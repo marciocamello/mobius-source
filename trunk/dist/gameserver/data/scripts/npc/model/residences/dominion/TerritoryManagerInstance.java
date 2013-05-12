@@ -13,15 +13,11 @@
 package npc.model.residences.dominion;
 
 import lineage2.gameserver.data.xml.holder.MultiSellHolder;
-import lineage2.gameserver.instancemanager.QuestManager;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.entity.events.impl.DominionSiegeEvent;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.entity.residence.Dominion;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.model.quest.Quest;
-import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
@@ -29,9 +25,6 @@ import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.ItemFunctions;
-import quests._234_FatesWhisper;
-import quests._235_MimirsElixir;
-import quests._236_SeedsOfChaos;
 
 /**
  * @author Mobius
@@ -89,38 +82,12 @@ public class TerritoryManagerInstance extends NpcInstance
 			}
 			if (player.consumeItem(badgeId, 100L))
 			{
-				Quest q = QuestManager.getQuest(_234_FatesWhisper.class);
-				QuestState qs = player.getQuestState(q.getClass());
-				if (qs != null)
-				{
-					qs.exitCurrentQuest(true);
-				}
-				q.newQuestState(player, Quest.COMPLETED);
-				if (player.getRace() == Race.kamael)
-				{
-					qs = player.getQuestState(_236_SeedsOfChaos.class);
-					if (qs != null)
-					{
-						qs.exitCurrentQuest(true);
-					}
-					q.newQuestState(player, Quest.COMPLETED);
-				}
-				else
-				{
-					q = QuestManager.getQuest(_235_MimirsElixir.class);
-					qs = player.getQuestState(q.getClass());
-					if (qs != null)
-					{
-						qs.exitCurrentQuest(true);
-					}
-					q.newQuestState(player, Quest.COMPLETED);
-				}
 				Olympiad.addNoble(player);
 				player.setNoble(true);
 				player.updatePledgeClass();
 				player.updateNobleSkills();
 				player.sendSkillList();
-				player.broadcastUserInfo(true);
+				player.broadcastUserInfo();
 			}
 			else
 			{

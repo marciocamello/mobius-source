@@ -488,19 +488,17 @@
 	</skill>
 	<skill id="1324" levels="1" name="Summon CP Potion">
     <!-- Summons 20 high quality Combat Spirit Potions. Consumes 50 Soul Ore. -->
-		<set name="magicType" val="MAGIC"/>
-		<set name="icon" val="icon.skill1324"/>
 		<set name="reuseDelay" val="600000"/>
 		<set name="hitTime" val="20000"/>
-		<set name="hitCancelTime" val="500"/>
-		<set name="mpConsume1" val="412"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="itemConsumeId" val="1785"/>
 		<set name="itemConsumeCount" val="50"/>
+		<set name="icon" val="icon.skill1324"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume1" val="412"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="SUMMON_ITEM"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="SummonItemId" val="5592"/>
-		<set name="SummonMinCount" val="20"/>
 	</skill>
 	<skill id="1325" levels="1" name="Fortune of Noblesse">
     <!-- Allows a party member to avoid negative after-death effects after being killed by a boss or raid monster. Consumes 4 A-Grade Lucky Amulets. -->
@@ -2352,7 +2350,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect count="3" name="Fear" stackOrder="-1" stackType="Fear" time="5" val="0">
+			<effect count="30" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0">
 				<add order="0x40" stat="runSpd" val="66"/>
 			</effect>
 		</for>
@@ -2438,7 +2436,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant2>
 		<for>
-			<effect count="5" name="Fear" stackOrder="-1" stackType="Fear" time="5" val="0"/>
+			<effect count="15" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0"/>
 		</for>
 	</skill>
 	<skill id="1382" levels="5" name="Mass Gloom">

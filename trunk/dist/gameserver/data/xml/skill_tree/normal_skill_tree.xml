@@ -18176,6 +18176,9 @@
 			<skill id="10265" level="6" cost="50000000" name="Eruption" min_level="94" />
 			<skill id="10265" level="7" cost="50000000" name="Eruption" min_level="96" />
 			<skill id="10265" level="8" cost="50000000" name="Eruption" min_level="98" />
+			<skill id="10300" level="1" cost="50000000" name="The Last Attack" min_level="90" />
+			<skill id="10300" level="2" cost="50000000" name="The Last Attack" min_level="95" />
+			<skill id="10300" level="3" cost="50000000" name="The Last Attack" min_level="99" />
 			<skill id="10266" level="1" cost="10000000" name="Giant Punch" min_level="85" />
 			<skill id="10266" level="2" cost="50000000" name="Giant Punch" min_level="87" />
 			<skill id="10266" level="3" cost="50000000" name="Giant Punch" min_level="89" />

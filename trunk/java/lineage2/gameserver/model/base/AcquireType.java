@@ -43,6 +43,10 @@ public enum AcquireType
 	 */
 	CERTIFICATION,
 	/**
+	 * Field CERTIFICATION.
+	 */
+	DUAL_CERTIFICATION,
+	/**
 	 * Field COLLECTION.
 	 */
 	COLLECTION,

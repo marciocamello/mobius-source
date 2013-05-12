@@ -13,6 +13,7 @@
 package lineage2.gameserver.skills.effects;
 
 import lineage2.gameserver.model.Effect;
+import lineage2.gameserver.skills.EffectType;
 import lineage2.gameserver.stats.Env;
 
 /**
@@ -52,7 +53,8 @@ public final class EffectParalyze extends Effect
 	public void onStart()
 	{
 		super.onStart();
-		_effected.startParalyzed();
+		if(!_effected.isParalyzed())
+			_effected.startParalyzed();
 		_effected.abortAttack(true, true);
 		_effected.abortCast(true, true);
 	}
@@ -64,7 +66,8 @@ public final class EffectParalyze extends Effect
 	public void onExit()
 	{
 		super.onExit();
-		_effected.stopParalyzed();
+		if(_effected.isParalyzed() && _effected.getEffectList().getEffectByType(EffectType.KnockDown) == null && _effected.getEffectList().getEffectByType(EffectType.HellBinding) == null)
+			_effected.stopParalyzed();
 	}
 	
 	/**

@@ -1,90 +1,27 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package lineage2.gameserver.network.serverpackets;
 
+import javolution.util.FastList;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
 public class NpcInfoPoly extends L2GameServerPacket
 {
-	/**
-	 * Field _obj.
-	 */
-	private final Creature _obj;
-	/**
-	 * Field _heading. Field _z. Field _y. Field _x.
-	 */
-	private final int _x, _y, _z, _heading;
-	/**
-	 * Field _npcId.
-	 */
-	private final int _npcId;
-	/**
-	 * Field _isAlikeDead. Field _isInCombat. Field _isRunning. Field _isSummoned.
-	 */
-	private final boolean _isSummoned, _isRunning, _isInCombat, _isAlikeDead;
-	/**
-	 * Field _pAtkSpd. Field _mAtkSpd.
-	 */
-	private final int _mAtkSpd, _pAtkSpd;
-	/**
-	 * Field _swimWalkSpd. Field _swimRunSpd. Field _walkSpd. Field _runSpd.
-	 */
-	private final int _runSpd, _walkSpd, _swimRunSpd, _swimWalkSpd;
-	/**
-	 * Field _flRunSpd.
-	 */
-	private int _flRunSpd;
-	/**
-	 * Field _flWalkSpd.
-	 */
-	private int _flWalkSpd;
-	/**
-	 * Field _flyRunSpd.
-	 */
-	private int _flyRunSpd;
-	/**
-	 * Field _flyWalkSpd.
-	 */
-	private int _flyWalkSpd;
-	/**
-	 * Field _lhand. Field _rhand.
-	 */
+	// ddddddddddddddddddffffdddcccccSSddd dddddccffddddccd
+	private Creature _obj;
+	private int _x, _y, _z, _heading;
+	private int _npcId;
+	private boolean _isSummoned, _isRunning, _isInCombat, _isAlikeDead;
+	private int _mAtkSpd, _pAtkSpd;
+	private int _runSpd, _walkSpd, _swimRunSpd, _swimWalkSpd, _flRunSpd, _flWalkSpd, _flyRunSpd, _flyWalkSpd;
 	private int _rhand, _lhand;
-	/**
-	 * Field _title. Field _name.
-	 */
-	private final String _name, _title;
-	/**
-	 * Field colHeight. Field colRadius.
-	 */
-	private final double colRadius, colHeight;
-	/**
-	 * Field _team.
-	 */
-	private final TeamType _team;
-	
-	/**
-	 * Constructor for NpcInfoPoly.
-	 * @param cha Player
-	 */
+	private String _name, _title;
+	private double colRadius, colHeight;
+	private TeamType _team;
+	private FastList<Integer> _aveList;
+
 	public NpcInfoPoly(Player cha)
 	{
 		_obj = cha;
@@ -112,24 +49,16 @@ public class NpcInfoPoly extends L2GameServerPacket
 		_isAlikeDead = cha.isAlikeDead();
 		_name = cha.getName();
 		_title = cha.getTitle();
-		cha.getAbnormalEffect();
 		_team = cha.getTeam();
+		_aveList = cha.getAveList();
 	}
-	
-	/**
-	 * Method writeImpl.
-	 */
+
 	@Override
 	protected final void writeImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
 		writeC(0x0c);
 		writeD(_obj.getObjectId());
-		writeD(_npcId + 1000000);
+		writeD(_npcId + 1000000); // npctype id
 		writeD(0x00);
 		writeD(_x);
 		writeD(_y);
@@ -140,56 +69,70 @@ public class NpcInfoPoly extends L2GameServerPacket
 		writeD(_pAtkSpd);
 		writeD(_runSpd);
 		writeD(_walkSpd);
-		writeD(_swimRunSpd);
-		writeD(_swimWalkSpd);
+		writeD(_swimRunSpd/* 0x32 */); // swimspeed
+		writeD(_swimWalkSpd/* 0x32 */); // swimspeed
 		writeD(_flRunSpd);
 		writeD(_flWalkSpd);
 		writeD(_flyRunSpd);
 		writeD(_flyWalkSpd);
-		writeF(1);
-		writeF(1);
+		writeF(1/* _cha.getProperMultiplier() */);
+		writeF(1/* _cha.getAttackSpeedMultiplier() */);
 		writeF(colRadius);
 		writeF(colHeight);
-		writeD(_rhand);
+		writeD(_rhand); // right hand weapon
 		writeD(0);
-		writeD(_lhand);
-		writeC(1);
+		writeD(_lhand); // left hand weapon
+		writeC(1); // name above char 1=true ... ??
 		writeC(_isRunning ? 1 : 0);
 		writeC(_isInCombat ? 1 : 0);
 		writeC(_isAlikeDead ? 1 : 0);
-		writeC(_isSummoned ? 2 : 0);
+		writeC(_isSummoned ? 2 : 0); // invisible ?? 0=false 1=true 2=summoned
+		                             // (only works if model has a summon
+		                             // animation)
 		writeS(_name);
 		writeS(_title);
 		writeD(0);
 		writeD(0);
-		writeD(0000);
-		writeD(0000);
-		writeD(0000);
-		writeD(0000);
-		writeD(0000);
-		writeC(0000);
+		writeD(0000); // hmm karma ??
+		writeD(0000); // C2
+		writeD(0000); // C2
+		writeD(0000); // C2
+		writeD(0000); // C2
+		writeC(0000); // C2
 		writeC(_team.ordinal());
 		writeF(colRadius);
 		writeF(colHeight);
+		writeD(0x00); // C4
+		writeD(0x00);
+		writeD(0x00);
+		writeD(0x00);
+
+		writeC(1); // show name
+		writeC(1); // show title
+
 		writeD(0x00);
 		writeD(0x00);
 		writeD(0x00);
 		writeD(0x00);
-		writeC(1);
-		writeC(1);
 		writeD(0x00);
 		writeD(0x00);
 		writeD(0x00);
 		writeD(0x00);
 		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
-		writeH(0x00);
-		writeH(0x00);
-		writeC(0x00);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
+		writeC(0);
+		writeF(0);
+
+		if (_aveList != null)
+		{
+			writeD(_aveList.size());
+			for (int i : _aveList)
+			{
+				writeD(i);
+			}
+		}
+		else
+		{
+			writeD(0x00);
+		}
 	}
 }

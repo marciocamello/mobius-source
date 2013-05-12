@@ -28,12 +28,17 @@ import lineage2.gameserver.model.reward.RewardData;
 import lineage2.gameserver.model.reward.RewardGroup;
 import lineage2.gameserver.model.reward.RewardList;
 import lineage2.gameserver.model.reward.RewardType;
+import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.npc.AbsorbInfo;
 import lineage2.gameserver.templates.npc.Faction;
 import lineage2.gameserver.templates.npc.MinionData;
 import lineage2.gameserver.templates.npc.NpcTemplate;
+import lineage2.gameserver.templates.npc.RandomActions;
+import lineage2.gameserver.templates.npc.WalkerRoute;
+import lineage2.gameserver.templates.npc.WalkerRoutePoint;
+import lineage2.gameserver.templates.npc.WalkerRouteType;
 import lineage2.gameserver.utils.Location;
 
 /**
@@ -309,6 +314,38 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 						}
 						template.addTeleportList(id, list.toArray(new TeleportLocation[list.size()]));
 					}
+				}
+				else if (nodeName.equalsIgnoreCase("walker_route"))
+				{
+					int id = Integer.parseInt(secondElement.attributeValue("id"));
+					WalkerRouteType type = secondElement.attributeValue("type") == null ? WalkerRouteType.LENGTH : WalkerRouteType.valueOf(secondElement.attributeValue("type").toUpperCase());
+					WalkerRoute walkerRoute = new WalkerRoute(id, type);
+					for (Iterator<?> nextIterator = secondElement.elementIterator(); nextIterator.hasNext(); )
+					{
+						org.dom4j.Element nextElement = (org.dom4j.Element)nextIterator.next();
+						Location loc = Location.parse(nextElement);
+						NpcString phrase = nextElement.attributeValue("phrase_id") == null ? null : NpcString.valueOf(Integer.parseInt(nextElement.attributeValue("phrase_id").toUpperCase()));
+						int socialActionId = nextElement.attributeValue("social_action_id") == null ? -1 : Integer.parseInt(nextElement.attributeValue("social_action_id"));
+						int delay = nextElement.attributeValue("delay") == null ? 0 : Integer.parseInt(nextElement.attributeValue("delay"));
+						boolean running = nextElement.attributeValue("running") == null ? false : Boolean.parseBoolean(nextElement.attributeValue("running"));
+						walkerRoute.addPoint(new WalkerRoutePoint(loc, phrase, socialActionId, delay, running));
+					}
+					template.addWalkerRoute(walkerRoute);
+				}
+				else if (nodeName.equalsIgnoreCase("random_actions"))
+				{
+					boolean random_order = secondElement.attributeValue("random_order") == null ? false : Boolean.parseBoolean(secondElement.attributeValue("random_order"));
+					RandomActions randomActions = new RandomActions(random_order);
+					for (Iterator<?> nextIterator = secondElement.elementIterator(); nextIterator.hasNext(); )
+					{
+						org.dom4j.Element nextElement = (org.dom4j.Element)nextIterator.next();
+						int id = Integer.parseInt(nextElement.attributeValue("id"));
+						NpcString phrase = nextElement.attributeValue("phrase_id") == null ? null : NpcString.valueOf(Integer.parseInt(nextElement.attributeValue("phrase_id")));
+						int socialActionId = nextElement.attributeValue("social_action_id") == null ? -1 : Integer.parseInt(nextElement.attributeValue("social_action_id"));
+						int delay = nextElement.attributeValue("delay") == null ? 0 : Integer.parseInt(nextElement.attributeValue("delay"));
+						randomActions.addAction(new RandomActions.Action(id, phrase, socialActionId, delay));
+					}
+					template.setRandomActions(randomActions);
 				}
 			}
 			getHolder().addTemplate(template);

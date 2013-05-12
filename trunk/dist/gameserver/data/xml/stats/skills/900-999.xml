@@ -797,6 +797,7 @@
 		<set name="criticalRate" val="10"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isOffensive" val="true"/>
+		<set name="reuseDelay" val="900"/> <!-- Balance by Zyth, WunkiaKorps 2013 -->
 	</skill>
 	<skill id="940" levels="1" name="Fake Attack">
     <!-- Pretends to attack. -->
@@ -1597,7 +1598,7 @@
     <!-- Attack multiple enemies at the front with 11030 Power added to P. Atk. Over-hit. Critical. Bow/crossbow required. -->
 		<set name="icon" val="icon.skill0987"/>
 		<set name="reuseDelay" val="12000"/>
-		<set name="power" val="16667"/>
+		<set name="power" val="11030"/>
 		<set name="magicLevel" val="82"/>
 		<set name="castRange" val="900"/>
 		<set name="skillRadius" val="550"/>
@@ -1747,17 +1748,15 @@
 		<set name="coolTime" val="200"/>
 		<set name="magicLevel" val="40"/>
 		<set name="castRange" val="400"/>
-		<set name="hitTime" val="800"/>
-		<set name="reuseDelay" val="3000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="38"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="DEBUFF"/>
 		<set name="flyType" val="CHARGE"/>
 		<set name="flyRadius" val="400"/>
-		<set name="flyToBack" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
+		<set name="isSkillTimePermanent" val="true"/> 
 		<cond msgId="113" addName="1">
 			<not>
 				<using kind="Bow, Crossbow"/>
@@ -1767,13 +1766,11 @@
 	<skill id="995" levels="1" name="Rush Impact">
     <!-- Rushes forward to attack the enemies in front with 4224 Power added to P. Atk. and inflicts Shock for 9 seconds. Cannot be used when a bow/crossbow is equipped. -->
 		<set name="icon" val="icon.skill0793"/>
-		<set name="coolTime" val="200"/>
+		<set name="coolTime" val="800"/>
 		<set name="power" val="4224"/>
 		<set name="magicLevel" val="83"/>
 		<set name="castRange" val="600"/>
-		<set name="hitTime" val="800"/>
 		<set name="reuseDelay" val="20000"/>
-		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="82"/>
 		<set name="activateRate" val="60"/>
 		<set name="target" val="TARGET_TUNNEL"/>
@@ -1781,10 +1778,10 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="flyType" val="CHARGE"/>
 		<set name="flyRadius" val="600"/>
-		<set name="flyToBack" val="true"/>
 		<set name="trait" val="SHOCK"/>
 		<set name="saveVs" val="CON"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isSkillTimePermanent" val="true"/> 
 		<cond msgId="113" addName="1">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Dagger, Pole, Fist, Dual Sword, Dual Dagger"/>
 		</cond>
@@ -1799,6 +1796,7 @@
 		<set name="magicLevel" val="83"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="DEBUFF"/>
+		<set name="trait" val="DISARM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect count="1" name="Disarm" time="5" val="0">
@@ -1847,7 +1845,6 @@
 		<set name="skillType" val="DEBUFF"/>
 		<set name="flyType" val="CHARGE"/>
 		<set name="flyRadius" val="400"/>
-		<set name="flyToBack" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
 		<cond msgId="113" addName="1">

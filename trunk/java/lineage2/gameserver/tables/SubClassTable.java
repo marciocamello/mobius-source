@@ -15,8 +15,6 @@ package lineage2.gameserver.tables;
 import gnu.trove.list.array.TIntArrayList;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
-import java.util.Collection;
-
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SubClass;
 import lineage2.gameserver.model.base.ClassId;
@@ -71,21 +69,21 @@ public final class SubClassTable
 	 */
 	private void init()
 	{
-		_subClasses = new TIntObjectHashMap<>();
+		_subClasses = new TIntObjectHashMap<TIntArrayList>();
 		for (ClassId baseClassId : ClassId.VALUES)
 		{
-			if (baseClassId.isOfLevel(ClassLevel.First))
+			if (baseClassId.isOfLevel(ClassLevel.First) || baseClassId.isOfLevel(ClassLevel.Second))
 			{
 				continue;
 			}
 			TIntArrayList availSubs = new TIntArrayList();
 			for (ClassId subClassId : ClassId.VALUES)
 			{
-				if (!subClassId.isOfLevel(ClassLevel.Second))
+				if (!subClassId.isOfLevel(ClassLevel.Third))
 				{
 					continue;
 				}
-				if (!areClassesComportable(baseClassId, subClassId))
+				if (!areClassesComportable(baseClassId, subClassId, false))
 				{
 					continue;
 				}
@@ -114,17 +112,17 @@ public final class SubClassTable
 		for (int clsId : subClassesList.toArray())
 		{
 			ClassId subClassId = ClassId.VALUES[clsId];
-			Collection<SubClass> playerSubClasses = player.getSubClassList().values();
-			for (SubClass playerSubClass : playerSubClasses)
+			
+			for (SubClass playerSubClass : player.getSubClassList().values())
 			{
 				ClassId playerSubClassId = ClassId.VALUES[playerSubClass.getClassId()];
-				if (!areClassesComportable(playerSubClassId, subClassId))
+				if (!areClassesComportable(playerSubClassId, subClassId, playerSubClass.isBase()))
 				{
 					subClassesList.remove(clsId);
 					continue loop;
 				}
 			}
-			if (subClassId.isOfRace(Race.kamael))
+			if (player.getRace() == Race.kamael)
 			{
 				if (((player.getSex() == 1) && (subClassId == ClassId.M_SOUL_BREAKER)) || ((player.getSex() == 0) && (subClassId == ClassId.F_SOUL_BREAKER)))
 				{
@@ -147,17 +145,17 @@ public final class SubClassTable
 	 * @param subClassId ClassId
 	 * @return boolean
 	 */
-	public static boolean areClassesComportable(ClassId baseClassId, ClassId subClassId)
+	public static boolean areClassesComportable(ClassId baseClassId, ClassId subClassId, boolean isBase)
 	{
 		if (baseClassId == subClassId)
 		{
 			return false;
 		}
-		if (baseClassId.getType2() == subClassId.getType2())
+		if (baseClassId.getType2() == subClassId.getType2() && isBase)
 		{
 			return false;
 		}
-		if (baseClassId.isOfRace(Race.kamael) != subClassId.isOfRace(Race.kamael))
+		if ((baseClassId.isOfRace(Race.kamael) != subClassId.isOfRace(Race.kamael)) && !baseClassId.isOfLevel(ClassLevel.Awaking))
 		{
 			return false;
 		}

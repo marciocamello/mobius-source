@@ -1559,7 +1559,7 @@
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="TRANSFORMATION"/>
-		<set name="reuseDelay" val="14400000" />
+		<set name="reuseDelay" val="14400000"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isCommon" val="true"/>
 		<set name="addSkills" val="619;1"/>
@@ -1574,7 +1574,7 @@
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="TRANSFORMATION"/>
-		<set name="reuseDelay" val="14400000" />
+		<set name="reuseDelay" val="14400000"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isCommon" val="true"/>
 		<set name="addSkills" val="619;1"/>

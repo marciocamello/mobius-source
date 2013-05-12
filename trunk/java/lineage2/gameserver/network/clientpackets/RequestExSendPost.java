@@ -125,7 +125,7 @@ public class RequestExSendPost extends L2GameClientPacket
 		}
 		if (activeChar.isGM() && _recieverName.equalsIgnoreCase("ONLINE_ALL"))
 		{
-			Map<Integer, Long> map = new HashMap<>();
+			Map<Integer, Long> map = new HashMap<Integer, Long>();
 			if ((_items != null) && (_items.length > 0))
 			{
 				for (int i = 0; i < _items.length; i++)

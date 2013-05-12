@@ -11,6 +11,7 @@
 		<give itemId="0" count="0"/>
 		<quest id="0"/>
 		<reuse resetReuse="30 6 * * 3,6" setUponEntry="false" sharedReuseGroup="4"/>
+		<geodata map="26_21"/>
 		<doors>
 			<door id="26210001" opened="true"/>
 			<door id="26210002" opened="true"/>

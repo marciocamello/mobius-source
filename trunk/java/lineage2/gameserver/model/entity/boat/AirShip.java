@@ -141,7 +141,7 @@ public class AirShip extends Boat
 	@Override
 	public L2GameServerPacket getOnPacket(Playable playable, Location location)
 	{
-		return new ExGetOnAirShip(playable, this, location);
+		return new ExGetOnAirShip(playable.getPlayer(), this, location);
 	}
 	
 	/**
@@ -153,7 +153,7 @@ public class AirShip extends Boat
 	@Override
 	public L2GameServerPacket getOffPacket(Playable playable, Location location)
 	{
-		return new ExGetOffAirShip(playable, this, location);
+		return new ExGetOffAirShip(playable.getPlayer(), this, location);
 	}
 	
 	/**

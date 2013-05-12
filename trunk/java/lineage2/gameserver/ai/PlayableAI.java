@@ -25,7 +25,6 @@ import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.geodata.GeoEngine;
-import lineage2.gameserver.model.ClonePlayer;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Playable;
@@ -34,6 +33,7 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Skill.NextAction;
 import lineage2.gameserver.model.Skill.SkillType;
 import lineage2.gameserver.model.Summon;
+import lineage2.gameserver.model.ClonePlayer;
 import lineage2.gameserver.network.serverpackets.MyTargetSelected;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Location;
@@ -477,13 +477,13 @@ public class PlayableAI extends CharacterAI
 			Playable actor = getActor();
 			if (getIntention() != AI_INTENTION_FOLLOW)
 			{
-				if ((actor.isPet() || actor.isServitor()) && (getIntention() == AI_INTENTION_ACTIVE))
-				{
-					((Summon) actor).setFollowMode(false);
-				}
-				else if (actor.isClone() && (getIntention() == AI_INTENTION_ACTIVE))
+				if (actor.isClone() && getIntention() == AI_INTENTION_ACTIVE)
 				{
 					((ClonePlayer) actor).setFollowMode(false);
+				}
+				else if ((actor.isPet() || actor.isServitor()) && (getIntention() == AI_INTENTION_ACTIVE))
+				{
+					((Summon) actor).setFollowMode(false);
 				}
 				return;
 			}
@@ -934,7 +934,7 @@ public class PlayableAI extends CharacterAI
 		Playable actor = getActor();
 		if (skill.altUse() || skill.isToggle())
 		{
-			if ((skill.isToggle() || skill.isHandler()) && (actor.isOutOfControl() || actor.isStunned() || actor.isSleeping() || actor.isParalyzed() || actor.isAlikeDead()))
+			if (((skill.isToggle() && !skill.isAwakeningToggle())|| skill.isHandler()) && (actor.isOutOfControl() || actor.isStunned() || actor.isSleeping() || actor.isParalyzed() || actor.isAlikeDead() || actor.isAirBinded() || actor.isKnockedBack() || actor.isKnockedDown() || actor.isPulledNow()))
 			{
 				clientActionFailed();
 			}

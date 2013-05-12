@@ -1,10 +1,9 @@
 <!DOCTYPE list SYSTEM "instances.dtd">
 <list>
     <!-- SSQ Necropolis -->
-    <instance id="112" name="Disciples Necropolis (Past)" maxChannels="20" collapseIfEmpty="10" timelimit="60"
-              dispelBuffs="false">
+    <instance id="112" name="Disciples Necropolis (Past)" maxChannels="20" collapseIfEmpty="10" timelimit="60" dispelBuffs="false">
         <collapse on-party-dismiss="true" timer="60"/>
-        <level min="79" max="85"/>
+        <level min="79" max="99"/>
         <party min="1" max="1"/>
         <return loc="171864 -17480 -4896"/>
         <teleport loc="-89560 215784 -7488"/>

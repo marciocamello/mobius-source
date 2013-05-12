@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-    <npc id="8401" name="Jermann" title="Ancient Kartia's Ruler">
+	<npc id="8401" name="Jermann" title="Ancient Kartia's Ruler">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -45,7 +45,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8402" name="Jermann" title="Ancient Kartia's Ruler">
+	<npc id="8402" name="Jermann" title="Ancient Kartia's Ruler">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -89,7 +89,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8403" name="Jermann" title="Ancient Kartia's Ruler">
+	<npc id="8403" name="Jermann" title="Ancient Kartia's Ruler">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -133,7 +133,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8404" name="Fairweather Borna" title="">
+	<npc id="8404" name="Fairweather Borna" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -177,7 +177,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8405" name="Ancient Kartia Records" title="Holder of Mysterious Power">
+	<npc id="8405" name="Ancient Kartia Records" title="Holder of Mysterious Power">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -221,7 +221,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8406" name="" title="">
+	<npc id="8406" name="" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -265,7 +265,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8407" name="Supreme Tank" title="Sigel Knight">
+	<npc id="8407" name="Supreme Tank" title="Sigel Knight">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -309,7 +309,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8408" name="King of Destruction" title="Tyrr Warrior">
+	<npc id="8408" name="King of Destruction" title="Tyrr Warrior">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -353,7 +353,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8409" name="Torturer" title="Feoh Wizard">
+	<npc id="8409" name="Torturer" title="Feoh Wizard">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -397,7 +397,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8410" name="Noble Healer" title="Aeore Healer">
+	<npc id="8410" name="Noble Healer" title="Aeore Healer">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -441,7 +441,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8411" name="Romantic Assassin" title="Othell Rogue">
+	<npc id="8411" name="Romantic Assassin" title="Othell Rogue">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -485,7 +485,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8412" name="Bad Fellow" title="Feoh Wizard">
+	<npc id="8412" name="Bad Fellow" title="Feoh Wizard">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -529,7 +529,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8413" name="Buff of the Gods" title="Iss Enchanter">
+	<npc id="8413" name="Buff of the Gods" title="Iss Enchanter">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -573,7 +573,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8414" name="Legendary Knight" title="Sigel Knight">
+	<npc id="8414" name="Legendary Knight" title="Sigel Knight">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -617,7 +617,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8415" name="Master Marksman" title="Yul Archer">
+	<npc id="8415" name="Master Marksman" title="Yul Archer">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -661,7 +661,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8416" name="Crystal of Protection" title="">
+	<npc id="8416" name="Crystal of Protection" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -705,7 +705,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8417" name="Ancient Kartia Labyrinth's Teleport Device" title="">
+	<npc id="8417" name="Ancient Kartia's Labyrinth Teleport Device" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -749,7 +749,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8418" name="" title="">
+	<npc id="8418" name="" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -793,7 +793,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8419" name="" title="">
+	<npc id="8419" name="" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -837,7 +837,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8420" name="" title="">
+	<npc id="8420" name="" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -881,7 +881,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8421" name="" title="">
+	<npc id="8421" name="" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -925,7 +925,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8422" name="Jermann" title="Ancient Kartia's Ruler">
+	<npc id="8422" name="Jermann" title="Ancient Kartia's Ruler">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -969,7 +969,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8423" name="Warrior of Death" title="">
+	<npc id="8423" name="Warrior of Death" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1013,7 +1013,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8424" name="Kajin" title="Obedient">
+	<npc id="8424" name="Kajin" title="Obedient">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1057,7 +1057,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8425" name="Beryn" title="Obedient">
+	<npc id="8425" name="Beryn" title="Obedient">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1101,7 +1101,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8426" name="Unicorn" title="">
+	<npc id="8426" name="Unicorn" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1145,7 +1145,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8427" name="" title="">
+	<npc id="8427" name="" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1189,7 +1189,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8428" name="Endless Stamina" title="Sigel Knight">
+	<npc id="8428" name="Endless Stamina" title="Sigel Knight">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1233,7 +1233,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8429" name="Thunder Heel" title="Aeore Healer">
+	<npc id="8429" name="Thunder Heel" title="Aeore Healer">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1277,7 +1277,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8430" name="Beauty Buff" title="Iss Enchanter">
+	<npc id="8430" name="Beauty Buff" title="Iss Enchanter">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1321,7 +1321,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8431" name="Star Healer" title="Aeore Healer">
+	<npc id="8431" name="Star Healer" title="Aeore Healer">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1365,7 +1365,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8432" name="Man of Fire" title="Othell Rogue">
+	<npc id="8432" name="Man of Fire" title="Othell Rogue">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1409,7 +1409,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8433" name="Warrior of Death" title="">
+	<npc id="8433" name="Warrior of Death" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1453,7 +1453,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8434" name="Warrior of Death" title="">
+	<npc id="8434" name="Warrior of Death" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1497,7 +1497,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8435" name="Russia's Test" title="">
+	<npc id="8435" name="Russia's Test" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1541,7 +1541,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8436" name="Kajin" title="Obedient">
+	<npc id="8436" name="Kajin" title="Obedient">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1585,7 +1585,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8437" name="Beryn" title="Obedient">
+	<npc id="8437" name="Beryn" title="Obedient">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1629,7 +1629,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8438" name="Kajin" title="Obedient">
+	<npc id="8438" name="Kajin" title="Obedient">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1673,7 +1673,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8439" name="Beryn" title="Obedient">
+	<npc id="8439" name="Beryn" title="Obedient">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1717,7 +1717,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8440" name="Pirate Captain Uthanka's Tombstone" title="">
+	<npc id="8440" name="Pirate Captain Uthanka's Tombstone" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1761,7 +1761,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8441" name="Pirate Captain Uthanka's Spirit" title="">
+	<npc id="8441" name="Pirate Captain Uthanka's Spirit" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1805,7 +1805,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8442" name="" title="">
+	<npc id="8442" name="" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1849,7 +1849,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8443" name="" title="">
+	<npc id="8443" name="" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1893,7 +1893,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8444" name="Ancient Kartia Guard" title="Sworn to Loyalty">
+	<npc id="8444" name="Ancient Kartia Guard" title="Sworn to Loyalty">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1937,7 +1937,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8445" name="Ancient Kartia Guard" title="Sworn to Loyalty">
+	<npc id="8445" name="Ancient Kartia Watchman" title="Sworn to Loyalty">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -1981,7 +1981,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8446" name="Kajin" title="Sworn to Loyalty">
+	<npc id="8446" name="Kajin" title="Sworn to Loyalty">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2025,7 +2025,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8447" name="Beryn" title="Sworn to Loyalty">
+	<npc id="8447" name="Beryn" title="Sworn to Loyalty">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2069,7 +2069,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8448" name="Chest of Offerings" title="For the New Ruler">
+	<npc id="8448" name="Chest of Offerings" title="For the New Ruler">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2113,7 +2113,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8449" name="Zellaka" title="Shilen's Subordinate">
+	<npc id="8449" name="Zellaka" title="Shilen's Subordinate">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2157,7 +2157,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8450" name="Pelline" title="Shilen's Subordinate">
+	<npc id="8450" name="Pelline" title="Shilen's Subordinate">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2201,7 +2201,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8451" name="Kalios" title="Shilen's Subordinate">
+	<npc id="8451" name="Kalios" title="Shilen's Subordinate">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2245,7 +2245,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8452" name="Kartia Guard" title="Shilen's Subordinate">
+	<npc id="8452" name="Kartia Guard" title="Shilen's Subordinate">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2289,7 +2289,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8453" name="Kartia Watchman" title="Shilen's Subordinate">
+	<npc id="8453" name="Kartia Watchman" title="Shilen's Subordinate">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2333,7 +2333,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8454" name="Kartia Guard" title="Shilen's Subordinate">
+	<npc id="8454" name="Kartia Guard" title="Shilen's Subordinate">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2377,7 +2377,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8455" name="Kartia Watchman" title="Shilen's Subordinate">
+	<npc id="8455" name="Kartia Watchman" title="Shilen's Subordinate">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2421,7 +2421,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8456" name="Kartia Guard" title="Shilen's Subordinate">
+	<npc id="8456" name="Kartia Guard" title="Shilen's Subordinate">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2465,7 +2465,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8457" name="Kartia Watchman" title="Shilen's Subordinate">
+	<npc id="8457" name="Kartia Watchman" title="Shilen's Subordinate">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2509,7 +2509,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8458" name="Stone Statue of Jermann the Great Leader" title="">
+	<npc id="8458" name="Stone Statue of Jermann the Great Leader" title="">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>
@@ -2553,7 +2553,7 @@
             <defence attribute="unholy" value="20"/>
         </attributes>
     </npc>
-    <npc id="8459" name="g_event_battle_cat" title="">
+	<npc id="8459" name="Sandy the Cat" title="Test Server Helper">
         <set name="aggroRange" value="0"/>
         <set name="ai_type" value="CharacterAI"/>
         <set name="baseAtkRange" value="40"/>

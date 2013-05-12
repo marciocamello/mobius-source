@@ -1,50 +1,27 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
 public class ExVitalityEffectInfo extends L2GameServerPacket
 {
-	/**
-	 * Field player.
-	 */
-	private final Player player;
-	
-	/**
-	 * Constructor for ExVitalityEffectInfo.
-	 * @param player Player
-	 */
+	private int points;
+	private int expBonus;
+
 	public ExVitalityEffectInfo(Player player)
 	{
-		this.player = player;
+		points = player.getVitality();
+		expBonus = (int) (player.getVitality() == 0 ? 0 : (int) (Config.ALT_VITALITY_RATE * 100));
 	}
-	
-	/**
-	 * Method writeImpl.
-	 */
+
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0x11D);
-		writeD(player.getVitality());
-		writeD(player.getVitality() == 0 ? 0 : (int) (Config.ALT_VITALITY_RATE * 100));
-		writeD(7);
-		writeD(7);
+		writeEx(0x11E);
+
+		writeD(points);
+		writeD(expBonus);
+		writeD(5);// TODO: Remaining items count
+		writeD(5);// TODO: Remaining items count
 	}
 }

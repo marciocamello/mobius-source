@@ -13,7 +13,6 @@
 package ai.residences.dominion;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.instancemanager.QuestManager;
 import lineage2.gameserver.listener.actor.player.OnPlayerEnterListener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObjectsStorage;
@@ -21,15 +20,12 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.listener.CharListenerList;
 import lineage2.gameserver.model.entity.events.impl.DominionSiegeEvent;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.model.quest.Quest;
-import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 
-import quests._731_ProtectTheMilitaryAssociationLeader;
 import ai.residences.SiegeGuardFighter;
 
 /**
@@ -124,12 +120,6 @@ public class MilitaryAssociationLeader extends SiegeGuardFighter
 			{
 				return;
 			}
-			
-			final Quest q = QuestManager.getQuest(_731_ProtectTheMilitaryAssociationLeader.class);
-			
-			final QuestState questState = q.newQuestStateAndNotSave(player, Quest.CREATED);
-			questState.setCond(1, false);
-			questState.setStateAndNotSave(Quest.STARTED);
 		}
 	}
 	
@@ -170,16 +160,11 @@ public class MilitaryAssociationLeader extends SiegeGuardFighter
 		{
 			actor.setParameter("dominion_first_attack", false);
 			final NpcString msg = MESSAGES.get(siegeEvent.getId())[0];
-			final Quest q = QuestManager.getQuest(_731_ProtectTheMilitaryAssociationLeader.class);
 			for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 			{
 				if (player.getEvent(DominionSiegeEvent.class).equals(siegeEvent))
 				{
 					player.sendPacket(new ExShowScreenMessage(msg, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
-					
-					QuestState questState = q.newQuestStateAndNotSave(player, Quest.CREATED);
-					questState.setCond(1, false);
-					questState.setStateAndNotSave(Quest.STARTED);
 				}
 			}
 			CharListenerList.addGlobal(_listener);
@@ -209,12 +194,6 @@ public class MilitaryAssociationLeader extends SiegeGuardFighter
 			if (player.getEvent(DominionSiegeEvent.class).equals(siegeEvent))
 			{
 				player.sendPacket(new ExShowScreenMessage(msg, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
-				
-				QuestState questState = player.getQuestState(_731_ProtectTheMilitaryAssociationLeader.class);
-				if (questState != null)
-				{
-					questState.abortQuest();
-				}
 			}
 		}
 		

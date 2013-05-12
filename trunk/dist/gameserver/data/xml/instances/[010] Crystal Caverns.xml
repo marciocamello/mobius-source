@@ -4,7 +4,7 @@
     <instance id="10" name="Crystal Caverns" maxChannels="20" collapseIfEmpty="10" timelimit="90">
         <collapse on-party-dismiss="true" timer="60"/>
         <level min="78" max="85"/>
-        <party min="2" max="9"/>
+        <party min="2" max="7"/>
         <return loc="42673 -47988 -797"/>
         <teleport loc="140486 148895 -11817"/>
         <remove itemId="9690" count="1" necessary="true"/>

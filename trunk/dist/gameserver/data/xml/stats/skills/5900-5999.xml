@@ -64,6 +64,7 @@
 		<set name="mpConsume1" val="15"/>
 		<set name="mpConsume2" val="59"/>
 		<set name="activateRate" val="70"/>
+		<set name="trait" val="DISARM"/>
 		<set name="target" val="TARGET_AURA"/>
 		<set name="skillRadius" val="600"/>
 		<set name="skillType" val="DEBUFF"/>

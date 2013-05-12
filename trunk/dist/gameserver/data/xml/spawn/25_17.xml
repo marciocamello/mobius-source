@@ -1329,7 +1329,7 @@
         <!--Mysterious Ancient Tablet-->
     </spawn>
     <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-        <point x="171935" y="-17472" z="-4896" h="49000"/>
+        <point x="168851" y="-18321" z="-3168" h="49000"/>
         <npc id="32585"/>
         <!--Promise of Mammon-->
     </spawn>

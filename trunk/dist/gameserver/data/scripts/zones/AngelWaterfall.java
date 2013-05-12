@@ -12,10 +12,14 @@
  */
 package zones;
 
+import quests._10301_ShadowOfTerrorBlackishRedFog;
+import lineage2.gameserver.instancemanager.QuestManager;
 import lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Zone;
+import lineage2.gameserver.model.quest.Quest;
+import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
@@ -27,27 +31,9 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public class AngelWaterfall implements ScriptFile
 {
-	/**
-	 * Field _zoneListener.
-	 */
 	private static ZoneListener _zoneListener;
-	/**
-	 * Field zones.
-	 */
-	static String[] zones =
-	{
-		"[25_20_telzone_to_magmeld]",
-		"[Hall_of_Orbis_1_level]",
-		"[Hall_of_Orbis_2_level]",
-		"[Seed_of_Annihilation_1]",
-		"[Seed_of_Annihilation_2]",
-		"[Seed_of_Annihilation_3]",
-		"[Seed_of_Annihilation_4]"
-	};
+	private static String[] zones = {"[25_20_telzone_to_magmeld]"};
 	
-	/**
-	 * Method init.
-	 */
 	private void init()
 	{
 		_zoneListener = new ZoneListener();
@@ -113,13 +99,19 @@ public class AngelWaterfall implements ScriptFile
 				return;
 			}
 			Player player = cha.getPlayer();
-			if (zone == ReflectionUtils.getZone(zones[0]))
+			
+			QuestState qs = player.getQuestState(_10301_ShadowOfTerrorBlackishRedFog.class);
+			if(qs != null && qs.getCond() == 3 && player.getVar("instance10301") == null)
 			{
-				if (!player.getVarB("@25_20_telzone_to_magmeld"))
-				{
-					player.showQuestMovie(SceneMovie.si_arkan_enter);
-					player.setVar("@25_20_telzone_to_magmeld", "true", -1);
-				}
+				Quest q = QuestManager.getQuest(10301);
+				player.processQuestEvent(q.getName(), "enterInstance", null);
+				//player.setVar("instance10301", "true", -1);
+				return;
+			}
+			if (!player.getVarB("@25_20_telzone_to_magmeld"))
+			{
+				player.showQuestMovie(SceneMovie.si_arkan_enter);
+				player.setVar("@25_20_telzone_to_magmeld", "true", -1);
 			}
 			cha.teleToLocation(Location.parseLoc(zone.getParams().getString("tele")));
 		}

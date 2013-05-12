@@ -1,11 +1,10 @@
 <!DOCTYPE list SYSTEM "instances.dtd">
 <list>
     <!-- Daytime Zaken -->
-    <instance id="133" name="Cavern of the Pirate Captain (daydream)" maxChannels="20" collapseIfEmpty="10"
-              timelimit="60" dispelBuffs="true" respawn="60">
+    <instance id="133" name="Cavern of the Pirate Captain (daydream)" maxChannels="20" collapseIfEmpty="10" timelimit="60" dispelBuffs="true" respawn="60">
         <collapse on-party-dismiss="true" timer="60"/>
         <level min="55" max="65"/>
-        <party min="2" max="9"/>
+        <party min="2" max="7"/>
         <return loc="52212 218998 -3208"/>
         <teleport loc="52680 219992 -3522"/>
         <remove itemId="0" count="0" necessary="false"/>

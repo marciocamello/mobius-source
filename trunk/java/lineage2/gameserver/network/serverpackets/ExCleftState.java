@@ -1,67 +1,47 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package lineage2.gameserver.network.serverpackets;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
 public class ExCleftState extends L2GameServerPacket
 {
-	/**
-	 * Field CleftState_Total. (value is 0)
-	 */
 	public static final int CleftState_Total = 0;
-	/**
-	 * Field CleftState_TowerDestroy. (value is 1)
-	 */
 	public static final int CleftState_TowerDestroy = 1;
-	/**
-	 * Field CleftState_CatUpdate. (value is 2)
-	 */
 	public static final int CleftState_CatUpdate = 2;
-	/**
-	 * Field CleftState_Result. (value is 3)
-	 */
 	public static final int CleftState_Result = 3;
-	/**
-	 * Field CleftState_PvPKill. (value is 4)
-	 */
 	public static final int CleftState_PvPKill = 4;
-	/**
-	 * Field CleftState.
-	 */
-	private final int CleftState = 0;
-	
-	/**
-	 * Method writeImpl.
-	 */
+
+	private int CleftState = 0; // TODO
+
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0x95);
+		writeEx(0x96);
 		writeD(CleftState);
 		switch (CleftState)
 		{
 			case CleftState_Total:
+				// dddddSS - BTeam Point:%d CatID:%d CatName:%s RemainSec:%d
+				// RTeam Point:%d CatID:%d CatName:%s RemainSec:%d
+				// BlueTeam: d[dddd] - Total List TeamID:%d PlayerID:%d Kill:%d
+				// Death:%d Tower:%d
+				// RedTeam: d[dddd] - Total List TeamID:%d PlayerID:%d Kill:%d
+				// Death:%d Tower:%d
 				break;
 			case CleftState_TowerDestroy:
+				// ddddddddd - RemainSec:%d BlueTeamPt:%d RedTeamPt:%d TeamID:%d
+				// TowerType:%d PlayerID:%d CleftTowerCount:%d KillCount:%d
+				// DeathCount:%d
 				break;
 			case CleftState_CatUpdate:
+				// dddS - RemainSec:%d TeamID:%d CatID:%d CatName:%s
 				break;
 			case CleftState_Result:
+				// dd - WinTeamID:%d LoseTeamID:%d
 				break;
 			case CleftState_PvPKill:
+				// ddd - BTeamPoint:%d RTeamPoint:%d
+				// ddddd - PvPKill01 TeamID:%d PlayerID:%d CleftTowerCount:%d
+				// Kill:%d Death:%d RemainSec:%d
+				// ddddd - PvPKill02 TeamID:%d PlayerID:%d CleftTowerCount:%d
+				// Kill:%d Death:%d
 				break;
 		}
 	}

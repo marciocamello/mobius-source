@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<!--ru title: Главный Рыцарь Ледяного Лабиринта-->
-	<!--ru name: Клакиес-->
 	<npc id="25700" name="Glakias" title="Archery Knight Captain">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="9015056.357"/>
-		<set name="baseMpMax" value="92340.0"/>
-		<set name="baseHpReg" value="1947.687"/>
-		<set name="baseMpReg" value="500.0"/>
-		<set name="basePAtk" value="21748"/>
-		<set name="baseMAtk" value="3776"/>
-		<set name="basePDef" value="2064"/>
-		<set name="baseMDef" value="1089"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseHpMax" value="22299331"/>
+		<set name="baseMpMax" value="4326"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="15515"/>
+		<set name="baseMAtk" value="5309"/>
+		<set name="basePDef" value="3277"/>
+		<set name="baseMDef" value="2142"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseShldDef" value="0"/>
@@ -38,7 +36,7 @@
 		<!--Npc specific-->
 		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="freya.IceCaptainKnight"/>
-		<set name="level" value="85"/>
+		<set name="level" value="88"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -125,8 +123,6 @@
 			</group>
 		</rewardlist>
 	</npc>
-	<!--ru title: Правитель Флиндов-->
-	<!--ru name: Анаис-->
 	<npc id="25701" name="Anais" title="Lord of Splendor">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
@@ -135,7 +131,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="937564.609"/>
+		<set name="baseHpMax" value="2232341"/>
 		<set name="baseMpMax" value="21812.0"/>
 		<set name="baseHpReg" value="240.22"/>
 		<set name="baseMpReg" value="500.0"/>
@@ -165,7 +161,7 @@
 		<set name="level" value="84"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="6653170"/>
-		<set name="rewardSp" value="1080082"/>
+		<set name="rewardSp" value="900069"/>
 		<set name="rewardRp" value="508"/>
 		<set name="aggroRange" value="300"/>
 		<set name="shots" value="NONE"/>
@@ -259,7 +255,7 @@
 		</rewardlist>
 	</npc>
 	<!--ru name: Хранитель Грааля-->
-	<npc id="25702" name="Guard of the Grail" title="">
+	<npc id="25702" name="Guardian of the Grail" title="">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
@@ -267,7 +263,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="4039.043"/>
+		<set name="baseHpMax" value="6375"/>
 		<set name="baseMpMax" value="1812.0"/>
 		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpReg" value="3.0"/>
@@ -347,7 +343,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="402092.519"/>
+		<set name="baseHpMax" value="957382"/>
 		<set name="baseMpMax" value="15408.0"/>
 		<set name="baseHpReg" value="172.748"/>
 		<set name="baseMpReg" value="300.0"/>
@@ -457,7 +453,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="4604.887"/>
+		<set name="baseHpMax" value="7966"/>
 		<set name="baseMpMax" value="1507.8"/>
 		<set name="baseHpReg" value="62.397"/>
 		<set name="baseMpReg" value="3.0"/>
@@ -537,7 +533,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="2632.196"/>
+		<set name="baseHpMax" value="4553"/>
 		<set name="baseMpMax" value="1475.0"/>
 		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpReg" value="3.0"/>
@@ -615,7 +611,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="56202.842"/>
+		<set name="baseHpMax" value="58338"/>
 		<set name="baseMpMax" value="1777.4"/>
 		<set name="baseHpReg" value="190.897"/>
 		<set name="baseMpReg" value="3.0"/>
@@ -695,7 +691,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="56202.842"/>
+		<set name="baseHpMax" value="58338"/>
 		<set name="baseMpMax" value="1777.4"/>
 		<set name="baseHpReg" value="190.897"/>
 		<set name="baseMpReg" value="3.0"/>
@@ -775,7 +771,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="112316.375"/>
+		<set name="baseHpMax" value="116584"/>
 		<set name="baseMpMax" value="1777.4"/>
 		<set name="baseHpReg" value="190.745"/>
 		<set name="baseMpReg" value="3.0"/>
@@ -857,7 +853,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="618854.528"/>
+		<set name="baseHpMax" value="1178794"/>
 		<set name="baseMpMax" value="1777.4"/>
 		<set name="baseHpReg" value="237.842"/>
 		<set name="baseMpReg" value="20.0"/>
@@ -942,7 +938,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="280911.662"/>
+		<set name="baseHpMax" value="1605241"/>
 		<set name="baseMpMax" value="17774.0"/>
 		<set name="baseHpReg" value="36.892"/>
 		<set name="baseMpReg" value="400.0"/>
@@ -1060,7 +1056,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="16110.474"/>
+		<set name="baseHpMax" value="66890"/>
 		<set name="baseMpMax" value="1777.4"/>
 		<set name="baseHpReg" value="17.776"/>
 		<set name="baseMpReg" value="3.0"/>
@@ -1137,7 +1133,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="16110.474"/>
+		<set name="baseHpMax" value="66890"/>
 		<set name="baseMpMax" value="1777.4"/>
 		<set name="baseHpReg" value="17.776"/>
 		<set name="baseMpReg" value="20.0"/>
@@ -1225,7 +1221,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="1395831.132"/>
+		<set name="baseHpMax" value="3334240"/>
 		<set name="baseMpMax" value="18120.0"/>
 		<set name="baseHpReg" value="159.894"/>
 		<set name="baseMpReg" value="30.0"/>
@@ -1337,7 +1333,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="344947.577"/>
+		<set name="baseHpMax" value="823981"/>
 		<set name="baseMpMax" value="18120.0"/>
 		<set name="baseHpReg" value="196.415"/>
 		<set name="baseMpReg" value="30.0"/>
@@ -1364,10 +1360,10 @@
 		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
-		<set name="level" value="98"/>
+		<set name="level" value="84"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="rewardExp" value="468444704"/>
-		<set name="rewardSp" value="10633168"/>
+		<set name="rewardExp" value="2662111"/>
+		<set name="rewardSp" value="1460807"/>
 		<set name="rewardRp" value="126"/>
 		<set name="aggroRange" value="0"/>
 		<set name="shots" value="NONE"/>
@@ -1450,7 +1446,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="19178.966"/>
+		<set name="baseHpMax" value="30270"/>
 		<set name="baseMpMax" value="1812.0"/>
 		<set name="baseHpReg" value="196.571"/>
 		<set name="baseMpReg" value="3.0"/>
@@ -1477,7 +1473,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
-		<set name="level" value="97"/>
+		<set name="level" value="84"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -1534,7 +1530,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="1360985.814"/>
+		<set name="baseHpMax" value="3251004"/>
 		<set name="baseMpMax" value="18120.0"/>
 		<set name="baseHpReg" value="154.09"/>
 		<set name="baseMpReg" value="30.0"/>
@@ -1648,7 +1644,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="1360985.814"/>
+		<set name="baseHpMax" value="2148057"/>
 		<set name="baseMpMax" value="18120.0"/>
 		<set name="baseHpReg" value="154.09"/>
 		<set name="baseMpReg" value="30.0"/>
@@ -1734,7 +1730,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="3187601.0"/>
+		<set name="baseHpMax" value="5944159"/>
 		<set name="baseMpMax" value="22106.0"/>
 		<set name="baseHpReg" value="656.0"/>
 		<set name="baseMpReg" value="63.0"/>
@@ -1828,7 +1824,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="3187601.0"/>
+		<set name="baseHpMax" value="5052535"/>
 		<set name="baseMpMax" value="22106.0"/>
 		<set name="baseHpReg" value="656.0"/>
 		<set name="baseMpReg" value="63.0"/>
@@ -1914,7 +1910,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="3750258.0"/>
+		<set name="baseHpMax" value="5944159"/>
 		<set name="baseMpMax" value="22106.0"/>
 		<set name="baseHpReg" value="656.0"/>
 		<set name="baseMpReg" value="63.0"/>
@@ -2012,7 +2008,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="3750258.0"/>
+		<set name="baseHpMax" value="5944159"/>
 		<set name="baseMpMax" value="22106.0"/>
 		<set name="baseHpReg" value="656.0"/>
 		<set name="baseMpReg" value="63.0"/>
@@ -2110,7 +2106,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="3750258.0"/>
+		<set name="baseHpMax" value="5944159"/>
 		<set name="baseMpMax" value="22106.0"/>
 		<set name="baseHpReg" value="656.0"/>
 		<set name="baseMpReg" value="63.0"/>
@@ -2202,28 +2198,28 @@
 	<!--ru name: Шипастый Терзатель-->
 	<npc id="25723" name="Spike Slasher" title="Raid Boss">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
+		<set name="baseSTR" value="109"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="2625180.0"/>
-		<set name="baseMpMax" value="22106.0"/>
-		<set name="baseHpReg" value="656.0"/>
-		<set name="baseMpReg" value="63.0"/>
+		<set name="baseINT" value="74"/>
+		<set name="baseWIT" value="64"/>
+		<set name="baseMEN" value="72"/>
+		<set name="baseHpMax" value="4160911"/>
+		<set name="baseMpMax" value="22106"/>
+		<set name="baseHpReg" value="656"/>
+		<set name="baseMpReg" value="63"/>
 		<set name="basePAtk" value="37270"/>
 		<set name="baseMAtk" value="50746"/>
 		<set name="basePDef" value="1856"/>
 		<set name="baseMDef" value="1103"/>
-		<set name="basePAtkSpd" value="253"/>
+		<set name="basePAtkSpd" value="278"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseShldRate" value="0"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseWalkSpd" value="1"/>
-		<set name="baseRunSpd" value="1"/>
+		<set name="baseWalkSpd" value="30"/>
+		<set name="baseRunSpd" value="220"/>
 		<set name="rndDam" value="30"/>
 		<set name="baseEvasionRate" value="0"/>
 		<set name="baseAccuracyRate" value="0"/>
@@ -2236,7 +2232,7 @@
 		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="dragonvalley.DragonRaid"/>
 		<set name="level" value="84"/>
-		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpRate" value="1"/>
 		<set name="rewardExp" value="24629320"/>
 		<set name="rewardSp" value="3331957"/>
 		<set name="rewardRp" value="0"/>
@@ -2300,28 +2296,28 @@
 	<!--ru name: Могучий Взрыватель-->
 	<npc id="25724" name="Muscle Bomber" title="Raid Boss">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
+		<set name="baseSTR" value="109"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="3750258.0"/>
-		<set name="baseMpMax" value="22106.0"/>
-		<set name="baseHpReg" value="656.0"/>
-		<set name="baseMpReg" value="63.0"/>
+		<set name="baseINT" value="74"/>
+		<set name="baseWIT" value="64"/>
+		<set name="baseMEN" value="72"/>
+		<set name="baseHpMax" value="5944159"/>
+		<set name="baseMpMax" value="22106"/>
+		<set name="baseHpReg" value="656"/>
+		<set name="baseMpReg" value="63"/>
 		<set name="basePAtk" value="46213"/>
 		<set name="baseMAtk" value="57090"/>
 		<set name="basePDef" value="1856"/>
 		<set name="baseMDef" value="1103"/>
-		<set name="basePAtkSpd" value="253"/>
+		<set name="basePAtkSpd" value="278"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseShldRate" value="0"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseWalkSpd" value="1"/>
-		<set name="baseRunSpd" value="1"/>
+		<set name="baseWalkSpd" value="30"/>
+		<set name="baseRunSpd" value="120"/>
 		<set name="rndDam" value="30"/>
 		<set name="baseEvasionRate" value="0"/>
 		<set name="baseAccuracyRate" value="0"/>
@@ -2334,7 +2330,7 @@
 		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="dragonvalley.DragonRaid"/>
 		<set name="level" value="84"/>
-		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpRate" value="1"/>
 		<set name="rewardExp" value="26388558"/>
 		<set name="rewardSp" value="3569954"/>
 		<set name="rewardRp" value="0"/>
@@ -2392,7 +2388,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="3902308.0"/>
+		<set name="baseHpMax" value="6185159"/>
 		<set name="baseMpMax" value="22530.0"/>
 		<set name="baseHpReg" value="1529.0"/>
 		<set name="baseMpReg" value="1061.0"/>
@@ -2460,7 +2456,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="3902308.0"/>
+		<set name="baseHpMax" value="6185159"/>
 		<set name="baseMpMax" value="22530.0"/>
 		<set name="baseHpReg" value="1529.0"/>
 		<set name="baseMpReg" value="1061.0"/>
@@ -2528,7 +2524,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="3902308.0"/>
+		<set name="baseHpMax" value="6185159"/>
 		<set name="baseMpMax" value="22530.0"/>
 		<set name="baseHpReg" value="1529.0"/>
 		<set name="baseMpReg" value="1061.0"/>
@@ -2589,7 +2585,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="680.0"/>
+		<set name="baseHpMax" value="18797"/>
 		<set name="baseMpMax" value="2000.0"/>
 		<set name="baseHpReg" value="0.0"/>
 		<set name="baseMpReg" value="0.9"/>
@@ -2616,7 +2612,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
-		<set name="level" value="50"/>
+		<set name="level" value="85"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="21881"/>
 		<set name="rewardSp" value="1893"/>
@@ -2647,7 +2643,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="680.0"/>
+		<set name="baseHpMax" value="18797"/>
 		<set name="baseMpMax" value="2000.0"/>
 		<set name="baseHpReg" value="0.0"/>
 		<set name="baseMpReg" value="0.9"/>
@@ -2674,7 +2670,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
-		<set name="level" value="50"/>
+		<set name="level" value="85"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="21881"/>
 		<set name="rewardSp" value="1893"/>
@@ -2705,7 +2701,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="680.0"/>
+		<set name="baseHpMax" value="5691"/>
 		<set name="baseMpMax" value="2000.0"/>
 		<set name="baseHpReg" value="0.0"/>
 		<set name="baseMpReg" value="0.9"/>
@@ -2732,7 +2728,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
-		<set name="level" value="85"/>
+		<set name="level" value="80"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -2763,7 +2759,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="680.0"/>
+		<set name="baseHpMax" value="5691"/>
 		<set name="baseMpMax" value="2000.0"/>
 		<set name="baseHpReg" value="0.0"/>
 		<set name="baseMpReg" value="0.9"/>
@@ -2790,7 +2786,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
-		<set name="level" value="85"/>
+		<set name="level" value="80"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -2816,20 +2812,20 @@
 	<!--ru name: Чудовищный Дракон-->
 	<npc id="25732" name="Dragon Beast" title="Raid Boss">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="680.0"/>
-		<set name="baseMpMax" value="2000.0"/>
-		<set name="baseHpReg" value="0.0"/>
-		<set name="baseMpReg" value="0.9"/>
-		<set name="basePAtk" value="971"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMDef" value="250"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseHpMax" value="6185159"/>
+		<set name="baseMpMax" value="4081"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="13940"/>
+		<set name="baseMAtk" value="4632"/>
+		<set name="basePDef" value="3033"/>
+		<set name="baseMDef" value="2030"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseShldDef" value="0"/>
@@ -2847,7 +2843,7 @@
 		<set name="collision_radius" value="50.0"/>
 		<set name="collision_height" value="84.0"/>
 		<!--Npc specific-->
-		<set name="type" value="Npc"/>
+		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -2888,7 +2884,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="680.0"/>
+		<set name="baseHpMax" value="6635"/>
 		<set name="baseMpMax" value="2000.0"/>
 		<set name="baseHpReg" value="0.0"/>
 		<set name="baseMpReg" value="0.9"/>
@@ -2940,7 +2936,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="680.0"/>
+		<set name="baseHpMax" value="6635"/>
 		<set name="baseMpMax" value="2000.0"/>
 		<set name="baseHpReg" value="0.0"/>
 		<set name="baseMpReg" value="0.9"/>
@@ -2987,20 +2983,20 @@
 	<!--ru name: Воин Фей-->
 	<npc id="25735" name="Fairy Warrior" title="Faithful Servant">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="40330.26"/>
-		<set name="baseMpMax" value="231.96"/>
-		<set name="baseHpReg" value="17.535"/>
-		<set name="baseMpReg" value="1.5"/>
-		<set name="basePAtk" value="971"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMDef" value="250"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseHpMax" value="48442"/>
+		<set name="baseMpMax" value="4498"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="16632"/>
+		<set name="baseMAtk" value="5800"/>
+		<set name="basePDef" value="3445"/>
+		<set name="baseMDef" value="2218"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseShldDef" value="382"/>
@@ -3020,7 +3016,7 @@
 		<!--Npc specific-->
 		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="94"/>
+		<set name="level" value="90"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="258086"/>
 		<set name="rewardSp" value="5254"/>
@@ -3083,7 +3079,7 @@
 	</npc>
 	<!--ru title: Поборник Кимериана-->
 	<!--ru name: Терзатель Фей-->
-	<npc id="25736" name="Fairy Slasher" title="Faithful Servant">
+	<npc id="25736" name="Fairy Rogue" title="Faithful Servant">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
@@ -3091,7 +3087,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="4185.614"/>
+		<set name="baseHpMax" value="48442"/>
 		<set name="baseMpMax" value="218.52"/>
 		<set name="baseHpReg" value="17.158"/>
 		<set name="baseMpReg" value="1.5"/>
@@ -3118,7 +3114,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="94"/>
+		<set name="level" value="90"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="258086"/>
 		<set name="rewardSp" value="5254"/>
@@ -3153,7 +3149,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6247.185"/>
+		<set name="baseHpMax" value="48442"/>
 		<set name="baseMpMax" value="218.52"/>
 		<set name="baseHpReg" value="17.158"/>
 		<set name="baseMpReg" value="1.5"/>
@@ -3180,7 +3176,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="94"/>
+		<set name="level" value="90"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="258086"/>
 		<set name="rewardSp" value="5254"/>
@@ -3207,20 +3203,20 @@
 	<!--ru name: Сатир Чародей-->
 	<npc id="25738" name="Satyr Wizard" title="Faithful Servant">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="40330.26"/>
-		<set name="baseMpMax" value="231.96"/>
-		<set name="baseHpReg" value="17.535"/>
-		<set name="baseMpReg" value="1.5"/>
-		<set name="basePAtk" value="971"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMDef" value="250"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseHpMax" value="48442"/>
+		<set name="baseMpMax" value="4498"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="16632"/>
+		<set name="baseMAtk" value="5800"/>
+		<set name="basePDef" value="3445"/>
+		<set name="baseMDef" value="2218"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseShldDef" value="0"/>
@@ -3240,7 +3236,7 @@
 		<!--Npc specific-->
 		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="94"/>
+		<set name="level" value="90"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="258086"/>
 		<set name="rewardSp" value="5254"/>
@@ -3331,7 +3327,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="3123.592"/>
+		<set name="baseHpMax" value="48442"/>
 		<set name="baseMpMax" value="218.52"/>
 		<set name="baseHpReg" value="17.158"/>
 		<set name="baseMpReg" value="1.5"/>
@@ -3358,7 +3354,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="94"/>
+		<set name="level" value="90"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="258086"/>
 		<set name="rewardSp" value="5254"/>
@@ -3393,7 +3389,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="4185.614"/>
+		<set name="baseHpMax" value="48442"/>
 		<set name="baseMpMax" value="218.52"/>
 		<set name="baseHpReg" value="17.158"/>
 		<set name="baseMpReg" value="1.5"/>
@@ -3420,7 +3416,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Ranger"/>
-		<set name="level" value="94"/>
+		<set name="level" value="90"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="258086"/>
 		<set name="rewardSp" value="5254"/>
@@ -3447,7 +3443,7 @@
 	</npc>
 	<!--ru title: Поборник Кимериана-->
 	<!--ru name: Защитник Трикина-->
-	<npc id="25741" name="Trichin Defender" title="Faithful Servant">
+	<npc id="25741" name="Treekin Defender" title="Faithful Servant">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
@@ -3482,7 +3478,7 @@
 		<!--Npc specific-->
 		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="94"/>
+		<set name="level" value="21"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="1770537"/>
 		<set name="rewardSp" value="37520"/>
@@ -3537,7 +3533,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="5895.55"/>
+		<set name="baseHpMax" value="48442"/>
 		<set name="baseMpMax" value="192.0"/>
 		<set name="baseHpReg" value="16.54"/>
 		<set name="baseMpReg" value="1.2"/>
@@ -3564,7 +3560,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="94"/>
+		<set name="level" value="90"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="1770537"/>
 		<set name="rewardSp" value="37520"/>
@@ -3622,7 +3618,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Priest"/>
-		<set name="level" value="95"/>
+		<set name="level" value="20"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="1808517"/>
 		<set name="rewardSp" value="38710"/>
@@ -3647,20 +3643,20 @@
 	<!--ru name: Двойной Ночной Кошмар-->
 	<npc id="25744" name="Double Nightmare" title="Faithful Servant">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="56644.14"/>
-		<set name="baseMpMax" value="259.2"/>
-		<set name="baseHpReg" value="24.086"/>
-		<set name="baseMpReg" value="1.5"/>
-		<set name="basePAtk" value="971"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMDef" value="250"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseHpMax" value="251772"/>
+		<set name="baseMpMax" value="4586"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="17211"/>
+		<set name="baseMAtk" value="6058"/>
+		<set name="basePDef" value="3531"/>
+		<set name="baseMDef" value="2256"/>
 		<set name="basePAtkSpd" value="212"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseShldDef" value="0"/>
@@ -3680,7 +3676,7 @@
 		<!--Npc specific-->
 		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="85"/>
+		<set name="level" value="91"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -3742,20 +3738,20 @@
 	<!--ru name: Кимериан-->
 	<npc id="25745" name="Kimerian" title="Fairy Leader">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="8725.563"/>
-		<set name="baseMpMax" value="245.52"/>
-		<set name="baseHpReg" value="23.437"/>
-		<set name="baseMpReg" value="1.5"/>
-		<set name="basePAtk" value="971"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMDef" value="250"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseHpMax" value="1028131"/>
+		<set name="baseMpMax" value="4676"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="17804"/>
+		<set name="baseMAtk" value="6325"/>
+		<set name="basePDef" value="3618"/>
+		<set name="baseMDef" value="2295"/>
 		<set name="basePAtkSpd" value="279"/>
 		<set name="baseMAtkSpd" value="330"/>
 		<set name="baseShldDef" value="0"/>
@@ -3773,7 +3769,7 @@
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="52.0"/>
 		<!--Npc specific-->
-		<set name="type" value="Minion"/>
+		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Priest"/>
 		<set name="level" value="92"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -3831,7 +3827,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="4362.781"/>
+		<set name="baseHpMax" value="35967"/>
 		<set name="baseMpMax" value="245.52"/>
 		<set name="baseHpReg" value="23.437"/>
 		<set name="baseMpReg" value="1.5"/>
@@ -3858,7 +3854,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="85"/>
+		<set name="level" value="90"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -3883,20 +3879,20 @@
 	<!--ru name: Кимериан-->
 	<npc id="25747" name="Kimerian" title="Fairy Leader">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="43316.309"/>
-		<set name="baseMpMax" value="259.2"/>
-		<set name="baseHpReg" value="18.439"/>
-		<set name="baseMpReg" value="1.5"/>
-		<set name="basePAtk" value="971"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMDef" value="250"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseHpMax" value="296576"/>
+		<set name="baseMpMax" value="1272"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="382"/>
+		<set name="baseMAtk" value="45"/>
+		<set name="basePDef" value="242"/>
+		<set name="baseMDef" value="343"/>
 		<set name="basePAtkSpd" value="279"/>
 		<set name="baseMAtkSpd" value="330"/>
 		<set name="baseShldDef" value="0"/>
@@ -3916,7 +3912,7 @@
 		<!--Npc specific-->
 		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="92"/>
+		<set name="level" value="25"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="37507182"/>
 		<set name="rewardSp" value="968256"/>
@@ -3983,7 +3979,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="4475.707"/>
+		<set name="baseHpMax" value="25028"/>
 		<set name="baseMpMax" value="245.52"/>
 		<set name="baseHpReg" value="17.961"/>
 		<set name="baseMpReg" value="1.5"/>
@@ -4010,7 +4006,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Ranger"/>
-		<set name="level" value="94"/>
+		<set name="level" value="93"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="258086"/>
 		<set name="rewardSp" value="5254"/>
@@ -4033,7 +4029,7 @@
 	</npc>
 	<!--ru title: Поборник Кимериана-->
 	<!--ru name: Терзатель Фей-->
-	<npc id="25749" name="Fairy Slasher" title="Faithful Servant">
+	<npc id="25749" name="Fairy Rogue" title="Faithful Servant">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
@@ -4068,7 +4064,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="94"/>
+		<set name="level" value="24"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="258086"/>
 		<set name="rewardSp" value="5254"/>
@@ -4126,7 +4122,7 @@
 		<!--Npc specific-->
 		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="94"/>
+		<set name="level" value="20"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="258086"/>
 		<set name="rewardSp" value="5254"/>
@@ -4212,7 +4208,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Mystic"/>
-		<set name="level" value="94"/>
+		<set name="level" value="19"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="258086"/>
 		<set name="rewardSp" value="5254"/>
@@ -4270,7 +4266,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Priest"/>
-		<set name="level" value="94"/>
+		<set name="level" value="19"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="258086"/>
 		<set name="rewardSp" value="5254"/>
@@ -4328,7 +4324,7 @@
 		<!--Npc specific-->
 		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="94"/>
+		<set name="level" value="35"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="258086"/>
 		<set name="rewardSp" value="5254"/>
@@ -4391,22 +4387,22 @@
 	</npc>
 	<!--ru title: Поборник Кимериана-->
 	<!--ru name: Защитник Трикина-->
-	<npc id="25754" name="Trichin Defender" title="Faithful Servant">
+	<npc id="25754" name="Treekin Defender" title="Faithful Servant">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="69449.568"/>
-		<set name="baseMpMax" value="402.6"/>
-		<set name="baseHpReg" value="26.794"/>
-		<set name="baseMpReg" value="1.8"/>
-		<set name="basePAtk" value="971"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMDef" value="250"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseHpMax" value="25167"/>
+		<set name="baseMpMax" value="4861"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="19033"/>
+		<set name="baseMAtk" value="6886"/>
+		<set name="basePDef" value="3797"/>
+		<set name="baseMDef" value="2373"/>
 		<set name="basePAtkSpd" value="250"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseShldDef" value="0"/>
@@ -4485,7 +4481,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="10526.668"/>
+		<set name="baseHpMax" value="25028"/>
 		<set name="baseMpMax" value="387.72"/>
 		<set name="baseHpReg" value="25.613"/>
 		<set name="baseMpReg" value="1.8"/>
@@ -4512,7 +4508,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="94"/>
+		<set name="level" value="93"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="1770537"/>
 		<set name="rewardSp" value="37520"/>
@@ -4543,7 +4539,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="5263.334"/>
+		<set name="baseHpMax" value="25167"/>
 		<set name="baseMpMax" value="387.72"/>
 		<set name="baseHpReg" value="25.613"/>
 		<set name="baseMpReg" value="1.8"/>
@@ -4570,7 +4566,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Mystic"/>
-		<set name="level" value="95"/>
+		<set name="level" value="94"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="1808517"/>
 		<set name="rewardSp" value="38710"/>
@@ -4595,20 +4591,20 @@
 	<!--ru name: Двойной Ночной Кошмар-->
 	<npc id="25757" name="Double Nightmare" title="Faithful Servant">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="69449.568"/>
-		<set name="baseMpMax" value="402.6"/>
-		<set name="baseHpReg" value="26.794"/>
-		<set name="baseMpReg" value="1.8"/>
-		<set name="basePAtk" value="971"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMDef" value="250"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseHpMax" value="580768"/>
+		<set name="baseMpMax" value="4861"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="19033"/>
+		<set name="baseMAtk" value="6886"/>
+		<set name="basePDef" value="3797"/>
+		<set name="baseMDef" value="2373"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseShldDef" value="0"/>
@@ -4628,7 +4624,7 @@
 		<!--Npc specific-->
 		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="85"/>
+		<set name="level" value="94"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -4701,20 +4697,20 @@
 	<!--ru name: Кимериан-->
 	<npc id="25758" name="Kimerian" title="Fairy Leader">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="7052.867"/>
-		<set name="baseMpMax" value="387.72"/>
-		<set name="baseHpReg" value="25.613"/>
-		<set name="baseMpReg" value="1.8"/>
-		<set name="basePAtk" value="971"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMDef" value="250"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseHpMax" value="1649921"/>
+		<set name="baseMpMax" value="4956"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="19669"/>
+		<set name="baseMAtk" value="7181"/>
+		<set name="basePDef" value="3888"/>
+		<set name="baseMDef" value="2412"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseShldDef" value="0"/>
@@ -4732,7 +4728,7 @@
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="52.0"/>
 		<!--Npc specific-->
-		<set name="type" value="Minion"/>
+		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="95"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -4785,7 +4781,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="10526.668"/>
+		<set name="baseHpMax" value="55325"/>
 		<set name="baseMpMax" value="387.72"/>
 		<set name="baseHpReg" value="25.613"/>
 		<set name="baseMpReg" value="1.8"/>
@@ -4812,7 +4808,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="85"/>
+		<set name="level" value="92"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -4843,7 +4839,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="221100.025"/>
+		<set name="baseHpMax" value="2278804"/>
 		<set name="baseMpMax" value="1036.8"/>
 		<set name="baseHpReg" value="72.964"/>
 		<set name="baseMpReg" value="2.4"/>
@@ -4956,7 +4952,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="34433.218"/>
+		<set name="baseHpMax" value="1580452"/>
 		<set name="baseMpMax" value="1007.0"/>
 		<set name="baseHpReg" value="71.371"/>
 		<set name="baseMpReg" value="2.4"/>
@@ -5031,7 +5027,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="34433.218"/>
+		<set name="baseHpMax" value="2257788"/>
 		<set name="baseMpMax" value="1007.0"/>
 		<set name="baseHpReg" value="71.371"/>
 		<set name="baseMpReg" value="2.4"/>
@@ -5114,7 +5110,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="215207.61"/>
+		<set name="baseHpMax" value="2257788"/>
 		<set name="baseMpMax" value="1007.0"/>
 		<set name="baseHpReg" value="71.371"/>
 		<set name="baseMpReg" value="2.4"/>
@@ -5237,7 +5233,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="33456.124"/>
+		<set name="baseHpMax" value="2257788"/>
 		<set name="baseMpMax" value="977.4"/>
 		<set name="baseHpReg" value="69.691"/>
 		<set name="baseMpReg" value="2.4"/>
@@ -5316,7 +5312,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="16728.062"/>
+		<set name="baseHpMax" value="358277"/>
 		<set name="baseMpMax" value="977.4"/>
 		<set name="baseHpReg" value="69.691"/>
 		<set name="baseMpReg" value="2.4"/>
@@ -5343,7 +5339,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="85"/>
+		<set name="level" value="96"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -5374,7 +5370,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="442200.05"/>
+		<set name="baseHpMax" value="2278804"/>
 		<set name="baseMpMax" value="1036.8"/>
 		<set name="baseHpReg" value="182.411"/>
 		<set name="baseMpReg" value="2.4"/>
@@ -5477,7 +5473,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="155046.064"/>
+		<set name="baseHpMax" value="2257788"/>
 		<set name="baseMpMax" value="747.8"/>
 		<set name="baseHpReg" value="53.855"/>
 		<set name="baseMpReg" value="2.1"/>
@@ -5594,7 +5590,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="15873.757"/>
+		<set name="baseHpMax" value="2257788"/>
 		<set name="baseMpMax" value="720.0"/>
 		<set name="baseHpReg" value="51.719"/>
 		<set name="baseMpReg" value="2.1"/>
@@ -5671,7 +5667,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="11846.088"/>
+		<set name="baseHpMax" value="2257788"/>
 		<set name="baseMpMax" value="720.0"/>
 		<set name="baseHpReg" value="51.719"/>
 		<set name="baseMpReg" value="2.1"/>
@@ -5698,7 +5694,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="97"/>
+		<set name="level" value="96"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="84726163"/>
 		<set name="rewardSp" value="1963046"/>
@@ -5742,8 +5738,6 @@
 			</group>
 		</rewardlist>
 	</npc>
-	<!--ru title: Рейдовый Босс-->
-	<!--ru name: Раджарос-->
 	<npc id="25770" name="Lazaros" title="Raid Boss">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
@@ -5752,14 +5746,14 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="148076.094"/>
+		<set name="baseHpMax" value="2257788"/>
 		<set name="baseMpMax" value="720.0"/>
 		<set name="baseHpReg" value="51.719"/>
 		<set name="baseMpReg" value="2.1"/>
-		<set name="basePAtk" value="971"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMDef" value="250"/>
+		<set name="basePAtk" value="12971"/>
+		<set name="baseMAtk" value="5663"/>
+		<set name="basePDef" value="1341"/>
+		<set name="baseMDef" value="1250"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseShldDef" value="0"/>
@@ -5779,7 +5773,7 @@
 		<!--Npc specific-->
 		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="97"/>
+		<set name="level" value="95"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="84726163"/>
 		<set name="rewardSp" value="1963046"/>
@@ -5801,68 +5795,26 @@
 		<skill id="14757" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
-			<group chance="65.292">
-				<!--Necklace of Seal-->
-				<reward item_id="119" min="1" max="1" chance="14.8393"/>
-				<!--Nassen's Earring-->
-				<reward item_id="855" min="1" max="1" chance="19.7857"/>
-				<!--Ring of Seal-->
-				<reward item_id="886" min="1" max="1" chance="29.6786"/>
-				<!--Necklace of Seal Chain-->
-				<reward item_id="1920" min="140" max="420" chance="3.9388"/>
-				<!--Nassen's Earring Gemstone-->
-				<reward item_id="1918" min="81" max="243" chance="8.6166"/>
-				<!--Ring of Seal Gemstone-->
-				<reward item_id="2917" min="40" max="120" chance="23.141"/>
+			<group chance="100.0">
+				<reward item_id="18189" min="1" max="1" chance="1.386"/>
+				<reward item_id="18199" min="1" max="1" chance="1.340"/>
+				<reward item_id="18187" min="1" max="1" chance="1"/>
+				<reward item_id="18191" min="1" max="1" chance="1"/>
+				<reward item_id="18198" min="1" max="1" chance="1"/>
+				<reward item_id="18192" min="1" max="1" chance="0.5"/>
 			</group>
-			<group chance="84.464">
-				<!--Eminence Bow-->
-				<reward item_id="286" min="1" max="1" chance="4.7573"/>
-				<!--Eminence Bow Shaft-->
-				<reward item_id="2121" min="3" max="9" chance="85.93218"/>
-				<!--Unidentified Seraph Gloves : Robe-->
-				<reward item_id="18199" min="1" max="1" chance="1.8434"/>
-				<!--Unidentified Seraph Boots : Heavy-->
-				<reward item_id="18189" min="1" max="1" chance="1.84103"/>
-				<!--Unidentified Seraph Leather Helmet : Light-->
-				<reward item_id="18191" min="1" max="1" chance="1.6954"/>
-				<!--Unidentified Seraph Gaiters : Heavy-->
-				<reward item_id="18187" min="1" max="1" chance="1.53794"/>
-				<!--Unidentified Seraph Stockings : Robe-->
-				<reward item_id="18198" min="1" max="1" chance="1.50479"/>
-				<!--Unidentified Seraph Leather Armor : Light-->
-				<reward item_id="18192" min="1" max="1" chance="0.88796"/>
-			</group>
-			<group chance="33.752">
-				<!--Scroll: Enchant Weapon of Destruction (C-Grade) : Event-->
-				<reward item_id="22227" min="1" max="2" chance="1.692"/>
-				<!--Scroll: Enchant Weapon of Destruction (B-Grade) : Event-->
-				<reward item_id="22225" min="1" max="2" chance="1.128"/>
-				<!--Scroll: Enchant Armor (R-Grade)-->
-				<reward item_id="17527" min="1" max="1" chance="61.15229"/>
-				<!--Water Crystal-->
-				<reward item_id="9553" min="1" max="1" chance="36.02771"/>
-			</group>
-			<group chance="87.0">
-				<!--Memento Mori-->
-				<reward item_id="9814" min="1" max="3" chance="100.0"/>
-			</group>
-			<group chance="87.0">
-				<!--Destruction Tombstone-->
-				<reward item_id="8176" min="1" max="1" chance="100.0"/>
+			<group chance="100.0">
+				<reward item_id="17527" min="1" max="1" chance="22.04"/>
+				<reward item_id="9553" min="1" max="1" chance="13.48"/>
 			</group>
 		</rewardlist>
 		<minions>
-			<!--Tomb Manager-->
 			<!--Noctum-->
 			<minion npc_id="25771" count="3"/>
-			<!--King of Merchants-->
 			<!--Harnak Ghost-->
 			<minion npc_id="25772" count="2"/>
 		</minions>
 	</npc>
-	<!--ru title: Смотритель могилы-->
-	<!--ru name: Накдум-->
 	<npc id="25771" name="Noctum" title="Tomb Manager">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
@@ -5871,7 +5823,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="15133.574"/>
+		<set name="baseHpMax" value="368130"/>
 		<set name="baseMpMax" value="692.4"/>
 		<set name="baseHpReg" value="49.588"/>
 		<set name="baseMpReg" value="2.1"/>
@@ -5919,27 +5871,19 @@
 			<skill id="4416" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
-			<group chance="13.703">
-				<!--Unidentified Immortal Earring-->
-				<reward item_id="18135" min="1" max="1" chance="48.06977"/>
-				<!--Unidentified Immortal Necklace-->
-				<reward item_id="18134" min="1" max="1" chance="35.51047"/>
-				<!--Unidentified Immortal Gaiters : Heavy-->
-				<reward item_id="18119" min="1" max="1" chance="5.47325"/>
-				<!--Unidentified Immortal Leather Armor : Light-->
-				<reward item_id="18124" min="1" max="1" chance="5.47325"/>
-				<!--Unidentified Immortal Stockings : Robe-->
-				<reward item_id="18130" min="1" max="1" chance="5.47325"/>
+			<group chance="100.0">
+				<reward item_id="18135" min="1" max="1" chance="6.840"/>
+				<reward item_id="18134" min="1" max="1" chance="5.067"/>
+				<reward item_id="18130" min="1" max="1" chance="1.240"/>
+				<reward item_id="18119" min="1" max="1" chance="1.204"/>
+				<reward item_id="18124" min="1" max="1" chance="1"/>
 			</group>
-			<group chance="0.75">
-				<!--Scroll: Enchant Weapon (R-Grade)-->
-				<reward item_id="17526" min="1" max="1" chance="100.0"/>
+			<group chance="100.0">
+				<reward item_id="17526" min="1" max="1" chance="1"/>
 			</group>
 		</rewardlist>
 	</npc>
-	<!--ru title: Король Высших Гигантов-->
-	<!--ru name: Призрак Харнака-->
-	<npc id="25772" name="Harnak Ghost" title="King of Merchants">
+	<npc id="25772" name="Harnak's Wraith" title="King of Merchants">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
@@ -5947,7 +5891,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="11293.712"/>
+		<set name="baseHpMax" value="1840653"/>
 		<set name="baseMpMax" value="692.4"/>
 		<set name="baseHpReg" value="49.588"/>
 		<set name="baseMpReg" value="2.1"/>
@@ -5995,42 +5939,34 @@
 			<skill id="4416" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
-			<group chance="12.086">
-				<!--Unidentified Immortal Gauntlet : Heavy-->
-				<reward item_id="18120" min="1" max="1" chance="22.5302"/>
-				<!--Unidentified Immortal Leather Boots : Light-->
-				<reward item_id="18127" min="1" max="1" chance="22.3399"/>
-				<!--Unidentified Immortal Circlet : Robe-->
-				<reward item_id="18128" min="1" max="1" chance="20.69336"/>
-				<!--Unidentified Immortal Tunic : Robe-->
-				<reward item_id="18129" min="1" max="1" chance="17.3672"/>
-				<!--Unidentified Immortal Breastplate : Heavy-->
-				<reward item_id="18118" min="1" max="1" chance="17.06934"/>
+			<group chance="100.0">
+				<reward item_id="18127" min="1" max="1" chance="4.955"/>
+				<reward item_id="18120" min="1" max="1" chance="4.912"/>
+				<reward item_id="18128" min="1" max="1" chance="3.331"/>
+				<reward item_id="18129" min="1" max="1" chance="2.806"/>
+				<reward item_id="18118" min="1" max="1" chance="2.715"/>
 			</group>
-			<group chance="1.02">
-				<!--Scroll: Enchant Weapon (R-Grade)-->
-				<reward item_id="17526" min="1" max="1" chance="100.0"/>
+			<group chance="100.0">
+				<reward item_id="17526" min="1" max="1" chance="1.180"/>
 			</group>
 		</rewardlist>
 	</npc>
-	<!--ru title: Проклятый Смотритель-->
-	<!--ru name: Демонический Накдум-->
 	<npc id="25773" name="Demonic Noctum" title="Cursed Manager">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="121183.101"/>
-		<set name="baseMpMax" value="610.8"/>
-		<set name="baseHpReg" value="43.343"/>
-		<set name="baseMpReg" value="2.1"/>
-		<set name="basePAtk" value="971"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMDef" value="250"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseHpMax" value="371819"/>
+		<set name="baseMpMax" value="4326"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="15515"/>
+		<set name="baseMAtk" value="5309"/>
+		<set name="basePDef" value="3277"/>
+		<set name="baseMDef" value="2142"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseShldDef" value="0"/>
@@ -6136,7 +6072,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="12313.398"/>
+		<set name="baseHpMax" value="3718193"/>
 		<set name="baseMpMax" value="584.0"/>
 		<set name="baseHpReg" value="41.347"/>
 		<set name="baseMpReg" value="2.1"/>
@@ -6219,20 +6155,20 @@
 	<!--ru name: Афрос-->
 	<npc id="25775" name="Apherus" title="">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="9189.103"/>
-		<set name="baseMpMax" value="584.0"/>
-		<set name="baseHpReg" value="41.347"/>
-		<set name="baseMpReg" value="2.1"/>
-		<set name="basePAtk" value="971"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMDef" value="250"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseHpMax" value="4111534"/>
+		<set name="baseMpMax" value="4861"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="19033"/>
+		<set name="baseMAtk" value="6886"/>
+		<set name="basePDef" value="3797"/>
+		<set name="baseMDef" value="2373"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseShldDef" value="0"/>
@@ -6250,7 +6186,7 @@
 		<set name="collision_radius" value="35.0"/>
 		<set name="collision_height" value="93.0"/>
 		<!--Npc specific-->
-		<set name="type" value="Minion"/>
+		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="94"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -6279,20 +6215,20 @@
 	<!--ru name: Гвардеец-->
 	<npc id="25776" name="Royal Guard" title="Apherus Garden">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="108760.132"/>
-		<set name="baseMpMax" value="557.4"/>
-		<set name="baseHpReg" value="39.411"/>
-		<set name="baseMpReg" value="2.1"/>
-		<set name="basePAtk" value="971"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMDef" value="250"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseHpMax" value="147710"/>
+		<set name="baseMpMax" value="4676"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="17804"/>
+		<set name="baseMAtk" value="6325"/>
+		<set name="basePDef" value="3618"/>
+		<set name="baseMDef" value="2295"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseShldDef" value="0"/>
@@ -6377,7 +6313,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="16462.953"/>
+		<set name="baseHpMax" value="147710"/>
 		<set name="baseMpMax" value="531.0"/>
 		<set name="baseHpReg" value="37.544"/>
 		<set name="baseMpReg" value="2.1"/>
@@ -6435,7 +6371,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="8231.476"/>
+		<set name="baseHpMax" value="147710"/>
 		<set name="baseMpMax" value="531.0"/>
 		<set name="baseHpReg" value="37.544"/>
 		<set name="baseMpReg" value="2.1"/>
@@ -6487,20 +6423,20 @@
 	<!--ru name: Спасия-->
 	<npc id="25779" name="Spezion" title="Raid Boss">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="863404.0"/>
-		<set name="baseMpMax" value="22800.0"/>
-		<set name="baseHpReg" value="18.439"/>
-		<set name="baseMpReg" value="1.5"/>
-		<set name="basePAtk" value="971"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMDef" value="250"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseHpMax" value="2055767"/>
+		<set name="baseMpMax" value="4861"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="19033"/>
+		<set name="baseMAtk" value="6886"/>
+		<set name="basePDef" value="3797"/>
+		<set name="baseMDef" value="2373"/>
 		<set name="basePAtkSpd" value="250"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseShldDef" value="0"/>
@@ -6520,7 +6456,7 @@
 		<!--Npc specific-->
 		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="98"/>
+		<set name="level" value="94"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="1099043344"/>
 		<set name="rewardSp" value="24947048"/>
@@ -6610,7 +6546,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6680.159"/>
+		<set name="baseHpMax" value="18112"/>
 		<set name="baseMpMax" value="245.52"/>
 		<set name="baseHpReg" value="17.961"/>
 		<set name="baseMpReg" value="1.5"/>
@@ -6637,7 +6573,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Mystic"/>
-		<set name="level" value="85"/>
+		<set name="level" value="94"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -6667,7 +6603,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6680.159"/>
+		<set name="baseHpMax" value="18112"/>
 		<set name="baseMpMax" value="245.52"/>
 		<set name="baseHpReg" value="17.961"/>
 		<set name="baseMpReg" value="1.5"/>
@@ -6694,7 +6630,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="85"/>
+		<set name="level" value="94"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -6931,7 +6867,7 @@
 		<!--Npc specific-->
 		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="85"/>
+		<set name="level" value="37"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -6973,8 +6909,6 @@
 			</group>
 		</rewardlist>
 		<minions>
-			<!--Teredor-->
-			<minion npc_id="25785" count="1"/>
 			<!--Son-in-law of the King-->
 			<!--Lachikios-->
 			<minion npc_id="25786" count="3"/>
@@ -6983,20 +6917,20 @@
 	<!--ru name: Траджан-->
 	<npc id="25785" name="Teredor" title="">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="11740.948"/>
-		<set name="baseMpMax" value="417.6"/>
-		<set name="baseHpReg" value="28.064"/>
-		<set name="baseMpReg" value="1.8"/>
-		<set name="basePAtk" value="62971"/>
-		<set name="baseMAtk" value="33663"/>
-		<set name="basePDef" value="3341"/>
-		<set name="baseMDef" value="3250"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseHpMax" value="2602735"/>
+		<set name="baseMpMax" value="4326"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="15515"/>
+		<set name="baseMAtk" value="5309"/>
+		<set name="basePDef" value="3277"/>
+		<set name="baseMDef" value="2142"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseShldDef" value="0"/>
@@ -7013,15 +6947,14 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="90.0"/>
 		<set name="collision_height" value="190.0"/>
-		<!--Npc specific-->
-		<set name="type" value="Minion"/>
+		<set name="type" value="ReflectionBoss"/>
 		<set name="ai_type" value="teredor.Teredor"/>
-		<set name="level" value="87"/>
+		<set name="level" value="88"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="305082624"/>
 		<set name="rewardSp" value="8588328"/>
 		<set name="rewardRp" value="0"/>
-		<set name="aggroRange" value="0"/>
+		<set name="aggroRange" value="600"/>
 		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -7108,7 +7041,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="85"/>
+		<set name="level" value="36"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -7166,7 +7099,7 @@
 		<!--Npc specific-->
 		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="85"/>
+		<set name="level" value="80"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -7250,7 +7183,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Ranger"/>
-		<set name="level" value="85"/>
+		<set name="level" value="79"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -7308,7 +7241,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="85"/>
+		<set name="level" value="79"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -7366,7 +7299,7 @@
 		<!--Npc specific-->
 		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Mystic"/>
-		<set name="level" value="85"/>
+		<set name="level" value="80"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -7454,7 +7387,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="85"/>
+		<set name="level" value="79"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -7512,7 +7445,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="85"/>
+		<set name="level" value="79"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -7570,7 +7503,7 @@
 		<!--Npc specific-->
 		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="85"/>
+		<set name="level" value="72"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -7668,7 +7601,7 @@
 		<!--Npc specific-->
 		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="85"/>
+		<set name="level" value="75"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -7772,7 +7705,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Minion"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="level" value="85"/>
+		<set name="level" value="74"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -7797,20 +7730,20 @@
 	<!--ru name: Эмамбифи-->
 	<npc id="25796" name="Veridan" title="Hell's Warden">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="31431.674"/>
-		<set name="baseMpMax" value="1475.0"/>
-		<set name="baseHpReg" value="122.143"/>
-		<set name="baseMpReg" value="3.0"/>
-		<set name="basePAtk" value="971"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMDef" value="250"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseHpMax" value="1775522"/>
+		<set name="baseMpMax" value="5254"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="21668"/>
+		<set name="baseMAtk" value="8122"/>
+		<set name="basePDef" value="4170"/>
+		<set name="baseMDef" value="2533"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseShldDef" value="0"/>
@@ -7828,7 +7761,7 @@
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="55.0"/>
 		<!--Npc specific-->
-		<set name="type" value="Minion"/>
+		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="98"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -7871,20 +7804,20 @@
 	<!--ru name: Кечи-->
 	<npc id="25797" name="Kechi" title="Flaming">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="373386.071"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseHpReg" value="117.684"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="971"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMDef" value="250"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseHpMax" value="1775522"/>
+		<set name="baseMpMax" value="5254"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="21668"/>
+		<set name="baseMAtk" value="8122"/>
+		<set name="basePDef" value="4170"/>
+		<set name="baseMDef" value="2533"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseShldDef" value="0"/>
@@ -7981,7 +7914,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="39454.502"/>
+		<set name="baseHpMax" value="133516"/>
 		<set name="baseMpMax" value="1314.0"/>
 		<set name="baseHpReg" value="116.469"/>
 		<set name="baseMpReg" value="2.7"/>
@@ -8035,20 +7968,20 @@
 	<!--ru name: Михаэль-->
 	<npc id="25799" name="Michaela" title="Grand Judge">
 		<!--Base character specific-->
-		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="58887.317"/>
-		<set name="baseMpMax" value="1314.0"/>
-		<set name="baseHpReg" value="116.469"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="971"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseMDef" value="250"/>
+		<set name="baseSTR" value="60"/>
+		<set name="baseCON" value="57"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseHpMax" value="1775522"/>
+		<set name="baseMpMax" value="5254"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="21668"/>
+		<set name="baseMAtk" value="8122"/>
+		<set name="basePDef" value="4170"/>
+		<set name="baseMDef" value="2533"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseShldDef" value="0"/>
@@ -8066,7 +7999,7 @@
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="32.0"/>
 		<!--Npc specific-->
-		<set name="type" value="Minion"/>
+		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="level" value="98"/>
 		<set name="baseHpRate" value="1.0"/>

@@ -12,11 +12,7 @@
  */
 package lineage2.gameserver.model;
 
-import java.util.concurrent.ScheduledFuture;
-
-import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.ai.FakePlayerAI;
 import lineage2.gameserver.listener.actor.OnAttackListener;
@@ -44,10 +40,6 @@ public class FakePlayer extends Creature
 	 * Field _listener.
 	 */
 	private final OwnerAttakListener _listener;
-	/**
-	 * Field _broadcastCharInfoTask.
-	 */
-	ScheduledFuture<?> _broadcastCharInfoTask;
 	
 	/**
 	 * Constructor for FakePlayer.
@@ -156,22 +148,9 @@ public class FakePlayer extends Creature
 	}
 	
 	/**
-	 * Method broadcastCharInfo.
-	 */
-	@Override
-	public void broadcastCharInfo()
-	{
-		if (_broadcastCharInfoTask != null)
-		{
-			return;
-		}
-		_broadcastCharInfoTask = ThreadPoolManager.getInstance().schedule(new BroadcastCharInfoTask(), Config.BROADCAST_CHAR_INFO_INTERVAL);
-	}
-	
-	/**
 	 * Method broadcastCharInfoImpl.
 	 */
-	public void broadcastCharInfoImpl()
+	public void broadcastCharInfo()
 	{
 		for (Player player : World.getAroundPlayers(this))
 		{
@@ -224,22 +203,6 @@ public class FakePlayer extends Creature
 		public void onAttack(Creature actor, Creature target)
 		{
 			notifyOwerStartAttak();
-		}
-	}
-	
-	/**
-	 * @author Mobius
-	 */
-	public class BroadcastCharInfoTask extends RunnableImpl
-	{
-		/**
-		 * Method runImpl.
-		 */
-		@Override
-		public void runImpl()
-		{
-			broadcastCharInfoImpl();
-			_broadcastCharInfoTask = null;
 		}
 	}
 }

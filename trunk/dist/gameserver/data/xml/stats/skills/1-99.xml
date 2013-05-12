@@ -163,8 +163,10 @@
 		<set name="criticalRate" val="10"/>
 		<set name="nextAction" val="attack"/>
 		<set name="chargeBoost" val="true"/>
-		<set name="num_charges" val="3"/>
-		<set name="charge_skill_id" val="8"/>
+		<!--<set name="num_charges" val="3"/>-->
+		<!--<set name="charge_skill_id" val="8"/>-->
+		<set name="max_charges" val="3"/> <!-- fixed by Zyth, WunkiaKorps 2013 -->
+		<set name="chargeBoost" val="true"/> <!-- fixed by Zyth, WunkiaKorps 2013 -->
 		<enchant1 levels="30" name="Power">
 			<table name="#power">3225 3254 3283 3312 3340 3369 3398 3427 3456 3484 3513 3542 3571 3600 3628 3657 3686 3715 3744 3772 3801 3830 3859 3888 3916 3945 3974 4003 4032 4061</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -228,8 +230,9 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="criticalRate" val="10"/>
 		<set name="chargeBoost" val="true"/>
-		<set name="num_charges" val="2"/>
-		<set name="charge_skill_id" val="8"/>
+		<!--<set name="num_charges" val="2"/>-->
+		<!--<set name="charge_skill_id" val="8"/>-->
+		<set name="max_charges" val="2"/> <!-- fixed by Zyth, WunkiaKorps 2013 -->
 		<set name="nextAction" val="none"/>
 		<enchant1 levels="30" name="Power">
 			<table name="#power">1843 1860 1876 1893 1909 1925 1942 1958 1975 1991 2008 2024 2041 2057 2074 2090 2107 2123 2139 2156 2172 2189 2205 2222 2238 2255 2271 2288 2304 2321</table>
@@ -296,9 +299,10 @@
 		<set name="itemConsumeCount" val="3"/>
 		<set name="criticalRate" val="10"/>
 		<set name="chargeBoost" val="true"/>
-		<set name="num_charges" val="0"/>
-		<set name="cond_charges" val="2"/>
-		<set name="charge_skill_id" val="8"/>
+		<!--<set name="num_charges" val="0"/>-->
+		<!--<set name="cond_charges" val="2"/>-->
+		<!--<set name="charge_skill_id" val="8"/>-->
+		<set name="max_charges" val="4"/> <!-- fixed by Zyth, WunkiaKorps 2013 -->
 		<enchant1 levels="30" name="Power">
 			<table name="#power">461 465 469 474 478 482 486 490 494 498 502 506 511 515 519 523 527 531 535 539 543 548 552 556 560 564 568 572 576 581</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -605,9 +609,10 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="chargeBoost" val="true"/>
-		<set name="num_charges" val="0"/>
-		<set name="cond_charges" val="0"/>
-		<set name="charge_skill_id" val="50"/>
+		<!--<set name="num_charges" val="0"/>-->
+		<!--<set name="cond_charges" val="0"/>-->
+		<!--<set name="charge_skill_id" val="50"/>-->
+		<set name="max_charges" val="1"/> <!-- fixed by Zyth, WunkiaKorps 2013 -->
 		<set name="itemConsumeId" val="5589"/>
 		<set name="itemConsumeCount" val="2"/>
 		<enchant1 levels="30" name="Power">
@@ -1100,9 +1105,10 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="chargeBoost" val="true"/>
-		<set name="num_charges" val="0"/>
-		<set name="cond_charges" val="0"/>
-		<set name="charge_skill_id" val="50"/>
+		<!--<set name="num_charges" val="0"/>-->
+		<!--<set name="cond_charges" val="0"/>-->
+		<!--<set name="charge_skill_id" val="50"/>-->
+		<set name="max_charges" val="1"/> <!-- fixed by Zyth, WunkiaKorps 2013 -->
 		<set name="itemConsumeId" val="5589"/>
 		<set name="itemConsumeCount" val="2"/>
 		<enchant1 levels="30" name="Power">
@@ -1220,7 +1226,7 @@
 		<set name="corpse" val="true"/>
 		<set name="skillType" val="SWEEP"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<enchant1 levels="30" name="Power"> <!-- FIXME: хз что значит Increased regeneration в описании -->
+		<enchant1 levels="30" name="Power"> <!-- FIXME: Ñ…Ð· Ñ‡Ñ‚Ð¾ Ð·Ð½Ð°Ñ‡Ð¸Ñ‚ Increased regeneration Ð² Ð¾Ð¿Ð¸ÑÐ°Ð½Ð¸Ð¸ -->
 			<table name="#heal">10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155</table>
 			<table name="#heal-count">1</table>
 			<table name="#reuseDelay">0</table>
@@ -1466,8 +1472,9 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="criticalRate" val="10"/>
 		<set name="chargeBoost" val="true"/>
-		<set name="num_charges" val="1"/>
-		<set name="charge_skill_id" val="50"/>
+		<!--<set name="num_charges" val="1"/>-->
+		<!--<set name="charge_skill_id" val="50"/>-->
+		<set name="max_charges" val="1"/> <!-- fixed by Zyth, WunkiaKorps 2013 -->
 		<enchant1 levels="30" name="Power">
 			<table name="#power">2151 2170 2189 2209 2228 2247 2266 2285 2305 2324 2343 2362 2381 2401 2420 2439 2458 2477 2497 2516 2535 2554 2573 2593 2612 2631 2650 2670 2689 2708</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -1633,7 +1640,7 @@
 		<set name="trait" val="DERANGEMENT"/>
 		<set name="saveVs" val="MEN"/>
 		<for>
-			<effect count="3" name="Fear" stackOrder="-1" stackType="Fear" time="5" val="0"/>
+			<effect count="10" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0"/>
 		</for>
 	</skill>
 	<skill id="67" levels="7" name="Summon Life Cubic">

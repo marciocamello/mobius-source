@@ -4,7 +4,7 @@
     <instance id="11" name="Nornil's Garden" maxChannels="20" collapseIfEmpty="10" timelimit="120">
         <collapse on-party-dismiss="true" timer="60"/>
         <level min="15" max="22"/>
-        <party min="2" max="9"/>
+        <party min="2" max="7"/>
         <return loc="-84725 60027 -2576"/>
         <teleport loc="-111188 74555 -12432"/>
         <remove itemId="0" count="0" necessary="false"/>

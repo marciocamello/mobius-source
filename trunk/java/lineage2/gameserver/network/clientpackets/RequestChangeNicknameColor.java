@@ -87,7 +87,7 @@ public class RequestChangeNicknameColor extends L2GameClientPacket
 		{
 			activeChar.setTitleColor(COLORS[_colorNum]);
 			activeChar.setTitle(_title);
-			activeChar.broadcastUserInfo(true);
+			activeChar.broadcastUserInfo();
 		}
 	}
 }

@@ -939,14 +939,11 @@
     <!-- none -->
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="power" val="30"/>
+		<set name="power" val="5000"/>
 		<set name="magicLevel" val="1"/>
-		<set name="altUse" val="true"/>
-		<set name="itemConsumeId" val="13033"/>
-		<set name="itemConsumeCount" val="1"/>
 		<set name="isHandler" val="true"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="HEAL_PERCENT"/>
+		<set name="skillType" val="HEAL_HP_CP"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="2593" levels="1" name="Bow/Crossbow Attack Resistance Potion">

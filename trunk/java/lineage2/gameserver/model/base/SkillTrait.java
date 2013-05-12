@@ -114,6 +114,74 @@ public enum SkillTrait
 	 */
 	PHYSICAL_BLOCKADE,
 	/**
+	 * Field AIRJOKE.
+	 */
+	AIRJOKE
+	{
+		@Override
+		public final double calcVuln(Env env)
+		{
+			return env.target.calcStat(Stats.AIRJOKE_RESIST, env.character, env.skill);
+		}
+		
+		@Override
+		public final double calcProf(Env env)
+		{
+			return env.character.calcStat(Stats.AIRJOKE_POWER, env.target, env.skill);
+		}
+	},
+	/**
+	 * Field MUTATE.
+	 */
+	MUTATE
+	{
+		@Override
+		public final double calcVuln(Env env)
+		{
+			return env.target.calcStat(Stats.MUTATE_RESIST, env.character, env.skill);
+		}
+		
+		@Override
+		public final double calcProf(Env env)
+		{
+			return env.character.calcStat(Stats.MUTATE_POWER, env.target, env.skill);
+		}
+	},
+	/**
+	 * Field DISARM.
+	 */
+	DISARM
+	{
+		@Override
+		public final double calcVuln(Env env)
+		{
+			return env.target.calcStat(Stats.DISARM_RESIST, env.character, env.skill);
+		}
+		
+		@Override
+		public final double calcProf(Env env)
+		{
+			return env.character.calcStat(Stats.DISARM_POWER, env.target, env.skill);
+		}
+	},
+	/**
+	 * Field PULL.
+	 */
+	PULL
+	{
+		@Override
+		public final double calcVuln(Env env)
+		{
+			return env.target.calcStat(Stats.PULL_RESIST, env.character, env.skill);
+		}
+		
+		@Override
+		public final double calcProf(Env env)
+		{
+			return env.character.calcStat(Stats.PULL_POWER, env.target, env.skill);
+		}
+	},
+	/**
 	 * Field POISON.
 	 */
 	POISON

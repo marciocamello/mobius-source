@@ -121,6 +121,11 @@ public class EffectsDAO
 					}
 					effect.setCount(effectCount);
 					effect.setPeriod(effectCount == 1 ? duration - effectCurTime : duration);
+					if(et.getEffectType() == EffectType.ServitorShare && playable.isPlayer())
+					{
+						playable.getPlayer().setServitorShareRestore(true, effect);
+						continue;
+					}
 					playable.getEffectList().addEffect(effect);
 				}
 			}

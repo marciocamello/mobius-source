@@ -122,7 +122,10 @@ public class Tasks
 		/**
 		 * Field olympiad_nobles.
 		 */
-		olympiad_nobles("DELETE FROM olympiad_nobles WHERE olympiad_nobles.char_id NOT IN (SELECT obj_Id FROM characters);");
+		olympiad_nobles("DELETE FROM olympiad_nobles WHERE olympiad_nobles.char_id NOT IN (SELECT obj_Id FROM characters);"),
+		//FIX FOR AWAKENING CLASS INTO OLYMPIAD NOBLE TABLE.
+		olympiad_nobles_update("UPDATE olympiad_nobles SET class_id = (select class_id from character_subclasses WHERE olympiad_nobles.char_id=character_subclasses.char_obj_id AND type=0) WHERE EXISTS (select class_id from character_subclasses WHERE olympiad_nobles.char_id=character_subclasses.char_obj_id AND type=0);");
+		//----------
 		/**
 		 * Field totalUpdated.
 		 */

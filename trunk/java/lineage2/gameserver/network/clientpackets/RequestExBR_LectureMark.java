@@ -64,7 +64,7 @@ public class RequestExBR_LectureMark extends L2GameClientPacket
 			case EVANGELIST_MARK:
 			case OFF_MARK:
 				player.setLectureMark(_mark);
-				player.broadcastUserInfo(true);
+				player.broadcastUserInfo();
 				break;
 		}
 	}

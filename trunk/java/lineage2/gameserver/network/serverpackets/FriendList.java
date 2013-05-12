@@ -1,44 +1,25 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package lineage2.gameserver.network.serverpackets;
+
+import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.actor.instances.player.Friend;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.actor.instances.player.Friend;
-
 /**
- * @author Mobius
- * @version $Revision: 1.0 $
+ * @author VISTALL
+ * @date 23:37/22.03.2011
  */
 public class FriendList extends L2GameServerPacket
 {
-	/**
-	 * Field _friends.
-	 */
 	private List<FriendInfo> _friends = Collections.emptyList();
-	
-	/**
-	 * Constructor for FriendList.
-	 * @param player Player
-	 */
+
 	public FriendList(Player player)
 	{
 		Map<Integer, Friend> friends = player.getFriendList().getList();
-		_friends = new ArrayList<>(friends.size());
+		_friends = new ArrayList<FriendInfo>(friends.size());
 		for (Map.Entry<Integer, Friend> entry : friends.entrySet())
 		{
 			Friend friend = entry.getValue();
@@ -51,10 +32,7 @@ public class FriendList extends L2GameServerPacket
 			_friends.add(f);
 		}
 	}
-	
-	/**
-	 * Method writeImpl.
-	 */
+
 	@Override
 	protected void writeImpl()
 	{
@@ -70,39 +48,13 @@ public class FriendList extends L2GameServerPacket
 			writeD(f.level);
 		}
 	}
-	
-	/**
-	 * @author Mobius
-	 */
+
 	private class FriendInfo
 	{
-		/**
-		 * Constructor for FriendInfo.
-		 */
-		public FriendInfo()
-		{
-			// TODO Auto-generated constructor stub
-		}
-		
-		/**
-		 * Field name.
-		 */
-		String name;
-		/**
-		 * Field objectId.
-		 */
-		int objectId;
-		/**
-		 * Field online.
-		 */
-		boolean online;
-		/**
-		 * Field level.
-		 */
-		int level;
-		/**
-		 * Field classId.
-		 */
-		int classId;
+		private String name;
+		private int objectId;
+		private boolean online;
+		private int level;
+		private int classId;
 	}
 }

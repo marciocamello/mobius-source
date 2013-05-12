@@ -648,10 +648,18 @@
 	</skill>
 	<skill id="14285" levels="1" name="Octavis's Arrow Shaft">
     <!-- Octavis's arrow shaft. Throw a spear on the floor to inflict powerful attack damage. -->
-		<set name="icon" val="icon.skill0507"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1000"/>
+        <set name="power" val="50000"/>
+        <set name="coolTime" val="10"/>
+        <set name="effectRange" val="1000"/>
+        <set name="hitTime" val="5000"/>
+        <set name="magicLvl" val="0"/>
+        <set name="mpConsume" val="50"/>
+        <set name="nextActionAttack" val="true"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="reuseDelay" val="5000"/>
+        <set name="skillType" val="PDAM"/>
+        <set name="target" val="TARGET_ONE"/>
 	</skill>
 	<skill id="14286" levels="1" name="Teleport">
     <!-- none -->

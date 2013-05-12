@@ -61,7 +61,7 @@ public enum ClassId
 	/**
 	 * Field HAWKEYE.
 	 */
-	HAWKEYE(9, ClassType.FIGHTER, Race.human, ROGUE, ClassLevel.Third, ClassType2.Rogue),
+	HAWKEYE(9, ClassType.FIGHTER, Race.human, ROGUE, ClassLevel.Third, ClassType2.Archer),
 	/**
 	 * Field HUMAN_MAGE.
 	 */
@@ -121,7 +121,7 @@ public enum ClassId
 	/**
 	 * Field SILVER_RANGER.
 	 */
-	SILVER_RANGER(24, ClassType.FIGHTER, Race.elf, ELVEN_SCOUT, ClassLevel.Third, ClassType2.Rogue),
+	SILVER_RANGER(24, ClassType.FIGHTER, Race.elf, ELVEN_SCOUT, ClassLevel.Third, ClassType2.Archer),
 	/**
 	 * Field ELVEN_MAGE.
 	 */
@@ -173,7 +173,7 @@ public enum ClassId
 	/**
 	 * Field PHANTOM_RANGER.
 	 */
-	PHANTOM_RANGER(37, ClassType.FIGHTER, Race.darkelf, ASSASIN, ClassLevel.Third, ClassType2.Rogue),
+	PHANTOM_RANGER(37, ClassType.FIGHTER, Race.darkelf, ASSASIN, ClassLevel.Third, ClassType2.Archer),
 	/**
 	 * Field DARK_MAGE.
 	 */
@@ -245,7 +245,7 @@ public enum ClassId
 	/**
 	 * Field BOUNTY_HUNTER.
 	 */
-	BOUNTY_HUNTER(55, ClassType.FIGHTER, Race.dwarf, SCAVENGER, ClassLevel.Third, ClassType2.Warrior),
+	BOUNTY_HUNTER(55, ClassType.FIGHTER, Race.dwarf, SCAVENGER, ClassLevel.Third, ClassType2.Rogue),
 	/**
 	 * Field ARTISAN.
 	 */
@@ -393,7 +393,7 @@ public enum ClassId
 	/**
 	 * Field SAGITTARIUS.
 	 */
-	SAGITTARIUS(92, ClassType.FIGHTER, Race.human, HAWKEYE, ClassLevel.Fourth, ClassType2.Rogue),
+	SAGITTARIUS(92, ClassType.FIGHTER, Race.human, HAWKEYE, ClassLevel.Fourth, ClassType2.Archer),
 	/**
 	 * Field ADVENTURER.
 	 */
@@ -433,7 +433,7 @@ public enum ClassId
 	/**
 	 * Field MOONLIGHT_SENTINEL.
 	 */
-	MOONLIGHT_SENTINEL(102, ClassType.FIGHTER, Race.elf, SILVER_RANGER, ClassLevel.Fourth, ClassType2.Rogue),
+	MOONLIGHT_SENTINEL(102, ClassType.FIGHTER, Race.elf, SILVER_RANGER, ClassLevel.Fourth, ClassType2.Archer),
 	/**
 	 * Field MYSTIC_MUSE.
 	 */
@@ -461,7 +461,7 @@ public enum ClassId
 	/**
 	 * Field GHOST_SENTINEL.
 	 */
-	GHOST_SENTINEL(109, ClassType.FIGHTER, Race.darkelf, PHANTOM_RANGER, ClassLevel.Fourth, ClassType2.Rogue),
+	GHOST_SENTINEL(109, ClassType.FIGHTER, Race.darkelf, PHANTOM_RANGER, ClassLevel.Fourth, ClassType2.Archer),
 	/**
 	 * Field STORM_SCREAMER.
 	 */
@@ -493,7 +493,7 @@ public enum ClassId
 	/**
 	 * Field FORTUNE_SEEKER.
 	 */
-	FORTUNE_SEEKER(117, ClassType.FIGHTER, Race.dwarf, BOUNTY_HUNTER, ClassLevel.Fourth, ClassType2.Warrior),
+	FORTUNE_SEEKER(117, ClassType.FIGHTER, Race.dwarf, BOUNTY_HUNTER, ClassLevel.Fourth, ClassType2.Rogue),
 	/**
 	 * Field MAESTRO.
 	 */
@@ -537,15 +537,15 @@ public enum ClassId
 	/**
 	 * Field M_SOUL_BREAKER.
 	 */
-	M_SOUL_BREAKER(128, ClassType.FIGHTER, Race.kamael, TROOPER, ClassLevel.Third, ClassType2.Warrior),
+	M_SOUL_BREAKER(128, ClassType.FIGHTER, Race.kamael, TROOPER, ClassLevel.Third, ClassType2.Wizard),
 	/**
 	 * Field F_SOUL_BREAKER.
 	 */
-	F_SOUL_BREAKER(129, ClassType.FIGHTER, Race.kamael, WARDER, ClassLevel.Third, ClassType2.Warrior),
+	F_SOUL_BREAKER(129, ClassType.FIGHTER, Race.kamael, WARDER, ClassLevel.Third, ClassType2.Wizard),
 	/**
 	 * Field ARBALESTER.
 	 */
-	ARBALESTER(130, ClassType.FIGHTER, Race.kamael, WARDER, ClassLevel.Third, ClassType2.Rogue),
+	ARBALESTER(130, ClassType.FIGHTER, Race.kamael, WARDER, ClassLevel.Third, ClassType2.Archer),
 	/**
 	 * Field DOOMBRINGER.
 	 */
@@ -553,15 +553,15 @@ public enum ClassId
 	/**
 	 * Field M_SOUL_HOUND.
 	 */
-	M_SOUL_HOUND(132, ClassType.FIGHTER, Race.kamael, M_SOUL_BREAKER, ClassLevel.Fourth, ClassType2.Warrior),
+	M_SOUL_HOUND(132, ClassType.FIGHTER, Race.kamael, M_SOUL_BREAKER, ClassLevel.Fourth, ClassType2.Wizard),
 	/**
 	 * Field F_SOUL_HOUND.
 	 */
-	F_SOUL_HOUND(133, ClassType.FIGHTER, Race.kamael, F_SOUL_BREAKER, ClassLevel.Fourth, ClassType2.Warrior),
+	F_SOUL_HOUND(133, ClassType.FIGHTER, Race.kamael, F_SOUL_BREAKER, ClassLevel.Fourth, ClassType2.Wizard),
 	/**
 	 * Field TRICKSTER.
 	 */
-	TRICKSTER(134, ClassType.FIGHTER, Race.kamael, ARBALESTER, ClassLevel.Fourth, ClassType2.Rogue),
+	TRICKSTER(134, ClassType.FIGHTER, Race.kamael, ARBALESTER, ClassLevel.Fourth, ClassType2.Archer),
 	/**
 	 * Field INSPECTOR.
 	 */
@@ -593,7 +593,7 @@ public enum ClassId
 	/**
 	 * Field yulArcher.
 	 */
-	yulArcher(142, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Rogue),
+	yulArcher(142, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Archer),
 	/**
 	 * Field feohWizard.
 	 */
@@ -825,10 +825,20 @@ public enum ClassId
 	{
 		return (sex == 0) || (_parent2 == null) ? _parent : _parent2;
 	}
-	
 	static
 	{
 		VALUES = values();
+	}
+
+
+	/**
+	 * Method getParent.
+	 * @param sex int
+	 * @return ClassId
+	 */
+	public final Integer getParentId()
+	{
+		return _parent.getId();
 	}
 	
 	/**

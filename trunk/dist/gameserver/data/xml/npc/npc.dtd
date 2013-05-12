@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!ELEMENT list (npc)*>
-<!ELEMENT npc (set|faction|skills|equip|rewardlist|teach_classes|minions|teleportlist|absorblist|ai_params|attributes)*>
+<!ELEMENT npc (set|faction|skills|equip|rewardlist|teach_classes|minions|teleportlist|absorblist|ai_params|attributes|walker_route|random_actions)*>
 <!ATTLIST npc
 	id CDATA #REQUIRED
 	template_id CDATA #IMPLIED
@@ -80,3 +80,25 @@
 <!ATTLIST defence
 	attribute CDATA #REQUIRED
 	value CDATA #REQUIRED>
+<!ELEMENT walker_route (route_point)*>
+<!ATTLIST walker_route
+	id CDATA #REQUIRED
+	type CDATA #IMPLIED>
+<!ELEMENT route_point (#PCDATA)>
+<!ATTLIST route_point
+	x CDATA #REQUIRED
+	y CDATA #REQUIRED
+	z CDATA #REQUIRED
+	phrase_id CDATA #IMPLIED
+	social_action_id CDATA #IMPLIED
+	delay CDATA #IMPLIED
+	running CDATA #IMPLIED>
+<!ELEMENT random_actions (action)*>
+<!ATTLIST random_actions
+	random_order CDATA #IMPLIED>
+<!ELEMENT action (#PCDATA)>
+<!ATTLIST action
+	id CDATA #REQUIRED
+	phrase_id CDATA #IMPLIED
+	social_action_id CDATA #IMPLIED
+	delay CDATA #IMPLIED>

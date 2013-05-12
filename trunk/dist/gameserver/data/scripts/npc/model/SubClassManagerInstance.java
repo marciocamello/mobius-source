@@ -12,21 +12,37 @@
  */
 package npc.model;
 
+import gnu.trove.map.hash.TIntIntHashMap;
+
 import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.StringTokenizer;
+import java.util.Map.Entry;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import lineage2.gameserver.Config;
+import lineage2.gameserver.cache.Msg;
+import lineage2.gameserver.instancemanager.AwakingManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SubClass;
 import lineage2.gameserver.model.actor.instances.player.SubClassInfo;
 import lineage2.gameserver.model.actor.instances.player.SubClassList;
 import lineage2.gameserver.model.base.AcquireType;
 import lineage2.gameserver.model.base.ClassId;
-import lineage2.gameserver.model.base.Race;
+import lineage2.gameserver.model.base.ClassLevel;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.tables.DualClassTable;
 import lineage2.gameserver.tables.SubClassTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.CertificationFunctions;
@@ -34,8 +50,6 @@ import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.ItemFunctions;
 
 /**
- * @author Mobius
- * @version $Revision: 1.0 $
  */
 public final class SubClassManagerInstance extends NpcInstance
 {
@@ -48,6 +62,15 @@ public final class SubClassManagerInstance extends NpcInstance
 	 */
 	private static final int CERTIFICATE_ID = 30433;
 	
+	private static TIntIntHashMap _DESTINYCHANGECLASSES = new TIntIntHashMap(8);
+		
+	private static Map <Integer, Double> _REAWAKENINGCOST = new HashMap<Integer, Double>();
+			
+	/**
+	 * Field _log.
+	 */
+	private static Logger _log = LoggerFactory.getLogger(SubClassManagerInstance.class);
+		
 	/**
 	 * Constructor for SubClassManagerInstance.
 	 * @param objectId int
@@ -56,6 +79,27 @@ public final class SubClassManagerInstance extends NpcInstance
 	public SubClassManagerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
+		_DESTINYCHANGECLASSES.clear();
+		_REAWAKENINGCOST.clear();
+		_DESTINYCHANGECLASSES.put(139,90);
+		_DESTINYCHANGECLASSES.put(140,88);
+		_DESTINYCHANGECLASSES.put(141,93);
+		_DESTINYCHANGECLASSES.put(142,92);
+		_DESTINYCHANGECLASSES.put(143,94);
+		_DESTINYCHANGECLASSES.put(144,98);
+		_DESTINYCHANGECLASSES.put(145,96);
+		_DESTINYCHANGECLASSES.put(146,97);
+		_REAWAKENINGCOST.put(85, Config.ALT_GAME_DUALCLASS_REAWAKENING_COST[0]);
+		_REAWAKENINGCOST.put(86, Config.ALT_GAME_DUALCLASS_REAWAKENING_COST[1]);
+		_REAWAKENINGCOST.put(87, Config.ALT_GAME_DUALCLASS_REAWAKENING_COST[2]);
+		_REAWAKENINGCOST.put(88, Config.ALT_GAME_DUALCLASS_REAWAKENING_COST[3]);
+		_REAWAKENINGCOST.put(89, Config.ALT_GAME_DUALCLASS_REAWAKENING_COST[4]);
+		_REAWAKENINGCOST.put(90, Config.ALT_GAME_DUALCLASS_REAWAKENING_COST[5]);
+		_REAWAKENINGCOST.put(91, Config.ALT_GAME_DUALCLASS_REAWAKENING_COST[6]);
+		_REAWAKENINGCOST.put(92, Config.ALT_GAME_DUALCLASS_REAWAKENING_COST[7]);
+		_REAWAKENINGCOST.put(93, Config.ALT_GAME_DUALCLASS_REAWAKENING_COST[8]);
+		_REAWAKENINGCOST.put(94, Config.ALT_GAME_DUALCLASS_REAWAKENING_COST[9]);
+		_REAWAKENINGCOST = sortByLevels(_REAWAKENINGCOST); 
 	}
 	
 	/**
@@ -97,11 +141,6 @@ public final class SubClassManagerInstance extends NpcInstance
 			String cmd2 = st.nextToken();
 			if (cmd2.equalsIgnoreCase("add"))
 			{
-				if (!checkSubClassQuest(player))
-				{
-					showChatWindow(player, "default/" + getNpcId() + "-no_quest.htm");
-					return;
-				}
 				if (player.getSubClassList().size() >= SubClassList.MAX_SUB_COUNT)
 				{
 					showChatWindow(player, "default/" + getNpcId() + "-add_no_limit.htm");
@@ -121,8 +160,8 @@ public final class SubClassManagerInstance extends NpcInstance
 					StringBuilder availSubList = new StringBuilder();
 					Set<ClassId> availSubClasses = SubClassInfo.getAvailableSubClasses(player, null, null, true);
 					for (ClassId subClsId : availSubClasses)
-					{
-						availSubList.append("<a action=\"bypass -h npc_%objectId%_subclass_add_" + subClsId.getId() + "\">" + HtmlUtils.htmlClassName(subClsId.getId()) + "</a><br>");
+					{						
+						availSubList.append("<a action=\"bypass -h npc_%objectId%_subclass_add_" + subClsId.getId() + "\">" + HtmlUtils.htmlClassName(subClsId.getId())  + "/" + HtmlUtils.htmlClassName(getChildClass(subClsId.getId())) + "</a><br>");
 					}
 					showChatWindow(player, "default/" + getNpcId() + "-add_list.htm", "<?ADD_SUB_LIST?>", availSubList.toString());
 					return;
@@ -130,7 +169,7 @@ public final class SubClassManagerInstance extends NpcInstance
 				int addSubClassId = Integer.parseInt(st.nextToken());
 				if (!st.hasMoreTokens())
 				{
-					String addSubConfirm = "<a action=\"bypass -h npc_%objectId%_subclass_add_" + addSubClassId + "_confirm\">" + HtmlUtils.htmlClassName(addSubClassId) + "</a>";
+					String addSubConfirm = "<a action=\"bypass -h npc_%objectId%_subclass_add_" + addSubClassId + "_confirm\">" + HtmlUtils.htmlClassName(addSubClassId) + "/" + HtmlUtils.htmlClassName(getChildClass(addSubClassId)) + "</a>";
 					showChatWindow(player, "default/" + getNpcId() + "-add_confirm.htm", "<?ADD_SUB_CONFIRM?>", addSubConfirm);
 					return;
 				}
@@ -142,8 +181,10 @@ public final class SubClassManagerInstance extends NpcInstance
 						player.sendPacket(SystemMsg.C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_SUBCLASS_CHARACTER_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD);
 						return;
 					}
-					if (player.addSubClass(addSubClassId, true, 0))
+					if (player.addSubClass(addSubClassId, true, 0, 0, false, 0))
 					{
+						player.rewardSkills(false,true);
+						player.sendSkillList();
 						player.sendPacket(SystemMsg.THE_NEW_SUBCLASS_HAS_BEEN_ADDED);
 						showChatWindow(player, "default/" + getNpcId() + "-add_success.htm");
 						return;
@@ -167,12 +208,7 @@ public final class SubClassManagerInstance extends NpcInstance
 			}
 			else if (cmd2.equalsIgnoreCase("cancel"))
 			{
-				if (!checkSubClassQuest(player) && !player.getSubClassList().haveSubClasses())
-				{
-					showChatWindow(player, "default/" + getNpcId() + "-no_quest.htm");
-					return;
-				}
-				if (checkSubClassQuest(player) && !player.getSubClassList().haveSubClasses())
+				if (!player.getSubClassList().haveSubClasses())
 				{
 					showChatWindow(player, "default/" + getNpcId() + "-cancel_no_subs.htm");
 					return;
@@ -196,7 +232,7 @@ public final class SubClassManagerInstance extends NpcInstance
 							continue;
 						}
 						int classId = sub.getClassId();
-						mySubList.append("<a action=\"bypass -h npc_%objectId%_subclass_cancel_" + classId + "\">" + HtmlUtils.htmlClassName(classId) + "</a><br>");
+						mySubList.append("<a action=\"bypass -h npc_%objectId%_subclass_cancel_" + classId + "\">" + HtmlUtils.htmlClassName(classId) + "/" + HtmlUtils.htmlClassName(getChildClass(classId)) + "</a><br>");
 					}
 					showChatWindow(player, "default/" + getNpcId() + "-cancel_list.htm", "<?CANCEL_SUB_LIST?>", mySubList.toString());
 					return;
@@ -208,7 +244,7 @@ public final class SubClassManagerInstance extends NpcInstance
 					int[] availSubClasses = SubClassTable.getInstance().getAvailableSubClasses(player, cancelClassId);
 					for (int subClsId : availSubClasses)
 					{
-						availSubList.append("<a action=\"bypass -h npc_%objectId%_subclass_cancel_" + cancelClassId + "_" + subClsId + "\">" + HtmlUtils.htmlClassName(subClsId) + "</a><br>");
+						availSubList.append("<a action=\"bypass -h npc_%objectId%_subclass_cancel_" + cancelClassId + "_" + subClsId + "\">" + HtmlUtils.htmlClassName(subClsId) + "/" + HtmlUtils.htmlClassName(getChildClass(subClsId)) + "</a><br>");
 					}
 					showChatWindow(player, "default/" + getNpcId() + "-cancel_change_list.htm", "<?CANCEL_CHANGE_SUB_LIST?>", availSubList.toString());
 					return;
@@ -216,15 +252,17 @@ public final class SubClassManagerInstance extends NpcInstance
 				int newSubClassId = Integer.parseInt(st.nextToken());
 				if (!st.hasMoreTokens())
 				{
-					String newSubConfirm = "<a action=\"bypass -h npc_%objectId%_subclass_cancel_" + cancelClassId + "_" + newSubClassId + "_confirm\">" + HtmlUtils.htmlClassName(newSubClassId) + "</a>";
+					String newSubConfirm = "<a action=\"bypass -h npc_%objectId%_subclass_cancel_" + cancelClassId + "_" + newSubClassId + "_confirm\">" + HtmlUtils.htmlClassName(newSubClassId) + "/" + HtmlUtils.htmlClassName(getChildClass(newSubClassId)) +"</a>";
 					showChatWindow(player, "default/" + getNpcId() + "-cancel_confirm.htm", "<?CANCEL_SUB_CONFIRM?>", newSubConfirm);
 					return;
 				}
 				String cmd3 = st.nextToken();
 				if (cmd3.equalsIgnoreCase("confirm"))
 				{
-					if (player.modifySubClass(cancelClassId, newSubClassId))
+					if (player.modifySubClass(cancelClassId, newSubClassId,false))
 					{
+						player.rewardSkills(false,true);
+						player.sendSkillList();
 						player.sendPacket(SystemMsg.THE_NEW_SUBCLASS_HAS_BEEN_ADDED);
 						showChatWindow(player, "default/" + getNpcId() + "-add_success.htm");
 						return;
@@ -233,33 +271,153 @@ public final class SubClassManagerInstance extends NpcInstance
 					return;
 				}
 			}
-			else if (cmd2.equalsIgnoreCase("CertificationList"))
+			else if (cmd2.equalsIgnoreCase("reawakendualclass"))
 			{
-				CertificationFunctions.showCertificationList(this, player);
-			}
-			else if (cmd2.equalsIgnoreCase("GetCertification65"))
-			{
-				CertificationFunctions.getCertification65(this, player);
-			}
-			else if (cmd2.equalsIgnoreCase("GetCertification70"))
-			{
-				CertificationFunctions.getCertification70(this, player);
-			}
-			else if (cmd2.equalsIgnoreCase("GetCertification75"))
-			{
-				CertificationFunctions.getCertification75(this, player);
-			}
-			else if (cmd2.equalsIgnoreCase("GetCertification80"))
-			{
-				CertificationFunctions.getCertification80(this, player);
+				if (!player.getActiveSubClass().isDouble() || !player.isAwaking() || !(player.getLevel() > 84))
+				{
+					showChatWindow(player, "default/" + getNpcId() + "-reawaken_nodual.htm");
+					return;
+				}
+				if (!st.hasMoreTokens())
+				{
+					StringBuilder costList = new StringBuilder();
+					for(Iterator <Entry<Integer,Double>> i = _REAWAKENINGCOST.entrySet().iterator(); i.hasNext();)
+					{
+						Map.Entry<Integer,Double> e = (Map.Entry<Integer, Double>)i.next();
+						costList.append("<tr><td><center><font color=\"LEVEL\">"+ e.getKey() + (e.getKey() == 94 ? "+" : " ") + "</font></center></td><td><center><font color=\"LEVEL\">" + e.getValue() + " Million</font></center></td></tr>");
+					}
+					showChatWindow(player, "default/" + getNpcId() + "-reawaken_cost.htm","<?COST?>", costList.toString());
+					return;
+				}
+				st.nextToken();
+				if (!st.hasMoreTokens())
+				{
+					StringBuilder availSubList = new StringBuilder();
+					int[] availDualAwakenClasses = DualClassTable.getInstance().getAvailableDualClasses(player, player.getActiveSubClass().getClassId());
+					for (int subClsId : availDualAwakenClasses)
+					{
+						availSubList.append("<a action=\"bypass -h npc_%objectId%_subclass_reawakendualclass_select_" + subClsId + "\">" + HtmlUtils.htmlClassName(subClsId) + "</a><br>");
+					}
+					showChatWindow(player, "default/" + getNpcId() + "-reawaken_list.htm", "<?CANCEL_CHANGE_SUB_LIST?>", availSubList.toString());
+					return;
+				}
+				int newSubClassId = Integer.parseInt(st.nextToken());
+				if (!st.hasMoreTokens())
+				{
+					String newSubConfirm = "<a action=\"bypass -h npc_%objectId%_subclass_reawakendualclass_select_" + newSubClassId + "_confirm\">" + HtmlUtils.htmlClassName(newSubClassId) + "</a>";
+					showChatWindow(player, "default/" + getNpcId() + "-reawaken_confirm.htm", "<?CANCEL_SUB_CONFIRM?>", newSubConfirm);
+					return;
+				}
+				String cmd3 = st.nextToken();
+				if (cmd3.equalsIgnoreCase("confirm"))
+				{
+					long reawakeningCost = Math.round(_REAWAKENINGCOST.get(player.getLevel() < 95 ? player.getLevel() : 94) * 1000000);
+					if(player.getInventory().getAdena() < reawakeningCost)
+					{
+						player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+						return;
+					}
+					player.getInventory().reduceAdena(reawakeningCost);
+					int previousClassId = player.getActiveSubClass().getClassId();
+					CertificationFunctions.cancelCertification(this, player, true, true);
+					int humanSkillClassId = _DESTINYCHANGECLASSES.get(newSubClassId);
+					if (player.modifySubClass(previousClassId, newSubClassId,true))
+					{
+						AwakingManager.getInstance().onTransferOnlyRemoveSkills(player, newSubClassId, humanSkillClassId);
+						AwakingManager.getInstance().giveItems(player, previousClassId, newSubClassId);
+						player.sendPacket(SystemMsg.THE_NEW_SUBCLASS_HAS_BEEN_ADDED);
+						showChatWindow(player, "default/" + getNpcId() + "-add_success.htm");
+						player.rewardSkills(false,true);
+						player.sendSkillList();
+						return;
+					}
+					showChatWindow(player, "default/" + getNpcId() + "-add_error.htm");
+					return;
+				}
 			}
 			else if (cmd2.equalsIgnoreCase("CertificationSkillList"))
 			{
-				showSertifikationSkillList(player, AcquireType.CERTIFICATION);
+				if(CertificationFunctions.checkConditionSkillList(this, player, 65))
+					showTransformationSkillList(player, AcquireType.CERTIFICATION);
+				return;
+			}
+			else if (cmd2.equalsIgnoreCase("DualCertificationSkillList"))
+			{
+				if(CertificationFunctions.checkConditionSkillList(this, player, 85))
+					showTransformationSkillList(player, AcquireType.DUAL_CERTIFICATION);
+				return;
+			}
+			else if (cmd2.equalsIgnoreCase("CancelRequest"))
+			{
+				showChatWindow(player, "default/" + getNpcId() + "-cancelrequest.htm");
+				return;
+			}
+			else if (cmd2.equalsIgnoreCase("CertificationList"))
+			{
+				if(!st.hasMoreTokens())
+				{
+					return;
+				}
+				int levelCertification = Integer.parseInt(st.nextToken());	
+				CertificationFunctions.showCertificationList(this, player, levelCertification);
+			}
+			else if (cmd2.equalsIgnoreCase("GetCertification"))
+			{
+				if(!st.hasMoreTokens())
+				{
+					return;
+				}
+				int levelCertification = Integer.parseInt(st.nextToken());				
+				if(((levelCertification >= 65 && levelCertification <= 95) && levelCertification % 5 == 0) || levelCertification == 99)
+				{
+					CertificationFunctions.getInstance();
+					CertificationFunctions.getCertification(levelCertification, this, player);
+				}
+				else
+				{
+					_log.info("Condition for select level are incorrect");
+					return;
+				}				
+			}
+			else if (cmd2.equalsIgnoreCase("confirmCertification"))
+			{
+				if(!st.hasMoreTokens())
+				{
+					return;
+				}
+				int levelCertification = Integer.parseInt(st.nextToken());
+				if(((levelCertification >= 65 && levelCertification <= 95) && levelCertification % 5 == 0) || levelCertification == 99)
+				{
+					CertificationFunctions.confirmCertification(levelCertification, this, player);
+				}
+				else
+				{
+					_log.info("Condition level are incorrect");
+					return;
+				}				
+				
 			}
 			else if (cmd2.equalsIgnoreCase("CertificationCancel"))
 			{
-				CertificationFunctions.cancelCertification(this, player);
+				if(!st.hasMoreTokens())
+				{
+					showChatWindow(player, "default/" + getNpcId() + "-certification_cancel.htm", "<?COST?>", Config.ALT_GAME_RESET_CERTIFICATION_COST / 1000000 );
+					return;
+				}
+				boolean confirm = Boolean.parseBoolean(st.nextToken());
+				if(confirm)
+					CertificationFunctions.cancelCertification(this, player, false, false);
+			}
+			else if (cmd2.equalsIgnoreCase("DualCertificationCancel"))
+			{
+				if(!st.hasMoreTokens())
+				{
+					showChatWindow(player, "default/" + getNpcId() + "-dualcertification_cancel.htm", "<?COST?>", Config.ALT_GAME_RESET_DUALCERTIFICATION_COST / 1000000);
+					return;
+				}
+				boolean confirm = Boolean.parseBoolean(st.nextToken());
+				if(confirm)
+					CertificationFunctions.cancelCertification(this, player, true, false);
 			}
 		}
 		else
@@ -286,25 +444,34 @@ public final class SubClassManagerInstance extends NpcInstance
 		showAcquireList(type, player);
 	}
 	
-	/**
-	 * Method checkSubClassQuest.
-	 * @param player Player
-	 * @return boolean
-	 */
-	private static boolean checkSubClassQuest(Player player)
+	@SuppressWarnings("unchecked")
+	private static <K extends Comparable, V extends Comparable> Map <K,V> sortByLevels(Map<K,V> map)
 	{
-		if (!Config.ALT_GAME_SUBCLASS_WITHOUT_QUESTS)
+		List <K> keys = new LinkedList<K>(map.keySet());
+		Collections.sort(keys);
+		Map <K,V> sortedMap = new LinkedHashMap<K,V>();
+		for(K key: keys)
 		{
-			if (player.isQuestCompleted("_234_FatesWhisper"))
-			{
-				if (player.getRace() == Race.kamael)
-				{
-					return player.isQuestCompleted("_236_SeedsOfChaos");
-				}
-				return player.isQuestCompleted("_235_MimirsElixir");
-			}
-			return false;
+			sortedMap.put(key, map.get(key));
 		}
-		return true;
+		return sortedMap;
+	}
+	
+	private static Integer getChildClass(Integer previousClass)
+	{
+		int childClass = 0;
+		for (ClassId clid : ClassId.values())
+		{
+			if(!clid.isOfLevel(ClassLevel.Fourth))
+			{
+				continue;
+			}
+			if(clid.getParentId() == previousClass)
+			{
+				childClass = clid.getId();
+				break;
+			}
+		}
+		return childClass;
 	}
 }

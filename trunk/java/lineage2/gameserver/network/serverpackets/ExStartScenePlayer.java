@@ -1,15 +1,3 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.network.serverpackets.components.SceneMovie;
@@ -17,7 +5,7 @@ import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 public class ExStartScenePlayer extends L2GameServerPacket
 {
 	private final int _sceneId;
-	
+
 	public static final int SCENE_LINDVIOR = 1;
 	public static final int SCENE_ECHMUS_OPENING = 2;
 	public static final int SCENE_ECHMUS_SUCCESS = 3;
@@ -56,8 +44,8 @@ public class ExStartScenePlayer extends L2GameServerPacket
 	public static final int SCENE_BOSS_OCTABIS_PHASECH_A = 36; // 10000.00000000
 	public static final int SCENE_BOSS_OCTABIS_PHASECH_B = 37; // 14000.00000000
 	public static final int SCENE_BOSS_OCTABIS_ENDING = 38; // 38000.00000000
-	public static final int SCENE_TALKING_ISLAND_BOSS_OPENING = 43;
-	public static final int SCENE_TALKING_ISLAND_BOSS_ENDING = 44;
+	public static final int SCENE_TALKING_ISLAND_BOSS_OPENING = 43; //Квест на первую профу старт
+	public static final int SCENE_TALKING_ISLAND_BOSS_ENDING = 44; //Квест на первую профу финиш
 	public static final int SCENE_AWAKENING_OPENING = 45;
 	public static final int SCENE_AWAKENING_BOSS_OPENING = 46;
 	public static final int SCENE_AWAKENING_BOSS_ENDING_A = 47; // 25050
@@ -81,13 +69,13 @@ public class ExStartScenePlayer extends L2GameServerPacket
 	public static final int SCENE_SC_NOBLE_OPENING = 99; // 10000.00000000
 	public static final int SCENE_SC_NOBLE_ENDING = 100; // 10000.00000000
 	public static final int SCENE_SI_ILLUSION_01_QUE = 101; // 29200.00000000 TI
-	public static final int SCENE_SI_ILLUSION_02_QUE = 102; // 27150.00000000 TI
-	public static final int SCENE_SI_ILLUSION_03_QUE = 103; // 16100.00000000
+	public static final int SCENE_SI_ILLUSION_02_QUE = 102; // 27150.00000000 TI 
+	public static final int SCENE_SI_ILLUSION_03_QUE = 103; // 16100.00000000 Исагира
 	public static final int SCENE_SI_ARKAN_ENTER = 104; // 30300.00000000
 	public static final int SCENE_SI_BARLOG_OPENING = 105; // 19300.00000000
 	public static final int SCENE_SI_BARLOG_STORY = 106; // 67500.00000000
-	public static final int SCENE_SI_ILLUSION_04_QUE = 107; // 10100.00000000
-	public static final int SCENE_SI_ILLUSION_05_QUE = 108; // 10100.00000000
+	public static final int SCENE_SI_ILLUSION_04_QUE = 107; // 10100.00000000 НЕ понятно
+	public static final int SCENE_SI_ILLUSION_05_QUE = 108; // 10100.00000000 НЕ понятно (камера падает вниз откуда то)
 	public static final int SCENE_SC_BLOODVEIN_OPENING = 109; // 13000.00000000
 	public static final int SCENE_LAND_KSERTH_A = 1000; // 10000.00000000
 	public static final int SCENE_LAND_KSERTH_B = 1001; // 10000.00000000
@@ -96,21 +84,22 @@ public class ExStartScenePlayer extends L2GameServerPacket
 	public static final int SCENE_LAND_ANNIHILATION_A = 1004; // 15000.00000000
 	public static final int SCENE_BR_G_CARTIA_1_SIN = 2001; // 17800.00000000
 	public static final int SCENE_BR_G_CARTIA_2_SIN = 2002; // 15800.00000000
-	
+
+
 	public ExStartScenePlayer(int sceneId)
 	{
 		_sceneId = sceneId;
 	}
-	
+
 	public ExStartScenePlayer(SceneMovie scene)
 	{
 		_sceneId = scene.getId();
 	}
-	
+
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0x99);
+		writeEx(0x9A);
 		writeD(_sceneId);
 	}
 }

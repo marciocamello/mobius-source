@@ -147,7 +147,7 @@ public class Vehicle extends Boat
 		{
 			return null;
 		}
-		return new GetOnVehicle(playable, this, location);
+		return new GetOnVehicle(playable.getPlayer(), this, location);
 	}
 	
 	/**
@@ -163,7 +163,7 @@ public class Vehicle extends Boat
 		{
 			return null;
 		}
-		return new GetOffVehicle(playable, this, location);
+		return new GetOffVehicle(playable.getPlayer(), this, location);
 	}
 	
 	/**

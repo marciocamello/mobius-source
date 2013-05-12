@@ -3,8 +3,8 @@
 	<!-- Teredor -->
 	<instance id="160" name="Teredor Cavern" maxChannels="10" collapseIfEmpty="10" timelimit="120" dispelBuffs="true" respawn="60">
 		<collapse on-party-dismiss="true" timer="60"/>
-		<level min="85" max="90"/>
-		<party min="7" max="14"/>
+		<level min="85" max="99"/>
+		<party min="7" max="7"/>
 		<return loc="85772 -142527 -1336"/>
 		<teleport loc="186805 -173786 -3872"/>
 		<remove itemId="0" count="0" necessary="false"/>
@@ -16,7 +16,6 @@
 			<spawn mobId="33092" type="point" respawn="0">
 				<coords loc="186767 -173841 -3872 215"/>
 			</spawn>
-
 			<!-- 19024 Beatle -->
 			<spawn mobId="19024" type="point" respawn="60">
 				<coords loc="184243 -181629 -3760 215"/>
@@ -500,8 +499,5 @@
 				<coords loc="181463 -186085 -3504 22126"/>
 			</spawn>
 		</spawns>	
-		<!--<zones>
-			<zone name="[Teredor_epic]" active="true"/>
-		</zones>-->
 	</instance>
 </list>

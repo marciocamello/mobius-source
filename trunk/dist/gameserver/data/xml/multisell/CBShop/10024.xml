@@ -1,6 +1,6 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
 
-<list maintainEnchantment="true">
+<list maintainEnchantment="true" applyTaxes="true">
 <config keepenchanted="true" />
   <!-- Blood Mark -->
   <item id="1">

@@ -1035,37 +1035,38 @@ can_attack_door - может ли кубик бить дверь
 			<skill id="5579" level="1" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Cure-->
 		</skills>
 	</cubic>
+	<!-- GoD cubic -->
 	<cubic id="15" level="1" delay="14">
 		<skills chance="100">
-			<skill id="10056" level="1" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Drain-->
+			<skill id="10056" level="1" action_type="CANCEL" chance="99" can_attack_door="false" />  <!--Cubic Drain-->
 		</skills>
 	</cubic>
 	<cubic id="15" level="2" delay="14">
 		<skills chance="100">
-			<skill id="10056" level="2" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Drain-->
+			<skill id="10056" level="2" action_type="CANCEL" chance="99" can_attack_door="false" />  <!--Cubic Drain-->
 		</skills>
 	</cubic>
 	<cubic id="15" level="3" delay="14">
 		<skills chance="100">
-			<skill id="10056" level="3" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Drain-->
+			<skill id="10056" level="3" action_type="CANCEL" chance="99" can_attack_door="false" />  <!--Cubic Drain-->
 		</skills>
 	</cubic>
 	<cubic id="15" level="4" delay="14">
 		<skills chance="100">
-			<skill id="10056" level="4" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Drain-->
+			<skill id="10056" level="4" action_type="CANCEL" chance="99" can_attack_door="false" />  <!--Cubic Drain-->
 		</skills>
 	</cubic>
 	<cubic id="15" level="5" delay="14">
 		<skills chance="100">
-			<skill id="10056" level="5" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Drain-->
+			<skill id="10056" level="5" action_type="CANCEL" chance="99" can_attack_door="false" />  <!--Cubic Drain-->
 		</skills>
 	</cubic>
 	<cubic id="15" level="6" delay="14">
 		<skills chance="100">
-			<skill id="10056" level="6" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Drain-->
+			<skill id="10056" level="6" action_type="CANCEL" chance="99" can_attack_door="false" />  <!--Cubic Drain-->
 		</skills>	
 		<skills chance="100">
-			<skill id="10042" level="1" action_type="HEAL" can_attack_door="false">	<!--Cubic Heal-->
+			<skill id="10042" level="1" action_type="HEAL" can_attack_door="false">  <!--Cubic Heal-->
 				<chance min="0" max="29" value="53" />
 				<chance min="30" max="59" value="30" />
 				<chance min="60" max="100" value="13" />
@@ -1074,10 +1075,10 @@ can_attack_door - может ли кубик бить дверь
 	</cubic>
 	<cubic id="15" level="7" delay="14">
 		<skills chance="100">
-			<skill id="10056" level="7" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Drain-->
+			<skill id="10056" level="7" action_type="CANCEL" chance="99" can_attack_door="false" />  <!--Cubic Drain-->
 		</skills>	
 		<skills chance="100">
-			<skill id="10042" level="2" action_type="HEAL" can_attack_door="false">	<!--Cubic Heal-->
+			<skill id="10042" level="2" action_type="HEAL" can_attack_door="false">  <!--Cubic Heal-->
 				<chance min="0" max="29" value="53" />
 				<chance min="30" max="59" value="30" />
 				<chance min="60" max="100" value="13" />
@@ -1086,10 +1087,10 @@ can_attack_door - может ли кубик бить дверь
 	</cubic>
 	<cubic id="15" level="8" delay="14">
 		<skills chance="100">
-			<skill id="10056" level="8" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Drain-->
+			<skill id="10056" level="8" action_type="CANCEL" chance="99" can_attack_door="false" />  <!--Cubic Drain-->
 		</skills>	
 		<skills chance="100">
-			<skill id="10042" level="3" action_type="HEAL" can_attack_door="false">	<!--Cubic Heal-->
+			<skill id="10042" level="3" action_type="HEAL" can_attack_door="false">  <!--Cubic Heal-->
 				<chance min="0" max="29" value="53" />
 				<chance min="30" max="59" value="30" />
 				<chance min="60" max="100" value="13" />
@@ -1098,156 +1099,135 @@ can_attack_door - может ли кубик бить дверь
 	</cubic>	
 	<cubic id="16" level="1" delay="15">
 		<skills chance="50">
-			<skill id="11292" level="1" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Cure-->
+			<skill id="11292" level="1" action_type="CANCEL" chance="99" can_attack_door="false" />  <!--Cubic Cleanse-->
 		</skills>
 		<skills chance="50">
-			<skill id="11293" level="1" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Cure-->
+			<skill id="11293" level="1" action_type="DEBUFF" chance="30" can_attack_door="false" />  <!--Cubic Cancellation-->
 		</skills>
+        <skills chance="25">
+            <skill id="11294" level="1" action_type="DEBUFF" chance="30" can_attack_door="false"/>   <!--Cubic Root-->
+        </skills>
 	</cubic>
 	<cubic id="16" level="2" delay="15">
 		<skills chance="50">
-			<skill id="11292" level="2" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Cure-->
+			<skill id="11292" level="2" action_type="CANCEL" chance="99" can_attack_door="false" />  <!--Cubic Cleanse-->
 		</skills>
 		<skills chance="50">
-			<skill id="11293" level="2" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Cure-->
+			<skill id="11293" level="2" action_type="DEBUFF" chance="30" can_attack_door="false" />  <!--Cubic Cancellation-->
 		</skills>
+        <skills chance="25">
+            <skill id="11294" level="2" action_type="DEBUFF" chance="30" can_attack_door="false"/>   <!--Cubic Root-->
+        </skills>
 	</cubic>
 	<cubic id="16" level="3" delay="15">
 		<skills chance="50">
-			<skill id="11292" level="3" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Cure-->
+			<skill id="11292" level="3" action_type="CANCEL" chance="99" can_attack_door="false" />  <!--Cubic Cleanse-->
 		</skills>
 		<skills chance="50">
-			<skill id="11293" level="3" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Cure-->
+			<skill id="11293" level="3" action_type="DEBUFF" chance="30" can_attack_door="false" />  <!--Cubic Cancellation-->
 		</skills>
+        <skills chance="25">
+            <skill id="11294" level="3" action_type="DEBUFF" chance="30" can_attack_door="false"/>   <!--Cubic Root-->
+        </skills>
 	</cubic>
 	<cubic id="16" level="4" delay="15">
 		<skills chance="50">
-			<skill id="11292" level="4" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Cure-->
+			<skill id="11292" level="4" action_type="CANCEL" chance="99" can_attack_door="false" />  <!--Cubic Cleanse-->
 		</skills>
 		<skills chance="50">
-			<skill id="11293" level="4" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Cure-->
+			<skill id="11293" level="4" action_type="DEBUFF" chance="30" can_attack_door="false" />  <!--Cubic Cancellation-->
 		</skills>
+        <skills chance="25">
+            <skill id="11294" level="4" action_type="DEBUFF" chance="30" can_attack_door="false"/>   <!--Cubic Root-->
+        </skills>
 	</cubic>
 	<cubic id="16" level="5" delay="15">
 		<skills chance="50">
-			<skill id="11292" level="5" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Cure-->
+			<skill id="11292" level="5" action_type="CANCEL" chance="99" can_attack_door="false" />  <!--Cubic Cleanse-->
 		</skills>
 		<skills chance="50">
-			<skill id="11293" level="5" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Cure-->
+			<skill id="11293" level="5" action_type="DEBUFF" chance="30" can_attack_door="false" />  <!--Cubic Cancellation-->
 		</skills>
+        <skills chance="25">
+            <skill id="11294" level="5" action_type="DEBUFF" chance="30" can_attack_door="false"/>   <!--Cubic Root-->
+        </skills>
 	</cubic>
 	<cubic id="16" level="6" delay="15">
 		<skills chance="50">
-			<skill id="11292" level="6" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Cure-->
+			<skill id="11292" level="6" action_type="CANCEL" chance="99" can_attack_door="false" />  <!--Cubic Cleanse-->
 		</skills>
 		<skills chance="50">
-			<skill id="11293" level="6" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Cure-->
+			<skill id="11293" level="6" action_type="DEBUFF" chance="30" can_attack_door="false" />  <!--Cubic Cancellation-->
 		</skills>
+        <skills chance="25">
+            <skill id="11294" level="6" action_type="DEBUFF" chance="30" can_attack_door="false"/>   <!--Cubic Root-->
+        </skills>
 	</cubic>
 	<cubic id="16" level="7" delay="15">
 		<skills chance="50">
-			<skill id="11292" level="7" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Cure-->
+			<skill id="11292" level="7" action_type="CANCEL" chance="99" can_attack_door="false" />  <!--Cubic Cleanse-->
 		</skills>
 		<skills chance="50">
-			<skill id="11293" level="7" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Cure-->
+			<skill id="11293" level="7" action_type="DEBUFF" chance="30" can_attack_door="false" />  <!--Cubic Cancellation-->
 		</skills>
+        <skills chance="25">
+            <skill id="11294" level="7" action_type="DEBUFF" chance="30" can_attack_door="false"/>   <!--Cubic Root-->
+        </skills>
 	</cubic>
 	<cubic id="16" level="8" delay="15">
 		<skills chance="50">
-			<skill id="11292" level="8" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Cure-->
+			<skill id="11292" level="8" action_type="CANCEL" chance="99" can_attack_door="false" />  <!--Cubic Cleanse-->
 		</skills>
 		<skills chance="50">
-			<skill id="11293" level="8" action_type="CANCEL" chance="99" can_attack_door="false" />	<!--Cubic Cure-->
+			<skill id="11293" level="8" action_type="DEBUFF" chance="30" can_attack_door="false" />  <!--Cubic Cancellation-->
 		</skills>
+        <skills chance="25">
+            <skill id="11294" level="8" action_type="DEBUFF" chance="30" can_attack_door="false"/>   <!--Cubic Root-->
+        </skills>
 	</cubic>
 	<cubic id="17" level="1" delay="15">
-		<skills chance="50">
-			<skill id="11807" level="1" action_type="HEAL" can_attack_door="false">	<!--Cubic Cure-->
-				<chance min="0" max="29" value="53" />
-				<chance min="30" max="59" value="30" />
-				<chance min="60" max="100" value="13" />
-			</skill>
-		</skills>
+        <skills chance="100">
+            <skill id="11807" level="1" action_type="HEAL" can_attack_door="false">  <!--Cubic Heal-->
+                <chance min="0" max="29" value="53"/>
+                <chance min="30" max="59" value="30"/>
+                <chance min="60" max="100" value="13"/>
+            </skill>
+        </skills>
 	</cubic>
 	<cubic id="17" level="2" delay="15">
-		<skills chance="50">
-			<skill id="11807" level="2" action_type="HEAL" can_attack_door="false">	<!--Cubic Cure-->
-				<chance min="0" max="29" value="53" />
-				<chance min="30" max="59" value="30" />
-				<chance min="60" max="100" value="13" />
-			</skill>
-		</skills>
+        <skills chance="100">
+            <skill id="11807" level="2" action_type="HEAL" can_attack_door="false">  <!--Cubic Heal-->
+                <chance min="0" max="29" value="53"/>
+                <chance min="30" max="59" value="30"/>
+                <chance min="60" max="100" value="13"/>
+            </skill>
+        </skills>
 	</cubic>
 	<cubic id="17" level="3" delay="15">
-		<skills chance="50">
-			<skill id="11807" level="3" action_type="HEAL" can_attack_door="false">	<!--Cubic Cure-->
-				<chance min="0" max="29" value="53" />
-				<chance min="30" max="59" value="30" />
-				<chance min="60" max="100" value="13" />
-			</skill>
-		</skills>
+        <skills chance="100">
+            <skill id="11807" level="3" action_type="HEAL" can_attack_door="false">  <!--Cubic Heal-->
+                <chance min="0" max="29" value="53"/>
+                <chance min="30" max="59" value="30"/>
+                <chance min="60" max="100" value="13"/>
+            </skill>
+        </skills>
 	</cubic>
 	<cubic id="17" level="4" delay="15">
-		<skills chance="50">
-			<skill id="11807" level="4" action_type="HEAL" can_attack_door="false" >	<!--Cubic Cure-->
-				<chance min="0" max="29" value="53" />
-				<chance min="30" max="59" value="30" />
-				<chance min="60" max="100" value="13" />
-			</skill>
-		</skills>
+        <skills chance="100">
+            <skill id="11807" level="4" action_type="HEAL" can_attack_door="false">  <!--Cubic Heal-->
+                <chance min="0" max="29" value="53"/>
+                <chance min="30" max="59" value="30"/>
+                <chance min="60" max="100" value="13"/>
+            </skill>
+        </skills>
 	</cubic>
 	<cubic id="17" level="5" delay="15">
-		<skills chance="50">
-			<skill id="11807" level="5" action_type="HEAL" can_attack_door="false" >	<!--Cubic Cure-->
-				<chance min="0" max="29" value="53" />
-				<chance min="30" max="59" value="30" />
-				<chance min="60" max="100" value="13" />
-			</skill>
-		</skills>
-	</cubic>
-	<cubic id="17" level="1" delay="15">
-		<skills chance="50">
-			<skill id="11807" level="1" action_type="HEAL" can_attack_door="false">  <!--Cubic Cure-->
-				<chance min="0" max="29" value="53" />
-				<chance min="30" max="59" value="30" />
-				<chance min="60" max="100" value="13" />
-			</skill>
-		</skills>
-	</cubic>
-	<cubic id="17" level="2" delay="15">
-		<skills chance="50">
-			<skill id="11807" level="2" action_type="HEAL" can_attack_door="false">  <!--Cubic Cure-->
-				<chance min="0" max="29" value="53" />
-				<chance min="30" max="59" value="30" />
-				<chance min="60" max="100" value="13" />
-			</skill>
-		</skills>
-	</cubic>
-	<cubic id="17" level="3" delay="15">
-		<skills chance="50">
-			<skill id="11807" level="3" action_type="HEAL" can_attack_door="false">  <!--Cubic Cure-->
-				<chance min="0" max="29" value="53" />
-				<chance min="30" max="59" value="30" />
-				<chance min="60" max="100" value="13" />
-			</skill>
-		</skills>
-	</cubic>
-	<cubic id="17" level="4" delay="15">
-		<skills chance="50">
-			<skill id="11807" level="4" action_type="HEAL" can_attack_door="false" >  <!--Cubic Cure-->
-				<chance min="0" max="29" value="53" />
-				<chance min="30" max="59" value="30" />
-				<chance min="60" max="100" value="13" />
-			</skill>
-		</skills>
-	</cubic>
-	<cubic id="17" level="5" delay="15">
-		<skills chance="50">
-			<skill id="11807" level="5" action_type="HEAL" can_attack_door="false" >  <!--Cubic Cure-->
-				<chance min="0" max="29" value="53" />
-				<chance min="30" max="59" value="30" />
-				<chance min="60" max="100" value="13" />
-			</skill>
-		</skills>
+        <skills chance="100">
+            <skill id="11807" level="5" action_type="HEAL" can_attack_door="false">  <!--Cubic Heal-->
+                <chance min="0" max="29" value="53"/>
+                <chance min="30" max="59" value="30"/>
+                <chance min="60" max="100" value="13"/>
+            </skill>
+        </skills>
 	</cubic>
 </list>

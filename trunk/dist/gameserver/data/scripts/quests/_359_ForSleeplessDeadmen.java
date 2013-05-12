@@ -13,9 +13,6 @@
 package quests;
 
 import lineage2.commons.util.Rnd;
-import lineage2.gameserver.data.xml.holder.ResidenceHolder;
-import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
@@ -78,29 +75,6 @@ public class _359_ForSleeplessDeadmen extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("30857-07.htm"))
 		{
-			Castle castle = ResidenceHolder.getInstance().getResidence(5);
-			if (castle.getOwner() != null)
-			{
-				Player castleOwner = castle.getOwner().getLeader().getPlayer();
-				if ((castleOwner != null) && (castleOwner != st.getPlayer()) && (castleOwner.getClan() == st.getPlayer().getClan()) && (castleOwner.getQuestState(_713_PathToBecomingALordAden.class) != null) && (castleOwner.getQuestState(_713_PathToBecomingALordAden.class).getCond() == 2))
-				{
-					if (castleOwner.getQuestState(_713_PathToBecomingALordAden.class).get("questsDone") != null)
-					{
-						if (Integer.parseInt(castleOwner.getQuestState(_713_PathToBecomingALordAden.class).get("questsDone")) < 5)
-						{
-							castleOwner.getQuestState(_713_PathToBecomingALordAden.class).set("questsDone", String.valueOf(Integer.parseInt(castleOwner.getQuestState(_713_PathToBecomingALordAden.class).get("questsDone")) + 1), true);
-						}
-						else
-						{
-							castleOwner.getQuestState(_713_PathToBecomingALordAden.class).setCond(4);
-						}
-					}
-					else
-					{
-						castleOwner.getQuestState(_713_PathToBecomingALordAden.class).set("questsDone", "1", true);
-					}
-				}
-			}
 			st.exitCurrentQuest(true);
 			st.playSound(SOUND_FINISH);
 		}

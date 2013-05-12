@@ -40,7 +40,7 @@ public class RequestReload extends L2GameClientPacket
 		{
 			return;
 		}
-		player.sendUserInfo(true);
+		player.sendUserInfo();
 		World.showObjectsToPlayer(player);
 	}
 }

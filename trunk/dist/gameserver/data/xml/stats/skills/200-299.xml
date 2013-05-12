@@ -1210,8 +1210,9 @@
 		<set name="criticalRate" val="10"/>
 		<set name="shieldignore" val="true"/>
 		<set name="chargeBoost" val="true"/>
-		<set name="num_charges" val="4"/>
-		<set name="charge_skill_id" val="8"/>
+		<!--<set name="num_charges" val="4"/>-->
+		<!--<set name="charge_skill_id" val="8"/>-->
+		<set name="max_charges" val="4"/> <!-- fixed by Zyth, WunkiaKorps 2013 -->
 		<set name="nextAction" val="attack"/>
 		<enchant1 levels="30" name="Power">
 			<table name="#power">4299 4338 4376 4415 4453 4491 4530 4568 4607 4645 4683 4722 4760 4799 4837 4875 4914 4952 4991 5029 5067 5106 5144 5183 5221 5259 5298 5336 5375 5413</table>
@@ -1550,7 +1551,7 @@
 			<table name="#mpConsume2">58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" time="#abnormal_time" stackOrder="1" stackType="song_of_hunter" val="0" >
+			<effect count="1" name="Buff" time="#abnormal_time" stackOrder="1" stackType="song_of_hunter" val="0">
 				<add order="0x40" stat="rCrit" val="100"/>
 			</effect>
 		</for>
@@ -2075,8 +2076,9 @@
 		<set name="criticalRate" val="10"/>
 		<set name="shieldignore" val="true"/>
 		<set name="chargeBoost" val="true"/>
-		<set name="num_charges" val="2"/>
-		<set name="charge_skill_id" val="50"/>
+		<!--<set name="num_charges" val="2"/>-->
+		<!--<set name="charge_skill_id" val="50"/>-->
+		<set name="max_charges" val="2"/> <!-- fixed by Zyth, WunkiaKorps 2013 -->
 		<set name="nextAction" val="attack"/>
 		<enchant1 levels="30" name="Power">
 			<table name="#power">3225 3254 3283 3312 3340 3369 3398 3427 3456 3484 3513 3542 3571 3600 3628 3657 3686 3715 3744 3772 3801 3830 3859 3888 3916 3945 3974 4003 4032 4061</table>

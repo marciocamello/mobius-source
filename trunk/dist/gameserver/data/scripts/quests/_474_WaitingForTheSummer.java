@@ -12,56 +12,40 @@
  */
 package quests;
 
+import org.apache.commons.lang3.ArrayUtils;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 
-import org.apache.commons.lang3.ArrayUtils;
-
 public class _474_WaitingForTheSummer extends Quest implements ScriptFile
 {
-	// npc
+	//npc
 	private static final int GUIDE = 33463;
 	private static final int VISHOTSKY = 31981;
-	
-	// q items
+
+	//q items
 	private static final int BUFFALO_MEAT = 19490;
 	private static final int URSUS_MEAT = 19491;
 	private static final int YETI_MIAT = 19492;
-	
-	// mobs
-	private static final int[] BUFFALO =
-	{
-		22093,
-		22094
-	};
-	private static final int[] URSUS =
-	{
-		22095,
-		22096
-	};
-	private static final int[] YETI =
-	{
-		22097,
-		22098
-	};
-	
+
+	//mobs
+	private static final int[] BUFFALO = {22093, 22094};
+	private static final int[] URSUS = {22095, 22096};
+	private static final int[] YETI = {22097, 22098};
+
 	@Override
 	public void onLoad()
-	{
-	}
+	{}
 	
 	@Override
 	public void onReload()
-	{
-	}
+	{}
 	
 	@Override
 	public void onShutdown()
-	{
-	}
+	{}
 	
 	public _474_WaitingForTheSummer()
 	{
@@ -79,7 +63,7 @@ public class _474_WaitingForTheSummer extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		st.getPlayer();
-		if (event.equalsIgnoreCase("33463-3.htm"))
+		if(event.equalsIgnoreCase("33463-3.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
@@ -95,44 +79,40 @@ public class _474_WaitingForTheSummer extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int state = st.getState();
 		int cond = st.getCond();
-		if (npcId == GUIDE)
+		if(npcId == GUIDE)
 		{
-			if (state == 1)
+			if(state == 1)
 			{
-				if (!st.isNowAvailableByTime())
+				if(!st.isNowAvailableByTime())
 				{
 					return "33463-comp.htm";
 				}
 				return "33463.htm";
 			}
-			if (state == 2)
+			if(state == 2)
 			{
-				if (cond == 1)
-				{
+				if(cond == 1)
 					return "33463-4.htm";
-				}
-				
+					
 			}
 		}
-		if ((npcId == VISHOTSKY) && (state == 2))
+		if(npcId == VISHOTSKY && state == 2)
 		{
-			if (cond == 1)
-			{
+			if(cond == 1)
 				return "31981-1.htm";
-			}
-			if (cond == 2)
+			if(cond == 2)
 			{
-				st.giveItems(57, 194000);
+				st.giveItems(57,194000);
 				st.addExpAndSp(1879400, 1782000);
 				st.takeItems(BUFFALO_MEAT, -1);
 				st.takeItems(URSUS_MEAT, -1);
 				st.takeItems(YETI_MIAT, -1);
 				st.unset("cond");
 				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(this);
-				return "31981.htm"; // no further html do here
-			}
-		}
+				st.exitCurrentQuest(this);		
+				return "31981.htm"; //no further html do here
+			}	
+		}		
 		return "noquest";
 	}
 	

@@ -30,14 +30,11 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public class SwampSpirit extends DefaultAI
 {
-	/**
-	 * Field healSkill.
-	 */
 	private static final Skill healSkill = SkillTable.getInstance().getInfo(14064, 1);
-	/**
-	 * Field healSkillBig.
-	 */
 	private static final Skill healSkillBig = SkillTable.getInstance().getInfo(14065, 1);
+	private static final Skill blindlightSkill = SkillTable.getInstance().getInfo(14066, 1);
+	
+	
 	
 	/**
 	 * Constructor for SwampSpirit.
@@ -84,6 +81,12 @@ public class SwampSpirit extends DefaultAI
 							npc.broadcastPacket(new MagicSkillUse(npc, player, healSkillBig.getId(), healSkillBig.getLevel(), 0, 0));
 							npc.callSkill(SkillTable.getInstance().getInfo(healSkillBig.getId(), healSkillBig.getLevel()), target, true);
 						}
+						break;
+					case 32938:
+						List<Creature> target = new ArrayList<>();
+						target.add(npc);
+						npc.broadcastPacket(new MagicSkillUse(npc, player, blindlightSkill.getId(), blindlightSkill.getLevel(), 0, 0));
+						npc.callSkill(SkillTable.getInstance().getInfo(blindlightSkill.getId(), blindlightSkill.getLevel()), target, true);
 						break;
 				}
 			}

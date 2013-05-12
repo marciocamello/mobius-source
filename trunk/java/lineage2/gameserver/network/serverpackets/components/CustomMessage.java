@@ -1,15 +1,3 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package lineage2.gameserver.network.serverpackets.components;
 
 import lineage2.gameserver.data.StringHolder;
@@ -22,36 +10,41 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
 /**
- * @author Mobius
- * @version $Revision: 1.0 $
+ * Даный класс является обработчиком интернациональных сообщений. Поддержживается полностью юникод.
+ * <p/>
+ * По функциональности он не уступает SystemMessage, но поддерживает одновременно несколько языков.
+ * 
+ * @Author: Death
+ * @Date: 10/6/2007
+ * @Time: 10:34:57
  */
 public class CustomMessage
 {
-	/**
-	 * Field _text.
-	 */
 	private String _text;
-	/**
-	 * Field mark.
-	 */
 	private int mark = 0;
-	
+
 	/**
-	 * Constructor for CustomMessage.
-	 * @param address String
-	 * @param player Player
-	 * @param args Object[]
+	 * Создает новый инстанс сообщения.
+	 * 
+	 * @param address
+	 *            адрес(ключ) параметра с языком интернационализации
+	 * @param player
+	 *            игрок у которого будет взят язык
+	 * @param args
 	 */
 	public CustomMessage(String address, Player player, Object... args)
 	{
 		_text = StringHolder.getInstance().getNotNull(player, address);
 		add(args);
 	}
-	
+
 	/**
-	 * Method addNumber.
-	 * @param number long
-	 * @return CustomMessage
+	 * Заменяет следующий елемент числом.<br>
+	 * {0} {1} ... {Integer.MAX_VALUE}
+	 * 
+	 * @param number
+	 *            чем мы хотим заменить
+	 * @return этот инстанс уже с имененным текстом
 	 */
 	public CustomMessage addNumber(long number)
 	{
@@ -59,57 +52,40 @@ public class CustomMessage
 		mark++;
 		return this;
 	}
-	
-	/**
-	 * Method add.
-	 * @param args Object[]
-	 * @return CustomMessage
-	 */
+
 	public CustomMessage add(Object... args)
 	{
 		for (Object arg : args)
-		{
 			if (arg instanceof String)
-			{
 				addString((String) arg);
-			}
 			else if (arg instanceof Integer)
-			{
 				addNumber((Integer) arg);
-			}
 			else if (arg instanceof Long)
-			{
 				addNumber((Long) arg);
-			}
 			else if (arg instanceof ItemTemplate)
-			{
 				addItemName((ItemTemplate) arg);
-			}
 			else if (arg instanceof ItemInstance)
-			{
 				addItemName((ItemInstance) arg);
-			}
 			else if (arg instanceof Creature)
-			{
 				addCharName((Creature) arg);
-			}
 			else if (arg instanceof Skill)
-			{
 				this.addSkillName((Skill) arg);
-			}
 			else
 			{
 				System.out.println("unknown CustomMessage arg type: " + arg);
 				Thread.dumpStack();
 			}
-		}
+
 		return this;
 	}
-	
+
 	/**
-	 * Method addString.
-	 * @param str String
-	 * @return CustomMessage
+	 * Заменяет следующий елемент строкой.<br>
+	 * {0} {1} ... {Integer.MAX_VALUE}
+	 * 
+	 * @param str
+	 *            чем мы хотим заменить
+	 * @return этот инстанс уже с имененным текстом
 	 */
 	public CustomMessage addString(String str)
 	{
@@ -117,11 +93,14 @@ public class CustomMessage
 		mark++;
 		return this;
 	}
-	
+
 	/**
-	 * Method addSkillName.
-	 * @param skill Skill
-	 * @return CustomMessage
+	 * Заменяет следующий елемент именем скилла.<br>
+	 * {0} {1} ... {Integer.MAX_VALUE}
+	 * 
+	 * @param skill
+	 *            именем которого мы хотим заменить.
+	 * @return этот инстанс уже с имененным текстом
 	 */
 	public CustomMessage addSkillName(Skill skill)
 	{
@@ -129,22 +108,29 @@ public class CustomMessage
 		mark++;
 		return this;
 	}
-	
+
 	/**
-	 * Method addSkillName.
-	 * @param skillId int
-	 * @param skillLevel int
-	 * @return CustomMessage
+	 * Заменяет следующий елемент именем скилла.<br>
+	 * {0} {1} ... {Integer.MAX_VALUE}
+	 * 
+	 * @param skillId
+	 *            именем которого мы хотим заменить.
+	 * @param skillLevel
+	 *            уровень скилла
+	 * @return этот инстанс уже с имененным текстом
 	 */
 	public CustomMessage addSkillName(int skillId, int skillLevel)
 	{
 		return addSkillName(SkillTable.getInstance().getInfo(skillId, skillLevel));
 	}
-	
+
 	/**
-	 * Method addItemName.
-	 * @param item ItemTemplate
-	 * @return CustomMessage
+	 * Заменяет следующий елемент именем предмета.<br>
+	 * {0} {1} ... {Integer.MAX_VALUE}
+	 * 
+	 * @param item
+	 *            именем которого мы хотим заменить.
+	 * @return этот инстанс уже с имененным текстом
 	 */
 	public CustomMessage addItemName(ItemTemplate item)
 	{
@@ -152,31 +138,40 @@ public class CustomMessage
 		mark++;
 		return this;
 	}
-	
+
 	/**
-	 * Method addItemName.
-	 * @param itemId int
-	 * @return CustomMessage
+	 * Заменяет следующий елемент именем предмета.<br>
+	 * {0} {1} ... {Integer.MAX_VALUE}
+	 * 
+	 * @param itemId
+	 *            именем которого мы хотим заменить.
+	 * @return этот инстанс уже с имененным текстом
 	 */
 	public CustomMessage addItemName(int itemId)
 	{
 		return addItemName(ItemHolder.getInstance().getTemplate(itemId));
 	}
-	
+
 	/**
-	 * Method addItemName.
-	 * @param item ItemInstance
-	 * @return CustomMessage
+	 * Заменяет следующий елемент именем предмета.<br>
+	 * {0} {1} ... {Integer.MAX_VALUE}
+	 * 
+	 * @param item
+	 *            именем которого мы хотим заменить.
+	 * @return этот инстанс уже с имененным текстом
 	 */
 	public CustomMessage addItemName(ItemInstance item)
 	{
 		return addItemName(item.getTemplate());
 	}
-	
+
 	/**
-	 * Method addCharName.
-	 * @param cha Creature
-	 * @return CustomMessage
+	 * Заменяет следующий елемент именем персонажа.<br>
+	 * {0} {1} ... {Integer.MAX_VALUE}
+	 * 
+	 * @param cha
+	 *            именем которого мы хотим заменить.
+	 * @return этот инстанс уже с имененным текстом
 	 */
 	public CustomMessage addCharName(Creature cha)
 	{
@@ -184,10 +179,11 @@ public class CustomMessage
 		mark++;
 		return this;
 	}
-	
+
 	/**
-	 * Method toString.
-	 * @return String
+	 * Возвращает локализированную строку, полученную после всех действий.
+	 * 
+	 * @return строка.
 	 */
 	@Override
 	public String toString()

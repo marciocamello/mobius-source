@@ -1,11 +1,10 @@
 <!DOCTYPE list SYSTEM "instances.dtd">
 <list>
     <!-- Seed of Infinity (Hall of Suffering) -->
-    <instance id="115" name="Seed of Infinity (Hall of Suffering)" maxChannels="20" collapseIfEmpty="10" timelimit="60"
-              dispelBuffs="true">
+    <instance id="115" name="Seed of Infinity (Hall of Suffering)" maxChannels="20" collapseIfEmpty="10" timelimit="60" dispelBuffs="true">
         <collapse on-party-dismiss="true" timer="60"/>
         <level min="75" max="82"/>
-        <party min="2" max="9"/>
+        <party min="2" max="7"/>
         <return loc="-183352 206008 -12896"/>
         <teleport loc="-187816 205576 -9528"/>
         <remove itemId="0" count="0" necessary="false"/>

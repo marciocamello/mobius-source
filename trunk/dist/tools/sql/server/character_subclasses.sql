@@ -15,5 +15,6 @@ CREATE TABLE `character_subclasses` (
   `type` VARCHAR(45) NOT NULL DEFAULT '',
   `death_penalty` tinyint(4) NOT NULL DEFAULT '0',
   `certification` int(11) NOT NULL,
+  `dual_certification` int(11) NOT NULL,
   PRIMARY KEY (`char_obj_id`,`class_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

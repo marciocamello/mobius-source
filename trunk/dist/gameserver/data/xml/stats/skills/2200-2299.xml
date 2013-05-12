@@ -1,76 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="2200" levels="3" name="Item - Jade Treasure Box">
-    <!-- none -->
+	<skill id="2200" levels="3" name="Item - Jade Treasue Box">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2201" levels="3" name="Item - Blue Treasure Box">
-    <!-- none -->
+	<skill id="2201" levels="3" name="Item - Blue Treasue Box">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2202" levels="3" name="Item - Yellow Treasure Box">
-    <!-- none -->
+	<skill id="2202" levels="3" name="Item - Yellow Treasue Box">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2203" levels="3" name="Item - Orange Treasure Box">
-    <!-- none -->
+	<skill id="2203" levels="3" name="Item - Orange Treasue Box">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2204" levels="3" name="Item - Violet Treasure Box">
-    <!-- none -->
+	<skill id="2204" levels="3" name="Item - Violet Treasue Box">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2205" levels="3" name="Item - Red Treasure Box">
-    <!-- none -->
+	<skill id="2205" levels="3" name="Item - Red Treasue Box">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2206" levels="3" name="Item - White Treasure Box">
-    <!-- none -->
+	<skill id="2206" levels="3" name="Item - White Treasue Box">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2207" levels="3" name="Item - Black Treasure Box">
-    <!-- none -->
+	<skill id="2207" levels="3" name="Item - Black Treasue Box">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2208" levels="1" name="Blessed Scroll: Enchant Armor (S Grade)">
     <!-- none -->
@@ -152,130 +152,130 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="2215" levels="4" name="Item - Quest Special Box">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2216" levels="4" name="Item - Quest Special Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2217" levels="5" name="Item - Quest Treasure Box">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2218" levels="3" name="Item - Quest Sac">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2219" levels="2" name="Item - Quest Sac">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2220" levels="9" name="Item - Easy Green Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2221" levels="9" name="Item - Easy Jade Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2222" levels="9" name="Item - Easy Blue Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2223" levels="9" name="Item - Easy Yellow Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2224" levels="9" name="Item - Easy Orange Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2225" levels="9" name="Item - Easy Violet Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2226" levels="9" name="Item - Easy Red Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2227" levels="9" name="Item - Easy White Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2228" levels="9" name="Item - Easy Black Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2229" levels="8" name="Treasure Chest Key - 1">
     <!-- none -->
@@ -815,125 +815,121 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
 	<skill id="2261" levels="9" name="Item - Hard Green Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2262" levels="9" name="Item - Hard Jade Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2263" levels="9" name="Item - Hard Blue Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2264" levels="9" name="Item - Hard Yellow Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2265" levels="9" name="Item - Hard Orange Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2266" levels="9" name="Item - Hard Violet Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2267" levels="9" name="Item - Hard Red Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2268" levels="9" name="Item - Hard White Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2269" levels="9" name="Item - Hard Black Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2270" levels="9" name="Item - Adventurer Box">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2271" levels="1" name="Item - Hot Spring Fish">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2272" levels="1" name="Item - Fight Song Crystal">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="itemConsumeId" val="8555"/>
-		<set name="itemConsumeCount" val="1"/>
 		<set name="isHandler" val="true"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="altUse" val="true"/>
 	</skill>
 	<skill id="2273" levels="1" name="Item - Red Devil Support Box">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2274" levels="9" name="u,Fisherman's Potion – Green">
     <!-- u,Fisherman's Potion – Green. Fishing Mastery Level is now reduced. You can now catch green fish. -->
@@ -983,13 +979,13 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="2277" levels="6" name="Event Gift Box">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2278" levels="3" name="Herb of Life">
     <!-- none -->
@@ -1166,89 +1162,89 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2287" levels="6" name="Elixir of Life (No Grade)">
-    <!-- none -->
-		<table name="#itemConsumeId">8622 8623 8624 8625 8626 8627</table>
-		<table name="#levelMin">1 20 40 52 61 76</table>
-		<table name="#levelMax">19 39 51 60 75 84</table>
-		<table name="#power">250 650 1100 1500 1900 2300</table>
-		<set name="magicType" val="SPECIAL"/>
-		<set name="icon" val="icon.skill0000"/>
-		<set name="reuseDelay" val="600000"/>
-		<set name="power" val="#power"/>
-		<set name="magicLevel" val="1"/>
-		<set name="itemConsumeId" val="#itemConsumeId"/>
-		<set name="itemConsumeCount" val="1"/>
-		<set name="isHandler" val="true"/>
-		<set name="altUse" val="true"/>
-		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="HEAL"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+	<skill id="2287" levels="7" name="Elixir of Life (No Grade)">
+		<!--gorodetskiy-->
+		<table name="#itemConsumeId">8622 8623 8624 8625 8626 8627 30357</table>
+		<table name="#levelMin">1 20 40 52 61 76 85</table>
+		<table name="#levelMax">19 39 51 60 75 84 99</table>
+		<table name="#power">250 650 1100 1500 1900 2300 2700</table>
+		<set name="magicType" val="SPECIAL" />
+		<set name="icon" val="icon.skill0000" />
+		<set name="reuseDelay" val="600000" />
+		<set name="power" val="#power" />
+		<set name="magicLevel" val="1" />
+		<set name="itemConsumeId" val="#itemConsumeId" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="isHandler" val="true" />
+		<set name="altUse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="HEAL" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<cond msgId="1902">
 			<and>
-				<player minLevel="#levelMin"/>
-				<player maxLevel="#levelMax"/>
+				<player minLevel="#levelMin" />
+				<player maxLevel="#levelMax" />
 			</and>
 		</cond>
 	</skill>
-	<skill id="2288" levels="6" name="Elixir of Mental Strength (No Grade)">
-    <!-- none -->
-		<table name="#itemConsumeId">8628 8629 8630 8631 8632 8633</table>
-		<table name="#levelMin">1 20 40 52 61 76</table>
-		<table name="#levelMax">19 39 51 60 75 84</table>
-		<table name="#power">60 140 220 290 360 420</table>
-		<set name="magicType" val="SPECIAL"/>
-		<set name="icon" val="icon.skill0000"/>
-		<set name="reuseDelay" val="600000"/>
-		<set name="power" val="#power"/>
-		<set name="magicLevel" val="1"/>
-		<set name="itemConsumeId" val="#itemConsumeId"/>
-		<set name="itemConsumeCount" val="1"/>
-		<set name="isHandler" val="true"/>
-		<set name="altUse" val="true"/>
-		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="MANAHEAL"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+	<skill id="2288" levels="7" name="Elixir of Mental Strength (No Grade)">
+		<!--gorodetskiy-->
+		<table name="#itemConsumeId">8628 8629 8630 8631 8632 8633 30358</table>
+		<table name="#levelMin">1 20 40 52 61 76 85</table>
+		<table name="#levelMax">19 39 51 60 75 84 99</table>
+		<table name="#power">60 140 220 290 360 420 480</table>
+		<set name="magicType" val="SPECIAL" />
+		<set name="icon" val="icon.skill0000" />
+		<set name="reuseDelay" val="600000" />
+		<set name="power" val="#power" />
+		<set name="magicLevel" val="1" />
+		<set name="itemConsumeId" val="#itemConsumeId" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="isHandler" val="true" />
+		<set name="altUse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="MANAHEAL" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<cond msgId="1902">
 			<and>
-				<player minLevel="#levelMin"/>
-				<player maxLevel="#levelMax"/>
+				<player minLevel="#levelMin" />
+				<player maxLevel="#levelMax" />
 			</and>
 		</cond>
 	</skill>
-	<skill id="2289" levels="6" name="Elixir of CP (No Grade)">
-    <!-- none -->
-		<table name="#itemConsumeId">8634 8635 8636 8637 8638 8639</table>
-		<table name="#levelMin">1 20 40 52 61 76</table>
-		<table name="#levelMax">19 39 51 60 75 84</table>
-		<table name="#power">150 350 600 800 1000 1200</table>
-		<set name="magicType" val="SPECIAL"/>
-		<set name="icon" val="icon.skill0000"/>
-		<set name="reuseDelay" val="600000"/>
-		<set name="power" val="#power"/>
-		<set name="magicLevel" val="1"/>
-		<set name="itemConsumeId" val="#itemConsumeId"/>
-		<set name="itemConsumeCount" val="1"/>
-		<set name="isHandler" val="true"/>
-		<set name="altUse" val="true"/>
-		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="COMBATPOINTHEAL"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+	<skill id="2289" levels="7" name="Elixir of CP (No Grade)">
+		<!--gorodetskiy-->
+		<table name="#itemConsumeId">8634 8635 8636 8637 8638 8639 30359</table>
+		<table name="#levelMin">1 20 40 52 61 76 85</table>
+		<table name="#levelMax">19 39 51 60 75 84 99</table>
+		<table name="#power">150 350 600 800 1000 1200 1400</table>
+		<set name="magicType" val="SPECIAL" />
+		<set name="icon" val="icon.skill0000" />
+		<set name="reuseDelay" val="600000" />
+		<set name="power" val="#power" />
+		<set name="magicLevel" val="1" />
+		<set name="itemConsumeId" val="#itemConsumeId" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="isHandler" val="true" />
+		<set name="altUse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="operateType" val="OP_ACTIVE" />
 		<cond msgId="1902">
 			<and>
-				<player minLevel="#levelMin"/>
-				<player maxLevel="#levelMax"/>
+				<player minLevel="#levelMin" />
+				<player maxLevel="#levelMax" />
 			</and>
 		</cond>
 	</skill>
 	<skill id="2290" levels="1" name="Coffer of Shadows">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2291" levels="1" name="Facelifting Potion">
     <!-- none -->

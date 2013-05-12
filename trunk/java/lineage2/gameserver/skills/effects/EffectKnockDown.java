@@ -34,11 +34,11 @@ public class EffectKnockDown extends Effect
 	 * Field _z. Field _y. Field _x.
 	 */
 	private int _x, _y, _z;
-	
+
+
 	private static TIntIntHashMap _ChainKnockSkills = new TIntIntHashMap(8);
 	
 	private static TIntIntHashMap _ChainedTemporalReplace = new TIntIntHashMap(8);
-	
 	/**
 	 * Constructor for EffectKnockDown.
 	 * @param env Env
@@ -60,13 +60,13 @@ public class EffectKnockDown extends Effect
 		_ChainedTemporalReplace.put(10250, 10009);
 		_ChainedTemporalReplace.put(10500, 10258);
 		_ChainedTemporalReplace.put(10750, 10508);
-		_ChainedTemporalReplace.put(11000, 10760); // Confirmed by lineage forum
+		_ChainedTemporalReplace.put(11000, 10760);
 		_ChainedTemporalReplace.put(11249, 11011);
 		_ChainedTemporalReplace.put(11750, 11510);
 		_ChainedTemporalReplace.put(11500, 11273);
 		_ChainedTemporalReplace.put(12000, 11766);
 	}
-	
+
 	/**
 	 * Method checkCondition.
 	 * @return boolean
@@ -74,7 +74,7 @@ public class EffectKnockDown extends Effect
 	@Override
 	public boolean checkCondition()
 	{
-		if (_effected.IsAirBind() || _effected.IsKnockedDown())
+		if (_effected.isAirBinded() || _effected.isKnockedDown())
 		{
 			return false;
 		}
@@ -109,21 +109,24 @@ public class EffectKnockDown extends Effect
 		_x = (tagetLoc.x - (int) (offset * cos));
 		_y = (tagetLoc.y - (int) (offset * sin));
 		_z = tagetLoc.z;
-		
 		Location loc = new Location(_x, _y, _z);
 		loc = GeoEngine.moveCheck(tagetLoc.x, tagetLoc.y, tagetLoc.z, _x, _y, _effected.getGeoIndex());
-		
-		_effected.startKnockDown();
-		for (Player playerNearEffected : World.getAroundPlayers(_effected, 1200, 400))// Need to check: When the target has been hitted by another Knock Down skill, don't trigger chain skill
+		if(!_effected.isKnockedDown())
+			_effected.startKnockingdown();
+		for(Player playerNearEffected : World.getAroundPlayers(_effected, 1200, 400))//Need to check: When the target has been hitted by another Knock Down skill, don't trigger chain skill
 		{
-			if ((playerNearEffected.getTarget() == _effected) && playerNearEffected.isAwaking())
+			if(playerNearEffected.getTarget() == _effected && playerNearEffected.isAwaking())
 			{
 				int chainSkill = _ChainKnockSkills.get(playerNearEffected.getClassId().getId());
 				int temporalReplaceSkill = _ChainedTemporalReplace.get(chainSkill);
-				playerNearEffected.sendPacket(new ExAlterSkillRequest(chainSkill, temporalReplaceSkill, 3));
+				playerNearEffected.sendPacket(new ExAlterSkillRequest(chainSkill,temporalReplaceSkill,3));	
 			}
 		}
-		_effected.broadcastPacket(new FlyToLocation(_effected, loc, FlyType.PUSH_DOWN_HORIZONTAL, getSkill().getFlySpeed()));// need to check: if the effected is already knocked down, move the target again?
+		if (loc == null)
+			_log.info("EffectKnockDown Loc null check this!");
+		_effected.broadcastPacket(new FlyToLocation(_effected, loc, FlyType.PUSH_DOWN_HORIZONTAL, getSkill().getFlySpeed()));//need to check: if the effected is already knocked down, move the target again?
+		_effected.abortAttack(true, true);
+		_effected.abortCast(true, true);
 		_effected.setXYZ(loc.getX(), loc.getY(), loc.getZ());
 		_effected.broadcastPacket(new ValidateLocation(_effected));
 	}
@@ -135,9 +138,8 @@ public class EffectKnockDown extends Effect
 	public void onExit()
 	{
 		super.onExit();
-		_effected.setXYZ(_x, _y, _z);
-		_effected.broadcastPacket(new ValidateLocation(_effected));
-		_effected.stopKnockDown(true);
+		if(_effected.isKnockedDown())
+			_effected.stopKnockingdown();
 	}
 	
 	/**

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!ELEMENT list (sub_unit_skill_tree|pledge_skill_tree|collection_skill_tree|certification_skill_tree|transfer_skill_tree|normal_skill_tree|fishing_skill_tree|transformation_skill_tree|awakening_keep_skill_tree|awakening_general_keep_skill_tree)*>
+<!ELEMENT list (sub_unit_skill_tree|pledge_skill_tree|collection_skill_tree|certification_skill_tree|transfer_skill_tree|normal_skill_tree|fishing_skill_tree|transformation_skill_tree|awakening_keep_skill_tree|awakening_general_keep_skill_tree|dualclass_certification_skill_tree)*>
 <!ELEMENT sub_unit_skill_tree (skill)*>
 <!ELEMENT pledge_skill_tree (skill)*>
 <!ELEMENT collection_skill_tree (skill)*>
 <!ELEMENT certification_skill_tree (skill)*>
+<!ELEMENT dualclass_certification_skill_tree (skill)*>
 <!ELEMENT fishing_skill_tree (race)*>
 <!ELEMENT transfer_skill_tree (class)*>
 <!ELEMENT normal_skill_tree (class)*>
@@ -20,6 +21,7 @@
 			name CDATA #IMPLIED
 			cost CDATA #IMPLIED
 			clicked CDATA #IMPLIED
+			deprecated CDATA #IMPLIED
 			race CDATA #IMPLIED>
 	<!ELEMENT class (skill)*>
 		<!ATTLIST class id CDATA #REQUIRED>

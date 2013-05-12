@@ -1,5 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
+	<skill id="9337" levels="1" name="??????? ? ???????? ??????">
+		<set name="magicLevel" val="1"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9338" levels="1" name="??????? ? ???????">
+		<set name="magicLevel" val="1"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9339" levels="1" name="??????: ??????? ?????????? ??????">
+		<set name="magicLevel" val="1"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9340" levels="1" name="?????? ?????: ???????? ??????">
+		<set name="magicLevel" val="1"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9341" levels="1" name="?????? ?????: ?????? ???????????">
+		<set name="magicLevel" val="1"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9342" levels="1" name="?????? ?????: ?????? ??????????">
+		<set name="magicLevel" val="1"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9343" levels="1" name="?????? ?????: ????. ?????? ???????????">
+		<set name="magicLevel" val="1"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9344" levels="1" name="?????? ?????: ?????? ?????? ????">
+		<set name="magicLevel" val="1"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9345" levels="1" name="A Treasure Box">
+		<set name="magicLevel" val="1"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="itemConsumeId" val="34702"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9346" levels="1" name="Hero Treasure Box">
+		<set name="magicLevel" val="1"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="itemConsumeId" val="34703"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
    <skill id="9365" levels="2" name="Support of Eva">
     <!-- Recovers HP by 20%, MP by 20%, and CP by 30%. Can be used in the Olympiad. -->
         <table name="#regHpMp">1.2 1.3</table>
@@ -153,4 +247,17 @@
         <set name="hitTime" val="10000"/>
         <set name="isReuseDelayPermanent" val="true"/>
     </skill>
+    <skill id="9399" levels="1" name="Firecracker of Fear">
+    <!-- none -->
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="1500"/>
+		<set name="magicLevel" val="1"/>
+		<set name="itemConsumeId" val="34761"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="HOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
 </list>

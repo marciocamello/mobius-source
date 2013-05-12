@@ -410,7 +410,7 @@ public class TeamMember
 		}
 		player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
 		player.setCurrentCp(player.getMaxCp());
-		player.broadcastUserInfo(true);
+		player.broadcastUserInfo();
 	}
 	
 	/**

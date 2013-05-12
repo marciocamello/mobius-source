@@ -1,15 +1,3 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package lineage2.gameserver.network.serverpackets;
 
 import javolution.util.FastList;
@@ -30,170 +18,36 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.skills.effects.EffectCubic;
 import lineage2.gameserver.utils.Location;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
 public class UserInfo extends L2GameServerPacket
 {
-	/**
-	 * Field can_writeImpl.
-	 */
-	private boolean can_writeImpl = false;
-	/**
-	 * Field partyRoom.
-	 */
-	private final boolean partyRoom;
-	/**
-	 * Field _swimWalkSpd. Field _swimRunSpd. Field _walkSpd. Field _runSpd.
-	 */
-	private final int _runSpd, _walkSpd, _swimRunSpd, _swimWalkSpd;
-	/**
-	 * Field _flRunSpd.
-	 */
-	private int _flRunSpd;
-	/**
-	 * Field _flWalkSpd.
-	 */
-	private int _flWalkSpd;
-	/**
-	 * Field _flyRunSpd.
-	 */
-	private int _flyRunSpd;
-	/**
-	 * Field _flyWalkSpd.
-	 */
-	private int _flyWalkSpd;
-	/**
-	 * Field _relation.
-	 */
-	private int _relation;
-	/**
-	 * Field col_height. Field col_radius. Field attack_speed. Field move_speed.
-	 */
-	private final double move_speed, attack_speed, col_radius, col_height;
-	/**
-	 * Field _inv.
-	 */
-	private final int[][] _inv;
-	/**
-	 * Field _fishLoc. Field _loc.
-	 */
-	private final Location _loc, _fishLoc;
-	/**
-	 * Field maxCp. Field curCp. Field level. Field base_class. Field sex. Field _race. Field vehicle_obj_id. Field obj_id.
-	 */
-	private final int obj_id, vehicle_obj_id, _race, sex, base_class, level, curCp, maxCp;
-	/**
-	 * Field _enchant.
-	 */
-	private int _enchant;
-	/**
-	 * Field _weaponFlag.
-	 */
-	private final int _weaponFlag;
-	/**
-	 * Field _exp.
-	 */
-	private final long _exp;
-	/**
-	 * Field rec_have. Field rec_left. Field maxLoad. Field curLoad. Field maxMp. Field curMp. Field maxHp. Field curHp.
-	 */
-	private final int curHp, maxHp, curMp, maxMp, curLoad, maxLoad, rec_left, rec_have;
-	/**
-	 * Field InventoryLimit. Field ClanPrivs. Field _sp. Field _men. Field _wit. Field _int. Field _dex. Field _con. Field _str.
-	 */
-	private final int _str, _con, _dex, _int, _wit, _men, _sp, ClanPrivs, InventoryLimit;
-	/**
-	 * Field mCritRate. Field maccuracy. Field mevasion. Field _matkspd. Field _matk. Field crit. Field accuracy. Field evasion. Field _pdef. Field _patkspd. Field _patk.
-	 */
-	private final int _patk, _patkspd, _pdef, evasion, accuracy, crit, _matk, _matkspd, mevasion, maccuracy, mCritRate;
-	/**
-	 * Field vitality. Field fame. Field gm_commands. Field face. Field hair_color. Field hair_style. Field karma. Field pvp_flag. Field _mdef.
-	 */
-	private final int _mdef, pvp_flag, karma, hair_style, hair_color, face, gm_commands, fame, vitality;
-	/**
-	 * Field large_clan_crest_id. Field ally_crest_id. Field ally_id. Field clan_crest_id. Field clan_id.
-	 */
+	private boolean can_writeImpl = false, partyRoom;
+	private int _runSpd, _walkSpd, _swimRunSpd, _swimWalkSpd, _flRunSpd, _flWalkSpd, _flyRunSpd, _flyWalkSpd, _relation;
+	private double move_speed, attack_speed, col_radius, col_height;
+	private int[][] _inv;
+	private Location _loc, _fishLoc;
+	private int obj_id, vehicle_obj_id, _race, sex, base_class, level, curCp, maxCp, _enchant, _weaponFlag;
+	private long _exp;
+	private int curHp, maxHp, curMp, maxMp, curLoad, maxLoad, rec_left, rec_have;
+	private int _str, _con, _dex, _int, _wit, _men, _sp, ClanPrivs, InventoryLimit;
+	private int _patk, _patkspd, _pdef, evasion, accuracy, crit, _matk, _matkspd, _mevasion, _maccuracy, _mCritRate;
+	private int _mdef, pvp_flag, karma, hair_style, hair_color, face, gm_commands, fame, vitality;
 	private int clan_id, clan_crest_id, ally_id, ally_crest_id, large_clan_crest_id;
-	/**
-	 * Field agathion. Field class_id. Field pvp_kills. Field pk_kills. Field can_crystalize. Field private_store.
-	 */
-	private final int private_store, can_crystalize, pk_kills, pvp_kills, class_id, agathion;
-	/**
-	 * Field hero. Field noble.
-	 */
-	private final int noble, hero;
-	/**
-	 * Field mount_id.
-	 */
-	private int mount_id;
-	/**
-	 * Field cw_level.
-	 */
-	private int cw_level;
-	/**
-	 * Field fishing. Field transformation. Field title_color. Field pledge_type. Field pledge_class. Field running. Field name_color.
-	 */
-	private final int name_color, running, pledge_class, pledge_type, title_color, transformation, fishing;
-	/**
-	 * Field defenceUnholy. Field defenceHoly. Field defenceEarth. Field defenceWind. Field defenceWater. Field defenceFire.
-	 */
-	private final int defenceFire, defenceWater, defenceWind, defenceEarth, defenceHoly, defenceUnholy;
-	/**
-	 * Field mount_type.
-	 */
+	private int private_store, can_crystalize, pk_kills, pvp_kills, class_id, agathion;
+	private int noble, hero, mount_id, cw_level;
+	private int name_color, running, pledge_class, pledge_type, title_color, transformation, fishing;
+	private int defenceFire, defenceWater, defenceWind, defenceEarth, defenceHoly, defenceUnholy;
 	private int mount_type;
-	/**
-	 * Field title. Field _name.
-	 */
 	private String _name, title;
-	/**
-	 * Field cubics.
-	 */
-	private final EffectCubic[] cubics;
-	/**
-	 * Field attackElement.
-	 */
-	private final Element attackElement;
-	/**
-	 * Field attackElementValue.
-	 */
-	private final int attackElementValue;
-	/**
-	 * Field _allowMap. Field isFlying.
-	 */
-	private final boolean isFlying, _allowMap;
-	/**
-	 * Field talismans.
-	 */
-	private final int talismans;
-	/**
-	 * Field openCloak.
-	 */
-	private final boolean openCloak;
-	/**
-	 * Field _expPercent.
-	 */
-	private final double _expPercent;
-	/**
-	 * Field _team.
-	 */
-	private final TeamType _team;
+	private EffectCubic[] cubics;
+	private Element attackElement;
+	private int attackElementValue;
+	private boolean isFlying, _allowMap;
+	private int talismans;
+	private boolean openCloak;
+	private double _expPercent;
+	private TeamType _team;
 	private final FastList<Integer> _aveList;
-	/**
-	 * Field _log.
-	 */
-	@SuppressWarnings("unused")
-	private static final Logger _log = LoggerFactory.getLogger(UserInfo.class);
-	
-	/**
-	 * Constructor for UserInfo.
-	 * @param player Player
-	 */
+
 	public UserInfo(Player player)
 	{
 		if (player.getTransformationName() != null)
@@ -208,31 +62,29 @@ public class UserInfo extends L2GameServerPacket
 		else
 		{
 			_name = player.getName();
+
 			Clan clan = player.getClan();
 			Alliance alliance = clan == null ? null : clan.getAlliance();
+			//
 			clan_id = clan == null ? 0 : clan.getClanId();
 			clan_crest_id = clan == null ? 0 : clan.getCrestId();
 			large_clan_crest_id = clan == null ? 0 : clan.getCrestLargeId();
+			//
 			ally_id = alliance == null ? 0 : alliance.getAllyId();
 			ally_crest_id = alliance == null ? 0 : alliance.getAllyCrestId();
+
 			cw_level = 0;
 			title = player.getTitle();
 		}
+
 		if (player.getPlayerAccess().GodMode && player.isInvisible())
-		{
 			title += "[I]";
-		}
 		if (player.isPolymorphed())
-		{
 			if (NpcHolder.getInstance().getTemplate(player.getPolyId()) != null)
-			{
 				title += " - " + NpcHolder.getInstance().getTemplate(player.getPolyId()).name;
-			}
 			else
-			{
 				title += " - Polymorphed";
-			}
-		}
+
 		if (player.isMounted())
 		{
 			_enchant = 0;
@@ -245,10 +97,16 @@ public class UserInfo extends L2GameServerPacket
 			mount_id = 0;
 			mount_type = 0;
 		}
+
 		_weaponFlag = player.getActiveWeaponInstance() == null ? 0x14 : 0x28;
+
 		move_speed = player.getMovementSpeedMultiplier();
 		_runSpd = (int) (player.getRunSpeed() / move_speed);
 		_walkSpd = (int) (player.getWalkSpeed() / move_speed);
+
+		_flRunSpd = (int) player.getTemplate().getBaseFlyRunSpd();
+		_flWalkSpd = (int) player.getTemplate().getBaseFlyWalkSpd();
+
 		if (player.isFlying())
 		{
 			_flyRunSpd = _runSpd;
@@ -259,8 +117,10 @@ public class UserInfo extends L2GameServerPacket
 			_flyRunSpd = 0;
 			_flyWalkSpd = 0;
 		}
-		_swimRunSpd = player.getSwimSpeed();
-		_swimWalkSpd = player.getSwimSpeed();
+
+		_swimRunSpd = player.getSwimRunSpeed();
+		_swimWalkSpd = player.getSwimWalkSpeed();
+
 		_inv = new int[Inventory.PAPERDOLL_MAX][3];
 		for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
 		{
@@ -268,17 +128,17 @@ public class UserInfo extends L2GameServerPacket
 			_inv[PAPERDOLL_ID][1] = player.getInventory().getPaperdollItemId(PAPERDOLL_ID);
 			_inv[PAPERDOLL_ID][2] = player.getInventory().getPaperdollAugmentationId(PAPERDOLL_ID);
 		}
+
 		_relation = player.isClanLeader() ? 0x40 : 0;
 		for (GlobalEvent e : player.getEvents())
-		{
 			_relation = e.getUserRelation(player, _relation);
-		}
+
 		_loc = player.getLoc();
 		obj_id = player.getObjectId();
 		vehicle_obj_id = player.isInBoat() ? player.getBoat().getObjectId() : 0x00;
 		_race = player.getRace().ordinal();
 		sex = player.getSex();
-		base_class = player.getBaseDefaultClassId();
+		base_class = player.getBaseClassId();
 		level = player.getLevel();
 		_exp = player.getExp();
 		_expPercent = Experience.getExpPercent(player.getLevel(), player.getExp());
@@ -299,15 +159,15 @@ public class UserInfo extends L2GameServerPacket
 		_patkspd = player.getPAtkSpd();
 		_pdef = player.getPDef(null);
 		evasion = player.getEvasionRate(null);
-		mevasion = player.getMEvasionRate(null);
-		maccuracy = player.getMAccuracy();
-		mCritRate = (int) player.getMagicCriticalRate(null, null);
+		_mevasion = player.getMEvasionRate(null);
+		_maccuracy = player.getMAccuracy();
+		_mCritRate = (int) player.getMagicCriticalRate(null, null);
 		accuracy = player.getAccuracy();
 		crit = player.getCriticalHit(null, null);
 		_matk = player.getMAtk(null, null);
 		_matkspd = player.getMAtkSpd();
 		_mdef = player.getMDef(null, null);
-		pvp_flag = player.getPvpFlag();
+		pvp_flag = player.getPvpFlag(); // 0=white, 1=purple, 2=purpleblink
 		karma = player.getKarma();
 		attack_speed = player.getAttackSpeedMultiplier();
 		col_radius = player.getColRadius();
@@ -316,6 +176,7 @@ public class UserInfo extends L2GameServerPacket
 		hair_color = player.getHairColor();
 		face = player.getFace();
 		gm_commands = player.isGM() || player.getPlayerAccess().CanUseGMCommand ? 1 : 0;
+		// builder level
 		clan_id = player.getClanId();
 		ally_id = player.getAllyId();
 		private_store = player.getPrivateStoreType();
@@ -323,20 +184,31 @@ public class UserInfo extends L2GameServerPacket
 		pk_kills = player.getPkKills();
 		pvp_kills = player.getPvpKills();
 		cubics = player.getCubics().toArray(new EffectCubic[player.getCubics().size()]);
-		player.getAbnormalEffect();
+		_aveList = player.getAveList();
 		ClanPrivs = player.getClanPrivileges();
-		rec_left = player.getRecomLeft();
-		rec_have = player.getRecomHave();
+		rec_left = player.getRecomLeft(); // c2 recommendations remaining
+		rec_have = player.getRecomHave(); // c2 recommendations received
 		InventoryLimit = player.getInventoryLimit();
 		class_id = player.getClassId().getId();
 		maxCp = player.getMaxCp();
 		curCp = (int) player.getCurrentCp();
 		_team = player.getTeam();
-		noble = player.isNoble() || (player.isGM() && Config.GM_HERO_AURA) ? 1 : 0;
-		hero = player.isHero() || (player.isGM() && Config.GM_HERO_AURA) ? 1 : 0;
+		noble = player.isNoble() || player.isGM() && Config.GM_HERO_AURA ? 1 : 0; // 0x01:
+		// symbol
+		// on
+		// char
+		// menu
+		// ctrl+I
+		hero = player.isHero() || player.isGM() && Config.GM_HERO_AURA ? 1 : 0; // 0x01:
+		// Hero
+		// Aura
+		// and
+		// symbol
+		fishing = player.isFishing() ? 1 : 0; // Fishing Mode
 		_fishLoc = player.getFishLoc();
 		name_color = player.getNameColor();
-		running = player.isRunning() ? 0x01 : 0x00;
+		running = player.isRunning() ? 0x01 : 0x00; // changes the Speed display
+		// on Status Window
 		pledge_class = player.getPledgeClass();
 		pledge_type = player.getPledgeType();
 		title_color = player.getTitleColor();
@@ -352,32 +224,23 @@ public class UserInfo extends L2GameServerPacket
 		agathion = player.getAgathionId();
 		fame = player.getFame();
 		vitality = player.getVitality();
-		partyRoom = (player.getMatchingRoom() != null) && (player.getMatchingRoom().getType() == MatchingRoom.PARTY_MATCHING) && (player.getMatchingRoom().getLeader() == player);
+		partyRoom = player.getMatchingRoom() != null && player.getMatchingRoom().getType() == MatchingRoom.PARTY_MATCHING && player.getMatchingRoom().getLeader() == player;
 		isFlying = player.isInFlyingTransform();
 		talismans = player.getTalismanCount();
 		openCloak = player.getOpenCloak();
 		_allowMap = player.isActionBlocked(Zone.BLOCKED_ACTION_MINIMAP);
-		fishing = player.isFishing() ? 1 : 0;
+		fishing = player.isFishing() ? 1 : 0; // Fishing Mode
 		can_writeImpl = true;
-		_aveList = player.getAveList();
 	}
-	
-	/**
-	 * Method writeImpl.
-	 */
+
 	@Override
 	protected final void writeImpl()
 	{
 		if (!can_writeImpl)
-		{
 			return;
-		}
-		Player activeChar = getClient().getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
+
 		writeC(0x32);
+
 		writeD(_loc.x);
 		writeD(_loc.y);
 		writeD(_loc.z + Config.CLIENT_Z_SHIFT);
@@ -404,32 +267,29 @@ public class UserInfo extends L2GameServerPacket
 		writeD(curLoad);
 		writeD(maxLoad);
 		writeD(_weaponFlag);
+
 		for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
-		{
 			writeD(_inv[PAPERDOLL_ID][0]);
-		}
+
 		for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
-		{
 			writeD(_inv[PAPERDOLL_ID][1]);
-		}
+
 		for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
-		{
 			writeD(_inv[PAPERDOLL_ID][2]);
-		}
+
 		writeD(talismans);
 		writeD(openCloak ? 0x01 : 0x00);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
-		if (getClient().getRevision() == 448)
-		{
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-		}
+
+		writeD(0); // Tauti
+		writeD(0); // Tauti
+		writeD(0); // Tauti
+		writeD(0); // Tauti
+		writeD(0); // Tauti
+		writeD(0); // Tauti
+		writeD(0); // Tauti
+		writeD(0); // Tauti
+		writeD(0); // Tauti
+
 		writeD(_patk);
 		writeD(_patkspd);
 		writeD(_pdef);
@@ -440,15 +300,15 @@ public class UserInfo extends L2GameServerPacket
 		writeD(_matkspd);
 		writeD(_patkspd);
 		writeD(_mdef);
-		writeD(mevasion);
-		writeD(maccuracy);
-		writeD(mCritRate);
+		writeD(_mevasion);
+		writeD(_maccuracy);
+		writeD(_mCritRate);
 		writeD(pvp_flag);
 		writeD(karma);
 		writeD(_runSpd);
 		writeD(_walkSpd);
-		writeD(_swimRunSpd);
-		writeD(_swimWalkSpd);
+		writeD(_swimRunSpd); // swimspeed
+		writeD(_swimWalkSpd); // swimspeed
 		writeD(_flRunSpd);
 		writeD(_flWalkSpd);
 		writeD(_flyRunSpd);
@@ -466,18 +326,19 @@ public class UserInfo extends L2GameServerPacket
 		writeD(clan_crest_id);
 		writeD(ally_id);
 		writeD(ally_crest_id);
+		// 0x40 leader rights
+		// siege flags: attacker - 0x180 sword over name, defender - 0x80
+		// shield, 0xC0 crown (|leader), 0x1C0 flag (|leader)
 		writeD(_relation);
-		writeC(mount_type);
+		writeC(mount_type); // mount type
 		writeC(private_store);
 		writeC(can_crystalize);
 		writeD(pk_kills);
 		writeD(pvp_kills);
 		writeH(cubics.length);
 		for (EffectCubic cubic : cubics)
-		{
 			writeH(cubic == null ? 0 : cubic.getId());
-		}
-		writeC(partyRoom ? 0x01 : 0x00);
+		writeC(partyRoom ? 0x01 : 0x00); // 1-find party members
 		writeC(isFlying ? 0x02 : 0x00);
 		writeD(ClanPrivs);
 		writeH(rec_left);
@@ -503,24 +364,31 @@ public class UserInfo extends L2GameServerPacket
 		writeD(pledge_type);
 		writeD(title_color);
 		writeD(cw_level);
-		writeD(transformation);
+		writeD(transformation); // Transformation id
+
+		// AttackElement (0 - Fire, 1 - Water, 2 - Wind, 3 - Earth, 4 - Holy, 5
+		// - Dark, -2 - None)
 		writeH(attackElement.getId());
-		writeH(attackElementValue);
-		writeH(defenceFire);
-		writeH(defenceWater);
-		writeH(defenceWind);
-		writeH(defenceEarth);
-		writeH(defenceHoly);
-		writeH(defenceUnholy);
+		writeH(attackElementValue); // AttackElementValue
+		writeH(defenceFire); // DefAttrFire
+		writeH(defenceWater); // DefAttrWater
+		writeH(defenceWind); // DefAttrWind
+		writeH(defenceEarth); // DefAttrEarth
+		writeH(defenceHoly); // DefAttrHoly
+		writeH(defenceUnholy); // DefAttrUnholy
+
 		writeD(agathion);
-		writeD(fame);
-		writeD(_allowMap ? 1 : 0);
-		writeD(vitality);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
-		writeC(0x00);
-		
+
+		// T2 Starts
+		writeD(fame); // Fame
+		writeD(_allowMap ? 1 : 0); // Minimap on Hellbound
+		writeD(vitality); // Vitality Points
+
+		writeD(0x00);// Unknown GOD
+		writeD(0x00);// Unknown GOD (1 - Party searching?)
+		writeC(0x00);// Unknown GOD
+		writeD(0x00);// Unknown GOD
+
 		if (_aveList != null)
 		{
 			writeD(_aveList.size());
@@ -533,7 +401,7 @@ public class UserInfo extends L2GameServerPacket
 		{
 			writeD(0x00);
 		}
-		
-		writeC(0x00);
+
+		writeC(0); // Tauti
 	}
 }

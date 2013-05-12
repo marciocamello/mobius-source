@@ -1364,4 +1364,12 @@
         </territory>
 			<npc id="23148" /><!--Insane Creation-->
 		</spawn>
+	<spawn count="1" respawn="43200" respawn_random="0" period_of_day="none">
+		<point x="189086" y="13713" z="-2688" h="10000" />
+		<npc id="25859" /><!--Flynt (Raid Boss lv 97)-->
+	</spawn>
+	<spawn count="1" respawn="43200" respawn_random="0" period_of_day="none">
+		<point x="192593" y="22215" z="-3632" h="10000" />
+		<npc id="25862" /><!--Harp (Raid Boss lv 97)-->
+	</spawn>
 </list>

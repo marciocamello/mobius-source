@@ -1,105 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <list>
-<hp_table classId="146">
-<set level="1" value="100.2979146"/>
-<set level="2" value="115.6603774"/>
-<set level="3" value="131.1916584"/>
-<set level="4" value="146.8917577"/>
-<set level="5" value="162.7606753"/>
-<set level="6" value="178.7984111"/>
-<set level="7" value="195.0049652"/>
-<set level="8" value="211.3803376"/>
-<set level="9" value="227.9245283"/>
-<set level="10" value="244.6375372"/>
-<set level="11" value="261.5193644"/>
-<set level="12" value="278.5700099"/>
-<set level="13" value="295.7894737"/>
-<set level="14" value="313.1777557"/>
-<set level="15" value="330.734856"/>
-<set level="16" value="348.4607746"/>
-<set level="17" value="366.3555114"/>
-<set level="18" value="384.4190665"/>
-<set level="19" value="402.6514399"/>
-<set level="20" value="421.0526316"/>
-<set level="21" value="448.3614697"/>
-<set level="22" value="475.91857"/>
-<set level="23" value="503.7239325"/>
-<set level="24" value="531.7775571"/>
-<set level="25" value="560.0794439"/>
-<set level="26" value="588.6295929"/>
-<set level="27" value="617.428004"/>
-<set level="28" value="646.4746773"/>
-<set level="29" value="675.7696127"/>
-<set level="30" value="705.3128103"/>
-<set level="31" value="735.1042701"/>
-<set level="32" value="765.1439921"/>
-<set level="33" value="795.4319762"/>
-<set level="34" value="825.9682224"/>
-<set level="35" value="856.7527309"/>
-<set level="36" value="887.7855015"/>
-<set level="37" value="919.0665343"/>
-<set level="38" value="950.5958292"/>
-<set level="39" value="982.3733863"/>
-<set level="40" value="1014.399206"/>
-<set level="41" value="1059.58292"/>
-<set level="42" value="1105.114201"/>
-<set level="43" value="1150.993049"/>
-<set level="44" value="1197.219464"/>
-<set level="45" value="1243.793446"/>
-<set level="46" value="1290.714995"/>
-<set level="47" value="1337.984111"/>
-<set level="48" value="1385.600794"/>
-<set level="49" value="1433.565045"/>
-<set level="50" value="1481.876862"/>
-<set level="51" value="1530.536246"/>
-<set level="52" value="1579.543198"/>
-<set level="53" value="1628.897716"/>
-<set level="54" value="1678.599801"/>
-<set level="55" value="1728.649454"/>
-<set level="56" value="1779.046673"/>
-<set level="57" value="1829.79146"/>
-<set level="58" value="1880.883813"/>
-<set level="59" value="1932.323734"/>
-<set level="60" value="1984.111221"/>
-<set level="61" value="2036.246276"/>
-<set level="62" value="2088.728898"/>
-<set level="63" value="2141.559086"/>
-<set level="64" value="2194.736842"/>
-<set level="65" value="2248.262165"/>
-<set level="66" value="2302.135055"/>
-<set level="67" value="2356.355511"/>
-<set level="68" value="2410.923535"/>
-<set level="69" value="2465.839126"/>
-<set level="70" value="2521.102284"/>
-<set level="71" value="2576.713009"/>
-<set level="72" value="2632.671301"/>
-<set level="73" value="2688.97716"/>
-<set level="74" value="2745.630586"/>
-<set level="75" value="2802.631579"/>
-<set level="76" value="2859.980139"/>
-<set level="77" value="2917.676266"/>
-<set level="78" value="2975.71996"/>
-<set level="79" value="3034.111221"/>
-<set level="80" value="3092.85005"/>
-<set level="81" value="3151.936445"/>
-<set level="82" value="3211.370407"/>
-<set level="83" value="3271.151936"/>
-<set level="84" value="3331.281033"/>
-<set level="85" value="6831.678252"/>
-<set level="86" value="6994.786495"/>
-<set level="87" value="7157.249255"/>
-<set level="88" value="7320.059583"/>
-<set level="89" value="7483.217478"/>
-<set level="90" value="7645.729891"/>
-<set level="91" value="7808.589871"/>
-<set level="92" value="7971.797418"/>
-<set level="93" value="8134.359484"/>
-<set level="94" value="8297.269116"/>
-<set level="95" value="8460.526316"/>
-<set level="96" value="8922.04568"/>
-<set level="97" value="9383.912612"/>
-<set level="98" value="9845.134062"/>
-<set level="99" value="10307.69613"/>
-</hp_table>
+	<hp_table classId="146">
+		<set level="1" value="80.0"/>
+		<set level="2" value="92.74"/>
+		<set level="3" value="105.62"/>
+		<set level="4" value="118.64"/>
+		<set level="5" value="131.8"/>
+		<set level="6" value="145.1"/>
+		<set level="7" value="158.54"/>
+		<set level="8" value="172.12"/>
+		<set level="9" value="185.84"/>
+		<set level="10" value="199.7"/>
+		<set level="11" value="213.7"/>
+		<set level="12" value="227.84"/>
+		<set level="13" value="242.12"/>
+		<set level="14" value="256.54"/>
+		<set level="15" value="271.1"/>
+		<set level="16" value="285.8"/>
+		<set level="17" value="300.64"/>
+		<set level="18" value="315.62"/>
+		<set level="19" value="330.74"/>
+		<set level="20" value="346.0"/>
+		<set level="21" value="381.2"/>
+		<set level="22" value="416.72"/>
+		<set level="23" value="452.56"/>
+		<set level="24" value="488.72"/>
+		<set level="25" value="525.2"/>
+		<set level="26" value="562.0"/>
+		<set level="27" value="599.12"/>
+		<set level="28" value="636.56"/>
+		<set level="29" value="674.32"/>
+		<set level="30" value="712.4"/>
+		<set level="31" value="750.8"/>
+		<set level="32" value="789.52"/>
+		<set level="33" value="828.56"/>
+		<set level="34" value="867.92"/>
+		<set level="35" value="907.6"/>
+		<set level="36" value="947.6"/>
+		<set level="37" value="987.92"/>
+		<set level="38" value="1028.56"/>
+		<set level="39" value="1069.52"/>
+		<set level="40" value="1110.8"/>
+		<set level="41" value="1168.0"/>
+		<set level="42" value="1225.64"/>
+		<set level="43" value="1283.72"/>
+		<set level="44" value="1342.24"/>
+		<set level="45" value="1401.2"/>
+		<set level="46" value="1460.6"/>
+		<set level="47" value="1520.44"/>
+		<set level="48" value="1580.72"/>
+		<set level="49" value="1641.44"/>
+		<set level="50" value="1702.6"/>
+		<set level="51" value="1764.2"/>
+		<set level="52" value="1826.24"/>
+		<set level="53" value="1888.72"/>
+		<set level="54" value="1951.64"/>
+		<set level="55" value="2015.0"/>
+		<set level="56" value="2078.8"/>
+		<set level="57" value="2143.04"/>
+		<set level="58" value="2207.72"/>
+		<set level="59" value="2272.84"/>
+		<set level="60" value="2338.4"/>
+		<set level="61" value="2404.4"/>
+		<set level="62" value="2470.84"/>
+		<set level="63" value="2537.72"/>
+		<set level="64" value="2605.04"/>
+		<set level="65" value="2672.8"/>
+		<set level="66" value="2741.0"/>
+		<set level="67" value="2809.64"/>
+		<set level="68" value="2878.72"/>
+		<set level="69" value="2948.24"/>
+		<set level="70" value="3018.2"/>
+		<set level="71" value="3088.6"/>
+		<set level="72" value="3159.44"/>
+		<set level="73" value="3230.72"/>
+		<set level="74" value="3302.44"/>
+		<set level="75" value="3374.6"/>
+		<set level="76" value="3447.2"/>
+		<set level="77" value="3520.24"/>
+		<set level="78" value="3593.72"/>
+		<set level="79" value="3667.64"/>
+		<set level="80" value="3742.0"/>
+		<set level="81" value="3816.8"/>
+		<set level="82" value="3892.04"/>
+		<set level="83" value="3967.72"/>
+		<set level="84" value="4043.84"/>
+		<set level="85" value="4423.5"/>
+		<set level="86" value="4574.079"/>
+		<set level="87" value="4726.639"/>
+		<set level="88" value="4876.758"/>
+		<set level="89" value="5026.317"/>
+		<set level="90" value="5176.877"/>
+		<set level="91" value="5329.437"/>
+		<set level="92" value="5629.996"/>
+		<set level="93" value="5782.556"/>
+		<set level="94" value="5939.115"/>
+		<set level="95" value="6090.675"/>
+		<set level="96" value="6244.234"/>
+		<set level="97" value="6397.356"/>
+		<set level="98" value="6553.675"/>
+		<set level="99" value="6706.234"/>
+	</hp_table>
 </list>

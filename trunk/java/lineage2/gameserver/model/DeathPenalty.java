@@ -175,7 +175,7 @@ public class DeathPenalty
 				return;
 			}
 			skill.getEffects(player, player, false, false);
-			player.sendPacket(new SystemMessage(SystemMessage.THE_LEVEL_S1_DEATH_PENALTY_WILL_BE_ASSESSED).addNumber(getLevel(player)));
+			player.sendPacket(new SystemMessage(SystemMessage.THE_LEVEL_S1_SHILENS_BREATH_WILL_BE_ASSESSED).addNumber(getLevel(player)));
 		}
 		player.updateStats();
 	}
@@ -218,7 +218,7 @@ public class DeathPenalty
 				return;
 			}
 			skill.getEffects(player, player, false, false);
-			player.sendPacket(new SystemMessage(SystemMessage.THE_LEVEL_S1_DEATH_PENALTY_WILL_BE_ASSESSED).addNumber(getLevel(player)));
+			player.sendPacket(new SystemMessage(SystemMessage.THE_LEVEL_S1_SHILENS_BREATH_WILL_BE_ASSESSED).addNumber(getLevel(player)));
 			player.updateStats();
 		}
 	}
@@ -249,7 +249,7 @@ public class DeathPenalty
 		if (getLevel(player) > 0)
 		{
 			player.broadcastPacket(new MagicSkillUse(player, player, _skillId, getLevel(player), 0, 0));
-			player.sendPacket(new SystemMessage(SystemMessage.THE_LEVEL_S1_DEATH_PENALTY_WILL_BE_ASSESSED).addNumber(getLevel(player)));
+			player.sendPacket(new SystemMessage(SystemMessage.THE_LEVEL_S1_SHILENS_BREATH_WILL_BE_ASSESSED).addNumber(getLevel(player)));
 		}
 		else
 		{

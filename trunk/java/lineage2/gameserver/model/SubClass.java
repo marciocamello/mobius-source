@@ -40,6 +40,22 @@ public class SubClass
 	 */
 	public static final int CERTIFICATION_80 = 1 << 3;
 	/**
+	 * Field CERTIFICATION_85.
+	 */
+	public static final int DUALCERTIFICATION_85 = 1 << 0;
+	/**
+	 * Field CERTIFICATION_90.
+	 */
+	public static final int DUALCERTIFICATION_90 = 1 << 1;
+	/**
+	 * Field CERTIFICATION_95.
+	 */
+	public static final int DUALCERTIFICATION_95 = 1 << 2;
+	/**
+	 * Field CERTIFICATION_85.
+	 */
+	public static final int DUALCERTIFICATION_99 = 1 << 3;
+	/**
 	 * Field _classId.
 	 */
 	private int _classId = 0;
@@ -88,6 +104,10 @@ public class SubClass
 	 */
 	private int _certification;
 	/**
+	 * Field _dualCertification.
+	 */
+	private int _dualCertification;
+	/**
 	 * Field _hp.
 	 */
 	private double _hp = 1;
@@ -99,6 +119,18 @@ public class SubClass
 	 * Field _cp.
 	 */
 	private double _cp = 1;
+	/**
+	 * Field _hp.
+	 */
+	private double _logOnhp = 1;
+	/**
+	 * Field _mp.
+	 */
+	private double _logOnMp = 1;
+	/**
+	 * Field _cp.
+	 */
+	private double _logOnCp = 1;
 	/**
 	 * Field awakingId.
 	 */
@@ -225,6 +257,66 @@ public class SubClass
 		_sp = (int) Math.min(Math.max(0, spValue), Integer.MAX_VALUE);
 	}
 	
+	/**
+	 * Method setlogOnHp.
+	 * @param hpValue double
+	 * This function are in for controls HP on logon of characters
+	 */
+	public void setLogonHp(double hpValue)
+	{
+		_logOnhp = hpValue;
+	}
+	
+	/**
+	 * Method getHp.
+	 * @return double
+	 * When the character skills effects are loaded, this value is taken without modification of the table, an applied to the character when all effect are loaded
+	 */
+	public double getlogOnHp()
+	{
+		return _logOnhp;
+	}
+
+	
+	/**
+	 * Method setlogOnMp.
+	 * @param hpValue double
+	 * This function are in for controls HP on logon of characters
+	 */
+	public void setLogonMp(double mpValue)
+	{
+		_logOnMp = mpValue;
+	}
+	
+	/**
+	 * Method getLogonMp.
+	 * @return double
+	 * When the character skills effects are loaded, this value is taken without modification of the table, an applied to the character when all effect are loaded
+	 */
+	public double getlogOnMp()
+	{
+		return _logOnMp;
+	}
+	
+	/**
+	 * Method setlogOnCp.
+	 * @param hpValue double
+	 * This function are in for controls HP on logon of characters
+	 */
+	public void setLogonCp(double cpValue)
+	{
+		_logOnCp = cpValue;
+	}
+	
+	/**
+	 * Method getLogOnCp.
+	 * @return double
+	 * When the character skills effects are loaded, this value is taken without modification of the table, an applied to the character when all effect are loaded
+	 */
+	public double getlogOnCp()
+	{
+		return _logOnCp;
+	}
 	/**
 	 * Method setHp.
 	 * @param hpValue double
@@ -405,6 +497,43 @@ public class SubClass
 	public boolean isCertificationGet(int v)
 	{
 		return (_certification & v) == v;
+	}
+
+	/**
+	 * Method getCertification.
+	 * @return int
+	 */
+	public int getDualCertification()
+	{
+		return _dualCertification;
+	}
+	
+	/**
+	 * Method setDualCertification.
+	 * @param certification int
+	 */
+	public void setDualCertification(int dualcertification)
+	{
+		_dualCertification = dualcertification;
+	}
+	
+	/**
+	 * Method addDualCertification.
+	 * @param c int
+	 */
+	public void addDualCertification(int c)
+	{
+		_dualCertification |= c;
+	}
+	
+	/**
+	 * Method isDualCertificationGet.
+	 * @param v int
+	 * @return boolean
+	 */
+	public boolean isDualCertificationGet(int v)
+	{
+		return (_dualCertification & v) == v;
 	}
 	
 	/**

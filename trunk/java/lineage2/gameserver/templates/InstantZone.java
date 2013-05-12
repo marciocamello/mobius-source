@@ -517,11 +517,11 @@ public class InstantZone
 		{
 			_entryType = InstantZoneEntryType.SOLO;
 		}
-		else if ((getMinParty() > 1) && (getMaxParty() <= 9))
+		else if ((getMinParty() > 1) && (getMaxParty() <= 7))
 		{
 			_entryType = InstantZoneEntryType.PARTY;
 		}
-		else if (getMaxParty() > 9)
+		else if (getMaxParty() > 7)
 		{
 			_entryType = InstantZoneEntryType.COMMAND_CHANNEL;
 		}

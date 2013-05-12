@@ -39,12 +39,13 @@ import lineage2.gameserver.data.xml.parser.PlayerTemplateParser;
 import lineage2.gameserver.data.xml.parser.RecipeParser;
 import lineage2.gameserver.data.xml.parser.ResidenceParser;
 import lineage2.gameserver.data.xml.parser.RestartPointParser;
+import lineage2.gameserver.data.xml.parser.RestorationInfoParser;
 import lineage2.gameserver.data.xml.parser.ShuttleTemplateParser;
 import lineage2.gameserver.data.xml.parser.SkillAcquireParser;
 import lineage2.gameserver.data.xml.parser.SoulCrystalParser;
 import lineage2.gameserver.data.xml.parser.SpawnParser;
-import lineage2.gameserver.data.xml.parser.SpawnsData;
 import lineage2.gameserver.data.xml.parser.StaticObjectParser;
+import lineage2.gameserver.data.xml.parser.StatuesSpawnParser;
 import lineage2.gameserver.data.xml.parser.WalkerRoutesParser;
 import lineage2.gameserver.data.xml.parser.WeaponItemParser;
 import lineage2.gameserver.data.xml.parser.ZoneParser;
@@ -67,6 +68,7 @@ public abstract class Parsers
 		HtmCache.getInstance().reload();
 		StringHolder.getInstance().load();
 		SkillTable.getInstance().load();
+		RestorationInfoParser.getInstance().load();
 		OptionDataParser.getInstance().load();
 		EtcItemParser.getInstance().load();
 		WeaponItemParser.getInstance().load();
@@ -80,7 +82,6 @@ public abstract class Parsers
 		CustomSpawnTable.getInstance();
 		ZoneParser.getInstance().load();
 		SpawnParser.getInstance().load();
-		SpawnsData.getInstance().load();
 		InstantZoneParser.getInstance().load();
 		WalkerRoutesParser.getInstance().load();
 		RecipeParser.getInstance().load();
@@ -104,5 +105,7 @@ public abstract class Parsers
 		PetitionGroupParser.getInstance().load();
 		PlayerTemplateParser.getInstance().load();
 		LevelBonusParser.getInstance().load();
+
+		StatuesSpawnParser.getInstance().load();
 	}
 }

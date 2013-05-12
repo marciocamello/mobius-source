@@ -30,6 +30,7 @@ import lineage2.gameserver.model.entity.Hero;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.instances.OlympiadManagerInstance;
+import lineage2.gameserver.model.quest.dynamic.DynamicQuestController;
 import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
@@ -231,6 +232,15 @@ public class RequestBypassToServer extends L2GameClientPacket
 				else
 				{
 					activeChar.processQuestEvent(p.substring(0, idx), p.substring(idx).trim(), npc);
+				}
+			}
+			else if (bp.bypass.startsWith("Campaign "))
+			{
+				String p = bp.bypass.substring(9).trim();
+				int idx = p.indexOf(' ');
+				if (idx > 0) {
+					String campaignName = p.substring(0, idx);
+					DynamicQuestController.getInstance().processDialogEvent(campaignName, p.substring(idx).trim(), activeChar);
 				}
 			}
 			else if (bp.handler != null)

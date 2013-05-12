@@ -1,51 +1,29 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ * Copyright Java Team (c) 2012. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ * Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+ * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+ * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+ * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
+
 package lineage2.gameserver.network.serverpackets;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
 public class ExChangeMPCost extends L2GameServerPacket
 {
-	/**
-	 * Field unk1.
-	 */
-	private final int unk1;
-	/**
-	 * Field unk2.
-	 */
-	private final double unk2;
-	
-	/**
-	 * Constructor for ExChangeMPCost.
-	 * @param unk1 int
-	 * @param unk2 double
-	 */
+	private int unk1;
+	private double unk2;
+
 	public ExChangeMPCost(int unk1, double unk2)
 	{
 		this.unk1 = unk1;
 		this.unk2 = unk2;
 	}
-	
-	/**
-	 * Method writeImpl.
-	 */
+
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0xEA);
-		writeD(unk1);
-		writeF(unk2);
+		writeEx(0xEB);
+		writeD(unk1);// TODO unknown
+		writeF(unk2);// TODO unknown
 	}
 }

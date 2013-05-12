@@ -1,15 +1,3 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package instances;
 
 import java.util.ArrayList;
@@ -40,6 +28,7 @@ import lineage2.gameserver.utils.Location;
 /**
  * @author pchayka
  */
+
 public class HeartInfinityAttack extends Reflection
 {
 	private static final int AliveTumor = 18708;
@@ -47,19 +36,19 @@ public class HeartInfinityAttack extends Reflection
 	private static final int Ekimus = 29150;
 	private static final int Hound = 29151;
 	private static final int RegenerationCoffin = 18710;
-	long tumorRespawnTime;
+	private long tumorRespawnTime;
 	private NpcInstance ekimus;
-	private final List<NpcInstance> hounds = new ArrayList<>(2);
+	private List<NpcInstance> hounds = new ArrayList<NpcInstance>(2);
 	private boolean houndBlocked = false;
 	private boolean conquestBegun = false;
-	boolean conquestEnded = false;
-	private final DeathListener deathListener = new DeathListener();
+	private boolean conquestEnded = false;
+	private DeathListener deathListener = new DeathListener();
 	private Player invoker;
 	private ScheduledFuture<?> timerTask;
-	long startTime;
+	private long startTime;
 	private ScheduledFuture<?> ekimusIdleTask;
 	private boolean notifiedEkimusIdle = false;
-	
+
 	@Override
 	protected void onCreate()
 	{
@@ -67,33 +56,25 @@ public class HeartInfinityAttack extends Reflection
 		spawnByGroup("soi_hoi_attack_init");
 		tumorRespawnTime = 150 * 1000L;
 	}
-	
+
 	public void notifyEchmusEntrance(Player leader)
 	{
-		if (conquestBegun)
-		{
+		if(conquestBegun)
 			return;
-		}
 		conquestBegun = true;
 		invoker = leader;
-		for (Player p : getPlayers())
-		{
+		for(Player p : getPlayers())
 			p.sendPacket(new ExShowScreenMessage(NpcString.YOU_WILL_PARTICIPATE_IN_S1_S2_SHORTLY, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, "#" + NpcString.HEART_OF_IMMORTALITY.getId(), "#" + NpcString.ATTACK.getId()));
-		}
-		ThreadPoolManager.getInstance().schedule(new RunnableImpl()
-		{
+		ThreadPoolManager.getInstance().schedule(new RunnableImpl(){
 			@Override
-			public void runImpl()
+			public void runImpl() throws Exception
 			{
-				for (Player p : getPlayers())
-				{
+				for(Player p : getPlayers())
 					p.showQuestMovie(ExStartScenePlayer.SCENE_ECHMUS_OPENING);
-				}
-				
-				ThreadPoolManager.getInstance().schedule(new RunnableImpl()
-				{
+
+				ThreadPoolManager.getInstance().schedule(new RunnableImpl(){
 					@Override
-					public void runImpl()
+					public void runImpl() throws Exception
 					{
 						conquestBegins();
 					}
@@ -101,8 +82,8 @@ public class HeartInfinityAttack extends Reflection
 			}
 		}, 20000L);
 	}
-	
-	void conquestBegins()
+
+	private void conquestBegins()
 	{
 		despawnByGroup("soi_hoi_attack_init");
 		spawnByGroup("soi_hoi_attack_mob_1");
@@ -112,12 +93,10 @@ public class HeartInfinityAttack extends Reflection
 		spawnByGroup("soi_hoi_attack_mob_5");
 		spawnByGroup("soi_hoi_attack_mob_6");
 		spawnByGroup("soi_hoi_attack_tumors");
-		for (NpcInstance n : getAllByNpcId(AliveTumor, true))
-		{
+		for(NpcInstance n : getAllByNpcId(AliveTumor, true))
 			n.setCurrentHp(n.getMaxHp() * .5, false);
-		}
 		spawnByGroup("soi_hoi_attack_wards");
-		// spawnByGroup("soi_hoi_attack_echmus");
+		//spawnByGroup("soi_hoi_attack_echmus");
 		ekimus = addSpawnWithoutRespawn(Ekimus, new Location(-179537, 208854, -15504, 16384), 0);
 		hounds.add(addSpawnWithoutRespawn(Hound, new Location(-179224, 209624, -15504, 16384), 0));
 		hounds.add(addSpawnWithoutRespawn(Hound, new Location(-179880, 209464, -15504, 16384), 0));
@@ -135,11 +114,9 @@ public class HeartInfinityAttack extends Reflection
 		getZone("[soi_hoi_attack_defenceup_5]").setActive(true);
 		getZone("[soi_hoi_attack_defenceup_6]").setActive(true);
 		getDoor(14240102).openMe();
-		for (Player p : getPlayers())
-		{
+		for(Player p : getPlayers())
 			p.sendPacket(new ExShowScreenMessage(NpcString.YOU_CAN_HEAR_THE_UNDEAD_OF_EKIMUS_RUSHING_TOWARD_YOU, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, "#" + NpcString.HEART_OF_IMMORTALITY.getId(), "#" + NpcString.ATTACK.getId()));
-		}
-		if (invoker != null)
+		if(invoker != null)
 		{
 			ekimus.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, invoker, 50000);
 			Functions.npcShout(ekimus, NpcString.I_SHALL_ACCEPT_YOUR_CHALLENGE_S1_COME_AND_DIE_IN_THE_ARMS_OF_IMMORTALITY, invoker.getName());
@@ -148,64 +125,53 @@ public class HeartInfinityAttack extends Reflection
 		startTime = System.currentTimeMillis();
 		timerTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new TimerTask(), 298 * 1000L, 5 * 60 * 1000L);
 	}
-	
-	void invokeDeathListener()
+
+	private void invokeDeathListener()
 	{
-		for (NpcInstance npc : getNpcs())
-		{
+		for(NpcInstance npc : getNpcs())
 			npc.addListener(deathListener);
-		}
 	}
-	
+
 	private class DeathListener implements OnDeathListener
 	{
-		public DeathListener()
-		{
-			// TODO Auto-generated constructor stub
-		}
-		
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
-			if (!self.isNpc())
-			{
+			if(!self.isNpc())
 				return;
-			}
-			if (self.getNpcId() == AliveTumor)
+			if(self.getNpcId() == AliveTumor)
 			{
 				((NpcInstance) self).dropItem(killer.getPlayer(), 13797, Rnd.get(2, 5));
 				NpcInstance deadTumor = addSpawnWithoutRespawn(DeadTumor, self.getLoc(), 0);
 				self.deleteMe();
 				notifyTumorDeath();
-				// Schedule tumor revival
+				//Schedule tumor revival
 				ThreadPoolManager.getInstance().schedule(new TumorRevival(deadTumor), tumorRespawnTime);
 				// Schedule regeneration coffins spawn
 				ThreadPoolManager.getInstance().schedule(new RegenerationCoffinSpawn(deadTumor), 20000L);
 			}
-			else if (self.getNpcId() == Ekimus)
+			else if(self.getNpcId() == Ekimus)
 			{
 				conquestConclusion(true);
 				SoIManager.notifyEkimusKill();
 			}
 		}
 	}
-	
+
 	private class TumorRevival extends RunnableImpl
 	{
 		NpcInstance _deadTumor;
-		
+
 		public TumorRevival(NpcInstance deadTumor)
 		{
 			_deadTumor = deadTumor;
 		}
-		
+
 		@Override
-		public void runImpl()
+		public void runImpl() throws Exception
 		{
-			if (conquestEnded)
-			{
+			if(conquestEnded)
 				return;
-			}
 			NpcInstance tumor = addSpawnWithoutRespawn(AliveTumor, _deadTumor.getLoc(), 0);
 			tumor.setCurrentHp(tumor.getMaxHp() * .25, false);
 			notifyTumorRevival();
@@ -213,117 +179,86 @@ public class HeartInfinityAttack extends Reflection
 			invokeDeathListener();
 		}
 	}
-	
+
 	private class RegenerationCoffinSpawn extends RunnableImpl
 	{
 		NpcInstance _deadTumor;
-		
+
 		public RegenerationCoffinSpawn(NpcInstance deadTumor)
 		{
 			_deadTumor = deadTumor;
 		}
-		
+
 		@Override
-		public void runImpl()
+		public void runImpl() throws Exception
 		{
-			if (conquestEnded)
-			{
+			if(conquestEnded)
 				return;
-			}
-			for (int i = 0; i < 4; i++)
-			{
+			for(int i = 0; i < 4; i++)
 				addSpawnWithoutRespawn(RegenerationCoffin, new Location(_deadTumor.getLoc().x, _deadTumor.getLoc().y, _deadTumor.getLoc().z, Location.getRandomHeading()), 250);
-			}
 		}
 	}
-	
+
 	private class TimerTask extends RunnableImpl
 	{
-		public TimerTask()
-		{
-			// TODO Auto-generated constructor stub
-		}
-		
 		@Override
-		public void runImpl()
+		public void runImpl() throws Exception
 		{
-			long time = ((startTime + (25 * 60 * 1000L)) - System.currentTimeMillis()) / 60000;
-			if (time == 0)
-			{
+			long time = (startTime + 25 * 60 * 1000L - System.currentTimeMillis()) / 60000;
+			if(time == 0)
 				conquestConclusion(false);
-			}
 			else
 			{
-				if (time == 20)
-				{
+				if(time == 20)
 					spawnByGroup("soi_hoi_attack_bosses");
-				}
-				for (Player p : getPlayers())
-				{
-					p.sendPacket(new ExShowScreenMessage(NpcString.S1_MINUTES_ARE_REMAINING, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, String.valueOf(((startTime + (25 * 60 * 1000L)) - System.currentTimeMillis()) / 60000)));
-				}
+				for(Player p : getPlayers())
+					p.sendPacket(new ExShowScreenMessage(NpcString.S1_MINUTES_ARE_REMAINING, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, String.valueOf((startTime + 25 * 60 * 1000L - System.currentTimeMillis()) / 60000)));
 			}
 		}
 	}
-	
-	void notifyTumorDeath()
+
+	private void notifyTumorDeath()
 	{
-		if (getAliveTumorCount() < 1)
+		if(getAliveTumorCount() < 1)
 		{
 			houndBlocked = true;
-			for (NpcInstance npc : hounds)
-			{
+			for(NpcInstance npc : hounds)
 				npc.block();
-			}
-			for (Player p : getPlayers())
-			{
+			for(Player p : getPlayers())
 				p.sendPacket(new ExShowScreenMessage(NpcString.WITH_ALL_CONNECTIONS_TO_THE_TUMOR_SEVERED_EKIMUS_HAS_LOST_ITS_POWER_TO_CONTROL_THE_FERAL_HOUND, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false));
-			}
 		}
 		else
-		{
-			for (Player p : getPlayers())
-			{
+			for(Player p : getPlayers())
 				p.sendPacket(new ExShowScreenMessage(NpcString.THE_TUMOR_INSIDE_S1_THAT_HAS_PROVIDED_ENERGY_N_TO_EKIMUS_IS_DESTROYED, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, "#" + NpcString.HEART_OF_IMMORTALITY.getId()));
-			}
-		}
 		handleEkimusStats();
 	}
-	
-	void notifyTumorRevival()
+
+	private void notifyTumorRevival()
 	{
-		if ((getAliveTumorCount() == 1) && houndBlocked)
+		if(getAliveTumorCount() == 1 && houndBlocked)
 		{
 			houndBlocked = false;
-			for (NpcInstance npc : hounds)
-			{
+			for(NpcInstance npc : hounds)
 				npc.unblock();
-			}
-			for (Player p : getPlayers())
-			{
+			for(Player p : getPlayers())
 				p.sendPacket(new ExShowScreenMessage(NpcString.WITH_THE_CONNECTION_TO_THE_TUMOR_RESTORED_EKIMUS_HAS_REGAINED_CONTROL_OVER_THE_FERAL_HOUND, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false));
-			}
 		}
 		else
-		{
-			for (Player p : getPlayers())
-			{
+			for(Player p : getPlayers())
 				p.sendPacket(new ExShowScreenMessage(NpcString.THE_TUMOR_INSIDE_S1_HAS_BEEN_COMPLETELY_RESURRECTED_N_AND_STARTED_TO_ENERGIZE_EKIMUS_AGAIN, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, "#" + NpcString.HEART_OF_IMMORTALITY.getId()));
-			}
-		}
 		handleEkimusStats();
 	}
-	
+
 	private int getAliveTumorCount()
 	{
 		return getAllByNpcId(AliveTumor, true).size();
 	}
-	
+
 	public void notifyCoffinDeath()
 	{
 		tumorRespawnTime += 8 * 1000L;
 	}
-	
+
 	private void handleEkimusStats()
 	{
 		double[] a = getStatMultiplier();
@@ -334,11 +269,11 @@ public class HeartInfinityAttack extends Reflection
 		ekimus.addStatFunc(new FuncSet(Stats.MAGIC_DEFENCE, 0x30, this, ekimus.getTemplate().getBaseMDef() * a[0]));
 		ekimus.addStatFunc(new FuncSet(Stats.REGENERATE_HP_RATE, 0x30, this, ekimus.getTemplate().getBaseHpReg() * a[2]));
 	}
-	
+
 	private double[] getStatMultiplier()
 	{
 		double[] a = new double[3];
-		switch (getAliveTumorCount())
+		switch(getAliveTumorCount())
 		{
 			case 6:
 				a[0] = 2; // Mdef
@@ -378,13 +313,11 @@ public class HeartInfinityAttack extends Reflection
 		}
 		return a;
 	}
-	
-	void conquestConclusion(boolean win)
+
+	private void conquestConclusion(boolean win)
 	{
-		if (timerTask != null)
-		{
+		if(timerTask != null)
 			timerTask.cancel(false);
-		}
 		conquestEnded = true;
 		despawnByGroup("soi_hoi_attack_wards");
 		despawnByGroup("soi_hoi_attack_mob_1");
@@ -394,91 +327,71 @@ public class HeartInfinityAttack extends Reflection
 		despawnByGroup("soi_hoi_attack_mob_5");
 		despawnByGroup("soi_hoi_attack_mob_6");
 		despawnByGroup("soi_hoi_attack_bosses");
-		if ((ekimus != null) && !ekimus.isDead())
+		if(ekimus != null && !ekimus.isDead())
 		{
-			for (NpcInstance npc : hounds)
-			{
+			for(NpcInstance npc : hounds)
 				npc.deleteMe();
-			}
 			ekimus.deleteMe();
 		}
 		startCollapseTimer(15 * 60 * 1000L);
-		if (win)
-		{
+		if(win)
 			setReenterTime(System.currentTimeMillis());
-		}
-		for (Player p : getPlayers())
+		for(Player p : getPlayers())
 		{
 			p.sendPacket(new SystemMessage2(SystemMsg.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addInteger(15));
 			p.sendPacket(new ExShowScreenMessage(win ? NpcString.CONGRATULATIONS_YOU_HAVE_SUCCEEDED_AT_S1_S2_THE_INSTANCE_WILL_SHORTLY_EXPIRE : NpcString.YOU_HAVE_FAILED_AT_S1_S2, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, "#" + NpcString.HEART_OF_IMMORTALITY.getId(), "#" + NpcString.ATTACK.getId()));
 			p.showQuestMovie(win ? ExStartScenePlayer.SCENE_ECHMUS_SUCCESS : ExStartScenePlayer.SCENE_ECHMUS_FAIL);
 		}
-		for (NpcInstance npc : getNpcs())
-		{
-			if ((npc.getNpcId() == AliveTumor) || (npc.getNpcId() == DeadTumor) || (npc.getNpcId() == RegenerationCoffin))
-			{
+		for(NpcInstance npc : getNpcs())
+			if(npc.getNpcId() == AliveTumor || npc.getNpcId() == DeadTumor || npc.getNpcId() == RegenerationCoffin)
 				npc.deleteMe();
-			}
-		}
 	}
-	
+
 	public void notifyEkimusAttack()
 	{
-		if (ekimusIdleTask != null)
+		if(ekimusIdleTask != null)
 		{
 			ekimusIdleTask.cancel(false);
 			ekimusIdleTask = null;
 			notifiedEkimusIdle = false;
 		}
 	}
-	
+
 	public void notifyEkimusIdle()
 	{
-		if (notifiedEkimusIdle)
-		{
+		if(notifiedEkimusIdle)
 			return;
-		}
 		notifiedEkimusIdle = true;
-		for (Player p : getPlayers())
-		{
+		for(Player p : getPlayers())
 			p.sendPacket(new ExShowScreenMessage(NpcString.THERE_IS_NO_PARTY_CURRENTLY_CHALLENGING_EKIMUS, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, "180"));
-		}
-		ekimusIdleTask = ThreadPoolManager.getInstance().schedule(new RunnableImpl()
-		{
+		ekimusIdleTask = ThreadPoolManager.getInstance().schedule(new RunnableImpl(){
 			@Override
-			public void runImpl()
+			public void runImpl() throws Exception
 			{
 				conquestConclusion(false);
 			}
 		}, 180000L);
 	}
-	
+
 	public void notifyEkimusRoomEntrance()
 	{
-		for (Playable playable : getZone("[soi_hoi_attack_echmusroom]").getInsidePlayables())
-		{
+		for(Playable playable : getZone("[soi_hoi_attack_echmusroom]").getInsidePlayables())
 			playable.teleToLocation(new Location(-179537, 211233, -15472));
-		}
-		ThreadPoolManager.getInstance().schedule(new RunnableImpl()
-		{
+		ThreadPoolManager.getInstance().schedule(new RunnableImpl(){
 			@Override
-			public void runImpl()
+			public void runImpl() throws Exception
 			{
-				for (Player p : getPlayers())
-				{
+				for(Player p : getPlayers())
 					p.sendPacket(new ExShowScreenMessage(NpcString.EKIMUS_HAS_SENSED_ABNORMAL_ACTIVITY, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false));
-				}
 			}
 		}, 10000L);
 	}
-	
+
 	@Override
 	protected void onCollapse()
 	{
-		if (timerTask != null)
-		{
+		if(timerTask != null)
 			timerTask.cancel(false);
-		}
 		super.onCollapse();
 	}
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="51001" template_id="33727" name="" title="">
+	<npc id="51001" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -90,7 +90,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51002" template_id="33727" name="" title="">
+	<npc id="51002" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -179,7 +179,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51003" template_id="33727" name="" title="">
+	<npc id="51003" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -268,7 +268,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51004" template_id="33727" name="" title="">
+	<npc id="51004" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -357,7 +357,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51005" template_id="33727" name="" title="">
+	<npc id="51005" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -446,7 +446,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51006" template_id="33727" name="" title="">
+	<npc id="51006" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -535,7 +535,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51007" template_id="33727" name="" title="">
+	<npc id="51007" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -624,7 +624,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51008" template_id="33727" name="" title="">
+	<npc id="51008" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -713,7 +713,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51009" template_id="33727" name="" title="">
+	<npc id="51009" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -802,7 +802,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51010" template_id="33727" name="" title="">
+	<npc id="51010" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -891,7 +891,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51011" template_id="33727" name="" title="">
+	<npc id="51011" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -980,7 +980,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51012" template_id="33727" name="" title="">
+	<npc id="51012" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -1069,7 +1069,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51013" template_id="33727" name="" title="">
+	<npc id="51013" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -1158,7 +1158,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51014" template_id="33727" name="" title="">
+	<npc id="51014" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -1247,7 +1247,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51015" template_id="33727" name="" title="">
+	<npc id="51015" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -1336,7 +1336,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51016" template_id="33727" name="" title="">
+	<npc id="51016" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -1425,7 +1425,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51017" template_id="33727" name="" title="">
+	<npc id="51017" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -1514,7 +1514,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51018" template_id="33727" name="" title="">
+	<npc id="51018" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -1603,7 +1603,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51019" template_id="33727" name="" title="">
+	<npc id="51019" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -1692,7 +1692,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51020" template_id="33727" name="" title="">
+	<npc id="51020" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -1781,7 +1781,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51021" template_id="33727" name="" title="">
+	<npc id="51021" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -1870,7 +1870,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51022" template_id="33727" name="" title="">
+	<npc id="51022" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -1959,7 +1959,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51023" template_id="33727" name="" title="">
+	<npc id="51023" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -2048,7 +2048,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51024" template_id="33727" name="" title="">
+	<npc id="51024" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -2137,7 +2137,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51025" template_id="33727" name="" title="">
+	<npc id="51025" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -2226,7 +2226,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51026" template_id="33727" name="" title="">
+	<npc id="51026" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -2315,7 +2315,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51027" template_id="33727" name="" title="">
+	<npc id="51027" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -2404,7 +2404,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51028" template_id="33727" name="" title="">
+	<npc id="51028" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -2493,7 +2493,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51029" template_id="33727" name="" title="">
+	<npc id="51029" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -2582,7 +2582,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51030" template_id="33727" name="" title="">
+	<npc id="51030" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -2671,7 +2671,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51031" template_id="33727" name="" title="">
+	<npc id="51031" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -2760,7 +2760,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51032" template_id="33727" name="" title="">
+	<npc id="51032" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -2849,7 +2849,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51033" template_id="33727" name="" title="">
+	<npc id="51033" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -2938,7 +2938,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51034" template_id="33727" name="" title="">
+	<npc id="51034" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -3027,7 +3027,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51035" template_id="33727" name="" title="">
+	<npc id="51035" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -3116,7 +3116,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51036" template_id="33727" name="" title="">
+	<npc id="51036" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -3205,7 +3205,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51037" template_id="33727" name="" title="">
+	<npc id="51037" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -3294,7 +3294,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51038" template_id="33727" name="" title="">
+	<npc id="51038" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -3383,7 +3383,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51039" template_id="33727" name="" title="">
+	<npc id="51039" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -3472,7 +3472,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51040" template_id="33727" name="" title="">
+	<npc id="51040" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -3561,7 +3561,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51041" template_id="33727" name="" title="">
+	<npc id="51041" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -3650,7 +3650,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51042" template_id="33727" name="" title="">
+	<npc id="51042" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
@@ -3739,7 +3739,7 @@
 			<reward item_id="35481" min="1" max="1" chance="0.05"/>
 		</rewardlist>
 	</npc>
-	<npc id="51043" template_id="33727" name="" title="">
+	<npc id="51043" name="" title="">
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>

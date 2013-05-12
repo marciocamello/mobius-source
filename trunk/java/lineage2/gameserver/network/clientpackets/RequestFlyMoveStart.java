@@ -66,7 +66,7 @@ public class RequestFlyMoveStart extends L2GameClientPacket
 			return;
 		}
 		activeChar.sendPacket(new ExFlyMove(activeChar.getObjectId(), way.getPoints(), track.getId()));
-		activeChar.broadcastPacketToOthers(new ExFlyMoveBroadcast(activeChar, destLoc));
+		activeChar.broadcastPacketToOthers(new ExFlyMoveBroadcast(activeChar, 2, destLoc));
 		activeChar.setVar("@safe_jump_loc", activeChar.getLoc().toXYZString(), -1);
 		activeChar.setCurrentJumpTrack(track);
 		activeChar.setCurrentJumpWay(way);

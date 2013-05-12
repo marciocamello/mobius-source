@@ -329,8 +329,7 @@ public class GameObjectsStorage
 	 */
 	@SuppressWarnings(
 	{
-		"unchecked",
-		"rawtypes"
+		"unchecked", "rawtypes"
 	})
 	public static List<GameObject> getAllObjects()
 	{

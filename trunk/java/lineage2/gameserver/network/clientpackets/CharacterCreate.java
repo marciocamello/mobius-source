@@ -168,7 +168,7 @@ public class CharacterCreate extends L2GameClientPacket
 				newChar.registerShortCut(new ShortCut(11, 0, ShortCut.TYPE_ITEM, item.getObjectId(), -1, 1));
 			}
 		}
-		newChar.rewardSkills(false);
+		newChar.rewardSkills(false,false);
 		if (newChar.getSkillLevel(1001) > 0)
 		{
 			newChar.registerShortCut(new ShortCut(1, 0, ShortCut.TYPE_SKILL, 1001, 1, 1));

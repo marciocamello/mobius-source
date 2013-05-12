@@ -65,7 +65,7 @@ public class EMDam extends Skill
 		{
 			if (activeChar.isPlayer())
 			{
-				activeChar.sendMessage("�?еобходимо активироват�? одну из аур...");
+				activeChar.sendMessage("No Stance Activated...");
 			}
 			return false;
 		}

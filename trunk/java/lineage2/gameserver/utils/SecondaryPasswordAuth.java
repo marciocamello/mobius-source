@@ -229,15 +229,15 @@ public class SecondaryPasswordAuth
 	{
 		if (System.currentTimeMillis() <= _unBanTime)
 		{
-			_activeClient.sendPacket(new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_PROMPT, (int) (_unBanTime - System.currentTimeMillis()) / 1000));
+			_activeClient.sendPacket(new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_PROMPT));
 		}
 		else if (passwordExist())
 		{
-			_activeClient.sendPacket(new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_PROMPT, 0));
+			_activeClient.sendPacket(new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_PROMPT));
 		}
 		else
 		{
-			_activeClient.sendPacket(new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_NEW, 0));
+			_activeClient.sendPacket(new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_NEW));
 		}
 	}
 	

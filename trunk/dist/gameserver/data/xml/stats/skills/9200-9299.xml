@@ -149,24 +149,24 @@
         </for>
     </skill>
 	<skill id="9232" levels="1" name="Mentor's Poem of Harp">
-    <!-- With the help of your mentor, increases physical accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. This buff is only applied while your mentor is logged in. -->
-        <set name="magicLevel" val="1"/>
+	<!-- With the help of your mentor, increases physical accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. This buff is only applied while your mentor is logged in. -->
+		<set name="magicLevel" val="1"/>
 		<set name="mpConsume1" val="0"/>
 		<set name="isPreservedOnDeath" val="true"/>
 		<set name="isSelfDispellable" val="false"/>
-        <set name="target" val="TARGET_SELF"/>
-        <set name="skillType" val="CONT"/>
-        <set name="operateType" val="OP_TOGGLE"/>
-        <for>
-            <effect count="0x7fffffff" name="Mentoring" time="99999999" val="0" stackOrder="11" stackType="accuracyUp;SpeedUp;Poem_Arfa;rEvas;CoP">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_TOGGLE"/>
+		<for>
+			<effect count="0x7fffffff" name="Mentoring" time="99999999" val="0" stackOrder="11" stackType="accuracyUp;SpeedUp;Poem_Arfa;rEvas;CoP">
 				<add order="0x40" stat="accCombat" val="5"/>
 				<add order="0x40" stat="pSkillEvasion" val="5"/>
-                <add order="0x40" stat="mSkillEvasion" val="5"/>
+				<add order="0x40" stat="mEvas" val="5"/>
 				<add order="0x40" stat="runSpd" val="34"/>
 				<mul order="0x30" stat="critDamRcpt" val="0.7"/>
-            </effect>
-        </for>
-    </skill>
+			</effect>
+		</for>
+	</skill>
 	<skill id="9233" levels="1" name="Mentor's Guidance">
     <!-- With the help of your mentor, increases acquired XP and SP by 200%. This buff is only applied while your mentor is logged in. -->
         <table name="#power">2.0</table>

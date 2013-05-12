@@ -1,11 +1,10 @@
 <!DOCTYPE list SYSTEM "instances.dtd">
 <list>
     <!-- Freya Castle - Hard Mode -->
-    <instance id="144" name="Ice Queen's Castle (ultimate battle)" maxChannels="10" collapseIfEmpty="10" timelimit="120"
-              dispelBuffs="true">
+    <instance id="144" name="Ice Queen's Castle (ultimate battle)" maxChannels="10" collapseIfEmpty="10" timelimit="120" dispelBuffs="true">
         <collapse on-party-dismiss="true" timer="60"/>
-        <level min="82" max="85"/>
-        <party min="10" max="27"/>
+        <level min="82" max="96"/>
+        <party min="8" max="21"/>
         <return loc="115576 -125688 -3456"/>
         <teleport loc="113880 -112296 -11225"/>
         <remove itemId="0" count="0" necessary="false"/>

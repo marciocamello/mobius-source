@@ -367,7 +367,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Field _classlist.
 	 */
-	public Map<Integer, SubClass> _classlist = new HashMap<>(4);
+	public Map<Integer, SubClass> _classlist = new HashMap<Integer, SubClass>(4);
 	/**
 	 * Field OBSERVER_NONE. (value is 0)
 	 */
@@ -603,19 +603,19 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Field _recipebook.
 	 */
-	private final Map<Integer, RecipeTemplate> _recipebook = new TreeMap<>();
+	private final Map<Integer, RecipeTemplate> _recipebook = new TreeMap<Integer, RecipeTemplate>();
 	/**
 	 * Field _commonrecipebook.
 	 */
-	private final Map<Integer, RecipeTemplate> _commonrecipebook = new TreeMap<>();
+	private final Map<Integer, RecipeTemplate> _commonrecipebook = new TreeMap<Integer, RecipeTemplate>();
 	/**
 	 * Field _premiumItems.
 	 */
-	private final Map<Integer, PremiumItem> _premiumItems = new TreeMap<>();
+	private final Map<Integer, PremiumItem> _premiumItems = new TreeMap<Integer, PremiumItem>();
 	/**
 	 * Field _quests.
 	 */
-	private final Map<String, QuestState> _quests = new HashMap<>();
+	private final Map<String, QuestState> _quests = new HashMap<String, QuestState>();
 	/**
 	 * Field _shortCuts.
 	 */
@@ -727,7 +727,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Field _chars.
 	 */
-	private Map<Integer, String> _chars = new HashMap<>(8);
+	private Map<Integer, String> _chars = new HashMap<Integer, String>(8);
 	/**
 	 * Field expertiseIndex.
 	 */
@@ -759,7 +759,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Field _activeSoulShots.
 	 */
-	private final Set<Integer> _activeSoulShots = new CopyOnWriteArraySet<>();
+	private final Set<Integer> _activeSoulShots = new CopyOnWriteArraySet<Integer>();
 	/**
 	 * Field _observerRegion.
 	 */
@@ -795,7 +795,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Field _blockList.
 	 */
-	private final Map<Integer, String> _blockList = new ConcurrentSkipListMap<>();
+	private final Map<Integer, String> _blockList = new ConcurrentSkipListMap<Integer, String>();
 	/**
 	 * Field _friendList.
 	 */
@@ -923,7 +923,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Field _transformationSkills.
 	 */
-	Map<Integer, Skill> _transformationSkills = new HashMap<>();
+	Map<Integer, Skill> _transformationSkills = new HashMap<Integer, Skill>();
 	/**
 	 * Field _expandInventory.
 	 */
@@ -955,7 +955,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Field _blockedActions.
 	 */
-	private final List<String> _blockedActions = new ArrayList<>();
+	private final List<String> _blockedActions = new ArrayList<String>();
 	/**
 	 * Field _notShowBuffAnim.
 	 */
@@ -979,7 +979,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Field _sharedGroupReuses.
 	 */
-	private final IntObjectMap<TimeStamp> _sharedGroupReuses = new CHashIntObjectMap<>();
+	private final IntObjectMap<TimeStamp> _sharedGroupReuses = new CHashIntObjectMap<TimeStamp>();
 	/**
 	 * Field _askDialog.
 	 */
@@ -995,7 +995,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Field _instancesReuses.
 	 */
-	private final Map<Integer, Long> _instancesReuses = new ConcurrentHashMap<>();
+	private final Map<Integer, Long> _instancesReuses = new ConcurrentHashMap<Integer, Long>();
 	/**
 	 * Field _currentJumpTrack.
 	 */
@@ -1007,12 +1007,17 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Field _summons.
 	 */
-	@SuppressWarnings("unused")
 	private ConcurrentHashMap<Integer, Summon> _summons = new ConcurrentHashMap<Integer, Summon>(4);
 	/**
 	 * Field _tree.
 	 */
 	private boolean _tree;
+	/**
+	 * Field _ServitorShareRestore.
+	 */
+	private boolean _ServitorShareRestore = false;
+	
+	private Effect _ServitorShareRestoreData = null;
 	/**
 	 * Field _collision_radius.
 	 */
@@ -1678,7 +1683,7 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	public Quest[] getAllActiveQuests()
 	{
-		List<Quest> quests = new ArrayList<>(_quests.size());
+		List<Quest> quests = new ArrayList<Quest>(_quests.size());
 		questRead.lock();
 		try
 		{
@@ -1723,7 +1728,7 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	public List<QuestState> getQuestsForEvent(NpcInstance npc, QuestEventType event, boolean forNpcQuestList)
 	{
-		List<QuestState> states = new ArrayList<>();
+		List<QuestState> states = new ArrayList<QuestState>();
 		Quest[] quests = npc.getTemplate().getEventQuests(event);
 		QuestState qs;
 		if (quests != null)
@@ -2113,7 +2118,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		setRecomLeft(getRecomLeft() + recoms);
 		setRecomLeftToday(getRecomLeftToday() + recoms);
-		sendUserInfo(true);
+		sendUserInfo();
 		return recoms;
 	}
 	
@@ -2151,7 +2156,7 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			setRecomLeft(getRecomLeft() - 1);
 		}
-		sendUserInfo(true);
+		sendUserInfo();
 	}
 	
 	/**
@@ -2161,7 +2166,7 @@ public final class Player extends Playable implements PlayerGroup
 	public void addRecomHave(final int val)
 	{
 		setRecomHave(getRecomHave() + val);
-		broadcastUserInfo(true);
+		broadcastUserInfo();
 		sendVoteSystemInfo();
 	}
 	
@@ -2387,30 +2392,6 @@ public final class Player extends Playable implements PlayerGroup
 	}
 	
 	/**
-	 * @author Mobius
-	 */
-	private class UpdateEffectIcons extends RunnableImpl
-	{
-		/**
-		 * Constructor for UpdateEffectIcons.
-		 */
-		public UpdateEffectIcons()
-		{
-			// TODO Auto-generated constructor stub
-		}
-		
-		/**
-		 * Method runImpl.
-		 */
-		@Override
-		public void runImpl()
-		{
-			updateEffectIconsImpl();
-			_updateEffectIconsTask = null;
-		}
-	}
-	
-	/**
 	 * Method updateEffectIcons.
 	 */
 	@Override
@@ -2421,21 +2402,8 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			return;
 		}
-		if (Config.USER_INFO_INTERVAL == 0)
-		{
-			if (_updateEffectIconsTask != null)
-			{
-				_updateEffectIconsTask.cancel(false);
-				_updateEffectIconsTask = null;
-			}
-			updateEffectIconsImpl();
-			return;
-		}
-		if (_updateEffectIconsTask != null)
-		{
-			return;
-		}
-		_updateEffectIconsTask = ThreadPoolManager.getInstance().schedule(new UpdateEffectIcons(), Config.USER_INFO_INTERVAL);
+		updateEffectIconsImpl();
+		return;
 	}
 	
 	/**
@@ -2747,12 +2715,12 @@ public final class Player extends Playable implements PlayerGroup
 		abortCast(true, true);
 		int classId = sub.getClassId();
 		int oldClassId = getActiveClassId();
-		setActiveSubClass(classId, true);
+		setActiveSubClass(classId, true, 0);
 		Skill skill = SkillTable.getInstance().getInfo(1570, 1);
 		skill.getEffects(this, this, false, false);
-		if (isAwaking()) // If the characters returns to Main, or dual Subclass and Delete Skills prof are active, do check of Correct skills
+		if(isAwaking()) //If the characters returns to Main, or dual Subclass and Delete Skills prof are active, do check of Correct skills
 		{
-			if (Config.ALT_CHECK_SKILLS_AWAKENING)
+			if(Config.ALT_CHECK_SKILLS_AWAKENING)
 			{
 				AwakingManager.getInstance().checkAwakenPlayerSkills(this);
 			}
@@ -3089,7 +3057,7 @@ public final class Player extends Playable implements PlayerGroup
 	public synchronized void setClassId(final int id, boolean noban, boolean bity)
 	{
 		ClassId classId = ClassId.VALUES[id];
-		if (!noban && !classId.equalsOrChildOf(ClassId.VALUES[getActiveClassId()]) && !getVarB("awakenByStoneOfDestiny", false) && !(getPlayerAccess().CanChangeClass || Config.EVERYBODY_HAS_ADMIN_RIGHTS))
+		if (!noban && !classId.equalsOrChildOf(ClassId.VALUES[getActiveClassId()]) && !getVarB("awakenByStoneOfDestiny",false) && !(getPlayerAccess().CanChangeClass || Config.EVERYBODY_HAS_ADMIN_RIGHTS))
 		{
 			Thread.dumpStack();
 			return;
@@ -3100,7 +3068,7 @@ public final class Player extends Playable implements PlayerGroup
 			final SubClass cclass = getActiveSubClass();
 			final int oldClass = cclass.getClassId();
 			_subClassList.changeSubClassId(oldClass, id);
-			changeClassInDb(oldClass, id, cclass.getDefaultClassId());
+			changeClassInDb(oldClass, id, cclass.getDefaultClassId() == 0 ? getSubClassList().getBaseSubClass().getDefaultClassId() : cclass.getDefaultClassId());
 			if (cclass.isBase())
 			{
 				addClanPointsOnProfession(id);
@@ -3117,7 +3085,7 @@ public final class Player extends Playable implements PlayerGroup
 					ItemFunctions.addItem(this, 15309, 7, true);
 					break;
 			}
-			rewardSkills(true);
+			rewardSkills(true,false);
 			storeCharSubClasses();
 			broadcastCharInfo();
 		}
@@ -3276,7 +3244,7 @@ public final class Player extends Playable implements PlayerGroup
 					{
 						double points = ((noRateExp / (npcLevel * npcLevel)) * 100) / 9;
 						points *= Config.ALT_VITALITY_CONSUME_RATE;
-						if ((getEffectList().getEffectByType(EffectType.Vitality) != null) || (getEffectList().getEffectByStackType("vitalityRegen") != null))
+						if (getEffectList().getEffectByType(EffectType.Vitality) != null || getEffectList().getEffectByStackType("vitalityRegen") != null)
 						{
 							points *= -1;
 						}
@@ -3403,10 +3371,10 @@ public final class Player extends Playable implements PlayerGroup
 	 * Method rewardSkills.
 	 * @param send boolean
 	 */
-	public void rewardSkills(boolean send)
+	public void rewardSkills(boolean send, boolean isSubclassAdd)
 	{
 		boolean update = false;
-		if (Config.AUTO_LEARN_SKILLS)
+		if (Config.AUTO_LEARN_SKILLS || isSubclassAdd)
 		{
 			ClassId _cId = null;
 			int unLearnable = 0;
@@ -3417,7 +3385,7 @@ public final class Player extends Playable implements PlayerGroup
 				for (SkillLearn s : skills)
 				{
 					Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
-					if ((sk == null) || ((sk.getId() > 10000) && (sk.getId() != 20006) && (sk.getId() != 19088) && (sk.getId() != 19089) && (sk.getId() != 19090)) || (isAwaking() ? !sk.getCanLearn(getClassId()) && !sk.getCanLearn(_cId) : !sk.getCanLearn(getClassId())) || (!Config.AUTO_LEARN_FORGOTTEN_SKILLS && s.isClicked()))
+					if ((sk == null) || (sk.getId() > 10000 && sk.getId() != 20006 && sk.getId() != 19088 && sk.getId() != 19089 && sk.getId() != 19090 ) || (isAwaking() ? !sk.getCanLearn(getClassId()) && !sk.getCanLearn(_cId) : !sk.getCanLearn(getClassId())) || (!Config.AUTO_LEARN_FORGOTTEN_SKILLS && s.isClicked()))
 					{
 						unLearnable++;
 						continue;
@@ -3437,7 +3405,10 @@ public final class Player extends Playable implements PlayerGroup
 				{
 					Skill sk = SkillTable.getInstance().getInfo(skill.getId(), skill.getLevel());
 					addSkill(sk, true);
-					if ((getAllShortCuts().size() > 0) && (sk.getLevel() > 1))
+					if (
+							(getAllShortCuts().size() > 0) && 
+							(sk.getLevel() > 1)
+						)
 					{
 						for (ShortCut sc : getAllShortCuts())
 						{
@@ -3796,7 +3767,7 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			return;
 		}
-		if (isStunned() || isSleeping() || isParalyzed() || isAttackingNow() || isCastingNow() || isMoving)
+		if (isStunned() || isSleeping() || isParalyzed() || isAttackingNow() || isCastingNow() || isMoving || isAirBinded() || isKnockedBack() || isKnockedDown() || isPulledNow())
 		{
 			getAI().setNextAction(nextAction.REST, null, null, false, false);
 			return;
@@ -3974,15 +3945,6 @@ public final class Player extends Playable implements PlayerGroup
 	}
 	
 	/**
-	 * Method isTautiClient.
-	 * @return boolean
-	 */
-	public boolean isTautiClient()
-	{
-		return getRevision() >= 448 ? true : false;
-	}
-	
-	/**
 	 * Method setNetConnection.
 	 * @param connection GameClient
 	 */
@@ -4112,65 +4074,38 @@ public final class Player extends Playable implements PlayerGroup
 	}
 	
 	/**
-	 * Field _broadcastCharInfoTask.
-	 */
-	ScheduledFuture<?> _broadcastCharInfoTask;
-	
-	/**
-	 * @author Mobius
-	 */
-	public class BroadcastCharInfoTask extends RunnableImpl
-	{
-		/**
-		 * Method runImpl.
-		 */
-		@Override
-		public void runImpl()
-		{
-			broadcastCharInfoImpl();
-			_broadcastCharInfoTask = null;
-		}
-	}
-	
-	/**
 	 * Method broadcastCharInfo.
 	 */
 	@Override
 	public void broadcastCharInfo()
 	{
-		broadcastUserInfo(false);
+		broadcastUserInfo();
 	}
 	
 	/**
 	 * Method broadcastUserInfo.
 	 * @param force boolean
 	 */
-	public void broadcastUserInfo(boolean force)
+	public void broadcastUserInfo()
 	{
-		sendUserInfo(force);
+		sendUserInfo();
 		if (!isVisible() || isInvisible())
 		{
 			return;
 		}
-		if (Config.BROADCAST_CHAR_INFO_INTERVAL == 0)
+		L2GameServerPacket ci = isPolymorphed() ? new NpcInfoPoly(this) : new CharInfo(this);
+		L2GameServerPacket exCi = new ExBR_ExtraUserInfo(this);
+		L2GameServerPacket dominion = getEvent(DominionSiegeEvent.class) != null ? new ExDominionWarStart(this) : null;
+		for (Player player : World.getAroundPlayers(this))
 		{
-			force = true;
-		}
-		if (force)
-		{
-			if (_broadcastCharInfoTask != null)
+			player.sendPacket(ci, exCi);
+			player.sendPacket(RelationChanged.update(player, this, player));
+			if (dominion != null)
 			{
-				_broadcastCharInfoTask.cancel(false);
-				_broadcastCharInfoTask = null;
+				player.sendPacket(dominion);
 			}
-			broadcastCharInfoImpl();
-			return;
 		}
-		if (_broadcastCharInfoTask != null)
-		{
-			return;
-		}
-		_broadcastCharInfoTask = ThreadPoolManager.getInstance().schedule(new BroadcastCharInfoTask(), Config.BROADCAST_CHAR_INFO_INTERVAL);
+		return;
 	}
 	
 	/**
@@ -4186,7 +4121,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_polyNpcId = polyid;
 		teleToLocation(getLoc());
-		broadcastUserInfo(true);
+		broadcastUserInfo();
 	}
 	
 	/**
@@ -4205,29 +4140,6 @@ public final class Player extends Playable implements PlayerGroup
 	public int getPolyId()
 	{
 		return _polyNpcId;
-	}
-	
-	/**
-	 * Method broadcastCharInfoImpl.
-	 */
-	void broadcastCharInfoImpl()
-	{
-		if (!isVisible() || isInvisible())
-		{
-			return;
-		}
-		L2GameServerPacket ci = isPolymorphed() ? new NpcInfoPoly(this) : new CharInfo(this);
-		L2GameServerPacket exCi = new ExBR_ExtraUserInfo(this);
-		L2GameServerPacket dominion = getEvent(DominionSiegeEvent.class) != null ? new ExDominionWarStart(this) : null;
-		for (Player player : World.getAroundPlayers(this))
-		{
-			player.sendPacket(ci, exCi);
-			player.sendPacket(RelationChanged.update(player, this, player));
-			if (dominion != null)
-			{
-				player.sendPacket(dominion);
-			}
-		}
 	}
 	
 	/**
@@ -4258,80 +4170,22 @@ public final class Player extends Playable implements PlayerGroup
 	}
 	
 	/**
-	 * Field _userInfoTask.
+	 * Method sendUserInfo.
+	 * @param force boolean
 	 */
-	Future<?> _userInfoTask;
-	
-	/**
-	 * @author Mobius
-	 */
-	private class UserInfoTask extends RunnableImpl
+	public void sendUserInfo()
 	{
-		/**
-		 * Constructor for UserInfoTask.
-		 */
-		public UserInfoTask()
+		if (!isVisible() || entering || isLogoutStarted())
 		{
-			// TODO Auto-generated constructor stub
+			return;
 		}
-		
-		/**
-		 * Method runImpl.
-		 */
-		@Override
-		public void runImpl()
-		{
-			sendUserInfoImpl();
-			_userInfoTask = null;
-		}
-	}
-	
-	/**
-	 * Method sendUserInfoImpl.
-	 */
-	void sendUserInfoImpl()
-	{
 		sendPacket(new UserInfo(this), new ExBR_ExtraUserInfo(this));
 		DominionSiegeEvent siegeEvent = getEvent(DominionSiegeEvent.class);
 		if (siegeEvent != null)
 		{
 			sendPacket(new ExDominionWarStart(this));
 		}
-	}
-	
-	/**
-	 * Method sendUserInfo.
-	 */
-	public void sendUserInfo()
-	{
-		sendUserInfo(false);
-	}
-	
-	/**
-	 * Method sendUserInfo.
-	 * @param force boolean
-	 */
-	public void sendUserInfo(boolean force)
-	{
-		if (!isVisible() || entering || isLogoutStarted())
-		{
-			return;
-		}
-		if ((Config.USER_INFO_INTERVAL == 0) || force)
-		{
-			if (_userInfoTask != null)
-			{
-				_userInfoTask.cancel(false);
-				_userInfoTask = null;
-			}
-			sendUserInfoImpl();
-			return;
-		}
-		if (_userInfoTask != null)
-		{
-			return;
-		}
-		_userInfoTask = ThreadPoolManager.getInstance().schedule(new UserInfoTask(), Config.USER_INFO_INTERVAL);
+		return;
 	}
 	
 	/**
@@ -4399,7 +4253,7 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			return;
 		}
-		List<L2GameServerPacket> packets = new ArrayList<>(withPet ? 4 : 1);
+		List<L2GameServerPacket> packets = new ArrayList<L2GameServerPacket>(withPet ? 4 : 1);
 		if (withPet)
 		{
 			for (Summon summon : getSummonList())
@@ -4759,18 +4613,10 @@ public final class Player extends Playable implements PlayerGroup
 			{
 				return;
 			}
-			if (oldTarget.isCreature())
-			{
-				((Creature) oldTarget).removeStatusListener(this);
-			}
 			broadcastPacket(new TargetUnselected(this));
 		}
 		if (newTarget != null)
 		{
-			if (newTarget.isCreature())
-			{
-				((Creature) newTarget).addStatusListener(this);
-			}
 			sendPacket(new MyTargetSelected(newTarget.getObjectId(), 0));
 			broadcastPacket(new TargetSelected(getObjectId(), newTarget.getObjectId(), getLoc()));
 		}
@@ -4892,11 +4738,9 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 		super.reduceCurrentHp(damage, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
-		
+
 		if (attacker.getPlayer() == null)
-		{
 			WorldStatisticsManager.getInstance().updateStat(this, CategoryType.DAMAGE_FROM_MONSTERS, getClassId().getId(), (long) damage);
-		}
 	}
 	
 	/**
@@ -5174,7 +5018,7 @@ public final class Player extends Playable implements PlayerGroup
 				}
 			}
 		}
-		List<ItemInstance> drop = new LazyArrayList<>(), dropItem = new LazyArrayList<>(), dropEquip = new LazyArrayList<>(), dropWeapon = new LazyArrayList<>();
+		List<ItemInstance> drop = new LazyArrayList<ItemInstance>(), dropItem = new LazyArrayList<ItemInstance>(), dropEquip = new LazyArrayList<ItemInstance>(), dropWeapon = new LazyArrayList<ItemInstance>();
 		getInventory().writeLock();
 		try
 		{
@@ -5298,7 +5142,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 		WorldStatisticsManager.getInstance().updateStat(this, CategoryType.DIE_COUNT, 1);
-		if ((killer != null) && (killer.getPlayer() == null))
+		if (killer != null && killer.getPlayer() == null)
 		{
 			WorldStatisticsManager.getInstance().updateStat(this, CategoryType.KILLED_BY_MONSTER_COUNT, 1);
 		}
@@ -5520,7 +5364,7 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			return Collections.emptyList();
 		}
-		List<L2GameServerPacket> list = new ArrayList<>();
+		List<L2GameServerPacket> list = new ArrayList<L2GameServerPacket>();
 		if (forPlayer.getObjectId() != getObjectId())
 		{
 			list.add(isPolymorphed() ? new NpcInfoPoly(this) : new CharInfo(this));
@@ -5695,7 +5539,7 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			_matchingRoom.broadcastPlayerUpdate(this);
 		}
-		rewardSkills(true);
+		rewardSkills(true,false);
 	}
 	
 	/**
@@ -6475,7 +6319,7 @@ public final class Player extends Playable implements PlayerGroup
 		int sp = 0;
 		boolean active = true;
 		SubClassType type = SubClassType.BASE_CLASS;
-		if (!CharacterSubclassDAO.getInstance().insert(player.getObjectId(), classId, classId, exp, sp, hp, mp, cp, hp, mp, cp, level, active, type, null, 0))
+		if (!CharacterSubclassDAO.getInstance().insert(player.getObjectId(), classId, classId, exp, sp, hp, mp, cp, hp, mp, cp, level, active, type, null, 0, 0))
 		{
 			return null;
 		}
@@ -6643,7 +6487,7 @@ public final class Player extends Playable implements PlayerGroup
 				EventHolder.getInstance().findEvent(player);
 				Quest.restoreQuestStates(player);
 				player.getSubClassList().restore();
-				player.setActiveSubClass(player.getActiveClassId(), false);
+				player.setActiveSubClass(player.getActiveClassId(), false, 0);
 				player.restoreVitality();
 				player.getInventory().restore();
 				player._menteeList.restore();
@@ -6719,7 +6563,7 @@ public final class Player extends Playable implements PlayerGroup
 				}
 				DbUtils.close(statement3, rset3);
 				{
-					List<Zone> zones = new ArrayList<>();
+					List<Zone> zones = new ArrayList<Zone>();
 					World.getZones(zones, player.getLoc(), player.getReflection());
 					if (!zones.isEmpty())
 					{
@@ -6930,10 +6774,8 @@ public final class Player extends Playable implements PlayerGroup
 				statement.setInt(22, (int) (_onlineBeginTime > 0 ? ((_onlineTime + System.currentTimeMillis()) - _onlineBeginTime) / 1000L : _onlineTime / 1000L));
 				
 				if (_onlineBeginTime > 0L)
-				{
 					WorldStatisticsManager.getInstance().updateStat(this, CategoryType.TIME_PLAYED, (System.currentTimeMillis() - _onlineBeginTime) / 1000);
-				}
-				
+
 				statement.setInt(23, getPledgeType());
 				statement.setInt(24, getPowerGrade());
 				statement.setInt(25, getLvlJoinedAcademy());
@@ -6978,6 +6820,27 @@ public final class Player extends Playable implements PlayerGroup
 	}
 	
 	/**
+	 * Method addCertSkill.
+	 * @param newSkill Skill
+	 * @param store boolean
+	 * @return Skill
+	 */
+	public Skill addCertSkill(final Skill newSkill, final boolean isDual)
+	{
+		if (newSkill == null)
+		{
+			return null;
+		}
+		Skill oldSkill = super.addSkill(newSkill);
+		if (newSkill.equals(oldSkill))
+		{
+			return oldSkill;
+		}
+		storeCertSkill(newSkill, oldSkill,isDual);
+		return oldSkill;
+	}
+	
+	/**
 	 * Method addSkill.
 	 * @param newSkill Skill
 	 * @param store boolean
@@ -6991,11 +6854,17 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		if (newSkill.isRelationSkill())
 		{
+			//New Method
+			List<Integer> lst = Arrays.asList(ArrayUtils.toObject(newSkill.getRelationSkills()));
+			removeSkills(lst, true);
+			/*
+			//Old Method
 			int[] _ss = newSkill.getRelationSkills();
-			for (int _k : _ss)
+	 		for (int _k : _ss)
 			{
 				removeSkill(_k, true);
 			}
+			 */
 		}
 		Skill oldSkill = super.addSkill(newSkill);
 		if (newSkill.equals(oldSkill))
@@ -7030,6 +6899,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * @param fromDB boolean
 	 * @return Skill
 	 */
+	//Must be used for single skill to remove don't use into loop cycle!
 	public Skill removeSkill(int id, boolean fromDB)
 	{
 		Skill oldSkill = super.removeSkillById(id);
@@ -7061,6 +6931,182 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return oldSkill;
 	}
+
+	/**
+	 * Method removeSkills.
+	 * @param _SkillToRemove List<Integer>
+	 * @param fromDB boolean
+	 */
+	//Lighter removeSkills query by passing list of skill to remove.
+	public void removeSkills(List<Integer> SkillToRemove, boolean fromDB)
+	{
+		Iterator<Integer> iterator = SkillToRemove.iterator();
+		while (iterator.hasNext())
+		{
+			super.removeSkillById(iterator.next());
+		}
+		if (SkillToRemove.size() > 0 && fromDB)
+		{
+			String SkillList = SkillToRemove.toString();
+			SkillList = SkillList.replace('[', '(');
+			SkillList = SkillList.replace(']', ')');
+			Connection con = null;
+			PreparedStatement statement = null;
+			try
+			{
+				con = DatabaseFactory.getInstance().getConnection();
+				statement = con.prepareStatement("DELETE FROM character_skills WHERE skill_id IN " + SkillList + " AND char_obj_id=? AND class_index=?");
+				statement.setInt(1, getObjectId());
+				statement.setInt(2, getActiveClassId());
+				statement.execute();
+			}
+			catch (final Exception e)
+			{
+				_log.error("Could not delete skill!", e);
+			}
+			finally
+			{
+				DbUtils.closeQuietly(con, statement);
+			}
+		}
+	}
+
+	/**
+	 * Method storeCertSkill.
+	 * @param newSkill Skill
+	 * @param oldSkill Skill
+	 */
+	public HashMap <Integer, Integer> getCertSkill()
+	{
+		Connection con = null;
+		PreparedStatement statement = null;
+		ResultSet rset = null;
+		HashMap <Integer, Integer> skillList = new HashMap<Integer,Integer>();
+		try
+		{
+			con = DatabaseFactory.getInstance().getConnection();
+			for(SubClass sb : getSubClassList().values())
+			{
+				if(sb.getType() == SubClassType.BASE_CLASS)
+				{
+					List <Integer> certificationId = new ArrayList <Integer>();
+					Collection<SkillLearn> skillLearnList = SkillAcquireHolder.getInstance().getAvailableSkills(null, AcquireType.CERTIFICATION);
+					for(SkillLearn sklL : skillLearnList)
+					{
+						certificationId.add(sklL.getId());
+					}
+					statement = con.prepareStatement("SELECT skill_id, skill_level FROM character_skills WHERE char_obj_id=? AND class_index=?");
+					statement.setInt(1, getObjectId());
+					statement.setInt(2, sb.getClassId());
+					rset = statement.executeQuery();					
+					while(rset.next())
+					{
+						for(Integer sklId : certificationId)
+						{
+							if(sklId == rset.getInt("skill_id"))
+							{
+								skillList.put(rset.getInt("skill_id"), rset.getInt("skill_level"));									
+							}
+						}
+					}
+					break;
+				}
+			}
+		}
+		catch (final Exception e)
+		{
+			_log.error("Error could not get Certification skills!", e);
+		}
+		finally
+		{
+			DbUtils.closeQuietly(con, statement, rset);
+		}
+		return skillList;
+	}
+
+	/**
+	 * Method storeCertSkill.
+	 * @param newSkill Skill
+	 * @param oldSkill Skill
+	 */
+	private void storeCertSkill(final Skill newSkill, final Skill oldSkill, final boolean isDual)
+	{
+		if (newSkill == null)
+		{
+			_log.warn("could not store new skill. its NULL");
+			return;
+		}
+		Connection con = null;
+		PreparedStatement statement = null;
+		try
+		{
+			con = DatabaseFactory.getInstance().getConnection();
+			for(SubClass sb : this.getSubClassList().values())
+			{
+				if(sb.getType() == SubClassType.BASE_CLASS || sb.getType() == SubClassType.DOUBLE_SUBCLASS || (sb.getType() == SubClassType.SUBCLASS && !isDual))
+				{
+					statement = con.prepareStatement("REPLACE INTO character_skills (char_obj_id,skill_id,skill_level,class_index) values(?,?,?,?)");
+					statement.setInt(1, getObjectId());
+					statement.setInt(2, newSkill.getId());
+					statement.setInt(3, newSkill.getLevel());
+					statement.setInt(4, sb.getClassId());		
+					statement.execute();			
+				}
+			}
+		}
+		catch (final Exception e)
+		{
+			_log.error("Error could not store Certification skills!", e);
+		}
+		finally
+		{
+			DbUtils.closeQuietly(con, statement);
+		}
+	}
+	
+	/**
+	 * Method removeCertSkill.
+	 * @param id int
+	 * @param fromDB boolean
+	 * @return Skill
+	 */
+	//Must be used for single skill to remove don't use into loop cycle!
+	public void removeCertSkill(List <Integer> skillsRemove)
+	{
+		Iterator<Integer> iterator = skillsRemove.iterator();
+		while (iterator.hasNext())
+		{
+			super.removeSkillById(iterator.next());
+		}
+		if (skillsRemove.size() > 0)
+		{
+			String SkillList = skillsRemove.toString();
+			SkillList = SkillList.replace('[', '(');
+			SkillList = SkillList.replace(']', ')');
+			Connection con = null;
+			PreparedStatement statement = null;
+			try
+			{
+				con = DatabaseFactory.getInstance().getConnection();
+				for(SubClass subclass : getSubClassList().values())
+				{
+					statement = con.prepareStatement("DELETE FROM character_skills WHERE skill_id IN " + SkillList + " AND char_obj_id=? AND class_index=?");
+					statement.setInt(1, getObjectId());
+					statement.setInt(2, subclass.getClassId());
+					statement.execute();					
+				}
+			}
+			catch (final Exception e)
+			{
+				_log.error("Could not delete certification skill!", e);
+			}
+			finally
+			{
+				DbUtils.closeQuietly(con, statement);
+			}
+		}
+	}
+
 	
 	/**
 	 * Method storeSkill.
@@ -7101,6 +7147,26 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	private void restoreSkills()
 	{
+		//----------------------------------------------
+		List<Integer> keepskill = new ArrayList<Integer>();
+		//Nobless Skills
+		keepskill.add(325);
+		//Common Craft Skills
+		keepskill.add(1320);
+		//Mentor Skills
+		keepskill.add(9227);
+		keepskill.add(9228);
+		keepskill.add(9229);
+		keepskill.add(9230);
+		keepskill.add(9231);
+		keepskill.add(9232);
+		keepskill.add(9233);
+		keepskill.add(9256);
+		keepskill.add(9376);
+		keepskill.add(9377);
+		keepskill.add(9378);
+		keepskill.add(9379);
+		//------------------------------------------------
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
@@ -7111,7 +7177,8 @@ public final class Player extends Playable implements PlayerGroup
 			statement.setInt(1, getObjectId());
 			statement.setInt(2, getActiveClassId());
 			rset = statement.executeQuery();
-			List<Integer> _relationSkillToRemove = new ArrayList<>();
+			List<Integer> _relationSkillToRemove = new ArrayList<Integer>();
+			List<Integer> _SkillToRemove = new ArrayList<Integer>();
 			while (rset.next())
 			{
 				final int id = rset.getInt("skill_id");
@@ -7119,30 +7186,47 @@ public final class Player extends Playable implements PlayerGroup
 				final Skill skill = SkillTable.getInstance().getInfo(id, level);
 				if (skill == null)
 				{
-					_log.info("Problem! RestoreSkill Id: " + id + " level: " + level);
+					_log.warn("Problem! RestoreSkill Id: " + id + " level: " + level);
 					continue;
 				}
 				if (!isAwaking() && !SkillAcquireHolder.getInstance().isSkillPossible(this, skill))
 				{
-					removeSkill(skill, true);
-					removeSkillFromShortCut(skill.getId());
-					_log.info("SkillTree: Removed skill: " + skill.getId() + " - " + skill.getName() + " to the player " + getName());
+					if (!keepskill.contains(skill.getId()))
+					{
+						_SkillToRemove.add(skill.getId());
+						//removeSkill(skill, true);
+						removeSkillFromShortCut(skill.getId());
+						_log.info("SkillTree: Removed skill: " + skill.getId() + " - " + skill.getName() + " to the player " + getName());
+						continue;
+					}
+				}
+				//-------------------
+				//SKILL RACE CHECK
+				//-------------------
+				if (isAwaking() && !SkillAcquireHolder.getInstance().isSkillRacePossible(this, skill))
+				{
+					_SkillToRemove.add(skill.getId());
+					//removeSkill(skill, true);
+					_log.info("Race Skill Removed: " + skill.getId() + " - " + skill.getName() + " to the player " + getName());
 					continue;
 				}
-				if (isAwaking())
+				//-------------------
+				//SKILL DB CHECK
+				//-------------------
+				if (!SkillAcquireHolder.getInstance().isSkillPossible(this, skill))
 				{
-					SkillLearn learn = SkillAcquireHolder.getInstance().getSkillLearn(this, skill.getId(), skill.getDisplayLevel() > 100 ? skill.getBaseLevel() : skill.getLevel(), AcquireType.NORMAL);
-					if (learn != null)
+					if (!SkillAcquireHolder.getInstance().getAllClassSkillId().contains(skill.getId()))
 					{
-						// RACE SKILL CHECK
-						if (!learn.isOfRace(getRace()))
+						if (!keepskill.contains(skill.getId()))
 						{
-							removeSkill(skill, true);
-							_log.info("RaceSkill: Removed skill: " + skill.getId() + " - " + skill.getName() + " to the player " + getName());
+							_SkillToRemove.add(skill.getId());
+							//removeSkill(skill, true);
+							_log.info("Removed Skill: " + skill.getId() + " - " + skill.getName() + " to the player " + getName());
 							continue;
 						}
 					}
 				}
+				//-------------------
 				if (Config.ALT_DELETE_SKILL_RELATION && skill.isRelationSkill())
 				{
 					int[] _ss = skill.getRelationSkills();
@@ -7153,6 +7237,9 @@ public final class Player extends Playable implements PlayerGroup
 				}
 				super.addSkill(skill);
 			}
+			
+			removeSkills(_SkillToRemove, true);
+
 			if (isNoble())
 			{
 				updateNobleSkills();
@@ -7180,7 +7267,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 			if (Config.ALT_DELETE_SKILL_RELATION)
 			{
-				HashSet<Integer> _tmp = new HashSet<>();
+				HashSet<Integer> _tmp = new HashSet<Integer>();
 				_tmp.addAll(_relationSkillToRemove);
 				_relationSkillToRemove.clear();
 				_relationSkillToRemove.addAll(_tmp);
@@ -7418,7 +7505,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		recalcHennaStats();
 		sendPacket(new HennaInfo(this));
-		sendUserInfo(true);
+		sendUserInfo();
 		ItemFunctions.addItem(this, dyeID, henna.getDrawCount() / 2, true);
 		return true;
 	}
@@ -7470,7 +7557,7 @@ public final class Player extends Playable implements PlayerGroup
 					}
 				}
 				sendPacket(new HennaInfo(this));
-				sendUserInfo(true);
+				sendUserInfo();
 				return true;
 			}
 		}
@@ -7759,9 +7846,9 @@ public final class Player extends Playable implements PlayerGroup
 		_mountNpcId = npcId;
 		_mountObjId = obj_id;
 		_mountLevel = level;
-		broadcastUserInfo(true);
+		broadcastUserInfo();
 		broadcastPacket(new Ride(this));
-		broadcastUserInfo(true);
+		broadcastUserInfo();
 		sendSkillList();
 	}
 	
@@ -7917,7 +8004,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		if (_cubics == null)
 		{
-			_cubics = new ConcurrentHashMap<>(3);
+			_cubics = new ConcurrentHashMap<Integer, EffectCubic>(3);
 		}
 		_cubics.put(cubic.getId(), cubic);
 	}
@@ -8274,7 +8361,7 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			sendPacket(new MyTargetSelected(getTarget().getObjectId(), 0));
 		}
-		sendUserInfo(true);
+		sendUserInfo();
 		for (Summon summon : getSummonList())
 		{
 			summon.teleportToOwner();
@@ -9418,7 +9505,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Field user_variables.
 	 */
-	private final Map<String, String> user_variables = new ConcurrentHashMap<>();
+	private final Map<String, String> user_variables = new ConcurrentHashMap<String, String>();
 	
 	/**
 	 * Method setVar.
@@ -9864,7 +9951,7 @@ public final class Player extends Playable implements PlayerGroup
 		setRecomHave(getRecomHave() - 20);
 		stopRecomBonusTask(false);
 		startRecomBonusTask();
-		sendUserInfo(true);
+		sendUserInfo();
 		sendVoteSystemInfo();
 	}
 	
@@ -9973,6 +10060,11 @@ public final class Player extends Playable implements PlayerGroup
 			statement.setInt(4, oldclass);
 			statement.executeUpdate();
 			DbUtils.close(statement);
+			statement = con.prepareStatement("UPDATE olympiad_nobles SET class_id=? WHERE char_id=?");
+			statement.setInt(1, newclass);
+			statement.setInt(2, getObjectId());
+			statement.executeUpdate();
+			DbUtils.close(statement);
 			statement = con.prepareStatement("DELETE FROM character_hennas WHERE char_obj_id=? AND class_index=?");
 			statement.setInt(1, getObjectId());
 			statement.setInt(2, newclass);
@@ -10065,28 +10157,44 @@ public final class Player extends Playable implements PlayerGroup
 	 * @param certification int
 	 * @return boolean
 	 */
-	public boolean addSubClass(final int classId, boolean storeOld, int certification)
+	public boolean addSubClass(final int classId, boolean storeOld, int certification, int dual_certification, boolean isDual, int index)
 	{
 		final SubClass newClass = new SubClass();
-		final SubClassType type = SubClassType.SUBCLASS;
+		SubClassType type = SubClassType.SUBCLASS;
+		int level = 40;
+		if(isDual)
+		{
+			type = SubClassType.DOUBLE_SUBCLASS;
+			level = 85;
+		}
 		newClass.setType(type);
 		newClass.setClassId(classId);
 		newClass.setCertification(certification);
-		if (!getSubClassList().add(newClass))
+		if (index > 0 && index < 5)
+		{
+			getSubClassList().addToIndex(newClass, index);
+		}
+		else if (!getSubClassList().add(newClass))
 		{
 			return false;
-		}
-		final int level = 40;
-		final long exp = Experience.LEVEL[level];
+		}		
+		final long exp = Experience.getExpForLevel(level);
 		final double hp = getMaxHp();
 		final double mp = getMaxMp();
 		final double cp = getMaxCp();
-		if (!CharacterSubclassDAO.getInstance().insert(getObjectId(), classId, classId, exp, 0, hp, mp, cp, hp, mp, cp, level, false, type, null, certification))
+		if (!CharacterSubclassDAO.getInstance().insert(getObjectId(), classId, classId, exp, 0, hp, mp, cp, hp, mp, cp, level, false, type, null, certification, dual_certification))
 		{
 			return false;
 		}
-		setActiveSubClass(classId, storeOld);
-		rewardSkills(false);
+		setActiveSubClass(classId, storeOld, exp);
+		HashMap <Integer,Integer> certificationSkills = getCertSkill();
+		for(Iterator <Entry<Integer,Integer>> i = certificationSkills.entrySet().iterator();i.hasNext();)
+		{
+			Map.Entry<Integer,Integer> e = (Map.Entry<Integer, Integer>)i.next();
+			Skill skl = SkillTable.getInstance().getInfo(e.getKey(), e.getValue());
+			addSkill(skl,true);									
+		}
+		rewardSkills(false,false);
 		sendSkillList();
 		setCurrentHpMp(getMaxHp(), getMaxMp(), true);
 		setCurrentCp(getMaxCp());
@@ -10099,13 +10207,14 @@ public final class Player extends Playable implements PlayerGroup
 	 * @param newClassId int
 	 * @return boolean
 	 */
-	public boolean modifySubClass(final int oldClassId, final int newClassId)
+	public boolean modifySubClass(final int oldClassId, final int newClassId, boolean isDual)
 	{
 		final SubClass originalClass = getSubClassList().getByClassId(oldClassId);
 		if ((originalClass == null) || originalClass.isBase())
 		{
 			return false;
 		}
+		final int dual_certification = originalClass.getCertification();
 		final int certification = originalClass.getCertification();
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -10152,8 +10261,9 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			DbUtils.closeQuietly(con, statement);
 		}
+		int index = getSubClassList().getByClassId(oldClassId).getIndex();
 		getSubClassList().removeByClassId(oldClassId);
-		return (newClassId <= 0) || addSubClass(newClassId, false, certification);
+		return (newClassId <= 0) || addSubClass(newClassId, false, certification, dual_certification, isDual, index);
 	}
 	
 	/**
@@ -10161,7 +10271,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * @param subId int
 	 * @param store boolean
 	 */
-	public void setActiveSubClass(int subId, boolean store)
+	public void setActiveSubClass(int subId, boolean store, long exp)
 	{
 		if (!_subClassOperationLock.tryLock())
 		{
@@ -10195,7 +10305,11 @@ public final class Player extends Playable implements PlayerGroup
 			}
 			SubClass newActiveSub = _subClassList.changeActiveSubClass(subId);
 			_template = PlayerTemplateHolder.getInstance().getPlayerTemplate(getRace(), getClassId(), Sex.VALUES[getSex()]);
-			setClassId(subId, false, false);
+			setClassId(subId, true, false);
+			if(exp > 0)
+			{
+				newActiveSub.setExp(exp);
+			}
 			removeAllSkills();
 			getEffectList().stopAllEffects();
 			getSummonList().unsummonAllServitors();
@@ -10207,7 +10321,7 @@ public final class Player extends Playable implements PlayerGroup
 			getSummonList().unsummonAll(false);
 			setAgathion(0);
 			restoreSkills();
-			rewardSkills(false);
+			rewardSkills(false,false);
 			checkSkills();
 			sendPacket(new ExStorageMaxCount(this));
 			refreshExpertisePenalty();
@@ -10235,7 +10349,7 @@ public final class Player extends Playable implements PlayerGroup
 			getDeathPenalty().restore(this);
 			setIncreasedForce(0);
 			startHourlyTask();
-			sendUserInfo(true);
+			sendUserInfo();
 			sendSkillList();
 			broadcastCharInfo();
 			updateEffectIcons();
@@ -11637,7 +11751,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Field _tamedBeasts.
 	 */
-	private final Map<Integer, TamedBeastInstance> _tamedBeasts = new ConcurrentHashMap<>();
+	private final Map<Integer, TamedBeastInstance> _tamedBeasts = new ConcurrentHashMap<Integer, TamedBeastInstance>();
 	
 	/**
 	 * Method getTrainedBeasts.
@@ -11852,17 +11966,17 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			sendPacket(new ExAutoSoulShot(shotId, true));
 		}
-		if (transformationId == 0)
+		if(transformationId == 0)
 		{
-			if (isAwaking())
+			if(isAwaking())
 			{
-				if (Config.ALT_CHECK_SKILLS_AWAKENING)// When you untransform, checks for awakening skills
+				if(Config.ALT_CHECK_SKILLS_AWAKENING)//When you untransform, checks for awakening skills
 				{
 					AwakingManager.getInstance().checkAwakenPlayerSkills(this);
 				}
 			}
 		}
-		broadcastUserInfo(true);
+		broadcastUserInfo();
 	}
 	
 	/**
@@ -11894,7 +12008,7 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			return super.getAllSkills();
 		}
-		Map<Integer, Skill> tempSkills = new HashMap<>();
+		Map<Integer, Skill> tempSkills = new HashMap<Integer, Skill>();
 		for (Skill s : super.getAllSkills())
 		{
 			if ((s != null) && !s.isActive() && !s.isToggle())
@@ -12118,7 +12232,7 @@ public final class Player extends Playable implements PlayerGroup
 		var = getVar("selllist");
 		if (var != null)
 		{
-			_sellList = new CopyOnWriteArrayList<>();
+			_sellList = new CopyOnWriteArrayList<TradeItem>();
 			String[] items = var.split(":");
 			for (String item : items)
 			{
@@ -12157,7 +12271,7 @@ public final class Player extends Playable implements PlayerGroup
 		var = getVar("packageselllist");
 		if (var != null)
 		{
-			_packageSellList = new CopyOnWriteArrayList<>();
+			_packageSellList = new CopyOnWriteArrayList<TradeItem>();
 			String[] items = var.split(":");
 			for (String item : items)
 			{
@@ -12196,7 +12310,7 @@ public final class Player extends Playable implements PlayerGroup
 		var = getVar("buylist");
 		if (var != null)
 		{
-			_buyList = new CopyOnWriteArrayList<>();
+			_buyList = new CopyOnWriteArrayList<TradeItem>();
 			String[] items = var.split(":");
 			for (String item : items)
 			{
@@ -12224,7 +12338,7 @@ public final class Player extends Playable implements PlayerGroup
 		var = getVar("createlist");
 		if (var != null)
 		{
-			_createList = new CopyOnWriteArrayList<>();
+			_createList = new CopyOnWriteArrayList<ManufactureItem>();
 			String[] items = var.split(":");
 			for (String item : items)
 			{
@@ -12906,13 +13020,13 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			if (bypasses_bbs == null)
 			{
-				bypasses_bbs = new LazyArrayList<>();
+				bypasses_bbs = new LazyArrayList<String>();
 			}
 			return bypasses_bbs;
 		}
 		if (bypasses == null)
 		{
-			bypasses = new LazyArrayList<>();
+			bypasses = new LazyArrayList<String>();
 		}
 		return bypasses;
 	}
@@ -13086,8 +13200,14 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			@Override
 			public void runImpl()
-			{
+			{				
 				getSummonList().summonAll();
+				if(_ServitorShareRestore)
+				{
+					_ServitorShareRestoreData.start();
+					_ServitorShareRestore = false;
+					_ServitorShareRestoreData = null;
+				}
 			}
 		});
 	}
@@ -13107,7 +13227,7 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			return null;
 		}
-		Collection<TrapInstance> result = new ArrayList<>(getTrapsCount());
+		Collection<TrapInstance> result = new ArrayList<TrapInstance>(getTrapsCount());
 		TrapInstance trap;
 		for (Integer trapId : _traps.keySet())
 		{
@@ -13140,7 +13260,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		if (_traps == null)
 		{
-			_traps = new HashMap<>();
+			_traps = new HashMap<Integer, Long>();
 		}
 		_traps.put(trap.getObjectId(), trap.getStoredId());
 	}
@@ -13191,7 +13311,7 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			return;
 		}
-		List<TrapInstance> toRemove = new ArrayList<>();
+		List<TrapInstance> toRemove = new ArrayList<TrapInstance>();
 		for (Integer trapId : traps.keySet())
 		{
 			toRemove.add((TrapInstance) GameObjectsStorage.get(traps.get(trapId)));
@@ -13387,7 +13507,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		if (_userSession == null)
 		{
-			_userSession = new ConcurrentHashMap<>();
+			_userSession = new ConcurrentHashMap<String, String>();
 		}
 		if ((val == null) || val.isEmpty())
 		{
@@ -13762,7 +13882,7 @@ public final class Player extends Playable implements PlayerGroup
 			return;
 		}
 		int rnd = Rnd.nextInt();
-		_askDialog = new ImmutablePair<>(rnd, listener);
+		_askDialog = new ImmutablePair<Integer, OnAnswerListener>(rnd, listener);
 		dlg.setRequestId(rnd);
 		sendPacket(dlg);
 	}
@@ -14364,11 +14484,11 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Field _acquiredItemMonthly.
 	 */
-	HashMap<Integer, Long> _acquiredItemMonthly = new HashMap<>();
+	HashMap<Integer, Long> _acquiredItemMonthly = new HashMap<Integer, Long>();
 	/**
 	 * Field _acquiredItemTotal.
 	 */
-	HashMap<Integer, Long> _acquiredItemTotal = new HashMap<>();
+	HashMap<Integer, Long> _acquiredItemTotal = new HashMap<Integer, Long>();
 	
 	/**
 	 * Method getAcquiredItem.
@@ -14691,7 +14811,7 @@ public final class Player extends Playable implements PlayerGroup
 		hero.set(Olympiad.CHAR_ID, player.getObjectId());
 		hero.set(Olympiad.CHAR_NAME, player.getName());
 		hero.set(Hero.ACTIVE, 1);
-		List<StatsSet> heroesToBe = new ArrayList<>();
+		List<StatsSet> heroesToBe = new ArrayList<StatsSet>();
 		heroesToBe.add(hero);
 		Hero.getInstance().computeNewHeroes(heroesToBe);
 		player.setHero(true);
@@ -14701,7 +14821,16 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			player.broadcastPacket(new SocialAction(player.getObjectId(), 16));
 		}
-		player.broadcastUserInfo(true);
+		player.broadcastUserInfo();
+	}
+	
+	/**
+	 * Method setServitorShareRestore.
+	 * */
+	public void setServitorShareRestore(boolean result, Effect effectToRestore)
+	{
+		_ServitorShareRestore = result;
+		_ServitorShareRestoreData = effectToRestore;
 	}
 	
 	/**
@@ -14721,25 +14850,33 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_ping = ping;
 	}
-	
+
 	public long getStartingTimeInFullParty()
 	{
 		return _startingTimeInFullParty;
 	}
-	
+
 	public void setStartingTimeInFullParty(long time)
 	{
 		_startingTimeInFullParty = time;
 	}
-	
+
 	public long getStartingTimeInParty()
 	{
 		return _startingTimeInParty;
 	}
-	
+
 	public void setStartingTimeInParty(long time)
 	{
 		_startingTimeInParty = time;
 	}
-	
+
+	@Override
+	public Collection<Summon> getPets()
+	{
+		if (_summons != null)
+			return _summons.values();
+		return new ArrayList<Summon>(0);
+	}
+
 }

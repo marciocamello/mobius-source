@@ -1,11 +1,10 @@
 <!DOCTYPE list SYSTEM "instances.dtd">
 <list>
     <!-- Tower of Infinitum - Ranku -->
-    <instance id="4" name="Tower of Infinitum Ranku" maxChannels="5" collapseIfEmpty="10" timelimit="30"
-              dispelBuffs="false">
+    <instance id="4" name="Tower of Infinitum Ranku" maxChannels="5" collapseIfEmpty="10" timelimit="30" dispelBuffs="false">
         <collapse on-party-dismiss="true" timer="60"/>
         <level min="75" max="85"/>
-        <party min="2" max="9"/>
+        <party min="2" max="7"/>
         <return loc="-19008 277122 -13376"/>
         <teleport loc="-19008 277024 -15000"/>
         <remove itemId="15516" count="1" necessary="true"/>

@@ -409,7 +409,7 @@ public class Party implements PlayerGroup
 				}
 				else
 				{
-					pmember.add(new PartySmallWindowAdd(member, player));
+					pmember.add(new PartySmallWindowAdd(member, player, getLootDistribution()));
 				}
 				pmember.add(new PartyMemberPosition().add(player));
 				pmember.add(RelationChanged.update(member, player, member));
@@ -439,9 +439,7 @@ public class Party implements PlayerGroup
 		{
 			member.setStartingTimeInParty(System.currentTimeMillis());
 			if (_members.size() == 7)
-			{
 				member.setStartingTimeInFullParty(System.currentTimeMillis());
-			}
 		}
 		return true;
 	}
@@ -478,9 +476,7 @@ public class Party implements PlayerGroup
 		synchronized (_members)
 		{
 			if (_members.size() == 7)
-			{
 				WorldStatisticsManager.getInstance().updateStat(player, CategoryType.TIME_IN_FULLPARTY, (System.currentTimeMillis() - player.getStartingTimeInFullParty()) / 1000);
-			}
 			if (!_members.remove(player))
 			{
 				return false;
@@ -558,9 +554,7 @@ public class Party implements PlayerGroup
 			}
 			WorldStatisticsManager.getInstance().updateStat(leader, CategoryType.TIME_IN_PARTY, (System.currentTimeMillis() - leader.getStartingTimeInParty()) / 1000);
 			if (leader.getStartingTimeInFullParty() != 0)
-			{
 				WorldStatisticsManager.getInstance().updateStat(leader, CategoryType.TIME_IN_FULLPARTY, (System.currentTimeMillis() - leader.getStartingTimeInFullParty()) / 1000);
-			}
 			dissolveParty();
 		}
 		else

@@ -118,7 +118,7 @@ public final class NpcTemplate extends CharTemplate
 	/**
 	 * Field rewardSp.
 	 */
-	public final int rewardSp;
+	public final long rewardSp;
 	/**
 	 * Field rewardRp.
 	 */
@@ -248,6 +248,9 @@ public final class NpcTemplate extends CharTemplate
 	 */
 	private int summonPoints = 1;
 	
+	private RandomActions _randomActions = null;
+	private TIntObjectHashMap<WalkerRoute> _walkerRoute = new TIntObjectHashMap<WalkerRoute>();
+	
 	/**
 	 * Constructor for NpcTemplate.
 	 * @param set StatsSet
@@ -261,7 +264,7 @@ public final class NpcTemplate extends CharTemplate
 		title = set.getString("title");
 		level = set.getInteger("level");
 		rewardExp = set.getLong("rewardExp");
-		rewardSp = set.getInteger("rewardSp");
+		rewardSp = set.getLong("rewardSp");
 		rewardRp = set.getInteger("rewardRp");
 		aggroRange = set.getInteger("aggroRange");
 		rhand = set.getInteger("rhand", 0);
@@ -870,5 +873,29 @@ public final class NpcTemplate extends CharTemplate
 	public void setSummonPoints(int count)
 	{
 		summonPoints = count;
+	}
+
+	public void setRandomActions(RandomActions randomActions)
+	{
+		_randomActions = randomActions;
+	}
+
+	public RandomActions getRandomActions()
+	{
+		return _randomActions;
+	}
+
+	public void addWalkerRoute(WalkerRoute walkerRoute)
+	{
+		if (!walkerRoute.isValid())
+		{
+			return;
+		}
+		_walkerRoute.put(walkerRoute.getId(), walkerRoute);
+	}
+
+	public WalkerRoute getWalkerRoute(int id)
+	{
+		return (WalkerRoute)this._walkerRoute.get(id);
 	}
 }

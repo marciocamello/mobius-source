@@ -689,6 +689,10 @@ public final class CaravanTraderInstance extends NpcInstance
 				break;
 		}
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
+		if (htmlpath == null)
+		{
+			htmlpath = getHtmlPath(getNpcId(), 0, player);
+		}
 		html.setFile(htmlpath);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%npcname%", getName());

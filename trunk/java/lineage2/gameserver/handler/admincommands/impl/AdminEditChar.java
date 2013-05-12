@@ -225,7 +225,7 @@ public class AdminEditChar implements IAdminCommandHandler
 						return false;
 					}
 					Player player = target.getPlayer();
-					player.setClassId(id, false, false);
+					player.setClassId(id, true, false);
 					player.sendMessage("Your class has been changed by a GM");
 					player.broadcastCharInfo();
 					return true;
@@ -440,7 +440,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			player.sendSkillList();
 			player.sendMessage("Admin has changed your hero status.");
-			player.broadcastUserInfo(true);
+			player.broadcastUserInfo();
 		}
 		else if (fullString.startsWith("admin_setnoble"))
 		{
@@ -479,7 +479,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			player.updatePledgeClass();
 			player.updateNobleSkills();
 			player.sendSkillList();
-			player.broadcastUserInfo(true);
+			player.broadcastUserInfo();
 		}
 		else if (fullString.startsWith("admin_setsex"))
 		{
@@ -495,7 +495,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			player.changeSex();
 			player.sendMessage("Your gender has been changed by a GM");
-			player.broadcastUserInfo(true);
+			player.broadcastUserInfo();
 		}
 		else if (fullString.startsWith("admin_setcolor"))
 		{
@@ -514,7 +514,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				player.setNameColor(Integer.decode("0x" + val));
 				player.sendMessage("Your name color has been changed by a GM");
-				player.broadcastUserInfo(true);
+				player.broadcastUserInfo();
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -583,7 +583,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				st.nextToken();
 				int classId = Short.parseShort(st.nextToken());
-				if (!player.addSubClass(classId, true, 0))
+				if (!player.addSubClass(classId, true, 0, 0, false, 0))
 				{
 					activeChar.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.SubclassCouldNotBeAdded", activeChar));
 					return false;

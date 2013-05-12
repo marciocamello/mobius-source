@@ -911,4 +911,8 @@
         <npc id="22242"/>
         <!--Muertos Warrior-->
     </spawn>
+	<spawn count="1" respawn="43200" respawn_random="0" period_of_day="none">
+		<point x="-105914" y="46729" z="-1504" h="10000" />
+		<npc id="25902" /><!--Gigantic Golem (Raid Boss lv 96)-->
+	</spawn>
 </list>

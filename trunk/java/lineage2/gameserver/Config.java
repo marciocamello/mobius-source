@@ -88,9 +88,6 @@ public class Config
 	public static String DATABASE_LOGIN;
 	public static String DATABASE_PASSWORD;
 	public static boolean AUTOSAVE;
-	public static long USER_INFO_INTERVAL;
-	public static boolean BROADCAST_STATS_INTERVAL;
-	public static long BROADCAST_CHAR_INFO_INTERVAL;
 	public static int EFFECT_TASK_MANAGER_COUNT;
 	public static int MAXIMUM_ONLINE_USERS;
 	public static boolean DONTLOADSPAWN;
@@ -133,7 +130,6 @@ public class Config
 	public static boolean ALT_ALL_PHYS_SKILLS_OVERHIT;
 	public static double ALT_POLE_DAMAGE_MODIFIER;
 	public static boolean ALT_REMOVE_SKILLS_ON_DELEVEL;
-	public static boolean ALT_USE_BOW_REUSE_MODIFIER;
 	public static boolean ALT_VITALITY_ENABLED;
 	public static double ALT_VITALITY_RATE;
 	public static double ALT_VITALITY_CONSUME_RATE;
@@ -252,6 +248,10 @@ public class Config
 	public static int ALT_MAX_DUAL_SUB_LEVEL;
 	public static int ALT_GAME_SUB_ADD;
 	public static boolean ALT_GAME_SUB_BOOK;
+	public static double[] ALT_GAME_DUALCLASS_REAWAKENING_COST;
+	public static int ALT_GAME_RESET_CERTIFICATION_COST;
+	public static int ALT_GAME_RESET_DUALCERTIFICATION_COST;
+	public static boolean ALT_GAME_REMOVE_PREVIOUS_CERTIFICATES;
 	public static boolean ALT_NO_LASTHIT;
 	public static boolean ALT_KAMALOKA_NIGHTMARES_PREMIUM_ONLY;
 	public static boolean ALT_KAMALOKA_NIGHTMARE_REENTER;
@@ -395,7 +395,7 @@ public class Config
 	public static boolean OLYMPIAD_OLDSTYLE_STAT;
 	public static long NONOWNER_ITEM_PICKUP_DELAY;
 	public static boolean LOG_CHAT;
-	public static Map<Integer, PlayerAccess> gmlist = new HashMap<>();
+	public static Map<Integer, PlayerAccess> gmlist = new HashMap<Integer, PlayerAccess>();
 	public static double RATE_XP;
 	public static double RATE_SP;
 	public static double RATE_QUESTS_REWARD;
@@ -473,7 +473,7 @@ public class Config
 	public static String CLASS_MASTERS_PRICE;
 	public static String CLASS_MASTERS_PRICE_ITEM;
 	public static int[] CLASS_MASTERS_PRICE_ITEM_LIST = new int[5];
-	public static List<Integer> ALLOW_CLASS_MASTERS_LIST = new ArrayList<>();
+	public static List<Integer> ALLOW_CLASS_MASTERS_LIST = new ArrayList<Integer>();
 	public static int[] CLASS_MASTERS_PRICE_LIST = new int[5];
 	public static boolean ALLOW_EVENT_GATEKEEPER;
 	public static boolean ITEM_BROKER_ITEM_SEARCH;
@@ -501,21 +501,20 @@ public class Config
 	public static int MIN_PK_TO_ITEMS_DROP;
 	public static boolean DROP_ITEMS_ON_DIE;
 	public static boolean DROP_ITEMS_AUGMENTED;
-	public static List<Integer> KARMA_LIST_NONDROPPABLE_ITEMS = new ArrayList<>();
+	public static List<Integer> KARMA_LIST_NONDROPPABLE_ITEMS = new ArrayList<Integer>();
 	public static int PVP_TIME;
 	public static int REPUTATION_COUNT;
 	public static int PK_KILLER_NAME_COLOUR;
 	public static boolean ALT_GAME_KARMA_PLAYER_CAN_SHOP;
-	public static int ENCHANT_CHANCE_WEAPON;
-	public static int ENCHANT_CHANCE_ARMOR;
-	public static int ENCHANT_CHANCE_ACCESSORY;
-	public static int ENCHANT_CHANCE_CRYSTAL_WEAPON;
-	public static int ENCHANT_CHANCE_CRYSTAL_ARMOR;
-	public static int ENCHANT_CHANCE_CRYSTAL_ACCESSORY;
-	public static int ENCHANT_MAX;
-	public static int ENCHANT_ATTRIBUTE_STONE_CHANCE;
-	public static int ENCHANT_ATTRIBUTE_CRYSTAL_CHANCE;
-	public static int ARMOR_OVERENCHANT_HPBONUS_LIMIT;
+	public static int OVERENCHANT_LIMIT1;
+	public static int OVERENCHANT_LIMIT2;
+	public static int OVERENCHANT_LIMIT3;
+	public static int OVERENCHANT_LIMIT4;
+	public static double OVERENCHANT_MUL1;
+	public static double OVERENCHANT_MUL2;
+	public static double OVERENCHANT_MUL3;
+	public static double OVERENCHANT_MUL4;
+	public static double BLESSED_ARMOR_WEAPON_MUL;
 	public static boolean SHOW_ENCHANT_EFFECT_RESULT;
 	public static boolean REGEN_SIT_WAIT;
 	public static double RATE_RAID_REGEN;
@@ -627,10 +626,10 @@ public class Config
 	public static int COMMUNITYBOARD_BUFF_TIME;
 	public static int COMMUNITYBOARD_BUFF_PICE;
 	public static int COMMUNITYBOARD_BUFF_SAVE_PICE;
-	public static List<Integer> COMMUNITYBOARD_BUFF_ALLOW = new ArrayList<>();
-	public static List<Integer> COMMUNITI_LIST_MAGE_SUPPORT = new ArrayList<>();
-	public static List<Integer> COMMUNITI_LIST_FIGHTER_SUPPORT = new ArrayList<>();
-	public static List<String> COMMUNITYBOARD_MULTISELL_ALLOW = new ArrayList<>();
+	public static List<Integer> COMMUNITYBOARD_BUFF_ALLOW = new ArrayList<Integer>();
+	public static List<Integer> COMMUNITI_LIST_MAGE_SUPPORT = new ArrayList<Integer>();
+	public static List<Integer> COMMUNITI_LIST_FIGHTER_SUPPORT = new ArrayList<Integer>();
+	public static List<String> COMMUNITYBOARD_MULTISELL_ALLOW = new ArrayList<String>();
 	public static String BBS_DEFAULT;
 	public static String BBS_HOME_DIR;
 	public static boolean COMMUNITYBOARD_TELEPORT_ENABLED;
@@ -689,6 +688,8 @@ public class Config
 	public static boolean LOAD_GM_SPAWN_CUSTOM;
 	public static int STARTING_ADENA;
 	public static int STARTING_LEVEL;
+	public static int BOW_REUSE;
+	public static int CROSSBOW_REUSE;
 	public static int LIM_PATK;
 	public static int LIM_MATK;
 	public static int LIM_PDEF;
@@ -699,7 +700,9 @@ public class Config
 	public static int LIM_CRIT;
 	public static int LIM_MCRIT;
 	public static int LIM_ACCURACY;
+	public static int LIM_MACCURACY;
 	public static int LIM_EVASION;
+	public static int LIM_MEVASION;
 	public static int LIM_MOVE;
 	public static int GM_LIM_MOVE;
 	public static int LIM_FAME;
@@ -707,8 +710,6 @@ public class Config
 	public static double ALT_NPC_MATK_MODIFIER;
 	public static double ALT_NPC_MAXHP_MODIFIER;
 	public static double ALT_NPC_MAXMP_MODIFIER;
-	public static int SAFE_ENCHANT_COMMON;
-	public static int SAFE_ENCHANT_FULL_BODY;
 	public static boolean ALLOW_TALK_WHILE_SITTING;
 	public static boolean PARTY_LEADER_ONLY_CAN_INVITE;
 	public static boolean ALLOW_CLANSKILLS;
@@ -926,9 +927,6 @@ public class Config
 		DATABASE_URL = serverSettings.getProperty("URL", "jdbc:mysql://localhost/l2sdb");
 		DATABASE_LOGIN = serverSettings.getProperty("Login", "root");
 		DATABASE_PASSWORD = serverSettings.getProperty("Password", "");
-		USER_INFO_INTERVAL = serverSettings.getProperty("UserInfoInterval", 100L);
-		BROADCAST_STATS_INTERVAL = serverSettings.getProperty("BroadcastStatsInterval", true);
-		BROADCAST_CHAR_INFO_INTERVAL = serverSettings.getProperty("BroadcastCharInfoInterval", 100L);
 		EFFECT_TASK_MANAGER_COUNT = serverSettings.getProperty("EffectTaskManagers", 2);
 		SCHEDULED_THREAD_POOL_SIZE = serverSettings.getProperty("ScheduledThreadPoolSize", NCPUS * 4);
 		EXECUTOR_THREAD_POOL_SIZE = serverSettings.getProperty("ExecutorThreadPoolSize", NCPUS * 2);
@@ -1239,20 +1237,17 @@ public class Config
 		WAREHOUSE_SLOTS_DWARF = otherSettings.getProperty("BaseWarehouseSlotsForDwarf", 120);
 		WAREHOUSE_SLOTS_CLAN = otherSettings.getProperty("MaximumWarehouseSlotsForClan", 200);
 		FREIGHT_SLOTS = otherSettings.getProperty("MaximumFreightSlots", 10);
-		ENCHANT_CHANCE_WEAPON = otherSettings.getProperty("EnchantChance", 66);
-		ENCHANT_CHANCE_ARMOR = otherSettings.getProperty("EnchantChanceArmor", ENCHANT_CHANCE_WEAPON);
-		ENCHANT_CHANCE_ACCESSORY = otherSettings.getProperty("EnchantChanceAccessory", ENCHANT_CHANCE_ARMOR);
-		ENCHANT_CHANCE_CRYSTAL_WEAPON = otherSettings.getProperty("EnchantChanceCrystal", 66);
-		ENCHANT_CHANCE_CRYSTAL_ARMOR = otherSettings.getProperty("EnchantChanceCrystalArmor", ENCHANT_CHANCE_CRYSTAL_WEAPON);
-		ENCHANT_CHANCE_CRYSTAL_ACCESSORY = otherSettings.getProperty("EnchantChanceCrystalAccessory", ENCHANT_CHANCE_CRYSTAL_ARMOR);
-		SAFE_ENCHANT_COMMON = otherSettings.getProperty("SafeEnchantCommon", 3);
-		SAFE_ENCHANT_FULL_BODY = otherSettings.getProperty("SafeEnchantFullBody", 4);
-		ENCHANT_MAX = otherSettings.getProperty("EnchantMax", 20);
-		ARMOR_OVERENCHANT_HPBONUS_LIMIT = otherSettings.getProperty("ArmorOverEnchantHPBonusLimit", 10) - 3;
 		SHOW_ENCHANT_EFFECT_RESULT = otherSettings.getProperty("ShowEnchantEffectResult", false);
-		ENCHANT_ATTRIBUTE_STONE_CHANCE = otherSettings.getProperty("EnchantAttributeChance", 50);
-		ENCHANT_ATTRIBUTE_CRYSTAL_CHANCE = otherSettings.getProperty("EnchantAttributeCrystalChance", 30);
-		REGEN_SIT_WAIT = otherSettings.getProperty("RegenSitWait", false);
+		OVERENCHANT_LIMIT1 = otherSettings.getProperty("overEnchantLimit1", 3);
+		OVERENCHANT_LIMIT2 = otherSettings.getProperty("overEnchantLimit2", 6);
+		OVERENCHANT_LIMIT3 = otherSettings.getProperty("overEnchantLimit3", 9);
+		OVERENCHANT_LIMIT4 = otherSettings.getProperty("overEnchantLimit4", 19);
+		OVERENCHANT_MUL1 = otherSettings.getProperty("overEnchantMul1", 2);
+		OVERENCHANT_MUL2 = otherSettings.getProperty("overEnchantMul2", 3);
+		OVERENCHANT_MUL3 = otherSettings.getProperty("overEnchantMul3", 4);
+		OVERENCHANT_MUL4 = otherSettings.getProperty("overEnchantMul4", 5);
+		BLESSED_ARMOR_WEAPON_MUL = otherSettings.getProperty("blessedArmorWeaponMul", 1.5);
+ 		REGEN_SIT_WAIT = otherSettings.getProperty("RegenSitWait", false);
 		STARTING_ADENA = otherSettings.getProperty("StartingAdena", 0);
 		STARTING_LEVEL = otherSettings.getProperty("StartingLevel", 1);
 		UNSTUCK_SKILL = otherSettings.getProperty("UnstuckSkill", true);
@@ -1316,10 +1311,14 @@ public class Config
 		LIM_PATK_SPD = formulasSettings.getProperty("LimitPatkSpd", 1500);
 		LIM_MATK_SPD = formulasSettings.getProperty("LimitMatkSpd", 1999);
 		LIM_CRIT_DAM = formulasSettings.getProperty("LimitCriticalDamage", 2000);
+		BOW_REUSE = formulasSettings.getProperty("bowReuse", 1500);
+		CROSSBOW_REUSE = formulasSettings.getProperty("crossbowReuse", 850);
 		LIM_CRIT = formulasSettings.getProperty("LimitCritical", 500);
 		LIM_MCRIT = formulasSettings.getProperty("LimitMCritical", 200);
-		LIM_ACCURACY = formulasSettings.getProperty("LimitAccuracy", 200);
-		LIM_EVASION = formulasSettings.getProperty("LimitEvasion", 200);
+		LIM_ACCURACY = formulasSettings.getProperty("LimitAccuracy", 300);
+		LIM_MACCURACY = formulasSettings.getProperty("LimitMAccuracy", 300);
+		LIM_MEVASION = formulasSettings.getProperty("LimitMEvasion", 300);
+		LIM_EVASION = formulasSettings.getProperty("LimitEvasion", 300);
 		LIM_MOVE = formulasSettings.getProperty("LimitMove", 250);
 		GM_LIM_MOVE = formulasSettings.getProperty("GmLimitMove", 1500);
 		LIM_FAME = formulasSettings.getProperty("LimitFame", 3000000);
@@ -1383,6 +1382,41 @@ public class Config
 		ALT_GAME_LEVEL_TO_GET_SUBCLASS = altSettings.getProperty("AltLevelToGetSubclass", 75);
 		ALT_GAME_SUB_ADD = altSettings.getProperty("AltSubAdd", 0);
 		ALT_GAME_SUB_BOOK = altSettings.getProperty("AltSubBook", false);
+		ALT_GAME_RESET_CERTIFICATION_COST = altSettings.getProperty("AltResetCertificationCost", 10000000);
+		ALT_GAME_RESET_DUALCERTIFICATION_COST = altSettings.getProperty("AltResetDualCertificationCost", 20000000);
+		ALT_GAME_REMOVE_PREVIOUS_CERTIFICATES = altSettings.getProperty("AltRemovePreviousCertificates", false);
+		ALT_GAME_DUALCLASS_REAWAKENING_COST = altSettings.getProperty("AltGameDualClassReawakeningCost", new double[]
+		{
+			100,
+			90,
+			80,
+			70,
+			60,
+			50,
+			40,
+			30,
+			20,
+			10				
+		});
+		_log.warn("altGameReawakeningCost = " + ALT_GAME_DUALCLASS_REAWAKENING_COST.length);
+		if(ALT_GAME_DUALCLASS_REAWAKENING_COST.length != 10)
+		{
+			double [] DefaultValues = new double[] 
+			{
+				100,
+				90,
+				80,
+				70,
+				60,
+				50,
+				40,
+				30,
+				20,
+				10						
+			};
+			ALT_GAME_DUALCLASS_REAWAKENING_COST = DefaultValues;
+			_log.warn("altGameReawakeningCost = Incorrect values for corresponding levels, loaded default values");
+		}
 		ALT_MAX_LEVEL = Math.min(altSettings.getProperty("AltMaxLevel", 99), Experience.LEVEL.length - 1);
 		ALT_MAX_SUB_LEVEL = Math.min(altSettings.getProperty("AltMaxSubLevel", 80), Experience.LEVEL.length - 1);
 		ALT_MAX_DUAL_SUB_LEVEL = Math.min(altSettings.getProperty("AltMaxDualSubLevel", 99), Experience.LEVEL.length - 1);
@@ -1505,7 +1539,6 @@ public class Config
 		});
 		ALT_ALL_PHYS_SKILLS_OVERHIT = altSettings.getProperty("AltAllPhysSkillsOverhit", true);
 		ALT_REMOVE_SKILLS_ON_DELEVEL = altSettings.getProperty("AltRemoveSkillsOnDelevel", true);
-		ALT_USE_BOW_REUSE_MODIFIER = altSettings.getProperty("AltUseBowReuseModifier", true);
 		ALLOW_CH_DOOR_OPEN_ON_CLICK = altSettings.getProperty("AllowChDoorOpenOnClick", true);
 		ALT_CH_ALL_BUFFS = altSettings.getProperty("AltChAllBuffs", false);
 		ALT_CH_ALLOW_1H_BUFFS = altSettings.getProperty("AltChAllowHourBuff", false);
@@ -1717,7 +1750,7 @@ public class Config
 		DROPCHANCE_EQUIPPED_WEAPON = pvpSettings.getProperty("ChanceOfDropWeapon", 3);
 		DROPCHANCE_EQUIPMENT = pvpSettings.getProperty("ChanceOfDropEquippment", 17);
 		DROPCHANCE_ITEM = pvpSettings.getProperty("ChanceOfDropOther", 80);
-		KARMA_LIST_NONDROPPABLE_ITEMS = new ArrayList<>();
+		KARMA_LIST_NONDROPPABLE_ITEMS = new ArrayList<Integer>();
 		for (int id : pvpSettings.getProperty("ListOfNonDroppableItems", new int[]
 		{
 			57,
@@ -1935,7 +1968,7 @@ public class Config
 	 */
 	public static void abuseLoad()
 	{
-		List<Pattern> tmp = new ArrayList<>();
+		List<Pattern> tmp = new ArrayList<Pattern>();
 		LineNumberReader lnr = null;
 		try
 		{

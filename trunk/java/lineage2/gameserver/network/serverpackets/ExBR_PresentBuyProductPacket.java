@@ -1,89 +1,53 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package lineage2.gameserver.network.serverpackets;
 
 /**
- * @author Mobius
- * @version $Revision: 1.0 $
+ * @author : Darvin
+ * @date : 26.01.12 18:13
  */
 public class ExBR_PresentBuyProductPacket extends L2GameServerPacket
 {
-	/**
-	 * Field RESULT_OK. (value is 1)
-	 */
-	public static final int RESULT_OK = 1;
-	/**
-	 * Field RESULT_NOT_ENOUGH_POINTS. (value is -1)
-	 */
-	public static final int RESULT_NOT_ENOUGH_POINTS = -1;
-	/**
-	 * Field RESULT_WRONG_PRODUCT. (value is -2)
-	 */
-	public static final int RESULT_WRONG_PRODUCT = -2;
-	/**
-	 * Field RESULT_INVENTORY_FULL. (value is -4)
-	 */
-	public static final int RESULT_INVENTORY_FULL = -4;
-	/**
-	 * Field RESULT_WRONG_ITEM. (value is -5)
-	 */
-	public static final int RESULT_WRONG_ITEM = -5;
-	/**
-	 * Field RESULT_SALE_PERIOD_ENDED. (value is -7)
-	 */
-	public static final int RESULT_SALE_PERIOD_ENDED = -7;
-	/**
-	 * Field RESULT_WRONG_USER_STATE. (value is -9)
-	 */
-	public static final int RESULT_WRONG_USER_STATE = -9;
-	/**
-	 * Field RESULT_WRONG_PACKAGE_ITEMS. (value is -10)
-	 */
-	public static final int RESULT_WRONG_PACKAGE_ITEMS = -10;
-	/**
-	 * Field RESULT_WRONG_DAY_OF_WEEK. (value is -12)
-	 */
-	public static final int RESULT_WRONG_DAY_OF_WEEK = -12;
-	/**
-	 * Field RESULT_WRONG_SALE_PERIOD. (value is -13)
-	 */
-	public static final int RESULT_WRONG_SALE_PERIOD = -13;
-	/**
-	 * Field RESULT_ITEM_WAS_SALED. (value is -14)
-	 */
-	public static final int RESULT_ITEM_WAS_SALED = -14;
-	/**
-	 * Field result.
-	 */
-	private final int result;
-	
-	/**
-	 * Constructor for ExBR_PresentBuyProductPacket.
-	 * @param result int
-	 */
+	public static final int RESULT_OK = 1; // OK
+	public static final int RESULT_NOT_ENOUGH_POINTS = -1;// Недостаточно
+	                                                      // средств для покупки
+	public static final int RESULT_WRONG_PRODUCT = -2; // Невозможно приобрести
+	                                                   // данный продукт
+	public static final int RESULT_INVENTORY_FULL = -4; // Вы не можете купить
+	                                                    // предмет, так как ваш
+	                                                    // инвентарь переполнен
+	public static final int RESULT_WRONG_ITEM = -5; // Невозможно приобрести
+	                                                // данный предмет
+	public static final int RESULT_SALE_PERIOD_ENDED = -7; // also -8 // Вы не
+	                                                       // можете купить
+	                                                       // данный предмет.
+	                                                       // Закончилось время
+	                                                       // продажи
+	public static final int RESULT_WRONG_USER_STATE = -9; // also -11 // Вы не
+	                                                      // можете сейчас
+	                                                      // приобрести этот
+	                                                      // предмет
+	public static final int RESULT_WRONG_PACKAGE_ITEMS = -10;// Вы не можете
+	                                                         // приобрести
+	                                                         // упаковку
+	                                                         // предметов
+	public static final int RESULT_WRONG_DAY_OF_WEEK = -12;// В этот день недели
+	                                                       // покупка невозможна
+	public static final int RESULT_WRONG_SALE_PERIOD = -13;// В данный период
+	                                                       // времени покупка
+	                                                       // невозможна
+	public static final int RESULT_ITEM_WAS_SALED = -14;// Предмет продан
+
+	private int result;
+
 	public ExBR_PresentBuyProductPacket(int result)
 	{
 		this.result = result;
 	}
-	
-	/**
-	 * Method writeImpl.
-	 */
+
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0x11F);
+		writeEx(0x120);
 		writeD(result);
-		writeC(0x00);
+		writeC(0x00);// (GOD) Unknown
 	}
 }

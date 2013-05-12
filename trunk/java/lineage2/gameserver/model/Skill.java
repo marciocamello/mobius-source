@@ -14,8 +14,12 @@ package lineage2.gameserver.model;
 
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.StringTokenizer;
+import java.util.Map.Entry;
 
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.geometry.Polygon;
@@ -95,6 +99,7 @@ import lineage2.gameserver.skills.skillclasses.Recall;
 import lineage2.gameserver.skills.skillclasses.ReelingPumping;
 import lineage2.gameserver.skills.skillclasses.Refill;
 import lineage2.gameserver.skills.skillclasses.Replace;
+import lineage2.gameserver.skills.skillclasses.Restoration;
 import lineage2.gameserver.skills.skillclasses.Resurrect;
 import lineage2.gameserver.skills.skillclasses.Ride;
 import lineage2.gameserver.skills.skillclasses.SPHeal;
@@ -126,6 +131,7 @@ import lineage2.gameserver.stats.funcs.Func;
 import lineage2.gameserver.stats.funcs.FuncTemplate;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.StatsSet;
+import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
 
 import org.apache.commons.lang3.math.NumberUtils;
@@ -425,7 +431,11 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		/**
 		 * Field TARGET_SUMMON_AURA.
 		 */
-		TARGET_SUMMON_AURA
+		TARGET_SUMMON_AURA,
+		/**
+		 * Field TARGET_GROUND.
+		 */
+		TARGET_GROUND
 	}
 	
 	/**
@@ -785,6 +795,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		 * Field SUMMON_ITEM.
 		 */
 		SUMMON_ITEM(SummonItem.class),
+		RESTORATION(Restoration.class), 
 		/**
 		 * Field SUMMON_MENTOR.
 		 */
@@ -828,7 +839,11 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		/**
 		 * Field VITALITY_HEAL.
 		 */
-		VITALITY_HEAL(VitalityHeal.class);
+		VITALITY_HEAL(VitalityHeal.class),
+		/**
+		 * Field SWEEP.
+		 */
+		PLUNDER(Sweep.class);
 		/**
 		 * Field clazz.
 		 */
@@ -974,6 +989,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				case DESTROY_SUMMON:
 				case STEAL_BUFF:
 				case DISCORD:
+				case PLUNDER:
 					return true;
 				default:
 					return false;
@@ -1194,6 +1210,10 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 */
 	public static final int SKILL_DUAL_CAST = 11068;
 	/**
+	 * Field _isAuraSkill.
+	 */
+	protected boolean _isAuraSkill;
+	/**
 	 * Field _isAlterSkill.
 	 */
 	protected boolean _isAlterSkill;
@@ -1210,6 +1230,10 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 */
 	protected int _scopeAngle;
 	/**
+	 * Field _maxHitCancelCount.
+	 */
+	protected int _maxHitCancelCount;
+	/**
 	 * Field _isCancelable.
 	 */
 	protected boolean _isCancelable;
@@ -1221,6 +1245,10 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 * Field _isCommon.
 	 */
 	protected boolean _isCommon;
+	/**
+	 * Field _castOverStun.
+	 */
+	protected boolean _castOverStun;
 	/**
 	 * Field _isItemHandler.
 	 */
@@ -1273,6 +1301,14 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 * Field _isReuseDelayPermanent.
 	 */
 	protected boolean _isReuseDelayPermanent;
+	/**
+	 * Field _isHealDamageSkill.
+	 */
+	protected boolean _isHealDamageSkill = false;
+	/**
+	 * Field _lakcisHealStance.
+	 */
+	protected boolean _skillHealStance = false;
 	/**
 	 * Field _isReflectable.
 	 */
@@ -1365,6 +1401,10 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 * Field _isCubicSkill.
 	 */
 	protected boolean _isCubicSkill = false;
+	/**
+	 * Field _isAwakeningToggle.
+	 */
+	protected boolean _isAwakeningToggle = false;
 	/**
 	 * Field _isSelfDispellable.
 	 */
@@ -1609,6 +1649,8 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 * Field _icon.
 	 */
 	protected String _icon;
+
+	protected boolean _isMarkDamage;
 	/**
 	 * Field _skillToCast.
 	 */
@@ -1625,6 +1667,10 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 * Field reuseGroupId.
 	 */
 	private final int reuseGroupId = -1;
+	protected boolean _isPowerModified = false;
+	private int _powerModCount;
+	private HashMap <List<String>, Double> _powerModifiers = new HashMap<List<String>, Double>();
+	private double _power2;
 	
 	/**
 	 * Constructor for Skill.
@@ -1642,10 +1688,12 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		_isNewbie = set.getBool("isNewbie", false);
 		_isSelfDispellable = set.getBool("isSelfDispellable", true);
 		_isPreservedOnDeath = set.getBool("isPreservedOnDeath", false);
+		_isAwakeningToggle = set.getBool("isAwakeningToggle", false);
 		_isHeroic = set.getBool("isHeroic", false);
 		_isAltUse = set.getBool("altUse", false);
 		_mpConsume1 = set.getInteger("mpConsume1", 0);
 		_mpConsume2 = set.getInteger("mpConsume2", 0);
+		_maxHitCancelCount = set.getInteger("maxHitCancelCount", 0);
 		_energyConsume = set.getInteger("energyConsume", 0);
 		_hpConsume = set.getInteger("hpConsume", 0);
 		_soulsConsume = set.getInteger("soulsConsume", 0);
@@ -1664,6 +1712,30 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		String s1 = set.getString("itemConsumeCount", "");
 		String s2 = set.getString("itemConsumeId", "");
 		String s3 = set.getString("relationSkillsId", "");
+		_powerModCount = set.getInteger("powerModCount",0);
+		if(!(_powerModCount == 0))
+		{
+			_isPowerModified = true;
+			for(int i = 0; i < _powerModCount; i++)
+			{
+				List <String> weaponsMod = new ArrayList<String>();
+				String sPowerMod = set.getString("powerModByWeapon"+String.valueOf(i+1),"");
+				double dPowerMod = set.getDouble("powerModPercent"+String.valueOf(i+1),1.);
+				if(sPowerMod.length() == 0)
+				{
+					weaponsMod.add("None");
+				}
+				else
+				{
+					String[] s = sPowerMod.split(";");
+					for(int j = 0; j < s.length; j++)
+					{
+						weaponsMod.add(s[j]);
+					}
+				}
+				_powerModifiers.put(weaponsMod,dPowerMod);
+			}
+		}
 		if (s1.length() == 0)
 		{
 			_itemConsume = new int[]
@@ -1715,9 +1787,11 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		}
 		_referenceItemId = set.getInteger("referenceItemId", 0);
 		_referenceItemMpConsume = set.getInteger("referenceItemMpConsume", 0);
+		_castOverStun = set.getBool("castOverStun", false);
 		_isItemHandler = set.getBool("isHandler", false);
 		_isCommon = set.getBool("isCommon", false);
-		_isAlterSkill = set.getBool("isAlterSkill", false);
+		_isAuraSkill= set.getBool("isAuraSkill", false);
+		_isAlterSkill= set.getBool("isAlterSkill", false);
 		_isSaveable = set.getBool("isSaveable", true);
 		_coolTime = set.getInteger("coolTime", 0);
 		_skillInterruptTime = set.getInteger("hitCancelTime", 0);
@@ -1734,6 +1808,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		_isUndeadOnly = set.getBool("undeadOnly", false);
 		_isCorpse = set.getBool("corpse", false);
 		_power = set.getDouble("power", 0.);
+		_power2 = set.getDouble("power2", 0.);
 		_powerPvP = set.getDouble("powerPvP", 0.);
 		_powerPvE = set.getDouble("powerPvE", 0.);
 		_effectPoint = set.getInteger("effectPoint", 0);
@@ -1765,6 +1840,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		_levelModifier = set.getInteger("levelModifier", 1);
 		_isCancelable = set.getBool("cancelable", true);
 		_isReflectable = set.getBool("reflectable", true);
+		_isHealDamageSkill = set.getBool("isHealDamageSkill", false);
 		_isShieldignore = set.getBool("shieldignore", false);
 		_criticalRate = set.getInteger("criticalRate", 0);
 		_isOverhit = set.getBool("overHit", false);
@@ -1795,6 +1871,8 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		_lethal2 = set.getDouble("lethal2", 0.);
 		_absorbPart = set.getDouble("absorbPart", 0.);
 		_icon = set.getString("icon", "");
+		_isMarkDamage = set.getBool("isMarkDamage", false);
+
 		StringTokenizer st = new StringTokenizer(set.getString("addSkills", ""), ";");
 		while (st.hasMoreTokens())
 		{
@@ -1830,7 +1908,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		}
 		else
 		{
-			_canLearn = new ArrayList<>();
+			_canLearn = new ArrayList<ClassId>();
 			st = new StringTokenizer(canLearn, " \r\n\t,;");
 			while (st.hasMoreTokens())
 			{
@@ -1845,7 +1923,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		}
 		else
 		{
-			_teachers = new ArrayList<>();
+			_teachers = new ArrayList<Integer>();
 			st = new StringTokenizer(teachers, " \r\n\t,;");
 			while (st.hasMoreTokens())
 			{
@@ -1884,6 +1962,48 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		activeChar.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(_displayId, _displayLevel));
 		return false;
 	}
+	
+
+	/**
+	 * Method getWeaponModifiedPower.
+	 * @param activeChar Creature
+	 * @return boolean
+	 */
+	public double getWeaponModifiedPower(Creature activeChar)
+	{
+		if ((activeChar.getActiveWeaponInstance() != null) && (activeChar.getActiveWeaponItem() != null))
+		{		
+			
+			for(Iterator <Entry<List<String>,Double>> i = _powerModifiers.entrySet().iterator(); i.hasNext();)
+			{
+				Map.Entry<List<String>,Double> e = i.next();
+				for(String weaponName : e.getKey())
+				{
+					if(activeChar.getActiveWeaponItem().getItemType().toString().equals(weaponName))
+					{
+						return e.getValue();
+					}
+				}
+			}
+		}
+		if ((activeChar.getSecondaryWeaponInstance() != null) && (activeChar.getSecondaryWeaponItem() != null))
+		{			
+			for(Iterator <Entry<List<String>,Double>> i = _powerModifiers.entrySet().iterator(); i.hasNext();)
+			{
+				Map.Entry<List<String>,Double> e = i.next();
+				for(String weaponName : e.getKey())
+				{
+					if(activeChar.getActiveWeaponItem().getItemType().toString().equals(weaponName))
+					{
+						return e.getValue();
+					}
+				}
+			}			
+		}
+		return 1.;		
+	}
+
+
 	
 	/**
 	 * Method checkCondition.
@@ -2083,6 +2203,14 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		{
 			return SystemMsg.INVALID_TARGET;
 		}
+		if(target.isNpc() && (!_skillHealStance && _isHealDamageSkill))
+		{
+			return null;
+		}
+		if(!target.isPlayer() && (_skillHealStance && _isHealDamageSkill))
+		{
+			return SystemMsg.INVALID_TARGET;
+		}
 		if (_isAltUse || (_targetType == SkillTargetType.TARGET_FEEDABLE_BEAST) || (_targetType == SkillTargetType.TARGET_UNLOCKABLE) || (_targetType == SkillTargetType.TARGET_CHEST))
 		{
 			return null;
@@ -2109,7 +2237,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				{
 					return null;
 				}
-				if (isOffensive())
+				if (isOffensive() ||(!_skillHealStance && _isHealDamageSkill))
 				{
 					if (player.isInOlympiadMode() && !player.isOlympiadCompStart())
 					{
@@ -2207,6 +2335,18 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				{
 					return SystemMsg.INVALID_TARGET;
 				}
+				if ((player.getParty() == null) && (_skillHealStance && _isHealDamageSkill))
+				{
+					return SystemMsg.INVALID_TARGET;
+				}
+				if ((pcTarget == player) && (_skillHealStance && _isHealDamageSkill) && ((player.getParty() != null) && (player.getParty() != pcTarget.getParty())))
+				{
+					return SystemMsg.INVALID_TARGET;
+				}
+				if ((pcTarget == player) && (_skillHealStance && _isHealDamageSkill) && ((player.getParty() != null) && (player.getParty() == pcTarget.getParty())))
+				{
+					return null;
+				}
 				if (pcTarget == player)
 				{
 					return null;
@@ -2246,7 +2386,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				return null;
 			}
 		}
-		if (isAoE() && isOffensive() && (getCastRange() < Integer.MAX_VALUE) && !GeoEngine.canSeeTarget(activeChar, target, activeChar.isFlying()))
+		if (isAoE() && isOffensive() && (!_skillHealStance && _isHealDamageSkill) && (getCastRange() < Integer.MAX_VALUE) && !GeoEngine.canSeeTarget(activeChar, target, activeChar.isFlying()))
 		{
 			return SystemMsg.CANNOT_SEE_TARGET;
 		}
@@ -2285,6 +2425,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			case TARGET_SELF:
 				return activeChar;
 			case TARGET_AURA:
+			case TARGET_GROUND:
 			case TARGET_COMMCHANNEL:
 			case TARGET_MULTIFACE_AURA:
 				return activeChar;
@@ -2398,11 +2539,11 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		List<Creature> targets;
 		if (oneTarget())
 		{
-			targets = new LazyArrayList<>(1);
+			targets = new LazyArrayList<Creature>(1);
 			targets.add(aimingTarget);
 			return targets;
 		}
-		targets = new LazyArrayList<>();
+		targets = new LazyArrayList<Creature>();
 		switch (_targetType)
 		{
 			case TARGET_EVENT:
@@ -2562,6 +2703,17 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				}
 				break;
 			}
+			case TARGET_GROUND:
+			{
+				Player player = activeChar.getPlayer();
+				if (player == null)
+				{
+					break;
+				}
+				Location loc = player.getGroundSkillLoc();
+				addTargetsToList(targets, loc, activeChar, forceUse);
+				break;
+			}
 		}
 		return targets;
 	}
@@ -2641,6 +2793,80 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		}
 	}
 	
+	/**
+	 * Method addTargetsToLakcisDamage.
+	 * @param targets List<Creature>
+	 * @param aimingTarget Creature
+	 * @param activeChar Creature
+	 * @param forceUse boolean
+	 */
+	public void addTargetsToLakcis(List<Creature> targets, Creature activeChar, boolean isHealTask)
+	{		
+		_skillHealStance = isHealTask;
+		int count = 0;
+		Polygon terr = null;
+		for (Creature target : activeChar.getAroundCharacters(_skillRadius, 300))
+		{
+			if ((terr != null) && !terr.isInside(target.getX(), target.getY(), target.getZ()))
+			{
+				continue;
+			}
+			if ((target == null) || (activeChar == target) || ((activeChar.getPlayer() != null) && (activeChar.getPlayer() == target.getPlayer())))
+			{
+				continue;
+			}
+			if (checkTarget(activeChar, target, activeChar, false, false) != null)
+			{
+				continue;
+			}
+			if (!(activeChar instanceof DecoyInstance) && activeChar.isNpc() && target.isNpc())
+			{
+				continue;
+			}
+			targets.add(target);
+			count++;
+			if (isOffensive() && (count >= 20) && !activeChar.isRaid())
+			{
+				break;
+			}
+		}
+	}
+	/**
+	 * Method addTargetsToList.
+	 * @param targets List<Creature>
+	 * @param loc Location
+	 * @param activeChar Creature
+	 * @param forceUse boolean
+	 */
+	private void addTargetsToList(List<Creature> targets, Location loc, Creature activeChar, boolean forceUse)
+	{
+		int count = 0;
+		for (Creature target : activeChar.getAroundCharacters(1600, 300))
+		{
+			if ((target == null) || (activeChar == target) || ((activeChar.getPlayer() != null) && (activeChar.getPlayer() == target.getPlayer())))
+			{
+				continue;
+			}
+			if (target.getDistance(loc) < getSkillRadius())
+			{
+				if (checkTarget(activeChar, target, target, forceUse, false) != null)
+				{
+					continue;
+				}
+				if (!(activeChar instanceof DecoyInstance) && activeChar.isNpc() && target.isNpc())
+				{
+					continue;
+				}
+				targets.add(target);
+			}
+			count++;
+			if (isOffensive() && (count >= 20) && !activeChar.isRaid())
+			{
+				break;
+			}
+		}
+	}
+
 	/**
 	 * Method getEffects.
 	 * @param effector Creature
@@ -2723,7 +2949,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 						continue;
 					}
 					Creature character = et._applyOnCaster || (et._isReflectable && skillReflected) ? effector : effected;
-					List<Creature> targets = new LazyArrayList<>(1);
+					List<Creature> targets = new LazyArrayList<Creature>(1);
 					targets.add(character);
 					if (et._applyOnSummon && character.isPlayer())
 					{
@@ -3496,6 +3722,15 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	}
 	
 	/**
+	 * Method getPower2.
+	 * @return double
+	 */
+	public final double getPower2()
+	{
+		return _power2;
+	}
+	
+	/**
 	 * Method getPowerPvP.
 	 * @return double
 	 */
@@ -3530,7 +3765,15 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	{
 		_reuseDelay = newReuseDelay;
 	}
-	
+
+	/**
+	 * Method getMaxHitCancelCount.
+	 * @return double
+	 */
+	public final int getMaxHitCancelCount()
+	{
+		return _maxHitCancelCount;
+	}
 	/**
 	 * Method getShieldIgnore.
 	 * @return boolean
@@ -3719,7 +3962,15 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	{
 		return _isItemHandler;
 	}
-	
+
+	/**
+	 * Method castOverStun.
+	 * @return boolean
+	 */
+	public final boolean isCastOverStun()
+	{
+		return _castOverStun;
+	}
 	/**
 	 * Method isMagic.
 	 * @return boolean
@@ -3763,6 +4014,15 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	public final boolean isHeroic()
 	{
 		return _isHeroic;
+	}
+	
+	/**
+	 * Method isAwakeningToggle.
+	 * @return boolean
+	 */
+	public final boolean isAwakeningToggle()
+	{
+		return _isAwakeningToggle;
 	}
 	
 	/**
@@ -4063,9 +4323,10 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 */
 	public boolean isItemSkill()
 	{
-		return _name.contains("Item Skill") || _name.contains("Talisman");
+		return _name.contains("Item Skill") || _name.contains("Talisman"); 
 	}
-	
+
+		
 	/**
 	 * Method toString.
 	 * @return String
@@ -4094,6 +4355,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			case TARGET_AREA:
 			case TARGET_AREA_AIM_CORPSE:
 			case TARGET_AURA:
+			case TARGET_GROUND:
 			case TARGET_PET_AURA:
 			case TARGET_MULTIFACE:
 			case TARGET_MULTIFACE_AURA:
@@ -4113,6 +4375,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		switch (_targetType)
 		{
 			case TARGET_AURA:
+			case TARGET_GROUND:
 			case TARGET_MULTIFACE_AURA:
 			case TARGET_ALLY:
 			case TARGET_CLAN:
@@ -4125,7 +4388,6 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				return false;
 		}
 	}
-	
 	/**
 	 * Method isAlterSkill.
 	 * @return boolean
@@ -4133,6 +4395,15 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	public boolean isAlterSkill()
 	{
 		return _isAlterSkill;
+	}
+
+	/**
+	 * Method isAuraSkill.
+	 * @return boolean
+	 */
+	public boolean isAuraSkill()
+	{
+		return _isAuraSkill;
 	}
 	
 	/**
@@ -4444,6 +4715,11 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		return _icon;
 	}
 	
+	public Boolean isMarkDamage()
+	{
+		return _isMarkDamage;
+	}
+	
 	/**
 	 * Method getEnergyConsume.
 	 * @return int
@@ -4505,5 +4781,10 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	public int getFlySpeed()
 	{
 		return _flySpeed;
+	}
+
+	public boolean isPowerModified() 
+	{		
+		return _isPowerModified;
 	}
 }

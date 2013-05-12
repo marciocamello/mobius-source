@@ -944,7 +944,7 @@ public abstract class GameObject extends EventOwner
 	{
 		return false;
 	}
-	
+
 	/**
 	 * Method isNpc.
 	 * @return boolean

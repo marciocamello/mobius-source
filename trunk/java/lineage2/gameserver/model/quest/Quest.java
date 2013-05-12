@@ -39,6 +39,7 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
+import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.entity.olympiad.OlympiadGame;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.startcondition.ICheckStartCondition;
@@ -54,6 +55,7 @@ import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.Location;
+import lineage2.gameserver.utils.ReflectionUtils;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
@@ -1513,5 +1515,36 @@ public class Quest
 			}
 		}
 		return true;
+	}
+
+	protected final void enterInstance(QuestState st, int instancedZoneId)
+	{
+		Player player = st.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		Reflection reflection = player.getActiveReflection();
+		if (reflection != null)
+		{
+			if (player.canReenterInstance(instancedZoneId))
+			{
+				player.teleToLocation(reflection.getTeleportLoc(), reflection);
+				onReenterInstance(st, reflection);
+			}
+		}
+		else if (player.canEnterInstance(instancedZoneId))
+		{
+			Reflection newReflection = ReflectionUtils.enterReflection(player, instancedZoneId);
+			onEnterInstance(st, newReflection);
+		}
+	}
+
+	public void onEnterInstance(QuestState st, Reflection reflection)
+	{
+	}
+
+	public void onReenterInstance(QuestState st, Reflection reflection)
+	{
 	}
 }

@@ -551,7 +551,7 @@ public class MultiSellHolder
 				_log.warn("MultiSell [" + multiSellId + "] Production [" + entry.getProduction().get(0).getItemId() + "] not found!");
 				return null;
 			}
-			if ((item.getReferencePrice() > entry.getIngredients().get(0).getItemCount()) && !Config.LOGIN_SERVER_IS_PVP)
+			if ((entry.getIngredients().get(0).getItemId() == 57 &&  item.getReferencePrice() > entry.getIngredients().get(0).getItemCount()) && !Config.LOGIN_SERVER_IS_PVP)
 			{
 				_log.warn("MultiSell [" + multiSellId + "] Production '" + item.getName() + "' [" + entry.getProduction().get(0).getItemId() + "] price is lower than referenced | " + item.getReferencePrice() + " > " + entry.getIngredients().get(0).getItemCount());
 			}

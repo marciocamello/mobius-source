@@ -1,20 +1,10 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package npc.model.residences.castle;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.StringTokenizer;
+
+import npc.model.residences.ResidenceManager;
 
 import lineage2.gameserver.dao.CastleDamageZoneDAO;
 import lineage2.gameserver.dao.CastleDoorUpgradeDAO;
@@ -51,8 +41,6 @@ import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.ReflectionUtils;
-import npc.model.residences.ResidenceManager;
-
 import org.napile.primitive.maps.IntObjectMap;
 
 public class ChamberlainDarkInstance extends ResidenceManager
@@ -61,12 +49,12 @@ public class ChamberlainDarkInstance extends ResidenceManager
 	 *
 	 */
 	private static final long serialVersionUID = 7889598664307011523L;
-	
+
 	public ChamberlainDarkInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
-	
+
 	@Override
 	protected void setDialogs()
 	{
@@ -74,43 +62,37 @@ public class ChamberlainDarkInstance extends ResidenceManager
 		_failDialog = "castle/chamberlain/chamberlain-notlord.htm";
 		_siegeDialog = _mainDialog;
 	}
-	
+
 	@SuppressWarnings("rawtypes")
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
-		if (!canBypassCheck(player, this))
-		{
+		if(!canBypassCheck(player, this))
 			return;
-		}
-		
+
 		int condition = getCond(player);
-		if (condition != COND_OWNER)
-		{
+		if(condition != COND_OWNER)
 			return;
-		}
-		
+
 		StringTokenizer st = new StringTokenizer(command, " ");
 		String actualCommand = st.nextToken();
 		String val = "";
-		if (st.countTokens() >= 1)
-		{
+		if(st.countTokens() >= 1)
 			val = st.nextToken();
-		}
-		
+
 		Castle castle = getCastle();
-		if (actualCommand.equalsIgnoreCase("viewSiegeInfo"))
+		if(actualCommand.equalsIgnoreCase("viewSiegeInfo"))
 		{
-			if (!isHaveRigths(player, Clan.CP_CS_MANAGE_SIEGE))
+			if(!isHaveRigths(player, Clan.CP_CS_MANAGE_SIEGE))
 			{
 				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 				return;
 			}
 			player.sendPacket(new CastleSiegeInfo(castle, player));
 		}
-		else if (actualCommand.equalsIgnoreCase("ManageTreasure"))
+		else if(actualCommand.equalsIgnoreCase("ManageTreasure"))
 		{
-			if (!player.isClanLeader())
+			if(!player.isClanLeader())
 			{
 				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 				return;
@@ -122,17 +104,17 @@ public class ChamberlainDarkInstance extends ResidenceManager
 			html.replace("%CollectedSeed%", String.valueOf(castle.getCollectedSeed()));
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("TakeTreasure"))
+		else if(actualCommand.equalsIgnoreCase("TakeTreasure"))
 		{
-			if (!player.isClanLeader())
+			if(!player.isClanLeader())
 			{
 				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 				return;
 			}
-			if (!val.equals(""))
+			if(!val.equals(""))
 			{
 				long treasure = Long.parseLong(val);
-				if (castle.getTreasury() < treasure)
+				if(castle.getTreasury() < treasure)
 				{
 					NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 					html.setFile("castle/chamberlain/chamberlain-havenottreasure.htm");
@@ -141,14 +123,14 @@ public class ChamberlainDarkInstance extends ResidenceManager
 					player.sendPacket(html);
 					return;
 				}
-				if (treasure > 0)
+				if(treasure > 0)
 				{
 					castle.addToTreasuryNoTax(-treasure, false, false);
 					Log.add(castle.getName() + "|" + -treasure + "|CastleChamberlain", "treasury");
 					player.addAdena(treasure);
 				}
 			}
-			
+
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("castle/chamberlain/chamberlain-castlevault.htm");
 			html.replace("%Treasure%", String.valueOf(castle.getTreasury()));
@@ -156,24 +138,24 @@ public class ChamberlainDarkInstance extends ResidenceManager
 			html.replace("%CollectedSeed%", String.valueOf(castle.getCollectedSeed()));
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("PutTreasure"))
+		else if(actualCommand.equalsIgnoreCase("PutTreasure"))
 		{
-			if (!val.equals(""))
+			if(!val.equals(""))
 			{
 				long treasure = Long.parseLong(val);
-				if (treasure > player.getAdena())
+				if(treasure > player.getAdena())
 				{
 					player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 					return;
 				}
-				if (treasure > 0)
+				if(treasure > 0)
 				{
 					castle.addToTreasuryNoTax(treasure, false, false);
 					Log.add(castle.getName() + "|" + treasure + "|CastleChamberlain", "treasury");
 					player.reduceAdena(treasure, true);
 				}
 			}
-			
+
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("castle/chamberlain/chamberlain-castlevault.htm");
 			html.replace("%Treasure%", String.valueOf(castle.getTreasury()));
@@ -181,22 +163,20 @@ public class ChamberlainDarkInstance extends ResidenceManager
 			html.replace("%CollectedSeed%", String.valueOf(castle.getCollectedSeed()));
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("manor"))
+		else if(actualCommand.equalsIgnoreCase("manor"))
 		{
-			if (!isHaveRigths(player, Clan.CP_CS_MANOR_ADMIN))
+			if(!isHaveRigths(player, Clan.CP_CS_MANOR_ADMIN))
 			{
 				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 				return;
 			}
 			String filename = "";
-			if (CastleManorManager.getInstance().isDisabled())
-			{
+			if(CastleManorManager.getInstance().isDisabled())
 				filename = "npcdefault.htm";
-			}
 			else
 			{
 				int cmd = Integer.parseInt(val);
-				switch (cmd)
+				switch(cmd)
 				{
 					case 0:
 						filename = "castle/chamberlain/manor/manor.htm";
@@ -210,140 +190,116 @@ public class ChamberlainDarkInstance extends ResidenceManager
 						break;
 				}
 			}
-			
-			if (filename.length() > 0)
+
+			if(filename.length() > 0)
 			{
 				NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 				html.setFile(filename);
 				player.sendPacket(html);
 			}
 		}
-		else if (actualCommand.startsWith("manor_menu_select"))
+		else if(actualCommand.startsWith("manor_menu_select"))
 		{
-			if (!isHaveRigths(player, Clan.CP_CS_MANOR_ADMIN))
+			if(!isHaveRigths(player, Clan.CP_CS_MANOR_ADMIN))
 			{
 				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 				return;
 			}
 			// input string format:
 			// manor_menu_select?ask=X&state=Y&time=X
-			if (CastleManorManager.getInstance().isUnderMaintenance())
+			if(CastleManorManager.getInstance().isUnderMaintenance())
 			{
 				player.sendPacket(SystemMsg.THE_MANOR_SYSTEM_IS_CURRENTLY_UNDER_MAINTENANCE);
 				player.sendActionFailed();
 				return;
 			}
-			
+
 			String params = actualCommand.substring(actualCommand.indexOf("?") + 1);
 			StringTokenizer str = new StringTokenizer(params, "&");
 			int ask = Integer.parseInt(str.nextToken().split("=")[1]);
 			int state = Integer.parseInt(str.nextToken().split("=")[1]);
 			int time = Integer.parseInt(str.nextToken().split("=")[1]);
-			
+
 			int castleId;
-			if (state == -1)
-			{
+			if(state == -1) // info for current manor
 				castleId = castle.getId();
-			}
 			else
-			{
 				// info for requested manor
 				castleId = state;
-			}
-			
-			switch (ask)
+
+			switch(ask)
 			{ // Main action
 				case 3: // Current seeds (Manor info)
-					if ((time == 1) && !ResidenceHolder.getInstance().getResidence(Castle.class, castleId).isNextPeriodApproved())
-					{
+					if(time == 1 && !ResidenceHolder.getInstance().getResidence(Castle.class, castleId).isNextPeriodApproved())
 						player.sendPacket(new ExShowSeedInfo(castleId, Collections.<SeedProduction> emptyList()));
-					}
 					else
-					{
 						player.sendPacket(new ExShowSeedInfo(castleId, ResidenceHolder.getInstance().getResidence(Castle.class, castleId).getSeedProduction(time)));
-					}
 					break;
 				case 4: // Current crops (Manor info)
-					if ((time == 1) && !ResidenceHolder.getInstance().getResidence(Castle.class, castleId).isNextPeriodApproved())
-					{
+					if(time == 1 && !ResidenceHolder.getInstance().getResidence(Castle.class, castleId).isNextPeriodApproved())
 						player.sendPacket(new ExShowCropInfo(castleId, Collections.<CropProcure> emptyList()));
-					}
 					else
-					{
 						player.sendPacket(new ExShowCropInfo(castleId, ResidenceHolder.getInstance().getResidence(Castle.class, castleId).getCropProcure(time)));
-					}
 					break;
 				case 5: // Basic info (Manor info)
 					player.sendPacket(new ExShowManorDefaultInfo());
 					break;
 				case 7: // Edit seed setup
-					if (castle.isNextPeriodApproved())
-					{
+					if(castle.isNextPeriodApproved())
 						player.sendPacket(SystemMsg.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_430_AM_AND_8_PM);
-					}
 					else
-					{
 						player.sendPacket(new ExShowSeedSetting(castle.getId()));
-					}
 					break;
 				case 8: // Edit crop setup
-					if (castle.isNextPeriodApproved())
-					{
+					if(castle.isNextPeriodApproved())
 						player.sendPacket(SystemMsg.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_430_AM_AND_8_PM);
-					}
 					else
-					{
 						player.sendPacket(new ExShowCropSetting(castle.getId()));
-					}
 					break;
 			}
 		}
-		else if (actualCommand.equalsIgnoreCase("operate_door")) // door control
+		else if(actualCommand.equalsIgnoreCase("operate_door")) // door control
 		{
-			if (!isHaveRigths(player, Clan.CP_CS_ENTRY_EXIT))
+			if(!isHaveRigths(player, Clan.CP_CS_ENTRY_EXIT))
 			{
 				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 				return;
 			}
-			if (castle.getSiegeEvent().isInProgress() || castle.getDominion().getSiegeEvent().isInProgress())
+			if(castle.getSiegeEvent().isInProgress() || castle.getDominion().getSiegeEvent().isInProgress())
 			{
 				showChatWindow(player, "residence2/castle/chamberlain_saius021.htm");
 				return;
 			}
-			if (!val.equals(""))
+			if(!val.equals(""))
 			{
 				boolean open = Integer.parseInt(val) == 1;
-				while (st.hasMoreTokens())
+				while(st.hasMoreTokens())
 				{
 					DoorInstance door = ReflectionUtils.getDoor(Integer.parseInt(st.nextToken()));
-					if (open)
-					{
+					if(open)
 						door.openMe(player, true);
-					}
 					else
-					{
 						door.closeMe(player, true);
-					}
 				}
 			}
-			
+
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("castle/chamberlain/" + getTemplate().npcId + "-d.htm");
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("tax_set")) // tax rates control
+		else if(actualCommand.equalsIgnoreCase("tax_set")) // tax rates control
 		{
-			if (!isHaveRigths(player, Clan.CP_CS_TAXES))
+			if(!isHaveRigths(player, Clan.CP_CS_TAXES))
 			{
 				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 				return;
 			}
-			if (!val.equals(""))
+			if(!val.equals(""))
 			{
 				// По умолчанию налог не более 15%
 				int maxTax = 15;
 				int tax = Integer.parseInt(val);
-				if ((tax < 0) || (tax > maxTax))
+				if(tax < 0 || tax > maxTax)
 				{
 					NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 					html.setFile("castle/chamberlain/chamberlain-hightax.htm");
@@ -353,101 +309,91 @@ public class ChamberlainDarkInstance extends ResidenceManager
 				}
 				castle.setTaxPercent(player, tax);
 			}
-			
+
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("castle/chamberlain/chamberlain-settax.htm");
 			html.replace("%CurrentTax%", String.valueOf(castle.getTaxPercent()));
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("upgrade_castle"))
+		else if(actualCommand.equalsIgnoreCase("upgrade_castle"))
 		{
-			if (!checkSiegeFunctions(player))
-			{
+			if(!checkSiegeFunctions(player))
 				return;
-			}
-			
+
 			showChatWindow(player, "castle/chamberlain/chamberlain-upgrades.htm");
 		}
-		else if (actualCommand.equalsIgnoreCase("reinforce"))
+		else if(actualCommand.equalsIgnoreCase("reinforce"))
 		{
-			if (!checkSiegeFunctions(player))
-			{
+			if(!checkSiegeFunctions(player))
 				return;
-			}
-			
+
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("castle/chamberlain/doorStrengthen-" + castle.getName() + ".htm");
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("trap_select"))
+		else if(actualCommand.equalsIgnoreCase("trap_select"))
 		{
-			if (!checkSiegeFunctions(player))
-			{
+			if(!checkSiegeFunctions(player))
 				return;
-			}
-			
+
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("castle/chamberlain/trap_select-" + castle.getName() + ".htm");
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("buy_trap"))
+		else if(actualCommand.equalsIgnoreCase("buy_trap"))
 		{
-			if (!checkSiegeFunctions(player))
-			{
+			if(!checkSiegeFunctions(player))
 				return;
-			}
-			
-			if (castle.getSiegeEvent().getObjects(CastleSiegeEvent.BOUGHT_ZONES).contains(val))
+
+			if(castle.getSiegeEvent().getObjects(CastleSiegeEvent.BOUGHT_ZONES).contains(val))
 			{
 				NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 				html.setFile("castle/chamberlain/trapAlready.htm");
 				player.sendPacket(html);
 				return;
 			}
-			
+
 			List<CastleDamageZoneObject> objects = castle.getSiegeEvent().getObjects(val);
 			long price = 0;
-			for (CastleDamageZoneObject o : objects)
-			{
+			for(CastleDamageZoneObject o : objects)
 				price += o.getPrice();
-			}
-			
-			if (player.getClan().getAdenaCount() < price)
+
+			if(player.getClan().getAdenaCount() < price)
 			{
 				player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 				return;
 			}
-			
+
 			player.getClan().getWarehouse().destroyItemByItemId(ItemTemplate.ITEM_ID_ADENA, price);
 			castle.getSiegeEvent().addObject(CastleSiegeEvent.BOUGHT_ZONES, val);
 			CastleDamageZoneDAO.getInstance().insert(castle, val);
-			
+
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("castle/chamberlain/trapSuccess.htm");
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("door_manage"))
+		else if(actualCommand.equalsIgnoreCase("door_manage"))
 		{
-			if (!isHaveRigths(player, Clan.CP_CS_ENTRY_EXIT))
+			if(!isHaveRigths(player, Clan.CP_CS_ENTRY_EXIT))
 			{
 				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 				return;
 			}
-			if (castle.getSiegeEvent().isInProgress() || castle.getDominion().getSiegeEvent().isInProgress())
+			if(castle.getSiegeEvent().isInProgress() || castle.getDominion().getSiegeEvent().isInProgress())
 			{
 				showChatWindow(player, "residence2/castle/chamberlain_saius021.htm");
 				return;
 			}
-			
+
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("castle/chamberlain/doorManage.htm");
 			html.replace("%id%", val);
 			html.replace("%type%", st.nextToken());
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("upgrade_door_confirm"))
+		else if(actualCommand.equalsIgnoreCase("upgrade_door_confirm"))
 		{
-			if (!isHaveRigths(player, Clan.CP_CS_MANAGE_SIEGE))
+			if(!isHaveRigths(player, Clan.CP_CS_MANAGE_SIEGE))
 			{
 				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 				return;
@@ -456,7 +402,7 @@ public class ChamberlainDarkInstance extends ResidenceManager
 			int type = Integer.parseInt(st.nextToken());
 			int level = Integer.parseInt(st.nextToken());
 			long price = getDoorCost(type, level);
-			
+
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("castle/chamberlain/doorConfirm.htm");
 			html.replace("%id%", String.valueOf(id));
@@ -465,67 +411,63 @@ public class ChamberlainDarkInstance extends ResidenceManager
 			html.replace("%price%", String.valueOf(price));
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("upgrade_door"))
+		else if(actualCommand.equalsIgnoreCase("upgrade_door"))
 		{
-			if (checkSiegeFunctions(player))
-			{
+			if(checkSiegeFunctions(player))
 				return;
-			}
-			
+
 			int id = Integer.parseInt(val);
 			int type = Integer.parseInt(st.nextToken());
 			int level = Integer.parseInt(st.nextToken());
 			long price = getDoorCost(type, level);
-			
+
 			List<DoorObject> doorObjects = castle.getSiegeEvent().getObjects(SiegeEvent.DOORS);
 			DoorObject targetDoorObject = null;
-			for (DoorObject o : doorObjects)
-			{
-				if (o.getUId() == id)
+			for(DoorObject o : doorObjects)
+				if(o.getUId() == id)
 				{
 					targetDoorObject = o;
 					break;
 				}
-			}
-			
+
 			DoorInstance door = targetDoorObject.getDoor();
-			int upgradeHp = ((door.getMaxHp() - door.getUpgradeHp()) * level) - door.getMaxHp();
-			
-			if ((price == 0) || (upgradeHp < 0))
+			int upgradeHp = (door.getMaxHp() - door.getUpgradeHp()) * level - door.getMaxHp();
+
+			if(price == 0 || upgradeHp < 0)
 			{
 				player.sendMessage(new CustomMessage("common.Error", player));
 				return;
 			}
-			
-			if (door.getUpgradeHp() >= upgradeHp)
+
+			if(door.getUpgradeHp() >= upgradeHp)
 			{
-				int oldLevel = (door.getUpgradeHp() / (door.getMaxHp() - door.getUpgradeHp())) + 1;
+				int oldLevel = door.getUpgradeHp() / (door.getMaxHp() - door.getUpgradeHp()) + 1;
 				NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 				html.setFile("castle/chamberlain/doorAlready.htm");
 				html.replace("%level%", String.valueOf(oldLevel));
 				player.sendPacket(html);
 				return;
 			}
-			
-			if (player.getClan().getAdenaCount() < price)
+
+			if(player.getClan().getAdenaCount() < price)
 			{
 				player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 				return;
 			}
-			
+
 			player.getClan().getWarehouse().destroyItemByItemId(ItemTemplate.ITEM_ID_ADENA, price);
-			
+
 			targetDoorObject.setUpgradeValue(castle.<SiegeEvent<?, ?>> getSiegeEvent(), upgradeHp);
 			CastleDoorUpgradeDAO.getInstance().insert(door.getDoorId(), upgradeHp);
 		}
-		else if (actualCommand.equalsIgnoreCase("report")) // Report page
+		else if(actualCommand.equalsIgnoreCase("report")) // Report page
 		{
-			if (!isHaveRigths(player, Clan.CP_CS_USE_FUNCTIONS))
+			if(!isHaveRigths(player, Clan.CP_CS_USE_FUNCTIONS))
 			{
 				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 				return;
 			}
-			
+
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("castle/chamberlain/chamberlain-report.htm");
 			html.replaceNpcString("%FeudName%", castle.getNpcStringName());
@@ -533,16 +475,16 @@ public class ChamberlainDarkInstance extends ResidenceManager
 			html.replace("%CharName%", player.getName());
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("fortressStatus"))
+		else if(actualCommand.equalsIgnoreCase("fortressStatus"))
 		{
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("castle/chamberlain/chamberlain-fortress-status.htm");
 			StringBuilder b = new StringBuilder(100);
-			
-			for (IntObjectMap.Entry<List> entry : castle.getRelatedFortresses().entrySet())
+
+			for(IntObjectMap.Entry<List> entry : castle.getRelatedFortresses().entrySet())
 			{
 				NpcString type;
-				switch (entry.getKey())
+				switch(entry.getKey())
 				{
 					case Fortress.DOMAIN:
 						type = NpcString.DOMAIN_FORTRESS;
@@ -555,12 +497,12 @@ public class ChamberlainDarkInstance extends ResidenceManager
 				}
 				@SuppressWarnings("unchecked")
 				List<Fortress> fortresses = entry.getValue();
-				for (Fortress fort : fortresses)
+				for(Fortress fort : fortresses)
 				{
 					b.append(HtmlUtils.htmlResidenceName(fort.getId())).append(" (").append(HtmlUtils.htmlNpcString(type)).append(") : <font color=\"00FFFF\">");
-					
+
 					NpcString contractType;
-					switch (fort.getContractState())
+					switch(fort.getContractState())
 					{
 						case Fortress.NOT_DECIDED:
 							contractType = NpcString.NONPARTISAN;
@@ -580,17 +522,17 @@ public class ChamberlainDarkInstance extends ResidenceManager
 			html.replace("%list%", b.toString());
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("Crown")) // Give Crown to Castle Owner
+		else if(actualCommand.equalsIgnoreCase("Crown")) // Give Crown to Castle Owner
 		{
-			if (!player.isClanLeader())
+			if(!player.isClanLeader())
 			{
 				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 				return;
 			}
-			if (player.getInventory().getItemByItemId(6841) == null)
+			if(player.getInventory().getItemByItemId(6841) == null)
 			{
 				player.getInventory().addItem(ItemFunctions.createItem(6841));
-				
+
 				NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 				html.setFile("castle/chamberlain/chamberlain-givecrown.htm");
 				html.replace("%CharName%", player.getName());
@@ -604,104 +546,78 @@ public class ChamberlainDarkInstance extends ResidenceManager
 				player.sendPacket(html);
 			}
 		}
-		else if (actualCommand.equalsIgnoreCase("viewTerritoryWarInfo"))
-		{
+		else if(actualCommand.equalsIgnoreCase("viewTerritoryWarInfo"))
 			player.sendPacket(new ExShowDominionRegistry(player, castle.getDominion()));
-		}
-		else if (actualCommand.equalsIgnoreCase("manageFunctions"))
+		else if(actualCommand.equalsIgnoreCase("manageFunctions"))
 		{
-			if (!player.hasPrivilege(Privilege.CS_FS_SET_FUNCTIONS))
-			{
+			if(!player.hasPrivilege(Privilege.CS_FS_SET_FUNCTIONS))
 				showChatWindow(player, "residence2/castle/chamberlain_saius063.htm");
-			}
 			else
-			{
 				showChatWindow(player, "residence2/castle/chamberlain_saius065.htm");
-			}
 		}
-		else if (actualCommand.equalsIgnoreCase("manageSiegeFunctions"))
+		else if(actualCommand.equalsIgnoreCase("manageSiegeFunctions"))
 		{
-			if (!player.hasPrivilege(Privilege.CS_FS_SET_FUNCTIONS))
-			{
+			if(!player.hasPrivilege(Privilege.CS_FS_SET_FUNCTIONS))
 				showChatWindow(player, "residence2/castle/chamberlain_saius063.htm");
-			}
-			else if (castle.getDomainFortressContract() == 0)
-			{
+			else if(castle.getDomainFortressContract() == 0)
 				showChatWindow(player, "residence2/castle/chamberlain_saius069.htm");
-			}
 			else
-			{
 				showChatWindow(player, "residence2/castle/chamberlain_saius052.htm");
-			}
 		}
-		else if (actualCommand.equalsIgnoreCase("items"))
+		else if(actualCommand.equalsIgnoreCase("items"))
 		{
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("residence2/castle/chamberlain_saius064.htm");
 			html.replace("%npcId%", String.valueOf(getNpcId()));
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("default"))
+		else if(actualCommand.equalsIgnoreCase("default"))
 		{
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("castle/chamberlain/chamberlain.htm");
 			player.sendPacket(html);
 		}
 		else
-		{
 			super.onBypassFeedback(player, command);
-		}
 	}
-	
+
 	@Override
 	protected int getCond(Player player)
 	{
-		if (player.isGM())
-		{
+		if(player.isGM())
 			return COND_OWNER;
-		}
 		Residence castle = getCastle();
-		if ((castle != null) && (castle.getId() > 0))
-		{
-			if (player.getClan() != null)
-			{
-				if (castle.getSiegeEvent().isInProgress())
-				{
+		if(castle != null && castle.getId() > 0)
+			if(player.getClan() != null)
+				if(castle.getSiegeEvent().isInProgress())
 					return COND_SIEGE; // Busy because of siege
-				}
-				else if (castle.getOwnerId() == player.getClanId())
+				else if(castle.getOwnerId() == player.getClanId())
 				{
-					if (player.isClanLeader())
-					{
+					if(player.isClanLeader()) // Leader of clan
 						return COND_OWNER;
-					}
-					if (isHaveRigths(player, Clan.CP_CS_ENTRY_EXIT) || // doors
+					if(isHaveRigths(player, Clan.CP_CS_ENTRY_EXIT) || // doors
 					isHaveRigths(player, Clan.CP_CS_MANOR_ADMIN) || // manor
 					isHaveRigths(player, Clan.CP_CS_MANAGE_SIEGE) || // siege
 					isHaveRigths(player, Clan.CP_CS_USE_FUNCTIONS) || // funcs
 					isHaveRigths(player, Clan.CP_CS_DISMISS) || // banish
 					isHaveRigths(player, Clan.CP_CS_TAXES) || // tax
 					isHaveRigths(player, Clan.CP_CS_MERCENARIES) || // merc
-					isHaveRigths(player, Clan.CP_CS_SET_FUNCTIONS) // funcs
+					isHaveRigths(player, Clan.CP_CS_SET_FUNCTIONS) //funcs
 					)
-					{
 						return COND_OWNER;
-					}
 				}
-			}
-		}
-		
+
 		return COND_FAIL;
 	}
-	
+
 	private long getDoorCost(int type, int level)
 	{
 		int price = 0;
-		
-		switch (type)
+
+		switch(type)
 		{
 			case 1: // Главные ворота
-				switch (level)
+				switch(level)
 				{
 					case 2:
 						price = 3000000;
@@ -715,7 +631,7 @@ public class ChamberlainDarkInstance extends ResidenceManager
 				}
 				break;
 			case 2: // Внутренние ворота
-				switch (level)
+				switch(level)
 				{
 					case 2:
 						price = 750000;
@@ -729,7 +645,7 @@ public class ChamberlainDarkInstance extends ResidenceManager
 				}
 				break;
 			case 3: // Стены
-				switch (level)
+				switch(level)
 				{
 					case 2:
 						price = 1600000;
@@ -743,56 +659,56 @@ public class ChamberlainDarkInstance extends ResidenceManager
 				}
 				break;
 		}
-		
+
 		return price;
 	}
-	
+
 	@Override
 	protected Residence getResidence()
 	{
 		return getCastle();
 	}
-	
+
 	@Override
 	public L2GameServerPacket decoPacket()
 	{
 		return null;
 	}
-	
+
 	@Override
 	protected int getPrivUseFunctions()
 	{
 		return Clan.CP_CS_USE_FUNCTIONS;
 	}
-	
+
 	@Override
 	protected int getPrivSetFunctions()
 	{
 		return Clan.CP_CS_SET_FUNCTIONS;
 	}
-	
+
 	@Override
 	protected int getPrivDismiss()
 	{
 		return Clan.CP_CS_DISMISS;
 	}
-	
+
 	@Override
 	protected int getPrivDoors()
 	{
 		return Clan.CP_CS_ENTRY_EXIT;
 	}
-	
+
 	private boolean checkSiegeFunctions(Player player)
 	{
 		Castle castle = getCastle();
-		if (!player.hasPrivilege(Privilege.CS_FS_SIEGE_WAR))
+		if(!player.hasPrivilege(Privilege.CS_FS_SIEGE_WAR))
 		{
 			player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			return false;
 		}
-		
-		if (castle.getSiegeEvent().isInProgress() || castle.getDominion().getSiegeEvent().isInProgress())
+
+		if(castle.getSiegeEvent().isInProgress() || castle.getDominion().getSiegeEvent().isInProgress())
 		{
 			showChatWindow(player, "residence2/castle/chamberlain_saius021.htm");
 			return false;

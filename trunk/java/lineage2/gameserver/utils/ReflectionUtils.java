@@ -17,6 +17,9 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import lineage2.gameserver.data.xml.holder.InstantZoneHolder;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.CommandChannel;
@@ -25,6 +28,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.DoorInstance;
+import lineage2.gameserver.network.GamePacketHandler;
 import lineage2.gameserver.templates.InstantZone;
 
 /**
@@ -33,6 +37,10 @@ import lineage2.gameserver.templates.InstantZone;
  */
 public class ReflectionUtils
 {
+	/**
+	 * Field _log.
+	 */
+	private static final Logger _log = LoggerFactory.getLogger(GamePacketHandler.class);
 	/**
 	 * Method getDoor.
 	 * @param id int
@@ -111,6 +119,8 @@ public class ReflectionUtils
 	public static Reflection enterReflection(Player invoker, Reflection r, InstantZone iz)
 	{
 		r.init(iz);
+		
+		_log.info("Player: " + invoker.getName() + " started instance "+ r.getName() +" id:" + r.getId());
 		if (r.getReturnLoc() == null)
 		{
 			r.setReturnLoc(invoker.getLoc());

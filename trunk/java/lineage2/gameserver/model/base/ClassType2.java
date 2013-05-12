@@ -35,6 +35,10 @@ public enum ClassType2
 	 */
 	Rogue(10283, 10290),
 	/**
+	 * Field Rogue.
+	 */
+	Archer(10283, 10290),
+	/**
 	 * Field Healer.
 	 */
 	Healer(10285, 10291),

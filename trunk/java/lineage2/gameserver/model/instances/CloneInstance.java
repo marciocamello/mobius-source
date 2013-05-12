@@ -194,6 +194,16 @@ public class CloneInstance extends ClonePlayer
 	{
 		return true;
 	}
+
+	/**
+	 * Method isServitor.
+	 * @return boolean
+	 */
+	@Override
+	public boolean isClone()
+	{
+		return true;
+	}
 	
 	/**
 	 * Method onAction.
@@ -248,7 +258,7 @@ public class CloneInstance extends ClonePlayer
 			player.sendPacket(msg);
 		}
 	}
-	
+
 	/**
 	 * Method getDEX.
 	 * @return int
@@ -330,7 +340,7 @@ public class CloneInstance extends ClonePlayer
 	{
 		return _owner.getWIT();
 	}
-	
+
 	/**
 	 * Method getMAtk.
 	 * @param target Creature
@@ -394,7 +404,7 @@ public class CloneInstance extends ClonePlayer
 	{
 		return _owner.getMDef(target, skill);
 	}
-	
+
 	/**
 	 * Method getMovementSpeedMultiplier.
 	 * @return double
@@ -456,7 +466,7 @@ public class CloneInstance extends ClonePlayer
 	{
 		return _owner.getSwimWalkSpeed();
 	}
-	
+
 	@Override
 	public int getPAtk(Creature target)
 	{
@@ -483,5 +493,5 @@ public class CloneInstance extends ClonePlayer
 	{
 		return _owner.getPDef(target);
 	}
-	
+
 }

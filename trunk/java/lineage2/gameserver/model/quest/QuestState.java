@@ -917,7 +917,7 @@ public final class QuestState
 		_state = state;
 		if (getQuest().isVisible(player) && isStarted())
 		{
-			player.sendPacket(new ExShowQuestMark(getQuest().getQuestIntId()));
+			player.sendPacket(new ExShowQuestMark(getQuest().getQuestIntId(), getCond()));
 		}
 		Quest.updateQuestInDb(this);
 		player.sendPacket(new QuestList(player));
@@ -939,7 +939,7 @@ public final class QuestState
 		_state = state;
 		if (getQuest().isVisible(player) && isStarted())
 		{
-			player.sendPacket(new ExShowQuestMark(getQuest().getQuestIntId()));
+			player.sendPacket(new ExShowQuestMark(getQuest().getQuestIntId(), getCond()));
 		}
 		player.sendPacket(new QuestList(player));
 		return state;
@@ -1016,7 +1016,7 @@ public final class QuestState
 		}
 		player.sendPacket(new TutorialShowHtml(text, type));
 	}
-	
+
 	/**
 	 * Method startQuestTimer.
 	 * @param name String
@@ -1466,8 +1466,9 @@ public final class QuestState
 			player.sendPacket(new QuestList(player));
 			if ((newCond != 0) && getQuest().isVisible(player) && isStarted())
 			{
-				player.sendPacket(new ExShowQuestMark(getQuest().getQuestIntId()));
+				player.sendPacket(new ExShowQuestMark(getQuest().getQuestIntId(), getCond()));
 			}
+			player.sendPacket(new QuestList(player));
 		}
 		return result;
 	}
@@ -1500,5 +1501,30 @@ public final class QuestState
 		}
 		long restartTime = Long.parseLong(val);
 		return restartTime <= System.currentTimeMillis();
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public boolean isNowAvailable()
+	{
+		String val = get("restartTime");
+		if(val == null)
+		{
+			return true;
+		}
+
+		long restartTime = Long.parseLong(val);
+
+		return restartTime <= System.currentTimeMillis();
+	}
+
+	/**
+	 */
+	public void startQuest()
+	{
+		setState(2);    // STARTED
+		setCond(1);
+		playSound("ItemSound.quest_accept");
 	}
 }

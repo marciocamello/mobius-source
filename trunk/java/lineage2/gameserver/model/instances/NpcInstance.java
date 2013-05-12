@@ -28,7 +28,6 @@ import java.util.concurrent.ScheduledFuture;
 
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.lang.reference.HardReference;
-import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.ai.CharacterAI;
@@ -1042,41 +1041,9 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 */
-	public class BroadcastCharInfoTask extends RunnableImpl
-	{
-		/**
-		 * Method runImpl.
-		 */
-		@Override
-		public void runImpl()
-		{
-			broadcastCharInfoImpl();
-			_broadcastCharInfoTask = null;
-		}
-	}
-	
-	/**
 	 * Method broadcastCharInfo.
 	 */
-	@Override
 	public void broadcastCharInfo()
-	{
-		if (!isVisible())
-		{
-			return;
-		}
-		if (_broadcastCharInfoTask != null)
-		{
-			return;
-		}
-		_broadcastCharInfoTask = ThreadPoolManager.getInstance().schedule(new BroadcastCharInfoTask(), Config.BROADCAST_CHAR_INFO_INTERVAL);
-	}
-	
-	/**
-	 * Method broadcastCharInfoImpl.
-	 */
-	public void broadcastCharInfoImpl()
 	{
 		for (Player player : World.getAroundPlayers(this))
 		{
@@ -1536,10 +1503,6 @@ public class NpcInstance extends Creature
 			{
 				showTransformationSkillList(player, AcquireType.TRANSFORMATION);
 			}
-			else if (command.equalsIgnoreCase("CertificationSkillList"))
-			{
-				showTransformationSkillList(player, AcquireType.CERTIFICATION);
-			}
 			else if (command.equalsIgnoreCase("CollectionSkillList"))
 			{
 				showCollectionSkillList(player);
@@ -1606,7 +1569,7 @@ public class NpcInstance extends Creature
 			}
 			else if (command.equalsIgnoreCase("CertificationCancel"))
 			{
-				CertificationFunctions.cancelCertification(this, player);
+				CertificationFunctions.cancelCertification(this, player, false, false);
 			}
 			else if (command.startsWith("RemoveTransferSkill"))
 			{
@@ -1845,7 +1808,7 @@ public class NpcInstance extends Creature
 	 */
 	public void showQuestWindow(Player player)
 	{
-		Map<Integer, QuestInfo> options = new HashMap<>();
+		Map<Integer, QuestInfo> options = new HashMap<Integer, QuestInfo>();
 		Quest[] starts = getTemplate().getEventQuests(QuestEventType.QUEST_START);
 		List<QuestState> awaits = player.getQuestsForEvent(this, QuestEventType.QUEST_TALK, true);
 		if (starts != null)
@@ -1870,7 +1833,7 @@ public class NpcInstance extends Creature
 		}
 		if (options.size() > 1)
 		{
-			List<QuestInfo> l = new ArrayList<>();
+			List<QuestInfo> l = new ArrayList<QuestInfo>();
 			l.addAll(options.values());
 			Collections.sort(l);
 			showQuestChooseWindow(player, l);
@@ -2293,7 +2256,7 @@ public class NpcInstance extends Creature
 			player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			return;
 		}
-		Set<SkillLearn> learns = new TreeSet<>();
+		Set<SkillLearn> learns = new TreeSet<SkillLearn>();
 		for (SubUnit sub : player.getClan().getAllSubUnits())
 		{
 			learns.addAll(SkillAcquireHolder.getInstance().getAvailableSkills(player, AcquireType.SUB_UNIT, sub));
@@ -2556,7 +2519,7 @@ public class NpcInstance extends Creature
 	@Override
 	public List<L2GameServerPacket> addPacketList(Player forPlayer, Creature dropper)
 	{
-		List<L2GameServerPacket> list = new ArrayList<>(3);
+		List<L2GameServerPacket> list = new ArrayList<L2GameServerPacket>(3);
 		list.add(new NpcInfo(this, forPlayer));
 		if (isInCombat())
 		{
@@ -2723,7 +2686,7 @@ public class NpcInstance extends Creature
 		}
 		if (_parameters == StatsSet.EMPTY)
 		{
-			_parameters = new MultiValueSet<>(set.size());
+			_parameters = new MultiValueSet<String>(set.size());
 		}
 		_parameters.putAll(set);
 	}

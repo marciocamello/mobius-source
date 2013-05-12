@@ -85,18 +85,30 @@
 		<set name="relationSkillsId" val="1028;"/>
 		<enchant1 levels="10" name="Cost">
 			<table name="#mpConsume2">108 101 95 87 80 73 66 60 52 46</table>
+			<table name="#power">116 117 119 120 121 123 124 125 127 128</table>
+            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant1>
 		<enchant2 name="Duel">
 			<table name="#powerPvP">116 117 119 120 121 123 124 125 127 128</table>
+			<table name="#power">116 117 119 120 121 123 124 125 127 128</table>
+            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant2>
 		<enchant3 name="Holy Attack">
 			<table name="#element">holy</table>
 			<table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+			<table name="#power">116 117 119 120 121 123 124 125 127 128</table>
+            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
 		<enchant4 name="Dark Attack">
 			<table name="#element">unholy</table>
 			<table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+			<table name="#power">116 117 119 120 121 123 124 125 127 128</table>
+            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant4>
+		<enchant5 levels="10" name="Recycle" enchRoute="9">
+			<table name="#power">116 117 119 120 121 123 124 125 127 128</table>
+            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant5>
         <for>
             <effect count="1" name="KnockBack" stackOrder="-1" stackType="KnockBack" time="1" val="0"/>
         </for>
@@ -119,18 +131,31 @@
 		<set name="skillType" val="MDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1528;"/>
-		<enchant1 levels="10" name="Cost"/>
+		<enchant1 levels="10" name="Cost">
+			<table name="#power">125 126 127 129 130 132 133 135 136 138</table>
+            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant1>
 		<enchant2 name="Duel">
 			<table name="#powerPvP">125 126 127 129 130 132 133 135 136 138</table>
+			<table name="#power">125 126 127 129 130 132 133 135 136 138</table>
+            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant2>
 		<enchant3 name="Holy Attack">
 			<table name="#element">holy</table>
 			<table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+			<table name="#power">125 126 127 129 130 132 133 135 136 138</table>
+            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
 		<enchant4 name="Dark Attack">
 			<table name="#element">unholy</table>
 			<table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+			<table name="#power">125 126 127 129 130 132 133 135 136 138</table>
+            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant4>
+		<enchant5 levels="10" name="Recycle" enchRoute="9">
+			<table name="#power">125 126 127 129 130 132 133 135 136 138</table>
+            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant5>
 	</skill>
 	<skill id="11818" levels="1" name="Summoning Price">
 		<!-- Healing abilities are decreased as a price for summoning Lumi. -->
@@ -150,11 +175,13 @@
 		<set name="skillType" val="RECALL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1050;1255"/>
+		<enchant1 levels="10" name="Cost"/>
 		<for/>
 	</skill>
 	<skill id="11820" levels="1" name="Power of Saha">
 		<!-- Increases the selected target's P. Atk. by 17%, P. Def. by 15%, M. Atk. by 79%, and M. Def. by 30% for 30 minutes. -->
 		<table name="#mpConsume2">70</table>
+		<table name="#time">1800</table>
 		<set name="reuseDelay" val="4000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>		
@@ -163,9 +190,12 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="relationSkillsId" val="871;1040;875;"/>
+		<set name="relationSkillsId" val="871;1068;1040;875;"/>
+		<enchant1 levels="10" name="Time">
+		    <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant1>
 		<for>
-			<effect count="1" name="Buff" time="1800" val="0" stackOrder="10" stackType="mAtk;pAtk;pDef">
+			<effect count="1" name="Buff" time="#time" val="0" stackOrder="10" stackType="mAtk;pAtk;pDef">
 				<mul order="0x30" stat="pAtk" val="1.17"/>
 				<mul order="0x30" stat="pDef" val="1.15"/>
 				<mul order="0x30" stat="mAtk" val="1.79"/>
@@ -176,6 +206,7 @@
 	<skill id="11821" levels="1" name="Critical of Saha">
 		<!-- Increases the selected target's P. Critical Rate by 32%, P. Critical Damage by 35%, M. Critical Rate by 20 and decreases MP Consumption for physical skills by 20% and magic skills by 10% for 30 minutes. -->
 		<table name="#mpConsume2">70</table>
+		<table name="#time">1800</table>
 		<set name="reuseDelay" val="4000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>		
@@ -185,8 +216,11 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1397;1242;1077;1303;"/>
+		<enchant1 levels="10" name="Time">
+		    <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant1>
 		<for>
-			<effect count="1" name="Buff" time="1800" val="0" stackOrder="11" stackType="magicCritUp;rCrit;clarity;cAtk">
+			<effect count="1" name="Buff" time="#time" val="0" stackOrder="11" stackType="magicCritUp;rCrit;clarity;cAtk">
 				<mul order="0x30" stat="rCrit" val="1.32"/>
 				<mul order="0x30" stat="cAtk" val="1.35"/>
 				<add order="0x40" stat="mCritRate" val="20"/>
@@ -198,6 +232,7 @@
 	<skill id="11822" levels="1" name="Force of Saha">
 		<!-- Increases the selected target's Atk. Spd. by 34%, Casting Spd. by 31% and bestows a 9% Vampiric Rage effect for 30 minutes. -->
 		<table name="#mpConsume2">70</table>
+		<table name="#time">1800</table>
 		<set name="reuseDelay" val="4000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>		
@@ -206,9 +241,12 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="relationSkillsId" val="1268;"/> 
+		<set name="relationSkillsId" val="1268;"/>
+		<enchant1 levels="10" name="Time">
+		    <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant1>
 		<for>
-			<effect count="1" name="Buff" time="1800" val="0" stackOrder="11" stackType="pAtkSpeedUp;mAtkSpeedUp">
+			<effect count="1" name="Buff" time="#time" val="0" stackOrder="11" stackType="pAtkSpeedUp;mAtkSpeedUp">
 				<add order="0x40" stat="absorbDam" val="9"/>
 				<mul order="0x30" stat="pAtkSpd" val="1.34"/>
 				<mul order="0x30" stat="mAtkSpd" val="1.31"/>
@@ -218,6 +256,7 @@
 	<skill id="11823" levels="1" name="Speed of Saha">
 		<!-- Increases the selected target's P. Accuracy by 5, P. and M. Evasion by 5, Speed by 34 and decreases received critical damage by 30% for 30 minutes. -->
 		<table name="#mpConsume2">70</table>
+		<table name="#time">1800</table>
 		<set name="reuseDelay" val="4000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>		
@@ -227,8 +266,11 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1240;1087;"/>
+		<enchant1 levels="10" name="Time">
+		    <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant1>
 		<for>
-			<effect count="1" name="Buff" time="1800" val="0" stackOrder="11" stackType="accuracyUp;rEvas;SpeedUp;CoP;Poem_Arfa;">
+			<effect count="1" name="Buff" time="#time" val="0" stackOrder="11" stackType="accuracyUp;rEvas;SpeedUp;CoP;Poem_Arfa;">
 				<add order="0x40" stat="accCombat" val="5"/>
 				<add order="0x40" stat="rEvas" val="5"/>
 				<add order="0x40" stat="mEvas" val="5"/>
@@ -240,6 +282,7 @@
 	<skill id="11824" levels="1" name="Resistance of Saha">
 		<!-- Increases resistance to Stun by 40%, Poison by 50%, and Holy and Dark by 30 for 30 minutes. -->
 		<table name="#mpConsume2">70</table>
+		<table name="#time">1800</table>
 		<set name="reuseDelay" val="4000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>		
@@ -249,8 +292,11 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1392;1259;1393;1033;"/>
+		<enchant1 levels="10" name="Time">
+		    <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant1>
 		<for>
-			<effect count="1" name="Buff" time="1800" val="0" stackOrder="4" stackType="shockRcpt;DarkAtr;HolyAtr;poisonResist">
+			<effect count="1" name="Buff" time="#time" val="0" stackOrder="4" stackType="shockRcpt;DarkAtr;HolyAtr;poisonResist">
 				<mul order="0x30" stat="stunResist" val="1.4"/>
 				<mul order="0x30" stat="poisonResist" val="1.5"/>
 				<add order="0x40" stat="defenceHoly" val="30"/>
@@ -261,6 +307,7 @@
 	<skill id="11825" levels="1" name="Clarity of Saha">
 		<!-- Increases resistance to Hold/Sleep/Mental attacks by 50, resistance to buff canceling attacks by 30 and resistance to debuffs by 20 for 30 minutes. -->
 		<table name="#mpConsume2">70</table>
+		<table name="#time">1800</table>
 		<set name="reuseDelay" val="4000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>		
@@ -269,9 +316,12 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="relationSkillsId" val="1354;1035;"/> 
+		<set name="relationSkillsId" val="1354;1035;"/>
+		<enchant1 levels="10" name="Time">
+		    <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant1>
 		<for>
-			<effect count="1" name="Buff" time="1800" val="0" stackOrder="4" stackType="mental;resist_debuff_dispel">
+			<effect count="1" name="Buff" time="#time" val="0" stackOrder="4" stackType="mental;resist_debuff_dispel">
 				<add order="0x40" stat="rootResist" val="50"/>
 				<add order="0x40" stat="sleepResist" val="50"/>
 				<add order="0x40" stat="mentalResist" val="50"/>
@@ -283,6 +333,7 @@
 	<skill id="11826" levels="1" name="Emblem of Salvation">
 		<!-- Resurrects when dead and retains all buffs and debuffs. The Blessing of Noblesse and Lucky Charm, however, will disappear. -->
 		<table name="#mpConsume2">70</table>
+		<table name="#time">3600</table>
 		<set name="reuseDelay" val="4000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>		
@@ -292,8 +343,12 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 		<set name="relationSkillsId" val="1410;"/>
+		<enchant1 levels="10" name="Cost"/>
+		<enchant2 levels="10" name="Time">
+		    <table name="#time">3600 3600 3600 3600 3600 3600 3600 3600 3600 3600</table> <!--TODO: check retail time value-->
+		</enchant2>
 		<for>
-			<effect count="1" name="Salvation" stackOrder="0" stackType="Salvation" time="3600" val="0"/>
+			<effect count="1" name="Salvation" stackOrder="0" stackType="Salvation" time="#time" val="0"/>
 		</for>
 	</skill>
 	<skill id="11827" levels="1" name="Fairy Blessing"> 
@@ -319,10 +374,12 @@
 		<set name="skillType" val="CHAIN_HEAL"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="relationSkillsId" val="1553;"/> 
+		<enchant1 levels="10" name="Cost"/>
 	</skill> 
 	<skill id="11830" levels="1" name="Saha the Blessing">
 		<!-- For 30 minutes, increases the selected target's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, resistance to debuffs by 10%, and P. Def. upon evading a critical attack. Decreases speed by 15%. -->
 		<table name="#mpConsume2">70</table>
+		<table name="#time">1800</table>
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="2000"/>
 		<set name="hitTime" val="700"/>
@@ -332,9 +389,12 @@
 		<set name="target" val="TARGET_ONE"/> 
 		<set name="skillType" val="BUFF"/> 
 		<set name="operateType" val="OP_ACTIVE"/> 
-		<set name="relationSkillsId" val="1355;1357;1311;"/> 
+		<set name="relationSkillsId" val="1355;1357;1311;"/>
+		<enchant1 levels="10" name="Time">
+		    <table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant1>
 		<for>  
-			<effect count="1" name="Buff" stackOrder="7" stackType="ancient" time="1800" val="0">
+			<effect count="1" name="Buff" stackOrder="7" stackType="ancient" time="#time" val="0">
 				<mul order="0x30" stat="maxMp" val="1.2"/>
 				<mul order="0x30" stat="regHp" val="1.2"/>
 				<add order="0x40" stat="mCritRate" val="20"/>
@@ -368,6 +428,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="levelModifier" val="2"/>
 		<set name="relationSkillsId" val="1395;"/> 
+		<enchant1 levels="10" name="Cost"/>
 		<for/>
 	</skill>
 	<skill id="11832" levels="6" name="Mass Fatal Sleep">
@@ -387,6 +448,8 @@
 		<set name="skillType" val="SLEEP"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1508;1042"/>
+		<enchant1 levels="10" name="Cost"/>
+		<enchant2 levels="10" name="Chance"/>
 		<for>
 			<effect count="1" name="Sleep" stackOrder="-1" stackType="Sleep" time="30" val="0"/>
 		</for>
