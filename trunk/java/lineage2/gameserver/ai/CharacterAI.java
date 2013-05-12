@@ -427,7 +427,7 @@ public class CharacterAI extends AbstractAI
 	 * @param timerId int
 	 * @param delay long
 	 */
-	protected void addTimer(int timerId, long delay)
+	public void addTimer(int timerId, long delay)
 	{
 		addTimer(timerId, null, null, delay);
 	}

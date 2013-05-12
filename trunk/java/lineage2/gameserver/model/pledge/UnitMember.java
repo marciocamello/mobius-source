@@ -155,7 +155,7 @@ public class UnitMember
 	{
 		this._race = _race;
 	}
-
+	
 	/**
 	 * Method getPlayer.
 	 * @return Player
@@ -598,7 +598,7 @@ public class UnitMember
 	{
 		return _leaderOf;
 	}
-
+	
 	public int getRace()
 	{
 		return _race;

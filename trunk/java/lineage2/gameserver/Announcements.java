@@ -313,11 +313,14 @@ public class Announcements
 			player.sendPacket(cs);
 		}
 	}
-	public void announceToAll(IStaticPacket sm) 
-        {
-			for(Player player : GameObjectsStorage.getAllPlayersForIterate())
-				player.sendPacket(sm);
-        }
+	
+	public void announceToAll(IStaticPacket sm)
+	{
+		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
+		{
+			player.sendPacket(sm);
+		}
+	}
 	
 	/**
 	 * Method announceByCustomMessage.

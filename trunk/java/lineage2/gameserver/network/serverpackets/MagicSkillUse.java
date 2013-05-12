@@ -1,21 +1,32 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Creature;
 
 /**
- * Format: dddddddddh [h] h [ddd] Пример пакета: 48 86 99 00 4F 86 99 00 4F EF 08 00 00 01 00 00 00 00 00 00 00 00 00 00 00 F9 B5 FF FF 7D E0 01 00 68
- * F3 FF FF 00 00 00 00
+ * Format: dddddddddh [h] h [ddd] Пример пакета: 48 86 99 00 4F 86 99 00 4F EF 08 00 00 01 00 00 00 00 00 00 00 00 00 00 00 F9 B5 FF FF 7D E0 01 00 68 F3 FF FF 00 00 00 00
  */
 public class MagicSkillUse extends L2GameServerPacket
 {
-	private int _targetId;
-	private int _skillId;
-	private int _skillLevel;
-	private int _hitTime;
-	private int _reuseDelay;
-	private int _chaId, _x, _y, _z, _tx, _ty, _tz;
-	private boolean _isDoubleCasting;
-
+	private final int _targetId;
+	private final int _skillId;
+	private final int _skillLevel;
+	private final int _hitTime;
+	private final int _reuseDelay;
+	private final int _chaId, _x, _y, _z, _tx, _ty, _tz;
+	private final boolean _isDoubleCasting;
+	
 	public MagicSkillUse(Creature cha, Creature target, int skillId, int skillLevel, int hitTime, long reuseDelay, boolean isDoubleCastingNow)
 	{
 		_chaId = cha.getObjectId();
@@ -49,7 +60,7 @@ public class MagicSkillUse extends L2GameServerPacket
 		_tz = target.getZ();
 		_isDoubleCasting = false;
 	}
-
+	
 	public MagicSkillUse(Creature cha, int skillId, int skillLevel, int hitTime, long reuseDelay)
 	{
 		_chaId = cha.getObjectId();
@@ -66,7 +77,7 @@ public class MagicSkillUse extends L2GameServerPacket
 		_tz = cha.getZ();
 		_isDoubleCasting = false;
 	}
-
+	
 	@Override
 	protected final void writeImpl()
 	{
@@ -88,7 +99,7 @@ public class MagicSkillUse extends L2GameServerPacket
 		writeD(_ty);
 		writeD(_tz);
 	}
-
+	
 	public static int getSkillReplace(int _skillId)
 	{
 		switch (_skillId)

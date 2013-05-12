@@ -1,21 +1,36 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.network.serverpackets;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.SubUnit;
 import lineage2.gameserver.model.pledge.UnitMember;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class PledgeShowMemberListAll extends L2GameServerPacket
 {
-	private int _clanObjectId, _clanCrestId, _level, _rank, _reputation, _allianceObjectId, _allianceCrestId;
-	private int _hasCastle, _hasClanHall, _hasFortress, _atClanWar;
-	private String _unitName, _leaderName, _allianceName;
-	private int _pledgeType, _territorySide;
-	private List<PledgePacketMember> _members;
-
+	private final int _clanObjectId, _clanCrestId, _level, _rank, _reputation;
+	private int _allianceObjectId;
+	private int _allianceCrestId;
+	private final int _hasCastle, _hasClanHall, _hasFortress, _atClanWar;
+	private final String _unitName, _leaderName;
+	private String _allianceName;
+	private final int _pledgeType, _territorySide;
+	private final List<PledgePacketMember> _members;
+	
 	public PledgeShowMemberListAll(Clan clan, final SubUnit sub)
 	{
 		_pledgeType = sub.getType();
@@ -31,27 +46,29 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 		_reputation = clan.getReputationScore();
 		_atClanWar = clan.isAtWarOrUnderAttack();
 		_territorySide = clan.getWarDominion();
-
+		
 		Alliance ally = clan.getAlliance();
-
+		
 		if (ally != null)
 		{
 			_allianceObjectId = ally.getAllyId();
 			_allianceName = ally.getAllyName();
 			_allianceCrestId = ally.getAllyCrestId();
 		}
-
-		_members = new ArrayList<PledgePacketMember>(sub.size());
-
+		
+		_members = new ArrayList<>(sub.size());
+		
 		for (UnitMember m : sub.getUnitMembers())
+		{
 			_members.add(new PledgePacketMember(m));
+		}
 	}
-
+	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0x5a);
-
+		
 		writeD(_pledgeType == Clan.SUBUNIT_MAIN_CLAN ? 0 : 1);
 		writeD(_clanObjectId);
 		writeD(_pledgeType);
@@ -72,7 +89,7 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 		writeD(_allianceCrestId);
 		writeD(_atClanWar);
 		writeD(_territorySide);// territory Id
-
+		
 		writeD(_members.size());
 		for (PledgePacketMember m : _members)
 		{
@@ -85,17 +102,17 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 			writeD(m._hasSponsor ? 1 : 0);
 		}
 	}
-
+	
 	private class PledgePacketMember
 	{
-		private String _name;
-		private int _level;
-		private int _classId;
-		private int _sex;
-		private int _race;
-		private int _online;
-		private boolean _hasSponsor;
-
+		final String _name;
+		final int _level;
+		final int _classId;
+		final int _sex;
+		final int _race;
+		final int _online;
+		final boolean _hasSponsor;
+		
 		public PledgePacketMember(UnitMember m)
 		{
 			_name = m.getName();

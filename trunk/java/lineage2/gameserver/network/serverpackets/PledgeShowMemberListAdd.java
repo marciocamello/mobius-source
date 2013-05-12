@@ -1,16 +1,28 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.pledge.UnitMember;
 
 public class PledgeShowMemberListAdd extends L2GameServerPacket
 {
-	private PledgePacketMember _member;
-
+	private final PledgePacketMember _member;
+	
 	public PledgeShowMemberListAdd(UnitMember member)
 	{
 		_member = new PledgePacketMember(member);
 	}
-
+	
 	@Override
 	protected final void writeImpl()
 	{
@@ -23,17 +35,17 @@ public class PledgeShowMemberListAdd extends L2GameServerPacket
 		writeD(_member._online);
 		writeD(_member._pledgeType);
 	}
-
+	
 	private class PledgePacketMember
 	{
-		private String _name;
-		private int _level;
-		private int _classId;
-		private int _sex;
-		private int _race;
-		private int _online;
-		private int _pledgeType;
-
+		final String _name;
+		final int _level;
+		final int _classId;
+		final int _sex;
+		final int _race;
+		final int _online;
+		final int _pledgeType;
+		
 		public PledgePacketMember(UnitMember m)
 		{
 			_name = m.getName();

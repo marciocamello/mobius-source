@@ -52,6 +52,7 @@ public class HardReferences
 	
 	/**
 	 * Method emptyRef.
+	 * @param <T>
 	 * @return HardReference<T>
 	 */
 	@SuppressWarnings("unchecked")
@@ -62,6 +63,7 @@ public class HardReferences
 	
 	/**
 	 * Method unwrap.
+	 * @param <T>
 	 * @param refs Collection<HardReference<T>>
 	 * @return Collection<T>
 	 */
@@ -81,6 +83,7 @@ public class HardReferences
 	
 	/**
 	 * @author Mobius
+	 * @param <T>
 	 */
 	private static class WrappedIterable<T> implements Iterable<T>
 	{
@@ -100,6 +103,7 @@ public class HardReferences
 		
 		/**
 		 * @author Mobius
+		 * @param <T>
 		 */
 		private static class WrappedIterator<T> implements Iterator<T>
 		{
@@ -161,6 +165,7 @@ public class HardReferences
 	
 	/**
 	 * Method iterate.
+	 * @param <T>
 	 * @param refs Iterable<HardReference<T>>
 	 * @return Iterable<T>
 	 */

@@ -23,13 +23,12 @@ public final class AttributeCap
 	private final Double _attackVal;
 	
 	private final Double _defenseVal;
+	
 	/**
 	 * Constructor for enchantStat.
-	 * param String name
-	 * param int grade
-	 * param Double option1
-	 * param Double option2
-	 * param Double option3
+	 * @param capValues
+	 * @param attackValue
+	 * @param defenseValue
 	 */
 	
 	public AttributeCap(Integer capValues, Double attackValue, Double defenseValue)
@@ -38,11 +37,12 @@ public final class AttributeCap
 		_attackVal = attackValue;
 		_defenseVal = defenseValue;
 	}
-
+	
 	public Integer getCap()
 	{
 		return _capVal;
 	}
+	
 	/**
 	 * Method getOption1.
 	 * @return double

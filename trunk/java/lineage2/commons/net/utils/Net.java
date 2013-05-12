@@ -118,7 +118,8 @@ public class Net
 	/**
 	 * Method parseAddress.
 	 * @param s String
-	 * @return int * @throws IllegalArgumentException
+	 * @return int
+	 * @throws IllegalArgumentException
 	 */
 	public static int parseAddress(String s) throws IllegalArgumentException
 	{
@@ -138,7 +139,8 @@ public class Net
 	/**
 	 * Method parseNetmask.
 	 * @param s String
-	 * @return int * @throws IllegalArgumentException
+	 * @return int
+	 * @throws IllegalArgumentException
 	 */
 	public static int parseNetmask(String s) throws IllegalArgumentException
 	{

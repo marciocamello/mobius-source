@@ -12,8 +12,6 @@
  */
 package lineage2.gameserver.data.xml.parser;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -35,6 +33,8 @@ import lineage2.gameserver.templates.player.StatAttributes;
 import lineage2.gameserver.utils.Location;
 
 import org.dom4j.Element;
+
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius

@@ -40,12 +40,12 @@ public class KartiaLabyrinth85Party extends Reflection
 	
 	private static final int DOOR1_ID = 16170002;
 	private static final int DOOR2_ID = 16170003;
-
-	private int KartiaGuard = 19229;
-	private int KartiaWatchman = 19230;
-	private int DimensionalWatchman = 19231;
-	private int LordOfKartia = 25882;
-
+	
+	private final int KartiaGuard = 19229;
+	private final int KartiaWatchman = 19230;
+	private final int DimensionalWatchman = 19231;
+	private final int LordOfKartia = 25882;
+	
 	public KartiaLabyrinth85Party()
 	{
 		_deathListener = new DeathListener();
@@ -334,7 +334,7 @@ public class KartiaLabyrinth85Party extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_1, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
-			for(NpcInstance n : getNpcs())
+			for (NpcInstance n : getNpcs())
 			{
 				n.deleteMe();
 			}
@@ -390,7 +390,7 @@ public class KartiaLabyrinth85Party extends Reflection
 			openDoor(DOOR1_ID);
 		}
 	}
-
+	
 	private class ThirdSevenStage extends RunnableImpl
 	{
 		ThirdSevenStage()
@@ -408,7 +408,7 @@ public class KartiaLabyrinth85Party extends Reflection
 			sixstagestagemobv.addListener(_deathListener);
 		}
 	}
-
+	
 	private class SecondSevenStage extends RunnableImpl
 	{
 		SecondSevenStage()
@@ -431,7 +431,7 @@ public class KartiaLabyrinth85Party extends Reflection
 			ThreadPoolManager.getInstance().schedule(new ThirdSevenStage(), 21000L);
 		}
 	}
-
+	
 	private class SevenStage extends RunnableImpl
 	{
 		SevenStage()
@@ -458,7 +458,7 @@ public class KartiaLabyrinth85Party extends Reflection
 			ThreadPoolManager.getInstance().schedule(new SecondSevenStage(), 21000L);
 		}
 	}
-
+	
 	private class ThreeSixStage extends RunnableImpl
 	{
 		ThreeSixStage()
@@ -552,7 +552,7 @@ public class KartiaLabyrinth85Party extends Reflection
 			ThreadPoolManager.getInstance().schedule(new SixStage(), 60000L);
 		}
 	}
-
+	
 	private class SecondFiveStage extends RunnableImpl
 	{
 		SecondFiveStage()
@@ -572,7 +572,7 @@ public class KartiaLabyrinth85Party extends Reflection
 			ThreadPoolManager.getInstance().schedule(new ThirdFiveStage(), 21000L);
 		}
 	}
-
+	
 	private class FiveStage extends RunnableImpl
 	{
 		FiveStage()
@@ -680,7 +680,7 @@ public class KartiaLabyrinth85Party extends Reflection
 			ThreadPoolManager.getInstance().schedule(new ForthStage(), 60000L);
 		}
 	}
-
+	
 	private class SecondThirdStage extends RunnableImpl
 	{
 		SecondThirdStage()

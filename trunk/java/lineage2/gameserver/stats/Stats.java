@@ -280,8 +280,8 @@ public enum Stats
 	 * Field MUTATE_RESIST.
 	 */
 	MUTATE_RESIST("mutateResist", Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY),
-	/**c
-	 * Field DISARM_RESIST.
+	/**
+	 * c Field DISARM_RESIST.
 	 */
 	DISARM_RESIST("disarmResist", Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY),
 	/**

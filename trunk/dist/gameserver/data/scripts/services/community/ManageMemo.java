@@ -418,7 +418,9 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 	
 	/**
 	 * Method getMemoList.
-	 * @param player Player * * @return String @param count int
+	 * @param player Player
+	 * @param page
+	 * @param count
 	 * @return String
 	 */
 	private static String getMemoList(Player player, int page, int count)
@@ -461,7 +463,8 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 	}
 	
 	/**
-	 * Method ge* * @return int@param player Player
+	 * Method getMemoCount
+	 * @param player
 	 * @return int
 	 */
 	private static int getMemoCount(Player player)

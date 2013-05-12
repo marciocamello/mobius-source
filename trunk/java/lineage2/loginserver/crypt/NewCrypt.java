@@ -176,7 +176,8 @@ public class NewCrypt
 	/**
 	 * Method decrypt.
 	 * @param raw byte[]
-	 * @return byte[] * @throws IOException
+	 * @return byte[]
+	 * @throws IOException
 	 */
 	public byte[] decrypt(byte[] raw) throws IOException
 	{
@@ -210,7 +211,8 @@ public class NewCrypt
 	/**
 	 * Method crypt.
 	 * @param raw byte[]
-	 * @return byte[] * @throws IOException
+	 * @return byte[]
+	 * @throws IOException
 	 */
 	public byte[] crypt(byte[] raw) throws IOException
 	{

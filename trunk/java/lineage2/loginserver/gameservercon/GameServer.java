@@ -170,7 +170,8 @@ public class GameServer
 	
 	/**
 	 * Method getInternalHost.
-	 * @return InetAddress * @throws UnknownHostException
+	 * @return InetAddress
+	 * @throws UnknownHostException
 	 */
 	public InetAddress getInternalHost() throws UnknownHostException
 	{
@@ -205,7 +206,8 @@ public class GameServer
 	
 	/**
 	 * Method getExternalHost.
-	 * @return InetAddress * @throws UnknownHostException
+	 * @return InetAddress
+	 * @throws UnknownHostException
 	 */
 	public InetAddress getExternalHost() throws UnknownHostException
 	{

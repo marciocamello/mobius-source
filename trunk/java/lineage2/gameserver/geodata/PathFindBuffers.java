@@ -12,10 +12,6 @@
  */
 package lineage2.gameserver.geodata;
 
-import gnu.trove.iterator.TIntIntIterator;
-import gnu.trove.map.hash.TIntIntHashMap;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -25,6 +21,9 @@ import java.util.concurrent.locks.ReentrantLock;
 import lineage2.commons.text.StrTable;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.utils.Location;
+import gnu.trove.iterator.TIntIntIterator;
+import gnu.trove.map.hash.TIntIntHashMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius

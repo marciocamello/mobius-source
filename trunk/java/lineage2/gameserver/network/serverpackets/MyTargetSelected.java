@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.network.serverpackets;
 
 /**
@@ -25,19 +37,19 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class MyTargetSelected extends L2GameServerPacket
 {
-	private int _objectId;
-	private int _color;
-
+	private final int _objectId;
+	private final int _color;
+	
 	/**
-	 * @param int objectId of the target
-	 * @param int level difference to the target. name color is calculated from that
+	 * @param objectId of the target
+	 * @param color
 	 */
 	public MyTargetSelected(int objectId, int color)
 	{
 		_objectId = objectId;
 		_color = color;
 	}
-
+	
 	@Override
 	protected final void writeImpl()
 	{

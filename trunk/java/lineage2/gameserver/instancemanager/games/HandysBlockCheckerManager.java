@@ -12,8 +12,6 @@
  */
 package lineage2.gameserver.instancemanager.games;
 
-import gnu.trove.map.hash.TIntIntHashMap;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -34,6 +32,7 @@ import lineage2.gameserver.network.serverpackets.ExCubeGameChangeTeam;
 import lineage2.gameserver.network.serverpackets.ExCubeGameRemovePlayer;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import gnu.trove.map.hash.TIntIntHashMap;
 
 /**
  * @author Mobius

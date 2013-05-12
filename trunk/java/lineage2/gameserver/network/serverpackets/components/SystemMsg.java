@@ -1,10 +1,22 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.network.serverpackets.components;
+
+import java.util.NoSuchElementException;
 
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
-
-import java.util.NoSuchElementException;
 
 /**
  * @author VISTALL
@@ -1203,7 +1215,7 @@ public enum SystemMsg implements IStaticPacket
 	// Message: Nevit's Advent Blessing has ended. Continue your journey and you
 	// will surely meet his favor again sometime soon.
 	NEVITS_BLESSING_HAS_ENDED_CONTINUE_YOUR_JOURNEY_AND_YOU_WILL_SURELY_MEET_HIS_FAVOR_AGAIN_SOMETIME_SOON(3275),
-	THE_CORRESPONDING_WORK_CANNOT_BE_PROCEEDED_BECAUSE_THE_INVENTORY_WEIGHTQUANTITY_LIMIT_HAS_BEEN_EXCEEDED(3646), 
+	THE_CORRESPONDING_WORK_CANNOT_BE_PROCEEDED_BECAUSE_THE_INVENTORY_WEIGHTQUANTITY_LIMIT_HAS_BEEN_EXCEEDED(3646),
 	// Message: You cannor change an attribute while using a private shop or workshop.
 	YOU_CANNOT_CHANGE_AN_ATTRIBUTE_WHILE_USING_A_PRIVATE_SHOP_OR_WORKSHOP(3659),
 	// Message: Enchantment or attribute enchantment is in progress.
@@ -1335,15 +1347,15 @@ public enum SystemMsg implements IStaticPacket
 	// Message: This account has already received a gift
 	THIS_ACCOUNT_HAS_ALREADY_RECEIVED_A_GIFT(3289),
 	SUBCLASS_S1_HAS_BEEN_UPGRADED_TO_DUEL_CLASS_S2_CONGRATULATIONS(3279);
-
+	
 	private final L2GameServerPacket _message;
 	private final int _id;
 	private final byte _size;
-
+	
 	SystemMsg(int i)
 	{
 		_id = i;
-
+		
 		if (name().contains("S4") || name().contains("C4"))
 		{
 			_size = 4;
@@ -1370,32 +1382,38 @@ public enum SystemMsg implements IStaticPacket
 			_message = new SystemMessage2(this);
 		}
 	}
-
+	
 	public int getId()
 	{
 		return _id;
 	}
-
+	
 	public byte size()
 	{
 		return _size;
 	}
-
+	
 	public static SystemMsg valueOf(int id)
 	{
 		for (SystemMsg m : values())
+		{
 			if (m.getId() == id)
+			{
 				return m;
-
+			}
+		}
+		
 		throw new NoSuchElementException("Not find SystemMsg by id: " + id);
 	}
-
+	
 	@Override
 	public L2GameServerPacket packet(Player player)
 	{
 		if (_message == null)
+		{
 			throw new NoSuchElementException("Running SystemMsg.packet(Player), but message require arguments: " + name());
-
+		}
+		
 		return _message;
 	}
 }

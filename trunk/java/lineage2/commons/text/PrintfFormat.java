@@ -260,7 +260,8 @@ public class PrintfFormat
 	/**
 	 * Method sprintf.
 	 * @param x int
-	 * @return String * @throws IllegalArgumentException
+	 * @return String
+	 * @throws IllegalArgumentException
 	 */
 	public String sprintf(int x) throws IllegalArgumentException
 	{
@@ -288,7 +289,8 @@ public class PrintfFormat
 	/**
 	 * Method sprintf.
 	 * @param x long
-	 * @return String * @throws IllegalArgumentException
+	 * @return String
+	 * @throws IllegalArgumentException
 	 */
 	public String sprintf(long x) throws IllegalArgumentException
 	{
@@ -316,7 +318,8 @@ public class PrintfFormat
 	/**
 	 * Method sprintf.
 	 * @param x double
-	 * @return String * @throws IllegalArgumentException
+	 * @return String
+	 * @throws IllegalArgumentException
 	 */
 	public String sprintf(double x) throws IllegalArgumentException
 	{
@@ -344,7 +347,8 @@ public class PrintfFormat
 	/**
 	 * Method sprintf.
 	 * @param x String
-	 * @return String * @throws IllegalArgumentException
+	 * @return String
+	 * @throws IllegalArgumentException
 	 */
 	public String sprintf(String x) throws IllegalArgumentException
 	{
@@ -372,7 +376,8 @@ public class PrintfFormat
 	/**
 	 * Method sprintf.
 	 * @param x Object
-	 * @return String * @throws IllegalArgumentException
+	 * @return String
+	 * @throws IllegalArgumentException
 	 */
 	public String sprintf(Object x) throws IllegalArgumentException
 	{
@@ -621,7 +626,8 @@ public class PrintfFormat
 		/**
 		 * Method internalsprintf.
 		 * @param s int
-		 * @return String * @throws IllegalArgumentException
+		 * @return String
+		 * @throws IllegalArgumentException
 		 */
 		String internalsprintf(int s) throws IllegalArgumentException
 		{
@@ -685,7 +691,8 @@ public class PrintfFormat
 		/**
 		 * Method internalsprintf.
 		 * @param s long
-		 * @return String * @throws IllegalArgumentException
+		 * @return String
+		 * @throws IllegalArgumentException
 		 */
 		String internalsprintf(long s) throws IllegalArgumentException
 		{
@@ -749,7 +756,8 @@ public class PrintfFormat
 		/**
 		 * Method internalsprintf.
 		 * @param s double
-		 * @return String * @throws IllegalArgumentException
+		 * @return String
+		 * @throws IllegalArgumentException
 		 */
 		String internalsprintf(double s) throws IllegalArgumentException
 		{
@@ -776,7 +784,8 @@ public class PrintfFormat
 		/**
 		 * Method internalsprintf.
 		 * @param s String
-		 * @return String * @throws IllegalArgumentException
+		 * @return String
+		 * @throws IllegalArgumentException
 		 */
 		String internalsprintf(String s) throws IllegalArgumentException
 		{

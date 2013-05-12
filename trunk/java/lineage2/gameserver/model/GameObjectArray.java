@@ -24,6 +24,7 @@ import org.slf4j.LoggerFactory;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <E>
  */
 public class GameObjectArray<E extends GameObject> implements Iterable<E>
 {

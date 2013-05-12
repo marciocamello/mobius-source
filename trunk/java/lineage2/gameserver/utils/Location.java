@@ -310,7 +310,8 @@ public class Location extends Point3D implements SpawnRange, Serializable
 	/**
 	 * Method parseLoc.
 	 * @param s String
-	 * @return Location * @throws IllegalArgumentException
+	 * @return Location
+	 * @throws IllegalArgumentException
 	 */
 	public static Location parseLoc(String s) throws IllegalArgumentException
 	{

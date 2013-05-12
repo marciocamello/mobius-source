@@ -722,8 +722,8 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 	
 	/**
 	 * @author Mobius
+	 * @param <T>
 	 */
-	
 	private static class PlayersComparator<T> implements Comparator<T>
 	{
 		/**

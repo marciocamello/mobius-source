@@ -12,8 +12,8 @@
  */
 package lineage2.gameserver.templates.jump;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
 import lineage2.gameserver.utils.Location;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius

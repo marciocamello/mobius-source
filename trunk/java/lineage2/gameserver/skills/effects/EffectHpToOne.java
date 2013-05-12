@@ -30,7 +30,7 @@ public final class EffectHpToOne extends Effect
 	{
 		super(env, template);
 	}
-		
+	
 	/**
 	 * Method onStart.
 	 */
@@ -38,7 +38,7 @@ public final class EffectHpToOne extends Effect
 	public void onStart()
 	{
 		super.onStart();
-		_effected.setCurrentHp(1,false);
+		_effected.setCurrentHp(1, false);
 	}
 	
 	/**

@@ -12,7 +12,6 @@
  */
 package handler.items;
 
-import gnu.trove.set.hash.TIntHashSet;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.cache.Msg;
@@ -26,6 +25,7 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SetupGauge;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.SoulCrystal;
+import gnu.trove.set.hash.TIntHashSet;
 
 /**
  * @author Mobius

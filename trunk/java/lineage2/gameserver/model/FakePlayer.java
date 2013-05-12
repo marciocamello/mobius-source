@@ -150,6 +150,7 @@ public class FakePlayer extends Creature
 	/**
 	 * Method broadcastCharInfoImpl.
 	 */
+	@Override
 	public void broadcastCharInfo()
 	{
 		for (Player player : World.getAroundPlayers(this))

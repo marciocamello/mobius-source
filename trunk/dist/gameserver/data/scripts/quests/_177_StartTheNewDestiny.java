@@ -35,8 +35,8 @@ public class _177_StartTheNewDestiny extends Quest implements ScriptFile
 	private static final int questitem_02 = 17719;
 	private static final int questitem_03 = 17720;
 	private static final int questitem_04 = 17721;
-	private static final List <Integer> _Mobs1 = new ArrayList<Integer>();
-	private static final List <Integer> _Mobs2 = new ArrayList<Integer>();
+	private static final List<Integer> _Mobs1 = new ArrayList<>();
+	private static final List<Integer> _Mobs2 = new ArrayList<>();
 	
 	public _177_StartTheNewDestiny()
 	{
@@ -120,13 +120,13 @@ public class _177_StartTheNewDestiny extends Quest implements ScriptFile
 		int cond = st.getCond();
 		if (npcId == Hadel)
 		{
-			if(!(st.getState() == Quest.COMPLETED))
-			{		
-				if ((player.getActiveSubClass().isSub() && cond == 0 && !player.getSubClassList().haveDualClass()) ||(cond > 0 && player.getActiveSubClass().getClassId() == st.getInt("subClassId")))
+			if (!(st.getState() == Quest.COMPLETED))
+			{
+				if ((player.getActiveSubClass().isSub() && (cond == 0) && !player.getSubClassList().haveDualClass()) || ((cond > 0) && (player.getActiveSubClass().getClassId() == st.getInt("subClassId"))))
 				{
 					if (cond == 0)
 					{
-						if (player.getLevel() >= 80 && ClassId.VALUES[player.getSubClassList().getBaseSubClass().getClassId()].isOfLevel(ClassLevel.Awaking) && ClassId.VALUES[player.getActiveSubClass().getClassId()].isOfLevel(ClassLevel.Fourth))
+						if ((player.getLevel() >= 80) && ClassId.VALUES[player.getSubClassList().getBaseSubClass().getClassId()].isOfLevel(ClassLevel.Awaking) && ClassId.VALUES[player.getActiveSubClass().getClassId()].isOfLevel(ClassLevel.Fourth))
 						{
 							htmltext = "33344_01.htm";
 						}
@@ -193,7 +193,7 @@ public class _177_StartTheNewDestiny extends Quest implements ScriptFile
 		}
 		else if (npcId == Ishuma)
 		{
-			if(!(st.getState() == Quest.COMPLETED))
+			if (!(st.getState() == Quest.COMPLETED))
 			{
 				if (st.getInt("subClassId") == player.getClassId().getId())
 				{
@@ -236,7 +236,7 @@ public class _177_StartTheNewDestiny extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		int subclassId = st.getInt("subClassId");
-		if((st.getPlayer().getActiveSubClass().getClassId() == subclassId) && st.getState() == Quest.STARTED)
+		if ((st.getPlayer().getActiveSubClass().getClassId() == subclassId) && (st.getState() == Quest.STARTED))
 		{
 			if ((cond == 1) && _Mobs1.contains(npcId) && Rnd.chance(chanceGetItem))
 			{
@@ -285,10 +285,10 @@ public class _177_StartTheNewDestiny extends Quest implements ScriptFile
 		}
 		else
 		{
-			if(cond > 0)
+			if (cond > 0)
 			{
 				st.getPlayer().sendMessage("You cannot obtain the quest items if you are in different subclass to which started the quest.");
-			}				
+			}
 		}
 		return null;
 	}

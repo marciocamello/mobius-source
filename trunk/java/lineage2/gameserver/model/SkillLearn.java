@@ -79,6 +79,8 @@ public final class SkillLearn implements Comparable<SkillLearn>
 	 * @param itemId int
 	 * @param itemCount long
 	 * @param clicked boolean
+	 * @param deprecated
+	 * @param race
 	 * @param required_items Map<Integer,Long>
 	 * @param delete_skills List<Integer>
 	 */
@@ -173,12 +175,12 @@ public final class SkillLearn implements Comparable<SkillLearn>
 	{
 		return _race;
 	}
-
+	
 	public boolean isOfRace(Race race)
 	{
 		return (_race == null) || (_race == race);
 	}
-
+	
 	/**
 	 * Method compareTo.
 	 * @param o SkillLearn

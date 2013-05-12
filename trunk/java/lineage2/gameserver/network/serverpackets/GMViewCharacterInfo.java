@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
@@ -10,27 +22,27 @@ import lineage2.gameserver.utils.Location;
 
 public class GMViewCharacterInfo extends L2GameServerPacket
 {
-	private Location _loc;
-	private int[][] _inv;
-	private int obj_id, _race, _sex, class_id, pvp_flag, karma, level, mount_type;
-	private int _str, _con, _dex, _int, _wit, _men, _sp;
-	private int curHp, maxHp, curMp, maxMp, curCp, maxCp, curLoad, maxLoad, rec_left, rec_have;
-	private int _patk, _patkspd, _pdef, evasion, accuracy, crit, _matk, _matkspd;
-	private int _mdef, hair_style, hair_color, face, gm_commands;
-	private int clan_id, clan_crest_id, ally_id, title_color;
-	private int noble, hero, private_store, name_color, pk_kills, pvp_kills;
-	private int _runSpd, _walkSpd, _swimSpd, DwarvenCraftLevel, running, pledge_class;
-	private String _name, title;
-	private long _exp;
-	private double move_speed, attack_speed, col_radius, col_height;
-	private Element attackElement;
-	private int attackElementValue;
-	private int defenceFire, defenceWater, defenceWind, defenceEarth, defenceHoly, defenceUnholy;
-	private int fame, vitality;
-	private int talismans;
-	private boolean openCloak;
-	private double _expPercent;
-
+	private final Location _loc;
+	private final int[][] _inv;
+	private final int obj_id, _race, _sex, class_id, pvp_flag, karma, level, mount_type;
+	private final int _str, _con, _dex, _int, _wit, _men, _sp;
+	private final int curHp, maxHp, curMp, maxMp, curCp, maxCp, curLoad, maxLoad, rec_left, rec_have;
+	private final int _patk, _patkspd, _pdef, evasion, accuracy, crit, _matk, _matkspd;
+	private final int _mdef, hair_style, hair_color, face, gm_commands;
+	private final int clan_id, clan_crest_id, ally_id, title_color;
+	private final int noble, hero, private_store, name_color, pk_kills, pvp_kills;
+	private final int _runSpd, _walkSpd, _swimSpd, DwarvenCraftLevel, running, pledge_class;
+	private final String _name, title;
+	private final long _exp;
+	private final double move_speed, attack_speed, col_radius, col_height;
+	private final Element attackElement;
+	private final int attackElementValue;
+	private final int defenceFire, defenceWater, defenceWind, defenceEarth, defenceHoly, defenceUnholy;
+	private final int fame, vitality;
+	private final int talismans;
+	private final boolean openCloak;
+	private final double _expPercent;
+	
 	public GMViewCharacterInfo(final Player cha)
 	{
 		_loc = cha.getLoc();
@@ -88,7 +100,7 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		//
 		ally_id = alliance == null ? 0 : alliance.getAllyId();
 		// ally_crest_id = alliance == null ? 0 : alliance.getAllyCrestId();
-
+		
 		private_store = cha.isInObserverMode() ? Player.STORE_OBSERVING_GAMES : cha.getPrivateStoreType();
 		DwarvenCraftLevel = Math.max(cha.getSkillLevel(1320), 0);
 		pk_kills = cha.getPkKills();
@@ -123,12 +135,12 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 			_inv[PAPERDOLL_ID][2] = cha.getInventory().getPaperdollAugmentationId(PAPERDOLL_ID);
 		}
 	}
-
+	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0x95);
-
+		
 		writeD(_loc.x);
 		writeD(_loc.y);
 		writeD(_loc.z);
@@ -155,19 +167,25 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeD(curLoad);
 		writeD(maxLoad);
 		writeD(pk_kills);
-
+		
 		for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
+		{
 			writeD(_inv[PAPERDOLL_ID][0]);
-
+		}
+		
 		for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
+		{
 			writeD(_inv[PAPERDOLL_ID][1]);
-
+		}
+		
 		for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
+		{
 			writeD(_inv[PAPERDOLL_ID][2]);
-
+		}
+		
 		writeD(talismans);
 		writeD(openCloak ? 0x01 : 0x00);
-
+		
 		writeD(_patk);
 		writeD(_patkspd);
 		writeD(_pdef);
@@ -218,7 +236,7 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeC(hero);
 		writeD(name_color);
 		writeD(title_color);
-
+		
 		writeH(attackElement.getId());
 		writeH(attackElementValue);
 		writeH(defenceFire);
@@ -227,7 +245,7 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeH(defenceEarth);
 		writeH(defenceHoly);
 		writeH(defenceUnholy);
-
+		
 		writeD(fame);
 		writeD(vitality);
 	}

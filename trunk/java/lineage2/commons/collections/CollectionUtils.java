@@ -32,6 +32,7 @@ public final class CollectionUtils
 	
 	/**
 	 * Method eqBrute.
+	 * @param <T>
 	 * @param list List<T>
 	 * @param lo int
 	 * @param hi int
@@ -84,6 +85,7 @@ public final class CollectionUtils
 	
 	/**
 	 * Method eqSort.
+	 * @param <T>
 	 * @param list List<T>
 	 * @param lo0 int
 	 * @param hi0 int
@@ -125,6 +127,7 @@ public final class CollectionUtils
 	
 	/**
 	 * Method eqSort.
+	 * @param <T>
 	 * @param list List<T>
 	 */
 	public static <T extends Comparable<T>> void eqSort(List<T> list)
@@ -134,6 +137,7 @@ public final class CollectionUtils
 	
 	/**
 	 * Method eqBrute.
+	 * @param <T>
 	 * @param list List<T>
 	 * @param lo int
 	 * @param hi int
@@ -187,6 +191,7 @@ public final class CollectionUtils
 	
 	/**
 	 * Method eqSort.
+	 * @param <T>
 	 * @param list List<T>
 	 * @param lo0 int
 	 * @param hi0 int
@@ -229,6 +234,7 @@ public final class CollectionUtils
 	
 	/**
 	 * Method eqSort.
+	 * @param <T>
 	 * @param list List<T>
 	 * @param c Comparator<? super T>
 	 */
@@ -239,6 +245,7 @@ public final class CollectionUtils
 	
 	/**
 	 * Method insertionSort.
+	 * @param <T>
 	 * @param list List<T>
 	 */
 	public static <T extends Comparable<T>> void insertionSort(List<T> list)
@@ -259,6 +266,7 @@ public final class CollectionUtils
 	
 	/**
 	 * Method insertionSort.
+	 * @param <T>
 	 * @param list List<T>
 	 * @param c Comparator<? super T>
 	 */
@@ -280,6 +288,7 @@ public final class CollectionUtils
 	
 	/**
 	 * Method hashCode.
+	 * @param <E>
 	 * @param collection Collection<E>
 	 * @return int
 	 */
@@ -297,6 +306,7 @@ public final class CollectionUtils
 	
 	/**
 	 * Method safeGet.
+	 * @param <E>
 	 * @param list List<E>
 	 * @param index int
 	 * @return E

@@ -190,7 +190,8 @@ public class Util
 	 * Method packInt.
 	 * @param a int[]
 	 * @param bits int
-	 * @return int * @throws Exception
+	 * @return int
+	 * @throws Exception
 	 */
 	public static int packInt(int[] a, int bits) throws Exception
 	{
@@ -226,7 +227,8 @@ public class Util
 	 * Method packLong.
 	 * @param a int[]
 	 * @param bits int
-	 * @return long * @throws Exception
+	 * @return long
+	 * @throws Exception
 	 */
 	public static long packLong(int[] a, int bits) throws Exception
 	{

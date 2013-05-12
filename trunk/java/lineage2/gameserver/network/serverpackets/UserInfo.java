@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.network.serverpackets;
 
 import javolution.util.FastList;
@@ -20,34 +32,43 @@ import lineage2.gameserver.utils.Location;
 
 public class UserInfo extends L2GameServerPacket
 {
-	private boolean can_writeImpl = false, partyRoom;
-	private int _runSpd, _walkSpd, _swimRunSpd, _swimWalkSpd, _flRunSpd, _flWalkSpd, _flyRunSpd, _flyWalkSpd, _relation;
-	private double move_speed, attack_speed, col_radius, col_height;
-	private int[][] _inv;
-	private Location _loc, _fishLoc;
-	private int obj_id, vehicle_obj_id, _race, sex, base_class, level, curCp, maxCp, _enchant, _weaponFlag;
-	private long _exp;
-	private int curHp, maxHp, curMp, maxMp, curLoad, maxLoad, rec_left, rec_have;
-	private int _str, _con, _dex, _int, _wit, _men, _sp, ClanPrivs, InventoryLimit;
-	private int _patk, _patkspd, _pdef, evasion, accuracy, crit, _matk, _matkspd, _mevasion, _maccuracy, _mCritRate;
-	private int _mdef, pvp_flag, karma, hair_style, hair_color, face, gm_commands, fame, vitality;
+	private boolean can_writeImpl = false;
+	private final boolean partyRoom;
+	private final int _runSpd, _walkSpd, _swimRunSpd, _swimWalkSpd, _flRunSpd, _flWalkSpd;
+	private int _flyRunSpd;
+	private int _flyWalkSpd;
+	private int _relation;
+	private final double move_speed, attack_speed, col_radius, col_height;
+	private final int[][] _inv;
+	private final Location _loc, _fishLoc;
+	private final int obj_id, vehicle_obj_id, _race, sex, base_class, level, curCp, maxCp;
+	private int _enchant;
+	private final int _weaponFlag;
+	private final long _exp;
+	private final int curHp, maxHp, curMp, maxMp, curLoad, maxLoad, rec_left, rec_have;
+	private final int _str, _con, _dex, _int, _wit, _men, _sp, ClanPrivs, InventoryLimit;
+	private final int _patk, _patkspd, _pdef, evasion, accuracy, crit, _matk, _matkspd, _mevasion, _maccuracy, _mCritRate;
+	private final int _mdef, pvp_flag, karma, hair_style, hair_color, face, gm_commands, fame, vitality;
 	private int clan_id, clan_crest_id, ally_id, ally_crest_id, large_clan_crest_id;
-	private int private_store, can_crystalize, pk_kills, pvp_kills, class_id, agathion;
-	private int noble, hero, mount_id, cw_level;
-	private int name_color, running, pledge_class, pledge_type, title_color, transformation, fishing;
-	private int defenceFire, defenceWater, defenceWind, defenceEarth, defenceHoly, defenceUnholy;
+	private final int private_store, can_crystalize, pk_kills, pvp_kills, class_id, agathion;
+	private final int noble, hero;
+	private int mount_id;
+	private int cw_level;
+	private final int name_color, running, pledge_class, pledge_type, title_color, transformation;
+	private int fishing;
+	private final int defenceFire, defenceWater, defenceWind, defenceEarth, defenceHoly, defenceUnholy;
 	private int mount_type;
 	private String _name, title;
-	private EffectCubic[] cubics;
-	private Element attackElement;
-	private int attackElementValue;
-	private boolean isFlying, _allowMap;
-	private int talismans;
-	private boolean openCloak;
-	private double _expPercent;
-	private TeamType _team;
+	private final EffectCubic[] cubics;
+	private final Element attackElement;
+	private final int attackElementValue;
+	private final boolean isFlying, _allowMap;
+	private final int talismans;
+	private final boolean openCloak;
+	private final double _expPercent;
+	private final TeamType _team;
 	private final FastList<Integer> _aveList;
-
+	
 	public UserInfo(Player player)
 	{
 		if (player.getTransformationName() != null)
@@ -62,7 +83,7 @@ public class UserInfo extends L2GameServerPacket
 		else
 		{
 			_name = player.getName();
-
+			
 			Clan clan = player.getClan();
 			Alliance alliance = clan == null ? null : clan.getAlliance();
 			//
@@ -72,19 +93,27 @@ public class UserInfo extends L2GameServerPacket
 			//
 			ally_id = alliance == null ? 0 : alliance.getAllyId();
 			ally_crest_id = alliance == null ? 0 : alliance.getAllyCrestId();
-
+			
 			cw_level = 0;
 			title = player.getTitle();
 		}
-
+		
 		if (player.getPlayerAccess().GodMode && player.isInvisible())
+		{
 			title += "[I]";
+		}
 		if (player.isPolymorphed())
+		{
 			if (NpcHolder.getInstance().getTemplate(player.getPolyId()) != null)
+			{
 				title += " - " + NpcHolder.getInstance().getTemplate(player.getPolyId()).name;
+			}
 			else
+			{
 				title += " - Polymorphed";
-
+			}
+		}
+		
 		if (player.isMounted())
 		{
 			_enchant = 0;
@@ -97,16 +126,16 @@ public class UserInfo extends L2GameServerPacket
 			mount_id = 0;
 			mount_type = 0;
 		}
-
+		
 		_weaponFlag = player.getActiveWeaponInstance() == null ? 0x14 : 0x28;
-
+		
 		move_speed = player.getMovementSpeedMultiplier();
 		_runSpd = (int) (player.getRunSpeed() / move_speed);
 		_walkSpd = (int) (player.getWalkSpeed() / move_speed);
-
+		
 		_flRunSpd = (int) player.getTemplate().getBaseFlyRunSpd();
 		_flWalkSpd = (int) player.getTemplate().getBaseFlyWalkSpd();
-
+		
 		if (player.isFlying())
 		{
 			_flyRunSpd = _runSpd;
@@ -117,10 +146,10 @@ public class UserInfo extends L2GameServerPacket
 			_flyRunSpd = 0;
 			_flyWalkSpd = 0;
 		}
-
+		
 		_swimRunSpd = player.getSwimRunSpeed();
 		_swimWalkSpd = player.getSwimWalkSpeed();
-
+		
 		_inv = new int[Inventory.PAPERDOLL_MAX][3];
 		for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
 		{
@@ -128,11 +157,13 @@ public class UserInfo extends L2GameServerPacket
 			_inv[PAPERDOLL_ID][1] = player.getInventory().getPaperdollItemId(PAPERDOLL_ID);
 			_inv[PAPERDOLL_ID][2] = player.getInventory().getPaperdollAugmentationId(PAPERDOLL_ID);
 		}
-
+		
 		_relation = player.isClanLeader() ? 0x40 : 0;
 		for (GlobalEvent e : player.getEvents())
+		{
 			_relation = e.getUserRelation(player, _relation);
-
+		}
+		
 		_loc = player.getLoc();
 		obj_id = player.getObjectId();
 		vehicle_obj_id = player.isInBoat() ? player.getBoat().getObjectId() : 0x00;
@@ -193,13 +224,13 @@ public class UserInfo extends L2GameServerPacket
 		maxCp = player.getMaxCp();
 		curCp = (int) player.getCurrentCp();
 		_team = player.getTeam();
-		noble = player.isNoble() || player.isGM() && Config.GM_HERO_AURA ? 1 : 0; // 0x01:
+		noble = player.isNoble() || (player.isGM() && Config.GM_HERO_AURA) ? 1 : 0; // 0x01:
 		// symbol
 		// on
 		// char
 		// menu
 		// ctrl+I
-		hero = player.isHero() || player.isGM() && Config.GM_HERO_AURA ? 1 : 0; // 0x01:
+		hero = player.isHero() || (player.isGM() && Config.GM_HERO_AURA) ? 1 : 0; // 0x01:
 		// Hero
 		// Aura
 		// and
@@ -224,7 +255,7 @@ public class UserInfo extends L2GameServerPacket
 		agathion = player.getAgathionId();
 		fame = player.getFame();
 		vitality = player.getVitality();
-		partyRoom = player.getMatchingRoom() != null && player.getMatchingRoom().getType() == MatchingRoom.PARTY_MATCHING && player.getMatchingRoom().getLeader() == player;
+		partyRoom = (player.getMatchingRoom() != null) && (player.getMatchingRoom().getType() == MatchingRoom.PARTY_MATCHING) && (player.getMatchingRoom().getLeader() == player);
 		isFlying = player.isInFlyingTransform();
 		talismans = player.getTalismanCount();
 		openCloak = player.getOpenCloak();
@@ -232,15 +263,17 @@ public class UserInfo extends L2GameServerPacket
 		fishing = player.isFishing() ? 1 : 0; // Fishing Mode
 		can_writeImpl = true;
 	}
-
+	
 	@Override
 	protected final void writeImpl()
 	{
 		if (!can_writeImpl)
+		{
 			return;
-
+		}
+		
 		writeC(0x32);
-
+		
 		writeD(_loc.x);
 		writeD(_loc.y);
 		writeD(_loc.z + Config.CLIENT_Z_SHIFT);
@@ -267,19 +300,25 @@ public class UserInfo extends L2GameServerPacket
 		writeD(curLoad);
 		writeD(maxLoad);
 		writeD(_weaponFlag);
-
+		
 		for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
+		{
 			writeD(_inv[PAPERDOLL_ID][0]);
-
+		}
+		
 		for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
+		{
 			writeD(_inv[PAPERDOLL_ID][1]);
-
+		}
+		
 		for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
+		{
 			writeD(_inv[PAPERDOLL_ID][2]);
-
+		}
+		
 		writeD(talismans);
 		writeD(openCloak ? 0x01 : 0x00);
-
+		
 		writeD(0); // Tauti
 		writeD(0); // Tauti
 		writeD(0); // Tauti
@@ -289,7 +328,7 @@ public class UserInfo extends L2GameServerPacket
 		writeD(0); // Tauti
 		writeD(0); // Tauti
 		writeD(0); // Tauti
-
+		
 		writeD(_patk);
 		writeD(_patkspd);
 		writeD(_pdef);
@@ -337,7 +376,9 @@ public class UserInfo extends L2GameServerPacket
 		writeD(pvp_kills);
 		writeH(cubics.length);
 		for (EffectCubic cubic : cubics)
+		{
 			writeH(cubic == null ? 0 : cubic.getId());
+		}
 		writeC(partyRoom ? 0x01 : 0x00); // 1-find party members
 		writeC(isFlying ? 0x02 : 0x00);
 		writeD(ClanPrivs);
@@ -365,7 +406,7 @@ public class UserInfo extends L2GameServerPacket
 		writeD(title_color);
 		writeD(cw_level);
 		writeD(transformation); // Transformation id
-
+		
 		// AttackElement (0 - Fire, 1 - Water, 2 - Wind, 3 - Earth, 4 - Holy, 5
 		// - Dark, -2 - None)
 		writeH(attackElement.getId());
@@ -376,19 +417,19 @@ public class UserInfo extends L2GameServerPacket
 		writeH(defenceEarth); // DefAttrEarth
 		writeH(defenceHoly); // DefAttrHoly
 		writeH(defenceUnholy); // DefAttrUnholy
-
+		
 		writeD(agathion);
-
+		
 		// T2 Starts
 		writeD(fame); // Fame
 		writeD(_allowMap ? 1 : 0); // Minimap on Hellbound
 		writeD(vitality); // Vitality Points
-
+		
 		writeD(0x00);// Unknown GOD
 		writeD(0x00);// Unknown GOD (1 - Party searching?)
 		writeC(0x00);// Unknown GOD
 		writeD(0x00);// Unknown GOD
-
+		
 		if (_aveList != null)
 		{
 			writeD(_aveList.size());
@@ -401,7 +442,7 @@ public class UserInfo extends L2GameServerPacket
 		{
 			writeD(0x00);
 		}
-
+		
 		writeC(0); // Tauti
 	}
 }

@@ -48,6 +48,7 @@ import org.dom4j.Element;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <H>
  */
 public abstract class StatParser<H extends AbstractHolder> extends AbstractDirParser<H>
 {

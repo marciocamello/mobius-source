@@ -12,8 +12,6 @@
  */
 package ai;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
@@ -33,6 +31,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius

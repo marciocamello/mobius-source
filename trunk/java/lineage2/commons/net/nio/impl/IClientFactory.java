@@ -15,6 +15,7 @@ package lineage2.commons.net.nio.impl;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <T>
  */
 public interface IClientFactory<T extends MMOClient>
 {

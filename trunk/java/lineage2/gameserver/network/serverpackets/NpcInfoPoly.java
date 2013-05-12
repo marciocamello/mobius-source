@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.network.serverpackets;
 
 import javolution.util.FastList;
@@ -10,18 +22,22 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class NpcInfoPoly extends L2GameServerPacket
 {
 	// ddddddddddddddddddffffdddcccccSSddd dddddccffddddccd
-	private Creature _obj;
-	private int _x, _y, _z, _heading;
-	private int _npcId;
-	private boolean _isSummoned, _isRunning, _isInCombat, _isAlikeDead;
-	private int _mAtkSpd, _pAtkSpd;
-	private int _runSpd, _walkSpd, _swimRunSpd, _swimWalkSpd, _flRunSpd, _flWalkSpd, _flyRunSpd, _flyWalkSpd;
+	private final Creature _obj;
+	private final int _x, _y, _z, _heading;
+	private final int _npcId;
+	private final boolean _isSummoned, _isRunning, _isInCombat, _isAlikeDead;
+	private final int _mAtkSpd, _pAtkSpd;
+	private final int _runSpd, _walkSpd, _swimRunSpd, _swimWalkSpd;
+	private int _flRunSpd;
+	private int _flWalkSpd;
+	private int _flyRunSpd;
+	private int _flyWalkSpd;
 	private int _rhand, _lhand;
-	private String _name, _title;
-	private double colRadius, colHeight;
-	private TeamType _team;
-	private FastList<Integer> _aveList;
-
+	private final String _name, _title;
+	private final double colRadius, colHeight;
+	private final TeamType _team;
+	private final FastList<Integer> _aveList;
+	
 	public NpcInfoPoly(Player cha)
 	{
 		_obj = cha;
@@ -52,7 +68,7 @@ public class NpcInfoPoly extends L2GameServerPacket
 		_team = cha.getTeam();
 		_aveList = cha.getAveList();
 	}
-
+	
 	@Override
 	protected final void writeImpl()
 	{
@@ -87,8 +103,8 @@ public class NpcInfoPoly extends L2GameServerPacket
 		writeC(_isInCombat ? 1 : 0);
 		writeC(_isAlikeDead ? 1 : 0);
 		writeC(_isSummoned ? 2 : 0); // invisible ?? 0=false 1=true 2=summoned
-		                             // (only works if model has a summon
-		                             // animation)
+										// (only works if model has a summon
+										// animation)
 		writeS(_name);
 		writeS(_title);
 		writeD(0);
@@ -106,10 +122,10 @@ public class NpcInfoPoly extends L2GameServerPacket
 		writeD(0x00);
 		writeD(0x00);
 		writeD(0x00);
-
+		
 		writeC(1); // show name
 		writeC(1); // show title
-
+		
 		writeD(0x00);
 		writeD(0x00);
 		writeD(0x00);
@@ -121,7 +137,7 @@ public class NpcInfoPoly extends L2GameServerPacket
 		writeD(0x00);
 		writeC(0);
 		writeF(0);
-
+		
 		if (_aveList != null)
 		{
 			writeD(_aveList.size());

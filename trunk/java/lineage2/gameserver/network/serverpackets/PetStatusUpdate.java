@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Summon;
@@ -5,12 +17,12 @@ import lineage2.gameserver.utils.Location;
 
 public class PetStatusUpdate extends L2GameServerPacket
 {
-	private int type, obj_id, level;
-	private int maxFed, curFed, maxHp, curHp, maxMp, curMp;
-	private long exp, exp_this_lvl, exp_next_lvl;
-	private Location _loc;
-	private String title;
-
+	private final int type, obj_id, level;
+	private final int maxFed, curFed, maxHp, curHp, maxMp, curMp;
+	private final long exp, exp_this_lvl, exp_next_lvl;
+	private final Location _loc;
+	private final String title;
+	
 	public PetStatusUpdate(final Summon summon)
 	{
 		type = summon.getSummonType();
@@ -28,7 +40,7 @@ public class PetStatusUpdate extends L2GameServerPacket
 		exp_this_lvl = summon.getExpForThisLevel();
 		exp_next_lvl = summon.getExpForNextLevel();
 	}
-
+	
 	@Override
 	protected final void writeImpl()
 	{

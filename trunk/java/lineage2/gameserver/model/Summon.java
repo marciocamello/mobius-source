@@ -12,8 +12,6 @@
  */
 package lineage2.gameserver.model;
 
-import gnu.trove.iterator.TIntObjectIterator;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -61,6 +59,7 @@ import lineage2.gameserver.taskmanager.DecayTaskManager;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
+import gnu.trove.iterator.TIntObjectIterator;
 
 /**
  * @author Mobius
@@ -152,15 +151,15 @@ public abstract class Summon extends Playable
 					final Skill skl = owner.getEffectList().getEffectByStackType("ServitorShare").getSkill();
 					long currenttime = owner.getEffectList().getEffectByStackType("ServitorShare").getTime();
 					long duration = owner.getEffectList().getEffectByStackType("ServitorShare").getDuration();
-					for(EffectTemplate et : skl.getEffectTemplates())
+					for (EffectTemplate et : skl.getEffectTemplates())
 					{
-						if(et == null || et.getEffectType() != EffectType.ServitorShare)
+						if ((et == null) || (et.getEffectType() != EffectType.ServitorShare))
 						{
 							continue;
 						}
-						Env env = new Env(owner,SummonEffect,skl);
+						Env env = new Env(owner, SummonEffect, skl);
 						final Effect effect = et.getEffect(env);
-						if(effect == null)
+						if (effect == null)
 						{
 							continue;
 						}
@@ -586,7 +585,7 @@ public abstract class Summon extends Playable
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 		}
 	}
-
+	
 	/**
 	 * Method setDefendMode.
 	 * @param state boolean
@@ -595,7 +594,7 @@ public abstract class Summon extends Playable
 	{
 		_defend = state;
 	}
-
+	
 	/**
 	 * Method isFollowMode.
 	 * @return boolean
@@ -604,7 +603,7 @@ public abstract class Summon extends Playable
 	{
 		return _follow;
 	}
-
+	
 	/**
 	 * Method isFollowMode.
 	 * @return boolean
@@ -613,7 +612,7 @@ public abstract class Summon extends Playable
 	{
 		return _defend;
 	}
-
+	
 	/**
 	 * Field _updateEffectIconsTask.
 	 */
@@ -888,6 +887,7 @@ public abstract class Summon extends Playable
 	/**
 	 * Method broadcastCharInfo.
 	 */
+	@Override
 	public void broadcastCharInfo()
 	{
 		Player owner = getPlayer();
@@ -1012,7 +1012,7 @@ public abstract class Summon extends Playable
 	@Override
 	public List<L2GameServerPacket> addPacketList(Player forPlayer, Creature dropper)
 	{
-		List<L2GameServerPacket> list = new ArrayList<L2GameServerPacket>();
+		List<L2GameServerPacket> list = new ArrayList<>();
 		Player owner = getPlayer();
 		if (owner == forPlayer)
 		{

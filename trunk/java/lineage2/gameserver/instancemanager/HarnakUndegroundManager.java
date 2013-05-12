@@ -1,6 +1,16 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.instancemanager;
-
-import gnu.trove.map.hash.TIntObjectHashMap;
 
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Player;
@@ -8,8 +18,11 @@ import lineage2.gameserver.network.serverpackets.Earthquake;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.utils.NpcUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author KilRoy
@@ -18,47 +31,52 @@ public class HarnakUndegroundManager
 {
 	private static final Logger _log = LoggerFactory.getLogger(HarnakUndegroundManager.class);
 	private static HarnakUndegroundManager _instance;
-	private static int secondStageAltarCount;
-	private static int thirdStageAltarCount;
-	private static int HARNAK = 25772;
-	private static int ANGRY_HARNAK = 25774;
-	private static int DEMONIC_NOKTUM = 25773;
+	static int secondStageAltarCount;
+	static int thirdStageAltarCount;
+	static int HARNAK = 25772;
+	static int ANGRY_HARNAK = 25774;
+	static int DEMONIC_NOKTUM = 25773;
 	private static TIntObjectHashMap<Integer> npcListIdSecond;
 	private static TIntObjectHashMap<Integer> npcListIdThird;
-
+	
 	public HarnakUndegroundManager()
 	{
-		npcListIdSecond = new TIntObjectHashMap<Integer>();
-		npcListIdThird = new TIntObjectHashMap<Integer>();
+		npcListIdSecond = new TIntObjectHashMap<>();
+		npcListIdThird = new TIntObjectHashMap<>();
 		secondStageAltarCount = 0;
 		thirdStageAltarCount = 0;
 		_log.info("Harnak Undeground Manager: Loaded");
 	}
-
+	
 	public static HarnakUndegroundManager getInstance()
 	{
 		if (_instance == null)
+		{
 			_instance = new HarnakUndegroundManager();
+		}
 		return _instance;
 	}
-
+	
 	public boolean addSecondStagePoint(int npcId, final Player player)
 	{
-		if(requestAddNpcToListSecond(npcId))
+		if (requestAddNpcToListSecond(npcId))
 		{
-			if(secondStageAltarCount < 8)
-				secondStageAltarCount++;
-			if(secondStageAltarCount == 8)
+			if (secondStageAltarCount < 8)
 			{
-				ThreadPoolManager.getInstance().schedule(new Runnable(){
+				secondStageAltarCount++;
+			}
+			if (secondStageAltarCount == 8)
+			{
+				ThreadPoolManager.getInstance().schedule(new Runnable()
+				{
 					@Override
 					public void run()
 					{
-						if(player.isInParty())
+						if (player.isInParty())
 						{
-							for(Player players : player.getParty().getPartyMembers())
+							for (Player players : player.getParty().getPartyMembers())
 							{
-								if(players.isInRange(player, 1000))
+								if (players.isInRange(player, 1000))
 								{
 									players.sendPacket(new ExShowScreenMessage(NpcString.ALL_SEALS_HAVE_BEEN_BROKEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 									player.broadcastPacket(new Earthquake(players.getLoc(), 50, 4));
@@ -79,24 +97,27 @@ public class HarnakUndegroundManager
 		}
 		return false;
 	}
-
+	
 	public boolean addThirdStagePoint(int npcId, final Player player)
 	{
-		if(requestAddNpcToListThird(npcId))
+		if (requestAddNpcToListThird(npcId))
 		{
-			if(thirdStageAltarCount < 8)
-				thirdStageAltarCount++;
-			if(thirdStageAltarCount == 8)
+			if (thirdStageAltarCount < 8)
 			{
-				ThreadPoolManager.getInstance().schedule(new Runnable(){
+				thirdStageAltarCount++;
+			}
+			if (thirdStageAltarCount == 8)
+			{
+				ThreadPoolManager.getInstance().schedule(new Runnable()
+				{
 					@Override
 					public void run()
 					{
-						if(player.isInParty())
+						if (player.isInParty())
 						{
-							for(Player players : player.getParty().getPartyMembers())
+							for (Player players : player.getParty().getPartyMembers())
 							{
-								if(players.isInRange(player, 1000))
+								if (players.isInRange(player, 1000))
 								{
 									players.sendPacket(new ExShowScreenMessage(NpcString.ALL_JAILS_ARE_OPEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 									player.broadcastPacket(new Earthquake(player.getLoc(), 50, 4));
@@ -125,38 +146,42 @@ public class HarnakUndegroundManager
 		}
 		return false;
 	}
-
+	
 	public boolean requestAddNpcToListSecond(int npcId)
 	{
-		if(npcListIdSecond.get(npcId) == null)
+		if (npcListIdSecond.get(npcId) == null)
 		{
 			npcListIdSecond.put(npcId, Integer.valueOf(npcId));
 			return true;
 		}
 		return false;
 	}
-
+	
 	public void requestRemoveNpcFromListSecond(int npcId)
 	{
 		npcListIdSecond.remove(npcId);
-		if(secondStageAltarCount > 0)
+		if (secondStageAltarCount > 0)
+		{
 			secondStageAltarCount--;
+		}
 	}
-
+	
 	public boolean requestAddNpcToListThird(int npcId)
 	{
-		if(npcListIdThird.get(npcId) == null)
+		if (npcListIdThird.get(npcId) == null)
 		{
 			npcListIdThird.put(npcId, Integer.valueOf(npcId));
 			return true;
 		}
 		return false;
 	}
-
+	
 	public void requestRemoveNpcFromListThird(int npcId)
 	{
 		npcListIdThird.remove(npcId);
-		if(thirdStageAltarCount > 0)
+		if (thirdStageAltarCount > 0)
+		{
 			thirdStageAltarCount--;
+		}
 	}
 }

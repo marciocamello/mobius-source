@@ -151,18 +151,9 @@ public final class VillageMasterInstance extends NpcInstance
 		{
 			CertificationFunctions.showCertificationList(this, player, 65);
 		}/*
-		else if (command.equalsIgnoreCase("GetCertification65"))
-		{
-			CertificationFunctions.getCertification65(this, player);
-		}
-		else if (command.equalsIgnoreCase("GetCertification70"))
-		{
-			CertificationFunctions.getCertification70(this, player);
-		}
-		else if (command.equalsIgnoreCase("GetCertification80"))
-		{
-			CertificationFunctions.getCertification80(this, player);
-		}*/
+		 * else if (command.equalsIgnoreCase("GetCertification65")) { CertificationFunctions.getCertification65(this, player); } else if (command.equalsIgnoreCase("GetCertification70")) { CertificationFunctions.getCertification70(this, player); } else if
+		 * (command.equalsIgnoreCase("GetCertification80")) { CertificationFunctions.getCertification80(this, player); }
+		 */
 		else
 		{
 			super.onBypassFeedback(player, command);

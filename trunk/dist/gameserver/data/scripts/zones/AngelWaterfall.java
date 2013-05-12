@@ -12,7 +12,6 @@
  */
 package zones;
 
-import quests._10301_ShadowOfTerrorBlackishRedFog;
 import lineage2.gameserver.instancemanager.QuestManager;
 import lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener;
 import lineage2.gameserver.model.Creature;
@@ -24,6 +23,7 @@ import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
+import quests._10301_ShadowOfTerrorBlackishRedFog;
 
 /**
  * @author Mobius
@@ -32,7 +32,10 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public class AngelWaterfall implements ScriptFile
 {
 	private static ZoneListener _zoneListener;
-	private static String[] zones = {"[25_20_telzone_to_magmeld]"};
+	private static String[] zones =
+	{
+		"[25_20_telzone_to_magmeld]"
+	};
 	
 	private void init()
 	{
@@ -101,11 +104,11 @@ public class AngelWaterfall implements ScriptFile
 			Player player = cha.getPlayer();
 			
 			QuestState qs = player.getQuestState(_10301_ShadowOfTerrorBlackishRedFog.class);
-			if(qs != null && qs.getCond() == 3 && player.getVar("instance10301") == null)
+			if ((qs != null) && (qs.getCond() == 3) && (player.getVar("instance10301") == null))
 			{
 				Quest q = QuestManager.getQuest(10301);
 				player.processQuestEvent(q.getName(), "enterInstance", null);
-				//player.setVar("instance10301", "true", -1);
+				// player.setVar("instance10301", "true", -1);
 				return;
 			}
 			if (!player.getVarB("@25_20_telzone_to_magmeld"))

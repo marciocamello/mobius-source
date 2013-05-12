@@ -202,7 +202,8 @@ public class SchedulingPattern
 	 * Method buildValueMatcher.
 	 * @param str String
 	 * @param parser ValueParser
-	 * @return ValueMatcher * @throws Exception
+	 * @return ValueMatcher
+	 * @throws Exception
 	 */
 	private ValueMatcher buildValueMatcher(String str, ValueParser parser) throws Exception
 	{
@@ -247,7 +248,8 @@ public class SchedulingPattern
 	 * Method parseListElement.
 	 * @param str String
 	 * @param parser ValueParser
-	 * @return List<Integer> * @throws Exception
+	 * @return List<Integer>
+	 * @throws Exception
 	 */
 	private List<Integer> parseListElement(String str, ValueParser parser) throws Exception
 	{
@@ -296,7 +298,8 @@ public class SchedulingPattern
 	 * Method parseRange.
 	 * @param str String
 	 * @param parser ValueParser
-	 * @return List<Integer> * @throws Exception
+	 * @return List<Integer>
+	 * @throws Exception
 	 */
 	private List<Integer> parseRange(String str, ValueParser parser) throws Exception
 	{
@@ -519,7 +522,8 @@ public class SchedulingPattern
 	 * @param value String
 	 * @param aliases String[]
 	 * @param offset int
-	 * @return int * @throws Exception
+	 * @return int
+	 * @throws Exception
 	 */
 	static int parseAlias(String value, String[] aliases, int offset) throws Exception
 	{
@@ -568,7 +572,8 @@ public class SchedulingPattern
 		/**
 		 * Method parse.
 		 * @param value String
-		 * @return int * @throws Exception
+		 * @return int
+		 * @throws Exception
 		 */
 		public int parse(String value) throws Exception;
 		

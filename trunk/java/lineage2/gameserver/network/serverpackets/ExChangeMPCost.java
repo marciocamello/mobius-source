@@ -10,15 +10,15 @@ package lineage2.gameserver.network.serverpackets;
 
 public class ExChangeMPCost extends L2GameServerPacket
 {
-	private int unk1;
-	private double unk2;
-
+	private final int unk1;
+	private final double unk2;
+	
 	public ExChangeMPCost(int unk1, double unk2)
 	{
 		this.unk1 = unk1;
 		this.unk2 = unk2;
 	}
-
+	
 	@Override
 	protected void writeImpl()
 	{

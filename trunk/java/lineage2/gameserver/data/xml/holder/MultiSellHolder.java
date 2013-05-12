@@ -12,8 +12,6 @@
  */
 package lineage2.gameserver.data.xml.holder;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +32,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
+
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius
@@ -551,7 +551,7 @@ public class MultiSellHolder
 				_log.warn("MultiSell [" + multiSellId + "] Production [" + entry.getProduction().get(0).getItemId() + "] not found!");
 				return null;
 			}
-			if ((entry.getIngredients().get(0).getItemId() == 57 &&  item.getReferencePrice() > entry.getIngredients().get(0).getItemCount()) && !Config.LOGIN_SERVER_IS_PVP)
+			if (((entry.getIngredients().get(0).getItemId() == 57) && (item.getReferencePrice() > entry.getIngredients().get(0).getItemCount())) && !Config.LOGIN_SERVER_IS_PVP)
 			{
 				_log.warn("MultiSell [" + multiSellId + "] Production '" + item.getName() + "' [" + entry.getProduction().get(0).getItemId() + "] price is lower than referenced | " + item.getReferencePrice() + " > " + entry.getIngredients().get(0).getItemCount());
 			}

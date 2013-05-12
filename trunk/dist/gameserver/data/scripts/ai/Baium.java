@@ -12,8 +12,6 @@
  */
 package ai;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,6 +22,7 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.instances.NpcInstance;
 import bosses.BaiumManager;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius

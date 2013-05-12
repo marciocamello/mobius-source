@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package quests;
 
 import java.util.ArrayList;
@@ -18,20 +30,20 @@ import lineage2.gameserver.utils.NpcUtils;
 
 public class _10301_ShadowOfTerrorBlackishRedFog extends Quest implements ScriptFile
 {
-	//massives && single Npc
-	private static List<NpcInstance> _Priests = new ArrayList<NpcInstance>();
-	private static List<NpcInstance> _MobsToDie = new ArrayList<NpcInstance>();
+	// massives && single Npc
+	private static List<NpcInstance> _Priests = new ArrayList<>();
+	private static List<NpcInstance> _MobsToDie = new ArrayList<>();
 	private static NpcInstance _mainZhrec = null;
-	//npc & items
+	// npc & items
 	private static final int RADA = 33100;
 	private static final int SLAKI = 32893;
 	private static final int CRYSTALL = 17604;
 	private static final int SPIRIT_ITEM = 17588;
 	private static final int LARGE_VERDANT_WILDS = 33489;
-
+	
 	private static final int WISP = 32938;
-	private boolean _spawned = false;
-
+	private final boolean _spawned = false;
+	
 	public _10301_ShadowOfTerrorBlackishRedFog()
 	{
 		super(false);
@@ -45,13 +57,13 @@ public class _10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 		
 		addLevelCheck(90, 99);
 	}
-
+	
 	@Override
 	public String onSkillUse(NpcInstance npc, Skill skill, QuestState qs)
 	{
 		int skillId = skill.getId();
 		int npcId = npc.getNpcId();
-		if (skillId == 12011 && npcId == LARGE_VERDANT_WILDS && _spawned == false)
+		if ((skillId == 12011) && (npcId == LARGE_VERDANT_WILDS) && (_spawned == false))
 		{
 			NpcUtils.spawnSingle(WISP, Location.findPointToStay(qs.getPlayer().getLoc(), 50, 100, 0), 120000);
 			NpcUtils.spawnSingle(WISP, Location.findPointToStay(qs.getPlayer().getLoc(), 50, 100, 0), 120000);
@@ -59,27 +71,26 @@ public class _10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 		return null;
 	}
 	
-
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		Player player = st.getPlayer();
-		if(player == null)
+		if (player == null)
 		{
 			return null;
 		}
-		if(event.equalsIgnoreCase("33100-8.htm"))
+		if (event.equalsIgnoreCase("33100-8.htm"))
 		{
 			st.setCond(2);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 			st.giveItems(CRYSTALL, 8);
 		}
-		if(event.equalsIgnoreCase("33100-10.htm"))
+		if (event.equalsIgnoreCase("33100-10.htm"))
 		{
 			st.giveItems(CRYSTALL, 3);
 		}
-		if(event.equalsIgnoreCase("32893-6.htm"))
+		if (event.equalsIgnoreCase("32893-6.htm"))
 		{
 			st.giveItems(57, 1863420);
 			st.giveItems(17380, 1);
@@ -88,17 +99,17 @@ public class _10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
-		if(event.equalsIgnoreCase("enterInstance"))
+		if (event.equalsIgnoreCase("enterInstance"))
 		{
-			enterInstance(st, 192); //instance ID
-			st.startQuestTimer("initNpcs", 5000); //delay as in movie
+			enterInstance(st, 192); // instance ID
+			st.startQuestTimer("initNpcs", 5000); // delay as in movie
 			return null;
 		}
-		else if(event.equalsIgnoreCase("initNpcs"))
+		else if (event.equalsIgnoreCase("initNpcs"))
 		{
 			_mainZhrec = player.getReflection().addSpawnWithoutRespawn(33361, new Location(183989, 85803, -7752, 22740), 0);
 			player.getReflection().addSpawnWithoutRespawn(33362, new Location(183961, 85734, -7752, 19716), 0);
-
+			
 			NpcInstance _npc2 = player.getReflection().addSpawnWithoutRespawn(33361, new Location(183993, 86055, -7752, 42404), 0);
 			NpcInstance _npc3 = player.getReflection().addSpawnWithoutRespawn(33361, new Location(183767, 85872, -7752, 2944), 0);
 			NpcInstance _npc4 = player.getReflection().addSpawnWithoutRespawn(33361, new Location(183913, 86084, -7752, 49296), 0);
@@ -128,7 +139,7 @@ public class _10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 			_Priests.add(_npc8);
 			_Priests.add(_npc9);
 			_Priests.add(_npc10);
-
+			
 			_MobsToDie.add(_npc12);
 			_MobsToDie.add(_npc13);
 			_MobsToDie.add(_npc14);
@@ -138,22 +149,22 @@ public class _10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 			_MobsToDie.add(_npc18);
 			_MobsToDie.add(_npc19);
 			_MobsToDie.add(_npc20);
-
-			st.startQuestTimer("startDiologue1", 5000); //delay as in movie
+			
+			st.startQuestTimer("startDiologue1", 5000); // delay as in movie
 			return null;
 		}
-
-		else if(event.equalsIgnoreCase("startDiologue1"))
+		
+		else if (event.equalsIgnoreCase("startDiologue1"))
 		{
-			//			Functions.npcSay(_mainZhrec, NpcString.DRINK_THE_SACRIFICE_OF_BLOOD_THAT_WE_HAVE);
-			st.startQuestTimer("startDiologue2", 3000); //dlg 2
+			// Functions.npcSay(_mainZhrec, NpcString.DRINK_THE_SACRIFICE_OF_BLOOD_THAT_WE_HAVE);
+			st.startQuestTimer("startDiologue2", 3000); // dlg 2
 			return null;
 		}
-		else if(event.equalsIgnoreCase("startDiologue2"))
+		else if (event.equalsIgnoreCase("startDiologue2"))
 		{
-			for(NpcInstance npcP : _Priests)
+			for (NpcInstance npcP : _Priests)
 			{
-				if(Rnd.chance(50))
+				if (Rnd.chance(50))
 				{
 					Functions.npcSay(npcP, NpcString.AND_BRING_DOWN_THE_HAMMER_OF_JUSTICE);
 				}
@@ -161,47 +172,49 @@ public class _10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 				{
 					Functions.npcSay(npcP, NpcString.FOR_THE_DESTRUCTION_AND_RESURRECTION);
 				}
-			}	
-			for(int i = 0 ; i < 5 ; i++)
-				st.getPlayer().broadcastPacket(new MagicSkillUse(st.getPlayer(), 14496, 1, 500, 0));
-			st.startQuestTimer("startDiologue3", 5000); //dlg 3
-			return null;
-		}
-
-		else if(event.equalsIgnoreCase("startDiologue3"))
-		{
-			for(NpcInstance npcP : _Priests)
-			{
-				Functions.npcSay(npcP, NpcString.DEAR_THE_GODDESS_OF_DESTRUCTION_THE_LIGHT_AND_THEIR_CREATURES_FEAR_YOU);	
 			}
-			_mainZhrec.broadcastPacket(new MagicSkillUse(_mainZhrec, 14497, 1, 5000, 0));		
-			st.startQuestTimer("startKillTimer", 5000); //dlg 3
+			for (int i = 0; i < 5; i++)
+			{
+				st.getPlayer().broadcastPacket(new MagicSkillUse(st.getPlayer(), 14496, 1, 500, 0));
+			}
+			st.startQuestTimer("startDiologue3", 5000); // dlg 3
 			return null;
 		}
-
-		else if(event.equalsIgnoreCase("startKillTimer"))
+		
+		else if (event.equalsIgnoreCase("startDiologue3"))
 		{
-			for(NpcInstance npcP : _MobsToDie)
+			for (NpcInstance npcP : _Priests)
+			{
+				Functions.npcSay(npcP, NpcString.DEAR_THE_GODDESS_OF_DESTRUCTION_THE_LIGHT_AND_THEIR_CREATURES_FEAR_YOU);
+			}
+			_mainZhrec.broadcastPacket(new MagicSkillUse(_mainZhrec, 14497, 1, 5000, 0));
+			st.startQuestTimer("startKillTimer", 5000); // dlg 3
+			return null;
+		}
+		
+		else if (event.equalsIgnoreCase("startKillTimer"))
+		{
+			for (NpcInstance npcP : _MobsToDie)
 			{
 				npcP.doDie(null);
 			}
-			st.startQuestTimer("startSpawnLast", 5000); //spawn guards
+			st.startQuestTimer("startSpawnLast", 5000); // spawn guards
 			return null;
 		}
-
-		else if(event.equalsIgnoreCase("startSpawnLast"))
+		
+		else if (event.equalsIgnoreCase("startSpawnLast"))
 		{
-			NpcInstance npcP = player.getReflection().addSpawnWithoutRespawn(33365, new Location(player.getX()+Rnd.get(150), 85780+Rnd.get(150), -7752, 15428), 0);
+			NpcInstance npcP = player.getReflection().addSpawnWithoutRespawn(33365, new Location(player.getX() + Rnd.get(150), 85780 + Rnd.get(150), -7752, 15428), 0);
 			player.getReflection().addSpawnWithoutRespawn(33365, new Location(player.getX() + Rnd.get(150), 85780 + Rnd.get(150), -7752, 15428), 0);
 			player.getReflection().addSpawnWithoutRespawn(33365, new Location(player.getX() + Rnd.get(150), 85780 + Rnd.get(150), -7752, 15428), 0);
 			player.getReflection().addSpawnWithoutRespawn(33365, new Location(player.getX() + Rnd.get(150), 85780 + Rnd.get(150), -7752, 15428), 0);
 			player.getReflection().addSpawnWithoutRespawn(33365, new Location(player.getX() + Rnd.get(150), 85780 + Rnd.get(150), -7752, 15428), 0);
 			player.getReflection().addSpawnWithoutRespawn(33365, new Location(player.getX() + Rnd.get(150), 85780 + Rnd.get(150), -7752, 15428), 0);
 			Functions.npcSay(npcP, NpcString.AH_UH_AH_UH_AH);
-			st.startQuestTimer("ExitInstance", 3000); //exitInstance
+			st.startQuestTimer("ExitInstance", 3000); // exitInstance
 			return null;
 		}
-		else if(event.equalsIgnoreCase("ExitInstance"))
+		else if (event.equalsIgnoreCase("ExitInstance"))
 		{
 			st.getPlayer().setVar("instance10301", "true", -1);
 			st.getPlayer().teleToLocation(207559, 86429, -1000, 0);
@@ -209,7 +222,7 @@ public class _10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 		}
 		return event;
 	}
-
+	
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
@@ -217,56 +230,57 @@ public class _10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 		int npcId = npc.getNpcId();
 		int state = st.getState();
 		int cond = st.getCond();
-		if(npcId == RADA)
+		if (npcId == RADA)
 		{
-			if(state == COMPLETED)
+			if (state == COMPLETED)
 			{
 				return "33100-comp.htm";
 			}
-			if(player.getLevel() < 90)
+			if (player.getLevel() < 90)
 			{
 				return "33100-lvl.htm";
 			}
-			if(cond == 0)
+			if (cond == 0)
 			{
 				return "33100.htm";
 			}
-			if(state == 2)
+			if (state == 2)
 			{
-				if(cond == 2 && st.getQuestItemsCount(CRYSTALL) == 0)
+				if ((cond == 2) && (st.getQuestItemsCount(CRYSTALL) == 0))
 				{
 					return "33100-9.htm";
 				}
-				if(cond == 3)
+				if (cond == 3)
 				{
 					return "33100-11.htm";
 				}
 			}
-
+			
 		}
-		if(npcId == SLAKI)
+		if (npcId == SLAKI)
 		{
-			if(state == COMPLETED)
+			if (state == COMPLETED)
 			{
 				return "32893-comp.htm";
 			}
-
-			if(cond == 3 && st.getQuestItemsCount(SPIRIT_ITEM) >= 1 && player.getVar("instance10301") != null)
+			
+			if ((cond == 3) && (st.getQuestItemsCount(SPIRIT_ITEM) >= 1) && (player.getVar("instance10301") != null))
 			{
 				return "32893-1.htm";
 			}
 		}
 		return "noquest";
 	}
-
+	
+	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		if(cond != 2)
+		if (cond != 2)
 		{
 			return null;
 		}
-		if(!Rnd.chance(10))
+		if (!Rnd.chance(10))
 		{
 			return null;
 		}
@@ -275,17 +289,17 @@ public class _10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 		st.setCond(3);
 		return null;
 	}
-
+	
 	@Override
 	public void onLoad()
 	{
 	}
-
+	
 	@Override
 	public void onReload()
 	{
 	}
-
+	
 	@Override
 	public void onShutdown()
 	{

@@ -12,7 +12,6 @@
  */
 package lineage2.gameserver.tables;
 
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,10 +41,10 @@ public class EnchantStatBonusTable
 	 */
 	private static Logger _log = LoggerFactory.getLogger(EnchantStatBonusTable.class);
 	
-	private static HashMap <Integer, List<enchantStat>> _enchantStatListArmor = new HashMap<Integer,List <enchantStat>>();
+	private static HashMap<Integer, List<enchantStat>> _enchantStatListArmor = new HashMap<>();
 	
-	private static HashMap <WeaponType, List<enchantStat>> _enchantStatListWeapon = new HashMap<WeaponType,List <enchantStat>>();
-
+	private static HashMap<WeaponType, List<enchantStat>> _enchantStatListWeapon = new HashMap<>();
+	
 	private List<enchantStat> _enchantDefenseList;
 	
 	private static EnchantStatBonusTable _instance = new EnchantStatBonusTable();
@@ -88,45 +87,45 @@ public class EnchantStatBonusTable
 			{
 				if ("list".equalsIgnoreCase(n.getNodeName()))
 				{
-					List<enchantStat> defense = new ArrayList<enchantStat>();
-					List<enchantStat> chest = new ArrayList<enchantStat>();
-					List<enchantStat> legging = new ArrayList<enchantStat>();
-					List<enchantStat> head = new ArrayList<enchantStat>();
-					List<enchantStat> hand = new ArrayList<enchantStat>();
-					List<enchantStat> feet = new ArrayList<enchantStat>();
+					List<enchantStat> defense = new ArrayList<>();
+					List<enchantStat> chest = new ArrayList<>();
+					List<enchantStat> legging = new ArrayList<>();
+					List<enchantStat> head = new ArrayList<>();
+					List<enchantStat> hand = new ArrayList<>();
+					List<enchantStat> feet = new ArrayList<>();
 					
-					List<enchantStat> sword = new ArrayList<enchantStat>();
-					List<enchantStat> blunt = new ArrayList<enchantStat>();
-					List<enchantStat> rapier = new ArrayList<enchantStat>();
-					List<enchantStat> ancient = new ArrayList<enchantStat>();
-					List<enchantStat> pole = new ArrayList<enchantStat>();
-					List<enchantStat> dagger = new ArrayList<enchantStat>();
-					List<enchantStat> dualdagger = new ArrayList<enchantStat>();
-					List<enchantStat> crossbow = new ArrayList<enchantStat>();
+					List<enchantStat> sword = new ArrayList<>();
+					List<enchantStat> blunt = new ArrayList<>();
+					List<enchantStat> rapier = new ArrayList<>();
+					List<enchantStat> ancient = new ArrayList<>();
+					List<enchantStat> pole = new ArrayList<>();
+					List<enchantStat> dagger = new ArrayList<>();
+					List<enchantStat> dualdagger = new ArrayList<>();
+					List<enchantStat> crossbow = new ArrayList<>();
 					
-					List<enchantStat> bigsword = new ArrayList<enchantStat>();
-					List<enchantStat> bigblunt = new ArrayList<enchantStat>();
-					List<enchantStat> dualsword = new ArrayList<enchantStat>();
-					List<enchantStat> dualblunt = new ArrayList<enchantStat>();
-					List<enchantStat> dualfist = new ArrayList<enchantStat>();
-
-					List<enchantStat> bow = new ArrayList<enchantStat>();
-					for(Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+					List<enchantStat> bigsword = new ArrayList<>();
+					List<enchantStat> bigblunt = new ArrayList<>();
+					List<enchantStat> dualsword = new ArrayList<>();
+					List<enchantStat> dualblunt = new ArrayList<>();
+					List<enchantStat> dualfist = new ArrayList<>();
+					
+					List<enchantStat> bow = new ArrayList<>();
+					for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 					{
 						Double opt1;
 						Double opt2;
 						Integer grade;
 						NamedNodeMap attrs = d.getAttributes();
 						Node att;
-						if("enchant".equalsIgnoreCase(d.getNodeName()))
+						if ("enchant".equalsIgnoreCase(d.getNodeName()))
 						{
 							att = attrs.getNamedItem("grade");
-							if(att == null)
-							{	
+							if (att == null)
+							{
 								_log.info("EnchantStatBonusTable: Missing grade. skipping");
 								continue;
 							}
-							if("R".equalsIgnoreCase(att.getNodeValue()))
+							if ("R".equalsIgnoreCase(att.getNodeValue()))
 							{
 								grade = ItemTemplate.CRYSTAL_R;
 							}
@@ -140,7 +139,7 @@ public class EnchantStatBonusTable
 							}
 							else if ("B".equalsIgnoreCase(att.getNodeValue()))
 							{
-								grade = ItemTemplate.CRYSTAL_B;								
+								grade = ItemTemplate.CRYSTAL_B;
 							}
 							else if ("C".equalsIgnoreCase(att.getNodeValue()))
 							{
@@ -160,14 +159,14 @@ public class EnchantStatBonusTable
 								continue;
 							}
 							att = attrs.getNamedItem("opt1");
-							if(att == null)
+							if (att == null)
 							{
 								_log.info("EnchantStatBonusTable: Missing opt1. skipping");
 								continue;
 							}
 							opt1 = Double.parseDouble(att.getNodeValue());
 							att = attrs.getNamedItem("opt2");
-							if(att == null)
+							if (att == null)
 							{
 								opt2 = 0D;
 							}
@@ -176,90 +175,90 @@ public class EnchantStatBonusTable
 								opt2 = Double.parseDouble(att.getNodeValue());
 							}
 							att = attrs.getNamedItem("name");
-							if(att == null)
-							{	
+							if (att == null)
+							{
 								_log.info("EnchantStatBonusTable: Missing name. skipping");
 								continue;
 							}
-							if("defense".equalsIgnoreCase(att.getNodeValue()))
+							if ("defense".equalsIgnoreCase(att.getNodeValue()))
 							{
-								defense.add(new enchantStat(grade,opt1,opt2));
+								defense.add(new enchantStat(grade, opt1, opt2));
 							}
-							else if("chest".equalsIgnoreCase(att.getNodeValue()))
+							else if ("chest".equalsIgnoreCase(att.getNodeValue()))
 							{
-								chest.add(new enchantStat(grade,opt1,opt2));
+								chest.add(new enchantStat(grade, opt1, opt2));
 							}
 							else if ("legging".equalsIgnoreCase(att.getNodeValue()))
 							{
-								legging.add(new enchantStat(grade,opt1,opt2));
+								legging.add(new enchantStat(grade, opt1, opt2));
 							}
 							else if ("head".equalsIgnoreCase(att.getNodeValue()))
 							{
-								head.add(new enchantStat(grade,opt1,opt2));
+								head.add(new enchantStat(grade, opt1, opt2));
 							}
 							else if ("hand".equalsIgnoreCase(att.getNodeValue()))
 							{
-								hand.add(new enchantStat(grade,opt1,opt2));
+								hand.add(new enchantStat(grade, opt1, opt2));
 							}
 							else if ("feet".equalsIgnoreCase(att.getNodeValue()))
 							{
-								feet.add(new enchantStat(grade,opt1,opt2));
+								feet.add(new enchantStat(grade, opt1, opt2));
 							}
 							else if ("sword".equalsIgnoreCase(att.getNodeValue()))
 							{
-								sword.add(new enchantStat(grade,opt1,opt2));
+								sword.add(new enchantStat(grade, opt1, opt2));
 							}
-							else if("blunt".equalsIgnoreCase(att.getNodeValue()))
+							else if ("blunt".equalsIgnoreCase(att.getNodeValue()))
 							{
-								blunt.add(new enchantStat(grade,opt1,opt2));								
+								blunt.add(new enchantStat(grade, opt1, opt2));
 							}
-							else if("rapier".equalsIgnoreCase(att.getNodeValue()))
+							else if ("rapier".equalsIgnoreCase(att.getNodeValue()))
 							{
-								rapier.add(new enchantStat(grade,opt1,opt2));								
+								rapier.add(new enchantStat(grade, opt1, opt2));
 							}
-							else if("ancient".equalsIgnoreCase(att.getNodeValue()))
+							else if ("ancient".equalsIgnoreCase(att.getNodeValue()))
 							{
-								ancient.add(new enchantStat(grade,opt1,opt2));								
+								ancient.add(new enchantStat(grade, opt1, opt2));
 							}
-							else if("pole".equalsIgnoreCase(att.getNodeValue()))
+							else if ("pole".equalsIgnoreCase(att.getNodeValue()))
 							{
-								pole.add(new enchantStat(grade,opt1,opt2));								
+								pole.add(new enchantStat(grade, opt1, opt2));
 							}
-							else if("dagger".equalsIgnoreCase(att.getNodeValue()))
+							else if ("dagger".equalsIgnoreCase(att.getNodeValue()))
 							{
-								dagger.add(new enchantStat(grade,opt1,opt2));								
+								dagger.add(new enchantStat(grade, opt1, opt2));
 							}
-							else if("crossbow".equalsIgnoreCase(att.getNodeValue()))
+							else if ("crossbow".equalsIgnoreCase(att.getNodeValue()))
 							{
-								crossbow.add(new enchantStat(grade,opt1,opt2));								
+								crossbow.add(new enchantStat(grade, opt1, opt2));
 							}
-							else if("dualdagger".equalsIgnoreCase(att.getNodeValue()))
+							else if ("dualdagger".equalsIgnoreCase(att.getNodeValue()))
 							{
-								dualdagger.add(new enchantStat(grade,opt1,opt2));								
+								dualdagger.add(new enchantStat(grade, opt1, opt2));
 							}
-							else if("bigsword".equalsIgnoreCase(att.getNodeValue()))
+							else if ("bigsword".equalsIgnoreCase(att.getNodeValue()))
 							{
-								bigsword.add(new enchantStat(grade,opt1,opt2));								
+								bigsword.add(new enchantStat(grade, opt1, opt2));
 							}
-							else if("bigblunt".equalsIgnoreCase(att.getNodeValue()))
+							else if ("bigblunt".equalsIgnoreCase(att.getNodeValue()))
 							{
-								bigblunt.add(new enchantStat(grade,opt1,opt2));								
+								bigblunt.add(new enchantStat(grade, opt1, opt2));
 							}
-							else if("dualsword".equalsIgnoreCase(att.getNodeValue()))
+							else if ("dualsword".equalsIgnoreCase(att.getNodeValue()))
 							{
-								dualsword.add(new enchantStat(grade,opt1,opt2));								
+								dualsword.add(new enchantStat(grade, opt1, opt2));
 							}
-							else if("dualblunt".equalsIgnoreCase(att.getNodeValue()))
+							else if ("dualblunt".equalsIgnoreCase(att.getNodeValue()))
 							{
-								dualblunt.add(new enchantStat(grade,opt1,opt2));								
+								dualblunt.add(new enchantStat(grade, opt1, opt2));
 							}
-							else if("dualfist".equalsIgnoreCase(att.getNodeValue()))
+							else if ("dualfist".equalsIgnoreCase(att.getNodeValue()))
 							{
-								dualfist.add(new enchantStat(grade,opt1,opt2));								
+								dualfist.add(new enchantStat(grade, opt1, opt2));
 							}
-							else if("bow".equalsIgnoreCase(att.getNodeValue()))
+							else if ("bow".equalsIgnoreCase(att.getNodeValue()))
 							{
-								bow.add(new enchantStat(grade,opt1,opt2));								
+								bow.add(new enchantStat(grade, opt1, opt2));
 							}
 							else
 							{
@@ -294,17 +293,17 @@ public class EnchantStatBonusTable
 					
 					_enchantStatListWeapon.put(WeaponType.BOW, bow);
 					int i = 0;
-					for(List <enchantStat> iterator : _enchantStatListArmor.values())
+					for (List<enchantStat> iterator : _enchantStatListArmor.values())
 					{
 						i += iterator.size();
 					}
-					_log.info("EnchantStatBonusTable: Loaded " + i +" Armor enchant bonuses.");
+					_log.info("EnchantStatBonusTable: Loaded " + i + " Armor enchant bonuses.");
 					i = 0;
-					for(List <enchantStat> iterator : _enchantStatListWeapon.values())
+					for (List<enchantStat> iterator : _enchantStatListWeapon.values())
 					{
 						i += iterator.size();
 					}
-					_log.info("EnchantStatBonusTable: Loaded " + i +" Weapon enchant bonuses.");
+					_log.info("EnchantStatBonusTable: Loaded " + i + " Weapon enchant bonuses.");
 				}
 			}
 			_log.info("EnchantStatBonusTable: Loaded enchant bonuses.");
@@ -315,51 +314,45 @@ public class EnchantStatBonusTable
 			e.printStackTrace();
 		}
 	}
-
+	
 	public final double getDefenseBonus(Integer CrystalType, Integer EnchantLevel, Integer OELimit)
 	{
-		for(enchantStat crystalType : _enchantDefenseList)
+		for (enchantStat crystalType : _enchantDefenseList)
 		{
-			if(crystalType.getGrade() == CrystalType)
+			if (crystalType.getGrade() == CrystalType)
 			{
-				if(CrystalType != ItemTemplate.CRYSTAL_R)
+				if (CrystalType != ItemTemplate.CRYSTAL_R)
 				{
-					if(EnchantLevel <= OELimit)
+					if (EnchantLevel <= OELimit)
 					{
 						return crystalType.getOption1();
 					}
-					else
-					{
-						return crystalType.getOption2();
-					}					
+					return crystalType.getOption2();
 				}
-				else
-				{
-					return crystalType.getOption1();				
-				}
+				return crystalType.getOption1();
 			}
 		}
 		_log.info("EnchantStatBonusTable: Incorrect Crystal Type");
 		return 0;
 	}
-
+	
 	public final double getStatBonus(Integer bodyPart, boolean isMagicStat)
 	{
-		List <enchantStat> bonus = _enchantStatListArmor.get(bodyPart);
-		if(bonus == null)
+		List<enchantStat> bonus = _enchantStatListArmor.get(bodyPart);
+		if (bonus == null)
 		{
 			_log.info("EnchantStatBonusTable: Incorrect part for bonus on bodyPart Integer: " + bodyPart);
 			return 0;
 		}
-		for(enchantStat statBonus : bonus)
+		for (enchantStat statBonus : bonus)
 		{
-			if(isMagicStat && statBonus.getOption2() > 0)
+			if (isMagicStat && (statBonus.getOption2() > 0))
 			{
-				return statBonus.getOption2(); 
+				return statBonus.getOption2();
 			}
-			else if(!isMagicStat && statBonus.getOption1() > 0)
+			else if (!isMagicStat && (statBonus.getOption1() > 0))
 			{
-				return statBonus.getOption1();				
+				return statBonus.getOption1();
 			}
 			else
 			{
@@ -371,28 +364,28 @@ public class EnchantStatBonusTable
 	
 	public final double getWeaponStatBonus(WeaponType weapon, Integer CrystalType, boolean isMagicStat)
 	{
-		List <enchantStat> bonus = _enchantStatListWeapon.get(weapon);
-		if(bonus == null)
+		List<enchantStat> bonus = _enchantStatListWeapon.get(weapon);
+		if (bonus == null)
 		{
 			_log.info("EnchantStatBonusTable: Incorrect weapon for bonus");
 			return 0;
 		}
 		double option1 = 0;
 		double option2 = 0;
-		for(enchantStat stats : bonus)
+		for (enchantStat stats : bonus)
 		{
-			if(stats.getGrade() == CrystalType)
+			if (stats.getGrade() == CrystalType)
 			{
 				option1 = stats.getOption1();
 				option2 = stats.getOption2();
 				break;
 			}
 		}
-		if(isMagicStat && option2 > 0)
+		if (isMagicStat && (option2 > 0))
 		{
 			return option2;
 		}
-		else if (!isMagicStat && option1 > 0)
+		else if (!isMagicStat && (option1 > 0))
 		{
 			return option1;
 		}

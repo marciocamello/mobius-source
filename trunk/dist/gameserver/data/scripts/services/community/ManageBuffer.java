@@ -40,8 +40,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * @author vegax
- * @version $Revision: 1.0 $
- * Summons Buff fix by vegax for L2JEuropa
+ * @version $Revision: 1.0 $ Summons Buff fix by vegax for L2JEuropa
  */
 public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoardHandler
 {
@@ -167,17 +166,17 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 			Skill skill = SkillTable.getInstance().getInfo(id, lvl);
 			if (!player.getVarB("isPlayerBuff"))
 			{
-					for (Summon summon : player.getSummonList())
+				for (Summon summon : player.getSummonList())
+				{
+					for (EffectTemplate et : skill.getEffectTemplates())
 					{
-						for (EffectTemplate et : skill.getEffectTemplates())
-						{
-							Env env = new Env(summon, summon, skill);
-							Effect effect = et.getEffect(env);
-							effect.setPeriod(time);
-							summon.getEffectList().addEffect(effect);
-							summon.updateEffectIconsImpl();
-						}
+						Env env = new Env(summon, summon, skill);
+						Effect effect = et.getEffect(env);
+						effect.setPeriod(time);
+						summon.getEffectList().addEffect(effect);
+						summon.updateEffectIconsImpl();
 					}
+				}
 			}
 			else
 			{

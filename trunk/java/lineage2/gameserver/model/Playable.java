@@ -668,7 +668,7 @@ public abstract class Playable extends Creature
 								npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, this, ai.damage == 0 ? aggro / 2 : aggro);
 							}
 						}
-						//Notify Attack also on skill
+						// Notify Attack also on skill
 						if ((target.isServitor() || target.isPlayer()) && skill.isOffensive())
 						{
 							if (!skill.isAI())
@@ -677,7 +677,7 @@ public abstract class Playable extends Creature
 								target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, this, damage);
 							}
 						}
-						//Notify Attack on Skill End
+						// Notify Attack on Skill End
 					}
 				}
 				if (checkPvP(target, skill))

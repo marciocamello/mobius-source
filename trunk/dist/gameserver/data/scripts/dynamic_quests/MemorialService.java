@@ -1,6 +1,19 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package dynamic_quests;
 
 import lineage2.gameserver.listener.actor.player.OnSocialActionListener;
+import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
@@ -9,6 +22,7 @@ import lineage2.gameserver.model.quest.dynamic.DynamicQuest;
 import lineage2.gameserver.network.clientpackets.RequestActionUse;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.scripts.ScriptFile;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,7 +31,7 @@ public class MemorialService extends DynamicQuest implements ScriptFile
 	private static final Logger _log = LoggerFactory.getLogger(MemorialService.class);
 	// ID
 	private static final int QUEST_ID = 3;
-	//private static final String START_TIME = "00 23 * * Mon";
+	// private static final String START_TIME = "00 23 * * Mon";
 	private static final String START_TIME = "00 17 * * *";
 	private static final int MIN_LEVEL = 40;
 	private static final int MAX_LEVEL = 99;
@@ -32,7 +46,7 @@ public class MemorialService extends DynamicQuest implements ScriptFile
 	private static final int MAX_TASK_POINT = 1;
 	private static final int REWARD_1 = 33501;
 	private final OnSocialActionListener socialActionListener = new OnSocialActionListenerImpl();
-
+	
 	public MemorialService()
 	{
 		super(QUEST_ID, DURATION);
@@ -44,18 +58,18 @@ public class MemorialService extends DynamicQuest implements ScriptFile
 		addLevelCheck(MIN_LEVEL, MAX_LEVEL);
 		initSchedulingPattern(START_TIME);
 	}
-
+	
 	@Override
 	protected boolean onStartCondition()
 	{
 		return true;
 	}
-
+	
 	@Override
 	protected void onStart()
 	{
 	}
-
+	
 	@Override
 	protected void onStop(boolean success)
 	{
@@ -63,15 +77,17 @@ public class MemorialService extends DynamicQuest implements ScriptFile
 		{
 			Player player = GameObjectsStorage.getPlayer(objectId);
 			if (player != null)
+			{
 				removeParticipant(player);
+			}
 		}
 	}
-
+	
 	@Override
 	protected void onFinish()
 	{
 	}
-
+	
 	@Override
 	protected String onRequestHtml(Player player, boolean participant)
 	{
@@ -83,18 +99,16 @@ public class MemorialService extends DynamicQuest implements ScriptFile
 				{
 					return "dc0003_start001.htm";
 				}
-				else
-				{
-					return "dc0003_context001.htm";
-				}
+				return "dc0003_context001.htm";
 			}
 			else if (isSuccessed())
 			{
 				boolean rewardReceived = rewardReceived(player);
 				if (rewardReceived)
+				{
 					return "dc0003_reward_received001.htm";
-				else
-					return "dc0003_reward001.htm";
+				}
+				return "dc0003_reward001.htm";
 			}
 			else
 			{
@@ -103,7 +117,7 @@ public class MemorialService extends DynamicQuest implements ScriptFile
 		}
 		return null;
 	}
-
+	
 	@Override
 	protected boolean onPlayerEnter(Player player)
 	{
@@ -114,12 +128,12 @@ public class MemorialService extends DynamicQuest implements ScriptFile
 		}
 		return false;
 	}
-
+	
 	@Override
 	protected void onTaskCompleted(int taskId)
 	{
 	}
-
+	
 	@Override
 	protected String onDialogEvent(String event, Player player)
 	{
@@ -140,57 +154,70 @@ public class MemorialService extends DynamicQuest implements ScriptFile
 		}
 		return response;
 	}
-
+	
 	@Override
 	protected void onAddParticipant(Player player)
 	{
 		player.getListeners().add(socialActionListener);
 	}
-
+	
 	@Override
 	protected void onRemoveParticipant(Player player)
 	{
 		player.getListeners().remove(socialActionListener);
 	}
-
+	
 	@Override
-	protected boolean isZoneQuest() {
+	protected boolean isZoneQuest()
+	{
 		return false;
 	}
-
+	
 	@Override
 	public void onLoad()
 	{
-		_log.info("Dynamic Quest: Loaded quest ID "+QUEST_ID+". Name: Memorial Service - Campaign");
+		_log.info("Dynamic Quest: Loaded quest ID " + QUEST_ID + ". Name: Memorial Service - Campaign");
 	}
-
+	
 	@Override
 	public void onReload()
 	{
 	}
-
+	
 	@Override
 	public void onShutdown()
 	{
 	}
-
+	
 	private final class OnSocialActionListenerImpl implements OnSocialActionListener
 	{
+		/**
+		 * 
+		 */
+		public OnSocialActionListenerImpl()
+		{
+			// TODO Auto-generated constructor stub
+		}
+		
 		@Override
 		public void onSocialAction(Player player, GameObject target, RequestActionUse.Action action)
 		{
-			if (target != null && target.isNpc() && player.isInRange(target, NpcInstance.INTERACTION_DISTANCE))
+			if ((target != null) && target.isNpc() && player.isInRange(target, Creature.INTERACTION_DISTANCE))
 			{
 				NpcInstance npc = (NpcInstance) target;
 				switch (npc.getNpcId())
 				{
 					case PRIEST_KHYBER:
 						if (action.value == SocialAction.SORROW)
+						{
 							increaseTaskPoint(SORROW_EMOTE, player, 1);
+						}
 						break;
 					case GUARD_JANSON:
 						if (action.value == SocialAction.BOW)
+						{
 							increaseTaskPoint(PERFORM_POLITE, player, 1);
+						}
 						break;
 				}
 			}

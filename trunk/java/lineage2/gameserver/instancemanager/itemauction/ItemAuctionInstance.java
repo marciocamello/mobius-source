@@ -12,8 +12,6 @@
  */
 package lineage2.gameserver.instancemanager.itemauction;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -44,6 +42,8 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius
@@ -518,7 +518,8 @@ public class ItemAuctionInstance
 	/**
 	 * Method loadAuction.
 	 * @param auctionId int
-	 * @return ItemAuction * @throws SQLException
+	 * @return ItemAuction
+	 * @throws SQLException
 	 */
 	private ItemAuction loadAuction(int auctionId) throws SQLException
 	{

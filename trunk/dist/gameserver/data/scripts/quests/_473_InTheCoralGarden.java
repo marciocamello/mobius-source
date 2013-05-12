@@ -12,13 +12,13 @@
  */
 package quests;
 
-import gnu.trove.map.hash.TIntIntHashMap;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExQuestNpcLogList;
 import lineage2.gameserver.scripts.ScriptFile;
+import gnu.trove.map.hash.TIntIntHashMap;
 
 public class _473_InTheCoralGarden extends Quest implements ScriptFile
 {

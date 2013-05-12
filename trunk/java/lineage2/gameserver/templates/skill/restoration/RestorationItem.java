@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.templates.skill.restoration;
 
 import lineage2.commons.util.Rnd;
@@ -7,31 +19,31 @@ public final class RestorationItem
 	private final int _id;
 	private final int _minCount;
 	private final int _maxCount;
-
+	
 	public RestorationItem(int id, int minCount, int maxCount)
 	{
-		this._id = id;
-		this._minCount = minCount;
-		this._maxCount = maxCount;
+		_id = id;
+		_minCount = minCount;
+		_maxCount = maxCount;
 	}
-
+	
 	public int getId()
 	{
-		return this._id;
+		return _id;
 	}
-
+	
 	public int getMinCount()
 	{
-		return this._minCount;
+		return _minCount;
 	}
-
+	
 	public int getMaxCount()
 	{
-		return this._maxCount;
+		return _maxCount;
 	}
-
+	
 	public int getRandomCount()
 	{
-		return Rnd.get(this._minCount, this._maxCount);
+		return Rnd.get(_minCount, _maxCount);
 	}
 }

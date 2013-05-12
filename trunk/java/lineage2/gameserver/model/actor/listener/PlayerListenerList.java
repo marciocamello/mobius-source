@@ -219,11 +219,12 @@ public class PlayerListenerList extends CharListenerList
 			}
 		}
 	}
-
+	
 	public void onSocialAction(Action action)
 	{
 		if (!global.getListeners().isEmpty())
-		{	for (Listener<Creature> listener : global.getListeners())
+		{
+			for (Listener<Creature> listener : global.getListeners())
 			{
 				if (OnSocialActionListener.class.isInstance(listener))
 				{
@@ -242,11 +243,12 @@ public class PlayerListenerList extends CharListenerList
 			}
 		}
 	}
-
+	
 	public void onUseItem(ItemInstance item)
 	{
 		if (!global.getListeners().isEmpty())
-		{	for (Listener<Creature> listener : global.getListeners())
+		{
+			for (Listener<Creature> listener : global.getListeners())
 			{
 				if (OnUseItemListener.class.isInstance(listener))
 				{

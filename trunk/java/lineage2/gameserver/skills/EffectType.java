@@ -615,7 +615,11 @@ public enum EffectType
 	 * Method makeEffect.
 	 * @param env Env
 	 * @param template EffectTemplate
-	 * @return Effect * @throws IllegalArgumentException * @throws InstantiationException * @throws IllegalAccessException * @throws InvocationTargetException
+	 * @return Effect
+	 * @throws IllegalArgumentException
+	 * @throws InstantiationException
+	 * @throws IllegalAccessException
+	 * @throws InvocationTargetException
 	 */
 	public Effect makeEffect(Env env, EffectTemplate template) throws IllegalArgumentException, InstantiationException, IllegalAccessException, InvocationTargetException
 	{

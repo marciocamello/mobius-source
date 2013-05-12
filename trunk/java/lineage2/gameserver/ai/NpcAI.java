@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.ai;
 
 import lineage2.commons.util.Rnd;
@@ -23,15 +35,15 @@ public class NpcAI extends CharacterAI
 	private int _currentWalkerPoint;
 	private boolean _delete;
 	private boolean _isActive;
-
+	
 	public NpcAI(NpcInstance actor)
 	{
 		super(actor);
-
+		
 		_randomActions = actor.getTemplate().getRandomActions();
 		_haveRandomActions = ((_randomActions != null) && (_randomActions.getActionsCount() > 0));
 		_currentActionId = 0;
- 
+		
 		int walkerRouteId = actor.getParameter("walker_route_id", -1);
 		_walkerRoute = actor.getTemplate().getWalkerRoute(walkerRouteId);
 		_haveWalkerRoute = ((_walkerRoute != null) && (_walkerRoute.isValid()));
@@ -40,7 +52,8 @@ public class NpcAI extends CharacterAI
 		_delete = false;
 		_isActive = false;
 	}
-
+	
+	@Override
 	protected void onEvtArrived()
 	{
 		if (!_isActive)
@@ -49,7 +62,8 @@ public class NpcAI extends CharacterAI
 		}
 		continueWalkerRoute();
 	}
-
+	
+	@Override
 	protected void onEvtTimer(int timerId, Object arg1, Object arg2)
 	{
 		if (timerId == -1000)
@@ -60,33 +74,42 @@ public class NpcAI extends CharacterAI
 				{
 					return;
 				}
-				moveToLocation((Location)arg1);
+				moveToLocation((Location) arg1);
 			}
 		}
 		else if (timerId == -2000)
 		{
 			if (_haveRandomActions)
+			{
 				makeRandomAction();
+			}
 		}
 	}
-
+	
+	@Override
 	public boolean isActive()
 	{
 		return _isActive;
 	}
-
+	
+	@Override
 	public void stopAITask()
 	{
 		_isActive = false;
 		if (_haveWalkerRoute)
 		{
 			if (_toBackWay)
+			{
 				_currentWalkerPoint += 1;
+			}
 			else
+			{
 				_currentWalkerPoint -= 1;
+			}
 		}
 	}
-
+	
+	@Override
 	public void startAITask()
 	{
 		_isActive = true;
@@ -101,34 +124,37 @@ public class NpcAI extends CharacterAI
 			{
 				return;
 			}
- 			addTimer(-2000, Rnd.get(0, action.getDelay()) * 1000L);
+			addTimer(-2000, Rnd.get(0, action.getDelay()) * 1000L);
 		}
 	}
-
+	
 	private void continueWalkerRoute()
 	{
 		if (_haveWalkerRoute)
 		{
-	       WalkerRoutePoint route = _walkerRoute.getPoint(_currentWalkerPoint);
-	       if (route == null)
-	       {
-	    	   return;
-	       }
-	       NpcInstance actor = getActor();
-	       int socialActionId = route.getSocialActionId();
-	       if (socialActionId >= 0)
-	       {
-	    	   actor.broadcastPacket(new L2GameServerPacket[] { new SocialAction(actor.getObjectId(), socialActionId) });
-	       }
-	       NpcString phrase = route.getPhrase();
-	       if (phrase != null)
-	       {
-	    	   Functions.npcSay(actor, phrase, new String[0]);
-	       }
-	       moveToNextPoint(route.getDelay());
+			WalkerRoutePoint route = _walkerRoute.getPoint(_currentWalkerPoint);
+			if (route == null)
+			{
+				return;
+			}
+			NpcInstance actor = getActor();
+			int socialActionId = route.getSocialActionId();
+			if (socialActionId >= 0)
+			{
+				actor.broadcastPacket(new L2GameServerPacket[]
+				{
+					new SocialAction(actor.getObjectId(), socialActionId)
+				});
+			}
+			NpcString phrase = route.getPhrase();
+			if (phrase != null)
+			{
+				Functions.npcSay(actor, phrase, new String[0]);
+			}
+			moveToNextPoint(route.getDelay());
 		}
 	}
- 
+	
 	private void moveToNextPoint(int delay)
 	{
 		if (!_isActive)
@@ -151,20 +177,24 @@ public class NpcAI extends CharacterAI
 				{
 					_currentWalkerPoint += 1;
 				}
-				if (_currentWalkerPoint >= _walkerRoute.size() - 1)
+				if (_currentWalkerPoint >= (_walkerRoute.size() - 1))
 				{
 					_toBackWay = true;
 				}
 				if (_currentWalkerPoint == 0)
 				{
-					_toBackWay = false; break;
+					_toBackWay = false;
+					break;
 				}
+				break;
 			case 2:
 				_currentWalkerPoint += 1;
-				if (_currentWalkerPoint >= _walkerRoute.size() - 1)
+				if (_currentWalkerPoint >= (_walkerRoute.size() - 1))
 				{
-					_currentWalkerPoint = 0; break;
+					_currentWalkerPoint = 0;
+					break;
 				}
+				break;
 			case 3:
 				if (_walkerRoute.size() > 1)
 				{
@@ -182,19 +212,21 @@ public class NpcAI extends CharacterAI
 					return;
 				}
 				_currentWalkerPoint += 1;
-				if (_currentWalkerPoint >= _walkerRoute.size() - 1)
+				if (_currentWalkerPoint >= (_walkerRoute.size() - 1))
 				{
-					_delete = true; break;
+					_delete = true;
+					break;
 				}
+				break;
 			case 5:
 				_currentWalkerPoint += 1;
-				if (_currentWalkerPoint >= _walkerRoute.size() - 1)
+				if (_currentWalkerPoint >= (_walkerRoute.size() - 1))
 				{
 					actor.stopMove();
 				}
 				break;
 		}
- 
+		
 		WalkerRoutePoint route = _walkerRoute.getPoint(_currentWalkerPoint);
 		if (route == null)
 		{
@@ -217,7 +249,7 @@ public class NpcAI extends CharacterAI
 			moveToLocation(route.getLocation());
 		}
 	}
- 
+	
 	private void makeRandomAction()
 	{
 		if (!_isActive)
@@ -242,7 +274,10 @@ public class NpcAI extends CharacterAI
 		int socialActionId = action.getSocialActionId();
 		if (socialActionId >= 0)
 		{
-			actor.broadcastPacket(new L2GameServerPacket[] { new SocialAction(actor.getObjectId(), socialActionId) });
+			actor.broadcastPacket(new L2GameServerPacket[]
+			{
+				new SocialAction(actor.getObjectId(), socialActionId)
+			});
 		}
 		NpcString phrase = action.getPhrase();
 		if (phrase != null)
@@ -251,7 +286,7 @@ public class NpcAI extends CharacterAI
 		}
 		addTimer(-2000, action.getDelay() * 1000L);
 	}
-
+	
 	private void moveToLocation(Location loc)
 	{
 		NpcInstance actor = getActor();
@@ -264,11 +299,12 @@ public class NpcAI extends CharacterAI
 			clientStopMoving();
 			actor.teleToLocation(loc);
 			continueWalkerRoute();
-  		}
+		}
 	}
-
+	
+	@Override
 	public NpcInstance getActor()
 	{
-		return (NpcInstance)super.getActor();
+		return (NpcInstance) super.getActor();
 	}
 }

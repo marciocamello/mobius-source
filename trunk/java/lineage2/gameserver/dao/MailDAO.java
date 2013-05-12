@@ -367,7 +367,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
-			//ADDED FOR MAIL FIX
+			// ADDED FOR MAIL FIX
 			statement = con.prepareStatement(REMOVE_OWN_MAIL);
 			statement.setInt(1, mail.getSenderId());
 			statement.setInt(2, mail.getMessageId());
@@ -378,7 +378,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 			statement.setInt(2, mail.getMessageId());
 			statement.setInt(3, 0);
 			statement.execute();
-			//END
+			// END
 			statement = con.prepareStatement(REMOVE_MAIL);
 			statement.setInt(1, mail.getMessageId());
 			statement.execute();
@@ -589,7 +589,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 			return mail;
 		}
 		mail = load0(id);
-		if (mail==null)
+		if (mail == null)
 		{
 			_log.warn("Mail load error id:" + id);
 		}

@@ -297,7 +297,8 @@ public class FishingChampionShipManager
 	
 	/**
 	 * Method getFishLength.
-	 * @param par inrin * @return Stringg
+	 * @param par inrin
+	 * @return
 	 */
 	
 	public String getFishLength(int par)
@@ -311,7 +312,8 @@ public class FishingChampionShipManager
 	
 	/**
 	 * Method getCurrentFishLength.
-	 * @param par inrin * @return Stringg
+	 * @param par inrin
+	 * @return
 	 */
 	
 	public String getCurrentFishLength(int par)
@@ -679,7 +681,8 @@ public class FishingChampionShipManager
 		}
 		
 		/**
-		 * Method getName.ring * @return String
+		 * Method getName.ring
+		 * @return
 		 */
 		
 		public String getName()
@@ -688,7 +691,8 @@ public class FishingChampionShipManager
 		}
 		
 		/**
-		 * Method getRewardType. int * @return int
+		 * Method getRewardType. int
+		 * @return
 		 */
 		
 		public int getRewardType()
@@ -697,7 +701,8 @@ public class FishingChampionShipManager
 		}
 		
 		/**
-		 * Method getLength.uble * @return double
+		 * Method getLength.uble
+		 * @return
 		 */
 		
 		public double getLength()

@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package instances;
 
 import java.util.List;
@@ -14,7 +26,6 @@ import lineage2.gameserver.utils.Location;
 
 /**
  * ����� ������������ Rim Pailaka - Rune
- *
  * @author pchayka
  */
 
@@ -34,31 +45,31 @@ public class RimPailaka extends Reflection
 	private static final long firstwavedelay = 120 * 1000L;
 	private static final long secondwavedelay = 480 * 1000L; // 8 ����� ����� ������ �����
 	private static final long thirdwavedelay = 480 * 1000L; // 16 ����� ����� ������ �����
-
+	
 	private ScheduledFuture<?> initTask;
 	private ScheduledFuture<?> firstwaveTask;
-	private ScheduledFuture<?> secondWaveTask;
-	private ScheduledFuture<?> thirdWaveTask;
-
+	ScheduledFuture<?> secondWaveTask;
+	ScheduledFuture<?> thirdWaveTask;
+	
 	public RimPailaka()
 	{
 		super();
 	}
-
+	
 	@Override
 	public void onCreate()
 	{
 		super.onCreate();
-
+		
 		ThreadPoolManager.getInstance().schedule(new CollapseTimer(10), (getInstancedZone().getTimelimit() - 10) * 60 * 1000L);
 		initTask = ThreadPoolManager.getInstance().schedule(new InvestigatorsSpawn(), initdelay);
 		firstwaveTask = ThreadPoolManager.getInstance().schedule(new FirstWave(), firstwavedelay);
 	}
-
+	
 	public class InvestigatorsSpawn extends RunnableImpl
 	{
 		@Override
-		public void runImpl() throws Exception
+		public void runImpl()
 		{
 			Location ranger = new Location(49192, -12232, -9384, 0);
 			Location mage = new Location(49192, -12456, -9392, 0);
@@ -70,92 +81,122 @@ public class RimPailaka extends Reflection
 			addSpawnWithoutRespawn(SeducedWarrior, warrior, 0);
 		}
 	}
-
+	
 	public class FirstWave extends RunnableImpl
 	{
 		@Override
-		public void runImpl() throws Exception
+		public void runImpl()
 		{
 			List<Player> who = getPlayers();
-			if(who != null && !who.isEmpty())
-				for(Player player : who)
+			if ((who != null) && !who.isEmpty())
+			{
+				for (Player player : who)
+				{
 					player.sendPacket(new ExShowScreenMessage("First stage begins!", 3000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
-
+				}
+			}
+			
 			Location bossnminions = new Location(50536, -12232, -9384, 32768);
 			addSpawnWithoutRespawn(KanadisGuide1, bossnminions, 0);
-			for(int i = 0; i < 10; i++)
+			for (int i = 0; i < 10; i++)
+			{
 				addSpawnWithoutRespawn(KanadisFollower1, bossnminions, 400);
+			}
 			secondWaveTask = ThreadPoolManager.getInstance().schedule(new SecondWave(), secondwavedelay);
 		}
 	}
-
+	
 	public class SecondWave extends RunnableImpl
 	{
 		@Override
-		public void runImpl() throws Exception
+		public void runImpl()
 		{
 			List<Player> who = getPlayers();
-			if(who != null && !who.isEmpty())
-				for(Player player : who)
+			if ((who != null) && !who.isEmpty())
+			{
+				for (Player player : who)
+				{
 					player.sendPacket(new ExShowScreenMessage("Second stage begins!", 3000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
-
+				}
+			}
+			
 			Location bossnminions = new Location(50536, -12232, -9384, 32768);
 			addSpawnWithoutRespawn(KanadisGuide2, bossnminions, 0);
-			for(int i = 0; i < 10; i++)
+			for (int i = 0; i < 10; i++)
+			{
 				addSpawnWithoutRespawn(KanadisFollower2, bossnminions, 400);
+			}
 			thirdWaveTask = ThreadPoolManager.getInstance().schedule(new ThirdWave(), thirdwavedelay);
 		}
 	}
-
+	
 	public class ThirdWave extends RunnableImpl
 	{
 		@Override
-		public void runImpl() throws Exception
+		public void runImpl()
 		{
 			List<Player> who = getPlayers();
-			if(who != null && !who.isEmpty())
-				for(Player player : who)
+			if ((who != null) && !who.isEmpty())
+			{
+				for (Player player : who)
+				{
 					player.sendPacket(new ExShowScreenMessage("Third stage begins!", 3000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
-
+				}
+			}
+			
 			Location bossnminions = new Location(50536, -12232, -9384, 32768);
 			addSpawnWithoutRespawn(KanadisGuide3, bossnminions, 100);
 			addSpawnWithoutRespawn(KanadisGuide3, bossnminions, 100);
-			for(int i = 0; i < 10; i++)
+			for (int i = 0; i < 10; i++)
+			{
 				addSpawnWithoutRespawn(KanadisFollower3, bossnminions, 400);
+			}
 		}
 	}
-
+	
 	public class CollapseTimer extends RunnableImpl
 	{
 		private int _minutes = 0;
-
+		
 		public CollapseTimer(int minutes)
 		{
 			_minutes = minutes;
 		}
-
+		
 		@Override
-		public void runImpl() throws Exception
+		public void runImpl()
 		{
 			List<Player> who = getPlayers();
-			if(who != null && !who.isEmpty())
-				for(Player player : who)
+			if ((who != null) && !who.isEmpty())
+			{
+				for (Player player : who)
+				{
 					player.sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(_minutes));
+				}
+			}
 		}
 	}
-
+	
 	@Override
 	public void onCollapse()
 	{
-		if(initTask != null)
+		if (initTask != null)
+		{
 			initTask.cancel(true);
-		if(firstwaveTask != null)
+		}
+		if (firstwaveTask != null)
+		{
 			firstwaveTask.cancel(true);
-		if(secondWaveTask != null)
+		}
+		if (secondWaveTask != null)
+		{
 			secondWaveTask.cancel(true);
-		if(thirdWaveTask != null)
+		}
+		if (thirdWaveTask != null)
+		{
 			thirdWaveTask.cancel(true);
-
+		}
+		
 		super.onCollapse();
 	}
 }

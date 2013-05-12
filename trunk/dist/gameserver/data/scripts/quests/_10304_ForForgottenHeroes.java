@@ -12,11 +12,11 @@
  */
 package quests;
 
-import gnu.trove.map.hash.TIntIntHashMap;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
+import gnu.trove.map.hash.TIntIntHashMap;
 
 public class _10304_ForForgottenHeroes extends Quest implements ScriptFile
 {

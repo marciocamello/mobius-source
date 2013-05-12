@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.network.serverpackets;
 
 import lineage2.commons.util.Rnd;
@@ -12,11 +24,13 @@ public final class SendStatus extends L2GameServerPacket
 	private static int max_online_players = 0;
 	private static int online_priv_store = 0;
 	private static long last_update = 0;
-
+	
 	public SendStatus()
 	{
-		if (System.currentTimeMillis() - last_update < MIN_UPDATE_PERIOD)
+		if ((System.currentTimeMillis() - last_update) < MIN_UPDATE_PERIOD)
+		{
 			return;
+		}
 		last_update = System.currentTimeMillis();
 		int i = 0;
 		int j = 0;
@@ -24,13 +38,15 @@ public final class SendStatus extends L2GameServerPacket
 		{
 			i++;
 			if (player.isInStoreMode() && (!Config.SENDSTATUS_TRADE_JUST_OFFLINE || player.isInOfflineMode()))
+			{
 				j++;
+			}
 		}
 		online_players = i;
 		online_priv_store = (int) Math.floor(j * Config.SENDSTATUS_TRADE_MOD);
 		max_online_players = Math.max(max_online_players, online_players);
 	}
-
+	
 	@Override
 	protected final void writeImpl()
 	{
@@ -40,11 +56,13 @@ public final class SendStatus extends L2GameServerPacket
 		writeD(online_players); // Current Online
 		writeD(online_players); // Current Online
 		writeD(online_priv_store); // Priv.Store Chars
-
+		
 		// SEND TRASH
 		writeD(0x002C0030);
 		for (int x = 0; x < 10; x++)
+		{
 			writeH(41 + Rnd.get(17));
+		}
 		writeD(43 + Rnd.get(17));
 		int z = 36219 + Rnd.get(1987);
 		writeD(z);

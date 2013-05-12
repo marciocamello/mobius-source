@@ -17,6 +17,7 @@ import java.util.Queue;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <T>
  */
 public abstract class FIFORunnableQueue<T extends Runnable> implements Runnable
 {

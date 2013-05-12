@@ -1,14 +1,21 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package quests;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import ai.NpcArcherAI;
-import ai.NpcHealerAI;
-import ai.NpcMageAI;
-import ai.NpcWarriorAI;
 
 import lineage2.gameserver.listener.actor.OnDeathListener;
 import lineage2.gameserver.model.Creature;
@@ -27,6 +34,10 @@ import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
+import ai.NpcArcherAI;
+import ai.NpcHealerAI;
+import ai.NpcMageAI;
+import ai.NpcWarriorAI;
 
 public abstract class SagasSuperclass extends Quest
 {
@@ -34,13 +45,13 @@ public abstract class SagasSuperclass extends Quest
 	{
 		super(party);
 	}
-
+	
 	protected int StartNPC = 0;
 	protected Race StartRace;
-
+	
 	// massives
-	private static List<NpcInstance> _npcWaves = new ArrayList<NpcInstance>();
-
+	static List<NpcInstance> _npcWaves = new ArrayList<>();
+	
 	private static final int Avanguard_aden = 33407;
 	private static final int Avanguard_corpse1 = 33166;
 	private static final int Avanguard_corpse2 = 33167;
@@ -49,7 +60,7 @@ public abstract class SagasSuperclass extends Quest
 	private static final int Avanguard_member = 33165;
 	// instance npc:
 	private static final int Avanguard_camptain = 33170;
-
+	
 	private static final int Avanguard_Ellis = 33171;
 	private static final int Avanguard_Barton = 33172;
 	private static final int Avanguard_Xaok = 33173;
@@ -57,7 +68,7 @@ public abstract class SagasSuperclass extends Quest
 	// npc helpers
 	private static final int Van_Archer = 33414;
 	private static final int Van_Infantry = 33415;
-
+	
 	// monsters
 	private static final int Shaman = 27430;
 	private static final int Slayer = 27431;
@@ -66,14 +77,14 @@ public abstract class SagasSuperclass extends Quest
 	private static final int Guard_Darkness = 27434;
 	// boss
 	private static final int Death_wound = 27425;
-
+	
 	// items
 	private static final int DeadSoldierOrbs = 17748;
 	private static final int Ring_Shout = 17484;
 	// onKill won't work here because mobs also killing mobs
-	private DeathListener deathListener = new DeathListener();
-
-	protected static Map<Integer, Class<?>> Quests = new HashMap<Integer, Class<?>>();
+	private final DeathListener deathListener = new DeathListener();
+	
+	protected static Map<Integer, Class<?>> Quests = new HashMap<>();
 	static
 	{
 		Quests.put(10341, _10341_DayOfDestinyHumanFate.class);
@@ -83,9 +94,29 @@ public abstract class SagasSuperclass extends Quest
 		Quests.put(10345, _10345_DayOfDestinyDwarfsFate.class);
 		Quests.put(10346, _10346_DayOfDestinyKamaelsFate.class);
 	}
-
-	protected static int[][] QuestRace = new int[][] { { 0 }, { 1 }, { 2 }, { 3 }, { 4 }, { 5 } };
-
+	
+	protected static int[][] QuestRace = new int[][]
+	{
+		{
+			0
+		},
+		{
+			1
+		},
+		{
+			2
+		},
+		{
+			3
+		},
+		{
+			4
+		},
+		{
+			5
+		}
+	};
+	
 	protected void init()
 	{
 		addStartNpc(StartNPC);
@@ -101,13 +132,13 @@ public abstract class SagasSuperclass extends Quest
 		addTalkId(Avanguard_Barton);
 		addTalkId(Avanguard_Xaok);
 		addTalkId(Avanguard_Ellia);
-
+		
 		addQuestItem(DeadSoldierOrbs);
 		addQuestItem(Ring_Shout);
-
+		
 		addLevelCheck(76, 99);
 	}
-
+	
 	private static void initFriendNpc(Player player)
 	{
 		int npcId1 = Integer.parseInt(player.getVar("sel1")); // first chosen
@@ -127,8 +158,8 @@ public abstract class SagasSuperclass extends Quest
 		NpcInstance infantry1 = player.getReflection().addSpawnWithoutRespawn(npcId5, new Location(56168, -176712, -7973, 49151), 0);
 		NpcInstance infantry2 = player.getReflection().addSpawnWithoutRespawn(npcId5, new Location(55960, -176696, -7973, 49151), 0);
 		NpcInstance infantry3 = player.getReflection().addSpawnWithoutRespawn(npcId5, new Location(56376, -176712, -7973, 49151), 0);
-
-		switch(npcId1)
+		
+		switch (npcId1)
 		{
 			case 33171:
 				sel1.setAI(new NpcHealerAI(sel1));
@@ -144,9 +175,9 @@ public abstract class SagasSuperclass extends Quest
 				break;
 			default:
 				break;
-		} 
-
-		switch(npcId2)
+		}
+		
+		switch (npcId2)
 		{
 			case 33171:
 				sel2.setAI(new NpcHealerAI(sel2));
@@ -173,93 +204,103 @@ public abstract class SagasSuperclass extends Quest
 		player.unsetVar("sel1");
 		player.unsetVar("sel2");
 	}
-
+	
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
 		Player player = st.getPlayer();
-
-		if(event.equalsIgnoreCase(StartNPC + "-5.htm"))
+		
+		if (event.equalsIgnoreCase(StartNPC + "-5.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
-		else if(event.equalsIgnoreCase("33407-1.htm"))
+		else if (event.equalsIgnoreCase("33407-1.htm"))
 		{
 			st.setCond(2);
 			st.playSound(SOUND_ACCEPT);
 		}
-		else if(event.equalsIgnoreCase("33407-4.htm"))
+		else if (event.equalsIgnoreCase("33407-4.htm"))
 		{
 			st.takeItems(DeadSoldierOrbs, -1);
 			st.setCond(4);
 		}
-		else if(event.equalsIgnoreCase("33166-1.htm"))
+		else if (event.equalsIgnoreCase("33166-1.htm"))
 		{
-			if(player.getVar("orb1") != null)
+			if (player.getVar("orb1") != null)
+			{
 				return "33166-got.htm";
-
+			}
+			
 			player.setVar("orb1", "1", -1);
 			st.giveItems(DeadSoldierOrbs, 1);
 			st.playSound(SOUND_MIDDLE);
 			checkOrbs(player, st);
 		}
-		else if(event.equalsIgnoreCase("33167-1.htm"))
+		else if (event.equalsIgnoreCase("33167-1.htm"))
 		{
-			if(player.getVar("orb2") != null)
+			if (player.getVar("orb2") != null)
+			{
 				return "33167-got.htm";
-
+			}
+			
 			player.setVar("orb2", "1", -1);
 			st.giveItems(DeadSoldierOrbs, 1);
 			st.playSound(SOUND_MIDDLE);
 			checkOrbs(player, st);
 		}
-		else if(event.equalsIgnoreCase("33168-1.htm"))
+		else if (event.equalsIgnoreCase("33168-1.htm"))
 		{
-			if(player.getVar("orb3") != null)
+			if (player.getVar("orb3") != null)
+			{
 				return "33168-got.htm";
-
+			}
+			
 			player.setVar("orb3", "1", -1);
 			st.giveItems(DeadSoldierOrbs, 1);
 			st.playSound(SOUND_MIDDLE);
 			checkOrbs(player, st);
 		}
-		else if(event.equalsIgnoreCase("33169-1.htm"))
+		else if (event.equalsIgnoreCase("33169-1.htm"))
 		{
-			if(player.getVar("orb4") != null)
+			if (player.getVar("orb4") != null)
+			{
 				return "33168-got.htm";
-
+			}
+			
 			player.setVar("orb4", "1", -1);
 			st.giveItems(DeadSoldierOrbs, 1);
 			st.playSound(SOUND_MIDDLE);
 			checkOrbs(player, st);
 		}
-
-		else if(event.equalsIgnoreCase("33170-2.htm"))
+		
+		else if (event.equalsIgnoreCase("33170-2.htm"))
 		{
 			st.setCond(6);
 			st.playSound(SOUND_MIDDLE);
 		}
-
-		else if(event.equalsIgnoreCase("33170-6.htm"))
+		
+		else if (event.equalsIgnoreCase("33170-6.htm"))
 		{
 			st.setCond(10);
-			if(st.getQuestItemsCount(Ring_Shout) == 0)
+			if (st.getQuestItemsCount(Ring_Shout) == 0)
+			{
 				st.giveItems(Ring_Shout, 1); // ring
+			}
 			Functions.npcSay(npc, NpcString.THE_CRY_OF_FATE_PENDANT_WILL_BE_HELPFUL_TO_YOU_PLEASE_EQUIP_IT_AND_BRING_OUT_THE_POWER_OF_THE_PENDANT_TO_PREPARE_FOR_THE_NEXT_FIGHT);
 		}
-
-		else if(event.equalsIgnoreCase("selection"))
+		
+		else if (event.equalsIgnoreCase("selection"))
 		{
-			if(player.getVar("sel1") == null)
+			if (player.getVar("sel1") == null)
 			{
 				player.setVar("sel1", npc.getNpcId(), -1);
 				npc.deleteMe();
 				return null;
 			}
-			if(player.getVar("sel2") == null)
+			if (player.getVar("sel2") == null)
 			{
 				player.setVar("sel2", npc.getNpcId(), -1);
 				npc.deleteMe();
@@ -267,19 +308,21 @@ public abstract class SagasSuperclass extends Quest
 				return null;
 			}
 		}
-
-		else if(event.equalsIgnoreCase("enterinstance"))
+		
+		else if (event.equalsIgnoreCase("enterinstance"))
 		{
-			if(!_npcWaves.isEmpty())
+			if (!_npcWaves.isEmpty())
+			{
 				_npcWaves.clear();
+			}
 			player.unsetVar("wave");
 			// maybe take some other quest items?
 			st.setCond(5);
 			enterInstance(st, 185);
 			return null;
 		}
-
-		else if(event.equalsIgnoreCase("battleField"))
+		
+		else if (event.equalsIgnoreCase("battleField"))
 		{
 			// missing parts of the instance:
 			// init npcs
@@ -291,73 +334,73 @@ public abstract class SagasSuperclass extends Quest
 			st.setCond(8);
 			return null;
 		}
-
-		else if(event.equalsIgnoreCase("wave1"))
+		
+		else if (event.equalsIgnoreCase("wave1"))
 		{
 			initWave1(player);
 			return null;
 		}
-
-		else if(event.equalsIgnoreCase("2"))
+		
+		else if (event.equalsIgnoreCase("2"))
 		{
 			initWave2(player);
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			return null;
 		}
-
-		else if(event.equalsIgnoreCase("3"))
+		
+		else if (event.equalsIgnoreCase("3"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave3(player);
 			return null;
 		}
-		else if(event.equalsIgnoreCase("4"))
+		else if (event.equalsIgnoreCase("4"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave4(player);
 			return null;
 		}
-		else if(event.equalsIgnoreCase("5"))
+		else if (event.equalsIgnoreCase("5"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave5(player);
 			return null;
 		}
-		else if(event.equalsIgnoreCase("6"))
+		else if (event.equalsIgnoreCase("6"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave6(player);
 			return null;
 		}
-		else if(event.equalsIgnoreCase("8"))
+		else if (event.equalsIgnoreCase("8"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave8(player);
 			st.startQuestTimer("9", 30000);
 			return null;
 		}
-		else if(event.equalsIgnoreCase("9"))
+		else if (event.equalsIgnoreCase("9"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave9(player);
 			st.startQuestTimer("10", 30000);
 			return null;
 		}
-		else if(event.equalsIgnoreCase("10"))
+		else if (event.equalsIgnoreCase("10"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave10(player);
 			st.startQuestTimer("11", 30000);
 			return null;
 		}
-		else if(event.equalsIgnoreCase("11"))
+		else if (event.equalsIgnoreCase("11"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave11(player);
 			st.startQuestTimer("12", 30000);
 			return null;
 		}
-		else if(event.equalsIgnoreCase("12"))
+		else if (event.equalsIgnoreCase("12"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave12(player);
@@ -366,8 +409,8 @@ public abstract class SagasSuperclass extends Quest
 			player.setVar("wave", 12, -1);
 			return null;
 		}
-
-		else if(event.equalsIgnoreCase("13"))
+		
+		else if (event.equalsIgnoreCase("13"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.I_DEATH_WOUND_CHAMPION_OF_SHILEN_SHALL_END_YOUR_WORLD, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave13(player);
@@ -376,14 +419,14 @@ public abstract class SagasSuperclass extends Quest
 			player.setVar("wave", 13, -1);
 			return null;
 		}
-		else if(event.equalsIgnoreCase("firstStandCompleted"))
+		else if (event.equalsIgnoreCase("firstStandCompleted"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_HAVE_STOPPED_THEIR_ATTACK_REST_AND_THEN_SPEAK_WITH_ADOLPH, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			st.setCond(9);
 			return null;
 		}
-
-		else if(event.equalsIgnoreCase("engagesecondstand"))
+		
+		else if (event.equalsIgnoreCase("engagesecondstand"))
 		{
 			// init second stand
 			// init waves
@@ -393,32 +436,42 @@ public abstract class SagasSuperclass extends Quest
 			st.setCond(11);
 			return null;
 		}
-
-		else if(event.equalsIgnoreCase("secondStandCompleted"))
+		
+		else if (event.equalsIgnoreCase("secondStandCompleted"))
 		{
 			player.unsetVar("wave");
 			st.setCond(12);
 			return null;
 		}
-		else if(event.startsWith("giveme"))
+		else if (event.startsWith("giveme"))
 		{
-			if(event.equalsIgnoreCase("givemered"))
-				st.giveItems(9570, 1);
-			else if(event.equalsIgnoreCase("givemeblue"))
-				st.giveItems(9571, 1);
-			else if(event.equalsIgnoreCase("givemegreen"))
-				st.giveItems(9572, 1);
-
-			int _reqClass = -1;
-			for(ClassId cid : ClassId.VALUES)
+			if (event.equalsIgnoreCase("givemered"))
 			{
-				if(cid.childOf(player.getClassId()) && cid.getClassLevel().ordinal() == player.getClassId().getClassLevel().ordinal() + 1)
-					_reqClass = cid.getId();
+				st.giveItems(9570, 1);
 			}
-
-			if(_reqClass == -1)
+			else if (event.equalsIgnoreCase("givemeblue"))
+			{
+				st.giveItems(9571, 1);
+			}
+			else if (event.equalsIgnoreCase("givemegreen"))
+			{
+				st.giveItems(9572, 1);
+			}
+			
+			int _reqClass = -1;
+			for (ClassId cid : ClassId.VALUES)
+			{
+				if (cid.childOf(player.getClassId()) && (cid.getClassLevel().ordinal() == (player.getClassId().getClassLevel().ordinal() + 1)))
+				{
+					_reqClass = cid.getId();
+				}
+			}
+			
+			if (_reqClass == -1)
+			{
 				player.sendMessage("Something gone wrong, please contact administrator!");
-
+			}
+			
 			player.setClassId(_reqClass, false, false);
 			player.broadcastPacket(new MagicSkillUse(player, player, 5103, 1, 1000, 0));
 			st.giveItems(ADENA_ID, 5000000);
@@ -433,9 +486,9 @@ public abstract class SagasSuperclass extends Quest
 			return StartNPC + "-7.htm";
 		}
 		return htmltext;
-
+		
 	}
-
+	
 	private void initWave13(Player player)
 	{
 		// _npcWaves
@@ -447,9 +500,9 @@ public abstract class SagasSuperclass extends Quest
 		NpcInstance boss = player.getReflection().addSpawnWithoutRespawn(Death_wound, new Location(56168, -177544, -7974, 16383), 0);
 		boss.broadcastPacket(new Earthquake(boss.getLoc(), 40, 10));
 		boss.addListener(deathListener);
-
+		
 	}
-
+	
 	private void initWave12(Player player)
 	{
 		// _npcWaves
@@ -475,7 +528,7 @@ public abstract class SagasSuperclass extends Quest
 		npc6.addListener(deathListener);
 		npc7.addListener(deathListener);
 	}
-
+	
 	private void initWave11(Player player)
 	{
 		// _npcWaves
@@ -504,7 +557,7 @@ public abstract class SagasSuperclass extends Quest
 		npc7.addListener(deathListener);
 		npc8.addListener(deathListener);
 	}
-
+	
 	private void initWave10(Player player)
 	{
 		// _npcWaves
@@ -530,7 +583,7 @@ public abstract class SagasSuperclass extends Quest
 		npc6.addListener(deathListener);
 		npc7.addListener(deathListener);
 	}
-
+	
 	private void initWave9(Player player)
 	{
 		// _npcWaves
@@ -559,7 +612,7 @@ public abstract class SagasSuperclass extends Quest
 		npc7.addListener(deathListener);
 		npc8.addListener(deathListener);
 	}
-
+	
 	private void initWave8(Player player)
 	{
 		// _npcWaves
@@ -588,7 +641,7 @@ public abstract class SagasSuperclass extends Quest
 		npc7.addListener(deathListener);
 		npc8.addListener(deathListener);
 	}
-
+	
 	private void initWave7(Player player)
 	{
 		// _npcWaves
@@ -611,7 +664,7 @@ public abstract class SagasSuperclass extends Quest
 		npc5.addListener(deathListener);
 		npc6.addListener(deathListener);
 	}
-
+	
 	private void initWave6(Player player)
 	{
 		// _npcWaves
@@ -634,7 +687,7 @@ public abstract class SagasSuperclass extends Quest
 		npc5.addListener(deathListener);
 		npc6.addListener(deathListener);
 	}
-
+	
 	private void initWave5(Player player)
 	{
 		// _npcWaves
@@ -660,7 +713,7 @@ public abstract class SagasSuperclass extends Quest
 		npc6.addListener(deathListener);
 		npc7.addListener(deathListener);
 	}
-
+	
 	private void initWave4(Player player)
 	{
 		// _npcWaves
@@ -689,7 +742,7 @@ public abstract class SagasSuperclass extends Quest
 		npc7.addListener(deathListener);
 		npc8.addListener(deathListener);
 	}
-
+	
 	private void initWave3(Player player)
 	{
 		// _npcWaves
@@ -706,7 +759,7 @@ public abstract class SagasSuperclass extends Quest
 		npc3.addListener(deathListener);
 		npc4.addListener(deathListener);
 	}
-
+	
 	private void initWave2(Player player)
 	{
 		// _npcWaves
@@ -723,7 +776,7 @@ public abstract class SagasSuperclass extends Quest
 		npc3.addListener(deathListener);
 		npc4.addListener(deathListener);
 	}
-
+	
 	private void initWave1(Player player)
 	{
 		// _npcWaves
@@ -741,23 +794,33 @@ public abstract class SagasSuperclass extends Quest
 		npc4.addListener(deathListener);
 		player.setVar("wave", 1, -1);
 	}
-
+	
 	private class DeathListener implements OnDeathListener
 	{
+		/**
+		 * 
+		 */
+		public DeathListener()
+		{
+			// TODO Auto-generated constructor stub
+		}
+		
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
-			if(self.isNpc())
+			if (self.isNpc())
 			{
 				NpcInstance npc = (NpcInstance) self;
-				if(_npcWaves.contains(npc) || npc.getNpcId() == Death_wound)
+				if (_npcWaves.contains(npc) || (npc.getNpcId() == Death_wound))
 				{
 					// we need to find our player in this instance, let's search
-					for(Player p : npc.getReflection().getPlayers())
+					for (Player p : npc.getReflection().getPlayers())
 					{
 						// the only player inside is ours
-						if(p == null) // maybe left the instance
+						if (p == null)
+						{
 							continue;
+						}
 						QuestState st = findQuest(p);
 						onKill(npc, st);
 					}
@@ -765,54 +828,58 @@ public abstract class SagasSuperclass extends Quest
 			}
 		}
 	}
-
+	
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		Player player = st.getPlayer();
 		int wave = Integer.parseInt(player.getVar("wave"));
-		if(npc.getNpcId() == Death_wound)
+		if (npc.getNpcId() == Death_wound)
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.AGH_HUMANS_HA_IT_DOES_NOT_MATTER_YOUR_WORLD_WILL_END_ANYWAYS, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			st.startQuestTimer("secondStandCompleted", 1000);
 			return null;
 		}
-
-		if(checkWave(player, npc, wave, st))
+		
+		if (checkWave(player, npc, wave, st))
 		{
 			return null;
 		}
 		return null;
 	}
-
+	
 	public static boolean checkWave(Player player, NpcInstance npc, int waveId, QuestState st)
 	{
-		if(_npcWaves.contains(npc))
+		if (_npcWaves.contains(npc))
 		{
 			_npcWaves.remove(npc);
 		}
-		if(waveId < 7) // after the first stand we go on timers anyway
+		if (waveId < 7) // after the first stand we go on timers anyway
 		{
-			if(_npcWaves.isEmpty())
+			if (_npcWaves.isEmpty())
 			{
 				int _nextWave = waveId + 1;
 				player.setVar("wave", _nextWave, -1);
-				if(_nextWave == 7)
+				if (_nextWave == 7)
+				{
 					st.startQuestTimer("firstStandCompleted", 5000);
+				}
 				else
+				{
 					st.startQuestTimer("" + _nextWave + "", 7000);
+				}
 			}
 		}
-		if(waveId == 12 && _npcWaves.isEmpty())
+		if ((waveId == 12) && _npcWaves.isEmpty())
 		{
 			st.startQuestTimer("13", 2000);
 		}
 		return true;
 	}
-
+	
 	private static void checkOrbs(Player player, QuestState st)
 	{
-		if(st.getQuestItemsCount(DeadSoldierOrbs) == 4)
+		if (st.getQuestItemsCount(DeadSoldierOrbs) == 4)
 		{
 			st.playSound(SOUND_MIDDLE);
 			st.setCond(3);
@@ -822,7 +889,7 @@ public abstract class SagasSuperclass extends Quest
 			player.unsetVar("orb4");
 		}
 	}
-
+	
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
@@ -831,67 +898,100 @@ public abstract class SagasSuperclass extends Quest
 		int npcId = npc.getNpcId();
 		Player player = st.getPlayer();
 		String htmltext = "noquest";
-		if(!canTakeQuest(player))
+		if (!canTakeQuest(player))
+		{
 			return StartNPC + ".htm";
-
-		if(id == COMPLETED)
+		}
+		
+		if (id == COMPLETED)
+		{
 			return htmltext;
-
-		else if(npcId == StartNPC)
+		}
+		else if (npcId == StartNPC)
 		{
-			if(cond == 0)
+			if (cond == 0)
+			{
 				return StartNPC + "-1.htm";
-			else if(cond == 1)
+			}
+			else if (cond == 1)
+			{
 				return StartNPC + "-got.htm";
-			else if(cond == 13)
+			}
+			else if (cond == 13)
+			{
 				return StartNPC + "-6.htm";
+			}
 		}
-		else if(npcId == Avanguard_aden)
+		else if (npcId == Avanguard_aden)
 		{
-			if(cond == 1)
+			if (cond == 1)
+			{
 				return "33407.htm";
-			else if(cond == 2)
+			}
+			else if (cond == 2)
+			{
 				return "33407-2.htm";
-			else if(cond == 3)
+			}
+			else if (cond == 3)
+			{
 				return "33407-3.htm";
+			}
 		}
-		else if(npcId == Avanguard_corpse1)
+		else if (npcId == Avanguard_corpse1)
 		{
-			if(cond == 2)
+			if (cond == 2)
+			{
 				return "33166.htm";
+			}
 		}
-		else if(npcId == Avanguard_corpse2)
+		else if (npcId == Avanguard_corpse2)
 		{
-			if(cond == 2)
+			if (cond == 2)
+			{
 				return "33167.htm";
+			}
 		}
-		else if(npcId == Avanguard_corpse3)
+		else if (npcId == Avanguard_corpse3)
 		{
-			if(cond == 2)
+			if (cond == 2)
+			{
 				return "33168.htm";
+			}
 		}
-		else if(npcId == Avanguard_corpse4)
+		else if (npcId == Avanguard_corpse4)
 		{
-			if(cond == 2)
+			if (cond == 2)
+			{
 				return "33169.htm";
+			}
 		}
-		else if(npcId == Avanguard_member)
+		else if (npcId == Avanguard_member)
 		{
-			if(cond >= 4)
+			if (cond >= 4)
+			{
 				return "33165.htm";
+			}
 		}
-
-		else if(npcId == Avanguard_camptain)
+		
+		else if (npcId == Avanguard_camptain)
 		{
-			if(cond == 5)
+			if (cond == 5)
+			{
 				return "33170-1.htm";
-			else if(cond == 7)
+			}
+			else if (cond == 7)
+			{
 				return "33170-3.htm";
-			else if(cond == 9)
+			}
+			else if (cond == 9)
+			{
 				return "33170-5.htm";
-			else if(cond == 10)
+			}
+			else if (cond == 10)
+			{
 				return "33170-7.htm";
-			else if(cond == 12)
+			}
+			else if (cond == 12)
 			{
 				st.setCond(13);
 				st.giveItems(736, 1); // SOE
@@ -899,59 +999,77 @@ public abstract class SagasSuperclass extends Quest
 				return "33170-8.htm";
 			}
 		}
-
-		else if(npcId == Avanguard_Ellis)
+		
+		else if (npcId == Avanguard_Ellis)
 		{
-			if(cond == 6)
+			if (cond == 6)
+			{
 				return "33171-1.htm";
+			}
 		}
-
-		else if(npcId == Avanguard_Barton)
+		
+		else if (npcId == Avanguard_Barton)
 		{
-			if(cond == 6)
+			if (cond == 6)
+			{
 				return "33172-1.htm";
+			}
 		}
-
-		else if(npcId == Avanguard_Xaok)
+		
+		else if (npcId == Avanguard_Xaok)
 		{
-			if(cond == 6)
+			if (cond == 6)
+			{
 				return "33173-1.htm";
+			}
 		}
-
-		else if(npcId == Avanguard_Ellia)
+		
+		else if (npcId == Avanguard_Ellia)
 		{
-			if(cond == 6)
+			if (cond == 6)
+			{
 				return "33174-1.htm";
+			}
 		}
 		return htmltext;
 	}
-
+	
 	private boolean canTakeQuest(Player player)
 	{
-		if(player == null)
+		if (player == null)
+		{
 			return false;
-		if(player.getLevel() < 76)
+		}
+		if (player.getLevel() < 76)
+		{
 			return false;
-		if(!player.getClassId().isOfLevel(ClassLevel.Third))
+		}
+		if (!player.getClassId().isOfLevel(ClassLevel.Third))
+		{
 			return false;
-		if(player.getClassId().getRace() != StartRace)
+		}
+		if (player.getClassId().getRace() != StartRace)
+		{
 			return false;
+		}
 		return true;
 	}
-
+	
 	public static QuestState findQuest(Player player)
 	{
 		QuestState st = null;
-		for(Integer q : Quests.keySet())
+		for (Integer q : Quests.keySet())
 		{
 			st = player.getQuestState(Quests.get(q));
-			if(st != null)
+			if (st != null)
 			{
 				int[] qc = QuestRace[q - 10341];
-				for(int c : qc)
+				for (int c : qc)
 				{
-					if(player.getRace().ordinal() == c)
+					if (player.getRace().ordinal() == c)
+					{
 						return st;
+					}
 				}
 			}
 		}

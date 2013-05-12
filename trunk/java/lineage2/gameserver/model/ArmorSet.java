@@ -12,9 +12,6 @@
  */
 package lineage2.gameserver.model;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-import gnu.trove.set.hash.TIntHashSet;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -22,6 +19,8 @@ import java.util.StringTokenizer;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.tables.SkillTable;
+import gnu.trove.map.hash.TIntObjectHashMap;
+import gnu.trove.set.hash.TIntHashSet;
 
 /**
  * @author Mobius

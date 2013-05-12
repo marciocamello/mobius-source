@@ -12,8 +12,8 @@
  */
 package lineage2.gameserver.data.xml.holder;
 
-import gnu.trove.map.hash.TIntDoubleHashMap;
 import lineage2.commons.data.xml.AbstractHolder;
+import gnu.trove.map.hash.TIntDoubleHashMap;
 
 /**
  * @author Mobius

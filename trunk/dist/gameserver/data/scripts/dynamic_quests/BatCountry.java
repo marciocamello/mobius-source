@@ -1,7 +1,16 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package dynamic_quests;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.listener.actor.player.OnSocialActionListener;
@@ -21,13 +30,16 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ItemFunctions;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class BatCountry extends DynamicQuest implements ScriptFile
 {
 	public static final Logger _log = LoggerFactory.getLogger(BatCountry.class);
 	private static final int QUEST_ID = 14;
 	private static final int DURATION = 1800; // 30 minutes duration
-	private static final String START_TIME = "00 14,18 * * Wed,Sat"; // Start days: Wednesday, Saturday - time: 2.00 p.m., 6.00 p.m.  
-	private static final String SPAWN_GROUP = "bat_country_mobs"; //xml spawn
+	private static final String START_TIME = "00 14,18 * * Wed,Sat"; // Start days: Wednesday, Saturday - time: 2.00 p.m., 6.00 p.m.
+	private static final String SPAWN_GROUP = "bat_country_mobs"; // xml spawn
 	
 	private final OnSocialActionListener _action = new OnSocialActionListenerImpl();
 	private final OnUseItemListener _onUseItem = new OnUseItemListenerImpl();
@@ -56,7 +68,7 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 		addLevelCheck(MIN_LEVEL, MAX_LEVEL);
 		initSchedulingPattern(START_TIME);
 	}
-
+	
 	@Override
 	protected boolean isZoneQuest()
 	{
@@ -66,23 +78,25 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 	@Override
 	public void onLoad()
 	{
-		_log.info("Dynamic Quest: Loaded quest ID "+QUEST_ID+". Name: Bat Country - Campaign");
+		_log.info("Dynamic Quest: Loaded quest ID " + QUEST_ID + ". Name: Bat Country - Campaign");
 	}
-
+	
 	@Override
-	public void onReload() {
+	public void onReload()
+	{
 	}
-
+	
 	@Override
-	public void onShutdown() {
+	public void onShutdown()
+	{
 	}
-
+	
 	@Override
 	protected void onStart()
 	{
-		_log.info("Dynamic Quest: "+QUEST_ID+". Name: Bat Country - Campaign [STARTED]");
+		_log.info("Dynamic Quest: " + QUEST_ID + ". Name: Bat Country - Campaign [STARTED]");
 	}
-
+	
 	@Override
 	protected void onStop(boolean success)
 	{
@@ -90,14 +104,17 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 		{
 			Player player = GameObjectsStorage.getPlayer(objectId);
 			if (player != null)
+			{
 				removeParticipant(player);
+			}
 		}
 	}
-
+	
 	@Override
-	protected void onFinish() {
-}
-
+	protected void onFinish()
+	{
+	}
+	
 	@Override
 	protected String onRequestHtml(Player player, boolean participant)
 	{
@@ -115,7 +132,9 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 			{
 				boolean rewardReceived = rewardReceived(player);
 				if (rewardReceived)
+				{
 					return "dc0014_reward_received001.htm";
+				}
 				return "dc0014_reward001.htm";
 			}
 			else
@@ -125,7 +144,7 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 		}
 		return null;
 	}
-
+	
 	@Override
 	protected boolean onPlayerEnter(Player player)
 	{
@@ -136,11 +155,12 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 		}
 		return false;
 	}
-
+	
 	@Override
-	protected void onTaskCompleted(int taskId) {
+	protected void onTaskCompleted(int taskId)
+	{
 	}
-
+	
 	@Override
 	protected String onDialogEvent(String event, Player player)
 	{
@@ -161,21 +181,21 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 		}
 		return response;
 	}
-
+	
 	@Override
 	protected void onAddParticipant(Player player)
 	{
 		player.getListeners().add(_onUseItem);
 		player.getListeners().add(_action);
 	}
-
+	
 	@Override
 	protected void onRemoveParticipant(Player player)
 	{
 		player.getListeners().remove(_onUseItem);
 		player.getListeners().remove(_action);
 	}
-
+	
 	@Override
 	protected boolean onStartCondition()
 	{
@@ -188,11 +208,11 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 		{
 			// TODO Auto-generated constructor stub
 		}
-
+		
 		@Override
 		public void onSocialAction(Player player, GameObject target, RequestActionUse.Action action)
 		{
-			if (target != null && target.isNpc())
+			if ((target != null) && target.isNpc())
 			{
 				NpcInstance npc = (NpcInstance) target;
 				double dist = player.getDistance(npc);
@@ -202,7 +222,7 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 						if ((action.value == SocialAction.APPLAUD) && (dist < 50) && !npc.isDead())
 						{
 							player.sendPacket(new ExShowScreenMessage(NpcString.USE_THE_FIRECRACKER_OF_FEAR_ON_THE_BAT_COLONY, 4500, ScreenMessageAlign.TOP_CENTER));
-							ItemFunctions.addItem(player, FIRECRACKER, Rnd.get(1,3), true);
+							ItemFunctions.addItem(player, FIRECRACKER, Rnd.get(1, 3), true);
 							npc.doDie(player);
 						}
 						break;
@@ -210,7 +230,7 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 						if ((action.value == SocialAction.APPLAUD) && (dist < 50) && !npc.isDead())
 						{
 							player.sendPacket(new ExShowScreenMessage(NpcString.USE_THE_FIRECRACKER_OF_FEAR_ON_THE_BAT_COLONY, 4500, ScreenMessageAlign.TOP_CENTER));
-							ItemFunctions.addItem(player, FIRECRACKER, Rnd.get(1,3), true);
+							ItemFunctions.addItem(player, FIRECRACKER, Rnd.get(1, 3), true);
 							npc.doDie(player);
 						}
 						break;
@@ -218,7 +238,7 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 						if ((action.value == SocialAction.APPLAUD) && (dist < 50) && !npc.isDead())
 						{
 							player.sendPacket(new ExShowScreenMessage(NpcString.USE_THE_FIRECRACKER_OF_FEAR_ON_THE_BAT_COLONY, 4500, ScreenMessageAlign.TOP_CENTER));
-							ItemFunctions.addItem(player, FIRECRACKER, Rnd.get(1,3), true);
+							ItemFunctions.addItem(player, FIRECRACKER, Rnd.get(1, 3), true);
 							npc.doDie(player);
 						}
 						break;
@@ -229,16 +249,16 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 	
 	private final class OnUseItemListenerImpl extends Functions implements OnUseItemListener
 	{
-
+		
 		public OnUseItemListenerImpl()
 		{
 			// TODO Auto-generated constructor stub
 		}
-
+		
 		@Override
 		public void onUseItem(Player player, GameObject target, ItemInstance item)
 		{
-			if (target != null && target.isNpc())
+			if ((target != null) && target.isNpc())
 			{
 				NpcInstance npc = (NpcInstance) target;
 				double dist = player.getDistance(npc);

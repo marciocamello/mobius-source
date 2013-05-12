@@ -51,7 +51,7 @@ public class SummonAI extends PlayableAI
 			changeIntention(CtrlIntention.AI_INTENTION_FOLLOW, actor.getPlayer(), Config.FOLLOW_RANGE);
 			thinkFollow();
 		}
-		else if (!actor.isFollowMode() && getIntention() == AI_INTENTION_ACTIVE)
+		else if (!actor.isFollowMode() && (getIntention() == AI_INTENTION_ACTIVE))
 		{
 			actor.setFollowMode(true);
 		}
@@ -86,8 +86,10 @@ public class SummonAI extends PlayableAI
 		{
 			Attack(attacker, false, false);
 		}
-		if (actor.getPlayer().isDebug())
+		if (actor.getPlayer().isDebug() && (null != attacker))
+		{
 			actor.getPlayer().sendMessage("SummonAI onEvtAttacked isDefendMode:" + actor.isDefendMode() + " isDepressed:" + actor.isDepressed() + " " + attacker.getName());
+		}
 		if ((attacker != null) && actor.isDefendMode() && !actor.isDepressed())
 		{
 			Attack(attacker, false, false);

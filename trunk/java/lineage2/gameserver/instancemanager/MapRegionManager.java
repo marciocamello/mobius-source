@@ -93,6 +93,7 @@ public class MapRegionManager extends AbstractHolder
 	
 	/**
 	 * Method getRegionData.
+	 * @param <T>
 	 * @param clazz Class<T>
 	 * @param o GameObject
 	 * @return T
@@ -104,6 +105,7 @@ public class MapRegionManager extends AbstractHolder
 	
 	/**
 	 * Method getRegionData.
+	 * @param <T>
 	 * @param clazz Class<T>
 	 * @param loc Location
 	 * @return T
@@ -115,6 +117,7 @@ public class MapRegionManager extends AbstractHolder
 	
 	/**
 	 * Method getRegionData.
+	 * @param <T>
 	 * @param clazz Class<T>
 	 * @param x int
 	 * @param y int

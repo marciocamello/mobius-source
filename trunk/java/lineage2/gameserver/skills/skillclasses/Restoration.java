@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
@@ -19,7 +31,8 @@ public class Restoration extends Skill
 	{
 		super(set);
 	}
-
+	
+	@Override
 	public boolean checkCondition(Creature activeChar, Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
 		if (!activeChar.isPlayable())
@@ -28,8 +41,8 @@ public class Restoration extends Skill
 		}
 		if (activeChar.isPlayer())
 		{
-			Player player = (Player)activeChar;
-			if ((player.getWeightPenalty() >= 3) || (player.getInventory().getSize() > player.getInventoryLimit() - 10))
+			Player player = (Player) activeChar;
+			if ((player.getWeightPenalty() >= 3) || (player.getInventory().getSize() > (player.getInventoryLimit() - 10)))
 			{
 				player.sendPacket(SystemMsg.THE_CORRESPONDING_WORK_CANNOT_BE_PROCEEDED_BECAUSE_THE_INVENTORY_WEIGHTQUANTITY_LIMIT_HAS_BEEN_EXCEEDED);
 				return false;
@@ -37,7 +50,8 @@ public class Restoration extends Skill
 		}
 		return true;
 	}
-
+	
+	@Override
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{
 		if (!activeChar.isPlayable())
@@ -49,7 +63,7 @@ public class Restoration extends Skill
 		{
 			return;
 		}
-		Playable playable = (Playable)activeChar;
+		Playable playable = (Playable) activeChar;
 		int itemConsumeId = restorationInfo.getItemConsumeId();
 		int itemConsumeCount = restorationInfo.getItemConsumeCount();
 		if ((itemConsumeId > 0) && (itemConsumeCount > 0))
@@ -59,10 +73,10 @@ public class Restoration extends Skill
 				playable.sendPacket(SystemMsg.THERE_ARE_NOT_ENOUGH_NECESSARY_ITEMS_TO_USE_THE_SKILL);
 				return;
 			}
-
+			
 			ItemFunctions.removeItem(playable, itemConsumeId, itemConsumeCount, true);
 		}
-
+		
 		List<RestorationItem> restorationItems = restorationInfo.getRandomGroupItems();
 		if ((restorationItems == null) || (restorationItems.size() == 0))
 		{

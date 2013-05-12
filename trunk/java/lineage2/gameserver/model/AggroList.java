@@ -12,9 +12,6 @@
  */
 package lineage2.gameserver.model;
 
-import gnu.trove.iterator.TIntObjectIterator;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
@@ -28,6 +25,8 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.instances.NpcInstance;
+import gnu.trove.iterator.TIntObjectIterator;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius

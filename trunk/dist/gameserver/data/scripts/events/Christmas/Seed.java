@@ -12,7 +12,6 @@
  */
 package events.Christmas;
 
-import handler.items.ScriptItemHandler;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.cache.Msg;
@@ -26,6 +25,7 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.npc.NpcTemplate;
+import handler.items.ScriptItemHandler;
 
 /**
  * @author Mobius

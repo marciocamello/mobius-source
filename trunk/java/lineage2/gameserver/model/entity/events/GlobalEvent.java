@@ -347,6 +347,7 @@ public abstract class GlobalEvent extends LoggerObject
 	
 	/**
 	 * Method getObjects.
+	 * @param <O>
 	 * @param name String
 	 * @return List<O>
 	 */
@@ -359,6 +360,7 @@ public abstract class GlobalEvent extends LoggerObject
 	
 	/**
 	 * Method getFirstObject.
+	 * @param <O>
 	 * @param name String
 	 * @return O
 	 */
@@ -412,6 +414,7 @@ public abstract class GlobalEvent extends LoggerObject
 	
 	/**
 	 * Method removeObjects.
+	 * @param <O>
 	 * @param name String
 	 * @return List<O>
 	 */

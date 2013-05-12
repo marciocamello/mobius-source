@@ -73,6 +73,7 @@ public final class ResidenceHolder extends AbstractHolder
 	
 	/**
 	 * Method getResidence.
+	 * @param <R>
 	 * @param id int
 	 * @return R
 	 */
@@ -83,6 +84,7 @@ public final class ResidenceHolder extends AbstractHolder
 	
 	/**
 	 * Method getResidence.
+	 * @param <R>
 	 * @param type Class<R>
 	 * @param id int
 	 * @return R
@@ -99,6 +101,7 @@ public final class ResidenceHolder extends AbstractHolder
 	
 	/**
 	 * Method getResidenceList.
+	 * @param <R>
 	 * @param t Class<R>
 	 * @return List<R>
 	 */
@@ -118,6 +121,7 @@ public final class ResidenceHolder extends AbstractHolder
 	
 	/**
 	 * Method getResidenceByObject.
+	 * @param <R>
 	 * @param type Class<? extends Residence>
 	 * @param object GameObject
 	 * @return R
@@ -129,6 +133,7 @@ public final class ResidenceHolder extends AbstractHolder
 	
 	/**
 	 * Method getResidenceByCoord.
+	 * @param <R>
 	 * @param type Class<R>
 	 * @param x int
 	 * @param y int
@@ -151,6 +156,7 @@ public final class ResidenceHolder extends AbstractHolder
 	
 	/**
 	 * Method findNearestResidence.
+	 * @param <R>
 	 * @param clazz Class<R>
 	 * @param x int
 	 * @param y int

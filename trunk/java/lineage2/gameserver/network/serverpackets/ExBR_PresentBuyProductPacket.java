@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.network.serverpackets;
 
 /**
@@ -8,41 +20,41 @@ public class ExBR_PresentBuyProductPacket extends L2GameServerPacket
 {
 	public static final int RESULT_OK = 1; // OK
 	public static final int RESULT_NOT_ENOUGH_POINTS = -1;// Недостаточно
-	                                                      // средств для покупки
+															// средств для покупки
 	public static final int RESULT_WRONG_PRODUCT = -2; // Невозможно приобрести
-	                                                   // данный продукт
+														// данный продукт
 	public static final int RESULT_INVENTORY_FULL = -4; // Вы не можете купить
-	                                                    // предмет, так как ваш
-	                                                    // инвентарь переполнен
+														// предмет, так как ваш
+														// инвентарь переполнен
 	public static final int RESULT_WRONG_ITEM = -5; // Невозможно приобрести
-	                                                // данный предмет
+													// данный предмет
 	public static final int RESULT_SALE_PERIOD_ENDED = -7; // also -8 // Вы не
-	                                                       // можете купить
-	                                                       // данный предмет.
-	                                                       // Закончилось время
-	                                                       // продажи
+															// можете купить
+															// данный предмет.
+															// Закончилось время
+															// продажи
 	public static final int RESULT_WRONG_USER_STATE = -9; // also -11 // Вы не
-	                                                      // можете сейчас
-	                                                      // приобрести этот
-	                                                      // предмет
+															// можете сейчас
+															// приобрести этот
+															// предмет
 	public static final int RESULT_WRONG_PACKAGE_ITEMS = -10;// Вы не можете
-	                                                         // приобрести
-	                                                         // упаковку
-	                                                         // предметов
+																// приобрести
+																// упаковку
+																// предметов
 	public static final int RESULT_WRONG_DAY_OF_WEEK = -12;// В этот день недели
-	                                                       // покупка невозможна
+															// покупка невозможна
 	public static final int RESULT_WRONG_SALE_PERIOD = -13;// В данный период
-	                                                       // времени покупка
-	                                                       // невозможна
+															// времени покупка
+															// невозможна
 	public static final int RESULT_ITEM_WAS_SALED = -14;// Предмет продан
-
-	private int result;
-
+	
+	private final int result;
+	
 	public ExBR_PresentBuyProductPacket(int result)
 	{
 		this.result = result;
 	}
-
+	
 	@Override
 	protected void writeImpl()
 	{

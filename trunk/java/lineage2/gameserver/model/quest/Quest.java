@@ -12,9 +12,6 @@
  */
 package lineage2.gameserver.model.quest;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-import gnu.trove.set.hash.TIntHashSet;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -60,6 +57,9 @@ import lineage2.gameserver.utils.ReflectionUtils;
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import gnu.trove.map.hash.TIntObjectHashMap;
+import gnu.trove.set.hash.TIntHashSet;
 
 /**
  * @author Mobius
@@ -1516,7 +1516,7 @@ public class Quest
 		}
 		return true;
 	}
-
+	
 	protected final void enterInstance(QuestState st, int instancedZoneId)
 	{
 		Player player = st.getPlayer();
@@ -1539,11 +1539,11 @@ public class Quest
 			onEnterInstance(st, newReflection);
 		}
 	}
-
+	
 	public void onEnterInstance(QuestState st, Reflection reflection)
 	{
 	}
-
+	
 	public void onReenterInstance(QuestState st, Reflection reflection)
 	{
 	}

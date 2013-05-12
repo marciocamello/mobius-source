@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.network.serverpackets;
 
 import java.util.List;
@@ -9,20 +21,22 @@ import lineage2.gameserver.utils.Location;
 
 public class PetInfo extends L2GameServerPacket
 {
-	private int _runSpd, _walkSpd, MAtkSpd, PAtkSpd, pvp_flag, karma, rideable;
-	private int _type, obj_id, npc_id, runing, incombat, dead, _sp, level;
-	private int curFed, maxFed, curHp, maxHp, curMp, maxMp, curLoad, maxLoad;
-	private int PAtk, PDef, MAtk, MDef, Accuracy, Evasion, Crit, sps, ss, type, _showSpawnAnimation;
-	private Location _loc;
-	private double col_redius, col_height;
-	private long exp, exp_this_lvl, exp_next_lvl;
-	private String _name, title;
-	private TeamType _team;
-	private int sumPoint, maxSumPoint;
-	private int _ownerId;
+	private final int _runSpd, _walkSpd, MAtkSpd, PAtkSpd, pvp_flag, karma;
+	private int rideable;
+	private final int _type, obj_id, npc_id, runing, incombat, dead, _sp, level;
+	private final int curFed, maxFed, curHp, maxHp, curMp, maxMp, curLoad, maxLoad;
+	private final int PAtk, PDef, MAtk, MDef, Accuracy, Evasion, Crit, sps, ss, type;
+	private int _showSpawnAnimation;
+	private final Location _loc;
+	private final double col_redius, col_height;
+	private final long exp, exp_this_lvl, exp_next_lvl;
+	private final String _name, title;
+	private final TeamType _team;
+	private final int sumPoint, maxSumPoint;
+	private final int _ownerId;
 	private final List<Integer> _aveList;
-	private int _mevasion, _maccuracy, _mCritRate;
-
+	private final int _mevasion, _maccuracy, _mCritRate;
+	
 	public PetInfo(Summon summon)
 	{
 		_type = summon.getSummonType();
@@ -64,9 +78,13 @@ public class PetInfo extends L2GameServerPacket
 		Evasion = summon.getEvasionRate(null);
 		Crit = summon.getCriticalHit(null, null);
 		if (summon.getPlayer().getTransformation() != 0)
+		{
 			rideable = 0; // not rideable
+		}
 		else
+		{
 			rideable = PetDataTable.isMountable(npc_id) ? 1 : 0;
+		}
 		_team = summon.getTeam();
 		ss = summon.getSoulshotConsumeCount();
 		sps = summon.getSpiritshotConsumeCount();
@@ -79,13 +97,13 @@ public class PetInfo extends L2GameServerPacket
 		_maccuracy = summon.getMAccuracy();
 		_mCritRate = (int) summon.getMagicCriticalRate(null, null);
 	}
-
+	
 	public PetInfo update()
 	{
 		_showSpawnAnimation = 1;
 		return this;
 	}
-
+	
 	@Override
 	protected final void writeImpl()
 	{
@@ -121,15 +139,15 @@ public class PetInfo extends L2GameServerPacket
 		writeC(incombat); // attacking 1=true
 		writeC(dead); // dead 1=true
 		writeC(_showSpawnAnimation); // invisible ?? 0=false 1=true 2=summoned
-		                             // (only works if model has a summon
-		                             // animation)
+										// (only works if model has a summon
+										// animation)
 		writeD(-1);
 		writeS(_name);
 		writeD(-1);
 		writeS(title);
 		writeD(1);
 		writeD(pvp_flag); // 0=white, 1=purple, 2=purpleblink, if its greater
-		                  // then karma = purple
+							// then karma = purple
 		writeD(karma); // hmm karma ??
 		writeD(curFed); // how fed it is
 		writeD(maxFed); // max fed it can be
@@ -139,11 +157,11 @@ public class PetInfo extends L2GameServerPacket
 		writeD(maxMp); // max mp
 		writeD(_sp); // sp
 		writeD(level);// lvl
-
+		
 		writeQ(exp);
 		writeQ(exp_this_lvl); // 0% absolute value
 		writeQ(exp_next_lvl); // 100% absoulte value
-
+		
 		writeD(curLoad); // weight
 		writeD(maxLoad); // max weight it can carry
 		writeD(PAtk);// patk

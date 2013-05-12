@@ -21,11 +21,13 @@ import lineage2.commons.util.Rnd;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
+ * @param <E>
  */
 public class RndSelector<E>
 {
 	/**
 	 * @author Mobius
+	 * @param <T>
 	 */
 	private class RndNode<T> implements Comparable<RndNode<T>>
 	{

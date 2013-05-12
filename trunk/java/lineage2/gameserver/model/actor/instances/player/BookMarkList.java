@@ -188,7 +188,7 @@ public class BookMarkList
 		}
 		if (Functions.removeItem(owner, 20025, 1) != 1)
 		{
-			//owner.sendPacket(SystemMsg.YOU_CANNOT_BOOKMARK_THIS_LOCATION_BECAUSE_YOU_DO_NOT_HAVE_A_MY_TELEPORT_FLAG);
+			// owner.sendPacket(SystemMsg.YOU_CANNOT_BOOKMARK_THIS_LOCATION_BECAUSE_YOU_DO_NOT_HAVE_A_MY_TELEPORT_FLAG);
 			owner.sendMessage("You cannot teleport because you do not have a My Teleport Spellbook.");
 			return false;
 		}

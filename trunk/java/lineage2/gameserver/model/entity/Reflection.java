@@ -12,8 +12,6 @@
  */
 package lineage2.gameserver.model.entity;
 
-import gnu.trove.set.hash.TIntHashSet;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -65,6 +63,8 @@ import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import gnu.trove.set.hash.TIntHashSet;
 
 /**
  * @author Mobius
@@ -1325,6 +1325,7 @@ public class Reflection
 	
 	/**
 	 * Method addListener.
+	 * @param <T>
 	 * @param listener T
 	 * @return boolean
 	 */
@@ -1335,6 +1336,7 @@ public class Reflection
 	
 	/**
 	 * Method removeListener.
+	 * @param <T>
 	 * @param listener T
 	 * @return boolean
 	 */

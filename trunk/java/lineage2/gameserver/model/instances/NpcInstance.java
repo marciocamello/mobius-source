@@ -12,8 +12,6 @@
  */
 package lineage2.gameserver.model.instances;
 
-import gnu.trove.iterator.TIntObjectIterator;
-
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
@@ -117,6 +115,8 @@ import lineage2.gameserver.utils.Strings;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import gnu.trove.iterator.TIntObjectIterator;
 
 /**
  * @author Mobius
@@ -1043,6 +1043,7 @@ public class NpcInstance extends Creature
 	/**
 	 * Method broadcastCharInfo.
 	 */
+	@Override
 	public void broadcastCharInfo()
 	{
 		for (Player player : World.getAroundPlayers(this))
@@ -1808,7 +1809,7 @@ public class NpcInstance extends Creature
 	 */
 	public void showQuestWindow(Player player)
 	{
-		Map<Integer, QuestInfo> options = new HashMap<Integer, QuestInfo>();
+		Map<Integer, QuestInfo> options = new HashMap<>();
 		Quest[] starts = getTemplate().getEventQuests(QuestEventType.QUEST_START);
 		List<QuestState> awaits = player.getQuestsForEvent(this, QuestEventType.QUEST_TALK, true);
 		if (starts != null)
@@ -1833,7 +1834,7 @@ public class NpcInstance extends Creature
 		}
 		if (options.size() > 1)
 		{
-			List<QuestInfo> l = new ArrayList<QuestInfo>();
+			List<QuestInfo> l = new ArrayList<>();
 			l.addAll(options.values());
 			Collections.sort(l);
 			showQuestChooseWindow(player, l);
@@ -2256,7 +2257,7 @@ public class NpcInstance extends Creature
 			player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			return;
 		}
-		Set<SkillLearn> learns = new TreeSet<SkillLearn>();
+		Set<SkillLearn> learns = new TreeSet<>();
 		for (SubUnit sub : player.getClan().getAllSubUnits())
 		{
 			learns.addAll(SkillAcquireHolder.getInstance().getAvailableSkills(player, AcquireType.SUB_UNIT, sub));
@@ -2453,6 +2454,7 @@ public class NpcInstance extends Creature
 	
 	/**
 	 * Method addListener.
+	 * @param <T>
 	 * @param listener T
 	 * @return boolean
 	 */
@@ -2463,6 +2465,7 @@ public class NpcInstance extends Creature
 	
 	/**
 	 * Method removeListener.
+	 * @param <T>
 	 * @param listener T
 	 * @return boolean
 	 */
@@ -2519,7 +2522,7 @@ public class NpcInstance extends Creature
 	@Override
 	public List<L2GameServerPacket> addPacketList(Player forPlayer, Creature dropper)
 	{
-		List<L2GameServerPacket> list = new ArrayList<L2GameServerPacket>(3);
+		List<L2GameServerPacket> list = new ArrayList<>(3);
 		list.add(new NpcInfo(this, forPlayer));
 		if (isInCombat())
 		{
@@ -2686,7 +2689,7 @@ public class NpcInstance extends Creature
 		}
 		if (_parameters == StatsSet.EMPTY)
 		{
-			_parameters = new MultiValueSet<String>(set.size());
+			_parameters = new MultiValueSet<>(set.size());
 		}
 		_parameters.putAll(set);
 	}

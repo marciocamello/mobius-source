@@ -767,6 +767,7 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 	
 	/**
 	 * @author Mobius
+	 * @param <T>
 	 */
 	private static class ClansComparator<T> implements Comparator<T>
 	{

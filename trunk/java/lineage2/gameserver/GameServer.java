@@ -300,10 +300,10 @@ public class GameServer
 		NaiaCoreManager.getInstance();
 		SoDManager.getInstance();
 		SoIManager.getInstance();
-        SoHManager.getInstance();
-        HarnakUndegroundManager.getInstance();
-
-        BloodAltarManager.getInstance();
+		SoHManager.getInstance();
+		HarnakUndegroundManager.getInstance();
+		
+		BloodAltarManager.getInstance();
 		L2TopManager.getInstance();
 		MMOTopManager.getInstance();
 		SMSWayToPay.getInstance();
@@ -311,9 +311,9 @@ public class GameServer
 		AwakingManager.getInstance();
 		FindPartyManager.getInstance().load();
 		
-        ArcanManager.getInstance();
-        WorldStatisticsManager.getInstance();
-
+		ArcanManager.getInstance();
+		WorldStatisticsManager.getInstance();
+		
 		SubClassTable.getInstance();
 		DualClassTable.getInstance();
 		if (Config.GARBAGE_COLLECTOR_INTERVAL > 0)
@@ -375,6 +375,7 @@ public class GameServer
 	
 	/**
 	 * Method addListener.
+	 * @param <T>
 	 * @param listener T
 	 * @return boolean
 	 */
@@ -385,6 +386,7 @@ public class GameServer
 	
 	/**
 	 * Method removeListener.
+	 * @param <T>
 	 * @param listener T
 	 * @return boolean
 	 */

@@ -57,7 +57,7 @@ public class KartiaGuard extends Fighter
 	{
 		return target.isMonster();
 	}
-
+	
 	/**
 	 * Method onEvtThink.
 	 */
@@ -66,14 +66,18 @@ public class KartiaGuard extends Fighter
 	{
 		final NpcInstance actor = getActor();
 		if (master == null)
-			master = getActor().getFollowTarget();
-		//if master exit from instance delete me
-		if (actor.getReflectionId() != master.getReflectionId())
-			actor.deleteMe();
-		//Check for Heal
-		if (actor.getNpcId() == 33639 || actor.getNpcId() == 33628 || actor.getNpcId() == 33617)
 		{
-			if (master != null && !master.isDead() && master.getCurrentHpPercents() < 80)
+			master = getActor().getFollowTarget();
+		}
+		// if master exit from instance delete me
+		if (actor.getReflectionId() != master.getReflectionId())
+		{
+			actor.deleteMe();
+		}
+		// Check for Heal
+		if ((actor.getNpcId() == 33639) || (actor.getNpcId() == 33628) || (actor.getNpcId() == 33617))
+		{
+			if ((master != null) && !master.isDead() && (master.getCurrentHpPercents() < 80))
 			{
 				if (!actor.isCastingNow() && (_ReuseTimer < System.currentTimeMillis()))
 				{
@@ -82,10 +86,10 @@ public class KartiaGuard extends Fighter
 				}
 			}
 		}
-		//Check for Aggression
-		if (actor.getNpcId() == 33609 || actor.getNpcId() == 33620 || actor.getNpcId() == 33631)
+		// Check for Aggression
+		if ((actor.getNpcId() == 33609) || (actor.getNpcId() == 33620) || (actor.getNpcId() == 33631))
 		{
-			if (master != null && !master.isDead() && master.getTarget() != null)
+			if ((master != null) && !master.isDead() && (master.getTarget() != null))
 			{
 				if (!actor.isCastingNow() && (_ReuseTimer < System.currentTimeMillis()))
 				{
@@ -93,9 +97,9 @@ public class KartiaGuard extends Fighter
 					{
 						if (npc instanceof MonsterInstance)
 						{
-							if (npc.getTarget() != null && npc.getTarget().isPlayer())
+							if ((npc.getTarget() != null) && npc.getTarget().isPlayer())
 							{
-								actor.doCast(SkillTable.getInstance().getInfo(10060, 1), npc, true);							
+								actor.doCast(SkillTable.getInstance().getInfo(10060, 1), npc, true);
 								_ReuseTimer = System.currentTimeMillis() + (7 * 1000L);
 							}
 						}
@@ -105,7 +109,7 @@ public class KartiaGuard extends Fighter
 		}
 		if (getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
 		{
-			//Check for Mobs to Attack
+			// Check for Mobs to Attack
 			int mobscount = 0;
 			for (NpcInstance npc : actor.getAroundNpc(600, 100))
 			{
@@ -115,18 +119,18 @@ public class KartiaGuard extends Fighter
 					mobscount++;
 				}
 			}
-			if (mobscount > 0 && !actor.getAggroList().isEmpty())
+			if ((mobscount > 0) && !actor.getAggroList().isEmpty())
 			{
 				Attack(actor.getAggroList().getRandomHated(), true, false);
 			}
-			//Check for Follow
+			// Check for Follow
 			else
 			{
 				if (getIntention() == CtrlIntention.AI_INTENTION_ACTIVE)
 				{
 					setIntention(CtrlIntention.AI_INTENTION_FOLLOW);
 				}
-				if (master != null && actor.getDistance(master.getLoc()) > 300)
+				if ((master != null) && (actor.getDistance(master.getLoc()) > 300))
 				{
 					final Location loc = new Location(master.getX() + Rnd.get(-120, 120), master.getY() + Rnd.get(-120, 120), master.getZ());
 					actor.followToCharacter(loc, master, Config.FOLLOW_RANGE, false);

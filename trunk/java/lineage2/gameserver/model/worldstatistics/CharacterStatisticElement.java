@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.model.worldstatistics;
 
 /**
@@ -6,32 +18,32 @@ package lineage2.gameserver.model.worldstatistics;
  */
 public class CharacterStatisticElement
 {
-	private CategoryType categoryType;
-	private long value;
-	private long monthlyValue;
-
+	private final CategoryType categoryType;
+	private final long value;
+	private final long monthlyValue;
+	
 	public CharacterStatisticElement(CategoryType type, long value, long monthlyValue)
 	{
 		categoryType = type;
 		this.value = value;
 		this.monthlyValue = monthlyValue;
 	}
-
+	
 	public CharacterStatisticElement(CategoryType type, long value)
 	{
 		this(type, value, 0L);
 	}
-
+	
 	public CategoryType getCategoryType()
 	{
 		return categoryType;
 	}
-
+	
 	public long getValue()
 	{
 		return value;
 	}
-
+	
 	public long getMonthlyValue()
 	{
 		return monthlyValue;

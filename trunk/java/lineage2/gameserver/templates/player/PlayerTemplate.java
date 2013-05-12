@@ -12,8 +12,6 @@
  */
 package lineage2.gameserver.templates.player;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.List;
 
 import lineage2.commons.util.Rnd;
@@ -23,6 +21,7 @@ import lineage2.gameserver.templates.CharTemplate;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.StartItem;
 import lineage2.gameserver.utils.Location;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius

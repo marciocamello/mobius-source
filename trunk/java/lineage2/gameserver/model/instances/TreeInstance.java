@@ -110,7 +110,7 @@ public class TreeInstance extends Summon
 	@Override
 	public String getName()
 	{
-		return this.getTemplate().getName();
+		return getTemplate().getName();
 	}
 	
 	/**

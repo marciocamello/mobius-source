@@ -206,6 +206,7 @@ public abstract class Residence implements JdbcEntity
 	
 	/**
 	 * Method getSiegeEvent.
+	 * @param <E>
 	 * @return E
 	 */
 	@SuppressWarnings("unchecked")

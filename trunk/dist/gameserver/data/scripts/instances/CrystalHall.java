@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package instances;
 
 import lineage2.gameserver.listener.actor.OnDeathListener;
@@ -13,39 +25,41 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Location;
 
 /**
- *
  * @author Awakeninger
  */
 
-public class CrystalHall extends Reflection {
-    private static final int RB1 = 25881;
+public class CrystalHall extends Reflection
+{
+	private static final int RB1 = 25881;
 	private static final int RB2 = 25881;
 	private static final int Cannon1 = 19008;
-	private static final int Cannon2 = 19008;   
+	private static final int Cannon2 = 19008;
 	private static final int Cannon3 = 19008;
-	private static final int Cannon4 = 19008; 
+	private static final int Cannon4 = 19008;
 	private static final int Cannon5 = 19008;
-	private static final int Cannon6 = 19008;   
+	private static final int Cannon6 = 19008;
 	private static final int Cannon7 = 19008;
 	private static final int Cannon8 = 19009;
 	private static final int Exchanger = 33388;
 	private static final int DoorOutside = 24220005;
 	private static final int DoorInside = 24220006;
 	private long _savedTime;
-	private Location Cannon1Loc = new Location(143144, 145832, -12061);
-	private Location Cannon2Loc = new Location(141912, 144200, -11949);
-	private Location Cannon3Loc = new Location(143368, 143768, -11976);
-	private Location Cannon4Loc = new Location(145544, 143746, -11841);
-	private Location Cannon5Loc = new Location(147544, 144872, -12251);
-	private Location Cannon6Loc = new Location(148952, 145224, -12326);
-	private Location Cannon7Loc = new Location(148152, 146136, -12305);
-	private Location Cannon8Loc = new Location(149096, 146872, -12369);
-    private Location RB1Loc = new Location(152984, 145960, -12609, 15640);
-	private Location RB2Loc = new Location(152536, 145960, -12609, 15640);
-	private DeathListener _deathListener = new DeathListener();
+	private final Location Cannon1Loc = new Location(143144, 145832, -12061);
+	private final Location Cannon2Loc = new Location(141912, 144200, -11949);
+	private final Location Cannon3Loc = new Location(143368, 143768, -11976);
+	private final Location Cannon4Loc = new Location(145544, 143746, -11841);
+	private final Location Cannon5Loc = new Location(147544, 144872, -12251);
+	private final Location Cannon6Loc = new Location(148952, 145224, -12326);
+	private final Location Cannon7Loc = new Location(148152, 146136, -12305);
+	private final Location Cannon8Loc = new Location(149096, 146872, -12369);
+	private final Location RB1Loc = new Location(152984, 145960, -12609, 15640);
+	final Location RB2Loc = new Location(152536, 145960, -12609, 15640);
+	private final DeathListener _deathListener = new DeathListener();
+	
 	@Override
-   public void onPlayerEnter(Player player) {
-        super.onPlayerEnter(player);
+	public void onPlayerEnter(Player player)
+	{
+		super.onPlayerEnter(player);
 		_savedTime = System.currentTimeMillis();
 		player.sendPacket(new ExSendUIEvent(player, 0, 1, (int) (System.currentTimeMillis() - _savedTime) / 1000, 0, NpcString.ELAPSED_TIME));
 		NpcInstance can8 = addSpawnWithoutRespawn(Cannon8, Cannon8Loc, 0);
@@ -68,43 +82,87 @@ public class CrystalHall extends Reflection {
 		RB1N.addListener(_deathListener);
 		NpcInstance RB2N = addSpawnWithoutRespawn(RB2, RB2Loc, 0);
 		RB2N.addListener(_deathListener);
-    }
+	}
 	
-	
-	private class DeathListener implements OnDeathListener {
-        @Override
-        public void onDeath(Creature self, Creature killer) {
-            if (self.isNpc() && self.getNpcId() == Cannon1) {
-			for (Player p : getPlayers()){
-				p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 1));}
-			}else if (self.isNpc() && self.getNpcId() == Cannon2) {
-			for (Player p : getPlayers()){
-				p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 2));}
-			}else if (self.isNpc() && self.getNpcId() == Cannon3) {
-			for (Player p : getPlayers()){
-				p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 3));}
-			}else if (self.isNpc() && self.getNpcId() == Cannon4) {
-			for (Player p : getPlayers()){
-				p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 4));}
-			}else if (self.isNpc() && self.getNpcId() == Cannon5) {
-			for (Player p : getPlayers()){
-				p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 5));}
-			}else if (self.isNpc() && self.getNpcId() == Cannon6) {
-			for (Player p : getPlayers()){
-				p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 6));}
-			}else if (self.isNpc() && self.getNpcId() == Cannon7) {
-			for (Player p : getPlayers()){
-				p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 7));}
-			}else if (self.isNpc() && self.getNpcId() == Cannon8) {
-			for (Player p : getPlayers()){
-				p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying_open_door, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true));}
+	private class DeathListener implements OnDeathListener
+	{
+		/**
+		 * 
+		 */
+		public DeathListener()
+		{
+			// TODO Auto-generated constructor stub
+		}
+		
+		@Override
+		public void onDeath(Creature self, Creature killer)
+		{
+			if (self.isNpc() && (self.getNpcId() == Cannon1))
+			{
+				for (Player p : getPlayers())
+				{
+					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 1));
+				}
+			}
+			else if (self.isNpc() && (self.getNpcId() == Cannon2))
+			{
+				for (Player p : getPlayers())
+				{
+					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 2));
+				}
+			}
+			else if (self.isNpc() && (self.getNpcId() == Cannon3))
+			{
+				for (Player p : getPlayers())
+				{
+					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 3));
+				}
+			}
+			else if (self.isNpc() && (self.getNpcId() == Cannon4))
+			{
+				for (Player p : getPlayers())
+				{
+					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 4));
+				}
+			}
+			else if (self.isNpc() && (self.getNpcId() == Cannon5))
+			{
+				for (Player p : getPlayers())
+				{
+					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 5));
+				}
+			}
+			else if (self.isNpc() && (self.getNpcId() == Cannon6))
+			{
+				for (Player p : getPlayers())
+				{
+					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 6));
+				}
+			}
+			else if (self.isNpc() && (self.getNpcId() == Cannon7))
+			{
+				for (Player p : getPlayers())
+				{
+					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 7));
+				}
+			}
+			else if (self.isNpc() && (self.getNpcId() == Cannon8))
+			{
+				for (Player p : getPlayers())
+				{
+					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying_open_door, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true));
+				}
 				getDoor(DoorOutside).openMe();
 				getDoor(DoorInside).openMe();
-			}else if (self.isNpc() && self.getNpcId() == RB1 && self.getNpcId() == RB2) {
-			for (Player p : getPlayers()){
-				p.sendPacket(new ExSendUIEvent(p, 1, 1, 0, 0));
-				p.sendPacket(new SystemMessage2(SystemMsg.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addInteger(5));}
-				startCollapseTimer(5 * 60 * 1000L);	
+			}
+			else if (self.isNpc() && (self.getNpcId() == RB1) && (self.getNpcId() == RB2))
+			{
+				for (Player p : getPlayers())
+				{
+					p.sendPacket(new ExSendUIEvent(p, 1, 1, 0, 0));
+					p.sendPacket(new SystemMessage2(SystemMsg.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addInteger(5));
+				}
+				startCollapseTimer(5 * 60 * 1000L);
 				addSpawnWithoutRespawn(Exchanger, RB2Loc, 0);
 			}
 		}

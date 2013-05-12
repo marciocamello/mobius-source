@@ -14,8 +14,6 @@ package instances;
 
 import java.util.concurrent.ScheduledFuture;
 
-import org.apache.commons.lang3.ArrayUtils;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.listener.actor.OnDeathListener;
@@ -30,6 +28,8 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.utils.Location;
 
+import org.apache.commons.lang3.ArrayUtils;
+
 public class KartiaLabyrinth95Solo extends Reflection
 {
 	private ScheduledFuture<?> firstStageGuardSpawn;
@@ -42,13 +42,20 @@ public class KartiaLabyrinth95Solo extends Reflection
 	
 	private static final int DOOR1_ID = 16170002;
 	private static final int DOOR2_ID = 16170003;
-
-	private int KartiaGuard = 19226;
-	private int KartiaWatchman = 19227;
-	private int DimensionalWatchman = 19228;
-	private int LordOfKartia = 19255;
-
-	private static final int[] supporter = {33631,33633,33635,33637,33639};
+	
+	private final int KartiaGuard = 19226;
+	private final int KartiaWatchman = 19227;
+	private final int DimensionalWatchman = 19228;
+	private final int LordOfKartia = 19255;
+	
+	static final int[] supporter =
+	{
+		33631,
+		33633,
+		33635,
+		33637,
+		33639
+	};
 	
 	public KartiaLabyrinth95Solo()
 	{
@@ -339,9 +346,9 @@ public class KartiaLabyrinth95Solo extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_1, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
-			for(NpcInstance n : getNpcs())
+			for (NpcInstance n : getNpcs())
 			{
-				if(!ArrayUtils.contains(supporter, n.getNpcId()))
+				if (!ArrayUtils.contains(supporter, n.getNpcId()))
 				{
 					n.deleteMe();
 				}
@@ -398,7 +405,7 @@ public class KartiaLabyrinth95Solo extends Reflection
 			openDoor(DOOR1_ID);
 		}
 	}
-
+	
 	private class ThirdSevenStage extends RunnableImpl
 	{
 		ThirdSevenStage()
@@ -416,7 +423,7 @@ public class KartiaLabyrinth95Solo extends Reflection
 			sixstagestagemobv.addListener(_deathListener);
 		}
 	}
-
+	
 	private class SecondSevenStage extends RunnableImpl
 	{
 		SecondSevenStage()
@@ -439,7 +446,7 @@ public class KartiaLabyrinth95Solo extends Reflection
 			ThreadPoolManager.getInstance().schedule(new ThirdSevenStage(), 21000L);
 		}
 	}
-
+	
 	private class SevenStage extends RunnableImpl
 	{
 		SevenStage()
@@ -466,7 +473,7 @@ public class KartiaLabyrinth95Solo extends Reflection
 			ThreadPoolManager.getInstance().schedule(new SecondSevenStage(), 21000L);
 		}
 	}
-
+	
 	private class ThreeSixStage extends RunnableImpl
 	{
 		ThreeSixStage()
@@ -560,7 +567,7 @@ public class KartiaLabyrinth95Solo extends Reflection
 			ThreadPoolManager.getInstance().schedule(new SixStage(), 60000L);
 		}
 	}
-
+	
 	private class SecondFiveStage extends RunnableImpl
 	{
 		SecondFiveStage()
@@ -580,7 +587,7 @@ public class KartiaLabyrinth95Solo extends Reflection
 			ThreadPoolManager.getInstance().schedule(new ThirdFiveStage(), 21000L);
 		}
 	}
-
+	
 	private class FiveStage extends RunnableImpl
 	{
 		FiveStage()
@@ -688,7 +695,7 @@ public class KartiaLabyrinth95Solo extends Reflection
 			ThreadPoolManager.getInstance().schedule(new ForthStage(), 60000L);
 		}
 	}
-
+	
 	private class SecondThirdStage extends RunnableImpl
 	{
 		SecondThirdStage()

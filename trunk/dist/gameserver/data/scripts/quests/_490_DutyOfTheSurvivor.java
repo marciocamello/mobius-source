@@ -1,11 +1,24 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package quests;
 
+import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
+
 import org.apache.commons.lang3.ArrayUtils;
-import lineage2.commons.util.Rnd;
 
 public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 {
@@ -13,24 +26,40 @@ public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 	private static final int EXTRACT = 34059;
 	private static final int BLOOD = 34060;
 	private static final int DROP_CHANCE = 60;
-	private static final int EXTRACT_MOBS[] = { 23162, 23163, 23164, 23165, 23166, 23167 };
-	private static final int BLOOD_MOBS[] = { 23168, 23169, 23170, 23171, 23172, 23173 };
+	private static final int EXTRACT_MOBS[] =
+	{
+		23162,
+		23163,
+		23164,
+		23165,
+		23166,
+		23167
+	};
+	private static final int BLOOD_MOBS[] =
+	{
+		23168,
+		23169,
+		23170,
+		23171,
+		23172,
+		23173
+	};
 	
 	@Override
 	public void onLoad()
 	{
 	}
-
+	
 	@Override
 	public void onReload()
 	{
 	}
-
+	
 	@Override
 	public void onShutdown()
 	{
 	}
-
+	
 	public _490_DutyOfTheSurvivor()
 	{
 		super(false);
@@ -38,9 +67,13 @@ public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 		addTalkId(VOLLODOS);
 		addKillId(EXTRACT_MOBS);
 		addKillId(BLOOD_MOBS);
-		addQuestItem((new int[] { 34059, 34060 }));
+		addQuestItem((new int[]
+		{
+			34059,
+			34060
+		}));
 	}
-
+	
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
@@ -53,7 +86,7 @@ public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 		}
 		return htmltext;
 	}
-
+	
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
@@ -65,19 +98,28 @@ public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 			if (st.getPlayer().getLevel() >= 85)
 			{
 				if (cond == 0)
-				{ 
-					if (st.isNowAvailableByTime())
-						htmltext = "30137.htm";
-					else
-						htmltext = "30137-comp.htm";
-				} else if (cond == 1)
 				{
-					if(st.haveQuestItem(34059) || st.haveQuestItem(34060))
-						htmltext = "30137-9.htm";
+					if (st.isNowAvailableByTime())
+					{
+						htmltext = "30137.htm";
+					}
 					else
-						htmltext = "30137-6.htm";
+					{
+						htmltext = "30137-comp.htm";
+					}
 				}
-				if(cond == 2)
+				else if (cond == 1)
+				{
+					if (st.haveQuestItem(34059) || st.haveQuestItem(34060))
+					{
+						htmltext = "30137-9.htm";
+					}
+					else
+					{
+						htmltext = "30137-6.htm";
+					}
+				}
+				if (cond == 2)
 				{
 					st.takeItems(34059, -1);
 					st.takeItems(34060, -1);
@@ -88,27 +130,30 @@ public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 					st.playSound(SOUND_FINISH);
 					htmltext = "30137-comp.htm";
 				}
-			} else 
+			}
+			else
+			{
 				htmltext = "30137-lvl.htm";
+			}
 		}
 		
 		return htmltext;
 	}
-
+	
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		if(ArrayUtils.contains(EXTRACT_MOBS, npc.getNpcId()) && st.getQuestItemsCount(EXTRACT) < 20 && Rnd.get(100) < DROP_CHANCE)
+		if (ArrayUtils.contains(EXTRACT_MOBS, npc.getNpcId()) && (st.getQuestItemsCount(EXTRACT) < 20) && (Rnd.get(100) < DROP_CHANCE))
 		{
 			st.giveItems(EXTRACT, 1);
 			st.playSound(SOUND_ITEMGET);
 		}
-		if(ArrayUtils.contains(BLOOD_MOBS, npc.getNpcId()) && st.getQuestItemsCount(BLOOD) < 20 && Rnd.get(100) < DROP_CHANCE)
+		if (ArrayUtils.contains(BLOOD_MOBS, npc.getNpcId()) && (st.getQuestItemsCount(BLOOD) < 20) && (Rnd.get(100) < DROP_CHANCE))
 		{
 			st.giveItems(BLOOD, 1);
 			st.playSound(SOUND_ITEMGET);
 		}
-		if(st.getQuestItemsCount(EXTRACT) == 20 && st.getQuestItemsCount(BLOOD) == 20)
+		if ((st.getQuestItemsCount(EXTRACT) == 20) && (st.getQuestItemsCount(BLOOD) == 20))
 		{
 			st.setCond(2);
 			st.playSound(SOUND_MIDDLE);
