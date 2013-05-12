@@ -77,7 +77,7 @@ public abstract class SagasSuperclass extends Quest
 	static
 	{
 		Quests.put(10341, _10341_DayOfDestinyHumanFate.class);
-		Quests.put(10342, _10342_DayOfDestinyElvenFate.class);
+		Quests.put(10342, _10342_DayofDestinyElvenFate.class);
 		Quests.put(10343, _10343_DayOfDestinyDarkElfsFate.class);
 		Quests.put(10344, _10344_DayOfDestinyOrcsFate.class);
 		Quests.put(10345, _10345_DayOfDestinyDwarfsFate.class);
