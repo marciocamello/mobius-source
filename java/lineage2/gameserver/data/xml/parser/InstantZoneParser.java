@@ -148,7 +148,7 @@ public class InstantZoneParser extends AbstractDirParser<InstantZoneHolder>
 			maxChannels = Integer.parseInt(n);
 			n = element.attributeValue("dispelBuffs");
 			dispelBuffs = (n != null) && Boolean.parseBoolean(n);
-			int minLevel = 0, maxLevel = 0, minParty = 1, maxParty = 9;
+			int minLevel = 0, maxLevel = 0, minParty = 1, maxParty = 7;
 			List<Location> teleportLocs = Collections.emptyList();
 			Location ret = null;
 			for (Iterator<Element> subIterator = element.elementIterator(); subIterator.hasNext();)

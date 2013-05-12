@@ -1,53 +1,37 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package lineage2.gameserver.network.serverpackets;
+
+import lineage2.gameserver.model.IconEffect;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import lineage2.gameserver.model.IconEffect;
-
 /**
- * @author Mobius
- * @version $Revision: 1.0 $
+ * sample
+ * <p/>
+ * 0000: 85 02 00 10 04 00 00 01 00 4b 02 00 00 2c 04 00 .........K...,.. 0010: 00 01 00 58 02 00 00 ...X...
+ * <p/>
+ * <p/>
+ * format h (dhd)
+ * 
+ * @version $Revision: 1.3.2.1.2.6 $ $Date: 2005/04/05 19:41:08 $
  */
 public class AbnormalStatusUpdate extends L2GameServerPacket implements IconEffectPacket
 {
-	/**
-	 * Field INFINITIVE_EFFECT. (value is -1)
-	 */
 	public static final int INFINITIVE_EFFECT = -1;
-	/**
-	 * Field _effects.
-	 */
-	private final List<IconEffect> _effects;
-	
-	/**
-	 * Constructor for AbnormalStatusUpdate.
-	 */
+	private List<IconEffect> _effects;
+
 	public AbnormalStatusUpdate()
 	{
-		_effects = new ArrayList<>();
+		_effects = new ArrayList<IconEffect>();
 	}
-	
-	/**
-	 * Method writeImpl.
-	 */
+
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0x85);
+
 		writeH(_effects.size());
+
 		for (IconEffect temp : _effects)
 		{
 			writeD(temp.getSkillId());
@@ -55,15 +39,7 @@ public class AbnormalStatusUpdate extends L2GameServerPacket implements IconEffe
 			writeD(temp.getDuration());
 		}
 	}
-	
-	/**
-	 * Method addIconEffect.
-	 * @param skillId int
-	 * @param level int
-	 * @param duration int
-	 * @param obj int
-	 * @see lineage2.gameserver.network.serverpackets.IconEffectPacket#addIconEffect(int, int, int, int)
-	 */
+
 	@Override
 	public void addIconEffect(int skillId, int level, int duration, int obj)
 	{

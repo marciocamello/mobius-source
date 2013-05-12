@@ -37,7 +37,7 @@
         <set name="operateType" val="OP_ACTIVE"/>
 		<for>
             <effect count="1" name="Buff" stackOrder="1" val="1">
-                <mul order="0x30" stat="reflectDam" value="1"/>
+                <mul order="0x30" stat="reflectDam" val="1"/>
             </effect>
         </for>
 	</skill>
@@ -50,7 +50,7 @@
         <set name="operateType" val="OP_ACTIVE"/>
 		<for>
             <effect count="1" name="Buff" stackOrder="1" val="1">
-                <mul order="0x30" stat="reflectDam" value="2"/>
+                <mul order="0x30" stat="reflectDam" val="2"/>
             </effect>
         </for>
 	</skill>
@@ -63,7 +63,7 @@
         <set name="operateType" val="OP_ACTIVE"/>
 		<for>
             <effect count="1" name="Buff" stackOrder="1" val="1">
-                <mul order="0x30" stat="reflectDam" value="3"/>
+                <mul order="0x30" stat="reflectDam" val="3"/>
             </effect>
         </for>
 	</skill>
@@ -76,7 +76,7 @@
         <set name="operateType" val="OP_ACTIVE"/>
 		<for>
             <effect count="1" name="Buff" stackOrder="1" val="1">
-                <mul order="0x30" stat="reflectDam" value="4"/>
+                <mul order="0x30" stat="reflectDam" val="4"/>
             </effect>
         </for>
 	</skill>
@@ -89,7 +89,7 @@
         <set name="operateType" val="OP_ACTIVE"/>
 		<for>
             <effect count="1" name="Buff" stackOrder="1" val="1">
-                <mul order="0x30" stat="reflectDam" value="5"/>
+                <mul order="0x30" stat="reflectDam" val="5"/>
             </effect>
         </for>
 	</skill>
@@ -102,7 +102,7 @@
         <set name="operateType" val="OP_ACTIVE"/>
 		<for>
             <effect count="1" name="Buff" stackOrder="1" val="1">
-                <mul order="0x30" stat="reflectDam" value="6"/>
+                <mul order="0x30" stat="reflectDam" val="6"/>
             </effect>
         </for>
 	</skill>
@@ -115,7 +115,7 @@
         <set name="operateType" val="OP_ACTIVE"/>
 		<for>
             <effect count="1" name="Buff" stackOrder="1" val="1">
-                <mul order="0x30" stat="reflectDam" value="7"/>
+                <mul order="0x30" stat="reflectDam" val="7"/>
             </effect>
         </for>
 	</skill>
@@ -128,7 +128,7 @@
         <set name="operateType" val="OP_ACTIVE"/>
 		<for>
             <effect count="1" name="Buff" stackOrder="1" val="1">
-                <mul order="0x30" stat="reflectDam" value="8"/>
+                <mul order="0x30" stat="reflectDam" val="8"/>
             </effect>
         </for>
 	</skill>
@@ -141,7 +141,7 @@
         <set name="operateType" val="OP_ACTIVE"/>
 		<for>
             <effect count="1" name="Buff" stackOrder="1" val="1">
-                <mul order="0x30" stat="reflectDam" value="9"/>
+                <mul order="0x30" stat="reflectDam" val="9"/>
             </effect>
         </for>
 	</skill>
@@ -154,7 +154,7 @@
         <set name="operateType" val="OP_ACTIVE"/>
 		<for>
             <effect count="1" name="Buff" stackOrder="1" val="1">
-                <mul order="0x30" stat="reflectDam" value="1"/>
+                <mul order="0x30" stat="reflectDam" val="1"/>
             </effect>
         </for>
 	</skill>

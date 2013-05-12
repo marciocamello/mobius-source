@@ -21,17 +21,15 @@ import java.util.Collection;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
-import java.util.concurrent.Future;
-
 import lineage2.commons.collections.JoinedIterator;
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.cache.CrestCache;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.database.mysql;
+import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.entity.boat.ClanAirShip;
@@ -48,6 +46,8 @@ import lineage2.gameserver.network.serverpackets.PledgeShowMemberListDeleteAll;
 import lineage2.gameserver.network.serverpackets.PledgeSkillList;
 import lineage2.gameserver.network.serverpackets.PledgeSkillListAdd;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
+import lineage2.gameserver.skills.effects.EffectTemplate;
+import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Log;
@@ -175,11 +175,7 @@ public class Clan implements Iterable<UnitMember>
 	/**
 	 * Field _clanLeaderSkill.
 	 */
-	static Skill _clanLeaderSkill = null;
-	/**
-	 * Field _clanLeaderSkillIncreaseTask.
-	 */
-	protected Future<?> _clanLeaderSkillIncreaseTask = null;
+	static Skill _clanLeaderSkill = SkillTable.getInstance().getInfo(19009, 1);
 	/**
 	 * Field _reputation.
 	 */
@@ -2308,78 +2304,45 @@ public class Clan implements Iterable<UnitMember>
 	{
 		if (activeChar.isClanLeader())
 		{
-			if (activeChar.getClan().getLevel() >= 5)
+			_clanLeaderSkill = SkillTable.getInstance().getInfo(19009, 1);
+			for (Player member : getOnlineMembers(0))
 			{
-				startLeaderSkillTask();
-			}
-		}
-		else if (_clanLeaderSkill != null)
-		{
-			_clanLeaderSkill = null;
-		}
-	}
-	
-	/**
-	 * Method startLeaderSkillTask.
-	 */
-	public void startLeaderSkillTask()
-	{
-		if (_clanLeaderSkillIncreaseTask != null)
-		{
-			_clanLeaderSkillIncreaseTask.cancel(false);
-		}
-		ClanLeaderSkillIncreaseTask clsit = new ClanLeaderSkillIncreaseTask();
-		_clanLeaderSkillIncreaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(clsit, 100, 600000);
-	}
-	
-	/**
-	 * @author Mobius
-	 */
-	private class ClanLeaderSkillIncreaseTask implements Runnable
-	{
-		/**
-		 * Constructor for ClanLeaderSkillIncreaseTask.
-		 */
-		public ClanLeaderSkillIncreaseTask()
-		{
-			// TODO Auto-generated constructor stub
-		}
-		
-		/**
-		 * Method run.
-		 * @see java.lang.Runnable#run()
-		 */
-		@Override
-		public void run()
-		{
-			if (getLeader().isOnline())
-			{
-				if (_clanLeaderSkill == null)
+				for (EffectTemplate et : _clanLeaderSkill.getEffectTemplates())
 				{
-					_clanLeaderSkill = SkillTable.getInstance().getInfo(19009, 1);
-				}
-				else
-				{
-					int level = _clanLeaderSkill.getLevel();
-					if (level != 5)
+					Effect effect = et.getEffect(new Env(member, member, _clanLeaderSkill));
+					if (effect != null)
 					{
-						_clanLeaderSkill = SkillTable.getInstance().getInfo(19009, level + 1);
+						member.getEffectList().addEffect(effect);
 					}
-				}
-				for (Player member : getOnlineMembers(0))
-				{
-					member.addSkill(SkillTable.getInstance().getInfo(_clanLeaderSkill.getId(), _clanLeaderSkill.getLevel()), false);
-				}
+				}		
 			}
-			else
+		}
+		else if (getLeader().isOnline())
+		{
+			_clanLeaderSkill = SkillTable.getInstance().getInfo(19009, 1);
+			for (EffectTemplate et : _clanLeaderSkill.getEffectTemplates())
 			{
-				for (Player member : getOnlineMembers(0))
+				Effect effect = et.getEffect(new Env(activeChar, activeChar, _clanLeaderSkill));
+				if (effect != null)
 				{
-					member.getEffectList().stopEffect(_clanLeaderSkill);
+					activeChar.getEffectList().addEffect(effect);
 				}
-				_clanLeaderSkillIncreaseTask.cancel(false);
-				_clanLeaderSkillIncreaseTask = null;
-				_clanLeaderSkill = null;
+			}		
+		}
+	}
+
+	/**
+	 * Method startNotifyClanLogOut.
+	 * @param activeChar Player
+	 */
+	public void startNotifyClanLogOut(Player activeChar)
+	{
+		if (activeChar.isClanLeader())
+		{
+			_clanLeaderSkill = SkillTable.getInstance().getInfo(19009, 1);
+			for (Player member : getOnlineMembers(0))
+			{
+				member.getEffectList().stopEffect(_clanLeaderSkill);
 			}
 		}
 	}

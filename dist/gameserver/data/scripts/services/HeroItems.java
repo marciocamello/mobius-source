@@ -146,113 +146,113 @@ public class HeroItems extends Functions
 			"30392",
 			"weapon_the_dagger_of_hero_i00",
 			"Infinity Shaper",
-			"Св�?щенное �?ружие Геро�?. Увеличивает мак�?. HP/мак�?. MP/мак�?. CP/ урон при PvP/ Скор. �?аг. и Скор. �?тк. Дополнител�?но увеличивает �?ан�? �?рит. �?тк.",
+			"Holy hero's weapon. Increases Max HP / Max MP / Max CP. Increases damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. P. Critical Rate increases.",
 			"640/399",
-			"�?инжал"
+			"Dagger"
 		},
 		{
 			"30393",
 			"weapon_the_sword_of_hero_i00",
 			"Infinity Cutter",
-			"Св�?щенное �?ружие Геро�?. Увеличивает мак�?. HP/мак�?. MP/мак�?. CP/ урон при PvP/ Скор. �?аг. �? Скор. �?тк. Дополнител�?но увеличивает �?ан�? �?рит. �?тк.",
+			"Holy hero's weapon. Increases Max HP / Max MP / Max CP. Increases damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. P. Critical Rate increases.",
 			"720/399",
-			"�?дноручный меч"
+			"Sword"
 		},
 		{
 			"30394",
 			"weapon_the_two_handed_sword_of_hero_i00",
 			"Infinity Slasher",
-			"Св�?щенное �?ружие Геро�?. Увеличивает мак�?. HP/мак�?. MP/мак�?. CP/ урон при PvP/ Скор. �?аг. �? Скор. �?тк. Дополнител�?но увеличивает �?ан�? �?рит. �?тк.",
+			"Holy hero's weapon. Increases Max HP / Max MP / Max CP. Increases damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. P. Critical Rate increases.",
 			"877/399",
-			"Двуручный меч"
+			"Two Handed Sword"
 		},
 		{
 			"30395",
 			"weapon_the_axe_of_hero_i00",
 			"Infinity Avenger",
-			"Св�?щенное �?ружие Геро�?. Увеличивает мак�?. HP/мак�?. MP/мак�?. CP/ урон при PvP/ Скор. �?аг. и Скор. �?тк. Дополнител�?но увеличивает �?ан�? �?рит. �?тк.",
+			"Holy hero's weapon. Increases Max HP / Max MP / Max CP. Increases damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. P. Critical Rate increases.",
 			"720/399",
-			"�?дноручна�? дубина"
+			"Blunt"
 		},
 		{
 			"30396",
 			"weapon_the_fist_of_hero_i00",
 			"Infinity Fighter",
-			"Св�?щенное �?ружие Геро�?. Увеличивает мак�?. HP/мак�?. MP/мак�?. CP/ урон при PvP/ Скор. �?аг. и Скор. �?тк.. Дополнител�?но увеличивает �?ан�? �?рит. �?тк.",
+			"Holy hero's weapon. Increases Max HP / Max MP / Max CP. Increases damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. P. Critical Rate increases.",
 			"877/399",
-			"�?а�?тет"
+			"Dual Fist"
 		},
 		{
 			"30397",
 			"weapon_the_pole_of_hero_i00",
 			"Infinity Stormer",
-			"Св�?щенное �?ружие Геро�?. Увеличивает мак�?. HP/мак�?. MP/мак�?. CP/ урон при PvP/ Скор. �?аг. и Скор. �?тк.. Дополнител�?но увеличивает �?ан�? �?рит. �?тк.",
+			"Holy hero's weapon. Increases Max HP / Max MP / Max CP. Increases damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. P. Critical Rate increases.",
 			"720/399",
-			"�?оп�?е"
+			"Pole"
 		},
 		{
 			"30398",
 			"weapon_the_bow_of_hero_i00",
 			"Infinity Thrower",
-			"Св�?щенное �?ружие Геро�?. Увеличивает мак�?. HP/мак�?. MP/мак�?. CP/ урон при PvP/ Скор. �?аг. и Скор. �?тк.. Дополнител�?но увеличивает �?ан�? �?рит. �?тк.",
+			"Holy hero's weapon. Increases Max HP / Max MP / Max CP. Increases damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. P. Critical Rate increases.",
 			"1419/399",
-			"Лук"
+			"Bow"
 		},
 		{
 			"30399",
 			"weapon_infinity_shooter_i00",
 			"Infinity Shooter",
-			"Св�?щенное �?ружие Геро�?. Увеличивает мак�?. HP/мак�?. MP/мак�?. CP/ урон при PvP/ Скор. �?аг. и Скор. �?тк.. Дополнител�?но увеличивает �?ан�? �?рит. �?тк.",
+			"Holy hero's weapon. Increases Max HP / Max MP / Max CP. Increases damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. P. Critical Rate increases.",
 			"908/399",
-			"�?рбалет"
+			"Crossbow"
 		},
 		{
 			"30400",
 			"weapon_infinity_sword_i00",
 			"Infinity Buster",
-			"Св�?щенное �?ружие Геро�?. Увеличивает мак�?. HP/мак�?. MP/мак�?. CP/ урон при PvP/ Скор. �?аг. и Скор. �?тк.. Дополнител�?но придает �?ффект �?роницател�?но�?ти.",
+			"Holy hero's weapon. Increases Max HP / Max MP / Max CP. Increases damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. Acumen is added.",
 			"592/508",
-			"�?дноручный меч"
+			"Sword"
 		},
 		{
 			"30401",
 			"weapon_the_mace_of_hero_i00",
 			"Infinity Caster",
-			"Св�?щенное �?ружие Геро�?. Увеличивает мак�?. HP/мак�?. MP/мак�?. CP/ урон при PvP/ Скор. �?аг. и Скор. �?тк.. Дополнител�?но придает �?ффект �?роницател�?но�?ти.",
+			"Holy hero's weapon. Increases Max HP / Max MP / Max CP. Increases damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. Acumen is added.",
 			"592/508",
-			"�?дноручна�? дубина"
+			"Blunt"
 		},
 		{
 			"30402",
 			"weapon_the_staff_of_hero_i00",
 			"Infinity Retributer",
-			"Св�?щенное �?ружие Геро�?. Увеличивает мак�?. HP/мак�?. MP/мак�?. CP/ урон при PvP/ Скор. �?аг. и Скор. �?тк.. Дополнител�?но придает �?ффект �?роницател�?но�?ти.",
+			"Holy hero's weapon. Increases Max HP / Max MP / Max CP. Increases damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. Acumen is added.",
 			"721/551",
-			"Двуручна�? дубина"
+			"Blunt"
 		},
 		{
 			"30403",
 			"weapon_r_dualsword_i00",
 			"Infinity Dual Sword",
-			"Св�?щенное �?ружие Геро�?. Увеличивает мак�?. HP/мак�?. MP/мак�?. CP/ урон при PvP/ Скор. �?аг. и Скор. �?тк.. Дополнител�?но увеличивает �?ан�? �?рит. �?тк.",
+			"Holy hero's weapon. Increases Max HP / Max MP / Max CP. Increases damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. P. Critical Rate increases.",
 			"877/399",
-			"�?арные мечи"
+			"Dual Sword"
 		},
 		{
 			"30404",
 			"weapon_r_dualdagger_i00",
 			"Infinity Dual Dagger",
-			"Св�?щенное �?ружие Геро�?. Увеличивает мак�?. HP/мак�?. MP/мак�?. CP/ урон при PvP/ Скор. �?аг. и Скор. �?тк.. Дополнител�?но увеличивает �?ан�? �?рит. �?тк.",
+			"Holy hero's weapon. Increases Max HP / Max MP / Max CP. Increases damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. P. Critical Rate increases.",
 			"738/399",
-			"�?арные кинжалы"
+			"Dual Dagger"
 		},
 		{
 			"30405",
 			"weapon_r_dualblunt_i00",
 			"Infinity Dual Blunt Weapon",
-			"Св�?щенное �?ружие Геро�?. Увеличивает мак�?. HP/мак�?. MP/мак�?. CP/ урон при PvP/ Скор. �?аг. и Скор. �?тк.. Дополнител�?но увеличивает �?ан�? �?рит. �?тк.",
+			"Holy hero's weapon. Increases Max HP / Max MP / Max CP. Increases damage inflicted during PvP. Increases Atk. Spd. and Casting Spd. P. Critical Rate increases.",
 			"877/399",
-			"�?арные дубины"
+			"Dual Blunt"
 		}
 	};
 	

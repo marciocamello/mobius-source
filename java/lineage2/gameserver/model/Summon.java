@@ -18,7 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Future;
-import java.util.concurrent.ScheduledFuture;
 
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -54,6 +53,9 @@ import lineage2.gameserver.network.serverpackets.RelationChanged;
 import lineage2.gameserver.network.serverpackets.StatusUpdate;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Events;
+import lineage2.gameserver.skills.EffectType;
+import lineage2.gameserver.skills.effects.EffectTemplate;
+import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.taskmanager.DecayTaskManager;
 import lineage2.gameserver.templates.item.WeaponTemplate;
@@ -95,9 +97,9 @@ public abstract class Summon extends Playable
 	 */
 	private int _maxLoad, _spsCharged;
 	/**
-	 * Field _ssCharged. Field _depressed. Field _follow.
+	 * Field _ssCharged. Field _depressed. Field _follow. Field _defend.
 	 */
-	private boolean _follow = true, _depressed = false, _ssCharged = false;
+	private boolean _follow = true, _depressed = false, _ssCharged = false, _defend = false;
 	/**
 	 * Field _decayTask.
 	 */
@@ -137,6 +139,37 @@ public abstract class Summon extends Playable
 		if (party != null)
 		{
 			party.broadcastToPartyMembers(owner, new ExPartyPetWindowAdd(this));
+		}
+		if (owner.getEffectList().getEffectByStackType("ServitorShare") != null)
+		{
+			final Creature SummonEffect = this;
+			ThreadPoolManager.getInstance().execute(new RunnableImpl()
+			{
+				@Override
+				public void runImpl()
+				{
+					final Player owner = getPlayer();
+					final Skill skl = owner.getEffectList().getEffectByStackType("ServitorShare").getSkill();
+					long currenttime = owner.getEffectList().getEffectByStackType("ServitorShare").getTime();
+					long duration = owner.getEffectList().getEffectByStackType("ServitorShare").getDuration();
+					for(EffectTemplate et : skl.getEffectTemplates())
+					{
+						if(et == null || et.getEffectType() != EffectType.ServitorShare)
+						{
+							continue;
+						}
+						Env env = new Env(owner,SummonEffect,skl);
+						final Effect effect = et.getEffect(env);
+						if(effect == null)
+						{
+							continue;
+						}
+						effect.setCount(1);
+						effect.setPeriod(duration - currenttime);
+						effect.schedule();
+					}
+				}
+			});
 		}
 		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 	}
@@ -474,7 +507,7 @@ public abstract class Summon extends Playable
 		Player owner = getPlayer();
 		sendStatusUpdate();
 		StatusUpdate su = makeStatusUpdate(StatusUpdate.MAX_HP, StatusUpdate.CUR_HP);
-		broadcastToStatusListeners(su);
+		broadcastPacket(su);
 		Party party = owner.getParty();
 		if (party != null)
 		{
@@ -553,7 +586,16 @@ public abstract class Summon extends Playable
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 		}
 	}
-	
+
+	/**
+	 * Method setDefendMode.
+	 * @param state boolean
+	 */
+	public void setDefendMode(boolean state)
+	{
+		_defend = state;
+	}
+
 	/**
 	 * Method isFollowMode.
 	 * @return boolean
@@ -562,7 +604,16 @@ public abstract class Summon extends Playable
 	{
 		return _follow;
 	}
-	
+
+	/**
+	 * Method isFollowMode.
+	 * @return boolean
+	 */
+	public boolean isDefendMode()
+	{
+		return _defend;
+	}
+
 	/**
 	 * Field _updateEffectIconsTask.
 	 */
@@ -575,51 +626,14 @@ public abstract class Summon extends Playable
 	public abstract int getSummonPoint();
 	
 	/**
-	 * @author Mobius
-	 */
-	private class UpdateEffectIcons extends RunnableImpl
-	{
-		/**
-		 * Constructor for UpdateEffectIcons.
-		 */
-		public UpdateEffectIcons()
-		{
-			// TODO Auto-generated constructor stub
-		}
-		
-		/**
-		 * Method runImpl.
-		 */
-		@Override
-		public void runImpl()
-		{
-			updateEffectIconsImpl();
-			_updateEffectIconsTask = null;
-		}
-	}
-	
-	/**
 	 * Method updateEffectIcons.
 	 */
 	@Override
 	public void updateEffectIcons()
 	{
 		super.updateEffectIcons();
-		if (Config.USER_INFO_INTERVAL == 0)
-		{
-			if (_updateEffectIconsTask != null)
-			{
-				_updateEffectIconsTask.cancel(false);
-				_updateEffectIconsTask = null;
-			}
-			updateEffectIconsImpl();
-			return;
-		}
-		if (_updateEffectIconsTask != null)
-		{
-			return;
-		}
-		_updateEffectIconsTask = ThreadPoolManager.getInstance().schedule(new UpdateEffectIcons(), Config.USER_INFO_INTERVAL);
+		updateEffectIconsImpl();
+		return;
 	}
 	
 	/**
@@ -872,43 +886,9 @@ public abstract class Summon extends Playable
 	}
 	
 	/**
-	 * Field _broadcastCharInfoTask.
-	 */
-	ScheduledFuture<?> _broadcastCharInfoTask;
-	
-	/**
-	 * @author Mobius
-	 */
-	public class BroadcastCharInfoTask extends RunnableImpl
-	{
-		/**
-		 * Method runImpl.
-		 */
-		@Override
-		public void runImpl()
-		{
-			broadcastCharInfoImpl();
-			_broadcastCharInfoTask = null;
-		}
-	}
-	
-	/**
 	 * Method broadcastCharInfo.
 	 */
-	@Override
 	public void broadcastCharInfo()
-	{
-		if (_broadcastCharInfoTask != null)
-		{
-			return;
-		}
-		_broadcastCharInfoTask = ThreadPoolManager.getInstance().schedule(new BroadcastCharInfoTask(), Config.BROADCAST_CHAR_INFO_INTERVAL);
-	}
-	
-	/**
-	 * Method broadcastCharInfoImpl.
-	 */
-	public void broadcastCharInfoImpl()
 	{
 		Player owner = getPlayer();
 		for (Player player : World.getAroundPlayers(this))
@@ -925,63 +905,13 @@ public abstract class Summon extends Playable
 	}
 	
 	/**
-	 * Field _petInfoTask.
-	 */
-	Future<?> _petInfoTask;
-	
-	/**
-	 * @author Mobius
-	 */
-	private class PetInfoTask extends RunnableImpl
-	{
-		/**
-		 * Constructor for PetInfoTask.
-		 */
-		public PetInfoTask()
-		{
-			// TODO Auto-generated constructor stub
-		}
-		
-		/**
-		 * Method runImpl.
-		 */
-		@Override
-		public void runImpl()
-		{
-			sendPetInfoImpl();
-			_petInfoTask = null;
-		}
-	}
-	
-	/**
-	 * Method sendPetInfoImpl.
-	 */
-	void sendPetInfoImpl()
-	{
-		Player owner = getPlayer();
-		owner.sendPacket(new PetInfo(this).update());
-	}
-	
-	/**
 	 * Method sendPetInfo.
 	 */
 	public void sendPetInfo()
 	{
-		if (Config.USER_INFO_INTERVAL == 0)
-		{
-			if (_petInfoTask != null)
-			{
-				_petInfoTask.cancel(false);
-				_petInfoTask = null;
-			}
-			sendPetInfoImpl();
-			return;
-		}
-		if (_petInfoTask != null)
-		{
-			return;
-		}
-		_petInfoTask = ThreadPoolManager.getInstance().schedule(new PetInfoTask(), Config.USER_INFO_INTERVAL);
+		Player owner = getPlayer();
+		owner.sendPacket(new PetInfo(this).update());
+		return;
 	}
 	
 	/**
@@ -1082,7 +1012,7 @@ public abstract class Summon extends Playable
 	@Override
 	public List<L2GameServerPacket> addPacketList(Player forPlayer, Creature dropper)
 	{
-		List<L2GameServerPacket> list = new ArrayList<>();
+		List<L2GameServerPacket> list = new ArrayList<L2GameServerPacket>();
 		Player owner = getPlayer();
 		if (owner == forPlayer)
 		{

@@ -12,6 +12,7 @@
  */
 package lineage2.gameserver.templates.item;
 
+import lineage2.gameserver.Config;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.funcs.FuncTemplate;
 import lineage2.gameserver.templates.StatsSet;
@@ -204,7 +205,7 @@ public final class WeaponTemplate extends ItemTemplate
 		_spiritShotCount = set.getInteger("spiritshots", 0);
 		_kamaelConvert = set.getInteger("kamael_convert", 0);
 		_rndDam = set.getInteger("rnd_dam", 0);
-		_atkReuse = set.getInteger("atk_reuse", type == WeaponType.BOW ? 1500 : type == WeaponType.CROSSBOW ? 820 : 0);
+		_atkReuse = set.getInteger("atk_reuse", type == WeaponType.BOW ? Config.BOW_REUSE : type == WeaponType.CROSSBOW ? Config.CROSSBOW_REUSE : 0);
 		_mpConsume = set.getInteger("mp_consume", 0);
 		if (getItemType() == WeaponType.NONE)
 		{

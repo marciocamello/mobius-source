@@ -5,27 +5,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="7"/>
 		<set name="collision_height" value="23.0"/>
@@ -55,27 +55,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -104,27 +104,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -153,27 +153,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePAtk" value="689"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="5"/>
 		<set name="collision_height" value="21.5"/>
@@ -203,27 +203,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePAtk" value="689"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="5"/>
 		<set name="collision_height" value="23.0"/>
@@ -250,27 +250,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -299,27 +299,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="26"/>
 		<set name="collision_height" value="15.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -345,27 +345,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -394,27 +394,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="7"/>
 		<set name="collision_height" value="21.2"/>
@@ -441,27 +441,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="27"/>
 		<set name="collision_height" value="18.0"/>
 		<set name="collision_radius" value="11.0"/>
@@ -487,27 +487,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="147"/>
 		<set name="baseShldRate" value="20"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="23.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -537,27 +537,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="23.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -586,27 +586,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -635,27 +635,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePAtk" value="689"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="5"/>
 		<set name="collision_height" value="25.0"/>
@@ -685,27 +685,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePAtk" value="689"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="5"/>
 		<set name="collision_height" value="22.5"/>
@@ -732,27 +732,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="8.0"/>
@@ -778,29 +778,29 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePAtk" value="689"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="24.0"/>
+		<set name="collision_height" value="23.0"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="level" value="70"/>
 		<set name="rewardExp" value="0"/>
@@ -827,27 +827,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -876,27 +876,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="25.5"/>
 		<set name="collision_radius" value="8.0"/>
@@ -926,27 +926,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="22.4"/>
 		<set name="collision_radius" value="9.5"/>
@@ -975,27 +975,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="collision_radius" value="8.0"/>
@@ -1024,27 +1024,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -1073,27 +1073,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="collision_radius" value="20.0"/>
@@ -1119,27 +1119,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="80"/>
 		<set name="collision_height" value="16.3"/>
 		<set name="collision_radius" value="6.0"/>
@@ -1165,27 +1165,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="22.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -1211,27 +1211,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="10.5"/>
 		<set name="collision_radius" value="5.0"/>
@@ -1260,27 +1260,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="16.5"/>
 		<set name="collision_radius" value="7.0"/>
@@ -1309,27 +1309,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="80"/>
 		<set name="collision_height" value="16.3"/>
 		<set name="collision_radius" value="6.0"/>
@@ -1355,27 +1355,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -1401,27 +1401,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="48"/>
 		<set name="collision_height" value="16.0"/>
 		<set name="collision_radius" value="11.0"/>
@@ -1447,27 +1447,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePAtk" value="689"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="48"/>
 		<set name="collision_height" value="16.0"/>
 		<set name="collision_radius" value="11.0"/>
@@ -1493,27 +1493,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="8.0"/>
@@ -1542,29 +1542,29 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="48"/>
-		<set name="collision_height" value="28.0"/>
+		<set name="collision_height" value="33.0"/>
 		<set name="collision_radius" value="7.0"/>
 		<set name="level" value="70"/>
 		<set name="rewardExp" value="0"/>
@@ -1588,27 +1588,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="8.0"/>
@@ -1637,27 +1637,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="8.0"/>
@@ -1686,27 +1686,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="8.0"/>
@@ -1735,27 +1735,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -1784,27 +1784,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -1833,27 +1833,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="8.0"/>
@@ -1882,27 +1882,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -1931,27 +1931,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="23.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -1980,27 +1980,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="23.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -2029,27 +2029,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -2078,27 +2078,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="collision_radius" value="8.0"/>
@@ -2123,31 +2123,31 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="31644" name="Witness of Dawn Franz" title="Witness of Dawn">
+	<npc id="31644" name="Franz" title="Witness of Dawn">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -2176,27 +2176,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="21.5"/>
 		<set name="collision_radius" value="7.0"/>
@@ -2225,27 +2225,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="7.0"/>
@@ -2271,27 +2271,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="7.0"/>
@@ -2317,27 +2317,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="7.0"/>
@@ -2363,27 +2363,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="7.0"/>
@@ -2409,27 +2409,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePAtk" value="689"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="7.0"/>
@@ -2455,31 +2455,31 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="7.0"/>
-		<set name="level" value="70"/>
+		<set name="level" value="68"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -2501,27 +2501,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="7.0"/>
@@ -2547,27 +2547,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="7.0"/>
@@ -2593,27 +2593,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="7.0"/>
@@ -2639,27 +2639,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="7.0"/>
@@ -2685,27 +2685,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="7.0"/>
@@ -2731,27 +2731,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="7.0"/>
@@ -2777,27 +2777,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="7.0"/>
@@ -2823,27 +2823,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="7.0"/>
@@ -2869,27 +2869,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="7.0"/>
@@ -2915,27 +2915,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="46.5"/>
 		<set name="collision_radius" value="32.0"/>
@@ -2961,27 +2961,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="46.5"/>
 		<set name="collision_radius" value="32.0"/>
@@ -3007,27 +3007,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="46.5"/>
 		<set name="collision_radius" value="32.0"/>
@@ -3053,27 +3053,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="46.5"/>
 		<set name="collision_radius" value="32.0"/>
@@ -3095,31 +3095,31 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="31665" name="Dwarf's Corpse" title="">
+	<npc id="31665" name="Dwarf Corpse" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="collision_radius" value="13.0"/>
@@ -3148,31 +3148,31 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="5"/>
 		<set name="collision_height" value="21.5"/>
-		<set name="collision_radius" value="8.0"/>
+		<set name="collision_radius" value="7.0"/>
 		<set name="level" value="70"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
@@ -3195,27 +3195,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="5"/>
 		<set name="collision_height" value="23.5"/>
@@ -3242,30 +3242,30 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="5"/>
-		<set name="collision_height" value="16.5"/>
+		<set name="collision_height" value="17.0"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="level" value="70"/>
 		<set name="rewardExp" value="0"/>
@@ -3289,27 +3289,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePAtk" value="689"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="5"/>
 		<set name="collision_height" value="18.0"/>
@@ -3336,31 +3336,31 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="5"/>
 		<set name="collision_height" value="21.5"/>
-		<set name="collision_radius" value="8.0"/>
+		<set name="collision_radius" value="7.0"/>
 		<set name="level" value="70"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
@@ -3383,27 +3383,27 @@
 		<set name="aggroRange" value="1000"/>
 		<set name="ai_type" value="Guard"/>
 		<set name="baseAtkRange" value="1100"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="80"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="3290.113"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="5193"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="1242"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="469"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="250"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1674.8"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="basePAtk" value="1952"/>
+		<set name="baseMpReg" value="3.0"/>
+		<set name="basePAtk" value="971"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="577"/>
+		<set name="basePDef" value="341"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -3432,27 +3432,27 @@
 		<set name="aggroRange" value="1000"/>
 		<set name="ai_type" value="Guard"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="3290.113"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="5193"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="1242"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="469"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="250"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1674.8"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="basePAtk" value="1952"/>
+		<set name="baseMpReg" value="3.0"/>
+		<set name="basePAtk" value="971"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="577"/>
+		<set name="basePDef" value="341"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="8.0"/>
@@ -3481,31 +3481,31 @@
 		<set name="aggroRange" value="1000"/>
 		<set name="ai_type" value="Guard"/>
 		<set name="baseAtkRange" value="1100"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="57"/>
 		<set name="baseCritRate" value="80"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="3290.113"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="1242"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseMDef" value="469"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1674.8"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="basePAtk" value="1952"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="577"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseHpMax" value="84843"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseMAtk" value="8455"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMDef" value="2573"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseMpMax" value="5357"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="22365"/>
+		<set name="basePAtkSpd" value="266"/>
+		<set name="basePDef" value="4266"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="60"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="70"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="8.0"/>
-		<set name="level" value="80"/>
+		<set name="level" value="99"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -3530,31 +3530,31 @@
 		<set name="aggroRange" value="1000"/>
 		<set name="ai_type" value="Guard"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="57"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="3290.113"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="1242"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseMDef" value="469"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1674.8"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="basePAtk" value="1952"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="577"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseHpMax" value="84843"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseMAtk" value="8455"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMDef" value="2573"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseMpMax" value="5357"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="22365"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="basePDef" value="4266"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="60"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="70"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="8.0"/>
-		<set name="level" value="80"/>
+		<set name="level" value="99"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -3575,36 +3575,36 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="31675" name="Viktor Van Dake" title="Border Outpost Captain">
+	<npc id="31675" name="Viktor Van Dake" title="Border Patrol Captain">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Guard"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="57"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseHpMax" value="84843"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseMAtk" value="8455"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="2573"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseMpMax" value="5357"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="22365"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="4266"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="60"/>
 		<set name="baseShldDef" value="147"/>
 		<set name="baseShldRate" value="20"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="70"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="4"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="8.0"/>
-		<set name="level" value="70"/>
+		<set name="level" value="99"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -3626,36 +3626,36 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="31676" name="Gregory Athebaldt" title="Border Outpost Captain">
+	<npc id="31676" name="Gregory Athebaldt" title="Border Patrol Captain">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Guard"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="84843"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="5"/>
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="8.0"/>
-		<set name="level" value="70"/>
+		<set name="level" value="99"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -3680,32 +3680,32 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Guard"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="57"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="3290.113"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="1242"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="469"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1674.8"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="basePAtk" value="1952"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseHpMax" value="84843"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseMAtk" value="8455"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="2573"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseMpMax" value="5357"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="22365"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="577"/>
+		<set name="basePDef" value="4266"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="60"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="70"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="4"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="8.0"/>
-		<set name="level" value="80"/>
+		<set name="level" value="99"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -3730,27 +3730,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Guard"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="3290.113"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="84843"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="1242"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="469"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="250"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1674.8"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="basePAtk" value="1952"/>
+		<set name="baseMpReg" value="3.0"/>
+		<set name="basePAtk" value="971"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="577"/>
+		<set name="basePDef" value="341"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="5"/>
 		<set name="collision_height" value="24.0"/>
@@ -3780,27 +3780,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Guard"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="8"/>
 		<set name="collision_height" value="23.5"/>
@@ -3830,27 +3830,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Guard"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="147"/>
 		<set name="baseShldRate" value="20"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="7"/>
 		<set name="collision_height" value="24.0"/>
@@ -3881,32 +3881,32 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Guard"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="57"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="3290.113"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="1242"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="469"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1674.8"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="basePAtk" value="1952"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseHpMax" value="84843"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseMAtk" value="7485"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="2452"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseMpMax" value="5054"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="20320"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="577"/>
+		<set name="basePDef" value="3981"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="60"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="70"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="8"/>
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="8.0"/>
-		<set name="level" value="80"/>
+		<set name="level" value="96"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -3931,32 +3931,32 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Guard"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="57"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="3290.113"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="1242"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="469"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1674.8"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="basePAtk" value="1952"/>
+		<set name="baseDEX" value="73"/>
+		<set name="baseHpMax" value="84843"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="20"/>
+		<set name="baseINT" value="76"/>
+		<set name="baseMAtk" value="8122"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="2533"/>
+		<set name="baseMEN" value="80"/>
+		<set name="baseMpMax" value="5254"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="basePAtk" value="21668"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="577"/>
+		<set name="basePDef" value="4170"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="60"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="70"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="7"/>
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="8.0"/>
-		<set name="level" value="80"/>
+		<set name="level" value="98"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -3981,30 +3981,30 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePAtk" value="689"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="307.0"/>
-		<set name="collision_radius" value="120.0"/>
+		<set name="collision_height" value="305.0"/>
+		<set name="collision_radius" value="205.0"/>
 		<set name="level" value="70"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
@@ -4027,27 +4027,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="90"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="collision_radius" value="11.0"/>
@@ -4073,27 +4073,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="90"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="collision_radius" value="11.0"/>
@@ -4119,27 +4119,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="40"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="collision_radius" value="10.0"/>
@@ -4168,27 +4168,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="40"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="collision_radius" value="10.0"/>
@@ -4217,27 +4217,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePAtk" value="689"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="8.0"/>
@@ -4266,27 +4266,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="8.0"/>
@@ -4315,30 +4315,30 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePAtk" value="689"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="69.0"/>
-		<set name="collision_radius" value="24.0"/>
+		<set name="collision_radius" value="21.0"/>
 		<set name="level" value="70"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
@@ -4361,27 +4361,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePAtk" value="689"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="collision_height" value="22.0"/>
 		<set name="collision_radius" value="9.0"/>
@@ -4407,27 +4407,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="147"/>
 		<set name="baseShldRate" value="20"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="7"/>
 		<set name="collision_height" value="30.5"/>
@@ -4457,27 +4457,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="147"/>
 		<set name="baseShldRate" value="20"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="7"/>
 		<set name="collision_height" value="22.0"/>
@@ -4507,27 +4507,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="147"/>
 		<set name="baseShldRate" value="20"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="8"/>
 		<set name="collision_height" value="30.5"/>
@@ -4557,27 +4557,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="3858"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="147"/>
 		<set name="baseShldRate" value="20"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="8"/>
 		<set name="collision_height" value="22.0"/>
@@ -4607,27 +4607,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="8"/>
 		<set name="collision_height" value="24.0"/>
@@ -4657,27 +4657,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="7"/>
 		<set name="collision_height" value="24.0"/>
@@ -4707,27 +4707,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="8"/>
 		<set name="collision_height" value="25.0"/>
@@ -4761,27 +4761,27 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="43"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="2444.468"/>
-		<set name="baseHpRate" value="1"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="4228"/>
+		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="7.5"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="780"/>
-		<set name="baseMAtkSpd" value="500"/>
-		<set name="baseMDef" value="382"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="470"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="217"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1345.8"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="1303"/>
+		<set name="basePAtk" value="689"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="471"/>
+		<set name="basePDef" value="296"/>
 		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="40"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="8"/>
 		<set name="collision_height" value="25.0"/>

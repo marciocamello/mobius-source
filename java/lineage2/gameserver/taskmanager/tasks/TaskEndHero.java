@@ -62,7 +62,7 @@ public class TaskEndHero extends Task
 			{
 				player.setHero(false);
 				player.updatePledgeClass();
-				player.broadcastUserInfo(true);
+				player.broadcastUserInfo();
 				Hero.deleteHero(player);
 				Hero.removeSkills(player);
 				player.unsetVar("HeroPeriod");

@@ -111,10 +111,8 @@ public class SymbolInstance extends NpcInstance
 					{
 						if (_skill.checkTarget(_owner, t, null, false, false) == null)
 						{
-							if ((t == _owner) && _skill.isOffensive())
-							{
+							if (t == _owner && _skill.isOffensive())
 								continue;
-							}
 							targets.add(t);
 						}
 					}

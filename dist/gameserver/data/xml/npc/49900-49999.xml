@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="49900" template_id="33105" name="" title="">
+	<npc id="49900" name="" title="">
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -51,7 +51,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="49901" template_id="33105" name="" title="">
+	<npc id="49901" name="" title="">
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -101,7 +101,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="49902" template_id="33105" name="" title="">
+	<npc id="49902" name="" title="">
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>

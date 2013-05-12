@@ -33,7 +33,7 @@
 		<set name="skillType" val="MDAM"/>
 		<set name="isMagic" val="true"/>
 		<set name="target" val="TARGET_ONE"/>
-		<set name="overHit" val="true"/>>
+		<set name="overHit" val="true"/>&gt;
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
 		<set name="isAlterSkill" val="true"/>

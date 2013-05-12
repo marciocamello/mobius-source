@@ -98,7 +98,7 @@ public class AdminPledge implements IAdminCommandHandler
 						target.sendPacket(clan.listAll());
 						target.sendPacket(new PledgeShowInfoUpdate(clan), Msg.CLAN_HAS_BEEN_CREATED);
 						target.updatePledgeClass();
-						target.sendUserInfo(true);
+						target.sendUserInfo();
 						return true;
 					}
 					activeChar.sendPacket(Msg.THIS_NAME_ALREADY_EXISTS);
@@ -132,7 +132,7 @@ public class AdminPledge implements IAdminCommandHandler
 					{
 						member.updatePledgeClass();
 						member.sendPacket(Msg.CLANS_SKILL_LEVEL_HAS_INCREASED, pu, ps);
-						member.broadcastUserInfo(true);
+						member.broadcastUserInfo();
 					}
 					return true;
 				}

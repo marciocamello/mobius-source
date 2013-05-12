@@ -2120,4 +2120,16 @@
         <npc id="36440"/>
         <!--Special Envoy-->
     </spawn>
+	<spawn count="1" respawn="43200" respawn_random="0" period_of_day="none">
+		<point x="48243" y="147316" z="-3440" h="10000" />
+		<npc id="25886" /><!--Houpon the Warden Overseer (Raid Boss lv 97)-->
+	</spawn>
+	<spawn count="1" respawn="43200" respawn_random="0" period_of_day="none">
+		<point x="43509" y="145180" z="-3120" h="10000" />
+		<npc id="25887" /><!--Crook the Mad (Raid Boss lv 97)-->
+	</spawn>
+	<spawn count="1" respawn="43200" respawn_random="0" period_of_day="none">
+		<point x="44799" y="155939" z="-1048" h="10000" />
+		<npc id="25887" /><!--Guillotine of Death (Raid Boss lv 97)-->
+	</spawn>
 </list>

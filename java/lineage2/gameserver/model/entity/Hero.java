@@ -259,7 +259,7 @@ public class Hero
 					}
 					player.setHero(false);
 					player.updatePledgeClass();
-					player.broadcastUserInfo(true);
+					player.broadcastUserInfo();
 				}
 			}
 		}
@@ -411,7 +411,7 @@ public class Hero
 			player.getClan().incReputation(5000, true, "Hero:activateHero:" + player);
 			player.getClan().broadcastToOtherOnlineMembers(new SystemMessage(SystemMessage.CLAN_MEMBER_S1_WAS_NAMED_A_HERO_2S_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION_SCORE).addString(player.getName()).addNumber(Math.round(5000 * Config.RATE_CLAN_REP_SCORE)), player);
 		}
-		player.broadcastUserInfo(true);
+		player.broadcastUserInfo();
 		updateHeroes(player.getObjectId());
 	}
 	

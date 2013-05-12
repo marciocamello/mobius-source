@@ -23,7 +23,7 @@ import lineage2.gameserver.stats.funcs.FuncTemplate;
  * @version $Revision: 1.0 $
  */
 public class EffectServitorShare extends Effect
-{
+{		
 	/**
 	 * @author Mobius
 	 */

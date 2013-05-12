@@ -16,6 +16,7 @@ import gnu.trove.map.hash.TIntIntHashMap;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 
 import javolution.util.FastList;
@@ -61,7 +62,92 @@ public class AwakingManager implements OnPlayerEnterListener
 	 * Field _CA.
 	 */
 	private static TIntIntHashMap _CA = new TIntIntHashMap(36);
+	/**
+	 * Field _LegacyWeapon.
+	 */
+	private static TIntIntHashMap _LegacyWeapon = new TIntIntHashMap(36);
+	/**
+	 * Field _AwakenPower.
+	 */
+	private static TIntIntHashMap _AwakenPower = new TIntIntHashMap(8);
+	/**
+	 * Field _AwakenPower.
+	 */
+	private static TIntIntHashMap _CloakDualClass = new TIntIntHashMap(8);
+
+	/**
+	 * Field _AlterSigel.
+	 */
+	private static final Integer [] _AlterSigel =
+	{
+		10250,
+		10249
+	};
+
+	/**
+	 * Field _AlterTyrr.
+	 */
+	private static final Integer [] _AlterTyrr =
+	{
+		10500,
+		10499
+	};
+
+	/**
+	 * Field _AlterOthell.
+	 */
+	private static final Integer [] _AlterOthell =
+	{
+		10750,
+		10749
+	};
+
+	/**
+	 * Field _AlterYul.
+	 */
+	private static final Integer [] _AlterYul =
+	{
+		11000,
+		10999
+	};
+
+	/**
+	 * Field _AlterFeoh.
+	 */
+	private static final Integer [] _AlterFeoh =
+	{
+		11249,
+		11247
+	};
+
+	/**
+	 * Field _AlterIss.
+	 */
+	private static final Integer [] _AlterIss =
+	{
+		11750,
+		11749
+	};
+
+	/**
+	 * Field _AlterWynn.
+	 */
+	private static final Integer [] _AlterWynn =
+	{
+		11500,
+		11499
+	};
+
+	/**
+	 * Field _AlterAerore.
+	 */
+	private static final Integer [] _AlterAerore =
+	{
+		12000,
+		11999
+	};
 	
+	private static final HashMap <Integer, Integer[]> _AlterSkills = new HashMap<Integer, Integer []>();
 	/**
 	 * Field count30T.
 	 */
@@ -100,43 +186,6 @@ public class AwakingManager implements OnPlayerEnterListener
 		83
 	};
 	/**
-	 * Field count30.
-	 */
-	private static final int[] count30 =
-	{
-		0,
-		0,
-		0,
-		0,
-		1,
-		1,
-		1,
-		1,
-		2,
-		2,
-		2,
-		3,
-		3,
-		3,
-		4,
-		4,
-		5,
-		6,
-		6,
-		7,
-		8,
-		9,
-		9,
-		10,
-		11,
-		13,
-		14,
-		15,
-		19,
-		21,
-		25
-	};
-	/**
 	 * Field count15T.
 	 */
 	private static final int[] count15T =
@@ -158,28 +207,6 @@ public class AwakingManager implements OnPlayerEnterListener
 		24,
 		35
 	};
-	/**
-	 * Field count15.
-	 */
-	private static final int[] count15 =
-	{
-		0,
-		0,
-		0,
-		0,
-		1,
-		1,
-		1,
-		1,
-		2,
-		2,
-		3,
-		3,
-		3,
-		6,
-		8,
-		11
-	};
 	
 	/**
 	 * Method load.
@@ -191,51 +218,47 @@ public class AwakingManager implements OnPlayerEnterListener
 			CharListenerList.addGlobal(this);
 		}
 		_CA.clear();
+		_AlterSkills.clear();
+		_LegacyWeapon.clear();
+		_AwakenPower.clear();
+		_CloakDualClass.clear();
 		/***************************************************************************************************
-		 * 139 H_PhoenixKnight, H_HellKnight, E_EvaTemplar, DE_ShillienTemplar 140 H_Duelist, H_Dreadnought, O_Titan, O_GrandKhauatari, D_Maestro, K_Male_Doombringer 141 H_Adventurer, E_WindRider, DE_GhostHunter, D_FortuneSeeker, 142 H_Sagittarius, E_MoonlightSentinel, DE_GhostSentinel,
-		 * K_Female_Trickster 143 H_Archmage, H_Soultaker, E_MysticMuse, DE_StormScreamer, K_Male_Soulhound, K_Female_Soulhound 144 H_Hierophant, E_SwordMuse, DE_SpectralDancer, O_Dominator, O_Doomcryer, K_Judicator 145 H_ArcanaLord, E_ElementalMaster, DE_SpectralMaster 146 H_Cardinal, E_EvaSaint,
-		 * DE_ShillienSaint
-		 ****************************************************************************************************/
-		_CA.put(90, 139);
-		_CA.put(91, 139);
-		_CA.put(99, 139);
-		_CA.put(106, 139);
-		_CA.put(89, 140);
-		_CA.put(88, 140);
-		_CA.put(113, 140);
-		_CA.put(114, 140);
-		_CA.put(118, 140);
-		_CA.put(131, 140);
-		_CA.put(93, 141);
-		_CA.put(101, 141);
-		_CA.put(108, 141);
-		_CA.put(117, 141);
-		_CA.put(92, 142);
-		_CA.put(102, 142);
-		_CA.put(109, 142);
-		_CA.put(134, 142);
-		_CA.put(94, 143);
-		_CA.put(95, 143);
-		_CA.put(103, 143);
-		_CA.put(110, 143);
-		_CA.put(132, 143);
-		_CA.put(133, 143);
-		_CA.put(98, 144);
-		_CA.put(116, 144);
-		_CA.put(115, 144);
-		_CA.put(100, 144);
-		_CA.put(107, 144);
-		_CA.put(136, 144);
-		_CA.put(96, 145);
-		_CA.put(104, 145);
-		_CA.put(111, 145);
-		_CA.put(97, 146);
-		_CA.put(105, 146);
-		_CA.put(112, 146);
-		
-		_log.info("AwakingManager: Loaded 8 Awaking class for " + _CA.size() + " normal class.");
+		* 139 H_PhoenixKnight, H_HellKnight, E_EvaTemplar, DE_ShillienTemplar
+		* 140 H_Duelist, H_Dreadnought, O_Titan, O_GrandKhauatari, D_Maestro, K_Male_Doombringer
+		* 141 H_Adventurer, E_WindRider, DE_GhostHunter, D_FortuneSeeker, 
+		* 142 H_Sagittarius, E_MoonlightSentinel, DE_GhostSentinel, K_Female_Trickster
+		* 143 H_Archmage, H_Soultaker, E_MysticMuse, DE_StormScreamer, K_Male_Soulhound, K_Female_Soulhound
+		* 144 H_Hierophant, E_SwordMuse, DE_SpectralDancer, O_Dominator, O_Doomcryer, K_Judicator
+		* 145 H_ArcanaLord, E_ElementalMaster, DE_SpectralMaster
+		* 146 H_Cardinal, E_EvaSaint, DE_ShillienSaint
+		****************************************************************************************************/
+		_CA.put(90, 139);		_CA.put(91, 139);		_CA.put(99, 139);		_CA.put(106, 139);
+		_CA.put(89, 140);		_CA.put(88, 140);		_CA.put(113, 140);		_CA.put(114, 140);		_CA.put(118, 140);		_CA.put(131, 140);
+		_CA.put(93, 141);		_CA.put(101, 141);		_CA.put(108, 141);		_CA.put(117, 141);
+		_CA.put(92, 142);		_CA.put(102, 142);		_CA.put(109, 142);		_CA.put(134, 142);
+		_CA.put(94, 143);		_CA.put(95, 143);		_CA.put(103, 143);		_CA.put(110, 143);		_CA.put(132, 143);		_CA.put(133, 143);
+		_CA.put(98, 144);		_CA.put(116, 144);		_CA.put(115, 144);		_CA.put(100, 144);		_CA.put(107, 144);		_CA.put(136, 144);
+		_CA.put(96, 145);		_CA.put(104, 145);		_CA.put(111, 145);
+		_CA.put(97, 146);		_CA.put(105, 146);		_CA.put(112, 146);
+		_AwakenPower.put(139,32264);	_AwakenPower.put(140,32265);	_AwakenPower.put(141,32266);	_AwakenPower.put(142,32267);
+		_AwakenPower.put(143,32268);	_AwakenPower.put(144,32270);	_AwakenPower.put(145,32269);
+		_AwakenPower.put(146,32271);
+		_CloakDualClass.put(139,30310);	_CloakDualClass.put(140,30311);	_CloakDualClass.put(141,30312);
+		_CloakDualClass.put(142,30313);	_CloakDualClass.put(143,30314);	_CloakDualClass.put(144,30316);
+		_CloakDualClass.put(145,30315);	_CloakDualClass.put(146,30317);
+		_LegacyWeapon.put(88,33717);	_LegacyWeapon.put(89,33718);	_LegacyWeapon.put(90,33719);	_LegacyWeapon.put(91,33720);	_LegacyWeapon.put(92,33721);
+		_LegacyWeapon.put(93,33722);	_LegacyWeapon.put(94,33723);	_LegacyWeapon.put(95,33724);	_LegacyWeapon.put(96,33725);
+		_LegacyWeapon.put(97,33726);	_LegacyWeapon.put(98,33727);	_LegacyWeapon.put(99,33728);	_LegacyWeapon.put(100,33729);	_LegacyWeapon.put(101,33730);
+		_LegacyWeapon.put(102,33731);	_LegacyWeapon.put(103,33732);	_LegacyWeapon.put(104,33733);	_LegacyWeapon.put(105,33734);	_LegacyWeapon.put(106,33735);
+		_LegacyWeapon.put(107,33736);	_LegacyWeapon.put(108,33737);	_LegacyWeapon.put(109,33738);	_LegacyWeapon.put(110,33739);	_LegacyWeapon.put(111,33740);
+		_LegacyWeapon.put(112,33741);	_LegacyWeapon.put(113,33742);	_LegacyWeapon.put(114,33743);	_LegacyWeapon.put(115,33744);	_LegacyWeapon.put(116,33745);
+		_LegacyWeapon.put(117,33746);	_LegacyWeapon.put(118,33747);	_LegacyWeapon.put(131,33761);	_LegacyWeapon.put(132,33762);	_LegacyWeapon.put(133,33763);
+		_LegacyWeapon.put(134,33763);	_LegacyWeapon.put(136,33765);
+		_AlterSkills.put(139,_AlterSigel);		_AlterSkills.put(140,_AlterTyrr);		_AlterSkills.put(141,_AlterOthell);
+		_AlterSkills.put(142,_AlterYul);		_AlterSkills.put(143,_AlterFeoh);		_AlterSkills.put(144,_AlterIss);
+		_AlterSkills.put(145,_AlterWynn);		_AlterSkills.put(146,_AlterAerore);
+		_log.info("AwakingManager: Loaded 8 Awaking class for " + _CA.size() + " normal class. Loaded " + _LegacyWeapon.size() + " Legacy Weapons.");
 	}
-	
 	/**
 	 * Method getInstance.
 	 * @return AwakingManager
@@ -290,7 +313,7 @@ public class AwakingManager implements OnPlayerEnterListener
 		player.sendPacket(new ExChangeToAwakenedClass(newClass));
 		return;
 	}
-	
+
 	/**
 	 * Method SendReqToAwaking.
 	 * @param player Player, int toClassId
@@ -323,16 +346,17 @@ public class AwakingManager implements OnPlayerEnterListener
 	public void SetAwakingId(Player player)
 	{
 		int _oldId = player.getClassId().getId();
+		giveGiantEssences(player, false);
 		if (Config.ALT_DELETE_SKILL_PROF) // its important part of correct skill assignment this If sentence, removed from player.java
 		{
 			onTransferOnlyRemoveSkills(player);
 		}
 		player.setClassId(_CA.get(_oldId), false, false);
-		giveGiantEssences(player, false);
-		player.broadcastUserInfo(true);
+		player.broadcastUserInfo();
 		player.broadcastPacket(new SocialAction(player.getObjectId(), (_CA.get(_oldId) - 119)));
-		giveItems(player);
+		giveItems(player, _oldId, _CA.get(_oldId));
 	}
+
 	
 	/**
 	 * Method SetAwakingId.
@@ -340,57 +364,37 @@ public class AwakingManager implements OnPlayerEnterListener
 	 */
 	public void SetAwakingId(Player player, int toClass, int classIdSkills)
 	{
+		giveGiantEssences(player, false);
+		giveItems(player,player.getActiveClassId(),toClass);
 		if (Config.ALT_DELETE_SKILL_PROF) // its important part of correct skill assignment this If sentence, removed from player.java
 		{
-			onTransferOnlyRemoveSkills(player, toClass, classIdSkills);
+			onTransferOnlyRemoveSkills(player,toClass,classIdSkills);
 		}
 		player.setClassId(toClass, false, false);
-		giveGiantEssences(player, false);
-		player.broadcastUserInfo(true);
+		player.broadcastUserInfo();
 		player.broadcastPacket(new SocialAction(player.getObjectId(), (toClass - 119)));
-		giveItems(player);
 	}
 	
 	/**
 	 * Method giveItems.
 	 * @param player Player
 	 */
-	public void giveItems(Player player)
+	public void giveItems(Player player, Integer previousClassId, Integer newClassId)
 	{
-		switch (player.getClassId().getId())
+		if(!player.getSubClassList().isDoubleClassActive())
 		{
-			case 139:
-				ItemFunctions.addItem(player, 32264, 1, true);
-				ItemFunctions.addItem(player, 33735, 1, true);
-				break;
-			case 140:
-				ItemFunctions.addItem(player, 32265, 1, true);
-				ItemFunctions.addItem(player, 33742, 1, true);
-				break;
-			case 141:
-				ItemFunctions.addItem(player, 32266, 1, true);
-				ItemFunctions.addItem(player, 33722, 1, true);
-				break;
-			case 142:
-				ItemFunctions.addItem(player, 32267, 1, true);
-				ItemFunctions.addItem(player, 33763, 1, true);
-				break;
-			case 143:
-				ItemFunctions.addItem(player, 32268, 1, true);
-				ItemFunctions.addItem(player, 33732, 1, true);
-				break;
-			case 144:
-				ItemFunctions.addItem(player, 32270, 1, true);
-				ItemFunctions.addItem(player, 33727, 1, true);
-				break;
-			case 145:
-				ItemFunctions.addItem(player, 32269, 1, true);
-				ItemFunctions.addItem(player, 33740, 1, true);
-				break;
-			case 146:
-				ItemFunctions.addItem(player, 32271, 1, true);
-				ItemFunctions.addItem(player, 33726, 1, true);
+			ItemFunctions.addItem(player, _AwakenPower.get(newClassId), 1, true);
+			ItemFunctions.addItem(player, _LegacyWeapon.get(previousClassId), 1, true);
 		}
+		else
+		{
+			if(previousClassId >= 139)
+			{
+		        player.getInventory().destroyItemByItemId(_CloakDualClass.get(previousClassId), 1);
+		        player.getWarehouse().destroyItemByItemId(_CloakDualClass.get(previousClassId), 1);
+			}
+			ItemFunctions.addItem(player, _CloakDualClass.get(newClassId), 1, true);
+		}			
 	}
 	
 	/**
@@ -429,7 +433,7 @@ public class AwakingManager implements OnPlayerEnterListener
 	 */
 	public int giveGiantEssences(Player player, boolean onlyCalculateCount)
 	{
-		List<Integer> enchantedSkills = new FastList<>();
+		List<Integer> enchantedSkills = new FastList<Integer>();
 		int count = 0;
 		for (Skill skill : player.getAllSkills())
 		{
@@ -442,29 +446,13 @@ public class AwakingManager implements OnPlayerEnterListener
 				{
 					if (sl.getMaxLevel() == 15)
 					{
-						if (player.isTautiClient())
-						{
-							elevel = Math.min(count15T.length, elevel);
-							count += count15T[elevel];
-						}
-						else
-						{
-							elevel = Math.min(count15.length, elevel);
-							count += count15[elevel];
-						}
+						elevel = Math.min(count15T.length, elevel);
+						count += count15T[elevel];
 					}
 					else
 					{
-						if (player.isTautiClient())
-						{
-							elevel = Math.min(count30T.length, elevel);
-							count += count30T[elevel];
-						}
-						else
-						{
-							elevel = Math.min(count30.length, elevel);
-							count += count30[elevel];
-						}
+						elevel = Math.min(count30T.length, elevel);
+						count += count30T[elevel];
 					}
 				}
 			}
@@ -490,90 +478,104 @@ public class AwakingManager implements OnPlayerEnterListener
 		int previousClassId = player.getClassId().getId();
 		int newClassId = _CA.get(previousClassId);
 		boolean delete = false;
-		if (Config.ALT_DELETE_AWAKEN_SKILL_FROM_DB)
-		{
+		if(Config.ALT_DELETE_AWAKEN_SKILL_FROM_DB)
 			delete = true;
-		}
-		List<Integer> skillsToMantain = SkillAcquireHolder.getInstance().getMaintainSkillOnAwake(previousClassId, newClassId);
-		List<Integer> allSkillsId = SkillAcquireHolder.getInstance().getAllClassSkillId();
-		for (Skill skl : player.getAllSkills())
+		List <Integer> skillsToMantain = SkillAcquireHolder.getInstance().getMaintainSkillOnAwake(previousClassId,newClassId);
+		List <Integer> allSkillsId = SkillAcquireHolder.getInstance().getAllClassSkillId();
+		for(Skill skl : player.getAllSkills())
 		{
-			if (allSkillsId.contains(skl.getId()))
+			if(allSkillsId.contains(skl.getId()))
 			{
-				player.removeSkill(skl, delete);
+				player.removeSkill(skl,delete);
 			}
 		}
-		for (int skillId : skillsToMantain)
+		for(int skillId : skillsToMantain)
 		{
 			int skillLv = SkillTable.getInstance().getBaseLevel(skillId);
 			Skill newSkill = SkillTable.getInstance().getInfo(skillId, skillLv);
-			player.addSkill(newSkill, true);
+			player.addSkill(newSkill,true);
+		}
+		for(int alterSkill : _AlterSkills.get(newClassId))
+		{
+			int skillLv = SkillTable.getInstance().getBaseLevel(alterSkill);
+			Skill newSkillAlter = SkillTable.getInstance().getInfo(alterSkill, skillLv);			
+			player.addSkill(newSkillAlter,true);
 		}
 		player.sendSkillList();
 	}
 	
-	private void onTransferOnlyRemoveSkills(Player player, int toFinalClass, int mayKeepSkills)
+	public void onTransferOnlyRemoveSkills(Player player, int toFinalClass, int baseKeepSkills)
 	{
 		boolean delete = false;
-		if (Config.ALT_DELETE_AWAKEN_SKILL_FROM_DB)
-		{
+		if(Config.ALT_DELETE_AWAKEN_SKILL_FROM_DB)
 			delete = true;
-		}
-		List<Integer> allSkillsId = SkillAcquireHolder.getInstance().getAllClassSkillId();
-		List<Integer> skillsToMantain = SkillAcquireHolder.getInstance().getMaintainSkillOnAwake(mayKeepSkills, toFinalClass);
-		for (Skill skl : player.getAllSkills())
+		List <Integer> allSkillsId = SkillAcquireHolder.getInstance().getAllClassSkillId();
+		List <Integer> skillsToMantain = SkillAcquireHolder.getInstance().getMaintainSkillOnAwake(baseKeepSkills,toFinalClass);
+		for(Skill skl : player.getAllSkills())
 		{
-			if (allSkillsId.contains(skl.getId()))
+			if(allSkillsId.contains(skl.getId()))
 			{
-				player.removeSkill(skl, delete);
+				player.removeSkill(skl,delete);
 			}
 		}
-		for (int skillId : skillsToMantain)
+		for(int skillId : skillsToMantain)
 		{
 			int skillLv = SkillTable.getInstance().getBaseLevel(skillId);
 			Skill newSkill = SkillTable.getInstance().getInfo(skillId, skillLv);
-			player.addSkill(newSkill, true);
+			player.addSkill(newSkill,true);
 		}
+		for(int alterSkill : _AlterSkills.get(toFinalClass))
+		{
+			int skillLv = SkillTable.getInstance().getBaseLevel(alterSkill);
+			Skill newSkillAlter = SkillTable.getInstance().getInfo(alterSkill, skillLv);			
+			player.addSkill(newSkillAlter,true);
+		}		
 		player.sendSkillList();
 	}
 	
-	public void checkAwakenPlayerSkills(Player player) // For check on subclass change and logon
+	public void checkAwakenPlayerSkills(Player player) //For check on subclass change and logon
 	{
 		int classId = player.getActiveClassId();
 		boolean delete = false;
-		if (Config.ALT_DELETE_AWAKEN_SKILL_FROM_DB)
-		{
+		if(Config.ALT_DELETE_AWAKEN_SKILL_FROM_DB)
 			delete = true;
-		}
-		List<Integer> SkillsCheck = new ArrayList<>();
-		List<Integer> allSkillsId = SkillAcquireHolder.getInstance().getAllClassSkillId();
+		List <Integer> SkillsCheck = new ArrayList<Integer>();
+		List <Integer> SkillsToRemove = new ArrayList<Integer>();
+		List <Integer> allSkillsId = SkillAcquireHolder.getInstance().getAllClassSkillId();
 		SkillsCheck.addAll(SkillAcquireHolder.getInstance().getAwakenGeneralKeepSkillList());
 		SkillsCheck.addAll(SkillAcquireHolder.getInstance().getAwakenClassSkillForCheck(classId));
 		SkillsCheck.addAll(SkillAcquireHolder.getInstance().getAllAwakenSkillsByClass(classId));
-		if (player.getTransformation() == 0)// if the character log on with a transformation, do not remove any skill
+		if(player.getTransformation() == 0)//if the character log on with a transformation, do not remove any skill
 		{
-			for (Skill skl : player.getAllSkills())
+			for(Skill skl : player.getAllSkills())
 			{
-				if (!SkillsCheck.contains(skl.getId()) && allSkillsId.contains(skl.getId()))
+				if(!SkillsCheck.contains(skl.getId()) && allSkillsId.contains(skl.getId()))
 				{
-					player.removeSkill(skl, delete);
+					//player.removeSkill(skl,delete);
+					SkillsToRemove.add(skl.getId());
 				}
 			}
 		}
 		else
 		{
-			for (Skill skl : player.getAllSkills())
+			for(Skill skl : player.getAllSkills())
 			{
-				int skId = skl.getId();
-				if (!SkillsCheck.contains(skId) && SkillsCheck.contains(skId))
+				if(!SkillsCheck.contains(skl.getId()) && SkillsCheck.contains(skl.getId()))
 				{
-					player.removeSkill(skl, delete);
+					//player.removeSkill(skl,delete);
+					SkillsToRemove.add(skl.getId());
 				}
 			}
 		}
+		player.removeSkills(SkillsToRemove, delete);
+		for(int alterSkill : _AlterSkills.get(classId))
+		{
+			int skillLv = SkillTable.getInstance().getBaseLevel(alterSkill);
+			Skill newSkillAlter = SkillTable.getInstance().getInfo(alterSkill, skillLv);			
+			player.addSkill(newSkillAlter,true);
+		}
 		player.sendSkillList();
 	}
-	
 	/**
 	 * Method onPlayerEnter.
 	 * @param player Player
@@ -599,5 +601,5 @@ public class AwakingManager implements OnPlayerEnterListener
 			player.sendPacket(new ExShowUsmVideo(ExShowUsmVideo.Q010));
 			player.sendPacket(new ExCallToChangeClass(_CA.get(player.getClassId().getId()), true));
 		}
-	}
+	}	
 }

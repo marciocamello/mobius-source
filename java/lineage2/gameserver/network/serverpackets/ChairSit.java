@@ -1,53 +1,26 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.StaticObjectInstance;
 
 /**
- * @author Mobius
- * @version $Revision: 1.0 $
+ * format: d
  */
 public class ChairSit extends L2GameServerPacket
 {
-	/**
-	 * Field _objectId.
-	 */
-	private final int _objectId;
-	/**
-	 * Field _staticObjectId.
-	 */
-	private final int _staticObjectId;
-	
-	/**
-	 * Constructor for ChairSit.
-	 * @param player Player
-	 * @param throne StaticObjectInstance
-	 */
+	private int _objectId;
+	private int _staticObjectId;
+
 	public ChairSit(Player player, StaticObjectInstance throne)
 	{
 		_objectId = player.getObjectId();
 		_staticObjectId = throne.getUId();
 	}
-	
-	/**
-	 * Method writeImpl.
-	 */
+
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(0xED);
+		writeC(0xed);
 		writeD(_objectId);
 		writeD(_staticObjectId);
 	}

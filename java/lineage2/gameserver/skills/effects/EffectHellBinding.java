@@ -48,14 +48,14 @@ public final class EffectHellBinding extends Effect
 		_ChainedAirSkills.put(144, 11749);
 		_ChainedAirSkills.put(145, 11499);
 		_ChainedAirSkills.put(146, 11999);
-		_ChainedTemporalReplace.put(10249, 10009);
+		_ChainedTemporalReplace.put(10249, 10008);
 		_ChainedTemporalReplace.put(10499, 10258);
 		_ChainedTemporalReplace.put(10749, 10508);
 		_ChainedTemporalReplace.put(10999, 10760); //Confirmed by lineage forum
-		_ChainedTemporalReplace.put(11247, 11011);
-		_ChainedTemporalReplace.put(11749, 11510);
-		_ChainedTemporalReplace.put(11499, 11273);
-		_ChainedTemporalReplace.put(11999, 11766);
+		_ChainedTemporalReplace.put(11247, 11017);
+		_ChainedTemporalReplace.put(11749, 11509);
+		_ChainedTemporalReplace.put(11499, 11263);
+		_ChainedTemporalReplace.put(11999, 11814);
 	}
 	
 	/**
@@ -65,7 +65,7 @@ public final class EffectHellBinding extends Effect
 	@Override
 	public boolean checkCondition()
 	{
-		if (_effected.isParalyzeImmune() || _effected.IsAirBind() || _effected.IsKnockedDown())
+		if (_effected.isParalyzeImmune() || _effected.isAirBinded() || _effected.isKnockedDown())
 		{
 			return false;
 		}
@@ -88,7 +88,12 @@ public final class EffectHellBinding extends Effect
 				playerNearEffected.sendPacket(new ExAlterSkillRequest(chainSkill,temporalReplaceSkill,5));	
 			}
 		}
-		_effected.startAirBind();
+		if(!_effected.isAirBinded())
+			_effected.startAirbinding();
+		_effected.abortAttack(true, true);
+		_effected.abortCast(true, true);
+		_effected.startParalyzed();
+		_effected.stopMove();
 	}
 	
 	/**
@@ -98,7 +103,9 @@ public final class EffectHellBinding extends Effect
 	public void onExit()
 	{
 		super.onExit();
-		_effected.stopAirBind(true);
+		if(_effected.isAirBinded())
+			_effected.stopAirbinding();			
+		_effected.stopParalyzed();
 	}
 	
 	/**

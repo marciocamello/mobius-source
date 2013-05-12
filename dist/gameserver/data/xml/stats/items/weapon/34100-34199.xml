@@ -8,7 +8,7 @@
 		<set name="weight" value="106"/>
 		<set name="type" value="DAGGER"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -17,9 +17,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="80"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34101" name="ПА - Полуторный Меч*Багровый Меч (Земля)" add_name="ПА">
 		<!--Done by ALF-->
@@ -28,7 +29,7 @@
 		<set name="weight" value="247"/>
 		<set name="type" value="DUAL"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -37,9 +38,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="107"/>
 			<add stat="mAtk" order="0x10" value="51"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34102" name="ПА - Полуторный Меч*Багровый Меч (Вода)" add_name="ПА">
 		<!--Done by ALF-->
@@ -48,7 +50,7 @@
 		<set name="weight" value="247"/>
 		<set name="type" value="DUAL"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -57,9 +59,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="107"/>
 			<add stat="mAtk" order="0x10" value="51"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34103" name="ПА - Полуторный Меч*Багровый Меч (Ветер)" add_name="ПА">
 		<!--Done by ALF-->
@@ -68,7 +71,7 @@
 		<set name="weight" value="247"/>
 		<set name="type" value="DUAL"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -77,9 +80,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="107"/>
 			<add stat="mAtk" order="0x10" value="51"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34104" name="ПА - Полуторный Меч*Багровый Меч (Огонь)" add_name="ПА">
 		<!--Done by ALF-->
@@ -88,7 +92,7 @@
 		<set name="weight" value="247"/>
 		<set name="type" value="DUAL"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -97,9 +101,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="107"/>
 			<add stat="mAtk" order="0x10" value="51"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34105" name="ПА - Полуторный Меч*Багровый Меч (Святость)" add_name="ПА">
 		<!--Done by ALF-->
@@ -108,7 +113,7 @@
 		<set name="weight" value="247"/>
 		<set name="type" value="DUAL"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -117,9 +122,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="107"/>
 			<add stat="mAtk" order="0x10" value="51"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34106" name="ПА - Полуторный Меч*Багровый Меч (Тьма)" add_name="ПА">
 		<!--Done by ALF-->
@@ -128,7 +134,7 @@
 		<set name="weight" value="247"/>
 		<set name="type" value="DUAL"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -137,9 +143,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="107"/>
 			<add stat="mAtk" order="0x10" value="51"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34107" name="ПА - Костолом (Земля)" add_name="ПА">
 		<!--Done by ALF-->
@@ -148,7 +155,7 @@
 		<set name="weight" value="172"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -157,9 +164,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="92"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34108" name="ПА - Костолом (Вода)" add_name="ПА">
 		<!--Done by ALF-->
@@ -168,7 +176,7 @@
 		<set name="weight" value="172"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -177,9 +185,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="92"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34109" name="ПА - Костолом (Ветер)" add_name="ПА">
 		<!--Done by ALF-->
@@ -188,7 +197,7 @@
 		<set name="weight" value="172"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -197,9 +206,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="92"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34110" name="ПА - Костолом (Огонь)" add_name="ПА">
 		<!--Done by ALF-->
@@ -208,7 +218,7 @@
 		<set name="weight" value="172"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -217,9 +227,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="92"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34111" name="ПА - Костолом (Святость)" add_name="ПА">
 		<!--Done by ALF-->
@@ -228,7 +239,7 @@
 		<set name="weight" value="172"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -237,9 +248,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="92"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34112" name="ПА - Костолом (Тьма)" add_name="ПА">
 		<!--Done by ALF-->
@@ -248,7 +260,7 @@
 		<set name="weight" value="172"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -257,9 +269,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="92"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34113" name="ПА - Легкий Лук (Земля)" add_name="ПА">
 		<!--Done by ALF-->
@@ -268,7 +281,7 @@
 		<set name="weight" value="181"/>
 		<set name="type" value="BOW"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="10"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -277,9 +290,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="191"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34114" name="ПА - Легкий Лук (Вода)" add_name="ПА">
 		<!--Done by ALF-->
@@ -288,7 +302,7 @@
 		<set name="weight" value="181"/>
 		<set name="type" value="BOW"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="10"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -297,9 +311,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="191"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34115" name="ПА - Легкий Лук (Ветер)" add_name="ПА">
 		<!--Done by ALF-->
@@ -308,7 +323,7 @@
 		<set name="weight" value="181"/>
 		<set name="type" value="BOW"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="10"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -317,9 +332,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="191"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34116" name="ПА - Легкий Лук (Огонь)" add_name="ПА">
 		<!--Done by ALF-->
@@ -328,7 +344,7 @@
 		<set name="weight" value="181"/>
 		<set name="type" value="BOW"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="10"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -337,9 +353,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="191"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34117" name="ПА - Легкий Лук (Святость)" add_name="ПА">
 		<!--Done by ALF-->
@@ -348,7 +365,7 @@
 		<set name="weight" value="181"/>
 		<set name="type" value="BOW"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="10"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -357,9 +374,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="191"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34118" name="ПА - Легкий Лук (Тьма)" add_name="ПА">
 		<!--Done by ALF-->
@@ -368,7 +386,7 @@
 		<set name="weight" value="181"/>
 		<set name="type" value="BOW"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="10"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -377,9 +395,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="191"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34119" name="ПА - Посох Жизни (Земля)" add_name="ПА">
 		<!--Done by ALF-->
@@ -388,7 +407,7 @@
 		<set name="weight" value="118"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -397,9 +416,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="74"/>
 			<add stat="mAtk" order="0x10" value="72"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34120" name="ПА - Посох Жизни (Вода)" add_name="ПА">
 		<!--Done by ALF-->
@@ -408,7 +428,7 @@
 		<set name="weight" value="118"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -417,9 +437,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="74"/>
 			<add stat="mAtk" order="0x10" value="72"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34121" name="ПА - Посох Жизни (Ветер)" add_name="ПА">
 		<!--Done by ALF-->
@@ -428,7 +449,7 @@
 		<set name="weight" value="118"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -437,9 +458,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="74"/>
 			<add stat="mAtk" order="0x10" value="72"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34122" name="ПА - Посох Жизни (Огонь)" add_name="ПА">
 		<!--Done by ALF-->
@@ -448,7 +470,7 @@
 		<set name="weight" value="118"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -457,9 +479,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="74"/>
 			<add stat="mAtk" order="0x10" value="72"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34123" name="ПА - Посох Жизни (Святость)" add_name="ПА">
 		<!--Done by ALF-->
@@ -468,7 +491,7 @@
 		<set name="weight" value="118"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -477,9 +500,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="74"/>
 			<add stat="mAtk" order="0x10" value="72"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34124" name="ПА - Посох Жизни (Тьма)" add_name="ПА">
 		<!--Done by ALF-->
@@ -488,7 +512,7 @@
 		<set name="weight" value="118"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -497,9 +521,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="74"/>
 			<add stat="mAtk" order="0x10" value="72"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34125" name="ПА - Шипованный Джамадхар (Земля)" add_name="ПА">
 		<!--Done by ALF-->
@@ -508,7 +533,7 @@
 		<set name="weight" value="152"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -517,9 +542,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="112"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34126" name="ПА - Шипованный Джамадхар (Вода)" add_name="ПА">
 		<!--Done by ALF-->
@@ -528,7 +554,7 @@
 		<set name="weight" value="152"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -537,9 +563,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="112"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34127" name="ПА - Шипованный Джамадхар (Ветер)" add_name="ПА">
 		<!--Done by ALF-->
@@ -548,7 +575,7 @@
 		<set name="weight" value="152"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -557,9 +584,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="112"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34128" name="ПА - Шипованный Джамадхар (Огонь)" add_name="ПА">
 		<!--Done by ALF-->
@@ -568,7 +596,7 @@
 		<set name="weight" value="152"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -577,9 +605,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="112"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34129" name="ПА - Шипованный Джамадхар (Святость)" add_name="ПА">
 		<!--Done by ALF-->
@@ -588,7 +617,7 @@
 		<set name="weight" value="152"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -597,9 +626,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="112"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34130" name="ПА - Шипованный Джамадхар (Тьма)" add_name="ПА">
 		<!--Done by ALF-->
@@ -608,7 +638,7 @@
 		<set name="weight" value="152"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -617,9 +647,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="112"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34131" name="ПА - Молот Атубы (Земля)" add_name="ПА">
 		<!--Done by ALF-->
@@ -628,7 +659,7 @@
 		<set name="weight" value="101"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -637,9 +668,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="90"/>
 			<add stat="mAtk" order="0x10" value="79"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34132" name="ПА - Молот Атубы (Вода)" add_name="ПА">
 		<!--Done by ALF-->
@@ -648,7 +680,7 @@
 		<set name="weight" value="101"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -657,9 +689,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="90"/>
 			<add stat="mAtk" order="0x10" value="79"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34133" name="ПА - Молот Атубы (Ветер)" add_name="ПА">
 		<!--Done by ALF-->
@@ -668,7 +701,7 @@
 		<set name="weight" value="101"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -677,9 +710,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="90"/>
 			<add stat="mAtk" order="0x10" value="79"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34134" name="ПА - Молот Атубы (Огонь)" add_name="ПА">
 		<!--Done by ALF-->
@@ -688,7 +722,7 @@
 		<set name="weight" value="101"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -697,9 +731,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="90"/>
 			<add stat="mAtk" order="0x10" value="79"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34135" name="ПА - Молот Атубы (Святость)" add_name="ПА">
 		<!--Done by ALF-->
@@ -708,7 +743,7 @@
 		<set name="weight" value="101"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -717,9 +752,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="90"/>
 			<add stat="mAtk" order="0x10" value="79"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34136" name="ПА - Молот Атубы (Тьма)" add_name="ПА">
 		<!--Done by ALF-->
@@ -728,7 +764,7 @@
 		<set name="weight" value="101"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -737,9 +773,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="90"/>
 			<add stat="mAtk" order="0x10" value="79"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34137" name="ПА - Длинный Меч Эльфов (Земля)" add_name="ПА">
 		<!--Done by ALF-->
@@ -748,7 +785,7 @@
 		<set name="weight" value="144"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -757,9 +794,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="92"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34138" name="ПА - Длинный Меч Эльфов (Вода)" add_name="ПА">
 		<!--Done by ALF-->
@@ -768,7 +806,7 @@
 		<set name="weight" value="144"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -777,9 +815,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="92"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34139" name="ПА - Длинный Меч Эльфов (Ветер)" add_name="ПА">
 		<!--Done by ALF-->
@@ -788,7 +827,7 @@
 		<set name="weight" value="144"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -797,9 +836,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="92"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34140" name="ПА - Длинный Меч Эльфов (Огонь)" add_name="ПА">
 		<!--Done by ALF-->
@@ -808,7 +848,7 @@
 		<set name="weight" value="144"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -817,9 +857,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="92"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34141" name="ПА - Длинный Меч Эльфов (Святость)" add_name="ПА">
 		<!--Done by ALF-->
@@ -828,7 +869,7 @@
 		<set name="weight" value="144"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -837,9 +878,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="92"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34142" name="ПА - Длинный Меч Эльфов (Тьма)" add_name="ПА">
 		<!--Done by ALF-->
@@ -848,7 +890,7 @@
 		<set name="weight" value="144"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -857,9 +899,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="92"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34143" name="ПА - Кацбальгер Генерала (Земля)" add_name="ПА">
 		<!--Done by ALF-->
@@ -868,7 +911,7 @@
 		<set name="weight" value="201"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -877,9 +920,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="100"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34144" name="ПА - Кацбальгер Генерала (Вода)" add_name="ПА">
 		<!--Done by ALF-->
@@ -888,7 +932,7 @@
 		<set name="weight" value="201"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -897,9 +941,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="100"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34145" name="ПА - Кацбальгер Генерала (Ветер)" add_name="ПА">
 		<!--Done by ALF-->
@@ -908,7 +953,7 @@
 		<set name="weight" value="201"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -917,9 +962,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="100"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34146" name="ПА - Кацбальгер Генерала (Огонь)" add_name="ПА">
 		<!--Done by ALF-->
@@ -928,7 +974,7 @@
 		<set name="weight" value="201"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -937,9 +983,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="100"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34147" name="ПА - Кацбальгер Генерала (Святость)" add_name="ПА">
 		<!--Done by ALF-->
@@ -948,7 +995,7 @@
 		<set name="weight" value="201"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -957,9 +1004,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="100"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34148" name="ПА - Кацбальгер Генерала (Тьма)" add_name="ПА">
 		<!--Done by ALF-->
@@ -968,7 +1016,7 @@
 		<set name="weight" value="201"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -977,9 +1025,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="100"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34149" name="ПА - Легкий Арбалет (Земля)" add_name="ПА">
 		<!--Done by ALF-->
@@ -988,7 +1037,7 @@
 		<set name="weight" value="181"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="6"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -997,9 +1046,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="117"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34150" name="ПА - Легкий Арбалет (Вода)" add_name="ПА">
 		<!--Done by ALF-->
@@ -1008,7 +1058,7 @@
 		<set name="weight" value="181"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="6"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1017,9 +1067,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="117"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34151" name="ПА - Легкий Арбалет (Ветер)" add_name="ПА">
 		<!--Done by ALF-->
@@ -1028,7 +1079,7 @@
 		<set name="weight" value="181"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="6"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1037,9 +1088,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="117"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34152" name="ПА - Легкий Арбалет (Огонь)" add_name="ПА">
 		<!--Done by ALF-->
@@ -1048,7 +1100,7 @@
 		<set name="weight" value="181"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="6"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1057,9 +1109,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="117"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34153" name="ПА - Легкий Арбалет (Святость)" add_name="ПА">
 		<!--Done by ALF-->
@@ -1068,7 +1121,7 @@
 		<set name="weight" value="181"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="6"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1077,9 +1130,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="117"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34154" name="ПА - Легкий Арбалет (Тьма)" add_name="ПА">
 		<!--Done by ALF-->
@@ -1088,7 +1142,7 @@
 		<set name="weight" value="181"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="6"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1097,9 +1151,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="117"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34155" name="ПА - Клеймор (Земля)" add_name="ПА">
 		<!--Done by ALF-->
@@ -1108,7 +1163,7 @@
 		<set name="weight" value="209"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1117,9 +1172,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="112"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34156" name="ПА - Клеймор (Вода)" add_name="ПА">
 		<!--Done by ALF-->
@@ -1128,7 +1184,7 @@
 		<set name="weight" value="209"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1137,9 +1193,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="112"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34157" name="ПА - Клеймор (Ветер)" add_name="ПА">
 		<!--Done by ALF-->
@@ -1148,7 +1205,7 @@
 		<set name="weight" value="209"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1157,9 +1214,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="112"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34158" name="ПА - Клеймор (Огонь)" add_name="ПА">
 		<!--Done by ALF-->
@@ -1168,7 +1226,7 @@
 		<set name="weight" value="209"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1177,9 +1235,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="112"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34159" name="ПА - Клеймор (Святость)" add_name="ПА">
 		<!--Done by ALF-->
@@ -1188,7 +1247,7 @@
 		<set name="weight" value="209"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1197,9 +1256,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="112"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34160" name="ПА - Клеймор (Тьма)" add_name="ПА">
 		<!--Done by ALF-->
@@ -1208,7 +1268,7 @@
 		<set name="weight" value="209"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1217,9 +1277,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="112"/>
 			<add stat="mAtk" order="0x10" value="54"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34161" name="ПА - Большая Пата (Земля)" add_name="Риск. Ускорение - ПА">
 		<!--Done by ALF-->
@@ -1228,7 +1289,7 @@
 		<set name="weight" value="146"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1237,9 +1298,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="190"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34162" name="ПА - Большая Пата (Вода)" add_name="Риск. Ускорение - ПА">
 		<!--Done by ALF-->
@@ -1248,7 +1310,7 @@
 		<set name="weight" value="146"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1257,9 +1319,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="190"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34163" name="ПА - Большая Пата (Ветер)" add_name="Риск. Ускорение - ПА">
 		<!--Done by ALF-->
@@ -1268,7 +1331,7 @@
 		<set name="weight" value="146"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1277,9 +1340,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="190"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34164" name="ПА - Большая Пата (Огонь)" add_name="Риск. Ускорение - ПА">
 		<!--Done by ALF-->
@@ -1288,7 +1352,7 @@
 		<set name="weight" value="146"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1297,9 +1361,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="190"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34165" name="ПА - Большая Пата (Святость)" add_name="Риск. Ускорение - ПА">
 		<!--Done by ALF-->
@@ -1308,7 +1373,7 @@
 		<set name="weight" value="146"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1317,9 +1382,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="190"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34166" name="ПА - Большая Пата (Тьма)" add_name="Риск. Ускорение - ПА">
 		<!--Done by ALF-->
@@ -1328,7 +1394,7 @@
 		<set name="weight" value="146"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1337,9 +1403,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="190"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34167" name="ПА - Посох Мертвеца (Земля)" add_name="Магическая Регенерация - ПА">
 		<!--Done by ALF-->
@@ -1348,7 +1415,7 @@
 		<set name="weight" value="101"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1357,9 +1424,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="152"/>
 			<add stat="mAtk" order="0x10" value="122"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34168" name="ПА - Посох Мертвеца (Вода)" add_name="Магическая Регенерация - ПА">
 		<!--Done by ALF-->
@@ -1368,7 +1436,7 @@
 		<set name="weight" value="101"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1377,9 +1445,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="152"/>
 			<add stat="mAtk" order="0x10" value="122"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34169" name="ПА - Посох Мертвеца (Ветер)" add_name="Магическая Регенерация - ПА">
 		<!--Done by ALF-->
@@ -1388,7 +1457,7 @@
 		<set name="weight" value="101"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1397,9 +1466,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="152"/>
 			<add stat="mAtk" order="0x10" value="122"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34170" name="ПА - Посох Мертвеца (Огонь)" add_name="Магическая Регенерация - ПА">
 		<!--Done by ALF-->
@@ -1408,7 +1478,7 @@
 		<set name="weight" value="101"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1417,9 +1487,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="152"/>
 			<add stat="mAtk" order="0x10" value="122"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34171" name="ПА - Посох Мертвеца (Святость)" add_name="Магическая Регенерация - ПА">
 		<!--Done by ALF-->
@@ -1428,7 +1499,7 @@
 		<set name="weight" value="101"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1437,9 +1508,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="152"/>
 			<add stat="mAtk" order="0x10" value="122"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34172" name="ПА - Посох Мертвеца (Тьма)" add_name="Магическая Регенерация - ПА">
 		<!--Done by ALF-->
@@ -1448,7 +1520,7 @@
 		<set name="weight" value="101"/>
 		<set name="type" value="BLUNT"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1457,9 +1529,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="152"/>
 			<add stat="mAtk" order="0x10" value="122"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34173" name="ПА - Клинок Берсерка (Земля)" add_name="Фокусировка - ПА">
 		<!--Done by ALF-->
@@ -1468,7 +1541,7 @@
 		<set name="weight" value="138"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1477,9 +1550,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="190"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34174" name="ПА - Клинок Берсерка (Вода)" add_name="Фокусировка - ПА">
 		<!--Done by ALF-->
@@ -1488,7 +1562,7 @@
 		<set name="weight" value="138"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1497,9 +1571,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="190"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34175" name="ПА - Клинок Берсерка (Ветер)" add_name="Фокусировка - ПА">
 		<!--Done by ALF-->
@@ -1508,7 +1583,7 @@
 		<set name="weight" value="138"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1517,9 +1592,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="190"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34176" name="ПА - Клинок Берсерка (Огонь)" add_name="Фокусировка - ПА">
 		<!--Done by ALF-->
@@ -1528,7 +1604,7 @@
 		<set name="weight" value="138"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1537,9 +1613,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="190"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34177" name="ПА - Клинок Берсерка (Святость)" add_name="Фокусировка - ПА">
 		<!--Done by ALF-->
@@ -1548,7 +1625,7 @@
 		<set name="weight" value="138"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1557,9 +1634,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="190"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34178" name="ПА - Клинок Берсерка (Тьма)" add_name="Фокусировка - ПА">
 		<!--Done by ALF-->
@@ -1568,7 +1646,7 @@
 		<set name="weight" value="138"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1577,9 +1655,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="190"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34179" name="ПА - Самострел (Земля)" add_name="Наведение - ПА">
 		<!--Done by ALF-->
@@ -1588,7 +1667,7 @@
 		<set name="weight" value="174"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="6"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1597,9 +1676,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="198"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34180" name="ПА - Самострел (Вода)" add_name="Наведение - ПА">
 		<!--Done by ALF-->
@@ -1608,7 +1688,7 @@
 		<set name="weight" value="174"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="6"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1617,9 +1697,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="198"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34181" name="ПА - Самострел (Ветер)" add_name="Наведение - ПА">
 		<!--Done by ALF-->
@@ -1628,7 +1709,7 @@
 		<set name="weight" value="174"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="6"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1637,9 +1718,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="198"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34182" name="ПА - Самострел (Огонь)" add_name="Наведение - ПА">
 		<!--Done by ALF-->
@@ -1648,7 +1730,7 @@
 		<set name="weight" value="174"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="6"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1657,9 +1739,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="198"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34183" name="ПА - Самострел (Святость)" add_name="Наведение - ПА">
 		<!--Done by ALF-->
@@ -1668,7 +1751,7 @@
 		<set name="weight" value="174"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="6"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1677,9 +1760,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="198"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34184" name="ПА - Самострел (Тьма)" add_name="Наведение - ПА">
 		<!--Done by ALF-->
@@ -1688,7 +1772,7 @@
 		<set name="weight" value="174"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="6"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1697,9 +1781,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="198"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34185" name="ПА - Шамшир*Шамшир (Земля)" add_name="ПА">
 		<!--Done by ALF-->
@@ -1708,7 +1793,7 @@
 		<set name="weight" value="233"/>
 		<set name="type" value="DUAL"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1717,9 +1802,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="190"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34186" name="ПА - Шамшир*Шамшир (Вода)" add_name="ПА">
 		<!--Done by ALF-->
@@ -1728,7 +1814,7 @@
 		<set name="weight" value="233"/>
 		<set name="type" value="DUAL"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1737,9 +1823,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="190"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34187" name="ПА - Шамшир*Шамшир (Ветер)" add_name="ПА">
 		<!--Done by ALF-->
@@ -1748,7 +1835,7 @@
 		<set name="weight" value="233"/>
 		<set name="type" value="DUAL"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1757,9 +1844,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="190"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34188" name="ПА - Шамшир*Шамшир (Огонь)" add_name="ПА">
 		<!--Done by ALF-->
@@ -1768,7 +1856,7 @@
 		<set name="weight" value="233"/>
 		<set name="type" value="DUAL"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1777,9 +1865,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="190"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34189" name="ПА - Шамшир*Шамшир (Святость)" add_name="ПА">
 		<!--Done by ALF-->
@@ -1788,7 +1877,7 @@
 		<set name="weight" value="233"/>
 		<set name="type" value="DUAL"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1797,9 +1886,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="190"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34190" name="ПА - Шамшир*Шамшир (Тьма)" add_name="ПА">
 		<!--Done by ALF-->
@@ -1808,7 +1898,7 @@
 		<set name="weight" value="233"/>
 		<set name="type" value="DUAL"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1817,9 +1907,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="190"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34191" name="ПА - Клык (Земля)" add_name="Фокусировка - ПА">
 		<!--Done by ALF-->
@@ -1828,7 +1919,7 @@
 		<set name="weight" value="195"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1837,9 +1928,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="169"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34192" name="ПА - Клык (Вода)" add_name="Фокусировка - ПА">
 		<!--Done by ALF-->
@@ -1848,7 +1940,7 @@
 		<set name="weight" value="195"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1857,9 +1949,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="169"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34193" name="ПА - Клык (Ветер)" add_name="Фокусировка - ПА">
 		<!--Done by ALF-->
@@ -1868,7 +1961,7 @@
 		<set name="weight" value="195"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1877,9 +1970,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="169"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34194" name="ПА - Клык (Огонь)" add_name="Фокусировка - ПА">
 		<!--Done by ALF-->
@@ -1888,7 +1982,7 @@
 		<set name="weight" value="195"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1897,9 +1991,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="169"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34195" name="ПА - Клык (Святость)" add_name="Фокусировка - ПА">
 		<!--Done by ALF-->
@@ -1908,7 +2003,7 @@
 		<set name="weight" value="195"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1917,9 +2012,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="169"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34196" name="ПА - Клык (Тьма)" add_name="Фокусировка - ПА">
 		<!--Done by ALF-->
@@ -1928,7 +2024,7 @@
 		<set name="weight" value="195"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1937,9 +2033,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="169"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34197" name="ПА - Длинный Меч Самурая (Земля)" add_name="Фокусировка - ПА">
 		<!--Done by ALF-->
@@ -1948,7 +2045,7 @@
 		<set name="weight" value="138"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1957,9 +2054,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="156"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34198" name="ПА - Длинный Меч Самурая (Вода)" add_name="Фокусировка - ПА">
 		<!--Done by ALF-->
@@ -1968,7 +2066,7 @@
 		<set name="weight" value="138"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1977,9 +2075,10 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="156"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="34199" name="ПА - Длинный Меч Самурая (Ветер)" add_name="Фокусировка - ПА">
 		<!--Done by ALF-->
@@ -1988,7 +2087,7 @@
 		<set name="weight" value="138"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="2"/>
+		<set name="crystal_count" value="0"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<equip>
@@ -1997,8 +2096,9 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="156"/>
 			<add stat="mAtk" order="0x10" value="83"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
-			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
 		</for>
+		<set name="crystallizable" value="false"/>
 	</weapon>
 </list>

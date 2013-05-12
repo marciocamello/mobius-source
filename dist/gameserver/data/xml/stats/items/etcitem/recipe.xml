@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "item.dtd">
-
-<list>	
+<list>    
 	<etcitem id="30426" name="Рецепт - Эликсир Жизни: Ранг R">
 		<set name="icon" value="icon.etc_recipe_black_i00"/>
 		<set name="class" value="RECIPIES"/>
@@ -318,8 +317,8 @@
 		<set name="type" value="RECIPE"/>
 	</etcitem>
 	<etcitem id="19401" name="Рецепт - Неопознанная Туника Кадейры (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -328,8 +327,8 @@
 		<set name="recipe_id" value="1086"/>
 	</etcitem>
 	<etcitem id="19402" name="Рецепт - Неопознанные Штаны Кадейры (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -338,8 +337,8 @@
 		<set name="recipe_id" value="1087"/>
 	</etcitem>
 	<etcitem id="19403" name="Рецепт - Неопознанные Перчатки Кадейры (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -348,8 +347,8 @@
 		<set name="recipe_id" value="1088"/>
 	</etcitem>
 	<etcitem id="19404" name="Рецепт - Неопознанные Ботинки Кадейры (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -358,8 +357,8 @@
 		<set name="recipe_id" value="1089"/>
 	</etcitem>
 	<etcitem id="19405" name="Рецепт - Неопознанный Символ Кадейры (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -368,8 +367,8 @@
 		<set name="recipe_id" value="1090"/>
 	</etcitem>
 	<etcitem id="19406" name="Рецепт - Неопознанное Ожерелье Кадейры (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -378,8 +377,8 @@
 		<set name="recipe_id" value="1091"/>
 	</etcitem>
 	<etcitem id="19407" name="Рецепт - Неопознанная Серьга Кадейры (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -388,8 +387,8 @@
 		<set name="recipe_id" value="1092"/>
 	</etcitem>
 	<etcitem id="19408" name="Рецепт - Неопознанное Кольцо Кадейры (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -398,8 +397,8 @@
 		<set name="recipe_id" value="1093"/>
 	</etcitem>
 	<etcitem id="19409" name="Рецепт - Неопознанное Острие Хелиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -408,8 +407,8 @@
 		<set name="recipe_id" value="1094"/>
 	</etcitem>
 	<etcitem id="19410" name="Рецепт - Неопознанный Резак Хелиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -418,8 +417,8 @@
 		<set name="recipe_id" value="1095"/>
 	</etcitem>
 	<etcitem id="19411" name="Рецепт - Неопознанный Эспадон Хелиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -428,8 +427,8 @@
 		<set name="recipe_id" value="1096"/>
 	</etcitem>
 	<etcitem id="19412" name="Рецепт - Неопознанный Мститель Хелиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -438,8 +437,8 @@
 		<set name="recipe_id" value="1097"/>
 	</etcitem>
 	<etcitem id="19413" name="Рецепт - Неопознанный Воитель Хелиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -448,8 +447,8 @@
 		<set name="recipe_id" value="1098"/>
 	</etcitem>
 	<etcitem id="19414" name="Рецепт - Неопознанный Буревестник Хелиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -458,8 +457,8 @@
 		<set name="recipe_id" value="1099"/>
 	</etcitem>
 	<etcitem id="19415" name="Рецепт - Неопознанный Бросок Хелиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -468,8 +467,8 @@
 		<set name="recipe_id" value="1100"/>
 	</etcitem>
 	<etcitem id="19416" name="Рецепт - Неопознанный Страж Хелиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -478,8 +477,8 @@
 		<set name="recipe_id" value="1101"/>
 	</etcitem>
 	<etcitem id="19417" name="Рецепт - Неопознанный Расчленитель Хелиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -488,8 +487,8 @@
 		<set name="recipe_id" value="1102"/>
 	</etcitem>
 	<etcitem id="19418" name="Рецепт - Неопознанный Заклинатель Хелиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -498,8 +497,8 @@
 		<set name="recipe_id" value="1103"/>
 	</etcitem>
 	<etcitem id="19419" name="Рецепт - Неопознанное Возмездие Хелиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -508,8 +507,8 @@
 		<set name="recipe_id" value="1104"/>
 	</etcitem>
 	<etcitem id="19420" name="Рецепт - Неопознанный Шлем Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -518,8 +517,8 @@
 		<set name="recipe_id" value="1105"/>
 	</etcitem>
 	<etcitem id="19421" name="Рецепт - Неопознанная Кираса Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -528,8 +527,8 @@
 		<set name="recipe_id" value="1106"/>
 	</etcitem>
 	<etcitem id="19422" name="Рецепт - Неопознанные Набедренники Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -538,8 +537,8 @@
 		<set name="recipe_id" value="1107"/>
 	</etcitem>
 	<etcitem id="19423" name="Рецепт - Неопознанные Рукавицы Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -548,8 +547,8 @@
 		<set name="recipe_id" value="1108"/>
 	</etcitem>
 	<etcitem id="19424" name="Рецепт - Неопознанные Сапоги Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -558,8 +557,8 @@
 		<set name="recipe_id" value="1109"/>
 	</etcitem>
 	<etcitem id="19425" name="Рецепт - Неопознанный Щит Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -568,8 +567,8 @@
 		<set name="recipe_id" value="1110"/>
 	</etcitem>
 	<etcitem id="19426" name="Рецепт - Неопознанный Кожаный Шлем Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -578,8 +577,8 @@
 		<set name="recipe_id" value="1111"/>
 	</etcitem>
 	<etcitem id="19427" name="Рецепт - Неопознанная Кожаная Кираса Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -588,8 +587,8 @@
 		<set name="recipe_id" value="1112"/>
 	</etcitem>
 	<etcitem id="19428" name="Рецепт - Неопознанные Кожаные Брюки Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -598,8 +597,8 @@
 		<set name="recipe_id" value="1113"/>
 	</etcitem>
 	<etcitem id="19429" name="Рецепт - Неопознанные Кожаные Перчатки Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -608,8 +607,8 @@
 		<set name="recipe_id" value="1114"/>
 	</etcitem>
 	<etcitem id="19430" name="Рецепт - Неопознанные Кожаные Сапоги Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -618,8 +617,8 @@
 		<set name="recipe_id" value="1115"/>
 	</etcitem>
 	<etcitem id="19431" name="Рецепт - Неопознанная Диадема Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -628,8 +627,8 @@
 		<set name="recipe_id" value="1116"/>
 	</etcitem>
 	<etcitem id="19432" name="Рецепт - Неопознанная Туника Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -638,8 +637,8 @@
 		<set name="recipe_id" value="1117"/>
 	</etcitem>
 	<etcitem id="19433" name="Рецепт - Неопознанные Штаны Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -648,8 +647,8 @@
 		<set name="recipe_id" value="1118"/>
 	</etcitem>
 	<etcitem id="19434" name="Рецепт - Неопознанные Перчатки Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -658,8 +657,8 @@
 		<set name="recipe_id" value="1119"/>
 	</etcitem>
 	<etcitem id="19435" name="Рецепт - Неопознанные Ботинки Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -668,8 +667,8 @@
 		<set name="recipe_id" value="1120"/>
 	</etcitem>
 	<etcitem id="19436" name="Рецепт - Неопознанный Символ Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -678,8 +677,8 @@
 		<set name="recipe_id" value="1121"/>
 	</etcitem>
 	<etcitem id="19437" name="Рецепт - Неопознанное Ожерелье Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -688,8 +687,8 @@
 		<set name="recipe_id" value="1122"/>
 	</etcitem>
 	<etcitem id="19438" name="Рецепт - Неопознанная Серьга Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -698,8 +697,8 @@
 		<set name="recipe_id" value="1123"/>
 	</etcitem>
 	<etcitem id="19439" name="Рецепт - Неопознанное Кольцо Айдиоса (60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -708,8 +707,8 @@
 		<set name="recipe_id" value="1124"/>
 	</etcitem>
 	<etcitem id="34841" name="Рецепт - Компактная Упаковка: Заряды Души Ранг R (100%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -718,8 +717,8 @@
 		<set name="recipe_id" value="1163"/>
 	</etcitem>
 	<etcitem id="34842" name="Рецепт - Компактная Упаковка: Заряды Духа Ранг R (100%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -728,8 +727,8 @@
 		<set name="recipe_id" value="1164"/>
 	</etcitem>
 	<etcitem id="34843" name="Рецепт - Компактная Упаковка: Благословенные Заряды Духа Ранг R (100%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -738,8 +737,8 @@
 		<set name="recipe_id" value="1165"/>
 	</etcitem>
 	<etcitem id="35420" name="Рецепт - Острия Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -748,8 +747,8 @@
 		<set name="recipe_id" value="1166"/>
 	</etcitem>
 	<etcitem id="35421" name="Рецепт - Резака Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -758,8 +757,8 @@
 		<set name="recipe_id" value="1167"/>
 	</etcitem>
 	<etcitem id="35422" name="Рецепт - Эспадона Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -768,8 +767,8 @@
 		<set name="recipe_id" value="1168"/>
 	</etcitem>
 	<etcitem id="35423" name="Рецепт - Мстителя Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -778,8 +777,8 @@
 		<set name="recipe_id" value="1169"/>
 	</etcitem>
 	<etcitem id="35424" name="Рецепт - Воителя Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -788,8 +787,8 @@
 		<set name="recipe_id" value="1170"/>
 	</etcitem>
 	<etcitem id="35425" name="Рецепт - Буревестника Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -798,8 +797,8 @@
 		<set name="recipe_id" value="1171"/>
 	</etcitem>
 	<etcitem id="35426" name="Рецепт - Броска Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -808,8 +807,8 @@
 		<set name="recipe_id" value="1172"/>
 	</etcitem>
 	<etcitem id="35427" name="Рецепт - Стража Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -818,8 +817,8 @@
 		<set name="recipe_id" value="1173"/>
 	</etcitem>
 	<etcitem id="35428" name="Рецепт - Расчленителя Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -828,8 +827,8 @@
 		<set name="recipe_id" value="1174"/>
 	</etcitem>
 	<etcitem id="35429" name="Рецепт - Заклинателя Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -838,8 +837,8 @@
 		<set name="recipe_id" value="1175"/>
 	</etcitem>
 	<etcitem id="35430" name="Рецепт - Возмездия Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -848,8 +847,8 @@
 		<set name="recipe_id" value="1176"/>
 	</etcitem>
 	<etcitem id="35431" name="Рецепт - Шлема Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -858,8 +857,8 @@
 		<set name="recipe_id" value="1177"/>
 	</etcitem>
 	<etcitem id="35432" name="Рецепт - Кирасы Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -868,8 +867,8 @@
 		<set name="recipe_id" value="1178"/>
 	</etcitem>
 	<etcitem id="35433" name="Рецепт - Набедренников Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -878,8 +877,8 @@
 		<set name="recipe_id" value="1179"/>
 	</etcitem>
 	<etcitem id="35434" name="Рецепт - Рукавиц Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -888,8 +887,8 @@
 		<set name="recipe_id" value="1180"/>
 	</etcitem>
 	<etcitem id="35435" name="Рецепт - Сапог Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -898,8 +897,8 @@
 		<set name="recipe_id" value="1181"/>
 	</etcitem>
 	<etcitem id="35436" name="Рецепт - Щита Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -908,8 +907,8 @@
 		<set name="recipe_id" value="1182"/>
 	</etcitem>
 	<etcitem id="35437" name="Рецепт - Шлема Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -918,8 +917,8 @@
 		<set name="recipe_id" value="1183"/>
 	</etcitem>
 	<etcitem id="35438" name="Рецепт - Кожаной Кирасы Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -928,8 +927,8 @@
 		<set name="recipe_id" value="1184"/>
 	</etcitem>
 	<etcitem id="35439" name="Рецепт - Кожаных Брюк Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -938,8 +937,8 @@
 		<set name="recipe_id" value="1185"/>
 	</etcitem>
 	<etcitem id="35440" name="Рецепт - Кожаных Перчаток Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -948,8 +947,8 @@
 		<set name="recipe_id" value="1186"/>
 	</etcitem>
 	<etcitem id="35441" name="Рецепт - Кожаных Сапог Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -958,8 +957,8 @@
 		<set name="recipe_id" value="1187"/>
 	</etcitem>
 	<etcitem id="35442" name="Рецепт - Диадемы Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -968,8 +967,8 @@
 		<set name="recipe_id" value="1188"/>
 	</etcitem>
 	<etcitem id="35443" name="Рецепт - Туники Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -978,8 +977,8 @@
 		<set name="recipe_id" value="1189"/>
 	</etcitem>
 	<etcitem id="35444" name="Рецепт - Штанов Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -988,8 +987,8 @@
 		<set name="recipe_id" value="1190"/>
 	</etcitem>
 	<etcitem id="35445" name="Рецепт - Перчаток Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -998,8 +997,8 @@
 		<set name="recipe_id" value="1191"/>
 	</etcitem>
 	<etcitem id="35446" name="Рецепт - Ботинок Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1008,8 +1007,8 @@
 		<set name="recipe_id" value="1192"/>
 	</etcitem>
 	<etcitem id="35447" name="Рецепт - Символа Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1018,8 +1017,8 @@
 		<set name="recipe_id" value="1193"/>
 	</etcitem>
 	<etcitem id="35448" name="Рецепт - Ожерелья Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1028,8 +1027,8 @@
 		<set name="recipe_id" value="1194"/>
 	</etcitem>
 	<etcitem id="35449" name="Рецепт - Серьги Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1038,8 +1037,8 @@
 		<set name="recipe_id" value="1195"/>
 	</etcitem>
 	<etcitem id="35450" name="Рецепт - Кольца Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1048,8 +1047,8 @@
 		<set name="recipe_id" value="1196"/>
 	</etcitem>
 	<etcitem id="35451" name="Рецепт - Острия Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1058,8 +1057,8 @@
 		<set name="recipe_id" value="1197"/>
 	</etcitem>
 	<etcitem id="35452" name="Рецепт - Резака Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1068,8 +1067,8 @@
 		<set name="recipe_id" value="1198"/>
 	</etcitem>
 	<etcitem id="35453" name="Рецепт - Эспадона Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1078,8 +1077,8 @@
 		<set name="recipe_id" value="1199"/>
 	</etcitem>
 	<etcitem id="35454" name="Рецепт - Мстителя Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1088,8 +1087,8 @@
 		<set name="recipe_id" value="1200"/>
 	</etcitem>
 	<etcitem id="35455" name="Рецепт - Воителя Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1098,8 +1097,8 @@
 		<set name="recipe_id" value="1201"/>
 	</etcitem>
 	<etcitem id="35456" name="Рецепт - Буревестника Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1108,8 +1107,8 @@
 		<set name="recipe_id" value="1202"/>
 	</etcitem>
 	<etcitem id="35457" name="Рецепт - Броска Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1118,8 +1117,8 @@
 		<set name="recipe_id" value="1203"/>
 	</etcitem>
 	<etcitem id="35458" name="Рецепт - Стража Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1128,8 +1127,8 @@
 		<set name="recipe_id" value="1204"/>
 	</etcitem>
 	<etcitem id="35459" name="Рецепт - Расчленителя Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1138,8 +1137,8 @@
 		<set name="recipe_id" value="1205"/>
 	</etcitem>
 	<etcitem id="35460" name="Рецепт - Заклинателя Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1148,8 +1147,8 @@
 		<set name="recipe_id" value="1206"/>
 	</etcitem>
 	<etcitem id="35461" name="Рецепт - Возмездия Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1158,8 +1157,8 @@
 		<set name="recipe_id" value="1207"/>
 	</etcitem>
 	<etcitem id="35462" name="Рецепт - Шлема Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1168,8 +1167,8 @@
 		<set name="recipe_id" value="1208"/>
 	</etcitem>
 	<etcitem id="35463" name="Рецепт - Кирасы Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1178,8 +1177,8 @@
 		<set name="recipe_id" value="1209"/>
 	</etcitem>
 	<etcitem id="35464" name="Рецепт - Набедренников Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1188,8 +1187,8 @@
 		<set name="recipe_id" value="1210"/>
 	</etcitem>
 	<etcitem id="35465" name="Рецепт - Рукавиц Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1198,8 +1197,8 @@
 		<set name="recipe_id" value="1211"/>
 	</etcitem>
 	<etcitem id="35466" name="Рецепт - Сапог Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1208,8 +1207,8 @@
 		<set name="recipe_id" value="1212"/>
 	</etcitem>
 	<etcitem id="35467" name="Рецепт - Щита Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1218,8 +1217,8 @@
 		<set name="recipe_id" value="1213"/>
 	</etcitem>
 	<etcitem id="35468" name="Рецепт - Шлема Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1228,8 +1227,8 @@
 		<set name="recipe_id" value="1214"/>
 	</etcitem>
 	<etcitem id="35469" name="Рецепт - Кирасы Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1238,8 +1237,8 @@
 		<set name="recipe_id" value="1215"/>
 	</etcitem>
 	<etcitem id="35470" name="Рецепт - Кожаных Брюк Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1248,8 +1247,8 @@
 		<set name="recipe_id" value="1216"/>
 	</etcitem>
 	<etcitem id="35471" name="Рецепт - Перчаток Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1258,8 +1257,8 @@
 		<set name="recipe_id" value="1217"/>
 	</etcitem>
 	<etcitem id="35472" name="Рецепт - Сапог Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1268,8 +1267,8 @@
 		<set name="recipe_id" value="1218"/>
 	</etcitem>
 	<etcitem id="35473" name="Рецепт - Диадемы Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1278,8 +1277,8 @@
 		<set name="recipe_id" value="1219"/>
 	</etcitem>
 	<etcitem id="35474" name="Рецепт - Туники Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1288,8 +1287,8 @@
 		<set name="recipe_id" value="1220"/>
 	</etcitem>
 	<etcitem id="35475" name="Рецепт - Штанов Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1298,8 +1297,8 @@
 		<set name="recipe_id" value="1221"/>
 	</etcitem>
 	<etcitem id="35476" name="Рецепт - Перчаток Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1308,8 +1307,8 @@
 		<set name="recipe_id" value="1222"/>
 	</etcitem>
 	<etcitem id="35477" name="Рецепт - Ботинок Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1318,8 +1317,8 @@
 		<set name="recipe_id" value="1223"/>
 	</etcitem>
 	<etcitem id="35478" name="Рецепт - Символа Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1328,8 +1327,8 @@
 		<set name="recipe_id" value="1224"/>
 	</etcitem>
 	<etcitem id="35479" name="Рецепт - Ожерелья Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1338,8 +1337,8 @@
 		<set name="recipe_id" value="1225"/>
 	</etcitem>
 	<etcitem id="35480" name="Рецепт - Серьги Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1348,8 +1347,8 @@
 		<set name="recipe_id" value="1226"/>
 	</etcitem>
 	<etcitem id="35481" name="Рецепт - Кольца Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1358,8 +1357,8 @@
 		<set name="recipe_id" value="1227"/>
 	</etcitem>
 	<etcitem id="35482" name="Рецепт - Благословенного Острия Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1368,8 +1367,8 @@
 		<set name="recipe_id" value="1228"/>
 	</etcitem>
 	<etcitem id="35483" name="Рецепт - Благословенного Резака Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1378,8 +1377,8 @@
 		<set name="recipe_id" value="1229"/>
 	</etcitem>
 	<etcitem id="35484" name="Рецепт - Благословенного Эспадона Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1388,8 +1387,8 @@
 		<set name="recipe_id" value="1230"/>
 	</etcitem>
 	<etcitem id="35485" name="Рецепт - Благословенного Мстителя Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1398,8 +1397,8 @@
 		<set name="recipe_id" value="1231"/>
 	</etcitem>
 	<etcitem id="35486" name="Рецепт - Благословенного Воителя Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1408,8 +1407,8 @@
 		<set name="recipe_id" value="1232"/>
 	</etcitem>
 	<etcitem id="35487" name="Рецепт - Благословенного Буревестника Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1418,8 +1417,8 @@
 		<set name="recipe_id" value="1233"/>
 	</etcitem>
 	<etcitem id="35488" name="Рецепт - Благословенного Броска Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1428,8 +1427,8 @@
 		<set name="recipe_id" value="1234"/>
 	</etcitem>
 	<etcitem id="35489" name="Рецепт - Благословенного Стража Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1438,8 +1437,8 @@
 		<set name="recipe_id" value="1235"/>
 	</etcitem>
 	<etcitem id="35490" name="Рецепт - Благословенного Расчленителя Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1448,8 +1447,8 @@
 		<set name="recipe_id" value="1236"/>
 	</etcitem>
 	<etcitem id="35491" name="Рецепт - Благословенного Заклинателя Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1458,8 +1457,8 @@
 		<set name="recipe_id" value="1237"/>
 	</etcitem>
 	<etcitem id="35492" name="Рецепт - Благословенного Возмездия Фантазмы(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1468,8 +1467,8 @@
 		<set name="recipe_id" value="1238"/>
 	</etcitem>
 	<etcitem id="35493" name="Рецепт - Благословенного Шлема Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1478,8 +1477,8 @@
 		<set name="recipe_id" value="1239"/>
 	</etcitem>
 	<etcitem id="35494" name="Рецепт - Благословенной Кирасы Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1488,8 +1487,8 @@
 		<set name="recipe_id" value="1240"/>
 	</etcitem>
 	<etcitem id="35495" name="Рецепт - Благословенных Набедренников Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1498,8 +1497,8 @@
 		<set name="recipe_id" value="1241"/>
 	</etcitem>
 	<etcitem id="35496" name="Рецепт - Благословенных Рукавиц Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1508,8 +1507,8 @@
 		<set name="recipe_id" value="1242"/>
 	</etcitem>
 	<etcitem id="35497" name="Рецепт - Благословенных Сапог Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1518,8 +1517,8 @@
 		<set name="recipe_id" value="1243"/>
 	</etcitem>
 	<etcitem id="35498" name="Рецепт - Благословенного Щита Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1528,8 +1527,8 @@
 		<set name="recipe_id" value="1244"/>
 	</etcitem>
 	<etcitem id="35499" name="Рецепт - Благословенного Шлема Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1538,8 +1537,8 @@
 		<set name="recipe_id" value="1245"/>
 	</etcitem>
 	<etcitem id="35500" name="Рецепт - Благословенной Кожаной Кирасы Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1548,8 +1547,8 @@
 		<set name="recipe_id" value="1246"/>
 	</etcitem>
 	<etcitem id="35501" name="Рецепт - Благословенных Кожаных Брюк Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1558,8 +1557,8 @@
 		<set name="recipe_id" value="1247"/>
 	</etcitem>
 	<etcitem id="35502" name="Рецепт - Благословенных Кожаных Перчаток Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1568,8 +1567,8 @@
 		<set name="recipe_id" value="1248"/>
 	</etcitem>
 	<etcitem id="35503" name="Рецепт - Благословенных Кожаных Сапог Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1578,8 +1577,8 @@
 		<set name="recipe_id" value="1249"/>
 	</etcitem>
 	<etcitem id="35504" name="Рецепт - Благословенной Диадемы Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1588,8 +1587,8 @@
 		<set name="recipe_id" value="1250"/>
 	</etcitem>
 	<etcitem id="35505" name="Рецепт - Благословенной Туники Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1598,8 +1597,8 @@
 		<set name="recipe_id" value="1251"/>
 	</etcitem>
 	<etcitem id="35506" name="Рецепт - Благословенных Штанов Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1608,8 +1607,8 @@
 		<set name="recipe_id" value="1252"/>
 	</etcitem>
 	<etcitem id="35507" name="Рецепт - Благословенных Перчаток Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1618,8 +1617,8 @@
 		<set name="recipe_id" value="1253"/>
 	</etcitem>
 	<etcitem id="35508" name="Рецепт - Благословенных Ботинок Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1628,8 +1627,8 @@
 		<set name="recipe_id" value="1254"/>
 	</etcitem>
 	<etcitem id="35509" name="Рецепт - Благословенного Символа Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1638,8 +1637,8 @@
 		<set name="recipe_id" value="1255"/>
 	</etcitem>
 	<etcitem id="35510" name="Рецепт - Благословенного Ожерелья Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1648,8 +1647,8 @@
 		<set name="recipe_id" value="1256"/>
 	</etcitem>
 	<etcitem id="35511" name="Рецепт - Благословенной Серьги Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1658,8 +1657,8 @@
 		<set name="recipe_id" value="1257"/>
 	</etcitem>
 	<etcitem id="35512" name="Рецепт - Благословенного Кольца Кадейры(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1668,8 +1667,8 @@
 		<set name="recipe_id" value="1258"/>
 	</etcitem>
 	<etcitem id="35513" name="Рецепт - Благословенного Острия Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1678,8 +1677,8 @@
 		<set name="recipe_id" value="1259"/>
 	</etcitem>
 	<etcitem id="35514" name="Рецепт - Благословенного Резака Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1688,8 +1687,8 @@
 		<set name="recipe_id" value="1260"/>
 	</etcitem>
 	<etcitem id="35515" name="Рецепт - Благословенного Эспадона Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1698,8 +1697,8 @@
 		<set name="recipe_id" value="1261"/>
 	</etcitem>
 	<etcitem id="35516" name="Рецепт - Благословенного Мстителя Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1708,8 +1707,8 @@
 		<set name="recipe_id" value="1262"/>
 	</etcitem>
 	<etcitem id="35517" name="Рецепт - Благословенного Воителя Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1718,8 +1717,8 @@
 		<set name="recipe_id" value="1263"/>
 	</etcitem>
 	<etcitem id="35518" name="Рецепт - Благословенного Буревестника Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1728,8 +1727,8 @@
 		<set name="recipe_id" value="1264"/>
 	</etcitem>
 	<etcitem id="35519" name="Рецепт - Благословенного Броска Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1738,8 +1737,8 @@
 		<set name="recipe_id" value="1265"/>
 	</etcitem>
 	<etcitem id="35520" name="Рецепт - Благословенного Стража Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1748,8 +1747,8 @@
 		<set name="recipe_id" value="1266"/>
 	</etcitem>
 	<etcitem id="35521" name="Рецепт - Благословенного Расчленителя Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1758,8 +1757,8 @@
 		<set name="recipe_id" value="1267"/>
 	</etcitem>
 	<etcitem id="35522" name="Рецепт - Благословенного Заклинателя Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1768,8 +1767,8 @@
 		<set name="recipe_id" value="1268"/>
 	</etcitem>
 	<etcitem id="35523" name="Рецепт - Благословенного Возмездия Хелиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1778,8 +1777,8 @@
 		<set name="recipe_id" value="1269"/>
 	</etcitem>
 	<etcitem id="35524" name="Рецепт - Благословенного Шлема Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1788,8 +1787,8 @@
 		<set name="recipe_id" value="1270"/>
 	</etcitem>
 	<etcitem id="35525" name="Рецепт - Благословенной Кирасы Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1798,8 +1797,8 @@
 		<set name="recipe_id" value="1271"/>
 	</etcitem>
 	<etcitem id="35526" name="Рецепт - Благословенных Набедренников Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1808,8 +1807,8 @@
 		<set name="recipe_id" value="1272"/>
 	</etcitem>
 	<etcitem id="35527" name="Рецепт - Благословенных Рукавиц Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1818,8 +1817,8 @@
 		<set name="recipe_id" value="1273"/>
 	</etcitem>
 	<etcitem id="35528" name="Рецепт - Благословенных Сапог Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1828,8 +1827,8 @@
 		<set name="recipe_id" value="1274"/>
 	</etcitem>
 	<etcitem id="35529" name="Рецепт - Благословенного Щита Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1838,8 +1837,8 @@
 		<set name="recipe_id" value="1275"/>
 	</etcitem>
 	<etcitem id="35530" name="Рецепт - Благословенного Шлема Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1848,8 +1847,8 @@
 		<set name="recipe_id" value="1276"/>
 	</etcitem>
 	<etcitem id="35531" name="Рецепт - Благословенной Кирасы Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1858,8 +1857,8 @@
 		<set name="recipe_id" value="1277"/>
 	</etcitem>
 	<etcitem id="35532" name="Рецепт - Благословенных Кожаных Брюк Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1868,8 +1867,8 @@
 		<set name="recipe_id" value="1278"/>
 	</etcitem>
 	<etcitem id="35533" name="Рецепт - Благословенных Перчаток Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1878,8 +1877,8 @@
 		<set name="recipe_id" value="1279"/>
 	</etcitem>
 	<etcitem id="35534" name="Рецепт - Благословенных Сапог Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1888,8 +1887,8 @@
 		<set name="recipe_id" value="1280"/>
 	</etcitem>
 	<etcitem id="35535" name="Рецепт - Благословенной Диадемы Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1898,8 +1897,8 @@
 		<set name="recipe_id" value="1281"/>
 	</etcitem>
 	<etcitem id="35536" name="Рецепт - Благословенной Туники Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1908,8 +1907,8 @@
 		<set name="recipe_id" value="1282"/>
 	</etcitem>
 	<etcitem id="35537" name="Рецепт - Благословенных Штанов Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1918,8 +1917,8 @@
 		<set name="recipe_id" value="1283"/>
 	</etcitem>
 	<etcitem id="35538" name="Рецепт - Благословенных Перчаток Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1928,8 +1927,8 @@
 		<set name="recipe_id" value="1284"/>
 	</etcitem>
 	<etcitem id="35539" name="Рецепт - Благословенных Ботинок Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1938,8 +1937,8 @@
 		<set name="recipe_id" value="1285"/>
 	</etcitem>
 	<etcitem id="35540" name="Рецепт - Благословенного Символа Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1948,8 +1947,8 @@
 		<set name="recipe_id" value="1286"/>
 	</etcitem>
 	<etcitem id="35541" name="Рецепт - Благословенного Ожерелья Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1958,8 +1957,8 @@
 		<set name="recipe_id" value="1287"/>
 	</etcitem>
 	<etcitem id="35542" name="Рецепт - Благословенной Серьги Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>
@@ -1968,8 +1967,8 @@
 		<set name="recipe_id" value="1288"/>
 	</etcitem>
 	<etcitem id="35543" name="Рецепт - Благословенного Кольца Айдиоса(60%)">
-		<set name="icon" value="icon.etc_recipe_gold_i00" />
-		<set name="material" value="liquid" />
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="immediate_effect" value="1"/>

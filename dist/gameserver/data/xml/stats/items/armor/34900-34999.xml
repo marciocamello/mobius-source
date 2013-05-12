@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "item.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<armor id="34925" name="Cloak of Light">
 		<set name="icon" value="icon.amor_goodness_cloak"/>
@@ -11,7 +12,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="50"/>
 			<add stat="mDef" order="0x10" value="40"/>
-			<enchant stat="pDef" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -26,136 +27,172 @@
 		<for>
 			<add stat="pDef" order="0x10" value="50"/>
 			<add stat="mDef" order="0x10" value="40"/>
-			<enchant stat="pDef" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-    <armor id="34935" name="Star Agathion Bracelet - Hye-jin Jang">        <!--Done By Darvin (c)Java-Team-->
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="icon.bracelet_tersi_agathion"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="RIGHT_BRACELET"/>
-        </equip>
-        <set name="ex_type" value="BRACELET"/>
-    </armor>
-    <armor id="34936" name="Star Agathion Bracelet - Hyuk Jang">        <!--Done By Darvin (c)Java-Team-->
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="icon.bracelet_tersi_agathion"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="RIGHT_BRACELET"/>
-        </equip>
-        <set name="ex_type" value="BRACELET"/>
-    </armor>
-    <armor id="34937" name="Star Agathion Bracelet - Soo-ro Kim">        <!--Done By Darvin (c)Java-Team-->
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="icon.bracelet_tersi_agathion"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="RIGHT_BRACELET"/>
-        </equip>
-        <set name="ex_type" value="BRACELET"/>
-    </armor>
-    <armor id="34938" name="Star Agathion Bracelet - Jae-bum Park">        <!--Done By Darvin (c)Java-Team-->
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="icon.bracelet_tersi_agathion"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="RIGHT_BRACELET"/>
-        </equip>
-        <set name="ex_type" value="BRACELET"/>
-    </armor>
-    <armor id="34939" name="Star Agathion Bracelet - Shin-young Kim">        <!--Done By Darvin (c)Java-Team-->
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="icon.bracelet_tersi_agathion"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="RIGHT_BRACELET"/>
-        </equip>
-        <set name="ex_type" value="BRACELET"/>
-    </armor>
-    <armor id="34984" name="Talisman of Infinity">
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="BranchSys.br_rudolf_food_orange_i00"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="TALISMAN"/>
-        </equip>
-        <set name="ex_type" value="OTHER_ITEMS"/>
+	<armor id="34935" name="Star Agathion Bracelet - Hye-jin Jang">		<!--Done By Darvin (c)Java-Team-->
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bracelet_tersi_agathion"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_BRACELET"/>
+		</equip>
+		<set name="ex_type" value="BRACELET"/>
+	</armor>
+	<armor id="34936" name="Star Agathion Bracelet - Hyuk Jang">		<!--Done By Darvin (c)Java-Team-->
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bracelet_tersi_agathion"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_BRACELET"/>
+		</equip>
+		<set name="ex_type" value="BRACELET"/>
+	</armor>
+	<armor id="34937" name="Star Agathion Bracelet - Soo-ro Kim">		<!--Done By Darvin (c)Java-Team-->
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bracelet_tersi_agathion"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_BRACELET"/>
+		</equip>
+		<set name="ex_type" value="BRACELET"/>
+	</armor>
+	<armor id="34938" name="Star Agathion Bracelet - Jae-bum Park">		<!--Done By Darvin (c)Java-Team-->
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bracelet_tersi_agathion"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_BRACELET"/>
+		</equip>
+		<set name="ex_type" value="BRACELET"/>
+	</armor>
+	<armor id="34939" name="Star Agathion Bracelet - Shin-young Kim">		<!--Done By Darvin (c)Java-Team-->
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bracelet_tersi_agathion"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_BRACELET"/>
+		</equip>
+		<set name="ex_type" value="BRACELET"/>
+	</armor>
+	<armor id="34984" name="Talisman of Infinity">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.br_rudolf_food_orange_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<set name="ex_type" value="OTHER_ITEMS"/>
 		<skills>
-            <skill id="13384" level="1"/>
-        </skills>
-    </armor>
-    <armor id="34985" name="Talisman of Destruction">
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="BranchSys.br_rudolf_food_orange_i00"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="TALISMAN"/>
-        </equip>
-        <set name="ex_type" value="OTHER_ITEMS"/>
+			<skill id="13384" level="1"/>
+		</skills>
+	</armor>
+	<armor id="34985" name="Talisman of Destruction">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.br_rudolf_food_orange_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<set name="ex_type" value="OTHER_ITEMS"/>
 		<skills>
-            <skill id="13385" level="1"/>
-        </skills>
-    </armor>
-    <armor id="34986" name="Talisman of Annihilation">
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="BranchSys.br_rudolf_food_orange_i00"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="TALISMAN"/>
-        </equip>
-        <set name="ex_type" value="OTHER_ITEMS"/>
+			<skill id="13385" level="1"/>
+		</skills>
+	</armor>
+	<armor id="34986" name="Talisman of Annihilation">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.br_rudolf_food_orange_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<set name="ex_type" value="OTHER_ITEMS"/>
 		<skills>
-            <skill id="13386" level="1"/>
-        </skills>
-    </armor>
-    <armor id="34987" name="Talisman of Hellfire">
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="BranchSys.br_rudolf_food_red_i00"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="TALISMAN"/>
-        </equip>
-        <set name="ex_type" value="OTHER_ITEMS"/>
+			<skill id="13386" level="1"/>
+		</skills>
+	</armor>
+	<armor id="34987" name="Talisman of Hellfire">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.br_rudolf_food_red_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<set name="ex_type" value="OTHER_ITEMS"/>
 		<skills>
-            <skill id="13387" level="1"/>
-        </skills>
-    </armor>
-    <armor id="34988" name="Talisman of Desire">
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="BranchSys.br_rudolf_food_blue_i00"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="TALISMAN"/>
-        </equip>
-        <set name="ex_type" value="OTHER_ITEMS"/>
+			<skill id="13387" level="1"/>
+		</skills>
+	</armor>
+	<armor id="34988" name="Talisman of Desire">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.br_rudolf_food_blue_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<set name="ex_type" value="OTHER_ITEMS"/>
 		<skills>
-            <skill id="13388" level="1"/>
-        </skills>
-    </armor>
-    <armor id="34989" name="Talisman of Longing">
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="BranchSys.br_rudolf_food_purple_i00"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="TALISMAN"/>
-        </equip>
-        <set name="ex_type" value="OTHER_ITEMS"/>
+			<skill id="13388" level="1"/>
+		</skills>
+	</armor>
+	<armor id="34989" name="Talisman of Longing">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.br_rudolf_food_purple_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<set name="ex_type" value="OTHER_ITEMS"/>
 		<skills>
-            <skill id="13389" level="1"/>
+			<skill id="13389" level="1"/>
+		</skills>
+	</armor>
+	<armor id="34996" name="Radiant Cloak of Light">
+        <set name="type" value="NONE"/>
+        <set name="weight" value="220"/>
+		<equip>
+            <slot id="BACK"/>
+        </equip>
+        <set name="ex_type" value="CLOAK"/>
+		<skills>
+            <skill id="19037" level="1"/>
         </skills>
+        <for>
+            <add stat="pDef" order="0x10" value="50"/>
+            <add stat="mDef" order="0x10" value="40"/>
+            <enchant stat="pDef" order="0x0C" value="0"/>
+            <enchant stat="maxHp" order="0x80" value="0"/>
+            <enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="34997" name="Cold Cloak of Darkness">
+        <set name="type" value="NONE"/>
+        <set name="weight" value="220"/>
+		<equip>
+            <slot id="BACK"/>
+        </equip>
+        <set name="ex_type" value="CLOAK"/>
+		<skills>
+            <skill id="19038" level="1"/>
+        </skills>
+        <for>
+            <add stat="pDef" order="0x10" value="50"/>
+            <add stat="mDef" order="0x10" value="40"/>
+            <enchant stat="pDef" order="0x0C" value="0"/>
+            <enchant stat="maxHp" order="0x80" value="0"/>
+            <enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
     </armor>
 </list>

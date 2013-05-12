@@ -1,10 +1,9 @@
 <!DOCTYPE list SYSTEM "instances.dtd">
 <list>
     <!-- Freya - Meeting Sirra -->
-    <instance id="137" name="Ice Queen's Castle" maxChannels="20" collapseIfEmpty="0" timelimit="30" dispelBuffs="false"
-              respawn="60">
+    <instance id="137" name="Ice Queen's Castle" maxChannels="20" collapseIfEmpty="0" timelimit="30" dispelBuffs="false" respawn="60">
         <collapse on-party-dismiss="true" timer="60"/>
-        <level min="82" max="85"/>
+        <level min="82" max="99"/>
         <return loc="113848 -109272 -870"/>
         <teleport loc="114000 -112357 -11200"/>
         <remove itemId="0" count="0" necessary="false"/>

@@ -329,6 +329,69 @@ public class StatFunctions
 			}
 		}
 	}
+
+	
+	/**
+	 * @author Mobius
+	 */
+	private static class FuncMAccuracyAdd extends Func
+	{
+		/**
+		 * Field func.
+		 */
+		static final FuncMAccuracyAdd func = new FuncMAccuracyAdd();
+		
+		/**
+		 * Constructor for FuncMAccuracyAdd.
+		 */
+		private FuncMAccuracyAdd()
+		{
+			super(Stats.MACCURACY_COMBAT, 0x10, null);
+		}
+		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
+		@Override
+		public void calc(Env env)
+		{
+			if (env.character.isPet())
+			{
+				return;
+			}
+			env.value += (Math.sqrt(env.character.getWIT()) * 3) + (env.character.getLevel() * 2);
+		}
+	}
+	
+	/**
+	 * @author Mobius
+	 */
+	private static class FuncMEvasionAdd extends Func
+	{
+		/**
+		 * Field func.
+		 */
+		static final FuncMEvasionAdd func = new FuncMEvasionAdd();
+		
+		/**
+		 * Constructor for FuncMEvasionAdd.
+		 */
+		private FuncMEvasionAdd()
+		{
+			super(Stats.MEVASION_RATE, 0x10, null);
+		}
+		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
+		@Override
+		public void calc(Env env)
+		{
+			env.value += (Math.sqrt(env.character.getWIT()) * 3) + (env.character.getLevel() * 2);
+		}
+	}
 	
 	/**
 	 * @author Mobius
@@ -359,18 +422,22 @@ public class StatFunctions
 			{
 				return;
 			}
-			env.value += (Math.sqrt(env.character.getDEX()) * 6) + env.character.getLevel();
+			env.value += (Math.sqrt(env.character.getDEX()) * 5.5) + env.character.getLevel();
 			if (env.character.isServitor())
 			{
 				env.value += env.character.getLevel() < 60 ? 4 : 5;
 			}
-			if (env.character.getLevel() > 77)
+			if (env.character.getLevel() > 77 && env.character.getLevel() < 85)
 			{
 				env.value += env.character.getLevel() - 77;
 			}
-			if (env.character.getLevel() > 69)
+			if (env.character.getLevel() > 69 && env.character.getLevel() < 85)
 			{
 				env.value += env.character.getLevel() - 69;
+			}
+			if (env.character.getLevel() > 84)
+			{
+				env.value += 24;
 			}
 		}
 	}
@@ -400,14 +467,14 @@ public class StatFunctions
 		@Override
 		public void calc(Env env)
 		{
-			env.value += (Math.sqrt(env.character.getDEX()) * 6) + env.character.getLevel();
-			if (env.character.getLevel() > 77)
-			{
-				env.value += env.character.getLevel() - 77;
-			}
-			if (env.character.getLevel() > 69)
+			env.value += (Math.sqrt(env.character.getDEX()) * 5.5) + env.character.getLevel();
+			if (env.character.getLevel() > 69 && env.character.getLevel() < 85)
 			{
 				env.value += env.character.getLevel() - 69;
+			}
+			if (env.character.getLevel() > 84)
+			{
+				env.value += 16;
 			}
 		}
 	}
@@ -1514,7 +1581,63 @@ public class StatFunctions
 			env.value = Math.min(Config.LIM_EVASION, env.value);
 		}
 	}
+	/**
+	 * @author Mobius
+	 */
+	private static class FuncMEvasionLimit extends Func
+	{
+		/**
+		 * Field func.
+		 */
+		static final Func func = new FuncMEvasionLimit();
+		
+		/**
+		 * Constructor for FuncEvasionLimit.
+		 */
+		private FuncMEvasionLimit()
+		{
+			super(Stats.MEVASION_RATE, 0x100, null);
+		}
+		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
+		@Override
+		public void calc(Env env)
+		{
+			env.value = Math.min(Config.LIM_MEVASION, env.value);
+		}
+	}
 	
+	/**
+	 * @author Mobius
+	 */
+	private static class FuncMAccuracyLimit extends Func
+	{
+		/**
+		 * Field func.
+		 */
+		static final Func func = new FuncMAccuracyLimit();
+		
+		/**
+		 * Constructor for FuncAccuracyLimit.
+		 */
+		private FuncMAccuracyLimit()
+		{
+			super(Stats.MACCURACY_COMBAT, 0x100, null);
+		}
+		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
+		@Override
+		public void calc(Env env)
+		{
+			env.value = Math.min(Config.LIM_MACCURACY, env.value);
+		}
+	}
 	/**
 	 * @author Mobius
 	 */
@@ -1573,9 +1696,6 @@ public class StatFunctions
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private static class FuncMCritLimit extends Func
 	{
 		/**
@@ -1890,7 +2010,9 @@ public class StatFunctions
 		cha.addStatFunc(FuncMAtkSpdLimit.func);
 		cha.addStatFunc(FuncCAtkLimit.func);
 		cha.addStatFunc(FuncEvasionLimit.func);
+		cha.addStatFunc(FuncMEvasionLimit.func);
 		cha.addStatFunc(FuncAccuracyLimit.func);
+		cha.addStatFunc(FuncMAccuracyLimit.func);
 		cha.addStatFunc(FuncCritLimit.func);
 		cha.addStatFunc(FuncMCritLimit.func);
 		cha.addStatFunc(FuncMCriticalRateMul.func);
@@ -1909,87 +2031,5 @@ public class StatFunctions
 		cha.addStatFunc(FuncAttributeDefenceInit.getFunc(Element.WIND));
 		cha.addStatFunc(FuncAttributeDefenceInit.getFunc(Element.HOLY));
 		cha.addStatFunc(FuncAttributeDefenceInit.getFunc(Element.UNHOLY));
-	}
-	
-	/**
-	 * @author Mobius
-	 */
-	private static class FuncMAccuracyAdd extends Func
-	{
-		/**
-		 * Field func.
-		 */
-		static final FuncMAccuracyAdd func = new FuncMAccuracyAdd();
-		
-		/**
-		 * Constructor for FuncMAccuracyAdd.
-		 */
-		private FuncMAccuracyAdd()
-		{
-			super(Stats.MACCURACY_COMBAT, 0x10, null);
-		}
-		
-		/**
-		 * Method calc.
-		 * @param env Env
-		 */
-		@Override
-		public void calc(Env env)
-		{
-			if (env.character.isPet())
-			{
-				return;
-			}
-			env.value += (Math.sqrt(env.character.getWIT()) * 3) + (env.character.getLevel() * 2);
-			if (env.character.isServitor())
-			{
-				env.value += env.character.getLevel() < 60 ? 4 : 5;
-			}
-			if (env.character.getLevel() > 77)
-			{
-				env.value += env.character.getLevel() - 77;
-			}
-			if (env.character.getLevel() > 69)
-			{
-				env.value += env.character.getLevel() - 69;
-			}
-		}
-	}
-	
-	/**
-	 * @author Mobius
-	 */
-	private static class FuncMEvasionAdd extends Func
-	{
-		/**
-		 * Field func.
-		 */
-		static final FuncMEvasionAdd func = new FuncMEvasionAdd();
-		
-		/**
-		 * Constructor for FuncMEvasionAdd.
-		 */
-		private FuncMEvasionAdd()
-		{
-			super(Stats.MEVASION_RATE, 0x10, null);
-		}
-		
-		/**
-		 * Method calc.
-		 * @param env Env
-		 */
-		@Override
-		public void calc(Env env)
-		{
-			env.value += (Math.sqrt(env.character.getWIT()) * 3) + (env.character.getLevel() * 2);
-			if (env.character.getLevel() > 77)
-			{
-				env.value += env.character.getLevel() - 77;
-			}
-			if (env.character.getLevel() > 69)
-			{
-				env.value += env.character.getLevel() - 69;
-			}
-		}
 	}
 }

@@ -68,6 +68,7 @@ public class UnitMember
 	/**
 	 * Field _pledgeType.
 	 */
+	private int _race;
 	private int _pledgeType;
 	/**
 	 * Field _powerGrade.
@@ -147,8 +148,14 @@ public class UnitMember
 		_powerGrade = player.getPowerGrade();
 		_apprentice = player.getApprentice();
 		_sex = player.getSex();
+		setRace(player.getRace().ordinal());
 	}
 	
+	public void setRace(int _race)
+	{
+		this._race = _race;
+	}
+
 	/**
 	 * Method getPlayer.
 	 * @return Player
@@ -590,5 +597,10 @@ public class UnitMember
 	public int getLeaderOf()
 	{
 		return _leaderOf;
+	}
+
+	public int getRace()
+	{
+		return _race;
 	}
 }

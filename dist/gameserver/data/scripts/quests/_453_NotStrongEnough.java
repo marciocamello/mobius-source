@@ -27,6 +27,7 @@ public class _453_NotStrongEnough extends Quest implements ScriptFile
 	public static final String E_MOBS = "e_mobs";
 	private static final int[] Rewards =
 	{
+		//Requiem weapon
 		18103,
 		18104,
 		18105,
@@ -38,6 +39,7 @@ public class _453_NotStrongEnough extends Quest implements ScriptFile
 		18111,
 		18112,
 		18113,
+		//Apocalypse weapon
 		18137,
 		18138,
 		18139,
@@ -49,8 +51,10 @@ public class _453_NotStrongEnough extends Quest implements ScriptFile
 		18145,
 		18146,
 		18147,
+		//Enchant Scrolls
 		17526,
 		17527,
+		//Attribute
 		9546,
 		9547,
 		9548,
@@ -60,9 +64,9 @@ public class _453_NotStrongEnough extends Quest implements ScriptFile
 		4343,
 		4342,
 		4345,
-		1078,
+		4344,
 		4346,
-		7917
+		4347
 	};
 	
 	public _453_NotStrongEnough()

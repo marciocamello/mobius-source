@@ -35,13 +35,6 @@ public class Potions extends SimpleItemHandler
 		7909,
 		7910,
 		7911,
-		9997,
-		9998,
-		9999,
-		10000,
-		10001,
-		10002,
-		13750,
 		14612
 	};
 	
@@ -100,34 +93,6 @@ public class Potions extends SimpleItemHandler
 			case 7911:
 				player.broadcastPacket(new MagicSkillUse(player, player, 2253, 1, 0, 0));
 				player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(2253, 1));
-				break;
-			case 9997:
-				player.broadcastPacket(new MagicSkillUse(player, player, 2335, 1, 0, 0));
-				player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(2335, 1));
-				break;
-			case 9998:
-				player.broadcastPacket(new MagicSkillUse(player, player, 2336, 1, 0, 0));
-				player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(2336, 1));
-				break;
-			case 9999:
-				player.broadcastPacket(new MagicSkillUse(player, player, 2338, 1, 0, 0));
-				player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(2338, 1));
-				break;
-			case 10000:
-				player.broadcastPacket(new MagicSkillUse(player, player, 2337, 1, 0, 0));
-				player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(2337, 1));
-				break;
-			case 10001:
-				player.broadcastPacket(new MagicSkillUse(player, player, 2340, 1, 0, 0));
-				player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(2340, 1));
-				break;
-			case 10002:
-				player.broadcastPacket(new MagicSkillUse(player, player, 2339, 1, 0, 0));
-				player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(2339, 1));
-				break;
-			case 13750:
-				player.broadcastPacket(new MagicSkillUse(player, player, 2592, 1, 0, 0));
-				player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(2592, 1));
 				break;
 			case 14612:
 				player.broadcastPacket(new MagicSkillUse(player, player, 23017, 1, 0, 0));

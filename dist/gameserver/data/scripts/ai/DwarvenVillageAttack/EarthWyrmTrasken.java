@@ -1,18 +1,7 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package ai.DwarvenVillageAttack;
 
 import instances.MemoryOfDisaster;
+
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.entity.Reflection;
@@ -25,12 +14,12 @@ public class EarthWyrmTrasken extends DefaultAI
 	private static final int ENRAGED_SKILL_ID = 14505;
 	private static final int BODY_STRIKE_SKILL_ID_1 = 14337;
 	private static final int BODY_STRIKE_SKILL_ID_2 = 14338;
-	
+
 	public EarthWyrmTrasken(NpcInstance actor)
 	{
 		super(actor);
 	}
-	
+
 	@Override
 	protected void onEvtSpawn()
 	{
@@ -38,13 +27,13 @@ public class EarthWyrmTrasken extends DefaultAI
 		getActor().setRHandId(RHAND_ID);
 		addTimer(1, 50);
 	}
-	
+
 	@Override
 	protected void onEvtTimer(int timerId, Object arg1, Object arg2)
 	{
 		super.onEvtTimer(timerId, arg1, arg2);
 		Skill sk;
-		switch (timerId)
+		switch(timerId)
 		{
 			case 1:
 				sk = SkillTable.getInstance().getInfo(ENRAGED_SKILL_ID, 1);
@@ -63,22 +52,18 @@ public class EarthWyrmTrasken extends DefaultAI
 				break;
 		}
 	}
-	
+
 	@Override
 	protected void onEvtFinishCasting(int skill_id, boolean success)
 	{
-		if (skill_id == ENRAGED_SKILL_ID)
+		if(skill_id == ENRAGED_SKILL_ID)
 		{
 			Reflection r = getActor().getReflection();
-			if (r instanceof MemoryOfDisaster)
-			{
+			if(r instanceof MemoryOfDisaster)
 				((MemoryOfDisaster) r).startFinalScene();
-			}
 			addTimer(2, 50);
 		}
-		else if (skill_id == BODY_STRIKE_SKILL_ID_1)
-		{
+		else if(skill_id == BODY_STRIKE_SKILL_ID_1)
 			addTimer(3, 50);
-		}
 	}
 }

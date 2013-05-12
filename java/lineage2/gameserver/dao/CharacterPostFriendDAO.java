@@ -85,7 +85,7 @@ public class CharacterPostFriendDAO
 		}
 		catch (Exception e)
 		{
-			_log.error("CharacterPostFriendDAO.load(L2Player): " + e, e);
+			_log.error("CharacterPostFriendDAO.load(L2Player): "+ player.getObjectId() + e, e);
 		}
 		finally
 		{

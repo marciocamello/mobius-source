@@ -87,21 +87,22 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="19009" levels="5" name="Clan Advent">
-    <!-- Increases clan members' P. Atk., P. Def., M. Atk., and M. Def. by 1% and HP/MP recovery bonus by 1 when the clan leader logs in. Stage 1 effect is applied at the time of the clan leader's login and the level increases every 10 minutes up to level 5. -->
-		<set name="isClanSkill" val="true"/>
-		<table name="#px"> 1.02 1.03 1.04 1.05 1.06 </table>
-		<table name="#reg"> 1 2 3 4 5 </table>
+	<skill id="19009" levels="1" name="Clan Advent">
+	<!-- When the clan leader logs in, clan members' P. Atk., P. Def., and M. Def. + 5%, M. Atk. + 6%, and HP/MP recovery bonus + 5. -->
+		<set name="magicType" val="MAGIC"/>
+		<set name="magicLevel" val="1"/>
 		<set name="reuseDelay" val="2000"/>
-		<set name="operateType" val="OP_PASSIVE"/> <!-- Пассив -->
-		<set name="skillType" val="BUFF"/>
 		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="clan_renewal">
-				<mul order="0x30" stat="pAtk" val="#px"/>
-				<mul order="0x30" stat="pDef" val="#px"/>
-				<add order="0x40" stat="regHp" val="#reg"/>
-				<add order="0x40" stat="regMp" val="#reg"/>
+			<effect count="0x7fffffff" name="Buff" stackOrder="1" time="3600" val="0" stackType="clan_renewal">
+				<mul order="0x30" stat="pAtk" val="1.05"/>
+				<mul order="0x30" stat="pDef" val="1.05"/>
+				<mul order="0x30" stat="mDef" val="1.05"/>
+				<mul order="0x30" stat="mAtk" val="1.06"/>
+				<add order="0x40" stat="regHp" val="5"/>
+				<add order="0x40" stat="regMp" val="5"/>
 			</effect>
 		</for>
 	</skill>
@@ -240,8 +241,8 @@
 	<skill id="19018" levels="1" name="Clan Guardian Recovery">
     <!-- Restores HP/MP/CP. -->
 		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="19034" levels="1" name="Imprint of Light">
 		<set name="reuseDelay" val="5000"/>
@@ -277,9 +278,45 @@
 		<set name="isReuseDelayPermanent" val="true"/>
 		<set name="castle_side" val="DARK"/>
 	</skill>
+	<skill id="19037" levels="1" name="Radiant Cloak of Light">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="icon" val="icon.skill19037"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="magicLevel" val="1"/>
+		<for>
+			<add stat="STR" order="0x10" val="3"/>
+			<add stat="DEX" order="0x10" val="3"/>
+			<add stat="CON" order="0x10" val="3"/>
+			<add stat="MEN" order="0x10" val="3"/>
+			<add stat="WIT" order="0x10" val="3"/>
+			<add stat="INT" order="0x10" val="3"/>
+			<mul stat="pvpPhysDefenceBonus" order="0x30" val="1.15"/>
+			<mul stat="pvpPhysSkillDefenceBonus" order="0x30" val="1.15"/>
+			<mul stat="pvpMagicSkillDefenceBonus" order="0x30" val="1.15"/>
+		</for>
+	</skill>
+	<skill id="19038" levels="1" name="Cold Cloak of Darkness">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="icon" val="icon.skill19038"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="magicLevel" val="1"/>
+		<for>
+			<add stat="STR" order="0x10" val="3"/>
+			<add stat="DEX" order="0x10" val="3"/>
+			<add stat="CON" order="0x10" val="3"/>
+			<add stat="MEN" order="0x10" val="3"/>
+			<add stat="WIT" order="0x10" val="3"/>
+			<add stat="INT" order="0x10" val="3"/>
+			<mul stat="pvpPhysDefenceBonus" order="0x30" val="1.15"/>
+			<mul stat="pvpPhysSkillDefenceBonus" order="0x30" val="1.15"/>
+			<mul stat="pvpMagicSkillDefenceBonus" order="0x30" val="1.15"/>
+		</for>
+	</skill>
 	<skill id="19074" levels="1" name="Academy Precept">
     <!-- For 60 minutes, increases academy members' P. Atk. by 10%, M. Atk. by 10%, Critical Rate by 10%, and M. Critical Rate by 10%. -->
-		<set name="isClanSkill" val="true" />
+		<set name="isClanSkill" val="true"/>
 		<table name="#mpConsume2">100</table>
 		<set name="reuseDelay" val="43200000"/>
 		<set name="hitTime" val="4000"/>
@@ -352,7 +389,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>	
 	<skill id="19088" levels="4" name="Summon Siege Golem">
-    <!-- Summons a siege weapon. Requires 400 R-grade crystals. Automatically acquired by dwarves at level 85. -->
+		<!-- Summons a siege weapon. Requires 400 R-grade crystals. Automatically acquired by dwarves at level 85. -->
 		<table name="#npcId">15054 15055 15056 15057</table>
 		<set name="mpConsume2" val="530"/>
 		<set name="itemConsumeId" val="17371"/>
@@ -361,47 +398,47 @@
 		<set name="reuseDelay" val="7200000"/>
 		<set name="hitTime" val="180000"/>
 		<set name="skillType" val="SUMMON"/>
-		<set name="summonType" val="SIEGE_SUMMON"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		  <set name="lifeTime" val="1200000"/>
+		<set name="lifeTime" val="1200000"/>
 		<set name="npcId" val="#npcId"/>
+		<set name="summonType" val="SIEGE_SUMMON"/>
 		<cond msgId="16">
 			<player summon_siege_golem=""/>
 		</cond>
 	 </skill>		
 	<skill id="19089" levels="4" name="Summon Wild Hog Cannon">
     <!-- Summons a siege weapon. Can only move in normal mode. During siege mode, it cannot move, and it can inflict long-range attacks. Switching modes takes 30 seconds. Requires 600 R-grade crystals. Automatically acquired by dwarves at level 85. -->
-		  <table name="#npcId">15058 15059 15060 15061</table>
-		  <set name="mpConsume2" val="530"/>
-		  <set name="itemConsumeId" val="17371"/>
-		  <set name="itemConsumeCount" val="600"/>
-		  <set name="target" val="TARGET_SELF"/>
-		  <set name="reuseDelay" val="7200000"/>
-		  <set name="hitTime" val="180000"/>
-		  <set name="skillType" val="SUMMON"/>
-		  <set name="summonType" val="SIEGE_SUMMON"/>
-		  <set name="operateType" val="OP_ACTIVE"/>
-		  <set name="lifeTime" val="1200000"/>
-		  <set name="npcId" val="#npcId"/>
+		<table name="#npcId">15058 15059 15060 15061</table>
+		<set name="mpConsume2" val="530"/>
+		<set name="itemConsumeId" val="17371"/>
+		<set name="itemConsumeCount" val="600"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="reuseDelay" val="7200000"/>
+		<set name="hitTime" val="180000"/>
+		<set name="skillType" val="SUMMON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="lifeTime" val="1200000"/>
+		<set name="npcId" val="#npcId"/>
+		<set name="summonType" val="SIEGE_SUMMON"/>
 		<cond msgId="16">
 			<player summon_siege_golem=""/>
 		</cond>
 	</skill>		
 	<skill id="19090" levels="4" name="Summon Swoop Cannon">
     <!-- Summons a Swoop Cannon. Requires 500 R-grade crystals. Automatically acquired by dwarves at level 85. -->
-		  <table name="#npcId">15062 15063 15064 15065</table>
-		  <set name="mpConsume2" val="530"/>
-		  <set name="itemConsumeCount" val="500"/>
-		  <set name="itemConsumeId" val="17371"/>
-		  <set name="target" val="TARGET_SELF"/>
-		  <set name="reuseDelay" val="7200000"/>
-		  <set name="hitTime" val="180000"/>
-		  <set name="skillType" val="SUMMON"/>
-		  <set name="summonType" val="SIEGE_SUMMON"/>
-		  <set name="operateType" val="OP_ACTIVE"/>
-		  <set name="lifeTime" val="1200000"/>
-		  <set name="npcId" val="#npcId"/>
-		  <cond msgId="16">
+		<table name="#npcId">15062 15063 15064 15065</table>
+		<set name="mpConsume2" val="530"/>
+		<set name="itemConsumeCount" val="500"/>
+		<set name="itemConsumeId" val="17371"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="reuseDelay" val="7200000"/>
+		<set name="hitTime" val="180000"/>
+		<set name="skillType" val="SUMMON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="lifeTime" val="1200000"/>
+		<set name="npcId" val="#npcId"/>
+		<set name="summonType" val="SIEGE_SUMMON"/>
+		<cond msgId="16">
 			<player summon_siege_golem=""/>
 		</cond>
 	</skill>

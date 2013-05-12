@@ -206,7 +206,7 @@ public class Dominion extends Residence
 		{
 			if (npc.getDominion() == this)
 			{
-				npc.broadcastCharInfoImpl();
+				npc.broadcastCharInfo();
 			}
 		}
 	}

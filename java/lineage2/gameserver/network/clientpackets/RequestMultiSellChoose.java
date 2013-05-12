@@ -476,7 +476,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 			double rndNum = 100.0D * Rnd.nextDouble();
 			double chance = 0.0D;
 			double chanceFrom = 0.0D;
-			cycle1:
+			cycle1 :
 			for (MultiSellIngredient in : entry.getProduction())
 			{
 				if (in.getItemId() <= 0)
@@ -526,7 +526,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 						{
 							if (in.getChance() >= 0)
 							{
-								chance = in.getChance();
+								chance = in.getChance();							
 								
 								if ((rndNum >= chanceFrom) && (rndNum <= (chance + chanceFrom)))
 								{

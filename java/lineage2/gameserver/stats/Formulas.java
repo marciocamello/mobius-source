@@ -28,6 +28,7 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.skills.EffectType;
 import lineage2.gameserver.skills.effects.EffectTemplate;
+import lineage2.gameserver.tables.AttributeDamageResistTable;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.utils.PositionUtils;
 
@@ -42,6 +43,7 @@ public class Formulas
 	 * @param cha Creature
 	 * @return double
 	 */
+	
 	public static double calcHpRegen(Creature cha)
 	{
 		double init;
@@ -415,6 +417,11 @@ public class Formulas
 					attacker.sendPacket(SystemMsg.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
 				}
 			}
+			if(skill.isPowerModified())
+			{
+				double percentMod = skill.getWeaponModifiedPower(attacker);
+				info.damage *= percentMod;
+			}
 			if (info.damage > 0)
 			{
 				attacker.displayGiveDamageMessage(target, (int) info.damage, info.crit || blow, false, false, false);
@@ -450,7 +457,9 @@ public class Formulas
 	{
 		AttackInfo info = new AttackInfo();
 		boolean isPvP = attacker.isPlayable() && target.isPlayable();
+		info.crit_static = attacker.calcStat(Stats.MCRITICAL_DAMAGE_STATIC, target, skill);
 		info.shld = skill.getShieldIgnore() && calcShldUse(attacker, target);
+		info.miss = false;
 		double mAtk = attacker.getMAtk(target, skill);
 		if (sps == 2)
 		{
@@ -526,9 +535,8 @@ public class Formulas
 		info.crit = calcMCrit(attacker.getMagicCriticalRate(target, skill));
 		if (info.crit)
 		{
-			// TODO CHECK MAGIC CRITICAL DAMAGE
-			info.damage *= 2.0;
-			info.damage += attacker.getMagicCriticalDmg(target, skill);
+			info.damage *= attacker.getMagicCriticalDmg(target, skill);
+			info.damage += info.crit_static;
 		}
 		info.damage = attacker.calcStat(Stats.MAGIC_DAMAGE, info.damage, target, skill);
 		if (info.shld)
@@ -583,6 +591,12 @@ public class Formulas
 				target.sendPacket(msg);
 			}
 		}
+		if ((info.damage > 1) && skill.isMagic() && calcMagicMiss(attacker,target))
+		{
+			attacker.sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addName(attacker));
+			target.sendPacket(new SystemMessage(SystemMessage.C1_HAS_EVADED_C2S_ATTACK).addName(target).addName(attacker));
+			info.damage = 0;
+		}
 		if (info.damage > 0)
 		{
 			attacker.displayGiveDamageMessage(target, (int) info.damage, info.crit, false, false, true);
@@ -597,6 +611,22 @@ public class Formulas
 		{
 			info.reflectableDamage = info.damage - receiveDamageLimit;
 			info.damage = receiveDamageLimit;
+		}
+		if (skill.isMarkDamage())
+		{
+			int boost = 1;
+			//TODO ADD INTO XML LIST OF SKILL TO CHECK
+			// name="dependOnTargetEffectId" value="11259,11261,11262"
+			int[] list = {11259,11261,11262};
+			for (int id : list)
+			{
+				if (target.getEffectList().containEffectFromSkillId(id, true))
+				{
+					boost += 1;
+				}
+			}
+			//TODO CHECK RETAIL INFO ABOUT BOOST DAMAGE
+			info.damage *= boost;
 		}
 		return info;
 	}
@@ -687,7 +717,7 @@ public class Formulas
 	 */
 	public static boolean calcMCrit(double mRate)
 	{
-		return (Rnd.get() * 100) <= Math.min(Config.LIM_MCRIT, mRate);
+		return mRate > Rnd.get(1000);
 	}
 	
 	/**
@@ -790,6 +820,20 @@ public class Formulas
 				chanceToHit *= 1.1;
 				break;
 		}
+		return !Rnd.chance(chanceToHit);
+	}
+
+	/**
+	 * Method calcMagicMiss.
+	 * @param attacker Creature
+	 * @param target Creature
+	 * @return boolean
+	 */
+	public static boolean calcMagicMiss(Creature attacker, Creature target)
+	{
+		int chanceToHit = 88 + (2 * (attacker.getMAccuracy() - target.getMEvasionRate((attacker))));
+		chanceToHit = Math.max(chanceToHit, 28);
+		chanceToHit = Math.min(chanceToHit, 98);
 		return !Rnd.chance(chanceToHit);
 	}
 	
@@ -1163,47 +1207,23 @@ public class Formulas
 		{
 			return value;
 		}
-		if ((pAttacker != null) && pAttacker.isGM() && Config.DEBUG)
+		Double attDiff = attacker.calcStat(element.getAttack(), power) - defender.calcStat(element.getDefence(), 0.);
+		if ((pAttacker != null) && pAttacker.isDebug())
 		{
 			pAttacker.sendMessage("Element: " + element.name());
 			pAttacker.sendMessage("Attack: " + attacker.calcStat(element.getAttack(), power));
 			pAttacker.sendMessage("Defence: " + defender.calcStat(element.getDefence(), 0.));
-			pAttacker.sendMessage("Modifier: " + getElementMod(defender.calcStat(element.getDefence(), 0.), attacker.calcStat(element.getAttack(), power)));
+			pAttacker.sendMessage("Modifier: " + (attDiff < 0 ? "On defense " : "On attack ") + AttributeDamageResistTable.getInstance().getAttributeBonus(attDiff));
 		}
-		return value * getElementMod(defender.calcStat(element.getDefence(), 0.), attacker.calcStat(element.getAttack(), power));
-	}
-	
-	/**
-	 * Method getElementMod.
-	 * @param defense double
-	 * @param attack double
-	 * @return double
-	 */
-	private static double getElementMod(double defense, double attack)
-	{
-		double diff = attack - defense;
-		if (diff <= 0)
+		if(attDiff < 0)
 		{
-			return 1.0;
-		}
-		else if (diff < 50)
-		{
-			return 1.0 + (diff * 0.003948);
-		}
-		else if (diff < 150)
-		{
-			return 1.2;
-		}
-		else if (diff < 300)
-		{
-			return 1.4;
+			return value / AttributeDamageResistTable.getInstance().getAttributeBonus(attDiff);
 		}
 		else
 		{
-			return 1.7;
+			return value * AttributeDamageResistTable.getInstance().getAttributeBonus(attDiff);
 		}
 	}
-	
 	/**
 	 * Method getAttackElement.
 	 * @param attacker Creature
@@ -1212,24 +1232,30 @@ public class Formulas
 	 */
 	public static Element getAttackElement(Creature attacker, Creature target)
 	{
-		double val, max = Double.MIN_VALUE;
+		double val, max = Double.MIN_VALUE, maxElementDefenseVal = Double.MIN_VALUE;
+		Element maxElementDefense = Element.NONE;		
 		Element result = Element.NONE;
 		for (Element e : Element.VALUES)
 		{
 			val = attacker.calcStat(e.getAttack(), 0., null, null);
 			if (val <= 0.)
 			{
+				if(target != null && ((target.calcStat(e.getDefence(), 0., null, null)) > maxElementDefenseVal))
+				{
+					maxElementDefenseVal = target.calcStat(e.getDefence(), 0., null, null); 
+					maxElementDefense = e;
+				}
 				continue;
 			}
-			if (target != null)
+			if(val > max)
 			{
-				val -= target.calcStat(e.getDefence(), 0., null, null);
-			}
-			if (val > max)
-			{
-				result = e;
 				max = val;
-			}
+				result = e;
+			}	
+		}
+		if(result == Element.NONE && target != null)
+		{
+			return maxElementDefense;
 		}
 		return result;
 	}

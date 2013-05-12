@@ -139,11 +139,15 @@ public enum Stats
 	/**
 	 * Field MCRITICAL_RATE.
 	 */
-	MCRITICAL_RATE("mCritRate", 0., Double.POSITIVE_INFINITY, 10.),
+	MCRITICAL_RATE("mCritRate", 0., Double.POSITIVE_INFINITY, 80.),
 	/**
 	 * Field MCRITICAL_DAMAGE.
 	 */
-	MCRITICAL_DAMAGE("mCritDamage", 0., 10., 2.5),
+	MCRITICAL_DAMAGE("mCritDamage", 0., 10., 2),
+	/**
+	 * Field CRITICAL_DAMAGE_STATIC.
+	 */
+	MCRITICAL_DAMAGE_STATIC("mCAtkStatic"),
 	/**
 	 * Field PHYSICAL_DAMAGE.
 	 */
@@ -269,6 +273,22 @@ public enum Stats
 	 */
 	MAGIC_RESIST("magicResist", -200., 300.),
 	/**
+	 * Field AIRJOKE_RESIST.
+	 */
+	AIRJOKE_RESIST("airjokeResist", Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY),
+	/**
+	 * Field MUTATE_RESIST.
+	 */
+	MUTATE_RESIST("mutateResist", Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY),
+	/**c
+	 * Field DISARM_RESIST.
+	 */
+	DISARM_RESIST("disarmResist", Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY),
+	/**
+	 * Field PULL_RESIST.
+	 */
+	PULL_RESIST("pullResist", Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY),
+	/**
 	 * Field KNOCKBACK_RESIST.
 	 */
 	KNOCKBACK_RESIST("knockBackResist", Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY),
@@ -316,6 +336,22 @@ public enum Stats
 	 * Field MAGIC_POWER.
 	 */
 	MAGIC_POWER("magicPower", -200., 200.),
+	/**
+	 * Field TRANSFORM_POWER.
+	 */
+	MUTATE_POWER("mutatePower", -200., 200.),
+	/**
+	 * Field PULL_POWER.
+	 */
+	AIRJOKE_POWER("airjokePower", -200., 200.),
+	/**
+	 * Field PULL_POWER.
+	 */
+	DISARM_POWER("disarmPower", -200., 200.),
+	/**
+	 * Field PULL_POWER.
+	 */
+	PULL_POWER("pullPower", -200., 200.),
 	/**
 	 * Field KNOCKBACK_POWER.
 	 */
@@ -457,6 +493,10 @@ public enum Stats
 	 */
 	REFLECT_AND_BLOCK_MSKILL_DAMAGE_CHANCE("reflectAndBlockMSkillDam", 0., 100.),
 	/**
+	 * Field REFLECT_RESISTANCE_PERCENT.
+	 */
+	REFLECT_RESISTANCE_PERCENT("reflectResist", 0., 100.),
+	/**
 	 * Field REFLECT_DAMAGE_PERCENT.
 	 */
 	REFLECT_DAMAGE_PERCENT("reflectDam", 0., 100.),
@@ -488,10 +528,6 @@ public enum Stats
 	 * Field PSKILL_EVASION.
 	 */
 	PSKILL_EVASION("pSkillEvasion", 0., 100.),
-	/**
-	 * Field MSKILL_EVASION.
-	 */
-	MSKILL_EVASION("mSkillEvasion", 0., 100.),
 	/**
 	 * Field COUNTER_ATTACK.
 	 */

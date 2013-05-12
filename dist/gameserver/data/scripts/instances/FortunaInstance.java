@@ -34,14 +34,12 @@ public class FortunaInstance extends Reflection
 	private ScheduledFuture<?> firstStageGuardSpawn;
 	DeathListener _deathListener;
 	private final ZoneListener _epicZoneListener;
-	boolean _entryLocked;
 	boolean _startLaunched;
 	
 	public FortunaInstance()
 	{
 		_deathListener = new DeathListener();
 		_epicZoneListener = new ZoneListener();
-		_entryLocked = false;
 		_startLaunched = false;
 	}
 	
@@ -76,7 +74,7 @@ public class FortunaInstance extends Reflection
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
-			if (_entryLocked)
+			if (_startLaunched)
 			{
 				return;
 			}
@@ -710,10 +708,10 @@ public class FortunaInstance extends Reflection
 		@Override
 		public void runImpl()
 		{
-			/* 58 */addSpawnWithoutRespawn(23076, new Location(41448, -175608, -7974), 0);
-			/* 59 */addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
-			/* 60 */addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
-			/* 61 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.KonyarSpawn(), 19500L);
+			addSpawnWithoutRespawn(23076, new Location(41448, -175608, -7974), 0);
+			addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
+			addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.KonyarSpawn(), 19500L);
 		}
 	}
 	
@@ -726,10 +724,10 @@ public class FortunaInstance extends Reflection
 		@Override
 		public void runImpl()
 		{
-			/* 46 */addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
-			/* 47 */addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
-			/* 48 */addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
-			/* 49 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FiveStageMainMob8SubStage(), 12500L);
+			addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
+			addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
+			addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FiveStageMainMob8SubStage(), 12500L);
 		}
 	}
 	
@@ -742,10 +740,10 @@ public class FortunaInstance extends Reflection
 		@Override
 		public void runImpl()
 		{
-			/* 34 */addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
-			/* 35 */addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
-			/* 36 */addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
-			/* 37 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FiveStageMainMob7SubStage(), 12500L);
+			addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
+			addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
+			addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FiveStageMainMob7SubStage(), 12500L);
 		}
 	}
 	
@@ -758,10 +756,10 @@ public class FortunaInstance extends Reflection
 		@Override
 		public void runImpl()
 		{
-			/* 22 */addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
-			/* 23 */addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
-			/* 24 */addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
-			/* 25 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FiveStageMainMob6SubStage(), 12500L);
+			addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
+			addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
+			addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FiveStageMainMob6SubStage(), 12500L);
 		}
 	}
 	
@@ -973,14 +971,14 @@ public class FortunaInstance extends Reflection
 		@Override
 		public void runImpl()
 		{
-			/* 57 */for (Player player : getPlayers())
+			for (Player player : getPlayers())
 			{
-				/* 58 */player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_4, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_4, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
-			/* 60 */addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
-			/* 61 */addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
-			/* 62 */addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
-			/* 63 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FourStageMainMob2SubStage(), 12500L);
+			addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
+			addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
+			addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FourStageMainMob2SubStage(), 12500L);
 		}
 	}
 	
@@ -993,11 +991,11 @@ public class FortunaInstance extends Reflection
 		@Override
 		public void runImpl()
 		{
-			/* 45 */for (Player player : getPlayers())
+			for (Player player : getPlayers())
 			{
-				/* 46 */player.sendPacket(new ExShowScreenMessage(NpcString.POGLOTITESVET, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcString.POGLOTITESVET, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
-			/* 48 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FourStageMainMob1SubStage(), 10000L);
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FourStageMainMob1SubStage(), 10000L);
 		}
 	}
 	
@@ -1010,12 +1008,12 @@ public class FortunaInstance extends Reflection
 		@Override
 		public void runImpl()
 		{
-			/* 31 */for (Player player : getPlayers())
+			for (Player player : getPlayers())
 			{
-				/* 32 */player.sendPacket(new ExShowScreenMessage(NpcString.PLAKSA, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcString.PLAKSA, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
-			/* 34 */NpcInstance plaksaraid = addSpawnWithoutRespawn(25837, new Location(42104, -175320, -7974, 15956), 0);
-			/* 35 */plaksaraid.addListener(_deathListener);
+			NpcInstance plaksaraid = addSpawnWithoutRespawn(25837, new Location(42104, -175320, -7974, 15956), 0);
+			plaksaraid.addListener(_deathListener);
 		}
 	}
 	
@@ -1475,7 +1473,6 @@ public class FortunaInstance extends Reflection
 		@Override
 		public void runImpl()
 		{
-			_entryLocked = true;
 			ThreadPoolManager.getInstance().schedule(new FortunaInstance.StartInstance(), 35000L);
 		}
 	}

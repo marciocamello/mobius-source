@@ -1,140 +1,148 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.entity.residence.ClanHall;
 import lineage2.gameserver.model.entity.residence.ResidenceFunction;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
 public class AgitDecoInfo extends L2GameServerPacket
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(AgitDecoInfo.class);
+	private static int[] _buff = { 0, 1, 1, 1, 2, 2, 2, 2, 2, 0, 0, 1, 1, 1, 2, 2, 2, 2, 2 };
+	private static int[] _itCr8 = { 0, 1, 2, 2 };
+
 	/**
-	 * Field _buff.
+	 * В коментах: Первое число = присланое сервером, второе уровень установленый в кланхолле Пример: mp recovery: 0 = 0 значит что уровень 0 прислал
+	 * 0, уровни 5 и 15 прислали 1, уровни 25, 35, 50 прислали 2
+	 * <p/>
+	 * кажись нигде ничего не напутал...
 	 */
-	private static int[] _buff =
-	{
-		0,
-		1,
-		1,
-		1,
-		2,
-		2,
-		2,
-		2,
-		2,
-		0,
-		0,
-		1,
-		1,
-		1,
-		2,
-		2,
-		2,
-		2,
-		2
-	};
-	/**
-	 * Field _itCr8.
-	 */
-	private static int[] _itCr8 =
-	{
-		0,
-		1,
-		2,
-		2
-	};
-	/**
-	 * Field _id.
-	 */
-	private final int _id;
-	/**
-	 * Field hp_recovery.
-	 */
-	private final int hp_recovery;
-	/**
-	 * Field mp_recovery.
-	 */
-	private final int mp_recovery;
-	/**
-	 * Field exp_recovery.
-	 */
-	private final int exp_recovery;
-	/**
-	 * Field teleport.
-	 */
-	private final int teleport;
-	/**
-	 * Field curtains.
-	 */
-	private final int curtains;
-	/**
-	 * Field itemCreate.
-	 */
-	private final int itemCreate;
-	/**
-	 * Field support.
-	 */
-	private final int support;
-	/**
-	 * Field platform.
-	 */
-	private final int platform;
-	
-	/**
-	 * Constructor for AgitDecoInfo.
-	 * @param clanHall ClanHall
-	 */
+	private int _id;
+	private int hp_recovery;
+	private int mp_recovery;
+	private int exp_recovery;
+	private int teleport;
+	private int curtains;
+	private int itemCreate;
+	private int support;
+	private int platform;
+
 	public AgitDecoInfo(ClanHall clanHall)
 	{
 		_id = clanHall.getId();
-		hp_recovery = getHpRecovery(clanHall.isFunctionActive(ResidenceFunction.RESTORE_HP) ? clanHall.getFunction(ResidenceFunction.RESTORE_HP).getLevel() : 0);
-		mp_recovery = getMpRecovery(clanHall.isFunctionActive(ResidenceFunction.RESTORE_MP) ? clanHall.getFunction(ResidenceFunction.RESTORE_MP).getLevel() : 0);
-		exp_recovery = getExpRecovery(clanHall.isFunctionActive(ResidenceFunction.RESTORE_EXP) ? clanHall.getFunction(ResidenceFunction.RESTORE_EXP).getLevel() : 0);
-		teleport = clanHall.isFunctionActive(ResidenceFunction.TELEPORT) ? clanHall.getFunction(ResidenceFunction.TELEPORT).getLevel() : 0;
-		curtains = clanHall.isFunctionActive(ResidenceFunction.CURTAIN) ? clanHall.getFunction(ResidenceFunction.CURTAIN).getLevel() : 0;
-		itemCreate = clanHall.isFunctionActive(ResidenceFunction.ITEM_CREATE) ? _itCr8[clanHall.getFunction(ResidenceFunction.ITEM_CREATE).getLevel()] : 0;
-		support = clanHall.isFunctionActive(ResidenceFunction.SUPPORT) ? _buff[clanHall.getFunction(ResidenceFunction.SUPPORT).getLevel()] : 0;
-		platform = clanHall.isFunctionActive(ResidenceFunction.PLATFORM) ? clanHall.getFunction(ResidenceFunction.PLATFORM).getLevel() : 0;
+
+		hp_recovery = getHpRecovery(clanHall.isFunctionActive(ResidenceFunction.RESTORE_HP) ? clanHall.getFunction(ResidenceFunction.RESTORE_HP).getLevel() : 0);// hp
+		                                                                                                                                                         // recovery,
+		                                                                                                                                                         // 0
+		                                                                                                                                                         // =
+		                                                                                                                                                         // 0,
+		                                                                                                                                                         // 1
+		                                                                                                                                                         // =
+		                                                                                                                                                         // 80,
+		                                                                                                                                                         // 120,
+		                                                                                                                                                         // 180,
+		                                                                                                                                                         // 2
+		                                                                                                                                                         // =
+		                                                                                                                                                         // 240,
+		                                                                                                                                                         // 300
+		mp_recovery = getMpRecovery(clanHall.isFunctionActive(ResidenceFunction.RESTORE_MP) ? clanHall.getFunction(ResidenceFunction.RESTORE_MP).getLevel() : 0);// mp
+		                                                                                                                                                         // recovery,
+		                                                                                                                                                         // 0
+		                                                                                                                                                         // =
+		                                                                                                                                                         // 0,
+		                                                                                                                                                         // 1
+		                                                                                                                                                         // =
+		                                                                                                                                                         // 5,
+		                                                                                                                                                         // 15,
+		                                                                                                                                                         // 2
+		                                                                                                                                                         // =
+		                                                                                                                                                         // 30,
+		                                                                                                                                                         // 40
+		exp_recovery = getExpRecovery(clanHall.isFunctionActive(ResidenceFunction.RESTORE_EXP) ? clanHall.getFunction(ResidenceFunction.RESTORE_EXP).getLevel() : 0);// exp
+		                                                                                                                                                             // recovery,
+		                                                                                                                                                             // 0
+		                                                                                                                                                             // =
+		                                                                                                                                                             // 0,
+		                                                                                                                                                             // 1=
+		                                                                                                                                                             // 15,
+		                                                                                                                                                             // 2
+		                                                                                                                                                             // =
+		                                                                                                                                                             // 25,
+		                                                                                                                                                             // 35,
+		                                                                                                                                                             // 50
+		teleport = clanHall.isFunctionActive(ResidenceFunction.TELEPORT) ? clanHall.getFunction(ResidenceFunction.TELEPORT).getLevel() : 0;// teleport,
+		                                                                                                                                   // 0,
+		                                                                                                                                   // 1,
+		                                                                                                                                   // 2
+		curtains = clanHall.isFunctionActive(ResidenceFunction.CURTAIN) ? clanHall.getFunction(ResidenceFunction.CURTAIN).getLevel() : 0;// curtains,
+		                                                                                                                                 // 0
+		                                                                                                                                 // =
+		                                                                                                                                 // 0,
+		                                                                                                                                 // 1
+		                                                                                                                                 // =
+		                                                                                                                                 // 1,
+		                                                                                                                                 // 2
+		                                                                                                                                 // =
+		                                                                                                                                 // 2
+		itemCreate = clanHall.isFunctionActive(ResidenceFunction.ITEM_CREATE) ? _itCr8[clanHall.getFunction(ResidenceFunction.ITEM_CREATE).getLevel()] : 0;// item
+		                                                                                                                                                   // creation
+		                                                                                                                                                   // 0
+		                                                                                                                                                   // =
+		                                                                                                                                                   // 0,
+		                                                                                                                                                   // 1
+		                                                                                                                                                   // =
+		                                                                                                                                                   // 1,
+		                                                                                                                                                   // 2
+		                                                                                                                                                   // =
+		                                                                                                                                                   // 2,
+		                                                                                                                                                   // 3
+		support = clanHall.isFunctionActive(ResidenceFunction.SUPPORT) ? _buff[clanHall.getFunction(ResidenceFunction.SUPPORT).getLevel()] : 0;// assist
+		                                                                                                                                       // magic,
+		                                                                                                                                       // 0
+		                                                                                                                                       // =
+		                                                                                                                                       // 0,
+		                                                                                                                                       // 1
+		                                                                                                                                       // =
+		                                                                                                                                       // 3,
+		                                                                                                                                       // 2
+		                                                                                                                                       // =
+		                                                                                                                                       // 5,
+		                                                                                                                                       // 7,
+		                                                                                                                                       // 8
+		platform = clanHall.isFunctionActive(ResidenceFunction.PLATFORM) ? clanHall.getFunction(ResidenceFunction.PLATFORM).getLevel() : 0;// front
+		                                                                                                                                   // platform,
+		                                                                                                                                   // 0
+		                                                                                                                                   // =
+		                                                                                                                                   // 0,
+		                                                                                                                                   // 1
+		                                                                                                                                   // =
+		                                                                                                                                   // 1,
+		                                                                                                                                   // 2
+		                                                                                                                                   // =
+		                                                                                                                                   // 2
 	}
-	
+
 	/**
-	 * Method writeImpl.
+	 * Packet send, must be confirmed writeC(0xfd); writeD(0); // clanhall id writeC(0); // FUNC_RESTORE_HP (Fireplace) writeC(0); // FUNC_RESTORE_MP
+	 * (Carpet) writeC(0); // FUNC_RESTORE_MP (Statue) writeC(0); // FUNC_RESTORE_EXP (Chandelier) writeC(0); // FUNC_TELEPORT (Mirror) writeC(0); //
+	 * Crytal writeC(0); // Curtain writeC(0); // FUNC_ITEM_CREATE (Magic Curtain) writeC(0); // FUNC_SUPPORT writeC(0); // FUNC_SUPPORT (Flag)
+	 * writeC(0); // Front Platform writeC(0); // FUNC_ITEM_CREATE writeD(0); writeD(0); writeD(0); writeD(0); writeD(0);
 	 */
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(0xFD);
-		writeD(_id);
+		writeC(0xfd);
+		writeD(_id); // clan hall id, во всяком случае всегда приходил 31.
 		writeC(hp_recovery);
-		writeC(mp_recovery);
-		writeC(mp_recovery);
+		writeC(mp_recovery); // Ковер
+		writeC(mp_recovery); // Статуя
 		writeC(exp_recovery);
 		writeC(teleport);
-		writeC(0);
+		writeC(0); // кристалл? Что за хрень то :)?
 		writeC(curtains);
 		writeC(itemCreate);
 		writeC(support);
-		writeC(support);
+		writeC(support); // Флаг
 		writeC(platform);
 		writeC(itemCreate);
 		writeD(0);
@@ -143,12 +151,7 @@ public class AgitDecoInfo extends L2GameServerPacket
 		writeD(0);
 		writeD(0);
 	}
-	
-	/**
-	 * Method getHpRecovery.
-	 * @param percent int
-	 * @return int
-	 */
+
 	private static int getHpRecovery(int percent)
 	{
 		switch (percent)
@@ -175,12 +178,7 @@ public class AgitDecoInfo extends L2GameServerPacket
 				return 0;
 		}
 	}
-	
-	/**
-	 * Method getMpRecovery.
-	 * @param percent int
-	 * @return int
-	 */
+
 	private static int getMpRecovery(int percent)
 	{
 		switch (percent)
@@ -204,12 +202,7 @@ public class AgitDecoInfo extends L2GameServerPacket
 				return 0;
 		}
 	}
-	
-	/**
-	 * Method getExpRecovery.
-	 * @param percent int
-	 * @return int
-	 */
+
 	private static int getExpRecovery(int percent)
 	{
 		switch (percent)

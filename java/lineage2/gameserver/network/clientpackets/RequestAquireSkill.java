@@ -31,7 +31,7 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.tables.SkillTable;
 
 /**
- * @author Mobius
+ * @author Europa - Updated by Maleiva2013
  * @version $Revision: 1.0 $
  */
 public class RequestAquireSkill extends L2GameClientPacket
@@ -98,20 +98,20 @@ public class RequestAquireSkill extends L2GameClientPacket
 		switch (_type)
 		{
 			case NORMAL:
-				learnSimpleNextLevel(player, skillLearn, skill);
+				learnSimpleNextLevel(player, skillLearn, skill, 0);
 				/*
 				 * if (trainer != null) { trainer.showSkillList(player); }
 				 */
 				break;
 			case TRANSFORMATION:
-				learnSimpleNextLevel(player, skillLearn, skill);
+				learnSimpleNextLevel(player, skillLearn, skill, 0);
 				if (trainer != null)
 				{
 					trainer.showTransformationSkillList(player, AcquireType.TRANSFORMATION);
 				}
 				break;
 			case COLLECTION:
-				learnSimpleNextLevel(player, skillLearn, skill);
+				learnSimpleNextLevel(player, skillLearn, skill, 0);
 				if (trainer != null)
 				{
 					NpcInstance.showCollectionSkillList(player);
@@ -127,7 +127,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 				}
 				break;
 			case FISHING:
-				learnSimpleNextLevel(player, skillLearn, skill);
+				learnSimpleNextLevel(player, skillLearn, skill, 0);
 				if (trainer != null)
 				{
 					NpcInstance.showFishingSkillList(player);
@@ -145,10 +145,22 @@ public class RequestAquireSkill extends L2GameClientPacket
 					player.sendPacket(SystemMsg.THIS_SKILL_CANNOT_BE_LEARNED_WHILE_IN_THE_SUBCLASS_STATE);
 					return;
 				}
-				learnSimpleNextLevel(player, skillLearn, skill);
+				learnSimpleNextLevel(player, skillLearn, skill, 1);
 				if (trainer != null)
 				{
 					trainer.showTransformationSkillList(player, AcquireType.CERTIFICATION);
+				}
+				break;
+			case DUAL_CERTIFICATION:
+				if (!player.getActiveSubClass().isBase())
+				{
+					player.sendPacket(SystemMsg.THIS_SKILL_CANNOT_BE_LEARNED_WHILE_IN_THE_SUBCLASS_STATE);
+					return;
+				}
+				learnSimpleNextLevel(player, skillLearn, skill, 2);
+				if (trainer != null)
+				{
+					trainer.showTransformationSkillList(player, AcquireType.DUAL_CERTIFICATION);
 				}
 				break;
 		}
@@ -160,14 +172,26 @@ public class RequestAquireSkill extends L2GameClientPacket
 	 * @param skillLearn SkillLearn
 	 * @param skill Skill
 	 */
-	private static void learnSimpleNextLevel(Player player, SkillLearn skillLearn, Skill skill)
+	private static void learnSimpleNextLevel(Player player, SkillLearn skillLearn, Skill skill, int typeLearn)
 	{
 		final int skillLevel = player.getSkillLevel(skillLearn.getId(), 0);
 		if (skillLevel != (skillLearn.getLevel() - 1))
 		{
 			return;
 		}
-		learnSimple(player, skillLearn, skill);
+		switch(typeLearn)
+		{
+			case 1:
+				learnCertification(player, skillLearn, skill, false);
+				break;
+			case 2:
+				learnCertification(player, skillLearn, skill, true);
+				break;
+			default:
+				learnSimple(player, skillLearn, skill);
+				break;
+		}
+		
 	}
 	
 	/**
@@ -193,6 +217,32 @@ public class RequestAquireSkill extends L2GameClientPacket
 		player.sendPacket(new SystemMessage2(SystemMsg.YOU_HAVE_EARNED_S1_SKILL).addSkillName(skill.getId(), skill.getLevel()));
 		player.setSp(player.getSp() - skillLearn.getCost());
 		player.addSkill(skill, true);
+		player.sendUserInfo();
+		player.updateStats();
+		player.sendPacket(new SkillList(player, skill.getId()));
+		player.sendPacket(new ExAcquirableSkillListByClass(player));
+		RequestExEnchantSkill.updateSkillShortcuts(player, skill.getId(), skill.getLevel());
+	}
+
+	
+	/**
+	 * Method learnCertification.
+	 * @param player Player
+	 * @param skillLearn SkillLearn
+	 * @param skill Skill
+	 * @param boolean isDual 
+	 */
+	private static void learnCertification(Player player, SkillLearn skillLearn, Skill skill, final boolean isDual)
+	{
+		if (skillLearn.getItemId() > 0)
+		{
+			if (!player.consumeItem(skillLearn.getItemId(), skillLearn.getItemCount()))
+			{
+				return;
+			}
+		}
+		player.sendPacket(new SystemMessage2(SystemMsg.YOU_HAVE_EARNED_S1_SKILL).addSkillName(skill.getId(), skill.getLevel()));
+		player.addCertSkill(skill, isDual);
 		player.sendUserInfo();
 		player.updateStats();
 		player.sendPacket(new SkillList(player, skill.getId()));

@@ -10,7 +10,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="7134.0"/>
+		<set name="baseHpMax" value="4840"/>
 		<set name="baseMpMax" value="2657.0"/>
 		<set name="baseHpReg" value="9.9"/>
 		<set name="baseMpReg" value="3.09"/>
@@ -86,7 +86,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6120.0"/>
+		<set name="baseHpMax" value="4566"/>
 		<set name="baseMpMax" value="2174.0"/>
 		<set name="baseHpReg" value="9.4"/>
 		<set name="baseMpReg" value="3.09"/>
@@ -162,7 +162,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6187.0"/>
+		<set name="baseHpMax" value="4585"/>
 		<set name="baseMpMax" value="2205.0"/>
 		<set name="baseHpReg" value="9.4"/>
 		<set name="baseMpReg" value="3.09"/>
@@ -238,7 +238,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6255.0"/>
+		<set name="baseHpMax" value="4605"/>
 		<set name="baseMpMax" value="2237.0"/>
 		<set name="baseHpReg" value="9.5"/>
 		<set name="baseMpReg" value="3.09"/>
@@ -314,7 +314,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6324.0"/>
+		<set name="baseHpMax" value="4625"/>
 		<set name="baseMpMax" value="2269.0"/>
 		<set name="baseHpReg" value="9.5"/>
 		<set name="baseMpReg" value="3.09"/>
@@ -390,7 +390,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6394.0"/>
+		<set name="baseHpMax" value="4644"/>
 		<set name="baseMpMax" value="2302.0"/>
 		<set name="baseHpReg" value="9.5"/>
 		<set name="baseMpReg" value="3.09"/>
@@ -466,7 +466,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6464.0"/>
+		<set name="baseHpMax" value="4664"/>
 		<set name="baseMpMax" value="2335.0"/>
 		<set name="baseHpReg" value="9.6"/>
 		<set name="baseMpReg" value="3.09"/>
@@ -542,7 +542,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6535.0"/>
+		<set name="baseHpMax" value="4683"/>
 		<set name="baseMpMax" value="2369.0"/>
 		<set name="baseHpReg" value="9.6"/>
 		<set name="baseMpReg" value="3.09"/>
@@ -618,7 +618,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6607.0"/>
+		<set name="baseHpMax" value="4703"/>
 		<set name="baseMpMax" value="2403.0"/>
 		<set name="baseHpReg" value="9.6"/>
 		<set name="baseMpReg" value="3.09"/>
@@ -694,7 +694,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6680.0"/>
+		<set name="baseHpMax" value="4723"/>
 		<set name="baseMpMax" value="2438.0"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="3.09"/>
@@ -770,7 +770,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6754.0"/>
+		<set name="baseHpMax" value="4742"/>
 		<set name="baseMpMax" value="2473.0"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="3.09"/>
@@ -846,7 +846,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6828.0"/>
+		<set name="baseHpMax" value="4762"/>
 		<set name="baseMpMax" value="2509.0"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="3.09"/>
@@ -922,7 +922,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6903.0"/>
+		<set name="baseHpMax" value="4781"/>
 		<set name="baseMpMax" value="2545.0"/>
 		<set name="baseHpReg" value="9.8"/>
 		<set name="baseMpReg" value="3.09"/>
@@ -998,7 +998,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6979.0"/>
+		<set name="baseHpMax" value="4801"/>
 		<set name="baseMpMax" value="2582.0"/>
 		<set name="baseHpReg" value="9.8"/>
 		<set name="baseMpReg" value="3.09"/>
@@ -1074,7 +1074,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="7056.0"/>
+		<set name="baseHpMax" value="4821"/>
 		<set name="baseMpMax" value="2619.0"/>
 		<set name="baseHpReg" value="9.8"/>
 		<set name="baseMpReg" value="3.09"/>
@@ -1150,7 +1150,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="7134.0"/>
+		<set name="baseHpMax" value="4840"/>
 		<set name="baseMpMax" value="2657.0"/>
 		<set name="baseHpReg" value="9.9"/>
 		<set name="baseMpReg" value="7.1"/>
@@ -1226,7 +1226,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="3137.0"/>
+		<set name="baseHpMax" value="3134"/>
 		<set name="baseMpMax" value="1184.0"/>
 		<set name="baseHpReg" value="1.4"/>
 		<set name="baseMpReg" value="0.87"/>
@@ -1302,7 +1302,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="3137.0"/>
+		<set name="baseHpMax" value="3134"/>
 		<set name="baseMpMax" value="1184.0"/>
 		<set name="baseHpReg" value="1.4"/>
 		<set name="baseMpReg" value="0.87"/>
@@ -1378,7 +1378,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="9756.0"/>
+		<set name="baseHpMax" value="6054"/>
 		<set name="baseMpMax" value="2275.0"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -1766,7 +1766,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="14011.0"/>
+		<set name="baseHpMax" value="25682"/>
 		<set name="baseMpMax" value="1398.0"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -1793,7 +1793,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
-		<set name="level" value="80"/>
+		<set name="level" value="85"/>
 		<set name="baseHpRate" value="1.61051"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -1870,7 +1870,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="2880.376"/>
+		<set name="baseHpMax" value="49955"/>
 		<set name="baseMpMax" value="1674.8"/>
 		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpReg" value="3.0"/>
@@ -1897,7 +1897,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
-		<set name="level" value="95"/>
+		<set name="level" value="99"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -1966,7 +1966,7 @@
 		</attributes>
 	</npc>
 	<!--ru name: Милый Мишка-->
-	<npc id="14929" name="Armored Bear" title="">
+	<npc id="14929" name="Cute Bear" title="">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
@@ -1974,7 +1974,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="8826.498422712933"/>
+		<set name="baseHpMax" value="18215"/>
 		<set name="baseMpMax" value="1115.814696485623"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -2019,23 +2019,23 @@
 	</npc>
 	<!--ru name: Саблезубый Кугуар-->
 	<npc id="14930" name="Saber Tooth Cougar" title="">
-		<!--Base character specific-->
+		<!--Tauti Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="5883.91167192429"/>
+		<set name="baseHpMax" value="12142"/>
 		<set name="baseMpMax" value="1115.814696485623"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
-		<set name="basePAtk" value="1154"/>
-		<set name="baseMAtk" value="599"/>
-		<set name="basePDef" value="1260"/>
-		<set name="baseMDef" value="2922"/>
-		<set name="basePAtkSpd" value="447"/>
-		<set name="baseMAtkSpd" value="327"/>
+		<set name="basePAtk" value="2213"/>
+		<set name="baseMAtk" value="1367"/>
+		<set name="basePDef" value="1524"/>
+		<set name="baseMDef" value="4436"/>
+		<set name="basePAtkSpd" value="491"/>
+		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseShldRate" value="0"/>
@@ -2043,11 +2043,11 @@
 		<set name="baseWalkSpd" value="26"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="rndDam" value="30"/>
-		<set name="baseEvasionRate" value="23"/>
-		<set name="baseAccuracyRate" value="29"/>
+		<set name="baseEvasionRate" value="0"/>
+		<set name="baseAccuracyRate" value="0"/>
 		<set name="baseMevasionRate" value="0"/>
 		<set name="baseMaccuracyRate" value="0"/>
-		<set name="baseMCritRate" value="50.0"/>
+		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="19.0"/>
 		<set name="collision_height" value="12.25"/>
 		<!--Npc specific-->
@@ -2078,7 +2078,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="5883.91167192429"/>
+		<set name="baseHpMax" value="12142"/>
 		<set name="baseMpMax" value="1674.1214057507987"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -2128,35 +2128,35 @@
 	<!--ru name: Громовой Ястреб-->
 	<npc id="14932" name="Thunder Hawk" title="">
 	<!--tauti retail fixed by andreagighi-->
-		<set name="collision_height" value="50.0"/>
-		<set name="collision_radius" value="12.0"/>
+		<set name="collision_height" value="36.5"/>
+		<set name="collision_radius" value="10.2"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="7189.88"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="27"/>
-		<set name="baseMpMax" value="1398"/>
-		<set name="baseMpReg" value="17"/>
-		<set name="baseSTR" value="88"/>
-		<set name="baseCON" value="82"/>
-		<set name="baseDEX" value="55"/>
-		<set name="baseINT" value="79"/>
+		<set name="baseHpMax" value="9850"/>
+		<set name="baseHpRate" value="1.61051"/>
+		<set name="baseHpReg" value="9.7"/>
+		<set name="baseMpMax" value="1783.0"/>
+		<set name="baseMpReg" value="9.7"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="78"/>
+		<set name="baseMEN" value="20"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="1387"/>
-		<set name="basePDef" value="1268"/>
+		<set name="basePAtk" value="971"/>
+		<set name="basePDef" value="341"/>
 		<set name="baseCritRate" value="47"/>
-		<set name="basePAtkSpd" value="299"/>
+		<set name="basePAtkSpd" value="520"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="50"/>
-		<set name="baseMAtk" value="608"/>
-		<set name="baseMDef" value="1231"/>
-		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="250"/>
+		<set name="baseMAtkSpd" value="676"/>
 		<attributes>
 			<defence attribute="fire" value="200"/>
 			<defence attribute="water" value="200"/>
@@ -2176,7 +2176,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="3460.0"/>
+		<set name="baseHpMax" value="6342"/>
 		<set name="baseMpMax" value="1783.0"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -2332,7 +2332,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="7189.0"/>
+		<set name="baseHpMax" value="7189"/>
 		<set name="baseMpMax" value="1398.0"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -2384,7 +2384,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="7489.0"/>
+		<set name="baseHpMax" value="12986"/>
 		<set name="baseMpMax" value="1398.0"/>
 		<set name="baseHpReg" value="10.1"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -2436,7 +2436,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="7889.0"/>
+		<set name="baseHpMax" value="13544"/>
 		<set name="baseMpMax" value="1498.0"/>
 		<set name="baseHpReg" value="10.8"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -2488,7 +2488,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="8189.0"/>
+		<set name="baseHpMax" value="7930"/>
 		<set name="baseMpMax" value="1548.0"/>
 		<set name="baseHpReg" value="11.2"/>
 		<set name="baseMpReg" value="10.7"/>
@@ -2534,33 +2534,33 @@
 	<!--ru name: Громовой Ястреб-->
 	<npc id="14940" name="Thunder Hawk" title="">
 		<!--tauti retail fixed by andreagighi-->
-		<set name="collision_height" value="50.0"/>
-		<set name="collision_radius" value="12.0"/>
+		<set name="collision_height" value="36.5"/>
+		<set name="collision_radius" value="10.2"/>
 		<set name="level" value="87"/>
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="7394.02"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="27"/>
-		<set name="baseMpMax" value="1451"/>
-		<set name="baseMpReg" value="17"/>
-		<set name="baseSTR" value="88"/>
-		<set name="baseCON" value="82"/>
-		<set name="baseDEX" value="55"/>
-		<set name="baseINT" value="79"/>
+		<set name="baseHpMax" value="7394"/>
+		<set name="baseHpRate" value="1.61051"/>
+		<set name="baseHpReg" value="9.7"/>
+		<set name="baseMpMax" value="1783.0"/>
+		<set name="baseMpReg" value="9.7"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="78"/>
+		<set name="baseMEN" value="20"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="1488"/>
-		<set name="basePDef" value="1335"/>
-		<set name="baseMAtk" value="662"/>
-		<set name="baseMDef" value="1309"/>
-		<set name="basePAtkSpd" value="299"/>
+		<set name="basePAtk" value="971"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="250"/>
+		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="47"/>
-		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="50"/>
 		<attributes>
@@ -2576,33 +2576,33 @@
 	<!--ru name: Громовой Ястреб-->
 	<npc id="14941" name="Thunder Hawk" title="">
 	<!--tauti retail fixed by andreagighi-->
-		<set name="collision_height" value="50.0"/>
-		<set name="collision_radius" value="12.0"/>
+		<set name="collision_height" value="36.5"/>
+		<set name="collision_radius" value="10.2"/>
 		<set name="level" value="89"/>
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="7605.08"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="27"/>
-		<set name="baseMpMax" value="1505"/>
-		<set name="baseMpReg" value="17"/>
-		<set name="baseSTR" value="88"/>
-		<set name="baseCON" value="82"/>
-		<set name="baseDEX" value="55"/>
-		<set name="baseINT" value="79"/>
+		<set name="baseHpMax" value="10418"/>
+		<set name="baseHpRate" value="1.61051"/>
+		<set name="baseHpReg" value="9.7"/>
+		<set name="baseMpMax" value="1783.0"/>
+		<set name="baseMpReg" value="9.7"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="78"/>
+		<set name="baseMEN" value="20"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="1596"/>
-		<set name="basePDef" value="1406"/>
-		<set name="baseMAtk" value="718"/>
-		<set name="baseMDef" value="1388"/>
-		<set name="basePAtkSpd" value="299"/>
+		<set name="basePAtk" value="971"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="250"/>
+		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="47"/>
-		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="50"/>
 		<attributes>
@@ -2618,33 +2618,33 @@
 	<!--ru name: Громовой Ястреб-->
 	<npc id="14942" name="Thunder Hawk" title="">
 		<!--tauti retail fixed by andreagighi-->
-		<set name="collision_height" value="50.0"/>
-		<set name="collision_radius" value="12.0"/>
+		<set name="collision_height" value="36.5"/>
+		<set name="collision_radius" value="10.2"/>
 		<set name="level" value="91"/>
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="7805.76"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="28"/>
-		<set name="baseMpMax" value="1558"/>
-		<set name="baseMpReg" value="17"/>
-		<set name="baseSTR" value="88"/>
-		<set name="baseCON" value="82"/>
-		<set name="baseDEX" value="55"/>
-		<set name="baseINT" value="79"/>
+		<set name="baseHpMax" value="14105"/>
+		<set name="baseHpRate" value="1.61051"/>
+		<set name="baseHpReg" value="9.7"/>
+		<set name="baseMpMax" value="1883.0"/>
+		<set name="baseMpReg" value="9.7"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="78"/>
+		<set name="baseMEN" value="20"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="1711"/>
-		<set name="basePDef" value="1477"/>
-		<set name="baseMAtk" value="776"/>
-		<set name="baseMDef" value="1478"/>
-		<set name="basePAtkSpd" value="299"/>
+		<set name="basePAtk" value="971"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="250"/>
+		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="47"/>
-		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="50"/>
 		<attributes>
@@ -2666,7 +2666,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="2880.376"/>
+		<set name="baseHpMax" value="3460"/>
 		<set name="baseMpMax" value="1674.8"/>
 		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpReg" value="3.0"/>
@@ -2693,7 +2693,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
-		<set name="level" value="85"/>
+		<set name="level" value="90"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -2718,7 +2718,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="2880.376"/>
+		<set name="baseHpMax" value="14753"/>
 		<set name="baseMpMax" value="1674.8"/>
 		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpReg" value="3.0"/>
@@ -2745,7 +2745,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
-		<set name="level" value="85"/>
+		<set name="level" value="90"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -2770,7 +2770,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="2880.376"/>
+		<set name="baseHpMax" value="15730"/>
 		<set name="baseMpMax" value="1674.8"/>
 		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpReg" value="3.0"/>
@@ -2797,7 +2797,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
-		<set name="level" value="85"/>
+		<set name="level" value="95"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -2822,7 +2822,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="2880.376"/>
+		<set name="baseHpMax" value="16829"/>
 		<set name="baseMpMax" value="1674.8"/>
 		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpReg" value="3.0"/>
@@ -2849,7 +2849,7 @@
 		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
-		<set name="level" value="85"/>
+		<set name="level" value="99"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -2874,7 +2874,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="9046.056782334384"/>
+		<set name="baseHpMax" value="33196"/>
 		<set name="baseMpMax" value="1159.744408945687"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -2926,7 +2926,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="9265.615141955835"/>
+		<set name="baseHpMax" value="21212"/>
 		<set name="baseMpMax" value="1203.6741214057508"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -2978,7 +2978,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="9485.173501577287"/>
+		<set name="baseHpMax" value="19523"/>
 		<set name="baseMpMax" value="1247.6038338658147"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -3030,7 +3030,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="9704.731861198738"/>
+		<set name="baseHpMax" value="27771"/>
 		<set name="baseMpMax" value="1291.5335463258787"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -3082,7 +3082,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="9924.29022082019"/>
+		<set name="baseHpMax" value="25169"/>
 		<set name="baseMpMax" value="1333.8658146964856"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -3134,7 +3134,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="10143.848580441641"/>
+		<set name="baseHpMax" value="39992"/>
 		<set name="baseMpMax" value="1379.3929712460065"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -3186,7 +3186,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="10363.406940063092"/>
+		<set name="baseHpMax" value="26927"/>
 		<set name="baseMpMax" value="1423.3226837060704"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -3231,23 +3231,23 @@
 	</npc>
 	<!--ru name: Саблезубый Кугуар-->
 	<npc id="14954" name="Saber Tooth Cougar" title="">
-		<!--Base character specific-->
+		<!--Tauti Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6030.283911671924"/>
+		<set name="baseHpMax" value="12426"/>
 		<set name="baseMpMax" value="1159.744408945687"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
-		<set name="basePAtk" value="1255"/>
-		<set name="baseMAtk" value="662"/>
-		<set name="basePDef" value="1335"/>
-		<set name="baseMDef" value="3136"/>
-		<set name="basePAtkSpd" value="447"/>
-		<set name="baseMAtkSpd" value="327"/>
+		<set name="basePAtk" value="2374"/>
+		<set name="baseMAtk" value="1494"/>
+		<set name="basePDef" value="1603"/>
+		<set name="baseMDef" value="4715"/>
+		<set name="basePAtkSpd" value="491"/>
+		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseShldRate" value="0"/>
@@ -3255,11 +3255,11 @@
 		<set name="baseWalkSpd" value="26"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="rndDam" value="30"/>
-		<set name="baseEvasionRate" value="26"/>
-		<set name="baseAccuracyRate" value="31"/>
+		<set name="baseEvasionRate" value="0"/>
+		<set name="baseAccuracyRate" value="0"/>
 		<set name="baseMevasionRate" value="0"/>
 		<set name="baseMaccuracyRate" value="0"/>
-		<set name="baseMCritRate" value="50.0"/>
+		<set name="baseMCritRate" value="0.0"/>
 		<set name="collision_radius" value="19.0"/>
 		<set name="collision_height" value="12.25"/>
 		<!--Npc specific-->
@@ -3283,23 +3283,23 @@
 	</npc>
 	<!--ru name: Саблезубый Кугуар-->
 	<npc id="14955" name="Saber Tooth Cougar" title="">
-		<!--Base character specific-->
+		<!--Tauti Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6176.656151419558"/>
+		<set name="baseHpMax" value="12718"/>
 		<set name="baseMpMax" value="1203.6741214057508"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
-		<set name="basePAtk" value="1357"/>
-		<set name="baseMAtk" value="725"/>
-		<set name="basePDef" value="1410"/>
-		<set name="baseMDef" value="3350"/>
-		<set name="basePAtkSpd" value="447"/>
-		<set name="baseMAtkSpd" value="327"/>
+		<set name="basePAtk" value="2547"/>
+		<set name="baseMAtk" value="1619"/>
+		<set name="basePDef" value="1687"/>
+		<set name="baseMDef" value="5007"/>
+		<set name="basePAtkSpd" value="491"/>
+		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseShldRate" value="0"/>
@@ -3307,11 +3307,11 @@
 		<set name="baseWalkSpd" value="26"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="rndDam" value="30"/>
-		<set name="baseEvasionRate" value="29"/>
-		<set name="baseAccuracyRate" value="33"/>
+		<set name="baseEvasionRate" value="0"/>
+		<set name="baseAccuracyRate" value="0"/>
 		<set name="baseMevasionRate" value="0"/>
 		<set name="baseMaccuracyRate" value="0"/>
-		<set name="baseMCritRate" value="50.0"/>
+		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="19.0"/>
 		<set name="collision_height" value="12.25"/>
 		<!--Npc specific-->
@@ -3335,23 +3335,23 @@
 	</npc>
 	<!--ru name: Саблезубый Кугуар-->
 	<npc id="14956" name="Saber Tooth Cougar" title="">
-		<!--Base character specific-->
+		<!--Tauti Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6323.028391167192"/>
+		<set name="baseHpMax" value="13014"/>
 		<set name="baseMpMax" value="1247.6038338658147"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
-		<set name="basePAtk" value="1459"/>
-		<set name="baseMAtk" value="788"/>
-		<set name="basePDef" value="1485"/>
-		<set name="baseMDef" value="3564"/>
-		<set name="basePAtkSpd" value="447"/>
-		<set name="baseMAtkSpd" value="327"/>
+		<set name="basePAtk" value="2734"/>
+		<set name="baseMAtk" value="1755"/>
+		<set name="basePDef" value="1774"/>
+		<set name="baseMDef" value="5321"/>
+		<set name="basePAtkSpd" value="491"/>
+		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseShldRate" value="0"/>
@@ -3359,11 +3359,11 @@
 		<set name="baseWalkSpd" value="26"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="rndDam" value="30"/>
-		<set name="baseEvasionRate" value="32"/>
-		<set name="baseAccuracyRate" value="35"/>
+		<set name="baseEvasionRate" value="0"/>
+		<set name="baseAccuracyRate" value="0"/>
 		<set name="baseMevasionRate" value="0"/>
 		<set name="baseMaccuracyRate" value="0"/>
-		<set name="baseMCritRate" value="50.0"/>
+		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="19.0"/>
 		<set name="collision_height" value="12.25"/>
 		<!--Npc specific-->
@@ -3387,23 +3387,23 @@
 	</npc>
 	<!--ru name: Саблезубый Кугуар-->
 	<npc id="14957" name="Saber Tooth Cougar" title="">
-		<!--Base character specific-->
+		<!--Tauti Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6469.400630914826"/>
+		<set name="baseHpMax" value="13321"/>
 		<set name="baseMpMax" value="1291.5335463258787"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
-		<set name="basePAtk" value="1560"/>
-		<set name="baseMAtk" value="851"/>
-		<set name="basePDef" value="1560"/>
-		<set name="baseMDef" value="3778"/>
-		<set name="basePAtkSpd" value="447"/>
-		<set name="baseMAtkSpd" value="327"/>
+		<set name="basePAtk" value="2933"/>
+		<set name="baseMAtk" value="1906"/>
+		<set name="basePDef" value="1867"/>
+		<set name="baseMDef" value="5653"/>
+		<set name="basePAtkSpd" value="491"/>
+		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseShldRate" value="0"/>
@@ -3411,11 +3411,11 @@
 		<set name="baseWalkSpd" value="26"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="rndDam" value="30"/>
-		<set name="baseEvasionRate" value="35"/>
-		<set name="baseAccuracyRate" value="37"/>
+		<set name="baseEvasionRate" value="0"/>
+		<set name="baseAccuracyRate" value="0"/>
 		<set name="baseMevasionRate" value="0"/>
 		<set name="baseMaccuracyRate" value="0"/>
-		<set name="baseMCritRate" value="50.0"/>
+		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="19.0"/>
 		<set name="collision_height" value="12.25"/>
 		<!--Npc specific-->
@@ -3439,23 +3439,23 @@
 	</npc>
 	<!--ru name: Саблезубый Кугуар-->
 	<npc id="14958" name="Saber Tooth Cougar" title="">
-		<!--Base character specific-->
+		<!--Tauti Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6616.403785488959"/>
+		<set name="baseHpMax" value="16779"/>
 		<set name="baseMpMax" value="1333.8658146964856"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
-		<set name="basePAtk" value="1662"/>
-		<set name="baseMAtk" value="914"/>
-		<set name="basePDef" value="1635"/>
-		<set name="baseMDef" value="3993"/>
-		<set name="basePAtkSpd" value="447"/>
-		<set name="baseMAtkSpd" value="327"/>
+		<set name="basePAtk" value="4194"/>
+		<set name="baseMAtk" value="3674"/>
+		<set name="basePDef" value="2290"/>
+		<set name="baseMDef" value="7003"/>
+		<set name="basePAtkSpd" value="491"/>
+		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseShldRate" value="0"/>
@@ -3463,11 +3463,11 @@
 		<set name="baseWalkSpd" value="26"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="rndDam" value="30"/>
-		<set name="baseEvasionRate" value="36"/>
-		<set name="baseAccuracyRate" value="41"/>
+		<set name="baseEvasionRate" value="0"/>
+		<set name="baseAccuracyRate" value="0"/>
 		<set name="baseMevasionRate" value="0"/>
 		<set name="baseMaccuracyRate" value="0"/>
-		<set name="baseMCritRate" value="50.0"/>
+		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="19.0"/>
 		<set name="collision_height" value="12.25"/>
 		<!--Npc specific-->
@@ -3498,7 +3498,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6762.145110410095"/>
+		<set name="baseHpMax" value="17774"/>
 		<set name="baseMpMax" value="1379.3929712460065"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -3550,7 +3550,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6908.517350157729"/>
+		<set name="baseHpMax" value="17950"/>
 		<set name="baseMpMax" value="1423.3226837060704"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -3602,7 +3602,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6030.283911671924"/>
+		<set name="baseHpMax" value="19845"/>
 		<set name="baseMpMax" value="1739.6166134185303"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -3658,7 +3658,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6176.656151419558"/>
+		<set name="baseHpMax" value="25809"/>
 		<set name="baseMpMax" value="1805.111821086262"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -3714,7 +3714,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6323.028391167192"/>
+		<set name="baseHpMax" value="14846"/>
 		<set name="baseMpMax" value="1870.6070287539935"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -3770,7 +3770,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6469.400630914826"/>
+		<set name="baseHpMax" value="13321"/>
 		<set name="baseMpMax" value="1936.1022364217251"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -3826,7 +3826,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6616.403785488959"/>
+		<set name="baseHpMax" value="16779"/>
 		<set name="baseMpMax" value="2001.5974440894568"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -3882,7 +3882,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6762.145110410095"/>
+		<set name="baseHpMax" value="26809"/>
 		<set name="baseMpMax" value="2067.0926517571884"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -3938,7 +3938,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="6908.517350157729"/>
+		<set name="baseHpMax" value="17950"/>
 		<set name="baseMpMax" value="2132.58785942492"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -4310,7 +4310,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="8590.0"/>
+		<set name="baseHpMax" value="15157"/>
 		<set name="baseMpMax" value="1601.0"/>
 		<set name="baseHpReg" value="11.7"/>
 		<set name="baseMpReg" value="11.5"/>
@@ -4362,7 +4362,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="9201.0"/>
+		<set name="baseHpMax" value="12155"/>
 		<set name="baseMpMax" value="1771.0"/>
 		<set name="baseHpReg" value="13.1"/>
 		<set name="baseMpReg" value="11.5"/>
@@ -4414,7 +4414,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="9357.0"/>
+		<set name="baseHpMax" value="8741"/>
 		<set name="baseMpMax" value="1771.0"/>
 		<set name="baseHpReg" value="13.1"/>
 		<set name="baseMpReg" value="11.5"/>
@@ -4466,7 +4466,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="9500.0"/>
+		<set name="baseHpMax" value="16023"/>
 		<set name="baseMpMax" value="1800.0"/>
 		<set name="baseHpReg" value="13.1"/>
 		<set name="baseMpReg" value="11.5"/>
@@ -4518,7 +4518,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="9710.0"/>
+		<set name="baseHpMax" value="11976"/>
 		<set name="baseMpMax" value="1800.0"/>
 		<set name="baseHpReg" value="13.1"/>
 		<set name="baseMpReg" value="11.5"/>
@@ -4570,7 +4570,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="9910.0"/>
+		<set name="baseHpMax" value="16023"/>
 		<set name="baseMpMax" value="1800.0"/>
 		<set name="baseHpReg" value="13.1"/>
 		<set name="baseMpReg" value="11.5"/>
@@ -4622,7 +4622,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="10510.0"/>
+		<set name="baseHpMax" value="16250"/>
 		<set name="baseMpMax" value="1800.0"/>
 		<set name="baseHpReg" value="13.1"/>
 		<set name="baseMpReg" value="11.5"/>
@@ -4674,7 +4674,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="10710.0"/>
+		<set name="baseHpMax" value="16250"/>
 		<set name="baseMpMax" value="1800.0"/>
 		<set name="baseHpReg" value="13.1"/>
 		<set name="baseMpReg" value="11.5"/>
@@ -4726,7 +4726,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="11810.0"/>
+		<set name="baseHpMax" value="16250"/>
 		<set name="baseMpMax" value="2000.0"/>
 		<set name="baseHpReg" value="14.1"/>
 		<set name="baseMpReg" value="11.5"/>
@@ -4778,7 +4778,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="12203.0"/>
+		<set name="baseHpMax" value="15568"/>
 		<set name="baseMpMax" value="2000.0"/>
 		<set name="baseHpReg" value="14.1"/>
 		<set name="baseMpReg" value="11.5"/>
@@ -4830,7 +4830,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="12503.0"/>
+		<set name="baseHpMax" value="8741"/>
 		<set name="baseMpMax" value="2000.0"/>
 		<set name="baseHpReg" value="14.1"/>
 		<set name="baseMpReg" value="11.5"/>
@@ -4882,7 +4882,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="14003.0"/>
+		<set name="baseHpMax" value="12500"/>
 		<set name="baseMpMax" value="2400.0"/>
 		<set name="baseHpReg" value="14.1"/>
 		<set name="baseMpReg" value="11.5"/>
@@ -4931,28 +4931,28 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="82"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="47"/>
-		<set name="baseDEX" value="55"/>
-		<set name="baseHpMax" value="8042.77"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="28"/>
-		<set name="baseINT" value="79"/>
-		<set name="baseMAtk" value="846"/>
-		<set name="baseMAtkSpd" value="398"/>
-		<set name="baseMDef" value="1568"/>
-		<set name="baseMEN" value="78"/>
-		<set name="baseMpMax" value="1614"/>
-		<set name="baseMpReg" value="17"/>
-		<set name="basePAtk" value="1836"/>
-		<set name="basePAtkSpd" value="299"/>
-		<set name="basePDef" value="1556"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="8042"/>
+		<set name="baseHpRate" value="1.61051"/>
+		<set name="baseHpReg" value="9.7"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="250"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="1883.0"/>
+		<set name="baseMpReg" value="9.7"/>
+		<set name="basePAtk" value="971"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="basePDef" value="341"/>
 		<set name="baseRunSpd" value="180"/>
-		<set name="baseSTR" value="88"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="50.0"/>
-		<set name="collision_radius" value="12.0"/>
+		<set name="collision_height" value="36.5"/>
+		<set name="collision_radius" value="10.2"/>
 		<set name="level" value="93"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
@@ -4974,28 +4974,28 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="82"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="47"/>
-		<set name="baseDEX" value="55"/>
-		<set name="baseHpMax" value="8269.40"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="28"/>
-		<set name="baseINT" value="79"/>
-		<set name="baseMAtk" value="914"/>
-		<set name="baseMAtkSpd" value="398"/>
-		<set name="baseMDef" value="1666"/>
-		<set name="baseMEN" value="78"/>
-		<set name="baseMpMax" value="1669"/>
-		<set name="baseMpReg" value="18"/>
-		<set name="basePAtk" value="1970"/>
-		<set name="basePAtkSpd" value="299"/>
-		<set name="basePDef" value="1635"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="15157"/>
+		<set name="baseHpRate" value="1.61051"/>
+		<set name="baseHpReg" value="9.7"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="250"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="1883.0"/>
+		<set name="baseMpReg" value="9.7"/>
+		<set name="basePAtk" value="971"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="basePDef" value="341"/>
 		<set name="baseRunSpd" value="180"/>
-		<set name="baseSTR" value="88"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="50.0"/>
-		<set name="collision_radius" value="12.0"/>
+		<set name="collision_height" value="36.5"/>
+		<set name="collision_radius" value="10.2"/>
 		<set name="level" value="95"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
@@ -5017,28 +5017,28 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="82"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="55"/>
-		<set name="baseHpMax" value="8502.95"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="28"/>
-		<set name="baseINT" value="79"/>
-		<set name="baseMAtk" value="990"/>
-		<set name="baseMAtkSpd" value="398"/>
-		<set name="baseMDef" value="1769"/>
-		<set name="baseMEN" value="78"/>
-		<set name="baseMpMax" value="1727"/>
-		<set name="baseMpReg" value="18"/>
-		<set name="basePAtk" value="2112"/>
-		<set name="basePAtkSpd" value="299"/>
-		<set name="basePDef" value="1720"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="8502"/>
+		<set name="baseHpRate" value="1.61051"/>
+		<set name="baseHpReg" value="9.7"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="250"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2183.0"/>
+		<set name="baseMpReg" value="9.7"/>
+		<set name="basePAtk" value="971"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="basePDef" value="341"/>
 		<set name="baseRunSpd" value="180"/>
-		<set name="baseSTR" value="88"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="50.0"/>
-		<set name="collision_radius" value="12.0"/>
+		<set name="collision_height" value="36.5"/>
+		<set name="collision_radius" value="10.2"/>
 		<set name="level" value="97"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
@@ -5060,28 +5060,28 @@
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="82"/>
+		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="55"/>
-		<set name="baseHpMax" value="8741.69"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="28"/>
-		<set name="baseINT" value="79"/>
-		<set name="baseMAtk" value="1074"/>
-		<set name="baseMAtkSpd" value="399"/>
-		<set name="baseMDef" value="1879"/>
-		<set name="baseMEN" value="78"/>
-		<set name="baseMpMax" value="1783"/>
-		<set name="baseMpReg" value="18"/>
-		<set name="basePAtk" value="2267"/>
-		<set name="basePAtkSpd" value="299"/>
-		<set name="basePDef" value="1808"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="16250"/>
+		<set name="baseHpRate" value="1.61051"/>
+		<set name="baseHpReg" value="9.7"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="250"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2383.0"/>
+		<set name="baseMpReg" value="9.7"/>
+		<set name="basePAtk" value="971"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="basePDef" value="341"/>
 		<set name="baseRunSpd" value="180"/>
-		<set name="baseSTR" value="88"/>
+		<set name="baseSTR" value="78"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="50.0"/>
-		<set name="collision_radius" value="12.0"/>
+		<set name="collision_height" value="36.5"/>
+		<set name="collision_radius" value="10.2"/>
 		<set name="level" value="99"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
@@ -5106,7 +5106,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="4701.0"/>
+		<set name="baseHpMax" value="8741"/>
 		<set name="baseMpMax" value="2383.0"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -5158,7 +5158,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="4701.0"/>
+		<set name="baseHpMax" value="16250"/>
 		<set name="baseMpMax" value="2383.0"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -5210,7 +5210,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="4701.0"/>
+		<set name="baseHpMax" value="8741"/>
 		<set name="baseMpMax" value="2383.0"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -5262,7 +5262,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="4701.0"/>
+		<set name="baseHpMax" value="12150"/>
 		<set name="baseMpMax" value="2383.0"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -5314,7 +5314,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="4701.0"/>
+		<set name="baseHpMax" value="8741"/>
 		<set name="baseMpMax" value="2383.0"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -5366,7 +5366,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="4701.0"/>
+		<set name="baseHpMax" value="8741"/>
 		<set name="baseMpMax" value="2383.0"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -5418,7 +5418,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="4701.0"/>
+		<set name="baseHpMax" value="16250"/>
 		<set name="baseMpMax" value="2383.0"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>
@@ -5470,7 +5470,7 @@
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseHpMax" value="4701.0"/>
+		<set name="baseHpMax" value="8741"/>
 		<set name="baseMpMax" value="2383.0"/>
 		<set name="baseHpReg" value="9.7"/>
 		<set name="baseMpReg" value="9.7"/>

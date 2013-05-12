@@ -13,6 +13,9 @@
 package lineage2.gameserver.ai;
 
 import static lineage2.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
+
+import java.util.List;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.geodata.GeoEngine;
@@ -287,6 +290,29 @@ public class PlayerAI extends PlayableAI
 		super.Cast(skill, target, forceUse, dontMove);
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
+	@Override
+	protected void onEvtAttacked(Creature attacker, int damage)
+	{
+		Player actor = getActor();
+		if (attacker != null && actor.getSummonList().size() > 0)
+		{
+			List<Summon> servitors = actor.getSummonList().getServitors();
+			for (Summon summon : servitors)
+			{
+				if (!summon.isDead() && summon.isDefendMode() && !summon.isDepressed())
+				{
+					summon.getAI().Attack(attacker, false, false);
+				}
+			}
+		}
+		super.onEvtAttacked(attacker, damage);
+	}
+
 	/**
 	 * Method getActor.
 	 * @return Player

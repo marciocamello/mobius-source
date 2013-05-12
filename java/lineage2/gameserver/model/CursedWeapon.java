@@ -207,7 +207,7 @@ public class CursedWeapon
 		oldItem.setDropTime(0);
 		_item = oldItem;
 		player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_DROPPED_S1).addItemName(oldItem.getItemId()));
-		player.broadcastUserInfo(true);
+		player.broadcastUserInfo();
 		player.broadcastPacket(new Earthquake(player.getLoc(), 30, 12));
 		return true;
 	}
@@ -316,7 +316,7 @@ public class CursedWeapon
 		giveSkill(player);
 		player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
 		player.setCurrentCp(player.getMaxCp());
-		player.broadcastUserInfo(true);
+		player.broadcastUserInfo();
 	}
 	
 	/**

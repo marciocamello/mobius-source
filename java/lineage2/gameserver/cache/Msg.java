@@ -244,7 +244,7 @@ public abstract class Msg
 	public static final SystemMessage CLAN_HAS_DISPERSED = new SystemMessage(SystemMessage.CLAN_HAS_DISPERSED);
 	public static final SystemMessage THE_ALLIANCE_HAS_BEEN_DISSOLVED = new SystemMessage(SystemMessage.THE_ALLIANCE_HAS_BEEN_DISSOLVED);
 	public static final SystemMessage YOU_HAVE_WITHDRAWN_FROM_THE_ALLIANCE = new SystemMessage(SystemMessage.YOU_HAVE_WITHDRAWN_FROM_THE_ALLIANCE);
-	public static final SystemMessage THE_DEATH_PENALTY_HAS_BEEN_LIFTED = new SystemMessage(SystemMessage.THE_DEATH_PENALTY_HAS_BEEN_LIFTED);
+	public static final SystemMessage THE_DEATH_PENALTY_HAS_BEEN_LIFTED = new SystemMessage(SystemMessage.THE_SHILENS_BREATH_HAS_BEEN_LIFTED);
 	public static final SystemMessage YOU_ALREADY_HAVE_A_PET = new SystemMessage(SystemMessage.YOU_ALREADY_HAVE_A_PET);
 	public static final SystemMessage THERE_ARE_NOT_ANY_GMS_THAT_ARE_PROVIDING_CUSTOMER_SERVICE_CURRENTLY = new SystemMessage(SystemMessage.THERE_ARE_NOT_ANY_GMS_THAT_ARE_PROVIDING_CUSTOMER_SERVICE_CURRENTLY);
 	public static final SystemMessage _GM_LIST_ = new SystemMessage(SystemMessage._GM_LIST_);

@@ -128,7 +128,7 @@ public class AdminLevel implements IAdminCommandHandler
 			case admin_setLevel:
 				if (wordList.length < 2)
 				{
-					activeChar.sendMessage("USAGE: //setLevel level");
+					activeChar.sendMessage("USAGE: //setlevel level");
 					return false;
 				}
 				try

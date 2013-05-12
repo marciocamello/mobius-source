@@ -188,7 +188,7 @@ public class BookMarkList
 		}
 		if (Functions.removeItem(owner, 20025, 1) != 1)
 		{
-			// owner.sendPacket(SystemMsg.YOU_CANNOT_BOOKMARK_THIS_LOCATION_BECAUSE_YOU_DO_NOT_HAVE_A_MY_TELEPORT_FLAG);
+			//owner.sendPacket(SystemMsg.YOU_CANNOT_BOOKMARK_THIS_LOCATION_BECAUSE_YOU_DO_NOT_HAVE_A_MY_TELEPORT_FLAG);
 			owner.sendMessage("You cannot teleport because you do not have a My Teleport Spellbook.");
 			return false;
 		}
@@ -401,7 +401,7 @@ public class BookMarkList
 			player.sendPacket(Msg.YOU_CANNOT_SUMMON_DURING_A_TRADE_OR_WHILE_USING_THE_PRIVATE_SHOPS);
 			return false;
 		}
-		if (player.isInBoat() || player.isParalyzed() || player.isStunned() || player.isSleeping())
+		if (player.isInBoat() || player.isParalyzed() || player.isStunned() || player.isSleeping() || player.isAirBinded() || player.isKnockedBack() || player.isKnockedDown() || player.isPulledNow())
 		{
 			player.sendPacket(Msg.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_YOU_ARE_IN_A_FLINT_OR_PARALYZED_STATE);
 			return false;

@@ -29,15 +29,14 @@ public class EffectTargetToMe extends Effect
 	 * Constructor for EffectTargetToMe.
 	 * @param env Env
 	 * @param template EffectTemplate
+	 * 
 	 */
-	
+
 	/**
 	 * Field _z. Field _y. Field _x.
 	 */
 	
-	int _x;
-	int _y;
-	int _z;
+	private int _x,_y,_z;
 	
 	public EffectTargetToMe(Env env, EffectTemplate template)
 	{
@@ -51,32 +50,24 @@ public class EffectTargetToMe extends Effect
 	public void onStart()
 	{
 		super.onStart();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				Location flyLoc = _effected.getFlyLocation(getEffector(), getSkill());
-				_effected.startStunning();
-				_effected.abortCast(true, true);
-				_effected.broadcastPacket(new FlyToLocation(_effected, flyLoc, getSkill().getFlyType(), getSkill().getFlySpeed()));
-				_x = flyLoc.getX();
-				_y = flyLoc.getY();
-				_z = flyLoc.getZ();
-				_effected.setXYZ(flyLoc.getX(), flyLoc.getY(), flyLoc.getZ());
-				_effected.broadcastPacket(new ValidateLocation(_effected));
-			}
-			
-		}, 500L);
-		Location flyLoc = _effected.getFlyLocation(getEffector(), getSkill());
-		_effected.startStunning();
-		_effected.abortCast(true, true);
-		_effected.broadcastPacket(new FlyToLocation(_effected, flyLoc, getSkill().getFlyType(), getSkill().getFlySpeed()));
-		_x = flyLoc.getX();
-		_y = flyLoc.getY();
-		_z = flyLoc.getZ();
-		_effected.setXYZ(flyLoc.getX(), flyLoc.getY(), flyLoc.getZ());
-		_effected.broadcastPacket(new ValidateLocation(_effected));
+		if(!_effected.isPulledNow())
+			_effected.startPulling();
+        ThreadPoolManager.getInstance().schedule(new Runnable()
+        { 
+    	    @Override
+            public void run()
+            {    			
+    			Location flyLoc = _effected.getFlyLocation(getEffector(), getSkill());
+    			_effected.abortCast(true, true);
+    			_effected.broadcastPacket(new FlyToLocation(_effected, flyLoc, getSkill().getFlyType(),getSkill().getFlySpeed()));
+    			_x = flyLoc.getX();
+    			_y = flyLoc.getY();
+    			_z = flyLoc.getZ();
+    			_effected.setXYZ(flyLoc.getX(),flyLoc.getY(),flyLoc.getZ());
+    			_effected.broadcastPacket(new ValidateLocation(_effected));
+            }     
+
+        }, 500L);
 	}
 	
 	/**
@@ -88,13 +79,8 @@ public class EffectTargetToMe extends Effect
 		super.onExit();
 		_effected.setXYZ(_x, _y, _z);
 		_effected.broadcastPacket(new ValidateLocation(_effected));
-		try
-		{
-			_effected.stopStunning();
-		}
-		catch (Throwable ex)
-		{
-		}
+		if(_effected.isPulledNow())
+			_effected.stopPulling();
 	}
 	
 	/**

@@ -478,7 +478,7 @@ public class CursedWeaponsManager
 				_log.info("CursedWeaponsManager[453]: Error! Cursed weapon not found!!!");
 			}
 			player.sendChanges();
-			player.broadcastUserInfo(true);
+			player.broadcastUserInfo();
 		}
 		else if (cw.getItem() != null)
 		{

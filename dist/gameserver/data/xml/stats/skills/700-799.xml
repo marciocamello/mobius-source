@@ -1048,7 +1048,7 @@
 		<set name="trait" val="DERANGEMENT"/>
 		<set name="saveVs" val="MEN"/>
 		<for>
-			<effect count="3" name="Fear" stackOrder="-1" stackType="Fear" time="5" val="0"/>
+			<effect count="15" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0"/>
 		</for>
 	</skill>
 	<skill id="748" levels="1" name="Saber Tooth Tiger Sprint">
@@ -1394,7 +1394,7 @@
 		<set name="trait" val="DERANGEMENT"/>
 		<set name="saveVs" val="MEN"/>
 		<for>
-			<effect count="1" name="Fear" stackOrder="-1" stackType="Fear" time="8" val="0">
+			<effect count="8" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0">
 				<mul order="0x30" stat="pDef" val="0.7"/>
 				<mul order="0x30" stat="mDef" val="0.7"/>
 				<mul order="0x30" stat="runSpd" val="0.7"/>
@@ -1660,7 +1660,7 @@
 		<set name="trait" val="DERANGEMENT"/>
 		<set name="saveVs" val="MEN"/>
 		<for>
-			<effect count="4" name="Fear" stackOrder="-1" stackType="Fear" time="2" val="0">
+			<effect count="8" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0">
 				<mul order="0x50" stat="runSpd" val="0.67"/>
 				<mul order="0x30" stat="pDef" val="0.67"/>
 				<sub order="0x40" stat="rEvas" val="10"/>
@@ -1679,6 +1679,7 @@
 		<set name="activateRate" val="70"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="DEBUFF"/>
+		<set name="trait" val="DISARM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="num_charges" val="2"/>
 		<set name="charge_skill_id" val="8"/>
@@ -1710,8 +1711,9 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="criticalRate" val="10"/>
 		<set name="chargeBoost" val="true"/>
-		<set name="num_charges" val="2"/>
-		<set name="charge_skill_id" val="50"/>
+		<!--<set name="num_charges" val="2"/>-->
+		<!--<set name="charge_skill_id" val="50"/>-->
+		<set name="max_charges" val="2"/> <!-- fixed by Zyth, WunkiaKorps 2013 -->
 		<set name="saveVs" val="CON"/>
 		<cond msgId="113" addName="1">
 			<using kind="Fist, Dual Fist"/>
@@ -2218,6 +2220,7 @@
 		<set name="activateRate" val="#activateRate"/>
 		<set name="target" val="TARGET_AURA"/>
 		<set name="skillRadius" val="200"/>
+		<set name="trait" val="DISARM"/>
 		<set name="skillType" val="DEBUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="saveVs" val="STR"/>

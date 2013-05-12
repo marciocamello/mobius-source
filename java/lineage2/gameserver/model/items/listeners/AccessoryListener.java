@@ -73,7 +73,7 @@ public final class AccessoryListener implements OnEquipListener
 		}
 		if (item.isAccessory() || item.getTemplate().isTalisman() || item.getTemplate().isBracelet())
 		{
-			player.sendUserInfo(true);
+			player.sendUserInfo();
 		}
 		else
 		{
@@ -98,7 +98,7 @@ public final class AccessoryListener implements OnEquipListener
 		Player player = (Player) actor;
 		if (item.isAccessory() || item.getTemplate().isTalisman() || item.getTemplate().isBracelet())
 		{
-			player.sendUserInfo(true);
+			player.sendUserInfo();
 		}
 		else
 		{

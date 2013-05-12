@@ -145,11 +145,11 @@ public class CommissionShopManager
 		ItemInstance item = player.getInventory().getItemByObjectId(itemObjId);
 		if ((item != null) && item.canBeSold(player))
 		{
-			player.sendPacket(new ExResponseCommissionInfo(1));
+			player.sendPacket(new ExResponseCommissionInfo(item));
 		}
 		else
 		{
-			player.sendPacket(new ExResponseCommissionInfo(0));
+			player.sendPacket(new ExResponseCommissionInfo(item));
 		}
 	}
 	

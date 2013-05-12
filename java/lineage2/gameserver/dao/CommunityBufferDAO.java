@@ -28,12 +28,12 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class CommunityBufferDAO
-{
+public class CommunityBufferDAO {
 	/**
 	 * Field _log.
 	 */
-	private static final Logger _log = LoggerFactory.getLogger(CommunityBufferDAO.class);
+	private static final Logger _log = LoggerFactory
+			.getLogger(CommunityBufferDAO.class);
 	/**
 	 * Field _instance.
 	 */
@@ -43,67 +43,63 @@ public class CommunityBufferDAO
 	 */
 	public static final String SELECT_SQL_QUERY = "SELECT * FROM bbs_skillsave";
 	/**
-	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM bbs_skillsave WHERE charId=? AND schameid=?"")
+	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM bbs_skillsave WHERE
+	 * charId=? AND schameid=?"")
 	 */
 	public static final String DELETE_SQL_QUERY = "DELETE FROM bbs_skillsave WHERE charId=? AND schameid=?";
 	/**
-	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO bbs_skillsave (charId,schameid,name,skills) VALUES(?,?,?,?)"")
+	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO bbs_skillsave
+	 * (charId,schameid,name,skills) VALUES(?,?,?,?)"")
 	 */
 	public static final String INSERT_SQL_QUERY = "INSERT INTO bbs_skillsave (charId,schameid,name,skills) VALUES(?,?,?,?)";
-	
+
 	/**
 	 * Method getInstance.
+	 * 
 	 * @return CommunityBufferDAO
 	 */
-	public static CommunityBufferDAO getInstance()
-	{
+	public static CommunityBufferDAO getInstance() {
 		return _instance;
 	}
-	
+
 	/**
 	 * Method select.
 	 */
-	public void select()
-	{
+	public void select() {
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
-		try
-		{
+		try {
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_SQL_QUERY);
 			rset = statement.executeQuery();
-			while (rset.next())
-			{
+			while (rset.next()) {
 				SBufferScheme scheme = new SBufferScheme();
 				scheme.id = rset.getInt("schameid");
 				scheme.obj_id = rset.getInt("charId");
 				scheme.name = rset.getString("name");
-				scheme.skills_id = ManageBbsBuffer.StringToInt(rset.getString("skills"));
+				scheme.skills_id = ManageBbsBuffer.StringToInt(rset
+						.getString("skills"));
 				ManageBbsBuffer.getInstance();
 				ManageBbsBuffer.getSchemeList().add(scheme);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.error("CommunityBufferDAO.select():" + e, e);
-		}
-		finally
-		{
+		} finally {
 			DbUtils.closeQuietly(con, statement, rset);
 		}
 	}
-	
+
 	/**
 	 * Method delete.
-	 * @param scheme SBufferScheme
+	 * 
+	 * @param scheme
+	 *            SBufferScheme
 	 */
-	public void delete(SBufferScheme scheme)
-	{
+	public void delete(SBufferScheme scheme) {
 		Connection con = null;
 		PreparedStatement statement = null;
-		try
-		{
+		try {
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(DELETE_SQL_QUERY);
 			statement.setInt(1, scheme.obj_id);
@@ -111,19 +107,17 @@ public class CommunityBufferDAO
 			statement.execute();
 			ManageBbsBuffer.getInstance();
 			ManageBbsBuffer.getSchemeList().remove(scheme);
-		}
-		catch (Exception e)
-		{
-		}
-		finally
-		{
+		} catch (Exception e) {
+		} finally {
 			DbUtils.closeQuietly(con, statement);
 		}
 	}
-	
+
 	/**
 	 * Method insert.
-	 * @param scheme SBufferScheme
+	 * 
+	 * @param scheme
+	 *            SBufferScheme
 	 */
 	public void insert(SBufferScheme scheme)
 	{
@@ -133,6 +127,7 @@ public class CommunityBufferDAO
 		String buff_list = ManageBbsBuffer.IntToString(scheme.skills_id);
 		try
 		{
+			if(buff_list != "" || !buff_list.isEmpty()){
 			con = DatabaseFactory.getInstance().getConnection();
 			stmt = con.prepareStatement(INSERT_SQL_QUERY);
 			stmt.setInt(1, scheme.obj_id);
@@ -142,6 +137,8 @@ public class CommunityBufferDAO
 			stmt.execute();
 			ManageBbsBuffer.getInstance();
 			ManageBbsBuffer.getSchemeList().add(scheme);
+			}
+			
 		}
 		catch (Exception e)
 		{

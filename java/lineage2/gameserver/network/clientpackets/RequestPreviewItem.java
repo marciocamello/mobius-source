@@ -222,7 +222,7 @@ public class RequestPreviewItem extends L2GameClientPacket
 		public void runImpl()
 		{
 			_activeChar.sendPacket(Msg.TRYING_ON_MODE_HAS_ENDED);
-			_activeChar.sendUserInfo(true);
+			_activeChar.sendUserInfo();
 		}
 	}
 }

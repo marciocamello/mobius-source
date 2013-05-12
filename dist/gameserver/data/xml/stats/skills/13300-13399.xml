@@ -93,13 +93,13 @@
 		</for>
 	</skill>
 	<skill id="13312" levels="1" name="Robe Upper Special Ability">
-    <!-- Magic evasion by + 3 and resistance to mental attacks by + 9. -->
+	<!-- Magic evasion by + 3 and resistance to mental attacks by + 9. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="magicLevel" val="1"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>				
-				<add order="0x40" stat="mSkillEvasion" val="3"/>		
+			<add order="0x40" stat="mEvas" val="3"/>		
 		</for>
 	</skill>
 	<skill id="13313" levels="1" name="Blessed Antharas Earring">
@@ -125,6 +125,20 @@
 			<add order="0x10" stat="MEN" val="3"/>			
 		</for>
 	</skill>
+    	<skill id="13314" levels="1" name="Blessed Antharas Earring Stun Cancel">
+    	<!-- Cancels Stun and gives Stun resist. -->
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="NEGATE_EFFECTS"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="negateEffects" val="Stun"/>
+		<set name="castOverStun" val="true"/>
+		<for>
+		    <effect name="Buff" stackOrder="1" stackType="AntharasStunRes" time="300">
+		    	<add order="0x40" stat="stunResist" val="100"/>
+		    </effect>
+		</for>
+   	 </skill>
 	<skill id="13315" levels="1" name="Blessed Valakas Necklace">
     <!-- Increases Resistance to fire/darkness attacks, Resistance to sleep attack, sleep attack bonus, Max HP/ P. Atk./ M. Atk. and magic damage critical rate. Decreases skill re-use time. Redirects some of the physical damage received back upon the enemy. STR+3, INT+3 -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00"/>
@@ -149,32 +163,27 @@
 		</for>
 	</skill>
 	<skill id="13316" levels="1" name="Blessed Valakas Necklace">
-    <!-- Cancels hold and receives hold resistance. -->
-        <set name="magicType" val="MAGIC"/>
-        <set name="icon" val="icon.skill0323"/>
-        <set name="reuseDelay" val="60000"/>
-        <set name="magicLevel" val="85"/>
-        <set name="hitTime" val="3000"/>
-        <set name="hitCancelTime" val="500"/>
-        <set name="mpConsume1" val="398"/>
-        <set name="itemConsumeId" val="17371"/>
-        <set name="itemConsumeCount" val="1"/>
-        <set name="target" val="TARGET_SELF"/>
-        <set name="skillType" val="SUMMON_ITEM"/>
-        <set name="operateType" val="OP_ACTIVE"/>
-        <set name="SummonItemId" val="6646"/>
-        <set name="SummonMinCount" val="1900"/>
-        <set name="SummonMaxCount" val="1900"/>
-    </skill>
+   	<!-- Cancels hold and receives hold resistance. -->
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="NEGATE_EFFECTS"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="negateEffects" val="Root"/>
+		<for>
+		    <effect name="Buff" stackOrder="1" stackType="ValakasHoldRes" time="300">
+		    	<add order="0x40" stat="rootResist" val="100"/>
+		    </effect>
+		</for>
+   	</skill>
 	<skill id="13317" levels="1" name="Earth Wyrm Heart Ring">
-    <!-- Increases resistance to wind/water attacks, resistance to physical/mental/poison attacks, resistance to knock back/knock down/pulling, poison attack bonus, Critical Damage, Accuracy/Atk. Spd./Casting Spd./and MP recovery speed. -->
+    	<!-- Increases resistance to wind/water attacks, resistance to physical/mental/poison attacks, resistance to knock back/knock down/pulling, poison attack bonus, Critical Damage, Accuracy/Atk. Spd./Casting Spd./and MP recovery speed. -->
 		<set name="magicLvl" val="85"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="target" val="TARGET_SELF"/>
 		<for>
-			<sub order="0x40" stat="knockBackResist" val="10"/>
-			<sub order="0x40" stat="knockDownResist" val="10"/>
+			<add order="0x40" stat="knockBackResist" val="20"/>
+			<add order="0x40" stat="knockDownResist" val="20"/>
 			<add order="0x40" stat="magicResist" val="2"/>
 			<add order="0x40" stat="physResist" val="2"/>
 			<add order="0x40" stat="poisonPower" val="50"/>
@@ -222,7 +231,6 @@
 		<set name="target" val="TARGET_SELF"/>
 		<for>
 			<effect count="1" name="NegateEffects" stackType="Poison" time="0" val="0"/>
-			<effect count="1" name="NegateEffects" stackType="Bleed" time="0" val="0"/>
 		</for>
 	</skill>
     <skill id="13320" levels="1" name="Istina's Ring">

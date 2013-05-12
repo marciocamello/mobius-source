@@ -2,7 +2,7 @@
 <list>
 	<instance id="178" name="Labyrinth of Belis" maxChannels="50" collapseIfEmpty="10" timelimit="180" dispelBuffs="false" respawn="60">
 		<collapse on-party-dismiss="true" timer="60"/>
-		<level min="18" max="25"/>
+		<level min="18" max="99"/>
 		<return loc="-111816 231880 -3192"/>
 		<teleport loc="-119934 211153 -8584"/>
 		<remove itemId="0" count="0" necessary="false"/>

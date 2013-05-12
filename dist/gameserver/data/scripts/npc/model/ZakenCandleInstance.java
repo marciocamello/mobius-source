@@ -15,6 +15,7 @@ package npc.model;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.skills.AbnormalEffect;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
 /**
@@ -79,12 +80,16 @@ public final class ZakenCandleInstance extends NpcInstance
 			if (npc.getNpcId() == Anchor)
 			{
 				setRHandId(BOW_Weapon);
+				startAbnormalEffect(AbnormalEffect.INVULNERABLE);
+				player.sendMessage("Here...");
 				broadcastCharInfo();
 				used = true;
 				return;
 			}
 		}
 		setRHandId(THS_Weapon);
+		startAbnormalEffect(AbnormalEffect.REDCIRCLE);
+		player.sendMessage("Not Here...");
 		broadcastCharInfo();
 		used = true;
 	}

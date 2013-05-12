@@ -1,45 +1,26 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package lineage2.gameserver.network.serverpackets;
 
 /**
- * @author Mobius
- * @version $Revision: 1.0 $
+ * Asks the player to join a Command Channel
  */
 public class ExAskJoinMPCC extends L2GameServerPacket
 {
+	private String _requestorName;
+
 	/**
-	 * Field _requestorName.
-	 */
-	private final String _requestorName;
-	
-	/**
-	 * Constructor for ExAskJoinMPCC.
-	 * @param requestorName String
+	 * @param String
+	 *            Name of CCLeader
 	 */
 	public ExAskJoinMPCC(String requestorName)
 	{
 		_requestorName = requestorName;
 	}
-	
-	/**
-	 * Method writeImpl.
-	 */
+
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0x1A);
-		writeS(_requestorName);
+		writeEx(0x1a);
+		writeS(_requestorName); // лидер CC
 		writeD(0x00);
 	}
 }

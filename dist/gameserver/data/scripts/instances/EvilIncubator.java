@@ -1,15 +1,3 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package instances;
 
 import java.util.List;
@@ -44,18 +32,10 @@ public class EvilIncubator extends Reflection
 	private static final int VAN_INFANTRY = 33415;
 	private static final int VAL_DEFENSE_WALL = 33416;
 	private static final int ADOLPH_NPC = 33170;
-	private static final int[] MONSTERS =
-	{
-		27430,
-		27431,
-		27432,
-		27433,
-		27434
-	};
+	private static final int[] MONSTERS = { 27430, 27431, 27432, 27433, 27434 };
 	private static final int DEATH_WOUND = 27429;
 	private static final Location START_BATTLE_LOCATION = new Location(56167, -175615, -7944, 49653);
-	private static final Location[] MONSTERS_WAVE_COORDS =
-	{
+	private static final Location[] MONSTERS_WAVE_COORDS = { 
 		new Location(56205, -177550, -7944, 63),
 		new Location(56095, -177550, -7944, 233),
 		new Location(56245, -177550, -7944, 255),
@@ -69,33 +49,32 @@ public class EvilIncubator extends Reflection
 		new Location(56595, -176695, -7944, 269),
 		new Location(56642, -176560, -7952, 263),
 		new Location(56023, -177087, -7952, 16026),
-		new Location(56212, -176074, -7944, 37403)
-	};
-	
-	List<NpcInstance> ADOLPH;
+		new Location(56212, -176074, -7944, 37403) };
+
+	private List<NpcInstance> ADOLPH;
 	private int GUARD1 = 0;
 	private int GUARD2 = 0;
-	boolean sayLocker = false;
-	int firstWaveMonsters = 0;
-	int secondWaveMonsters = 0;
-	int mobKilled = 0;
-	int instanceStage = 0;
-	private final QuestState state;
-	
-	DeathListener deathListener = new DeathListener();
-	
+	private boolean sayLocker = false;
+	private int firstWaveMonsters = 0;
+	private int secondWaveMonsters = 0;
+	private int mobKilled = 0;
+	private int instanceStage = 0;
+	private QuestState state;
+
+	private DeathListener deathListener = new DeathListener();
+
 	public EvilIncubator(QuestState state)
 	{
 		super();
 		this.state = state;
 	}
-	
+
 	@Override
 	protected void onCreate()
 	{
 		super.onCreate();
 	}
-	
+
 	@Override
 	public void onPlayerEnter(Player player)
 	{
@@ -111,7 +90,7 @@ public class EvilIncubator extends Reflection
 		ThreadPoolManager.getInstance().schedule(new SayChatTask(NpcString.WHAT_DO_I_FEEL_WHEN_I_KILL_SHILENS_MONSTERS_RECOIL, ADOLPH_HELPERS3), 3000);
 		ThreadPoolManager.getInstance().schedule(new SayChatTask(NpcString.MY_SUMMONS_ARE_NOT_AFRAID_OF_SHILENS_MONSTER, ADOLPH_HELPERS4), 9000);
 	}
-	
+
 	public void startFirstWave(Player player)
 	{
 		sayLocker = false;
@@ -120,10 +99,8 @@ public class EvilIncubator extends Reflection
 		addSpawnWithoutRespawn(GUARD1, new Location(56367, -175707, -7981, 53248), 0);
 		addSpawnWithoutRespawn(GUARD2, new Location(55982, -175707, -7981, 53248), 0);
 		List<NpcInstance> npc = getAllByNpcId(ADOLPH_NPC, true);
-		if (!npc.isEmpty())
-		{
+		if(!npc.isEmpty())
 			npc.get(0).deleteMe();
-		}
 		addSpawnWithoutRespawn(ADOLPH_NPC, START_BATTLE_LOCATION, 0);
 		ADOLPH = getAllByNpcId(ADOLPH_NPC, true);
 		addSpawnWithoutRespawn(VAN_ARCHER, new Location(55982, -176068, -7981, 53248), 0);
@@ -141,34 +118,28 @@ public class EvilIncubator extends Reflection
 		ThreadPoolManager.getInstance().schedule(new SayChatTask(NpcString.I_M_ON_FIRE_NO_WAIT_THAT_WOULD_BE_YOU, ADOLPH_HELPERS4), 7000);
 		ThreadPoolManager.getInstance().schedule(new FirstWaveTask(), 10000);
 	}
-	
+
 	public void startSecondWave()
 	{
 		instanceStage = 2;
 		ThreadPoolManager.getInstance().schedule(new SecondWaveTask(), 3000);
 	}
-	
+
 	public void setHelperId(int npcId)
 	{
-		if (GUARD1 == 0)
-		{
+		if(GUARD1 == 0)
 			GUARD1 = npcId;
-		}
 		else
-		{
 			GUARD2 = npcId;
-		}
 	}
-	
+
 	public void deleteSelectedHelper(int npcId)
 	{
 		List<NpcInstance> npc = getAllByNpcId(npcId, true);
-		if (!npc.isEmpty())
-		{
+		if(!npc.isEmpty())
 			npc.get(0).deleteMe();
-		}
 	}
-	
+
 	public void deleteNotSelectedHelper()
 	{
 		sayLocker = true;
@@ -176,155 +147,127 @@ public class EvilIncubator extends Reflection
 		npc.addAll(getAllByNpcId(ADOLPH_HELPERS2, true));
 		npc.addAll(getAllByNpcId(ADOLPH_HELPERS3, true));
 		npc.addAll(getAllByNpcId(ADOLPH_HELPERS4, true));
-		if (!npc.isEmpty())
+		if(!npc.isEmpty())
 		{
 			npc.get(0).deleteMe();
 			npc.get(1).deleteMe();
 		}
 	}
-	
+
 	public void sendInstanceState(int state)
 	{
-		if (state == 1)
+		if(state == 1)
 		{
 			ADOLPH.get(0).broadcastPacket(new NpcSay(ADOLPH.get(0), ChatType.NPC_SAY, NpcString.CREATURES_HAVE_STOPPED_ATTACKING_USE_THIS_TIME_TO_REST_AND_RECOVER));
-			for (Player player : getPlayers())
-			{
+			for(Player player : getPlayers())
 				player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_HAVE_STOPPER_THEIR_ATTACK_REST_AND_THEN_SPEEAK_WITH_ADOLPH, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
-			}
 		}
-		if (state == 2)
+		if(state == 2)
 		{
 			ADOLPH.get(0).broadcastPacket(new NpcSay(ADOLPH.get(0), ChatType.NPC_SAY, NpcString.THE_CRY_OF_FATE_PENDANT_WILL_BE_HELPFUL_TO_YOU_PLEASE_EQUIP_IT_AND_BRING_OUT_THE_POWER_OF_THE_PENDANT_TO_PREPARE_FOR_THE_NEXT_FIGHT));
 		}
-		if (state == 3)
+		if(state == 3)
 		{
-			for (Player player : getPlayers())
-			{
+			for(Player player : getPlayers())
 				player.sendPacket(new ExShowScreenMessage(NpcString.AGH_HUMANS_HA_IT_DOES_NOT_MATTER_YOUR_WORLD_WILL_END_ANYWAYS, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
-			}
 		}
 	}
-	
+
 	private void invokeDeathListener()
 	{
-		for (NpcInstance npc : getNpcs())
-		{
+		for(NpcInstance npc : getNpcs())
 			npc.addListener(deathListener);
-		}
 	}
-	
-	void spawnMonsters()
+
+	private void spawnMonsters()
 	{
 		Location coords = MONSTERS_WAVE_COORDS[Rnd.get(MONSTERS_WAVE_COORDS.length)];
-		for (int element : MONSTERS)
+		for(int i = 0;i < MONSTERS.length;i++)
 		{
-			addSpawnWithoutRespawn(element, coords, 50);
-			if (secondWaveMonsters == 9)
-			{
+			addSpawnWithoutRespawn(MONSTERS[i], coords, 50);
+			if(secondWaveMonsters == 9)
 				addSpawnWithoutRespawn(DEATH_WOUND, coords, 50);
-			}
 			invokeDeathListener();
 		}
-		if (secondWaveMonsters == 9)
+		if(secondWaveMonsters == 9)
 		{
 			addSpawnWithoutRespawn(DEATH_WOUND, coords, 50);
 			invokeDeathListener();
 		}
 	}
-	
-	void setQuestCond(int cond)
+
+	private void setQuestCond(int cond)
 	{
 		state.setCond(cond);
 		state.playSound(Quest.SOUND_MIDDLE);
 	}
-	
+
 	public int getInstanceStage()
 	{
 		return instanceStage;
 	}
-	
+
 	private class SayChatTask extends RunnableImpl
 	{
-		private final NpcString msg;
-		private final int npcId;
-		
+		private NpcString msg;
+		private int npcId;
+
 		public SayChatTask(NpcString msg, int npcId)
 		{
 			this.msg = msg;
 			this.npcId = npcId;
 		}
-		
+
 		@Override
-		public void runImpl()
+		public void runImpl() throws Exception
 		{
 			List<NpcInstance> npc = getAllByNpcId(npcId, true);
-			if (!npc.isEmpty())
-			{
+			if(!npc.isEmpty())
 				npc.get(0).broadcastPacket(new NpcSay(npc.get(0), ChatType.NPC_SAY, msg));
-			}
-			if (!sayLocker && !npc.isEmpty())
-			{
+			if(!sayLocker && !npc.isEmpty())
 				ThreadPoolManager.getInstance().schedule(this, 8000);
-			}
 		}
 	}
-	
+
 	private class FirstWaveTask extends RunnableImpl
 	{
-		public FirstWaveTask()
-		{
-			// TODO Auto-generated constructor stub
-		}
-		
 		@Override
-		public void runImpl()
+		public void runImpl() throws Exception
 		{
 			firstWaveMonsters++;
-			if (firstWaveMonsters != 6)
+			if(firstWaveMonsters != 6)
 			{
-				for (Player player : getPlayers())
-				{
+				for(Player player : getPlayers())
 					player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
-				}
 				spawnMonsters();
 				ThreadPoolManager.getInstance().schedule(this, 40000);
 			}
 			else
 			{
-				for (Player player : getPlayers())
-				{
+				for(Player player : getPlayers())
 					player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
-				}
-				
+					
 				spawnMonsters();
 			}
 		}
 	}
-	
+
 	private class SecondWaveTask extends RunnableImpl
 	{
-		public SecondWaveTask()
-		{
-			// TODO Auto-generated constructor stub
-		}
-		
 		@Override
-		public void runImpl()
+		public void runImpl() throws Exception
 		{
 			secondWaveMonsters++;
-			if (secondWaveMonsters != 9)
+			if(secondWaveMonsters != 9)
 			{
-				for (Player player : getPlayers())
-				{
+				for(Player player : getPlayers())
 					player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
-				}
 				spawnMonsters();
 				ThreadPoolManager.getInstance().schedule(this, 30000);
 			}
 			else
 			{
-				for (Player player : getPlayers())
+				for(Player player : getPlayers())
 				{
 					player.sendPacket(new ExShowScreenMessage(NpcString.I_DEATH_WOUND_CHAMPION_OF_SHILEN_SHALL_END_YOUR_WORLD, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 					player.broadcastPacket(new Earthquake(ADOLPH.get(0).getLoc(), 50, 4));
@@ -333,31 +276,24 @@ public class EvilIncubator extends Reflection
 			}
 		}
 	}
-	
+
 	private class DeathListener implements OnDeathListener
 	{
-		public DeathListener()
-		{
-			// TODO Auto-generated constructor stub
-		}
-		
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
-			if (!self.isNpc())
-			{
+			if(!self.isNpc())
 				return;
-			}
-			if ((self.getNpcId() == 27430) || (self.getNpcId() == 27431) || (self.getNpcId() == 27432) || (self.getNpcId() == 27433) || (self.getNpcId() == 27434) || (self.getNpcId() == 27429))
+			if(self.getNpcId() == 27430 || self.getNpcId() == 27431 || self.getNpcId() == 27432 || self.getNpcId() == 27433 || self.getNpcId() == 27434 || self.getNpcId() == 27429)
 			{
 				mobKilled++;
-				if ((mobKilled >= 30) && (instanceStage == 1))
+				if(mobKilled >= 30 && instanceStage == 1)
 				{
 					mobKilled = 0;
 					setQuestCond(9);
 					sendInstanceState(1);
 				}
-				if ((mobKilled >= 46) && (instanceStage == 2))
+				if(mobKilled >= 46 && instanceStage == 2)
 				{
 					mobKilled = 0;
 					deathListener = null;

@@ -254,8 +254,12 @@
 		<table name="#Tab-mReuse">1 1 0.01 0.01</table>
 		<set name="icon" val="icon.skill7029"/>
 		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="CONT"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="magicLevel" val="85"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isSaveable" val="false"/>
 		<set name="cancelable" val="false"/>
@@ -266,6 +270,7 @@
 				<mul order="0x30" stat="mAtkSpd" val="#Tab-mAtkSpd"/>
 				<mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
 				<mul order="0x30" stat="mReuse" val="#Tab-mReuse"/>
+				<mul order="0x30" stat="pReuse" val="#Tab-mReuse"/>
 			</effect>
 		</for>
 	</skill>

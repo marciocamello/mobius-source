@@ -488,6 +488,7 @@ public class OnActionShift extends Functions
 		dialog = dialog.replaceFirst("%mdef%", String.valueOf(door.getMDef(null, null)));
 		dialog = dialog.replaceFirst("%type%", door.getDoorType().name());
 		dialog = dialog.replaceFirst("%upgradeHP%", String.valueOf(door.getUpgradeHp()));
+		dialog = dialog.replaceFirst("%geoIndex%", String.valueOf(door.getGeoIndex()));
 		StringBuilder b = new StringBuilder("");
 		for (GlobalEvent e : door.getEvents())
 		{

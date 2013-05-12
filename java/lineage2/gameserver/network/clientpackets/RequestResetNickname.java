@@ -42,7 +42,7 @@ public class RequestResetNickname extends L2GameClientPacket
 		if (activeChar.getTitleColor() != Player.DEFAULT_TITLE_COLOR)
 		{
 			activeChar.setTitleColor(Player.DEFAULT_TITLE_COLOR);
-			activeChar.broadcastUserInfo(true);
+			activeChar.broadcastUserInfo();
 		}
 	}
 }

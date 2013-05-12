@@ -1,30 +1,17 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package npc.model;
 
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.instances.DoorInstance;
-import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.ExSendUIEvent;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.model.instances.*;
 import lineage2.gameserver.templates.npc.NpcTemplate;
+import lineage2.gameserver.network.serverpackets.*;
+import lineage2.gameserver.network.serverpackets.components.*;
 import lineage2.gameserver.utils.ReflectionUtils;
 
 /**
  * @author Awakeninger
  */
-public final class AltarGatekeeperInstance extends NpcInstance
-{
+
+public final class AltarGatekeeperInstance extends NpcInstance {
 	/**
 	 * 
 	 */
@@ -45,34 +32,27 @@ public final class AltarGatekeeperInstance extends NpcInstance
 	DoorInstance _door6 = ReflectionUtils.getDoor(DoorEnter6);
 	DoorInstance _door7 = ReflectionUtils.getDoor(DoorEnter7);
 	
-	public AltarGatekeeperInstance(int objectId, NpcTemplate template)
-	{
-		super(objectId, template);
-	}
-	
-	@Override
-	public void onBypassFeedback(Player player, String command)
-	{
-		if (!canBypassCheck(player, this))
-		{
-			return;
-		}
-		
-		if (command.startsWith("start"))
-		{
-			_savedTime = System.currentTimeMillis();
-			player.sendPacket(new ExSendUIEvent(player, 0, 1, (int) (System.currentTimeMillis() - _savedTime) / 1000, 0, NpcString.ELAPSED_TIME));
-			_door1.openMe();
-			_door2.openMe();
-			_door3.openMe();
-			_door4.openMe();
-			_door5.openMe();
-			_door6.openMe();
-			_door7.openMe();
-		}
+    public AltarGatekeeperInstance(int objectId, NpcTemplate template) {
+        super(objectId, template);
+    }
+
+    @Override
+    public void onBypassFeedback(Player player, String command) {
+        if (!canBypassCheck(player, this))
+            return;
+			
+		if(command.startsWith("start"))
+		{		_savedTime = System.currentTimeMillis();
+				player.sendPacket(new ExSendUIEvent(player, 0, 1, (int) (System.currentTimeMillis() - _savedTime) / 1000, 0, NpcString.ELAPSED_TIME));
+				_door1.openMe();
+				_door2.openMe();
+				_door3.openMe();
+				_door4.openMe();
+				_door5.openMe();
+				_door6.openMe();
+				_door7.openMe();
+		} 
 		else
-		{
-			super.onBypassFeedback(player, command);
-		}
-	}
+            super.onBypassFeedback(player, command);
+    }
 }

@@ -52,7 +52,7 @@
 		<set name="coolTime" val="300"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="target" val="TARGET_ONE"/>
-		<set name="overHit" val="true"/>>
+		<set name="overHit" val="true"/>&gt;
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
 		<set name="isSkillTimePermanent" val="true"/>
@@ -112,8 +112,11 @@
         <enchant1 levels="10" name="Power">
             <table name="#pDef">103 109 116 122 129 135 141 148 154 161</table>
         </enchant1>
-        <for>
+        <for><!-- TODO: Need to add P. Skill Critical Rate depending of DEX feature and HP stat-->
             <add order="0x10" stat="STR" val="2"/>
+            <add order="0x40" stat="maxHp" val="4783">
+                <using kind="Light"/>
+            </add>
             <add order="0x40" stat="pDef" val="#pDef">
                 <using kind="Light"/>
             </add>
@@ -152,6 +155,11 @@
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="BUFF"/>
         <set name="operateType" val="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="10809" level="1" type="CRIT" chance="100"><!--TODO: Unconfirmed Chance-->
+				<using kind="Bow, Crossbow"/>
+			</trigger>
+		</triggers>
         <enchant1 levels="10" name="Power">
             <table name="#fall">0.69 0.68 0.67 0.66 0.65 0.64 0.63 0.62 0.61 0.6</table>
             <table name="#maxLoad">1.51 1.52 1.53 1.54 1.55 1.56 1.57 1.58 1.59 1.6</table>
@@ -161,26 +169,33 @@
             <add order="0x40" stat="runSpd" val="17"/>
             <mul order="0x30" stat="maxLoad" val="#maxLoad"/>
             <mul order="0x30" stat="fall" val="#fall"/>
+			<triggers>
+				<trigger id="10809" level="1" type="CRIT" chance="100">
+					<player damage="1;0"/>
+				</trigger>
+			</triggers>
         </for>
     </skill>
     <skill id="10755" levels="1" name="Superior Mind Resistance">
     <!-- STR + 2. Resistance + 20 to Hold, Sleep, Paralysis, Mental attack, Poison, Bleed, and Stun. In addition, there is a chance of reflecting debuffs back to the attacker. -->
-        <table name="#vul">20</table>
-        <set name="magicLvl" val="85"/>
-        <set name="target" val="TARGET_SELF"/>
-        <set name="relationSkillsId" val="329;328"/>
-        <set name="skillType" val="BUFF"/>
-        <set name="operateType" val="OP_PASSIVE"/>
-        <enchant1 levels="10" name="Power">
-            <table name="#vul">21 22 23 24 25 26 27 28 29 30</table>
-        </enchant1>
-        <for>
-            <add order="0x10" stat="STR" val="2"/>
-            <add order="0x40" stat="bleedResist" val="#vul"/>
-            <add order="0x40" stat="rootResist" val="#vul"/>
-            <add order="0x40" stat="sleepResist" val="#vul"/>
-            <add order="0x40" stat="stunResist" val="#vul"/>
-        </for>
+	<table name="#vul">20</table>
+	<set name="magicLvl" val="85"/>
+	<set name="target" val="TARGET_SELF"/>
+	<set name="relationSkillsId" val="329;328"/>
+	<set name="skillType" val="BUFF"/>
+	<set name="operateType" val="OP_PASSIVE"/>
+	<enchant1 levels="10" name="Power">
+	    <table name="#vul">21 22 23 24 25 26 27 28 29 30</table>
+	</enchant1>
+	<for>
+		<add order="0x10" stat="STR" val="2"/>
+		<add order="0x40" stat="bleedResist" val="#vul"/>
+		<add order="0x40" stat="rootResist" val="#vul"/>
+		<add order="0x40" stat="sleepResist" val="#vul"/>
+		<add order="0x40" stat="stunResist" val="#vul"/>
+		<add order="0x40" stat="reflectMagicDebuff" val="10"/><!--TODO: Unconfirmed Values -->
+		<add order="0x40" stat="reflectPhysicDebuff" val="10"/><!--TODO: Unconfirmed Values -->
+	</for>
     </skill>
     <skill id="10756" levels="1" name="Superior Critical Mastery">
     <!-- STR + 2, P. Accuracy + 8, P. Critical Rate + 25%, and Critical Damage + 774. + 1000% chance of triggering skill mastery. -->
@@ -193,17 +208,16 @@
         <enchant1 levels="10" name="Power">
             <table name="#vul">808 841 875 910 946 983 1022 1062 1104 1147</table>
         </enchant1>
-        <for>
+        <for><!-- TODO: Need to add 1000% chance of Skill Mastery -->
             <add order="0x10" stat="STR" val="2"/>
             <add order="0x40" stat="accCombat" val="8"/>
-            <add order="0x40" stat="rCrit" val="25"/>
+            <mul order="0x30" stat="rCrit" val="1.25"/>
             <add order="0x40" stat="cAtkStatic" val="#vul"/>
         </for>
     </skill>
     <skill id="10757" levels="4" name="Siege Fire Stance">
     <!-- Increases P. Atk., P. Skill power and Critical Damage by 25% when a bow or crossbow is equipped. Increases P. Accuracy by 4 and skill cooldown by 10%. Decreases Atk. Spd. and Speed by 20%. -->
-        <table name="#cAtk">1.25 1.3 1.35 1.4</table>
-        <table name="#pAtk">1.25 1.3 1.35 1.4</table>
+        <table name="#powIncrease">1.25 1.3 1.35 1.4</table>
         <table name="#magicLevel">85 86 87 88</table>
         <table name="#mpConsume2">36</table>
         <set name="reuseDelay" val="1000"/>
@@ -211,6 +225,7 @@
         <set name="relationSkillsId" val="524;131;"/>
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="magicLevel" val="#magicLevel"/>
+        <set name="isAwakeningToggle" val="true"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="CONT"/>
         <set name="operateType" val="OP_TOGGLE"/>
@@ -219,8 +234,9 @@
         </cond>
         <for>
             <effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="stance" time="5" val="0.2">
-                <mul order="0x30" stat="cAtk" val="#cAtk"/>
-                <mul order="0x30" stat="pAtk" val="#pAtk"/>
+                <mul order="0x30" stat="cAtk" val="#powIncrease"/>
+                <mul order="0x30" stat="pAtk" val="#powIncrease"/>
+                <mul order="0x30" stat="skillPower" val="#powIncrease"/>
                 <add order="0x40" stat="accCombat" val="4"/>
                 <mul order="0x30" stat="pReuse" val="0.9"/>
                 <mul order="0x30" stat="pAtkSpd" val="0.8"/>
@@ -240,6 +256,7 @@
         <set name="hitTime" val="500"/>
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="magicLevel" val="#magicLevel"/>
+        <set name="isAwakeningToggle" val="true"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="CONT"/>
         <set name="operateType" val="OP_TOGGLE"/>
@@ -252,6 +269,7 @@
                 <add order="0x40" stat="runSpd" val="#Spd"/>
                 <mul order="0x30" stat="pReuse" val="#reuse"/>
                 <mul order="0x30" stat="pAtk" val="0.8"/>
+                <mul order="0x30" stat="skillPower" val="0.8"/>
                 <sub order="0x40" stat="accCombat" val="6"/>
             </effect>
         </for>
@@ -261,24 +279,25 @@
         <table name="#magicLevel">85 86 87 88</table>
         <table name="#accCombat">6 7 8 9</table>
         <table name="#Range">100 150 200 350</table>
-        <table name="#rCrit">20 25 30 35</table>
+        <table name="#rCrit">1.2 1.25 1.30 1.35</table>
         <table name="#mpConsume2">36</table>
         <set name="reuseDelay" val="1000"/>
         <set name="relationSkillsId" val="523;131;"/>
         <set name="hitTime" val="500"/>
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="magicLevel" val="#magicLevel"/>
+        <set name="isAwakeningToggle" val="true"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="CONT"/>
         <set name="operateType" val="OP_TOGGLE"/>
         <cond msgId="113" addName="1">
             <using kind="Bow,Crossbow"/>
         </cond>
-        <for>
+        <for><!-- TODO: Need to mix this stance with Pinpoint Shot modifying halfkill=false to halfkill=true when this stance is activated-->
             <effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="stance" time="5" val="0.2">
                 <add order="0x40" stat="accCombat" val="#accCombat"/>
                 <add order="0x40" stat="pAtkRange" val="#Range"/>
-                <add order="0x40" stat="rCrit" val="#rCrit"/>
+                <mul order="0x30" stat="rCrit" val="#rCrit"/>
                 <mul order="0x30" stat="pAtkSpd" val="0.8">
                 </mul>
             </effect>
@@ -304,40 +323,52 @@
         <set name="power" val="#power"/>
         <set name="skillRadius" val="250"/>
         <set name="skillType" val="PDAM"/>
+		<set name="criticalRate" val="10"/>
         <set name="target" val="TARGET_MULTIFACE"/>
         <set name="alterSkillsId" val="10999;11000;14579"/>
         <cond msgId="113" addName="1">
             <using kind="Bow,Crossbow"/>
         </cond>
-        <enchant1 levels="10" name="Cost"/>
+        <enchant1 levels="10" name="Cost">
+            <table name="#power">31801 32534 33266 33998 34731 35463 36196 36928 37661 38393</table>
+        </enchant1>
         <enchant2 name="Duel">
             <table name="#powerPvP">31801 32534 33266 33998 34731 35463 36196 36928 37661 38393</table>
+            <table name="#power">31801 32534 33266 33998 34731 35463 36196 36928 37661 38393</table>
         </enchant2>
         <enchant3 name="Fire Attack">
             <table name="#element">fire</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">31801 32534 33266 33998 34731 35463 36196 36928 37661 38393</table>
         </enchant3>
         <enchant4 name="Water Attack">
             <table name="#element">water</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">31801 32534 33266 33998 34731 35463 36196 36928 37661 38393</table>
         </enchant4>
         <enchant5 name="Wind Attack">
             <table name="#element">wind</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">31801 32534 33266 33998 34731 35463 36196 36928 37661 38393</table>
         </enchant5>
         <enchant6 name="Earth Attack">
             <table name="#element">earth</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">31801 32534 33266 33998 34731 35463 36196 36928 37661 38393</table>
         </enchant6>
         <enchant7 name="Holy Attack">
             <table name="#element">holy</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">31801 32534 33266 33998 34731 35463 36196 36928 37661 38393</table>
         </enchant7>
         <enchant8 name="Dark Attack">
             <table name="#element">unholy</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">31801 32534 33266 33998 34731 35463 36196 36928 37661 38393</table>
         </enchant8>
-        <enchant9 levels="10" name="Recycle"/>
+        <enchant9 levels="10" name="Recycle">
+            <table name="#power">31801 32534 33266 33998 34731 35463 36196 36928 37661 38393</table>
+        </enchant9>
     </skill>
     <skill id="10761" levels="8" name="Bow Strike">
     <!-- Knock Back frontal enemies. Attack the target with 2681 Power added to P. Atk. Bow/crossbow required. Over-hit. Critical. -->
@@ -354,46 +385,61 @@
         <table name="#element">none</table>
         <set name="elementPower" val="#elementPower"/>
         <set name="element" val="#element"/>
-        <set name="flyType" val="THROW_HORIZONTAL"/>
-        <set name="flyRadius" val="-200"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="operateType" val="OP_ACTIVE"/>
+		<set name="criticalRate" val="10"/>
         <set name="overHit" val="true"/>
         <set name="power" val="#power"/>
         <set name="skillType" val="PDAM"/>
+        <set name="trait" val="KNOCKBACK"/>
+        <set name="activateRate" val="60"/>
         <set name="target" val="TARGET_ONE"/>
         <cond msgId="113" addName="1">
             <using kind="Bow,Crossbow"/>
         </cond>
-        <enchant1 levels="10" name="Cost"/>
+        <enchant1 levels="10" name="Cost">
+            <table name="#power">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
+        </enchant1>
         <enchant2 name="Duel">
             <table name="#powerPvP">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
+            <table name="#power">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
         </enchant2>
         <enchant3 name="Fire Attack">
             <table name="#element">fire</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
         </enchant3>
         <enchant4 name="Water Attack">
             <table name="#element">water</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
         </enchant4>
         <enchant5 name="Wind Attack">
             <table name="#element">wind</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
         </enchant5>
         <enchant6 name="Earth Attack">
             <table name="#element">earth</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
         </enchant6>
         <enchant7 name="Holy Attack">
             <table name="#element">holy</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
         </enchant7>
         <enchant8 name="Dark Attack">
             <table name="#element">unholy</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
         </enchant8>
-        <enchant9 levels="10" name="Recycle"/>
+        <enchant9 levels="10" name="Recycle">
+            <table name="#power">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
+        </enchant9>
+        <for>
+            <effect count="1" name="KnockBack" stackOrder="-1" stackType="KnockBack" time="5" val="0"/>
+        </for>
     </skill>
     <skill id="10762" levels="8" name="Quick Shot">
     <!-- Attacks the target with 15634 Power added to P. Atk. Bow/crossbow required. Over-hit. Critical. -->
@@ -413,41 +459,53 @@
         <set name="element" val="#element"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="operateType" val="OP_ACTIVE"/>
+		<set name="criticalRate" val="10"/>
         <set name="power" val="#power"/>
         <set name="skillType" val="PDAM"/>
         <set name="target" val="TARGET_ONE"/>
         <cond msgId="113" addName="1">
             <using kind="Bow,Crossbow"/>
         </cond>
-        <enchant1 levels="10" name="Cost"/>
+        <enchant1 levels="10" name="Cost">
+       	    <table name="#power">23992 24549 25106 25663 26220 26778 27335 27892 28449 29006</table>
+        </enchant1>
         <enchant2 name="Duel">
             <table name="#powerPvP">23992 24549 25106 25663 26220 26778 27335 27892 28449 29006</table>
+            <table name="#power">23992 24549 25106 25663 26220 26778 27335 27892 28449 29006</table>
         </enchant2>
         <enchant3 name="Fire Attack">
             <table name="#element">fire</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">23992 24549 25106 25663 26220 26778 27335 27892 28449 29006</table>
         </enchant3>
         <enchant4 name="Water Attack">
             <table name="#element">water</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">23992 24549 25106 25663 26220 26778 27335 27892 28449 29006</table>
         </enchant4>
         <enchant5 name="Wind Attack">
             <table name="#element">wind</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">23992 24549 25106 25663 26220 26778 27335 27892 28449 29006</table>
         </enchant5>
         <enchant6 name="Earth Attack">
             <table name="#element">earth</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">23992 24549 25106 25663 26220 26778 27335 27892 28449 29006</table>
         </enchant6>
         <enchant7 name="Holy Attack">
             <table name="#element">holy</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">23992 24549 25106 25663 26220 26778 27335 27892 28449 29006</table>
         </enchant7>
         <enchant8 name="Dark Attack">
             <table name="#element">unholy</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">23992 24549 25106 25663 26220 26778 27335 27892 28449 29006</table>
         </enchant8>
-        <enchant9 levels="10" name="Recycle"/>
+        <enchant9 levels="10" name="Recycle">
+            <table name="#power">23992 24549 25106 25663 26220 26778 27335 27892 28449 29006</table>
+		</enchant9>
     </skill>
     <skill id="10763" levels="8" name="Pinpoint Shot">
     <!-- Aims for the target's weak points to attack with 22198 power added to P. Atk. Disregards 30% of the target's P. Def. Bow/crossbow required. Over-hit. Critical. -->
@@ -463,6 +521,7 @@
         <set name="castRange" val="1100"/>
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="relationSkillsId" val="627;343;"/>
+		<set name="criticalRate" val="10"/>
         <set name="elementPower" val="#elementPower"/>
         <set name="element" val="#element"/>
         <set name="activateRate" val="60"/>
@@ -475,35 +534,46 @@
         <cond msgId="113" addName="1">
             <using kind="Bow,Crossbow"/>
         </cond>
-        <enchant1 levels="10" name="Cost"/>
+        <enchant1 levels="10" name="Cost">
+            <table name="#power">33827 34827 35378 36153 36928 37703 38479 39254 40029 40804</table>
+        </enchant1>
         <enchant2 name="Duel">
             <table name="#powerPvP">33827 34827 35378 36153 36928 37703 38479 39254 40029 40804</table>
+            <table name="#power">33827 34827 35378 36153 36928 37703 38479 39254 40029 40804</table>
         </enchant2>
         <enchant3 name="Fire Attack">
             <table name="#element">fire</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">33827 34827 35378 36153 36928 37703 38479 39254 40029 40804</table>
         </enchant3>
         <enchant4 name="Water Attack">
             <table name="#element">water</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">33827 34827 35378 36153 36928 37703 38479 39254 40029 40804</table>
         </enchant4>
         <enchant5 name="Wind Attack">
             <table name="#element">wind</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">33827 34827 35378 36153 36928 37703 38479 39254 40029 40804</table>
         </enchant5>
         <enchant6 name="Earth Attack">
             <table name="#element">earth</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">33827 34827 35378 36153 36928 37703 38479 39254 40029 40804</table>
         </enchant6>
         <enchant7 name="Holy Attack">
             <table name="#element">holy</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">33827 34827 35378 36153 36928 37703 38479 39254 40029 40804</table>
         </enchant7>
         <enchant8 name="Dark Attack">
             <table name="#element">unholy</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">33827 34827 35378 36153 36928 37703 38479 39254 40029 40804</table>
         </enchant8>
-        <enchant9 levels="10" name="Recycle"/>
+        <enchant9 levels="10" name="Recycle">
+            <table name="#power">33827 34827 35378 36153 36928 37703 38479 39254 40029 40804</table>
+        </enchant9>
         <for>
             <effect count="1" name="Debuff" stackOrder="-1" stackType="Stun" time="9" val="0">
                 <mul order="0x30" stat="pDef" val="0.7"/>
@@ -574,35 +644,46 @@
         <cond msgId="113" addName="1">
             <using kind="Bow,Crossbow"/>
         </cond>
-        <enchant1 levels="10" name="Cost"/>
+        <enchant1 levels="10" name="Cost">
+			<table name="#power">15242 15595 15948 16301 16654 17007 17360 17713 18066 18419</table>
+        </enchant1>
         <enchant2 levels="10" name="Chance">
+            <table name="#power">15242 15595 15948 16301 16654 17007 17360 17713 18066 18419</table>
             <table name="#activateRate">53 56 59 62 65 68 71 74 77 80</table>
         </enchant2>
         <enchant3 name="Fire Attack">
             <table name="#element">fire</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">15242 15595 15948 16301 16654 17007 17360 17713 18066 18419</table>
         </enchant3>
         <enchant4 name="Water Attack">
             <table name="#element">water</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">15242 15595 15948 16301 16654 17007 17360 17713 18066 18419</table>
         </enchant4>
         <enchant5 name="Wind Attack">
             <table name="#element">wind</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">15242 15595 15948 16301 16654 17007 17360 17713 18066 18419</table>
         </enchant5>
         <enchant6 name="Earth Attack">
             <table name="#element">earth</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">15242 15595 15948 16301 16654 17007 17360 17713 18066 18419</table>
         </enchant6>
         <enchant7 name="Holy Attack">
             <table name="#element">holy</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">15242 15595 15948 16301 16654 17007 17360 17713 18066 18419</table>
         </enchant7>
         <enchant8 name="Dark Attack">
             <table name="#element">unholy</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">15242 15595 15948 16301 16654 17007 17360 17713 18066 18419</table>
         </enchant8>
-        <enchant9 levels="10" name="Recycle"/>
+        <enchant9 levels="10" name="Recycle">
+            <table name="#power">15242 15595 15948 16301 16654 17007 17360 17713 18066 18419</table>
+        </enchant9>
         <for>
             <effect name="Stun" time="9" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="stun"/>
         </for>
@@ -623,47 +704,62 @@
         <set name="elementPower" val="#elementPower"/>
         <set name="element" val="#element"/>
         <set name="magicLevel" val="#magicLevel"/>
-        <set name="flyType" val="THROW_HORIZONTAL"/>
-        <set name="flyRadius" val="-200"/>
         <set name="relationSkillsId" val="990;"/>
         <set name="operateType" val="OP_ACTIVE"/>
+		<set name="criticalRate" val="10"/>
         <set name="overHit" val="true"/>
         <set name="power" val="#power"/>
         <set name="skillType" val="PDAM"/>
+        <set name="trait" val="KNOCKBACK"/>
+        <set name="activateRate" val="60"/>
         <set name="target" val="TARGET_ONE"/>
         <set name="cancelTarget" val="50"/>
         <cond msgId="113" addName="1">
             <using kind="Bow,Crossbow"/>
         </cond>
-        <enchant1 levels="10" name="Cost"/>
+        <enchant1 levels="10" name="Cost">
+			<table name="#power">29918 30254 30589 30925 31260 31595 31931 32266 32601 32937</table>
+        </enchant1>
         <enchant2 levels="10" name="Chance">
+            <table name="#power">29918 30254 30589 30925 31260 31595 31931 32266 32601 32937</table>
             <table name="#activateRate">53 56 59 62 65 68 71 74 77 80</table>
         </enchant2>
         <enchant3 name="Fire Attack">
             <table name="#element">fire</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">29918 30254 30589 30925 31260 31595 31931 32266 32601 32937</table>
         </enchant3>
         <enchant4 name="Water Attack">
             <table name="#element">water</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">29918 30254 30589 30925 31260 31595 31931 32266 32601 32937</table>
         </enchant4>
         <enchant5 name="Wind Attack">
             <table name="#element">wind</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">29918 30254 30589 30925 31260 31595 31931 32266 32601 32937</table>
         </enchant5>
         <enchant6 name="Earth Attack">
             <table name="#element">earth</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">29918 30254 30589 30925 31260 31595 31931 32266 32601 32937</table>
         </enchant6>
         <enchant7 name="Holy Attack">
             <table name="#element">holy</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">29918 30254 30589 30925 31260 31595 31931 32266 32601 32937</table>
         </enchant7>
         <enchant8 name="Dark Attack">
             <table name="#element">unholy</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">29918 30254 30589 30925 31260 31595 31931 32266 32601 32937</table>
         </enchant8>
-        <enchant9 levels="10" name="Recycle"/>
+        <enchant9 levels="10" name="Recycle">
+			<table name="#power">29918 30254 30589 30925 31260 31595 31931 32266 32601 32937</table>
+        </enchant9>
+        <for>
+            <effect count="1" name="KnockBack" stackOrder="-1" stackType="KnockBack" time="5" val="0"/>
+        </for>        
     </skill>
     <skill id="10771" levels="8" name="Multiple Arrow">
     <!-- Attacks frontal enemies with 23391 Power added to P. Atk. Bow/crossbow required. Over-hit. Critical. -->
@@ -683,6 +779,7 @@
         <set name="magicLevel" val="#magicLevel"/>
         <set name="relationSkillsId" val="987;"/>
         <set name="operateType" val="OP_ACTIVE"/>
+		<set name="criticalRate" val="10"/>
         <set name="overHit" val="true"/>
         <set name="power" val="#power"/>
         <set name="skillType" val="PDAM"/>
@@ -692,35 +789,46 @@
         <cond msgId="113" addName="1">
             <using kind="Bow,Crossbow"/>
         </cond>
-        <enchant1 levels="10" name="Cost"/>
+        <enchant1 levels="10" name="Cost">
+			<table name="#power">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
+		</enchant1>
         <enchant2 name="Duel">
+			<table name="#power">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
             <table name="#powerPvP">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
         </enchant2>
         <enchant3 name="Fire Attack">
             <table name="#element">fire</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
         </enchant3>
         <enchant4 name="Water Attack">
             <table name="#element">water</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
         </enchant4>
         <enchant5 name="Wind Attack">
             <table name="#element">wind</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
         </enchant5>
         <enchant6 name="Earth Attack">
             <table name="#element">earth</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
         </enchant6>
         <enchant7 name="Holy Attack">
             <table name="#element">holy</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
         </enchant7>
         <enchant8 name="Dark Attack">
             <table name="#element">unholy</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
         </enchant8>
-        <enchant9 levels="10" name="Recycle"/>
+        <enchant9 levels="10" name="Recycle">
+            <table name="#power">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
+        </enchant9>
     </skill>
     <skill id="10772" levels="8" name="Heavy Arrow Rain">
     <!-- Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 22526 damage added to P. Atk. Bow/crossbow required. Over-hit. Critical. -->
@@ -738,6 +846,7 @@
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="elementPower" val="#elementPower"/>
         <set name="element" val="#element"/>
+		<set name="criticalRate" val="10"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="overHit" val="true"/>
@@ -748,35 +857,46 @@
         <cond msgId="113" addName="1">
             <using kind="Bow,Crossbow"/>
         </cond>
-        <enchant1 levels="10" name="Cost"/>
+        <enchant1 levels="10" name="Cost">
+			<table name="#power">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
+        </enchant1>
         <enchant2 name="Duel">
+			<table name="#power">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
             <table name="#powerPvP">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
         </enchant2>
         <enchant3 name="Fire Attack">
             <table name="#element">fire</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
         </enchant3>
         <enchant4 name="Water Attack">
             <table name="#element">water</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
         </enchant4>
         <enchant5 name="Wind Attack">
             <table name="#element">wind</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
         </enchant5>
         <enchant6 name="Earth Attack">
             <table name="#element">earth</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
         </enchant6>
         <enchant7 name="Holy Attack">
             <table name="#element">holy</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
         </enchant7>
         <enchant8 name="Dark Attack">
             <table name="#element">unholy</table>
             <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
         </enchant8>
-        <enchant9 levels="10" name="Recycle"/>
+        <enchant9 levels="10" name="Recycle">
+			<table name="#power">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
+        </enchant9>
     </skill>
     <skill id="10774" levels="4" name="Quick Evasion">
     <!-- Quickly moves 300 units of distance back. -->
@@ -793,6 +913,10 @@
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="flyType" val="DUMMY"/>
         <set name="flyRadius" val="#flyRadius"/>
+		<enchant1 levels="10" name="Distance">
+			<table name="#flyRadius">-460 -470 -480 -490 -500 -510 -520 -530 -540 -550</table> <!--Non-Retail value, Must be Checked-->
+			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant1>
     </skill>
     <skill id="10775" levels="3" name="Confusion Decoy">
     <!-- Summons a decoy that receives attacks for you. -->
@@ -815,6 +939,7 @@
         <cond msgId="113" addName="1">
             <using kind="Crossbow, Bow"/>
         </cond>
+		<enchant1 levels="10" name="Cost"/>
     </skill>
     <skill id="10776" levels="4" name="Final Ultimate Escape">
     <!-- For 30 seconds, increases P. Evasion + 30, M. Evasion + 60, resistance to magic + 20%, resistance to buff-canceling attacks + 95%, and Evasion rate to P. skills attacks + 80%. -->
@@ -822,8 +947,10 @@
         <table name="#rEvas">60 70 80 90</table>
         <table name="#time">30</table>
         <table name="#mEvas">60 70 80 90</table>
-        <table name="#mEvas">1.8 1.85 1.9 1.95</table>
+        <table name="#pSkillEvasion">1.8 1.85 1.9 1.95</table>
         <table name="#mpConsume2">74 76 78 80</table>
+        <table name="#rSpd">0</table>
+        <table name="#stunPow">0</table>
         <set name="reuseDelay" val="900000"/>
         <set name="hitTime" val="1000"/>
         <set name="mpConsume2" val="#mpConsume2"/>
@@ -841,17 +968,27 @@
             <table name="#time">31 32 33 34 35 36 37 38 39 40</table>
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
         </enchant2>
-        <enchant3 levels="10" name="Recycle">
-            <table name="#reuseDelay">899500 889500 878500 868500 858000 848000 837500 827500 817000 806000</table>
+        <enchant3 levels="10" name="Wind Walk">
+            <table name="#rSpd">1 2 3 4 5 6 7 8 9 10</table>
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
         </enchant3>
+        <enchant4 levels="10" name="Chance Shock">
+            <table name="#stunPow">1 2 3 4 5 6 7 8 9 10</table>
+            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+        </enchant4>
+        <enchant5 levels="10" name="Recovery" enchRoute="9">
+            <table name="#reuseDelay">899500 889500 878500 868500 858000 848000 837500 827500 817000 806000</table>
+            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+        </enchant5>
         <for>
             <effect name="Buff" time="#time" val="0" stackOrder="1" stackType="avoid_up_special">
                 <add order="0x40" stat="rEvas" val="#rEvas"/>
                 <add order="0x40" stat="mEvas" val="#mEvas"/>
-                <mul order="0x30" stat="mDef" val="1.2"/>
-                <sub order="0x40" stat="debuffResist" val="95"/>
-                <mul order="0x30" stat="pSkillEvasion" val="#mEvas"/>
+                <add order="0x40" stat="magicResist" val="20"/>
+                <add order="0x40" stat="cancelResist" val="95"/>
+                <mul order="0x30" stat="pSkillEvasion" val="#pSkillEvasion"/>
+                <mul order="0x30" stat="runSpd" val="#rSpd"/>
+                <mul order="0x30" stat="stunPower" val="#stunPow"/>
             </effect>
         </for>
     </skill>
@@ -866,9 +1003,12 @@
         <set name="relationSkillsId" val="511;"/>
         <set name="target" val="TARGET_ONE"/>
         <set name="activateRate" val="70"/>
-        <set name="skillType" val="DELETE_HATE_OF_ME"/>
+        <set name="skillType" val="AGGRESSION"/>
         <set name="operateType" val="OP_ACTIVE"/>
-        <set name="cancelTarget" val="50"/>
+		<cond msgId="113" addName="1">
+            <using kind="Crossbow, Bow"/>
+        </cond>
+		<enchant1 levels="10" name="Cost"/>
         <for/>
     </skill>
     <skill id="10778" levels="1" name="Diversion">
@@ -881,9 +1021,13 @@
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="target" val="TARGET_ONE"/>
         <set name="activateRate" val="70"/>
-        <set name="skillType" val="DELETE_HATE_OF_ME"/>
+        <set name="skillType" val="DELETE_HATE_OF_ME"/><!-- TODO: its the same effect for lure shot, and this is different -->
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="cancelTarget" val="50"/>
+		<cond msgId="113" addName="1">
+            <using kind="Crossbow, Bow"/>
+        </cond>
+		<enchant1 levels="10" name="Cost"/>
         <for/>
     </skill>
     <skill id="10779" levels="4" name="Quick Fire">
@@ -892,6 +1036,8 @@
         <table name="#pAtkSpd">1.5 1.8 2.0 3.0</table>
         <table name="#magicLevel">85 86 87 88</table>
         <table name="#time">20</table>
+        <table name="#stunPow">0</table>
+        <table name="#rootPow">0</table>
         <set name="reuseDelay" val="120000"/>
         <set name="hitTime" val="1500"/>
         <set name="castRange" val="800"/>
@@ -909,16 +1055,28 @@
             <table name="#time">21 22 23 24 25 26 27 28 29 30</table>
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
         </enchant2>
-        <enchant3 levels="10" name="Recycle">
-            <table name="#reuseDelay">110500 100500 99500 99500 98000 98000 97500 97500 97000 96000</table>
+        <enchant3 levels="10" name="Chance Shock">
+            <table name="#stunPow">1 2 3 4 5 6 7 8 9 10</table>
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
         </enchant3>
+        <enchant4 levels="10" name="Chance Hold">
+            <table name="#rootPow">1 2 3 4 5 6 7 8 9 10</table>
+            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+        </enchant4>
+        <enchant5 levels="10" name="Recovery" enchRoute="9">
+            <table name="#reuseDelay">110500 100500 99500 99500 98000 98000 97500 97500 97000 96000</table>
+            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+        </enchant5>
         <for>
-            <effect name="Buff" time="#time" val="0" stackOrder="1" stackType="buff">
-                <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
-                <mul order="0x30" stat="pAtk" val="0.85">
-                    <using kind="bow,crossbow"/>
+            <effect name="Buff" time="#time" val="0" stackOrder="1" stackType="QuickFire">
+                <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
+                    <using kind="Bow,Crossbow"/>
                 </mul>
+                <mul order="0x30" stat="pAtk" val="0.85">
+                    <using kind="Bow,Crossbow"/>
+                </mul>
+                <add order="0x40" stat="stunPower" val="#stunPow"/>
+                <add order="0x40" stat="rootPower" val="#rootPow"/>
             </effect>
         </for>
     </skill>
@@ -949,51 +1107,81 @@
         <enchant1 levels="10" name="Cost">
             <table name="#mpConsume2">76 73 70 67 64 60 57 54 51 48</table>
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+            <table name="#power">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
         </enchant1>
-        <enchant2 levels="10" name="Time">
+        <enchant2 levels="10" name="Chance">
             <table name="#activateRate">53 56 59 63 65 69 73 77 85 90</table>
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+            <table name="#power">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
         </enchant2>
-        <enchant3 levels="10" name="Recycle">
+        <enchant3 name="Fire Attack">
+            <table name="#element">fire</table>
+            <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
+        </enchant3>
+        <enchant4 name="Water Attack">
+            <table name="#element">water</table>
+            <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
+        </enchant4>
+        <enchant5 name="Wind Attack">
+            <table name="#element">wind</table>
+            <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
+        </enchant5>
+        <enchant6 name="Earth Attack">
+            <table name="#element">earth</table>
+            <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
+        </enchant6>
+        <enchant7 name="Holy Attack">
+            <table name="#element">holy</table>
+            <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
+        </enchant7>
+        <enchant8 name="Dark Attack">
+            <table name="#element">unholy</table>
+            <table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+            <table name="#power">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
+        </enchant8>
+        <enchant9 levels="10" name="Recycle">
             <table name="#reuseDelay">29500 29500 28500 28500 28000 28000 27500 27500 27000 26000</table>
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
-        </enchant3>
+            <table name="#power">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
+        </enchant9>
         <for>
             <effect name="Debuff" time="20" val="0" effectPower="40" effectType="DEBUFF" stackOrder="1" stackType="speed_down">
                 <mul order="0x30" stat="runSpd" val="0.7"/>
             </effect>
         </for>
     </skill>
-    <skill id="10781" levels="2" name="Phoenix Arrow">
+    <skill id="10781" levels="1" name="Phoenix Arrow">
     <!-- Shoots a magical arrow to obliterate an area. Attacks targets within the skill's range with 120000 power. -->
-        <table name="#power">12000 14000</table>
-        <table name="#magicLevel">95 99</table>
-        <table name="#mpConsume2">210 220</table>
-        <table name="#powerPvP">0</table>
-        <set name="powerPvP" val="#powerPvP"/>
-        <set name="reuseDelay" val="600000"/>
-        <set name="hitTime" val="2200"/>
-        <set name="castRange" val="1100"/>
-        <set name="mpConsume2" val="#mpConsume2"/>
-        <set name="magicLevel" val="#magicLevel"/>
-        <set name="power" val="#power"/>
+		<table name="#power">120000</table>
+		<table name="#magicLevel">95</table>
+		<table name="#mpConsume2">210</table>
+		<table name="#powerPvP">0</table>
+		<set name="powerPvP" val="#powerPvP"/>
+		<set name="reuseDelay" val="600000"/>
+		<set name="hitTime" val="2200"/>
+		<set name="castRange" val="1100"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="power" val="#power"/>
 		<set name="symbolId" val="13025"/>
 		<set name="addSkills" val="10782;1"/>
-        <set name="target" val="TARGET_AREA"/>
-        <set name="skillRadius" val="200"/>
-        <set name="skillType" val="BUFF"/>
-        <set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_GROUND"/>
+		<set name="skillRadius" val="300"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="1509">
 			<not>
 				<player olympiad="true"/>
 			</not>
 		</cond>
-        <enchant1 levels="10" name="Cost"/>
-        <enchant2 name="Duel">
-            <table name="#powerPvP">142000 144000 146000 148000 150000 152000 154000 156000 158000 160000</table>
-        </enchant2>
-        <enchant3 levels="10" name="Recycle"/>
-    </skill>
+		<enchant1 levels="10" name="Cost"/>
+		<enchant2 levels="10" name="Recycle" enchRoute="9"/>
+	</skill>
 	<skill id="10782" levels="1" name="Deadly Move 2">
     <!-- Death blow! Please do not use. -->
 		<set name="target" val="TARGET_ONE"/>
@@ -1008,6 +1196,8 @@
         <table name="#accCombat">25 30 35 40</table>
         <table name="#mpConsume2">54 60 65 69</table>
         <table name="#time">60</table>
+        <table name="#stunPow">0</table>
+        <table name="#rootPow">0</table>
         <set name="reuseDelay" val="600000"/>
         <set name="relationSkillsId" val="413;414;521;313;"/>
         <set name="hitTime" val="1200"/>
@@ -1025,15 +1215,25 @@
             <table name="#time">62 64 66 68 70 72 74 76 78 80</table>
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
         </enchant2>
-        <enchant3 levels="10" name="Recycle">
-            <table name="#reuseDelay">59500 59500 59500 58500 57000 57000 56500 56500 56000 55000</table>
+        <enchant3 levels="10" name="Chance Shock">
+            <table name="#stunPow">1 2 3 4 5 6 7 8 9 10</table>
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
         </enchant3>
+        <enchant4 levels="10" name="Chance Hold">
+            <table name="#rootPow">1 2 3 4 5 6 7 8 9 10</table>
+            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+        </enchant4>
+        <enchant5 levels="10" name="Recovery" enchRoute="9">
+            <table name="#reuseDelay">59500 59500 59500 58500 57000 57000 56500 56500 56000 55000</table>
+            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+        </enchant5>
         <for>
             <effect name="Buff" time="#time" val="0">
                 <add order="0x40" stat="accCombat" val="#accCombat"/>
                 <add order="0x40" stat="rCrit" val="#rCrit"/>
                 <mul order="0x30" stat="cAtk" val="#cAtk"/>
+                <add order="0x40" stat="stunPower" val="#stunPow"/>
+                <add order="0x40" stat="rootPower" val="#rootPow"/>
             </effect>
         </for>
     </skill>
@@ -1058,6 +1258,7 @@
     <skill id="10785" levels="1" name="Flare">
     <!-- Fires a Flare to reveal nearby hiding enemies or traps. Bow/crossbow required. -->
         <table name="#mpConsume2">70</table>
+        <table name="#skillRadius">300</table>
         <set name="reuseDelay" val="120000"/>
         <set name="hitTime" val="1200"/>
         <set name="relationSkillsId" val="933;"/>
@@ -1072,16 +1273,24 @@
         <cond msgId="113" addName="1">
             <using kind="Bow,Crossbow"/>
         </cond>
+        <enchant1 levels="10" name="Cost">
+            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+        </enchant1>
+        <enchant2 levels="10" name="Distance">
+            <table name="#magicLevel">310 320 330 340 350 360 370 380 390 400</table>
+            <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+        </enchant2>
     </skill>
     <skill id="10786" levels="3" name="Time Bomb">
     <!-- Plants a bomb on the target that detonates after 10 seconds to inflict damage with 30000 power. While the bomb is being installed, the target's P. Accuracy decreases by 10. -->
         <table name="#mpConsume2">66 69 72</table>
         <table name="#magicLevel">93 96 99</table>
+        <table name="#activateRate">70 70 70</table>
         <set name="magicType" val="MAGIC"/>
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="reuseDelay" val="15000"/>
-        <set name="activateRate" val="70"/>
+        <set name="activateRate" val="#activateRate"/>
         <set name="hitTime" val="1500"/>
         <set name="castRange" val="900"/>
         <set name="target" val="TARGET_ONE"/>
@@ -1093,14 +1302,18 @@
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
         </enchant1>
         <enchant2 levels="10" name="Chance">
-            <table name="#activateRate">53 56 59 62 65 68 71 74 77 80</table>
+            <table name="#activateRate">71 72 73 74 75 76 77 78 79 80</table>
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
         </enchant2>
-        <enchant3 levels="10" name="Recycle">
+		<enchant3 levels="10" name="Entangle">
+			<!--TODO-->
+			<!--<table name="runSpeed">.99 .98 .97 .96 .95 .94 .93 .92 .91 .9</table>-->
+		</enchant3>
+        <enchant4 levels="10" name="Recovery" enchRoute="9">
             <table name="#reuseDelay">1400 1400 1300 1300 1200 1200 1100 1100 1000 1000</table>
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
-        </enchant3>
-        <for>
+        </enchant4>
+        <for><!-- TODO: this is immediate effect, and skill description says until past 10 seconds.-->
             <effect count="1" name="DamOverTime" time="1" val="30000"/>
         </for>
     </skill>
@@ -1185,6 +1398,7 @@
         <set name="skillRadius" val="350"/>
         <set name="addSkills" val="5269;#skill"/>
         <set name="npcId" val="13037"/>
+		<enchant1 levels="10" name="Chance"/>
         <for/>
     </skill>
     <skill id="10792" levels="1" name="Gravity Trap">
@@ -1203,12 +1417,14 @@
         <set name="isSkillTimePermanent" val="true"/>
         <set name="addSkills" val="5271;#skill"/>
         <set name="npcId" val="13041"/>
+		<enchant1 levels="10" name="Chance"/>
         <for/>
     </skill>
     <skill id="10793" levels="1" name="Flash">
     <!-- Cancels the targets of nearby enemies. Increases speed + 50 for 5 seconds and prevents enemies from targeting you. -->
         <table name="#mpConsume2">77</table>
         <table name="#magicLevel">85</table>
+	  	<table name="#Stun">0</table>
         <set name="reuseDelay" val="5000"/>
         <set name="relationSkillsId" val="939"/>
         <set name="magicLevel" val="#magicLevel"/>
@@ -1220,9 +1436,22 @@
         <set name="skillType" val="DEBUFF"/>
         <set name="operateType" val="OP_ACTIVE"/>
 		<set name="cancelTarget" val="100"/>
+		<enchant1 levels="10" name="Cost"/>
+		<enchant2 levels="10" name="Chance Shock">
+			<table name="#Stun">1 2 3 4 5 6 7 8 9 10</table> 
+		</enchant2>
+		<enchant3 levels="10" name="Chance Knockdown">
+			<!--TODO-->
+			<!--<table name="#Knockdown">1 2 3 4 5 6 7 8 9 10</table>-->
+		</enchant3>
+		<enchant4 levels="10" name="Chance Hold">
+			<!--TODO-->
+			<!--<table name="#Hold">1 2 3 4 5 6 7 8 9 10</table>-->
+		</enchant4>
         <for>
             <effect count="1" name="Buff" stackType="Dash" time="5" val="0" applyOnCaster="true">
                 <add order="0x40" stat="runSpd" val="50"/>
+				<add order="0x40" stat="stunPower" val="#Stun"/>
             </effect>
         </for>
     </skill>
@@ -1288,11 +1517,16 @@
         <set name="relationSkillsId" val="466"/>
         <set name="skillType" val="BUFF"/>
         <set name="operateType" val="OP_PASSIVE"/>
+        <triggers>
+            <trigger id="10058" level="1" type="RECEIVE_DAMAGE" chance="50">
+                <player damage="50;0"/>
+            </trigger>
+        </triggers>
         <enchant1 levels="10" name="Power">
             <table name="#mDef">206 213 220 227 234 241 248 255 262 270</table>
             <table name="#magicLevel">86 87 88 90 91 92 93 95 97 99</table>
         </enchant1>
-        <for>
+        <for><!--TODO: need to add trigger for Protection of Rune and Protection of elemental-->
             <add order="0x10" stat="STR" val="2"/>
             <add order="0x40" stat="mDef" val="#mDef"/>
         </for>

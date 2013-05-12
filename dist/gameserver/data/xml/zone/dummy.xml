@@ -882,63 +882,50 @@
         <set name="tele" val="-179275 186802 -10720"/>
         <circle loc="-179430 183844 360 -15250 -15100"/>
     </zone>
-	<zone name="[Hall_of_Orbis_1_level]" type="dummy">
+	<zone name="[Hall_of_Orbis_0_1_level]" type="dummy">
         <set name="tele" val="214488 53240 -8078"/>
         <circle loc="198008 90584 260 -410 -310"/>
     </zone>
-	<zone name="[Hall_of_Orbis_2_level]" type="dummy">
+	<zone name="[Hall_of_Orbis_1_0_level]" type="dummy">
+        <set name="tele" val="197784 90136 -222"/>
+        <polygon>
+            <coords loc="215272 52792 -7998 -7998"/>
+            <coords loc="215272 53448 -7998 -7998"/>
+            <coords loc="214936 53448 -7998 -7998"/>
+            <coords loc="214936 52792 -7998 -7998"/>
+        </polygon>
+    </zone>
+	<zone name="[Hall_of_Orbis_1_2_level]" type="dummy">
         <set name="tele" val="214264 53240 -14346"/>
         <circle loc="215240 52280 260 -8880 -8780"/>
     </zone>
-	<zone name="[orbis_to_1st]" type="dummy" >
-		<polygon>
-			<coords loc="198120 90504 -445 -390"/>
-			<coords loc="198152 90680 -445 -390"/>
-			<coords loc="198280 90664 -445 -390"/>
-			<coords loc="198280 90504 -445 -390"/>
-		</polygon>
-	</zone>
-	<zone name="[orbis_to_enter]" type="dummy" >
-		<polygon>
-			<coords loc="214904 52952 -7999 -7900"/>
-			<coords loc="215304 52952 -7999 -7900"/>
-			<coords loc="215272 52744 -7999 -7900"/>
-			<coords loc="215064 52760 -7999 -7900"/>
-		</polygon>
-	</zone>
-	<zone name="[orbis_from_1st_to_2nd]" type="dummy" >
-		<polygon>
-			<coords loc="215752 52056 -8830 -8810"/>
-			<coords loc="215736 52472 -8830 -8810"/>
-			<coords loc="215960 52440 -8830 -8810"/>
-			<coords loc="215960 52088 -8830 -8810"/>
-		</polygon>
-	</zone>
-	<zone name="[orbis_from_2nd_to_1st]" type="dummy" >
-		<polygon>
-			<coords loc="214904 52952 -14210 -14180"/>
-			<coords loc="215256 52920 -14210 -14180"/>
-			<coords loc="215272 52744 -14210 -14180"/>
-			<coords loc="215080 52760 -14210 -14180"/>
-		</polygon>
-	</zone>
-	<zone name="[orbis_from_2nd_to_3rd]" type="dummy" >
-		<polygon>
-			<coords loc="210328 48968 -15040 15000"/>
-			<coords loc="210312 48760 -15040 15000"/>
-			<coords loc="210344 48552 -15040 15000"/>
-			<coords loc="210088 48584 -15040 15000"/>
-			<coords loc="210088 48936 -15040 15000"/>
-		</polygon>
-	</zone>
-	<zone name="[orbis_from_3rd_to_2nd]" type="dummy" >
-		<polygon>
-			<coords loc="211272 114968 -12695 -12600"/>
-			<coords loc="211752 114984 -12695 -12600"/>
-			<coords loc="211720 114664 -12695 -12600"/>
-			<coords loc="211320 114664 -12695 -12600"/>
-		</polygon>
-	</zone>
+	<zone name="[Hall_of_Orbis_2_1_level]" type="dummy">
+        <set name="tele" val="215192 51608 -8723"/>
+        <polygon>
+            <coords loc="215272 52776 -14206 -14206"/>
+            <coords loc="215272 53448 -14206 -14206"/>
+            <coords loc="214936 53448 -14206 -14206"/>
+            <coords loc="214936 52792 -14206 -14206"/>
+        </polygon>
+    </zone>
+	<zone name="[Hall_of_Orbis_2_3_level]" type="dummy">
+        <set name="tele" val="211720 115512 -12766"/>
+        <polygon>
+            <coords loc="210088 48936 -15034 -15034"/>
+            <coords loc="210088 48552 -15034 -15034"/>
+            <coords loc="211080 48552 -15034 -15034"/>
+            <coords loc="211080 48936 -15034 -15034"/>
+        </polygon>
+    </zone>
+	<zone name="[Hall_of_Orbis_3_2_level]" type="dummy">
+        <set name="tele" val="210888 49480 -14904"/>
+        <polygon>
+            <coords loc="211720 115272 -12760 -12760"/>
+            <coords loc="211720 114680 -12760 -12760"/>
+            <coords loc="211320 114680 -12642 -12760"/>
+            <coords loc="211320 115272 -12642 -12760"/>
+        </polygon>
+    </zone>
 	<zone name="[harnak_underground_4pf_1]" type="dummy">
         <circle loc="-107926 208860 850"/>
     </zone>

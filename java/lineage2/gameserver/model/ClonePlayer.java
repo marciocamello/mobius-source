@@ -16,12 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Future;
-import java.util.concurrent.ScheduledFuture;
-
-import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.ai.ClonePlayerAI;
 import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.instancemanager.ReflectionManager;
@@ -103,7 +99,7 @@ public class ClonePlayer extends Playable
 		stopDecay();
 		_decayTask = DecayTaskManager.getInstance().addDecayTask(this, delay);
 	}
-	
+
 	/**
 	 * Method stopDecay.
 	 */
@@ -115,7 +111,7 @@ public class ClonePlayer extends Playable
 			_decayTask = null;
 		}
 	}
-	
+
 	/**
 	 * Method onDecay.
 	 */
@@ -133,7 +129,7 @@ public class ClonePlayer extends Playable
 		stopDecay();
 		doDecay();
 	}
-	
+
 	/**
 	 * Method onSpawn.
 	 */
@@ -144,7 +140,7 @@ public class ClonePlayer extends Playable
 		getPlayer();
 		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 	}
-	
+
 	/**
 	 * Method getAI.
 	 * @return ClonePlayerAI
@@ -164,7 +160,7 @@ public class ClonePlayer extends Playable
 		}
 		return (ClonePlayerAI) _ai;
 	}
-	
+
 	/**
 	 * Method onAction.
 	 * @param player Player
@@ -268,7 +264,7 @@ public class ClonePlayer extends Playable
 		}
 		
 	}
-	
+
 	/**
 	 * Method setFollowMode.
 	 * @param state boolean
@@ -298,7 +294,7 @@ public class ClonePlayer extends Playable
 	{
 		return _follow;
 	}
-	
+
 	/**
 	 * Method isClone.
 	 * @return boolean
@@ -308,36 +304,7 @@ public class ClonePlayer extends Playable
 	{
 		return true;
 	}
-	
-	/**
-	 * Field _updateEffectIconsTask.
-	 */
-	Future<?> _updateEffectIconsTask;
-	
-	/**
-	 * @author Mobius
-	 */
-	private class UpdateEffectIcons extends RunnableImpl
-	{
-		/**
-		 * Constructor for UpdateEffectIcons.
-		 */
-		public UpdateEffectIcons()
-		{
-			// TODO Auto-generated constructor stub
-		}
-		
-		/**
-		 * Method runImpl.
-		 */
-		@Override
-		public void runImpl()
-		{
-			updateEffectIconsImpl();
-			_updateEffectIconsTask = null;
-		}
-	}
-	
+
 	/**
 	 * Method updateEffectIcons.
 	 */
@@ -345,21 +312,8 @@ public class ClonePlayer extends Playable
 	public void updateEffectIcons()
 	{
 		super.updateEffectIcons();
-		if (Config.USER_INFO_INTERVAL == 0)
-		{
-			if (_updateEffectIconsTask != null)
-			{
-				_updateEffectIconsTask.cancel(false);
-				_updateEffectIconsTask = null;
-			}
-			updateEffectIconsImpl();
-			return;
-		}
-		if (_updateEffectIconsTask != null)
-		{
-			return;
-		}
-		_updateEffectIconsTask = ThreadPoolManager.getInstance().schedule(new UpdateEffectIcons(), Config.USER_INFO_INTERVAL);
+		updateEffectIconsImpl();
+		return;
 	}
 	
 	/**
@@ -483,7 +437,7 @@ public class ClonePlayer extends Playable
 	{
 		_spsCharged = state;
 	}
-	
+
 	/**
 	 * Method isInRange.
 	 * @return boolean
@@ -514,52 +468,18 @@ public class ClonePlayer extends Playable
 			getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, owner, Config.FOLLOW_RANGE);
 		}
 	}
-	
-	/**
-	 * Field _broadcastCharInfoTask.
-	 */
-	ScheduledFuture<?> _broadcastCharInfoTask;
-	
-	/**
-	 * @author Mobius
-	 */
-	public class BroadcastCharInfoTask extends RunnableImpl
-	{
-		/**
-		 * Method runImpl.
-		 */
-		@Override
-		public void runImpl()
-		{
-			broadcastCharInfoImpl();
-			_broadcastCharInfoTask = null;
-		}
-	}
-	
+
 	/**
 	 * Method broadcastCharInfo.
 	 */
-	@Override
 	public void broadcastCharInfo()
-	{
-		if (_broadcastCharInfoTask != null)
-		{
-			return;
-		}
-		_broadcastCharInfoTask = ThreadPoolManager.getInstance().schedule(new BroadcastCharInfoTask(), Config.BROADCAST_CHAR_INFO_INTERVAL);
-	}
-	
-	/**
-	 * Method broadcastCharInfoImpl.
-	 */
-	public void broadcastCharInfoImpl()
 	{
 		for (Player player : World.getAroundPlayers(this))
 		{
 			player.sendPacket(new CharInfo(this));
 		}
 	}
-	
+
 	/**
 	 * Method startPvPFlag.
 	 * @param target Creature
@@ -649,7 +569,7 @@ public class ClonePlayer extends Playable
 		}
 		return list;
 	}
-	
+
 	/**
 	 * Method startAttackStanceTask.
 	 */
@@ -694,7 +614,7 @@ public class ClonePlayer extends Playable
 		}
 		return super.getEvents();
 	}
-	
+
 	/**
 	 * Method isAutoAttackable.
 	 * @param attacker Creature
@@ -715,6 +635,7 @@ public class ClonePlayer extends Playable
 	{
 		return _owner.getLevel();
 	}
+	
 	
 	/**
 	 * Method notifyOwerStartAttak.
@@ -770,17 +691,18 @@ public class ClonePlayer extends Playable
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
 	@Override
 	public long getWearedMask()
 	{
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
+
 	@Override
 	public void doPickupItem(GameObject object)
 	{
 		// TODO Auto-generated method stub
+		
 	}
 }

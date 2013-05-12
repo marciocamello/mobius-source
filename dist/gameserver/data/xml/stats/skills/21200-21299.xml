@@ -718,8 +718,8 @@
 			<mul order="0x30" stat="pAtk" val="1.05"/>
 			<mul order="0x30" stat="mAtk" val="1.05"/>
 			<add order="0x30" stat="mAtk" val="2"/>		
-			<add stat="rCrit" order="0x40" value="90"/>
-			<add stat="mCritDamage" order="0x40" value="68"/>
+			<add stat="rCrit" order="0x40" val="90"/>
+			<add stat="mCritDamage" order="0x40" val="68"/>
 		</for>
 	</skill>
 	<skill id="21262" levels="1" name="Bad Bunny's Earring">

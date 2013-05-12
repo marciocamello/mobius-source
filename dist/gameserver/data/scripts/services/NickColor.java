@@ -60,13 +60,13 @@ public class NickColor extends Functions
 		if (param[0].equalsIgnoreCase("FFFFFF"))
 		{
 			player.setNameColor(Integer.decode("0xFFFFFF"));
-			player.broadcastUserInfo(true);
+			player.broadcastUserInfo();
 			return;
 		}
 		if (player.getInventory().destroyItemByItemId(Config.SERVICES_CHANGE_NICK_COLOR_ITEM, Config.SERVICES_CHANGE_NICK_COLOR_PRICE))
 		{
 			player.setNameColor(Integer.decode("0x" + param[0]));
-			player.broadcastUserInfo(true);
+			player.broadcastUserInfo();
 		}
 		else if (Config.SERVICES_CHANGE_NICK_COLOR_ITEM == 57)
 		{

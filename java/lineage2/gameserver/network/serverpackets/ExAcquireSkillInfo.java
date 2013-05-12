@@ -1,15 +1,3 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
@@ -17,17 +5,13 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.SkillLearn;
 import lineage2.gameserver.tables.SkillTable;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
 public class ExAcquireSkillInfo extends L2GameServerPacket
 {
 	/**
 	 * Field skillLearn.
 	 */
 	private final SkillLearn skillLearn;
-	
+
 	/**
 	 * Constructor for ExAcquireSkillInfo.
 	 * @param player Player
@@ -37,18 +21,16 @@ public class ExAcquireSkillInfo extends L2GameServerPacket
 	{
 		this.skillLearn = skillLearn;
 	}
-	
-	/**
-	 * Method writeImpl.
-	 */
-	@Override
-	protected void writeImpl()
-	{
-		writeEx(0xFB);
+
+    @Override
+    protected void writeImpl()
+    {
+		writeEx(0xFC);
 		writeD(skillLearn.getId());
 		writeD(skillLearn.getLevel());
 		writeD(skillLearn.getCost());
 		writeH(skillLearn.getMinLevel());
+        writeH(0);  // Tauti
 		writeD(skillLearn.getRequiredItems().size());
 		for (int itemId : skillLearn.getRequiredItems().keySet())
 		{
@@ -70,5 +52,5 @@ public class ExAcquireSkillInfo extends L2GameServerPacket
 		{
 			writeD(0x00);
 		}
-	}
+    }
 }

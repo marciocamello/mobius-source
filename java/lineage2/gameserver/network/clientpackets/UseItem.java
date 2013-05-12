@@ -22,8 +22,6 @@ import lineage2.gameserver.skills.TimeStamp;
 import lineage2.gameserver.tables.PetDataTable;
 
 /**
- * @author Mobius
- * @version $Revision: 1.0 $
  */
 public class UseItem extends L2GameClientPacket
 {
@@ -139,5 +137,6 @@ public class UseItem extends L2GameClientPacket
 				}
 			}
 		}
+		activeChar.getListeners().onUseItem(item); // DynamicQuest
 	}
 }

@@ -27,6 +27,7 @@ import lineage2.gameserver.skills.effects.EffectBluff;
 import lineage2.gameserver.skills.effects.EffectBuff;
 import lineage2.gameserver.skills.effects.EffectCPDamPercent;
 import lineage2.gameserver.skills.effects.EffectCallSkills;
+import lineage2.gameserver.skills.effects.EffectCannotTarget;
 import lineage2.gameserver.skills.effects.EffectCharge;
 import lineage2.gameserver.skills.effects.EffectChargesOverTime;
 import lineage2.gameserver.skills.effects.EffectCharmOfCourage;
@@ -42,6 +43,7 @@ import lineage2.gameserver.skills.effects.EffectDestroySummon;
 import lineage2.gameserver.skills.effects.EffectDisarm;
 import lineage2.gameserver.skills.effects.EffectDiscord;
 import lineage2.gameserver.skills.effects.EffectDispelEffects;
+import lineage2.gameserver.skills.effects.EffectDispelOnHIt;
 import lineage2.gameserver.skills.effects.EffectEnervation;
 import lineage2.gameserver.skills.effects.EffectFakeDeath;
 import lineage2.gameserver.skills.effects.EffectFear;
@@ -50,6 +52,7 @@ import lineage2.gameserver.skills.effects.EffectGrow;
 import lineage2.gameserver.skills.effects.EffectHPDamPercent;
 import lineage2.gameserver.skills.effects.EffectHate;
 import lineage2.gameserver.skills.effects.EffectHeal;
+import lineage2.gameserver.skills.effects.EffectHealAndDamage;
 import lineage2.gameserver.skills.effects.EffectHealBlock;
 import lineage2.gameserver.skills.effects.EffectHealCPPercent;
 import lineage2.gameserver.skills.effects.EffectHealHPCP;
@@ -57,6 +60,7 @@ import lineage2.gameserver.skills.effects.EffectHealOverTime;
 import lineage2.gameserver.skills.effects.EffectHealPercent;
 import lineage2.gameserver.skills.effects.EffectHellBinding;
 import lineage2.gameserver.skills.effects.EffectHourglass;
+import lineage2.gameserver.skills.effects.EffectHpToOne;
 import lineage2.gameserver.skills.effects.EffectImmobilize;
 import lineage2.gameserver.skills.effects.EffectIncreaseChargesOverTime;
 import lineage2.gameserver.skills.effects.EffectInterrupt;
@@ -202,7 +206,7 @@ public enum EffectType
 	/**
 	 * Field Disarm.
 	 */
-	Disarm(EffectDisarm.class, null, true),
+	Disarm(EffectDisarm.class, null, Stats.DISARM_RESIST, Stats.DISARM_POWER, true),
 	/**
 	 * Field Discord.
 	 */
@@ -236,6 +240,10 @@ public enum EffectType
 	 */
 	Heal(EffectHeal.class, null, false),
 	/**
+	 * Field Heal.
+	 */
+	HealAndDamage(EffectHealAndDamage.class, null, false),
+	/**
 	 * Field HealBlock.
 	 */
 	HealBlock(EffectHealBlock.class, null, true),
@@ -258,11 +266,15 @@ public enum EffectType
 	/**
 	 * Field HellBinding.
 	 */
-	HellBinding(EffectHellBinding.class, null, false),
+	HellBinding(EffectHellBinding.class, AbnormalEffect.S_HELLBINDING, true),
 	/**
 	 * Field HPDamPercent.
 	 */
 	HPDamPercent(EffectHPDamPercent.class, null, true),
+	/**
+	 * Field HpToOne.
+	 */
+	HpToOne(EffectHpToOne.class, null, true),
 	/**
 	 * Field IncreaseChargesOverTime.
 	 */
@@ -368,6 +380,10 @@ public enum EffectType
 	 */
 	Relax(EffectRelax.class, null, true),
 	/**
+	 * Field CannotTarget.
+	 */
+	CannotTarget(EffectCannotTarget.class, null, true),
+	/**
 	 * Field RemoveTarget.
 	 */
 	RemoveTarget(EffectRemoveTarget.class, null, true),
@@ -408,6 +424,10 @@ public enum EffectType
 	 */
 	Stun(EffectStun.class, AbnormalEffect.STUN, Stats.STUN_RESIST, Stats.STUN_POWER, true),
 	/**
+	 * Field DispelOnHit.
+	 */
+	DispelOnHit(EffectDispelOnHIt.class, null, true),
+	/**
 	 * Field SummonSkill.
 	 */
 	SummonSkill(EffectSummonSkill.class, null, true),
@@ -418,7 +438,7 @@ public enum EffectType
 	/**
 	 * Field Transformation.
 	 */
-	Transformation(EffectTransformation.class, null, true),
+	Transformation(EffectTransformation.class, null, Stats.MUTATE_RESIST, Stats.MUTATE_POWER, true),
 	/**
 	 * Field UnAggro.
 	 */
@@ -434,7 +454,7 @@ public enum EffectType
 	/**
 	 * Field TargetToMe.
 	 */
-	TargetToMe(EffectTargetToMe.class, null, true),
+	TargetToMe(EffectTargetToMe.class, null, Stats.PULL_RESIST, Stats.PULL_POWER, true),
 	/**
 	 * Field TargetToOwner.
 	 */
@@ -470,11 +490,11 @@ public enum EffectType
 	/**
 	 * Field KnockDown.
 	 */
-	KnockDown(EffectKnockDown.class, null, true),
+	KnockDown(EffectKnockDown.class, AbnormalEffect.S_51, Stats.KNOCKDOWN_RESIST, Stats.KNOCKDOWN_POWER, true),
 	/**
 	 * Field KnockBack.
 	 */
-	KnockBack(EffectKnockBack.class, null, true),
+	KnockBack(EffectKnockBack.class, null, Stats.KNOCKBACK_RESIST, Stats.KNOCKBACK_POWER, true),
 	/**
 	 * Field ShadowStep
 	 */

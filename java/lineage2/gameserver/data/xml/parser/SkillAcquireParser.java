@@ -97,6 +97,10 @@ public final class SkillAcquireParser extends AbstractDirParser<SkillAcquireHold
 		{
 			getHolder().addAllCertificationLearns(parseSkillLearn(iterator.next()));
 		}
+		for (Iterator<Element> iterator = rootElement.elementIterator("dualclass_certification_skill_tree"); iterator.hasNext();)
+		{
+			getHolder().addAllDualCertificationLearns(parseSkillLearn(iterator.next()));
+		}
 		for (Iterator<Element> iterator = rootElement.elementIterator("sub_unit_skill_tree"); iterator.hasNext();)
 		{
 			getHolder().addAllSubUnitLearns(parseSkillLearn(iterator.next()));
@@ -133,7 +137,7 @@ public final class SkillAcquireParser extends AbstractDirParser<SkillAcquireHold
 		}
 		for (Iterator<Element> iterator = rootElement.elementIterator("normal_skill_tree"); iterator.hasNext();)
 		{
-			HashMap<Integer, List<SkillLearn>> map = new HashMap<>();
+			HashMap<Integer, List<SkillLearn>> map = new HashMap<Integer, List<SkillLearn>>();
 			Element nxt = iterator.next();
 			for (Iterator<Element> classIterator = nxt.elementIterator("class"); classIterator.hasNext();)
 			{
@@ -157,18 +161,18 @@ public final class SkillAcquireParser extends AbstractDirParser<SkillAcquireHold
 		}
 		for (Iterator<Element> iterator = rootElement.elementIterator("awakening_keep_skill_tree"); iterator.hasNext();)
 		{
-			HashMap<Integer, HashMap<Integer, List<Integer>>> map = new HashMap<>();
+			HashMap <Integer, HashMap<Integer,List<Integer>> > map = new HashMap<Integer, HashMap<Integer,List<Integer>>>();
 			Element nxt = iterator.next();
 			for (Iterator<Element> awakenClassIterator = nxt.elementIterator("awakenClass"); awakenClassIterator.hasNext();)
 			{
 				Element awakenClass = awakenClassIterator.next();
 				int awakenClassId = Integer.parseInt(awakenClass.attributeValue("id"));
-				HashMap<Integer, List<Integer>> transferClassList = new HashMap<>();
-				for (Iterator<Element> fromClassIterator = awakenClass.elementIterator("fromClass"); fromClassIterator.hasNext();)
+				HashMap<Integer,List<Integer>> transferClassList = new HashMap<Integer,List<Integer>>();
+				for(Iterator <Element> fromClassIterator = awakenClass.elementIterator("fromClass"); fromClassIterator.hasNext();)
 				{
 					Element fromClass = fromClassIterator.next();
 					int fromClassId = Integer.parseInt(fromClass.attributeValue("id"));
-					List<Integer> keepSkill = parseKeepSkill(fromClass);
+					List <Integer> keepSkill = parseKeepSkill(fromClass);
 					transferClassList.put(fromClassId, keepSkill);
 				}
 				map.put(awakenClassId, transferClassList);
@@ -184,7 +188,7 @@ public final class SkillAcquireParser extends AbstractDirParser<SkillAcquireHold
 	 */
 	private List<SkillLearn> parseSkillLearn(Element tree)
 	{
-		List<SkillLearn> skillLearns = new ArrayList<>();
+		List<SkillLearn> skillLearns = new ArrayList<SkillLearn>();
 		for (Iterator<Element> iterator = tree.elementIterator("skill"); iterator.hasNext();)
 		{
 			Element element = iterator.next();
@@ -195,9 +199,10 @@ public final class SkillAcquireParser extends AbstractDirParser<SkillAcquireHold
 			int item_id = element.attributeValue("item_id") == null ? 0 : Integer.parseInt(element.attributeValue("item_id"));
 			long item_count = element.attributeValue("item_count") == null ? 1 : Long.parseLong(element.attributeValue("item_count"));
 			boolean clicked = (element.attributeValue("clicked") != null) && Boolean.parseBoolean(element.attributeValue("clicked"));
+			boolean deprecated = (element.attributeValue("deprecated") != null) && Boolean.parseBoolean(element.attributeValue("deprecated"));
 			Race race = element.attributeValue("race") == null ? null : Race.valueOf(element.attributeValue("race"));
 			
-			skillLearns.add(new SkillLearn(id, level, min_level, cost, item_id, item_count, clicked, race, new HashMap<Integer, Long>(), new ArrayList<Integer>()));
+			skillLearns.add(new SkillLearn(id, level, min_level, cost, item_id, item_count, clicked, deprecated, race, new HashMap<Integer, Long>(), new ArrayList<Integer>()));
 		}
 		return skillLearns;
 	}
@@ -209,7 +214,7 @@ public final class SkillAcquireParser extends AbstractDirParser<SkillAcquireHold
 	 */
 	private List<Integer> parseKeepSkill(Element tree)
 	{
-		List<Integer> skillRemove = new ArrayList<>();
+		List <Integer> skillRemove = new ArrayList<Integer>();
 		for (Iterator<Element> iterator = tree.elementIterator("keepSkill"); iterator.hasNext();)
 		{
 			Element element = iterator.next();
@@ -217,5 +222,5 @@ public final class SkillAcquireParser extends AbstractDirParser<SkillAcquireHold
 			skillRemove.add(id);
 		}
 		return skillRemove;
-	}
+	}	
 }

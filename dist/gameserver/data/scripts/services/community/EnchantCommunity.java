@@ -327,7 +327,7 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 				EhchantItem.setEnchantLevel(EchantVal);
 				activeChar.getInventory().equipItem(EhchantItem);
 				activeChar.sendPacket(new InventoryUpdate().addModifiedItem(EhchantItem));
-				activeChar.broadcastUserInfo(true);
+				activeChar.broadcastUserInfo();
 				activeChar.sendMessage("" + EhchantItem.getTemplate().getName() + " was enchanted to " + EchantVal + ". Thanks.");
 				onBypassCommand(activeChar, "_bbsechant;");
 			}
@@ -361,7 +361,7 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 					EhchantItem.setAttributeElement(el, EchantVal);
 					activeChar.getInventory().equipItem(EhchantItem);
 					activeChar.sendPacket(new InventoryUpdate().addModifiedItem(EhchantItem));
-					activeChar.broadcastUserInfo(true);
+					activeChar.broadcastUserInfo();
 					activeChar.sendMessage("" + EhchantItem.getTemplate().getName() + " was enchanted to " + EchantVal + ". Thanks.");
 					onBypassCommand(activeChar, "_bbsechant;");
 				}
@@ -388,7 +388,7 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 					EhchantItem.setAttributeElement(el, EchantVal);
 					activeChar.getInventory().equipItem(EhchantItem);
 					activeChar.sendPacket(new InventoryUpdate().addModifiedItem(EhchantItem));
-					activeChar.broadcastUserInfo(true);
+					activeChar.broadcastUserInfo();
 					activeChar.sendMessage("" + EhchantItem.getTemplate().getName() + " was enchanted to " + EchantVal + ". Thanks.");
 					onBypassCommand(activeChar, "_bbsechant;");
 				}

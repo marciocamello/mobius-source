@@ -64,7 +64,7 @@ public final class RequestFlyMove extends L2GameClientPacket
 			return;
 		}
 		Location destLoc = point.getLocation();
-		activeChar.broadcastPacketToOthers(new ExFlyMoveBroadcast(activeChar, destLoc));
+		activeChar.broadcastPacketToOthers(new ExFlyMoveBroadcast(activeChar, 2, destLoc));
 		activeChar.setLoc(destLoc);
 		JumpTrack track = activeChar.getCurrentJumpTrack();
 		if (track == null)

@@ -22,7 +22,6 @@ import lineage2.gameserver.handler.voicecommands.impl.Help;
 import lineage2.gameserver.handler.voicecommands.impl.Offline;
 import lineage2.gameserver.handler.voicecommands.impl.Online;
 import lineage2.gameserver.handler.voicecommands.impl.Password;
-import lineage2.gameserver.handler.voicecommands.impl.Ping;
 import lineage2.gameserver.handler.voicecommands.impl.Repair;
 import lineage2.gameserver.handler.voicecommands.impl.ServerInfo;
 import lineage2.gameserver.handler.voicecommands.impl.Wedding;
@@ -67,7 +66,6 @@ public class VoicedCommandHandler extends AbstractHolder
 		registerVoicedCommandHandler(new Wedding());
 		registerVoicedCommandHandler(new WhoAmI());
 		registerVoicedCommandHandler(new Online());
-		registerVoicedCommandHandler(new Ping());
 		registerVoicedCommandHandler(new Password());
 	}
 	

@@ -185,10 +185,10 @@ public class SpawnManager
 		for (Spawner spawner : spawnerList)
 		{
 			npcSpawnCount += spawner.init();
-			if (((npcSpawnCount % 1000) == 0) && (npcSpawnCount != 0))
-			{
-				_log.info("SpawnManager: spawned " + npcSpawnCount + " npc for group: " + group);
-			}
+			//if (((npcSpawnCount % 1000) == 0) && (npcSpawnCount != 0))
+			//{
+			//	_log.info("SpawnManager: spawned " + npcSpawnCount + " npc for group: " + group);
+			//}
 		}
 		_log.info("SpawnManager: spawned " + npcSpawnCount + " npc; spawns: " + spawnerList.size() + "; group: " + group);
 	}

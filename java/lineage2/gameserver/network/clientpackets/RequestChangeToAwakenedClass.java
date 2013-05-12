@@ -62,6 +62,14 @@ public class RequestChangeToAwakenedClass extends L2GameClientPacket
 			{
 				return;
 			}
+			if (player.getLevel() < 85)
+			{
+				return;
+			}
+			if (player.getClassId().level() < 3)
+			{
+				return;
+			}
 			if (change != 1)
 			{
 				return;
@@ -73,13 +81,15 @@ public class RequestChangeToAwakenedClass extends L2GameClientPacket
 				{
 					if (player.getInventory().getCountOf(SCROLL_OF_AFTERLIFE) > 0)
 					{
-						player.getInventory().removeItemByItemId(SCROLL_OF_AFTERLIFE, 1);
-						if (player.getVarB("awakenByStoneOfDestiny", false))
+						player.getInventory().destroyItemByItemId(SCROLL_OF_AFTERLIFE, 1);
+						//player.getInventory().removeItemByItemId(SCROLL_OF_AFTERLIFE, 1);
+						if(player.getVarB("awakenByStoneOfDestiny", false))
 						{
 							int classTarget = player.getVarInt("classTarget");
 							int classKeepSkills = player.getVarInt("classKeepSkills");
-							player.getInventory().removeItemByItemId(STONE_OF_DESTINY, 1);
-							AwakingManager.getInstance().SetAwakingId(player, classTarget, classKeepSkills);
+							//player.getInventory().removeItemByItemId(STONE_OF_DESTINY, 1);
+							player.getInventory().destroyItemByItemId(STONE_OF_DESTINY, 1);
+							AwakingManager.getInstance().SetAwakingId(player,classTarget,classKeepSkills);
 						}
 						else
 						{
@@ -117,12 +127,12 @@ public class RequestChangeToAwakenedClass extends L2GameClientPacket
 			{
 				return;
 			}
-			if (player.getVarB("awakenByStoneOfDestiny", false))
+			if(player.getVarB("awakenByStoneOfDestiny", false))
 			{
 				int classTarget = player.getVarInt("classTarget");
 				int classKeepSkills = player.getVarInt("classKeepSkills");
 				player.getInventory().removeItemByItemId(STONE_OF_DESTINY, 1);
-				AwakingManager.getInstance().SetAwakingId(player, classTarget, classKeepSkills);
+				AwakingManager.getInstance().SetAwakingId(player,classTarget,classKeepSkills);
 			}
 			else
 			{

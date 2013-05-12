@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="36600" name="a_royal_guardA_MHuman" title="-_-">
+	<npc id="36600" name="Revolutionary" title="Gludio">
 		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
@@ -44,7 +44,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36601" name="a_royal_guardA_MHuman" title="-_-">
+	<npc id="36601" name="Revolutionary" title="Dion">
 		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
@@ -87,7 +87,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36602" name="a_royal_guardA_MHuman" title="-_-">
+	<npc id="36602" name="Revolutionary" title="Giran">
 		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
@@ -130,7 +130,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36603" name="a_royal_guardA_MHuman" title="-_-">
+	<npc id="36603" name="Revolutionary" title="Oren">
 		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
@@ -173,7 +173,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36604" name="a_royal_guardA_MHuman" title="-_-">
+	<npc id="36604" name="Revolutionary" title="Aden">
 		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
@@ -216,7 +216,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36605" name="a_royal_guardA_MHuman" title="-_-">
+	<npc id="36605" name="Revolutionary" title="Innadril">
 		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
@@ -259,7 +259,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36606" name="a_royal_guardA_MHuman" title="-_-">
+	<npc id="36606" name="Revolutionary" title="Goddard">
 		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
@@ -302,7 +302,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36607" name="a_royal_guardA_MHuman" title="-_-">
+	<npc id="36607" name="Revolutionary" title="Rune">
 		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
@@ -345,7 +345,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36608" name="a_royal_guardA_MHuman" title="-_-">
+	<npc id="36608" name="Revolutionary" title="Schuttgart">
 		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
@@ -388,7 +388,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36609" name="a_teleporter_FElf" title="-_-">
+	<npc id="36609" name="Proclaimer" title="Gludio">
 		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
@@ -431,7 +431,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36610" name="a_teleporter_FElf" title="-_-">
+	<npc id="36610" name="Proclaimer" title="Dion">
 		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
@@ -474,7 +474,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36611" name="a_teleporter_FElf" title="-_-">
+	<npc id="36611" name="Proclaimer" title="Giran">
 		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
@@ -517,7 +517,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36612" name="a_teleporter_FElf" title="-_-">
+	<npc id="36612" name="Proclaimer" title="Oren">
 		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
@@ -560,7 +560,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36613" name="a_teleporter_FElf" title="-_-">
+	<npc id="36613" name="Proclaimer" title="Aden">
 		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
@@ -603,7 +603,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36614" name="a_teleporter_FElf" title="-_-">
+	<npc id="36614" name="Proclaimer" title="Innadril">
 		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
@@ -646,7 +646,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36615" name="a_teleporter_FElf" title="-_-">
+	<npc id="36615" name="Proclaimer" title="Goddard">
 		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
@@ -689,7 +689,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36616" name="a_teleporter_FElf" title="-_-">
+	<npc id="36616" name="Proclaimer" title="Rune">
 		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
@@ -732,7 +732,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-		<npc id="36617" name="a_teleporter_FElf" title="-_-">
+	<npc id="36617" name="Proclaimer" title="Schuttgart">
 		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
@@ -775,7 +775,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-		<npc id="36618" name="lilim_wizard" title="-_-">
+	<npc id="36618" name="Chamberlain of Darkness" title="">
 		<!--by Awakeninger-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
@@ -818,7 +818,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36619" name="lilim_wizard" title="-_-">
+	<npc id="36619" name="Chamberlain of Darkness" title="">
 		<!--by Awakeninger-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
@@ -861,7 +861,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36620" name="lilim_wizard" title="-_-">
+	<npc id="36620" name="Chamberlain of Darkness" title="">
 		<!--by Awakeninger-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
@@ -904,7 +904,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36621" name="lilim_wizard" title="-_-">
+	<npc id="36621" name="Chamberlain of Darkness" title="">
 		<!--by Awakeninger-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
@@ -947,7 +947,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36622" name="lilim_wizard" title="-_-">
+	<npc id="36622" name="Chamberlain of Darkness" title="">
 		<!--by Awakeninger-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
@@ -990,7 +990,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36623" name="lilim_wizard" title="-_-">
+	<npc id="36623" name="Chamberlain of Darkness" title="">
 		<!--by Awakeninger-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
@@ -1033,7 +1033,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36624" name="lilim_wizard" title="-_-">
+	<npc id="36624" name="Chamberlain of Darkness" title="">
 		<!--by Awakeninger-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
@@ -1076,7 +1076,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36625" name="lilim_wizard" title="-_-">
+	<npc id="36625" name="Chamberlain of Darkness" title="">
 		<!--by Awakeninger-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
@@ -1119,7 +1119,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="36626" name="lilim_wizard" title="-_-">
+	<npc id="36626" name="Chamberlain of Darkness" title="">
 		<!--by Awakeninger-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>

@@ -45,10 +45,10 @@ public class TutorialGuides extends ScriptItemHandler
 		switch (itemId)
 		{
 			case 32777:
-				playable.getPlayer().sendPacket(new TutorialShowHtml(TutorialShowHtml.GUIDE, 0x02));
+				playable.getPlayer().sendPacket(new TutorialShowHtml(TutorialShowHtml.GUIDE_ADVENTURER, 0x02));
 				break;
 			case 32778:
-				playable.getPlayer().sendPacket(new TutorialShowHtml(TutorialShowHtml.GUIDE_Aw, 0x02));
+				playable.getPlayer().sendPacket(new TutorialShowHtml(TutorialShowHtml.GUIDE_AWAKING, 0x02));
 				break;
 			default:
 				return false;

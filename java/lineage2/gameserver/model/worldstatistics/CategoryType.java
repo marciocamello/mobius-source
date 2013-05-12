@@ -1,20 +1,6 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package lineage2.gameserver.model.worldstatistics;
 
-import static lineage2.gameserver.dao.WorldStatisticDAO.UPDATE_STATISTIC_MODE_ADD;
-import static lineage2.gameserver.dao.WorldStatisticDAO.UPDATE_STATISTIC_MODE_INSERT_MAX;
-import static lineage2.gameserver.dao.WorldStatisticDAO.UPDATE_STATISTIC_MODE_REPLACE;
+import static lineage2.gameserver.dao.WorldStatisticDAO.*;
 
 public enum CategoryType
 {
@@ -25,7 +11,7 @@ public enum CategoryType
 	TIME_IN_BATTLE(3), // TODO
 	TIME_IN_PARTY(4),
 	TIME_IN_FULLPARTY(5),
-	
+
 	WEAPON_ENCHANT_MAX(21),
 	WEAPON_ENCHANT_MAX_D(21, 1, UPDATE_STATISTIC_MODE_REPLACE),
 	WEAPON_ENCHANT_MAX_C(21, 2, UPDATE_STATISTIC_MODE_REPLACE),
@@ -37,7 +23,7 @@ public enum CategoryType
 	WEAPON_ENCHANT_MAX_R(21, 8, UPDATE_STATISTIC_MODE_REPLACE),
 	WEAPON_ENCHANT_MAX_R95(21, 10, UPDATE_STATISTIC_MODE_REPLACE),
 	WEAPON_ENCHANT_MAX_R99(21, 11, UPDATE_STATISTIC_MODE_REPLACE),
-	
+
 	ARMOR_ENCHANT_MAX(23),
 	ARMOR_ENCHANT_MAX_D(23, 1, UPDATE_STATISTIC_MODE_REPLACE),
 	ARMOR_ENCHANT_MAX_C(23, 2, UPDATE_STATISTIC_MODE_REPLACE),
@@ -49,7 +35,7 @@ public enum CategoryType
 	ARMOR_ENCHANT_MAX_R(23, 8, UPDATE_STATISTIC_MODE_REPLACE),
 	ARMOR_ENCHANT_MAX_R95(23, 9, UPDATE_STATISTIC_MODE_REPLACE),
 	ARMOR_ENCHANT_MAX_R99(23, 10, UPDATE_STATISTIC_MODE_REPLACE),
-	
+
 	WEAPON_ENCHANT_TRY(22),
 	WEAPON_ENCHANT_TRY_D(22, 1, UPDATE_STATISTIC_MODE_REPLACE),
 	WEAPON_ENCHANT_TRY_C(22, 2, UPDATE_STATISTIC_MODE_REPLACE),
@@ -61,7 +47,7 @@ public enum CategoryType
 	WEAPON_ENCHANT_TRY_R(22, 8, UPDATE_STATISTIC_MODE_REPLACE),
 	WEAPON_ENCHANT_TRY_R95(22, 9, UPDATE_STATISTIC_MODE_REPLACE),
 	WEAPON_ENCHANT_TRY_R99(22, 10, UPDATE_STATISTIC_MODE_REPLACE),
-	
+
 	ARMOR_ENCHANT_TRY(24),
 	ARMOR_ENCHANT_TRY_D(24, 1, UPDATE_STATISTIC_MODE_REPLACE),
 	ARMOR_ENCHANT_TRY_C(24, 2, UPDATE_STATISTIC_MODE_REPLACE),
@@ -73,10 +59,10 @@ public enum CategoryType
 	ARMOR_ENCHANT_TRY_R(24, 8, UPDATE_STATISTIC_MODE_REPLACE),
 	ARMOR_ENCHANT_TRY_R95(24, 9, UPDATE_STATISTIC_MODE_REPLACE),
 	ARMOR_ENCHANT_TRY_R99(24, 10, UPDATE_STATISTIC_MODE_REPLACE),
-	
+
 	PRIVATE_SELL_COUNT(11),
 	QUESTS_COMPLETED(12),
-	
+
 	SS_CONSUMED(13),
 	SS_CONSUMED_D(13, 1),
 	SS_CONSUMED_C(13, 2),
@@ -84,7 +70,7 @@ public enum CategoryType
 	SS_CONSUMED_A(13, 4),
 	SS_CONSUMED_S(13, 5),
 	SS_CONSUMED_R(13, 8),
-	
+
 	// SS & BSS
 	SPS_CONSUMED(14),
 	SPS_CONSUMED_D(14, 1),
@@ -93,10 +79,10 @@ public enum CategoryType
 	SPS_CONSUMED_A(14, 4),
 	SPS_CONSUMED_S(14, 5),
 	SPS_CONSUMED_R(14, 8),
-	
+
 	RESURRECTED_CHAR_COUNT(18),
 	RESURRECTED_BY_OTHER_COUNT(19),
-	
+
 	DIE_COUNT(20),
 	// Hunting field section
 	MONSTERS_KILLED(1000),
@@ -129,7 +115,7 @@ public enum CategoryType
 	DAMAGE_FROM_MONSTERS_WYNN_SUMMONER(1005, 145),
 	DAMAGE_FROM_MONSTERS_AEORE_HEALER(1005, 146),
 	KILLED_BY_MONSTER_COUNT(1002),
-	
+
 	// Raid section
 	EPIC_BOSS_KILLS(1006),
 	EPIC_BOSS_KILLS_25774(1006, 1025774),
@@ -144,7 +130,7 @@ public enum CategoryType
 	EPIC_BOSS_KILLS_25867(1006, 1025867),
 	EPIC_BOSS_KILLS_29212(1006, 1029212),
 	EPIC_BOSS_KILLS_29197(1006, 1029197),
-	
+
 	// PVP section
 	PK_COUNT(2004),
 	PVP_COUNT(2005),
@@ -177,11 +163,11 @@ public enum CategoryType
 	DAMAGE_FROM_PC_FEOH_WIZARD(2008, 144),
 	DAMAGE_FROM_PC_WYNN_SUMMONER(2008, 145),
 	DAMAGE_FROM_PC_AEORE_HEALER(2008, 146),
-	
+
 	// Clan section
 	MEMBERS_COUNT(3000, UPDATE_STATISTIC_MODE_REPLACE), // TODO[K] - released
-														// this category in
-														// WSManager
+	                                                    // this category in
+	                                                    // WSManager
 	INVITED_COUNT(3001), // TODO[K] - released this category in WSManager
 	LEAVED_COUNT(3002), // TODO[K] - released this category in WSManager
 	REPUTATION_COUNT(3003), // TODO[K] - released this category in WSManager
@@ -191,51 +177,49 @@ public enum CategoryType
 	private final int _id;
 	private final int _subcat;
 	private final int _saveMode;
-	
+
 	private CategoryType(int id)
 	{
 		_id = id;
 		_subcat = 0;
 		_saveMode = UPDATE_STATISTIC_MODE_ADD;
-		
+
 	}
-	
+
 	private CategoryType(int id, int subcat)
 	{
 		_id = id;
 		_subcat = subcat;
 		_saveMode = UPDATE_STATISTIC_MODE_ADD;
 	}
-	
+
 	private CategoryType(int id, int subcat, int saveMode)
 	{
 		_id = id;
 		_subcat = subcat;
 		_saveMode = saveMode;
 	}
-	
+
 	public static CategoryType getCategoryById(int catId, int subcatId)
 	{
 		for (CategoryType category : values())
 		{
 			if ((category.getClientId() == catId) && (category.getSubcat() == subcatId))
-			{
 				return category;
-			}
 		}
 		return null;
 	}
-	
+
 	public final int getClientId()
 	{
 		return _id;
 	}
-	
+
 	public final int getSubcat()
 	{
 		return _subcat;
 	}
-	
+
 	public int getSaveMode()
 	{
 		return _saveMode;

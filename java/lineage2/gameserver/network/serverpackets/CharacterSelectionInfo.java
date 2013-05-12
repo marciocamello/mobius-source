@@ -1,15 +1,3 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package lineage2.gameserver.network.serverpackets;
 
 import java.sql.Connection;
@@ -28,165 +16,146 @@ import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.base.SubClassType;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.utils.AutoBan;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
 public class CharacterSelectionInfo extends L2GameServerPacket
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(CharacterSelectionInfo.class);
-	/**
-	 * Field _loginName.
-	 */
-	private final String _loginName;
-	/**
-	 * Field _sessionId.
-	 */
-	private final int _sessionId;
-	/**
-	 * Field charSelectionInfo.
-	 */
-	private final CharSelectionInfo charSelectionInfo;
-	
-	/**
-	 * Constructor for CharacterSelectionInfo.
-	 * @param loginName String
-	 * @param sessionId int
-	 */
+
+	private String _loginName;
+
+	private int _sessionId;
+
+	private CharSelectionInfo charSelectionInfo;
+
 	public CharacterSelectionInfo(String loginName, int sessionId)
 	{
 		_sessionId = sessionId;
 		_loginName = loginName;
 		charSelectionInfo = loadCharacterSelectInfo(loginName);
 	}
-	
-	/**
-	 * Method getCharInfo.
-	 * @return CharSelectionInfo
-	 */
+
 	public CharSelectionInfo getCharInfo()
 	{
 		return charSelectionInfo;
 	}
-	
-	/**
-	 * Method writeImpl.
-	 */
+
 	@Override
 	protected final void writeImpl()
 	{
 		int size = charSelectionInfo.size();
+
 		writeC(0x09);
 		writeD(size);
 		writeD(0x07);
 		writeC(0x00);
 		writeC(0x01);
 		writeD(0x00);
-		long lastAccess = 0;
+
+		long lastAccess = -1L;
+		int lastUsed = -1;
 		for (CharSelectInfoPackage info : charSelectionInfo)
-		{
 			if (lastAccess < info.getLastAccess())
 			{
 				lastAccess = info.getLastAccess();
+				lastUsed++;
 			}
-		}
+		int i = 0;
 		for (CharSelectInfoPackage charInfoPackage : charSelectionInfo)
 		{
 			writeS(charInfoPackage.getName());
-			writeD(charInfoPackage.getCharId());
+			writeD(charInfoPackage.getCharId()); // ?
 			writeS(_loginName);
 			writeD(_sessionId);
 			writeD(charInfoPackage.getClanId());
-			writeD(0x00);
+			writeD(0x00); // ??
+
 			writeD(charInfoPackage.getSex());
 			writeD(charInfoPackage.getRace());
 			writeD(charInfoPackage.getBaseClassId());
+
 			writeD(0x01);
+
 			writeD(charInfoPackage.getX());
 			writeD(charInfoPackage.getY());
 			writeD(charInfoPackage.getZ());
+
 			writeF(charInfoPackage.getCurrentHp());
 			writeF(charInfoPackage.getCurrentMp());
+
 			writeD(charInfoPackage.getSp());
 			writeQ(charInfoPackage.getExp());
 			int lvl = charInfoPackage.getLevel();
 			writeF(Experience.getExpPercent(lvl, charInfoPackage.getExp()));
 			writeD(lvl);
+
 			writeD(charInfoPackage.getKarma());
 			writeD(charInfoPackage.getPk());
 			writeD(charInfoPackage.getPvP());
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
+
+			for (int j = 0; j < 7; j++)
+				writeD(0x00);
+
 			for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
-			{
 				writeD(charInfoPackage.getPaperdollItemId(PAPERDOLL_ID));
-			}
-			if ((getClient().getRevision() == 411) || (getClient().getRevision() == 448))
-			{
-				writeD(0x00);
-				writeD(0x00);
-				writeD(0x00);
-				writeD(0x00);
-				writeD(0x00);
-				writeD(0x00);
-				writeD(0x00);
-				writeD(0x00);
-				writeD(0x00);
-			}
+
+			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_RHAND));
+			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_LHAND));
+			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_GLOVES));
+			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_CHEST));
+			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_LEGS));
+			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_FEET));
+                        writeD(0x00);
+			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_HAIR));
+			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_DHAIR));
+
 			writeD(charInfoPackage.getHairStyle());
 			writeD(charInfoPackage.getHairColor());
 			writeD(charInfoPackage.getFace());
-			writeF(charInfoPackage.getMaxHp());
-			writeF(charInfoPackage.getMaxMp());
+
+			writeF(charInfoPackage.getMaxHp()); // hp max
+			writeF(charInfoPackage.getMaxMp()); // mp max
+
 			writeD(charInfoPackage.getAccessLevel() > -100 ? charInfoPackage.getDeleteTimer() : -1);
 			writeD(charInfoPackage.getClassId());
-			writeD(charInfoPackage.getLastAccess() == lastAccess ? 1 : 0);
+			writeD(i == lastUsed ? 1 : 0);
+
 			writeC(Math.min(charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_RHAND), 127));
-			writeD(charInfoPackage.getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND));
+			//writeD(charInfoPackage.getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND));
+                        
+			writeH(0x00);
+			writeH(0x00);
+            
 			int weaponId = charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_RHAND);
-			if (weaponId == 8190)
-			{
+			if (weaponId == 8190) // Transform id
 				writeD(301);
-			}
 			else if (weaponId == 8689)
-			{
 				writeD(302);
-			}
 			else
-			{
 				writeD(0x00);
-			}
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
+
+                        for (int j = 0; j < 4; j++)
+                                writeD(0x00);
+                        
 			writeF(0x00);
 			writeF(0x00);
+
 			writeD(charSelectionInfo.getVitalityPoints());
+			writeD(200); // Vitality percent
+			writeD(0x00); //Vitaliti items count
 			writeD(charInfoPackage.getAccessLevel() > -100 ? 0x01 : 0x00);
+
+			writeC(0x00);
+			writeC(0x00);
+			i++;
 		}
 	}
-	
-	/**
-	 * Method loadCharacterSelectInfo.
-	 * @param loginName String
-	 * @return CharSelectionInfo
-	 */
+
 	public static CharSelectionInfo loadCharacterSelectInfo(String loginName)
 	{
 		CharSelectionInfo charSelectionInfo = new CharSelectionInfo();
+
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
@@ -197,9 +166,7 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 			statement.setString(1, loginName);
 			rset = statement.executeQuery();
 			while (rset.next())
-			{
 				charSelectionInfo.addSelectionInfo(restoreChar(rset));
-			}
 			DbUtils.closeQuietly(statement, rset);
 			statement = con.prepareStatement("SELECT `points` FROM `vitality_points` WHERE `account_name`=?");
 			statement.setString(1, loginName);
@@ -218,9 +185,10 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 		{
 			DbUtils.closeQuietly(con, statement, rset);
 		}
+
 		return charSelectionInfo;
 	}
-	
+
 	/**
 	 * Method restoreBaseClassId.
 	 * @param objId int
@@ -254,12 +222,7 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 		}
 		return classId;
 	}
-	
-	/**
-	 * Method restoreChar.
-	 * @param chardata ResultSet
-	 * @return CharSelectInfoPackage
-	 */
+
 	private static CharSelectInfoPackage restoreChar(ResultSet chardata)
 	{
 		CharSelectInfoPackage charInfopackage = null;
@@ -285,54 +248,54 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 			charInfopackage.setCurrentHp(chardata.getDouble("curHp"));
 			charInfopackage.setMaxMp(chardata.getInt("maxMp"));
 			charInfopackage.setCurrentMp(chardata.getDouble("curMp"));
+
 			charInfopackage.setX(chardata.getInt("x"));
 			charInfopackage.setY(chardata.getInt("y"));
 			charInfopackage.setZ(chardata.getInt("z"));
 			charInfopackage.setPk(chardata.getInt("pkkills"));
 			charInfopackage.setPvP(chardata.getInt("pvpkills"));
+
 			charInfopackage.setFace(chardata.getInt("face"));
 			charInfopackage.setHairStyle(chardata.getInt("hairstyle"));
 			charInfopackage.setHairColor(chardata.getInt("haircolor"));
 			charInfopackage.setSex(chardata.getInt("sex"));
+
 			charInfopackage.setExp(chardata.getLong("exp"));
 			charInfopackage.setSp(chardata.getInt("sp"));
 			charInfopackage.setClanId(chardata.getInt("clanid"));
+
 			charInfopackage.setKarma(chardata.getInt("karma"));
 			charInfopackage.setRace(race.ordinal());
 			charInfopackage.setClassId(classid);
-			charInfopackage.setBaseClassId(baseClassId[1]);
+			charInfopackage.setBaseClassId(baseClassId[0]);
 			long deletetime = chardata.getLong("deletetime");
 			int deletedays = 0;
 			if (Config.DELETE_DAYS > 0)
-			{
 				if (deletetime > 0)
 				{
-					deletetime = (int) ((System.currentTimeMillis() / 1000) - deletetime);
+					deletetime = (int) (System.currentTimeMillis() / 1000 - deletetime);
 					deletedays = (int) (deletetime / 3600 / 24);
 					if (deletedays >= Config.DELETE_DAYS)
 					{
 						CharacterDAO.getInstance().deleteCharByObjId(objectId);
 						return null;
 					}
-					deletetime = (Config.DELETE_DAYS * 3600 * 24) - deletetime;
+					deletetime = Config.DELETE_DAYS * 3600 * 24 - deletetime;
 				}
 				else
-				{
 					deletetime = 0;
-				}
-			}
 			charInfopackage.setDeleteTimer((int) deletetime);
 			charInfopackage.setLastAccess(chardata.getLong("lastAccess") * 1000L);
 			charInfopackage.setAccessLevel(chardata.getInt("accesslevel"));
-			if ((charInfopackage.getAccessLevel() < 0) && !AutoBan.isBanned(objectId))
-			{
+
+			if (charInfopackage.getAccessLevel() < 0 && !AutoBan.isBanned(objectId))
 				charInfopackage.setAccessLevel(0);
-			}
 		}
 		catch (Exception e)
 		{
 			_log.error("", e);
 		}
+
 		return charInfopackage;
 	}
 }

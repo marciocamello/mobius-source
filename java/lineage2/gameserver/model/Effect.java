@@ -604,6 +604,16 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		{
 			getEffected().getPlayer().getPlayerAccess().UseTeleport = true;
 		}
+		if(getEffected().isPlayer() && getEffected().getPlayer().getSummonList() != null)
+		{
+			for(Summon sm : getEffected().getPlayer().getSummonList())
+			{
+				if(sm.getEffectList().getEffectByType(EffectType.ServitorShare) != null)
+				{
+					sm.getEffectList().stopEffect(getSkill());
+				}
+			}
+		}
 	}
 	
 	/**

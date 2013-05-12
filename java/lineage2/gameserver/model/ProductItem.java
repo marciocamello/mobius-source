@@ -24,11 +24,11 @@ public class ProductItem
 	/**
 	 * Field NOT_LIMITED_START_TIME. (value is 315547200000)
 	 */
-	public static final long NOT_LIMITED_START_TIME = 315547200000L;
+	public static final long NOT_LIMITED_START_TIME = 315558000000L;
 	/**
 	 * Field NOT_LIMITED_END_TIME. (value is 2127445200000)
 	 */
-	public static final long NOT_LIMITED_END_TIME = 2127445200000L;
+	public static final long NOT_LIMITED_END_TIME = 2127452400000L;
 	/**
 	 * Field NOT_LIMITED_START_HOUR. (value is 0)
 	 */

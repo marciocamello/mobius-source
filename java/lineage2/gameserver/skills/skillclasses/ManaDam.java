@@ -83,8 +83,8 @@ public class ManaDam extends Skill
 					if (crit)
 					{
 						activeChar.sendPacket(Msg.MAGIC_CRITICAL_HIT);
-						// damage *= activeChar.calcStat(Stats.MCRITICAL_DAMAGE, activeChar.isPlayable() && target.isPlayable() ? 2. : 3., target, this);
 						damage *= 2.0;
+						damage += activeChar.getMagicCriticalDmg(target, this);
 					}
 					target.reduceCurrentMp(damage, activeChar);
 				}

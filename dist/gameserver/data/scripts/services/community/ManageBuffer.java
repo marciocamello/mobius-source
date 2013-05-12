@@ -27,7 +27,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.base.TeamType;
-import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.network.serverpackets.ShowBoard;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
@@ -40,8 +39,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @author Mobius
+ * @author vegax
  * @version $Revision: 1.0 $
+ * Summons Buff fix by vegax for L2JEuropa
  */
 public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoardHandler
 {
@@ -167,32 +167,17 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 			Skill skill = SkillTable.getInstance().getInfo(id, lvl);
 			if (!player.getVarB("isPlayerBuff"))
 			{
-				if (player.getSummonList().getPet() != null)
-				{
-					PetInstance pet = player.getSummonList().getPet();
-					for (EffectTemplate et : skill.getEffectTemplates())
-					{
-						Env env = new Env(pet, pet, skill);
-						Effect effect = et.getEffect(env);
-						effect.setPeriod(time);
-						pet.getEffectList().addEffect(effect);
-						pet.updateEffectIconsImpl();
-					}
-				}
-				if ((player.getSummonList() != null) && Config.BUFFER_SUMMON_ENABLE)
-				{
-					for (Summon pet : player.getSummonList())
+					for (Summon summon : player.getSummonList())
 					{
 						for (EffectTemplate et : skill.getEffectTemplates())
 						{
-							Env env = new Env(pet, pet, skill);
+							Env env = new Env(summon, summon, skill);
 							Effect effect = et.getEffect(env);
 							effect.setPeriod(time);
-							pet.getEffectList().addEffect(effect);
-							pet.updateEffectIconsImpl();
+							summon.getEffectList().addEffect(effect);
+							summon.updateEffectIconsImpl();
 						}
 					}
-				}
 			}
 			else
 			{
@@ -228,18 +213,12 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 			}
 			if (!player.getVarB("isPlayerBuff"))
 			{
-				if (player.getSummonList().getPet() != null)
+				if (player.getSummonList().getServitors() != null)
 				{
-					PetInstance pet = player.getSummonList().getPet();
-					pet.setCurrentHpMp(pet.getMaxHp(), pet.getMaxMp());
-					pet.setCurrentCp(pet.getMaxCp(), true);
-				}
-				if ((player.getSummonList() != null) && Config.BUFFER_SUMMON_ENABLE)
-				{
-					for (Summon pet : player.getSummonList())
+					for (Summon summon : player.getSummonList())
 					{
-						pet.setCurrentHpMp(pet.getMaxHp(), pet.getMaxMp());
-						pet.setCurrentCp(pet.getMaxCp(), true);
+						summon.setCurrentHpMp(summon.getMaxHp(), summon.getMaxMp());
+						summon.setCurrentCp(summon.getMaxCp(), true);
 					}
 				}
 			}
@@ -259,11 +238,11 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 			{
 				player.getEffectList().stopAllEffects();
 			}
-			else if (!player.getVarB("isPlayerBuff") && (player.getSummonList().getPet() != null))
+			else if (!player.getVarB("isPlayerBuff") && (player.getSummonList().getServitors() != null))
 			{
-				for (Summon pet : player.getSummonList())
+				for (Summon summon : player.getSummonList())
 				{
-					pet.getEffectList().stopAllEffects();
+					summon.getEffectList().stopAllEffects();
 				}
 			}
 			ShowHtml(mBypass[1], player);
@@ -373,7 +352,7 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 	private void ShowHtml(String name, Player player)
 	{
 		String html = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/buffer/" + name + ".htm", player);
-		html = html.replaceFirst("%aim%", player.getVarB("isPlayerBuff") ? "Character" : "Pet");
+		html = html.replaceFirst("%aim%", player.getVarB("isPlayerBuff") ? "Character" : "Summon");
 		html = html.replace("%pice%", GetStringCount(Config.COMMUNITYBOARD_BUFF_PICE));
 		html = html.replace("%group_pice%", GetStringCount(Config.COMMUNITYBOARD_BUFF_SAVE_PICE));
 		StringBuilder content = new StringBuilder("");
@@ -412,17 +391,17 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 				continue;
 			}
 			skill = SkillTable.getInstance().getInfo(i, lvl);
-			if (!player.getVarB("isPlayerBuff") && (player.getSummonList().getPet() != null))
+			if (!player.getVarB("isPlayerBuff") && (player.getSummonList().getServitors() != null))
 			{
 				for (EffectTemplate et : skill.getEffectTemplates())
 				{
-					for (Summon pet : player.getSummonList())
+					for (Summon summon : player.getSummonList())
 					{
-						Env env = new Env(pet, pet, skill);
+						Env env = new Env(summon, summon, skill);
 						Effect effect = et.getEffect(env);
 						effect.setPeriod(time);
-						pet.getEffectList().addEffect(effect);
-						pet.updateEffectIconsImpl();
+						summon.getEffectList().addEffect(effect);
+						summon.updateEffectIconsImpl();
 					}
 				}
 			}

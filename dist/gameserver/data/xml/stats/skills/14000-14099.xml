@@ -495,17 +495,25 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="14066" levels="11" name="Blind Light">
-    <!-- No effect. -->
-		<set name="icon" val="icon.skill1381"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="magicLevel" val="85"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill1258"/>
+		<set name="castRange" val="300"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="14067" levels="11" name="Big Blind Light">
-    <!-- No effect. -->
-		<set name="icon" val="icon.skill1381"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="magicLevel" val="85"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill1258"/>
+		<set name="castRange" val="300"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="14068" levels="6" name="Garden Inducement">

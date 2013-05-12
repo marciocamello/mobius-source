@@ -2,1003 +2,1003 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<etcitem id="35400" name="Материал Благословенного Шлема Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>   
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>   
 	<etcitem id="35401" name="Материал Благословенной Кирасы Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>   
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>   
 	<etcitem id="35402" name="Материал Благословенных Набедренников Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>   
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>   
 	<etcitem id="35403" name="Материал Благословенных Рукавиц Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>   
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>   
 	<etcitem id="35404" name="Материал Благословенных Сапог Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>   
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>   
 	<etcitem id="35405" name="Материал Благословенного Щита Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>   
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>   
 	<etcitem id="35406" name="Материал Благословенного Кожаного Шлема Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>   
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>   
 	<etcitem id="35407" name="Материал Благословенной Кожаной Кирасы Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>   
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>   
 	<etcitem id="35408" name="Материал Благословенных Кожаных Брюк Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>   
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>   
 	<etcitem id="35409" name="Материал Благословенных Кожаных Перчаток Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>   
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>   
 	<etcitem id="35410" name="Материал Благословенных Кожаных Сапог Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>   
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>   
 	<etcitem id="35411" name="Материал Благословенной Диадемы Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>   
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>   
 	<etcitem id="35412" name="Материал Благословенной Туники Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>   
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>   
 	<etcitem id="35413" name="Материал Благословенных Штанов Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>   
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>   
 	<etcitem id="35414" name="Материал Благословенных Перчаток Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>   
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>   
 	<etcitem id="35415" name="Материал Благословенных  Ботинок Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>   
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>   
 	<etcitem id="35416" name="Материал Благословенного Символа Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>   
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>   
 	<etcitem id="35417" name="Камень Благословенного Ожерелья Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>   
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>   
 	<etcitem id="35418" name="Камень Благословенной Серьги Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>   
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>   
 	<etcitem id="35419" name="Камень Благословенного Кольца Айдиоса">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35420" name="Рецепт: Острие Реквиема (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35421" name="Рецепт: Резак Реквиема (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35422" name="Рецепт: Эспадон Реквиема (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35423" name="Рецепт: Мститель Реквиема (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35424" name="Рецепт: Воитель Реквиема (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35425" name="Рецепт: Буревестник Реквиема (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35426" name="Рецепт: Бросок Реквиема (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35427" name="Рецепт: Страж Реквиема (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35428" name="Рецепт: Расчленитель Реквиема (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35429" name="Рецепт: Заклинатель Реквиема (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35430" name="Рецепт: Возмездие Реквиема (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35431" name="Рецепт: Шлем Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35432" name="Рецепт: Кираса Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35433" name="Рецепт: Набедренники Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35434" name="Рецепт: Рукавицы Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35435" name="Рецепт: Сапоги Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35436" name="Рецепт: Щит Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35437" name="Рецепт: Кожаный Шлем Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35438" name="Рецепт: Кожаная Кираса Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35439" name="Рецепт: Кожаные Брюки Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35440" name="Рецепт: Кожаные Перчатки Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35441" name="Рецепт: Кожаные Сапоги Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35442" name="Рецепт: Диадема Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35443" name="Рецепт: Туника Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35444" name="Рецепт: Штаны Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35445" name="Рецепт: Перчатки Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35446" name="Рецепт: Ботинки Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35447" name="Рецепт: Символ Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35448" name="Рецепт: Ожерелье Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35449" name="Рецепт: Серьга Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35450" name="Рецепт: Кольцо Бессмертия (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35451" name="Рецепт: Острие Апокалипсиса (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35452" name="Рецепт: Резак Апокалипсиса (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35453" name="Рецепт: Эспадон Апокалипсиса (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35454" name="Рецепт: Мститель Апокалипсиса (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35455" name="Рецепт: Воитель Апокалипсиса (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35456" name="Рецепт: Буревестник Апокалипсиса (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35457" name="Рецепт: Бросок Апокалипсиса (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35458" name="Рецепт: Страж Апокалипсиса (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35459" name="Рецепт: Расчленитель Апокалипсиса (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35460" name="Рецепт: Заклинатель Апокалипсиса (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35461" name="Рецепт: Возмездие Апокалипсиса (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35462" name="Рецепт: Шлем Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35463" name="Рецепт: Кираса Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35464" name="Рецепт: Набедренники Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35465" name="Рецепт: Рукавицы Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35466" name="Рецепт: Сапоги Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35467" name="Рецепт: Щит Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35468" name="Рецепт: Кожаный Шлем Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35469" name="Рецепт: Кожаный Доспех Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35470" name="Рецепт: Кожаные Брюки Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35471" name="Рецепт: Кожаные Перчатки Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35472" name="Рецепт: Кожаные Сапоги Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35473" name="Рецепт: Диадема Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35474" name="Рецепт: Туника Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35475" name="Рецепт: Штаны Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35476" name="Рецепт: Перчатки Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35477" name="Рецепт: Ботинки Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35478" name="Рецепт: Символ Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35479" name="Рецепт: Ожерелье Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35480" name="Рецепт: Серьга Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35481" name="Рецепт: Кольцо Ада (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35482" name="Рецепт: Благословенное Острие Фантазмы (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35483" name="Рецепт: Благословенный Резак Фантазмы (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35484" name="Рецепт: Благословенный Эспадон Фантазмы (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35485" name="Рецепт: Благословенный Мститель Фантазмы (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35486" name="Рецепт: Благословенный Воитель Фантазмы (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35487" name="Рецепт: Благословенный Буревестник Фантазмы (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35488" name="Рецепт: Благословенный Бросок Фантазмы (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35489" name="Рецепт: Благословенный Страж Фантазмы (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35490" name="Рецепт: Благословенный Расчленитель Фантазмы (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35491" name="Рецепт: Благословенный Заклинатель Фантазмы (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35492" name="Рецепт: Благословенное Возмездие Фантазмы (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35493" name="Рецепт: Благословенный Шлем Кадейры (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35494" name="Рецепт: Благословенная Кираса Кадейры (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35495" name="Рецепт: Благословенные Набедренники Кадейры (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35496" name="Рецепт: Благословенные Рукавицы Кадейры (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35497" name="Рецепт: Благословенные Сапоги Кадейры (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35498" name="Рецепт: Благословенный Щит Кадейры (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 	<etcitem id="35499" name="Рецепт: Благословенный Кожаный Шлем Кадейры (60%)">
-	    <!-- Developed by Respawner -->
-	    <!-- http://dev-world.org/ -->
-        <set name="ex_type" value="OTHER_ITEMS"/>
-        <set name="class" value="MATHERIALS"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="MATERIAL"/>
-        <set name="weight" value="60"/>
-    </etcitem>
+		<!-- Developed by Respawner -->
+		<!-- http://dev-world.org/ -->
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MATHERIALS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="60"/>
+	</etcitem>
 </list>

@@ -2,18 +2,6 @@
 <list>
 <config showall="true" notax="true" keepenchanted="false"/>
     <item>
-        <ingredient id="33501" count="128"/> <!-- Mark of the King -->
-		<ingredient id="33500" count="5117"/> <!-- Mark of Lords -->
-		<ingredient id="57" count="17056300"/> <!-- Adena -->
-        <production id="36116" count="1"/> <!-- Blessed Scroll (R-Grade) - Campaign -->
-    </item>
-    <item>
-        <ingredient id="33501" count="552"/> <!-- Mark of the King -->
-		<ingredient id="33500" count="22075"/> <!-- Mark of Lords -->
-		<ingredient id="57" count="73581200"/> <!-- Adena -->
-        <production id="36117" count="1"/> <!-- Blessed Scroll(R95-Grade) - Campaign -->
-    </item>
-    <item>
         <ingredient id="33501" count="60"/> <!-- Mark of the King -->
 		<ingredient id="33500" count="2400"/> <!-- Mark of Lords -->
 		<ingredient id="57" count="8000000"/> <!-- Adena -->
@@ -66,30 +54,6 @@
 		<ingredient id="33500" count="60"/> <!-- Mark of Lords -->
 		<ingredient id="57" count="200000"/> <!-- Adena -->
         <production id="33518" count="1"/> <!-- Blessed Scroll of Ressurection - Campaign -->
-    </item>
-	<item>
-        <ingredient id="33501" count="75"/> <!-- Mark of the King -->
-		<ingredient id="33500" count="3000"/> <!-- Mark of Lords -->
-		<ingredient id="57" count="10000000"/> <!-- Adena -->
-        <production id="36125" count="1"/> <!-- Angel Circlet - STR (7-day) - Campaign -->
-    </item>
-	<item>
-        <ingredient id="33501" count="75"/> <!-- Mark of the King -->
-		<ingredient id="33500" count="3000"/> <!-- Mark of Lords -->
-		<ingredient id="57" count="10000000"/> <!-- Adena -->
-        <production id="36126" count="1"/> <!-- Angel Circlet - DEX (7-day) - Campaign -->
-    </item>
-	<item>
-        <ingredient id="33501" count="75"/> <!-- Mark of the King -->
-		<ingredient id="33500" count="3000"/> <!-- Mark of Lords -->
-		<ingredient id="57" count="10000000"/> <!-- Adena -->
-        <production id="36127" count="1"/> <!-- Angel Circlet - WIT (7-day) - Campaign -->
-    </item>
-	<item>
-        <ingredient id="33501" count="75"/> <!-- Mark of the King -->
-		<ingredient id="33500" count="3000"/> <!-- Mark of Lords -->
-		<ingredient id="57" count="10000000"/> <!-- Adena -->
-        <production id="36128" count="1"/> <!-- Angel Circlet - INT (7-day) - Campaign -->
     </item>
 	<item>
 		<ingredient id="33501" count="1"/> <!-- Mark of the King -->

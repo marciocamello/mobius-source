@@ -665,11 +665,11 @@ public class RequestActionUse extends L2GameClientPacket
 		/**
 		 * Field ACTION1103.
 		 */
-		ACTION1103(1103, 1, 0, 0),
+		ACTION1103(1103, SERVITOR_GROUP_ACTION, 0, 0),
 		/**
 		 * Field ACTION1104.
 		 */
-		ACTION1104(1104, 1, 0, 0),
+		ACTION1104(1104, SERVITOR_GROUP_ACTION, 0, 0),
 		/**
 		 * Field ACTION1106.
 		 */
@@ -1415,7 +1415,7 @@ public class RequestActionUse extends L2GameClientPacket
 				}
 				switch (action.id)
 				{
-					case 1099:
+					case 1099:	//Attack
 						if ((target == null) || !target.isCreature())
 						{
 							activeChar.sendActionFailed();
@@ -1464,12 +1464,12 @@ public class RequestActionUse extends L2GameClientPacket
 						{
 							if (!summon.isDead())
 							{
-								summon.setFollowMode(!summon.isFollowMode());
+								summon.setFollowMode(true);
 								summon.getAI().Attack(target, _ctrlPressed, _shiftPressed);
 							}
 						}
 						break;
-					case 1100:
+					case 1100:	//Move
 						if ((target != null) && !servitors.contains(target))
 						{
 							for (Summon summon : servitors)
@@ -1482,13 +1482,13 @@ public class RequestActionUse extends L2GameClientPacket
 							}
 						}
 						break;
-					case 1101:
+					case 1101:	//Pause
 						for (Summon summon : servitors)
 						{
 							summon.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 						}
 						break;
-					case 1102:
+					case 1102:	//Cancel the Summoning
 						if (activeChar.getSummonList().isInCombat())
 						{
 							activeChar.sendPacket(SystemMsg.A_PET_CANNOT_BE_UNSUMMONED_DURING_BATTLE);
@@ -1497,6 +1497,18 @@ public class RequestActionUse extends L2GameClientPacket
 						else
 						{
 							activeChar.getSummonList().unsummonAllServitors();
+						}
+						break;
+					case 1103:	//Passive
+						for (Summon summon : servitors)
+						{
+							summon.setDefendMode(false);
+						}
+						break;
+					case 1104:	//Defend
+						for (Summon summon : servitors)
+						{
+							summon.setDefendMode(true);
 						}
 						break;
 				}
@@ -1529,6 +1541,7 @@ public class RequestActionUse extends L2GameClientPacket
 					ThreadPoolManager.getInstance().schedule(new SocialTask(activeChar), 2600);
 					activeChar.startParalyzed();
 				}
+				activeChar.getListeners().onSocialAction(action); // DynamicQuest
 				break;
 			case COUPLE_ACTION:
 				if (activeChar.isOutOfControl() || activeChar.isActionsDisabled() || activeChar.isSitting())

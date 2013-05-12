@@ -14,6 +14,8 @@ package instances;
 
 import java.util.concurrent.ScheduledFuture;
 
+import org.apache.commons.lang3.ArrayUtils;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.listener.actor.OnDeathListener;
@@ -36,12 +38,24 @@ public class KartiaLabyrinth95Solo extends Reflection
 	private final ZoneListenerL _landingZoneListener;
 	boolean _entryLocked;
 	boolean _startLaunched;
+	boolean _landingentered;
+	
+	private static final int DOOR1_ID = 16170002;
+	private static final int DOOR2_ID = 16170003;
+
+	private int KartiaGuard = 19226;
+	private int KartiaWatchman = 19227;
+	private int DimensionalWatchman = 19228;
+	private int LordOfKartia = 19255;
+
+	private static final int[] supporter = {33631,33633,33635,33637,33639};
 	
 	public KartiaLabyrinth95Solo()
 	{
 		_deathListener = new DeathListener();
 		_epicZoneListener = new ZoneListener();
 		_landingZoneListener = new ZoneListenerL();
+		_landingentered = false;
 		_entryLocked = false;
 		_startLaunched = false;
 	}
@@ -79,7 +93,11 @@ public class KartiaLabyrinth95Solo extends Reflection
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
-			ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.TwoCycleStart(), 17999L);
+			if (!_landingentered)
+			{
+				ThreadPoolManager.getInstance().schedule(new TwoCycleStart(), 17999L);
+				_landingentered = true;
+			}
 		}
 		
 		@Override
@@ -106,7 +124,7 @@ public class KartiaLabyrinth95Solo extends Reflection
 			{
 				return;
 			}
-			ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.StartKartiaSolo85(), 30000L);
+			ThreadPoolManager.getInstance().schedule(new StartKartiaSolo85(), 30000L);
 			_startLaunched = true;
 		}
 		
@@ -125,79 +143,14 @@ public class KartiaLabyrinth95Solo extends Reflection
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
-			if ((self.isNpc()) && (self.getNpcId() == 53000))
+			if ((self.isNpc()) && (self.getNpcId() == DimensionalWatchman))
 			{
-				ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.FirstStage(), 17000L);
+				ThreadPoolManager.getInstance().schedule(new TwoCycle(), 17000L);
 				self.deleteMe();
 			}
-			else if ((self.isNpc()) && (self.getNpcId() == 53001))
+			else if ((self.isNpc()) && (self.getNpcId() == LordOfKartia))
 			{
-				ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.SecondStage(), 17000L);
-				self.deleteMe();
-			}
-			else if ((self.isNpc()) && (self.getNpcId() == 53002))
-			{
-				ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.ThirdStage(), 17000L);
-				self.deleteMe();
-			}
-			else if ((self.isNpc()) && (self.getNpcId() == 53003))
-			{
-				ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.ForthStage(), 17000L);
-				self.deleteMe();
-			}
-			else if ((self.isNpc()) && (self.getNpcId() == 53004))
-			{
-				ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.FiveStage(), 17000L);
-				self.deleteMe();
-			}
-			else if ((self.isNpc()) && (self.getNpcId() == 53005))
-			{
-				ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.SixStage(), 17000L);
-				self.deleteMe();
-			}
-			else if ((self.isNpc()) && (self.getNpcId() == 53006))
-			{
-				ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.TwoCycle(), 17000L);
-				self.deleteMe();
-			}
-			else if ((self.isNpc()) && (self.getNpcId() == 53007))
-			{
-				ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.TwoCycleStageOne(), 25000L);
-				self.deleteMe();
-			}
-			else if ((self.isNpc()) && (self.getNpcId() == 53008))
-			{
-				ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.TwoCycleStageTwo(), 25000L);
-				self.deleteMe();
-			}
-			else if ((self.isNpc()) && (self.getNpcId() == 53009))
-			{
-				ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.FreeCycleStageTwo(), 25000L);
-				self.deleteMe();
-			}
-			else if ((self.isNpc()) && (self.getNpcId() == 53010))
-			{
-				ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.FourCycleStageTwo(), 25000L);
-				self.deleteMe();
-			}
-			else if ((self.isNpc()) && (self.getNpcId() == 53011))
-			{
-				ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.FiveCycleStageTwo(), 50000L);
-				self.deleteMe();
-			}
-			else if ((self.isNpc()) && (self.getNpcId() == 53012))
-			{
-				ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.SixCycleStageTwo(), 25000L);
-				self.deleteMe();
-			}
-			else if ((self.isNpc()) && (self.getNpcId() == 53013))
-			{
-				ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.SevenCycleStageTwo(), 21000L);
-				self.deleteMe();
-			}
-			else if ((self.isNpc()) && (self.getNpcId() == 19253))
-			{
-				ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.CloseInstance(), 9000L);
+				ThreadPoolManager.getInstance().schedule(new CloseInstance(), 9000L);
 				self.deleteMe();
 			}
 		}
@@ -217,13 +170,14 @@ public class KartiaLabyrinth95Solo extends Reflection
 			for (Player p : getPlayers())
 			{
 				p.sendPacket(new SystemMessage(2106).addNumber(5));
+				p.addExpAndSp(975674677, 8509978, 0, 0, true, false);
 			}
 		}
 	}
 	
-	private class SevenCycleStageTwo extends RunnableImpl
+	private class TowCycleStageSeven extends RunnableImpl
 	{
-		SevenCycleStageTwo()
+		TowCycleStageSeven()
 		{
 		}
 		
@@ -234,20 +188,20 @@ public class KartiaLabyrinth95Solo extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_7, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
-			addSpawnWithoutRespawn(19221, new Location(-111848, -15560, -11445), 0);
-			addSpawnWithoutRespawn(19220, new Location(-111656, -15528, -11444), 0);
-			addSpawnWithoutRespawn(19221, new Location(-111432, -15496, -11443), 0);
-			addSpawnWithoutRespawn(19220, new Location(-111192, -15512, -11444), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110968, -15512, -11444), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110792, -15592, -11444), 0);
-			NpcInstance zellakassspawner = addSpawnWithoutRespawn(19253, new Location(-111288, -15784, -11428), 0);
-			zellakassspawner.addListener(_deathListener);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111848, -15560, -11445), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111656, -15528, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111432, -15496, -11443), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111192, -15512, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110968, -15512, -11444), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110792, -15592, -11444), 0);
+			NpcInstance kaliospawner = addSpawnWithoutRespawn(LordOfKartia, new Location(-111288, -15784, -11428), 0);
+			kaliospawner.addListener(_deathListener);
 		}
 	}
 	
-	private class SixCycleStageTwo extends RunnableImpl
+	private class TwoCycleStageSix extends RunnableImpl
 	{
-		SixCycleStageTwo()
+		TwoCycleStageSix()
 		{
 		}
 		
@@ -258,20 +212,26 @@ public class KartiaLabyrinth95Solo extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_6, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
-			addSpawnWithoutRespawn(19221, new Location(-111848, -15560, -11445), 0);
-			addSpawnWithoutRespawn(19220, new Location(-111656, -15528, -11444), 0);
-			addSpawnWithoutRespawn(19221, new Location(-111432, -15496, -11443), 0);
-			addSpawnWithoutRespawn(19220, new Location(-111192, -15512, -11444), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110968, -15512, -11444), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110792, -15592, -11444), 0);
-			NpcInstance sevencyclestageonemonster = addSpawnWithoutRespawn(53013, new Location(-110792, -15592, -11444), 0);
-			sevencyclestageonemonster.addListener(_deathListener);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111848, -15560, -11445), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111848, -15560, -11445), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111656, -15528, -11444), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111656, -15528, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111432, -15496, -11443), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111432, -15496, -11443), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111192, -15512, -11444), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111192, -15512, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110968, -15512, -11444), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110968, -15512, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110792, -15592, -11444), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110792, -15592, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110792, -15592, -11444), 0);
+			ThreadPoolManager.getInstance().schedule(new TowCycleStageSeven(), 90000L);
 		}
 	}
 	
-	private class FiveCycleStageTwo extends RunnableImpl
+	private class TwoCycleStageFive extends RunnableImpl
 	{
-		FiveCycleStageTwo()
+		TwoCycleStageFive()
 		{
 		}
 		
@@ -282,20 +242,20 @@ public class KartiaLabyrinth95Solo extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_5, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
-			addSpawnWithoutRespawn(19221, new Location(-111848, -15560, -11445), 0);
-			addSpawnWithoutRespawn(19220, new Location(-111656, -15528, -11444), 0);
-			addSpawnWithoutRespawn(19221, new Location(-111432, -15496, -11443), 0);
-			addSpawnWithoutRespawn(19220, new Location(-111192, -15512, -11444), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110968, -15512, -11444), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110792, -15592, -11444), 0);
-			NpcInstance sixcyclestageonemonster = addSpawnWithoutRespawn(53012, new Location(-110792, -15592, -11444), 0);
-			sixcyclestageonemonster.addListener(_deathListener);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111848, -15560, -11445), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111656, -15528, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111432, -15496, -11443), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111192, -15512, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110968, -15512, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110792, -15592, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110792, -15592, -11444), 0);
+			ThreadPoolManager.getInstance().schedule(new TwoCycleStageSix(), 60000L);
 		}
 	}
 	
-	private class FourCycleStageTwo extends RunnableImpl
+	private class TwoCycleStageFour extends RunnableImpl
 	{
-		FourCycleStageTwo()
+		TwoCycleStageFour()
 		{
 		}
 		
@@ -306,20 +266,20 @@ public class KartiaLabyrinth95Solo extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_4, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
-			addSpawnWithoutRespawn(19221, new Location(-111848, -15560, -11445), 0);
-			addSpawnWithoutRespawn(19220, new Location(-111656, -15528, -11444), 0);
-			addSpawnWithoutRespawn(19221, new Location(-111432, -15496, -11443), 0);
-			addSpawnWithoutRespawn(19220, new Location(-111192, -15512, -11444), 0);
-			addSpawnWithoutRespawn(19222, new Location(-110968, -15512, -11444), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110792, -15592, -11444), 0);
-			NpcInstance fivecyclestageonemonster = addSpawnWithoutRespawn(53011, new Location(-110792, -15592, -11444), 0);
-			fivecyclestageonemonster.addListener(_deathListener);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111848, -15560, -11445), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111656, -15528, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111432, -15496, -11443), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111192, -15512, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110968, -15512, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110792, -15592, -11444), 0);
+			addSpawnWithoutRespawn(DimensionalWatchman, new Location(-110792, -15592, -11444), 0);
+			ThreadPoolManager.getInstance().schedule(new TwoCycleStageFive(), 60000L);
 		}
 	}
 	
-	private class FreeCycleStageTwo extends RunnableImpl
+	private class TwoCycleStageThree extends RunnableImpl
 	{
-		FreeCycleStageTwo()
+		TwoCycleStageThree()
 		{
 		}
 		
@@ -330,14 +290,14 @@ public class KartiaLabyrinth95Solo extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_3, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
-			addSpawnWithoutRespawn(19221, new Location(-111848, -15560, -11445), 0);
-			addSpawnWithoutRespawn(19220, new Location(-111656, -15528, -11444), 0);
-			addSpawnWithoutRespawn(19221, new Location(-111432, -15496, -11443), 0);
-			addSpawnWithoutRespawn(19220, new Location(-111192, -15512, -11444), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110968, -15512, -11444), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110792, -15592, -11444), 0);
-			NpcInstance fourcyclestageonemonster = addSpawnWithoutRespawn(53010, new Location(-110792, -15592, -11444), 0);
-			fourcyclestageonemonster.addListener(_deathListener);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111848, -15560, -11445), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111656, -15528, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111432, -15496, -11443), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111192, -15512, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110968, -15512, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110792, -15592, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110792, -15592, -11444), 0);
+			ThreadPoolManager.getInstance().schedule(new TwoCycleStageFour(), 60000L);
 		}
 	}
 	
@@ -354,15 +314,15 @@ public class KartiaLabyrinth95Solo extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_2, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
-			closeDoor(16170003);
-			addSpawnWithoutRespawn(19221, new Location(-111848, -15560, -11445), 0);
-			addSpawnWithoutRespawn(19220, new Location(-111656, -15528, -11444), 0);
-			addSpawnWithoutRespawn(19221, new Location(-111432, -15496, -11443), 0);
-			addSpawnWithoutRespawn(19220, new Location(-111192, -15512, -11444), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110968, -15512, -11444), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110792, -15592, -11444), 0);
-			NpcInstance freecyclestageonemonster = addSpawnWithoutRespawn(53009, new Location(-110792, -15592, -11444), 0);
-			freecyclestageonemonster.addListener(_deathListener);
+			closeDoor(DOOR2_ID);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111848, -15560, -11445), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111656, -15528, -11444), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111432, -15496, -11443), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111192, -15512, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110968, -15512, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110792, -15592, -11444), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110792, -15592, -11444), 0);
+			ThreadPoolManager.getInstance().schedule(new TwoCycleStageThree(), 60000L);
 		}
 	}
 	
@@ -379,15 +339,22 @@ public class KartiaLabyrinth95Solo extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_1, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
-			openDoor(16170003);
-			addSpawnWithoutRespawn(19220, new Location(-111848, -15560, -11445), 0);
-			addSpawnWithoutRespawn(19220, new Location(-111656, -15528, -11444), 0);
-			addSpawnWithoutRespawn(19220, new Location(-111432, -15496, -11443), 0);
-			addSpawnWithoutRespawn(19220, new Location(-111192, -15512, -11444), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110968, -15512, -11444), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110792, -15592, -11444), 0);
-			NpcInstance twocyclestageonemonster = addSpawnWithoutRespawn(53008, new Location(-110792, -15592, -11444), 0);
-			twocyclestageonemonster.addListener(_deathListener);
+			for(NpcInstance n : getNpcs())
+			{
+				if(!ArrayUtils.contains(supporter, n.getNpcId()))
+				{
+					n.deleteMe();
+				}
+			}
+			openDoor(DOOR2_ID);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111848, -15560, -11445), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111656, -15528, -11444), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111432, -15496, -11443), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111192, -15512, -11444), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110968, -15512, -11444), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110792, -15592, -11444), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110792, -15592, -11444), 0);
+			ThreadPoolManager.getInstance().schedule(new TwoCycleStageTwo(), 60000L);
 		}
 	}
 	
@@ -400,20 +367,22 @@ public class KartiaLabyrinth95Solo extends Reflection
 		@Override
 		public void runImpl()
 		{
-			closeDoor(16170002);
-			addSpawnWithoutRespawn(19221, new Location(-110904, -12216, -11594), 0);
-			addSpawnWithoutRespawn(19222, new Location(-110888, -12424, -11591), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110856, -12760, -11594), 0);
-			addSpawnWithoutRespawn(19221, new Location(-111304, -13016, -11596), 0);
-			addSpawnWithoutRespawn(19222, new Location(-111288, -12744, -11596), 0);
-			addSpawnWithoutRespawn(19221, new Location(-111336, -12424, -11596), 0);
-			addSpawnWithoutRespawn(19222, new Location(-111336, -12232, -11596), 0);
-			addSpawnWithoutRespawn(19221, new Location(-111736, -12232, -11596), 0);
-			addSpawnWithoutRespawn(19222, new Location(-111720, -12488, -11596), 0);
-			addSpawnWithoutRespawn(19221, new Location(-111736, -12776, -11596), 0);
-			addSpawnWithoutRespawn(19222, new Location(-111720, -13032, -11596), 0);
-			NpcInstance twocyclemonster = addSpawnWithoutRespawn(53007, new Location(-110856, -13080, -11593), 0);
-			twocyclemonster.addListener(_deathListener);
+			closeDoor(DOOR1_ID);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110904, -12216, -11594), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110888, -12424, -11591), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110856, -12760, -11594), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111304, -13016, -11596), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111288, -12744, -11596), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111336, -12424, -11596), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111336, -12232, -11596), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111736, -12232, -11596), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-111720, -12488, -11596), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111736, -12776, -11596), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111736, -12776, -11596), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111736, -12776, -11596), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111736, -12776, -11596), 0);
+			addSpawnWithoutRespawn(DimensionalWatchman, new Location(-110856, -13080, -11593), 0);
+			ThreadPoolManager.getInstance().schedule(new TwoCycleStageOne(), 180000L);
 		}
 	}
 	
@@ -426,10 +395,78 @@ public class KartiaLabyrinth95Solo extends Reflection
 		@Override
 		public void runImpl()
 		{
-			openDoor(16170002);
+			openDoor(DOOR1_ID);
 		}
 	}
-	
+
+	private class ThirdSevenStage extends RunnableImpl
+	{
+		ThirdSevenStage()
+		{
+		}
+		
+		@Override
+		public void runImpl()
+		{
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110648, -10424, -11891), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10520, -11888), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10472, -11883), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10360, -11883), 0);
+			NpcInstance sixstagestagemobv = addSpawnWithoutRespawn(DimensionalWatchman, new Location(-110664, -10360, -11883), 0);
+			sixstagestagemobv.addListener(_deathListener);
+		}
+	}
+
+	private class SecondSevenStage extends RunnableImpl
+	{
+		SecondSevenStage()
+		{
+		}
+		
+		@Override
+		public void runImpl()
+		{
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10488, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110584, -10280, -11917), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10312, -11889), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110648, -10424, -11891), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10520, -11888), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10472, -11883), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10360, -11883), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10360, -11883), 0);
+			ThreadPoolManager.getInstance().schedule(new ThirdSevenStage(), 21000L);
+		}
+	}
+
+	private class SevenStage extends RunnableImpl
+	{
+		SevenStage()
+		{
+		}
+		
+		@Override
+		public void runImpl()
+		{
+			for (Player player : getPlayers())
+			{
+				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_7, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+			}
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10488, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110584, -10280, -11917), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10312, -11889), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110648, -10424, -11891), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10520, -11888), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10472, -11883), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10360, -11883), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10360, -11883), 0);
+			ThreadPoolManager.getInstance().schedule(new SecondSevenStage(), 21000L);
+		}
+	}
+
 	private class ThreeSixStage extends RunnableImpl
 	{
 		ThreeSixStage()
@@ -439,13 +476,17 @@ public class KartiaLabyrinth95Solo extends Reflection
 		@Override
 		public void runImpl()
 		{
-			addSpawnWithoutRespawn(19222, new Location(-110600, -10584, -11910), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110584, -10280, -11917), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10520, -11888), 0);
-			addSpawnWithoutRespawn(19222, new Location(-110664, -10472, -11883), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10360, -11883), 0);
-			NpcInstance sixstagestagemobv = addSpawnWithoutRespawn(53006, new Location(-110664, -10360, -11883), 0);
-			sixstagestagemobv.addListener(_deathListener);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10488, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110584, -10280, -11917), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10312, -11889), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110648, -10424, -11891), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10520, -11888), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10472, -11883), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10360, -11883), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10360, -11883), 0);
+			ThreadPoolManager.getInstance().schedule(new SevenStage(), 60000L);
 		}
 	}
 	
@@ -458,12 +499,17 @@ public class KartiaLabyrinth95Solo extends Reflection
 		@Override
 		public void runImpl()
 		{
-			addSpawnWithoutRespawn(19222, new Location(-110600, -10584, -11910), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110584, -10280, -11917), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10520, -11888), 0);
-			addSpawnWithoutRespawn(19222, new Location(-110664, -10472, -11883), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10360, -11883), 0);
-			ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.ThreeSixStage(), 21000L);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10488, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110584, -10280, -11917), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10312, -11889), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110648, -10424, -11891), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10520, -11888), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10472, -11883), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10360, -11883), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10360, -11883), 0);
+			ThreadPoolManager.getInstance().schedule(new ThreeSixStage(), 21000L);
 		}
 	}
 	
@@ -478,21 +524,43 @@ public class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_7, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_6, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
-			addSpawnWithoutRespawn(19222, new Location(-110600, -10584, -11910), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110600, -10488, -11910), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110600, -10376, -11910), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110584, -10280, -11917), 0);
-			addSpawnWithoutRespawn(19222, new Location(-110664, -10312, -11889), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110648, -10424, -11891), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10520, -11888), 0);
-			addSpawnWithoutRespawn(19222, new Location(-110664, -10472, -11883), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10360, -11883), 0);
-			ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.SecondSixStage(), 21000L);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10488, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110584, -10280, -11917), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10312, -11889), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110648, -10424, -11891), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10520, -11888), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10472, -11883), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10360, -11883), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10360, -11883), 0);
+			ThreadPoolManager.getInstance().schedule(new SecondSixStage(), 21000L);
 		}
 	}
 	
+	private class ThirdFiveStage extends RunnableImpl
+	{
+		ThirdFiveStage()
+		{
+		}
+		
+		@Override
+		public void runImpl()
+		{
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110584, -10280, -11917), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10312, -11889), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110648, -10424, -11891), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10520, -11888), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10472, -11883), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10360, -11883), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10360, -11883), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10360, -11883), 0);
+			ThreadPoolManager.getInstance().schedule(new SixStage(), 60000L);
+		}
+	}
+
 	private class SecondFiveStage extends RunnableImpl
 	{
 		SecondFiveStage()
@@ -502,17 +570,17 @@ public class KartiaLabyrinth95Solo extends Reflection
 		@Override
 		public void runImpl()
 		{
-			addSpawnWithoutRespawn(19220, new Location(-110584, -10280, -11917), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10312, -11889), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110648, -10424, -11891), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10520, -11888), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110664, -10472, -11883), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10360, -11883), 0);
-			NpcInstance fivestagestagemobv = addSpawnWithoutRespawn(53005, new Location(-110664, -10360, -11883), 0);
-			fivestagestagemobv.addListener(_deathListener);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110584, -10280, -11917), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10312, -11889), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110648, -10424, -11891), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10520, -11888), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10472, -11883), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10360, -11883), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10360, -11883), 0);
+			ThreadPoolManager.getInstance().schedule(new ThirdFiveStage(), 21000L);
 		}
 	}
-	
+
 	private class FiveStage extends RunnableImpl
 	{
 		FiveStage()
@@ -524,18 +592,38 @@ public class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_6, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_5, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
-			addSpawnWithoutRespawn(19220, new Location(-110600, -10584, -11910), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110600, -10488, -11910), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110600, -10376, -11910), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110584, -10280, -11917), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10312, -11889), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110648, -10424, -11891), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10520, -11888), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110664, -10472, -11883), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10360, -11883), 0);
-			ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.SecondFiveStage(), 21000L);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10488, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110584, -10280, -11917), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10312, -11889), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110648, -10424, -11891), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10520, -11888), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10472, -11883), 0);
+			ThreadPoolManager.getInstance().schedule(new SecondFiveStage(), 21000L);
+		}
+	}
+	
+	private class ThirdForthStage extends RunnableImpl
+	{
+		ThirdForthStage()
+		{
+		}
+		
+		@Override
+		public void runImpl()
+		{
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110584, -10280, -11917), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10312, -11889), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110648, -10424, -11891), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10520, -11888), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10472, -11883), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10360, -11883), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10360, -11883), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10360, -11883), 0);
+			ThreadPoolManager.getInstance().schedule(new FiveStage(), 60000L);
 		}
 	}
 	
@@ -548,14 +636,14 @@ public class KartiaLabyrinth95Solo extends Reflection
 		@Override
 		public void runImpl()
 		{
-			addSpawnWithoutRespawn(19220, new Location(-110584, -10280, -11917), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10312, -11889), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110648, -10424, -11891), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10520, -11888), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110664, -10472, -11883), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10360, -11883), 0);
-			NpcInstance forthstagestagemobv = addSpawnWithoutRespawn(53004, new Location(-110664, -10360, -11883), 0);
-			forthstagestagemobv.addListener(_deathListener);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110584, -10280, -11917), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10312, -11889), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110648, -10424, -11891), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10520, -11888), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10472, -11883), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10360, -11883), 0);
+			addSpawnWithoutRespawn(KartiaWatchman, new Location(-110664, -10360, -11883), 0);
+			ThreadPoolManager.getInstance().schedule(new ThirdForthStage(), 21000L);
 		}
 	}
 	
@@ -570,21 +658,37 @@ public class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_5, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_4, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
-			addSpawnWithoutRespawn(19220, new Location(-110600, -10584, -11910), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110600, -10488, -11910), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110600, -10376, -11910), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110584, -10280, -11917), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10312, -11889), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110648, -10424, -11891), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10520, -11888), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110664, -10472, -11883), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10360, -11883), 0);
-			ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.SecondForthStage(), 21000L);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10488, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110584, -10280, -11917), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10312, -11889), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110648, -10424, -11891), 0);
+			ThreadPoolManager.getInstance().schedule(new SecondForthStage(), 21000L);
 		}
 	}
 	
+	private class ThirdThirdStage extends RunnableImpl
+	{
+		ThirdThirdStage()
+		{
+		}
+		
+		@Override
+		public void runImpl()
+		{
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10488, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110584, -10280, -11917), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10312, -11889), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110648, -10424, -11891), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10360, -11883), 0);
+			ThreadPoolManager.getInstance().schedule(new ForthStage(), 60000L);
+		}
+	}
+
 	private class SecondThirdStage extends RunnableImpl
 	{
 		SecondThirdStage()
@@ -594,14 +698,13 @@ public class KartiaLabyrinth95Solo extends Reflection
 		@Override
 		public void runImpl()
 		{
-			addSpawnWithoutRespawn(19220, new Location(-110600, -10488, -11910), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110600, -10376, -11910), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110584, -10280, -11917), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10312, -11889), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110648, -10424, -11891), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10520, -11888), 0);
-			NpcInstance thirdstagestagemobv = addSpawnWithoutRespawn(53003, new Location(-110664, -10360, -11883), 0);
-			thirdstagestagemobv.addListener(_deathListener);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10488, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110584, -10280, -11917), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10312, -11889), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110648, -10424, -11891), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10520, -11888), 0);
+			ThreadPoolManager.getInstance().schedule(new ThirdThirdStage(), 21000L);
 		}
 	}
 	
@@ -616,17 +719,15 @@ public class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_4, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_3, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
-			addSpawnWithoutRespawn(19220, new Location(-110600, -10584, -11910), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110600, -10488, -11910), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110600, -10376, -11910), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110584, -10280, -11917), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10312, -11889), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110648, -10424, -11891), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10520, -11888), 0);
-			addSpawnWithoutRespawn(19221, new Location(-110664, -10360, -11883), 0);
-			ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.SecondThirdStage(), 21000L);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10488, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110584, -10280, -11917), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10312, -11889), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110648, -10424, -11891), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10520, -11888), 0);
+			ThreadPoolManager.getInstance().schedule(new SecondThirdStage(), 21000L);
 		}
 	}
 	
@@ -639,11 +740,12 @@ public class KartiaLabyrinth95Solo extends Reflection
 		@Override
 		public void runImpl()
 		{
-			addSpawnWithoutRespawn(19220, new Location(-110664, -10312, -11889), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110664, -10520, -11888), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110664, -10360, -11883), 0);
-			NpcInstance secondstagemobv = addSpawnWithoutRespawn(53002, new Location(-110664, -10360, -11883), 0);
-			secondstagemobv.addListener(_deathListener);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10312, -11889), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10520, -11888), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10360, -11883), 0);
+			ThreadPoolManager.getInstance().schedule(new ThirdStage(), 60000L);
 		}
 	}
 	
@@ -658,14 +760,14 @@ public class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_3, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_2, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
-			addSpawnWithoutRespawn(19220, new Location(-110600, -10584, -11910), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110600, -10376, -11910), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110664, -10312, -11889), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110664, -10520, -11888), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110664, -10360, -11883), 0);
-			ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.SecondStageSecond(), 21000L);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10312, -11889), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10520, -11888), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10360, -11883), 0);
+			ThreadPoolManager.getInstance().schedule(new SecondStageSecond(), 21000L);
 		}
 	}
 	
@@ -680,38 +782,13 @@ public class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_2, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
-			}
-			addSpawnWithoutRespawn(19220, new Location(-110600, -10584, -11910), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110600, -10376, -11910), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110664, -10312, -11889), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110664, -10520, -11888), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110664, -10360, -11883), 0);
-			NpcInstance firststagemobv = addSpawnWithoutRespawn(53001, new Location(-110664, -10360, -11883), 0);
-			firststagemobv.addListener(_deathListener);
-		}
-	}
-	
-	private class PreStage extends RunnableImpl
-	{
-		PreStage()
-		{
-		}
-		
-		@Override
-		public void runImpl()
-		{
-			for (Player player : getPlayers())
-			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_1, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
-			addSpawnWithoutRespawn(19220, new Location(-110600, -10584, -11910), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110600, -10376, -11910), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110664, -10312, -11889), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110664, -10520, -11888), 0);
-			addSpawnWithoutRespawn(19220, new Location(-110664, -10360, -11883), 0);
-			NpcInstance prestagemob = addSpawnWithoutRespawn(53000, new Location(-110664, -10360, -11883), 0);
-			prestagemob.addListener(_deathListener);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10312, -11889), 0);
+			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10360, -11883), 0);
+			ThreadPoolManager.getInstance().schedule(new SecondStage(), 60000L);
 		}
 	}
 	
@@ -725,7 +802,7 @@ public class KartiaLabyrinth95Solo extends Reflection
 		public void runImpl()
 		{
 			_entryLocked = true;
-			ThreadPoolManager.getInstance().schedule(new KartiaLabyrinth95Solo.PreStage(), 12000L);
+			ThreadPoolManager.getInstance().schedule(new FirstStage(), 12000L);
 		}
 	}
 }

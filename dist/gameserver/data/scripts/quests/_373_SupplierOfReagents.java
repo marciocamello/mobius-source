@@ -1006,17 +1006,8 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 						}
 						if (item == MIMIRS_ELIXIR)
 						{
-							QuestState mimirs = st.getPlayer().getQuestState(_235_MimirsElixir.class);
-							if (mimirs != null)
-							{
-								chance = 100;
-								qty = 1;
-								mimirs.setCond(8);
-							}
-							else
-							{
-								return "31149-7d.htm";
-							}
+							chance = 100;
+							qty = 1;
 						}
 						if (Rnd.chance(chance))
 						{

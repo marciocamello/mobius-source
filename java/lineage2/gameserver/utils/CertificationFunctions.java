@@ -12,17 +12,21 @@
  */
 package lineage2.gameserver.utils;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
+import lineage2.gameserver.dao.CharacterSubclassDAO;
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.SkillLearn;
 import lineage2.gameserver.model.SubClass;
 import lineage2.gameserver.model.base.AcquireType;
-import lineage2.gameserver.model.base.ClassType2;
+import lineage2.gameserver.model.base.SubClassType;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
@@ -38,120 +42,117 @@ public class CertificationFunctions
 	 */
 	public static final String PATH = "villagemaster/certification/";
 	
+	private static HashMap <Integer, Integer> _certificationList = new HashMap <Integer,Integer>();
+
+	private static CertificationFunctions _instance;
+
+	private static int CERTIFICATE = 10280;
+
+	private static int DUAL_CERTIFICATE = 36078;
+	
+	
+	/**
+	 * Method getInstance.
+	 * @return SubClassTable
+	 */
+	public static CertificationFunctions getInstance()
+	{
+		if (_instance == null)
+		{
+			_instance = new CertificationFunctions();
+		}
+		return _instance;
+	}
+	
+	public CertificationFunctions()
+	{
+		_certificationList.put(65, SubClass.CERTIFICATION_65);
+		_certificationList.put(70, SubClass.CERTIFICATION_70);
+		_certificationList.put(75, SubClass.CERTIFICATION_75);
+		_certificationList.put(80, SubClass.CERTIFICATION_80);
+		_certificationList.put(85, SubClass.DUALCERTIFICATION_85);
+		_certificationList.put(90, SubClass.DUALCERTIFICATION_90);
+		_certificationList.put(95, SubClass.DUALCERTIFICATION_95);
+		_certificationList.put(99, SubClass.DUALCERTIFICATION_99);
+	}
 	/**
 	 * Method showCertificationList.
 	 * @param npc NpcInstance
 	 * @param player Player
 	 */
-	public static void showCertificationList(NpcInstance npc, Player player)
+	public static boolean checkConditionSkillList(NpcInstance npc, Player player, Integer level)
 	{
-		if (!checkConditions(65, npc, player, true))
+		if(!player.isBaseClassActive())
 		{
-			return;
+			Functions.show(PATH + (level < 85 ? "certificateSkillList-nobase.htm" : "dualcertificateSkillList-nobase.htm"), player, npc);
+			return false;
 		}
-		Functions.show(PATH + "certificatelist.htm", player, npc);
+		int certificate = level < 85 ? CERTIFICATE : DUAL_CERTIFICATE;
+		if(player.getInventory().getItemByItemId(certificate) == null)
+		{
+			Functions.show(PATH + (level < 85 ? "certificateSkillList-nocertificate.htm" : "dualcertificateSkillList-nocertificate.htm"), player, npc);
+			return false;			
+		}
+		return true;
 	}
 	
 	/**
-	 * Method getCertification65.
+	 * Method showCertificationList.
 	 * @param npc NpcInstance
 	 * @param player Player
 	 */
-	public static void getCertification65(NpcInstance npc, Player player)
+	public static void showCertificationList(NpcInstance npc, Player player, Integer level)
 	{
-		if (!checkConditions(65, npc, player, Config.ALT_GAME_SUB_BOOK))
+		if (!checkConditions(level, npc, player, true))
+		{
+			return;
+		}
+		Functions.show(PATH + (level < 85 ? "certificatelist.htm" : "dualcertificatelist.htm"), player, npc);
+	}
+	
+	/**
+	 * Method getCertification.
+	 * @param npc NpcInstance
+	 * @param player Player
+	 */
+	public static void getCertification(Integer level, NpcInstance npc, Player player)
+	{
+		if (!checkConditions(level, npc, player, Config.ALT_GAME_SUB_BOOK))
 		{
 			return;
 		}
 		SubClass clzz = player.getActiveSubClass();
-		if (clzz.isCertificationGet(SubClass.CERTIFICATION_65))
+		if ((clzz.isCertificationGet(SubClass.CERTIFICATION_65) && level == 65) || (clzz.isDualCertificationGet(SubClass.DUALCERTIFICATION_85) && level == 85) || level < 85 ? clzz.isCertificationGet(_certificationList.get(level)) : clzz.isDualCertificationGet(_certificationList.get(level)) )
 		{
 			Functions.show(PATH + "certificate-already.htm", player, npc);
 			return;
 		}
-		Functions.addItem(player, 10280, 1);
-		clzz.addCertification(SubClass.CERTIFICATION_65);
-		player.store(true);
+		if(((level > 65 && level <= 80) && !clzz.isCertificationGet(SubClass.CERTIFICATION_65)) || ((level > 85 && level <= 99) && !clzz.isDualCertificationGet(SubClass.DUALCERTIFICATION_85)))
+		{
+			Functions.show(PATH + (level > 65 && level <= 80 ? "certificate-fail.htm" : "dualcertificate-fail.htm"), player, npc);
+			return;			
+		}
+		Functions.show(PATH  + "certificate-confirmation.htm", player, npc, "<?LEVEL?>", String.valueOf(level));
 	}
 	
+
 	/**
-	 * Method getCertification70.
+	 * Method confirmCertification.
+	 * @param integer level
 	 * @param npc NpcInstance
 	 * @param player Player
 	 */
-	public static void getCertification70(NpcInstance npc, Player player)
+	public static void confirmCertification(Integer level, NpcInstance npc, Player player)
 	{
-		if (!checkConditions(70, npc, player, Config.ALT_GAME_SUB_BOOK))
-		{
-			return;
-		}
 		SubClass clzz = player.getActiveSubClass();
-		if (!clzz.isCertificationGet(SubClass.CERTIFICATION_65))
+		Functions.addItem(player, level < 85 ? CERTIFICATE : DUAL_CERTIFICATE, 1);
+		if(level < 85)
 		{
-			Functions.show(PATH + "certificate-fail.htm", player, npc);
-			return;
+			clzz.addCertification(_certificationList.get(level));
 		}
-		if (clzz.isCertificationGet(SubClass.CERTIFICATION_70))
-		{
-			Functions.show(PATH + "certificate-already.htm", player, npc);
-			return;
-		}
-		Functions.addItem(player, 10280, 1);
-		clzz.addCertification(SubClass.CERTIFICATION_70);
-		player.store(true);
-	}
-	
-	/**
-	 * Method getCertification75.
-	 * @param npc NpcInstance
-	 * @param player Player
-	 */
-	public static void getCertification75(NpcInstance npc, Player player)
-	{
-		if (!checkConditions(75, npc, player, Config.ALT_GAME_SUB_BOOK))
-		{
-			return;
-		}
-		SubClass clzz = player.getActiveSubClass();
-		if (!clzz.isCertificationGet(SubClass.CERTIFICATION_65))
-		{
-			Functions.show(PATH + "certificate-fail.htm", player, npc);
-			return;
-		}
-		if (clzz.isCertificationGet(SubClass.CERTIFICATION_75))
-		{
-			Functions.show(PATH + "certificate-already.htm", player, npc);
-			return;
-		}
-		Functions.addItem(player, 10280, 1);
-		clzz.addCertification(SubClass.CERTIFICATION_75);
-		player.store(true);
-	}
-	
-	/**
-	 * Method getCertification80.
-	 * @param npc NpcInstance
-	 * @param player Player
-	 */
-	public static void getCertification80(NpcInstance npc, Player player)
-	{
-		if (!checkConditions(80, npc, player, Config.ALT_GAME_SUB_BOOK))
-		{
-			return;
-		}
-		SubClass clzz = player.getActiveSubClass();
-		if (!clzz.isCertificationGet(SubClass.CERTIFICATION_65))
-		{
-			Functions.show(PATH + "certificate-fail.htm", player, npc);
-			return;
-		}
-		if (clzz.isCertificationGet(SubClass.CERTIFICATION_80))
-		{
-			Functions.show(PATH + "certificate-already.htm", player, npc);
-			return;
-		}
-		Functions.addItem(player, 10280, 1);
-		clzz.addCertification(SubClass.CERTIFICATION_80);
+		else
+			clzz.addDualCertification(_certificationList.get(level));
+		Functions.show(PATH  + "certificate-sucess.htm", player, npc);
 		player.store(true);
 	}
 	
@@ -160,42 +161,56 @@ public class CertificationFunctions
 	 * @param npc NpcInstance
 	 * @param player Player
 	 */
-	public static void cancelCertification(NpcInstance npc, Player player)
+	public static void cancelCertification(NpcInstance npc, Player player, boolean isDualCertification, boolean isDualClassReset)
 	{
-		if (player.getInventory().getAdena() < 10000000)
+		Integer adenaCost = isDualClassReset ? 0 : isDualCertification ? Config.ALT_GAME_RESET_DUALCERTIFICATION_COST : Config.ALT_GAME_RESET_CERTIFICATION_COST;
+		AcquireType cancelAcquireType = isDualCertification ? AcquireType.DUAL_CERTIFICATION : AcquireType.CERTIFICATION;
+		Integer DestroyItems = !isDualCertification ? CERTIFICATE : DUAL_CERTIFICATE; 
+		if (player.getInventory().getAdena() < adenaCost)
 		{
 			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
-		if (!player.getActiveSubClass().isBase())
-		{
-			return;
-		}
-		player.getInventory().reduceAdena(10000000);
-		for (ClassType2 classType2 : ClassType2.VALUES)
-		{
-			player.getInventory().destroyItemByItemId(classType2.getCertificateId(), player.getInventory().getCountOf(classType2.getCertificateId()));
-			player.getInventory().destroyItemByItemId(classType2.getTransformationId(), player.getInventory().getCountOf(classType2.getTransformationId()));
-		}
-		Collection<SkillLearn> skillLearnList = SkillAcquireHolder.getInstance().getAvailableSkills(null, AcquireType.CERTIFICATION);
+		List <Integer> SkillIdToRemove = new ArrayList <Integer>();
+		Collection<SkillLearn> skillLearnList = SkillAcquireHolder.getInstance().getAvailableSkills(null, cancelAcquireType);
 		for (SkillLearn learn : skillLearnList)
 		{
 			Skill skill = player.getKnownSkill(learn.getId());
 			if (skill != null)
 			{
-				player.removeSkill(skill, true);
+				SkillIdToRemove.add(skill.getId());
 			}
 		}
+		if(SkillIdToRemove.size() <= 0 && !isDualClassReset)
+		{
+			Functions.show(PATH  + "certificate-nohaveskills.htm", player, npc);
+			return;
+		}
+		player.removeCertSkill(SkillIdToRemove);
+		player.getInventory().reduceAdena(adenaCost);
+        player.getInventory().destroyItemByItemId(DestroyItems, player.getInventory().getCountOf(DestroyItems));
 		for (SubClass subClass : player.getSubClassList().values())
 		{
-			if (!subClass.isBase())
+			if (isDualCertification)
 			{
-				subClass.setCertification(0);
+				if(subClass.isDouble())
+				{
+					subClass.setDualCertification(0);					
+				}				
+			}
+			else
+			{
+				if(!subClass.isBase())
+				{
+					subClass.setCertification(0);
+				}
 			}
 		}
 		player.sendSkillList();
-		Functions.show(new CustomMessage("scripts.services.SubclassSkills.SkillsDeleted", player), player);
-	}
+		CharacterSubclassDAO.getInstance().store(player);
+		if(!isDualClassReset)
+			Functions.show(new CustomMessage("scripts.services.SubclassSkills.SkillsDeleted", player), player);
+	}	
 	
 	/**
 	 * Method checkConditions.
@@ -207,27 +222,55 @@ public class CertificationFunctions
 	 */
 	public static boolean checkConditions(int level, NpcInstance npc, Player player, boolean first)
 	{
-		if (player.getLevel() < level)
+		String typeCertificate = new String();
+		if (level < 85)
 		{
-			Functions.show(PATH + "certificate-nolevel.htm", player, npc, "%level%", level);
-			return false;
+			typeCertificate = "certificate";
+			if (player.getLevel() < level)
+			{
+				Functions.show(PATH + typeCertificate +"-nolevel.htm", player, npc, "%level%", level);
+				return false;
+			}
+			if (player.getActiveSubClass().isBase())
+			{
+				Functions.show(PATH + typeCertificate +"-nosub.htm", player, npc);
+				return false;
+			}
 		}
-		if (player.getActiveSubClass().isBase())
+		else
 		{
-			Functions.show(PATH + "certificate-nosub.htm", player, npc);
-			return false;
+			typeCertificate = "dualcertificate";
+			int levelMain = 0, levelDual = 0;
+			for(SubClass sc : player.getSubClassList().values())
+			{
+				if(sc.getType() == SubClassType.BASE_CLASS)
+				{
+					levelMain = sc.getLevel();				
+				}
+				else if (sc.getType() == SubClassType.DOUBLE_SUBCLASS)
+				{
+					levelDual = sc.getLevel();
+				}
+			}
+			if(levelDual == 0)
+			{
+				Functions.show(PATH + typeCertificate + "-nodualoncharacter.htm", player, npc);
+				return false;			
+			}
+			if(levelMain < level || levelDual < level)
+			{
+				Functions.show(PATH + typeCertificate + "-nolevel.htm", player, npc, "%level%", level);
+				return false;
+			}	
+			if (!player.getActiveSubClass().isDouble())
+			{
+				Functions.show(PATH + typeCertificate + "-nodual.htm", player, npc);
+				return false;
+			}	
 		}
 		if (first)
 		{
 			return true;
-		}
-		for (ClassType2 type : ClassType2.VALUES)
-		{
-			if ((player.getInventory().getCountOf(type.getCertificateId()) > 0) || (player.getInventory().getCountOf(type.getTransformationId()) > 0))
-			{
-				Functions.show(PATH + "certificate-already.htm", player, npc);
-				return false;
-			}
 		}
 		return true;
 	}

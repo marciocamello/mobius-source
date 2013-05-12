@@ -8,6 +8,8 @@
 		<remove itemId="0" count="0" necessary="false"/>
 		<give itemId="0" count="0"/>
 		<reuse resetReuse="* * * * *" setUponEntry="true" sharedReuseGroup="0"/>
+		<party min="7" max="45"/>
+		<geodata map="21_12"/>
 		<spawns>
 		</spawns>
 		<doors>

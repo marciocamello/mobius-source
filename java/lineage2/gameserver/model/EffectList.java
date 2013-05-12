@@ -236,7 +236,31 @@ public class EffectList
 		}
 		return false;
 	}
-	
+
+	/**
+	 * Method containEffectFromSkill.
+	 * @param skillId integer
+	 * @param removeEffects boolean
+	 * @return boolean
+	 */
+	public boolean containEffectFromSkillId(int skillId, boolean removeEffects)
+	{
+		boolean contain = false;
+		if (isEmpty())
+		{
+			return contain;
+		}
+		for (Effect e : _effects)
+		{
+			if (skillId == e.getSkill().getId())
+			{
+				contain = true;
+				e.exit();
+			}
+		}
+		return contain;
+	}
+
 	/**
 	 * Method getAllEffects.
 	 * @return List<Effect>

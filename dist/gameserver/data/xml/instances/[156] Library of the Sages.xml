@@ -3,7 +3,7 @@
     <instance id="156" name="Library of the Sages" maxChannels="50" collapseIfEmpty="1" timelimit="30"
               dispelBuffs="false" respawn="60">
         <collapse on-party-dismiss="true" timer="60"/>
-        <level min="81" max="85"/>
+        <level min="81" max="99"/>
         <return loc="37128 -49768 -1128"/>
         <teleport loc="37205 -49753 -1128"/>
         <remove itemId="0" count="0" necessary="false"/>

@@ -41,7 +41,7 @@ public abstract class ScriptItemHandler implements ScriptFile, IItemHandler
 		if (item.isEquipped())
 		{
 			player.getInventory().unEquipItem(item);
-			player.sendUserInfo(true);
+			player.sendUserInfo();
 		}
 		item = player.getInventory().removeItemByObjectId(item.getObjectId(), count);
 		if (item == null)

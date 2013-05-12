@@ -74,7 +74,7 @@ public final class SubClassInfo
 	 * Field SUBCLASS_SET_MAP.
 	 */
 	@SuppressWarnings("rawtypes")
-	private static final EnumMap<ClassId, Set> SUBCLASS_SET_MAP = new EnumMap<>(ClassId.class);
+	private static final EnumMap<ClassId, Set> SUBCLASS_SET_MAP = new EnumMap <ClassId, Set>(ClassId.class);
 	
 	/**
 	 * Method getAvailableSubClasses.
@@ -157,24 +157,18 @@ public final class SubClassInfo
 				{
 					availSubs.remove(availSub);
 				}
-			}
-			if ((npcRace != null) && (npcTeachType != null))
-			{
-				if ((!availSub.isOfRace(Race.human)) && (!availSub.isOfRace(Race.elf)))
-				{
-					if (!availSub.isOfRace(npcRace))
-					{
-						availSubs.remove(availSub);
-					}
-				}
-				else if (!availSub.isOfType(npcTeachType))
+				if(availSub.getType2() == ClassId.VALUES[subClass.getClassId()].getType2() && subClass.isBase())
 				{
 					availSubs.remove(availSub);
 				}
 			}
 			if (availSub.isOfRace(Race.kamael))
 			{
-				if (((currClass == ClassId.M_SOUL_HOUND) || (currClass == ClassId.F_SOUL_HOUND) || (currClass == ClassId.F_SOUL_BREAKER) || (currClass == ClassId.M_SOUL_BREAKER)) && ((availSub == ClassId.F_SOUL_BREAKER) || (availSub == ClassId.M_SOUL_BREAKER)))
+				if (player.getSex() == 1 && (availSub == ClassId.M_SOUL_BREAKER))
+				{
+					availSubs.remove(availSub);
+				}
+				if (player.getSex() == 0 && (availSub == ClassId.F_SOUL_BREAKER))
 				{
 					availSubs.remove(availSub);
 				}
@@ -275,20 +269,20 @@ public final class SubClassInfo
 		SUBCLASS_SET_MAP.put(ClassId.MYSTIC_MUSE, SUBCLASS_SET_5);
 		SUBCLASS_SET_MAP.put(ClassId.SPELLHOWLER, SUBCLASS_SET_5);
 		SUBCLASS_SET_MAP.put(ClassId.STORM_SCREAMER, SUBCLASS_SET_5);
+		SUBCLASS_SET_MAP.put(ClassId.SOULTAKER, EnumSet.of(ClassId.NECROMANCER));
 		SUBCLASS_SET_MAP.put(ClassId.DOOMBRINGER, SUBCLASS_SET_6);
 		SUBCLASS_SET_MAP.put(ClassId.M_SOUL_HOUND, SUBCLASS_SET_6);
 		SUBCLASS_SET_MAP.put(ClassId.F_SOUL_HOUND, SUBCLASS_SET_6);
 		SUBCLASS_SET_MAP.put(ClassId.TRICKSTER, SUBCLASS_SET_6);
 		SUBCLASS_SET_MAP.put(ClassId.DUELIST, EnumSet.of(ClassId.GLADIATOR));
 		SUBCLASS_SET_MAP.put(ClassId.DREADNOUGHT, EnumSet.of(ClassId.WARLORD));
-		SUBCLASS_SET_MAP.put(ClassId.SOULTAKER, EnumSet.of(ClassId.NECROMANCER));
-		SUBCLASS_SET_MAP.put(ClassId.CARDINAL, EnumSet.of(ClassId.BISHOP));
-		SUBCLASS_SET_MAP.put(ClassId.HIEROPHANT, EnumSet.of(ClassId.PROPHET));
-		SUBCLASS_SET_MAP.put(ClassId.SWORD_MUSE, EnumSet.of(ClassId.SWORDSINGER));
-		SUBCLASS_SET_MAP.put(ClassId.EVAS_SAINT, EnumSet.of(ClassId.ELDER));
-		SUBCLASS_SET_MAP.put(ClassId.SPECTRAL_DANCER, EnumSet.of(ClassId.BLADEDANCER));
 		SUBCLASS_SET_MAP.put(ClassId.TITAN, EnumSet.of(ClassId.DESTROYER));
 		SUBCLASS_SET_MAP.put(ClassId.GRAND_KHAVATARI, EnumSet.of(ClassId.TYRANT));
+		SUBCLASS_SET_MAP.put(ClassId.CARDINAL, EnumSet.of(ClassId.BISHOP));
+		SUBCLASS_SET_MAP.put(ClassId.EVAS_SAINT, EnumSet.of(ClassId.ELDER));
+		SUBCLASS_SET_MAP.put(ClassId.HIEROPHANT, EnumSet.of(ClassId.PROPHET));
+		SUBCLASS_SET_MAP.put(ClassId.SWORD_MUSE, EnumSet.of(ClassId.SWORDSINGER));
+		SUBCLASS_SET_MAP.put(ClassId.SPECTRAL_DANCER, EnumSet.of(ClassId.BLADEDANCER));
 		SUBCLASS_SET_MAP.put(ClassId.DOMINATOR, EnumSet.of(ClassId.OVERLORD));
 		SUBCLASS_SET_MAP.put(ClassId.DOOMCRYER, EnumSet.of(ClassId.WARCRYER));
 	}

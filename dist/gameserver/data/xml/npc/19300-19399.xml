@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="19306" name="" title="">
+	<npc id="19306" name="Yin Spicula Lieutenant" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -48,7 +48,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="19307" name="" title="">
+	<npc id="19307" name="Yin Spicula Captain" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -95,7 +95,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="19309" name="" title="">
+	<npc id="19309" name="Golem of Repairs" title="Black Anvil Guild">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -142,7 +142,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="19311" name="" title="">
+	<npc id="19311" name="Drill Golem" title="Black Anvil Guild">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -189,7 +189,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="19313" name="" title="">
+	<npc id="19313" name="Excavator Golem" title="Black Anvil Guild">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -236,7 +236,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="19315" name="" title="">
+	<npc id="19315" name="Pincer Golem" title="Black Anvil Guild">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -283,7 +283,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="19317" name="" title="">
+	<npc id="19317" name="Screw Golem" title="Black Anvil Guild">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -330,7 +330,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="19318" name="" title="">
+	<npc id="19318" name="Cannon Golem" title="Black Anvil Guild">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -377,7 +377,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="19320" name="" title="">
+	<npc id="19320" name="Yin" title="Spicula Clone Generator">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -424,7 +424,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="19322" name="" title="">
+	<npc id="19322" name="Soldier" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>
@@ -471,7 +471,7 @@
             <defence attribute="unholy" value="150"/>
         </attributes>
     </npc>
-	<npc id="19323" name="" title="">
+	<npc id="19323" name="Soldier" title="">
         <!--Need TODO-->
         <set name="baseHpMax" value="2444.468"/>
         <set name="baseMAtkSpd" value="500"/>

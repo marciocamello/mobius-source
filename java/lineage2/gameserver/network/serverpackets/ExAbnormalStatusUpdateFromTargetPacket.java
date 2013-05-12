@@ -1,67 +1,40 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package lineage2.gameserver.network.serverpackets;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.IconEffect;
 import lineage2.gameserver.utils.EffectsComparator;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
- * @author Mobius
- * @version $Revision: 1.0 $
+ * @author ALF
+ * @data 07.02.2012
  */
 public class ExAbnormalStatusUpdateFromTargetPacket extends L2GameServerPacket implements IconEffectPacket
 {
-	/**
-	 * Field objId.
-	 */
-	private final int objId;
-	/**
-	 * Field _effects.
-	 */
-	private final List<IconEffect> _effects;
-	
-	/**
-	 * Constructor for ExAbnormalStatusUpdateFromTargetPacket.
-	 * @param target Creature
-	 */
+	private int objId;
+	private List<IconEffect> _effects;
+
 	public ExAbnormalStatusUpdateFromTargetPacket(Creature target)
 	{
-		_effects = new ArrayList<>();
+		_effects = new ArrayList<IconEffect>();
 		objId = target.getObjectId();
+
 		Effect[] effects = target.getEffectList().getAllFirstEffects();
 		Arrays.sort(effects, EffectsComparator.getInstance());
+
 		for (Effect effect : effects)
-		{
-			if ((effect != null) && effect.isInUse())
-			{
+			if (effect != null && effect.isInUse())
 				effect.addIcon(this);
-			}
-		}
 	}
-	
-	/**
-	 * Method writeImpl.
-	 */
+
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0xE5);
+		writeEx(0xE6);
 		writeD(objId);
 		writeH(_effects.size());
 		for (IconEffect e : _effects)
@@ -70,21 +43,15 @@ public class ExAbnormalStatusUpdateFromTargetPacket extends L2GameServerPacket i
 			writeH(e.getLevel());
 			writeD(0x00);
 			writeD(e.getDuration());
-			writeD(e.getObj());
+			writeD(e.getObj()); // objId того кто наложил дебаф, нужно для
+			                    // определения ты наложил или нет.
 		}
 	}
-	
-	/**
-	 * Method addIconEffect.
-	 * @param skillId int
-	 * @param level int
-	 * @param duration int
-	 * @param obj int
-	 * @see lineage2.gameserver.network.serverpackets.IconEffectPacket#addIconEffect(int, int, int, int)
-	 */
+
 	@Override
 	public void addIconEffect(int skillId, int level, int duration, int obj)
 	{
 		_effects.add(new IconEffect(skillId, level, duration, obj));
 	}
+
 }

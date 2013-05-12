@@ -89,7 +89,7 @@ public final class EffectInvisible extends Effect
 			return;
 		}
 		player.setInvisibleType(_invisibleType);
-		player.broadcastUserInfo(true);
+		player.broadcastUserInfo();
 		for (Summon summon : player.getSummonList())
 		{
 			summon.broadcastCharInfo();

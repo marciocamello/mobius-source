@@ -351,7 +351,7 @@
 		<set name="trait" val="DERANGEMENT"/>
 		<set name="saveVs" val="MEN"/>
 		<for>
-			<effect count="3" name="Fear" stackOrder="-1" stackType="Fear" time="5" val="0"/>
+			<effect count="15" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0"/>
 		</for>
 	</skill>
 	<skill id="5221" levels="1" name="Balor - Physical Close Range Weak Point">
@@ -983,7 +983,7 @@
 		<set name="trait" val="DERANGEMENT"/>
 		<set name="saveVs" val="MEN"/>
 		<for>
-			<effect count="3" name="Fear" stackOrder="-1" stackType="Fear" time="5" val="0"/>
+			<effect count="15" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0"/>
 		</for>
 	</skill>
 	<skill id="5260" levels="12" name="Disarm">
@@ -998,6 +998,7 @@
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="activateRate" val="70"/>
 		<set name="target" val="TARGET_ONE"/>
+		<set name="trait" val="DISARM"/>
 		<set name="skillType" val="DEBUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="saveVs" val="STR"/>

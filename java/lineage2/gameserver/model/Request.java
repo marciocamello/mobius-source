@@ -92,7 +92,11 @@ public class Request extends MultiValueSet<String>
 		/**
 		 * Field MENTEE.
 		 */
-		MENTEE
+		MENTEE,
+		/**
+		 * Field SUBSTITUTE.
+		 */
+		SUBSTITUTE
 	}
 	
 	/**

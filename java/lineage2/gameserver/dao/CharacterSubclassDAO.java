@@ -44,13 +44,13 @@ public class CharacterSubclassDAO
 	 */
 	private static CharacterSubclassDAO _instance = new CharacterSubclassDAO();
 	/**
-	 * Field SELECT_SQL_QUERY. (value is ""SELECT class_id, default_class_id, exp, sp, curHp, curCp, curMp, active, type, death_penalty, certification FROM character_subclasses WHERE char_obj_id=?"")
+	 * Field SELECT_SQL_QUERY. (value is ""SELECT class_id, default_class_id, exp, sp, curHp, curCp, curMp, active, type, death_penalty, certification, dual_certificationFROM character_subclasses WHERE char_obj_id=?"")
 	 */
-	public static final String SELECT_SQL_QUERY = "SELECT class_id, default_class_id, exp, sp, curHp, curCp, curMp, active, type, death_penalty, certification FROM character_subclasses WHERE char_obj_id=?";
+	public static final String SELECT_SQL_QUERY = "SELECT class_id, default_class_id, exp, sp, curHp, curCp, curMp, active, type, death_penalty, certification, dual_certification FROM character_subclasses WHERE char_obj_id=?";
 	/**
-	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO character_subclasses (char_obj_id, class_id, default_class_id, exp, sp, curHp, curMp, curCp, maxHp, maxMp, maxCp, level, active, type, death_penalty, certification) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"")
+	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO character_subclasses (char_obj_id, class_id, default_class_id, exp, sp, curHp, curMp, curCp, maxHp, maxMp, maxCp, level, active, type, death_penalty, certification, dual_certification) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"")
 	 */
-	public static final String INSERT_SQL_QUERY = "INSERT INTO character_subclasses (char_obj_id, class_id, default_class_id, exp, sp, curHp, curMp, curCp, maxHp, maxMp, maxCp, level, active, type, death_penalty, certification) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	public static final String INSERT_SQL_QUERY = "INSERT INTO character_subclasses (char_obj_id, class_id, default_class_id, exp, sp, curHp, curMp, curCp, maxHp, maxMp, maxCp, level, active, type, death_penalty, certification, dual_certification) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 	
 	/**
 	 * Method getInstance.
@@ -81,7 +81,7 @@ public class CharacterSubclassDAO
 	 * @param certification int
 	 * @return boolean
 	 */
-	public boolean insert(int objId, int classId, int dafaultClassId, long exp, int sp, double curHp, double curMp, double curCp, double maxHp, double maxMp, double maxCp, int level, boolean active, SubClassType type, DeathPenalty deathPenalty, int certification)
+	public boolean insert(int objId, int classId, int dafaultClassId, long exp, int sp, double curHp, double curMp, double curCp, double maxHp, double maxMp, double maxCp, int level, boolean active, SubClassType type, DeathPenalty deathPenalty, int certification, int dual_certification)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -105,6 +105,7 @@ public class CharacterSubclassDAO
 			statement.setInt(14, type.ordinal());
 			statement.setInt(15, deathPenalty == null ? 0 : 6);
 			statement.setInt(16, certification);
+			statement.setInt(17, dual_certification);
 			statement.executeUpdate();
 		}
 		catch (final Exception e)
@@ -126,7 +127,7 @@ public class CharacterSubclassDAO
 	 */
 	public List<SubClass> restore(Player player)
 	{
-		List<SubClass> result = new ArrayList<>();
+		List<SubClass> result = new ArrayList<SubClass>();
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
@@ -146,10 +147,14 @@ public class CharacterSubclassDAO
 				subClass.setHp(rset.getDouble("curHp"));
 				subClass.setMp(rset.getDouble("curMp"));
 				subClass.setCp(rset.getDouble("curCp"));
+				subClass.setLogonHp(rset.getDouble("curHp"));
+				subClass.setLogonMp(rset.getDouble("curMp"));
+				subClass.setLogonCp(rset.getDouble("curCp"));
 				subClass.setActive(rset.getInt("active") == 1);
 				subClass.setType(SubClassType.VALUES[rset.getInt("type")]);
 				subClass.setDeathPenalty(new DeathPenalty(player, rset.getInt("death_penalty")));
 				subClass.setCertification(rset.getInt("certification"));
+				subClass.setDualCertification(rset.getInt("dual_certification"));
 				result.add(subClass);
 			}
 		}
@@ -190,7 +195,8 @@ public class CharacterSubclassDAO
 				sb.append("active=").append(subClass.isActive() ? 1 : 0).append(',');
 				sb.append("type=").append(subClass.getType().ordinal()).append(',');
 				sb.append("death_penalty=").append(subClass.getDeathPenalty(player).getLevelOnSaveDB(player)).append(',');
-				sb.append("certification='").append(subClass.getCertification()).append('\'');
+				sb.append("certification=").append(subClass.getCertification()).append(',');
+				sb.append("dual_certification=").append(subClass.getDualCertification());
 				sb.append(" WHERE char_obj_id=").append(player.getObjectId()).append(" AND class_id=").append(subClass.getClassId()).append(" LIMIT 1");
 				statement.executeUpdate(sb.toString());
 			}

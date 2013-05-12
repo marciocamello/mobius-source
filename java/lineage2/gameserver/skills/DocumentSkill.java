@@ -268,7 +268,7 @@ public final class DocumentSkill extends DocumentBase
 				}
 				else
 				{
-					enchRoute = count + 1;
+					enchRoute = count +1;
 				}
 				for (int r = 1; r <= eLevels; r++)
 				{

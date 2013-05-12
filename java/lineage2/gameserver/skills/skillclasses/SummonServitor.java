@@ -305,7 +305,7 @@ public class SummonServitor extends Skill
 				clone.spawnMe(cloneLoc);
 				clone.setRunning();
 				clone.setFollowMode(true);
-				
+
 				cloneLoc = Location.findAroundPosition(activeChar, 50, 70);
 				clone = new CloneInstance(IdFactory.getInstance().getNextId(), activeChar.getTemplate(), activeChar, _lifeTime, cloneLoc);
 				clone.setHeading(activeChar.getHeading());
@@ -315,7 +315,7 @@ public class SummonServitor extends Skill
 				clone.spawnMe(cloneLoc);
 				clone.setRunning();
 				clone.setFollowMode(true);
-				
+
 				cloneLoc = Location.findAroundPosition(activeChar, 50, 70);
 				clone = new CloneInstance(IdFactory.getInstance().getNextId(), activeChar.getTemplate(), activeChar, _lifeTime, cloneLoc);
 				clone.setHeading(activeChar.getHeading());

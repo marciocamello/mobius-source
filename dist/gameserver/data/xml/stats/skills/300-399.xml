@@ -752,41 +752,33 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="323" levels="1" name="Quiver of Arrow: A Grade">
-    <!-- Summons between 700 and 2800 Mithril arrows. Consumes 1 A-Grade Crystal. -->
-		<set name="magicType" val="MAGIC"/>
-		<set name="icon" val="icon.skill0323"/>
+	<skill id="323" levels="1" name="Quiver of Arrow: Grade A">
 		<set name="reuseDelay" val="600000"/>
-		<set name="magicLevel" val="66"/>
 		<set name="hitTime" val="3000"/>
-		<set name="hitCancelTime" val="500"/>
-		<set name="mpConsume1" val="366"/>
+		<set name="magicLevel" val="66"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="itemConsumeId" val="1461"/>
 		<set name="itemConsumeCount" val="1"/>
-		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="SUMMON_ITEM"/>
-		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="SummonItemId" val="1344"/>
-		<set name="SummonMinCount" val="700"/>
-		<set name="SummonMaxCount" val="2800"/>
-	</skill>
-	<skill id="324" levels="1" name="Quiver of Arrow: S Grade">
-    <!-- Summons between 900 and 3600 arrows of light. Consumes 1 S-Grade Crystal. -->
-		<set name="magicType" val="MAGIC"/>
-		<set name="icon" val="icon.skill0324"/>
-		<set name="reuseDelay" val="600000"/>
-		<set name="magicLevel" val="72"/>
-		<set name="hitTime" val="3000"/>
+		<set name="icon" val="icon.skill0323"/>
 		<set name="hitCancelTime" val="500"/>
-		<set name="mpConsume1" val="398"/>
+		<set name="mpConsume1" val="366"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="324" levels="1" name="Quiver of Arrow: Grade S">
+		<set name="reuseDelay" val="600000"/>
+		<set name="hitTime" val="3000"/>
+		<set name="magicLevel" val="72"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="itemConsumeId" val="1462"/>
 		<set name="itemConsumeCount" val="1"/>
+		<set name="icon" val="icon.skill0324"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume1" val="398"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="SUMMON_ITEM"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="SummonItemId" val="1345"/>
-		<set name="SummonMinCount" val="900"/>
-		<set name="SummonMaxCount" val="3600"/>
 	</skill>
 	<skill id="325" levels="1" name="Strider Siege Assault">
     <!-- Uses 15005 Power to attack a castle's gate. Can be used while mounted on a Strider. Consumes 5 Spirit Ore. -->
@@ -1318,6 +1310,7 @@
 		<set name="charges" val="8"/>
 		<set name="isOffensive" val="true"/>
 		<set name="nextAction" val="attack"/>
+		<set name="reuseDelay" val="900"/> <!-- Balance by Zyth, WunkiaKorps 2013 -->
 	</skill>
 	<skill id="346" levels="1" name="Raging Force">
     <!-- Attacks the enemy with a devastating burst of wind energy. Requires a fist weapon. Possible up to stage 8. Over-hit and critical hit are possible. -->
@@ -1339,6 +1332,7 @@
 		<set name="charges" val="8"/>
 		<set name="isOffensive" val="true"/>
 		<set name="nextAction" val="attack"/>
+		<set name="reuseDelay" val="900"/> <!-- Balance by Zyth, WunkiaKorps 2013 -->
 	</skill>
 	<skill id="347" levels="1" name="Earthquake">
     <!-- Supplements the user's P. Atk. with 4848 Power in an Earth-shattering spear thrust. Requires a polearm. Over-hit and critical hit are possible. Ignores Shield Defense. Target may be canceled. -->
