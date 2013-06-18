@@ -16,7 +16,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.BuyListHolder.NpcTradeList;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
@@ -31,9 +30,7 @@ import lineage2.gameserver.network.serverpackets.ExShowManorDefaultInfo;
 import lineage2.gameserver.network.serverpackets.ExShowProcureCropDetail;
 import lineage2.gameserver.network.serverpackets.ExShowSeedInfo;
 import lineage2.gameserver.network.serverpackets.ExShowSellCropList;
-import lineage2.gameserver.network.serverpackets.MyTargetSelected;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-import lineage2.gameserver.network.serverpackets.ValidateLocation;
 import lineage2.gameserver.templates.manor.CropProcure;
 import lineage2.gameserver.templates.manor.SeedProduction;
 import lineage2.gameserver.templates.npc.NpcTemplate;
@@ -59,48 +56,29 @@ public class ManorManagerInstance extends MerchantInstance
 		super(objectId, template);
 	}
 	
-	/**
-	 * Method onAction.
-	 * @param player Player
-	 * @param shift boolean
-	 */
 	@Override
-	public void onAction(Player player, boolean shift)
+	public void onInteract(final Player player)
 	{
-		if (this != player.getTarget())
+		if (CastleManorManager.getInstance().isDisabled())
 		{
-			player.setTarget(this);
-			player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel() - getLevel()), new ValidateLocation(this));
+			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
+			
+			html.setFile("npcdefault.htm");
+			html.replace("%objectId%", String.valueOf(getObjectId()));
+			html.replace("%npcname%", getName());
+			player.sendPacket(html);
+		}
+		else if (!player.isGM() // Player is not GM
+			&& player.isClanLeader() // Player is clan leader of clan (then he is the lord)
+			&& (getCastle() != null // Verification of castle
+			) && (getCastle().getOwnerId() == player.getClanId() // Player's clan owning the castle
+			))
+		{
+			showMessageWindow(player, "manager-lord.htm");
 		}
 		else
 		{
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
-			player.sendPacket(my);
-			if (!isInRange(player, INTERACTION_DISTANCE))
-			{
-				player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
-				player.sendActionFailed();
-			}
-			else
-			{
-				if (CastleManorManager.getInstance().isDisabled())
-				{
-					NpcHtmlMessage html = new NpcHtmlMessage(player, this);
-					html.setFile("npcdefault.htm");
-					html.replace("%objectId%", String.valueOf(getObjectId()));
-					html.replace("%npcname%", getName());
-					player.sendPacket(html);
-				}
-				else if (!player.isGM() && player.isClanLeader() && (getCastle() != null) && (getCastle().getOwnerId() == player.getClanId()))
-				{
-					showMessageWindow(player, "manager-lord.htm");
-				}
-				else
-				{
-					showMessageWindow(player, "manager.htm");
-				}
-				player.sendActionFailed();
-			}
+			showMessageWindow(player, "manager.htm");
 		}
 	}
 	

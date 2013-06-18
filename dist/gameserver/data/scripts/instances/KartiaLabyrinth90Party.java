@@ -34,17 +34,16 @@ public class KartiaLabyrinth90Party extends Reflection
 	DeathListener _deathListener;
 	private final ZoneListener _epicZoneListener;
 	private final ZoneListenerL _landingZoneListener;
-	boolean _entryLocked;
 	boolean _startLaunched;
 	boolean _landingentered;
 	
 	private static final int DOOR1_ID = 16170002;
 	private static final int DOOR2_ID = 16170003;
 	
-	private final int KartiaGuard = 19232;
-	private final int KartiaWatchman = 19233;
-	private final int DimensionalWatchman = 19234;
-	private final int LordOfKartia = 25883;
+	int KartiaGuard = 19232;
+	int KartiaWatchman = 19233;
+	int DimensionalWatchman = 19234;
+	int LordOfKartia = 25883;
 	
 	public KartiaLabyrinth90Party()
 	{
@@ -52,7 +51,6 @@ public class KartiaLabyrinth90Party extends Reflection
 		_epicZoneListener = new ZoneListener();
 		_landingZoneListener = new ZoneListenerL();
 		_landingentered = false;
-		_entryLocked = false;
 		_startLaunched = false;
 	}
 	
@@ -111,7 +109,7 @@ public class KartiaLabyrinth90Party extends Reflection
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
-			if (_entryLocked)
+			if (_startLaunched)
 			{
 				return;
 			}
@@ -120,7 +118,7 @@ public class KartiaLabyrinth90Party extends Reflection
 			{
 				return;
 			}
-			ThreadPoolManager.getInstance().schedule(new StartKartiaParty85(), 30000L);
+			ThreadPoolManager.getInstance().schedule(new StartKartiaParty90(), 30000L);
 			_startLaunched = true;
 		}
 		
@@ -784,16 +782,15 @@ public class KartiaLabyrinth90Party extends Reflection
 		}
 	}
 	
-	private class StartKartiaParty85 extends RunnableImpl
+	private class StartKartiaParty90 extends RunnableImpl
 	{
-		StartKartiaParty85()
+		StartKartiaParty90()
 		{
 		}
 		
 		@Override
 		public void runImpl()
 		{
-			_entryLocked = true;
 			ThreadPoolManager.getInstance().schedule(new FirstStage(), 12000L);
 		}
 	}

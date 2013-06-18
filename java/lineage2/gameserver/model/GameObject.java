@@ -18,6 +18,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.lang.reference.HardReferences;
+import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.base.InvisibleType;
@@ -26,6 +27,7 @@ import lineage2.gameserver.model.entity.events.EventOwner;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.network.serverpackets.DeleteObject;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Events;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
@@ -438,20 +440,6 @@ public abstract class GameObject extends EventOwner
 			r.removeObject(this);
 		}
 		clearRef();
-	}
-	
-	/**
-	 * Method onAction.
-	 * @param player Player
-	 * @param shift boolean
-	 */
-	public void onAction(Player player, boolean shift)
-	{
-		if (Events.onAction(player, this, shift))
-		{
-			return;
-		}
-		player.sendActionFailed();
 	}
 	
 	/**
@@ -1172,4 +1160,119 @@ public abstract class GameObject extends EventOwner
 		}
 		return ((GameObject) obj).getObjectId() == getObjectId();
 	}
+	
+	public void onActionTarget(final Player player, boolean forced)
+	{
+		player.setTarget(this);
+	}
+	
+	public void onActionSelect(final Player player, final boolean forced)
+	{
+		if (Events.onAction(player, this, forced))
+		{
+			return;
+		}
+		
+		if (player.getTarget() == this)
+		{
+			onActionTargeted(player, forced);
+		}
+		else
+		{
+			onActionTarget(player, forced);
+		}
+	}
+	
+	public void onActionTargeted(final Player player, boolean forced)
+	{
+		if (player == this)
+		{
+			return;
+		}
+		if (player.isSitting())
+		{
+			// msg?
+			return;
+		}
+		if (player.isMovementDisabled())
+		{
+			return;
+		}
+		
+		if (!player.isInRange(this, Creature.INTERACTION_DISTANCE))
+		{
+			player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this, null);
+			return;
+		}
+		onInteract(player);
+	}
+	
+	public void onInteract(final Player player)
+	{
+		// dummy
+	}
+	
+	public boolean isTargetable(final Player player)
+	{
+		if (player.isInObserverMode())
+		{
+			return false;
+		}
+		
+		if (player.isTeleporting())
+		{
+			return false;
+		}
+		
+		if (player.isOutOfControl())
+		{
+			return false;
+		}
+		
+		if (player.isAlikeDead() && (this != player))
+		{
+			return false;
+		}
+		
+		if (player.getReflectionId() != getReflectionId())
+		{
+			return false;
+		}
+		
+		if (player.isLockedTarget())
+		{
+			if (player.isClanAirShipDriver())
+			{
+				
+				/*
+				 * 2740 : This action is prohibited while steering.
+				 */
+				player.sendPacket(new SystemMessage(SystemMessage.THIS_ACTION_IS_PROHIBITED_WHILE_CONTROLLING));
+			}
+			
+			return false;
+		}
+		
+		if (player.isFrozen())
+		{
+			
+			/*
+			 * 687 : You cannot move while frozen. Please wait.
+			 */
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOVE_IN_A_FROZEN_STATE_PLEASE_WAIT_A_MOMENT));
+			return false;
+		}
+		
+		if ((player.getAggressionTarget() != null) && (player.getAggressionTarget() != this) && !player.getAggressionTarget().isDead())
+		{
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean displayHpBar()
+	{
+		return false;
+	}
+	
 }

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="5650" name="Alternative Dark Coda Seed">
+	<etcitem id="5650" name="Seed: Alternative Dark Coda">
+	<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Dark Coda. For best results, a level 5-15 character must plant it on a level 5-15 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -11,7 +12,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5651" name="Alternative Red Coda Seed">
+	<etcitem id="5651" name="Seed: Alternative Red Coda">
+	<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Red Coda. For best results, a level 8-18 character must plant it on a level 8-18 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -21,7 +23,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5652" name="Alternative Chilly Coda Seed">
+	<etcitem id="5652" name="Seed: Alternative Chilly Coda">
+	<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Chilly Coda. For best results, a level 11-21 character must plant it on a level 11-21 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -31,7 +34,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5653" name="Alternative Blue Coda Seed">
+	<etcitem id="5653" name="Seed: Alternative Blue Coda">
+	<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 14-24 character must plant it on a level 14-24 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -41,7 +45,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5654" name="Alternative Golden Coda Seed">
+	<etcitem id="5654" name="Seed: Alternative Golden Coda">
+	<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Golden Coda. For best results, a level 17-27 character must plant it on a level 17-27 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -51,7 +56,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5655" name="Alternative Lute Coda Seed">
+	<etcitem id="5655" name="Seed: Alternative Lute Coda">
+	<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Lute Coda. For best results, a level 20-30 character must plant it on a level 20-30 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -61,7 +67,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5656" name="Alternative Desert Coda Seed">
+	<etcitem id="5656" name="Seed: Alternative Desert Coda">
+	<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Desert Coda. For best results, a level 23-33 character must plant it on a level 23-33 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -71,7 +78,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5657" name="Alternative Blue Cobol Seed">
+	<etcitem id="5657" name="Seed: Alternative Blue Cobol">
+	<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 32-42 character must plant it on a level 32-42 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -81,7 +89,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5658" name="Alternative Blue Coda Seed">
+	<etcitem id="5658" name="Seed: Alternative Blue Coda">
+	<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 14-24 character must plant it on a level 14-24 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -91,7 +100,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5659" name="Alternative Golden Coda Seed">
+	<etcitem id="5659" name="Seed: Alternative Golden Coda">
+	<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Golden Coda. For best results, a level 17-27 character must plant it on a level 17-27 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -101,7 +111,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5660" name="Alternative Lute Coda Seed">
+	<etcitem id="5660" name="Seed: Alternative Lute Coda">
+	<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Lute Coda. For best results, a level 20-30 character must plant it on a level 20-30 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -111,7 +122,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5661" name="Alternative Desert Coda Seed">
+	<etcitem id="5661" name="Seed: Alternative Desert Coda">
+	<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Desert Coda. For best results, a level 23-33 character must plant it on a level 23-33 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -121,7 +133,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5662" name="Alternative Red Cobol Seed">
+	<etcitem id="5662" name="Seed: Alternative Red Cobol">
+	<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Red Cobol. For best results, a level 26-36 character must plant it on a level 26-36 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -131,7 +144,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5663" name="Alternative Chilly Cobol Seed">
+	<etcitem id="5663" name="Seed: Alternative Chilly Cobol">
+	<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29-39 character must plant it on a level 29-39 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -141,7 +155,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5664" name="Alternative Thorn Cobol Seed">
+	<etcitem id="5664" name="Seed: Alternative Thorn Cobol">
+	<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -151,7 +166,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5665" name="Alternative Golden Cobol Seed">
+	<etcitem id="5665" name="Seed: Alternative Golden Cobol">
+	<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38-48 character must plant it on a level 38-48 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -161,7 +177,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5666" name="Alternative Great Cobol Seed">
+	<etcitem id="5666" name="Seed: Alternative Great Cobol">
+	<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41-51 character must plant it on a level 41-51 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -171,7 +188,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5667" name="Alternative Red Cobol Seed">
+	<etcitem id="5667" name="Seed: Alternative Red Cobol">
+	<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Red Cobol. For best results, a level 26-36 character must plant it on a level 26-36 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -181,7 +199,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5668" name="Alternative Chilly Cobol Seed">
+	<etcitem id="5668" name="Seed: Alternative Chilly Cobol">
+	<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29-39 character must plant it on a level 29-39 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -191,7 +210,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5669" name="Alternative Blue Cobol Seed">
+	<etcitem id="5669" name="Seed: Alternative Blue Cobol">
+	<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Blue Cobol. For best results, a level 32-42 character must plant it on a level 32-42 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -201,7 +221,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5670" name="Alternative Thorn Cobol Seed">
+	<etcitem id="5670" name="Seed: Alternative Thorn Cobol">
+	<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -211,7 +232,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5671" name="Alternative Golden Cobol Seed">
+	<etcitem id="5671" name="Seed: Alternative Golden Cobol">
+	<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38-48 character must plant it on a level 38-48 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -221,7 +243,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5672" name="Alternative Great Cobol Seed">
+	<etcitem id="5672" name="Seed: Alternative Great Cobol">
+	<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41-51 character must plant it on a level 41-51 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -231,7 +254,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5673" name="Alternative Red Codran Seed">
+	<etcitem id="5673" name="Seed: Alternative Red Codran">
+	<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Red Codran. For best results, a level 44-54 character must plant it on a level 44-54 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -241,7 +265,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5674" name="Alternative Twin Codran Seed">
+	<etcitem id="5674" name="Seed: Alternative Twin Codran">
+	<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Twin Codran. For best results, a level 53-63 character must plant it on a level 53-63 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -251,7 +276,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5675" name="Alternative Desert Codran Seed">
+	<etcitem id="5675" name="Seed: Alternative Desert Codran">
+	<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Desert Codran. For best results, a level 59-69 character must plant it on a level 59-69 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -261,7 +287,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5676" name="Alternative Dark Coda Seed">
+	<etcitem id="5676" name="Seed: Alternative Dark Coda">
+	<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Dark Coda. For best results, a level 5-15 character must plant it on a level 5-15 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -271,7 +298,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5677" name="Alternative Red Coda Seed">
+	<etcitem id="5677" name="Seed: Alternative Red Coda">
+	<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Red Coda. For best results, a level 8-18 character must plant it on a level 8-18 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -281,7 +309,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5678" name="Alternative Blue Coda Seed">
+	<etcitem id="5678" name="Seed: Alternative Blue Coda">
+	<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 14-24 character must plant it on a level 14-24 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -291,7 +320,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5679" name="Alternative Red Cobol Seed">
+	<etcitem id="5679" name="Seed: Alternative Red Cobol">
+	<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Red Cobol. For best results, a level 26-36 character must plant it on a level 26-36 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -301,7 +331,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5680" name="Alternative Chilly Cobol Seed">
+	<etcitem id="5680" name="Seed: Alternative Chilly Cobol">
+	<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29-39 character must plant it on a level 29-39 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -311,7 +342,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5681" name="Alternative Blue Cobol Seed">
+	<etcitem id="5681" name="Seed: Alternative Blue Cobol">
+	<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Blue Cobol. For best results, a level 32-42 character must plant it on a level 32-42 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -321,7 +353,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5682" name="Alternative Thorn Cobol Seed">
+	<etcitem id="5682" name="Seed: Alternative Thorn Cobol">
+	<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -331,7 +364,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5683" name="Alternative Sea Codran Seed">
+	<etcitem id="5683" name="Seed: Alternative Sea Codran">
+	<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Sea Codran. For best results, a level 45-55 character must plant it on a level 45-55 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -341,7 +375,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5684" name="Alternative Chilly Codran Seed">
+	<etcitem id="5684" name="Seed: Alternative Chilly Codran">
+	<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Chilly Codran. For best results, a level 47-57 character must plant it on a level 47-57 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -351,7 +386,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5685" name="Alternative Blue Codran Seed">
+	<etcitem id="5685" name="Seed: Alternative Blue Codran">
+	<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Blue Codran. For best results, a level 50-60 character must plant it on a level 50-60 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -361,7 +397,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5686" name="Alternative Twin Codran Seed">
+	<etcitem id="5686" name="Seed: Alternative Twin Codran">
+	<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Twin Codran. For best results, a level 53-63 character must plant it on a level 53-63 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -371,7 +408,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5687" name="Alternative Thorn Cobol Seed">
+	<etcitem id="5687" name="Seed: Alternative Thorn Cobol">
+	<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -381,7 +419,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5688" name="Alternative Golden Cobol Seed">
+	<etcitem id="5688" name="Seed: Alternative Golden Cobol">
+	<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38-48 character must plant it on a level 38-48 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -391,7 +430,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5689" name="Alternative Great Cobol Seed">
+	<etcitem id="5689" name="Seed: Alternative Great Cobol">
+	<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41-51 character must plant it on a level 41-51 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -401,7 +441,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5690" name="Alternative Red Codran Seed">
+	<etcitem id="5690" name="Seed: Alternative Red Codran">
+	<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Red Codran. For best results, a level 44-54 character must plant it on a level 44-54 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -411,7 +452,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5691" name="Alternative Chilly Codran Seed">
+	<etcitem id="5691" name="Seed: Alternative Chilly Codran">
+	<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Chilly Codran. For best results, a level 47-57 character must plant it on a level 47-57 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -421,7 +463,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5692" name="Alternative Blue Codran Seed">
+	<etcitem id="5692" name="Seed: Alternative Blue Codran">
+	<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Blue Codran. For best results, a level 50-60 character must plant it on a level 50-60 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -431,7 +474,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5693" name="Alternative Twin Codran Seed">
+	<etcitem id="5693" name="Seed: Alternative Twin Codran">
+	<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Twin Codran. For best results, a level 53-63 character must plant it on a level 53-63 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -441,7 +485,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5694" name="Alternative Great Codran Seed">
+	<etcitem id="5694" name="Seed: Alternative Great Codran">
+	<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Great Codran. For best results, a level 56-66 character must plant it on a level 56-66 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -451,7 +496,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5695" name="Alternative Desert Codran Seed">
+	<etcitem id="5695" name="Seed: Alternative Desert Codran">
+	<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Desert Codran. For best results, a level 59-69 character must plant it on a level 59-69 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -461,7 +507,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5696" name="Alternative Chilly Cobol Seed">
+	<etcitem id="5696" name="Seed: Alternative Chilly Cobol">
+	<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29-39 character must plant it on a level 29-39 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -471,7 +518,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5697" name="Alternative Blue Cobol Seed">
+	<etcitem id="5697" name="Seed: Alternative Blue Cobol">
+	<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Blue Cobol. For best results, a level 32-42 character must plant it on a level 32-42 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -481,7 +529,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5698" name="Alternative Thorn Cobol Seed">
+	<etcitem id="5698" name="Seed: Alternative Thorn Cobol">
+	<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -491,7 +540,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5699" name="Alternative Golden Cobol Seed">
+	<etcitem id="5699" name="Seed: Alternative Golden Cobol">
+	<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38-48 character must plant it on a level 38-48 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

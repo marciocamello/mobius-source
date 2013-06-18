@@ -16,7 +16,7 @@
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="skillType" val="NEGATE_EFFECTS"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="negateEffects" val="Poison:#power;Bleed:#power"/>
@@ -32,7 +32,7 @@
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="12"/>
 		<set name="mpConsume2" val="46"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="skillType" val="NEGATE_EFFECTS"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="negateEffects" val="Root;Paralyze;Debuff"/>
@@ -1285,7 +1285,7 @@
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="itemConsumeId" val="3031"/>
 		<set name="itemConsumeCount" val="10"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<enchant1 levels="15" name="Time">
@@ -1328,7 +1328,7 @@
 		<set name="itemConsumeId" val="3031"/>
 		<set name="itemConsumeCount" val="10"/>
 		<set name="effectPoint" val="666"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<enchant1 levels="15" name="Time">
@@ -1369,7 +1369,7 @@
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="itemConsumeId" val="3031"/>
 		<set name="itemConsumeCount" val="10"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<enchant1 levels="15" name="Time">
@@ -1420,7 +1420,7 @@
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="itemConsumeId" val="3031"/>
 		<set name="itemConsumeCount" val="20"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<enchant1 levels="15" name="Time">
@@ -2512,7 +2512,7 @@
 		<set name="activateRate" val="#activateRate"/>
 		<set name="itemConsumeId" val="3031"/>
 		<set name="itemConsumeCount" val="#itemConsumeCount"/>
-		<set name="target" val="TARGET_PET_AURA"/>
+		<set name="target" val="TARGET_SUMMON_AURA"/>
 		<set name="skillRadius" val="200"/>
 		<set name="skillType" val="DEBUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -2560,7 +2560,7 @@
 		<set name="activateRate" val="#activateRate"/>
 		<set name="itemConsumeId" val="3031"/>
 		<set name="itemConsumeCount" val="#itemConsumeCount"/>
-		<set name="target" val="TARGET_PET_AURA"/>
+		<set name="target" val="TARGET_SUMMON_AURA"/>
 		<set name="skillRadius" val="200"/>
 		<set name="skillType" val="DEBUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -2608,7 +2608,7 @@
 		<set name="activateRate" val="#activateRate"/>
 		<set name="itemConsumeId" val="3031"/>
 		<set name="itemConsumeCount" val="#itemConsumeCount"/>
-		<set name="target" val="TARGET_PET_AURA"/>
+		<set name="target" val="TARGET_SUMMON_AURA"/>
 		<set name="skillRadius" val="200"/>
 		<set name="skillType" val="DEBUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>

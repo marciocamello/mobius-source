@@ -41,11 +41,10 @@ public class SeedOfHellfire extends DynamicQuest implements ScriptFile
 	
 	private static final int MIN_LEVEL = 97;
 	private static final int MAX_LEVEL = 99;
-	private static final int DURATION = 3_240;
+	private static final int DURATION = 60 * 60;
 	private static final int REWARD = 33709;
 	private static final int ELITE_REWARD = 35548;
-	// private static final String START_TIME = "30 * * * *";
-	private static final String START_TIME = "1 * * * *";
+	private static final String START_TIME = "30 * * * *";
 	private static final int KILL_SOH_MOBS = 1501;
 	private final KillListenerImpl _killListener = new KillListenerImpl();
 	private ZoneListener _zoneListener;
@@ -185,6 +184,7 @@ public class SeedOfHellfire extends DynamicQuest implements ScriptFile
 		if (event.equals("Reward"))
 		{
 			tryReward(player);
+			// response = null;
 		}
 		else if (event.endsWith(".htm"))
 		{

@@ -35,6 +35,7 @@ import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.NpcInfo;
 import lineage2.gameserver.network.serverpackets.StatusUpdate;
+import lineage2.gameserver.network.serverpackets.StatusUpdate.StatusUpdateField;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.ReflectionUtils;
@@ -182,7 +183,7 @@ public class KashaNegate implements ScriptFile
 		{
 			actor.setDisplayId(npcId);
 			DeleteObject d = new DeleteObject(actor);
-			L2GameServerPacket su = actor.makeStatusUpdate(StatusUpdate.CUR_HP, StatusUpdate.MAX_HP);
+			L2GameServerPacket su = new StatusUpdate(actor).addAttribute(StatusUpdateField.CUR_HP, StatusUpdateField.MAX_HP);
 			for (Player player : World.getAroundPlayers(actor))
 			{
 				player.sendPacket(d, new NpcInfo(actor, player));

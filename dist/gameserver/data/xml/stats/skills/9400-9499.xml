@@ -307,67 +307,113 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9442" levels="1" name="Trowel">
-    <!-- Collect flowers of fire. -->
-		<set name="reuseDelay" val="6000"/>
-		<set name="hitTime" val="3000"/>
-		<set name="icon" val="icon.skill0000"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+	<!-- Collect flowers of fire. -->
+	<set name="icon" val="icon.skill0000"/>
+	<set name="magicType" val="SPECIAL"/>
+	<set name="magicLevel" val="1"/>
+	<set name="target" val="TARGET_ONE"/>
+	<set name="skillType" val="EFFECT"/>
+	<set name="operateType" val="OP_ACTIVE"/>
+	<set name="isHandler" val="true"/>
+	<set name="hitTime" val="5000"/>
 	</skill>
 	<skill id="9443" levels="1" name="Empty Bottle for Hot Spring Water">
     <!-- Collect hot spring water. -->
 		<set name="reuseDelay" val="6000"/>
 		<set name="hitTime" val="3000"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON_ITEM"/>
+		<set name="isHandler" val="true"/>
+		<set name="SummonItemId" val="34888"/>
+		<set name="SummonMinCount" val="1"/>
+		<set name="itemConsumeId" val="34887"/>
+		<set name="itemConsumeCount" val="1"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9444" levels="1" name="Helping Seed">
-    <!-- Summon the Helping Tree. -->
+	<!-- Summon the Helping Tree. -->
 		<set name="icon" val="icon.skill0000"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="EFFECT"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+		<set name="hitTime" val="5000"/>
 	</skill>
 	<skill id="9445" levels="1" name="Summon Stone">
     <!-- Summons Lanya. -->
-		<set name="icon" val="icon.skill0000"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="reuseDelay" val="1"/>
+		<set name="hitTime" val="600"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume2" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON"/>
+		<set name="isHandler" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="npcId" val="33696"/>
+		<set name="lifeTime" val="60"/>
+		<set name="summonType" val="NPC"/>
 	</skill>
 	<skill id="9446" levels="1" name="Scroll of Escape - Hot Springs">
     <!-- none -->
-		<set name="hitTime" val="20000"/>
+		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="20000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="townId" val="17"/>
+		<set name="itemConsumeId" val="34978"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RECALL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9447" levels="1" name="Scroll of Escape - Forge of the Gods">
     <!-- none -->
-		<set name="hitTime" val="20000"/>
+		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="20000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="townId" val="17"/>
+		<set name="itemConsumeId" val="34979"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RECALL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9448" levels="1" name="Scroll of Escape - Isle of Prayer">
     <!-- none -->
-		<set name="hitTime" val="20000"/>
+		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="20000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="townId" val="17"/>
+		<set name="itemConsumeId" val="34980"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RECALL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9449" levels="1" name="Escape - Siege of Aden Area">
     <!-- none -->
-		<set name="hitTime" val="20000"/>
+		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="20000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="townId" val="17"/>
+		<set name="itemConsumeId" val="34981"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RECALL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9450" levels="1" name="Escape - Siege of Rune Area">

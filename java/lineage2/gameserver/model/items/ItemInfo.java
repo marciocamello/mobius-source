@@ -98,33 +98,14 @@ public class ItemInfo
 	 * Field defenceWind.
 	 */
 	private int defenceWind;
-	/**
-	 * Field defenceEarth.
-	 */
 	private int defenceEarth;
-	/**
-	 * Field defenceHoly.
-	 */
 	private int defenceHoly;
-	/**
-	 * Field defenceUnholy.
-	 */
 	private int defenceUnholy;
-	/**
-	 * Field equipSlot.
-	 */
 	private int equipSlot;
-	/**
-	 * Field temporalLifeTime.
-	 */
 	private int temporalLifeTime;
-	/**
-	 * Field enchantOptions.
-	 */
 	private int[] enchantOptions = ItemInstance.EMPTY_ENCHANT_OPTIONS;
-	/**
-	 * Field item.
-	 */
+	private int visualId;
+	
 	private ItemTemplate item;
 	
 	/**
@@ -161,6 +142,7 @@ public class ItemInfo
 		setEquipSlot(item.getEquipSlot());
 		setTemporalLifeTime(item.getTemporalLifeTime());
 		setEnchantOptions(item.getEnchantOptions());
+		setVisualId(item.getVisualId());
 	}
 	
 	/**
@@ -661,5 +643,15 @@ public class ItemInfo
 	public void setEnchantOptions(int[] enchantOptions)
 	{
 		this.enchantOptions = enchantOptions;
+	}
+	
+	public int getVisualId()
+	{
+		return visualId;
+	}
+	
+	public void setVisualId(int visualId)
+	{
+		this.visualId = visualId;
 	}
 }

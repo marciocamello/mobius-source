@@ -555,7 +555,7 @@ public class FeedableBeastInstance extends MonsterInstance
 		{
 			MonsterInstance nextNpc = spawn(nextNpcId, getX(), getY(), getZ());
 			feedInfo.put(nextNpc.getObjectId(), player.getObjectId());
-			player.setObjectTarget(nextNpc);
+			player.setTarget(nextNpc);
 			ThreadPoolManager.getInstance().schedule(new AggrPlayer(nextNpc, player), 3000);
 		}
 	}

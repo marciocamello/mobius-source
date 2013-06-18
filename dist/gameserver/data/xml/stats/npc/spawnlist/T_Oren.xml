@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE list SYSTEM "spawn.dtd">
-<list>
-	<spawns name="Oren">
-		<spawn npcId="33497" x="80090" y="55049" z="-1544" heading="39972" /><!-- Лоина (Торговец Волшебными Красками) -->
-	</spawns>
-</list>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="8500" name="Aden's Luminous Lure">
+	<etcitem id="8500" name="Aden Luminous Bait">
+	<!-- This luminous Bait can be used to catch Aden's Big Fish. It is used in Aden Territory by fishermen whose Fishing Mastery level is 19-21. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -13,7 +14,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8501" name="Innadril's Luminous Lure">
+	<etcitem id="8501" name="Innadril Luminous Bait">
+	<!-- This luminous Bait can be used to catch Innadril's Big Fish. It is used in Innadril Territory by fishermen whose Fishing Mastery level is 13-15. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -25,7 +27,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8502" name="Goddard's Luminous Lure">
+	<etcitem id="8502" name="Goddard Luminous Bait">
+	<!-- This luminous Bait can be used to catch Goddard's Big Fish. It is used in Goddard Territory by fishermen whose Fishing Mastery level is 25-27. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -37,7 +40,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8503" name="Rune's Luminous Lure">
+	<etcitem id="8503" name="Rune Luminous Bait">
+	<!-- This luminous Bait can be used to catch Rune's Big Fish. It is used in Rune Territory by fishermen whose Fishing Mastery level is 22-24. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -49,7 +53,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8504" name="Schuttgart's Luminous Lure">
+	<etcitem id="8504" name="Schuttgart Luminous Bait">
+	<!-- This luminous Bait can be used to catch Schuttgart's Big Fish. It is used in Schuttgart Territory by fishermen whose Fishing Mastery level is 7-9. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -61,7 +66,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8505" name="Green Luminous Lure - Low Grade">
+	<etcitem id="8505" name="Luminous Green Bait (Low-grade)">
+	<!-- This Bait can be used to catch fast low-grade fish at night. The higher the bait's grade , the more quickly the fish will take the bait. It cannot be used during the day. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -73,7 +79,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8506" name="Green Luminous Lure">
+	<etcitem id="8506" name="Luminous Green Bait">
+	<!-- This Bait can be used to catch fast fish at night. The higher the bait's grade , the more quickly the fish will take the bait. It cannot be used during the day. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i00"/>
@@ -85,7 +92,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8507" name="Green Colored Lure - High Grade">
+	<etcitem id="8507" name="Luminous Green Bait (High-grade)">
+	<!-- This Bait can be used to catch fast high-grade fish at night. The higher the bait's grade , the more quickly the fish will take the bait. It cannot be used during the day. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -97,7 +105,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8508" name="Purple Luminous Lure - Low Grade">
+	<etcitem id="8508" name="Luminous Purple Bait (Low-grade)">
+	<!-- This Bait can be used to catch fat low-grade fish at night. The higher the bait's grade , the more quickly the fish will take the bait. It cannot be used during the day. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -109,7 +118,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8509" name="Purple Luminous Lure">
+	<etcitem id="8509" name="Luminous Purple Bait">
+	<!-- This Bait can be used to catch fat fish at night. The higher the bait's grade , the more quickly the fish will take the bait. It cannot be used during the day. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i01"/>
@@ -121,7 +131,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8510" name="Purple Luminous Lure - High Grade">
+	<etcitem id="8510" name="Luminous Purple Bait (High-grade)">
+	<!-- This Bait can be used to catch fat high-grade fish at night. The higher the bait's grade , the more quickly the fish will take the bait. It cannot be used during the day. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -133,7 +144,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8511" name="Yellow Luminous Lure - Low Grade">
+	<etcitem id="8511" name="Luminous Yellow Bait (Low-grade)">
+	<!-- This Bait can be used to catch ugly low-grade fish at night. The higher the bait's grade , the more quickly the fish will take the bait. It cannot be used during the day. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -145,7 +157,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8512" name="Yellow Luminous Lure">
+	<etcitem id="8512" name="Luminous Yellow Bait">
+	<!-- This Bait can be used to catch ugly fish at night. The higher the bait's grade , the more quickly the fish will take the bait. It cannot be used during the day. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i02"/>
@@ -157,7 +170,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8513" name="Yellow Luminous Lure - High Grade">
+	<etcitem id="8513" name="Luminous Yellow Bait (High-grade)">
+	<!-- This Bait can be used to catch ugly high-grade fish at night. The higher the bait's grade , the more quickly the fish will take the bait. It cannot be used during the day. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -170,6 +184,7 @@
 		</equip>
 	</etcitem>
 	<etcitem id="8514" name="Remnants of Old Dwarves' Dreams">
+	<!-- This strange object may be dropped by the ghosts of ancient Dwarves as they find eternal rest. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -177,7 +192,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="8515" name="Charm of Courage: No Grade">
+	<etcitem id="8515" name="Charm of Courage (No-grade)">
+	<!-- Allows on-the-spot resurrection during a Castle Siege, Clan Hall or Fortress Battle (level 1-19). -->
 		<set name="reuse_delay" value="1200000"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
@@ -190,7 +206,8 @@
 			<skill id="5041" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="8516" name="Charm of Courage: D-Grade">
+	<etcitem id="8516" name="Charm of Courage (D-grade)">
+	<!-- Allows on-the-spot resurrection during a Castle Siege, Clan Hall or Fortress Battle (level 1-39). -->
 		<set name="reuse_delay" value="1200000"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="D"/>
@@ -203,7 +220,8 @@
 			<skill id="5041" level="2"/>
 		</skills>
 	</etcitem>
-	<etcitem id="8517" name="Charm of Courage: C-Grade">
+	<etcitem id="8517" name="Charm of Courage (C-grade)">
+	<!-- Allows on-the-spot resurrection during a Castle Siege, Clan Hall or Fortress Battle (level 1-51). -->
 		<set name="reuse_delay" value="1200000"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="C"/>
@@ -216,7 +234,8 @@
 			<skill id="5041" level="3"/>
 		</skills>
 	</etcitem>
-	<etcitem id="8518" name="Charm of Courage: B-Grade">
+	<etcitem id="8518" name="Charm of Courage (B-grade)">
+	<!-- Allows on-the-spot resurrection during a Castle Siege, Clan Hall or Fortress Battle (level 1-60). -->
 		<set name="reuse_delay" value="1200000"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="B"/>
@@ -229,7 +248,8 @@
 			<skill id="5041" level="4"/>
 		</skills>
 	</etcitem>
-	<etcitem id="8519" name="Charm of Courage: A-Grade">
+	<etcitem id="8519" name="Charm of Courage (A-grade)">
+	<!-- Allows on-the-spot resurrection during a Castle Siege, Clan Hall or Fortress Battle (level 1-75). -->
 		<set name="reuse_delay" value="1200000"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="A"/>
@@ -242,7 +262,8 @@
 			<skill id="5041" level="5"/>
 		</skills>
 	</etcitem>
-	<etcitem id="8520" name="Charm of Courage: S-Grade">
+	<etcitem id="8520" name="Charm of Courage (S-grade)">
+	<!-- Allows on-the-spot resurrection during a Castle Siege, Clan Hall, or Fortress Battle (level 76-84). Can also be used by characters below level 76. -->
 		<set name="reuse_delay" value="1200000"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="S"/>
@@ -256,6 +277,7 @@
 		</skills>
 	</etcitem>
 	<etcitem id="8521" name="Seed: Sea Coba">
+	<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -266,6 +288,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="8522" name="Seed: Alternative Sea Coba">
+	<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -276,6 +299,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="8523" name="Seed: Twin Coba">
+	<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -286,6 +310,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="8524" name="Seed: Alternative Twin Coba">
+	<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -296,6 +321,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="8525" name="Seed: Great Coba">
+	<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Great Coba. For best results, a level 80-90 character must plant it on a level 80-90 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -306,6 +332,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="8526" name="Seed: Alternative Great Coba">
+	<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Great Coba. For best results, a level 80-90 character must plant it on a level 80-90 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -315,7 +342,8 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="8534" name="Adventurer's Box: C-Grade Accessory (Low Grade)">
+	<etcitem id="8534" name="Adventurer's Box: C-grade Accessory (Low-grade)">
+	<!-- Has a chance of containing a C-grade , low quality accessory. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -328,7 +356,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8535" name="Adventurer's Box: C-Grade Accessory (Medium Grade)">
+	<etcitem id="8535" name="Adventurer's Box: C-grade Accessory (Mid-grade)">
+	<!-- Has a chance of containing a C-grade , medium quality accessory. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -341,7 +370,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8536" name="Adventurer's Box: C-Grade Accessory (High Grade)">
+	<etcitem id="8536" name="Adventurer's Box: C-grade Accessory (High-grade)">
+	<!-- Has a chance of containing a C-grade , high quality accessory. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -354,7 +384,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8537" name="Adventurer's Box: B-Grade Accessory (Low Grade)">
+	<etcitem id="8537" name="Adventurer's Box: B-grade Accessory (Low-grade)">
+	<!-- Has a chance of containing a B-grade , low quality accessory. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -367,7 +398,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8538" name="Adventurer's Box: B-Grade Accessory (High Grade)">
+	<etcitem id="8538" name="Adventurer's Box: B-grade Accessory (High-grade)">
+	<!-- Has a chance of containing a B-grade , high quality accessory. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -381,6 +413,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="8539" name="Adventurer's Box: Hair Accessory">
+	<!-- Has a chance of containing a Raider's Hair Accessory. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -394,6 +427,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="8540" name="Adventurer's Box: Cradle of Creation">
+	<!-- Has a chance of containing a Cradle of Creation. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -407,6 +441,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="8542" name="Newbie Travel Token">
+	<!-- This token is used to help novice travelers move to various places. Characters under level 20 may redeem it at a Newbie Helper for travel between Talking Island Village, Dark Elf Village, Elven Village, Dwarven Village, Orc Village, and Kamael Village. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -418,6 +453,7 @@
 		<set name="weight" value="10"/>
 	</etcitem>
 	<etcitem id="8543" name="Bead Parcel">
+	<!-- Take this parcel of woven beads to Warehouse Chief Yasheni in the Town of Schuttgart. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -426,6 +462,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8544" name="Timora Orc's Head">
+	<!-- Severed head of the cowardly Timora Orc who betrayed his own tribe and joined the Ragna Orcs. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -434,6 +471,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8545" name="Kasha Spider's Tooth">
+	<!-- This crooked spider's tooth was pulled out by hand during close combat. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -442,6 +480,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8546" name="Horn of Baar Dre Vanul">
+	<!-- This smooth, flawless horn comes from Baar Dre Vanul, who inhabits the Immortal Plateau's Southern Region. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -450,6 +489,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8547" name="Old Box">
+	<!-- Old box that can be caught by fishing in the Hot Springs area. If you Double-click it, you can obtain the Certificate for Participation in a Clan Hall war in the Hot Springs at a certain chance. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -463,7 +503,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8548" name="Hot Springs Lure">
+	<etcitem id="8548" name="Hot Spring Bait">
+	<!-- This Bait can be used to catch old box while fishing in the Hot Springs area in Goddard. Only characters with Fishing Mastery Level 20 or higher can haul in the old box. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i02"/>
@@ -476,6 +517,7 @@
 		</equip>
 	</etcitem>
 	<etcitem id="8549" name="Bruin Lizardman Blood">
+	<!-- Blood obtained by slaying a Bruin Lizardman. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -484,6 +526,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8550" name="Picot Araneid's Leg">
+	<!-- Leg obtained by slaying a Picot Araneid. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -491,7 +534,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="8551" name="Box of Cheerleading Gear Used to encourage victory.">
+	<etcitem id="8551" name="Red Devil Support Box">
+	<!-- Box of Cheerleading Items for Cheering on the Red Devils. If you Double-click it, it will randomly change to a different item. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -504,6 +548,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="8553" name="Red Mask of Victory, Fabric">
+	<!-- The essential ingredient needed to make a Mask of the Red Devils. It can be sold at a regular store. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_of_cloth_red_i00"/>
@@ -512,7 +557,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="8554" name="Recipe: Red Mask of Victory (100%)">
+	<etcitem id="8554" name="Recipe: Red Mask of Victory">
+	<!-- For All Tribes. Recipe for a Mask of the Red Devils. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -523,6 +569,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="8555" name="Echo Crystal - Viva Victory Korea">
+	<!-- Echo Crystal that plays the theme music of the World Cup. It disappears after one use. -->
 		<set name="reuse_delay" value="20000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -537,6 +584,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="8556" name="Dewdrop of Destruction">
+	<!-- Clicking the Dewdrop of Destruction causes the portrait to disappear. It cannot be dropped, but is deleted upon entering the Last Imperial Tomb. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -548,6 +596,7 @@
 		<set name="weight" value="3"/>
 	</etcitem>
 	<etcitem id="8570" name="Event Gift Box">
+	<!-- PC coupon event item. When Double-clicked, it turns to another random item. Cannot be exchanged or dropped. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -563,6 +612,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="8571" name="Event Gift Box">
+	<!-- PC coupon event item. When Double-clicked, it turns to another random item. Cannot be exchanged or dropped. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -578,6 +628,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="8572" name="Event Gift Box">
+	<!-- PC coupon event item. When Double-clicked, it turns to another random item. Cannot be exchanged or dropped. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -593,6 +644,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="8573" name="Event Gift Box">
+	<!-- PC coupon event item. When Double-clicked, it turns to another random item. Cannot be exchanged or dropped. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -608,6 +660,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="8574" name="Event Gift Box">
+	<!-- PC coupon event item. When Double-clicked, it turns to another random item. Cannot be exchanged or dropped. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -623,6 +676,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="8575" name="Event Gift Box">
+	<!-- PC coupon event item. When Double-clicked, it turns to another random item. Cannot be exchanged or dropped. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -637,7 +691,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8592" name="Weapon Exchange Coupon - No Grade">
+	<etcitem id="8592" name="Weapon Coupon (No-grade)">
+	<!-- Item that is used for the Player Commendation coupon event. A coupon that can be used to exchange for a No-grade weapon at Adventurers' Guide. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -645,7 +700,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="8593" name="Weapon Exchange Coupon - D Grade">
+	<etcitem id="8593" name="Weapon Coupon (D-grade)">
+	<!-- Item that is used for the Player Commendation coupon event. A coupon that can be used to exchange for a D-grade weapon at Adventurers' Guide. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -653,7 +709,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="8594" name="Scroll: Recovery (No Grade)">
+	<etcitem id="8594" name="Scroll: Recovery (No-grade)">
+	<!-- This scroll recovers a character's abilities from the effects of death. This item can only be used on self by a character of level 19 or below. This scroll cannot be used by chaotic characters. -->
 		<set name="reuse_delay" value="10000"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
@@ -667,7 +724,8 @@
 			<skill id="2286" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="8595" name="Scroll: Recovery (Grade D)">
+	<etcitem id="8595" name="Scroll: Recovery (D-grade)">
+	<!-- This scroll recovers a character's abilities from the effects of death. This item can only be used on self by characters level 20 - 39. This scroll cannot be used by chaotic characters. -->
 		<set name="reuse_delay" value="10000"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="D"/>
@@ -681,7 +739,8 @@
 			<skill id="2286" level="2"/>
 		</skills>
 	</etcitem>
-	<etcitem id="8596" name="Scroll: Recovery (Grade C)">
+	<etcitem id="8596" name="Scroll: Recovery (C-grade)">
+	<!-- This scroll recovers a character's abilities from the effects of death. This item can only be used on self by characters level 40 - 51. This scroll cannot be used by chaotic characters. -->
 		<set name="reuse_delay" value="10000"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="C"/>
@@ -695,7 +754,8 @@
 			<skill id="2286" level="3"/>
 		</skills>
 	</etcitem>
-	<etcitem id="8597" name="Scroll: Recovery (Grade B)">
+	<etcitem id="8597" name="Scroll: Recovery (B-grade)">
+	<!-- This scroll recovers a character's abilities from the effects of death. This item can only be used on self by characters level 52 - 60. This scroll cannot be used by chaotic characters. -->
 		<set name="reuse_delay" value="10000"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="B"/>
@@ -709,7 +769,8 @@
 			<skill id="2286" level="4"/>
 		</skills>
 	</etcitem>
-	<etcitem id="8598" name="Scroll: Recovery (Grade A)">
+	<etcitem id="8598" name="Scroll: Recovery (A-grade)">
+	<!-- This scroll recovers a character's abilities from the effects of death. This item can only be used on self by characters level 61 - 75. This scroll cannot be used by chaotic characters. -->
 		<set name="reuse_delay" value="10000"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="A"/>
@@ -723,7 +784,8 @@
 			<skill id="2286" level="5"/>
 		</skills>
 	</etcitem>
-	<etcitem id="8599" name="Scroll: Recovery (Grade S)">
+	<etcitem id="8599" name="Scroll: Recovery (S-grade)">
+	<!-- This scroll recovers a character's abilities from the effects of death. This item can only be used by a character whose level is 76 or higher. This scroll cannot be used by chaotic characters. -->
 		<set name="reuse_delay" value="10000"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="S"/>

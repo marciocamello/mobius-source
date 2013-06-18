@@ -112,4 +112,8 @@
 		<ingredient id="57" count="12" />
 		<production id="19443" count="1"/>
 	</item>
+	<item id="29">
+		<ingredient id="57" count="100000" />
+		<production id="8875" count="1"/>
+	</item>
 </list>

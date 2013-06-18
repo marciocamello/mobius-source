@@ -47,15 +47,4 @@ public class SandstormInstance extends NpcInstance
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 	}
-	
-	/**
-	 * Method onAction.
-	 * @param player Player
-	 * @param shift boolean
-	 */
-	@Override
-	public void onAction(Player player, boolean shift)
-	{
-		player.sendActionFailed();
-	}
 }

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="10836" name="Pathfinder Supplies (level 2)">
+	<etcitem id="10836" name="Pathfinder Supplies (Level 2)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -16,7 +17,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10837" name="Pathfinder Supplies (level 4)">
+	<etcitem id="10837" name="Pathfinder Supplies (Level 4)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -31,7 +33,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10838" name="Pathfinder Supplies (level 5)">
+	<etcitem id="10838" name="Pathfinder Supplies (Level 5)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -46,7 +49,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10839" name="Pathfinder Supplies (level 6)">
+	<etcitem id="10839" name="Pathfinder Supplies (Level 6)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -61,7 +65,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10840" name="Pathfinder Supplies (level 7)">
+	<etcitem id="10840" name="Pathfinder Supplies (Level 7)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -76,7 +81,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10841" name="Pathfinder Supplies (level 8)">
+	<etcitem id="10841" name="Pathfinder Supplies (Level 8)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -91,7 +97,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10842" name="Pathfinder Supplies (level 11)">
+	<etcitem id="10842" name="Pathfinder Supplies (Level 11)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -106,7 +113,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10843" name="Pathfinder Supplies (level 12)">
+	<etcitem id="10843" name="Pathfinder Supplies (Level 12)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -121,7 +129,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10844" name="Pathfinder Supplies (level 13)">
+	<etcitem id="10844" name="Pathfinder Supplies (Level 13)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -136,7 +145,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10845" name="Pathfinder Supplies (level 14)">
+	<etcitem id="10845" name="Pathfinder Supplies (Level 14)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -151,7 +161,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10846" name="Pathfinder Supplies (level 15)">
+	<etcitem id="10846" name="Pathfinder Supplies (Level 15)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -166,7 +177,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10847" name="Pathfinder Supplies (level 18)">
+	<etcitem id="10847" name="Pathfinder Supplies (Level 18)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -181,7 +193,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10848" name="Pathfinder Supplies (level 19)">
+	<etcitem id="10848" name="Pathfinder Supplies (Level 19)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -196,7 +209,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10849" name="Pathfinder Supplies (level 20)">
+	<etcitem id="10849" name="Pathfinder Supplies (Level 20)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -211,7 +225,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10850" name="Pathfinder Supplies (level 21)">
+	<etcitem id="10850" name="Pathfinder Supplies (Level 21)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -226,7 +241,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10851" name="Pathfinder Supplies (level 22)">
+	<etcitem id="10851" name="Pathfinder Supplies (Level 22)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -241,7 +257,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10852" name="Pathfinder Supplies (level 25)">
+	<etcitem id="10852" name="Pathfinder Supplies (Level 25)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -256,7 +273,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10853" name="Pathfinder Supplies (level 26)">
+	<etcitem id="10853" name="Pathfinder Supplies (Level 26)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -271,7 +289,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10854" name="Pathfinder Supplies (level 27)">
+	<etcitem id="10854" name="Pathfinder Supplies (Level 27)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -286,7 +305,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10855" name="Pathfinder Supplies (level 28)">
+	<etcitem id="10855" name="Pathfinder Supplies (Level 28)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -301,7 +321,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10856" name="Pathfinder Supplies (level 29)">
+	<etcitem id="10856" name="Pathfinder Supplies (Level 29)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -316,7 +337,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10857" name="Pathfinder Supplies (level 32)">
+	<etcitem id="10857" name="Pathfinder Supplies (Level 32)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -331,7 +353,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10858" name="Pathfinder Supplies (level 33)">
+	<etcitem id="10858" name="Pathfinder Supplies (Level 33)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -346,7 +369,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10859" name="Pathfinder Supplies (level 34)">
+	<etcitem id="10859" name="Pathfinder Supplies (Level 34)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -361,7 +385,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10860" name="Pathfinder Supplies (level 35)">
+	<etcitem id="10860" name="Pathfinder Supplies (Level 35)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -376,7 +401,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10861" name="Pathfinder Supplies (level 36)">
+	<etcitem id="10861" name="Pathfinder Supplies (Level 36)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -391,7 +417,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10862" name="Pathfinder Supplies (level 38)">
+	<etcitem id="10862" name="Pathfinder Supplies (Level 38)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -406,7 +433,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10863" name="Pathfinder Supplies (level 39)">
+	<etcitem id="10863" name="Pathfinder Supplies (Level 39)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -421,7 +449,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10864" name="Pathfinder Supplies (level 40)">
+	<etcitem id="10864" name="Pathfinder Supplies (Level 40)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -436,7 +465,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10865" name="Pathfinder Supplies (level 41)">
+	<etcitem id="10865" name="Pathfinder Supplies (Level 41)">
+	<!-- Faded Supply Box. Double-click for a chance to receive an item. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -452,6 +482,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="10866" name="Energy Ore">
+	<!-- Energy ore that is found in the eastern region's mining area. It is used as an experimental ingredient in Inventor Maru's energy conversion device. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -460,6 +491,7 @@
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="10867" name="Bloody Cloth Fragment">
+	<!-- Piece of cloth soaked with Mark's blood. It is needed to determine the type of Poison . -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -468,6 +500,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="10868" name="Helvetia's Antidote">
+	<!-- Antidote purchased from Helvetia. Give it to Mark. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -476,6 +509,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="10869" name="Contaminated Kasha Spider Venom">
+	<!-- Kasha Spider venom that has been contaminated by Kash the evil spirit of decay and death. Collect them and bring them to Trader Kunai. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

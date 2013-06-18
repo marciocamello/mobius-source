@@ -506,6 +506,16 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 			return 0;
 		}
 		
+		public int getVisualItemId(int slot)
+		{
+			ItemInstance item = _paperdoll[slot];
+			if (item != null)
+			{
+				return item.getVisualId();
+			}
+			return 0;
+		}
+		
 		/**
 		 * Method getPaperdollEnchantEffect.
 		 * @param slot int

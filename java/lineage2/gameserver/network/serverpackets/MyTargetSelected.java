@@ -12,6 +12,10 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+import lineage2.gameserver.model.GameObject;
+import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.instances.MonsterInstance;
+
 /**
  * <p/>
  * sample b9 73 5d 30 49 01 00 00 00 00 00
@@ -37,24 +41,20 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class MyTargetSelected extends L2GameServerPacket
 {
-	private final int _objectId;
-	private final int _color;
+	final int _color;
+	final int _obj;
 	
-	/**
-	 * @param objectId of the target
-	 * @param color
-	 */
-	public MyTargetSelected(int objectId, int color)
+	public MyTargetSelected(final Player player, final GameObject obj)
 	{
-		_objectId = objectId;
-		_color = color;
+		_obj = obj.getObjectId();
+		_color = obj.isMonster() ? player.getLevel() - ((MonsterInstance) obj).getLevel() : 0;
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0xb9);
-		writeD(_objectId);
+		writeD(_obj);
 		writeH(_color);
 		writeD(0x00);
 	}

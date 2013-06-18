@@ -769,6 +769,20 @@
             <coords loc="-248373 250442 4318 0"/>
         </PKrestart_point>
     </zone>
+	<zone name="[inner_hellfire01]" type="dummy" >
+		<polygon>
+			<coords loc="-253983 204764 -13600 -5600" />
+			<coords loc="-237481 204721 -13600 -5600" />
+			<coords loc="-237521 221261 -13600 -5600" />
+			<coords loc="-253986 221221 -13600 -5600" />
+		</polygon>
+		<restart_point>
+			<coords loc="-248373 250442 4318 0" />
+		</restart_point>
+		<PKrestart_point>
+			<coords loc="-248373 250442 4318 0" />
+		</PKrestart_point>
+	</zone>
     <zone name="[inner_undying01]" type="dummy">
         <polygon>
             <coords loc="-182265 204880 -16233 -6233"/>

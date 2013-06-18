@@ -3557,18 +3557,18 @@
             <skill id="5465" level="1"/>
             <!-- Earth Attack -->
         </skills>
-        <attributes>
-            <defence attribute="fire" value="20"/>
-            <defence attribute="water" value="20"/>
-            <defence attribute="wind" value="20"/>
-            <defence attribute="earth" value="20"/>
-            <defence attribute="holy" value="20"/>
-            <defence attribute="unholy" value="20"/>
-        </attributes>
+		<attributes>
+			<defence attribute="fire" value="167"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="220"/>
+			<defence attribute="holy" value="220"/>
+			<defence attribute="unholy" value="220"/>
+		</attributes>
     </npc>
 	<npc id="25866" name="Apherus" title="">
         <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="Fighter"/>
+		<set name="ai_type" value="gardenofgenesis.Apherus"/>
         <set name="baseAtkRange" value="40"/>
         <set name="baseCON" value="57"/>
         <set name="baseCritRate" value="40"/>
@@ -3614,14 +3614,25 @@
             <skill id="5465" level="1"/>
             <!-- Earth Attack -->
         </skills>
-        <attributes>
-            <defence attribute="fire" value="20"/>
-            <defence attribute="water" value="20"/>
-            <defence attribute="wind" value="20"/>
-            <defence attribute="earth" value="20"/>
-            <defence attribute="holy" value="20"/>
-            <defence attribute="unholy" value="20"/>
-        </attributes>
+		<attributes>
+			<defence attribute="fire" value="187"/>
+			<defence attribute="water" value="240"/>
+			<defence attribute="wind" value="240"/>
+			<defence attribute="earth" value="240"/>
+			<defence attribute="holy" value="240"/>
+			<defence attribute="unholy" value="240"/>
+		</attributes>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="18165" min="1" max="1" chance="30.34"/>
+				<reward item_id="18160" min="1" max="1" chance="20.52"/>
+				<reward item_id="18143" min="1" max="1" chance="2.600"/>
+				<reward item_id="18147" min="1" max="1" chance="1.775"/>
+			</group>
+			<group chance="100.0">
+				<reward item_id="17526" min="1" max="1" chance="8.133"/>
+			</group>
+		</rewardlist>
     </npc>
 	<npc id="25867" name="Spezion" title="Raid Boss">
         <set name="aggroRange" value="0"/>
@@ -4934,6 +4945,57 @@
 				<reward item_id="35371" min="9" max="25" chance="0.5"/>
 			</group>
 		</rewardlist>
+	</npc>
+	<npc id="25888" name="Execution Grounds Watchman Guillotine" title="Raid Boss">
+		<!--Base character specific-->
+		<set name="baseSTR" value="98"/>
+		<set name="baseCON" value="87"/>
+		<set name="baseDEX" value="83"/>
+		<set name="baseINT" value="11"/>
+		<set name="baseWIT" value="115"/>
+		<set name="baseMEN" value="5"/>
+		<set name="baseHpMax" value="1484202.0"/>
+		<set name="baseMpMax" value="22800.0"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpReg" value="3.0"/>
+		<set name="basePAtk" value="20986"/>
+		<set name="basePDef" value="4075"/>
+		<set name="baseMAtk" value="7798"/>
+		<set name="baseMDef" value="2492"/>
+		<set name="basePAtkSpd" value="266"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseWalkSpd" value="55"/>
+		<set name="baseRunSpd" value="150"/>
+		<set name="rndDam" value="30"/>
+		<set name="baseEvasionRate" value="0"/>
+		<set name="baseAccuracyRate" value="0"/>
+		<set name="baseMevasionRate" value="0"/>
+		<set name="baseMaccuracyRate" value="0"/>
+		<set name="baseMCritRate" value="50.0"/>
+		<set name="collision_radius" value="20.0"/>
+		<set name="collision_height" value="58.0"/>
+		<!--Npc specific-->
+		<set name="type" value="RaidBoss"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="level" value="97"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="rewardExp" value="458933384"/>
+		<set name="rewardSp" value="10242960"/>
+		<set name="rewardRp" value="0"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
+		<attributes>
+			<defence attribute="fire" value="200"/>
+			<defence attribute="water" value="200"/>
+			<defence attribute="wind" value="200"/>
+			<defence attribute="earth" value="200"/>
+			<defence attribute="holy" value="200"/>
+			<defence attribute="unholy" value="200"/>
+		</attributes>
 	</npc>
 	<npc id="25892" name="Guillotine of Death" title="Raid Boss">
 		<set name="aggroRange" value="0"/>

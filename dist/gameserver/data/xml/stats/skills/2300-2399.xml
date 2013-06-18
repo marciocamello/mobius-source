@@ -101,26 +101,26 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
 	<skill id="2308" levels="36" name="Event Item">
-    <!-- none -->
+		<!--
+			Description:
+			Lvl 1-36 Name - Event Item
+		-->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2309" levels="1" name="Pig Chest">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="itemConsumeId" val="9144"/>
-		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="SUMMON_ITEM"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="SummonItemId" val="9143"/>
-		<set name="SummonMinCount" val="1"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2310" levels="1" name="Scroll of Guidance - Event Use">
     <!-- Increases Accuracy. Effect 3. -->
@@ -355,58 +355,70 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
 	<skill id="2323" levels="1" name="Red Sage's Stone">
-    <!-- none -->
-		<set name="magicType" val="SPECIAL"/>
-		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="itemConsumeId" val="9171"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2324" levels="1" name="Blue Sage's Stone">
-    <!-- none -->
-		<set name="magicType" val="SPECIAL"/>
-		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="itemConsumeId" val="9172"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2325" levels="1" name="Orange Sage's Stone">
-    <!-- none -->
-		<set name="magicType" val="SPECIAL"/>
-		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="itemConsumeId" val="9173"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2326" levels="1" name="Black Sage's Stone">
-    <!-- none -->
-		<set name="magicType" val="SPECIAL"/>
-		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="itemConsumeId" val="9174"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2327" levels="1" name="White Sage's Stone">
-    <!-- none -->
-		<set name="magicType" val="SPECIAL"/>
-		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="itemConsumeId" val="9175"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2328" levels="1" name="Green Sage's Stone">
-    <!-- none -->
-		<set name="magicType" val="SPECIAL"/>
-		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="itemConsumeId" val="9176"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2329" levels="4" name="Fire Stone">
     <!-- none -->

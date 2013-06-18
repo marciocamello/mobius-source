@@ -47,6 +47,7 @@ import lineage2.gameserver.model.quest.QuestEventType;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.StatusUpdate;
+import lineage2.gameserver.network.serverpackets.StatusUpdate.StatusUpdateField;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.taskmanager.AiTaskManager;
 import lineage2.gameserver.utils.Location;
@@ -1241,7 +1242,7 @@ public class DefaultAI extends CharacterAI
 			{
 				npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, killer, 100);
 				killer.setTarget(npc);
-				killer.sendPacket(npc.makeStatusUpdate(StatusUpdate.CUR_HP, StatusUpdate.MAX_HP));
+				killer.sendPacket(new StatusUpdate(npc).addAttribute(StatusUpdateField.CUR_HP, StatusUpdateField.MAX_HP));
 			}
 		}
 		super.onEvtDead(killer);
@@ -1292,7 +1293,7 @@ public class DefaultAI extends CharacterAI
 				actor.doDie(actor);
 				actor.decayMe();
 				attacker.setTarget(npc);
-				attacker.sendPacket(npc.makeStatusUpdate(StatusUpdate.CUR_HP, StatusUpdate.MAX_HP));
+				attacker.sendPacket(new StatusUpdate(npc).addAttribute(StatusUpdateField.CUR_HP, StatusUpdateField.MAX_HP));
 				return;
 			}
 		}

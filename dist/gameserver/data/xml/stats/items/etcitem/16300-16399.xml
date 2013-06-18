@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="16357" name="Sealed Vesper Ring of Chaos">
+	<etcitem id="16357" name="Sealed Foundation Vesper Ring">
+	<!-- Rare Sealed Vesper Ring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="5142000"/>
 		<set name="class" value="ACCESSORY"/>
 		<set name="crystal_type" value="S80"/>
@@ -10,7 +11,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="150"/>
 	</etcitem>
-	<etcitem id="16358" name="Sealed Vesper Earring of Chaos">
+	<etcitem id="16358" name="Sealed Foundation Vesper Earring">
+	<!-- Rare Sealed Vesper Earring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="7713000"/>
 		<set name="class" value="ACCESSORY"/>
 		<set name="crystal_type" value="S80"/>
@@ -19,7 +21,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="150"/>
 	</etcitem>
-	<etcitem id="16359" name="Sealed Vesper Necklace of Chaos">
+	<etcitem id="16359" name="Sealed Foundation Vesper Necklace">
+	<!-- Rare Sealed Vesper Necklace that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="10284000"/>
 		<set name="class" value="ACCESSORY"/>
 		<set name="crystal_type" value="S80"/>
@@ -28,7 +31,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="150"/>
 	</etcitem>
-	<etcitem id="16360" name="Sealed Moirai Ring of Chaos">
+	<etcitem id="16360" name="Sealed Foundation Moirai Ring">
+	<!-- Rare Sealed Moirai Ring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="3710000"/>
 		<set name="class" value="ACCESSORY"/>
 		<set name="crystal_type" value="S80"/>
@@ -37,7 +41,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="150"/>
 	</etcitem>
-	<etcitem id="16361" name="Sealed Moirai Earring of Chaos">
+	<etcitem id="16361" name="Sealed Foundation Moirai Earring">
+	<!-- Rare Sealed Moirai Earring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="5565000"/>
 		<set name="class" value="ACCESSORY"/>
 		<set name="crystal_type" value="S80"/>
@@ -46,7 +51,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="150"/>
 	</etcitem>
-	<etcitem id="16362" name="Sealed Moirai Necklace of Chaos">
+	<etcitem id="16362" name="Sealed Foundation Moirai Necklace">
+	<!-- Rare Sealed Moirai Necklace that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="7420000"/>
 		<set name="class" value="ACCESSORY"/>
 		<set name="crystal_type" value="S80"/>
@@ -55,7 +61,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="150"/>
 	</etcitem>
-	<etcitem id="16363" name="Vesper Ring of Chaos">
+	<etcitem id="16363" name="Foundation Vesper Ring">
+	<!-- Rare Sealed Vesper Ring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="crystal_count" value="365"/>
 		<set name="price" value="7596000"/>
 		<set name="class" value="ACCESSORY"/>
@@ -65,7 +72,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="150"/>
 	</etcitem>
-	<etcitem id="16364" name="Vesper Earring of Chaos">
+	<etcitem id="16364" name="Foundation Vesper Earring">
+	<!-- Rare Sealed Vesper Earring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="crystal_count" value="547"/>
 		<set name="price" value="11394000"/>
 		<set name="class" value="ACCESSORY"/>
@@ -75,7 +83,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="150"/>
 	</etcitem>
-	<etcitem id="16365" name="Vesper Necklace of Chaos">
+	<etcitem id="16365" name="Foundation Vesper Necklace">
+	<!-- Rare Sealed Vesper Necklace that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="crystal_count" value="729"/>
 		<set name="price" value="15192000"/>
 		<set name="class" value="ACCESSORY"/>
@@ -85,7 +94,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="150"/>
 	</etcitem>
-	<etcitem id="16366" name="Moirai Ring of Chaos">
+	<etcitem id="16366" name="Foundation Moirai Ring">
+	<!-- Rare Sealed Moirai Ring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="crystal_count" value="263"/>
 		<set name="price" value="5480000"/>
 		<set name="class" value="ACCESSORY"/>
@@ -95,7 +105,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="150"/>
 	</etcitem>
-	<etcitem id="16367" name="Moirai Earring of Chaos">
+	<etcitem id="16367" name="Foundation Moirai Earring">
+	<!-- Rare Sealed Moirai Earring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="crystal_count" value="395"/>
 		<set name="price" value="8221000"/>
 		<set name="class" value="ACCESSORY"/>
@@ -105,7 +116,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="150"/>
 	</etcitem>
-	<etcitem id="16368" name="Moirai Necklace of Chaos">
+	<etcitem id="16368" name="Foundation Moirai Necklace">
+	<!-- Rare Sealed Moirai Necklace that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="crystal_count" value="526"/>
 		<set name="price" value="10961000"/>
 		<set name="class" value="ACCESSORY"/>
@@ -116,6 +128,7 @@
 		<set name="weight" value="150"/>
 	</etcitem>
 	<etcitem id="16381" name="Training Order Paper">
+	<!-- The Sel Mahum Training Officer's Training Order Papers. Take it back to Guard Stan of Oren Village. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -129,6 +142,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="16382" name="Shoes String of Sel Mahum">
+	<!-- Clumsy Sel Mahum's shoelace. Take it back to Guard Stan of Oren Village. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -143,7 +157,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="16383" name="Christmas Cake Pack">
+	<etcitem id="16383" name="Holiday Cake Pack">
+	<!-- Holiday Cake Pack. Contains a Holiday Cake box. Cannot be exchanged, dropped, sold, or mailed. Cannot be sold in a private store. Can be shared between characters on the same account through the Dimensional Merchant. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -157,7 +172,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="16384" name="Special Christmas Cake Pack">
+	<etcitem id="16384" name="Special Holiday Cake Pack">
+	<!-- Special Holiday Cake Pack. Contains a Special Christmas box. Cannot be exchanged, dropped, sold, or mailed. Cannot be sold in a private store. Can be shared between characters on the same account through the Dimensional Merchant. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -171,7 +187,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="16385" name="Teddy Boy Gift Box Pack ">
+	<etcitem id="16385" name="Teddy Boy Gift Box Pack">
+	<!-- Teddy Boy Wrapped Pack. Contains a Teddy Boy Wrapped Pack. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -186,6 +203,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="16386" name="Teddy Girl Gift Box Pack">
+	<!-- Teddy Girl Wrapped Pack . Contains a Teddy Girl Wrapped Pack. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -199,7 +217,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="16387" name="Christmas Cake Pack (event)">
+	<etcitem id="16387" name="Holiday Cake Pack (Event)">
+	<!-- Holiday Cake Pack. Contains a Holiday Cake box. Cannot be exchanged, dropped, sold, or mailed. Cannot be sold in a private store. Can be shared between characters on the same account through the Dimensional Merchant. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -213,7 +232,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="16388" name="Special Christmas Cake Pack (event)">
+	<etcitem id="16388" name="Special Holiday Cake Pack (Event)">
+	<!-- Special Holiday Cake Pack. Contains a Special Christmas box. Cannot be exchanged, dropped, sold, or mailed. Cannot be sold in a private store. Can be shared between characters on the same account through the Dimensional Merchant. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -227,7 +247,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="16389" name="Teddy Boy Gift Box Pack (event)">
+	<etcitem id="16389" name="Teddy Boy Gift Box Pack (Event)">
+	<!-- Teddy Boy Wrapped Pack . Contains a Teddy Boy Wrapped Pack. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -241,7 +262,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="16390" name="Teddy Girl Gift Box Pack (event)">
+	<etcitem id="16390" name="Teddy Girl Gift Box Pack (Event)">
+	<!-- Teddy Girl Wrapped Pack . Contains a Teddy Girl Wrapped Pack. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -255,7 +277,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="16391" name="Christmas Cake Box">
+	<etcitem id="16391" name="Holiday Cake Box">
+	<!-- Holiday Cake Box. Contains 1 Holiday Cake and 1 White Winter Wish Candle. Can be exchanged. Cannot be dropped, destroyed, sold, or registered on Private Store. Can be shared between characters on the same account through the Dimensional Merchant. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -268,7 +291,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="16392" name="Special Christmas Cake Box">
+	<etcitem id="16392" name="Special Holiday Cake Box">
+	<!-- Special Holiday Cake Box. Contains 5 Holiday Cake boxes and 1 Santa's Stockings (bonus). Can be exchanged. Cannot be dropped, destroyed, sold, or registered on Private Store. Can be shared between characters on the same account through the Dimensional Merchant. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -281,7 +305,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="16393" name="Christmas Cake Box (event)">
+	<etcitem id="16393" name="Holiday Cake Box (Event)">
+	<!-- Holiday Cake Box. Contains 1 Holiday Cake and 1 White Winter Wish Candle. Can be exchanged. Cannot be dropped, destroyed, sold, or registered on Private Store. Can be shared between characters on the same account through the Dimensional Merchant. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -294,7 +319,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="16394" name="Special Christmas Cake Box (event)">
+	<etcitem id="16394" name="Special Holiday Cake Box (Event)">
+	<!-- Special Holiday Cake Box. Contains 5 Holiday Cake boxes and 1 Santa's Stockings (bonus). Can be exchanged. Cannot be dropped, destroyed, sold, or registered on Private Store. Can be shared between characters on the same account through the Dimensional -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -308,6 +334,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="16395" name="Teddy Boy Gift Box">
+	<!-- Teddy Boy Wrapped Pack. Contains 1 Teddy Boy Summon Bracelet and 3 White Winter Wish Candles. Can be exchanged. Cannot be dropped, destroyed, sold, or registered on Private Store. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -321,6 +348,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="16396" name="Teddy Girl Gift Box">
+	<!-- Teddy Girl Wrapped Pack. Contains 1 Teddy Girl Summon Bracelet and 3 White Winter Wish Candles. Can be exchanged. Cannot be dropped, destroyed, sold, or registered on Private Store. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -333,7 +361,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="16397" name="Teddy Boy Gift Box (event)">
+	<etcitem id="16397" name="Teddy Boy Gift Box (Event)">
+	<!-- Teddy Boy Wrapped Pack. Contains 1 Teddy Boy Summon Bracelet and 3 White Winter Wish Candles. Can be exchanged. Cannot be dropped, destroyed, sold, or registered on Private Store. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -346,7 +375,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="16398" name="Teddy Girl Gift Box (event)">
+	<etcitem id="16398" name="Teddy Girl Gift Box (Event)">
+	<!-- Teddy Girl Wrapped Pack. Contains 1 Teddy Girl Summon Bracelet and 3 White Winter Wish Candles. Can be exchanged. Cannot be dropped, destroyed, sold, or registered on Private Store. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -359,7 +389,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="16399" name="Teddy Boy Summon Bracelet" add_name="Permanent Use">
+	<etcitem id="16399" name="Teddy Boy Summon Bracelet" add_name="Permanent">
+	<!-- Teddy Boy Summon Bracelet. Can summon an Agathion - Teddy Boy. Increases the Weight Limit by 3000 when equipped. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

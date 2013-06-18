@@ -16,14 +16,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
-import lineage2.gameserver.network.serverpackets.MyTargetSelected;
-import lineage2.gameserver.network.serverpackets.ValidateLocation;
-import lineage2.gameserver.scripts.Events;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import gnu.trove.set.hash.TIntHashSet;
@@ -53,43 +49,16 @@ public class OlympiadBufferInstance extends NpcInstance
 		super(objectId, template);
 	}
 	
-	/**
-	 * Method onAction.
-	 * @param player Player
-	 * @param shift boolean
-	 */
 	@Override
-	public void onAction(Player player, boolean shift)
+	public void onInteract(final Player player)
 	{
-		if (Events.onAction(player, this, shift))
+		if (buffs.size() > 4)
 		{
-			player.sendActionFailed();
-			return;
-		}
-		if (this != player.getTarget())
-		{
-			player.setTarget(this);
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
-			player.sendPacket(my);
-			player.sendPacket(new ValidateLocation(this));
+			showChatWindow(player, 1);
 		}
 		else
 		{
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
-			player.sendPacket(my);
-			if (!isInRange(player, INTERACTION_DISTANCE))
-			{
-				player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
-			}
-			else if (buffs.size() > 4)
-			{
-				showChatWindow(player, 1);
-			}
-			else
-			{
-				showChatWindow(player, 0);
-			}
-			player.sendActionFailed();
+			showChatWindow(player, 0);
 		}
 	}
 	

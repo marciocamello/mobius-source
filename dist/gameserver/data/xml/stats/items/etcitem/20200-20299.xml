@@ -2,6 +2,7 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<etcitem id="20210" name="Charming Valentine Gift Set">
+	<!-- Wrapped Pack containing a Charming Cupid Agathion and some scrumptious Chocolate Cookies. Cannot be exchanged, dropped or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -14,6 +15,7 @@
 		<set name="weight" value="100"/>
 	</etcitem>
 	<etcitem id="20211" name="Naughty Valentine Gift Set">
+	<!-- Wrapped Pack containing a Naughty Cupid Agathion and some scrumptious Chocolate Cookies. Cannot be exchanged, dropped or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -26,6 +28,7 @@
 		<set name="weight" value="100"/>
 	</etcitem>
 	<etcitem id="20214" name="Chocolate Cookie">
+	<!-- Replenishes Vitality to a certain degree. Cooldown is 60 min. Cannot be exchanged, dropped, or sold.  Limited number available. Can be shared between characters on the same account through the Dimensional Merchant. -->
 		<set name="freightable" value="true"/>
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
@@ -36,12 +39,13 @@
 		<set name="stackable" value="true"/>
 		<set name="tradeable" value="false"/>
 		<set name="type" value="SCROLL"/>
-		<set name="weight" value="5"/>
+		<set name="weight" value="0"/>
 		<skills>
 			<skill id="22028" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="20215" name="White Maneki Neko Agathion Pack">
+	<etcitem id="20215" name="Agathion - White Maneki Neko Pack">
+	<!-- Wrapped Pack containing an Agathion - White Maneki Neko. Cannot be exchanged, dropped or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -53,7 +57,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20216" name="Black Maneki Neko Agathion Pack">
+	<etcitem id="20216" name="Agathion - Black Maneki Neko Pack">
+	<!-- Wrapped Pack containing an Agathion - Black Maneki Neko. Cannot be exchanged, dropped or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -65,7 +70,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20217" name="Brown Maneki Neko Agathion Pack">
+	<etcitem id="20217" name="Agathion - Brown Maneki Neko Pack">
+	<!-- Wrapped Pack containing an Agathion - Brown Maneki Neko. Cannot be exchanged, dropped or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -77,7 +83,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20218" name="White Maneki Neko Agathion 7-Day Pack" add_name="Resurrection">
+	<etcitem id="20218" name="Agathion - White Maneki Neko Pack (7-day)" add_name="Resurrection">
+	<!-- Wrapped Pack containing an Agathion - White Maneki Neko (7-day). Cannot be exchanged, dropped or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -89,7 +96,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20219" name="Black Maneki Neko Agathion 7-Day Pack" add_name="Escape">
+	<etcitem id="20219" name="Agathion - Black Maneki Neko Pack (7-day)" add_name="Escape">
+	<!-- Wrapped Pack containing an Agathion - Black Maneki Neko (7-day limit). Cannot be exchanged, dropped, or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -101,7 +109,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20220" name="Brown Maneki Neko Agathion 7-Day Pack" add_name="Vitality">
+	<etcitem id="20220" name="Agathion - Brown Maneki Neko Pack (7-day)" add_name="Vitality">
+	<!-- Wrapped Pack containing an Agathion - Brown Maneki Neko (7-day limit). Cannot be exchanged, dropped or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -113,7 +122,9 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20227" name="One-Eyed Bat Drove Agathion Pack">
+	<etcitem id="20227" name="Agathion - One-eyed Bat Drove Pack">
+	<!-- Dimensional Item Pack
+	Wrapped Pack containing an Agathion - One-eyed Bat Drove. Cannot be exchanged, dropped or sold. Can be shared between characters within the same account through the Dimensional Merchant. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -125,7 +136,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20228" name="One-Eyed Bat Drove Agathion 7-Day Pack" add_name="Resist Unholy">
+	<etcitem id="20228" name="Agathion - One-eyed Bat Drove Pack (7-day)" add_name="Dark Attack Resistance">
+	<!-- Wrapped Pack containing an Agathion - One-eyed Bat Drove (7-day limit). Cannot be exchanged, dropped or sold. Cooldown: 1 hour. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -137,7 +149,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20229" name="One-Eyed Bat Drove Agathion 7-Day Pack" add_name="Vitality">
+	<etcitem id="20229" name="Agathion - One-eyed Bat Drove Pack (7-day)" add_name="Vitality">
+	<!-- Wrapped Pack containing an Agathion - One-eyed Bat Drove (7-day limit). Cannot be exchanged, dropped or sold. Cooldown: 1 hour. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -149,7 +162,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20233" name="Pegasus Agathion Pack">
+	<etcitem id="20233" name="Agathion - Pegasus Pack">
+	<!-- Wrapped Pack containing an Agathion - Pegasus. Cannot be exchanged, dropped or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -161,7 +175,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20234" name="Pegasus Agathion 7-Day Pack" add_name="Wind Walk">
+	<etcitem id="20234" name="Agathion - Pegasus Pack (7-day)" add_name="Wind Walk">
+	<!-- Wrapped Pack containing an Agathion - Pegasus (7-day limit). Cannot be exchanged, dropped or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -173,7 +188,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20235" name="Pegasus Agathion 7-Day Pack" add_name="Escape">
+	<etcitem id="20235" name="Agathion - Pegasus Pack (7-day)" add_name="Escape">
+	<!-- Wrapped Pack containing an Agathion - Pegasus (7-day limit). Cannot be exchanged, dropped or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -185,7 +201,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20239" name="Yellow-Robed Tojigong Pack">
+	<etcitem id="20239" name="Yellow-robed Tojigong Pack">
+	<!-- Wrapped Pack containing an Agathion - Yellow-robed Tojigong. Cannot be exchanged, dropped or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -197,7 +214,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20240" name="Blue-Robed Tojigong Pack">
+	<etcitem id="20240" name="Blue-robed Tojigong Pack">
+	<!-- Wrapped Pack containing an Agathion - Blue-robed Tojigong. Cannot be exchanged, dropped or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -209,7 +227,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20241" name="Green-Robed Tojigong Pack">
+	<etcitem id="20241" name="Green-robed Tojigong Pack">
+	<!-- Wrapped Pack containing an Agathion - Green-robed Tojigong. Cannot be exchanged, dropped or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -221,7 +240,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20242" name="Yellow-Robed Tojigong 7-Day Pack" add_name="Greater Heal">
+	<etcitem id="20242" name="Yellow-robed Tojigong Pack (7-day)" add_name="Greater Heal">
+	<!-- Wrapped Pack containing an Agathion - Yellow-robed Tojigong (7-day limit). Cannot be exchanged, dropped or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -233,7 +253,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20243" name="Blue-Robed Tojigong 7-Day Pack" add_name="Reflect Damage">
+	<etcitem id="20243" name="Blue-robed Tojigong Pack (7-day)" add_name="Reflect Damage">
+	<!-- Wrapped Pack containing an Agathion - Blue-robed Tojigong (7-day limit). Cannot be exchanged, dropped or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -245,7 +266,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20244" name="Green-Robed Tojigong 7-Day Pack" add_name="Mana Regeneration">
+	<etcitem id="20244" name="Green-robed Tojigong Pack (7-day)" add_name="Mana Regeneration">
+	<!-- Wrapped Pack containing an Agathion - Green-robed Tojigong (7-day limit). Cannot be exchanged, dropped or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -257,7 +279,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20251" name="Bugbear Agathion Pack">
+	<etcitem id="20251" name="Agathion - Bugbear Pack">
+	<!-- Wrapped Pack containing an Agathion - Bugbear. Cannot be exchanged, dropped or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -269,7 +292,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20254" name="Agathion of Love Pack (Event)">
+	<etcitem id="20254" name="Love Agathion Pack (Event)">
+	<!-- Wrapped Pack containing an Love Agathion Seal Bracelet. Cannot be exchanged, dropped or sold. May be stored in a private warehouse. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -281,6 +305,7 @@
 		<set name="weight" value="100"/>
 	</etcitem>
 	<etcitem id="20271" name="Baguette Legacy">
+	<!-- Binds the intense emotions of Baguette. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -301,7 +326,9 @@
 		</cond>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="20272" name="Baguette Herb">
+	<etcitem id="20272" name="Baguette's Herb">
+	<!-- Event item
+	Mysterious herb that increases Atk. Spd. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -317,6 +344,8 @@
 		</cond>
 	</etcitem>
 	<etcitem id="20273" name="Cream Puff Herb">
+	<!-- Event item
+	Mysterious herb that recovers Vitality upon acquiring XP. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -332,6 +361,8 @@
 		</cond>
 	</etcitem>
 	<etcitem id="20274" name="Cheesecake Herb">
+	<!-- Event item
+	Mysterious herb that increases Casting Spd. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -347,6 +378,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="20277" name="Baguette Legacy - Kamael">
+	<!-- Binds the intense emotions of Baguette. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. For Kamael use only. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -368,6 +400,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="20278" name="Gold Afro Hair Pack">
+	<!-- Pack with Gold Afro. Uses 2 hair accessory slots. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -383,6 +416,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="20279" name="Pink Afro Hair Pack">
+	<!-- Pack with Pink Afro. Uses 2 hair accessory slots. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -397,7 +431,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20280" name="Red Sumo Wrestler Agathion Pack">
+	<etcitem id="20280" name="Agathion - Red Sumo Wrestler Pack">
+	<!-- Wrapped Pack containing an Agathion - Red Sumo Wrestler. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -409,7 +444,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20281" name="Red Sumo Wrestler Agathion 7-Day Pack" add_name="Death Whisper">
+	<etcitem id="20281" name="Agathion - Red Sumo Wrestler Pack (7-day)" add_name="Death Whisper">
+	<!-- Wrapped Pack containing an Agathion - Red Sumo Wrestler (7-day). Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -421,7 +457,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20282" name="Blue Sumo Wrestler Agathion Pack">
+	<etcitem id="20282" name="Agathion - Blue Sumo Wrestler Pack">
+	<!-- Wrapped Pack containing an Agathion - Blue Sumo Wrestler. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -433,7 +470,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20283" name="Blue Sumo Wrestler Agathion 7-Day Pack" add_name="Wild Magic">
+	<etcitem id="20283" name="Agathion - Blue Sumo Wrestler Pack (7-day)" add_name="Wild Magic">
+	<!-- Wrapped Pack containing an Agathion - Blue Sumo Wrestler (7-day). Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -445,7 +483,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20284" name="Great Sumo Match Agathion Pack">
+	<etcitem id="20284" name="Agathion - Great Sumo Match Pack">
+	<!-- Wrapped Pack containing an Agathion - Great Sumo Match. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -457,7 +496,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20285" name="Great Sumo Match Agathion 7-Day Pack" add_name="Big Head / Firework">
+	<etcitem id="20285" name="Agathion - Great Sumo Match Pack (7-day)" add_name="Big Head / Firework">
+	<!-- Wrapped Pack containing an Agathion - Great Sumo Match (7-day). Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -469,7 +509,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20286" name="Button-Eyed Bear Doll Agathion Pack">
+	<etcitem id="20286" name="Agathion - Button-eyed Bear Doll Pack">
+	<!-- Wrapped Pack containing an Agathion - Button-eyed Bear Doll. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -481,7 +522,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20287" name="Button-Eyed Bear Doll Agathion 7-Day Pack" add_name="Escape">
+	<etcitem id="20287" name="Agathion - Button-eyed Bear Doll Pack (7-day)" add_name="Escape">
+	<!-- Wrapped Pack containing an Agathion - Button-eyed Bear Doll (7-day). Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -493,7 +535,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20288" name="Button-Eyed Bear Doll Agathion 7-Day Pack" add_name="Resurrection">
+	<etcitem id="20288" name="Agathion - Button-eyed Bear Doll Pack (7-day)" add_name="Resurrection">
+	<!-- Wrapped Pack containing an Agathion - Button-eyed Bear Doll (7-day). Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -505,7 +548,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20289" name="Button-Eyed Bear Doll Agathion 7-Day Pack" add_name="Energy">
+	<etcitem id="20289" name="Agathion - Button-eyed Bear Doll Pack (7-day)" add_name="Vitality">
+	<!-- Wrapped Pack containing an Agathion - Button-eyed Bear Doll (7-day). Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -517,7 +561,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20290" name="God of Fortune Agathion Pack">
+	<etcitem id="20290" name="Agathion - God of Fortune Pack">
+	<!-- Wrapped Pack containing an Agathion - God of Fortune. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -529,7 +574,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20291" name="God of Fortune Agathion 7-Day Pack" add_name="Energy">
+	<etcitem id="20291" name="Agathion - God of Fortune Pack (7-day)" add_name="Vitality">
+	<!-- Wrapped Pack containing an Agathion - God of Fortune (7-day). Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -541,7 +587,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20292" name="Dryad Agathion Pack">
+	<etcitem id="20292" name="Agathion - Dryad Pack">
+	<!-- Wrapped Pack containing Agathion - Dryad. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -553,7 +600,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20293" name="Wonboso Agathion Pack">
+	<etcitem id="20293" name="Agathion - Wonboso Pack">
+	<!-- Wrapped Pack containing an Agathion - Wonboso. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -565,7 +613,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20294" name="Wonboso Agathion 7-Day Pack" add_name="Wind Walk">
+	<etcitem id="20294" name="Agathion - Wonboso Pack (7-day)" add_name="Wind Walk">
+	<!-- Wrapped Pack containing an Agathion - Wonboso (7-day). Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -577,7 +626,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20295" name="Daewoonso Agathion Pack">
+	<etcitem id="20295" name="Agathion - Daewoonso Pack">
+	<!-- Wrapped Pack containing an Agathion - Daewoonso. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -589,7 +639,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20296" name="Daewoonso Agathion 7-Day Pack" add_name="New Year's Gift">
+	<etcitem id="20296" name="Agathion - Daewoonso Pack (7-day)" add_name="New Year's Gift">
+	<!-- Wrapped Pack containing an Agathion - Daewoonso (7-day). Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

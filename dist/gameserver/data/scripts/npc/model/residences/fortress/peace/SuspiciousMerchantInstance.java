@@ -13,11 +13,8 @@
 package npc.model.residences.fortress.peace;
 
 import lineage2.gameserver.dao.SiegeClanDAO;
-import lineage2.gameserver.data.xml.holder.EventHolder;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.entity.events.EventType;
-import lineage2.gameserver.model.entity.events.impl.DominionSiegeRunnerEvent;
 import lineage2.gameserver.model.entity.events.impl.FortressSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.entity.events.objects.SiegeClanObject;
@@ -150,13 +147,6 @@ public class SuspiciousMerchantInstance extends NpcInstance
 			}
 			
 			if ((clan.getHasFortress() > 0) && (fortress.getSiegeDate().getTimeInMillis() > 0))
-			{
-				showChatWindow(player, "residence2/fortress/fortress_ordery006.htm");
-				return;
-			}
-			
-			DominionSiegeRunnerEvent runnerEvent = EventHolder.getInstance().getEvent(EventType.MAIN_EVENT, 1);
-			if (runnerEvent.isRegistrationOver())
 			{
 				showChatWindow(player, "residence2/fortress/fortress_ordery006.htm");
 				return;

@@ -1001,9 +1001,9 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+        <set name="type" value="FairyCocons"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--?????????? ????????-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1048,7 +1048,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+        <set name="type" value="FairyCocons"/>
 		<ai_params>
 			<set name="isImmobilized" value="true"/>
 		</ai_params>

@@ -1180,7 +1180,7 @@
 		<set name="mpInitialConsume" val="15"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="337;"/>
 		<enchant1 levels="10" name="Cost">
@@ -1232,7 +1232,7 @@
         <set name="target" val="TARGET_ONE"/>
         <set name="skillType" val="MDAM"/>
         <set name="isDebuff" val="true"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <enchant1 levels="10" name="Cost">
             <table name="#power">174 176 178 180 182 184 186 188 190 193</table>
@@ -1299,7 +1299,7 @@
         <set name="skillType" val="DRAIN"/>
         <set name="saveVs" val="MEN"/>
         <set name="isDebuff" val="true"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="skillRadius" val="400"/>
         <enchant1 levels="10" name="Cost">
@@ -1394,7 +1394,7 @@
         <set name="magicLevel" val="#magicLevel"/>
         <set name="isDebuff" val="true"/>
         <set name="relationSkillsId" val="981;1064;1336;1447;"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="lvlDepend" val="2"/>
         <set name="flyRadius" val="30"/>
         <set name="flyType" val="THROW_UP"/>
@@ -1431,7 +1431,7 @@
 		<table name="#pdef">1</table>
 		<table name="#mdef">1</table>
         <set name="isDebuff" val="true"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="lvlDepend" val="2"/>
         <set name="flyRadius" val="30"/>
         <set name="flyType" val="THROW_UP"/>
@@ -1475,7 +1475,7 @@
         <set name="flyRadius" val="#flyradius"/>
         <set name="flyType" val="THROW_UP"/>
         <set name="isDebuff" val="true"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="trait" val="AIRJOKE"/>
         <set name="lvlDepend" val="1"/>
         <set name="skillRadius" val="#radius"/>
@@ -1514,7 +1514,7 @@
         <set name="flyRadius" val="#flyradius"/>
         <set name="flyType" val="THROW_UP"/>
         <set name="isDebuff" val="true"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="trait" val="AIRJOKE"/>
         <set name="lvlDepend" val="1"/>
         <set name="operateType" val="OP_ACTIVE"/>
@@ -1588,7 +1588,7 @@
 		<set name="castRange" val="900"/>
 		<set name="effectRange" val="1000"/>
 		<set name="isDebuff" val="true"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="relationSkillsId" val="1169;"/>
 		<enchant1 levels="10" name="Cost"> 
 			<table name="#mpConsume1">16 15 14 14 13 12 12 11 10 10</table>
@@ -1641,7 +1641,7 @@
         <set name="skillType" val="DEBUFF"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="isDebuff" val="true"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <enchant1 levels="10" name="Cost">
             <table name="#mpConsume2">214 205 196 187 178 169 160 151 142 133</table>
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
@@ -1693,7 +1693,7 @@
 		<set name="flyType" val="DUMMY"/>
 		<set name="flyRadius" val="#flyradius"/>
 		<set name="lvlDepend" val="1"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="powerPvP" val="#powerPvP"/>
 		<set name="power" val="#power"/>
 		<set name="saveVs" val="CON"/>
@@ -1734,7 +1734,7 @@
 		<set name="hitTime" val="1000"/>
 		<set name="lvlDepend" val="1"/>
 		<set name="isDebuff" val="true"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="magicLvl" val="#magicLevel"/>
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -1785,7 +1785,7 @@
         <set name="mpInitialConsume" val="#mpInitialConsume"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="BUFF"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="aggroPoints" val="#aggroPoints"/>
         <enchant1 levels="10" name="Cost">
@@ -1836,7 +1836,7 @@
         <set name="power" val="#MP"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="MANAHEAL"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="aggroPoints" val="#aggroPoints"/>
         <set name="relationSkillsId" val="1157;502;"/>
@@ -1854,7 +1854,7 @@
 		<table name="#mdef">1</table>
 		<set name="aggroPoints" val="204"/>
   		<set name="hitTime" val="1000"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="magicLvl" val="85"/>
 		<set name="mpConsume1" val="14"/>
 		<set name="mpConsume2" val="56"/>
@@ -2344,7 +2344,7 @@
 		<set name="coolTime" val="200"/>
 		<set name="lvlDepend" val="1"/>
 		<set name="isDebuff" val="true"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="magicLvl" val="#magicLevel"/>
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -2404,7 +2404,7 @@
         <set name="saveVs" val="MEN"/>
         <set name="isDebuff" val="true"/>
         <set name="skillType" val="DEBUFF"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="operateType" val="OP_ACTIVE"/>
 		<enchant1 levels="10" name="Cost"/>
         <for>

@@ -34,7 +34,6 @@ import lineage2.gameserver.model.pledge.Privilege;
 import lineage2.gameserver.network.serverpackets.CastleSiegeInfo;
 import lineage2.gameserver.network.serverpackets.ExShowCropInfo;
 import lineage2.gameserver.network.serverpackets.ExShowCropSetting;
-import lineage2.gameserver.network.serverpackets.ExShowDominionRegistry;
 import lineage2.gameserver.network.serverpackets.ExShowManorDefaultInfo;
 import lineage2.gameserver.network.serverpackets.ExShowSeedInfo;
 import lineage2.gameserver.network.serverpackets.ExShowSeedSetting;
@@ -305,7 +304,7 @@ public class ChamberlainDarkInstance extends ResidenceManager
 				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 				return;
 			}
-			if (castle.getSiegeEvent().isInProgress() || castle.getDominion().getSiegeEvent().isInProgress())
+			if (castle.getSiegeEvent().isInProgress())
 			{
 				showChatWindow(player, "residence2/castle/chamberlain_saius021.htm");
 				return;
@@ -340,7 +339,6 @@ public class ChamberlainDarkInstance extends ResidenceManager
 			}
 			if (!val.equals(""))
 			{
-				// По умолчанию налог не более 15%
 				int maxTax = 15;
 				int tax = Integer.parseInt(val);
 				if ((tax < 0) || (tax > maxTax))
@@ -433,7 +431,7 @@ public class ChamberlainDarkInstance extends ResidenceManager
 				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 				return;
 			}
-			if (castle.getSiegeEvent().isInProgress() || castle.getDominion().getSiegeEvent().isInProgress())
+			if (castle.getSiegeEvent().isInProgress())
 			{
 				showChatWindow(player, "residence2/castle/chamberlain_saius021.htm");
 				return;
@@ -604,9 +602,29 @@ public class ChamberlainDarkInstance extends ResidenceManager
 				player.sendPacket(html);
 			}
 		}
-		else if (actualCommand.equalsIgnoreCase("viewTerritoryWarInfo"))
+		else if (actualCommand.equalsIgnoreCase("Cloak")) // Give Cold Cloak of Dark to Castle Owner
 		{
-			player.sendPacket(new ExShowDominionRegistry(player, castle.getDominion()));
+			if (!player.isClanLeader())
+			{
+				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				return;
+			}
+			if (player.getInventory().getItemByItemId(34997) == null)
+			{
+				player.getInventory().addItem(ItemFunctions.createItem(34997));
+				
+				NpcHtmlMessage html = new NpcHtmlMessage(player, this);
+				html.setFile("castle/chamberlain/chamberlain-givecloak.htm");
+				html.replace("%CharName%", player.getName());
+				html.replaceNpcString("%FeudName%", castle.getNpcStringName());
+				player.sendPacket(html);
+			}
+			else
+			{
+				NpcHtmlMessage html = new NpcHtmlMessage(player, this);
+				html.setFile("castle/chamberlain/alreadyhavecloak.htm");
+				player.sendPacket(html);
+			}
 		}
 		else if (actualCommand.equalsIgnoreCase("manageFunctions"))
 		{
@@ -700,7 +718,7 @@ public class ChamberlainDarkInstance extends ResidenceManager
 		
 		switch (type)
 		{
-			case 1: // Главные ворота
+			case 1:
 				switch (level)
 				{
 					case 2:
@@ -714,7 +732,7 @@ public class ChamberlainDarkInstance extends ResidenceManager
 						break;
 				}
 				break;
-			case 2: // Внутренние ворота
+			case 2:
 				switch (level)
 				{
 					case 2:
@@ -728,7 +746,7 @@ public class ChamberlainDarkInstance extends ResidenceManager
 						break;
 				}
 				break;
-			case 3: // Стены
+			case 3:
 				switch (level)
 				{
 					case 2:
@@ -792,7 +810,7 @@ public class ChamberlainDarkInstance extends ResidenceManager
 			return false;
 		}
 		
-		if (castle.getSiegeEvent().isInProgress() || castle.getDominion().getSiegeEvent().isInProgress())
+		if (castle.getSiegeEvent().isInProgress())
 		{
 			showChatWindow(player, "residence2/castle/chamberlain_saius021.htm");
 			return false;

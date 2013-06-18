@@ -20,7 +20,6 @@ import java.util.List;
 
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
-import lineage2.gameserver.model.reward.RewardData;
 import lineage2.gameserver.templates.FishTemplate;
 
 import org.slf4j.Logger;
@@ -28,10 +27,6 @@ import org.slf4j.LoggerFactory;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
 public class FishTable
 {
 	/**
@@ -56,10 +51,6 @@ public class FishTable
 	 * Field _fishes.
 	 */
 	private TIntObjectHashMap<List<FishTemplate>> _fishes;
-	/**
-	 * Field _fishRewards.
-	 */
-	private TIntObjectHashMap<List<RewardData>> _fishRewards;
 	
 	/**
 	 * Constructor for FishTable.
@@ -83,7 +74,6 @@ public class FishTable
 	private void load()
 	{
 		_fishes = new TIntObjectHashMap<>();
-		_fishRewards = new TIntObjectHashMap<>();
 		int count = 0;
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -116,29 +106,7 @@ public class FishTable
 				fishes.add(fish);
 				count++;
 			}
-			DbUtils.close(statement, resultSet);
 			_log.info("FishTable: Loaded " + count + " fishes.");
-			count = 0;
-			statement = con.prepareStatement("SELECT fishid, rewardid, min, max, chance FROM fishreward ORDER BY fishid");
-			resultSet = statement.executeQuery();
-			RewardData reward;
-			List<RewardData> rewards;
-			while (resultSet.next())
-			{
-				int fishid = resultSet.getInt("fishid");
-				int rewardid = resultSet.getInt("rewardid");
-				int mindrop = resultSet.getInt("min");
-				int maxdrop = resultSet.getInt("max");
-				int chance = resultSet.getInt("chance");
-				reward = new RewardData(rewardid, mindrop, maxdrop, chance * 10000.);
-				if ((rewards = _fishRewards.get(fishid)) == null)
-				{
-					_fishRewards.put(fishid, rewards = new ArrayList<>());
-				}
-				rewards.add(reward);
-				count++;
-			}
-			_log.info("FishTable: Loaded " + count + " fish rewards.");
 		}
 		catch (Exception e)
 		{
@@ -148,15 +116,6 @@ public class FishTable
 		{
 			DbUtils.closeQuietly(con, statement, resultSet);
 		}
-	}
-	
-	/**
-	 * Method getFishIds.
-	 * @return int[]
-	 */
-	public int[] getFishIds()
-	{
-		return _fishRewards.keys();
 	}
 	
 	/**
@@ -190,26 +149,6 @@ public class FishTable
 		if (result.isEmpty())
 		{
 			_log.warn("No fishes for group : " + group + " type: " + type + " level: " + lvl + "!");
-		}
-		return result;
-	}
-	
-	/**
-	 * Method getFishReward.
-	 * @param fishid int
-	 * @return List<RewardData>
-	 */
-	public List<RewardData> getFishReward(int fishid)
-	{
-		List<RewardData> result = _fishRewards.get(fishid);
-		if (_fishRewards == null)
-		{
-			_log.warn("No fish rewards defined for fish id: " + fishid + "!");
-			return null;
-		}
-		if (result.isEmpty())
-		{
-			_log.warn("No fish rewards for fish id: " + fishid + "!");
 		}
 		return result;
 	}

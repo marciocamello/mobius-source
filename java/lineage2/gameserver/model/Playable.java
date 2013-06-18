@@ -49,10 +49,6 @@ import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
 import lineage2.gameserver.utils.Location;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
 public abstract class Playable extends Creature
 {
 	/**
@@ -997,5 +993,17 @@ public abstract class Playable extends Creature
 	public void setInBoatPosition(Location loc)
 	{
 		_inBoatPosition = loc;
+	}
+	
+	@Override
+	public void onInteract(final Player player)
+	{
+		player.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, this, Config.FOLLOW_RANGE);
+	}
+	
+	@Override
+	public boolean displayHpBar()
+	{
+		return true;
 	}
 }

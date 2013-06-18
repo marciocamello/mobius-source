@@ -2,6 +2,7 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<etcitem id="20700" name="Bamboo Panda Hat Pack">
+	<!-- Wrapped Pack containing a Bamboo Panda Hat. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -13,7 +14,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20701" name="Agathion of Bamboo Panda 7 Day Pack" add_name="Great Adventurer's Soul Power">
+	<etcitem id="20701" name="Bamboo Panda Hat Pack (7-day)" add_name="Great Adventurer's Soul Power">
+	<!-- Wrapped Pack containing a Bamboo Panda Hat (7-day). Cannot be exchanged, dropped, or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -26,6 +28,7 @@
 		<set name="weight" value="100"/>
 	</etcitem>
 	<etcitem id="20702" name="Sexy Panda Hat Pack">
+	<!-- Wrapped Pack containing a Sexy Panda Hat. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -37,7 +40,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20703" name="Agathion of Sexy Panda 7 Day Pack" add_name="Blessing of Resurrection ">
+	<etcitem id="20703" name="Agathion - Sexy Panda Pack (7-day)" add_name="Blessed Resurrection">
+	<!-- Wrapped Pack containing a Sexy Panda Hat (7-day). Cannot be exchanged, dropped, or sold. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -49,7 +53,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20704" name="Gate Keeper Hat Pack">
+	<etcitem id="20704" name="Gatekeeper Hat Pack">
+	<!-- Wrapped Pack containing a Gatekeeper Hat. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -61,7 +66,9 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20705" name="Gate Keeper Hat 7-day Pack" add_name="Instinct of Destruction">
+	<etcitem id="20705" name="Gatekeeper Hat Pack (7-day)" add_name="Appetite for Destruction">
+	<!-- Dimensional Item Pack
+	Wrapped Pack containing a Gatekeeper Hat (7-day). Cannot be exchanged or dropped. Can be shared between characters within the same account through the Dimensional Merchant. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -73,7 +80,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20706" name="Halloween Candy - Event">
+	<etcitem id="20706" name="Revita-Pop (Event)">
+	<!-- For events. Sweet Revita-Pop. Give it to Skooldie to exchange for Halloween Toy Box. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -86,7 +94,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20707" name="Wooldy Summon Scroll - Event">
+	<etcitem id="20707" name="Scroll: Summon Uldie (Event)">
+	<!-- For events. Use to summon Uldie, first sister of Halloween Children, to play Jack Game. Uldie can't be summoned with pet or if Halloween Mask is not equipped. You can't play Jack Game while morphed or in stance status so be cautious! -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -100,7 +109,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20708" name="Verdandi Summon Scroll - Event">
+	<etcitem id="20708" name="Scroll: Summon Belldandy (Event)">
+	<!-- For events. Use to summon Belldandy, second sister of Halloween Children, to play Jack Game. Belldandy can't be summoned with pet or if Halloween Mask is not equipped. You can't play Jack Game while morphed or in stance status so be cautious! -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -114,7 +124,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20709" name="Skooldy Summon Scroll - Event">
+	<etcitem id="20709" name="Scroll: Summon Skooldie (Event)">
+	<!-- For events. Use to summon Skooldie, little brother of Halloween Children, to practice Jack Game. Skooldie can't be summoned with pet or if Halloween Mask is not equipped. You can't play Jack Game while morphed or in stance status so be cautious! Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -130,7 +141,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20710" name="Halloween Toy Box - Event">
+	<etcitem id="20710" name="Halloween Toy Box (Event)">
+	<!-- For events. One of Halloween Mask can be obtained with chance. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -149,7 +161,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="20717" name="Shiny Halloween Toy Box - Event">
+	<etcitem id="20717" name="Shiny Halloween Toy Box (Event)">
+	<!-- For events. One of Shiny Halloween Mask can be obtained with chance. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -168,7 +181,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="20728" name="Lucky Sky Lantern Summon Scroll">
+	<etcitem id="20728" name="Scroll: Summon Lucky Lamp">
+	<!-- Summons Sky Lantern to offer to sky with a wish. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="reuse_delay" value="14400000"/>
 		<set name="delay_share_group" value="101"/>
 		<set name="class" value="OTHER"/>
@@ -185,7 +199,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20729" name="Ambience Sky Lantern Summon Scroll">
+	<etcitem id="20729" name="Scroll: Summon Ambience Sky Lantern">
+	<!-- Summons Sky Lantern to offer to sky with a wish. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="reuse_delay" value="14400000"/>
 		<set name="delay_share_group" value="101"/>
 		<set name="class" value="OTHER"/>
@@ -202,7 +217,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20730" name="Sway Sky Lantern Summon Scroll">
+	<etcitem id="20730" name="Scroll: Summon Rolling Lamp">
+	<!-- Summons Sky Lantern to offer to sky with a wish. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="reuse_delay" value="14400000"/>
 		<set name="delay_share_group" value="101"/>
 		<set name="class" value="OTHER"/>
@@ -219,7 +235,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20731" name="Comfort Sky Lantern Summon Scroll">
+	<etcitem id="20731" name="Scroll: Summon Comfort Sky Lantern">
+	<!-- Summons Sky Lantern to offer to sky with a wish. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="reuse_delay" value="14400000"/>
 		<set name="delay_share_group" value="101"/>
 		<set name="class" value="OTHER"/>
@@ -236,7 +253,9 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20734" name="Golden Jack O'Lantern Mask 7 Day Pack" add_name="Authority of Golden Jack O'Lantern Mask.">
+	<etcitem id="20734" name="Golden Jack O'Lantern Mask Pack (7-day)" add_name="Authority of Golden Jack O'Lantern Mask.">
+	<!-- Dimensional Item Pack
+	Wrapped Pack with Golden Jack O'Lantern Mask(7 Day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared between characters within the same account through the Dimensional Merchant. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -248,7 +267,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20735" name="Zombie Agathion Pack">
+	<etcitem id="20735" name="Agathion - Zombie Pack">
+	<!-- Wrapped Pack containing an Agathion - Zombie. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -260,7 +280,9 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20736" name="Zombie Agathion 7 Day Pack" add_name="Escape from Death">
+	<etcitem id="20736" name="Agathion - Zombie Pack (7-day)" add_name="Soul Stealth">
+	<!-- Dimensional Item Pack
+	Wrapped Pack containing an Agathion - Zombie (7-day). Cannot be exchanged or dropped. Can be shared between characters within the same account through the Dimensional Merchant. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -272,7 +294,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20737" name="Baekyi Hwamae Agation Pack">
+	<etcitem id="20737" name="Agathion - Bluebird Pack">
+	<!-- Wrapped Pack containing an Agathion - Bluebird. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -284,7 +307,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20738" name="Kwanwoo Hwamae Agation Pack">
+	<etcitem id="20738" name="Agathion - Hatbird Pack">
+	<!-- Wrapped Pack containing an Agathion - Hatbird. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -296,7 +320,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20739" name="Morph Scroll Box">
+	<etcitem id="20739" name="Transformation Scroll Pack">
+	<!-- One of Onyx Beast, Doom Wraith, Apostle Grail morph scroll drops with chance. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -311,6 +336,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="20740" name="Cocktail Pack">
+	<!-- Wrapped Pack with sweet fruit cocktail and refreshing fruit cocktail. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -321,7 +347,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20741" name="Rune of SP 30% - Event" add_name="1 hours limited period">
+	<etcitem id="20741" name="SP Rune 30% (Event)" add_name="(1-hour)">
+	<!-- For events. Ancient characters which endow mysterious ability if it is possessed in the inventory. It increases acquired SP by 30%. The remaining time decreases even when not playing. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -336,7 +363,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20742" name="Rune of Exp. Points 30% - Event" add_name="1 hours limited period">
+	<etcitem id="20742" name="XP Rune III (Lv1-99) 30% (Event)" add_name="(1-hour)">
+	<!-- For events. Ancient characters which endow mysterious ability if it is possessed in the inventory. It increases acquired XP by 30%. The remaining time decreases even when not playing. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -351,7 +379,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20748" name="Shiny Mask of Giant Hercules 7 day Pack " add_name="Blessing of Halloween">
+	<etcitem id="20748" name="Reanimated Corpse Mask Pack (7-day)" add_name="Blessing of Halloween">
+	<!-- Wrapped Pack with Reanimated Corpse Mask. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -363,7 +392,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20749" name="Shiny Mask of Silent Scream 7 day Pack " add_name="Blessing of Halloween">
+	<etcitem id="20749" name="Shriek Mask Pack (7-day)" add_name="Blessing of Halloween">
+	<!-- Wrapped Pack with Shriek Mask. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -375,7 +405,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20750" name="Shiny Spirit of Wrath Mask 7 day Pack " add_name="Blessing of Halloween">
+	<etcitem id="20750" name="Red Devil Mask Pack (7-day)" add_name="Blessing of Halloween">
+	<!-- Wrapped Pack with Red Devil Mask. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -387,7 +418,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20751" name="Shiny Undecaying Corpse Mask 7Day Pack " add_name="Blessing of Halloween">
+	<etcitem id="20751" name="Mummy Mask Pack (7-day)" add_name="Blessing of Halloween">
+	<!-- Wrapped Pack with Mummy Mask. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -399,7 +431,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20752" name="Shiny Planet X235 Alien Mask 7 day Pack " add_name="Blessing of Halloween">
+	<etcitem id="20752" name="Alien Mask Pack (7-day)" add_name="Blessing of Halloween">
+	<!-- Wrapped Pack with Alien Mask. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -412,6 +445,7 @@
 		<set name="weight" value="100"/>
 	</etcitem>
 	<etcitem id="20753" name="Santa's Gift Box">
+	<!-- Box containing Santas' Christmas Gift. You must receive this gift to end the year on a good note! Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -426,6 +460,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="20754" name="Santa's Gift Box - Jackpot">
+	<!-- Box containing Santas' Biggest Christmas Gift! You must receive this gift to end the year on a good note! Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -439,7 +474,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20755" name="Santa's Weapon Exchange Coupon - Regular" add_name="24 hours limited period">
+	<etcitem id="20755" name="Santa's Weapon Coupon - Regular" add_name="(24-hour)">
+	<!-- Take this coupon to the Santa in any town, and you will receive a very powerful weapon. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -452,7 +488,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20756" name="Santa's Shirt Exchange Coupon" add_name="24 hours limited period">
+	<etcitem id="20756" name="Santa's Shirt Coupon" add_name="(24-hour)">
+	<!-- Take this coupon to the Santa in any town, and you will receive a Holiday Shirt. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -465,7 +502,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20757" name="Santa's Weapon Exchange Coupon - Jackpot" add_name="24 hours limited period">
+	<etcitem id="20757" name="Santa's Weapon Coupon - Jackpot" add_name="(24-hour)">
+	<!-- Coupon that can only be obtained by a lucky person. If you take this exchange ticket to Santa in any town, you will receive a very powerful permanent weapon. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -478,7 +516,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20758" name="Santa's Weapon Exchange Coupon Box">
+	<etcitem id="20758" name="Santa's Weapon Coupon Box">
+	<!-- If you use it, you can receive Santa's Weapon Coupon. If you're lucky, you might have a chance of also receiving a Weapon Coupon - Jackpot! Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -496,7 +535,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="20760" name="Rudolph Necklace - Event">
+	<etcitem id="20760" name="Rudolph Necklace (Event)">
+	<!-- Necklace that can summon a Rudolph. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -510,6 +550,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="20761" name="Rudolph Necklace">
+	<!-- Necklace that can summon a Rudolph. Can keep a cute baby Rudolph. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -523,7 +564,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20762" name="Rudolph Pet Exchange Ticket" add_name="7 days limit">
+	<etcitem id="20762" name="Rudolph Pet Exchange Ticket" add_name="(7-day)">
+	<!-- Exchange Ticket that can be exchanged for a Rudolph Necklace. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -537,7 +579,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20763" name="Rudolph Rearing Certificate" add_name="24 hours limited period">
+	<etcitem id="20763" name="Rudolph Rearing Certificate" add_name="(24-hour)">
+	<!-- Certificate that shows you have received three reindeer necklaces. If you have this item, you cannot receive more necklaces until this certificate expires. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -545,6 +588,7 @@
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="20764" name="Purple Star Candy">
+	<!-- Candy containing energy of a star. Replenishes Vitality to a certain degree upon use. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cooldown is 60 min. Limited number available. -->
 		<set name="reuse_delay" value="14400000"/>
 		<set name="delay_share_group" value="15"/>
 		<set name="class" value="OTHER"/>
@@ -559,7 +603,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20765" name="Blue Star Candy ">
+	<etcitem id="20765" name="Blue Star Candy">
+	<!-- Candy containing energy of a star. Replenishes Vitality to a certain degree upon use. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cooldown is 60 min.  Limited number available. -->
 		<set name="reuse_delay" value="14400000"/>
 		<set name="delay_share_group" value="15"/>
 		<set name="class" value="OTHER"/>
@@ -575,6 +620,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="20766" name="Red Star Candy">
+	<!-- Candy containing energy of a star. Replenishes Vitality to a certain degree upon use. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cooldown is 60 min.  Limited number available. -->
 		<set name="reuse_delay" value="14400000"/>
 		<set name="delay_share_group" value="15"/>
 		<set name="class" value="OTHER"/>
@@ -590,6 +636,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="20767" name="Orange Star Candy">
+	<!-- Candy containing energy of a star. Replenishes Vitality to a certain degree upon use. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cooldown is 60 min.  Limited number available. -->
 		<set name="reuse_delay" value="14400000"/>
 		<set name="delay_share_group" value="15"/>
 		<set name="class" value="OTHER"/>
@@ -604,7 +651,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20768" name="Food of Doubt">
+	<etcitem id="20768" name="Mysterious Food">
+	<!-- Food containing mysterious power. When eaten, Vitality is maintained for 20 minutes when acquiring XP Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Limited number available. -->
 		<set name="reuse_delay" value="14400000"/>
 		<set name="delay_share_group" value="15"/>
 		<set name="class" value="OTHER"/>
@@ -620,6 +668,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="20769" name="Rudolph Baby Food">
+	<!-- Nutritious food that a baby Rudolph must eat to grow into a Boy Rudolph. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="reuse_delay" value="10000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -634,6 +683,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="20770" name="Apple Basket Herb">
+	<!-- Fruit basket full of delicious-looking apples. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -646,6 +696,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="20771" name="Orange Basket Herb">
+	<!-- Fruit basket full of delicious-looking oranges. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -658,6 +709,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="20772" name="Banana Basket Herb">
+	<!-- Fruit basket full of delicious-looking bananas. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -670,6 +722,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="20773" name="Rudolph's Gift">
+	<!-- Rudolph's Gift filled with Christmas fortune. Contains a wrapped Rudolph Pet Coupon, 4 Vitality Star Candy, Mysterious Food, and Transformation Scroll Pack. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -685,6 +738,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="20788" name="Flame Box">
+	<!-- When used, can display a brilliant flame screen. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -699,7 +753,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20796" name="Gwangong Agathion 7-Day Pack" add_name="Aura of Fury ">
+	<etcitem id="20796" name="Agathion - Guangong Pack (7-day)" add_name="Aura of Fury">
+	<!-- Wrapped Pack containing an Agathion - Guangong (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -709,7 +764,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20797" name="Gwanseum Nyang Nyang Agathion 7-Day Pack" add_name="Blessing of Mercy ">
+	<etcitem id="20797" name="Agathion - Gwanseum Nyang Nyang Pack (7-day)" add_name="Blessing of Mercy">
+	<!-- Wrapped Pack containing an Agathion - Gwanseum Nyang Nyang (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -719,7 +775,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20798" name="Blue Opera Agathion 7-Day Pack" add_name="Sword of Recovery ">
+	<etcitem id="20798" name="Agathion - Blue Opera Pack (7-day)" add_name="Sword of Recovery">
+	<!-- Wrapped Pack containing an Agathion - Blue Opera (7 day - Sword of Recovery). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -729,7 +786,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20799" name="Blue Opera Agathion 7-Day Pack" add_name="Sword of Lightning ">
+	<etcitem id="20799" name="Agathion - Blue Opera Pack (7-day)" add_name="Sword of Lightning">
+	<!-- Wrapped Pack containing an Agathion - Blue Opera (7 day - Sword of Lightning). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

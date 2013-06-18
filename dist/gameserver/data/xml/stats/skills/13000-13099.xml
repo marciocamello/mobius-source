@@ -1135,7 +1135,7 @@
             <add order="0x40" stat="rootResist" val="#rootResist"/>
             <add order="0x40" stat="maxHp" val="#maxHp"/>
 			<mul order="0x30" stat="pDef" val="#pDef"/>
-			<add order="0x30" stat="pAtk" val="#pAtk"/>
+			<add order="0x40" stat="pAtk" val="#pAtk"/>
             <add order="0x40" stat="defenceFire" val="#defenceFire"/>
             <add order="0x40" stat="defenceWater" val="#defenceWater"/>
             <add order="0x40" stat="defenceWind" val="#defenceWind"/>
@@ -1194,7 +1194,7 @@
             <sub order="0x40" stat="CON" val="1"/>
             <add order="0x40" stat="cAtkStatic" val="#cAtkStatic"/>
             <add order="0x40" stat="rootResist" val="#rootResist"/>
-            <add order="0x30" stat="pAtk" val="#pAtk"/>
+            <add order="0x40" stat="pAtk" val="#pAtk"/>
             <mul order="0x30" stat="pDef" val="#pDef"/>
             <mul order="0x30" stat="mpConsum" val="#mpConsum"/>
             <add order="0x40" stat="defenceFire" val="#defenceFire"/>
@@ -1259,7 +1259,7 @@
             <add order="0x40" stat="cAtkStatic" val="#cAtkStatic"/>
             <add order="0x40" stat="rootResist" val="#rootResist"/>
             <add order="0x40" stat="maxHp" val="#maxHp"/>
-            <add order="0x30" stat="pAtk" val="#pAtk"/>
+            <add order="0x40" stat="pAtk" val="#pAtk"/>
             <mul order="0x30" stat="skillPower" val="#skillPower"/>
             <add order="0x40" stat="defenceFire" val="#defenceFire"/>
             <add order="0x40" stat="defenceWater" val="#defenceWater"/>
@@ -1323,7 +1323,7 @@
             <add order="0x40" stat="cAtkStatic" val="#cAtkStatic"/>
             <add order="0x40" stat="rootResist" val="#rootResist"/>
             <add order="0x40" stat="maxHp" val="#maxHp"/>
-            <add order="0x30" stat="pAtk" val="#pAtk"/>
+            <add order="0x40" stat="pAtk" val="#pAtk"/>
             <mul order="0x30" stat="pDef" val="#pDef"/>
             <add order="0x40" stat="absorbDam" val="#absorbDam"/>
             <add order="0x40" stat="defenceFire" val="#defenceFire"/>
@@ -1390,7 +1390,7 @@
             <add order="0x40" stat="cAtkStatic" val="#cAtkStatic"/>
             <add order="0x40" stat="rootResist" val="#rootResist"/>
             <add order="0x40" stat="maxHp" val="#maxHp"/>
-            <add order="0x30" stat="pAtk" val="#pAtk"/>
+            <add order="0x40" stat="pAtk" val="#pAtk"/>
             <mul order="0x30" stat="pDef" val="#pDef"/>
             <add order="0x40" stat="stunPower" val="#stunPower"/>
             <add order="0x40" stat="defenceFire" val="#defenceFire"/>
@@ -1448,7 +1448,7 @@
         <set name="operateType" val="OP_PASSIVE"/>
         <for>
             <add order="0x40" stat="STR" val="1"/>
-            <add order="0x30" stat="pAtk" val="155"/>
+            <add order="0x40" stat="pAtk" val="155"/>
             <mul order="0x30" stat="pAtk" val="#pAtk"/>
             <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
             <add order="0x40" stat="rootResist" val="#rootResist"/>
@@ -1481,7 +1481,7 @@
         <for>
             <add order="0x40" stat="DEX" val="2"/>
             <sub order="0x40" stat="STR" val="1"/>
-            <add order="0x30" stat="pAtk" val="#pAtkAdd"/>
+            <add order="0x40" stat="pAtk" val="#pAtkAdd"/>
             <mul order="0x30" stat="pAtk" val="#pAtk"/>
             <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
             <mul order="0x40" stat="rCrit" val="#rCrit"/>
@@ -1514,7 +1514,7 @@
         <for>
             <add order="0x40" stat="STR" val="2"/>
             <sub order="0x40" stat="CON" val="1"/>
-            <add order="0x30" stat="pAtk" val="180"/>
+            <add order="0x40" stat="pAtk" val="180"/>
             <mul order="0x30" stat="pAtk" val="#pAtk"/>
             <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
             <add order="0x40" stat="maxHp" val="#maxHp"/>
@@ -1581,7 +1581,7 @@
         <for>
             <add order="0x40" stat="STR" val="3"/>
             <sub order="0x40" stat="CON" val="2"/>
-            <add order="0x30" stat="pAtk" val="214"/>
+            <add order="0x40" stat="pAtk" val="214"/>
             <mul order="0x30" stat="pAtk" val="#pAtk"/>
             <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
             <add order="0x40" stat="maxHp" val="#maxHp"/>
@@ -1648,7 +1648,7 @@
         <for>
             <add order="0x40" stat="STR" val="3"/>
             <sub order="0x40" stat="CON" val="1"/>
-            <add order="0x30" stat="pAtk" val="246"/>
+            <add order="0x40" stat="pAtk" val="246"/>
             <mul order="0x30" stat="pAtk" val="#pAtk"/>
             <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
             <add order="0x40" stat="maxHp" val="#maxHp"/>
@@ -1713,7 +1713,7 @@
         <for>
             <add order="0x40" stat="STR" val="4"/>
             <sub order="0x40" stat="CON" val="2"/>
-            <add order="0x30" stat="pAtk" val="255"/>
+            <add order="0x40" stat="pAtk" val="255"/>
             <mul order="0x30" stat="pAtk" val="#pAtk"/>
             <mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
             <add order="0x40" stat="maxHp" val="#maxHp"/>
@@ -1808,7 +1808,7 @@
             <add order="0x40" stat="INT" val="2"/>
             <sub order="0x40" stat="MEN" val="1"/>
             <mul order="0x30" stat="mAtk" val="#mAtk"/>
-            <add order="0x30" stat="mAtk" val="#mAtkAdd"/>
+            <add order="0x40" stat="mAtk" val="#mAtkAdd"/>
             <mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
             <add order="0x40" stat="maxMp" val="#maxMp"/>
             <mul order="0x40" stat="mCritRate" val="#mCritRate"/>
@@ -1873,7 +1873,7 @@
             <add order="0x40" stat="INT" val="3"/>
             <sub order="0x40" stat="MEN" val="2"/>
             <mul order="0x30" stat="mAtk" val="#mAtk"/>
-            <add order="0x30" stat="mAtk" val="#mAtkAdd"/>
+            <add order="0x40" stat="mAtk" val="#mAtkAdd"/>
             <mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
             <add order="0x40" stat="maxMp" val="#maxMp"/>
             <mul order="0x30" stat="concentration" val="#concentration"/>
@@ -1941,11 +1941,11 @@
             <add order="0x40" stat="INT" val="3"/>
             <sub order="0x40" stat="MEN" val="1"/>
             <mul order="0x30" stat="mAtk" val="#mAtk"/>
-            <add order="0x30" stat="mAtk" val="#mAtkAdd"/>
+            <add order="0x40" stat="mAtk" val="#mAtkAdd"/>
             <mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
             <add order="0x40" stat="maxMp" val="#maxMp"/>
-            <mul order="0x40" stat="mCritRate" val="#mCritRate"/>
-            <add order="0x30" stat="mCritDamage" val="#mCritDamage"/>
+            <mul order="0x30" stat="mCritRate" val="#mCritRate"/>
+            <add order="0x40" stat="mCAtkStatic" val="#mCritDamage"/>
             <add order="0x40" stat="rootResist" val="#rootResist"/>
             <add order="0x40" stat="defenceFire" val="#defenceFire"/>
             <add order="0x40" stat="defenceWater" val="#defenceWater"/>
@@ -2009,7 +2009,7 @@
             <add order="0x40" stat="INT" val="4"/>
             <sub order="0x40" stat="MEN" val="2"/>
             <mul order="0x30" stat="mAtk" val="#mAtk"/>
-            <add order="0x30" stat="mAtk" val="#mAtkAdd"/>
+            <add order="0x40" stat="mAtk" val="#mAtkAdd"/>
             <mul order="0x30" stat="mAtkSpd" val="1.15"/>
             <add order="0x40" stat="maxMp" val="#maxMp"/>
             <mul order="0x40" stat="mCritRate" val="#mCritRate"/>
@@ -2043,7 +2043,7 @@
             <add order="0x40" stat="WIT" val="4"/>
             <sub order="0x40" stat="MEN" val="2"/>
             <mul order="0x30" stat="mAtk" val="#mAtk"/>
-            <add order="0x30" stat="mAtk" val="#mAtkAdd"/>
+            <add order="0x40" stat="mAtk" val="#mAtkAdd"/>
             <mul order="0x30" stat="mAtkSpd" val="#mAtkSpd"/>
             <add order="0x40" stat="maxMp" val="#maxMp"/>
             <mul order="0x30" stat="regMp" val="#regMp"/>

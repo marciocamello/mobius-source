@@ -115,7 +115,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1740"/>
 	</etcitem>
-	<etcitem id="14310" name="Sword of Damascus">
+	<etcitem id="14310" name="Damascus Sword">
 		<set name="crystal_count" value="1346"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -171,7 +171,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="930"/>
 	</etcitem>
-	<etcitem id="14315" name="Demon Dagger">
+	<etcitem id="14315" name="Demon's Dagger">
 		<set name="crystal_count" value="1346"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -216,7 +216,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2080"/>
 	</etcitem>
-	<etcitem id="14319" name="Demon Dagger">
+	<etcitem id="14319" name="Demon's Dagger">
 		<set name="crystal_count" value="1346"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -227,7 +227,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="970"/>
 	</etcitem>
-	<etcitem id="14320" name="Guardian Sword">
+	<etcitem id="14320" name="Guardian's Sword">
 		<set name="crystal_count" value="1346"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -341,7 +341,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1550"/>
 	</etcitem>
-	<etcitem id="14330" name="Behemoth's Tuning Fork">
+	<etcitem id="14330" name="Behemoth' Tuning Fork">
 		<set name="crystal_count" value="2157"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -479,7 +479,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1640"/>
 	</etcitem>
-	<etcitem id="14342" name="Necklace of Binding">
+	<etcitem id="14342" name="Necklace of Seal">
 		<set name="crystal_count" value="174"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -501,7 +501,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="150"/>
 	</etcitem>
-	<etcitem id="14344" name="Ring of Binding">
+	<etcitem id="14344" name="Ring of Seal">
 		<set name="crystal_count" value="87"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -512,7 +512,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="150"/>
 	</etcitem>
-	<etcitem id="14345" name="Earring of Black Ore">
+	<etcitem id="14345" name="Black Ore Earring">
 		<set name="crystal_count" value="95"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -523,7 +523,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="150"/>
 	</etcitem>
-	<etcitem id="14346" name="Ring of Black Ore">
+	<etcitem id="14346" name="Black Ore Ring">
 		<set name="crystal_count" value="63"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -534,7 +534,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="150"/>
 	</etcitem>
-	<etcitem id="14347" name="Necklace of Black Ore">
+	<etcitem id="14347" name="Black Ore Necklace">
 		<set name="crystal_count" value="126"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -579,6 +579,7 @@
 		<set name="weight" value="150"/>
 	</etcitem>
 	<etcitem id="14351" name="Gracian Anniversary Coins">
+	<!-- Gracian Anniversary Coins can be used at an Item Merchant in order to receive a reward. Cannot be exchanged, dropped, destroyed nor stored in a private warehouse. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -588,7 +589,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="14352" name="Sculpture of Doubt ">
+	<etcitem id="14352" name="Mysterious Sculpture">
+	<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -596,7 +598,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="14353" name="Sculpture of Doubt">
+	<etcitem id="14353" name="Mysterious Sculpture">
+	<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -604,7 +607,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="14354" name="Sculpture of Doubt">
+	<etcitem id="14354" name="Mysterious Sculpture">
+	<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -612,7 +616,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="14355" name="Sculpture of Doubt">
+	<etcitem id="14355" name="Mysterious Sculpture">
+	<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -620,7 +625,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="14356" name="Sculpture of Doubt">
+	<etcitem id="14356" name="Mysterious Sculpture">
+	<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -628,7 +634,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="14357" name="Sculpture of Doubt">
+	<etcitem id="14357" name="Mysterious Sculpture">
+	<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -636,7 +643,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="14358" name="Sculpture of Doubt">
+	<etcitem id="14358" name="Mysterious Sculpture">
+	<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -644,7 +652,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="14359" name="Sculpture of Doubt">
+	<etcitem id="14359" name="Mysterious Sculpture">
+	<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -652,7 +661,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="14360" name="Sculpture of Doubt">
+	<etcitem id="14360" name="Mysterious Sculpture">
+	<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -660,7 +670,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="14361" name="Blood Stained Cloth">
+	<etcitem id="14361" name="Blood-stained Cloth">
+	<!-- Piece of cloth soaked in the blood of angels and Platinum race that Magister Kaspar asked for. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -669,6 +680,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="14362" name="White Cloth">
+	<!-- Large piece of white cloth given by Magister Kaspar. Stain the cloth with the blood of angels and the Platinum race in the Tower of Insolence. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

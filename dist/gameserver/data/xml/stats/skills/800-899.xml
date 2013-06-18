@@ -411,7 +411,7 @@
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="effectPoint" val="#effectPoint"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="skillType" val="HEAL_PERCENT"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="144">
@@ -434,7 +434,7 @@
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="effectPoint" val="#effectPoint"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="144">
@@ -463,7 +463,7 @@
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="effectPoint" val="#effectPoint"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="144">
@@ -933,7 +933,7 @@
 		<set name="hitTime" val="180000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="target" val="TARGET_ONE"/>
-		<set name="skillType" val="TAKEFLAG"/>
+		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isCommon" val="true"/>
 		<set name="isSkillTimePermanent" val="true"/>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE list SYSTEM "spawn.dtd">
-<list>
-	<spawns name="Hunters_Village">
-		<spawn npcId="33495" x="116345" y="74692" z="-2584" heading="15388" /><!-- Джамис (Торговец Волшебными Красками) -->
-		<spawn npcId="33100" x="116328" y="76905" z="-2728" heading="56899" /><!-- Рада (Глава Делегации Магмельда) -->
-	</spawns>
-</list>

@@ -15,13 +15,11 @@ package lineage2.gameserver.model.instances;
 import java.util.concurrent.ScheduledFuture;
 
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.model.ClonePlayer;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObjectTasks;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
-import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.player.PlayerTemplate;
@@ -204,57 +202,12 @@ public class CloneInstance extends ClonePlayer
 		return true;
 	}
 	
-	/**
-	 * Method onAction.
-	 * @param player Player
-	 * @param shift boolean
-	 */
 	@Override
-	public void onAction(Player player, boolean shift)
+	public void onActionSelect(final Player player, boolean forced)
 	{
-		super.onAction(player, shift);
-		if (shift)
+		if (isTargetable())
 		{
-			if (!player.getPlayerAccess().CanViewChar)
-			{
-				return;
-			}
-			String dialog;
-			dialog = HtmCache.getInstance().getNotNull("scripts/actions/admin.L2SummonInstance.onActionShift.htm", player);
-			dialog = dialog.replaceFirst("%name%", String.valueOf(getPlayer().getName()));
-			dialog = dialog.replaceFirst("%level%", String.valueOf(getLevel()));
-			dialog = dialog.replaceFirst("%class%", String.valueOf(getPlayer().getClass().getSimpleName()));
-			dialog = dialog.replaceFirst("%xyz%", getLoc().x + " " + getLoc().y + " " + getLoc().z);
-			dialog = dialog.replaceFirst("%heading%", String.valueOf(getLoc().h));
-			dialog = dialog.replaceFirst("%owner%", String.valueOf(getPlayer().getName()));
-			dialog = dialog.replaceFirst("%ownerId%", String.valueOf(getPlayer().getObjectId()));
-			dialog = dialog.replaceFirst("%npcId%", String.valueOf(0));
-			dialog = dialog.replaceFirst("%expPenalty%", String.valueOf(0));
-			dialog = dialog.replaceFirst("%maxHp%", String.valueOf(getMaxHp()));
-			dialog = dialog.replaceFirst("%maxMp%", String.valueOf(getMaxMp()));
-			dialog = dialog.replaceFirst("%currHp%", String.valueOf((int) getCurrentHp()));
-			dialog = dialog.replaceFirst("%currMp%", String.valueOf((int) getCurrentMp()));
-			dialog = dialog.replaceFirst("%pDef%", String.valueOf(getPDef(null)));
-			dialog = dialog.replaceFirst("%mDef%", String.valueOf(getMDef(null, null)));
-			dialog = dialog.replaceFirst("%pAtk%", String.valueOf(getPAtk(null)));
-			dialog = dialog.replaceFirst("%mAtk%", String.valueOf(getMAtk(null, null)));
-			dialog = dialog.replaceFirst("%accuracy%", String.valueOf(getAccuracy()));
-			dialog = dialog.replaceFirst("%evasionRate%", String.valueOf(getEvasionRate(null)));
-			dialog = dialog.replaceFirst("%crt%", String.valueOf(getCriticalHit(null, null)));
-			dialog = dialog.replaceFirst("%runSpeed%", String.valueOf(getRunSpeed()));
-			dialog = dialog.replaceFirst("%walkSpeed%", String.valueOf(getWalkSpeed()));
-			dialog = dialog.replaceFirst("%pAtkSpd%", String.valueOf(getPAtkSpd()));
-			dialog = dialog.replaceFirst("%mAtkSpd%", String.valueOf(getMAtkSpd()));
-			dialog = dialog.replaceFirst("%dist%", String.valueOf(0));
-			dialog = dialog.replaceFirst("%STR%", String.valueOf(getSTR()));
-			dialog = dialog.replaceFirst("%DEX%", String.valueOf(getDEX()));
-			dialog = dialog.replaceFirst("%CON%", String.valueOf(getCON()));
-			dialog = dialog.replaceFirst("%INT%", String.valueOf(getINT()));
-			dialog = dialog.replaceFirst("%WIT%", String.valueOf(getWIT()));
-			dialog = dialog.replaceFirst("%MEN%", String.valueOf(getMEN()));
-			NpcHtmlMessage msg = new NpcHtmlMessage(5);
-			msg.setHtml(dialog);
-			player.sendPacket(msg);
+			super.onActionSelect(player, forced);
 		}
 	}
 	

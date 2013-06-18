@@ -13,7 +13,7 @@
 package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.serverpackets.StatusUpdate;
+import lineage2.gameserver.network.serverpackets.StatusUpdate.StatusUpdateField;
 
 /**
  * @author Mobius
@@ -46,6 +46,6 @@ public class RequestItemList extends L2GameClientPacket
 			return;
 		}
 		activeChar.sendItemList(true);
-		activeChar.sendStatusUpdate(false, false, StatusUpdate.CUR_LOAD);
+		activeChar.sendStatusUpdate(false, false, StatusUpdateField.CUR_LOAD);
 	}
 }

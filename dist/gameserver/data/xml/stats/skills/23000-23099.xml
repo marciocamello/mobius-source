@@ -1267,13 +1267,16 @@
 		</for>
 	</skill>
 	<skill id="23066" levels="1" name="Daewoonso Agathion Special Skill - New Year's Gift Ability">
-    <!-- Can receive a New Year's Gift. Cooldown is 1 hours. -->
-		<set name="magicType" val="SPECIAL"/>
-		<set name="icon" val="icon.skill_agathion_special"/>
+		<!--
+			Last modify:	29.07.2009
+			Description: Can receive a New Year's Gift. Reuse Delay 1 hours.
+		-->
 		<set name="reuseDelay" val="3600000"/>
 		<set name="magicLevel" val="85"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="BUFF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 		<cond msgId="2292">
@@ -1284,10 +1287,6 @@
 				<player olympiad="true"/>
 			</not>
 		</cond>
-		<for>
-			<effect count="1" name="Buff" time="300" val="0">
-			</effect>
-		</for>
 	</skill>
 	<skill id="23067" levels="1" name="Agathion Cute Trick - Pomona">
     <!-- You can see the summoned spirit's cute tricks. -->

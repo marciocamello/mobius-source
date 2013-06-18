@@ -264,7 +264,7 @@
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="effectPoint" val="#effectPoint"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="skillType" val="MANAHEAL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<enchant1 levels="30" name="Power">
@@ -295,7 +295,7 @@
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="effectPoint" val="#effectPoint"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="skillType" val="HEAL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<enchant1 levels="30" name="Power">
@@ -388,7 +388,7 @@
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="effectPoint" val="#effectPoint"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<enchant1 levels="30" name="Time">
@@ -425,7 +425,7 @@
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="effectPoint" val="#effectPoint"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<enchant1 levels="30" name="Time">
@@ -462,7 +462,7 @@
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="effectPoint" val="#effectPoint"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<enchant1 levels="30" name="Time">
@@ -499,7 +499,7 @@
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="effectPoint" val="#effectPoint"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<enchant1 levels="30" name="Time">
@@ -536,7 +536,7 @@
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="effectPoint" val="#effectPoint"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<enchant1 levels="30" name="Time">
@@ -573,7 +573,7 @@
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="effectPoint" val="#effectPoint"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<enchant1 levels="30" name="Time">

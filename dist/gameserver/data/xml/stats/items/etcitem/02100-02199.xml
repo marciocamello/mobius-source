@@ -2,6 +2,7 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<etcitem id="2100" name="Paradia Staff Head">
+	<!-- Key material that Dwarves use to make the Paradia Staff. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -11,6 +12,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2101" name="Inferno Staff Head">
+	<!-- Key material that Dwarves use to make the Inferno Staff. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -19,7 +21,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="2102" name="Pa'agrian Hammer Head">
+	<etcitem id="2102" name="Pa'agrio Hammer Head">
+	<!-- Key material that Dwarves use to make the Pa'agrio Hammer. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -29,6 +32,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2103" name="Sage's Staff Head">
+	<!-- Key material that Dwarves use to make the Sage's Staff. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -38,6 +42,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2104" name="Club of Nature Head">
+	<!-- Key material that Dwarves use to make the Club of Nature. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -46,7 +51,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="2105" name="Mace of the Underworld Head">
+	<etcitem id="2105" name="Mace of Underworld Head">
+	<!-- Key material that Dwarves use to make the Mace of Underworld. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -56,6 +62,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2106" name="Grace Dagger Edge">
+	<!-- Key material that Dwarves use to make the Grace Dagger. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -65,6 +72,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2107" name="Dark Screamer Edge">
+	<!-- Key material that Dwarves use to make the Dark Screamer. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -74,6 +82,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2108" name="Fisted Blade Piece">
+	<!-- Key material that Dwarves use to make the Fisted Blade. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -83,6 +92,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2109" name="Akat Longbow Shaft">
+	<!-- Key material that Dwarves use to make the Akat Longbow. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_branch_gold_i00"/>
@@ -92,6 +102,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2110" name="Heathen's Book Page">
+	<!-- Key material that Dwarves use to make the Heathen's Book. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_of_paper_white_i00"/>
@@ -101,6 +112,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2111" name="Hex Doll Fragment">
+	<!-- Key material that Dwarves use to make a Hex Doll. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bark_gold_i00"/>
@@ -109,7 +121,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="2112" name="Pa'agrian Axe Blade">
+	<etcitem id="2112" name="Pa'agrio Axe Blade">
+	<!-- Key material that Dwarves use to make the Pa'agrio Axe. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -119,6 +132,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2113" name="Scorpion Blade">
+	<!-- Key material that Dwarves use to make the Scorpion. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -128,6 +142,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2114" name="Widowmaker Head">
+	<!-- Key material that Dwarves use to make a Widowmaker. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -136,7 +151,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="2115" name="Samurai Longsword Blade">
+	<etcitem id="2115" name="Samurai Long Sword Blade">
+	<!-- Key material that Dwarves use to make the Samurai Long Sword. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -146,6 +162,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2116" name="Deadman's Staff Head">
+	<!-- Key material that Dwarves use to make the Deadman's Staff. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -155,6 +172,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2117" name="Ghoul's Staff Head">
+	<!-- Key material that Dwarves use to make the Ghoul's Staff. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -164,6 +182,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2118" name="Demon's Staff Head">
+	<!-- Key material that Dwarves use to make the Demon's Staff. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -173,6 +192,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2119" name="Crystal Dagger Blade">
+	<!-- Key material that Dwarves use to make the Crystal Dagger. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -182,6 +202,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2120" name="Great Pata Blade">
+	<!-- Key material that Dwarves use to make the Great Pata. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -191,6 +212,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2121" name="Eminence Bow Shaft">
+	<!-- Key material that Dwarves use to make the Eminence Bow. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_branch_gold_i00"/>
@@ -200,6 +222,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2122" name="Orcish Poleaxe Blade">
+	<!-- Key material that Dwarves use to make the Orcish Poleaxe. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -209,6 +232,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2123" name="Candle of Wisdom Model">
+	<!-- Key material that Dwarves use to make the Candle of Wisdom. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mold_i00"/>
@@ -218,6 +242,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2124" name="Blessed Branch Splinter">
+	<!-- Key material that Dwarves use to make the Blessed Branch. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_branch_blue_i00"/>
@@ -227,6 +252,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2125" name="Phoenix Feather Piece">
+	<!-- Key material that Dwarves use to make the Phoenix Feather. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_feather_gold_i00"/>
@@ -236,6 +262,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2126" name="Cerberus Eye Fragment">
+	<!-- Key material that Dwarves use to make the Cerberus eye. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_eyeball_i00"/>
@@ -245,6 +272,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2127" name="Scroll of Destruction Page">
+	<!-- Key material that Dwarves use to make the Scroll of Destruction. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_scroll_gray_i00"/>
@@ -253,7 +281,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="2128" name="Claws of Black Dragon Piece">
+	<etcitem id="2128" name="Black Dragon Claw Piece">
+	<!-- Key material that Dwarves use to make the Black Dragon Claw. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_claw_i00"/>
@@ -263,6 +292,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="2129" name="Three Eyed Crow's Feather Piece">
+	<!-- Key material that Dwarves use to make the Three Eyed Crow's Feather. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_feather_black_i00"/>
@@ -271,7 +301,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="2130" name="Gemstone D">
+	<etcitem id="2130" name="Gemstone (D-grade)">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_crystal_ball_silver_i00"/>
@@ -280,7 +310,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="2131" name="Gemstone C">
+	<etcitem id="2131" name="Gemstone (C-grade)">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_crystal_ball_green_i00"/>
@@ -289,7 +319,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="2132" name="Gemstone B">
+	<etcitem id="2132" name="Gemstone (B-grade)">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bead_green_i00"/>
@@ -298,7 +328,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="2133" name="Gemstone A">
+	<etcitem id="2133" name="Gemstone (A-grade)">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bead_red_i00"/>
@@ -307,7 +337,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="2134" name="Gemstone S">
+	<etcitem id="2134" name="Gemstone (S-grade)">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bead_silver_i00"/>
@@ -317,6 +347,7 @@
 		<set name="weight" value="2"/>
 	</etcitem>
 	<etcitem id="2135" name="Recipe: Braided Hemp">
+	<!-- For Dwarves only. Recipe for a Braided Hemp. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -327,6 +358,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2136" name="Recipe: Cokes">
+	<!-- For Dwarves only. Recipe for Cokes. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -337,6 +369,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2137" name="Recipe: Steel">
+	<!-- For Dwarves only. Recipe for Steel. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -346,7 +379,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2138" name="Recipe: Coarse Bone Powder (100%)">
+	<etcitem id="2138" name="Recipe: Coarse Bone Powder">
+	<!-- For Dwarves only. Recipe for Coarse Bone Powder. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -357,6 +391,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2139" name="Recipe: Steel Mold">
+	<!-- For Dwarves only. Recipe for a Steel Mold. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -366,7 +401,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2140" name="Recipe: High Grade Suede">
+	<etcitem id="2140" name="Recipe: High-grade Suede">
+	<!-- For Dwarves only. Recipe for High-grade Suede. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -377,6 +413,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2141" name="Recipe: Silver Mold">
+	<!-- For Dwarves only. Recipe for a Silver Mold. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -387,6 +424,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2142" name="Recipe: Varnish of Purity">
+	<!-- For Dwarves only. Recipe for Varnish of Purity. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -397,6 +435,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2143" name="Recipe: Synthetic Cokes">
+	<!-- For Dwarves only. Recipe for Synthetic Cokes. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -407,6 +446,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2144" name="Recipe: Compound Braid">
+	<!-- For Dwarves only. Recipe for a Compound Braid. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -417,6 +457,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2145" name="Recipe: Mithril Alloy">
+	<!-- For Dwarves only. Recipe for Mithril Alloy. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -427,6 +468,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2146" name="Recipe: Artisan's frame">
+	<!-- For Dwarves only. Recipe for an Artisan's frame. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -436,7 +478,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2147" name="Recipe: Blacksmith's frame">
+	<etcitem id="2147" name="Recipe: Blacksmith' frame">
+	<!-- For Dwarves only. Recipe for a Blacksmith' frame. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -447,6 +490,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2148" name="Recipe: Crafted Leather">
+	<!-- For Dwarves only. Recipe for Crafted Leather. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -457,6 +501,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2149" name="Recipe: Metallic Fiber">
+	<!-- For Dwarves only. Recipe for a Metallic Fiber. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -467,6 +512,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2150" name="Recipe: Blue Diamond Necklace">
+	<!-- For Dwarves only. Recipe for a Blue Diamond Necklace. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -477,6 +523,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2151" name="Recipe: Necklace of Devotion">
+	<!-- For Dwarves only. Recipe for a Necklace of Devotion. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -486,7 +533,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2152" name="Recipe: Enchanted Necklace">
+	<etcitem id="2152" name="Recipe: Necklace of Magic">
+	<!-- For Dwarves only. Recipe for an Necklace of Magic. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -496,7 +544,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2153" name="Recipe: Tiger's Eye Earring">
+	<etcitem id="2153" name="Recipe: Tiger's Eye">
+	<!-- For Dwarves only. Recipe for a Tiger's Eye. Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -507,6 +556,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2154" name="Recipe: Elven Earring">
+	<!-- For Dwarves only. Recipe for Elven Earring. Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -517,6 +567,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2155" name="Recipe: Elven Ring">
+	<!-- For Dwarves only. Recipe for an Elven Ring. Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -527,6 +578,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2156" name="Recipe: Elven Necklace">
+	<!-- For Dwarves only. Recipe for an Elven Necklace. Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -536,7 +588,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2157" name="Recipe: Omen Beast's Eye Earring">
+	<etcitem id="2157" name="Recipe: Onyx Beast's Eye Earring">
+	<!-- For Dwarves only. Recipe for an Onyx Beast's Eye Earring. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -547,6 +600,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2158" name="Recipe: Mithril Ring">
+	<!-- For Dwarves only. Recipe for a Mithril Ring. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -556,7 +610,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2159" name="Recipe: Necklace of Darkness">
+	<etcitem id="2159" name="Recipe: Dark Necklace">
+	<!-- For Dwarves only. Recipe for a Dark Necklace. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -567,6 +622,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2160" name="Recipe: Moonstone Earring">
+	<!-- For Dwarves only. Recipe for Moonstone Earring. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -577,6 +633,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2161" name="Recipe: Aquastone Ring">
+	<!-- For Dwarves only. Recipe for an Aquastone Ring. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -587,6 +644,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2162" name="Recipe: Aquastone Necklace">
+	<!-- For Dwarves only. Recipe for an Aquastone Necklace. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -597,6 +655,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2163" name="Recipe: Earring of Protection">
+	<!-- For Dwarves only. Recipe for Earring of Protection. Requires Create Item - Skill Level 5. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -607,6 +666,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2164" name="Recipe: Ring of Protection">
+	<!-- For Dwarves only. Recipe for a Ring of Protection. Requires Create Item - Skill Level 5. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -617,6 +677,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2165" name="Recipe: Necklace of Protection">
+	<!-- For Dwarves only. Recipe for a Necklace of Protection. Requires Create Item - Skill Level 5. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -626,7 +687,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2166" name="Recipe: Earrings of Binding (100%)">
+	<etcitem id="2166" name="Recipe: Earring of Seal">
+	<!-- For Dwarves only. Recipe for Earring of Seal. Requires Create Item - Skill Level 5. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -637,6 +699,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2167" name="Recipe: Ring of Ages">
+	<!-- For Dwarves only. Recipe for making a Ring of Ages. Requires Create Item - Skill Level 5. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -647,6 +710,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2168" name="Recipe: Necklace of Mermaid">
+	<!-- For Dwarves only. Recipe for a Necklace of Mermaid. Requires Create Item - Skill Level 5. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -656,7 +720,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2169" name="Recipe: Necklace of Binding">
+	<etcitem id="2169" name="Recipe: Necklace of Seal">
+	<!-- For Dwarves only. Recipe for a Necklace of Seal. Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -667,6 +732,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2170" name="Recipe: Nassen's Earring">
+	<!-- For Dwarves only. Recipe for Nassen's earrings. Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -677,6 +743,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2171" name="Recipe: Sage's Ring">
+	<!-- For Dwarves only. Recipe for a Sage's Ring. Requires Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_red_i00"/>
@@ -687,6 +754,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2172" name="Recipe: Sage's Necklace">
+	<!-- For Dwarves only. Recipe for a Sage's Necklace. Requires Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_red_i00"/>
@@ -697,6 +765,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2173" name="Recipe: Hard Leather Shirt">
+	<!-- For Dwarves only. Recipe for a Hard Leather Shirt. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -707,6 +776,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2174" name="Recipe: Hard Leather Gaiters">
+	<!-- For Dwarves only. Recipe for a Hard Leather Gaiters. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -717,6 +787,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2175" name="Recipe: Boots">
+	<!-- For Dwarves only. Recipe for Boots. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -727,6 +798,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2176" name="Recipe: Leather Boots">
+	<!-- For Dwarves only. Recipe for Leather Boots. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -737,6 +809,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2177" name="Recipe: Bone Helmet">
+	<!-- For Dwarves only. Recipe for a Bone Helmet. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -747,6 +820,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2178" name="Recipe: Dark Stockings">
+	<!-- For Dwarves only. Recipe for Dark Stockings. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -757,6 +831,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2179" name="Recipe: Crafted Leather Gloves">
+	<!-- For Dwarves only. Recipe for Crafted Leather Gloves. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -767,6 +842,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2180" name="Recipe: Scale Mail">
+	<!-- For Dwarves only. Recipe for a Scale Mail. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -777,6 +853,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2181" name="Recipe: White Tunic">
+	<!-- For Dwarves only. Recipe for a White Tunic. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -787,6 +864,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2182" name="Recipe: Scale Gaiters">
+	<!-- For Dwarves only. Recipe for Scale Gaiters. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -797,6 +875,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2183" name="Recipe: Mithril Banded Mail">
+	<!-- For Dwarves only. Recipe for a Mithril Banded Mail. Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -807,6 +886,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2184" name="Recipe: Mithril Banded Gaiters">
+	<!-- For Dwarves only. Recipe for Mithril Banded Gaiters. Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -817,6 +897,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2185" name="Recipe: Iron Boots">
+	<!-- For Dwarves only. Recipe for Iron Boots. Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -826,7 +907,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2186" name="Recipe: Brigandine Tunic">
+	<etcitem id="2186" name="Recipe: Brigandine">
+	<!-- For Dwarves only. Recipe for Brigandine. Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -837,6 +919,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2187" name="Recipe: Manticore Skin Shirt">
+	<!-- For Dwarves only. Recipe for a Manticore Leather Shirt. Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -847,6 +930,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2188" name="Recipe: Manticore Skin Gaiters">
+	<!-- For Dwarves only. Recipe for Manticore Leather Gaiters. Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -857,6 +941,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2189" name="Recipe: Mithril Tunic">
+	<!-- For Dwarves only. Recipe for a  Mithril Tunic. Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -867,6 +952,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2190" name="Recipe: Mithril Stockings">
+	<!-- For Dwarves only. Recipe for Mithril Stockings. Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -877,6 +963,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2191" name="Recipe: RIP Gauntlets">
+	<!-- For Dwarves only. Recipe for RIP Gauntlets. Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -887,6 +974,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2192" name="Recipe: Kite Shield">
+	<!-- For Dwarves only. Recipe for a Kite Shield. Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -896,7 +984,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2193" name="Recipe: Boots of Power">
+	<etcitem id="2193" name="Recipe: Boots of Strength">
+	<!-- For Dwarves only. Recipe for Boots of Strength. Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -907,6 +996,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2194" name="Recipe: Mithril Gloves">
+	<!-- For Dwarves only. Recipe for Mithril Gloves. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -917,6 +1007,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2195" name="Recipe: Half Plate Armor">
+	<!-- For Dwarves only. Recipe for Half Plate. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -927,6 +1018,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2196" name="Recipe: Plate Gaiters">
+	<!-- For Dwarves only. Recipe for Plate Gaiters. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -937,6 +1029,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2197" name="Recipe: Salamander Skin Mail">
+	<!-- For Dwarves only. Recipe for a Salamander Skin Mail. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -946,7 +1039,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2198" name="Recipe: Sage's Rag">
+	<etcitem id="2198" name="Recipe: Sage's Rags">
+	<!-- For Dwarves only. Recipe for a Sage's Rags. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -957,6 +1051,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="2199" name="Recipe: Karmian Stockings">
+	<!-- For Dwarves only. Recipe for Karmian Stockings. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>

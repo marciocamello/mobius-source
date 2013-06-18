@@ -2,6 +2,7 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<etcitem id="15404" name="6th Anniversary Party Gift Box (2003)" add_name="Event">
+	<!-- Contains the 6th Anniversary Party Cube, a 30-day limited time item. It automatically disappears at the end of the 6th anniversary cube event. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -18,6 +19,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15405" name="6th Anniversary Party Gift Box (2004)" add_name="Event">
+	<!-- Contains the 6th Anniversary Party Cube, a 25-day limited time item. It automatically disappears at the end of the 6th anniversary cube event. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -34,6 +36,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15406" name="6th Anniversary Party Gift Box (2005)" add_name="Event">
+	<!-- Contains the 6th Anniversary Party Cube, a 20-day limited time item. It automatically disappears at the end of the 6th anniversary cube event. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -50,6 +53,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15407" name="6th Anniversary Party Gift Box (2006)" add_name="Event">
+	<!-- Contains the 6th Anniversary Party Cube, a 15-day limited time item. It automatically disappears at the end of the 6th anniversary cube event. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -66,6 +70,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15408" name="6th Anniversary Party Gift Box (2007)" add_name="Event">
+	<!-- Contains the 6th Anniversary Party Cube, a 10-day limited time item. It automatically disappears at the end of the 6th anniversary cube event. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -82,6 +87,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15409" name="6th Anniversary Party Gift Box (2008)" add_name="Event">
+	<!-- Contains the 6th Anniversary Party Cube, a 5-day limited time item. It automatically disappears at the end of the 6th anniversary cube event. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -98,6 +104,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15410" name="6th Anniversary Party Gift Box (2009)" add_name="Event">
+	<!-- Contains the 6th Anniversary Party Cube, a 3-day limited time item. It automatically disappears at the end of the 6th anniversary cube event. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -114,6 +121,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15411" name="6th Anniversary Party Gift Set (2003)" add_name="Event">
+	<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 30-day limited time item. It automatically disappears at the end of the 6th anniversary cube event. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -130,6 +138,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15412" name="6th Anniversary Party Gift Set (2004)" add_name="Event">
+	<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 25-day limited time item. It automatically disappears at the end of the 6th anniversary cube event. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -146,6 +155,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15413" name="6th Anniversary Party Gift Set (2005)" add_name="Event">
+	<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 20-day limited time item. It automatically disappears at the end of the 6th anniversary cube event. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -162,6 +172,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15414" name="6th Anniversary Party Gift Set (2006)" add_name="Event">
+	<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 15-day limited time item. It automatically disappears at the end of the 6th anniversary cube event. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -178,6 +189,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15415" name="6th Anniversary Party Gift Set (2007)" add_name="Event">
+	<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 10-day limited time item. It automatically disappears at the end of the 6th anniversary cube event. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -194,6 +206,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15416" name="6th Anniversary Party Gift Set (2008)" add_name="Event">
+	<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 5-day limited time item. It automatically disappears at the end of the 6th anniversary cube event. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -210,6 +223,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15417" name="6th Anniversary Party Gift Set (2009)" add_name="Event">
+	<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 3-day limited time item. It automatically disappears at the end of the 6th anniversary cube event. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -225,7 +239,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="15418" name="Sixth Anniversary Party Cube Manage - Event" add_name="30 day limited period">
+	<etcitem id="15418" name="6th Anniversary Party Cube (Event)" add_name="30-day">
+	<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. Cannot be exchanged, dropped, or destroyed. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -237,7 +252,8 @@
 			<skill id="9042" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="15419" name="Sixth Anniversary Party Cube Manage - Event" add_name="25 day limited period">
+	<etcitem id="15419" name="6th Anniversary Party Cube (Event)" add_name="(25-day)">
+	<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. Cannot be exchanged, dropped, or destroyed. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -249,7 +265,8 @@
 			<skill id="9043" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="15420" name="Sixth Anniversary Party Cube Manage - Event" add_name="20 day limited period">
+	<etcitem id="15420" name="6th Anniversary Party Cube (Event)" add_name="(20-day)">
+	<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. Cannot be exchanged, dropped, or destroyed. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -261,7 +278,8 @@
 			<skill id="9044" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="15421" name="Sixth Anniversary Party Cube Manage - Event" add_name="15 day limited period">
+	<etcitem id="15421" name="6th Anniversary Party Cube (Event)" add_name="(15-day)">
+	<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. Cannot be exchanged, dropped, or destroyed. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -273,7 +291,8 @@
 			<skill id="9045" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="15422" name="Sixth Anniversary Party Cube Manage - Event" add_name="10 day limited period">
+	<etcitem id="15422" name="6th Anniversary Party Cube (Event)" add_name="10-day">
+	<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. Cannot be exchanged, dropped, or destroyed. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -285,7 +304,8 @@
 			<skill id="9046" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="15423" name="Sixth Anniversary Party Cube Manage - Event" add_name="5 day limited period">
+	<etcitem id="15423" name="6th Anniversary Party Cube (Event)" add_name="(5-day)">
+	<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. Cannot be exchanged, dropped, or destroyed. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -297,7 +317,8 @@
 			<skill id="9047" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="15424" name="Sixth Anniversary Party Cube Manage - Event" add_name="3 day limited period">
+	<etcitem id="15424" name="6th Anniversary Party Cube (Event)" add_name="(3-day)">
+	<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. Cannot be exchanged, dropped, or destroyed. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -309,7 +330,8 @@
 			<skill id="9048" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="15425" name="Hero's Treasure Box" add_name="Event">
+	<etcitem id="15425" name="Hero's Treasure Chest" add_name="Event">
+	<!-- Contains an armor set 30-day Pack, a Minion Coupon, and a Hero's Escape Point item. Cannot be exchanged, dropped, or destroyed. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -318,7 +340,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15426" name="Hero's Summon Point - Event" add_name="Event">
+	<etcitem id="15426" name="Hero's Escape Point" add_name="Event">
+	<!-- When Double-clicked, 10000 Player Commendation Points can be acquired. Cooldown 7 days. Cannot be exchanged, dropped, or destroyed. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -329,7 +352,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="15427" name="Sixth Anniversary Party Cake - Event" add_name="Event">
+	<etcitem id="15427" name="6th Anniversary Party Cake" add_name="Event">
+	<!-- For 1 hour, Vitality is recovered when acquiring XP. Cooldown is 12 hours. Cannot be exchanged, dropped, or destroyed. Vitality item with limited usage. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -339,7 +363,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15430" name="Event - Halloween Candy" add_name="Event">
+	<etcitem id="15430" name="Event - Revita-Pop" add_name="Event">
+	<!-- Sweet Revita-Pop. You can give it to Skooldie to exchange for the Halloween Toy Box. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -354,7 +379,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="15431" name="Event - Uldie Summon Scroll">
+	<etcitem id="15431" name="Event - Scroll: Summon Uldie">
+	<!-- When used, summons the oldest girl Uldie among the Three Siblings, and can play Jack's game. You cannot summon Uldie if a pet is summoned or if the Halloween mask isn't equipped. You cannot play Jack's game is you are currently transformed or your stance is in a switched state! -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -370,7 +396,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="15432" name="Event - Belldandy Summon Scroll">
+	<etcitem id="15432" name="Event - Scroll: Summon Belldandy">
+	<!-- When used, summons the middle child Belldandy among the Three Siblings, and can play Jack's game. You cannot summon Belldandy if a pet is summoned or if the Halloween mask isn't equipped. You cannot play Jack's game is you are currently transformed or your stance is in a switched state! -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -386,7 +413,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="15433" name="Event - Skooldie Summon Scroll">
+	<etcitem id="15433" name="Event - Scroll: Summon Skooldie">
+	<!-- When used, summons the youngest child Skooldie among the Three Siblings, and can play Jack's game. You cannot summon Skooldie if a pet is summoned or if the Halloween mask isn't equipped. You cannot play Jack's game is you are currently transformed or your stance is in a switched state! Trade Cannot be dropped or destroyed. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -402,7 +430,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="15434" name="Halloween Toy Chest">
+	<etcitem id="15434" name="Halloween Toy Box">
+	<!-- Gives a chance to acquire one of Halloween masks. Cannot be exchange, dropped, or destroyed. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -421,7 +450,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="15435" name="Shiny Halloween Toy Chest">
+	<etcitem id="15435" name="Shiny Halloween Toy Box">
+	<!-- Gives a chance to acquire one of Shiny Halloween masks. Cannot be exchanged, dropped, or destroyed. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -440,7 +470,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="15436" name="Halloween Transformation Stick" add_name="7 day limited period">
+	<etcitem id="15436" name="Halloween Transformation Stick" add_name="(7-day)">
+	<!-- You can transform to Halloween Pumpkin. 7-day Limited Period accessory. Cannot be exchanged, dropped, or destroyed. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -449,7 +480,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
 	</etcitem>
-	<etcitem id="15437" name="Transformation Scroll Box">
+	<etcitem id="15437" name="Transformation Scroll Pack">
+	<!-- Gives a chance to acquire one of the following transformation scrolls: Onyx Beast, Doom Wraith, and Grail Apostle. Cannot be exchanged, dropped, or destroyed. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -464,7 +496,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="15438" name="10 minute Energy Maintaining Potion">
+	<etcitem id="15438" name="Vitality Maintaining Potion (10-minute)">
+	<!-- Vitality is maintained for 10 min. Cooldown is 30 min. Cannot be exchanged, dropped, or destroyed. Vitality item with limited usage. Can be shared between characters on the same account through the Dimensional Merchant. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -477,7 +510,8 @@
 			<skill id="9068" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="15439" name="10,000 SP scroll">
+	<etcitem id="15439" name="Scroll: 100,000 SP">
+	<!-- Scroll that replenishes 100,000 SP. Does not increase SP when used in a chaotic state. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sp_scroll3_i00"/>
@@ -493,7 +527,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="15440" name="Vitality Maintenance Potion - 30 minutes">
+	<etcitem id="15440" name="Vitality Maintaining Potion (30-minute)">
+	<!-- Vitality is maintained for 30 min. Cooldown is 60 min. Cannot be exchanged, dropped, or destroyed. Vitality item with limited usage. Can be shared between characters on the same account through the Dimensional Merchant. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -506,7 +541,8 @@
 			<skill id="9068" level="2"/>
 		</skills>
 	</etcitem>
-	<etcitem id="15454" name="Shiny Planet X235 Alien's Mask Pack" add_name="Event">
+	<etcitem id="15454" name="Alien Mask Pack" add_name="Event">
+	<!-- Contains an Alien Mask. Cannot be exchanged, dropped, or sold in a private store. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -517,7 +553,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15455" name="Shiny Super Strong Giant's Mask Pack" add_name="Event">
+	<etcitem id="15455" name="Reanimated Corpse Mask Pack" add_name="Event">
+	<!-- Contains a Reanimated Corpse Mask. Cannot be exchanged, dropped, or sold in a private store. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -528,7 +565,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15456" name="Shiny Silent Scream's Mask Pack" add_name="Event">
+	<etcitem id="15456" name="Shriek Mask Pack" add_name="Event">
+	<!-- Contains a Shriek Mask. Cannot be exchanged, dropped, or sold in a private store. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -539,7 +577,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15457" name="Shiny Wrathful Spirit's Mask Pack" add_name="Event">
+	<etcitem id="15457" name="Red Devil Mask Pack" add_name="Event">
+	<!-- Contains a Red Devil Mask. Cannot be exchanged, dropped, or sold in a private store. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -550,7 +589,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15458" name="Shiny Unrotten Corpse's Mask Pack" add_name="Event">
+	<etcitem id="15458" name="Mummy Mask Pack" add_name="Event">
+	<!-- Contains a Mummy Mask. Cannot be exchanged, dropped, or sold in a private store. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -562,6 +602,7 @@
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="15459" name="Halloween Nectar Pumpkin Pack" add_name="Event">
+	<!-- Halloween Nectar Pumpkin Pack. Contains 1 Halloween nectar pumpkin. Cannot be exchanged, dropped, or sold in a private store. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -573,6 +614,7 @@
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="15460" name="Halloween King Pumpkin Pack" add_name="Event">
+	<!-- Halloween King Pumpkin Pack. Contains 1 Halloween king pumpkin. Cannot be exchanged, dropped, or sold in a private store. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -584,6 +626,7 @@
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="15461" name="Halloween Nectar Pumpkin" add_name="Event">
+	<!-- Halloween Nectar Pumpkin. With a certain chance, can obtain a Vitality replenishing drink or a feather of blessing and 1 small Halloween pumpkin. Can be exchanged. Cannot be dropped, sold in a private store, or destroyed. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -602,11 +645,12 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="15462" name="Halloween King Pumpkin" add_name="Event">
+	<!-- Halloween King Pumpkin. Contains 6 Halloween nectar pumpkins and a Golden Jack O'Lantern Mask (7 day limited). Can be exchanged. Cannot be dropped, sold in a private store, or destroyed. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
-		<set name="icon" value="icon.event_halloween_king_pumpkin_i00"/>
+		<set name="icon" value="icon.event_halloween_king_pumpkini00"/>
 		<set name="stackable" value="true"/>
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
@@ -617,6 +661,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15463" name="Small Halloween Pumpkin" add_name="Event">
+	<!-- Small Halloween Pumpkin. Double-click and you can obtain 1 bonus item with a certain chance. Cannot be exchanged, dropped, sold in a private store, or destroyed. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -635,7 +680,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="15465" name="Halloween Nectar Pumpkin Pack - event" add_name="Event">
+	<etcitem id="15465" name="Halloween Nectar Pumpkin Pack (Event)" add_name="Event">
+	<!-- Halloween Nectar Pumpkin Pack. Contains 1 Halloween nectar pumpkin. Cannot be exchanged, dropped, or sold in a private store. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -646,7 +692,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15466" name="Halloween King Pumpkin Pack - event" add_name="Event">
+	<etcitem id="15466" name="Halloween King Pumpkin Pack (Event)" add_name="Event">
+	<!-- Halloween King Pumpkin Pack. Contains 1 Halloween king pumpkin. Cannot be exchanged, dropped, or sold in a private store. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -657,7 +704,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15467" name="Halloween Nectar Pumpkin - event" add_name="Event">
+	<etcitem id="15467" name="Halloween Nectar Pumpkin (Event)" add_name="Event">
+	<!-- Halloween Nectar Pumpkin. With a certain chance, can obtain a Vitality replenishing drink or a feather of blessing and 1 small Halloween pumpkin. Can be exchanged. Cannot be dropped, sold in a private store, or destroyed. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -675,12 +723,13 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="15468" name="Halloween King Pumpkin - event" add_name="Event">
+	<etcitem id="15468" name="Halloween King Pumpkin (Event)" add_name="Event">
+	<!-- Halloween King Pumpkin. Contains 6 Halloween nectar pumpkins and a Golden Jack O'Lantern Mask (7 day limited). Can be exchanged. Cannot be dropped, sold in a private store, or destroyed. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
-		<set name="icon" value="icon.event_halloween_king_pumpkin_i00"/>
+		<set name="icon" value="icon.event_halloween_king_pumpkini00"/>
 		<set name="stackable" value="true"/>
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
@@ -691,6 +740,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15469" name="Frozen Core">
+	<!-- Magic stone that temporarily neutralizes Freya's powerful magic -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="reuse_delay" value="1200000"/>
@@ -709,6 +759,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15470" name="Black Frozen Core">
+	<!-- Magic stone that temporarily neutralizes Freya's powerful magic -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -740,7 +791,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="15472" name="Sealed Mystery Sword">
+	<etcitem id="15472" name="Sealed Divine Sword">
+	<!-- Sacred sword that can neutralize Freya's power. Cannot use it directly due to some unknown M. Atk. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -753,6 +805,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15474" name="Golden Spice">
+	<!-- Feed used to tame baby animals on the Beast Farm. Using this feed will allow the monster to drop Adena and/or items, but will give less XP -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -772,6 +825,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="15475" name="Crystal Spice">
+	<!-- Feed used to tame baby animals on the Beast Farm. This feed will cause the monster to give more XP, but no Adena or items. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -791,6 +845,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="15476" name="Blessed Golden Spice">
+	<!-- Better quality feed that has a chance to tame animals on the Beast Farm with just one application. -->
 		<set name="price" value="200"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -810,6 +865,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="15477" name="Blessed Crystal Spice">
+	<!-- Better quality feed that has a chance to tame animals on the Beast Farm with just one application. -->
 		<set name="price" value="200"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -828,7 +884,8 @@
 		</cond>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="15478" name="Golden Spice - S grade">
+	<etcitem id="15478" name="Golden Spice (S-grade)">
+	<!-- Better quality feed that has a chance to turn Beast Farm babies into a fully grown pets with just one application. Using this feed will allow the monster to drop Adena and/or items, but will give less XP -->
 		<set name="price" value="200"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -847,7 +904,8 @@
 		</cond>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="15479" name="Crystal Spice - S grade">
+	<etcitem id="15479" name="Crystal Spice (S-grade)">
+	<!-- Better quality feed that has a chance to turn Beast Farm babies into a fully grown pets with just one application. This feed causes the monster to give more XP, but no Adena or items. -->
 		<set name="price" value="200"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -867,6 +925,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="15480" name="Old Golden Spice">
+	<!-- Old and unusable Beast Farm Feed -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -880,6 +939,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15481" name="Old Crystal Spice">
+	<!-- Old and unusable Beast Farm Feed -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -893,6 +953,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15482" name="Golden Spice Crate">
+	<!-- This box hold up to 50 Golden Spices. When converted, there is also a chance that Special Feed will be received. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -911,7 +972,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="15483" name="Crystal Spice Crate">
+	<etcitem id="15483" name="Crystal Spice Compressed Pack">
+	<!-- Small pack with a compressed Crystal Spice. When you use it, it changes into a 50 Crystal Spices. Special Feed may also come out. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -931,6 +993,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="15485" name="Torch">
+	<!-- Can be used to light a fire. Cannot be exchanged, dropped, or sold in a private store. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -945,7 +1008,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="15486" name="Spirit Stone Fragment ">
+	<etcitem id="15486" name="Soul Stone Fragment">
+	<!-- Energy from the Seed of Annihilation resides within these Soul Stone Fragments. Can be used at Special Product Broker Kirklan. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -962,6 +1026,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15487" name="Maguen Plasma Collector">
+	<!-- This device is used to collect plasma from the Wild Maguen that inhabit the Seed of Annihilation. Under the right circumstances, plasma collection allows you to obtain a pet Maguen. -->
 		<set name="reuse_delay" value="5"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -980,6 +1045,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15488" name="Maguen Pet Collar">
+	<!-- Necklace that summons a Maguen. The summoned Maguen can eat wolf-type feed, and Takes a part of the XP gained by the Pet master. No exchange, drop, sale, or mail available. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -995,6 +1061,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15489" name="Elite Maguen Pet Collar">
+	<!-- Necklace that summons an Elite Maguen. The summoned Maguen can eat wolf-type feed, and Takes a part of the XP gained by the Pet master. No exchange, drop, sale, or mail available. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1010,6 +1077,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15490" name="Maguen Collection Box">
+	<!-- Its contents are a mystery. The only way to find out what is inside is to open it. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1026,6 +1094,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15491" name="Elite Maguen Collection Box">
+	<!-- Its contents are a mystery. The only way to find out what is inside is to open it. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1042,6 +1111,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15492" name="Sel Mahum Salmon Porridge">
+	<!-- u,Sel Mahum salmon porridge. Smells better than expected… but not by much. -->
 		<set name="reuse_delay" value="300000"/>
 		<set name="delay_share_group" value="6"/>
 		<set name="price" value="1"/>
@@ -1063,6 +1133,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="15493" name="Fantasy Mushroom Pouch">
+	<!-- Pouch containing the spores of Fantasy Mushrooms, which grow in the Plains of the Lizardmen. Detailed information can be obtained from Investigator Sally on the Plains of the Lizardmen. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1079,6 +1150,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15494" name="Sticky Mushroom Pouch">
+	<!-- Pouch containing the spores of Sticky Mushrooms, which grow in the Plains of the Lizardmen. Detailed information can be obtained from Investigator Sally on the Plains of the Lizardmen. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1094,7 +1166,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="15495" name="Energy Plant Leaf">
+	<etcitem id="15495" name="Vitality Plant Leaf">
+	<!-- Leaf of the Vitality Plant, which grows in the Plains of the Lizardmen. Detailed information can be obtained from Investigator Sally on the Plains of the Lizardmen. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1111,6 +1184,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15496" name="Seer Ugoros Pass">
+	<!-- Document from Investigator Johnny in the Plains of the Lizardmen that verifies you possess the required skills. It indicates that you have the right to go and see Tanta Lizardman Seer Ugoros. Show it to Gatekeeper Batracos near the Plains of the Lizardmen. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1125,7 +1199,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="15497" name="Highest Grade Lizard Scale">
+	<etcitem id="15497" name="High-grade Lizard Scale">
+	<!-- The highest-quality Lizardman Scale without any blemishes obtained after defeating Tanta Lizardmen Seer Ugoros. Take it to Researcher Ankumi on the Plains of the Lizardmen. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1140,7 +1215,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="15498" name="Middle Grade Lizard Scale">
+	<etcitem id="15498" name="High-quality Lizardmen Scale">
+	<!-- The medium-quality Lizardman Scale obtained after defeating Tanta Lizardmen Seer Ugoros. Take it to Researcher Ankumi on the Plains of the Lizardmen. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1156,6 +1232,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15499" name="Vial of Tanta Blood">
+	<!-- Vial containing the blood of Tanta Lizardmen. Take it to Investigator Laki on the Plains of the Lizardmen. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

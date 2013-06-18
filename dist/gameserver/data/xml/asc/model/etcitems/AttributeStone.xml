@@ -69,5 +69,18 @@
 	<item id="33490" min_arm="60" max_arm="120" min_weap="150" max_weap="300" inc_arm="60" inc_weap="150" inc_weap_arm="0" chance="20" element="WIND" />
 	<item id="33491" min_arm="60" max_arm="120" min_weap="150" max_weap="300" inc_arm="60" inc_weap="150" inc_weap_arm="0" chance="20" element="UNHOLY" />
 	<item id="33492" min_arm="60" max_arm="120" min_weap="150" max_weap="300" inc_arm="60" inc_weap="150" inc_weap_arm="0" chance="20" element="HOLY" />
+
+	<item id="33863" min_arm="0" max_arm="60" min_weap="0" max_weap="150" inc_arm="60" inc_weap="150" inc_weap_arm="0" chance="30" element="FIRE" />
+	<item id="33864" min_arm="0" max_arm="60" min_weap="0" max_weap="150" inc_arm="60" inc_weap="150" inc_weap_arm="0" chance="30" element="WATER" />
+	<item id="33865" min_arm="0" max_arm="60" min_weap="0" max_weap="150" inc_arm="60" inc_weap="150" inc_weap_arm="0" chance="30" element="EARTH" />
+	<item id="33866" min_arm="0" max_arm="60" min_weap="0" max_weap="150" inc_arm="60" inc_weap="150" inc_weap_arm="0" chance="30" element="WIND" />
+	<item id="33867" min_arm="0" max_arm="60" min_weap="0" max_weap="150" inc_arm="60" inc_weap="150" inc_weap_arm="0" chance="30" element="HOLY" />
+	<item id="33868" min_arm="0" max_arm="60" min_weap="0" max_weap="150" inc_arm="60" inc_weap="150" inc_weap_arm="0" chance="30" element="UNHOLY" />
+	<item id="33869" min_arm="60" max_arm="120" min_weap="150" max_weap="300" inc_arm="60" inc_weap="150" inc_weap_arm="0" chance="20" element="FIRE" />
+	<item id="33870" min_arm="60" max_arm="120" min_weap="150" max_weap="300" inc_arm="60" inc_weap="150" inc_weap_arm="0" chance="20" element="WATER" />
+	<item id="33871" min_arm="60" max_arm="120" min_weap="150" max_weap="300" inc_arm="60" inc_weap="150" inc_weap_arm="0" chance="20" element="EARTH" />
+	<item id="33872" min_arm="60" max_arm="120" min_weap="150" max_weap="300" inc_arm="60" inc_weap="150" inc_weap_arm="0" chance="20" element="WIND" />
+	<item id="33873" min_arm="60" max_arm="120" min_weap="150" max_weap="300" inc_arm="60" inc_weap="150" inc_weap_arm="0" chance="20" element="HOLY" />
+	<item id="33874" min_arm="60" max_arm="120" min_weap="150" max_weap="300" inc_arm="60" inc_weap="150" inc_weap_arm="0" chance="20" element="UNHOLY" />
 	
 </list>

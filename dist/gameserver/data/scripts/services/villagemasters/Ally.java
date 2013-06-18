@@ -16,10 +16,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.VillageMasterInstance;
 import lineage2.gameserver.scripts.Functions;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
 public class Ally extends Functions
 {
 	/**
@@ -37,7 +33,7 @@ public class Ally extends Functions
 		{
 			htmltext = "ally-02.htm";
 		}
-		((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/" + htmltext);
+		((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/ally/" + htmltext);
 	}
 	
 	/**
@@ -55,6 +51,6 @@ public class Ally extends Functions
 		{
 			htmltext = "ally-03.htm";
 		}
-		((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/" + htmltext);
+		((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/ally/" + htmltext);
 	}
 }

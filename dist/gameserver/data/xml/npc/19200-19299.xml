@@ -2601,17 +2601,17 @@
 		<skills/>
 	</npc>
 	<npc id="19259" name="Smelting Furnace" title="">
-		<!--fixed by Darvin & HaxHago-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="170.0"/>
 		<set name="collision_height" value="90.5"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Npc"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="621600000"/>
+		<set name="baseHpMax" value="556923"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="2025740"/>
+		<set name="baseMpMax" value="25740"/>
 		<set name="baseMpReg" value="3"/>
 		<set name="baseSTR" value="98"/>
 		<set name="baseCON" value="87"/>
@@ -2631,6 +2631,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -3481,17 +3482,17 @@
 		<skills/>
 	</npc>
 	<npc id="19279" name="Cooling Device" title="">
-		<!--fixed by Darvin & HaxHago-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="170.0"/>
 		<set name="collision_height" value="90.5"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Npc"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="621600000"/>
+		<set name="baseHpMax" value="556923"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="2025740"/>
+		<set name="baseMpMax" value="25740"/>
 		<set name="baseMpReg" value="3"/>
 		<set name="baseSTR" value="98"/>
 		<set name="baseCON" value="87"/>
@@ -3511,6 +3512,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -3522,17 +3524,17 @@
 		<skills/>
 	</npc>
 	<npc id="19280" name="Weapon Molding Device" title="">
-		<!--fixed by Darvin & HaxHago-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="170.0"/>
 		<set name="collision_height" value="90.5"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Npc"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="621600000"/>
+		<set name="baseHpMax" value="556923"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="2025740"/>
+		<set name="baseMpMax" value="25740"/>
 		<set name="baseMpReg" value="3"/>
 		<set name="baseSTR" value="98"/>
 		<set name="baseCON" value="87"/>
@@ -3552,6 +3554,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -3563,17 +3566,17 @@
 		<skills/>
 	</npc>
 	<npc id="19281" name="Armor Molding Device" title="">
-		<!--fixed by Darvin & HaxHago-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="170.0"/>
 		<set name="collision_height" value="90.5"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Npc"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="621600000"/>
+		<set name="baseHpMax" value="556923"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="2025740"/>
+		<set name="baseMpMax" value="25740"/>
 		<set name="baseMpReg" value="3"/>
 		<set name="baseSTR" value="98"/>
 		<set name="baseCON" value="87"/>
@@ -3593,6 +3596,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>

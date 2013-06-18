@@ -384,10 +384,26 @@ public class ResidenceFunction
 	/**
 	 * Field buffs_template.
 	 */
+	/*
+	 * 15374 1 Clan Hall - Horn Melody For 30 min., P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. none none\0 15375 1 Clan Hall - Drum Melody For 30 min., Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 20, Critical Damage during a standard attack + 20%, P. Atk. + 10%, P.
+	 * Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, Debuff Resistance + 10%, and P. Def. when receiving a critical attack. Also, Spd. - 15%, and Critical Damage during a standard attack is increased after receiving a certain amount of damage. none none\0 15376 1
+	 * Clan Hall - Pipe Organ Melody For 30 min., Max HP/ MP/ CP + 37%, and HP Recovery Bonus + 20%. none none\0 15377 1 Clan Hall - Guitar Melody For 30 min., P. Critical Rate + 32%, P. Critical Damage + 35%, and M. Critical Rate + 20. Also, P. Skill MP Consumption - 20%, M. Skill MP Consumption
+	 * -10%, and the Iss Enchanter's Enchant Skill MP Consumption - 20%. none none\0 15378 1 Clan Hall - Harp Melody For 30 min., P. Accuracy + 5, P. Evasion/ M. Evasion + 5, and Spd. + 34. Also, Received Critical Damage - 30%. none none\0 15379 1 Clan Hall - Lute Melody For 30 min., Atk. Spd. +
+	 * 34%, Casting Spd. + 31%, and has a chance of applying 9% Vampiric Rage effect. none none\0 15374 2 Clan Hall - Horn Melody For 30 min., P. Atk. + 19%, P. Def. + 15%, M. Atk. + 83%, and M. Def. + 30%. none none\0 15375 2 Clan Hall - Drum Melody For 30 min., Max MP + 20%, HP Recovery Bonus +
+	 * 20%, M. Critical Rate + 20, Critical Damage during a standard attack + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, Debuff Resistance + 10%, and P. Def. when receiving a critical attack. Also, Spd. - 10%, and Critical Damage during a
+	 * standard attack is increased after receiving a certain amount of damage. none none\0 15376 2 Clan Hall - Pipe Organ Melody For 30 min., Max HP/ MP/ CP + 39%, and HP Recovery Bonus + 20%. none none\0 15377 2 Clan Hall - Guitar Melody For 30 min., P. Critical Rate + 34%, P. Critical Damage +
+	 * 35%, and M. Critical Rate + 20. Also, P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and the Iss Enchanter's Enchant Skill MP Consumption - 20%. none none\0 15378 2 Clan Hall - Harp Melody For 30 min., P. Accuracy + 6, P. Evasion/ M. Evasion + 6, and Spd. + 35. Also, Received
+	 * Critical Damage - 30%. none none\0 15379 2 Clan Hall - Lute Melody For 30 min., Atk. Spd. + 35%, Casting Spd. + 32%, and has a chance of applying 9% Vampiric Rage effect. none none\0 15380 1 Clan Hall - Knight's Harmony For 30 min., P. Atk. + 12%, P. Critical Damage + 35%, P. Critical Rate +
+	 * 100%, P. Def. + 45%, Shield Defense Rate + 30%, and Shield Defense + 50%. none none\0 15381 1 Clan Hall - Warrior's Harmony For 30 min., P. Atk. + 35%, P. Critical Damage + 35%, P. Critical Rate + 100%, Atk. Spd. + 8%, M. Atk. + 16%, Casting Spd. + 8%, and Spd. + 8. none none\0 15382 1 Clan
+	 * Hall - Wizard's Harmony For 30 min., M. Atk. + 40%, M. Critical Rate + 100%, Casting Spd. + 8%, P. Atk. + 8%, Atk. Spd. + 8%, Spd. + 8, M. Def. + 14%, and MP Recovery Bonus + 20%. Also, M. Skill MP Consumption - 15%, P. Skill MP Consumption - 5%, Skill Cooldown - 20%. none none\0
+	 */
 	private static final Object[][][] buffs_template =
 	{
-		{},
 		{
+		// level 0 - no buff
+		},
+		{
+			// level 1
 			{
 				SkillTable.getInstance().getInfo(4342, 1),
 				A
@@ -410,6 +426,7 @@ public class ResidenceFunction
 			},
 		},
 		{
+			// level 2
 			{
 				SkillTable.getInstance().getInfo(4342, 2),
 				A
@@ -432,6 +449,7 @@ public class ResidenceFunction
 			},
 		},
 		{
+			// level 3
 			{
 				SkillTable.getInstance().getInfo(4342, 2),
 				A
@@ -454,6 +472,7 @@ public class ResidenceFunction
 			},
 		},
 		{
+			// level 4
 			{
 				SkillTable.getInstance().getInfo(4342, 2),
 				A
@@ -492,6 +511,7 @@ public class ResidenceFunction
 			},
 		},
 		{
+			// level 5
 			{
 				SkillTable.getInstance().getInfo(4342, 2),
 				A
@@ -549,8 +569,11 @@ public class ResidenceFunction
 				W
 			},
 		},
-		{},
 		{
+		// level 6 - unused
+		},
+		{
+			// level 7
 			{
 				SkillTable.getInstance().getInfo(4342, 2),
 				A
@@ -607,8 +630,46 @@ public class ResidenceFunction
 				SkillTable.getInstance().getInfo(4354, 4),
 				W
 			},
+			// GOD
+			{
+				SkillTable.getInstance().getInfo(15374, 1),
+				M
+			},
+			{
+				SkillTable.getInstance().getInfo(15375, 1),
+				M
+			},
+			{
+				SkillTable.getInstance().getInfo(15376, 1),
+				M
+			},
+			{
+				SkillTable.getInstance().getInfo(15377, 1),
+				M
+			},
+			{
+				SkillTable.getInstance().getInfo(15378, 1),
+				M
+			},
+			{
+				SkillTable.getInstance().getInfo(15379, 1),
+				M
+			},
+			{
+				SkillTable.getInstance().getInfo(15380, 1),
+				M
+			},
+			{
+				SkillTable.getInstance().getInfo(15381, 1),
+				M
+			},
+			{
+				SkillTable.getInstance().getInfo(15382, 1),
+				M
+			}
 		},
 		{
+			// level 8
 			{
 				SkillTable.getInstance().getInfo(4342, 2),
 				A
@@ -685,10 +746,52 @@ public class ResidenceFunction
 				SkillTable.getInstance().getInfo(4360, 1),
 				W
 			},
+			// GOD
+			{
+				SkillTable.getInstance().getInfo(15374, 2),
+				M
+			},
+			{
+				SkillTable.getInstance().getInfo(15375, 2),
+				M
+			},
+			{
+				SkillTable.getInstance().getInfo(15376, 2),
+				M
+			},
+			{
+				SkillTable.getInstance().getInfo(15377, 2),
+				M
+			},
+			{
+				SkillTable.getInstance().getInfo(15378, 2),
+				M
+			},
+			{
+				SkillTable.getInstance().getInfo(15379, 2),
+				M
+			},
+			{
+				SkillTable.getInstance().getInfo(15380, 1),
+				M
+			},
+			{
+				SkillTable.getInstance().getInfo(15381, 1),
+				M
+			},
+			{
+				SkillTable.getInstance().getInfo(15382, 1),
+				M
+			}
 		},
-		{},
-		{},
 		{
+		// Level 9 - unused
+		},
+		{
+		// level 10 - unused
+		},
+		{
+			// level 11
 			{
 				SkillTable.getInstance().getInfo(4342, 3),
 				A
@@ -711,6 +814,7 @@ public class ResidenceFunction
 			},
 		},
 		{
+			// level 12
 			{
 				SkillTable.getInstance().getInfo(4342, 4),
 				A
@@ -733,6 +837,7 @@ public class ResidenceFunction
 			},
 		},
 		{
+			// level 13
 			{
 				SkillTable.getInstance().getInfo(4342, 4),
 				A
@@ -755,6 +860,7 @@ public class ResidenceFunction
 			},
 		},
 		{
+			// level 14
 			{
 				SkillTable.getInstance().getInfo(4342, 4),
 				A
@@ -793,6 +899,7 @@ public class ResidenceFunction
 			},
 		},
 		{
+			// level 15
 			{
 				SkillTable.getInstance().getInfo(4342, 4),
 				A
@@ -850,8 +957,11 @@ public class ResidenceFunction
 				W
 			},
 		},
-		{},
 		{
+		// level 16 - unused
+		},
+		{
+			// level 17
 			{
 				SkillTable.getInstance().getInfo(4342, 4),
 				A
@@ -910,6 +1020,7 @@ public class ResidenceFunction
 			},
 		},
 		{
+			// level 18
 			{
 				SkillTable.getInstance().getInfo(4342, 4),
 				A

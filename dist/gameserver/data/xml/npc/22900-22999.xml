@@ -4161,9 +4161,8 @@
 		</rewardlist>
 	</npc>
 	<npc id="22964" name="Apherus Lookout" title="Bewildered">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="ai_type" value="gardenofgenesis.ApherusLookoutBewildered"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="30.0"/>
 		<set name="level" value="93"/>

@@ -655,6 +655,30 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.381">
+				<reward item_id="57" min="16549" max="38671" chance="99.45866" />
+				<reward item_id="35338" min="1" max="1" chance="0.42625" />
+				<reward item_id="35327" min="1" max="1" chance="0.10656" />
+				<reward item_id="35451" min="1" max="1" chance="0.00426" />
+				<reward item_id="35462" min="1" max="1" chance="0.00426" />
+			</group>
+			<group chance="0.375">
+				<reward item_id="19285" min="1" max="1" chance="80.00000" />
+				<reward item_id="19271" min="1" max="1" chance="20.00000" />
+			</group>
+			<group chance="33.993">
+				<reward item_id="34990" min="2" max="6" chance="51.39293" />
+				<reward item_id="34992" min="9" max="27" chance="37.00762" />
+				<reward item_id="34991" min="28" max="84" chance="11.58180" />
+				<reward item_id="19420" min="1" max="1" chance="0.00883" />
+				<reward item_id="19409" min="1" max="1" chance="0.00883" />
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="19271" min="1" max="1" chance="0.00300" />
+			<reward item_id="19285" min="1" max="1" chance="0.00300" />
+		</rewardlist>		
 	</npc>
 	<npc id="23214" name="Beggar Zofan" title="">
 		<set name="aggroRange" value="0"/>
@@ -703,6 +727,30 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.381">
+				<reward item_id="57" min="16549" max="38671" chance="99.45866" />
+				<reward item_id="35344" min="1" max="1" chance="0.42625" />
+				<reward item_id="35328" min="1" max="1" chance="0.10656" />
+				<reward item_id="35452" min="1" max="1" chance="0.00426" />
+				<reward item_id="35468" min="1" max="1" chance="0.00426" />
+			</group>
+			<group chance="0.375">
+				<reward item_id="19291" min="1" max="1" chance="80.00000" />
+				<reward item_id="19272" min="1" max="1" chance="20.00000" />
+			</group>
+			<group chance="33.500">
+				<reward item_id="34990" min="2" max="6" chance="53.46269" />
+				<reward item_id="34992" min="9" max="27" chance="34.86567" />
+				<reward item_id="34991" min="28" max="84" chance="11.65373" />
+				<reward item_id="19426" min="1" max="1" chance="0.00896" />
+				<reward item_id="19410" min="1" max="1" chance="0.00896" />
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="19272" min="1" max="1" chance="0.00300" />
+			<reward item_id="19291" min="1" max="1" chance="0.00300" />
+		</rewardlist>		
 	</npc>
 	<npc id="23215" name="Zofan" title="">
 		<set name="aggroRange" value="0"/>

@@ -24,7 +24,26 @@
 		<for/>
 	</skill>
 	<skill id="11302" levels="8" name="Servitor Major Heal">
-    <!-- Heals the servitor with 1488 Power. -->
+    <!-- 
+	11302	1	Servitor Major Heal	Heals the servitor with 1488 Power.
+	11302	2	Servitor Major Heal	Heals the servitor with 1495 Power.
+	11302	3	Servitor Major Heal	Heals the servitor with 1507 Power.
+	11302	4	Servitor Major Heal	Heals the servitor with 1519 Power.
+	11302	5	Servitor Major Heal	Heals the servitor with 1532 Power.
+	11302	6	Servitor Major Heal	Heals the servitor with 1544 Power.
+	11302	7	Servitor Major Heal	Heals the servitor with 1557 Power.
+	11302	8	Servitor Major Heal	Heals the servitor with 1570 Power.
+	11302	101	Servitor Major Heal	Recovers servitor's HP by 1570. Enchant Cost: Decreases MP Consumption.	+ 1 Cost	Decreases MP Consumption.
+	11302	102	Servitor Major Heal	Recovers servitor's HP by 1570. Enchant Cost: Decreases MP Consumption.	+ 2 Cost	Decreases MP Consumption.
+	11302	103	Servitor Major Heal	Recovers servitor's HP by 1570. Enchant Cost: Decreases MP Consumption.	+ 3 Cost	Decreases MP Consumption.
+	11302	104	Servitor Major Heal	Recovers servitor's HP by 1570. Enchant Cost: Decreases MP Consumption.	+ 4 Cost	Decreases MP Consumption.
+	11302	105	Servitor Major Heal	Recovers servitor's HP by 1570. Enchant Cost: Decreases MP Consumption.	+ 5 Cost	Decreases MP Consumption.
+	11302	106	Servitor Major Heal	Recovers servitor's HP by 1570. Enchant Cost: Decreases MP Consumption.	+ 6 Cost	Decreases MP Consumption.
+	11302	107	Servitor Major Heal	Recovers servitor's HP by 1570. Enchant Cost: Decreases MP Consumption.	+ 7 Cost	Decreases MP Consumption.
+	11302	108	Servitor Major Heal	Recovers servitor's HP by 1570. Enchant Cost: Decreases MP Consumption.	+ 8 Cost	Decreases MP Consumption.
+	11302	109	Servitor Major Heal	Recovers servitor's HP by 1570. Enchant Cost: Decreases MP Consumption.	+ 9 Cost	Decreases MP Consumption.
+	11302	110	Servitor Major Heal	Recovers servitor's HP by 1570. Enchant Cost: Decreases MP Consumption.	+ 10 Cost	Decreases MP Consumption.
+	-->
 		<table name="#effectPoint">711 722 733 743 753 763 772 780</table>
 		<table name="#power">1488 1495 1507 1519 1532 1544 1557 1570</table>
 		<table name="#magicLevel">85 86 87 88 89 90 91 92</table>
@@ -37,11 +56,12 @@
 		<set name="effectPoint" val="#effectPoint"/>
 		<set name="power" val="#power"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="target" val="TARGET_SUMMON_AURA"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="skillType" val="HEAL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<enchant1 levels="10" name="Cost"/>
-		<for/>
+		<enchant1 levels="10" name="Cost">
+			<table name="#mpConsume2">67 64 61 58 56 53 50 47 44 42</table>
+		</enchant1>
 	</skill>
 	<skill id="11303" levels="1" name="Mass Servitor Magic Barrier">
     <!-- Increases M. Def. of all servitors by 30% for 30 minutes. -->
@@ -367,23 +387,16 @@
 	</skill>
 	<skill id="11316" levels="1" name="Summon Soulshots">
     <!-- Summons 1900 Beast Soulshots with 80% probability and 380 Blessed Beast Spiritshots with 20% probability. Consumes 1 Crystal (R-Grade). -->
-		<table name="#magicLevel">85</table>
-		<table name="#SummonMinCount">1900</table>
-		<table name="#SummonMaxCount">1900</table>
-		<table name="#OreConsume">1</table>
-		<table name="#mpConsume2">400</table>
 		<set name="reuseDelay" val="60000"/>
 		<set name="hitTime" val="3000"/>
-		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="magicLevel" val="85"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill11316"/>
+		<set name="mpConsume2" val="398"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="magicLevel" val="#magicLevel"/>
-		<set name="skillType" val="SUMMON_ITEM"/>
+		<set name="skillType" val="RESTORATION"/>
+		<set name="isHandler" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="17371"/>
-		<set name="SummonItemId" val="20332"/>
-		<set name="itemConsumeCount" val="#OreConsume"/>
-		<set name="SummonMinCount" val="#SummonMinCount"/>
-		<set name="SummonMaxCount" val="#SummonMaxCount"/>
 	</skill>
 	<skill id="11317" levels="8" name="Servitor Group Heal">
     <!-- Restores all servitors' HP by 1191. Not Used. -->

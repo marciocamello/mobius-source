@@ -4399,10 +4399,6 @@
 		<npc id="33565" /><!--Hermecuss servant Stutgard-->
 	</spawn>
 	<spawn count="1" respawn="43200" respawn_random="0" period_of_day="none">
-		<point x="213746" y="115267" z="-864" h="10000" />
-		<npc id="25866" /><!--Apherus (Raid Boss lv 94)-->
-	</spawn>
-	<spawn count="1" respawn="43200" respawn_random="0" period_of_day="none">
 		<point x="217592" y="108696" z="-12544" h="10000" />
 		<npc id="25770" /><!--Lazaros (Raid Boss lv 95)-->
 	</spawn>

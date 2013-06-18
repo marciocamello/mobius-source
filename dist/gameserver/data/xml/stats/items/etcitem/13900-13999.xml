@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="13900" name="Sealed Magic Pin (A-Grade)">
+	<etcitem id="13900" name="Sealed Magic Pin (A-grade)">
+	<!-- Can be attached to Sealed Magic Pin and Belt. And the seal can be cancelled through the weaver Olf Kanore and Olf Adams. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -10,7 +11,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13901" name="Sealed Magic Pin (S-Grade)">
+	<etcitem id="13901" name="Sealed Magic Pin (S-grade)">
+	<!-- Can be attached to Sealed Magic Pin and Belt. And the seal can be cancelled through the weaver Olf Kanore and Olf Adams. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -19,7 +21,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13902" name="Low-Grade Magic Pin (C-Grade)">
+	<etcitem id="13902" name="Low-grade Magic Pin (C-grade)">
+	<!-- Low-grade Magic Pin that can improve the function of Cloth Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -28,7 +31,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13903" name="Mid-Grade Magic Pin (C-Grade)">
+	<etcitem id="13903" name="Mid-grade Magic Pin (C-grade)">
+	<!-- Magic Pin that can improve the function of Cloth Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -37,7 +41,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13904" name="High-Grade Magic Pin (C-Grade)">
+	<etcitem id="13904" name="High-grade Magic Pin (C-grade)">
+	<!-- High-grade Magic Pin that can improve the function of Cloth Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -46,7 +51,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13905" name="Top-Grade Magic Pin (C-Grade)">
+	<etcitem id="13905" name="Top-grade Magic Pin (C-grade)">
+	<!-- Top-grade Magic Pin that can improve the function of Cloth Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -55,7 +61,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13906" name="Low-Grade Magic Pin (B-Grade)">
+	<etcitem id="13906" name="Low-grade Magic Pin (B-grade)">
+	<!-- Low-grade Magic Pin that can improve the function of Leather Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -64,7 +71,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13907" name="Mid-Grade Magic Pin (B-Grade)">
+	<etcitem id="13907" name="Mid-grade Magic Pin (B-grade)">
+	<!-- Magic Pin that can improve the function of Leather Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -73,7 +81,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13908" name="High-Grade Magic Pin (B-Grade)">
+	<etcitem id="13908" name="High-grade Magic Pin (B-grade)">
+	<!-- High-grade Magic Pin that can improve the function of Leather Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -82,7 +91,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13909" name="Top-Grade Magic Pin (B-Grade)">
+	<etcitem id="13909" name="Top-grade Magic Pin (B-grade)">
+	<!-- Top-grade Magic Pin that can improve the function of Leather Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -91,7 +101,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13910" name="Low-Grade Magic Pin (A-Grade)">
+	<etcitem id="13910" name="Low-grade Magic Pin (A-grade)">
+	<!-- Low-grade Magic Pin that can improve the function of Iron Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -100,7 +111,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13911" name="Mid-Grade Magic Pin (A-Grade)">
+	<etcitem id="13911" name="Mid-grade Magic Pin (A-grade)">
+	<!-- Magic Pin that can improve the function of Iron Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -109,7 +121,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13912" name="High-Grade Magic Pin (A-Grade)">
+	<etcitem id="13912" name="High-grade Magic Pin (A-grade)">
+	<!-- High-grade Magic Pin that can improve the function of Iron Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -118,7 +131,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13913" name="Top-Grade Magic Pin (A-Grade)">
+	<etcitem id="13913" name="Top-grade Magic Pin (A-grade)">
+	<!-- Top-grade Magic Pin that can improve the function of Iron Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -127,7 +141,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13914" name="Low-Grade Magic Pin (S-Grade)">
+	<etcitem id="13914" name="Low-grade Magic Pin (S-grade)">
+	<!-- Low-grade Magic Pin that can improve the function of Mithril Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -136,7 +151,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13915" name="Mid-Grade Magic Pin (S-Grade)">
+	<etcitem id="13915" name="Mid-grade Magic Pin (S-grade)">
+	<!-- Magic Pin that can improve the function of Mithril Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -145,7 +161,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13916" name="High-Grade Magic Pin (S-Grade)">
+	<etcitem id="13916" name="High-grade Magic Pin (S-grade)">
+	<!-- High-grade Magic Pin that can improve the function of Mithril Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -154,7 +171,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13917" name="Top-Grade Magic Pin (S-Grade)">
+	<etcitem id="13917" name="Top-grade Magic Pin (S-grade)">
+	<!-- Top-grade Magic Pin that can improve the function of Mithril Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -163,7 +181,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13918" name="Sealed Magic Pouch (C-Grade)">
+	<etcitem id="13918" name="Sealed Magic Pouch (C-grade)">
+	<!-- Item can be attached to a Sealed Magic Belt by weaver Olf Kanore or Olf Adams. They can also unseal these items. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -172,7 +191,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13919" name="Sealed Magic Pouch (B-Grade)">
+	<etcitem id="13919" name="Sealed Magic Pouch (B-grade)">
+	<!-- Item can be attached to a Sealed Magic Belt by weaver Olf Kanore or Olf Adams. They can also unseal these items. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -181,7 +201,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13920" name="Sealed Magic Pouch (A-Grade)">
+	<etcitem id="13920" name="Sealed Magic Pouch (A-grade)">
+	<!-- Item can be attached to a Sealed Magic Belt by weaver Olf Kanore or Olf Adams. They can also unseal these items. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -190,7 +211,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13921" name="Sealed Magic Pouch (S-Grade)">
+	<etcitem id="13921" name="Sealed Magic Pouch (S-grade)">
+	<!-- Item can be attached to a Sealed Magic Belt by weaver Olf Kanore or Olf Adams. They can also unseal these items. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -199,7 +221,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13922" name="Low-Grade Magic Pouch (C-Grade)">
+	<etcitem id="13922" name="Low-grade Magic Pouch (C-grade)">
+	<!-- Low-grade Magic Pouch that can improve the function of Cloth Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -208,7 +231,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13923" name="Mid-Grade Magic Pouch (C-Grade)">
+	<etcitem id="13923" name="Mid-grade Magic Pouch (C-grade)">
+	<!-- Magic Pouch that can improve the function of Cloth Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -217,7 +241,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13924" name="High-Grade Magic Pouch (C-Grade)">
+	<etcitem id="13924" name="High-grade Magic Pouch (C-grade)">
+	<!-- High-grade Magic Pouch that can improve the function of Cloth Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -226,7 +251,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13925" name="Top-Grade Magic Pouch (C-Grade)">
+	<etcitem id="13925" name="Top-grade Magic Pouch (C-grade)">
+	<!-- Top-grade Magic Pouch that can improve the function of Cloth Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -235,7 +261,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13926" name="Low-Grade Magic Pouch (B-Grade)">
+	<etcitem id="13926" name="Low-grade Magic Pouch (B-grade)">
+	<!-- Low-grade Magic Pouch that can improve the function of Leather Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -244,7 +271,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13927" name="Mid-Grade Magic Pouch (B-Grade)">
+	<etcitem id="13927" name="Mid-grade Magic Pouch (B-grade)">
+	<!-- Magic Pouch that can improve the function of Leather Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -253,7 +281,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13928" name="High-Grade Magic Pouch (B-Grade)">
+	<etcitem id="13928" name="High-grade Magic Pouch (B-grade)">
+	<!-- High-grade Magic Pouch that can improve the function of Leather Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -262,7 +291,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13929" name="Top-Grade Magic Pouch (B-Grade)">
+	<etcitem id="13929" name="Top-grade Magic Pouch (B-grade)">
+	<!-- Top-grade Magic Pouch that can improve the function of Leather Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -271,7 +301,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13930" name="Low-Grade Magic Pouch (A-Grade)">
+	<etcitem id="13930" name="Low-grade Magic Pouch (A-grade)">
+	<!-- Low-grade Magic Pouch that can improve the function of Iron Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -280,7 +311,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13931" name="Mid-Grade Magic Pouch (A-Grade)">
+	<etcitem id="13931" name="Mid-grade Magic Pouch (A-grade)">
+	<!-- Magic Pouch that can improve the function of Iron Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -289,7 +321,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13932" name="High-Grade Magic Pouch (A-Grade)">
+	<etcitem id="13932" name="High-grade Magic Pouch (A-grade)">
+	<!-- High-grade Magic Pouch that can improve the function of Iron Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -298,7 +331,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13933" name="Top-Grade Magic Pouch (A-Grade)">
+	<etcitem id="13933" name="Top-grade Magic Pouch (A-grade)">
+	<!-- Top-grade Magic Pouch that can improve the function of Iron Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -307,7 +341,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13934" name="Low-Grade Magic Pouch (S-Grade)">
+	<etcitem id="13934" name="Low-grade Magic Pouch (S-grade)">
+	<!-- Low-grade Magic Pouch that can improve the function of Mithril Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -316,7 +351,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13935" name="Mid-Grade Magic Pouch (S-Grade)">
+	<etcitem id="13935" name="Mid-grade Magic Pouch (S-grade)">
+	<!-- Magic Pouch that can improve the function of Mithril Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -325,7 +361,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13936" name="High-Grade Magic Pouch (S-Grade)">
+	<etcitem id="13936" name="High-grade Magic Pouch (S-grade)">
+	<!-- High-grade Magic Pouch that can improve the function of Mithril Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -334,7 +371,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13937" name="Top-Grade Magic Pouch (S-Grade)">
+	<etcitem id="13937" name="Top-grade Magic Pouch (S-grade)">
+	<!-- Top-grade Magic Pouch that can improve the function of Mithril Belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -343,7 +381,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13970" name="Spellbook - Star Stone Extraction Skill">
+	<etcitem id="13970" name="Spellbook: Star Stone Extraction Skill">
+	<!-- Collection supplemental scroll created for Adventurers who aren't familiar with collecting Star Stones. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -353,7 +392,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="13988" name="S80 Grade Weapon Chest (Event)">
+	<etcitem id="13988" name="Dynasty Weapon Pack (Event)">
+	<!-- Can receive one of the event's top reward items, a Dynasty weapon item. You are a lucky person to receive this prize. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -368,7 +408,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13989" name="S80 Grade Armor Chest (Event)">
+	<etcitem id="13989" name="Dynasty Armor Pack (Event)">
+	<!-- Can receive one of the event's top reward items, a Dynasty armor item. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -383,7 +424,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13990" name="Grade S Weapon Chest (Event) ">
+	<etcitem id="13990" name="Weapon Pack (S-grade) (Event)">
+	<!-- Double-click to open this item and receive an S-grade Weapon. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -398,7 +440,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13991" name="Grade S Armor Chest (Event)">
+	<etcitem id="13991" name="Armor Pack (S-grade) (Event)">
+	<!-- Double-click to open this item and receive a sealed S-grade Armor piece. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -413,7 +456,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13992" name="Grade S Accessory Chest (Event)">
+	<etcitem id="13992" name="Accessory Pack (S-grade) (Event)">
+	<!-- Double-click to open this item and receive a sealed S-grade Accessory. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -428,7 +472,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13993" name="Design - Crystal of Fire">
+	<etcitem id="13993" name="Design: Fire Crystal">
+	<!-- Design for making a Fire Crystal. Requires Create Common item level 9. Success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="crystallizable" value="true"/>
@@ -439,7 +484,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="13994" name="Design - Crystal of Water">
+	<etcitem id="13994" name="Design: Water Crystal">
+	<!-- Design for making a Water Crystal. Requires Create Common item level 9. Success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="crystallizable" value="true"/>
@@ -450,7 +496,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="13995" name="Design - Crystal of Wind">
+	<etcitem id="13995" name="Design: Wind Crystal">
+	<!-- Design for making a Wind Crystal.  Requires Create Common item level 9. Success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="crystallizable" value="true"/>
@@ -461,7 +508,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="13996" name="Design - Crystal of Earth">
+	<etcitem id="13996" name="Design: Earth Crystal">
+	<!-- Design for making an Earth Crystal.  Requires Create Common item level 9. Success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="crystallizable" value="true"/>
@@ -472,7 +520,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="13997" name="Design - Crystal of Darkness">
+	<etcitem id="13997" name="Design: Dark Crystal">
+	<!-- Design for making a Dark Crystal.  Requires Create Common item level 9. Success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="crystallizable" value="true"/>
@@ -483,7 +532,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="13998" name="Design - Crystal of Sacred">
+	<etcitem id="13998" name="Design: Holy Crystal">
+	<!-- Design for making a Holy Crystal.  Requires Create Common item level 9. Success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="crystallizable" value="true"/>
@@ -495,6 +545,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="13999" name="Gludio Supply Box - Hair Accessory">
+	<!-- Pouch bearing the unique pattern of Gludio. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

@@ -62,6 +62,10 @@ public class EffectTargetToMe extends Effect
 			{
 				Location flyLoc = _effected.getFlyLocation(getEffector(), getSkill());
 				_effected.abortCast(true, true);
+				if (flyLoc == null)
+				{
+					_log.info("EffectTargetToMe Loc null check this!");
+				}
 				_effected.broadcastPacket(new FlyToLocation(_effected, flyLoc, getSkill().getFlyType(), getSkill().getFlySpeed()));
 				_x = flyLoc.getX();
 				_y = flyLoc.getY();

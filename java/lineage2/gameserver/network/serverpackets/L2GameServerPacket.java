@@ -119,7 +119,7 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 		writeH(item.getEnchantOptions()[0]);
 		writeH(item.getEnchantOptions()[1]);
 		writeH(item.getEnchantOptions()[2]);
-		writeD(0x00);
+		writeD(item.getVisualId());
 	}
 	
 	protected void writeItemInfo(ItemInfo item)
@@ -156,7 +156,7 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 		writeH(item.getEnchantOptions()[0]);
 		writeH(item.getEnchantOptions()[1]);
 		writeH(item.getEnchantOptions()[2]);
-		writeD(0x00);
+		writeD(item.getVisualId());
 	}
 	
 	protected void writeItemElements(MultiSellIngredient item)

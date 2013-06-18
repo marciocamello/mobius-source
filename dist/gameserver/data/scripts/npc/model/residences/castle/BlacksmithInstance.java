@@ -12,14 +12,11 @@
  */
 package npc.model.residences.castle;
 
-import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.instancemanager.CastleManorManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.pledge.Clan;
-import lineage2.gameserver.network.serverpackets.MyTargetSelected;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-import lineage2.gameserver.network.serverpackets.ValidateLocation;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
 /**
@@ -53,45 +50,6 @@ public class BlacksmithInstance extends NpcInstance
 	public BlacksmithInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
-	}
-	
-	/**
-	 * Method onAction.
-	 * @param player Player
-	 * @param shift boolean
-	 */
-	@Override
-	public void onAction(Player player, boolean shift)
-	{
-		if (this != player.getTarget())
-		{
-			player.setTarget(this);
-			player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel() - getLevel()));
-			player.sendPacket(new ValidateLocation(this));
-		}
-		else
-		{
-			player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel() - getLevel()));
-			if (!isInRange(player, INTERACTION_DISTANCE))
-			{
-				player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
-				player.sendActionFailed();
-			}
-			else
-			{
-				if (CastleManorManager.getInstance().isDisabled())
-				{
-					NpcHtmlMessage html = new NpcHtmlMessage(player, this);
-					html.setFile("npcdefault.htm");
-					player.sendPacket(html);
-				}
-				else
-				{
-					showMessageWindow(player, 0);
-				}
-				player.sendActionFailed();
-			}
-		}
 	}
 	
 	/**

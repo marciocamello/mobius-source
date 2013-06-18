@@ -17,7 +17,6 @@ import lineage2.gameserver.idfactory.IdFactory;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.reference.L2Reference;
-import lineage2.gameserver.network.serverpackets.MyTargetSelected;
 
 /**
  * @author Mobius
@@ -53,20 +52,8 @@ public class ControlKeyInstance extends GameObject
 		return reference;
 	}
 	
-	/**
-	 * Method onAction.
-	 * @param player Player
-	 * @param shift boolean
-	 */
 	@Override
-	public void onAction(Player player, boolean shift)
+	public void onActionTargeted(final Player player, boolean forced)
 	{
-		if (player.getTarget() != this)
-		{
-			player.setTarget(this);
-			player.sendPacket(new MyTargetSelected(getObjectId(), 0));
-			return;
-		}
-		player.sendActionFailed();
 	}
 }

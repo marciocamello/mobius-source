@@ -540,6 +540,9 @@ public enum SystemMsg implements IStaticPacket
 	// Message: The Blessed Enchant failed. The enchant value of the item became
 	// 0.
 	THE_BLESSED_ENCHANT_FAILED(1517),
+	
+	// You do not meet the required condition to equip that item.
+	YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM(1518),
 	// Message: You should release your pet or servitor so that it does not fall
 	// off of the boat and drown!
 	YOU_SHOULD_RELEASE_YOUR_PET_OR_SERVITOR_SO_THAT_IT_DOES_NOT_FALL_OFF_OF_THE_BOAT_AND_DROWN(1523),
@@ -1345,8 +1348,17 @@ public enum SystemMsg implements IStaticPacket
 	// Message: A Mark of Adventurer is acquired. This item can be re-acquired after 6:30 a.m. everyday
 	A_MARK_OF_ADVENTURER_IS_ACQUIRED_THIS_ITEM_CAN_BE_RE_ACQUIRED_EVERYDAY(3495),
 	// Message: This account has already received a gift
+	SUBCLASS_S1_HAS_BEEN_UPGRADED_TO_DUEL_CLASS_S2_CONGRATULATIONS(3279),
 	THIS_ACCOUNT_HAS_ALREADY_RECEIVED_A_GIFT(3289),
-	SUBCLASS_S1_HAS_BEEN_UPGRADED_TO_DUEL_CLASS_S2_CONGRATULATIONS(3279);
+	YOU_CANNOT_EXTRACT_FROM_A_MODIFIED_ITEM(6093),
+	THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS(6094),
+	YOU_CANNOT_MODIFY_AS_YOU_DO_NOT_HAVE_ENOUGH_ADENA(6099),
+	YOU_HAVE_SPENT_S1_ON_A_SUCCESSFUL_APPEARANCE_MODIFICATION(6100),
+	ITEM_GRADES_DO_NOT_MATCH(6101),
+	YOU_CANNOT_EXTRACT_FROM_ITEMS_THAT_ARE_HIGHERGRADE_THAN_ITEMS_TO_BE_MODIFIED(6102),
+	YOU_CANNOT_MODIFY_OR_RESTORE_NOGRADE_ITEMS(6103),
+	WEAPONS_ONLY(6104),
+	ARMOR_ONLY(6105);
 	
 	private final L2GameServerPacket _message;
 	private final int _id;

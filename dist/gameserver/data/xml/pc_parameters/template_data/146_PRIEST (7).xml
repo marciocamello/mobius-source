@@ -32,7 +32,7 @@
         </creation_data>
         <stats_data>
             <min_attributes int="10" str="10" con="10" men="10" dex="10" wit="10"/>
-            <max_attributes int="120" str="120" con="120" men="120" dex="120" wit="120"/>
+            <max_attributes int="150" str="150" con="150" men="150" dex="150" wit="150"/>
             <base_attributes int="77" str="40" con="43" men="84" dex="23" wit="74"/>
             <!--GOD: <min_attributes int="10" str="10" con="10" men="10" dex="10" wit="10"/>
                <max_attributes int="99" str="99" con="99" men="99" dex="99" wit="99"/>

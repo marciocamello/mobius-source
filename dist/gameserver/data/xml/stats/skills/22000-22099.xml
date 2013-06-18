@@ -116,31 +116,31 @@
 		<set name="altUse" val="true"/>
 	</skill>
 	<skill id="22007" levels="1" name="Good Luck Lucky Bag">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="22008" levels="1" name="Lucky Four-leaf Clover">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="22009" levels="1" name="Miracle of Christmas">
-    <!-- none -->
+	<skill id="22009" levels="1" name="Holiday Miracle">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 		<cond msgId="1509">
 			<not>
 				<player olympiad="true"/>
@@ -148,31 +148,31 @@
 		</cond>
 	</skill>
 	<skill id="22010" levels="1" name="Mysterious Formal Dress">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="22011" levels="1" name="Santa Claus' Gift - Joy">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="22012" levels="1" name="Santa Claus' Gift - Enjoyment">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="22013" levels="1" name="Holiday Festival">
     <!-- Maximum HP/MP/CP, Physical/Defense Power, Speed and P. Atk. are increased, and MP consumption for skills is decreased. Effectiveness 3. -->
@@ -239,22 +239,22 @@
 		</cond>
 	</skill>
 	<skill id="22017" levels="1" name="Santa Claus' Gift - Luck">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="22018" levels="1" name="Santa Claus' Gift - Luck">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="22019" levels="1" name="Extra Pass - Kamaloka (Hall of the Abyss)">
     <!-- none -->
@@ -284,58 +284,60 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="22022" levels="1" name="Premium Valentine Decoration">
-    <!-- none -->
-		<set name="magicType" val="SPECIAL"/>
-		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="itemConsumeId" val="20198"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="22023" levels="1" name="Shabby Valentine Cake">
-    <!-- none -->
+	<skill id="22023" levels="1" name="Simple Valentine Cake">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="22024" levels="1" name="Ordinary Valentine Cake">
-    <!-- none -->
+	<skill id="22024" levels="1" name="Velvety Valentine Cake">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="22025" levels="1" name="Delicious Valentine Cake">
-    <!-- none -->
+	<skill id="22025" levels="1" name="Delectable Valentine Cake">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="22026" levels="1" name="Perfect Valentine Cake">
-    <!-- none -->
+	<skill id="22026" levels="1" name="Decadent Valentine Cake">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="22027" levels="1" name="Fantasy Valentine Cake">
-    <!-- none -->
+	<skill id="22027" levels="1" name="Heavenly Valentine Cake">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="22028" levels="1" name="Chocolate Cookie">
     <!-- none -->
@@ -396,28 +398,28 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22032" levels="1" name="Legacy of Baguette">
-    <!-- none -->
+	<skill id="22032" levels="1" name="Baguette Legacy">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 		<cond msgId="1509">
 			<not>
 				<player olympiad="true"/>
 			</not>
 		</cond>
 	</skill>
-	<skill id="22033" levels="1" name="Legacy of Baguette-Kamael">
-    <!-- none -->
+	<skill id="22033" levels="1" name="Baguette Legacy - Kamael">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 		<cond msgId="1509">
 			<not>
 				<player olympiad="true"/>
@@ -1004,22 +1006,22 @@
 		</cond>
 	</skill>
 	<skill id="22071" levels="1" name="Huge Fortuna Box">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="22072" levels="1" name="Huge Fortuna Cube">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="22073" levels="1" name="Weapon Enchant Scroll (S-Grade)">
     <!-- none -->
@@ -1366,13 +1368,13 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
 	<skill id="22092" levels="1" name="Scroll Master 1">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 		<cond msgId="1509">
 			<not>
 				<player olympiad="true"/>
@@ -1380,27 +1382,27 @@
 		</cond>
 	</skill>
 	<skill id="22093" levels="1" name="Scroll Master 2">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 		<cond msgId="1509">
 			<not>
 				<player olympiad="true"/>
 			</not>
 		</cond>
 	</skill>
-	<skill id="22094" levels="1" name="XP Master">
-    <!-- none -->
+	<skill id="22094" levels="1" name="Exp. Master">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 		<cond msgId="1509">
 			<not>
 				<player olympiad="true"/>

@@ -2,6 +2,7 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<etcitem id="7600" name="Worn Tarot Card - Wealth">
+	<!-- Old and worn-out tarot card given by the Lady of the Lake. This card symbolizes wealth. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -10,6 +11,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7601" name="Worn Tarot Card - Power">
+	<!-- Old and worn-out tarot card given by the Lady of the Lake. This card symbolizes power. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -18,6 +20,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7602" name="Worn Tarot Card - Love">
+	<!-- Old and worn-out tarot card given by the Lady of the Lake. This card symbolizes love. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -26,6 +29,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7603" name="Worn Tarot Card - Knowledge">
+	<!-- Old and worn-out tarot card given by the Lady of the Lake. This card symbolizes knowledge. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -34,6 +38,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7604" name="Summoner Keats' Letter">
+	<!-- Clumsily-written letter written by Summoner Keats who was turned into a frog. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -42,6 +47,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7605" name="Miracle Potion of Transferred Life">
+	<!-- An Elven miracle cure mixed by Priest Cerenas. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -50,6 +56,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7606" name="Kamilen's Antidote">
+	<!-- Medicine made by Magister Kamilen to cure Summoner Noctisse. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -58,6 +65,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7607" name="Coolant of the Repaired Wilma #3">
+	<!-- The cooling system refrigerant of repaired time machine "Wilma 3". -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -66,6 +74,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7608" name="Sealed Envelope">
+	<!-- Sealed envelope given by Information Broker Bavarin. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -73,7 +82,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="7609" name="Proof of Catching a Fish">
+	<etcitem id="7609" name="Mark of Fishing">
+	<!-- Fishing certificate. If you collect it and take it to a member of the Fishermen's Guild, you can learn a skill that is related to expanding a slot. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -81,7 +91,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="7610" name="Wind Fishing Lure">
+	<etcitem id="7610" name="Wind Bait">
+	<!-- Lure that was given out by Lanosco. It contains the hidden power of wind. It is not easy to use this bait. Only those who are highly skilled in fishing should use it. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_broken_crystal_silver_i00"/>
@@ -92,7 +103,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="7611" name="Icy Air Fishing Lure">
+	<etcitem id="7611" name="Icy Air Bait">
+	<!-- Lure that was given out by O'Fulle. It contains the hidden power of icy air. It is not easy to use this bait. Only those who are highly skilled in fishing should use it. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_broken_crystal_blue_i00"/>
@@ -103,7 +115,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="7612" name="Earth Fishing Lure">
+	<etcitem id="7612" name="Earth Bait">
+	<!-- Lure that was given out by Willie. It contains the hidden power of earth. It is not easy to use this bait. Only those who are highly skilled in fishing should use it. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_broken_crystal_gold_i00"/>
@@ -114,7 +127,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="7613" name="Flaming Fishing Lure">
+	<etcitem id="7613" name="Flaming Bait">
+	<!-- Lure that was given out by Linnaeus. It contains the hidden power of flames. It is not easy to use this bait. Only those who are highly skilled in fishing should use it. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_broken_crystal_red_i00"/>
@@ -125,7 +139,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="7614" name="Chest Caught by Wind Fishing Lure">
+	<etcitem id="7614" name="Chest Caught with a Wind Bait">
+	<!-- Chest fished up with the Wind Bait. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -134,7 +149,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="7615" name="Chest Caught by Icy Air Fishing Lure">
+	<etcitem id="7615" name="Chest Caught with Icy Air Bait">
+	<!-- Chest fished up with the Icy Air Bait. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -143,7 +159,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="7616" name="Chest Caught by Earth Fishing Lure">
+	<etcitem id="7616" name="Chest Caught with an Earth Bait">
+	<!-- Chest fished up with the Earth Bait. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -152,7 +169,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="7617" name="Chest Caught by using a Flaming Fishing Lure">
+	<etcitem id="7617" name="Chest Caught with a Flaming Bait">
+	<!-- Chest fished up with the Flaming Bait. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -162,6 +180,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="7618" name="Scroll of Escape: Ketra Orc Village">
+	<!-- Magical scroll that relocates you to Ketra Orc Village. Cannot be sold in shops. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -182,6 +201,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7619" name="Scroll of Escape: Varka Silenos Village">
+	<!-- Magical scroll that relocates you to Varka Silenos Village. Cannot be sold in shops. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -202,6 +222,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7620" name="Trash">
+	<!-- Saint's blood that has power of holiness. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -210,6 +231,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7621" name="Essence of Wind">
+	<!-- Essence of wind extracted from Singing Wind. It is an item requested by Lanosco. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -218,6 +240,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7622" name="Lost Bait Ingredient">
+	<!-- The lost bait that was recovered from a Fettered Soul. O'Fulle asked you to bring it back to him. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -226,6 +249,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7623" name="Eye of Tarlk Basilisk">
+	<!-- Eye harvested from a Tarlk Basilisk. Willie asked you to bring it back to him. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -234,6 +258,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7624" name="Crimson Drake Heart">
+	<!-- Heart of a Crimson Drake surrounded by flames. Linnaeus asked you to bring it back to him. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -242,6 +267,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7625" name="Strange Golem Blueprint">
+	<!-- Golem blueprint with an unusual design that is different from any other golem blueprint. It seems to be designed by Shaling. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -250,6 +276,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7626" name="Kiki's Letter">
+	<!-- Completely sealed letter. On the envelope,  Kiki's name is written as its recipient. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -258,6 +285,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7627" name="Small Glass Box">
+	<!-- Beautiful box made of glass. It is engraved with the names of Anabel and Liesel. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -266,6 +294,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7628" name="Rukal's Musical Score">
+	<!-- Musical score of  beautiful music. Its author is written down as Composer Rukal. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -274,6 +303,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7629" name="Looted Goods - White Cargo box">
+	<!-- White Cargo Box looted from a trader's wagon. Seems to have valuable goods. Double-click to see the contents. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -292,6 +322,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7630" name="Looted Goods - Blue Cargo box">
+	<!-- Blue Cargo Box looted from a trader's wagon. Seems to have valuable goods. Double-click to see the contents. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -310,6 +341,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7631" name="Looted Goods - Yellow Cargo box">
+	<!-- Yellow Cargo Box looted from a trader's wagon. Seems to have valuable goods. Double-click to see the contents. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -327,7 +359,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="7632" name="Looted Goods - Red Cargo Box">
+	<etcitem id="7632" name="Looted Goods - Red Document Box">
+	<!-- Red Crate looted from a trader's wagon. Seems to have valuable goods. Double-click to see the contents. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -345,7 +378,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="7633" name="Looted Goods - Purple Cargo Box">
+	<etcitem id="7633" name="Looted Goods - Purple Document Box">
+	<!-- Purple crate looted from a trader's wagon. Seems to have valuable goods. Double-click to see the contents. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -364,6 +398,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7634" name="Looted Goods - Brown Pouch">
+	<!-- Pouch looted from a trader's wagon. Seems to have valuable goods. Double-click to see the contents. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -381,7 +416,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="7635" name="Looted Goods - Gray Pouch">
+	<etcitem id="7635" name="Looted Goods - Grey Pouch">
+	<!-- Pouch looted from a trader's wagon. Seems to have valuable goods. Double-click to see the contents. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -400,6 +436,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7636" name="Booty - Yellow Pouch">
+	<!-- Item discovered in the marsh. Dirty yellow pouch ripped here and there. Double-click to see the contents. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -418,6 +455,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7637" name="Booty - Brown Pouch">
+	<!-- Item discovered in the marsh. Dirty brown pouch ripped here and there. Double-click to see the contents. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -435,7 +473,9 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="7638" name="Spellbook - Mass Summon Storm Cubic">
+	<etcitem id="7638" name="Spellbook: Mass Summon Storm Cubic">
+	<!-- Spellbook needed to learn Mass Summon Storm Cubic. Used by Warlocks.
+	Required level: 40 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
@@ -445,7 +485,9 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7639" name="Spellbook - Mass Summon Aqua Cubic">
+	<etcitem id="7639" name="Spellbook: Mass Summon Aqua Cubic">
+	<!-- Spellbook needed to learn Mass Summon Aqua Cubic. Used Elemental Summoners.
+	Required level: 40 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
@@ -455,7 +497,9 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7640" name="Spellbook - Mass Summon Phantom Cubic">
+	<etcitem id="7640" name="Spellbook: Mass Summon Phantom Cubic">
+	<!-- Spellbook needed to learn Mass Summon Phantom Cubic. Used by Phantom Summoners.
+	Required level: 40 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
@@ -465,7 +509,9 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7641" name="Spellbook - Summon Feline Queen">
+	<etcitem id="7641" name="Spellbook: Summon Feline Queen">
+	<!-- Spellbook needed to learn Summon Feline Queen. Used by Warlocks.
+	Required level: 56 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
@@ -475,7 +521,9 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7642" name="Spellbook - Summon Unicorn Seraphim">
+	<etcitem id="7642" name="Spellbook: Summon Seraphim the Unicorn">
+	<!-- Spellbook needed to learn Summon Seraphim the Unicorn. Used by Elemental Summoners.
+	Required level: 56 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
@@ -485,7 +533,9 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7643" name="Spellbook - Summon Nightshade">
+	<etcitem id="7643" name="Spellbook: Summon Nightshade">
+	<!-- Spellbook needed to learn Summon Night Shade. Used by Phantom Summoners.
+	Required level: 56 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
@@ -495,7 +545,9 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7644" name="Spellbook - Summon Cursed Man">
+	<etcitem id="7644" name="Spellbook: Summon Cursed Man">
+	<!-- Spellbook needed to learn Summon Cursed Man. Used by Necromancers.
+	Required level: 56 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
@@ -505,7 +557,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7645" name="Spellbook - Balance Life">
+	<etcitem id="7645" name="Spellbook: Balance Life">
+	<!-- Spellbook needed to learn Balance Life. Used by Cardinals. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_white_i00"/>
@@ -515,7 +568,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7646" name="Spellbook - Curse of Doom">
+	<etcitem id="7646" name="Spellbook: Curse of Doom">
+	<!-- Spellbook needed to learn Curse of Doom. Used by Soultakers. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_black_i00"/>
@@ -525,7 +579,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7647" name="Spellbook - Curse of Abyss">
+	<etcitem id="7647" name="Spellbook: Curse of Abyss">
+	<!-- Spellbook needed to learn Curse of Abyss. Used by Soultakers. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_black_i00"/>
@@ -535,7 +590,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7648" name="Spellbook - Arcane Chaos">
+	<etcitem id="7648" name="Spellbook: Arcane Chaos">
+	<!-- Spellbook needed to learn Arcane Chaos. Used by Archmages/Mystic Muses/Storm Screamers. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_element_i00"/>
@@ -545,7 +601,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7649" name="Spellbook - Fire Vortex">
+	<etcitem id="7649" name="Spellbook: Fire Vortex">
+	<!-- Spellbook needed to learn Fire Vortex. Used by Archmages. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_element_i00"/>
@@ -555,7 +612,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7650" name="Spellbook - Ice Vortex">
+	<etcitem id="7650" name="Spellbook: Ice Vortex">
+	<!-- Spellbook needed to learn Ice Vortex. Used by Mystic Muses. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_element_i00"/>
@@ -565,7 +623,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7651" name="Spellbook - Wind Vortex">
+	<etcitem id="7651" name="Spellbook: Wind Vortex">
+	<!-- Spellbook needed to learn Wind Vortex. Used by Storm Screamers. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_element_i00"/>
@@ -575,7 +634,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7652" name="Spellbook - Light Vortex">
+	<etcitem id="7652" name="Spellbook: Light Vortex">
+	<!-- Spellbook needed to learn Light Vortex. Used by Mystic Muses. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_white_i00"/>
@@ -585,7 +645,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7653" name="Spellbook - Dark Vortex">
+	<etcitem id="7653" name="Spellbook: Dark Vortex">
+	<!-- Spellbook needed to learn Dark Vortex. Used by Soultakers and Storm Screamers. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_black_i00"/>
@@ -595,7 +656,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7654" name="Spellbook - Mass Warrior Bane">
+	<etcitem id="7654" name="Spellbook: Mass Warrior Bane">
+	<!-- Spellbook needed to learn Mass Warrior Bane. Used by Soultakers. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_element_i00"/>
@@ -605,7 +667,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7655" name="Spellbook - Mass Mage Bane">
+	<etcitem id="7655" name="Spellbook: Mass Mage Bane">
+	<!-- Spellbook needed to learn Mass Mage Bane. Used by Soultakers. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_element_i00"/>
@@ -615,7 +678,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7656" name="Spellbook - Warrior Servitor">
+	<etcitem id="7656" name="Spellbook: Warrior Servitor">
+	<!-- Spellbook needed to learn Warrior Servitor. Used by Arcana Lords. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
@@ -625,7 +689,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7657" name="Spellbook - Wizard Servitor">
+	<etcitem id="7657" name="Spellbook: Wizard Servitor">
+	<!-- Spellbook needed to learn Wizard Servitor. Used by Elemental Masters. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
@@ -635,7 +700,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7658" name="Spellbook - Assassin Servitor">
+	<etcitem id="7658" name="Spellbook: Assassin Servitor">
+	<!-- Spellbook needed to learn Assassin Servitor. Used by Spectral Masters. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
@@ -645,7 +711,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7659" name="Spellbook - Final Servitor">
+	<etcitem id="7659" name="Spellbook: Final Servitor">
+	<!-- Spellbook needed to learn Final Servitor. Used by Arcana Lords/Elemental Masters/Spectral Masters. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
@@ -655,7 +722,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7660" name="Spellbook - Warrior Bane">
+	<etcitem id="7660" name="Spellbook: Warrior Bane">
+	<!-- Spellbook needed to learn Warrior Bane. Used by Arcana Lords/Elemental Masters. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_element_i00"/>
@@ -665,7 +733,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7661" name="Spellbook - Mage Bane">
+	<etcitem id="7661" name="Spellbook: Mage Bane">
+	<!-- Spellbook needed to learn Mage Bane. Used by Arcana Lords/Spectral Masters. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_element_i00"/>
@@ -675,7 +744,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7662" name="Spellbook - Elemental Protection">
+	<etcitem id="7662" name="Spellbook: Elements Resistance">
+	<!-- Spellbook needed to learn Elements Resistance. Used by Hierophants. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -685,7 +755,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7663" name="Spellbook - Divine Protection">
+	<etcitem id="7663" name="Spellbook: Divine Protection">
+	<!-- Spellbook needed to learn Divine Protection. Used by Cardinals/Eva's Saints. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -695,7 +766,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7664" name="Spellbook - Arcane Protection">
+	<etcitem id="7664" name="Spellbook: Arcane Protection">
+	<!-- Spellbook needed to learn Arcane Protection. Used by Eva's Saints or Shillien Saints. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -705,7 +777,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7665" name="Spellbook - Prophecy of Water">
+	<etcitem id="7665" name="Spellbook: Prophecy of Water">
+	<!-- Spellbook needed to learn Prophecy of Water. Used by Eva's Saints. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -715,7 +788,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7666" name="Spellbook - Prophecy of Fire">
+	<etcitem id="7666" name="Spellbook: Prophecy of Fire">
+	<!-- Spellbook needed to learn Prophecy of Fire. Used by Hierophants. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -725,7 +799,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7667" name="Spellbook - Prophecy of Wind">
+	<etcitem id="7667" name="Spellbook: Prophecy of Wind">
+	<!-- Spellbook needed to learn Prophecy of Wind. Used by Shillien Saints. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -735,7 +810,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7668" name="Spellbook - Block Shield">
+	<etcitem id="7668" name="Spellbook: Block Shield">
+	<!-- Spellbook needed to learn Block Shield. Used by Hierophants/Shillien Saints. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -745,7 +821,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7669" name="Spellbook - Block Wind Walk">
+	<etcitem id="7669" name="Spellbook: Block Wind Walk">
+	<!-- Spellbook needed to learn Block Wind Walk. Used by Hierophants/Eva's Saints. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -755,7 +832,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7670" name="Spellbook - Mass Block Shield">
+	<etcitem id="7670" name="Spellbook: Mass Block Shield">
+	<!-- Spellbook needed to learn Mass Block Shield. Used by Cardinals. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -765,7 +843,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7671" name="Spellbook - Mass Block Wind Walk">
+	<etcitem id="7671" name="Spellbook: Mass Block Wind Walk">
+	<!-- Spellbook needed to learn Mass Block Wind Walk. Used by Cardinals. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -775,7 +854,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7672" name="Amulet - Chant of Spirit">
+	<etcitem id="7672" name="Amulet: Chant of Spirit">
+	<!-- Amulet required to memorize the Chant of Spirit spell. Used by Doomcryers. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_orcish_talisman_i00"/>
@@ -785,7 +865,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7673" name="Amulet - Chant of Victory">
+	<etcitem id="7673" name="Amulet: Chant of Victory">
+	<!-- Amulet required to memorize the Chant of Victory spell. Used by Doomcryers. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_orcish_talisman_i00"/>
@@ -795,7 +876,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7674" name="Amulet - Pa'agrio's Eye">
+	<etcitem id="7674" name="Amulet: Pa'agrio's Eye">
+	<!-- Amulet required to memorize the Pa'agrio's Eye spell. Used by Dominators. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_orcish_talisman_i00"/>
@@ -805,7 +887,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7675" name="Amulet - Pa'agrio's Soul">
+	<etcitem id="7675" name="Amulet: Pa'agrio's Soul">
+	<!-- Amulet required to memorize the Pa'agrio's Soul spell. Used by Dominators. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_orcish_talisman_i00"/>
@@ -815,7 +898,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="7676" name="Amulet - Seal of Despair">
+	<etcitem id="7676" name="Amulet: Seal of Despair">
+	<!-- Amulet required to memorize the Seal of Despair spell. Used by Dominators. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_orcish_talisman_i00"/>
@@ -826,6 +910,7 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="7677" name="Virgil's Letter">
+	<!-- Letter sent by Virgil, a rich Dwarf in the Town of Rune. It asks for help. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -834,6 +919,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7678" name="Caradine's Letter">
+	<!-- Letter sent by Caradine, the Messenger of the Lake. Says to go to the Town of Goddard when you reach Subclass Level 65. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -842,6 +928,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7679" name="Caradine's Letter">
+	<!-- Letter sent by Caradine, the Messenger of the Lake. Says to go to the Town of Goddard when you reach Subclass Level 75. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -850,6 +937,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="7684" name="Raccoon Ears Fabric">
+	<!-- Main ingredient essentially required to make Raccoon Ears. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_of_cloth_blue_i00"/>
@@ -859,6 +947,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="7685" name="Outlaw's Eyepatch Strap">
+	<!-- Main ingredient essentially required to make an Outlaw's Eyepatch. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_braided_hemp_i00"/>
@@ -868,6 +957,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="7686" name="Maiden's Hairpin Piece">
+	<!-- Main ingredient essentially required to make a Maiden's Hairpin. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_broken_crystal_green_i00"/>
@@ -877,6 +967,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="7687" name="Rabbit Ears Fabric">
+	<!-- Main ingredient essentially required to make Rabbit Ears. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_of_cloth_blue_i00"/>
@@ -886,6 +977,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="7688" name="Cat Ears Fabric">
+	<!-- Main ingredient essentially required to make Cat Ears. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_of_cloth_blue_i00"/>
@@ -894,7 +986,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="7689" name="Recipe - Raccoon Ears (100%)">
+	<etcitem id="7689" name="Recipe: Raccoon Ears">
+	<!-- This recipe for Raccoon Ears can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -904,7 +997,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="7690" name="Recipe - Outlaw's Eyepatch (100%)">
+	<etcitem id="7690" name="Recipe: Outlaw's Eyepatch">
+	<!-- This technique for creating an Outlaw's Eyepatch can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -914,7 +1008,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="7691" name="Recipe - Maiden's Hairpin (100%)">
+	<etcitem id="7691" name="Recipe: Maiden's Hairpin">
+	<!-- This technique to create a Maiden's Hairpin can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -924,7 +1019,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="7692" name="Recipe - Rabbit Ears (100%)">
+	<etcitem id="7692" name="Recipe: Rabbit Ears">
+	<!-- This recipe for Rabbit Ears can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -934,7 +1030,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="7693" name="Recipe - Cat Ears (100%)">
+	<etcitem id="7693" name="Recipe: Cat Ears">
+	<!-- This recipe for Cat Ears can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -944,7 +1041,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="7697" name="Piece of Forget-me-not Hairpin">
+	<etcitem id="7697" name="Forget-me-not Hairpin Piece">
+	<!-- Indispensable raw material that is needed to make a Forget-me-not Hairpin. It can be sold at a general store. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_broken_crystal_green_i00"/>
@@ -954,6 +1052,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="7698" name="Piece of Daisy Hairpin">
+	<!-- Indispensable material that is needed to make a Daisy Hairpin. It can be sold at a general store. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_broken_crystal_green_i00"/>
@@ -962,7 +1061,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="7699" name="Recipe: Forget-me-not Hairpin (100%)">
+	<etcitem id="7699" name="Recipe: Forget-me-not Hairpin">
+	<!-- This technique for creating a Forget-me-not Hairpin can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>

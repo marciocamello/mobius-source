@@ -30,7 +30,6 @@
         <skill id="19004" level="1" cost="1000" name="Контроль над Негативными Эффектами Клана" min_level="5"/>
         <skill id="19005" level="1" cost="1000" name="Контроль над Устойчивостью Клана" min_level="5"/>
         <skill id="19006" level="1" cost="1000" name="Контроль над Психикой Клана" min_level="5"/>
-        <skill id="19009" level="1" name="Рождение Клана" min_level="5"/>
         <!--7 level-->
         <skill id="370" level="2" cost="3600" name="Благословение Тела Клана" min_level="7"/>
         <skill id="371" level="2" cost="3600" name="Духовность Клана" min_level="7"/>

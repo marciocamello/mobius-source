@@ -24,6 +24,7 @@ import lineage2.gameserver.model.base.Experience;
 import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.items.Inventory;
+import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.model.matching.MatchingRoom;
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
@@ -50,7 +51,7 @@ public class UserInfo extends L2GameServerPacket
 	private final int _patk, _patkspd, _pdef, evasion, accuracy, crit, _matk, _matkspd, _mevasion, _maccuracy, _mCritRate;
 	private final int _mdef, pvp_flag, karma, hair_style, hair_color, face, gm_commands, fame, vitality;
 	private int clan_id, clan_crest_id, ally_id, ally_crest_id, large_clan_crest_id;
-	private final int private_store, can_crystalize, pk_kills, pvp_kills, class_id, agathion;
+	private final int private_store, can_crystalize, pk_kills, pvp_kills, class_id, agathion, _partySubstitute;
 	private final int noble, hero;
 	private int mount_id;
 	private int cw_level;
@@ -68,6 +69,7 @@ public class UserInfo extends L2GameServerPacket
 	private final double _expPercent;
 	private final TeamType _team;
 	private final FastList<Integer> _aveList;
+	private final PcInventory inv;
 	
 	public UserInfo(Player player)
 	{
@@ -261,6 +263,8 @@ public class UserInfo extends L2GameServerPacket
 		openCloak = player.getOpenCloak();
 		_allowMap = player.isActionBlocked(Zone.BLOCKED_ACTION_MINIMAP);
 		fishing = player.isFishing() ? 1 : 0; // Fishing Mode
+		_partySubstitute = 0;
+		inv = player.getInventory();
 		can_writeImpl = true;
 	}
 	
@@ -319,15 +323,15 @@ public class UserInfo extends L2GameServerPacket
 		writeD(talismans);
 		writeD(openCloak ? 0x01 : 0x00);
 		
+		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_RHAND)); // Tauti
+		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_LHAND)); // Tauti
 		writeD(0); // Tauti
-		writeD(0); // Tauti
-		writeD(0); // Tauti
-		writeD(0); // Tauti
-		writeD(0); // Tauti
-		writeD(0); // Tauti
-		writeD(0); // Tauti
-		writeD(0); // Tauti
-		writeD(0); // Tauti
+		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_GLOVES)); // Tauti
+		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_CHEST)); // Tauti
+		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_LEGS)); // Tauti
+		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_FEET)); // Tauti
+		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_HAIR)); // Tauti
+		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_DHAIR)); // Tauti
 		
 		writeD(_patk);
 		writeD(_patkspd);
@@ -387,7 +391,7 @@ public class UserInfo extends L2GameServerPacket
 		writeD(mount_id);
 		writeH(InventoryLimit);
 		writeD(class_id);
-		writeD(0x00);
+		writeD(0x00); // special effects? circles around player...
 		writeD(maxCp);
 		writeD(curCp);
 		writeC(_enchant);
@@ -427,7 +431,7 @@ public class UserInfo extends L2GameServerPacket
 		
 		writeD(0x00);// Unknown GOD
 		writeD(0x00);// Unknown GOD (1 - Party searching?)
-		writeC(0x00);// Unknown GOD
+		writeC(_partySubstitute);
 		writeD(0x00);// Unknown GOD
 		
 		if (_aveList != null)
@@ -442,7 +446,5 @@ public class UserInfo extends L2GameServerPacket
 		{
 			writeD(0x00);
 		}
-		
-		writeC(0); // Tauti
 	}
 }

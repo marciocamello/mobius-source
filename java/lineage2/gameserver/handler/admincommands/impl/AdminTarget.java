@@ -57,7 +57,7 @@ public class AdminTarget implements IAdminCommandHandler
 			GameObject obj = World.getPlayer(targetName);
 			if ((obj != null) && obj.isPlayer())
 			{
-				obj.onAction(activeChar, false);
+				obj.onActionSelect(activeChar, false);
 			}
 			else
 			{

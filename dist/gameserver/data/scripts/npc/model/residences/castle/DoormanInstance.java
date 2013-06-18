@@ -151,7 +151,7 @@ public class DoormanInstance extends npc.model.residences.DoormanInstance
 		Clan residenceOwner = residence.getOwner();
 		if ((residenceOwner != null) && (player.getClan() == residenceOwner) && ((player.getClanPrivileges() & getOpenPriv()) == getOpenPriv()))
 		{
-			if (residence.getSiegeEvent().isInProgress() || residence.getDominion().getSiegeEvent().isInProgress())
+			if (residence.getSiegeEvent().isInProgress())
 			{
 				return COND_SIEGE;
 			}

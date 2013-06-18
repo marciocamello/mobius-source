@@ -21,20 +21,13 @@ import java.util.Map;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.dao.SiegeClanDAO;
-import lineage2.gameserver.data.xml.holder.EventHolder;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.handler.admincommands.AdminCommandHandler;
 import lineage2.gameserver.model.GameObject;
-import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.entity.events.EventType;
-import lineage2.gameserver.model.entity.events.impl.DominionSiegeEvent;
-import lineage2.gameserver.model.entity.events.impl.DominionSiegeRunnerEvent;
 import lineage2.gameserver.model.entity.events.impl.FortressSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.entity.events.objects.SiegeClanObject;
-import lineage2.gameserver.model.entity.residence.Dominion;
 import lineage2.gameserver.model.entity.residence.Fortress;
 import lineage2.gameserver.model.entity.residence.Residence;
 import lineage2.gameserver.model.pledge.Clan;
@@ -73,18 +66,6 @@ public class AdminResidence extends ScriptAdminCommand
 		 */
 		admin_set_siege_time,
 		/**
-		 * Field admin_start_dominion_war.
-		 */
-		admin_start_dominion_war,
-		/**
-		 * Field admin_stop_dominion_war.
-		 */
-		admin_stop_dominion_war,
-		/**
-		 * Field admin_set_dominion_time.
-		 */
-		admin_set_dominion_time,
-		/**
 		 * Field admin_quick_siege_start.
 		 */
 		admin_quick_siege_start,
@@ -122,7 +103,6 @@ public class AdminResidence extends ScriptAdminCommand
 		final SiegeEvent<?, ?> event;
 		Calendar calendar;
 		NpcHtmlMessage msg;
-		final DominionSiegeRunnerEvent runnerEvent;
 		switch (command)
 		{
 			case admin_residence_list:
@@ -163,63 +143,27 @@ public class AdminResidence extends ScriptAdminCommand
 				}
 				event = r.getSiegeEvent();
 				msg = new NpcHtmlMessage(5);
-				if (r instanceof Dominion)
+				msg.setFile("admin/residence/siege_info.htm");
+				msg.replace("%residence%", HtmlUtils.htmlResidenceName(r.getId()));
+				msg.replace("%id%", String.valueOf(r.getId()));
+				msg.replace("%owner%", (r.getOwner() == null) ? "NPC" : r.getOwner().getName());
+				msg.replace("%cycle%", String.valueOf(r.getCycle()));
+				msg.replace("%paid_cycle%", String.valueOf(r.getPaidCycle()));
+				msg.replace("%reward_count%", String.valueOf(r.getRewardCount()));
+				msg.replace("%left_time%", String.valueOf(r.getCycleDelay()));
+				final StringBuilder clans = new StringBuilder(100);
+				for (Map.Entry<String, List<Serializable>> entry : event.getObjects().entrySet())
 				{
-					msg.setFile("admin/residence/dominion_siege_info.htm");
-					msg.replace("%residence%", HtmlUtils.htmlResidenceName(r.getId()));
-					msg.replace("%id%", String.valueOf(r.getId()));
-					msg.replace("%owner%", (r.getOwner() == null) ? "NPC" : r.getOwner().getName());
-					StringBuilder builder = new StringBuilder(100);
-					List<SiegeClanObject> clans = event.getObjects(SiegeEvent.ATTACKERS);
-					for (SiegeClanObject clan : clans)
+					for (Serializable o : entry.getValue())
 					{
-						builder.append("<tr>").append("<td>").append(clan.getClan().getName()).append("</td>").append("<td>").append(clan.getClan().getLeaderName()).append("</td>").append("<td>").append(SiegeEvent.ATTACKERS).append("</td>").append("</tr>");
-					}
-					clans = event.getObjects(SiegeEvent.DEFENDERS);
-					for (SiegeClanObject clan : clans)
-					{
-						builder.append("<tr>").append("<td>").append(clan.getClan().getName()).append("</td>").append("<td>").append(clan.getClan().getLeaderName()).append("</td>").append("<td>").append(SiegeEvent.DEFENDERS).append("</td>").append("</tr>");
-					}
-					msg.replace("%clans%", builder.toString());
-					builder = new StringBuilder(100);
-					List<Integer> players = event.getObjects(DominionSiegeEvent.ATTACKER_PLAYERS);
-					for (int i : players)
-					{
-						Player player = GameObjectsStorage.getPlayer(i);
-						builder.append("<tr>").append("<td>").append(i).append("</td>").append("<td>").append((player == null) ? "null" : player.getName()).append("</td>").append("<td>").append(DominionSiegeEvent.ATTACKER_PLAYERS).append("</td>").append("</tr>");
-					}
-					players = event.getObjects(DominionSiegeEvent.DEFENDER_PLAYERS);
-					for (int i : players)
-					{
-						Player player = GameObjectsStorage.getPlayer(i);
-						builder.append("<tr>").append("<td>").append(i).append("</td>").append("<td>").append((player == null) ? "null" : player.getName()).append("</td>").append("<td>").append(DominionSiegeEvent.DEFENDER_PLAYERS).append("</td>").append("</tr>");
-					}
-					msg.replace("%players%", builder.toString());
-				}
-				else
-				{
-					msg.setFile("admin/residence/siege_info.htm");
-					msg.replace("%residence%", HtmlUtils.htmlResidenceName(r.getId()));
-					msg.replace("%id%", String.valueOf(r.getId()));
-					msg.replace("%owner%", (r.getOwner() == null) ? "NPC" : r.getOwner().getName());
-					msg.replace("%cycle%", String.valueOf(r.getCycle()));
-					msg.replace("%paid_cycle%", String.valueOf(r.getPaidCycle()));
-					msg.replace("%reward_count%", String.valueOf(r.getRewardCount()));
-					msg.replace("%left_time%", String.valueOf(r.getCycleDelay()));
-					final StringBuilder clans = new StringBuilder(100);
-					for (Map.Entry<String, List<Serializable>> entry : event.getObjects().entrySet())
-					{
-						for (Serializable o : entry.getValue())
+						if (o instanceof SiegeClanObject)
 						{
-							if (o instanceof SiegeClanObject)
-							{
-								SiegeClanObject siegeClanObject = (SiegeClanObject) o;
-								clans.append("<tr>").append("<td>").append(siegeClanObject.getClan().getName()).append("</td>").append("<td>").append(siegeClanObject.getClan().getLeaderName()).append("</td>").append("<td>").append(siegeClanObject.getType()).append("</td>").append("</tr>");
-							}
+							SiegeClanObject siegeClanObject = (SiegeClanObject) o;
+							clans.append("<tr>").append("<td>").append(siegeClanObject.getClan().getName()).append("</td>").append("<td>").append(siegeClanObject.getClan().getLeaderName()).append("</td>").append("<td>").append(siegeClanObject.getType()).append("</td>").append("</tr>");
 						}
 					}
-					msg.replace("%clans%", clans.toString());
 				}
+				msg.replace("%clans%", clans.toString());
 				msg.replace("%hour%", String.valueOf(r.getSiegeDate().get(Calendar.HOUR_OF_DAY)));
 				msg.replace("%minute%", String.valueOf(r.getSiegeDate().get(Calendar.MINUTE)));
 				msg.replace("%day%", String.valueOf(r.getSiegeDate().get(Calendar.DAY_OF_MONTH)));
@@ -251,17 +195,10 @@ public class AdminResidence extends ScriptAdminCommand
 				}
 				event = r.getSiegeEvent();
 				event.clearActions();
-				if (r instanceof Dominion)
-				{
-					r.changeOwner(clan);
-				}
-				else
-				{
-					r.getLastSiegeDate().setTimeInMillis((clan == null) ? 0 : System.currentTimeMillis());
-					r.getOwnDate().setTimeInMillis((clan == null) ? 0 : System.currentTimeMillis());
-					r.changeOwner(clan);
-					event.reCalcNextTime(false);
-				}
+				r.getLastSiegeDate().setTimeInMillis((clan == null) ? 0 : System.currentTimeMillis());
+				r.getOwnDate().setTimeInMillis((clan == null) ? 0 : System.currentTimeMillis());
+				r.changeOwner(clan);
+				event.reCalcNextTime(false);
 				break;
 			case admin_set_siege_time:
 				r = ResidenceHolder.getInstance().getResidence(Integer.parseInt(wordList[1]));
@@ -341,56 +278,6 @@ public class AdminResidence extends ScriptAdminCommand
 					}
 				});
 				AdminCommandHandler.getInstance().useAdminCommandHandler(activeChar, "admin_residence " + r.getId());
-				break;
-			case admin_start_dominion_war:
-				calendar = Calendar.getInstance();
-				if (wordList.length >= 2)
-				{
-					calendar.set(Calendar.SECOND, -Integer.parseInt(wordList[1]));
-				}
-				runnerEvent = EventHolder.getInstance().getEvent(EventType.MAIN_EVENT, 1);
-				runnerEvent.clearActions();
-				for (Fortress f : ResidenceHolder.getInstance().getResidenceList(Fortress.class))
-				{
-					f.getSiegeEvent().clearActions();
-					if (f.getSiegeEvent().isInProgress())
-					{
-						f.getSiegeEvent().stopEvent();
-					}
-					f.getSiegeEvent().removeObjects(SiegeEvent.ATTACKERS);
-					SiegeClanDAO.getInstance().delete(f);
-				}
-				for (Dominion d : runnerEvent.getRegisteredDominions())
-				{
-					d.getSiegeEvent().clearActions();
-					d.getSiegeDate().setTimeInMillis(calendar.getTimeInMillis());
-				}
-				runnerEvent.getSiegeDate().setTimeInMillis(calendar.getTimeInMillis());
-				runnerEvent.registerActions();
-				break;
-			case admin_stop_dominion_war:
-				runnerEvent = EventHolder.getInstance().getEvent(EventType.MAIN_EVENT, 1);
-				runnerEvent.clearActions();
-				ThreadPoolManager.getInstance().execute(new RunnableImpl()
-				{
-					@Override
-					public void runImpl()
-					{
-						for (Fortress f : ResidenceHolder.getInstance().getResidenceList(Fortress.class))
-						{
-							if (f.getSiegeEvent().isInProgress())
-							{
-								f.getSiegeEvent().stopEvent();
-							}
-						}
-						for (Dominion d : runnerEvent.getRegisteredDominions())
-						{
-							d.getSiegeEvent().clearActions();
-							d.getSiegeEvent().stopEvent();
-						}
-						runnerEvent.stopEvent();
-					}
-				});
 				break;
 			case admin_backup_unit_info:
 				final GameObject target = activeChar.getTarget();

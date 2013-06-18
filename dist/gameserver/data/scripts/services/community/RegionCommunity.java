@@ -562,7 +562,7 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 				player.sendPacket(new RadarControl(0, 2, seller.getLoc()));
 				if (player.knowsObject(seller))
 				{
-					player.setObjectTarget(seller);
+					player.setTarget(seller);
 					seller.broadcastRelationChanged();
 				}
 			}

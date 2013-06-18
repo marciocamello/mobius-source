@@ -314,6 +314,58 @@
 			<mul stat="pvpMagicSkillDefenceBonus" order="0x30" val="1.15"/>
 		</for>
 	</skill>
+	<skill id="19039" levels="1" name="Cloak of Light">
+	<!--All Stats +2, decreased damage received during PvP by 5%. Ineffective in Chaotic state.-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="icon" val="icon.skill19039"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="magicLevel" val="1"/>
+		<for>
+			<add stat="STR" order="0x10" val="2"/>
+			<add stat="DEX" order="0x10" val="2"/>
+			<add stat="CON" order="0x10" val="2"/>
+			<add stat="MEN" order="0x10" val="2"/>
+			<add stat="WIT" order="0x10" val="2"/>
+			<add stat="INT" order="0x10" val="2"/>
+			<mul stat="pvpPhysDefenceBonus" order="0x30" val="1.05"/>
+			<mul stat="pvpPhysSkillDefenceBonus" order="0x30" val="1.05"/>
+			<mul stat="pvpMagicSkillDefenceBonus" order="0x30" val="1.05"/>
+		</for>
+	</skill>
+	<!--All Stats +2, decreased damage received during PvP by 5%.-->
+	<skill id="19040" levels="1" name="Cloak of Darkness">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="icon" val="icon.skill19040"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="magicLevel" val="1"/>
+		<for>
+			<add stat="STR" order="0x10" val="2"/>
+			<add stat="DEX" order="0x10" val="2"/>
+			<add stat="CON" order="0x10" val="2"/>
+			<add stat="MEN" order="0x10" val="2"/>
+			<add stat="WIT" order="0x10" val="2"/>
+			<add stat="INT" order="0x10" val="2"/>
+			<mul stat="pvpPhysDefenceBonus" order="0x30" val="1.05"/>
+			<mul stat="pvpPhysSkillDefenceBonus" order="0x30" val="1.05"/>
+			<mul stat="pvpMagicSkillDefenceBonus" order="0x30" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="19041" levels="1" name="Castle Return">
+		<set name="icon" val="icon.skill19041"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="magicLevel" val="1"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RECALL"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="castle" val="true"/>
+		<set name="reuseDelay" val="1800000"/>
+		<set name="hitTime" val="20000"/>
+		<set name="isHandler" val="true"/>
+		<set name="hitCancelTime" val="500"/>
+	</skill>
 	<skill id="19074" levels="1" name="Academy Precept">
     <!-- For 60 minutes, increases academy members' P. Atk. by 10%, M. Atk. by 10%, Critical Rate by 10%, and M. Critical Rate by 10%. -->
 		<set name="isClanSkill" val="true"/>
@@ -483,5 +535,18 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="19099" levels="1" name="GM's Authority">
+    <!-- Inflicts petrification on the target for 60 minutes. -->
+		<set name="power" val="99999"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillType" val="PARALYZE"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="relationSkillsId" val="437;1097"/>
+		<for>
+		<effect count="1" name="Petrification" stackOrder="-1" stackType="paralyze" time="3600" val="0">
+			<set order="0x80" stat="regHp" val="0"/>
+		</effect>
+		</for>
 	</skill>
 </list>

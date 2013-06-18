@@ -57,5 +57,9 @@ public enum SummonType
 	/**
 	 * Field CLONE.
 	 */
-	CLONE
+	CLONE,
+	/**
+	 * Field NPC.
+	 */
+	NPC
 }

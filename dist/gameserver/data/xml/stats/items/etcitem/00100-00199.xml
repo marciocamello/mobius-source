@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="136" name="(Not In Use)">
+	<etcitem id="136" name="(Not in Use)">
+	<!-- Dimensional Item Pack
+	Wrapped pack containing an Agathion - Angry Devil (30-day). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -13,7 +15,9 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="137" name="(Not In Use)">
+	<etcitem id="137" name="(Not in Use)">
+	<!-- Dimensional Item Pack
+	Wrapped pack containing an Agathion - Shiny (30-day). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -25,7 +29,9 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="138" name="(Not In Use)">
+	<etcitem id="138" name="(Not in Use)">
+	<!-- Dimensional Item Pack
+	Wrapped pack containing an Agathion - Sobbing (30-day). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -37,7 +43,9 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="139" name="Sudden Agathion 7 Day Pack">
+	<etcitem id="139" name="Agathion - Angry Devil Pack (7-day)">
+	<!-- Dimensional Item Pack
+	Wrapped pack containing an Agathion - Angry Devil (7-day). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -49,7 +57,9 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="140" name="Shiny Agathion 7 Day Pack">
+	<etcitem id="140" name="Agathion - Shiny Pack (7-day)">
+	<!-- Dimensional Item Pack
+	Wrapped pack containing an Agathion - Shiny (7-day). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -61,7 +71,9 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="141" name="Sobbing Agathion 7 Day Pack">
+	<etcitem id="141" name="Agathion - Sobbing Pack (7-day)">
+	<!-- Dimensional Item Pack
+	Wrapped pack containing an Agathion - Sobbing (7-day). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -73,7 +85,9 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="163" name="(Not In Use)">
+	<etcitem id="163" name="(Not in Use)">
+	<!-- Dimensional Item Pack
+	Wrapped pack containing an Agathion - Sobbing (30-day). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -85,7 +99,9 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="170" name="Sudden Agathion 7 Day Pack (Event)">
+	<etcitem id="170" name="Agathion - Angry Devil Pack (7-day) (Event)">
+	<!-- Dimensional Item Pack
+	Wrapped pack containing an Agathion - Angry Devil (7-day). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

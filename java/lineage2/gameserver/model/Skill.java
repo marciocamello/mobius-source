@@ -93,6 +93,7 @@ import lineage2.gameserver.skills.skillclasses.NegateStats;
 import lineage2.gameserver.skills.skillclasses.PDam;
 import lineage2.gameserver.skills.skillclasses.PcBangPointsAdd;
 import lineage2.gameserver.skills.skillclasses.PetSummon;
+import lineage2.gameserver.skills.skillclasses.Plunder;
 import lineage2.gameserver.skills.skillclasses.Recall;
 import lineage2.gameserver.skills.skillclasses.ReelingPumping;
 import lineage2.gameserver.skills.skillclasses.Refill;
@@ -112,7 +113,6 @@ import lineage2.gameserver.skills.skillclasses.SummonServitor;
 import lineage2.gameserver.skills.skillclasses.SummonSiegeFlag;
 import lineage2.gameserver.skills.skillclasses.Sweep;
 import lineage2.gameserver.skills.skillclasses.TakeCastle;
-import lineage2.gameserver.skills.skillclasses.TakeFlag;
 import lineage2.gameserver.skills.skillclasses.TakeFortress;
 import lineage2.gameserver.skills.skillclasses.TameControl;
 import lineage2.gameserver.skills.skillclasses.TeleportNpc;
@@ -430,6 +430,10 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		 * Field TARGET_SUMMON_AURA.
 		 */
 		TARGET_SUMMON_AURA,
+		/**
+		 * Field TARGET_SUMMON_AURA_AND_ME.
+		 */
+		TARGET_SUMMON_AURA_AND_ME,
 		/**
 		 * Field TARGET_GROUND.
 		 */
@@ -815,10 +819,6 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		 */
 		TAMECONTROL(TameControl.class),
 		/**
-		 * Field TAKEFLAG.
-		 */
-		TAKEFLAG(TakeFlag.class),
-		/**
 		 * Field TELEPORT_NPC.
 		 */
 		TELEPORT_NPC(TeleportNpc.class),
@@ -841,7 +841,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		/**
 		 * Field SWEEP.
 		 */
-		PLUNDER(Sweep.class);
+		PLUNDER(Plunder.class);
 		/**
 		 * Field clazz.
 		 */
@@ -1970,7 +1970,6 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	{
 		if ((activeChar.getActiveWeaponInstance() != null) && (activeChar.getActiveWeaponItem() != null))
 		{
-			
 			for (Entry<List<String>, Double> e : _powerModifiers.entrySet())
 			{
 				for (String weaponName : e.getKey())
@@ -2184,7 +2183,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		{
 			return SystemMsg.YOUR_TARGET_IS_OUT_OF_RANGE;
 		}
-		if ((_skillType == SkillType.TAKECASTLE) || (_skillType == SkillType.TAKEFORTRESS) || (_skillType == SkillType.TAKEFLAG))
+		if ((_skillType == SkillType.TAKECASTLE) || (_skillType == SkillType.TAKEFORTRESS))
 		{
 			return null;
 		}
@@ -2314,7 +2313,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 					{
 						return null;
 					}
-					if (pcTarget.getKarma() < 0)
+					if (pcTarget.isChaotic())
 					{
 						return null;
 					}
@@ -2372,7 +2371,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				{
 					return SystemMsg.INVALID_TARGET;
 				}
-				if (pcTarget.getKarma() < 0)
+				if (pcTarget.isChaotic())
 				{
 					return SystemMsg.INVALID_TARGET;
 				}
@@ -2410,6 +2409,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		switch (_targetType)
 		{
 			case TARGET_SUMMON_AURA:
+			case TARGET_SUMMON_AURA_AND_ME:
 			case TARGET_ALLY:
 			case TARGET_CLAN:
 			case TARGET_PARTY:
@@ -2433,12 +2433,12 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			case TARGET_FEEDABLE_BEAST:
 				return target instanceof FeedableBeastInstance ? target : null;
 			case TARGET_PET:
+				return (target != null) && (target.isPet()) && (target.isDead() == _isCorpse) ? target : null;
 			case TARGET_PET_AURA:
 				target = activeChar.getPlayer().getSummonList().getFirstServitor();
 				return (target != null) && (target.isDead() == _isCorpse) ? target : null;
 			case TARGET_SUMMON:
-				target = activeChar.getPlayer().getSummonList().getSecondServitor();
-				return (target != null) && (target.isDead() == _isCorpse) ? target : null;
+				return (target != null) && (target.isServitor()) && (target.isDead() == _isCorpse) ? target : null;
 			case TARGET_OWNER:
 				if (activeChar.isServitor() || activeChar.isPet())
 				{
@@ -2626,10 +2626,17 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				addTargetsToList(targets, activeChar.getPlayer().getSummonList().getFirstServitor(), activeChar, forceUse);
 				break;
 			case TARGET_SUMMON_AURA:
+			case TARGET_SUMMON_AURA_AND_ME:
 				List<Summon> servitors = activeChar.getPlayer().getSummonList().getServitors();
 				for (Summon summon : servitors)
 				{
 					targets.add(summon);
+				}
+				switch (_targetType)
+				{
+					case TARGET_SUMMON_AURA_AND_ME:
+						targets.add(activeChar);
+						break;
 				}
 				break;
 			case TARGET_PARTY:
@@ -4377,6 +4384,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			case TARGET_PARTY:
 			case TARGET_PARTY_WITHOUT_ME:
 			case TARGET_SUMMON_AURA:
+			case TARGET_SUMMON_AURA_AND_ME:
 				return true;
 			default:
 				return false;

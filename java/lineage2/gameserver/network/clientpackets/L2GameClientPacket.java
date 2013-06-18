@@ -17,6 +17,7 @@ import java.util.List;
 
 import lineage2.commons.net.nio.impl.ReceivablePacket;
 import lineage2.gameserver.GameServer;
+import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 
@@ -133,5 +134,10 @@ public abstract class L2GameClientPacket extends ReceivablePacket<GameClient>
 	public String getType()
 	{
 		return "[C] " + getClass().getSimpleName();
+	}
+	
+	public Player getActiveChar()
+	{
+		return getClient().getActiveChar();
 	}
 }

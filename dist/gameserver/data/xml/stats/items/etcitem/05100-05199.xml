@@ -40,7 +40,7 @@
 		<set name="type" value="SEED"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="5104" name="Mature Shining Coda">
+	<etcitem id="5104" name="Mature Coda of Light">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -243,6 +243,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="5125" name="Harvester">
+	<!-- Used to harvest the crop from the corpse of the monster on which a seed was sown. Most successful when character and target are not more than 5 levels apart. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -251,7 +252,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="5126" name="Dualsword Craft Stamp">
+	<etcitem id="5126" name="Dual Weapon Crafting Stamp">
+	<!-- Certificate obtained from a shop or quest. Essential component for making dualswords of B-grade and higher. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -261,7 +263,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="5134" name="Compressed Package of Soulshots: No Grade">
+	<etcitem id="5134" name="Compressed Package of Soulshots (No-grade)">
+	<!-- 300 compressed soulshots. No-grade . -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -274,7 +277,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="5135" name="Compressed Package of Soulshots: D-grade">
+	<etcitem id="5135" name="Compressed Package of Soulshots (D-grade)">
+	<!-- 300 compressed soulshots. D-grade. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -287,7 +291,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="5136" name="Compressed Package of Soulshots: C-grade">
+	<etcitem id="5136" name="Compressed Package of Soulshots (C-grade)">
+	<!-- 300 compressed soulshots. C-grade. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -300,46 +305,50 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="5137" name="Compressed Package of Soulshots: B-grade">
+	<etcitem id="5137" name="Compressed Package of Soulshots (B-grade)">
+	<!-- 300 compressed soulshots. B-grade. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
 		<set name="price" value="16500"/>
 		<set name="type" value="OTHER"/>
-		<set name="weight" value="300"/>
+		<set name="weight" value="200"/>
 		<skills>
 			<skill id="2081" level="1"/>
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="5138" name="Compressed Package of Soulshots: A-grade">
+	<etcitem id="5138" name="Compressed Package of Soulshots (A-grade)">
+	<!-- 300 compressed soulshots. A-grade. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
 		<set name="price" value="26400"/>
 		<set name="type" value="OTHER"/>
-		<set name="weight" value="300"/>
+		<set name="weight" value="200"/>
 		<skills>
 			<skill id="2082" level="1"/>
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="5139" name="Compressed Package of Soulshots: S-grade">
+	<etcitem id="5139" name="Compressed Package of Soulshots (S-grade)">
+	<!-- 300 compressed soulshots. S-grade. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
 		<set name="price" value="33000"/>
 		<set name="type" value="OTHER"/>
-		<set name="weight" value="300"/>
+		<set name="weight" value="200"/>
 		<skills>
 			<skill id="2083" level="1"/>
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="5140" name="Compressed Package of Spiritshots: No Grade">
+	<etcitem id="5140" name="Compressed Package of Spiritshots (No-grade)">
+	<!-- 300 compressed spiritshots. No-grade . -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -352,7 +361,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="5141" name="Compressed Package of Spiritshots: D-grade">
+	<etcitem id="5141" name="Compressed Package of Spiritshots (D-grade)">
+	<!-- 300 compressed spiritshots. D-grade. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -365,7 +375,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="5142" name="Compressed Package of Spiritshots: C-grade">
+	<etcitem id="5142" name="Compressed Package of Spiritshots (C-grade)">
+	<!-- 300 compressed spiritshots. C-grade. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -378,7 +389,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="5143" name="Compressed Package of Spiritshots: B-grade">
+	<etcitem id="5143" name="Compressed Package of Spiritshots (B-grade)">
+	<!-- 300 compressed spiritshots. B-grade. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -391,33 +403,36 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="5144" name="Compressed Package of Spiritshots: A-grade">
+	<etcitem id="5144" name="Compressed Package of Spiritshots (A-grade)">
+	<!-- 300 compressed spiritshots. A-grade. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
 		<set name="price" value="39600"/>
 		<set name="type" value="OTHER"/>
-		<set name="weight" value="300"/>
+		<set name="weight" value="200"/>
 		<skills>
 			<skill id="2088" level="1"/>
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="5145" name="Compressed Package of Spiritshots: S-grade">
+	<etcitem id="5145" name="Compressed Package of Spiritshots (S-grade)">
+	<!-- 300 compressed spiritshots. S-grade. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
 		<set name="price" value="49500"/>
 		<set name="type" value="OTHER"/>
-		<set name="weight" value="300"/>
+		<set name="weight" value="200"/>
 		<skills>
 			<skill id="2089" level="1"/>
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="5146" name="Compressed Package of Blessed Spiritshots: No Grade">
+	<etcitem id="5146" name="Compressed Package of Blessed Spiritshots (No-grade)">
+	<!-- 300 compressed blessed spiritshots. No-grade . -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -430,7 +445,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="5147" name="Compressed Package of Blessed Spiritshots: D-grade">
+	<etcitem id="5147" name="Compressed Package of Blessed Spiritshots (D-grade)">
+	<!-- 300 compressed blessed spiritshots. D-grade. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -443,7 +459,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="5148" name="Compressed Package of Blessed Spiritshots: C-grade">
+	<etcitem id="5148" name="Compressed Package of Blessed Spiritshots (C-grade)">
+	<!-- 300 compressed blessed spiritshots. C-grade. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -456,7 +473,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="5149" name="Compressed Package of Blessed Spiritshots: B-grade">
+	<etcitem id="5149" name="Compressed Package of Blessed Spiritshots (B-grade)">
+	<!-- 300 compressed blessed spiritshots. B-grade. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -469,33 +487,36 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="5150" name="Compressed Package of Blessed Spiritshots: A-grade">
+	<etcitem id="5150" name="Compressed Package of Blessed Spiritshots (A-grade)">
+	<!-- 300 compressed blessed spiritshots. A-grade. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
 		<set name="price" value="95700"/>
 		<set name="type" value="OTHER"/>
-		<set name="weight" value="300"/>
+		<set name="weight" value="200"/>
 		<skills>
 			<skill id="2094" level="1"/>
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="5151" name="Compressed Package of Blessed Spiritshots: S-grade">
+	<etcitem id="5151" name="Compressed Package of Blessed Spiritshots (S-grade)">
+	<!-- 300 compressed blessed spiritshots. S-grade. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
 		<set name="price" value="115500"/>
 		<set name="type" value="OTHER"/>
-		<set name="weight" value="300"/>
+		<set name="weight" value="200"/>
 		<skills>
 			<skill id="2095" level="1"/>
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="5152" name="Magic Compressor">
+	<!-- Magic tool needed to compress soulshots, spiritshots etc. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -504,7 +525,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
 	</etcitem>
-	<etcitem id="5153" name="Recipe: Soulshot (D) Compressed Package (100%)">
+	<etcitem id="5153" name="Recipe: Soulshot (D) Compressed Package">
+	<!-- For Dwarves only. Recipe for the Compressed Package of Soulshots (D-grade) . Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -514,7 +536,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5154" name="Recipe: Soulshot (C) Compressed Package (100%)">
+	<etcitem id="5154" name="Recipe: Soulshot (C) Compressed Package">
+	<!-- For Dwarves only. Recipe for the Compressed Package of Soulshots (C-grade) . Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -524,7 +547,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5155" name="Recipe: Soulshot (B) Compressed Package (100%)">
+	<etcitem id="5155" name="Recipe: Soulshot (B) Compressed Package">
+	<!-- For Dwarves only. Recipe for the Compressed Package of Soulshots (B-grade). Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_red_i00"/>
@@ -534,7 +558,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5156" name="Recipe: Soulshot (A) Compressed Package (100%)">
+	<etcitem id="5156" name="Recipe: Soulshot (A) Compressed Package">
+	<!-- For Dwarves only. Recipe for the Compressed Package of Soulshots (A-grade) . Requires Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -544,7 +569,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5157" name="Recipe: Soulshot (S) Compressed Package (100%)">
+	<etcitem id="5157" name="Recipe: Soulshot (S) Compressed Package">
+	<!-- For Dwarves only. Recipe for the Compressed Package of Soulshots (S-grade) . Requires Create Item - Skill Level 8. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_black_i00"/>
@@ -554,7 +580,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5158" name="Recipe: Spiritshot (D) Compressed Package (100%)">
+	<etcitem id="5158" name="Recipe: Spiritshot (D) Compressed Package">
+	<!-- For Dwarves only. Recipe for the Compressed Package of Spiritshots (D-grade) . Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -564,7 +591,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5159" name="Recipe: Spiritshot (C) Compressed Package (100%)">
+	<etcitem id="5159" name="Recipe: Spiritshot (C) Compressed Package">
+	<!-- For Dwarves only. Recipe for the Compressed Package of Spiritshots (C-grade) . Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -574,7 +602,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5160" name="Recipe: Spiritshot (B) Compressed Package (100%)">
+	<etcitem id="5160" name="Recipe: Spiritshot (B) Compressed Package">
+	<!-- For Dwarves only. Recipe for the Compressed Package of Spiritshots (B-grade). Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_red_i00"/>
@@ -584,7 +613,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5161" name="Recipe: Spiritshot (A) Compressed Package (100%)">
+	<etcitem id="5161" name="Recipe: Spiritshot (A) Compressed Package">
+	<!-- For Dwarves only. Recipe for the Compressed Package of Spiritshots (A-grade) . Requires Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -594,7 +624,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5162" name="Recipe: Spiritshot (S) Compressed Package (100%)">
+	<etcitem id="5162" name="Recipe: Spiritshot (S) Compressed Package">
+	<!-- For Dwarves only. Recipe for the Compressed Package of Spiritshots (S-grade) . Requires Create Item - Skill Level 8. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_black_i00"/>
@@ -604,7 +635,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5163" name="Recipe: Blessed Spiritshot (D) Compressed Package (100%)">
+	<etcitem id="5163" name="Recipe: Blessed Spiritshot (D) Compressed Package">
+	<!-- For Dwarves only. Recipe for the Compressed Package of Blessed Spiritshots (D-grade) . Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -614,7 +646,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5164" name="Recipe: Blessed Spiritshot (C) Compressed Package (100%)">
+	<etcitem id="5164" name="Recipe: Blessed Spiritshot (C) Compressed Package">
+	<!-- For Dwarves only. Recipe for the Compressed Package of Blessed Spiritshots (C-grade) . Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -624,7 +657,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5165" name="Recipe: Blessed Spiritshot (B) Compressed Package (100%)">
+	<etcitem id="5165" name="Recipe: Blessed Spiritshot (B) Compressed Package">
+	<!-- For Dwarves only. Recipe for the Compressed Package of Blessed Spiritshots (B-grade). Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_red_i00"/>
@@ -634,7 +668,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5166" name="Recipe: Blessed Spiritshot (A) Compressed Package (100%)">
+	<etcitem id="5166" name="Recipe: Blessed Spiritshot (A) Compressed Package">
+	<!-- For Dwarves only. Recipe for the Compressed Package of Blessed Spiritshots (A-grade) . Requires Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -644,7 +679,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5167" name="Recipe: Blessed Spiritshot (S) Compressed Package (100%)">
+	<etcitem id="5167" name="Recipe: Blessed Spiritshot (S) Compressed Package">
+	<!-- For Dwarves only. Recipe for the Compressed Package of Blessed Spiritshots (S-grade) . Requires Create Item - Skill Level 8. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_black_i00"/>
@@ -655,6 +691,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="5168" name="Food for Strider">
+	<!-- When the hunger gauge of a Strider reaches 55% or below, its food will be consumed automatically. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -674,6 +711,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="5169" name="Deluxe Food for Strider">
+	<!-- When the hunger gauge of a Strider reaches 55% or below, its food will be consumed automatically. Food consumption efficiency improves while riding a Strider. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -692,7 +730,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="5192" name="Rope of Magic: D-Grade">
+	<etcitem id="5192" name="Magic Rope (D-grade)">
+	<!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_braided_hemp_i00"/>
@@ -701,7 +740,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="5193" name="Rope of Magic: C-Grade">
+	<etcitem id="5193" name="Magic Rope (C-grade)">
+	<!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_braided_hemp_i00"/>
@@ -710,7 +750,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="5194" name="Rope of Magic: B-Grade">
+	<etcitem id="5194" name="Magic Rope (B-grade)">
+	<!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_braided_hemp_i00"/>
@@ -719,7 +760,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="5195" name="Rope of Magic: A-Grade">
+	<etcitem id="5195" name="Magic Rope (A-grade)">
+	<!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_braided_hemp_i00"/>
@@ -728,7 +770,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="5196" name="Rope of Magic: S Grade">
+	<etcitem id="5196" name="Magic Rope (S-grade)">
+	<!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_braided_hemp_i00"/>
@@ -738,6 +781,7 @@
 		<set name="weight" value="2"/>
 	</etcitem>
 	<etcitem id="5197" name="Chest Key - Grade 8">
+	<!-- Opens a level 1 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -753,6 +797,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="5198" name="Chest Key - Grade 7">
+	<!-- Opens a level 10 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -768,6 +813,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="5199" name="Chest Key - Grade 6">
+	<!-- Opens a level 20 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

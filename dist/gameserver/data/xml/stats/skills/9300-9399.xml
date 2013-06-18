@@ -75,8 +75,6 @@
 	<skill id="9345" levels="1" name="A Treasure Box">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
-		<set name="itemConsumeId" val="34702"/>
-		<set name="itemConsumeCount" val="1"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="RESTORATION"/>
@@ -86,8 +84,6 @@
 	<skill id="9346" levels="1" name="Hero Treasure Box">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
-		<set name="itemConsumeId" val="34703"/>
-		<set name="itemConsumeCount" val="1"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="RESTORATION"/>

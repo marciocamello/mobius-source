@@ -2,6 +2,7 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<etcitem id="8300" name="Recipe: Infernal Master (60%)">
+	<!-- This formula for manufacturing an Infernal Master can only be used by Dwarves and Requires Create Item - Skill Level 7. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -11,7 +12,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8301" name="Recipe: Priest Sword (100%)">
+	<etcitem id="8301" name="Recipe: Priest Sword">
+	<!-- This formula for manufacturing a Priest Sword can only be used by Dwarves and Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -21,7 +23,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8302" name="Recipe: Sword of Magic Fog (100%)">
+	<etcitem id="8302" name="Recipe: Sword of Magic Fog">
+	<!-- This formula for manufacturing a Sword of Magic Fog can only be used by Dwarves and Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -31,7 +34,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8303" name="Recipe: Mysterious Sword (100%)">
+	<etcitem id="8303" name="Recipe: Mysterious Sword">
+	<!-- This formula for manufacturing a Mysterious Sword can only be used by Dwarves and Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -41,7 +45,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8304" name="Recipe: Ecliptic Sword (100%)">
+	<etcitem id="8304" name="Recipe: Ecliptic Sword">
+	<!-- This formula for manufacturing an Ecliptic Sword can only be used by Dwarves and Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -51,7 +56,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8305" name="Recipe: Wizard's Tear (100%)">
+	<etcitem id="8305" name="Recipe: Wizard's Tear">
+	<!-- This formula for Tears of a Wizard can only be used by Dwarves and Requires Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_red_i00"/>
@@ -62,6 +68,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="8306" name="Recipe: Wizard's Tear (60%)">
+	<!-- This formula for Tears of a Wizard can only be used by Dwarves and Requires Create Item - Skill Level 7. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_red_i00"/>
@@ -71,7 +78,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8307" name="Recipe: Priest Mace (100%)">
+	<etcitem id="8307" name="Recipe: Priest Mace">
+	<!-- This formula for manufacturing a Priest Mace can only be used by Dwarves and Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -81,7 +89,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8308" name="Recipe: Ecliptic Axe (100%)">
+	<etcitem id="8308" name="Recipe: Ecliptic Axe">
+	<!-- This formula for manufacturing an Ecliptic Axe can only be used by Dwarves and Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -91,7 +100,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8309" name="Recipe: Spell Breaker (100%)">
+	<etcitem id="8309" name="Recipe: Spell Breaker">
+	<!-- This formula for manufacturing a Spell Breaker can only be used by Dwarves and Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_red_i00"/>
@@ -102,6 +112,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="8310" name="Recipe: Spell Breaker (60%)">
+	<!-- This formula for manufacturing a Spell Breaker can only be used by Dwarves and Requires Create Item - Skill Level 6. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_red_i00"/>
@@ -111,7 +122,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8311" name="Recipe: Kaim Vanul's Bones (100%)">
+	<etcitem id="8311" name="Recipe: Kaim Vanul's Bones">
+	<!-- This formula for manufacturing the weapon known as Kaim Vanul's Bones can only be used by Dwarves and Requires Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_red_i00"/>
@@ -122,6 +134,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="8312" name="Recipe: Kaim Vanul's Bones (60%)">
+	<!-- This formula for manufacturing the weapon known as Kaim Vanul's Bones can only be used by Dwarves and Requires Create Item - Skill Level 7. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_red_i00"/>
@@ -131,7 +144,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8313" name="Recipe: Spiritual Eye (100%)">
+	<etcitem id="8313" name="Recipe: Spiritual Eye">
+	<!-- This formula for the Spiritual Eye can only be used by Dwarves and requires a Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -142,6 +156,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="8314" name="Recipe: Spiritual Eye (60%)">
+	<!-- This formula for the Spiritual Eye can only be used by Dwarves and requires a Create Item - Skill Level 7. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -151,7 +166,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8315" name="Recipe: Flaming Dragon Skull (100%)">
+	<etcitem id="8315" name="Recipe: Flaming Dragon Skull">
+	<!-- This formula for manufacturing a Flaming Dragon Skull can only be used by Dwarves and Requires Create Item - Skill Level 8. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -162,6 +178,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="8316" name="Recipe: Flaming Dragon Skull (60%)">
+	<!-- This formula for manufacturing a Flaming Dragon Skull can only be used by Dwarves and Requires Create Item - Skill Level 8. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -171,7 +188,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8317" name="Recipe: Titan Hammer (100%)">
+	<etcitem id="8317" name="Recipe: Lesser Giant's Hammer">
+	<!-- This formula for manufacturing a Lesser Giant's Hammer can only be used by Dwarves and Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -181,7 +199,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8318" name="Recipe: Dwarven Hammer (100%)">
+	<etcitem id="8318" name="Recipe: Dwarven Hammer">
+	<!-- This formula for manufacturing a Dwarven Hammer can only be used by Dwarves and Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -191,7 +210,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8319" name="Recipe: Karik Horn (100%)">
+	<etcitem id="8319" name="Recipe: Karik Horn">
+	<!-- This formula for manufacturing a Karik Horn can only be used by Dwarves and Requires Create Item - Skill Level 5. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -201,7 +221,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8320" name="Recipe: Destroyer Hammer (100%)">
+	<etcitem id="8320" name="Recipe: Destroyer Hammer">
+	<!-- This formula for manufacturing a Hammer of the Destroyer can only be used by Dwarves and Requires Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -211,7 +232,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8321" name="Recipe: Ice Storm Hammer (100%)">
+	<etcitem id="8321" name="Recipe: Ice Storm Hammer">
+	<!-- This formula for manufacturing a Storm Hammer can only be used by Dwarves and Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_red_i00"/>
@@ -222,6 +244,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="8322" name="Recipe: Ice Storm Hammer (60%)">
+	<!-- This formula for manufacturing a Storm Hammer can only be used by Dwarves and Requires Create Item - Skill Level 6. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_red_i00"/>
@@ -231,7 +254,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8323" name="Recipe: Star Buster (100%)">
+	<etcitem id="8323" name="Recipe: Star Buster">
+	<!-- This formula for manufacturing a Star Buster can only be used by Dwarves and Requires Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_red_i00"/>
@@ -242,6 +266,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="8324" name="Recipe: Star Buster (60%)">
+	<!-- This formula for manufacturing a Star Buster can only be used by Dwarves and Requires Create Item - Skill Level 7. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_red_i00"/>
@@ -251,7 +276,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8325" name="Recipe: Doom Crusher (100%)">
+	<etcitem id="8325" name="Recipe: Doom Crusher">
+	<!-- This formula for manufacturing a Doom Crusher can only be used by Dwarves and Requires Create Item - Skill Level 8. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -262,6 +288,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="8326" name="Recipe: Doom Crusher (60%)">
+	<!-- This formula for manufacturing a Doom Crusher can only be used by Dwarves and Requires Create Item - Skill Level 8. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -272,6 +299,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="8327" name="Steel Sword Blade">
+	<!-- Vital material used by Dwarves to make Steel Swords. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -280,7 +308,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="8328" name="Titan Sword Blade">
+	<etcitem id="8328" name="Lesser Giant's Sword Blade">
+	<!-- Vital material used by Dwarves to make Lesser Giant's Swords. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -290,6 +319,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8329" name="Pa'agrian Sword Blade">
+	<!-- Vital material used by Dwarves to make Pa'agrian Swords. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -298,7 +328,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="8330" name="Guardian Sword Blade">
+	<etcitem id="8330" name="Guardian's Sword Blade">
+	<!-- Vital material used by Dwarves to make Guardian's Swords. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -308,6 +339,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8331" name="Infernal Master Blade">
+	<!-- Vital material used by Dwarves to make an Infernal Master. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -317,6 +349,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8332" name="Priest Sword Blade">
+	<!-- Vital material used by Dwarves to make Priest Swords. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -326,6 +359,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8333" name="Sword of Magic Fog Blade">
+	<!-- Vital material used by Dwarves to make Swords of Magic Fog. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -335,6 +369,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8334" name="Mysterious Sword Blade">
+	<!-- Vital material used by Dwarves to make Mysterious Swords. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -344,6 +379,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8335" name="Ecliptic Sword Blade">
+	<!-- Vital material used by Dwarves to make Swords of Eclipse. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -353,6 +389,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8336" name="Blade of the Wizard's Tear">
+	<!-- Vital material used by Dwarves to make a Wizard's Tear. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -362,6 +399,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8337" name="Priest Mace Head">
+	<!-- Vital material used by Dwarves to make Priest Maces. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -371,6 +409,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8338" name="Axe of Eclipse Head">
+	<!-- Vital material used by Dwarves to make an Ecliptic Axe. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -380,6 +419,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8339" name="Spell Breaker Head">
+	<!-- Vital material used by Dwarves to make Spell Breakers. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -389,6 +429,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8340" name="Bones Head of Kaim Vanul">
+	<!-- Vital material used by Dwarves to make the weapon known as Kaim Vanul's Bones. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -398,6 +439,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8341" name="Spiritual Eye Piece">
+	<!-- Vital material used by Dwarves to make the Spiritual Eye. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -407,6 +449,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8342" name="Flaming Dragon Skull Piece">
+	<!-- Vital material used by Dwarves to make a Flaming Dragon Skull. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -415,7 +458,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="8343" name="Titan Hammer Piece">
+	<etcitem id="8343" name="Lesser Giant's Hammer Piece">
+	<!-- Vital material used by Dwarves to make Lesser Giant's Hammers. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -425,6 +469,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8344" name="Dwarven Hammer Piece">
+	<!-- Vital material used by Dwarves to make Dwarven Hammers. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -434,6 +479,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8345" name="Karik Horn Piece">
+	<!-- Vital material used by Dwarves to make Karik Horns. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -442,7 +488,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="8346" name="Hammer Piece of Destroyer">
+	<etcitem id="8346" name="Destroyer Hammer Piece">
+	<!-- Vital material used by Dwarves to make Destroyer Hammer. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -452,6 +499,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8347" name="Ice Storm Hammer Head">
+	<!-- Vital material used by Dwarves to make Ice Storm Hammers. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -461,6 +509,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8348" name="Star Buster Head">
+	<!-- Vital material used by Dwarves to make Star Busters. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -470,6 +519,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8349" name="Doom Crusher Head">
+	<!-- Vital material used by Dwarves to make a Red Doom Crusher. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -478,7 +528,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="8351" name="Black Colored Fish Scale">
+	<etcitem id="8351" name="Black Fish Scale">
+	<!-- Take this high-grade fish scale to a Fishing Guild Member to exchange it for an item or sell it to a regular store. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_scale_i00"/>
@@ -488,6 +539,7 @@
 		<set name="weight" value="10"/>
 	</etcitem>
 	<etcitem id="8352" name="Red Colored Fish Scale">
+	<!-- Take this high-grade fish scale to a Fishing Guild Member to exchange it for an item or sell it to a regular store. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_dion_fish_scale_i00"/>
@@ -496,7 +548,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="10"/>
 	</etcitem>
-	<etcitem id="8353" name="Green Colored Fish Scale">
+	<etcitem id="8353" name="Green Fish Scale">
+	<!-- Take this high-grade fish scale to a Fishing Guild Member to exchange it for an item or sell it to a regular store. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_giran_fish_scale_i00"/>
@@ -505,7 +558,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="10"/>
 	</etcitem>
-	<etcitem id="8354" name="Yellow Colored Fish Scale">
+	<etcitem id="8354" name="Yellow Fish Scale">
+	<!-- Take this high-grade fish scale to a Fishing Guild Member to exchange it for an item or sell it to a regular store. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_oren_fish_scale_i00"/>
@@ -515,6 +569,7 @@
 		<set name="weight" value="10"/>
 	</etcitem>
 	<etcitem id="8355" name="Blue Colored Fish Scale">
+	<!-- Take this high-grade fish scale to a Fishing Guild Member to exchange it for an item or sell it to a regular store. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_aden_fish_scale_i00"/>
@@ -524,6 +579,7 @@
 		<set name="weight" value="10"/>
 	</etcitem>
 	<etcitem id="8356" name="White Colored Fish Scale">
+	<!-- Take this high-grade fish scale to a Fishing Guild Member to exchange it for an item or sell it to a regular store. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_innadrile_fish_scale_i00"/>
@@ -533,6 +589,7 @@
 		<set name="weight" value="10"/>
 	</etcitem>
 	<etcitem id="8357" name="Orange Colored Fish Scale">
+	<!-- Take this high-grade fish scale to a Fishing Guild Member to exchange it for an item or sell it to a regular store. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_godad_fish_scale_i00"/>
@@ -541,7 +598,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="10"/>
 	</etcitem>
-	<etcitem id="8358" name="Purple Colored Fish Scale">
+	<etcitem id="8358" name="Purple Fish Scale">
+	<!-- Take this high-grade fish scale to a Fishing Guild Member to exchange it for an item or sell it to a regular store. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_rune_fish_scale_i00"/>
@@ -551,6 +609,7 @@
 		<set name="weight" value="10"/>
 	</etcitem>
 	<etcitem id="8359" name="Jade Colored Fish Scale">
+	<!-- Take this high-grade fish scale to a Fishing Guild Member to exchange it for an item or sell it to a regular store. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_schuttgart_fish_scale_i00"/>
@@ -559,7 +618,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="10"/>
 	</etcitem>
-	<etcitem id="8360" name="Adventurer's Box - C Accessory">
+	<etcitem id="8360" name="Adventurer's Box: C-grade Accessory">
+	<!-- Open the box to obtain C-grade accessories at a certain rate. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -569,7 +629,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="8361" name="Adventurer's Box - B Accessory">
+	<etcitem id="8361" name="Adventurer's Box: B-grade Accessory">
+	<!-- Open the box to obtain B-grade accessories at a certain rate. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -579,7 +640,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="8362" name="Adventurer's Box - Hair Accessory">
+	<etcitem id="8362" name="Adventurer's Box: Hair Accessory">
+	<!-- Open the box to obtain Raider Dragon accessories at a certain rate. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -589,7 +651,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="8363" name="Adventurer's Box - Cradle of Creation">
+	<etcitem id="8363" name="Adventurer's Box: Cradle of Creation">
+	<!-- Open the box to obtain the Cradle of Creation at a certain rate. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -599,7 +662,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="8364" name="Recipe: Party Hat (100%)">
+	<etcitem id="8364" name="Recipe: Party Hat">
+	<!-- This technique for making a Party Hat can be used by all races. Requires Create Item Common Skill level 6. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -610,6 +674,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="8365" name="Recipe: Party Hat (70%)">
+	<!-- This technique for making a Party Hat can be used by all races. Requires Create Item Common Skill level 6. The success rate is 70%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -619,7 +684,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8366" name="Recipe: Feathered Hat (100%)">
+	<etcitem id="8366" name="Recipe: Chapeau">
+	<!-- This formula for making a Chapeau can be used by all races. Requires Create Item Common Skill level 6. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -629,7 +695,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8367" name="Recipe: Feathered Hat (70%)">
+	<etcitem id="8367" name="Recipe: Chapeau (70%)">
+	<!-- This formula for making a Chapeau can be used by all races. Requires Create Item Common Skill level 6. The success rate is 70%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -639,7 +706,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8368" name="Recipe: Artisan's Goggles (100%)">
+	<etcitem id="8368" name="Recipe: Artisan's Goggles">
+	<!-- This formula for making Artisan's Goggles can be used by all races. Requires Create Item Common Skill level 6. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -650,6 +718,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="8369" name="Recipe: Artisan's Goggles (70%)">
+	<!-- This formula for making Artisan's Goggles can be used by all races. Requires Create Item Common Skill level 6. The success rate is 70%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -659,7 +728,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8370" name="Recipe: Red Horn of Victory (100%)">
+	<etcitem id="8370" name="Recipe: Red Horn of Victory">
+	<!-- For All Tribes. Recipe for making Red Devil Horns. Requires Create Common Item Skill level 4. 100% chance of success. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -669,7 +739,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8371" name="Recipe: Little Angel Wings (100%)">
+	<etcitem id="8371" name="Recipe: Little Angel Wings">
+	<!-- This formula for making a Little Angel Wing can be used by all races. Requires Create Common Item Skill level 4. 100% chance of success. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -679,7 +750,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8372" name="Recipe: Fairy Antennae (100%)">
+	<etcitem id="8372" name="Recipe: Fairy Antennae">
+	<!-- This formula for making Fairy Antennae can be used by all races. Requires Create Common Item Skill level 4. 100% chance of success. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -690,6 +762,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="8373" name="Party Hat Fabric">
+	<!-- Key material to make a Party Hat. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_leather_yellow_i00"/>
@@ -698,7 +771,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="8374" name="Feathered Hat Fabric">
+	<etcitem id="8374" name="Chapeau Fabric">
+	<!-- Key material to make a Chapeau. Available at any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_leather_yellow_i00"/>
@@ -708,6 +782,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8375" name="Artisan's Goggles Fabric">
+	<!-- Used to make Artisan's Goggles, it can also be sold at any regular store. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_leather_yellow_i00"/>
@@ -717,6 +792,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8376" name="Red Horn of Victory Fragment">
+	<!-- The main ingredient that is needed to make a horn of a red devil. It can be sold to a regular store. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_broken_crystal_red_i00"/>
@@ -726,6 +802,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8377" name="Little Angel Wings Piece">
+	<!-- Used by Dwarves to make a Little Angel Wing, it can also be sold at any regular store. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_broken_crystal_green_i00"/>
@@ -735,6 +812,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8378" name="Fairy Antennae Piece">
+	<!-- Used by Dwarves to make Fairy Antennae, it can also be sold at any regular store. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_broken_crystal_green_i00"/>
@@ -743,7 +821,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="8379" name="Petrification Scroll">
+	<etcitem id="8379" name="Scroll: Petrification">
+	<!-- Temporarily petrifies the target. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -753,6 +832,7 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8380" name="Spellbook: Betray">
+	<!-- Spellbook needed to learn Betray. Used by Warlocks, Elemental Summoners and Phantom Summoners. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
@@ -763,6 +843,8 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8381" name="Spellbook: Mass Curse Fear">
+	<!-- Spellbook needed to learn Mass Curse Fear. Used by Necromancers.
+	Required level: 58 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_black_i00"/>
@@ -773,6 +855,8 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8382" name="Spellbook: Mass Curse Gloom">
+	<!-- Spellbook needed to learn Mass Curse Gloom. Used by Necromancers.
+	Required level: 58 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_black_i00"/>
@@ -783,6 +867,8 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8383" name="Spellbook: Mass Surrender to Fire">
+	<!-- Spellbook needed to learn Mass Surrender to Fire. Used by Warlocks.
+	Required level: 58 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
@@ -793,6 +879,8 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8384" name="Spellbook: Mass Surrender to Water">
+	<!-- Spellbook needed to learn Mass Surrender to Water. Used by Elemental Summoners.
+	Required level: 58 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
@@ -803,6 +891,8 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8385" name="Spellbook: Mass Surrender to Wind">
+	<!-- Spellbook needed to learn Mass Surrender to Wind. Used by Phantom Summoners.
+	Required level: 58 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
@@ -812,7 +902,9 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="8386" name="Spellbook - Arcane Disruption">
+	<etcitem id="8386" name="Spellbook: Arcane Disruption">
+	<!-- Spellbook needed to learn Arcane Disruption. Used by Warlocks.
+	Required level: 56 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_summon_i00"/>
@@ -822,7 +914,9 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="8387" name="Spellbook - Summon Cursed Bones">
+	<etcitem id="8387" name="Spellbook: Summon Cursed Bones">
+	<!-- Spellbook needed to learn Summon Cursed Bones. Used by Necromancers and Phantom Summoners.
+	Required level: 58 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_black_i00"/>
@@ -833,6 +927,8 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8388" name="Spellbook: Greater Might">
+	<!-- Spellbook needed to learn Great Might. Used by Prophets.
+	Required level: 58 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -843,6 +939,8 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8389" name="Spellbook: Greater Shield">
+	<!-- Spellbook needed to learn Greater Shield. Used by Prophets.
+	Required level: 58 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -853,6 +951,8 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8390" name="Amulet: War Chant">
+	<!-- Amulet needed to learn War Chant. Used by Warcryers.
+	Required level: 58 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_orcish_talisman_i00"/>
@@ -862,7 +962,9 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="8391" name="Amulet: Earth Chant">
+	<etcitem id="8391" name="Amulet: Chant of Earth">
+	<!-- Amulet needed to learn Chant of Earth. Used by Warcryers.
+	Required level: 58 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_orcish_talisman_i00"/>
@@ -872,7 +974,9 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="8392" name="Spellbook: Holy Resistance">
+	<etcitem id="8392" name="Spellbook: Holy Attack Resistance">
+	<!-- Spellbook needed to learn Holy Attack Resistance. Used by Prophets and Shillien Elders.
+	Required level: 58 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -882,7 +986,9 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="8393" name="Spellbook: Unholy Resistance">
+	<etcitem id="8393" name="Spellbook: Dark Attack Resistance">
+	<!-- Spellbook needed to learn Dark Attack Resistance. Used by Prophets and Elven Elders.
+	Required level: 58 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -893,6 +999,8 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8394" name="Spellbook: Trance">
+	<!-- Spellbook needed to learn Trance. Used by Bishops and Elven Elders.
+	Required level: 56 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -903,6 +1011,8 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8395" name="Spellbook: Erase">
+	<!-- Spellbook needed to learn Erase. Used by Bishops, Prophets, Elven Elders and Shillien Elders.
+	Required level: 56 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -913,6 +1023,8 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8396" name="Spellbook: Magical Backfire">
+	<!-- Spellbook needed to learn Magical Backfire. Used by Bishops.
+	Required level: 56 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -923,6 +1035,8 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8397" name="Spellbook: Clarity">
+	<!-- Spellbook needed to learn Clarity. Used by Elven Elders.
+	Required level: 58 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -933,6 +1047,8 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8398" name="Spellbook: Mana Burn">
+	<!-- Spellbook needed to learn Mana Burn. Used by Bishops, Prophets, Elven Elders and Shillien Elders.
+	Required level: 56 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -943,6 +1059,8 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8399" name="Spellbook: Mana Storm">
+	<!-- Spellbook needed to learn Mana Storm. Used by Bishops.
+	Required level: 58 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>

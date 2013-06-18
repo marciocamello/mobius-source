@@ -30,10 +30,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
 public class EnchantStatBonusTable
 {
 	/**

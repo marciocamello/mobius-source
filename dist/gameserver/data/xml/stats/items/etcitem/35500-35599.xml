@@ -2,7 +2,7 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<etcitem id="35548" name="Engineer Zofan's Supply Box">
-		<!--gorodetskiy-->
+	<!-- Box obtaining after completing the Destroy the Machine Device mission on the 2nd floor of the Seed of Hellfire. Double-click to check for more information. -->
 		<set name="icon" value="icon.etc_pi_gift_box_i01"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="weight" value="100"/>
@@ -10,7 +10,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</etcitem>
-	<etcitem id="35556" name="Билет в Лабиринт Картии - Ур. 85 (соло)">
+	<etcitem id="35556" name="Extra Pass - Kartia's Labyrinth Level 85 Solo">
+	<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 85 solo dungeon. Cannot be exchanged, dropped or sold. Can be used only once a day. -->
 		<set name="icon" value="icon.etc_ticket_red_i00"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -19,7 +20,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="35557" name="Билет в Лабиринт Картии - Ур. 90 (соло)">
+	<etcitem id="35557" name="Extra Pass - Kartia's Labyrinth Level 90 Solo">
+	<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 90 solo dungeon. Cannot be exchanged, dropped or sold. Can be used only once a day. -->
 		<set name="icon" value="icon.etc_ticket_red_i00"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -28,7 +30,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="35558" name="Билет в Лабиринт Картии - Ур. 95 (соло)">
+	<etcitem id="35558" name="Extra Pass - Kartia's Labyrinth Level 95 Solo">
+	<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 95 solo dungeon. Cannot be exchanged, dropped or sold. Can be used only once a day. -->
 		<set name="icon" value="icon.etc_ticket_red_i00"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -37,7 +40,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="35559" name="Билет в Лабиринт Картии - Ур. 85 (группа)">
+	<etcitem id="35559" name="Extra Pass - Kartia's Labyrinth Level 85 Party">
+	<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 85 party dungeon. Cannot be exchanged, dropped or sold. Can be used only once a day. -->
 		<set name="icon" value="icon.etc_ticket_red_i00"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -46,7 +50,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="35560" name="Билет в Лабиринт Картии - Ур. 90 (группа)">
+	<etcitem id="35560" name="Extra Pass - Kartia's Labyrinth Level 90 Party">
+	<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 90 party dungeon. Cannot be exchanged, dropped or sold. Can be used only once a day. -->
 		<set name="icon" value="icon.etc_ticket_red_i00"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -55,7 +60,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="35561" name="Билет в Лабиринт Картии - Ур. 95 (группа)">
+	<etcitem id="35561" name="Extra Pass - Kartia's Labyrinth Level 95 Party">
+	<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 95 party dungeon. Cannot be exchanged, dropped or sold. Can be used only once a day. -->
 		<set name="icon" value="icon.etc_ticket_red_i00"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

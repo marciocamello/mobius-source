@@ -260,7 +260,7 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 		{
 			packet = new SystemMessage2(SystemMsg.C1_CANNOT_DUEL_BECAUSE_C1_IS_PARTICIPATING_IN_THE_OLYMPIAD).addName(target);
 		}
-		else if (target.isCursedWeaponEquipped() || (target.getKarma() < 0) || (target.getPvpFlag() > 0))
+		else if (target.isCursedWeaponEquipped() || (target.isChaotic()) || (target.getPvpFlag() > 0))
 		{
 			packet = new SystemMessage2(SystemMsg.C1_CANNOT_DUEL_BECAUSE_C1_IS_IN_A_CHAOTIC_STATE).addName(target);
 		}

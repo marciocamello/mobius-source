@@ -16,7 +16,6 @@ import lineage2.gameserver.data.xml.holder.EventHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Request;
 import lineage2.gameserver.model.Request.L2RequestType;
-import lineage2.gameserver.model.entity.events.impl.DominionSiegeEvent;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.SubUnit;
 import lineage2.gameserver.model.pledge.UnitMember;
@@ -137,15 +136,7 @@ public class RequestAnswerJoinPledge extends L2GameClientPacket
 			player.sendPacket(new PledgeSkillList(clan));
 			player.sendSkillList();
 			EventHolder.getInstance().findEvent(player);
-			if (clan.getWarDominion() > 0)
-			{
-				DominionSiegeEvent siegeEvent = player.getEvent(DominionSiegeEvent.class);
-				siegeEvent.updatePlayer(player, true);
-			}
-			else
-			{
-				player.broadcastCharInfo();
-			}
+			player.broadcastCharInfo();
 			player.store(false);
 		}
 		finally

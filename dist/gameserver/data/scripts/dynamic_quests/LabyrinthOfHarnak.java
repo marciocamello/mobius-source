@@ -28,9 +28,6 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * @author KilRoy
- */
 public class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 {
 	private static final Logger _log = LoggerFactory.getLogger(LabyrinthOfHarnak.class);
@@ -40,7 +37,7 @@ public class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 	private static final int MIN_LEVEL = 85;
 	private static final int MAX_LEVEL = 99;
 	
-	private static final int DURATION = 10_800;
+	private static final int DURATION = 10800;
 	private static final String START_TIME = "1 * * * *";
 	
 	private static final int REWARD = 32726;
@@ -211,6 +208,7 @@ public class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 		if (event.equals("Reward"))
 		{
 			tryReward(player);
+			// response = null;
 		}
 		else if (event.endsWith(".htm"))
 		{

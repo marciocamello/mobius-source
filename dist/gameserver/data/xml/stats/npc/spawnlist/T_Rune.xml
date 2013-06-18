@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE list SYSTEM "spawn.dtd">
-<list>
-	<spawns name="Rune">
-		<spawn npcId="33467" x="45026" y="-47458" z="-792" heading="49557" /><!-- Меллади (Торговец Волшебными Красками) -->
-	</spawns>
-</list>

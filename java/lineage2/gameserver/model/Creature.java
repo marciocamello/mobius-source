@@ -15,7 +15,6 @@ package lineage2.gameserver.model;
 import static lineage2.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -81,7 +80,7 @@ import lineage2.gameserver.network.serverpackets.AutoAttackStart;
 import lineage2.gameserver.network.serverpackets.AutoAttackStop;
 import lineage2.gameserver.network.serverpackets.ChangeMoveType;
 import lineage2.gameserver.network.serverpackets.CharMoveToLocation;
-import lineage2.gameserver.network.serverpackets.ExAbnormalStatusUpdateFromTargetPacket;
+import lineage2.gameserver.network.serverpackets.ExAbnormalStatusUpdateFromTarget;
 import lineage2.gameserver.network.serverpackets.ExTeleportToLocationActivate;
 import lineage2.gameserver.network.serverpackets.FlyToLocation;
 import lineage2.gameserver.network.serverpackets.FlyToLocation.FlyType;
@@ -89,9 +88,9 @@ import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.MagicSkillCanceled;
 import lineage2.gameserver.network.serverpackets.MagicSkillLaunched;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
-import lineage2.gameserver.network.serverpackets.MyTargetSelected;
 import lineage2.gameserver.network.serverpackets.SetupGauge;
 import lineage2.gameserver.network.serverpackets.StatusUpdate;
+import lineage2.gameserver.network.serverpackets.StatusUpdate.StatusUpdateField;
 import lineage2.gameserver.network.serverpackets.StopMove;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.TeleportToLocation;
@@ -119,7 +118,6 @@ import lineage2.gameserver.templates.CharTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
 import lineage2.gameserver.templates.spawn.WalkerRouteTemplate;
-import lineage2.gameserver.utils.EffectsComparator;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.PositionUtils;
@@ -745,6 +743,10 @@ public abstract class Creature extends GameObject
 	 * Field _deathImmune.
 	 */
 	protected boolean _deathImmune = false;
+	
+	private List<Player> _statusListeners;
+	private final Lock statusListenersLock = new ReentrantLock();
+	
 	/**
 	 * Field _walkerRoutesTemplate.
 	 */
@@ -950,7 +952,7 @@ public abstract class Creature extends GameObject
 				reduceCurrentHp((value / 100.) * damage, 0, target, null, true, true, false, false, false, false, true);
 			}
 		}
-		if ((skill != null) || bow)
+		if (((skill != null) || bow) && Config.ALT_ABSORB_DAMAGE_ONLY_MEELE)
 		{
 			return false;
 		}
@@ -1068,32 +1070,29 @@ public abstract class Creature extends GameObject
 		double transferToSummonDam = calcStat(Stats.TRANSFER_TO_SUMMON_DAMAGE_PERCENT, 0.);
 		if (transferToSummonDam > 0)
 		{
+			// TRANSFER DAMAGE ALWAYS TO THE FIRST SUMMON
+			Summon summon = null;
 			List<Summon> servitors = ((Player) this).getSummonList().getServitors();
 			double transferDamage = (damage * transferToSummonDam) * .01;
-			for (Iterator<Summon> it = servitors.iterator(); it.hasNext();)
-			{
-				Summon summon = it.next();
-				if ((summon == null) || summon.isDead() || (summon.getCurrentHp() < (transferDamage / servitors.size())))
-				{
-					it.remove();
-				}
-			}
 			if (servitors.size() > 0)
 			{
-				for (Summon summon : servitors)
-				{
-					if (summon.isInRangeZ(this, 1200))
-					{
-						damage -= transferDamage;
-						summon.reduceCurrentHp(transferDamage, 0, summon, null, false, false, false, false, true, false, true);
-					}
-				}
+				summon = servitors.get(0);
+			}
+			if ((summon != null) && !summon.isDead() && (summon.getCurrentHp() > transferDamage) && summon.isInRangeZ(this, 1200))
+			{
+				damage -= transferDamage;
+				summon.reduceCurrentHp(transferDamage, 0, summon, null, false, false, false, false, true, false, true);
 			}
 			else
 			{
 				getEffectList().stopEffects(EffectType.AbsorbDamageToSummon);
 				return damage;
 			}
+			/*
+			 * List<Summon> servitors = ((Player) this).getSummonList().getServitors(); double transferDamage = (damage * transferToSummonDam) * .01; for (Iterator<Summon> it = servitors.iterator(); it.hasNext();) { Summon summon = it.next(); if ((summon == null) || summon.isDead() ||
+			 * (summon.getCurrentHp() < (transferDamage / servitors.size()))) { it.remove(); } } if (servitors.size() > 0) { for (Summon summon : servitors) { if (summon.isInRangeZ(this, 1200)) { damage -= transferDamage; summon.reduceCurrentHp(transferDamage, 0, summon, null, false, false, false,
+			 * false, true, false, true); } } } else { getEffectList().stopEffects(EffectType.AbsorbDamageToSummon); return damage; }
+			 */
 		}
 		return damage;
 	}
@@ -1427,59 +1426,100 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
-	/**
-	 * Method makeStatusUpdate.
-	 * @param fields int[]
-	 * @return StatusUpdate
-	 */
-	public StatusUpdate makeStatusUpdate(int... fields)
+	public void broadcastToStatusListeners(L2GameServerPacket... packets)
 	{
-		StatusUpdate su = new StatusUpdate(getObjectId());
-		for (int field : fields)
+		if (!isVisible() || (packets.length == 0))
 		{
-			switch (field)
+			return;
+		}
+		
+		statusListenersLock.lock();
+		
+		try
+		{
+			if ((_statusListeners == null) || _statusListeners.isEmpty())
 			{
-				case StatusUpdate.CUR_HP:
-					su.addAttribute(field, (int) getCurrentHp());
-					break;
-				case StatusUpdate.MAX_HP:
-					su.addAttribute(field, getMaxHp());
-					break;
-				case StatusUpdate.CUR_MP:
-					su.addAttribute(field, (int) getCurrentMp());
-					break;
-				case StatusUpdate.MAX_MP:
-					su.addAttribute(field, getMaxMp());
-					break;
-				case StatusUpdate.KARMA:
-					su.addAttribute(field, getKarma());
-					break;
-				case StatusUpdate.CUR_CP:
-					su.addAttribute(field, (int) getCurrentCp());
-					break;
-				case StatusUpdate.MAX_CP:
-					su.addAttribute(field, getMaxCp());
-					break;
-				case StatusUpdate.PVP_FLAG:
-					su.addAttribute(field, getPvpFlag());
-					break;
+				return;
+			}
+			
+			Player player;
+			
+			for (int i = 0; i < _statusListeners.size(); i++)
+			{
+				player = _statusListeners.get(i);
+				
+				player.sendPacket(packets);
 			}
 		}
-		return su;
+		finally
+		{
+			statusListenersLock.unlock();
+		}
 	}
 	
-	/**
-	 * Method makeHPStatusUpdate.
-	 * @param _attakerId int
-	 * @return StatusUpdate
-	 */
-	public StatusUpdate makeHPStatusUpdate(int _attakerId)
+	public void addStatusListener(Player cha)
 	{
-		StatusUpdate su = new StatusUpdate(getObjectId(), _attakerId);
-		su.addAttribute(StatusUpdate.CUR_HP, (int) getCurrentHp());
-		su.addAttribute(StatusUpdate.CUR_CP, (int) getCurrentCp());
-		su.addAttribute(StatusUpdate.MAX_HP, getMaxHp());
-		return su;
+		if (cha == this)
+		{
+			return;
+		}
+		
+		statusListenersLock.lock();
+		
+		try
+		{
+			if (_statusListeners == null)
+			{
+				_statusListeners = new LazyArrayList<>();
+			}
+			
+			if (!_statusListeners.contains(cha))
+			{
+				_statusListeners.add(cha);
+			}
+		}
+		finally
+		{
+			statusListenersLock.unlock();
+		}
+	}
+	
+	public void removeStatusListener(Creature cha)
+	{
+		statusListenersLock.lock();
+		
+		try
+		{
+			if (_statusListeners == null)
+			{
+				return;
+			}
+			
+			_statusListeners.remove(cha);
+		}
+		finally
+		{
+			statusListenersLock.unlock();
+		}
+	}
+	
+	public void clearStatusListeners()
+	{
+		statusListenersLock.lock();
+		
+		try
+		{
+			if (_statusListeners == null)
+			{
+				return;
+			}
+			
+			_statusListeners.clear();
+		}
+		finally
+		{
+			statusListenersLock.unlock();
+		}
 	}
 	
 	/**
@@ -1491,22 +1531,16 @@ public abstract class Creature extends GameObject
 		{
 			return;
 		}
-		StatusUpdate su = makeStatusUpdate(StatusUpdate.MAX_HP, StatusUpdate.MAX_MP, StatusUpdate.CUR_HP, StatusUpdate.CUR_MP);
-		broadcastPacket(su);
-	}
-	
-	/**
-	 * Method broadcastHPStatusUpdate.
-	 * @param _id int
-	 */
-	public void broadcastHPStatusUpdate(int _id)
-	{
-		if (!needStatusUpdate())
+		StatusUpdate statusUpdatePacket = new StatusUpdate(this).addAttribute(StatusUpdateField.CUR_HP, StatusUpdateField.MAX_HP);
+		
+		for (final Player pla : World.getAroundPlayers(this))
 		{
-			return;
+			if (pla == null)
+			{
+				continue;
+			}
+			pla.sendPacket(statusUpdatePacket);
 		}
-		StatusUpdate su = makeHPStatusUpdate(_id);
-		broadcastPacket(su);
 	}
 	
 	/**
@@ -1681,7 +1715,7 @@ public abstract class Creature extends GameObject
 				{
 					if (Rnd.chance(skill.getCancelTarget()))
 					{
-						if (((target.getCastingSkill() == null) || !((target.getCastingSkill().getSkillType() == SkillType.TAKECASTLE) || (target.getCastingSkill().getSkillType() == SkillType.TAKEFORTRESS) || (target.getCastingSkill().getSkillType() == SkillType.TAKEFLAG))) && !target.isRaid())
+						if (((target.getCastingSkill() == null) || !((target.getCastingSkill().getSkillType() == SkillType.TAKECASTLE) || (target.getCastingSkill().getSkillType() == SkillType.TAKEFORTRESS))) && !target.isRaid())
 						{
 							target.abortAttack(true, true);
 							target.abortCast(true, true);
@@ -2179,9 +2213,12 @@ public abstract class Creature extends GameObject
 			{
 				sendPacket(Msg.SUMMON_A_PET);
 			}
-			else if (!skill.isHandler() || skill.isAlterSkill())
+			else if (!skill.isHandler())
 			{
-				sendPacket(new SystemMessage(SystemMessage.YOU_USE_S1).addSkillName(magicId, level));
+				if (!skill.isAlterSkill())
+				{
+					sendPacket(new SystemMessage(SystemMessage.YOU_USE_S1).addSkillName(magicId, level));
+				}
 			}
 			else
 			{
@@ -2297,7 +2334,7 @@ public abstract class Creature extends GameObject
 		{
 			return GeoEngine.moveCheckInAir(getX(), getY(), getZ(), getX() + x1, getY() + y1, getZ() + z1, getColRadius(), getGeoIndex());
 		}
-		return GeoEngine.moveCheck(getX(), getY(), getZ(), getX() + x1, getY() + y1, getGeoIndex() + z1);
+		return GeoEngine.moveCheck(getX(), getY(), getZ(), getX() + x1, getY() + y1, getGeoIndex());
 	}
 	
 	/**
@@ -4236,27 +4273,34 @@ public abstract class Creature extends GameObject
 	 */
 	protected boolean needStatusUpdate()
 	{
-		if (!isVisible())
+		if (!isVisible() || !displayHpBar())
 		{
 			return false;
 		}
+		
 		boolean result = false;
 		int bar;
+		
 		bar = (int) ((getCurrentHp() * CLIENT_BAR_SIZE) / getMaxHp());
+		
 		if ((bar == 0) || (bar != _lastHpBarUpdate))
 		{
 			_lastHpBarUpdate = bar;
 			result = true;
 		}
+		
 		bar = (int) ((getCurrentMp() * CLIENT_BAR_SIZE) / getMaxMp());
+		
 		if ((bar == 0) || (bar != _lastMpBarUpdate))
 		{
 			_lastMpBarUpdate = bar;
 			result = true;
 		}
+		
 		if (isPlayer())
 		{
 			bar = (int) ((getCurrentCp() * CLIENT_BAR_SIZE) / getMaxCp());
+			
 			if ((bar == 0) || (bar != _lastCpBarUpdate))
 			{
 				_lastCpBarUpdate = bar;
@@ -4274,12 +4318,17 @@ public abstract class Creature extends GameObject
 	@Override
 	public void onForcedAttack(Player player, boolean shift)
 	{
-		player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel() - getLevel()));
+		if (player.getTarget() != this)
+		{
+			player.setTarget(this);
+		}
+		
 		if (!isAttackable(player) || player.isConfused() || player.isBlocked())
 		{
 			player.sendActionFailed();
 			return;
 		}
+		
 		player.getAI().Attack(this, true, shift);
 	}
 	
@@ -4471,6 +4520,10 @@ public abstract class Creature extends GameObject
 				for (Creature target : targets)
 				{
 					flyLoc = target.getFlyLocation(null, skill);
+					if (flyLoc == null)
+					{
+						_log.warn(skill.getFlyType() + " have null flyLoc.");
+					}
 					target.setLoc(flyLoc);
 					broadcastPacket(new FlyToLocation(target, flyLoc, skill.getFlyType(), 0));
 				}
@@ -5026,7 +5079,7 @@ public abstract class Creature extends GameObject
 		checkHpMessages(hpStart, _currentHp);
 		if (sendInfo)
 		{
-			broadcastHPStatusUpdate(_attakerId);
+			broadcastStatusUpdate();
 			sendChanges();
 		}
 		if (_currentHp < maxHp)
@@ -6846,17 +6899,6 @@ public abstract class Creature extends GameObject
 	 */
 	public void updateEffectIcons()
 	{
-		Effect[] effects = getEffectList().getAllFirstEffects();
-		Arrays.sort(effects, EffectsComparator.getInstance());
-		ExAbnormalStatusUpdateFromTargetPacket packet = new ExAbnormalStatusUpdateFromTargetPacket(this);
-		for (Effect effect : effects)
-		{
-			if (effect.isInUse())
-			{
-				effect.addIcon(packet);
-			}
-		}
-		broadcastPacket(packet);
 	}
 	
 	/**
@@ -7105,6 +7147,7 @@ public abstract class Creature extends GameObject
 		stopAttackStanceTask();
 		stopRegeneration();
 		updateZones();
+		clearStatusListeners();
 		super.onDespawn();
 	}
 	
@@ -7540,5 +7583,48 @@ public abstract class Creature extends GameObject
 	public Collection<Summon> getPets()
 	{
 		return new ArrayList<>(0);
+	}
+	
+	public void broadcastEffectsStatusToListeners()
+	{
+		if (!isVehicle() && !isDoor())
+		{
+			final ExAbnormalStatusUpdateFromTarget exb = new ExAbnormalStatusUpdateFromTarget(this);
+			
+			if (isPlayer() && (getTarget() == this))
+			{
+				sendPacket(exb);
+			}
+			
+			broadcastToStatusListeners(exb);
+		}
+	}
+	
+	@Override
+	public void onActionTarget(final Player player, boolean forced)
+	{
+		super.onActionTarget(player, forced);
+		
+		if ((player != this) && !isDoor())
+		{
+			validateLocation(0);
+		}
+	}
+	
+	@Override
+	public void onActionTargeted(final Player player, boolean forced)
+	{
+		if (player == this)
+		{
+			return;
+		}
+		
+		if (isAutoAttackable(player))
+		{
+			player.getAI().Attack(this, false, forced);
+			return;
+		}
+		
+		super.onActionTargeted(player, forced);
 	}
 }

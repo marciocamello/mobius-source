@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="15200" name="Orc Mage Class Equipment Set" add_name="10 day limited period">
+	<etcitem id="15200" name="Orc Mage Class Equipment Set" add_name="10-day">
+	<!-- Friend recommend service exclusive item set for the Orc Mage occupation classes. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -10,7 +11,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15201" name="Knight Class Equipment Set" add_name="30 day limited period">
+	<etcitem id="15201" name="Knight Class Equipment Set" add_name="30-day">
+	<!-- Friend recommend service exclusive item set for the knight occupation class. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -19,7 +21,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15202" name="Magic Class Equipment Set" add_name="30 day limited period">
+	<etcitem id="15202" name="Mage Class Equipment Set" add_name="30-day">
+	<!-- Friend recommend service exclusive item set for the magic occupation classes. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -28,7 +31,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15203" name="Warrior Class Equipment Set" add_name="30 day limited period">
+	<etcitem id="15203" name="Warrior Class Equipment Set" add_name="30-day">
+	<!-- Friend recommend service exclusive item set for the warrior occupation classes. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -37,7 +41,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15204" name="Rouge Class Equipment Set" add_name="30 day limited period">
+	<etcitem id="15204" name="Rogue Class Equipment Set" add_name="30-day">
+	<!-- Friend recommend service exclusive item set for the Rogue occupation classes. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -46,7 +51,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15205" name="Kamael Class Equipment Set" add_name="30 day limited period">
+	<etcitem id="15205" name="Kamael Class Equipment Set" add_name="30-day">
+	<!-- Friend recommend service exclusive item set for the Kamael occupation classes. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -55,7 +61,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15206" name="Orc Fighter Class Equipment Set" add_name="30 day limited period">
+	<etcitem id="15206" name="Orc Fighter Class Equipment Set" add_name="30-day">
+	<!-- Friend recommend service exclusive item set for the Orc Fighter occupation classes. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -64,7 +71,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15207" name="Orc Mage Class Equipment Set" add_name="30 day limited period">
+	<etcitem id="15207" name="Orc Mage Class Equipment Set" add_name="30-day">
+	<!-- Friend recommend service exclusive item set for the Orc Mage occupation classes. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -73,7 +81,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15209" name="Equipment Set 10 Day Pack Exchange Coupon">
+	<etcitem id="15209" name="Equipment Set Pack Coupon (10-day)">
+	<!-- Can exchange for Equipment Set 10-day Pack. -->
 		<set name="freightable" value="true"/>
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
@@ -83,7 +92,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15210" name="Equipment Set 10 Day Pack" add_name="10 day limited period">
+	<etcitem id="15210" name="Equipment Set Pack (10-day)" add_name="10-day">
+	<!-- When used, you can obtain a 10-day Limited Period equipment set for your class. Can use after 1st job change. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="10000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -93,7 +103,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15211" name="Equipment Set 30 Day Pack" add_name="30 day limited period">
+	<etcitem id="15211" name="Equipment Set Pack (30-day)" add_name="30-day">
+	<!-- When used, you can obtain a 30-day Limited Period equipment set for your class. Can use after 1st job change. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="10000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -103,7 +114,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15212" name="Friend Recommend Round 1 Reward Pack Exchange Coupon" add_name="Recommender">
+	<etcitem id="15212" name="Friend Recommend Round 1 Reward Pack Coupon" add_name="Recommender">
+	<!-- When used, you can exchange for a Friend Recommend Round 1 Reward Pack. -->
 		<set name="freightable" value="true"/>
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
@@ -113,7 +125,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15213" name="Friend Recommend Round 1 Reward Pack" add_name="30 day limited period">
+	<etcitem id="15213" name="Friend Recommend Round 1 Reward Pack" add_name="30-day">
+	<!-- Friend recommend service reward pack containing a Bracelet of Friendship, hair accessory, and Minion coupon. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -123,7 +136,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15214" name="Friend Recommend Round 2 Reward Pack Exchange Coupon" add_name="Recommender">
+	<etcitem id="15214" name="Friend Recommend Round 2 Reward Pack Coupon" add_name="Recommender">
+	<!-- When used, you can exchange for a Friend Recommend Round 2 Reward Pack. -->
 		<set name="freightable" value="true"/>
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
@@ -133,7 +147,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15215" name="Friend Recommend Round 2 Reward Pack" add_name="30 day limited period">
+	<etcitem id="15215" name="Friend Recommend Round 2 Reward Pack" add_name="30-day">
+	<!-- Friend recommend service reward pack containing Friend Recommendation Proof with a Bracelet of Friendship, Agathion - Oink oink, High-level Minion coupon. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -143,7 +158,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15216" name="Friend Recommend Round 1 Reward Pack Exchange Coupon" add_name="New Human">
+	<etcitem id="15216" name="Friend Recommend Round 1 Reward Pack Coupon" add_name="New Dormancy">
+	<!-- When used, you can exchange for a Friend Recommend Round 1 Reward Pack. -->
 		<set name="freightable" value="true"/>
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
@@ -153,7 +169,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15217" name="Friend Recommend Round 1 Reward Pack" add_name="30 day limited period">
+	<etcitem id="15217" name="Friend Recommend Round 1 Reward Pack" add_name="30-day">
+	<!-- Friend recommend service reward pack containing an Equipment Set 30-day Pack, Bracelet of Friendship, hair accessory, and Minion coupon. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -163,7 +180,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15218" name="Friend Recommend Round 2 Reward Pack Exchange Coupon" add_name="New Human">
+	<etcitem id="15218" name="Friend Recommend Round 2 Reward Pack Coupon" add_name="New Dormancy">
+	<!-- When used, you can exchange for a Friend Recommend Round 2 Reward Pack. -->
 		<set name="freightable" value="true"/>
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
@@ -173,7 +191,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15219" name="Friend Recommend Round 2 Reward Pack" add_name="30 day limited period">
+	<etcitem id="15219" name="Friend Recommend Round 2 Reward Pack" add_name="30-day">
+	<!-- Friend recommend service reward pack containing Friend Recommendation Proof with an Equipment Set 30-day Pack, Bracelet of Friendship, Agathion - Oink oink, High-level Minion coupon. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -183,7 +202,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15222" name="Friendship Heavy Armor of Nightmare Set Pack" add_name="10 day limited period">
+	<etcitem id="15222" name="Fortune Heavy Armor of Nightmare Set Pack" add_name="10-day">
+	<!-- When used, you acquire a Fortune Heavy Armor of Nightmare Set. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -193,7 +213,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15223" name="Doom Plate Armor of Friendship Set Pack" add_name="10 day limited period">
+	<etcitem id="15223" name="Doom Plate Armor of Fortune Set Pack" add_name="10-day">
+	<!-- When used, you acquire a Doom Plate Armor of Fortune Set. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -203,7 +224,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15224" name="Full Plate of Friendship Set Pack" add_name="10 day limited period">
+	<etcitem id="15224" name="Full Plate of Fortune Set Pack" add_name="10-day">
+	<!-- When used, you acquire a Full Plate of Fortune Set. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -213,7 +235,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15225" name="Brigandine of Friendship Set Pack" add_name="10 day limited period">
+	<etcitem id="15225" name="Brigandine of Fortune Set Pack" add_name="10-day">
+	<!-- When used, you acquire a Brigandine of Fortune Set. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -223,7 +246,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15226" name="Dark Crystal Light Armor of Friendship Set Pack" add_name="10 day limited period">
+	<etcitem id="15226" name="Dark Crystal Light Armor of Fortune Set Pack" add_name="10-day">
+	<!-- When used, you acquire a Dark Crystal Light Armor of Fortune Set. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -233,7 +257,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15227" name="Leather Armor of Doom of Friendship Set Pack" add_name="10 day limited period">
+	<etcitem id="15227" name="Leather Armor of Doom of Fortune Set Pack" add_name="10-day">
+	<!-- When used, you acquire a Leather Armor of Doom of Fortune Set. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -243,7 +268,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15228" name="Plate Leather of Friendship Set Pack" add_name="10 day limited period">
+	<etcitem id="15228" name="Plated Leather of Fortune Set Pack" add_name="10-day">
+	<!-- When used, you acquire a Plated Leather of Fortune Set. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -253,7 +279,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15229" name="Manticore Leather of Friendship Set Pack" add_name="10 day limited period">
+	<etcitem id="15229" name="Manticore Leather of Fortune Set Pack" add_name="10-day">
+	<!-- When used, you acquire a Manticore Leather of Fortune Set. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -263,7 +290,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15230" name="Dark Crystal Robe of Friendship Set Pack" add_name="10 day limited period">
+	<etcitem id="15230" name="Dark Crystal Robe of Fortune Set Pack" add_name="10-day">
+	<!-- When used, you acquire a Dark Crystal Robe of Fortune Set. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -273,7 +301,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15231" name="Avadon Robe of Friendship Set Pack" add_name="10 day limited period">
+	<etcitem id="15231" name="Avadon Robe of Fortune Set Pack" add_name="10-day">
+	<!-- When used, you acquire an Avadon Robe of Fortune Set. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -283,7 +312,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15232" name="Karmian of Friendship Set Pack" add_name="10 day limited period">
+	<etcitem id="15232" name="Karmian of Fortune Set Pack" add_name="10-day">
+	<!-- When used, you acquire a Karmian of Fortune Set. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -293,7 +323,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15233" name="Mithril Tunic of Friendship Set Pack" add_name="10 day limited period">
+	<etcitem id="15233" name="Mithril Tunic of Fortune Set Pack" add_name="10-day">
+	<!-- When used, you acquire a Mithril Tunic of Fortune Set. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -303,7 +334,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15234" name="Magic Weapon of Friendship Set" add_name="10 day limited period">
+	<etcitem id="15234" name="Magic Weapon of Fortune Set" add_name="10-day">
+	<!-- When used, you acquire 4 magic weapons at A~D-grade s. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -313,7 +345,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15235" name="Dagger of Friendship Set" add_name="10 day limited period">
+	<etcitem id="15235" name="Dagger of Fortune Set" add_name="10-day">
+	<!-- When used, you acquire 4 daggers at A~D-grade s. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -323,7 +356,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15236" name="Bow of Friendship Set" add_name="10 day limited period">
+	<etcitem id="15236" name="Bow of Fortune Set" add_name="10-day">
+	<!-- When used, you acquire 4 bows at A~D-grade s. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -333,7 +367,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15237" name="Blunt Weapon of Friendship Set" add_name="10 day limited period">
+	<etcitem id="15237" name="Blunt Weapon of Fortune Set" add_name="10-day">
+	<!-- When used, you acquire 4 blunt weapons at A~D-grade s. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -343,7 +378,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15238" name="One-handed Sword of Friendship Set" add_name="10 day limited period">
+	<etcitem id="15238" name="One-handed Sword of Fortune Set" add_name="10-day">
+	<!-- When used, you acquire 4 one-handed swords at A~D-grade s. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -353,7 +389,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15239" name="Two-handed Sword of Friendship Set" add_name="10 day limited period">
+	<etcitem id="15239" name="Two-handed Sword of Fortune Set" add_name="10-day">
+	<!-- When used, you acquire 4 two-handed swords at A~D-grade s. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -363,7 +400,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15240" name="Hand-to-hand Combat Weapon of Friendship Set" add_name="10 day limited period">
+	<etcitem id="15240" name="Fist Weapon of Fortune Set" add_name="10-day">
+	<!-- When used, you acquire 4 fist weapons at A~D-grade s. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -373,7 +411,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15241" name="Dualsword of Friendship Set" add_name="10 day limited period">
+	<etcitem id="15241" name="Dualsword of Fortune Set" add_name="10-day">
+	<!-- When used, you acquire 4 dualswords at A~D-grade s. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -383,7 +422,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15242" name="Spear of Friendship Set" add_name="10 day limited period">
+	<etcitem id="15242" name="Spear of Fortune Set" add_name="10-day">
+	<!-- When used, you acquire 4 spears at A~D-grade s. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -393,7 +433,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15243" name="Ancient Sword of Friendship Set" add_name="10 day limited period">
+	<etcitem id="15243" name="Ancient Sword of Fortune Set" add_name="10-day">
+	<!-- When used, you acquire 4 ancient swords at A~D-grade s. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -403,7 +444,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15244" name="Short Sword of Friendship Set" add_name="10 day limited period">
+	<etcitem id="15244" name="Short Sword of Fortune Set" add_name="10-day">
+	<!-- When used, you acquire 4 short swords at A~D-grade s. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -413,7 +455,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15245" name="Crossbow of Friendship Set" add_name="10 day limited period">
+	<etcitem id="15245" name="Crossbow of Fortune Set" add_name="10-day">
+	<!-- When used, you acquire 4 crossbows at A~D-grade s. Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -423,7 +466,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15246" name="Friendship Heavy Armor of Nightmare Set Pack" add_name="30 day limited period">
+	<etcitem id="15246" name="Fortune Heavy Armor of Nightmare Set Pack" add_name="30-day">
+	<!-- When used, you acquire a Fortune Heavy Armor of Nightmare Set. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -433,7 +477,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15247" name="Doom Plate Armor of Friendship Set Pack" add_name="30 day limited period">
+	<etcitem id="15247" name="Doom Plate Armor of Fortune Set Pack" add_name="30-day">
+	<!-- When used, you acquire a Doom Plate Armor of Fortune Set. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -443,7 +488,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15248" name="Full Plate of Friendship Set Pack" add_name="30 day limited period">
+	<etcitem id="15248" name="Full Plate of Fortune Set Pack" add_name="30-day">
+	<!-- When used, you acquire a Full Plate of Fortune Set. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -453,7 +499,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15249" name="Brigandine of Friendship Set Pack" add_name="30 day limited period">
+	<etcitem id="15249" name="Brigandine of Fortune Set Pack" add_name="30-day">
+	<!-- When used, you acquire a Brigandine of Fortune Set. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -463,7 +510,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15250" name="Dark Crystal Light Armor of Friendship Set Pack" add_name="30 day limited period">
+	<etcitem id="15250" name="Dark Crystal Light Armor of Fortune Set Pack" add_name="30-day">
+	<!-- When used, you acquire a Dark Crystal Light Armor of Fortune Set. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -473,7 +521,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15251" name="Leather Armor of Doom of Friendship Set Pack" add_name="30 day limited period">
+	<etcitem id="15251" name="Leather Armor of Doom of Fortune Set Pack" add_name="30-day">
+	<!-- When used, you acquire a Leather Armor of Doom of Fortune Set. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -483,7 +532,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15252" name="Plate Leather of Friendship Set Pack" add_name="30 day limited period">
+	<etcitem id="15252" name="Plated Leather of Fortune Set Pack" add_name="30-day">
+	<!-- When used, you acquire a Plated Leather of Fortune Set. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -493,7 +543,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15253" name="Manticore Leather of Friendship Set Pack" add_name="30 day limited period">
+	<etcitem id="15253" name="Manticore Leather of Fortune Set Pack" add_name="30-day">
+	<!-- When used, you acquire a Manticore Leather of Fortune Set. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -503,7 +554,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15254" name="Dark Crystal Robe of Friendship Set Pack" add_name="30 day limited period">
+	<etcitem id="15254" name="Dark Crystal Robe of Fortune Set Pack" add_name="30-day">
+	<!-- When used, you acquire a Dark Crystal Robe of Fortune Set. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -513,7 +565,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15255" name="Avadon Robe of Friendship Set Pack" add_name="30 day limited period">
+	<etcitem id="15255" name="Avadon Robe of Fortune Set Pack" add_name="30-day">
+	<!-- When used, you acquire an Avadon Robe of Fortune Set. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -523,7 +576,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15256" name="Karmian of Friendship Set Pack" add_name="30 day limited period">
+	<etcitem id="15256" name="Karmian of Fortune Set Pack" add_name="30-day">
+	<!-- When used, you acquire a Karmian of Fortune Set. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -533,7 +587,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15257" name="Mithril Tunic of Friendship Set Pack" add_name="30 day limited period">
+	<etcitem id="15257" name="Mithril Tunic of Fortune Set Pack" add_name="30-day">
+	<!-- When used, you acquire a Mithril Tunic of Fortune Set. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -543,7 +598,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15258" name="Magic Weapon of Friendship Set" add_name="30 day limited period">
+	<etcitem id="15258" name="Magic Weapon of Fortune Set" add_name="30-day">
+	<!-- When used, you acquire 4 magic weapons at A~D-grade s. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -553,7 +609,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15259" name="Dagger of Friendship Set" add_name="30 day limited period">
+	<etcitem id="15259" name="Dagger of Fortune Set" add_name="30-day">
+	<!-- When used, you acquire 4 daggers at A~D-grade s. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -563,7 +620,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15260" name="Bow of Friendship Set" add_name="30 day limited period">
+	<etcitem id="15260" name="Bow of Fortune Set" add_name="30-day">
+	<!-- When used, you acquire 4 bows at A~D-grade s. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -573,7 +631,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15261" name="Blunt Weapon of Friendship Set" add_name="30 day limited period">
+	<etcitem id="15261" name="Blunt Weapon of Fortune Set" add_name="30-day">
+	<!-- When used, you acquire 4 blunt weapons at A~D-grade s. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -583,7 +642,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15262" name="One-handed Sword of Friendship Set" add_name="30 day limited period">
+	<etcitem id="15262" name="One-handed Sword of Fortune Set" add_name="30-day">
+	<!-- When used, you acquire 4 one-handed swords at A~D-grade s. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -593,7 +653,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15263" name="Two-handed Sword of Friendship Set" add_name="30 day limited period">
+	<etcitem id="15263" name="Two-handed Sword of Fortune Set" add_name="30-day">
+	<!-- When used, you acquire 4 two-handed swords at A~D-grade s. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -603,7 +664,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15264" name="Hand-to-hand Combat Weapon of Friendship Set" add_name="30 day limited period">
+	<etcitem id="15264" name="Fist Weapon of Fortune Set" add_name="30-day">
+	<!-- When used, you acquire 4 fist weapons at A~D-grade s. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -613,7 +675,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15265" name="Dualsword of Friendship Set" add_name="30 day limited period">
+	<etcitem id="15265" name="Dualsword of Fortune Set" add_name="30-day">
+	<!-- When used, you acquire 4 dualswords at A~D-grade s. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -623,7 +686,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15266" name="Spear of Friendship Set" add_name="30 day limited period">
+	<etcitem id="15266" name="Spear of Fortune Set" add_name="30-day">
+	<!-- When used, you acquire 4 spears at A~D-grade s. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -633,7 +697,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15267" name="Ancient Sword of Friendship Set" add_name="30 day limited period">
+	<etcitem id="15267" name="Ancient Sword of Fortune Set" add_name="30-day">
+	<!-- When used, you acquire 4 ancient swords at A~D-grade s. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -643,7 +708,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15268" name="Short Sword of Friendship Set" add_name="30 day limited period">
+	<etcitem id="15268" name="Short Sword of Fortune Set" add_name="30-day">
+	<!-- When used, you acquire 4 short swords at A~D-grade s. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -653,7 +719,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15269" name="Crossbow of Friendship Set" add_name="30 day limited period">
+	<etcitem id="15269" name="Crossbow of Fortune Set" add_name="30-day">
+	<!-- When used, you acquire 4 crossbows at A~D-grade s. Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -663,7 +730,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15270" name="Majestic Set of Friendship" add_name="10 day limited period">
+	<etcitem id="15270" name="Jewelry Pack (A-grade)" add_name="10-day">
+	<!-- When used, you acquire a Jewelry Set of Fortune (A-grade). Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -673,7 +741,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15271" name="Black Ore Set of Friendship" add_name="10 day limited period">
+	<etcitem id="15271" name="Jewelry Pack (B-grade)" add_name="10-day">
+	<!-- When used, you acquire a Jewelry Set of Fortune (B-grade). Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -683,7 +752,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15272" name="Sealed Set of Friendship" add_name="10 day limited period">
+	<etcitem id="15272" name="Jewelry Pack (C-grade)" add_name="10-day">
+	<!-- When used, you acquire a Jewelry Set of Fortune (C-grade). Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -693,7 +763,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15273" name="Elven Set of Friendship" add_name="10 day limited period">
+	<etcitem id="15273" name="Jewelry Pack (D-grade)" add_name="10-day">
+	<!-- When used, you acquire an Jewelry Set of Fortune (D-grade). Expires after 10 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -703,7 +774,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15274" name="Majestic Set of Friendship" add_name="30 day limited period">
+	<etcitem id="15274" name="Jewelry Pack (A-grade)" add_name="30-day">
+	<!-- Wrapped Pack containing an A-grade Jewelry Set of Fortune that can be used for 30 days. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -713,7 +785,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15275" name="Black Ore Set of Friendship" add_name="30 day limited period">
+	<etcitem id="15275" name="Jewelry Pack (B-grade)" add_name="30-day">
+	<!-- Wrapped Pack containing a B-grade Jewelry Set of Fortune that can be used for 30 days. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -723,7 +796,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15276" name="Sealed Set of Friendship" add_name="30 day limited period">
+	<etcitem id="15276" name="Jewelry Pack (C-grade)" add_name="30-day">
+	<!-- Wrapped Pack containing a C-grade Jewelry Set of Fortune that can be used for 30 days. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -733,7 +807,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15277" name="Elven Set of Friendship" add_name="30 day limited period">
+	<etcitem id="15277" name="Jewelry Pack (D-grade)" add_name="30-day">
+	<!-- When used, you acquire an Jewelry Set of Fortune (D-grade). Expires after 30 days if not used. Cannot be exchanged or dropped. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -743,7 +818,8 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15278" name="Vitamin Manager's Gift">
+	<etcitem id="15278" name="Dimensional Merchant's Gift">
+	<!-- Special gift received from the Dimensional Merchant for the friend recommend service. When used, you can acquire occasionally such items as Fresh Milk, Blessed Scroll of Escape, Blessed Scroll of Resurrection, and weapon Enchant Stones. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -753,6 +829,7 @@
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="15279" name="Friend Recommendation Proof">
+	<!-- Take this proof to the Dimensional Merchant in front of the warehouse to receive a special gift. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

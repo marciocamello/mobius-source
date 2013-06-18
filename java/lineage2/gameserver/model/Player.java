@@ -143,7 +143,6 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.entity.boat.Boat;
 import lineage2.gameserver.model.entity.boat.ClanAirShip;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
-import lineage2.gameserver.model.entity.events.impl.DominionSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.DuelEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.entity.olympiad.CompType;
@@ -190,7 +189,6 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.model.worldstatistics.CategoryType;
 import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.serverpackets.AbnormalStatusUpdate;
-import lineage2.gameserver.network.serverpackets.ActionFail;
 import lineage2.gameserver.network.serverpackets.AutoAttackStart;
 import lineage2.gameserver.network.serverpackets.CameraMode;
 import lineage2.gameserver.network.serverpackets.ChairSit;
@@ -198,13 +196,12 @@ import lineage2.gameserver.network.serverpackets.ChangeWaitType;
 import lineage2.gameserver.network.serverpackets.CharInfo;
 import lineage2.gameserver.network.serverpackets.ConfirmDlg;
 import lineage2.gameserver.network.serverpackets.EtcStatusUpdate;
+import lineage2.gameserver.network.serverpackets.ExAbnormalStatusUpdateFromTarget;
 import lineage2.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 import lineage2.gameserver.network.serverpackets.ExAutoSoulShot;
 import lineage2.gameserver.network.serverpackets.ExBR_AgathionEnergyInfo;
 import lineage2.gameserver.network.serverpackets.ExBR_ExtraUserInfo;
 import lineage2.gameserver.network.serverpackets.ExBasicActionList;
-import lineage2.gameserver.network.serverpackets.ExDominionWarStart;
-import lineage2.gameserver.network.serverpackets.ExDuelUpdateUserInfo;
 import lineage2.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
 import lineage2.gameserver.network.serverpackets.ExOlympiadMatchEnd;
 import lineage2.gameserver.network.serverpackets.ExOlympiadMode;
@@ -257,18 +254,17 @@ import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.network.serverpackets.SpawnEmitter;
 import lineage2.gameserver.network.serverpackets.SpecialCamera;
 import lineage2.gameserver.network.serverpackets.StatusUpdate;
+import lineage2.gameserver.network.serverpackets.StatusUpdate.StatusUpdateField;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.TargetSelected;
 import lineage2.gameserver.network.serverpackets.TargetUnselected;
 import lineage2.gameserver.network.serverpackets.TeleportToLocation;
 import lineage2.gameserver.network.serverpackets.UserInfo;
-import lineage2.gameserver.network.serverpackets.ValidateLocation;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
-import lineage2.gameserver.scripts.Events;
 import lineage2.gameserver.skills.EffectType;
 import lineage2.gameserver.skills.TimeStamp;
 import lineage2.gameserver.skills.effects.EffectCubic;
@@ -852,6 +848,9 @@ public final class Player extends Playable implements PlayerGroup
 	 * Field _olympiadSide.
 	 */
 	private int _olympiadSide = -1;
+	
+	private ItemInstance _enchantItem;
+	private ItemInstance _enchantSupportItem;
 	/**
 	 * Field _varka.
 	 */
@@ -2380,6 +2379,31 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		sendPacket(new SkillList(this));
 		sendPacket(new ExAcquirableSkillListByClass(this));
+	}
+	
+	@Override
+	public void onInteract(Player player)
+	{
+		if (!isInStoreMode())
+		{
+			super.onInteract(player);
+		}
+		else
+		{
+			switch (getPrivateStoreType())
+			{
+				case STORE_PRIVATE_SELL:
+				case STORE_PRIVATE_SELL_PACKAGE:
+					player.sendPacket(new PrivateStoreListSell(player, this));
+					break;
+				case STORE_PRIVATE_BUY:
+					player.sendPacket(new PrivateStoreListBuy(player, this));
+					break;
+				case STORE_PRIVATE_MANUFACTURE:
+					player.sendPacket(new RecipeShopSellList(player, this));
+					break;
+			}
+		}
 	}
 	
 	/**
@@ -3961,107 +3985,20 @@ public final class Player extends Playable implements PlayerGroup
 	}
 	
 	/**
-	 * Method onAction.
-	 * @param player Player
-	 * @param shift boolean
-	 */
-	@Override
-	public void onAction(final Player player, boolean shift)
-	{
-		if (isFrozen())
-		{
-			player.sendPacket(ActionFail.STATIC);
-			return;
-		}
-		if (Events.onAction(player, this, shift))
-		{
-			player.sendPacket(ActionFail.STATIC);
-			return;
-		}
-		if (!isTargetable())
-		{
-			player.sendPacket(ActionFail.STATIC);
-			return;
-		}
-		if (player.getTarget() != this)
-		{
-			player.setTarget(this);
-			if (player.getTarget() == this)
-			{
-				player.sendPacket(new MyTargetSelected(getObjectId(), 0));
-			}
-			else
-			{
-				player.sendPacket(ActionFail.STATIC);
-			}
-		}
-		else if (getPrivateStoreType() != Player.STORE_PRIVATE_NONE)
-		{
-			if ((getDistance(player) > INTERACTION_DISTANCE) && (player.getAI().getIntention() != CtrlIntention.AI_INTENTION_INTERACT))
-			{
-				if (!shift)
-				{
-					player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this, null);
-				}
-				else
-				{
-					player.sendPacket(ActionFail.STATIC);
-				}
-			}
-			else
-			{
-				player.doInteract(this);
-			}
-		}
-		else if (isAutoAttackable(player))
-		{
-			player.getAI().Attack(this, false, shift);
-		}
-		else if (player != this)
-		{
-			if (player.getAI().getIntention() != CtrlIntention.AI_INTENTION_FOLLOW)
-			{
-				if (!shift)
-				{
-					player.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, this, Config.FOLLOW_RANGE);
-				}
-				else
-				{
-					player.sendPacket(ActionFail.STATIC);
-				}
-			}
-			else
-			{
-				player.sendPacket(ActionFail.STATIC);
-			}
-		}
-		else
-		{
-			player.sendPacket(ActionFail.STATIC);
-		}
-	}
-	
-	/**
 	 * Method broadcastStatusUpdate.
 	 */
 	@Override
 	public void broadcastStatusUpdate()
 	{
-		if (!needStatusUpdate())
-		{
-			return;
-		}
-		StatusUpdate su = makeStatusUpdate(StatusUpdate.MAX_HP, StatusUpdate.MAX_MP, StatusUpdate.MAX_CP, StatusUpdate.CUR_HP, StatusUpdate.CUR_MP, StatusUpdate.CUR_CP, StatusUpdate.DAMAGE);
-		broadcastPacket(su);
+		super.broadcastStatusUpdate();
+		
+		sendPacket(new StatusUpdate(this).addAttribute(StatusUpdateField.CUR_HP, StatusUpdateField.CUR_MP, StatusUpdateField.CUR_CP, StatusUpdateField.MAX_HP, StatusUpdateField.MAX_MP, StatusUpdateField.MAX_CP));
 		if (isInParty())
+		// Send the Server->Client packet PartySmallWindowUpdate with current HP, MP and Level to all other L2Player of the Party
 		{
 			getParty().broadcastToPartyMembers(this, new PartySmallWindowUpdate(this));
 		}
-		DuelEvent duelEvent = getEvent(DuelEvent.class);
-		if (duelEvent != null)
-		{
-			duelEvent.sendPacket(new ExDuelUpdateUserInfo(this), getTeam().revert().name());
-		}
+		
 		if (isInOlympiadMode() && isOlympiadCompStart())
 		{
 			if (_olympiadGame != null)
@@ -4092,15 +4029,10 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		L2GameServerPacket ci = isPolymorphed() ? new NpcInfoPoly(this) : new CharInfo(this);
 		L2GameServerPacket exCi = new ExBR_ExtraUserInfo(this);
-		L2GameServerPacket dominion = getEvent(DominionSiegeEvent.class) != null ? new ExDominionWarStart(this) : null;
 		for (Player player : World.getAroundPlayers(this))
 		{
 			player.sendPacket(ci, exCi);
 			player.sendPacket(RelationChanged.update(player, this, player));
-			if (dominion != null)
-			{
-				player.sendPacket(dominion);
-			}
 		}
 		return;
 	}
@@ -4176,60 +4108,7 @@ public final class Player extends Playable implements PlayerGroup
 			return;
 		}
 		sendPacket(new UserInfo(this), new ExBR_ExtraUserInfo(this));
-		DominionSiegeEvent siegeEvent = getEvent(DominionSiegeEvent.class);
-		if (siegeEvent != null)
-		{
-			sendPacket(new ExDominionWarStart(this));
-		}
 		return;
-	}
-	
-	/**
-	 * Method makeStatusUpdate.
-	 * @param fields int[]
-	 * @return StatusUpdate
-	 */
-	@Override
-	public StatusUpdate makeStatusUpdate(int... fields)
-	{
-		StatusUpdate su = new StatusUpdate(getObjectId());
-		for (int field : fields)
-		{
-			switch (field)
-			{
-				case StatusUpdate.CUR_HP:
-					su.addAttribute(field, (int) getCurrentHp());
-					break;
-				case StatusUpdate.MAX_HP:
-					su.addAttribute(field, getMaxHp());
-					break;
-				case StatusUpdate.CUR_MP:
-					su.addAttribute(field, (int) getCurrentMp());
-					break;
-				case StatusUpdate.MAX_MP:
-					su.addAttribute(field, getMaxMp());
-					break;
-				case StatusUpdate.CUR_LOAD:
-					su.addAttribute(field, getCurrentLoad());
-					break;
-				case StatusUpdate.MAX_LOAD:
-					su.addAttribute(field, getMaxLoad());
-					break;
-				case StatusUpdate.PVP_FLAG:
-					su.addAttribute(field, _pvpFlag);
-					break;
-				case StatusUpdate.KARMA:
-					su.addAttribute(field, getKarma());
-					break;
-				case StatusUpdate.CUR_CP:
-					su.addAttribute(field, (int) getCurrentCp());
-					break;
-				case StatusUpdate.MAX_CP:
-					su.addAttribute(field, getMaxCp());
-					break;
-			}
-		}
-		return su;
 	}
 	
 	/**
@@ -4238,23 +4117,26 @@ public final class Player extends Playable implements PlayerGroup
 	 * @param withPet boolean
 	 * @param fields int[]
 	 */
-	public void sendStatusUpdate(boolean broadCast, boolean withPet, int... fields)
+	public void sendStatusUpdate(boolean broadCast, boolean withPet, StatusUpdateField... fields)
 	{
 		if ((fields.length == 0) || (entering && !broadCast))
 		{
 			return;
 		}
-		StatusUpdate su = makeStatusUpdate(fields);
-		if (!su.hasAttributes())
+		
+		StatusUpdate su = new StatusUpdate(this).addAttribute(fields);
+		
+		if (su.isEmpty())
 		{
 			return;
 		}
+		
 		List<L2GameServerPacket> packets = new ArrayList<>(withPet ? 4 : 1);
 		if (withPet)
 		{
 			for (Summon summon : getSummonList())
 			{
-				packets.add(summon.makeStatusUpdate(fields));
+				packets.add(new StatusUpdate(summon).addAttribute(fields));
 			}
 		}
 		packets.add(su);
@@ -4352,50 +4234,6 @@ public final class Player extends Playable implements PlayerGroup
 		for (IStaticPacket p : packets)
 		{
 			_connection.sendPacket(p.packet(this));
-		}
-	}
-	
-	/**
-	 * Method doInteract.
-	 * @param target GameObject
-	 */
-	public void doInteract(GameObject target)
-	{
-		if ((target == null) || isActionsDisabled())
-		{
-			sendActionFailed();
-			return;
-		}
-		if (target.isPlayer())
-		{
-			if (target.getDistance(this) <= INTERACTION_DISTANCE)
-			{
-				Player temp = (Player) target;
-				if ((temp.getPrivateStoreType() == STORE_PRIVATE_SELL) || (temp.getPrivateStoreType() == STORE_PRIVATE_SELL_PACKAGE))
-				{
-					sendPacket(new PrivateStoreListSell(this, temp));
-					sendActionFailed();
-				}
-				else if (temp.getPrivateStoreType() == STORE_PRIVATE_BUY)
-				{
-					sendPacket(new PrivateStoreListBuy(this, temp));
-					sendActionFailed();
-				}
-				else if (temp.getPrivateStoreType() == STORE_PRIVATE_MANUFACTURE)
-				{
-					sendPacket(new RecipeShopSellList(this, temp));
-					sendActionFailed();
-				}
-				sendActionFailed();
-			}
-			else if (getAI().getIntention() != CtrlIntention.AI_INTENTION_INTERACT)
-			{
-				getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this, null);
-			}
-		}
-		else
-		{
-			target.onAction(this, false);
 		}
 	}
 	
@@ -4565,56 +4403,48 @@ public final class Player extends Playable implements PlayerGroup
 	}
 	
 	/**
-	 * Method setObjectTarget.
-	 * @param target GameObject
-	 */
-	public void setObjectTarget(GameObject target)
-	{
-		setTarget(target);
-		if (target == null)
-		{
-			return;
-		}
-		if (target == getTarget())
-		{
-			if (target.isNpc())
-			{
-				NpcInstance npc = (NpcInstance) target;
-				sendPacket(new MyTargetSelected(npc.getObjectId(), getLevel() - npc.getLevel()));
-				sendPacket(npc.makeStatusUpdate(StatusUpdate.CUR_HP, StatusUpdate.MAX_HP));
-				sendPacket(new ValidateLocation(npc), ActionFail.STATIC);
-			}
-			else
-			{
-				sendPacket(new MyTargetSelected(target.getObjectId(), 0));
-			}
-		}
-	}
-	
-	/**
 	 * Method setTarget.
 	 * @param newTarget GameObject
 	 */
 	@Override
 	public void setTarget(GameObject newTarget)
 	{
+		// Check if the new target is visible
 		if ((newTarget != null) && !newTarget.isVisible())
 		{
 			newTarget = null;
 		}
+		
 		GameObject oldTarget = getTarget();
+		
 		if (oldTarget != null)
 		{
 			if (oldTarget.equals(newTarget))
 			{
 				return;
 			}
+			if (oldTarget.isCreature())
+			{
+				((Creature) oldTarget).removeStatusListener(this);
+			}
+			
 			broadcastPacket(new TargetUnselected(this));
 		}
+		
 		if (newTarget != null)
 		{
-			sendPacket(new MyTargetSelected(newTarget.getObjectId(), 0));
-			broadcastPacket(new TargetSelected(getObjectId(), newTarget.getObjectId(), getLoc()));
+			if (newTarget.isCreature())
+			{
+				((Creature) newTarget).addStatusListener(this);
+				
+				if (newTarget.displayHpBar())
+				{
+					sendPacket(new StatusUpdate(((Creature) newTarget)).addAttribute(StatusUpdateField.MAX_HP, StatusUpdateField.CUR_HP));
+				}
+			}
+			
+			updateTargetSelectionInfo(newTarget);
+			broadcastPacketToOthers(new TargetSelected(getObjectId(), newTarget.getObjectId(), getLoc()));
 		}
 		super.setTarget(newTarget);
 	}
@@ -5416,11 +5246,6 @@ public final class Player extends Playable implements PlayerGroup
 			list.add(new AutoAttackStart(getObjectId()));
 		}
 		list.add(RelationChanged.update(forPlayer, this, forPlayer));
-		DominionSiegeEvent dominionSiegeEvent = getEvent(DominionSiegeEvent.class);
-		if (dominionSiegeEvent != null)
-		{
-			list.add(new ExDominionWarStart(this));
-		}
 		if (isInBoat())
 		{
 			list.add(getBoat().getOnPacket(this, getInBoatPosition()));
@@ -5648,6 +5473,8 @@ public final class Player extends Playable implements PlayerGroup
 		_fistsWeaponItem = null;
 		_chars = null;
 		_enchantScroll = null;
+		_enchantItem = null;
+		_enchantSupportItem = null;
 		_lastNpc = HardReferences.emptyRef();
 		_observerRegion = null;
 	}
@@ -6180,7 +6007,8 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	public void updateKarma(boolean flagChanged)
 	{
-		sendStatusUpdate(true, true, StatusUpdate.KARMA);
+		sendStatusUpdate(true, true, StatusUpdateField.KARMA);
+		
 		if (flagChanged)
 		{
 			broadcastRelationChanged();
@@ -6262,7 +6090,7 @@ public final class Player extends Playable implements PlayerGroup
 					_PvPRegTask.cancel(true);
 					_PvPRegTask = null;
 				}
-				sendStatusUpdate(true, true, StatusUpdate.PVP_FLAG);
+				sendStatusUpdate(true, true, StatusUpdateField.PVP_FLAG);
 			}
 			_karma = (int) new_karma;
 		}
@@ -8349,9 +8177,10 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		sendActionFailed();
 		getAI().notifyEvent(CtrlEvent.EVT_TELEPORTED);
+		
 		if (isLockedTarget() && (getTarget() != null))
 		{
-			sendPacket(new MyTargetSelected(getTarget().getObjectId(), 0));
+			updateTargetSelectionInfo();
 		}
 		sendUserInfo();
 		for (Summon summon : getSummonList())
@@ -11713,7 +11542,7 @@ public final class Player extends Playable implements PlayerGroup
 			return;
 		}
 		setPvpFlag(value);
-		sendStatusUpdate(true, true, StatusUpdate.PVP_FLAG);
+		sendStatusUpdate(true, true, StatusUpdateField.PVP_FLAG);
 		broadcastRelationChanged();
 	}
 	
@@ -14337,6 +14166,26 @@ public final class Player extends Playable implements PlayerGroup
 		_lectureMark = lectureMark;
 	}
 	
+	public void updateTargetSelectionInfo()
+	{
+		final GameObject obj = getTarget();
+		
+		if (obj != null)
+		{
+			updateTargetSelectionInfo(obj);
+		}
+	}
+	
+	public void updateTargetSelectionInfo(final GameObject ob)
+	{
+		sendPacket(new MyTargetSelected(this, ob));
+		
+		if (ob.isCreature() && !ob.isVehicle() && !ob.isDoor())
+		{
+			sendPacket(new ExAbnormalStatusUpdateFromTarget((Creature) ob));
+		}
+	}
+	
 	/**
 	 * Method isAwaking.
 	 * @return boolean
@@ -14877,6 +14726,31 @@ public final class Player extends Playable implements PlayerGroup
 			return _summons.values();
 		}
 		return new ArrayList<>(0);
+	}
+	
+	public boolean isChaotic()
+	{
+		return getKarma() < 0;
+	}
+	
+	public void setAppearanceStone(final ItemInstance enchantItem)
+	{
+		_enchantItem = enchantItem;
+	}
+	
+	public ItemInstance getAppearanceStone()
+	{
+		return _enchantItem;
+	}
+	
+	public void setAppearanceExtractItem(final ItemInstance supportItem)
+	{
+		_enchantSupportItem = supportItem;
+	}
+	
+	public ItemInstance getAppearanceExtractItem()
+	{
+		return _enchantSupportItem;
 	}
 	
 }

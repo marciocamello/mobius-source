@@ -26,7 +26,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Skill.SkillTargetType;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
-import lineage2.gameserver.network.serverpackets.MyTargetSelected;
 import lineage2.gameserver.network.serverpackets.NpcInfo;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.taskmanager.EffectTaskManager;
@@ -385,23 +384,9 @@ public final class TrapInstance extends NpcInstance
 	{
 	}
 	
-	/**
-	 * Method onAction.
-	 * @param player Player
-	 * @param shift boolean
-	 */
 	@Override
-	public void onAction(Player player, boolean shift)
+	public void onActionTargeted(final Player player, boolean forced)
 	{
-		if (player.getTarget() != this)
-		{
-			player.setTarget(this);
-			if (player.getTarget() == this)
-			{
-				player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel()));
-			}
-		}
-		player.sendActionFailed();
 	}
 	
 	/**

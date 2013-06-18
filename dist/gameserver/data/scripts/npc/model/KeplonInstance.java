@@ -51,10 +51,6 @@ public final class KeplonInstance extends NpcInstance
 		{
 			return;
 		}
-		if (checkForDominionWard(player))
-		{
-			return;
-		}
 		if (command.equalsIgnoreCase("buygreen"))
 		{
 			if (ItemFunctions.removeItem(player, 57, 10000, true) >= 10000)

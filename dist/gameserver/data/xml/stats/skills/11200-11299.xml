@@ -73,7 +73,7 @@
 		<set name="magicLevel" val="85"/>
 		<set name="coolTime" val="300"/>
 		<set name="skillType" val="MDAM"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="overHit" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -117,7 +117,7 @@
 		<set name="magicLevel" val="85"/>
 		<set name="coolTime" val="300"/>
 		<set name="skillType" val="MDAM"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="overHit" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -227,9 +227,9 @@
 		</for>
    </skill>
 	<skill id="11254" levels="4" name="Superior Summon Mastery">
-    <!-- INT + 2. You can use up to 6 summon points, and when you receive damage your servitor's battle skills are increased. -->
+    <!-- INT + 2. You can use up to 4 summon points, and when you receive damage your servitor's battle skills are increased -->
         <table name="#magicLevel">85 86 87 88</table>
-        <table name="#summonPointCount">6 7 8 9</table>
+        <table name="#summonPointCount">4 4 4 4</table>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_SELF"/>
         <set name="skillType" val="BUFF"/>
@@ -245,7 +245,7 @@
 		<table name="#vuln">30</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="relationSkillsId" val="328;329"/> 
 		<set name="operateType" val="OP_PASSIVE"/>
 			<for>
@@ -256,17 +256,34 @@
 				<sub order="0x40" stat="paralyzeResist" val="#vuln"/>
 			</for>
    </skill>
-    <skill id="11256" levels="8" name="Summon Armored Bear">
-    <!-- Summons a fearless Armored Bear from the fairy dimension. Consumes 3 summon points. -->
+    <skill id="11256" levels="8" name="Summon Cute Bear">
+    <!--1	Summon Cute Bear	Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points.
+		2	Summon Cute Bear	Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points.
+		3	Summon Cute Bear	Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points.
+		4	Summon Cute Bear	Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points.
+		5	Summon Cute Bear	Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points.
+		6	Summon Cute Bear	Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points.
+		7	Summon Cute Bear	Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points.
+		8	Summon Cute Bear	Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points.
+		101	Summon Cute Bear	Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 1 Power
+		102	Summon Cute Bear	Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 2 Power
+		103	Summon Cute Bear	Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 3 Power
+		104	Summon Cute Bear	Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 4 Power
+		105	Summon Cute Bear	Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 5 Power
+		106	Summon Cute Bear	Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 6 Power
+		107	Summon Cute Bear	Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 7 Power
+		108	Summon Cute Bear	Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 8 Power
+		109	Summon Cute Bear	Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 9 Power
+		110	Summon Cute Bear	Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 10 Power-->
         <table name="#lifeTime">3600 3600 3600 3600 3600 3600 3600 3600</table>
         <table name="#magicLevel">85 86 87 88 89 90 91 92</table>
         <table name="#mpConsume2">351 361 376 391 406 421 436 456</table>
-        <table name="#npcIds">14947 14948 14949 14950 14951 14952 14953 14971</table>
+        <table name="#npcIds">14929 14947 14948 14949 14950 14951 14952 14953</table>
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="reuseDelay" val="5000"/>
         <set name="hitTime" val="3800"/>
         <set name="castRange" val="1100"/>
-        <set name="summonPoint" val="3"/>
+        <set name="summonPoint" val="2"/>
         <set name="summonType" val="MULTI_SERVITOR"/>
         <set name="magicLevel" val="#magicLevel"/>
         <set name="target" val="TARGET_SELF"/>
@@ -279,7 +296,24 @@
         <for/>
     </skill>
     <skill id="11257" levels="8" name="Summon Saber Tooth Cougar">
-    <!-- Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points. -->
+    <!--1	Summon Saber Tooth Cougar	Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points.
+		2	Summon Saber Tooth Cougar	Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points.
+		3	Summon Saber Tooth Cougar	Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points.
+		4	Summon Saber Tooth Cougar	Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points.
+		5	Summon Saber Tooth Cougar	Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points.
+		6	Summon Saber Tooth Cougar	Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points.
+		7	Summon Saber Tooth Cougar	Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points.
+		8	Summon Saber Tooth Cougar	Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points.
+		101	Summon Saber Tooth Cougar	Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 1 Power
+		102	Summon Saber Tooth Cougar	Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 2 Power
+		103	Summon Saber Tooth Cougar	Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 3 Power
+		104	Summon Saber Tooth Cougar	Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 4 Power
+		105	Summon Saber Tooth Cougar	Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 5 Power
+		106	Summon Saber Tooth Cougar	Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 6 Power
+		107	Summon Saber Tooth Cougar	Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 7 Power
+		108	Summon Saber Tooth Cougar	Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 8 Power
+		109	Summon Saber Tooth Cougar	Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 9 Power
+		110	Summon Saber Tooth Cougar	Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 10 Power-->
         <table name="#lifeTime">3600 3600 3600 3600 3600 3600 3600 3600</table>
         <table name="#magicLevel">85 86 87 88 89 90 91 92</table>
         <table name="#mpConsume2">351 361 376 391 406 421 436 456</table>
@@ -298,10 +332,26 @@
         <enchant1 levels="10" name="Power">
             <table name="#npcIds">15032 15033 15034 15035 15036 15037 15038 15039 15040 15041</table>
         </enchant1>
-        <for/>
     </skill>
-    <skill id="11258" levels="8" name="Summon Soul Reaper">
-    <!-- Summons a nefarious Soul Reaper from the demonic dimension. Consumes 2 summon points. -->
+    <skill id="11258" levels="8" name="Summon Grim Reaper">
+	<!--1	Summon Grim Reaper	Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points.
+		2	Summon Grim Reaper	Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points.
+		3	Summon Grim Reaper	Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points.
+		4	Summon Grim Reaper	Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points.
+		5	Summon Grim Reaper	Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points.
+		6	Summon Grim Reaper	Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points.
+		7	Summon Grim Reaper	Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points.
+		8	Summon Grim Reaper	Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points.
+		101	Summon Grim Reaper	Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 1 Power
+		102	Summon Grim Reaper	Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 2 Power
+		103	Summon Grim Reaper	Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 3 Power
+		104	Summon Grim Reaper	Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 4 Power
+		105	Summon Grim Reaper	Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 5 Power
+		106	Summon Grim Reaper	Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 6 Power
+		107	Summon Grim Reaper	Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 7 Power
+		108	Summon Grim Reaper	Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 8 Power
+		109	Summon Grim Reaper	Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 9 Power
+		110	Summon Grim Reaper	Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points. Enchant Power: Increases the effect.	+ 10 Power-->
         <table name="#lifeTime">3600 3600 3600 3600 3600 3600 3600 3600</table>
         <table name="#magicLevel">85 86 87 88 89 90 91 92</table>
         <table name="#mpConsume2">351 361 376 391 406 421 436 456</table>
@@ -316,14 +366,13 @@
         <set name="reuseDelay" val="5000"/>
         <set name="hitTime" val="4000"/>
         <set name="skillType" val="SUMMON"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="operateType" val="OP_ACTIVE"/>
-        <table name="#npcIds">14961 14962 14963 14964 14965 14966 14967 14973</table>
+		<table name="#npcIds">14931 14961 14962 14963 14964 14965 14966 14967</table>
         <set name="npcId" val="#npcIds"/>
         <enchant1 levels="10" name="Power">
             <table name="#npcIds">15042 15043 15044 15045 15046 15047 15048 15049 15050 15051</table>
         </enchant1>
-        <for/>
     </skill>
     <skill id="11259" levels="8" name="Mark of Weakness">
     <!-- Weakens the target for 10 seconds. Decreases 269 HP per second and decreases resistance to debuffs by 5%. -->
@@ -343,7 +392,7 @@
 		<set name="isDebuff" val="true"/>
 		<set name="saveVs" val="CON"/>
 		<set name="skillType" val="DEBUFF"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="alterSkillsId" val="11499;11500;14579"/>
         <enchant1 levels="10" name="Cost">
@@ -393,7 +442,7 @@
 		<set name="saveVs" val="CON"/>
 		<set name="skillType" val="DEBUFF"/>
 		<set name="absorbPart" val="0.4"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
         <enchant1 levels="10" name="Cost">
             <table name="#DOT">369 372 374 376 378 381 383 385 387 389</table>
@@ -439,7 +488,7 @@
 		<set name="isDebuff" val="true"/>
 		<set name="saveVs" val="CON"/>
 		<set name="skillType" val="DEBUFF"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
         <enchant1 levels="10" name="Cost">
             <table name="#DOT">406 409 411 414 416 419 421 423 426 428</table>
@@ -636,7 +685,7 @@
 		<set name="relationSkillsId" val="48;452;497;260;477;95"/>
 		<set name="skillType" val="SUMMON"/>
 		<set name="summonType" val="TREE"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="magicLevel" val="99"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="addSkills" val="11289;1"/>
@@ -700,7 +749,7 @@
 		<set name="target" val="TARGET_PARTY"/>
 		<set name="relationSkillsId" val="1126;"/> 
 		<set name="skillType" val="MANAHEAL"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<enchant1 levels="10" name="Cost">
 			<!--TODO-->
@@ -733,7 +782,7 @@
         <table name="#powerPvP">0</table>
         <table name="#elementPower">0</table>
         <table name="#element">none</table>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
         <set name="elementPower" val="#elementPower"/>
         <set name="element" val="#element"/>
         <set name="powerPvP" val="#powerPvP"/>
@@ -1081,7 +1130,7 @@
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="effectPoint" val="#effectPoint"/>
         <set name="element" val="unholy"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="elementPower" val="#elementPower"/>
         <set name="target" val="TARGET_ONE"/>
         <set name="skillType" val="DRAIN"/>
@@ -1112,7 +1161,7 @@
         <set name="target" val="TARGET_AREA"/>
         <set name="skillType" val="MDAM"/>
         <set name="castRange" val="500"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="reuseDelay" val="5000"/>
         <enchant1 levels="30" name="Power">
             <table name="#power">122 122 123 124 124 125 125 126 127 127</table>
@@ -1474,18 +1523,34 @@
 		</for>
 	</skill>
     <skill id="11299" levels="1" name="Servitor Balance Life">
-    <!-- Equalizes your HP with summoned servitors' HP. -->
-		<set name="mpConsume" val="63"/>
+    <!-- 
+	11299	1	Servitor Balance Life	Equalizes your HP with summoned servitors' HP.
+	11299	101	Servitor Balance Life	Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption.	+ 1 Cost	Decreases MP Consumption.
+	11299	102	Servitor Balance Life	Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption.	+ 2 Cost	Decreases MP Consumption.
+	11299	103	Servitor Balance Life	Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption.	+ 3 Cost	Decreases MP Consumption.
+	11299	104	Servitor Balance Life	Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption.	+ 4 Cost	Decreases MP Consumption.
+	11299	105	Servitor Balance Life	Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption.	+ 5 Cost	Decreases MP Consumption.
+	11299	106	Servitor Balance Life	Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption.	+ 6 Cost	Decreases MP Consumption.
+	11299	107	Servitor Balance Life	Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption.	+ 7 Cost	Decreases MP Consumption.
+	11299	108	Servitor Balance Life	Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption.	+ 8 Cost	Decreases MP Consumption.
+	11299	109	Servitor Balance Life	Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption.	+ 9 Cost	Decreases MP Consumption.
+	11299	110	Servitor Balance Life	Balances you and your servitor's HP. Enchant Cost: Decreases MP Consumption.	+ 10 Cost	Decreases MP Consumption.
+	-->
+		<table name="#mpConsume2">63</table>
+		<set name="mpConsume" val="#mpConsume2"/>
 		<set name="power" val="1000"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON_AURA_AND_ME"/>
 		<set name="skillRadius" val="1000"/>
+		<set name="effectPoint" val="398"/>
 		<set name="reuseDelay" val="30000"/>
 		<set name="hitTime" val="5200"/>
 		<set name="magicLvl" val="91"/>
 		<set name="skillType" val="BALANCE"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="aggroPoints" val="398"/>
-		<enchant1 levels="10" name="Cost"/>
+		<enchant1 levels="10" name="Cost">
+			<table name="#mpConsume2">60 57 55 52 50 47 45 42 40 37</table>
+		</enchant1>
    </skill>
 </list>

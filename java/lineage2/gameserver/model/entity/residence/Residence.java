@@ -821,7 +821,7 @@ public abstract class Residence implements JdbcEntity
 	 */
 	public Location getNotOwnerRestartPoint(Player player)
 	{
-		return player.getKarma() < 0 ? getChaosRestartPoint() : getOtherRestartPoint();
+		return player.isChaotic() ? getChaosRestartPoint() : getOtherRestartPoint();
 	}
 	
 	/**

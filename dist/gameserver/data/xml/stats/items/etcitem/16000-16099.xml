@@ -2,6 +2,7 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<etcitem id="16027" name="Bottle of Freya's Soul">
+	<!-- Bottle containing a little bit of Freya's Soul. Find and speak to Rafforty to find out the purpose behind this little item. -->
 		<set name="price" value="1000000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -11,7 +12,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="16028" name="Vesper Cutter of Chaos">
+	<etcitem id="16028" name="Foundation Vesper Cutter">
+	<!-- Rare Vesper Cutter that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="74946000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -21,7 +23,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1800"/>
 	</etcitem>
-	<etcitem id="16029" name="Vesper Slasher of Chaos">
+	<etcitem id="16029" name="Foundation Vesper Slasher">
+	<!-- Rare Vesper Slasher that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="74946000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -31,7 +34,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1800"/>
 	</etcitem>
-	<etcitem id="16030" name="Vesper Buster of Chaos">
+	<etcitem id="16030" name="Foundation Vesper Buster">
+	<!-- Rare Vesper Buster that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="74946000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -41,7 +45,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1800"/>
 	</etcitem>
-	<etcitem id="16031" name="Vesper Shaper of Chaos">
+	<etcitem id="16031" name="Foundation Vesper Shaper">
+	<!-- Rare Vesper Shaper that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="74946000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -51,7 +56,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1800"/>
 	</etcitem>
-	<etcitem id="16032" name="Vesper Fighter of Chaos">
+	<etcitem id="16032" name="Foundation Vesper Fighter">
+	<!-- Rare Vesper Fighter that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="74946000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -61,7 +67,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1800"/>
 	</etcitem>
-	<etcitem id="16033" name="Vesper Stormer of Chaos">
+	<etcitem id="16033" name="Foundation Vesper Stormer">
+	<!-- Rare Vesper Stormer that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="74946000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -71,7 +78,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1800"/>
 	</etcitem>
-	<etcitem id="16034" name="Vesper Avenger of Chaos">
+	<etcitem id="16034" name="Foundation Vesper Avenger">
+	<!-- Rare Vesper Avenger that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="74946000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -81,7 +89,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1800"/>
 	</etcitem>
-	<etcitem id="16035" name="Vesper Retributer of Chaos">
+	<etcitem id="16035" name="Foundation Vesper Retributer">
+	<!-- Rare Vesper Retributer that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="74946000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -91,7 +100,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1800"/>
 	</etcitem>
-	<etcitem id="16036" name="Vesper Caster of Chaos">
+	<etcitem id="16036" name="Foundation Vesper Caster">
+	<!-- Rare Vesper Caster that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="74946000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -101,7 +111,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1800"/>
 	</etcitem>
-	<etcitem id="16037" name="Vesper Singer of Chaos">
+	<etcitem id="16037" name="Foundation Vesper Singer">
+	<!-- Rare Vesper Singer that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="74946000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -111,7 +122,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1800"/>
 	</etcitem>
-	<etcitem id="16038" name="Vesper Thrower of Chaos">
+	<etcitem id="16038" name="Foundation Vesper Thrower">
+	<!-- Rare Vesper Thrower that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="74946000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -121,7 +133,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1800"/>
 	</etcitem>
-	<etcitem id="16039" name="Vesper Pincer of Chaos">
+	<etcitem id="16039" name="Foundation Vesper Pincer">
+	<!-- Rare Vesper Pincer that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="74946000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -131,7 +144,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1800"/>
 	</etcitem>
-	<etcitem id="16040" name="Vesper Schutze of Chaos">
+	<etcitem id="16040" name="Foundation Vesper Shooter">
+	<!-- Rare Vesper Shooter that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="74946000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -141,7 +155,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1800"/>
 	</etcitem>
-	<etcitem id="16041" name="Vesper Nagan of Chaos">
+	<etcitem id="16041" name="Foundation Vesper Nagan">
+	<!-- Rare Vesper Nagan that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="price" value="74946000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

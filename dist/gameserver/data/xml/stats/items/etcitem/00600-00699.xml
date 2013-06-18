@@ -2,6 +2,7 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<etcitem id="686" name="Chair">
+	<!-- Chair -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -12,6 +13,7 @@
 		<set name="weight" value="100"/>
 	</etcitem>
 	<etcitem id="687" name="Darin's Letter">
+	<!-- The love letter that Darin Has written to Roxxy. Darin Has asked you to deliver this letter to Gatekeeper Roxxy. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -20,6 +22,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="688" name="Roxxy's Kerchief">
+	<!-- Roxxy's handkerchief. This is the reply that Roxxy Has given to Darin's letter, and must be delivered to Darin. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -28,6 +31,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="689" name="Poetry Book">
+	<!-- Poetry book treasured by Arujien. The book contains poems that he Has written. Take this to Greenis. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -36,6 +40,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="690" name="Lyrics Book">
+	<!-- The lyrics book of Herbien -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -44,6 +49,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="691" name="Romance Novel">
+	<!-- Romance novel -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -52,6 +58,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="692" name="Arujien's Letter">
+	<!-- Arujien's letter -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -59,7 +66,8 @@
 		<set name="icon" value="icon.item_canuse37"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="693" name="Greenis's Letter">
+	<etcitem id="693" name="Greenis' Letter">
+	<!-- Greenis' letter, refusing Arujien's love. Take this to Arujien. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -68,6 +76,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="694" name="Ingredient List">
+	<!-- List of ingredients: 3 omen Animal Bloods, 2 mana seeker husks, 2 gargoyle horns -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -75,7 +84,8 @@
 		<set name="icon" value="icon.item_normal37"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="695" name="Omen Beast's Blood">
+	<etcitem id="695" name="Onyx Beast's Blood">
+	<!-- The blood of an Onyx Beast. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -85,6 +95,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="696" name="Mana Seeker's Husk">
+	<!-- The husk of a mana seeker. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -94,6 +105,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="697" name="Gargoyle's Horn">
+	<!-- The horn of a gargoyle. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -103,6 +115,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="698" name="Gilbert's List">
+	<!-- List of things to eliminate: orcs, hobgoblins, walking fungus -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -111,6 +124,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="699" name="Orc's Nose">
+	<!-- The nose of an orc. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

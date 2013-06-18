@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS `items` (
   `custom_type2` int(5) NOT NULL,
   `custom_flags` int(11) NOT NULL,
   `agathion_energy` int(11) NOT NULL,
+  `visual_id` int(7) NOT NULL,
   PRIMARY KEY  (`object_id`),
   KEY `owner_id` (`owner_id`),
   KEY `loc` (`loc`),

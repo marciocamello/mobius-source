@@ -1637,7 +1637,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="GardenDoor"/>
 		<skills>
 			<skill id="4416" level="2"/>
 		</skills>
@@ -1686,7 +1686,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="GardenDoor"/>
 		<skills>
 			<skill id="4416" level="2"/>
 		</skills>
@@ -1735,7 +1735,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="GardenDoor"/>
 		<skills>
 			<skill id="4416" level="2"/>
 		</skills>
@@ -1784,7 +1784,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="GardenDoor"/>
 		<skills>
 			<skill id="4416" level="2"/>
 		</skills>
@@ -1847,7 +1847,6 @@
 		</attributes>
 	</npc>
 	<npc id="33138" name="Genesis Angel Statue" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -1882,7 +1881,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="GardenDoor"/>
 		<skills>
 			<skill id="4416" level="2"/>
 		</skills>
@@ -1896,7 +1895,6 @@
 		</attributes>
 	</npc>
 	<npc id="33139" name="Fountain of Genesis" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -1931,7 +1929,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="GardenDoor"/>
 		<skills>
 			<skill id="4416" level="2"/>
 		</skills>
@@ -1945,7 +1943,6 @@
 		</attributes>
 	</npc>
 	<npc id="33140" name="Genesis Goddess Statue" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -1980,7 +1977,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="GardenDoor"/>
 		<skills>
 			<skill id="4416" level="2"/>
 		</skills>
@@ -2321,9 +2318,9 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Магические Создания-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2368,9 +2365,9 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Магические Создания-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>

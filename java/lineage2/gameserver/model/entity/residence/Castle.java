@@ -75,7 +75,6 @@ public class Castle extends Residence
 	private final IntObjectMap<MerchantGuard> _merchantGuards = new HashIntObjectMap<>();
 	@SuppressWarnings("rawtypes")
 	private final IntObjectMap<List> _relatedFortresses = new CTreeIntObjectMap<>();
-	private Dominion _dominion;
 	
 	private List<CropProcure> _procure;
 	private List<SeedProduction> _production;
@@ -183,8 +182,6 @@ public class Castle extends Residence
 		if ((getOwnerId() > 0) && ((newOwner == null) || (newOwner.getClanId() != getOwnerId())))
 		{
 			removeSkills();
-			getDominion().changeOwner(null);
-			getDominion().removeSkills();
 			
 			setTaxPercent(null, 0);
 			cancelCycleTask();
@@ -836,16 +833,6 @@ public class Castle extends Residence
 		_isNextPeriodApproved = val;
 	}
 	
-	public Dominion getDominion()
-	{
-		return _dominion;
-	}
-	
-	public void setDominion(Dominion dominion)
-	{
-		_dominion = dominion;
-	}
-	
 	public void addRelatedFortress(int type, int fortress)
 	{
 		List<Integer> fortresses = _relatedFortresses.get(type);
@@ -929,6 +916,11 @@ public class Castle extends Residence
 		return _residenceSide;
 	}
 	
+	public boolean isCastleTypeLight()
+	{
+		return (getResidenceSide().ordinal() == 1) || (getResidenceSide().ordinal() == 0);
+	}
+	
 	public void broadcastResidenceState()
 	{
 		L2GameServerPacket trigger = new ExCastleState(this);
@@ -968,7 +960,6 @@ public class Castle extends Residence
 			}
 			return;
 		}
-		
 		if (getId() == 2)
 		{
 			//
@@ -993,7 +984,6 @@ public class Castle extends Residence
 			}
 			return;
 		}
-		
 		if (getId() == 3)
 		{
 			if ((getResidenceSide().ordinal() == 1) || (getResidenceSide().ordinal() == 0))
@@ -1014,11 +1004,9 @@ public class Castle extends Residence
 				// broadcastPacket(getResidenceSide().ordinal(),true,false);
 				setTaxPercent(null, 30);
 				_log.info("Terrytory on Dark Side");
-				
 			}
 			return;
 		}
-		
 		if (getId() == 4)
 		{
 			if ((getResidenceSide().ordinal() == 1) || (getResidenceSide().ordinal() == 0))
@@ -1042,7 +1030,6 @@ public class Castle extends Residence
 			}
 			return;
 		}
-		
 		if (getId() == 5)
 		{
 			if ((getResidenceSide().ordinal() == 1) || (getResidenceSide().ordinal() == 0))
@@ -1066,7 +1053,6 @@ public class Castle extends Residence
 			}
 			return;
 		}
-		
 		if (getId() == 6)
 		{
 			if ((getResidenceSide().ordinal() == 1) || (getResidenceSide().ordinal() == 0))
@@ -1090,7 +1076,6 @@ public class Castle extends Residence
 			}
 			return;
 		}
-		
 		if (getId() == 7)
 		{
 			if ((getResidenceSide().ordinal() == 1) || (getResidenceSide().ordinal() == 0))
@@ -1114,10 +1099,8 @@ public class Castle extends Residence
 			}
 			return;
 		}
-		
 		if (getId() == 8)
 		{
-			
 			if ((getResidenceSide().ordinal() == 1) || (getResidenceSide().ordinal() == 0))
 			{
 				setResidenceSide(ResidenceSide.LIGHT);
@@ -1139,7 +1122,6 @@ public class Castle extends Residence
 			}
 			return;
 		}
-		
 		if (getId() == 9)
 		{
 			if ((getResidenceSide().ordinal() == 1) || (getResidenceSide().ordinal() == 0))

@@ -27,7 +27,6 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.AutoAttackStart;
 import lineage2.gameserver.network.serverpackets.CharInfo;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
-import lineage2.gameserver.network.serverpackets.MyTargetSelected;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
@@ -252,25 +251,6 @@ public class DecoyInstance extends NpcInstance
 			owner.setDecoy(null);
 		}
 		super.onDelete();
-	}
-	
-	/**
-	 * Method onAction.
-	 * @param player Player
-	 * @param shift boolean
-	 */
-	@Override
-	public void onAction(Player player, boolean shift)
-	{
-		if (player.getTarget() != this)
-		{
-			player.setTarget(this);
-			player.sendPacket(new MyTargetSelected(getObjectId(), 0));
-		}
-		else if (isAutoAttackable(player))
-		{
-			player.getAI().Attack(this, false, shift);
-		}
 	}
 	
 	/**

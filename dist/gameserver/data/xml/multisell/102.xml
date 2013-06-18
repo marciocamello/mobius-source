@@ -1,11 +1,294 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!-- Noblesse Gate Pass ==> items -->
-
+<!-- http://l2wiki.com/index.php?title=Grand_Olympiad&direction=next&oldid=129614 -->
 <list>
-    <!-- Внимание: keepenchanted НЕ должно быть установлено в мультиселлах, где в одном блоке возможны два одинаковых нестекуемых предмета (напрмиер dual) -->
     <!-- ignoreprice не работает с keepencahnted -->
     <config showall="true" notax="false" keepenchanted="false"/>
+	<!-- Eternal Armor Heavy-->
+	<item>
+        <ingredient id="13722" count="115500"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="1620000"/>
+        <!--Fame-->
+		<ingredient id="57" count="144000000"/>
+        <!--Adena-->
+        <production id="17431" count="1"/>
+        <!--Eternal Breastplate-->
+    </item>
+	<item>
+        <ingredient id="13722" count="70000"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="990000"/>
+        <!--Fame-->
+		<ingredient id="57" count="96000000"/>
+        <!--Adena-->
+        <production id="17432" count="1"/>
+        <!--Eternal Gaiters-->
+    </item>
+	<item>
+        <ingredient id="13722" count="28700"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="390000"/>
+        <!--Fame-->
+		<ingredient id="57" count="36000000"/>
+        <!--Adena-->
+        <production id="17433" count="1"/>
+        <!--Eternal Gauntlets-->
+    </item>
+	<item>
+        <ingredient id="13722" count="28700"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="390000"/>
+        <!--Fame-->
+		<ingredient id="57" count="36000000"/>
+        <!--Adena-->
+        <production id="17434" count="1"/>
+        <!--Eternal Boots-->
+    </item>
+	<item>
+        <ingredient id="13722" count="43400"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="600000"/>
+        <!--Fame-->
+		<ingredient id="57" count="56600000"/>
+        <!--Adena-->
+        <production id="17430" count="1"/>
+        <!--Eternal Helmet-->
+    </item>
+	<item>
+        <ingredient id="13722" count="3100"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="414000"/>
+        <!--Fame-->
+		<ingredient id="57" count="37600000"/>
+        <!--Adena-->
+        <production id="17435" count="1"/>
+        <!--Eternal Shield-->
+    </item>
+	<!-- Eternal Armor Light-->
+	<item>
+        <ingredient id="13722" count="70000"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="990000"/>
+        <!--Fame-->
+		<ingredient id="57" count="96000000"/>
+        <!--Adena-->
+        <production id="17438" count="1"/>
+        <!--Eternal Leather Leggings-->
+    </item>
+	<item>
+        <ingredient id="13722" count="28700"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="390000"/>
+        <!--Fame-->
+		<ingredient id="57" count="36000000"/>
+        <!--Adena-->
+        <production id="17439" count="1"/>
+        <!--Eternal Leather Gloves-->
+    </item>
+	<item>
+        <ingredient id="13722" count="28700"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="390000"/>
+        <!--Fame-->
+		<ingredient id="57" count="36000000"/>
+        <!--Adena-->
+        <production id="17440" count="1"/>
+        <!--Eternal Leather Boots-->
+    </item>
+	<item>
+        <ingredient id="13722" count="115500"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="1620000"/>
+        <!--Fame-->
+		<ingredient id="57" count="144000000"/>
+        <!--Adena-->
+        <production id="17437" count="1"/>
+        <!--Eternal Leather Armor-->
+    </item>
+	<item>
+        <ingredient id="13722" count="43400"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="600000"/>
+        <!--Fame-->
+		<ingredient id="57" count="53600000"/>
+        <!--Adena-->
+        <production id="17436" count="1"/>
+        <!--Eternal Leather Helmet-->
+    </item>
+	<!-- Eternal Armor Robe-->
+	<item>
+        <ingredient id="13722" count="28700"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="390000"/>
+        <!--Fame-->
+		<ingredient id="57" count="36000000"/>
+        <!--Adena-->
+        <production id="17445" count="1"/>
+        <!--Eternal Shoes-->
+    </item>
+	<item>
+        <ingredient id="13722" count="43400"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="600000"/>
+        <!--Fame-->
+		<ingredient id="57" count="53600000"/>
+        <!--Adena-->
+        <production id="17441" count="1"/>
+        <!--Eternal Circlet-->
+    </item>
+	<item>
+        <ingredient id="13722" count="28700"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="390000"/>
+        <!--Fame-->
+		<ingredient id="57" count="36000000"/>
+        <!--Adena-->
+        <production id="17444" count="1"/>
+        <!--Eternal Gloves-->
+    </item>
+	<item>
+        <ingredient id="13722" count="3100"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="414000"/>
+        <!--Fame-->
+		<ingredient id="57" count="37600000"/>
+        <!--Adena-->
+        <production id="17446" count="1"/>
+        <!--Eternal Sigil-->
+    </item>
+	<item>
+        <ingredient id="13722" count="115500"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="1620000"/>
+        <!--Fame-->
+		<ingredient id="57" count="144000000"/>
+        <!--Adena-->
+        <production id="17442" count="1"/>
+        <!--Eternal Tunic-->
+    </item>
+	<item>
+        <ingredient id="13722" count="70000"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="990000"/>
+        <!--Fame-->
+		<ingredient id="57" count="96000000"/>
+        <!--Adena-->
+        <production id="17443" count="1"/>
+        <!--Eternal Stockings-->
+    </item>
+	<!--Amaranthine Weapon-->
+	<item>
+        <ingredient id="13722" count="224000"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="3000000"/>
+        <!--Fame-->
+		<ingredient id="57" count="280000000"/>
+        <!--Adena-->
+        <production id="17422" count="1"/>
+        <!--Amaranthine Thrower-->
+    </item>
+	<item>
+        <ingredient id="13722" count="224000"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="3000000"/>
+        <!--Fame-->
+		<ingredient id="57" count="280000000"/>
+        <!--Adena-->
+        <production id="17421" count="1"/>
+        <!--Amaranthine Stormer-->
+    </item>
+	<item>
+        <ingredient id="13722" count="224000"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="3000000"/>
+        <!--Fame-->
+		<ingredient id="57" count="280000000"/>
+        <!--Adena-->
+        <production id="17426" count="1"/>
+        <!--Amaranthine Retributer-->
+    </item>
+	<item>
+        <ingredient id="13722" count="224000"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="3000000"/>
+        <!--Fame-->
+		<ingredient id="57" count="280000000"/>
+        <!--Adena-->
+        <production id="17420" count="1"/>
+        <!--Amaranthine Fighter-->
+    </item>
+	<item>
+        <ingredient id="13722" count="224000"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="3000000"/>
+        <!--Fame-->
+		<ingredient id="57" count="280000000"/>
+        <!--Adena-->
+        <production id="17425" count="1"/>
+        <!--Amaranthine Caster-->
+    </item>
+	<item>
+        <ingredient id="13722" count="224000"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="3000000"/>
+        <!--Fame-->
+		<ingredient id="57" count="280000000"/>
+        <!--Adena-->
+        <production id="17419" count="1"/>
+        <!--Amaranthine Avenger-->
+    </item>
+	<item>
+        <ingredient id="13722" count="224000"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="3000000"/>
+        <!--Fame-->
+		<ingredient id="57" count="280000000"/>
+        <!--Adena-->
+        <production id="17416" count="1"/>
+        <!--Amaranthine Shaper-->
+    </item>
+	<item>
+        <ingredient id="13722" count="224000"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="3000000"/>
+        <!--Fame-->
+		<ingredient id="57" count="280000000"/>
+        <!--Adena-->
+        <production id="17424" count="1"/>
+        <!--Amaranthine Buster-->
+    </item>
+	<item>
+        <ingredient id="13722" count="224000"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="3000000"/>
+        <!--Fame-->
+		<ingredient id="57" count="280000000"/>
+        <!--Adena-->
+        <production id="17417" count="1"/>
+        <!--Amaranthine Cutter-->
+    </item>
+	<item>
+        <ingredient id="13722" count="224000"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="3000000"/>
+        <!--Fame-->
+		<ingredient id="57" count="280000000"/>
+        <!--Adena-->
+        <production id="17423" count="1"/>
+        <!--Amaranthine Shooter-->
+    </item>
+	<item>
+        <ingredient id="13722" count="224000"/>
+        <!--Olympiad Token-->
+        <ingredient id="-300" count="3000000"/>
+        <!--Fame-->
+		<ingredient id="57" count="280000000"/>
+        <!--Adena-->
+        <production id="17418" count="1"/>
+        <!--Amaranthine Slasher-->
+    </item>
+	<!-- Hero Items -->
     <item>
         <ingredient id="13722" count="30600"/>
         <!--Olympiad Token-->
@@ -29,805 +312,5 @@
         <!--Olympiad Token-->
         <production id="13754" count="1"/>
         <!--Olympiad Warrior's Earring-->
-    </item>
-    <item>
-        <ingredient id="13722" count="245000"/>
-        <!--Olympiad Token-->
-        <production id="13137" count="1"/>
-        <!--Vesper Helmet-->
-    </item>
-    <item>
-        <ingredient id="13722" count="245000"/>
-        <!--Olympiad Token-->
-        <production id="13138" count="1"/>
-        <!--Vesper Leather Helmet-->
-    </item>
-    <item>
-        <ingredient id="13722" count="245000"/>
-        <!--Olympiad Token-->
-        <production id="13139" count="1"/>
-        <!--Vesper Circlet-->
-    </item>
-    <item>
-        <ingredient id="13722" count="171500"/>
-        <!--Olympiad Token-->
-        <production id="12813" count="1"/>
-        <!--Vesper Sigil-->
-    </item>
-    <item>
-        <ingredient id="13722" count="653352"/>
-        <!--Olympiad Token-->
-        <production id="13432" count="1"/>
-        <!--Vesper Breastplate-->
-    </item>
-    <item>
-        <ingredient id="13722" count="490000"/>
-        <!--Olympiad Token-->
-        <production id="13433" count="1"/>
-        <!--Vesper Leather Breastplate-->
-    </item>
-    <item>
-        <ingredient id="13722" count="490000"/>
-        <!--Olympiad Token-->
-        <production id="13434" count="1"/>
-        <!--Vesper Tunic-->
-    </item>
-    <item>
-        <ingredient id="13722" count="408352"/>
-        <!--Olympiad Token-->
-        <production id="13438" count="1"/>
-        <!--Vesper Gaiters-->
-    </item>
-    <item>
-        <ingredient id="13722" count="163338"/>
-        <!--Olympiad Token-->
-        <production id="13439" count="1"/>
-        <!--Vesper Gauntlet-->
-    </item>
-    <item>
-        <ingredient id="13722" count="163338"/>
-        <!--Olympiad Token-->
-        <production id="13440" count="1"/>
-        <!--Vesper Boots-->
-    </item>
-    <item>
-        <ingredient id="13722" count="171500"/>
-        <!--Olympiad Token-->
-        <production id="13471" count="1"/>
-        <!--Vesper Shield-->
-    </item>
-    <item>
-        <ingredient id="13722" count="306264"/>
-        <!--Olympiad Token-->
-        <production id="13441" count="1"/>
-        <!--Vesper Leather Leggings-->
-    </item>
-    <item>
-        <ingredient id="13722" count="163338"/>
-        <!--Olympiad Token-->
-        <production id="13442" count="1"/>
-        <!--Vesper Leather Gloves-->
-    </item>
-    <item>
-        <ingredient id="13722" count="163338"/>
-        <!--Olympiad Token-->
-        <production id="13443" count="1"/>
-        <!--Vesper Leather Boots-->
-    </item>
-    <item>
-        <ingredient id="13722" count="306264"/>
-        <!--Olympiad Token-->
-        <production id="13444" count="1"/>
-        <!--Vesper Stockings-->
-    </item>
-    <item>
-        <ingredient id="13722" count="163338"/>
-        <!--Olympiad Token-->
-        <production id="13445" count="1"/>
-        <!--Vesper Gloves-->
-    </item>
-    <item>
-        <ingredient id="13722" count="163338"/>
-        <!--Olympiad Token-->
-        <production id="13446" count="1"/>
-        <!--Vesper Shoes-->
-    </item>
-    <item>
-        <ingredient id="13722" count="314100"/>
-        <!--Olympiad Token-->
-        <ingredient id="57" count="10470000"/>
-        <!--Adena-->
-        <production id="15589" count="1"/>
-        <!--Vorpal Helmet-->
-    </item>
-    <item>
-        <ingredient id="13722" count="314100"/>
-        <!--Olympiad Token-->
-        <ingredient id="57" count="10470000"/>
-        <!--Adena-->
-        <production id="15590" count="1"/>
-        <!--Vorpal Leather Helmet-->
-    </item>
-    <item>
-        <ingredient id="13722" count="314100"/>
-        <!--Olympiad Token-->
-        <ingredient id="57" count="10470000"/>
-        <!--Adena-->
-        <production id="15591" count="1"/>
-        <!--Vorpal Circlet-->
-    </item>
-    <item>
-        <ingredient id="13722" count="837600"/>
-        <!--Olympiad Token-->
-        <ingredient id="57" count="27920000"/>
-        <!--Adena-->
-        <production id="15592" count="1"/>
-        <!--Vorpal Breastplate-->
-    </item>
-    <item>
-        <ingredient id="13722" count="628200"/>
-        <!--Olympiad Token-->
-        <ingredient id="57" count="20940000"/>
-        <!--Adena-->
-        <production id="15593" count="1"/>
-        <!--Vorpal Leather Breastplate-->
-    </item>
-    <item>
-        <ingredient id="13722" count="628200"/>
-        <!--Olympiad Token-->
-        <ingredient id="57" count="20940000"/>
-        <!--Adena-->
-        <production id="15594" count="1"/>
-        <!--Vorpal Tunic-->
-    </item>
-    <item>
-        <ingredient id="13722" count="523500"/>
-        <!--Olympiad Token-->
-        <ingredient id="57" count="17450000"/>
-        <!--Adena-->
-        <production id="15595" count="1"/>
-        <!--Vorpal Gaiter-->
-    </item>
-    <item>
-        <ingredient id="13722" count="392625"/>
-        <!--Olympiad Token-->
-        <ingredient id="57" count="13087500"/>
-        <!--Adena-->
-        <production id="15596" count="1"/>
-        <!--Vorpal Leather Legging-->
-    </item>
-    <item>
-        <ingredient id="13722" count="392625"/>
-        <!--Olympiad Token-->
-        <ingredient id="57" count="13087500"/>
-        <!--Adena-->
-        <production id="15597" count="1"/>
-        <!--Vorpal Stockings-->
-    </item>
-    <item>
-        <ingredient id="13722" count="209400"/>
-        <!--Olympiad Token-->
-        <ingredient id="57" count="6980000"/>
-        <!--Adena-->
-        <production id="15598" count="1"/>
-        <!--Vorpal Gauntlet-->
-    </item>
-    <item>
-        <ingredient id="13722" count="209400"/>
-        <!--Olympiad Token-->
-        <ingredient id="57" count="6980000"/>
-        <!--Adena-->
-        <production id="15599" count="1"/>
-        <!--Vorpal Leather Gloves-->
-    </item>
-    <item>
-        <ingredient id="13722" count="209400"/>
-        <!--Olympiad Token-->
-        <ingredient id="57" count="6980000"/>
-        <!--Adena-->
-        <production id="15600" count="1"/>
-        <!--Vorpal Gloves-->
-    </item>
-    <item>
-        <ingredient id="13722" count="209400"/>
-        <!--Olympiad Token-->
-        <ingredient id="57" count="6980000"/>
-        <!--Adena-->
-        <production id="15601" count="1"/>
-        <!--Vorpal Boots-->
-    </item>
-    <item>
-        <ingredient id="13722" count="209400"/>
-        <!--Olympiad Token-->
-        <ingredient id="57" count="6980000"/>
-        <!--Adena-->
-        <production id="15602" count="1"/>
-        <!--Vorpal Leather Boots-->
-    </item>
-    <item>
-        <ingredient id="13722" count="209400"/>
-        <!--Olympiad Token-->
-        <ingredient id="57" count="6980000"/>
-        <!--Adena-->
-        <production id="15603" count="1"/>
-        <!--Vorpal Shoes-->
-    </item>
-    <item>
-        <ingredient id="13722" count="219870"/>
-        <!--Olympiad Token-->
-        <ingredient id="57" count="7329000"/>
-        <!--Adena-->
-        <production id="15604" count="1"/>
-        <!--Vorpal Shield-->
-    </item>
-    <item>
-        <ingredient id="13722" count="219870"/>
-        <!--Olympiad Token-->
-        <ingredient id="57" count="7329000"/>
-        <!--Adena-->
-        <production id="15605" count="1"/>
-        <!--Vorpal Sigil-->
-    </item>
-	
-	    <!--God by Evil_dnk-->
-	<item>
-        <ingredient id="13722" count="100000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="110000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="1550000"/>
-        <!--Fame-->
-        <production id="17324" count="1"/>
-        <!--Apocalypse Shaper-->
-    </item>
-	<item>
-        <ingredient id="13722" count="100000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="110000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="1550000"/>
-        <!--Fame-->
-        <production id="17325" count="1"/>
-        <!--Apocalypse Cutter-->
-    </item>
-	<item>
-        <ingredient id="13722" count="100000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="110000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="1550000"/>
-        <!--Fame-->
-        <production id="17326" count="1"/>
-        <!--Apocalypse Slasher-->
-    </item>
-	<item>
-        <ingredient id="13722" count="100000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="110000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="1550000"/>
-        <!--Fame-->
-        <production id="17327" count="1"/>
-        <!--Apocalypse Avenger-->
-    </item>
-	<item>
-        <ingredient id="13722" count="100000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="110000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="1550000"/>
-        <!--Fame-->
-        <production id="17328" count="1"/>
-        <!--Apocalypse Fighter-->
-    </item>
-	<item>
-        <ingredient id="13722" count="100000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="110000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="1550000"/>
-        <!--Fame-->
-        <production id="17329" count="1"/>
-        <!--Apocalypse Stormer-->
-    </item>
-	<item>
-        <ingredient id="13722" count="100000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="110000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="1550000"/>
-        <!--Fame-->
-        <production id="17330" count="1"/>
-        <!--Apocalypse Thrower-->
-    </item>
-	<item>
-        <ingredient id="13722" count="100000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="110000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="1550000"/>
-        <!--Fame-->
-        <production id="17331" count="1"/>
-        <!--Apocalypse Shooter-->
-    </item>
-	<item>
-        <ingredient id="13722" count="100000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="110000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="1550000"/>
-        <!--Fame-->
-        <production id="17332" count="1"/>
-        <!--Apocalypse Buster-->
-    </item>
-	<item>
-        <ingredient id="13722" count="100000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="110000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="1550000"/>
-        <!--Fame-->
-        <production id="17333" count="1"/>
-        <!--Apocalypse Caster-->
-    </item>
-	<item>
-        <ingredient id="13722" count="100000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="110000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="1550000"/>
-        <!--Fame-->
-        <production id="17334" count="1"/>
-        <!--Apocalypse Retributer-->
-    </item>
-		<item>
-        <ingredient id="13722" count="20000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="21000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="300000"/>
-        <!--Fame-->
-        <production id="17338" count="1"/>
-        <!--Twilight Helmet-->
-    </item>
-		<item>
-        <ingredient id="13722" count="50000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="56000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="800000"/>
-        <!--Fame-->
-        <production id="17339" count="1"/>
-        <!--Twilight Breastplate-->
-    </item>
-		<item>
-        <ingredient id="13722" count="32000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="35000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="500000"/>
-        <!--Fame-->
-        <production id="17340" count="1"/>
-        <!--Twilight Gaiters-->
-    </item>
-		<item>
-        <ingredient id="13722" count="13000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="14000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="200000"/>
-        <!--Fame-->
-        <production id="17341" count="1"/>
-        <!--Twilight Gauntlet-->
-    </item>
-		<item>
-        <ingredient id="13722" count="13000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="14000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="200000"/>
-        <!--Fame-->
-        <production id="17342" count="1"/>
-        <!--Twilight Boots-->
-    </item>
-		<item>
-        <ingredient id="13722" count="14000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="14000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="220000"/>
-        <!--Fame-->
-        <production id="17343" count="1"/>
-        <!--Twilight Shield-->
-    </item>
-		<item>
-        <ingredient id="13722" count="20000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="21000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="300000"/>
-        <!--Fame-->
-        <production id="17344" count="1"/>
-        <!--Twilight Leather Helmet-->
-    </item>
-		<item>
-        <ingredient id="13722" count="50000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="56000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="800000"/>
-        <!--Fame-->
-        <production id="17345" count="1"/>
-        <!--Twilight Leather Armor-->
-    </item>
-			<item>
-        <ingredient id="13722" count="32000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="35000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="500000"/>
-        <!--Fame-->
-        <production id="17346" count="1"/>
-        <!--Twilight Leather Legging-->
-    </item>
-		<item>
-        <ingredient id="13722" count="13000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="14000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="300000"/>
-        <!--Fame-->
-        <production id="17347" count="1"/>
-        <!--Twilight Leather Gloves-->
-    </item>
-			<item>
-        <ingredient id="13722" count="13000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="14000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="300000"/>
-        <!--Fame-->
-        <production id="17348" count="1"/>
-        <!--Twilight Leather Boots-->
-    </item>
-			<item>
-        <ingredient id="13722" count="20000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="21000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="300000"/>
-        <!--Fame-->
-        <production id="17349" count="1"/>
-        <!--Twilight Circlet-->
-    </item>
-			<item>
-        <ingredient id="13722" count="50000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="56000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="800000"/>
-        <!--Fame-->
-        <production id="17350" count="1"/>
-        <!--Twilight Tunic-->
-    </item>
-			<item>
-        <ingredient id="13722" count="32000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="35000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="500000"/>
-        <!--Fame-->
-        <production id="17351" count="1"/>
-        <!--Twilight Stockings-->
-    </item>
-			<item>
-        <ingredient id="13722" count="13000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="14000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="200000"/>
-        <!--Fame-->
-        <production id="17352" count="1"/>
-        <!--Twilight Gloves-->
-    </item>
-		<item>
-        <ingredient id="13722" count="13000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="14000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="200000"/>
-        <!--Fame-->
-        <production id="17353" count="1"/>
-        <!--Twilight Shoes-->
-    </item>
-			<item>
-        <ingredient id="13722" count="14000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="14000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="220000"/>
-        <!--Fame-->
-        <production id="17354" count="1"/>
-        <!--Twilight Sigil-->
-    </item>
-	<item>
-        <ingredient id="13722" count="320000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="350000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="5000000"/>
-        <!--Fame-->
-        <production id="17382" count="1"/>
-        <!--Specter Shaper-->
-    </item>
-				<item>
-        <ingredient id="13722" count="320000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="350000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="5000000"/>
-        <!--Fame-->
-        <production id="17383" count="1"/>
-        <!--Specter Cutter	-->
-    </item>
-				<item>
-        <ingredient id="13722" count="320000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="350000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="5000000"/>
-        <!--Fame-->
-        <production id="17384" count="1"/>
-        <!--Specter Slasher-->
-    </item>
-				<item>
-        <ingredient id="13722" count="320000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="350000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="5000000"/>
-        <!--Fame-->
-        <production id="17385" count="1"/>
-        <!--Specter Avenger-->
-    </item>
-				<item>
-        <ingredient id="13722" count="320000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="350000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="5000000"/>
-        <!--Fame-->
-        <production id="17386" count="1"/>
-        <!--Specter Fighter-->
-    </item>
-				<item>
-        <ingredient id="13722" count="320000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="350000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="5000000"/>
-        <!--Fame-->
-        <production id="17387" count="1"/>
-        <!--Specter Stormer-->
-    </item>
-				<item>
-        <ingredient id="13722" count="320000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="350000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="5000000"/>
-        <!--Fame-->
-        <production id="17388" count="1"/>
-        <!--Specter Thrower-->
-    </item>
-				<item>
-        <ingredient id="13722" count="320000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="350000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="5000000"/>
-        <!--Fame-->
-        <production id="17389" count="1"/>
-        <!--Specter Shooter-->
-    </item>
-				<item>
-        <ingredient id="13722" count="320000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="350000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="5000000"/>
-        <!--Fame-->
-        <production id="17390" count="1"/>
-        <!--Specter Buster-->
-    </item>
-				<item>
-        <ingredient id="13722" count="320000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="350000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="5000000"/>
-        <!--Fame-->
-        <production id="17391" count="1"/>
-        <!--Specter Caster-->
-    </item>
-				<item>
-        <ingredient id="13722" count="320000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="350000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="5000000"/>
-        <!--Fame-->
-        <production id="17392" count="1"/>
-        <!--Specter Retributer-->
-    </item>
-				<item>
-        <ingredient id="13722" count="62000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="67000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="1000000"/>
-        <!--Fame-->
-        <production id="17396" count="1"/>
-        <!--Seraph Helmet-->
-    </item>
-				<item>
-        <ingredient id="13722" count="16500"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="180000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="2700000"/>
-        <!--Fame-->
-        <production id="17397" count="1"/>
-        <!--Seraph Breastplate-->
-    </item>
-				<item>
-        <ingredient id="13722" count="10000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="120000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="1650000"/>
-        <!--Fame-->
-        <production id="17398" count="1"/>
-        <!--Seraph Gaiters-->
-    </item>
-				<item>
-        <ingredient id="13722" count="41000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="45000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="650000"/>
-        <!--Fame-->
-        <production id="17399" count="1"/>
-        <!--Seraph Gauntlet-->
-    </item>
-				<item>
-        <ingredient id="13722" count="41000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="45000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="650000"/>
-        <!--Fame-->
-        <production id="17400" count="1"/>
-        <!--Seraph Boots-->
-    </item>
-				<item>
-        <ingredient id="13722" count="43000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="47000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="690000"/>
-        <!--Fame-->
-        <production id="17401" count="1"/>
-        <!--Seraph Shield-->
-    </item>
-				<item>
-        <ingredient id="13722" count="62000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="67000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="1000000"/>
-        <!--Fame-->
-        <production id="17402" count="1"/>
-        <!--Seraph Leather Helmet-->
-    </item>
-				<item>
-        <ingredient id="13722" count="16500"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="180000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="2700000"/>
-        <!--Fame-->
-        <production id="17403" count="1"/>
-        <!--Seraph Leather Armor-->
-    </item>
-				<item>
-        <ingredient id="13722" count="10000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="120000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="1650000"/>
-        <!--Fame-->
-        <production id="17404" count="1"/>
-        <!--Seraph Leather Legging-->
-    </item>
-				<item>
-        <ingredient id="13722" count="41000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="45000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="650000"/>
-        <!--Fame-->
-        <production id="17405" count="1"/>
-        <!--Seraph Leather Gloves-->
-    </item>
-				<item>
-        <ingredient id="13722" count="41000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="45000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="650000"/>
-        <!--Fame-->
-        <production id="17406" count="1"/>
-        <!--Seraph Leather Boots-->
-    </item>
-				<item>
-        <ingredient id="13722" count="62000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="67000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="1000000"/>
-        <!--Fame-->
-        <production id="17407" count="1"/>
-        <!--Seraph Circlet-->
-    </item>
-				<item>
-        <ingredient id="13722" count="16500"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="180000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="2700000"/>
-        <!--Fame-->
-        <production id="17408" count="1"/>
-        <!--Seraph Tunic-->
-    </item>
-				<item>
-        <ingredient id="13722" count="10000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="120000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="1650000"/>
-        <!--Fame-->
-        <production id="17409" count="1"/>
-        <!--Seraph Stockings-->
-    </item>
-				<item>
-        <ingredient id="13722" count="41000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="45000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="650000"/>
-        <!--Fame-->
-        <production id="17410" count="1"/>
-        <!--Seraph Gloves-->
-    </item>
-				<item>
-        <ingredient id="13722" count="41000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="45000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="650000"/>
-        <!--Fame-->
-        <production id="17411" count="1"/>
-        <!--Seraph Shoes-->
-    </item>
-				<item>
-        <ingredient id="13722" count="43000"/>
-        <!--Olympiad Token-->
-		<ingredient id="57" count="47000000"/>
-        <!--Adena-->
-        <ingredient id="-300" count="690000"/>
-        <!--Fame-->
-        <production id="17412" count="1"/>
-        <!--Seraph Sigil-->
     </item>
 </list>

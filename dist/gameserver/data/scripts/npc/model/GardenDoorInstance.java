@@ -32,7 +32,7 @@ public final class GardenDoorInstance extends NpcInstance
 	
 	private static final int APHROS_KEY = 17373;
 	
-	private static final int APHROS = 25775;
+	private static final int APHROS = 25866; // RAID
 	private static final int GUARDIAN = 25776;
 	private static final int ANGEL_STATUE_KEEPER = 23038;
 	private static final int FOUNTAIN_KEEPER = 23039;

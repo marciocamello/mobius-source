@@ -37,14 +37,9 @@ public class NoActionNpcInstance extends NpcInstance
 		super(objectID, template);
 	}
 	
-	/**
-	 * Method onAction.
-	 * @param player Player
-	 * @param dontMove boolean
-	 */
 	@Override
-	public void onAction(final Player player, final boolean dontMove)
+	public void onActionSelect(final Player player, final boolean forced)
 	{
-		player.sendActionFailed();
 	}
+	
 }

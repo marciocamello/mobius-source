@@ -75,6 +75,15 @@ public class AirShipControllerInstance extends NpcInstance
 			player._stablePoint = player.getLoc().setH(0);
 			boat.addPlayer(player, new Location());
 		}
+		if (command.equalsIgnoreCase("hellfireenter"))
+		{
+			if (player.getLevel() < 97)
+			{
+				showChatWindow(player, "default/hellfire-notp.htm");
+				return;
+			}
+			player.teleToLocation(-147711, 152768, -14056);
+		}
 		else
 		{
 			super.onBypassFeedback(player, command);

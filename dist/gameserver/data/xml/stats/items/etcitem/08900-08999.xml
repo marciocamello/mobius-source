@@ -2,6 +2,7 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<etcitem id="8900" name="Ancient Spellbook: Cyclone">
+	<!-- Ancient Spellbook needed to learn Cyclone. Can be used by a Storm Screamer. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_element_i00"/>
@@ -12,6 +13,7 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8901" name="Ancient Spellbook: Raging Waves">
+	<!-- Ancient Spellbook needed to learn Raging Waves. Used by Mystic Muses. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_element_i00"/>
@@ -22,6 +24,7 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8902" name="Ancient Spellbook: Day of Doom">
+	<!-- Ancient Spellbook needed to learn Day of Doom. Can be used by a Soultaker. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_element_i00"/>
@@ -32,6 +35,7 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8903" name="Ancient Spellbook: Gehenna">
+	<!-- Ancient Spellbook needed to learn Gehenna. Can be used by a Soultaker. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_element_i00"/>
@@ -41,7 +45,8 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="8904" name="Ancient Spellbook: Anti-Summoning Field">
+	<etcitem id="8904" name="Ancient Spellbook: Anti-summoning Field">
+	<!-- Ancient Spellbook needed to learn Anti-summoning Field. Can be used by an Arcana Lord, Elemental Master, and Spectral Master. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_element_i00"/>
@@ -52,6 +57,7 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8905" name="Ancient Spellbook: Purification Field">
+	<!-- Ancient Spellbook needed to learn Purification Field. Used by a Cardinal. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_element_i00"/>
@@ -62,6 +68,7 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8906" name="Ancient Spellbook: Miracle">
+	<!-- Ancient Spellbook needed to learn Miracle. Used by a Cardinal. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_element_i00"/>
@@ -72,6 +79,7 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8907" name="Ancient Spellbook: Flames of Invincibility">
+	<!-- Ancient Spellbook needed to learn Flames of Invincibility. Used by a Dominator. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_element_i00"/>
@@ -82,6 +90,7 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8908" name="Ancient Spellbook: Mass Recharge">
+	<!-- Ancient Spellbook needed to learn Mass Recharge. Can be used by an Eva's Saint and Shillien Saint. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_element_i00"/>
@@ -92,6 +101,8 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8909" name="Blueprint: Summon Swoop Cannon">
+	<!-- Blueprint needed to learn the Summon Swoop Cannon technique. Can be used by a Warsmith.
+	Required level: 68 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_plan_i00"/>
@@ -102,6 +113,7 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8924" name="Boat Ticket: Primeval Isle to Rune.">
+	<!-- Boat Ticket from Primeval Isle to Rune. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -111,7 +123,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="8925" name="Boat Ticket: Rune to Primeval Isle.">
+	<etcitem id="8925" name="Boat Ticket: Rune to Primeval Isle">
+	<!-- Boat Ticket from Rune to Primeval Isle. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -122,6 +135,7 @@
 		<set name="weight" value="20"/>
 	</etcitem>
 	<etcitem id="8939" name="Dominic's Mark">
+	<!-- Dominic's Mark. Used in carrying out a secret mission. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -130,6 +144,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8940" name="Mark of the Future: Human">
+	<!-- Mark of the Future. Received from Grand Master Klaus Blackbird of Oren Castle Town. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -138,6 +153,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8941" name="Mark of the Future: Dwarf">
+	<!-- Mark of the Future. Received from Warehouse Chief Alder of Schuttgart Castle Town. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -146,6 +162,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8942" name="Mark of the Future: Elf">
+	<!-- Mark of the Future. Received from Magister Juris of Town of Giran. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -154,6 +171,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8943" name="Mark of the Future: Dark Elf">
+	<!-- Mark of the Future. Received from Grand Master Oltran of Town of Aden. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -162,6 +180,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8944" name="Mark of the Future: Orc">
+	<!-- Mark of the Future. Received from High Prefect Aklan of Goddard Castle Town. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -170,6 +189,8 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8945" name="Spellbook: Celestial Shield">
+	<!-- Spellbook needed to learn Celestial Shield. Used by Bishops.
+	Required level: 64 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -180,6 +201,8 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="8946" name="Spellbook: Invocation">
+	<!-- Spellbook need to learn Invocation. Used by Bishops, Elders, and Shillien Elders.
+	Required level: 56 -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -189,14 +212,14 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="8952" name="Greater Herb of Life">
+	<etcitem id="8952" name="Major Herb of Life">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value=""/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="8953" name="Greater Herb of Mana">
+	<etcitem id="8953" name="Major Herb of Mana">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -204,6 +227,7 @@
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="8954" name="Blue Primeval Crystal">
+	<!-- Increases SP by 50000 when used. Can only be used by characters level 76 or above. -->
 		<set name="reuse_delay" value="1000"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="S"/>
@@ -217,6 +241,7 @@
 		</skills>
 	</etcitem>
 	<etcitem id="8955" name="Green Primeval Crystal">
+	<!-- Increases SP by 100000 when used. Can only be used by characters level 76 or above. -->
 		<set name="reuse_delay" value="1000"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="S"/>
@@ -230,6 +255,7 @@
 		</skills>
 	</etcitem>
 	<etcitem id="8956" name="Red Primeval Crystal">
+	<!-- Increases SP by 200000 when used. Can only be used by characters level 76 or above. -->
 		<set name="reuse_delay" value="1000"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="S"/>
@@ -243,6 +269,7 @@
 		</skills>
 	</etcitem>
 	<etcitem id="8957" name="Attack Orders">
+	<!-- Fantastic Scroll of Escape event item. A Warehouse Keeper can exchange these for Shadow Items appropriate to your level. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -252,6 +279,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="8958" name="Defense Orders">
+	<!-- Fantastic Scroll of Escape event item. A Warehouse Keeper can exchange these for Shadow Items appropriate to your level. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -261,6 +289,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="8959" name="Supply Orders">
+	<!-- Fantastic Scroll of Escape event item. A Warehouse Keeper can exchange these for consumables appropriate to your level. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -269,7 +298,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="8960" name="No Grade Shadow Armor Set Box">
+	<etcitem id="8960" name="Shadow Armor Set Pack (No-grade)">
+	<!-- One can receive a no-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are more than 20 empty inventory slots.) -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -282,7 +312,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8961" name="D-Grade Shadow Armor Set Box">
+	<etcitem id="8961" name="Shadow Armor Set Pack (D-grade)">
+	<!-- One can receive a D-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are more than 20 empty inventory slots.) -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -295,7 +326,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8962" name="C-Grade Shadow Armor Set Box">
+	<etcitem id="8962" name="Shadow Armor Set Pack (C-grade)">
+	<!-- One can receive a C-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are more than 20 empty inventory slots.) -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -308,7 +340,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8963" name="B-Grade Shadow Armor Set Box">
+	<etcitem id="8963" name="Shadow Armor Set Pack (B-grade)">
+	<!-- One can receive a B-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are more than 20 empty inventory slots.) -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -321,7 +354,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8964" name="A-Grade Shadow Armor Set Box">
+	<etcitem id="8964" name="Shadow Armor Set Pack (A-grade)">
+	<!-- One can receive an A-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are more than 20 empty inventory slots.) -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -334,7 +368,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8965" name="S-Grade Shadow Armor Set Box">
+	<etcitem id="8965" name="Shadow Armor Set Pack (S-grade)">
+	<!-- One can receive an S-grade Shadow Armor set by Double-clicking. (Can be used when the Weight Gauge is below 60% and there are more than 20 empty inventory slots.) -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -347,7 +382,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8966" name="No Grade Item Set Box (Warrior Use)">
+	<etcitem id="8966" name="Item Set Pack (No-grade) (Warrior)">
+	<!-- One can receive no-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -360,7 +396,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8967" name="D Grade Item Set Box (Warrior Use)">
+	<etcitem id="8967" name="Item Set Pack (D-grade) (Warrior)">
+	<!-- One can receive D-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -373,7 +410,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8968" name="C Grade Item Set Box (Warrior Use)">
+	<etcitem id="8968" name="Item Set Pack (C-grade) (Warrior)">
+	<!-- One can receive C-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -386,7 +424,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8969" name="B Grade Item Set Box (Warrior Use)">
+	<etcitem id="8969" name="Item Set Pack (B-grade) (Warrior)">
+	<!-- One can receive B-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -399,7 +438,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8970" name="A Grade Item Set Box (Warrior Use)">
+	<etcitem id="8970" name="Item Set Pack (A-grade) (Warrior)">
+	<!-- One can receive A-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -412,7 +452,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8971" name="A, S Grade Item Set Box (Warrior Use)">
+	<etcitem id="8971" name="Item Set Pack (A/S-grade) (Warrior)">
+	<!-- One can receive A- and S-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
