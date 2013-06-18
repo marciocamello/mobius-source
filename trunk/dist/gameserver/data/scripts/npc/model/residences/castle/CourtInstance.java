@@ -19,6 +19,7 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.skills.skillclasses.Call;
 import lineage2.gameserver.templates.npc.NpcTemplate;
+import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
 
 /**
@@ -121,6 +122,52 @@ public class CourtInstance extends NpcInstance
 					}
 					showChatWindow(player, "castle/CourtMagician/CourtMagician-nogate.htm");
 				}
+			}
+			else if (command.equalsIgnoreCase("Cloak")) // Give Cloak of Light/Dark
+			{
+				if (player.getClan() != null)
+				{
+					if (player.getCastle() != null)
+					{
+						if (player.getCastle().isCastleTypeLight())
+						{
+							if (player.getInventory().getItemByItemId(34925) == null) // Cloak of Light
+							{
+								player.getInventory().addItem(ItemFunctions.createItem(34925));
+								NpcHtmlMessage html = new NpcHtmlMessage(player, this);
+								html.setFile("castle/CourtMagician/CourtMagician-givecloak.htm");
+								html.replace("%CharName%", player.getName());
+								html.replaceNpcString("%FeudName%", player.getCastle().getNpcStringName());
+								player.sendPacket(html);
+							}
+							else
+							{
+								NpcHtmlMessage html = new NpcHtmlMessage(player, this);
+								html.setFile("castle/CourtMagician/alreadyhavecloak.htm");
+								player.sendPacket(html);
+							}
+						}
+						else
+						{
+							if (player.getInventory().getItemByItemId(34926) == null) // Cloak of Darkness
+							{
+								player.getInventory().addItem(ItemFunctions.createItem(34926));
+								NpcHtmlMessage html = new NpcHtmlMessage(player, this);
+								html.setFile("castle/CourtMagician/CourtMagician-givecloak.htm");
+								html.replace("%CharName%", player.getName());
+								html.replaceNpcString("%FeudName%", player.getCastle().getNpcStringName());
+								player.sendPacket(html);
+							}
+							else
+							{
+								NpcHtmlMessage html = new NpcHtmlMessage(player, this);
+								html.setFile("castle/CourtMagician/alreadyhavecloak.htm");
+								player.sendPacket(html);
+							}
+						}
+					}
+				}
+				
 			}
 			else
 			{

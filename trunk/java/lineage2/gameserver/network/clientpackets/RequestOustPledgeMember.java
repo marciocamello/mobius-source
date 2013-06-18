@@ -14,7 +14,6 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.entity.events.impl.DominionSiegeEvent;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.network.serverpackets.PledgeShowMemberListDelete;
@@ -62,12 +61,6 @@ public class RequestOustPledgeMember extends L2GameClientPacket
 		}
 		Player memberPlayer = member.getPlayer();
 		if (member.isOnline() && member.getPlayer().isInCombat())
-		{
-			activeChar.sendPacket(SystemMsg.A_CLAN_MEMBER_MAY_NOT_BE_DISMISSED_DURING_COMBAT);
-			return;
-		}
-		DominionSiegeEvent siegeEvent = memberPlayer == null ? null : memberPlayer.getEvent(DominionSiegeEvent.class);
-		if ((siegeEvent != null) && siegeEvent.isInProgress())
 		{
 			activeChar.sendPacket(SystemMsg.A_CLAN_MEMBER_MAY_NOT_BE_DISMISSED_DURING_COMBAT);
 			return;

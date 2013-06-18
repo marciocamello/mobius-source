@@ -483,6 +483,25 @@ public abstract class Inventory extends ItemContainer
 		return 0;
 	}
 	
+	public int getVisualItemId(int slot)
+	{
+		ItemInstance item = getPaperdollItem(slot);
+		if (item != null)
+		{
+			return item.getVisualId();
+		}
+		else if (slot == PAPERDOLL_HAIR)
+		{
+			item = _paperdoll[PAPERDOLL_DHAIR];
+			if (item != null)
+			{
+				return item.getVisualId();
+			}
+		}
+		
+		return 0;
+	}
+	
 	/**
 	 * Method getPaperdollObjectId.
 	 * @param slot int

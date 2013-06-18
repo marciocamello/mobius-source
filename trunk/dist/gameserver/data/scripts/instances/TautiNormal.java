@@ -13,6 +13,7 @@
 package instances;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -62,15 +63,18 @@ public class TautiNormal extends Reflection
 	static final Location TAUTI_SPAWN = new Location(-147264, 212896, -10056);
 	
 	private final ZoneListener _epicZoneListener = new ZoneListener();
-	final DeathListener _deathListener = new DeathListener();
-	final CurrentHpListener _currentHpListener = new CurrentHpListener();
+	DeathListener _deathListener = new DeathListener();
+	CurrentHpListener _currentHpListener = new CurrentHpListener();
 	
 	boolean _entryLocked = false;
+	boolean _startLaunched = false;
 	boolean _sayLocked = false;
 	boolean _hpListenerLocked = false;
 	private boolean _reenterLocked = false;
 	
 	int _stage = 0;
+	
+	AtomicInteger raidplayers = new AtomicInteger();
 	
 	private static int[] KUNDAS =
 	{
@@ -148,10 +152,10 @@ public class TautiNormal extends Reflection
 		super.onCollapse();
 	}
 	
-	// private boolean checkstartCond(int raidplayers)
-	// {
-	// return !(raidplayers < getInstancedZone().getMinParty() || _startLaunched);
-	// }
+	boolean checkstartCond(int raidplayers)
+	{
+		return !((raidplayers < getInstancedZone().getMinParty()) || _startLaunched);
+	}
 	
 	public class ZoneListener implements OnZoneEnterLeaveListener
 	{
@@ -169,12 +173,13 @@ public class TautiNormal extends Reflection
 				return;
 			}
 			
-			// if(checkstartCond(raidplayers.incrementAndGet()))
-			// {
-			ThreadPoolManager.getInstance().schedule(new StartNormalTauti(), 30000L);
-			_log.info("Party in Tauti zone");
-			
-			// }
+			if (checkstartCond(raidplayers.incrementAndGet()))
+			{
+				ThreadPoolManager.getInstance().schedule(new StartNormalTauti(), 30000L);
+				_startLaunched = true;
+				_log.info("Party in Tauti zone");
+				
+			}
 		}
 		
 		@Override

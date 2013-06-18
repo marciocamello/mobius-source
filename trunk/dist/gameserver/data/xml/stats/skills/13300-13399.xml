@@ -202,7 +202,7 @@
     <!-- Increases all party members' Atk. Spd./Casting Spd. by 5% for 5 minutes. In addition, 2% vampiric rate applies with a certain probability. -->
 		<set name="aggroPoints" val="1"/>
 		<set name="hitTime" val="200"/> <!--Guess-->
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="magicLvl" val="85"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="reuseDelay" val="7200000"/> <!--Guess-->
@@ -222,7 +222,7 @@
 	<skill id="13319" levels="1" name="Earth Wyrm Heart Ring">
     <!-- Removes poison effect. -->
 		<set name="aggroPoints" val="1"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="magicLvl" val="85"/>
 		<set name="hitTime" val="200"/> <!--Guess-->
 		<set name="reuseDelay" val="7200000"/> <!--Guess-->

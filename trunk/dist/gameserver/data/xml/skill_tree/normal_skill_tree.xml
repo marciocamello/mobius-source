@@ -18982,7 +18982,7 @@
 			<skill id="11513" level="6" cost="50000000" name="Mass Crippling Attack" min_level="94" />
 			<skill id="11513" level="7" cost="50000000" name="Mass Crippling Attack" min_level="96" />
 			<skill id="11513" level="8" cost="50000000" name="Mass Crippling Attack" min_level="98" />
-			<skill id="11514" level="1" cost="50000000" name="Mass Shadow Blade" min_level="87" />
+			<skill id="11514" level="1" cost="50000000" name="Mass Shadow Blade" min_level="85" />
 			<skill id="11514" level="2" cost="50000000" name="Mass Shadow Blade" min_level="87" />
 			<skill id="11514" level="3" cost="50000000" name="Mass Shadow Blade" min_level="89" />
 			<skill id="11514" level="4" cost="50000000" name="Mass Shadow Blade" min_level="91" />
@@ -19082,6 +19082,8 @@
 			<skill id="11562" level="1" cost="10000000" name="Devil's Movement" min_level="85" />
 			<skill id="11563" level="1" cost="10000000" name="Quick Return" min_level="85" />
 			<skill id="11564" level="1" cost="10000000" name="Angel's Resurrection" min_level="85" />
+			<skill id="11564" level="2" cost="50000000" name="Angel's Resurrection" min_level="90" />
+			<skill id="11564" level="3" cost="50000000" name="Angel's Resurrection" min_level="95" />
 			<skill id="11565" level="1" cost="50000000" name="Elemental Protection" min_level="85" />
 			<skill id="11566" level="1" cost="10000000" name="Divine Protection" min_level="85" />
 			<skill id="11567" level="1" cost="10000000" name="Mental Protection" min_level="85" />

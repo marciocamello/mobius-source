@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="20402" name="Laborer Hat 7 Day Pack" add_name="Bless the Body">
+	<etcitem id="20402" name="Laborer Hat Pack (7-day)" add_name="Blessed Body">
+	<!-- Wrapped Pack containing a Laborer Hat (7-day). Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -13,7 +14,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20403" name="Laborer Hat 7 Day Pack" add_name="Bless the Soul">
+	<etcitem id="20403" name="Laborer Hat Pack (7-day)" add_name="Blessed Soul">
+	<!-- Wrapped Pack containing a Laborer Hat (7-day). Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -26,6 +28,7 @@
 		<set name="weight" value="100"/>
 	</etcitem>
 	<etcitem id="20404" name="Laborer Hat Pack">
+	<!-- Wrapped Pack containing a Laborer Hat. Cannot be exchanged or dropped. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -37,7 +40,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20450" name="Majo Agathion 7 Day Pack">
+	<etcitem id="20450" name="Agathion - Majo Pack (7-day)">
+	<!-- Wrapped Pack containing an Agathion - Majo (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -49,7 +53,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20451" name="Gold Crown Majo Agathion 7 Day Pack">
+	<etcitem id="20451" name="Agathion - Gold Majo Pack (7-day)">
+	<!-- Wrapped Pack containing a Gold Crown Agathion (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -61,7 +66,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20452" name="Black Crown Majo Agathion 7 Day Pack">
+	<etcitem id="20452" name="Agathion - Black Majo Pack (7-day)">
+	<!-- Wrapped Pack containing Agathion - Black Majo (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -73,7 +79,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20453" name="Plaipitak Agathion 7 Day Pack">
+	<etcitem id="20453" name="Agathion - Plaipitak Pack (7-day)">
+	<!-- Wrapped Pack containing an Agathion - Plaipitak (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -85,7 +92,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20454" name="Plaipitak Agathion 7 Day Pack">
+	<etcitem id="20454" name="Agathion - Plaipitak Pack (7-day)">
+	<!-- Wrapped Pack containing an Agathion - Plaipitak (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -97,7 +105,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20455" name="Plaipitak Agathion 7 Day Pack">
+	<etcitem id="20455" name="Agathion - Plaipitak Pack (7-day)">
+	<!-- Wrapped Pack containing an Agathion - Plaipitak (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -109,7 +118,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20456" name="Agathion of Baby Panda 7 Day Pack">
+	<etcitem id="20456" name="Agathion - Baby Panda Pack (7-day)">
+	<!-- Wrapped Pack containing an Agathion - Baby Panda (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -121,7 +131,9 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20457" name="Bamboo Panda Agathion 7 Day Pack">
+	<etcitem id="20457" name="Agathion - Bamboo Panda Pack (7-day)">
+	<!-- Dimensional Item Pack
+	Wrapped Pack containing an Agathion - Bamboo Panda (7-day). Cannot be exchanged or dropped. Can be shared between characters within the same account through the Dimensional Merchant. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -133,7 +145,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20458" name="Agathion of Sexy Panda 7 Day Pack">
+	<etcitem id="20458" name="Agathion - Sexy Panda Pack (7-day)">
+	<!-- Wrapped Pack containing an Agathion - Sexy Pandan (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -145,7 +158,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20459" name="Horn Rimmed Glasses 7 day pack">
+	<etcitem id="20459" name="Horn-rimmed Glasses Pack (7-day)">
+	<!-- Wrapped Pack containing Horn-rimmed Glasses (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -157,7 +171,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20460" name="Afro Hair 7 day Pack">
+	<etcitem id="20460" name="Afro Hair Pack (7-day)">
+	<!-- Wrapped Pack containing Afro Hair (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -169,7 +184,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20461" name="Afro Hair 7 day Pack">
+	<etcitem id="20461" name="Afro Hair Pack (7-day)">
+	<!-- Wrapped Pack containing Afro Hair (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -181,7 +197,9 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20462" name="Uniform Hat 7 Day Pack">
+	<etcitem id="20462" name="Uniform Hat Pack (7-day)">
+	<!-- Dimensional Item Pack
+	Wrapped Pack containing a Uniform Hat (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared between characters within the same account through the Dimensional Merchant. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -193,7 +211,9 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20463" name="Assassin's Bamboo Hat 7 day pack">
+	<etcitem id="20463" name="Assassin's Bamboo Hat Pack (7-day)">
+	<!-- Dimensional Item Pack
+	Wrapped Pack containing an Assassin's Bamboo Hat (7-day). Cannot be exchanged or dropped. Can be shared between characters within the same account through the Dimensional Merchant. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -205,7 +225,9 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20464" name="Ruthless Tribe Mask 7 day Pack">
+	<etcitem id="20464" name="Ruthless Tribe Mask Pack (7-day)">
+	<!-- Dimensional Item Pack
+	Wrapped Pack containing a Ruthless Tribe Mask (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared between characters within the same account through the Dimensional Merchant. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -217,7 +239,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20465" name="Ribbon Hairband 7 day Pack">
+	<etcitem id="20465" name="Ribbon Hairband Pack (7-day)">
+	<!-- Wrapped Pack containing a Ribbon Hairband (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -229,7 +252,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20466" name="Visor 7 Day Pack">
+	<etcitem id="20466" name="Visor Pack (7-day)">
+	<!-- Wrapped Pack containing a Visor (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -241,7 +265,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20467" name="Kat the Cat Hat 7 Day Pack">
+	<etcitem id="20467" name="Kat the Cat Hat Pack (7-day)">
+	<!-- Wrapped Pack containing a Kat the Cat Hat (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -253,7 +278,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20468" name="Skull Hat 7 Day Pack">
+	<etcitem id="20468" name="Skull Hat Pack (7-day)">
+	<!-- Wrapped Pack containing a Skull Hat (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -265,7 +291,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20469" name="Gold Afro Hair 7 day Pack">
+	<etcitem id="20469" name="Gold Afro Hair Pack (7-day)">
+	<!-- Wrapped Pack containing Gold Afro Hair (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -277,7 +304,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20470" name="Pink Afro Hair 7 day Pack">
+	<etcitem id="20470" name="Pink Afro Hair Pack (7-day)">
+	<!-- Wrapped Pack containing Pink Afro Hair (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -289,7 +317,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20471" name="Goggle 7 Day Pack">
+	<etcitem id="20471" name="Goggles Pack (7-day)">
+	<!-- Wrapped Pack containing Goggles (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -301,7 +330,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20472" name="Napoleon Hat 7 Day Pack">
+	<etcitem id="20472" name="Napoleon Hat Pack (7-day)">
+	<!-- Wrapped Pack containing a Napoleon Hat (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -313,7 +343,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20473" name="Horn Hairband 7 day Pack">
+	<etcitem id="20473" name="Horn Hairband Pack (7-day)">
+	<!-- Wrapped Pack containing a Horn Hairband (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -325,7 +356,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20474" name="Black Gem Mask 7 day Pack">
+	<etcitem id="20474" name="Black Gem Mask Pack (7-day)">
+	<!-- Wrapped Pack containing a Black Gem Mask (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -337,7 +369,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20475" name="Plastic Hair 7 day Pack">
+	<etcitem id="20475" name="Plastic Hair Pack (7-day)">
+	<!-- Wrapped Pack containing Plastic Hair (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -349,7 +382,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20476" name="Daisy Hairpin 7 day Pack">
+	<etcitem id="20476" name="Daisy Hairpin Pack (7-day)">
+	<!-- Wrapped Pack containing a Daisy Hairpin (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -361,7 +395,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20477" name="Forget-me-not Hairpin 7 day Pack">
+	<etcitem id="20477" name="Forget-me-not Hairpin Pack (7-day)">
+	<!-- Wrapped Pack containing a Forget-me-not Hairpin (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -373,7 +408,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20478" name="Outlaw's Eyepatch 7 Day Pack">
+	<etcitem id="20478" name="Outlaw's Eyepatch Pack (7-day)">
+	<!-- Wrapped Pack containing an Outlaw's Eyepatch (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -385,7 +421,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20479" name="Pirate's Eyepatch 7 Day Pack">
+	<etcitem id="20479" name="Pirate's Eyepatch Pack (7-day)">
+	<!-- Wrapped Pack containing a Pirate's Eyepatch (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -397,7 +434,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20480" name="Monocle 7 Day Pack">
+	<etcitem id="20480" name="Monocle Pack (7-day)">
+	<!-- Wrapped Pack containing a Monocle (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -409,7 +447,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20481" name="Red Mask of Victory 7 Day Pack">
+	<etcitem id="20481" name="Red Mask of Victory Pack (7-day)">
+	<!-- Wrapped Pack containing a Red Mask of Victory (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -421,7 +460,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20482" name="Red Horn of Victory 7 Day Pack">
+	<etcitem id="20482" name="Red Horn of Victory Pack (7-day)">
+	<!-- Wrapped Pack containing a Red Horn of Victory (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -433,7 +473,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20483" name="Party Mask 7 day Pack">
+	<etcitem id="20483" name="Party Mask Pack (7-day)">
+	<!-- Wrapped Pack containing a Party Mask (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -445,7 +486,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20484" name="Red Party Mask 7 day Pack">
+	<etcitem id="20484" name="Red Party Mask Pack (7-day)">
+	<!-- Wrapped Pack containing a Red Party Mask (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -457,7 +499,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20485" name="Cat Ears 7 Day Pack">
+	<etcitem id="20485" name="Cat Ears Pack (7-day)">
+	<!-- Wrapped Pack containing Cat Ears (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -469,7 +512,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20486" name="Noblewoman's Hairpin 7 day Pack">
+	<etcitem id="20486" name="Lady's Hair Pin Pack (7-day)">
+	<!-- Wrapped Pack containing a Lady's Hair Pin (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -481,7 +525,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20487" name="Raccoon Ears 7 Day Pack">
+	<etcitem id="20487" name="Raccoon Ears Pack (7-day)">
+	<!-- Wrapped Pack containing Raccoon Ears (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -493,7 +538,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20488" name="Rabbit Ears 7 Day Pack">
+	<etcitem id="20488" name="Rabbit Ears Pack (7-day)">
+	<!-- Wrapped Pack containing Rabbit Ears (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -505,7 +551,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20489" name="Little Angel's Wings 7 Day Pack">
+	<etcitem id="20489" name="Little Angel Wings Pack (7-day)">
+	<!-- Wrapped Pack containing a Little Angel Wings (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -517,7 +564,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20490" name="Fairy's Tentacle 7 Day Pack">
+	<etcitem id="20490" name="Fairy Antennae Pack (7-day)">
+	<!-- Wrapped Pack containing a Fairy Antennae (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -529,7 +577,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20491" name="Dandy's Chapeau 7 Day Pack">
+	<etcitem id="20491" name="Chapeau Pack (7-day)">
+	<!-- Wrapped Pack containing a Dandy's Chapeau (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -541,7 +590,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20492" name="Artisan's Goggles 7 Day Pack">
+	<etcitem id="20492" name="Artisan's Goggles Pack (7-day)">
+	<!-- Wrapped Pack containing an Artisan's Goggles (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -553,7 +603,9 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20493" name="Light Purple Maned Horse Mounting Bracelet 7 Day Pack">
+	<etcitem id="20493" name="Mount - Darkmane Pacer Pack (7-day)">
+	<!-- Dimensional Item Pack
+	Wrapped Pack containing a Mount - Darkmane Pacer (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared between characters within the same account through the Dimensional Merchant. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -565,7 +617,9 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20494" name="Steam Beatle Mounting Bracelet 7 Day Pack">
+	<etcitem id="20494" name="Mount - Steam Beetle Pack (7-day)">
+	<!-- Dimensional Item Pack
+	Wrapped Pack containing a Mount - Steam Beetle (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared between characters within the same account through the Dimensional Merchant. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -577,7 +631,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20497" name="Mother's Wreath - Event" add_name="Blessing of Love - 24 hours limited period">
+	<etcitem id="20497" name="Mother's Wreath (Event)" add_name="Blessing of Love (24-hour)">
+	<!-- For events. Wreath containing a mother's love. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -593,7 +648,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20498" name="Mother's Wreath" add_name="Blessing of Love - 3 day limited period">
+	<etcitem id="20498" name="Mother's Wreath" add_name="Blessing of Love (3-day)">
+	<!-- Wreath containing a mother's love. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

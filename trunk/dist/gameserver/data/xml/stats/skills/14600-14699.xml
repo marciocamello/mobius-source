@@ -13,7 +13,7 @@
         <set name="hitTime" val="1200"/>
         <set name="hitCancelTime" val="500"/>
         <set name="mpConsume" val="1"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="skillType" val="POISON"/>
         <set name="power" val="70"/>
         <set name="operateType" val="OP_ACTIVE"/>
@@ -29,7 +29,7 @@
         <set name="hitTime" val="1500"/>
         <set name="hitCancelTime" val="500"/>
         <set name="mpConsume" val="1"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="skillType" val="POISON"/>
         <set name="power" val="70"/>
         <set name="operateType" val="OP_ACTIVE"/>
@@ -45,7 +45,7 @@
         <set name="hitTime" val="3000"/>
         <set name="hitCancelTime" val="500"/>
         <set name="mpConsume" val="1"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="skillType" val="POISON"/>
         <set name="power" val="70"/>
         <set name="operateType" val="OP_ACTIVE"/>
@@ -108,7 +108,7 @@
         <set name="hitTime" val="1500"/>
         <set name="hitCancelTime" val="500"/>
         <set name="skillType" val="MDAM"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="power" val="124"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="target" val="TARGET_ONE"/>
@@ -118,7 +118,7 @@
         <set name="hitTime" val="3000"/>
         <set name="hitCancelTime" val="500"/>
         <set name="skillType" val="HEAL_WITH_CP"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="power" val="1488"/>
         <set name="operateType" val="OP_ACTIVE"/>
         <set name="target" val="TARGET_SELF"/>
@@ -132,7 +132,7 @@
         <set name="target" val="TARGET_ONE"/>
         <set name="skillType" val="MDAM"/>
         <set name="effetRange" val="600"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="operateType" val="OP_ACTIVE"/>
     </skill>
     <skill id="14612" levels="1" name="Press the icon to use the chain skill.">
@@ -686,7 +686,7 @@
 		<set name="element" val="0"/> <!-- Fire -->
 		<set name="elementPower" val="80"/>
 		<set name="isDebuff" val="true"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="saveVs" val="MEN"/>
 		<set name="power" val="20"/> <!-- Base Land Rate -->
 		<set name="lvlDepend" val="1"/>
@@ -714,7 +714,7 @@
         <set name="hitTime" val="1200"/>
         <set name="hitCancelTime" val="500"/>
         <set name="mpConsume" val="1"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="skillType" val="POISON"/>
         <set name="power" val="70"/>
         <set name="operateType" val="OP_ACTIVE"/>
@@ -730,7 +730,7 @@
         <set name="hitTime" val="1500"/>
         <set name="hitCancelTime" val="500"/>
         <set name="mpConsume" val="1"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="skillType" val="POISON"/>
         <set name="power" val="70"/>
         <set name="operateType" val="OP_ACTIVE"/>
@@ -778,7 +778,7 @@
         <set name="hitTime" val="699"/>
         <set name="hitCancelTime" val="300"/>
         <set name="skillType" val="BUFF"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="power" val="1400"/>
         <set name="mpConsume" val="1"/>
         <set name="operateType" val="OP_ACTIVE"/>
@@ -798,7 +798,7 @@
         <set name="hitTime" val="1500"/>
         <set name="hitCancelTime" val="500"/>
         <set name="skillType" val="MDAM"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="power" val="31"/>
         <set name="mpConsume" val="1"/>
         <set name="operateType" val="OP_ACTIVE"/>
@@ -830,7 +830,7 @@
         <set name="hitTime" val="1000"/>
         <set name="skillRadius" val="600"/>
         <set name="isDebuff" val="true"/>
-        <set name="isMagic" val="true"/>
+        <set name="magicType" val="MAGIC"/>
         <set name="lvlDepend" val="1"/>
         <set name="magicLvl" val="18"/>
         <set name="mpConsume" val="0"/>

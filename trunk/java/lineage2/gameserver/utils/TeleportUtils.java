@@ -96,7 +96,7 @@ public class TeleportUtils
 				return ResidenceHolder.getInstance().getResidence(clan.getHasFortress()).getOwnerRestartPoint();
 			}
 		}
-		if (player.getKarma() < 0)
+		if (player.isChaotic())
 		{
 			if (player.getPKRestartPoint() != null)
 			{
@@ -116,7 +116,7 @@ public class TeleportUtils
 			RestartPoint rp = ra.getRestartPoint().get(player.getRace());
 			Location restartPoint = Rnd.get(rp.getRestartPoints());
 			Location PKrestartPoint = Rnd.get(rp.getPKrestartPoints());
-			return player.getKarma() < 0 ? PKrestartPoint : restartPoint;
+			return player.isChaotic() ? PKrestartPoint : restartPoint;
 		}
 		_log.warn("Cannot find restart location from coordinates: " + from + "!");
 		return DEFAULT_RESTART;

@@ -250,6 +250,7 @@ public final class NpcTemplate extends CharTemplate
 	
 	private RandomActions _randomActions = null;
 	private final TIntObjectHashMap<WalkerRoute> _walkerRoute = new TIntObjectHashMap<>();
+	private final boolean displayHpBar;
 	
 	/**
 	 * Constructor for NpcTemplate.
@@ -277,6 +278,7 @@ public final class NpcTemplate extends CharTemplate
 		_AIParams = (StatsSet) set.getObject("aiParams", StatsSet.EMPTY);
 		setType(set.getString("type", null));
 		setAI(set.getString("ai_type", null));
+		displayHpBar = set.getBool("displayHpBar", true);
 	}
 	
 	/**
@@ -897,5 +899,10 @@ public final class NpcTemplate extends CharTemplate
 	public WalkerRoute getWalkerRoute(int id)
 	{
 		return _walkerRoute.get(id);
+	}
+	
+	public boolean isDisplayHpBar()
+	{
+		return displayHpBar;
 	}
 }

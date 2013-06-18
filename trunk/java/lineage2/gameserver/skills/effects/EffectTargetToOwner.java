@@ -18,10 +18,6 @@ import lineage2.gameserver.network.serverpackets.FlyToLocation;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.utils.Location;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
 public class EffectTargetToOwner extends Effect
 {
 	/**
@@ -44,6 +40,10 @@ public class EffectTargetToOwner extends Effect
 		if (((SymbolInstance) getEffector()).getOwner().getObjectId() != _effected.getObjectId())
 		{
 			Location flyLoc = _effected.getFlyLocation(((SymbolInstance) getEffector()).getOwner(), getSkill());
+			if (flyLoc == null)
+			{
+				_log.warn("EffectTargetToOwner Loc null check this!");
+			}
 			_effected.setLoc(flyLoc);
 			_effected.broadcastPacket(new FlyToLocation(_effected, flyLoc, getSkill().getFlyType(), 0));
 		}

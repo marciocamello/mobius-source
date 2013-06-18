@@ -19,7 +19,6 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Spawner;
-import lineage2.gameserver.model.entity.events.impl.DominionSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.pledge.Clan;
@@ -142,10 +141,6 @@ public abstract class SiegeToggleNpcInstance extends NpcInstance
 			return false;
 		}
 		if (siegeEvent.getSiegeClan(SiegeEvent.DEFENDERS, player.getClan()) != null)
-		{
-			return false;
-		}
-		if (siegeEvent.getObjects(DominionSiegeEvent.DEFENDER_PLAYERS).contains(player.getObjectId()))
 		{
 			return false;
 		}

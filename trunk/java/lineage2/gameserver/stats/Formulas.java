@@ -738,7 +738,7 @@ public class Formulas
 			return false;
 		}
 		Skill skill = target.getCastingSkill();
-		if ((skill != null) && ((skill.getSkillType() == SkillType.TAKECASTLE) || (skill.getSkillType() == SkillType.TAKEFORTRESS) || (skill.getSkillType() == SkillType.TAKEFLAG)))
+		if ((skill != null) && ((skill.getSkillType() == SkillType.TAKECASTLE) || (skill.getSkillType() == SkillType.TAKEFORTRESS)))
 		{
 			return false;
 		}

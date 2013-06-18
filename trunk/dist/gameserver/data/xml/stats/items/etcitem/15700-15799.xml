@@ -2,6 +2,7 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<etcitem id="15711" name="War Veteran Voucher">
+	<!-- Document showing military service in the Seed of Annihilation region. Collect plenty of these and take them back to Soldier Ilvenis at the pier in the Seed of Annihilation to exchange for a reward. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -15,6 +16,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15712" name="Full Barrel of Soup">
+	<!-- Food container of the Sel Mahums. Contains a lot of porridge. Take it back to Guard Stan of Oren Village. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -30,6 +32,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15713" name="Empty Soup Barrel">
+	<!-- Food container of the Sel Mahums. It's completely empty. Take it back to Guard Stan of Oren Village. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -45,6 +48,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15714" name="Sel Mahum ID Tag">
+	<!-- ID Tag of a Sel Mahum who is training at the Sel Mahum Training Grounds. Take it back to Guard Pinaps of Oren Village. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -60,6 +64,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15715" name="Damaged Book">
+	<!-- Ancient text that is too damaged to determine its contents. It served its purpose as a book. Sell it at the shop and get at least a little money. -->
 		<set name="price" value="10000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -74,6 +79,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15716" name="Packaged Book">
+	<!-- Item received after saving a Treasure Hunter. It's tightly wrapped so you can't see what book is inside. Double-click for more information. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -91,6 +97,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="15769" name="Sealed Vesper Ring Gem">
+	<!-- Essential ingredient that a Dwarf needs to make Vesper Ring. It can be sold at ordinary stores. -->
 		<set name="price" value="19100"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -100,6 +107,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15770" name="Sealed Vesper Earring Gem">
+	<!-- Essential ingredient that a Dwarf needs to make Vesper Earring. It can be sold at ordinary stores. -->
 		<set name="price" value="31800"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -109,6 +117,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15771" name="Sealed Vesper Necklace Gem">
+	<!-- Essential ingredient that a Dwarf needs to make Vesper Necklace. It can be sold at ordinary stores. -->
 		<set name="price" value="44200"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -118,6 +127,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15772" name="Sealed Moirai Ring Gem">
+	<!-- Essential ingredient that a Dwarf needs to make Moirai Ring. It can be sold at ordinary stores. -->
 		<set name="price" value="14500"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -127,6 +137,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15773" name="Sealed Moirai Earring Gem">
+	<!-- Essential ingredient that a Dwarf needs to make Moirai Earring. It can be sold at ordinary stores. -->
 		<set name="price" value="25800"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -136,6 +147,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15774" name="Sealed Moirai Necklace Gem">
+	<!-- Essential ingredient that a Dwarf needs to make Moirai Necklace. It can be sold at ordinary stores. -->
 		<set name="price" value="29900"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -144,7 +156,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="15775" name="Recipe - Sealed Moirai Helmet (60%) ">
+	<etcitem id="15775" name="Recipe: Sealed Moirai Helmet (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Helmet. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -155,7 +168,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15776" name="Recipe - Sealed Moirai Leather Helmet(60%) ">
+	<etcitem id="15776" name="Recipe: Sealed Moirai Leather Helmet(60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Leather Helmet. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -166,7 +180,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15777" name="Recipe - Sealed Moirai Circlet (60%) ">
+	<etcitem id="15777" name="Recipe: Sealed Moirai Circlet (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Circlet. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -177,7 +192,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15778" name="Recipe - Sealed Moirai Breastplate (60%) ">
+	<etcitem id="15778" name="Recipe: Sealed Moirai Breastplate (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Breastplate. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -188,7 +204,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15779" name="Recipe - Sealed Moirai Leather Breastplate (60%) ">
+	<etcitem id="15779" name="Recipe: Sealed Moirai Leather Breastplate (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Leather Breastplate. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -199,7 +216,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15780" name="Recipe - Sealed Moirai Tunic (60%) ">
+	<etcitem id="15780" name="Recipe: Sealed Moirai Tunic (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Tunic. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -210,7 +228,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15781" name="Recipe - Sealed Moirai Gaiter (60%) ">
+	<etcitem id="15781" name="Recipe: Sealed Moirai Gaiters (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Gaiters. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -221,7 +240,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15782" name="Recipe - Sealed Moirai Leather Legging (60%) ">
+	<etcitem id="15782" name="Recipe: Sealed Moirai Leather Leggings (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Leather Leggings. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -232,7 +252,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15783" name="Recipe - Sealed Moirai Stockings (60%) ">
+	<etcitem id="15783" name="Recipe: Sealed Moirai Stockings (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Stockings. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -243,7 +264,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15784" name="Recipe - Sealed Moirai Gauntlet (60%) ">
+	<etcitem id="15784" name="Recipe: Sealed Moirai Gauntlets (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Gauntlets. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -254,7 +276,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15785" name="Recipe - Sealed Moirai Leather Gloves (60%) ">
+	<etcitem id="15785" name="Recipe: Sealed Moirai Leather Gloves (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Leather Gloves. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -265,7 +288,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15786" name="Recipe - Sealed Moirai Gloves (60%) ">
+	<etcitem id="15786" name="Recipe: Sealed Moirai Gloves (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Gloves. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -276,7 +300,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15787" name="Recipe - Sealed Moirai Boots (60%) ">
+	<etcitem id="15787" name="Recipe: Sealed Moirai Boots (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Boots. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -287,7 +312,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15788" name="Recipe - Sealed Moirai Leather Boots (60%) ">
+	<etcitem id="15788" name="Recipe: Sealed Moirai Leather Boots (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Leather Boots. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -298,7 +324,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15789" name="Recipe - Sealed Moirai Shoes (60%) ">
+	<etcitem id="15789" name="Recipe: Sealed Moirai Shoes (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Shoes. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -309,7 +336,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15790" name="Recipe - Sealed Moirai Sigil (60%) ">
+	<etcitem id="15790" name="Recipe: Sealed Moirai Sigil (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Sigil. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -320,7 +348,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15791" name="Recipe - Sealed Moirai Shield (60%) ">
+	<etcitem id="15791" name="Recipe: Sealed Moirai Shield (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Shield. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -331,7 +360,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15792" name="Recipe - Sealed Vesper Helmet (60%) ">
+	<etcitem id="15792" name="Recipe: Sealed Vesper Helmet (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Vesper Helmet. Requires Create Item - Skill Level 10. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -342,7 +372,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15793" name="Recipe - Sealed Vesper Leather Helmet (60%) ">
+	<etcitem id="15793" name="Recipe: Sealed Vesper Leather Helmet (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Vesper Leather Helmet. Requires Create Item - Skill Level 10. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -353,7 +384,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15794" name="Recipe - Sealed Vesper Circlet (60%) ">
+	<etcitem id="15794" name="Recipe: Sealed Vesper Circlet (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Vesper Circlet. Requires Create Item - Skill Level 10. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -364,7 +396,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15795" name="Recipe - Sealed Vesper Breastplate (60%) ">
+	<etcitem id="15795" name="Recipe: Sealed Vesper Breastplate (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Vesper Breastplate. Requires Create Item - Skill Level 10. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -375,7 +408,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15796" name="Recipe - Sealed Vesper Leather Breastplate (60%) ">
+	<etcitem id="15796" name="Recipe: Sealed Vesper Leather Breastplate (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Vesper Leather Breastplate. Requires Create Item - Skill Level 10. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -386,7 +420,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15797" name="Recipe - Sealed Vesper Tunic (60%) ">
+	<etcitem id="15797" name="Recipe: Sealed Vesper Tunic (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Vesper Tunic. Requires Create Item - Skill Level 10. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -397,7 +432,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15798" name="Recipe - Sealed Vesper Gaiter (60%) ">
+	<etcitem id="15798" name="Recipe: Sealed Vesper Gaiters (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Vesper Gaiters. Requires Create Item - Skill Level 10. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -408,7 +444,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="15799" name="Recipe - Sealed Vesper Leather Legging (60%) ">
+	<etcitem id="15799" name="Recipe: Sealed Vesper Leather Leggings (60%)">
+	<!-- Exclusive to Dwarves. Recipe for making a Sealed Vesper Leather Leggings. Requires Create Item - Skill Level 10. The success rate is 60%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>

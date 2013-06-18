@@ -12,23 +12,25 @@
  */
 package zones;
 
+import instances.Nursery;
 import lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener;
 import lineage2.gameserver.model.Creature;
+import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Zone;
+import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.scripts.ScriptFile;
-import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
 
 public class BirthingRoom implements ScriptFile
 {
 	
-	static final Location TELEPORT_LOC = new Location(-185839, 147909, -15312);
 	private static final String[] zones =
 	{
-		"[telzone_Annihilation_0]",
-		"[telzone_Annihilation_1]"
+		"[Birthing_room_0]",
+		"[Birthing_room_1]"
 	};
 	private static ZoneListener _zoneListener;
+	private static final int InstanceId = 171;
 	
 	private void init()
 	{
@@ -73,9 +75,19 @@ public class BirthingRoom implements ScriptFile
 				return;
 			}
 			
-			if ((zone.getName().equalsIgnoreCase("[telzone_Annihilation_0]")) || (zone.getName().equalsIgnoreCase("[telzone_Annihilation_1]")))
+			Player player = cha.getPlayer();
+			
+			Reflection r = player.getActiveReflection();
+			if (r != null)
 			{
-				cha.teleToLocation(TELEPORT_LOC);
+				if (player.canReenterInstance(InstanceId))
+				{
+					player.teleToLocation(r.getTeleportLoc(), r);
+				}
+			}
+			else if (player.canEnterInstance(InstanceId))
+			{
+				ReflectionUtils.enterReflection(player, new Nursery(), InstanceId);
 			}
 		}
 		

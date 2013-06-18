@@ -14,10 +14,7 @@
  */
 package npc.model.residences.fortress;
 
-import lineage2.gameserver.data.xml.holder.EventHolder;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.entity.events.EventType;
-import lineage2.gameserver.model.entity.events.impl.DominionSiegeRunnerEvent;
 import lineage2.gameserver.model.entity.residence.Fortress;
 import lineage2.gameserver.model.entity.residence.Residence;
 import lineage2.gameserver.model.pledge.Clan;
@@ -112,12 +109,11 @@ public class ManagerInstance extends ResidenceManager
 	@Override
 	protected int getCond(Player player)
 	{
-		DominionSiegeRunnerEvent runnerEvent = EventHolder.getInstance().getEvent(EventType.MAIN_EVENT, 1);
 		Residence residence = getResidence();
 		Clan residenceOwner = residence.getOwner();
 		if ((residenceOwner != null) && (player.getClan() == residenceOwner))
 		{
-			if (residence.getSiegeEvent().isInProgress() || runnerEvent.isInProgress())
+			if (residence.getSiegeEvent().isInProgress())
 			{
 				return COND_SIEGE;
 			}

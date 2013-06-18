@@ -748,55 +748,80 @@ public final class ItemFunctions
 	 */
 	public static final int[][] catalyst =
 	{
+		// WP D
 		{
 			12362,
 			14078,
 			14702
 		},
+		// WP C
 		{
 			12363,
 			14079,
 			14703
 		},
+		// WP B
 		{
 			12364,
 			14080,
 			14704
 		},
+		// WP A
 		{
 			12365,
 			14081,
 			14705
 		},
+		// WP S
 		{
 			12366,
 			14082,
 			14706
 		},
+		// AM D
 		{
 			12367,
 			14083,
 			14707
 		},
+		// AM C
 		{
 			12368,
 			14084,
 			14708
 		},
+		// AM B
 		{
 			12369,
 			14085,
 			14709
 		},
+		// AM A
 		{
 			12370,
 			14086,
 			14710
 		},
+		// AM S
 		{
 			12371,
 			14087,
 			14711
+		},
+		
+		// WP R
+		{
+			23347,
+			23599,
+			30381,
+			30855
+		},
+		// AM R
+		{
+			23348,
+			23600,
+			30382,
+			33861
 		}
 	};
 	
@@ -811,6 +836,10 @@ public final class ItemFunctions
 		{
 			switch (item.getCrystalType().cry)
 			{
+				case ItemTemplate.CRYSTAL_R:
+					return catalyst[10];
+				case ItemTemplate.CRYSTAL_S:
+					return catalyst[4];
 				case ItemTemplate.CRYSTAL_A:
 					return catalyst[3];
 				case ItemTemplate.CRYSTAL_B:
@@ -819,14 +848,16 @@ public final class ItemFunctions
 					return catalyst[1];
 				case ItemTemplate.CRYSTAL_D:
 					return catalyst[0];
-				case ItemTemplate.CRYSTAL_S:
-					return catalyst[4];
 			}
 		}
 		else if ((item.getTemplate().getType2() == ItemTemplate.TYPE2_SHIELD_ARMOR) || (item.getTemplate().getType2() == ItemTemplate.TYPE2_ACCESSORY))
 		{
 			switch (item.getCrystalType().cry)
 			{
+				case ItemTemplate.CRYSTAL_R:
+					return catalyst[11];
+				case ItemTemplate.CRYSTAL_S:
+					return catalyst[9];
 				case ItemTemplate.CRYSTAL_A:
 					return catalyst[8];
 				case ItemTemplate.CRYSTAL_B:
@@ -835,8 +866,6 @@ public final class ItemFunctions
 					return catalyst[6];
 				case ItemTemplate.CRYSTAL_D:
 					return catalyst[5];
-				case ItemTemplate.CRYSTAL_S:
-					return catalyst[9];
 			}
 		}
 		return new int[]
@@ -872,6 +901,8 @@ public final class ItemFunctions
 							return 12;
 						case 4:
 							return 10;
+						case 10:
+							return 10;
 						case 5:
 							return 35;
 						case 6:
@@ -881,6 +912,8 @@ public final class ItemFunctions
 						case 8:
 							return 18;
 						case 9:
+							return 15;
+						case 11:
 							return 15;
 					}
 				}

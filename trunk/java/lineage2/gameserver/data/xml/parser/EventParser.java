@@ -50,7 +50,6 @@ import lineage2.gameserver.model.entity.events.objects.FortressCombatFlagObject;
 import lineage2.gameserver.model.entity.events.objects.SiegeToggleNpcObject;
 import lineage2.gameserver.model.entity.events.objects.SpawnExObject;
 import lineage2.gameserver.model.entity.events.objects.StaticObjectObject;
-import lineage2.gameserver.model.entity.events.objects.TerritoryWardObject;
 import lineage2.gameserver.model.entity.events.objects.ZoneObject;
 import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
@@ -223,15 +222,6 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 				int y = Integer.parseInt(objectsElement.attributeValue("y"));
 				int z = Integer.parseInt(objectsElement.attributeValue("z"));
 				objects.add(new FortressCombatFlagObject(new Location(x, y, z)));
-			}
-			else if (nodeName.equalsIgnoreCase("territory_ward"))
-			{
-				int x = Integer.parseInt(objectsElement.attributeValue("x"));
-				int y = Integer.parseInt(objectsElement.attributeValue("y"));
-				int z = Integer.parseInt(objectsElement.attributeValue("z"));
-				int itemId = Integer.parseInt(objectsElement.attributeValue("item_id"));
-				int npcId = Integer.parseInt(objectsElement.attributeValue("npc_id"));
-				objects.add(new TerritoryWardObject(itemId, npcId, new Location(x, y, z)));
 			}
 			else if (nodeName.equalsIgnoreCase("siege_toggle_npc"))
 			{

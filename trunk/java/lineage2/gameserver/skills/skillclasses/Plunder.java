@@ -14,7 +14,7 @@ package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
 
-import lineage2.commons.util.Rnd;
+import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
@@ -23,6 +23,8 @@ import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.reward.RewardItem;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.stats.Formulas;
+import lineage2.gameserver.stats.Formulas.AttackInfo;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.ItemFunctions;
 
@@ -84,27 +86,62 @@ public class Plunder extends Skill
 		{
 			activeChar.unChargeShots(false);
 		}
-		boolean success;
-		success = Rnd.chance(getPower()); // TODO NEED CALC THIS SKILL IN A CORRECT WAY
-		if (success)
+		for (Creature target : targets)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HAS_SUCCEEDED).addSkillName(_id, getDisplayLevel()));
-		}
-		else
-		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HAS_FAILED).addSkillName(_id, getDisplayLevel()));
-			return;
-		}
-		
-		Player player = (Player) activeChar;
-		for (Creature targ : targets)
-		{
-			if ((targ == null) || !targ.isMonster())
+			// SPOIL PART
+			if ((target != null) && !target.isDead())
+			{
+				if (target.isMonster())
+				{
+					if (!((MonsterInstance) target).isSpoiled())
+					{
+						MonsterInstance monster = (MonsterInstance) target;
+						boolean success;
+						success = Formulas.calcSkillSuccess(activeChar, target, this, getActivateRate());
+						if (success && monster.setSpoiled((Player) activeChar))
+						{
+							activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HAS_SUCCEEDED).addSkillName(_id, getDisplayLevel()));
+						}
+						else
+						{
+							activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HAS_FAILED).addSkillName(_id, getDisplayLevel()));
+							return;
+						}
+					}
+				}
+				if (getPower() > 0)
+				{
+					double damage, reflectableDamage = 0;
+					if (isMagic())
+					{
+						AttackInfo info = Formulas.calcMagicDam(activeChar, target, this, ss);
+						damage = info.damage;
+						reflectableDamage = info.reflectableDamage;
+					}
+					else
+					{
+						AttackInfo info = Formulas.calcPhysDam(activeChar, target, this, false, false, ss > 0, false);
+						damage = info.damage;
+						reflectableDamage = info.reflectableDamage;
+						if (info.lethal_dmg > 0)
+						{
+							target.reduceCurrentHp(info.lethal_dmg, reflectableDamage, activeChar, this, true, true, false, false, false, false, false);
+						}
+					}
+					target.reduceCurrentHp(damage, reflectableDamage, activeChar, this, true, true, false, true, false, false, true);
+					target.doCounterAttack(this, activeChar, false);
+				}
+				getEffects(activeChar, target, false, false);
+				target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, activeChar, Math.max(_effectPoint, 1));
+			}
+			// SWEEP PART
+			Player player = (Player) activeChar;
+			if ((target == null) || !target.isMonster())
 			{
 				continue;
 			}
-			MonsterInstance target = (MonsterInstance) targ;
-			List<RewardItem> items = target.takeSweep();
+			MonsterInstance targetMonster = (MonsterInstance) target;
+			List<RewardItem> items = targetMonster.takeSweep();
 			if (items == null)
 			{
 				continue;
@@ -120,7 +157,7 @@ public class Plunder extends Skill
 				}
 				if (!player.getInventory().validateCapacity(sweep) || !player.getInventory().validateWeight(sweep))
 				{
-					sweep.dropToTheGround(player, target);
+					sweep.dropToTheGround(player, targetMonster);
 					continue;
 				}
 				player.getInventory().addItem(sweep);

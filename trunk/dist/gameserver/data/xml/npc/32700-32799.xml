@@ -3661,14 +3661,10 @@
 		<set name="texture" value="LineageNpcEV.riding_control_unit"/>
 		<set name="type" value="Merchant"/>
 		<teleportlist>
-			<!-- Порт Грация -->
 			<sublist id="1">
 				<target loc="-212808 209672 4257" item_id="57" price="150000" name="1010709"/>
-			<!-- Порт Семени Бессмертия -->
 				<target loc="-248536 250280 4311" item_id="57" price="150000" name="1010710"/>
-			<!-- Порт Семени Разрушения -->
 				<target loc="-175512 154488 2689" item_id="57" price="150000" name="1010711"/>
-			<!-- Порт Семени Уничтожения -->
 			</sublist>
 		</teleportlist>
 		<attributes>

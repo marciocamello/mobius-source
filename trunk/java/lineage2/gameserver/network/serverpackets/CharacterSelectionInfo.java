@@ -119,15 +119,15 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 				writeD(charInfoPackage.getPaperdollItemId(PAPERDOLL_ID));
 			}
 			
-			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_RHAND));
-			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_LHAND));
-			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_GLOVES));
-			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_CHEST));
-			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_LEGS));
-			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_FEET));
+			writeD(charInfoPackage.getVisualItemId(Inventory.PAPERDOLL_RHAND));
+			writeD(charInfoPackage.getVisualItemId(Inventory.PAPERDOLL_LHAND));
+			writeD(charInfoPackage.getVisualItemId(Inventory.PAPERDOLL_GLOVES));
+			writeD(charInfoPackage.getVisualItemId(Inventory.PAPERDOLL_CHEST));
+			writeD(charInfoPackage.getVisualItemId(Inventory.PAPERDOLL_LEGS));
+			writeD(charInfoPackage.getVisualItemId(Inventory.PAPERDOLL_FEET));
 			writeD(0x00);
-			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_HAIR));
-			writeD(charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_DHAIR));
+			writeD(charInfoPackage.getVisualItemId(Inventory.PAPERDOLL_HAIR));
+			writeD(charInfoPackage.getVisualItemId(Inventory.PAPERDOLL_DHAIR));
 			
 			writeD(charInfoPackage.getHairStyle());
 			writeD(charInfoPackage.getHairColor());

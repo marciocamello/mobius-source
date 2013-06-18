@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE list SYSTEM "spawn.dtd">
-<list>
-	<spawns name="Gludin">
-		<spawn npcId="33493" x="-81490" y="152254" z="-3120" heading="48074" /><!-- Ламиния (Торговец Волшебными Красками) -->
-	</spawns>
-</list>

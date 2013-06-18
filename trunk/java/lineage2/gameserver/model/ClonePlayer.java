@@ -30,15 +30,11 @@ import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.entity.events.impl.DuelEvent;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
-import lineage2.gameserver.network.serverpackets.ActionFail;
 import lineage2.gameserver.network.serverpackets.AutoAttackStart;
 import lineage2.gameserver.network.serverpackets.CharInfo;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
-import lineage2.gameserver.network.serverpackets.MyTargetSelected;
 import lineage2.gameserver.network.serverpackets.PartySpelled;
 import lineage2.gameserver.network.serverpackets.RelationChanged;
-import lineage2.gameserver.network.serverpackets.StatusUpdate;
-import lineage2.gameserver.scripts.Events;
 import lineage2.gameserver.taskmanager.DecayTaskManager;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.templates.player.PlayerTemplate;
@@ -167,60 +163,12 @@ public class ClonePlayer extends Playable
 	 * @param player Player
 	 * @param shift boolean
 	 */
-	@Override
-	public void onAction(final Player player, boolean shift)
-	{
-		if (isFrozen())
-		{
-			player.sendPacket(ActionFail.STATIC);
-			return;
-		}
-		if (Events.onAction(player, this, shift))
-		{
-			player.sendPacket(ActionFail.STATIC);
-			return;
-		}
-		Player owner = getPlayer();
-		if (player.getTarget() != this)
-		{
-			player.setTarget(this);
-			if (player.getTarget() == this)
-			{
-				player.sendPacket(new MyTargetSelected(getObjectId(), 0), makeStatusUpdate(StatusUpdate.CUR_HP, StatusUpdate.MAX_HP, StatusUpdate.CUR_MP, StatusUpdate.MAX_MP));
-			}
-			else
-			{
-				player.sendPacket(ActionFail.STATIC);
-			}
-		}
-		else if (player == owner)
-		{
-			player.sendPacket(new CharInfo(this));
-			player.sendPacket(ActionFail.STATIC);
-		}
-		else if (isAutoAttackable(player))
-		{
-			player.getAI().Attack(this, false, shift);
-		}
-		else
-		{
-			if (player.getAI().getIntention() != CtrlIntention.AI_INTENTION_FOLLOW)
-			{
-				if (!shift)
-				{
-					player.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, this, Config.FOLLOW_RANGE);
-				}
-				else
-				{
-					player.sendActionFailed();
-				}
-			}
-			else
-			{
-				player.sendActionFailed();
-			}
-		}
-	}
+	/*
+	 * @Override public void onAction(final Player player, boolean shift) { if (isFrozen()) { player.sendPacket(ActionFail.STATIC); return; } if (Events.onAction(player, this, shift)) { player.sendPacket(ActionFail.STATIC); return; } Player owner = getPlayer(); if (player.getTarget() != this) {
+	 * player.setTarget(this); if (player.getTarget() == this) { player.sendPacket(new MyTargetSelected(getObjectId(), 0), makeStatusUpdate(StatusUpdate.CUR_HP, StatusUpdate.MAX_HP, StatusUpdate.CUR_MP, StatusUpdate.MAX_MP)); } else { player.sendPacket(ActionFail.STATIC); } } else if (player ==
+	 * owner) { player.sendPacket(new CharInfo(this)); player.sendPacket(ActionFail.STATIC); } else if (isAutoAttackable(player)) { player.getAI().Attack(this, false, shift); } else { if (player.getAI().getIntention() != CtrlIntention.AI_INTENTION_FOLLOW) { if (!shift) {
+	 * player.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, this, Config.FOLLOW_RANGE); } else { player.sendActionFailed(); } } else { player.sendActionFailed(); } } }
+	 */
 	
 	/**
 	 * Method onDeath.

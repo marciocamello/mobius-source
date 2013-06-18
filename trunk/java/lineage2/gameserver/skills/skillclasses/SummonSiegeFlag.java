@@ -20,7 +20,6 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Zone;
-import lineage2.gameserver.model.entity.events.impl.DominionSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.entity.events.objects.SiegeClanObject;
 import lineage2.gameserver.model.entity.events.objects.ZoneObject;
@@ -138,7 +137,7 @@ public class SummonSiegeFlag extends Skill
 					player.sendPacket(SystemMsg.YOU_CANNOT_SET_UP_A_BASE_HERE, new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 					return false;
 				}
-				SiegeClanObject siegeClan = siegeEvent.getSiegeClan(siegeEvent.getClass() == DominionSiegeEvent.class ? SiegeEvent.DEFENDERS : SiegeEvent.ATTACKERS, player.getClan());
+				SiegeClanObject siegeClan = siegeEvent.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
 				if (siegeClan == null)
 				{
 					player.sendPacket(SystemMsg.YOU_CANNOT_SUMMON_THE_ENCAMPMENT_BECAUSE_YOU_ARE_NOT_A_MEMBER_OF_THE_SIEGE_CLAN_INVOLVED_IN_THE_CASTLE__FORTRESS__HIDEOUT_SIEGE, new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
@@ -173,7 +172,7 @@ public class SummonSiegeFlag extends Skill
 		{
 			return;
 		}
-		SiegeClanObject siegeClan = siegeEvent.getSiegeClan(siegeEvent.getClass() == DominionSiegeEvent.class ? SiegeEvent.DEFENDERS : SiegeEvent.ATTACKERS, clan);
+		SiegeClanObject siegeClan = siegeEvent.getSiegeClan(SiegeEvent.ATTACKERS, clan);
 		if (siegeClan == null)
 		{
 			return;

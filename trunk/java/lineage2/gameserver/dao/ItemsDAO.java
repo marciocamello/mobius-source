@@ -35,46 +35,18 @@ import net.sf.ehcache.Element;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
 public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 {
 	/**
 	 * Field _log.
 	 */
 	private static final Logger _log = LoggerFactory.getLogger(ItemsDAO.class);
-	/**
-	 * Field RESTORE_ITEM. (value is ""SELECT object_id, owner_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, life_time, custom_flags, augmentation_id, attribute_fire, attribute_water, attribute_wind, attribute_earth, attribute_holy, attribute_unholy, agathion_energy
-	 * FROM items WHERE object_id = ?"")
-	 */
-	private final static String RESTORE_ITEM = "SELECT object_id, owner_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, life_time, custom_flags, augmentation_id, attribute_fire, attribute_water, attribute_wind, attribute_earth, attribute_holy, attribute_unholy, agathion_energy FROM items WHERE object_id = ?";
-	/**
-	 * Field RESTORE_OWNER_ITEMS. (value is ""SELECT object_id FROM items WHERE owner_id = ? AND loc = ?"")
-	 */
+	private final static String RESTORE_ITEM = "SELECT object_id, owner_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, life_time, custom_flags, augmentation_id, attribute_fire, attribute_water, attribute_wind, attribute_earth, attribute_holy, attribute_unholy, agathion_energy, visual_id FROM items WHERE object_id = ?";
 	private final static String RESTORE_OWNER_ITEMS = "SELECT object_id FROM items WHERE owner_id = ? AND loc = ?";
-	/**
-	 * Field RESTORE_ITEMS_BY_LOC. (value is ""SELECT object_id FROM items WHERE loc = ?"")
-	 */
 	private final static String RESTORE_ITEMS_BY_LOC = "SELECT object_id FROM items WHERE loc = ?";
-	/**
-	 * Field STORE_ITEM. (value is ""INSERT INTO items (object_id, owner_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, life_time, custom_flags, augmentation_id, attribute_fire, attribute_water, attribute_wind, attribute_earth, attribute_holy, attribute_unholy,
-	 * agathion_energy) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"")
-	 */
-	private final static String STORE_ITEM = "INSERT INTO items (object_id, owner_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, life_time, custom_flags, augmentation_id, attribute_fire, attribute_water, attribute_wind, attribute_earth, attribute_holy, attribute_unholy, agathion_energy) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-	/**
-	 * Field UPDATE_ITEM. (value is ""UPDATE items SET owner_id = ?, item_id = ?, count = ?, enchant_level = ?, loc = ?, loc_data = ?, custom_type1 = ?, custom_type2 = ?, life_time = ?, custom_flags = ?, augmentation_id = ?, attribute_fire = ?, attribute_water = ?, attribute_wind = ?,
-	 * attribute_earth = ?, attribute_holy = ?, attribute_unholy = ?, agathion_energy=? WHERE object_id = ?"")
-	 */
-	private final static String UPDATE_ITEM = "UPDATE items SET owner_id = ?, item_id = ?, count = ?, enchant_level = ?, loc = ?, loc_data = ?, custom_type1 = ?, custom_type2 = ?, life_time = ?, custom_flags = ?, augmentation_id = ?, attribute_fire = ?, attribute_water = ?, attribute_wind = ?, attribute_earth = ?, attribute_holy = ?, attribute_unholy = ?, agathion_energy=? WHERE object_id = ?";
-	/**
-	 * Field REMOVE_ITEM. (value is ""DELETE FROM items WHERE object_id = ?"")
-	 */
+	private final static String STORE_ITEM = "INSERT INTO items (object_id, owner_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, life_time, custom_flags, augmentation_id, attribute_fire, attribute_water, attribute_wind, attribute_earth, attribute_holy, attribute_unholy, agathion_energy, visual_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	private final static String UPDATE_ITEM = "UPDATE items SET owner_id = ?, item_id = ?, count = ?, enchant_level = ?, loc = ?, loc_data = ?, custom_type1 = ?, custom_type2 = ?, life_time = ?, custom_flags = ?, augmentation_id = ?, attribute_fire = ?, attribute_water = ?, attribute_wind = ?, attribute_earth = ?, attribute_holy = ?, attribute_unholy = ?, agathion_energy=?, visual_id=? WHERE object_id = ?";
 	private final static String REMOVE_ITEM = "DELETE FROM items WHERE object_id = ?";
-	/**
-	 * Field instance.
-	 */
 	private final static ItemsDAO instance = new ItemsDAO();
 	
 	/**
@@ -222,6 +194,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 			item.getAttributes().setHoly(rset.getInt(17));
 			item.getAttributes().setUnholy(rset.getInt(18));
 			item.setAgathionEnergy(rset.getInt(19));
+			item.setVisualId(rset.getInt(20));
 		}
 		return item;
 	}
@@ -253,6 +226,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		statement.setInt(17, item.getAttributes().getHoly());
 		statement.setInt(18, item.getAttributes().getUnholy());
 		statement.setInt(19, item.getAgathionEnergy());
+		statement.setInt(20, item.getVisualId());
 	}
 	
 	/**
@@ -320,7 +294,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 	 */
 	private void update0(ItemInstance item, PreparedStatement statement) throws SQLException
 	{
-		statement.setInt(19, item.getObjectId());
+		statement.setInt(20, item.getObjectId());
 		statement.setInt(1, item.getOwnerId());
 		statement.setInt(2, item.getItemId());
 		statement.setLong(3, item.getCount());
@@ -339,6 +313,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		statement.setInt(16, item.getAttributes().getHoly());
 		statement.setInt(17, item.getAttributes().getUnholy());
 		statement.setInt(18, item.getAgathionEnergy());
+		statement.setInt(19, item.getVisualId());
 	}
 	
 	/**

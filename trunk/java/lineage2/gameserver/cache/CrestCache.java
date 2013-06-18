@@ -44,10 +44,6 @@ public class CrestCache
 	 */
 	public static final int CREST_SIZE = 256;
 	/**
-	 * Field LARGE_CREST_SIZE. (value is 2176)
-	 */
-	public static final int LARGE_CREST_SIZE = 2176;
-	/**
 	 * Field _log.
 	 */
 	private static final Logger _log = LoggerFactory.getLogger(CrestCache.class);
@@ -102,6 +98,8 @@ public class CrestCache
 	 */
 	private final Lock writeLock = lock.writeLock();
 	
+	public byte[] crestLargeTmp = null;
+	
 	/**
 	 * Constructor for CrestCache.
 	 */
@@ -145,7 +143,7 @@ public class CrestCache
 				crest = rset.getBytes("largecrest");
 				crestId = getCrestId(pledgeId, crest);
 				_pledgeCrestLargeId.put(pledgeId, crestId);
-				_pledgeCrestLarge.put(crestId, crest);
+				get_pledgeCrestLarge().put(crestId, crest);
 			}
 			DbUtils.close(statement, rset);
 			statement = con.prepareStatement("SELECT ally_id, crest FROM ally_data WHERE crest IS NOT NULL");
@@ -213,7 +211,7 @@ public class CrestCache
 		readLock.lock();
 		try
 		{
-			crest = _pledgeCrestLarge.get(crestId);
+			crest = get_pledgeCrestLarge().get(crestId);
 		}
 		finally
 		{
@@ -346,7 +344,7 @@ public class CrestCache
 		writeLock.lock();
 		try
 		{
-			_pledgeCrestLarge.remove(_pledgeCrestLargeId.remove(pledgeId));
+			get_pledgeCrestLarge().remove(_pledgeCrestLargeId.remove(pledgeId));
 		}
 		finally
 		{
@@ -460,7 +458,7 @@ public class CrestCache
 		try
 		{
 			_pledgeCrestLargeId.put(pledgeId, crestId);
-			_pledgeCrestLarge.put(crestId, crest);
+			get_pledgeCrestLarge().put(crestId, crest);
 		}
 		finally
 		{
@@ -525,5 +523,10 @@ public class CrestCache
 			DbUtils.closeQuietly(con, statement);
 		}
 		return crestId;
+	}
+	
+	public TIntObjectHashMap<byte[]> get_pledgeCrestLarge()
+	{
+		return _pledgeCrestLarge;
 	}
 }

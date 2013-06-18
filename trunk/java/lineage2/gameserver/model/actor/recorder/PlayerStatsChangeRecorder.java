@@ -19,7 +19,7 @@ import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.matching.MatchingRoom;
 import lineage2.gameserver.network.serverpackets.ExStorageMaxCount;
-import lineage2.gameserver.network.serverpackets.StatusUpdate;
+import lineage2.gameserver.network.serverpackets.StatusUpdate.StatusUpdateField;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -197,15 +197,15 @@ public final class PlayerStatsChangeRecorder extends CharStatsChangeRecorder<Pla
 		}
 		if ((_changes & SEND_CUR_LOAD) == SEND_CUR_LOAD)
 		{
-			_activeChar.sendStatusUpdate(false, false, StatusUpdate.CUR_LOAD);
+			_activeChar.sendStatusUpdate(false, false, StatusUpdateField.CUR_LOAD);
 		}
 		if ((_changes & SEND_MAX_LOAD) == SEND_MAX_LOAD)
 		{
-			_activeChar.sendStatusUpdate(false, false, StatusUpdate.MAX_LOAD);
+			_activeChar.sendStatusUpdate(false, false, StatusUpdateField.MAX_LOAD);
 		}
 		if ((_changes & BROADCAST_KARMA) == BROADCAST_KARMA)
 		{
-			_activeChar.sendStatusUpdate(true, false, StatusUpdate.KARMA);
+			_activeChar.sendStatusUpdate(true, false, StatusUpdateField.KARMA);
 		}
 		if ((_changes & SEND_STORAGE_INFO) == SEND_STORAGE_INFO)
 		{

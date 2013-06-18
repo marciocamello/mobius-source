@@ -34,7 +34,6 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Skill.NextAction;
 import lineage2.gameserver.model.Skill.SkillType;
 import lineage2.gameserver.model.Summon;
-import lineage2.gameserver.network.serverpackets.MyTargetSelected;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Location;
 
@@ -599,7 +598,8 @@ public class PlayableAI extends CharacterAI
 		{
 			if (actor.isPlayer())
 			{
-				((Player) actor).doInteract(target);
+				// ((Player) actor).doInteract(target);
+				target.onActionSelect((Player) actor, false);
 			}
 			setIntention(AI_INTENTION_ACTIVE);
 		}
@@ -888,14 +888,10 @@ public class PlayableAI extends CharacterAI
 		}
 		else if (actor.getAggressionTarget() == null)
 		{
-			GameObject actorStoredTarget = actor.getTarget();
+			actor.getTarget();
 			actor.setAggressionTarget(target);
 			actor.setTarget(target);
 			clearNextAction();
-			if (actorStoredTarget != target)
-			{
-				actor.sendPacket(new MyTargetSelected(target.getObjectId(), 0));
-			}
 		}
 	}
 	

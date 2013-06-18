@@ -16,18 +16,15 @@ import java.util.Collections;
 import java.util.List;
 
 import lineage2.commons.lang.reference.HardReference;
-import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.reference.L2Reference;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
-import lineage2.gameserver.network.serverpackets.MyTargetSelected;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.ShowTownMap;
 import lineage2.gameserver.network.serverpackets.StaticObject;
-import lineage2.gameserver.scripts.Events;
 import lineage2.gameserver.templates.StaticObjectTemplate;
 import lineage2.gameserver.utils.Location;
 
@@ -94,42 +91,17 @@ public class StaticObjectInstance extends GameObject
 		return _template.getType();
 	}
 	
-	/**
-	 * Method onAction.
-	 * @param player Player
-	 * @param shift boolean
-	 */
 	@Override
-	public void onAction(Player player, boolean shift)
+	public void onInteract(final Player player)
 	{
-		if (Events.onAction(player, this, shift))
+		switch (_template.getType())
 		{
-			return;
-		}
-		if (player.getTarget() != this)
-		{
-			player.setTarget(this);
-			player.sendPacket(new MyTargetSelected(getObjectId(), 0));
-			return;
-		}
-		MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
-		player.sendPacket(my);
-		if (!isInRange(player, 150))
-		{
-			if (player.getAI().getIntention() != CtrlIntention.AI_INTENTION_INTERACT)
-			{
-				player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this, null);
-			}
-			return;
-		}
-		if (_template.getType() == 0)
-		{
-			player.sendPacket(new NpcHtmlMessage(player, getUId(), "newspaper/arena.htm", 0));
-		}
-		else if (_template.getType() == 2)
-		{
-			player.sendPacket(new ShowTownMap(_template.getFilePath(), _template.getMapX(), _template.getMapY()));
-			player.sendActionFailed();
+			case 0:
+				player.sendPacket(new NpcHtmlMessage(player, getUId(), "newspaper/arena.htm", 0));
+				break;
+			case 2:
+				player.sendPacket(new ShowTownMap(_template.getFilePath(), _template.getMapX(), _template.getMapY()));
+				break;
 		}
 	}
 	

@@ -938,28 +938,28 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="26065" levels="1" name="Fighter's Scroll Bundle">
-    <!-- none -->
+	<skill id="26065" levels="1" name="A Scroll Bundle of Fighter">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 		<cond msgId="1509">
 			<not>
 				<player olympiad="true"/>
 			</not>
 		</cond>
 	</skill>
-	<skill id="26066" levels="1" name="Mage's Scroll Bundle">
-    <!-- none -->
+	<skill id="26066" levels="1" name="A Scroll Bundle of Mage">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 		<cond msgId="1509">
 			<not>
 				<player olympiad="true"/>
@@ -967,117 +967,66 @@
 		</cond>
 	</skill>
 	<skill id="26067" levels="5" name="Bone Quiver">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="26068" levels="10" name="Blessed Spiritshot Pack - D grade">
 		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="26068" levels="10" name="Blessed Spiritshot Pack (D-Grade)">
-    <!-- none -->
-		<table name="#itemConsumeId">22094 22095 22096 22097 22098 22109 22110 22111 22112 22113</table>
-		<table name="#SummonItemId">22072 22073 22074 22075 22076 22072 22073 22074 22075 22076</table>
-		<table name="#SummonMinCount">5000 5000 5000 5000 5000 10000 10000 10000 10000 10000</table>
+	<skill id="26069" levels="10" name="Spiritshot Pack - D grade">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="itemConsumeId" val="#itemConsumeId"/>
-		<set name="itemConsumeCount" val="1"/>
 		<set name="isHandler" val="true"/>
-		<set name="SummonItemId" val="#SummonItemId"/>
-		<set name="SummonMinCount" val="#SummonMinCount"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="SUMMON_ITEM"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="altUse" val="true"/>
 	</skill>
-	<skill id="26069" levels="10" name="Spiritshot Pack (D-Grade)">
-    <!-- none -->
-		<table name="#itemConsumeId">22099 22100 22101 22102 22103 22114 22115 22116 22117 22118</table>
-		<table name="#SummonItemId">22077 22078 22079 22080 22081 22077 22078 22079 22080 22081</table>
-		<table name="#SummonMinCount">5000 5000 5000 5000 5000 10000 10000 10000 10000 10000</table>
+	<skill id="26070" levels="10" name="Soulshot Pack - D grade">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="itemConsumeId" val="#itemConsumeId"/>
-		<set name="itemConsumeCount" val="1"/>
 		<set name="isHandler" val="true"/>
-		<set name="SummonItemId" val="#SummonItemId"/>
-		<set name="SummonMinCount" val="#SummonMinCount"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="SUMMON_ITEM"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="altUse" val="true"/>
 	</skill>
-	<skill id="26070" levels="10" name="Soulshot Pack (D-Grade)">
-    <!-- none -->
-		<table name="#itemConsumeId">22104 22105 22106 22107 22108 22119 22120 22121 22122 22123</table>
-		<table name="#SummonItemId">22082 22083 22084 22085 22086 22082 22083 22084 22085 22086</table>
-		<table name="#SummonMinCount">5000 5000 5000 5000 5000 10000 10000 10000 10000 10000</table>
+	<skill id="26071" levels="17" name="Wrapped daisy hairpin">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="itemConsumeId" val="#itemConsumeId"/>
-		<set name="itemConsumeCount" val="1"/>
 		<set name="isHandler" val="true"/>
-		<set name="SummonItemId" val="#SummonItemId"/>
-		<set name="SummonMinCount" val="#SummonMinCount"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="SUMMON_ITEM"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="altUse" val="true"/>
-	</skill>
-	<skill id="26071" levels="17" name="Wrapped Daisy Hairpin">
-    <!-- none -->
-		<table name="#itemConsumeId">22124 22125 22126 22127 22128 22129 22130 22131 22132 22133 22134 22135 22136 22137 22138 22139 22140</table>
-		<table name="#SummonItemId">22156 22157 22158 22159 22160 22161 22162 22163 22164 22165 22166 22167 22168 22169 22170 22171 22172</table>
-		<set name="magicType" val="SPECIAL"/>
-		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="itemConsumeId" val="#itemConsumeId"/>
-		<set name="itemConsumeCount" val="1"/>
-		<set name="isHandler" val="true"/>
-		<set name="SummonItemId" val="#SummonItemId"/>
-		<set name="SummonMinCount" val="1"/>
-		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="SUMMON_ITEM"/>
-		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="altUse" val="true"/>
 	</skill>
 	<skill id="26072" levels="3" name="Wrapped Pet Exchange Ticket - Buffalo">
-    <!-- none -->
-		<table name="#itemConsumeId">22141 22142 22143</table>
-		<table name="#SummonItemId">7583 7584 7585</table>
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="itemConsumeId" val="#itemConsumeId"/>
-		<set name="itemConsumeCount" val="1"/>
 		<set name="isHandler" val="true"/>
-		<set name="SummonItemId" val="#SummonItemId"/>
-		<set name="SummonMinCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="SUMMON_ITEM"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="altUse" val="true"/>
 	</skill>
 	<skill id="26073" levels="5" name="Bone Bolt Container">
-    <!-- none -->
-		<table name="#itemConsumeId">22149 22150 22151 22152 22153</table>
-		<table name="#SummonItemId">22144 22145 22146 22147 22148</table>
-		<table name="#SummonMinCount">10000 10000 10000 10000 10000</table>
-		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
-		<set name="itemConsumeId" val="#itemConsumeId"/>
-		<set name="itemConsumeCount" val="1"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
 		<set name="isHandler" val="true"/>
-		<set name="SummonItemId" val="#SummonItemId"/>
-		<set name="SummonMinCount" val="#SummonMinCount"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="SUMMON_ITEM"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="altUse" val="true"/>
 	</skill>
 </list>

@@ -19,7 +19,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.ManufactureItem;
 import lineage2.gameserver.network.serverpackets.RecipeShopItemInfo;
-import lineage2.gameserver.network.serverpackets.StatusUpdate;
+import lineage2.gameserver.network.serverpackets.StatusUpdate.StatusUpdateField;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
@@ -182,7 +182,7 @@ public class RequestRecipeShopMakeDo extends L2GameClientPacket
 			buyer.getInventory().writeUnlock();
 		}
 		manufacturer.reduceCurrentMp(recipe.getMpConsume(), null);
-		manufacturer.sendStatusUpdate(false, false, StatusUpdate.CUR_MP);
+		manufacturer.sendStatusUpdate(false, false, StatusUpdateField.CUR_MP);
 		RecipeTemplate.RecipeComponent product = recipe.getRandomProduct();
 		int itemId = product.getItemId();
 		long itemsCount = product.getCount();

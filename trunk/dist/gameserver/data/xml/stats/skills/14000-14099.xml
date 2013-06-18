@@ -661,7 +661,6 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="14086" levels="1" name="Apherus Gate Key Discovery">
-    <!-- none -->
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>

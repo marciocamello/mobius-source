@@ -111,15 +111,14 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2510" levels="1" name="Wondrous Cubic">
-    <!-- none -->
+	<skill id="2510" levels="1" name="Mysterious Cube">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="reuseDelay" val="86400000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2511" levels="1" name="Scroll of Transformation - Gatekeeper">
     <!-- Transformed into a gatekeeper. -->

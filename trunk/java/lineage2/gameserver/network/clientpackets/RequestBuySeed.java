@@ -104,7 +104,7 @@ public class RequestBuySeed extends L2GameClientPacket
 			activeChar.sendPacket(Msg.YOU_CANNOT_DO_THAT_WHILE_FISHING);
 			return;
 		}
-		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (activeChar.getKarma() < 0) && !activeChar.isGM())
+		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (activeChar.isChaotic()) && !activeChar.isGM())
 		{
 			activeChar.sendActionFailed();
 			return;

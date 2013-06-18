@@ -2,6 +2,7 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<etcitem id="3700" name="Blood Crystal: Purity 3">
+	<!-- Bloody jewel that contains dreary magical power. Purity 3. The higher the purity of the crystal is, the higher the value. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -11,6 +12,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3701" name="Blood Crystal: Purity 4">
+	<!-- Bloody jewel that contains dreary magical power. Purity 4. The higher the purity of the crystal is, the higher the value. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -20,6 +22,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3702" name="Blood Crystal: Purity 5">
+	<!-- Bloody jewel that contains dreary magical power. Purity 5. The higher the purity of the crystal is, the higher the value. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -29,6 +32,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3703" name="Blood Crystal: Purity 6">
+	<!-- Bloody jewel that contains dreary magical power. Purity 6. The higher the purity of the crystal is, the higher the value. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -38,6 +42,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3704" name="Blood Crystal: Purity 7">
+	<!-- Bloody jewel that contains dreary magical power. Purity 7. The higher the purity of the crystal is, the higher the value. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -47,6 +52,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3705" name="Blood Crystal: Purity 8">
+	<!-- Bloody jewel that contains dreary magical power. Purity 8. The higher the purity of the crystal is, the higher the value. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -56,6 +62,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3706" name="Blood Crystal: Purity 9">
+	<!-- Bloody jewel that contains dreary magical power. Purity 9. The higher the purity of the crystal is, the higher the value. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -65,6 +72,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3707" name="Blood Crystal: Purity 10">
+	<!-- Bloody jewel that contains dreary magical power. Purity 10. The higher the purity of the crystal is, the higher the value. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -73,7 +81,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="3708" name="Blood Crystal: Broken">
+	<etcitem id="3708" name="Broken Blood Crystal">
+	<!-- Blood crystal broken by magical inequality. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -83,6 +92,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3709" name="Guardian Basilisk Scale">
+	<!-- Scale that was peeled off the corpse of Guardian Basilisk. Collect 40 and take them to Hunter Guild Member Grey. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -92,6 +102,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3710" name="Karut Weed">
+	<!-- Blade of grass that Leto lizardman shamans use for medication. Collect 20 and take them to Hunter Guild Member Grey. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -101,6 +112,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3711" name="Haka's Head">
+	<!-- Certificate proving that Breka overlord Haka was killed. Take it together with heads of Jaka and Marka to Hunter Guild Member Grey. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -110,6 +122,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3712" name="Jakas' Head">
+	<!-- Certificate proving that breka overlord jaka was killed. Take it together with heads of haka and marka to Hunter Guild Member Grey. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -119,6 +132,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3713" name="Marka's Head">
+	<!-- Certificate demonstrating that breka overlord marka was killed. Take it together with heads of haka and jaka to Hunter Guild Member Grey. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -128,6 +142,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3714" name="Windsus Aleph Skin">
+	<!-- Skin peeled off after killing Windsus Aleph. Take it to Hunter Guild Member Grey. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -137,6 +152,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3715" name="Indigo Spirit Ore">
+	<!-- Spirit Ore obtained from killing manashen or Reinforced Stone Golem. Collect 20 and take them to Hunter Guild Member Grey. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -145,7 +161,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="3716" name="Sporesea Seed">
+	<etcitem id="3716" name="Spirit of the Sea of Spores">
+	<!-- Spore that comes out of the body of Giant Fungus. Collect 30 and take them to Hunter Guild Member Grey. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -155,6 +172,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3717" name="Timak Orc Totem">
+	<!-- Small statue that Timak orc fighters carry on themselves. Collect 20 and take them to Hunter Guild Member Grey. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -164,6 +182,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3718" name="Trisalim Silk">
+	<!-- Strong spider web that comes out of the body of trisalim. Collect 20 and take them to Hunter Guild Member Grey. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -173,6 +192,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3719" name="Ambrosius Fruit">
+	<!-- Tree fruit obtained from killing valley treants. Collect 30 and take them to Hunter Guild Member Grey. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -182,6 +202,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3720" name="Balefire Crystal">
+	<!-- Crystal of ill will obtained from killing tairim. Collect 20 and take them to Hunter Guild Member Grey. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -191,6 +212,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3721" name="Imperial Arrowhead">
+	<!-- Arrowhead used by archers of the ancient Elmoreden empire. Collect 20 and take them to Hunter Guild Member Grey. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -200,6 +222,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3722" name="Athu's Head">
+	<!-- Certificate proving that talk raider Athu was killed. Collect heads of five raiders and take them to Hunter Guild Member Grey. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -209,6 +232,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3723" name="Lanka's Head">
+	<!-- Certificate proving that talk raider Lanka was killed. Collect heads of five raiders and take them to Hunter Guild Member Grey. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -218,6 +242,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3724" name="Triska's Head">
+	<!-- Certificate proving that talk raider Triska was killed. Collect heads of five raiders and take them to Hunter Guild Member Grey. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -227,6 +252,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3725" name="Motura's Head">
+	<!-- Certificate proving that talk raider Motura was killed. Collect heads of five raiders and take them to Hunter Guild Member Grey. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -235,7 +261,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="3726" name="Kalath's Head">
+	<etcitem id="3726" name="Kalath' Head">
+	<!-- Certificate proving that talk raider Kalath was killed. Collect heads of five raiders and take them to Hunter Guild Member Greay. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -245,6 +272,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3727" name="1st Circle Request: 1C">
+	<!-- Kill Leto lizardman archer or soldier and get 40 totems of War Hero Kadesh. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -254,6 +282,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3728" name="1st Circle Request: 2C">
+	<!-- Kill timak orc warrior or overlord and get 50 timak jade necklaces. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -263,6 +292,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3729" name="1st Circle Request: 3C">
+	<!-- Kill Reinforced Stone Golems, collect and bring back 50 of the fragments. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -272,6 +302,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3730" name="1st Circle Request: 4C">
+	<!-- Get 30 pieces of giant floating eye. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -281,6 +312,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3731" name="1st Circle Request: 5C">
+	<!-- Kill dire Wyrms and collect and bring 40 eggs. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -290,6 +322,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3732" name="1st Circle Request: 6C">
+	<!-- Collect and bring 100 claws of Guardian Basilisk. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -299,6 +332,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3733" name="1st Circle Request: 7C">
+	<!-- Kill Fettered Souls and get 50 Deadman's Chains. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -308,6 +342,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3734" name="1st Circle Request: 8C">
+	<!-- Collect and bring 30 tusks of Windsus. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -317,6 +352,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3735" name="1st Circle Request: 9C">
+	<!-- Collect and bring 100 skulls of grandis. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -326,6 +362,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3736" name="1st Circle Request: 10C">
+	<!-- Kill taik orc archer or warrior and collect and bring 50 taik obsidian necklaces. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -335,6 +372,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3737" name="1st Circle Request: 11C">
+	<!-- Bring 30 heads of karul bugbear. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -344,6 +382,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3738" name="1st Circle Request: 12C">
+	<!-- Kill Tamlin Orc or Tamlin Orc Archer and collect and bring 40 tamlin ivory amulets. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -353,6 +392,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3739" name="1st Circle Request: 1B">
+	<!-- Kill leto chief narak and bring the head. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -362,6 +402,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3740" name="1st Circle Request: 2B">
+	<!-- Collect and bring 50 Reinforced Gargoyle's horns. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -371,6 +412,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3741" name="1st Circle Request: 3B">
+	<!-- Kill breka orc warrior or shaman and get 50 coiled serpent totems. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -380,6 +422,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3742" name="1st Circle Request: 4B">
+	<!-- Kill leto shaman ketz and get demon kadesh totem. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -389,6 +432,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3743" name="1st Circle Request: 5B">
+	<!-- Kill timak raider kaikee and bring the head. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -398,6 +442,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3744" name="1st Circle Request: 6B">
+	<!-- Get and bring 30 kronbe venom sacs. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -407,6 +452,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3745" name="1st Circle Request: 1A">
+	<!-- Kill spore zombie in the Spore Sea and bring 30 amulets of Eva. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -416,6 +462,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3746" name="1st Circle Request: 2A">
+	<!-- Kill grandis chief gok magok and bring back the Lesser Giant's Tablet. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -425,6 +472,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3747" name="1st Circle Request: 3A">
+	<!-- Kill Karul Chief Orooto and bring back the Book of Shunaiman. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -434,6 +482,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3748" name="2nd Circle Request: 1C">
+	<!-- Kill rot tree in the Sea of Spores and gather and bring 40 seeds. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -443,6 +492,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3749" name="2nd Circle Request 2C">
+	<!-- Gather and bring 40 trisalim venom sacs. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -452,6 +502,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3750" name="2nd Circle Request 3C">
+	<!-- Kill taik orc shaman or captain and get 50 taik orc totems. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -461,6 +512,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3751" name="2nd Circle Request: 4C">
+	<!-- Kill Harit Lizardman Soldier, Archer and Warrior and collect and bring 40 Harit Barbed Necklaces. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -470,6 +522,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3752" name="2nd Circle Request: 5C">
+	<!-- Kill the Harat Ratmen who dwell on the War-Torn Plains and collect 20 coins from the ancient empire and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -479,6 +532,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3753" name="2nd Circle Request: 6C">
+	<!-- Bring 30 farcran leathers. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -488,6 +542,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3754" name="2nd Circle Request: 7C">
+	<!-- Kill flines in the Enchanted Valley, collect and bring back 40 tempest shards. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -497,6 +552,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3755" name="2nd Circle Request: 8C">
+	<!-- Kill lieles in the Enchanted Valley, collect and bring back 40 tsunami shards. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -506,6 +562,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3756" name="2nd Circle Request: 9C">
+	<!-- Kill satyr or satyr elder and collect and bring 40 manes that were obtained. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -515,6 +572,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3757" name="2nd Circle Request: 10C">
+	<!-- Kill forest runner and collect and bring 40 hamadryadesung shards. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -524,6 +582,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3758" name="2nd Circle Request: 11C">
+	<!-- Kill vanor silenos soldier, scout or warrior and collect and bring 30 of their manes. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -533,6 +592,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3759" name="2nd Circle Request: 12C">
+	<!-- Kill taik bugbear warriors and collect and bring 30 Tarlk Bugbear totems. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -542,6 +602,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3760" name="2nd Circle Request: 1B">
+	<!-- Kill timak overlord okun and bring the head. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -551,6 +612,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3761" name="2nd Circle Request: 2B">
+	<!-- Kill taik overlord kakran and bring the head. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -560,6 +622,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3762" name="2nd Circle Request: 3B">
+	<!-- Destroy mirrors of the Forest of Mirrors and collect and bring 40 narcissus soulstones. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -569,6 +632,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3763" name="2nd Circle Request: 4B">
+	<!-- Collect and bring 20 diprive eyes. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -578,6 +642,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3764" name="2nd Circle Request: 5B">
+	<!-- Bring 20 unicorn horns. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -587,6 +652,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3765" name="2nd Circle Request: 6B">
+	<!-- Kill vanor chief kerunos and remove and bring the mane. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -596,6 +662,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3766" name="2nd Circle Request: 1A">
+	<!-- Kill grave wanderers and collect and bring 20 skulls of executed persons. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -605,6 +672,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3767" name="2nd Circle Request: 2A">
+	<!-- Kill Harit Chieftain Kubel, recover the bust of King Travis and bring it. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -614,6 +682,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3768" name="2nd Circle Request: 3A">
+	<!-- Kill judges of marsh and collect and bring 10 swords of bodyguards of King Cadmus. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -623,6 +692,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3769" name="Charm of Kadesh">
+	<!-- Totem obtained from killing Leto lizardman archers or soldiers. Collect 40 and take them to Hunter Guild. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -632,6 +702,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3770" name="Timak Jade Necklace">
+	<!-- Necklace obtained from killing Timak orc warriors or warlords. Collect 50 and take them to Hunter Guild. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -640,7 +711,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="3771" name="Enchanted Golem Shard">
+	<etcitem id="3771" name="Reinforced Stone Golem Shard">
+	<!-- Fragment of destroyed Reinforced Stone Golem. Collect 50 and take them to Hunter Guild. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -650,6 +722,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3772" name="Giant Monster Eye Meat">
+	<!-- Piece cut for food from the corpse of a giant monster eye. Collect 30 and take them to Hunter Guild. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -659,6 +732,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3773" name="Dire Wyrm Egg">
+	<!-- Egg obtained from female dire Wyrm. Collect 40 and take them to Hunter Guild. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -667,7 +741,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="3774" name="Grd Basilisk Talon">
+	<etcitem id="3774" name="Guardian Basilisk Talon">
+	<!-- Claw removed from Guardian Basilisk corpse. Collect 100 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -676,7 +751,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="3775" name="Revenant's Chains">
+	<etcitem id="3775" name="Deadman's Chains">
+	<!-- Chain wrapped around the body of a fettered soul. Collect 50 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -686,6 +762,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3776" name="Windsus Tusk">
+	<!-- Giant tooth of a Windsus. Collect 30 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -694,7 +771,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="3777" name="Grandis Skull">
+	<etcitem id="3777" name="Grandis' Skull">
+	<!-- Skull obtained from killing grandis. Collect 100 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -704,6 +782,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3778" name="Taik Obsidian Amulet">
+	<!-- Amulet obtained from killing Taik orc archers or warriors. Collect 50 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -713,6 +792,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3779" name="Karul Bugbear Head">
+	<!-- Head cut off after killing Karul bugbears. Collect 30 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -722,6 +802,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3780" name="Tamlin Ivory Charm">
+	<!-- Charm obtained from killing Tamlin Orcs or Tamlin Orc Archers. Collect 40 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -731,6 +812,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3781" name="Fang of Narak">
+	<!-- Certificate of having killed Leto elder Narak. Take it to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -739,7 +821,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="3782" name="Enchanted Gargoyle Horn">
+	<etcitem id="3782" name="Reinforced Gargoyle's Horn">
+	<!-- Horn obtained from destroyed Reinforced Gargoyle body. Collect 50 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -749,6 +832,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3783" name="Coiled Serpent Totem">
+	<!-- Statue obtained from killing Breka orc warriors or shamen. Collect 50 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -758,6 +842,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3784" name="Totem of Kadesh">
+	<!-- Statue of demon Kadesh obtained from killing Leto shaman Ketz. Take it to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -767,6 +852,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3785" name="Kaiki's Head">
+	<!-- Certificate of having killed Timak raider Kaikee. Take it to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -776,6 +862,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3786" name="Kronbe Venom Sac">
+	<!-- Venom sac obtained from killing kronbe. Collect 30 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -785,6 +872,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3787" name="Eva's Charm">
+	<!-- Charm carried on the bodies of ancient Elven warriors. Collect 30 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -793,7 +881,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="3788" name="Titan's Tablet">
+	<etcitem id="3788" name="Lesser Giant's Tablet">
+	<!-- Ancient stone tablet recovered from grandis chief Gok Magok. Take it to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -803,6 +892,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3789" name="Book of Shunaiman">
+	<!-- Ancient document recovered from Karul Chief Orooto. Take it to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -812,6 +902,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3790" name="Rotting Tree Spores">
+	<!-- Seed collected from rot tree trunks. Collect 40 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -821,6 +912,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3791" name="Trisalim Venom Sac">
+	<!-- Venom sac removed from trisalim corpse. Collect 40 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -830,6 +922,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3792" name="Taik Orc Totem">
+	<!-- Statue obtained from killing Taik orc shamen or captains. Collect 50 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -839,6 +932,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3793" name="Harit Barbed Necklace">
+	<!-- Necklace obtained from killing Harit lizardman soldiers, archers or warriors. Collect 40 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -847,7 +941,8 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="3794" name="Coin of Old Empire">
+	<etcitem id="3794" name="Coin of the Old Empire">
+	<!-- Coin used during the time of the ancient Elmoreden Empire. Collect 20 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -857,6 +952,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3795" name="Skin of Farcran">
+	<!-- Skin removed after killing farcran. Collect 30 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -866,6 +962,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3796" name="Tempest Shard">
+	<!-- Spirit ore obtained by killing a fline. Collect 40 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -875,6 +972,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3797" name="Tsunami Shard">
+	<!-- Spirit ore obtained by killing a liele. Collect 40 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -884,6 +982,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3798" name="Satyr Mane">
+	<!-- Mane obtained from killing satyr or satyr elders. Collect 40 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -893,6 +992,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="3799" name="Hamadryad Shard">
+	<!-- Spirit Ore obtained from killing forest runner. Collect 40 and take them to Guild Member Tor. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

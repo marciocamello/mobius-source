@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="13400" name="Escape - Gludin Village">
+	<etcitem id="13400" name="Scroll of Escape: Gludin Village">
+	<!-- Teleports you to Gludin Village. Cannot be sold, exchanged or dropped. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -15,7 +16,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13401" name="Escape - Town of Gludio">
+	<etcitem id="13401" name="Scroll of Escape: Town of Gludio">
+	<!-- Teleports you to the Town of Gludio. Cannot be sold, exchanged or dropped. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -29,7 +31,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13402" name="Escape - Town of Dion">
+	<etcitem id="13402" name="Scroll of Escape: Town of Dion">
+	<!-- Teleports you to the Town of Dion. Cannot be sold, exchanged or dropped. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -43,7 +46,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13403" name="Escape - Floran Village">
+	<etcitem id="13403" name="Scroll of Escape: Floran Village">
+	<!-- Teleports you to Floran Village. Cannot be sold, exchanged or dropped. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -57,7 +61,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13404" name="Escape - Giran Castle Town">
+	<etcitem id="13404" name="Scroll of Escape: Town of Giran">
+	<!-- Teleports you to the Town of Giran. Cannot be sold, exchanged or dropped. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -71,7 +76,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13405" name="Escape - Hardin's Academy">
+	<etcitem id="13405" name="Scroll of Escape: Hardin's Academy">
+	<!-- Teleports you to Hardin's Academy. Cannot be sold, exchanged or dropped. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -85,7 +91,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13406" name="Escape - Heine">
+	<etcitem id="13406" name="Scroll of Escape: Heine">
+	<!-- Teleports you to Heine. Cannot be sold, exchanged or dropped. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -99,7 +106,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13407" name="Escape - Town of Oren">
+	<etcitem id="13407" name="Scroll of Escape: Town of Oren">
+	<!-- Teleports you to the Town of Oren. Cannot be sold, exchanged or dropped. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -113,7 +121,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13408" name="Escape - Ivory Tower">
+	<etcitem id="13408" name="Scroll of Escape: Ivory Tower">
+	<!-- Teleports you to the Ivory Tower. Cannot be sold, exchanged or dropped. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -127,7 +136,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13409" name="Escape - Hunters Village">
+	<etcitem id="13409" name="Scroll of Escape: Hunters Village">
+	<!-- Teleports you to Hunters Village. Cannot be sold, exchanged or dropped. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -141,7 +151,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13410" name="Escape - Town of Aden">
+	<etcitem id="13410" name="Scroll of Escape: Town of Aden">
+	<!-- Teleports you to the Town of Aden. Cannot be sold, exchanged or dropped. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -155,7 +166,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13411" name="Escape - Town of Goddard">
+	<etcitem id="13411" name="Scroll of Escape: Town of Goddard">
+	<!-- Teleports you to the Town of Goddard. Cannot be sold, exchanged or dropped. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -169,7 +181,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13412" name="Escape - Rune Township">
+	<etcitem id="13412" name="Scroll of Escape: Town of Rune">
+	<!-- Teleports you to the Town of Rune. Cannot be sold, exchanged or dropped. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -183,7 +196,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13413" name="Escape - Town of Schuttgart">
+	<etcitem id="13413" name="Scroll of Escape: Town of Schuttgart">
+	<!-- Teleports you to the Town of Schuttgart. Cannot be sold, exchanged or dropped. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -197,7 +211,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13414" name="Escape - Kamael Village">
+	<etcitem id="13414" name="Scroll of Escape: Kamael Village">
+	<!-- Teleports you to Kamael Village. Cannot be sold, exchanged or dropped. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -211,7 +226,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13417" name="L2day - Letter Y">
+	<etcitem id="13417" name="Letter - Y">
+	<!-- Item for the Lineage II 8th Anniversary event. Combine with other letters to create a special word and bring it to Angel Cat to receive a great gift! -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -220,6 +236,7 @@
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="13418" name="L2day - Letter 5">
+	<!-- Items for the L2 Day event. Combine the letters to create a special word and bring it to Angel Cat to receive a great gift! -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -228,6 +245,7 @@
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="13419" name="Lineage II Commemorative Mark">
+	<!-- Keep this Lineage II Commemorative Mark safe and it will bring you luck. If destroyed, it loses its effect. Cannot be exchanged or dropped. May be stored in a private warehouse. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -238,6 +256,7 @@
 		<set name="weight" value="20"/>
 	</etcitem>
 	<etcitem id="13420" name="Multi-colored Honey Rice Cake">
+	<!-- Some Vitality is replenished upon use. The effect does not apply to pets. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
@@ -248,6 +267,7 @@
 		<set name="weight" value="5"/>
 	</etcitem>
 	<etcitem id="13421" name="Honey Wheat Cake">
+	<!-- Some Vitality is replenished upon use. Cannot be exchanged or dropped. Can be stored in a private warehouse. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
@@ -260,6 +280,7 @@
 		<set name="weight" value="5"/>
 	</etcitem>
 	<etcitem id="13422" name="Medium Parchment Box">
+	<!-- Event Item. Reward box containing two village Scrolls of Escape. Double-click on this item to see what you've won. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -275,6 +296,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="13423" name="Medium Mineral Box">
+	<!-- Event Item. Reward box containing various attribute stones. Double-click on the container to see what you've won. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -289,7 +311,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13424" name="Large Libation Box">
+	<etcitem id="13424" name="Large Juice Box">
+	<!-- Event Item. Reward box containing unusual liquid refreshments. Double-click on the container to see what you've won. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -305,6 +328,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="13425" name="Small Parchment Box">
+	<!-- Event Item. Reward box containing one village Scroll of Escape. Double-click on this item to see what you've won. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -320,6 +344,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="13426" name="Small Mineral Box">
+	<!-- Event Item. Reward box containing various attribute stones. Double-click on the container to see what you've won. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -334,7 +359,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13427" name="Medium Libation Box">
+	<etcitem id="13427" name="Medium Juice Box">
+	<!-- Event Item. Reward box containing unusual liquid refreshments. Double-click on the container to see what you've won. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -349,7 +375,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13428" name="Small Libation Box">
+	<etcitem id="13428" name="Small Juice Box">
+	<!-- Event Item. Reward box containing unusual liquid refreshments. Double-click on the container to see what you've won. Cannot be exchanged or dropped. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

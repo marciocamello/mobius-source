@@ -27,10 +27,6 @@ import lineage2.gameserver.network.clientpackets.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
 public final class GamePacketHandler implements IPacketHandler<GameClient>, IClientFactory<GameClient>, IMMOExecutor<GameClient>
 {
 	/**
@@ -138,7 +134,7 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 							msg = new Logout();
 							break;
 						case 0x01:
-							msg = new AttackRequest();
+							msg = new AttackTargetAction(); // new AttackRequest();
 							break;
 						case 0x02:
 							break;
@@ -208,7 +204,7 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 						case 0x1e:
 							break;
 						case 0x1f:
-							msg = new Action();
+							msg = new SelectTargetAction(); // new Action();
 							break;
 						case 0x20:
 							break;
@@ -769,7 +765,29 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 									msg = new RequestPledgeCrestLarge();
 									break;
 								case 0x11:
-									msg = new RequestSetPledgeCrestLarge();
+									int id7 = buf.getInt();
+									if (client.getActiveChar().isGM() && client.getActiveChar().isDebug())
+									{
+										client.getActiveChar().sendMessage("IN_GAME 0xd0: 0x11:" + id7);
+									}
+									switch (id7)
+									{
+										case 0x00:
+											msg = new RequestSetPledgeCrestLarge(0);
+											break;
+										case 0x01:
+											msg = new RequestSetPledgeCrestLarge(1);
+											break;
+										case 0x02:
+											msg = new RequestSetPledgeCrestLarge(2);
+											break;
+										case 0x03:
+											msg = new RequestSetPledgeCrestLarge(3);
+											break;
+										case 0x04:
+											msg = new RequestSetPledgeCrestLarge(4);
+											break;
+									}
 									break;
 								case 0x12:
 									msg = new RequestPledgeSetAcademyMaster();
@@ -993,12 +1011,12 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 								case 0x56:
 									msg = new NotifyStartMiniGame();
 									break;
-								case 0x57:
-									msg = new RequestExJoinDominionWar();
-									break;
-								case 0x58:
-									msg = new RequestExDominionInfo();
-									break;
+								// case 0x57:
+								// msg = new RequestExJoinDominionWar();
+								// break;
+								// case 0x58:
+								// msg = new RequestExDominionInfo();
+								// break;
 								case 0x59:
 									msg = new RequestExCleftEnter();
 									break;
@@ -1303,6 +1321,18 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 									break;
 								case 0xc2:
 									msg = new RequestInstanceZone();
+									break;
+								case 0xCC:
+									msg = new RequestExTryToPutShapeShiftingTargetItem();
+									break;
+								case 0xCD:
+									msg = new RequestExTryToPutShapeShiftingEnchantSupportItem();
+									break;
+								case 0xCE:
+									msg = new RequestExCancelShapeShiftingItem();
+									break;
+								case 0xCF:
+									msg = new RequestShapeShiftingItem();
 									break;
 								default:
 									_log.info("0xd0=" + id3);

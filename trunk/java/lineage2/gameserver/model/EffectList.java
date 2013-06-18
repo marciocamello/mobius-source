@@ -19,7 +19,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-import lineage2.gameserver.network.serverpackets.ExAbnormalStatusUpdateFromTargetPacket;
 import lineage2.gameserver.skills.EffectType;
 import lineage2.gameserver.skills.effects.EffectTemplate;
 import lineage2.gameserver.skills.skillclasses.Transformation;
@@ -522,13 +521,6 @@ public class EffectList
 		}
 		_actor.updateStats();
 		_actor.updateEffectIcons();
-		for (Creature character : _actor.getAroundCharacters(900, 900))
-		{
-			if (character.isPlayer() && (character.getTarget() == _actor))
-			{
-				character.sendPacket(new ExAbnormalStatusUpdateFromTargetPacket(_actor));
-			}
-		}
 	}
 	
 	/**

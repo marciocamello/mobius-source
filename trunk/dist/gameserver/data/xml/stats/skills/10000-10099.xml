@@ -992,7 +992,7 @@
 		<set name="hitTime" val="500"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="aggroPoints" val="595"/>
 		<set name="relationSkillsId" val="86;916;"/>
@@ -1187,7 +1187,7 @@
 		<set name="hitTime" val="500"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="65;278;449;22;67;10;406;33;"/>
 		<enchant1 levels="10" name="Cost">
@@ -1625,7 +1625,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SUMMON"/>
 		<set name="summonType" val="SERVITOR"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="npcId" val="#npcIds"/>
 		<set name="relationSkillsId" val="283;"/>
@@ -1667,7 +1667,7 @@
 		<table name="#mpConsume">96 98 101 105 108 111 115 118</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#cubicLevel">1 2 3 4 5 6 7 8</table>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="magicLvl" val="#magicLevel"/>
 		<set name="mpConsume" val="#mpConsume"/>
 		<set name="operateType" val="OP_ACTIVE"/>

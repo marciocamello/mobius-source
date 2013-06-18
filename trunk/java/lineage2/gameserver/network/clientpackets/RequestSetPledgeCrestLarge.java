@@ -17,20 +17,24 @@ import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Clan;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
 public class RequestSetPledgeCrestLarge extends L2GameClientPacket
 {
-	/**
-	 * Field _length.
-	 */
 	private int _length;
-	/**
-	 * Field _data.
-	 */
 	private byte[] _data;
+	private final int _request;
+	
+	public RequestSetPledgeCrestLarge(int i)
+	{
+		_request = i;
+	}
+	
+	byte[] concatenateByteArrays(byte[] a, byte[] b)
+	{
+		byte[] result = new byte[a.length + b.length];
+		System.arraycopy(a, 0, result, 0, a.length);
+		System.arraycopy(b, 0, result, a.length, b.length);
+		return result;
+	}
 	
 	/**
 	 * Method readImpl.
@@ -38,11 +42,20 @@ public class RequestSetPledgeCrestLarge extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
+		readD();
 		_length = readD();
-		if ((_length == CrestCache.LARGE_CREST_SIZE) && (_length == _buf.remaining()))
+		if ((_length != 0) && (_length == _buf.remaining()))
 		{
 			_data = new byte[_length];
 			readB(_data);
+			if (_request == 0)
+			{
+				CrestCache.getInstance().crestLargeTmp = _data;
+			}
+			else
+			{
+				CrestCache.getInstance().crestLargeTmp = concatenateByteArrays(CrestCache.getInstance().crestLargeTmp, _data);
+			}
 		}
 	}
 	
@@ -52,35 +65,60 @@ public class RequestSetPledgeCrestLarge extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
-		if (activeChar == null)
+		if (_request == 4)
 		{
-			return;
-		}
-		Clan clan = activeChar.getClan();
-		if (clan == null)
-		{
-			return;
-		}
-		if ((activeChar.getClanPrivileges() & Clan.CP_CL_EDIT_CREST) == Clan.CP_CL_EDIT_CREST)
-		{
-			if ((clan.getCastle() == 0) && (clan.getHasHideout() == 0))
+			Player activeChar = getClient().getActiveChar();
+			if (activeChar == null)
 			{
-				activeChar.sendPacket(Msg.THE_CLANS_EMBLEM_WAS_SUCCESSFULLY_REGISTERED__ONLY_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_A_CASTLE_CAN_GET_THEIR_EMBLEM_DISPLAYED_ON_CLAN_RELATED_ITEMS);
 				return;
 			}
-			int crestId = 0;
-			if (_data != null)
+			Clan clan = activeChar.getClan();
+			if (clan == null)
 			{
-				crestId = CrestCache.getInstance().savePledgeCrestLarge(clan.getClanId(), _data);
+				return;
+			}
+			if ((activeChar.getClanPrivileges() & Clan.CP_CL_EDIT_CREST) == Clan.CP_CL_EDIT_CREST)
+			{
+				if ((clan.getCastle() == 0) && (clan.getHasHideout() == 0))
+				{
+					activeChar.sendPacket(Msg.THE_CLANS_EMBLEM_WAS_SUCCESSFULLY_REGISTERED__ONLY_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_A_CASTLE_CAN_GET_THEIR_EMBLEM_DISPLAYED_ON_CLAN_RELATED_ITEMS);
+					return;
+				}
+				int crestId = 0;
+				crestId = CrestCache.getInstance().savePledgeCrestLarge(clan.getClanId(), CrestCache.getInstance().crestLargeTmp);
 				activeChar.sendPacket(Msg.THE_CLANS_EMBLEM_WAS_SUCCESSFULLY_REGISTERED__ONLY_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_A_CASTLE_CAN_GET_THEIR_EMBLEM_DISPLAYED_ON_CLAN_RELATED_ITEMS);
+				clan.setCrestLargeId(crestId);
+				clan.broadcastClanStatus(false, true, false);
 			}
-			else if (clan.hasCrestLarge())
+		}
+		else if ((_request == 0) && (_data == null))
+		{
+			Player activeChar = getClient().getActiveChar();
+			if (activeChar == null)
 			{
-				CrestCache.getInstance().removePledgeCrestLarge(clan.getClanId());
+				return;
 			}
-			clan.setCrestLargeId(crestId);
-			clan.broadcastClanStatus(false, true, false);
+			Clan clan = activeChar.getClan();
+			if (clan == null)
+			{
+				return;
+			}
+			if ((activeChar.getClanPrivileges() & Clan.CP_CL_EDIT_CREST) == Clan.CP_CL_EDIT_CREST)
+			{
+				if ((clan.getCastle() == 0) && (clan.getHasHideout() == 0))
+				{
+					activeChar.sendPacket(Msg.THE_CLANS_EMBLEM_WAS_SUCCESSFULLY_REGISTERED__ONLY_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_A_CASTLE_CAN_GET_THEIR_EMBLEM_DISPLAYED_ON_CLAN_RELATED_ITEMS);
+					return;
+				}
+				int crestId = 0;
+				if (clan.hasCrestLarge())
+				{
+					CrestCache.getInstance().removePledgeCrestLarge(clan.getClanId());
+					activeChar.sendMessage("Large Crest Deleted.");
+				}
+				clan.setCrestLargeId(crestId);
+				clan.broadcastClanStatus(false, true, false);
+			}
 		}
 	}
 }

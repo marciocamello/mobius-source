@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="7800" name="Small Black Fat Fish - For Beginners">
+	<etcitem id="7800" name="Small Black Fat Fish (Novice)">
+	<!-- Double-click to randomly change into a another item. The changed item can be used as  a regular ingredient to make other items. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -14,7 +15,8 @@
 			<skill id="2228" level="3"/>
 		</skills>
 	</etcitem>
-	<etcitem id="7801" name="Black Nimble Fish - For Beginners">
+	<etcitem id="7801" name="Black Nimble Fish (Novice)">
+	<!-- Double-click to randomly change into a another item. The changed item can be used as  a regular ingredient to make other items. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -27,7 +29,8 @@
 			<skill id="2228" level="4"/>
 		</skills>
 	</etcitem>
-	<etcitem id="7802" name="Black Ugly Fish - For Beginners">
+	<etcitem id="7802" name="Black Ugly Fish (Novice)">
+	<!-- Double-click to randomly change into a another item. The changed item can be used as  a regular ingredient to make other items. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -40,7 +43,8 @@
 			<skill id="2228" level="5"/>
 		</skills>
 	</etcitem>
-	<etcitem id="7803" name="Black Fat Fish - For Beginners">
+	<etcitem id="7803" name="Black Fat Fish (Novice)">
+	<!-- Double-click to randomly change into a another item. The changed item can be used as  a regular ingredient to make other items. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -53,7 +57,8 @@
 			<skill id="2228" level="6"/>
 		</skills>
 	</etcitem>
-	<etcitem id="7804" name="Large Black Nimble Fish - For Beginners">
+	<etcitem id="7804" name="Large Black Nimble Fish (Novice)">
+	<!-- Double-click to randomly change into a another item. The changed item can be used as  a regular ingredient to make other items. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -66,7 +71,8 @@
 			<skill id="2228" level="7"/>
 		</skills>
 	</etcitem>
-	<etcitem id="7805" name="Large Black Ugly Fish - For Beginners">
+	<etcitem id="7805" name="Large Black Ugly Fish (Novice)">
+	<!-- Double-click to randomly change into a another item. The changed item can be used as  a regular ingredient to make other items. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -79,7 +85,8 @@
 			<skill id="2228" level="8"/>
 		</skills>
 	</etcitem>
-	<etcitem id="7806" name="Large Black Fat Fish - For Beginners">
+	<etcitem id="7806" name="Large Black Fat Fish (Novice)">
+	<!-- Double-click to randomly change into a another item. The changed item can be used as  a regular ingredient to make other items. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -92,7 +99,8 @@
 			<skill id="2228" level="9"/>
 		</skills>
 	</etcitem>
-	<etcitem id="7807" name="Green Colored Lure - For Beginners">
+	<etcitem id="7807" name="Green Bait (Novice)">
+	<!-- Lure used by beginners. Since only the fish intended for beginners take the bait, a player can easily learn how to fish. This bait is preferred by fast fish. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i00"/>
@@ -104,7 +112,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="7808" name="Purple Colored Lure - For Beginners">
+	<etcitem id="7808" name="Purple Bait (Novice)">
+	<!-- Lure used by beginners. Since only the fish intended for beginners take the bait, a player can easily learn how to fish. This bait is preferred by fat fish. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i01"/>
@@ -116,7 +125,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="7809" name="Yellow Colored Lure - For Beginners">
+	<etcitem id="7809" name="Yellow Bait (Novice)">
+	<!-- Lure used by beginners. Since only the fish intended for beginners take the bait, a player can easily learn how to fish. This bait is preferred by ugly fish. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i02"/>
@@ -128,7 +138,8 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="7832" name="Apprentice Adventurer's Weapon Exchange Coupon">
+	<etcitem id="7832" name="Apprentice Adventurer's Weapon Coupon">
+	<!-- A coupon that is needed to borrow weapons for apprentice adventurers from the Adventurers' Guide. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -138,7 +149,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="7833" name="Adventurer's Magic Accessory Exchange Coupon">
+	<etcitem id="7833" name="Adventurer's Magic Accessory Coupon">
+	<!-- Use this coupon to borrow magic accessories from the Adventurers' Guild. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -149,6 +161,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="7835" name="Amulet: Seal of Disease">
+	<!-- Amulet required for the Seal of Disease spell. Used by Dominators. -->
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_orcish_talisman_i00"/>
@@ -159,6 +172,7 @@
 		<set name="weight" value="120"/>
 	</etcitem>
 	<etcitem id="7838" name="Santa's Hat">
+	<!-- A Santa Claus hat that was created to celebrate the holiday. This hat can be worn only during the end of year holiday season. -->
 		<set name="icon" value="icon.accessory_santas_cap_i00"/>
 		<set name="weight" value="10"/>
 		<set name="class" value="OTHER"/>

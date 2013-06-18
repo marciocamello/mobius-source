@@ -29,11 +29,7 @@ public enum ResidenceType
 	/**
 	 * Field Fortress.
 	 */
-	Fortress,
-	/**
-	 * Field Dominion.
-	 */
-	Dominion;
+	Fortress;
 	/**
 	 * Field VALUES.
 	 */

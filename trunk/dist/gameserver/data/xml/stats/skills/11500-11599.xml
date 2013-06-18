@@ -169,7 +169,6 @@
 		<set name="elementPower" val="#elementPower"/>
 		<set name="flyType" val="CHARGE"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="neutral" val="true"/>
 		<set name="nextAction" val="attack"/>
 		<set name="relationSkillsId" val="939;1244;105;1245;1484;102;1209;1564;122;98;6921;4481;6873;8573"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -621,7 +620,7 @@
 		<set name="magicLevel" val="85"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="skillRadius" val="1000"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1006;1040;1517;989;1036;988;1007;123;1009;871;"/>
 		<enchant1 levels="10" name="Cost"/>
@@ -651,7 +650,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="skillRadius" val="1000"/>
 		<set name="magicLevel" val="85"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1356;1413;1363;"/>
 		<enchant1 levels="10" name="Cost"/>
@@ -689,7 +688,7 @@
 		<set name="skillRadius" val="1000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1044;1045;1501;1048;"/>
 		<enchant1 levels="10" name="Cost"/>
@@ -720,7 +719,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="magicLevel" val="85"/>
 		<set name="skillRadius" val="1000"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1476;1242;1253;1308;1518;1077;"/>
 		<enchant1 levels="10" name="Cost"/>
@@ -751,7 +750,7 @@
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="target" val="#target"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="skillRadius" val="1000"/>
 		<set name="magicLevel" val="85"/>
@@ -786,7 +785,7 @@
 		<set name="skillRadius" val="1000"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="magicLevel" val="85"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1002;1251;1310;971;1519;1086;"/>
 		<enchant1 levels="10" name="Cost"/>
@@ -812,7 +811,7 @@
 		<set name="target" val="TARGET_PARTY_ONE"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="magicLevel" val="85"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1283;1590;264;1243;1389;1391;271;"/>
 		<enchant1 levels="10" name="Cost"/>
@@ -845,7 +844,7 @@
 		<set name="target" val="TARGET_PARTY_ONE"/>
 		<set name="magicLevel" val="85"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1062;1388;274;1562;1586;1390;269;1261;"/>
 		<enchant1 levels="10" name="Cost"/>
@@ -890,7 +889,7 @@
 		<set name="target" val="TARGET_PARTY_ONE"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="magicLevel" val="85"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="267;273;349;1588;1078;365;336;1596;337;"/>
 		<enchant1 levels="10" name="Cost"/>
@@ -1054,7 +1053,7 @@
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_PARTY"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<enchant1 levels="10" name="Cost"/>
 		<enchant2 levels="10" name="Shield">
@@ -1215,7 +1214,7 @@
 		<set name="magicLevel" val="85"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="activateRate" val="95"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="npcId" val="13093"/>
 		<set name="relationSkillsId" val="15;"/>
         <enchant1 levels="10" name="Cost">
@@ -1346,7 +1345,7 @@
 		<set name="target" val="TARGET_PARTY"/>
 		<set name="skillRadius" val="1000"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1411;"/>
 		<enchant1 levels="10" name="Cost"/>
@@ -1819,7 +1818,7 @@
 		<set name="skillRadius" val="900"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="relationSkillsId" val="1549;307;1182;481;306;1189;308;1548;529;1352;309;1191;"/>
 		<enchant1 levels="10" name="Cost">
 		    <table name="#mpConsume2">107 103 98 94 89 85 80 76 71 67</table>
@@ -1851,7 +1850,7 @@
 		<set name="skillRadius" val="900"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="relationSkillsId" val="270;196;1392;1393;1033;530;277;1032"/>
 		<enchant1 levels="10" name="Cost">
 		    <table name="#mpConsume2">107 103 98 94 89 85 80 76 71 67</table>
@@ -1883,7 +1882,7 @@
 		<set name="skillRadius" val="900"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="relationSkillsId" val="311;1035;1362;1415;"/>
 		<enchant1 levels="10" name="Cost">
 		    <table name="#mpConsume2">107 103 98 94 89 85 80 76 71 67</table>

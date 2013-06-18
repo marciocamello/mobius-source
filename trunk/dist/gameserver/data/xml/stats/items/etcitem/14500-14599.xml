@@ -2,6 +2,8 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<etcitem id="14530" name="Maxwell House Pack">
+	<!-- Dimensional Item Pack
+	The wrapped pack containing 3 sheets of Feather of Resurrection, 3 sheets of Minion Pet Coupon (5-hour), 1 Mount - Darkmane Pacer (7-day) and one of Ornithomimus Hat (30-day). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -13,7 +15,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14531" name="Gludio Supply Box - Magic Pin" add_name="Grade S, A">
+	<etcitem id="14531" name="Gludio Supply Box - Magic Pin" add_name="S-grade , A">
+	<!-- Box that has the symbol of Gludio. Has a chance of containing a high grade magic pin that can be attached to a belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -28,7 +31,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14532" name="Dion Supply Box - Magic Pin" add_name="Grade S, A">
+	<etcitem id="14532" name="Dion Supply Box - Magic Pin" add_name="S-grade , A">
+	<!-- Box that has the symbol of Dion. Has a chance of containing a high grade magic pin that can be attached to a belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -43,7 +47,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14533" name="Giran Supply Box - Magic Pin" add_name="Grade S, A">
+	<etcitem id="14533" name="Giran Supply Box - Magic Pin" add_name="S-grade , A">
+	<!-- Box that has the symbol of Giran. Has a chance of containing a high grade magic pin that can be attached to a belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -58,7 +63,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14534" name="Oren Supply Box - Magic Pin" add_name="Grade S, A">
+	<etcitem id="14534" name="Oren Supply Box - Magic Pin" add_name="S-grade , A">
+	<!-- Box that has the symbol of Oren. Has a chance of containing a high grade magic pin that can be attached to a belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -73,7 +79,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14535" name="Aden Supply Box - Magic Pin" add_name="Grade S, A">
+	<etcitem id="14535" name="Aden Supply Box - Magic Pin" add_name="S-grade , A">
+	<!-- Box that has the symbol of Aden. Has a chance of containing a high grade magic pin that can be attached to a belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -88,7 +95,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14536" name="Innadril Supply Box - Magic Pin" add_name="Grade S, A">
+	<etcitem id="14536" name="Innadril Supply Box - Magic Pin" add_name="S-grade , A">
+	<!-- Box that has the symbol of Innadril. Has a chance of containing a high grade magic pin that can be attached to a belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -103,7 +111,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14537" name="Goddard Supply Box - Magic Pin" add_name="Grade S, A">
+	<etcitem id="14537" name="Goddard Supply Box: Magic Pin" add_name="S-grade , A">
+	<!-- Box that has the symbol of Goddard. Has a chance of containing a high grade magic pin that can be attached to a belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -118,7 +127,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14538" name="Rune Supply Box - Magic Pin" add_name="Grade S, A">
+	<etcitem id="14538" name="Rune Supply Box - Magic Pin" add_name="S-grade , A">
+	<!-- Box that has the symbol of Rune. Has a chance of containing a high grade magic pin that can be attached to a belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -133,7 +143,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14539" name="Schuttgart Supply Box - Magic Pin" add_name="Grade S, A">
+	<etcitem id="14539" name="Schuttgart Supply Box - Magic Pin" add_name="S-grade , A">
+	<!-- Box that has the symbol of Schuttgart. Has a chance of containing a high grade magic pin that can be attached to a belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -148,7 +159,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14540" name="Gludio Supply Box - Magic Pouch" add_name="Grade S, A">
+	<etcitem id="14540" name="Gludio Supply Box - Magic Pouch" add_name="S-grade , A">
+	<!-- Box that has the symbol of Gludio. Has a chance of containing a high grade magic pouch that can be attached to a belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -163,7 +175,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14541" name="Dion Supply Box - Magic Pouch" add_name="Grade S, A">
+	<etcitem id="14541" name="Dion Supply Box - Magic Pouch" add_name="S-grade , A">
+	<!-- Box that has the symbol of Dion. Has a chance of containing a high grade magic pouch that can be attached to a belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -178,7 +191,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14542" name="Giran Supply Box - Magic Pouch" add_name="Grade S, A">
+	<etcitem id="14542" name="Giran Supply Box - Magic Pouch" add_name="S-grade , A">
+	<!-- Box that has the symbol of Giran. Has a chance of containing a high grade magic pouch that can be attached to a belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -193,7 +207,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14543" name="Oren Supply Box - Magic Pouch" add_name="Grade S, A">
+	<etcitem id="14543" name="Oren Supply Box - Magic Pouch" add_name="S-grade , A">
+	<!-- Box that has the symbol of Oren. Has a chance of containing a high grade magic pouch that can be attached to a belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -208,7 +223,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14544" name="Aden Supply Box - Magic Pouch" add_name="Grade S, A">
+	<etcitem id="14544" name="Aden Supply Box - Magic Pouch" add_name="S-grade , A">
+	<!-- Box that has the symbol of Aden. Has a chance of containing a high grade magic pouch that can be attached to a belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -223,7 +239,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14545" name="Innadril Supply Box - Magic Pouch" add_name="Grade S, A">
+	<etcitem id="14545" name="Innadril Supply Box - Magic Pouch" add_name="S-grade , A">
+	<!-- Box that has the symbol of Innadril. Has a chance of containing a high grade magic pouch that can be attached to a belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -238,7 +255,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14546" name="Goddard Supply Box - Magic Pouch" add_name="Grade S, A">
+	<etcitem id="14546" name="Goddard Supply Box: Magic Pouch" add_name="S-grade , A">
+	<!-- Box that has the symbol of Goddard. Has a chance of containing a high grade magic pouch that can be attached to a belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -253,7 +271,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14547" name="Rune Supply Box - Magic Pouch" add_name="Grade S, A">
+	<etcitem id="14547" name="Rune Supply Box - Magic Pouch" add_name="S-grade , A">
+	<!-- Box that has the symbol of Rune. Has a chance of containing a high grade magic pouch that can be attached to a belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -268,7 +287,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14548" name="Schuttgart Supply Box - Magic Pouch" add_name="Grade S, A">
+	<etcitem id="14548" name="Schuttgart Supply Box - Magic Pouch" add_name="S-grade , A">
+	<!-- Box that has the symbol of Schuttgart. High grade magic pouch that can be attached to the belt is packaged. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -283,7 +303,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14549" name="Gludio Supply Box - Belt" add_name="Grade S, A">
+	<etcitem id="14549" name="Gludio Supply Box - Belt" add_name="S-grade , A">
+	<!-- Box that has the symbol of Gludio. Has a chance of containing a high grade belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -298,7 +319,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14550" name="Dion Supply Box - Belt" add_name="Grade S, A">
+	<etcitem id="14550" name="Dion Supply Box - Belt" add_name="S-grade , A">
+	<!-- Box that has the symbol of Dion. Has a chance of containing a high grade belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -313,7 +335,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14551" name="Giran Supply Box - Belt" add_name="Grade S, A">
+	<etcitem id="14551" name="Giran Supply Box - Belt" add_name="S-grade , A">
+	<!-- Box that has the symbol of Giran. Has a chance of containing a high grade belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -328,7 +351,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14552" name="Oren Supply Box - Belt" add_name="Grade S, A">
+	<etcitem id="14552" name="Oren Supply Box - Belt" add_name="S-grade , A">
+	<!-- Box that has the symbol of Oren. Has a chance of containing a high grade belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -343,7 +367,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14553" name="Aden Supply Box - Belt" add_name="Grade S, A">
+	<etcitem id="14553" name="Aden Supply Box - Belt" add_name="S-grade , A">
+	<!-- Box that has the symbol of Aden. Has a chance of containing a high grade belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -358,7 +383,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14554" name="Innadril Supply Box - Belt" add_name="Grade S, A">
+	<etcitem id="14554" name="Innadril Supply Box - Belt" add_name="S-grade , A">
+	<!-- Box that has the symbol of Innadril. Has a chance of containing a high grade belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -373,7 +399,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14555" name="Goddard Supply Box - Belt" add_name="Grade S, A">
+	<etcitem id="14555" name="Goddard Supply Box: Belt" add_name="S-grade , A">
+	<!-- Box that has the symbol of Goddard. Has a chance of containing a high grade belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -388,7 +415,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14556" name="Rune Supply Box - Belt" add_name="Grade S, A">
+	<etcitem id="14556" name="Rune Supply Box - Belt" add_name="S-grade , A">
+	<!-- Box that has the symbol of Rune. Has a chance of containing a high grade belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -403,7 +431,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14557" name="Schuttgart Supply Box - Belt" add_name="Grade S, A">
+	<etcitem id="14557" name="Schuttgart Supply Box - Belt" add_name="S-grade , A">
+	<!-- Box that has the symbol of Schuttgart. Has a chance of containing a high grade belt. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -418,7 +447,8 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14559" name="PC cafe points">
+	<etcitem id="14559" name="Player Commendation Points">
+	<!-- When double clicked, 7000 Player Commendation Points can be acquired. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pccafe_point_i00"/>

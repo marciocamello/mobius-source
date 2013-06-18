@@ -63,10 +63,8 @@ import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.model.entity.DelusionChamber;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
-import lineage2.gameserver.model.entity.events.objects.TerritoryWardObject;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.entity.residence.ClanHall;
-import lineage2.gameserver.model.entity.residence.Dominion;
 import lineage2.gameserver.model.entity.residence.Fortress;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.pledge.Clan;
@@ -76,25 +74,20 @@ import lineage2.gameserver.model.quest.QuestEventType;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.AcquireSkillDone;
 import lineage2.gameserver.network.serverpackets.AcquireSkillList;
-import lineage2.gameserver.network.serverpackets.ActionFail;
 import lineage2.gameserver.network.serverpackets.AutoAttackStart;
 import lineage2.gameserver.network.serverpackets.ExChangeNpcState;
 import lineage2.gameserver.network.serverpackets.ExShowBaseAttributeCancelWindow;
 import lineage2.gameserver.network.serverpackets.ExShowVariationCancelWindow;
 import lineage2.gameserver.network.serverpackets.ExShowVariationMakeWindow;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
-import lineage2.gameserver.network.serverpackets.MyTargetSelected;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.NpcInfo;
 import lineage2.gameserver.network.serverpackets.RadarControl;
 import lineage2.gameserver.network.serverpackets.SocialAction;
-import lineage2.gameserver.network.serverpackets.StatusUpdate;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.ValidateLocation;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
-import lineage2.gameserver.scripts.Events;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.tables.SkillTable;
@@ -248,10 +241,6 @@ public class NpcInstance extends Creature
 	 * Field _nearestClanHall.
 	 */
 	private ClanHall _nearestClanHall;
-	/**
-	 * Field _nearestDominion.
-	 */
-	private Dominion _nearestDominion;
 	/**
 	 * Field _nameNpcString.
 	 */
@@ -1172,88 +1161,32 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Method getDominion.
-	 * @return Dominion
-	 */
-	public Dominion getDominion()
-	{
-		if (getReflection() != ReflectionManager.DEFAULT)
-		{
-			return null;
-		}
-		if (_nearestDominion == null)
-		{
-			if (getTemplate().getCastleId() == 0)
-			{
-				return null;
-			}
-			Castle castle = ResidenceHolder.getInstance().getResidence(getTemplate().getCastleId());
-			_nearestDominion = castle.getDominion();
-		}
-		return _nearestDominion;
-	}
-	
-	/**
 	 * Field _lastSocialAction.
 	 */
 	protected long _lastSocialAction;
 	
-	/**
-	 * Method onAction.
-	 * @param player Player
-	 * @param shift boolean
-	 */
 	@Override
-	public void onAction(Player player, boolean shift)
+	public void onActionSelect(final Player player, boolean forced)
 	{
-		if (!isTargetable())
+		if (isTargetable())
 		{
-			player.sendActionFailed();
-			return;
+			super.onActionSelect(player, forced);
 		}
-		if (player.getTarget() != this)
-		{
-			player.setTarget(this);
-			if (player.getTarget() == this)
-			{
-				player.sendPacket(new MyTargetSelected(getObjectId(), player.getLevel() - getLevel()), makeStatusUpdate(StatusUpdate.CUR_HP, StatusUpdate.MAX_HP));
-			}
-			player.sendPacket(new ValidateLocation(this), ActionFail.STATIC);
-			return;
-		}
-		if (Events.onAction(player, this, shift))
-		{
-			player.sendActionFailed();
-			return;
-		}
-		if (isAutoAttackable(player))
-		{
-			player.getAI().Attack(this, false, shift);
-			return;
-		}
-		if (!isInRange(player, INTERACTION_DISTANCE))
-		{
-			if (player.getAI().getIntention() != CtrlIntention.AI_INTENTION_INTERACT)
-			{
-				player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this, null);
-			}
-			return;
-		}
-		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (player.getKarma() < 0) && !player.isGM() && !(this instanceof WarehouseInstance))
-		{
-			player.sendActionFailed();
-			return;
-		}
-		if ((!Config.ALLOW_TALK_WHILE_SITTING && player.isSitting()) || player.isAlikeDead())
+	}
+	
+	@Override
+	public void onInteract(final Player player)
+	{
+		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && player.isChaotic() && !player.isGM() && !(this instanceof WarehouseInstance))
 		{
 			return;
 		}
+		
 		if (hasRandomAnimation())
 		{
 			onRandomAnimation();
 		}
-		player.sendActionFailed();
-		player.stopMove(false);
+		
 		if (_isBusy)
 		{
 			showBusyWindow(player);
@@ -1262,17 +1195,20 @@ public class NpcInstance extends Creature
 		{
 			boolean flag = false;
 			Quest[] qlst = getTemplate().getEventQuests(QuestEventType.NPC_FIRST_TALK);
+			
 			if ((qlst != null) && (qlst.length > 0))
 			{
 				for (Quest element : qlst)
 				{
 					QuestState qs = player.getQuestState(element.getName());
+					
 					if (((qs == null) || !qs.isCompleted()) && element.notifyFirstTalk(this, player))
 					{
 						flag = true;
 					}
 				}
 			}
+			
 			if (!flag)
 			{
 				showChatWindow(player, 0);
@@ -1371,10 +1307,6 @@ public class NpcInstance extends Creature
 	public void onBypassFeedback(Player player, String command)
 	{
 		if (!canBypassCheck(player, this))
-		{
-			return;
-		}
-		if ((getTemplate().getTeleportList().size() > 0) && checkForDominionWard(player))
 		{
 			return;
 		}
@@ -1881,10 +1813,6 @@ public class NpcInstance extends Creature
 	 */
 	public void showChatWindow(Player player, int val, Object... replace)
 	{
-		if ((getTemplate().getTeleportList().size() > 0) && checkForDominionWard(player))
-		{
-			return;
-		}
 		String filename;
 		int npcId = getNpcId();
 		switch (npcId)
@@ -2575,13 +2503,20 @@ public class NpcInstance extends Creature
 	@Override
 	public Clan getClan()
 	{
-		Dominion dominion = getDominion();
-		if (dominion == null)
+		if (getTemplate().getCastleId() == 0)
 		{
 			return null;
 		}
-		int lordObjectId = dominion.getLordObjectId();
-		return lordObjectId == 0 ? null : dominion.getOwner();
+		Castle castle = ResidenceHolder.getInstance().getResidence(getTemplate().getCastleId());
+		if (castle.getOwner() == null)
+		{
+			return null;
+		}
+		if (castle.getOwner().getLevel() > 6)
+		{
+			return castle.getOwner();
+		}
+		return null;
 	}
 	
 	/**
@@ -2645,22 +2580,6 @@ public class NpcInstance extends Creature
 	public void setSpawnRange(SpawnRange spawnRange)
 	{
 		_spawnRange = spawnRange;
-	}
-	
-	/**
-	 * Method checkForDominionWard.
-	 * @param player Player
-	 * @return boolean
-	 */
-	public boolean checkForDominionWard(Player player)
-	{
-		ItemInstance item = getActiveWeaponInstance();
-		if ((item != null) && (item.getAttachment() instanceof TerritoryWardObject))
-		{
-			showChatWindow(player, "flagman.htm");
-			return true;
-		}
-		return false;
 	}
 	
 	/**
@@ -2773,5 +2692,11 @@ public class NpcInstance extends Creature
 	public void setHasChatWindow(boolean hasChatWindow)
 	{
 		_hasChatWindow = hasChatWindow;
+	}
+	
+	@Override
+	public boolean displayHpBar()
+	{
+		return getTemplate().isDisplayHpBar();
 	}
 }

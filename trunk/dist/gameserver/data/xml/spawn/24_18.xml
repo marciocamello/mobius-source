@@ -994,9 +994,33 @@
         <!--Gatekeeper-->
     </spawn>
     <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-        <point x="147552" y="2128" z="221" h="48000"/>
+		<point x="147552" y="2128" z="221" h="48000"/>
         <npc id="35271"/>
         <!--Gatekeeper-->
+	</spawn>
+	<spawn count="2" respawn="60" respawn_random="0" period_of_day="none">
+        <point x="147592" y="8689" z="-480" h="16383"/>
+		<point x="147240" y="8088" z="-464" h="49151"/>
+        <npc id="35267"/>
+        <!--Outer Castle Gatekeeper-->
+    </spawn>
+	<spawn count="2" respawn="60" respawn_random="0" period_of_day="none">
+        <point x="145816" y="4712" z="-400" h="32767"/>
+		<point x="146216" y="4504" z="-400" h="0"/>
+        <npc id="35268"/>
+        <!--Inner Castle Gatekeeper-->
+	</spawn>
+	<spawn count="2" respawn="60" respawn_random="0" period_of_day="none">
+        <point x="147592" y="6392" z="-400" h="16383"/>
+		<point x="147352" y="5976" z="-400" h="49151"/>
+        <npc id="35269"/>
+        <!--Hall Castle Gatekeeper-->
+    </spawn>
+	<spawn count="2" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="148696" y="4712" z="-400" h="32767"/>
+		<point x="149128" y="4488" z="-416" h="0"/>
+        <npc id="35270"/>
+		<!--Inner Castle Gatekeeper 2-->
     </spawn>
     <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
         <point x="147449" y="1899" z="216" h="49000"/>

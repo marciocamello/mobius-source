@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="6900" name="Recipe: Arcana Mace (100%)">
+	<etcitem id="6900" name="Recipe: Arcana Mace">
+	<!-- For Dwarves only. Recipe for an Arcana Mace. Requires Create Item - Skill Level 9. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_black_i00"/>
@@ -11,7 +12,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6901" name="Recipe: Shining Arrow (100%)">
+	<etcitem id="6901" name="Recipe: Arrow of Light">
+	<!-- For Dwarves only. Recipe for an Arrow of Light. Requires Create Item - Skill Level 5. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_black_i00"/>
@@ -22,6 +24,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="6903" name="Music Box M">
+	<!-- Music Box playing Minu's music. Disappear after the one-time use. -->
 		<set name="reuse_delay" value="20000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -36,6 +39,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="6904" name="Party Mask Fabric">
+	<!-- Main ingredient essentially required to make a Party Mask. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_of_cloth_blue_i00"/>
@@ -44,7 +48,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="6905" name="Hair Pin Piece">
+	<etcitem id="6905" name="Lady's Hair Pin Piece">
+	<!-- Main ingredient essentially required to make a Lady's Hair Pin. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_broken_crystal_green_i00"/>
@@ -53,7 +58,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="6906" name="Pirate's Eye Patch Material">
+	<etcitem id="6906" name="Pirate's Eyepatch String">
+	<!-- Main component necessary to make a Pirate's Eyepatch. May also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_braided_hemp_i00"/>
@@ -63,6 +69,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="6907" name="Monocle Piece">
+	<!-- Main ingredient essentially required to make a Monocle. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bark_blue_i00"/>
@@ -72,6 +79,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="6908" name="Fish Oil">
+	<!-- Used as an ingredient for general workshop or can be exchanged for a Mark of Fishing by a Fishing Guild Member. Can also be sold at ordinary shops. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_fish_oil_i00"/>
@@ -81,6 +89,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="6909" name="Greater Fish Oil">
+	<!-- Used as an ingredient for general workshop or can be exchanged for a Mark of Fishing by a Fishing Guild Member. Can also be sold at ordinary shops. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_fish_oil_i01"/>
@@ -90,6 +99,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="6910" name="Premium Fish Oil">
+	<!-- Used as an ingredient for general workshop or can be exchanged for a Mark of Fishing by a Fishing Guild Member. Can also be sold at ordinary shops. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_fish_oil_i02"/>
@@ -99,6 +109,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="6911" name="Fish Scale">
+	<!-- Used as an ingredient for general workshop or can be exchanged for a Mark of Fishing by a Fishing Guild Member. Can also be sold at ordinary shops. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_fish_scale_i00"/>
@@ -108,6 +119,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="6912" name="Shiny Fish Scale">
+	<!-- Used as an ingredient for general workshop or can be exchanged for a Mark of Fishing by a Fishing Guild Member. Can also be sold at ordinary shops. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_fish_scale_i01"/>
@@ -117,6 +129,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="6913" name="Fish Gem">
+	<!-- Used as an ingredient for general workshop or can be exchanged for a Mark of Fishing by a Fishing Guild Member. Can also be sold at ordinary shops. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_fish_gem_i00"/>
@@ -126,6 +139,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="6914" name="Shiny Fish Gem">
+	<!-- Used as an ingredient for general workshop or can be exchanged for a Mark of Fishing by a Fishing Guild Member. Can also be sold at ordinary shops. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_fish_gem_i01"/>
@@ -135,6 +149,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="6915" name="Thin Fish Bone">
+	<!-- Used as an ingredient for general workshop or can be exchanged for a Mark of Fishing by a Fishing Guild Member. Can also be sold at ordinary shops. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_fang_gray_i00"/>
@@ -144,6 +159,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="6916" name="Thick Fish Bone">
+	<!-- Used as an ingredient for general workshop or can be exchanged for a Mark of Fishing by a Fishing Guild Member. Can also be sold at ordinary shops. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_fang_ivory_i00"/>
@@ -152,7 +168,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6920" name="Recipe: Greater Fish Oil (100%)">
+	<etcitem id="6920" name="Recipe: Greater Fish Oil">
+	<!-- This recipe for mid-grade Fish Oil can be used by all races. Requires Create Common Item Skill Level 2. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -163,6 +180,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="6921" name="Recipe: Premium Fish Oil(100%)">
+	<!-- This recipe for high-grade Fish Oil can be used by all races. Requires Create Common Item Skill Level 3. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -172,7 +190,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6922" name="Recipe: Party Mask (100%)">
+	<etcitem id="6922" name="Recipe: Party Mask">
+	<!-- This recipe for a Party Mask can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -182,7 +201,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6923" name="Recipe: Lady's Hair Pin (100%)">
+	<etcitem id="6923" name="Recipe: Lady's Hair Pin">
+	<!-- This recipe for a Lady's Hair Pin can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -192,7 +212,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6924" name="Recipe: Pirate's Eye Patch (100%)">
+	<etcitem id="6924" name="Recipe: Pirate's Eyepatch">
+	<!-- This recipe for a Pirate's Eyepatch may be used by all races. Requires Create Common Item - Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -202,7 +223,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6925" name="Recipe: Monocle (100%)">
+	<etcitem id="6925" name="Recipe: Monocle">
+	<!-- This recipe for a Monocle can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -212,7 +234,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6926" name="Recipe: Lesser Healing Potion (100%)">
+	<etcitem id="6926" name="Recipe: Healing Potion">
+	<!-- This recipe for a Healing Potion can be used by all races. Requires Create Common Item Skill Level 1. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -222,7 +245,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6927" name="Recipe: Healing Potion (100%)">
+	<etcitem id="6927" name="Recipe: Major Healing Potion">
+	<!-- This recipe for a Major Healing Potion can be used by all races. Requires Create Common Item Skill Level 2. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -232,7 +256,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6928" name="Recipe: Greater Healing Potion (100%)">
+	<etcitem id="6928" name="Recipe: Major Healing Potion">
+	<!-- This recipe for a Superior Healing Potion can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -242,7 +267,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6929" name="Recipe: Antidote (100%)">
+	<etcitem id="6929" name="Recipe: Antidote">
+	<!-- This recipe for a standard Antidote can be used by all races. Requires Create Common Item Skill Level 1. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -252,7 +278,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6930" name="Recipe: Greater Antidote (100%)">
+	<etcitem id="6930" name="Recipe: Greater Antidote">
+	<!-- This recipe for a Greater Antidote can be used by all races. Requires Create Common Item Skill Level 2. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -262,7 +289,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6931" name="Recipe: Bandage (100%)">
+	<etcitem id="6931" name="Recipe: Bandage">
+	<!-- This recipe for a Bandage can be used by all races. Requires Create Common Item Skill Level 1. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -272,7 +300,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6932" name="Recipe: Emergency Dressing (100%)">
+	<etcitem id="6932" name="Recipe: Emergency Dressing">
+	<!-- This recipe for an Emergency Dressing can be used by all races. Requires Create Common Item Skill Level 2. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -282,7 +311,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6933" name="Recipe: Haste Potion (100%)">
+	<etcitem id="6933" name="Recipe: Wind Walk Potion">
+	<!-- This recipe for a Haste Potion can be used by all races. Requires Create Common Item Skill Level 1. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -292,7 +322,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6934" name="Recipe: Potion of Alacrity (100%)">
+	<etcitem id="6934" name="Recipe: Haste Potion">
+	<!-- This recipe for a potion allowing swifter attacks can be used by all races. Requires Create Common Item Skill Level 1. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -302,7 +333,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6935" name="Recipe: Greater Haste Potion (100%)">
+	<etcitem id="6935" name="Recipe: Greater Wind Walk Potion">
+	<!-- This recipe for a Greater Haste Potion can be used by all races Requires Create Common Item Skill Level 3. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -312,7 +344,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6936" name="Recipe: Greater Swift Attack Potion (100%)">
+	<etcitem id="6936" name="Recipe: Greater Haste Potion">
+	<!-- This recipe for a potion allowing for greater swift attacks can be used by all races. Requires Create Common Item Skill Level 3. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -322,7 +355,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6937" name="Recipe: Magic Haste Potion (100%)">
+	<etcitem id="6937" name="Recipe: Magic Haste Potion">
+	<!-- This recipe for a Magic Haste Potion can be used by all races. Requires Create Common Item Skill Level 1. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -332,7 +366,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6938" name="Recipe: Greater Magic Haste Potion (100%)">
+	<etcitem id="6938" name="Recipe: Greater Magic Haste Potion">
+	<!-- This recipe for a Greater Magic Haste Potion can be used by all races. Requires Create Common Item Skill Level 3. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -342,7 +377,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6939" name="Recipe: Mystery Potion (100%)">
+	<etcitem id="6939" name="Recipe: Mysterious Potion">
+	<!-- This recipe for a mysterious potion can be used by all races. Requires Create Common Item Skill Level 2. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -352,7 +388,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6940" name="Recipe: Facelifting Potion - A (100%)">
+	<etcitem id="6940" name="Recipe: Facelifting Potion - A">
+	<!-- This recipe for a facelifting potion can be used by all races. Requires Create Common Item Skill Level 3. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -362,7 +399,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6941" name="Recipe: Facelifting Potion - B (100%)">
+	<etcitem id="6941" name="Recipe: Facelifting Potion - B">
+	<!-- This recipe for a facelifting potion can be used by all races. Requires Create Common Item Skill Level 3. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -372,7 +410,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6942" name="Recipe: Facelifting Potion - C (100%)">
+	<etcitem id="6942" name="Recipe: Facelifting Potion - C">
+	<!-- This recipe for a facelifting potion can be used by all races. Requires Create Common Item Skill Level 3. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -382,7 +421,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6943" name="Recipe: Dye Potion - A (100%)">
+	<etcitem id="6943" name="Recipe: Dye Potion - A">
+	<!-- This recipe for a dye potion can be used by all races. Requires Create Common Item Skill Level 3. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -392,7 +432,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6944" name="Recipe: Dye Potion - B (100%)">
+	<etcitem id="6944" name="Recipe: Dye Potion - B">
+	<!-- This recipe for a dye potion can be used by all races. Requires Create Common Item Skill Level 3. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -402,7 +443,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6945" name="Recipe: Dye Potion - C (100%)">
+	<etcitem id="6945" name="Recipe: Dye Potion - C">
+	<!-- This recipe for a dye potion can be used by all races. Requires Create Common Item Skill Level 3. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -412,7 +454,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6946" name="Recipe: Dye Potion - D (100%)">
+	<etcitem id="6946" name="Recipe: Dye Potion - D">
+	<!-- This recipe for a dye potion can be used by all races. Requires Create Common Item Skill Level 3. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -422,7 +465,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6947" name="Recipe: Hair Style Change Potion - A (100%)">
+	<etcitem id="6947" name="Recipe: Hair Style Change Potion - A">
+	<!-- This recipe for a potion that changes a character's hair style can be used by all races. Requires Create Common Item Skill Level 3. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -432,7 +476,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6948" name="Recipe: Hair Style Change Potion - B (100%)">
+	<etcitem id="6948" name="Recipe: Hair Style Change Potion - B">
+	<!-- This recipe for a potion that changes a character's hair style can be used by all races. Requires Create Common Item Skill Level 3. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -442,7 +487,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6949" name="Recipe: Hair Style Change Potion - C (100%)">
+	<etcitem id="6949" name="Recipe: Hair Style Change Potion - C">
+	<!-- This recipe for a potion that changes a character's hair style can be used by all races. Requires Create Common Item Skill Level 3. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -452,7 +498,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6950" name="Recipe: Hair Style Change Potion - D (100%)">
+	<etcitem id="6950" name="Recipe: Hair Style Change Potion - D">
+	<!-- This recipe for a potion that changes a character's hair style can be used by all races. Requires Create Common Item Skill Level 3. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -462,7 +509,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6951" name="Recipe: Hair Style Change Potion - E (100%)">
+	<etcitem id="6951" name="Recipe: Hair Style Change Potion - E">
+	<!-- This recipe for a potion that changes a character's hair style can be used by all races. Requires Create Common Item Skill Level 3. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -472,7 +520,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6952" name="Recipe: Hair Style Change Potion - F (100%)">
+	<etcitem id="6952" name="Recipe: Hair Style Change Potion - F">
+	<!-- This recipe for a potion that changes a character's hair style can be used by all races. Requires Create Common Item Skill Level 3. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -482,7 +531,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6953" name="Recipe: Hair Style Change Potion - G (100%)">
+	<etcitem id="6953" name="Recipe: Hair Style Change Potion - G">
+	<!-- This recipe for a potion that changes a character's hair style can be used by all races. Requires Create Common Item Skill Level 3. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -492,7 +542,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6954" name="Recipe: Dye of STR &lt;Str+1 Con-1&gt; (100%)">
+	<etcitem id="6954" name="Recipe: Dye of STR &amp;lt;Str+ 1 Con-1&amp;gt;">
+	<!-- This recipe for Dye of STR <Str+ 1 Con-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -502,7 +553,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6955" name="Recipe: Dye of STR &lt;Str+1 Dex-1&gt; (100%)">
+	<etcitem id="6955" name="Recipe: Dye of STR &amp;lt;Str+ 1 Dex-1&amp;gt;">
+	<!-- This recipe for Dye of STR <Str+ 1 Dex-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -512,7 +564,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6956" name="Recipe: Dye of CON &lt;Con+1 Str-1&gt; (100%)">
+	<etcitem id="6956" name="Recipe: Dye of CON &amp;lt;Con+ 1 Str-1&amp;gt;">
+	<!-- This recipe for Dye of CON <Con+ 1 Str-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -522,7 +575,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6957" name="Recipe: Dye of CON &lt;Con+1 Dex-1&gt; (100%)">
+	<etcitem id="6957" name="Recipe: Dye of CON &amp;lt;Con+ 1 Dex-1&amp;gt;">
+	<!-- This recipe for Dye of CON <Con+ 1 Dex-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -532,7 +586,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6958" name="Recipe: Dye of DEX &lt;Dex+1 Str-1&gt; (100%)">
+	<etcitem id="6958" name="Recipe: Dye of DEX &amp;lt;Dex+ 1 Str-1&amp;gt;">
+	<!-- This recipe for Dye of DEX <Dex+ 1 Str-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -542,7 +597,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6959" name="Recipe: Dye of DEX &lt;Dex+1 Con-1&gt; (100%)">
+	<etcitem id="6959" name="Recipe: Dye of DEX &amp;lt;Dex+ 1 Con-1&amp;gt;">
+	<!-- This recipe for Dye of DEX <Dex+ 1 Con-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -552,7 +608,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6960" name="Recipe: Dye of INT &lt;Int+1 Men-1&gt; (100%)">
+	<etcitem id="6960" name="Recipe: Dye of INT &amp;lt;Int+ 1 Men-1&amp;gt;">
+	<!-- This recipe for Dye of INT <Int+ 1 Men-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -562,7 +619,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6961" name="Recipe: Dye of INT &lt;Int+1 Wit-1&gt; (100%)">
+	<etcitem id="6961" name="Recipe: Dye of INT &amp;lt;Int+ 1 Wit-1&amp;gt;">
+	<!-- This recipe for Dye of INT <Int+ 1 Wit-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -572,7 +630,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6962" name="Recipe: Dye of MEN &lt;Men+1 Int-1&gt; (100%)">
+	<etcitem id="6962" name="Recipe: Dye of MEN &amp;lt;Men+ 1 Int-1&amp;gt;">
+	<!-- This recipe for Dye of MEN <Men+ 1 Int-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -582,7 +641,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6963" name="Recipe: Dye of MEN &lt;Men+1 Wit-1&gt; (100%)">
+	<etcitem id="6963" name="Recipe: Dye of MEN &amp;lt;Men+ 1 Wit-1&amp;gt;">
+	<!-- This recipe for Dye of MEN <Men+ 1 Wit-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -592,7 +652,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6964" name="Recipe: Dye of WIT&lt;Wit+1 Int-1&gt; (100%)">
+	<etcitem id="6964" name="Recipe: Dye of WIT &amp;lt;Wit+ 1 Int-1&amp;gt;">
+	<!-- This recipe for Dye of WIT <Wit+ 1 Int-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -602,7 +663,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6965" name="Recipe: Dye of WIT&lt;Wit+1 Men-1&gt; (100%)">
+	<etcitem id="6965" name="Recipe: Dye of WIT &amp;lt;Wit+ 1 Men-1&amp;gt;">
+	<!-- This recipe for Dye of WIT <Wit+ 1 Men-1>. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -612,7 +674,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6966" name="Recipe: Greater Dye of STR &lt;Str+1 Con-1&gt; (100%)">
+	<etcitem id="6966" name="Recipe: Greater Dye of STR &amp;lt;Str+ 1 Con-1&amp;gt;">
+	<!-- This recipe for Greater Dye of STR <Str+ 1 Con-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -622,7 +685,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6967" name="Recipe: Greater Dye of STR &lt;Str+1 Dex-1&gt; (100%)">
+	<etcitem id="6967" name="Recipe: Greater Dye of STR &amp;lt;Str+ 1 Dex-1&amp;gt;">
+	<!-- This recipe for Greater Dye of STR <Str+ 1 Dex-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -632,7 +696,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6968" name="Recipe: Greater Dye of CON &lt;Con+1 Str-1&gt; (100%)">
+	<etcitem id="6968" name="Recipe: Greater Dye of CON &amp;lt;Con+ 1 Str-1&amp;gt;">
+	<!-- This recipe for Greater Dye of CON <Con+ 1 Str-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -642,7 +707,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6969" name="Recipe: Greater Dye of CON &lt;Con+1 Dex-1&gt; (100%)">
+	<etcitem id="6969" name="Recipe: Greater Dye of CON &amp;lt;Con+ 1 Dex-1&amp;gt;">
+	<!-- This recipe for Greater Dye of CON <Con+ 1 Dex-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -652,7 +718,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6970" name="Recipe: Greater Dye of DEX &lt;Dex+1 Str-1&gt; (100%)">
+	<etcitem id="6970" name="Recipe: Greater Dye of DEX &amp;lt;Dex+ 1 Str-1&amp;gt;">
+	<!-- This recipe for Greater Dye of DEX <Dex+ 1 Str-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -662,7 +729,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6971" name="Recipe: Greater Dye of DEX &lt;Dex+1 Con-1&gt; (100%)">
+	<etcitem id="6971" name="Recipe: Greater Dye of DEX &amp;lt;Dex+ 1 Con-1&amp;gt;">
+	<!-- This recipe for Greater Dye of DEX <Dex+ 1 Con-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -672,7 +740,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6972" name="Recipe: Greater Dye of INT &lt;Int+1 Men-1&gt; (100%)">
+	<etcitem id="6972" name="Recipe: Greater Dye of INT &amp;lt;Int+ 1 Men-1&amp;gt;">
+	<!-- This recipe for Greater Dye of INT <Int+ 1 Men-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -682,7 +751,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6973" name="Recipe: Greater Dye of INT &lt;Int+1 Wit-1&gt; (100%)">
+	<etcitem id="6973" name="Recipe: Greater Dye of INT &amp;lt;Int+ 1 Wit-1&amp;gt;">
+	<!-- This recipe for Greater Dye of INT <Int+ 1 Wit-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -692,7 +762,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6974" name="Recipe: Greater Dye of MEN &lt;Men+1 Int-1&gt; (100%)">
+	<etcitem id="6974" name="Recipe: Greater Dye of MEN &amp;lt;Men+ 1 Int-1&amp;gt;">
+	<!-- This recipe for Greater Dye of MEN <Men+ 1 Int-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -702,7 +773,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6975" name="Recipe: Greater Dye of MEN &lt;Men+1 Wit-1&gt; (100%)">
+	<etcitem id="6975" name="Recipe: Greater Dye of MEN &amp;lt;Men+ 1 Wit-1&amp;gt;">
+	<!-- This recipe for Greater Dye of MEN <Men+ 1 Wit-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -712,7 +784,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6976" name="Recipe: Greater Dye of WIT&lt;Wit+1 Int-1&gt; (100%)">
+	<etcitem id="6976" name="Recipe: Greater Dye of WIT &amp;lt;Wit+ 1 Int-1&amp;gt;">
+	<!-- This recipe for Greater Dye of WIT <Wit+ 1 Int-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -722,7 +795,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6977" name="Recipe: Greater Dye of WIT&lt;Wit+1 Men-1&gt; (100%)">
+	<etcitem id="6977" name="Recipe: Greater Dye of WIT &amp;lt;Wit+ 1 Men-1&amp;gt;">
+	<!-- This recipe for Greater Dye of WIT <Wit+ 1 Men-1> can be used by all races. Requires Create Common Item Skill Level 4. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -732,7 +806,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6978" name="Recipe: Greater Dye of STR &lt;Str+2 Con-2&gt; (100%)">
+	<etcitem id="6978" name="Recipe: Greater Dye of STR &amp;lt;Str+ 2 Con-2&amp;gt;">
+	<!-- This recipe for Greater Dye of STR <Str+ 2 Con-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -742,7 +817,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6979" name="Recipe: Greater Dye of STR &lt;Str+2 Dex-2&gt; (100%)">
+	<etcitem id="6979" name="Recipe: Greater Dye of STR &amp;lt;Str+ 2 Dex-2&amp;gt;">
+	<!-- This recipe for Greater Dye of STR <Str+ 2 Dex-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -752,7 +828,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6980" name="Recipe: Greater Dye of CON &lt;Con+2 Str-2&gt; (100%)">
+	<etcitem id="6980" name="Recipe: Greater Dye of CON &amp;lt;Con+ 2 Str-2&amp;gt;">
+	<!-- This recipe for Greater Dye of CON <Con+ 2 Str-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -762,7 +839,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6981" name="Recipe: Greater Dye of CON &lt;Con+2 Dex-2&gt; (100%)">
+	<etcitem id="6981" name="Recipe: Greater Dye of CON &amp;lt;Con+ 2 Dex-2&amp;gt;">
+	<!-- This recipe for Greater Dye of CON <Con+ 2 Dex-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -772,7 +850,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6982" name="Recipe: Greater Dye of DEX &lt;Dex+2 Str-2&gt; (100%)">
+	<etcitem id="6982" name="Recipe: Greater Dye of DEX &amp;lt;Dex+ 2 Str-2&amp;gt;">
+	<!-- This recipe for Greater Dye of DEX <Dex+ 2 Str-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -782,7 +861,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6983" name="Recipe: Greater Dye of DEX &lt;Dex+2 Con-2&gt; (100%)">
+	<etcitem id="6983" name="Recipe: Greater Dye of DEX &amp;lt;Dex+ 2 Con-2&amp;gt;">
+	<!-- This recipe for Greater Dye of DEX <Dex+ 2 Con-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -792,7 +872,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6984" name="Recipe: Greater Dye of INT &lt;Int+2 Men-2&gt; (100%)">
+	<etcitem id="6984" name="Recipe: Greater Dye of INT &amp;lt;Int+ 2 Men-2&amp;gt;">
+	<!-- This recipe for Greater Dye of INT <Int+ 2 Men-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -802,7 +883,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6985" name="Recipe: Greater Dye of INT &lt;Int+2 Wit-2&gt; (100%)">
+	<etcitem id="6985" name="Recipe: Greater Dye of INT &amp;lt;Int+ 2 Wit-2&amp;gt;">
+	<!-- This recipe for Greater Dye of INT <Int+ 2 Wit-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -812,7 +894,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6986" name="Recipe: Greater Dye of MEN &lt;Men+2 Int-2&gt; (100%)">
+	<etcitem id="6986" name="Recipe: Greater Dye of MEN &amp;lt;Men+ 2 Int-2&amp;gt;">
+	<!-- This recipe for Greater Dye of MEN <Men+ 2 Int-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -822,7 +905,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6987" name="Recipe: Greater Dye of MEN &lt;Men+2 Wit-2&gt; (100%)">
+	<etcitem id="6987" name="Recipe: Greater Dye of MEN &amp;lt;Men+ 2 Wit-2&amp;gt;">
+	<!-- This recipe for Greater Dye of MEN <Men+ 2 Wit-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -832,7 +916,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6988" name="Recipe: Greater Dye of WIT&lt;Wit+2 Int-2&gt; (100%)">
+	<etcitem id="6988" name="Recipe: Greater Dye of WIT &amp;lt;Wit+ 2 Int-2&amp;gt;">
+	<!-- This recipe for Greater Dye of WIT <Wit+ 2 Int-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -842,7 +927,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6989" name="Recipe: Greater Dye of WIT&lt;Wit+2 Men-2&gt; (100%)">
+	<etcitem id="6989" name="Recipe: Greater Dye of WIT &amp;lt;Wit+ 2 Men-2&amp;gt;">
+	<!-- This recipe for Greater Dye of WIT <Wit+ 2 Men-2> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -852,7 +938,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6990" name="Recipe: Greater Dye of STR &lt;Str+3 Con-3&gt; (100%)">
+	<etcitem id="6990" name="Recipe: Greater Dye of STR &amp;lt;Str+ 3 Con-3&amp;gt;">
+	<!-- This recipe for Greater Dye of STR <Str+ 3 Con-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -862,7 +949,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6991" name="Recipe: Greater Dye of STR &lt;Str+3 Dex-3&gt; (100%)">
+	<etcitem id="6991" name="Recipe: Greater Dye of STR &amp;lt;Str+ 3 Dex-3&amp;gt;">
+	<!-- This recipe for Greater Dye of STR <Str+ 3 Dex-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -872,7 +960,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6992" name="Recipe: Greater Dye of CON &lt;Con+3 Str-3&gt; (100%)">
+	<etcitem id="6992" name="Recipe: Greater Dye of CON &amp;lt;Con+ 3 Str-3&amp;gt;">
+	<!-- This recipe for Greater Dye of CON <Con+ 3 Str-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -882,7 +971,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6993" name="Recipe: Greater Dye of CON &lt;Con+3 Dex-3&gt; (100%)">
+	<etcitem id="6993" name="Recipe: Greater Dye of CON &amp;lt;Con+ 3 Dex-3&amp;gt;">
+	<!-- This recipe for Greater Dye of CON <Con+ 3 Dex-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -892,7 +982,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6994" name="Recipe: Greater Dye of DEX &lt;Dex+3 Str-3&gt; (100%)">
+	<etcitem id="6994" name="Recipe: Greater Dye of DEX &amp;lt;Dex+ 3 Str-3&amp;gt;">
+	<!-- This recipe for Greater Dye of DEX <Dex+ 3 Str-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -902,7 +993,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6995" name="Recipe: Greater Dye of DEX &lt;Dex+3 Con-3&gt; (100%)">
+	<etcitem id="6995" name="Recipe: Greater Dye of DEX &amp;lt;Dex+ 3 Con-3&amp;gt;">
+	<!-- This recipe for Greater Dye of DEX <Dex+ 3 Con-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -912,7 +1004,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6996" name="Recipe: Greater Dye of INT &lt;Int+3 Men-3&gt; (100%)">
+	<etcitem id="6996" name="Recipe: Greater Dye of INT &amp;lt;Int+ 3 Men-3&amp;gt;">
+	<!-- This recipe for Greater Dye of INT <Int+ 3 Men-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -922,7 +1015,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6997" name="Recipe: Greater Dye of INT &lt;Int+3 Wit-3&gt; (100%)">
+	<etcitem id="6997" name="Recipe: Greater Dye of INT &amp;lt;Int+ 3 Wit-3&amp;gt;">
+	<!-- This recipe for Greater Dye of INT <Int+ 3 Wit-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -932,7 +1026,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6998" name="Recipe: Greater Dye of MEN &lt;Men+3 Int-3&gt; (100%)">
+	<etcitem id="6998" name="Recipe: Greater Dye of MEN &amp;lt;Men+ 3 Int-3&amp;gt;">
+	<!-- This recipe for Greater Dye of MEN <Men+ 3 Int-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -942,7 +1037,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6999" name="Recipe: Greater Dye of MEN &lt;Men+3 Wit-3&gt; (100%)">
+	<etcitem id="6999" name="Recipe: Greater Dye of MEN &amp;lt;Men+ 3 Wit-3&amp;gt;">
+	<!-- This recipe for Greater Dye of MEN <Men+ 3 Wit-3> can be used by all races. Requires Create Common Item Skill Level 5. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>

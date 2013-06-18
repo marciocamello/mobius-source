@@ -988,10 +988,6 @@
 		<set name="type" value="NONE"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystal_count" value="8"/>
-		<for>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="30763" name="Bound Imperial Staff">

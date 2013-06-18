@@ -28,7 +28,7 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 	private final int _hasCastle, _hasClanHall, _hasFortress, _atClanWar;
 	private final String _unitName, _leaderName;
 	private String _allianceName;
-	private final int _pledgeType, _territorySide;
+	private final int _pledgeType;
 	private final List<PledgePacketMember> _members;
 	
 	public PledgeShowMemberListAll(Clan clan, final SubUnit sub)
@@ -45,7 +45,6 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 		_rank = clan.getRank();
 		_reputation = clan.getReputationScore();
 		_atClanWar = clan.isAtWarOrUnderAttack();
-		_territorySide = clan.getWarDominion();
 		
 		Alliance ally = clan.getAlliance();
 		
@@ -88,7 +87,7 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 		writeS(_allianceName);
 		writeD(_allianceCrestId);
 		writeD(_atClanWar);
-		writeD(_territorySide);// territory Id
+		writeD(0x00);
 		
 		writeD(_members.size());
 		for (PledgePacketMember m : _members)
@@ -105,13 +104,13 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 	
 	private class PledgePacketMember
 	{
-		final String _name;
-		final int _level;
-		final int _classId;
-		final int _sex;
-		final int _race;
-		final int _online;
-		final boolean _hasSponsor;
+		String _name;
+		int _level;
+		int _classId;
+		int _sex;
+		int _race;
+		int _online;
+		boolean _hasSponsor;
 		
 		public PledgePacketMember(UnitMember m)
 		{

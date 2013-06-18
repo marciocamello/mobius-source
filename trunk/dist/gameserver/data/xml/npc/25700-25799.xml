@@ -6152,7 +6152,6 @@
 			</group>
 		</rewardlist>
 	</npc>
-	<!--ru name: Афрос-->
 	<npc id="25775" name="Apherus" title="">
 		<!--Base character specific-->
 		<set name="baseSTR" value="60"/>
@@ -6187,7 +6186,7 @@
 		<set name="collision_height" value="93.0"/>
 		<!--Npc specific-->
 		<set name="type" value="RaidBoss"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="ai_type" value="gardenofgenesis.Apherus"/>
 		<set name="level" value="94"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="198916032"/>
@@ -6196,23 +6195,32 @@
 		<set name="aggroRange" value="0"/>
 		<set name="shots" value="NONE"/>
 		<attributes>
-			<attack attribute="unholy" value="20"/>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="unholy" value="53"/>
+			<defence attribute="fire" value="187"/>
+			<defence attribute="water" value="240"/>
+			<defence attribute="wind" value="240"/>
+			<defence attribute="earth" value="240"/>
+			<defence attribute="holy" value="240"/>
+			<defence attribute="unholy" value="240"/>
 		</attributes>
 		<skills>
 			<skill id="4494" level="1"/>
 			<skill id="5465" level="1"/>
 			<!--Undead-->
 			<skill id="4416" level="5"/>
-		<skill id="14723" level="1"/>
+			<skill id="14723" level="1"/>
 		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="18165" min="1" max="1" chance="30.34"/>
+				<reward item_id="18160" min="1" max="1" chance="20.52"/>
+				<reward item_id="18143" min="1" max="1" chance="2.600"/>
+				<reward item_id="18147" min="1" max="1" chance="1.775"/>
+			</group>
+			<group chance="100.0">
+				<reward item_id="17526" min="1" max="1" chance="8.133"/>
+			</group>
+		</rewardlist>
 	</npc>
-	<!--ru title: Сад Афроса-->
-	<!--ru name: Гвардеец-->
 	<npc id="25776" name="Royal Guard" title="Apherus Garden">
 		<!--Base character specific-->
 		<set name="baseSTR" value="60"/>
@@ -6246,7 +6254,7 @@
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="25.5"/>
 		<!--Npc specific-->
-		<set name="type" value="RaidBoss"/>
+		<set name="type" value="Monster"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="92"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -6256,55 +6264,19 @@
 		<set name="aggroRange" value="0"/>
 		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="167"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="220"/>
+			<defence attribute="holy" value="220"/>
+			<defence attribute="unholy" value="220"/>
 		</attributes>
 		<skills>
 			<skill id="5465" level="1"/>
 			<!--Animals-->
 			<skill id="4416" level="5"/>
 		</skills>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="63.0811">
-				<!--Robe of Seal-->
-				<reward item_id="440" min="1" max="1" chance="26.2497"/>
-				<!--Robe of Seal Fabric-->
-				<reward item_id="1970" min="12" max="36" chance="73.7503"/>
-			</group>
-			<group chance="28.8116">
-				<!--Horn of Glory-->
-				<reward item_id="325" min="1" max="1" chance="23.5602"/>
-				<!--Horn of Glory Fragment-->
-				<reward item_id="2088" min="12" max="36" chance="76.4398"/>
-			</group>
-			<group chance="0.5259">
-				<!--Scroll: Enchant Weapon of Destruction (C-Grade) : Event-->
-				<reward item_id="22227" min="1" max="2" chance="100.0"/>
-			</group>
-			<group chance="89.0">
-				<!--Earth Egg-->
-				<reward item_id="9816" min="1" max="2" chance="100.0"/>
-			</group>
-			<group chance="70.0">
-				<!--Destruction Tombstone-->
-				<reward item_id="8176" min="1" max="1" chance="100.0"/>
-			</group>
-		</rewardlist>
-		<minions>
-			<!--Apherus Garden-->
-			<!--Chasseur-->
-			<minion npc_id="25777" count="1"/>
-			<!--Apherus Garden-->
-			<!--Sentry-->
-			<minion npc_id="25778" count="3"/>
-		</minions>
 	</npc>
-	<!--ru title: Сад Афроса-->
-	<!--ru name: Следопыт-->
 	<npc id="25777" name="Chasseur" title="Apherus Garden">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
@@ -6338,7 +6310,7 @@
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="25.5"/>
 		<!--Npc specific-->
-		<set name="type" value="Minion"/>
+		<set name="type" value="Monster"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="92"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -6348,12 +6320,12 @@
 		<set name="aggroRange" value="0"/>
 		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="167"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="220"/>
+			<defence attribute="holy" value="220"/>
+			<defence attribute="unholy" value="220"/>
 		</attributes>
 		<skills>
 			<skill id="5465" level="1"/>
@@ -6361,8 +6333,6 @@
 			<skill id="4416" level="5"/>
 		</skills>
 	</npc>
-	<!--ru title: Сад Афроса-->
-	<!--ru name: Охранник-->
 	<npc id="25778" name="Escort" title="Apherus Garden">
 		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
@@ -6396,7 +6366,7 @@
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="25.5"/>
 		<!--Npc specific-->
-		<set name="type" value="Minion"/>
+		<set name="type" value="Monster"/>
 		<set name="ai_type" value="Ranger"/>
 		<set name="level" value="92"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -6406,12 +6376,12 @@
 		<set name="aggroRange" value="0"/>
 		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="167"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="220"/>
+			<defence attribute="holy" value="220"/>
+			<defence attribute="unholy" value="220"/>
 		</attributes>
 		<skills>
 			<skill id="5465" level="1"/>

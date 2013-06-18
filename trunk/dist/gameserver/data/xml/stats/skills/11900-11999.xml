@@ -9,7 +9,7 @@
 	<skill id="11998" levels="1" name="Healer - Individual">
     <!-- Atk. Spd. + 30% for 5 seconds. -->
 		<set name="magicLvl" val="85"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="hitTime" val="500"/>
 		<set name="reuseDelay" val="5000"/>
         <set name="magicType" val="MAGIC"/>
@@ -31,7 +31,7 @@
 		<set name="magicLevel" val="85"/>
 		<set name="coolTime" val="300"/>
 		<set name="skillType" val="MDAM"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="overHit" val="true"/>&gt;
 		<set name="operateType" val="OP_ACTIVE"/>

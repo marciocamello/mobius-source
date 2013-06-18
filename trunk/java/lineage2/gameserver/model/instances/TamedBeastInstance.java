@@ -141,15 +141,9 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 		return false;
 	}
 	
-	/**
-	 * Method onAction.
-	 * @param player Player
-	 * @param dontMove boolean
-	 */
 	@Override
-	public void onAction(final Player player, final boolean dontMove)
+	public void onActionTargeted(final Player player, boolean forced)
 	{
-		player.setObjectTarget(this);
 	}
 	
 	/**

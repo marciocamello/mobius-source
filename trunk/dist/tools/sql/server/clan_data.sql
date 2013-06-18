@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `clan_data` (
 	`hasHideout` TINYINT UNSIGNED NOT NULL DEFAULT '0',
 	`ally_id` INT NOT NULL DEFAULT '0',
 	`crest` VARBINARY(256) NULL DEFAULT NULL,
-	`largecrest` VARBINARY(8192) NULL DEFAULT NULL,
+	`largecrest` mediumblob,
 	`reputation_score` INT NOT NULL DEFAULT '0',
 	`warehouse` INT NOT NULL DEFAULT '0',
 	`expelled_member` INT UNSIGNED NOT NULL DEFAULT '0',

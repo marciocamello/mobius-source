@@ -21,6 +21,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.model.instances.DecoyInstance;
 import lineage2.gameserver.model.items.Inventory;
+import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.model.matching.MatchingRoom;
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
@@ -30,10 +31,6 @@ import lineage2.gameserver.utils.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/*
- * 410 protocol:
- * dddddSddddddddddddddddddddddddhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhddddddddddddddddddffffdddSddddccccccch
- */
 public class CharInfo extends L2GameServerPacket
 {
 	private static final Logger _log = LoggerFactory.getLogger(CharInfo.class);
@@ -56,6 +53,7 @@ public class CharInfo extends L2GameServerPacket
 	private TeamType _team;
 	private int curHP, maxHP, curMP, maxMP, curCP;
 	private FastList<Integer> _aveList;
+	private PcInventory inv;
 	
 	public CharInfo(Player cha)
 	{
@@ -175,6 +173,7 @@ public class CharInfo extends L2GameServerPacket
 		
 		_mAtkSpd = player.getMAtkSpd();
 		_pAtkSpd = player.getPAtkSpd();
+		
 		speed_move = player.getMovementSpeedMultiplier();
 		_runSpd = (int) (player.getRunSpeed() / speed_move);
 		_walkSpd = (int) (player.getWalkSpeed() / speed_move);
@@ -244,12 +243,15 @@ public class CharInfo extends L2GameServerPacket
 		maxHP = player.getMaxHp();
 		curMP = (int) player.getCurrentMp();
 		maxMP = player.getMaxMp();
+		_aveList = player.getAveList();
+		inv = player.getInventory();
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
@@ -293,15 +295,15 @@ public class CharInfo extends L2GameServerPacket
 		writeD(pvp_flag);
 		writeD(karma);
 		
+		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_RHAND)); // Tauti
+		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_LHAND)); // Tauti
 		writeD(0); // Tauti
-		writeD(0); // Tauti
-		writeD(0); // Tauti
-		writeD(0); // Tauti
-		writeD(0); // Tauti
-		writeD(0); // Tauti
-		writeD(0); // Tauti
-		writeD(0); // Tauti
-		writeD(0); // Tauti
+		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_GLOVES)); // Tauti
+		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_CHEST)); // Tauti
+		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_LEGS)); // Tauti
+		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_FEET)); // Tauti
+		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_HAIR)); // Tauti
+		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_DHAIR)); // Tauti
 		
 		writeD(_mAtkSpd);
 		writeD(_pAtkSpd);
@@ -335,8 +337,7 @@ public class CharInfo extends L2GameServerPacket
 		writeC(_combat);
 		writeC(_dead);
 		writeC(0x00); // is invisible
-		writeC(mount_type); // 1-on Strider, 2-on Wyvern, 3-on Great Wolf, 0-no
-		// mount
+		writeC(mount_type); // 1-on Strider, 2-on Wyvern, 3-on Great Wolf, 0-no mount
 		writeC(private_store);
 		writeH(cubics.length);
 		for (EffectCubic cubic : cubics)
@@ -348,7 +349,7 @@ public class CharInfo extends L2GameServerPacket
 		writeH(rec_have);
 		writeD(mount_id);
 		writeD(class_id);
-		writeD(0x00);
+		writeD(0x00); // special effects? circles around player...
 		writeC(_enchant);
 		
 		writeC(_team.ordinal()); // team circle around feet 1 = Blue, 2 = red
@@ -374,17 +375,17 @@ public class CharInfo extends L2GameServerPacket
 		
 		writeD(0x01); // T2
 		
-		writeD(0x00);// Unknown1 (GOD)
-		writeD(0x00);// Unknown2 (GOD)
-		writeD(0x00);// Unknown3 (GOD)
+		writeD(0x00);
+		writeD(0x00);
+		writeD(0x00);
 		writeD(curCP);
 		writeD(curHP);
 		writeD(maxHP);
 		writeD(curMP);
 		writeD(maxMP);
 		writeD(0x00);
-		writeD(0x00);// Unknown9 (GOD)
-		writeC(0x00);// Unknown10 (GOD)
+		writeD(0x00);
+		writeC(0x00);
 		
 		if (_aveList != null)
 		{
@@ -399,8 +400,7 @@ public class CharInfo extends L2GameServerPacket
 			writeD(0x00);
 		}
 		
-		writeC(0x00); // Tauti
-		
+		writeC(0x00);
 	}
 	
 	public static final int[] PAPERDOLL_ORDER =

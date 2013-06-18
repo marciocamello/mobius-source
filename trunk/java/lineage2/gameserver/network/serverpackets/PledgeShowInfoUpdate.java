@@ -22,7 +22,6 @@ public class PledgeShowInfoUpdate extends L2GameServerPacket
 	private final int clan_id, clan_level, clan_rank, clan_rep, crest_id, ally_id;
 	private int ally_crest;
 	private final int atwar;
-	private final int _territorySide;
 	private String ally_name = StringUtils.EMPTY;
 	private final int HasCastle, HasHideout, HasFortress;
 	
@@ -38,7 +37,6 @@ public class PledgeShowInfoUpdate extends L2GameServerPacket
 		crest_id = clan.getCrestId();
 		ally_id = clan.getAllyId();
 		atwar = clan.isAtWar();
-		_territorySide = clan.getWarDominion();
 		Alliance ally = clan.getAlliance();
 		if (ally != null)
 		{
@@ -68,6 +66,6 @@ public class PledgeShowInfoUpdate extends L2GameServerPacket
 		writeD(ally_crest); // c5
 		writeD(atwar); // c5
 		writeD(0x00);
-		writeD(_territorySide);
+		writeD(0x00);
 	}
 }

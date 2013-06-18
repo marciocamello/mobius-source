@@ -199,27 +199,27 @@ public enum Stats
 	/**
 	 * Field STAT_STR.
 	 */
-	STAT_STR("STR", 1., 119.),
+	STAT_STR("STR", 1., 150.),
 	/**
 	 * Field STAT_CON.
 	 */
-	STAT_CON("CON", 1., 119.),
+	STAT_CON("CON", 1., 150.),
 	/**
 	 * Field STAT_DEX.
 	 */
-	STAT_DEX("DEX", 1., 119.),
+	STAT_DEX("DEX", 1., 150.),
 	/**
 	 * Field STAT_INT.
 	 */
-	STAT_INT("INT", 1., 119.),
+	STAT_INT("INT", 1., 150.),
 	/**
 	 * Field STAT_WIT.
 	 */
-	STAT_WIT("WIT", 1., 119.),
+	STAT_WIT("WIT", 1., 150.),
 	/**
 	 * Field STAT_MEN.
 	 */
-	STAT_MEN("MEN", 1., 119.),
+	STAT_MEN("MEN", 1., 150.),
 	/**
 	 * Field BREATH.
 	 */

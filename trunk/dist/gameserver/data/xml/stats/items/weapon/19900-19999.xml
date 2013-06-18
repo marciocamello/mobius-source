@@ -31,10 +31,6 @@
 		<set name="type" value="NONE"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="0"/>
-		<for>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="19938" name="Requiem Shaper" add_name="Guidance + Haste">

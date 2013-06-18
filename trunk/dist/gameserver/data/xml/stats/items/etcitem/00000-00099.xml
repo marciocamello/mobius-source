@@ -2,6 +2,7 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<etcitem id="17" name="Wooden Arrow">
+	<!-- Arrow made of wood. It is an arrow used for a No-grade bow. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_wooden_quiver_i00"/>
@@ -13,7 +14,9 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="53" name="(Not In Use)">
+	<etcitem id="53" name="(Not in Use)">
+	<!-- Dimensional Item Pack
+	Wrapped pack containing an Agathion - Angry Devil (30-day). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -25,7 +28,9 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="54" name="(Not In Use)">
+	<etcitem id="54" name="(Not in Use)">
+	<!-- Dimensional Item Pack
+	Wrapped pack containing an Agathion - Shiny (30-day). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -37,7 +42,9 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="55" name="Shiny Agathion 7 Day Pack (Event)">
+	<etcitem id="55" name="Agathion - Shiny Pack (7-day) (Event)">
+	<!-- Dimensional Item Pack
+	Wrapped pack containing an Agathion - Shiny (7-day). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -49,7 +56,9 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="56" name="Sobbing Agathion 7 Day Pack (Event)">
+	<etcitem id="56" name="Agathion - Sobbing Pack (7-day) (Event)">
+	<!-- Dimensional Item Pack
+	Wrapped pack containing an Agathion - Sobbing (7-day). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

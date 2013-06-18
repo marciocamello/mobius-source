@@ -47,7 +47,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	/**
 	 * Field _log.
 	 */
-	protected static final Logger _log = LoggerFactory.getLogger(Effect.class);
+	public static final Logger _log = LoggerFactory.getLogger(Effect.class);
 	/**
 	 * Field EMPTY_L2EFFECT_ARRAY.
 	 */
@@ -557,6 +557,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		{
 			getEffected().getPlayer().getPlayerAccess().UseTeleport = false;
 		}
+		getEffected().broadcastEffectsStatusToListeners();
 	}
 	
 	/**
@@ -614,6 +615,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 				}
 			}
 		}
+		getEffected().broadcastEffectsStatusToListeners();
 	}
 	
 	/**

@@ -102,11 +102,11 @@
 		<table name="#lifeTime">60 60 60 60 60</table>
 		<table name="#cubicLevel">1 2 3 4 5</table>
 		<set name="magicType" val="MAGIC"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="hitTime" val="3000"/>
 		<set name="target" val="TARGET_PARTY_ONE"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="reuseDelay" val="15000"/>
@@ -604,7 +604,7 @@
 		<set name="hitTime" val="5000"/>
 		<set name="skillType" val="SUMMON"/>
 		<set name="summonType" val="TREE"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="addSkills" val="11806;#skill"/>
@@ -632,19 +632,18 @@
 		<table name="#lifeTime">3600 3600 3600 3600</table>
 		<table name="#magicLevel">85 86 89 92</table>
 		<table name="#mpConsume2">96 106 117 127</table>
-		<table name="#npcid">14925</table>
+		<table name="#npcid">14925 14944 14945 14946</table>
 		<set name="lifeTime" val="#lifeTime"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SUMMON"/>
 		<set name="summonType" val="SERVITOR"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="npcId" val="#npcid"/>
 		<set name="relationSkillsId" val="1360;1361;1359;1358;"/>
 		<enchant1 levels="10" name="Power">
-			<!--TODO: get npc ids-->
-			<table name="#npcid">14925 14925 14925 14925 14925 14925 14925 14925 14925 14925</table> <!--Need Npc Ids-->
+			<table name="#npcid">15000 15001 15002 15003 15004 15005 15006 15007 15008 15009</table>
             <table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant1>
 	</skill>
@@ -735,7 +734,7 @@
 		<set name="saveVs" val="MEN"/>
 		<set name="skillType" val="DEBUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<for>
 			<effect name="Debuff" count="1" time="15" stackOrder="1" stackType="Sleep" val="0">
 				<mul order="0x30" stat="runSpd" val="0.5"/>
@@ -809,7 +808,7 @@
 		<set name="saveVs" val="MEN"/>
 		<set name="isDebuff" val="true"/>
 		<set name="skillType" val="DEBUFF"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect name="Debuff" time="40" val="0" stackOrder="1" stackType="reuse_delay_up">
@@ -988,7 +987,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="#power" val="20"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="relationSkillsId" val="329;328"/>
 		<enchant1 levels="10" name="Power">

@@ -73,10 +73,6 @@ public class OlympiadManagerInstance extends NpcInstance
 		{
 			return;
 		}
-		if (checkForDominionWard(player))
-		{
-			return;
-		}
 		if (!Config.ENABLE_OLYMPIAD)
 		{
 			return;
@@ -228,10 +224,6 @@ public class OlympiadManagerInstance extends NpcInstance
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
-		if (checkForDominionWard(player))
-		{
-			return;
-		}
 		String fileName = Olympiad.OLYMPIAD_HTML_PATH;
 		int npcId = getNpcId();
 		switch (npcId)

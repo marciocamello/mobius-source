@@ -10,7 +10,7 @@
 		<set name="magicLevel" val="85"/>
 		<set name="coolTime" val="300"/>
 		<set name="skillType" val="MDAM"/>
-		<set name="isMagic" val="true"/>
+		<set name="magicType" val="MAGIC"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="overHit" val="true"/>&gt;
 		<set name="operateType" val="OP_ACTIVE"/>

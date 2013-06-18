@@ -19,13 +19,13 @@
 		</cond>
 	</skill>
 	<skill id="22101" levels="1" name="Fortune of Love Box">
-    <!-- none -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 		<cond msgId="1509">
 			<not>
 				<player olympiad="true"/>
@@ -33,14 +33,14 @@
 		</cond>
 	</skill>
 	<skill id="22102" levels="1" name="Soul Magic Box">
-    <!-- none -->
-		<set name="magicType" val="SPECIAL"/>
-		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="86400000"/>
 		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 		<cond msgId="1509">
 			<not>
 				<player olympiad="true"/>
@@ -130,28 +130,28 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22108" levels="1" name="Halloween Toy Chest">
-    <!-- none -->
+	<skill id="22108" levels="1" name="Halloween Toy Box">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 		<cond msgId="1509">
 			<not>
 				<player olympiad="true"/>
 			</not>
 		</cond>
 	</skill>
-	<skill id="22109" levels="1" name="Shiny Halloween Toy Chest">
-    <!-- none -->
+	<skill id="22109" levels="1" name="Shiny Halloween Toy Box">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 		<cond msgId="1509">
 			<not>
 				<player olympiad="true"/>
@@ -214,28 +214,30 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22114" levels="1" name="Scroll of Transformation Box">
-    <!-- none -->
+	<skill id="22114" levels="1" name="Morph Scroll Box">
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 		<cond msgId="1509">
 			<not>
 				<player olympiad="true"/>
 			</not>
 		</cond>
 	</skill>
-	<skill id="22115" levels="1" name="White Bearded Santa's Weapon Exchange Ticket Box">
-    <!-- none -->
-		<set name="magicType" val="SPECIAL"/>
-		<set name="icon" val="icon.skill0000"/>
+	<skill id="22115" levels="1" name="Santa's Weapon Exchange Ticket Box">
 		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="itemConsumeId" val="20758"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 		<cond msgId="1509">
 			<not>
 				<player olympiad="true"/>
@@ -986,14 +988,15 @@
 		<set name="itemConsumeCount" val="1"/>
 		<set name="addEnergy" val="10000"/>
 	</skill>
-	<skill id="22167" levels="1" name="April Fool's Day Vesper Weapon Gift">
-    <!-- Acquires one of the 14 types of Vesper weapons. -->
+	<skill id="22167" levels="1" name="April Fools' Day Vesper Weapon Gift">
+		<!-- One among 14 Vesper Weapons will be given. -->
+		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0001"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="22168" levels="1" name="Thirst for Victory Quenching Drink">
     <!-- Replenishes an Agathion's energy by 1000. -->
@@ -1004,14 +1007,16 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="22169" levels="1" name="Soccer Ball of Cheering Release">
-    <!-- none -->
-		<set name="magicType" val="SPECIAL"/>
-		<set name="icon" val="icon.skill0001"/>
+	<skill id="22169" levels="1" name="Soccer Ball of Cheers Release">
 		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="itemConsumeId" val="20993"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="icon" val="icon.skill0001"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="22170" levels="1" name="Hardin's Divine Protection">
     <!-- Maximizes P. Def. for 10 seconds. -->
@@ -1099,13 +1104,15 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
 	<skill id="22179" levels="1" name="Fortuna of Chaos">
-    <!-- none -->
-		<set name="magicType" val="SPECIAL"/>
-		<set name="icon" val="icon.skill0001"/>
 		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="itemConsumeId" val="21041"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="icon" val="icon.skill0001"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="22180" levels="1" name="Wondrous Cubic - 1 time use">
     <!-- none -->
@@ -1129,18 +1136,60 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="22183" levels="1" name="Dragon Master Lee Transformation Scroll">
-    <!-- Transformed into Dragon Master Lee. -->
-		<set name="icon" val="icon.skilltransform1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+	<!-- Transformed into Dragon Master Lee. -->
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skilltransform2"/>
+    	<set name="itemConsumeId" val="21148"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="580;3;581;3;582;3;583;3;619;1;5491;1"/>
+		<set name="npcId" val="134"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<for>
+			<effect count="1" name="Transformation" time="3600" val="20005">
+				<set order="0x40" stat="STR" val="41"/>
+				<set order="0x40" stat="DEX" val="31"/>
+				<set order="0x40" stat="CON" val="33"/>
+				<set order="0x40" stat="INT" val="29"/>
+				<set order="0x40" stat="WIT" val="11"/>
+				<set order="0x40" stat="MEN" val="25"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="22184" levels="1" name="Dragon Master Karin Transformation Scroll">
-    <!-- Transformed into Dragon Master Karin. -->
-		<set name="icon" val="icon.skilltransform1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+	<!-- Transformed into Dragon Master Karin. -->
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skilltransform2"/>
+		<set name="itemConsumeId" val="21149"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="580;3;581;3;582;3;583;3;619;1;5491;1"/>
+		<set name="npcId" val="135"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<for>
+			<effect count="1" name="Transformation" time="3600" val="20006">
+				<set order="0x40" stat="STR" val="41"/>
+				<set order="0x40" stat="DEX" val="31"/>
+				<set order="0x40" stat="CON" val="33"/>
+				<set order="0x40" stat="INT" val="29"/>
+				<set order="0x40" stat="WIT" val="11"/>
+				<set order="0x40" stat="MEN" val="25"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="22185" levels="1" name="Shiny Lighting">
     <!-- Lighting shines brightly above the character's head. -->

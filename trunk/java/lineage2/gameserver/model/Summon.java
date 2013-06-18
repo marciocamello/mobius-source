@@ -33,13 +33,11 @@ import lineage2.gameserver.model.entity.events.impl.DuelEvent;
 import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.PetInventory;
-import lineage2.gameserver.network.serverpackets.ActionFail;
 import lineage2.gameserver.network.serverpackets.AutoAttackStart;
 import lineage2.gameserver.network.serverpackets.ExPartyPetWindowAdd;
 import lineage2.gameserver.network.serverpackets.ExPartyPetWindowDelete;
 import lineage2.gameserver.network.serverpackets.ExPartyPetWindowUpdate;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
-import lineage2.gameserver.network.serverpackets.MyTargetSelected;
 import lineage2.gameserver.network.serverpackets.NpcInfo;
 import lineage2.gameserver.network.serverpackets.PartySpelled;
 import lineage2.gameserver.network.serverpackets.PetDelete;
@@ -48,9 +46,7 @@ import lineage2.gameserver.network.serverpackets.PetItemList;
 import lineage2.gameserver.network.serverpackets.PetStatusShow;
 import lineage2.gameserver.network.serverpackets.PetStatusUpdate;
 import lineage2.gameserver.network.serverpackets.RelationChanged;
-import lineage2.gameserver.network.serverpackets.StatusUpdate;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
-import lineage2.gameserver.scripts.Events;
 import lineage2.gameserver.skills.EffectType;
 import lineage2.gameserver.skills.effects.EffectTemplate;
 import lineage2.gameserver.stats.Env;
@@ -238,70 +234,6 @@ public abstract class Summon extends Playable
 	public boolean isMountable()
 	{
 		return false;
-	}
-	
-	/**
-	 * Method onAction.
-	 * @param player Player
-	 * @param shift boolean
-	 */
-	@Override
-	public void onAction(final Player player, boolean shift)
-	{
-		if (isFrozen())
-		{
-			player.sendPacket(ActionFail.STATIC);
-			return;
-		}
-		if (Events.onAction(player, this, shift))
-		{
-			player.sendPacket(ActionFail.STATIC);
-			return;
-		}
-		Player owner = getPlayer();
-		if (player.getTarget() != this)
-		{
-			player.setTarget(this);
-			if (player.getTarget() == this)
-			{
-				player.sendPacket(new MyTargetSelected(getObjectId(), 0), makeStatusUpdate(StatusUpdate.CUR_HP, StatusUpdate.MAX_HP, StatusUpdate.CUR_MP, StatusUpdate.MAX_MP));
-			}
-			else
-			{
-				player.sendPacket(ActionFail.STATIC);
-			}
-		}
-		else if (player == owner)
-		{
-			player.sendPacket(new PetInfo(this).update());
-			if (!player.isActionsDisabled())
-			{
-				player.sendPacket(new PetStatusShow(this));
-			}
-			player.sendPacket(ActionFail.STATIC);
-		}
-		else if (isAutoAttackable(player))
-		{
-			player.getAI().Attack(this, false, shift);
-		}
-		else
-		{
-			if (player.getAI().getIntention() != CtrlIntention.AI_INTENTION_FOLLOW)
-			{
-				if (!shift)
-				{
-					player.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, this, Config.FOLLOW_RANGE);
-				}
-				else
-				{
-					player.sendActionFailed();
-				}
-			}
-			else
-			{
-				player.sendActionFailed();
-			}
-		}
 	}
 	
 	/**
@@ -499,15 +431,14 @@ public abstract class Summon extends Playable
 	@Override
 	public void broadcastStatusUpdate()
 	{
-		if (!needStatusUpdate())
-		{
-			return;
-		}
+		super.broadcastStatusUpdate();
+		
 		Player owner = getPlayer();
+		
 		sendStatusUpdate();
-		StatusUpdate su = makeStatusUpdate(StatusUpdate.MAX_HP, StatusUpdate.CUR_HP);
-		broadcastPacket(su);
+		
 		Party party = owner.getParty();
+		
 		if (party != null)
 		{
 			party.broadcastToPartyMembers(owner, new ExPartyPetWindowUpdate(this));
@@ -1106,4 +1037,37 @@ public abstract class Summon extends Playable
 			player.sendPacket(SystemMsg.THAT_PET_SERVITOR_SKILL_CANNOT_BE_USED_BECAUSE_IT_IS_RECHARGING);
 		}
 	}
+	
+	@Override
+	public void onActionTarget(final Player player, boolean forced)
+	{
+		super.onActionTarget(player, forced);
+		
+		if (getPlayer() == player)
+		{
+			player.sendPacket(new PetInfo(this).update());
+			
+			if (!player.isActionsDisabled())
+			{
+				player.sendPacket(new PetStatusShow(this));
+			}
+		}
+	}
+	
+	@Override
+	public void onActionTargeted(final Player player, boolean forced)
+	{
+		if (getPlayer() == player)
+		{
+			player.sendPacket(new PetInfo(this).update());
+			
+			if (!player.isActionsDisabled())
+			{
+				player.sendPacket(new PetStatusShow(this));
+			}
+		}
+		
+		super.onActionTargeted(player, forced);
+	}
+	
 }

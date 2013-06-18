@@ -45,7 +45,7 @@ public class Clan extends Functions
 		{
 			htmltext = "clan-09.htm";
 		}
-		((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/" + htmltext);
+		((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/clan/" + htmltext);
 	}
 	
 	/**
@@ -65,12 +65,12 @@ public class Clan extends Functions
 		}
 		else if (pl.getClan() != null)
 		{
-			htmltext = "9000-08.htm";
+			htmltext = "clan-08.htm";
 		}
 		else
 		{
-			htmltext = "9000-11.htm";
+			htmltext = "clan-11.htm";
 		}
-		((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/" + htmltext);
+		((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/clan/" + htmltext);
 	}
 }

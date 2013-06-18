@@ -273,15 +273,9 @@ public class SymbolInstance extends NpcInstance
 	{
 	}
 	
-	/**
-	 * Method onAction.
-	 * @param player Player
-	 * @param shift boolean
-	 */
 	@Override
-	public void onAction(Player player, boolean shift)
+	public void onActionSelect(final Player player, final boolean forced)
 	{
-		player.sendActionFailed();
 	}
 	
 	/**

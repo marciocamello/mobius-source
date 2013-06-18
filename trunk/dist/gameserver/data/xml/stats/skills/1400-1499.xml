@@ -896,8 +896,14 @@
 		<set name="castRange" val="32767"/>
 	</skill>
 	<skill id="1430" levels="5" name="Invocation">
-    <!-- Decreases P. Def. by 90% and recovers 54 MP every second for 30 seconds. The status is canceled when damage is incurred. -->
-		<table name="#regMp">27 30 34 37 42</table>
+    <!--
+	1430	1	Invocation	Decreases P. Def. by 90% and recovers 54 MP every second for 30 seconds. The status is canceled when damage is incurred
+	1430	2	Invocation	Decreases P. Def. by 90% and recovers 60 MP every second for 30 seconds. The status is canceled when damage is incurred
+	1430	3	Invocation	Decreases P. Def. by 90% and recovers 68 MP every second for 30 seconds. The status is canceled when damage is incurred
+	1430	4	Invocation	Decreases P. Def. by 90% and recovers 74 MP every second for 30 seconds. The status is canceled when damage is incurred
+	1430	5	Invocation	Decreases P. Def. by 90% and recovers 84 MP every second for 30 seconds. The status is canceled when damage is incurred
+	-->
+		<table name="#regMp">54 60 68 74 84</table>
 		<table name="#mpConsume2">21 22 24 26 27</table>
 		<table name="#mpConsume1">6 6 6 7 7</table>
 		<table name="#magicLevel">56 60 64 68 72</table>
@@ -3096,7 +3102,7 @@
 		<set name="mpConsume2" val="58"/>
 		<set name="itemConsumeId" val="3031"/>
 		<set name="itemConsumeCount" val="5"/>
-		<set name="target" val="TARGET_PET"/>
+		<set name="target" val="TARGET_SUMMON"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>

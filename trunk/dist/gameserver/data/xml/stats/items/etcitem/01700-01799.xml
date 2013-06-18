@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="1700" name="(Not used) Oriharukon">
+	<etcitem id="1700" name="(Not in Use) Oriharukon">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_wood_i00"/>
@@ -10,7 +11,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="1701" name="Spell Solution">
+	<etcitem id="1701" name="Enchanted Solution">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_potion_gold_i00"/>
@@ -20,6 +22,7 @@
 		<set name="weight" value="2"/>
 	</etcitem>
 	<etcitem id="1702" name="Metal Frame">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mold_i00"/>
@@ -28,7 +31,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="1703" name="Steel of the Highest Grade">
+	<etcitem id="1703" name="Top-grade Steel">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -37,7 +41,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="1704" name="Stone of Anguish">
+	<etcitem id="1704" name="Stone of Hatred">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bead_red_i00"/>
@@ -47,6 +52,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1705" name="Sprig of Wisdom">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_leaf_gold_i00"/>
@@ -56,6 +62,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1706" name="Blue Diamond Fragment">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_crystal_ball_blue_i00"/>
@@ -65,6 +72,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1707" name="Saint's Molar">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_molar_white_i00"/>
@@ -74,6 +82,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1708" name="Smoky Quartz">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bead_white_i00"/>
@@ -83,6 +92,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1709" name="Blood of Manticore">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_reagent_gold_i00"/>
@@ -92,6 +102,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1710" name="Tiger's Eye Crystal">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_crystal_ball_gold_i00"/>
@@ -101,6 +112,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1711" name="Claw of Leopard">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_claw_i00"/>
@@ -110,6 +122,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1712" name="Leather Shoes Material">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_of_cloth_white_i00"/>
@@ -119,6 +132,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1713" name="Leather Tunic Material">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_of_cloth_white_i00"/>
@@ -128,6 +142,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1714" name="Leather Stockings Material">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_of_cloth_white_i00"/>
@@ -137,6 +152,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1715" name="Leather Helmet Material">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_of_cloth_white_i00"/>
@@ -146,6 +162,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1716" name="Leather Gloves Texture">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_of_cloth_black_i00"/>
@@ -155,6 +172,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1717" name="Leather Gloves Lining">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_of_cloth_green_i00"/>
@@ -164,6 +182,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1718" name="Black Bone Fragment">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_bone_black_i00"/>
@@ -173,6 +192,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1719" name="Hard Leather Shirt Material">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_of_cloth_white_i00"/>
@@ -182,6 +202,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1720" name="Blue-Black Bone Fragment">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_bone_black_i00"/>
@@ -190,7 +211,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="1721" name="Hard Leather Gaiter Material">
+	<etcitem id="1721" name="Hard Leather Gaiters Material">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_of_cloth_blue_i00"/>
@@ -200,6 +222,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1722" name="Boots Material">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_leather_brown_i00"/>
@@ -209,6 +232,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1723" name="Leather Boots Material">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_of_cloth_white_i00"/>
@@ -218,6 +242,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1724" name="Skull Fragment">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_skull_black_i00"/>
@@ -227,6 +252,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1725" name="Dark Stockings Material">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_leather_gray_i00"/>
@@ -236,6 +262,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1726" name="Crafted Leather Gloves Lining">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_of_cloth_blue_i00"/>
@@ -245,6 +272,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1727" name="Crafted Leather Gloves Texture">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_of_cloth_black_i00"/>
@@ -254,6 +282,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1728" name="Steel Scale">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_plate_glay_i00"/>
@@ -263,6 +292,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1729" name="Pure White Cloth">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_of_cloth_white_i00"/>
@@ -272,6 +302,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1730" name="Purifying Potion">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_potion_clear_i00"/>
@@ -281,6 +312,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1731" name="Steel Scale Gaiters">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_plate_blue_i00"/>
@@ -290,6 +322,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1732" name="Leather Fittings">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_leather_gray_i00"/>
@@ -299,6 +332,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1733" name="Large Sheet Iron">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_plate_black_i00"/>
@@ -308,6 +342,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1734" name="Small Leather Fittings">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_leather_brown_i00"/>
@@ -317,6 +352,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1735" name="Small Sheet Iron">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_plate_glay_i00"/>
@@ -326,6 +362,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1736" name="Iron Boots Binding">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -335,6 +372,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1737" name="Iron Boots Frame">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mold_i00"/>
@@ -344,6 +382,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1738" name="Wide Blade">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -353,6 +392,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1739" name="Broadsword Mold">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mold_i00"/>
@@ -362,6 +402,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1740" name="Crafted Willow Branch">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_branch_blue_i00"/>
@@ -370,7 +411,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="1741" name="Stave">
+	<etcitem id="1741" name="Bow Shaft">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_branch_gold_i00"/>
@@ -380,6 +422,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1742" name="Red Cedar Branch">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_branch_gold_i00"/>
@@ -388,7 +431,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="1743" name="Dirk Blade">
+	<etcitem id="1743" name="Dirk Blade Edge">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -398,6 +442,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1744" name="Dirk Mold">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mold_i00"/>
@@ -407,6 +452,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1745" name="Brandish Blade">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -416,6 +462,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1746" name="Short Spear Blade">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -425,6 +472,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1747" name="Shining Blade">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -434,6 +482,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1748" name="Sword of Reflection Mold">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mold_i00"/>
@@ -443,6 +492,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1749" name="Branch of the Mother Tree">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_branch_green_i00"/>
@@ -452,6 +502,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1750" name="Dark Forest Leaf">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_herb_blue_i00"/>
@@ -461,6 +512,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1751" name="Lump of Iron">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bead_silver_i00"/>
@@ -470,6 +522,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1752" name="Piece of Sword Breaker">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bark_gold_i00"/>
@@ -479,6 +532,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1753" name="Sword Breaker Mold">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mold_i00"/>
@@ -488,6 +542,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1754" name="Steel Bow Mold">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mold_i00"/>
@@ -496,7 +551,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="1755" name="Metal Stave">
+	<etcitem id="1755" name="Metal Bow Shaft">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_branch_gold_i00"/>
@@ -506,6 +562,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1756" name="Spirit of the Saber Smith">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_skull_black_i00"/>
@@ -515,6 +572,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1757" name="Saber Blade">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -524,6 +582,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1758" name="Saber Mold">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mold_i00"/>
@@ -533,6 +592,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1759" name="Blood of Assassin">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_reagent_red_i00"/>
@@ -541,7 +601,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="1760" name="Assassin Blade">
+	<etcitem id="1760" name="Assassin Knife Blade">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -550,7 +611,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="1761" name="Assassin Mold">
+	<etcitem id="1761" name="Assassin Knife Mold">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mold_i00"/>
@@ -560,6 +622,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1762" name="Piece of Trident">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bark_blue_i00"/>
@@ -569,6 +632,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1763" name="Ruby Fragment">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_powder_red_i00"/>
@@ -578,6 +642,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1764" name="Deep Sea Water">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_potion_blue_i00"/>
@@ -587,6 +652,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1765" name="Spinebone Fragment">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_bone_white_i00"/>
@@ -596,6 +662,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1766" name="Spinebone Pattern">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mold_i00"/>
@@ -605,6 +672,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1767" name="Piece of Mace of Judgment">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bark_gold_i00"/>
@@ -614,6 +682,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1768" name="Pattern of Judgment">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mold_i00"/>
@@ -623,6 +692,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1769" name="Piece of Conjuror's Staff">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bark_blue_i00"/>
@@ -632,6 +702,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1770" name="Magic Flute">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_flute_i00"/>
@@ -640,7 +711,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="1771" name="Elven Stave">
+	<etcitem id="1771" name="Elven Bow Shaft">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_branch_green_i00"/>
@@ -650,6 +722,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1772" name="Leaf of the Mother Tree">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_herb_green_i00"/>
@@ -658,7 +731,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="1773" name="Piece of Dwarven Trident">
+	<etcitem id="1773" name="Dwarven Trident Piece">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bark_green_i00"/>
@@ -667,7 +741,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="1774" name="Piece of Two-Handed Sword">
+	<etcitem id="1774" name="Piece of Two-handed Sword">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -676,7 +751,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="1775" name="Two-Handed Sword Mold">
+	<etcitem id="1775" name="Two-handed Sword Mold">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mold_i00"/>
@@ -686,6 +762,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1776" name="Piece of Spiked Club">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bark_blue_i00"/>
@@ -695,6 +772,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1777" name="Steel Piece of Club">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_plate_glay_i00"/>
@@ -703,7 +781,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="1778" name="Shilen Bone">
+	<etcitem id="1778" name="Silenos Bone">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_bone_white_i00"/>
@@ -712,7 +791,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="1779" name="Shilen Mane">
+	<etcitem id="1779" name="Silenos Mane">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mane_i00"/>
@@ -722,6 +802,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1780" name="Purity Bronze">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_plate_blue_i00"/>
@@ -730,7 +811,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="1781" name="Gastraphetes Stave">
+	<etcitem id="1781" name="Gastraphetes Bow Shaft">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.weapon_short_bow_i00"/>
@@ -740,6 +822,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1782" name="Gastraphetes Addendum">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_orcish_talisman_i00"/>
@@ -749,6 +832,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1783" name="Blood of Fiend">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_reagent_gold_i00"/>
@@ -758,6 +842,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="1784" name="Cursed Leather">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_leather_gray_i00"/>
@@ -766,7 +851,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="1785" name="Soul Ore">
+	<etcitem id="1785" name="Soulstone">
+	<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_crystal_white_i00"/>
@@ -775,7 +861,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="10"/>
 	</etcitem>
-	<etcitem id="1786" name="Recipe: Broad Sword">
+	<etcitem id="1786" name="Recipe: Broadsword">
+	<!-- For Dwarves only. Recipe for a Broadsword. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -786,6 +873,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="1787" name="Recipe: Willow Staff">
+	<!-- For Dwarves only. Recipe for a Willow Staff. Requires Create Item - Skill Level 1 The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -796,6 +884,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="1788" name="Recipe: Bow">
+	<!-- For Dwarves only. Recipe for a Bow. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -806,6 +895,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="1789" name="Recipe: Cedar Staff">
+	<!-- For Dwarves only. Recipe for a Cedar Staff. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -816,6 +906,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="1790" name="Recipe: Dirk">
+	<!-- For Dwarves only. Recipe for a Dirk. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -826,6 +917,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="1791" name="Recipe: Brandish">
+	<!-- For Dwarves only. Recipe for a Brandish. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -836,6 +928,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="1792" name="Recipe: Short Spear">
+	<!-- For Dwarves only. Recipe for a Short Spear. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -846,6 +939,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="1793" name="Recipe: Sword of Reflection">
+	<!-- For Dwarves only. Recipe for a Sword of Reflection. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -856,6 +950,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="1794" name="Recipe: Forest Bow">
+	<!-- For Dwarves only. Recipe for a Forest Bow. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -866,6 +961,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="1795" name="Recipe: Leather Shoes">
+	<!-- For Dwarves only. Recipe for Leather Shoes. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -876,6 +972,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="1796" name="Recipe: Leather Tunic">
+	<!-- For Dwarves only. Recipe for a Leather Tunic. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -886,6 +983,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="1797" name="Recipe: Leather Stockings">
+	<!-- For Dwarves only. Recipe for Leather Stockings. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -896,6 +994,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="1798" name="Recipe: Leather Helmet">
+	<!-- For Dwarves only. Recipe for a Leather Helmet. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -906,6 +1005,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="1799" name="Recipe: Leather Gloves">
+	<!-- For Dwarves only. Recipe for Leather Gloves. Requires Create Item - Skill Level 1. The success rate is 100%. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>

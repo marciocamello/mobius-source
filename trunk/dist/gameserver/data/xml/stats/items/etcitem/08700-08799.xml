@@ -2,6 +2,7 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<etcitem id="8700" name="Recipe: Tiphon's Spear (60%)">
+	<!-- For Dwarves only. Recipe for making Tiphon's Spear. Requires Create Item - Skill Level 8. 60% success rate. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -11,7 +12,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8701" name="Recipe: Tiphon's Spear (100%)">
+	<etcitem id="8701" name="Recipe: Tiphon's Spear">
+	<!-- For Dwarves only. Recipe for making Tiphon's Spear. Requires Create Item - Skill Level 8. 100% success rate. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -22,6 +24,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="8702" name="Recipe: Shyeed's Bow (60%)">
+	<!-- For Dwarves only. Recipe for making Shyeed's Bow. Requires Create Item - Skill Level 8. 60% success rate. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -31,7 +34,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8703" name="Recipe: Shyeed's Bow (100%)">
+	<etcitem id="8703" name="Recipe: Shyeed's Bow">
+	<!-- For Dwarves only. Recipe for making Shyeed's Bow. Requires Create Item - Skill Level 8. 100% success rate. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -42,6 +46,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="8704" name="Recipe: Sobekk's Hurricane (60%)">
+	<!-- For Dwarves only. Recipe for making Sobekk's Hurricane. Requires Create Item - Skill Level 8. 60% success rate. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -51,7 +56,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8705" name="Recipe: Sobekk's Hurricane (100%)">
+	<etcitem id="8705" name="Recipe: Sobekk's Hurricane">
+	<!-- For Dwarves only. Recipe for making Sobekk's Hurricane. Requires Create Item - Skill Level 8. 100% success rate. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -62,6 +68,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="8706" name="Recipe: Themis' Tongue (60%)">
+	<!-- For Dwarves only. Recipe for making Themis' Tongue. Requires Create Item - Skill Level 8. 60% success rate. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -71,7 +78,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8707" name="Recipe: Themis' Tongue (100%)">
+	<etcitem id="8707" name="Recipe: Themis' Tongue">
+	<!-- For Dwarves only. Recipe for making Themis' Tongue. Requires Create Item - Skill Level 8. 100% success rate. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -82,6 +90,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="8708" name="Recipe: Cabrio's Hand (60%)">
+	<!-- For Dwarves only. Recipe for making Cabrio's Hand. Requires Create Item - Skill Level 8. 60% success rate. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -91,7 +100,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8709" name="Recipe: Cabrio's Hand (100%)">
+	<etcitem id="8709" name="Recipe: Cabrio's Hand">
+	<!-- For Dwarves only. Recipe for making Cabrio's Hand. Requires Create Item - Skill Level 8. 100% success rate. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -102,6 +112,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="8710" name="Recipe: Daimon Crystal (60%)">
+	<!-- For Dwarves only. Recipe for making a Demon's Crystal. Requires Create Item - Skill Level 8. 60% success rate. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -111,7 +122,8 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="8711" name="Recipe: Daimon Crystal (100%)">
+	<etcitem id="8711" name="Recipe: Daimon Crystal">
+	<!-- For Dwarves only. Recipe for making a Daimon Crystal. Requires Create Item - Skill Level 8. 100% success rate. -->
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_violet_i00"/>
@@ -122,6 +134,7 @@
 		<set name="weight" value="30"/>
 	</etcitem>
 	<etcitem id="8712" name="Sirra's Blade Edge">
+	<!-- Essential ingredient needed by a Dwarf to make Sirra's Blade. It can be sold at a regular store. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -131,6 +144,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8713" name="Sword of Ipos Blade">
+	<!-- Essential ingredient needed by a Dwarf to make the Sword of Ipos. It can be sold at a regular store. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -140,6 +154,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8714" name="Barakiel's Axe Piece">
+	<!-- Essential ingredient needed by a Dwarf to make Barakiel's Axe. It can be sold at a regular store. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bark_gold_i00"/>
@@ -148,7 +163,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="8715" name="Behemoth's Tuning Fork Piece">
+	<etcitem id="8715" name="Behemoth' Tuning Fork Piece">
+	<!-- Essential ingredient needed by a Dwarf to make Behemoth' Tuning Fork. It can be sold at a regular store. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bark_gold_i00"/>
@@ -158,6 +174,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8716" name="Naga Storm Piece">
+	<!-- Essential ingredient needed by a Dwarf to make Naga Storm. It can be sold at a regular store. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bark_gold_i00"/>
@@ -167,6 +184,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8717" name="Tiphon's Spear Edge">
+	<!-- Essential ingredient needed by a Dwarf to make Tiphon's Spear. It can be sold at a regular store. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -176,6 +194,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8718" name="Shyeed's Bow Shaft">
+	<!-- Essential ingredient needed by a Dwarf to make Shyeed's Bow. It can be sold at a regular store. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_branch_gold_i00"/>
@@ -185,6 +204,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8719" name="Sobekk's Hurricane Edge">
+	<!-- Essential ingredient needed by a Dwarf to make Sobekk's Hurricane. It can be sold at a regular store. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sword_body_i00"/>
@@ -194,6 +214,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8720" name="Themis' Tongue Piece">
+	<!-- Essential ingredient needed by a Dwarf to make Themis' Tongue. It can be sold at a regular store. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bark_gold_i00"/>
@@ -203,6 +224,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8721" name="Cabrio's Hand Head">
+	<!-- Essential ingredient needed by a Dwarf to make Cabrio's Hand. It can be sold at a regular store. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_squares_gray_i00"/>
@@ -212,6 +234,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="8722" name="Daimon Crystal Fragment">
+	<!-- Essential ingredient needed by a Dwarf to make Daimon Crystal. It can be sold at a regular store. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bark_gold_i00"/>
@@ -220,7 +243,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="8723" name="Life Stone: level 46">
+	<etcitem id="8723" name="Life Stone -  Level 46">
+	<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 46 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i00"/>
@@ -229,7 +253,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8724" name="Life Stone: level 49">
+	<etcitem id="8724" name="Life Stone -  Level 49">
+	<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 49 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i00"/>
@@ -238,7 +263,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8725" name="Life Stone: level 52">
+	<etcitem id="8725" name="Life Stone -  Level 52">
+	<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 52 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i00"/>
@@ -247,7 +273,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8726" name="Life Stone: level 55">
+	<etcitem id="8726" name="Life Stone -  Level 55">
+	<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 55 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i00"/>
@@ -256,7 +283,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8727" name="Life Stone: level 58">
+	<etcitem id="8727" name="Life Stone -  Level 58">
+	<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 58 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i01"/>
@@ -265,7 +293,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8728" name="Life Stone: level 61">
+	<etcitem id="8728" name="Life Stone -  Level 61">
+	<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 61 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i01"/>
@@ -274,7 +303,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8729" name="Life Stone: level 64">
+	<etcitem id="8729" name="Life Stone -  Level 64">
+	<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 64 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i02"/>
@@ -283,7 +313,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8730" name="Life Stone: level 67">
+	<etcitem id="8730" name="Life Stone -  Level 67">
+	<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 67 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i02"/>
@@ -292,7 +323,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8731" name="Life Stone: level 70">
+	<etcitem id="8731" name="Life Stone -  Level 70">
+	<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 70 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i02"/>
@@ -301,7 +333,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8732" name="Life Stone: level 76">
+	<etcitem id="8732" name="Life Stone -  Level 76">
+	<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 76 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i03"/>
@@ -310,7 +343,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8733" name="Mid-Grade Life Stone: level 46">
+	<etcitem id="8733" name="Mid-grade Life Stone -  Level 46">
+	<!-- Mid-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 46 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_special_i00"/>
@@ -319,7 +353,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8734" name="Mid-Grade Life Stone: level 49">
+	<etcitem id="8734" name="Mid-grade Life Stone -  Level 49">
+	<!-- Mid-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 49 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_special_i00"/>
@@ -328,7 +363,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8735" name="Mid-Grade Life Stone: level 52">
+	<etcitem id="8735" name="Mid-grade Life Stone -  Level 52">
+	<!-- Mid-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 52 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_special_i00"/>
@@ -337,7 +373,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8736" name="Mid-Grade Life Stone: level 55">
+	<etcitem id="8736" name="Mid-grade Life Stone -  Level 55">
+	<!-- Mid-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 55 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_special_i00"/>
@@ -346,7 +383,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8737" name="Mid-Grade Life Stone: level 58">
+	<etcitem id="8737" name="Mid-grade Life Stone -  Level 58">
+	<!-- Mid-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 58 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_special_i01"/>
@@ -355,7 +393,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8738" name="Mid-Grade Life Stone: level 61">
+	<etcitem id="8738" name="Mid-grade Life Stone -  Level 61">
+	<!-- Mid-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 61 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_special_i01"/>
@@ -364,7 +403,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8739" name="Mid-Grade Life Stone: level 64">
+	<etcitem id="8739" name="Mid-grade Life Stone -  Level 64">
+	<!-- Mid-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 64 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_special_i02"/>
@@ -373,7 +413,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8740" name="Mid-Grade Life Stone: level 67">
+	<etcitem id="8740" name="Mid-grade Life Stone -  Level 67">
+	<!-- Mid-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 67 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_special_i02"/>
@@ -382,7 +423,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8741" name="Mid-Grade Life Stone: level 70">
+	<etcitem id="8741" name="Mid-grade Life Stone -  Level 70">
+	<!-- Mid-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 70 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_special_i02"/>
@@ -391,7 +433,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8742" name="Mid-Grade Life Stone: level 76">
+	<etcitem id="8742" name="Mid-grade Life Stone -  Level 76">
+	<!-- Mid-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 76 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_special_i03"/>
@@ -400,7 +443,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8743" name="High-Grade Life Stone: level 46">
+	<etcitem id="8743" name="High-grade Life Stone -  Level 46">
+	<!-- High-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 46 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_rare_i00"/>
@@ -409,7 +453,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8744" name="High-Grade Life Stone: level 49">
+	<etcitem id="8744" name="High-grade Life Stone -  Level 49">
+	<!-- High-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 49 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_rare_i00"/>
@@ -418,7 +463,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8745" name="High-Grade Life Stone: level 52">
+	<etcitem id="8745" name="High-grade Life Stone -  Level 52">
+	<!-- High-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 52 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_rare_i00"/>
@@ -427,7 +473,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8746" name="High-Grade Life Stone: level 55">
+	<etcitem id="8746" name="High-grade Life Stone -  Level 55">
+	<!-- High-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 55 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_rare_i00"/>
@@ -436,7 +483,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8747" name="High-Grade Life Stone: level 58">
+	<etcitem id="8747" name="High-grade Life Stone -  Level 58">
+	<!-- High-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 58 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_rare_i01"/>
@@ -445,7 +493,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8748" name="High-Grade Life Stone: level 61">
+	<etcitem id="8748" name="High-grade Life Stone -  Level 61">
+	<!-- High-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 61 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_rare_i01"/>
@@ -454,7 +503,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8749" name="High-Grade Life Stone: level 64">
+	<etcitem id="8749" name="High-grade Life Stone -  Level 64">
+	<!-- High-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 64 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_rare_i02"/>
@@ -463,7 +513,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8750" name="High-Grade Life Stone: level 67">
+	<etcitem id="8750" name="High-grade Life Stone -  Level 67">
+	<!-- High-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 67 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_rare_i02"/>
@@ -472,7 +523,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8751" name="High-Grade Life Stone: level 70">
+	<etcitem id="8751" name="High-grade Life Stone -  Level 70">
+	<!-- High-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 70 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_rare_i02"/>
@@ -481,7 +533,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8752" name="High-Grade Life Stone: level 76">
+	<etcitem id="8752" name="High-grade Life Stone -  Level 76">
+	<!-- High-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 76 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_rare_i03"/>
@@ -490,7 +543,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8753" name="Top-Grade Life Stone: level 46">
+	<etcitem id="8753" name="Top-grade Life Stone -  Level 46">
+	<!-- The highest-grade mineral available that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 46 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_unique_i00"/>
@@ -499,7 +553,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8754" name="Top-Grade Life Stone: level 49">
+	<etcitem id="8754" name="Top-grade Life Stone -  Level 49">
+	<!-- The highest-grade mineral available that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 49 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_unique_i00"/>
@@ -508,7 +563,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8755" name="Top-Grade Life Stone: level 52">
+	<etcitem id="8755" name="Top-grade Life Stone -  Level 52">
+	<!-- The highest-grade mineral available that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 52 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_unique_i00"/>
@@ -517,7 +573,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8756" name="Top-Grade Life Stone: level 55">
+	<etcitem id="8756" name="Top-grade Life Stone -  Level 55">
+	<!-- The highest-grade mineral available that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 55 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_unique_i00"/>
@@ -526,7 +583,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8757" name="Top-Grade Life Stone: level 58">
+	<etcitem id="8757" name="Top-grade Life Stone -  Level 58">
+	<!-- The highest-grade mineral available that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 58 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_unique_i01"/>
@@ -535,7 +593,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8758" name="Top-Grade Life Stone: level 61">
+	<etcitem id="8758" name="Top-grade Life Stone -  Level 61">
+	<!-- The highest-grade mineral available that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 61 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_unique_i01"/>
@@ -544,7 +603,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8759" name="Top-Grade Life Stone: level 64">
+	<etcitem id="8759" name="Top-grade Life Stone -  Level 64">
+	<!-- The highest-grade mineral available that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 64 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_unique_i02"/>
@@ -553,7 +613,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8760" name="Top-Grade Life Stone: level 67">
+	<etcitem id="8760" name="Top-grade Life Stone -  Level 67">
+	<!-- The highest-grade mineral available that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 67 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_unique_i02"/>
@@ -562,7 +623,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8761" name="Top-Grade Life Stone: level 70">
+	<etcitem id="8761" name="Top-grade Life Stone -  Level 70">
+	<!-- The highest-grade mineral available that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 70 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_unique_i02"/>
@@ -571,7 +633,8 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="8762" name="Top-Grade Life Stone: level 76">
+	<etcitem id="8762" name="Top-grade Life Stone -  Level 76">
+	<!-- The highest-grade mineral available that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 76 or above. -->
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_unique_i03"/>
@@ -581,6 +644,7 @@
 		<set name="weight" value="2"/>
 	</etcitem>
 	<etcitem id="8764" name="Trap Stone">
+	<!-- Stone used in the Elrokian Trap. -->
 		<set name="price" value="500"/>
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -590,6 +654,7 @@
 		<set name="weight" value="2"/>
 	</etcitem>
 	<etcitem id="8765" name="Red Gem">
+	<!-- Shiny red gems collected by Warehouse Chief Klump of Town of Aden. You can play the card game if you bring Klump more than 50 of these gems. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -598,6 +663,7 @@
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="8766" name="Spirit Bead">
+	<!-- Beads collected by Blacksmith Wilbert of Town of Aden. You can play the game if you bring him more than 50. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -606,6 +672,7 @@
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="8767" name="Tyrannosaurus Claw">
+	<!-- This claw can be obtained by defeating a Tyrannosaurus. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -614,6 +681,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8768" name="Diary Fragment">
+	<!-- This is a piece of a missing expedition member's diary. Deliver it to the expedition leader, Captain Marquez. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -624,6 +692,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8769" name="Expedition Member's Letter">
+	<!-- This is a letter that a missing expedition member sent to his Elrokian friend Kirikachin. Deliver it to Kirikachin. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -632,6 +701,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8770" name="Ornithomimus Claw">
+	<!-- Take this to Asamah, the chief's son. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -642,6 +712,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8771" name="Deinonychus Bone">
+	<!-- Take this to Asamah, the chief's son. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -652,6 +723,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8772" name="Pachycephalosaurus Skin">
+	<!-- Take this to Asamah, the chief's son. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -662,6 +734,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8773" name="Practice Elrokian Trap">
+	<!-- Take this practice trap, which is necessary for learning a special Elrokian tribal skill, to Kirikachin. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.weapon_seize_mace_i00"/>
@@ -669,6 +742,7 @@
 		<set name="type" value="MATERIAL"/>
 	</etcitem>
 	<etcitem id="8774" name="Dinosaur Tissue">
+	<!-- This Dinosaur Tissue is a research ingredient for magicians and Dwarven craftsmen. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -677,6 +751,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8775" name="Dinosaur Egg">
+	<!-- This Dinosaur Egg is a research ingredient (along with Dinosaur Tissue) for magicians and Dwarven craftsmen. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -685,6 +760,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8776" name="Bones of a Plains Dinosaur">
+	<!-- This is a research ingredient for Shilen's priests and magicians. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -693,6 +769,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8777" name="Ancient Creatures and How I Long To Be With Them">
+	<!-- Found in Rune's main library, this book contains information about ancient creatures. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -701,6 +778,7 @@
 		<set name="type" value="MATERIAL"/>
 	</etcitem>
 	<etcitem id="8778" name="Mantarasa Egg">
+	<!-- This mysterious item can cure any illness. It can be obtained in the Primeval Isle's Lost Nest. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -709,6 +787,7 @@
 		<set name="type" value="MATERIAL"/>
 	</etcitem>
 	<etcitem id="8779" name="Ornithomimus Claw">
+	<!-- This dinosaur claw can be used by the Elrokian Shaman Karakawei to perform a special ritual. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -719,6 +798,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8780" name="Deinonychus Bone Fragment">
+	<!-- This dinosaur bone fragment can be used by the Elrokian Shaman Karakawei to perform a special ritual. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -729,6 +809,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8781" name="Epitaph of Wisdom">
+	<!-- This epitaph can be obtained from the Chuta Kaimu Pillar of Wisdom in the Lost Nest. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -738,6 +819,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8782" name="Gazkh Fragment">
+	<!-- This is a fragment of the axe Gazkh that Shilen gave to the Elrokian warriors long ago. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_piece_of_gazk_i00"/>
@@ -745,6 +827,7 @@
 		<set name="type" value="MATERIAL"/>
 	</etcitem>
 	<etcitem id="8783" name="Bone Powder">
+	<!-- These ash-like remains of an ancient Elrokian warrior can be obtained after performing a memorial service at the Warrior's Tomb. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -754,6 +837,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8784" name="Gazkh">
+	<!-- This ancient axe, Gazkh, can be reformed by Shilen's Stone Statue. It is necessary to battle Sailren. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_head_of_gazk_i00"/>
@@ -761,6 +845,7 @@
 		<set name="type" value="MATERIAL"/>
 	</etcitem>
 	<etcitem id="8785" name="Dinosaur Fang Necklace">
+	<!-- This necklace is the mark of the ancient Elrokians who raid the wharf. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -769,6 +854,7 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="8786" name="Primeval Potion">
+	<!-- Increases Poison/Anesthesia Resistance. -->
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_potion_red_i00"/>
@@ -788,6 +874,7 @@
 		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="8787" name="Sprigant's Fruit">
+	<!-- This fruit, dropped by Sprigants, increases Poison/Anesthesia Resistance. -->
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_fruit_green_i00"/>

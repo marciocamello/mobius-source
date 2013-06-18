@@ -2,6 +2,7 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<etcitem id="9205" name="Alchemist's Chest Key">
+	<!-- Key to open an Alchemist's Chest. For event use only. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -12,7 +13,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
 	</etcitem>
-	<etcitem id="9206" name="Greater Healing Potion (Event)">
+	<etcitem id="9206" name="Major Healing Potion (Event)">
+	<!-- Magical potion that quickly restores HP. Its effect lasts for 15 seconds. Designed for use in events only. -->
 		<set name="reuse_delay" value="10000"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
@@ -30,6 +32,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="9207" name="Quick Healing Potion (Event)">
+	<!-- Magic potion that instantly restores HP. Instant effect with no duration. Event item. Cannot be used when HP is full. -->
 		<set name="reuse_delay" value="500"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>

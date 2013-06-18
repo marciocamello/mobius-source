@@ -167,6 +167,18 @@ public class PcInventory extends Inventory
 		return itemId;
 	}
 	
+	@Override
+	public int getVisualItemId(int slot)
+	{
+		Player player = getActor();
+		int itemId = super.getVisualItemId(slot);
+		if ((slot == PAPERDOLL_RHAND) && (itemId == 0) && player.isClanAirShipDriver())
+		{
+			itemId = 13556;
+		}
+		return itemId;
+	}
+	
 	/**
 	 * Method onRefreshWeight.
 	 */

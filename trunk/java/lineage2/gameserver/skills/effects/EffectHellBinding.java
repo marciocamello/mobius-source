@@ -42,15 +42,15 @@ public final class EffectHellBinding extends Effect
 		_ChainedAirSkills.put(140, 10499);
 		_ChainedAirSkills.put(141, 10749);
 		_ChainedAirSkills.put(142, 10999);
-		_ChainedAirSkills.put(143, 11247);
+		_ChainedAirSkills.put(143, 11249);
 		_ChainedAirSkills.put(144, 11749);
 		_ChainedAirSkills.put(145, 11499);
 		_ChainedAirSkills.put(146, 11999);
 		_ChainedTemporalReplace.put(10249, 10008);
 		_ChainedTemporalReplace.put(10499, 10258);
 		_ChainedTemporalReplace.put(10749, 10508);
-		_ChainedTemporalReplace.put(10999, 10760); // Confirmed by lineage forum
-		_ChainedTemporalReplace.put(11247, 11017);
+		_ChainedTemporalReplace.put(10999, 10760);
+		_ChainedTemporalReplace.put(11249, 11017);
 		_ChainedTemporalReplace.put(11749, 11509);
 		_ChainedTemporalReplace.put(11499, 11263);
 		_ChainedTemporalReplace.put(11999, 11814);
@@ -92,7 +92,6 @@ public final class EffectHellBinding extends Effect
 		}
 		_effected.abortAttack(true, true);
 		_effected.abortCast(true, true);
-		_effected.startParalyzed();
 		_effected.stopMove();
 	}
 	
@@ -107,7 +106,6 @@ public final class EffectHellBinding extends Effect
 		{
 			_effected.stopAirbinding();
 		}
-		_effected.stopParalyzed();
 	}
 	
 	/**

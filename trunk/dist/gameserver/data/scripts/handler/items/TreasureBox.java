@@ -22,16 +22,19 @@ import lineage2.gameserver.scripts.Functions;
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
- * @author KilRoy
- * @date 02.10.2012 15:54 =================================================== 32727 A Treasure Box - Double-click to acquire at random a hair Accessory Pack, pendant, box, enchant scroll box, and elixir box. =================================================== 33477 Hero's Treasure Box - Box
- *       containing 1 of various R-Grade items (Elixirs, Enchant Scrolls, etc.) ===================================================
- */
+* @author KilRoy
+* @date 02.10.2012 15:54
+===================================================
+32727	A Treasure Box - Double-click to acquire at random a hair Accessory Pack, pendant, box, enchant scroll box, and elixir box.
+===================================================
+33477	Hero's Treasure Box	- Box containing 1 of various R-Grade items (Elixirs, Enchant Scrolls, etc.)
+===================================================
+*/
 public class TreasureBox extends SimpleItemHandler
 {
 	private static final int[] ITEM_IDS = new int[]
 	{
 		32241,
-		32727,
 		32728,
 		32729,
 		32730,
@@ -84,9 +87,6 @@ public class TreasureBox extends SimpleItemHandler
 		switch (itemId)
 		{
 		// -------------Chest
-			case 32727:
-				use32727(player, ctrl);
-				break;
 			case 33477:
 				use33477(player, ctrl);
 				break;
@@ -194,123 +194,11 @@ public class TreasureBox extends SimpleItemHandler
 	}
 	
 	// --------------------------------------------------Chest
-	// A Treasure Box
-	private void use32727(Player player, boolean ctrl)
-	{
-		int[][] list = new int[][]
-		{
-			{
-				32730,
-				1
-			},
-			{
-				32731,
-				1
-			},
-			{
-				32732,
-				1
-			},
-			{
-				32733,
-				1
-			},
-			{
-				32734,
-				1
-			},
-			{
-				32735,
-				1
-			},
-			{
-				32736,
-				1
-			},
-			{
-				32737,
-				1
-			},
-			{
-				32738,
-				1
-			},
-			{
-				32739,
-				1
-			},
-			{
-				32740,
-				1
-			},
-			{
-				32741,
-				1
-			},
-			{
-				32728,
-				1
-			},
-			{
-				32729,
-				1
-			}
-		};
-		double[] chances = new double[]
-		{
-			9.55555,
-			3.01515,
-			33.16666,
-			26.86999,
-			19.19444,
-			13.38888,
-			7.75,
-			4,
-			28.33333,
-			23.94444,
-			16,
-			12.6666,
-			25.38888,
-			9.77777,
-			8.77777
-		};
-		extractRandomOneItem(player, list, chances);
-	}
-	
 	// Hero's Treasure Box
 	private void use33477(Player player, boolean ctrl)
 	{
-		int[][] list = new int[][]
-		{
-			{
-				34694,
-				1
-			},
-			{
-				34695,
-				1
-			},
-			{
-				34696,
-				1
-			},
-			{
-				34697,
-				1
-			},
-			{
-				34698,
-				1
-			}
-		};
-		double[] chances = new double[]
-		{
-			11.55555,
-			6.01515,
-			9.16666,
-			10.86999,
-			38.19444
-		};
+		int[][] list = new int[][]{{34694, 1}, {34695, 1}, {34696, 1}, {34697, 1}, {34698, 1}};
+		double[] chances = new double[]{11.55555, 6.01515, 9.16666, 10.86999, 38.19444};
 		extractRandomOneItem(player, list, chances);
 	}
 	
@@ -320,276 +208,64 @@ public class TreasureBox extends SimpleItemHandler
 	// Enchant Scroll Box - R Grade
 	private void use32731(Player player, boolean ctrl)
 	{
-		int[][] list = new int[][]
-		{
-			{
-				17526,
-				1
-			},
-			{
-				19447,
-				1
-			},
-			{
-				17527,
-				1
-			},
-			{
-				19448,
-				1
-			}
-		};
-		double[] chances = new double[]
-		{
-			11.55555,
-			6.01515,
-			34.16666,
-			19.86999
-		};
+		int[][] list = new int[][]{{17526, 1}, {19447, 1}, {17527, 1}, {19448, 1}};
+		double[] chances = new double[]{11.55555, 6.01515, 34.16666, 19.86999};
 		extractRandomOneItem(player, list, chances);
 	}
 	
 	// Enchant Scroll Box - S Grade
 	private void use32730(Player player, boolean ctrl)
 	{
-		int[][] list = new int[][]
-		{
-			{
-				959,
-				1
-			},
-			{
-				6577,
-				1
-			},
-			{
-				960,
-				1
-			},
-			{
-				6578,
-				1
-			}
-		};
-		double[] chances = new double[]
-		{
-			11.55555,
-			6.01515,
-			34.16666,
-			19.86999
-		};
+		int[][] list = new int[][]{{959, 1}, {6577, 1}, {960, 1}, {6578, 1}};
+		double[] chances = new double[]{11.55555, 6.01515, 34.16666, 19.86999};
 		extractRandomOneItem(player, list, chances);
 	}
 	
 	// Enchant Scroll Box - A Grade
 	private void use32735(Player player, boolean ctrl)
 	{
-		int[][] list = new int[][]
-		{
-			{
-				729,
-				1
-			},
-			{
-				6569,
-				1
-			},
-			{
-				730,
-				1
-			},
-			{
-				6570,
-				1
-			}
-		};
-		double[] chances = new double[]
-		{
-			11.55555,
-			6.01515,
-			34.16666,
-			19.86999
-		};
+		int[][] list = new int[][]{{729, 1}, {6569, 1}, {730, 1}, {6570, 1}};
+		double[] chances = new double[]{11.55555, 6.01515, 34.16666, 19.86999};
 		extractRandomOneItem(player, list, chances);
 	}
 	
 	// Enchant Scroll Box - B Grade
 	private void use32734(Player player, boolean ctrl)
 	{
-		int[][] list = new int[][]
-		{
-			{
-				947,
-				1
-			},
-			{
-				6571,
-				1
-			},
-			{
-				948,
-				1
-			},
-			{
-				6572,
-				1
-			}
-		};
-		double[] chances = new double[]
-		{
-			11.55555,
-			6.01515,
-			34.16666,
-			19.86999
-		};
+		int[][] list = new int[][]{{947, 1}, {6571, 1}, {948, 1}, {6572, 1}};
+		double[] chances = new double[]{11.55555, 6.01515, 34.16666, 19.86999};
 		extractRandomOneItem(player, list, chances);
 	}
 	
 	// Enchant Scroll Box - C Grade
 	private void use32733(Player player, boolean ctrl)
 	{
-		int[][] list = new int[][]
-		{
-			{
-				951,
-				1
-			},
-			{
-				6573,
-				1
-			},
-			{
-				952,
-				1
-			},
-			{
-				6574,
-				1
-			}
-		};
-		double[] chances = new double[]
-		{
-			11.55555,
-			6.01515,
-			34.16666,
-			19.86999
-		};
+		int[][] list = new int[][]{{951, 1}, {6573, 1}, {952, 1}, {6574, 1}};
+		double[] chances = new double[]{11.55555, 6.01515, 34.16666, 19.86999};
 		extractRandomOneItem(player, list, chances);
 	}
 	
 	// Enchant Scroll Box - D Grade
 	private void use32732(Player player, boolean ctrl)
 	{
-		int[][] list = new int[][]
-		{
-			{
-				955,
-				1
-			},
-			{
-				6575,
-				1
-			},
-			{
-				956,
-				1
-			},
-			{
-				6576,
-				1
-			}
-		};
-		double[] chances = new double[]
-		{
-			11.55555,
-			6.01515,
-			34.16666,
-			19.86999
-		};
+		int[][] list = new int[][]{{955, 1}, {6575, 1}, {956, 1}, {6576, 1}};
+		double[] chances = new double[]{11.55555, 6.01515, 34.16666, 19.86999};
 		extractRandomOneItem(player, list, chances);
 	}
 	
 	// Hero's Enchant Scroll of Destruction Box
 	private void use34695(Player player, boolean ctrl)
 	{
-		int[][] list = new int[][]
-		{
-			{
-				33478,
-				1
-			},
-			{
-				33479,
-				1
-			},
-			{
-				22221,
-				1
-			},
-			{
-				22222,
-				1
-			},
-			{
-				22223,
-				1
-			},
-			{
-				22224,
-				1
-			}
-		};
-		double[] chances = new double[]
-		{
-			5.55555,
-			9.01515,
-			14.55555,
-			21.01515,
-			34.16666,
-			41.86999
-		};
+		int[][] list = new int[][]{{33478, 1}, {33479, 1}, {22221, 1}, {22222, 1}, {22223, 1}, {22224, 1}};
+		double[] chances = new double[]{5.55555, 9.01515, 14.55555, 21.01515, 34.16666, 41.86999};
 		extractRandomOneItem(player, list, chances);
 	}
 	
 	// Hero's Blessed Enchant Scroll Box
 	private void use34696(Player player, boolean ctrl)
 	{
-		int[][] list = new int[][]
-		{
-			{
-				19447,
-				1
-			},
-			{
-				19448,
-				1
-			},
-			{
-				6577,
-				1
-			},
-			{
-				6578,
-				1
-			},
-			{
-				6569,
-				1
-			},
-			{
-				6570,
-				1
-			}
-		};
-		double[] chances = new double[]
-		{
-			5.55555,
-			9.01515,
-			14.55555,
-			21.01515,
-			34.16666,
-			41.86999
-		};
+		int[][] list = new int[][]{{19447, 1}, {19448, 1}, {6577, 1}, {6578, 1}, {6569, 1}, {6570, 1}};
+		double[] chances = new double[]{5.55555, 9.01515, 14.55555, 21.01515, 34.16666, 41.86999};
 		extractRandomOneItem(player, list, chances);
 	}
 	
@@ -599,167 +275,48 @@ public class TreasureBox extends SimpleItemHandler
 	// Elixir Box (R-Grade)
 	private void use32737(Player player, boolean ctrl)
 	{
-		int[][] list = new int[][]
-		{
-			{
-				32316,
-				1
-			},
-			{
-				30357,
-				1
-			},
-			{
-				30358,
-				1
-			},
-			{
-				30359,
-				1
-			}
-		};
-		double[] chances = new double[]
-		{
-			11.55555,
-			24.01515,
-			18.16666,
-			32.86999
-		};
+		int[][] list = new int[][]{{32316, 1}, {30357, 1}, {30358, 1}, {30359, 1}};
+		double[] chances = new double[]{11.55555, 24.01515, 18.16666, 32.86999};
 		extractRandomOneItem(player, list, chances);
 	}
 	
 	// Elixir Box (S-Grade)
 	private void use32736(Player player, boolean ctrl)
 	{
-		int[][] list = new int[][]
-		{
-			{
-				8627,
-				1
-			},
-			{
-				8633,
-				1
-			},
-			{
-				8639,
-				1
-			}
-		};
-		double[] chances = new double[]
-		{
-			19.01515,
-			18.16666,
-			32.86999
-		};
+		int[][] list = new int[][]{{8627, 1}, {8633, 1}, {8639, 1}};
+		double[] chances = new double[]{19.01515, 18.16666, 32.86999};
 		extractRandomOneItem(player, list, chances);
 	}
 	
 	// Elixir Box (A-Grade)
 	private void use32741(Player player, boolean ctrl)
 	{
-		int[][] list = new int[][]
-		{
-			{
-				8626,
-				1
-			},
-			{
-				8632,
-				1
-			},
-			{
-				8638,
-				1
-			}
-		};
-		double[] chances = new double[]
-		{
-			19.01515,
-			18.16666,
-			32.86999
-		};
+		int[][] list = new int[][]{{8626, 1}, {8632, 1}, {8638, 1}};
+		double[] chances = new double[]{19.01515, 18.16666, 32.86999};
 		extractRandomOneItem(player, list, chances);
 	}
 	
 	// Elixir Box (B-Grade)
 	private void use32740(Player player, boolean ctrl)
 	{
-		int[][] list = new int[][]
-		{
-			{
-				8625,
-				1
-			},
-			{
-				8631,
-				1
-			},
-			{
-				8637,
-				1
-			}
-		};
-		double[] chances = new double[]
-		{
-			19.01515,
-			18.16666,
-			32.86999
-		};
+		int[][] list = new int[][]{{8625, 1}, {8631, 1}, {8637, 1}};
+		double[] chances = new double[]{19.01515, 18.16666, 32.86999};
 		extractRandomOneItem(player, list, chances);
 	}
 	
 	// Elixir Box (C-Grade)
 	private void use32739(Player player, boolean ctrl)
 	{
-		int[][] list = new int[][]
-		{
-			{
-				8624,
-				1
-			},
-			{
-				8630,
-				1
-			},
-			{
-				8636,
-				1
-			}
-		};
-		double[] chances = new double[]
-		{
-			19.01515,
-			18.16666,
-			32.86999
-		};
+		int[][] list = new int[][]{{8624, 1}, {8630, 1}, {8636, 1}};
+		double[] chances = new double[]{19.01515, 18.16666, 32.86999};
 		extractRandomOneItem(player, list, chances);
 	}
 	
 	// Elixir Box (D-Grade)
 	private void use32738(Player player, boolean ctrl)
 	{
-		int[][] list = new int[][]
-		{
-			{
-				8623,
-				1
-			},
-			{
-				8629,
-				1
-			},
-			{
-				8635,
-				1
-			}
-		};
-		double[] chances = new double[]
-		{
-			19.01515,
-			18.16666,
-			32.86999
-		};
+		int[][] list = new int[][]{{8623, 1}, {8629, 1}, {8635, 1}};
+		double[] chances = new double[]{19.01515, 18.16666, 32.86999};
 		extractRandomOneItem(player, list, chances);
 	}
 	
@@ -769,224 +326,16 @@ public class TreasureBox extends SimpleItemHandler
 	// Hair Accessory Chest
 	private void use32728(Player player, boolean ctrl)
 	{
-		int[][] list = new int[][]
-		{
-			{
-				8921,
-				1
-			},
-			{
-				8920,
-				1
-			},
-			{
-				22168,
-				1
-			},
-			{
-				7680,
-				1
-			},
-			{
-				6843,
-				1
-			},
-			{
-				8565,
-				1
-			},
-			{
-				22159,
-				1
-			},
-			{
-				7681,
-				1
-			},
-			{
-				8916,
-				1
-			},
-			{
-				8184,
-				1
-			},
-			{
-				13494,
-				1
-			},
-			{
-				13495,
-				1
-			}
-		};
-		double[] chances = new double[]
-		{
-			11.55555,
-			11.01515,
-			34.16666,
-			34.86999,
-			38.19444,
-			35.55555,
-			30.55555,
-			25.55555,
-			27.55555,
-			31.55555,
-			11.55555,
-			11.55555
-		};
+		int[][] list = new int[][]{{8921, 1}, {8920, 1}, {22168, 1}, {7680, 1}, {6843, 1}, {8565, 1}, {22159, 1}, {7681, 1}, {8916, 1}, {8184, 1}, {13494, 1}, {13495, 1}};
+		double[] chances = new double[]{11.55555, 11.01515, 34.16666, 34.86999, 38.19444, 35.55555, 30.55555, 25.55555, 27.55555, 31.55555, 11.55555, 11.55555};
 		extractRandomOneItem(player, list, chances);
 	}
 	
 	// Pendant Box
 	private void use32729(Player player, boolean ctrl)
 	{
-		int[][] list = new int[][]
-		{
-			{
-				32767,
-				1
-			},
-			{
-				32768,
-				1
-			},
-			{
-				32769,
-				1
-			},
-			{
-				32764,
-				1
-			},
-			{
-				32765,
-				1
-			},
-			{
-				32766,
-				1
-			},
-			{
-				32762,
-				1
-			},
-			{
-				32763,
-				1
-			},
-			{
-				32746,
-				1
-			},
-			{
-				32747,
-				1
-			},
-			{
-				32744,
-				1
-			},
-			{
-				32745,
-				1
-			},
-			{
-				32742,
-				1
-			},
-			{
-				32743,
-				1
-			},
-			{
-				34635,
-				1
-			},
-			{
-				34636,
-				1
-			},
-			{
-				34637,
-				1
-			},
-			{
-				34638,
-				1
-			},
-			{
-				34639,
-				1
-			},
-			{
-				34640,
-				1
-			},
-			{
-				34641,
-				1
-			},
-			{
-				34642,
-				1
-			},
-			{
-				34643,
-				1
-			},
-			{
-				34644,
-				1
-			},
-			{
-				34645,
-				1
-			},
-			{
-				34646,
-				1
-			},
-			{
-				34647,
-				1
-			},
-			{
-				34648,
-				1
-			}
-		};
-		double[] chances = new double[]
-		{
-			11.55555,
-			11.01515,
-			11.16666,
-			11.86999,
-			11.19444,
-			11.55555,
-			30.55555,
-			25.55555,
-			27.55555,
-			31.55555,
-			28.55555,
-			34.55555,
-			31.55555,
-			33.55555,
-			34.55555,
-			23.55555,
-			32.55555,
-			19.55555,
-			20.55555,
-			25.55555,
-			31.55555,
-			32.55555,
-			11.55555,
-			11.55555,
-			11.55555,
-			11.55555,
-			11.55555,
-			11.55555
-		};
+		int[][] list = new int[][]{{32767, 1}, {32768, 1}, {32769, 1}, {32764, 1}, {32765, 1}, {32766, 1}, {32762, 1}, {32763, 1}, {32746, 1}, {32747, 1}, {32744, 1}, {32745, 1}, {32742, 1}, {32743, 1}, {34635, 1}, {34636, 1}, {34637, 1}, {34638, 1}, {34639, 1}, {34640, 1}, {34641, 1}, {34642, 1}, {34643, 1}, {34644, 1}, {34645, 1}, {34646, 1}, {34647, 1}, {34648, 1}};
+		double[] chances = new double[]{11.55555, 11.01515, 11.16666, 11.86999, 11.19444, 11.55555, 30.55555, 25.55555, 27.55555, 31.55555, 28.55555, 34.55555, 31.55555, 33.55555, 34.55555, 23.55555, 32.55555, 19.55555, 20.55555, 25.55555, 31.55555, 32.55555, 11.55555, 11.55555, 11.55555, 11.55555, 11.55555, 11.55555};
 		extractRandomOneItem(player, list, chances);
 	}
 	
@@ -1086,112 +435,8 @@ public class TreasureBox extends SimpleItemHandler
 	// -------------Other Items
 	private void use32241(Player player, boolean ctrl) // Adventures Box
 	{
-		int[][] list = new int[][]
-		{
-			{
-				22024,
-				1
-			},
-			{
-				22026,
-				1
-			},
-			{
-				736,
-				1
-			},
-			{
-				13410,
-				1
-			},
-			{
-				13404,
-				1
-			},
-			{
-				13400,
-				1
-			},
-			{
-				13401,
-				1
-			},
-			{
-				13411,
-				1
-			},
-			{
-				13395,
-				1
-			},
-			{
-				13402,
-				1
-			},
-			{
-				13412,
-				1
-			},
-			{
-				13413,
-				1
-			},
-			{
-				10131,
-				1
-			},
-			{
-				10132,
-				1
-			},
-			{
-				10134,
-				1
-			},
-			{
-				10135,
-				1
-			},
-			{
-				10136,
-				1
-			},
-			{
-				10137,
-				1
-			},
-			{
-				10138,
-				1
-			},
-			{
-				22025,
-				1
-			}
-		};
-		double[] chances = new double[]
-		{
-			39.01515,
-			11.16666,
-			22.86999,
-			22.86999,
-			22.86999,
-			22.86999,
-			22.86999,
-			22.86999,
-			22.86999,
-			22.86999,
-			22.86999,
-			22.86999,
-			14.86999,
-			14.86999,
-			14.86999,
-			14.86999,
-			14.86999,
-			14.86999,
-			14.86999,
-			11.86999
-		};
+		int[][] list = new int[][]{{22024, 1}, {22026, 1}, {736, 1}, {13410, 1}, {13404, 1}, {13400, 1}, {13401, 1}, {13411, 1}, {13395, 1}, {13402, 1}, {13412, 1}, {13413, 1}, {10131, 1}, {10132, 1}, {10134, 1}, {10135, 1}, {10136, 1}, {10137, 1}, {10138, 1}, {22025, 1}};
+		double[] chances = new double[]{39.01515, 11.16666, 22.86999, 22.86999, 22.86999, 22.86999, 22.86999, 22.86999, 22.86999, 22.86999, 22.86999, 22.86999, 14.86999, 14.86999, 14.86999, 14.86999, 14.86999, 14.86999, 14.86999, 11.86999};
 		extractRandomOneItem(player, list, chances);
 	}
 	

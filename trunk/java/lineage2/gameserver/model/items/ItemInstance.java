@@ -46,6 +46,7 @@ import lineage2.gameserver.stats.funcs.FuncTemplate;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.taskmanager.ItemsAutoDestroy;
 import lineage2.gameserver.taskmanager.LazyPrecisionTaskManager;
+import lineage2.gameserver.templates.item.ExItemType;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.item.ItemTemplate.Grade;
 import lineage2.gameserver.templates.item.ItemTemplate.ItemClass;
@@ -57,10 +58,6 @@ import org.napile.primitive.Containers;
 import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.HashIntSet;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
 public final class ItemInstance extends GameObject implements JdbcEntity
 {
 	/**
@@ -255,6 +252,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	 * Field _chargedFishtshot.
 	 */
 	private boolean _chargedFishtshot = false;
+	private int _visualId;
 	/**
 	 * Field _augmentationId.
 	 */
@@ -689,6 +687,11 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return template.getItemType();
 	}
 	
+	public ExItemType getExItemType()
+	{
+		return template.getExItemType();
+	}
+	
 	/**
 	 * Method isArmor.
 	 * @return boolean
@@ -734,15 +737,15 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return template.isStackable();
 	}
 	
-	/**
-	 * Method onAction.
-	 * @param player Player
-	 * @param shift boolean
-	 */
 	@Override
-	public void onAction(Player player, boolean shift)
+	public void onActionSelect(final Player player, final boolean forced)
 	{
-		if (Events.onAction(player, this, shift))
+		if (Events.onAction(player, this, forced))
+		{
+			return;
+		}
+		
+		if (player.isAlikeDead())
 		{
 			return;
 		}
@@ -1800,12 +1803,36 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return _enchantOptions;
 	}
 	
-	/**
-	 * Method getDropPlayers.
-	 * @return IntSet
-	 */
+	public int getVisualId()
+	{
+		return _visualId;
+	}
+	
+	public void setVisualId(int val)
+	{
+		_visualId = val;
+	}
+	
 	public IntSet getDropPlayers()
 	{
 		return _dropPlayers;
+	}
+	
+	public boolean isOther()
+	{
+		if (!isAccessory() || !isWeapon() || !isArmor())
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean canBeAppearance()
+	{
+		if (isAccessory() || isWeapon() || isArmor())
+		{
+			return true;
+		}
+		return false;
 	}
 }

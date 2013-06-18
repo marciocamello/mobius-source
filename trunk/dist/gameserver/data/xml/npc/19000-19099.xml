@@ -69,24 +69,25 @@
 		</skills>
 	</npc>
 	<npc id="19001" name="Apherus Package" title="Mysterious">
-		<!--fixed by Darvin & HaxHago-->
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="92"/>
-		<set name="type" value="Npc"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="5134"/>
-		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1674.8"/>
-		<set name="baseMpReg" value="3.0"/>
+		<set name="baseMpMax" value="1675"/>
+		<set name="baseMpReg" value="3"/>
 		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="5"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -99,6 +100,7 @@
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="1"/>
 		<set name="baseWalkSpd" value="1"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="160"/>
 			<defence attribute="water" value="160"/>
@@ -107,27 +109,32 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="17373" min="1" max="1" chance="100.0"/>
+			</group>
+		</rewardlist>
 	</npc>
 	<npc id="19002" name="Apherus Package" title="Mysterious">
-		<!--fixed by Darvin & HaxHago-->
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="92"/>
-		<set name="type" value="Npc"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="5134"/>
-		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1674.8"/>
-		<set name="baseMpReg" value="3.0"/>
+		<set name="baseMpMax" value="1675"/>
+		<set name="baseMpReg" value="3"/>
 		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="5"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -140,6 +147,7 @@
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="1"/>
 		<set name="baseWalkSpd" value="1"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="160"/>
 			<defence attribute="water" value="160"/>
@@ -151,24 +159,25 @@
 		<skills/>
 	</npc>
 	<npc id="19003" name="Apherus Package" title="Mysterious">
-		<!--fixed by Darvin & HaxHago-->
+		<!--L2WT Tauti Confirmed-->
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
-		<set name="level" value="85"/>
-		<set name="type" value="Npc"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="level" value="92"/>
+		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="2880.376"/>
-		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpMax" value="5134"/>
+		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1674.8"/>
-		<set name="baseMpReg" value="3.0"/>
+		<set name="baseMpMax" value="1675"/>
+		<set name="baseMpReg" value="3"/>
 		<set name="baseSTR" value="78"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="5"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -181,6 +190,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="1"/>
 		<set name="baseWalkSpd" value="1"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="160"/>
 			<defence attribute="water" value="160"/>

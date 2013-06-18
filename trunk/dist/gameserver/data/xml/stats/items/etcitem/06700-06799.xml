@@ -2,6 +2,7 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<etcitem id="6700" name="Sealed Tateossian Necklace Chain">
+	<!-- Main ingredient required for a Dwarf to make the Sealed Tateossian Necklace. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_jewel_box_i00"/>
@@ -11,6 +12,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="6701" name="Sealed Imperial Crusader Breastplate Part">
+	<!-- Main ingredient required for a Dwarf to make the Sealed Imperial Crusader Breastplate. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_plate_silver_i00"/>
@@ -20,6 +22,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="6702" name="Sealed Imperial Crusader Gaiters Pattern">
+	<!-- Main ingredient required for a Dwarf to make the Sealed Imperial Crusader Gaiters. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pouch_brown_i00"/>
@@ -29,6 +32,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="6703" name="Sealed Imperial Crusader Gauntlets Design">
+	<!-- Main ingredient required for a Dwarf to make the sealed imperial crusader gauntlets. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pouch_brown_i00"/>
@@ -38,6 +42,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="6704" name="Sealed Imperial Crusader Boots Design">
+	<!-- Main ingredient required for a Dwarf to make the Sealed Imperial Crusader Boots. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pouch_brown_i00"/>
@@ -47,6 +52,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="6705" name="Sealed Imperial Crusader Shield Part">
+	<!-- Main ingredient required for a Dwarf to make the Sealed Imperial Crusader Shield. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_plate_silver_i00"/>
@@ -56,6 +62,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="6706" name="Sealed Imperial Crusader Helmet Pattern">
+	<!-- Main ingredient required for a Dwarf to make the Sealed Imperial Crusader Helmet. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pouch_brown_i00"/>
@@ -65,6 +72,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="6707" name="Sealed Draconic Leather Armor Part">
+	<!-- Main ingredient required for a Dwarf to make the Sealed Draconic Leather Armor. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_leather_gray_i00"/>
@@ -74,6 +82,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="6708" name="Sealed Draconic Leather Gloves Fabric">
+	<!-- Main ingredient required for a Dwarf to make the Sealed Draconic Leather Gloves. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_leather_gray_i00"/>
@@ -83,6 +92,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="6709" name="Sealed Draconic Leather Boots Design">
+	<!-- Main ingredient required for a Dwarf to make the Sealed Draconic Leather Boots. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pouch_brown_i00"/>
@@ -92,6 +102,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="6710" name="Sealed Draconic Leather Helmet Pattern">
+	<!-- Main ingredient required for a Dwarf to make the Sealed Draconic Leather Helmet. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pouch_brown_i00"/>
@@ -101,6 +112,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="6711" name="Sealed Major Arcana Robe Part">
+	<!-- Main ingredient required for a Dwarf to make the Sealed Major Arcana Robe. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_plate_silver_i00"/>
@@ -110,6 +122,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="6712" name="Sealed Major Arcana Gloves fabric">
+	<!-- Main ingredient required for a Dwarf to make the Sealed Major Arcana Gloves. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_leather_gray_i00"/>
@@ -119,6 +132,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="6713" name="Sealed Major Arcana Boots Design">
+	<!-- Main ingredient required for a Dwarf to make the Sealed Major Arcana Boots. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pouch_brown_i00"/>
@@ -128,6 +142,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="6714" name="Sealed Major Arcana Circlet Pattern">
+	<!-- Main ingredient required for a Dwarf to make the Sealed Major Arcana Circlet. Can also be sold at ordinary shops. -->
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pouch_brown_i00"/>
@@ -137,6 +152,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="6727" name="Seed: Alternative Great Coba">
+	<!-- Plant this seed onto a monster in the Goddard area and it will bear the fruit of the Alternative Great Coba. For best results, a level 80-90 character must plant it on a level 80-90 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -147,6 +163,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6728" name="Seed: Alternative Sea Coba">
+	<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -157,6 +174,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6729" name="Seed: Alternative Sea Coba">
+	<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -167,6 +185,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6730" name="Seed: Alternative Sea Coba">
+	<!-- Plant this seed onto a monster in the Goddard area and it will bear the fruit of the Alternative Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -177,6 +196,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6731" name="Seed: Alternative Red Coba">
+	<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Red Coba. For best results, a level 65-75 character must plant it on a level 65-75 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -187,6 +207,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6732" name="Seed: Alternative Red Coba">
+	<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Red Coba. For best results, a level 65-75 character must plant it on a level 65-75 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -197,6 +218,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6733" name="Seed: Alternative Red Coba">
+	<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Red Coba. For best results, a level 65-75 character must plant it on a level 65-75 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -207,6 +229,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6734" name="Seed: Alternative Red Coba">
+	<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Red Coba. For best results, a level 65-75 character must plant it on a level 65-75 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -217,6 +240,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6735" name="Seed: Alternative Red Coba">
+	<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Red Coba. For best results, a level 65-75 character must plant it on a level 65-75 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -227,6 +251,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6736" name="Seed: Alternative Desert Coba">
+	<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Desert Coba. For best results, a level 71-81 character must plant it on a level 71-81 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -237,6 +262,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6737" name="Seed: Alternative Desert Coba">
+	<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Desert Coba. For best results, a level 71-81 character must plant it on a level 71-81 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -247,6 +273,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6738" name="Seed: Alternative Desert Coba">
+	<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Desert Coba. For best results, a level 71-81 character must plant it on a level 71-81 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -257,6 +284,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6739" name="Seed: Alternative Desert Coba">
+	<!-- Plant this seed onto a monster in the Goddard area and it will bear the fruit of the Alternative Desert Coba. For best results, a level 71-81 character must plant it on a level 71-81 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -267,6 +295,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6740" name="Seed: Alternative Desert Coba">
+	<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Desert Coba. For best results, a level 71-81 character must plant it on a level 71-81 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -277,6 +306,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6741" name="Seed: Alternative Twin Coba">
+	<!-- Plant this seed onto a monster in the Goddard area and it will bear the fruit of the Alternative Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -287,6 +317,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6742" name="Seed: Alternative Blue Coba">
+	<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Blue Coba. For best results, a level 62-72 character must plant it on a level 62-72 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -297,6 +328,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6743" name="Seed: Alternative Blue Coba">
+	<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Blue Coba. For best results, a level 62-72 character must plant it on a level 62-72 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -307,6 +339,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6744" name="Seed: Alternative Blue Coba">
+	<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Blue Coba. For best results, a level 62-72 character must plant it on a level 62-72 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -317,6 +350,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6745" name="Seed: Alternative Blue Coba">
+	<!-- Plant this seed onto a monster in the Goddard area and it will bear the fruit of the Alternative Blue Coba. For best results, a level 62-72 character must plant it on a level 62-72 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -327,6 +361,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6746" name="Seed: Alternative Blue Coba">
+	<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Blue Coba. For best results, a level 62-72 character must plant it on a level 62-72 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -337,6 +372,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6747" name="Seed: Alternative Golden Coba">
+	<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Golden Coba. For best results, a level 68-78 character must plant it on a level 68-78 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -347,6 +383,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6748" name="Seed: Alternative Golden Coba">
+	<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Golden Coba. For best results, a level 68-78 character must plant it on a level 68-78 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -357,6 +394,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6749" name="Seed: Alternative Golden Coba">
+	<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Golden Coba. For best results, a level 68-78 character must plant it on a level 68-78 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -367,6 +405,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6750" name="Seed: Alternative Golden Coba">
+	<!-- Plant this seed onto a monster in the Goddard area and it will bear the fruit of the Alternative Golden Coba. For best results, a level 68-78 character must plant it on a level 68-78 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -377,6 +416,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6751" name="Seed: Alternative Golden Coba">
+	<!-- Plant this seed onto a monster in the Goddard area and it will bear the fruit of the Alternative Golden Coba. For best results, a level 68-78 character must plant it on a level 68-78 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -387,6 +427,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6752" name="Seed: Alternative Golden Coba">
+	<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Alternative Golden Coba. For best results, a level 68-78 character must plant it on a level 68-78 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -397,6 +438,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6753" name="Seed: Great Coba">
+	<!-- Plant this seed onto a monster in the Goddard area and it will bear the fruit of the Great Coba. For best results, a level 80-90 character must plant it on a level 80-90 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -407,6 +449,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6754" name="Seed: Sea Coba">
+	<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -417,6 +460,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6755" name="Seed: Sea Coba">
+	<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -427,6 +471,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6756" name="Seed: Sea Coba">
+	<!-- Plant this seed onto a monster in the Goddard area and it will bear the fruit of the Sea Coba. For best results, a level 74-84 character must plant it on a level 74-84 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -437,6 +482,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6757" name="Seed: Red Coba">
+	<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Red Coba. For best results, a level 65-75 character must plant it on a level 65-75 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -447,6 +493,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6758" name="Seed: Red Coba">
+	<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Red Coba. For best results, a level 65-75 character must plant it on a level 65-75 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -457,6 +504,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6759" name="Seed: Red Coba">
+	<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Red Coba. For best results, a level 65-75 character must plant it on a level 65-75 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -467,6 +515,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6760" name="Seed: Red Coba">
+	<!-- Plant this seed onto a monster in the Goddard area and it will bear the fruit of the Red Coba. For best results, a level 65-75 character must plant it on a level 65-75 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -477,6 +526,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6761" name="Seed: Red Coba">
+	<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Red Coba. For best results, a level 65-75 character must plant it on a level 65-75 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -487,6 +537,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6762" name="Seed: Desert Coba">
+	<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Desert Coba. For best results, a level 71-81 character must plant it on a level 71-81 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -497,6 +548,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6763" name="Seed: Desert Coba">
+	<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Desert Coba. For best results, a level 71-81 character must plant it on a level 71-81 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -507,6 +559,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6764" name="Seed: Desert Coba">
+	<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Desert Coba. For best results, a level 71-81 character must plant it on a level 71-81 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -517,6 +570,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6765" name="Seed: Desert Coba">
+	<!-- Plant this seed onto a monster in the Goddard area and it will bear the fruit of the Desert Coba. For best results, a level 71-81 character must plant it on a level 71-81 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -527,6 +581,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6766" name="Seed: Desert Coba">
+	<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Desert Coba. For best results, a level 71-81 character must plant it on a level 71-81 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -537,6 +592,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6767" name="Seed: Twin Coba">
+	<!-- Plant this seed onto a monster in the Goddard area and it will bear the fruit of the Twin Coba. For best results, a level 77-87 character must plant it on a level 77-87 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -547,6 +603,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6768" name="Seed: Blue Coba">
+	<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Blue Coba. For best results, a level 62-72 character must plant it on a level 62-72 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -557,6 +614,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6769" name="Seed: Blue Coba">
+	<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Blue Coba. For best results, a level 62-72 character must plant it on a level 62-72 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -567,6 +625,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6770" name="Seed: Blue Coba">
+	<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Blue Coba. For best results, a level 62-72 character must plant it on a level 62-72 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -577,6 +636,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6771" name="Seed: Blue Coba">
+	<!-- Plant this seed onto a monster in the Goddard area and it will bear the fruit of the Blue Coba. For best results, a level 62-72 character must plant it on a level 62-72 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -587,6 +647,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6772" name="Seed: Blue Coba">
+	<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Blue Coba. For best results, a level 62-72 character must plant it on a level 62-72 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -597,6 +658,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6773" name="Seed: Golden Coba">
+	<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Golden Coba. For best results, a level 68-78 character must plant it on a level 68-78 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -607,6 +669,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6774" name="Seed: Golden Coba">
+	<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Golden Coba. For best results, a level 68-78 character must plant it on a level 68-78 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -617,6 +680,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6775" name="Seed: Golden Coba">
+	<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Golden Coba. For best results, a level 68-78 character must plant it on a level 68-78 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -627,6 +691,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6776" name="Seed: Golden Coba">
+	<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Golden Coba. For best results, a level 68-78 character must plant it on a level 68-78 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -637,6 +702,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6777" name="Seed: Golden Coba">
+	<!-- Plant this seed onto a monster in the Goddard area and it will bear the fruit of the Golden Coba. For best results, a level 68-78 character must plant it on a level 68-78 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -647,6 +713,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6778" name="Seed: Golden Coba">
+	<!-- Plant this seed onto a monster in the Rune area and it will bear the fruit of the Golden Coba. For best results, a level 68-78 character must plant it on a level 68-78 monster. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -657,6 +724,7 @@
 		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="6779" name="Mercenary Posting Ticket (Sword/Stationary)">
+	<!-- Goddard/Sword/Stationary -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -668,6 +736,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6780" name="Mercenary Posting Ticket (Spear/Stationary)">
+	<!-- Goddard/Spear/Stationary -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -679,6 +748,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6781" name="Mercenary Posting Ticket (Bow/Stationary)">
+	<!-- Goddard/Bow/Stationary -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -690,6 +760,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6782" name="Mercenary Posting Ticket (Cleric/Stationary)">
+	<!-- Goddard/Cleric/Stationary -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -701,6 +772,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6783" name="Mercenary Posting Ticket (Wizard/Stationary)">
+	<!-- Goddard/Wizard/Stationary -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -712,6 +784,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6784" name="Mercenary Posting Ticket (Sword/Mobile)">
+	<!-- Goddard/Sword/Mobile -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -723,6 +796,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6785" name="Mercenary Posting Ticket (Spear/Mobile)">
+	<!-- Goddard/Spear/Mobile -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -734,6 +808,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6786" name="Mercenary Posting Ticket (Bow/Mobile)">
+	<!-- Goddard/Bow/Mobile -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -745,6 +820,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6787" name="Mercenary Posting Ticket (Cleric/Mobile)">
+	<!-- Goddard/Cleric/Mobile -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -756,6 +832,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6788" name="Mercenary Posting Ticket (Wizard/Mobile)">
+	<!-- Goddard/Wizard/Mobile -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -767,6 +844,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6789" name="Mercenary Posting Ticket (Teleporter1)">
+	<!-- Placed in Goddard, at the Teleporter or inside the castle, this ticket allows teleportation to the inner castle or the guardian's location. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -778,6 +856,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6790" name="Mercenary Posting Ticket (Teleporter2)">
+	<!-- Placed in Goddard, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle or the guardian's location. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -789,6 +868,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6791" name="Mercenary Posting Ticket (Teleporter3)">
+	<!-- Placed in Goddard, at the Teleporter or inside the castle, this ticket allows teleportation to the inner or outer castle. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -800,6 +880,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6792" name="Greater Mercenary Posting Ticket (Sword/Stationary)">
+	<!-- Goddard/Sword/Stationary. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -811,6 +892,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6793" name="Greater Mercenary Posting Ticket (Spear/Stationary)">
+	<!-- Goddard/Spear/Stationary. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -822,6 +904,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6794" name="Greater Mercenary Posting Ticket (Bow/Stationary)">
+	<!-- Goddard/Bow/Stationary. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -833,6 +916,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6795" name="Greater Mercenary Posting Ticket (Cleric/Stationary)">
+	<!-- Goddard/Cleric/Stationary. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -844,6 +928,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6796" name="Greater Mercenary Posting Ticket (Wizard/Stationary)">
+	<!-- Goddard/Wizard/Stationary. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -855,6 +940,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6797" name="Greater Mercenary Posting Ticket (Sword/Mobile)">
+	<!-- Goddard/Sword/Mobile. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -866,6 +952,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6798" name="Greater Mercenary Posting Ticket (Spear/Mobile)">
+	<!-- Goddard/Spear/Mobile. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -877,6 +964,7 @@
 		<set name="type" value="MERCENARY_TICKET"/>
 	</etcitem>
 	<etcitem id="6799" name="Greater Mercenary Posting Ticket (Bow/Mobile)">
+	<!-- Goddard/Bow/Mobile. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

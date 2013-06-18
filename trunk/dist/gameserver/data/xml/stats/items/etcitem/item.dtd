@@ -41,7 +41,12 @@
 	olympiad CDATA #IMPLIED
 	race CDATA #IMPLIED
 	instance_zone CDATA #IMPLIED
-	classId CDATA #IMPLIED>
+	classId CDATA #IMPLIED
+	castleLightClanLeader CDATA #IMPLIED
+	castleLight CDATA #IMPLIED
+	castleDarkClanLeader CDATA #IMPLIED
+	castleDark CDATA #IMPLIED
+	>
 <!ELEMENT target (#PCDATA)>
 <!ATTLIST target
 	pvp CDATA #REQUIRED>

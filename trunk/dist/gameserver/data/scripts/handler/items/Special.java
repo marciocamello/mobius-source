@@ -12,7 +12,6 @@
  */
 package handler.items;
 
-import lineage2.commons.util.Rnd;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.QuestManager;
 import lineage2.gameserver.instancemanager.ReflectionManager;
@@ -48,20 +47,22 @@ public class Special extends SimpleItemHandler
 	 */
 	private static final int[] ITEM_IDS = new int[]
 	{
+		8060,
 		8556,
 		13853,
 		13808,
 		13809,
 		14835,
 		15537,
-		10632,
+		17268,
+		17619,
 		21899,
 		21900,
 		21901,
 		21902,
 		21903,
 		21904,
-		17268
+		34033
 	};
 	
 	/**
@@ -87,20 +88,32 @@ public class Special extends SimpleItemHandler
 		final int itemId = item.getItemId();
 		switch (itemId)
 		{
+		// Key of Enigma
+			case 8060:
+				return use8060(player, ctrl);
+				// Dewdrop of Destruction
 			case 8556:
 				return use8556(player, ctrl);
+				// DestroyedDarknessFragmentPowder -> DestroyedLightFragmentPowder
 			case 13853:
 				return use13853(player, ctrl);
+				// Holy Water for SSQ 2nd quest
 			case 13808:
 				return use13808(player, ctrl);
+				// Court Mag Staff for SSQ 2nd quest
 			case 13809:
 				return use13809(player, ctrl);
 			case 14835:
 				return use14835(player, ctrl);
+				// Strongbox of Promise
 			case 15537:
 				return use15537(player, ctrl);
-			case 10632:
-				return use10632(player, ctrl);
+				// Antharas Blood Crystal
+			case 17268:
+				return use17268(player, ctrl);
+				// cruma quest
+				// case 17619:
+				// return use17619(player, ctrl);
 			case 21899:
 				return use21899(player, ctrl);
 			case 21900:
@@ -113,19 +126,26 @@ public class Special extends SimpleItemHandler
 				return use21903(player, ctrl);
 			case 21904:
 				return use21904(player, ctrl);
-			case 17268:
-				return use17268(player, ctrl);
+				// megameld quest
+				// case 34033:
+				// return use34033(player, ctrl);
 			default:
 				return false;
 		}
 	}
 	
-	/**
-	 * Method use8556.
-	 * @param player Player
-	 * @param ctrl boolean
-	 * @return boolean
-	 */
+	// Key of Enigma
+	private boolean use8060(Player player, boolean ctrl)
+	{
+		if (Functions.removeItem(player, 8058, 1) == 1)
+		{
+			Functions.addItem(player, 8059, 1);
+			return true;
+		}
+		return false;
+	}
+	
+	// Dewdrop of Destruction
 	private boolean use8556(Player player, boolean ctrl)
 	{
 		final int[] npcs =
@@ -149,12 +169,7 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
-	/**
-	 * Method use13853.
-	 * @param player Player
-	 * @param ctrl boolean
-	 * @return boolean
-	 */
+	// DestroyedDarknessFragmentPowder -> DestroyedLightFragmentPowde
 	private boolean use13853(Player player, boolean ctrl)
 	{
 		if (!player.isInZone(ZoneType.mother_tree))
@@ -281,64 +296,7 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
-	/**
-	 * Method use10632.
-	 * @param player Player
-	 * @param ctrl boolean
-	 * @return boolean
-	 */
-	private boolean use10632(Player player, boolean ctrl)
-	{
-		final int chance = Rnd.get(1000000);
-		if (chance < 350000)
-		{
-			Functions.addItem(player, 10633, 1);
-		}
-		else if (chance < 550000)
-		{
-			Functions.addItem(player, 10634, 1);
-		}
-		else if (chance < 650000)
-		{
-			Functions.addItem(player, 10635, 1);
-		}
-		else if (chance < 730000)
-		{
-			Functions.addItem(player, 10636, 1);
-		}
-		else if (chance < 750000)
-		{
-			Functions.addItem(player, 10637, 1);
-		}
-		else if (chance < 890000)
-		{
-			Functions.addItem(player, 10642, 1);
-		}
-		else if (chance < 960000)
-		{
-			Functions.addItem(player, 10643, 1);
-		}
-		else if (chance < 985000)
-		{
-			Functions.addItem(player, 10644, 1);
-		}
-		else if (chance < 995000)
-		{
-			Functions.addItem(player, 10645, 1);
-		}
-		else if (chance <= 1000000)
-		{
-			Functions.addItem(player, 10646, 1);
-		}
-		return true;
-	}
-	
-	/**
-	 * Method use21899.
-	 * @param player Player
-	 * @param ctrl boolean
-	 * @return boolean
-	 */
+	// Totem
 	private boolean use21899(Player player, boolean ctrl)
 	{
 		if (!player.isInZone(AntharasManager.getZone()) && !player.isInZone(ValakasManager.getZone()))
@@ -350,12 +308,7 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
-	/**
-	 * Method use21900.
-	 * @param player Player
-	 * @param ctrl boolean
-	 * @return boolean
-	 */
+	// Totem
 	private boolean use21900(Player player, boolean ctrl)
 	{
 		if (!player.isInZone(AntharasManager.getZone()) && !player.isInZone(ValakasManager.getZone()))
@@ -367,12 +320,7 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
-	/**
-	 * Method use21901.
-	 * @param player Player
-	 * @param ctrl boolean
-	 * @return boolean
-	 */
+	// Totem
 	private boolean use21901(Player player, boolean ctrl)
 	{
 		if (!player.isInZone(AntharasManager.getZone()) && !player.isInZone(ValakasManager.getZone()))
@@ -384,12 +332,7 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
-	/**
-	 * Method use21902.
-	 * @param player Player
-	 * @param ctrl boolean
-	 * @return boolean
-	 */
+	// Totem
 	private boolean use21902(Player player, boolean ctrl)
 	{
 		if (!player.isInZone(AntharasManager.getZone()) && !player.isInZone(ValakasManager.getZone()))
@@ -401,12 +344,7 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
-	/**
-	 * Method use21903.
-	 * @param player Player
-	 * @param ctrl boolean
-	 * @return boolean
-	 */
+	// Refined Red Dragon Blood
 	private boolean use21903(Player player, boolean ctrl)
 	{
 		if (!player.isInZone(AntharasManager.getZone()) && !player.isInZone(ValakasManager.getZone()))
@@ -419,12 +357,7 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
-	/**
-	 * Method use21904.
-	 * @param player Player
-	 * @param ctrl boolean
-	 * @return boolean
-	 */
+	// Refined Blue Dragon Blood
 	private boolean use21904(Player player, boolean ctrl)
 	{
 		if (!player.isInZone(AntharasManager.getZone()) && !player.isInZone(ValakasManager.getZone()))
@@ -437,12 +370,7 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
-	/**
-	 * Method use17268.
-	 * @param player Player
-	 * @param ctrl boolean
-	 * @return boolean
-	 */
+	// Antharas Blood Crystal
 	private boolean use17268(Player player, boolean ctrl)
 	{
 		if (!player.isInZone(AntharasManager.getZone()))
@@ -455,6 +383,17 @@ public class Special extends SimpleItemHandler
 		return true;
 	}
 	
+	// TODO ADD MISSING QUEST
+	/*
+	 * private boolean use17619(Player player, boolean ctrl) { //TODO[Iqman+Nosferatu] Define zone in cruma tower we can use this scroll only there!! QuestState qs = player.getQuestState(_10352_LegacyofCrumaTower.class); QuestState qs2 = player.getQuestState(_480_AnotherLegacyOfCrumaTower.class);
+	 * if(player.getVar("MechanismSpawn") != null || qs == null || qs.getCond() > 4) { if(qs2 == null || qs2.getCond() > 4 || player.getVar("MechanismSpawn") != null) { player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(17619)); return false; } }
+	 * Functions.removeItem(player, 17619, 1); NpcInstance npc = Functions.spawn(Location.findPointToStay(player.getLoc(), 50, 100, player.getGeoIndex()), 17619); player.setVar("MechanismSpawn", "1", 120000); if(qs != null && !qs.isCompleted()) { Quest q = QuestManager.getQuest(10352);
+	 * player.processQuestEvent(q.getName(), "advanceCond3", null); } if(qs2 != null && !qs2.isCompleted()) { Quest q2 = QuestManager.getQuest(480); player.processQuestEvent(q2.getName(), "advanceCond3", null); } Functions.executeTask("handler.items.Special", "despawnNpc", new Object[] {npc,
+	 * player}, 120000); return true; } public static void despawnNpc(NpcInstance npc, Player player) { if(npc != null) npc.deleteMe(); if(player != null) player.unsetVar("CrystalsSpawn"); } private boolean use34033(Player player, boolean ctrl) { QuestState qs =
+	 * player.getQuestState(_10304_ForTheForgottenHeroes.class); NpcHtmlMessage msg = new NpcHtmlMessage(5); if(player.getLevel() >= 90 && qs == null) { Quest q = QuestManager.getQuest(10304); QuestState st = player.getQuestState(q.getClass()); st = q.newQuestState(player, Quest.CREATED);
+	 * st.setState(Quest.STARTED); st.setCond(1); useItem(player, 34033, 1); Functions.addItem(player, 17618, 1); msg.setFile("quests/_10304_ForTheForgottenHeroes/2.htm"); player.sendPacket(msg); } else { msg.setFile("quests/_10304_ForTheForgottenHeroes/4.htm"); player.sendPacket(msg); return false;
+	 * } return true; }
+	 */
 	/**
 	 * Method useItem.
 	 * @param player Player

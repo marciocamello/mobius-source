@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="15623" name="Exp">
+	<etcitem id="15623" name="XP">
+	<!-- You acquire XP as a reward. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -14,6 +15,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15624" name="SP">
+	<!-- You acquire SP as a reward. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -25,7 +27,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="15625" name="Question Mark">
+	<etcitem id="15625" name="Unknown Reward">
+	<!-- Reward given if you fulfill certain conditions. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -38,6 +41,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15626" name="Vitality">
+	<!-- You acquire Vitality points as a reward. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -50,10 +54,11 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15627" name="Clan Point">
+	<!-- You acquire clan points as a reward. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="icon" value="icon.bloodpledge_point_i00"/>
+		<set name="icon" value="icon.etc_bloodpledge_point_i00"/>
 		<set name="type" value="OTHER"/>
 		<cond msgId="1508">
 			<not>
@@ -62,6 +67,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15628" name="Gamble Reward">
+	<!-- Reward based on a game of chance. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -74,6 +80,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15629" name="Random Reward">
+	<!-- Random reward given to player. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -86,6 +93,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15630" name="Flexible Reward">
+	<!-- Reward is chosen based on your performance. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -98,6 +106,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15631" name="Bonus Reward">
+	<!-- Little extra in addition to the current reward. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -109,7 +118,8 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="15632" name="Sub Class Reward">
+	<etcitem id="15632" name="Subclass Reward">
+	<!-- Subclass authority was obtained. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -122,6 +132,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15633" name="PK Reduction">
+	<!-- The PK Count is decreased. -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -134,6 +145,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15634" name="Vesper Cutter Piece">
+	<!-- Essential ingredient that a Dwarf needs to make Vesper Cutter. It can be sold at ordinary stores. -->
 		<set name="price" value="336700"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -143,6 +155,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15635" name="Vesper Slasher Piece">
+	<!-- Essential ingredient that a Dwarf needs to make Vesper Slasher. It can be sold at ordinary stores. -->
 		<set name="price" value="337300"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -152,6 +165,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15636" name="Vesper Buster Piece">
+	<!-- Essential ingredient that a Dwarf needs to make Vesper Buster. It can be sold at ordinary stores. -->
 		<set name="price" value="336700"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -161,6 +175,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15637" name="Vesper Shaper Piece">
+	<!-- Essential ingredient that a Dwarf needs to make Vesper Shaper. It can be sold at ordinary stores. -->
 		<set name="price" value="336700"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -170,6 +185,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15638" name="Vesper Fighter Piece">
+	<!-- Essential ingredient that a Dwarf needs to make Vesper Fighter. It can be sold at ordinary stores. -->
 		<set name="price" value="339600"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -179,6 +195,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15639" name="Vesper Stormer Piece">
+	<!-- Essential ingredient that a Dwarf needs to make Vesper Stormer. It can be sold at ordinary stores. -->
 		<set name="price" value="335700"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -188,6 +205,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15640" name="Vesper Avenger Piece">
+	<!-- Essential ingredient that a Dwarf needs to make Vesper Avenger. It can be sold at ordinary stores. -->
 		<set name="price" value="339600"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -197,6 +215,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15641" name="Vesper Retributer Piece">
+	<!-- Essential ingredient that a Dwarf needs to make Vesper Retributer. It can be sold at ordinary stores. -->
 		<set name="price" value="335700"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -206,6 +225,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15642" name="Vesper Caster Piece">
+	<!-- Essential ingredient that a Dwarf needs to make Vesper Caster. It can be sold at ordinary stores. -->
 		<set name="price" value="339600"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -215,6 +235,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15643" name="Vesper Singer Piece">
+	<!-- Essential ingredient that a Dwarf needs to make Vesper Singer. It can be sold at ordinary stores. -->
 		<set name="price" value="338700"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -224,6 +245,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15644" name="Vesper Thrower Piece">
+	<!-- Essential ingredient that a Dwarf needs to make Vesper Thrower. It can be sold at ordinary stores. -->
 		<set name="price" value="335300"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -233,6 +255,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15645" name="Sealed Moirai Helmet Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Moirai Helmet. It can be sold at ordinary stores. -->
 		<set name="price" value="33700"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -242,6 +265,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15646" name="Sealed Moirai Leather Helmet Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Moirai Leather Helmet. It can be sold at ordinary stores. -->
 		<set name="price" value="33700"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -251,6 +275,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15647" name="Sealed Moirai Circlet Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Moirai Circlet. It can be sold at ordinary stores. -->
 		<set name="price" value="33700"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -260,6 +285,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15648" name="Sealed Moirai Breastplate Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Moirai Breastplate. It can be sold at ordinary stores. -->
 		<set name="price" value="84300"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -269,6 +295,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15649" name="Sealed Moirai Leather Breastplate Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Moirai Leather Breastplate. It can be sold at ordinary stores. -->
 		<set name="price" value="62300"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -278,6 +305,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15650" name="Sealed Moirai Tunic Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Moirai Tunic. It can be sold at ordinary stores. -->
 		<set name="price" value="62300"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -286,7 +314,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="15651" name="Sealed Moirai Gaiter Piece">
+	<etcitem id="15651" name="Sealed Moirai Gaiters Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Moirai Gaiters. It can be sold at ordinary stores. -->
 		<set name="price" value="50300"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -295,7 +324,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="15652" name="Sealed Moirai Leather Legging Piece">
+	<etcitem id="15652" name="Sealed Moirai Leather Leggings Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Moirai Leather Leggings. It can be sold at ordinary stores. -->
 		<set name="price" value="38400"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -305,6 +335,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15653" name="Sealed Moirai Stockings Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Moirai Stockings. It can be sold at ordinary stores. -->
 		<set name="price" value="38400"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -313,7 +344,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="15654" name="Sealed Moirai Gauntlet Piece">
+	<etcitem id="15654" name="Sealed Moirai Gauntlets Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Moirai Gauntlets. It can be sold at ordinary stores. -->
 		<set name="price" value="22400"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -323,6 +355,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15655" name="Sealed Moirai Leather Gloves Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Moirai Leather Gloves. It can be sold at ordinary stores. -->
 		<set name="price" value="22400"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -332,6 +365,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15656" name="Sealed Moirai Gloves Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Moirai Gloves. It can be sold at ordinary stores. -->
 		<set name="price" value="22400"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -341,6 +375,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15657" name="Sealed Moirai Boots Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Moirai Boots. It can be sold at ordinary stores. -->
 		<set name="price" value="22400"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -350,6 +385,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15658" name="Sealed Moirai Leather Boots Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Moirai Leather Boots. It can be sold at ordinary stores. -->
 		<set name="price" value="22400"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -359,6 +395,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15659" name="Sealed Moirai Shoes Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Moirai Shoes. It can be sold at ordinary stores. -->
 		<set name="price" value="22400"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -368,6 +405,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15660" name="Sealed Vesper Helmet Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Vesper Helmet. It can be sold at ordinary stores. -->
 		<set name="price" value="43600"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -377,6 +415,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15661" name="Sealed Vesper Leather Helmet Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Vesper Leather Helmet. It can be sold at ordinary stores. -->
 		<set name="price" value="43600"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -386,6 +425,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15662" name="Sealed Vesper Circlet Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Vesper Circlet. It can be sold at ordinary stores. -->
 		<set name="price" value="43600"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -395,6 +435,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15663" name="Sealed Vesper Breastplate Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Vesper Breastplate. It can be sold at ordinary stores. -->
 		<set name="price" value="110500"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -404,6 +445,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15664" name="Sealed Vesper Leather Breastplate Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Vesper Breastplate. It can be sold at ordinary stores. -->
 		<set name="price" value="84300"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -413,6 +455,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15665" name="Sealed Vesper Tunic Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Vesper Tunic. It can be sold at ordinary stores. -->
 		<set name="price" value="84300"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -421,7 +464,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="15666" name="Sealed Vesper Gaiter Piece">
+	<etcitem id="15666" name="Sealed Vesper Gaiters Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Vesper Gaiters. It can be sold at ordinary stores. -->
 		<set name="price" value="68600"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -430,7 +474,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="15667" name="Sealed Vesper Gauntlet Piece">
+	<etcitem id="15667" name="Sealed Vesper Gauntlets Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Vesper Gauntlets. It can be sold at ordinary stores. -->
 		<set name="price" value="26100"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -440,6 +485,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15668" name="Sealed Vesper Boots Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Vesper Boots. It can be sold at ordinary stores. -->
 		<set name="price" value="26100"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -448,7 +494,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="15669" name="Sealed Vesper Verteidiger Piece">
+	<etcitem id="15669" name="Sealed Vesper Shield Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Vesper Shield. It can be sold at ordinary stores. -->
 		<set name="price" value="29500"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -457,7 +504,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="15670" name="Sealed Vesper Leather Legging Piece">
+	<etcitem id="15670" name="Sealed Vesper Leather Leggings Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Vesper Leather Leggings. It can be sold at ordinary stores. -->
 		<set name="price" value="54700"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -467,6 +515,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15671" name="Sealed Vesper Leather Gloves Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Vesper Leather Gloves. It can be sold at ordinary stores. -->
 		<set name="price" value="26100"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -476,6 +525,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15672" name="Sealed Vesper Leather Boots Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Vesper Leather Boots. It can be sold at ordinary stores. -->
 		<set name="price" value="26100"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -485,6 +535,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15673" name="Sealed Vesper Stockings Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Vesper Stockings. It can be sold at ordinary stores. -->
 		<set name="price" value="54700"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -494,6 +545,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15674" name="Sealed Vesper Gloves Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Vesper Gloves. It can be sold at ordinary stores. -->
 		<set name="price" value="26100"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -503,6 +555,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15675" name="Sealed Vesper Shoes Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Vesper Shoes. It can be sold at ordinary stores. -->
 		<set name="price" value="26100"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -512,6 +565,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15690" name="Secret Key">
+	<!-- Key that opens a secret gate -->
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -525,6 +579,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15691" name="Sealed Vesper Sigil Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Vesper Sigil. It can be sold at ordinary stores. -->
 		<set name="price" value="29500"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -534,6 +589,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<etcitem id="15692" name="Sealed Moirai Sigil Piece">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Moirai Sigil. It can be sold at ordinary stores. -->
 		<set name="price" value="18800"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
@@ -542,7 +598,8 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="15693" name="Sealed Moirai Shield Piece">
+	<etcitem id="15693" name="Sealed Moirai Shield Fragment">
+	<!-- Essential ingredient that a Dwarf needs to make a Sealed Moirai Shield. It can be sold at ordinary stores. -->
 		<set name="price" value="18800"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>

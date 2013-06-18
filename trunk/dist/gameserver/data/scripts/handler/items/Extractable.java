@@ -12,6 +12,7 @@
  */
 package handler.items;
 
+import org.apache.commons.lang3.ArrayUtils;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,17 +24,15 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 
-import org.apache.commons.lang3.ArrayUtils;
-
 public class Extractable extends SimpleItemHandler
 {
-	private static final int[] ITEM_IDS = new int[] { 5916, 5944, 14841, 5955, 14847, 5966, 5967, 5968, 5969, 6007,
-			6008, 6009, 6010, 10408, 10473, 9599, 20069, 20070, 20071, 20072, 20073, 20074, 20210, 20211, 20215, 20216,
+		private static final int[] ITEM_IDS = new int[] { 14841, 14847, 
+			10408, 10473, 9599, 20069, 20070, 20071, 20072, 20073, 20074, 20210, 20211, 20215, 20216,
 			20217, 20218, 20219, 20220, 20227, 20228, 20229, 20233, 20234, 20235, 20239, 20240, 20241, 20242, 20243,
 			20244, 20251, 20254, 20278, 20279, 20041, 20042, 20043, 20044, 20035, 20036, 20037, 20038, 20039, 20040,
 			20060, 20061, 22000, 22001, 22002, 22003, 22004, 22005, 20326, 20327, 20329, 20330, 20059, 20494, 20493,
 			20395, 21000, 13281, 13282, 13283, 13284, 13285, 13286, 13287, 13288, 13289, 13290, 14267, 14268, 14269,
-			13280, 22087, 22088, 13713, 13714, 13715, 13716, 13717, 13718, 13719, 13720, 13721, 14549, 14550, 14551,
+			13280, 13713, 13714, 13715, 13716, 13717, 13718, 13719, 13720, 13721, 14549, 14550, 14551,
 			14552, 14553, 14554, 14555, 14556, 14557, 13695, 13696, 13697, 13698, 13699, 13700, 13701, 13702, 13703,
 			14531, 14532, 14533, 14534, 14535, 14536, 14537, 14538, 14539, 13704, 13705, 13706, 13707, 13708, 13709,
 			13710, 13711, 13712, 14540, 14541, 14542, 14543, 14544, 14545, 14546, 14547, 14548, 14884, 14885, 14886,
@@ -41,12 +40,10 @@ public class Extractable extends SimpleItemHandler
 			14616, 20575, 20804, 20807, 20805, 20808, 20806, 20809, 20842, 20843, 20844, 20845, 20846, 20847, 20848,
 			20849, 20850, 20851, 20852, 20853, 20854, 20855, 20856, 20857, 20858, 20859, 20860, 20861, 20862, 20863,
 			20864, 20811, 20812, 20813, 20814, 20815, 20816, 20817, 20810, 20865, 20748, 20749, 20750, 20751, 20752,
-			20195, 20196, 20197, 20198, 13777, 13778, 13779, 13780, 13781, 13782, 13783, 13784, 13785, 13786, 14849,
+			13777, 13778, 13779, 13780, 13781, 13782, 13783, 13784, 13785, 13786, 14849,
 			14834, 14833, 13988, 13989, 13003, 13004, 13005, 13006, 13007, 13990, 13991, 13992, 14850, 14713, 14714,
-			14715, 14716, 14717, 14718, 17138, 15482, 15483, 13270, 13271, 13272, 14231, 14232, 21747, 21748, 21749,
-			17169, 21169, 21753, 21752, 21092, 21091, 10254, 10206, 10205, 9144, 9135, 9134, 9133, 9132, 9131, 9130,
-			9127, 9126, 9125, 9124, 9123, 9122, 9121, 9120, 9119, 9118, 9117, 9116, 9115, 9114, 9113, 9112, 9111, 9110,
-			9109, 9108, 9107, 9106, 9105, 9104, 8971, 8970, 8969, 8968, 8967, 8966, 5909, 5910, 5912, 5913, 5907, 5906,
+			14715, 14716, 14717, 14718, 17138, 15482, 15483, 13270, 13271, 13272, 14231, 14232,
+			17169, 21169, 21092, 21091, 10254, 10206, 10205, 5909, 5910, 5912, 5913, 5907, 5906,
 			170, 163, 141, 140, 137, 138, 139, 136, 53, 54, 55, 56, 13079,
 			13080, 13082, 13083, 13084, 13085, 13086, 13087, 13088, 13089, 13090, 13091, 13092, 13093, 13094, 13095,
 			13096, 13097, 13098, 22187, 21601, 21602, 21603, 21604, 21605, 21606, 21607, 21608, 21609, 21610, 21611,
@@ -70,20 +67,20 @@ public class Extractable extends SimpleItemHandler
 			13349, 13350, 13351, 13352, 13353, 13354, 13355, 13356, 13357, 13358, 13359, 13360, 13361, 13362, 13363,
 			13364, 13365, 13366, 13367, 13368, 13369, 13370, 13371, 13372, 13373, 13374, 13375, 13376, 13377, 13378,
 			13379, 13380, 13381, 13384, 13385, 13422, 13423, 13424, 13425, 13426, 13427, 13428, 13799, 14530, 20700,
-			20701, 20702, 20703, 20704, 20705, 20734, 20735, 20736, 20737, 20738, 20739, 20740, 20753, 20754, 20773,
+			20701, 20702, 20703, 20704, 20705, 20734, 20735, 20736, 20737, 20738, 20740, 20753, 20754, 20773,
 			20796, 20797, 20798, 20799, 15200, 15201, 15202, 15203, 15204, 15205, 15206, 15207, 15209, 15212, 15213,
 			15214, 15215, 15216, 15217, 15218, 15219, 15222, 15223, 15224, 15225, 15226, 15227, 15228, 15229, 15230,
 			15231, 15232, 15233, 15234, 15235, 15236, 15237, 15238, 15239, 15240, 15241, 15242, 15243, 15244, 15245,
 			15246, 15247, 15248, 15249, 15250, 15251, 15252, 15253, 15254, 15255, 15256, 15257, 15258, 15259, 15260,
 			15261, 15262, 15263, 15264, 15265, 15266, 15267, 15268, 15269, 15270, 15271, 15272, 15273, 15274, 15275,
-			15276, 15277, 15278, 20271, 20277, 20280, 20281, 20282, 20283, 20284, 20285, 20286, 20287, 20288, 20289,
+			15276, 15277, 15278, 20277, 20280, 20281, 20282, 20283, 20284, 20285, 20286, 20287, 20288, 20289,
 			20290, 20291, 20292, 20293, 20294, 20295, 20296, 14639, 14640, 14641, 14642, 14643, 14644, 14645, 14646,
 			14647, 14648, 14649, 14650, 14651, 14652, 14653, 14654, 14655, 14656, 14657, 14658, 14659, 14660, 14661,
 			14662, 14663, 14676, 14677, 20402, 20403, 20404, 20450, 20451, 20452, 20453, 20454, 20455, 20456, 20457,
 			20458, 20459, 20460, 20461, 20462, 20463, 20464, 20465, 20466, 20467, 20468, 20469, 20470, 20471, 20472,
 			20473, 20474, 20475, 20476, 20477, 20478, 20479, 20480, 20481, 20482, 20483, 20484, 20485, 20486, 20487,
 			20488, 20489, 20490, 20491, 20492, 14635, 14636, 14637, 14638, 20607, 20608, 20609, 20610, 20611, 20612,
-			20619, 20620, 20623, 20624, 20625, 20627, 20629, 20631, 20632, 20680, 20681, 20682, 20683, 20684, 20685,
+			20619, 20620, 20623, 20624, 20625, 20627, 20631, 20632, 20680, 20681, 20682, 20683, 20684, 20685,
 			20686, 20687, 20688, 20689, 20690, 20691, 20692, 20693, 20694, 20695, 20696, 20697, 20698, 20699, 20800,
 			20801, 20802, 20803, 20869, 20898, 20505, 20506, 20507, 20508, 20509, 20510, 20511, 20512, 20513, 20514,
 			20540, 20541, 20542, 20543, 20544, 20548, 20549, 20550, 20551, 20552, 20553, 20554, 20555, 20556, 20557,
@@ -124,6 +121,7 @@ public class Extractable extends SimpleItemHandler
 			30291, // Twilight Robe Armor Box
 			30292, // Immortal Accessory Box
 			30293, // Twilight Accessory Box
+			33465,
 			34927,
 			34928,
 			34929,
@@ -826,9 +824,6 @@ public class Extractable extends SimpleItemHandler
 		case 20631:
 			use20631(player, ctrl);
 			break;
-		case 20629:
-			use20629(player, ctrl);
-			break;
 		case 20627:
 			use20627(player, ctrl);
 			break;
@@ -1148,12 +1143,8 @@ public class Extractable extends SimpleItemHandler
 		case 20280:
 			use20280(player, ctrl);
 			break;
-
 		case 20277:
 			use20277(player, ctrl);
-			break;
-		case 20271:
-			use20271(player, ctrl);
 			break;
 		case 15278:
 			use15278(player, ctrl);
@@ -1402,9 +1393,6 @@ public class Extractable extends SimpleItemHandler
 			break;
 		case 20740:
 			use20740(player, ctrl);
-			break;
-		case 20739:
-			use20739(player, ctrl);
 			break;
 		case 20738:
 			use20738(player, ctrl);
@@ -2372,44 +2360,11 @@ public class Extractable extends SimpleItemHandler
 		case 22187:
 			use22187(player, ctrl);
 			break;
-		case 5916:
-			use5916(player, ctrl);
-			break;
-		case 5944:
-			use5944(player, ctrl);
-			break;
 		case 14841:
 			use14841(player, ctrl);
 			break;
-		case 5955:
-			use5955(player, ctrl);
-			break;
 		case 14847:
 			use14847(player, ctrl);
-			break;
-		case 5966:
-			use5966(player, ctrl);
-			break;
-		case 5967:
-			use5967(player, ctrl);
-			break;
-		case 5968:
-			use5968(player, ctrl);
-			break;
-		case 5969:
-			use5969(player, ctrl);
-			break;
-		case 6007:
-			use6007(player, ctrl);
-			break;
-		case 6008:
-			use6008(player, ctrl);
-			break;
-		case 6009:
-			use6009(player, ctrl);
-			break;
-		case 6010:
-			use6010(player, ctrl);
 			break;
 		case 10408:
 			use10408(player, ctrl);
@@ -2632,12 +2587,6 @@ public class Extractable extends SimpleItemHandler
 			break;
 		case 13280:
 			use13280(player, ctrl);
-			break;
-		case 22087:
-			use22087(player, ctrl);
-			break;
-		case 22088:
-			use22088(player, ctrl);
 			break;
 		case 13713:
 			use13713(player, ctrl);
@@ -2990,18 +2939,6 @@ public class Extractable extends SimpleItemHandler
 		case 20752:
 			use20752(player, ctrl);
 			break;
-		case 20195:
-			use20195(player, ctrl);
-			break;
-		case 20196:
-			use20196(player, ctrl);
-			break;
-		case 20197:
-			use20197(player, ctrl);
-			break;
-		case 20198:
-			use20198(player, ctrl);
-			break;
 		case 13777:
 			use13777(player, ctrl);
 			break;
@@ -3131,12 +3068,6 @@ public class Extractable extends SimpleItemHandler
 		case 21169:
 			use21169(player, ctrl);
 			break;
-		case 21753:
-			use21753(player, ctrl);
-			break;
-		case 21752:
-			use21752(player, ctrl);
-			break;
 		case 20635:
 			use20635(player, ctrl);
 			break;
@@ -3199,117 +3130,6 @@ public class Extractable extends SimpleItemHandler
 			break;
 		case 5913:
 			use5913(player, ctrl);
-			break;
-		case 8966:
-			use8966(player, ctrl);
-			break;
-		case 8967:
-			use8967(player, ctrl);
-			break;
-		case 8968:
-			use8968(player, ctrl);
-			break;
-		case 8969:
-			use8969(player, ctrl);
-			break;
-		case 8970:
-			use8970(player, ctrl);
-			break;
-		case 8971:
-			use8971(player, ctrl);
-			break;
-		case 9104:
-			use9104(player, ctrl);
-			break;
-		case 9105:
-			use9105(player, ctrl);
-			break;
-		case 9106:
-			use9106(player, ctrl);
-			break;
-		case 9107:
-			use9107(player, ctrl);
-			break;
-		case 9108:
-			use9108(player, ctrl);
-			break;
-		case 9109:
-			use9109(player, ctrl);
-			break;
-		case 9110:
-			use9110(player, ctrl);
-			break;
-		case 9111:
-			use9111(player, ctrl);
-			break;
-		case 9112:
-			use9112(player, ctrl);
-			break;
-		case 9113:
-			use9113(player, ctrl);
-			break;
-		case 9114:
-			use9114(player, ctrl);
-			break;
-		case 9115:
-			use9115(player, ctrl);
-			break;
-		case 9116:
-			use9116(player, ctrl);
-			break;
-		case 9117:
-			use9117(player, ctrl);
-			break;
-		case 9118:
-			use9118(player, ctrl);
-			break;
-		case 9119:
-			use9119(player, ctrl);
-			break;
-		case 9120:
-			use9120(player, ctrl);
-			break;
-		case 9121:
-			use9121(player, ctrl);
-			break;
-		case 9122:
-			use9122(player, ctrl);
-			break;
-		case 9123:
-			use9123(player, ctrl);
-			break;
-		case 9124:
-			use9124(player, ctrl);
-			break;
-		case 9125:
-			use9125(player, ctrl);
-			break;
-		case 9126:
-			use9126(player, ctrl);
-			break;
-		case 9127:
-			use9127(player, ctrl);
-			break;
-		case 9130:
-			use9130(player, ctrl);
-			break;
-		case 9131:
-			use9131(player, ctrl);
-			break;
-		case 9132:
-			use9132(player, ctrl);
-			break;
-		case 9133:
-			use9133(player, ctrl);
-			break;
-		case 9134:
-			use9134(player, ctrl);
-			break;
-		case 9135:
-			use9135(player, ctrl);
-			break;
-		case 9144:
-			use9144(player, ctrl);
 			break;
 		case 10205:
 			use10205(player, ctrl);
@@ -3562,6 +3382,9 @@ public class Extractable extends SimpleItemHandler
 			break;
 		case 30293: // Twilight Accessory Box
 			use30293(player, ctrl);
+			break;
+		case 33465:
+			use33465(player, ctrl);
 			break;
 		case 34927:
 			use34927(player, ctrl);
@@ -5252,21 +5075,6 @@ public class Extractable extends SimpleItemHandler
 		Functions.addItem(player, 20633, 1);
 	}
 
-	private void use20629(Player player, boolean ctrl) {
-		/**
-		 * @Author: 4ipolino
-		 */
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 20590, 1, 1 }, { 9207, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				40.00, 60.00 };
-
-		capsulate(player, items, chances);
-	}
-
 	private void use20627(Player player, boolean ctrl) {
 		/**
 		 * @Author: 4ipolino
@@ -6098,24 +5906,6 @@ public class Extractable extends SimpleItemHandler
 		double chances[] = new double[] {
 				// chance
 				33.00, 33.00, 34.00 };
-
-		capsulate(player, items, chances);
-	}
-
-	private void use20271(Player player, boolean ctrl) {
-		/**
-		 * @Author: 4ipolino
-		 */
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 20255, 1, 1 }, { 20256, 1, 1 }, { 20257, 1, 1 }, { 20258, 1, 1 }, { 20259, 1, 1 }, { 20260, 1, 1 },
-				{ 20261, 1, 1 }, { 20262, 1, 1 }, { 20263, 1, 1 }, { 20264, 1, 1 }, { 20265, 1, 1 }, { 20270, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				8.34, 8.34, 8.34, 8.34, 8.34, 8.34, 8.34, 8.34, 8.34, 8.34, 8.34, 8.26
-
-		};
 
 		capsulate(player, items, chances);
 	}
@@ -6997,20 +6787,6 @@ public class Extractable extends SimpleItemHandler
 		 */
 		Functions.addItem(player, 20393, 1);
 		Functions.addItem(player, 20394, 1);
-	}
-
-	private void use20739(Player player, boolean ctrl) { /* by 4ipolino */
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 20364, 1, 1 }, { 20365, 1, 1 }, { 20366, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				33.00, 33.00, 34.00
-
-		};
-
-		capsulate(player, items, chances);
 	}
 
 	private void use20738(Player player, boolean ctrl) {
@@ -9672,27 +9448,6 @@ public class Extractable extends SimpleItemHandler
 
 	// ------ Adventurer's Boxes ------
 
-	// Quest 370: A Wiseman Sows Seeds
-	private void use5916(Player player, boolean ctrl) {
-		int[] list = new int[] { 5917, 5918, 5919, 5920, 736 };
-		int[] counts = new int[] { 1, 1, 1, 1, 1 };
-		extract_item(list, counts, player);
-	}
-
-	// Quest 376: Giants Cave Exploration, Part 1
-	private void use5944(Player player, boolean ctrl) {
-		int[] list = { 5922, 5923, 5924, 5925, 5926, 5927, 5928, 5929, 5930, 5931, 5932, 5933, 5934, 5935, 5936, 5937,
-				5938, 5939, 5940, 5941, 5942, 5943 };
-		int[] counts = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
-
-		if (ctrl) {
-			long item_count = 1 + Functions.removeItem(player, 5944, Functions.getItemCount(player, 5944));
-			for (int[] res : mass_extract_item(item_count, list, counts, player))
-				Functions.addItem(player, res[0], res[1]);
-		} else
-			extract_item(list, counts, player);
-	}
-
 	// Quest 376: Giants Cave Exploration, Part 1
 	private void use14841(Player player, boolean ctrl) {
 		int[] list = { 14836, 14837, 14838, 14839, 14840 };
@@ -9700,19 +9455,6 @@ public class Extractable extends SimpleItemHandler
 
 		if (ctrl) {
 			long item_count = 1 + Functions.removeItem(player, 14841, Functions.getItemCount(player, 14841));
-			for (int[] res : mass_extract_item(item_count, list, counts, player))
-				Functions.addItem(player, res[0], res[1]);
-		} else
-			extract_item(list, counts, player);
-	}
-
-	// Quest 377: Giants Cave Exploration, Part 2, old
-	private void use5955(Player player, boolean ctrl) {
-		int[] list = { 5942, 5943, 5945, 5946, 5947, 5948, 5949, 5950, 5951, 5952, 5953, 5954 };
-		int[] counts = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
-
-		if (ctrl) {
-			long item_count = 1 + Functions.removeItem(player, 5955, Functions.getItemCount(player, 5955));
 			for (int[] res : mass_extract_item(item_count, list, counts, player))
 				Functions.addItem(player, res[0], res[1]);
 		} else
@@ -9730,111 +9472,6 @@ public class Extractable extends SimpleItemHandler
 				Functions.addItem(player, res[0], res[1]);
 		} else
 			extract_item(list, counts, player);
-	}
-
-	// Quest 372: Legacy of Insolence
-	private void use5966(Player player, boolean ctrl) {
-		int[] list = new int[] { 5970, 5971, 5977, 5978, 5979, 5986, 5993, 5994, 5995, 5997, 5983, 6001 };
-		int[] counts = new int[] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
-		extract_item(list, counts, player);
-	}
-
-	// Quest 372: Legacy of Insolence
-	private void use5967(Player player, boolean ctrl) {
-		int[] list = new int[] { 5970, 5971, 5975, 5976, 5980, 5985, 5993, 5994, 5995, 5997, 5983, 6001 };
-		int[] counts = new int[] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
-		extract_item(list, counts, player);
-	}
-
-	// Quest 372: Legacy of Insolence
-	private void use5968(Player player, boolean ctrl) {
-		int[] list = new int[] { 5973, 5974, 5981, 5984, 5989, 5990, 5991, 5992, 5996, 5998, 5999, 6000, 5988, 5983,
-				6001 };
-		int[] counts = new int[] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
-		extract_item(list, counts, player);
-	}
-
-	// Quest 372: Legacy of Insolence
-	private void use5969(Player player, boolean ctrl) {
-		int[] list = new int[] { 5970, 5971, 5982, 5987, 5989, 5990, 5991, 5992, 5996, 5998, 5999, 6000, 5972, 6001 };
-		int[] counts = new int[] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
-		extract_item(list, counts, player);
-	}
-
-	/**
-	 * Quest 373: Supplier of Reagents, from Hallate's Maid, Reagent Pouch (Gray) 2x Quicksilver (6019) 30% 2x Moonstone
-	 * Shard (6013) 30% 1x Rotten Bone Piece (6014) 20% 1x Infernium Ore (6016) 20%
-	 * @param player 
-	 * @param ctrl 
-	 */
-	private void use6007(Player player, boolean ctrl) {
-		int[] list = new int[] { 6019, 6013, 6014, 6016 };
-		int[] counts = new int[] { 2, 2, 1, 1 };
-		int[] chances = new int[] { 30, 30, 20, 20 };
-
-		if (ctrl) {
-			long item_count = 1 + Functions.removeItem(player, 6007, Functions.getItemCount(player, 6007));
-			for (int[] res : mass_extract_item_r(item_count, list, counts, chances, player))
-				Functions.addItem(player, res[0], res[1]);
-		} else
-			extract_item_r(list, counts, chances, player);
-	}
-
-	/**
-	 * Quest 373: Supplier of Reagents, from Platinum Tribe Shaman, Reagent Pouch (Yellow) 2x Blood Root (6017) 10% 2x
-	 * Sulfur (6020) 20% 1x Rotten Bone Piece (6014) 35% 1x Infernium Ore (6016) 35%
-	 * @param player 
-	 * @param ctrl 
-	 */
-	private void use6008(Player player, boolean ctrl) {
-		int[] list = new int[] { 6017, 6020, 6014, 6016 };
-		int[] counts = new int[] { 2, 2, 1, 1 };
-		int[] chances = new int[] { 10, 20, 35, 35 };
-
-		if (ctrl) {
-			long item_count = 1 + Functions.removeItem(player, 6008, Functions.getItemCount(player, 6008));
-			for (int[] res : mass_extract_item_r(item_count, list, counts, chances, player))
-				Functions.addItem(player, res[0], res[1]);
-		} else
-			extract_item_r(list, counts, chances, player);
-	}
-
-	/**
-	 * Quest 373: Supplier of Reagents, from Hames Orc Shaman, Reagent Pouch (Brown) 1x Lava Stone (6012) 20% 2x
-	 * Volcanic Ash (6018) 20% 2x Quicksilver (6019) 20% 1x Moonstone Shard (6013) 40%
-	 * @param player 
-	 * @param ctrl 
-	 */
-	private void use6009(Player player, boolean ctrl) {
-		int[] list = new int[] { 6012, 6018, 6019, 6013 };
-		int[] counts = new int[] { 1, 2, 2, 1 };
-		int[] chances = new int[] { 20, 20, 20, 40 };
-
-		if (ctrl) {
-			long item_count = 1 + Functions.removeItem(player, 6009, Functions.getItemCount(player, 6009));
-			for (int[] res : mass_extract_item_r(item_count, list, counts, chances, player))
-				Functions.addItem(player, res[0], res[1]);
-		} else
-			extract_item_r(list, counts, chances, player);
-	}
-
-	/**
-	 * Quest 373: Supplier of Reagents, from Platinum Guardian Shaman, Reagent Box 2x Blood Root (6017) 20% 2x Sulfur
-	 * (6020) 20% 1x Infernium Ore (6016) 35% 2x Demon's Blood (6015) 25%
-	 * @param player 
-	 * @param ctrl 
-	 */
-	private void use6010(Player player, boolean ctrl) {
-		int[] list = new int[] { 6017, 6020, 6016, 6015 };
-		int[] counts = new int[] { 2, 2, 1, 2 };
-		int[] chances = new int[] { 20, 20, 35, 25 };
-
-		if (ctrl) {
-			long item_count = 1 + Functions.removeItem(player, 6010, Functions.getItemCount(player, 6010));
-			for (int[] res : mass_extract_item_r(item_count, list, counts, chances, player))
-				Functions.addItem(player, res[0], res[1]);
-		} else
-			extract_item_r(list, counts, chances, player);
 	}
 
 	// Old Agathion
@@ -10254,30 +9891,6 @@ public class Extractable extends SimpleItemHandler
 	// Agathion of Love 7-Day Pack
 	private void use13280(Player player, boolean ctrl) {
 		Functions.addItem(player, 20201, 1);
-	}
-
-	// A Scroll Bundle of Fighter
-	private void use22087(Player player, boolean ctrl) {
-		Functions.addItem(player, 22039, 1);
-		Functions.addItem(player, 22040, 1);
-		Functions.addItem(player, 22041, 1);
-		Functions.addItem(player, 22042, 1);
-		Functions.addItem(player, 22043, 1);
-		Functions.addItem(player, 22044, 1);
-		Functions.addItem(player, 22047, 1);
-		Functions.addItem(player, 22048, 1);
-	}
-
-	// A Scroll Bundle of Mage
-	private void use22088(Player player, boolean ctrl) {
-		Functions.addItem(player, 22045, 1);
-		Functions.addItem(player, 22046, 1);
-		Functions.addItem(player, 22048, 1);
-		Functions.addItem(player, 22049, 1);
-		Functions.addItem(player, 22050, 1);
-		Functions.addItem(player, 22051, 1);
-		Functions.addItem(player, 22052, 1);
-		Functions.addItem(player, 22053, 1);
 	}
 
 	// ****** End Item Mall ******
@@ -11258,97 +10871,6 @@ public class Extractable extends SimpleItemHandler
 		Functions.addItem(player, 20747, 1);
 	}
 
-	// Simple Valentine Cake
-	private void use20195(Player player, boolean ctrl) {
-		// Velvety Valentine Cake
-		if (Rnd.chance(20))
-			Functions.addItem(player, 20196, 1);
-		else {
-			// Dragon Bomber Transformation Scroll
-			if (Rnd.chance(5))
-				Functions.addItem(player, 20371, 1);
-
-			// Unicorn Transformation Scroll
-			if (Rnd.chance(5))
-				Functions.addItem(player, 20367, 1);
-
-			// Quick Healing Potion
-			if (Rnd.chance(10))
-				Functions.addItem(player, 1540, 1);
-
-			// Greater Healing Potion
-			if (Rnd.chance(15))
-				Functions.addItem(player, 1539, 1);
-		}
-	}
-
-	// Velvety Valentine Cake
-	private void use20196(Player player, boolean ctrl) {
-		// Delectable Valentine Cake
-		if (Rnd.chance(15))
-			Functions.addItem(player, 20197, 1);
-		else {
-			// Scroll: Enchant Armor (C)
-			if (Rnd.chance(10))
-				Functions.addItem(player, 952, 1);
-
-			// Scroll: Enchant Armor (B)
-			if (Rnd.chance(5))
-				Functions.addItem(player, 948, 1);
-
-			// Blessed Scroll of Escape
-			if (Rnd.chance(10))
-				Functions.addItem(player, 1538, 1);
-
-			// Blessed Scroll of Resurrection
-			if (Rnd.chance(5))
-				Functions.addItem(player, 3936, 1);
-
-			// Agathion of Love - 3 Day Expiration Period
-			if (Rnd.chance(10))
-				Functions.addItem(player, 20200, 1);
-		}
-	}
-
-	// Delectable Valentine Cake
-	private void use20197(Player player, boolean ctrl) {
-		// Decadent Valentine Cake
-		if (Rnd.chance(10))
-			Functions.addItem(player, 20198, 1);
-		else {
-			// Scroll: Enchant Weapon (C)
-			if (Rnd.chance(10))
-				Functions.addItem(player, 951, 1);
-
-			// Scroll: Enchant Weapon (B)
-			if (Rnd.chance(5))
-				Functions.addItem(player, 947, 1);
-
-			// Agathion of Love - 7 Day Expiration Period
-			if (Rnd.chance(5))
-				Functions.addItem(player, 20201, 1);
-		}
-	}
-
-	// Decadent Valentine Cake
-	private void use20198(Player player, boolean ctrl) {
-		// Scroll: Enchant Weapon (S)
-		if (Rnd.chance(5))
-			Functions.addItem(player, 959, 1);
-
-		// Scroll: Enchant Weapon (A)
-		if (Rnd.chance(10))
-			Functions.addItem(player, 729, 1);
-
-		// Agathion of Love - 15 Day Expiration Period
-		if (Rnd.chance(10))
-			Functions.addItem(player, 20202, 1);
-
-		// Agathion of Love - 30 Day Expiration Period
-		if (Rnd.chance(5))
-			Functions.addItem(player, 20203, 1);
-	}
-
 	private static final int[] SOI_books = { 14209, // Forgotten Scroll - Hide
 			14212, // Forgotten Scroll - Enlightenment - Wizard
 			14213, // Forgotten Scroll - Enlightenment - Healer
@@ -11758,58 +11280,6 @@ public class Extractable extends SimpleItemHandler
 		Functions.addItem(player, 13488, 1);
 	}
 
-	// Pablo's Box
-	private void use21753(Player player, boolean ctrl)
-	{
-		int category = Rnd.get(7);
-		switch (category)
-		{
-		case 0:
-			Functions.addItem(player, 21122, 1);
-			break;
-		case 1:
-			Functions.addItem(player, 21118, 1);
-			break;
-		case 2:
-			Functions.addItem(player, 21116, 1);
-			break;
-		case 3:
-			Functions.addItem(player, 21114, 1);
-			break;
-		case 4:
-			Functions.addItem(player, 21112, 1);
-			break;
-		case 5:
-			Functions.addItem(player, 21120, 1);
-			break;
-		case 6:
-			Functions.addItem(player, 21126, 1);
-			break;
-		}
-	}
-
-	// Rune Jewelry Box - Talisman
-	private void use21752(Player player, boolean ctrl)
-	{
-		final List<Integer> talismans = new ArrayList<>();
-
-		// 9914-9965
-		for (int i = 9914; i <= 9965; i++)
-			if (i != 9923)
-				talismans.add(i);
-		// 10416-10424
-		for (int i = 10416; i <= 10424; i++)
-			talismans.add(i);
-		// 10518-10519
-		for (int i = 10518; i <= 10519; i++)
-			talismans.add(i);
-		// 10533-10543
-		for (int i = 10533; i <= 10543; i++)
-			talismans.add(i);
-
-		Functions.addItem(player, talismans.get(Rnd.get(talismans.size())), 1);
-	}
-
 	// (Not In Use)
 	private void use53(Player player, boolean ctrl) {
 		int items[][] = new int[][] {
@@ -12040,487 +11510,6 @@ public class Extractable extends SimpleItemHandler
 		double chances[] = new double[] {
 				// chance
 				100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// No Grade Item Set Box (Warrior Use)
-	private void use8966(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 1835, 1000, 1000 }, { 8622, 10, 10 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// D Grade Item Set Box (Warrior Use)
-	private void use8967(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 1463, 1000, 1000 }, { 8623, 10, 10 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// C Grade Item Set Box (Warrior Use)
-	private void use8968(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 1464, 1000, 1000 }, { 8624, 10, 10 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// B Grade Item Set Box (Warrior Use)
-	private void use8969(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 1465, 500, 500 }, { 8625, 7, 7 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// A Grade Item Set Box (Warrior Use)
-	private void use8970(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 1466, 300, 300 }, { 8626, 7, 7 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// A, S Grade Item Set Box (Warrior Use)
-	private void use8971(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 1466, 300, 300 }, { 8627, 5, 5 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// Composite Bow and Wooden Arrow
-	private void use9104(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 8980, 1, 1 }, { 17, 1000, 1000 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// Gastraphetes and Bone Arrow
-	private void use9105(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 8989, 1, 1 }, { 1341, 1000, 1000 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// Akat Long Bow and Steel Arrow
-	private void use9106(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 8997, 1, 1 }, { 1342, 1000, 1000 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// Dark Elven Long Bow and Silver Arrow
-	private void use9107(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9008, 1, 1 }, { 1343, 1000, 1000 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// Carnage Bow and Mithril Arrow
-	private void use9108(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9016, 1, 1 }, { 1344, 1000, 1000 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// Soul Bow and Mithril Arrow
-	private void use9109(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9027, 1, 1 }, { 1344, 1000, 1000 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// No Grade Shadow Armor Set Box (Heavy Armor Use)
-	private void use9110(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9030, 1, 1 }, { 9031, 1, 1 }, { 9038, 1, 1 }, { 9039, 1, 1 }, { 9037, 1, 1 }, { 9036, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0, 100.0, 100.0, 100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// D-Grade Shadow Armor Set Box (Heavy Armor Use)
-	private void use9111(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9040, 1, 1 }, { 9041, 1, 1 }, { 9042, 1, 1 }, { 9043, 1, 1 }, { 9044, 1, 1 }, { 9053, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0, 100.0, 100.0, 100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// C-Grade Shadow Armor Set Box (Heavy Armor Use)
-	private void use9112(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9054, 1, 1 }, { 9055, 1, 1 }, { 9056, 1, 1 }, { 9057, 1, 1 }, { 9028, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0, 100.0, 100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// B-Grade Shadow Armor Set Box (Heavy Armor Use)
-	private void use9113(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9067, 1, 1 }, { 9068, 1, 1 }, { 9069, 1, 1 }, { 9070, 1, 1 }, { 9071, 1, 1 }, { 9072, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0, 100.0, 100.0, 100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// Low A-Grade Shadow Armor Set Box (Heavy Armor Use)
-	private void use9114(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9081, 1, 1 }, { 9082, 1, 1 }, { 9083, 1, 1 }, { 9084, 1, 1 }, { 9085, 1, 1 }, { 9086, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0, 100.0, 100.0, 100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// High A-Grade Shadow Armor Set Box (Heavy Armor Use)
-	private void use9115(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9094, 1, 1 }, { 9095, 1, 1 }, { 9096, 1, 1 }, { 9097, 1, 1 }, { 9029, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0, 100.0, 100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// No Grade Shadow Armor Set Box (Light Armor Use)
-	private void use9116(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9032, 1, 1 }, { 9033, 1, 1 }, { 9037, 1, 1 }, { 9038, 1, 1 }, { 9039, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0, 100.0, 100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// D-Grade Shadow Armor Set Box (Light Armor Use)
-	private void use9117(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9045, 1, 1 }, { 9046, 1, 1 }, { 9047, 1, 1 }, { 9048, 1, 1 }, { 9053, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0, 100.0, 100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// C-Grade Shadow Armor Set Box (Light Armor Use
-	private void use9118(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9058, 1, 1 }, { 9059, 1, 1 }, { 9060, 1, 1 }, { 9061, 1, 1 }, { 9066, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0, 100.0, 100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// B-Grade Shadow Armor Set Box (Light Armor Use)
-	private void use9119(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9073, 1, 1 }, { 9074, 1, 1 }, { 9075, 1, 1 }, { 9076, 1, 1 }, { 9069, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0, 100.0, 100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// Low A-Grade Shadow Armor Set Box (Light Armor Use)
-	private void use9120(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9087, 1, 1 }, { 9088, 1, 1 }, { 9089, 1, 1 }, { 9090, 1, 1 }, { 9083, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0, 100.0, 100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// High A-Grade Shadow Armor Set Box (Light Armor Use
-	private void use9121(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9098, 1, 1 }, { 9099, 1, 1 }, { 9100, 1, 1 }, { 9095, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0, 100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// No Grade Shadow Armor Set Box (Robe Use)
-	private void use9122(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9034, 1, 1 }, { 9035, 1, 1 }, { 9037, 1, 1 }, { 9038, 1, 1 }, { 9036, 1, 1 }, { 9039, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0, 100.0, 100.0, 100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// D-Grade Shadow Armor Set Box (Robe Use)
-	private void use9123(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9049, 1, 1 }, { 9050, 1, 1 }, { 9051, 1, 1 }, { 9052, 1, 1 }, { 9053, 1, 1 }, { 9044, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0, 100.0, 100.0, 100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// C-Grade Shadow Armor Set Box (Robe Use)
-	private void use9124(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9062, 1, 1 }, { 9063, 1, 1 }, { 9064, 1, 1 }, { 9065, 1, 1 }, { 9066, 1, 1 }, { 9056, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0, 100.0, 100.0, 100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// B-Grade Shadow Armor Set Box (Robe Use)
-	private void use9125(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9077, 1, 1 }, { 9078, 1, 1 }, { 9079, 1, 1 }, { 9080, 1, 1 }, { 9069, 1, 1 }, { 9070, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0, 100.0, 100.0, 100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// Low A-Grade Shadow Armor Set Box (Robe Use)
-	private void use9126(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9091, 1, 1 }, { 9092, 1, 1 }, { 9093, 1, 1 }, { 9084, 1, 1 }, { 9083, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0, 100.0, 100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// High A-Grade Shadow Armor Set Box (Robe Use)
-	private void use9127(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 9101, 1, 1 }, { 9102, 1, 1 }, { 9103, 1, 1 }, { 9095, 1, 1 }, { 9129, 1, 1 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0, 100.0, 100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// No Grade Item Set Box (Magic Use)
-	private void use9130(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 2509, 1000, 1000 }, { 8622, 10, 10 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// D Grade Item Set Box (Magic Use)
-	private void use9131(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 2510, 1000, 1000 }, { 8623, 10, 10 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// C Grade Item Set Box (Magic Use)
-	private void use9132(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 2511, 1000, 1000 }, { 8624, 10, 10 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// B Grade Item Set Box (Magic Use)
-	private void use9133(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 2512, 500, 500 }, { 8625, 7, 7 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// A Grade Item Set Box (Magic Use)
-	private void use9134(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 2513, 300, 300 }, { 8626, 7, 7 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// A, S Grade Item Set Box (Magic Use
-	private void use9135(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-				// itemId, min, max
-				{ 2513, 300, 300 }, { 8627, 5, 5 } };
-
-		double chances[] = new double[] {
-				// chance
-				100.0, 100.0 };
-
-		capsulate(player, items, chances);
-	}
-
-	// Pirate's Booty
-	private void use9144(Player player, boolean ctrl) {
-		int items[][] = new int[][] {
-		// itemId, min, max
-		{ 9143, 1, 1 } };
-
-		double chances[] = new double[] {
-		// chance
-		50.0 };
 
 		capsulate(player, items, chances);
 	}
@@ -13433,4 +12422,21 @@ public class Extractable extends SimpleItemHandler
 		}
 		return true;
 	}
+	
+	private void use33465(Player player, boolean ctrl)
+	{
+		if (Rnd.chance(30))
+		{
+			if (Rnd.chance(40))
+				Functions.addItem(player, 30297, 1L);
+			else if (Rnd.chance(20))
+				Functions.addItem(player, 30299, 1L);
+			else if (Rnd.chance(10))
+				Functions.addItem(player, 30298, 1L);
+			else if (Rnd.chance(30))
+				Functions.addItem(player, 30300, 1L);
+		}
+		else player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+	}
+
 }
