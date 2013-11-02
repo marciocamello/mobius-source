@@ -259,15 +259,14 @@ public class CommissionShopDAO
 	public CommissionItemInfo getCommissionItemInfo(long auctionId, ExItemType exItemType)
 	{
 		CommissionItemInfo itemInfo = null;
-		Connection con = null;
-		PreparedStatement statement = null;
 		ResultSet rset = null;
 		CommissionItemContainer container = CommissionShopManager.getInstance().getContainer();
 		container.readLock();
-		try
+		try (
+				Connection con = DatabaseFactory.getInstance().getConnection();
+				PreparedStatement statement = con.prepareStatement(SELECT_COMMISSION_ITEM_INFO);
+		)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement(SELECT_COMMISSION_ITEM_INFO);
 			statement.setLong(1, auctionId);
 			statement.setString(2, exItemType.name());
 			rset = statement.executeQuery();
@@ -295,7 +294,7 @@ public class CommissionShopDAO
 		finally
 		{
 			container.readUnlock();
-			DbUtils.closeQuietly(con, statement, rset);
+			DbUtils.closeQuietly(rset);
 		}
 		return itemInfo;
 	}

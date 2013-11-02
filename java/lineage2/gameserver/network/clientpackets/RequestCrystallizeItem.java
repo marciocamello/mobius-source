@@ -188,6 +188,8 @@ public class RequestCrystallizeItem extends L2GameClientPacket
 				}
 				break;
 			}
+			default:
+				break;
 		}
 		if (!canCrystallize)
 		{

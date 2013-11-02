@@ -1799,6 +1799,7 @@
 		</equip>
 		<ai_params>
             <set name="ignoreAggroDelay" value="true"/>
+			<set name="TargetEnabled" value="false" />
         </ai_params>
 	</npc>
 	<npc id="19142" name="Sacrificial Offering" title="">
@@ -2279,6 +2280,7 @@
 		</equip>
 		<ai_params>
             <set name="ignoreAggroDelay" value="true"/>
+			<set name="TargetEnabled" value="false" />
         </ai_params>
 	</npc>
 	<npc id="19153" name="Combat Soldier" title="">
@@ -2325,6 +2327,7 @@
 		</skills>
 		<ai_params>
             <set name="ignoreAggroDelay" value="true"/>
+			<set name="TargetEnabled" value="false" />
         </ai_params>
 	</npc>
 	<npc id="19154" name="Combat Officer" title="Combat Assistant">
@@ -2369,6 +2372,9 @@
 		<skills>
 			<skill id="4416" level="4"/>
 		</skills>
+		<ai_params>
+			<set name="TargetEnabled" value="false" />
+        </ai_params>
 	</npc>
 	<npc id="19155" name="Infiltration Officer" title="Combat Assistant">
 		<set name="collision_radius" value="12.0"/>

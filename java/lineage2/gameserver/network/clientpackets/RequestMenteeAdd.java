@@ -18,7 +18,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Request;
 import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.model.World;
-import lineage2.gameserver.model.actor.instances.player.Mentee;
+import lineage2.gameserver.model.actor.instances.player.MenteeMentor;
 import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.serverpackets.ExMentorAdd;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
@@ -63,17 +63,17 @@ public class RequestMenteeAdd extends L2GameClientPacket
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.YOU_MUST_AWAKEN_IN_ORDER_TO_BECOME_A_MENTOR));
 			return;
 		}
-		if (activeChar.getMenteeList().getList().size() == 3)
+		if (activeChar.getMenteeMentorList().getList().size() == 3)
 		{
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.A_MENTOR_CAN_HAVE_UP_TO_3_MENTEES_AT_THE_SAME_TIME));
 			return;
 		}
-		if (newMentee.getMenteeList().getMentor() != 0)
+		if (newMentee.getMenteeMentorList().getMentor() != 0)
 		{
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_ALREADY_HAS_A_MENTOR).addName(newMentee));
 			return;
 		}
-		for (Map.Entry<Integer, Mentee> entry : activeChar.getMenteeList().getList().entrySet())
+		for (Map.Entry<Integer, MenteeMentor> entry : activeChar.getMenteeMentorList().getList().entrySet())
 		{
 			if (entry.getValue().getName().equals(_newMentee))
 			{

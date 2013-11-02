@@ -65,6 +65,50 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
+	<armor id="34859" name="Refined Istina's Bracelet">
+		<set name="icon" value="icon.istina_bangel"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="523"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<equip>
+			<slot id="RIGHT_BRACELET"/>
+		</equip>
+		<set name="ex_type" value="BRACELET"/>
+		<skills>
+			<skill id="13378" level="1"/>
+		</skills>	
+	</armor>
+	<armor id="34860" name="Refined Octavis's Bracelet">
+		<set name="icon" value="icon.octavis_bangel"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="523"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<equip>
+			<slot id="RIGHT_BRACELET"/>
+		</equip>
+		<set name="ex_type" value="BRACELET"/>
+		<skills>
+			<skill id="13379" level="1"/>
+		</skills>	
+	</armor>
 	<armor id="34869" name="Agathion Seal Bracelet - Spirit of Flame (event)">		<!--Done By Darvin (c)Java-Team-->
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>

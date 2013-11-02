@@ -1,15 +1,3 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package lineage2.gameserver.data.xml.parser;
 
 import java.io.File;
@@ -27,54 +15,50 @@ import org.dom4j.Element;
 public final class RestorationInfoParser extends AbstractDirParser<RestorationInfoHolder>
 {
 	private static final RestorationInfoParser _instance = new RestorationInfoParser();
-	
+
 	public static RestorationInfoParser getInstance()
 	{
 		return _instance;
 	}
-	
-	protected RestorationInfoParser()
+
+  	protected RestorationInfoParser()
 	{
-		super(RestorationInfoHolder.getInstance());
+  		super(RestorationInfoHolder.getInstance());
 	}
-	
-	@Override
+
 	public File getXMLDir()
 	{
 		return new File(Config.DATAPACK_ROOT, "data/xml/stats/skills/restoration_info");
 	}
-	
-	@Override
+
 	public boolean isIgnored(File f)
 	{
 		return false;
 	}
-	
-	@Override
+
 	public String getDTDFileName()
 	{
 		return "restoration_info.dtd";
 	}
-	
-	@Override
+
 	protected void readData(Element rootElement) throws Exception
 	{
-		for (Iterator<?> restorationIterator = rootElement.elementIterator(); restorationIterator.hasNext();)
+		for (Iterator<?> restorationIterator = rootElement.elementIterator(); restorationIterator.hasNext(); )
 		{
-			Element restorationElement = (Element) restorationIterator.next();
+			Element restorationElement = (Element)restorationIterator.next();
 			int skillId = Integer.parseInt(restorationElement.attributeValue("skill_id"));
 			int skillLvl = Integer.parseInt(restorationElement.attributeValue("skill_level"));
 			int consumeItemId = restorationElement.attributeValue("consume_item_id") == null ? -1 : Integer.parseInt(restorationElement.attributeValue("consume_item_id"));
 			int consumeItemCount = restorationElement.attributeValue("consume_item_count") == null ? 1 : Integer.parseInt(restorationElement.attributeValue("consume_item_count"));
 			RestorationInfo restorationInfo = new RestorationInfo(skillId, skillLvl, consumeItemId, consumeItemCount);
-			for (Iterator<?> groupIterator = restorationElement.elementIterator(); groupIterator.hasNext();)
+			for (Iterator<?> groupIterator = restorationElement.elementIterator(); groupIterator.hasNext(); )
 			{
-				Element groupElement = (Element) groupIterator.next();
+				Element groupElement = (Element)groupIterator.next();
 				double chance = Double.parseDouble(groupElement.attributeValue("chance"));
 				RestorationGroup restorationGroup = new RestorationGroup(chance);
-				for (Iterator<?> itemIterator = groupElement.elementIterator(); itemIterator.hasNext();)
+				for (Iterator<?> itemIterator = groupElement.elementIterator(); itemIterator.hasNext(); )
 				{
-					Element itemElement = (Element) itemIterator.next();
+					Element itemElement = (Element)itemIterator.next();
 					int id = Integer.parseInt(itemElement.attributeValue("id"));
 					int minCount = Integer.parseInt(itemElement.attributeValue("min_count"));
 					int maxCount = itemElement.attributeValue("max_count") == null ? minCount : Integer.parseInt(itemElement.attributeValue("max_count"));
@@ -82,7 +66,7 @@ public final class RestorationInfoParser extends AbstractDirParser<RestorationIn
 				}
 				restorationInfo.addRestorationGroup(restorationGroup);
 			}
-			getHolder().addRestorationInfo(restorationInfo);
+			(getHolder()).addRestorationInfo(restorationInfo);
 		}
 	}
 }

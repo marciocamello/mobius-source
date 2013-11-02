@@ -2674,7 +2674,7 @@
 		<set name="baseDEX" value="30"/>
 		<set name="baseHpMax" value="91"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="2"/>
 		<set name="baseINT" value="21"/>
 		<set name="baseMAtk" value="23"/>
 		<set name="baseMAtkSpd" value="334"/>

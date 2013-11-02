@@ -57,7 +57,7 @@ public class _10292_SevenSignsGirlOfDoubt extends Quest implements ScriptFile
 	{
 		Player player = st.getPlayer();
 		String htmltext = event;
-		if (event.equalsIgnoreCase("priest_wood_q10292_3.htm"))
+		if (event.equalsIgnoreCase("priest_wood_q10292_1.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);

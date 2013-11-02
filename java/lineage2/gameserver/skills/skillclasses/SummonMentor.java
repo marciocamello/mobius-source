@@ -101,11 +101,11 @@ public class SummonMentor extends Skill
 			return;
 		}
 		Player player = (Player) activeChar;
-		int mentorId = player.getMenteeList().getMentor();
+		int mentorId = player.getMenteeMentorList().getMentor();
 		String mentorName = null;
 		if (mentorId != 0)
 		{
-			mentorName = player.getMenteeList().getList().get(mentorId).getName();
+			mentorName = player.getMenteeMentorList().getList().get(mentorId).getName();
 		}
 		Player mentor;
 		if (mentorName != null)

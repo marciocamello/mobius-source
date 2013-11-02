@@ -329,6 +329,7 @@ public class StatFunctions
 			}
 		}
 	}
+
 	
 	/**
 	 * @author Mobius
@@ -426,11 +427,11 @@ public class StatFunctions
 			{
 				env.value += env.character.getLevel() < 60 ? 4 : 5;
 			}
-			if ((env.character.getLevel() > 77) && (env.character.getLevel() < 85))
+			if (env.character.getLevel() > 77 && env.character.getLevel() < 85)
 			{
 				env.value += env.character.getLevel() - 77;
 			}
-			if ((env.character.getLevel() > 69) && (env.character.getLevel() < 85))
+			if (env.character.getLevel() > 69 && env.character.getLevel() < 85)
 			{
 				env.value += env.character.getLevel() - 69;
 			}
@@ -467,7 +468,7 @@ public class StatFunctions
 		public void calc(Env env)
 		{
 			env.value += (Math.sqrt(env.character.getDEX()) * 5.5) + env.character.getLevel();
-			if ((env.character.getLevel() > 69) && (env.character.getLevel() < 85))
+			if (env.character.getLevel() > 69 && env.character.getLevel() < 85)
 			{
 				env.value += env.character.getLevel() - 69;
 			}
@@ -1181,6 +1182,8 @@ public class StatFunctions
 						case DUALDAGGER:
 							env.value += 12.;
 							break;
+						default:
+							break;
 					}
 				}
 			}
@@ -1580,7 +1583,6 @@ public class StatFunctions
 			env.value = Math.min(Config.LIM_EVASION, env.value);
 		}
 	}
-	
 	/**
 	 * @author Mobius
 	 */
@@ -1638,7 +1640,6 @@ public class StatFunctions
 			env.value = Math.min(Config.LIM_MACCURACY, env.value);
 		}
 	}
-	
 	/**
 	 * @author Mobius
 	 */

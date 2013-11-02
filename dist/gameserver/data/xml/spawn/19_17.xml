@@ -26,11 +26,11 @@
         <npc id="30255"/>
         <!--Haprock-->
     </spawn>
-    <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-        <point x="-12736" y="122816" z="-3112" h="49152"/>
-        <npc id="30256"/>
-        <!--Bella-->
-    </spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-14531" y="124060" z="-3120" h="0" />
+		<npc id="30256" />
+		<!-- Bella -->
+	</spawn>
     <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
         <point x="-13579" y="123017" z="-3104" h="50870"/>
         <npc id="30288"/>
@@ -676,11 +676,6 @@
         <point x="-20714" y="182103" z="-5734" h="0"/>
         <npc id="29004"/>
         <!--Guard Ant-->
-    </spawn>
-    <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-        <point x="-18212" y="108827" z="-2472" h="16384"/>
-        <npc id="35100"/>
-        <!--Sayres-->
     </spawn>
     <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
         <point x="-15172" y="116723" z="-3216" h="16384"/>
@@ -3073,7 +3068,7 @@
         <!--Adventurer Helper Oren-->
     </spawn>
     <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-        <point x="147088" y="25930" z="-2038" h="32672"/>
+        <point x="147064" y="25939" z="-2016" h="50973"/>
         <npc id="33463"/>
         <!--Adventurer Helper Aden-->
     </spawn>

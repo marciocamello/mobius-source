@@ -789,6 +789,7 @@
         <table name="#mpConsume2">245 246 247 248</table>
 		<table name="#radius">400</table>
 		<table name="#flyradius">-200</table>
+        <set name="magicType" val="MAGIC"/>
         <set name="reuseDelay" val="15000"/>
         <set name="hitTime" val="4000"/>
         <set name="mpConsume2" val="#mpConsume2"/>
@@ -1890,6 +1891,7 @@
     <!-- Inflicts magic damage on the target with 126 power. Also inflicts Fear and Burns. Over-hit. -->
         <table name="#mpConsume2">452</table>
 		<table name="#runspd">1</table>
+        <set name="magicType" val="MAGIC"/>
         <set name="reuseDelay" val="600000"/>
         <set name="hitTime" val="6700"/>
         <set name="castRange" val="900"/>
@@ -1922,6 +1924,7 @@
     <!-- Inflicts magic damage on the target and nearby enemies with 126 power. Also inflicts Fear and Burns. Over-hit. -->
         <table name="#mpConsume2">1652</table>
 		<table name="#runspd">1</table>
+        <set name="magicType" val="MAGIC"/>
         <set name="reuseDelay" val="600000"/>
         <set name="hitTime" val="6750"/>
         <set name="castRange" val="900"/>

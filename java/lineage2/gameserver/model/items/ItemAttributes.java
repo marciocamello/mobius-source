@@ -279,6 +279,8 @@ public class ItemAttributes implements Serializable
 			case UNHOLY:
 				unholy = value;
 				break;
+			case NONE:
+				break;
 		}
 	}
 	

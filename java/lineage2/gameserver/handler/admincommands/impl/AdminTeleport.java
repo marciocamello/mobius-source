@@ -326,6 +326,8 @@ public class AdminTeleport implements IAdminCommandHandler
 				}
 				activeChar.sendMessage("Object " + target + " not found");
 				break;
+			default:
+				break;
 		}
 		if (!activeChar.getPlayerAccess().CanEditChar)
 		{
@@ -404,6 +406,8 @@ public class AdminTeleport implements IAdminCommandHandler
 				}
 				activeChar.sendMessage("Player '" + wordList[1] + "' in reflection: " + activeChar.getReflectionId() + ", name: " + activeChar.getReflection().getName());
 				break;
+			default:
+				break;
 		}
 		if (!activeChar.getPlayerAccess().CanEditNPC)
 		{
@@ -413,6 +417,8 @@ public class AdminTeleport implements IAdminCommandHandler
 		{
 			case admin_recall_npc:
 				recallNPC(activeChar);
+				break;
+			default:
 				break;
 		}
 		return true;

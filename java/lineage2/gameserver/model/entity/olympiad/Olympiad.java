@@ -389,6 +389,8 @@ public class Olympiad
 				noble.sendPacket(SystemMsg.YOU_ARE_CURRENTLY_REGISTERED_FOR_A_1V1_CLASS_IRRELEVANT_MATCH);
 				break;
 			}
+			default:
+				break;
 		}
 		return true;
 	}
@@ -443,6 +445,8 @@ public class Olympiad
 					validPlayer.sendPacket(SystemMsg.THE_TOTAL_NUMBER_OF_MATCHES_THAT_CAN_BE_ENTERED_IN_1_WEEK_IS_60_CLASS_IRRELEVANT_INDIVIDUAL_MATCHES_30_SPECIFIC_MATCHES_AND_10_TEAM_MATCHES);
 					return false;
 				}
+				break;
+			default:
 				break;
 		}
 		if (ar[0] == 0)

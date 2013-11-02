@@ -4274,6 +4274,9 @@
             <defence attribute="holy" value="150"/>
             <defence attribute="unholy" value="150"/>
         </attributes>
+		<ai_params>
+			<set name="TargetEnabled" value="false"/>
+		</ai_params>
     </npc>
 	<npc id="32989" name="Territory Manager" title="">
         <!--Need TODO-->

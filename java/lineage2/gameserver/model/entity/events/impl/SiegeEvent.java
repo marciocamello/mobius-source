@@ -51,8 +51,6 @@ import lineage2.gameserver.utils.TimeUtils;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
- * @param <R>
- * @param <S>
  */
 public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject> extends GlobalEvent
 {
@@ -686,6 +684,8 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 				{
 					player.sendPacket(SystemMsg.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE);
 				}
+				break;
+			default:
 				break;
 		}
 		return loc;

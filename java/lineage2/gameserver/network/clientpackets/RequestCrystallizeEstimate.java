@@ -189,6 +189,8 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 				}
 				break;
 			}
+			default:
+				break;
 		}
 		if (!canCrystallize)
 		{

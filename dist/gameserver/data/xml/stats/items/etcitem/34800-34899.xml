@@ -332,20 +332,6 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="34859" name="Enhanced Istina's Bracelet">
-	<!-- Istina's Bracelet with refined abilities. Activates 5 talisman slots when equipped. MP + 216, Con + 1, and Men + 1. Cannot be exchanged, dropped, enchanted, or sold in a private store. -->
-		<set name="icon" value="icon.istina_bangel"/>
-		<set name="weight" value="150"/>
-		<set name="crystal_type" value="R"/>
-		<set name="type" value="OTHER"/>
-	</etcitem>
-	<etcitem id="34860" name="Enhanced Octavis' Bracelet">
-	<!-- Octavis' Bracelet with refined abilities. Activates 5 talisman slots when equipped. MP + 216, Dex + 1, and Wit + 1. Cannot be exchanged, dropped, enchanted, or sold in a private store. -->
-		<set name="icon" value="icon.octavis_bangel"/>
-		<set name="weight" value="150"/>
-		<set name="crystal_type" value="R"/>
-		<set name="type" value="OTHER"/>
-	</etcitem>
 	<etcitem id="34862" name="Lavish Decoration Paper">
 	<!-- It says "You only get one lift" in angma language. -->
 		<set name="icon" value="icon.etc_plan_i00"/>

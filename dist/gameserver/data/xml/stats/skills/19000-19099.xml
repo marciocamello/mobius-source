@@ -278,6 +278,21 @@
 		<set name="isReuseDelayPermanent" val="true"/>
 		<set name="castle_side" val="DARK"/>
 	</skill>
+	<skill id="19036" levels="1" name="Blessing of Light">
+    <!-- Proclaimer buff. -->
+        <table name="#power">0.03</table>
+        <set name="magicLevel" val="1"/>
+		<set name="mpConsume1" val="0"/>
+		<set name="isSelfDispellable" val="true"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="2" stackType="proclaimer" time="3600" val="0">
+				<add order="0x40" stat="ExpMultiplier" val="#power"/>
+			</effect>
+		</for>
+    </skill>
 	<skill id="19037" levels="1" name="Radiant Cloak of Light">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>

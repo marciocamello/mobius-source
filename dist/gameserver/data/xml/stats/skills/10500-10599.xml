@@ -1038,7 +1038,6 @@
     <skill id="10528" levels="1" name="Shadow Fake Death">
     <!-- Acts dead to stop monsters from attacking. Cannot be targeted until you get back up. 20 MP is consumed per second. -->
         <table name="#mpConsume2">71</table>
-        <set name="reuseDelay" val="300000"/>
         <set name="mpConsume2" val="#mpConsume2"/>
         <set name="magicLevel" val="85"/>
         <set name="relationSkillsId" val="60;"/>

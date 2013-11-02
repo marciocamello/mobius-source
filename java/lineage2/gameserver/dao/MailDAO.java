@@ -362,30 +362,35 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 	 */
 	private void delete0(Mail mail) throws SQLException
 	{
-		Connection con = null;
-		PreparedStatement statement = null;
-		try
+		try (
+				Connection con = DatabaseFactory.getInstance().getConnection();
+				PreparedStatement statement = con.prepareStatement(REMOVE_OWN_MAIL);
+		)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			// ADDED FOR MAIL FIX
-			statement = con.prepareStatement(REMOVE_OWN_MAIL);
+			//ADDED FOR MAIL FIX
 			statement.setInt(1, mail.getSenderId());
 			statement.setInt(2, mail.getMessageId());
 			statement.setInt(3, 1);
 			statement.execute();
-			statement = con.prepareStatement(REMOVE_OWN_MAIL);
+		}
+		try (
+				Connection con = DatabaseFactory.getInstance().getConnection();
+				PreparedStatement statement = con.prepareStatement(REMOVE_OWN_MAIL);
+		)
+		{
 			statement.setInt(1, mail.getReceiverId());
 			statement.setInt(2, mail.getMessageId());
 			statement.setInt(3, 0);
 			statement.execute();
-			// END
-			statement = con.prepareStatement(REMOVE_MAIL);
+		}
+		try (
+				Connection con = DatabaseFactory.getInstance().getConnection();
+				PreparedStatement statement = con.prepareStatement(REMOVE_MAIL);
+		)
+		{
+			//END
 			statement.setInt(1, mail.getMessageId());
 			statement.execute();
-		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement);
 		}
 		delete.incrementAndGet();
 	}
@@ -589,7 +594,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 			return mail;
 		}
 		mail = load0(id);
-		if (mail == null)
+		if (mail==null)
 		{
 			_log.warn("Mail load error id:" + id);
 		}

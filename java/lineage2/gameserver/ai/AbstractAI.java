@@ -278,6 +278,12 @@ public abstract class AbstractAI extends RunnableImpl
 			case EVT_MENU_SELECTED:
 				onEvtMenuSelected((Player) args[0], ((Number) args[1]).intValue(), ((Number) args[2]).intValue());
 				break;
+			case EVT_KNOCK_DOWN:
+				onEvtKnockDown();
+				break;
+			case EVT_TELEPORTED:
+				onEvtTeleported();
+				break;
 		}
 	}
 	
@@ -533,4 +539,14 @@ public abstract class AbstractAI extends RunnableImpl
 	 * @param reply int
 	 */
 	protected abstract void onEvtMenuSelected(Player player, int ask, int reply);
+	
+	/**
+	 * Method onEvtKnockDown.
+	 */
+	protected abstract void onEvtKnockDown();
+	
+	/**
+	 * Method onEvtTeleported.
+	 */
+	protected abstract void onEvtTeleported();
 }

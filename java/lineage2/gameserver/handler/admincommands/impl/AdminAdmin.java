@@ -517,6 +517,9 @@ public class AdminAdmin implements IAdminCommandHandler
 						Functions.sendDebugMessage(activeChar, "Undying state has been enabled.");
 					}
 					break;
+				default:
+					activeChar.sendMessage("Command isn't implemented yet.");
+					break;
 			}
 			return true;
 		}
@@ -548,6 +551,8 @@ public class AdminAdmin implements IAdminCommandHandler
 					{
 						activeChar.sendMessage("Html page not found");
 					}
+					break;
+				default:
 					break;
 			}
 			return true;

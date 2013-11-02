@@ -21,7 +21,7 @@ import java.util.Map;
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.actor.instances.player.Mentee;
+import lineage2.gameserver.model.actor.instances.player.MenteeMentor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -63,9 +63,9 @@ public class MentoringDAO
 	 * @param listOwner Player
 	 * @return Map<Integer,Mentee>
 	 */
-	public Map<Integer, Mentee> selectMenteeList(Player listOwner)
+	public Map<Integer, MenteeMentor> selectMenteeMentorList(Player listOwner)
 	{
-		Map<Integer, Mentee> map = new HashMap<>();
+		Map<Integer, MenteeMentor> map = new HashMap<>();
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
@@ -82,7 +82,7 @@ public class MentoringDAO
 				String name = rset.getString("char_name");
 				int classId = rset.getInt("class_id");
 				int level = rset.getInt("level");
-				map.put(objectId, new Mentee(objectId, name, classId, level, classId > 138));
+				map.put(objectId, new MenteeMentor(objectId, name, classId, level, classId > 138));
 			}
 		}
 		catch (Exception e)
@@ -115,7 +115,7 @@ public class MentoringDAO
 		}
 		catch (Exception e)
 		{
-			_log.warn(mentor.getMenteeList() + " could not add mentee objectid: " + mentee.getObjectId(), e);
+			_log.warn(mentor.getMenteeMentorList() + " could not add mentee objectid: " + mentee.getObjectId(), e);
 		}
 		finally
 		{

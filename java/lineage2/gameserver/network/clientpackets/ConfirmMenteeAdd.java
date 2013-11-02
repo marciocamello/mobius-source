@@ -103,13 +103,12 @@ public class ConfirmMenteeAdd extends L2GameClientPacket
 		}
 		try
 		{
-			requestor.getMenteeList().addMentee(activeChar);
-			activeChar.getMenteeList().addMentor(requestor);
+			requestor.getMenteeMentorList().addMentee(activeChar);
+			activeChar.getMenteeMentorList().addMentor(requestor);
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTOR).addName(requestor), new ExMentorList(activeChar));
 			requestor.sendPacket(new SystemMessage2(SystemMsg.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTEE).addName(activeChar), new ExMentorList(requestor));
-			Mentoring.applyMentoringCond(requestor, true);
-			Mentoring.addMentoringSkills(requestor);
-			Mentoring.addMentoringSkills(activeChar);
+			Mentoring.applyMenteeBuffs(activeChar);
+			Mentoring.applyMentorBuffs(requestor);
 		}
 		finally
 		{

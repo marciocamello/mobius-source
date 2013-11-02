@@ -413,6 +413,8 @@ public class GiftOfVitality extends Functions implements ScriptFile
 					htmltext = "jack-okbuff.htm";
 				}
 				break;
+			default:
+				break;
 		}
 		show("scripts/events/GiftOfVitality/" + htmltext, getSelf().getPlayer());
 	}

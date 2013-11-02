@@ -26,6 +26,7 @@ public class RequestMentorCancel extends L2GameClientPacket
 	/**
 	 * Field _mtype.
 	 */
+	@SuppressWarnings("unused")
 	private int _mtype;
 	/**
 	 * Field _charName.
@@ -49,15 +50,35 @@ public class RequestMentorCancel extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
-		Player menteeChar = World.getPlayer(_charName);
-		activeChar.getMenteeList().remove(_charName, _mtype == 1, true);
-		activeChar.sendPacket(new ExMentorList(activeChar));
-		if ((menteeChar != null) && menteeChar.isOnline())
+		int mentorId = activeChar.getMenteeMentorList().getMentor();
+		if (mentorId != 0)
 		{
-			menteeChar.getMenteeList().remove(activeChar.getName(), _mtype != 1, false);
-			menteeChar.sendPacket(new ExMentorList(menteeChar));
+			String mentorName = activeChar.getMenteeMentorList().getList().get(mentorId).getName();
+			Player mentorChar = World.getPlayer(mentorName);
+			mentorChar.getMenteeMentorList().remove(activeChar.getName(), true, true);
+			mentorChar.sendPacket(new ExMentorList(mentorChar));
+			if ((activeChar != null) && activeChar.isOnline())
+			{
+				activeChar.getMenteeMentorList().remove(mentorChar.getName(), false, false);
+				activeChar.sendPacket(new ExMentorList(activeChar));
+			}
+			Mentoring.cancelMentorBuffs(mentorChar);
+			Mentoring.cancelMenteeBuffs(activeChar);
+			Mentoring.setTimePenalty(mentorChar.getObjectId(), System.currentTimeMillis() + (2 * 24 * 3600 * 1000L), -1);
 		}
-		Mentoring.applyMentoringCond(activeChar, false);
-		Mentoring.setTimePenalty(_mtype == 1 ? activeChar.getObjectId() : activeChar.getMenteeList().getMentor(), System.currentTimeMillis() + (7 * 24 * 3600 * 1000L), -1);
+		else
+		{
+			Player menteeChar = World.getPlayer(_charName);
+			activeChar.getMenteeMentorList().remove(_charName, true, true);
+			activeChar.sendPacket(new ExMentorList(activeChar));
+			if ((menteeChar != null) && menteeChar.isOnline())
+			{
+				menteeChar.getMenteeMentorList().remove(activeChar.getName(), false, false);
+				menteeChar.sendPacket(new ExMentorList(menteeChar));
+			}
+			Mentoring.cancelMentorBuffs(activeChar);
+			Mentoring.cancelMenteeBuffs(menteeChar);
+			Mentoring.setTimePenalty(activeChar.getObjectId(), System.currentTimeMillis() + (2 * 24 * 3600 * 1000L), -1);
+		}
 	}
 }

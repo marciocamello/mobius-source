@@ -265,6 +265,8 @@ public class NewbieGuideInstance extends NpcInstance
 					case KAMAEL_F_SOLDIER:
 						val = 32138;
 						break;
+					default:
+						break;
 				}
 				break;
 			case 4:
