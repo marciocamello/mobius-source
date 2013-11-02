@@ -52,7 +52,7 @@ public class SpiritShot extends ScriptItemHandler
 	 */
 	private static final int[] _skillIds =
 	{
-		2061,
+		2047,
 		2155,
 		2156,
 		2157,

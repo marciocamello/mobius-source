@@ -776,9 +776,8 @@
 		<skills/>
 	</npc>
 	<npc id="36618" name="Chamberlain of Darkness" title="">
-		<!--by Awakeninger-->
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="castle_id" value="1"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="level" value="99"/>
@@ -819,9 +818,8 @@
 		<skills/>
 	</npc>
 	<npc id="36619" name="Chamberlain of Darkness" title="">
-		<!--by Awakeninger-->
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="castle_id" value="2"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="level" value="99"/>
@@ -862,9 +860,8 @@
 		<skills/>
 	</npc>
 	<npc id="36620" name="Chamberlain of Darkness" title="">
-		<!--by Awakeninger-->
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="castle_id" value="3"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="level" value="99"/>
@@ -905,9 +902,8 @@
 		<skills/>
 	</npc>
 	<npc id="36621" name="Chamberlain of Darkness" title="">
-		<!--by Awakeninger-->
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="castle_id" value="4"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="level" value="99"/>
@@ -948,9 +944,8 @@
 		<skills/>
 	</npc>
 	<npc id="36622" name="Chamberlain of Darkness" title="">
-		<!--by Awakeninger-->
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="castle_id" value="5"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="level" value="99"/>
@@ -991,9 +986,8 @@
 		<skills/>
 	</npc>
 	<npc id="36623" name="Chamberlain of Darkness" title="">
-		<!--by Awakeninger-->
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="castle_id" value="6"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="level" value="99"/>
@@ -1034,9 +1028,8 @@
 		<skills/>
 	</npc>
 	<npc id="36624" name="Chamberlain of Darkness" title="">
-		<!--by Awakeninger-->
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="castle_id" value="7"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="level" value="99"/>
@@ -1077,9 +1070,8 @@
 		<skills/>
 	</npc>
 	<npc id="36625" name="Chamberlain of Darkness" title="">
-		<!--by Awakeninger-->
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="castle_id" value="8"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="level" value="99"/>
@@ -1120,9 +1112,8 @@
 		<skills/>
 	</npc>
 	<npc id="36626" name="Chamberlain of Darkness" title="">
-		<!--by Awakeninger-->
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="castle_id" value="9"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="level" value="99"/>

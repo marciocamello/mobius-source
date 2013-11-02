@@ -129,6 +129,8 @@ public class SummonServitor extends Skill
 			case CLONE:
 			case NPC:
 				break;
+			default:
+				break;
 		}
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
@@ -306,7 +308,7 @@ public class SummonServitor extends Skill
 				clone.spawnMe(cloneLoc);
 				clone.setRunning();
 				clone.setFollowMode(true);
-				
+
 				cloneLoc = Location.findAroundPosition(activeChar, 50, 70);
 				clone = new CloneInstance(IdFactory.getInstance().getNextId(), activeChar.getTemplate(), activeChar, _lifeTime, cloneLoc);
 				clone.setHeading(activeChar.getHeading());
@@ -316,7 +318,7 @@ public class SummonServitor extends Skill
 				clone.spawnMe(cloneLoc);
 				clone.setRunning();
 				clone.setFollowMode(true);
-				
+
 				cloneLoc = Location.findAroundPosition(activeChar, 50, 70);
 				clone = new CloneInstance(IdFactory.getInstance().getNextId(), activeChar.getTemplate(), activeChar, _lifeTime, cloneLoc);
 				clone.setHeading(activeChar.getHeading());
@@ -341,6 +343,8 @@ public class SummonServitor extends Skill
 				normalnpc.setReflection(activeChar.getReflection());
 				normalnpc.spawnMe(activeChar.getLoc());
 				ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(normalnpc), _lifeTime);
+				break;
+			default:
 				break;
 		}
 		if (isSSPossible())

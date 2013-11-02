@@ -934,10 +934,10 @@
 	<zone name="[Hall_of_Orbis_3_2_level]" type="dummy">
         <set name="tele" val="210888 49480 -14904"/>
         <polygon>
-            <coords loc="211720 115272 -12760 -12760"/>
-            <coords loc="211720 114680 -12760 -12760"/>
-            <coords loc="211320 114680 -12642 -12760"/>
-            <coords loc="211320 115272 -12642 -12760"/>
+            <coords loc="211720 115272 -12608 -12760"/>
+            <coords loc="211720 114680 -12608 -12760"/>
+            <coords loc="211320 114680 -12608 -12760"/>
+            <coords loc="211320 115272 -12608 -12760"/>
         </polygon>
     </zone>
 	<zone name="[harnak_underground_4pf_1]" type="dummy">

@@ -598,6 +598,8 @@ public class BelethManager extends Functions implements ScriptFile
 						ThreadPoolManager.getInstance().schedule(new eventExecutor(Event.entity_clear), 10);
 					}
 					break;
+				default:
+					break;
 			}
 		}
 	}

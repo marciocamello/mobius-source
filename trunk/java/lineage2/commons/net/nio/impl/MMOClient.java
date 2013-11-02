@@ -17,8 +17,8 @@ import java.nio.ByteBuffer;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
- * @param <T>
  */
+@SuppressWarnings("rawtypes")
 public abstract class MMOClient<T extends MMOConnection>
 {
 	/**

@@ -27,8 +27,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
- * @param <T>
  */
+@SuppressWarnings("rawtypes")
 public class MMOConnection<T extends MMOClient>
 {
 	/**

@@ -163,6 +163,8 @@ public class TeamMember
 			case NON_CLASSED:
 				set.set(Olympiad.GAME_NOCLASSES_COUNT, set.getInteger(Olympiad.GAME_NOCLASSES_COUNT) + 1);
 				break;
+			default:
+				break;
 		}
 	}
 	

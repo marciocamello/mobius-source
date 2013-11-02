@@ -99,6 +99,8 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 					return false;
 				}
 				break;
+			default:
+				break;
 		}
 		switch (command)
 		{

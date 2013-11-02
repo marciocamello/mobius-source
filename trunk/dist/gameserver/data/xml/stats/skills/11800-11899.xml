@@ -1,12 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
+	<skill id="11800" levels="3" name="Sustain">
+	<!-- For 10 second, increases Healing power by 50, 100, 200. If triggered again, the effect will increase. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="11801" levels="3" name="Sustain">
+	<!-- For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
+		<set name="reuseDelay" val="1000"/>
+		<set name="hitTime" val="500"/>
+		<set name="castRange" val="600"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="11802" levels="3" name="Sustain">
+	<!-- For 10 second, increases Healing power by 50, 100, 200. If triggered again, the effect will increase. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="11803" levels="3" name="Sustain">
+	<!-- For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
+		<set name="reuseDelay" val="1000"/>
+		<set name="hitTime" val="500"/>
+		<set name="castRange" val="600"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="11804" levels="3" name="Sustain">
+	<!-- For 10 second, increases Healing power by 50, 100, 200. If triggered again, the effect will increase. -->
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<!-- <skill id="11805" levels="1" name="Not in Use"></skill> -->
 	<skill id="11806" levels="4" name="Blessing of Tree">
 		<!-- Recovers HP and removes bad abnormal statuses. -->
 		<table name="#power">3000 3100 3200 3300</table>
 		<set name="magicType" val="SPECIAL"/>
-		<set name="reuseDelay" val="2000"/>
+		<set name="reuseDelay" val="7000"/>
+		<set name="hitTime" val="500"/>
 		<set name="power" val="#power"/>
-		<set name="hitTime" val="100"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HEAL_HP_CP"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -24,9 +61,7 @@
 	<skill id="11807" levels="5" name="Miracle of Fairy">
 		<table name="#power">400 500 600 700</table>
 		<set name="magicType" val="SPECIAL"/>
-		<set name="reuseDelay" val="2000"/>
 		<set name="power" val="#power"/>
-		<set name="hitTime" val="100"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HEAL"/>
 		<set name="operateType" val="OP_ACTIVE"/>

@@ -3779,24 +3779,23 @@
         <!--Dead Worshipper-->
     </spawn>
     <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-        <point x="154208" y="-51648" z="-2992" h="57344"/>
+		<point x="154208" y="-51648" z="-2992" h="57344"/>
         <npc id="35367"/>
         <!--Daven-->
     </spawn>
-	    <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
         <point x="147240" y="27368" z="-2228" h="57344"/>
         <npc id="33585"/>
         <!--Konrad-->
     </spawn>
-		    <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-        <point x="147656" y="27368" z="-2228" h="57344"/>
-        <npc id="33647"/>
-        <!--Karntii-->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="147656" y="27368" z="-2228" h="57344"/>
+		<npc id="33647"/>
+		<!--Karntii-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="147784" y="25914" z="-2038" h="57344"/>
+		<npc id="33515"/>
+		<!--Giorgio-->
     </spawn>
-			    <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-        <point x="147784" y="25914" z="-2038" h="57344"/>
-        <npc id="33515"/>
-        <!--Giorgio-->
-    </spawn>
-	
 </list>

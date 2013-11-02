@@ -628,11 +628,6 @@
         <!--Adventure Guildsman-->
     </spawn>
     <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-        <point x="22172" y="160923" z="-2666" h="49152"/>
-        <npc id="35142"/>
-        <!--Crosby-->
-    </spawn>
-    <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
         <point x="19132" y="153027" z="-3120" h="49152"/>
         <npc id="35146"/>
         <!--Gibbson-->
@@ -686,11 +681,6 @@
         <point x="15681" y="142885" z="-2706" h="15741"/>
         <npc id="31219"/>
         <!--Event Gatekeeper-->
-    </spawn>
-    <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-        <point x="10165" y="-49055" z="-281" h="57344"/>
-        <npc id="35509"/>
-        <!--Frederick-->
     </spawn>
     <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
         <point x="10175" y="-49241" z="-281" h="8529"/>

@@ -328,13 +328,15 @@
  	</skill> 
  	<skill id="13328" levels="1" name="Octavis's Belt"> 
     <!-- MP recovery rate + 2.3 and weight limit + 13000. -->
+		<table name="#Weight">13000</table>
+		<set name="magicLevel" val="1"/>
  		<set name="target" val="TARGET_SELF"/> 
  		<set name="skillType" val="BUFF"/> 
  		<set name="operateType" val="OP_PASSIVE"/> 
  		<for> 
  		    <add order="0x40" stat="regMp" val="2.3"/> 
-            <add order="0x40" stat="maxNoPenaltyLoad" val="13000"/> 
- 	  </for> 
+			<add order="0x40" stat="maxLoad" val="#Weight"/>
+		</for>
 	</skill> 
     <skill id="13339" levels="1" name="Enchant Heavy Armor (R Grade)">
     <!-- P. Def and MP Recovery Bonus increase when a set item is enchanted. -->
@@ -378,7 +380,31 @@
             <add order="0x40" stat="talismansLimit" val="4"/>
         </for>
     </skill>
-		<skill id="13384" levels="1" name="Equip Talisman of Infinity">
+	<skill id="13378" levels="1" name="Refined Istina's Bracelet">
+	<!-- CON+1,MEN+1. 5 Talisman(s) can be equipped. -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x10" stat="MEN" val="1"/>
+			<add order="0x10" stat="CON" val="1"/>
+			<add order="0x40" stat="maxMp" val="216"/>
+			<add order="0x40" stat="talismansLimit" val="5"/>
+		</for>
+	</skill>
+	<skill id="13379" levels="1" name="Refined Octavis Bracelet">
+	<!-- DEX+1,DEX+1. 5 Talisman(s) can be equipped. -->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x10" stat="DEX" val="1"/>
+			<add order="0x10" stat="WIT" val="1"/>
+			<add order="0x40" stat="maxMp" val="216"/>
+			<add order="0x40" stat="talismansLimit" val="5"/>
+		</for>
+	</skill>
+	<skill id="13384" levels="1" name="Equip Talisman of Infinity">
 	<!-- Talisman of Infinity burns with power. -->
 		<set name="magicType" val="SPECIAL"/>
 		<set name="magicLevel" val="97"/>

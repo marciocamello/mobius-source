@@ -118,7 +118,7 @@ public class Request extends MultiValueSet<String>
 	/**
 	 * Field _reciever.
 	 */
-	private final HardReference<Player> _reciever;
+	private final HardReference<Player> _receiver;
 	/**
 	 * Field _isRequestorConfirmed.
 	 */
@@ -150,14 +150,14 @@ public class Request extends MultiValueSet<String>
 	 * @param requestor Player
 	 * @param reciever Player
 	 */
-	public Request(L2RequestType type, Player requestor, Player reciever)
+	public Request(L2RequestType type, Player requestor, Player receiver)
 	{
 		_id = _nextId.incrementAndGet();
 		_requestor = requestor.getRef();
-		_reciever = reciever.getRef();
+		_receiver = receiver.getRef();
 		_type = type;
 		requestor.setRequest(this);
-		reciever.setRequest(this);
+		receiver.setRequest(this);
 	}
 	
 	/**
@@ -204,7 +204,7 @@ public class Request extends MultiValueSet<String>
 		{
 			player.setRequest(null);
 		}
-		player = getReciever();
+		player = getReceiver();
 		if ((player != null) && (player.getRequest() == this))
 		{
 			player.setRequest(null);
@@ -227,7 +227,7 @@ public class Request extends MultiValueSet<String>
 		{
 			player.setRequest(null);
 		}
-		player = getReciever();
+		player = getReceiver();
 		if ((player != null) && (player.getRequest() == this))
 		{
 			player.setRequest(null);
@@ -239,7 +239,7 @@ public class Request extends MultiValueSet<String>
 	 */
 	public void timeout()
 	{
-		Player player = getReciever();
+		Player player = getReceiver();
 		if (player != null)
 		{
 			if (player.getRequest() == this)
@@ -259,9 +259,9 @@ public class Request extends MultiValueSet<String>
 	{
 		if (player == getRequestor())
 		{
-			return getReciever();
+			return getReceiver();
 		}
-		if (player == getReciever())
+		if (player == getReceiver())
 		{
 			return getRequestor();
 		}
@@ -281,9 +281,9 @@ public class Request extends MultiValueSet<String>
 	 * Method getReciever.
 	 * @return Player
 	 */
-	public Player getReciever()
+	public Player getReceiver()
 	{
-		return _reciever.get();
+		return _receiver.get();
 	}
 	
 	/**
@@ -331,7 +331,7 @@ public class Request extends MultiValueSet<String>
 		{
 			_isRequestorConfirmed = true;
 		}
-		else if (player == getReciever())
+		else if (player == getReceiver())
 		{
 			_isRecieverConfirmed = true;
 		}
@@ -348,7 +348,7 @@ public class Request extends MultiValueSet<String>
 		{
 			return _isRequestorConfirmed;
 		}
-		else if (player == getReciever())
+		else if (player == getReceiver())
 		{
 			return _isRecieverConfirmed;
 		}

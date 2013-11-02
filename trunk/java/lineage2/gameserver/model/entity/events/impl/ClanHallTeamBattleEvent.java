@@ -269,6 +269,8 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 					loc = teleportList.get(index);
 				}
 				break;
+			default:
+				break;
 		}
 		return loc;
 	}

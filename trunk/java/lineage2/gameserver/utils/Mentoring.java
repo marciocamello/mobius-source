@@ -20,7 +20,6 @@ import lineage2.gameserver.database.mysql;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.World;
-import lineage2.gameserver.model.actor.instances.player.Mentee;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.mail.Mail;
 import lineage2.gameserver.network.serverpackets.ExNoticePostArrived;
@@ -91,18 +90,18 @@ public class Mentoring
 	 */
 	public static int[] effectsForMentee =
 	{
-		9233,
 		9227,
 		9228,
 		9229,
 		9230,
 		9231,
-		9232
+		9232,
+		9233
 	};
 	/**
 	 * Field skillForMenee.
 	 */
-	public static int skillForMenee = 9379;
+	public static int skillForMentee = 9379;
 	/**
 	 * Field skillsForMentor.
 	 */
@@ -116,96 +115,66 @@ public class Mentoring
 	 * Field effectForMentor.
 	 */
 	public static int effectForMentor = 9256;
-	/**
-	 * Field effectsForDebuff.
-	 */
-	public static int[] effectsForDebuff =
-	{
-		9233,
-		9227,
-		9228,
-		9229,
-		9230,
-		9231,
-		9232,
-		9376,
-		9377,
-		9378,
-		9256
-	};
 	
 	/**
-	 * Method applyMentoringCond.
-	 * @param dependPlayer Player
-	 * @param login boolean
+	 * Method applyMenteeBuffs.
+	 * @param menteePlayer Player
 	 */
-	public static void applyMentoringCond(Player dependPlayer, boolean login)
+	public static void applyMenteeBuffs(Player menteePlayer)
 	{
-		if (login)
+		addMentoringSkills(menteePlayer);
+		if (menteePlayer.getLevel() < 86)
 		{
-			if (dependPlayer.getClassId().getId() > 138)
+			for (int effect : effectsForMentee)
 			{
-				addMentoringSkills(dependPlayer);
-				if (!dependPlayer.getEffectList().containEffectFromSkills(new int[effectForMentor]))
+				if (!menteePlayer.getEffectList().containEffectFromSkills(new int[effect]))
 				{
-					SkillTable.getInstance().getInfo(effectForMentor, 1).getEffects(dependPlayer, dependPlayer, false, false);
-				}
-				for (Mentee mentee : dependPlayer.getMenteeList().getList().values())
-				{
-					Player menteePlayer = World.getPlayer(mentee.getName());
-					if (menteePlayer != null)
-					{
-						for (int effect : effectsForMentee)
-						{
-							if (!menteePlayer.getEffectList().containEffectFromSkills(new int[effect]))
-							{
-								SkillTable.getInstance().getInfo(effect, 1).getEffects(menteePlayer, menteePlayer, false, false);
-							}
-						}
-					}
-				}
-			}
-			else
-			{
-				for (int effect : effectsForMentee)
-				{
-					if (!dependPlayer.getEffectList().containEffectFromSkills(new int[effect]))
-					{
-						SkillTable.getInstance().getInfo(effect, 1).getEffects(dependPlayer, dependPlayer, false, false);
-					}
-				}
-				int mentorId = dependPlayer.getMenteeList().getMentor();
-				if (dependPlayer.getMenteeList().getList().get(mentorId) != null)
-				{
-					String mentorName = dependPlayer.getMenteeList().getList().get(mentorId).getName();
-					Player mentorPlayer = World.getPlayer(mentorName);
-					if (mentorPlayer != null)
-					{
-						if (!mentorPlayer.getEffectList().containEffectFromSkills(new int[effectForMentor]))
-						{
-							SkillTable.getInstance().getInfo(effectForMentor, 1).getEffects(mentorPlayer, mentorPlayer, false, false);
-						}
-					}
+					SkillTable.getInstance().getInfo(effect, 1).getEffects(menteePlayer, menteePlayer, false, false);
 				}
 			}
 		}
-		else
+	}
+	
+	/**
+	 * Method applyMentorBuffs.
+	 * @param dependPlayer Player
+	 * @param updateMentees boolean
+	 */
+	public static void applyMentorBuffs(Player mentorPlayer)
+	{
+		addMentoringSkills(mentorPlayer);
+		if (mentorPlayer.getClassId().getId() > 138 && mentorPlayer.getLevel() > 85)
 		{
-			for (Mentee mentee : dependPlayer.getMenteeList().getList().values())
+			if (!mentorPlayer.getEffectList().containEffectFromSkills(new int[effectForMentor]))
 			{
-				Player menteePlayer = World.getPlayer(mentee.getName());
-				if (menteePlayer != null)
-				{
-					if (!menteePlayer.getMenteeList().someOneOnline(false))
-					{
-						for (int buff : effectsForDebuff)
-						{
-							menteePlayer.getEffectList().stopEffect(buff);
-						}
-					}
-				}
+				SkillTable.getInstance().getInfo(effectForMentor, mentorPlayer.getMenteeMentorList().getOnlineMenteesCount(mentorPlayer)).getEffects(mentorPlayer, mentorPlayer, false, false);
 			}
 		}
+	}
+	
+	public static void cancelMenteeBuffs(Player mentee)
+	{
+		if (mentee.getMenteeMentorList().someOneOnline(false) 
+				|| mentee.getMenteeMentorList().someOneOnline(true))
+		{
+			return;
+		}
+		for (int buff : effectsForMentee)
+		{
+			mentee.getEffectList().removeEffect(buff);
+		}
+	}
+	
+	public static void cancelMentorBuffs(Player mentor)
+	{
+		if (mentor.getMenteeMentorList().someOneOnline(false)
+				|| mentor.getMenteeMentorList().someOneOnline(true))
+		{
+			mentor.getEffectList().removeEffect(effectForMentor);
+			SkillTable.getInstance().getInfo(effectForMentor, mentor.getMenteeMentorList().getOnlineMenteesCount(mentor)).getEffects(mentor, mentor, false, false);
+			return;
+		}
+		mentor.getEffectList().removeEffect(effectForMentor);
 	}
 	
 	/**
@@ -214,7 +183,7 @@ public class Mentoring
 	 */
 	public static void addMentoringSkills(Player mentoringPlayer)
 	{
-		if (mentoringPlayer.getMenteeList().getMentor() == 0)
+		if (mentoringPlayer.getMenteeMentorList().getMentor() == 0)
 		{
 			for (int skillId : skillsForMentor)
 			{
@@ -225,7 +194,7 @@ public class Mentoring
 		}
 		else
 		{
-			Skill skill = SkillTable.getInstance().getInfo(skillForMenee, 1);
+			Skill skill = SkillTable.getInstance().getInfo(skillForMentee, 1);
 			mentoringPlayer.addSkill(skill, true);
 			mentoringPlayer.sendSkillList();
 		}
@@ -247,6 +216,19 @@ public class Mentoring
 		else
 		{
 			mysql.set("REPLACE INTO character_variables (obj_id, type, name, value, expire_time) VALUES (?,'user-var','mentorPenalty',?,?)", mentorId, timeTo, expirationTime);
+		}
+	}
+	
+	public static long getTimePenalty(int mentorId)
+	{
+		Player mentor = World.getPlayer(mentorId);
+		if ((mentor != null) && mentor.isOnline())
+		{
+			return mentor.getVarLong("mentorPenalty");
+		}
+		else
+		{
+			return (long) mysql.get("SELECT value FROM character_variables WHERE obj_id = " + mentorId);
 		}
 	}
 	

@@ -124,13 +124,12 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 			String html = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_mail_list.htm", player);
 			int inbox = 0;
 			int send = 0;
-			Connection con = null;
-			PreparedStatement statement = null;
 			ResultSet rset = null;
-			try
+			try (
+					Connection con = DatabaseFactory.getInstance().getConnection();
+					PreparedStatement statement = con.prepareStatement("SELECT count(*) as cnt FROM `bbs_mail` WHERE `box_type` = 0 and `to_object_id` = ?");
+			)
 			{
-				con = DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("SELECT count(*) as cnt FROM `bbs_mail` WHERE `box_type` = 0 and `to_object_id` = ?");
 				statement.setInt(1, player.getObjectId());
 				rset = statement.executeQuery();
 				if (rset.next())
@@ -138,12 +137,17 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 					inbox = rset.getInt("cnt");
 				}
 				statement.close();
-				statement = con.prepareStatement("SELECT count(*) as cnt FROM `bbs_mail` WHERE `box_type` = 1 and `from_object_id` = ?");
-				statement.setInt(1, player.getObjectId());
-				rset = statement.executeQuery();
-				if (rset.next())
+				rset.close();
+				try (
+						PreparedStatement statement2 = con.prepareStatement("SELECT count(*) as cnt FROM `bbs_mail` WHERE `box_type` = 1 and `from_object_id` = ?");
+				)
 				{
-					send = rset.getInt("cnt");
+					statement2.setInt(1, player.getObjectId());
+					rset = statement2.executeQuery();
+					if (rset.next())
+					{
+						send = rset.getInt("cnt");
+					}
 				}
 			}
 			catch (Exception e)
@@ -151,7 +155,7 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 			}
 			finally
 			{
-				DbUtils.closeQuietly(con, statement, rset);
+				DbUtils.closeQuietly(rset);
 			}
 			List<MailData> mailList = null;
 			switch (type)

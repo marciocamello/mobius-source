@@ -1022,7 +1022,7 @@
 		</enchant4>
 		<enchant5 levels="10" name="Recycle" enchRoute="9"/>
 		<for>
-			<effect name="Buff" time="#time" val="0" stackOrder="1" stackType="possession">
+			<effect name="Buff" time="#time" val="0" stackOrder="11" stackType="guts">
 				<add order="0x40" stat="debuffResist" val="20"/>
 				<add order="0x40" stat="runSpd" val="20"/>
 				<add order="0x40" stat="pAtk" val="1000"/>

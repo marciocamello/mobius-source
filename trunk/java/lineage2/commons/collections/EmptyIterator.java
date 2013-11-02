@@ -17,18 +17,17 @@ import java.util.Iterator;
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
- * @param <E>
  */
 public class EmptyIterator<E> implements Iterator<E>
 {
 	/**
 	 * Field INSTANCE.
 	 */
+	@SuppressWarnings("rawtypes")
 	private static final Iterator INSTANCE = new EmptyIterator();
 	
 	/**
 	 * Method getInstance.
-	 * @param <E>
 	 * @return Iterator<E>
 	 */
 	@SuppressWarnings("unchecked")

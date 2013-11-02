@@ -100,6 +100,8 @@ public enum AcquireType
 				return 105;
 			case TRANSFER_SHILLIEN_SAINTS:
 				return 112;
+			default:
+				break;
 		}
 		return 0;
 	}

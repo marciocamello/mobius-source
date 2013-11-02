@@ -64,6 +64,8 @@ public final class L2LoginPacketHandler implements IPacketHandler<L2LoginClient>
 					packet = new RequestServerLogin();
 				}
 				break;
+			default:
+				break;
 		}
 		return packet;
 	}

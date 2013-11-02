@@ -12,6 +12,10 @@
  */
 package lineage2.gameserver.model;
 
+import gnu.trove.list.array.TIntArrayList;
+import gnu.trove.map.hash.TIntObjectHashMap;
+import gnu.trove.set.hash.TIntHashSet;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -26,10 +30,6 @@ import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.funcs.FuncTemplate;
 
 import org.apache.commons.lang3.ArrayUtils;
-
-import gnu.trove.list.array.TIntArrayList;
-import gnu.trove.map.hash.TIntObjectHashMap;
-import gnu.trove.set.hash.TIntHashSet;
 
 /**
  * @author Mobius
@@ -235,7 +235,7 @@ public class EffectList
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Method containEffectFromSkill.
 	 * @param skillId integer
@@ -259,7 +259,7 @@ public class EffectList
 		}
 		return contain;
 	}
-	
+
 	/**
 	 * Method getAllEffects.
 	 * @return List<Effect>
@@ -556,6 +556,47 @@ public class EffectList
 		}
 		_actor.updateStats();
 		_actor.updateEffectIcons();
+	}
+	
+	/**
+	 * Method removeEffect.
+	 * @param skillId int
+	 */
+	public void removeEffect(int skillId)
+	{
+		if (isEmpty())
+		{
+			return;
+		}
+		for (Effect e : _effects)
+		{
+			if (e.getSkill().getId() == skillId)
+			{
+				boolean remove = false;
+				lock.lock();
+				try
+				{
+					if (_effects == null)
+					{
+						return;
+					}
+					if (!((remove = _effects.remove(e))))
+					{
+						return;
+					}
+				}
+				finally
+				{
+					lock.unlock();
+				}
+				if (!remove)
+				{
+					return;
+				}
+				_actor.updateStats();
+				_actor.updateEffectIcons();
+			}
+		}
 	}
 	
 	/**

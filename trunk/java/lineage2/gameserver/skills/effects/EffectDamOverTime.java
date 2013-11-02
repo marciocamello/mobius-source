@@ -103,6 +103,8 @@ public class EffectDamOverTime extends Effect
 				case Bleed:
 					damage = (bleed[getStackOrder() - 1] * getPeriod()) / 1000;
 					break;
+				default:
+					break;
 			}
 		}
 		damage = _effector.calcStat(getSkill().isMagic() ? Stats.MAGIC_DAMAGE : Stats.PHYSICAL_DAMAGE, damage, _effected, getSkill());
@@ -114,12 +116,12 @@ public class EffectDamOverTime extends Effect
 			}
 			return false;
 		}
-		if (_effected.isNpc() && (_effected.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK))
+		if(_effected.isNpc() && _effected.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
 		{
-			NpcInstance npcAggro = (NpcInstance) _effected;
-			npcAggro.getAggroList().addDamageHate(_effector, (int) damage, 200);
+			NpcInstance npcAggro = (NpcInstance)_effected;
+			npcAggro.getAggroList().addDamageHate(_effector, (int)damage, 200);
 			npcAggro.setRunning();
-			npcAggro.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _effector);
+			npcAggro.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _effector);	
 		}
 		if (getSkill().getAbsorbPart() > 0)
 		{

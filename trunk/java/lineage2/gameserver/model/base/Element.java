@@ -145,6 +145,8 @@ public enum Element
 				return UNHOLY;
 			case UNHOLY:
 				return HOLY;
+			default:
+				break;
 		}
 		return NONE;
 	}

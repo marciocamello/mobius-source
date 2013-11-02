@@ -3525,6 +3525,9 @@
 			<defence attribute="holy" value="150"/>
 			<defence attribute="unholy" value="150"/>
 		</attributes>
+		<ai_params>
+			<set name="TargetEnabled" value="false" />
+        </ai_params>
 	</npc>
 	<npc id="31674" name="Patrol" title="">
 		<set name="aggroRange" value="1000"/>
@@ -3574,6 +3577,9 @@
 			<defence attribute="holy" value="150"/>
 			<defence attribute="unholy" value="150"/>
 		</attributes>
+		<ai_params>
+			<set name="TargetEnabled" value="false" />
+        </ai_params>
 	</npc>
 	<npc id="31675" name="Viktor Van Dake" title="Border Patrol Captain">
 		<set name="aggroRange" value="0"/>

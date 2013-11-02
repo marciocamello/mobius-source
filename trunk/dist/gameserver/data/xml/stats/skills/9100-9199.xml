@@ -1310,4 +1310,173 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
+	<skill id="9185" levels="1" name="Scroll: Enchant Weapon (R-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_ITEM"/>
+		<set name="skillType" val="ENCHANT_WEAPON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9186" levels="1" name="Scroll: Enchant Armor (R-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_ITEM"/>
+		<set name="skillType" val="ENCHANT_ARMOR"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9187" levels="1" name="Blessed Scroll: Enchant Weapon (R-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_ITEM"/>
+		<set name="skillType" val="ENCHANT_WEAPON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9188" levels="1" name="Player Commendation - Scroll: Enchant Weapon (R-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_ITEM"/>
+		<set name="skillType" val="ENCHANT_WEAPON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9189" levels="1" name="Player Commendation - Scroll: Enchant Armor (R-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_ITEM"/>
+		<set name="skillType" val="ENCHANT_ARMOR"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9190" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (R-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_ITEM"/>
+		<set name="skillType" val="ENCHANT_WEAPON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9191" levels="1" name="Scroll of Escape: Cruma Tower">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9192" levels="1" name="Scroll of Escape: Tower of Insolence">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9193" levels="1" name="Soulshot (R-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SOULSHOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9194" levels="1" name="Spiritshot (R-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SPIRITSHOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9195" levels="1" name="Blessed Spiritshot (R-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SPIRITSHOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9196" levels="1" name="Blessed Scroll: Enchant Armor (R-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_ITEM"/>
+		<set name="skillType" val="ENCHANT_ARMOR"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>
+	<skill id="9197" levels="1" name="Scroll: 100,000,000 SP">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="hitTime" val="200"/>
+		<set name="reuseDelay" val="3000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<!--<for>
+			<effect name="GiveSp" noicon="1" val="100000000" />
+		</for>-->
+	</skill>
+	<skill id="9198" levels="1" name="Elixir: Horn Melody">
+	<!-- For 30 minutes, increases P. Atk. by 17%, P. Def. by 15%, M. Atk. by 79%, and M. Def. by 30%. -->
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill11517"/>
+		<set name="magicLevel" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="1800" val="0" stackOrder="11" stackType="MagicDefUp;pAtk;pDef;mAtk">
+				<mul order="0x30" stat="pDef" val="1.15"/>
+				<mul order="0x30" stat="pAtk" val="1.17"/>
+				<mul order="0x30" stat="mAtk" val="1.79"/>
+				<mul order="0x30" stat="mDef" val="1.30"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="9199" levels="1" name="Elixir: Drum Melody">
+	<!-- For 30 minutes, increases Max MP by 20%, HP recovery bonus by 20%, M. Critical Rate by 20, 
+		Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, 
+		M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Debuff Resistance by 10%, 
+		and P. Def. upon receiving a critical attack. Decreases Speed by 15%, and additionally increases 
+		Critical Damage during a normal attack when receiving more than a certain amount of damage. -->
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill11522"/>
+		<set name="magicLevel" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="1800" val="0" stackOrder="11" stackType="ancient">
+				<mul order="0x30" stat="maxMp" val="1.2"/>
+				<mul order="0x30" stat="regHp" val="1.2"/>
+				<add order="0x40" stat="mCritRate" val="20"/>
+				<mul order="0x30" stat="cAtk" val="1.2"/>
+				<mul order="0x30" stat="pAtk" val="1.1"/>
+				<mul order="0x30" stat="pDef" val="1.2"/>
+				<mul order="0x30" stat="pAtkSpd" val="1.2"/>
+				<mul order="0x30" stat="mAtkSpd" val="1.2"/>
+				<mul order="0x30" stat="mAtk" val="1.2"/>
+				<mul order="0x30" stat="mDef" val="1.2"/>
+				<mul order="0x30" stat="runSpd" val="0.85"/>
+				<add order="0x40" stat="debuffResist" val="10"/>
+			</effect>
+		</for>
+	</skill>
 </list>

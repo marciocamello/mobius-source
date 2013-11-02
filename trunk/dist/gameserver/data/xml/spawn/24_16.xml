@@ -4748,10 +4748,6 @@
         <point x="150547" y="-47803" z="-1744" h="2960"/>
         <npc id="35351"/>
     </spawn>
-    <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-        <point x="147408" y="-49296" z="-2120" h="16500"/>
-        <npc id="35363"/>
-    </spawn>
     <spawn group="godard_dominion_siege" count="1" respawn="10800" respawn_random="0" period_of_day="none">
         <point x="147134" y="-45144" z="-1357" h="16416"/>
         <npc id="36548"/>

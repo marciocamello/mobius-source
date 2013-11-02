@@ -21,6 +21,7 @@ import java.util.NavigableMap;
 import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
 
+import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.data.xml.holder.RecipeHolder;
 import lineage2.gameserver.model.GameObjectsStorage;
@@ -1564,6 +1565,10 @@ public class ItemBroker extends Functions
 	 */
 	public String getHtmlAppends(Integer val)
 	{
+		if (!Config.ITEM_BROKER_ITEM_SEARCH)
+		{
+			return "";
+		}
 		StringBuilder append = new StringBuilder();
 		int type = 0;
 		String typeNameEn = "";
@@ -1655,7 +1660,7 @@ public class ItemBroker extends Functions
 		}
 		if (var.length != 5)
 		{
-			show("�?екорректна�? длина данных", player, npc);
+			show("Incorrect data length", player, npc);
 			return;
 		}
 		int type;
@@ -1673,14 +1678,14 @@ public class ItemBroker extends Functions
 		}
 		catch (Exception e)
 		{
-			show("�?екорректные данные", player, npc);
+			show("incorrect data", player, npc);
 			return;
 		}
 		ItemClass itemClass = itemType >= ItemClass.values().length ? null : ItemClass.values()[itemType];
 		TreeMap<String, TreeMap<Long, Item>> allItems = getItems(type);
 		if (allItems == null)
 		{
-			show("�?�?ибка - предметов такого типа не найдено", player, npc);
+			show("Error - this type of objects found", player, npc);
 			return;
 		}
 		List<Item> items = new ArrayList<>(allItems.size() * 10);
@@ -1726,7 +1731,7 @@ public class ItemBroker extends Functions
 		StringBuilder out = new StringBuilder(200);
 		out.append("[npc_%objectId%_Chat 1");
 		out.append(type);
-		out.append("|««]&nbsp;&nbsp;");
+		out.append("|��]&nbsp;&nbsp;");
 		int totalPages = items.size();
 		totalPages = (totalPages / MAX_ITEMS_PER_PAGE) + ((totalPages % MAX_ITEMS_PER_PAGE) > 0 ? 1 : 0);
 		totalPages = Math.max(1, totalPages);
@@ -1858,7 +1863,7 @@ public class ItemBroker extends Functions
 		}
 		if ((var.length < 7) || (var.length > 12))
 		{
-			show("�?екорректна�? длина данных", player, npc);
+			show("Incorrect data length", player, npc);
 			return;
 		}
 		int type;
@@ -1886,41 +1891,41 @@ public class ItemBroker extends Functions
 		}
 		catch (Exception e)
 		{
-			show("�?екорректные данные", player, npc);
+			show("Incorrect data", player, npc);
 			return;
 		}
 		ItemTemplate template = ItemHolder.getInstance().getTemplate(itemId);
 		if (template == null)
 		{
-			show("�?�?ибка - itemId не определен.", player, npc);
+			show("Error - itemId not specified.", player, npc);
 			return;
 		}
 		TreeMap<String, TreeMap<Long, Item>> tmpItems = getItems(type);
 		if (tmpItems == null)
 		{
-			show("�?�?ибка - такой тип предмета от�?ут�?твует.", player, npc);
+			show("Error - this type of subject matter is not.", player, npc);
 			return;
 		}
 		TreeMap<Long, Item> allItems = tmpItems.get(template.getName());
 		if (allItems == null)
 		{
-			show("�?�?ибка - предметов �? таким названием не найдено.", player, npc);
+			show("Error - items with the same name found.", player, npc);
 			return;
 		}
 		StringBuilder out = new StringBuilder(200);
 		if (search == null)
 		{
-			listPageNum(out, type, itemType, returnPage, minEnchant, rare, "««");
+			listPageNum(out, type, itemType, returnPage, minEnchant, rare, "��");
 		}
 		else
 		{
-			findPageNum(out, type, returnPage, search, "««");
+			findPageNum(out, type, returnPage, search, "��");
 		}
 		out.append("&nbsp;&nbsp;");
 		NavigableMap<Long, Item> sortedItems = type == Player.STORE_PRIVATE_BUY ? allItems.descendingMap() : allItems;
 		if (sortedItems == null)
 		{
-			show("�?�?ибка - ничего не найдено.", player, npc);
+			show("Error - No results.", player, npc);
 			return;
 		}
 		List<Item> items = new ArrayList<>(sortedItems.size());
@@ -2073,7 +2078,7 @@ public class ItemBroker extends Functions
 		}
 		if (var.length != 3)
 		{
-			show("�?екорректна�? длина данных", player, npc);
+			show("Incorrect data length", player, npc);
 			return;
 		}
 		int type;
@@ -2087,25 +2092,25 @@ public class ItemBroker extends Functions
 		}
 		catch (Exception e)
 		{
-			show("�?екорректные данные", player, npc);
+			show("Incorrect data", player, npc);
 			return;
 		}
 		ItemTemplate temp = ItemHolder.getInstance().getTemplate(itemId);
 		if (temp == null)
 		{
-			show("�?�?ибка - itemId не определен.", player, npc);
+			show("Error - itemId not specified.", player, npc);
 			return;
 		}
 		TreeMap<String, TreeMap<Long, Item>> allItems = getItems(type);
 		if (allItems == null)
 		{
-			show("�?�?ибка - предметов такого типа не найдено.", player, npc);
+			show("Error - this type of objects found.", player, npc);
 			return;
 		}
 		TreeMap<Long, Item> items = allItems.get(temp.getName());
 		if (items == null)
 		{
-			show("�?�?ибка - предметов �? таким именем не найдено.", player, npc);
+			show("Error - items with the same name found.", player, npc);
 			return;
 		}
 		Item item = null;
@@ -2119,14 +2124,14 @@ public class ItemBroker extends Functions
 		}
 		if (item == null)
 		{
-			show("�?�?ибка - предмет не найден.", player, npc);
+			show("Error - object not found.", player, npc);
 			return;
 		}
 		boolean found = false;
 		Player trader = GameObjectsStorage.getAsPlayer(item.merchantStoredId);
 		if (trader == null)
 		{
-			show("Торговец не найден, возможно он вы�?ел из игры.", player, npc);
+			show("Merchant not found, maybe he got out of the.", player, npc);
 			return;
 		}
 		switch (type)
@@ -2348,13 +2353,13 @@ public class ItemBroker extends Functions
 		}
 		catch (Exception e)
 		{
-			show("�?екорректные данные", player, npc);
+			show("incorrect data", player, npc);
 			return;
 		}
 		TreeMap<String, TreeMap<Long, Item>> allItems = getItems(type);
 		if (allItems == null)
 		{
-			show("�?�?ибка - предметов �? таким типом не найдено.", player, npc);
+			show("Error - with this type of objects found.", player, npc);
 			return;
 		}
 		List<Item> items = new ArrayList<>();
@@ -2394,7 +2399,7 @@ public class ItemBroker extends Functions
 		StringBuilder out = new StringBuilder(200);
 		out.append("[npc_%objectId%_Chat 1");
 		out.append(type);
-		out.append("|««]&nbsp;&nbsp;");
+		out.append("|��]&nbsp;&nbsp;");
 		int totalPages = items.size();
 		totalPages = (totalPages / MAX_ITEMS_PER_PAGE) + ((totalPages % MAX_ITEMS_PER_PAGE) > 0 ? 1 : 0);
 		totalPages = Math.max(1, totalPages);

@@ -39,6 +39,7 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Log;
+import lineage2.gameserver.utils.Mentoring;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.Util;
 
@@ -159,7 +160,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		/**
 		 * Field admin_set_bang.
 		 */
-		admin_set_bang
+		admin_set_bang,
+		admin_reset_mentor_penalty
 	}
 	
 	/**
@@ -700,6 +702,25 @@ public class AdminEditChar implements IAdminCommandHandler
 			target.sendMessage("Your Pc Bang Points count is now " + count);
 			target.sendPacket(new ExPCCafePointInfo(target, count, 1, 2, 12));
 			activeChar.sendMessage("You have set " + target.getName() + "'s Pc Bang Points to " + count);
+		}
+		else if (fullString.startsWith("admin_reset_mentor_penalty"))
+		{
+			if (activeChar.getTarget().getPlayer() == null)
+			{
+				activeChar.sendMessage("You have no target selected.");
+				return false;
+			}
+			if (Mentoring.getTimePenalty(activeChar.getTargetId()) > 0)
+			{
+				Mentoring.setTimePenalty(activeChar.getTargetId(), 0, -1);
+				activeChar.getTarget().getPlayer().sendMessage("Your mentor penalty has been lifted by a GM.");
+				activeChar.sendMessage(activeChar.getTarget().getPlayer().getName() + "'s mentor penalty has been lifted.");
+			}
+			else
+			{
+				activeChar.sendMessage("The selected character has no penalty.");
+				return false;
+			}
 		}
 		return true;
 	}

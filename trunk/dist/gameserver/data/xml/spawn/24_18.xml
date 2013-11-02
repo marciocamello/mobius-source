@@ -2539,11 +2539,6 @@
         <npc id="35254"/>
     </spawn>
     <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-        <point x="147412" y="3355" z="-46" h="16389"/>
-        <npc id="35274"/>
-        <!--Logan-->
-    </spawn>
-    <spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
         <point x="147551" y="19577" z="-1991" h="16389"/>
         <npc id="35278"/>
         <!--Messenger Ruford-->
