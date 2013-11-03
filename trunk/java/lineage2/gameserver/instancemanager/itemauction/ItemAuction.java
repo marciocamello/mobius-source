@@ -12,9 +12,6 @@
  */
 package lineage2.gameserver.instancemanager.itemauction;
 
-import gnu.trove.iterator.TIntObjectIterator;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -32,6 +29,9 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import gnu.trove.iterator.TIntObjectIterator;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius

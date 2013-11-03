@@ -13,7 +13,6 @@
 package lineage2.gameserver.model;
 
 import static lineage2.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
-import gnu.trove.set.hash.TIntHashSet;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -129,6 +128,8 @@ import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import gnu.trove.set.hash.TIntHashSet;
 
 /**
  * @author Mobius
@@ -403,7 +404,7 @@ public abstract class Creature extends GameObject
 	 * Field _isAttackAborted.
 	 */
 	
-	private final FastList<Integer> _aveList = new FastList<Integer>();
+	private final FastList<Integer> _aveList = new FastList<>();
 	
 	protected boolean _isAttackAborted;
 	/**
@@ -433,7 +434,7 @@ public abstract class Creature extends GameObject
 	/**
 	 * Field _skills.
 	 */
-	protected final Map<Integer, Skill> _skills = new ConcurrentSkipListMap<Integer, Skill>();
+	protected final Map<Integer, Skill> _skills = new ConcurrentSkipListMap<>();
 	/**
 	 * Field _triggers.
 	 */
@@ -441,7 +442,7 @@ public abstract class Creature extends GameObject
 	/**
 	 * Field _skillReuses.
 	 */
-	protected final IntObjectMap<TimeStamp> _skillReuses = new CHashIntObjectMap<TimeStamp>();
+	protected final IntObjectMap<TimeStamp> _skillReuses = new CHashIntObjectMap<>();
 	/**
 	 * Field _effectList.
 	 */
@@ -649,7 +650,7 @@ public abstract class Creature extends GameObject
 	/**
 	 * Field _targetRecorder.
 	 */
-	private final List<List<Location>> _targetRecorder = new ArrayList<List<Location>>();
+	private final List<List<Location>> _targetRecorder = new ArrayList<>();
 	/**
 	 * Field _followTimestamp.
 	 */
@@ -721,7 +722,7 @@ public abstract class Creature extends GameObject
 	/**
 	 * Field _zones.
 	 */
-	private final List<Zone> _zones = new LazyArrayList<Zone>();
+	private final List<Zone> _zones = new LazyArrayList<>();
 	/**
 	 * Field zonesLock.
 	 */
@@ -742,10 +743,10 @@ public abstract class Creature extends GameObject
 	 * Field _deathImmune.
 	 */
 	protected boolean _deathImmune = false;
-
+	
 	private List<Player> _statusListeners;
 	private final Lock statusListenersLock = new ReentrantLock();
-
+	
 	/**
 	 * Field _walkerRoutesTemplate.
 	 */
@@ -934,15 +935,15 @@ public abstract class Creature extends GameObject
 		}
 		if ((skill != null) && skill.isMagic())
 		{
-			value = target.calcStat(Stats.REFLECT_MSKILL_DAMAGE_PERCENT, 0, this, skill) - this.calcStat(Stats.REFLECT_RESISTANCE_PERCENT,0.,target, skill);
+			value = target.calcStat(Stats.REFLECT_MSKILL_DAMAGE_PERCENT, 0, this, skill) - this.calcStat(Stats.REFLECT_RESISTANCE_PERCENT, 0., target, skill);
 		}
 		else if ((skill != null) && (skill.getCastRange() <= 200))
 		{
-			value = target.calcStat(Stats.REFLECT_PSKILL_DAMAGE_PERCENT, 0, this, skill) - this.calcStat(Stats.REFLECT_RESISTANCE_PERCENT,0.,target, skill);
+			value = target.calcStat(Stats.REFLECT_PSKILL_DAMAGE_PERCENT, 0, this, skill) - this.calcStat(Stats.REFLECT_RESISTANCE_PERCENT, 0., target, skill);
 		}
 		else if ((skill == null) && !bow)
 		{
-			value = target.calcStat(Stats.REFLECT_DAMAGE_PERCENT, 0, this, null) - this.calcStat(Stats.REFLECT_RESISTANCE_PERCENT,0.,target, null);			
+			value = target.calcStat(Stats.REFLECT_DAMAGE_PERCENT, 0, this, null) - this.calcStat(Stats.REFLECT_RESISTANCE_PERCENT, 0., target, null);
 		}
 		if (value > 0)
 		{
@@ -951,7 +952,7 @@ public abstract class Creature extends GameObject
 				reduceCurrentHp((value / 100.) * damage, 0, target, null, true, true, false, false, false, false, true);
 			}
 		}
-		if ((skill != null || bow) && Config.ALT_ABSORB_DAMAGE_ONLY_MEELE)
+		if (((skill != null) || bow) && Config.ALT_ABSORB_DAMAGE_ONLY_MEELE)
 		{
 			return false;
 		}
@@ -1069,7 +1070,7 @@ public abstract class Creature extends GameObject
 		double transferToSummonDam = calcStat(Stats.TRANSFER_TO_SUMMON_DAMAGE_PERCENT, 0.);
 		if (transferToSummonDam > 0)
 		{
-			//TRANSFER DAMAGE ALWAYS TO THE FIRST SUMMON
+			// TRANSFER DAMAGE ALWAYS TO THE FIRST SUMMON
 			Summon summon = null;
 			List<Summon> servitors = ((Player) this).getSummonList().getServitors();
 			double transferDamage = (damage * transferToSummonDam) * .01;
@@ -1077,7 +1078,7 @@ public abstract class Creature extends GameObject
 			{
 				summon = servitors.get(0);
 			}
-			if (summon != null && !summon.isDead() && summon.getCurrentHp()>transferDamage && summon.isInRangeZ(this, 1200))
+			if ((summon != null) && !summon.isDead() && (summon.getCurrentHp() > transferDamage) && summon.isInRangeZ(this, 1200))
 			{
 				damage -= transferDamage;
 				summon.reduceCurrentHp(transferDamage, 0, summon, null, false, false, false, false, true, false, true);
@@ -1087,34 +1088,11 @@ public abstract class Creature extends GameObject
 				getEffectList().stopEffects(EffectType.AbsorbDamageToSummon);
 				return damage;
 			}
-			/* 
-			List<Summon> servitors = ((Player) this).getSummonList().getServitors();
-			double transferDamage = (damage * transferToSummonDam) * .01;
-			for (Iterator<Summon> it = servitors.iterator(); it.hasNext();)
-			{
-				Summon summon = it.next();
-				if ((summon == null) || summon.isDead() || (summon.getCurrentHp() < (transferDamage / servitors.size())))
-				{
-					it.remove();
-				}
-			}
-			if (servitors.size() > 0)
-			{
-				for (Summon summon : servitors)
-				{
-					if (summon.isInRangeZ(this, 1200))
-					{
-						damage -= transferDamage;
-						summon.reduceCurrentHp(transferDamage, 0, summon, null, false, false, false, false, true, false, true);
-					}
-				}
-			}
-			else
-			{
-				getEffectList().stopEffects(EffectType.AbsorbDamageToSummon);
-				return damage;
-			}
-			*/
+			/*
+			 * List<Summon> servitors = ((Player) this).getSummonList().getServitors(); double transferDamage = (damage * transferToSummonDam) * .01; for (Iterator<Summon> it = servitors.iterator(); it.hasNext();) { Summon summon = it.next(); if ((summon == null) || summon.isDead() ||
+			 * (summon.getCurrentHp() < (transferDamage / servitors.size()))) { it.remove(); } } if (servitors.size() > 0) { for (Summon summon : servitors) { if (summon.isInRangeZ(this, 1200)) { damage -= transferDamage; summon.reduceCurrentHp(transferDamage, 0, summon, null, false, false, false,
+			 * false, true, false, true); } } } else { getEffectList().stopEffects(EffectType.AbsorbDamageToSummon); return damage; }
+			 */
 		}
 		return damage;
 	}
@@ -1127,7 +1105,7 @@ public abstract class Creature extends GameObject
 	{
 		if (_blockedStats == null)
 		{
-			_blockedStats = new ArrayList<Stats>();
+			_blockedStats = new ArrayList<>();
 		}
 		_blockedStats.addAll(stats);
 	}
@@ -1447,29 +1425,29 @@ public abstract class Creature extends GameObject
 			target.sendPacket(packets);
 		}
 	}
-
+	
 	public void broadcastToStatusListeners(L2GameServerPacket... packets)
 	{
-		if(!isVisible() || (packets.length == 0))
+		if (!isVisible() || (packets.length == 0))
 		{
 			return;
 		}
-
+		
 		statusListenersLock.lock();
-
+		
 		try
 		{
-			if((_statusListeners == null) || _statusListeners.isEmpty())
+			if ((_statusListeners == null) || _statusListeners.isEmpty())
 			{
 				return;
 			}
-
+			
 			Player player;
-
-			for(int i = 0; i < _statusListeners.size(); i++)
+			
+			for (int i = 0; i < _statusListeners.size(); i++)
 			{
 				player = _statusListeners.get(i);
-
+				
 				player.sendPacket(packets);
 			}
 		}
@@ -1478,24 +1456,24 @@ public abstract class Creature extends GameObject
 			statusListenersLock.unlock();
 		}
 	}
-
+	
 	public void addStatusListener(Player cha)
 	{
-		if(cha == this)
+		if (cha == this)
 		{
 			return;
 		}
-
+		
 		statusListenersLock.lock();
-
+		
 		try
 		{
-			if(_statusListeners == null)
+			if (_statusListeners == null)
 			{
-				_statusListeners = new LazyArrayList<Player>();
+				_statusListeners = new LazyArrayList<>();
 			}
-
-			if(!_statusListeners.contains(cha))
+			
+			if (!_statusListeners.contains(cha))
 			{
 				_statusListeners.add(cha);
 			}
@@ -1505,18 +1483,18 @@ public abstract class Creature extends GameObject
 			statusListenersLock.unlock();
 		}
 	}
-
+	
 	public void removeStatusListener(Creature cha)
 	{
 		statusListenersLock.lock();
-
+		
 		try
 		{
-			if(_statusListeners == null)
+			if (_statusListeners == null)
 			{
 				return;
 			}
-
+			
 			_statusListeners.remove(cha);
 		}
 		finally
@@ -1524,18 +1502,18 @@ public abstract class Creature extends GameObject
 			statusListenersLock.unlock();
 		}
 	}
-
+	
 	public void clearStatusListeners()
 	{
 		statusListenersLock.lock();
-
+		
 		try
 		{
-			if(_statusListeners == null)
+			if (_statusListeners == null)
 			{
 				return;
 			}
-
+			
 			_statusListeners.clear();
 		}
 		finally
@@ -1543,7 +1521,7 @@ public abstract class Creature extends GameObject
 			statusListenersLock.unlock();
 		}
 	}
-
+	
 	/**
 	 * Method broadcastStatusUpdate.
 	 */
@@ -1554,10 +1532,10 @@ public abstract class Creature extends GameObject
 			return;
 		}
 		StatusUpdate statusUpdatePacket = new StatusUpdate(this).addAttribute(StatusUpdateField.CUR_HP, StatusUpdateField.MAX_HP);
-
-		for(final Player pla : World.getAroundPlayers(this))
+		
+		for (final Player pla : World.getAroundPlayers(this))
 		{
-			if(pla == null)
+			if (pla == null)
 			{
 				continue;
 			}
@@ -1694,9 +1672,9 @@ public abstract class Creature extends GameObject
 						continue;
 					}
 				}
-				for(EffectTemplate ef : skill.getEffectTemplates())
+				for (EffectTemplate ef : skill.getEffectTemplates())
 				{
-					if((target.isAirBinded() ||target.isKnockedDown()) && (ef.getEffectType() == EffectType.KnockDown || ef.getEffectType() == EffectType.HellBinding ))
+					if ((target.isAirBinded() || target.isKnockedDown()) && ((ef.getEffectType() == EffectType.KnockDown) || (ef.getEffectType() == EffectType.HellBinding)))
 					{
 						itr.remove();
 						continue;
@@ -1729,7 +1707,7 @@ public abstract class Creature extends GameObject
 						}
 					}
 				}
-				if(target.getEffectList().getEffectByType(EffectType.DispelOnHit) != null)
+				if (target.getEffectList().getEffectByType(EffectType.DispelOnHit) != null)
 				{
 					target.getEffectList().getEffectByType(EffectType.DispelOnHit).onActionTime();
 				}
@@ -2221,7 +2199,7 @@ public abstract class Creature extends GameObject
 		Formulas.calcSkillMastery(skill, this);
 		long reuseDelay = Math.max(0, Formulas.calcSkillReuseDelay(this, skill));
 		broadcastPacket(new MagicSkillUse(this, target, skill.getDisplayId(), level, skillTime, reuseDelay, isDoubleCastingNow()));
-		if(skill.getFlyType() == FlyType.CHARGE)
+		if (skill.getFlyType() == FlyType.CHARGE)
 		{
 			skillTime = minCastTime;
 		}
@@ -2238,7 +2216,9 @@ public abstract class Creature extends GameObject
 			else if (!skill.isHandler())
 			{
 				if (!skill.isAlterSkill())
+				{
 					sendPacket(new SystemMessage(SystemMessage.YOU_USE_S1).addSkillName(magicId, level));
+				}
 			}
 			else
 			{
@@ -2356,7 +2336,7 @@ public abstract class Creature extends GameObject
 		}
 		return GeoEngine.moveCheck(getX(), getY(), getZ(), getX() + x1, getY() + y1, getGeoIndex());
 	}
-
+	
 	/**
 	 * Method doDie.
 	 * @param killer Creature
@@ -2576,7 +2556,7 @@ public abstract class Creature extends GameObject
 	{
 		return (int) calcStat(Stats.CRITICAL_BASE, _template.getBaseCritRate(), target, skill);
 	}
-
+	
 	/**
 	 * Method getCriticalDmg.
 	 * @param target Creature
@@ -2587,7 +2567,7 @@ public abstract class Creature extends GameObject
 	{
 		return (int) calcStat(Stats.CRITICAL_DAMAGE, target, skill);
 	}
-
+	
 	/**
 	 * Method getMagicCriticalRate.
 	 * @param target Creature
@@ -2598,7 +2578,7 @@ public abstract class Creature extends GameObject
 	{
 		return (int) calcStat(Stats.MCRITICAL_RATE, target, skill);
 	}
-
+	
 	/**
 	 * Method getMagicCriticalRate.
 	 * @param target Creature
@@ -2609,7 +2589,7 @@ public abstract class Creature extends GameObject
 	{
 		return calcStat(Stats.MCRITICAL_DAMAGE, target, skill);
 	}
-
+	
 	/**
 	 * Method getCurrentCp.
 	 * @return double
@@ -4293,7 +4273,7 @@ public abstract class Creature extends GameObject
 	 */
 	protected boolean needStatusUpdate()
 	{
-		if(!isVisible() || !displayHpBar())
+		if (!isVisible() || !displayHpBar())
 		{
 			return false;
 		}
@@ -4320,7 +4300,7 @@ public abstract class Creature extends GameObject
 		if (isPlayer())
 		{
 			bar = (int) ((getCurrentCp() * CLIENT_BAR_SIZE) / getMaxCp());
-
+			
 			if ((bar == 0) || (bar != _lastCpBarUpdate))
 			{
 				_lastCpBarUpdate = bar;
@@ -4338,17 +4318,17 @@ public abstract class Creature extends GameObject
 	@Override
 	public void onForcedAttack(Player player, boolean shift)
 	{
-		if(player.getTarget() != this)
+		if (player.getTarget() != this)
 		{
 			player.setTarget(this);
 		}
-
-		if(!isAttackable(player) || player.isConfused() || player.isBlocked())
+		
+		if (!isAttackable(player) || player.isConfused() || player.isBlocked())
 		{
 			player.sendActionFailed();
 			return;
 		}
-
+		
 		player.getAI().Attack(this, true, shift);
 	}
 	
@@ -4394,7 +4374,7 @@ public abstract class Creature extends GameObject
 		{
 			target.getEffectList().stopEffects(EffectType.Stun);
 		}
-		if(target.getEffectList().getEffectByType(EffectType.DispelOnHit) != null && !miss)
+		if ((target.getEffectList().getEffectByType(EffectType.DispelOnHit) != null) && !miss)
 		{
 			target.getEffectList().getEffectByType(EffectType.DispelOnHit).onActionTime();
 		}
@@ -4531,7 +4511,7 @@ public abstract class Creature extends GameObject
 		}
 		switch (skill.getFlyType())
 		{
-			// TARGETS FLYTYPE
+		// TARGETS FLYTYPE
 			case THROW_UP:
 			case THROW_HORIZONTAL:
 			case PUSH_HORIZONTAL:
@@ -4541,7 +4521,9 @@ public abstract class Creature extends GameObject
 				{
 					flyLoc = target.getFlyLocation(null, skill);
 					if (flyLoc == null)
+					{
 						_log.warn(skill.getFlyType() + " have null flyLoc.");
+					}
 					target.setLoc(flyLoc);
 					broadcastPacket(new FlyToLocation(target, flyLoc, skill.getFlyType(), 0));
 				}
@@ -4549,9 +4531,9 @@ public abstract class Creature extends GameObject
 			// CASTER FLYTYPE
 			case CHARGE:
 				Location flyLocCharge;
-				for(Creature target : targets)
+				for (Creature target : targets)
 				{
-					double radian = PositionUtils.convertHeadingToRadian(this.getHeading());
+					double radian = PositionUtils.convertHeadingToRadian(getHeading());
 					flyLocCharge = target.getLoc();
 					flyLocCharge.set(flyLocCharge.getX() + (int) (Math.sin(radian) * 40), flyLocCharge.getY() - (int) (Math.cos(radian) * 40), flyLocCharge.getZ());
 					setLoc(flyLocCharge);
@@ -4592,12 +4574,18 @@ public abstract class Creature extends GameObject
 		}
 		int skillCoolTime = 0;
 		int chargeAddition = 0;
-		if(skill.getFlyType() == FlyType.CHARGE)
+		if (skill.getFlyType() == FlyType.CHARGE)
+		{
 			chargeAddition = skill.getHitTime();
-		if(!skill.isSkillTimePermanent())
+		}
+		if (!skill.isSkillTimePermanent())
+		{
 			skillCoolTime = Formulas.calcMAtkSpd(this, skill, skill.getCoolTime() + chargeAddition);
-		else				
+		}
+		else
+		{
 			skillCoolTime = skill.getCoolTime() + chargeAddition;
+		}
 		if (skillCoolTime > 0)
 		{
 			ThreadPoolManager.getInstance().schedule(new CastEndTimeTask(this), skillCoolTime);
@@ -4620,18 +4608,18 @@ public abstract class Creature extends GameObject
 		{
 			skillId = getCastingSkill().getId();
 			// TODO: CHAIN SKILL MINOR FIX
-			if(getCastingSkill().isAlterSkill())
+			if (getCastingSkill().isAlterSkill())
 			{
-				if(getCastingTarget().isAirBinded())
+				if (getCastingTarget().isAirBinded())
 				{
 					getCastingTarget().getEffectList().stopEffects(EffectType.HellBinding);
 				}
-				else if(getCastingTarget().isKnockedDown())
+				else if (getCastingTarget().isKnockedDown())
 				{
 					getCastingTarget().getEffectList().stopEffects(EffectType.KnockDown);
 				}
 			}
-			//----------------
+			// ----------------
 		}
 		clearCastVars();
 		getAI().notifyEvent(CtrlEvent.EVT_FINISH_CASTING, skillId, success);
@@ -4731,7 +4719,7 @@ public abstract class Creature extends GameObject
 			}
 		}
 		onReduceCurrentHp(damage, attacker, skill, awake, standUp, directHp);
-
+		
 		if (attacker.isPlayer())
 		{
 			WorldStatisticsManager.getInstance().updateStat(attacker.getPlayer(), CategoryType.DAMAGE_TO_MONSTERS, attacker.getPlayer().getClassId().getId(), (long) damage);
@@ -4754,8 +4742,12 @@ public abstract class Creature extends GameObject
 		{
 			List<Effect> effects = getEffectList().getAllEffects();
 			for (Effect effect : effects)
+			{
 				if (effect.getSkill().isDispelOnDamage())
+				{
 					getEffectList().stopEffect(effect.getSkill());
+				}
+			}
 		}
 		if (awake && isSleeping())
 		{
@@ -4950,12 +4942,12 @@ public abstract class Creature extends GameObject
 	{
 		if (_triggers == null)
 		{
-			_triggers = new ConcurrentHashMap<TriggerType, Set<TriggerInfo>>();
+			_triggers = new ConcurrentHashMap<>();
 		}
 		Set<TriggerInfo> hs = _triggers.get(t.getType());
 		if (hs == null)
 		{
-			hs = new CopyOnWriteArraySet<TriggerInfo>();
+			hs = new CopyOnWriteArraySet<>();
 			_triggers.put(t.getType(), hs);
 		}
 		hs.add(t);
@@ -5337,7 +5329,7 @@ public abstract class Creature extends GameObject
 	{
 		if (_skillMastery == null)
 		{
-			_skillMastery = new HashMap<Integer, Integer>();
+			_skillMastery = new HashMap<>();
 		}
 		_skillMastery.put(skill, mastery);
 	}
@@ -5837,7 +5829,7 @@ public abstract class Creature extends GameObject
 	{
 		return _airbinded.setAndGet(false);
 	}
-
+	
 	/**
 	 * Method startKnockingback.
 	 * @return boolean
@@ -5855,7 +5847,7 @@ public abstract class Creature extends GameObject
 	{
 		return _knockedback.setAndGet(false);
 	}
-
+	
 	/**
 	 * Method startKnockingback.
 	 * @return boolean
@@ -5873,8 +5865,7 @@ public abstract class Creature extends GameObject
 	{
 		return _knockeddown.setAndGet(false);
 	}
-
-
+	
 	/**
 	 * Method startPulling For chain skills.
 	 * @return boolean
@@ -6283,6 +6274,7 @@ public abstract class Creature extends GameObject
 	{
 		return _pulled.get();
 	}
+	
 	/**
 	 * Method isMeditated.
 	 * @return boolean
@@ -7298,6 +7290,7 @@ public abstract class Creature extends GameObject
 	
 	/**
 	 * Method addListener.
+	 * @param <T>
 	 * @param listener T
 	 * @return boolean
 	 */
@@ -7308,6 +7301,7 @@ public abstract class Creature extends GameObject
 	
 	/**
 	 * Method removeListener.
+	 * @param <T>
 	 * @param listener T
 	 * @return boolean
 	 */
@@ -7398,7 +7392,7 @@ public abstract class Creature extends GameObject
 	{
 		return (_transformationId == 8) || (_transformationId == 9) || (_transformationId == 260);
 	}
-
+	
 	/**
 	 * Method isInMountTransform.
 	 * @return boolean
@@ -7587,52 +7581,52 @@ public abstract class Creature extends GameObject
 	{
 		return 0;
 	}
-
+	
 	public Collection<Summon> getPets()
 	{
-		return new ArrayList<Summon>(0);
+		return new ArrayList<>(0);
 	}
-
+	
 	public void broadcastEffectsStatusToListeners()
 	{
-		if(!isVehicle() && !isDoor())
+		if (!isVehicle() && !isDoor())
 		{
 			final ExAbnormalStatusUpdateFromTarget exb = new ExAbnormalStatusUpdateFromTarget(this);
-
-			if(isPlayer() && (getTarget() == this))
+			
+			if (isPlayer() && (getTarget() == this))
 			{
 				sendPacket(exb);
 			}
-
+			
 			broadcastToStatusListeners(exb);
 		}
 	}
-
+	
 	@Override
 	public void onActionTarget(final Player player, boolean forced)
 	{
 		super.onActionTarget(player, forced);
-
-		if((player != this) && !isDoor())
+		
+		if ((player != this) && !isDoor())
 		{
 			validateLocation(0);
 		}
 	}
-
+	
 	@Override
 	public void onActionTargeted(final Player player, boolean forced)
 	{
-		if(player == this)
+		if (player == this)
 		{
 			return;
 		}
-
-		if(isAutoAttackable(player))
+		
+		if (isAutoAttackable(player))
 		{
 			player.getAI().Attack(this, false, forced);
 			return;
 		}
-
+		
 		super.onActionTargeted(player, forced);
 	}
 }

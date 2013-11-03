@@ -111,7 +111,7 @@ public class GeoOptimizer
 			{
 				f.delete();
 			}
-			try(RandomAccessFile raf = new RandomAccessFile(f, "rw");
+			try (RandomAccessFile raf = new RandomAccessFile(f, "rw");
 				FileChannel wChannel = raf.getChannel())
 			{
 				ByteBuffer buffer = wChannel.map(FileChannel.MapMode.READ_WRITE, 0, (links.length * 6) + 1);
@@ -271,8 +271,8 @@ public class GeoOptimizer
 			{
 				return false;
 			}
-			try(RandomAccessFile raf = new RandomAccessFile(GeoCrc, "r");
-					FileChannel roChannel = raf.getChannel();)
+			try (RandomAccessFile raf = new RandomAccessFile(GeoCrc, "r");
+				FileChannel roChannel = raf.getChannel();)
 			{
 				if (roChannel.size() != (GeoEngine.BLOCKS_IN_MAP * 4))
 				{
@@ -306,7 +306,7 @@ public class GeoOptimizer
 			{
 				f.delete();
 			}
-			try(RandomAccessFile raf = new RandomAccessFile(f, "rw");
+			try (RandomAccessFile raf = new RandomAccessFile(f, "rw");
 				FileChannel wChannel = raf.getChannel())
 			{
 				ByteBuffer buffer = wChannel.map(FileChannel.MapMode.READ_WRITE, 0, GeoEngine.BLOCKS_IN_MAP * 4);
@@ -417,8 +417,8 @@ public class GeoOptimizer
 		{
 			return null;
 		}
-		try(RandomAccessFile raf = new RandomAccessFile(f, "r");
-				FileChannel roChannel = raf.getChannel())
+		try (RandomAccessFile raf = new RandomAccessFile(f, "r");
+			FileChannel roChannel = raf.getChannel())
 		{
 			int count = (int) ((roChannel.size() - 1) / 6);
 			ByteBuffer buffer = roChannel.map(FileChannel.MapMode.READ_ONLY, 0, roChannel.size());

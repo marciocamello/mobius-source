@@ -83,7 +83,7 @@ public class MenteeMentorList
 			Player otherSideMentee = World.getPlayer(name);
 			if (otherSideMentee != null)
 			{
-				otherSideMentee.sendPacket(new SystemMessage2(SystemMsg.THE_MENTORING_RELATIONSHIP_WITH_S1_HAS_BEEN_CANCELED).addString(isMentor ? _owner.getName() : name ));
+				otherSideMentee.sendPacket(new SystemMessage2(SystemMsg.THE_MENTORING_RELATIONSHIP_WITH_S1_HAS_BEEN_CANCELED).addString(isMentor ? _owner.getName() : name));
 			}
 			_owner.sendPacket(new SystemMessage2(SystemMsg.THE_MENTORING_RELATIONSHIP_WITH_S1_HAS_BEEN_CANCELED).addString(isMentor ? name : _owner.getName()));
 		}
@@ -224,7 +224,8 @@ public class MenteeMentorList
 	
 	/**
 	 * Method getOnlineMenteesCount.
-	 * @return int
+	 * @param mentor
+	 * @return
 	 */
 	public int getOnlineMenteesCount(Player mentor)
 	{

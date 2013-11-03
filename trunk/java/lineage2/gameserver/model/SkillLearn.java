@@ -221,7 +221,7 @@ public final class SkillLearn implements Comparable<SkillLearn>
 	 */
 	public List<Skill> getRemovedSkillsForPlayer(Player player)
 	{
-		List<Skill> skills = new ArrayList<Skill>();
+		List<Skill> skills = new ArrayList<>();
 		for (int skill_id : getDeleteSkills())
 		{
 			if (player.getKnownSkill(skill_id) != null)

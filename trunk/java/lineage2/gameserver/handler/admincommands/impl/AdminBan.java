@@ -98,12 +98,10 @@ public class AdminBan implements IAdminCommandHandler
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
 	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)

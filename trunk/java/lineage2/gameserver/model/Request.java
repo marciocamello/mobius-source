@@ -148,7 +148,7 @@ public class Request extends MultiValueSet<String>
 	 * Constructor for Request.
 	 * @param type L2RequestType
 	 * @param requestor Player
-	 * @param reciever Player
+	 * @param receiver Player
 	 */
 	public Request(L2RequestType type, Player requestor, Player receiver)
 	{

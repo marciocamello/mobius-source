@@ -12,9 +12,6 @@
  */
 package lineage2.gameserver.tables;
 
-import gnu.trove.list.array.TDoubleArrayList;
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +32,9 @@ import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
+
+import gnu.trove.list.array.TDoubleArrayList;
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius

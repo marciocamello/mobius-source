@@ -225,10 +225,8 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 		}
 		int leaderId = clan.getLeaderId();
 		ResultSet rs = null;
-		try (
-				Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement offline = con.prepareStatement("SELECT value FROM character_quests WHERE char_id=? AND var=? AND name=?");
-		)
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement offline = con.prepareStatement("SELECT value FROM character_quests WHERE char_id=? AND var=? AND name=?");)
 		{
 			offline.setInt(1, leaderId);
 			offline.setString(2, var);
@@ -260,12 +258,9 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 		}
 		finally
 		{
-			//DbUtils.closeQuietly(rs); //FIXME: creating error while compiling the scripts on server start (see below).
+			// DbUtils.closeQuietly(rs); //FIXME: creating error while compiling the scripts on server start (see below).
 			/**
-			 * ERROR server\gameserver\data\scripts\quests\_503_PursuitClanAmbition.java:0,0: 
-			 * Internal compiler error: 
-			 * java.lang.IllegalArgumentException: info cannot be null at org.eclipse.jdt.internal.compiler.codegen.StackMapFrame.addStackItem(StackMapFrame.java:81)
-			 * 
+			 * ERROR server\gameserver\data\scripts\quests\_503_PursuitClanAmbition.java:0,0: Internal compiler error: java.lang.IllegalArgumentException: info cannot be null at org.eclipse.jdt.internal.compiler.codegen.StackMapFrame.addStackItem(StackMapFrame.java:81)
 			 */
 		}
 	}
