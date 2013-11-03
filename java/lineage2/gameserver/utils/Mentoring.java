@@ -137,13 +137,12 @@ public class Mentoring
 	
 	/**
 	 * Method applyMentorBuffs.
-	 * @param dependPlayer Player
-	 * @param updateMentees boolean
+	 * @param mentorPlayer Player
 	 */
 	public static void applyMentorBuffs(Player mentorPlayer)
 	{
 		addMentoringSkills(mentorPlayer);
-		if (mentorPlayer.getClassId().getId() > 138 && mentorPlayer.getLevel() > 85)
+		if ((mentorPlayer.getClassId().getId() > 138) && (mentorPlayer.getLevel() > 85))
 		{
 			if (!mentorPlayer.getEffectList().containEffectFromSkills(new int[effectForMentor]))
 			{
@@ -154,8 +153,7 @@ public class Mentoring
 	
 	public static void cancelMenteeBuffs(Player mentee)
 	{
-		if (mentee.getMenteeMentorList().someOneOnline(false) 
-				|| mentee.getMenteeMentorList().someOneOnline(true))
+		if (mentee.getMenteeMentorList().someOneOnline(false) || mentee.getMenteeMentorList().someOneOnline(true))
 		{
 			return;
 		}
@@ -167,8 +165,7 @@ public class Mentoring
 	
 	public static void cancelMentorBuffs(Player mentor)
 	{
-		if (mentor.getMenteeMentorList().someOneOnline(false)
-				|| mentor.getMenteeMentorList().someOneOnline(true))
+		if (mentor.getMenteeMentorList().someOneOnline(false) || mentor.getMenteeMentorList().someOneOnline(true))
 		{
 			mentor.getEffectList().removeEffect(effectForMentor);
 			SkillTable.getInstance().getInfo(effectForMentor, mentor.getMenteeMentorList().getOnlineMenteesCount(mentor)).getEffects(mentor, mentor, false, false);
@@ -226,10 +223,7 @@ public class Mentoring
 		{
 			return mentor.getVarLong("mentorPenalty");
 		}
-		else
-		{
-			return (long) mysql.get("SELECT value FROM character_variables WHERE obj_id = " + mentorId);
-		}
+		return (long) mysql.get("SELECT value FROM character_variables WHERE obj_id = " + mentorId);
 	}
 	
 	/**

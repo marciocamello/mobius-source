@@ -125,10 +125,8 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 			int inbox = 0;
 			int send = 0;
 			ResultSet rset = null;
-			try (
-					Connection con = DatabaseFactory.getInstance().getConnection();
-					PreparedStatement statement = con.prepareStatement("SELECT count(*) as cnt FROM `bbs_mail` WHERE `box_type` = 0 and `to_object_id` = ?");
-			)
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
+				PreparedStatement statement = con.prepareStatement("SELECT count(*) as cnt FROM `bbs_mail` WHERE `box_type` = 0 and `to_object_id` = ?");)
 			{
 				statement.setInt(1, player.getObjectId());
 				rset = statement.executeQuery();
@@ -138,9 +136,7 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 				}
 				statement.close();
 				rset.close();
-				try (
-						PreparedStatement statement2 = con.prepareStatement("SELECT count(*) as cnt FROM `bbs_mail` WHERE `box_type` = 1 and `from_object_id` = ?");
-				)
+				try (PreparedStatement statement2 = con.prepareStatement("SELECT count(*) as cnt FROM `bbs_mail` WHERE `box_type` = 1 and `from_object_id` = ?");)
 				{
 					statement2.setInt(1, player.getObjectId());
 					rset = statement2.executeQuery();

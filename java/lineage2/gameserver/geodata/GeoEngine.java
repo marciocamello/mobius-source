@@ -1909,8 +1909,8 @@ public class GeoEngine
 			return false;
 		}
 		File geoFile = new File(Config.DATAPACK_ROOT, fname);
-		try(RandomAccessFile raf = new RandomAccessFile(geoFile, "r");
-				FileChannel roChannel = raf.getChannel())
+		try (RandomAccessFile raf = new RandomAccessFile(geoFile, "r");
+			FileChannel roChannel = raf.getChannel())
 		{
 			long size = roChannel.size();
 			MappedByteBuffer buf = roChannel.map(FileChannel.MapMode.READ_ONLY, 0, size);

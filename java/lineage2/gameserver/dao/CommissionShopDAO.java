@@ -262,10 +262,8 @@ public class CommissionShopDAO
 		ResultSet rset = null;
 		CommissionItemContainer container = CommissionShopManager.getInstance().getContainer();
 		container.readLock();
-		try (
-				Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement statement = con.prepareStatement(SELECT_COMMISSION_ITEM_INFO);
-		)
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement statement = con.prepareStatement(SELECT_COMMISSION_ITEM_INFO);)
 		{
 			statement.setLong(1, auctionId);
 			statement.setString(2, exItemType.name());

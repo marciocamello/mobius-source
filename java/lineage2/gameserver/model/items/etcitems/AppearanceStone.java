@@ -16,7 +16,7 @@ public class AppearanceStone
 		FIXED,
 		RESTORE
 	}
-
+	
 	public static enum ShapeTargetType
 	{
 		NONE,
@@ -25,7 +25,7 @@ public class AppearanceStone
 		ACCESSORY,
 		ALL
 	}
-
+	
 	private final int _itemId;
 	private final ShapeTargetType[] _targetTypes;
 	private final ShapeTargetType _clientTargetType;
@@ -34,7 +34,7 @@ public class AppearanceStone
 	private final long _cost;
 	private final int _extractItemId;
 	private final ExItemType[] _itemTypes;
-
+	
 	public AppearanceStone(int itemId, ShapeTargetType[] targetTypes, ShapeType type, Grade[] grades, long cost, int extractItemId, ExItemType[] itemTypes)
 	{
 		_itemId = itemId;
@@ -44,8 +44,8 @@ public class AppearanceStone
 		_cost = cost;
 		_extractItemId = extractItemId;
 		_itemTypes = itemTypes;
-
-		if(_targetTypes.length > 1)
+		
+		if (_targetTypes.length > 1)
 		{
 			_clientTargetType = ShapeTargetType.ALL;
 		}
@@ -54,42 +54,42 @@ public class AppearanceStone
 			_clientTargetType = _targetTypes[0];
 		}
 	}
-
+	
 	public int getItemId()
 	{
 		return _itemId;
 	}
-
+	
 	public ShapeTargetType[] getTargetTypes()
 	{
 		return _targetTypes;
 	}
-
+	
 	public ShapeTargetType getClientTargetType()
 	{
 		return _clientTargetType;
 	}
-
+	
 	public ShapeType getType()
 	{
 		return _type;
 	}
-
+	
 	public Grade[] getGrades()
 	{
 		return _grades;
 	}
-
+	
 	public long getCost()
 	{
 		return _cost;
 	}
-
+	
 	public int getExtractItemId()
 	{
 		return _extractItemId;
 	}
-
+	
 	public ExItemType[] getItemTypes()
 	{
 		return _itemTypes;

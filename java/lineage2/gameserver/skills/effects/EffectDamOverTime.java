@@ -116,12 +116,12 @@ public class EffectDamOverTime extends Effect
 			}
 			return false;
 		}
-		if(_effected.isNpc() && _effected.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
+		if (_effected.isNpc() && (_effected.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK))
 		{
-			NpcInstance npcAggro = (NpcInstance)_effected;
-			npcAggro.getAggroList().addDamageHate(_effector, (int)damage, 200);
+			NpcInstance npcAggro = (NpcInstance) _effected;
+			npcAggro.getAggroList().addDamageHate(_effector, (int) damage, 200);
 			npcAggro.setRunning();
-			npcAggro.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _effector);	
+			npcAggro.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _effector);
 		}
 		if (getSkill().getAbsorbPart() > 0)
 		{

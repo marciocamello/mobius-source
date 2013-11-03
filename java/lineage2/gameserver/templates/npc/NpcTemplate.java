@@ -12,8 +12,6 @@
  */
 package lineage2.gameserver.templates.npc;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -42,6 +40,8 @@ import lineage2.gameserver.templates.StatsSet;
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * @author Mobius
@@ -249,8 +249,8 @@ public final class NpcTemplate extends CharTemplate
 	private int summonPoints = 1;
 	
 	private RandomActions _randomActions = null;
-	private TIntObjectHashMap<WalkerRoute> _walkerRoute = new TIntObjectHashMap<WalkerRoute>();
-	private boolean displayHpBar;
+	private final TIntObjectHashMap<WalkerRoute> _walkerRoute = new TIntObjectHashMap<>();
+	private final boolean displayHpBar;
 	
 	/**
 	 * Constructor for NpcTemplate.
@@ -878,17 +878,17 @@ public final class NpcTemplate extends CharTemplate
 	{
 		summonPoints = count;
 	}
-
+	
 	public void setRandomActions(RandomActions randomActions)
 	{
 		_randomActions = randomActions;
 	}
-
+	
 	public RandomActions getRandomActions()
 	{
 		return _randomActions;
 	}
-
+	
 	public void addWalkerRoute(WalkerRoute walkerRoute)
 	{
 		if (!walkerRoute.isValid())
@@ -897,12 +897,12 @@ public final class NpcTemplate extends CharTemplate
 		}
 		_walkerRoute.put(walkerRoute.getId(), walkerRoute);
 	}
-
+	
 	public WalkerRoute getWalkerRoute(int id)
 	{
-		return this._walkerRoute.get(id);
+		return _walkerRoute.get(id);
 	}
-
+	
 	public boolean isDisplayHpBar()
 	{
 		return displayHpBar;

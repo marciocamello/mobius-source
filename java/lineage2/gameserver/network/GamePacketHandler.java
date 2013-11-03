@@ -134,7 +134,7 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 							msg = new Logout();
 							break;
 						case 0x01:
-							msg = new AttackTargetAction();    // new AttackRequest();
+							msg = new AttackTargetAction(); // new AttackRequest();
 							break;
 						case 0x02:
 							break;
@@ -204,7 +204,7 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 						case 0x1e:
 							break;
 						case 0x1f:
-							msg = new SelectTargetAction();    // new Action();
+							msg = new SelectTargetAction(); // new Action();
 							break;
 						case 0x20:
 							break;
@@ -1012,10 +1012,10 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 									msg = new NotifyStartMiniGame();
 									break;
 								case 0x57:
-								//	msg = new RequestExJoinDominionWar();
+									// msg = new RequestExJoinDominionWar();
 									break;
 								case 0x58:
-								//	msg = new RequestExDominionInfo();
+									// msg = new RequestExDominionInfo();
 									break;
 								case 0x59:
 									msg = new RequestExCleftEnter();
@@ -1163,7 +1163,7 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 									break;
 								case 0x8A:
 									int id5 = buf.getInt();
-									switch (id5) 
+									switch (id5)
 									{
 										case 0:
 											msg = new RequestExBR_ProductList();
@@ -1322,18 +1322,18 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 								case 0xc2:
 									msg = new RequestInstanceZone();
 									break;
-                                case 0xCC:
-                                    msg = new RequestExTryToPutShapeShiftingTargetItem();
-                                    break;
-                                case 0xCD:
-                                    msg = new RequestExTryToPutShapeShiftingEnchantSupportItem();
-                                    break;
-                                case 0xCE:
-                                    msg = new RequestExCancelShapeShiftingItem();
-                                    break;
-                                case 0xCF:
-                                    msg = new RequestShapeShiftingItem();
-                                    break;
+								case 0xCC:
+									msg = new RequestExTryToPutShapeShiftingTargetItem();
+									break;
+								case 0xCD:
+									msg = new RequestExTryToPutShapeShiftingEnchantSupportItem();
+									break;
+								case 0xCE:
+									msg = new RequestExCancelShapeShiftingItem();
+									break;
+								case 0xCF:
+									msg = new RequestShapeShiftingItem();
+									break;
 								default:
 									_log.info("0xd0=" + id3);
 									client.onUnknownPacket();

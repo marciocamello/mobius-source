@@ -396,7 +396,7 @@ public class Config
 	public static boolean OLYMPIAD_OLDSTYLE_STAT;
 	public static long NONOWNER_ITEM_PICKUP_DELAY;
 	public static boolean LOG_CHAT;
-	public static Map<Integer, PlayerAccess> gmlist = new HashMap<Integer, PlayerAccess>();
+	public static Map<Integer, PlayerAccess> gmlist = new HashMap<>();
 	public static double RATE_XP;
 	public static double RATE_SP;
 	public static double RATE_QUESTS_REWARD;
@@ -474,7 +474,7 @@ public class Config
 	public static String CLASS_MASTERS_PRICE;
 	public static String CLASS_MASTERS_PRICE_ITEM;
 	public static int[] CLASS_MASTERS_PRICE_ITEM_LIST = new int[5];
-	public static List<Integer> ALLOW_CLASS_MASTERS_LIST = new ArrayList<Integer>();
+	public static List<Integer> ALLOW_CLASS_MASTERS_LIST = new ArrayList<>();
 	public static int[] CLASS_MASTERS_PRICE_LIST = new int[5];
 	public static boolean ALLOW_EVENT_GATEKEEPER;
 	public static boolean ITEM_BROKER_ITEM_SEARCH;
@@ -502,7 +502,7 @@ public class Config
 	public static int MIN_PK_TO_ITEMS_DROP;
 	public static boolean DROP_ITEMS_ON_DIE;
 	public static boolean DROP_ITEMS_AUGMENTED;
-	public static List<Integer> KARMA_LIST_NONDROPPABLE_ITEMS = new ArrayList<Integer>();
+	public static List<Integer> KARMA_LIST_NONDROPPABLE_ITEMS = new ArrayList<>();
 	public static int PVP_TIME;
 	public static int REPUTATION_COUNT;
 	public static int PK_KILLER_NAME_COLOUR;
@@ -627,10 +627,10 @@ public class Config
 	public static int COMMUNITYBOARD_BUFF_TIME;
 	public static int COMMUNITYBOARD_BUFF_PICE;
 	public static int COMMUNITYBOARD_BUFF_SAVE_PICE;
-	public static List<Integer> COMMUNITYBOARD_BUFF_ALLOW = new ArrayList<Integer>();
-	public static List<Integer> COMMUNITI_LIST_MAGE_SUPPORT = new ArrayList<Integer>();
-	public static List<Integer> COMMUNITI_LIST_FIGHTER_SUPPORT = new ArrayList<Integer>();
-	public static List<String> COMMUNITYBOARD_MULTISELL_ALLOW = new ArrayList<String>();
+	public static List<Integer> COMMUNITYBOARD_BUFF_ALLOW = new ArrayList<>();
+	public static List<Integer> COMMUNITI_LIST_MAGE_SUPPORT = new ArrayList<>();
+	public static List<Integer> COMMUNITI_LIST_FIGHTER_SUPPORT = new ArrayList<>();
+	public static List<String> COMMUNITYBOARD_MULTISELL_ALLOW = new ArrayList<>();
 	public static String BBS_DEFAULT;
 	public static String BBS_HOME_DIR;
 	public static boolean COMMUNITYBOARD_TELEPORT_ENABLED;
@@ -1250,7 +1250,7 @@ public class Config
 		OVERENCHANT_MUL3 = otherSettings.getProperty("overEnchantMul3", 4);
 		OVERENCHANT_MUL4 = otherSettings.getProperty("overEnchantMul4", 5);
 		BLESSED_ARMOR_WEAPON_MUL = otherSettings.getProperty("blessedArmorWeaponMul", 1.5);
- 		REGEN_SIT_WAIT = otherSettings.getProperty("RegenSitWait", false);
+		REGEN_SIT_WAIT = otherSettings.getProperty("RegenSitWait", false);
 		STARTING_ADENA = otherSettings.getProperty("StartingAdena", 0);
 		STARTING_LEVEL = otherSettings.getProperty("StartingLevel", 1);
 		UNSTUCK_SKILL = otherSettings.getProperty("UnstuckSkill", true);
@@ -1402,12 +1402,12 @@ public class Config
 			40,
 			30,
 			20,
-			10				
+			10
 		});
 		_log.warn("altGameReawakeningCost = " + ALT_GAME_DUALCLASS_REAWAKENING_COST.length);
-		if(ALT_GAME_DUALCLASS_REAWAKENING_COST.length != 10)
+		if (ALT_GAME_DUALCLASS_REAWAKENING_COST.length != 10)
 		{
-			double [] DefaultValues = new double[] 
+			double[] DefaultValues = new double[]
 			{
 				100,
 				90,
@@ -1418,7 +1418,7 @@ public class Config
 				40,
 				30,
 				20,
-				10						
+				10
 			};
 			ALT_GAME_DUALCLASS_REAWAKENING_COST = DefaultValues;
 			_log.warn("altGameReawakeningCost = Incorrect values for corresponding levels, loaded default values");
@@ -1756,7 +1756,7 @@ public class Config
 		DROPCHANCE_EQUIPPED_WEAPON = pvpSettings.getProperty("ChanceOfDropWeapon", 3);
 		DROPCHANCE_EQUIPMENT = pvpSettings.getProperty("ChanceOfDropEquippment", 17);
 		DROPCHANCE_ITEM = pvpSettings.getProperty("ChanceOfDropOther", 80);
-		KARMA_LIST_NONDROPPABLE_ITEMS = new ArrayList<Integer>();
+		KARMA_LIST_NONDROPPABLE_ITEMS = new ArrayList<>();
 		for (int id : pvpSettings.getProperty("ListOfNonDroppableItems", new int[]
 		{
 			57,
@@ -1974,7 +1974,7 @@ public class Config
 	 */
 	public static void abuseLoad()
 	{
-		List<Pattern> tmp = new ArrayList<Pattern>();
+		List<Pattern> tmp = new ArrayList<>();
 		LineNumberReader lnr = null;
 		try
 		{

@@ -419,7 +419,7 @@ public class Formulas
 					attacker.sendPacket(SystemMsg.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
 				}
 			}
-			if(skill.isPowerModified())
+			if (skill.isPowerModified())
 			{
 				double percentMod = skill.getWeaponModifiedPower(attacker);
 				info.damage *= percentMod;
@@ -593,7 +593,7 @@ public class Formulas
 				target.sendPacket(msg);
 			}
 		}
-		if ((info.damage > 1) && skill.isMagic() && calcMagicMiss(attacker,target))
+		if ((info.damage > 1) && skill.isMagic() && calcMagicMiss(attacker, target))
 		{
 			attacker.sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addName(attacker));
 			target.sendPacket(new SystemMessage(SystemMessage.C1_HAS_EVADED_C2S_ATTACK).addName(target).addName(attacker));
@@ -617,9 +617,14 @@ public class Formulas
 		if (skill.isMarkDamage())
 		{
 			int boost = 1;
-			//TODO ADD INTO XML LIST OF SKILL TO CHECK
+			// TODO ADD INTO XML LIST OF SKILL TO CHECK
 			// name="dependOnTargetEffectId" value="11259,11261,11262"
-			int[] list = {11259,11261,11262};
+			int[] list =
+			{
+				11259,
+				11261,
+				11262
+			};
 			for (int id : list)
 			{
 				if (target.getEffectList().containEffectFromSkillId(id, true))
@@ -627,7 +632,7 @@ public class Formulas
 					boost += 1;
 				}
 			}
-			//TODO CHECK RETAIL INFO ABOUT BOOST DAMAGE
+			// TODO CHECK RETAIL INFO ABOUT BOOST DAMAGE
 			info.damage *= boost;
 		}
 		return info;
@@ -830,7 +835,7 @@ public class Formulas
 		}
 		return !Rnd.chance(chanceToHit);
 	}
-
+	
 	/**
 	 * Method calcMagicMiss.
 	 * @param attacker Creature
@@ -1223,15 +1228,13 @@ public class Formulas
 			pAttacker.sendMessage("Defence: " + defender.calcStat(element.getDefence(), 0.));
 			pAttacker.sendMessage("Modifier: " + (attDiff < 0 ? "On defense " : "On attack ") + AttributeDamageResistTable.getInstance().getAttributeBonus(attDiff));
 		}
-		if(attDiff < 0)
+		if (attDiff < 0)
 		{
 			return value / AttributeDamageResistTable.getInstance().getAttributeBonus(attDiff);
 		}
-		else
-		{
-			return value * AttributeDamageResistTable.getInstance().getAttributeBonus(attDiff);
-		}
+		return value * AttributeDamageResistTable.getInstance().getAttributeBonus(attDiff);
 	}
+	
 	/**
 	 * Method getAttackElement.
 	 * @param attacker Creature
@@ -1241,27 +1244,27 @@ public class Formulas
 	public static Element getAttackElement(Creature attacker, Creature target)
 	{
 		double val, max = Double.MIN_VALUE, maxElementDefenseVal = Double.MIN_VALUE;
-		Element maxElementDefense = Element.NONE;		
+		Element maxElementDefense = Element.NONE;
 		Element result = Element.NONE;
 		for (Element e : Element.VALUES)
 		{
 			val = attacker.calcStat(e.getAttack(), 0., null, null);
 			if (val <= 0.)
 			{
-				if(target != null && ((target.calcStat(e.getDefence(), 0., null, null)) > maxElementDefenseVal))
+				if ((target != null) && ((target.calcStat(e.getDefence(), 0., null, null)) > maxElementDefenseVal))
 				{
-					maxElementDefenseVal = target.calcStat(e.getDefence(), 0., null, null); 
+					maxElementDefenseVal = target.calcStat(e.getDefence(), 0., null, null);
 					maxElementDefense = e;
 				}
 				continue;
 			}
-			if(val > max)
+			if (val > max)
 			{
 				max = val;
 				result = e;
-			}	
+			}
 		}
-		if(result == Element.NONE && target != null)
+		if ((result == Element.NONE) && (target != null))
 		{
 			return maxElementDefense;
 		}
