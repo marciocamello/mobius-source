@@ -38,7 +38,7 @@ public class PrivateStoreMsgSell extends L2GameServerPacket
 	{
 		if (_pkg)
 		{
-			writeEx(0x80);
+			writeEx(0x81);
 		}
 		else
 		{

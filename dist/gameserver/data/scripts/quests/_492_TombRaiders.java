@@ -13,6 +13,8 @@
 package quests;
 
 import lineage2.commons.util.Rnd;
+import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.base.ClassLevel;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
@@ -58,13 +60,13 @@ public class _492_TombRaiders extends Quest implements ScriptFile
 		addStartNpc(ZENIA);
 		addKillId(Mobs);
 		addQuestItem(ANCIENT_REL);
-		addLevelCheck(80, 85);
+		addLevelCheck(80, 100);
+		addClassLevelCheck(4);
 	}
 	
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
-		st.getPlayer();
 		if (event.equalsIgnoreCase("32140-5.htm"))
 		{
 			st.setCond(1);
@@ -77,15 +79,23 @@ public class _492_TombRaiders extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		st.getPlayer();
+		Player player = st.getPlayer();
 		int npcId = npc.getNpcId();
 		int state = st.getState();
 		int cond = st.getCond();
 		if (npcId == ZENIA)
 		{
+			if (player.getLevel() < 80)
+			{
+				return "32140-lvl.htm";
+			}
+			if (!player.getClassId().isOfLevel(ClassLevel.Third))
+			{
+				return "32140-class.htm";
+			}
 			if (state == 1)
 			{
-				if (!st.isNowAvailableByTime())
+				if (!st.isNowAvailable())
 				{
 					return "32140-comp.htm";
 				}
@@ -99,7 +109,7 @@ public class _492_TombRaiders extends Quest implements ScriptFile
 				}
 				if (cond == 2)
 				{
-					st.addExpAndSp(25000000, 28500000); // Retail EXP & SP
+					st.addExpAndSp(9009000, 8997060); // Unknown!!!!!
 					st.takeItems(ANCIENT_REL, -1);
 					st.unset("cond");
 					st.playSound(SOUND_FINISH);
@@ -119,7 +129,7 @@ public class _492_TombRaiders extends Quest implements ScriptFile
 		{
 			return null;
 		}
-		if (ArrayUtils.contains(Mobs, npc.getNpcId()) && Rnd.chance(75))
+		if (ArrayUtils.contains(Mobs, npc.getNpcId()) && Rnd.chance(25))
 		{
 			st.giveItems(ANCIENT_REL, 1);
 		}

@@ -1048,7 +1048,8 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 			}
 			return;
 		}
-		if ((_status > 1) && (player != null) && (player.getTeam() != TeamType.NONE) && (live_list1.contains(player.getStoredId()) || live_list2.contains(player.getStoredId())))
+		
+		if ((_status > 1) && (player.getTeam() != TeamType.NONE) && (live_list1.contains(player.getStoredId()) || live_list2.contains(player.getStoredId())))
 		{
 			removePlayer(player);
 			checkLive();

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="30200" name="Stan" title="Guard">
@@ -37,10 +37,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="275"/>	<!--Long Bow-->
+			<rhand item_id="275"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -87,10 +87,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="275"/>	<!--Long Bow-->
+			<rhand item_id="275"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -137,7 +137,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -184,7 +184,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -231,7 +231,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -278,12 +278,12 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Warehouse"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<teach_classes>
-			<class id="53"/>	<!--dwarvenFighter-->
-			<class id="54"/>	<!--scavenger-->
-			<class id="55"/>	<!--bountyHunter-->
+			<class id="53"/>
+			<class id="54"/>
+			<class id="55"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -330,10 +330,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="130"/>	<!--Elven Sword-->
+			<rhand item_id="130"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -380,10 +380,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="276"/>	<!--Elven Bow-->
+			<rhand item_id="276"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -430,10 +430,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="276"/>	<!--Elven Bow-->
+			<rhand item_id="276"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -480,10 +480,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="130"/>	<!--Elven Sword-->
+			<rhand item_id="130"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -530,10 +530,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="276"/>	<!--Elven Bow-->
+			<rhand item_id="276"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -580,10 +580,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="130"/>	<!--Elven Sword-->
+			<rhand item_id="130"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -630,7 +630,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -677,7 +677,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -724,10 +724,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="79"/>	<!--Sword of Damascus-->
+			<rhand item_id="79"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -774,7 +774,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -821,7 +821,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -868,12 +868,12 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Warehouse"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<teach_classes>
-			<class id="53"/>	<!--dwarvenFighter-->
-			<class id="54"/>	<!--scavenger-->
-			<class id="55"/>	<!--bountyHunter-->
+			<class id="53"/>
+			<class id="54"/>
+			<class id="55"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -920,63 +920,38 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<teleportlist>
-			<!-- Деревня Охотников -->
 			<sublist id="1">
-			<!-- Update GOD -->
 				<target loc="146783 25808 -2008" item_id="57" price="5900" name="1010023" castle_id="5"/>
-			<!-- Аден -->
 				<target loc="82971 53207 -1488" item_id="57" price="4100" name="1010013" castle_id="4"/>
-			<!-- Орен -->
 				<target loc="105918 109759 -3192" item_id="57" price="3400" name="1010022"/>
-			<!-- Академия Хардина -->
 				<target loc="124904 61992 -3920" item_id="57" price="1300" name="1010618"/>
-			<!-- Волшебная Долина - юг -->
 				<target loc="104426 33746 -3800" item_id="57" price="3600" name="1010619"/>
-			<!-- Волшебная Долина - север -->
 				<target loc="85391 16228 -3672" item_id="57" price="6800" name="1010014"/>
-			<!-- Башня Слоновой Кости -->
 				<target loc="142065 81300 -3000" item_id="57" price="2000" name="1010585"/>
-			<!-- Лес Зеркал -->
 				<target loc="73024 118485 -3696" item_id="57" price="1800" name="1010067"/>
-			<!-- Долина Драконов -->
 				<target loc="172458 90314 -1984" item_id="57" price="6300" name="1010607"/>
-			<!-- Ангельский Водопад -->
 				<target loc="131557 114509 -3712" item_id="57" price="7000" name="1010120"/>
-			<!-- Логово Антараса -->
 			</sublist>
 			<sublist id="2">
 				<target loc="-87328 142266 -3640" item_id="57" price="1000" name="1010506"/>
-			<!-- Арена Глудина 1000 аден -->
 				<target loc="73579 142709 -3768" item_id="57" price="1000" name="1010507"/>
-			<!-- Арена Гирана 1000 аден -->
 				<target loc="166080 75574 -2992" item_id="57" price="1000" name="1010586"/>
-			<!-- Центр Леса Зеркал 1000 аден -->
 				<target loc="114674 44150 -3376" item_id="57" price="1000" name="1010617"/>
-			<!-- Волшебная Долина-центр 1000 аден -->
-				<target loc="114306 86573 -3104" item_id="57" price="1000" name="1010130"/> <!-- Долина Охотников 1000 аден -->
+				<target loc="114306 86573 -3104" item_id="57" price="1000" name="1010130"/>
 				<target loc="146440 46723 -3432" item_id="57" price="1000" name="1010053"/>
-			<!-- Колизей 1000 аден -->
 				<target loc="154396 121235 -3808" item_id="57" price="1000" name="1010512"/>
-			<!-- Серце Логова Антараса 1000 аден -->
 			</sublist>
 			<sublist id="3">
 				<target loc="-87328 142266 -3640" item_id="6651" price="1" name="1010506"/>
-			<!-- Арена Глудина 1 символ олимпиады -->
 				<target loc="73579 142709 -3768" item_id="6651" price="1" name="1010507"/>
-			<!-- Арена Гирана 1 символ олимпиады -->
 				<target loc="166080 75574 -2992" item_id="6651" price="1" name="1010586"/>
-			<!-- Центр Леса Зеркал 1 символ олимпиады -->
 				<target loc="114674 44150 -3376" item_id="6651" price="1" name="1010617"/>
-			<!-- Волшебная Долина-центр 1 символ олимпиады -->
 				<target loc="114306 86573 -3104" item_id="6651" price="1" name="1010130"/>
-			<!-- Долина Охотников 1 символ олимпиады -->
 				<target loc="146440 46723 -3432" item_id="6651" price="1" name="1010053"/>
-			<!-- Колизей 1 символ олимпиады -->
 				<target loc="154396 121235 -3808" item_id="6651" price="1" name="1010512"/>
-			<!-- Серце Логова Антараса 1 символ олимпиады -->
 			</sublist>
 		</teleportlist>
 		<attributes>
@@ -1024,7 +999,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1071,7 +1046,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1118,12 +1093,12 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Warehouse"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<teach_classes>
-			<class id="53"/>	<!--dwarvenFighter-->
-			<class id="54"/>	<!--scavenger-->
-			<class id="55"/>	<!--bountyHunter-->
+			<class id="53"/>
+			<class id="54"/>
+			<class id="55"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1170,74 +1145,43 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<teleportlist>
-			<!-- Глудио -->
 			<sublist id="1">
-			<!-- Update GOD -->
 				<target loc="87126 -143520 -1288" item_id="57" price="85000" name="1010574" castle_id="9"/>
-			<!-- Шутгарт -->
 				<target loc="111455 219400 -3544" item_id="57" price="47000" name="1010049" castle_id="6"/>
-			<!-- Хейн -->
 				<target loc="146783 25808 -2008" item_id="57" price="56000" name="1010023" castle_id="5"/>
-			<!-- Аден -->
 				<target loc="82971 53207 -1488" item_id="57" price="35000" name="1010013" castle_id="4"/>
-			<!-- Орен -->
 				<target loc="15472 142880 -2688" item_id="57" price="3400" name="1010006" castle_id="2"/>
-			<!-- Дион -->
 				<target loc="148024 -55281 -2728" item_id="57" price="71000" name="1010199" castle_id="7"/>
-			<!-- Годдард -->
 				<target loc="83396 147904 -3400" item_id="57" price="29000" name="1010007" castle_id="3"/>
-			<!-- Гиран -->
 				<target loc="43835 -47749 -792" item_id="57" price="53000" name="1010200" castle_id="8"/>
-			<!-- Руна -->
 				<target loc="-80684 149770 -3040" item_id="57" price="7300" name="1010004"/>
-			<!-- Глудин -->		
 				<target loc="-111988 257240 -1376" item_id="57" price="9200" name="1010001"/>
-			<!-- Деревня Говорящего Острова -->		
 				<target loc="44734 49210 -3056" item_id="57" price="9200" name="1010155"/>
-			<!-- Эльфийская Деревня -->
 				<target loc="11167 16012 -4584" item_id="57" price="10000" name="1010156"/>
-			<!-- Деревня Темных Эльфов -->
 				<target loc="115357 -178212 -928" item_id="57" price="32000" name="1010158"/>
-			<!-- Деревня Гномов -->
 				<target loc="-44124 -113390 -240" item_id="57" price="23000" name="1010157"/>
-			<!-- Деревня Орков -->
 				<target loc="-117001 46589 360" item_id="57" price="12000" name="1010648"/>
-			<!-- Деревня Камаэль -->
 				<target loc="-41155 122795 -2912" item_id="57" price="790" name="1010097"/>
-			<!-- Руины Страданий -->
 				<target loc="-19359 136846 -3760" item_id="57" price="610" name="1010101"/>
-			<!-- Руины Отчаяния -->
 				<target loc="-9959 176184 -4144" item_id="57" price="2100" name="1010566"/>
-			<!-- Муравейник -->
 				<target loc="-28327 155125 -3512" item_id="57" price="1400" name="1010102"/>
-			<!-- Поместье Виндавуд -->
 				<target loc="-16464 208824 -3656" item_id="57" price="1400" name="1010621"/>
-			<!-- Пустошь -->
 				<target loc="-74833 168759 -3504" item_id="57" price="1400" name="1010175"/>
-			<!-- Холм Ветряных Мельниц -->
 			</sublist>
 			<sublist id="2">
 				<target loc="-87328 142266 -3640" item_id="57" price="1000" name="1010506"/>
-			<!-- Арена Глудина -->
 				<target loc="73579 142709 -3768" item_id="57" price="1000" name="1010507"/>
-			<!-- Арена Гирана -->
 				<target loc="-6989 109503 -3040" item_id="57" price="1000" name="1010171"/>
-			<!-- Охотничьи Угодья Зла (Ур.14) -->
 				<target loc="146440 46723 -3432" item_id="57" price="1000" name="1010053"/>
-			<!-- Колизей -->
 			</sublist>
 			<sublist id="3">
 				<target loc="-87328 142266 -3640" item_id="6651" price="1" name="1010506"/>
-			<!-- Арена Глудина -->
 				<target loc="73579 142709 -3768" item_id="6651" price="1" name="1010507"/>
-			<!-- Арена Гирана -->
 				<target loc="-6989 109503 -3040" item_id="6651" price="1" name="1010171"/>
-			<!-- Охотничьи Угодья Зла (Ур.14) -->
 				<target loc="146440 46723 -3432" item_id="6651" price="1" name="1010053"/>
-			<!-- Колизей -->
 			</sublist>
 		</teleportlist>
 		<attributes>
@@ -1285,10 +1229,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="89"/>	<!--Big Hammer-->
+			<rhand item_id="89"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1335,10 +1279,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="150"/>	<!--Elemental Sword-->
+			<rhand item_id="150"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1385,10 +1329,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="130"/>	<!--Elven Sword-->
+			<rhand item_id="130"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1435,7 +1379,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1482,7 +1426,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1529,7 +1473,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1576,10 +1520,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="68"/>	<!--Falchion-->
+			<rhand item_id="68"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1626,12 +1570,12 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<teach_classes>
-			<class id="25"/>	<!--elvenMage-->
-			<class id="29"/>	<!--oracle-->
-			<class id="30"/>	<!--elder-->
+			<class id="25"/>
+			<class id="29"/>
+			<class id="30"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1678,7 +1622,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1725,7 +1669,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1772,15 +1716,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="89"/>	<!--Big Hammer-->
+			<rhand item_id="89"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<teach_classes>
-			<class id="53"/>	<!--dwarvenFighter-->
-			<class id="56"/>	<!--artisan-->
-			<class id="57"/>	<!--warsmith-->
+			<class id="53"/>
+			<class id="56"/>
+			<class id="57"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>

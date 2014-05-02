@@ -1,0 +1,480 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="34800" name="Dark Crystal" add_name="Event">
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_unholy_crystal_i00"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="34801" name="Holy Crystal" add_name="Event">
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_holy_crystal_i00"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+	</etcitem>
+	<etcitem id="34811" name="Soulshot Box" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34812" name="Blessed Spiritshot Box" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34813" name="Stone Pack" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34814" name="Crystal Pack" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34815" name="Scroll: Enchant Armor (S-grade) Pack" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34816" name="Scroll: Enchant Armor (R-grade) Pack" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34817" name="Scroll: Enchant Weapon (S-grade) Pack" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34818" name="Scroll: Enchant Weapon (R-grade) Pack" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34819" name="Squash Ring Pack" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34820" name="Squash Earring Pack" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34821" name="Squash Necklace Pack" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34822" name="Squash Accessory Pack" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34823" name="Rare Soul Crystal (R-grade) Box" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34824" name="Rare Soul Crystal (R95-grade) Box" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34825" name="Rare Soul Crystal (R99-grade) Box" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34826" name="Talisman Box" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34827" name="Elixir (S-grade) Box" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34828" name="Elixir (R-grade) Box" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34829" name="Blessed Scroll Pack (R-grade)" add_name="Event">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34830" name="R Enchant Set Pack">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34835" name="Afro Hair Pack">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34836" name="Afro Hair Pack (7-day)">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34837" name="Magic Rope (R-grade)">
+		<set name="icon" value="icon.etc_braided_hemp_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34841" name="Recipe: Soulshot (R-grade) Compressed Package">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1163"/>
+	</etcitem>
+	<etcitem id="34842" name="Recipe: Spiritshot (R-grade) Compressed Package">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1164"/>
+	</etcitem>
+	<etcitem id="34843" name="Recipe: Blessed Spiritshot (R-grade) Compressed Package">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1165"/>
+	</etcitem>
+	<etcitem id="34844" name="Mysterious Herb">
+		<set name="icon" value=""/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34845" name="Mysterious Herb">
+		<set name="icon" value=""/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34846" name="Bard's Gift">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34847" name="Pirate Elixir (2-hour)">
+		<set name="icon" value="icon.etc_hot_spring_nectar_i00"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34849" name="Herb of Mysterious Power">
+		<set name="icon" value="icon.etc_warrior_set_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="HERB"/>
+		<set name="handler" value="Skills"/>
+		<skills>
+			<skill id="9404" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="34850" name="Mysterious Herb of Magic">
+		<set name="icon" value="icon.etc_magic_set_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="HERB"/>
+		<set name="handler" value="Skills"/>
+		<skills>
+			<skill id="9405" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="34851" name="Cube Fragment Armor - R">
+		<set name="icon" value="Branchsys2.icon.event_cubic_a_piece_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34852" name="Cube Fragment Weapon - R">
+		<set name="icon" value="Branchsys2.icon.event_cubic_w_piece_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34853" name="Shiny Cube Fragment Armor - R">
+		<set name="icon" value="Branchsys2.icon.shine_cubic_a_piece_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34854" name="Shiny Cube Fragment Weapon - R">
+		<set name="icon" value="Branchsys2.icon.shine_cubic_w_piece_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34855" name="Raina's Box">
+		<set name="icon" value="icon.present_of_destination_event"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34856" name="Echo Crystal - Theme of Love" add_name="Campaign">
+		<set name="icon" value="icon.etc_echo_crystal_i02"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34857" name="Echo Crystal - Theme of the Feast" add_name="Campaign">
+		<set name="icon" value="icon.etc_echo_crystal_i04"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34858" name="Echo Crystal - Theme of Celebration" add_name="Campaign">
+		<set name="icon" value="icon.etc_echo_crystal_i00"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34862" name="Lavish Decoration Paper">
+		<set name="icon" value="icon.etc_plan_i00"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34863" name="Contaminated Draco Egg">
+		<set name="icon" value="icon.etc_ev_triol_egg"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34864" name="Small Draco Egg">
+		<set name="icon" value="icon.etc_ev_small_egg"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34865" name="Large Draco Egg">
+		<set name="icon" value="icon.etc_ev_big_egg"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34866" name="Shattered Egg Shell">
+		<set name="icon" value="icon.etc_ev_broken_egg"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34867" name="Draco's Gift">
+		<set name="icon" value="icon.etc_treasure_box_i03"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34868" name="Draco's Shiny Gift">
+		<set name="icon" value="icon.etc_treasure_box_i08"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34870" name="Mentee Certificate Pack">
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34879" name="Low-grade Magic Rune Clip (R-grade)">
+		<set name="icon" value="icon.etc_rune_clip_i00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34880" name="Mid-grade Magic Rune Clip (R-grade)">
+		<set name="icon" value="icon.etc_rune_clip_i00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34881" name="High-grade Magic Rune Clip (R-grade)">
+		<set name="icon" value="icon.etc_rune_clip_i01"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34882" name="Top-grade Magic Rune Clip (R-grade)">
+		<set name="icon" value="icon.etc_rune_clip_i02"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34883" name="Bottle of Istina's Soul">
+		<set name="icon" value="icon.etc_fruit_juice_glass_bottle_i00"/>
+		<set name="weight" value="60"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34884" name="Bottle of Octavis' Soul">
+		<set name="icon" value="icon.etc_fruit_juice_glass_bottle_i06"/>
+		<set name="weight" value="60"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34885" name="Circlet of Earthquake Pack (60-day)">
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34886" name="Novella Prophecy">
+		<set name="icon" value="icon.etc_jewel_red_i00"/>
+		<set name="weight" value="0"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34887" name="Empty Hot Springs Water Bottle">
+		<set name="icon" value="icon.etc_hot_spring_glass_bottle_i00"/>
+		<set name="class" value="CONSUMABLE"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="9443" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="34888" name="Hot Springs Water Bottle">
+		<set name="icon" value="icon.etc_fruit_juice_glass_bottle_i05"/>
+		<set name="weight" value="0"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34889" name="Hard Leather">
+		<set name="icon" value="icon.etc_leather_brown_i00"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34890" name="Trowel">
+		<set name="icon" value="icon.etc_trowel_i00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="9442" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="34891" name="Energy of Fire">
+		<set name="icon" value="icon.etc_bead_red_i00"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34892" name="Hard Fossil Containing Energy of Water">
+		<set name="icon" value="icon.etc_hard_fossil_i00"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34893" name="Seed of Helping Herb">
+		<set name="icon" value="icon.etc_coda_seed_i00"/>
+		<set name="weight" value="0"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34894" name="Herb Remnants">
+		<set name="icon" value="icon.etc_powder_orange_i00"/>
+		<set name="weight" value="0"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34895" name="Spellbook: Clan Flag">
+		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
+		<set name="weight" value="20"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34898" name="Proof of Survival">
+		<set name="icon" value="icon.etc_fire_rune_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34899" name="Key of Darkness">
+		<set name="icon" value="icon.etc_dark_key_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+</list>

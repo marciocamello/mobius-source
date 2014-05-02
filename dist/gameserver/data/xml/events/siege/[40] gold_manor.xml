@@ -1,6 +1,5 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "events.dtd">
 <list>
-    <event id="40" name="Gold Manor" type="SIEGE_EVENT" impl="ClanHallAuction">
-    </event>
+	<event id="40" name="Gold Manor" type="SIEGE_EVENT" impl="ClanHallAuction"/>
 </list>

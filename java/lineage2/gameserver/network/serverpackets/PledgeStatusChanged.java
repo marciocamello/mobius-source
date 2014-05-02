@@ -21,23 +21,28 @@ import lineage2.gameserver.model.pledge.Clan;
  */
 public class PledgeStatusChanged extends L2GameServerPacket
 {
-	private final int leader_id, clan_id, level;
+	@SuppressWarnings("unused")
+	private final int leader_id, clan_id, level, type, crestId, allyId;
 	
 	public PledgeStatusChanged(Clan clan)
 	{
 		leader_id = clan.getLeaderId();
 		clan_id = clan.getClanId();
 		level = clan.getLevel();
+		type = clan.getUnionType();
+		crestId = clan.getCrestId();
+		allyId = clan.getAllyId();
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0xCD);
+		writeD(0);
 		writeD(leader_id);
 		writeD(clan_id);
-		writeD(0);
-		writeD(level);
+		writeD(crestId);
+		writeD(allyId);
 		writeD(0);
 		writeD(0);
 		writeD(0);

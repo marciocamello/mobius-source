@@ -1731,7 +1731,7 @@ public class ItemBroker extends Functions
 		StringBuilder out = new StringBuilder(200);
 		out.append("[npc_%objectId%_Chat 1");
 		out.append(type);
-		out.append("|««]&nbsp;&nbsp;");
+		out.append("|ï¿½ï¿½]&nbsp;&nbsp;");
 		int totalPages = items.size();
 		totalPages = (totalPages / MAX_ITEMS_PER_PAGE) + ((totalPages % MAX_ITEMS_PER_PAGE) > 0 ? 1 : 0);
 		totalPages = Math.max(1, totalPages);
@@ -1915,11 +1915,11 @@ public class ItemBroker extends Functions
 		StringBuilder out = new StringBuilder(200);
 		if (search == null)
 		{
-			listPageNum(out, type, itemType, returnPage, minEnchant, rare, "««");
+			listPageNum(out, type, itemType, returnPage, minEnchant, rare, "ï¿½ï¿½");
 		}
 		else
 		{
-			findPageNum(out, type, returnPage, search, "««");
+			findPageNum(out, type, returnPage, search, "ï¿½ï¿½");
 		}
 		out.append("&nbsp;&nbsp;");
 		NavigableMap<Long, Item> sortedItems = type == Player.STORE_PRIVATE_BUY ? allItems.descendingMap() : allItems;
@@ -2399,7 +2399,7 @@ public class ItemBroker extends Functions
 		StringBuilder out = new StringBuilder(200);
 		out.append("[npc_%objectId%_Chat 1");
 		out.append(type);
-		out.append("|««]&nbsp;&nbsp;");
+		out.append("|ï¿½ï¿½]&nbsp;&nbsp;");
 		int totalPages = items.size();
 		totalPages = (totalPages / MAX_ITEMS_PER_PAGE) + ((totalPages % MAX_ITEMS_PER_PAGE) > 0 ? 1 : 0);
 		totalPages = Math.max(1, totalPages);
@@ -2466,14 +2466,13 @@ public class ItemBroker extends Functions
 				out.append(minEnchant);
 				out.append(" 0 0 1 ");
 				out.append(currentPage);
-				if (search != null)
+				
+				for (String element : search)
 				{
-					for (String element : search)
-					{
-						out.append(' ');
-						out.append(element);
-					}
+					out.append(' ');
+					out.append(element);
 				}
+				
 				out.append('|');
 				out.append("<font color=\"LEVEL\">");
 				out.append(temp.getName());

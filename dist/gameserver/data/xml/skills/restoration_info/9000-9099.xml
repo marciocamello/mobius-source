@@ -1,0 +1,3124 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "restoration_info.dtd">
+<list>
+	<restoration skill_id="9027" skill_level="1" name="PC cafe personal instant lottery">
+		<group chance="0.0010">
+			<item id="15359" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1">
+			<item id="15360" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0">
+			<item id="15361" min_count="1" max_count="1"/>
+		</group>
+		<group chance="20.0">
+			<item id="15362" min_count="1" max_count="1"/>
+		</group>
+		<group chance="77.899">
+			<item id="15363" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9036" skill_level="1" name="Special July 7th Parcel">
+		<group chance="65.0">
+			<item id="15379" min_count="5" max_count="5"/>
+			<item id="15384" min_count="1" max_count="1"/>
+		</group>
+		<group chance="24.99">
+			<item id="15379" min_count="5" max_count="5"/>
+			<item id="15385" min_count="1" max_count="1"/>
+		</group>
+		<group chance="10.0">
+			<item id="15379" min_count="5" max_count="5"/>
+			<item id="15386" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.01">
+			<item id="15379" min_count="5" max_count="5"/>
+			<item id="15387" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9037" skill_level="1" name="Special July 7th Parcel (Event)">
+		<group chance="65.0">
+			<item id="15380" min_count="5" max_count="5"/>
+			<item id="15389" min_count="1" max_count="1"/>
+		</group>
+		<group chance="24.99">
+			<item id="15380" min_count="5" max_count="5"/>
+			<item id="15390" min_count="1" max_count="1"/>
+		</group>
+		<group chance="10.0">
+			<item id="15380" min_count="5" max_count="5"/>
+			<item id="15391" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.01">
+			<item id="15380" min_count="5" max_count="5"/>
+			<item id="15392" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9042" skill_level="1" name="6th Anniversary Cube">
+		<group chance="2.0E-4">
+			<item id="13143" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14105" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14108" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14109" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14110" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14111" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13144" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14106" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14112" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14113" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14114" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13145" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14107" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14115" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14116" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14117" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13887" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9514" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9515" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9516" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9517" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9518" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9529" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9519" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9520" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9521" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9522" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9523" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9524" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9525" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9526" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9527" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9528" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="13886" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13457" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13458" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13459" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13460" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13461" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13462" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13463" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13464" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13465" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13466" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13467" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13468" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13469" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13470" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10215" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10216" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10217" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10218" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10219" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10220" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10221" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10222" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10223" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10224" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10225" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10226" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9380" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9446" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9384" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9449" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9450" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9445" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9443" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9442" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="10252" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9448" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="10253" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9384" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9444" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9447" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1111">
+			<item id="15428" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10480" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10481" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10482" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13071" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13072" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13073" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12365" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12366" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12370" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12371" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="729" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="730" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="959" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="960" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5908" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5911" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5914" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9570" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9571" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9572" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="13420" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.6773">
+			<item id="15427" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.8387">
+			<item id="13421" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14683" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14684" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14685" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14686" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14687" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14689" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14690" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14691" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14692" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14693" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14695" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14696" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14697" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14698" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14699" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8751" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8752" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="9575" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="10485" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8761" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8762" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="9576" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="10486" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.4516">
+			<item id="2133" min_count="1" max_count="1"/>
+		</group>
+		<group chance="12.9032">
+			<item id="2134" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9043" skill_level="1" name="6th Anniversary Cube">
+		<group chance="2.0E-4">
+			<item id="13143" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14105" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14108" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14109" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14110" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14111" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13144" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14106" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14112" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14113" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14114" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13145" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14107" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14115" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14116" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14117" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13887" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9514" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9515" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9516" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9517" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9518" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9529" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9519" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9520" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9521" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9522" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9523" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9524" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9525" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9526" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9527" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9528" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="13886" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13457" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13458" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13459" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13460" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13461" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13462" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13463" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13464" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13465" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13466" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13467" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13468" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13469" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13470" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10215" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10216" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10217" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10218" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10219" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10220" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10221" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10222" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10223" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10224" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10225" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10226" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9380" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9446" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9384" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9449" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9450" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9445" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9443" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9442" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="10252" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9448" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="10253" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9384" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9444" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9447" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1111">
+			<item id="15428" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10480" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10481" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10482" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13071" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13072" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13073" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12365" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12366" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12370" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12371" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="729" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="730" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="959" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="960" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5908" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5911" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5914" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9570" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9571" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9572" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="13420" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.6773">
+			<item id="15427" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.8387">
+			<item id="13421" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14683" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14684" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14685" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14686" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14687" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14689" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14690" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14691" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14692" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14693" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14695" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14696" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14697" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14698" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14699" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8751" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8752" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="9575" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="10485" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8761" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8762" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="9576" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="10486" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.4516">
+			<item id="2133" min_count="1" max_count="1"/>
+		</group>
+		<group chance="12.9032">
+			<item id="2134" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9044" skill_level="1" name="6th Anniversary Cube">
+		<group chance="2.0E-4">
+			<item id="13143" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14105" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14108" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14109" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14110" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14111" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13144" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14106" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14112" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14113" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14114" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13145" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14107" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14115" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14116" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14117" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13887" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9514" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9515" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9516" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9517" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9518" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9529" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9519" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9520" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9521" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9522" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9523" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9524" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9525" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9526" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9527" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9528" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="13886" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13457" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13458" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13459" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13460" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13461" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13462" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13463" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13464" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13465" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13466" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13467" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13468" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13469" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13470" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10215" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10216" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10217" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10218" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10219" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10220" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10221" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10222" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10223" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10224" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10225" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10226" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9380" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9446" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9384" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9449" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9450" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9445" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9443" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9442" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="10252" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9448" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="10253" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9384" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9444" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9447" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1111">
+			<item id="15428" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10480" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10481" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10482" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13071" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13072" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13073" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12365" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12366" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12370" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12371" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="729" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="730" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="959" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="960" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5908" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5911" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5914" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9570" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9571" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9572" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="13420" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.6773">
+			<item id="15427" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.8387">
+			<item id="13421" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14683" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14684" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14685" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14686" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14687" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14689" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14690" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14691" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14692" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14693" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14695" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14696" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14697" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14698" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14699" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8751" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8752" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="9575" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="10485" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8761" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8762" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="9576" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="10486" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.4516">
+			<item id="2133" min_count="1" max_count="1"/>
+		</group>
+		<group chance="12.9032">
+			<item id="2134" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9045" skill_level="1" name="6th Anniversary Cube">
+		<group chance="2.0E-4">
+			<item id="13143" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14105" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14108" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14109" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14110" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14111" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13144" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14106" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14112" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14113" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14114" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13145" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14107" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14115" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14116" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14117" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13887" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9514" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9515" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9516" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9517" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9518" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9529" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9519" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9520" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9521" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9522" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9523" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9524" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9525" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9526" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9527" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9528" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="13886" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13457" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13458" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13459" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13460" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13461" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13462" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13463" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13464" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13465" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13466" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13467" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13468" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13469" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13470" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10215" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10216" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10217" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10218" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10219" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10220" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10221" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10222" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10223" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10224" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10225" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10226" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9380" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9446" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9384" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9449" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9450" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9445" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9443" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9442" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="10252" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9448" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="10253" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9384" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9444" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9447" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1111">
+			<item id="15428" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10480" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10481" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10482" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13071" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13072" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13073" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12365" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12366" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12370" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12371" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="729" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="730" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="959" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="960" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5908" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5911" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5914" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9570" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9571" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9572" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="13420" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.6773">
+			<item id="15427" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.8387">
+			<item id="13421" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14683" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14684" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14685" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14686" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14687" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14689" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14690" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14691" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14692" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14693" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14695" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14696" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14697" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14698" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14699" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8751" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8752" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="9575" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="10485" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8761" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8762" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="9576" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="10486" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.4516">
+			<item id="2133" min_count="1" max_count="1"/>
+		</group>
+		<group chance="12.9032">
+			<item id="2134" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9046" skill_level="1" name="6th Anniversary Cube">
+		<group chance="2.0E-4">
+			<item id="13143" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14105" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14108" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14109" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14110" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14111" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13144" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14106" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14112" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14113" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14114" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13145" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14107" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14115" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14116" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14117" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13887" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9514" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9515" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9516" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9517" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9518" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9529" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9519" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9520" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9521" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9522" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9523" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9524" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9525" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9526" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9527" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9528" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="13886" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13457" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13458" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13459" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13460" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13461" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13462" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13463" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13464" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13465" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13466" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13467" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13468" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13469" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13470" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10215" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10216" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10217" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10218" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10219" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10220" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10221" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10222" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10223" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10224" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10225" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10226" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9380" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9446" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9384" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9449" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9450" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9445" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9443" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9442" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="10252" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9448" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="10253" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9384" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9444" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9447" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1111">
+			<item id="15428" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10480" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10481" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10482" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13071" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13072" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13073" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12365" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12366" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12370" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12371" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="729" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="730" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="959" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="960" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5908" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5911" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5914" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9570" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9571" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9572" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="13420" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.6773">
+			<item id="15427" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.8387">
+			<item id="13421" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14683" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14684" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14685" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14686" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14687" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14689" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14690" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14691" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14692" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14693" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14695" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14696" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14697" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14698" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14699" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8751" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8752" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="9575" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="10485" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8761" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8762" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="9576" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="10486" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.4516">
+			<item id="2133" min_count="1" max_count="1"/>
+		</group>
+		<group chance="12.9032">
+			<item id="2134" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9047" skill_level="1" name="6th Anniversary Cube">
+		<group chance="2.0E-4">
+			<item id="13143" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14105" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14108" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14109" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14110" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14111" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13144" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14106" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14112" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14113" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14114" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13145" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14107" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14115" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14116" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14117" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13887" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9514" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9515" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9516" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9517" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9518" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9529" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9519" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9520" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9521" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9522" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9523" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9524" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9525" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9526" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9527" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9528" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="13886" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13457" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13458" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13459" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13460" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13461" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13462" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13463" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13464" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13465" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13466" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13467" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13468" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13469" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13470" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10215" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10216" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10217" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10218" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10219" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10220" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10221" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10222" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10223" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10224" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10225" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10226" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9380" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9446" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9384" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9449" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9450" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9445" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9443" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9442" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="10252" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9448" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="10253" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9384" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9444" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9447" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1111">
+			<item id="15428" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10480" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10481" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10482" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13071" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13072" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13073" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12365" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12366" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12370" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12371" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="729" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="730" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="959" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="960" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5908" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5911" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5914" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9570" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9571" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9572" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="13420" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.6773">
+			<item id="15427" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.8387">
+			<item id="13421" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14683" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14684" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14685" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14686" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14687" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14689" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14690" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14691" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14692" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14693" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14695" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14696" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14697" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14698" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14699" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8751" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8752" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="9575" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="10485" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8761" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8762" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="9576" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="10486" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.4516">
+			<item id="2133" min_count="1" max_count="1"/>
+		</group>
+		<group chance="12.9032">
+			<item id="2134" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9048" skill_level="1" name="6th Anniversary Cube">
+		<group chance="2.0E-4">
+			<item id="13143" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14105" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14108" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14109" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14110" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14111" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13144" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14106" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14112" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14113" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14114" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13145" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14107" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14115" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14116" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="14117" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13887" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9514" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9515" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9516" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9517" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9518" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9529" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9519" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9520" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9521" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9522" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9523" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9524" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9525" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9526" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9527" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="9528" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.3E-4">
+			<item id="13886" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13457" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13458" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13459" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13460" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13461" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13462" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13463" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13464" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13465" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13466" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13467" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13468" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13469" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0E-5">
+			<item id="13470" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10215" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10216" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10217" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10218" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10219" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10220" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10221" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10222" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10223" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10224" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10225" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.0E-5">
+			<item id="10226" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9380" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9446" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9384" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9449" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9450" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9445" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9443" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9442" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="10252" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9448" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="10253" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9384" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9444" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.6E-4">
+			<item id="9447" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1111">
+			<item id="15428" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10480" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10481" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0E-4">
+			<item id="10482" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13071" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13072" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0E-4">
+			<item id="13073" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12365" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12366" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12370" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="12371" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="729" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="730" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="959" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="960" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5908" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5911" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="5914" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9570" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9571" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.0489">
+			<item id="9572" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1466">
+			<item id="13420" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.6773">
+			<item id="15427" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.8387">
+			<item id="13421" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14683" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14684" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14685" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14686" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14687" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14689" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14690" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14691" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14692" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14693" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14695" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14696" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14697" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14698" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.2174">
+			<item id="14699" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8751" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8752" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="9575" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="10485" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8761" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="8762" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="9576" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0161">
+			<item id="10486" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.4516">
+			<item id="2133" min_count="1" max_count="1"/>
+		</group>
+		<group chance="12.9032">
+			<item id="2134" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9055" skill_level="1" name="Golden Spice Capsule">
+		<group chance="90.0">
+			<item id="15474" min_count="50" max_count="50"/>
+		</group>
+		<group chance="5.0">
+			<item id="15474" min_count="40" max_count="40"/>
+			<item id="15476" min_count="5" max_count="5"/>
+		</group>
+		<group chance="5.0">
+			<item id="15474" min_count="40" max_count="40"/>
+			<item id="15478" min_count="5" max_count="5"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9056" skill_level="1" name="Crystal Spice Capsule">
+		<group chance="90.0">
+			<item id="15475" min_count="50" max_count="50"/>
+		</group>
+		<group chance="5.0">
+			<item id="15475" min_count="40" max_count="40"/>
+			<item id="15477" min_count="5" max_count="5"/>
+		</group>
+		<group chance="5.0">
+			<item id="15475" min_count="40" max_count="40"/>
+			<item id="15479" min_count="5" max_count="5"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9064" skill_level="1" name="Halloween Toy Chest">
+		<group chance="20.0">
+			<item id="15443" min_count="1" max_count="1"/>
+		</group>
+		<group chance="20.0">
+			<item id="15444" min_count="1" max_count="1"/>
+		</group>
+		<group chance="20.0">
+			<item id="15445" min_count="1" max_count="1"/>
+		</group>
+		<group chance="20.0">
+			<item id="15446" min_count="1" max_count="1"/>
+		</group>
+		<group chance="20.0">
+			<item id="15447" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9065" skill_level="1" name="Shiny Halloween Toy Chest">
+		<group chance="20.0">
+			<item id="15450" min_count="1" max_count="1"/>
+		</group>
+		<group chance="20.0">
+			<item id="15451" min_count="1" max_count="1"/>
+		</group>
+		<group chance="20.0">
+			<item id="15452" min_count="1" max_count="1"/>
+		</group>
+		<group chance="20.0">
+			<item id="15453" min_count="1" max_count="1"/>
+		</group>
+		<group chance="20.0">
+			<item id="15449" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9066" skill_level="1" name="Scroll of Transformation Box">
+		<group chance="33.0">
+			<item id="10131" min_count="1" max_count="1"/>
+		</group>
+		<group chance="33.0">
+			<item id="10132" min_count="1" max_count="1"/>
+		</group>
+		<group chance="34.0">
+			<item id="10133" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9070" skill_level="1" name="Halloween Pumpkin">
+		<group chance="50.0">
+			<item id="15463" min_count="1" max_count="1"/>
+			<item id="14055" min_count="1" max_count="1"/>
+		</group>
+		<group chance="50.0">
+			<item id="15463" min_count="1" max_count="1"/>
+			<item id="10649" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9071" skill_level="1" name="Halloween Pumpkin - event">
+		<group chance="50.0">
+			<item id="15463" min_count="1" max_count="1"/>
+			<item id="14055" min_count="1" max_count="1"/>
+		</group>
+		<group chance="50.0">
+			<item id="15463" min_count="1" max_count="1"/>
+			<item id="10649" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9072" skill_level="1" name="Small Halloween Pumpkin">
+		<group chance="5.0">
+			<item id="14706" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0">
+			<item id="14711" min_count="1" max_count="1"/>
+		</group>
+		<group chance="10.0">
+			<item id="14705" min_count="1" max_count="1"/>
+		</group>
+		<group chance="10.0">
+			<item id="14704" min_count="1" max_count="1"/>
+		</group>
+		<group chance="10.0">
+			<item id="14710" min_count="1" max_count="1"/>
+		</group>
+		<group chance="10.0">
+			<item id="14709" min_count="1" max_count="1"/>
+		</group>
+		<group chance="10.0">
+			<item id="15439" min_count="1" max_count="1"/>
+		</group>
+		<group chance="15.0">
+			<item id="14065" min_count="1" max_count="1"/>
+		</group>
+		<group chance="15.0">
+			<item id="13273" min_count="1" max_count="1"/>
+		</group>
+		<group chance="15.0">
+			<item id="13016" min_count="10" max_count="10"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9077" skill_level="1" name="Open Packaged Book">
+		<group chance="40.0">
+			<item id="8619" min_count="1" max_count="1"/>
+		</group>
+		<group chance="40.0">
+			<item id="8620" min_count="1" max_count="1"/>
+		</group>
+		<group chance="20.0">
+			<item id="15715" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9080" skill_level="1" name="Santa's Sock">
+		<group chance="82.9">
+			<item id="16408" min_count="1" max_count="1"/>
+			<item id="14739" min_count="1" max_count="1"/>
+			<item id="5561" min_count="1" max_count="1"/>
+		</group>
+		<group chance="10.0">
+			<item id="14678" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.0">
+			<item id="14679" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.0">
+			<item id="14680" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1">
+			<item id="14681" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="9085" skill_level="1" name="Santa Claus's Gift">
+		<group chance="4.98E-5">
+			<item id="13457" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.98E-5">
+			<item id="13458" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.98E-5">
+			<item id="13459" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.98E-5">
+			<item id="13460" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.98E-5">
+			<item id="13461" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.98E-5">
+			<item id="13462" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.98E-5">
+			<item id="13463" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.98E-5">
+			<item id="13464" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.98E-5">
+			<item id="13465" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.98E-5">
+			<item id="13466" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.98E-5">
+			<item id="13467" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.98E-5">
+			<item id="13468" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.98E-5">
+			<item id="13469" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.98E-5">
+			<item id="13470" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.162E-4">
+			<item id="10215" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.162E-4">
+			<item id="10216" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.162E-4">
+			<item id="10217" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.162E-4">
+			<item id="10218" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.162E-4">
+			<item id="10219" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.162E-4">
+			<item id="10220" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.162E-4">
+			<item id="10221" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.162E-4">
+			<item id="10222" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.162E-4">
+			<item id="10223" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.162E-4">
+			<item id="10224" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.162E-4">
+			<item id="10225" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.162E-4">
+			<item id="10226" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.486E-4">
+			<item id="9380" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.486E-4">
+			<item id="9446" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.486E-4">
+			<item id="9384" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.486E-4">
+			<item id="9449" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.486E-4">
+			<item id="9450" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.486E-4">
+			<item id="9445" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.486E-4">
+			<item id="9443" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.486E-4">
+			<item id="9442" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.486E-4">
+			<item id="10252" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.486E-4">
+			<item id="9448" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.486E-4">
+			<item id="10253" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.486E-4">
+			<item id="9384" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.486E-4">
+			<item id="9444" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.486E-4">
+			<item id="9447" min_count="1" max_count="1"/>
+		</group>
+		<group chance="7.33E-5">
+			<item id="13143" min_count="1" max_count="1"/>
+		</group>
+		<group chance="7.33E-5">
+			<item id="14105" min_count="1" max_count="1"/>
+		</group>
+		<group chance="7.33E-5">
+			<item id="14108" min_count="1" max_count="1"/>
+		</group>
+		<group chance="7.33E-5">
+			<item id="14109" min_count="1" max_count="1"/>
+		</group>
+		<group chance="7.33E-5">
+			<item id="14110" min_count="1" max_count="1"/>
+		</group>
+		<group chance="7.33E-5">
+			<item id="14111" min_count="1" max_count="1"/>
+		</group>
+		<group chance="7.33E-5">
+			<item id="13144" min_count="1" max_count="1"/>
+		</group>
+		<group chance="7.33E-5">
+			<item id="14106" min_count="1" max_count="1"/>
+		</group>
+		<group chance="7.33E-5">
+			<item id="14112" min_count="1" max_count="1"/>
+		</group>
+		<group chance="7.33E-5">
+			<item id="14113" min_count="1" max_count="1"/>
+		</group>
+		<group chance="7.33E-5">
+			<item id="14114" min_count="1" max_count="1"/>
+		</group>
+		<group chance="7.33E-5">
+			<item id="13145" min_count="1" max_count="1"/>
+		</group>
+		<group chance="7.33E-5">
+			<item id="14107" min_count="1" max_count="1"/>
+		</group>
+		<group chance="7.33E-5">
+			<item id="14115" min_count="1" max_count="1"/>
+		</group>
+		<group chance="7.33E-5">
+			<item id="14116" min_count="1" max_count="1"/>
+		</group>
+		<group chance="7.33E-5">
+			<item id="14117" min_count="1" max_count="1"/>
+		</group>
+		<group chance="7.33E-5">
+			<item id="13887" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.458E-4">
+			<item id="9514" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.458E-4">
+			<item id="9515" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.458E-4">
+			<item id="9516" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.458E-4">
+			<item id="9517" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.458E-4">
+			<item id="9518" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.458E-4">
+			<item id="9529" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.458E-4">
+			<item id="9519" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.458E-4">
+			<item id="9520" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.458E-4">
+			<item id="9521" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.458E-4">
+			<item id="9522" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.458E-4">
+			<item id="9523" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.458E-4">
+			<item id="9524" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.458E-4">
+			<item id="9525" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.458E-4">
+			<item id="9526" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.458E-4">
+			<item id="9527" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.458E-4">
+			<item id="9528" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.458E-4">
+			<item id="13886" min_count="1" max_count="1"/>
+		</group>
+		<group chance="8.261E-4">
+			<item id="9570" min_count="1" max_count="1"/>
+		</group>
+		<group chance="8.261E-4">
+			<item id="9571" min_count="1" max_count="1"/>
+		</group>
+		<group chance="8.261E-4">
+			<item id="9572" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.649E-4">
+			<item id="10480" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.649E-4">
+			<item id="10481" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.649E-4">
+			<item id="10482" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.325E-4">
+			<item id="13071" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.325E-4">
+			<item id="13072" min_count="1" max_count="1"/>
+		</group>
+		<group chance="2.325E-4">
+			<item id="13073" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.5263449">
+			<item id="729" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.5263449">
+			<item id="959" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.7655924">
+			<item id="730" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.7655924">
+			<item id="960" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.4975597">
+			<item id="1538" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.7681786">
+			<item id="14686" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.7681786">
+			<item id="14687" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.7686099">
+			<item id="14693" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.7686099">
+			<item id="14692" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.7681786">
+			<item id="14698" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.7681786">
+			<item id="14699" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.5217011">
+			<item id="15439" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.12009793">
+			<item id="14611" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.5389435">
+			<item id="5560" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.2401959">
+			<item id="5562" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.2401959">
+			<item id="5563" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.2401959">
+			<item id="5564" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.2401959">
+			<item id="5565" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.2401959">
+			<item id="5566" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.3044378">
+			<item id="6622" min_count="1" max_count="1"/>
+		</group>
+		<group chance="22.5439206">
+			<item id="14701" min_count="1" max_count="1"/>
+		</group>
+		<group chance="63.06608387">
+			<item id="17005" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+</list>

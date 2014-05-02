@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="14800" name="Dark Panther" title="">
@@ -36,7 +36,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -82,7 +82,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -128,7 +128,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -174,7 +174,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -220,7 +220,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -266,7 +266,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -312,7 +312,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -358,7 +358,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="50"/>
@@ -404,7 +404,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="60"/>
@@ -450,7 +450,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="70"/>
@@ -496,7 +496,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -542,7 +542,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="85"/>
@@ -588,7 +588,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="90"/>
@@ -634,7 +634,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="95"/>
@@ -680,7 +680,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -726,7 +726,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="102"/>
@@ -772,7 +772,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="104"/>
@@ -818,7 +818,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="106"/>
@@ -864,7 +864,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="109"/>
@@ -910,7 +910,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="111"/>
@@ -956,7 +956,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="113"/>
@@ -1002,7 +1002,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="115"/>
@@ -1048,7 +1048,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="118"/>
@@ -1094,7 +1094,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -1140,7 +1140,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="122"/>
@@ -1186,7 +1186,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="124"/>
@@ -1232,7 +1232,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="127"/>
@@ -1278,7 +1278,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="129"/>
@@ -1324,7 +1324,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="131"/>
@@ -1370,7 +1370,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="133"/>
@@ -1416,7 +1416,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="136"/>
@@ -1462,7 +1462,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="138"/>
@@ -1508,7 +1508,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="140"/>
@@ -1554,7 +1554,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="143"/>
@@ -1600,7 +1600,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="145"/>
@@ -1646,7 +1646,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="147"/>
@@ -1692,7 +1692,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -1738,7 +1738,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -1784,7 +1784,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -1830,7 +1830,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1876,7 +1876,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1922,7 +1922,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="50"/>
@@ -1968,7 +1968,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="60"/>
@@ -2014,7 +2014,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="70"/>
@@ -2060,7 +2060,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -2106,7 +2106,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="85"/>
@@ -2152,7 +2152,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="90"/>
@@ -2198,7 +2198,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="95"/>
@@ -2244,7 +2244,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -2290,7 +2290,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="102"/>
@@ -2336,7 +2336,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="104"/>
@@ -2382,7 +2382,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="106"/>
@@ -2428,7 +2428,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="109"/>
@@ -2474,7 +2474,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="111"/>
@@ -2520,7 +2520,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="113"/>
@@ -2566,7 +2566,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="115"/>
@@ -2612,7 +2612,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="118"/>
@@ -2658,7 +2658,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -2704,7 +2704,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="122"/>
@@ -2750,7 +2750,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="124"/>
@@ -2796,7 +2796,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="127"/>
@@ -2842,7 +2842,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="129"/>
@@ -2888,7 +2888,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="131"/>
@@ -2934,7 +2934,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="133"/>
@@ -2980,7 +2980,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="136"/>
@@ -3026,7 +3026,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="138"/>
@@ -3072,7 +3072,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="140"/>
@@ -3118,7 +3118,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="143"/>
@@ -3164,7 +3164,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="145"/>
@@ -3210,7 +3210,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="21"/>	<!--Siege Weapons-->
+			<skill id="4416" level="21"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="147"/>
@@ -3256,7 +3256,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -3302,7 +3302,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -3348,7 +3348,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -3394,7 +3394,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -3440,7 +3440,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -3486,7 +3486,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -3532,7 +3532,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -3578,7 +3578,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -3624,7 +3624,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -3670,7 +3670,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -3716,7 +3716,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -3762,7 +3762,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -3808,7 +3808,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -3854,7 +3854,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -3900,7 +3900,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -3946,7 +3946,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -3992,7 +3992,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -4038,7 +4038,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -4084,7 +4084,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -4130,7 +4130,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -4176,7 +4176,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -4222,7 +4222,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -4268,7 +4268,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -4314,7 +4314,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -4360,7 +4360,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -4406,7 +4406,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -4452,7 +4452,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -4498,7 +4498,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -4544,7 +4544,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>
@@ -4590,7 +4590,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="100"/>

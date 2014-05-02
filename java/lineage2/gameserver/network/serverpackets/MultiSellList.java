@@ -85,8 +85,8 @@ public class MultiSellList extends L2GameServerPacket
 				int itemId = prod.getItemId();
 				ItemTemplate template = itemId > 0 ? ItemHolder.getInstance().getTemplate(prod.getItemId()) : null;
 				writeD(itemId);
-				writeD(itemId > 0 ? template.getBodyPart() : 0);
-				writeH(itemId > 0 ? template.getType2ForPackets() : 0);
+				writeD((itemId > 0) && (template != null) ? template.getBodyPart() : 0);
+				writeH((itemId > 0) && (template != null) ? template.getType2ForPackets() : 0);
 				writeQ(prod.getItemCount());
 				writeH(prod.getItemEnchant());
 				writeD(prod.getChance());
@@ -99,7 +99,7 @@ public class MultiSellList extends L2GameServerPacket
 				int itemId = i.getItemId();
 				final ItemTemplate item = itemId > 0 ? ItemHolder.getInstance().getTemplate(i.getItemId()) : null;
 				writeD(itemId);
-				writeH(itemId > 0 ? item.getType2() : 0xffff);
+				writeH((itemId > 0) && (item != null) ? item.getType2() : 0xffff);
 				writeQ(i.getItemCount());
 				writeH(i.getItemEnchant());
 				writeD(0x00);

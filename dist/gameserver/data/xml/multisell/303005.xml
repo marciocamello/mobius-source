@@ -1,9 +1,6 @@
-<?xml version='1.0' encoding='utf-8'?>
-<!DOCTYPE list SYSTEM "multisell.dtd">
-<!--ÐŸÑ€Ð¸Ð´Ð°Ñ‚ÑŒ Ñ…Ð°Ñ€Ð°ÐºÑ‚ÐµÑ€Ð¸ÑÑ‚Ð¸ÐºÐ¸ Ð´Ð¾ÑÐ¿ÐµÑ…Ð°Ð¼ Ñ€Ð°Ð½Ð³Ð° R-->
+<?xml version="1.0"?>
 <list>
 	<config show_all="false" no_tax="true" keep_enchanted="true"/>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ð¹ Ð¨Ð»ÐµÐ¼ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19586" count="1"/>
 		<ingredient id="17845" count="1"/>
@@ -14,7 +11,6 @@
 		<ingredient id="17845" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ð°Ñ ÐšÐ¸Ñ€Ð°ÑÐ° Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19587" count="1"/>
 		<ingredient id="17846" count="1"/>
@@ -25,7 +21,6 @@
 		<ingredient id="17846" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ðµ ÐÐ°Ð±ÐµÐ´Ñ€ÐµÐ½Ð½Ð¸ÐºÐ¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19588" count="1"/>
 		<ingredient id="17847" count="1"/>
@@ -36,7 +31,6 @@
 		<ingredient id="17847" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ðµ Ð ÑƒÐºÐ°Ð²Ð¸Ñ†Ñ‹ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19589" count="1"/>
 		<ingredient id="17848" count="1"/>
@@ -47,7 +41,6 @@
 		<ingredient id="17848" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ðµ Ð¡Ð°Ð¿Ð¾Ð³Ð¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19590" count="1"/>
 		<ingredient id="17849" count="1"/>
@@ -58,7 +51,6 @@
 		<ingredient id="17849" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ð¹ Ð©Ð¸Ñ‚ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19591" count="1"/>
 		<ingredient id="17850" count="1"/>
@@ -69,7 +61,6 @@
 		<ingredient id="17850" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ð¹ ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ð¹ Ð¨Ð»ÐµÐ¼ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19592" count="1"/>
 		<ingredient id="17851" count="1"/>
@@ -80,7 +71,6 @@
 		<ingredient id="17851" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ð°Ñ ÐšÐ¾Ð¶Ð°Ð½Ð°Ñ ÐšÐ¸Ñ€Ð°ÑÐ° Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19593" count="1"/>
 		<ingredient id="17852" count="1"/>
@@ -91,7 +81,6 @@
 		<ingredient id="17852" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ðµ ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ðµ Ð‘Ñ€ÑŽÐºÐ¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19594" count="1"/>
 		<ingredient id="17853" count="1"/>
@@ -102,7 +91,6 @@
 		<ingredient id="17853" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ðµ ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ðµ ÐŸÐµÑ€Ñ‡Ð°Ñ‚ÐºÐ¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19595" count="1"/>
 		<ingredient id="17854" count="1"/>
@@ -113,7 +101,6 @@
 		<ingredient id="17854" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ðµ ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ðµ Ð¡Ð°Ð¿Ð¾Ð³Ð¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19596" count="1"/>
 		<ingredient id="17855" count="1"/>
@@ -124,7 +111,6 @@
 		<ingredient id="17855" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ð°Ñ Ð”Ð¸Ð°Ð´ÐµÐ¼Ð° Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19597" count="1"/>
 		<ingredient id="17856" count="1"/>
@@ -135,7 +121,6 @@
 		<ingredient id="17856" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ð°Ñ Ð¢ÑƒÐ½Ð¸ÐºÐ° Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19598" count="1"/>
 		<ingredient id="17857" count="1"/>
@@ -146,7 +131,6 @@
 		<ingredient id="17857" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ðµ Ð¨Ñ‚Ð°Ð½Ñ‹ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19599" count="1"/>
 		<ingredient id="17858" count="1"/>
@@ -157,7 +141,6 @@
 		<ingredient id="17858" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ðµ ÐŸÐµÑ€Ñ‡Ð°Ñ‚ÐºÐ¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19600" count="1"/>
 		<ingredient id="17859" count="1"/>
@@ -168,7 +151,6 @@
 		<ingredient id="17859" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ðµ Ð‘Ð¾Ñ‚Ð¸Ð½ÐºÐ¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19601" count="1"/>
 		<ingredient id="17860" count="1"/>
@@ -179,7 +161,6 @@
 		<ingredient id="17860" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¨Ð»ÐµÐ¼ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19522" count="1"/>
 		<ingredient id="17304" count="1"/>
@@ -190,7 +171,6 @@
 		<ingredient id="17304" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--ÐšÐ¸Ñ€Ð°ÑÐ° Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19523" count="1"/>
 		<ingredient id="17305" count="1"/>
@@ -201,7 +181,6 @@
 		<ingredient id="17305" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--ÐÐ°Ð±ÐµÐ´Ñ€ÐµÐ½Ð½Ð¸ÐºÐ¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19524" count="1"/>
 		<ingredient id="17306" count="1"/>
@@ -212,7 +191,6 @@
 		<ingredient id="17306" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð ÑƒÐºÐ°Ð²Ð¸Ñ†Ñ‹ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19525" count="1"/>
 		<ingredient id="17307" count="1"/>
@@ -223,7 +201,6 @@
 		<ingredient id="17307" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¡Ð°Ð¿Ð¾Ð³Ð¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19526" count="1"/>
 		<ingredient id="17308" count="1"/>
@@ -234,7 +211,6 @@
 		<ingredient id="17308" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð©Ð¸Ñ‚ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19527" count="1"/>
 		<ingredient id="17309" count="1"/>
@@ -245,7 +221,6 @@
 		<ingredient id="17309" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ð¹ Ð¨Ð»ÐµÐ¼ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19528" count="1"/>
 		<ingredient id="17310" count="1"/>
@@ -256,7 +231,6 @@
 		<ingredient id="17310" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ð¹ Ð”Ð¾ÑÐ¿ÐµÑ… Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19529" count="1"/>
 		<ingredient id="17311" count="1"/>
@@ -267,7 +241,6 @@
 		<ingredient id="17311" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ðµ Ð‘Ñ€ÑŽÐºÐ¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19530" count="1"/>
 		<ingredient id="17312" count="1"/>
@@ -278,7 +251,6 @@
 		<ingredient id="17312" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ðµ ÐŸÐµÑ€Ñ‡Ð°Ñ‚ÐºÐ¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19531" count="1"/>
 		<ingredient id="17313" count="1"/>
@@ -289,7 +261,6 @@
 		<ingredient id="17313" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ðµ Ð¡Ð°Ð¿Ð¾Ð³Ð¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19532" count="1"/>
 		<ingredient id="17314" count="1"/>
@@ -300,7 +271,6 @@
 		<ingredient id="17314" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð”Ð¸Ð°Ð´ÐµÐ¼Ð° Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19533" count="1"/>
 		<ingredient id="17315" count="1"/>
@@ -311,7 +281,6 @@
 		<ingredient id="17315" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¢ÑƒÐ½Ð¸ÐºÐ° Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19534" count="1"/>
 		<ingredient id="17316" count="1"/>
@@ -322,7 +291,6 @@
 		<ingredient id="17316" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¨Ñ‚Ð°Ð½Ñ‹ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19535" count="1"/>
 		<ingredient id="17317" count="1"/>
@@ -333,7 +301,6 @@
 		<ingredient id="17317" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--ÐŸÐµÑ€Ñ‡Ð°Ñ‚ÐºÐ¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19536" count="1"/>
 		<ingredient id="17318" count="1"/>
@@ -344,7 +311,6 @@
 		<ingredient id="17318" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð‘Ð¾Ñ‚Ð¸Ð½ÐºÐ¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19537" count="1"/>
 		<ingredient id="17319" count="1"/>
@@ -355,7 +321,6 @@
 		<ingredient id="17319" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð‘Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð½Ñ‹Ð¹ Ð¨Ð»ÐµÐ¼ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19650" count="1"/>
 		<ingredient id="17981" count="1"/>
@@ -366,7 +331,6 @@
 		<ingredient id="17981" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð‘Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð½Ð°Ñ ÐšÐ¸Ñ€Ð°ÑÐ° Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19651" count="1"/>
 		<ingredient id="17982" count="1"/>
@@ -377,7 +341,6 @@
 		<ingredient id="17982" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð‘Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð½Ñ‹Ðµ ÐÐ°Ð±ÐµÐ´Ñ€ÐµÐ½Ð½Ð¸ÐºÐ¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19652" count="1"/>
 		<ingredient id="17983" count="1"/>
@@ -388,7 +351,6 @@
 		<ingredient id="17983" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð‘Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð½Ñ‹Ðµ Ð ÑƒÐºÐ°Ð²Ð¸Ñ†Ñ‹ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19653" count="1"/>
 		<ingredient id="17984" count="1"/>
@@ -399,7 +361,6 @@
 		<ingredient id="17984" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð‘Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð½Ñ‹Ðµ Ð¡Ð°Ð¿Ð¾Ð³Ð¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19654" count="1"/>
 		<ingredient id="17985" count="1"/>
@@ -410,7 +371,6 @@
 		<ingredient id="17985" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19655" count="1"/>
 		<ingredient id="17986" count="1"/>
@@ -421,7 +381,6 @@
 		<ingredient id="17986" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð‘Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð½Ñ‹Ð¹ ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ð¹ Ð¨Ð»ÐµÐ¼ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19656" count="1"/>
 		<ingredient id="17987" count="1"/>
@@ -432,7 +391,6 @@
 		<ingredient id="17987" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð‘Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð½Ñ‹Ð¹ ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ð¹ Ð”Ð¾ÑÐ¿ÐµÑ… Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19657" count="1"/>
 		<ingredient id="17988" count="1"/>
@@ -443,7 +401,6 @@
 		<ingredient id="17988" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð‘Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð½Ñ‹Ðµ ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ðµ Ð‘Ñ€ÑŽÐºÐ¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19658" count="1"/>
 		<ingredient id="17989" count="1"/>
@@ -454,7 +411,6 @@
 		<ingredient id="17989" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð‘Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð½Ñ‹Ðµ ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ðµ ÐŸÐµÑ€Ñ‡Ð°Ñ‚ÐºÐ¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19659" count="1"/>
 		<ingredient id="17990" count="1"/>
@@ -465,7 +421,6 @@
 		<ingredient id="17990" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð‘Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð½Ñ‹Ðµ ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ðµ Ð¡Ð°Ð¿Ð¾Ð³Ð¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19660" count="1"/>
 		<ingredient id="17991" count="1"/>
@@ -476,7 +431,6 @@
 		<ingredient id="17991" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð‘Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð½Ð°Ñ Ð”Ð¸Ð°Ð´ÐµÐ¼Ð° Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19661" count="1"/>
 		<ingredient id="17992" count="1"/>
@@ -487,7 +441,6 @@
 		<ingredient id="17992" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð‘Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð½Ð°Ñ Ð¢ÑƒÐ½Ð¸ÐºÐ° Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19662" count="1"/>
 		<ingredient id="17993" count="1"/>
@@ -498,7 +451,6 @@
 		<ingredient id="17993" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð‘Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð½Ñ‹Ðµ Ð¨Ñ‚Ð°Ð½Ñ‹ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19663" count="1"/>
 		<ingredient id="17994" count="1"/>
@@ -509,7 +461,6 @@
 		<ingredient id="17994" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð‘Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð½Ñ‹Ðµ ÐŸÐµÑ€Ñ‡Ð°Ñ‚ÐºÐ¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19664" count="1"/>
 		<ingredient id="17995" count="1"/>
@@ -520,7 +471,6 @@
 		<ingredient id="17995" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð‘Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð½Ñ‹Ðµ Ð‘Ð¾Ñ‚Ð¸Ð½ÐºÐ¸ Ð‘ÐµÑÑÐ¼ÐµÑ€Ñ‚Ð¸Ñ-->
 	<item>
 		<production id="19665" count="1"/>
 		<ingredient id="17996" count="1"/>
@@ -531,7 +481,6 @@
 		<ingredient id="17996" count="1"/>
 		<ingredient id="57" count="384000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ð¹ Ð¨Ð»ÐµÐ¼ ÐÐ´Ð°-->
 	<item>
 		<production id="19602" count="1"/>
 		<ingredient id="17879" count="1"/>
@@ -542,7 +491,6 @@
 		<ingredient id="17879" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ð°Ñ ÐšÐ¸Ñ€Ð°ÑÐ° ÐÐ´Ð°-->
 	<item>
 		<production id="19603" count="1"/>
 		<ingredient id="17880" count="1"/>
@@ -553,7 +501,6 @@
 		<ingredient id="17880" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ðµ ÐÐ°Ð±ÐµÐ´Ñ€ÐµÐ½Ð½Ð¸ÐºÐ¸ ÐÐ´Ð°-->
 	<item>
 		<production id="19604" count="1"/>
 		<ingredient id="17881" count="1"/>
@@ -564,7 +511,6 @@
 		<ingredient id="17881" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ðµ Ð ÑƒÐºÐ°Ð²Ð¸Ñ†Ñ‹ ÐÐ´Ð°-->
 	<item>
 		<production id="19605" count="1"/>
 		<ingredient id="17882" count="1"/>
@@ -575,7 +521,6 @@
 		<ingredient id="17882" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ðµ Ð¡Ð°Ð¿Ð¾Ð³Ð¸ ÐÐ´Ð°-->
 	<item>
 		<production id="19606" count="1"/>
 		<ingredient id="17883" count="1"/>
@@ -586,7 +531,6 @@
 		<ingredient id="17883" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19607" count="1"/>
 		<ingredient id="17884" count="1"/>
@@ -597,7 +541,6 @@
 		<ingredient id="17884" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ð¹ ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ð¹ Ð¨Ð»ÐµÐ¼ ÐÐ´Ð°-->
 	<item>
 		<production id="19608" count="1"/>
 		<ingredient id="17885" count="1"/>
@@ -608,7 +551,6 @@
 		<ingredient id="17885" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ð°Ñ ÐšÐ¾Ð¶Ð°Ð½Ð°Ñ ÐšÐ¸Ñ€Ð°ÑÐ° ÐÐ´Ð°-->
 	<item>
 		<production id="19609" count="1"/>
 		<ingredient id="17886" count="1"/>
@@ -619,7 +561,6 @@
 		<ingredient id="17886" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ðµ ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ðµ Ð‘Ñ€ÑŽÐºÐ¸ ÐÐ´Ð°-->
 	<item>
 		<production id="19610" count="1"/>
 		<ingredient id="17887" count="1"/>
@@ -630,7 +571,6 @@
 		<ingredient id="17887" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ðµ ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ðµ ÐŸÐµÑ€Ñ‡Ð°Ñ‚ÐºÐ¸ ÐÐ´Ð°-->
 	<item>
 		<production id="19611" count="1"/>
 		<ingredient id="17888" count="1"/>
@@ -641,7 +581,6 @@
 		<ingredient id="17888" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ðµ ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ðµ Ð¡Ð°Ð¿Ð¾Ð³Ð¸ ÐÐ´Ð°-->
 	<item>
 		<production id="19612" count="1"/>
 		<ingredient id="17889" count="1"/>
@@ -652,7 +591,6 @@
 		<ingredient id="17889" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ð°Ñ Ð”Ð¸Ð°Ð´ÐµÐ¼Ð° ÐÐ´Ð°-->
 	<item>
 		<production id="19613" count="1"/>
 		<ingredient id="17890" count="1"/>
@@ -663,7 +601,6 @@
 		<ingredient id="17890" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ð°Ñ Ð¢ÑƒÐ½Ð¸ÐºÐ° ÐÐ´Ð°-->
 	<item>
 		<production id="19614" count="1"/>
 		<ingredient id="17891" count="1"/>
@@ -674,7 +611,6 @@
 		<ingredient id="17891" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ðµ Ð¨Ñ‚Ð°Ð½Ñ‹ ÐÐ´Ð°-->
 	<item>
 		<production id="19615" count="1"/>
 		<ingredient id="17892" count="1"/>
@@ -685,7 +621,6 @@
 		<ingredient id="17892" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ðµ ÐŸÐµÑ€Ñ‡Ð°Ñ‚ÐºÐ¸ ÐÐ´Ð°-->
 	<item>
 		<production id="19616" count="1"/>
 		<ingredient id="17893" count="1"/>
@@ -696,7 +631,6 @@
 		<ingredient id="17893" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ðµ Ð‘Ð¾Ñ‚Ð¸Ð½ÐºÐ¸ ÐÐ´Ð°-->
 	<item>
 		<production id="19617" count="1"/>
 		<ingredient id="17894" count="1"/>
@@ -707,7 +641,6 @@
 		<ingredient id="17894" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð¨Ð»ÐµÐ¼ ÐÐ´Ð°-->
 	<item>
 		<production id="19538" count="1"/>
 		<ingredient id="17338" count="1"/>
@@ -718,7 +651,6 @@
 		<ingredient id="17338" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--ÐšÐ¸Ñ€Ð°ÑÐ° ÐÐ´Ð°-->
 	<item>
 		<production id="19539" count="1"/>
 		<ingredient id="17339" count="1"/>
@@ -729,7 +661,6 @@
 		<ingredient id="17339" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--ÐÐ°Ð±ÐµÐ´Ñ€ÐµÐ½Ð½Ð¸ÐºÐ¸ ÐÐ´Ð°-->
 	<item>
 		<production id="19540" count="1"/>
 		<ingredient id="17340" count="1"/>
@@ -740,7 +671,6 @@
 		<ingredient id="17340" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð ÑƒÐºÐ°Ð²Ð¸Ñ†Ñ‹ ÐÐ´Ð°-->
 	<item>
 		<production id="19541" count="1"/>
 		<ingredient id="17341" count="1"/>
@@ -751,7 +681,6 @@
 		<ingredient id="17341" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð¡Ð°Ð¿Ð¾Ð³Ð¸ ÐÐ´Ð°-->
 	<item>
 		<production id="19542" count="1"/>
 		<ingredient id="17342" count="1"/>
@@ -762,7 +691,6 @@
 		<ingredient id="17342" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19543" count="1"/>
 		<ingredient id="17343" count="1"/>
@@ -773,7 +701,6 @@
 		<ingredient id="17343" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ð¹ Ð¨Ð»ÐµÐ¼ ÐÐ´Ð°-->
 	<item>
 		<production id="19544" count="1"/>
 		<ingredient id="17344" count="1"/>
@@ -784,7 +711,6 @@
 		<ingredient id="17344" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--ÐšÐ¾Ð¶Ð°Ð½Ð°Ñ ÐšÐ¸Ñ€Ð°ÑÐ° ÐÐ´Ð°-->
 	<item>
 		<production id="19545" count="1"/>
 		<ingredient id="17345" count="1"/>
@@ -795,7 +721,6 @@
 		<ingredient id="17345" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ðµ Ð‘Ñ€ÑŽÐºÐ¸ ÐÐ´Ð°-->
 	<item>
 		<production id="19546" count="1"/>
 		<ingredient id="17346" count="1"/>
@@ -806,7 +731,6 @@
 		<ingredient id="17346" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ðµ ÐŸÐµÑ€Ñ‡Ð°Ñ‚ÐºÐ¸ ÐÐ´Ð°-->
 	<item>
 		<production id="19547" count="1"/>
 		<ingredient id="17347" count="1"/>
@@ -817,7 +741,6 @@
 		<ingredient id="17347" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--ÐšÐ¾Ð¶Ð°Ð½Ñ‹Ðµ Ð¡Ð°Ð¿Ð¾Ð³Ð¸ ÐÐ´Ð°-->
 	<item>
 		<production id="19548" count="1"/>
 		<ingredient id="17348" count="1"/>
@@ -828,7 +751,6 @@
 		<ingredient id="17348" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð”Ð¸Ð°Ð´ÐµÐ¼Ð° ÐÐ´Ð°-->
 	<item>
 		<production id="19549" count="1"/>
 		<ingredient id="17349" count="1"/>
@@ -839,7 +761,6 @@
 		<ingredient id="17349" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð¢ÑƒÐ½Ð¸ÐºÐ° ÐÐ´Ð°-->
 	<item>
 		<production id="19550" count="1"/>
 		<ingredient id="17350" count="1"/>
@@ -850,7 +771,6 @@
 		<ingredient id="17350" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð¨Ñ‚Ð°Ð½Ñ‹ ÐÐ´Ð°-->
 	<item>
 		<production id="19551" count="1"/>
 		<ingredient id="17351" count="1"/>
@@ -861,7 +781,6 @@
 		<ingredient id="17351" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--ÐŸÐµÑ€Ñ‡Ð°Ñ‚ÐºÐ¸ ÐÐ´Ð°-->
 	<item>
 		<production id="19552" count="1"/>
 		<ingredient id="17352" count="1"/>
@@ -872,7 +791,6 @@
 		<ingredient id="17352" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð‘Ð¾Ñ‚Ð¸Ð½ÐºÐ¸ ÐÐ´Ð°-->
 	<item>
 		<production id="19553" count="1"/>
 		<ingredient id="17353" count="1"/>
@@ -883,7 +801,6 @@
 		<ingredient id="17353" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð‘Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð½Ñ‹Ð¹ Ð¨Ð»ÐµÐ¼ ÐÐ´Ð°-->
 	<item>
 		<production id="19666" count="1"/>
 		<ingredient id="18015" count="1"/>
@@ -894,7 +811,6 @@
 		<ingredient id="18015" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19667" count="1"/>
 		<ingredient id="18016" count="1"/>
@@ -905,7 +821,6 @@
 		<ingredient id="18016" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19668" count="1"/>
 		<ingredient id="18017" count="1"/>
@@ -916,7 +831,6 @@
 		<ingredient id="18017" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19669" count="1"/>
 		<ingredient id="18018" count="1"/>
@@ -927,7 +841,6 @@
 		<ingredient id="18018" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19670" count="1"/>
 		<ingredient id="18019" count="1"/>
@@ -938,7 +851,6 @@
 		<ingredient id="18019" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19671" count="1"/>
 		<ingredient id="18020" count="1"/>
@@ -949,7 +861,6 @@
 		<ingredient id="18020" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19672" count="1"/>
 		<ingredient id="18021" count="1"/>
@@ -960,7 +871,6 @@
 		<ingredient id="18021" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19673" count="1"/>
 		<ingredient id="18022" count="1"/>
@@ -971,7 +881,6 @@
 		<ingredient id="18022" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19674" count="1"/>
 		<ingredient id="18023" count="1"/>
@@ -982,7 +891,6 @@
 		<ingredient id="18023" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19675" count="1"/>
 		<ingredient id="18024" count="1"/>
@@ -993,7 +901,6 @@
 		<ingredient id="18024" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19676" count="1"/>
 		<ingredient id="18025" count="1"/>
@@ -1004,7 +911,6 @@
 		<ingredient id="18025" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19677" count="1"/>
 		<ingredient id="18026" count="1"/>
@@ -1015,7 +921,6 @@
 		<ingredient id="18026" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19678" count="1"/>
 		<ingredient id="18027" count="1"/>
@@ -1026,7 +931,6 @@
 		<ingredient id="18027" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19679" count="1"/>
 		<ingredient id="18028" count="1"/>
@@ -1037,7 +941,6 @@
 		<ingredient id="18028" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19680" count="1"/>
 		<ingredient id="18029" count="1"/>
@@ -1048,7 +951,6 @@
 		<ingredient id="18029" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð‘Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð½Ñ‹Ðµ Ð‘Ð¾Ñ‚Ð¸Ð½ÐºÐ¸ ÐÐ´Ð°-->
 	<item>
 		<production id="19681" count="1"/>
 		<ingredient id="18030" count="1"/>
@@ -1059,7 +961,6 @@
 		<ingredient id="18030" count="1"/>
 		<ingredient id="57" count="1146000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ð¹ Ð¨Ð»ÐµÐ¼ ÐšÐ°Ð´ÐµÐ¹Ñ€Ñ‹-->
 	<item>
 		<production id="19618" count="1"/>
 		<ingredient id="17913" count="1"/>
@@ -1070,7 +971,6 @@
 		<ingredient id="17913" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19619" count="1"/>
 		<ingredient id="17914" count="1"/>
@@ -1081,7 +981,6 @@
 		<ingredient id="17914" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19620" count="1"/>
 		<ingredient id="17915" count="1"/>
@@ -1092,7 +991,6 @@
 		<ingredient id="17915" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19621" count="1"/>
 		<ingredient id="17916" count="1"/>
@@ -1103,7 +1001,6 @@
 		<ingredient id="17916" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19622" count="1"/>
 		<ingredient id="17917" count="1"/>
@@ -1114,7 +1011,6 @@
 		<ingredient id="17917" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19623" count="1"/>
 		<ingredient id="17918" count="1"/>
@@ -1125,7 +1021,6 @@
 		<ingredient id="17918" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19624" count="1"/>
 		<ingredient id="17919" count="1"/>
@@ -1136,7 +1031,6 @@
 		<ingredient id="17919" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19625" count="1"/>
 		<ingredient id="17920" count="1"/>
@@ -1147,7 +1041,6 @@
 		<ingredient id="17920" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19626" count="1"/>
 		<ingredient id="17921" count="1"/>
@@ -1158,7 +1051,6 @@
 		<ingredient id="17921" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19627" count="1"/>
 		<ingredient id="17922" count="1"/>
@@ -1169,7 +1061,6 @@
 		<ingredient id="17922" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19628" count="1"/>
 		<ingredient id="17923" count="1"/>
@@ -1180,7 +1071,6 @@
 		<ingredient id="17923" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19629" count="1"/>
 		<ingredient id="17924" count="1"/>
@@ -1191,7 +1081,6 @@
 		<ingredient id="17924" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19630" count="1"/>
 		<ingredient id="17925" count="1"/>
@@ -1202,7 +1091,6 @@
 		<ingredient id="17925" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19631" count="1"/>
 		<ingredient id="17926" count="1"/>
@@ -1213,7 +1101,6 @@
 		<ingredient id="17926" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19632" count="1"/>
 		<ingredient id="17927" count="1"/>
@@ -1224,7 +1111,6 @@
 		<ingredient id="17927" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!--Ð¡ÐºÐ¾Ð²Ð°Ð½Ð½Ñ‹Ðµ Ð‘Ð¾Ñ‚Ð¸Ð½ÐºÐ¸ ÐšÐ°Ð´ÐµÐ¹Ñ€Ñ‹-->
 	<item>
 		<production id="19633" count="1"/>
 		<ingredient id="17928" count="1"/>
@@ -1235,7 +1121,6 @@
 		<ingredient id="17928" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!--Ð¨Ð»ÐµÐ¼ ÐšÐ°Ð´ÐµÐ¹Ñ€Ñ‹-->
 	<item>
 		<production id="19554" count="1"/>
 		<ingredient id="17396" count="1"/>
@@ -1246,7 +1131,6 @@
 		<ingredient id="17396" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19555" count="1"/>
 		<ingredient id="17397" count="1"/>
@@ -1257,7 +1141,6 @@
 		<ingredient id="17397" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19556" count="1"/>
 		<ingredient id="17398" count="1"/>
@@ -1268,7 +1151,6 @@
 		<ingredient id="17398" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19557" count="1"/>
 		<ingredient id="17399" count="1"/>
@@ -1279,7 +1161,6 @@
 		<ingredient id="17399" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19558" count="1"/>
 		<ingredient id="17400" count="1"/>
@@ -1290,7 +1171,6 @@
 		<ingredient id="17400" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19559" count="1"/>
 		<ingredient id="17401" count="1"/>
@@ -1301,7 +1181,6 @@
 		<ingredient id="17401" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19560" count="1"/>
 		<ingredient id="17402" count="1"/>
@@ -1312,7 +1191,6 @@
 		<ingredient id="17402" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19561" count="1"/>
 		<ingredient id="17403" count="1"/>
@@ -1323,7 +1201,6 @@
 		<ingredient id="17403" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19562" count="1"/>
 		<ingredient id="17404" count="1"/>
@@ -1334,7 +1211,6 @@
 		<ingredient id="17404" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19563" count="1"/>
 		<ingredient id="17405" count="1"/>
@@ -1345,7 +1221,6 @@
 		<ingredient id="17405" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19564" count="1"/>
 		<ingredient id="17406" count="1"/>
@@ -1356,7 +1231,6 @@
 		<ingredient id="17406" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19565" count="1"/>
 		<ingredient id="17407" count="1"/>
@@ -1367,7 +1241,6 @@
 		<ingredient id="17407" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19566" count="1"/>
 		<ingredient id="17408" count="1"/>
@@ -1378,7 +1251,6 @@
 		<ingredient id="17408" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19567" count="1"/>
 		<ingredient id="17409" count="1"/>
@@ -1389,7 +1261,6 @@
 		<ingredient id="17409" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19568" count="1"/>
 		<ingredient id="17410" count="1"/>
@@ -1400,7 +1271,6 @@
 		<ingredient id="17410" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!--Ð‘Ð¾Ñ‚Ð¸Ð½ÐºÐ¸ ÐšÐ°Ð´ÐµÐ¹Ñ€Ñ‹-->
 	<item>
 		<production id="19569" count="1"/>
 		<ingredient id="17411" count="1"/>
@@ -1411,7 +1281,6 @@
 		<ingredient id="17411" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!--Ð‘Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð½Ñ‹Ð¹ Ð¨Ð»ÐµÐ¼ ÐšÐ°Ð´ÐµÐ¹Ñ€Ñ‹-->
 	<item>
 		<production id="19682" count="1"/>
 		<ingredient id="18049" count="1"/>
@@ -1422,7 +1291,6 @@
 		<ingredient id="18049" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19683" count="1"/>
 		<ingredient id="18050" count="1"/>
@@ -1433,7 +1301,6 @@
 		<ingredient id="18050" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19684" count="1"/>
 		<ingredient id="18051" count="1"/>
@@ -1444,7 +1311,6 @@
 		<ingredient id="18051" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19685" count="1"/>
 		<ingredient id="18052" count="1"/>
@@ -1455,7 +1321,6 @@
 		<ingredient id="18052" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19686" count="1"/>
 		<ingredient id="18053" count="1"/>
@@ -1466,7 +1331,6 @@
 		<ingredient id="18053" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19687" count="1"/>
 		<ingredient id="18054" count="1"/>
@@ -1477,7 +1341,6 @@
 		<ingredient id="18054" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19688" count="1"/>
 		<ingredient id="18055" count="1"/>
@@ -1488,7 +1351,6 @@
 		<ingredient id="18055" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19689" count="1"/>
 		<ingredient id="18056" count="1"/>
@@ -1499,7 +1361,6 @@
 		<ingredient id="18056" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19690" count="1"/>
 		<ingredient id="18057" count="1"/>
@@ -1510,7 +1371,6 @@
 		<ingredient id="18057" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19691" count="1"/>
 		<ingredient id="18058" count="1"/>
@@ -1521,7 +1381,6 @@
 		<ingredient id="18058" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19692" count="1"/>
 		<ingredient id="18059" count="1"/>
@@ -1532,7 +1391,6 @@
 		<ingredient id="18059" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19693" count="1"/>
 		<ingredient id="18060" count="1"/>
@@ -1543,7 +1401,6 @@
 		<ingredient id="18060" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19694" count="1"/>
 		<ingredient id="18061" count="1"/>
@@ -1554,7 +1411,6 @@
 		<ingredient id="18061" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19695" count="1"/>
 		<ingredient id="18062" count="1"/>
@@ -1565,7 +1421,6 @@
 		<ingredient id="18062" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!---->
 	<item>
 		<production id="19696" count="1"/>
 		<ingredient id="18063" count="1"/>
@@ -1576,7 +1431,6 @@
 		<ingredient id="18063" count="1"/>
 		<ingredient id="57" count="2620000"/>
 	</item>
-	<!--Ð‘Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð½Ñ‹Ðµ Ð‘Ð¾Ñ‚Ð¸Ð½ÐºÐ¸ ÐšÐ°Ð´ÐµÐ¹Ñ€Ñ‹-->
 	<item>
 		<production id="19697" count="1"/>
 		<ingredient id="18064" count="1"/>

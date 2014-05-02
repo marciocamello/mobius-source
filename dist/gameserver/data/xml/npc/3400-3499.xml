@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="3401" name="Greyclaw Kutus" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -53,7 +52,6 @@
 		</attributes>
 	</npc>
 	<npc id="3402" name="Kutus' Escort" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -103,7 +101,6 @@
 		</attributes>
 	</npc>
 	<npc id="3403" name="Kutus' Pawn" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -153,7 +150,6 @@
 		</attributes>
 	</npc>
 	<npc id="3404" name="Tracker Captain Sharuk" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -204,7 +200,6 @@
 		</attributes>
 	</npc>
 	<npc id="3405" name="Sharuk's Tracker" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -254,7 +249,6 @@
 		</attributes>
 	</npc>
 	<npc id="3406" name="Sharuk's Marksman" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -304,7 +298,6 @@
 		</attributes>
 	</npc>
 	<npc id="3407" name="Sukar Ratman Chief" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -355,7 +348,6 @@
 		</attributes>
 	</npc>
 	<npc id="3408" name="Sukar Ratman Escort" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -405,7 +397,6 @@
 		</attributes>
 	</npc>
 	<npc id="3409" name="Sukar Ratman Priest" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -455,7 +446,6 @@
 		</attributes>
 	</npc>
 	<npc id="3410" name="Ikuntai" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -508,7 +498,6 @@
 		</attributes>
 	</npc>
 	<npc id="3411" name="Ikuntai's Servitor" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -559,7 +548,6 @@
 		</attributes>
 	</npc>
 	<npc id="3412" name="Ikuntai's Pawn" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -611,7 +599,6 @@
 		</attributes>
 	</npc>
 	<npc id="3413" name="Zombie Lord Crowl" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -664,7 +651,6 @@
 		</attributes>
 	</npc>
 	<npc id="3414" name="Evil Spirit Archer" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -716,7 +702,6 @@
 		</attributes>
 	</npc>
 	<npc id="3415" name="Evil Spirit Warrior" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -768,7 +753,6 @@
 		</attributes>
 	</npc>
 	<npc id="3416" name="Zombie Lord Ferkel" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -823,7 +807,6 @@
 		</attributes>
 	</npc>
 	<npc id="3417" name="Ferkel's Warrior" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -877,7 +860,6 @@
 		</attributes>
 	</npc>
 	<npc id="3418" name="Ferkel's Priest" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -931,7 +913,6 @@
 		</attributes>
 	</npc>
 	<npc id="3419" name="Execution Grounds Watchman Guillotine" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -985,7 +966,6 @@
 		</attributes>
 	</npc>
 	<npc id="3420" name="Flame Lord Shadar" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1038,7 +1018,6 @@
 		</attributes>
 	</npc>
 	<npc id="3421" name="Claws of Shadar" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1088,7 +1067,6 @@
 		</attributes>
 	</npc>
 	<npc id="3422" name="Whip of Shadar" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1140,7 +1118,6 @@
 		</attributes>
 	</npc>
 	<npc id="3423" name="Soul Collector Acheron" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1193,7 +1170,6 @@
 		</attributes>
 	</npc>
 	<npc id="3424" name="Soul Slasher" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1245,7 +1221,6 @@
 		</attributes>
 	</npc>
 	<npc id="3425" name="Soul Strainer" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1297,7 +1272,6 @@
 		</attributes>
 	</npc>
 	<npc id="3426" name="Lord Ishka" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1352,7 +1326,6 @@
 		</attributes>
 	</npc>
 	<npc id="3427" name="Ishka's Elite Officer" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1406,7 +1379,6 @@
 		</attributes>
 	</npc>
 	<npc id="3428" name="Ishka's Elite Soldier" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1460,7 +1432,6 @@
 		</attributes>
 	</npc>
 	<npc id="3429" name="Demon Kuri" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1513,7 +1484,6 @@
 		</attributes>
 	</npc>
 	<npc id="3430" name="Kuri's Wife" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="57879"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1564,7 +1534,6 @@
 		</attributes>
 	</npc>
 	<npc id="3431" name="Devil Blader of Chaos" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="28939"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1615,7 +1584,6 @@
 		</attributes>
 	</npc>
 	<npc id="3432" name="Ancient Weird Drake" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1667,7 +1635,6 @@
 		</attributes>
 	</npc>
 	<npc id="3433" name="Slaughter Lord Gato" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1718,7 +1685,6 @@
 		</attributes>
 	</npc>
 	<npc id="3434" name="Gato's Sniper" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1768,7 +1734,6 @@
 		</attributes>
 	</npc>
 	<npc id="3435" name="Gato's Troop Captain" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1817,7 +1782,6 @@
 		</attributes>
 	</npc>
 	<npc id="3436" name="Ketra Commander Atis" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1868,7 +1832,6 @@
 		</attributes>
 	</npc>
 	<npc id="3437" name="Ketra Marksman" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1918,7 +1881,6 @@
 		</attributes>
 	</npc>
 	<npc id="3438" name="Ketra Raider" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1967,7 +1929,6 @@
 		</attributes>
 	</npc>
 	<npc id="3439" name="Beacon of Blue Sky" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="536390"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2018,7 +1979,6 @@
 		</attributes>
 	</npc>
 	<npc id="3440" name="Beacon's Shooter" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="21302"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2070,7 +2030,6 @@
 		</attributes>
 	</npc>
 	<npc id="3441" name="Beacon's Warrior" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="15897"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2121,7 +2080,6 @@
 		</attributes>
 	</npc>
 	<npc id="3442" name="Earth Protector Panathen" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2172,7 +2130,6 @@
 		</attributes>
 	</npc>
 	<npc id="3443" name="Panathen's Knight" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2221,7 +2178,6 @@
 		</attributes>
 	</npc>
 	<npc id="3444" name="Panathen's Protectors" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2271,7 +2227,6 @@
 		</attributes>
 	</npc>
 	<npc id="3445" name="Betrayer of Urutu Freki" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2322,7 +2277,6 @@
 		</attributes>
 	</npc>
 	<npc id="3446" name="Freki's Vampire Bat" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2372,7 +2326,6 @@
 		</attributes>
 	</npc>
 	<npc id="3447" name="Freki's Wild Bear" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2422,7 +2375,6 @@
 		</attributes>
 	</npc>
 	<npc id="3448" name="Nellis' Vengeful Spirit" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2475,7 +2427,6 @@
 		</attributes>
 	</npc>
 	<npc id="3449" name="Nellis' Follower" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2527,7 +2478,6 @@
 		</attributes>
 	</npc>
 	<npc id="3450" name="Rayito the Looter" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2578,7 +2528,6 @@
 		</attributes>
 	</npc>
 	<npc id="3451" name="Rayito's Guard Captain" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2628,7 +2577,6 @@
 		</attributes>
 	</npc>
 	<npc id="3452" name="Rayito's Henchman" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2678,7 +2626,6 @@
 		</attributes>
 	</npc>
 	<npc id="3453" name="Ketra's Hero Hekaton" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2729,7 +2676,6 @@
 		</attributes>
 	</npc>
 	<npc id="3454" name="Hekaton's Scout" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2779,7 +2725,6 @@
 		</attributes>
 	</npc>
 	<npc id="3455" name="Hekaton's Servant" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2829,7 +2774,6 @@
 		</attributes>
 	</npc>
 	<npc id="3456" name="Varka's Hero Shadith" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2880,7 +2824,6 @@
 		</attributes>
 	</npc>
 	<npc id="3457" name="Shadith' Escort Captain" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2930,7 +2873,6 @@
 		</attributes>
 	</npc>
 	<npc id="3458" name="Shadith' Sentinel" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2980,7 +2922,6 @@
 		</attributes>
 	</npc>
 	<npc id="3459" name="Doom Blade Thanatos" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3035,7 +2976,6 @@
 		</attributes>
 	</npc>
 	<npc id="3460" name="Kernon" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3088,7 +3028,6 @@
 		</attributes>
 	</npc>
 	<npc id="3461" name="Taliadon" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3139,7 +3078,6 @@
 		</attributes>
 	</npc>
 	<npc id="3462" name="Vemsk" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3190,7 +3128,6 @@
 		</attributes>
 	</npc>
 	<npc id="3463" name="Meanas Anor" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3241,7 +3178,6 @@
 		</attributes>
 	</npc>
 	<npc id="3464" name="Swamp Wyvern" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3291,7 +3227,6 @@
 		</attributes>
 	</npc>
 	<npc id="3465" name="Swamp Succubus" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3343,7 +3278,6 @@
 		</attributes>
 	</npc>
 	<npc id="3466" name="Mammon Collector Talos" title="Lord of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3397,7 +3331,6 @@
 		</attributes>
 	</npc>
 	<npc id="3467" name="Talos' Pawn" title="Follower of Destruction">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>

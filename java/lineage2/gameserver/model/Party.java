@@ -556,11 +556,16 @@ public class Party implements PlayerGroup
 					}
 				}
 			}
-			WorldStatisticsManager.getInstance().updateStat(leader, CategoryType.TIME_IN_PARTY, (System.currentTimeMillis() - leader.getStartingTimeInParty()) / 1000);
-			if (leader.getStartingTimeInFullParty() != 0)
+			
+			if (leader != null)
 			{
-				WorldStatisticsManager.getInstance().updateStat(leader, CategoryType.TIME_IN_FULLPARTY, (System.currentTimeMillis() - leader.getStartingTimeInFullParty()) / 1000);
+				WorldStatisticsManager.getInstance().updateStat(leader, CategoryType.TIME_IN_PARTY, (System.currentTimeMillis() - leader.getStartingTimeInParty()) / 1000);
+				if (leader.getStartingTimeInFullParty() != 0)
+				{
+					WorldStatisticsManager.getInstance().updateStat(leader, CategoryType.TIME_IN_FULLPARTY, (System.currentTimeMillis() - leader.getStartingTimeInFullParty()) / 1000);
+				}
 			}
+			
 			dissolveParty();
 		}
 		else

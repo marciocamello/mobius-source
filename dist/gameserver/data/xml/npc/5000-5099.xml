@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="5001" name="Norhand" title="Steward">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -53,7 +52,6 @@
 		</attributes>
 	</npc>
 	<npc id="5002" name="Santa Girl" title="Happy Holidays">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2894"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -102,7 +100,6 @@
 		</attributes>
 	</npc>
 	<npc id="5003" name="Snow Man Grouch" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="865"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -151,7 +148,6 @@
 		</attributes>
 	</npc>
 	<npc id="5004" name="Snow Man Grouch" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="865"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -200,7 +196,6 @@
 		</attributes>
 	</npc>
 	<npc id="5005" name="Game Master" title="Customer Support">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -247,7 +242,6 @@
 		</attributes>
 	</npc>
 	<npc id="5006" name="Holiday Tree" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2894"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -294,7 +288,6 @@
 		</attributes>
 	</npc>
 	<npc id="5007" name="Evolution Deliverer" title="Beginning of Flames">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -341,7 +334,6 @@
 		</attributes>
 	</npc>
 	<npc id="5008" name="Evolution Guide" title="Root of Flames">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -387,8 +379,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="5009" name="Instant Zone Roadblock Décor" title="">
-		<!--Need TODO-->
+	<npc id="5009" name="Instant Zone Roadblock Decor" title="">
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -435,7 +426,6 @@
 		</attributes>
 	</npc>
 	<npc id="5010" name="Queen of Hearts" title="Valentine Messenger">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="4228"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>

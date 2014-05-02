@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
-<!DOCTYPE list SYSTEM "multisell.dtd">
-<!--Blacksmith of Mammon - Weapon Upgrade-->
-<!--MULTISELL - [ssq_weapon_upgrade]-->
+<?xml version="1.0"?>
 <list>
 	<config show_all="false" no_tax="true"/>
 	<item>

@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="6900" levels="1" name="84 level Raid Boss">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6901" levels="1" name="84 level Raid Boss">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6902" levels="1" name="84 level Raid Boss">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6903" levels="1" name="84 level Raid Boss">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6904" levels="1" name="84 level Raid Boss">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6905" levels="1" name="85 level Raid Boss">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6906" levels="1" name="85 level Raid Boss">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6907" levels="1" name="85 level Raid Boss">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6908" levels="1" name="Transform Master">
+		<set name="magicLevel" val="99"/>
+		<set name="icon" val="icon.skilltransform1"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillRadius" val="500"/>
+		<set name="power" val="999999"/>
+		<set name="hitTime" val="500"/>
+	</skill>
+	<skill id="6909" levels="1" name="Charming">
+		<set name="icon" val="icon.skilltransform1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6910" levels="1" name="Dance">
+		<set name="icon" val="icon.skilltransform2"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6911" levels="1" name="Greeting">
+		<set name="icon" val="icon.skilltransform3"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6912" levels="1" name="Stigma Aftermath">
+		<set name="icon" val="icon.skill5860"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6913" levels="1" name="Challenge of Faith">
+		<set name="icon" val="icon.skill0985"/>
+		<set name="magicLevel" val="83"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isSaveable" val="false"/>
+		<set name="isTrigger" val="true"/>
+		<for>
+			<effect count="1" name="Buff" time="15" val="0">
+				<add order="0x40" stat="pDef" val="360"/>
+				<add order="0x40" stat="mDef" val="270"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6914" levels="10" name="Haste">
+		<set name="icon" val="icon.skill1086"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6915" levels="10" name="Acumen">
+		<set name="icon" val="icon.skill1085"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6916" levels="1" name="Antharas's Cute Tricks">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill_agathion_cute"/>
+		<set name="magicLevel" val="85"/>
+		<set name="hitTime" val="3000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<cond msgId="2292">
+			<player agathion="16077"/>
+		</cond>
+	</skill>
+	<skill id="6917" levels="1" name="Kanna's Splendor">
+		<set name="icon" val="icon.skill_agathion_cute"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6918" levels="1" name="Kallesin's Splendor">
+		<set name="icon" val="icon.skill_agathion_cute"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6919" levels="1" name="Challenge Acceptance">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="6920" levels="1" name="Collector's Fortune">
+		<set name="icon" val="BranchSys2.icon.skill0952"/>
+		<set name="magicLevel" val="66"/>
+		<set name="reuseDelay" val="15000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isTrigger" val="true"/>
+		<for>
+			<effect name="Buff" count="1" time="10" val="0">
+				<mul order="0x40" stat="pAtk" val="1.15"/>
+				<add order="0x30" stat="rCrit" val="10"/>
+				<mul order="0x30" stat="cAtk" val="1.1"/>
+				<mul order="0x30" stat="pAtkSpd" val="1.03"/>
+				<add order="0x40" stat="runSpd" val="5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="6921" levels="1" name="Penetration Attack">
+		<set name="icon" val="icon.skill0122"/>
+		<set name="reuseDelay" val="30000"/>
+		<set name="magicLevel" val="80"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume2" val="43"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Debuff" time="30" val="0">
+				<mul order="0x30" stat="pDef" val="0.77"/>
+			</effect>
+		</for>
+	</skill>
+</list>

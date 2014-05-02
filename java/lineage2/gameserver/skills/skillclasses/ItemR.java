@@ -70,47 +70,45 @@ public class ItemR extends Skill
 			return;
 		}
 		Player player = (Player) activeChar;
-		if (player != null)
+		
+		if ((_item_r1 != 0) && (_item_r2 != 0) && (_item_r3 != 0))
 		{
-			if ((_item_r1 != 0) && (_item_r2 != 0) && (_item_r3 != 0))
+			player.getInventory().destroyItemByItemId(_item_del, 1);
+			player.sendPacket(new SystemMessage(SystemMessage.S2_S1_HAS_DISAPPEARED).addItemName(_item_del));
+			if (Rnd.chance(90))
 			{
-				player.getInventory().destroyItemByItemId(_item_del, 1);
-				player.sendPacket(new SystemMessage(SystemMessage.S2_S1_HAS_DISAPPEARED).addItemName(_item_del));
-				if (Rnd.chance(90))
-				{
-					player.getInventory().addItem(_item_r1, 1);
-					player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1).addItemName(_item_r1));
-				}
-				else if (Rnd.chance(2))
-				{
-					player.getInventory().addItem(_item_r3, 1);
-					player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1).addItemName(_item_r3));
-				}
-				else
-				{
-					player.getInventory().addItem(_item_r2, 1);
-					player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1).addItemName(_item_r2));
-				}
+				player.getInventory().addItem(_item_r1, 1);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1).addItemName(_item_r1));
 			}
-			else if ((_item_r1 != 0) && (_item_r2 != 0))
+			else if (Rnd.chance(2))
 			{
-				player.getInventory().destroyItemByItemId(_item_del, 1);
-				player.sendPacket(new SystemMessage(SystemMessage.S2_S1_HAS_DISAPPEARED).addItemName(_item_del));
-				if (Rnd.chance(90))
-				{
-					player.getInventory().addItem(_item_r1, 1);
-					player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1).addItemName(_item_r1));
-				}
-				else
-				{
-					player.getInventory().addItem(_item_r2, 1);
-					player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1).addItemName(_item_r2));
-				}
+				player.getInventory().addItem(_item_r3, 1);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1).addItemName(_item_r3));
 			}
 			else
 			{
-				player.sendMessage("Данный итем не реализован, ожидайте.");
+				player.getInventory().addItem(_item_r2, 1);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1).addItemName(_item_r2));
 			}
+		}
+		else if ((_item_r1 != 0) && (_item_r2 != 0))
+		{
+			player.getInventory().destroyItemByItemId(_item_del, 1);
+			player.sendPacket(new SystemMessage(SystemMessage.S2_S1_HAS_DISAPPEARED).addItemName(_item_del));
+			if (Rnd.chance(90))
+			{
+				player.getInventory().addItem(_item_r1, 1);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1).addItemName(_item_r1));
+			}
+			else
+			{
+				player.getInventory().addItem(_item_r2, 1);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1).addItemName(_item_r2));
+			}
+		}
+		else
+		{
+			player.sendMessage("Данный итем не реализован, ожидайте.");
 		}
 	}
 }

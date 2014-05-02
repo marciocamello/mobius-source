@@ -21,8 +21,12 @@ public class _613_ProveYourCourage extends Quest implements ScriptFile
 {
 	private final static int DURAI = 31377;
 	private final static int KETRAS_HERO_HEKATON = 25299;
+	
+	// Quest items
 	private final static int HEAD_OF_HEKATON = 7240;
 	private final static int FEATHER_OF_VALOR = 7229;
+	
+	// etc
 	@SuppressWarnings("unused")
 	private final static int MARK_OF_VARKA_ALLIANCE1 = 7221;
 	@SuppressWarnings("unused")
@@ -49,8 +53,10 @@ public class _613_ProveYourCourage extends Quest implements ScriptFile
 	public _613_ProveYourCourage()
 	{
 		super(true);
+		
 		addStartNpc(DURAI);
 		addKillId(KETRAS_HERO_HEKATON);
+		
 		addQuestItem(HEAD_OF_HEKATON);
 	}
 	

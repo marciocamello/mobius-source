@@ -17,10 +17,15 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 
+/**
+ * @author Bonux
+ */
 public class _10504_JewelOfAntharas extends Quest implements ScriptFile
 {
+	// NPC's
 	private static final int THEODRIC = 30755;
 	private static final int ULTIMATE_ANTHARAS = 29068;
+	// Item's
 	private static final int CLEAR_CRYSTAL = 21905;
 	private static final int FILLED_CRYSTAL_ANTHARAS = 21907;
 	private static final int PORTAL_STONE = 3865;
@@ -66,7 +71,7 @@ public class _10504_JewelOfAntharas extends Quest implements ScriptFile
 				{
 					htmltext = "antharas_watchman_theodric_q10504_00a.htm";
 				}
-				else if (st.isNowAvailableByTime())
+				else if (st.isNowAvailable())
 				{
 					htmltext = "antharas_watchman_theodric_q10504_01.htm";
 				}
@@ -95,8 +100,7 @@ public class _10504_JewelOfAntharas extends Quest implements ScriptFile
 					st.takeAllItems(FILLED_CRYSTAL_ANTHARAS);
 					st.giveItems(JEWEL_OF_ANTHARAS, 1);
 					st.playSound(SOUND_FINISH);
-					st.setState(COMPLETED);
-					st.exitCurrentQuest(false);
+					st.exitCurrentQuest(this);
 				}
 				else
 				{
@@ -112,6 +116,7 @@ public class _10504_JewelOfAntharas extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if ((cond == 1) && (npcId == ULTIMATE_ANTHARAS))
 		{
 			st.takeAllItems(CLEAR_CRYSTAL);

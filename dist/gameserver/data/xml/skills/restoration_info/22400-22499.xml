@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "restoration_info.dtd">
+<list>
+	<restoration skill_id="22448" skill_level="5" name="Soulshot Medium Pack (R-grade)">
+		<group chance="100.0">
+			<item id="22433" min_count="5000" max_count="5000"/>
+		</group>
+	</restoration>
+	<restoration skill_id="22449" skill_level="10" name="Soulshot Large Pack (R-grade)">
+		<group chance="100.0">
+			<item id="22433" min_count="10000" max_count="10000"/>
+		</group>
+	</restoration>
+	<restoration skill_id="22450" skill_level="5" name="Blessed Spiritshot Medium Pack (R-grade)">
+		<group chance="100.0">
+			<item id="22434" min_count="5000" max_count="5000"/>
+		</group>
+	</restoration>
+	<restoration skill_id="22451" skill_level="10" name="Blessed Spiritshot Large Pack (R-grade)">
+		<group chance="100.0">
+			<item id="22434" min_count="10000" max_count="10000"/>
+		</group>
+	</restoration>
+	<restoration skill_id="22474" skill_level="10" name="Soulshot R 10000">
+		<group chance="100.0">
+			<item id="22433" min_count="10000" max_count="10000"/>
+		</group>
+	</restoration>
+	<restoration skill_id="22475" skill_level="5" name="Blessed Spiritshot R 10000">
+		<group chance="100.0">
+			<item id="22434" min_count="10000" max_count="10000"/>
+		</group>
+	</restoration>
+	<restoration skill_id="22476" skill_level="3" name="Soulshot R 3000">
+		<group chance="100.0">
+			<item id="22433" min_count="3000" max_count="3000"/>
+		</group>
+	</restoration>
+	<restoration skill_id="22477" skill_level="3" name="Blessed Spiritshot R 3000">
+		<group chance="100.0">
+			<item id="22434" min_count="3000" max_count="3000"/>
+		</group>
+	</restoration>
+</list>

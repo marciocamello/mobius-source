@@ -22,23 +22,17 @@ import lineage2.gameserver.network.serverpackets.PledgeCrest;
  */
 public class RequestPledgeCrest extends L2GameClientPacket
 {
-	/**
-	 * Field _crestId.
-	 */
+	@SuppressWarnings("unused")
+	private int _clanId;
 	private int _crestId;
 	
-	/**
-	 * Method readImpl.
-	 */
 	@Override
 	protected void readImpl()
 	{
 		_crestId = readD();
+		_clanId = readD();
 	}
 	
-	/**
-	 * Method runImpl.
-	 */
 	@Override
 	protected void runImpl()
 	{
@@ -52,10 +46,12 @@ public class RequestPledgeCrest extends L2GameClientPacket
 			return;
 		}
 		byte[] data = CrestCache.getInstance().getPledgeCrest(_crestId);
-		if (data != null)
+		if (data == null)
 		{
-			PledgeCrest pc = new PledgeCrest(_crestId, data);
-			sendPacket(pc);
+			return;
 		}
+		PledgeCrest pc = new PledgeCrest(_crestId, data);
+		
+		sendPacket(pc);
 	}
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<list>
+	<config showall="true" notax="true" keepenchanted="true"/>
+	<item>
+		<ingredient count="3997000" id="57"/>
+		<production count="1" id="36187"/>
+	</item>
+	<item>
+		<ingredient count="11941000" id="57"/>
+		<production count="1" id="36188"/>
+	</item>
+	<item>
+		<ingredient count="1999000" id="57"/>
+		<production count="1" id="36189"/>
+	</item>
+	<item>
+		<ingredient count="5970000" id="57"/>
+		<production count="1" id="36190"/>
+	</item>
+</list>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<list>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146468" y="27822" z="-2264" h="65323"/>
+		<npc id="33825"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="86158" y="-143435" z="-1336" h="63814"/>
+		<npc id="33825"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15145" y="143472" z="-2664" h="57049"/>
+		<npc id="33825"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="81752" y="149631" z="-3464" h="49153"/>
+		<npc id="33825"/>
+	</spawn>
+</list>

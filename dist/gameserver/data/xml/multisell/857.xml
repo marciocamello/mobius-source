@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE list SYSTEM "multisell.dtd">
+<?xml version="1.0"?>
 <list>
 	<config showall="true" notax="true"/>
-
 </list>

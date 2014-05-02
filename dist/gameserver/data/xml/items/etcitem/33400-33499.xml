@@ -1,0 +1,368 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="33455" name="Scroll: Enchant Weapon of Destiny (D-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_scroll_of_enchant_weapon_i01"/>
+	</etcitem>
+	<etcitem id="33456" name="Scroll: Enchant Weapon of Destiny (C-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_scroll_of_enchant_weapon_i02"/>
+	</etcitem>
+	<etcitem id="33457" name="Scroll: Enchant Weapon of Destiny (B-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_scroll_of_enchant_weapon_i03"/>
+	</etcitem>
+	<etcitem id="33458" name="Scroll: Enchant Weapon of Destiny (A-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_scroll_of_enchant_weapon_i04"/>
+	</etcitem>
+	<etcitem id="33459" name="Scroll: Enchant Weapon of Destiny (S-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_scroll_of_enchant_weapon_i05"/>
+	</etcitem>
+	<etcitem id="33460" name="Scroll: Enchant Armor of Destiny (D-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_scroll_of_enchant_armor_i01"/>
+	</etcitem>
+	<etcitem id="33461" name="Scroll: Enchant Armor of Destiny (C-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_scroll_of_enchant_armor_i02"/>
+	</etcitem>
+	<etcitem id="33462" name="Scroll: Enchant Armor of Destiny (B-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_scroll_of_enchant_armor_i03"/>
+	</etcitem>
+	<etcitem id="33463" name="Scroll: Enchant Armor of Destiny (A-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_scroll_of_enchant_armor_i04"/>
+	</etcitem>
+	<etcitem id="33464" name="Scroll: Enchant Armor of Destiny (S-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_scroll_of_enchant_armor_i05"/>
+	</etcitem>
+	<etcitem id="33465" name="Lesser Giant's Fortune Box">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="33466" name="Weapon Pouch - R2">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_pouch_gold_i00"/>
+	</etcitem>
+	<etcitem id="33467" name="Armor Pouch - R2">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_pouch_gold_i00"/>
+	</etcitem>
+	<etcitem id="33468" name="Hero's Support Box">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="33469" name="Awakening Support Box">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="33474" name="Talking Island Homemade Cookie">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="BranchSys.icon.br_valentine_cookie_i00"/>
+	</etcitem>
+	<etcitem id="33475" name="Charm of Courage (R-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_charm_of_courage_i05"/>
+	</etcitem>
+	<etcitem id="33476" name="Rune of Destiny">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="br_cashtex.item.br_cash_rune_of_feather_i00"/>
+	</etcitem>
+	<etcitem id="33477" name="Hero's Treasure Chest">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12871" level="1"/>
+		</skills>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="33478" name="Scroll: Enchant Weapon of Destruction (R-grade)">
+		<set name="icon" value="icon.scroll_of_enchant_weapon_i06"/>
+		<set name="stackable" value="true"/>
+		<set name="sellable" value="false"/>
+		<set name="class" value="MISC"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="33479" name="Scroll: Enchant Armor of Destruction (R-grade)">
+		<set name="icon" value="icon.scroll_of_enchant_armor_i06"/>
+		<set name="stackable" value="true"/>
+		<set name="sellable" value="false"/>
+		<set name="class" value="MISC"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="SCROLL"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="33481" name="Fire Stone - Super">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_fire_stone_i00"/>
+	</etcitem>
+	<etcitem id="33482" name="Water Stone - Super">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_water_stone_i00"/>
+	</etcitem>
+	<etcitem id="33483" name="Earth Stone - Super">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_earth_stone_i00"/>
+	</etcitem>
+	<etcitem id="33484" name="Wind Stone - Super">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_wind_stone_i00"/>
+	</etcitem>
+	<etcitem id="33485" name="Dark Stone - Super">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_unholy_stone_i00"/>
+	</etcitem>
+	<etcitem id="33486" name="Holy Stone - Super">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_holy_stone_i00"/>
+	</etcitem>
+	<etcitem id="33487" name="Fire Crystal - Super">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_fire_crystal_i00"/>
+	</etcitem>
+	<etcitem id="33488" name="Water Crystal - Super">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_water_crystal_i00"/>
+	</etcitem>
+	<etcitem id="33489" name="Earth Crystal - Super">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_earth_crystal_i00"/>
+	</etcitem>
+	<etcitem id="33490" name="Wind Crystal - Super">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_wind_crystal_i00"/>
+	</etcitem>
+	<etcitem id="33491" name="Dark Crystal - Super">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_unholy_crystal_i00"/>
+	</etcitem>
+	<etcitem id="33492" name="Holy Crystal - Super">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_holy_crystal_i00"/>
+	</etcitem>
+	<etcitem id="33493" name="Attribute Enchant Support Box">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="33494" name="Talking Island Homemade Cookie" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="BranchSys.icon.br_valentine_cookie_i00"/>
+	</etcitem>
+	<etcitem id="33495" name="Requiem Weapon Pack - Standard">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="33496" name="Immortal Heavy Armor Pack - Standard">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="33497" name="Immortal Light Armor Pack - Standard">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="33498" name="Immortal Robe Armor Pack - Standard">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="33499" name="Immortal Accessory Pack - Standard">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+</list>

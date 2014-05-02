@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="22900" name="Satyr Summoner" title="Brutal">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="collision_radius" value="30.0"/>
@@ -63,7 +62,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22901" name="Satyr Summoner" title="Fully Enraged">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="collision_radius" value="30.0"/>
@@ -127,7 +125,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22902" name="Satyr Summoner" title="Slightly Enraged">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="collision_radius" value="30.0"/>
@@ -191,7 +188,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22903" name="Satyr Witch" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="collision_radius" value="30.0"/>
@@ -252,7 +248,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22904" name="Satyr Witch" title="Wicked">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="collision_radius" value="30.0"/>
@@ -314,7 +309,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22905" name="Satyr Witch" title="Mature">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="collision_radius" value="30.0"/>
@@ -378,7 +372,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22906" name="Satyr Witch" title="Imperfect">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="collision_radius" value="30.0"/>
@@ -442,7 +435,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22907" name="Satyr Witch" title="Violent">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="collision_radius" value="30.0"/>
@@ -507,7 +499,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22908" name="Satyr Witch" title="Brutal">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="collision_radius" value="30.0"/>
@@ -569,7 +560,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22909" name="Satyr Witch" title="Fully Enraged">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="collision_radius" value="30.0"/>
@@ -634,7 +624,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22910" name="Satyr Witch" title="Slightly Enraged">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="collision_radius" value="30.0"/>
@@ -700,8 +689,8 @@
 	<npc id="22911" name="Orbis' Victim" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="collision_height" value="51.0" />
-		<set name="collision_radius" value="30.0" />
+		<set name="collision_height" value="51.0"/>
+		<set name="collision_radius" value="30.0"/>
 		<set name="level" value="95"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
@@ -771,8 +760,8 @@
 	<npc id="22912" name="Orbis' Victim" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="collision_height" value="51.0" />
-		<set name="collision_radius" value="30.0" />
+		<set name="collision_height" value="51.0"/>
+		<set name="collision_radius" value="30.0"/>
 		<set name="level" value="96"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
@@ -843,8 +832,8 @@
 	<npc id="22913" name="Orbis' Victim" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="collision_height" value="51.0" />
-		<set name="collision_radius" value="30.0" />
+		<set name="collision_height" value="51.0"/>
+		<set name="collision_radius" value="30.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
@@ -914,8 +903,8 @@
 	<npc id="22914" name="Orbis' Guard" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="collision_height" value="54.0" />
-		<set name="collision_radius" value="30.0" />
+		<set name="collision_height" value="54.0"/>
+		<set name="collision_radius" value="30.0"/>
 		<set name="level" value="95"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
@@ -985,8 +974,8 @@
 	<npc id="22915" name="Orbis' Guard" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="collision_height" value="54.0" />
-		<set name="collision_radius" value="30.0" />
+		<set name="collision_height" value="54.0"/>
+		<set name="collision_radius" value="30.0"/>
 		<set name="level" value="96"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1057,8 +1046,8 @@
 	<npc id="22916" name="Orbis' Guard" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="collision_height" value="54.0" />
-		<set name="collision_radius" value="30.0" />
+		<set name="collision_height" value="54.0"/>
+		<set name="collision_radius" value="30.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1127,8 +1116,8 @@
 	<npc id="22917" name="Orbis' Thrower" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="collision_height" value="54.0" />
-		<set name="collision_radius" value="35.0" />
+		<set name="collision_height" value="54.0"/>
+		<set name="collision_radius" value="35.0"/>
 		<set name="level" value="95"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1191,8 +1180,8 @@
 	<npc id="22918" name="Orbis' Thrower" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="collision_height" value="54.0" />
-		<set name="collision_radius" value="35.0" />
+		<set name="collision_height" value="54.0"/>
+		<set name="collision_radius" value="35.0"/>
 		<set name="level" value="96"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1262,8 +1251,8 @@
 	<npc id="22919" name="Orbis' Thrower" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="collision_height" value="54.0" />
-		<set name="collision_radius" value="35.0" />
+		<set name="collision_height" value="54.0"/>
+		<set name="collision_radius" value="35.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1332,8 +1321,8 @@
 	<npc id="22920" name="Orbis' Thrower" title="Scout">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="collision_height" value="54.0" />
-		<set name="collision_radius" value="35.0" />
+		<set name="collision_height" value="54.0"/>
+		<set name="collision_radius" value="35.0"/>
 		<set name="level" value="96"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1403,8 +1392,8 @@
 	<npc id="22921" name="Orbis' Curator" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="collision_height" value="54.0" />
-		<set name="collision_radius" value="35.0" />
+		<set name="collision_height" value="54.0"/>
+		<set name="collision_radius" value="35.0"/>
 		<set name="level" value="95"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1467,8 +1456,8 @@
 	<npc id="22922" name="Orbis' Curator" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="collision_height" value="54.0" />
-		<set name="collision_radius" value="35.0" />
+		<set name="collision_height" value="54.0"/>
+		<set name="collision_radius" value="35.0"/>
 		<set name="level" value="96"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1532,8 +1521,8 @@
 	<npc id="22923" name="Orbis' Curator" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="collision_height" value="54.0" />
-		<set name="collision_radius" value="35.0" />
+		<set name="collision_height" value="54.0"/>
+		<set name="collision_radius" value="35.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1596,8 +1585,8 @@
 	<npc id="22924" name="Orbis' Ancient Hero" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="collision_height" value="54.0" />
-		<set name="collision_radius" value="35.0" />
+		<set name="collision_height" value="54.0"/>
+		<set name="collision_radius" value="35.0"/>
 		<set name="level" value="96"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1659,8 +1648,8 @@
 	<npc id="22925" name="Orbis' Ancient Hero" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="collision_height" value="54.0" />
-		<set name="collision_radius" value="35.0" />
+		<set name="collision_height" value="54.0"/>
+		<set name="collision_radius" value="35.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1726,8 +1715,8 @@
 	<npc id="22926" name="Orbis' Chief Curator" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="collision_height" value="58.0" />
-		<set name="collision_radius" value="40.0" />
+		<set name="collision_height" value="58.0"/>
+		<set name="collision_radius" value="40.0"/>
 		<set name="level" value="96"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1791,8 +1780,8 @@
 	<npc id="22927" name="Orbis' Chief Curator" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
-		<set name="collision_height" value="58.0" />
-		<set name="collision_radius" value="40.0" />
+		<set name="collision_height" value="58.0"/>
+		<set name="collision_radius" value="40.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1898,7 +1887,6 @@
 		</skills>
 	</npc>
 	<npc id="22929" name="Beast of the Arena" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="40.0"/>
@@ -1944,7 +1932,6 @@
 		</skills>
 	</npc>
 	<npc id="22930" name="Octavis' Chief Curator" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="16.0"/>
@@ -1990,7 +1977,6 @@
 		</skills>
 	</npc>
 	<npc id="22931" name="Krakia Bathus" title="Tomb Commander">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="28.0"/>
@@ -2056,7 +2042,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22932" name="Krakia Carcass" title="Tomb Sniper">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="28.0"/>
@@ -2119,7 +2104,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22933" name="Krakia Lotus" title="Tomb Summoner">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="28.0"/>
@@ -2186,7 +2170,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22934" name="Rakzan" title="Tomb Guardian">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="48.0"/>
@@ -2251,7 +2234,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22935" name="Weiss Khan" title="Tomb Wizard">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
@@ -2319,7 +2301,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22936" name="Weiss Ele" title="Tomb Oracle">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
@@ -2389,7 +2370,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22937" name="Bamonti" title="Tomb Soldier">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="12.0"/>
@@ -2457,7 +2437,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22938" name="Seknus" title="Tomb Illusionist">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="21.0"/>
@@ -2526,7 +2505,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22939" name="Demonic Bathus" title="Tomb Commander">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="28.0"/>
@@ -2592,7 +2570,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22940" name="Demonic Carcass" title="Tomb Sniper">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="28.0"/>
@@ -2654,7 +2631,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22941" name="Demonic Lotus" title="Tomb Summoner">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="28.0"/>
@@ -2721,7 +2697,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22942" name="Demonic Rakzan" title="Tomb Guardian">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="42.0"/>
@@ -2788,7 +2763,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22943" name="Demonic Weiss Khan" title="Tomb Wizard">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="16.0"/>
@@ -2856,7 +2830,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22944" name="Demonic Weiss Ele" title="Tomb Oracle">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="18.0"/>
@@ -2925,7 +2898,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22945" name="Demonic Bamonti" title="Tomb Soldier">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="19.0"/>
@@ -2992,7 +2964,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22946" name="Demonic Seknus" title="Tomb Illusionist">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="21.0"/>
@@ -3061,7 +3032,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22947" name="Garden Sentry" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="35.0"/>
@@ -3127,7 +3097,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22948" name="Garden Scout" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="30.0"/>
@@ -3193,7 +3162,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22949" name="Garden Commander" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="44.0"/>
@@ -3257,7 +3225,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22950" name="Outdoor Gardener" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="30.0"/>
@@ -3320,7 +3287,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22951" name="Garden Destroyer" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="17.0"/>
@@ -3388,7 +3354,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22952" name="Garden Watchman" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="12.0"/>
@@ -3452,7 +3417,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22953" name="Garden Scout" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="30.0"/>
@@ -3518,7 +3482,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22954" name="Sun Garden Manager" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="14.0"/>
@@ -3582,7 +3545,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22955" name="Sun Gardener" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="30.0"/>
@@ -3645,7 +3607,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22956" name="Garden Commander" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="44.0"/>
@@ -3709,7 +3670,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22957" name="Garden Warrior" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="35.0"/>
@@ -3773,7 +3733,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22958" name="Moon Garden Manager" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="14.0"/>
@@ -3837,7 +3796,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22959" name="Garden Protector" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="25.0"/>
@@ -3903,7 +3861,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22960" name="Moon Gardener" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="30.0"/>
@@ -3967,7 +3924,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22961" name="Garden Sentry" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="35.0"/>
@@ -4034,7 +3990,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22962" name="Garden Commander" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="44.0"/>
@@ -4097,7 +4052,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22963" name="Garden Warrior" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="35.0"/>
@@ -4224,15 +4178,14 @@
 		</rewardlist>
 	</npc>
 	<npc id="22965" name="Novice Phantom" title="">
-		<!--L2WT Tauti Confirmed-->
-		<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="41.5"/>
-		<set name="level" value="92"/>
+		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="263372"/>
+		<set name="baseHpMax" value="10137120"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="13"/>
 		<set name="baseMpMax" value="2582"/>
@@ -4243,13 +4196,13 @@
 		<set name="baseINT" value="21"/>
 		<set name="baseWIT" value="70"/>
 		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="548674"/>
+		<set name="rewardExp" value="5486740"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="11420"/>
+		<set name="rewardSp" value="114205"/>
 		<set name="basePAtk" value="3410"/>
-		<set name="basePDef" value="713"/>
+		<set name="basePDef" value="700"/>
 		<set name="baseMAtk" value="1581"/>
-		<set name="baseMDef" value="633"/>
+		<set name="baseMDef" value="750"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -4269,29 +4222,40 @@
 			<skill id="5467" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="4370" max="10192" chance="100.0"/>
+			<group chance="40.0">
+				<reward item_id="57" min="437001" max="10158492" chance="40.0"/>
 			</group>
-			<group chance="0.09">
-				<reward item_id="18153" min="1" max="1" chance="33.33333"/>
-				<reward item_id="18158" min="1" max="1" chance="33.33333"/>
-				<reward item_id="18164" min="1" max="1" chance="33.33333"/>
+			<group chance="40.0">
+				<reward item_id="6393" min="1" max="1" chance="40.0"/>
+				<reward item_id="4356" min="1" max="1" chance="40.0"/>
 			</group>
-			<group chance="0.3">
-				<reward item_id="17527" min="1" max="1" chance="100.0"/>
+			<group chance="0.05">
+				<reward item_id="18239" min="1" max="1" chance="0.05"/>
+				<reward item_id="18240" min="1" max="1" chance="0.05"/>
+				<reward item_id="18241" min="1" max="1" chance="0.05"/>
+				<reward item_id="18242" min="1" max="1" chance="0.05"/>
+				<reward item_id="18243" min="1" max="1" chance="0.05"/>
+				<reward item_id="18244" min="1" max="1" chance="0.05"/>
+				<reward item_id="18245" min="1" max="1" chance="0.05"/>
+				<reward item_id="18246" min="1" max="1" chance="0.05"/>
+				<reward item_id="18247" min="1" max="1" chance="0.05"/>
+				<reward item_id="18248" min="1" max="1" chance="0.05"/>
+				<reward item_id="18249" min="1" max="1" chance="0.05"/>
+				<reward item_id="18250" min="1" max="1" chance="0.05"/>
+				<reward item_id="18251" min="1" max="1" chance="0.05"/>
+				<reward item_id="18252" min="1" max="1" chance="0.05"/>
 			</group>
 		</rewardlist>
 	</npc>
 	<npc id="22966" name="Novice Phantom Wizard" title="">
-		<!--L2WT Tauti Confirmed-->
-		<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="39.0"/>
-		<set name="level" value="92"/>
+		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="263372"/>
+		<set name="baseHpMax" value="10137120"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="13"/>
 		<set name="baseMpMax" value="2582"/>
@@ -4302,13 +4266,13 @@
 		<set name="baseINT" value="21"/>
 		<set name="baseWIT" value="70"/>
 		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="548674"/>
+		<set name="rewardExp" value="5486740"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="11420"/>
+		<set name="rewardSp" value="114205"/>
 		<set name="basePAtk" value="3410"/>
-		<set name="basePDef" value="713"/>
+		<set name="basePDef" value="700"/>
 		<set name="baseMAtk" value="1581"/>
-		<set name="baseMDef" value="633"/>
+		<set name="baseMDef" value="750"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -4328,28 +4292,42 @@
 			<skill id="5467" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="4370" max="10192" chance="100.0"/>
+			<group chance="40.0">
+				<reward item_id="57" min="437001" max="10158492" chance="40.0"/>
 			</group>
-			<group chance="0.6">
-				<reward item_id="18156" min="1" max="1" chance="50.0"/>
-				<reward item_id="18167" min="1" max="1" chance="50.0"/>
+			<group chance="40.0">
+				<reward item_id="4356" min="1" max="1" chance="40.0"/>
 			</group>
-			<group chance="0.3">
-				<reward item_id="17527" min="1" max="1" chance="100.0"/>
+			<group chance="40.0">
+				<reward item_id="6393" min="1" max="1" chance="40.0"/>
+			</group>
+			<group chance="0.05">
+				<reward item_id="18239" min="1" max="1" chance="0.05"/>
+				<reward item_id="18240" min="1" max="1" chance="0.05"/>
+				<reward item_id="18241" min="1" max="1" chance="0.05"/>
+				<reward item_id="18242" min="1" max="1" chance="0.05"/>
+				<reward item_id="18243" min="1" max="1" chance="0.05"/>
+				<reward item_id="18244" min="1" max="1" chance="0.05"/>
+				<reward item_id="18245" min="1" max="1" chance="0.05"/>
+				<reward item_id="18246" min="1" max="1" chance="0.05"/>
+				<reward item_id="18247" min="1" max="1" chance="0.05"/>
+				<reward item_id="18248" min="1" max="1" chance="0.05"/>
+				<reward item_id="18249" min="1" max="1" chance="0.05"/>
+				<reward item_id="18250" min="1" max="1" chance="0.05"/>
+				<reward item_id="18251" min="1" max="1" chance="0.05"/>
+				<reward item_id="18252" min="1" max="1" chance="0.05"/>
 			</group>
 		</rewardlist>
 	</npc>
 	<npc id="22967" name="Median Phantom" title="">
-		<!--L2WT Tauti Confirmed-->
-		<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="44.5"/>
-		<set name="level" value="92"/>
+		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="263372"/>
+		<set name="baseHpMax" value="10137120"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="13"/>
 		<set name="baseMpMax" value="2582"/>
@@ -4360,13 +4338,13 @@
 		<set name="baseINT" value="21"/>
 		<set name="baseWIT" value="70"/>
 		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="576359"/>
+		<set name="rewardExp" value="5486740"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="11996"/>
+		<set name="rewardSp" value="114205"/>
 		<set name="basePAtk" value="3410"/>
-		<set name="basePDef" value="713"/>
+		<set name="basePDef" value="700"/>
 		<set name="baseMAtk" value="1581"/>
-		<set name="baseMDef" value="633"/>
+		<set name="baseMDef" value="750"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -4384,37 +4362,47 @@
 		<skills>
 			<skill id="4416" level="6"/>
 			<skill id="5467" level="1"/>
-			<skill id="4410" level="13"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="4513" max="10527" chance="100.0"/>
+			<group chance="40.0">
+				<reward item_id="57" min="437001" max="10158492" chance="40.0"/>
 			</group>
-			<group chance="0.105">
-				<reward item_id="18159" min="1" max="1" chance="71.42857"/>
-				<reward item_id="18152" min="1" max="1" chance="28.57143"/>
+			<group chance="40.0">
+				<reward item_id="4356" min="1" max="1" chance="40.0"/>
 			</group>
-			<group chance="0.03">
-				<reward item_id="17526" min="1" max="1" chance="100.0"/>
+			<group chance="40.0">
+				<reward item_id="6393" min="1" max="1" chance="40.0"/>
 			</group>
-		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="18153" min="1" max="1" chance="0.003"/>
+			<group chance="0.05">
+				<reward item_id="18239" min="1" max="1" chance="0.05"/>
+				<reward item_id="18240" min="1" max="1" chance="0.05"/>
+				<reward item_id="18241" min="1" max="1" chance="0.05"/>
+				<reward item_id="18242" min="1" max="1" chance="0.05"/>
+				<reward item_id="18243" min="1" max="1" chance="0.05"/>
+				<reward item_id="18244" min="1" max="1" chance="0.05"/>
+				<reward item_id="18245" min="1" max="1" chance="0.05"/>
+				<reward item_id="18246" min="1" max="1" chance="0.05"/>
+				<reward item_id="18247" min="1" max="1" chance="0.05"/>
+				<reward item_id="18248" min="1" max="1" chance="0.05"/>
+				<reward item_id="18249" min="1" max="1" chance="0.05"/>
+				<reward item_id="18250" min="1" max="1" chance="0.05"/>
+				<reward item_id="18251" min="1" max="1" chance="0.05"/>
+				<reward item_id="18252" min="1" max="1" chance="0.05"/>
+			</group>
 		</rewardlist>
 	</npc>
 	<npc id="22968" name="Median Escort Swordsman" title="">
-		<!--L2WT Tauti Confirmed-->
-		<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="32.5"/>
-		<set name="level" value="94"/>
+		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="542125"/>
+		<set name="baseHpMax" value="10137120"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2684"/>
+		<set name="baseMpMax" value="2582"/>
 		<set name="baseMpReg" value="4"/>
 		<set name="baseSTR" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -4422,13 +4410,13 @@
 		<set name="baseINT" value="21"/>
 		<set name="baseWIT" value="70"/>
 		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="1364255"/>
+		<set name="rewardExp" value="5486740"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="28912"/>
-		<set name="basePAtk" value="3735"/>
-		<set name="basePDef" value="737"/>
-		<set name="baseMAtk" value="1732"/>
-		<set name="baseMDef" value="655"/>
+		<set name="rewardSp" value="114205"/>
+		<set name="basePAtk" value="3410"/>
+		<set name="basePDef" value="700"/>
+		<set name="baseMAtk" value="1581"/>
+		<set name="baseMDef" value="750"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -4436,47 +4424,57 @@
 		<set name="baseWalkSpd" value="50"/>
 		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="240"/>
-			<defence attribute="water" value="240"/>
-			<defence attribute="wind" value="240"/>
-			<defence attribute="earth" value="240"/>
-			<defence attribute="holy" value="240"/>
-			<defence attribute="unholy" value="240"/>
+			<defence attribute="fire" value="220"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="220"/>
+			<defence attribute="holy" value="220"/>
+			<defence attribute="unholy" value="220"/>
 		</attributes>
 		<skills>
 			<skill id="4416" level="6"/>
 			<skill id="5467" level="1"/>
-			<skill id="4410" level="14"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="6769" max="15804" chance="100.0"/>
+			<group chance="40.0">
+				<reward item_id="57" min="437001" max="10158492" chance="40.0"/>
 			</group>
-			<group chance="0.06">
-				<reward item_id="18145" min="1" max="1" chance="50.0"/>
-				<reward item_id="18146" min="1" max="1" chance="50.0"/>
+			<group chance="40.0">
+				<reward item_id="4356" min="1" max="1" chance="40.0"/>
 			</group>
-			<group chance="0.03">
-				<reward item_id="17526" min="1" max="1" chance="100.0"/>
+			<group chance="40.0">
+				<reward item_id="6393" min="1" max="1" chance="40.0"/>
 			</group>
-		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="18139" min="1" max="1" chance="9.0E-4"/>
+			<group chance="0.05">
+				<reward item_id="18239" min="1" max="1" chance="0.05"/>
+				<reward item_id="18240" min="1" max="1" chance="0.05"/>
+				<reward item_id="18241" min="1" max="1" chance="0.05"/>
+				<reward item_id="18242" min="1" max="1" chance="0.05"/>
+				<reward item_id="18243" min="1" max="1" chance="0.05"/>
+				<reward item_id="18244" min="1" max="1" chance="0.05"/>
+				<reward item_id="18245" min="1" max="1" chance="0.05"/>
+				<reward item_id="18246" min="1" max="1" chance="0.05"/>
+				<reward item_id="18247" min="1" max="1" chance="0.05"/>
+				<reward item_id="18248" min="1" max="1" chance="0.05"/>
+				<reward item_id="18249" min="1" max="1" chance="0.05"/>
+				<reward item_id="18250" min="1" max="1" chance="0.05"/>
+				<reward item_id="18251" min="1" max="1" chance="0.05"/>
+				<reward item_id="18252" min="1" max="1" chance="0.05"/>
+			</group>
 		</rewardlist>
 	</npc>
 	<npc id="22969" name="Wraith Guardian" title="">
-		<!--L2WT Tauti Confirmed-->
-		<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="23.0"/>
 		<set name="collision_height" value="52.0"/>
-		<set name="level" value="93"/>
+		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="541220"/>
+		<set name="baseHpMax" value="10137120"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2632"/>
+		<set name="baseMpMax" value="2582"/>
 		<set name="baseMpReg" value="4"/>
 		<set name="baseSTR" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -4484,59 +4482,71 @@
 		<set name="baseINT" value="21"/>
 		<set name="baseWIT" value="70"/>
 		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="1202857"/>
+		<set name="rewardExp" value="5486740"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="25271"/>
-		<set name="basePAtk" value="3569"/>
-		<set name="basePDef" value="725"/>
-		<set name="baseMAtk" value="1655"/>
-		<set name="baseMDef" value="644"/>
+		<set name="rewardSp" value="114205"/>
+		<set name="basePAtk" value="3410"/>
+		<set name="basePDef" value="700"/>
+		<set name="baseMAtk" value="1581"/>
+		<set name="baseMDef" value="750"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
-		<set name="baseRunSpd" value="200"/>
-		<set name="baseWalkSpd" value="30"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="50"/>
 		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="240"/>
-			<defence attribute="water" value="240"/>
-			<defence attribute="wind" value="240"/>
-			<defence attribute="earth" value="240"/>
-			<defence attribute="holy" value="207"/>
-			<defence attribute="unholy" value="404"/>
-			<attack attribute="unholy" value="33"/>
+			<defence attribute="fire" value="220"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="220"/>
+			<defence attribute="holy" value="220"/>
+			<defence attribute="unholy" value="220"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="9"/>
+			<skill id="4416" level="6"/>
 			<skill id="5467" level="1"/>
-			<skill id="4410" level="13"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="6513" max="15211" chance="100.0"/>
+			<group chance="40.0">
+				<reward item_id="57" min="437001" max="10158492" chance="40.0"/>
 			</group>
-			<group chance="0.15">
-				<reward item_id="18153" min="1" max="1" chance="50.0"/>
-				<reward item_id="18158" min="1" max="1" chance="50.0"/>
+			<group chance="40.0">
+				<reward item_id="4356" min="1" max="1" chance="40.0"/>
 			</group>
-			<group chance="0.3">
-				<reward item_id="17527" min="1" max="1" chance="100.0"/>
+			<group chance="40.0">
+				<reward item_id="6393" min="1" max="1" chance="40.0"/>
+			</group>
+			<group chance="0.05">
+				<reward item_id="18239" min="1" max="1" chance="0.05"/>
+				<reward item_id="18240" min="1" max="1" chance="0.05"/>
+				<reward item_id="18241" min="1" max="1" chance="0.05"/>
+				<reward item_id="18242" min="1" max="1" chance="0.05"/>
+				<reward item_id="18243" min="1" max="1" chance="0.05"/>
+				<reward item_id="18244" min="1" max="1" chance="0.05"/>
+				<reward item_id="18245" min="1" max="1" chance="0.05"/>
+				<reward item_id="18246" min="1" max="1" chance="0.05"/>
+				<reward item_id="18247" min="1" max="1" chance="0.05"/>
+				<reward item_id="18248" min="1" max="1" chance="0.05"/>
+				<reward item_id="18249" min="1" max="1" chance="0.05"/>
+				<reward item_id="18250" min="1" max="1" chance="0.05"/>
+				<reward item_id="18251" min="1" max="1" chance="0.05"/>
+				<reward item_id="18252" min="1" max="1" chance="0.05"/>
 			</group>
 		</rewardlist>
 	</npc>
 	<npc id="22970" name="Wraith Warrior" title="">
-		<!--L2WT Tauti Confirmed-->
-		<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="43.0"/>
-		<set name="level" value="93"/>
+		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="541220"/>
+		<set name="baseHpMax" value="10137120"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2632"/>
+		<set name="baseMpMax" value="2582"/>
 		<set name="baseMpReg" value="4"/>
 		<set name="baseSTR" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -4544,51 +4554,60 @@
 		<set name="baseINT" value="21"/>
 		<set name="baseWIT" value="70"/>
 		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="1202857"/>
+		<set name="rewardExp" value="5486740"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="25271"/>
-		<set name="basePAtk" value="3569"/>
-		<set name="basePDef" value="725"/>
-		<set name="baseMAtk" value="1655"/>
-		<set name="baseMDef" value="644"/>
+		<set name="rewardSp" value="114205"/>
+		<set name="basePAtk" value="3410"/>
+		<set name="basePDef" value="700"/>
+		<set name="baseMAtk" value="1581"/>
+		<set name="baseMDef" value="750"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
-		<set name="baseRunSpd" value="160"/>
-		<set name="baseWalkSpd" value="60"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="50"/>
 		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="240"/>
-			<defence attribute="water" value="240"/>
-			<defence attribute="wind" value="240"/>
-			<defence attribute="earth" value="240"/>
-			<defence attribute="holy" value="207"/>
-			<defence attribute="unholy" value="404"/>
-			<attack attribute="unholy" value="33"/>
+			<defence attribute="fire" value="220"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="220"/>
+			<defence attribute="holy" value="220"/>
+			<defence attribute="unholy" value="220"/>
 		</attributes>
 		<skills>
-			<skill id="4416" level="9"/>
+			<skill id="4416" level="6"/>
 			<skill id="5467" level="1"/>
-			<skill id="4411" level="13"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
-			<group chance="70.0">
-				<reward item_id="57" min="6513" max="15211" chance="100.0"/>
+			<group chance="40.0">
+				<reward item_id="57" min="437001" max="10158492" chance="40.0"/>
 			</group>
-			<group chance="0.6">
-				<reward item_id="18156" min="1" max="1" chance="50.0"/>
-				<reward item_id="18167" min="1" max="1" chance="50.0"/>
+			<group chance="40.0">
+				<reward item_id="4356" min="1" max="1" chance="40.0"/>
 			</group>
-			<group chance="0.3">
-				<reward item_id="17527" min="1" max="1" chance="100.0"/>
+			<group chance="40.0">
+				<reward item_id="6393" min="1" max="1" chance="40.0"/>
 			</group>
-		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="18164" min="1" max="1" chance="0.003"/>
+			<group chance="0.05">
+				<reward item_id="18239" min="1" max="1" chance="0.05"/>
+				<reward item_id="18240" min="1" max="1" chance="0.05"/>
+				<reward item_id="18241" min="1" max="1" chance="0.05"/>
+				<reward item_id="18242" min="1" max="1" chance="0.05"/>
+				<reward item_id="18243" min="1" max="1" chance="0.05"/>
+				<reward item_id="18244" min="1" max="1" chance="0.05"/>
+				<reward item_id="18245" min="1" max="1" chance="0.05"/>
+				<reward item_id="18246" min="1" max="1" chance="0.05"/>
+				<reward item_id="18247" min="1" max="1" chance="0.05"/>
+				<reward item_id="18248" min="1" max="1" chance="0.05"/>
+				<reward item_id="18249" min="1" max="1" chance="0.05"/>
+				<reward item_id="18250" min="1" max="1" chance="0.05"/>
+				<reward item_id="18251" min="1" max="1" chance="0.05"/>
+				<reward item_id="18252" min="1" max="1" chance="0.05"/>
+			</group>
 		</rewardlist>
 	</npc>
 	<npc id="22971" name="Lizard Charmer" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="29.0"/>
@@ -4634,7 +4653,6 @@
 		</skills>
 	</npc>
 	<npc id="22972" name="Lizard Spearman" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="20.0"/>
@@ -4680,7 +4698,6 @@
 		</skills>
 	</npc>
 	<npc id="22973" name="Lizard Spearman" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="28.0"/>
@@ -4726,7 +4743,6 @@
 		</skills>
 	</npc>
 	<npc id="22974" name="Beast" title="Escort">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="17.0"/>
@@ -4772,7 +4788,6 @@
 		</skills>
 	</npc>
 	<npc id="22975" name="Arcan Spirit" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.5"/>
@@ -4819,7 +4834,6 @@
 		</skills>
 	</npc>
 	<npc id="22976" name="Arcan Spirit" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="11.0"/>
@@ -4866,7 +4880,6 @@
 		</skills>
 	</npc>
 	<npc id="22977" name="Arcan Spirit" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="17.0"/>
@@ -4912,7 +4925,6 @@
 		</skills>
 	</npc>
 	<npc id="22978" name="Arcan Spirit" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="20.0"/>
@@ -4959,7 +4971,6 @@
 		</skills>
 	</npc>
 	<npc id="22979" name="Novice Escort Swordsman" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="12.0"/>
@@ -5005,7 +5016,7 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="6458" max="15079" chance="100.0"/>
+				<reward item_id="57" min="6458" max="15079" chance="40.0"/>
 			</group>
 			<group chance="0.12">
 				<reward item_id="18138" min="1" max="1" chance="25.0"/>
@@ -5022,7 +5033,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22980" name="Novice Escort Wizard" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="13.0"/>
@@ -5081,7 +5091,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22981" name="Median Escort Swordsman" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="15.0"/>
@@ -5143,7 +5152,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="22982" name="Escort Paladin" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="18.0"/>
@@ -5190,7 +5198,6 @@
 		</skills>
 	</npc>
 	<npc id="22983" name="Escort Warrior" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="13.0"/>
@@ -5269,7 +5276,7 @@
 		<set name="baseWalkSpd" value="90"/>
 		<set name="shots" value="NONE"/>
 		<ai_params>
-			<set name="noRandomWalk" value="true" />
+			<set name="noRandomWalk" value="true"/>
 		</ai_params>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -5286,7 +5293,6 @@
 		</skills>
 	</npc>
 	<npc id="22985" name="Spezion's Pawn" title="Prison Raider">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="12.0"/>
@@ -5332,7 +5338,6 @@
 		</skills>
 	</npc>
 	<npc id="22986" name="Spezion's Pawn" title="Prison Raider">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="13.0"/>
@@ -5378,7 +5383,6 @@
 		</skills>
 	</npc>
 	<npc id="22987" name="Spezion's Pawn" title="Prison Raider">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="15.0"/>
@@ -5424,7 +5428,6 @@
 		</skills>
 	</npc>
 	<npc id="22988" name="Spezion's Pawn" title="Prison Raider">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="12.0"/>
@@ -5471,7 +5474,6 @@
 		</skills>
 	</npc>
 	<npc id="22989" name="Spezion's Pawn" title="Prison Raider">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="10.0"/>
@@ -5518,7 +5520,6 @@
 		</skills>
 	</npc>
 	<npc id="22990" name="Spezion's Pawn" title="Prison Raider">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="13.0"/>
@@ -5605,10 +5606,10 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="4410" level="13"/>	<!-- Slightly Strong P. Atk. -->
-			<skill id="4412" level="9"/>	<!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="8"/>	<!-- Weak M. Def. -->
-			<skill id="4416" level="6"/>	<!-- Humanoids -->
+			<skill id="4410" level="13"/>
+			<skill id="4412" level="9"/>
+			<skill id="4413" level="8"/>
+			<skill id="4416" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="100.0">
@@ -5669,10 +5670,10 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="4410" level="13"/>	<!-- Slightly Strong P. Atk. -->
-			<skill id="4412" level="9"/>	<!-- Slightly Weak M. Def. -->
-			<skill id="4413" level="8"/>	<!-- Weak M. Def. -->
-			<skill id="4416" level="14"/>	<!-- Humans -->
+			<skill id="4410" level="13"/>
+			<skill id="4412" level="9"/>
+			<skill id="4413" level="8"/>
+			<skill id="4416" level="14"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="100.0">
@@ -5736,10 +5737,10 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="4410" level="13"/>	<!-- Slightly Strong P. Atk. -->
-			<skill id="4412" level="9"/>	<!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="8"/>	<!-- Weak M. Def. -->
-			<skill id="4416" level="4"/>	<!-- Animals -->
+			<skill id="4410" level="13"/>
+			<skill id="4412" level="9"/>
+			<skill id="4413" level="8"/>
+			<skill id="4416" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="100.0">
@@ -5798,10 +5799,10 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="4410" level="13"/>	<!-- Slightly Strong P. Atk. -->
-			<skill id="4412" level="9"/>	<!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="8"/>	<!-- Weak M. Def. -->
-			<skill id="4416" level="4"/>	<!-- Animals -->
+			<skill id="4410" level="13"/>
+			<skill id="4412" level="9"/>
+			<skill id="4413" level="8"/>
+			<skill id="4416" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="100.0">
@@ -5860,10 +5861,10 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="4411" level="13"/>	<!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="8"/>	<!-- Weak P. Def. -->
-			<skill id="4413" level="9"/>	<!-- Slightly Weak M. Def. -->
-			<skill id="4416" level="14"/>	<!-- Humans -->
+			<skill id="4411" level="13"/>
+			<skill id="4412" level="8"/>
+			<skill id="4413" level="9"/>
+			<skill id="4416" level="14"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="100.0">
@@ -6083,11 +6084,11 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<skill id="4413" level="15"/> 	<!-- Strong M. Def. -->
-			<skill id="4412" level="15"/>	<!-- Strong P. Def. -->
-			<skill id="4411" level="15"/> 	<!-- Strong M. Atk. -->
-			<skill id="4410" level="13"/>	<!-- Slightly Strong P. Atk. -->
-			<skill id="4416" level="4"/>	<!-- Animals -->
+			<skill id="4413" level="15"/>
+			<skill id="4412" level="15"/>
+			<skill id="4411" level="15"/>
+			<skill id="4410" level="13"/>
+			<skill id="4416" level="4"/>
 		</skills>
 	</npc>
 </list>

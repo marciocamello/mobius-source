@@ -69,7 +69,7 @@ public final class DropListDataParser extends DocumentParser
 	public void load()
 	{
 		_dropsParsed = (_spoilsParsed = 0);
-		parseDirectory(Config.DATAPACK_ROOT + "/data/xml/stats/npc/droplist/");
+		parseDirectory(Config.DATAPACK_ROOT + "/data/xml/droplist/");
 		_log.info("Loaded " + _dropsParsed + " drops & " + _spoilsParsed + " spoils.");
 	}
 	

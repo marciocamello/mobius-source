@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="35010" name="Mercenary" title="">
@@ -40,11 +40,11 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="128"/>	<!--Knight's Sword-->
-			<lhand item_id="628"/>	<!--Hoplon-->
+			<rhand item_id="128"/>
+			<lhand item_id="628"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -94,10 +94,10 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="93"/>	<!--Winged Spear-->
+			<rhand item_id="93"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -147,10 +147,10 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="280"/>	<!--Light Crossbow-->
+			<rhand item_id="280"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -200,11 +200,11 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="316"/>	<!--Sage's Blood-->
+			<rhand item_id="316"/>
 		</equip>
 		<skills>
-			<skill id="4027" level="1"/>	<!--Gludio Heal-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4027" level="1"/>
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -254,11 +254,11 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="179"/>	<!--Mace of Prayer-->
+			<rhand item_id="179"/>
 		</equip>
 		<skills>
-			<skill id="4026" level="1"/>	<!--Gludio Flame-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4026" level="1"/>
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -305,11 +305,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="128"/>	<!--Knight's Sword-->
-			<lhand item_id="628"/>	<!--Hoplon-->
+			<rhand item_id="128"/>
+			<lhand item_id="628"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -356,10 +356,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="93"/>	<!--Winged Spear-->
+			<rhand item_id="93"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -406,10 +406,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="280"/>	<!--Light Crossbow-->
+			<rhand item_id="280"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -456,11 +456,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="316"/>	<!--Sage's Blood-->
+			<rhand item_id="316"/>
 		</equip>
 		<skills>
-			<skill id="4027" level="1"/>	<!--Gludio Heal-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4027" level="1"/>
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -507,11 +507,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="179"/>	<!--Mace of Prayer-->
+			<rhand item_id="179"/>
 		</equip>
 		<skills>
-			<skill id="4026" level="1"/>	<!--Gludio Flame-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4026" level="1"/>
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -561,10 +561,10 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="150"/>	<!--Elemental Sword-->
+			<rhand item_id="150"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -614,10 +614,10 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="97"/>	<!--Lance-->
+			<rhand item_id="97"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -667,10 +667,10 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="288"/>	<!--Carnage Bow-->
+			<rhand item_id="288"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -720,11 +720,11 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="325"/>	<!--Horn of Glory-->
+			<rhand item_id="325"/>
 		</equip>
 		<skills>
-			<skill id="4027" level="1"/>	<!--Gludio Heal-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4027" level="1"/>
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -774,11 +774,11 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="196"/>	<!--Stick of Eternity-->
+			<rhand item_id="196"/>
 		</equip>
 		<skills>
-			<skill id="4026" level="1"/>	<!--Gludio Flame-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4026" level="1"/>
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -825,10 +825,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="150"/>	<!--Elemental Sword-->
+			<rhand item_id="150"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -875,10 +875,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="97"/>	<!--Lance-->
+			<rhand item_id="97"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -925,10 +925,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="288"/>	<!--Carnage Bow-->
+			<rhand item_id="288"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -975,11 +975,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="325"/>	<!--Horn of Glory-->
+			<rhand item_id="325"/>
 		</equip>
 		<skills>
-			<skill id="4027" level="1"/>	<!--Gludio Heal-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4027" level="1"/>
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -1026,11 +1026,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="196"/>	<!--Stick of Eternity-->
+			<rhand item_id="196"/>
 		</equip>
 		<skills>
-			<skill id="4026" level="1"/>	<!--Gludio Flame-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4026" level="1"/>
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -1080,10 +1080,10 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="132"/>	<!--Sword of Limit-->
+			<rhand item_id="132"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1133,10 +1133,10 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="301"/>	<!--Scorpion-->
+			<rhand item_id="301"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1186,10 +1186,10 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="280"/>	<!--Light Crossbow-->
+			<rhand item_id="280"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1239,11 +1239,11 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="316"/>	<!--Sage's Blood-->
+			<rhand item_id="316"/>
 		</equip>
 		<skills>
-			<skill id="4027" level="1"/>	<!--Gludio Heal-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4027" level="1"/>
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1293,11 +1293,11 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="325"/>	<!--Horn of Glory-->
+			<rhand item_id="325"/>
 		</equip>
 		<skills>
-			<skill id="4026" level="1"/>	<!--Gludio Flame-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4026" level="1"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1344,10 +1344,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="132"/>	<!--Sword of Limit-->
+			<rhand item_id="132"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1394,10 +1394,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="301"/>	<!--Scorpion-->
+			<rhand item_id="301"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1444,10 +1444,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="280"/>	<!--Light Crossbow-->
+			<rhand item_id="280"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1494,11 +1494,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="316"/>	<!--Sage's Blood-->
+			<rhand item_id="316"/>
 		</equip>
 		<skills>
-			<skill id="4027" level="1"/>	<!--Gludio Heal-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4027" level="1"/>
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1545,11 +1545,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="325"/>	<!--Horn of Glory-->
+			<rhand item_id="325"/>
 		</equip>
 		<skills>
-			<skill id="4026" level="1"/>	<!--Gludio Flame-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4026" level="1"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1599,11 +1599,11 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="66"/>	<!--Gladius-->
-			<lhand item_id="20"/>	<!--Buckler-->
+			<rhand item_id="66"/>
+			<lhand item_id="20"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1653,10 +1653,10 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1706,10 +1706,10 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="274"/>	<!--Reinforced Bow-->
+			<rhand item_id="274"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1759,11 +1759,11 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="7"/>	<!--Apprentice's Rod-->
+			<rhand item_id="7"/>
 		</equip>
 		<skills>
-			<skill id="4027" level="1"/>	<!--Gludio Heal-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4027" level="1"/>
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1813,11 +1813,11 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="154"/>	<!--Dwarven Mace-->
+			<rhand item_id="154"/>
 		</equip>
 		<skills>
-			<skill id="4026" level="1"/>	<!--Gludio Flame-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4026" level="1"/>
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1864,11 +1864,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="66"/>	<!--Gladius-->
-			<lhand item_id="20"/>	<!--Buckler-->
+			<rhand item_id="66"/>
+			<lhand item_id="20"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1915,10 +1915,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1965,10 +1965,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="274"/>	<!--Reinforced Bow-->
+			<rhand item_id="274"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2015,11 +2015,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="7"/>	<!--Apprentice's Rod-->
+			<rhand item_id="7"/>
 		</equip>
 		<skills>
-			<skill id="4027" level="1"/>	<!--Gludio Heal-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4027" level="1"/>
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2066,11 +2066,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="154"/>	<!--Dwarven Mace-->
+			<rhand item_id="154"/>
 		</equip>
 		<skills>
-			<skill id="4026" level="1"/>	<!--Gludio Flame-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4026" level="1"/>
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2120,10 +2120,10 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="66"/>	<!--Gladius-->
+			<rhand item_id="66"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2173,10 +2173,10 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2226,10 +2226,10 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2279,11 +2279,11 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="6"/>	<!--Apprentice's Wand-->
+			<rhand item_id="6"/>
 		</equip>
 		<skills>
-			<skill id="4027" level="1"/>	<!--Gludio Heal-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4027" level="1"/>
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2333,11 +2333,11 @@
 		</ai_params>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="99"/>	<!--Apprentice's Spellbook-->
+			<rhand item_id="99"/>
 		</equip>
 		<skills>
-			<skill id="4026" level="1"/>	<!--Gludio Flame-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4026" level="1"/>
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2384,10 +2384,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="66"/>	<!--Gladius-->
+			<rhand item_id="66"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2434,10 +2434,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2484,10 +2484,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2534,11 +2534,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="6"/>	<!--Apprentice's Wand-->
+			<rhand item_id="6"/>
 		</equip>
 		<skills>
-			<skill id="4027" level="1"/>	<!--Gludio Heal-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4027" level="1"/>
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2585,11 +2585,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="99"/>	<!--Apprentice's Spellbook-->
+			<rhand item_id="99"/>
 		</equip>
 		<skills>
-			<skill id="4026" level="1"/>	<!--Gludio Flame-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4026" level="1"/>
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2636,13 +2636,13 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
-			<lhand item_id="6377"/>	<!--Imperial Crusader Shield-->
+			<rhand item_id="2500"/>
+			<lhand item_id="6377"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
-			<skill id="5112" level="7"/>	<!--Stun-->
-			<skill id="5113" level="7"/>	<!--Castle Self AE Dispell Buff-->
+			<skill id="4416" level="23"/>
+			<skill id="5112" level="7"/>
+			<skill id="5113" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -2689,13 +2689,13 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="mercenary_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="8687"/>	<!--Cabrio's Hand-->
+			<rhand item_id="8687"/>
 		</equip>
 		<skills>
-			<skill id="4026" level="1"/>	<!--Gludio Flame-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
-			<skill id="5052" level="7"/>	<!--Castle Long AE Fire-->
-			<skill id="5114" level="7"/>	<!--Hold-->
+			<skill id="4026" level="1"/>
+			<skill id="4416" level="23"/>
+			<skill id="5052" level="7"/>
+			<skill id="5114" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -2741,7 +2741,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.SiegeFlag"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2787,7 +2787,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Artefact"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2834,10 +2834,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="79"/>	<!--Sword of Damascus-->
+			<rhand item_id="79"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -2884,10 +2884,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="142"/>	<!--Keshanberk-->
+			<rhand item_id="142"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -2934,11 +2934,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="76"/>	<!--Sword of Delusion-->
-			<lhand item_id="2497"/>	<!--Full Plate Shield-->
+			<rhand item_id="76"/>
+			<lhand item_id="2497"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -2985,13 +2985,13 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="325"/>	<!--Horn of Glory-->
+			<rhand item_id="325"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="10"/>	<!--Prominence-->
-			<skill id="4001" level="6"/>	<!--NPC Windstrike-->
-			<skill id="4026" level="1"/>	<!--Gludio Flame-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="1230" level="10"/>
+			<skill id="4001" level="6"/>
+			<skill id="4026" level="1"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3038,13 +3038,13 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="193"/>	<!--Stick of Faith-->
+			<rhand item_id="193"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="10"/>	<!--Prominence-->
-			<skill id="4027" level="1"/>	<!--Gludio Heal-->
-			<skill id="4037" level="1"/>	<!--Decrease P. Atk.-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="1230" level="10"/>
+			<skill id="4027" level="1"/>
+			<skill id="4037" level="1"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3091,10 +3091,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="94"/>	<!--Bec de Corbin-->
+			<rhand item_id="94"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3141,10 +3141,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3191,10 +3191,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2499"/>	<!--Elven Long Sword-->
+			<rhand item_id="2499"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3241,10 +3241,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="276"/>	<!--Elven Bow-->
+			<rhand item_id="276"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3291,10 +3291,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3341,10 +3341,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3391,10 +3391,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3441,10 +3441,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3491,10 +3491,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3541,10 +3541,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3591,11 +3591,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="76"/>	<!--Sword of Delusion-->
-			<lhand item_id="2497"/>	<!--Full Plate Shield-->
+			<rhand item_id="76"/>
+			<lhand item_id="2497"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -3643,13 +3643,13 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="325"/>	<!--Horn of Glory-->
+			<rhand item_id="325"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="10"/>	<!--Prominence-->
-			<skill id="4001" level="6"/>	<!--NPC Windstrike-->
-			<skill id="4026" level="1"/>	<!--Gludio Flame-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="1230" level="10"/>
+			<skill id="4001" level="6"/>
+			<skill id="4026" level="1"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3697,13 +3697,13 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="193"/>	<!--Stick of Faith-->
+			<rhand item_id="193"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="10"/>	<!--Prominence-->
-			<skill id="4027" level="1"/>	<!--Gludio Heal-->
-			<skill id="4037" level="1"/>	<!--Decrease P. Atk.-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="1230" level="10"/>
+			<skill id="4027" level="1"/>
+			<skill id="4037" level="1"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3750,10 +3750,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="94"/>	<!--Bec de Corbin-->
+			<rhand item_id="94"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3800,10 +3800,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="93"/>	<!--Winged Spear-->
+			<rhand item_id="93"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3850,10 +3850,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2499"/>	<!--Elven Long Sword-->
+			<rhand item_id="2499"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3901,10 +3901,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="276"/>	<!--Elven Bow-->
+			<rhand item_id="276"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3951,10 +3951,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4001,10 +4001,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4051,10 +4051,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4101,10 +4101,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4151,10 +4151,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4201,10 +4201,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="gludio_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4255,7 +4255,7 @@
 		</ai_params>
 		<faction name="gludio_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4306,7 +4306,7 @@
 		</ai_params>
 		<faction name="gludio_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4357,7 +4357,7 @@
 		</ai_params>
 		<faction name="gludio_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4407,7 +4407,7 @@
 			<set name="teleport_loc" value="-18099 109297 -2475"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4463,7 +4463,7 @@
 			<set name="doors" value="19210001;19210002"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4519,7 +4519,7 @@
 			<set name="doors" value="19210005;19210006"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4566,10 +4566,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.castle.Blacksmith"/>
 		<equip>
-			<rhand item_id="89"/>	<!--Big Hammer-->
+			<rhand item_id="89"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4616,7 +4616,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.castle.Warehouse"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>

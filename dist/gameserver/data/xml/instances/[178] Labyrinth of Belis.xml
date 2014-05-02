@@ -1,7 +1,6 @@
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "instances.dtd">
-<!--AUTHOR: Bonux-->
 <list>
-	<!--Starts of Fate-->
 	<instance id="178" name="Labyrinth of Belis" maxChannels="20" collapseIfEmpty="0" timelimit="30" dispelBuffs="false" respawn="60">
 		<collapse on-party-dismiss="true" timer="60"/>
 		<level min="18" max="99"/>
@@ -29,7 +28,7 @@
 			<door id="16240008" opened="false"/>
 		</doors>
 		<spawns>
-            <group name="labyrinth_of_belis_q10331" spawned="true"/>
+			<group name="labyrinth_of_belis_q10331" spawned="true"/>
 		</spawns>
 	</instance>
 </list>

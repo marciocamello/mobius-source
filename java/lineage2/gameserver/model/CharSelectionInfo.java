@@ -155,6 +155,18 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 		 */
 		private int _hairColor = 0;
 		/**
+		 * Field _faceB.
+		 */
+		private int _faceB = 0;
+		/**
+		 * Field _hairStyleB.
+		 */
+		private int _hairStyleB = 0;
+		/**
+		 * Field _hairColorB.
+		 */
+		private int _hairColorB = 0;
+		/**
 		 * Field _sex.
 		 */
 		private int _sex = 0;
@@ -413,7 +425,11 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 		 */
 		public int getFace()
 		{
-			return _face;
+			if (getNewFace() == 0)
+			{
+				return _face;
+			}
+			return _faceB;
 		}
 		
 		/**
@@ -431,7 +447,11 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 		 */
 		public int getHairColor()
 		{
-			return _hairColor;
+			if (getNewHairColor() == 0)
+			{
+				return _hairColor;
+			}
+			return _hairColorB;
 		}
 		
 		/**
@@ -449,7 +469,11 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 		 */
 		public int getHairStyle()
 		{
-			return _hairStyle;
+			if (getNewHairStyle() == 0)
+			{
+				return _hairStyle;
+			}
+			return _hairStyleB;
 		}
 		
 		/**
@@ -459,6 +483,60 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 		public void setHairStyle(int hairStyle)
 		{
 			_hairStyle = hairStyle;
+		}
+		
+		/**
+		 * Method getNewFace.
+		 * @return int
+		 */
+		public int getNewFace()
+		{
+			return _faceB;
+		}
+		
+		/**
+		 * Method setNewFace.
+		 * @param face int
+		 */
+		public void setNewFace(int face)
+		{
+			_faceB = face;
+		}
+		
+		/**
+		 * Method getNewHairColor.
+		 * @return int
+		 */
+		public int getNewHairColor()
+		{
+			return _hairColorB;
+		}
+		
+		/**
+		 * Method setNewHairColor.
+		 * @param hairColor int
+		 */
+		public void setNewHairColor(int hairColor)
+		{
+			_hairColorB = hairColor;
+		}
+		
+		/**
+		 * Method getNewHairStyle.
+		 * @return int
+		 */
+		public int getNewHairStyle()
+		{
+			return _hairStyleB;
+		}
+		
+		/**
+		 * Method setNewHairStyle.
+		 * @param hairStyle int
+		 */
+		public void setNewHairStyle(int hairStyle)
+		{
+			_hairStyleB = hairStyle;
 		}
 		
 		/**

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="12621" name="Wyvern" title="">
@@ -36,8 +36,8 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4289" level="1"/>	<!--Wyvern Breath-->
-			<skill id="4416" level="10"/>	<!--Dragons-->
+			<skill id="4289" level="1"/>
+			<skill id="4416" level="10"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>

@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<weapon id="34921" name="Revolutionary's Sword">
+		<set name="icon" value="icon.weapon_sword_of_revolution_i00"/>
+		<set name="weight" value="1520"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="D"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="1"/>
+			<add stat="mAtk" order="0x10" value="1"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34922" name="Revolutionary's Bow">
+		<set name="icon" value="icon.weapon_gastraphetes_i00"/>
+		<set name="weight" value="1520"/>
+		<set name="type" value="BOW"/>
+		<set name="crystal_type" value="D"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="1"/>
+			<add stat="mAtk" order="0x10" value="1"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34923" name="Revolutionary's Staff">
+		<set name="icon" value="icon.weapon_goathead_staff_i00"/>
+		<set name="weight" value="1080"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="D"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="1"/>
+			<add stat="mAtk" order="0x10" value="1"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34924" name="Revolutionary's Wand">
+		<set name="icon" value="icon.weapon_life_stick_i00"/>
+		<set name="weight" value="1080"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="D"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="1"/>
+			<add stat="mAtk" order="0x10" value="1"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34998" name="Tauti's One-handed Axe">
+		<set name="icon" value="icon.weapon_tauti_one_hand_axe_i01"/>
+		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BLUNT_WEAPON"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="10"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystallizable" value="false"/>
+		<set name="weight" value="1000"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="element_enabled" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for>
+			<set order="0x08" stat="pAtk" value="629.0"/>
+			<set order="0x08" stat="mAtk" value="322.0"/>
+			<set stat="baseCrit" order="0x08" value="80"/>
+			<set order="0x08" stat="pAtkSpd" value="379.0"/>
+			<enchant value="0" order="0x0C" stat="pAtk"/>
+			<enchant value="0" order="0x0C" stat="mAtk"/>
+		</for>
+	</weapon>
+	<weapon id="34999" name="Tauti's Axe">
+		<set name="icon" value="icon.weapon_tauti_one_hand_magic_axe_i01"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="10"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="R"/>
+		<set name="weight" value="1000"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="element_enabled" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for>
+			<set order="0x08" stat="pAtk" value="766.0"/>
+			<set order="0x08" stat="mAtk" value="322.0"/>
+			<set stat="baseCrit" order="0x08" value="80"/>
+			<set order="0x08" stat="pAtkSpd" value="325.0"/>
+			<enchant value="0" order="0x0C" stat="pAtk"/>
+			<enchant value="0" order="0x0C" stat="mAtk"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+</list>

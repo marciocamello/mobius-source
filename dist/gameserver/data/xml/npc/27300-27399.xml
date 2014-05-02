@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="27300" name="Monument Watchman Ezekiel" title="Quest Monster">
@@ -36,24 +36,24 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="97"/>	<!--Lance-->
+			<rhand item_id="97"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="8"/>	<!--NPC Strike-->
-			<skill id="4072" level="7"/>	<!--Stun-->
-			<skill id="4101" level="8"/>	<!--NPC Spinning Slash-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="1"/>	<!--Heavy Armor Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="8"/>	<!--Angels-->
-			<skill id="4522" level="1"/>	<!--Eye of Assassin-->
-			<skill id="4523" level="1"/>	<!--Quest - BOSS Evasion-->
-			<skill id="4524" level="1"/>	<!--Quest - BOSS Bluff-->
+			<skill id="4032" level="8"/>
+			<skill id="4072" level="7"/>
+			<skill id="4101" level="8"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="1"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="8"/>
+			<skill id="4522" level="1"/>
+			<skill id="4523" level="1"/>
+			<skill id="4524" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -98,24 +98,24 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="97"/>	<!--Lance-->
+			<rhand item_id="97"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="8"/>	<!--NPC Strike-->
-			<skill id="4072" level="7"/>	<!--Stun-->
-			<skill id="4101" level="8"/>	<!--NPC Spinning Slash-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="1"/>	<!--Heavy Armor Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="8"/>	<!--Angels-->
-			<skill id="4522" level="1"/>	<!--Eye of Assassin-->
-			<skill id="4523" level="1"/>	<!--Quest - BOSS Evasion-->
-			<skill id="4524" level="1"/>	<!--Quest - BOSS Bluff-->
+			<skill id="4032" level="8"/>
+			<skill id="4072" level="7"/>
+			<skill id="4101" level="8"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="1"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="8"/>
+			<skill id="4522" level="1"/>
+			<skill id="4523" level="1"/>
+			<skill id="4524" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -160,18 +160,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="97"/>	<!--Lance-->
+			<rhand item_id="97"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="17"/>	<!--HP Increase (9x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="1"/>	<!--Heavy Armor Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4408" level="17"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="1"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -216,18 +216,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="97"/>	<!--Lance-->
+			<rhand item_id="97"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="17"/>	<!--HP Increase (9x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="1"/>	<!--Heavy Armor Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4408" level="17"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="1"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -272,18 +272,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="97"/>	<!--Lance-->
+			<rhand item_id="97"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="17"/>	<!--HP Increase (9x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="1"/>	<!--Heavy Armor Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4408" level="17"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="1"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -328,18 +328,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="97"/>	<!--Lance-->
+			<rhand item_id="97"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="17"/>	<!--HP Increase (9x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="1"/>	<!--Heavy Armor Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4408" level="17"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="1"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -384,18 +384,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="97"/>	<!--Lance-->
+			<rhand item_id="97"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="17"/>	<!--HP Increase (9x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="1"/>	<!--Heavy Armor Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4408" level="17"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="1"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -440,18 +440,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="97"/>	<!--Lance-->
+			<rhand item_id="97"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="17"/>	<!--HP Increase (9x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="1"/>	<!--Heavy Armor Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4408" level="17"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="1"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -496,18 +496,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="229"/>	<!--Kris-->
+			<rhand item_id="229"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="17"/>	<!--HP Increase (9x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="1"/>	<!--Heavy Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="17"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="1"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -552,18 +552,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="229"/>	<!--Kris-->
+			<rhand item_id="229"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="17"/>	<!--HP Increase (9x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="17"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -608,15 +608,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="17"/>	<!--HP Increase (9x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="1"/>	<!--Heavy Armor Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="17"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="1"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -661,15 +661,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="17"/>	<!--HP Increase (9x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="1"/>	<!--Heavy Armor Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4408" level="17"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="1"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -715,15 +715,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="17"/>	<!--HP Increase (9x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="17"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -768,20 +768,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="161"/>	<!--Silver Axe-->
+			<rhand item_id="161"/>
 		</equip>
 		<skills>
-			<skill id="4076" level="3"/>	<!--Decrease Speed-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="5"/>	<!--Blunt Weapons-->
-			<skill id="4416" level="8"/>	<!--Angels-->
-			<skill id="4532" level="1"/>	<!--Quest - BOSS Reflect-->
+			<skill id="4076" level="3"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="5"/>
+			<skill id="4416" level="8"/>
+			<skill id="4532" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -826,20 +826,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="161"/>	<!--Silver Axe-->
+			<rhand item_id="161"/>
 		</equip>
 		<skills>
-			<skill id="4076" level="3"/>	<!--Decrease Speed-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="5"/>	<!--Blunt Weapons-->
-			<skill id="4416" level="8"/>	<!--Angels-->
-			<skill id="4532" level="1"/>	<!--Quest - BOSS Reflect-->
+			<skill id="4076" level="3"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="5"/>
+			<skill id="4416" level="8"/>
+			<skill id="4532" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -884,20 +884,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="161"/>	<!--Silver Axe-->
+			<rhand item_id="161"/>
 		</equip>
 		<skills>
-			<skill id="4076" level="3"/>	<!--Decrease Speed-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="5"/>	<!--Blunt Weapons-->
-			<skill id="4416" level="8"/>	<!--Angels-->
-			<skill id="4532" level="1"/>	<!--Quest - BOSS Reflect-->
+			<skill id="4076" level="3"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="5"/>
+			<skill id="4416" level="8"/>
+			<skill id="4532" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -942,18 +942,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="161"/>	<!--Silver Axe-->
+			<rhand item_id="161"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="5"/>	<!--Blunt Weapons-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="5"/>
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -999,18 +999,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="161"/>	<!--Silver Axe-->
+			<rhand item_id="161"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="5"/>	<!--Blunt Weapons-->
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="5"/>
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1055,15 +1055,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="14"/>	<!--Strong P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="1"/>	<!--Heavy Armor Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="14"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="1"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1109,15 +1109,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="13"/>	<!--Slightly Strong P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="12"/>	<!--Slightly Strong P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="13"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="12"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1163,18 +1163,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1220,18 +1220,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="291"/>	<!--Trident-->
+			<rhand item_id="291"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="5"/>	<!--Blunt Weapons-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="5"/>
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1277,15 +1277,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="5"/>	<!--Blunt Weapons-->
-			<skill id="4416" level="12"/>	<!--Bugs-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="5"/>
+			<skill id="4416" level="12"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1331,18 +1331,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="148"/>	<!--Sword of Valhalla-->
+			<rhand item_id="148"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1388,18 +1388,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="6717"/>	<!--Monster Only(Einhasad Warrior)-->
+			<rhand item_id="6717"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1445,18 +1445,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="6722"/>	<!--Monster Only(Ahrimanes)-->
+			<rhand item_id="6722"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="1"/>	<!--Heavy Armor Type-->
-			<skill id="4415" level="4"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="1"/>
+			<skill id="4415" level="4"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1502,18 +1502,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="97"/>	<!--Lance-->
+			<rhand item_id="97"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="11"/>	<!--Spears-->
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="11"/>
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1559,18 +1559,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="6718"/>	<!--Monster Only(Einhasad Shaman)-->
+			<rhand item_id="6718"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1616,18 +1616,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="6717"/>	<!--Monster Only(Einhasad Warrior)-->
+			<rhand item_id="6717"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1673,18 +1673,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="6722"/>	<!--Monster Only(Ahrimanes)-->
+			<rhand item_id="6722"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="1"/>	<!--Heavy Armor Type-->
-			<skill id="4415" level="4"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="1"/>
+			<skill id="4415" level="4"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1730,18 +1730,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="196"/>	<!--Stick of Eternity-->
+			<rhand item_id="196"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1787,18 +1787,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="161"/>	<!--Silver Axe-->
+			<rhand item_id="161"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="1"/>	<!--Bare Hands-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="1"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1844,18 +1844,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="6722"/>	<!--Monster Only(Ahrimanes)-->
+			<rhand item_id="6722"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="1"/>	<!--Heavy Armor Type-->
-			<skill id="4415" level="4"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="1"/>
+			<skill id="4415" level="4"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1901,18 +1901,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="97"/>	<!--Lance-->
+			<rhand item_id="97"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="1"/>	<!--Heavy Armor Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="1"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1958,15 +1958,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2012,18 +2012,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="69"/>	<!--Bastard Sword-->
+			<rhand item_id="69"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2069,18 +2069,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="6717"/>	<!--Monster Only(Einhasad Warrior)-->
+			<rhand item_id="6717"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2126,18 +2126,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="946"/>	<!--Skeleton Dagger-->
+			<rhand item_id="946"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="5"/>	<!--Blunt Weapons-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="5"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2183,18 +2183,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="219"/>	<!--Sword Breaker-->
+			<rhand item_id="219"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2240,15 +2240,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2294,15 +2294,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2348,18 +2348,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Others-->
-			<skill id="5467" level="1"/>	<!--Dark Attacks-->
-			<skill id="5975" level="3"/>	<!--Dark Attack-->
-			<skill id="5976" level="3"/>	<!--Dark Storm-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
+			<skill id="5467" level="1"/>
+			<skill id="5975" level="3"/>
+			<skill id="5976" level="3"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="100"/>
@@ -2406,15 +2406,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2460,15 +2460,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2514,18 +2514,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Others-->
-			<skill id="5467" level="1"/>	<!--null-->
-			<skill id="5975" level="3"/>	<!--Dark Attack-->
-			<skill id="5976" level="3"/>	<!--Dark Storm-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
+			<skill id="5467" level="1"/>
+			<skill id="5975" level="3"/>
+			<skill id="5976" level="3"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="100"/>
@@ -2572,16 +2572,16 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="23"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="100"/>
@@ -2628,16 +2628,16 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="23"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="100"/>
@@ -2684,16 +2684,16 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="23"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="100"/>
@@ -2740,16 +2740,16 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="23"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="100"/>
@@ -2796,16 +2796,16 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="23"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="100"/>
@@ -2852,16 +2852,16 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="GuradsOfDawn"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="23"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="100"/>
@@ -2908,15 +2908,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2962,15 +2962,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3016,15 +3016,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3070,15 +3070,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3124,15 +3124,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3178,15 +3178,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3232,15 +3232,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3286,15 +3286,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3340,15 +3340,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3394,15 +3394,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3448,15 +3448,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3502,15 +3502,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3556,15 +3556,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3610,15 +3610,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3664,15 +3664,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3718,15 +3718,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3772,15 +3772,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3826,15 +3826,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3880,17 +3880,17 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="3"/>	<!--Extremely Weak P. Atk.-->
-			<skill id="4411" level="3"/>	<!--Extremely Weak M. Atk.-->
-			<skill id="4412" level="18"/>	<!--Extremely Strong P. Def.-->
-			<skill id="4413" level="19"/>	<!--Extremely Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
-			<skill id="4067" level="4"/>	<!--NPC Mortal Blow-->
-		<skill id="5467" level="1"/>
+			<skill id="4408" level="16"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="3"/>
+			<skill id="4411" level="3"/>
+			<skill id="4412" level="18"/>
+			<skill id="4413" level="19"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
+			<skill id="4067" level="4"/>
+			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -3936,18 +3936,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="3"/>	<!--Extremely Weak P. Atk.-->
-			<skill id="4411" level="3"/>	<!--Extremely Weak M. Atk.-->
-			<skill id="4412" level="18"/>	<!--Extremely Strong P. Def.-->
-			<skill id="4413" level="19"/>	<!--Extremely Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
-			<skill id="4002" level="4"/>	<!--NPC HP Drain-->
-			<skill id="4046" level="4"/>	<!--Sleep-->
-		<skill id="5467" level="1"/>
+			<skill id="4408" level="16"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="3"/>
+			<skill id="4411" level="3"/>
+			<skill id="4412" level="18"/>
+			<skill id="4413" level="19"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
+			<skill id="4002" level="4"/>
+			<skill id="4046" level="4"/>
+			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -3993,21 +3993,21 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="5800"/>	<!--Nephilim Lord-->
-			<lhand item_id="5799"/>	<!--Nephilim Lord-->
+			<rhand item_id="5800"/>
+			<lhand item_id="5799"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="3"/>	<!--Extremely Weak P. Atk.-->
-			<skill id="4411" level="3"/>	<!--Extremely Weak M. Atk.-->
-			<skill id="4412" level="18"/>	<!--Extremely Strong P. Def.-->
-			<skill id="4413" level="19"/>	<!--Extremely Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
-			<skill id="4032" level="4"/>	<!--NPC Strike-->
-		<skill id="5467" level="1"/>
+			<skill id="4408" level="16"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="3"/>
+			<skill id="4411" level="3"/>
+			<skill id="4412" level="18"/>
+			<skill id="4413" level="19"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
+			<skill id="4032" level="4"/>
+			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -4053,17 +4053,17 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="3"/>	<!--Extremely Weak P. Atk.-->
-			<skill id="4411" level="3"/>	<!--Extremely Weak M. Atk.-->
-			<skill id="4412" level="18"/>	<!--Extremely Strong P. Def.-->
-			<skill id="4413" level="19"/>	<!--Extremely Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
-			<skill id="4067" level="1"/>	<!--NPC Mortal Blow-->
-		<skill id="5467" level="1"/>
+			<skill id="4408" level="16"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="3"/>
+			<skill id="4411" level="3"/>
+			<skill id="4412" level="18"/>
+			<skill id="4413" level="19"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
+			<skill id="4067" level="1"/>
+			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -4109,18 +4109,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="3"/>	<!--Extremely Weak P. Atk.-->
-			<skill id="4411" level="3"/>	<!--Extremely Weak M. Atk.-->
-			<skill id="4412" level="18"/>	<!--Extremely Strong P. Def.-->
-			<skill id="4413" level="19"/>	<!--Extremely Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
-			<skill id="4002" level="1"/>	<!--NPC HP Drain-->
-			<skill id="4046" level="1"/>	<!--Sleep-->
-		<skill id="5467" level="1"/>
+			<skill id="4408" level="16"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="3"/>
+			<skill id="4411" level="3"/>
+			<skill id="4412" level="18"/>
+			<skill id="4413" level="19"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
+			<skill id="4002" level="1"/>
+			<skill id="4046" level="1"/>
+			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -4166,21 +4166,21 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="5800"/>	<!--Nephilim Lord-->
-			<lhand item_id="5799"/>	<!--Nephilim Lord-->
+			<rhand item_id="5800"/>
+			<lhand item_id="5799"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="3"/>	<!--Extremely Weak P. Atk.-->
-			<skill id="4411" level="3"/>	<!--Extremely Weak M. Atk.-->
-			<skill id="4412" level="18"/>	<!--Extremely Strong P. Def.-->
-			<skill id="4413" level="19"/>	<!--Extremely Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
-			<skill id="4032" level="4"/>	<!--NPC Strike-->
-		<skill id="5467" level="1"/>
+			<skill id="4408" level="16"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="3"/>
+			<skill id="4411" level="3"/>
+			<skill id="4412" level="18"/>
+			<skill id="4413" level="19"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
+			<skill id="4032" level="4"/>
+			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -4226,21 +4226,21 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="234"/>	<!--Demon's Dagger-->
-			<lhand item_id="234"/>	<!--Demon's Dagger-->
+			<rhand item_id="234"/>
+			<lhand item_id="234"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="3"/>	<!--Extremely Weak P. Atk.-->
-			<skill id="4411" level="3"/>	<!--Extremely Weak M. Atk.-->
-			<skill id="4412" level="18"/>	<!--Extremely Strong P. Def.-->
-			<skill id="4413" level="19"/>	<!--Extremely Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
-			<skill id="4032" level="4"/>	<!--NPC Strike-->
-		<skill id="5467" level="1"/>
+			<skill id="4408" level="16"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="3"/>
+			<skill id="4411" level="3"/>
+			<skill id="4412" level="18"/>
+			<skill id="4413" level="19"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
+			<skill id="4032" level="4"/>
+			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -4286,18 +4286,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="3"/>	<!--Extremely Weak P. Atk.-->
-			<skill id="4411" level="3"/>	<!--Extremely Weak M. Atk.-->
-			<skill id="4412" level="18"/>	<!--Extremely Strong P. Def.-->
-			<skill id="4413" level="19"/>	<!--Extremely Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
-			<skill id="4002" level="4"/>	<!--NPC HP Drain-->
-			<skill id="4046" level="4"/>	<!--Sleep-->
-		<skill id="5467" level="1"/>
+			<skill id="4408" level="16"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="3"/>
+			<skill id="4411" level="3"/>
+			<skill id="4412" level="18"/>
+			<skill id="4413" level="19"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
+			<skill id="4002" level="4"/>
+			<skill id="4046" level="4"/>
+			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -4343,21 +4343,21 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="5800"/>	<!--Nephilim Lord-->
-			<lhand item_id="5799"/>	<!--Nephilim Lord-->
+			<rhand item_id="5800"/>
+			<lhand item_id="5799"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="3"/>	<!--Extremely Weak P. Atk.-->
-			<skill id="4411" level="3"/>	<!--Extremely Weak M. Atk.-->
-			<skill id="4412" level="18"/>	<!--Extremely Strong P. Def.-->
-			<skill id="4413" level="19"/>	<!--Extremely Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
-			<skill id="4032" level="4"/>	<!--NPC Strike-->
-		<skill id="5467" level="1"/>
+			<skill id="4408" level="16"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="3"/>
+			<skill id="4411" level="3"/>
+			<skill id="4412" level="18"/>
+			<skill id="4413" level="19"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
+			<skill id="4032" level="4"/>
+			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -4403,16 +4403,16 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="10"/>	<!--HP Increase (2x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="13"/>	<!--Slightly Strong P. Def.-->
-			<skill id="4413" level="14"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="7"/>	<!--Spirits-->
-			<skill id="5463" level="1"/>	<!--Water Attacks-->
+			<skill id="4408" level="10"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="13"/>
+			<skill id="4413" level="14"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="7"/>
+			<skill id="5463" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="water" value="80"/>
@@ -4458,16 +4458,16 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="10"/>	<!--HP Increase (2x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="13"/>	<!--Slightly Strong P. Def.-->
-			<skill id="4413" level="14"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="7"/>	<!--Spirits-->
-			<skill id="5464" level="1"/>	<!--Wind Attacks-->
+			<skill id="4408" level="10"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="13"/>
+			<skill id="4413" level="14"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="7"/>
+			<skill id="5464" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="wind" value="100"/>
@@ -4513,15 +4513,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4567,15 +4567,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4621,15 +4621,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="SealDevice"/>
 		<skills>
-			<skill id="4408" level="16"/>	<!--HP Increase (8x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="5"/>	<!--Extremely Weak P. Atk.-->
-			<skill id="4411" level="4"/>	<!--Extremely Weak M. Atk.-->
-			<skill id="4412" level="18"/>	<!--Extremely Strong P. Def.-->
-			<skill id="4413" level="19"/>	<!--Extremely Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="2"/>	<!--Others-->
+			<skill id="4408" level="16"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="5"/>
+			<skill id="4411" level="4"/>
+			<skill id="4412" level="18"/>
+			<skill id="4413" level="19"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4675,17 +4675,17 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4045" level="1"/>	<!--Resist Full Magic Attack-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
-			<skill id="5467" level="1"/>	<!--Dark Attacks-->
+			<skill id="4045" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
+			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="200"/>
@@ -4732,17 +4732,17 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4045" level="1"/>	<!--Resist Full Magic Attack-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
-			<skill id="5467" level="1"/>	<!--Dark Attacks-->
+			<skill id="4045" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
+			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="200"/>
@@ -4789,22 +4789,22 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="5800"/>	<!--Nephilim Lord-->
-			<lhand item_id="5799"/>	<!--Nephilim Lord-->
+			<rhand item_id="5800"/>
+			<lhand item_id="5799"/>
 		</equip>
 		<skills>
-			<skill id="4045" level="1"/>	<!--Resist Full Magic Attack-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
-			<skill id="5467" level="1"/>	<!--Dark Attacks-->
+			<skill id="4045" level="1"/>
+			<skill id="4273" level="3"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
+			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="200"/>
@@ -4851,16 +4851,16 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4045" level="1"/>	<!--Resist Full Magic Attack-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4045" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<attack attribute="holy" value="200"/>
@@ -4907,16 +4907,16 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4045" level="1"/>	<!--Resist Full Magic Attack-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4045" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<attack attribute="holy" value="200"/>
@@ -4963,17 +4963,17 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4045" level="1"/>	<!--Resist Full Magic Attack-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4045" level="1"/>
+			<skill id="4273" level="3"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<attack attribute="holy" value="200"/>
@@ -5020,16 +5020,16 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4045" level="1"/>	<!--Resist Full Magic Attack-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="8"/>	<!--Angels-->
+			<skill id="4045" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="8"/>
 		</skills>
 		<attributes>
 			<attack attribute="holy" value="200"/>
@@ -5076,19 +5076,19 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="69"/>	<!--Bastard Sword-->
-			<lhand item_id="19"/>	<!--Small Shield-->
+			<rhand item_id="69"/>
+			<lhand item_id="19"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -5134,18 +5134,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="135"/>	<!--Samurai Longsword-->
+			<rhand item_id="135"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="1"/>	<!--Undead-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -5277,8 +5277,8 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="5975" level="3"/>	<!--Dark Attack-->
-			<skill id="5976" level="3"/>	<!--Dark Storm-->
+			<skill id="5975" level="3"/>
+			<skill id="5976" level="3"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="200"/>

@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "doors.dtd">
-
-<!-- Done by Yorie -->
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "doors.dtd">
 <list>
 	<door id="16240102" name="Harnak_4th_S10_door" hp="1" pdef="0" mdef="0">
 		<pos x="-107922" y="210540" z="-10636"/>

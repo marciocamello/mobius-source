@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="36500" name="Territory Catapult" title="Dion">
@@ -36,7 +36,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -82,7 +82,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -128,7 +128,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -174,7 +174,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -220,7 +220,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -266,7 +266,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -312,7 +312,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -358,7 +358,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -405,11 +405,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="76"/>	<!--Sword of Delusion-->
-			<lhand item_id="2497"/>	<!--Full Plate Shield-->
+			<rhand item_id="76"/>
+			<lhand item_id="2497"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -459,10 +459,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="8678"/>	<!--Sirra's Blade-->
+			<rhand item_id="8678"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -509,10 +509,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="8687"/>	<!--Cabrio's Hand-->
+			<rhand item_id="8687"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -562,10 +562,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="9442"/>	<!--Dynasty Sword-->
+			<rhand item_id="9442"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -615,10 +615,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="8684"/>	<!--Shyeed's Bow-->
+			<rhand item_id="8684"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -665,10 +665,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="6365"/>	<!--Basalt Battlehammer-->
+			<rhand item_id="6365"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -715,11 +715,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="76"/>	<!--Sword of Delusion-->
-			<lhand item_id="2497"/>	<!--Full Plate Shield-->
+			<rhand item_id="76"/>
+			<lhand item_id="2497"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -769,10 +769,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="8678"/>	<!--Sirra's Blade-->
+			<rhand item_id="8678"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -819,10 +819,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="8687"/>	<!--Cabrio's Hand-->
+			<rhand item_id="8687"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -872,10 +872,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="9442"/>	<!--Dynasty Sword-->
+			<rhand item_id="9442"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -925,10 +925,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="8684"/>	<!--Shyeed's Bow-->
+			<rhand item_id="8684"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -975,10 +975,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="6365"/>	<!--Basalt Battlehammer-->
+			<rhand item_id="6365"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -1025,11 +1025,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="76"/>	<!--Sword of Delusion-->
-			<lhand item_id="2497"/>	<!--Full Plate Shield-->
+			<rhand item_id="76"/>
+			<lhand item_id="2497"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -1079,10 +1079,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="8678"/>	<!--Sirra's Blade-->
+			<rhand item_id="8678"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1129,10 +1129,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="8687"/>	<!--Cabrio's Hand-->
+			<rhand item_id="8687"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -1182,10 +1182,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="9442"/>	<!--Dynasty Sword-->
+			<rhand item_id="9442"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -1235,10 +1235,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="8684"/>	<!--Shyeed's Bow-->
+			<rhand item_id="8684"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1285,10 +1285,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="6365"/>	<!--Basalt Battlehammer-->
+			<rhand item_id="6365"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -1335,11 +1335,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="76"/>	<!--Sword of Delusion-->
-			<lhand item_id="2497"/>	<!--Full Plate Shield-->
+			<rhand item_id="76"/>
+			<lhand item_id="2497"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -1389,10 +1389,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="8678"/>	<!--Sirra's Blade-->
+			<rhand item_id="8678"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1439,10 +1439,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="8687"/>	<!--Cabrio's Hand-->
+			<rhand item_id="8687"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -1492,10 +1492,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="9442"/>	<!--Dynasty Sword-->
+			<rhand item_id="9442"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -1545,10 +1545,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="8684"/>	<!--Shyeed's Bow-->
+			<rhand item_id="8684"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1595,10 +1595,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="6365"/>	<!--Basalt Battlehammer-->
+			<rhand item_id="6365"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -1645,11 +1645,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="76"/>	<!--Sword of Delusion-->
-			<lhand item_id="2497"/>	<!--Full Plate Shield-->
+			<rhand item_id="76"/>
+			<lhand item_id="2497"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -1699,10 +1699,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="8678"/>	<!--Sirra's Blade-->
+			<rhand item_id="8678"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1749,10 +1749,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="8687"/>	<!--Cabrio's Hand-->
+			<rhand item_id="8687"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -1802,10 +1802,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="9442"/>	<!--Dynasty Sword-->
+			<rhand item_id="9442"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -1855,10 +1855,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="8684"/>	<!--Shyeed's Bow-->
+			<rhand item_id="8684"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1905,10 +1905,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="6365"/>	<!--Basalt Battlehammer-->
+			<rhand item_id="6365"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -1955,11 +1955,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="76"/>	<!--Sword of Delusion-->
-			<lhand item_id="2497"/>	<!--Full Plate Shield-->
+			<rhand item_id="76"/>
+			<lhand item_id="2497"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -2009,10 +2009,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="8678"/>	<!--Sirra's Blade-->
+			<rhand item_id="8678"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2059,10 +2059,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="8687"/>	<!--Cabrio's Hand-->
+			<rhand item_id="8687"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -2112,10 +2112,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="9442"/>	<!--Dynasty Sword-->
+			<rhand item_id="9442"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -2165,10 +2165,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="8684"/>	<!--Shyeed's Bow-->
+			<rhand item_id="8684"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2215,10 +2215,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="6365"/>	<!--Basalt Battlehammer-->
+			<rhand item_id="6365"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -2265,11 +2265,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="76"/>	<!--Sword of Delusion-->
-			<lhand item_id="2497"/>	<!--Full Plate Shield-->
+			<rhand item_id="76"/>
+			<lhand item_id="2497"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -2319,10 +2319,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="8678"/>	<!--Sirra's Blade-->
+			<rhand item_id="8678"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2369,10 +2369,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="8687"/>	<!--Cabrio's Hand-->
+			<rhand item_id="8687"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -2422,10 +2422,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="9442"/>	<!--Dynasty Sword-->
+			<rhand item_id="9442"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -2475,10 +2475,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="8684"/>	<!--Shyeed's Bow-->
+			<rhand item_id="8684"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2525,10 +2525,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="6365"/>	<!--Basalt Battlehammer-->
+			<rhand item_id="6365"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -2575,11 +2575,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="76"/>	<!--Sword of Delusion-->
-			<lhand item_id="2497"/>	<!--Full Plate Shield-->
+			<rhand item_id="76"/>
+			<lhand item_id="2497"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -2629,10 +2629,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="8678"/>	<!--Sirra's Blade-->
+			<rhand item_id="8678"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2679,10 +2679,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="8687"/>	<!--Cabrio's Hand-->
+			<rhand item_id="8687"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -2732,10 +2732,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="9442"/>	<!--Dynasty Sword-->
+			<rhand item_id="9442"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -2785,10 +2785,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="8684"/>	<!--Shyeed's Bow-->
+			<rhand item_id="8684"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2835,10 +2835,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="6365"/>	<!--Basalt Battlehammer-->
+			<rhand item_id="6365"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -2885,11 +2885,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="76"/>	<!--Sword of Delusion-->
-			<lhand item_id="2497"/>	<!--Full Plate Shield-->
+			<rhand item_id="76"/>
+			<lhand item_id="2497"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -2939,10 +2939,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="8678"/>	<!--Sirra's Blade-->
+			<rhand item_id="8678"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2989,10 +2989,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="8687"/>	<!--Cabrio's Hand-->
+			<rhand item_id="8687"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -3042,10 +3042,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="9442"/>	<!--Dynasty Sword-->
+			<rhand item_id="9442"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -3095,10 +3095,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="8684"/>	<!--Shyeed's Bow-->
+			<rhand item_id="8684"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3145,10 +3145,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<equip>
-			<rhand item_id="6365"/>	<!--Basalt Battlehammer-->
+			<rhand item_id="6365"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -3194,14 +3194,14 @@
 		<set name="shots" value="SOUL_BSPIRIT"/>
 		<set name="type" value="SeducedInvestigator"/>
 		<equip>
-			<rhand item_id="80"/>	<!--Tallum Blade-->
-			<lhand item_id="641"/>	<!--Dark Crystal Shield-->
+			<rhand item_id="80"/>
+			<lhand item_id="641"/>
 		</equip>
 		<skills>
-			<skill id="4123" level="1"/>	<!--Hostile Feeling-->
-			<skill id="4416" level="14"/>	<!--Humans-->
-			<skill id="4720" level="1"/>	<!--BOSS Strike-->
-			<skill id="5970" level="1"/>	<!--Seduced Knight's Help-->
+			<skill id="4123" level="1"/>
+			<skill id="4416" level="14"/>
+			<skill id="4720" level="1"/>
+			<skill id="5970" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -3247,13 +3247,13 @@
 		<set name="shots" value="SOUL_BSPIRIT"/>
 		<set name="type" value="SeducedInvestigator"/>
 		<equip>
-			<rhand item_id="10212"/>	<!--For NPC (Bow)-->
+			<rhand item_id="10212"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
-			<skill id="4755" level="1"/>	<!--BOSS Power Shot-->
-			<skill id="5968" level="1"/>	<!--Rapid Shot-->
-			<skill id="5971" level="1"/>	<!--Seduced Ranger's Help-->
+			<skill id="4416" level="15"/>
+			<skill id="4755" level="1"/>
+			<skill id="5968" level="1"/>
+			<skill id="5971" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -3299,10 +3299,10 @@
 		<set name="shots" value="SOUL_BSPIRIT"/>
 		<set name="type" value="SeducedInvestigator"/>
 		<skills>
-			<skill id="4192" level="1"/>	<!--BOSS HP Drain-->
-			<skill id="4194" level="1"/>	<!--BOSS Aura Burn-->
-			<skill id="4416" level="14"/>	<!--Humans-->
-			<skill id="5972" level="1"/>	<!--Seduced Wizard's Help-->
+			<skill id="4192" level="1"/>
+			<skill id="4194" level="1"/>
+			<skill id="4416" level="14"/>
+			<skill id="5972" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -3348,14 +3348,14 @@
 		<set name="shots" value="SOUL_BSPIRIT"/>
 		<set name="type" value="SeducedInvestigator"/>
 		<equip>
-			<rhand item_id="9813"/>	<!--Orc Officer-->
-			<lhand item_id="9813"/>	<!--Orc Officer-->
+			<rhand item_id="9813"/>
+			<lhand item_id="9813"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="17"/>	<!--Orcs-->
-			<skill id="4725" level="1"/>	<!--Stun-->
-			<skill id="5969" level="1"/>	<!--Punch of Doom-->
-			<skill id="5973" level="1"/>	<!--Seduced Warrior's Help-->
+			<skill id="4416" level="17"/>
+			<skill id="4725" level="1"/>
+			<skill id="5969" level="1"/>
+			<skill id="5973" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -3401,11 +3401,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="80"/>	<!--Tallum Blade-->
-			<lhand item_id="641"/>	<!--Dark Crystal Shield-->
+			<rhand item_id="80"/>
+			<lhand item_id="641"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3451,10 +3451,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="10212"/>	<!--For NPC (Bow)-->
+			<rhand item_id="10212"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3500,7 +3500,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3546,11 +3546,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="9813"/>	<!--Orc Officer-->
-			<lhand item_id="9813"/>	<!--Orc Officer-->
+			<rhand item_id="9813"/>
+			<lhand item_id="9813"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="17"/>	<!--Orcs-->
+			<skill id="4416" level="17"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3596,7 +3596,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3642,7 +3642,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3688,7 +3688,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -3734,7 +3734,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -3780,7 +3780,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -3826,7 +3826,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -3872,7 +3872,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -3918,7 +3918,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -3964,7 +3964,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4010,7 +4010,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4056,7 +4056,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4102,7 +4102,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4148,7 +4148,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4194,7 +4194,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4240,7 +4240,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4286,7 +4286,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4332,7 +4332,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4378,7 +4378,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4424,7 +4424,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4470,7 +4470,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4516,7 +4516,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4562,7 +4562,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4608,7 +4608,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4654,7 +4654,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4700,7 +4700,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4746,7 +4746,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4792,7 +4792,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4838,7 +4838,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4884,7 +4884,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4930,7 +4930,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.QuestSiegeGuard"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>

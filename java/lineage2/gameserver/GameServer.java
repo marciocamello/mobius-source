@@ -213,7 +213,7 @@ public class GameServer
 		new File("./log/").mkdir();
 		version = new Version(GameServer.class);
 		_log.info("=================================================");
-		_log.info("Revision: ................ " + version.getRevisionNumber());
+		// _log.info("Revision: ................ " + version.getRevisionNumber());
 		_log.info("Build date: .............. " + version.getBuildDate());
 		_log.info("Compiler version: ........ " + version.getBuildJdk());
 		_log.info("=================================================");

@@ -19,98 +19,19 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author Evil_dnk
+ */
 public class _10300_OlMahumTranscender extends Quest implements ScriptFile
 {
+	
 	private static final int[] Adventurequid =
 	{
-		31776,
-		31777,
-		31778,
-		31779,
-		31780,
-		31781,
-		31782,
-		31783,
-		31784,
-		31785,
-		31786,
-		31787,
-		31788,
-		31789,
-		31790,
-		31791,
-		31792,
-		31793,
-		31794,
-		31795,
-		31796,
-		31797,
-		31798,
-		31799,
-		31824,
-		31805,
-		31800,
-		31801,
-		31802,
-		31803,
-		31804,
-		31805,
-		31806,
-		31807,
-		31808,
-		31809,
-		31810,
-		31811,
-		31812,
-		31813,
-		31814,
-		31815,
-		31816,
-		31817,
-		31818,
-		31819,
-		31820,
-		31821,
-		31822,
-		31823,
-		31824,
-		31825,
-		31826,
-		31827,
-		31828,
-		31829,
-		31830,
-		31831,
-		31832,
-		31833,
-		31834,
-		31835,
-		31836,
-		31837,
-		31838,
-		31839,
-		31840,
-		31841,
-		31991,
-		31992,
-		31993,
-		31994,
-		31995,
-		32337,
-		32337,
-		32338,
-		32339,
-		32340,
-		33385,
-		33386,
-		33387,
-		33388,
-		33389,
-		33390,
-		33391,
-		33392
+		33463
 	};
+	
 	private static final int mouen = 30196;
+	
 	private static final int[] Basilisk =
 	{
 		20573,
@@ -131,6 +52,7 @@ public class _10300_OlMahumTranscender extends Quest implements ScriptFile
 		20576,
 		20161
 	};
+	
 	private static final int markofbandit = 19484;
 	private static final int markofshaman = 19485;
 	private static final int proofmonstr = 19486;
@@ -156,6 +78,7 @@ public class _10300_OlMahumTranscender extends Quest implements ScriptFile
 		addStartNpc(Adventurequid);
 		addTalkId(Adventurequid);
 		addTalkId(mouen);
+		
 		addKillId(Basilisk);
 		addKillId(gnols);
 		addKillId(OelMahum);
@@ -176,6 +99,7 @@ public class _10300_OlMahumTranscender extends Quest implements ScriptFile
 		{
 			st.setCond(1);
 		}
+		
 		return htmltext;
 	}
 	
@@ -185,6 +109,7 @@ public class _10300_OlMahumTranscender extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (ArrayUtils.contains(Adventurequid, npcId))
 		{
 			if ((st.getPlayer().getLevel() >= 50) && (st.getPlayer().getLevel() <= 54) && (cond == 0))
@@ -213,10 +138,6 @@ public class _10300_OlMahumTranscender extends Quest implements ScriptFile
 				st.exitCurrentQuest(false);
 				st.playSound(SOUND_FINISH);
 			}
-			else if (cond == 0)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
 			else if (cond == 1)
 			{
 				htmltext = "1-2.htm";
@@ -229,6 +150,7 @@ public class _10300_OlMahumTranscender extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		if ((st.getCond() == 1) && ArrayUtils.contains(Basilisk, npcId) && (st.getQuestItemsCount(markofbandit) < 30))
 		{
 			st.giveItems(markofbandit, 1);

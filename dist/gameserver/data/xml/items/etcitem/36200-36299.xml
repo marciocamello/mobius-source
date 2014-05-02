@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="36221" name="Scroll Imbued with Heroes' Power">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_kalie_hero_scroll"/>
+	</etcitem>
+	<etcitem id="36234" name="Boss Accessory Pack" add_name="(1-day)">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_ev_draco_gift_box"/>
+	</etcitem>
+	<etcitem id="36222" name="Kaliel's Cube">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_kalie_cube"/>
+	</etcitem>
+	<etcitem id="36223" name="Extra Pass - Kartia's Labyrinth Level 85 Solo">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
+	</etcitem>
+	<etcitem id="36224" name="Extra Pass - Kartia's Labyrinth Level 90 Solo">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
+	</etcitem>
+	<etcitem id="36225" name="Extra Pass - Kartia's Labyrinth Level 95 Solo">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
+	</etcitem>
+	<etcitem id="36245" name="Charlotte's Vitality Replenishing Potion">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_potion_red_i00"/>
+	</etcitem>
+	<etcitem id="36246" name="Verdof's Invitation">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_letter_envelope_i00"/>
+	</etcitem>
+	<etcitem id="36247" name="Key of Pagans">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_old_key_i01"/>
+	</etcitem>
+	<etcitem id="36226" name="Extra Pass - Kartia's Labyrinth Level 85 Party">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
+	</etcitem>
+	<etcitem id="36227" name="Mark of Kargos">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.fairy_encounter_letter"/>
+	</etcitem>
+	<etcitem id="36228" name="Visitor's Badge">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_red_rose_i00"/>
+	</etcitem>
+	<etcitem id="36229" name="Pagan's Badge">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_totem_necklace_red_i00"/>
+	</etcitem>
+	<etcitem id="36230" name="Pagan Totem">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_totem_necklace_green_i00"/>
+	</etcitem>
+	<etcitem id="36231" name="Pagan Soul">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_crystal_ball_white_i00"/>
+	</etcitem>
+	<etcitem id="36232" name="Divine Box">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_box_of_adventure_3_i00"/>
+	</etcitem>
+	<etcitem id="36248" name="Memorable Raid Box: Queen Ant">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_treasure_box_i08"/>
+	</etcitem>
+	<etcitem id="36249" name="Memorable Raid Box: Orfen">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_treasure_box_i08"/>
+	</etcitem>
+	<etcitem id="36250" name="Memorable Raid Box: Anakim">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_treasure_box_i08"/>
+	</etcitem>
+	<etcitem id="36251" name="Memorable Raid Box: Lilith">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_treasure_box_i08"/>
+	</etcitem>
+	<etcitem id="36252" name="Bottle of Queen Ant's Soul">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="60"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_fruit_juice_glass_bottle_i09"/>
+	</etcitem>
+	<etcitem id="36253" name="Bottle of Orfen's Soul">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="60"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_fruit_juice_glass_bottle_i10"/>
+	</etcitem>
+	<etcitem id="36256" name="Transformation Scroll: Anakim">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_trans_4f_s_b_01"/>
+	</etcitem>
+	<etcitem id="36258" name="Transformation Potion: Queen Ant">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_lesser_potion_clear_i00"/>
+	</etcitem>
+	<etcitem id="36259" name="Transformation Potion: Orfen">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_lesser_potion_purple_i00"/>
+	</etcitem>
+	<etcitem id="36260" name="Transformation Potion: Anakim">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_lesser_potion_blue_i00"/>
+	</etcitem>
+	<etcitem id="36261" name="Transformation Potion: Lilith">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_lesser_potion_red_i00"/>
+	</etcitem>
+	<etcitem id="36267" name="Dimension Crumbs">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_broken_crystal_blue_i00"/>
+	</etcitem>
+	<etcitem id="36268" name="Extra Pass - Kartia's Labyrinth Level 90 Party">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
+	</etcitem>
+	<etcitem id="36269" name="Extra Pass - Kartia's Labyrinth Level 95 Party">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
+	</etcitem>
+	<etcitem id="36270" name="Teredor Entrance Pass">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
+	</etcitem>
+	<etcitem id="36271" name="Spezion Entrance Pass - Normal">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
+	</etcitem>
+	<etcitem id="36272" name="Spezion Entrance Pass - Extreme">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
+	</etcitem>
+	<etcitem id="36273" name="Fortuna Entrance Pass">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
+	</etcitem>
+	<etcitem id="36274" name="Nornil's Garden Entrance Pass">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
+	</etcitem>
+	<etcitem id="36275" name="Istina Entrance Pass - Normal">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
+	</etcitem>
+	<etcitem id="36276" name="Octavis Entrance Pass - Normal">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
+	</etcitem>
+	<etcitem id="36277" name="Baylor Entrance Pass">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
+	</etcitem>
+	<etcitem id="36278" name="Pagan Blood">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_dragons_blood_i00"/>
+	</etcitem>
+	<etcitem id="36282" name="Error Compensation Package">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_treasure_box_i05"/>
+	</etcitem>
+	<etcitem id="36283" name="Blessed Scroll: Enchant Weapon (R-grade)" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.blessed_scroll_of_enchant_weapon_i06"/>
+	</etcitem>
+	<etcitem id="36284" name="Blessed Scroll: Enchant Armor (R-grade)" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.blessed_scroll_of_enchant_armor_i06"/>
+	</etcitem>
+</list>

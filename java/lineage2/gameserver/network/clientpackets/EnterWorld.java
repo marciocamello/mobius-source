@@ -68,6 +68,7 @@ import lineage2.gameserver.network.serverpackets.ExShowUsmVideo;
 import lineage2.gameserver.network.serverpackets.ExStorageMaxCount;
 import lineage2.gameserver.network.serverpackets.ExSubjobInfo;
 import lineage2.gameserver.network.serverpackets.ExTutorialList;
+import lineage2.gameserver.network.serverpackets.ExUnReadMailCount;
 import lineage2.gameserver.network.serverpackets.ExVitalityEffectInfo;
 import lineage2.gameserver.network.serverpackets.ExWaitWaitingSubStituteInfo;
 import lineage2.gameserver.network.serverpackets.HennaInfo;
@@ -208,6 +209,7 @@ public class EnterWorld extends L2GameClientPacket
 			activeChar.sendPacket(new ExCastleState(castle));
 		}
 		activeChar.sendPacket(SystemMsg.WELCOME_TO_THE_WORLD_OF_LINEAGE_II);
+		// activeChar.sendPacket(new ExBR_NewIConCashBtnWnd());
 		Announcements.getInstance().showAnnouncements(activeChar);
 		if (first)
 		{
@@ -592,6 +594,7 @@ public class EnterWorld extends L2GameClientPacket
 			if (mail.isUnread())
 			{
 				sendPacket(ExNoticePostArrived.STATIC_FALSE);
+				sendPacket(new ExUnReadMailCount(mail));
 				break;
 			}
 		}

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="35500" name="Gatekeeper" title="Rune">
@@ -40,7 +40,7 @@
 		</ai_params>
 		<faction name="rune_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -90,7 +90,7 @@
 		</ai_params>
 		<faction name="rune_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -140,7 +140,7 @@
 			<set name="teleport_loc" value="11493 -49153 -536"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -197,7 +197,7 @@
 		</ai_params>
 		<faction name="rune_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -254,7 +254,7 @@
 		</ai_params>
 		<faction name="rune_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -311,7 +311,7 @@
 		</ai_params>
 		<faction name="rune_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -359,10 +359,10 @@
 		<set name="type" value="residences.castle.VenomTeleporter"/>
 		<faction name="rune_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="1376"/>	<!--Guard Spear-->
+			<rhand item_id="1376"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -410,10 +410,10 @@
 		<set name="type" value="residences.castle.Blacksmith"/>
 		<faction name="rune_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="89"/>	<!--Big Hammer-->
+			<rhand item_id="89"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -461,7 +461,7 @@
 		<set name="type" value="residences.castle.Warehouse"/>
 		<faction name="rune_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -508,7 +508,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.castle.ChamberlainLight"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Humans-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -555,7 +555,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -602,7 +602,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="MercManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -649,7 +649,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="ManorManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -696,10 +696,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.castle.CastleMessenger"/>
 		<equip>
-			<rhand item_id="135"/>	<!--Samurai Longsword-->
+			<rhand item_id="135"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -745,7 +745,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Artefact"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -791,7 +791,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Artefact"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -838,10 +838,10 @@
 		<set name="type" value="Npc"/>
 		<faction name="schutt_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="142"/>	<!--Keshanberk-->
+			<rhand item_id="142"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -888,10 +888,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schutt_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -938,11 +938,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="76"/>	<!--Sword of Delusion-->
-			<lhand item_id="2497"/>	<!--Full Plate Shield-->
+			<rhand item_id="76"/>
+			<lhand item_id="2497"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -989,12 +989,12 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="325"/>	<!--Horn of Glory-->
+			<rhand item_id="325"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="24"/>	<!--Prominence-->
-			<skill id="4001" level="6"/>	<!--NPC Windstrike-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="1230" level="24"/>
+			<skill id="4001" level="6"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1041,12 +1041,12 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="193"/>	<!--Stick of Faith-->
+			<rhand item_id="193"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="24"/>	<!--Prominence-->
-			<skill id="4037" level="1"/>	<!--Decrease P. Atk.-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="1230" level="24"/>
+			<skill id="4037" level="1"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1093,10 +1093,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="1376"/>	<!--Guard Spear-->
+			<rhand item_id="1376"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1143,10 +1143,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="93"/>	<!--Winged Spear-->
+			<rhand item_id="93"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1193,10 +1193,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1243,10 +1243,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1293,10 +1293,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1343,10 +1343,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1393,10 +1393,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1443,10 +1443,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1493,10 +1493,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schutt_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1543,10 +1543,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schutt_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1593,11 +1593,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schutt_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="76"/>	<!--Sword of Delusion-->
-			<lhand item_id="2497"/>	<!--Full Plate Shield-->
+			<rhand item_id="76"/>
+			<lhand item_id="2497"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -1644,12 +1644,12 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schutt_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="325"/>	<!--Horn of Glory-->
+			<rhand item_id="325"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="24"/>	<!--Prominence-->
-			<skill id="4001" level="6"/>	<!--NPC Windstrike-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="1230" level="24"/>
+			<skill id="4001" level="6"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1696,12 +1696,12 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schutt_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="193"/>	<!--Stick of Faith-->
+			<rhand item_id="193"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="24"/>	<!--Prominence-->
-			<skill id="4037" level="1"/>	<!--Decrease P. Atk.-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="1230" level="24"/>
+			<skill id="4037" level="1"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1748,10 +1748,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schutt_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="1376"/>	<!--Guard Spear-->
+			<rhand item_id="1376"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1798,10 +1798,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="93"/>	<!--Winged Spear-->
+			<rhand item_id="93"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1848,10 +1848,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1898,10 +1898,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1948,10 +1948,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1998,10 +1998,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2048,10 +2048,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2098,10 +2098,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2148,10 +2148,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="76"/>	<!--Sword of Delusion-->
+			<rhand item_id="76"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2198,10 +2198,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="schuttgart_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="280"/>	<!--Light Crossbow-->
+			<rhand item_id="280"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2251,7 +2251,7 @@
 		</ai_params>
 		<faction name="schuttgart_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2301,7 +2301,7 @@
 		</ai_params>
 		<faction name="schuttgart_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2350,10 +2350,10 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2403,10 +2403,10 @@
 			<set name="teleport_loc" value="77552 -152557 -536"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2462,10 +2462,10 @@
 			<set name="doors" value="22130002;22130001"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2521,10 +2521,10 @@
 			<set name="doors" value="22130007"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2580,10 +2580,10 @@
 			<set name="doors" value="22130006"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2639,7 +2639,7 @@
 			<set name="doors" value="22130015"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2695,7 +2695,7 @@
 			<set name="doors" value="22130014"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2742,10 +2742,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.castle.Blacksmith"/>
 		<equip>
-			<rhand item_id="89"/>	<!--Big Hammer-->
+			<rhand item_id="89"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2792,7 +2792,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.castle.Warehouse"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2839,7 +2839,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.castle.ChamberlainLight"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Humans-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2886,7 +2886,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2933,7 +2933,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="MercManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2980,7 +2980,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="ManorManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3027,10 +3027,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.castle.CastleMessenger"/>
 		<equip>
-			<rhand item_id="74"/>	<!--Katana-->
+			<rhand item_id="74"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3076,7 +3076,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3125,7 +3125,7 @@
 			<set name="flag" value="0"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3174,7 +3174,7 @@
 			<set name="flag" value="1"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3223,14 +3223,8 @@
 			<set name="flag" value="2"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4416" level="6"/>
 		</skills>
-  <!--  <teleportlist>
-            <sublist id="1"> Ненашол стринги.
-			    <target loc="114649 18587 -3609" item_id="57" price="150000" name="2nd Floor" />
-			    <target loc="112714 14111 10077" item_id="57" price="900000" name="14th Baium" />
-            </sublist>	
-        </teleportlist> -->			
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
@@ -3278,7 +3272,7 @@
 			<set name="flag" value="3"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3327,7 +3321,7 @@
 			<set name="flag" value="4"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3376,7 +3370,7 @@
 			<set name="doors" value="21160007;21160008"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3425,7 +3419,7 @@
 			<set name="doors" value="21160007;21160008"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3474,7 +3468,7 @@
 			<set name="doors" value="21160001;21160002"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3523,7 +3517,7 @@
 			<set name="doors" value="21160001;21160002"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3572,7 +3566,7 @@
 			<set name="doors" value="21160003;21160004"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3621,7 +3615,7 @@
 			<set name="doors" value="21160003;21160004"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3670,7 +3664,7 @@
 			<set name="doors" value="21160005;21160006"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3719,7 +3713,7 @@
 			<set name="doors" value="21160005;21160006"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3768,7 +3762,7 @@
 			<set name="doors" value="21160009;21160010"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3817,7 +3811,7 @@
 			<set name="doors" value="21160009;21160010"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3866,7 +3860,7 @@
 			<set name="doors" value="21160011;21160012"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3915,7 +3909,7 @@
 			<set name="doors" value="21160011;21160012"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3964,7 +3958,7 @@
 			<set name="doors" value="21160013;21160014"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4013,7 +4007,7 @@
 			<set name="doors" value="21160013;21160014"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4062,7 +4056,7 @@
 			<set name="doors" value="22130017;22130018"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4111,7 +4105,7 @@
 			<set name="doors" value="22130017;22130018"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4160,7 +4154,7 @@
 			<set name="doors" value="22130019;22130020"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4209,7 +4203,7 @@
 			<set name="doors" value="22130019;22130020"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4258,7 +4252,7 @@
 			<set name="doors" value="22130021;22130022"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4307,7 +4301,7 @@
 			<set name="doors" value="22130021;22130022"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4356,7 +4350,7 @@
 			<set name="doors" value="22130023;22130024"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4405,7 +4399,7 @@
 			<set name="doors" value="22130023;22130024"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4451,7 +4445,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.clanhall.RainbowGourd"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4497,7 +4491,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.clanhall.RainbowGourd"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4543,7 +4537,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.clanhall.RainbowGourd"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4589,7 +4583,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.clanhall.RainbowGourd"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4635,7 +4629,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4416" level="11"/>	<!--Giants-->
+			<skill id="4416" level="11"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4684,7 +4678,7 @@
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4733,8 +4727,8 @@
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
-			<skill id="4992" level="1"/>	<!--Stun-->
+			<skill id="4416" level="2"/>
+			<skill id="4992" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4783,7 +4777,7 @@
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4829,7 +4823,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.clanhall.RainbowYeti"/>
 		<skills>
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4875,7 +4869,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.clanhall.RainbowYeti"/>
 		<skills>
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4921,7 +4915,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.clanhall.RainbowYeti"/>
 		<skills>
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4967,7 +4961,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.clanhall.RainbowYeti"/>
 		<skills>
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>

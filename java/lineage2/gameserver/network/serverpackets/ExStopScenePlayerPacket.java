@@ -13,19 +13,21 @@
 package lineage2.gameserver.network.serverpackets;
 
 /**
- * @author K1mel
+ * @author Smo
  */
 public class ExStopScenePlayerPacket extends L2GameServerPacket
 {
-	public ExStopScenePlayerPacket()
+	private final int _movieId;
+	
+	public ExStopScenePlayerPacket(int movieId)
 	{
-		//
+		_movieId = movieId;
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
 		writeEx(0xE7);
-		// TODO: [K1mel]
+		writeD(_movieId);
 	}
 }

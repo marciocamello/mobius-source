@@ -17,13 +17,17 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 
+//By Evil_dnk
 public class _10368_RebellionofMonsters extends Quest implements ScriptFile
 {
+	
 	private static final int fred = 33179;
+	
 	private static final int jaga = 23024;
 	private static final int jagav = 23025;
 	private static final int incect = 23099;
 	private static final int incectl = 23100;
+	
 	private static final String jaga_item = "jaga";
 	private static final String jagav_item = "jagav";
 	private static final String incect_item = "incect";
@@ -53,7 +57,9 @@ public class _10368_RebellionofMonsters extends Quest implements ScriptFile
 		addKillNpcWithLog(1, jagav_item, 15, jagav);
 		addKillNpcWithLog(1, incect_item, 15, incect);
 		addKillNpcWithLog(1, incectl_item, 20, incectl);
+		
 		addLevelCheck(34, 40);
+		
 	}
 	
 	@Override
@@ -76,6 +82,7 @@ public class _10368_RebellionofMonsters extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == fred)
 		{
 			if (st.isCompleted())
@@ -99,6 +106,7 @@ public class _10368_RebellionofMonsters extends Quest implements ScriptFile
 				st.playSound(SOUND_FINISH);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -106,6 +114,7 @@ public class _10368_RebellionofMonsters extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		boolean doneKill = updateKill(npc, st);
+		
 		if (doneKill)
 		{
 			st.unset(jaga_item);

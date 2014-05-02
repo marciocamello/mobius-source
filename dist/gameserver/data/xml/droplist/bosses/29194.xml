@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../DropListData.xsd">
+	<npc id="29194">
+		<droplist>
+			<category id="1" chance="47.17588">
+				<item id="18178" min="1" max="1" chance="8.28048"/>
+				<item id="18197" min="1" max="1" chance="5.44839"/>
+				<item id="18201" min="1" max="1" chance="5.43922"/>
+				<item id="18190" min="1" max="1" chance="5.43279"/>
+				<item id="18186" min="1" max="1" chance="5.43004"/>
+				<item id="18199" min="1" max="1" chance="5.42637"/>
+				<item id="18196" min="1" max="1" chance="5.42546"/>
+				<item id="18187" min="1" max="1" chance="5.42177"/>
+				<item id="18185" min="1" max="1" chance="5.40066"/>
+				<item id="18191" min="1" max="1" chance="5.39608"/>
+				<item id="18194" min="1" max="1" chance="5.38046"/>
+				<item id="18189" min="1" max="1" chance="5.37497"/>
+				<item id="18200" min="1" max="1" chance="5.37403"/>
+				<item id="18198" min="1" max="1" chance="5.37221"/>
+				<item id="18188" min="1" max="1" chance="5.36761"/>
+				<item id="18192" min="1" max="1" chance="5.35017"/>
+				<item id="18193" min="1" max="1" chance="5.34374"/>
+				<item id="18195" min="1" max="1" chance="5.33548"/>
+			</category>
+			<category id="2" chance="43.29201">
+				<item id="18181" min="1" max="1" chance="9.15739"/>
+				<item id="18171" min="1" max="1" chance="9.14237"/>
+				<item id="18180" min="1" max="1" chance="9.12036"/>
+				<item id="18179" min="1" max="1" chance="9.10537"/>
+				<item id="18172" min="1" max="1" chance="9.09336"/>
+				<item id="18176" min="1" max="1" chance="9.09336"/>
+				<item id="18177" min="1" max="1" chance="9.08735"/>
+				<item id="18173" min="1" max="1" chance="9.06936"/>
+				<item id="18175" min="1" max="1" chance="9.06534"/>
+				<item id="18174" min="1" max="1" chance="9.04233"/>
+				<item id="18178" min="1" max="1" chance="9.02335"/>
+			</category>
+			<category id="3" chance="5.52177">
+				<item id="17404" min="1" max="1" chance="5.88235"/>
+				<item id="17407" min="1" max="1" chance="5.88235"/>
+				<item id="17408" min="1" max="1" chance="5.88235"/>
+				<item id="17398" min="1" max="1" chance="5.88235"/>
+				<item id="17406" min="1" max="1" chance="5.88235"/>
+				<item id="17405" min="1" max="1" chance="5.88235"/>
+				<item id="17403" min="1" max="1" chance="5.88235"/>
+				<item id="17402" min="1" max="1" chance="5.88235"/>
+				<item id="17401" min="1" max="1" chance="5.88235"/>
+				<item id="17400" min="1" max="1" chance="5.88235"/>
+				<item id="17409" min="1" max="1" chance="5.88235"/>
+				<item id="17410" min="1" max="1" chance="5.88235"/>
+				<item id="17411" min="1" max="1" chance="5.88235"/>
+				<item id="17396" min="1" max="1" chance="5.88235"/>
+				<item id="17397" min="1" max="1" chance="5.88235"/>
+				<item id="17412" min="1" max="1" chance="5.88235"/>
+				<item id="17399" min="1" max="1" chance="5.88235"/>
+			</category>
+			<category id="4" chance="3.57291">
+				<item id="17383" min="1" max="1" chance="9.09090"/>
+				<item id="17389" min="1" max="1" chance="9.09090"/>
+				<item id="17391" min="1" max="1" chance="9.09090"/>
+				<item id="17382" min="1" max="1" chance="9.09090"/>
+				<item id="17384" min="1" max="1" chance="9.09090"/>
+				<item id="17385" min="1" max="1" chance="9.09090"/>
+				<item id="17386" min="1" max="1" chance="9.09090"/>
+				<item id="17387" min="1" max="1" chance="9.09090"/>
+				<item id="17388" min="1" max="1" chance="9.09090"/>
+				<item id="17390" min="1" max="1" chance="9.09090"/>
+				<item id="17392" min="1" max="1" chance="9.09090"/>
+			</category>
+			<category id="5" chance="4.34379">
+				<item id="19457" min="1" max="1" chance="33.83842"/>
+				<item id="19458" min="1" max="1" chance="33.31008"/>
+				<item id="19459" min="1" max="1" chance="32.85149"/>
+			</category>
+			<category id="6" chance="25.079">
+				<item id="19447" min="1" max="1" chance="39.92982"/>
+				<item id="17747" min="1" max="1" chance="39.91786"/>
+				<item id="19445" min="1" max="1" chance="20.15232"/>
+			</category>
+		</droplist>
+	</npc>
+</list>

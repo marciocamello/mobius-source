@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="23172" name="Beach Swimsuit Appearance Stone" add_name="Event">
+		<set name="icon" value="BranchSys3.lcon.g_scrl_change_co_swimsuit_01"/>
+		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+</list>

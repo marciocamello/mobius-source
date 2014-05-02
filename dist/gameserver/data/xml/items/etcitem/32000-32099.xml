@@ -1,0 +1,1104 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="32000" name="Unidentified Brigandine Gaiters">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12609" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t43_l_i00"/>
+	</etcitem>
+	<etcitem id="32001" name="Unidentified Brigandine">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12610" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t43_u_i00"/>
+	</etcitem>
+	<etcitem id="32002" name="Unidentified Gloves of Seal">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12611" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t44_g_i00"/>
+	</etcitem>
+	<etcitem id="32003" name="Unidentified Boots of Seal">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12612" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t44_b_i00"/>
+	</etcitem>
+	<etcitem id="32004" name="Unidentified Ring of Seal">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12613" level="1"/>
+		</skills>
+		<set name="icon" value="icon.accessary_ring_of_binding_i00"/>
+	</etcitem>
+	<etcitem id="32005" name="Unidentified Necklace of Seal">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12614" level="1"/>
+		</skills>
+		<set name="icon" value="icon.accessary_necklace_of_binding_i00"/>
+	</etcitem>
+	<etcitem id="32006" name="Unidentified Robe of Seal">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12615" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t44_ul_i00"/>
+	</etcitem>
+	<etcitem id="32007" name="Unidentified Earring of Seal">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12616" level="1"/>
+		</skills>
+		<set name="icon" value="icon.accessary_earing_of_binding_i00"/>
+	</etcitem>
+	<etcitem id="32008" name="Unidentified Earring of Seal">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12617" level="1"/>
+		</skills>
+		<set name="icon" value="icon.accessary_earing_of_binding_i00"/>
+	</etcitem>
+	<etcitem id="32009" name="Unidentified Bonebreaker">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12618" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_bonebreaker_i00"/>
+	</etcitem>
+	<etcitem id="32010" name="Unidentified Proof of Revenge">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12619" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_proof_of_revenge_i00"/>
+	</etcitem>
+	<etcitem id="32011" name="Unidentified Bellion Cestus">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12620" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_bellion_cestus_i00"/>
+	</etcitem>
+	<etcitem id="32012" name="Unidentified Berserker Blade">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12621" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_berserker_blade_i00"/>
+	</etcitem>
+	<etcitem id="32013" name="Unidentified Battle Axe">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12622" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_battle_axe_i00"/>
+	</etcitem>
+	<etcitem id="32014" name="Unidentified Bec de Corbin">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12623" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_bech_de_corbin_i00"/>
+	</etcitem>
+	<etcitem id="32015" name="Unidentified Ballista">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12624" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_arbalest_i00"/>
+	</etcitem>
+	<etcitem id="32016" name="Unidentified Ballista">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12625" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_arbalest_i00"/>
+	</etcitem>
+	<etcitem id="32017" name="Unidentified Bastard Sword*Sword of Revolution">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12626" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+	</etcitem>
+	<etcitem id="32018" name="Unidentified Bastard Sword*Crimson Sword">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12627" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+	</etcitem>
+	<etcitem id="32019" name="Unidentified Bastard Sword*Artisan's Sword">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12628" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+	</etcitem>
+	<etcitem id="32020" name="Unidentified Bastard Sword*Elven Sword">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12629" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+	</etcitem>
+	<etcitem id="32021" name="Unidentified Bastard Sword*Elven Long Sword">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12630" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+	</etcitem>
+	<etcitem id="32022" name="Unidentified Bastard Sword*Spinebone Sword">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12631" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+	</etcitem>
+	<etcitem id="32023" name="Unidentified Bastard Sword*Bastard Sword">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12632" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+	</etcitem>
+	<etcitem id="32024" name="Unidentified Bastard Sword*Knight's Sword">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12633" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+	</etcitem>
+	<etcitem id="32025" name="Unidentified Bastard Sword">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12634" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_bastard_sword_i00"/>
+	</etcitem>
+	<etcitem id="32026" name="Unidentified Basalt Battlehammer">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12635" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_basalt_battlehammer_i00"/>
+	</etcitem>
+	<etcitem id="32027" name="Unidentified Body Slasher">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12636" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_body_slasher_i00"/>
+	</etcitem>
+	<etcitem id="32028" name="Unidentified Bagh-Nakh">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12637" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_baghnakh_i00"/>
+	</etcitem>
+	<etcitem id="32029" name="Unidentified Sword of Delusion">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12638" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_sword_of_delusion_i00"/>
+	</etcitem>
+	<etcitem id="32030" name="Unidentified Meteor Shower">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12639" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_meteor_shower_i00"/>
+	</etcitem>
+	<etcitem id="32031" name="Unidentified Mystic Staff">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12640" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_mystic_staff_i00"/>
+	</etcitem>
+	<etcitem id="32032" name="Unidentified Mystic Knife">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12641" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_mystic_knife_i00"/>
+	</etcitem>
+	<etcitem id="32033" name="Unidentified Mysterious Sword">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12642" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_mystery_sword_i00"/>
+	</etcitem>
+	<etcitem id="32034" name="Unidentified Mithril Breastplate">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12643" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t19_u_i00"/>
+	</etcitem>
+	<etcitem id="32035" name="Unidentified Mithril Stockings">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12644" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t51_l_i00"/>
+	</etcitem>
+	<etcitem id="32036" name="Unidentified Mithril Stockings">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12645" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t51_l_i00"/>
+	</etcitem>
+	<etcitem id="32037" name="Unidentified Mithril Tunic">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12646" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t51_u_i00"/>
+	</etcitem>
+	<etcitem id="32038" name="Unidentified Mithril Tunic">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12647" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t51_u_i00"/>
+	</etcitem>
+	<etcitem id="32039" name="Unidentified Mithril Gloves">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12648" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t46_g_i00"/>
+	</etcitem>
+	<etcitem id="32040" name="Unidentified Mithril Gloves">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12649" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t46_g_i00"/>
+	</etcitem>
+	<etcitem id="32041" name="Unidentified Mithril Scale Gaiters">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12650" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t40_l_i00"/>
+	</etcitem>
+	<etcitem id="32042" name="Unidentified Mithril Banded Mail">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12651" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t10_u_i00"/>
+	</etcitem>
+	<etcitem id="32043" name="Unidentified Mithril Banded Gaiters">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12652" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t10_l_i00"/>
+	</etcitem>
+	<etcitem id="32044" name="Unidentified Mithril Ring">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12653" level="1"/>
+		</skills>
+		<set name="icon" value="icon.accessary_mithril_ring_i00"/>
+	</etcitem>
+	<etcitem id="32045" name="Unidentified Mithril Dagger">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12654" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_mithril_dagger_i00"/>
+	</etcitem>
+	<etcitem id="32046" name="Unidentified Mithril Gauntlets">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12655" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t61_g_i00"/>
+	</etcitem>
+	<etcitem id="32047" name="Unidentified Mithril Gaiters">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12656" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t19_l_i00"/>
+	</etcitem>
+	<etcitem id="32048" name="Unidentified Moonstone Earring">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12657" level="1"/>
+		</skills>
+		<set name="icon" value="icon.accessary_moonstone_earing_i00"/>
+	</etcitem>
+	<etcitem id="32049" name="Unidentified Moonstone Earring">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12658" level="1"/>
+		</skills>
+		<set name="icon" value="icon.accessary_moonstone_earing_i00"/>
+	</etcitem>
+	<etcitem id="32050" name="Unidentified Linen Shirt">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12659" level="1"/>
+		</skills>
+		<set name="icon" value="icon.etc_shirts_d_i01"/>
+	</etcitem>
+	<etcitem id="32051" name="Unidentified Morning Star">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12660" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_morning_star_i00"/>
+	</etcitem>
+	<etcitem id="32052" name="Unidentified Maingauche">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12661" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_maingauche_i00"/>
+	</etcitem>
+	<etcitem id="32053" name="Unidentified Major Arcana Circlet">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12662" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_circlet_i00"/>
+	</etcitem>
+	<etcitem id="32054" name="Unidentified Major Arcana Boots">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12663" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t90_b_i00"/>
+	</etcitem>
+	<etcitem id="32055" name="Unidentified Major Arcana Robe">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12664" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t90_ul_i00"/>
+	</etcitem>
+	<etcitem id="32056" name="Unidentified Major Arcana Gloves">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12665" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t90_g_i00"/>
+	</etcitem>
+	<etcitem id="32057" name="Unidentified Mace of Underworld">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12666" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_mace_of_underworld_i00"/>
+	</etcitem>
+	<etcitem id="32058" name="Unidentified Manticore Skin Gloves">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12667" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t42_g_i00"/>
+	</etcitem>
+	<etcitem id="32059" name="Unidentified Manticore Skin Shirt">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12668" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t42_u_i00"/>
+	</etcitem>
+	<etcitem id="32060" name="Unidentified Manticore Skin Boots">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12669" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t42_b_i00"/>
+	</etcitem>
+	<etcitem id="32061" name="Unidentified Manticore Skin Gaiters">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12670" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t42_l_i00"/>
+	</etcitem>
+	<etcitem id="32062" name="Unidentified Deadman's Staff">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12671" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_deadmans_staff_i00"/>
+	</etcitem>
+	<etcitem id="32063" name="Unidentified Majestic Plate Armor">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12672" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t83_ul_i00"/>
+	</etcitem>
+	<etcitem id="32064" name="Unidentified Majestic Earring">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12673" level="1"/>
+		</skills>
+		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
+	</etcitem>
+	<etcitem id="32065" name="Unidentified Majestic Circlet">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12674" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+	</etcitem>
+	<etcitem id="32066" name="Unidentified Majestic Boots">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12675" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t83_b_i02"/>
+	</etcitem>
+	<etcitem id="32067" name="Unidentified Majestic Ring">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12676" level="1"/>
+		</skills>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+	</etcitem>
+	<etcitem id="32068" name="Unidentified Majestic Robe">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12677" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t85_ul_i00"/>
+	</etcitem>
+	<etcitem id="32069" name="Unidentified Majestic Leather Armor">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12678" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t84_ul_i00"/>
+	</etcitem>
+	<etcitem id="32070" name="Unidentified Majestic Necklace">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12679" level="1"/>
+		</skills>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+	</etcitem>
+	<etcitem id="32071" name="Unidentified Majestic Gauntlets">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12680" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t83_g_i02"/>
+	</etcitem>
+	<etcitem id="32072" name="Unidentified Soulfire Dirk">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12681" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_dagger_of_magicflame_i00"/>
+	</etcitem>
+	<etcitem id="32073" name="Unidentified Wizard Stockings">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12682" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t17_l_i00"/>
+	</etcitem>
+	<etcitem id="32074" name="Unidentified Wizard Tunic">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12683" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t17_u_i00"/>
+	</etcitem>
+	<etcitem id="32075" name="Unidentified Staff of Magic">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12684" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_staff_of_magicpower_i00"/>
+	</etcitem>
+	<etcitem id="32076" name="Unidentified Ring of Magic">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12685" level="1"/>
+		</skills>
+		<set name="icon" value="icon.accessary_enchanted_ring_i00"/>
+	</etcitem>
+	<etcitem id="32077" name="Unidentified Ring of Magic">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12686" level="1"/>
+		</skills>
+		<set name="icon" value="icon.accessary_enchanted_ring_i00"/>
+	</etcitem>
+	<etcitem id="32078" name="Unidentified Necklace of Magic">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12687" level="1"/>
+		</skills>
+		<set name="icon" value="icon.accessary_enchanted_necklace_i00"/>
+	</etcitem>
+	<etcitem id="32079" name="Unidentified Necklace of Magic">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12688" level="1"/>
+		</skills>
+		<set name="icon" value="icon.accessary_enchanted_necklace_i00"/>
+	</etcitem>
+	<etcitem id="32080" name="Unidentified Earring of Magic">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12689" level="1"/>
+		</skills>
+		<set name="icon" value="icon.accessary_enchanted_earing_i00"/>
+	</etcitem>
+	<etcitem id="32081" name="Unidentified Earring of Magic">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12690" level="1"/>
+		</skills>
+		<set name="icon" value="icon.accessary_enchanted_earing_i00"/>
+	</etcitem>
+	<etcitem id="32082" name="Unidentified Staff of Mana">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12691" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_staff_of_mana_i00"/>
+	</etcitem>
+	<etcitem id="32083" name="Unidentified Dagger of Mana">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12692" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_dagger_of_mana_i00"/>
+	</etcitem>
+	<etcitem id="32084" name="Unidentified Ring Breastplate">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12693" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t12_u_i00"/>
+	</etcitem>
+	<etcitem id="32085" name="Unidentified Longbow">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12694" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_long_bow_i00"/>
+	</etcitem>
+	<etcitem id="32086" name="Unidentified Rapier">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12695" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_rapier_i00"/>
+	</etcitem>
+	<etcitem id="32087" name="Unidentified Raid Sword*Raid Sword">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12696" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+	</etcitem>
+	<etcitem id="32088" name="Unidentified Raid Sword">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12697" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_raid_sword_i00"/>
+	</etcitem>
+	<etcitem id="32089" name="Unidentified Red Crescent">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12698" level="1"/>
+		</skills>
+		<set name="icon" value="icon.accessary_red_cresent_earing_i00"/>
+	</etcitem>
+	<etcitem id="32090" name="Unidentified Leather Armor of Doom">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12699" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t72_ul_i00"/>
+	</etcitem>
+	<etcitem id="32091" name="Unidentified Dark Crystal Leggings">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12700" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t75_l_i00"/>
+	</etcitem>
+	<etcitem id="32092" name="Unidentified Lance">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12701" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_lancia_i00"/>
+	</etcitem>
+	<etcitem id="32093" name="Unidentified Rind Leather Boots">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12702" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t49_b_i00"/>
+	</etcitem>
+	<etcitem id="32094" name="Unidentified Rind Leather Armor">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12703" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t49_u_i00"/>
+	</etcitem>
+	<etcitem id="32095" name="Unidentified Rind Leather Gloves">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12704" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t49_g_i00"/>
+	</etcitem>
+	<etcitem id="32096" name="Unidentified Rind Leather Gaiters">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12705" level="1"/>
+		</skills>
+		<set name="icon" value="icon.armor_t49_l_i00"/>
+	</etcitem>
+	<etcitem id="32097" name="Unidentified Dwarven Trident">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12706" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_dwarven_trident_i00"/>
+	</etcitem>
+	<etcitem id="32098" name="Unidentified Dwarven Hammer">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12707" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_dwarven_hammer_i00"/>
+	</etcitem>
+	<etcitem id="32099" name="Unidentified Dwarven Pike">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="12708" level="1"/>
+		</skills>
+		<set name="icon" value="icon.weapon_dwarven_pike_i00"/>
+	</etcitem>
+</list>

@@ -21,6 +21,7 @@ import lineage2.gameserver.data.xml.holder.RecipeHolder;
 import lineage2.gameserver.data.xml.parser.AirshipDockParser;
 import lineage2.gameserver.data.xml.parser.ArmorItemParser;
 import lineage2.gameserver.data.xml.parser.ArmorSetsParser;
+import lineage2.gameserver.data.xml.parser.BeautyShopParser;
 import lineage2.gameserver.data.xml.parser.CubicParser;
 import lineage2.gameserver.data.xml.parser.DomainParser;
 import lineage2.gameserver.data.xml.parser.DoorParser;
@@ -109,5 +110,6 @@ public abstract class Parsers
 		LevelBonusParser.getInstance().load();
 		
 		StatuesSpawnParser.getInstance().load();
+		BeautyShopParser.getInstance().load();
 	}
 }

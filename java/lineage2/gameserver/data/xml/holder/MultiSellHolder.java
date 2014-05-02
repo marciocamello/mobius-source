@@ -742,7 +742,7 @@ public class MultiSellHolder
 				for (MultiSellIngredient ingredient : ingridients)
 				{
 					ItemTemplate template = ingredient.getItemId() <= 0 ? null : ItemHolder.getInstance().getTemplate(ingredient.getItemId());
-					if ((ingredient.getItemId() <= 0) || nokey || template.isEquipment())
+					if ((ingredient.getItemId() <= 0) || nokey || ((template != null) && template.isEquipment()))
 					{
 						if (ingredient.getItemId() == 12374)
 						{
@@ -792,7 +792,7 @@ public class MultiSellHolder
 								MultiSellEntry possibleEntry = new MultiSellEntry(enchant ? ent.getEntryId() + (item.getEnchantLevel() * 100000) : ent.getEntryId());
 								for (MultiSellIngredient p : ent.getProduction())
 								{
-									if (enchant && template.canBeEnchanted())
+									if (enchant && (template != null) && template.canBeEnchanted())
 									{
 										p.setItemEnchant(item.getEnchantLevel());
 										p.setItemAttributes(item.getAttributes().clone());

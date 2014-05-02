@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="32200" name="Entien" title="Master">
@@ -37,20 +37,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<teach_classes>
-			<class id="123"/>	<!--maleSoldier-->
-			<class id="125"/>	<!--trooper-->
-			<class id="127"/>	<!--berserker-->
-			<class id="128"/>	<!--maleSoulbreaker-->
-			<class id="131"/>	<!--doombringer-->
-			<class id="132"/>	<!--maleSoulhound-->
-			<class id="135"/>	<!--inspector-->
-			<class id="136"/>	<!--judicator-->
+			<class id="123"/>
+			<class id="125"/>
+			<class id="127"/>
+			<class id="128"/>
+			<class id="131"/>
+			<class id="132"/>
+			<class id="135"/>
+			<class id="136"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -97,19 +97,19 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="9644"/>	<!--For NPC (Crossbow)-->
+			<rhand item_id="9644"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<teach_classes>
-			<class id="124"/>	<!--femaleSoldier-->
-			<class id="126"/>	<!--warder-->
-			<class id="129"/>	<!--femaleSoulbreaker-->
-			<class id="130"/>	<!--arbalester-->
-			<class id="134"/>	<!--trickster-->
-			<class id="135"/>	<!--inspector-->
-			<class id="136"/>	<!--judicator-->
+			<class id="124"/>
+			<class id="126"/>
+			<class id="129"/>
+			<class id="130"/>
+			<class id="134"/>
+			<class id="135"/>
+			<class id="136"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -156,10 +156,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<equip>
-			<rhand item_id="9644"/>	<!--For NPC (Crossbow)-->
+			<rhand item_id="9644"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -206,20 +206,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<teach_classes>
-			<class id="123"/>	<!--maleSoldier-->
-			<class id="125"/>	<!--trooper-->
-			<class id="127"/>	<!--berserker-->
-			<class id="128"/>	<!--maleSoulbreaker-->
-			<class id="131"/>	<!--doombringer-->
-			<class id="132"/>	<!--maleSoulhound-->
-			<class id="135"/>	<!--inspector-->
-			<class id="136"/>	<!--judicator-->
+			<class id="123"/>
+			<class id="125"/>
+			<class id="127"/>
+			<class id="128"/>
+			<class id="131"/>
+			<class id="132"/>
+			<class id="135"/>
+			<class id="136"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -266,19 +266,19 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="9644"/>	<!--For NPC (Crossbow)-->
+			<rhand item_id="9644"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<teach_classes>
-			<class id="124"/>	<!--femaleSoldier-->
-			<class id="126"/>	<!--warder-->
-			<class id="129"/>	<!--femaleSoulbreaker-->
-			<class id="130"/>	<!--arbalester-->
-			<class id="134"/>	<!--trickster-->
-			<class id="135"/>	<!--inspector-->
-			<class id="136"/>	<!--judicator-->
+			<class id="124"/>
+			<class id="126"/>
+			<class id="129"/>
+			<class id="130"/>
+			<class id="134"/>
+			<class id="135"/>
+			<class id="136"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -325,10 +325,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -375,10 +375,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -425,20 +425,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<teach_classes>
-			<class id="123"/>	<!--maleSoldier-->
-			<class id="125"/>	<!--trooper-->
-			<class id="127"/>	<!--berserker-->
-			<class id="128"/>	<!--maleSoulbreaker-->
-			<class id="131"/>	<!--doombringer-->
-			<class id="132"/>	<!--maleSoulhound-->
-			<class id="135"/>	<!--inspector-->
-			<class id="136"/>	<!--judicator-->
+			<class id="123"/>
+			<class id="125"/>
+			<class id="127"/>
+			<class id="128"/>
+			<class id="131"/>
+			<class id="132"/>
+			<class id="135"/>
+			<class id="136"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -485,19 +485,19 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="9644"/>	<!--For NPC (Crossbow)-->
+			<rhand item_id="9644"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<teach_classes>
-			<class id="124"/>	<!--femaleSoldier-->
-			<class id="126"/>	<!--warder-->
-			<class id="129"/>	<!--femaleSoulbreaker-->
-			<class id="130"/>	<!--arbalester-->
-			<class id="134"/>	<!--trickster-->
-			<class id="135"/>	<!--inspector-->
-			<class id="136"/>	<!--judicator-->
+			<class id="124"/>
+			<class id="126"/>
+			<class id="129"/>
+			<class id="130"/>
+			<class id="134"/>
+			<class id="135"/>
+			<class id="136"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -544,10 +544,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<equip>
-			<rhand item_id="9645"/>	<!--For NPC (Sword)-->
+			<rhand item_id="9645"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -594,10 +594,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<equip>
-			<rhand item_id="9644"/>	<!--For NPC (Crossbow)-->
+			<rhand item_id="9644"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -644,20 +644,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<teach_classes>
-			<class id="123"/>	<!--maleSoldier-->
-			<class id="125"/>	<!--trooper-->
-			<class id="127"/>	<!--berserker-->
-			<class id="128"/>	<!--maleSoulbreaker-->
-			<class id="131"/>	<!--doombringer-->
-			<class id="132"/>	<!--maleSoulhound-->
-			<class id="135"/>	<!--inspector-->
-			<class id="136"/>	<!--judicator-->
+			<class id="123"/>
+			<class id="125"/>
+			<class id="127"/>
+			<class id="128"/>
+			<class id="131"/>
+			<class id="132"/>
+			<class id="135"/>
+			<class id="136"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -704,19 +704,19 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="9644"/>	<!--For NPC (Crossbow)-->
+			<rhand item_id="9644"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<teach_classes>
-			<class id="124"/>	<!--femaleSoldier-->
-			<class id="126"/>	<!--warder-->
-			<class id="129"/>	<!--femaleSoulbreaker-->
-			<class id="130"/>	<!--arbalester-->
-			<class id="134"/>	<!--trickster-->
-			<class id="135"/>	<!--inspector-->
-			<class id="136"/>	<!--judicator-->
+			<class id="124"/>
+			<class id="126"/>
+			<class id="129"/>
+			<class id="130"/>
+			<class id="134"/>
+			<class id="135"/>
+			<class id="136"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -763,10 +763,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -813,10 +813,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -863,20 +863,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<teach_classes>
-			<class id="123"/>	<!--maleSoldier-->
-			<class id="125"/>	<!--trooper-->
-			<class id="127"/>	<!--berserker-->
-			<class id="128"/>	<!--maleSoulbreaker-->
-			<class id="131"/>	<!--doombringer-->
-			<class id="132"/>	<!--maleSoulhound-->
-			<class id="135"/>	<!--inspector-->
-			<class id="136"/>	<!--judicator-->
+			<class id="123"/>
+			<class id="125"/>
+			<class id="127"/>
+			<class id="128"/>
+			<class id="131"/>
+			<class id="132"/>
+			<class id="135"/>
+			<class id="136"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -923,19 +923,19 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="9644"/>	<!--For NPC (Crossbow)-->
+			<rhand item_id="9644"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<teach_classes>
-			<class id="124"/>	<!--femaleSoldier-->
-			<class id="126"/>	<!--warder-->
-			<class id="129"/>	<!--femaleSoulbreaker-->
-			<class id="130"/>	<!--arbalester-->
-			<class id="134"/>	<!--trickster-->
-			<class id="135"/>	<!--inspector-->
-			<class id="136"/>	<!--judicator-->
+			<class id="124"/>
+			<class id="126"/>
+			<class id="129"/>
+			<class id="130"/>
+			<class id="134"/>
+			<class id="135"/>
+			<class id="136"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -982,10 +982,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<equip>
-			<rhand item_id="9645"/>	<!--For NPC (Sword)-->
+			<rhand item_id="9645"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1032,10 +1032,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<equip>
-			<rhand item_id="9644"/>	<!--For NPC (Crossbow)-->
+			<rhand item_id="9644"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1082,20 +1082,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<teach_classes>
-			<class id="123"/>	<!--maleSoldier-->
-			<class id="125"/>	<!--trooper-->
-			<class id="127"/>	<!--berserker-->
-			<class id="128"/>	<!--maleSoulbreaker-->
-			<class id="131"/>	<!--doombringer-->
-			<class id="132"/>	<!--maleSoulhound-->
-			<class id="135"/>	<!--inspector-->
-			<class id="136"/>	<!--judicator-->
+			<class id="123"/>
+			<class id="125"/>
+			<class id="127"/>
+			<class id="128"/>
+			<class id="131"/>
+			<class id="132"/>
+			<class id="135"/>
+			<class id="136"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1142,19 +1142,19 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="9644"/>	<!--For NPC (Crossbow)-->
+			<rhand item_id="9644"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<teach_classes>
-			<class id="124"/>	<!--femaleSoldier-->
-			<class id="126"/>	<!--warder-->
-			<class id="129"/>	<!--femaleSoulbreaker-->
-			<class id="130"/>	<!--arbalester-->
-			<class id="134"/>	<!--trickster-->
-			<class id="135"/>	<!--inspector-->
-			<class id="136"/>	<!--judicator-->
+			<class id="124"/>
+			<class id="126"/>
+			<class id="129"/>
+			<class id="130"/>
+			<class id="134"/>
+			<class id="135"/>
+			<class id="136"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1201,10 +1201,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1251,10 +1251,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1301,20 +1301,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<teach_classes>
-			<class id="123"/>	<!--maleSoldier-->
-			<class id="125"/>	<!--trooper-->
-			<class id="127"/>	<!--berserker-->
-			<class id="128"/>	<!--maleSoulbreaker-->
-			<class id="131"/>	<!--doombringer-->
-			<class id="132"/>	<!--maleSoulhound-->
-			<class id="135"/>	<!--inspector-->
-			<class id="136"/>	<!--judicator-->
+			<class id="123"/>
+			<class id="125"/>
+			<class id="127"/>
+			<class id="128"/>
+			<class id="131"/>
+			<class id="132"/>
+			<class id="135"/>
+			<class id="136"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1361,19 +1361,19 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="9644"/>	<!--For NPC (Crossbow)-->
+			<rhand item_id="9644"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<teach_classes>
-			<class id="124"/>	<!--femaleSoldier-->
-			<class id="126"/>	<!--warder-->
-			<class id="129"/>	<!--femaleSoulbreaker-->
-			<class id="130"/>	<!--arbalester-->
-			<class id="134"/>	<!--trickster-->
-			<class id="135"/>	<!--inspector-->
-			<class id="136"/>	<!--judicator-->
+			<class id="124"/>
+			<class id="126"/>
+			<class id="129"/>
+			<class id="130"/>
+			<class id="134"/>
+			<class id="135"/>
+			<class id="136"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1420,10 +1420,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<equip>
-			<rhand item_id="9645"/>	<!--For NPC (Sword)-->
+			<rhand item_id="9645"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1470,10 +1470,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<equip>
-			<rhand item_id="9644"/>	<!--For NPC (Crossbow)-->
+			<rhand item_id="9644"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1520,20 +1520,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<teach_classes>
-			<class id="123"/>	<!--maleSoldier-->
-			<class id="125"/>	<!--trooper-->
-			<class id="127"/>	<!--berserker-->
-			<class id="128"/>	<!--maleSoulbreaker-->
-			<class id="131"/>	<!--doombringer-->
-			<class id="132"/>	<!--maleSoulhound-->
-			<class id="135"/>	<!--inspector-->
-			<class id="136"/>	<!--judicator-->
+			<class id="123"/>
+			<class id="125"/>
+			<class id="127"/>
+			<class id="128"/>
+			<class id="131"/>
+			<class id="132"/>
+			<class id="135"/>
+			<class id="136"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1580,19 +1580,19 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="9644"/>	<!--For NPC (Crossbow)-->
+			<rhand item_id="9644"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<teach_classes>
-			<class id="124"/>	<!--femaleSoldier-->
-			<class id="126"/>	<!--warder-->
-			<class id="129"/>	<!--femaleSoulbreaker-->
-			<class id="130"/>	<!--arbalester-->
-			<class id="134"/>	<!--trickster-->
-			<class id="135"/>	<!--inspector-->
-			<class id="136"/>	<!--judicator-->
+			<class id="124"/>
+			<class id="126"/>
+			<class id="129"/>
+			<class id="130"/>
+			<class id="134"/>
+			<class id="135"/>
+			<class id="136"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1639,10 +1639,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1689,10 +1689,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1739,20 +1739,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<teach_classes>
-			<class id="123"/>	<!--maleSoldier-->
-			<class id="125"/>	<!--trooper-->
-			<class id="127"/>	<!--berserker-->
-			<class id="128"/>	<!--maleSoulbreaker-->
-			<class id="131"/>	<!--doombringer-->
-			<class id="132"/>	<!--maleSoulhound-->
-			<class id="135"/>	<!--inspector-->
-			<class id="136"/>	<!--judicator-->
+			<class id="123"/>
+			<class id="125"/>
+			<class id="127"/>
+			<class id="128"/>
+			<class id="131"/>
+			<class id="132"/>
+			<class id="135"/>
+			<class id="136"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1799,19 +1799,19 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="9644"/>	<!--For NPC (Crossbow)-->
+			<rhand item_id="9644"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<teach_classes>
-			<class id="124"/>	<!--femaleSoldier-->
-			<class id="126"/>	<!--warder-->
-			<class id="129"/>	<!--femaleSoulbreaker-->
-			<class id="130"/>	<!--arbalester-->
-			<class id="134"/>	<!--trickster-->
-			<class id="135"/>	<!--inspector-->
-			<class id="136"/>	<!--judicator-->
+			<class id="124"/>
+			<class id="126"/>
+			<class id="129"/>
+			<class id="130"/>
+			<class id="134"/>
+			<class id="135"/>
+			<class id="136"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1858,10 +1858,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<equip>
-			<rhand item_id="9645"/>	<!--For NPC (Sword)-->
+			<rhand item_id="9645"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1908,10 +1908,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<equip>
-			<rhand item_id="9644"/>	<!--For NPC (Crossbow)-->
+			<rhand item_id="9644"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1957,10 +1957,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2006,10 +2006,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="9645"/>	<!--For NPC (Sword)-->
+			<rhand item_id="9645"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2055,10 +2055,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="9644"/>	<!--For NPC (Crossbow)-->
+			<rhand item_id="9644"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2104,7 +2104,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2150,7 +2150,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2196,10 +2196,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2245,10 +2245,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2294,10 +2294,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="9646"/>	<!--For NPC (Rapier)-->
+			<rhand item_id="9646"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2343,7 +2343,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2389,7 +2389,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2435,7 +2435,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2481,7 +2481,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2527,7 +2527,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2573,7 +2573,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2619,7 +2619,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2665,7 +2665,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2711,7 +2711,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2757,7 +2757,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2803,10 +2803,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="9645"/>	<!--For NPC (Sword)-->
+			<rhand item_id="9645"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2852,10 +2852,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="9645"/>	<!--For NPC (Sword)-->
+			<rhand item_id="9645"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2901,7 +2901,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2947,7 +2947,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2993,7 +2993,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3039,7 +3039,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3085,7 +3085,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3131,7 +3131,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3177,7 +3177,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3223,7 +3223,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3269,10 +3269,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="9644"/>	<!--For NPC (Crossbow)-->
+			<rhand item_id="9644"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3318,7 +3318,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3364,7 +3364,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3410,7 +3410,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3456,7 +3456,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3502,7 +3502,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3548,7 +3548,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3594,7 +3594,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3640,7 +3640,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3686,7 +3686,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3732,7 +3732,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3778,7 +3778,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3824,7 +3824,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3870,7 +3870,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3916,7 +3916,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3962,7 +3962,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -4008,7 +4008,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -4054,7 +4054,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -4100,7 +4100,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -4146,7 +4146,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -4192,7 +4192,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -4238,7 +4238,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -4284,7 +4284,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -4330,7 +4330,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -4376,7 +4376,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="CaravanTrader"/>
 		<skills>
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -4422,7 +4422,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="1"/>	<!--Undead-->
+			<skill id="4416" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -4468,7 +4468,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="CaravanTrader"/>
 		<skills>
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -4514,7 +4514,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="CaravanTrader"/>
 		<skills>
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -4560,7 +4560,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="QuarrySlave"/>
 		<skills>
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>

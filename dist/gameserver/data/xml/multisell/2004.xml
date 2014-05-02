@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
-<!DOCTYPE list SYSTEM "multisell.dtd">
-<!--Blacksmith Dual Swords B grade-->
+<?xml version="1.0"?>
 <list>
 	<item>
 		<ingredient id="73" count="1"/>

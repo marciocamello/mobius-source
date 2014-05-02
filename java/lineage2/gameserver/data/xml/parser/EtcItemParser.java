@@ -65,7 +65,7 @@ public final class EtcItemParser extends StatParser<ItemHolder>
 	@Override
 	public File getXMLDir()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/xml/stats/items/etcitem/");
+		return new File(Config.DATAPACK_ROOT, "data/xml/items/etcitem/");
 	}
 	
 	/**

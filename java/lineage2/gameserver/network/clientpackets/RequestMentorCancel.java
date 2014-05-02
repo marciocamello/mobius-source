@@ -57,7 +57,7 @@ public class RequestMentorCancel extends L2GameClientPacket
 			Player mentorChar = World.getPlayer(mentorName);
 			mentorChar.getMenteeMentorList().remove(activeChar.getName(), true, true);
 			mentorChar.sendPacket(new ExMentorList(mentorChar));
-			if ((activeChar != null) && activeChar.isOnline())
+			if (activeChar.isOnline())
 			{
 				activeChar.getMenteeMentorList().remove(mentorChar.getName(), false, false);
 				activeChar.sendPacket(new ExMentorList(activeChar));

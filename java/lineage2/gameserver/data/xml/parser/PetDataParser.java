@@ -66,7 +66,7 @@ public class PetDataParser extends AbstractDirParser<PetDataHolder>
 	@Override
 	public File getXMLDir()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/xml/stats/pets/");
+		return new File(Config.DATAPACK_ROOT, "data/xml/pets/");
 	}
 	
 	/**

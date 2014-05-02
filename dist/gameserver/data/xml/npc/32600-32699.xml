@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="32600" name="Alegria" title="Birthday Helper">
@@ -36,7 +36,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -82,7 +82,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -128,7 +128,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -174,11 +174,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="13524"/>	<!--Gracian Soldier One-handed Sword-->
-			<lhand item_id="13525"/>	<!--Gracian Soldier Shield-->
+			<rhand item_id="13524"/>
+			<lhand item_id="13525"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -228,7 +228,7 @@
 			<set name="platformId" value="0"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -278,7 +278,7 @@
 			<set name="platformId" value="0"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -891,7 +891,7 @@
 			<set name="noChatWindow" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="13524"/>	<!--Gracian Soldier One-handed Sword-->
+			<rhand item_id="13524"/>
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -937,8 +937,8 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="13524"/>	<!--Gracian Soldier One-handed Sword-->
-			<lhand item_id="13525"/>	<!--Gracian Soldier Shield-->
+			<rhand item_id="13524"/>
+			<lhand item_id="13525"/>
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -984,8 +984,8 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="13524"/>	<!--Gracian Soldier One-handed Sword-->
-			<lhand item_id="13525"/>	<!--Gracian Soldier Shield-->
+			<rhand item_id="13524"/>
+			<lhand item_id="13525"/>
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1203,8 +1203,8 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="13524"/>	<!--Gracian Soldier One-handed Sword-->
-			<lhand item_id="13525"/>	<!--Gracian Soldier Shield-->
+			<rhand item_id="13524"/>
+			<lhand item_id="13525"/>
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1293,7 +1293,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="94"/>	<!--Bec de Corbin-->
+			<rhand item_id="94"/>
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1339,7 +1339,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="94"/>	<!--Bec de Corbin-->
+			<rhand item_id="94"/>
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1643,7 +1643,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="313"/>	<!--Temptation of Abyss-->
+			<rhand item_id="313"/>
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2119,7 +2119,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="135"/>	<!--Samurai Longsword-->
+			<rhand item_id="135"/>
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20"/>

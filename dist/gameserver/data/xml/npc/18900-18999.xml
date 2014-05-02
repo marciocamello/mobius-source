@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="18900" name="Full Grown Grendel" title="">
@@ -37,47 +37,47 @@
 		<set name="texture" value="LineageMonster5.rough_bionic_bear"/>
 		<set name="type" value="FeedableBeast"/>
 		<skills>
-			<skill id="4071" level="3"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4379" level="5"/>	<!--Resist Spear Weapons-->
-			<skill id="4410" level="16"/>	<!--Very Strong P. Atk.-->
-			<skill id="4411" level="15"/>	<!--Strong M. Atk.-->
-			<skill id="4412" level="16"/>	<!--Very Strong P. Def.-->
-			<skill id="4413" level="18"/>	<!--Extremely Strong M. Def.-->
-			<skill id="4416" level="4"/>	<!--Animals-->
-			<skill id="5463" level="1"/>	<!--Water Attacks-->
-			<skill id="5620" level="7"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="4071" level="3"/>
+			<skill id="4379" level="5"/>
+			<skill id="4410" level="16"/>
+			<skill id="4411" level="15"/>
+			<skill id="4412" level="16"/>
+			<skill id="4413" level="18"/>
+			<skill id="4416" level="4"/>
+			<skill id="5463" level="1"/>
+			<skill id="5620" level="7"/>
 		</skills>
 		<rewardlist type="NOT_RATED_GROUPED">
 			<group chance="42.0">
-				<reward item_id="8600" min="1" max="1" chance="55.0000"/>	<!--Herb of Life-->
-				<reward item_id="8601" min="1" max="1" chance="38.0000"/>	<!--Greater Herb of Life-->
-				<reward item_id="8602" min="1" max="1" chance="7.0000"/>	<!--Superior Herb of Life-->
+				<reward item_id="8600" min="1" max="1" chance="55.0000"/>
+				<reward item_id="8601" min="1" max="1" chance="38.0000"/>
+				<reward item_id="8602" min="1" max="1" chance="7.0000"/>
 			</group>
 			<group chance="11.0">
-				<reward item_id="8603" min="1" max="1" chance="40.0000"/>	<!--Herb of Mana-->
-				<reward item_id="8604" min="1" max="1" chance="52.0000"/>	<!--Greater Herb of Mana-->
-				<reward item_id="8605" min="1" max="1" chance="8.0000"/>	<!--Superior Herb of Mana-->
+				<reward item_id="8603" min="1" max="1" chance="40.0000"/>
+				<reward item_id="8604" min="1" max="1" chance="52.0000"/>
+				<reward item_id="8605" min="1" max="1" chance="8.0000"/>
 			</group>
 			<group chance="25.0">
-				<reward item_id="8606" min="1" max="1" chance="20.0000"/>	<!--Herb of Power-->
-				<reward item_id="8608" min="1" max="1" chance="20.0000"/>	<!--Herb of Alacrity-->
-				<reward item_id="8610" min="1" max="1" chance="20.0000"/>	<!--Herb of Critical Attack - Probability-->
-				<reward item_id="10655" min="1" max="1" chance="20.0000"/>	<!--Herb of Vampiric Rage-->
-				<reward item_id="10656" min="1" max="1" chance="20.0000"/>	<!--Herb of Critical Attack - Power-->
+				<reward item_id="8606" min="1" max="1" chance="20.0000"/>
+				<reward item_id="8608" min="1" max="1" chance="20.0000"/>
+				<reward item_id="8610" min="1" max="1" chance="20.0000"/>
+				<reward item_id="10655" min="1" max="1" chance="20.0000"/>
+				<reward item_id="10656" min="1" max="1" chance="20.0000"/>
 			</group>
 			<group chance="10.0">
-				<reward item_id="8607" min="1" max="1" chance="50.0000"/>	<!--Herb of Magic-->
-				<reward item_id="8609" min="1" max="1" chance="50.0000"/>	<!--Herb of Casting Spd.-->
+				<reward item_id="8607" min="1" max="1" chance="50.0000"/>
+				<reward item_id="8609" min="1" max="1" chance="50.0000"/>
 			</group>
 			<group chance="1.0">
-				<reward item_id="8612" min="1" max="1" chance="33.0000"/>	<!--Herb of the Warrior-->
-				<reward item_id="8613" min="1" max="1" chance="33.0000"/>	<!--Herb of the Mystic-->
-				<reward item_id="8614" min="1" max="1" chance="34.0000"/>	<!--Herb of Recovery-->
+				<reward item_id="8612" min="1" max="1" chance="33.0000"/>
+				<reward item_id="8613" min="1" max="1" chance="33.0000"/>
+				<reward item_id="8614" min="1" max="1" chance="34.0000"/>
 			</group>
 			<group chance="11.0">
-				<reward item_id="8611" min="1" max="1" chance="94.0000"/>	<!--Herb of Speed-->
-				<reward item_id="10657" min="1" max="1" chance="3.0000"/>	<!--Herb of Doubt-->
-				<reward item_id="13028" min="1" max="1" chance="3.0000"/>	<!--Vitality Replenishing Herb-->
+				<reward item_id="8611" min="1" max="1" chance="94.0000"/>
+				<reward item_id="10657" min="1" max="1" chance="3.0000"/>
+				<reward item_id="13028" min="1" max="1" chance="3.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -351,88 +351,88 @@
 		<set name="texture" value="LineageMonster5.xel_mahum_warrior"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4071" level="3"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4410" level="13"/>	<!--Slightly Strong P. Atk.-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="5463" level="1"/>	<!--Water Attacks-->
-			<skill id="5620" level="2"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="4071" level="3"/>
+			<skill id="4410" level="13"/>
+			<skill id="4416" level="6"/>
+			<skill id="5463" level="1"/>
+			<skill id="5620" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="686" max="1402" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="686" max="1402" chance="100.0000"/>
 			</group>
 			<group chance="0.6239">
-				<reward item_id="15703" min="1" max="1" chance="0.0442"/>	<!--Sealed Moirai Gauntlet -->
-				<reward item_id="15704" min="1" max="1" chance="0.0442"/>	<!--Sealed Moirai Leather Gloves -->
-				<reward item_id="15705" min="1" max="1" chance="0.0442"/>	<!--Sealed Moirai Gloves -->
-				<reward item_id="15706" min="1" max="1" chance="0.0442"/>	<!--Sealed Moirai Boots -->
-				<reward item_id="15707" min="1" max="1" chance="0.0442"/>	<!--Sealed Moirai Leather Boots -->
-				<reward item_id="15708" min="1" max="1" chance="0.0442"/>	<!--Sealed Moirai Shoes -->
-				<reward item_id="15654" min="1" max="1" chance="16.6224"/>	<!--Sealed Moirai Gauntlet Piece-->
-				<reward item_id="15655" min="1" max="1" chance="16.6224"/>	<!--Sealed Moirai Leather Gloves Piece-->
-				<reward item_id="15656" min="1" max="1" chance="16.6224"/>	<!--Sealed Moirai Gloves Piece-->
-				<reward item_id="15657" min="1" max="1" chance="16.6224"/>	<!--Sealed Moirai Boots Piece-->
-				<reward item_id="15658" min="1" max="1" chance="16.6224"/>	<!--Sealed Moirai Leather Boots Piece-->
-				<reward item_id="15659" min="1" max="1" chance="16.6228"/>	<!--Sealed Moirai Shoes Piece-->
+				<reward item_id="15703" min="1" max="1" chance="0.0442"/>
+				<reward item_id="15704" min="1" max="1" chance="0.0442"/>
+				<reward item_id="15705" min="1" max="1" chance="0.0442"/>
+				<reward item_id="15706" min="1" max="1" chance="0.0442"/>
+				<reward item_id="15707" min="1" max="1" chance="0.0442"/>
+				<reward item_id="15708" min="1" max="1" chance="0.0442"/>
+				<reward item_id="15654" min="1" max="1" chance="16.6224"/>
+				<reward item_id="15655" min="1" max="1" chance="16.6224"/>
+				<reward item_id="15656" min="1" max="1" chance="16.6224"/>
+				<reward item_id="15657" min="1" max="1" chance="16.6224"/>
+				<reward item_id="15658" min="1" max="1" chance="16.6224"/>
+				<reward item_id="15659" min="1" max="1" chance="16.6228"/>
 			</group>
 			<group chance="4.8105">
-				<reward item_id="1879" min="1" max="1" chance="60.3191"/>	<!--Cokes-->
-				<reward item_id="1885" min="1" max="1" chance="30.1595"/>	<!--High-Grade Suede-->
-				<reward item_id="9628" min="1" max="1" chance="2.8385"/>	<!--Leonard-->
-				<reward item_id="9630" min="1" max="1" chance="1.9048"/>	<!--Orichalcum-->
-				<reward item_id="9629" min="1" max="1" chance="1.5735"/>	<!--Adamantine-->
-				<reward item_id="10483" min="1" max="1" chance="2.5133"/>	<!--Life Stone -  Level 82-->
-				<reward item_id="10484" min="1" max="1" chance="0.6283"/>	<!--Mid-Grade Life Stone -  Level 82-->
-				<reward item_id="10485" min="1" max="1" chance="0.0630"/>	<!--High-Grade Life Stone -  Level 82-->
+				<reward item_id="1879" min="1" max="1" chance="60.3191"/>
+				<reward item_id="1885" min="1" max="1" chance="30.1595"/>
+				<reward item_id="9628" min="1" max="1" chance="2.8385"/>
+				<reward item_id="9630" min="1" max="1" chance="1.9048"/>
+				<reward item_id="9629" min="1" max="1" chance="1.5735"/>
+				<reward item_id="10483" min="1" max="1" chance="2.5133"/>
+				<reward item_id="10484" min="1" max="1" chance="0.6283"/>
+				<reward item_id="10485" min="1" max="1" chance="0.0630"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="NOT_RATED_GROUPED">
 			<group chance="42.0">
-				<reward item_id="8600" min="1" max="1" chance="55.0000"/>	<!--Herb of Life-->
-				<reward item_id="8601" min="1" max="1" chance="38.0000"/>	<!--Greater Herb of Life-->
-				<reward item_id="8602" min="1" max="1" chance="7.0000"/>	<!--Superior Herb of Life-->
+				<reward item_id="8600" min="1" max="1" chance="55.0000"/>
+				<reward item_id="8601" min="1" max="1" chance="38.0000"/>
+				<reward item_id="8602" min="1" max="1" chance="7.0000"/>
 			</group>
 			<group chance="11.0">
-				<reward item_id="8603" min="1" max="1" chance="40.0000"/>	<!--Herb of Mana-->
-				<reward item_id="8604" min="1" max="1" chance="52.0000"/>	<!--Greater Herb of Mana-->
-				<reward item_id="8605" min="1" max="1" chance="8.0000"/>	<!--Superior Herb of Mana-->
+				<reward item_id="8603" min="1" max="1" chance="40.0000"/>
+				<reward item_id="8604" min="1" max="1" chance="52.0000"/>
+				<reward item_id="8605" min="1" max="1" chance="8.0000"/>
 			</group>
 			<group chance="25.0">
-				<reward item_id="8606" min="1" max="1" chance="20.0000"/>	<!--Herb of Power-->
-				<reward item_id="8608" min="1" max="1" chance="20.0000"/>	<!--Herb of Alacrity-->
-				<reward item_id="8610" min="1" max="1" chance="20.0000"/>	<!--Herb of Critical Attack - Probability-->
-				<reward item_id="10655" min="1" max="1" chance="20.0000"/>	<!--Herb of Vampiric Rage-->
-				<reward item_id="10656" min="1" max="1" chance="20.0000"/>	<!--Herb of Critical Attack - Power-->
+				<reward item_id="8606" min="1" max="1" chance="20.0000"/>
+				<reward item_id="8608" min="1" max="1" chance="20.0000"/>
+				<reward item_id="8610" min="1" max="1" chance="20.0000"/>
+				<reward item_id="10655" min="1" max="1" chance="20.0000"/>
+				<reward item_id="10656" min="1" max="1" chance="20.0000"/>
 			</group>
 			<group chance="10.0">
-				<reward item_id="8607" min="1" max="1" chance="50.0000"/>	<!--Herb of Magic-->
-				<reward item_id="8609" min="1" max="1" chance="50.0000"/>	<!--Herb of Casting Spd.-->
+				<reward item_id="8607" min="1" max="1" chance="50.0000"/>
+				<reward item_id="8609" min="1" max="1" chance="50.0000"/>
 			</group>
 			<group chance="1.0">
-				<reward item_id="8612" min="1" max="1" chance="33.0000"/>	<!--Herb of the Warrior-->
-				<reward item_id="8613" min="1" max="1" chance="33.0000"/>	<!--Herb of the Mystic-->
-				<reward item_id="8614" min="1" max="1" chance="34.0000"/>	<!--Herb of Recovery-->
+				<reward item_id="8612" min="1" max="1" chance="33.0000"/>
+				<reward item_id="8613" min="1" max="1" chance="33.0000"/>
+				<reward item_id="8614" min="1" max="1" chance="34.0000"/>
 			</group>
 			<group chance="11.0">
-				<reward item_id="8611" min="1" max="1" chance="94.0000"/>	<!--Herb of Speed-->
-				<reward item_id="10657" min="1" max="1" chance="3.0000"/>	<!--Herb of Doubt-->
-				<reward item_id="13028" min="1" max="1" chance="3.0000"/>	<!--Vitality Replenishing Herb-->
+				<reward item_id="8611" min="1" max="1" chance="94.0000"/>
+				<reward item_id="10657" min="1" max="1" chance="3.0000"/>
+				<reward item_id="13028" min="1" max="1" chance="3.0000"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="15654" min="1" max="1" chance="0.5826"/>	<!--Sealed Moirai Gauntlet Piece-->
-			<reward item_id="15655" min="1" max="1" chance="0.5826"/>	<!--Sealed Moirai Leather Gloves Piece-->
-			<reward item_id="15656" min="1" max="1" chance="0.5826"/>	<!--Sealed Moirai Gloves Piece-->
-			<reward item_id="15657" min="1" max="1" chance="0.5826"/>	<!--Sealed Moirai Boots Piece-->
-			<reward item_id="15658" min="1" max="1" chance="0.5826"/>	<!--Sealed Moirai Leather Boots Piece-->
-			<reward item_id="15659" min="1" max="1" chance="0.5826"/>	<!--Sealed Moirai Shoes Piece-->
-			<reward item_id="9630" min="1" max="1" chance="0.3434"/>	<!--Orichalcum-->
-			<reward item_id="15784" min="1" max="1" chance="0.0775"/>	<!--Recipe - Sealed Moirai Gauntlet (60%) -->
-			<reward item_id="15785" min="1" max="1" chance="0.0775"/>	<!--Recipe - Sealed Moirai Leather Gloves (60%) -->
-			<reward item_id="15786" min="1" max="1" chance="0.0775"/>	<!--Recipe - Sealed Moirai Gloves (60%) -->
-			<reward item_id="15787" min="1" max="1" chance="0.0775"/>	<!--Recipe - Sealed Moirai Boots (60%) -->
-			<reward item_id="15788" min="1" max="1" chance="0.0775"/>	<!--Recipe - Sealed Moirai Leather Boots (60%) -->
-			<reward item_id="15789" min="1" max="1" chance="0.0775"/>	<!--Recipe - Sealed Moirai Shoes (60%) -->
+			<reward item_id="15654" min="1" max="1" chance="0.5826"/>
+			<reward item_id="15655" min="1" max="1" chance="0.5826"/>
+			<reward item_id="15656" min="1" max="1" chance="0.5826"/>
+			<reward item_id="15657" min="1" max="1" chance="0.5826"/>
+			<reward item_id="15658" min="1" max="1" chance="0.5826"/>
+			<reward item_id="15659" min="1" max="1" chance="0.5826"/>
+			<reward item_id="9630" min="1" max="1" chance="0.3434"/>
+			<reward item_id="15784" min="1" max="1" chance="0.0775"/>
+			<reward item_id="15785" min="1" max="1" chance="0.0775"/>
+			<reward item_id="15786" min="1" max="1" chance="0.0775"/>
+			<reward item_id="15787" min="1" max="1" chance="0.0775"/>
+			<reward item_id="15788" min="1" max="1" chance="0.0775"/>
+			<reward item_id="15789" min="1" max="1" chance="0.0775"/>
 		</rewardlist>
 		<attributes>
 			<attack attribute="water" value="170"/>
@@ -480,83 +480,83 @@
 		<set name="texture" value="LineageMonster5.xel_mahum_sniper"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4071" level="3"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4410" level="13"/>	<!--Slightly Weak P. Atk.-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="5463" level="1"/>	<!--Water Attacks-->
-			<skill id="5620" level="2"/>	<!--Short-Range Physical Attack Weakness-->
+			<skill id="4071" level="3"/>
+			<skill id="4410" level="13"/>
+			<skill id="4416" level="6"/>
+			<skill id="5463" level="1"/>
+			<skill id="5620" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="725" max="1481" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="725" max="1481" chance="100.0000"/>
 			</group>
 			<group chance="0.5768">
-				<reward item_id="15694" min="1" max="1" chance="0.0404"/>	<!--Sealed Moirai Helmet -->
-				<reward item_id="15695" min="1" max="1" chance="0.0404"/>	<!--Sealed Moirai Leather Helmet -->
-				<reward item_id="15696" min="1" max="1" chance="0.0404"/>	<!--Sealed Moirai Circlet -->
-				<reward item_id="15710" min="1" max="1" chance="0.0578"/>	<!--Sealed Moirai Shield -->
-				<reward item_id="15709" min="1" max="1" chance="0.0578"/>	<!--Sealed Moirai Sigil -->
-				<reward item_id="15645" min="1" max="1" chance="15.1498"/>	<!--Sealed Moirai Helmet Piece-->
-				<reward item_id="15646" min="1" max="1" chance="15.1498"/>	<!--Sealed Moirai Leather Helmet Piece-->
-				<reward item_id="15647" min="1" max="1" chance="15.1498"/>	<!--Sealed Moirai Circlet Piece-->
-				<reward item_id="15693" min="1" max="1" chance="27.1569"/>	<!--Sealed Moirai Shield Piece-->
-				<reward item_id="15692" min="1" max="1" chance="27.1569"/>	<!--Sealed Moirai Sigil Piece-->
+				<reward item_id="15694" min="1" max="1" chance="0.0404"/>
+				<reward item_id="15695" min="1" max="1" chance="0.0404"/>
+				<reward item_id="15696" min="1" max="1" chance="0.0404"/>
+				<reward item_id="15710" min="1" max="1" chance="0.0578"/>
+				<reward item_id="15709" min="1" max="1" chance="0.0578"/>
+				<reward item_id="15645" min="1" max="1" chance="15.1498"/>
+				<reward item_id="15646" min="1" max="1" chance="15.1498"/>
+				<reward item_id="15647" min="1" max="1" chance="15.1498"/>
+				<reward item_id="15693" min="1" max="1" chance="27.1569"/>
+				<reward item_id="15692" min="1" max="1" chance="27.1569"/>
 			</group>
 			<group chance="5.0813">
-				<reward item_id="1879" min="1" max="1" chance="60.3191"/>	<!--Cokes-->
-				<reward item_id="1885" min="1" max="1" chance="30.1595"/>	<!--High-Grade Suede-->
-				<reward item_id="9628" min="1" max="1" chance="2.8385"/>	<!--Leonard-->
-				<reward item_id="9630" min="1" max="1" chance="1.9048"/>	<!--Orichalcum-->
-				<reward item_id="9629" min="1" max="1" chance="1.5735"/>	<!--Adamantine-->
-				<reward item_id="10483" min="1" max="1" chance="2.5133"/>	<!--Life Stone -  Level 82-->
-				<reward item_id="10484" min="1" max="1" chance="0.6283"/>	<!--Mid-Grade Life Stone -  Level 82-->
-				<reward item_id="10485" min="1" max="1" chance="0.0630"/>	<!--High-Grade Life Stone -  Level 82-->
+				<reward item_id="1879" min="1" max="1" chance="60.3191"/>
+				<reward item_id="1885" min="1" max="1" chance="30.1595"/>
+				<reward item_id="9628" min="1" max="1" chance="2.8385"/>
+				<reward item_id="9630" min="1" max="1" chance="1.9048"/>
+				<reward item_id="9629" min="1" max="1" chance="1.5735"/>
+				<reward item_id="10483" min="1" max="1" chance="2.5133"/>
+				<reward item_id="10484" min="1" max="1" chance="0.6283"/>
+				<reward item_id="10485" min="1" max="1" chance="0.0630"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="NOT_RATED_GROUPED">
 			<group chance="42.0">
-				<reward item_id="8600" min="1" max="1" chance="55.0000"/>	<!--Herb of Life-->
-				<reward item_id="8601" min="1" max="1" chance="38.0000"/>	<!--Greater Herb of Life-->
-				<reward item_id="8602" min="1" max="1" chance="7.0000"/>	<!--Superior Herb of Life-->
+				<reward item_id="8600" min="1" max="1" chance="55.0000"/>
+				<reward item_id="8601" min="1" max="1" chance="38.0000"/>
+				<reward item_id="8602" min="1" max="1" chance="7.0000"/>
 			</group>
 			<group chance="11.0">
-				<reward item_id="8603" min="1" max="1" chance="40.0000"/>	<!--Herb of Mana-->
-				<reward item_id="8604" min="1" max="1" chance="52.0000"/>	<!--Greater Herb of Mana-->
-				<reward item_id="8605" min="1" max="1" chance="8.0000"/>	<!--Superior Herb of Mana-->
+				<reward item_id="8603" min="1" max="1" chance="40.0000"/>
+				<reward item_id="8604" min="1" max="1" chance="52.0000"/>
+				<reward item_id="8605" min="1" max="1" chance="8.0000"/>
 			</group>
 			<group chance="25.0">
-				<reward item_id="8606" min="1" max="1" chance="20.0000"/>	<!--Herb of Power-->
-				<reward item_id="8608" min="1" max="1" chance="20.0000"/>	<!--Herb of Alacrity-->
-				<reward item_id="8610" min="1" max="1" chance="20.0000"/>	<!--Herb of Critical Attack - Probability-->
-				<reward item_id="10655" min="1" max="1" chance="20.0000"/>	<!--Herb of Vampiric Rage-->
-				<reward item_id="10656" min="1" max="1" chance="20.0000"/>	<!--Herb of Critical Attack - Power-->
+				<reward item_id="8606" min="1" max="1" chance="20.0000"/>
+				<reward item_id="8608" min="1" max="1" chance="20.0000"/>
+				<reward item_id="8610" min="1" max="1" chance="20.0000"/>
+				<reward item_id="10655" min="1" max="1" chance="20.0000"/>
+				<reward item_id="10656" min="1" max="1" chance="20.0000"/>
 			</group>
 			<group chance="10.0">
-				<reward item_id="8607" min="1" max="1" chance="50.0000"/>	<!--Herb of Magic-->
-				<reward item_id="8609" min="1" max="1" chance="50.0000"/>	<!--Herb of Casting Spd.-->
+				<reward item_id="8607" min="1" max="1" chance="50.0000"/>
+				<reward item_id="8609" min="1" max="1" chance="50.0000"/>
 			</group>
 			<group chance="1.0">
-				<reward item_id="8612" min="1" max="1" chance="33.0000"/>	<!--Herb of the Warrior-->
-				<reward item_id="8613" min="1" max="1" chance="33.0000"/>	<!--Herb of the Mystic-->
-				<reward item_id="8614" min="1" max="1" chance="34.0000"/>	<!--Herb of Recovery-->
+				<reward item_id="8612" min="1" max="1" chance="33.0000"/>
+				<reward item_id="8613" min="1" max="1" chance="33.0000"/>
+				<reward item_id="8614" min="1" max="1" chance="34.0000"/>
 			</group>
 			<group chance="11.0">
-				<reward item_id="8611" min="1" max="1" chance="94.0000"/>	<!--Herb of Speed-->
-				<reward item_id="10657" min="1" max="1" chance="3.0000"/>	<!--Herb of Doubt-->
-				<reward item_id="13028" min="1" max="1" chance="3.0000"/>	<!--Vitality Replenishing Herb-->
+				<reward item_id="8611" min="1" max="1" chance="94.0000"/>
+				<reward item_id="10657" min="1" max="1" chance="3.0000"/>
+				<reward item_id="13028" min="1" max="1" chance="3.0000"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="15645" min="1" max="1" chance="0.5317"/>	<!--Sealed Moirai Helmet Piece-->
-			<reward item_id="15646" min="1" max="1" chance="0.5317"/>	<!--Sealed Moirai Leather Helmet Piece-->
-			<reward item_id="15647" min="1" max="1" chance="0.5317"/>	<!--Sealed Moirai Circlet Piece-->
-			<reward item_id="15693" min="1" max="1" chance="0.9532"/>	<!--Sealed Moirai Shield Piece-->
-			<reward item_id="15692" min="1" max="1" chance="0.9532"/>	<!--Sealed Moirai Sigil Piece-->
-			<reward item_id="15775" min="1" max="1" chance="0.0710"/>	<!--Recipe - Sealed Moirai Helmet (60%) -->
-			<reward item_id="15776" min="1" max="1" chance="0.0710"/>	<!--Recipe - Sealed Moirai Leather Helmet(60%) -->
-			<reward item_id="15777" min="1" max="1" chance="0.0710"/>	<!--Recipe - Sealed Moirai Circlet (60%) -->
-			<reward item_id="15791" min="1" max="1" chance="0.1014"/>	<!--Recipe - Sealed Moirai Shield (60%) -->
-			<reward item_id="15790" min="1" max="1" chance="0.1014"/>	<!--Recipe - Sealed Moirai Sigil (60%) -->
+			<reward item_id="15645" min="1" max="1" chance="0.5317"/>
+			<reward item_id="15646" min="1" max="1" chance="0.5317"/>
+			<reward item_id="15647" min="1" max="1" chance="0.5317"/>
+			<reward item_id="15693" min="1" max="1" chance="0.9532"/>
+			<reward item_id="15692" min="1" max="1" chance="0.9532"/>
+			<reward item_id="15775" min="1" max="1" chance="0.0710"/>
+			<reward item_id="15776" min="1" max="1" chance="0.0710"/>
+			<reward item_id="15777" min="1" max="1" chance="0.0710"/>
+			<reward item_id="15791" min="1" max="1" chance="0.1014"/>
+			<reward item_id="15790" min="1" max="1" chance="0.1014"/>
 		</rewardlist>
 		<attributes>
 			<attack attribute="water" value="170"/>
@@ -604,11 +604,11 @@
 		<set name="texture" value="LineageMonster5.ol_mahum_cooker"/>
 		<set name="type" value="Monster"/>
 		<minions>
-			<minion npc_id="22779" count="2"/>	<!--Sel Mahum Escort Guard-->
+			<minion npc_id="22779" count="2"/>
 		</minions>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="25.0">
-				<reward item_id="15492" min="1" max="2" chance="100.0000"/>	<!--Sel Mahum Salmon Porridge-->
+				<reward item_id="15492" min="1" max="2" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -658,67 +658,67 @@
 		<set name="type" value="Monster"/>
 		<faction name="n_solina_clan" range="300"/>
 		<equip>
-			<rhand item_id="8211"/>	<!--Monster Only (Monk Warrior Sword)-->
-			<lhand item_id="8210"/>	<!--Monster Only (Monk Warrior Shield)-->
+			<rhand item_id="8211"/>
+			<lhand item_id="8210"/>
 		</equip>
 		<skills>
-			<skill id="4410" level="14"/>	<!--Strong P. Atk.-->
-			<skill id="4411" level="13"/>	<!--Slightly Strong M. Atk.-->
-			<skill id="4412" level="10"/>	<!--Slightly Weak P. Def.-->
-			<skill id="4416" level="8"/>	<!--Angels-->
-			<skill id="5466" level="1"/>	<!--Holy Attacks-->
-			<skill id="5620" level="5"/>	<!--Short-Range Physical Attack Weakness-->
-			<skill id="6311" level="1"/>	<!--Solina Thrust-->
+			<skill id="4410" level="14"/>
+			<skill id="4411" level="13"/>
+			<skill id="4412" level="10"/>
+			<skill id="4416" level="8"/>
+			<skill id="5466" level="1"/>
+			<skill id="5620" level="5"/>
+			<skill id="6311" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="1170" max="2361" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="1170" max="2361" chance="100.0000"/>
 			</group>
 			<group chance="0.9041">
-				<reward item_id="14109" min="1" max="1" chance="0.0372"/>	<!--Sealed Vesper Gauntlet-->
-				<reward item_id="14113" min="1" max="1" chance="0.0372"/>	<!--Sealed Vesper Leather Gloves-->
-				<reward item_id="14116" min="1" max="1" chance="0.0372"/>	<!--Sealed Vesper Gloves-->
-				<reward item_id="14110" min="1" max="1" chance="0.0372"/>	<!--Sealed Vesper Boots-->
-				<reward item_id="14114" min="1" max="1" chance="0.0372"/>	<!--Sealed Vesper Leather Boots-->
-				<reward item_id="14117" min="1" max="1" chance="0.0372"/>	<!--Sealed Vesper Shoes-->
-				<reward item_id="15667" min="1" max="1" chance="16.6295"/>	<!--Sealed Vesper Gauntlet Piece-->
-				<reward item_id="15671" min="1" max="1" chance="16.6295"/>	<!--Sealed Vesper Leather Gloves Piece-->
-				<reward item_id="15674" min="1" max="1" chance="16.6295"/>	<!--Sealed Vesper Gloves Piece-->
-				<reward item_id="15668" min="1" max="1" chance="16.6295"/>	<!--Sealed Vesper Boots Piece-->
-				<reward item_id="15672" min="1" max="1" chance="16.6295"/>	<!--Sealed Vesper Leather Boots Piece-->
-				<reward item_id="15675" min="1" max="1" chance="16.6293"/>	<!--Sealed Vesper Shoes Piece-->
+				<reward item_id="14109" min="1" max="1" chance="0.0372"/>
+				<reward item_id="14113" min="1" max="1" chance="0.0372"/>
+				<reward item_id="14116" min="1" max="1" chance="0.0372"/>
+				<reward item_id="14110" min="1" max="1" chance="0.0372"/>
+				<reward item_id="14114" min="1" max="1" chance="0.0372"/>
+				<reward item_id="14117" min="1" max="1" chance="0.0372"/>
+				<reward item_id="15667" min="1" max="1" chance="16.6295"/>
+				<reward item_id="15671" min="1" max="1" chance="16.6295"/>
+				<reward item_id="15674" min="1" max="1" chance="16.6295"/>
+				<reward item_id="15668" min="1" max="1" chance="16.6295"/>
+				<reward item_id="15672" min="1" max="1" chance="16.6295"/>
+				<reward item_id="15675" min="1" max="1" chance="16.6293"/>
 			</group>
 			<group chance="4.7329">
-				<reward item_id="1879" min="1" max="1" chance="59.2169"/>	<!--Cokes-->
-				<reward item_id="1885" min="1" max="1" chance="29.6085"/>	<!--High-Grade Suede-->
-				<reward item_id="9628" min="1" max="1" chance="2.7867"/>	<!--Leonard-->
-				<reward item_id="9630" min="1" max="1" chance="1.8700"/>	<!--Orichalcum-->
-				<reward item_id="9629" min="1" max="1" chance="1.5448"/>	<!--Adamantine-->
-				<reward item_id="9573" min="1" max="1" chance="2.4674"/>	<!--Life Stone -  Level 80-->
-				<reward item_id="9574" min="1" max="1" chance="0.6168"/>	<!--Mid-Grade Life Stone -  Level 80-->
-				<reward item_id="9575" min="1" max="1" chance="0.0617"/>	<!--High-Grade Life Stone -  Level 80-->
-				<reward item_id="15801" min="1" max="1" chance="0.3045"/>	<!--Recipe - Sealed Vesper Gauntlet (60%) -->
-				<reward item_id="15802" min="1" max="1" chance="0.3045"/>	<!--Recipe - Sealed Vesper Leather Gloves (60%) -->
-				<reward item_id="15803" min="1" max="1" chance="0.3045"/>	<!--Recipe - Sealed Vesper Gloves (60%) -->
-				<reward item_id="15804" min="1" max="1" chance="0.3045"/>	<!--Recipe - Sealed Vesper Boots (60%) -->
-				<reward item_id="15805" min="1" max="1" chance="0.3045"/>	<!--Recipe - Sealed Vesper Leather Boots (60%) -->
-				<reward item_id="15806" min="1" max="1" chance="0.3047"/>	<!--Recipe - Sealed Vesper Shoes (60%) -->
+				<reward item_id="1879" min="1" max="1" chance="59.2169"/>
+				<reward item_id="1885" min="1" max="1" chance="29.6085"/>
+				<reward item_id="9628" min="1" max="1" chance="2.7867"/>
+				<reward item_id="9630" min="1" max="1" chance="1.8700"/>
+				<reward item_id="9629" min="1" max="1" chance="1.5448"/>
+				<reward item_id="9573" min="1" max="1" chance="2.4674"/>
+				<reward item_id="9574" min="1" max="1" chance="0.6168"/>
+				<reward item_id="9575" min="1" max="1" chance="0.0617"/>
+				<reward item_id="15801" min="1" max="1" chance="0.3045"/>
+				<reward item_id="15802" min="1" max="1" chance="0.3045"/>
+				<reward item_id="15803" min="1" max="1" chance="0.3045"/>
+				<reward item_id="15804" min="1" max="1" chance="0.3045"/>
+				<reward item_id="15805" min="1" max="1" chance="0.3045"/>
+				<reward item_id="15806" min="1" max="1" chance="0.3047"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="15667" min="1" max="1" chance="0.8451"/>	<!--Sealed Vesper Gauntlet Piece-->
-			<reward item_id="15671" min="1" max="1" chance="0.8451"/>	<!--Sealed Vesper Leather Gloves Piece-->
-			<reward item_id="15674" min="1" max="1" chance="0.8451"/>	<!--Sealed Vesper Gloves Piece-->
-			<reward item_id="15668" min="1" max="1" chance="0.8451"/>	<!--Sealed Vesper Boots Piece-->
-			<reward item_id="15672" min="1" max="1" chance="0.8451"/>	<!--Sealed Vesper Leather Boots Piece-->
-			<reward item_id="15675" min="1" max="1" chance="0.8451"/>	<!--Sealed Vesper Shoes Piece-->
-			<reward item_id="9630" min="1" max="1" chance="0.5805"/>	<!--Orichalcum-->
-			<reward item_id="15801" min="1" max="1" chance="0.0945"/>	<!--Recipe - Sealed Vesper Gauntlet (60%) -->
-			<reward item_id="15802" min="1" max="1" chance="0.0945"/>	<!--Recipe - Sealed Vesper Leather Gloves (60%) -->
-			<reward item_id="15803" min="1" max="1" chance="0.0945"/>	<!--Recipe - Sealed Vesper Gloves (60%) -->
-			<reward item_id="15804" min="1" max="1" chance="0.0945"/>	<!--Recipe - Sealed Vesper Boots (60%) -->
-			<reward item_id="15805" min="1" max="1" chance="0.0945"/>	<!--Recipe - Sealed Vesper Leather Boots (60%) -->
-			<reward item_id="15806" min="1" max="1" chance="0.0945"/>	<!--Recipe - Sealed Vesper Shoes (60%) -->
+			<reward item_id="15667" min="1" max="1" chance="0.8451"/>
+			<reward item_id="15671" min="1" max="1" chance="0.8451"/>
+			<reward item_id="15674" min="1" max="1" chance="0.8451"/>
+			<reward item_id="15668" min="1" max="1" chance="0.8451"/>
+			<reward item_id="15672" min="1" max="1" chance="0.8451"/>
+			<reward item_id="15675" min="1" max="1" chance="0.8451"/>
+			<reward item_id="9630" min="1" max="1" chance="0.5805"/>
+			<reward item_id="15801" min="1" max="1" chance="0.0945"/>
+			<reward item_id="15802" min="1" max="1" chance="0.0945"/>
+			<reward item_id="15803" min="1" max="1" chance="0.0945"/>
+			<reward item_id="15804" min="1" max="1" chance="0.0945"/>
+			<reward item_id="15805" min="1" max="1" chance="0.0945"/>
+			<reward item_id="15806" min="1" max="1" chance="0.0945"/>
 		</rewardlist>
 		<attributes>
 			<attack attribute="holy" value="170"/>
@@ -767,56 +767,56 @@
 		<set name="type" value="Monster"/>
 		<faction name="n_solina_clan" range="300"/>
 		<skills>
-			<skill id="4276" level="5"/>	<!--Weak Point against Bow/Crossbow Weapons-->
-			<skill id="4410" level="15"/>	<!--Strong P. Atk.-->
-			<skill id="4411" level="14"/>	<!--Strong M. Atk.-->
-			<skill id="4416" level="8"/>	<!--Angels-->
-			<skill id="5466" level="1"/>	<!--Holy Attacks-->
-			<skill id="5620" level="4"/>	<!--Short-Range Physical Attack Weakness-->
-			<skill id="6312" level="1"/>	<!--Launch Sacred Sword Energy-->
-			<skill id="6313" level="1"/>	<!--Solina Bless-->
+			<skill id="4276" level="5"/>
+			<skill id="4410" level="15"/>
+			<skill id="4411" level="14"/>
+			<skill id="4416" level="8"/>
+			<skill id="5466" level="1"/>
+			<skill id="5620" level="4"/>
+			<skill id="6312" level="1"/>
+			<skill id="6313" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="1730" max="3492" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="1730" max="3492" chance="100.0000"/>
 			</group>
 			<group chance="1.3371">
-				<reward item_id="14109" min="1" max="1" chance="0.0372"/>	<!--Sealed Vesper Gauntlet-->
-				<reward item_id="14113" min="1" max="1" chance="0.0372"/>	<!--Sealed Vesper Leather Gloves-->
-				<reward item_id="14116" min="1" max="1" chance="0.0372"/>	<!--Sealed Vesper Gloves-->
-				<reward item_id="14110" min="1" max="1" chance="0.0372"/>	<!--Sealed Vesper Boots-->
-				<reward item_id="14114" min="1" max="1" chance="0.0372"/>	<!--Sealed Vesper Leather Boots-->
-				<reward item_id="14117" min="1" max="1" chance="0.0372"/>	<!--Sealed Vesper Shoes-->
-				<reward item_id="15667" min="1" max="1" chance="16.6295"/>	<!--Sealed Vesper Gauntlet Piece-->
-				<reward item_id="15671" min="1" max="1" chance="16.6295"/>	<!--Sealed Vesper Leather Gloves Piece-->
-				<reward item_id="15674" min="1" max="1" chance="16.6295"/>	<!--Sealed Vesper Gloves Piece-->
-				<reward item_id="15668" min="1" max="1" chance="16.6295"/>	<!--Sealed Vesper Boots Piece-->
-				<reward item_id="15672" min="1" max="1" chance="16.6295"/>	<!--Sealed Vesper Leather Boots Piece-->
-				<reward item_id="15675" min="1" max="1" chance="16.6293"/>	<!--Sealed Vesper Shoes Piece-->
+				<reward item_id="14109" min="1" max="1" chance="0.0372"/>
+				<reward item_id="14113" min="1" max="1" chance="0.0372"/>
+				<reward item_id="14116" min="1" max="1" chance="0.0372"/>
+				<reward item_id="14110" min="1" max="1" chance="0.0372"/>
+				<reward item_id="14114" min="1" max="1" chance="0.0372"/>
+				<reward item_id="14117" min="1" max="1" chance="0.0372"/>
+				<reward item_id="15667" min="1" max="1" chance="16.6295"/>
+				<reward item_id="15671" min="1" max="1" chance="16.6295"/>
+				<reward item_id="15674" min="1" max="1" chance="16.6295"/>
+				<reward item_id="15668" min="1" max="1" chance="16.6295"/>
+				<reward item_id="15672" min="1" max="1" chance="16.6295"/>
+				<reward item_id="15675" min="1" max="1" chance="16.6293"/>
 			</group>
 			<group chance="18.1342">
-				<reward item_id="1895" min="1" max="1" chance="78.3705"/>	<!--Metallic Fiber-->
-				<reward item_id="4040" min="1" max="1" chance="5.4859"/>	<!--Mold Lubricant-->
-				<reward item_id="4042" min="1" max="1" chance="4.5716"/>	<!--Enria-->
-				<reward item_id="4043" min="1" max="1" chance="9.1432"/>	<!--Asofe-->
-				<reward item_id="10483" min="1" max="1" chance="1.9048"/>	<!--Life Stone -  Level 82-->
-				<reward item_id="10484" min="1" max="1" chance="0.4762"/>	<!--Mid-Grade Life Stone -  Level 82-->
-				<reward item_id="10485" min="1" max="1" chance="0.0478"/>	<!--High-Grade Life Stone -  Level 82-->
+				<reward item_id="1895" min="1" max="1" chance="78.3705"/>
+				<reward item_id="4040" min="1" max="1" chance="5.4859"/>
+				<reward item_id="4042" min="1" max="1" chance="4.5716"/>
+				<reward item_id="4043" min="1" max="1" chance="9.1432"/>
+				<reward item_id="10483" min="1" max="1" chance="1.9048"/>
+				<reward item_id="10484" min="1" max="1" chance="0.4762"/>
+				<reward item_id="10485" min="1" max="1" chance="0.0478"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="15667" min="1" max="1" chance="1.3541"/>	<!--Sealed Vesper Gauntlet Piece-->
-			<reward item_id="15671" min="1" max="1" chance="1.3541"/>	<!--Sealed Vesper Leather Gloves Piece-->
-			<reward item_id="15674" min="1" max="1" chance="1.3541"/>	<!--Sealed Vesper Gloves Piece-->
-			<reward item_id="15668" min="1" max="1" chance="1.3541"/>	<!--Sealed Vesper Boots Piece-->
-			<reward item_id="15672" min="1" max="1" chance="1.3541"/>	<!--Sealed Vesper Leather Boots Piece-->
-			<reward item_id="15675" min="1" max="1" chance="1.3541"/>	<!--Sealed Vesper Shoes Piece-->
-			<reward item_id="15801" min="1" max="1" chance="0.1515"/>	<!--Recipe - Sealed Vesper Gauntlet (60%) -->
-			<reward item_id="15802" min="1" max="1" chance="0.1515"/>	<!--Recipe - Sealed Vesper Leather Gloves (60%) -->
-			<reward item_id="15803" min="1" max="1" chance="0.1515"/>	<!--Recipe - Sealed Vesper Gloves (60%) -->
-			<reward item_id="15804" min="1" max="1" chance="0.1515"/>	<!--Recipe - Sealed Vesper Boots (60%) -->
-			<reward item_id="15805" min="1" max="1" chance="0.1515"/>	<!--Recipe - Sealed Vesper Leather Boots (60%) -->
-			<reward item_id="15806" min="1" max="1" chance="0.1515"/>	<!--Recipe - Sealed Vesper Shoes (60%) -->
+			<reward item_id="15667" min="1" max="1" chance="1.3541"/>
+			<reward item_id="15671" min="1" max="1" chance="1.3541"/>
+			<reward item_id="15674" min="1" max="1" chance="1.3541"/>
+			<reward item_id="15668" min="1" max="1" chance="1.3541"/>
+			<reward item_id="15672" min="1" max="1" chance="1.3541"/>
+			<reward item_id="15675" min="1" max="1" chance="1.3541"/>
+			<reward item_id="15801" min="1" max="1" chance="0.1515"/>
+			<reward item_id="15802" min="1" max="1" chance="0.1515"/>
+			<reward item_id="15803" min="1" max="1" chance="0.1515"/>
+			<reward item_id="15804" min="1" max="1" chance="0.1515"/>
+			<reward item_id="15805" min="1" max="1" chance="0.1515"/>
+			<reward item_id="15806" min="1" max="1" chance="0.1515"/>
 		</rewardlist>
 		<attributes>
 			<attack attribute="holy" value="170"/>
@@ -865,8 +865,8 @@
 		<set name="type" value="Npc"/>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="100.0">
-				<reward item_id="730" min="1" max="1" chance="60.0000"/>	<!--Scroll: Enchant Armor (A-Grade)-->
-				<reward item_id="960" min="1" max="1" chance="40.0000"/>	<!--Scroll: Enchant Armor (S-Grade)-->
+				<reward item_id="730" min="1" max="1" chance="60.0000"/>
+				<reward item_id="960" min="1" max="1" chance="40.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -1146,48 +1146,48 @@
 		<set name="type" value="Monster"/>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="361" max="738" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="361" max="738" chance="100.0000"/>
 			</group>
 			<group chance="1.0607">
-				<reward item_id="9546" min="1" max="1" chance="16.6667"/>	<!--Fire Stone-->
-				<reward item_id="9547" min="1" max="1" chance="16.6667"/>	<!--Water Stone-->
-				<reward item_id="9548" min="1" max="1" chance="16.6667"/>	<!--Earth Stone-->
-				<reward item_id="9549" min="1" max="1" chance="16.6667"/>	<!--Wind Stone-->
-				<reward item_id="9550" min="1" max="1" chance="16.6667"/>	<!--Dark Stone-->
-				<reward item_id="9551" min="1" max="1" chance="16.6665"/>	<!--Divine Stone-->
+				<reward item_id="9546" min="1" max="1" chance="16.6667"/>
+				<reward item_id="9547" min="1" max="1" chance="16.6667"/>
+				<reward item_id="9548" min="1" max="1" chance="16.6667"/>
+				<reward item_id="9549" min="1" max="1" chance="16.6667"/>
+				<reward item_id="9550" min="1" max="1" chance="16.6667"/>
+				<reward item_id="9551" min="1" max="1" chance="16.6665"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="NOT_RATED_GROUPED">
 			<group chance="42.0">
-				<reward item_id="8600" min="1" max="1" chance="55.0000"/>	<!--Herb of Life-->
-				<reward item_id="8601" min="1" max="1" chance="38.0000"/>	<!--Greater Herb of Life-->
-				<reward item_id="8602" min="1" max="1" chance="7.0000"/>	<!--Superior Herb of Life-->
+				<reward item_id="8600" min="1" max="1" chance="55.0000"/>
+				<reward item_id="8601" min="1" max="1" chance="38.0000"/>
+				<reward item_id="8602" min="1" max="1" chance="7.0000"/>
 			</group>
 			<group chance="11.0">
-				<reward item_id="8603" min="1" max="1" chance="40.0000"/>	<!--Herb of Mana-->
-				<reward item_id="8604" min="1" max="1" chance="52.0000"/>	<!--Greater Herb of Mana-->
-				<reward item_id="8605" min="1" max="1" chance="8.0000"/>	<!--Superior Herb of Mana-->
+				<reward item_id="8603" min="1" max="1" chance="40.0000"/>
+				<reward item_id="8604" min="1" max="1" chance="52.0000"/>
+				<reward item_id="8605" min="1" max="1" chance="8.0000"/>
 			</group>
 			<group chance="25.0">
-				<reward item_id="8606" min="1" max="1" chance="20.0000"/>	<!--Herb of Power-->
-				<reward item_id="8608" min="1" max="1" chance="20.0000"/>	<!--Herb of Alacrity-->
-				<reward item_id="8610" min="1" max="1" chance="20.0000"/>	<!--Herb of Critical Attack - Probability-->
-				<reward item_id="10655" min="1" max="1" chance="20.0000"/>	<!--Herb of Vampiric Rage-->
-				<reward item_id="10656" min="1" max="1" chance="20.0000"/>	<!--Herb of Critical Attack - Power-->
+				<reward item_id="8606" min="1" max="1" chance="20.0000"/>
+				<reward item_id="8608" min="1" max="1" chance="20.0000"/>
+				<reward item_id="8610" min="1" max="1" chance="20.0000"/>
+				<reward item_id="10655" min="1" max="1" chance="20.0000"/>
+				<reward item_id="10656" min="1" max="1" chance="20.0000"/>
 			</group>
 			<group chance="10.0">
-				<reward item_id="8607" min="1" max="1" chance="50.0000"/>	<!--Herb of Magic-->
-				<reward item_id="8609" min="1" max="1" chance="50.0000"/>	<!--Herb of Casting Spd.-->
+				<reward item_id="8607" min="1" max="1" chance="50.0000"/>
+				<reward item_id="8609" min="1" max="1" chance="50.0000"/>
 			</group>
 			<group chance="1.0">
-				<reward item_id="8612" min="1" max="1" chance="33.0000"/>	<!--Herb of the Warrior-->
-				<reward item_id="8613" min="1" max="1" chance="33.0000"/>	<!--Herb of the Mystic-->
-				<reward item_id="8614" min="1" max="1" chance="34.0000"/>	<!--Herb of Recovery-->
+				<reward item_id="8612" min="1" max="1" chance="33.0000"/>
+				<reward item_id="8613" min="1" max="1" chance="33.0000"/>
+				<reward item_id="8614" min="1" max="1" chance="34.0000"/>
 			</group>
 			<group chance="11.0">
-				<reward item_id="8611" min="1" max="1" chance="94.0000"/>	<!--Herb of Speed-->
-				<reward item_id="10657" min="1" max="1" chance="3.0000"/>	<!--Herb of Doubt-->
-				<reward item_id="13028" min="1" max="1" chance="3.0000"/>	<!--Vitality Replenishing Herb-->
+				<reward item_id="8611" min="1" max="1" chance="94.0000"/>
+				<reward item_id="10657" min="1" max="1" chance="3.0000"/>
+				<reward item_id="13028" min="1" max="1" chance="3.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -1955,7 +1955,7 @@
 		<set name="type" value="Npc"/>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="100.0">
-				<reward item_id="960" min="1" max="1" chance="100.0000"/>	<!--Scroll: Enchant Armor (S-Grade)-->
+				<reward item_id="960" min="1" max="1" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2610,9 +2610,9 @@
 			<set name="showName" value="false"/>
 		</ai_params>
 		<skills>
-			<skill id="6599" level="12"/>	<!--NPC earth attack-->
-			<skill id="6705" level="1"/>	<!--Stun-->
-			<skill id="6262" level="1"/>	<!--EMP Power-->
+			<skill id="6599" level="12"/>
+			<skill id="6705" level="1"/>
+			<skill id="6262" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="200"/>
@@ -2659,7 +2659,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="6707" level="1"/>	<!--Self-destruction-->
+			<skill id="6707" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="holy" value="250"/>
@@ -2706,7 +2706,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="6708" level="1"/>	<!--Self-destruction-->
+			<skill id="6708" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="holy" value="250"/>
@@ -2756,10 +2756,10 @@
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
 		<skills>
-			<skill id="6494" level="28"/>	<!--NPC holy attack-->
-			<skill id="6705" level="1"/>	<!--Stun-->
-			<skill id="6710" level="1"/>	<!--Etis Haste-->
-			<skill id="6711" level="1"/>	<!--Etis Power Up-->
+			<skill id="6494" level="28"/>
+			<skill id="6705" level="1"/>
+			<skill id="6710" level="1"/>
+			<skill id="6711" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="holy" value="200"/>
@@ -2809,10 +2809,10 @@
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
 		<skills>
-			<skill id="6494" level="28"/>	<!--NPC holy attack-->
-			<skill id="6705" level="1"/>	<!--Stun-->
-			<skill id="6710" level="1"/>	<!--Etis Haste-->
-			<skill id="6711" level="1"/>	<!--Etis Power Up-->
+			<skill id="6494" level="28"/>
+			<skill id="6705" level="1"/>
+			<skill id="6710" level="1"/>
+			<skill id="6711" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="holy" value="200"/>
@@ -2862,10 +2862,10 @@
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
 		<skills>
-			<skill id="6494" level="28"/>	<!--NPC holy attack-->
-			<skill id="6705" level="1"/>	<!--Stun-->
-			<skill id="6710" level="1"/>	<!--Etis Haste-->
-			<skill id="6711" level="1"/>	<!--Etis Power Up-->
+			<skill id="6494" level="28"/>
+			<skill id="6705" level="1"/>
+			<skill id="6710" level="1"/>
+			<skill id="6711" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="holy" value="200"/>
@@ -2915,10 +2915,10 @@
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
 		<skills>
-			<skill id="6494" level="28"/>	<!--NPC holy attack-->
-			<skill id="6705" level="1"/>	<!--Stun-->
-			<skill id="6710" level="1"/>	<!--Etis Haste-->
-			<skill id="6711" level="1"/>	<!--Etis Power Up-->
+			<skill id="6494" level="28"/>
+			<skill id="6705" level="1"/>
+			<skill id="6710" level="1"/>
+			<skill id="6711" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="holy" value="200"/>
@@ -2968,9 +2968,9 @@
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
 		<skills>
-			<skill id="6709" level="1"/>	<!--Multi Shot-->
-			<skill id="5024" level="1"/>	<!--Decrease Atk. Spd.-->
-			<skill id="4153" level="1"/>	<!--Decrease Speed-->
+			<skill id="6709" level="1"/>
+			<skill id="5024" level="1"/>
+			<skill id="4153" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="holy" value="200"/>
@@ -3020,9 +3020,9 @@
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
 		<skills>
-			<skill id="6709" level="1"/>	<!--Multi Shot-->
-			<skill id="5024" level="1"/>	<!--Decrease Atk. Spd.-->
-			<skill id="4153" level="1"/>	<!--Decrease Speed-->
+			<skill id="6709" level="1"/>
+			<skill id="5024" level="1"/>
+			<skill id="4153" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="holy" value="200"/>
@@ -3072,9 +3072,9 @@
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
 		<skills>
-			<skill id="6709" level="1"/>	<!--Multi Shot-->
-			<skill id="5024" level="1"/>	<!--Decrease Atk. Spd.-->
-			<skill id="4153" level="1"/>	<!--Decrease Speed-->
+			<skill id="6709" level="1"/>
+			<skill id="5024" level="1"/>
+			<skill id="4153" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="holy" value="200"/>
@@ -3124,9 +3124,9 @@
 			<set name="noRandomWalk" value="true"/>
 		</ai_params>
 		<skills>
-			<skill id="6709" level="1"/>	<!--Multi Shot-->
-			<skill id="5024" level="1"/>	<!--Decrease Atk. Spd.-->
-			<skill id="4153" level="1"/>	<!--Decrease Speed-->
+			<skill id="6709" level="1"/>
+			<skill id="5024" level="1"/>
+			<skill id="4153" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="holy" value="200"/>
@@ -3691,8 +3691,8 @@
 		<set name="texture" value=""/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4416" level="5"/>	<!-- Plants -->
-			<skill id="5465" level="1"/>	<!-- Earth Attacks -->
+			<skill id="4416" level="5"/>
+			<skill id="5465" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3704,7 +3704,6 @@
 		</attributes>
 	</npc>
 	<npc id="18973" name="Treekin Defender" title="Experienced Scout">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseDEX" value="30"/>
@@ -3735,7 +3734,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="36.0"/>
 		<set name="collision_height" value="50.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Monster"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="92"/>
@@ -3755,19 +3753,14 @@
 			<defence attribute="unholy" value="240"/>
 		</attributes>
 		<skills>
-			<!--Mace Downward Strike-->
 			<skill id="14053" level="5"/>
-			<!--Wood Upward Strike-->
 			<skill id="14054" level="2"/>
 			<skill id="5465" level="1"/>
-			<!--Animals-->
 			<skill id="4416" level="5"/>
-			<!--Wood Downward Strike-->
 			<skill id="14101" level="2"/>
 		</skills>
 	</npc>
 	<npc id="18974" name="Centaur Archer" title="Scout">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseDEX" value="30"/>
@@ -3798,7 +3791,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="24.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Monster"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="90"/>
@@ -3810,7 +3802,6 @@
 		<set name="shots" value="NONE"/>
 		<faction name="fairy_clan" range="200"/>
 		<equip>
-			<!--Transparent Bow (for NPC) - 10-Day Limited Period-->
 			<rhand item_id="15302"/>
 		</equip>
 		<attributes>
@@ -3823,16 +3814,12 @@
 		</attributes>
 		<skills>
 			<skill id="5464" level="1"/>
-			<!--Power Shot-->
 			<skill id="14055" level="2"/>
-			<!--Animals-->
 			<skill id="4416" level="13"/>
-			<!--Power Arrow-->
 			<skill id="14056" level="2"/>
 		</skills>
 	</npc>
 	<npc id="18975" name="Centaur Archer" title="Experienced Scout">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseDEX" value="30"/>
@@ -3863,7 +3850,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="24.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Monster"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="92"/>
@@ -3875,7 +3861,6 @@
 		<set name="shots" value="NONE"/>
 		<faction name="fairy_clan" range="200"/>
 		<equip>
-			<!--Transparent Bow (for NPC) - 10-Day Limited Period-->
 			<rhand item_id="15302"/>
 		</equip>
 		<attributes>
@@ -3888,16 +3873,12 @@
 		</attributes>
 		<skills>
 			<skill id="5464" level="1"/>
-			<!--Power Shot-->
 			<skill id="14055" level="2"/>
-			<!--Animals-->
 			<skill id="4416" level="13"/>
-			<!--Power Arrow-->
 			<skill id="14056" level="2"/>
 		</skills>
 	</npc>
 	<npc id="18976" name="Beorning Berserker" title="Scout">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -3928,7 +3909,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="32.0"/>
 		<set name="collision_height" value="29.8"/>
-		<!--Npc specific-->
 		<set name="type" value="Monster"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="95"/>
@@ -3948,19 +3928,14 @@
 			<defence attribute="unholy" value="260"/>
 		</attributes>
 		<skills>
-			<!--Power Strike-->
 			<skill id="14050" level="3"/>
-			<!--P. Def. Decrease-->
 			<skill id="14051" level="2"/>
-			<!--Rush-->
 			<skill id="14052" level="2"/>
-			<!--Animals-->
 			<skill id="4416" level="3"/>
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
 	<npc id="18977" name="Beorning Berserker" title="Experienced Scout">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseDEX" value="30"/>
@@ -3991,7 +3966,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="32.0"/>
 		<set name="collision_height" value="26.8"/>
-		<!--Npc specific-->
 		<set name="type" value="Monster"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="93"/>
@@ -4011,19 +3985,14 @@
 			<defence attribute="unholy" value="260"/>
 		</attributes>
 		<skills>
-			<!--Power Strike-->
 			<skill id="14050" level="3"/>
-			<!--P. Def. Decrease-->
 			<skill id="14051" level="2"/>
-			<!--Rush-->
 			<skill id="14052" level="2"/>
-			<!--Animals-->
 			<skill id="4416" level="3"/>
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
 	<npc id="18978" name="Orbis' Victim" title="Cursed">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseDEX" value="30"/>
@@ -4054,7 +4023,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="60.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Monster"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="96"/>
@@ -4074,29 +4042,22 @@
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<!--Adena-->
 				<reward item_id="57" min="2209" max="5158" chance="100.0"/>
 			</group>
 			<group chance="4.161">
-				<!--Unidentified Seraph Boots : Heavy-->
 				<reward item_id="18189" min="1" max="1" chance="0.72098"/>
-				<!--Unidentified Seraph Leather Helmet : Light-->
 				<reward item_id="18191" min="1" max="1" chance="0.72098"/>
-				<!--Unidentified Seraph Gloves : Robe-->
 				<reward item_id="18199" min="1" max="1" chance="0.72098"/>
 			</group>
 			<group chance="0.105">
-				<!--Scroll: Enchant Armor (R-Grade)-->
 				<reward item_id="17527" min="1" max="1" chance="71.42857"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<!--Unidentified Seraph Necklace-->
 			<reward item_id="18202" min="1" max="1" chance="9.0E-4"/>
 		</rewardlist>
 	</npc>
 	<npc id="18979" name="Orbis' Guard" title="Cursed">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseDEX" value="30"/>
@@ -4127,7 +4088,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="60.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Monster"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="96"/>
@@ -4147,42 +4107,30 @@
 		</attributes>
 		<skills>
 			<skill id="5467" level="1"/>
-			<!--Bugs-->
 			<skill id="4416" level="6"/>
-			<!--Extremely Weak P. Atk.-->
 			<skill id="4410" level="19"/>
-			<!--Extremely Strong M. Atk.-->
 			<skill id="4411" level="18"/>
-			<!--Extremely Strong P. Def.-->
 			<skill id="4412" level="3"/>
-			<!--Extremely Weak M. Def.-->
 			<skill id="4413" level="3"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<!--Adena-->
 				<reward item_id="57" min="2209" max="5158" chance="100.0"/>
 			</group>
 			<group chance="3.188">
-				<!--Unidentified Seraph Helmet : Heavy-->
 				<reward item_id="18185" min="1" max="1" chance="0.94103"/>
-				<!--Unidentified Seraph Leather Gloves : Light-->
 				<reward item_id="18194" min="1" max="1" chance="0.94103"/>
-				<!--Unidentified Seraph Shoes : Robe-->
 				<reward item_id="18200" min="1" max="1" chance="0.94103"/>
 			</group>
 			<group chance="0.3">
-				<!--Scroll: Enchant Armor (R-Grade)-->
 				<reward item_id="17527" min="1" max="1" chance="100.0"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<!--Scroll: Enchant Weapon (R-Grade)-->
 			<reward item_id="17526" min="1" max="1" chance="9.0E-4"/>
 		</rewardlist>
 	</npc>
 	<npc id="18980" name="Orbis' Thrower" title="Cursed">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseDEX" value="30"/>
@@ -4213,7 +4161,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="60.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Monster"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="96"/>
@@ -4233,40 +4180,29 @@
 		</attributes>
 		<skills>
 			<skill id="5467" level="1"/>
-			<!--Bugs-->
 			<skill id="4416" level="6"/>
-			<!--Extremely Weak P. Atk.-->
 			<skill id="4410" level="19"/>
-			<!--Extremely Strong M. Atk.-->
 			<skill id="4411" level="18"/>
-			<!--Extremely Strong P. Def.-->
 			<skill id="4412" level="3"/>
-			<!--Extremely Weak M. Def.-->
 			<skill id="4413" level="3"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<!--Adena-->
 				<reward item_id="57" min="2209" max="5158" chance="100.0"/>
 			</group>
 			<group chance="5.514">
-				<!--Unidentified Seraph Shield : Heavy-->
 				<reward item_id="18190" min="1" max="1" chance="0.54407"/>
-				<!--Unidentified Seraph Sigil : Robe-->
 				<reward item_id="18201" min="1" max="1" chance="0.54407"/>
 			</group>
 			<group chance="0.03">
-				<!--Scroll: Enchant Weapon (R-Grade)-->
 				<reward item_id="17526" min="1" max="1" chance="100.0"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<!--Unidentified Seraph Leather Helmet : Light-->
 			<reward item_id="18191" min="1" max="1" chance="9.0E-4"/>
 		</rewardlist>
 	</npc>
 	<npc id="18981" name="Orbis' Curator" title="Cursed">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4297,7 +4233,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="60.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Monster"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="96"/>
@@ -4316,43 +4251,31 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<!--Bugs-->
 			<skill id="4416" level="6"/>
 			<skill id="5463" level="1"/>
-			<!--Extremely Weak P. Atk.-->
 			<skill id="4410" level="19"/>
-			<!--Extremely Strong M. Atk.-->
 			<skill id="4411" level="18"/>
-			<!--Extremely Strong P. Def.-->
 			<skill id="4412" level="3"/>
-			<!--Extremely Weak M. Def.-->
 			<skill id="4413" level="3"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<!--Adena-->
 				<reward item_id="57" min="2209" max="5158" chance="100.0"/>
 			</group>
 			<group chance="0.016">
-				<!--Unidentified Seraph Breastplate : Heavy-->
 				<reward item_id="18186" min="1" max="1" chance="33.33333"/>
-				<!--Unidentified Seraph Leather Leggings : Light-->
 				<reward item_id="18193" min="1" max="1" chance="33.33333"/>
-				<!--Unidentified Seraph Tunic : Robe-->
 				<reward item_id="18197" min="1" max="1" chance="33.33333"/>
 			</group>
 			<group chance="0.33">
-				<!--Wind Crystal-->
 				<reward item_id="9555" min="1" max="1" chance="90.90909"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<!--Scroll: Enchant Armor (R-Grade)-->
 			<reward item_id="17527" min="1" max="1" chance="0.0055"/>
 		</rewardlist>
 	</npc>
 	<npc id="18982" name="Orbis' Ancient Hero" title="Cursed">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4383,7 +4306,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="60.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Monster"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="96"/>
@@ -4403,44 +4325,31 @@
 		</attributes>
 		<skills>
 			<skill id="5467" level="1"/>
-			<!--Bugs-->
 			<skill id="4416" level="6"/>
-			<!--Extremely Weak P. Atk.-->
 			<skill id="4410" level="19"/>
-			<!--Extremely Strong M. Atk.-->
 			<skill id="4411" level="18"/>
-			<!--Extremely Strong P. Def.-->
 			<skill id="4412" level="3"/>
-			<!--Extremely Weak M. Def.-->
 			<skill id="4413" level="3"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<!--Adena-->
 				<reward item_id="57" min="2209" max="5158" chance="100.0"/>
 			</group>
 			<group chance="6.229">
-				<!--Unidentified Seraph Gaiters : Heavy-->
 				<reward item_id="18187" min="1" max="1" chance="0.0883"/>
-				<!--Unidentified Seraph Leather Armor : Light-->
 				<reward item_id="18192" min="1" max="1" chance="0.04816"/>
-				<!--Unidentified Seraph Stockings : Robe-->
 				<reward item_id="18198" min="1" max="1" chance="0.0883"/>
 			</group>
 			<group chance="0.306">
-				<!--Recipe: Spiritshot (R-Grade) (100%)-->
 				<reward item_id="30424" min="1" max="1" chance="98.19967"/>
-				<!--Scroll: Enchant Weapon (R-Grade)-->
 				<reward item_id="17526" min="1" max="1" chance="1.80033"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<!--Unidentified Seraph Sigil : Robe-->
 			<reward item_id="18201" min="1" max="1" chance="9.0E-4"/>
 		</rewardlist>
 	</npc>
 	<npc id="18983" name="Orbis' Chief Curator" title="Cursed">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4471,7 +4380,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="60.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Monster"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="96"/>
@@ -4490,41 +4398,30 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<!--Bugs-->
 			<skill id="4416" level="6"/>
 			<skill id="5463" level="1"/>
-			<!--Extremely Weak P. Atk.-->
 			<skill id="4410" level="19"/>
-			<!--Extremely Strong M. Atk.-->
 			<skill id="4411" level="18"/>
-			<!--Extremely Strong P. Def.-->
 			<skill id="4412" level="3"/>
-			<!--Extremely Weak M. Def.-->
 			<skill id="4413" level="3"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<!--Adena-->
 				<reward item_id="57" min="2209" max="5158" chance="100.0"/>
 			</group>
 			<group chance="0.66">
-				<!--Unidentified Seraph Shield : Heavy-->
 				<reward item_id="18190" min="1" max="1" chance="4.54545"/>
-				<!--Unidentified Seraph Sigil : Robe-->
 				<reward item_id="18201" min="1" max="1" chance="4.54545"/>
 			</group>
 			<group chance="0.3">
-				<!--Holy Crystal-->
 				<reward item_id="9557" min="1" max="1" chance="100.0"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<!--Unidentified Seraph Leather Armor : Light-->
 			<reward item_id="18192" min="1" max="1" chance="9.0E-4"/>
 		</rewardlist>
 	</npc>
 	<npc id="18984" name="Octavis' Influence" title="">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4555,7 +4452,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -4575,7 +4471,6 @@
 		</attributes>
 	</npc>
 	<npc id="18985" name="Genesis Trap 1" title="">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4606,7 +4501,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="80"/>
@@ -4626,7 +4520,6 @@
 		</attributes>
 	</npc>
 	<npc id="18986" name="Genesis Trap 2" title="">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4657,7 +4550,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="80"/>
@@ -4677,7 +4569,6 @@
 		</attributes>
 	</npc>
 	<npc id="18987" name="Rose Vine" title="">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4708,7 +4599,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="59.0"/>
 		<set name="collision_height" value="16.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="80"/>
@@ -4728,7 +4618,6 @@
 		</attributes>
 	</npc>
 	<npc id="18988" name="Rose Vine" title="">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4759,7 +4648,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="59.0"/>
 		<set name="collision_height" value="16.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -4779,7 +4667,6 @@
 		</attributes>
 	</npc>
 	<npc id="18989" name="Apherus Garden Gate" title="">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4810,7 +4697,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -4830,7 +4716,6 @@
 		</attributes>
 	</npc>
 	<npc id="18990" name="Apherus Garden Gate" title="">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4861,7 +4746,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -4881,7 +4765,6 @@
 		</attributes>
 	</npc>
 	<npc id="18991" name="Apherus Garden Gate" title="">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4912,7 +4795,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -4932,7 +4814,6 @@
 		</attributes>
 	</npc>
 	<npc id="18992" name="Apherus Garden Gate" title="">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4963,7 +4844,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -4983,7 +4863,6 @@
 		</attributes>
 	</npc>
 	<npc id="18993" name="Hatched Millipede" title="">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseDEX" value="30"/>
@@ -5014,7 +4893,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="45.0"/>
 		<set name="collision_height" value="8.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Monster"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="88"/>
@@ -5034,45 +4912,32 @@
 		</attributes>
 		<skills>
 			<skill id="5465" level="1"/>
-			<!--Animals-->
 			<skill id="4416" level="12"/>
-			<!--Millipede P. Atk. Enhancement-->
 			<skill id="14117" level="5"/>
-			<!--Millipede Blow-->
 			<skill id="14183" level="1"/>
-		<skill id="4412" level="9"/>
+			<skill id="4412" level="9"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<!--Adena-->
 				<reward item_id="57" min="766" max="1787" chance="100.0"/>
 			</group>
 			<group chance="0.609">
-				<!--Unidentified Requiem Shaper-->
 				<reward item_id="18103" min="1" max="1" chance="0.49261"/>
-				<!--Unidentified Requiem Avenger-->
 				<reward item_id="18106" min="1" max="1" chance="0.49261"/>
-				<!--Unidentified Requiem Retributer-->
 				<reward item_id="18113" min="1" max="1" chance="0.49261"/>
 			</group>
 			<group chance="0.753">
-				<!--Durandil Temper-->
 				<reward item_id="19309" min="1" max="1" chance="99.60159"/>
-				<!--Scroll: Enchant Weapon (R-Grade)-->
 				<reward item_id="17526" min="1" max="1" chance="0.39841"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<!--Unidentified Immortal Gaiters : Heavy-->
 			<reward item_id="18119" min="1" max="1" chance="9.0E-4"/>
-			<!--Unidentified Immortal Leather Armor : Light-->
 			<reward item_id="18124" min="1" max="1" chance="9.0E-4"/>
-			<!--Unidentified Immortal Stockings : Robe-->
 			<reward item_id="18130" min="1" max="1" chance="9.0E-4"/>
 		</rewardlist>
 	</npc>
 	<npc id="18994" name="Hatched Underbug" title="">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseDEX" value="30"/>
@@ -5103,7 +4968,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="35.0"/>
 		<set name="collision_height" value="35.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Monster"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="88"/>
@@ -5123,35 +4987,26 @@
 		</attributes>
 		<skills>
 			<skill id="5465" level="1"/>
-			<!--Animals-->
 			<skill id="4416" level="12"/>
-			<!--Underbug Self Blasting-->
 			<skill id="14119" level="1"/>
-			<!--Millipede P. Def. Enhancement-->
 			<skill id="14118" level="1"/>
-			<!--Millipede Blow-->
 			<skill id="14183" level="1"/>
-		<skill id="4412" level="9"/>
+			<skill id="4412" level="9"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<!--Adena-->
 				<reward item_id="57" min="766" max="1787" chance="100.0"/>
 			</group>
 			<group chance="0.606">
-				<!--Unidentified Requiem Cutter-->
 				<reward item_id="18104" min="1" max="1" chance="0.49505"/>
-				<!--Unidentified Requiem Thrower-->
 				<reward item_id="18109" min="1" max="1" chance="0.49505"/>
 			</group>
 			<group chance="0.003">
-				<!--Scroll: Enchant Weapon (R-Grade)-->
 				<reward item_id="17526" min="1" max="1" chance="100.0"/>
 			</group>
 		</rewardlist>
 	</npc>
 	<npc id="18995" name="Awakened Millipede" title="">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseDEX" value="30"/>
@@ -5182,7 +5037,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="45.0"/>
 		<set name="collision_height" value="8.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Monster"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="88"/>
@@ -5202,37 +5056,28 @@
 		</attributes>
 		<skills>
 			<skill id="5465" level="1"/>
-			<!--Animals-->
 			<skill id="4416" level="12"/>
-			<!--Millipede Blow-->
 			<skill id="14183" level="1"/>
-		<skill id="4412" level="9"/>
+			<skill id="4412" level="9"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<!--Adena-->
 				<reward item_id="57" min="766" max="1787" chance="100.0"/>
 			</group>
 			<group chance="0.909">
-				<!--Unidentified Requiem Slasher-->
 				<reward item_id="18105" min="1" max="1" chance="0.33003"/>
-				<!--Unidentified Requiem Fighter-->
 				<reward item_id="18107" min="1" max="1" chance="0.33003"/>
-				<!--Unidentified Requiem Shooter-->
 				<reward item_id="18110" min="1" max="1" chance="0.33003"/>
 			</group>
 			<group chance="0.003">
-				<!--Scroll: Enchant Weapon (R-Grade)-->
 				<reward item_id="17526" min="1" max="1" chance="100.0"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<!--Durandil Temper-->
 			<reward item_id="19309" min="1" max="1" chance="0.075"/>
 		</rewardlist>
 	</npc>
 	<npc id="18996" name="Egg" title="">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -5263,7 +5108,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="27.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -5283,7 +5127,6 @@
 		</attributes>
 	</npc>
 	<npc id="18997" name="Egg" title="">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseDEX" value="30"/>
@@ -5314,7 +5157,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="27.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Monster"/>
 		<set name="ai_type" value="teredor.TeredorEggs"/>
 		<set name="level" value="88"/>
@@ -5334,7 +5176,6 @@
 		</attributes>
 	</npc>
 	<npc id="18998" name="Teredor Transparent 1" title="">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -5365,7 +5206,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="hermunkus_message.Teredor_18998"/>
 		<set name="level" value="85"/>
@@ -5385,14 +5225,10 @@
 			<set name="TargetEnabled" value="false"/>
 		</ai_params>
 		<skills>
-			<!--Teredor Flu Infection
-			<skill id="14113" level="1"/>-->
-			<!-- Presentation -->
 			<skill id="16021" level="1"/>
 		</skills>
 	</npc>
 	<npc id="18999" name="Teredor Transparent 2" title="">
-		<!-- 11 JAN 2013 -->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -5423,7 +5259,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>

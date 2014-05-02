@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0"?>
 <list>
 	<!--
 	category = Best 		2
@@ -41,7 +41,7 @@
 	<product id="1080010" name="Latus Box" price="279" is_best="true" on_sale="true">
 		<component item_id="22311" count="1" />
 	</product>
-	
+
 	<!-- Package -->
 	<product id="1080049" name="A Scroll Bundle of Fighter" category="4" price="52" on_sale="true">
 		<component item_id="22087" count="1" />
@@ -67,7 +67,7 @@
 	<product id="1080234" name="Light Purple Maned Horse Bracelet 30 Day Pack" price="2695" is_best="true" is_new="true" on_sale="true">
 		<component item_id="20059" count="1" />
 	</product>
-	
+
 	<!-- Decorating -->
 	<product id="1080091" name="Wrapped daisy hairpin" category="3" price="338" on_sale="true">
 		<component item_id="22124" count="1" />
@@ -162,7 +162,7 @@
 	<product id="1080214" name="Kai the Cat Hat 7 Day Pack" category="3" price="169" is_new="true" on_sale="true">
 		<component item_id="13290" count="1" />
 	</product>
-	
+
 	<!-- Supplies -->
 	<product id="1080007" name="Powerful Healing Potion" category="2" price="3" on_sale="true">
 		<component item_id="22025" count="1" />
@@ -189,7 +189,7 @@
 		<component item_id="22043" count="1" />
 	</product>
 	<product id="1080026" name="Guidance Scroll" category="2" price="8" on_sale="true">
-	<component item_id="22044" count="1" />
+		<component item_id="22044" count="1" />
 	</product>
 	<product id="1080027" name="Empower Scroll" category="2" price="8" on_sale="true">
 		<component item_id="22045" count="1" />
@@ -464,10 +464,10 @@
 	<product id="1080183" name="Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss) 10 Sheet Bundle" category="2" price="675" is_new="true" on_sale="true">
 		<component item_id="20028" count="10" />
 	</product>
-	<product id="1080184" name="Feather of Blessing" category="2" is_new="true" on_sale="true">
+	<product id="1080184" name="Feather of Blessing" category="2" price="100" is_new="true" on_sale="true">
 		<component item_id="10649" count="1" />
 	</product>
-	<product id="1080185" name="Color Name" category="2" price="268" is_best="true" is_new="true" on_sale="true">
+	<product id="1080185" name="Color Name" category="2" price="100" is_best="true" is_new="true" on_sale="true">
 		<component item_id="13021" count="1" />
 	</product>
 	<product id="1080186" name="High Grade Potion of Will" category="2" price="14" is_best="true" is_new="true" on_sale="true">
@@ -515,7 +515,7 @@
 	<product id="1080200" name="Fresh Fruit Cocktail" category="2" price="91" is_best="true" is_new="true" on_sale="true">
 		<component item_id="20394" count="1" />
 	</product>
-	
+
 	<!-- Runes -->
 	<product id="1080048" name="Rune of Feather" category="1" price="68" on_sale="true">
 		<component item_id="22066" count="1" />

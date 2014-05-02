@@ -486,6 +486,11 @@ public class ChamberlainLightInstance extends ResidenceManager
 				}
 			}
 			
+			if (targetDoorObject == null)
+			{
+				return;
+			}
+			
 			DoorInstance door = targetDoorObject.getDoor();
 			int upgradeHp = ((door.getMaxHp() - door.getUpgradeHp()) * level) - door.getMaxHp();
 			

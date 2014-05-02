@@ -15,15 +15,16 @@ package quests;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
-import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author pchayka
+ */
 public class _10296_SevenSignsPoweroftheSeal extends Quest implements ScriptFile
 {
 	private static final int Eris = 32792;
@@ -33,6 +34,7 @@ public class _10296_SevenSignsPoweroftheSeal extends Quest implements ScriptFile
 	private static final int Hardin = 30832;
 	private static final int Wood = 32593;
 	private static final int Franz = 32597;
+	
 	private static final Location hiddenLoc = new Location(120744, -87432, -3392);
 	
 	public _10296_SevenSignsPoweroftheSeal()
@@ -78,14 +80,14 @@ public class _10296_SevenSignsPoweroftheSeal extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("enter_instance"))
 		{
-			enterInstance(player, 146);
+			enterInstance(st, 146);
 			return null;
 		}
 		else if (event.equalsIgnoreCase("franz_q10296_3.htm"))
 		{
 			if (player.getLevel() >= 81)
 			{
-				st.addExpAndSp(70000000, 12500000);
+				st.addExpAndSp(125000000, 12500000);
 				st.giveItems(17265, 1);
 				st.setState(COMPLETED);
 				st.playSound(SOUND_FINISH);
@@ -106,10 +108,11 @@ public class _10296_SevenSignsPoweroftheSeal extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
-		if (player.getBaseClassId() != player.getActiveClassId())
+		if (!player.isBaseClassActive())
 		{
 			return "no_subclass_allowed.htm";
 		}
+		
 		if (npcId == Eris)
 		{
 			if (cond == 0)
@@ -277,22 +280,6 @@ public class _10296_SevenSignsPoweroftheSeal extends Quest implements ScriptFile
 		public void runImpl()
 		{
 			teleportElcardia(_player);
-		}
-	}
-	
-	private void enterInstance(Player player, int instancedZoneId)
-	{
-		Reflection r = player.getActiveReflection();
-		if (r != null)
-		{
-			if (player.canReenterInstance(instancedZoneId))
-			{
-				player.teleToLocation(r.getTeleportLoc(), r);
-			}
-		}
-		else if (player.canEnterInstance(instancedZoneId))
-		{
-			ReflectionUtils.enterReflection(player, instancedZoneId);
 		}
 	}
 	

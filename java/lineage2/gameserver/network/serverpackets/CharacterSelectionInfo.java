@@ -64,6 +64,7 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 		writeD(0x07);
 		writeC(0x00);
 		writeC(0x01);
+		writeC(0x02);
 		writeD(0x00);
 		
 		long lastAccess = -1L;
@@ -80,11 +81,11 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 		for (CharSelectInfoPackage charInfoPackage : charSelectionInfo)
 		{
 			writeS(charInfoPackage.getName());
-			writeD(charInfoPackage.getCharId()); // ?
+			writeD(charInfoPackage.getCharId());
 			writeS(_loginName);
 			writeD(_sessionId);
 			writeD(charInfoPackage.getClanId());
-			writeD(0x00); // ??
+			writeD(0x00);
 			
 			writeD(charInfoPackage.getSex());
 			writeD(charInfoPackage.getRace());
@@ -141,10 +142,7 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 			writeD(i == lastUsed ? 1 : 0);
 			
 			writeC(Math.min(charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_RHAND), 127));
-			// writeD(charInfoPackage.getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND));
-			
-			writeH(0x00);
-			writeH(0x00);
+			writeD(charInfoPackage.getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND));
 			
 			int weaponId = charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_RHAND);
 			if (weaponId == 8190)
@@ -165,12 +163,12 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 				writeD(0x00);
 			}
 			
-			writeF(0x00);
-			writeF(0x00);
+			writeF(0.0D);
+			writeF(0.0D);
 			
 			writeD(charSelectionInfo.getVitalityPoints());
 			writeD(200); // Vitality percent
-			writeD(0x00); // Vitaliti items count
+			writeD(5); // Vitaliti items count
 			writeD(charInfoPackage.getAccessLevel() > -100 ? 0x01 : 0x00);
 			
 			writeC(0x00);
@@ -287,6 +285,11 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 			charInfopackage.setFace(chardata.getInt("face"));
 			charInfopackage.setHairStyle(chardata.getInt("hairstyle"));
 			charInfopackage.setHairColor(chardata.getInt("haircolor"));
+			
+			charInfopackage.setNewFace(chardata.getInt("faceB"));
+			charInfopackage.setNewHairStyle(chardata.getInt("hairstyleB"));
+			charInfopackage.setNewHairColor(chardata.getInt("haircolorB"));
+			
 			charInfopackage.setSex(chardata.getInt("sex"));
 			
 			charInfopackage.setExp(chardata.getLong("exp"));

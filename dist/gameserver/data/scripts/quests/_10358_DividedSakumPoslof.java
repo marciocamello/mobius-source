@@ -17,13 +17,17 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 
+//By Evil_dnk
 public class _10358_DividedSakumPoslof extends Quest implements ScriptFile
 {
+	
 	private static final int guild = 31795;
 	private static final int lef = 33510;
+	
 	private static final int vilan = 20402;
 	private static final int zombi = 20458;
 	private static final int poslov = 27452;
+	
 	private static final String vilan_item = "vilan";
 	private static final String zombi_item = "zombi";
 	private int killedposlov;
@@ -52,6 +56,7 @@ public class _10358_DividedSakumPoslof extends Quest implements ScriptFile
 		addKillId(poslov);
 		addKillNpcWithLog(1, vilan_item, 23, vilan);
 		addKillNpcWithLog(1, zombi_item, 20, zombi);
+		
 		addLevelCheck(32, 40);
 		addQuestCompletedCheck(_10337_SakumsImpact.class);
 	}
@@ -71,7 +76,7 @@ public class _10358_DividedSakumPoslof extends Quest implements ScriptFile
 		{
 			htmltext = "1-3.htm";
 			st.takeAllItems(17585);
-			st.getPlayer().addExpAndSp(550000, 150000);
+			st.getPlayer().addExpAndSp(450000, 180000);
 			st.giveItems(57, 105000);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
@@ -91,11 +96,12 @@ public class _10358_DividedSakumPoslof extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == lef)
 		{
 			if (st.isCompleted())
 			{
-				htmltext = TODO_FIND_HTML;
+				return htmltext;
 			}
 			else if ((cond == 0) && isAvailableFor(st.getPlayer()))
 			{
@@ -113,15 +119,15 @@ public class _10358_DividedSakumPoslof extends Quest implements ScriptFile
 			}
 			else if (cond == 3)
 			{
-				htmltext = TODO_FIND_HTML;
+				return htmltext;
 			}
 			else if (cond == 4)
 			{
-				htmltext = TODO_FIND_HTML;
+				return htmltext;
 			}
 			else
 			{
-				htmltext = TODO_FIND_HTML;
+				return htmltext;
 			}
 		}
 		else if (npcId == guild)
@@ -132,13 +138,14 @@ public class _10358_DividedSakumPoslof extends Quest implements ScriptFile
 			}
 			else if ((cond == 0) || (cond == 1) || (cond == 2) || (cond == 3))
 			{
-				htmltext = TODO_FIND_HTML;
+				return htmltext;
 			}
 			else if (cond == 4)
 			{
 				htmltext = "1-1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -146,13 +153,16 @@ public class _10358_DividedSakumPoslof extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		boolean doneKill = updateKill(npc, st);
+		
 		if (doneKill)
 		{
 			st.unset(vilan_item);
 			st.unset(zombi_item);
 			st.setCond(2);
 		}
+		
 		int npcId = npc.getNpcId();
+		
 		if ((npcId == poslov) && (st.getCond() == 3))
 		{
 			++killedposlov;

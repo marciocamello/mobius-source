@@ -15,10 +15,9 @@ package quests;
 import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.scripts.ScriptFile;
 
+//By viRUS
 public class _10344_DayOfDestinyOrcsFate extends SagasSuperclass implements ScriptFile
 {
-	private final int questId = 10344;
-	
 	@Override
 	public void onLoad()
 	{
@@ -43,11 +42,4 @@ public class _10344_DayOfDestinyOrcsFate extends SagasSuperclass implements Scri
 		
 		init();
 	}
-	
-	@Override
-	public int questId()
-	{
-		return questId;
-	}
-	
 }

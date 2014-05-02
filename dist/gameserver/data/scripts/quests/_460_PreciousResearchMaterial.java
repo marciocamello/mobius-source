@@ -12,50 +12,50 @@
  */
 package quests;
 
-import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 
-/**
- */
 public class _460_PreciousResearchMaterial extends Quest implements ScriptFile
 {
-	private static final int NPC_AMER = 33092;
-	private static final int NPC_FILAR = 30535;
-	private static final int ITEM_TEREDOR_EGG_FRAGMENT = 17735;
-	private static final int[] MOB_EGGS =
-	{
-		18997,
-		19023
-	};
-	private static final int REWARD_PROOF_OF_FIDELITY = 19450;
+	private static final int Amer = 33092; // ok
+	private static final int Filar = 30535;
+	private static final int Egg = 18997; //
+	private static final int POL = 19450; //
+	private static final int PART_EGG = 17735;
 	
 	public _460_PreciousResearchMaterial()
 	{
 		super(PARTY_ALL);
-		
-		addStartNpc(NPC_AMER);
-		addTalkId(NPC_FILAR);
-		addKillId(MOB_EGGS);
-		addQuestItem(ITEM_TEREDOR_EGG_FRAGMENT);
-		addLevelCheck(85, 99);
+		addStartNpc(Amer);
+		addTalkId(Filar);
+		addQuestItem(PART_EGG);
+		addKillId(Egg);
 	}
 	
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("30535-01.htm"))
+		int cond = st.getCond();
+		if (event.equalsIgnoreCase("4.htm"))
 		{
-			st.playSound(SOUND_FINISH);
-			st.takeAllItems(ITEM_TEREDOR_EGG_FRAGMENT);
-			st.giveItems(REWARD_PROOF_OF_FIDELITY, 2);
-			st.exitCurrentQuest(this);
+			st.setState(STARTED);
+			st.setCond(1);
+			st.playSound(SOUND_ACCEPT);
 		}
-		
+		if (event.equalsIgnoreCase("reward"))
+		{
+			if (cond == 2)
+			{
+				htmltext = "finish.htm";
+				st.takeItems(PART_EGG, -1);
+				st.giveItems(POL, 3);
+				st.playSound(SOUND_FINISH);
+				st.exitCurrentQuest(this);
+			}
+		}
 		return htmltext;
 	}
 	
@@ -63,84 +63,76 @@ public class _460_PreciousResearchMaterial extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		
-		if (npc.getNpcId() == NPC_AMER)
+		int npcId = npc.getNpcId();
+		int cond = st.getCond();
+		if (npcId == Amer)
 		{
-			if (st.getPlayer().getLevel() < 85)
+			if (cond == 0)
 			{
-				return ""; // low level
+				if (st.getPlayer().getLevel() < 85)
+				{
+					htmltext = "no-lvl.htm";
+				}
+				else if (st.isNowAvailable())
+				{
+					htmltext = "started.htm";
+				}
+				else
+				{
+					htmltext = "no_avaliable.htm";
+				}
 			}
-			
-			switch (st.getState())
+			else if (cond == 1)
 			{
-				case COMPLETED:
-					htmltext = "completed";
-					break;
-				case CREATED:
-					if (isAvailableFor(st.getPlayer()))
-					{
-						htmltext = "33092-00.htm";
-						
-						st.setState(STARTED);
-						st.playSound(SOUND_ACCEPT);
-						st.setCond(1);
-					}
-					else
-					{
-						htmltext = "daily";
-					}
-					
-					break;
-				case STARTED:
-					if (st.getCond() == 1)
-					{
-						htmltext = "33092-00.htm";
-					}
-					
-					break;
+				htmltext = "taken.htm";
+			}
+			else if (cond == 2)
+			{
+				return "cond2.htm";
 			}
 		}
-		else if (npc.getNpcId() == NPC_FILAR)
+		else if (npcId == Filar)
 		{
-			if (st.isStarted() && (st.getCond() == 2))
+			if (cond == 2)
 			{
-				htmltext = "30535-00.htm";
+				htmltext = "con_quest.htm";
 			}
 		}
-		
 		return htmltext;
 	}
 	
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		if ((st.getCond() == 1) && Rnd.chance(50))
-		{
-			st.giveItems(ITEM_TEREDOR_EGG_FRAGMENT, 1);
-			st.playSound(SOUND_ITEMGET);
-			
-			if (st.getQuestItemsCount(ITEM_TEREDOR_EGG_FRAGMENT) >= 20)
-			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(2);
-			}
-		}
+		int cond = st.getCond();
 		
+		if ((cond == 1) && (st.getQuestItemsCount(PART_EGG) < 20))
+		{
+			st.giveItems(PART_EGG, 1);
+		}
+		else if ((cond == 1) && (st.getQuestItemsCount(PART_EGG) >= 20))
+		{
+			st.giveItems(PART_EGG, 1);
+			st.setCond(2);
+		}
 		return null;
 	}
 	
 	@Override
 	public void onLoad()
 	{
+		// null
 	}
 	
 	@Override
 	public void onReload()
 	{
+		// null
 	}
 	
 	@Override
 	public void onShutdown()
 	{
+		// null
 	}
 }

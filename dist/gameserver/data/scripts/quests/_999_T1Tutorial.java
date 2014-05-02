@@ -301,10 +301,12 @@ public class _999_T1Tutorial extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		QuestState qs = st.getPlayer().getQuestState(_255_Tutorial.class);
-		if ((qs == null) || (st == null))
+		
+		if (qs == null)
 		{
 			return null;
 		}
+		
 		Player player = st.getPlayer();
 		if (player == null)
 		{

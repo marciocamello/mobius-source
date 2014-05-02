@@ -1,244 +1,154 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0"?>
 <list>
 	<config showall="false" notax="true" keepenchanted="true"/>
 	<item>
-		<!-- Запечатанная Серьга Татеосса -->
-		<ingredient count="1" id="6724" />
-		<!-- Древняя Адена -->
-		<ingredient count="731441" id="5575" />
-		<!-- Серьга Татеосса -->
-		<production count="1" id="858" />
+		<ingredient count="1" id="6724"/>
+		<ingredient count="731441" id="5575"/>
+		<production count="1" id="858"/>
 	</item>
 	<item>
-		<!-- Запечатанное Кольцо Татеосса -->
-		<ingredient count="1" id="6725" />
-		<!-- Древняя Адена -->
-		<ingredient count="487627" id="5575" />
-		<!-- Кольцо Татеосса -->
-		<production count="1" id="889" />
+		<ingredient count="1" id="6725"/>
+		<ingredient count="487627" id="5575"/>
+		<production count="1" id="889"/>
 	</item>
 	<item>
-		<!-- Запечатанное Ожерелье Татеосса -->
-		<ingredient count="1" id="6726" />
-		<!-- Древняя Адена -->
-		<ingredient count="975255" id="5575" />
-		<!-- Ожерелье Татеосса -->
-		<production count="1" id="920" />
+		<ingredient count="1" id="6726"/>
+		<ingredient count="975255" id="5575"/>
+		<production count="1" id="920"/>
 	</item>
 	<item>
-		<!-- Запечатанная Серьга Династии -->
-		<ingredient count="1" id="9452" />
-		<!-- Древняя Адена -->
-		<ingredient count="1924000" id="5575" />
-		<!-- Серьга Династии -->
-		<production count="1" id="9455" />
+		<ingredient count="1" id="9452"/>
+		<ingredient count="1924000" id="5575"/>
+		<production count="1" id="9455"/>
 	</item>
 	<item>
-		<!-- Запечатанное Ожерелье Династии -->
-		<ingredient count="1" id="9453" />
-		<!-- Древняя Адена -->
-		<ingredient count="2566000" id="5575" />
-		<!-- Ожерелье Династии -->
-		<production count="1" id="9456" />
+		<ingredient count="1" id="9453"/>
+		<ingredient count="2566000" id="5575"/>
+		<production count="1" id="9456"/>
 	</item>
 	<item>
-		<!-- Запечатанное Кольцо Династии -->
-		<ingredient count="1" id="9454" />
-		<!-- Древняя Адена -->
-		<ingredient count="1283000" id="5575" />
-		<!-- Кольцо Династии -->
-		<production count="1" id="9457" />
+		<ingredient count="1" id="9454"/>
+		<ingredient count="1283000" id="5575"/>
+		<production count="1" id="9457"/>
 	</item>
 	<item>
-		<!-- Запечатанная Серьга Татеосса -->
-		<ingredient count="1" id="11595" />
-		<!-- Древняя Адена -->
-		<ingredient count="731000" id="5575" />
-		<!-- Серьга Татеосса -->
-		<production count="1" id="11598" />
+		<ingredient count="1" id="11595"/>
+		<ingredient count="731000" id="5575"/>
+		<production count="1" id="11598"/>
 	</item>
 	<item>
-		<!-- Запечатанное Кольцо Татеосса -->
-		<ingredient count="1" id="11594" />
-		<!-- Древняя Адена -->
-		<ingredient count="488000" id="5575" />
-		<!-- Кольцо Татеосса -->
-		<production count="1" id="11597" />
+		<ingredient count="1" id="11594"/>
+		<ingredient count="488000" id="5575"/>
+		<production count="1" id="11597"/>
 	</item>
 	<item>
-		<!-- Запечатанное Ожерелье Татеосса -->
-		<ingredient count="1" id="11593" />
-		<!-- Древняя Адена -->
-		<ingredient count="975000" id="5575" />
-		<!-- Ожерелье Татеосса -->
-		<production count="1" id="11596" />
+		<ingredient count="1" id="11593"/>
+		<ingredient count="975000" id="5575"/>
+		<production count="1" id="11596"/>
 	</item>
 	<item>
-		<!-- Запечатанная Серьга Династии -->
-		<ingredient count="1" id="11604" />
-		<!-- Древняя Адена -->
-		<ingredient count="1924000" id="5575" />
-		<!-- Серьга Династии -->
-		<production count="1" id="11601" />
+		<ingredient count="1" id="11604"/>
+		<ingredient count="1924000" id="5575"/>
+		<production count="1" id="11601"/>
 	</item>
 	<item>
-		<!-- Запечатанное Ожерелье Династии -->
-		<ingredient count="1" id="11602" />
-		<!-- Древняя Адена -->
-		<ingredient count="2566000" id="5575" />
-		<!-- Ожерелье Династии -->
-		<production count="1" id="11599" />
+		<ingredient count="1" id="11602"/>
+		<ingredient count="2566000" id="5575"/>
+		<production count="1" id="11599"/>
 	</item>
 	<item>
-		<!-- Запечатанное Кольцо Династии -->
-		<ingredient count="1" id="11603" />
-		<!-- Древняя Адена -->
-		<ingredient count="1283000" id="5575" />
-		<!-- Кольцо Династии -->
-		<production count="1" id="11600" />
+		<ingredient count="1" id="11603"/>
+		<ingredient count="1283000" id="5575"/>
+		<production count="1" id="11600"/>
 	</item>
 	<item>
-		<!-- Запечатанная Серьга Дестино -->
-		<ingredient count="1" id="15767" />
-		<!-- Древняя Адена -->
-		<ingredient count="3180000" id="5575" />
-		<!-- Серьга Дестино -->
-		<production count="1" id="15724" />
+		<ingredient count="1" id="15767"/>
+		<ingredient count="3180000" id="5575"/>
+		<production count="1" id="15724"/>
 	</item>
 	<item>
-		<!-- Запечатанное Ожерелье Дестино -->
-		<ingredient count="1" id="15768" />
-		<!-- Древняя Адена -->
-		<ingredient count="4240000" id="5575" />
-		<!-- Ожерелье Дестино -->
-		<production count="1" id="15725" />
+		<ingredient count="1" id="15768"/>
+		<ingredient count="4240000" id="5575"/>
+		<production count="1" id="15725"/>
 	</item>
 	<item>
-		<!-- Запечатанное Кольцо Дестино -->
-		<ingredient count="1" id="15766" />
-		<!-- Древняя Адена -->
-		<ingredient count="2119000" id="5575" />
-		<!-- Кольцо Дестино -->
-		<production count="1" id="15723" />
+		<ingredient count="1" id="15766"/>
+		<ingredient count="2119000" id="5575"/>
+		<production count="1" id="15723"/>
 	</item>
 	<item>
-		<!-- Запечатанная Серьга Дестино -->
-		<ingredient count="1" id="16373" />
-		<!-- Древняя Адена -->
-		<ingredient count="3180000" id="5575" />
-		<!-- Серьга Дестино -->
-		<production count="1" id="16379" />
+		<ingredient count="1" id="16373"/>
+		<ingredient count="3180000" id="5575"/>
+		<production count="1" id="16379"/>
 	</item>
 	<item>
-		<!-- Запечатанное Ожерелье Дестино -->
-		<ingredient count="1" id="16374" />
-		<!-- Древняя Адена -->
-		<ingredient count="4240000" id="5575" />
-		<!-- Ожерелье Дестино -->
-		<production count="1" id="16380" />
+		<ingredient count="1" id="16374"/>
+		<ingredient count="4240000" id="5575"/>
+		<production count="1" id="16380"/>
 	</item>
 	<item>
-		<!-- Запечатанное Кольцо Дестино -->
-		<ingredient count="1" id="16372" />
-		<!-- Древняя Адена -->
-		<ingredient count="2119000" id="5575" />
-		<!-- Кольцо Дестино -->
-		<production count="1" id="16378" />
+		<ingredient count="1" id="16372"/>
+		<ingredient count="2119000" id="5575"/>
+		<production count="1" id="16378"/>
 	</item>
 	<item>
-		<!-- Запечатанная Серьга Венеры -->
-		<ingredient count="1" id="14160" />
-		<!-- Древняя Адена -->
-		<ingredient count="4408000" id="5575" />
-		<!-- Серьга Венеры -->
-		<production count="1" id="14163" />
+		<ingredient count="1" id="14160"/>
+		<ingredient count="4408000" id="5575"/>
+		<production count="1" id="14163"/>
 	</item>
 	<item>
-		<!-- Запечатанное Ожерелье Венеры -->
-		<ingredient count="1" id="14161" />
-		<!-- Древняя Адена -->
-		<ingredient count="5877000" id="5575" />
-		<!-- Ожерелье Венеры -->
-		<production count="1" id="14164" />
+		<ingredient count="1" id="14161"/>
+		<ingredient count="5877000" id="5575"/>
+		<production count="1" id="14164"/>
 	</item>
 	<item>
-		<!-- Запечатанное Кольцо Венеры -->
-		<ingredient count="1" id="14162" />
-		<!-- Древняя Адена -->
-		<ingredient count="2938000" id="5575" />
-		<!-- Кольцо Венеры -->
-		<production count="1" id="14165" />
+		<ingredient count="1" id="14162"/>
+		<ingredient count="2938000" id="5575"/>
+		<production count="1" id="14165"/>
 	</item>
 	<item>
-		<!-- Запечатанная Серьга Венеры -->
-		<ingredient count="1" id="16370" />
-		<!-- Древняя Адена -->
-		<ingredient count="4408000" id="5575" />
-		<!-- Серьга Венеры -->
-		<production count="1" id="16376" />
+		<ingredient count="1" id="16370"/>
+		<ingredient count="4408000" id="5575"/>
+		<production count="1" id="16376"/>
 	</item>
 	<item>
-		<!-- Запечатанное Ожерелье Венеры -->
-		<ingredient count="1" id="16371" />
-		<!-- Древняя Адена -->
-		<ingredient count="5877000" id="5575" />
-		<!-- Ожерелье Венеры -->
-		<production count="1" id="16377" />
+		<ingredient count="1" id="16371"/>
+		<ingredient count="5877000" id="5575"/>
+		<production count="1" id="16377"/>
 	</item>
 	<item>
-		<!-- Запечатанное Кольцо Венеры -->
-		<ingredient count="1" id="16369" />
-		<!-- Древняя Адена -->
-		<ingredient count="2938000" id="5575" />
-		<!-- Кольцо Венеры -->
-		<production count="1" id="16375" />
+		<ingredient count="1" id="16369"/>
+		<ingredient count="2938000" id="5575"/>
+		<production count="1" id="16375"/>
 	</item>
 	<item>
-		<!-- Запечатанная Серьга Верпеса -->
-		<ingredient count="1" id="15764" />
-		<!-- Древняя Адена -->
-		<ingredient count="5273000" id="5575" />
-		<!-- Серьга Верпеса -->
-		<production count="1" id="15721" />
+		<ingredient count="1" id="15764"/>
+		<ingredient count="5273000" id="5575"/>
+		<production count="1" id="15721"/>
 	</item>
 	<item>
-		<!-- Запечатанное Ожерелье Верпеса -->
-		<ingredient count="1" id="15765" />
-		<!-- Древняя Адена -->
-		<ingredient count="7031000" id="5575" />
-		<!-- Ожерелье Верпеса -->
-		<production count="1" id="15722" />
+		<ingredient count="1" id="15765"/>
+		<ingredient count="7031000" id="5575"/>
+		<production count="1" id="15722"/>
 	</item>
 	<item>
-		<!-- Запечатанное Кольцо Верпеса -->
-		<ingredient count="1" id="15763" />
-		<!-- Древняя Адена -->
-		<ingredient count="3515000" id="5575" />
-		<!-- Кольцо Верпеса -->
-		<production count="1" id="15720" />
+		<ingredient count="1" id="15763"/>
+		<ingredient count="3515000" id="5575"/>
+		<production count="1" id="15720"/>
 	</item>
 	<item>
-		<!-- Запечатанная Серьга Элегии -->
-		<ingredient count="1" id="15761" />
-		<!-- Древняя Адена -->
-		<ingredient count="6323000" id="5575" />
-		<!-- Серьга Элегии -->
-		<production count="1" id="15718" />
+		<ingredient count="1" id="15761"/>
+		<ingredient count="6323000" id="5575"/>
+		<production count="1" id="15718"/>
 	</item>
 	<item>
-		<!-- Запечатанное Ожерелье Элегии -->
-		<ingredient count="1" id="15762" />
-		<!-- Древняя Адена -->
-		<ingredient count="8431000" id="5575" />
-		<!-- Ожерелье Элегии -->
-		<production count="1" id="15719" />
+		<ingredient count="1" id="15762"/>
+		<ingredient count="8431000" id="5575"/>
+		<production count="1" id="15719"/>
 	</item>
 	<item>
-		<!-- Запечатанное Кольцо Элегии -->
-		<ingredient count="1" id="15760" />
-		<!-- Древняя Адена -->
-		<ingredient count="4215000" id="5575" />
-		<!-- Кольцо Элегии -->
-		<production count="1" id="15717" />
+		<ingredient count="1" id="15760"/>
+		<ingredient count="4215000" id="5575"/>
+		<production count="1" id="15717"/>
 	</item>
 </list>

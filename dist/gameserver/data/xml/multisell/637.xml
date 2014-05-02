@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE list SYSTEM "multisell.dtd">
-<!--Blacksmith of Mammon - Exchange foundation item to masterwork.--> 
-<!--MULTISELL - [high_item_trade]-->
+<?xml version="1.0"?>
 <list>
 	<config show_all="false" no_tax="true" keep_enchanted="true"/>
 	<item>

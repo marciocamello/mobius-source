@@ -12,7 +12,9 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import lineage2.gameserver.model.Player;
+import java.util.Map;
+
+import lineage2.gameserver.model.PremiumItem;
 
 /**
  * @author VISTALL
@@ -20,18 +22,43 @@ import lineage2.gameserver.model.Player;
  */
 public class ExGoodsInventoryInfo extends L2GameServerPacket
 {
+	private final Map<Integer, PremiumItem> _premiumItemMap;
 	
-	public ExGoodsInventoryInfo(Player player)
+	public ExGoodsInventoryInfo(Map<Integer, PremiumItem> premiumItemMap)
 	{
-		
+		_premiumItemMap = premiumItemMap;
 	}
 	
+	@SuppressWarnings("rawtypes")
 	@Override
 	protected void writeImpl()
 	{
-		/*
-		 * 203DA858 PUSH Engine.205127AC ASCII "QdSSQccSSh" 203DA8D0 PUSH Engine.20506EFC ASCII "dd"
-		 */
 		writeEx(0x112);
+		if (!_premiumItemMap.isEmpty())
+		{
+			writeH(_premiumItemMap.size());
+			for (Map.Entry entry : _premiumItemMap.entrySet())
+			{
+				writeQ((Integer) entry.getKey());
+				writeC(0);
+				writeD(10003);
+				writeS(((PremiumItem) entry.getValue()).getSender());
+				writeS(((PremiumItem) entry.getValue()).getSender());// ((PremiumItem)entry.getValue()).getSenderMessage());
+				writeQ(0);
+				writeC(2);
+				writeC(0);
+				
+				writeS(null);
+				writeS(null);
+				
+				writeH(1);
+				writeD(((PremiumItem) entry.getValue()).getItemId());
+				writeD((int) ((PremiumItem) entry.getValue()).getCount());
+			}
+		}
+		else
+		{
+			writeH(0);
+		}
 	}
 }

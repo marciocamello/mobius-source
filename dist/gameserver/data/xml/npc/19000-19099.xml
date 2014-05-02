@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="19000" name="Mutated Millipede" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="17.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="88"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="23472"/>
@@ -42,34 +41,26 @@
 			<defence attribute="unholy" value="180"/>
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
-                <group chance="70.000">
-                    <reward item_id="57" min="97" max="225" chance="100.00000"/>
-                    <!-- Адена -->
-                </group>
-                <group chance="0.035">
-                    <reward item_id="18125" min="1" max="1" chance="8.62069"/>
-                    <!-- Неопознанные Кожаные Брюки Бессмертия -->
-                    <reward item_id="18118" min="1" max="1" chance="2.58621"/>
-                    <!-- Неопознанная Кираса Бессмертия -->
-                    <reward item_id="18129" min="1" max="1" chance="2.58621"/>
-                    <!-- Неопознанная Туника Бессмертия -->
-                    <reward item_id="19178" min="1" max="1" chance="86.20690"/>
-                    <!-- Часть Неопознанного Заклинателя Реквиема -->
-                </group>
-                <group chance="0.301">
-                    <reward item_id="19310" min="1" max="1" chance="99.70090"/>
-                    <!-- Синтетический Кокс Высокого Качества -->
-                    <reward item_id="17526" min="1" max="1" chance="0.29910"/>
-                    <!-- Свиток: Модифицировать Оружие (R) -->
-                </group>
-            </rewardlist>
+			<group chance="70.000">
+				<reward item_id="57" min="97" max="225" chance="100.00000"/>
+			</group>
+			<group chance="0.035">
+				<reward item_id="18125" min="1" max="1" chance="8.62069"/>
+				<reward item_id="18118" min="1" max="1" chance="2.58621"/>
+				<reward item_id="18129" min="1" max="1" chance="2.58621"/>
+				<reward item_id="19178" min="1" max="1" chance="86.20690"/>
+			</group>
+			<group chance="0.301">
+				<reward item_id="19310" min="1" max="1" chance="99.70090"/>
+				<reward item_id="17526" min="1" max="1" chance="0.29910"/>
+			</group>
+		</rewardlist>
 		<skills>
 			<skill id="14183" level="1"/>
-		<skill id="4416" level="12"/>
+			<skill id="4416" level="12"/>
 		</skills>
 	</npc>
 	<npc id="19001" name="Apherus Package" title="Mysterious">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="5.0"/>
@@ -116,7 +107,6 @@
 		</rewardlist>
 	</npc>
 	<npc id="19002" name="Apherus Package" title="Mysterious">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="5.0"/>
@@ -159,7 +149,6 @@
 		<skills/>
 	</npc>
 	<npc id="19003" name="Apherus Package" title="Mysterious">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="5.0"/>
@@ -202,7 +191,6 @@
 		<skills/>
 	</npc>
 	<npc id="19004" name="Jungle Control 1" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="85"/>
@@ -243,7 +231,6 @@
 		<skills/>
 	</npc>
 	<npc id="19005" name="Jungle Control 2" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="85"/>
@@ -284,7 +271,6 @@
 		<skills/>
 	</npc>
 	<npc id="19006" name="Jungle Control 3" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="85"/>
@@ -325,7 +311,6 @@
 		<skills/>
 	</npc>
 	<npc id="19007" name="Jungle Control 4" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="85"/>
@@ -366,7 +351,6 @@
 		<skills/>
 	</npc>
 	<npc id="19008" name="Water Cannon" title="Square Base">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="32.0"/>
 		<set name="collision_height" value="24.5"/>
 		<set name="level" value="98"/>
@@ -411,7 +395,6 @@
 		</skills>
 	</npc>
 	<npc id="19009" name="Water Cannon" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="85"/>
@@ -454,7 +437,6 @@
 		</skills>
 	</npc>
 	<npc id="19011" name="Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="13.0"/>
 		<set name="level" value="97"/>
@@ -495,7 +477,6 @@
 		<skills/>
 	</npc>
 	<npc id="19012" name="Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="13.0"/>
 		<set name="level" value="97"/>
@@ -536,12 +517,11 @@
 		<skills/>
 	</npc>
 	<npc id="19013" name="Crystalline Golem" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="34.0"/>
 		<set name="collision_height" value="47.0"/>
 		<set name="level" value="96"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="12538"/>
@@ -581,12 +561,11 @@
 		</skills>
 	</npc>
 	<npc id="19014" name="Crystalline Golem" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="34.0"/>
 		<set name="collision_height" value="47.0"/>
 		<set name="level" value="96"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="12538"/>
@@ -626,12 +605,11 @@
 		</skills>
 	</npc>
 	<npc id="19015" name="Elite Millipede" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="88"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="497254"/>
@@ -666,23 +644,18 @@
 			<defence attribute="unholy" value="180"/>
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
-                <group chance="70.000">
-                    <reward item_id="57" min="2017" max="4705" chance="100.00000"/>
-                    <!-- Адена -->
-                </group>
-                <group chance="1.333">
-                    <reward item_id="18104" min="1" max="1" chance="2.25056"/>
-                    <!-- Неопознанный Резак Реквиема -->
-                    <reward item_id="18109" min="1" max="1" chance="2.25056"/>
-                    <!-- Неопознанный Бросок Реквиема -->
-                    <reward item_id="19174" min="1" max="1" chance="95.49887"/>
-                    <!-- Часть Неопознанного Буревестника Реквиема -->
-                </group>
-                <group chance="0.300">
-                    <reward item_id="17527" min="1" max="1" chance="100.00000"/>
-                    <!-- Свиток: Модифицировать Доспех (R) -->
-                </group>
-            </rewardlist>
+			<group chance="70.000">
+				<reward item_id="57" min="2017" max="4705" chance="100.00000"/>
+			</group>
+			<group chance="1.333">
+				<reward item_id="18104" min="1" max="1" chance="2.25056"/>
+				<reward item_id="18109" min="1" max="1" chance="2.25056"/>
+				<reward item_id="19174" min="1" max="1" chance="95.49887"/>
+			</group>
+			<group chance="0.300">
+				<reward item_id="17527" min="1" max="1" chance="100.00000"/>
+			</group>
+		</rewardlist>
 		<skills>
 			<skill id="4416" level="12"/>
 			<skill id="5465" level="1"/>
@@ -690,12 +663,11 @@
 		</skills>
 	</npc>
 	<npc id="19016" name="Teredor's Larva" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="17.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="88"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="11736"/>
@@ -730,31 +702,23 @@
 			<defence attribute="unholy" value="180"/>
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
-                <group chance="70.000">
-                    <reward item_id="57" min="57" max="133" chance="100.00000"/>
-                    <!-- Адена -->
-                </group>
-                <group chance="0.033">
-                    <reward item_id="18119" min="1" max="1" chance="2.75229"/>
-                    <!-- Неопознанные Набедренники Бессмертия -->
-                    <reward item_id="18124" min="1" max="1" chance="2.75229"/>
-                    <!-- Неопознанный Кожаный Доспех Бессмертия -->
-                    <reward item_id="18130" min="1" max="1" chance="2.75229"/>
-                    <!-- Неопознанные Штаны Бессмертия -->
-                    <reward item_id="19177" min="1" max="1" chance="91.74312"/>
-                    <!-- Часть Неопознанного Расчленителя Реквиема -->
-                </group>
-                <group chance="0.033">
-                    <reward item_id="19311" min="1" max="1" chance="90.90909"/>
-                    <!-- Рактолелиум -->
-                    <reward item_id="17527" min="1" max="1" chance="9.09091"/>
-                    <!-- Свиток: Модифицировать Доспех (R) -->
-                </group>
-            </rewardlist>
-            <rewardlist type="SWEEP">
-                <reward item_id="19310" min="1" max="1" chance="0.03000"/>
-                <!-- Синтетический Кокс Высокого Качества -->
-            </rewardlist>
+			<group chance="70.000">
+				<reward item_id="57" min="57" max="133" chance="100.00000"/>
+			</group>
+			<group chance="0.033">
+				<reward item_id="18119" min="1" max="1" chance="2.75229"/>
+				<reward item_id="18124" min="1" max="1" chance="2.75229"/>
+				<reward item_id="18130" min="1" max="1" chance="2.75229"/>
+				<reward item_id="19177" min="1" max="1" chance="91.74312"/>
+			</group>
+			<group chance="0.033">
+				<reward item_id="19311" min="1" max="1" chance="90.90909"/>
+				<reward item_id="17527" min="1" max="1" chance="9.09091"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="19310" min="1" max="1" chance="0.03000"/>
+		</rewardlist>
 		<skills>
 			<skill id="4416" level="12"/>
 			<skill id="5465" level="1"/>
@@ -762,12 +726,11 @@
 		</skills>
 	</npc>
 	<npc id="19017" name="Fairy of the Genesis" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="7.0"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -806,12 +769,11 @@
 		</skills>
 	</npc>
 	<npc id="19018" name="Lizard Charmer" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="29.0"/>
 		<set name="collision_height" value="44.0"/>
 		<set name="level" value="95"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="43"/>
@@ -853,12 +815,11 @@
 		</skills>
 	</npc>
 	<npc id="19019" name="Lizard Spearman" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="40.25"/>
 		<set name="level" value="95"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="43"/>
@@ -900,12 +861,11 @@
 		</skills>
 	</npc>
 	<npc id="19020" name="Lizard Spearman" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="37.5"/>
 		<set name="level" value="92"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="43"/>
@@ -947,12 +907,11 @@
 		</skills>
 	</npc>
 	<npc id="19021" name="Magical Power Ballista" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="70.0"/>
 		<set name="collision_height" value="60.5"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="7324"/>
@@ -989,7 +948,6 @@
 		<skills/>
 	</npc>
 	<npc id="19022" name="" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="85"/>
@@ -1030,12 +988,11 @@
 		<skills/>
 	</npc>
 	<npc id="19023" name="Egg" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="level" value="88"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="8650"/>
@@ -1072,12 +1029,11 @@
 		<skills/>
 	</npc>
 	<npc id="19024" name="Beatle" title="Hatcher">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="52.5"/>
 		<set name="level" value="88"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="248627"/>
@@ -1112,43 +1068,35 @@
 			<defence attribute="unholy" value="180"/>
 		</attributes>
 		<rewardlist type="RATED_GROUPED">
-                <group chance="70.000">
-                    <reward item_id="57" min="2508" max="5853" chance="100.00000"/>
-                    <!-- Адена -->
-                </group>
-                <group chance="1.297">
-                    <reward item_id="18108" min="1" max="1" chance="2.31303"/>
-                    <!-- Неопознанный Буревестник Реквиема -->
-                    <reward item_id="18111" min="1" max="1" chance="2.31303"/>
-                    <!-- Неопознанный Расчленитель Реквиема -->
-                    <reward item_id="18112" min="1" max="1" chance="2.31303"/>
-                    <!-- Неопознанный Заклинатель Реквиема -->
-                    <reward item_id="19170" min="1" max="1" chance="93.06091"/>
-                    <!-- Часть Неопознанного Резака Реквиема -->
-                </group>
-                <group chance="0.300">
-                    <reward item_id="17527" min="1" max="1" chance="100.00000"/>
-                    <!-- Свиток: Модифицировать Доспех (R) -->
-                </group>
-            </rewardlist>
-            <rewardlist type="SWEEP">
-                <reward item_id="19311" min="1" max="1" chance="0.07500"/>
-                <!-- Рактолелиум -->
-            </rewardlist>
+			<group chance="70.000">
+				<reward item_id="57" min="2508" max="5853" chance="100.00000"/>
+			</group>
+			<group chance="1.297">
+				<reward item_id="18108" min="1" max="1" chance="2.31303"/>
+				<reward item_id="18111" min="1" max="1" chance="2.31303"/>
+				<reward item_id="18112" min="1" max="1" chance="2.31303"/>
+				<reward item_id="19170" min="1" max="1" chance="93.06091"/>
+			</group>
+			<group chance="0.300">
+				<reward item_id="17527" min="1" max="1" chance="100.00000"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="19311" min="1" max="1" chance="0.07500"/>
+		</rewardlist>
 		<skills>
 			<skill id="4416" level="12"/>
 			<skill id="5465" level="1"/>
 			<skill id="14412" level="1"/>
-		<skill id="4412" level="9"/>
+			<skill id="4412" level="9"/>
 		</skills>
 	</npc>
 	<npc id="19025" name="Earth Wyrm Topography 1" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="1331.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="9311"/>
@@ -1185,12 +1133,11 @@
 		<skills/>
 	</npc>
 	<npc id="19026" name="Earth Wyrm Topography 2" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="1331.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="9311"/>
@@ -1227,12 +1174,11 @@
 		<skills/>
 	</npc>
 	<npc id="19027" name="Earth Wyrm Topography 3" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="1331.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="9311"/>
@@ -1269,12 +1215,11 @@
 		<skills/>
 	</npc>
 	<npc id="19028" name="Earth Wyrm Topography 4" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="1331.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="9311"/>
@@ -1311,12 +1256,11 @@
 		<skills/>
 	</npc>
 	<npc id="19029" name="Earth Wyrm Topography 5" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="1331.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -1353,12 +1297,11 @@
 		<skills/>
 	</npc>
 	<npc id="19030" name="Earth Wyrm Topography 6" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="1331.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -1395,12 +1338,11 @@
 		<skills/>
 	</npc>
 	<npc id="19031" name="Earth Wyrm Topography 7" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="1331.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -1437,12 +1379,11 @@
 		<skills/>
 	</npc>
 	<npc id="19032" name="Earth Wyrm Topography 8" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="1331.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -1479,7 +1420,6 @@
 		<skills/>
 	</npc>
 	<npc id="19033" name="Earth Wyrm Topography 9" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="85"/>
@@ -1520,7 +1460,6 @@
 		<skills/>
 	</npc>
 	<npc id="19034" name="Earth Wyrm Topography 10" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="85"/>
@@ -1561,7 +1500,6 @@
 		<skills/>
 	</npc>
 	<npc id="19035" name="Earth Wyrm Topography 11" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="80"/>
@@ -1602,12 +1540,11 @@
 		<skills/>
 	</npc>
 	<npc id="19036" name="Sealing Energy" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="14612"/>
@@ -1644,12 +1581,11 @@
 		<skills/>
 	</npc>
 	<npc id="19037" name="Wild Maguen" title="Raider">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="13.25"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="7324"/>
@@ -1688,12 +1624,11 @@
 		</skills>
 	</npc>
 	<npc id="19038" name="Baylor's Treasure Chest" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="8.5"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -1732,12 +1667,11 @@
 		</skills>
 	</npc>
 	<npc id="19039" name="Baylor's Treasure Chest" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="8.5"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="0"/>
@@ -1776,12 +1710,11 @@
 		</skills>
 	</npc>
 	<npc id="19040" name="Hell's Gate" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="2.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3695411"/>
@@ -1820,12 +1753,11 @@
 		</skills>
 	</npc>
 	<npc id="19041" name="Greedy Crystalline Golem" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="40.0"/>
 		<set name="collision_height" value="57.5"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="27135"/>
@@ -1865,7 +1797,6 @@
 		</skills>
 	</npc>
 	<npc id="19042" name="Jewel Management" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="85"/>
@@ -1906,7 +1837,6 @@
 		<skills/>
 	</npc>
 	<npc id="19043" name="For direction 1" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="95"/>
@@ -1947,7 +1877,6 @@
 		<skills/>
 	</npc>
 	<npc id="19044" name="For direction 2" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="95"/>
@@ -1988,7 +1917,6 @@
 		<skills/>
 	</npc>
 	<npc id="19045" name="For direction 3" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="95"/>
@@ -2029,7 +1957,6 @@
 		<skills/>
 	</npc>
 	<npc id="19046" name="For direction 4" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="95"/>
@@ -2070,7 +1997,6 @@
 		<skills/>
 	</npc>
 	<npc id="19047" name="For direction 5" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="95"/>
@@ -2111,7 +2037,6 @@
 		<skills/>
 	</npc>
 	<npc id="19048" name="For direction 6" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="95"/>
@@ -2152,7 +2077,6 @@
 		<skills/>
 	</npc>
 	<npc id="19049" name="For direction 7" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="48.15"/>
 		<set name="level" value="95"/>
@@ -2193,7 +2117,6 @@
 		<skills/>
 	</npc>
 	<npc id="19050" name="For direction 8" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="51.4"/>
 		<set name="level" value="95"/>
@@ -2234,7 +2157,6 @@
 		<skills/>
 	</npc>
 	<npc id="19051" name="For direction 9" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="43.5"/>
 		<set name="level" value="95"/>
@@ -2275,7 +2197,6 @@
 		<skills/>
 	</npc>
 	<npc id="19052" name="For direction 10" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="45.8"/>
 		<set name="level" value="95"/>
@@ -2316,7 +2237,6 @@
 		<skills/>
 	</npc>
 	<npc id="19053" name="For direction 11" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="49.0"/>
 		<set name="level" value="95"/>
@@ -2357,7 +2277,6 @@
 		<skills/>
 	</npc>
 	<npc id="19054" name="For direction 12" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="95"/>
@@ -2398,7 +2317,6 @@
 		<skills/>
 	</npc>
 	<npc id="19055" name="For direction 13" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="48.75"/>
 		<set name="level" value="95"/>
@@ -2439,12 +2357,11 @@
 		<skills/>
 	</npc>
 	<npc id="19056" name="For direction 14" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="51.5"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -2481,12 +2398,11 @@
 		<skills/>
 	</npc>
 	<npc id="19057" name="For direction 15" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -2523,7 +2439,6 @@
 		<skills/>
 	</npc>
 	<npc id="19058" name="For direction 16" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
@@ -2564,7 +2479,6 @@
 		<skills/>
 	</npc>
 	<npc id="19059" name="For direction 17" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
@@ -2605,7 +2519,6 @@
 		<skills/>
 	</npc>
 	<npc id="19060" name="For direction 18" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
@@ -2646,12 +2559,11 @@
 		<skills/>
 	</npc>
 	<npc id="19061" name="For direction 19" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="22.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -2688,12 +2600,11 @@
 		<skills/>
 	</npc>
 	<npc id="19062" name="For direction 20" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -2730,12 +2641,11 @@
 		<skills/>
 	</npc>
 	<npc id="19063" name="For direction 21" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -2772,12 +2682,11 @@
 		<skills/>
 	</npc>
 	<npc id="19064" name="For direction 22" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -2814,12 +2723,11 @@
 		<skills/>
 	</npc>
 	<npc id="19065" name="For direction 23" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -2856,12 +2764,11 @@
 		<skills/>
 	</npc>
 	<npc id="19066" name="For direction 24" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -2898,12 +2805,11 @@
 		<skills/>
 	</npc>
 	<npc id="19067" name="For direction 25" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -2940,12 +2846,11 @@
 		<skills/>
 	</npc>
 	<npc id="19068" name="For direction 26" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -2982,12 +2887,11 @@
 		<skills/>
 	</npc>
 	<npc id="19069" name="For direction 27" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="50.0"/>
 		<set name="collision_height" value="170.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -3024,7 +2928,6 @@
 		<skills/>
 	</npc>
 	<npc id="19070" name="Dimensional Keeper" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="85"/>
@@ -3065,7 +2968,6 @@
 		<skills/>
 	</npc>
 	<npc id="19071" name="Raid Boss Dummy" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="85"/>
@@ -3106,7 +3008,6 @@
 		<skills/>
 	</npc>
 	<npc id="19072" name="Standard Monster Dummy" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="85"/>
@@ -3147,7 +3048,6 @@
 		<skills/>
 	</npc>
 	<npc id="19073" name="Genesis Transparent" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="85"/>
@@ -3188,7 +3088,6 @@
 		<skills/>
 	</npc>
 	<npc id="19074" name="Decaying Darkness Region" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="98"/>
@@ -3229,7 +3128,6 @@
 		<skills/>
 	</npc>
 	<npc id="19075" name="Jewel Transparent 1" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="85"/>
@@ -3270,12 +3168,11 @@
 		<skills/>
 	</npc>
 	<npc id="19076" name="Escort Paladin" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="76.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -3314,7 +3211,6 @@
 		</skills>
 	</npc>
 	<npc id="19077" name="Jewel Transparent 2" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
@@ -3355,7 +3251,6 @@
 		<skills/>
 	</npc>
 	<npc id="19078" name="Water Cannon" title="Square Base">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="85"/>
@@ -3399,7 +3294,6 @@
 		</skills>
 	</npc>
 	<npc id="19079" name="Water Cannon" title="Square Base">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="85"/>
@@ -3443,7 +3337,6 @@
 		</skills>
 	</npc>
 	<npc id="19080" name="Earth Wyrm Egg" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="level" value="95"/>
@@ -3484,7 +3377,6 @@
 		<skills/>
 	</npc>
 	<npc id="19081" name="Earth Wyrm Heart" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="32.0"/>
 		<set name="collision_height" value="24.5"/>
 		<set name="level" value="95"/>
@@ -3528,7 +3420,6 @@
 		</skills>
 	</npc>
 	<npc id="19082" name="Light Sphere" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
@@ -3571,7 +3462,6 @@
 		</skills>
 	</npc>
 	<npc id="19083" name="Light Sphere" title="Large">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
@@ -3614,12 +3504,11 @@
 		</skills>
 	</npc>
 	<npc id="19084" name="Cursed Priest" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="15.6"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="13190"/>
@@ -3659,7 +3548,6 @@
 		</skills>
 	</npc>
 	<npc id="19085" name="Bundle" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="9.0"/>
 		<set name="level" value="99"/>
@@ -3700,12 +3588,11 @@
 		<skills/>
 	</npc>
 	<npc id="19086" name="Daemon Angma" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="40"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1"/>
@@ -3742,12 +3629,11 @@
 		<skills/>
 	</npc>
 	<npc id="19087" name="Daemon Angma Captain" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="40"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1"/>
@@ -3784,12 +3670,11 @@
 		<skills/>
 	</npc>
 	<npc id="19088" name="Follower of Shilen" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="40"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1"/>
@@ -3828,12 +3713,11 @@
 		</skills>
 	</npc>
 	<npc id="19089" name="Follower of Shilen" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -3872,12 +3756,11 @@
 		</skills>
 	</npc>
 	<npc id="19090" name="Cursed Villager" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="24.5"/>
 		<set name="level" value="40"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1"/>
@@ -3916,12 +3799,11 @@
 		</skills>
 	</npc>
 	<npc id="19091" name="Cursed Villager" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="40"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1"/>
@@ -3960,12 +3842,11 @@
 		</skills>
 	</npc>
 	<npc id="19092" name="Totem" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="32.0"/>
 		<set name="collision_height" value="24.5"/>
 		<set name="level" value="40"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1"/>
@@ -4004,12 +3885,11 @@
 		</skills>
 	</npc>
 	<npc id="19093" name="Immune Watchman" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="45.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1"/>
@@ -4046,7 +3926,6 @@
 		<skills/>
 	</npc>
 	<npc id="19094" name="Dark Elf Village Transparent 1" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="85"/>
@@ -4087,7 +3966,6 @@
 		<skills/>
 	</npc>
 	<npc id="19095" name="Jewel" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="85"/>
@@ -4128,7 +4006,6 @@
 		<skills/>
 	</npc>
 	<npc id="19096" name="Antharas Transparent 1" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="85"/>
@@ -4169,12 +4046,11 @@
 		<skills/>
 	</npc>
 	<npc id="19097" name="Antharas Transparent 2" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="30.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="13190"/>
@@ -4211,12 +4087,11 @@
 		<skills/>
 	</npc>
 	<npc id="19098" name="Antharas Transparent 3" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="30.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="13190"/>
@@ -4253,7 +4128,6 @@
 		<skills/>
 	</npc>
 	<npc id="19099" name="Antharas Transparent 4" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="85"/>

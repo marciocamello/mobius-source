@@ -13,6 +13,7 @@
 package quests;
 
 import lineage2.commons.util.Rnd;
+import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
@@ -22,21 +23,18 @@ import org.apache.commons.lang3.ArrayUtils;
 
 public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 {
-	private static final int VOLLODOS = 30137;
-	private static final int EXTRACT = 34059;
-	private static final int BLOOD = 34060;
-	private static final int DROP_CHANCE = 60;
-	private static final int EXTRACT_MOBS[] =
+	// npc
+	public static final int VOLODOS = 30137;
+	
+	// mobs
+	public static final int[] mobs =
 	{
 		23162,
 		23163,
 		23164,
 		23165,
 		23166,
-		23167
-	};
-	private static final int BLOOD_MOBS[] =
-	{
+		23167,
 		23168,
 		23169,
 		23170,
@@ -44,6 +42,8 @@ public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 		23172,
 		23173
 	};
+	private static int Zhelch = 34059;
+	private static int Blood = 34060;
 	
 	@Override
 	public void onLoad()
@@ -62,101 +62,97 @@ public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 	
 	public _490_DutyOfTheSurvivor()
 	{
-		super(false);
-		addStartNpc(VOLLODOS);
-		addTalkId(VOLLODOS);
-		addKillId(EXTRACT_MOBS);
-		addKillId(BLOOD_MOBS);
-		addQuestItem((new int[]
-		{
-			34059,
-			34060
-		}));
+		super(true);
+		addStartNpc(VOLODOS);
+		addTalkId(VOLODOS);
+		addKillId(mobs);
+		addLevelCheck(85, 89);
+		addQuestItem(Zhelch);
+		addQuestItem(Blood);
 	}
 	
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
-		String htmltext = event;
-		if (event.equalsIgnoreCase("30137-5.htm"))
+		if (event.equalsIgnoreCase("30137-6.htm"))
 		{
-			st.setState(STARTED);
 			st.setCond(1);
+			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
-		return htmltext;
+		return event;
 	}
 	
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		String htmltext = "noquest";
+		Player player = st.getPlayer();
 		int npcId = npc.getNpcId();
+		int state = st.getState();
 		int cond = st.getCond();
-		if (npcId == VOLLODOS)
+		if (npcId == VOLODOS)
 		{
-			if (st.getPlayer().getLevel() >= 85)
+			if (state == 1)
 			{
-				if (cond == 0)
+				if ((player.getLevel() < 85) || (player.getLevel() > 89))
 				{
-					if (st.isNowAvailableByTime())
-					{
-						htmltext = "30137.htm";
-					}
-					else
-					{
-						htmltext = "30137-comp.htm";
-					}
+					return "30137-lvl.htm";
 				}
-				else if (cond == 1)
+				if (!st.isNowAvailable())
 				{
-					if (st.haveQuestItem(34059) || st.haveQuestItem(34060))
-					{
-						htmltext = "30137-9.htm";
-					}
-					else
-					{
-						htmltext = "30137-6.htm";
-					}
+					return "30137-comp.htm";
+				}
+				return "30137.htm";
+			}
+			if (state == 2)
+			{
+				if (cond == 1)
+				{
+					return "30137-7.htm";
 				}
 				if (cond == 2)
 				{
-					st.takeItems(34059, -1);
-					st.takeItems(34060, -1);
-					st.addExpAndSp(145557000, 58119840);
 					st.giveItems(57, 505062);
+					st.addExpAndSp(145557000, 58119840);
 					st.unset("cond");
-					st.exitCurrentQuest(this);
 					st.playSound(SOUND_FINISH);
-					htmltext = "30137-comp.htm";
+					st.exitCurrentQuest(this);
+					return "30137-9.htm";
 				}
 			}
-			else
-			{
-				htmltext = "30137-lvl.htm";
-			}
 		}
-		
-		return htmltext;
+		return "noquest";
 	}
 	
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		if (ArrayUtils.contains(EXTRACT_MOBS, npc.getNpcId()) && (st.getQuestItemsCount(EXTRACT) < 20) && (Rnd.get(100) < DROP_CHANCE))
+		int cond = st.getCond();
+		if ((cond != 1) || (npc == null))
 		{
-			st.giveItems(EXTRACT, 1);
-			st.playSound(SOUND_ITEMGET);
+			return null;
 		}
-		if (ArrayUtils.contains(BLOOD_MOBS, npc.getNpcId()) && (st.getQuestItemsCount(BLOOD) < 20) && (Rnd.get(100) < DROP_CHANCE))
+		
+		if (ArrayUtils.contains(mobs, npc.getNpcId()))
 		{
-			st.giveItems(BLOOD, 1);
-			st.playSound(SOUND_ITEMGET);
-		}
-		if ((st.getQuestItemsCount(EXTRACT) == 20) && (st.getQuestItemsCount(BLOOD) == 20))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
+			if (Rnd.chance(10))
+			{
+				if (Rnd.chance(50))
+				{
+					if (st.getQuestItemsCount(Zhelch) < 20)
+					{
+						st.giveItems(Zhelch, 1);
+					}
+				}
+				else if (st.getQuestItemsCount(Blood) < 20)
+				{
+					st.giveItems(Blood, 1);
+				}
+				if ((st.getQuestItemsCount(Zhelch) >= 20) && (st.getQuestItemsCount(Blood) >= 20))
+				{
+					st.setCond(2);
+				}
+			}
 		}
 		return null;
 	}

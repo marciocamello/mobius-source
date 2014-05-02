@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="18700" name="" title="">
@@ -209,11 +209,11 @@
 		<set name="type" value="Monster"/>
 		<faction name="aceed_clan" range="300"/>
 		<skills>
-			<skill id="4408" level="9"/>	<!--HP Increase (1/2x)-->
-			<skill id="4411" level="15"/>	<!--Strong M. Atk.-->
-			<skill id="4412" level="14"/>	<!--Strong P. Def.-->
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
-			<skill id="5465" level="1"/>	<!--Earth Attacks-->
+			<skill id="4408" level="9"/>
+			<skill id="4411" level="15"/>
+			<skill id="4412" level="14"/>
+			<skill id="4416" level="2"/>
+			<skill id="5465" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="earth" value="130"/>
@@ -263,11 +263,11 @@
 			<set name="TargetEnabled" value="false"/>
 		</ai_params>
 		<skills>
-			<skill id="4408" level="9"/>	<!--HP Increase (1/2x)-->
-			<skill id="4411" level="15"/>	<!--Strong M. Atk.-->
-			<skill id="4412" level="14"/>	<!--Strong P. Def.-->
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
-			<skill id="5465" level="1"/>	<!--Earth Attacks-->
+			<skill id="4408" level="9"/>
+			<skill id="4411" level="15"/>
+			<skill id="4412" level="14"/>
+			<skill id="4416" level="2"/>
+			<skill id="5465" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="earth" value="130"/>
@@ -318,15 +318,15 @@
 			<set name="showName" value="false"/>
 		</ai_params>
 		<skills>
-			<skill id="4408" level="12"/>	<!--HP Increase (4x)-->
-			<skill id="4411" level="15"/>	<!--Strong M. Atk.-->
-			<skill id="4412" level="16"/>	<!--Very Strong P. Def.-->
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
-			<skill id="5465" level="1"/>	<!--Earth Attacks-->
+			<skill id="4408" level="12"/>
+			<skill id="4411" level="15"/>
+			<skill id="4412" level="16"/>
+			<skill id="4416" level="2"/>
+			<skill id="5465" level="1"/>
 		</skills>
 		<rewardlist type="NOT_RATED_GROUPED">
 			<group chance="80.0">
-				<reward item_id="8603" min="1" max="1" chance="100.0000"/>	<!--Herb of Mana-->
+				<reward item_id="8603" min="1" max="1" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -419,9 +419,9 @@
 		<set name="type" value="Monster"/>
 		<faction name="aceed_clan" range="300"/>
 		<skills>
-			<skill id="4408" level="11"/>	<!--HP Increase (3x)-->
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
-			<skill id="5465" level="1"/>	<!--Earth Attacks-->
+			<skill id="4408" level="11"/>
+			<skill id="4416" level="2"/>
+			<skill id="5465" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="earth" value="130"/>
@@ -472,13 +472,13 @@
 			<set name="showName" value="false"/>
 		</ai_params>
 		<skills>
-			<skill id="4408" level="10"/>	<!--HP Increase (2x)-->
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
-			<skill id="5465" level="1"/>	<!--Earth Attacks-->
+			<skill id="4408" level="10"/>
+			<skill id="4416" level="2"/>
+			<skill id="5465" level="1"/>
 		</skills>
 		<rewardlist type="NOT_RATED_GROUPED">
 			<group chance="80.0">
-				<reward item_id="8603" min="1" max="1" chance="100.0000"/>	<!--Herb of Mana-->
+				<reward item_id="8603" min="1" max="1" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -530,13 +530,13 @@
 			<set name="showName" value="false"/>
 		</ai_params>
 		<skills>
-			<skill id="4408" level="10"/>	<!--HP Increase (2x)-->
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
-			<skill id="5465" level="1"/>	<!--Earth Attacks-->
+			<skill id="4408" level="10"/>
+			<skill id="4416" level="2"/>
+			<skill id="5465" level="1"/>
 		</skills>
 		<rewardlist type="NOT_RATED_GROUPED">
 			<group chance="80.0">
-				<reward item_id="8603" min="1" max="1" chance="100.0000"/>	<!--Herb of Mana-->
+				<reward item_id="8603" min="1" max="1" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -588,13 +588,13 @@
 			<set name="showName" value="false"/>
 		</ai_params>
 		<skills>
-			<skill id="4408" level="10"/>	<!--HP Increase (2x)-->
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
-			<skill id="5465" level="1"/>	<!--Earth Attacks-->
+			<skill id="4408" level="10"/>
+			<skill id="4416" level="2"/>
+			<skill id="5465" level="1"/>
 		</skills>
 		<rewardlist type="NOT_RATED_GROUPED">
 			<group chance="80.0">
-				<reward item_id="8603" min="1" max="1" chance="100.0000"/>	<!--Herb of Mana-->
+				<reward item_id="8603" min="1" max="1" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -646,8 +646,8 @@
 			<set name="showName" value="false"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
-			<skill id="5465" level="1"/>	<!--Earth Attacks-->
+			<skill id="4416" level="2"/>
+			<skill id="5465" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="earth" value="130"/>
@@ -698,8 +698,8 @@
 			<set name="showName" value="false"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
-			<skill id="5465" level="1"/>	<!--Earth Attacks-->
+			<skill id="4416" level="2"/>
+			<skill id="5465" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="earth" value="130"/>
@@ -747,8 +747,8 @@
 		<set name="type" value="Monster"/>
 		<faction name="aceed_clan" range="300"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
-			<skill id="5465" level="1"/>	<!--Earth Attacks-->
+			<skill id="4416" level="2"/>
+			<skill id="5465" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="earth" value="130"/>
@@ -795,13 +795,13 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="13983"/>	<!--Exclusive to Monsters (Death Knight_2hs)-->
+			<rhand item_id="13983"/>
 		</equip>
 		<skills>
-			<skill id="4410" level="7"/>	<!--Weak P. Atk.-->
-			<skill id="4411" level="9"/>	<!--Slightly Weak M. Atk.-->
-			<skill id="4416" level="1"/>	<!--Undead-->
-			<skill id="5467" level="1"/>	<!--Dark Attacks-->
+			<skill id="4410" level="7"/>
+			<skill id="4411" level="9"/>
+			<skill id="4416" level="1"/>
+			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="130"/>
@@ -848,12 +848,12 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="13985"/>	<!--Exclusive to Monsters (Death Slayer_r)-->
+			<rhand item_id="13985"/>
 		</equip>
 		<skills>
-			<skill id="4410" level="14"/>	<!--Strong P. Atk.-->
-			<skill id="4416" level="1"/>	<!--Undead-->
-			<skill id="5467" level="1"/>	<!--Dark Attacks-->
+			<skill id="4410" level="14"/>
+			<skill id="4416" level="1"/>
+			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="130"/>
@@ -900,10 +900,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4410" level="9"/>	<!--Slightly Weak P. Atk.-->
-			<skill id="4411" level="13"/>	<!--Slightly Strong M. Atk.-->
-			<skill id="4416" level="1"/>	<!--Undead-->
-			<skill id="5465" level="1"/>	<!--Earth Attacks-->
+			<skill id="4410" level="9"/>
+			<skill id="4411" level="13"/>
+			<skill id="4416" level="1"/>
+			<skill id="5465" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="earth" value="130"/>
@@ -950,11 +950,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="13987"/>	<!--Exclusive to Monsters (Savage Warrior)-->
+			<rhand item_id="13987"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="5467" level="1"/>	<!--Dark Attacks-->
+			<skill id="4416" level="6"/>
+			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="130"/>
@@ -1001,8 +1001,8 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="5467" level="1"/>	<!--Dark Attacks-->
+			<skill id="4416" level="6"/>
+			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="130"/>
@@ -3630,9 +3630,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4408" level="11"/>	<!--HP Increase (3x)-->
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="11"/>
+			<skill id="4416" level="2"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="130"/>
@@ -3680,9 +3680,9 @@
 		<set name="type" value="ImmuneMonster"/>
 		<faction name="dragon" range="600"/>
 		<skills>
-			<skill id="4408" level="10"/>	<!--HP Increase (2x)-->
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="10"/>
+			<skill id="4416" level="2"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="130"/>
@@ -3729,9 +3729,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="ImmuneMonster"/>
 		<skills>
-			<skill id="4408" level="10"/>	<!--HP Increase (2x)-->
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="10"/>
+			<skill id="4416" level="2"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="130"/>
@@ -3778,9 +3778,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="ImmuneMonster"/>
 		<skills>
-			<skill id="4408" level="10"/>	<!--HP Increase (2x)-->
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="10"/>
+			<skill id="4416" level="2"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="130"/>
@@ -3871,8 +3871,8 @@
 		<set name="type" value="Monster"/>
 		<faction name="aceed_clan" range="300"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
-			<skill id="5467" level="1"/>	<!--Dark Attacks-->
+			<skill id="4416" level="2"/>
+			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="130"/>
@@ -4007,19 +4007,19 @@
 		<set name="type" value="Monster"/>
 		<faction name="des_dragon" range="1000"/>
 		<equip>
-			<rhand item_id="13978"/>	<!--Exclusive to Monsters (Mounted Troops High Level Leader)-->
+			<rhand item_id="13978"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="9"/>	<!--HP Increase (1/2x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
-			<skill id="4411" level="8"/>	<!--Weak M. Atk.-->
-			<skill id="4412" level="7"/>	<!--Weak P. Def.-->
-			<skill id="4413" level="8"/>	<!--Weak M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="10"/>	<!--Dragons-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="9"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="8"/>
+			<skill id="4411" level="8"/>
+			<skill id="4412" level="7"/>
+			<skill id="4413" level="8"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="10"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="150"/>
@@ -4067,19 +4067,19 @@
 		<set name="type" value="Monster"/>
 		<faction name="des_dragon" range="1000"/>
 		<equip>
-			<rhand item_id="13978"/>	<!--Exclusive to Monsters (Mounted Troops High Level Leader)-->
+			<rhand item_id="13978"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="9"/>	<!--HP Increase (1/2x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
-			<skill id="4411" level="8"/>	<!--Weak M. Atk.-->
-			<skill id="4412" level="7"/>	<!--Weak P. Def.-->
-			<skill id="4413" level="8"/>	<!--Weak M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="10"/>	<!--Dragons-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="9"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="8"/>
+			<skill id="4411" level="8"/>
+			<skill id="4412" level="7"/>
+			<skill id="4413" level="8"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="10"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="150"/>
@@ -4127,20 +4127,20 @@
 		<set name="type" value="Monster"/>
 		<faction name="des_dragon" range="1000"/>
 		<equip>
-			<rhand item_id="13979"/>	<!--Exclusive to Monsters (Dragon Steed Troop Battle Infantry Sword)-->
-			<lhand item_id="13980"/>	<!--Exclusive to Monsters (Dragon Steed Troop Battle Infantry Shield)-->
+			<rhand item_id="13979"/>
+			<lhand item_id="13980"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="9"/>	<!--HP Increase (1/2x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
-			<skill id="4411" level="8"/>	<!--Weak M. Atk.-->
-			<skill id="4412" level="7"/>	<!--Weak P. Def.-->
-			<skill id="4413" level="8"/>	<!--Weak M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="10"/>	<!--Dragons-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="9"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="8"/>
+			<skill id="4411" level="8"/>
+			<skill id="4412" level="7"/>
+			<skill id="4413" level="8"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="10"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="150"/>
@@ -4188,20 +4188,20 @@
 		<set name="type" value="Monster"/>
 		<faction name="des_dragon" range="1000"/>
 		<equip>
-			<rhand item_id="13979"/>	<!--Exclusive to Monsters (Dragon Steed Troop Battle Infantry Sword)-->
-			<lhand item_id="13980"/>	<!--Exclusive to Monsters (Dragon Steed Troop Battle Infantry Shield)-->
+			<rhand item_id="13979"/>
+			<lhand item_id="13980"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="9"/>	<!--HP Increase (1/2x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
-			<skill id="4411" level="8"/>	<!--Weak M. Atk.-->
-			<skill id="4412" level="7"/>	<!--Weak P. Def.-->
-			<skill id="4413" level="8"/>	<!--Weak M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="10"/>	<!--Dragons-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="9"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="8"/>
+			<skill id="4411" level="8"/>
+			<skill id="4412" level="7"/>
+			<skill id="4413" level="8"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="10"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="150"/>
@@ -4249,16 +4249,16 @@
 		<set name="type" value="Monster"/>
 		<faction name="des_dragon" range="1000"/>
 		<skills>
-			<skill id="4408" level="9"/>	<!--HP Increase (1/2x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
-			<skill id="4411" level="8"/>	<!--Weak M. Atk.-->
-			<skill id="4412" level="7"/>	<!--Weak P. Def.-->
-			<skill id="4413" level="8"/>	<!--Weak M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="10"/>	<!--Dragons-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="9"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="8"/>
+			<skill id="4411" level="8"/>
+			<skill id="4412" level="7"/>
+			<skill id="4413" level="8"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="10"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="150"/>
@@ -4306,16 +4306,16 @@
 		<set name="type" value="Monster"/>
 		<faction name="des_dragon" range="1000"/>
 		<skills>
-			<skill id="4408" level="9"/>	<!--HP Increase (1/2x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
-			<skill id="4411" level="8"/>	<!--Weak M. Atk.-->
-			<skill id="4412" level="7"/>	<!--Weak P. Def.-->
-			<skill id="4413" level="8"/>	<!--Weak M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="10"/>	<!--Dragons-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="9"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="8"/>
+			<skill id="4411" level="8"/>
+			<skill id="4412" level="7"/>
+			<skill id="4413" level="8"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="10"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="150"/>
@@ -4363,19 +4363,19 @@
 		<set name="type" value="Monster"/>
 		<faction name="des_dragon" range="1000"/>
 		<equip>
-			<rhand item_id="13981"/>	<!--Exclusive to Monsters (Mounted Troops Tactics)-->
+			<rhand item_id="13981"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="9"/>	<!--HP Increase (1/2x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
-			<skill id="4411" level="8"/>	<!--Weak M. Atk.-->
-			<skill id="4412" level="7"/>	<!--Weak P. Def.-->
-			<skill id="4413" level="8"/>	<!--Weak M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="10"/>	<!--Dragons-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="9"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="8"/>
+			<skill id="4411" level="8"/>
+			<skill id="4412" level="7"/>
+			<skill id="4413" level="8"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="10"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="150"/>
@@ -4423,19 +4423,19 @@
 		<set name="type" value="Monster"/>
 		<faction name="des_dragon" range="1000"/>
 		<equip>
-			<rhand item_id="13981"/>	<!--Exclusive to Monsters (Mounted Troops Tactics)-->
+			<rhand item_id="13981"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="9"/>	<!--HP Increase (1/2x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
-			<skill id="4411" level="8"/>	<!--Weak M. Atk.-->
-			<skill id="4412" level="7"/>	<!--Weak P. Def.-->
-			<skill id="4413" level="8"/>	<!--Weak M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="10"/>	<!--Dragons-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="9"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="8"/>
+			<skill id="4411" level="8"/>
+			<skill id="4412" level="7"/>
+			<skill id="4413" level="8"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="10"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="150"/>
@@ -4483,19 +4483,19 @@
 		<set name="type" value="Monster"/>
 		<faction name="des_dragon" range="1000"/>
 		<equip>
-			<rhand item_id="13843"/>	<!--Draconic Peltast Weapon-->
+			<rhand item_id="13843"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="9"/>	<!--HP Increase (1/2x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
-			<skill id="4411" level="8"/>	<!--Weak M. Atk.-->
-			<skill id="4412" level="7"/>	<!--Weak P. Def.-->
-			<skill id="4413" level="8"/>	<!--Weak M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="10"/>	<!--Dragons-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="9"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="8"/>
+			<skill id="4411" level="8"/>
+			<skill id="4412" level="7"/>
+			<skill id="4413" level="8"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="10"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="150"/>
@@ -4543,20 +4543,20 @@
 		<set name="type" value="Monster"/>
 		<faction name="des_dragon" range="1000"/>
 		<equip>
-			<rhand item_id="13843"/>	<!--Draconic Peltast Weapon-->
+			<rhand item_id="13843"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="9"/>	<!--HP Increase (1/2x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
-			<skill id="4411" level="8"/>	<!--Weak M. Atk.-->
-			<skill id="4412" level="7"/>	<!--Weak P. Def.-->
-			<skill id="4413" level="8"/>	<!--Weak M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="10"/>	<!--Dragons-->
-			<skill id="4441" level="5"/>	<!--Greater Resist Mental Derangement-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4408" level="9"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="8"/>
+			<skill id="4411" level="8"/>
+			<skill id="4412" level="7"/>
+			<skill id="4413" level="8"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="10"/>
+			<skill id="4441" level="5"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="fire" value="150"/>
@@ -4862,38 +4862,38 @@
 		<set name="type" value="Monster"/>
 		<faction name="fire_clan" range="300"/>
 		<skills>
-			<skill id="4045" level="10"/>	<!--Resist Full Magic Attack-->
-			<skill id="4408" level="14"/>	<!--HP Increase (6x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="8"/>	<!--Weak P. Atk.-->
-			<skill id="4410" level="8"/>	<!--Slightly Weak P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="10"/>	<!--Slightly Weak P. Def.-->
-			<skill id="4413" level="10"/>	<!--Slightly Weak M. Def.-->
-			<skill id="4414" level="1"/>	<!--Heavy Armor Type-->
-			<skill id="4415" level="5"/>	<!--Blunt Weapons-->
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
-			<skill id="4607" level="1"/>	<!--Magma Attack-->
-			<skill id="5462" level="1"/>	<!--Fire Attacks-->
+			<skill id="4045" level="10"/>
+			<skill id="4408" level="14"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="8"/>
+			<skill id="4410" level="8"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="10"/>
+			<skill id="4413" level="10"/>
+			<skill id="4414" level="1"/>
+			<skill id="4415" level="5"/>
+			<skill id="4416" level="2"/>
+			<skill id="4607" level="1"/>
+			<skill id="5462" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="2420" max="4913" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="2420" max="4913" chance="100.0000"/>
 			</group>
 			<group chance="0.5196">
-				<reward item_id="6371" min="1" max="1" chance="0.2201"/>	<!--Demon Splinter-->
-				<reward item_id="6695" min="1" max="1" chance="99.7799"/>	<!--Demon Splinter Blade-->
+				<reward item_id="6371" min="1" max="1" chance="0.2201"/>
+				<reward item_id="6695" min="1" max="1" chance="99.7799"/>
 			</group>
 			<group chance="2.8451">
-				<reward item_id="9628" min="1" max="1" chance="44.9357"/>	<!--Leonard-->
-				<reward item_id="9630" min="1" max="1" chance="30.1542"/>	<!--Orichalcum-->
-				<reward item_id="9629" min="1" max="1" chance="24.9101"/>	<!--Adamantine-->
+				<reward item_id="9628" min="1" max="1" chance="44.9357"/>
+				<reward item_id="9630" min="1" max="1" chance="30.1542"/>
+				<reward item_id="9629" min="1" max="1" chance="24.9101"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="960" min="1" max="1" chance="0.5298"/>	<!--Scroll: Enchant Armor (S-Grade)-->
-			<reward item_id="1894" min="1" max="1" chance="46.4713"/>	<!--Crafted Leather-->
-			<reward item_id="9540" min="1" max="1" chance="2.3694"/>	<!--Sealed Dynasty Tunic Piece-->
+			<reward item_id="960" min="1" max="1" chance="0.5298"/>
+			<reward item_id="1894" min="1" max="1" chance="46.4713"/>
+			<reward item_id="9540" min="1" max="1" chance="2.3694"/>
 		</rewardlist>
 		<attributes>
 			<attack attribute="fire" value="100"/>

@@ -147,7 +147,7 @@ public class _10331_StartOfFate extends Quest implements ScriptFile
 			}
 			return null;
 		}
-		else if (event.equalsIgnoreCase("drop_belise_mark"))
+		else if (event.equalsIgnoreCase("drop_belise_mark") && (npc != null))
 		{
 			npc.dropItem(st.getPlayer(), BELIS_MARK, 1);
 			return null;
@@ -250,7 +250,7 @@ public class _10331_StartOfFate extends Quest implements ScriptFile
 			if (st.getInt("stage") == 5)
 			{
 				int defendersCount = st.getInt("spawned_defenders");
-				if (defendersCount < NEED_DEFENDERS_KILLS_COUNT)
+				if ((defendersCount < NEED_DEFENDERS_KILLS_COUNT) && (npc != null))
 				{
 					int defenderNpcId = ((defendersCount == 0) || ((defendersCount % 2) == 0)) ? HANDYMAN : OPERATIVE;
 					Reflection reflect = npc.getReflection();

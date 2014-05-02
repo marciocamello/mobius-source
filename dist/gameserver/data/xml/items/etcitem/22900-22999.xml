@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="22966" name="Vitality Maintaining Potion (1-hour)">
+		<set name="icon" value="BranchSys2.br_essence_rose_i00"/>
+		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="22980" name="XP Rune I (Lv1-85) 100% Pack (1-hour)">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+</list>

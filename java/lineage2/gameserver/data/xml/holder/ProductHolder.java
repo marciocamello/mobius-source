@@ -38,6 +38,8 @@ import org.w3c.dom.Node;
  */
 public class ProductHolder
 {
+	public static int MAX_ITEMS_IN_RECENT_LIST;
+	public static String RECENT_PRDCT_LIST_VAR;
 	/**
 	 * Field _log.
 	 */

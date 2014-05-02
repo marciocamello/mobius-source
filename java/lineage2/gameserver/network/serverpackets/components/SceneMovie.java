@@ -101,6 +101,9 @@ public enum SceneMovie implements IStaticPacket
 	sc_tauti_opening(70, 15000),
 	sc_tauti_phase(71, 15000),
 	sc_tauti_ending(72, 15000),
+	sc_soulisland_quest(73, 25000),
+	sc_metucellar_opening(74, 25000),
+	sc_sub_quest(75, 25000),
 	sc_noble_opening(99, 10000),
 	sc_noble_ending(100, 10000),
 	

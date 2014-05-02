@@ -27,7 +27,7 @@ public class ExPVPMatchUserDie extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeEx(0x7F);
+		writeEx(0x80);
 		writeD(_blueKills);
 		writeD(_redKills);
 	}

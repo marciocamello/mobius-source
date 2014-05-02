@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="33100" name="Lada" title="Magmeld Emissary Leader">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="7.0"/>
@@ -48,7 +47,6 @@
 		</skills>
 	</npc>
 	<npc id="33101" name="Inside" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="talkingisland.Inside"/>
 		<set name="collision_radius" value="9.0"/>
@@ -96,7 +94,6 @@
 		<skills/>
 	</npc>
 	<npc id="33102" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="11.0"/>
@@ -140,7 +137,6 @@
 		<skills/>
 	</npc>
 	<npc id="33103" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="11.0"/>
@@ -184,7 +180,6 @@
 		<skills/>
 	</npc>
 	<npc id="33104" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="11.0"/>
@@ -228,7 +223,6 @@
 		<skills/>
 	</npc>
 	<npc id="33105" name="Guard" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="DefaultAI"/>
 		<set name="collision_radius" value="20.0"/>
@@ -276,7 +270,6 @@
 		<skills/>
 	</npc>
 	<npc id="33106" name="Guard" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="talkingisland.Guardian"/>
@@ -624,7 +617,6 @@
 		</attributes>
 	</npc>
 	<npc id="33113" name="" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -824,7 +816,6 @@
 		</attributes>
 	</npc>
 	<npc id="33117" name="" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="680.0"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -871,7 +862,6 @@
 		</attributes>
 	</npc>
 	<npc id="33118" name="" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="680.0"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -918,7 +908,6 @@
 		</attributes>
 	</npc>
 	<npc id="33119" name="Combat Soldier" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -964,9 +953,9 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<ai_params>
-            <set name="TargetEnabled" value="false"/>
+			<set name="TargetEnabled" value="false"/>
 			<set name="showName" value="false"/>
-        </ai_params>
+		</ai_params>
 	</npc>
 	<npc id="33120" name="Rubentis" title="">
 		<set name="baseHpMax" value="7324"/>
@@ -1261,7 +1250,6 @@
 		</attributes>
 	</npc>
 	<npc id="33126" name="" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -1308,7 +1296,6 @@
 		</attributes>
 	</npc>
 	<npc id="33127" name="Adventure Guildsman" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="680.0"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1357,7 +1344,6 @@
 		</attributes>
 	</npc>
 	<npc id="33128" name="Guillaume" title="Magmeld Emissary">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1406,7 +1392,6 @@
 		</attributes>
 	</npc>
 	<npc id="33129" name="Prieta" title="Magmeld Emissary">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -1455,7 +1440,6 @@
 		</attributes>
 	</npc>
 	<npc id="33130" name="Lykegos" title="Magmeld Emissary">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -1504,7 +1488,6 @@
 		</attributes>
 	</npc>
 	<npc id="33131" name="Noeti Mimilead" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -1553,7 +1536,6 @@
 		</attributes>
 	</npc>
 	<npc id="33132" name="Noeti Mimilead" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1602,7 +1584,6 @@
 		</attributes>
 	</npc>
 	<npc id="33133" name="Apherus Garden Gate" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -1651,7 +1632,6 @@
 		</attributes>
 	</npc>
 	<npc id="33134" name="Apherus Garden Gate" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -1700,7 +1680,6 @@
 		</attributes>
 	</npc>
 	<npc id="33135" name="Apherus Garden Gate" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -1749,7 +1728,6 @@
 		</attributes>
 	</npc>
 	<npc id="33136" name="Apherus Garden Gate" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -1798,7 +1776,6 @@
 		</attributes>
 	</npc>
 	<npc id="33137" name="Ant under Foot" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -1991,7 +1968,6 @@
 		</attributes>
 	</npc>
 	<npc id="33141" name="Fairy Citizen" title="Incarcerated">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -2040,7 +2016,6 @@
 		</attributes>
 	</npc>
 	<npc id="33142" name="Taegong Kim" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -2089,7 +2064,6 @@
 		</attributes>
 	</npc>
 	<npc id="33143" name="Fox" title="Talking">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="680.0"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2138,7 +2112,6 @@
 		</attributes>
 	</npc>
 	<npc id="33144" name="Toad" title="Talking">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -2187,7 +2160,6 @@
 		</attributes>
 	</npc>
 	<npc id="33145" name="Rabbit" title="Talking">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -2236,7 +2208,6 @@
 		</attributes>
 	</npc>
 	<npc id="33146" name="Garden Fairy" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -2379,7 +2350,6 @@
 		</attributes>
 	</npc>
 	<npc id="33149" name="Un Sepina" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="680.0"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2428,7 +2398,6 @@
 		</attributes>
 	</npc>
 	<npc id="33150" name="Un Retipina" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="680.0"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2477,7 +2446,6 @@
 		</attributes>
 	</npc>
 	<npc id="33151" name="Rumiese" title="Officer">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -2526,7 +2494,6 @@
 		</attributes>
 	</npc>
 	<npc id="33152" name="Tie" title="Soldier">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -2575,7 +2542,6 @@
 		</attributes>
 	</npc>
 	<npc id="33153" name="Izael" title="Tree Friend of Josephina">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2624,7 +2590,6 @@
 		</attributes>
 	</npc>
 	<npc id="33154" name="Izael" title="Tree Friend of Josephina">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2671,7 +2636,6 @@
 		</attributes>
 	</npc>
 	<npc id="33155" name="Rieyi" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2720,7 +2684,6 @@
 		</attributes>
 	</npc>
 	<npc id="33156" name="Relic Detector" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2769,7 +2732,6 @@
 		</attributes>
 	</npc>
 	<npc id="33157" name="Teleport Device" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="68"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2818,7 +2780,6 @@
 		</attributes>
 	</npc>
 	<npc id="33158" name="Hidden Cruma Device" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2867,7 +2828,6 @@
 		</attributes>
 	</npc>
 	<npc id="33159" name="Earth Wyrm Trasken" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2916,7 +2876,6 @@
 		</attributes>
 	</npc>
 	<npc id="33160" name="Fernando" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2965,7 +2924,6 @@
 		</attributes>
 	</npc>
 	<npc id="33161" name="Gate" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="680.0"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3014,7 +2972,6 @@
 		</attributes>
 	</npc>
 	<npc id="33162" name="Alejandro" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="680.0"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3063,7 +3020,6 @@
 		</attributes>
 	</npc>
 	<npc id="33163" name="Linkes" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3112,7 +3068,6 @@
 		</attributes>
 	</npc>
 	<npc id="33164" name="Crystal Guard Golem" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3161,7 +3116,6 @@
 		</attributes>
 	</npc>
 	<npc id="33165" name="Aden Vanguard Member" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3210,7 +3164,6 @@
 		</attributes>
 	</npc>
 	<npc id="33166" name="Aden Vanguard Corpse" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3259,7 +3212,6 @@
 		</attributes>
 	</npc>
 	<npc id="33167" name="Aden Vanguard Corpse" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3308,7 +3260,6 @@
 		</attributes>
 	</npc>
 	<npc id="33168" name="Aden Vanguard Corpse" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3357,7 +3308,6 @@
 		</attributes>
 	</npc>
 	<npc id="33169" name="Aden Vanguard Corpse" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3434,8 +3384,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="120" />
-		<set name="baseWalkSpd" value="30" />
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="30"/>
 		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="160"/>
@@ -3451,7 +3401,7 @@
 	</npc>
 	<npc id="33171" name="Priest Alice" title="Aden Vanguard">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="incubatorOfEvil.Avanguard_Ellis" />
+		<set name="ai_type" value="incubatorOfEvil.Avanguard_Ellis"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3469,12 +3419,12 @@
 		<set name="basePAtk" value="971"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="basePDef" value="341"/>
-		<set name="baseRunSpd" value="120" />
+		<set name="baseRunSpd" value="120"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
-		<set name="baseWalkSpd" value="30" />
+		<set name="baseWalkSpd" value="30"/>
 		<set name="collision_height" value="23.0"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="level" value="85"/>
@@ -3485,7 +3435,7 @@
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Люди-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3505,7 +3455,7 @@
 		<set name="collision_height" value="30.0"/>
 		<set name="collision_radius" value="14.5"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="incubatorOfEvil.Avanguard_Barton" />
+		<set name="ai_type" value="incubatorOfEvil.Avanguard_Barton"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3553,7 +3503,7 @@
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="10.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="incubatorOfEvil.Avanguard_Xaok" />
+		<set name="ai_type" value="incubatorOfEvil.Avanguard_Xaok"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3593,7 +3543,6 @@
 		</attributes>
 	</npc>
 	<npc id="33174" name="Magus Eliyah" title="Aden Vanguard">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="17300"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3602,7 +3551,7 @@
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="incubatorOfEvil.Avanguard_Ellia" />
+		<set name="ai_type" value="incubatorOfEvil.Avanguard_Ellia"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3642,7 +3591,6 @@
 		</attributes>
 	</npc>
 	<npc id="33175" name="Nevit" title="Angel of Blessing">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="680.0"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3691,7 +3639,6 @@
 		</attributes>
 	</npc>
 	<npc id="33176" name="Vent" title="Guard">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3740,7 +3687,6 @@
 		</attributes>
 	</npc>
 	<npc id="33177" name="Kallesin" title="Guard">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -3789,7 +3735,6 @@
 		</attributes>
 	</npc>
 	<npc id="33178" name="Silvan" title="Guard">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -3838,7 +3783,6 @@
 		</attributes>
 	</npc>
 	<npc id="33179" name="Fred" title="Guard">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -3887,7 +3831,6 @@
 		</attributes>
 	</npc>
 	<npc id="33180" name="Ye Sagira Teleport Device" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -3936,7 +3879,6 @@
 		</attributes>
 	</npc>
 	<npc id="33181" name="Ye Sagira Teleport Device" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -3985,7 +3927,6 @@
 		</attributes>
 	</npc>
 	<npc id="33182" name="Ye Sagira Teleport Device" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -4034,7 +3975,6 @@
 		</attributes>
 	</npc>
 	<npc id="33183" name="Ye Sagira Teleport Device" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -4083,7 +4023,6 @@
 		</attributes>
 	</npc>
 	<npc id="33184" name="Aymen" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="680.0"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -4132,7 +4071,6 @@
 		</attributes>
 	</npc>
 	<npc id="33185" name="Ye Sagira Teleport Device" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -4181,7 +4119,6 @@
 		</attributes>
 	</npc>
 	<npc id="33186" name="Ye Sagira Teleport Device" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -4230,7 +4167,6 @@
 		</attributes>
 	</npc>
 	<npc id="33187" name="Ye Sagira Teleport Device" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -4279,7 +4215,6 @@
 		</attributes>
 	</npc>
 	<npc id="33188" name="Ye Sagira Teleport Device" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -4328,7 +4263,6 @@
 		</attributes>
 	</npc>
 	<npc id="33189" name="Ye Sagira Teleport Device" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -4377,7 +4311,6 @@
 		</attributes>
 	</npc>
 	<npc id="33190" name="Ye Sagira Teleport Device" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -4426,7 +4359,6 @@
 		</attributes>
 	</npc>
 	<npc id="33191" name="Ye Sagira Teleport Device" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -4475,7 +4407,6 @@
 		</attributes>
 	</npc>
 	<npc id="33192" name="Ye Sagira Teleport Device" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -4607,7 +4538,7 @@
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Люди-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4619,7 +4550,6 @@
 		</attributes>
 	</npc>
 	<npc id="33195" name="Cribe" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="680.0"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -4668,7 +4598,6 @@
 		</attributes>
 	</npc>
 	<npc id="33196" name="" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="680.0"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -4715,7 +4644,6 @@
 		</attributes>
 	</npc>
 	<npc id="33197" name="Ye Sagira Teleport Device" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -4762,7 +4690,6 @@
 		</attributes>
 	</npc>
 	<npc id="33198" name="" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
@@ -4808,11 +4735,10 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 		<ai_params>
-			<set name="TargetEnabled" value="false" />
+			<set name="TargetEnabled" value="false"/>
 		</ai_params>
 	</npc>
 	<npc id="33199" name="Apprentice" title="Dwarven Workshop">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>

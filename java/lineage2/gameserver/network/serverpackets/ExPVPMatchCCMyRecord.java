@@ -29,7 +29,7 @@ public class ExPVPMatchCCMyRecord extends L2GameServerPacket
 	@Override
 	public void writeImpl()
 	{
-		writeEx(0x8A);
+		writeEx(0x8B);
 		writeD(_points);
 	}
 }

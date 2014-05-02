@@ -102,8 +102,9 @@ public class UserInfo extends L2GameServerPacket
 		
 		if (player.getPlayerAccess().GodMode && player.isInvisible())
 		{
-			title += "[I]";
+			title += "[Invisible]";
 		}
+		
 		if (player.isPolymorphed())
 		{
 			if (NpcHolder.getInstance().getTemplate(player.getPolyId()) != null)
@@ -446,5 +447,6 @@ public class UserInfo extends L2GameServerPacket
 		{
 			writeD(0x00);
 		}
+		writeC(0x00);
 	}
 }

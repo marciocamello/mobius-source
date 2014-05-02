@@ -527,6 +527,7 @@ public class Config
 	public static boolean PARALIZE_ON_RAID_DIFF;
 	public static double ALT_PK_DEATH_RATE;
 	public static boolean AWAKING_FREE;
+	public static boolean FREE_JUMPS_FOR_ALL;
 	public static boolean DEEPBLUE_DROP_RULES;
 	public static int DEEPBLUE_DROP_MAXDIFF;
 	public static int DEEPBLUE_DROP_RAID_MAXDIFF;
@@ -638,6 +639,7 @@ public class Config
 	public static int COMMUNITYBOARD_SAVE_TELE_PICE;
 	public static boolean ENCHANT_ENABLED;
 	public static int ENCHANTER_ITEM_ID;
+	public static int BEAUTY_SHOP_COIN_ITEM_ID;
 	public static int MAX_ENCHANT;
 	public static int[] ENCHANT_LEVELS;
 	public static int[] ENCHANT_PRICE_WPN;
@@ -1227,6 +1229,7 @@ public class Config
 	{
 		ExProperties otherSettings = load(OTHER_CONFIG_FILE);
 		AWAKING_FREE = otherSettings.getProperty("AwakingFree", false);
+		FREE_JUMPS_FOR_ALL = otherSettings.getProperty("FreeJumpsForAll", false);
 		DEEPBLUE_DROP_RULES = otherSettings.getProperty("UseDeepBlueDropRules", true);
 		DEEPBLUE_DROP_MAXDIFF = otherSettings.getProperty("DeepBlueDropMaxDiff", 8);
 		DEEPBLUE_DROP_RAID_MAXDIFF = otherSettings.getProperty("DeepBlueDropRaidMaxDiff", 2);
@@ -1263,7 +1266,7 @@ public class Config
 		SENDSTATUS_TRADE_JUST_OFFLINE = otherSettings.getProperty("SendStatusTradeJustOffline", false);
 		SENDSTATUS_TRADE_MOD = otherSettings.getProperty("SendStatusTradeMod", 1.);
 		ANNOUNCE_MAMMON_SPAWN = otherSettings.getProperty("AnnounceMammonSpawn", true);
-		GM_NAME_COLOUR = Integer.decode("0x" + otherSettings.getProperty("GMNameColour", "FFFFFF"));
+		GM_NAME_COLOUR = Integer.decode("0x" + otherSettings.getProperty("GMNameColour", "00CCFF"));
 		GM_HERO_AURA = otherSettings.getProperty("GMHeroAura", false);
 		NORMAL_NAME_COLOUR = Integer.decode("0x" + otherSettings.getProperty("NormalNameColour", "FFFFFF"));
 		CLANLEADER_NAME_COLOUR = Integer.decode("0x" + otherSettings.getProperty("ClanleaderNameColour", "FFFFFF"));
@@ -1549,6 +1552,7 @@ public class Config
 		ALT_CH_ALL_BUFFS = altSettings.getProperty("AltChAllBuffs", false);
 		ALT_CH_ALLOW_1H_BUFFS = altSettings.getProperty("AltChAllowHourBuff", false);
 		ALT_CH_SIMPLE_DIALOG = altSettings.getProperty("AltChSimpleDialog", false);
+		BEAUTY_SHOP_COIN_ITEM_ID = altSettings.getProperty("CoinForBeautyShop", 36308);
 		AUGMENTATION_NG_SKILL_CHANCE = altSettings.getProperty("AugmentationNGSkillChance", 15);
 		AUGMENTATION_NG_GLOW_CHANCE = altSettings.getProperty("AugmentationNGGlowChance", 0);
 		AUGMENTATION_MID_SKILL_CHANCE = altSettings.getProperty("AugmentationMidSkillChance", 30);

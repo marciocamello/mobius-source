@@ -35,15 +35,25 @@ public class SocialAction extends L2GameServerPacket
 	public static final int COUPLE_BOW = 16;
 	public static final int COUPLE_HIGH_FIVE = 17;
 	public static final int COUPLE_DANCE = 18;
+	public static final int AWAKENING = 20;
 	public static final int PROPOSE = 28;
 	public static final int PROVOKE = 29;
+	public static final int lv_1 = 89;
 	public static final int LEVEL_UP = 2122;
 	public static final int GIVE_HERO = 20016;
+	private int _unk;
 	
 	public SocialAction(int playerId, int actionId)
 	{
 		_playerId = playerId;
 		_actionId = actionId;
+	}
+	
+	public SocialAction(int objectId, int actionType, int unk)
+	{
+		_playerId = objectId;
+		_actionId = actionType;
+		_unk = unk;
 	}
 	
 	@Override
@@ -52,6 +62,6 @@ public class SocialAction extends L2GameServerPacket
 		writeC(0x27);
 		writeD(_playerId);
 		writeD(_actionId);
-		writeD(0); // ??? 0
+		writeD(_unk);
 	}
 }

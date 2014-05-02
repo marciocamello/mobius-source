@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DropListData.xsd">
+	<npc id="22096">
+		<droplist>
+			<category id="1" chance="70.000">
+				<item id="57" min="780" max="1580" chance="100.00000"/>
+			</category>
+			<category id="2" chance="0.140">
+				<item id="11935" min="1" max="1" chance="1.35987"/>
+				<item id="4116" min="1" max="1" chance="18.19229"/>
+				<item id="11938" min="1" max="1" chance="1.35987"/>
+				<item id="4117" min="1" max="1" chance="18.19229"/>
+				<item id="11934" min="1" max="1" chance="1.35987"/>
+				<item id="4118" min="1" max="1" chance="17.23616"/>
+				<item id="11941" min="1" max="1" chance="1.35987"/>
+				<item id="8340" min="1" max="1" chance="18.19229"/>
+				<item id="11936" min="1" max="1" chance="1.35987"/>
+				<item id="8348" min="1" max="1" chance="18.16181"/>
+				<item id="171" min="1" max="1" chance="0.64516"/>
+				<item id="175" min="1" max="1" chance="0.64516"/>
+				<item id="210" min="1" max="1" chance="0.64516"/>
+				<item id="7893" min="1" max="1" chance="0.64516"/>
+				<item id="7901" min="1" max="1" chance="0.64516"/>
+			</category>
+			<category id="3" chance="12.033">
+				<item id="34992" min="1" max="1" chance="43.89310"/>
+				<item id="34991" min="1" max="1" chance="43.89310"/>
+				<item id="1879" min="1" max="1" chance="7.31550"/>
+				<item id="1875" min="1" max="1" chance="2.92620"/>
+				<item id="4040" min="1" max="1" chance="0.87790"/>
+				<item id="4159" min="1" max="1" chance="0.12430"/>
+				<item id="8306" min="1" max="1" chance="0.03350"/>
+				<item id="8728" min="1" max="1" chance="0.73160"/>
+				<item id="8738" min="1" max="1" chance="0.18290"/>
+				<item id="8748" min="1" max="1" chance="0.01830"/>
+				<item id="8758" min="1" max="1" chance="0.00360"/>
+			</category>
+		</droplist>
+		<spoillist>
+			<item id="4052" min="1" max="1" chance="6.96340"/>
+			<item id="34991" min="23" max="23" chance="1.71030"/>
+		</spoillist>
+	</npc>
+</list>

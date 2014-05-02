@@ -364,7 +364,8 @@ public class RaidBossSpawnManager
 				assert score != null;
 				int bossId = rset.getInt("boss_id");
 				NpcTemplate template = NpcHolder.getInstance().getTemplate(bossId);
-				if ((bossId != KEY_RANK) && (bossId != KEY_TOTAL_POINTS) && (template != null) && (template.rewardRp > 0))
+				
+				if ((score != null) && (bossId != KEY_RANK) && (bossId != KEY_TOTAL_POINTS) && (template != null) && (template.rewardRp > 0))
 				{
 					score.put(bossId, rset.getInt("points"));
 				}

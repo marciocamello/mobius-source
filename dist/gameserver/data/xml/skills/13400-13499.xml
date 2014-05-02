@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="13409" levels="1" name="Rising Shirt">
+		<set name="magicLevel" val="85"/>
+		<set name="icon" val="icon.dual_shirt1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add stat="STR" order="0x10" val="1"/>
+			<add stat="INT" order="0x10" val="1"/>
+			<add stat="runSpd" order="0x40" val="7"/>
+		</for>
+	</skill>
+	<skill id="13410" levels="1" name="Blaze Shirt">
+		<set name="magicLevel" val="85"/>
+		<set name="icon" val="icon.dual_shirt2" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add stat="STR" order="0x10" val="1"/>
+			<add stat="INT" order="0x10" val="1"/>
+			<add stat="CON" order="0x10" val="1"/>
+			<add stat="MEN" order="0x10" val="1"/>
+			<add stat="runSpd" order="0x40" val="7"/>
+		</for>
+	</skill>
+	<skill id="13411" levels="1" name="Rising Belt">
+		<set name="magicLevel" val="85"/>
+		<set name="icon" val="icon.dual_belt1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add stat="maxLoad" order="0x40" val="12800"/>
+			<add stat="inventoryLimit" order="0x40" val="12"/>
+		</for>
+	</skill>
+	<skill id="13412" levels="1" name="Blaze Belt">
+		<set name="magicLevel" val="85"/>
+		<set name="icon" val="icon.dual_belt2" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add stat="maxLoad" order="0x40" val="12800"/>
+			<add stat="inventoryLimit" order="0x40" val="18"/>
+		</for>
+	</skill>
+</list>

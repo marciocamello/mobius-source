@@ -60,7 +60,7 @@ public final class JumpTracksParser extends AbstractFileParser<JumpTracksHolder>
 	@Override
 	public File getXMLFile()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/xml/jumps/jumping_tracks.xml");
+		return new File(Config.DATAPACK_ROOT, "data/xml/other/jumping_tracks.xml");
 	}
 	
 	/**

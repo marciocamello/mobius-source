@@ -14,22 +14,28 @@ package quests;
 
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.listener.actor.OnMagicUseListener;
-import lineage2.gameserver.listener.actor.player.OnSocialActionListener;
+import lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
+import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.actor.listener.CharListenerList;
+import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
-import lineage2.gameserver.network.clientpackets.RequestActionUse;
+import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
+import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
+import lineage2.gameserver.network.serverpackets.SocialAction;
+import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
+import lineage2.gameserver.utils.NpcUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
 
-public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnSocialActionListener, OnMagicUseListener
+public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagicUseListener
 {
 	public static final int INSTANCE_ID = 241;
 	
@@ -47,13 +53,13 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnSocia
 	private static final int DesertedDwarvenHouse = 33788;
 	private static final int PaagrioTemple = 33787;
 	private static final int AltarofShilen = 33785;
-	private static final int ShilensMessenger = 27492; // Kill me
+	private static final int ShilensMessenger = 27492; // spawned by scripts mob
 	private static final int CaveofSouls = 33789;
 	private static final int MotherTree = 33786;
-	private static final int Darin = 33748;
-	private static final int Roxxy = 33749;
-	private static final int BiotinHighPriest = 30031;
-	private static final int MysteriousDarkKnight = 33751;
+	private static final int Darin = 33748; // instance
+	private static final int Roxxy = 33749; // instance
+	private static final int BiotinHighPriest = 30031; // instance
+	private static final int MysteriousDarkKnight = 33751; // spawned by script npc
 	// Items
 	private static final int MysteriosLetter = 36072;
 	private static final int Waterfromthegardenofeva = 36066;
@@ -74,6 +80,8 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnSocia
 	private static final int flame = 9582;
 	private static final int love = 9583;
 	
+	private final ZoneListener _zoneListener;
+	
 	public _10385_RedThreadofFate()
 	{
 		super(false);
@@ -85,8 +93,10 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnSocia
 		
 		addKillId(ShilensMessenger);
 		
-		addLevelCheck(85, 99);
-		addQuestCompletedCheck(_10338_SeizeYourDestiny.class);
+		addLevelCheck(85, 100);
+		// addQuestCompletedCheck(_10338_SeizeYourDestiny.class);
+		
+		_zoneListener = new ZoneListener();
 	}
 	
 	@Override
@@ -103,8 +113,6 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnSocia
 	@Override
 	public void onReload()
 	{
-		CharListenerList.removeGlobal(this);
-		CharListenerList.addGlobal(this);
 	}
 	
 	@Override
@@ -114,7 +122,7 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnSocia
 		{
 			return;
 		}
-		QuestState st = ((Player) actor).getQuestState(_10385_RedThreadofFate.class);
+		QuestState st = actor.getPlayer().getQuestState(_10385_RedThreadofFate.class);
 		
 		if (st == null)
 		{
@@ -130,7 +138,6 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnSocia
 				if ((npcId == MotherTree) && (cond == 18))
 				{
 					ItemFunctions.removeItem(st.getPlayer(), Clearestwater, 1L, true);
-					// player.canEnterInstance(INSTANCE_ID);
 					enterInstance(st.getPlayer());
 					st.setCond(19);
 				}
@@ -139,7 +146,8 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnSocia
 				if ((npcId == AltarofShilen) && (cond == 16))
 				{
 					ItemFunctions.removeItem(st.getPlayer(), Brightestlight, 1L, true);
-					// player.sendPacket(new ExShowScreenMessage(NpcString.YOU_MUST_DESTROY_THE_MESSENGER_SHILEN, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
+					player.sendPacket(new ExShowScreenMessage(NpcString.YOU_MUST_DESTROY_THE_MESSENGER_SHILEN, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
+					player.sendPacket(new ExShowScreenMessage(NpcString.THE_ONLY_GOOD_SHILEN_CREATURE_IS_A_DEAD_ONE, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
 					NpcInstance mob = st.addSpawn(ShilensMessenger, 28760, 11032, -4252);
 					mob.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, player, 100000);
 				}
@@ -179,12 +187,12 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnSocia
 		{
 			return null;
 		}
+		
 		if ((npcId == ShilensMessenger) && (cond == 16))
 		{
 			st.setCond(17);
-			st.playSound("ItemSound.quest_itemget");
+			st.playSound(SOUND_ITEMGET);
 		}
-		
 		return null;
 	}
 	
@@ -199,46 +207,46 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnSocia
 			st.setState(2);
 			st.setCond(1);
 			st.giveItems(MysteriosLetter, 1L);
-			st.playSound("ItemSound.quest_accept");
+			st.playSound(SOUND_ACCEPT);
 		}
 		else if ((cond == 1) && event.equalsIgnoreCase("Morelin_q10385_02.htm"))
 		{
 			st.setCond(2);
-			st.playSound("ItemSound.quest_middle");
+			st.playSound(SOUND_MIDDLE);
 		}
 		else if ((cond == 2) && event.equalsIgnoreCase("Lania_q10385_02.htm"))
 		{
 			st.setCond(3);
-			st.playSound("ItemSound.quest_middle");
+			st.playSound(SOUND_MIDDLE);
 		}
 		else if ((cond == 6) && event.equalsIgnoreCase("Ladyofthelike_q10385_03.htm"))
 		{
 			st.takeItems(Waterfromthegardenofeva, 1L);
-			st.playSound("ItemSound.quest_middle");
+			st.playSound(SOUND_MIDDLE);
 		}
 		else if ((cond == 6) && event.equalsIgnoreCase("Ladyofthelike_q10385_06.htm"))
 		{
 			st.giveItems(Clearestwater, 1L);
 			st.setCond(7);
 			player.teleToLocation(new Location(172440, 90312, -2011));
-			st.playSound("ItemSound.quest_middle");
+			st.playSound(SOUND_MIDDLE);
 		}
 		else if ((cond == 7) && event.equalsIgnoreCase("Nerupa_q10385_04.htm"))
 		{
 			st.setCond(8);
 			st.giveItems(Brightestlight, 1L);
-			st.playSound("ItemSound.quest_middle");
+			st.playSound(SOUND_MIDDLE);
 		}
 		else if ((cond == 8) && event.equalsIgnoreCase("Enfeux_q10385_02.htm"))
 		{
 			st.giveItems(Purestsoul, 1L);
 			st.setCond(9);
-			st.playSound("ItemSound.quest_middle");
+			st.playSound(SOUND_MIDDLE);
 		}
 		else if ((cond == 9) && event.equalsIgnoreCase("Innocentin_q10385_02.htm"))
 		{
 			st.setCond(10);
-			st.playSound("ItemSound.quest_middle");
+			st.playSound(SOUND_MIDDLE);
 		}
 		else if ((cond == 10) && event.equalsIgnoreCase("Vulkan_q10385_04.htm"))
 		{
@@ -246,7 +254,7 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnSocia
 			st.giveItems(Vulkansilver, 1L);
 			st.giveItems(Vulkanfire, 1L);
 			st.setCond(11);
-			st.playSound("ItemSound.quest_middle");
+			st.playSound(SOUND_MIDDLE);
 		}
 		else if ((cond == 13) && event.equalsIgnoreCase("Wesley_q10385_03.htm"))
 		{
@@ -258,7 +266,7 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnSocia
 			st.giveItems(Fondestheart, 1L);
 			st.giveItems(SOEDwarvenvillage, 1L);
 			st.setCond(14);
-			st.playSound("ItemSound.quest_middle");
+			st.playSound(SOUND_MIDDLE);
 		}
 		else if ((cond == 11) && event.equalsIgnoreCase("Urn_q10385_02.htm"))
 		{
@@ -266,26 +274,31 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnSocia
 			st.takeItems(Vulkansilver, 1L);
 			st.takeItems(Vulkanfire, 1L);
 			st.setCond(12);
-			st.playSound("ItemSound.quest_middle");
+			st.playSound(SOUND_MIDDLE);
 		}
 		else if ((cond == 19) && htmltext.equalsIgnoreCase("Darin_q10385_03.htm"))
 		{
-			// player.sendPacket(new ExShowScreenMessage(NpcString.TALK_TO_ROXXIE, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
+			player.sendPacket(new ExShowScreenMessage(NpcString.TALK_TO_ROXXIE, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
 		}
 		if ((cond == 19) && event.equalsIgnoreCase("Roxxy_q10385_02.htm"))
 		{
 			st.setCond(20);
-			st.playSound("ItemSound.quest_middle");
+			st.playSound(SOUND_MIDDLE);
 		}
+		
 		if ((cond == 20) && event.equalsIgnoreCase("Biotin_q10385_03.htm"))
 		{
-			// player.sendPacket(new ExShowScreenMessage(NpcString.GET_OUT_OF_THE_TEMPLE, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
+			player.sendPacket(new ExShowScreenMessage(NpcString.GET_OUT_OF_THE_TEMPLE, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
 			st.setCond(21);
-			st.playSound("ItemSound.quest_middle");
-			player.getReflection().startCollapseTimer(5000);
-			st.startQuestTimer("timer1", 5000L);
+			st.playSound(SOUND_MIDDLE);
 		}
-		if (event.equalsIgnoreCase("timer1"))
+		if ((cond == 21) && event.equalsIgnoreCase("showMovie"))
+		{
+			st.getPlayer().showQuestMovie(ExStartScenePlayer.SCENE_SC_SUB_QUEST);
+			st.startQuestTimer("timer1", 25000L);
+			htmltext = null;
+		}
+		else if (event.equalsIgnoreCase("timer1"))
 		{
 			st.setCond(22);
 			st.cancelQuestTimer("timer1");
@@ -297,7 +310,7 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnSocia
 			st.giveItems(DimensionalDiamond, 40L);
 			st.setState(3);
 			st.exitCurrentQuest(false);
-			st.playSound("ItemSound.quest_finish");
+			st.playSound(SOUND_FINISH);
 		}
 		return htmltext;
 	}
@@ -308,6 +321,11 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnSocia
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		if (st.getPlayer().getVar("q10338") == null)
+		{
+			return "<html><head><body>You didn't complete quest Seize Your Destiny1...</body></html>";
+		}
+		
 		switch (npcId)
 		{
 			case Rean:
@@ -335,7 +353,7 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnSocia
 				{
 					htmltext = "Lania_q10385_03.htm";
 					st.setCond(5);
-					st.playSound("ItemSound.quest_middle");
+					st.playSound(SOUND_MIDDLE);
 				}
 				else if (cond == 2)
 				{
@@ -352,7 +370,7 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnSocia
 					htmltext = "HeineWaterSource_q10385_01.htm";
 					st.giveItems(Waterfromthegardenofeva, 1L);
 					st.setCond(6);
-					st.playSound("ItemSound.quest_middle");
+					st.playSound(SOUND_MIDDLE);
 				}
 				break;
 			case Ladyofthelike:
@@ -400,7 +418,7 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnSocia
 				{
 					htmltext = "Wesley_q10385_01.htm";
 					st.setCond(13);
-					st.playSound("ItemSound.quest_middle");
+					st.playSound(SOUND_MIDDLE);
 				}
 				break;
 			case Darin:
@@ -427,29 +445,69 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnSocia
 	
 	private void enterInstance(Player player)
 	{
-		if (player.canEnterInstance(INSTANCE_ID))
+		Reflection r = player.getActiveReflection();
+		if (r != null)
 		{
-			ReflectionUtils.enterReflection(player, INSTANCE_ID);
+			if (player.canReenterInstance(INSTANCE_ID))
+			{
+				player.teleToLocation(r.getTeleportLoc(), r);
+			}
+		}
+		else if (player.canEnterInstance(INSTANCE_ID))
+		{
+			Reflection newInstance = ReflectionUtils.enterReflection(player, INSTANCE_ID);
+			newInstance.getZone("[Q10385_EXIT_1]").addListener(_zoneListener);
+			newInstance.getZone("[Q10385_EXIT_2]").addListener(_zoneListener);
 		}
 	}
 	
 	@Override
-	public void onSocialAction(Player player, GameObject target, RequestActionUse.Action action)
+	public void onSocialActionUse(QuestState st, int actionId)
 	{
-		QuestState st = player.getQuestState(getName());
-		if ((st == null) || !target.isNpc())
+		if ((st.getPlayer().getTarget() == null) || !st.getPlayer().getTarget().isNpc())
 		{
 			return;
 		}
-		NpcInstance npc = (NpcInstance) target;
 		
-		int npcId = npc.getNpcId();
+		GameObject npc1 = st.getPlayer().getTarget();
+		int npcId = ((NpcInstance) npc1).getNpcId();
 		int cond = st.getCond();
 		
-		if ((cond == 3) && (npcId == Lania) && (action == RequestActionUse.Action.ACTION26))
+		if ((cond == 3) && (npcId == Lania) && (actionId == SocialAction.BOW))
 		{
 			st.setCond(4);
-			st.playSound("ItemSound.quest_middle");
+			st.playSound(SOUND_MIDDLE);
+		}
+	}
+	
+	public class ZoneListener implements OnZoneEnterLeaveListener
+	{
+		@Override
+		public void onZoneEnter(Zone zone, Creature actor)
+		{
+		}
+		
+		@Override
+		public void onZoneLeave(Zone zone, Creature actor)
+		{
+			if (!actor.isPlayer())
+			{
+				return;
+			}
+			Player player = actor.getPlayer();
+			QuestState st = player.getQuestState(_10385_RedThreadofFate.class);
+			if (st == null)
+			{
+				return;
+			}
+			if (st.getCond() == 21)
+			{
+				Location loc = zone.getName().contains("Q10385_EXIT_1") ? new Location(210632, 15576, -3754) : new Location(210632, 15576, -3754);
+				if (player.getReflection().getAllByNpcId(MysteriousDarkKnight, true).isEmpty())
+				{
+					NpcUtils.spawnSingle(MysteriousDarkKnight, loc, player.getReflection());
+				}
+			}
 		}
 	}
 }

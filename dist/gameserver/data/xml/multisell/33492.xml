@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
-<!DOCTYPE list SYSTEM "multisell.dtd">
-<!--ÐÐ°Ð¹Ñ‚Ð¸ Ð½Ð¾Ñ€Ð¼Ð°Ð»ÑŒÐ½Ñ‹Ð¹ Ð˜Ñ‚ÐµÐ¼Ð½ÐµÐ¹Ð¼ Ð¸ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð¾ÑÑ‚Ð°Ð»ÑŒÐ½Ð¾Ðµ-->
+<?xml version="1.0"?>
 <list>
 	<config no_tax="true"/>
 	<item>
@@ -20,7 +18,7 @@
 		<ingredient id="30306" count="3"/>
 	</item>
 	<item>
-		<production id="33465" count="1"/>	<!--Ð¡ÑƒÐ½Ð´ÑƒÐº Ð£Ð´Ð°Ñ‡Ð¸ Ð³Ð¸Ð³Ð°Ð½Ñ‚Ð¾Ð²-->
+		<production id="33465" count="1"/>
 		<ingredient id="30306" count="1"/>
 	</item>
 </list>

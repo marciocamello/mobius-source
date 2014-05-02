@@ -26,6 +26,7 @@ import java.util.concurrent.ScheduledFuture;
 
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.lang.reference.HardReference;
+import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.ai.CharacterAI;
@@ -76,9 +77,15 @@ import lineage2.gameserver.network.serverpackets.AcquireSkillDone;
 import lineage2.gameserver.network.serverpackets.AcquireSkillList;
 import lineage2.gameserver.network.serverpackets.AutoAttackStart;
 import lineage2.gameserver.network.serverpackets.ExChangeNpcState;
+import lineage2.gameserver.network.serverpackets.ExResponseBeautyListPacket;
+import lineage2.gameserver.network.serverpackets.ExResponseResetList;
 import lineage2.gameserver.network.serverpackets.ExShowBaseAttributeCancelWindow;
+import lineage2.gameserver.network.serverpackets.ExShowBeautyMenuPacket;
+import lineage2.gameserver.network.serverpackets.ExShowCommission;
+import lineage2.gameserver.network.serverpackets.ExShowUsmVideo;
 import lineage2.gameserver.network.serverpackets.ExShowVariationCancelWindow;
 import lineage2.gameserver.network.serverpackets.ExShowVariationMakeWindow;
+import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.NpcInfo;
@@ -87,6 +94,7 @@ import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.tables.ClanTable;
@@ -1029,9 +1037,16 @@ public class NpcInstance extends Creature
 		}
 	}
 	
-	/**
-	 * Method broadcastCharInfo.
-	 */
+	public class BroadcastCharInfoTask extends RunnableImpl
+	{
+		@Override
+		public void runImpl()
+		{
+			broadcastCharInfo();
+			_broadcastCharInfoTask = null;
+		}
+	}
+	
 	@Override
 	public void broadcastCharInfo()
 	{
@@ -1568,6 +1583,28 @@ public class NpcInstance extends Creature
 						}
 					}
 				}
+			}
+			else if (command.startsWith("commission"))
+			{
+				player.sendPacket(new ExShowCommission());
+			}
+			else if (command.startsWith("show_scene_magmeld"))
+			{
+				player.sendPacket(new ExStartScenePlayer(SceneMovie.si_arkan_enter));
+			}
+			else if (command.startsWith("show_usm_video_b"))
+			{
+				player.sendPacket(new ExShowUsmVideo(11));
+			}
+			else if (command.startsWith("Beautyshop"))
+			{
+				player.sendPacket(new ExShowBeautyMenuPacket(0));
+				player.sendPacket(new ExResponseBeautyListPacket(player, 1));
+			}
+			else if (command.startsWith("ResetBeautyshop"))
+			{
+				player.sendPacket(new ExShowBeautyMenuPacket(1));
+				player.sendPacket(new ExResponseResetList(player));
 			}
 		}
 		catch (StringIndexOutOfBoundsException sioobe)

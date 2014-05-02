@@ -1,0 +1,2004 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<weapon id="34200" name="Player Commendation - Samurai Long Sword (Fire)">
+		<set name="icon" value="icon.weapon_samurai_longsword_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="138"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34201" name="Player Commendation - Samurai Long Sword (Holy)">
+		<set name="icon" value="icon.weapon_samurai_longsword_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="138"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34202" name="Player Commendation - Samurai Long Sword (Dark)">
+		<set name="icon" value="icon.weapon_samurai_longsword_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="138"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34203" name="Player Commendation - Admiral's Estoc (Earth)">
+		<set name="icon" value="icon.weapon_blink_slasher_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="138"/>
+		<set name="type" value="RAPIER"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="141"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34204" name="Player Commendation - Admiral's Estoc (Water)">
+		<set name="icon" value="icon.weapon_blink_slasher_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="138"/>
+		<set name="type" value="RAPIER"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="141"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34205" name="Player Commendation - Admiral's Estoc (Wind)">
+		<set name="icon" value="icon.weapon_blink_slasher_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="138"/>
+		<set name="type" value="RAPIER"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="141"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34206" name="Player Commendation - Admiral's Estoc (Fire)">
+		<set name="icon" value="icon.weapon_blink_slasher_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="138"/>
+		<set name="type" value="RAPIER"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="141"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34207" name="Player Commendation - Admiral's Estoc (Holy)">
+		<set name="icon" value="icon.weapon_blink_slasher_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="138"/>
+		<set name="type" value="RAPIER"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="141"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34208" name="Player Commendation - Admiral's Estoc (Dark)">
+		<set name="icon" value="icon.weapon_blink_slasher_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="138"/>
+		<set name="type" value="RAPIER"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="141"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34209" name="Player Commendation - Yaksa Mace (Earth)">
+		<set name="icon" value="icon.weapon_yaksa_mace_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="164"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34210" name="Player Commendation - Yaksa Mace (Water)">
+		<set name="icon" value="icon.weapon_yaksa_mace_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="164"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34211" name="Player Commendation - Yaksa Mace (Wind)">
+		<set name="icon" value="icon.weapon_yaksa_mace_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="164"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34212" name="Player Commendation - Yaksa Mace (Fire)">
+		<set name="icon" value="icon.weapon_yaksa_mace_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="164"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34213" name="Player Commendation - Yaksa Mace (Holy)">
+		<set name="icon" value="icon.weapon_yaksa_mace_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="164"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34214" name="Player Commendation - Yaksa Mace (Dark)">
+		<set name="icon" value="icon.weapon_yaksa_mace_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="164"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34215" name="Player Commendation - Eminence Bow (Earth)">
+		<set name="icon" value="icon.weapon_eminence_bow_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="172"/>
+		<set name="type" value="BOW"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="10"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="323"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34216" name="Player Commendation - Eminence Bow (Water)">
+		<set name="icon" value="icon.weapon_eminence_bow_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="172"/>
+		<set name="type" value="BOW"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="10"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="323"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34217" name="Player Commendation - Eminence Bow (Wind)">
+		<set name="icon" value="icon.weapon_eminence_bow_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="172"/>
+		<set name="type" value="BOW"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="10"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="323"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34218" name="Player Commendation - Eminence Bow (Fire)">
+		<set name="icon" value="icon.weapon_eminence_bow_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="172"/>
+		<set name="type" value="BOW"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="10"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="323"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34219" name="Player Commendation - Eminence Bow (Holy)">
+		<set name="icon" value="icon.weapon_eminence_bow_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="172"/>
+		<set name="type" value="BOW"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="10"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="323"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34220" name="Player Commendation - Eminence Bow (Dark)">
+		<set name="icon" value="icon.weapon_eminence_bow_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="172"/>
+		<set name="type" value="BOW"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="10"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="323"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34221" name="Player Commendation - Orcish Poleaxe (Earth)">
+		<set name="icon" value="icon.weapon_orcish_poleaxe_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="195"/>
+		<set name="type" value="POLE"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34222" name="Player Commendation - Orcish Poleaxe (Water)">
+		<set name="icon" value="icon.weapon_orcish_poleaxe_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="195"/>
+		<set name="type" value="POLE"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34223" name="Player Commendation - Orcish Poleaxe (Wind)">
+		<set name="icon" value="icon.weapon_orcish_poleaxe_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="195"/>
+		<set name="type" value="POLE"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34224" name="Player Commendation - Orcish Poleaxe (Fire)">
+		<set name="icon" value="icon.weapon_orcish_poleaxe_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="195"/>
+		<set name="type" value="POLE"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34225" name="Player Commendation - Orcish Poleaxe (Holy)">
+		<set name="icon" value="icon.weapon_orcish_poleaxe_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="195"/>
+		<set name="type" value="POLE"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34226" name="Player Commendation - Orcish Poleaxe (Dark)">
+		<set name="icon" value="icon.weapon_orcish_poleaxe_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="195"/>
+		<set name="type" value="POLE"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="156"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34227" name="Player Commendation - Ecliptic Axe (Earth)">
+		<set name="icon" value="icon.weapon_eclipse_axe_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="164"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="125"/>
+			<add stat="mAtk" order="0x10" value="111"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34228" name="Player Commendation - Ecliptic Axe (Water)">
+		<set name="icon" value="icon.weapon_eclipse_axe_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="164"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="125"/>
+			<add stat="mAtk" order="0x10" value="111"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34229" name="Player Commendation - Ecliptic Axe (Wind)">
+		<set name="icon" value="icon.weapon_eclipse_axe_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="164"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="125"/>
+			<add stat="mAtk" order="0x10" value="111"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34230" name="Player Commendation - Ecliptic Axe (Fire)">
+		<set name="icon" value="icon.weapon_eclipse_axe_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="164"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="125"/>
+			<add stat="mAtk" order="0x10" value="111"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34231" name="Player Commendation - Ecliptic Axe (Holy)">
+		<set name="icon" value="icon.weapon_eclipse_axe_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="164"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="125"/>
+			<add stat="mAtk" order="0x10" value="111"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34232" name="Player Commendation - Ecliptic Axe (Dark)">
+		<set name="icon" value="icon.weapon_eclipse_axe_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="164"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="125"/>
+			<add stat="mAtk" order="0x10" value="111"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34233" name="Player Commendation - Crystal Dagger (Earth)">
+		<set name="icon" value="icon.weapon_crystal_dagger_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="100"/>
+		<set name="type" value="DAGGER"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="136"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34234" name="Player Commendation - Crystal Dagger (Water)">
+		<set name="icon" value="icon.weapon_crystal_dagger_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="100"/>
+		<set name="type" value="DAGGER"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="136"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34235" name="Player Commendation - Crystal Dagger (Wind)">
+		<set name="icon" value="icon.weapon_crystal_dagger_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="100"/>
+		<set name="type" value="DAGGER"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="136"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34236" name="Player Commendation - Crystal Dagger (Fire)">
+		<set name="icon" value="icon.weapon_crystal_dagger_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="100"/>
+		<set name="type" value="DAGGER"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="136"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34237" name="Player Commendation - Crystal Dagger (Holy)">
+		<set name="icon" value="icon.weapon_crystal_dagger_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="100"/>
+		<set name="type" value="DAGGER"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="136"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34238" name="Player Commendation - Crystal Dagger (Dark)">
+		<set name="icon" value="icon.weapon_crystal_dagger_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="100"/>
+		<set name="type" value="DAGGER"/>
+		<set name="crystal_type" value="C"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="136"/>
+			<add stat="mAtk" order="0x10" value="83"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34239" name="Player Commendation - Guardian's Sword (Earth)">
+		<set name="icon" value="icon.weapon_guardians_sword_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="193"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="236"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34240" name="Player Commendation - Guardian's Sword (Water)">
+		<set name="icon" value="icon.weapon_guardians_sword_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="193"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="236"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34241" name="Player Commendation - Guardian's Sword (Wind)">
+		<set name="icon" value="icon.weapon_guardians_sword_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="193"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="236"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34242" name="Player Commendation - Guardian's Sword (Fire)">
+		<set name="icon" value="icon.weapon_guardians_sword_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="193"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="236"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34243" name="Player Commendation - Guardian's Sword (Holy)">
+		<set name="icon" value="icon.weapon_guardians_sword_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="193"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="236"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34244" name="Player Commendation - Guardian's Sword (Dark)">
+		<set name="icon" value="icon.weapon_guardians_sword_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="193"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="236"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34245" name="Player Commendation - Damascus Sword (Earth)">
+		<set name="icon" value="icon.weapon_sword_of_damascus_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="135"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34246" name="Player Commendation - Damascus Sword (Water)">
+		<set name="icon" value="icon.weapon_sword_of_damascus_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="135"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34247" name="Player Commendation - Damascus Sword (Wind)">
+		<set name="icon" value="icon.weapon_sword_of_damascus_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="135"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34248" name="Player Commendation - Damascus Sword (Fire)">
+		<set name="icon" value="icon.weapon_sword_of_damascus_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="135"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34249" name="Player Commendation - Damascus Sword (Holy)">
+		<set name="icon" value="icon.weapon_sword_of_damascus_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="135"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34250" name="Player Commendation - Damascus Sword (Dark)">
+		<set name="icon" value="icon.weapon_sword_of_damascus_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="135"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34251" name="Player Commendation - Dismantler (Earth)">
+		<set name="icon" value="icon.weapon_dismantler_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="193"/>
+		<set name="type" value="ANCIENTSWORD"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="210"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34252" name="Player Commendation - Dismantler (Water)">
+		<set name="icon" value="icon.weapon_dismantler_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="193"/>
+		<set name="type" value="ANCIENTSWORD"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="210"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34253" name="Player Commendation - Dismantler (Wind)">
+		<set name="icon" value="icon.weapon_dismantler_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="193"/>
+		<set name="type" value="ANCIENTSWORD"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="210"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34254" name="Player Commendation - Dismantler (Fire)">
+		<set name="icon" value="icon.weapon_dismantler_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="193"/>
+		<set name="type" value="ANCIENTSWORD"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="210"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34255" name="Player Commendation - Dismantler (Holy)">
+		<set name="icon" value="icon.weapon_dismantler_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="193"/>
+		<set name="type" value="ANCIENTSWORD"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="210"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34256" name="Player Commendation - Dismantler (Dark)">
+		<set name="icon" value="icon.weapon_dismantler_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="193"/>
+		<set name="type" value="ANCIENTSWORD"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="210"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34257" name="Player Commendation - Lance (Earth)">
+		<set name="icon" value="icon.weapon_lancia_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="192"/>
+		<set name="type" value="POLE"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34258" name="Player Commendation - Lance (Water)">
+		<set name="icon" value="icon.weapon_lancia_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="192"/>
+		<set name="type" value="POLE"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34259" name="Player Commendation - Lance (Wind)">
+		<set name="icon" value="icon.weapon_lancia_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="192"/>
+		<set name="type" value="POLE"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34260" name="Player Commendation - Lance (Fire)">
+		<set name="icon" value="icon.weapon_lancia_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="192"/>
+		<set name="type" value="POLE"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34261" name="Player Commendation - Lance (Holy)">
+		<set name="icon" value="icon.weapon_lancia_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="192"/>
+		<set name="type" value="POLE"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34262" name="Player Commendation - Lance (Dark)">
+		<set name="icon" value="icon.weapon_lancia_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="192"/>
+		<set name="type" value="POLE"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34263" name="Player Commendation - Bellion Cestus (Earth)">
+		<set name="icon" value="icon.weapon_bellion_cestus_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="139"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="236"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34264" name="Player Commendation - Bellion Cestus (Water)">
+		<set name="icon" value="icon.weapon_bellion_cestus_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="139"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="236"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34265" name="Player Commendation - Bellion Cestus (Wind)">
+		<set name="icon" value="icon.weapon_bellion_cestus_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="139"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="236"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34266" name="Player Commendation - Bellion Cestus (Fire)">
+		<set name="icon" value="icon.weapon_bellion_cestus_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="139"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="236"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34267" name="Player Commendation - Bellion Cestus (Holy)">
+		<set name="icon" value="icon.weapon_bellion_cestus_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="139"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="236"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34268" name="Player Commendation - Bellion Cestus (Dark)">
+		<set name="icon" value="icon.weapon_bellion_cestus_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="139"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="236"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34269" name="Player Commendation - Staff of Evil Spirits (Earth)">
+		<set name="icon" value="icon.weapon_staff_of_evil_sprit_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="93"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="189"/>
+			<add stat="mAtk" order="0x10" value="145"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34270" name="Player Commendation - Staff of Evil Spirits (Water)">
+		<set name="icon" value="icon.weapon_staff_of_evil_sprit_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="93"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="189"/>
+			<add stat="mAtk" order="0x10" value="145"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34271" name="Player Commendation - Staff of Evil Spirits (Wind)">
+		<set name="icon" value="icon.weapon_staff_of_evil_sprit_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="93"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="189"/>
+			<add stat="mAtk" order="0x10" value="145"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34272" name="Player Commendation - Staff of Evil Spirits (Fire)">
+		<set name="icon" value="icon.weapon_staff_of_evil_sprit_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="93"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="189"/>
+			<add stat="mAtk" order="0x10" value="145"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34273" name="Player Commendation - Staff of Evil Spirits (Holy)">
+		<set name="icon" value="icon.weapon_staff_of_evil_sprit_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="93"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="189"/>
+			<add stat="mAtk" order="0x10" value="145"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34274" name="Player Commendation - Staff of Evil Spirits (Dark)">
+		<set name="icon" value="icon.weapon_staff_of_evil_sprit_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="93"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="189"/>
+			<add stat="mAtk" order="0x10" value="145"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34275" name="Player Commendation - Deadman's Glory (Earth)">
+		<set name="icon" value="icon.weapon_deadmans_glory_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="160"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34276" name="Player Commendation - Deadman's Glory (Water)">
+		<set name="icon" value="icon.weapon_deadmans_glory_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="160"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34277" name="Player Commendation - Deadman's Glory (Wind)">
+		<set name="icon" value="icon.weapon_deadmans_glory_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="160"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34278" name="Player Commendation - Deadman's Glory (Fire)">
+		<set name="icon" value="icon.weapon_deadmans_glory_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="160"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34279" name="Player Commendation - Deadman's Glory (Holy)">
+		<set name="icon" value="icon.weapon_deadmans_glory_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="160"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34280" name="Player Commendation - Deadman's Glory (Dark)">
+		<set name="icon" value="icon.weapon_deadmans_glory_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="160"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="194"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34281" name="Player Commendation - Samurai Long Sword*Samurai Long Sword (Earth)">
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="208"/>
+		<set name="type" value="DUAL"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="236"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34282" name="Player Commendation - Samurai Long Sword*Samurai Long Sword (Water)">
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="208"/>
+		<set name="type" value="DUAL"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="236"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34283" name="Player Commendation - Samurai Long Sword*Samurai Long Sword (Wind)">
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="208"/>
+		<set name="type" value="DUAL"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="236"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34284" name="Player Commendation - Samurai Long Sword*Samurai Long Sword (Fire)">
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="208"/>
+		<set name="type" value="DUAL"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="236"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34285" name="Player Commendation - Samurai Long Sword*Samurai Long Sword (Holy)">
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="208"/>
+		<set name="type" value="DUAL"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="236"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34286" name="Player Commendation - Samurai Long Sword*Samurai Long Sword (Dark)">
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="208"/>
+		<set name="type" value="DUAL"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="236"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34287" name="Player Commendation - Demon's Dagger (Earth)">
+		<set name="icon" value="icon.weapon_demons_sword_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="97"/>
+		<set name="type" value="DAGGER"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="170"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34288" name="Player Commendation - Demon's Dagger (Water)">
+		<set name="icon" value="icon.weapon_demons_sword_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="97"/>
+		<set name="type" value="DAGGER"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="170"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34289" name="Player Commendation - Demon's Dagger (Wind)">
+		<set name="icon" value="icon.weapon_demons_sword_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="97"/>
+		<set name="type" value="DAGGER"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="170"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34290" name="Player Commendation - Demon's Dagger (Fire)">
+		<set name="icon" value="icon.weapon_demons_sword_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="97"/>
+		<set name="type" value="DAGGER"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="170"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34291" name="Player Commendation - Demon's Dagger (Holy)">
+		<set name="icon" value="icon.weapon_demons_sword_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="97"/>
+		<set name="type" value="DAGGER"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="170"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34292" name="Player Commendation - Demon's Dagger (Dark)">
+		<set name="icon" value="icon.weapon_demons_sword_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="97"/>
+		<set name="type" value="DAGGER"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="170"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34293" name="Player Commendation - Kaim Vanul's Bones (Earth)">
+		<set name="icon" value="icon.weapon_bone_of_kaim_vanul_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="157"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="155"/>
+			<add stat="mAtk" order="0x10" value="132"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34294" name="Player Commendation - Kaim Vanul's Bones (Water)">
+		<set name="icon" value="icon.weapon_bone_of_kaim_vanul_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="157"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="155"/>
+			<add stat="mAtk" order="0x10" value="132"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34295" name="Player Commendation - Kaim Vanul's Bones (Wind)">
+		<set name="icon" value="icon.weapon_bone_of_kaim_vanul_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="157"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="155"/>
+			<add stat="mAtk" order="0x10" value="132"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34296" name="Player Commendation - Kaim Vanul's Bones (Fire)">
+		<set name="icon" value="icon.weapon_bone_of_kaim_vanul_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="157"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="155"/>
+			<add stat="mAtk" order="0x10" value="132"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34297" name="Player Commendation - Kaim Vanul's Bones (Holy)">
+		<set name="icon" value="icon.weapon_bone_of_kaim_vanul_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="157"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="155"/>
+			<add stat="mAtk" order="0x10" value="132"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34298" name="Player Commendation - Kaim Vanul's Bones (Dark)">
+		<set name="icon" value="icon.weapon_bone_of_kaim_vanul_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="157"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="155"/>
+			<add stat="mAtk" order="0x10" value="132"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34299" name="Player Commendation - Colichemarde (Earth)">
+		<set name="icon" value="icon.weapon_colichemarde_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="135"/>
+		<set name="type" value="RAPIER"/>
+		<set name="crystal_type" value="B"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="176"/>
+			<add stat="mAtk" order="0x10" value="99"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+</list>

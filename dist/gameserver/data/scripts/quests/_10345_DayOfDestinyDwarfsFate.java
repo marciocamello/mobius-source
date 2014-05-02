@@ -15,10 +15,9 @@ package quests;
 import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.scripts.ScriptFile;
 
+//By viRUS
 public class _10345_DayOfDestinyDwarfsFate extends SagasSuperclass implements ScriptFile
 {
-	private final int questId = 10345;
-	
 	@Override
 	public void onLoad()
 	{
@@ -40,14 +39,7 @@ public class _10345_DayOfDestinyDwarfsFate extends SagasSuperclass implements Sc
 		
 		StartNPC = 30847;
 		StartRace = Race.dwarf;
-		init();
 		
+		init();
 	}
-	
-	@Override
-	public int questId()
-	{
-		return questId;
-	}
-	
 }

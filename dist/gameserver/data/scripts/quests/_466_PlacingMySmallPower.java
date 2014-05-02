@@ -21,216 +21,42 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-/**
- * * @author coldy
- */
 public class _466_PlacingMySmallPower extends Quest implements ScriptFile
 {
-	private static final int NPC_ASTERIOS = 30154;
-	private static final int NPC_MIMILEAD = 32895;
-	private static final int[] mobsFairy =
+	// npc
+	public static final int ASTERIOS = 30154;
+	public static final int NOEM_MILID = 32895;
+	
+	// mobs
+	private final int[] WingMobs =
 	{
-		22867,
-		22875,
-		22883,
-		22868,
-		22876,
-		22884,
-		22869,
-		22877,
-		22885
+		22863,
+		22864,
+		22907,
+		22899,
+		22891,
+		22875
 	};
-	private static final int[] mobsStoppedMutate =
+	private final int[] CoconMobs =
+	{
+		32920
+	};
+	private final int[] BreathMobs =
 	{
 		22870,
-		22878,
 		22886,
-		22866,
-		22874,
-		22882
+		22902,
+		22894,
+		22878
 	};
-	private static final int MOB_LARGE_COCCON = 32920;
-	private static final int ITEM_FAIRY_WING = 17597;
-	private static final int ITEM_COCCON_FRAGMENT = 17598;
-	private static final int ITEM_KIMERIAN_BREATH = 17599;
-	private static final int ITEM_RECIPE_TONIC = 17603;
-	private static final int ITEM_TONIC = 17596;
-	private static final int REWARD_CERTIFICATE_OF_PROMISE = 30384;
 	
-	public _466_PlacingMySmallPower()
-	{
-		super(false);
-		
-		addStartNpc(NPC_ASTERIOS);
-		addTalkId(NPC_MIMILEAD);
-		addKillId(mobsFairy);
-		addKillId(mobsStoppedMutate);
-		addKillId(MOB_LARGE_COCCON);
-		addQuestItem(ITEM_FAIRY_WING, ITEM_COCCON_FRAGMENT, ITEM_KIMERIAN_BREATH, ITEM_RECIPE_TONIC, ITEM_TONIC);
-		addLevelCheck(90, 99);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		if (st == null)
-		{
-			return event;
-		}
-		
-		if ((npc.getNpcId() == NPC_ASTERIOS) && (event.equalsIgnoreCase("30154-05.htm")))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if ((npc.getNpcId() == NPC_MIMILEAD) && (event.equalsIgnoreCase("32895-03.htm")))
-		{
-			st.setCond(2);
-			st.playSound("ItemSound.quest_middle");
-		}
-		
-		return event;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		Player player = st.getPlayer();
-		String htmltext = "noquest";
-		
-		if (npc.getNpcId() == NPC_ASTERIOS)
-		{
-			if (player.getLevel() < 90)
-			{
-				st.exitCurrentQuest(true);
-				return "30154-02.htm";
-			}
-			
-			switch (st.getState())
-			{
-				case CREATED:
-					htmltext = "30154-01.htm";
-					break;
-				case STARTED:
-					switch (st.getCond())
-					{
-						case 1:
-						case 2:
-						case 3:
-						case 4:
-							htmltext = "30154-06.htm";
-							break;
-						case 5:
-							htmltext = "30154-07.htm";
-							
-							st.playSound("ItemSound.quest_finish");
-							st.takeAllItems(ITEM_TONIC);
-							st.giveItems(REWARD_CERTIFICATE_OF_PROMISE, 3);
-							st.exitCurrentQuest(this);
-					}
-					
-					break;
-				case DELAYED:
-					htmltext = "30154-03.htm";
-			}
-		}
-		else if (npc.getNpcId() == NPC_MIMILEAD)
-		{
-			if (st.isCompleted())
-			{
-				return "32895-08.htm";
-			}
-			
-			switch (st.getCond())
-			{
-				case 1:
-					htmltext = "32895-01.htm";
-					break;
-				case 2:
-					htmltext = "32895-04.htm";
-					break;
-				case 3:
-					st.setCond(4);
-					st.giveItems(ITEM_RECIPE_TONIC, 1);
-					st.playSound("ItemSound.quest_middle");
-					
-					htmltext = "32895-05.htm";
-					break;
-				case 4:
-					if (st.getQuestItemsCount(ITEM_TONIC) != 5)
-					{
-						htmltext = "32895-06.htm";
-					}
-					else
-					{
-						st.takeAllItems(ITEM_TONIC);
-						st.giveItems(ITEM_TONIC, 1);
-						st.setCond(5);
-						st.playSound("ItemSound.quest_middle");
-						
-						htmltext = "32895-07.htm";
-					}
-					
-					break;
-				case 5:
-					htmltext = "32895-07.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		if ((npc == null) || (st == null))
-		{
-			return null;
-		}
-		
-		if (st.getCond() == 2)
-		{
-			if (ArrayUtils.contains(mobsFairy, npc.getNpcId()))
-			{
-				if (Rnd.chance(20))
-				{
-					if (st.getQuestItemsCount(ITEM_FAIRY_WING) < 5)
-					{
-						st.giveItems(ITEM_FAIRY_WING, 1);
-					}
-				}
-			}
-			else if (npc.getNpcId() == 32920)
-			{
-				if (Rnd.chance(50))
-				{
-					if (st.getQuestItemsCount(ITEM_COCCON_FRAGMENT) < 5)
-					{
-						st.giveItems(ITEM_COCCON_FRAGMENT, 1);
-					}
-				}
-			}
-			else if (ArrayUtils.contains(mobsStoppedMutate, npc.getNpcId()))
-			{
-				if (Rnd.chance(20))
-				{
-					if (st.getQuestItemsCount(ITEM_KIMERIAN_BREATH) < 5)
-					{
-						st.giveItems(ITEM_KIMERIAN_BREATH, 1);
-					}
-				}
-			}
-			
-			if ((st.getQuestItemsCount(ITEM_FAIRY_WING) >= 5) && (st.getQuestItemsCount(ITEM_COCCON_FRAGMENT) >= 5) && (st.getQuestItemsCount(ITEM_KIMERIAN_BREATH) >= 5))
-			{
-				st.setCond(3);
-				st.playSound("ItemSound.quest_middle");
-			}
-		}
-		
-		return null;
-	}
+	// q items
+	public static final int WingI = 17597;
+	public static final int CoconI = 17598;
+	public static final int BreathI = 17599;
+	public static final int ProofWord = 30384;
+	public static final int NavozItem = 17596;
+	public static final int NavozRecipe = 17603;
 	
 	@Override
 	public void onLoad()
@@ -245,5 +71,145 @@ public class _466_PlacingMySmallPower extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
+	}
+	
+	public _466_PlacingMySmallPower()
+	{
+		super(true);
+		addStartNpc(ASTERIOS);
+		addTalkId(NOEM_MILID);
+		addKillId(WingMobs);
+		addKillId(CoconMobs);
+		addKillId(BreathMobs);
+		addQuestItem(WingI);
+		addQuestItem(CoconI);
+		addQuestItem(BreathI);
+		addQuestItem(NavozItem);
+		addQuestItem(NavozRecipe);
+		addLevelCheck(90, 100);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState st, NpcInstance npc)
+	{
+		if (event.equalsIgnoreCase("30154-4.htm"))
+		{
+			st.setCond(1);
+			st.setState(STARTED);
+			st.playSound(SOUND_ACCEPT);
+		}
+		if (event.equalsIgnoreCase("32895-4.htm"))
+		{
+			st.setCond(2);
+		}
+		return event;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState st)
+	{
+		Player player = st.getPlayer();
+		int npcId = npc.getNpcId();
+		int state = st.getState();
+		int cond = st.getCond();
+		if (npcId == ASTERIOS)
+		{
+			if (state == 1)
+			{
+				if (player.getLevel() < 90)
+				{
+					return "30154-lvl.htm";
+				}
+				if (!st.isNowAvailable())
+				{
+					return "30154-comp.htm";
+				}
+				if (st.getPlayer().getLevel() < 90)
+				{
+					return "30154-lvl.htm";
+				}
+				return "30154.htm";
+			}
+			if (state == 2)
+			{
+				if (cond == 1)
+				{
+					return "32921-5.htm";
+				}
+				
+				if (cond == 5)
+				{
+					st.giveItems(ProofWord, 1);
+					st.takeItems(NavozItem, 1);
+					st.unset("cond");
+					st.playSound(SOUND_FINISH);
+					st.exitCurrentQuest(this);
+					return "32921-6.htm"; // no further html do here
+				}
+			}
+		}
+		if ((npcId == NOEM_MILID) && (state == 2))
+		{
+			if (cond == 1)
+			{
+				return "32895.htm";
+			}
+			if (cond == 2)
+			{
+				return "32895-5.htm";
+			}
+			if (cond == 3)
+			{
+				st.setCond(4);
+				st.giveItems(NavozRecipe, 1);
+				return "32895-6.htm";
+			}
+			if ((cond == 4) && (st.getQuestItemsCount(NavozItem) == 0))
+			{
+				return "32895-7.htm";
+			}
+			if ((cond == 4) && (st.getQuestItemsCount(NavozItem) != 0))
+			{
+				st.setCond(5);
+				return "32895-8.htm";
+			}
+			if (cond == 5)
+			{
+				return "32895-10.htm";
+			}
+		}
+		return "noquest";
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState st)
+	{
+		int cond = st.getCond();
+		if ((cond != 2) || (npc == null))
+		{
+			return null;
+		}
+		if (ArrayUtils.contains(WingMobs, npc.getNpcId()) && Rnd.chance(7))
+		{
+			st.giveItems(WingI, 1);
+		}
+		if (ArrayUtils.contains(CoconMobs, npc.getNpcId()) && Rnd.chance(10))
+		{
+			st.giveItems(CoconI, 1);
+		}
+		if (ArrayUtils.contains(BreathMobs, npc.getNpcId()) && Rnd.chance(12))
+		{
+			st.giveItems(BreathI, 1);
+		}
+		checkCond(st);
+		return null;
+	}
+	
+	private static void checkCond(QuestState st)
+	{
+		if ((st.getQuestItemsCount(WingI) >= 5) && (st.getQuestItemsCount(CoconI) >= 5) && (st.getQuestItemsCount(BreathI) >= 5))
+		{
+			st.setCond(3);
+		}
 	}
 }

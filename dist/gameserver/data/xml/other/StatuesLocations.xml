@@ -1,23 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--Made By Awakeninger-->
-<!--Полученные EXP(Given EXp) = category 0
-	Полученные Адены(Given Aden`s = category 1
-	Время игры(Game Time = category 2
-	Время битвы(battletime) = category 3
-	Время полной группы(Full Party time) = category 5
-	Объем продаж в личной лавке(Value of Selling) = category 11
-	Очистка квеста(Completed Quests) = category 12
-	Кол-во заказанных воскрешений( WTF?! sniffed only for talking island) = category 18
-	Кол-во полученных воскрешений( WTF?! sniffed only for talking island) = category 19
-	Кол-во смертей(Count of Deathes) = category 20
-	Кол-во убийств монстров(Count of killed mob`s) = category 1000
-	Кол-во убийств монстрами(Count of deathes from mob`s) = category 1002
-	Количество поражений PK( WTF?! sniffed only for talking island) = category 2001
-	Количество поражений PVP( WTF?! sniffed only for talking island) = category 2002
-	Кол-во побед PK(Wins PK) = category 2004
-	Кол-во побед PVP(Wins PVP) = category 2005
+<?xml version="1.0"?>
+<!--Given EXp = category 0
+	Given Aden`s = category 1
+	Game Time = category 2
+	battletime = category 3
+	Full Party time = category 5
+	Value of Selling = category 11
+	Completed Quests = category 12
+	WTF?! sniffed only for talking island = category 18
+	WTF?! sniffed only for talking island = category 19
+	Count of Deathes = category 20
+	Count of killed mob`s = category 1000
+	Count of deathes from mob`s = category 1002
+	WTF?! sniffed only for talking island = category 2001
+	WTF?! sniffed only for talking island = category 2002
+	Wins PK = category 2004
+	Wins PVP = category 2005
 	-->
-	<!--TODO: Headings-->
+<!--TODO: Headings-->
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="StatuesLocations.xsd">
 	<!--Aden Castle Town-->
 	<location category="0" x="147091" y="26875" z="-2150" heading="32927" />
@@ -75,7 +74,7 @@
 	<location category="20" x="-114112" y="251872" z="-1570" heading="32927" />
 	<location category="1000" x="-114112" y="251680" z="-1604" heading="32927" />
 	<!-- Talking Island End -->
-	<!-- gludio -->
+	<!-- Gludio -->
 	<location category="0" x="-14491" y="123481" z="-3070" heading="1245" />
 	<location category="1" x="-12283" y="122070" z="-2950" heading="36061" />
 	<location category="2" x="-14573" y="123623" z="-3070" heading="52266" />
@@ -88,7 +87,7 @@
 	<location category="1002" x="-12425" y="122153" z="-2950" heading="46169" />
 	<location category="2004" x="-12140" y="122153" z="-2950" heading="20021" />
 	<location category="2005" x="-14266" y="123481" z="-3070" heading="27931" />
-	<!-- gludio end -->
+	<!-- Gludio end -->
 	<!-- Goddard -->
 	<location category="0" x="150280" y="-57384" z="-2920" heading="1245" />
 	<location category="1" x="145265" y="-57017" z="-2920" heading="36061" />
@@ -103,7 +102,7 @@
 	<location category="2004" x="145346" y="-57349" z="-2920" heading="20021" />
 	<location category="2005" x="145412" y="-57195" z="-2920" heading="27931" />
 	<!-- Goddard end -->
-	<!-- oren -->
+	<!-- Oren -->
 	<location category="0" x="82570" y="53548" z="-1430" heading="1245" />
 	<location category="1" x="80111" y="55844" z="-1500" heading="36061" />
 	<location category="2" x="82655" y="53694" z="-1430" heading="52266" />
@@ -116,8 +115,8 @@
 	<location category="1002" x="80196" y="55989" z="-1500" heading="46169" />
 	<location category="2004" x="80424" y="55696" z="-1500" heading="20021" />
 	<location category="2005" x="80195" y="55696" z="-1500" heading="27931" />
-	<!-- oren end -->
-	<!--runa-->
+	<!-- Oren end -->
+	<!--Rune-->
 	<location category="0" x="42326" y="-48093" z="-740" heading="1245" />
 	<location category="1" x="41545" y="-48375" z="-740" heading="36061" />
 	<location category="2" x="42130" y="-48093" z="-740" heading="52266" />
@@ -130,7 +129,7 @@
 	<location category="1002" x="41367" y="-48375" z="-740" heading="46169" />
 	<location category="2004" x="41930" y="-48373" z="-740" heading="20021" />
 	<location category="2005" x="41736" y="-48374" z="-740" heading="27931" />
-	<!--end runa-->
+	<!--end Rune-->
 	<!--Hein-->
 	<location category="0" x="112014" y="220640" z="-3600" heading="1245" />
 	<location category="1" x="111940" y="219739" z="-3600" heading="36061" />
@@ -145,7 +144,7 @@
 	<location category="2004" x="110786" y="219669" z="-3600" heading="20021" />
 	<location category="2005" x="112014" y="219725" z="-3600" heading="27931" />
 	<!--Hein end-->
-	<!-- shuttgard -->
+	<!-- Shuttgard -->
 	<location category="0" x="84932" y="-141153" z="-1480" heading="1245" />
 	<location category="1" x="89943" y="-141503" z="-1480" heading="36061" />
 	<location category="2" x="84755" y="-141300" z="-1480" heading="52266" />
@@ -158,6 +157,5 @@
 	<location category="1002" x="89961" y="-141338" z="-1480" heading="46169" />
 	<location category="2004" x="89605" y="-141456" z="-1480" heading="20021" />
 	<location category="2005" x="89797" y="-141583" z="-1480" heading="27931" />
-	<!-- shuttgard end -->
-	
+	<!-- Shuttgard end -->
 </list>

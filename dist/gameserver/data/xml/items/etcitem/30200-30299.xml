@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="30274" name="Luxury Cocktail">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_fruit_cocktail_i00"/>
+	</etcitem>
+	<etcitem id="30275" name="Scroll: 100,000,000 SP">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="2167" level="10"/>
+		</skills>
+		<set name="icon" value="icon.etc_sp_scroll3_i00"/>
+	</etcitem>
+	<etcitem id="30276" name="Soulshot Pack (R-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="500"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.br_cash_pack_of_soulshot_r_i00"/>
+	</etcitem>
+	<etcitem id="30277" name="Soulshot Large Pack (R-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="500"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.br_cash_pack_of_soulshot_r_i00"/>
+	</etcitem>
+	<etcitem id="30278" name="Spiritshot Pack (R-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="500"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.br_cash_pack_of_spiritshot_r_i00"/>
+	</etcitem>
+	<etcitem id="30279" name="Spiritshot Large Pack (R-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="500"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.br_cash_pack_of_spiritshot_r_i00"/>
+	</etcitem>
+	<etcitem id="30280" name="Blessed Spiritshot Pack (R-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="500"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.br_cash_pack_of_blessed_spiritshot_r_i00"/>
+	</etcitem>
+	<etcitem id="30281" name="Blessed Spiritshot Large Pack (R-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="500"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.br_cash_pack_of_blessed_spiritshot_r_i00"/>
+	</etcitem>
+	<etcitem id="30282" name="Orichalcum Quiver">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00"/>
+	</etcitem>
+	<etcitem id="30283" name="Orichalcum Bolt Container">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00"/>
+	</etcitem>
+	<etcitem id="30284" name="Requiem Weapon Pack">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="30285" name="Immortal Heavy Armor Pack">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="30286" name="Immortal Light Armor Pack">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="30287" name="Immortal Robe Armor Pack">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="30288" name="Apocalypse Weapon Pack">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="30289" name="Twilight Heavy Armor Pack">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="30290" name="Twilight Light Armor Pack">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="30291" name="Twilight Robe Armor Pack">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="30292" name="Immortal Accessory Pack">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="30293" name="Twilight Accessory Pack">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="30294" name="Blood of the Guardian of the Altar">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_dragons_blood_i00"/>
+	</etcitem>
+	<etcitem id="30295" name="Embryo's Imprinting">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.yogi_stick_i00"/>
+	</etcitem>
+	<etcitem id="30296" name="Ranger's Report">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_letter_white_i00"/>
+	</etcitem>
+	<etcitem id="30297" name="Superior Giant's Codex">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.codex_of_incuse"/>
+	</etcitem>
+	<etcitem id="30298" name="Superior Giant's Codex - Mastery">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.codex_of_incuse_dexterity"/>
+	</etcitem>
+	<etcitem id="30299" name="Superior Giant's Codex - Discipline">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.codex_of_incuse_training"/>
+	</etcitem>
+</list>

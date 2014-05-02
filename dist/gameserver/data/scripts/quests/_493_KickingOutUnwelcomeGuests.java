@@ -12,6 +12,7 @@
  */
 package quests;
 
+import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
@@ -19,17 +20,14 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _493_KickingOutUnwelcomeGuests extends Quest implements ScriptFile
 {
-	private static final int georgio = 33515;
-	private static final int Resurrectedc = 23147;
-	private static final int Insanec = 23148;
-	private static final int Undeadc = 23149;
-	private static final int Hellishc = 23150;
-	private static final int sMessenger = 23151;
-	private static final String Resurrectedc_item = "Resurrectedc";
-	private static final String Insanec_item = "Insanec";
-	private static final String Undeadc_item = "Undeadc";
-	private static final String Hellishc_item = "Hellishc";
-	private static final String sMessenger_item = "sMessenger";
+	// npc
+	public static final int JORJINO = 33515;
+	
+	public static final String A_LIST = "a_list";
+	public static final String B_LIST = "b_list";
+	public static final String C_LIST = "c_list";
+	public static final String D_LIST = "d_list";
+	public static final String E_LIST = "e_list";
 	
 	@Override
 	public void onLoad()
@@ -48,87 +46,86 @@ public class _493_KickingOutUnwelcomeGuests extends Quest implements ScriptFile
 	
 	public _493_KickingOutUnwelcomeGuests()
 	{
-		super(false);
-		addStartNpc(georgio);
-		addTalkId(georgio);
-		addKillNpcWithLog(1, Resurrectedc_item, 20, Resurrectedc);
-		addKillNpcWithLog(1, Insanec_item, 20, Insanec);
-		addKillNpcWithLog(1, Undeadc_item, 20, Undeadc);
-		addKillNpcWithLog(1, Hellishc_item, 20, Hellishc);
-		addKillNpcWithLog(1, sMessenger_item, 20, sMessenger);
-		addLevelCheck(95, 99);
+		super(true);
+		addStartNpc(JORJINO);
+		addTalkId(JORJINO);
+		
+		addKillNpcWithLog(1, A_LIST, 20, 23147);
+		addKillNpcWithLog(1, B_LIST, 20, 23148);
+		addKillNpcWithLog(1, C_LIST, 20, 23149);
+		addKillNpcWithLog(1, D_LIST, 20, 23150);
+		addKillNpcWithLog(1, E_LIST, 20, 23151);
+		
+		addLevelCheck(95, 100);
 	}
 	
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
-		String htmltext = event;
-		if (event.equalsIgnoreCase("quest_ac"))
+		if (event.equalsIgnoreCase("33515-4.htm"))
 		{
-			st.setState(STARTED);
 			st.setCond(1);
+			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
-			htmltext = "0-2.htm";
 		}
-		else if (event.equalsIgnoreCase("quest_rev"))
+		if (event.equalsIgnoreCase("33515-6.htm"))
 		{
-			st.getPlayer().addExpAndSp(560000000, 16000000);
-			st.exitCurrentQuest(this);
+			st.unset("cond");
+			st.addExpAndSp(560000000, 16000000);
 			st.playSound(SOUND_FINISH);
-			htmltext = "0-3.htm";
+			st.exitCurrentQuest(this);
 		}
-		return htmltext;
+		return event;
 	}
 	
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int cond = st.getCond();
+		Player player = st.getPlayer();
 		int npcId = npc.getNpcId();
-		String htmltext = "noquest";
-		if (npcId == georgio)
+		int state = st.getState();
+		int cond = st.getCond();
+		if (npcId == JORJINO)
 		{
-			if (cond == 0)
+			if (state == 1)
 			{
-				if (isAvailableFor(st.getPlayer()))
+				if (player.getLevel() < 95)
 				{
-					if (st.isNowAvailableByTime())
-					{
-						htmltext = "start.htm";
-					}
-					else
-					{
-						htmltext = "0-c.htm";
-					}
+					return "noquest";
 				}
-				else
+				if (!st.isNowAvailable())
 				{
-					htmltext = "0-nc.htm";
+					return "noquest";
 				}
+				return "33515.htm";
 			}
-			else if (cond == 1)
+			if (state == 2)
 			{
-				htmltext = "0-4.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "0-5.htm";
+				if (cond == 2)
+				{
+					return "33515-5.htm";
+				}
 			}
 		}
-		return htmltext;
+		return "noquest";
 	}
 	
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
+		int cond = st.getCond();
+		if (cond != 1)
+		{
+			return null;
+		}
 		boolean doneKill = updateKill(npc, st);
 		if (doneKill)
 		{
-			st.unset(Resurrectedc_item);
-			st.unset(Insanec_item);
-			st.unset(Undeadc_item);
-			st.unset(Hellishc_item);
-			st.unset(sMessenger_item);
+			st.unset(A_LIST);
+			st.unset(B_LIST);
+			st.unset(C_LIST);
+			st.unset(D_LIST);
+			st.unset(E_LIST);
 			st.setCond(2);
 		}
 		return null;

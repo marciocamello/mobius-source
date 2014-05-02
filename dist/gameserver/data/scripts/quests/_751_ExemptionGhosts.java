@@ -21,6 +21,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author cruel
+ * @name 751 - Exemption Ghosts
+ * @category Daily quest. Party
+ */
 public class _751_ExemptionGhosts extends Quest implements ScriptFile
 {
 	private static final int Roderik = 30631;
