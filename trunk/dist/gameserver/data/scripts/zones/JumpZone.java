@@ -15,6 +15,7 @@ package zones;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 
+import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Zone;
@@ -92,7 +93,7 @@ public class JumpZone implements ScriptFile
 			{
 				for (Player player : zone.getInsidePlayers())
 				{
-					if (player.isAwaking())
+					if (player.isAwaking() || Config.FREE_JUMPS_FOR_ALL)
 					{
 						player.sendPacket(ExNotifyFlyMoveStart.STATIC);
 					}

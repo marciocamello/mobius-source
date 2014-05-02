@@ -19,20 +19,34 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _496_IncarnationOfGluttonyKaliosGroup extends Quest implements ScriptFile
 {
+	// npc
 	public static final int KARTIA_RESEARCH = 33647;
+	
+	// mobs
 	public static final int KALIOS = 25884;
 	
-	public _496_IncarnationOfGluttonyKaliosGroup()
+	@Override
+	public void onLoad()
 	{
-		super(true);
-		addStartNpc(KARTIA_RESEARCH);
-		addKillId(KALIOS);
-		addLevelCheck(95, 99);
+	}
+	
+	@Override
+	public void onReload()
+	{
 	}
 	
 	@Override
 	public void onShutdown()
 	{
+	}
+	
+	public _496_IncarnationOfGluttonyKaliosGroup()
+	{
+		super(true);
+		addStartNpc(KARTIA_RESEARCH);
+		addTalkId(KARTIA_RESEARCH);
+		addKillId(KALIOS);
+		addLevelCheck(95, 100);
 	}
 	
 	@Override
@@ -57,7 +71,7 @@ public class _496_IncarnationOfGluttonyKaliosGroup extends Quest implements Scri
 		{
 			if (state == 1)
 			{
-				if (!isAvailableFor(st.getPlayer()) || !st.isNowAvailableByTime())
+				if (!st.isNowAvailable())
 				{
 					return "33647-3.htm";
 				}
@@ -71,25 +85,15 @@ public class _496_IncarnationOfGluttonyKaliosGroup extends Quest implements Scri
 				}
 				if (cond == 2)
 				{
-					st.giveItems(34929, 1L);
+					st.giveItems(34929, 1);
 					st.unset("cond");
-					st.playSound("ItemSound.quest_finish");
+					st.playSound(SOUND_FINISH);
 					st.exitCurrentQuest(this);
 					return "33647-4.htm";
 				}
 			}
 		}
 		return "noquest";
-	}
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
 	}
 	
 	@Override

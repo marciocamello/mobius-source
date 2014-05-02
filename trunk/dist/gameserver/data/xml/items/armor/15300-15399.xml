@@ -1,0 +1,2751 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="15312" name="Dawn's Bracelet">
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="S"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.accessory_lbracelet_of_dawn"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="15"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+		<set name="ex_type" value="BRACELET"/>
+		<skills>
+			<skill id="8337" level="1"/>
+		</skills>
+	</armor>
+	<armor id="15351" name="Seal Removal Bracelet_Towbat">
+		<set name="crystal_type" value="NONE"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+		<set name="ex_type" value="BRACELET"/>
+		<skills>
+			<skill id="3267" level="1"/>
+			<skill id="8358" level="1"/>
+			<skill id="8359" level="1"/>
+		</skills>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</armor>
+	<armor id="15383" name="Weaver's Multi-colored Clothes" add_name="7-day limited period">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="0"/>
+		<set name="durability" value="10080"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="UNDERWEAR"/>
+		</equip>
+		<set name="ex_type" value="UNDERWEAR"/>
+		<enchant_options>
+			<level val="0">
+				<option id="24949"/>
+			</level>
+			<level val="1">
+				<option id="24805"/>
+			</level>
+			<level val="2">
+				<option id="24806"/>
+			</level>
+			<level val="3">
+				<option id="24807"/>
+			</level>
+			<level val="4">
+				<option id="24808"/>
+				<option id="24855"/>
+				<option id="24902"/>
+			</level>
+			<level val="5">
+				<option id="24809"/>
+				<option id="24856"/>
+				<option id="24903"/>
+			</level>
+			<level val="6">
+				<option id="24810"/>
+				<option id="24857"/>
+				<option id="24904"/>
+			</level>
+			<level val="7">
+				<option id="24811"/>
+				<option id="24858"/>
+				<option id="24905"/>
+			</level>
+			<level val="8">
+				<option id="24812"/>
+				<option id="24859"/>
+				<option id="24906"/>
+			</level>
+			<level val="9">
+				<option id="24813"/>
+				<option id="24860"/>
+				<option id="24907"/>
+			</level>
+			<level val="10">
+				<option id="24814"/>
+				<option id="24861"/>
+				<option id="24908"/>
+			</level>
+			<level val="11">
+				<option id="24815"/>
+				<option id="24862"/>
+				<option id="24909"/>
+			</level>
+			<level val="12">
+				<option id="24816"/>
+				<option id="24863"/>
+				<option id="24910"/>
+			</level>
+			<level val="13">
+				<option id="24817"/>
+				<option id="24864"/>
+				<option id="24911"/>
+			</level>
+			<level val="14">
+				<option id="24818"/>
+				<option id="24865"/>
+				<option id="24912"/>
+			</level>
+			<level val="15">
+				<option id="24819"/>
+				<option id="24866"/>
+				<option id="24913"/>
+			</level>
+			<level val="16">
+				<option id="24820"/>
+				<option id="24867"/>
+				<option id="24914"/>
+			</level>
+			<level val="17">
+				<option id="24821"/>
+				<option id="24868"/>
+				<option id="24915"/>
+			</level>
+			<level val="18">
+				<option id="24822"/>
+				<option id="24869"/>
+				<option id="24916"/>
+			</level>
+			<level val="19">
+				<option id="24823"/>
+				<option id="24870"/>
+				<option id="24917"/>
+			</level>
+			<level val="20">
+				<option id="24824"/>
+				<option id="24871"/>
+				<option id="24918"/>
+			</level>
+			<level val="21">
+				<option id="24825"/>
+				<option id="24872"/>
+				<option id="24919"/>
+			</level>
+			<level val="22">
+				<option id="24826"/>
+				<option id="24873"/>
+				<option id="24920"/>
+			</level>
+			<level val="23">
+				<option id="24827"/>
+				<option id="24874"/>
+				<option id="24921"/>
+			</level>
+			<level val="24">
+				<option id="24828"/>
+				<option id="24875"/>
+				<option id="24922"/>
+			</level>
+			<level val="25">
+				<option id="24829"/>
+				<option id="24876"/>
+				<option id="24923"/>
+			</level>
+			<level val="26">
+				<option id="24830"/>
+				<option id="24877"/>
+				<option id="24924"/>
+			</level>
+			<level val="27">
+				<option id="24831"/>
+				<option id="24878"/>
+				<option id="24925"/>
+			</level>
+			<level val="28">
+				<option id="24832"/>
+				<option id="24879"/>
+				<option id="24926"/>
+			</level>
+			<level val="29">
+				<option id="24833"/>
+				<option id="24880"/>
+				<option id="24927"/>
+			</level>
+			<level val="30">
+				<option id="24834"/>
+				<option id="24881"/>
+				<option id="24928"/>
+			</level>
+			<level val="31">
+				<option id="24835"/>
+				<option id="24882"/>
+				<option id="24929"/>
+			</level>
+			<level val="32">
+				<option id="24836"/>
+				<option id="24883"/>
+				<option id="24930"/>
+			</level>
+			<level val="33">
+				<option id="24837"/>
+				<option id="24884"/>
+				<option id="24931"/>
+			</level>
+			<level val="34">
+				<option id="24838"/>
+				<option id="24885"/>
+				<option id="24932"/>
+			</level>
+			<level val="35">
+				<option id="24839"/>
+				<option id="24886"/>
+				<option id="24933"/>
+			</level>
+			<level val="36">
+				<option id="24840"/>
+				<option id="24887"/>
+				<option id="24934"/>
+			</level>
+			<level val="37">
+				<option id="24841"/>
+				<option id="24888"/>
+				<option id="24935"/>
+			</level>
+			<level val="38">
+				<option id="24842"/>
+				<option id="24889"/>
+				<option id="24936"/>
+			</level>
+			<level val="39">
+				<option id="24843"/>
+				<option id="24890"/>
+				<option id="24937"/>
+			</level>
+			<level val="40">
+				<option id="24844"/>
+				<option id="24891"/>
+				<option id="24938"/>
+			</level>
+			<level val="41">
+				<option id="24845"/>
+				<option id="24892"/>
+				<option id="24939"/>
+			</level>
+			<level val="42">
+				<option id="24846"/>
+				<option id="24893"/>
+				<option id="24940"/>
+			</level>
+			<level val="43">
+				<option id="24847"/>
+				<option id="24894"/>
+				<option id="24941"/>
+			</level>
+			<level val="44">
+				<option id="24848"/>
+				<option id="24895"/>
+				<option id="24942"/>
+			</level>
+			<level val="45">
+				<option id="24849"/>
+				<option id="24896"/>
+				<option id="24943"/>
+			</level>
+			<level val="46">
+				<option id="24850"/>
+				<option id="24897"/>
+				<option id="24944"/>
+			</level>
+			<level val="47">
+				<option id="24851"/>
+				<option id="24898"/>
+				<option id="24945"/>
+			</level>
+			<level val="48">
+				<option id="24852"/>
+				<option id="24899"/>
+				<option id="24946"/>
+			</level>
+			<level val="49">
+				<option id="24853"/>
+				<option id="24900"/>
+				<option id="24947"/>
+			</level>
+			<level val="50">
+				<option id="24854"/>
+				<option id="24901"/>
+				<option id="24948"/>
+			</level>
+		</enchant_options>
+	</armor>
+	<armor id="15384" name="Weaver's Multi-colored Clothes" add_name="30-day limited period">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="0"/>
+		<set name="durability" value="43200"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="UNDERWEAR"/>
+		</equip>
+		<set name="ex_type" value="UNDERWEAR"/>
+		<enchant_options>
+			<level val="0">
+				<option id="24949"/>
+			</level>
+			<level val="1">
+				<option id="24805"/>
+			</level>
+			<level val="2">
+				<option id="24806"/>
+			</level>
+			<level val="3">
+				<option id="24807"/>
+			</level>
+			<level val="4">
+				<option id="24808"/>
+				<option id="24855"/>
+				<option id="24902"/>
+			</level>
+			<level val="5">
+				<option id="24809"/>
+				<option id="24856"/>
+				<option id="24903"/>
+			</level>
+			<level val="6">
+				<option id="24810"/>
+				<option id="24857"/>
+				<option id="24904"/>
+			</level>
+			<level val="7">
+				<option id="24811"/>
+				<option id="24858"/>
+				<option id="24905"/>
+			</level>
+			<level val="8">
+				<option id="24812"/>
+				<option id="24859"/>
+				<option id="24906"/>
+			</level>
+			<level val="9">
+				<option id="24813"/>
+				<option id="24860"/>
+				<option id="24907"/>
+			</level>
+			<level val="10">
+				<option id="24814"/>
+				<option id="24861"/>
+				<option id="24908"/>
+			</level>
+			<level val="11">
+				<option id="24815"/>
+				<option id="24862"/>
+				<option id="24909"/>
+			</level>
+			<level val="12">
+				<option id="24816"/>
+				<option id="24863"/>
+				<option id="24910"/>
+			</level>
+			<level val="13">
+				<option id="24817"/>
+				<option id="24864"/>
+				<option id="24911"/>
+			</level>
+			<level val="14">
+				<option id="24818"/>
+				<option id="24865"/>
+				<option id="24912"/>
+			</level>
+			<level val="15">
+				<option id="24819"/>
+				<option id="24866"/>
+				<option id="24913"/>
+			</level>
+			<level val="16">
+				<option id="24820"/>
+				<option id="24867"/>
+				<option id="24914"/>
+			</level>
+			<level val="17">
+				<option id="24821"/>
+				<option id="24868"/>
+				<option id="24915"/>
+			</level>
+			<level val="18">
+				<option id="24822"/>
+				<option id="24869"/>
+				<option id="24916"/>
+			</level>
+			<level val="19">
+				<option id="24823"/>
+				<option id="24870"/>
+				<option id="24917"/>
+			</level>
+			<level val="20">
+				<option id="24824"/>
+				<option id="24871"/>
+				<option id="24918"/>
+			</level>
+			<level val="21">
+				<option id="24825"/>
+				<option id="24872"/>
+				<option id="24919"/>
+			</level>
+			<level val="22">
+				<option id="24826"/>
+				<option id="24873"/>
+				<option id="24920"/>
+			</level>
+			<level val="23">
+				<option id="24827"/>
+				<option id="24874"/>
+				<option id="24921"/>
+			</level>
+			<level val="24">
+				<option id="24828"/>
+				<option id="24875"/>
+				<option id="24922"/>
+			</level>
+			<level val="25">
+				<option id="24829"/>
+				<option id="24876"/>
+				<option id="24923"/>
+			</level>
+			<level val="26">
+				<option id="24830"/>
+				<option id="24877"/>
+				<option id="24924"/>
+			</level>
+			<level val="27">
+				<option id="24831"/>
+				<option id="24878"/>
+				<option id="24925"/>
+			</level>
+			<level val="28">
+				<option id="24832"/>
+				<option id="24879"/>
+				<option id="24926"/>
+			</level>
+			<level val="29">
+				<option id="24833"/>
+				<option id="24880"/>
+				<option id="24927"/>
+			</level>
+			<level val="30">
+				<option id="24834"/>
+				<option id="24881"/>
+				<option id="24928"/>
+			</level>
+			<level val="31">
+				<option id="24835"/>
+				<option id="24882"/>
+				<option id="24929"/>
+			</level>
+			<level val="32">
+				<option id="24836"/>
+				<option id="24883"/>
+				<option id="24930"/>
+			</level>
+			<level val="33">
+				<option id="24837"/>
+				<option id="24884"/>
+				<option id="24931"/>
+			</level>
+			<level val="34">
+				<option id="24838"/>
+				<option id="24885"/>
+				<option id="24932"/>
+			</level>
+			<level val="35">
+				<option id="24839"/>
+				<option id="24886"/>
+				<option id="24933"/>
+			</level>
+			<level val="36">
+				<option id="24840"/>
+				<option id="24887"/>
+				<option id="24934"/>
+			</level>
+			<level val="37">
+				<option id="24841"/>
+				<option id="24888"/>
+				<option id="24935"/>
+			</level>
+			<level val="38">
+				<option id="24842"/>
+				<option id="24889"/>
+				<option id="24936"/>
+			</level>
+			<level val="39">
+				<option id="24843"/>
+				<option id="24890"/>
+				<option id="24937"/>
+			</level>
+			<level val="40">
+				<option id="24844"/>
+				<option id="24891"/>
+				<option id="24938"/>
+			</level>
+			<level val="41">
+				<option id="24845"/>
+				<option id="24892"/>
+				<option id="24939"/>
+			</level>
+			<level val="42">
+				<option id="24846"/>
+				<option id="24893"/>
+				<option id="24940"/>
+			</level>
+			<level val="43">
+				<option id="24847"/>
+				<option id="24894"/>
+				<option id="24941"/>
+			</level>
+			<level val="44">
+				<option id="24848"/>
+				<option id="24895"/>
+				<option id="24942"/>
+			</level>
+			<level val="45">
+				<option id="24849"/>
+				<option id="24896"/>
+				<option id="24943"/>
+			</level>
+			<level val="46">
+				<option id="24850"/>
+				<option id="24897"/>
+				<option id="24944"/>
+			</level>
+			<level val="47">
+				<option id="24851"/>
+				<option id="24898"/>
+				<option id="24945"/>
+			</level>
+			<level val="48">
+				<option id="24852"/>
+				<option id="24899"/>
+				<option id="24946"/>
+			</level>
+			<level val="49">
+				<option id="24853"/>
+				<option id="24900"/>
+				<option id="24947"/>
+			</level>
+			<level val="50">
+				<option id="24854"/>
+				<option id="24901"/>
+				<option id="24948"/>
+			</level>
+		</enchant_options>
+	</armor>
+	<armor id="15385" name="Weaver's Multi-colored Clothes" add_name="60-day limited period">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="0"/>
+		<set name="durability" value="86400"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="UNDERWEAR"/>
+		</equip>
+		<set name="ex_type" value="UNDERWEAR"/>
+		<enchant_options>
+			<level val="0">
+				<option id="24949"/>
+			</level>
+			<level val="1">
+				<option id="24805"/>
+			</level>
+			<level val="2">
+				<option id="24806"/>
+			</level>
+			<level val="3">
+				<option id="24807"/>
+			</level>
+			<level val="4">
+				<option id="24808"/>
+				<option id="24855"/>
+				<option id="24902"/>
+			</level>
+			<level val="5">
+				<option id="24809"/>
+				<option id="24856"/>
+				<option id="24903"/>
+			</level>
+			<level val="6">
+				<option id="24810"/>
+				<option id="24857"/>
+				<option id="24904"/>
+			</level>
+			<level val="7">
+				<option id="24811"/>
+				<option id="24858"/>
+				<option id="24905"/>
+			</level>
+			<level val="8">
+				<option id="24812"/>
+				<option id="24859"/>
+				<option id="24906"/>
+			</level>
+			<level val="9">
+				<option id="24813"/>
+				<option id="24860"/>
+				<option id="24907"/>
+			</level>
+			<level val="10">
+				<option id="24814"/>
+				<option id="24861"/>
+				<option id="24908"/>
+			</level>
+			<level val="11">
+				<option id="24815"/>
+				<option id="24862"/>
+				<option id="24909"/>
+			</level>
+			<level val="12">
+				<option id="24816"/>
+				<option id="24863"/>
+				<option id="24910"/>
+			</level>
+			<level val="13">
+				<option id="24817"/>
+				<option id="24864"/>
+				<option id="24911"/>
+			</level>
+			<level val="14">
+				<option id="24818"/>
+				<option id="24865"/>
+				<option id="24912"/>
+			</level>
+			<level val="15">
+				<option id="24819"/>
+				<option id="24866"/>
+				<option id="24913"/>
+			</level>
+			<level val="16">
+				<option id="24820"/>
+				<option id="24867"/>
+				<option id="24914"/>
+			</level>
+			<level val="17">
+				<option id="24821"/>
+				<option id="24868"/>
+				<option id="24915"/>
+			</level>
+			<level val="18">
+				<option id="24822"/>
+				<option id="24869"/>
+				<option id="24916"/>
+			</level>
+			<level val="19">
+				<option id="24823"/>
+				<option id="24870"/>
+				<option id="24917"/>
+			</level>
+			<level val="20">
+				<option id="24824"/>
+				<option id="24871"/>
+				<option id="24918"/>
+			</level>
+			<level val="21">
+				<option id="24825"/>
+				<option id="24872"/>
+				<option id="24919"/>
+			</level>
+			<level val="22">
+				<option id="24826"/>
+				<option id="24873"/>
+				<option id="24920"/>
+			</level>
+			<level val="23">
+				<option id="24827"/>
+				<option id="24874"/>
+				<option id="24921"/>
+			</level>
+			<level val="24">
+				<option id="24828"/>
+				<option id="24875"/>
+				<option id="24922"/>
+			</level>
+			<level val="25">
+				<option id="24829"/>
+				<option id="24876"/>
+				<option id="24923"/>
+			</level>
+			<level val="26">
+				<option id="24830"/>
+				<option id="24877"/>
+				<option id="24924"/>
+			</level>
+			<level val="27">
+				<option id="24831"/>
+				<option id="24878"/>
+				<option id="24925"/>
+			</level>
+			<level val="28">
+				<option id="24832"/>
+				<option id="24879"/>
+				<option id="24926"/>
+			</level>
+			<level val="29">
+				<option id="24833"/>
+				<option id="24880"/>
+				<option id="24927"/>
+			</level>
+			<level val="30">
+				<option id="24834"/>
+				<option id="24881"/>
+				<option id="24928"/>
+			</level>
+			<level val="31">
+				<option id="24835"/>
+				<option id="24882"/>
+				<option id="24929"/>
+			</level>
+			<level val="32">
+				<option id="24836"/>
+				<option id="24883"/>
+				<option id="24930"/>
+			</level>
+			<level val="33">
+				<option id="24837"/>
+				<option id="24884"/>
+				<option id="24931"/>
+			</level>
+			<level val="34">
+				<option id="24838"/>
+				<option id="24885"/>
+				<option id="24932"/>
+			</level>
+			<level val="35">
+				<option id="24839"/>
+				<option id="24886"/>
+				<option id="24933"/>
+			</level>
+			<level val="36">
+				<option id="24840"/>
+				<option id="24887"/>
+				<option id="24934"/>
+			</level>
+			<level val="37">
+				<option id="24841"/>
+				<option id="24888"/>
+				<option id="24935"/>
+			</level>
+			<level val="38">
+				<option id="24842"/>
+				<option id="24889"/>
+				<option id="24936"/>
+			</level>
+			<level val="39">
+				<option id="24843"/>
+				<option id="24890"/>
+				<option id="24937"/>
+			</level>
+			<level val="40">
+				<option id="24844"/>
+				<option id="24891"/>
+				<option id="24938"/>
+			</level>
+			<level val="41">
+				<option id="24845"/>
+				<option id="24892"/>
+				<option id="24939"/>
+			</level>
+			<level val="42">
+				<option id="24846"/>
+				<option id="24893"/>
+				<option id="24940"/>
+			</level>
+			<level val="43">
+				<option id="24847"/>
+				<option id="24894"/>
+				<option id="24941"/>
+			</level>
+			<level val="44">
+				<option id="24848"/>
+				<option id="24895"/>
+				<option id="24942"/>
+			</level>
+			<level val="45">
+				<option id="24849"/>
+				<option id="24896"/>
+				<option id="24943"/>
+			</level>
+			<level val="46">
+				<option id="24850"/>
+				<option id="24897"/>
+				<option id="24944"/>
+			</level>
+			<level val="47">
+				<option id="24851"/>
+				<option id="24898"/>
+				<option id="24945"/>
+			</level>
+			<level val="48">
+				<option id="24852"/>
+				<option id="24899"/>
+				<option id="24946"/>
+			</level>
+			<level val="49">
+				<option id="24853"/>
+				<option id="24900"/>
+				<option id="24947"/>
+			</level>
+			<level val="50">
+				<option id="24854"/>
+				<option id="24901"/>
+				<option id="24948"/>
+			</level>
+		</enchant_options>
+	</armor>
+	<armor id="15386" name="Weaver's Multi-colored Clothes" add_name="90-day limited period">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="0"/>
+		<set name="durability" value="129600"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="UNDERWEAR"/>
+		</equip>
+		<set name="ex_type" value="UNDERWEAR"/>
+		<enchant_options>
+			<level val="0">
+				<option id="24949"/>
+			</level>
+			<level val="1">
+				<option id="24805"/>
+			</level>
+			<level val="2">
+				<option id="24806"/>
+			</level>
+			<level val="3">
+				<option id="24807"/>
+			</level>
+			<level val="4">
+				<option id="24808"/>
+				<option id="24855"/>
+				<option id="24902"/>
+			</level>
+			<level val="5">
+				<option id="24809"/>
+				<option id="24856"/>
+				<option id="24903"/>
+			</level>
+			<level val="6">
+				<option id="24810"/>
+				<option id="24857"/>
+				<option id="24904"/>
+			</level>
+			<level val="7">
+				<option id="24811"/>
+				<option id="24858"/>
+				<option id="24905"/>
+			</level>
+			<level val="8">
+				<option id="24812"/>
+				<option id="24859"/>
+				<option id="24906"/>
+			</level>
+			<level val="9">
+				<option id="24813"/>
+				<option id="24860"/>
+				<option id="24907"/>
+			</level>
+			<level val="10">
+				<option id="24814"/>
+				<option id="24861"/>
+				<option id="24908"/>
+			</level>
+			<level val="11">
+				<option id="24815"/>
+				<option id="24862"/>
+				<option id="24909"/>
+			</level>
+			<level val="12">
+				<option id="24816"/>
+				<option id="24863"/>
+				<option id="24910"/>
+			</level>
+			<level val="13">
+				<option id="24817"/>
+				<option id="24864"/>
+				<option id="24911"/>
+			</level>
+			<level val="14">
+				<option id="24818"/>
+				<option id="24865"/>
+				<option id="24912"/>
+			</level>
+			<level val="15">
+				<option id="24819"/>
+				<option id="24866"/>
+				<option id="24913"/>
+			</level>
+			<level val="16">
+				<option id="24820"/>
+				<option id="24867"/>
+				<option id="24914"/>
+			</level>
+			<level val="17">
+				<option id="24821"/>
+				<option id="24868"/>
+				<option id="24915"/>
+			</level>
+			<level val="18">
+				<option id="24822"/>
+				<option id="24869"/>
+				<option id="24916"/>
+			</level>
+			<level val="19">
+				<option id="24823"/>
+				<option id="24870"/>
+				<option id="24917"/>
+			</level>
+			<level val="20">
+				<option id="24824"/>
+				<option id="24871"/>
+				<option id="24918"/>
+			</level>
+			<level val="21">
+				<option id="24825"/>
+				<option id="24872"/>
+				<option id="24919"/>
+			</level>
+			<level val="22">
+				<option id="24826"/>
+				<option id="24873"/>
+				<option id="24920"/>
+			</level>
+			<level val="23">
+				<option id="24827"/>
+				<option id="24874"/>
+				<option id="24921"/>
+			</level>
+			<level val="24">
+				<option id="24828"/>
+				<option id="24875"/>
+				<option id="24922"/>
+			</level>
+			<level val="25">
+				<option id="24829"/>
+				<option id="24876"/>
+				<option id="24923"/>
+			</level>
+			<level val="26">
+				<option id="24830"/>
+				<option id="24877"/>
+				<option id="24924"/>
+			</level>
+			<level val="27">
+				<option id="24831"/>
+				<option id="24878"/>
+				<option id="24925"/>
+			</level>
+			<level val="28">
+				<option id="24832"/>
+				<option id="24879"/>
+				<option id="24926"/>
+			</level>
+			<level val="29">
+				<option id="24833"/>
+				<option id="24880"/>
+				<option id="24927"/>
+			</level>
+			<level val="30">
+				<option id="24834"/>
+				<option id="24881"/>
+				<option id="24928"/>
+			</level>
+			<level val="31">
+				<option id="24835"/>
+				<option id="24882"/>
+				<option id="24929"/>
+			</level>
+			<level val="32">
+				<option id="24836"/>
+				<option id="24883"/>
+				<option id="24930"/>
+			</level>
+			<level val="33">
+				<option id="24837"/>
+				<option id="24884"/>
+				<option id="24931"/>
+			</level>
+			<level val="34">
+				<option id="24838"/>
+				<option id="24885"/>
+				<option id="24932"/>
+			</level>
+			<level val="35">
+				<option id="24839"/>
+				<option id="24886"/>
+				<option id="24933"/>
+			</level>
+			<level val="36">
+				<option id="24840"/>
+				<option id="24887"/>
+				<option id="24934"/>
+			</level>
+			<level val="37">
+				<option id="24841"/>
+				<option id="24888"/>
+				<option id="24935"/>
+			</level>
+			<level val="38">
+				<option id="24842"/>
+				<option id="24889"/>
+				<option id="24936"/>
+			</level>
+			<level val="39">
+				<option id="24843"/>
+				<option id="24890"/>
+				<option id="24937"/>
+			</level>
+			<level val="40">
+				<option id="24844"/>
+				<option id="24891"/>
+				<option id="24938"/>
+			</level>
+			<level val="41">
+				<option id="24845"/>
+				<option id="24892"/>
+				<option id="24939"/>
+			</level>
+			<level val="42">
+				<option id="24846"/>
+				<option id="24893"/>
+				<option id="24940"/>
+			</level>
+			<level val="43">
+				<option id="24847"/>
+				<option id="24894"/>
+				<option id="24941"/>
+			</level>
+			<level val="44">
+				<option id="24848"/>
+				<option id="24895"/>
+				<option id="24942"/>
+			</level>
+			<level val="45">
+				<option id="24849"/>
+				<option id="24896"/>
+				<option id="24943"/>
+			</level>
+			<level val="46">
+				<option id="24850"/>
+				<option id="24897"/>
+				<option id="24944"/>
+			</level>
+			<level val="47">
+				<option id="24851"/>
+				<option id="24898"/>
+				<option id="24945"/>
+			</level>
+			<level val="48">
+				<option id="24852"/>
+				<option id="24899"/>
+				<option id="24946"/>
+			</level>
+			<level val="49">
+				<option id="24853"/>
+				<option id="24900"/>
+				<option id="24947"/>
+			</level>
+			<level val="50">
+				<option id="24854"/>
+				<option id="24901"/>
+				<option id="24948"/>
+			</level>
+		</enchant_options>
+	</armor>
+	<armor id="15387" name="Weaver's Multi-colored Clothes" add_name="Permanent Use">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="0"/>
+		<equip>
+			<slot id="UNDERWEAR"/>
+		</equip>
+		<set name="ex_type" value="UNDERWEAR"/>
+		<enchant_options>
+			<level val="0">
+				<option id="24949"/>
+			</level>
+			<level val="1">
+				<option id="24805"/>
+			</level>
+			<level val="2">
+				<option id="24806"/>
+			</level>
+			<level val="3">
+				<option id="24807"/>
+			</level>
+			<level val="4">
+				<option id="24808"/>
+				<option id="24855"/>
+				<option id="24902"/>
+			</level>
+			<level val="5">
+				<option id="24809"/>
+				<option id="24856"/>
+				<option id="24903"/>
+			</level>
+			<level val="6">
+				<option id="24810"/>
+				<option id="24857"/>
+				<option id="24904"/>
+			</level>
+			<level val="7">
+				<option id="24811"/>
+				<option id="24858"/>
+				<option id="24905"/>
+			</level>
+			<level val="8">
+				<option id="24812"/>
+				<option id="24859"/>
+				<option id="24906"/>
+			</level>
+			<level val="9">
+				<option id="24813"/>
+				<option id="24860"/>
+				<option id="24907"/>
+			</level>
+			<level val="10">
+				<option id="24814"/>
+				<option id="24861"/>
+				<option id="24908"/>
+			</level>
+			<level val="11">
+				<option id="24815"/>
+				<option id="24862"/>
+				<option id="24909"/>
+			</level>
+			<level val="12">
+				<option id="24816"/>
+				<option id="24863"/>
+				<option id="24910"/>
+			</level>
+			<level val="13">
+				<option id="24817"/>
+				<option id="24864"/>
+				<option id="24911"/>
+			</level>
+			<level val="14">
+				<option id="24818"/>
+				<option id="24865"/>
+				<option id="24912"/>
+			</level>
+			<level val="15">
+				<option id="24819"/>
+				<option id="24866"/>
+				<option id="24913"/>
+			</level>
+			<level val="16">
+				<option id="24820"/>
+				<option id="24867"/>
+				<option id="24914"/>
+			</level>
+			<level val="17">
+				<option id="24821"/>
+				<option id="24868"/>
+				<option id="24915"/>
+			</level>
+			<level val="18">
+				<option id="24822"/>
+				<option id="24869"/>
+				<option id="24916"/>
+			</level>
+			<level val="19">
+				<option id="24823"/>
+				<option id="24870"/>
+				<option id="24917"/>
+			</level>
+			<level val="20">
+				<option id="24824"/>
+				<option id="24871"/>
+				<option id="24918"/>
+			</level>
+			<level val="21">
+				<option id="24825"/>
+				<option id="24872"/>
+				<option id="24919"/>
+			</level>
+			<level val="22">
+				<option id="24826"/>
+				<option id="24873"/>
+				<option id="24920"/>
+			</level>
+			<level val="23">
+				<option id="24827"/>
+				<option id="24874"/>
+				<option id="24921"/>
+			</level>
+			<level val="24">
+				<option id="24828"/>
+				<option id="24875"/>
+				<option id="24922"/>
+			</level>
+			<level val="25">
+				<option id="24829"/>
+				<option id="24876"/>
+				<option id="24923"/>
+			</level>
+			<level val="26">
+				<option id="24830"/>
+				<option id="24877"/>
+				<option id="24924"/>
+			</level>
+			<level val="27">
+				<option id="24831"/>
+				<option id="24878"/>
+				<option id="24925"/>
+			</level>
+			<level val="28">
+				<option id="24832"/>
+				<option id="24879"/>
+				<option id="24926"/>
+			</level>
+			<level val="29">
+				<option id="24833"/>
+				<option id="24880"/>
+				<option id="24927"/>
+			</level>
+			<level val="30">
+				<option id="24834"/>
+				<option id="24881"/>
+				<option id="24928"/>
+			</level>
+			<level val="31">
+				<option id="24835"/>
+				<option id="24882"/>
+				<option id="24929"/>
+			</level>
+			<level val="32">
+				<option id="24836"/>
+				<option id="24883"/>
+				<option id="24930"/>
+			</level>
+			<level val="33">
+				<option id="24837"/>
+				<option id="24884"/>
+				<option id="24931"/>
+			</level>
+			<level val="34">
+				<option id="24838"/>
+				<option id="24885"/>
+				<option id="24932"/>
+			</level>
+			<level val="35">
+				<option id="24839"/>
+				<option id="24886"/>
+				<option id="24933"/>
+			</level>
+			<level val="36">
+				<option id="24840"/>
+				<option id="24887"/>
+				<option id="24934"/>
+			</level>
+			<level val="37">
+				<option id="24841"/>
+				<option id="24888"/>
+				<option id="24935"/>
+			</level>
+			<level val="38">
+				<option id="24842"/>
+				<option id="24889"/>
+				<option id="24936"/>
+			</level>
+			<level val="39">
+				<option id="24843"/>
+				<option id="24890"/>
+				<option id="24937"/>
+			</level>
+			<level val="40">
+				<option id="24844"/>
+				<option id="24891"/>
+				<option id="24938"/>
+			</level>
+			<level val="41">
+				<option id="24845"/>
+				<option id="24892"/>
+				<option id="24939"/>
+			</level>
+			<level val="42">
+				<option id="24846"/>
+				<option id="24893"/>
+				<option id="24940"/>
+			</level>
+			<level val="43">
+				<option id="24847"/>
+				<option id="24894"/>
+				<option id="24941"/>
+			</level>
+			<level val="44">
+				<option id="24848"/>
+				<option id="24895"/>
+				<option id="24942"/>
+			</level>
+			<level val="45">
+				<option id="24849"/>
+				<option id="24896"/>
+				<option id="24943"/>
+			</level>
+			<level val="46">
+				<option id="24850"/>
+				<option id="24897"/>
+				<option id="24944"/>
+			</level>
+			<level val="47">
+				<option id="24851"/>
+				<option id="24898"/>
+				<option id="24945"/>
+			</level>
+			<level val="48">
+				<option id="24852"/>
+				<option id="24899"/>
+				<option id="24946"/>
+			</level>
+			<level val="49">
+				<option id="24853"/>
+				<option id="24900"/>
+				<option id="24947"/>
+			</level>
+			<level val="50">
+				<option id="24854"/>
+				<option id="24901"/>
+				<option id="24948"/>
+			</level>
+		</enchant_options>
+	</armor>
+	<armor id="15388" name="Weaver's Multi-colored Clothes (Event)" add_name="7-day limited period">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="0"/>
+		<set name="durability" value="10080"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="UNDERWEAR"/>
+		</equip>
+		<set name="ex_type" value="UNDERWEAR"/>
+		<enchant_options>
+			<level val="0">
+				<option id="24949"/>
+			</level>
+			<level val="1">
+				<option id="24805"/>
+			</level>
+			<level val="2">
+				<option id="24806"/>
+			</level>
+			<level val="3">
+				<option id="24807"/>
+			</level>
+			<level val="4">
+				<option id="24808"/>
+				<option id="24855"/>
+				<option id="24902"/>
+			</level>
+			<level val="5">
+				<option id="24809"/>
+				<option id="24856"/>
+				<option id="24903"/>
+			</level>
+			<level val="6">
+				<option id="24810"/>
+				<option id="24857"/>
+				<option id="24904"/>
+			</level>
+			<level val="7">
+				<option id="24811"/>
+				<option id="24858"/>
+				<option id="24905"/>
+			</level>
+			<level val="8">
+				<option id="24812"/>
+				<option id="24859"/>
+				<option id="24906"/>
+			</level>
+			<level val="9">
+				<option id="24813"/>
+				<option id="24860"/>
+				<option id="24907"/>
+			</level>
+			<level val="10">
+				<option id="24814"/>
+				<option id="24861"/>
+				<option id="24908"/>
+			</level>
+			<level val="11">
+				<option id="24815"/>
+				<option id="24862"/>
+				<option id="24909"/>
+			</level>
+			<level val="12">
+				<option id="24816"/>
+				<option id="24863"/>
+				<option id="24910"/>
+			</level>
+			<level val="13">
+				<option id="24817"/>
+				<option id="24864"/>
+				<option id="24911"/>
+			</level>
+			<level val="14">
+				<option id="24818"/>
+				<option id="24865"/>
+				<option id="24912"/>
+			</level>
+			<level val="15">
+				<option id="24819"/>
+				<option id="24866"/>
+				<option id="24913"/>
+			</level>
+			<level val="16">
+				<option id="24820"/>
+				<option id="24867"/>
+				<option id="24914"/>
+			</level>
+			<level val="17">
+				<option id="24821"/>
+				<option id="24868"/>
+				<option id="24915"/>
+			</level>
+			<level val="18">
+				<option id="24822"/>
+				<option id="24869"/>
+				<option id="24916"/>
+			</level>
+			<level val="19">
+				<option id="24823"/>
+				<option id="24870"/>
+				<option id="24917"/>
+			</level>
+			<level val="20">
+				<option id="24824"/>
+				<option id="24871"/>
+				<option id="24918"/>
+			</level>
+			<level val="21">
+				<option id="24825"/>
+				<option id="24872"/>
+				<option id="24919"/>
+			</level>
+			<level val="22">
+				<option id="24826"/>
+				<option id="24873"/>
+				<option id="24920"/>
+			</level>
+			<level val="23">
+				<option id="24827"/>
+				<option id="24874"/>
+				<option id="24921"/>
+			</level>
+			<level val="24">
+				<option id="24828"/>
+				<option id="24875"/>
+				<option id="24922"/>
+			</level>
+			<level val="25">
+				<option id="24829"/>
+				<option id="24876"/>
+				<option id="24923"/>
+			</level>
+			<level val="26">
+				<option id="24830"/>
+				<option id="24877"/>
+				<option id="24924"/>
+			</level>
+			<level val="27">
+				<option id="24831"/>
+				<option id="24878"/>
+				<option id="24925"/>
+			</level>
+			<level val="28">
+				<option id="24832"/>
+				<option id="24879"/>
+				<option id="24926"/>
+			</level>
+			<level val="29">
+				<option id="24833"/>
+				<option id="24880"/>
+				<option id="24927"/>
+			</level>
+			<level val="30">
+				<option id="24834"/>
+				<option id="24881"/>
+				<option id="24928"/>
+			</level>
+			<level val="31">
+				<option id="24835"/>
+				<option id="24882"/>
+				<option id="24929"/>
+			</level>
+			<level val="32">
+				<option id="24836"/>
+				<option id="24883"/>
+				<option id="24930"/>
+			</level>
+			<level val="33">
+				<option id="24837"/>
+				<option id="24884"/>
+				<option id="24931"/>
+			</level>
+			<level val="34">
+				<option id="24838"/>
+				<option id="24885"/>
+				<option id="24932"/>
+			</level>
+			<level val="35">
+				<option id="24839"/>
+				<option id="24886"/>
+				<option id="24933"/>
+			</level>
+			<level val="36">
+				<option id="24840"/>
+				<option id="24887"/>
+				<option id="24934"/>
+			</level>
+			<level val="37">
+				<option id="24841"/>
+				<option id="24888"/>
+				<option id="24935"/>
+			</level>
+			<level val="38">
+				<option id="24842"/>
+				<option id="24889"/>
+				<option id="24936"/>
+			</level>
+			<level val="39">
+				<option id="24843"/>
+				<option id="24890"/>
+				<option id="24937"/>
+			</level>
+			<level val="40">
+				<option id="24844"/>
+				<option id="24891"/>
+				<option id="24938"/>
+			</level>
+			<level val="41">
+				<option id="24845"/>
+				<option id="24892"/>
+				<option id="24939"/>
+			</level>
+			<level val="42">
+				<option id="24846"/>
+				<option id="24893"/>
+				<option id="24940"/>
+			</level>
+			<level val="43">
+				<option id="24847"/>
+				<option id="24894"/>
+				<option id="24941"/>
+			</level>
+			<level val="44">
+				<option id="24848"/>
+				<option id="24895"/>
+				<option id="24942"/>
+			</level>
+			<level val="45">
+				<option id="24849"/>
+				<option id="24896"/>
+				<option id="24943"/>
+			</level>
+			<level val="46">
+				<option id="24850"/>
+				<option id="24897"/>
+				<option id="24944"/>
+			</level>
+			<level val="47">
+				<option id="24851"/>
+				<option id="24898"/>
+				<option id="24945"/>
+			</level>
+			<level val="48">
+				<option id="24852"/>
+				<option id="24899"/>
+				<option id="24946"/>
+			</level>
+			<level val="49">
+				<option id="24853"/>
+				<option id="24900"/>
+				<option id="24947"/>
+			</level>
+			<level val="50">
+				<option id="24854"/>
+				<option id="24901"/>
+				<option id="24948"/>
+			</level>
+		</enchant_options>
+	</armor>
+	<armor id="15389" name="Weaver's Multi-colored Clothes (Event)" add_name="30-day limited period">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="0"/>
+		<set name="durability" value="43200"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="UNDERWEAR"/>
+		</equip>
+		<set name="ex_type" value="UNDERWEAR"/>
+		<enchant_options>
+			<level val="0">
+				<option id="24949"/>
+			</level>
+			<level val="1">
+				<option id="24805"/>
+			</level>
+			<level val="2">
+				<option id="24806"/>
+			</level>
+			<level val="3">
+				<option id="24807"/>
+			</level>
+			<level val="4">
+				<option id="24808"/>
+				<option id="24855"/>
+				<option id="24902"/>
+			</level>
+			<level val="5">
+				<option id="24809"/>
+				<option id="24856"/>
+				<option id="24903"/>
+			</level>
+			<level val="6">
+				<option id="24810"/>
+				<option id="24857"/>
+				<option id="24904"/>
+			</level>
+			<level val="7">
+				<option id="24811"/>
+				<option id="24858"/>
+				<option id="24905"/>
+			</level>
+			<level val="8">
+				<option id="24812"/>
+				<option id="24859"/>
+				<option id="24906"/>
+			</level>
+			<level val="9">
+				<option id="24813"/>
+				<option id="24860"/>
+				<option id="24907"/>
+			</level>
+			<level val="10">
+				<option id="24814"/>
+				<option id="24861"/>
+				<option id="24908"/>
+			</level>
+			<level val="11">
+				<option id="24815"/>
+				<option id="24862"/>
+				<option id="24909"/>
+			</level>
+			<level val="12">
+				<option id="24816"/>
+				<option id="24863"/>
+				<option id="24910"/>
+			</level>
+			<level val="13">
+				<option id="24817"/>
+				<option id="24864"/>
+				<option id="24911"/>
+			</level>
+			<level val="14">
+				<option id="24818"/>
+				<option id="24865"/>
+				<option id="24912"/>
+			</level>
+			<level val="15">
+				<option id="24819"/>
+				<option id="24866"/>
+				<option id="24913"/>
+			</level>
+			<level val="16">
+				<option id="24820"/>
+				<option id="24867"/>
+				<option id="24914"/>
+			</level>
+			<level val="17">
+				<option id="24821"/>
+				<option id="24868"/>
+				<option id="24915"/>
+			</level>
+			<level val="18">
+				<option id="24822"/>
+				<option id="24869"/>
+				<option id="24916"/>
+			</level>
+			<level val="19">
+				<option id="24823"/>
+				<option id="24870"/>
+				<option id="24917"/>
+			</level>
+			<level val="20">
+				<option id="24824"/>
+				<option id="24871"/>
+				<option id="24918"/>
+			</level>
+			<level val="21">
+				<option id="24825"/>
+				<option id="24872"/>
+				<option id="24919"/>
+			</level>
+			<level val="22">
+				<option id="24826"/>
+				<option id="24873"/>
+				<option id="24920"/>
+			</level>
+			<level val="23">
+				<option id="24827"/>
+				<option id="24874"/>
+				<option id="24921"/>
+			</level>
+			<level val="24">
+				<option id="24828"/>
+				<option id="24875"/>
+				<option id="24922"/>
+			</level>
+			<level val="25">
+				<option id="24829"/>
+				<option id="24876"/>
+				<option id="24923"/>
+			</level>
+			<level val="26">
+				<option id="24830"/>
+				<option id="24877"/>
+				<option id="24924"/>
+			</level>
+			<level val="27">
+				<option id="24831"/>
+				<option id="24878"/>
+				<option id="24925"/>
+			</level>
+			<level val="28">
+				<option id="24832"/>
+				<option id="24879"/>
+				<option id="24926"/>
+			</level>
+			<level val="29">
+				<option id="24833"/>
+				<option id="24880"/>
+				<option id="24927"/>
+			</level>
+			<level val="30">
+				<option id="24834"/>
+				<option id="24881"/>
+				<option id="24928"/>
+			</level>
+			<level val="31">
+				<option id="24835"/>
+				<option id="24882"/>
+				<option id="24929"/>
+			</level>
+			<level val="32">
+				<option id="24836"/>
+				<option id="24883"/>
+				<option id="24930"/>
+			</level>
+			<level val="33">
+				<option id="24837"/>
+				<option id="24884"/>
+				<option id="24931"/>
+			</level>
+			<level val="34">
+				<option id="24838"/>
+				<option id="24885"/>
+				<option id="24932"/>
+			</level>
+			<level val="35">
+				<option id="24839"/>
+				<option id="24886"/>
+				<option id="24933"/>
+			</level>
+			<level val="36">
+				<option id="24840"/>
+				<option id="24887"/>
+				<option id="24934"/>
+			</level>
+			<level val="37">
+				<option id="24841"/>
+				<option id="24888"/>
+				<option id="24935"/>
+			</level>
+			<level val="38">
+				<option id="24842"/>
+				<option id="24889"/>
+				<option id="24936"/>
+			</level>
+			<level val="39">
+				<option id="24843"/>
+				<option id="24890"/>
+				<option id="24937"/>
+			</level>
+			<level val="40">
+				<option id="24844"/>
+				<option id="24891"/>
+				<option id="24938"/>
+			</level>
+			<level val="41">
+				<option id="24845"/>
+				<option id="24892"/>
+				<option id="24939"/>
+			</level>
+			<level val="42">
+				<option id="24846"/>
+				<option id="24893"/>
+				<option id="24940"/>
+			</level>
+			<level val="43">
+				<option id="24847"/>
+				<option id="24894"/>
+				<option id="24941"/>
+			</level>
+			<level val="44">
+				<option id="24848"/>
+				<option id="24895"/>
+				<option id="24942"/>
+			</level>
+			<level val="45">
+				<option id="24849"/>
+				<option id="24896"/>
+				<option id="24943"/>
+			</level>
+			<level val="46">
+				<option id="24850"/>
+				<option id="24897"/>
+				<option id="24944"/>
+			</level>
+			<level val="47">
+				<option id="24851"/>
+				<option id="24898"/>
+				<option id="24945"/>
+			</level>
+			<level val="48">
+				<option id="24852"/>
+				<option id="24899"/>
+				<option id="24946"/>
+			</level>
+			<level val="49">
+				<option id="24853"/>
+				<option id="24900"/>
+				<option id="24947"/>
+			</level>
+			<level val="50">
+				<option id="24854"/>
+				<option id="24901"/>
+				<option id="24948"/>
+			</level>
+		</enchant_options>
+	</armor>
+	<armor id="15390" name="Weaver's Multi-colored Clothes (Event)" add_name="60-day limited period">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="0"/>
+		<set name="durability" value="86400"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="UNDERWEAR"/>
+		</equip>
+		<set name="ex_type" value="UNDERWEAR"/>
+		<enchant_options>
+			<level val="0">
+				<option id="24949"/>
+			</level>
+			<level val="1">
+				<option id="24805"/>
+			</level>
+			<level val="2">
+				<option id="24806"/>
+			</level>
+			<level val="3">
+				<option id="24807"/>
+			</level>
+			<level val="4">
+				<option id="24808"/>
+				<option id="24855"/>
+				<option id="24902"/>
+			</level>
+			<level val="5">
+				<option id="24809"/>
+				<option id="24856"/>
+				<option id="24903"/>
+			</level>
+			<level val="6">
+				<option id="24810"/>
+				<option id="24857"/>
+				<option id="24904"/>
+			</level>
+			<level val="7">
+				<option id="24811"/>
+				<option id="24858"/>
+				<option id="24905"/>
+			</level>
+			<level val="8">
+				<option id="24812"/>
+				<option id="24859"/>
+				<option id="24906"/>
+			</level>
+			<level val="9">
+				<option id="24813"/>
+				<option id="24860"/>
+				<option id="24907"/>
+			</level>
+			<level val="10">
+				<option id="24814"/>
+				<option id="24861"/>
+				<option id="24908"/>
+			</level>
+			<level val="11">
+				<option id="24815"/>
+				<option id="24862"/>
+				<option id="24909"/>
+			</level>
+			<level val="12">
+				<option id="24816"/>
+				<option id="24863"/>
+				<option id="24910"/>
+			</level>
+			<level val="13">
+				<option id="24817"/>
+				<option id="24864"/>
+				<option id="24911"/>
+			</level>
+			<level val="14">
+				<option id="24818"/>
+				<option id="24865"/>
+				<option id="24912"/>
+			</level>
+			<level val="15">
+				<option id="24819"/>
+				<option id="24866"/>
+				<option id="24913"/>
+			</level>
+			<level val="16">
+				<option id="24820"/>
+				<option id="24867"/>
+				<option id="24914"/>
+			</level>
+			<level val="17">
+				<option id="24821"/>
+				<option id="24868"/>
+				<option id="24915"/>
+			</level>
+			<level val="18">
+				<option id="24822"/>
+				<option id="24869"/>
+				<option id="24916"/>
+			</level>
+			<level val="19">
+				<option id="24823"/>
+				<option id="24870"/>
+				<option id="24917"/>
+			</level>
+			<level val="20">
+				<option id="24824"/>
+				<option id="24871"/>
+				<option id="24918"/>
+			</level>
+			<level val="21">
+				<option id="24825"/>
+				<option id="24872"/>
+				<option id="24919"/>
+			</level>
+			<level val="22">
+				<option id="24826"/>
+				<option id="24873"/>
+				<option id="24920"/>
+			</level>
+			<level val="23">
+				<option id="24827"/>
+				<option id="24874"/>
+				<option id="24921"/>
+			</level>
+			<level val="24">
+				<option id="24828"/>
+				<option id="24875"/>
+				<option id="24922"/>
+			</level>
+			<level val="25">
+				<option id="24829"/>
+				<option id="24876"/>
+				<option id="24923"/>
+			</level>
+			<level val="26">
+				<option id="24830"/>
+				<option id="24877"/>
+				<option id="24924"/>
+			</level>
+			<level val="27">
+				<option id="24831"/>
+				<option id="24878"/>
+				<option id="24925"/>
+			</level>
+			<level val="28">
+				<option id="24832"/>
+				<option id="24879"/>
+				<option id="24926"/>
+			</level>
+			<level val="29">
+				<option id="24833"/>
+				<option id="24880"/>
+				<option id="24927"/>
+			</level>
+			<level val="30">
+				<option id="24834"/>
+				<option id="24881"/>
+				<option id="24928"/>
+			</level>
+			<level val="31">
+				<option id="24835"/>
+				<option id="24882"/>
+				<option id="24929"/>
+			</level>
+			<level val="32">
+				<option id="24836"/>
+				<option id="24883"/>
+				<option id="24930"/>
+			</level>
+			<level val="33">
+				<option id="24837"/>
+				<option id="24884"/>
+				<option id="24931"/>
+			</level>
+			<level val="34">
+				<option id="24838"/>
+				<option id="24885"/>
+				<option id="24932"/>
+			</level>
+			<level val="35">
+				<option id="24839"/>
+				<option id="24886"/>
+				<option id="24933"/>
+			</level>
+			<level val="36">
+				<option id="24840"/>
+				<option id="24887"/>
+				<option id="24934"/>
+			</level>
+			<level val="37">
+				<option id="24841"/>
+				<option id="24888"/>
+				<option id="24935"/>
+			</level>
+			<level val="38">
+				<option id="24842"/>
+				<option id="24889"/>
+				<option id="24936"/>
+			</level>
+			<level val="39">
+				<option id="24843"/>
+				<option id="24890"/>
+				<option id="24937"/>
+			</level>
+			<level val="40">
+				<option id="24844"/>
+				<option id="24891"/>
+				<option id="24938"/>
+			</level>
+			<level val="41">
+				<option id="24845"/>
+				<option id="24892"/>
+				<option id="24939"/>
+			</level>
+			<level val="42">
+				<option id="24846"/>
+				<option id="24893"/>
+				<option id="24940"/>
+			</level>
+			<level val="43">
+				<option id="24847"/>
+				<option id="24894"/>
+				<option id="24941"/>
+			</level>
+			<level val="44">
+				<option id="24848"/>
+				<option id="24895"/>
+				<option id="24942"/>
+			</level>
+			<level val="45">
+				<option id="24849"/>
+				<option id="24896"/>
+				<option id="24943"/>
+			</level>
+			<level val="46">
+				<option id="24850"/>
+				<option id="24897"/>
+				<option id="24944"/>
+			</level>
+			<level val="47">
+				<option id="24851"/>
+				<option id="24898"/>
+				<option id="24945"/>
+			</level>
+			<level val="48">
+				<option id="24852"/>
+				<option id="24899"/>
+				<option id="24946"/>
+			</level>
+			<level val="49">
+				<option id="24853"/>
+				<option id="24900"/>
+				<option id="24947"/>
+			</level>
+			<level val="50">
+				<option id="24854"/>
+				<option id="24901"/>
+				<option id="24948"/>
+			</level>
+		</enchant_options>
+	</armor>
+	<armor id="15391" name="Weaver's Multi-colored Clothes (Event)" add_name="90-day limited period">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="0"/>
+		<set name="durability" value="129600"/>
+		<set name="temporal" value="true"/>
+		<enchant_options>
+			<level val="0">
+				<option id="24949"/>
+			</level>
+			<level val="1">
+				<option id="24805"/>
+			</level>
+			<level val="2">
+				<option id="24806"/>
+			</level>
+			<level val="3">
+				<option id="24807"/>
+			</level>
+			<level val="4">
+				<option id="24808"/>
+				<option id="24855"/>
+				<option id="24902"/>
+			</level>
+			<level val="5">
+				<option id="24809"/>
+				<option id="24856"/>
+				<option id="24903"/>
+			</level>
+			<level val="6">
+				<option id="24810"/>
+				<option id="24857"/>
+				<option id="24904"/>
+			</level>
+			<level val="7">
+				<option id="24811"/>
+				<option id="24858"/>
+				<option id="24905"/>
+			</level>
+			<level val="8">
+				<option id="24812"/>
+				<option id="24859"/>
+				<option id="24906"/>
+			</level>
+			<level val="9">
+				<option id="24813"/>
+				<option id="24860"/>
+				<option id="24907"/>
+			</level>
+			<level val="10">
+				<option id="24814"/>
+				<option id="24861"/>
+				<option id="24908"/>
+			</level>
+			<level val="11">
+				<option id="24815"/>
+				<option id="24862"/>
+				<option id="24909"/>
+			</level>
+			<level val="12">
+				<option id="24816"/>
+				<option id="24863"/>
+				<option id="24910"/>
+			</level>
+			<level val="13">
+				<option id="24817"/>
+				<option id="24864"/>
+				<option id="24911"/>
+			</level>
+			<level val="14">
+				<option id="24818"/>
+				<option id="24865"/>
+				<option id="24912"/>
+			</level>
+			<level val="15">
+				<option id="24819"/>
+				<option id="24866"/>
+				<option id="24913"/>
+			</level>
+			<level val="16">
+				<option id="24820"/>
+				<option id="24867"/>
+				<option id="24914"/>
+			</level>
+			<level val="17">
+				<option id="24821"/>
+				<option id="24868"/>
+				<option id="24915"/>
+			</level>
+			<level val="18">
+				<option id="24822"/>
+				<option id="24869"/>
+				<option id="24916"/>
+			</level>
+			<level val="19">
+				<option id="24823"/>
+				<option id="24870"/>
+				<option id="24917"/>
+			</level>
+			<level val="20">
+				<option id="24824"/>
+				<option id="24871"/>
+				<option id="24918"/>
+			</level>
+			<level val="21">
+				<option id="24825"/>
+				<option id="24872"/>
+				<option id="24919"/>
+			</level>
+			<level val="22">
+				<option id="24826"/>
+				<option id="24873"/>
+				<option id="24920"/>
+			</level>
+			<level val="23">
+				<option id="24827"/>
+				<option id="24874"/>
+				<option id="24921"/>
+			</level>
+			<level val="24">
+				<option id="24828"/>
+				<option id="24875"/>
+				<option id="24922"/>
+			</level>
+			<level val="25">
+				<option id="24829"/>
+				<option id="24876"/>
+				<option id="24923"/>
+			</level>
+			<level val="26">
+				<option id="24830"/>
+				<option id="24877"/>
+				<option id="24924"/>
+			</level>
+			<level val="27">
+				<option id="24831"/>
+				<option id="24878"/>
+				<option id="24925"/>
+			</level>
+			<level val="28">
+				<option id="24832"/>
+				<option id="24879"/>
+				<option id="24926"/>
+			</level>
+			<level val="29">
+				<option id="24833"/>
+				<option id="24880"/>
+				<option id="24927"/>
+			</level>
+			<level val="30">
+				<option id="24834"/>
+				<option id="24881"/>
+				<option id="24928"/>
+			</level>
+			<level val="31">
+				<option id="24835"/>
+				<option id="24882"/>
+				<option id="24929"/>
+			</level>
+			<level val="32">
+				<option id="24836"/>
+				<option id="24883"/>
+				<option id="24930"/>
+			</level>
+			<level val="33">
+				<option id="24837"/>
+				<option id="24884"/>
+				<option id="24931"/>
+			</level>
+			<level val="34">
+				<option id="24838"/>
+				<option id="24885"/>
+				<option id="24932"/>
+			</level>
+			<level val="35">
+				<option id="24839"/>
+				<option id="24886"/>
+				<option id="24933"/>
+			</level>
+			<level val="36">
+				<option id="24840"/>
+				<option id="24887"/>
+				<option id="24934"/>
+			</level>
+			<level val="37">
+				<option id="24841"/>
+				<option id="24888"/>
+				<option id="24935"/>
+			</level>
+			<level val="38">
+				<option id="24842"/>
+				<option id="24889"/>
+				<option id="24936"/>
+			</level>
+			<level val="39">
+				<option id="24843"/>
+				<option id="24890"/>
+				<option id="24937"/>
+			</level>
+			<level val="40">
+				<option id="24844"/>
+				<option id="24891"/>
+				<option id="24938"/>
+			</level>
+			<level val="41">
+				<option id="24845"/>
+				<option id="24892"/>
+				<option id="24939"/>
+			</level>
+			<level val="42">
+				<option id="24846"/>
+				<option id="24893"/>
+				<option id="24940"/>
+			</level>
+			<level val="43">
+				<option id="24847"/>
+				<option id="24894"/>
+				<option id="24941"/>
+			</level>
+			<level val="44">
+				<option id="24848"/>
+				<option id="24895"/>
+				<option id="24942"/>
+			</level>
+			<level val="45">
+				<option id="24849"/>
+				<option id="24896"/>
+				<option id="24943"/>
+			</level>
+			<level val="46">
+				<option id="24850"/>
+				<option id="24897"/>
+				<option id="24944"/>
+			</level>
+			<level val="47">
+				<option id="24851"/>
+				<option id="24898"/>
+				<option id="24945"/>
+			</level>
+			<level val="48">
+				<option id="24852"/>
+				<option id="24899"/>
+				<option id="24946"/>
+			</level>
+			<level val="49">
+				<option id="24853"/>
+				<option id="24900"/>
+				<option id="24947"/>
+			</level>
+			<level val="50">
+				<option id="24854"/>
+				<option id="24901"/>
+				<option id="24948"/>
+			</level>
+		</enchant_options>
+		<equip>
+			<slot id="UNDERWEAR"/>
+		</equip>
+		<set name="ex_type" value="UNDERWEAR"/>
+	</armor>
+	<armor id="15392" name="Weaver's Multi-colored Clothes (Event)" add_name="Permanent Use">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="0"/>
+		<enchant_options>
+			<level val="0">
+				<option id="24949"/>
+			</level>
+			<level val="1">
+				<option id="24805"/>
+			</level>
+			<level val="2">
+				<option id="24806"/>
+			</level>
+			<level val="3">
+				<option id="24807"/>
+			</level>
+			<level val="4">
+				<option id="24808"/>
+				<option id="24855"/>
+				<option id="24902"/>
+			</level>
+			<level val="5">
+				<option id="24809"/>
+				<option id="24856"/>
+				<option id="24903"/>
+			</level>
+			<level val="6">
+				<option id="24810"/>
+				<option id="24857"/>
+				<option id="24904"/>
+			</level>
+			<level val="7">
+				<option id="24811"/>
+				<option id="24858"/>
+				<option id="24905"/>
+			</level>
+			<level val="8">
+				<option id="24812"/>
+				<option id="24859"/>
+				<option id="24906"/>
+			</level>
+			<level val="9">
+				<option id="24813"/>
+				<option id="24860"/>
+				<option id="24907"/>
+			</level>
+			<level val="10">
+				<option id="24814"/>
+				<option id="24861"/>
+				<option id="24908"/>
+			</level>
+			<level val="11">
+				<option id="24815"/>
+				<option id="24862"/>
+				<option id="24909"/>
+			</level>
+			<level val="12">
+				<option id="24816"/>
+				<option id="24863"/>
+				<option id="24910"/>
+			</level>
+			<level val="13">
+				<option id="24817"/>
+				<option id="24864"/>
+				<option id="24911"/>
+			</level>
+			<level val="14">
+				<option id="24818"/>
+				<option id="24865"/>
+				<option id="24912"/>
+			</level>
+			<level val="15">
+				<option id="24819"/>
+				<option id="24866"/>
+				<option id="24913"/>
+			</level>
+			<level val="16">
+				<option id="24820"/>
+				<option id="24867"/>
+				<option id="24914"/>
+			</level>
+			<level val="17">
+				<option id="24821"/>
+				<option id="24868"/>
+				<option id="24915"/>
+			</level>
+			<level val="18">
+				<option id="24822"/>
+				<option id="24869"/>
+				<option id="24916"/>
+			</level>
+			<level val="19">
+				<option id="24823"/>
+				<option id="24870"/>
+				<option id="24917"/>
+			</level>
+			<level val="20">
+				<option id="24824"/>
+				<option id="24871"/>
+				<option id="24918"/>
+			</level>
+			<level val="21">
+				<option id="24825"/>
+				<option id="24872"/>
+				<option id="24919"/>
+			</level>
+			<level val="22">
+				<option id="24826"/>
+				<option id="24873"/>
+				<option id="24920"/>
+			</level>
+			<level val="23">
+				<option id="24827"/>
+				<option id="24874"/>
+				<option id="24921"/>
+			</level>
+			<level val="24">
+				<option id="24828"/>
+				<option id="24875"/>
+				<option id="24922"/>
+			</level>
+			<level val="25">
+				<option id="24829"/>
+				<option id="24876"/>
+				<option id="24923"/>
+			</level>
+			<level val="26">
+				<option id="24830"/>
+				<option id="24877"/>
+				<option id="24924"/>
+			</level>
+			<level val="27">
+				<option id="24831"/>
+				<option id="24878"/>
+				<option id="24925"/>
+			</level>
+			<level val="28">
+				<option id="24832"/>
+				<option id="24879"/>
+				<option id="24926"/>
+			</level>
+			<level val="29">
+				<option id="24833"/>
+				<option id="24880"/>
+				<option id="24927"/>
+			</level>
+			<level val="30">
+				<option id="24834"/>
+				<option id="24881"/>
+				<option id="24928"/>
+			</level>
+			<level val="31">
+				<option id="24835"/>
+				<option id="24882"/>
+				<option id="24929"/>
+			</level>
+			<level val="32">
+				<option id="24836"/>
+				<option id="24883"/>
+				<option id="24930"/>
+			</level>
+			<level val="33">
+				<option id="24837"/>
+				<option id="24884"/>
+				<option id="24931"/>
+			</level>
+			<level val="34">
+				<option id="24838"/>
+				<option id="24885"/>
+				<option id="24932"/>
+			</level>
+			<level val="35">
+				<option id="24839"/>
+				<option id="24886"/>
+				<option id="24933"/>
+			</level>
+			<level val="36">
+				<option id="24840"/>
+				<option id="24887"/>
+				<option id="24934"/>
+			</level>
+			<level val="37">
+				<option id="24841"/>
+				<option id="24888"/>
+				<option id="24935"/>
+			</level>
+			<level val="38">
+				<option id="24842"/>
+				<option id="24889"/>
+				<option id="24936"/>
+			</level>
+			<level val="39">
+				<option id="24843"/>
+				<option id="24890"/>
+				<option id="24937"/>
+			</level>
+			<level val="40">
+				<option id="24844"/>
+				<option id="24891"/>
+				<option id="24938"/>
+			</level>
+			<level val="41">
+				<option id="24845"/>
+				<option id="24892"/>
+				<option id="24939"/>
+			</level>
+			<level val="42">
+				<option id="24846"/>
+				<option id="24893"/>
+				<option id="24940"/>
+			</level>
+			<level val="43">
+				<option id="24847"/>
+				<option id="24894"/>
+				<option id="24941"/>
+			</level>
+			<level val="44">
+				<option id="24848"/>
+				<option id="24895"/>
+				<option id="24942"/>
+			</level>
+			<level val="45">
+				<option id="24849"/>
+				<option id="24896"/>
+				<option id="24943"/>
+			</level>
+			<level val="46">
+				<option id="24850"/>
+				<option id="24897"/>
+				<option id="24944"/>
+			</level>
+			<level val="47">
+				<option id="24851"/>
+				<option id="24898"/>
+				<option id="24945"/>
+			</level>
+			<level val="48">
+				<option id="24852"/>
+				<option id="24899"/>
+				<option id="24946"/>
+			</level>
+			<level val="49">
+				<option id="24853"/>
+				<option id="24900"/>
+				<option id="24947"/>
+			</level>
+			<level val="50">
+				<option id="24854"/>
+				<option id="24901"/>
+				<option id="24948"/>
+			</level>
+		</enchant_options>
+		<equip>
+			<slot id="UNDERWEAR"/>
+		</equip>
+		<set name="ex_type" value="UNDERWEAR"/>
+	</armor>
+	<armor id="15393" name="Vitality Belt" add_name="7-day limited period">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_energy_belt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="0"/>
+		<set name="durability" value="10080"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<set name="ex_type" value="BELT"/>
+	</armor>
+	<armor id="15394" name="Vitality Belt" add_name="30-day limited period">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_energy_belt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="0"/>
+		<set name="durability" value="43200"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<set name="ex_type" value="BELT"/>
+	</armor>
+	<armor id="15395" name="Vitality Belt" add_name="60-day limited period">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_energy_belt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="0"/>
+		<set name="durability" value="86400"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<set name="ex_type" value="BELT"/>
+	</armor>
+	<armor id="15396" name="Vitality Belt" add_name="90-day limited period">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_energy_belt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="0"/>
+		<set name="durability" value="129600"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<set name="ex_type" value="BELT"/>
+	</armor>
+	<armor id="15397" name="Vitality Belt" add_name="Permanent Use">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_energy_belt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="0"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<set name="ex_type" value="BELT"/>
+	</armor>
+	<armor id="15398" name="Vitality Belt (Event)" add_name="7-day limited period">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_energy_belt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="0"/>
+		<set name="durability" value="10080"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<set name="ex_type" value="BELT"/>
+	</armor>
+	<armor id="15399" name="Vitality Belt (Event)" add_name="30-day limited period">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_energy_belt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="0"/>
+		<set name="durability" value="43200"/>
+		<set name="temporal" value="true"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<set name="ex_type" value="BELT"/>
+	</armor>
+</list>

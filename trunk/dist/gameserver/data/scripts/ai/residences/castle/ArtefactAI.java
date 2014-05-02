@@ -50,7 +50,7 @@ public class ArtefactAI extends CharacterAI
 	{
 		final NpcInstance actor = (NpcInstance) getActor();
 		final Player player = attacker.getPlayer();
-		if ((attacker == null) || (player == null) || (actor == null))
+		if ((player == null) || (actor == null))
 		{
 			return;
 		}

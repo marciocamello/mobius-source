@@ -82,7 +82,7 @@ public class SkillsEngine
 	 */
 	public Map<Integer, Skill> loadAllSkills()
 	{
-		File dir = new File(Config.DATAPACK_ROOT, "data/xml/stats/skills");
+		File dir = new File(Config.DATAPACK_ROOT, "data/xml/skills");
 		if (!dir.exists())
 		{
 			_log.info("Dir " + dir.getAbsolutePath() + " not exists");

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="31100" name="Gatekeeper Ziggurat" title="">
@@ -36,7 +36,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -82,7 +82,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -128,7 +128,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -174,7 +174,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -220,7 +220,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -266,7 +266,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -312,7 +312,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -358,7 +358,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -404,7 +404,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -450,7 +450,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -496,7 +496,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -542,7 +542,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -588,7 +588,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -634,7 +634,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -680,7 +680,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -726,7 +726,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -772,7 +772,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -818,7 +818,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -864,7 +864,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -910,7 +910,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -956,7 +956,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1002,7 +1002,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1048,7 +1048,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1094,7 +1094,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1140,7 +1140,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1186,7 +1186,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1232,7 +1232,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1278,10 +1278,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<lhand item_id="5802"/>	<!--For NPC (Dawn)-->
+			<lhand item_id="5802"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1327,10 +1327,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<lhand item_id="5802"/>	<!--For NPC (Dawn)-->
+			<lhand item_id="5802"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1376,10 +1376,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<lhand item_id="5802"/>	<!--For NPC (Dawn)-->
+			<lhand item_id="5802"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1425,10 +1425,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<lhand item_id="5802"/>	<!--For NPC (Dawn)-->
+			<lhand item_id="5802"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1474,10 +1474,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<lhand item_id="5802"/>	<!--For NPC (Dawn)-->
+			<lhand item_id="5802"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1523,7 +1523,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1569,7 +1569,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1615,7 +1615,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1661,7 +1661,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1707,7 +1707,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1753,10 +1753,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="5801"/>	<!--For NPC (Dusk)-->
+			<rhand item_id="5801"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1802,10 +1802,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="5801"/>	<!--For NPC (Dusk)-->
+			<rhand item_id="5801"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1851,10 +1851,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="5801"/>	<!--For NPC (Dusk)-->
+			<rhand item_id="5801"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1900,10 +1900,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="5801"/>	<!--For NPC (Dusk)-->
+			<rhand item_id="5801"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1949,10 +1949,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="5801"/>	<!--For NPC (Dusk)-->
+			<rhand item_id="5801"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1998,7 +1998,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2044,7 +2044,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2090,7 +2090,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2136,7 +2136,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2182,7 +2182,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2228,7 +2228,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2274,7 +2274,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2320,7 +2320,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2367,10 +2367,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<lhand item_id="5802"/>	<!--For NPC (Dawn)-->
+			<lhand item_id="5802"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2417,10 +2417,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="5801"/>	<!--For NPC (Dusk)-->
+			<rhand item_id="5801"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2466,7 +2466,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2512,7 +2512,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2558,7 +2558,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="1"/>	<!--Undead-->
+			<skill id="4416" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2604,7 +2604,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2650,7 +2650,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="1"/>	<!--Undead-->
+			<skill id="4416" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2696,7 +2696,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2742,7 +2742,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="1"/>	<!--Undead-->
+			<skill id="4416" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2788,7 +2788,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2834,7 +2834,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="1"/>	<!--Undead-->
+			<skill id="4416" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2880,7 +2880,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2926,7 +2926,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="1"/>	<!--Undead-->
+			<skill id="4416" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2972,7 +2972,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3018,7 +3018,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="1"/>	<!--Undead-->
+			<skill id="4416" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3064,7 +3064,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3110,7 +3110,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="1"/>	<!--Undead-->
+			<skill id="4416" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3156,7 +3156,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3202,7 +3202,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="1"/>	<!--Undead-->
+			<skill id="4416" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3248,7 +3248,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3294,7 +3294,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="1"/>	<!--Undead-->
+			<skill id="4416" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3340,7 +3340,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3386,7 +3386,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="1"/>	<!--Undead-->
+			<skill id="4416" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3432,7 +3432,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3478,7 +3478,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="1"/>	<!--Undead-->
+			<skill id="4416" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3524,7 +3524,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3570,7 +3570,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="1"/>	<!--Undead-->
+			<skill id="4416" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3616,7 +3616,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3662,7 +3662,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="1"/>	<!--Undead-->
+			<skill id="4416" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3708,7 +3708,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3754,7 +3754,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="1"/>	<!--Undead-->
+			<skill id="4416" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3800,7 +3800,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>

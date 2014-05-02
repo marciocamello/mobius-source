@@ -19,6 +19,9 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 
+/**
+ * @author pchayka
+ */
 public class _254_LegendaryTales extends Quest implements ScriptFile
 {
 	private static final int Gilmore = 30754;
@@ -52,7 +55,7 @@ public class _254_LegendaryTales extends Quest implements ScriptFile
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 		}
-		else if (event.startsWith("gilmore_q254_09.htm"))
+		else if (event.startsWith("gilmore_q254_20.htm"))
 		{
 			st.takeAllItems(LargeBone);
 			StringTokenizer tokenizer = new StringTokenizer(event);
@@ -98,8 +101,9 @@ public class _254_LegendaryTales extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
-			htmltext = "gilmore_q254_09.htm";
+			htmltext = "gilmore_q254_20.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -124,13 +128,21 @@ public class _254_LegendaryTales extends Quest implements ScriptFile
 			}
 			else if (cond == 1)
 			{
-				htmltext = "gilmore_q254_06.htm";
+				if (st.getQuestItemsCount(LargeBone) >= 1)
+				{
+					htmltext = "gilmore_q254_10.htm";
+				}
+				else
+				{
+					htmltext = "gilmore_q254_05.htm";
+				}
 			}
 			else if (cond == 2)
 			{
-				htmltext = "gilmore_q254_07.htm";
+				htmltext = "gilmore_q254_18.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -150,8 +162,9 @@ public class _254_LegendaryTales extends Quest implements ScriptFile
 				}
 				mask = mask << 1;
 			}
+			
 			var = st.getInt("RaidsKilled");
-			if ((var & mask) == 0)
+			if ((var & mask) == 0) // этого босса еще не убивали
 			{
 				var |= mask;
 				st.set("RaidsKilled", var);

@@ -146,7 +146,7 @@ public class GameServerCommunication extends Thread
 			}
 			catch (IOException e)
 			{
-				_log.error("Gameserver I/O error: " + e.getMessage());
+				_log.error("Could not communicate with game server.");
 				close(key);
 			}
 			catch (Exception e)

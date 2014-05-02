@@ -27,6 +27,7 @@ public class AllianceCrest extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xaf);
+		writeD(1);
 		writeD(_crestId);
 		writeD(_data.length);
 		writeB(_data);

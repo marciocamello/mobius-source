@@ -58,7 +58,7 @@ public final class WalkerRoutesParser extends AbstractFileParser<WalkerRoutesHol
 	@Override
 	public File getXMLFile()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/xml/routes/walker_routes.xml");
+		return new File(Config.DATAPACK_ROOT, "data/xml/other/walker_routes.xml");
 	}
 	
 	/**

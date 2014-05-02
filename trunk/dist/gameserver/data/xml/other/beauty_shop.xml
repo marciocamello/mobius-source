@@ -1,0 +1,629 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "beauty_shop.dtd">
+<list>
+	<config coin_item_id="36308" def_reset_price="1000000" />
+	<set id="0">
+		<hair id="10001" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10002" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10003" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10004" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10005" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10006" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10007" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10008" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10009" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10010" adena="0" coins="3" reset_price="1000000"/>
+		<face id="20001" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20002" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20003" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20004" adena="0" coins="2" reset_price="500000"/>
+		<face id="20005" adena="0" coins="2" reset_price="500000" />
+	</set>
+	<set id="1">
+		<hair id="10001" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10002" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10003" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10004" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10005" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10006" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10007" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10008" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10009" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10010" adena="0" coins="3" reset_price="1000000"/>
+		<face id="20001" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20002" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20003" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20004" adena="0" coins="2" reset_price="500000"/>
+		<face id="20005" adena="0" coins="2" reset_price="500000" />
+	</set>
+	<set id="2">
+		<hair id="10001" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10002" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10003" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10004" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10005" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10006" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10007" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10008" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10009" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10010" adena="0" coins="3" reset_price="1000000"/>
+		<face id="20001" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20002" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20003" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20004" adena="0" coins="2" reset_price="500000"/>
+		<face id="20005" adena="0" coins="2" reset_price="500000" />
+	</set>
+	<set id="3">
+		<hair id="10001" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10002" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10003" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10004" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10005" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10006" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10007" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10008" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10009" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10010" adena="0" coins="3" reset_price="1000000"/>
+		<face id="20001" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20002" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20003" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20004" adena="0" coins="2" reset_price="500000"/>
+		<face id="20005" adena="0" coins="2" reset_price="500000" />
+	</set>
+	<set id="4">
+		<hair id="10001" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10002" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10003" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10004" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10005" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10006" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10007" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10008" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10009" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10010" adena="0" coins="3" reset_price="1000000"/>
+		<face id="20001" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20002" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20003" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20004" adena="0" coins="2" reset_price="500000"/>
+		<face id="20005" adena="0" coins="2" reset_price="500000" />
+	</set>
+	<set id="5">
+		<hair id="10001" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10002" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10003" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10004" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10005" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10006" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10007" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10008" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10009" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10010" adena="0" coins="3" reset_price="1000000"/>
+		<face id="20001" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20002" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20003" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20004" adena="0" coins="2" reset_price="500000"/>
+		<face id="20005" adena="0" coins="2" reset_price="500000" />
+	</set>
+	<set id="6">
+		<hair id="10001" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10002" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10003" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10004" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10005" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10006" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10007" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10008" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10009" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10010" adena="0" coins="3" reset_price="1000000"/>
+		<face id="20001" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20002" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20003" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20004" adena="0" coins="2" reset_price="500000"/>
+		<face id="20005" adena="0" coins="2" reset_price="500000" />
+	</set>
+	<set id="7">
+		<hair id="10001" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10002" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10003" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10004" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10005" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10006" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10007" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10008" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10009" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10010" adena="0" coins="3" reset_price="1000000"/>
+		<face id="20001" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20002" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20003" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20004" adena="0" coins="2" reset_price="500000"/>
+		<face id="20005" adena="0" coins="2" reset_price="500000" />
+	</set>
+	<set id="8">
+		<hair id="10001" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10002" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10003" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10004" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10005" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10006" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10007" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10008" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10009" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10010" adena="0" coins="3" reset_price="1000000"/>
+		<face id="20001" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20002" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20003" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20004" adena="0" coins="2" reset_price="500000"/>
+		<face id="20005" adena="0" coins="2" reset_price="500000" />
+	</set>
+	<set id="9">
+		<hair id="10001" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10002" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10003" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10004" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10005" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10006" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10007" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10008" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10009" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10010" adena="0" coins="3" reset_price="1000000"/>
+		<face id="20001" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20002" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20003" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20004" adena="0" coins="2" reset_price="500000"/>
+		<face id="20005" adena="0" coins="2" reset_price="500000" />
+	</set>
+	<set id="10">
+		<hair id="10001" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10002" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10003" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10004" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10005" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10006" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10007" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10008" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10009" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10010" adena="0" coins="3" reset_price="1000000"/>
+		<face id="20001" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20002" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20003" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20004" adena="0" coins="2" reset_price="500000"/>
+		<face id="20005" adena="0" coins="2" reset_price="500000" />
+	</set>
+	<set id="11">
+		<hair id="10001" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10002" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10003" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10004" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10005" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10006" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10007" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10008" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10009" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10010" adena="0" coins="3" reset_price="1000000"/>
+		<face id="20001" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20002" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20003" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20004" adena="0" coins="2" reset_price="500000"/>
+		<face id="20005" adena="0" coins="2" reset_price="500000" />
+	</set>
+	<set id="12">
+		<hair id="10001" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10002" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10003" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10004" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10005" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10006" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10007" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10008" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10009" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10010" adena="0" coins="3" reset_price="1000000"/>
+		<face id="20001" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20002" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20003" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20004" adena="0" coins="2" reset_price="500000"/>
+		<face id="20005" adena="0" coins="2" reset_price="500000" />
+	</set>
+	<set id="13">
+		<hair id="10001" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10002" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10003" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10004" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10005" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10006" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10007" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10008" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10009" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10010" adena="0" coins="3" reset_price="1000000"/>
+		<face id="20001" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20002" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20003" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20004" adena="0" coins="2" reset_price="500000"/>
+		<face id="20005" adena="0" coins="2" reset_price="500000" />
+	</set>
+	<set id="14">
+		<hair id="10001" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10002" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10003" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10004" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10005" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10006" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10007" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10008" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10009" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10010" adena="0" coins="3" reset_price="1000000"/>
+		<face id="20001" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20002" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20003" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20004" adena="0" coins="2" reset_price="500000"/>
+		<face id="20005" adena="0" coins="2" reset_price="500000" />
+	</set>
+	<set id="15">
+		<hair id="10001" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10002" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10003" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10004" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10005" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10006" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10007" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10008" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10009" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10010" adena="0" coins="3" reset_price="1000000"/>
+		<face id="20001" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20002" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20003" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20004" adena="0" coins="2" reset_price="500000"/>
+		<face id="20005" adena="0" coins="2" reset_price="500000" />
+	</set>
+</list>

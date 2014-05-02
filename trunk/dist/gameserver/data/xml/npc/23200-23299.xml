@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="23200" name="Turan the Severed Ghost" title="">
@@ -657,28 +657,28 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.381">
-				<reward item_id="57" min="16549" max="38671" chance="99.45866" />
-				<reward item_id="35338" min="1" max="1" chance="0.42625" />
-				<reward item_id="35327" min="1" max="1" chance="0.10656" />
-				<reward item_id="35451" min="1" max="1" chance="0.00426" />
-				<reward item_id="35462" min="1" max="1" chance="0.00426" />
+				<reward item_id="57" min="16549" max="38671" chance="99.45866"/>
+				<reward item_id="35338" min="1" max="1" chance="0.42625"/>
+				<reward item_id="35327" min="1" max="1" chance="0.10656"/>
+				<reward item_id="35451" min="1" max="1" chance="0.00426"/>
+				<reward item_id="35462" min="1" max="1" chance="0.00426"/>
 			</group>
 			<group chance="0.375">
-				<reward item_id="19285" min="1" max="1" chance="80.00000" />
-				<reward item_id="19271" min="1" max="1" chance="20.00000" />
+				<reward item_id="19285" min="1" max="1" chance="80.00000"/>
+				<reward item_id="19271" min="1" max="1" chance="20.00000"/>
 			</group>
 			<group chance="33.993">
-				<reward item_id="34990" min="2" max="6" chance="51.39293" />
-				<reward item_id="34992" min="9" max="27" chance="37.00762" />
-				<reward item_id="34991" min="28" max="84" chance="11.58180" />
-				<reward item_id="19420" min="1" max="1" chance="0.00883" />
-				<reward item_id="19409" min="1" max="1" chance="0.00883" />
+				<reward item_id="34990" min="2" max="6" chance="51.39293"/>
+				<reward item_id="34992" min="9" max="27" chance="37.00762"/>
+				<reward item_id="34991" min="28" max="84" chance="11.58180"/>
+				<reward item_id="19420" min="1" max="1" chance="0.00883"/>
+				<reward item_id="19409" min="1" max="1" chance="0.00883"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19271" min="1" max="1" chance="0.00300" />
-			<reward item_id="19285" min="1" max="1" chance="0.00300" />
-		</rewardlist>		
+			<reward item_id="6393" min="1" max="1" chance="0.00300"/>
+			<reward item_id="19285" min="1" max="1" chance="0.00300"/>
+		</rewardlist>
 	</npc>
 	<npc id="23214" name="Beggar Zofan" title="">
 		<set name="aggroRange" value="0"/>
@@ -729,28 +729,28 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.381">
-				<reward item_id="57" min="16549" max="38671" chance="99.45866" />
-				<reward item_id="35344" min="1" max="1" chance="0.42625" />
-				<reward item_id="35328" min="1" max="1" chance="0.10656" />
-				<reward item_id="35452" min="1" max="1" chance="0.00426" />
-				<reward item_id="35468" min="1" max="1" chance="0.00426" />
+				<reward item_id="57" min="16549" max="38671" chance="99.45866"/>
+				<reward item_id="35344" min="1" max="1" chance="0.42625"/>
+				<reward item_id="35328" min="1" max="1" chance="0.10656"/>
+				<reward item_id="35452" min="1" max="1" chance="0.00426"/>
+				<reward item_id="35468" min="1" max="1" chance="0.00426"/>
 			</group>
 			<group chance="0.375">
-				<reward item_id="19291" min="1" max="1" chance="80.00000" />
-				<reward item_id="19272" min="1" max="1" chance="20.00000" />
+				<reward item_id="19291" min="1" max="1" chance="80.00000"/>
+				<reward item_id="19272" min="1" max="1" chance="20.00000"/>
 			</group>
 			<group chance="33.500">
-				<reward item_id="34990" min="2" max="6" chance="53.46269" />
-				<reward item_id="34992" min="9" max="27" chance="34.86567" />
-				<reward item_id="34991" min="28" max="84" chance="11.65373" />
-				<reward item_id="19426" min="1" max="1" chance="0.00896" />
-				<reward item_id="19410" min="1" max="1" chance="0.00896" />
+				<reward item_id="34990" min="2" max="6" chance="53.46269"/>
+				<reward item_id="34992" min="9" max="27" chance="34.86567"/>
+				<reward item_id="34991" min="28" max="84" chance="11.65373"/>
+				<reward item_id="19426" min="1" max="1" chance="0.00896"/>
+				<reward item_id="19410" min="1" max="1" chance="0.00896"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="19272" min="1" max="1" chance="0.00300" />
-			<reward item_id="19291" min="1" max="1" chance="0.00300" />
-		</rewardlist>		
+			<reward item_id="19272" min="1" max="1" chance="0.00300"/>
+			<reward item_id="19291" min="1" max="1" chance="0.00300"/>
+		</rewardlist>
 	</npc>
 	<npc id="23215" name="Zofan" title="">
 		<set name="aggroRange" value="0"/>
@@ -1046,7 +1046,6 @@
 		</skills>
 	</npc>
 	<npc id="23221" name="Adac the Engineer" title="Chief Engineer">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
@@ -1097,7 +1096,6 @@
 		</skills>
 	</npc>
 	<npc id="23222" name="Borok the Engineer" title="Chief Engineer">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
@@ -1148,7 +1146,6 @@
 		</skills>
 	</npc>
 	<npc id="23223" name="Koja the Engineer" title="Chief Engineer">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
@@ -1199,7 +1196,6 @@
 		</skills>
 	</npc>
 	<npc id="23224" name="Kunda Guardian" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="22.0"/>
@@ -1250,7 +1246,6 @@
 		</skills>
 	</npc>
 	<npc id="23225" name="Kunda Berserker" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
@@ -1301,7 +1296,6 @@
 		</skills>
 	</npc>
 	<npc id="23226" name="Kunda Executor" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
@@ -1352,7 +1346,6 @@
 		</skills>
 	</npc>
 	<npc id="23227" name="Beggar Zofan" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
@@ -1402,7 +1395,6 @@
 		</skills>
 	</npc>
 	<npc id="23228" name="Beggar Zofan" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
@@ -1452,7 +1444,6 @@
 		</skills>
 	</npc>
 	<npc id="23229" name="Zofan" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="20.0"/>
@@ -1502,7 +1493,6 @@
 		</skills>
 	</npc>
 	<npc id="23230" name="Zofan" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="14.0"/>
@@ -1552,7 +1542,6 @@
 		</skills>
 	</npc>
 	<npc id="23231" name="Young Zofan" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
@@ -1602,7 +1591,6 @@
 		</skills>
 	</npc>
 	<npc id="23232" name="Young Zofan" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
@@ -1652,7 +1640,6 @@
 		</skills>
 	</npc>
 	<npc id="23233" name="Engineer Zofan" title="Northern Device Supervisor">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
@@ -1703,7 +1690,6 @@
 		</skills>
 	</npc>
 	<npc id="23234" name="Engineer Zofan" title="Southern Device Supervisor">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
@@ -1753,7 +1739,6 @@
 		</skills>
 	</npc>
 	<npc id="23235" name="Kunda" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
@@ -1803,7 +1788,6 @@
 		</skills>
 	</npc>
 	<npc id="23236" name="Kunda" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="22.0"/>
@@ -1853,7 +1837,6 @@
 		</skills>
 	</npc>
 	<npc id="23237" name="Engineer Zofan" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
@@ -1903,7 +1886,6 @@
 		</skills>
 	</npc>
 	<npc id="23238" name="Kurklin the Shredder" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="25.0"/>
@@ -1951,7 +1933,6 @@
 		</skills>
 	</npc>
 	<npc id="23239" name="Heidmann" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="25.0"/>
@@ -1999,7 +1980,6 @@
 		</skills>
 	</npc>
 	<npc id="23240" name="Mandragora" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="12.0"/>
@@ -2046,7 +2026,6 @@
 		</skills>
 	</npc>
 	<npc id="23241" name="Mandragora" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="40.0"/>
@@ -2093,7 +2072,6 @@
 		</skills>
 	</npc>
 	<npc id="23242" name="Pafuron" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="40.0"/>
@@ -2141,7 +2119,6 @@
 		</skills>
 	</npc>
 	<npc id="23243" name="Krutati" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="40.0"/>
@@ -2189,7 +2166,6 @@
 		</skills>
 	</npc>
 	<npc id="23244" name="Alluring Irene" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="40.0"/>
@@ -2237,7 +2213,6 @@
 		</skills>
 	</npc>
 	<npc id="23245" name="Isaad" title="Watchman of the Eye of Infinity">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Ranger"/>
 		<set name="collision_radius" value="40.0"/>
@@ -2284,7 +2259,6 @@
 		</skills>
 	</npc>
 	<npc id="23246" name="Spicula 1" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
@@ -2327,7 +2301,6 @@
 		<skills/>
 	</npc>
 	<npc id="23247" name="Spicula 2" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
@@ -2370,7 +2343,6 @@
 		<skills/>
 	</npc>
 	<npc id="23248" name="Spicula 3" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="10.0"/>
@@ -2413,7 +2385,6 @@
 		<skills/>
 	</npc>
 	<npc id="23249" name="Spicula 4" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="10.0"/>
@@ -2456,7 +2427,6 @@
 		<skills/>
 	</npc>
 	<npc id="23250" name="Spicula 5" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
@@ -2499,7 +2469,6 @@
 		<skills/>
 	</npc>
 	<npc id="23251" name="Spicula 6" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
@@ -2542,7 +2511,6 @@
 		<skills/>
 	</npc>
 	<npc id="23252" name="Yin Spicula 1" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
@@ -2585,7 +2553,6 @@
 		<skills/>
 	</npc>
 	<npc id="23253" name="Yin Spicula 2" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
@@ -2628,7 +2595,6 @@
 		<skills/>
 	</npc>
 	<npc id="23254" name="Yin Spicula 3" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
@@ -2671,7 +2637,6 @@
 		<skills/>
 	</npc>
 	<npc id="23255" name="Light Golem" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="15.0"/>
@@ -2714,7 +2679,6 @@
 		<skills/>
 	</npc>
 	<npc id="23256" name="Draw Golem" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="21.0"/>
@@ -2757,7 +2721,6 @@
 		<skills/>
 	</npc>
 	<npc id="23257" name="Twosword Golem" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="16.0"/>
@@ -2800,7 +2763,6 @@
 		<skills/>
 	</npc>
 	<npc id="23258" name="Crane Golem" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="20.0"/>
@@ -2843,7 +2805,6 @@
 		<skills/>
 	</npc>
 	<npc id="23259" name="Great Golem" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="30.0"/>
@@ -2886,7 +2847,6 @@
 		<skills/>
 	</npc>
 	<npc id="23260" name="Great Summoned Golem" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="10.0"/>
@@ -2929,7 +2889,6 @@
 		<skills/>
 	</npc>
 	<npc id="23261" name="Doom Golem" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="25.0"/>
@@ -2972,7 +2931,6 @@
 		<skills/>
 	</npc>
 	<npc id="23262" name="Self-destruct Golem" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="5.0"/>
@@ -3015,7 +2973,6 @@
 		<skills/>
 	</npc>
 	<npc id="23263" name="Golem of Repairs" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="20.0"/>
@@ -3058,7 +3015,6 @@
 		<skills/>
 	</npc>
 	<npc id="23264" name="Drill Golem" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="20.0"/>
@@ -3101,7 +3057,6 @@
 		<skills/>
 	</npc>
 	<npc id="23265" name="Excavator Golem" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="20.0"/>
@@ -3144,7 +3099,6 @@
 		<skills/>
 	</npc>
 	<npc id="23266" name="Pincer Golem" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="21.0"/>
@@ -3187,7 +3141,6 @@
 		<skills/>
 	</npc>
 	<npc id="23267" name="Screw Golem" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="18.0"/>
@@ -3230,7 +3183,6 @@
 		<skills/>
 	</npc>
 	<npc id="23268" name="Scout Golem" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="12.0"/>
@@ -3273,7 +3225,6 @@
 		<skills/>
 	</npc>
 	<npc id="23269" name="Battle Golem" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="18.0"/>
@@ -3316,7 +3267,6 @@
 		<skills/>
 	</npc>
 	<npc id="23270" name="Nornil Patrol No. 1" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
@@ -3359,7 +3309,6 @@
 		<skills/>
 	</npc>
 	<npc id="23271" name="Nornil Patrol No. 2" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="10.0"/>
@@ -3402,7 +3351,6 @@
 		<skills/>
 	</npc>
 	<npc id="23272" name="Spicula's Elite Member No. 1" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
@@ -3445,7 +3393,6 @@
 		<skills/>
 	</npc>
 	<npc id="23273" name="Spicula's Elite Member No. 2" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="10.0"/>
@@ -3488,7 +3435,6 @@
 		<skills/>
 	</npc>
 	<npc id="23274" name="Spicula's Elite Captain" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="12.0"/>
@@ -3531,7 +3477,6 @@
 		<skills/>
 	</npc>
 	<npc id="23275" name="Spicula's Elite Captain" title="Evoked Spirit">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="14.0"/>
@@ -3574,7 +3519,6 @@
 		<skills/>
 	</npc>
 	<npc id="23276" name="Spicula's Elite Lieutenant" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="12.0"/>

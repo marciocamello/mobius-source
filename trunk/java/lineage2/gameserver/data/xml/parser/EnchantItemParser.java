@@ -15,7 +15,7 @@ package lineage2.gameserver.data.xml.parser;
 import java.io.File;
 import java.util.Iterator;
 
-import lineage2.commons.data.xml.AbstractDirParser;
+import lineage2.commons.data.xml.AbstractFileParser;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.EnchantItemHolder;
 import lineage2.gameserver.model.items.etcitems.AppearanceStone;
@@ -24,7 +24,7 @@ import lineage2.gameserver.templates.item.ItemTemplate;
 
 import org.dom4j.Element;
 
-public class EnchantItemParser extends AbstractDirParser<EnchantItemHolder>
+public class EnchantItemParser extends AbstractFileParser<EnchantItemHolder>
 {
 	private static EnchantItemParser _instance = new EnchantItemParser();
 	
@@ -39,15 +39,9 @@ public class EnchantItemParser extends AbstractDirParser<EnchantItemHolder>
 	}
 	
 	@Override
-	public File getXMLDir()
+	public File getXMLFile()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/xml/other/AppareanceStones/");
-	}
-	
-	@Override
-	public boolean isIgnored(File f)
-	{
-		return false;
+		return new File(Config.DATAPACK_ROOT, "data/xml/other/appearance_stones.xml");
 	}
 	
 	@Override

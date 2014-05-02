@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="30300" name="Pushkin" title="Blacksmith">
@@ -37,15 +37,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="89"/>	<!--Big Hammer-->
+			<rhand item_id="89"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<teach_classes>
-			<class id="53"/>	<!--dwarvenFighter-->
-			<class id="56"/>	<!--artisan-->
-			<class id="57"/>	<!--warsmith-->
+			<class id="53"/>
+			<class id="56"/>
+			<class id="57"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -92,7 +92,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -139,7 +139,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -186,7 +186,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -233,7 +233,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -280,7 +280,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -327,7 +327,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -374,7 +374,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -421,7 +421,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -468,12 +468,12 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Warehouse"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<teach_classes>
-			<class id="53"/>	<!--dwarvenFighter-->
-			<class id="54"/>	<!--scavenger-->
-			<class id="55"/>	<!--bountyHunter-->
+			<class id="53"/>
+			<class id="54"/>
+			<class id="55"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -520,15 +520,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<equip>
-			<rhand item_id="89"/>	<!--Big Hammer-->
+			<rhand item_id="89"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<teach_classes>
-			<class id="53"/>	<!--dwarvenFighter-->
-			<class id="56"/>	<!--artisan-->
-			<class id="57"/>	<!--warsmith-->
+			<class id="53"/>
+			<class id="56"/>
+			<class id="57"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -575,75 +575,46 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<teach_classes>
-			<class id="53"/>	<!--dwarvenFighter-->
-			<class id="54"/>	<!--scavenger-->
-			<class id="55"/>	<!--bountyHunter-->
+			<class id="53"/>
+			<class id="54"/>
+			<class id="55"/>
 		</teach_classes>
 		<teleportlist>
-			<!-- Глудин -->
 			<sublist id="1">
-			<!-- Update GOD -->
 				<target loc="-14593 123936 -3120" item_id="57" price="7300" name="1010005" castle_id="1"/>
-			<!-- Глудио -->
 				<target loc="-111988 257240 -1376" item_id="57" price="11000" name="1010001"/>
-			<!-- Деревня Говорящего Острова -->
 				<target loc="44734 49210 -3056" item_id="57" price="16000" name="1010155"/>
-			<!-- Эльфийская Деревня -->
 				<target loc="11167 16012 -4584" item_id="57" price="16000" name="1010156"/>
-			<!-- Деревня Темных Эльфов -->
 				<target loc="115357 -178212 -928" item_id="57" price="38000" name="1010158"/>
-			<!-- Деревня Гномов -->
 				<target loc="-44124 -113390 -240" item_id="57" price="26000" name="1010157"/>
-			<!-- Деревня Орков -->
 				<target loc="-117001 46589 360" item_id="57" price="10000" name="1010648"/>
-			<!-- Деревня Камаэль -->
 				<target loc="-44763 203497 -3592" item_id="57" price="1800" name="1010100"/>
-			<!-- Поселение Ящеров Лангк -->
 				<target loc="-75437 168800 -3632" item_id="57" price="550" name="1010175"/>
-			<!-- Холм Ветряных Мельниц -->
 				<target loc="-63736 101522 -3552" item_id="57" price="1400" name="1010096"/>
-			<!-- Охотничьи Угодья Фельмер -->
 				<target loc="-53001 191425 -3568" item_id="57" price="2000" name="1010106"/>
-			<!-- Забытый Храм -->
 				<target loc="-89763 105359 -3576" item_id="57" price="1800" name="1010095"/>
-			<!-- Лагерь Орков -->
 				<target loc="-88539 83389 -2864" item_id="57" price="2600" name="1010094"/>
-			<!-- Холм Ветров -->
 				<target loc="-16464 208824 -3656" item_id="57" price="3400" name="1010621"/>
-			<!-- Пустошь -->
 				<target loc="-42256 198333 -2800" item_id="57" price="3700" name="1010176"/>
-			<!-- Красная Гора -->
 				<target loc="-41155 122795 -2912" item_id="57" price="1900" name="1010097"/>
-			<!-- Руины Страданий -->
 				<target loc="-19359 136846 -3760" item_id="57" price="2500" name="1010101"/>
-			<!-- Руины Отчаяния -->
 			</sublist>
 			<sublist id="2">
 				<target loc="-87328 142266 -3640" item_id="57" price="1000" name="1010506"/>
-			<!-- Арена Глудина -->
 				<target loc="73579 142709 -3768" item_id="57" price="1000" name="1010507"/>
-			<!-- Арена Гирана -->
 				<target loc="-54026 179504 -4640" item_id="57" price="1000" name="1010499"/>
-			<!-- Центр Забытого Храма -->
 				<target loc="-47506 179572 -3632" item_id="57" price="1000" name="1010622"/>
-			<!-- Пустошь-запад -->
 				<target loc="146440 46723 -3432" item_id="57" price="1000" name="1010053"/>
-			<!-- Колизей -->
 			</sublist>
 			<sublist id="3">
 				<target loc="-87328 142266 -3640" item_id="6651" price="1" name="1010506"/>
-			<!-- Арена Глудина -->
 				<target loc="73579 142709 -3768" item_id="6651" price="1" name="1010507"/>
-			<!-- Арена Гирана -->
 				<target loc="-54026 179504 -4640" item_id="6651" price="1" name="1010499"/>
-			<!-- Центр Забытого Храма -->
 				<target loc="-47506 179572 -3632" item_id="6651" price="1" name="1010622"/>
-			<!-- Пустошь-запад -->
 				<target loc="146440 46723 -3432" item_id="6651" price="1" name="1010053"/>
-			<!-- Колизей -->
 			</sublist>
 		</teleportlist>
 		<attributes>
@@ -691,7 +662,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -738,12 +709,12 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Warehouse"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<teach_classes>
-			<class id="53"/>	<!--dwarvenFighter-->
-			<class id="54"/>	<!--scavenger-->
-			<class id="55"/>	<!--bountyHunter-->
+			<class id="53"/>
+			<class id="54"/>
+			<class id="55"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -790,19 +761,19 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<teach_classes>
-			<class id="0"/>	<!--fighter-->
-			<class id="1"/>	<!--warrior-->
-			<class id="2"/>	<!--gladiator-->
-			<class id="3"/>	<!--warlord-->
-			<class id="4"/>	<!--knight-->
-			<class id="5"/>	<!--paladin-->
-			<class id="6"/>	<!--darkAvenger-->
-			<class id="7"/>	<!--rogue-->
-			<class id="8"/>	<!--treasureHunter-->
-			<class id="9"/>	<!--hawkeye-->
+			<class id="0"/>
+			<class id="1"/>
+			<class id="2"/>
+			<class id="3"/>
+			<class id="4"/>
+			<class id="5"/>
+			<class id="6"/>
+			<class id="7"/>
+			<class id="8"/>
+			<class id="9"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -849,19 +820,19 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<teach_classes>
-			<class id="0"/>	<!--fighter-->
-			<class id="1"/>	<!--warrior-->
-			<class id="2"/>	<!--gladiator-->
-			<class id="3"/>	<!--warlord-->
-			<class id="4"/>	<!--knight-->
-			<class id="5"/>	<!--paladin-->
-			<class id="6"/>	<!--darkAvenger-->
-			<class id="7"/>	<!--rogue-->
-			<class id="8"/>	<!--treasureHunter-->
-			<class id="9"/>	<!--hawkeye-->
+			<class id="0"/>
+			<class id="1"/>
+			<class id="2"/>
+			<class id="3"/>
+			<class id="4"/>
+			<class id="5"/>
+			<class id="6"/>
+			<class id="7"/>
+			<class id="8"/>
+			<class id="9"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -908,16 +879,16 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<teach_classes>
-			<class id="18"/>	<!--elvenFighter-->
-			<class id="19"/>	<!--elvenKnight-->
-			<class id="20"/>	<!--templeKnight-->
-			<class id="21"/>	<!--swordSinger-->
-			<class id="22"/>	<!--elvenScout-->
-			<class id="23"/>	<!--plainsWalker-->
-			<class id="24"/>	<!--silverRanger-->
+			<class id="18"/>
+			<class id="19"/>
+			<class id="20"/>
+			<class id="21"/>
+			<class id="22"/>
+			<class id="23"/>
+			<class id="24"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -964,16 +935,16 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<teach_classes>
-			<class id="18"/>	<!--elvenFighter-->
-			<class id="19"/>	<!--elvenKnight-->
-			<class id="20"/>	<!--templeKnight-->
-			<class id="21"/>	<!--swordSinger-->
-			<class id="22"/>	<!--elvenScout-->
-			<class id="23"/>	<!--plainsWalker-->
-			<class id="24"/>	<!--silverRanger-->
+			<class id="18"/>
+			<class id="19"/>
+			<class id="20"/>
+			<class id="21"/>
+			<class id="22"/>
+			<class id="23"/>
+			<class id="24"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1020,16 +991,16 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<teach_classes>
-			<class id="31"/>	<!--darkFighter-->
-			<class id="32"/>	<!--palusKnight-->
-			<class id="33"/>	<!--shillienKnight-->
-			<class id="34"/>	<!--bladedancer-->
-			<class id="35"/>	<!--assassin-->
-			<class id="36"/>	<!--abyssWalker-->
-			<class id="37"/>	<!--phantomRanger-->
+			<class id="31"/>
+			<class id="32"/>
+			<class id="33"/>
+			<class id="34"/>
+			<class id="35"/>
+			<class id="36"/>
+			<class id="37"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1076,15 +1047,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<teach_classes>
-			<class id="38"/>	<!--darkMage-->
-			<class id="39"/>	<!--darkWizard-->
-			<class id="40"/>	<!--spellhowler-->
-			<class id="41"/>	<!--phantomSummoner-->
-			<class id="42"/>	<!--shillienOracle-->
-			<class id="43"/>	<!--shillienElder-->
+			<class id="38"/>
+			<class id="39"/>
+			<class id="40"/>
+			<class id="41"/>
+			<class id="42"/>
+			<class id="43"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1131,10 +1102,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="275"/>	<!--Long Bow-->
+			<rhand item_id="275"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1181,11 +1152,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="KamalokaGuard"/>
 		<equip>
-			<rhand item_id="129"/>	<!--Sword of Revolution-->
-			<lhand item_id="102"/>	<!--Round Shield-->
+			<rhand item_id="129"/>
+			<lhand item_id="102"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1232,11 +1203,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
-			<lhand item_id="20"/>	<!--Buckler-->
+			<rhand item_id="2"/>
+			<lhand item_id="20"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1283,10 +1254,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="275"/>	<!--Long Bow-->
+			<rhand item_id="275"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1333,10 +1304,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="275"/>	<!--Long Bow-->
+			<rhand item_id="275"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1383,10 +1354,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="275"/>	<!--Long Bow-->
+			<rhand item_id="275"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1433,11 +1404,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
-			<lhand item_id="20"/>	<!--Buckler-->
+			<rhand item_id="2"/>
+			<lhand item_id="20"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1484,10 +1455,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="275"/>	<!--Long Bow-->
+			<rhand item_id="275"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1534,7 +1505,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1581,14 +1552,14 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<teach_classes>
-			<class id="10"/>	<!--mage-->
-			<class id="11"/>	<!--wizard-->
-			<class id="12"/>	<!--sorceror-->
-			<class id="13"/>	<!--necromancer-->
-			<class id="14"/>	<!--warlock-->
+			<class id="10"/>
+			<class id="11"/>
+			<class id="12"/>
+			<class id="13"/>
+			<class id="14"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1635,13 +1606,13 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<teach_classes>
-			<class id="25"/>	<!--elvenMage-->
-			<class id="26"/>	<!--elvenWizard-->
-			<class id="27"/>	<!--spellsinger-->
-			<class id="28"/>	<!--elementalSummoner-->
+			<class id="25"/>
+			<class id="26"/>
+			<class id="27"/>
+			<class id="28"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1688,10 +1659,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="277"/>	<!--Dark Elven Bow-->
+			<rhand item_id="277"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1738,10 +1709,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="132"/>	<!--Sword of Limit-->
+			<rhand item_id="132"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1788,10 +1759,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="132"/>	<!--Sword of Limit-->
+			<rhand item_id="132"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1838,10 +1809,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="277"/>	<!--Dark Elven Bow-->
+			<rhand item_id="277"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1888,7 +1859,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Warehouse"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1935,7 +1906,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -1982,7 +1953,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2029,7 +2000,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2076,7 +2047,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2123,10 +2094,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="277"/>	<!--Dark Elven Bow-->
+			<rhand item_id="277"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2173,10 +2144,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="277"/>	<!--Dark Elven Bow-->
+			<rhand item_id="277"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2223,10 +2194,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="132"/>	<!--Sword of Limit-->
+			<rhand item_id="132"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2273,7 +2244,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2320,7 +2291,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2367,16 +2338,16 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<teach_classes>
-			<class id="31"/>	<!--darkFighter-->
-			<class id="32"/>	<!--palusKnight-->
-			<class id="33"/>	<!--shillienKnight-->
-			<class id="34"/>	<!--bladedancer-->
-			<class id="35"/>	<!--assassin-->
-			<class id="36"/>	<!--abyssWalker-->
-			<class id="37"/>	<!--phantomRanger-->
+			<class id="31"/>
+			<class id="32"/>
+			<class id="33"/>
+			<class id="34"/>
+			<class id="35"/>
+			<class id="36"/>
+			<class id="37"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2423,7 +2394,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2470,7 +2441,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2517,7 +2488,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2564,7 +2535,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2611,16 +2582,16 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<teach_classes>
-			<class id="18"/>	<!--elvenFighter-->
-			<class id="19"/>	<!--elvenKnight-->
-			<class id="20"/>	<!--templeKnight-->
-			<class id="21"/>	<!--swordSinger-->
-			<class id="22"/>	<!--elvenScout-->
-			<class id="23"/>	<!--plainsWalker-->
-			<class id="24"/>	<!--silverRanger-->
+			<class id="18"/>
+			<class id="19"/>
+			<class id="20"/>
+			<class id="21"/>
+			<class id="22"/>
+			<class id="23"/>
+			<class id="24"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2667,7 +2638,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="13"/>	<!--Fairies-->
+			<skill id="4416" level="13"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2714,7 +2685,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2761,7 +2732,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="VillageMaster"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2808,16 +2779,16 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<teach_classes>
-			<class id="18"/>	<!--elvenFighter-->
-			<class id="19"/>	<!--elvenKnight-->
-			<class id="20"/>	<!--templeKnight-->
-			<class id="21"/>	<!--swordSinger-->
-			<class id="22"/>	<!--elvenScout-->
-			<class id="23"/>	<!--plainsWalker-->
-			<class id="24"/>	<!--silverRanger-->
+			<class id="18"/>
+			<class id="19"/>
+			<class id="20"/>
+			<class id="21"/>
+			<class id="22"/>
+			<class id="23"/>
+			<class id="24"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2864,12 +2835,12 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<teach_classes>
-			<class id="25"/>	<!--elvenMage-->
-			<class id="29"/>	<!--oracle-->
-			<class id="30"/>	<!--elder-->
+			<class id="25"/>
+			<class id="29"/>
+			<class id="30"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2916,13 +2887,13 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<teach_classes>
-			<class id="25"/>	<!--elvenMage-->
-			<class id="26"/>	<!--elvenWizard-->
-			<class id="27"/>	<!--spellsinger-->
-			<class id="28"/>	<!--elementalSummoner-->
+			<class id="25"/>
+			<class id="26"/>
+			<class id="27"/>
+			<class id="28"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -2969,15 +2940,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<teach_classes>
-			<class id="38"/>	<!--darkMage-->
-			<class id="39"/>	<!--darkWizard-->
-			<class id="40"/>	<!--spellhowler-->
-			<class id="41"/>	<!--phantomSummoner-->
-			<class id="42"/>	<!--shillienOracle-->
-			<class id="43"/>	<!--shillienElder-->
+			<class id="38"/>
+			<class id="39"/>
+			<class id="40"/>
+			<class id="41"/>
+			<class id="42"/>
+			<class id="43"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3024,16 +2995,16 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Trainer"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<teach_classes>
-			<class id="31"/>	<!--darkFighter-->
-			<class id="32"/>	<!--palusKnight-->
-			<class id="33"/>	<!--shillienKnight-->
-			<class id="34"/>	<!--bladedancer-->
-			<class id="35"/>	<!--assassin-->
-			<class id="36"/>	<!--abyssWalker-->
-			<class id="37"/>	<!--phantomRanger-->
+			<class id="31"/>
+			<class id="32"/>
+			<class id="33"/>
+			<class id="34"/>
+			<class id="35"/>
+			<class id="36"/>
+			<class id="37"/>
 		</teach_classes>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3080,10 +3051,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="280"/>	<!--Light Crossbow-->
+			<rhand item_id="280"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3130,10 +3101,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="275"/>	<!--Long Bow-->
+			<rhand item_id="275"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3180,10 +3151,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="275"/>	<!--Long Bow-->
+			<rhand item_id="275"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3230,11 +3201,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
-			<lhand item_id="20"/>	<!--Buckler-->
+			<rhand item_id="2"/>
+			<lhand item_id="20"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3281,10 +3252,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="275"/>	<!--Long Bow-->
+			<rhand item_id="275"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3331,11 +3302,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
-			<lhand item_id="20"/>	<!--Buckler-->
+			<rhand item_id="2"/>
+			<lhand item_id="20"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3382,10 +3353,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="275"/>	<!--Long Bow-->
+			<rhand item_id="275"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3432,11 +3403,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Guard"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
-			<lhand item_id="20"/>	<!--Buckler-->
+			<rhand item_id="2"/>
+			<lhand item_id="20"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3483,7 +3454,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3530,7 +3501,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>

@@ -17,6 +17,7 @@ import java.util.Collection;
 import lineage2.commons.collections.CollectionUtils;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.threading.RunnableImpl;
+import lineage2.gameserver.Config;
 import lineage2.gameserver.instancemanager.CursedWeaponsManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance.ItemLocation;
@@ -113,6 +114,20 @@ public class PcInventory extends Inventory
 			return 0;
 		}
 		return _adena.getCount();
+	}
+	
+	/**
+	 * Method getBeautyShopCoin.
+	 * @return long
+	 */
+	public long getBeautyShopCoin()
+	{
+		ItemInstance _bscoin = getItemByItemId(Config.BEAUTY_SHOP_COIN_ITEM_ID);
+		if (_bscoin == null)
+		{
+			return 0;
+		}
+		return _bscoin.getCount();
 	}
 	
 	/**

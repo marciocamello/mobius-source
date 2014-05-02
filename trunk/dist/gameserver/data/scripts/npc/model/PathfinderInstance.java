@@ -280,8 +280,10 @@ public class PathfinderInstance extends NpcInstance
 		{
 			return null;
 		}
+		
 		StatsSet params = iz.getAddParams();
 		String rewards = null;
+		
 		for (int i = rank; i >= 0; i--)
 		{
 			rewards = params.getString("reward_lvl_" + i, null);
@@ -290,9 +292,16 @@ public class PathfinderInstance extends NpcInstance
 				break;
 			}
 		}
+		
+		if (rewards == null)
+		{
+			return null;
+		}
+		
 		String[] items_list = rewards.split(";");
 		int rewards_count = items_list.length;
 		int[][] result = new int[rewards_count][];
+		
 		for (int i = 0; i < rewards_count; i++)
 		{
 			String[] item_s = items_list[i].split("-");
@@ -305,6 +314,7 @@ public class PathfinderInstance extends NpcInstance
 			item[1] = Integer.parseInt(item_s[1]);
 			result[i] = item;
 		}
+		
 		return result;
 	}
 }

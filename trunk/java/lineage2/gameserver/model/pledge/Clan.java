@@ -82,6 +82,10 @@ public class Clan implements Iterable<UnitMember>
 	 */
 	private int _level;
 	/**
+	 * Field _unionType.
+	 */
+	private int _unionType;
+	/**
 	 * Field _hasCastle.
 	 */
 	private int _hasCastle;
@@ -93,6 +97,10 @@ public class Clan implements Iterable<UnitMember>
 	 * Field _hasHideout.
 	 */
 	private int _hasHideout;
+	/**
+	 * Field _warDominion.
+	 */
+	private int _warDominion;
 	/**
 	 * Field _crestId.
 	 */
@@ -2324,5 +2332,20 @@ public class Clan implements Iterable<UnitMember>
 				member.getEffectList().stopEffect(_clanLeaderSkill);
 			}
 		}
+	}
+	
+	public int getWarDominion()
+	{
+		return _warDominion;
+	}
+	
+	public void setWarDominion(int warDominion)
+	{
+		_warDominion = warDominion;
+	}
+	
+	public int getUnionType()
+	{
+		return _unionType;
 	}
 }

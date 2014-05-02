@@ -27,7 +27,7 @@ public class ExCubeGameChangeTimeToStart extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0x97);
+		writeEx(0x98);
 		writeD(0x03);
 		
 		writeD(_seconds);

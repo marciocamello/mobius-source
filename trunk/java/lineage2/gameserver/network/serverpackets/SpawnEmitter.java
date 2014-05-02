@@ -34,7 +34,7 @@ public class SpawnEmitter extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		// ddd
-		writeEx(0x5d);
+		writeEx(0x5e);
 		
 		writeD(_monsterObjId);
 		writeD(_playerObjId);

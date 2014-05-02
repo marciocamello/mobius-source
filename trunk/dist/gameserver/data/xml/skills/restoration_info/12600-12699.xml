@@ -1,0 +1,918 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "restoration_info.dtd">
+<list>
+	<restoration skill_id="12600" skill_level="1" name="Check Item" consume_item_id="31991">
+		<group chance="4.0">
+			<item id="9264" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31182" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31183" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31184" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12601" skill_level="1" name="Check Item" consume_item_id="31992">
+		<group chance="4.0">
+			<item id="9264" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31182" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31183" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31184" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12602" skill_level="1" name="Check Item" consume_item_id="31993">
+		<group chance="4.0">
+			<item id="351" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31197" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12603" skill_level="1" name="Check Item" consume_item_id="31994">
+		<group chance="4.0">
+			<item id="235" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31199" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31200" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31201" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12604" skill_level="1" name="Check Item" consume_item_id="31995">
+		<group chance="4.0">
+			<item id="269" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31203" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31204" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31205" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12605" skill_level="1" name="Check Item" consume_item_id="31996">
+		<group chance="4.0">
+			<item id="2411" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31206" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12606" skill_level="1" name="Check Item" consume_item_id="31997">
+		<group chance="4.0">
+			<item id="2493" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31207" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12607" skill_level="1" name="Check Item" consume_item_id="31998">
+		<group chance="4.0">
+			<item id="2425" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31208" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12608" skill_level="1" name="Check Item" consume_item_id="31999">
+		<group chance="4.0">
+			<item id="2449" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31209" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12609" skill_level="1" name="Check Item" consume_item_id="32000">
+		<group chance="4.0">
+			<item id="2378" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31210" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12610" skill_level="1" name="Check Item" consume_item_id="32001">
+		<group chance="4.0">
+			<item id="352" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31211" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12611" skill_level="1" name="Check Item" consume_item_id="32002">
+		<group chance="4.0">
+			<item id="2457" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31212" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12612" skill_level="1" name="Check Item" consume_item_id="32003">
+		<group chance="4.0">
+			<item id="2433" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31213" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12613" skill_level="1" name="Check Item" consume_item_id="32004">
+		<group chance="4.0">
+			<item id="14344" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31214" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12614" skill_level="1" name="Check Item" consume_item_id="32005">
+		<group chance="4.0">
+			<item id="14342" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31215" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12615" skill_level="1" name="Check Item" consume_item_id="32006">
+		<group chance="4.0">
+			<item id="440" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31216" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12616" skill_level="1" name="Check Item" consume_item_id="32007">
+		<group chance="4.0">
+			<item id="854" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31217" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12617" skill_level="1" name="Check Item" consume_item_id="32008">
+		<group chance="4.0">
+			<item id="854" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31217" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12618" skill_level="1" name="Check Item" consume_item_id="32009">
+		<group chance="4.0">
+			<item id="159" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31219" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12619" skill_level="1" name="Check Item" consume_item_id="32010">
+		<group chance="4.0">
+			<item id="314" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31220" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12620" skill_level="1" name="Check Item" consume_item_id="32011">
+		<group chance="4.0">
+			<item id="14316" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31222" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31223" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31224" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12621" skill_level="1" name="Check Item" consume_item_id="32012">
+		<group chance="4.0">
+			<item id="14302" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31226" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31227" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31228" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12622" skill_level="1" name="Check Item" consume_item_id="32013">
+		<group chance="4.0">
+			<item id="160" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31230" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31231" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31232" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12623" skill_level="1" name="Check Item" consume_item_id="32014">
+		<group chance="4.0">
+			<item id="94" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31234" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31235" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31236" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12624" skill_level="1" name="Check Item" consume_item_id="32015">
+		<group chance="4.0">
+			<item id="9256" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31239" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31240" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31241" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12625" skill_level="1" name="Check Item" consume_item_id="32016">
+		<group chance="4.0">
+			<item id="9256" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31239" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31240" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31241" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12626" skill_level="1" name="Check Item" consume_item_id="32017">
+		<group chance="4.0">
+			<item id="2531" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31245" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12627" skill_level="1" name="Check Item" consume_item_id="32018">
+		<group chance="4.0">
+			<item id="2529" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31246" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12628" skill_level="1" name="Check Item" consume_item_id="32019">
+		<group chance="4.0">
+			<item id="2527" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31247" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12629" skill_level="1" name="Check Item" consume_item_id="32020">
+		<group chance="4.0">
+			<item id="2530" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31248" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12630" skill_level="1" name="Check Item" consume_item_id="32021">
+		<group chance="4.0">
+			<item id="2532" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31249" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12631" skill_level="1" name="Check Item" consume_item_id="32022">
+		<group chance="4.0">
+			<item id="2526" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31250" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12632" skill_level="1" name="Check Item" consume_item_id="32023">
+		<group chance="4.0">
+			<item id="2525" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31251" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12633" skill_level="1" name="Check Item" consume_item_id="32024">
+		<group chance="4.0">
+			<item id="2528" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31252" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12634" skill_level="1" name="Check Item" consume_item_id="32025">
+		<group chance="4.0">
+			<item id="69" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31253" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12635" skill_level="1" name="Check Item" consume_item_id="32026">
+		<group chance="4.0">
+			<item id="6365" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31255" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31256" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31257" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12636" skill_level="1" name="Check Item" consume_item_id="32027">
+		<group chance="4.0">
+			<item id="302" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31259" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31260" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31261" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12637" skill_level="1" name="Check Item" consume_item_id="32028">
+		<group chance="4.0">
+			<item id="258" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31262" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12638" skill_level="1" name="Check Item" consume_item_id="32029">
+		<group chance="4.0">
+			<item id="76" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31264" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31265" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31266" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12639" skill_level="1" name="Check Item" consume_item_id="32030">
+		<group chance="4.0">
+			<item id="2504" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31268" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31269" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31270" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12640" skill_level="1" name="Check Item" consume_item_id="32031">
+		<group chance="4.0">
+			<item id="183" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31271" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12641" skill_level="1" name="Check Item" consume_item_id="32032">
+		<group chance="4.0">
+			<item id="239" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31272" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12642" skill_level="1" name="Check Item" consume_item_id="32033">
+		<group chance="4.0">
+			<item id="7887" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31274" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31275" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31276" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12643" skill_level="1" name="Check Item" consume_item_id="32034">
+		<group chance="4.0">
+			<item id="58" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31277" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12644" skill_level="1" name="Check Item" consume_item_id="32035">
+		<group chance="4.0">
+			<item id="470" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31278" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12645" skill_level="1" name="Check Item" consume_item_id="32036">
+		<group chance="4.0">
+			<item id="470" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31278" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12646" skill_level="1" name="Check Item" consume_item_id="32037">
+		<group chance="4.0">
+			<item id="437" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31280" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12647" skill_level="1" name="Check Item" consume_item_id="32038">
+		<group chance="4.0">
+			<item id="437" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31280" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12648" skill_level="1" name="Check Item" consume_item_id="32039">
+		<group chance="4.0">
+			<item id="61" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31282" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12649" skill_level="1" name="Check Item" consume_item_id="32040">
+		<group chance="4.0">
+			<item id="61" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31282" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12650" skill_level="1" name="Check Item" consume_item_id="32041">
+		<group chance="4.0">
+			<item id="2377" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31284" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12651" skill_level="1" name="Check Item" consume_item_id="32042">
+		<group chance="4.0">
+			<item id="393" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31285" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12652" skill_level="1" name="Check Item" consume_item_id="32043">
+		<group chance="4.0">
+			<item id="415" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31286" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12653" skill_level="1" name="Check Item" consume_item_id="32044">
+		<group chance="4.0">
+			<item id="882" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31287" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12654" skill_level="1" name="Check Item" consume_item_id="32045">
+		<group chance="4.0">
+			<item id="225" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31288" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12655" skill_level="1" name="Check Item" consume_item_id="32046">
+		<group chance="4.0">
+			<item id="608" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31289" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12656" skill_level="1" name="Check Item" consume_item_id="32047">
+		<group chance="4.0">
+			<item id="59" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31290" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12657" skill_level="1" name="Check Item" consume_item_id="32048">
+		<group chance="4.0">
+			<item id="852" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31291" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12658" skill_level="1" name="Check Item" consume_item_id="32049">
+		<group chance="4.0">
+			<item id="852" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31291" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12659" skill_level="1" name="Check Item" consume_item_id="32050">
+		<group chance="4.0">
+			<item id="9578" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31293" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12660" skill_level="1" name="Check Item" consume_item_id="32051">
+		<group chance="4.0">
+			<item id="88" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31294" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12661" skill_level="1" name="Check Item" consume_item_id="32052">
+		<group chance="4.0">
+			<item id="224" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31295" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12662" skill_level="1" name="Check Item" consume_item_id="32053">
+		<group chance="4.0">
+			<item id="6386" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31296" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12663" skill_level="1" name="Check Item" consume_item_id="32054">
+		<group chance="4.0">
+			<item id="6385" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31297" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12664" skill_level="1" name="Check Item" consume_item_id="32055">
+		<group chance="4.0">
+			<item id="6383" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31298" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12665" skill_level="1" name="Check Item" consume_item_id="32056">
+		<group chance="4.0">
+			<item id="6384" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31299" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12666" skill_level="1" name="Check Item" consume_item_id="32057">
+		<group chance="4.0">
+			<item id="202" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31301" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31302" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31303" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12667" skill_level="1" name="Check Item" consume_item_id="32058">
+		<group chance="4.0">
+			<item id="2448" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31304" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12668" skill_level="1" name="Check Item" consume_item_id="32059">
+		<group chance="4.0">
+			<item id="395" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31305" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12669" skill_level="1" name="Check Item" consume_item_id="32060">
+		<group chance="4.0">
+			<item id="2424" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31306" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12670" skill_level="1" name="Check Item" consume_item_id="32061">
+		<group chance="4.0">
+			<item id="417" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31307" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12671" skill_level="1" name="Check Item" consume_item_id="32062">
+		<group chance="4.0">
+			<item id="14293" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31309" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31310" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31311" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12672" skill_level="1" name="Check Item" consume_item_id="32063">
+		<group chance="4.0">
+			<item id="2383" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31312" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12673" skill_level="1" name="Check Item" consume_item_id="32064">
+		<group chance="4.0">
+			<item id="14348" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31313" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12674" skill_level="1" name="Check Item" consume_item_id="32065">
+		<group chance="4.0">
+			<item id="2419" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31314" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12675" skill_level="1" name="Check Item" consume_item_id="32066">
+		<group chance="4.0">
+			<item id="583" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="32813" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12676" skill_level="1" name="Check Item" consume_item_id="32067">
+		<group chance="4.0">
+			<item id="14349" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31318" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12677" skill_level="1" name="Check Item" consume_item_id="32068">
+		<group chance="4.0">
+			<item id="2409" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31319" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12678" skill_level="1" name="Check Item" consume_item_id="32069">
+		<group chance="4.0">
+			<item id="2395" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31320" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12679" skill_level="1" name="Check Item" consume_item_id="32070">
+		<group chance="4.0">
+			<item id="14350" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31321" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12680" skill_level="1" name="Check Item" consume_item_id="32071">
+		<group chance="4.0">
+			<item id="2482" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="32809" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12681" skill_level="1" name="Check Item" consume_item_id="32072">
+		<group chance="4.0">
+			<item id="242" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31326" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31327" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31328" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12682" skill_level="1" name="Check Item" consume_item_id="32073">
+		<group chance="4.0">
+			<item id="468" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31329" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12683" skill_level="1" name="Check Item" consume_item_id="32074">
+		<group chance="4.0">
+			<item id="435" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31330" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12684" skill_level="1" name="Check Item" consume_item_id="32075">
+		<group chance="4.0">
+			<item id="186" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31331" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12685" skill_level="1" name="Check Item" consume_item_id="32076">
+		<group chance="4.0">
+			<item id="879" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31332" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12686" skill_level="1" name="Check Item" consume_item_id="32077">
+		<group chance="4.0">
+			<item id="879" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31332" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12687" skill_level="1" name="Check Item" consume_item_id="32078">
+		<group chance="4.0">
+			<item id="911" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31334" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12688" skill_level="1" name="Check Item" consume_item_id="32079">
+		<group chance="4.0">
+			<item id="911" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31334" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12689" skill_level="1" name="Check Item" consume_item_id="32080">
+		<group chance="4.0">
+			<item id="848" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31336" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12690" skill_level="1" name="Check Item" consume_item_id="32081">
+		<group chance="4.0">
+			<item id="848" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31336" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12691" skill_level="1" name="Check Item" consume_item_id="32082">
+		<group chance="4.0">
+			<item id="185" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31338" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12692" skill_level="1" name="Check Item" consume_item_id="32083">
+		<group chance="4.0">
+			<item id="238" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31339" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12693" skill_level="1" name="Check Item" consume_item_id="32084">
+		<group chance="4.0">
+			<item id="347" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31340" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12694" skill_level="1" name="Check Item" consume_item_id="32085">
+		<group chance="4.0">
+			<item id="275" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31341" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12695" skill_level="1" name="Check Item" consume_item_id="32086">
+		<group chance="4.0">
+			<item id="9209" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31342" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12696" skill_level="1" name="Check Item" consume_item_id="32087">
+		<group chance="4.0">
+			<item id="2599" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31343" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12697" skill_level="1" name="Check Item" consume_item_id="32088">
+		<group chance="4.0">
+			<item id="133" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31345" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31346" min_count="1" max_count="1"/>
+		</group>
+		<group chance="32.0">
+			<item id="31347" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12698" skill_level="1" name="Check Item" consume_item_id="32089">
+		<group chance="4.0">
+			<item id="847" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31352" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="12699" skill_level="1" name="Check Item" consume_item_id="32090">
+		<group chance="4.0">
+			<item id="2392" min_count="1" max_count="1"/>
+		</group>
+		<group chance="96.0">
+			<item id="31353" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+</list>

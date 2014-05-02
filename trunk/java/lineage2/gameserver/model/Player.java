@@ -77,6 +77,7 @@ import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.data.xml.holder.MultiSellHolder.MultiSellListContainer;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.data.xml.holder.PlayerTemplateHolder;
+import lineage2.gameserver.data.xml.holder.ProductHolder;
 import lineage2.gameserver.data.xml.holder.RecipeHolder;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
@@ -199,6 +200,7 @@ import lineage2.gameserver.network.serverpackets.ConfirmDlg;
 import lineage2.gameserver.network.serverpackets.EtcStatusUpdate;
 import lineage2.gameserver.network.serverpackets.ExAbnormalStatusUpdateFromTarget;
 import lineage2.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
+import lineage2.gameserver.network.serverpackets.ExAdenaInvenCount;
 import lineage2.gameserver.network.serverpackets.ExAutoSoulShot;
 import lineage2.gameserver.network.serverpackets.ExBR_AgathionEnergyInfo;
 import lineage2.gameserver.network.serverpackets.ExBR_ExtraUserInfo;
@@ -501,9 +503,9 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	private int _karma, _pkKills, _pvpKills;
 	/**
-	 * Field _hairColor. Field _hairStyle. Field _face.
+	 * Field _hairColor. Field _hairStyle. Field _face. Field _faceB. Field _hairStyleB. Field _hairColorB.
 	 */
-	private int _face, _hairStyle, _hairColor;
+	private int _face, _hairStyle, _hairColor, _faceB, _hairStyleB, _hairColorB;
 	/**
 	 * Field _fame. Field _recomLeftToday. Field _recomHave.
 	 */
@@ -1224,7 +1226,11 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	public int getFace()
 	{
-		return _face;
+		if (getNewFace() == 0)
+		{
+			return _face;
+		}
+		return _faceB;
 	}
 	
 	/**
@@ -1242,7 +1248,11 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	public int getHairColor()
 	{
-		return _hairColor;
+		if (getNewHairColor() == 0)
+		{
+			return _hairColor;
+		}
+		return _hairColorB;
 	}
 	
 	/**
@@ -1260,7 +1270,11 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	public int getHairStyle()
 	{
-		return _hairStyle;
+		if (getNewHairStyle() == 0)
+		{
+			return _hairStyle;
+		}
+		return _hairStyleB;
 	}
 	
 	/**
@@ -1270,6 +1284,58 @@ public final class Player extends Playable implements PlayerGroup
 	public void setHairStyle(int hairStyle)
 	{
 		_hairStyle = hairStyle;
+	}
+	
+	public void checkB()
+	{
+		getFace();
+		getHairStyle();
+		getHairColor();
+	}
+	
+	public int getNewFace()
+	{
+		return _faceB;
+	}
+	
+	public void setNewFace(int face)
+	{
+		_faceB = face;
+	}
+	
+	public int getNewHairColor()
+	{
+		return _hairColorB;
+	}
+	
+	public void setNewHairColor(int hairColor)
+	{
+		_hairColorB = hairColor;
+	}
+	
+	public int getNewHairStyle()
+	{
+		return _hairStyleB;
+	}
+	
+	public void setNewHairStyle(int hairStyle)
+	{
+		_hairStyleB = hairStyle;
+	}
+	
+	public int getOriginalFace()
+	{
+		return _face;
+	}
+	
+	public int getOriginalHairColor()
+	{
+		return _hairColor;
+	}
+	
+	public int getOriginalHairStyle()
+	{
+		return _hairStyle;
 	}
 	
 	/**
@@ -3889,6 +3955,15 @@ public final class Player extends Playable implements PlayerGroup
 	}
 	
 	/**
+	 * Method getBeautyShopCoin.
+	 * @return long
+	 */
+	public long getBeautyShopCoin()
+	{
+		return getInventory().getBeautyShopCoin();
+	}
+	
+	/**
 	 * Method reduceAdena.
 	 * @param adena long
 	 * @return boolean
@@ -6143,6 +6218,9 @@ public final class Player extends Playable implements PlayerGroup
 		player.setHairStyle(hairStyle);
 		player.setHairColor(hairColor);
 		player.setFace(face);
+		player.setNewHairStyle(0);
+		player.setNewHairColor(0);
+		player.setNewFace(0);
 		player.setCreateTime(System.currentTimeMillis());
 		if (!CharacterDAO.getInstance().insert(player))
 		{
@@ -6204,6 +6282,9 @@ public final class Player extends Playable implements PlayerGroup
 				player.setFace(rset.getInt("face"));
 				player.setHairStyle(rset.getInt("hairStyle"));
 				player.setHairColor(rset.getInt("hairColor"));
+				player.setNewFace(rset.getInt("faceB"));
+				player.setNewHairStyle(rset.getInt("hairStyleB"));
+				player.setNewHairColor(rset.getInt("hairColorB"));
 				player.setHeading(0);
 				player.setKarma(rset.getInt("karma"));
 				player.setPvpKills(rset.getInt("pvpkills"));
@@ -6577,10 +6658,10 @@ public final class Player extends Playable implements PlayerGroup
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("UPDATE characters SET face=?,hairStyle=?,hairColor=?,sex=?,x=?,y=?,z=?,karma=?,pvpkills=?,pkkills=?,rec_have=?,rec_left=?,rec_bonus_time=?,clanid=?,deletetime=?,title=?,accesslevel=?,online=?,leaveclan=?,deleteclan=?,nochannel=?,onlinetime=?,pledge_type=?,pledge_rank=?,lvl_joined_academy=?,apprentice=?,key_bindings=?,pcBangPoints=?,char_name=?,fame=?,bookmarks=? WHERE obj_Id=? LIMIT 1");
-				statement.setInt(1, getFace());
-				statement.setInt(2, getHairStyle());
-				statement.setInt(3, getHairColor());
+				statement = con.prepareStatement("UPDATE characters SET face=?,hairStyle=?,hairColor=?,sex=?,x=?,y=?,z=?,karma=?,pvpkills=?,pkkills=?,rec_have=?,rec_left=?,rec_bonus_time=?,clanid=?,deletetime=?,title=?,accesslevel=?,online=?,leaveclan=?,deleteclan=?,nochannel=?,onlinetime=?,pledge_type=?,pledge_rank=?,lvl_joined_academy=?,apprentice=?,key_bindings=?,pcBangPoints=?,char_name=?,fame=?,bookmarks=?,faceB=?,hairStyleB=?,hairColorB=? WHERE obj_Id=? LIMIT 1");
+				statement.setInt(1, getOriginalFace());
+				statement.setInt(2, getOriginalHairStyle());
+				statement.setInt(3, getOriginalHairColor());
 				statement.setInt(4, getSex());
 				if (_stablePoint == null)
 				{
@@ -6624,7 +6705,10 @@ public final class Player extends Playable implements PlayerGroup
 				statement.setString(29, getName());
 				statement.setInt(30, getFame());
 				statement.setInt(31, bookmarks.getCapacity());
-				statement.setInt(32, getObjectId());
+				statement.setInt(32, getNewFace());
+				statement.setInt(33, getNewHairStyle());
+				statement.setInt(34, getNewHairColor());
+				statement.setInt(35, getObjectId());
 				statement.executeUpdate();
 				GameStats.increaseUpdatePlayerBase();
 				if (!fast)
@@ -10133,12 +10217,14 @@ public final class Player extends Playable implements PlayerGroup
 					}
 				}
 			}
-			if (store)
+			
+			if (store && (oldActiveSub != null))
 			{
 				oldActiveSub.setCp(getCurrentCp());
 				oldActiveSub.setHp(getCurrentHp());
 				oldActiveSub.setMp(getCurrentMp());
 			}
+			
 			SubClass newActiveSub = _subClassList.changeActiveSubClass(subId);
 			_template = PlayerTemplateHolder.getInstance().getPlayerTemplate(getRace(), getClassId(), Sex.VALUES[getSex()]);
 			setClassId(subId, true, false);
@@ -13493,6 +13579,7 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			sendPacket(new ExBR_AgathionEnergyInfo(agathionItemsSize, items));
 		}
+		sendPacket(new ExAdenaInvenCount(this));
 	}
 	
 	/**
@@ -14789,6 +14876,72 @@ public final class Player extends Playable implements PlayerGroup
 	public ItemInstance getAppearanceExtractItem()
 	{
 		return _enchantSupportItem;
+	}
+	
+	private int[] _recentProductList = null;
+	
+	public int[] getRecentProductList()
+	{
+		if (_recentProductList == null)
+		{
+			String value = getVar(ProductHolder.RECENT_PRDCT_LIST_VAR);
+			if (value == null)
+			{
+				return null;
+			}
+			
+			String[] products_str = value.split(";");
+			int[] result = new int[0];
+			for (String element : products_str)
+			{
+				int productId = Integer.parseInt(element);
+				if (ProductHolder.getInstance().getProduct(productId) == null)
+				{
+					continue;
+				}
+				
+				result = ArrayUtils.add(result, productId);
+			}
+			_recentProductList = result;
+		}
+		return _recentProductList;
+	}
+	
+	public void updateRecentProductList(final int productId)
+	{
+		if (_recentProductList == null)
+		{
+			_recentProductList = new int[1];
+			_recentProductList[0] = productId;
+		}
+		else
+		{
+			int[] newProductList = new int[1];
+			newProductList[0] = productId;
+			for (int itemId : _recentProductList)
+			{
+				if (newProductList.length >= ProductHolder.MAX_ITEMS_IN_RECENT_LIST)
+				{
+					break;
+				}
+				
+				if (ArrayUtils.contains(newProductList, itemId))
+				{
+					continue;
+				}
+				
+				newProductList = ArrayUtils.add(newProductList, itemId);
+			}
+			
+			_recentProductList = newProductList;
+		}
+		
+		String valueToUpdate = "";
+		for (int itemId : _recentProductList)
+		{
+			valueToUpdate += itemId + ";";
+		}
+		setVar(ProductHolder.RECENT_PRDCT_LIST_VAR, valueToUpdate, -1);
 	}
 	
 }

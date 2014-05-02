@@ -12,168 +12,20 @@
  */
 package quests;
 
-import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
-import lineage2.gameserver.network.serverpackets.ExQuestNpcLogList;
 import lineage2.gameserver.scripts.ScriptFile;
-import gnu.trove.map.hash.TIntIntHashMap;
+import services.SupportMagic;
 
 public class _10353_CertificationOfValue extends Quest implements ScriptFile
 {
-	private static final int CON1 = 33155;
-	private static final int CON2 = 33406;
-	private static final int CON3 = 33358;
-	private static final int CON4 = 17624;
+	// npc
+	public static final int LILEJ = 33155;
+	public static final int KUORI = 33358;
 	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = "noquest";
-		if (event.equalsIgnoreCase("33155-08.htm") || event.equalsIgnoreCase("33406-08.htm"))
-		{
-			st.getQuest();
-		}
-		else if (event.equalsIgnoreCase("33358-04.htm"))
-		{
-			st.setCond(2);
-			st.playSound("ItemSound.quest_middle");
-		}
-		return htmltext;
-	}
-	
-	public String onTalk(NpcInstance npc, Player player)
-	{
-		String htmltext = "noquest";
-		QuestState st = player.getQuestState("10353_CertificationOfValue");
-		if (st == null)
-		{
-			return htmltext;
-		}
-		if (npc.getNpcId() == CON1)
-		{
-			switch (st.getState())
-			{
-				case 0:
-					if (player.getLevel() >= 48)
-					{
-						htmltext = "33155-01.htm";
-					}
-					else
-					{
-						htmltext = "33155-02.htm";
-						st.exitCurrentQuest(true);
-					}
-					break;
-				case 1:
-					if (st.getCond() != 1)
-					{
-						break;
-					}
-					htmltext = "33155-08.htm";
-					break;
-				case 2:
-					htmltext = "33155-03.htm";
-			}
-		}
-		else if (npc.getNpcId() == CON2)
-		{
-			switch (st.getState())
-			{
-				case 0:
-					if (player.getLevel() >= 48)
-					{
-						htmltext = "33406-01.htm";
-					}
-					else
-					{
-						htmltext = "33406-02.htm";
-						st.exitCurrentQuest(true);
-					}
-					break;
-				case 1:
-					if (st.getCond() != 1)
-					{
-						break;
-					}
-					htmltext = "33406-08.htm";
-					break;
-				case 2:
-					htmltext = "33406-03.htm";
-			}
-		}
-		else if (npc.getNpcId() == CON3)
-		{
-			if (st.isStarted())
-			{
-				if (st.getCond() == 1)
-				{
-					htmltext = "33358-01.htm";
-				}
-				else if (st.getCond() == 2)
-				{
-					htmltext = "33358-05.htm";
-				}
-				else if (st.getCond() == 3)
-				{
-					htmltext = "33358-07.htm";
-					st.addExpAndSp(3000000, 2500000);
-					player.getInventory().getItemByItemId(CON4);
-					st.exitCurrentQuest(false);
-				}
-			}
-			else if (st.isCompleted())
-			{
-				htmltext = "33358-03.htm";
-			}
-		}
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		if ((npc == null) || (st == null))
-		{
-			return null;
-		}
-		if (st.getCond() == 2)
-		{
-			TIntIntHashMap moblist = new TIntIntHashMap();
-			int _1 = st.getInt("1");
-			if (((npc.getNpcId() >= 23044) && (npc.getNpcId() <= 23068)) || ((npc.getNpcId() >= 23101) && (npc.getNpcId() <= 23112) && (_1 < 10) && Rnd.chance(10)))
-			{
-				_1++;
-				st.set("1", String.valueOf(_1));
-			}
-			moblist.put(1033349, _1);
-			st.getPlayer().sendPacket(new ExQuestNpcLogList(st));
-			if (_1 >= 10)
-			{
-				st.setCond(3);
-				st.playSound("ItemSound.quest_middle");
-			}
-		}
-		return null;
-	}
-	
-	public _10353_CertificationOfValue()
-	{
-		super(false);
-		addStartNpc(CON1, CON2);
-		addTalkId(33155, 33406, CON3);
-		for (int i = 23044; i <= 23068; i++)
-		{
-			addKillId(i);
-		}
-		for (int i = 23101; i <= 23112; i++)
-		{
-			addKillId(i);
-		}
-		addLevelCheck(48, 99);
-	}
+	public static final String A_LIST = "a_list";
 	
 	@Override
 	public void onLoad()
@@ -188,5 +40,112 @@ public class _10353_CertificationOfValue extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
+	}
+	
+	public _10353_CertificationOfValue()
+	{
+		super(true);
+		addStartNpc(LILEJ);
+		addTalkId(KUORI);
+		
+		addLevelCheck(48, 100);
+		addKillNpcWithLog(2, A_LIST, 10, 23044, 23045, 23046, 23047, 23048, 23049, 23050, 23051, 23052, 23053, 23054, 23055, 23056, 23057, 23058, 23059, 23060, 23061, 23062, 23063, 23064, 23065, 23066, 23067, 23068, 23102, 23103, 23104, 23105, 23106, 23107, 23108, 23109, 23110, 23111, 23112);
+		
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState st, NpcInstance npc)
+	{
+		Player player = st.getPlayer();
+		if (event.equalsIgnoreCase("SupportPlayer"))
+		{
+			SupportMagic.doSupportMagic(npc, player, false);
+			return "33155-6.htm";
+		}
+		
+		if (event.equalsIgnoreCase("SupportPet"))
+		{
+			SupportMagic.doSupportMagic(npc, player, true);
+			return "33155-6.htm";
+		}
+		
+		if (event.equalsIgnoreCase("Goto"))
+		{
+			st.setCond(1);
+			st.setState(STARTED);
+			st.playSound(SOUND_ACCEPT);
+			player.teleToLocation(119656, 16072, -5120);
+			return null;
+		}
+		if (event.equalsIgnoreCase("33358-3.htm"))
+		{
+			st.setCond(2);
+		}
+		return event;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState st)
+	{
+		Player player = st.getPlayer();
+		int npcId = npc.getNpcId();
+		int state = st.getState();
+		int cond = st.getCond();
+		if (player.getLevel() < 48)
+		{
+			return "33155-lvl.htm";
+		}
+		if (state == COMPLETED)
+		{
+			return "33155-comp.htm";
+		}
+		if (npcId == LILEJ)
+		{
+			if (cond == 0)
+			{
+				return "33155.htm";
+			}
+			if (cond == 1)
+			{
+				return "33155-11.htm";
+			}
+		}
+		if (npcId == KUORI)
+		{
+			if (cond == 1)
+			{
+				return "33358.htm";
+			}
+			if (cond == 2)
+			{
+				return "33358-5.htm";
+			}
+			if (cond == 3)
+			{
+				st.addExpAndSp(3000000, 2500000);
+				st.giveItems(17624, 1);
+				st.playSound(SOUND_FINISH);
+				st.exitCurrentQuest(false);
+				return "33358-6.htm";
+			}
+		}
+		return "noquest";
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState st)
+	{
+		int cond = st.getCond();
+		if (cond != 2)
+		{
+			return null;
+		}
+		boolean doneKill = updateKill(npc, st);
+		if (doneKill)
+		{
+			st.unset(A_LIST);
+			st.setCond(3);
+		}
+		return null;
 	}
 }

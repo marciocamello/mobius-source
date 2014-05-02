@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "doors.dtd">
-
 <list>
 	<door id="26190002" name="Magmell_Orbis_S.B1F.Orbis_Passage_Door" hp="150" pdef="1" mdef="1">
 		<pos x="211583" y="50508" z="-8446"/>
@@ -9,7 +8,7 @@
 		<set name="unlockable" value="false"/>
 		<set name="key" value="0"/>
 		<set name="show_hp" value="false"/>
-		<set name="geodata" value="false"/> 
+		<set name="geodata" value="false"/>
 	</door>
 	<door id="26190004" name="Magmell_Orbis_S.B1F.Orbis_Passage_Door" hp="150" pdef="1" mdef="1">
 		<pos x="207777" y="46999" z="-8645"/>
@@ -18,7 +17,7 @@
 		<set name="unlockable" value="false"/>
 		<set name="key" value="0"/>
 		<set name="show_hp" value="false"/>
-		<set name="geodata" value="false"/> 
+		<set name="geodata" value="false"/>
 	</door>
 	<door id="26190017" name="Magmell_Orbis_S.B1F.Orbis_Passage_Door" hp="150" pdef="1" mdef="1">
 		<pos x="209718" y="45696" z="-15167"/>
@@ -27,7 +26,7 @@
 		<set name="unlockable" value="false"/>
 		<set name="key" value="0"/>
 		<set name="show_hp" value="false"/>
-		<set name="geodata" value="false"/> 
+		<set name="geodata" value="false"/>
 	</door>
 	<door id="26190005" name="Magmell_Orbis_S.B1F.Orbis_Passage_Door" hp="150" pdef="1" mdef="1">
 		<pos x="207777" y="53351" z="-8645"/>
@@ -36,7 +35,7 @@
 		<set name="unlockable" value="false"/>
 		<set name="key" value="0"/>
 		<set name="show_hp" value="false"/>
-		<set name="geodata" value="false"/> 
+		<set name="geodata" value="false"/>
 	</door>
 	<door id="26190003" name="Magmell_Orbis_S.B1F.Orbis_Passage_Door" hp="150" pdef="1" mdef="1">
 		<pos x="214476" y="50507" z="-8446"/>
@@ -45,7 +44,7 @@
 		<set name="unlockable" value="false"/>
 		<set name="key" value="0"/>
 		<set name="show_hp" value="false"/>
-		<set name="geodata" value="false"/> 
+		<set name="geodata" value="false"/>
 	</door>
 	<door id="26190019" name="Magmell_Orbis_S.B1F.Orbis_Passage_Door" hp="150" pdef="1" mdef="1">
 		<pos x="211507" y="50503" z="-14655"/>
@@ -54,7 +53,7 @@
 		<set name="unlockable" value="false"/>
 		<set name="key" value="0"/>
 		<set name="show_hp" value="false"/>
-		<set name="geodata" value="false"/> 
+		<set name="geodata" value="false"/>
 	</door>
 	<door id="26190006" name="Magmell_Orbis_S.B1F.Orbis_Passage_Door" hp="150" pdef="1" mdef="1">
 		<pos x="209728" y="54656" z="-8706"/>
@@ -63,7 +62,7 @@
 		<set name="unlockable" value="false"/>
 		<set name="key" value="0"/>
 		<set name="show_hp" value="false"/>
-		<set name="geodata" value="false"/> 
+		<set name="geodata" value="false"/>
 	</door>
 	<door id="26190007" name="Magmell_Orbis_S.B1F.Orbis_Passage_Door" hp="150" pdef="1" mdef="1">
 		<pos x="212256" y="54656" z="-8708"/>
@@ -72,7 +71,7 @@
 		<set name="unlockable" value="false"/>
 		<set name="key" value="0"/>
 		<set name="show_hp" value="false"/>
-		<set name="geodata" value="false"/> 
+		<set name="geodata" value="false"/>
 	</door>
 	<door id="26190001" name="Magmell_Orbis_S.B1F.Orbis_Passage_Door" hp="150" pdef="1" mdef="1">
 		<pos x="211583" y="52035" z="-8446"/>
@@ -81,6 +80,6 @@
 		<set name="unlockable" value="false"/>
 		<set name="key" value="0"/>
 		<set name="show_hp" value="false"/>
-		<set name="geodata" value="false"/> 
+		<set name="geodata" value="false"/>
 	</door>
 </list>

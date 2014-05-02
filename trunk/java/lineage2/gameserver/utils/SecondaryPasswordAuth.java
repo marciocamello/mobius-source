@@ -17,6 +17,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.logging.Logger;
 
+import lineage2.commons.util.Base64;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.loginservercon.LoginServerCommunication;
@@ -26,8 +27,6 @@ import lineage2.gameserver.network.loginservercon.gspackets.Player2ndAuthSetPass
 import lineage2.gameserver.network.serverpackets.Ex2ndPasswordAck;
 import lineage2.gameserver.network.serverpackets.Ex2ndPasswordCheck;
 import lineage2.gameserver.network.serverpackets.Ex2ndPasswordVerify;
-
-import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
 
 /**
  * @author Mobius
@@ -262,7 +261,7 @@ public class SecondaryPasswordAuth
 			MessageDigest md = MessageDigest.getInstance("SHA");
 			byte[] raw = password.getBytes("UTF-8");
 			byte[] hash = md.digest(raw);
-			return Base64.encode(hash);
+			return Base64.encodeBytes(hash);
 		}
 		catch (NoSuchAlgorithmException e)
 		{

@@ -84,7 +84,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				{
 					if (wordList.length < 2)
 					{
-						activeChar.sendMessage("USAGE: create_item id [count]");
+						activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/itemcreation.htm"));
 						return false;
 					}
 					int item_id = Integer.parseInt(wordList[1]);

@@ -17,10 +17,15 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 
+/**
+ * @author Bonux
+ */
 public class _10505_JewelOfValakas extends Quest implements ScriptFile
 {
+	// NPC's
 	private static final int KLEIN = 31540;
 	private static final int VALAKAS = 29028;
+	// Item's
 	private static final int EMPTY_CRYSTAL = 21906;
 	private static final int FILLED_CRYSTAL_VALAKAS = 21908;
 	private static final int VACUALITE_FLOATING_STONE = 7267;
@@ -66,7 +71,7 @@ public class _10505_JewelOfValakas extends Quest implements ScriptFile
 				{
 					htmltext = "valakas_watchman_klein_q10505_00a.htm";
 				}
-				else if (st.isNowAvailableByTime())
+				else if (st.isNowAvailable())
 				{
 					htmltext = "valakas_watchman_klein_q10505_01.htm";
 				}

@@ -129,7 +129,7 @@ public class OctavisNormal extends Reflection
 		{
 			if (actor.getNpcId() == Octavis1)
 			{
-				if ((actor == null) || actor.isDead())
+				if (actor.isDead())
 				{
 					return;
 				}
@@ -150,7 +150,7 @@ public class OctavisNormal extends Reflection
 			
 			if (actor.getNpcId() == Octavis2)
 			{
-				if ((actor == null) || actor.isDead())
+				if (actor.isDead())
 				{
 					return;
 				}
@@ -169,7 +169,7 @@ public class OctavisNormal extends Reflection
 			
 			if (actor.getNpcId() == OctavisRider)
 			{
-				if ((actor == null) || actor.isDead())
+				if (actor.isDead())
 				{
 					return;
 				}

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="18001" name="Blood Queen" title="">
@@ -36,63 +36,63 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<faction name="cave_servant_clan" range="400">
-			<ignore npc_id="20236"/>	<!--Cave Servant-->
-			<ignore npc_id="20272"/>	<!--Cave Servant-->
-			<ignore npc_id="20237"/>	<!--Cave Servant Archer-->
-			<ignore npc_id="20273"/>	<!--Cave Servant Archer-->
-			<ignore npc_id="20238"/>	<!--Cave Servant Warrior-->
-			<ignore npc_id="20274"/>	<!--Cave Servant Warrior-->
-			<ignore npc_id="20239"/>	<!--Cave Servant Captain-->
-			<ignore npc_id="20275"/>	<!--Cave Servant Captain-->
-			<ignore npc_id="20240"/>	<!--Royal Cave Servant-->
-			<ignore npc_id="20276"/>	<!--Royal Cave Servant-->
-			<ignore npc_id="20246"/>	<!--Cave Keeper-->
-			<ignore npc_id="20277"/>	<!--Cave Keeper-->
-			<ignore npc_id="20134"/>	<!--Cave Maiden-->
-			<ignore npc_id="20287"/>	<!--Cave Maiden-->
+			<ignore npc_id="20236"/>
+			<ignore npc_id="20272"/>
+			<ignore npc_id="20237"/>
+			<ignore npc_id="20273"/>
+			<ignore npc_id="20238"/>
+			<ignore npc_id="20274"/>
+			<ignore npc_id="20239"/>
+			<ignore npc_id="20275"/>
+			<ignore npc_id="20240"/>
+			<ignore npc_id="20276"/>
+			<ignore npc_id="20246"/>
+			<ignore npc_id="20277"/>
+			<ignore npc_id="20134"/>
+			<ignore npc_id="20287"/>
 		</faction>
 		<skills>
-			<skill id="4002" level="6"/>	<!--NPC HP Drain-->
-			<skill id="4035" level="6"/>	<!--Poison-->
-			<skill id="4039" level="6"/>	<!--NPC MP Drain-->
-			<skill id="4278" level="1"/>	<!--Dark Attack-->
-			<skill id="4333" level="5"/>	<!--Resist Dark Attack-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4002" level="6"/>
+			<skill id="4035" level="6"/>
+			<skill id="4039" level="6"/>
+			<skill id="4278" level="1"/>
+			<skill id="4333" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="765" max="1528" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="765" max="1528" chance="100.0000"/>
 			</group>
 			<group chance="0.6946">
-				<reward item_id="2397" min="1" max="1" chance="0.1646"/>	<!--Tunic of Zubei-->
-				<reward item_id="4069" min="1" max="1" chance="30.2620"/>	<!--Tunic of Zubei Fabric-->
-				<reward item_id="2402" min="1" max="1" chance="0.2638"/>	<!--Stockings of Zubei-->
-				<reward item_id="4070" min="1" max="1" chance="45.9482"/>	<!--Stockings of Zubei Fabric-->
-				<reward item_id="2406" min="1" max="1" chance="0.1126"/>	<!--Avadon Robe-->
-				<reward item_id="4071" min="1" max="1" chance="23.2488"/>	<!--Avadon Robe Fabric-->
+				<reward item_id="2397" min="1" max="1" chance="0.1646"/>
+				<reward item_id="4069" min="1" max="1" chance="30.2620"/>
+				<reward item_id="2402" min="1" max="1" chance="0.2638"/>
+				<reward item_id="4070" min="1" max="1" chance="45.9482"/>
+				<reward item_id="2406" min="1" max="1" chance="0.1126"/>
+				<reward item_id="4071" min="1" max="1" chance="23.2488"/>
 			</group>
 			<group chance="28.6912">
-				<reward item_id="1864" min="1" max="1" chance="62.1614"/>	<!--Stem-->
-				<reward item_id="1866" min="1" max="1" chance="20.7205"/>	<!--Suede-->
-				<reward item_id="1878" min="1" max="1" chance="12.4323"/>	<!--Braided Hemp-->
-				<reward item_id="1885" min="1" max="1" chance="2.5901"/>	<!--High-Grade Suede-->
-				<reward item_id="1889" min="1" max="1" chance="2.0720"/>	<!--Compound Braid-->
-				<reward item_id="4197" min="1" max="1" chance="0.0237"/>	<!--Recipe: Demon's Dagger (100%)-->
+				<reward item_id="1864" min="1" max="1" chance="62.1614"/>
+				<reward item_id="1866" min="1" max="1" chance="20.7205"/>
+				<reward item_id="1878" min="1" max="1" chance="12.4323"/>
+				<reward item_id="1885" min="1" max="1" chance="2.5901"/>
+				<reward item_id="1889" min="1" max="1" chance="2.0720"/>
+				<reward item_id="4197" min="1" max="1" chance="0.0237"/>
 			</group>
 			<group chance="20.0">
-				<reward item_id="1419" min="1" max="1" chance="100.0000"/>	<!--Blood Mark-->
+				<reward item_id="1419" min="1" max="1" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="1806" min="1" max="1" chance="1.0868"/>	<!--Recipe: Soulshot (B-Grade)-->
+			<reward item_id="1806" min="1" max="1" chance="1.0868"/>
 		</rewardlist>
 		<attributes>
 			<attack attribute="unholy" value="20"/>
@@ -138,36 +138,36 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<faction name="cave_servant_clan" range="300">
-			<ignore npc_id="20236"/>	<!--Cave Servant-->
-			<ignore npc_id="20272"/>	<!--Cave Servant-->
-			<ignore npc_id="20237"/>	<!--Cave Servant Archer-->
-			<ignore npc_id="20273"/>	<!--Cave Servant Archer-->
-			<ignore npc_id="20238"/>	<!--Cave Servant Warrior-->
-			<ignore npc_id="20274"/>	<!--Cave Servant Warrior-->
-			<ignore npc_id="20239"/>	<!--Cave Servant Captain-->
-			<ignore npc_id="20275"/>	<!--Cave Servant Captain-->
-			<ignore npc_id="20240"/>	<!--Royal Cave Servant-->
-			<ignore npc_id="20276"/>	<!--Royal Cave Servant-->
-			<ignore npc_id="20246"/>	<!--Cave Keeper-->
-			<ignore npc_id="20277"/>	<!--Cave Keeper-->
-			<ignore npc_id="20134"/>	<!--Cave Maiden-->
-			<ignore npc_id="20287"/>	<!--Cave Maiden-->
+			<ignore npc_id="20236"/>
+			<ignore npc_id="20272"/>
+			<ignore npc_id="20237"/>
+			<ignore npc_id="20273"/>
+			<ignore npc_id="20238"/>
+			<ignore npc_id="20274"/>
+			<ignore npc_id="20239"/>
+			<ignore npc_id="20275"/>
+			<ignore npc_id="20240"/>
+			<ignore npc_id="20276"/>
+			<ignore npc_id="20246"/>
+			<ignore npc_id="20277"/>
+			<ignore npc_id="20134"/>
+			<ignore npc_id="20287"/>
 		</faction>
 		<skills>
-			<skill id="4002" level="6"/>	<!--NPC HP Drain-->
-			<skill id="4035" level="6"/>	<!--Poison-->
-			<skill id="4039" level="6"/>	<!--NPC MP Drain-->
-			<skill id="4278" level="1"/>	<!--Dark Attack-->
-			<skill id="4333" level="5"/>	<!--Resist Dark Attack-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4002" level="6"/>
+			<skill id="4035" level="6"/>
+			<skill id="4039" level="6"/>
+			<skill id="4278" level="1"/>
+			<skill id="4333" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="20"/>
@@ -213,18 +213,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="4"/>
 		</skills>
 		<rewardlist type="SWEEP">
-			<reward item_id="1871" min="1" max="1" chance="0.9797"/>	<!--Charcoal-->
+			<reward item_id="1871" min="1" max="1" chance="0.9797"/>
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -270,18 +270,18 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="2"/>
+			<skill id="4444" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -327,15 +327,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -382,23 +382,23 @@
 		<set name="type" value="Monster"/>
 		<faction name="malruk_clan" range="300"/>
 		<equip>
-			<rhand item_id="1472"/>	<!--Dreadbane-->
+			<rhand item_id="1472"/>
 		</equip>
 		<skills>
-			<skill id="4002" level="6"/>	<!--NPC HP Drain-->
-			<skill id="4046" level="6"/>	<!--Sleep-->
-			<skill id="4098" level="6"/>	<!--Silence-->
-			<skill id="4275" level="2"/>	<!--Sacred Attack Weak Point-->
-			<skill id="4278" level="1"/>	<!--Dark Attack-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="1"/>	<!--Undead-->
+			<skill id="4002" level="6"/>
+			<skill id="4046" level="6"/>
+			<skill id="4098" level="6"/>
+			<skill id="4275" level="2"/>
+			<skill id="4278" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="20"/>
@@ -445,20 +445,20 @@
 		<set name="type" value="Monster"/>
 		<faction name="malruk_clan" range="300"/>
 		<skills>
-			<skill id="4002" level="6"/>	<!--NPC HP Drain-->
-			<skill id="4047" level="6"/>	<!--Hold-->
-			<skill id="4118" level="6"/>	<!--Paralysis-->
-			<skill id="4278" level="1"/>	<!--Dark Attack-->
-			<skill id="4333" level="5"/>	<!--Resist Dark Attack-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4002" level="6"/>
+			<skill id="4047" level="6"/>
+			<skill id="4118" level="6"/>
+			<skill id="4278" level="1"/>
+			<skill id="4333" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="20"/>
@@ -504,21 +504,21 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<skills>
-			<skill id="4047" level="7"/>	<!--Hold-->
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4085" level="1"/>	<!--Critical Damage-->
-			<skill id="4086" level="1"/>	<!--Critical Chance-->
-			<skill id="4278" level="1"/>	<!--Dark Attack-->
-			<skill id="4333" level="5"/>	<!--Resist Dark Attack-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="14"/>	<!--Strong P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="9"/>	<!--Demons-->
+			<skill id="4047" level="7"/>
+			<skill id="4071" level="5"/>
+			<skill id="4085" level="1"/>
+			<skill id="4086" level="1"/>
+			<skill id="4278" level="1"/>
+			<skill id="4333" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="14"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="9"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="20"/>
@@ -565,24 +565,24 @@
 		<set name="type" value="Monster"/>
 		<faction name="mercenary_siege_clan" range="500"/>
 		<equip>
-			<rhand item_id="127"/>	<!--Crimson Sword-->
+			<rhand item_id="127"/>
 		</equip>
 		<skills>
-			<skill id="4078" level="3"/>	<!--NPC Flamestrike-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
+			<skill id="4078" level="3"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4444" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -628,22 +628,22 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="218"/>	<!--Throwing Knife-->
+			<rhand item_id="218"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4444" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -689,20 +689,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -748,28 +748,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="125"/>	<!--Spinebone Sword-->
+			<rhand item_id="125"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4087" level="3"/>	<!--NPC Blaze-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4087" level="3"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="148" max="293" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="148" max="293" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -816,28 +816,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="316"/>	<!--Sage's Blood-->
+			<rhand item_id="316"/>
 		</equip>
 		<skills>
-			<skill id="4151" level="2"/>	<!--NPC Windstrike - Magic-->
-			<skill id="4160" level="2"/>	<!--NPC Aura Burn - Magic-->
-			<skill id="4225" level="5"/>	<!--Resist Stun Attacks-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="15"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4151" level="2"/>
+			<skill id="4160" level="2"/>
+			<skill id="4225" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="15"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="148" max="293" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="148" max="293" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -884,28 +884,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="292"/>	<!--Pike-->
+			<rhand item_id="292"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4244" level="3"/>	<!--NPC Wild Sweep-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="15"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4244" level="3"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="15"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="228" max="455" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="228" max="455" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -952,27 +952,27 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="158"/>	<!--Tarbar-->
+			<rhand item_id="158"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="3"/>	<!--NPC Strike-->
-			<skill id="4225" level="5"/>	<!--Resist Stun Attacks-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4032" level="3"/>
+			<skill id="4225" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="194" max="387" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="194" max="387" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -1019,20 +1019,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="273"/>	<!--Composite Bow-->
+			<rhand item_id="273"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1078,25 +1078,25 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="129"/>	<!--Sword of Revolution-->
+			<rhand item_id="129"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="4"/>	<!--NPC Strike-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4032" level="4"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="194" max="387" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="194" max="387" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -1143,27 +1143,27 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="72"/>	<!--Stormbringer-->
+			<rhand item_id="72"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4073" level="4"/>	<!--Stun-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4073" level="4"/>
+			<skill id="4273" level="3"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="253" max="504" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="253" max="504" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -1210,24 +1210,24 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="72"/>	<!--Stormbringer-->
+			<rhand item_id="72"/>
 		</equip>
 		<skills>
-			<skill id="4078" level="4"/>	<!--NPC Flamestrike-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
+			<skill id="4078" level="4"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4444" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1273,22 +1273,22 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="223"/>	<!--Kukuri-->
+			<rhand item_id="223"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4444" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1334,20 +1334,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="275"/>	<!--Long Bow-->
+			<rhand item_id="275"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1393,28 +1393,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="127"/>	<!--Crimson Sword-->
+			<rhand item_id="127"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4087" level="4"/>	<!--NPC Blaze-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4087" level="4"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="265" max="529" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="265" max="529" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -1461,28 +1461,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="316"/>	<!--Sage's Blood-->
+			<rhand item_id="316"/>
 		</equip>
 		<skills>
-			<skill id="4151" level="4"/>	<!--NPC Windstrike - Magic-->
-			<skill id="4160" level="4"/>	<!--NPC Aura Burn - Magic-->
-			<skill id="4225" level="5"/>	<!--Resist Stun Attacks-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="15"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4151" level="4"/>
+			<skill id="4160" level="4"/>
+			<skill id="4225" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="15"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="265" max="529" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="265" max="529" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -1529,28 +1529,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="297"/>	<!--Glaive-->
+			<rhand item_id="297"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4244" level="4"/>	<!--NPC Wild Sweep-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="15"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4244" level="4"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="15"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="381" max="761" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="381" max="761" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -1597,27 +1597,27 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="172"/>	<!--Heavy Bone Club-->
+			<rhand item_id="172"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="4"/>	<!--NPC Strike-->
-			<skill id="4225" level="5"/>	<!--Resist Stun Attacks-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4032" level="4"/>
+			<skill id="4225" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="335" max="669" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="335" max="669" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -1664,20 +1664,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="277"/>	<!--Dark Elven Bow-->
+			<rhand item_id="277"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1723,25 +1723,25 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="74"/>	<!--Katana-->
+			<rhand item_id="74"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="5"/>	<!--NPC Strike-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4032" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="335" max="669" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="335" max="669" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -1788,27 +1788,27 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="133"/>	<!--Raid Sword-->
+			<rhand item_id="133"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4073" level="5"/>	<!--Stun-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4073" level="5"/>
+			<skill id="4273" level="3"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="414" max="829" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="414" max="829" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -1855,24 +1855,24 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="133"/>	<!--Raid Sword-->
+			<rhand item_id="133"/>
 		</equip>
 		<skills>
-			<skill id="4078" level="5"/>	<!--NPC Flamestrike-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
+			<skill id="4078" level="5"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4444" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1918,22 +1918,22 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="226"/>	<!--Cursed Dagger-->
+			<rhand item_id="226"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4444" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1979,20 +1979,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="278"/>	<!--Gastraphetes-->
+			<rhand item_id="278"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2038,28 +2038,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="72"/>	<!--Stormbringer-->
+			<rhand item_id="72"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4087" level="5"/>	<!--NPC Blaze-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4087" level="5"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="431" max="863" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="431" max="863" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2106,28 +2106,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="316"/>	<!--Sage's Blood-->
+			<rhand item_id="316"/>
 		</equip>
 		<skills>
-			<skill id="4151" level="5"/>	<!--NPC Windstrike - Magic-->
-			<skill id="4160" level="5"/>	<!--NPC Aura Burn - Magic-->
-			<skill id="4225" level="5"/>	<!--Resist Stun Attacks-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="15"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4151" level="5"/>
+			<skill id="4160" level="5"/>
+			<skill id="4225" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="15"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="431" max="863" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="431" max="863" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2174,28 +2174,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="301"/>	<!--Scorpion-->
+			<rhand item_id="301"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4244" level="5"/>	<!--NPC Wild Sweep-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="15"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4244" level="5"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="15"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="585" max="1171" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="585" max="1171" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2242,27 +2242,27 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="91"/>	<!--Heavy War Axe-->
+			<rhand item_id="91"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="5"/>	<!--NPC Strike-->
-			<skill id="4225" level="5"/>	<!--Resist Stun Attacks-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4032" level="5"/>
+			<skill id="4225" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="525" max="1049" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="525" max="1049" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2309,20 +2309,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="282"/>	<!--Elemental Bow-->
+			<rhand item_id="282"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2368,25 +2368,25 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="135"/>	<!--Samurai Longsword-->
+			<rhand item_id="135"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="6"/>	<!--NPC Strike-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4032" level="6"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="525" max="1049" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="525" max="1049" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2433,27 +2433,27 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="79"/>	<!--Sword of Damascus-->
+			<rhand item_id="79"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4073" level="6"/>	<!--Stun-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4073" level="6"/>
+			<skill id="4273" level="3"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="629" max="1257" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="629" max="1257" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2500,24 +2500,24 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="79"/>	<!--Sword of Damascus-->
+			<rhand item_id="79"/>
 		</equip>
 		<skills>
-			<skill id="4078" level="6"/>	<!--NPC Flamestrike-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
+			<skill id="4078" level="6"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4444" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2563,22 +2563,22 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="234"/>	<!--Demon's Dagger-->
+			<rhand item_id="234"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4444" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2624,20 +2624,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="283"/>	<!--Akat Long Bow-->
+			<rhand item_id="283"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2683,28 +2683,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="133"/>	<!--Raid Sword-->
+			<rhand item_id="133"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4087" level="6"/>	<!--NPC Blaze-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4087" level="6"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="651" max="1302" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="651" max="1302" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2751,28 +2751,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="316"/>	<!--Sage's Blood-->
+			<rhand item_id="316"/>
 		</equip>
 		<skills>
-			<skill id="4151" level="6"/>	<!--NPC Windstrike - Magic-->
-			<skill id="4160" level="6"/>	<!--NPC Aura Burn - Magic-->
-			<skill id="4225" level="5"/>	<!--Resist Stun Attacks-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="15"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4151" level="6"/>
+			<skill id="4160" level="6"/>
+			<skill id="4225" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="15"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="651" max="1302" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="651" max="1302" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2819,28 +2819,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="97"/>	<!--Lance-->
+			<rhand item_id="97"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4244" level="6"/>	<!--NPC Wild Sweep-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="15"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4244" level="6"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="15"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="848" max="1697" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="848" max="1697" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2887,27 +2887,27 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="2503"/>	<!--Yaksa Mace-->
+			<rhand item_id="2503"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="6"/>	<!--NPC Strike-->
-			<skill id="4225" level="5"/>	<!--Resist Stun Attacks-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4032" level="6"/>
+			<skill id="4225" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="770" max="1541" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="770" max="1541" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2954,20 +2954,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="286"/>	<!--Eminence Bow-->
+			<rhand item_id="286"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3013,25 +3013,25 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="142"/>	<!--Keshanberk-->
+			<rhand item_id="142"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="7"/>	<!--NPC Strike-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4032" level="7"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="770" max="1541" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="770" max="1541" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -3078,27 +3078,27 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
+			<rhand item_id="2500"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4073" level="7"/>	<!--Stun-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4073" level="7"/>
+			<skill id="4273" level="3"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="902" max="1804" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="902" max="1804" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -3145,24 +3145,24 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
+			<rhand item_id="2500"/>
 		</equip>
 		<skills>
-			<skill id="4078" level="7"/>	<!--NPC Flamestrike-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
+			<skill id="4078" level="7"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4444" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3208,22 +3208,22 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="236"/>	<!--Soul Separator-->
+			<rhand item_id="236"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4444" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3269,20 +3269,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="287"/>	<!--Bow of Peril-->
+			<rhand item_id="287"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3328,28 +3328,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="79"/>	<!--Sword of Damascus-->
+			<rhand item_id="79"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4087" level="7"/>	<!--NPC Blaze-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4087" level="7"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="902" max="1804" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="902" max="1804" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -3396,28 +3396,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="316"/>	<!--Sage's Blood-->
+			<rhand item_id="316"/>
 		</equip>
 		<skills>
-			<skill id="4151" level="7"/>	<!--NPC Windstrike - Magic-->
-			<skill id="4160" level="7"/>	<!--NPC Aura Burn - Magic-->
-			<skill id="4225" level="5"/>	<!--Resist Stun Attacks-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="15"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4151" level="7"/>
+			<skill id="4160" level="7"/>
+			<skill id="4225" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="15"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="902" max="1804" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="902" max="1804" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -3464,28 +3464,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="305"/>	<!--Tallum Glaive-->
+			<rhand item_id="305"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4244" level="7"/>	<!--NPC Wild Sweep-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="15"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4244" level="7"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="15"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="902" max="1804" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="902" max="1804" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -3532,27 +3532,27 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="175"/>	<!--Art of Battle Axe-->
+			<rhand item_id="175"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="7"/>	<!--NPC Strike-->
-			<skill id="4225" level="5"/>	<!--Resist Stun Attacks-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4032" level="7"/>
+			<skill id="4225" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="902" max="1804" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="902" max="1804" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -3599,20 +3599,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="289"/>	<!--Soul Bow-->
+			<rhand item_id="289"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3658,25 +3658,25 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="151"/>	<!--Sword of Miracles-->
+			<rhand item_id="151"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="7"/>	<!--NPC Strike-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4032" level="7"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="902" max="1804" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="902" max="1804" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -3723,27 +3723,27 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
+			<rhand item_id="2500"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4073" level="7"/>	<!--Stun-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4073" level="7"/>
+			<skill id="4273" level="3"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="902" max="1804" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="902" max="1804" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -3790,24 +3790,24 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="127"/>	<!--Crimson Sword-->
+			<rhand item_id="127"/>
 		</equip>
 		<skills>
-			<skill id="4078" level="3"/>	<!--NPC Flamestrike-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
+			<skill id="4078" level="3"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4444" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3853,22 +3853,22 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="218"/>	<!--Throwing Knife-->
+			<rhand item_id="218"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4444" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3914,20 +3914,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3973,28 +3973,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="125"/>	<!--Spinebone Sword-->
+			<rhand item_id="125"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4087" level="3"/>	<!--NPC Blaze-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4087" level="3"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="148" max="293" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="148" max="293" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4041,28 +4041,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="316"/>	<!--Sage's Blood-->
+			<rhand item_id="316"/>
 		</equip>
 		<skills>
-			<skill id="4151" level="2"/>	<!--NPC Windstrike - Magic-->
-			<skill id="4160" level="2"/>	<!--NPC Aura Burn - Magic-->
-			<skill id="4225" level="5"/>	<!--Resist Stun Attacks-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="15"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4151" level="2"/>
+			<skill id="4160" level="2"/>
+			<skill id="4225" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="15"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="148" max="293" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="148" max="293" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4109,28 +4109,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="292"/>	<!--Pike-->
+			<rhand item_id="292"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4244" level="3"/>	<!--NPC Wild Sweep-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="15"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4244" level="3"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="15"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="228" max="455" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="228" max="455" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4177,27 +4177,27 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="158"/>	<!--Tarbar-->
+			<rhand item_id="158"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="3"/>	<!--NPC Strike-->
-			<skill id="4225" level="5"/>	<!--Resist Stun Attacks-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4032" level="3"/>
+			<skill id="4225" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="194" max="387" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="194" max="387" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4244,20 +4244,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="273"/>	<!--Composite Bow-->
+			<rhand item_id="273"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4303,25 +4303,25 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="129"/>	<!--Sword of Revolution-->
+			<rhand item_id="129"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="4"/>	<!--NPC Strike-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4032" level="4"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="194" max="387" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="194" max="387" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4368,27 +4368,27 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="72"/>	<!--Stormbringer-->
+			<rhand item_id="72"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4073" level="4"/>	<!--Stun-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4073" level="4"/>
+			<skill id="4273" level="3"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="253" max="504" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="253" max="504" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4435,24 +4435,24 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="72"/>	<!--Stormbringer-->
+			<rhand item_id="72"/>
 		</equip>
 		<skills>
-			<skill id="4078" level="4"/>	<!--NPC Flamestrike-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
+			<skill id="4078" level="4"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4444" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4498,22 +4498,22 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="223"/>	<!--Kukuri-->
+			<rhand item_id="223"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4444" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4559,20 +4559,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="275"/>	<!--Long Bow-->
+			<rhand item_id="275"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4618,28 +4618,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="127"/>	<!--Crimson Sword-->
+			<rhand item_id="127"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4087" level="4"/>	<!--NPC Blaze-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4087" level="4"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="265" max="529" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="265" max="529" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4686,28 +4686,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="316"/>	<!--Sage's Blood-->
+			<rhand item_id="316"/>
 		</equip>
 		<skills>
-			<skill id="4151" level="4"/>	<!--NPC Windstrike - Magic-->
-			<skill id="4160" level="4"/>	<!--NPC Aura Burn - Magic-->
-			<skill id="4225" level="5"/>	<!--Resist Stun Attacks-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="15"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4151" level="4"/>
+			<skill id="4160" level="4"/>
+			<skill id="4225" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="15"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="265" max="529" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="265" max="529" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4754,28 +4754,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="297"/>	<!--Glaive-->
+			<rhand item_id="297"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4244" level="4"/>	<!--NPC Wild Sweep-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="15"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4244" level="4"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="15"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="381" max="761" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="381" max="761" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4822,27 +4822,27 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="172"/>	<!--Heavy Bone Club-->
+			<rhand item_id="172"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="4"/>	<!--NPC Strike-->
-			<skill id="4225" level="5"/>	<!--Resist Stun Attacks-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4032" level="4"/>
+			<skill id="4225" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="335" max="669" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="335" max="669" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4889,20 +4889,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="277"/>	<!--Dark Elven Bow-->
+			<rhand item_id="277"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4948,25 +4948,25 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="74"/>	<!--Katana-->
+			<rhand item_id="74"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="5"/>	<!--NPC Strike-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4032" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="335" max="669" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="335" max="669" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -5013,27 +5013,27 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="133"/>	<!--Raid Sword-->
+			<rhand item_id="133"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4073" level="5"/>	<!--Stun-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4073" level="5"/>
+			<skill id="4273" level="3"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="414" max="829" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="414" max="829" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -5080,24 +5080,24 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="133"/>	<!--Raid Sword-->
+			<rhand item_id="133"/>
 		</equip>
 		<skills>
-			<skill id="4078" level="5"/>	<!--NPC Flamestrike-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
+			<skill id="4078" level="5"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4444" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -5143,22 +5143,22 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="226"/>	<!--Cursed Dagger-->
+			<rhand item_id="226"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4444" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -5204,20 +5204,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="278"/>	<!--Gastraphetes-->
+			<rhand item_id="278"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -5263,28 +5263,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="72"/>	<!--Stormbringer-->
+			<rhand item_id="72"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4087" level="5"/>	<!--NPC Blaze-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4087" level="5"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="431" max="863" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="431" max="863" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -5331,28 +5331,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="316"/>	<!--Sage's Blood-->
+			<rhand item_id="316"/>
 		</equip>
 		<skills>
-			<skill id="4151" level="5"/>	<!--NPC Windstrike - Magic-->
-			<skill id="4160" level="5"/>	<!--NPC Aura Burn - Magic-->
-			<skill id="4225" level="5"/>	<!--Resist Stun Attacks-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="15"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4151" level="5"/>
+			<skill id="4160" level="5"/>
+			<skill id="4225" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="15"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="431" max="863" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="431" max="863" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -5399,28 +5399,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="301"/>	<!--Scorpion-->
+			<rhand item_id="301"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4244" level="5"/>	<!--NPC Wild Sweep-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="15"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4244" level="5"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="15"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="585" max="1171" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="585" max="1171" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -5467,27 +5467,27 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="91"/>	<!--Heavy War Axe-->
+			<rhand item_id="91"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="5"/>	<!--NPC Strike-->
-			<skill id="4225" level="5"/>	<!--Resist Stun Attacks-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4032" level="5"/>
+			<skill id="4225" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="525" max="1049" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="525" max="1049" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -5534,20 +5534,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="282"/>	<!--Elemental Bow-->
+			<rhand item_id="282"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -5593,25 +5593,25 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="135"/>	<!--Samurai Longsword-->
+			<rhand item_id="135"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="6"/>	<!--NPC Strike-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4032" level="6"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="525" max="1049" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="525" max="1049" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -5658,27 +5658,27 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="79"/>	<!--Sword of Damascus-->
+			<rhand item_id="79"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4073" level="6"/>	<!--Stun-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4073" level="6"/>
+			<skill id="4273" level="3"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="629" max="1257" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="629" max="1257" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -5725,24 +5725,24 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="79"/>	<!--Sword of Damascus-->
+			<rhand item_id="79"/>
 		</equip>
 		<skills>
-			<skill id="4078" level="6"/>	<!--NPC Flamestrike-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
+			<skill id="4078" level="6"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4444" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -5788,22 +5788,22 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="234"/>	<!--Demon's Dagger-->
+			<rhand item_id="234"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4444" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -5849,20 +5849,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="283"/>	<!--Akat Long Bow-->
+			<rhand item_id="283"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -5908,28 +5908,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="133"/>	<!--Raid Sword-->
+			<rhand item_id="133"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4087" level="6"/>	<!--NPC Blaze-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4087" level="6"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="651" max="1302" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="651" max="1302" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -5976,28 +5976,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="316"/>	<!--Sage's Blood-->
+			<rhand item_id="316"/>
 		</equip>
 		<skills>
-			<skill id="4151" level="6"/>	<!--NPC Windstrike - Magic-->
-			<skill id="4160" level="6"/>	<!--NPC Aura Burn - Magic-->
-			<skill id="4225" level="5"/>	<!--Resist Stun Attacks-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="15"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4151" level="6"/>
+			<skill id="4160" level="6"/>
+			<skill id="4225" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="15"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="651" max="1302" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="651" max="1302" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -6044,28 +6044,28 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="97"/>	<!--Lance-->
+			<rhand item_id="97"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4244" level="7"/>	<!--NPC Wild Sweep-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="15"/>	<!--Strong M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4244" level="7"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="15"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="848" max="1697" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="848" max="1697" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -6112,27 +6112,27 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="2503"/>	<!--Yaksa Mace-->
+			<rhand item_id="2503"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="6"/>	<!--NPC Strike-->
-			<skill id="4225" level="5"/>	<!--Resist Stun Attacks-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="7"/>	<!--Daggers-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4445" level="2"/>	<!--Greater Resist Spear Weapons-->
+			<skill id="4032" level="6"/>
+			<skill id="4225" level="5"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="7"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4445" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="770" max="1541" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="770" max="1541" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -6179,20 +6179,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="286"/>	<!--Eminence Bow-->
+			<rhand item_id="286"/>
 		</equip>
 		<skills>
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="3"/>	<!--Light Armor Type-->
-			<skill id="4415" level="9"/>	<!--Bows-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="3"/>
+			<skill id="4415" level="9"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -6238,25 +6238,25 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="142"/>	<!--Keshanberk-->
+			<rhand item_id="142"/>
 		</equip>
 		<skills>
-			<skill id="4032" level="7"/>	<!--NPC Strike-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4032" level="7"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="770" max="1541" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="770" max="1541" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -6303,27 +6303,27 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
+			<rhand item_id="2500"/>
 		</equip>
 		<skills>
-			<skill id="4071" level="5"/>	<!--Resist Bow/Crossbow Weapons-->
-			<skill id="4073" level="7"/>	<!--Stun-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
+			<skill id="4071" level="5"/>
+			<skill id="4073" level="7"/>
+			<skill id="4273" level="3"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="902" max="1804" chance="100.0000"/>	<!--Adena-->
+				<reward item_id="57" min="902" max="1804" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -6370,24 +6370,24 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
+			<rhand item_id="2500"/>
 		</equip>
 		<skills>
-			<skill id="4078" level="8"/>	<!--NPC Flamestrike-->
-			<skill id="4273" level="3"/>	<!--Resist Daggers/Rapier Weapon-->
-			<skill id="4274" level="1"/>	<!--Blunt Weapon Weak Point-->
-			<skill id="4408" level="1"/>	<!--HP Increase (1x)-->
-			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
-			<skill id="4410" level="11"/>	<!--Average P. Atk.-->
-			<skill id="4411" level="11"/>	<!--Average M. Atk.-->
-			<skill id="4412" level="11"/>	<!--Average P. Def.-->
-			<skill id="4413" level="11"/>	<!--Average M. Def.-->
-			<skill id="4414" level="2"/>	<!--Standard Type-->
-			<skill id="4415" level="3"/>	<!--One-handed Sword-->
-			<skill id="4416" level="6"/>	<!--Humanoids-->
-			<skill id="4438" level="2"/>	<!--Greater Resist Sleep-->
-			<skill id="4439" level="2"/>	<!--Greater Resist Hold-->
-			<skill id="4444" level="2"/>	<!--Higher Resist Bow/Crossbow Weapons-->
+			<skill id="4078" level="8"/>
+			<skill id="4273" level="3"/>
+			<skill id="4274" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
+			<skill id="4416" level="6"/>
+			<skill id="4438" level="2"/>
+			<skill id="4439" level="2"/>
+			<skill id="4444" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>

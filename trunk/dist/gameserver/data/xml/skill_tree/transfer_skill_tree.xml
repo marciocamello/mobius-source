@@ -1,9 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "tree.dtd">
-<!--Create by VISTALL-->
 <list>
 	<transfer_skill_tree>
-		<!--Cardinal-->
 		<class id="97">
 			<skill id="1013" level="32" name="Recharge" min_level="76" item_id="15307" item_count="1"/>
 			<skill id="1087" level="3" name="Agility" min_level="76" item_id="15307" item_count="1"/>
@@ -30,7 +28,6 @@
 			<skill id="1268" level="4" name="Vampiric Rage" min_level="76" item_id="15307" item_count="1"/>
 			<skill id="1189" level="3" name="Resist Wind" min_level="76" item_id="15307" item_count="1"/>
 		</class>
-		<!--Eva Saints-->
 		<class id="105">
 			<skill id="1077" level="3" name="Focus" min_level="76" item_id="15308" item_count="1"/>
 			<skill id="1075" level="15" name="Peace" min_level="76" item_id="15308" item_count="1"/>
@@ -57,7 +54,6 @@
 			<skill id="1539" level="4" name="Stigma of Shilien" min_level="76" item_id="15308" item_count="1"/>
 			<skill id="1189" level="3" name="Resist Wind" min_level="76" item_id="15308" item_count="1"/>
 		</class>
-		<!--Shillen Saints-->
 		<class id="112">
 			<skill id="1044" level="3" name="Regeneration" min_level="76" item_id="15309" item_count="1"/>
 			<skill id="1075" level="15" name="Peace" min_level="76" item_id="15309" item_count="1"/>

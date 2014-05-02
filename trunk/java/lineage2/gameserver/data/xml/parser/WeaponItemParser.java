@@ -65,7 +65,7 @@ public final class WeaponItemParser extends StatParser<ItemHolder>
 	@Override
 	public File getXMLDir()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/xml/stats/items/weapon/");
+		return new File(Config.DATAPACK_ROOT, "data/xml/items/weapon/");
 	}
 	
 	/**
@@ -175,7 +175,7 @@ public final class WeaponItemParser extends StatParser<ItemHolder>
 						int id = Integer.parseInt(nextElement.attributeValue("id"));
 						int level = Integer.parseInt(nextElement.attributeValue("level"));
 						Skill skill = SkillTable.getInstance().getInfo(id, level);
-						if (skill != null)
+						if ((skill != null) && (template != null))
 						{
 							template.attachSkill(skill);
 						}
@@ -190,7 +190,7 @@ public final class WeaponItemParser extends StatParser<ItemHolder>
 					int id = Integer.parseInt(subElement.attributeValue("id"));
 					int level = Integer.parseInt(subElement.attributeValue("level"));
 					Skill skill = SkillTable.getInstance().getInfo(id, level);
-					if (skill != null)
+					if ((skill != null) && (template != null))
 					{
 						template.setEnchant4Skill(skill);
 					}
@@ -200,7 +200,7 @@ public final class WeaponItemParser extends StatParser<ItemHolder>
 					int id = Integer.parseInt(subElement.attributeValue("id"));
 					int level = Integer.parseInt(subElement.attributeValue("level"));
 					Skill skill = SkillTable.getInstance().getInfo(id, level);
-					if (skill != null)
+					if ((skill != null) && (template != null))
 					{
 						template.setUnequipeSkill(skill);
 					}
@@ -208,14 +208,14 @@ public final class WeaponItemParser extends StatParser<ItemHolder>
 				else if (subName.equalsIgnoreCase("cond"))
 				{
 					Condition condition = parseFirstCond(subElement);
-					if (condition != null)
+					if ((condition != null) && (template != null))
 					{
 						int msgId = parseNumber(subElement.attributeValue("msgId")).intValue();
 						condition.setSystemMsg(msgId);
 						template.setCondition(condition);
 					}
 				}
-				else if (subName.equalsIgnoreCase("attributes"))
+				else if (subName.equalsIgnoreCase("attributes") && (template != null))
 				{
 					int[] attributes = new int[6];
 					for (Iterator<org.dom4j.Element> nextIterator = subElement.elementIterator(); nextIterator.hasNext();)
@@ -235,7 +235,7 @@ public final class WeaponItemParser extends StatParser<ItemHolder>
 					for (Iterator<org.dom4j.Element> nextIterator = subElement.elementIterator(); nextIterator.hasNext();)
 					{
 						org.dom4j.Element nextElement = nextIterator.next();
-						if (nextElement.getName().equalsIgnoreCase("level"))
+						if (nextElement.getName().equalsIgnoreCase("level") && (template != null))
 						{
 							int val = Integer.parseInt(nextElement.attributeValue("val"));
 							int i = 0;

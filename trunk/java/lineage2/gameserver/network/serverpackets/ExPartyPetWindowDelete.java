@@ -18,12 +18,14 @@ public class ExPartyPetWindowDelete extends L2GameServerPacket
 {
 	private final int _summonObjectId;
 	private final int _ownerObjectId;
+	private final int _type;
 	private final String _summonName;
 	
 	public ExPartyPetWindowDelete(Summon summon)
 	{
 		_summonObjectId = summon.getObjectId();
 		_summonName = summon.getName();
+		_type = summon.getSummonType();
 		_ownerObjectId = summon.getPlayer().getObjectId();
 	}
 	
@@ -32,6 +34,7 @@ public class ExPartyPetWindowDelete extends L2GameServerPacket
 	{
 		writeEx(0x6B);
 		writeD(_summonObjectId);
+		writeD(_type);
 		writeD(_ownerObjectId);
 		writeS(_summonName);
 	}

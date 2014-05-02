@@ -576,19 +576,23 @@ public class MuseumManager
 			{
 				_log.log(Level.WARNING, "Could not parse StatuesLocations.xml file: " + e.getMessage(), e);
 			}
-			Node n = doc.getFirstChild();
-			for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+			
+			if (doc != null)
 			{
-				if (d.getNodeName().equals("location"))
+				Node n = doc.getFirstChild();
+				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 				{
-					NamedNodeMap attrs = d.getAttributes();
-					int location[] = new int[5];
-					location[4] = Integer.parseInt(attrs.getNamedItem("category").getNodeValue());
-					location[0] = Integer.parseInt(attrs.getNamedItem("x").getNodeValue());
-					location[1] = Integer.parseInt(attrs.getNamedItem("y").getNodeValue());
-					location[2] = Integer.parseInt(attrs.getNamedItem("z").getNodeValue());
-					location[3] = Integer.parseInt(attrs.getNamedItem("heading").getNodeValue());
-					_locations.add(location);
+					if (d.getNodeName().equals("location"))
+					{
+						NamedNodeMap attrs = d.getAttributes();
+						int location[] = new int[5];
+						location[4] = Integer.parseInt(attrs.getNamedItem("category").getNodeValue());
+						location[0] = Integer.parseInt(attrs.getNamedItem("x").getNodeValue());
+						location[1] = Integer.parseInt(attrs.getNamedItem("y").getNodeValue());
+						location[2] = Integer.parseInt(attrs.getNamedItem("z").getNodeValue());
+						location[3] = Integer.parseInt(attrs.getNamedItem("heading").getNodeValue());
+						_locations.add(location);
+					}
 				}
 			}
 		}

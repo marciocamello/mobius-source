@@ -13,22 +13,26 @@
 package quests;
 
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
-import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author pchayka
+ */
 public class _10293_SevenSignsForbiddenBook extends Quest implements ScriptFile
 {
 	private static final int Elcardia = 32784;
 	private static final int Sophia = 32596;
+	
 	private static final int SophiaInzone1 = 32861;
 	private static final int ElcardiaInzone1 = 32785;
 	private static final int SophiaInzone2 = 32863;
+	
 	private static final int SolinasBiography = 17213;
+	
 	private static final int[] books =
 	{
 		32809,
@@ -60,7 +64,7 @@ public class _10293_SevenSignsForbiddenBook extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("enter_library"))
 		{
-			enterInstance(player, 156);
+			enterInstance(st, 156);
 			return null;
 		}
 		else if (event.equalsIgnoreCase("sophia2_q10293_4.htm"))
@@ -120,7 +124,7 @@ public class _10293_SevenSignsForbiddenBook extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
-		if (player.getBaseClassId() != player.getActiveClassId())
+		if (!player.isBaseClassActive())
 		{
 			return "no_subclass_allowed.htm";
 		}
@@ -200,6 +204,7 @@ public class _10293_SevenSignsForbiddenBook extends Quest implements ScriptFile
 				{
 					htmltext = "elcardia2_q10293_5.htm";
 				}
+				
 				break;
 			case SophiaInzone2:
 				if ((cond == 6) || (cond == 7))
@@ -211,6 +216,7 @@ public class _10293_SevenSignsForbiddenBook extends Quest implements ScriptFile
 					htmltext = "sophia3_q10293_4.htm";
 				}
 				break;
+			// Books
 			case 32809:
 				htmltext = "book_q10293_3.htm";
 				break;
@@ -226,24 +232,9 @@ public class _10293_SevenSignsForbiddenBook extends Quest implements ScriptFile
 			case 32813:
 				htmltext = "book_q10293_5.htm";
 				break;
+		
 		}
 		return htmltext;
-	}
-	
-	private void enterInstance(Player player, int instancedZoneId)
-	{
-		Reflection r = player.getActiveReflection();
-		if (r != null)
-		{
-			if (player.canReenterInstance(instancedZoneId))
-			{
-				player.teleToLocation(r.getTeleportLoc(), r);
-			}
-		}
-		else if (player.canEnterInstance(instancedZoneId))
-		{
-			ReflectionUtils.enterReflection(player, instancedZoneId);
-		}
 	}
 	
 	private void teleportElcardia(Player player)

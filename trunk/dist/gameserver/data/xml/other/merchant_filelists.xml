@@ -1,7 +1,7 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0"?>
 <list>
-    <file name="merchant_buylists.xml"/>
-    <file name="clanhalls_buylists.xml"/>
-    <file name="classmaster_buylists.xml"/>
-    <file name="gm_shop.xml"/>
+	<file name="merchant_buylists.xml"/>
+	<file name="clanhalls_buylists.xml"/>
+	<file name="classmaster_buylists.xml"/>
+	<file name="gm_shop.xml"/>
 </list>

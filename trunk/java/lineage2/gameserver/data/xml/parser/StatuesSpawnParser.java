@@ -43,7 +43,7 @@ public class StatuesSpawnParser extends AbstractFileParser<StatuesHolder>
 	@Override
 	public File getXMLFile()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/xml/StatuesSpawn/StatuesSpawnData.xml");
+		return new File(Config.DATAPACK_ROOT, "data/xml/other/StatuesSpawnData.xml");
 	}
 	
 	@Override

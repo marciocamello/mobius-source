@@ -1,9 +1,5 @@
-<?xml version='1.0' encoding='utf-8'?>
-<!DOCTYPE list SYSTEM "multisell.dtd">
-<!--Remove Special Ability from Weapon-->
-<!--MULTISELL - [weapon_variation_sep_smith]-->
+<?xml version="1.0"?>
 <list>
-	<!--TODO: [Bonux] Ð¡Ð²ÐµÑ€Ð¸Ñ‚ÑŒ Ñ Ð¾Ñ„Ñ„Ð¾Ð¼.-->
 	<config show_all="false" no_tax="true" keep_enchanted="true"/>
 	<item>
 		<production id="72" count="1"/>

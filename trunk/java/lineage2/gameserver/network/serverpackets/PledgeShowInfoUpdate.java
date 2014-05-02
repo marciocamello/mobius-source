@@ -54,9 +54,9 @@ public class PledgeShowInfoUpdate extends L2GameServerPacket
 		writeD(crest_id);
 		writeD(clan_level);
 		writeD(HasCastle);
+		writeD(0);
 		writeD(HasHideout);
 		writeD(HasFortress);
-		writeD(0);
 		writeD(clan_rank);// displayed in the "tree" view (with the clan skills)
 		writeD(clan_rep);
 		writeD(0);

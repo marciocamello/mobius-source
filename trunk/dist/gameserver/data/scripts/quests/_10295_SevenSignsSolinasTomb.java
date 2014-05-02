@@ -25,6 +25,9 @@ import lineage2.gameserver.utils.Location;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * @author pchayka
+ */
 public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 {
 	private static final int ErisEvilThoughts = 32792;
@@ -38,14 +41,18 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 	private static final int AltarofHallowsSword = 32858;
 	private static final int AltarofHallowsBook = 32859;
 	private static final int AltarofHallowsShield = 32860;
+	
 	private static final int TeleportControlDevice2 = 32837;
 	private static final int TeleportControlDevice3 = 32842;
 	private static final int TomboftheSaintess = 32843;
+	
 	private static final int ScrollofAbstinence = 17228;
 	private static final int ShieldofSacrifice = 17229;
 	private static final int SwordofHolySpirit = 17230;
 	private static final int StaffofBlessing = 17231;
+	
 	private static final int Solina = 32793;
+	
 	private static final int[] SolinaGuardians =
 	{
 		18952,
@@ -60,8 +67,41 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 		18958,
 		18959
 	};
+	
 	static
 	{
+		@SuppressWarnings("unused")
+		Location[] minions1 =
+		{
+			new Location(55672, -252120, -6760),
+			new Location(55752, -252120, -6760),
+			new Location(55656, -252216, -6760),
+			new Location(55736, -252216, -6760)
+		};
+		@SuppressWarnings("unused")
+		Location[] minions2 =
+		{
+			new Location(55672, -252728, -6760),
+			new Location(55752, -252840, -6760),
+			new Location(55768, -252840, -6760),
+			new Location(55752, -252712, -6760)
+		};
+		@SuppressWarnings("unused")
+		Location[] minions3 =
+		{
+			new Location(56504, -252840, -6760),
+			new Location(56504, -252728, -6760),
+			new Location(56392, -252728, -6760),
+			new Location(56408, -252840, -6760)
+		};
+		@SuppressWarnings("unused")
+		Location[] minions4 =
+		{
+			new Location(56520, -252232, -6760),
+			new Location(56520, -252104, -6760),
+			new Location(56424, -252104, -6760),
+			new Location(56440, -252216, -6760)
+		};
 	}
 	
 	public _10295_SevenSignsSolinasTomb()
@@ -104,7 +144,7 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 			if (st.getQuestItemsCount(StaffofBlessing) > 0)
 			{
 				st.takeAllItems(StaffofBlessing);
-				player.broadcastPacket(new EventTrigger(21100206, false));
+				// TODO: remove glow from NPC
 				removeInvincibility(player, 18953);
 				return null;
 			}
@@ -115,7 +155,7 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 			if (st.getQuestItemsCount(ScrollofAbstinence) > 0)
 			{
 				st.takeAllItems(ScrollofAbstinence);
-				player.broadcastPacket(new EventTrigger(21100200, false));
+				// TODO: remove glow from NPC
 				removeInvincibility(player, 18954);
 				return null;
 			}
@@ -126,7 +166,7 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 			if (st.getQuestItemsCount(SwordofHolySpirit) > 0)
 			{
 				st.takeAllItems(SwordofHolySpirit);
-				player.broadcastPacket(new EventTrigger(21100204, false));
+				// TODO: remove glow from NPC
 				removeInvincibility(player, 18955);
 				return null;
 			}
@@ -137,7 +177,7 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 			if (st.getQuestItemsCount(ShieldofSacrifice) > 0)
 			{
 				st.takeAllItems(ShieldofSacrifice);
-				player.broadcastPacket(new EventTrigger(21100202, false));
+				// TODO: remove glow from NPC
 				removeInvincibility(player, 18952);
 				return null;
 			}
@@ -231,7 +271,7 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
-		if (player.getBaseClassId() != player.getActiveClassId())
+		if (!player.isBaseClassActive())
 		{
 			return "no_subclass_allowed.htm";
 		}
@@ -263,7 +303,7 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 				if (player.getLevel() >= 81)
 				{
 					htmltext = "eris_q10295_8.htm";
-					st.addExpAndSp(44000000, 12500000);
+					st.addExpAndSp(125000000, 12500000);
 					st.setState(COMPLETED);
 					st.playSound(SOUND_FINISH);
 					st.exitCurrentQuest(false);
@@ -288,6 +328,7 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 			{
 				htmltext = "teleport_device_q10295_2.htm";
 			}
+			
 		}
 		else if (npcId == PowerfulDeviceStaff)
 		{
@@ -434,6 +475,7 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 		{
 			return;
 		}
+		
 		r.openDoor(21100101);
 		r.openDoor(21100102);
 		r.openDoor(21100103);

@@ -16,23 +16,15 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
-import lineage2.gameserver.network.serverpackets.ExQuestNpcLogList;
 import lineage2.gameserver.scripts.ScriptFile;
-import gnu.trove.map.hash.TIntIntHashMap;
 
 public class _473_InTheCoralGarden extends Quest implements ScriptFile
 {
-	private static final int CON1 = 33044;
-	private static final int CON2 = 25799;
-	private static final int CON3 = 30387;
+	// npc
+	public static final int FIOREN = 33044;
 	
-	public _473_InTheCoralGarden()
-	{
-		super(false);
-		addStartNpc(CON1);
-		addTalkId(CON1);
-		addKillId(CON2);
-	}
+	// mobs
+	public static final int MICHAEL = 25799;
 	
 	@Override
 	public void onLoad()
@@ -49,113 +41,85 @@ public class _473_InTheCoralGarden extends Quest implements ScriptFile
 	{
 	}
 	
+	public _473_InTheCoralGarden()
+	{
+		super(true);
+		addStartNpc(FIOREN);
+		addKillId(MICHAEL);
+		addLevelCheck(97, 100);
+	}
+	
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
-		String htmltext = event;
-		String str = event;
-		int i = -1;
-		switch (str.hashCode())
+		if (event.equalsIgnoreCase("33044-3.htm"))
 		{
-			case -659506668:
-				if (!str.equals("33044-04.htm"))
-				{
-					break;
-				}
-				i = 0;
-				break;
-			case -656736105:
-				if (!str.equals("33044-07.htm"))
-				{
-					break;
-				}
-				i = 1;
+			st.setCond(1);
+			st.setState(STARTED);
+			st.playSound(SOUND_ACCEPT);
 		}
-		switch (i)
+		
+		if (event.equalsIgnoreCase("33044-6.htm"))
 		{
-			case 0:
-				st.setState(STARTED);
-				break;
-			case 1:
-				st.playSound(SOUND_FINISH);
-				st.giveItems(CON3, 10);
-				st.exitCurrentQuest(false);
+			st.giveItems(30387, 10); // hell proof
+			st.unset("cond");
+			st.playSound(SOUND_FINISH);
+			st.exitCurrentQuest(this);
 		}
-		return htmltext;
+		return event;
 	}
 	
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		Player player = st.getPlayer();
-		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
+		int state = st.getState();
 		int cond = st.getCond();
-		if (npcId == CON1)
+		if (npcId == FIOREN)
 		{
-			if (player.getLevel() < 97)
+			if (state == 1)
 			{
-				st.exitCurrentQuest(true);
-				return "33044-02.htm";
+				if (player.getLevel() < 97)
+				{
+					return "33044-lvl.htm";
+				}
+				if (!st.isNowAvailable())
+				{
+					return "33044-comp.htm";
+				}
+				
+				if (player.getLevel() < 97)
+				{
+					return "33044-lvl.htm";
+				}
+				
+				return "33044.htm";
 			}
-			if (st.getState() == CREATED)
-			{
-				htmltext = "33044-01.htm";
-			}
-			else if (st.getState() == STARTED)
+			if (state == 2)
 			{
 				if (cond == 1)
 				{
-					htmltext = "33044-05.htm";
+					return "33044-4.htm";
 				}
-				else
+				if (cond == 2)
 				{
-					htmltext = "33044-06.htm";
+					return "33044-5.htm";
 				}
-			}
-			else if (st.getState() == COMPLETED)
-			{
-				htmltext = "33044-08.htm";
 			}
 		}
-		return htmltext;
+		return "noquest";
 	}
 	
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		npc.getNpcId();
 		int cond = st.getCond();
-		Player player = st.getPlayer();
-		if ((npc.getNpcId() == CON2) && (cond == 1))
+		if ((cond != 1) || (npc == null))
 		{
-			TIntIntHashMap moblist = new TIntIntHashMap();
-			moblist.put(CON2, 1);
-			if (player.getParty() != null)
-			{
-				for (Player partyMember : player.getParty().getPartyMembers())
-				{
-					QuestState pst = partyMember.getQuestState("_473_InTheCoralGarden");
-					if ((pst != null) && (pst.isStarted()))
-					{
-						pst.setCond(2);
-						pst.playSound(SOUND_MIDDLE);
-						partyMember.sendPacket(new ExQuestNpcLogList(st));
-					}
-				}
-			}
-			else
-			{
-				st.setCond(2);
-				st.playSound(SOUND_MIDDLE);
-				player.sendPacket(new ExQuestNpcLogList(st));
-			}
+			return null;
 		}
+		st.setCond(2);
 		return null;
-	}
-	
-	public boolean isDailyQuest()
-	{
-		return true;
 	}
 }

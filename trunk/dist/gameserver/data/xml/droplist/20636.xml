@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DropListData.xsd">
+	<npc id="20636">
+		<droplist>
+			<category id="1" chance="70">
+				<item id="57" min="521" max="1066" chance="100"/>
+			</category>
+			<category id="2" chance="0.242">
+				<item id="89" min="1" max="1" chance="0.1832"/>
+				<item id="2061" min="1" max="1" chance="12.4818"/>
+				<item id="160" min="1" max="1" chance="0.1832"/>
+				<item id="2063" min="1" max="1" chance="12.4818"/>
+				<item id="161" min="1" max="1" chance="0.1832"/>
+				<item id="2064" min="1" max="1" chance="12.4818"/>
+				<item id="173" min="1" max="1" chance="0.1832"/>
+				<item id="2065" min="1" max="1" chance="12.4818"/>
+				<item id="191" min="1" max="1" chance="0.1832"/>
+				<item id="2066" min="1" max="1" chance="12.6653"/>
+				<item id="192" min="1" max="1" chance="0.1832"/>
+				<item id="2067" min="1" max="1" chance="11.6384"/>
+				<item id="193" min="1" max="1" chance="0.1832"/>
+				<item id="2068" min="1" max="1" chance="11.6384"/>
+				<item id="194" min="1" max="1" chance="0.1832"/>
+				<item id="2069" min="1" max="1" chance="12.6651"/>
+			</category>
+			<category id="3" chance="17.1341">
+				<item id="34990" min="3" max="3" chance="45.3915"/>
+				<item id="34992" min="1" max="1" chance="44.2276"/>
+				<item id="1882" min="1" max="1" chance="7.3713"/>
+				<item id="1894" min="1" max="1" chance="1.1639"/>
+				<item id="4042" min="1" max="1" chance="0.5528"/>
+				<item id="2230" min="1" max="1" chance="0.6428"/>
+				<item id="2320" min="1" max="1" chance="0.1156"/>
+				<item id="8723" min="1" max="1" chance="1.3268"/>
+				<item id="8733" min="1" max="1" chance="0.3317"/>
+				<item id="8743" min="1" max="1" chance="0.0332"/>
+				<item id="8753" min="1" max="1" chance="0.0067"/>
+			</category>
+		</droplist>
+		<spoillist>
+			<item id="2163" min="1" max="1" chance="6.7491"/>
+			<item id="2214" min="1" max="1" chance="3.2824"/>
+			<item id="1909" min="1" max="1" chance="17.8638"/>
+		</spoillist>
+	</npc>
+</list>

@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0"?>
 <list>
-	<hp_table classId="140">		
+	<hp_table classId="140">
 		<set level="1" value="80.0"/>
 		<set level="2" value="92.74"/>
 		<set level="3" value="105.62"/>

@@ -1,806 +1,804 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="19200" name="Reep" title="Weapons Merchant">
-        <set name="aggroRange" value="300"/>
-        <set name="ai_type" value="hermunkus_message.Dwarvs"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="4"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="20903"/>
-        <set name="baseHpRate" value="1.0"/>
-        <set name="baseHpReg" value="13"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="1148"/>
-        <set name="baseMAtkSpd" value="334"/>
-        <set name="baseMDef" value="562"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="2253"/>
-        <set name="baseMpReg" value="4"/>
-        <set name="basePAtk" value="2477"/>
-        <set name="basePAtkSpd" value="279"/>
-        <set name="basePDef" value="633"/>
-        <set name="baseRunSpd" value="100"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="70"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="17.0"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="rhand" value="199"/>
-        <set name="level" value="85"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Monster"/>
-        <faction name="211_instance_2" range="250"/>
-        <ai_params>
-            <set name="noRandomWalk" value="true"/>
-            <set name="ignoreAggroDelay" value="true"/>
-            <set name="TargetEnabled" value="false"/>
-            <set name="attackable" value="false"/>
-            <set name="wayType" value="3"/>
-        </ai_params>
-    </npc>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="hermunkus_message.Dwarvs"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="20903"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="1148"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseMDef" value="562"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2253"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="basePAtk" value="2477"/>
+		<set name="basePAtkSpd" value="279"/>
+		<set name="basePDef" value="633"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="17.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="rhand" value="199"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Monster"/>
+		<faction name="211_instance_2" range="250"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true"/>
+			<set name="ignoreAggroDelay" value="true"/>
+			<set name="TargetEnabled" value="false"/>
+			<set name="attackable" value="false"/>
+			<set name="wayType" value="3"/>
+		</ai_params>
+	</npc>
 	<npc id="19201" name="Garita" title="Accessory Merchant">
-        <set name="aggroRange" value="300"/>
-        <set name="ai_type" value="hermunkus_message.Dwarvs"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="4"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="20903"/>
-        <set name="baseHpRate" value="1.0"/>
-        <set name="baseHpReg" value="13"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="1148"/>
-        <set name="baseMAtkSpd" value="334"/>
-        <set name="baseMDef" value="562"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="2253"/>
-        <set name="baseMpReg" value="4"/>
-        <set name="basePAtk" value="2477"/>
-        <set name="basePAtkSpd" value="279"/>
-        <set name="basePDef" value="633"/>
-        <set name="baseRunSpd" value="100"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="70"/>
-        <set name="baseWalkSpd" value="20"/>
-        <set name="collision_height" value="17.5"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="rhand" value="91"/>
-        <set name="level" value="85"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Monster"/>
-        <faction name="211_instance_2" range="250"/>
-        <ai_params>
-            <set name="noRandomWalk" value="true"/>
-            <set name="ignoreAggroDelay" value="true"/>
-            <set name="TargetEnabled" value="false"/>
-            <set name="attackable" value="false"/>
-            <set name="wayType" value="1"/>
-        </ai_params>
-    </npc>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="hermunkus_message.Dwarvs"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="20903"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="1148"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseMDef" value="562"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2253"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="basePAtk" value="2477"/>
+		<set name="basePAtkSpd" value="279"/>
+		<set name="basePDef" value="633"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseWalkSpd" value="20"/>
+		<set name="collision_height" value="17.5"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="rhand" value="91"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Monster"/>
+		<faction name="211_instance_2" range="250"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true"/>
+			<set name="ignoreAggroDelay" value="true"/>
+			<set name="TargetEnabled" value="false"/>
+			<set name="attackable" value="false"/>
+			<set name="wayType" value="1"/>
+		</ai_params>
+	</npc>
 	<npc id="19202" name="Laferon" title="Foreman">
-        <set name="aggroRange" value="300"/>
-        <set name="ai_type" value="hermunkus_message.Dwarvs"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="4"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="20903"/>
-        <set name="baseHpRate" value="1.0"/>
-        <set name="baseHpReg" value="13"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="1148"/>
-        <set name="baseMAtkSpd" value="334"/>
-        <set name="baseMDef" value="562"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="2253"/>
-        <set name="baseMpReg" value="4"/>
-        <set name="basePAtk" value="2477"/>
-        <set name="basePAtkSpd" value="279"/>
-        <set name="basePDef" value="633"/>
-        <set name="baseRunSpd" value="100"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="70"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="19.0"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="rhand" value="194"/>
-        <set name="level" value="85"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Monster"/>
-        <faction name="211_instance_2" range="250"/>
-        <ai_params>
-            <set name="noRandomWalk" value="true"/>
-            <set name="ignoreAggroDelay" value="true"/>
-            <set name="TargetEnabled" value="false"/>
-            <set name="attackable" value="false"/>
-            <set name="wayType" value="2"/>
-        </ai_params>
-    </npc>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="hermunkus_message.Dwarvs"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="20903"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="1148"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseMDef" value="562"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2253"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="basePAtk" value="2477"/>
+		<set name="basePAtkSpd" value="279"/>
+		<set name="basePDef" value="633"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="19.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="rhand" value="194"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Monster"/>
+		<faction name="211_instance_2" range="250"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true"/>
+			<set name="ignoreAggroDelay" value="true"/>
+			<set name="TargetEnabled" value="false"/>
+			<set name="attackable" value="false"/>
+			<set name="wayType" value="2"/>
+		</ai_params>
+	</npc>
 	<npc id="19203" name="Paion" title="Protector">
-        <set name="aggroRange" value="300"/>
-        <set name="ai_type" value="hermunkus_message.Dwarvs"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="4"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="20903"/>
-        <set name="baseHpRate" value="1.0"/>
-        <set name="baseHpReg" value="13"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="1148"/>
-        <set name="baseMAtkSpd" value="334"/>
-        <set name="baseMDef" value="562"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="2253"/>
-        <set name="baseMpReg" value="4"/>
-        <set name="basePAtk" value="2477"/>
-        <set name="basePAtkSpd" value="279"/>
-        <set name="basePDef" value="633"/>
-        <set name="baseRunSpd" value="100"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="70"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="19.0"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="rhand" value="7896"/>
-        <set name="level" value="85"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Monster"/>
-        <faction name="211_instance_2" range="250"/>
-        <ai_params>
-            <set name="noRandomWalk" value="true"/>
-            <set name="ignoreAggroDelay" value="true"/>
-            <set name="TargetEnabled" value="false"/>
-            <set name="attackable" value="false"/>
-            <set name="wayType" value="3"/>
-        </ai_params>
-    </npc>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="hermunkus_message.Dwarvs"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="20903"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="1148"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseMDef" value="562"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2253"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="basePAtk" value="2477"/>
+		<set name="basePAtkSpd" value="279"/>
+		<set name="basePDef" value="633"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="19.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="rhand" value="7896"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Monster"/>
+		<faction name="211_instance_2" range="250"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true"/>
+			<set name="ignoreAggroDelay" value="true"/>
+			<set name="TargetEnabled" value="false"/>
+			<set name="attackable" value="false"/>
+			<set name="wayType" value="3"/>
+		</ai_params>
+	</npc>
 	<npc id="19204" name="Runant" title="Defender">
-        <set name="aggroRange" value="300"/>
-        <set name="ai_type" value="hermunkus_message.Dwarvs"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="4"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="20903"/>
-        <set name="baseHpRate" value="1.0"/>
-        <set name="baseHpReg" value="13"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="1148"/>
-        <set name="baseMAtkSpd" value="334"/>
-        <set name="baseMDef" value="562"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="2253"/>
-        <set name="baseMpReg" value="4"/>
-        <set name="basePAtk" value="2477"/>
-        <set name="basePAtkSpd" value="279"/>
-        <set name="basePDef" value="633"/>
-        <set name="baseRunSpd" value="100"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="70"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="19.0"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="rhand" value="187"/>
-        <set name="level" value="85"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Monster"/>
-        <faction name="211_instance_2" range="250"/>
-        <ai_params>
-            <set name="noRandomWalk" value="true"/>
-            <set name="ignoreAggroDelay" value="true"/>
-            <set name="TargetEnabled" value="false"/>
-            <set name="attackable" value="false"/>
-            <set name="wayType" value="1"/>
-        </ai_params>
-    </npc>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="hermunkus_message.Dwarvs"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="20903"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="1148"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseMDef" value="562"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2253"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="basePAtk" value="2477"/>
+		<set name="basePAtkSpd" value="279"/>
+		<set name="basePDef" value="633"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="19.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="rhand" value="187"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Monster"/>
+		<faction name="211_instance_2" range="250"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true"/>
+			<set name="ignoreAggroDelay" value="true"/>
+			<set name="TargetEnabled" value="false"/>
+			<set name="attackable" value="false"/>
+			<set name="wayType" value="1"/>
+		</ai_params>
+	</npc>
 	<npc id="19205" name="Ethan" title="Defender">
-        <set name="aggroRange" value="300"/>
-        <set name="ai_type" value="hermunkus_message.Dwarvs"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="4"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="20903"/>
-        <set name="baseHpRate" value="1.0"/>
-        <set name="baseHpReg" value="13"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="1148"/>
-        <set name="baseMAtkSpd" value="334"/>
-        <set name="baseMDef" value="562"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="2253"/>
-        <set name="baseMpReg" value="4"/>
-        <set name="basePAtk" value="2477"/>
-        <set name="basePAtkSpd" value="279"/>
-        <set name="basePDef" value="633"/>
-        <set name="baseRunSpd" value="100"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="70"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="19.0"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="rhand" value="158"/>
-        <set name="level" value="85"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Monster"/>
-        <faction name="211_instance_2" range="250"/>
-        <ai_params>
-            <set name="noRandomWalk" value="true"/>
-            <set name="ignoreAggroDelay" value="true"/>
-            <set name="TargetEnabled" value="false"/>
-            <set name="attackable" value="false"/>
-            <set name="wayType" value="3"/>
-        </ai_params>
-    </npc>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="hermunkus_message.Dwarvs"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="20903"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="1148"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseMDef" value="562"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2253"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="basePAtk" value="2477"/>
+		<set name="basePAtkSpd" value="279"/>
+		<set name="basePDef" value="633"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="19.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="rhand" value="158"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Monster"/>
+		<faction name="211_instance_2" range="250"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true"/>
+			<set name="ignoreAggroDelay" value="true"/>
+			<set name="TargetEnabled" value="false"/>
+			<set name="attackable" value="false"/>
+			<set name="wayType" value="3"/>
+		</ai_params>
+	</npc>
 	<npc id="19206" name="Cromwell" title="Defender">
-        <set name="aggroRange" value="300"/>
-        <set name="ai_type" value="hermunkus_message.Dwarvs"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="4"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="20903"/>
-        <set name="baseHpRate" value="1.0"/>
-        <set name="baseHpReg" value="13"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="1148"/>
-        <set name="baseMAtkSpd" value="334"/>
-        <set name="baseMDef" value="562"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="2253"/>
-        <set name="baseMpReg" value="4"/>
-        <set name="basePAtk" value="2477"/>
-        <set name="basePAtkSpd" value="279"/>
-        <set name="basePDef" value="633"/>
-        <set name="baseRunSpd" value="100"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="70"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="19.0"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="rhand" value="167"/>
-        <set name="level" value="85"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Monster"/>
-        <faction name="211_instance_2" range="250"/>
-        <ai_params>
-            <set name="noRandomWalk" value="true"/>
-            <set name="ignoreAggroDelay" value="true"/>
-            <set name="TargetEnabled" value="false"/>
-            <set name="attackable" value="false"/>
-            <set name="wayType" value="2"/>
-        </ai_params>
-    </npc>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="hermunkus_message.Dwarvs"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="20903"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="1148"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseMDef" value="562"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2253"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="basePAtk" value="2477"/>
+		<set name="basePAtkSpd" value="279"/>
+		<set name="basePDef" value="633"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="19.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="rhand" value="167"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Monster"/>
+		<faction name="211_instance_2" range="250"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true"/>
+			<set name="ignoreAggroDelay" value="true"/>
+			<set name="TargetEnabled" value="false"/>
+			<set name="attackable" value="false"/>
+			<set name="wayType" value="2"/>
+		</ai_params>
+	</npc>
 	<npc id="19207" name="Proton" title="Defender">
-        <set name="aggroRange" value="300"/>
-        <set name="ai_type" value="hermunkus_message.Dwarvs"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="4"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="20903"/>
-        <set name="baseHpRate" value="1.0"/>
-        <set name="baseHpReg" value="13"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="1148"/>
-        <set name="baseMAtkSpd" value="334"/>
-        <set name="baseMDef" value="562"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="2253"/>
-        <set name="baseMpReg" value="4"/>
-        <set name="basePAtk" value="2477"/>
-        <set name="basePAtkSpd" value="279"/>
-        <set name="basePDef" value="633"/>
-        <set name="baseRunSpd" value="100"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="70"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="19.0"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="rhand" value="166"/>
-        <set name="level" value="85"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Monster"/>
-        <faction name="211_instance_2" range="250"/>
-        <ai_params>
-            <set name="noRandomWalk" value="true"/>
-            <set name="ignoreAggroDelay" value="true"/>
-            <set name="TargetEnabled" value="false"/>
-            <set name="attackable" value="false"/>
-            <set name="wayType" value="3"/>
-        </ai_params>
-    </npc>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="hermunkus_message.Dwarvs"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="20903"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="1148"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseMDef" value="562"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2253"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="basePAtk" value="2477"/>
+		<set name="basePAtkSpd" value="279"/>
+		<set name="basePDef" value="633"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="19.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="rhand" value="166"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Monster"/>
+		<faction name="211_instance_2" range="250"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true"/>
+			<set name="ignoreAggroDelay" value="true"/>
+			<set name="TargetEnabled" value="false"/>
+			<set name="attackable" value="false"/>
+			<set name="wayType" value="3"/>
+		</ai_params>
+	</npc>
 	<npc id="19208" name="Dinkey" title="Defender">
-        <set name="aggroRange" value="300"/>
-        <set name="ai_type" value="hermunkus_message.Dwarvs"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="4"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="20903"/>
-        <set name="baseHpRate" value="1.0"/>
-        <set name="baseHpReg" value="13"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="1148"/>
-        <set name="baseMAtkSpd" value="334"/>
-        <set name="baseMDef" value="562"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="2253"/>
-        <set name="baseMpReg" value="4"/>
-        <set name="basePAtk" value="2477"/>
-        <set name="basePAtkSpd" value="279"/>
-        <set name="basePDef" value="633"/>
-        <set name="baseRunSpd" value="100"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="70"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="19.0"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="rhand" value="89"/>
-        <set name="level" value="85"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Monster"/>
-        <faction name="211_instance_2" range="250"/>
-        <ai_params>
-            <set name="noRandomWalk" value="true"/>
-            <set name="ignoreAggroDelay" value="true"/>
-            <set name="TargetEnabled" value="false"/>
-            <set name="attackable" value="false"/>
-            <set name="wayType" value="2"/>
-        </ai_params>
-    </npc>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="hermunkus_message.Dwarvs"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="20903"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="1148"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseMDef" value="562"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2253"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="basePAtk" value="2477"/>
+		<set name="basePAtkSpd" value="279"/>
+		<set name="basePDef" value="633"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="19.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="rhand" value="89"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Monster"/>
+		<faction name="211_instance_2" range="250"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true"/>
+			<set name="ignoreAggroDelay" value="true"/>
+			<set name="TargetEnabled" value="false"/>
+			<set name="attackable" value="false"/>
+			<set name="wayType" value="2"/>
+		</ai_params>
+	</npc>
 	<npc id="19209" name="Tardyon" title="Defender">
-        <set name="aggroRange" value="300"/>
-        <set name="ai_type" value="hermunkus_message.Dwarvs"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="4"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="20903"/>
-        <set name="baseHpRate" value="1.0"/>
-        <set name="baseHpReg" value="13"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="1148"/>
-        <set name="baseMAtkSpd" value="334"/>
-        <set name="baseMDef" value="562"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="2253"/>
-        <set name="baseMpReg" value="4"/>
-        <set name="basePAtk" value="2477"/>
-        <set name="basePAtkSpd" value="279"/>
-        <set name="basePDef" value="633"/>
-        <set name="baseRunSpd" value="100"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="70"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="19.0"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="rhand" value="160"/>
-        <set name="level" value="85"/>
-        <set name="rewardExp" value="1268305"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="25200"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Monster"/>
-        <faction name="211_instance_2" range="250"/>
-        <ai_params>
-            <set name="noRandomWalk" value="true"/>
-            <set name="ignoreAggroDelay" value="true"/>
-            <set name="TargetEnabled" value="false"/>
-            <set name="attackable" value="false"/>
-            <set name="wayType" value="3"/>
-        </ai_params>
-    </npc>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="hermunkus_message.Dwarvs"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="20903"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="1148"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseMDef" value="562"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2253"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="basePAtk" value="2477"/>
+		<set name="basePAtkSpd" value="279"/>
+		<set name="basePDef" value="633"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="19.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="rhand" value="160"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="1268305"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="25200"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Monster"/>
+		<faction name="211_instance_2" range="250"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true"/>
+			<set name="ignoreAggroDelay" value="true"/>
+			<set name="TargetEnabled" value="false"/>
+			<set name="attackable" value="false"/>
+			<set name="wayType" value="3"/>
+		</ai_params>
+	</npc>
 	<npc id="19210" name="Nathan" title="Defender">
-        <set name="aggroRange" value="300"/>
-        <set name="ai_type" value="hermunkus_message.Dwarvs"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="4"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="20903"/>
-        <set name="baseHpRate" value="1.0"/>
-        <set name="baseHpReg" value="13"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="1148"/>
-        <set name="baseMAtkSpd" value="334"/>
-        <set name="baseMDef" value="562"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="2253"/>
-        <set name="baseMpReg" value="4"/>
-        <set name="basePAtk" value="2477"/>
-        <set name="basePAtkSpd" value="279"/>
-        <set name="basePDef" value="633"/>
-        <set name="baseRunSpd" value="100"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="70"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="19.0"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="rhand" value="161"/>
-        <set name="level" value="85"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Monster"/>
-        <faction name="211_instance_2" range="250"/>
-        <ai_params>
-            <set name="noRandomWalk" value="true"/>
-            <set name="ignoreAggroDelay" value="true"/>
-            <set name="TargetEnabled" value="false"/>
-            <set name="attackable" value="false"/>
-            <set name="wayType" value="2"/>
-        </ai_params>
-    </npc>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="hermunkus_message.Dwarvs"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="20903"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="1148"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseMDef" value="562"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2253"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="basePAtk" value="2477"/>
+		<set name="basePAtkSpd" value="279"/>
+		<set name="basePDef" value="633"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="19.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="rhand" value="161"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Monster"/>
+		<faction name="211_instance_2" range="250"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true"/>
+			<set name="ignoreAggroDelay" value="true"/>
+			<set name="TargetEnabled" value="false"/>
+			<set name="attackable" value="false"/>
+			<set name="wayType" value="2"/>
+		</ai_params>
+	</npc>
 	<npc id="19211" name="Tate" title="Carrier">
-        <set name="aggroRange" value="300"/>
-        <set name="ai_type" value="hermunkus_message.Dwarvs"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="4"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="20903"/>
-        <set name="baseHpRate" value="1.0"/>
-        <set name="baseHpReg" value="13"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="1148"/>
-        <set name="baseMAtkSpd" value="334"/>
-        <set name="baseMDef" value="562"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="2253"/>
-        <set name="baseMpReg" value="4"/>
-        <set name="basePAtk" value="2477"/>
-        <set name="basePAtkSpd" value="279"/>
-        <set name="basePDef" value="633"/>
-        <set name="baseRunSpd" value="100"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="70"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="17.0"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="rhand" value="162"/>
-        <set name="level" value="85"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Monster"/>
-        <faction name="211_instance_2" range="250"/>
-        <ai_params>
-            <set name="noRandomWalk" value="true"/>
-            <set name="ignoreAggroDelay" value="true"/>
-            <set name="TargetEnabled" value="false"/>
-            <set name="attackable" value="false"/>
-            <set name="wayType" value="3"/>
-        </ai_params>
-    </npc>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="hermunkus_message.Dwarvs"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="20903"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="1148"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseMDef" value="562"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2253"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="basePAtk" value="2477"/>
+		<set name="basePAtkSpd" value="279"/>
+		<set name="basePDef" value="633"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="17.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="rhand" value="162"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Monster"/>
+		<faction name="211_instance_2" range="250"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true"/>
+			<set name="ignoreAggroDelay" value="true"/>
+			<set name="TargetEnabled" value="false"/>
+			<set name="attackable" value="false"/>
+			<set name="wayType" value="3"/>
+		</ai_params>
+	</npc>
 	<npc id="19212" name="Benis" title="Warehouse Keeper">
-        <set name="aggroRange" value="300"/>
-        <set name="ai_type" value="hermunkus_message.Dwarvs"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="4"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="20903"/>
-        <set name="baseHpRate" value="1.0"/>
-        <set name="baseHpReg" value="13"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="1148"/>
-        <set name="baseMAtkSpd" value="334"/>
-        <set name="baseMDef" value="562"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="2253"/>
-        <set name="baseMpReg" value="4"/>
-        <set name="basePAtk" value="2477"/>
-        <set name="basePAtkSpd" value="279"/>
-        <set name="basePDef" value="633"/>
-        <set name="baseRunSpd" value="100"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="70"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="17.0"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="rhand" value="30881"/>
-        <set name="level" value="85"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Monster"/>
-        <faction name="211_instance_2" range="250"/>
-        <ai_params>
-            <set name="noRandomWalk" value="true"/>
-            <set name="ignoreAggroDelay" value="true"/>
-            <set name="TargetEnabled" value="false"/>
-            <set name="attackable" value="false"/>
-            <set name="wayType" value="2"/>
-        </ai_params>
-    </npc>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="hermunkus_message.Dwarvs"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="20903"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="1148"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseMDef" value="562"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2253"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="basePAtk" value="2477"/>
+		<set name="basePAtkSpd" value="279"/>
+		<set name="basePDef" value="633"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="17.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="rhand" value="30881"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Monster"/>
+		<faction name="211_instance_2" range="250"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true"/>
+			<set name="ignoreAggroDelay" value="true"/>
+			<set name="TargetEnabled" value="false"/>
+			<set name="attackable" value="false"/>
+			<set name="wayType" value="2"/>
+		</ai_params>
+	</npc>
 	<npc id="19213" name="Hoffa" title="Warehouse Chief">
-        <set name="aggroRange" value="300"/>
-        <set name="ai_type" value="hermunkus_message.Dwarvs"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="4"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="20903"/>
-        <set name="baseHpRate" value="1.0"/>
-        <set name="baseHpReg" value="13"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="1148"/>
-        <set name="baseMAtkSpd" value="334"/>
-        <set name="baseMDef" value="562"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="2253"/>
-        <set name="baseMpReg" value="4"/>
-        <set name="basePAtk" value="2477"/>
-        <set name="basePAtkSpd" value="279"/>
-        <set name="basePDef" value="633"/>
-        <set name="baseRunSpd" value="100"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="70"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="17.0"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="rhand" value="2504"/>
-        <set name="level" value="85"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Monster"/>
-        <faction name="211_instance_2" range="250"/>
-        <ai_params>
-            <set name="noRandomWalk" value="true"/>
-            <set name="ignoreAggroDelay" value="true"/>
-            <set name="TargetEnabled" value="false"/>
-            <set name="attackable" value="false"/>
-            <set name="wayType" value="2"/>
-        </ai_params>
-    </npc>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="hermunkus_message.Dwarvs"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="20903"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="1148"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseMDef" value="562"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2253"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="basePAtk" value="2477"/>
+		<set name="basePAtkSpd" value="279"/>
+		<set name="basePDef" value="633"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="17.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="rhand" value="2504"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Monster"/>
+		<faction name="211_instance_2" range="250"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true"/>
+			<set name="ignoreAggroDelay" value="true"/>
+			<set name="TargetEnabled" value="false"/>
+			<set name="attackable" value="false"/>
+			<set name="wayType" value="2"/>
+		</ai_params>
+	</npc>
 	<npc id="19214" name="Rant" title="Warehouse Keeper">
-        <set name="aggroRange" value="300"/>
-        <set name="ai_type" value="hermunkus_message.Dwarvs"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="4"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="20903"/>
-        <set name="baseHpRate" value="1.0"/>
-        <set name="baseHpReg" value="13"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="1148"/>
-        <set name="baseMAtkSpd" value="334"/>
-        <set name="baseMDef" value="562"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="2253"/>
-        <set name="baseMpReg" value="4"/>
-        <set name="basePAtk" value="2477"/>
-        <set name="basePAtkSpd" value="279"/>
-        <set name="basePDef" value="633"/>
-        <set name="baseRunSpd" value="100"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="70"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="17.0"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="rhand" value="1511"/>
-        <set name="level" value="85"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Monster"/>
-        <faction name="211_instance_2" range="250"/>
-        <ai_params>
-            <set name="noRandomWalk" value="true"/>
-            <set name="ignoreAggroDelay" value="true"/>
-            <set name="TargetEnabled" value="false"/>
-            <set name="attackable" value="false"/>
-            <set name="wayType" value="2"/>
-        </ai_params>
-    </npc>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="hermunkus_message.Dwarvs"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="20903"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="1148"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseMDef" value="562"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2253"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="basePAtk" value="2477"/>
+		<set name="basePAtkSpd" value="279"/>
+		<set name="basePDef" value="633"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="17.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="rhand" value="1511"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Monster"/>
+		<faction name="211_instance_2" range="250"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true"/>
+			<set name="ignoreAggroDelay" value="true"/>
+			<set name="TargetEnabled" value="false"/>
+			<set name="attackable" value="false"/>
+			<set name="wayType" value="2"/>
+		</ai_params>
+	</npc>
 	<npc id="19215" name="Rolfe" title="Warehouse Keeper">
-        <set name="aggroRange" value="300"/>
-        <set name="ai_type" value="hermunkus_message.Dwarvs"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="4"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="20903"/>
-        <set name="baseHpRate" value="1.0"/>
-        <set name="baseHpReg" value="13"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="1148"/>
-        <set name="baseMAtkSpd" value="334"/>
-        <set name="baseMDef" value="562"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="2253"/>
-        <set name="baseMpReg" value="4"/>
-        <set name="basePAtk" value="2477"/>
-        <set name="basePAtkSpd" value="279"/>
-        <set name="basePDef" value="633"/>
-        <set name="baseRunSpd" value="100"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="70"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="17.0"/>
-        <set name="collision_radius" value="8.0"/>
-        <set name="rhand" value="7901"/>
-        <set name="level" value="85"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Monster"/>
-        <faction name="211_instance_2" range="250"/>
-        <ai_params>
-            <set name="noRandomWalk" value="true"/>
-            <set name="ignoreAggroDelay" value="true"/>
-            <set name="TargetEnabled" value="false"/>
-            <set name="attackable" value="false"/>
-            <set name="wayType" value="2"/>
-        </ai_params>
-    </npc>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="hermunkus_message.Dwarvs"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="20903"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="1148"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseMDef" value="562"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2253"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="basePAtk" value="2477"/>
+		<set name="basePAtkSpd" value="279"/>
+		<set name="basePDef" value="633"/>
+		<set name="baseRunSpd" value="100"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="17.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="rhand" value="7901"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Monster"/>
+		<faction name="211_instance_2" range="250"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true"/>
+			<set name="ignoreAggroDelay" value="true"/>
+			<set name="TargetEnabled" value="false"/>
+			<set name="attackable" value="false"/>
+			<set name="wayType" value="2"/>
+		</ai_params>
+	</npc>
 	<npc id="19216" name="Altar of Evil Spirit Offering Box" title="">
-        <!-- TODO: NEW NPC (AUTOGENERATED!) -->
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="CharacterAI"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="75"/>
-        <set name="baseCritRate" value="4"/>
-        <set name="baseDEX" value="41"/>
-        <set name="baseHpMax" value="41807"/>
-        <set name="baseHpRate" value="1.0"/>
-        <set name="baseHpReg" value="7.5"/>
-        <set name="baseINT" value="42"/>
-        <set name="baseMAtk" value="663"/>
-        <set name="baseMAtkSpd" value="334"/>
-        <set name="baseMDef" value="290"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="2000.0"/>
-        <set name="baseMpReg" value="2.7"/>
-        <set name="basePAtk" value="20000"/>
-        <set name="basePAtkSpd" value="279"/>
-        <set name="basePDef" value="390"/>
-        <set name="baseRunSpd" value="80"/>
-        <set name="baseSTR" value="78"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="78"/>
-        <set name="baseWalkSpd" value="30"/>
-        <set name="collision_height" value="15.0"/>
-        <set name="collision_radius" value="20.0"/>
-        <set name="level" value="85"/>
-        <set name="rewardExp" value="41807"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="3415"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Npc"/>
-    </npc>
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="41807"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseMDef" value="290"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2000.0"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="basePAtk" value="20000"/>
+		<set name="basePAtkSpd" value="279"/>
+		<set name="basePDef" value="390"/>
+		<set name="baseRunSpd" value="80"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="78"/>
+		<set name="baseWalkSpd" value="30"/>
+		<set name="collision_height" value="15.0"/>
+		<set name="collision_radius" value="20.0"/>
+		<set name="level" value="85"/>
+		<set name="rewardExp" value="41807"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="3415"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Npc"/>
+	</npc>
 	<npc id="19217" name="Earth Wyrm Trasken" title="Hell's Gate">
-        <set name="aggroRange" value="0"/>
-        <set name="ai_type" value="hermunkus_message.EarthWyrmTrasken"/>
-        <set name="baseAtkRange" value="40"/>
-        <set name="baseCON" value="43"/>
-        <set name="baseCritRate" value="4"/>
-        <set name="baseDEX" value="30"/>
-        <set name="baseHpMax" value="27406"/>
-        <set name="baseHpRate" value="1.0"/>
-        <set name="baseHpReg" value="13"/>
-        <set name="baseINT" value="21"/>
-        <set name="baseMAtk" value="2173"/>
-        <set name="baseMAtkSpd" value="398"/>
-        <set name="baseMDef" value="713"/>
-        <set name="baseMEN" value="20"/>
-        <set name="baseMpMax" value="2958"/>
-        <set name="baseMpReg" value="4"/>
-        <set name="basePAtk" value="4687"/>
-        <set name="basePAtkSpd" value="299"/>
-        <set name="basePDef" value="802"/>
-        <set name="baseRunSpd" value="120"/>
-        <set name="baseSTR" value="40"/>
-        <set name="baseShldDef" value="0"/>
-        <set name="baseShldRate" value="0"/>
-        <set name="baseWIT" value="70"/>
-        <set name="baseWalkSpd" value="50"/>
-        <set name="collision_height" value="1450.0"/>
-        <set name="collision_radius" value="500.0"/>
-        <set name="rhand" value="0"/>
-        <set name="level" value="99"/>
-        <set name="rewardExp" value="0"/>
-        <set name="rewardRp" value="0"/>
-        <set name="rewardSp" value="0"/>
-        <set name="shots" value="NONE"/>
-        <set name="texture" value=""/>
-        <set name="type" value="Monster"/>
-        <ai_params>
-            <set name="noRandomWalk" value="true"/>
-            <set name="showTitle" value="false"/>
-        </ai_params>
-    </npc>
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="hermunkus_message.EarthWyrmTrasken"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpMax" value="27406"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="2173"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseMDef" value="713"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="2958"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="basePAtk" value="4687"/>
+		<set name="basePAtkSpd" value="299"/>
+		<set name="basePDef" value="802"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="1450.0"/>
+		<set name="collision_radius" value="500.0"/>
+		<set name="rhand" value="0"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Monster"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true"/>
+			<set name="showTitle" value="false"/>
+		</ai_params>
+	</npc>
 	<npc id="19218" name="" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="7.0"/>
 		<set name="level" value="80"/>
@@ -841,7 +839,6 @@
 		<skills/>
 	</npc>
 	<npc id="19219" name="" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="level" value="86"/>
@@ -882,7 +879,6 @@
 		<skills/>
 	</npc>
 	<npc id="19220" name="Kartia Guard" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="14.0"/>
 		<set name="level" value="88"/>
@@ -927,7 +923,6 @@
 		</skills>
 	</npc>
 	<npc id="19221" name="Kartia Watchman" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="21.12"/>
 		<set name="collision_height" value="40.48"/>
 		<set name="level" value="88"/>
@@ -972,7 +967,6 @@
 		</skills>
 	</npc>
 	<npc id="19222" name="Kartia Dimensional Watchman" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="level" value="88"/>
@@ -1017,7 +1011,6 @@
 		</skills>
 	</npc>
 	<npc id="19223" name="Kartia Guard" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="33.0"/>
 		<set name="level" value="93"/>
@@ -1063,7 +1056,6 @@
 		</skills>
 	</npc>
 	<npc id="19224" name="Kartia Watchman" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="93"/>
@@ -1109,7 +1101,6 @@
 		</skills>
 	</npc>
 	<npc id="19225" name="Kartia Dimensional Watchman" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="38.0"/>
 		<set name="level" value="93"/>
@@ -1155,7 +1146,6 @@
 		</skills>
 	</npc>
 	<npc id="19226" name="Kartia Guard" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="42.0"/>
 		<set name="level" value="98"/>
@@ -1201,7 +1191,6 @@
 		</skills>
 	</npc>
 	<npc id="19227" name="Kartia Watchman" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="34.5"/>
 		<set name="level" value="98"/>
@@ -1247,7 +1236,6 @@
 		</skills>
 	</npc>
 	<npc id="19228" name="Kartia Dimensional Watchman" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="46.5"/>
 		<set name="level" value="98"/>
@@ -1293,7 +1281,6 @@
 		</skills>
 	</npc>
 	<npc id="19229" name="Kartia Guard" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="14.0"/>
 		<set name="level" value="88"/>
@@ -1340,7 +1327,6 @@
 		</skills>
 	</npc>
 	<npc id="19230" name="Kartia Watchman" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="21.12"/>
 		<set name="collision_height" value="40.48"/>
 		<set name="level" value="88"/>
@@ -1387,7 +1373,6 @@
 		</skills>
 	</npc>
 	<npc id="19231" name="Kartia Dimensional Watchman" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="level" value="88"/>
@@ -1436,7 +1421,6 @@
 		</skills>
 	</npc>
 	<npc id="19232" name="Kartia Guard" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="33.0"/>
 		<set name="level" value="93"/>
@@ -1484,7 +1468,6 @@
 		</skills>
 	</npc>
 	<npc id="19233" name="Kartia Watchman" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="93"/>
@@ -1532,7 +1515,6 @@
 		</skills>
 	</npc>
 	<npc id="19234" name="Kartia Dimensional Watchman" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="38.0"/>
 		<set name="level" value="93"/>
@@ -1582,7 +1564,6 @@
 		</skills>
 	</npc>
 	<npc id="19235" name="Kartia Guard" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="42.0"/>
 		<set name="level" value="98"/>
@@ -1630,7 +1611,6 @@
 		</skills>
 	</npc>
 	<npc id="19236" name="Kartia Watchman" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="34.5"/>
 		<set name="level" value="98"/>
@@ -1678,7 +1658,6 @@
 		</skills>
 	</npc>
 	<npc id="19237" name="Kartia Dimensional Watchman" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="46.5"/>
 		<set name="level" value="98"/>
@@ -1728,7 +1707,6 @@
 		</skills>
 	</npc>
 	<npc id="19238" name="Daemon Angma" title="Helpful">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="40"/>
@@ -1769,7 +1747,6 @@
 		<skills/>
 	</npc>
 	<npc id="19239" name="Daemon Angma" title="Aggressive">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="40"/>
@@ -1810,7 +1787,6 @@
 		<skills/>
 	</npc>
 	<npc id="19240" name="Daemon Angma" title="Sketchy">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="40"/>
@@ -1851,7 +1827,6 @@
 		<skills/>
 	</npc>
 	<npc id="19241" name="Daemon Angma" title="Mastermind">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="19.0"/>
 		<set name="level" value="40"/>
@@ -1892,7 +1867,6 @@
 		<skills/>
 	</npc>
 	<npc id="19242" name="Sound Clam" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="16.0"/>
 		<set name="collision_height" value="6.0"/>
 		<set name="level" value="99"/>
@@ -1933,7 +1907,6 @@
 		<skills/>
 	</npc>
 	<npc id="19243" name="Campaign Presentation 1" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="99"/>
@@ -1974,7 +1947,6 @@
 		<skills/>
 	</npc>
 	<npc id="19244" name="Red Tama Plant" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="23.0"/>
 		<set name="level" value="99"/>
@@ -2015,7 +1987,6 @@
 		<skills/>
 	</npc>
 	<npc id="19245" name="Blue Tama Plant" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="23.0"/>
 		<set name="level" value="99"/>
@@ -2056,12 +2027,11 @@
 		<skills/>
 	</npc>
 	<npc id="19246" name="Tanima" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="9.0"/>
 		<set name="level" value="40"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1"/>
@@ -2100,7 +2070,6 @@
 		</skills>
 	</npc>
 	<npc id="19247" name="Kartia's Altar" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.0"/>
 		<set name="collision_height" value="0.0"/>
 		<set name="level" value="99"/>
@@ -2141,7 +2110,6 @@
 		<skills/>
 	</npc>
 	<npc id="19248" name="Kartia's Altar" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.0"/>
 		<set name="collision_height" value="0.0"/>
 		<set name="level" value="99"/>
@@ -2182,7 +2150,6 @@
 		<skills/>
 	</npc>
 	<npc id="19249" name="Kartia's Altar" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.0"/>
 		<set name="collision_height" value="0.0"/>
 		<set name="level" value="99"/>
@@ -2223,7 +2190,6 @@
 		<skills/>
 	</npc>
 	<npc id="19250" name="Kartia's Altar" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="75.0"/>
 		<set name="level" value="99"/>
@@ -2264,7 +2230,6 @@
 		<skills/>
 	</npc>
 	<npc id="19251" name="Kartia's Altar" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="75.0"/>
 		<set name="level" value="99"/>
@@ -2305,7 +2270,6 @@
 		<skills/>
 	</npc>
 	<npc id="19252" name="Kartia's Altar" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="75.0"/>
 		<set name="level" value="99"/>
@@ -2477,12 +2441,11 @@
 		</skills>
 	</npc>
 	<npc id="19256" name="Tree of Life" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="51.0"/>
 		<set name="collision_height" value="50.5"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1"/>
@@ -2519,7 +2482,6 @@
 		<skills/>
 	</npc>
 	<npc id="19257" name="Small Draco Egg" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="99"/>
@@ -2560,7 +2522,6 @@
 		<skills/>
 	</npc>
 	<npc id="19258" name="Large Draco Egg" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="5.0"/>
 		<set name="level" value="99"/>
@@ -2643,7 +2604,6 @@
 		<skills/>
 	</npc>
 	<npc id="19260" name="Weapon Stand" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="80.0"/>
 		<set name="collision_height" value="150.0"/>
 		<set name="level" value="99"/>
@@ -2686,7 +2646,6 @@
 		</skills>
 	</npc>
 	<npc id="19261" name="Armor Stand" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="80.0"/>
 		<set name="collision_height" value="150.0"/>
 		<set name="level" value="99"/>
@@ -2729,12 +2688,11 @@
 		</skills>
 	</npc>
 	<npc id="19262" name="Kunda" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1536018"/>
@@ -2778,12 +2736,11 @@
 		</skills>
 	</npc>
 	<npc id="19263" name="Kunda" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1536018"/>
@@ -2827,12 +2784,11 @@
 		</skills>
 	</npc>
 	<npc id="19264" name="Kunda" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1536018"/>
@@ -2876,12 +2832,11 @@
 		</skills>
 	</npc>
 	<npc id="19265" name="Kunda Lord" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="60.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3248143"/>
@@ -2921,12 +2876,11 @@
 		</skills>
 	</npc>
 	<npc id="19266" name="Zahak" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="63.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3248143"/>
@@ -2966,12 +2920,11 @@
 		</skills>
 	</npc>
 	<npc id="19267" name="Mysterious Box" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="8.5"/>
 		<set name="level" value="90"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1"/>
@@ -3008,12 +2961,11 @@
 		<skills/>
 	</npc>
 	<npc id="19268" name="Mysterious Guard" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="30.0"/>
 		<set name="level" value="90"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="24024"/>
@@ -3050,7 +3002,6 @@
 		<skills/>
 	</npc>
 	<npc id="19269" name="Clan Flag" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="120.0"/>
 		<set name="level" value="99"/>
@@ -3091,12 +3042,11 @@
 		<skills/>
 	</npc>
 	<npc id="19270" name="Lesser Zahak" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="16.0"/>
 		<set name="collision_height" value="50.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="768009"/>
@@ -3136,12 +3086,11 @@
 		</skills>
 	</npc>
 	<npc id="19271" name="Verdof's Treasure Chest" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.0"/>
 		<set name="collision_height" value="0.0"/>
 		<set name="level" value="70"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1"/>
@@ -3180,12 +3129,11 @@
 		</skills>
 	</npc>
 	<npc id="19272" name="Bratty Angma" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="45.0"/>
 		<set name="level" value="80"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="57096"/>
@@ -3224,12 +3172,11 @@
 		</skills>
 	</npc>
 	<npc id="19273" name="Bratty Angma" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="45.0"/>
 		<set name="level" value="87"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="483119"/>
@@ -3268,12 +3215,11 @@
 		</skills>
 	</npc>
 	<npc id="19274" name="Bratty Angma" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="45.0"/>
 		<set name="level" value="92"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="511792"/>
@@ -3312,12 +3258,11 @@
 		</skills>
 	</npc>
 	<npc id="19275" name="Bratty Angma" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="45.0"/>
 		<set name="level" value="97"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="615748"/>
@@ -3356,12 +3301,11 @@
 		</skills>
 	</npc>
 	<npc id="19276" name="Bundle for Presentation Purposes" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="45.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
@@ -3398,12 +3342,11 @@
 		<skills/>
 	</npc>
 	<npc id="19277" name="Tauti's Axe for Presentation Purposes" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="45.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
@@ -3440,12 +3383,11 @@
 		<skills/>
 	</npc>
 	<npc id="19278" name="Tauti for Presentation Purposes" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="90.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="44940966"/>
@@ -3608,12 +3550,11 @@
 		<skills/>
 	</npc>
 	<npc id="19282" name="Exclusive to Noblesse Quests" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="45.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
@@ -3650,12 +3591,11 @@
 		<skills/>
 	</npc>
 	<npc id="19283" name="Tauti Spotlight" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="172999998"/>
@@ -3692,7 +3632,6 @@
 		<skills/>
 	</npc>
 	<npc id="19284" name="Explosive Orc Barrel" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="30.0"/>
 		<set name="level" value="99"/>
@@ -3733,12 +3672,11 @@
 		<skills/>
 	</npc>
 	<npc id="19285" name="Verdof's Treasure Chest - Decoration Only" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.0"/>
 		<set name="collision_height" value="0.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
@@ -3775,12 +3713,11 @@
 		<skills/>
 	</npc>
 	<npc id="19286" name="Possessed Pilgrim" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="11.0"/>
 		<set name="collision_height" value="25.4"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
@@ -3817,12 +3754,11 @@
 		<skills/>
 	</npc>
 	<npc id="19287" name="Zahak" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="63.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="172999998"/>
@@ -3859,7 +3795,6 @@
 		<skills/>
 	</npc>
 	<npc id="19288" name="" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="99"/>
@@ -3900,7 +3835,6 @@
 		<skills/>
 	</npc>
 	<npc id="19289" name="" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="99"/>
@@ -3941,7 +3875,6 @@
 		<skills/>
 	</npc>
 	<npc id="19290" name="" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="99"/>
@@ -3982,7 +3915,6 @@
 		<skills/>
 	</npc>
 	<npc id="19291" name="" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="99"/>
@@ -4023,12 +3955,11 @@
 		<skills/>
 	</npc>
 	<npc id="19292" name="Herb Chest" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="8.5"/>
 		<set name="level" value="90"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1"/>
@@ -4065,7 +3996,6 @@
 		<skills/>
 	</npc>
 	<npc id="19293" name="Helping Tree Summon Device" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="57.0"/>
 		<set name="collision_height" value="47.5"/>
 		<set name="level" value="99"/>
@@ -4106,12 +4036,11 @@
 		<skills/>
 	</npc>
 	<npc id="19294" name="Cocoon Destroyer" title="Violent">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="level" value="93"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="125144"/>
@@ -4148,7 +4077,6 @@
 		<skills/>
 	</npc>
 	<npc id="19295" name="Wisp" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="30.0"/>
 		<set name="level" value="99"/>
@@ -4189,12 +4117,11 @@
 		<skills/>
 	</npc>
 	<npc id="19296" name="Golem Generator" title="Virus-Infected">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="33.0"/>
 		<set name="collision_height" value="47.5"/>
 		<set name="level" value="93"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="125144"/>
@@ -4231,7 +4158,6 @@
 		<skills/>
 	</npc>
 	<npc id="19297" name="Alarm" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="33.5"/>
 		<set name="level" value="99"/>
@@ -4272,12 +4198,11 @@
 		<skills/>
 	</npc>
 	<npc id="19298" name="Boz" title="Spicula Clone Generator">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="70.0"/>
 		<set name="level" value="93"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="25028"/>
@@ -4314,12 +4239,11 @@
 		<skills/>
 	</npc>
 	<npc id="19299" name="Spicula's Elite Captain" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="25.0"/>
-		<set name="level" value="95"/>
+		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1113846"/>
@@ -4346,13 +4270,38 @@
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
 		<attributes>
-			<defence attribute="fire" value="0"/>
-			<defence attribute="water" value="0"/>
-			<defence attribute="wind" value="0"/>
-			<defence attribute="earth" value="0"/>
-			<defence attribute="holy" value="0"/>
-			<defence attribute="unholy" value="0"/>
+			<defence attribute="fire" value="300"/>
+			<defence attribute="water" value="300"/>
+			<defence attribute="wind" value="300"/>
+			<defence attribute="earth" value="300"/>
+			<defence attribute="holy" value="300"/>
+			<defence attribute="unholy" value="300"/>
 		</attributes>
 		<skills/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="40.0">
+				<reward item_id="57" min="437001" max="10158492" chance="40.0"/>
+			</group>
+			<group chance="40.0">
+				<reward item_id="6393" min="1" max="1" chance="40.0"/>
+				<reward item_id="4356" min="1" max="1" chance="40.0"/>
+			</group>
+			<group chance="0.05">
+				<reward item_id="18239" min="1" max="1" chance="0.05"/>
+				<reward item_id="18240" min="1" max="1" chance="0.05"/>
+				<reward item_id="18241" min="1" max="1" chance="0.05"/>
+				<reward item_id="18242" min="1" max="1" chance="0.05"/>
+				<reward item_id="18243" min="1" max="1" chance="0.05"/>
+				<reward item_id="18244" min="1" max="1" chance="0.05"/>
+				<reward item_id="18245" min="1" max="1" chance="0.05"/>
+				<reward item_id="18246" min="1" max="1" chance="0.05"/>
+				<reward item_id="18247" min="1" max="1" chance="0.05"/>
+				<reward item_id="18248" min="1" max="1" chance="0.05"/>
+				<reward item_id="18249" min="1" max="1" chance="0.05"/>
+				<reward item_id="18250" min="1" max="1" chance="0.05"/>
+				<reward item_id="18251" min="1" max="1" chance="0.05"/>
+				<reward item_id="18252" min="1" max="1" chance="0.05"/>
+			</group>
+		</rewardlist>
 	</npc>
 </list>

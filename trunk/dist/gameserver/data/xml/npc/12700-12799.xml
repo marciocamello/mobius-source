@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="12774" name="Young Squash" title="">
@@ -79,11 +79,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Squash"/>
 		<skills>
-			<skill id="4073" level="9"/>	<!--Stun-->
-			<skill id="4589" level="9"/>	<!--Decrease Speed-->
-			<skill id="4694" level="1"/>	<!--Ultimate Debuff-->
-			<skill id="4695" level="1"/>	<!--Ultimate Debuff-->
-			<skill id="4696" level="1"/>	<!--Ultimate Debuff-->
+			<skill id="4073" level="9"/>
+			<skill id="4589" level="9"/>
+			<skill id="4694" level="1"/>
+			<skill id="4695" level="1"/>
+			<skill id="4696" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -129,10 +129,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Squash"/>
 		<skills>
-			<skill id="4073" level="9"/>	<!--Stun-->
-			<skill id="4589" level="9"/>	<!--Decrease Speed-->
-			<skill id="4618" level="1"/>	<!--NPC Cancel PC Target-->
-			<skill id="4657" level="9"/>	<!--Hold-->
+			<skill id="4073" level="9"/>
+			<skill id="4589" level="9"/>
+			<skill id="4618" level="1"/>
+			<skill id="4657" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -178,9 +178,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Squash"/>
 		<skills>
-			<skill id="4073" level="9"/>	<!--Stun-->
-			<skill id="4565" level="9"/>	<!--NPC Eruption-->
-			<skill id="4601" level="3"/>	<!--NPC Clan Buff - Acumen Focus-->
+			<skill id="4073" level="9"/>
+			<skill id="4565" level="9"/>
+			<skill id="4601" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -226,11 +226,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Squash"/>
 		<skills>
-			<skill id="4073" level="9"/>	<!--Stun-->
-			<skill id="4589" level="9"/>	<!--Decrease Speed-->
-			<skill id="4694" level="1"/>	<!--Ultimate Debuff-->
-			<skill id="4695" level="1"/>	<!--Ultimate Debuff-->
-			<skill id="4696" level="1"/>	<!--Ultimate Debuff-->
+			<skill id="4073" level="9"/>
+			<skill id="4589" level="9"/>
+			<skill id="4694" level="1"/>
+			<skill id="4695" level="1"/>
+			<skill id="4696" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -276,10 +276,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Squash"/>
 		<skills>
-			<skill id="4073" level="9"/>	<!--Stun-->
-			<skill id="4589" level="9"/>	<!--Decrease Speed-->
-			<skill id="4618" level="1"/>	<!--NPC Cancel PC Target-->
-			<skill id="4657" level="9"/>	<!--Hold-->
+			<skill id="4073" level="9"/>
+			<skill id="4589" level="9"/>
+			<skill id="4618" level="1"/>
+			<skill id="4657" level="9"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -325,7 +325,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -371,7 +371,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -417,7 +417,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>

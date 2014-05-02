@@ -18,9 +18,6 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 
-/**
- * @author fear111
- */
 public class _10351_OwnerOfHall extends Quest implements ScriptFile
 {
 	// npc
@@ -46,11 +43,11 @@ public class _10351_OwnerOfHall extends Quest implements ScriptFile
 		super(true);
 		addStartNpc(TIPIA_NORMAL);
 		addTalkId(TIPIA_NORMAL);
-		addKillId(29209); // octavius
+		addKillId(29212); // octavius
 		
-		// addQuestCompletedCheck(_10318_DecayingDarkness.class);
+		addQuestCompletedCheck(_10318_DecayingDarkness.class);
 		
-		addLevelCheck(95, 99);
+		addLevelCheck(95, 100);
 	}
 	
 	@Override

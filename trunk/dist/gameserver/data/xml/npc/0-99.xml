@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="1" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="25.0"/>
@@ -56,7 +55,6 @@
 		</skills>
 	</npc>
 	<npc id="2" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="0.1"/>
@@ -110,7 +108,6 @@
 		</skills>
 	</npc>
 	<npc id="3" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="8.0"/>
@@ -164,7 +161,6 @@
 		</skills>
 	</npc>
 	<npc id="4" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="8.0"/>
@@ -218,7 +214,6 @@
 		</skills>
 	</npc>
 	<npc id="5" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="8.0"/>
@@ -272,7 +267,6 @@
 		</skills>
 	</npc>
 	<npc id="6" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="0.01"/>
@@ -326,7 +320,6 @@
 		</skills>
 	</npc>
 	<npc id="7" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="0.01"/>
@@ -380,7 +373,6 @@
 		</skills>
 	</npc>
 	<npc id="8" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="16.0"/>
@@ -434,7 +426,6 @@
 		</skills>
 	</npc>
 	<npc id="9" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="26.0"/>
@@ -488,7 +479,6 @@
 		</skills>
 	</npc>
 	<npc id="10" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="8.0"/>
@@ -542,7 +532,6 @@
 		</skills>
 	</npc>
 	<npc id="11" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="40.0"/>
@@ -599,7 +588,6 @@
 		</skills>
 	</npc>
 	<npc id="12" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="0.1"/>
@@ -656,7 +644,6 @@
 		</skills>
 	</npc>
 	<npc id="13" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="9.0"/>
@@ -709,7 +696,6 @@
 		</skills>
 	</npc>
 	<npc id="14" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="9.0"/>
@@ -762,7 +748,6 @@
 		</skills>
 	</npc>
 	<npc id="15" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="9.0"/>
@@ -815,7 +800,6 @@
 		</skills>
 	</npc>
 	<npc id="16" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="9.0"/>
@@ -868,7 +852,6 @@
 		</skills>
 	</npc>
 	<npc id="17" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="9.0"/>
@@ -921,7 +904,6 @@
 		</skills>
 	</npc>
 	<npc id="18" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="9.0"/>
@@ -974,7 +956,6 @@
 		</skills>
 	</npc>
 	<npc id="19" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="10.0"/>
@@ -1029,7 +1010,6 @@
 		</skills>
 	</npc>
 	<npc id="20" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="10.0"/>
@@ -1084,7 +1064,6 @@
 		</skills>
 	</npc>
 	<npc id="21" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="10.0"/>
@@ -1139,7 +1118,6 @@
 		</skills>
 	</npc>
 	<npc id="22" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="4.2"/>
@@ -1193,7 +1171,6 @@
 		</skills>
 	</npc>
 	<npc id="23" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="4.2"/>
@@ -1247,7 +1224,6 @@
 		</skills>
 	</npc>
 	<npc id="24" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="4.2"/>
@@ -1301,7 +1277,6 @@
 		</skills>
 	</npc>
 	<npc id="25" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="4.2"/>
@@ -1355,7 +1330,6 @@
 		</skills>
 	</npc>
 	<npc id="26" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="0.1"/>
@@ -1412,7 +1386,6 @@
 		</skills>
 	</npc>
 	<npc id="27" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="24.5"/>
@@ -1466,7 +1439,6 @@
 		</skills>
 	</npc>
 	<npc id="28" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="0.01"/>
@@ -1524,7 +1496,6 @@
 		</skills>
 	</npc>
 	<npc id="29" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="11.0"/>
@@ -1578,7 +1549,6 @@
 		</skills>
 	</npc>
 	<npc id="30" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="8.0"/>
@@ -1632,7 +1602,6 @@
 		</skills>
 	</npc>
 	<npc id="31" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="0.1"/>
@@ -1686,7 +1655,6 @@
 		</skills>
 	</npc>
 	<npc id="32" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="30.0"/>
@@ -1740,7 +1708,6 @@
 		</skills>
 	</npc>
 	<npc id="33" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="10.0"/>
@@ -1793,7 +1760,6 @@
 		</skills>
 	</npc>
 	<npc id="34" name="" title="">
-		<!--L2WT Tauti Confirmed-->
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="collision_radius" value="10.0"/>

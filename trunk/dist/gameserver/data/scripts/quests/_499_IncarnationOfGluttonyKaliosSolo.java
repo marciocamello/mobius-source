@@ -19,16 +19,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _499_IncarnationOfGluttonyKaliosSolo extends Quest implements ScriptFile
 {
+	// npc
 	public static final int KARTIA_RESEARCH = 33647;
-	public static final int KALIOS = 19255;
 	
-	public _499_IncarnationOfGluttonyKaliosSolo()
-	{
-		super(true);
-		addStartNpc(KARTIA_RESEARCH);
-		addKillId(KALIOS);
-		addLevelCheck(95, 99);
-	}
+	// mobs
+	public static final int KALIOS = 19255;
 	
 	@Override
 	public void onLoad()
@@ -43,6 +38,15 @@ public class _499_IncarnationOfGluttonyKaliosSolo extends Quest implements Scrip
 	@Override
 	public void onShutdown()
 	{
+	}
+	
+	public _499_IncarnationOfGluttonyKaliosSolo()
+	{
+		super(true);
+		addStartNpc(KARTIA_RESEARCH);
+		addTalkId(KARTIA_RESEARCH);
+		addKillId(KALIOS);
+		addLevelCheck(95, 100);
 	}
 	
 	@Override
@@ -74,7 +78,7 @@ public class _499_IncarnationOfGluttonyKaliosSolo extends Quest implements Scrip
 		{
 			if (state == 1)
 			{
-				if (!isAvailableFor(st.getPlayer()) || !st.isNowAvailableByTime())
+				if (!st.isNowAvailable())
 				{
 					return "33647-5.htm";
 				}

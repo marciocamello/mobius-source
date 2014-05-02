@@ -13,131 +13,209 @@
 package quests;
 
 import lineage2.commons.util.Rnd;
+import lineage2.gameserver.listener.actor.player.OnPlayerEnterListener;
+import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
-import lineage2.gameserver.scripts.ScriptFile;
 
-public class _10303_CrossroadsBetweenLightAndDarkness extends Quest implements ScriptFile
+/**
+ * @author pchayka
+ */
+public abstract class _10303_CrossroadsBetweenLightAndDarkness extends Quest
 {
-	private static final int CON1 = 32909;
-	private static final int CON2 = 33343;
-	private static final int CON3 = 17747;
-	private static final int[] CON4 =
+	@SuppressWarnings("unused")
+	private class OnPlayerEnterListenerImpl implements OnPlayerEnterListener
 	{
-		13505,
-		16108,
-		16102,
-		16105
-	};
-	private static final int[] CON5 =
+		@SuppressWarnings("null")
+		@Override
+		public void onPlayerEnter(Player player)
+		{
+			QuestState questState = player.getQuestState(_10303_CrossroadsBetweenLightAndDarkness.this.getClass());
+			if ((player.getLevel() >= 90) && (questState == null) && (questState.getState() != COMPLETED) && (questState.getState() != STARTED))
+			{
+				questState = newQuestState(player, Quest.CREATED);
+			}
+		}
+	}
+	
+	private static final int YONA = 32909;
+	private static final int SECRET_ZHREC = 33343;
+	private static final int DARKSTONE = 17747;
+	private final int[] locMobs =
 	{
-		16101,
-		16100,
-		16099,
-		16098
+		22895,
+		22887,
+		22879,
+		22871,
+		22863
 	};
 	
 	public _10303_CrossroadsBetweenLightAndDarkness()
 	{
 		super(false);
-		addTalkId(CON1, CON2);
-		addQuestItem(CON3);
+		addKillId(locMobs);
+		addQuestItem(DARKSTONE);
+		addTalkId(YONA);
+		addTalkId(SECRET_ZHREC);
 	}
 	
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
-		if (st == null)
+		String htmltext = event;
+		if (event.equalsIgnoreCase("32909-5.htm"))
 		{
-			return event;
-		}
-		if (event.equalsIgnoreCase("32909-05.htm"))
-		{
-			st.dropItem(npc, CON4[Rnd.get(CON4.length)], Rnd.get(1, 100));
+			st.takeItems(57, 465855);
 			st.addExpAndSp(6730155, 2847330);
-			st.getPlayer().addAdena(465855);
-			st.playSound("ItemSound.quest_finish");
+			st.takeItems(DARKSTONE, -1);
+			st.giveItems(getRndRewardYona(), 1);
+			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
-		else if (event.equalsIgnoreCase("33343-05.htm"))
+		
+		if (event.equalsIgnoreCase("33343-5.htm"))
 		{
-			st.dropItem(npc, CON5[Rnd.get(CON5.length)], Rnd.get(1, 100));
+			st.takeItems(57, 465855);
 			st.addExpAndSp(6730155, 2847330);
-			st.getPlayer().addAdena(465855);
-			st.playSound("ItemSound.quest_finish");
-			st.exitCurrentQuest(false);
+			st.giveItems(getRndRewardZhrec(), 1);
+			st.playSound(SOUND_FINISH);
+			st.setState(COMPLETED);
 		}
-		return event;
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState st)
+	{
+		int cond = st.getCond();
+		if (st.getPlayer().getLevel() < 90)
+		{
+			return null;
+		}
+		if (st.getState() == COMPLETED)
+		{
+			return null;
+		}
+		
+		if ((st.getCond() == 0) && (st.getState() == CREATED) && (Rnd.get(1000) == 3))
+		{
+			st.setState(STARTED);
+			return null;
+		}
+		else if ((cond == 1) && Rnd.chance(5))
+		{
+			if (st.getQuestItemsCount(DARKSTONE) == 0)
+			{
+				st.giveItems(DARKSTONE, 1);
+			}
+			return null;
+		}
+		
+		return null;
 	}
 	
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		if (st == null)
+		int npcId = npc.getNpcId();
+		int cond = st.getCond();
+		if (npcId == YONA)
 		{
-			return htmltext;
-		}
-		if (npc.getNpcId() == CON1)
-		{
-			switch (st.getState())
+			if (st.getState() == COMPLETED)
 			{
-				case 2:
-					htmltext = "32909-02.htm";
-					break;
-				case 1:
-					switch (st.getCond())
-					{
-						case 1:
-							if (st.getPlayer().getLevel() < 90)
-							{
-								htmltext = "32909-03.htm";
-							}
-							else
-							{
-								htmltext = "32909-01.htm";
-							}
-					}
+				return "32909-comp.htm";
+			}
+			if (st.getPlayer().getLevel() < 90)
+			{
+				return "32909-lvl.htm";
+			}
+			
+			if ((cond == 1) && (st.getQuestItemsCount(DARKSTONE) >= 1))
+			{
+				return "32909.htm";
 			}
 		}
-		else if (npc.getNpcId() == CON2)
+		else if (npcId == SECRET_ZHREC)
 		{
-			switch (st.getState())
+			if (st.getState() == COMPLETED)
 			{
-				case 2:
-					htmltext = "33343-02.htm";
-					break;
-				case 1:
-					switch (st.getCond())
-					{
-						case 1:
-							if (st.getPlayer().getLevel() < 90)
-							{
-								htmltext = "33343-03.htm";
-							}
-							else
-							{
-								htmltext = "33343-01.htm";
-							}
-					}
+				return "33343-comp.htm";
+			}
+			if (st.getPlayer().getLevel() < 90)
+			{
+				return "33343-lvl.htm";
+			}
+			
+			if ((cond == 1) && (st.getQuestItemsCount(DARKSTONE) >= 1))
+			{
+				return "33343.htm";
 			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public void onLoad()
+	public boolean isVisible(Player player)
 	{
+		if (player.getLevel() < 90)
+		{
+			return false;
+		}
+		QuestState questState = player.getQuestState(_10303_CrossroadsBetweenLightAndDarkness.this.getClass());
+		if ((questState == null) || (questState.getState() != STARTED))
+		{
+			return false;
+		}
+		return true;
 	}
 	
-	@Override
-	public void onReload()
+	private static int getRndRewardYona()
 	{
+		switch (Rnd.get(12))
+		{
+			case 1:
+			case 2:
+			case 3:
+				return 13505;
+			case 4:
+			case 5:
+			case 6:
+				return 16108;
+			case 7:
+			case 8:
+			case 9:
+				return 16102;
+			case 10:
+			case 11:
+			case 12:
+				return 16105;
+		}
+		return 57;
 	}
 	
-	@Override
-	public void onShutdown()
+	private static int getRndRewardZhrec()
 	{
+		switch (Rnd.get(12))
+		{
+			case 1:
+			case 2:
+			case 3:
+				return 16101;
+			case 4:
+			case 5:
+			case 6:
+				return 16100;
+			case 7:
+			case 8:
+			case 9:
+				return 16099;
+			case 10:
+			case 11:
+			case 12:
+				return 16098;
+		}
+		return 57;
 	}
 }

@@ -2810,13 +2810,17 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	{
 		_skillHealStance = isHealTask;
 		int count = 0;
-		Polygon terr = null;
+		
+		// Polygon terr = null;
+		
 		for (Creature target : activeChar.getAroundCharacters(_skillRadius, 300))
 		{
-			if ((terr != null) && !terr.isInside(target.getX(), target.getY(), target.getZ()))
-			{
-				continue;
-			}
+			
+			// if ((terr != null) && !terr.isInside(target.getX(), target.getY(), target.getZ()))
+			// {
+			// continue;
+			// }
+			
 			if ((target == null) || (activeChar == target) || ((activeChar.getPlayer() != null) && (activeChar.getPlayer() == target.getPlayer())))
 			{
 				continue;

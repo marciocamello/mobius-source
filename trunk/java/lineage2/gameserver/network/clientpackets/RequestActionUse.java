@@ -798,6 +798,7 @@ public class RequestActionUse extends L2GameClientPacket
 		 * Field ACTION88.
 		 */
 		ACTION88(88, SOCIAL_ACTION, SocialAction.PROVOKE, 2),
+		ACTION89(89, SOCIAL_ACTION, SocialAction.lv_1, 2), // Lindvior
 		/**
 		 * Field ACTION71.
 		 */
@@ -1112,7 +1113,7 @@ public class RequestActionUse extends L2GameClientPacket
 						{
 							activeChar.sendPacket(Msg.A_DEAD_PET_CANNOT_BE_RIDDEN);
 						}
-						else if ((pet != null) && pet.isMountable())
+						else if (pet.isMountable())
 						{
 							activeChar.getEffectList().stopEffect(Skill.SKILL_EVENT_TIMER);
 							activeChar.setMount(pet.getTemplate().npcId, pet.getObjectId(), pet.getLevel());

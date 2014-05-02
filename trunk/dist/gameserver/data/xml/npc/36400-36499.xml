@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="36400" name="Special Envoy" title="Innadril">
@@ -44,7 +44,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -98,7 +98,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -144,10 +144,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="OlympiadBuffer"/>
 		<equip>
-			<rhand item_id="70"/>	<!--Claymore-->
+			<rhand item_id="70"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -194,10 +194,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="PailakaGatekeeper"/>
 		<equip>
-			<rhand item_id="1376"/>	<!--Guard Spear-->
+			<rhand item_id="1376"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -244,10 +244,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="PailakaGatekeeper"/>
 		<equip>
-			<rhand item_id="1376"/>	<!--Guard Spear-->
+			<rhand item_id="1376"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -294,10 +294,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="PailakaGatekeeper"/>
 		<equip>
-			<rhand item_id="1376"/>	<!--Guard Spear-->
+			<rhand item_id="1376"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -344,10 +344,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="PailakaGatekeeper"/>
 		<equip>
-			<rhand item_id="1376"/>	<!--Guard Spear-->
+			<rhand item_id="1376"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -394,10 +394,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="PailakaGatekeeper"/>
 		<equip>
-			<rhand item_id="1376"/>	<!--Guard Spear-->
+			<rhand item_id="1376"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -444,10 +444,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="PailakaGatekeeper"/>
 		<equip>
-			<rhand item_id="1376"/>	<!--Guard Spear-->
+			<rhand item_id="1376"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -494,10 +494,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="PailakaGatekeeper"/>
 		<equip>
-			<rhand item_id="1376"/>	<!--Guard Spear-->
+			<rhand item_id="1376"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -544,10 +544,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="PailakaGatekeeper"/>
 		<equip>
-			<rhand item_id="1376"/>	<!--Guard Spear-->
+			<rhand item_id="1376"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -594,10 +594,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="PailakaGatekeeper"/>
 		<equip>
-			<rhand item_id="1376"/>	<!--Guard Spear-->
+			<rhand item_id="1376"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1554,7 +1554,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1608,7 +1608,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1662,7 +1662,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1716,7 +1716,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1770,7 +1770,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1824,7 +1824,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1878,7 +1878,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1932,7 +1932,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1986,7 +1986,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2040,7 +2040,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2094,7 +2094,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2148,7 +2148,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2202,7 +2202,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2256,7 +2256,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2310,7 +2310,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2364,7 +2364,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2418,7 +2418,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2472,7 +2472,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2526,7 +2526,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2580,7 +2580,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2634,7 +2634,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2688,7 +2688,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2742,7 +2742,7 @@
 			<set name="fail_contract_dialog" value="residence2/fortress/gludio_ambassador005.htm"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2789,7 +2789,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="ManorManager"/>
 		<skills>
-			<skill id="4416" level="25"/>	<!--Kamael-->
+			<skill id="4416" level="25"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2835,7 +2835,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2881,7 +2881,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2927,7 +2927,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2973,7 +2973,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3019,7 +3019,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3065,7 +3065,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3111,7 +3111,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3157,7 +3157,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3203,7 +3203,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3249,7 +3249,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3295,7 +3295,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3341,7 +3341,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3387,7 +3387,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3433,7 +3433,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3479,7 +3479,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3525,7 +3525,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3571,7 +3571,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3617,7 +3617,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3663,7 +3663,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3709,7 +3709,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3755,7 +3755,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="WyvernManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3801,7 +3801,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3847,7 +3847,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="FameManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3893,7 +3893,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="FameManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3940,11 +3940,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
-			<lhand item_id="6377"/>	<!--Imperial Crusader Shield-->
+			<rhand item_id="2500"/>
+			<lhand item_id="6377"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3991,11 +3991,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
-			<lhand item_id="6377"/>	<!--Imperial Crusader Shield-->
+			<rhand item_id="2500"/>
+			<lhand item_id="6377"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4042,11 +4042,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
-			<lhand item_id="6377"/>	<!--Imperial Crusader Shield-->
+			<rhand item_id="2500"/>
+			<lhand item_id="6377"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4093,11 +4093,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
-			<lhand item_id="6377"/>	<!--Imperial Crusader Shield-->
+			<rhand item_id="2500"/>
+			<lhand item_id="6377"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4144,11 +4144,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
-			<lhand item_id="6377"/>	<!--Imperial Crusader Shield-->
+			<rhand item_id="2500"/>
+			<lhand item_id="6377"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4195,11 +4195,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
-			<lhand item_id="6377"/>	<!--Imperial Crusader Shield-->
+			<rhand item_id="2500"/>
+			<lhand item_id="6377"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4246,11 +4246,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
-			<lhand item_id="6377"/>	<!--Imperial Crusader Shield-->
+			<rhand item_id="2500"/>
+			<lhand item_id="6377"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4297,11 +4297,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
-			<lhand item_id="6377"/>	<!--Imperial Crusader Shield-->
+			<rhand item_id="2500"/>
+			<lhand item_id="6377"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4348,11 +4348,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
-			<lhand item_id="6377"/>	<!--Imperial Crusader Shield-->
+			<rhand item_id="2500"/>
+			<lhand item_id="6377"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4399,7 +4399,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4446,7 +4446,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4493,7 +4493,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4540,7 +4540,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4587,7 +4587,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4634,7 +4634,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4681,7 +4681,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4728,7 +4728,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4775,7 +4775,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4821,7 +4821,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>

@@ -40,8 +40,7 @@ public class ExMagicAttackInfo extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeC(0xFE);
-		writeH(0xFA);
+		writeEx(0xFB);
 		writeD(player.getObjectId());
 		writeD(player.getTargetId());
 		writeD(0x01);

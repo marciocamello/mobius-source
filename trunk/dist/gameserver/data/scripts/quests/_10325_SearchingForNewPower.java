@@ -12,22 +12,222 @@
  */
 package quests;
 
-import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 
+/**
+ * @author Yorie
+ */
+// TODO: General, this quest should be checked for all races. Now it's checked only for elves
 public class _10325_SearchingForNewPower extends Quest implements ScriptFile
 {
-	private static final int galint = 32980;
-	private final static int talbot = 32156;
-	private final static int cindet = 32148;
-	private final static int black = 32161;
-	private final static int herz = 32151;
-	private final static int kinkaid = 32159;
-	private final static int xonia = 32144;
+	private final static int GALLINT = 32980;
+	/* Race depended talk NPCs */
+	private final static int TALBOT = 32156; // Human
+	private final static int CINDET = 32148; // Elves
+	private final static int BLACK = 32161; // Dark Elves
+	private final static int HERZ = 32151; // Orcs
+	private final static int KINCAID = 32159; // Dwarves
+	private final static int XONIA = 32144; // Kamael
+	/* ~Race dependent talk NPCs~ */
+	
+	private final static int SPIRITSHOT = 2509;
+	private final static int SOULSHOT = 1835;
+	
+	public _10325_SearchingForNewPower()
+	{
+		super(false);
+		
+		addStartNpc(GALLINT);
+		addTalkId(GALLINT);
+		addTalkId(BLACK);
+		addTalkId(KINCAID);
+		addTalkId(CINDET);
+		addTalkId(TALBOT);
+		addTalkId(HERZ);
+		addTalkId(XONIA);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		if (event.equalsIgnoreCase("quest_accept"))
+		{
+			htmltext = "gallint_q10325_3.htm";
+			Race race = qs.getPlayer().getRace();
+			if (race == Race.darkelf)
+			{
+				htmltext = "gallint_q10325_3_darkelves.htm";
+				qs.setCond(4);
+			}
+			else if (race == Race.dwarf)
+			{
+				htmltext = "gallint_q10325_3_dwarves.htm";
+				qs.setCond(6);
+			}
+			else if (race == Race.elf)
+			{
+				htmltext = "gallint_q10325_3_elves.htm";
+				qs.setCond(3);
+			}
+			else if (race == Race.human)
+			{
+				htmltext = "gallint_q10325_3_human.htm";
+				qs.setCond(2);
+			}
+			else if (race == Race.kamael)
+			{
+				htmltext = "gallint_q10325_3_kamael.htm";
+				qs.setCond(7);
+			}
+			else if (race == Race.orc)
+			{
+				htmltext = "gallint_q10325_3_orcs.htm";
+				qs.setCond(5);
+			}
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState st)
+	{
+		String htmltext = "noquest";
+		int npcId = npc.getNpcId();
+		int cond = st.getCond();
+		QuestState reqQuest = st.getPlayer().getQuestState("_10324_FindingMagisterGallint");
+		final Race race = st.getPlayer().getRace();
+		
+		// Add talk NPC by player race
+		/*
+		 * if(cond == 0 && !talkerAdded) { talkerAdded = true; if(race == Race.DARKELF) addTalkId(BLACK); else if(race == Race.DWARF) addTalkId(KINCAID); else if(race == Race.ELF) addTalkId(CINDET); else if(race == Race.HUMAN) addTalkId(TALBOT); else if(race == Race.KAMAEL) addTalkId(XONIA); else
+		 * if(race == Race.ORC) addTalkId(HERZ); addTalkId(GALLINT); }
+		 */
+		
+		int currentCond = st.getCond();
+		switch (npcId)
+		{
+			case GALLINT:
+				htmltext = "gallint_q10325_1.htm";
+				if (cond >= 8)
+				{
+					htmltext = "gallint_q10325_4.htm";
+					st.giveItems(ADENA_ID, 12000);
+					st.getPlayer().addExpAndSp(3254, 2400);
+					st.playSound(SOUND_FINISH);
+					if (st.getPlayer().isMageClass())
+					{
+						st.giveItems(SPIRITSHOT, 1000);
+					}
+					else
+					{
+						st.giveItems(SOULSHOT, 1000);
+					}
+					st.exitCurrentQuest(false);
+				}
+				else if (cond > 0)
+				{
+					htmltext = "gallint_q10325_taken.htm";
+				}
+				else if ((reqQuest == null) || !reqQuest.isCompleted())
+				{
+					htmltext = "You need to complete quest Finding Magister Gallint"; // TODO: Unknown text here
+				}
+				break;
+			case TALBOT:
+				if (race == Race.human)
+				{
+					if (currentCond == 2)
+					{
+						htmltext = "talbot_q10325_1.htm";
+						st.setCond(st.getCond() + 6);
+					}
+					else
+					{
+						htmltext = "talbot_q10325_taken.htm";
+					}
+				}
+				break;
+			case CINDET:
+				if (race == Race.elf)
+				{
+					if (currentCond == 3)
+					{
+						htmltext = "cindet_q10325_1.htm";
+						st.setCond(st.getCond() + 6);
+					}
+					else
+					{
+						htmltext = "cindet_q10325_taken.htm";
+					}
+				}
+				break;
+			case BLACK:
+				if (race == Race.darkelf)
+				{
+					if (currentCond == 4)
+					{
+						htmltext = "black_q10325_1.htm";
+						st.setCond(st.getCond() + 6);
+					}
+					else
+					{
+						htmltext = "black_q10325_taken.htm";
+					}
+				}
+				break;
+			case HERZ:
+				if (race == Race.orc)
+				{
+					if (currentCond == 5)
+					{
+						htmltext = "herz_q10325_1.htm";
+						st.setCond(st.getCond() + 6);
+					}
+					else
+					{
+						htmltext = "herz_q10325_taken.htm";
+					}
+				}
+				break;
+			case KINCAID:
+				if (race == Race.dwarf)
+				{
+					if (currentCond == 6)
+					{
+						htmltext = "kincaid_q10325_1.htm";
+						st.setCond(st.getCond() + 6);
+					}
+					else
+					{
+						htmltext = "kincaid_q10325_taken.htm";
+					}
+				}
+				break;
+			case XONIA:
+				if (race == Race.kamael)
+				{
+					if (currentCond == 7)
+					{
+						htmltext = "xonia_q10325_1.htm";
+						st.setCond(st.getCond() + 6);
+					}
+					else
+					{
+						htmltext = "xonia_q10325_taken.htm";
+					}
+				}
+				break;
+		}
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -42,241 +242,5 @@ public class _10325_SearchingForNewPower extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public _10325_SearchingForNewPower()
-	{
-		super(false);
-		addStartNpc(galint);
-		addTalkId(galint);
-		addTalkId(talbot);
-		addTalkId(cindet);
-		addTalkId(black);
-		addTalkId(kinkaid);
-		addTalkId(xonia);
-		addTalkId(herz);
-		addLevelCheck(1, 20);
-		addQuestCompletedCheck(_10324_FindingMagisterGallint.class);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		if (event.equalsIgnoreCase("0-2.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		if (event.equalsIgnoreCase("quest_ac"))
-		{
-			if (st.getPlayer().getRace() == Race.human)
-			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(2);
-				htmltext = "0-3h.htm";
-			}
-			if (st.getPlayer().getRace() == Race.elf)
-			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(3);
-				htmltext = "0-3e.htm";
-			}
-			if (st.getPlayer().getRace() == Race.darkelf)
-			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(4);
-				htmltext = "0-3de.htm";
-			}
-			if (st.getPlayer().getRace() == Race.dwarf)
-			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(6);
-				htmltext = "0-3d.htm";
-			}
-			if (st.getPlayer().getRace() == Race.kamael)
-			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(7);
-				htmltext = "0-3k.htm";
-			}
-			if (st.getPlayer().getRace() == Race.orc)
-			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(5);
-				htmltext = "0-3o.htm";
-			}
-		}
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		Player player = st.getPlayer();
-		int cond = st.getCond();
-		int npcId = npc.getNpcId();
-		String htmltext = "noquest";
-		if (npcId == galint)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "0-c.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "start.htm";
-			}
-			else if ((cond == 2) || (cond == 3) || (cond == 4) || (cond == 5) || (cond == 6) || (cond == 7))
-			{
-				htmltext = "0-4.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-2.htm";
-			}
-			else if ((cond == 8) || (cond == 9) || (cond == 10) || (cond == 11) || (cond == 12) || (cond == 13))
-			{
-				htmltext = "0-5.htm";
-				st.getPlayer().addExpAndSp(3254, 2400);
-				st.giveItems(57, 12000);
-				st.exitCurrentQuest(false);
-				st.playSound(SOUND_FINISH);
-				if (!player.isMageClass() || (player.getTemplate().getRace() == Race.orc))
-				{
-					st.giveItems(5789, 1000);
-				}
-				else
-				{
-					st.giveItems(5790, 1000);
-				}
-			}
-			else
-			{
-				htmltext = "0-nc.htm";
-			}
-		}
-		else if (npcId == black)
-		{
-			if (st.getPlayer().getRace() == Race.darkelf)
-			{
-				if (cond == 4)
-				{
-					st.setCond(10);
-					st.playSound(SOUND_MIDDLE);
-					htmltext = "1-2de.htm";
-				}
-				if (cond == 10)
-				{
-					htmltext = "1-4de.htm";
-				}
-			}
-			else
-			{
-				htmltext = "1-3de.htm";
-			}
-		}
-		else if (npcId == cindet)
-		{
-			if (st.getPlayer().getRace() == Race.elf)
-			{
-				if (cond == 3)
-				{
-					st.setCond(9);
-					st.playSound(SOUND_MIDDLE);
-					htmltext = "1-2e.htm";
-				}
-				if (cond == 9)
-				{
-					htmltext = "1-4e.htm";
-				}
-			}
-			else
-			{
-				htmltext = "1-3e.htm";
-			}
-		}
-		else if (npcId == talbot)
-		{
-			if (st.getPlayer().getRace() == Race.human)
-			{
-				if (cond == 2)
-				{
-					st.setCond(8);
-					st.playSound(SOUND_MIDDLE);
-					htmltext = "1-2h.htm";
-				}
-				if (cond == 8)
-				{
-					htmltext = "1-4h.htm";
-				}
-			}
-			else
-			{
-				htmltext = "1-3h.htm";
-			}
-		}
-		else if (npcId == xonia)
-		{
-			if (st.getPlayer().getRace() == Race.kamael)
-			{
-				if (cond == 7)
-				{
-					st.setCond(13);
-					st.playSound(SOUND_MIDDLE);
-					htmltext = "1-2k.htm";
-				}
-				if (cond == 13)
-				{
-					htmltext = "1-4k.htm";
-				}
-			}
-			else
-			{
-				htmltext = "1-3k.htm";
-			}
-		}
-		else if (npcId == kinkaid)
-		{
-			if (st.getPlayer().getRace() == Race.dwarf)
-			{
-				if (cond == 6)
-				{
-					st.setCond(12);
-					st.playSound(SOUND_MIDDLE);
-					htmltext = "1-2d.htm";
-				}
-				if (cond == 12)
-				{
-					htmltext = "1-4d.htm";
-				}
-			}
-			else
-			{
-				htmltext = "1-3d.htm";
-			}
-		}
-		else if (npcId == herz)
-		{
-			if (st.getPlayer().getRace() == Race.orc)
-			{
-				if (cond == 5)
-				{
-					st.setCond(11);
-					st.playSound(SOUND_MIDDLE);
-					htmltext = "1-2o.htm";
-				}
-				if (cond == 11)
-				{
-					htmltext = "1-4o.htm";
-				}
-			}
-			else
-			{
-				htmltext = "1-3o.htm";
-			}
-		}
-		return htmltext;
 	}
 }

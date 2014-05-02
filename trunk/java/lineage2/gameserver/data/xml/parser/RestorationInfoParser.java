@@ -29,7 +29,7 @@ public final class RestorationInfoParser extends AbstractDirParser<RestorationIn
 	@Override
 	public File getXMLDir()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/xml/stats/skills/restoration_info");
+		return new File(Config.DATAPACK_ROOT, "data/xml/skills/restoration_info");
 	}
 	
 	@Override

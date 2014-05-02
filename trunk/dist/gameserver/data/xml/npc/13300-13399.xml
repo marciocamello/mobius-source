@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="13300" name="Wise Retainer of Lights" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="13.0"/>
 		<set name="level" value="85"/>
@@ -43,7 +42,6 @@
 		<skills/>
 	</npc>
 	<npc id="13301" name="Symbol of Lakcis" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="13.0"/>
 		<set name="level" value="85"/>
@@ -84,7 +82,6 @@
 		<skills/>
 	</npc>
 	<npc id="13302" name="Incarnation" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="85"/>
@@ -125,7 +122,6 @@
 		<skills/>
 	</npc>
 	<npc id="13303" name="Incarnation" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="90"/>
@@ -166,7 +162,6 @@
 		<skills/>
 	</npc>
 	<npc id="13304" name="Incarnation" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="95"/>
@@ -207,7 +202,6 @@
 		<skills/>
 	</npc>
 	<npc id="13305" name="Incarnation" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="97"/>
@@ -248,12 +242,11 @@
 		<skills/>
 	</npc>
 	<npc id="13306" name="Damaged Area" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -290,12 +283,11 @@
 		<skills/>
 	</npc>
 	<npc id="13307" name="Ant Hell" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -332,12 +324,11 @@
 		<skills/>
 	</npc>
 	<npc id="13308" name="Ring of Yoke" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -374,12 +365,11 @@
 		<skills/>
 	</npc>
 	<npc id="13309" name="Stealth Detector" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -416,7 +406,6 @@
 		<skills/>
 	</npc>
 	<npc id="13310" name="Solo Dance" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="80"/>
@@ -457,12 +446,11 @@
 		<skills/>
 	</npc>
 	<npc id="13311" name="Awakened Knight's Mount" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="86"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -499,12 +487,11 @@
 		<skills/>
 	</npc>
 	<npc id="13312" name="Awakened Warrior's Mount" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="86"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -541,12 +528,11 @@
 		<skills/>
 	</npc>
 	<npc id="13313" name="Awakened Rogue's Mount" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.25"/>
 		<set name="level" value="86"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -583,12 +569,11 @@
 		<skills/>
 	</npc>
 	<npc id="13314" name="Awakened Archer's Mount" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -625,12 +610,11 @@
 		<skills/>
 	</npc>
 	<npc id="13315" name="Awakened Wizard's Mount" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.25"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -667,12 +651,11 @@
 		<skills/>
 	</npc>
 	<npc id="13316" name="Awakened Summoner's Mount" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.25"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -709,12 +692,11 @@
 		<skills/>
 	</npc>
 	<npc id="13317" name="Awakened Enchanter's Mount" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -751,12 +733,11 @@
 		<skills/>
 	</npc>
 	<npc id="13318" name="Awakened Healer's Mount" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -793,7 +774,6 @@
 		<skills/>
 	</npc>
 	<npc id="13319" name="Shadow of Hell" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="99"/>
@@ -834,7 +814,6 @@
 		<skills/>
 	</npc>
 	<npc id="13320" name="Shadow of Hell" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
@@ -875,7 +854,6 @@
 		<skills/>
 	</npc>
 	<npc id="13321" name="Shadow of Hell" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
@@ -916,7 +894,6 @@
 		<skills/>
 	</npc>
 	<npc id="13322" name="Shadow of Hell" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
@@ -957,7 +934,6 @@
 		<skills/>
 	</npc>
 	<npc id="13323" name="Whisper of Fear" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
@@ -998,7 +974,6 @@
 		<skills/>
 	</npc>
 	<npc id="13324" name="Whisper of Fear" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
@@ -1039,7 +1014,6 @@
 		<skills/>
 	</npc>
 	<npc id="13325" name="Whisper of Fear" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="85"/>
@@ -1080,7 +1054,6 @@
 		<skills/>
 	</npc>
 	<npc id="13326" name="Severe Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -1121,7 +1094,6 @@
 		<skills/>
 	</npc>
 	<npc id="13327" name="Yoke Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -1162,7 +1134,6 @@
 		<skills/>
 	</npc>
 	<npc id="13328" name="Decoy" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="99"/>
@@ -1203,7 +1174,6 @@
 		<skills/>
 	</npc>
 	<npc id="13329" name="Illusion" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="85"/>
@@ -1244,7 +1214,6 @@
 		<skills/>
 	</npc>
 	<npc id="13330" name="Kukuri" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="95"/>
@@ -1285,12 +1254,11 @@
 		<skills/>
 	</npc>
 	<npc id="13331" name="Guitar Fairy" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="4.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -1327,12 +1295,11 @@
 		<skills/>
 	</npc>
 	<npc id="13332" name="Maracas Fairy" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="4.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -1369,12 +1336,11 @@
 		<skills/>
 	</npc>
 	<npc id="13333" name="Cymbal Fairy" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="4.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -1411,12 +1377,11 @@
 		<skills/>
 	</npc>
 	<npc id="13334" name="Drums Fairy" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="4.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -1453,12 +1418,11 @@
 		<skills/>
 	</npc>
 	<npc id="13335" name="Pipe Organ Fairy" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="4.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -1495,12 +1459,11 @@
 		<skills/>
 	</npc>
 	<npc id="13336" name="Bugle Fairy" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="3.0"/>
 		<set name="collision_height" value="4.0"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -1537,12 +1500,11 @@
 		<skills/>
 	</npc>
 	<npc id="13337" name="Vampiric Fairy" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="7.5"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -1579,12 +1541,11 @@
 		<skills/>
 	</npc>
 	<npc id="13338" name="Enchanting Stone" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="20.5"/>
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
@@ -1621,7 +1582,6 @@
 		<skills/>
 	</npc>
 	<npc id="13339" name="Illusion" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.5"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="85"/>
@@ -1662,7 +1622,6 @@
 		<skills/>
 	</npc>
 	<npc id="13340" name="Kukurin" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="35.5"/>
 		<set name="level" value="85"/>
@@ -1703,7 +1662,6 @@
 		<skills/>
 	</npc>
 	<npc id="13341" name="Vitality Recovering Cake" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="0.01"/>
 		<set name="collision_height" value="5.5"/>
 		<set name="level" value="85"/>
@@ -1744,7 +1702,6 @@
 		<skills/>
 	</npc>
 	<npc id="13342" name="Specter of Light" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="125.0"/>
 		<set name="collision_height" value="43.0"/>
 		<set name="level" value="1"/>
@@ -1785,7 +1742,6 @@
 		<skills/>
 	</npc>
 	<npc id="13343" name="Specter of Mysterious Light" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="125.0"/>
 		<set name="collision_height" value="43.0"/>
 		<set name="level" value="1"/>
@@ -1826,7 +1782,6 @@
 		<skills/>
 	</npc>
 	<npc id="13344" name="Specter of Mysterious Light" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="125.0"/>
 		<set name="collision_height" value="43.0"/>
 		<set name="level" value="1"/>
@@ -1867,7 +1822,6 @@
 		<skills/>
 	</npc>
 	<npc id="13345" name="Specter of Mysterious Light" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="125.0"/>
 		<set name="collision_height" value="43.0"/>
 		<set name="level" value="85"/>
@@ -1908,7 +1862,6 @@
 		<skills/>
 	</npc>
 	<npc id="13346" name="Specter of Light" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="125.0"/>
 		<set name="collision_height" value="43.0"/>
 		<set name="level" value="1"/>
@@ -1949,7 +1902,6 @@
 		<skills/>
 	</npc>
 	<npc id="13347" name="Specter of Light" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="125.0"/>
 		<set name="collision_height" value="43.0"/>
 		<set name="level" value="1"/>
@@ -1990,7 +1942,6 @@
 		<skills/>
 	</npc>
 	<npc id="13348" name="Specter of Light" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="125.0"/>
 		<set name="collision_height" value="43.0"/>
 		<set name="level" value="1"/>
@@ -2031,7 +1982,6 @@
 		<skills/>
 	</npc>
 	<npc id="13349" name="Shard of Light" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="125.0"/>
 		<set name="collision_height" value="43.0"/>
 		<set name="level" value="1"/>
@@ -2072,7 +2022,6 @@
 		<skills/>
 	</npc>
 	<npc id="13350" name="Black Bear Mount" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="18.0"/>
 		<set name="level" value="99"/>
@@ -2113,7 +2062,6 @@
 		<skills/>
 	</npc>
 	<npc id="13351" name="Rosy Rose" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="22.7"/>
 		<set name="collision_height" value="14.3"/>
 		<set name="level" value="99"/>
@@ -2154,7 +2102,6 @@
 		<skills/>
 	</npc>
 	<npc id="13352" name="Deadly Rose" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="24.3"/>
 		<set name="collision_height" value="13.6"/>
 		<set name="level" value="99"/>
@@ -2195,7 +2142,6 @@
 		<skills/>
 	</npc>
 	<npc id="13353" name="Knight of Chaos" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="19.0"/>
 		<set name="collision_height" value="30.5"/>
 		<set name="level" value="99"/>
@@ -2236,7 +2182,6 @@
 		<skills/>
 	</npc>
 	<npc id="13354" name="T-shirt Portal" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="115.0"/>
 		<set name="level" value="99"/>
@@ -2279,7 +2224,6 @@
 		</skills>
 	</npc>
 	<npc id="13355" name="HM Pona" title="Customer Support">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="38.0"/>
 		<set name="level" value="99"/>
@@ -2322,7 +2266,6 @@
 		</skills>
 	</npc>
 	<npc id="13356" name="HM Bard" title="Customer Support">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="18.5"/>
 		<set name="level" value="99"/>
@@ -2365,7 +2308,6 @@
 		</skills>
 	</npc>
 	<npc id="13357" name="Severe Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -2406,7 +2348,6 @@
 		<skills/>
 	</npc>
 	<npc id="13358" name="Severe Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -2447,7 +2388,6 @@
 		<skills/>
 	</npc>
 	<npc id="13359" name="Severe Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -2488,7 +2428,6 @@
 		<skills/>
 	</npc>
 	<npc id="13360" name="Severe Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -2529,7 +2468,6 @@
 		<skills/>
 	</npc>
 	<npc id="13361" name="Severe Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -2570,7 +2508,6 @@
 		<skills/>
 	</npc>
 	<npc id="13362" name="Severe Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -2611,7 +2548,6 @@
 		<skills/>
 	</npc>
 	<npc id="13363" name="Severe Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -2652,7 +2588,6 @@
 		<skills/>
 	</npc>
 	<npc id="13364" name="Severe Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -2693,7 +2628,6 @@
 		<skills/>
 	</npc>
 	<npc id="13365" name="Severe Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -2734,7 +2668,6 @@
 		<skills/>
 	</npc>
 	<npc id="13366" name="Severe Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -2775,7 +2708,6 @@
 		<skills/>
 	</npc>
 	<npc id="13367" name="Yoke Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -2816,7 +2748,6 @@
 		<skills/>
 	</npc>
 	<npc id="13368" name="Yoke Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -2857,7 +2788,6 @@
 		<skills/>
 	</npc>
 	<npc id="13369" name="Yoke Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -2898,7 +2828,6 @@
 		<skills/>
 	</npc>
 	<npc id="13370" name="Yoke Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -2939,7 +2868,6 @@
 		<skills/>
 	</npc>
 	<npc id="13371" name="Yoke Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -2980,7 +2908,6 @@
 		<skills/>
 	</npc>
 	<npc id="13372" name="Yoke Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -3021,7 +2948,6 @@
 		<skills/>
 	</npc>
 	<npc id="13373" name="Yoke Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -3062,7 +2988,6 @@
 		<skills/>
 	</npc>
 	<npc id="13374" name="Yoke Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -3103,7 +3028,6 @@
 		<skills/>
 	</npc>
 	<npc id="13375" name="Yoke Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -3144,7 +3068,6 @@
 		<skills/>
 	</npc>
 	<npc id="13376" name="Yoke Trap" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="5.0"/>
 		<set name="collision_height" value="10.0"/>
 		<set name="level" value="99"/>
@@ -3185,12 +3108,11 @@
 		<skills/>
 	</npc>
 	<npc id="13377" name="Solo Dance" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="8056"/>
@@ -3227,12 +3149,11 @@
 		<skills/>
 	</npc>
 	<npc id="13378" name="Solo Dance" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="9311"/>
@@ -3269,12 +3190,11 @@
 		<skills/>
 	</npc>
 	<npc id="13379" name="Solo Dance" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="10790"/>
@@ -3311,12 +3231,11 @@
 		<skills/>
 	</npc>
 	<npc id="13380" name="Solo Dance" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="12538"/>
@@ -3353,12 +3272,11 @@
 		<skills/>
 	</npc>
 	<npc id="13381" name="Solo Dance" title="">
-		<!--fixed by Darvin & HaxHago-->
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-			<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="14612"/>

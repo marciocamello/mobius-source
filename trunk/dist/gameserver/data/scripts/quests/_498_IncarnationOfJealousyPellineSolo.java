@@ -19,20 +19,34 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _498_IncarnationOfJealousyPellineSolo extends Quest implements ScriptFile
 {
+	// npc
 	public static final int KARTIA_RESEARCH = 33647;
+	
+	// mobs
 	public static final int FILINE = 19254;
 	
-	public _498_IncarnationOfJealousyPellineSolo()
+	@Override
+	public void onLoad()
 	{
-		super(true);
-		addStartNpc(KARTIA_RESEARCH);
-		addKillId(FILINE);
-		addLevelCheck(90, 94);
+	}
+	
+	@Override
+	public void onReload()
+	{
 	}
 	
 	@Override
 	public void onShutdown()
 	{
+	}
+	
+	public _498_IncarnationOfJealousyPellineSolo()
+	{
+		super(true);
+		addStartNpc(KARTIA_RESEARCH);
+		addTalkId(KARTIA_RESEARCH);
+		addKillId(FILINE);
+		addLevelCheck(90, 94);
 	}
 	
 	@Override
@@ -41,14 +55,14 @@ public class _498_IncarnationOfJealousyPellineSolo extends Quest implements Scri
 		if (event.equalsIgnoreCase("33647-4.htm"))
 		{
 			st.setCond(1);
-			st.setState(2);
-			st.playSound("ItemSound.quest_accept");
+			st.setState(STARTED);
+			st.playSound(SOUND_ACCEPT);
 		}
 		if (event.equalsIgnoreCase("33647-8.htm"))
 		{
-			st.giveItems(34931, 1L);
+			st.giveItems(34931, 1);
 			st.unset("cond");
-			st.playSound("ItemSound.quest_finish");
+			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(this);
 		}
 		return event;
@@ -64,7 +78,7 @@ public class _498_IncarnationOfJealousyPellineSolo extends Quest implements Scri
 		{
 			if (state == 1)
 			{
-				if (!isAvailableFor(st.getPlayer()) || !st.isNowAvailableByTime())
+				if (!st.isNowAvailable())
 				{
 					return "33647-5.htm";
 				}
@@ -78,21 +92,12 @@ public class _498_IncarnationOfJealousyPellineSolo extends Quest implements Scri
 				}
 				if (cond == 2)
 				{
+					
 					return "33647-7.htm";
 				}
 			}
 		}
 		return "noquest";
-	}
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
 	}
 	
 	@Override

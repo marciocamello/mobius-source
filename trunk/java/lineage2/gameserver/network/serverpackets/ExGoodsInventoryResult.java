@@ -37,7 +37,7 @@ public class ExGoodsInventoryResult extends L2GameServerPacket
 	
 	private final int _result;
 	
-	private ExGoodsInventoryResult(int result)
+	public ExGoodsInventoryResult(int result)
 	{
 		_result = result;
 	}
@@ -45,7 +45,7 @@ public class ExGoodsInventoryResult extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0x113);
+		writeEx(0xE5);
 		writeD(_result);
 	}
 }

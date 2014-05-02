@@ -12,15 +12,15 @@
 	<server id="9" name="Teon (EURO)" />
 	<server id="10" name="Franz (EURO)" />
 	<server id="11" name="Luna (EURO)" />
-	<server id="12" name="Kastien" />
-	<server id="13" name="Airin" />
-	<server id="14" name="Staris" />
-	<server id="15" name="Ceriel" />
-	<server id="16" name="Fehyshar" />
-	<server id="17" name="Elhwynna" />
-	<server id="18" name="Ellikia" />
-	<server id="19" name="Shikken" />
-	<server id="20" name="Scryde" />
+	<server id="12" name="Sayha" />
+	<server id="13" name="Aria" />
+	<server id="14" name="Phoenix" />
+	<server id="15" name="Chronos (GMT-2)" />
+	<server id="16" name="Naia (GMT+1)" />
+	<server id="17" name="Shilen (GMT+0)" />
+	<server id="18" name="Magmeld (GMT-2)" />
+	<server id="19" name="Bartz (GMT-5)" />
+	<server id="20" name="Event Server" />
 	<server id="21" name="Frikios" />
 	<server id="22" name="Ophylia" />
 	<server id="23" name="Shakdun" />
@@ -34,11 +34,11 @@
 	<server id="31" name="Khadia" />
 	<server id="32" name="Roien" />
 	<server id="33" name="Kallint (Non-PvP)" />
-	<server id="34" name="Cedric" />
-	<server id="35" name="Nerufa" />
-	<server id="36" name="Asterios" />
-	<server id="37" name="Orfen" />
-	<server id="38" name="Mitrael" />
+	<server id="34" name="Baium" />
+	<server id="35" name="Kamael" />
+	<server id="36" name="Beleth" />
+	<server id="37" name="Anakim" />
+	<server id="38" name="Lilith" />
 	<server id="39" name="Thifiel" />
 	<server id="40" name="Lithra" />
 	<server id="41" name="Lockirin" />

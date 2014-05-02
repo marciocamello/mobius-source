@@ -22248,4 +22248,10 @@ public class SystemMessage extends L2GameServerPacket
 			obj = _obj;
 		}
 	}
+	
+	@Override
+	public SystemMessage clone()
+	{
+		return new SystemMessage(_messageId);
+	}
 }

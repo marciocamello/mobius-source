@@ -20,9 +20,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _10288_SecretMission extends Quest implements ScriptFile
 {
+	// NPC's
 	private static final int _dominic = 31350;
 	private static final int _aquilani = 32780;
 	private static final int _greymore = 32757;
+	// Items
 	private static final int _letter = 15529;
 	
 	@Override
@@ -43,6 +45,7 @@ public class _10288_SecretMission extends Quest implements ScriptFile
 	public _10288_SecretMission()
 	{
 		super(false);
+		
 		addStartNpc(_dominic);
 		addStartNpc(_aquilani);
 		addTalkId(_dominic);
@@ -142,6 +145,7 @@ public class _10288_SecretMission extends Quest implements ScriptFile
 		{
 			htmltext = "32757-01.htm";
 		}
+		
 		return htmltext;
 	}
 	

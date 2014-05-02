@@ -210,7 +210,7 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 								{
 									warn("Can't load rewardlist from group: " + npcId + "; type: " + type);
 								}
-								else
+								else if (group != null)
 								{
 									group.addData(data);
 								}

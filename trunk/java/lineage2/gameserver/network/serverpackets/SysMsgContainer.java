@@ -20,6 +20,7 @@ import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Summon;
+import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.entity.residence.Residence;
 import lineage2.gameserver.model.instances.DoorInstance;
@@ -51,7 +52,10 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		INSTANCE_NAME, // 10 d
 		STATIC_OBJECT_NAME, // 11
 		PLAYER_NAME, // 12 S
-		SYSTEM_STRING // 13 d
+		SYSTEM_STRING, // 13 d
+		UNK_14,
+		CLASS_NAME,
+		DAMAGE
 	}
 	
 	protected SystemMsg _message;
@@ -133,6 +137,16 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 	public T addSysString(int id)
 	{
 		return add(new SysStringArgument(id));
+	}
+	
+	public T addClassName(int i)
+	{
+		return add(new ClassNameArgument(i));
+	}
+	
+	public T addClassName(ClassId i)
+	{
+		return add(new ClassNameArgument(i.getId()));
 	}
 	
 	public T addSkillName(Skill skill)
@@ -482,4 +496,19 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 			return Types.PLAYER_NAME;
 		}
 	}
+	
+	public static class ClassNameArgument extends SysMsgContainer.IntegerArgument
+	{
+		public ClassNameArgument(int classId)
+		{
+			super(classId);
+		}
+		
+		@Override
+		SysMsgContainer.Types getType()
+		{
+			return SysMsgContainer.Types.CLASS_NAME;
+		}
+	}
+	
 }

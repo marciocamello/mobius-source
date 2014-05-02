@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "instances.dtd">
 <list>
 	<instance id="171" name="Nursery" maxChannels="25" collapseIfEmpty="1" timelimit="60" dispelBuffs="true">

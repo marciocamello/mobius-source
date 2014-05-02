@@ -4,7 +4,7 @@ title GoD: Game Server Console
 echo Starting GameServer.
 echo.
 
-java -version:1.7 -server -Dfile.encoding=UTF-8 -Xmx2G -Xnoclassgc -XX:+UseConcMarkSweepGC -XX:-UseGCOverheadLimit -cp config/xml;../libs/*; lineage2.gameserver.GameServer
+java -version:1.7 -server -Dfile.encoding=UTF-8 -Xms2G -Xmx4G -Xnoclassgc -XX:+UseConcMarkSweepGC -XX:-UseGCOverheadLimit -cp config/xml;../libs/*; lineage2.gameserver.GameServer
 
 if ERRORLEVEL 2 goto restart
 if ERRORLEVEL 1 goto error

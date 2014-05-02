@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="35200" name="Escort" title="Oren">
@@ -37,10 +37,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -87,10 +87,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -137,10 +137,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -187,10 +187,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -237,10 +237,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -287,11 +287,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="76"/>	<!--Sword of Delusion-->
-			<lhand item_id="2497"/>	<!--Full Plate Shield-->
+			<rhand item_id="76"/>
+			<lhand item_id="2497"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -339,13 +339,13 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="325"/>	<!--Horn of Glory-->
+			<rhand item_id="325"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="22"/>	<!--Prominence-->
-			<skill id="4001" level="6"/>	<!--NPC Windstrike-->
-			<skill id="4026" level="1"/>	<!--Gludio Flame-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="1230" level="22"/>
+			<skill id="4001" level="6"/>
+			<skill id="4026" level="1"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -393,13 +393,13 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="193"/>	<!--Stick of Faith-->
+			<rhand item_id="193"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="22"/>	<!--Prominence-->
-			<skill id="4027" level="1"/>	<!--Gludio Heal-->
-			<skill id="4037" level="1"/>	<!--Decrease P. Atk.-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="1230" level="22"/>
+			<skill id="4027" level="1"/>
+			<skill id="4037" level="1"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -446,10 +446,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="94"/>	<!--Bec de Corbin-->
+			<rhand item_id="94"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -496,10 +496,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="93"/>	<!--Winged Spear-->
+			<rhand item_id="93"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -546,10 +546,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2499"/>	<!--Elven Long Sword-->
+			<rhand item_id="2499"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -597,10 +597,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="276"/>	<!--Elven Bow-->
+			<rhand item_id="276"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -647,10 +647,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -697,10 +697,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -747,10 +747,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -797,10 +797,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -847,10 +847,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -897,10 +897,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -951,7 +951,7 @@
 		</ai_params>
 		<faction name="oren_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1002,7 +1002,7 @@
 		</ai_params>
 		<faction name="oren_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1053,7 +1053,7 @@
 		</ai_params>
 		<faction name="oren_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1103,7 +1103,7 @@
 			<set name="teleport_loc" value="82707 37203 -2265"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1159,7 +1159,7 @@
 			<set name="doors" value="22190001;22190002"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1215,7 +1215,7 @@
 			<set name="doors" value="22190005;22190006"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1263,10 +1263,10 @@
 		<set name="type" value="residences.castle.Blacksmith"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="89"/>	<!--Big Hammer-->
+			<rhand item_id="89"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1314,10 +1314,10 @@
 		<set name="type" value="residences.castle.Warehouse"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1364,7 +1364,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.castle.ChamberlainLight"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Humans-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1412,11 +1412,11 @@
 		<set name="type" value="WyvernManager"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="76"/>	<!--Sword of Delusion-->
-			<lhand item_id="2497"/>	<!--Full Plate Shield-->
+			<rhand item_id="76"/>
+			<lhand item_id="2497"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1463,7 +1463,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="MercManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1511,7 +1511,7 @@
 		<set name="type" value="ManorManager"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1559,7 +1559,7 @@
 		<set name="type" value="ManorManager"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1607,7 +1607,7 @@
 		<set name="type" value="ManorManager"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<skills>
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4416" level="16"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1654,10 +1654,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.castle.CastleMessenger"/>
 		<equip>
-			<rhand item_id="74"/>	<!--Katana-->
+			<rhand item_id="74"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1704,7 +1704,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Artefact"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1752,10 +1752,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="oren_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="80"/>	<!--Tallum Blade-->
+			<rhand item_id="80"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -1803,11 +1803,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
-			<lhand item_id="2497"/>	<!--Full Plate Shield-->
+			<rhand item_id="2"/>
+			<lhand item_id="2497"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -1855,13 +1855,13 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="7"/>	<!--Apprentice's Rod-->
+			<rhand item_id="7"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="26"/>	<!--Prominence-->
-			<skill id="4001" level="6"/>	<!--NPC Windstrike-->
-			<skill id="4114" level="1"/>	<!--Aden Flame-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="1230" level="26"/>
+			<skill id="4001" level="6"/>
+			<skill id="4114" level="1"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -1909,13 +1909,13 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="92"/>	<!--Sprite's Staff-->
+			<rhand item_id="92"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="26"/>	<!--Prominence-->
-			<skill id="4037" level="1"/>	<!--Decrease P. Atk.-->
-			<skill id="4115" level="1"/>	<!--Aden Heal-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="1230" level="26"/>
+			<skill id="4037" level="1"/>
+			<skill id="4115" level="1"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -1963,10 +1963,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="1376"/>	<!--Guard Spear-->
+			<rhand item_id="1376"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -2014,10 +2014,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="300"/>	<!--Great Axe-->
+			<rhand item_id="300"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2065,10 +2065,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="132"/>	<!--Sword of Limit-->
+			<rhand item_id="132"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2116,10 +2116,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2167,10 +2167,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2218,10 +2218,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2269,10 +2269,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2320,10 +2320,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2371,10 +2371,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2422,10 +2422,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2473,11 +2473,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="142"/>	<!--Keshanberk-->
-			<lhand item_id="633"/>	<!--Zubei's Shield-->
+			<rhand item_id="142"/>
+			<lhand item_id="633"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -2525,13 +2525,13 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="326"/>	<!--Heathen's Book-->
+			<rhand item_id="326"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="26"/>	<!--Prominence-->
-			<skill id="4001" level="6"/>	<!--NPC Windstrike-->
-			<skill id="4114" level="1"/>	<!--Aden Flame-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="1230" level="26"/>
+			<skill id="4001" level="6"/>
+			<skill id="4114" level="1"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -2579,13 +2579,13 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="325"/>	<!--Horn of Glory-->
+			<rhand item_id="325"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="26"/>	<!--Prominence-->
-			<skill id="4037" level="1"/>	<!--Decrease P. Atk.-->
-			<skill id="4115" level="1"/>	<!--Aden Heal-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="1230" level="26"/>
+			<skill id="4037" level="1"/>
+			<skill id="4115" level="1"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -2633,10 +2633,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="300"/>	<!--Great Axe-->
+			<rhand item_id="300"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -2684,10 +2684,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2735,10 +2735,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2786,10 +2786,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="285"/>	<!--Noble Elven Bow-->
+			<rhand item_id="285"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2837,10 +2837,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2888,10 +2888,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2939,10 +2939,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2990,10 +2990,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3041,10 +3041,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3092,10 +3092,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3146,7 +3146,7 @@
 		</ai_params>
 		<faction name="aden_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3197,7 +3197,7 @@
 		</ai_params>
 		<faction name="aden_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3248,7 +3248,7 @@
 		</ai_params>
 		<faction name="aden_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3299,7 +3299,7 @@
 		</ai_params>
 		<faction name="aden_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3350,7 +3350,7 @@
 		</ai_params>
 		<faction name="aden_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="23"/>	<!--Mercenaries-->
+			<skill id="4416" level="23"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3400,7 +3400,7 @@
 			<set name="teleport_loc" value="147452 4842 -341"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3456,7 +3456,7 @@
 			<set name="doors" value="24180001;24180002"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3512,7 +3512,7 @@
 			<set name="doors" value="24180013;24180012"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3568,7 +3568,7 @@
 			<set name="doors" value="24180005;24180004"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3624,7 +3624,7 @@
 			<set name="doors" value="24180014;24180015"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3680,7 +3680,7 @@
 			<set name="doors" value="24180016"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3728,10 +3728,10 @@
 		<set name="type" value="residences.castle.Blacksmith"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="89"/>	<!--Big Hammer-->
+			<rhand item_id="89"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3779,10 +3779,10 @@
 		<set name="type" value="residences.castle.Warehouse"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3829,7 +3829,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.castle.ChamberlainLight"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Humans-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3877,7 +3877,7 @@
 		<set name="type" value="WyvernManager"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3924,7 +3924,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="MercManager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3972,7 +3972,7 @@
 		<set name="type" value="ManorManager"/>
 		<faction name="aden_siege_clan" range="1200"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4019,10 +4019,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.castle.CastleMessenger"/>
 		<equip>
-			<rhand item_id="135"/>	<!--Samurai Longsword-->
+			<rhand item_id="135"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4068,7 +4068,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Artefact"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4115,10 +4115,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="79"/>	<!--Sword of Damascus-->
+			<rhand item_id="79"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4165,10 +4165,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="142"/>	<!--Keshanberk-->
+			<rhand item_id="142"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -4215,11 +4215,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="76"/>	<!--Sword of Delusion-->
-			<lhand item_id="2497"/>	<!--Full Plate Shield-->
+			<rhand item_id="76"/>
+			<lhand item_id="2497"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -4266,13 +4266,13 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="325"/>	<!--Horn of Glory-->
+			<rhand item_id="325"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="26"/>	<!--Prominence-->
-			<skill id="4001" level="6"/>	<!--NPC Windstrike-->
-			<skill id="4026" level="1"/>	<!--Gludio Flame-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="1230" level="26"/>
+			<skill id="4001" level="6"/>
+			<skill id="4026" level="1"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4319,13 +4319,13 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="193"/>	<!--Stick of Faith-->
+			<rhand item_id="193"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="26"/>	<!--Prominence-->
-			<skill id="4027" level="1"/>	<!--Gludio Heal-->
-			<skill id="4037" level="1"/>	<!--Decrease P. Atk.-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="1230" level="26"/>
+			<skill id="4027" level="1"/>
+			<skill id="4037" level="1"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4372,10 +4372,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="94"/>	<!--Bec de Corbin-->
+			<rhand item_id="94"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4422,10 +4422,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4472,10 +4472,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2499"/>	<!--Elven Long Sword-->
+			<rhand item_id="2499"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4522,10 +4522,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="276"/>	<!--Elven Bow-->
+			<rhand item_id="276"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4572,10 +4572,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4622,10 +4622,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4672,10 +4672,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4722,10 +4722,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="16"/>	<!--Great Spear-->
+			<rhand item_id="16"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4772,10 +4772,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
+			<rhand item_id="2"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4822,10 +4822,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="14"/>	<!--Bow-->
+			<rhand item_id="14"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4872,11 +4872,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="76"/>	<!--Sword of Delusion-->
-			<lhand item_id="2497"/>	<!--Full Plate Shield-->
+			<rhand item_id="76"/>
+			<lhand item_id="2497"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="80"/>
@@ -4924,13 +4924,13 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="325"/>	<!--Horn of Glory-->
+			<rhand item_id="325"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="26"/>	<!--Prominence-->
-			<skill id="4001" level="6"/>	<!--NPC Windstrike-->
-			<skill id="4026" level="1"/>	<!--Gludio Flame-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="1230" level="26"/>
+			<skill id="4001" level="6"/>
+			<skill id="4026" level="1"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4978,13 +4978,13 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="193"/>	<!--Stick of Faith-->
+			<rhand item_id="193"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="26"/>	<!--Prominence-->
-			<skill id="4027" level="1"/>	<!--Gludio Heal-->
-			<skill id="4037" level="1"/>	<!--Decrease P. Atk.-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="1230" level="26"/>
+			<skill id="4027" level="1"/>
+			<skill id="4037" level="1"/>
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -5031,10 +5031,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="94"/>	<!--Bec de Corbin-->
+			<rhand item_id="94"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -5081,10 +5081,10 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="innadrile_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="93"/>	<!--Winged Spear-->
+			<rhand item_id="93"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>

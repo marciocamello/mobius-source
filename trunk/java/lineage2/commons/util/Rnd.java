@@ -16,8 +16,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicLong;
 
-import org.apache.commons.math.random.MersenneTwister;
-import org.apache.commons.math.random.RandomGenerator;
+import org.apache.commons.math3.random.MersenneTwister;
+import org.apache.commons.math3.random.RandomGenerator;
 
 /**
  * @author Mobius

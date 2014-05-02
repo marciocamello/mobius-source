@@ -123,10 +123,13 @@ public abstract class Boat extends Creature
 	{
 		for (Player player : _players)
 		{
-			if (player != null)
+			if (player == null)
 			{
-				player.setXYZ(x, y, z, true);
+				continue;
 			}
+			
+			player.setXYZ(x, y, z, true);
+			
 			if (isShuttle())
 			{
 				for (Summon summon : player.getSummonList())

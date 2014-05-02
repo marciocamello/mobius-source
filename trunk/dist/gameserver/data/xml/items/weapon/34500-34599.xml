@@ -1,0 +1,1504 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<weapon id="34500" name="Player Commendation - Vesper Fighter (Fire)">
+		<set name="icon" value="icon.weapon_vesper_fighter_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="155"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="crystal_type" value="S"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="482"/>
+			<add stat="mAtk" order="0x10" value="176"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34501" name="Player Commendation - Vesper Fighter (Holy)">
+		<set name="icon" value="icon.weapon_vesper_fighter_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="155"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="crystal_type" value="S"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="482"/>
+			<add stat="mAtk" order="0x10" value="176"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34502" name="Player Commendation - Vesper Fighter (Dark)">
+		<set name="icon" value="icon.weapon_vesper_fighter_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="155"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="crystal_type" value="S"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="482"/>
+			<add stat="mAtk" order="0x10" value="176"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34503" name="Player Commendation - Vesper Pincer (Earth)">
+		<set name="icon" value="icon.weapon_vesper_pincer_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="128"/>
+		<set name="type" value="RAPIER"/>
+		<set name="crystal_type" value="S"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="359"/>
+			<add stat="mAtk" order="0x10" value="176"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34504" name="Player Commendation - Vesper Pincer (Water)">
+		<set name="icon" value="icon.weapon_vesper_pincer_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="128"/>
+		<set name="type" value="RAPIER"/>
+		<set name="crystal_type" value="S"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="359"/>
+			<add stat="mAtk" order="0x10" value="176"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34505" name="Player Commendation - Vesper Pincer (Wind)">
+		<set name="icon" value="icon.weapon_vesper_pincer_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="128"/>
+		<set name="type" value="RAPIER"/>
+		<set name="crystal_type" value="S"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="359"/>
+			<add stat="mAtk" order="0x10" value="176"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34506" name="Player Commendation - Vesper Pincer (Fire)">
+		<set name="icon" value="icon.weapon_vesper_pincer_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="128"/>
+		<set name="type" value="RAPIER"/>
+		<set name="crystal_type" value="S"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="359"/>
+			<add stat="mAtk" order="0x10" value="176"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34507" name="Player Commendation - Vesper Pincer (Holy)">
+		<set name="icon" value="icon.weapon_vesper_pincer_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="128"/>
+		<set name="type" value="RAPIER"/>
+		<set name="crystal_type" value="S"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="359"/>
+			<add stat="mAtk" order="0x10" value="176"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34508" name="Player Commendation - Vesper Pincer (Dark)">
+		<set name="icon" value="icon.weapon_vesper_pincer_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="128"/>
+		<set name="type" value="RAPIER"/>
+		<set name="crystal_type" value="S"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="359"/>
+			<add stat="mAtk" order="0x10" value="176"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34509" name="Player Commendation - Apocalypse Retributer (Earth)">
+		<set name="icon" value="icon.weapon_herencia_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="108"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="477"/>
+			<add stat="mAtk" order="0x10" value="314"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34510" name="Player Commendation - Apocalypse Retributer (Water)">
+		<set name="icon" value="icon.weapon_herencia_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="108"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="477"/>
+			<add stat="mAtk" order="0x10" value="314"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34511" name="Player Commendation - Apocalypse Retributer (Wind)">
+		<set name="icon" value="icon.weapon_herencia_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="108"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="477"/>
+			<add stat="mAtk" order="0x10" value="314"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34512" name="Player Commendation - Apocalypse Retributer (Fire)">
+		<set name="icon" value="icon.weapon_herencia_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="108"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="477"/>
+			<add stat="mAtk" order="0x10" value="314"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34513" name="Player Commendation - Apocalypse Retributer (Holy)">
+		<set name="icon" value="icon.weapon_herencia_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="108"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="477"/>
+			<add stat="mAtk" order="0x10" value="314"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34514" name="Player Commendation - Apocalypse Retributer (Dark)">
+		<set name="icon" value="icon.weapon_herencia_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="108"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="477"/>
+			<add stat="mAtk" order="0x10" value="314"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34515" name="Player Commendation - Apocalypse Buster (Earth)">
+		<set name="icon" value="icon.weapon_imerose_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="392"/>
+			<add stat="mAtk" order="0x10" value="285"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34516" name="Player Commendation - Apocalypse Buster (Water)">
+		<set name="icon" value="icon.weapon_imerose_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="392"/>
+			<add stat="mAtk" order="0x10" value="285"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34517" name="Player Commendation - Apocalypse Buster (Wind)">
+		<set name="icon" value="icon.weapon_imerose_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="392"/>
+			<add stat="mAtk" order="0x10" value="285"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34518" name="Player Commendation - Apocalypse Buster (Fire)">
+		<set name="icon" value="icon.weapon_imerose_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="392"/>
+			<add stat="mAtk" order="0x10" value="285"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34519" name="Player Commendation - Apocalypse Buster (Holy)">
+		<set name="icon" value="icon.weapon_imerose_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="392"/>
+			<add stat="mAtk" order="0x10" value="285"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34520" name="Player Commendation - Apocalypse Buster (Dark)">
+		<set name="icon" value="icon.weapon_imerose_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="392"/>
+			<add stat="mAtk" order="0x10" value="285"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34521" name="Player Commendation - Apocalypse Shaper (Earth)">
+		<set name="icon" value="icon.weapon_phasian_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="DAGGER"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="428"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34522" name="Player Commendation - Apocalypse Shaper (Water)">
+		<set name="icon" value="icon.weapon_phasian_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="DAGGER"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="428"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34523" name="Player Commendation - Apocalypse Shaper (Wind)">
+		<set name="icon" value="icon.weapon_phasian_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="DAGGER"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="428"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34524" name="Player Commendation - Apocalypse Shaper (Fire)">
+		<set name="icon" value="icon.weapon_phasian_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="DAGGER"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="428"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34525" name="Player Commendation - Apocalypse Shaper (Holy)">
+		<set name="icon" value="icon.weapon_phasian_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="DAGGER"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="428"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34526" name="Player Commendation - Apocalypse Shaper (Dark)">
+		<set name="icon" value="icon.weapon_phasian_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="DAGGER"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="428"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34527" name="Player Commendation - Apocalypse Shooter (Earth)">
+		<set name="icon" value="icon.weapon_medianox_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="158"/>
+		<set name="type" value="CROSSBOW"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="866"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34528" name="Player Commendation - Apocalypse Shooter (Water)">
+		<set name="icon" value="icon.weapon_medianox_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="158"/>
+		<set name="type" value="CROSSBOW"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="866"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34529" name="Player Commendation - Apocalypse Shooter (Wind)">
+		<set name="icon" value="icon.weapon_medianox_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="158"/>
+		<set name="type" value="CROSSBOW"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="866"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34530" name="Player Commendation - Apocalypse Shooter (Fire)">
+		<set name="icon" value="icon.weapon_medianox_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="158"/>
+		<set name="type" value="CROSSBOW"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="866"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34531" name="Player Commendation - Apocalypse Shooter (Holy)">
+		<set name="icon" value="icon.weapon_medianox_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="158"/>
+		<set name="type" value="CROSSBOW"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="866"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34532" name="Player Commendation - Apocalypse Shooter (Dark)">
+		<set name="icon" value="icon.weapon_medianox_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="158"/>
+		<set name="type" value="CROSSBOW"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="866"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34533" name="Player Commendation - Apocalypse Thrower (Earth)">
+		<set name="icon" value="icon.weapon_spina_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="BOW"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="963"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34534" name="Player Commendation - Apocalypse Thrower (Water)">
+		<set name="icon" value="icon.weapon_spina_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="BOW"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="963"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34535" name="Player Commendation - Apocalypse Thrower (Wind)">
+		<set name="icon" value="icon.weapon_spina_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="BOW"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="963"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34536" name="Player Commendation - Apocalypse Thrower (Fire)">
+		<set name="icon" value="icon.weapon_spina_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="BOW"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="963"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34537" name="Player Commendation - Apocalypse Thrower (Holy)">
+		<set name="icon" value="icon.weapon_spina_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="BOW"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="963"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34538" name="Player Commendation - Apocalypse Thrower (Dark)">
+		<set name="icon" value="icon.weapon_spina_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="BOW"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="963"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34539" name="Player Commendation - Apocalypse Stormer (Earth)">
+		<set name="icon" value="icon.weapon_grave_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="201"/>
+		<set name="type" value="POLE"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="489"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34540" name="Player Commendation - Apocalypse Stormer (Water)">
+		<set name="icon" value="icon.weapon_grave_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="201"/>
+		<set name="type" value="POLE"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="489"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34541" name="Player Commendation - Apocalypse Stormer (Wind)">
+		<set name="icon" value="icon.weapon_grave_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="201"/>
+		<set name="type" value="POLE"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="489"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34542" name="Player Commendation - Apocalypse Stormer (Fire)">
+		<set name="icon" value="icon.weapon_grave_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="201"/>
+		<set name="type" value="POLE"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="489"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34543" name="Player Commendation - Apocalypse Stormer (Holy)">
+		<set name="icon" value="icon.weapon_grave_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="201"/>
+		<set name="type" value="POLE"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="489"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34544" name="Player Commendation - Apocalypse Stormer (Dark)">
+		<set name="icon" value="icon.weapon_grave_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="201"/>
+		<set name="type" value="POLE"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="489"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34545" name="Player Commendation - Apocalypse Slasher (Earth)">
+		<set name="icon" value="icon.weapon_volver_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="174"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="595"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34546" name="Player Commendation - Apocalypse Slasher (Water)">
+		<set name="icon" value="icon.weapon_volver_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="174"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="595"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34547" name="Player Commendation - Apocalypse Slasher (Wind)">
+		<set name="icon" value="icon.weapon_volver_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="174"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="595"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34548" name="Player Commendation - Apocalypse Slasher (Fire)">
+		<set name="icon" value="icon.weapon_volver_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="174"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="595"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34549" name="Player Commendation - Apocalypse Slasher (Holy)">
+		<set name="icon" value="icon.weapon_volver_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="174"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="595"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34550" name="Player Commendation - Apocalypse Slasher (Dark)">
+		<set name="icon" value="icon.weapon_volver_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="174"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="595"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34551" name="Player Commendation - Apocalypse Avenger (Earth)">
+		<set name="icon" value="icon.weapon_raksilion_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="174"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="489"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34552" name="Player Commendation - Apocalypse Avenger (Water)">
+		<set name="icon" value="icon.weapon_raksilion_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="174"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="489"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34553" name="Player Commendation - Apocalypse Avenger (Wind)">
+		<set name="icon" value="icon.weapon_raksilion_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="174"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="489"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34554" name="Player Commendation - Apocalypse Avenger (Fire)">
+		<set name="icon" value="icon.weapon_raksilion_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="174"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="489"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34555" name="Player Commendation - Apocalypse Avenger (Holy)">
+		<set name="icon" value="icon.weapon_raksilion_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="174"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="489"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34556" name="Player Commendation - Apocalypse Avenger (Dark)">
+		<set name="icon" value="icon.weapon_raksilion_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="174"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="489"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34557" name="Player Commendation - Apocalypse Caster (Earth)">
+		<set name="icon" value="icon.weapon_yuke_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="108"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="392"/>
+			<add stat="mAtk" order="0x10" value="285"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34558" name="Player Commendation - Apocalypse Caster (Water)">
+		<set name="icon" value="icon.weapon_yuke_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="108"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="392"/>
+			<add stat="mAtk" order="0x10" value="285"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34559" name="Player Commendation - Apocalypse Caster (Wind)">
+		<set name="icon" value="icon.weapon_yuke_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="108"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="392"/>
+			<add stat="mAtk" order="0x10" value="285"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34560" name="Player Commendation - Apocalypse Caster (Fire)">
+		<set name="icon" value="icon.weapon_yuke_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="108"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="392"/>
+			<add stat="mAtk" order="0x10" value="285"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34561" name="Player Commendation - Apocalypse Caster (Holy)">
+		<set name="icon" value="icon.weapon_yuke_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="108"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="392"/>
+			<add stat="mAtk" order="0x10" value="285"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34562" name="Player Commendation - Apocalypse Caster (Dark)">
+		<set name="icon" value="icon.weapon_yuke_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="108"/>
+		<set name="type" value="BLUNT"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="392"/>
+			<add stat="mAtk" order="0x10" value="285"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34563" name="Player Commendation - Apocalypse Cutter (Earth)">
+		<set name="icon" value="icon.weapon_pasis_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="489"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34564" name="Player Commendation - Apocalypse Cutter (Water)">
+		<set name="icon" value="icon.weapon_pasis_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="489"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34565" name="Player Commendation - Apocalypse Cutter (Wind)">
+		<set name="icon" value="icon.weapon_pasis_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="489"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34566" name="Player Commendation - Apocalypse Cutter (Fire)">
+		<set name="icon" value="icon.weapon_pasis_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="489"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34567" name="Player Commendation - Apocalypse Cutter (Holy)">
+		<set name="icon" value="icon.weapon_pasis_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="489"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34568" name="Player Commendation - Apocalypse Cutter (Dark)">
+		<set name="icon" value="icon.weapon_pasis_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="152"/>
+		<set name="type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="489"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34569" name="Player Commendation - Apocalypse Fighter (Earth)">
+		<set name="icon" value="icon.weapon_kirche_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="155"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="595"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34570" name="Player Commendation - Apocalypse Fighter (Water)">
+		<set name="icon" value="icon.weapon_kirche_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="155"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="595"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34571" name="Player Commendation - Apocalypse Fighter (Wind)">
+		<set name="icon" value="icon.weapon_kirche_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="155"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="595"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34572" name="Player Commendation - Apocalypse Fighter (Fire)">
+		<set name="icon" value="icon.weapon_kirche_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="155"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="595"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34573" name="Player Commendation - Apocalypse Fighter (Holy)">
+		<set name="icon" value="icon.weapon_kirche_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="155"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="595"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="34574" name="Player Commendation - Apocalypse Fighter (Dark)">
+		<set name="icon" value="icon.weapon_kirche_i01"/>
+		<set name="durability" value="180"/>
+		<set name="weight" value="155"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="595"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+</list>

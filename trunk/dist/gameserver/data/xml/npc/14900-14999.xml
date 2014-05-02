@@ -1,9 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<!--ru name: Магнус-->
 	<npc id="14900" name="Magnus the Unicorn" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -34,7 +32,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="13.5"/>
 		<set name="collision_height" value="17.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -53,33 +50,20 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<skills>
-			<!--Servitor PvP Penalty-->
 			<skill id="5038" level="15"/>
-			<!--Spirits-->
 			<skill id="4416" level="7"/>
-			<!--HP High-->
 			<skill id="4408" level="4"/>
-			<!--MP Increase (1x)-->
 			<skill id="4409" level="1"/>
-			<!--Summoned Monster Magic Protection-->
 			<skill id="4121" level="9"/>
-			<!--Strong P. Atk.-->
 			<skill id="4410" level="15"/>
-			<!--Slightly Strong M. Atk.-->
 			<skill id="4411" level="13"/>
-			<!--Slightly Strong P. Def.-->
 			<skill id="4412" level="12"/>
-			<!--Slightly Strong M. Def.-->
 			<skill id="4413" level="12"/>
-			<!--Standard Type-->
 			<skill id="4414" level="2"/>
-			<!--One-handed Sword-->
 			<skill id="4415" level="3"/>
 		</skills>
 	</npc>
-	<!--ru name: Призрачный Лорд-->
 	<npc id="14901" name="Spectral Lord" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -110,7 +94,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.5"/>
 		<set name="collision_height" value="33.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="81"/>
@@ -129,33 +112,20 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<skills>
-			<!--Servitor PvP Penalty-->
 			<skill id="5038" level="15"/>
-			<!--Demons-->
 			<skill id="4416" level="9"/>
-			<!--HP High-->
 			<skill id="4408" level="4"/>
-			<!--MP Increase (1x)-->
 			<skill id="4409" level="1"/>
-			<!--Summoned Monster Magic Protection-->
 			<skill id="4121" level="9"/>
-			<!--Strong P. Atk.-->
 			<skill id="4410" level="15"/>
-			<!--Slightly Strong M. Atk.-->
 			<skill id="4411" level="13"/>
-			<!--Slightly Strong P. Def.-->
 			<skill id="4412" level="12"/>
-			<!--Slightly Strong M. Def.-->
 			<skill id="4413" level="12"/>
-			<!--Standard Type-->
 			<skill id="4414" level="2"/>
-			<!--One-handed Sword-->
 			<skill id="4415" level="3"/>
 		</skills>
 	</npc>
-	<!--ru name: Призрачный Лорд-->
 	<npc id="14902" name="Spectral Lord" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -186,7 +156,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.5"/>
 		<set name="collision_height" value="33.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="81"/>
@@ -205,33 +174,20 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<skills>
-			<!--Servitor PvP Penalty-->
 			<skill id="5038" level="15"/>
-			<!--Demons-->
 			<skill id="4416" level="9"/>
-			<!--HP High-->
 			<skill id="4408" level="4"/>
-			<!--MP Increase (1x)-->
 			<skill id="4409" level="1"/>
-			<!--Summoned Monster Magic Protection-->
 			<skill id="4121" level="9"/>
-			<!--Strong P. Atk.-->
 			<skill id="4410" level="15"/>
-			<!--Slightly Strong M. Atk.-->
 			<skill id="4411" level="13"/>
-			<!--Slightly Strong P. Def.-->
 			<skill id="4412" level="12"/>
-			<!--Slightly Strong M. Def.-->
 			<skill id="4413" level="12"/>
-			<!--Standard Type-->
 			<skill id="4414" level="2"/>
-			<!--One-handed Sword-->
 			<skill id="4415" level="3"/>
 		</skills>
 	</npc>
-	<!--ru name: Призрачный Лорд-->
 	<npc id="14903" name="Spectral Lord" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -262,7 +218,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.5"/>
 		<set name="collision_height" value="33.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="81"/>
@@ -281,33 +236,20 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<skills>
-			<!--Servitor PvP Penalty-->
 			<skill id="5038" level="15"/>
-			<!--Demons-->
 			<skill id="4416" level="9"/>
-			<!--HP High-->
 			<skill id="4408" level="4"/>
-			<!--MP Increase (1x)-->
 			<skill id="4409" level="1"/>
-			<!--Summoned Monster Magic Protection-->
 			<skill id="4121" level="9"/>
-			<!--Strong P. Atk.-->
 			<skill id="4410" level="15"/>
-			<!--Slightly Strong M. Atk.-->
 			<skill id="4411" level="13"/>
-			<!--Slightly Strong P. Def.-->
 			<skill id="4412" level="12"/>
-			<!--Slightly Strong M. Def.-->
 			<skill id="4413" level="12"/>
-			<!--Standard Type-->
 			<skill id="4414" level="2"/>
-			<!--One-handed Sword-->
 			<skill id="4415" level="3"/>
 		</skills>
 	</npc>
-	<!--ru name: Призрачный Лорд-->
 	<npc id="14904" name="Spectral Lord" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -338,7 +280,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.5"/>
 		<set name="collision_height" value="33.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="82"/>
@@ -357,33 +298,20 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<skills>
-			<!--Servitor PvP Penalty-->
 			<skill id="5038" level="15"/>
-			<!--Demons-->
 			<skill id="4416" level="9"/>
-			<!--HP High-->
 			<skill id="4408" level="4"/>
-			<!--MP Increase (1x)-->
 			<skill id="4409" level="1"/>
-			<!--Summoned Monster Magic Protection-->
 			<skill id="4121" level="9"/>
-			<!--Strong P. Atk.-->
 			<skill id="4410" level="15"/>
-			<!--Slightly Strong M. Atk.-->
 			<skill id="4411" level="13"/>
-			<!--Slightly Strong P. Def.-->
 			<skill id="4412" level="12"/>
-			<!--Slightly Strong M. Def.-->
 			<skill id="4413" level="12"/>
-			<!--Standard Type-->
 			<skill id="4414" level="2"/>
-			<!--One-handed Sword-->
 			<skill id="4415" level="3"/>
 		</skills>
 	</npc>
-	<!--ru name: Призрачный Лорд-->
 	<npc id="14905" name="Spectral Lord" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -414,7 +342,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.5"/>
 		<set name="collision_height" value="33.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="82"/>
@@ -433,33 +360,20 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<skills>
-			<!--Servitor PvP Penalty-->
 			<skill id="5038" level="15"/>
-			<!--Demons-->
 			<skill id="4416" level="9"/>
-			<!--HP High-->
 			<skill id="4408" level="4"/>
-			<!--MP Increase (1x)-->
 			<skill id="4409" level="1"/>
-			<!--Summoned Monster Magic Protection-->
 			<skill id="4121" level="9"/>
-			<!--Strong P. Atk.-->
 			<skill id="4410" level="15"/>
-			<!--Slightly Strong M. Atk.-->
 			<skill id="4411" level="13"/>
-			<!--Slightly Strong P. Def.-->
 			<skill id="4412" level="12"/>
-			<!--Slightly Strong M. Def.-->
 			<skill id="4413" level="12"/>
-			<!--Standard Type-->
 			<skill id="4414" level="2"/>
-			<!--One-handed Sword-->
 			<skill id="4415" level="3"/>
 		</skills>
 	</npc>
-	<!--ru name: Призрачный Лорд-->
 	<npc id="14906" name="Spectral Lord" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -490,7 +404,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.5"/>
 		<set name="collision_height" value="33.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="82"/>
@@ -509,33 +422,20 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<skills>
-			<!--Servitor PvP Penalty-->
 			<skill id="5038" level="15"/>
-			<!--Demons-->
 			<skill id="4416" level="9"/>
-			<!--HP High-->
 			<skill id="4408" level="4"/>
-			<!--MP Increase (1x)-->
 			<skill id="4409" level="1"/>
-			<!--Summoned Monster Magic Protection-->
 			<skill id="4121" level="9"/>
-			<!--Strong P. Atk.-->
 			<skill id="4410" level="15"/>
-			<!--Slightly Strong M. Atk.-->
 			<skill id="4411" level="13"/>
-			<!--Slightly Strong P. Def.-->
 			<skill id="4412" level="12"/>
-			<!--Slightly Strong M. Def.-->
 			<skill id="4413" level="12"/>
-			<!--Standard Type-->
 			<skill id="4414" level="2"/>
-			<!--One-handed Sword-->
 			<skill id="4415" level="3"/>
 		</skills>
 	</npc>
-	<!--ru name: Призрачный Лорд-->
 	<npc id="14907" name="Spectral Lord" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -566,7 +466,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.5"/>
 		<set name="collision_height" value="33.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="83"/>
@@ -585,33 +484,20 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<skills>
-			<!--Servitor PvP Penalty-->
 			<skill id="5038" level="15"/>
-			<!--Demons-->
 			<skill id="4416" level="9"/>
-			<!--HP High-->
 			<skill id="4408" level="4"/>
-			<!--MP Increase (1x)-->
 			<skill id="4409" level="1"/>
-			<!--Summoned Monster Magic Protection-->
 			<skill id="4121" level="9"/>
-			<!--Strong P. Atk.-->
 			<skill id="4410" level="15"/>
-			<!--Slightly Strong M. Atk.-->
 			<skill id="4411" level="13"/>
-			<!--Slightly Strong P. Def.-->
 			<skill id="4412" level="12"/>
-			<!--Slightly Strong M. Def.-->
 			<skill id="4413" level="12"/>
-			<!--Standard Type-->
 			<skill id="4414" level="2"/>
-			<!--One-handed Sword-->
 			<skill id="4415" level="3"/>
 		</skills>
 	</npc>
-	<!--ru name: Призрачный Лорд-->
 	<npc id="14908" name="Spectral Lord" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -642,7 +528,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.5"/>
 		<set name="collision_height" value="33.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="83"/>
@@ -661,33 +546,20 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<skills>
-			<!--Servitor PvP Penalty-->
 			<skill id="5038" level="15"/>
-			<!--Demons-->
 			<skill id="4416" level="9"/>
-			<!--HP High-->
 			<skill id="4408" level="4"/>
-			<!--MP Increase (1x)-->
 			<skill id="4409" level="1"/>
-			<!--Summoned Monster Magic Protection-->
 			<skill id="4121" level="9"/>
-			<!--Strong P. Atk.-->
 			<skill id="4410" level="15"/>
-			<!--Slightly Strong M. Atk.-->
 			<skill id="4411" level="13"/>
-			<!--Slightly Strong P. Def.-->
 			<skill id="4412" level="12"/>
-			<!--Slightly Strong M. Def.-->
 			<skill id="4413" level="12"/>
-			<!--Standard Type-->
 			<skill id="4414" level="2"/>
-			<!--One-handed Sword-->
 			<skill id="4415" level="3"/>
 		</skills>
 	</npc>
-	<!--ru name: Призрачный Лорд-->
 	<npc id="14909" name="Spectral Lord" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -718,7 +590,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.5"/>
 		<set name="collision_height" value="33.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="83"/>
@@ -737,33 +608,20 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<skills>
-			<!--Servitor PvP Penalty-->
 			<skill id="5038" level="15"/>
-			<!--Demons-->
 			<skill id="4416" level="9"/>
-			<!--HP High-->
 			<skill id="4408" level="4"/>
-			<!--MP Increase (1x)-->
 			<skill id="4409" level="1"/>
-			<!--Summoned Monster Magic Protection-->
 			<skill id="4121" level="9"/>
-			<!--Strong P. Atk.-->
 			<skill id="4410" level="15"/>
-			<!--Slightly Strong M. Atk.-->
 			<skill id="4411" level="13"/>
-			<!--Slightly Strong P. Def.-->
 			<skill id="4412" level="12"/>
-			<!--Slightly Strong M. Def.-->
 			<skill id="4413" level="12"/>
-			<!--Standard Type-->
 			<skill id="4414" level="2"/>
-			<!--One-handed Sword-->
 			<skill id="4415" level="3"/>
 		</skills>
 	</npc>
-	<!--ru name: Призрачный Лорд-->
 	<npc id="14910" name="Spectral Lord" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -794,7 +652,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.5"/>
 		<set name="collision_height" value="33.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="84"/>
@@ -813,33 +670,20 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<skills>
-			<!--Servitor PvP Penalty-->
 			<skill id="5038" level="15"/>
-			<!--Demons-->
 			<skill id="4416" level="9"/>
-			<!--HP High-->
 			<skill id="4408" level="4"/>
-			<!--MP Increase (1x)-->
 			<skill id="4409" level="1"/>
-			<!--Summoned Monster Magic Protection-->
 			<skill id="4121" level="9"/>
-			<!--Strong P. Atk.-->
 			<skill id="4410" level="15"/>
-			<!--Slightly Strong M. Atk.-->
 			<skill id="4411" level="13"/>
-			<!--Slightly Strong P. Def.-->
 			<skill id="4412" level="12"/>
-			<!--Slightly Strong M. Def.-->
 			<skill id="4413" level="12"/>
-			<!--Standard Type-->
 			<skill id="4414" level="2"/>
-			<!--One-handed Sword-->
 			<skill id="4415" level="3"/>
 		</skills>
 	</npc>
-	<!--ru name: Призрачный Лорд-->
 	<npc id="14911" name="Spectral Lord" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -870,7 +714,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.5"/>
 		<set name="collision_height" value="33.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="84"/>
@@ -889,33 +732,20 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<skills>
-			<!--Servitor PvP Penalty-->
 			<skill id="5038" level="15"/>
-			<!--Demons-->
 			<skill id="4416" level="9"/>
-			<!--HP High-->
 			<skill id="4408" level="4"/>
-			<!--MP Increase (1x)-->
 			<skill id="4409" level="1"/>
-			<!--Summoned Monster Magic Protection-->
 			<skill id="4121" level="9"/>
-			<!--Strong P. Atk.-->
 			<skill id="4410" level="15"/>
-			<!--Slightly Strong M. Atk.-->
 			<skill id="4411" level="13"/>
-			<!--Slightly Strong P. Def.-->
 			<skill id="4412" level="12"/>
-			<!--Slightly Strong M. Def.-->
 			<skill id="4413" level="12"/>
-			<!--Standard Type-->
 			<skill id="4414" level="2"/>
-			<!--One-handed Sword-->
 			<skill id="4415" level="3"/>
 		</skills>
 	</npc>
-	<!--ru name: Призрачный Лорд-->
 	<npc id="14912" name="Spectral Lord" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -946,7 +776,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.5"/>
 		<set name="collision_height" value="33.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="84"/>
@@ -965,33 +794,20 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<skills>
-			<!--Servitor PvP Penalty-->
 			<skill id="5038" level="15"/>
-			<!--Demons-->
 			<skill id="4416" level="9"/>
-			<!--HP High-->
 			<skill id="4408" level="4"/>
-			<!--MP Increase (1x)-->
 			<skill id="4409" level="1"/>
-			<!--Summoned Monster Magic Protection-->
 			<skill id="4121" level="9"/>
-			<!--Strong P. Atk.-->
 			<skill id="4410" level="15"/>
-			<!--Slightly Strong M. Atk.-->
 			<skill id="4411" level="13"/>
-			<!--Slightly Strong P. Def.-->
 			<skill id="4412" level="12"/>
-			<!--Slightly Strong M. Def.-->
 			<skill id="4413" level="12"/>
-			<!--Standard Type-->
 			<skill id="4414" level="2"/>
-			<!--One-handed Sword-->
 			<skill id="4415" level="3"/>
 		</skills>
 	</npc>
-	<!--ru name: Призрачный Лорд-->
 	<npc id="14913" name="Spectral Lord" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -1022,7 +838,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.5"/>
 		<set name="collision_height" value="33.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -1041,33 +856,20 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<skills>
-			<!--Servitor PvP Penalty-->
 			<skill id="5038" level="15"/>
-			<!--Demons-->
 			<skill id="4416" level="9"/>
-			<!--HP High-->
 			<skill id="4408" level="4"/>
-			<!--MP Increase (1x)-->
 			<skill id="4409" level="1"/>
-			<!--Summoned Monster Magic Protection-->
 			<skill id="4121" level="9"/>
-			<!--Strong P. Atk.-->
 			<skill id="4410" level="15"/>
-			<!--Slightly Strong M. Atk.-->
 			<skill id="4411" level="13"/>
-			<!--Slightly Strong P. Def.-->
 			<skill id="4412" level="12"/>
-			<!--Slightly Strong M. Def.-->
 			<skill id="4413" level="12"/>
-			<!--Standard Type-->
 			<skill id="4414" level="2"/>
-			<!--One-handed Sword-->
 			<skill id="4415" level="3"/>
 		</skills>
 	</npc>
-	<!--ru name: Призрачный Лорд-->
 	<npc id="14914" name="Spectral Lord" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -1098,7 +900,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.5"/>
 		<set name="collision_height" value="33.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -1117,33 +918,20 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<skills>
-			<!--Servitor PvP Penalty-->
 			<skill id="5038" level="15"/>
-			<!--Demons-->
 			<skill id="4416" level="9"/>
-			<!--HP High-->
 			<skill id="4408" level="4"/>
-			<!--MP Increase (1x)-->
 			<skill id="4409" level="1"/>
-			<!--Summoned Monster Magic Protection-->
 			<skill id="4121" level="9"/>
-			<!--Strong P. Atk.-->
 			<skill id="4410" level="15"/>
-			<!--Slightly Strong M. Atk.-->
 			<skill id="4411" level="13"/>
-			<!--Slightly Strong P. Def.-->
 			<skill id="4412" level="12"/>
-			<!--Slightly Strong M. Def.-->
 			<skill id="4413" level="12"/>
-			<!--Standard Type-->
 			<skill id="4414" level="2"/>
-			<!--One-handed Sword-->
 			<skill id="4415" level="3"/>
 		</skills>
 	</npc>
-	<!--ru name: Призрачный Лорд-->
 	<npc id="14915" name="Spectral Lord" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -1174,7 +962,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.5"/>
 		<set name="collision_height" value="33.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -1193,33 +980,20 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<skills>
-			<!--Servitor PvP Penalty-->
 			<skill id="5038" level="15"/>
-			<!--Demons-->
 			<skill id="4416" level="9"/>
-			<!--HP High-->
 			<skill id="4408" level="4"/>
-			<!--MP Increase (1x)-->
 			<skill id="4409" level="1"/>
-			<!--Summoned Monster Magic Protection-->
 			<skill id="4121" level="9"/>
-			<!--Strong P. Atk.-->
 			<skill id="4410" level="15"/>
-			<!--Slightly Strong M. Atk.-->
 			<skill id="4411" level="13"/>
-			<!--Slightly Strong P. Def.-->
 			<skill id="4412" level="12"/>
-			<!--Slightly Strong M. Def.-->
 			<skill id="4413" level="12"/>
-			<!--Standard Type-->
 			<skill id="4414" level="2"/>
-			<!--One-handed Sword-->
 			<skill id="4415" level="3"/>
 		</skills>
 	</npc>
-	<!--ru name: Тигрица-->
 	<npc id="14916" name="Tigress" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -1250,7 +1024,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="18.4"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="61"/>
@@ -1269,33 +1042,20 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<!--Servitor PvP Penalty-->
 			<skill id="5038" level="7"/>
-			<!--Beasts-->
 			<skill id="4416" level="3"/>
-			<!--HP Medium-High-->
 			<skill id="4408" level="2"/>
-			<!--MP Increase (1x)-->
 			<skill id="4409" level="1"/>
-			<!--Summoned Monster Magic Protection-->
 			<skill id="4121" level="9"/>
-			<!--Slightly Strong P. Atk.-->
 			<skill id="4410" level="12"/>
-			<!--Average M. Atk.-->
 			<skill id="4411" level="11"/>
-			<!--Slightly Strong P. Def.-->
 			<skill id="4412" level="12"/>
-			<!--Slightly Strong M. Def.-->
 			<skill id="4413" level="12"/>
-			<!--Standard Type-->
 			<skill id="4414" level="2"/>
-			<!--One-handed Sword-->
 			<skill id="4415" level="3"/>
 		</skills>
 	</npc>
-	<!--ru name: Тигрица-->
 	<npc id="14917" name="Tigress" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -1326,7 +1086,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="22.0"/>
 		<set name="collision_height" value="18.4"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="61"/>
@@ -1345,33 +1104,20 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<skills>
-			<!--Servitor PvP Penalty-->
 			<skill id="5038" level="7"/>
-			<!--Beasts-->
 			<skill id="4416" level="3"/>
-			<!--HP Medium-High-->
 			<skill id="4408" level="2"/>
-			<!--MP Increase (1x)-->
 			<skill id="4409" level="1"/>
-			<!--Summoned Monster Magic Protection-->
 			<skill id="4121" level="9"/>
-			<!--Strong P. Atk.-->
 			<skill id="4410" level="14"/>
-			<!--Average M. Atk.-->
 			<skill id="4411" level="11"/>
-			<!--Strong P. Def.-->
 			<skill id="4412" level="14"/>
-			<!--Strong M. Def.-->
 			<skill id="4413" level="14"/>
-			<!--Standard Type-->
 			<skill id="4414" level="2"/>
-			<!--One-handed Sword-->
 			<skill id="4415" level="3"/>
 		</skills>
 	</npc>
-	<!--ru name: Феникс-->
 	<npc id="14918" name="Imperial Phoenix" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -1402,7 +1148,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="7.0"/>
 		<set name="collision_height" value="34.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="83"/>
@@ -1421,33 +1166,20 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<skills>
-			<!--Servitor PvP Penalty-->
 			<skill id="5038" level="15"/>
-			<!--Spirits-->
 			<skill id="4416" level="7"/>
-			<!--HP Very High-->
 			<skill id="4408" level="6"/>
-			<!--MP Increase (1x)-->
 			<skill id="4409" level="1"/>
-			<!--Summoned Monster Magic Protection-->
 			<skill id="4121" level="9"/>
-			<!--Slightly Strong P. Atk.-->
 			<skill id="4410" level="13"/>
-			<!--Slightly Strong M. Atk.-->
 			<skill id="4411" level="13"/>
-			<!--Average P. Def.-->
 			<skill id="4412" level="11"/>
-			<!--Slightly Strong M. Def.-->
 			<skill id="4413" level="13"/>
-			<!--Standard Type-->
 			<skill id="4414" level="2"/>
-			<!--One-handed Sword-->
 			<skill id="4415" level="3"/>
 		</skills>
 	</npc>
-	<!--ru name: Гильдия Котов-->
 	<npc id="14919" name="Meow Unit" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -1478,7 +1210,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="18.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -1497,9 +1228,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<!--ru name: Лучник Сидиориола-->
 	<npc id="14920" name="Cydiareal Archer" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -1530,7 +1259,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="24.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -1549,9 +1277,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<!--ru name: Мучитель Бездны-->
 	<npc id="14921" name="Abyssal Tormentor" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -1582,7 +1308,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="32.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -1601,9 +1326,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<!--ru name: Гильдия Котов-->
 	<npc id="14922" name="Meow Unit" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -1634,7 +1357,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="18.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -1653,9 +1375,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<!--ru name: Лучник Сидиориола-->
 	<npc id="14923" name="Cydiareal Archer" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -1686,7 +1406,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="24.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -1705,9 +1424,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<!--ru name: Мучитель Бездны-->
 	<npc id="14924" name="Abyssal Tormentor" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -1738,7 +1455,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="32.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -1758,7 +1474,6 @@
 		</attributes>
 	</npc>
 	<npc id="14925" name="Unison of Lights" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -1789,7 +1504,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="18.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -1808,9 +1522,7 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 	</npc>
-	<!--ru name: Набиароп-->
 	<npc id="14926" name="Naviarope" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -1841,7 +1553,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="39.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -1860,9 +1571,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<!--ru name: Врата Смерти-->
 	<npc id="14927" name="Death Gate" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -1893,7 +1602,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="57.0"/>
 		<set name="collision_height" value="67.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -1912,9 +1620,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<!--ru name: Хордлинг-->
 	<npc id="14928" name="Hodling" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -1945,7 +1651,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="16.0"/>
 		<set name="collision_height" value="15.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -1965,7 +1670,6 @@
 		</attributes>
 	</npc>
 	<npc id="14929" name="Cute Bear" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -1996,7 +1700,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="18.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -2016,7 +1719,6 @@
 		</attributes>
 	</npc>
 	<npc id="14930" name="Saber Tooth Cougar" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -2047,7 +1749,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="19.0"/>
 		<set name="collision_height" value="12.25"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -2067,7 +1768,6 @@
 		</attributes>
 	</npc>
 	<npc id="14931" name="Grim Reaper" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -2098,7 +1798,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="32.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -2117,12 +1816,10 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<equip>
-			<!--Envoy Weapon-->
 			<rhand item_id="30329"/>
 		</equip>
 	</npc>
 	<npc id="14932" name="Thunder Hawk" title="">
-	<!--GD retail by andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -2153,7 +1850,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="collision_radius" value="10.2"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -2174,7 +1870,6 @@
 		<skills/>
 	</npc>
 	<npc id="14933" name="Tree of Life" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -2205,7 +1900,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="51.0"/>
 		<set name="collision_height" value="50.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -2224,9 +1918,7 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 	</npc>
-	<!--ru name: Кот Нокдаун-->
 	<npc id="14934" name="Knock-down Cat" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -2257,7 +1949,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="15.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -2276,9 +1967,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<!--ru name: Кот Прыжок-->
 	<npc id="14935" name="Jumping Cat" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -2309,7 +1998,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="15.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -2329,7 +2017,6 @@
 		</attributes>
 	</npc>
 	<npc id="14936" name="Golden Lion" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -2360,7 +2047,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="22.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -2380,7 +2066,6 @@
 		</attributes>
 	</npc>
 	<npc id="14937" name="Golden Lion" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -2411,7 +2096,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="22.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="86"/>
@@ -2431,7 +2115,6 @@
 		</attributes>
 	</npc>
 	<npc id="14938" name="Golden Lion" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -2462,7 +2145,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="22.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="89"/>
@@ -2482,7 +2164,6 @@
 		</attributes>
 	</npc>
 	<npc id="14939" name="Golden Lion" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -2513,7 +2194,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="22.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="92"/>
@@ -2533,7 +2213,6 @@
 		</attributes>
 	</npc>
 	<npc id="14940" name="Thunder Hawk" title="">
-	<!--GD retail by andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -2564,7 +2243,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="collision_radius" value="10.2"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="87"/>
@@ -2585,7 +2263,6 @@
 		<skills/>
 	</npc>
 	<npc id="14941" name="Thunder Hawk" title="">
-	<!--GD retail by andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -2616,7 +2293,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="collision_radius" value="10.2"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="89"/>
@@ -2637,7 +2313,6 @@
 		<skills/>
 	</npc>
 	<npc id="14942" name="Thunder Hawk" title="">
-	<!--GD retail by andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -2668,7 +2343,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="collision_radius" value="10.2"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="91"/>
@@ -2689,7 +2363,6 @@
 		<skills/>
 	</npc>
 	<npc id="14943" name="Tree of Life" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -2720,7 +2393,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="51.0"/>
 		<set name="collision_height" value="50.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="90"/>
@@ -2740,7 +2412,6 @@
 		</attributes>
 	</npc>
 	<npc id="14944" name="Unison of Lights" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -2771,7 +2442,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="18.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="90"/>
@@ -2791,7 +2461,6 @@
 		</attributes>
 	</npc>
 	<npc id="14945" name="Unison of Lights" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -2822,7 +2491,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="18.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="95"/>
@@ -2842,7 +2510,6 @@
 		</attributes>
 	</npc>
 	<npc id="14946" name="Unison of Lights" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -2873,7 +2540,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="18.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -2893,7 +2559,6 @@
 		</attributes>
 	</npc>
 	<npc id="14947" name="Cute Bear" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -2924,7 +2589,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="18.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="87"/>
@@ -2944,7 +2608,6 @@
 		</attributes>
 	</npc>
 	<npc id="14948" name="Cute Bear" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -2975,7 +2638,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="18.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="89"/>
@@ -2995,7 +2657,6 @@
 		</attributes>
 	</npc>
 	<npc id="14949" name="Cute Bear" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3026,7 +2687,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="18.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="91"/>
@@ -3046,7 +2706,6 @@
 		</attributes>
 	</npc>
 	<npc id="14950" name="Cute Bear" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3077,7 +2736,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="18.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="93"/>
@@ -3097,7 +2755,6 @@
 		</attributes>
 	</npc>
 	<npc id="14951" name="Cute Bear" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3128,7 +2785,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="18.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="95"/>
@@ -3148,7 +2804,6 @@
 		</attributes>
 	</npc>
 	<npc id="14952" name="Cute Bear" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3179,7 +2834,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="18.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="97"/>
@@ -3199,7 +2853,6 @@
 		</attributes>
 	</npc>
 	<npc id="14953" name="Cute Bear" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3230,7 +2883,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="18.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -3250,7 +2902,6 @@
 		</attributes>
 	</npc>
 	<npc id="14954" name="Saber Tooth Cougar" title="">
-		<!--Tauti Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3281,7 +2932,6 @@
 		<set name="baseMCritRate" value="0.0"/>
 		<set name="collision_radius" value="19.0"/>
 		<set name="collision_height" value="12.25"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="87"/>
@@ -3301,7 +2951,6 @@
 		</attributes>
 	</npc>
 	<npc id="14955" name="Saber Tooth Cougar" title="">
-		<!--Tauti Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3332,7 +2981,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="19.0"/>
 		<set name="collision_height" value="12.25"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="89"/>
@@ -3352,7 +3000,6 @@
 		</attributes>
 	</npc>
 	<npc id="14956" name="Saber Tooth Cougar" title="">
-		<!--Tauti Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3383,7 +3030,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="19.0"/>
 		<set name="collision_height" value="12.25"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="91"/>
@@ -3403,7 +3049,6 @@
 		</attributes>
 	</npc>
 	<npc id="14957" name="Saber Tooth Cougar" title="">
-		<!--Tauti Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3434,7 +3079,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="19.0"/>
 		<set name="collision_height" value="12.25"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="93"/>
@@ -3454,7 +3098,6 @@
 		</attributes>
 	</npc>
 	<npc id="14958" name="Saber Tooth Cougar" title="">
-		<!--Tauti Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3485,7 +3128,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="19.0"/>
 		<set name="collision_height" value="12.25"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="95"/>
@@ -3505,7 +3147,6 @@
 		</attributes>
 	</npc>
 	<npc id="14959" name="Saber Tooth Cougar" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3536,7 +3177,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="19.0"/>
 		<set name="collision_height" value="12.25"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="97"/>
@@ -3556,7 +3196,6 @@
 		</attributes>
 	</npc>
 	<npc id="14960" name="Saber Tooth Cougar" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3587,7 +3226,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="19.0"/>
 		<set name="collision_height" value="12.25"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -3607,7 +3245,6 @@
 		</attributes>
 	</npc>
 	<npc id="14961" name="Grim Reaper" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3638,7 +3275,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="32.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="87"/>
@@ -3657,12 +3293,10 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<equip>
-			<!--Envoy Weapon-->
 			<rhand item_id="30329"/>
 		</equip>
 	</npc>
 	<npc id="14962" name="Grim Reaper" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3693,7 +3327,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="32.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="89"/>
@@ -3712,12 +3345,10 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<equip>
-			<!--Envoy Weapon-->
 			<rhand item_id="30329"/>
 		</equip>
 	</npc>
 	<npc id="14963" name="Grim Reaper" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3748,7 +3379,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="32.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="91"/>
@@ -3767,12 +3397,10 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<equip>
-			<!--Envoy Weapon-->
 			<rhand item_id="30329"/>
 		</equip>
 	</npc>
 	<npc id="14964" name="Grim Reaper" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3803,7 +3431,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="32.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="93"/>
@@ -3822,12 +3449,10 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<equip>
-			<!--Envoy Weapon-->
 			<rhand item_id="30329"/>
 		</equip>
 	</npc>
 	<npc id="14965" name="Grim Reaper" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3858,7 +3483,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="32.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="95"/>
@@ -3877,12 +3501,10 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<equip>
-			<!--Envoy Weapon-->
 			<rhand item_id="30329"/>
 		</equip>
 	</npc>
 	<npc id="14966" name="Grim Reaper" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3913,7 +3535,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="32.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="97"/>
@@ -3932,12 +3553,10 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<equip>
-			<!--Envoy Weapon-->
 			<rhand item_id="30329"/>
 		</equip>
 	</npc>
 	<npc id="14967" name="Grim Reaper" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3968,7 +3587,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="32.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -3987,13 +3605,10 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 		<equip>
-			<!--Envoy Weapon-->
 			<rhand item_id="30329"/>
 		</equip>
 	</npc>
-	<!--ru name: Набиароп-->
 	<npc id="14968" name="Naviarope" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4024,7 +3639,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="39.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -4043,9 +3657,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<!--ru name: Набиароп-->
 	<npc id="14969" name="Naviarope" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4076,7 +3688,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="39.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -4095,9 +3706,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<!--ru name: Набиароп-->
 	<npc id="14970" name="Naviarope" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4128,7 +3737,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="25.0"/>
 		<set name="collision_height" value="39.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -4147,9 +3755,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<!--ru name: Милый Мишка-->
 	<npc id="14971" name="Cute Bear" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4180,7 +3786,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="18.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -4199,9 +3804,7 @@
 			<defence attribute="unholy" value="100"/>
 		</attributes>
 	</npc>
-	<!--ru name: Саблезубый Кугуар-->
 	<npc id="14972" name="Saber Tooth Cougar" title="">
-		<!--Base character specific-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4232,7 +3835,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="19.0"/>
 		<set name="collision_height" value="12.25"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -4282,7 +3884,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="32.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -4301,12 +3902,10 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 		<equip>
-			<!--Envoy Weapon-->
 			<rhand item_id="30329"/>
 		</equip>
 	</npc>
 	<npc id="14974" name="Golden Lion" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4337,7 +3936,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="22.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="95"/>
@@ -4357,7 +3955,6 @@
 		</attributes>
 	</npc>
 	<npc id="14975" name="Golden Lion" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4388,7 +3985,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="22.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="98"/>
@@ -4408,7 +4004,6 @@
 		</attributes>
 	</npc>
 	<npc id="14976" name="Golden Lion" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4439,7 +4034,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="22.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -4459,7 +4053,6 @@
 		</attributes>
 	</npc>
 	<npc id="14977" name="Golden Lion" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4490,7 +4083,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="22.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -4510,7 +4102,6 @@
 		</attributes>
 	</npc>
 	<npc id="14978" name="Golden Lion" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4541,7 +4132,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="22.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -4561,7 +4151,6 @@
 		</attributes>
 	</npc>
 	<npc id="14979" name="Golden Lion" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4592,7 +4181,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="22.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -4612,7 +4200,6 @@
 		</attributes>
 	</npc>
 	<npc id="14980" name="Golden Lion" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4643,7 +4230,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="22.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -4663,7 +4249,6 @@
 		</attributes>
 	</npc>
 	<npc id="14981" name="Golden Lion" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4694,7 +4279,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="22.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -4714,7 +4298,6 @@
 		</attributes>
 	</npc>
 	<npc id="14982" name="Golden Lion" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4745,7 +4328,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="22.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -4765,7 +4347,6 @@
 		</attributes>
 	</npc>
 	<npc id="14983" name="Golden Lion" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4796,7 +4377,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="22.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -4816,7 +4396,6 @@
 		</attributes>
 	</npc>
 	<npc id="14984" name="Golden Lion" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4847,7 +4426,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="22.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -4867,7 +4445,6 @@
 		</attributes>
 	</npc>
 	<npc id="14985" name="Golden Lion" title="">
-		<!--GD Retail by Andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4898,7 +4475,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="22.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -4918,7 +4494,6 @@
 		</attributes>
 	</npc>
 	<npc id="14986" name="Thunder Hawk" title="">
-	<!--GD retail by andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4949,7 +4524,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="collision_radius" value="10.2"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="93"/>
@@ -4970,7 +4544,6 @@
 		<skills/>
 	</npc>
 	<npc id="14987" name="Thunder Hawk" title="">
-	<!--GD retail by andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -5001,7 +4574,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="collision_radius" value="10.2"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="95"/>
@@ -5022,7 +4594,6 @@
 		<skills/>
 	</npc>
 	<npc id="14988" name="Thunder Hawk" title="">
-	<!--GD retail by andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -5053,7 +4624,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="collision_radius" value="10.2"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="97"/>
@@ -5074,7 +4644,6 @@
 		<skills/>
 	</npc>
 	<npc id="14989" name="Thunder Hawk" title="">
-	<!--GD retail by andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -5105,7 +4674,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="collision_radius" value="10.2"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -5126,7 +4694,6 @@
 		<skills/>
 	</npc>
 	<npc id="14990" name="Thunder Hawk" title="">
-	<!--GD retail by andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -5157,7 +4724,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="collision_radius" value="10.2"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -5178,7 +4744,6 @@
 		<skills/>
 	</npc>
 	<npc id="14991" name="Thunder Hawk" title="">
-	<!--GD retail by andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -5209,7 +4774,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="collision_radius" value="10.2"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -5230,7 +4794,6 @@
 		<skills/>
 	</npc>
 	<npc id="14992" name="Thunder Hawk" title="">
-	<!--GD retail by andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -5261,7 +4824,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="collision_radius" value="10.2"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -5282,7 +4844,6 @@
 		<skills/>
 	</npc>
 	<npc id="14993" name="Thunder Hawk" title="">
-	<!--GD retail by andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -5313,7 +4874,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="collision_radius" value="10.2"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -5334,7 +4894,6 @@
 		<skills/>
 	</npc>
 	<npc id="14994" name="Thunder Hawk" title="">
-	<!--GD retail by andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -5365,7 +4924,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="collision_radius" value="10.2"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -5386,7 +4944,6 @@
 		<skills/>
 	</npc>
 	<npc id="14995" name="Thunder Hawk" title="">
-	<!--GD retail by andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -5417,7 +4974,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="collision_radius" value="10.2"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -5438,7 +4994,6 @@
 		<skills/>
 	</npc>
 	<npc id="14996" name="Thunder Hawk" title="">
-	<!--GD retail by andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -5469,7 +5024,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="collision_radius" value="10.2"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -5490,7 +5044,6 @@
 		<skills/>
 	</npc>
 	<npc id="14997" name="Thunder Hawk" title="">
-	<!--GD retail by andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -5521,7 +5074,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="collision_radius" value="10.2"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -5542,7 +5094,6 @@
 		<skills/>
 	</npc>
 	<npc id="14998" name="Thunder Hawk" title="">
-	<!--GD retail by andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -5573,7 +5124,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="collision_radius" value="10.2"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>
@@ -5594,7 +5144,6 @@
 		<skills/>
 	</npc>
 	<npc id="14999" name="Thunder Hawk" title="">
-	<!--GD retail by andreagighi-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -5625,7 +5174,6 @@
 		<set name="baseMCritRate" value="0"/>
 		<set name="collision_height" value="36.5"/>
 		<set name="collision_radius" value="10.2"/>
-		<!--Npc specific-->
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="99"/>

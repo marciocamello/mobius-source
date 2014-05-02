@@ -12,6 +12,7 @@
  */
 package quests;
 
+import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
@@ -19,29 +20,14 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _10326_RespectYourElders extends Quest implements ScriptFile
 {
-	private static final int panteleon = 32972;
-	private static final int galint = 32980;
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
+	private static final int GALLINT = 32980;
+	private static final int PANTEON = 32972;
 	
 	public _10326_RespectYourElders()
 	{
 		super(false);
-		addStartNpc(galint);
-		addTalkId(panteleon);
+		addStartNpc(GALLINT);
+		addTalkId(PANTEON);
 		addLevelCheck(1, 20);
 		addQuestCompletedCheck(_10325_SearchingForNewPower.class);
 	}
@@ -50,20 +36,19 @@ public class _10326_RespectYourElders extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
-		if (event.equalsIgnoreCase("quest_ac"))
+		// Player player = st.getPlayer();
+		if (event.equalsIgnoreCase("3.htm"))
 		{
+			st.set("cond", "1", true);
 			st.setState(STARTED);
-			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
-			htmltext = "0-3.htm";
 		}
-		if (event.equalsIgnoreCase("qet_rev"))
+		else if (event.equalsIgnoreCase("5.htm"))
 		{
-			htmltext = "1-2.htm";
-			st.getPlayer().addExpAndSp(5300, 2800);
 			st.giveItems(57, 14000);
-			st.exitCurrentQuest(false);
+			st.addExpAndSp(5300, 2800);
 			st.playSound(SOUND_FINISH);
+			st.exitCurrentQuest(false);
 		}
 		return htmltext;
 	}
@@ -71,43 +56,59 @@ public class _10326_RespectYourElders extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int cond = st.getCond();
-		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
-		if (npcId == galint)
+		int npcId = npc.getNpcId();
+		int cond = st.getInt("cond");
+		Player player = st.getPlayer();
+		if (npcId == GALLINT)
 		{
-			if (st.isCompleted())
+			if ((cond == 0) && isAvailableFor(st.getPlayer()))
 			{
-				htmltext = "0-nc.htm";
+				htmltext = "1.htm";
+				// else TODO
 			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()))
+			else if (cond >= 8)
 			{
-				htmltext = "start.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-4.htm";
-			}
-			else
-			{
-				htmltext = "0-nc.htm";
+				htmltext = "3.htm";
+				st.giveItems(57, 12000);
+				if (player.isMageClass())
+				{
+					st.giveItems(2509, 1000);
+				}
+				else
+				{
+					st.giveItems(1835, 1000);
+				}
+				st.addExpAndSp(3254, 2400);
+				st.playSound(SOUND_FINISH);
+				st.exitCurrentQuest(false);
 			}
 		}
-		else if (npcId == panteleon)
+		else if (npcId == PANTEON)
 		{
-			if (st.isCompleted())
+			if (cond == 1)
 			{
-				htmltext = "1-c.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = "0-1.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "1-1.htm";
+				htmltext = "4.htm";
 			}
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+		//
+	}
+	
+	@Override
+	public void onReload()
+	{
+		//
+	}
+	
+	@Override
+	public void onShutdown()
+	{
+		//
 	}
 }

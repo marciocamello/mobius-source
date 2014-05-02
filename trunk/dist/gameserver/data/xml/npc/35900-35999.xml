@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="35900" name="Support Unit Captain" title="White Sands Fortress">
@@ -36,7 +36,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.fortress.peace.SupportUnitCaption"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -82,7 +82,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -128,7 +128,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.fortress.LogisticsOfficer"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -217,7 +217,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="PailakaGatekeeper"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -268,11 +268,11 @@
 			<set name="doors" value="23240008"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
-			<lhand item_id="20"/>	<!--Buckler-->
+			<rhand item_id="2"/>
+			<lhand item_id="20"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -323,11 +323,11 @@
 			<set name="doors" value="23240001"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
-			<lhand item_id="20"/>	<!--Buckler-->
+			<rhand item_id="2"/>
+			<lhand item_id="20"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -378,11 +378,11 @@
 			<set name="doors" value="23240002;23240003;23240006;23240007"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
-			<lhand item_id="20"/>	<!--Buckler-->
+			<rhand item_id="2"/>
+			<lhand item_id="20"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -429,21 +429,21 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="white_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
-			<lhand item_id="6377"/>	<!--Imperial Crusader Shield-->
+			<rhand item_id="2500"/>
+			<lhand item_id="6377"/>
 		</equip>
 		<skills>
-			<skill id="4178" level="7"/>	<!--BOSS Flamestrike-->
-			<skill id="4195" level="7"/>	<!--BOSS Twister-->
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4178" level="7"/>
+			<skill id="4195" level="7"/>
+			<skill id="4416" level="16"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="13.78">
-				<reward item_id="9581" min="1" max="1" chance="66.0508"/>	<!--Scale Shirt-->
-				<reward item_id="9591" min="1" max="1" chance="33.9492"/>	<!--Steel Bracelet-->
+				<reward item_id="9581" min="1" max="1" chance="66.0508"/>
+				<reward item_id="9591" min="1" max="1" chance="33.9492"/>
 			</group>
 			<group chance="90.0">
-				<reward item_id="9912" min="40" max="200" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="40" max="200" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -494,12 +494,12 @@
 		</ai_params>
 		<faction name="white_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="9"/>	<!--Demons-->
-			<skill id="5065" level="7"/>	<!--Castle DD Unholy-->
+			<skill id="4416" level="9"/>
+			<skill id="5065" level="7"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="78.165">
-				<reward item_id="9912" min="4" max="16" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="16" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -550,14 +550,14 @@
 		</ai_params>
 		<faction name="white_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="97"/>	<!--Lance-->
+			<rhand item_id="97"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="71.857">
-				<reward item_id="9912" min="4" max="12" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="12" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -608,14 +608,14 @@
 		</ai_params>
 		<faction name="white_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="98"/>	<!--Halberd-->
+			<rhand item_id="98"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Humans-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="66.28">
-				<reward item_id="9912" min="4" max="12" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="12" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -666,14 +666,14 @@
 		</ai_params>
 		<faction name="white_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="287"/>	<!--Bow of Peril-->
+			<rhand item_id="287"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Elves-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="67.211">
-				<reward item_id="9912" min="4" max="12" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="12" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -766,13 +766,13 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5461" level="6"/>	<!--Castle Gunner Shot-->
-			<skill id="5468" level="4"/>	<!--Castle Gunner Fire-->
+			<skill id="4416" level="22"/>
+			<skill id="5461" level="6"/>
+			<skill id="5468" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="61.737">
-				<reward item_id="9912" min="4" max="12" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="12" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -819,17 +819,17 @@
 		<set name="shots" value="SOUL"/>
 		<set name="type" value="residences.SiegeGuard"/>
 		<equip>
-			<rhand item_id="80"/>	<!--Tallum Blade-->
-			<lhand item_id="641"/>	<!--Dark Crystal Shield-->
+			<rhand item_id="80"/>
+			<lhand item_id="641"/>
 		</equip>
 		<skills>
-			<skill id="4172" level="10"/>	<!--Stun-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="4608" level="2"/>	<!--NPC Clan Buff - Berserk-->
+			<skill id="4172" level="10"/>
+			<skill id="4416" level="22"/>
+			<skill id="4608" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="84.137">
-				<reward item_id="9912" min="140" max="300" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="140" max="300" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -877,11 +877,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="white_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="75"/>	<!--Caliburs-->
+			<rhand item_id="75"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5112" level="7"/>	<!--Stun-->
+			<skill id="4416" level="22"/>
+			<skill id="5112" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -928,15 +928,15 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="white_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="75"/>	<!--Caliburs-->
+			<rhand item_id="75"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5045" level="6"/>	<!--Castle Power Strike-->
+			<skill id="4416" level="22"/>
+			<skill id="5045" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="73.01">
-				<reward item_id="9912" min="4" max="16" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="16" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -984,16 +984,16 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="white_siege_clan" range="600"/>
 		<skills>
-			<skill id="4194" level="12"/>	<!--BOSS Aura Burn-->
-			<skill id="4195" level="12"/>	<!--BOSS Twister-->
-			<skill id="4196" level="7"/>	<!--Decrease Speed-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5396" level="1"/>	<!--NPC - Spell Stance-->
-			<skill id="5398" level="1"/>	<!--NPC - Combination Force-->
+			<skill id="4194" level="12"/>
+			<skill id="4195" level="12"/>
+			<skill id="4196" level="7"/>
+			<skill id="4416" level="22"/>
+			<skill id="5396" level="1"/>
+			<skill id="5398" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="84.1571">
-				<reward item_id="9912" min="140" max="300" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="140" max="300" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -1041,18 +1041,18 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="white_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="325"/>	<!--Horn of Glory-->
+			<rhand item_id="325"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="28"/>	<!--Prominence-->
-			<skill id="4077" level="8"/>	<!--NPC Aura Burn-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5053" level="6"/>	<!--Castle DD Water-->
-			<skill id="5396" level="1"/>	<!--NPC - Spell Stance-->
+			<skill id="1230" level="28"/>
+			<skill id="4077" level="8"/>
+			<skill id="4416" level="22"/>
+			<skill id="5053" level="6"/>
+			<skill id="5396" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="77.574">
-				<reward item_id="9912" min="4" max="16" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="16" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -1103,16 +1103,16 @@
 		</ai_params>
 		<faction name="white_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="92"/>	<!--Sprite's Staff-->
+			<rhand item_id="92"/>
 		</equip>
 		<skills>
-			<skill id="4115" level="1"/>	<!--Aden Heal-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5114" level="7"/>	<!--Hold-->
+			<skill id="4115" level="1"/>
+			<skill id="4416" level="22"/>
+			<skill id="5114" level="7"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="82.382">
-				<reward item_id="9912" min="4" max="16" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="16" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -1162,16 +1162,16 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="10212"/>	<!--For NPC (Bow)-->
+			<rhand item_id="10212"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="4754" level="8"/>	<!--BOSS Power Shot-->
-			<skill id="4755" level="7"/>	<!--BOSS Power Shot-->
+			<skill id="4416" level="22"/>
+			<skill id="4754" level="8"/>
+			<skill id="4755" level="7"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="84.2235">
-				<reward item_id="9912" min="140" max="300" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="140" max="300" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -1222,15 +1222,15 @@
 		</ai_params>
 		<faction name="white_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="287"/>	<!--Bow of Peril-->
+			<rhand item_id="287"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5046" level="7"/>	<!--Castle Power Shot-->
+			<skill id="4416" level="22"/>
+			<skill id="5046" level="7"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="71.0">
-				<reward item_id="9912" min="4" max="16" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="16" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -1320,11 +1320,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.fortress.siege.MercenaryCaption"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
-			<lhand item_id="6377"/>	<!--Imperial Crusader Shield-->
+			<rhand item_id="2500"/>
+			<lhand item_id="6377"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -1370,10 +1370,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.SiegeGuard"/>
 		<equip>
-			<rhand item_id="96"/>	<!--Scythe-->
+			<rhand item_id="96"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="17"/>	<!--Orcs-->
+			<skill id="4416" level="17"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1419,7 +1419,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1465,7 +1465,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.fortress.Manager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1511,7 +1511,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.fortress.peace.SuspiciousMerchant"/>
 		<skills>
-			<skill id="4416" level="17"/>	<!--Orcs-->
+			<skill id="4416" level="17"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1557,11 +1557,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="80"/>	<!--Tallum Blade-->
-			<lhand item_id="641"/>	<!--Dark Crystal Shield-->
+			<rhand item_id="80"/>
+			<lhand item_id="641"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1607,7 +1607,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.fortress.peace.ArcherCaption"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1653,11 +1653,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="9813"/>	<!--Orc Officer-->
-			<lhand item_id="9813"/>	<!--Orc Officer-->
+			<rhand item_id="9813"/>
+			<lhand item_id="9813"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Humans-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1703,7 +1703,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.fortress.peace.SupportUnitCaption"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1749,7 +1749,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1795,7 +1795,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.fortress.LogisticsOfficer"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1884,7 +1884,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="PailakaGatekeeper"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1935,11 +1935,11 @@
 			<set name="doors" value="24150003"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
-			<lhand item_id="20"/>	<!--Buckler-->
+			<rhand item_id="2"/>
+			<lhand item_id="20"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -1990,11 +1990,11 @@
 			<set name="doors" value="24150008"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
-			<lhand item_id="20"/>	<!--Buckler-->
+			<rhand item_id="2"/>
+			<lhand item_id="20"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2045,11 +2045,11 @@
 			<set name="doors" value="24150004;24150005;24150006;24150007"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
-			<lhand item_id="20"/>	<!--Buckler-->
+			<rhand item_id="2"/>
+			<lhand item_id="20"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2096,21 +2096,21 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="borderland_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
-			<lhand item_id="6377"/>	<!--Imperial Crusader Shield-->
+			<rhand item_id="2500"/>
+			<lhand item_id="6377"/>
 		</equip>
 		<skills>
-			<skill id="4178" level="7"/>	<!--BOSS Flamestrike-->
-			<skill id="4195" level="7"/>	<!--BOSS Twister-->
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4178" level="7"/>
+			<skill id="4195" level="7"/>
+			<skill id="4416" level="16"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="13.78">
-				<reward item_id="9581" min="1" max="1" chance="66.0508"/>	<!--Scale Shirt-->
-				<reward item_id="9591" min="1" max="1" chance="33.9492"/>	<!--Steel Bracelet-->
+				<reward item_id="9581" min="1" max="1" chance="66.0508"/>
+				<reward item_id="9591" min="1" max="1" chance="33.9492"/>
 			</group>
 			<group chance="90.0">
-				<reward item_id="9912" min="40" max="200" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="40" max="200" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2161,12 +2161,12 @@
 		</ai_params>
 		<faction name="borderland_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="9"/>	<!--Demons-->
-			<skill id="5065" level="7"/>	<!--Castle DD Unholy-->
+			<skill id="4416" level="9"/>
+			<skill id="5065" level="7"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="78.005">
-				<reward item_id="9912" min="4" max="16" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="16" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2217,14 +2217,14 @@
 		</ai_params>
 		<faction name="borderland_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="97"/>	<!--Lance-->
+			<rhand item_id="97"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="71.957">
-				<reward item_id="9912" min="4" max="12" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="12" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2275,14 +2275,14 @@
 		</ai_params>
 		<faction name="borderland_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="98"/>	<!--Halberd-->
+			<rhand item_id="98"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Humans-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="66.28">
-				<reward item_id="9912" min="4" max="12" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="12" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2333,14 +2333,14 @@
 		</ai_params>
 		<faction name="borderland_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="287"/>	<!--Bow of Peril-->
+			<rhand item_id="287"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Elves-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="66.211">
-				<reward item_id="9912" min="4" max="12" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="12" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2562,14 +2562,14 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5461" level="6"/>	<!--Castle Gunner Shot-->
-			<skill id="5468" level="4"/>	<!--Castle Gunner Fire-->
+			<skill id="4416" level="22"/>
+			<skill id="5461" level="6"/>
+			<skill id="5468" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="48.2776">
-				<reward item_id="9912" min="24" max="72" chance="4.0000"/>	<!--Knight's Epaulette-->
-				<reward item_id="10014" min="1" max="1" chance="96.0000"/>	<!--Control Room Card-->
+				<reward item_id="9912" min="24" max="72" chance="4.0000"/>
+				<reward item_id="10014" min="1" max="1" chance="96.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2616,11 +2616,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="46.0">
-				<reward item_id="9912" min="4" max="6" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="6" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2667,17 +2667,17 @@
 		<set name="shots" value="SOUL"/>
 		<set name="type" value="residences.SiegeGuard"/>
 		<equip>
-			<rhand item_id="80"/>	<!--Tallum Blade-->
-			<lhand item_id="641"/>	<!--Dark Crystal Shield-->
+			<rhand item_id="80"/>
+			<lhand item_id="641"/>
 		</equip>
 		<skills>
-			<skill id="4172" level="10"/>	<!--Stun-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="4608" level="2"/>	<!--NPC Clan Buff - Berserk-->
+			<skill id="4172" level="10"/>
+			<skill id="4416" level="22"/>
+			<skill id="4608" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="84.1571">
-				<reward item_id="9912" min="140" max="300" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="140" max="300" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2725,11 +2725,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="borderland_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="75"/>	<!--Caliburs-->
+			<rhand item_id="75"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5112" level="7"/>	<!--Stun-->
+			<skill id="4416" level="22"/>
+			<skill id="5112" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -2776,15 +2776,15 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="borderland_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="75"/>	<!--Caliburs-->
+			<rhand item_id="75"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5045" level="6"/>	<!--Castle Power Strike-->
+			<skill id="4416" level="22"/>
+			<skill id="5045" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="73.01">
-				<reward item_id="9912" min="4" max="16" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="16" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2832,16 +2832,16 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="borderland_siege_clan" range="600"/>
 		<skills>
-			<skill id="4194" level="12"/>	<!--BOSS Aura Burn-->
-			<skill id="4195" level="12"/>	<!--BOSS Twister-->
-			<skill id="4196" level="7"/>	<!--Decrease Speed-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5396" level="1"/>	<!--NPC - Spell Stance-->
-			<skill id="5398" level="1"/>	<!--NPC - Combination Force-->
+			<skill id="4194" level="12"/>
+			<skill id="4195" level="12"/>
+			<skill id="4196" level="7"/>
+			<skill id="4416" level="22"/>
+			<skill id="5396" level="1"/>
+			<skill id="5398" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="84.1571">
-				<reward item_id="9912" min="140" max="300" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="140" max="300" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2889,18 +2889,18 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="borderland_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="325"/>	<!--Horn of Glory-->
+			<rhand item_id="325"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="28"/>	<!--Prominence-->
-			<skill id="4077" level="8"/>	<!--NPC Aura Burn-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5053" level="6"/>	<!--Castle DD Water-->
-			<skill id="5396" level="1"/>	<!--NPC - Spell Stance-->
+			<skill id="1230" level="28"/>
+			<skill id="4077" level="8"/>
+			<skill id="4416" level="22"/>
+			<skill id="5053" level="6"/>
+			<skill id="5396" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="77.574">
-				<reward item_id="9912" min="4" max="16" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="16" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -2951,16 +2951,16 @@
 		</ai_params>
 		<faction name="borderland_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="92"/>	<!--Sprite's Staff-->
+			<rhand item_id="92"/>
 		</equip>
 		<skills>
-			<skill id="4115" level="1"/>	<!--Aden Heal-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5114" level="7"/>	<!--Hold-->
+			<skill id="4115" level="1"/>
+			<skill id="4416" level="22"/>
+			<skill id="5114" level="7"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="82.382">
-				<reward item_id="9912" min="4" max="16" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="16" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -3010,16 +3010,16 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="10212"/>	<!--For NPC (Bow)-->
+			<rhand item_id="10212"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="4754" level="8"/>	<!--BOSS Power Shot-->
-			<skill id="4755" level="7"/>	<!--BOSS Power Shot-->
+			<skill id="4416" level="22"/>
+			<skill id="4754" level="8"/>
+			<skill id="4755" level="7"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="84.2235">
-				<reward item_id="9912" min="140" max="300" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="140" max="300" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -3070,15 +3070,15 @@
 		</ai_params>
 		<faction name="borderland_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="287"/>	<!--Bow of Peril-->
+			<rhand item_id="287"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5046" level="7"/>	<!--Castle Power Shot-->
+			<skill id="4416" level="22"/>
+			<skill id="5046" level="7"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="71.0">
-				<reward item_id="9912" min="4" max="16" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="16" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -3125,16 +3125,16 @@
 		<set name="shots" value="SOUL"/>
 		<set name="type" value="residences.SiegeGuard"/>
 		<equip>
-			<rhand item_id="9813"/>	<!--Orc Officer-->
-			<lhand item_id="9813"/>	<!--Orc Officer-->
+			<rhand item_id="9813"/>
+			<lhand item_id="9813"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="4725" level="7"/>	<!--Stun-->
+			<skill id="4416" level="22"/>
+			<skill id="4725" level="7"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.4766">
-				<reward item_id="9912" min="40" max="154" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="40" max="154" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -3181,15 +3181,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.SiegeGuard"/>
 		<equip>
-			<rhand item_id="7895"/>	<!--Flaming Dragon Skull-->
+			<rhand item_id="7895"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="4721" level="7"/>	<!--BOSS Strike-->
+			<skill id="4416" level="22"/>
+			<skill id="4721" level="7"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.4766">
-				<reward item_id="9912" min="40" max="154" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="40" max="154" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -3279,11 +3279,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.fortress.siege.MercenaryCaption"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
-			<lhand item_id="6377"/>	<!--Imperial Crusader Shield-->
+			<rhand item_id="2500"/>
+			<lhand item_id="6377"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="120"/>
@@ -3329,10 +3329,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.SiegeGuard"/>
 		<equip>
-			<rhand item_id="96"/>	<!--Scythe-->
+			<rhand item_id="96"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="17"/>	<!--Orcs-->
+			<skill id="4416" level="17"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3378,7 +3378,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="19"/>	<!--Others-->
+			<skill id="4416" level="19"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3424,7 +3424,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.fortress.Manager"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3470,7 +3470,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.fortress.peace.SuspiciousMerchant"/>
 		<skills>
-			<skill id="4416" level="17"/>	<!--Orcs-->
+			<skill id="4416" level="17"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3516,11 +3516,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="80"/>	<!--Tallum Blade-->
-			<lhand item_id="641"/>	<!--Dark Crystal Shield-->
+			<rhand item_id="80"/>
+			<lhand item_id="641"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3566,7 +3566,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.fortress.peace.ArcherCaption"/>
 		<skills>
-			<skill id="4416" level="15"/>	<!--Elves-->
+			<skill id="4416" level="15"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3612,11 +3612,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="9813"/>	<!--Orc Officer-->
-			<lhand item_id="9813"/>	<!--Orc Officer-->
+			<rhand item_id="9813"/>
+			<lhand item_id="9813"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Humans-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3662,7 +3662,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.fortress.peace.SupportUnitCaption"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3708,7 +3708,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3754,7 +3754,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.fortress.LogisticsOfficer"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3843,7 +3843,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="PailakaGatekeeper"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3894,11 +3894,11 @@
 			<set name="doors" value="22160001"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
-			<lhand item_id="20"/>	<!--Buckler-->
+			<rhand item_id="2"/>
+			<lhand item_id="20"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -3949,11 +3949,11 @@
 			<set name="doors" value="22160012"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
-			<lhand item_id="20"/>	<!--Buckler-->
+			<rhand item_id="2"/>
+			<lhand item_id="20"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4004,11 +4004,11 @@
 			<set name="doors" value="22160004;22160005;22160008;22160009"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="2"/>	<!--Long Sword-->
-			<lhand item_id="20"/>	<!--Buckler-->
+			<rhand item_id="2"/>
+			<lhand item_id="20"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4055,21 +4055,21 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="swamp_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="2500"/>	<!--Dark Legion's Edge-->
-			<lhand item_id="6377"/>	<!--Imperial Crusader Shield-->
+			<rhand item_id="2500"/>
+			<lhand item_id="6377"/>
 		</equip>
 		<skills>
-			<skill id="4178" level="7"/>	<!--BOSS Flamestrike-->
-			<skill id="4195" level="7"/>	<!--BOSS Twister-->
-			<skill id="4416" level="16"/>	<!--Dark Elves-->
+			<skill id="4178" level="7"/>
+			<skill id="4195" level="7"/>
+			<skill id="4416" level="16"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="13.78">
-				<reward item_id="9581" min="1" max="1" chance="66.0508"/>	<!--Scale Shirt-->
-				<reward item_id="9591" min="1" max="1" chance="33.9492"/>	<!--Steel Bracelet-->
+				<reward item_id="9581" min="1" max="1" chance="66.0508"/>
+				<reward item_id="9591" min="1" max="1" chance="33.9492"/>
 			</group>
 			<group chance="90.0">
-				<reward item_id="9912" min="40" max="200" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="40" max="200" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4120,12 +4120,12 @@
 		</ai_params>
 		<faction name="swamp_siege_clan" range="600"/>
 		<skills>
-			<skill id="4416" level="9"/>	<!--Demons-->
-			<skill id="5065" level="7"/>	<!--Castle DD Unholy-->
+			<skill id="4416" level="9"/>
+			<skill id="5065" level="7"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="78.005">
-				<reward item_id="9912" min="4" max="16" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="16" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4176,14 +4176,14 @@
 		</ai_params>
 		<faction name="swamp_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="97"/>	<!--Lance-->
+			<rhand item_id="97"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="71.957">
-				<reward item_id="9912" min="4" max="12" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="12" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4234,14 +4234,14 @@
 		</ai_params>
 		<faction name="swamp_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="98"/>	<!--Halberd-->
+			<rhand item_id="98"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Humans-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="66.28">
-				<reward item_id="9912" min="4" max="12" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="12" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4292,14 +4292,14 @@
 		</ai_params>
 		<faction name="swamp_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="287"/>	<!--Bow of Peril-->
+			<rhand item_id="287"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Elves-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="66.211">
-				<reward item_id="9912" min="4" max="12" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="12" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4521,14 +4521,14 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5461" level="6"/>	<!--Castle Gunner Shot-->
-			<skill id="5468" level="4"/>	<!--Castle Gunner Fire-->
+			<skill id="4416" level="22"/>
+			<skill id="5461" level="6"/>
+			<skill id="5468" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="48.2776">
-				<reward item_id="9912" min="24" max="72" chance="4.0000"/>	<!--Knight's Epaulette-->
-				<reward item_id="10014" min="1" max="1" chance="96.0000"/>	<!--Control Room Card-->
+				<reward item_id="9912" min="24" max="72" chance="4.0000"/>
+				<reward item_id="10014" min="1" max="1" chance="96.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4575,11 +4575,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
+			<skill id="4416" level="22"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="46.0">
-				<reward item_id="9912" min="4" max="6" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="6" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4626,17 +4626,17 @@
 		<set name="shots" value="SOUL"/>
 		<set name="type" value="residences.SiegeGuard"/>
 		<equip>
-			<rhand item_id="80"/>	<!--Tallum Blade-->
-			<lhand item_id="641"/>	<!--Dark Crystal Shield-->
+			<rhand item_id="80"/>
+			<lhand item_id="641"/>
 		</equip>
 		<skills>
-			<skill id="4172" level="10"/>	<!--Stun-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="4608" level="2"/>	<!--NPC Clan Buff - Berserk-->
+			<skill id="4172" level="10"/>
+			<skill id="4416" level="22"/>
+			<skill id="4608" level="2"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="84.1571">
-				<reward item_id="9912" min="140" max="300" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="140" max="300" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4684,11 +4684,11 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="swamp_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="75"/>	<!--Caliburs-->
+			<rhand item_id="75"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5112" level="7"/>	<!--Stun-->
+			<skill id="4416" level="22"/>
+			<skill id="5112" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="40"/>
@@ -4735,15 +4735,15 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="swamp_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="75"/>	<!--Caliburs-->
+			<rhand item_id="75"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5045" level="6"/>	<!--Castle Power Strike-->
+			<skill id="4416" level="22"/>
+			<skill id="5045" level="6"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="73.01">
-				<reward item_id="9912" min="4" max="16" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="16" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4791,16 +4791,16 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="swamp_siege_clan" range="600"/>
 		<skills>
-			<skill id="4194" level="12"/>	<!--BOSS Aura Burn-->
-			<skill id="4195" level="12"/>	<!--BOSS Twister-->
-			<skill id="4196" level="7"/>	<!--Decrease Speed-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5396" level="1"/>	<!--NPC - Spell Stance-->
-			<skill id="5398" level="1"/>	<!--NPC - Combination Force-->
+			<skill id="4194" level="12"/>
+			<skill id="4195" level="12"/>
+			<skill id="4196" level="7"/>
+			<skill id="4416" level="22"/>
+			<skill id="5396" level="1"/>
+			<skill id="5398" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="84.1571">
-				<reward item_id="9912" min="140" max="300" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="140" max="300" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4848,18 +4848,18 @@
 		<set name="type" value="residences.SiegeGuard"/>
 		<faction name="swamp_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="325"/>	<!--Horn of Glory-->
+			<rhand item_id="325"/>
 		</equip>
 		<skills>
-			<skill id="1230" level="28"/>	<!--Prominence-->
-			<skill id="4077" level="8"/>	<!--NPC Aura Burn-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5053" level="6"/>	<!--Castle DD Water-->
-			<skill id="5396" level="1"/>	<!--NPC - Spell Stance-->
+			<skill id="1230" level="28"/>
+			<skill id="4077" level="8"/>
+			<skill id="4416" level="22"/>
+			<skill id="5053" level="6"/>
+			<skill id="5396" level="1"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="77.574">
-				<reward item_id="9912" min="4" max="16" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="16" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4910,16 +4910,16 @@
 		</ai_params>
 		<faction name="swamp_siege_clan" range="600"/>
 		<equip>
-			<rhand item_id="92"/>	<!--Sprite's Staff-->
+			<rhand item_id="92"/>
 		</equip>
 		<skills>
-			<skill id="4115" level="1"/>	<!--Aden Heal-->
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5114" level="7"/>	<!--Hold-->
+			<skill id="4115" level="1"/>
+			<skill id="4416" level="22"/>
+			<skill id="5114" level="7"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="82.382">
-				<reward item_id="9912" min="4" max="16" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="16" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -4969,16 +4969,16 @@
 			<set name="isImmobilized" value="true"/>
 		</ai_params>
 		<equip>
-			<rhand item_id="10212"/>	<!--For NPC (Bow)-->
+			<rhand item_id="10212"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="4754" level="8"/>	<!--BOSS Power Shot-->
-			<skill id="4755" level="7"/>	<!--BOSS Power Shot-->
+			<skill id="4416" level="22"/>
+			<skill id="4754" level="8"/>
+			<skill id="4755" level="7"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="84.2235">
-				<reward item_id="9912" min="140" max="300" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="140" max="300" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -5029,15 +5029,15 @@
 		</ai_params>
 		<faction name="swamp_siege_clan" range="1200"/>
 		<equip>
-			<rhand item_id="287"/>	<!--Bow of Peril-->
+			<rhand item_id="287"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="5046" level="7"/>	<!--Castle Power Shot-->
+			<skill id="4416" level="22"/>
+			<skill id="5046" level="7"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="71.0">
-				<reward item_id="9912" min="4" max="16" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="4" max="16" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -5084,16 +5084,16 @@
 		<set name="shots" value="SOUL"/>
 		<set name="type" value="residences.SiegeGuard"/>
 		<equip>
-			<rhand item_id="9813"/>	<!--Orc Officer-->
-			<lhand item_id="9813"/>	<!--Orc Officer-->
+			<rhand item_id="9813"/>
+			<lhand item_id="9813"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="4725" level="7"/>	<!--Stun-->
+			<skill id="4416" level="22"/>
+			<skill id="4725" level="7"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.4766">
-				<reward item_id="9912" min="40" max="154" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="40" max="154" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -5140,15 +5140,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.SiegeGuard"/>
 		<equip>
-			<rhand item_id="7895"/>	<!--Flaming Dragon Skull-->
+			<rhand item_id="7895"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="22"/>	<!--Defending Army-->
-			<skill id="4721" level="7"/>	<!--BOSS Strike-->
+			<skill id="4416" level="22"/>
+			<skill id="4721" level="7"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.4766">
-				<reward item_id="9912" min="40" max="154" chance="100.0000"/>	<!--Knight's Epaulette-->
+				<reward item_id="9912" min="40" max="154" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>

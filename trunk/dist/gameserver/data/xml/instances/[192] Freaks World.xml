@@ -1,21 +1,19 @@
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "instances.dtd">
-<!--AUTHOR: Iqman-->
 <list>
-	<!--Freak's world 10301 quest -->
 	<instance id="192" name="Freaks World" maxChannels="20" collapseIfEmpty="1" timelimit="10" dispelBuffs="false" respawn="60">
 		<level min="76" max="99"/>
-		<return loc="147450 27064 -2208"/> <!-- To aden -->
+		<return loc="147450 27064 -2208"/>
 		<teleport loc="184328 85864 -7672"/>
 		<remove itemId="0" count="0" necessary="false"/>
 		<give itemId="0" count="0"/>
-		<quest id="10301"/> <!-- todo multiply quest values [bonux] -->
+		<quest id="10301"/>
 		<reuse resetReuse="* * * * *" setUponEntry="true" sharedReuseGroup="0"/>
 		<geodata map="25_20"/>
 		<spawns>
 			<spawn mobId="33363" respawn="0" type="point">
 				<coords loc="183505 86102 -7752 61780"/>
 			</spawn>
-
 			<spawn mobId="33363" respawn="0" type="point">
 				<coords loc="184295 85553 -7752 25024"/>
 			</spawn>

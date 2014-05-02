@@ -1,14 +1,16 @@
 @Echo off
+TITLE GoD Database Installer
 cls
-echo Welcome to Lineage GoD server database installer.
-echo This script will help you install the database server.
+echo This script will help you install the server database.
+echo To continue, press the space bar to exit Ctrl + C
+pause > nul
 echo ======================================================================
-echo Environment check...
+echo Checks environment ...
 mysql --help >nul 2>nul
 if errorlevel 1 goto nomysql
 echo  - MySQL...       ok
 echo ======================================================================
-echo Lineage GoD Server is ready for installation.
+echo GoD Server is ready for installation.
 echo Please perform the initial configuration
 echo ======================================================================
 set DO_INSTALL=Y
@@ -19,7 +21,7 @@ set INSTALL_MODE=login
 :prepare
 set DB_HOST=localhost
 set DB_USER=root
-set DB_PASSWORD=
+set DB_PASSWORD= 
 set DB_NAME=l2god
 :step2
 
@@ -27,7 +29,7 @@ set /P DB_HOST=The database server [%DB_HOST%]:
 
 set /P DB_USER=User DB [%DB_USER%]:
 
-set /P DB_PASSWORD=User password %DB_USER%:
+set /P DB_PASSWORD=The %DB_USER% user password:
 
 set /P DB_NAME=DB name [%DB_NAME%]:
 SET MYSQL_PARAM=-u %DB_USER% -h %DB_HOST%
@@ -38,7 +40,7 @@ echo exit | mysql %MYSQL_PARAM% %DB_NAME% >nul 2>nul
 if errorlevel 1 goto dbnotexists
 goto install
 :dbnotexists
-echo  ! The database %DB_NAME% does not exist
+echo The database %DB_NAME% does not exist!
 set ANSWER=Y
 set /P ANSWER=Create it [Y/n]?
 if "%ANSWER%"=="y" goto createdb

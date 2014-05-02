@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="16852" name="Hero's Treasure Chest">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="16853" name="Equipment Set Pack" add_name="(90-day)">
+		<set name="reuse_delay" value="10000"/>
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_equip_item_box_i01"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+</list>

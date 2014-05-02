@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DropListData.xsd">
+	<npc id="29019">
+		<droplist>
+			<category id="1" chance="100">
+				<item id="80" min="1" max="2" chance="25"/>
+				<item id="98" min="1" max="2" chance="25"/>
+				<item id="269" min="1" max="2" chance="25"/>
+				<item id="2504" min="1" max="2" chance="25"/>
+			</category>
+			<category id="2" chance="100">
+				<item id="235" min="1" max="2" chance="25"/>
+				<item id="288" min="1" max="2" chance="25"/>
+				<item id="150" min="1" max="2" chance="25"/>
+				<item id="212" min="1" max="2" chance="25"/>
+			</category>
+			<category id="3" chance="100">
+				<item id="81" min="1" max="2" chance="25"/>
+				<item id="151" min="1" max="2" chance="25"/>
+				<item id="2500" min="1" max="2" chance="25"/>
+				<item id="164" min="1" max="2" chance="25"/>
+			</category>
+			<category id="4" chance="100">
+				<item id="236" min="1" max="2" chance="20"/>
+				<item id="270" min="1" max="2" chance="20"/>
+				<item id="289" min="1" max="2" chance="20"/>
+				<item id="213" min="1" max="2" chance="20"/>
+				<item id="305" min="1" max="2" chance="20"/>
+			</category>
+			<category id="5" chance="100">
+				<item id="6364" min="1" max="1" chance="17"/>
+				<item id="6365" min="1" max="1" chance="17"/>
+				<item id="6369" min="1" max="1" chance="17"/>
+				<item id="6370" min="1" max="1" chance="17"/>
+				<item id="6372" min="1" max="1" chance="16"/>
+				<item id="6580" min="1" max="1" chance="16"/>
+			</category>
+			<category id="6" chance="100">
+				<item id="7575" min="1" max="1" chance="20"/>
+				<item id="6366" min="1" max="1" chance="20"/>
+				<item id="6367" min="1" max="1" chance="20"/>
+				<item id="6371" min="1" max="1" chance="20"/>
+				<item id="6579" min="1" max="1" chance="20"/>
+			</category>
+			<category id="7" chance="100">
+				<item id="6326" min="1" max="5" chance="30"/>
+				<item id="6327" min="1" max="5" chance="35"/>
+				<item id="6328" min="1" max="5" chance="35"/>
+			</category>
+			<category id="8" chance="100">
+				<item id="6323" min="1" max="5" chance="30"/>
+				<item id="6324" min="1" max="5" chance="35"/>
+				<item id="6325" min="1" max="5" chance="35"/>
+			</category>
+			<category id="9" chance="100">
+				<item id="6724" min="1" max="1" chance="35"/>
+				<item id="6725" min="1" max="1" chance="35"/>
+				<item id="6726" min="1" max="1" chance="30"/>
+			</category>
+			<category id="10" chance="100">
+				<item id="5287" min="1" max="3" chance="50"/>
+				<item id="5297" min="1" max="3" chance="25"/>
+				<item id="5304" min="1" max="3" chance="25"/>
+			</category>
+			<category id="11" chance="100">
+				<item id="5311" min="1" max="3" chance="35"/>
+				<item id="5320" min="1" max="3" chance="35"/>
+				<item id="5326" min="1" max="3" chance="30"/>
+			</category>
+			<category id="12" chance="100">
+				<item id="5293" min="1" max="3" chance="25"/>
+				<item id="5301" min="1" max="3" chance="25"/>
+				<item id="5308" min="1" max="3" chance="25"/>
+				<item id="5316" min="1" max="3" chance="8"/>
+				<item id="5323" min="1" max="3" chance="8"/>
+				<item id="5329" min="1" max="3" chance="9"/>
+			</category>
+			<category id="13" chance="100">
+				<item id="5288" min="1" max="3" chance="35"/>
+				<item id="5298" min="1" max="3" chance="35"/>
+				<item id="5305" min="1" max="3" chance="30"/>
+			</category>
+			<category id="14" chance="100">
+				<item id="6674" min="1" max="1" chance="15"/>
+				<item id="6675" min="1" max="1" chance="15"/>
+				<item id="6680" min="1" max="1" chance="35"/>
+				<item id="6684" min="1" max="1" chance="35"/>
+			</category>
+			<category id="15" chance="100">
+				<item id="5289" min="1" max="3" chance="25"/>
+				<item id="5294" min="1" max="3" chance="25"/>
+				<item id="5312" min="1" max="3" chance="25"/>
+				<item id="5317" min="1" max="3" chance="25"/>
+			</category>
+			<category id="16" chance="100">
+				<item id="5291" min="1" max="3" chance="25"/>
+				<item id="5296" min="1" max="3" chance="25"/>
+				<item id="5314" min="1" max="3" chance="25"/>
+				<item id="5319" min="1" max="3" chance="25"/>
+			</category>
+			<category id="17" chance="100">
+				<item id="5290" min="1" max="3" chance="25"/>
+				<item id="5295" min="1" max="3" chance="25"/>
+				<item id="5313" min="1" max="3" chance="25"/>
+				<item id="5318" min="1" max="3" chance="25"/>
+			</category>
+			<category id="18" chance="100">
+				<item id="5292" min="1" max="3" chance="40"/>
+				<item id="5315" min="1" max="3" chance="40"/>
+				<item id="6678" min="1" max="1" chance="20"/>
+			</category>
+			<category id="19" chance="100">
+				<item id="6676" min="1" max="1" chance="34"/>
+				<item id="6681" min="1" max="1" chance="33"/>
+				<item id="6685" min="1" max="1" chance="33"/>
+			</category>
+			<category id="20" chance="100">
+				<item id="6677" min="1" max="1" chance="34"/>
+				<item id="6682" min="1" max="1" chance="33"/>
+				<item id="6686" min="1" max="1" chance="33"/>
+			</category>
+			<category id="21" chance="100">
+				<item id="6679" min="1" max="1" chance="34"/>
+				<item id="6683" min="1" max="1" chance="33"/>
+				<item id="6687" min="1" max="1" chance="33"/>
+			</category>
+			<category id="22" chance="100">
+				<item id="729" min="1" max="19" chance="100"/>
+			</category>
+			<category id="23" chance="100">
+				<item id="1538" min="1" max="59" chance="100"/>
+			</category>
+			<category id="24" chance="100">
+				<item id="3936" min="1" max="39" chance="100"/>
+			</category>
+			<category id="25" chance="100">
+				<item id="57" min="14000000" max="18000000" chance="100"/>
+			</category>
+			<category id="26" chance="100">
+				<item id="57" min="14000000" max="18000000" chance="100"/>
+			</category>
+			<category id="27" chance="100">
+				<item id="57" min="14000000" max="18000000" chance="100"/>
+			</category>
+			<category id="28" chance="100">
+				<item id="57" min="14000000" max="18000000" chance="100"/>
+			</category>
+			<category id="29" chance="100">
+				<item id="57" min="14000000" max="18000000" chance="100"/>
+			</category>
+			<category id="30" chance="100">
+				<item id="57" min="14000000" max="18000000" chance="100"/>
+			</category>
+			<category id="31" chance="100">
+				<item id="57" min="9000000" max="13000000" chance="100"/>
+			</category>
+			<category id="32" chance="100">
+				<item id="6656" min="1" max="1" chance="100"/>
+			</category>
+			<category id="33" chance="50">
+				<item id="8620" min="10" max="30" chance="100"/>
+			</category>
+			<category id="34" chance="50">
+				<item id="13893" min="1" max="2" chance="100"/>
+			</category>
+		</droplist>
+	</npc>
+</list>

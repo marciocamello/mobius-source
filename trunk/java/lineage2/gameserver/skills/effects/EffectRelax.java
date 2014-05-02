@@ -96,10 +96,17 @@ public class EffectRelax extends Effect
 	public boolean onActionTime()
 	{
 		Player player = _effected.getPlayer();
-		if (player.isAlikeDead() || (player == null))
+		
+		if (player == null)
 		{
 			return false;
 		}
+		
+		if (player.isAlikeDead())
+		{
+			return false;
+		}
+		
 		if (!player.isSitting())
 		{
 			return false;

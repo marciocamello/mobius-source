@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="13100" name="Anakim" title="">
@@ -79,7 +79,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="8203"/>	<!--Monster Only (Venom Sword)-->
+			<rhand item_id="8203"/>
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -297,7 +297,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="8205"/>	<!--Monster Only (Heretic Priest Sigil)-->
+			<rhand item_id="8205"/>
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -343,7 +343,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="8208"/>	<!--Monster Only (Heretic Private Staff)-->
+			<rhand item_id="8208"/>
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -432,7 +432,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="8190"/>	<!--Demonic Sword Zariche-->
+			<rhand item_id="8190"/>
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -478,7 +478,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="8689"/>	<!--Blood Sword Akamanah-->
+			<rhand item_id="8689"/>
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -524,7 +524,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<equip>
-			<rhand item_id="5129"/>	<!--Doll Knife-->
+			<rhand item_id="5129"/>
 		</equip>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -914,11 +914,11 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="100.0">
-				<reward item_id="10639" min="1" max="2" chance="100.0000"/>	<!--Mouse Coin-->
+				<reward item_id="10639" min="1" max="2" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -965,7 +965,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1011,7 +1011,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1057,14 +1057,14 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="100.0">
-				<reward item_id="10639" min="4" max="6" chance="100.0000"/>	<!--Mouse Coin-->
+				<reward item_id="10639" min="4" max="6" chance="100.0000"/>
 			</group>
 			<group chance="5.0">
-				<reward item_id="9140" min="1" max="1" chance="100.0000"/>	<!--Salvation Bow-->
+				<reward item_id="9140" min="1" max="1" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -1111,14 +1111,14 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="100.0">
-				<reward item_id="10639" min="1" max="3" chance="100.0000"/>	<!--Mouse Coin-->
+				<reward item_id="10639" min="1" max="3" chance="100.0000"/>
 			</group>
 			<group chance="10.0">
-				<reward item_id="9140" min="1" max="1" chance="100.0000"/>	<!--Salvation Bow-->
+				<reward item_id="9140" min="1" max="1" chance="100.0000"/>
 			</group>
 		</rewardlist>
 		<attributes>
@@ -1294,7 +1294,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1305,7 +1305,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="13129" name="Teleporter" title="">
+	<npc id="13129" name="Turn Around" title="Broken Area">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1340,7 +1340,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="14"/>	<!--Humans-->
+			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1644,7 +1644,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1690,7 +1690,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1736,7 +1736,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1782,7 +1782,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1828,7 +1828,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1874,7 +1874,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1920,7 +1920,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1966,7 +1966,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2012,7 +2012,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2058,7 +2058,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2104,7 +2104,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2150,7 +2150,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2199,7 +2199,7 @@
 			<set name="isFlying" value="true"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2245,7 +2245,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2291,7 +2291,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2337,7 +2337,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2383,7 +2383,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2429,7 +2429,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2475,7 +2475,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2521,7 +2521,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2567,7 +2567,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2613,7 +2613,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2659,7 +2659,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2705,7 +2705,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2751,7 +2751,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Snowman"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2797,7 +2797,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2843,7 +2843,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2889,7 +2889,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2935,7 +2935,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2981,7 +2981,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3027,7 +3027,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3073,7 +3073,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3119,7 +3119,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3165,7 +3165,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3211,7 +3211,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3257,7 +3257,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3303,7 +3303,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3349,7 +3349,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3395,7 +3395,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3441,7 +3441,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3487,7 +3487,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3533,7 +3533,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3579,7 +3579,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3625,7 +3625,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3671,7 +3671,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3717,7 +3717,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3763,7 +3763,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="150"/>
@@ -3809,10 +3809,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Thomas"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
-			<skill id="6100" level="1"/>	<!--Turkey's Choice - Scissors-->
-			<skill id="6105" level="1"/>	<!--Turkey's Mistake-->
-			<skill id="6116" level="1"/>	<!--Attack Turkey-->
+			<skill id="4416" level="4"/>
+			<skill id="6100" level="1"/>
+			<skill id="6105" level="1"/>
+			<skill id="6116" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3858,7 +3858,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3904,7 +3904,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3950,7 +3950,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3996,7 +3996,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4042,7 +4042,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4088,7 +4088,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4134,7 +4134,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4180,7 +4180,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4226,7 +4226,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4272,7 +4272,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="FakeObelisk"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4318,7 +4318,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4364,7 +4364,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4410,7 +4410,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Npc"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>

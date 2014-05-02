@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="36187" name="Rising Shirt">
+		<set name="crystal_type" value="NONE"/>
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.dual_shirt1"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="130"/>
+		<equip>
+			<slot id="UNDERWEAR"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="38"/>
+		</for>
+		<skills>
+			<skill id="13409" level="1"/>
+		</skills>
+	</armor>
+	<armor id="36188" name="Blaze Shirt">
+		<set name="crystal_type" value="NONE"/>
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="icon" value="icon.dual_shirt2"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="130"/>
+		<equip>
+			<slot id="UNDERWEAR"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="38"/>
+		</for>
+		<skills>
+			<skill id="13410" level="1"/>
+		</skills>
+	</armor>
+	<armor id="36189" name="Rising Belt">
+		<set name="crystal_type" value="NONE"/>
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="icon" value="icon.dual_belt1"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="440"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="25"/>
+		</for>
+		<skills>
+			<skill id="13411" level="1"/>
+		</skills>
+	</armor>
+	<armor id="36190" name="Blaze Belt">
+		<set name="crystal_type" value="NONE"/>
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="icon" value="icon.dual_belt2"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="440"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="25"/>
+		</for>
+		<skills>
+			<skill id="13412" level="1"/>
+		</skills>
+	</armor>
+</list>

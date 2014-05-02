@@ -14,7 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 public class ExIsCharNameCreatable extends L2GameServerPacket
 {
-	private static final String _S__FE_10F_EXISCHARNAMECREATABLE = "[S] FE:10F ExIsCharNameCreatable";
+	private static final String _S__FE_110_EXISCHARNAMECREATABLE = "[S] FE:110 ExIsCharNameCreatable";
 	
 	public static final int REASON_CREATION_OK = -1;
 	public static final int REASON_CREATION_FAILED = 0x00;
@@ -42,6 +42,6 @@ public class ExIsCharNameCreatable extends L2GameServerPacket
 	@Override
 	public String getType()
 	{
-		return _S__FE_10F_EXISCHARNAMECREATABLE;
+		return _S__FE_110_EXISCHARNAMECREATABLE;
 	}
 }

@@ -65,7 +65,7 @@ public class RequestPartyMatchConfig extends L2GameClientPacket
 		CommandChannel channel = party != null ? party.getCommandChannel() : null;
 		if ((channel != null) && (channel.getChannelLeader() == player))
 		{
-			if (channel.getMatchingRoom() == null)
+			if ((channel.getMatchingRoom() == null) && (party != null))
 			{
 				CCMatchingRoom room = new CCMatchingRoom(player, 1, player.getLevel(), 50, party.getLootDistribution(), player.getName());
 				channel.setMatchingRoom(room);

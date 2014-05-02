@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "instances.dtd">
 <list>
 	<instance id="186" name="Orchid Hall" maxChannels="35" collapseIfEmpty="10" timelimit="40320">

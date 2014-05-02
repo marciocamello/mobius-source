@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "restoration_info.dtd">
+<list>
+	<restoration skill_id="513" skill_level="1" name="Create Dark Seed">
+		<group chance="100.0">
+			<item id="10112" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="519" skill_level="1" name="Quiver of Bolts: A Grade">
+		<group chance="30.0">
+			<item id="9636" min_count="700" max_count="700"/>
+		</group>
+		<group chance="50.0">
+			<item id="9636" min_count="1400" max_count="1400"/>
+		</group>
+		<group chance="20.0">
+			<item id="9636" min_count="2800" max_count="2800"/>
+		</group>
+	</restoration>
+	<restoration skill_id="520" skill_level="1" name="Quiver of Bolts: S Grade">
+		<group chance="30.0">
+			<item id="9637" min_count="900" max_count="900"/>
+		</group>
+		<group chance="50.0">
+			<item id="9637" min_count="1800" max_count="1800"/>
+		</group>
+		<group chance="20.0">
+			<item id="9637" min_count="3600" max_count="3600"/>
+		</group>
+	</restoration>
+</list>

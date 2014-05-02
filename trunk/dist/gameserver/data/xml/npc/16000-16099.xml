@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="16013" name="Trained Buffalo" title="">
@@ -37,19 +37,19 @@
 		<set name="type" value="TamedBeast"/>
 		<faction name="pet_clan" range="400"/>
 		<skills>
-			<skill id="122" level="11"/>	<!--Hex-->
-			<skill id="1044" level="3"/>	<!--Regeneration-->
-			<skill id="1045" level="5"/>	<!--Bless the Body-->
-			<skill id="1086" level="2"/>	<!--Haste-->
-			<skill id="1206" level="15"/>	<!--Wind Shackle-->
-			<skill id="1217" level="26"/>	<!--Greater Heal-->
-			<skill id="1240" level="3"/>	<!--Guidance-->
-			<skill id="1268" level="3"/>	<!--Vampiric Rage-->
-			<skill id="4416" level="3"/>	<!--Beasts-->
-			<skill id="5187" level="1"/>	<!--Pet Vampiric Rage-->
-			<skill id="5191" level="1"/>	<!--Pet Guidance-->
-			<skill id="5195" level="1"/>	<!--Pet Greater Heal-->
-			<skill id="5196" level="1"/>	<!--Pet Wind Shackle-->
+			<skill id="122" level="11"/>
+			<skill id="1044" level="3"/>
+			<skill id="1045" level="5"/>
+			<skill id="1086" level="2"/>
+			<skill id="1206" level="15"/>
+			<skill id="1217" level="26"/>
+			<skill id="1240" level="3"/>
+			<skill id="1268" level="3"/>
+			<skill id="4416" level="3"/>
+			<skill id="5187" level="1"/>
+			<skill id="5191" level="1"/>
+			<skill id="5195" level="1"/>
+			<skill id="5196" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -96,16 +96,16 @@
 		<set name="type" value="TamedBeast"/>
 		<faction name="pet_clan" range="400"/>
 		<skills>
-			<skill id="1013" level="25"/>	<!--Recharge-->
-			<skill id="1048" level="5"/>	<!--Bless the Soul-->
-			<skill id="1059" level="3"/>	<!--Empower-->
-			<skill id="1078" level="5"/>	<!--Concentration-->
-			<skill id="1085" level="3"/>	<!--Acumen-->
-			<skill id="1160" level="11"/>	<!--Slow-->
-			<skill id="1204" level="2"/>	<!--Wind Walk-->
-			<skill id="1263" level="9"/>	<!--Curse Gloom-->
-			<skill id="4416" level="3"/>	<!--Beasts-->
-			<skill id="5199" level="1"/>	<!--Pet Curse Gloom-->
+			<skill id="1013" level="25"/>
+			<skill id="1048" level="5"/>
+			<skill id="1059" level="3"/>
+			<skill id="1078" level="5"/>
+			<skill id="1085" level="3"/>
+			<skill id="1160" level="11"/>
+			<skill id="1204" level="2"/>
+			<skill id="1263" level="9"/>
+			<skill id="4416" level="3"/>
+			<skill id="5199" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -152,19 +152,19 @@
 		<set name="type" value="TamedBeast"/>
 		<faction name="pet_clan" range="400"/>
 		<skills>
-			<skill id="122" level="12"/>	<!--Hex-->
-			<skill id="1044" level="3"/>	<!--Regeneration-->
-			<skill id="1045" level="5"/>	<!--Bless the Body-->
-			<skill id="1086" level="2"/>	<!--Haste-->
-			<skill id="1206" level="16"/>	<!--Wind Shackle-->
-			<skill id="1217" level="28"/>	<!--Greater Heal-->
-			<skill id="1240" level="3"/>	<!--Guidance-->
-			<skill id="1268" level="3"/>	<!--Vampiric Rage-->
-			<skill id="4416" level="3"/>	<!--Beasts-->
-			<skill id="5187" level="1"/>	<!--Pet Vampiric Rage-->
-			<skill id="5191" level="1"/>	<!--Pet Guidance-->
-			<skill id="5195" level="1"/>	<!--Pet Greater Heal-->
-			<skill id="5196" level="1"/>	<!--Pet Wind Shackle-->
+			<skill id="122" level="12"/>
+			<skill id="1044" level="3"/>
+			<skill id="1045" level="5"/>
+			<skill id="1086" level="2"/>
+			<skill id="1206" level="16"/>
+			<skill id="1217" level="28"/>
+			<skill id="1240" level="3"/>
+			<skill id="1268" level="3"/>
+			<skill id="4416" level="3"/>
+			<skill id="5187" level="1"/>
+			<skill id="5191" level="1"/>
+			<skill id="5195" level="1"/>
+			<skill id="5196" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -211,16 +211,16 @@
 		<set name="type" value="TamedBeast"/>
 		<faction name="pet_clan" range="400"/>
 		<skills>
-			<skill id="1013" level="27"/>	<!--Recharge-->
-			<skill id="1048" level="5"/>	<!--Bless the Soul-->
-			<skill id="1059" level="3"/>	<!--Empower-->
-			<skill id="1078" level="6"/>	<!--Concentration-->
-			<skill id="1085" level="3"/>	<!--Acumen-->
-			<skill id="1160" level="12"/>	<!--Slow-->
-			<skill id="1204" level="2"/>	<!--Wind Walk-->
-			<skill id="1263" level="10"/>	<!--Curse Gloom-->
-			<skill id="4416" level="3"/>	<!--Beasts-->
-			<skill id="5199" level="1"/>	<!--Pet Curse Gloom-->
+			<skill id="1013" level="27"/>
+			<skill id="1048" level="5"/>
+			<skill id="1059" level="3"/>
+			<skill id="1078" level="6"/>
+			<skill id="1085" level="3"/>
+			<skill id="1160" level="12"/>
+			<skill id="1204" level="2"/>
+			<skill id="1263" level="10"/>
+			<skill id="4416" level="3"/>
+			<skill id="5199" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -267,19 +267,19 @@
 		<set name="type" value="TamedBeast"/>
 		<faction name="pet_clan" range="400"/>
 		<skills>
-			<skill id="122" level="10"/>	<!--Hex-->
-			<skill id="1044" level="3"/>	<!--Regeneration-->
-			<skill id="1045" level="5"/>	<!--Bless the Body-->
-			<skill id="1086" level="2"/>	<!--Haste-->
-			<skill id="1206" level="14"/>	<!--Wind Shackle-->
-			<skill id="1217" level="24"/>	<!--Greater Heal-->
-			<skill id="1240" level="3"/>	<!--Guidance-->
-			<skill id="1268" level="3"/>	<!--Vampiric Rage-->
-			<skill id="4416" level="3"/>	<!--Beasts-->
-			<skill id="5187" level="1"/>	<!--Pet Vampiric Rage-->
-			<skill id="5191" level="1"/>	<!--Pet Guidance-->
-			<skill id="5195" level="1"/>	<!--Pet Greater Heal-->
-			<skill id="5196" level="1"/>	<!--Pet Wind Shackle-->
+			<skill id="122" level="10"/>
+			<skill id="1044" level="3"/>
+			<skill id="1045" level="5"/>
+			<skill id="1086" level="2"/>
+			<skill id="1206" level="14"/>
+			<skill id="1217" level="24"/>
+			<skill id="1240" level="3"/>
+			<skill id="1268" level="3"/>
+			<skill id="4416" level="3"/>
+			<skill id="5187" level="1"/>
+			<skill id="5191" level="1"/>
+			<skill id="5195" level="1"/>
+			<skill id="5196" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -326,16 +326,16 @@
 		<set name="type" value="TamedBeast"/>
 		<faction name="pet_clan" range="400"/>
 		<skills>
-			<skill id="1013" level="23"/>	<!--Recharge-->
-			<skill id="1048" level="5"/>	<!--Bless the Soul-->
-			<skill id="1059" level="3"/>	<!--Empower-->
-			<skill id="1078" level="5"/>	<!--Concentration-->
-			<skill id="1085" level="3"/>	<!--Acumen-->
-			<skill id="1160" level="10"/>	<!--Slow-->
-			<skill id="1204" level="2"/>	<!--Wind Walk-->
-			<skill id="1263" level="8"/>	<!--Curse Gloom-->
-			<skill id="4416" level="3"/>	<!--Beasts-->
-			<skill id="5199" level="1"/>	<!--Pet Curse Gloom-->
+			<skill id="1013" level="23"/>
+			<skill id="1048" level="5"/>
+			<skill id="1059" level="3"/>
+			<skill id="1078" level="5"/>
+			<skill id="1085" level="3"/>
+			<skill id="1160" level="10"/>
+			<skill id="1204" level="2"/>
+			<skill id="1263" level="8"/>
+			<skill id="4416" level="3"/>
+			<skill id="5199" level="1"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -381,7 +381,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -427,7 +427,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -473,7 +473,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -519,7 +519,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -565,7 +565,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -611,7 +611,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -657,10 +657,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<equip>
-			<rhand item_id="9661"/>	<!--Enchanted Fenrir Fang-->
+			<rhand item_id="9661"/>
 		</equip>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -878,7 +878,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1053,7 +1053,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1099,7 +1099,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1145,7 +1145,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1191,7 +1191,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1237,7 +1237,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="10"/>	<!--Dragons-->
+			<skill id="4416" level="10"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1283,7 +1283,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="10"/>	<!--Dragons-->
+			<skill id="4416" level="10"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1329,7 +1329,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="10"/>	<!--Dragons-->
+			<skill id="4416" level="10"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1375,7 +1375,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1421,7 +1421,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1467,7 +1467,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="6"/>	<!--Humanoids-->
+			<skill id="4416" level="6"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1513,7 +1513,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1559,7 +1559,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1605,7 +1605,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="3"/>	<!--Beasts-->
+			<skill id="4416" level="3"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1694,7 +1694,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1740,7 +1740,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="7"/>	<!--Spirits-->
+			<skill id="4416" level="7"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1786,7 +1786,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="2"/>	<!--Magic Creatures-->
+			<skill id="4416" level="2"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1832,7 +1832,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Pet"/>
 		<skills>
-			<skill id="4416" level="4"/>	<!--Animals-->
+			<skill id="4416" level="4"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2964,9 +2964,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	
 	<npc id="16080" name="Magmeld Fairy" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3013,7 +3011,6 @@
 		</attributes>
 	</npc>
 	<npc id="16081" name="Fairy of Life" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3060,7 +3057,6 @@
 		</attributes>
 	</npc>
 	<npc id="16082" name="Tersi's Spirit" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>

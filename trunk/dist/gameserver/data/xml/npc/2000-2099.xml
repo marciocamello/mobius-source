@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="2081" name="Canabion of Plague" title="">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="6303"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -51,7 +50,6 @@
 		</attributes>
 	</npc>
 	<npc id="2082" name="Canabion of Plague" title="Doppler">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="6303"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -100,7 +98,6 @@
 		</attributes>
 	</npc>
 	<npc id="2083" name="Canabion of Plague" title="Void">
-		<!--Need TODO-->
 		<set name="baseHpMax" value="6635"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>

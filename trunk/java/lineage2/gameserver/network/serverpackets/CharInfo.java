@@ -54,6 +54,8 @@ public class CharInfo extends L2GameServerPacket
 	private int curHP, maxHP, curMP, maxMP, curCP;
 	private FastList<Integer> _aveList;
 	private PcInventory inv;
+	private int talismans;
+	private boolean openCloak;
 	
 	public CharInfo(Player cha)
 	{
@@ -238,6 +240,9 @@ public class CharInfo extends L2GameServerPacket
 		_isPartyRoomLeader = (player.getMatchingRoom() != null) && (player.getMatchingRoom().getType() == MatchingRoom.PARTY_MATCHING) && (player.getMatchingRoom().getLeader() == player);
 		_isFlying = player.isInFlyingTransform();
 		
+		talismans = player.getTalismanCount();
+		openCloak = player.getOpenCloak();
+		
 		curCP = (int) player.getCurrentCp();
 		curHP = (int) player.getCurrentHp();
 		maxHP = player.getMaxHp();
@@ -289,8 +294,8 @@ public class CharInfo extends L2GameServerPacket
 			writeD(_inv[PAPERDOLL_ID][1]);
 		}
 		
-		writeD(0x01); // TODO talisman count(VISTALL)
-		writeD(0x00); // TODO cloak status(VISTALL)
+		writeD(talismans); // TODO talisman count(VISTALL)
+		writeD((openCloak) ? 1 : 0); // TODO cloak status(VISTALL)
 		
 		writeD(pvp_flag);
 		writeD(karma);

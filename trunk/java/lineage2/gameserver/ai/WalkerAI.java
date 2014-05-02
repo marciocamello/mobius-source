@@ -106,6 +106,12 @@ public class WalkerAI extends DefaultAI
 			_routeIndex += _direction;
 			point = routeTemplate.getPoints().get(_routeIndex);
 		}
+		
+		if (point == null)
+		{
+			point = routeTemplate.getPoints().get(_routeIndex);
+		}
+		
 		Location nextLoc = point.getLoc();
 		long delay = (point.getDelay() <= 0) ? routeTemplate.getDelay() : point.getDelay();
 		if (_lastMove == 0)

@@ -1683,7 +1683,7 @@ public abstract class Creature extends GameObject
 				target.getListeners().onMagicHit(skill, this);
 				if (pl != null)
 				{
-					if ((target != null) && target.isNpc())
+					if (target.isNpc())
 					{
 						NpcInstance npc = (NpcInstance) target;
 						List<QuestState> ql = pl.getQuestsForEvent(npc, QuestEventType.MOB_TARGETED_BY_SKILL, false);

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DropListData.xsd">
+	<npc id="21318">
+		<droplist>
+			<category id="1" chance="70.000">
+				<item id="57" min="3087" max="6292" chance="100.00000"/>
+			</category>
+			<category id="2" chance="3.331">
+				<item id="12224" min="1" max="1" chance="3.77675"/>
+				<item id="5496" min="1" max="1" chance="20.32257"/>
+				<item id="12231" min="1" max="1" chance="3.77675"/>
+				<item id="5497" min="1" max="1" chance="20.32257"/>
+				<item id="12221" min="1" max="1" chance="3.77675"/>
+				<item id="5508" min="1" max="1" chance="20.32257"/>
+				<item id="12229" min="1" max="1" chance="3.77675"/>
+				<item id="5509" min="1" max="1" chance="20.32257"/>
+				<item id="5290" min="1" max="1" chance="0.90068"/>
+				<item id="5291" min="1" max="1" chance="0.90068"/>
+				<item id="5295" min="1" max="1" chance="0.90068"/>
+				<item id="5296" min="1" max="1" chance="0.90068"/>
+			</category>
+			<category id="3" chance="43.207">
+				<item id="34992" min="4" max="4" chance="51.83535"/>
+				<item id="1873" min="1" max="1" chance="19.43822"/>
+				<item id="34991" min="8" max="8" chance="6.47941"/>
+				<item id="1889" min="1" max="1" chance="3.23975"/>
+				<item id="4044" min="1" max="1" chance="1.61988"/>
+				<item id="5157" min="1" max="1" chance="0.02159"/>
+				<item id="8731" min="1" max="1" chance="0.45000"/>
+				<item id="8741" min="1" max="1" chance="0.11250"/>
+				<item id="8751" min="1" max="1" chance="0.01124"/>
+				<item id="8761" min="1" max="1" chance="0.00227"/>
+				<item id="1344" min="30" max="90" chance="20.24801"/>
+				<item id="10610" min="1" max="1" chance="0.69434"/>
+				<item id="10581" min="1" max="1" chance="0.69434"/>
+				<item id="8620" min="1" max="1" chance="0.01273"/>
+			</category>
+		</droplist>
+		<spoillist>
+			<item id="5478" min="1" max="1" chance="5.26000"/>
+			<item id="730" min="1" max="1" chance="0.52130"/>
+		</spoillist>
+	</npc>
+</list>

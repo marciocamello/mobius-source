@@ -100,6 +100,7 @@ public final class StringHolder extends AbstractHolder
 	/**
 	 * Method load.
 	 */
+	@SuppressWarnings("null")
 	public void load()
 	{
 		for (Language lang : Language.VALUES)

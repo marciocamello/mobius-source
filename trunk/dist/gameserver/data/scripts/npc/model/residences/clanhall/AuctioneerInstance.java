@@ -249,6 +249,11 @@ public class AuctioneerInstance extends NpcInstance
 				}
 			}
 			
+			if (clanHall == null)
+			{
+				return;
+			}
+			
 			ClanHallAuctionEvent auctionEvent = clanHall.getSiegeEvent();
 			List<AuctionSiegeClanObject> attackers = auctionEvent.getObjects(SiegeEvent.ATTACKERS);
 			

@@ -365,7 +365,7 @@ public class AugmentationData
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
-			File file = new File(Config.DATAPACK_ROOT, "data/xml/stats/augmentation/augmentation_skillmap.xml");
+			File file = new File(Config.DATAPACK_ROOT, "data/xml/augmentation/augmentation_skillmap.xml");
 			
 			Document doc = factory.newDocumentBuilder().parse(file);
 			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
@@ -451,7 +451,7 @@ public class AugmentationData
 				DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 				factory.setValidating(false);
 				factory.setIgnoringComments(true);
-				File file = new File(Config.DATAPACK_ROOT, "data/xml/stats/augmentation/augmentation_stats" + i + ".xml");
+				File file = new File(Config.DATAPACK_ROOT, "data/xml/augmentation/augmentation_stats" + i + ".xml");
 				Document doc = factory.newDocumentBuilder().parse(file);
 				for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 				{
@@ -512,7 +512,7 @@ public class AugmentationData
 				DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 				factory.setValidating(false);
 				factory.setIgnoringComments(true);
-				File file = new File(Config.DATAPACK_ROOT, "data/xml/stats/augmentation/augmentation_jewel_stats" + i + ".xml");
+				File file = new File(Config.DATAPACK_ROOT, "data/xml/augmentation/augmentation_jewel_stats" + i + ".xml");
 				Document doc = factory.newDocumentBuilder().parse(file);
 				for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 				{

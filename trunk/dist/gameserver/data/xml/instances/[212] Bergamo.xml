@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "instances.dtd">
 <list>
 	<instance id="212" name="Bergamo" maxChannels="35" collapseIfEmpty="10" timelimit="5">

@@ -1,0 +1,751 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="19400" name="Recipe: Unidentified Seraph Circlet (60%)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+	</etcitem>
+	<etcitem id="19401" name="Recipe: Unidentified Seraph Tunic (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1086"/>
+	</etcitem>
+	<etcitem id="19402" name="Recipe: Unidentified Seraph Stockings (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1087"/>
+	</etcitem>
+	<etcitem id="19403" name="Recipe: Unidentified Seraph Gloves (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1088"/>
+	</etcitem>
+	<etcitem id="19404" name="Recipe: Unidentified Seraph Shoes (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1089"/>
+	</etcitem>
+	<etcitem id="19405" name="Recipe: Unidentified Seraph Sigil (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1090"/>
+	</etcitem>
+	<etcitem id="19406" name="Recipe: Unidentified Seraph Necklace (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1091"/>
+	</etcitem>
+	<etcitem id="19407" name="Recipe: Unidentified Seraph Earring (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1092"/>
+	</etcitem>
+	<etcitem id="19408" name="Recipe: Unidentified Seraph Ring (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1093"/>
+	</etcitem>
+	<etcitem id="19409" name="Recipe: Unidentified Amaranthine Shaper (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1094"/>
+	</etcitem>
+	<etcitem id="19410" name="Recipe: Unidentified Amaranthine Cutter (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1095"/>
+	</etcitem>
+	<etcitem id="19411" name="Recipe: Unidentified Amaranthine Slasher (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1096"/>
+	</etcitem>
+	<etcitem id="19412" name="Recipe: Unidentified Amaranthine Avenger (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1097"/>
+	</etcitem>
+	<etcitem id="19413" name="Recipe: Unidentified Amaranthine Fighter (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1098"/>
+	</etcitem>
+	<etcitem id="19414" name="Recipe: Unidentified Amaranthine Stormer (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1099"/>
+	</etcitem>
+	<etcitem id="19415" name="Recipe: Unidentified Amaranthine Thrower (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1100"/>
+	</etcitem>
+	<etcitem id="19416" name="Recipe: Unidentified Amaranthine Shooter (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1101"/>
+	</etcitem>
+	<etcitem id="19417" name="Recipe: Unidentified Amaranthine Buster (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1102"/>
+	</etcitem>
+	<etcitem id="19418" name="Recipe: Unidentified Amaranthine Caster (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1103"/>
+	</etcitem>
+	<etcitem id="19419" name="Recipe: Unidentified Amaranthine Retributer (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1104"/>
+	</etcitem>
+	<etcitem id="19420" name="Recipe: Unidentified Eternal Helmet (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1105"/>
+	</etcitem>
+	<etcitem id="19421" name="Recipe: Unidentified Eternal Breastplate (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1106"/>
+	</etcitem>
+	<etcitem id="19422" name="Recipe: Unidentified Eternal Gaiters (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1107"/>
+	</etcitem>
+	<etcitem id="19423" name="Recipe: Unidentified Eternal Gauntlets (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1108"/>
+	</etcitem>
+	<etcitem id="19424" name="Recipe: Unidentified Eternal Boots (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1109"/>
+	</etcitem>
+	<etcitem id="19425" name="Recipe: Unidentified Eternal Shield (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1110"/>
+	</etcitem>
+	<etcitem id="19426" name="Recipe: Unidentified Eternal Leather Helmet (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1111"/>
+	</etcitem>
+	<etcitem id="19427" name="Recipe: Unidentified Eternal Leather Armor (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1112"/>
+	</etcitem>
+	<etcitem id="19428" name="Recipe: Unidentified Eternal Leather Leggings (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1113"/>
+	</etcitem>
+	<etcitem id="19429" name="Recipe: Unidentified Eternal Leather Gloves (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1114"/>
+	</etcitem>
+	<etcitem id="19430" name="Recipe: Unidentified Eternal Leather Boots (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1115"/>
+	</etcitem>
+	<etcitem id="19431" name="Recipe: Unidentified Eternal Circlet (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1116"/>
+	</etcitem>
+	<etcitem id="19432" name="Recipe: Unidentified Eternal Tunic (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1117"/>
+	</etcitem>
+	<etcitem id="19433" name="Recipe: Unidentified Eternal Stockings (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1118"/>
+	</etcitem>
+	<etcitem id="19434" name="Recipe: Unidentified Eternal Gloves (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1119"/>
+	</etcitem>
+	<etcitem id="19435" name="Recipe: Unidentified Eternal Shoes (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1120"/>
+	</etcitem>
+	<etcitem id="19436" name="Recipe: Unidentified Eternal Sigil (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1121"/>
+	</etcitem>
+	<etcitem id="19437" name="Recipe: Unidentified Eternal Necklace (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1122"/>
+	</etcitem>
+	<etcitem id="19438" name="Recipe: Unidentified Eternal Earring (60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1123"/>
+	</etcitem>
+	<etcitem id="19439" name="Recipe: Unidentified Eternal Ring(60%)">
+		<set name="icon" value="icon.etc_recipe_gold_i00"/>
+		<set name="material" value="liquid"/>
+		<set name="weight" value="30"/>
+		<set name="price" value="250000"/>
+		<set name="stackable" value="true"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="ex_type" value="RECIPE"/>
+		<set name="type" value="RECIPE"/>
+		<set name="recipe_id" value="1124"/>
+	</etcitem>
+	<etcitem id="19440" name="Gemstone (R-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_bead_gold_i00"/>
+	</etcitem>
+	<etcitem id="19441" name="Spiritshot (R-grade)">
+		<set name="freightable" value="true"/>
+		<set name="class" value="CONSUMABLE"/>
+		<set name="crystal_type" value="R"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.spiritshot_r_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="1"/>
+	</etcitem>
+	<etcitem id="19442" name="Blessed Spiritshot (R-grade)">
+		<set name="freightable" value="true"/>
+		<set name="class" value="CONSUMABLE"/>
+		<set name="crystal_type" value="R"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.blessed_spiritshot_r_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="1"/>
+	</etcitem>
+	<etcitem id="19443" name="Orichalcum Bolt">
+		<set name="class" value="CONSUMABLE"/>
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.etc_oricalcum_bolt_i00"/>
+		<set name="price" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="BOLT"/>
+		<set name="weight" value="0"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+	</etcitem>
+	<etcitem id="19444" name="Unbind Scroll (R-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.cursed_free_r"/>
+	</etcitem>
+	<etcitem id="19445" name="Unbind Scroll (R95-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.cursed_free_r95"/>
+	</etcitem>
+	<etcitem id="19446" name="Unbind Scroll (R99-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.cursed_free_r99"/>
+	</etcitem>
+	<etcitem id="19447" name="Blessed Scroll: Enchant Weapon (R-grade)">
+		<set name="class" value="MISC"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.blessed_scroll_of_enchant_weapon_i06"/>
+		<set name="price" value="5000000"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="SCROLL"/>
+		<set name="weight" value="120"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="19448" name="Blessed Scroll: Enchant Armor (R-grade)">
+		<set name="class" value="MISC"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.blessed_scroll_of_enchant_armor_i06"/>
+		<set name="price" value="5000000"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="SCROLL"/>
+		<set name="weight" value="120"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="19450" name="Proof of Fidelity">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.item_normal52"/>
+	</etcitem>
+	<etcitem id="19465" name="Bottle of Antharas' Soul">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="60"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.bottle_of_antalas_soul_i00"/>
+	</etcitem>
+	<etcitem id="19466" name="Bottle of Valakas' Soul">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="60"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.bottle_of_valakas_soul_i00"/>
+	</etcitem>
+	<etcitem id="19467" name="Yellow Soul Crystal Fragment (R99-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.r99_soul_stone_piece_i03"/>
+	</etcitem>
+	<etcitem id="19468" name="Teal Soul Crystal Fragment (R99-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.r99_soul_stone_piece_i04"/>
+	</etcitem>
+	<etcitem id="19469" name="Purple Soul Crystal Fragment (R99-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.r99_soul_stone_piece_i05"/>
+	</etcitem>
+	<etcitem id="19482" name="Ivory Tower Delivery">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_jewel_box_i00"/>
+	</etcitem>
+	<etcitem id="19483" name="Research Ingredient">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_oil_pot_white_i00"/>
+	</etcitem>
+	<etcitem id="19484" name="Outlaw's Mark">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_jewel_green_i00"/>
+	</etcitem>
+	<etcitem id="19485" name="Witch Doctor's Mark">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_jewel_blue_i00"/>
+	</etcitem>
+	<etcitem id="19486" name="Element of Evil">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_debris_i00"/>
+	</etcitem>
+	<etcitem id="19487" name="Legacy Core">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_black_freezing_core_i00"/>
+	</etcitem>
+	<etcitem id="19488" name="Pure Legacy Core">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_freezing_core_i00"/>
+	</etcitem>
+	<etcitem id="19489" name="Remnant Ash">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_powder_gray_i00"/>
+	</etcitem>
+	<etcitem id="19490" name="Buffalo Meat">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_meat_of_monstereye_i00"/>
+	</etcitem>
+	<etcitem id="19491" name="Ursus Meat">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_meat_i00"/>
+	</etcitem>
+	<etcitem id="19492" name="Yeti Meat">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_bodypart_liver_i00"/>
+	</etcitem>
+	<etcitem id="19493" name="Mysterious Letter">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.item_normal20"/>
+	</etcitem>
+	<etcitem id="19494" name="Mysterious Letter">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.item_normal20"/>
+	</etcitem>
+	<etcitem id="19495" name="Blazing Swamp Ash">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_powder_gray_i00"/>
+	</etcitem>
+	<etcitem id="19496" name="Argos Blood Sample">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_dragons_blood_i00"/>
+	</etcitem>
+	<etcitem id="19497" name="Hot Springs Water Sample">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_hot_spring_mineral_i00"/>
+	</etcitem>
+	<etcitem id="19498" name="Stakato Shell">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_parasite_i00"/>
+	</etcitem>
+	<etcitem id="19499" name="Dancer Goods">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_pouch_yellow_i00"/>
+	</etcitem>
+</list>

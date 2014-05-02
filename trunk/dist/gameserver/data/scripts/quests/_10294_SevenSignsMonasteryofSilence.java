@@ -23,6 +23,9 @@ import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author pchayka
+ */
 public class _10294_SevenSignsMonasteryofSilence extends Quest implements ScriptFile
 {
 	private static final int Elcardia = 32784;
@@ -34,11 +37,16 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 	private static final int GreenRelicWatcher = RelicWatcher[1];
 	private static final int BlueRelicWatcher = RelicWatcher[2];
 	private static final int RedRelicWatcher = RelicWatcher[3];
+	
 	private static final int JudevanEtinasEvilThoughts = 32888;
 	private static final int SolinaLayrother = 27407;
+	
 	private static final int JudevanEtinasEvilThoughts2 = 32797;
 	private static final int SolinasEvilThoughts = 32793;
+	
+	// reading desks
 	private static final int[] ReadingDesk = ArrayUtils.createAscendingArray(32821, 32836);
+	
 	private static final int[] YellowRoomDesks =
 	{
 		ReadingDesk[0],
@@ -47,6 +55,7 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 		ReadingDesk[3]
 	};
 	private static final int YellowTrueReadingDesk = YellowRoomDesks[2];
+	
 	private static final int[] GreenRoomDesks =
 	{
 		ReadingDesk[4],
@@ -55,6 +64,7 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 		ReadingDesk[7]
 	};
 	private static final int GreenTrueReadingDesk = GreenRoomDesks[3];
+	
 	private static final int[] BlueRoomDesks =
 	{
 		ReadingDesk[8],
@@ -63,6 +73,7 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 		ReadingDesk[11]
 	};
 	private static final int BlueTrueReadingDesk = BlueRoomDesks[1];
+	
 	private static final int[] RedRoomDesks =
 	{
 		ReadingDesk[12],
@@ -110,25 +121,25 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 			Location loc = null;
 			switch (Integer.parseInt(tokenizer.nextToken()))
 			{
-				case 1:
+				case 1: // yellow
 					if (st.getInt("yellow") == 0)
 					{
 						loc = new Location(82434, -249546, -8320);
 					}
 					break;
-				case 2:
+				case 2: // green
 					if (st.getInt("green") == 0)
 					{
 						loc = new Location(88536, -249784, -8320);
 					}
 					break;
-				case 3:
+				case 3: // blue
 					if (st.getInt("blue") == 0)
 					{
 						loc = new Location(85672, -246872, -8320);
 					}
 					break;
-				case 4:
+				case 4: // red
 					if (st.getInt("red") == 0)
 					{
 						loc = new Location(85896, -252664, -8320);
@@ -231,6 +242,7 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 				{
 					htmltext = "relicwatcher_q10294_yellowtest.htm";
 				}
+				
 			}
 			else if (npc.getNpcId() == GreenRelicWatcher)
 			{
@@ -238,6 +250,7 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 				{
 					htmltext = "relicwatcher_q10294_greentest.htm";
 				}
+				
 			}
 			else if (npc.getNpcId() == BlueRelicWatcher)
 			{
@@ -245,6 +258,7 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 				{
 					htmltext = "relicwatcher_q10294_bluetest.htm";
 				}
+				
 			}
 			else if (npc.getNpcId() == RedRelicWatcher)
 			{
@@ -252,6 +266,7 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 				{
 					htmltext = "relicwatcher_q10294_redtest.htm";
 				}
+				
 			}
 		}
 		else if (event.equalsIgnoreCase("false_answer"))
@@ -281,7 +296,7 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
-		if (player.getBaseClassId() != player.getActiveClassId())
+		if (!player.isBaseClassActive())
 		{
 			return "no_subclass_allowed.htm";
 		}

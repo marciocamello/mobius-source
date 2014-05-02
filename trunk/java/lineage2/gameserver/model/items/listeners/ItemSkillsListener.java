@@ -92,7 +92,7 @@ public final class ItemSkillsListener implements OnEquipListener
 		{
 			player.doCast(unequipeSkill, player, true);
 		}
-		if ((itemSkills.length > 0) || (enchant4Skill != null))
+		if (((itemSkills != null) && (itemSkills.length > 0)) || (enchant4Skill != null))
 		{
 			player.sendSkillList();
 			player.updateStats();

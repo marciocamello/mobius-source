@@ -1,0 +1,759 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="8600" levels="1" name="Summon Royal Aegis">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="2000"/>
+		<set name="mpConsume2" val="40"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="addSkills" val="9206;1;619;1"/>
+		<set name="npcId" val="13311"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Transformation" time="1800" val="129">
+				<add order="0x40" stat="runSpd" val="50"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="8601" levels="1" name="Summon Battle Scar">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="2000"/>
+		<set name="mpConsume2" val="40"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="addSkills" val="9206;1;619;1"/>
+		<set name="npcId" val="13312"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Transformation" time="1800" val="130">
+				<add order="0x40" stat="runSpd" val="50"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="8602" levels="1" name="Summon Blood Tail">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="2000"/>
+		<set name="mpConsume2" val="40"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="addSkills" val="9206;1;619;1"/>
+		<set name="npcId" val="13313"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Transformation" time="1800" val="131">
+				<add order="0x40" stat="runSpd" val="50"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="8603" levels="1" name="Summon Tempest Arrow">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="2000"/>
+		<set name="mpConsume2" val="40"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="addSkills" val="9206;1;619;1"/>
+		<set name="npcId" val="13314"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Transformation" time="1800" val="132">
+				<add order="0x40" stat="runSpd" val="50"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="8604" levels="1" name="Summon Blue Phantom">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="2000"/>
+		<set name="mpConsume2" val="40"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="addSkills" val="9206;1;619;1"/>
+		<set name="npcId" val="13315"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Transformation" time="1800" val="133">
+				<add order="0x40" stat="runSpd" val="50"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="8605" levels="1" name="Summon White Wing">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="2000"/>
+		<set name="mpConsume2" val="40"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="addSkills" val="9206;1;619;1"/>
+		<set name="npcId" val="13316"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Transformation" time="1800" val="134">
+				<add order="0x40" stat="runSpd" val="50"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="8606" levels="1" name="Summon Swift Melody">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="2000"/>
+		<set name="mpConsume2" val="40"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="addSkills" val="9206;1;619;1"/>
+		<set name="npcId" val="13317"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Transformation" time="1800" val="135">
+				<add order="0x40" stat="runSpd" val="50"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="8607" levels="1" name="Summon Silver Saint">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="2000"/>
+		<set name="mpConsume2" val="40"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="addSkills" val="9206;1;619;1"/>
+		<set name="npcId" val="13318"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Transformation" time="1800" val="136">
+				<add order="0x40" stat="runSpd" val="50"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="8608" levels="1" name="R Talisman - P. Atk.">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="pAtk" val="37"/>
+		</for>
+	</skill>
+	<skill id="8609" levels="1" name="R90 Talisman - P. Atk.">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="pAtk" val="43"/>
+		</for>
+	</skill>
+	<skill id="8610" levels="1" name="R95 Talisman - P. Atk.">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="pAtk" val="52"/>
+		</for>
+	</skill>
+	<skill id="8611" levels="1" name="R99 Talisman - P. Atk.">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="pAtk" val="60"/>
+		</for>
+	</skill>
+	<skill id="8612" levels="1" name="R Talisman - P. Def.">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="pDef" val="38"/>
+		</for>
+	</skill>
+	<skill id="8613" levels="1" name="R90 Talisman - P. Def.">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="pDef" val="43"/>
+		</for>
+	</skill>
+	<skill id="8614" levels="1" name="R95 Talisman - P. Def.">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="pDef" val="49"/>
+		</for>
+	</skill>
+	<skill id="8615" levels="1" name="R99 Talisman - P. Def.">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="pDef" val="54"/>
+		</for>
+	</skill>
+	<skill id="8616" levels="1" name="R Talisman - M. Atk.">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="mAtk" val="37"/>
+		</for>
+	</skill>
+	<skill id="8617" levels="1" name="R90 Talisman - M. Atk.">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="mAtk" val="46"/>
+		</for>
+	</skill>
+	<skill id="8618" levels="1" name="R95 Talisman - M. Atk.">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="mAtk" val="56"/>
+		</for>
+	</skill>
+	<skill id="8619" levels="1" name="R99 Talisman - M. Atk.">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="mAtk" val="66"/>
+		</for>
+	</skill>
+	<skill id="8620" levels="1" name="R Talisman - M. Def.">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="mDef" val="21"/>
+		</for>
+	</skill>
+	<skill id="8621" levels="1" name="R90 Talisman - M. Def.">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="mDef" val="24"/>
+		</for>
+	</skill>
+	<skill id="8622" levels="1" name="R95 Talisman - M. Def.">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="mDef" val="28"/>
+		</for>
+	</skill>
+	<skill id="8623" levels="1" name="R99 Talisman - M. Def.">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="mDef" val="32"/>
+		</for>
+	</skill>
+	<skill id="8624" levels="1" name="R Talisman - Max HP">
+		<set name="magicLevel" val="85"/>
+		<set name="icon" val="icon.r85_talisman_hp_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8625" levels="1" name="R90 Talisman - Max HP">
+		<set name="magicLevel" val="90"/>
+		<set name="icon" val="icon.r85_talisman_hp_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8626" levels="1" name="R95 Talisman - Max HP">
+		<set name="magicLevel" val="95"/>
+		<set name="icon" val="icon.r85_talisman_hp_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8627" levels="1" name="R99 Talisman - Max HP">
+		<set name="magicLevel" val="99"/>
+		<set name="icon" val="icon.r85_talisman_hp_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8628" levels="1" name="R Talisman - Max MP">
+		<set name="magicLevel" val="85"/>
+		<set name="icon" val="icon.r85_talisman_mp_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8629" levels="1" name="R90 Talisman - Max MP">
+		<set name="magicLevel" val="90"/>
+		<set name="icon" val="icon.r85_talisman_mp_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8630" levels="1" name="R95 Talisman - Max MP">
+		<set name="magicLevel" val="95"/>
+		<set name="icon" val="icon.r85_talisman_mp_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8631" levels="1" name="R99 Talisman - Max MP">
+		<set name="magicLevel" val="99"/>
+		<set name="icon" val="icon.r85_talisman_mp_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8632" levels="1" name="R Talisman - Max CP">
+		<set name="magicLevel" val="85"/>
+		<set name="icon" val="icon.r85_talisman_cp_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8633" levels="1" name="R90 Talisman - Max CP">
+		<set name="magicLevel" val="90"/>
+		<set name="icon" val="icon.r85_talisman_cp_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8634" levels="1" name="R95 Talisman - Max CP">
+		<set name="magicLevel" val="95"/>
+		<set name="icon" val="icon.r85_talisman_cp_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8635" levels="1" name="R99 Talisman - Max CP">
+		<set name="magicLevel" val="99"/>
+		<set name="icon" val="icon.r85_talisman_cp_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8636" levels="1" name="R Talisman - Critical Damage">
+		<set name="magicLevel" val="85"/>
+		<set name="icon" val="icon.r85_talisman_ca_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8637" levels="1" name="R90 Talisman - Critical Damage">
+		<set name="magicLevel" val="90"/>
+		<set name="icon" val="icon.r85_talisman_ca_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8638" levels="1" name="R95 Talisman - Critical Damage">
+		<set name="magicLevel" val="95"/>
+		<set name="icon" val="icon.r85_talisman_ca_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8639" levels="1" name="R99 Talisman - Critical Damage">
+		<set name="magicLevel" val="99"/>
+		<set name="icon" val="icon.r85_talisman_ca_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8640" levels="1" name="R Talisman - Critical Defense">
+		<set name="magicLevel" val="85"/>
+		<set name="icon" val="icon.r85_talisman_ca_down_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8641" levels="1" name="R90 Talisman - Critical Defense">
+		<set name="magicLevel" val="90"/>
+		<set name="icon" val="icon.r85_talisman_ca_down_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8642" levels="1" name="R95 Talisman - Critical Defense">
+		<set name="magicLevel" val="95"/>
+		<set name="icon" val="icon.r85_talisman_ca_down_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8643" levels="1" name="R99 Talisman - Critical Defense">
+		<set name="magicLevel" val="99"/>
+		<set name="icon" val="icon.r85_talisman_ca_down_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8644" levels="1" name="R Talisman - M. Critical Rate">
+		<set name="magicLevel" val="85"/>
+		<set name="icon" val="icon.r_talisman_mc_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8645" levels="1" name="R Talisman - P. Accuracy">
+		<set name="magicLevel" val="85"/>
+		<set name="icon" val="icon.r_talisman_ph_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8646" levels="1" name="R Talisman - M. Accuracy">
+		<set name="magicLevel" val="85"/>
+		<set name="icon" val="icon.r_talisman_mh_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8647" levels="1" name="R Talisman - P. Evasion">
+		<set name="magicLevel" val="85"/>
+		<set name="icon" val="icon.r_talisman_pm_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8648" levels="1" name="R Talisman - M. Evasion">
+		<set name="magicLevel" val="85"/>
+		<set name="icon" val="icon.r_talisman_mm_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8649" levels="1" name="R Talisman - Physical Critical Rate">
+		<set name="magicLevel" val="85"/>
+		<set name="icon" val="icon.r_talisman_cr_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8650" levels="1" name="R Talisman - P. Critical Evasion">
+		<set name="magicLevel" val="85"/>
+		<set name="icon" val="icon.r_talisman_cm_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8651" levels="1" name="R Talisman - P. Atk. (active)">
+		<set name="icon" val="icon.r85_talisman_pa_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8652" levels="1" name="R90 Talisman - P. Atk. (active)">
+		<set name="icon" val="icon.r85_talisman_pa_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8653" levels="1" name="R95 Talisman - P. Atk. (active)">
+		<set name="icon" val="icon.r85_talisman_pa_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8654" levels="1" name="R99 Talisman - P. Atk. (active)">
+		<set name="icon" val="icon.r85_talisman_pa_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8655" levels="1" name="R Talisman - P. Def. (active)">
+		<set name="icon" val="icon.r85_talisman_pd_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8656" levels="1" name="R90 Talisman - P. Def. (active)">
+		<set name="icon" val="icon.r85_talisman_pd_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8657" levels="1" name="R95 Talisman - P. Def. (active)">
+		<set name="icon" val="icon.r85_talisman_pd_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8658" levels="1" name="R99 Talisman - P. Def. (active)">
+		<set name="icon" val="icon.r85_talisman_pd_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8659" levels="1" name="R Talisman - M. Atk. (active)">
+		<set name="icon" val="icon.r85_talisman_ma_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8660" levels="1" name="R90 Talisman - M. Atk. (active)">
+		<set name="icon" val="icon.r85_talisman_ma_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8661" levels="1" name="R95 Talisman - M. Atk. (active)">
+		<set name="icon" val="icon.r85_talisman_ma_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8662" levels="1" name="R99 Talisman - M. Atk. (active)">
+		<set name="icon" val="icon.r85_talisman_ma_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8663" levels="1" name="R Talisman - Magic Resistance (active)">
+		<set name="icon" val="icon.r85_talisman_md_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8664" levels="1" name="R90 Talisman - M. Def. (active)">
+		<set name="icon" val="icon.r85_talisman_md_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8665" levels="1" name="R95 Talisman - M. Def. (active)">
+		<set name="icon" val="icon.r85_talisman_md_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8666" levels="1" name="R99 Talisman - M. Def. (active)">
+		<set name="icon" val="icon.r85_talisman_md_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8667" levels="1" name="R Talisman - Max HP (active)">
+		<set name="icon" val="icon.r85_talisman_hp_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8668" levels="1" name="R90 Talisman - Max HP (active)">
+		<set name="icon" val="icon.r85_talisman_hp_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8669" levels="1" name="R95 Talisman - Max HP (active)">
+		<set name="icon" val="icon.r85_talisman_hp_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8670" levels="1" name="R99 Talisman - Max HP (active)">
+		<set name="icon" val="icon.r85_talisman_hp_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8671" levels="1" name="R Talisman - Max MP (active)">
+		<set name="icon" val="icon.r85_talisman_mp_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8672" levels="1" name="R90 Talisman - Max MP (active)">
+		<set name="icon" val="icon.r85_talisman_mp_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8673" levels="1" name="R95 Talisman - Max MP (active)">
+		<set name="icon" val="icon.r85_talisman_mp_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8674" levels="1" name="R99 Talisman - Max MP (active)">
+		<set name="icon" val="icon.r85_talisman_mp_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8675" levels="1" name="R Talisman - Max CP (active)">
+		<set name="icon" val="icon.r85_talisman_cp_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8676" levels="1" name="R90 Talisman - Max CP (active)">
+		<set name="icon" val="icon.r85_talisman_cp_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8677" levels="1" name="R95 Talisman - Max CP (active)">
+		<set name="icon" val="icon.r85_talisman_cp_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8678" levels="1" name="R99 Talisman - Max CP (active)">
+		<set name="icon" val="icon.r85_talisman_cp_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8679" levels="1" name="R Talisman - Critical Damage (active)">
+		<set name="icon" val="icon.r85_talisman_ca_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8680" levels="1" name="R90 Talisman - Critical Damage (active)">
+		<set name="icon" val="icon.r85_talisman_ca_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8681" levels="1" name="R95 Talisman - Critical Damage (active)">
+		<set name="icon" val="icon.r85_talisman_ca_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8682" levels="1" name="R99 Talisman - Critical Damage (active)">
+		<set name="icon" val="icon.r85_talisman_ca_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8683" levels="1" name="R Talisman - Critical Defense (active)">
+		<set name="icon" val="icon.r85_talisman_ca_down_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8684" levels="1" name="R90 Talisman - Critical Defense (active)">
+		<set name="icon" val="icon.r85_talisman_ca_down_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8685" levels="1" name="R95 Talisman - Critical Defense (active)">
+		<set name="icon" val="icon.r85_talisman_ca_down_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8686" levels="1" name="R99 Talisman - Critical Defense (active)">
+		<set name="icon" val="icon.r85_talisman_ca_down_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8687" levels="1" name="R Talisman - M. Critical Rate (active)">
+		<set name="icon" val="icon.r_talisman_mc_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8688" levels="1" name="R Talisman - P. Accuracy (active)">
+		<set name="icon" val="icon.r_talisman_ph_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8689" levels="1" name="R Talisman - M. Accuracy (active)">
+		<set name="icon" val="icon.r_talisman_mh_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8690" levels="1" name="R Talisman - P. Evasion (active)">
+		<set name="icon" val="icon.r_talisman_pm_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8691" levels="1" name="R Talisman - M. Evasion (active)">
+		<set name="icon" val="icon.r_talisman_mm_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8692" levels="1" name="R Talisman - Physical Critical Rate (active)">
+		<set name="icon" val="icon.r_talisman_cr_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8693" levels="1" name="R Talisman - P. Critical Evasion (active)">
+		<set name="icon" val="icon.r_talisman_cm_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8694" levels="1" name="R Special Talisman - Shield Defense">
+		<set name="icon" val="icon.r85_talisman_pd_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8695" levels="1" name="R90 Special Talisman - Shield Defense">
+		<set name="icon" val="icon.r85_talisman_pd_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8696" levels="1" name="R95 Special Talisman - Shield Defense">
+		<set name="icon" val="icon.r85_talisman_pd_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8697" levels="1" name="R99 Special Talisman - Shield Defense">
+		<set name="magicLevel" val="99"/>
+		<set name="icon" val="icon.r85_talisman_pd_up_passive"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8698" levels="1" name="R Special Talisman - Shield Defense (active)">
+		<set name="icon" val="icon.r85_talisman_pd_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8699" levels="1" name="R90 Special Talisman - Shield Defense (active)">
+		<set name="icon" val="icon.r85_talisman_pd_up_active"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+</list>

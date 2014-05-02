@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="32800" name="Frikios" title="Guide of Revelation">
@@ -3221,7 +3221,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3267,7 +3267,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3313,7 +3313,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3359,7 +3359,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3405,7 +3405,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3451,7 +3451,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3497,7 +3497,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3543,7 +3543,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3589,7 +3589,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3635,7 +3635,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3810,7 +3810,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Merchant"/>
 		<skills>
-			<skill id="4416" level="18"/>	<!--Dwarves-->
+			<skill id="4416" level="18"/>
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -3994,7 +3994,6 @@
 		</attributes>
 	</npc>
 	<npc id="32892" name="Lydia" title="God's Messenger">
-		<!--11 JAN 2013-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4025,7 +4024,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="33.5"/>
-		<!--Npc specific-->
 		<set name="type" value="TipiaNpc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -4045,7 +4043,6 @@
 		</attributes>
 	</npc>
 	<npc id="32893" name="Slaski" title="Hierarch">
-		<!--11 JAN 2013-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4076,7 +4073,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="collision_height" value="20.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -4096,7 +4092,6 @@
 		</attributes>
 	</npc>
 	<npc id="32894" name="Izael" title="Tree Friend of Josephina">
-		<!--11 JAN 2013-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4127,7 +4122,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="29.0"/>
 		<set name="collision_height" value="25.5"/>
-		<!--Npc specific-->
 		<set name="type" value="IzaelManager"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -4147,7 +4141,6 @@
 		</attributes>
 	</npc>
 	<npc id="32895" name="Noeti Mimilead" title="Fairy Hierarch">
-		<!--11 JAN 2013-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4178,7 +4171,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="9.5"/>
 		<set name="collision_height" value="25.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -4198,7 +4190,6 @@
 		</attributes>
 	</npc>
 	<npc id="32896" name="Naomi Kasheron" title="Elite Bodyguard">
-		<!--11 JAN 2013-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4229,7 +4220,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="21.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -4249,7 +4239,6 @@
 		</attributes>
 	</npc>
 	<npc id="32897" name="Alco" title="Grocer">
-		<!--11 JAN 2013-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4280,7 +4269,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="20.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -4300,7 +4288,6 @@
 		</attributes>
 	</npc>
 	<npc id="32898" name="Kantarubis" title="Gray Pillar">
-		<!--11 JAN 2013-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4331,7 +4318,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="6.0"/>
 		<set name="collision_height" value="18.0"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
@@ -4351,7 +4337,6 @@
 		</attributes>
 	</npc>
 	<npc id="32899" name="Hamrun" title="Warehouse Keeper">
-		<!--11 JAN 2013-->
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4382,7 +4367,6 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="17.5"/>
-		<!--Npc specific-->
 		<set name="type" value="Npc"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>

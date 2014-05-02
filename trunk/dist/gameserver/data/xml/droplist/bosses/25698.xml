@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../DropListData.xsd">
+	<npc id="25698">
+		<droplist>
+			<category id="1" chance="1.026">
+				<item id="14107" min="1" max="1" chance="38.46260"/>
+				<item id="14115" min="1" max="1" chance="61.53740"/>
+			</category>
+			<category id="2" chance="89.783">
+				<item id="13463" min="1" max="1" chance="0.08044"/>
+				<item id="13464" min="1" max="1" chance="0.08044"/>
+				<item id="13465" min="1" max="1" chance="0.08044"/>
+				<item id="13466" min="1" max="1" chance="0.08044"/>
+				<item id="17308" min="1" max="1" chance="14.92489"/>
+				<item id="17319" min="1" max="1" chance="14.66872"/>
+				<item id="17318" min="1" max="1" chance="13.91134"/>
+				<item id="17313" min="1" max="1" chance="13.86678"/>
+				<item id="17310" min="1" max="1" chance="9.71789"/>
+				<item id="17304" min="1" max="1" chance="9.63992"/>
+				<item id="18109" min="1" max="1" chance="5.78061"/>
+				<item id="18103" min="1" max="1" chance="5.74051"/>
+				<item id="18113" min="1" max="1" chance="5.72603"/>
+				<item id="18104" min="1" max="1" chance="5.70153"/>
+			</category>
+			<category id="3" chance="34.214">
+				<item id="959" min="1" max="1" chance="5.23062"/>
+				<item id="960" min="1" max="1" chance="52.30629"/>
+				<item id="6577" min="1" max="1" chance="0.87181"/>
+				<item id="17526" min="1" max="1" chance="41.59128"/>
+			</category>
+		</droplist>
+	</npc>
+</list>

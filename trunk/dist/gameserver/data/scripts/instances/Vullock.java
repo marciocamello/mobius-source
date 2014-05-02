@@ -113,7 +113,7 @@ public class Vullock extends Reflection
 			if (actor.getNpcId() == Vullock)
 			{
 				// _log.info("Target - Vullock");
-				if ((actor == null) || actor.isDead())
+				if (actor.isDead())
 				{
 					return;
 				}

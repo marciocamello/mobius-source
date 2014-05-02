@@ -124,10 +124,13 @@ public class EffectKnockDown extends Effect
 				playerNearEffected.sendPacket(new ExAlterSkillRequest(chainSkill, temporalReplaceSkill, 3));
 			}
 		}
+		
 		if (loc == null)
 		{
 			_log.info("EffectKnockDown Loc null check this!");
+			return;
 		}
+		
 		_effected.broadcastPacket(new FlyToLocation(_effected, loc, FlyType.PUSH_DOWN_HORIZONTAL, getSkill().getFlySpeed()));// need to check: if the effected is already knocked down, move the target again?
 		_effected.abortAttack(true, true);
 		_effected.abortCast(true, true);

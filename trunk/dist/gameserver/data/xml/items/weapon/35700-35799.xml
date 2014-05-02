@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<weapon id="35708" name="Lumi Exclusive Weapon">
+		<set name="icon" value="icon.weapon_monster_i00"/>
+		<set name="type" value="BOW"/>
+		<set name="ex_type" value="BOW"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="5"/>
+		<set name="damage_range" value="0;0;10;0"/>
+		<set name="attack_range" value="500"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="D"/>
+		<set name="weight" value="300"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="2"/>
+		<set name="spiritshots" value="2"/>
+		<set name="enchant_enabled" value="1"/>
+		<for/>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+</list>

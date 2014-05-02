@@ -311,7 +311,7 @@ public class LoginServerCommunication extends Thread
 			}
 			catch (IOException e)
 			{
-				_log.error("LoginServer I/O error: " + e.getMessage());
+				_log.error("Could not communicate with login server.");
 			}
 			close();
 			try

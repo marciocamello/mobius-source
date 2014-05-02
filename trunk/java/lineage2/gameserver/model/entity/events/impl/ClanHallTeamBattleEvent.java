@@ -130,6 +130,7 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 		List<CTBTeamObject> teams = getObjects(TRYOUT_PART);
 		boolean hasWinner = false;
 		CTBTeamObject winnerTeam = null;
+		
 		for (CTBTeamObject t : teams)
 		{
 			if (t.isParticle())
@@ -138,10 +139,12 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 				winnerTeam = t;
 			}
 		}
-		if (!hasWinner)
+		
+		if (!hasWinner || (winnerTeam == null))
 		{
 			return;
 		}
+		
 		SiegeClanObject clan = winnerTeam.getSiegeClan();
 		if (clan != null)
 		{
