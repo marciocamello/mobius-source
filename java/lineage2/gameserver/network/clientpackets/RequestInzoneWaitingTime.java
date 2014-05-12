@@ -15,16 +15,11 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExInzoneWaitingInfo;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
  * @author Smo
  */
 public class RequestInzoneWaitingTime extends L2GameClientPacket
 {
-	private static final Logger _log = LoggerFactory.getLogger(RequestInzoneWaitingTime.class);
-	
 	@Override
 	protected void readImpl()
 	{
@@ -40,6 +35,5 @@ public class RequestInzoneWaitingTime extends L2GameClientPacket
 		}
 		
 		player.sendPacket(new ExInzoneWaitingInfo(player));
-		_log.info("[IMPLEMENT ME!] RequestInzoneWaitingTime (maybe trigger)");
 	}
 }
