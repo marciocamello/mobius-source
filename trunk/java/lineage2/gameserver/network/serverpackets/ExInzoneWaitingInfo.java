@@ -15,32 +15,45 @@ package lineage2.gameserver.network.serverpackets;
 import java.util.Map;
 
 import javolution.util.FastMap;
+import lineage2.gameserver.data.xml.holder.InstantZoneHolder;
 import lineage2.gameserver.model.Player;
 
 /**
- * @author Smo
+ * @author KilRoy
  */
 public class ExInzoneWaitingInfo extends L2GameServerPacket
 {
-	private final int _currentInzoneID = -1;
-	Map<Integer, Integer> _instanceTimes;
+	private int instanceZoneId = -1;
+	private final Map<Integer, Integer> collapseInstanceTime;
 	
 	public ExInzoneWaitingInfo(Player player)
 	{
-		_instanceTimes = new FastMap<>();
+		collapseInstanceTime = new FastMap<>();
+		if (player.getActiveReflection() != null)
+		{
+			instanceZoneId = player.getActiveReflection().getInstancedZoneId();
+		}
+		for (int i : player.getInstanceReuses().keySet())
+		{
+			int timeToCollapse = InstantZoneHolder.getInstance().getMinutesToNextEntrance(i, player);
+			if (timeToCollapse > 0)
+			{
+				collapseInstanceTime.put(i, timeToCollapse * 60);
+			}
+		}
 	}
 	
 	@Override
 	protected void writeImpl()
 	{
-		
-		writeEx(0x123);
-		writeD(_currentInzoneID);
-		writeD(_instanceTimes.size());
-		for (int instanceId : _instanceTimes.keySet())
+		writeEx(0x124);
+		writeD(instanceZoneId);
+		writeD(collapseInstanceTime.size());
+		for (Integer integer : collapseInstanceTime.keySet())
 		{
-			writeD(instanceId);
-			writeD(_instanceTimes.get(instanceId));
+			int currentInstanceId = integer.intValue();
+			writeD(currentInstanceId);
+			writeD((collapseInstanceTime.get(currentInstanceId)));
 		}
 	}
 }
