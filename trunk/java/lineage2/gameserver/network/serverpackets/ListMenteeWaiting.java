@@ -12,11 +12,65 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.World;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class ListMenteeWaiting extends L2GameServerPacket
 {
+	public static final Logger _log = LoggerFactory.getLogger(ListMenteeWaiting.class);
+	List<Player> mentees;
+	int page;
+	int playersInPage;
+	
+	public ListMenteeWaiting(Player activeChar, int _page, int minLevel, int maxLevel)
+	{
+		mentees = new ArrayList<>();
+		page = _page;
+		playersInPage = 64;
+		
+		for (Player player : World.getAroundPlayers(activeChar))
+		{
+			int mentorId = player.getMentorSystem().getMentor();
+			// _log.info("players: " + player + " mentee: [" + mentorId + "]");
+			if ((player.getLevel() >= minLevel) && (player.getLevel() <= maxLevel) && (mentorId == 0) && !player.isAwaking())
+			{
+				mentees.add(player);
+			}
+		}
+	}
+	
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0x122);
+		writeEx(0x123);
+		
+		writeD(page);
+		int i;
+		if (!mentees.isEmpty())
+		{
+			writeD(mentees.size());
+			writeD(mentees.size() % playersInPage);
+			i = 1;
+			for (Player player : mentees)
+			{
+				if ((i <= (playersInPage * page)) && (i > (playersInPage * (page - 1))))
+				{
+					writeS(player.getName());
+					writeD(player.getClassId().ordinal());
+					writeD(player.getLevel());
+				}
+			}
+		}
+		else
+		{
+			writeD(0x00);
+			writeD(0x00);
+		}
 	}
 }

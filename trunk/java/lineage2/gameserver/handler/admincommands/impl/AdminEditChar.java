@@ -39,7 +39,7 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Log;
-import lineage2.gameserver.utils.Mentoring;
+import lineage2.gameserver.utils.MentorUtil;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.Util;
 
@@ -49,7 +49,6 @@ import org.apache.commons.lang3.math.NumberUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-@SuppressWarnings("unused")
 public class AdminEditChar implements IAdminCommandHandler
 {
 	/**
@@ -175,7 +174,6 @@ public class AdminEditChar implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
 		if (activeChar.getPlayerAccess().CanRename)
 		{
 			if (fullString.startsWith("admin_settitle"))
@@ -710,9 +708,9 @@ public class AdminEditChar implements IAdminCommandHandler
 				activeChar.sendMessage("You have no target selected.");
 				return false;
 			}
-			if (Mentoring.getTimePenalty(activeChar.getTargetId()) > 0)
+			if (MentorUtil.getTimePenalty(activeChar.getTargetId()) > 0)
 			{
-				Mentoring.setTimePenalty(activeChar.getTargetId(), 0, -1);
+				MentorUtil.setTimePenalty(activeChar.getTargetId(), 0, -1);
 				activeChar.getTarget().getPlayer().sendMessage("Your mentor penalty has been lifted by a GM.");
 				activeChar.sendMessage(activeChar.getTarget().getPlayer().getName() + "'s mentor penalty has been lifted.");
 			}

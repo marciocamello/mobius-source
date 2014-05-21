@@ -48,16 +48,26 @@ public class FriendList extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeC(0x58);
+		writeC(0x75);
 		writeD(_friends.size());
 		for (FriendInfo f : _friends)
 		{
-			writeD(f.objectId);
+			writeD(0x00);
 			writeS(f.name);
 			writeD(f.online);
-			writeD(f.online ? f.objectId : 0);
-			writeD(f.classId);
-			writeD(f.level);
+			if (f.online)
+			{
+				writeD(f.objectId);
+				writeD(f.level);
+				writeD(f.classId);
+			}
+			else
+			{
+				writeD(0);
+				writeD(f.classId);
+				writeD(f.level);
+			}
+			writeS(f.name);
 		}
 	}
 	
