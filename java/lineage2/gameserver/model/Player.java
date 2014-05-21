@@ -118,8 +118,6 @@ import lineage2.gameserver.model.actor.instances.player.BookMarkList;
 import lineage2.gameserver.model.actor.instances.player.FriendList;
 import lineage2.gameserver.model.actor.instances.player.Macro;
 import lineage2.gameserver.model.actor.instances.player.MacroList;
-import lineage2.gameserver.model.actor.instances.player.MenteeMentor;
-import lineage2.gameserver.model.actor.instances.player.MenteeMentorList;
 import lineage2.gameserver.model.actor.instances.player.RecomBonus;
 import lineage2.gameserver.model.actor.instances.player.ShortCut;
 import lineage2.gameserver.model.actor.instances.player.ShortCutList;
@@ -205,7 +203,6 @@ import lineage2.gameserver.network.serverpackets.ExAutoSoulShot;
 import lineage2.gameserver.network.serverpackets.ExBR_AgathionEnergyInfo;
 import lineage2.gameserver.network.serverpackets.ExBR_ExtraUserInfo;
 import lineage2.gameserver.network.serverpackets.ExBasicActionList;
-import lineage2.gameserver.network.serverpackets.ExMentorList;
 import lineage2.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
 import lineage2.gameserver.network.serverpackets.ExOlympiadMatchEnd;
 import lineage2.gameserver.network.serverpackets.ExOlympiadMode;
@@ -306,7 +303,7 @@ import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Language;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
-import lineage2.gameserver.utils.Mentoring;
+import lineage2.gameserver.utils.MentorUtil;
 import lineage2.gameserver.utils.SiegeUtils;
 import lineage2.gameserver.utils.SqlBatch;
 import lineage2.gameserver.utils.Strings;
@@ -801,10 +798,6 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	private final FriendList _friendList = new FriendList(this);
 	/**
-	 * Field _menteeList.
-	 */
-	private final MenteeMentorList _menteeMentorList = new MenteeMentorList(this);
-	/**
 	 * Field _hero.
 	 */
 	private boolean _hero = false;
@@ -1037,6 +1030,10 @@ public final class Player extends Playable implements PlayerGroup
 	 * Field _summonList.
 	 */
 	private final SummonList _summonList = new SummonList(this);
+	/**
+	 * Field mentorSystem.
+	 */
+	private final MentoringSystem mentorSystem;
 	
 	/**
 	 * Constructor for Player.
@@ -1047,6 +1044,7 @@ public final class Player extends Playable implements PlayerGroup
 	public Player(final int objectId, final PlayerTemplate template, final String accountName)
 	{
 		super(objectId, template);
+		mentorSystem = new MentoringSystem(this);
 		_login = accountName;
 		_collision_radius = template.getCollisionRadius();
 		_collision_height = template.getCollisionHeight();
@@ -5381,53 +5379,6 @@ public final class Player extends Playable implements PlayerGroup
 					break;
 				}
 			}
-			int mentorId = getMenteeMentorList().getMentor();
-			if (mentorId != 0)
-			{
-				String mentorName = getMenteeMentorList().getList().get(mentorId).getName();
-				Player mentorPlayer = World.getPlayer(mentorName);
-				if (getMenteeMentorList().someOneOnline(true) && (getLevel() != 86))
-				{
-					Mentoring.applyMenteeBuffs(this);
-					Mentoring.applyMentorBuffs(mentorPlayer);
-				}
-				if (mentorPlayer != null)
-				{
-					if (Mentoring.SIGN_OF_TUTOR.containsKey(getLevel()))
-					{
-						Map<Integer, Long> signOfTutor = new HashMap<Integer, Long>()
-						{
-							/**
-	 * 
-	 */
-							private static final long serialVersionUID = 1L;
-							
-							{
-								put(33804, (long) Mentoring.SIGN_OF_TUTOR.get(getLevel()));
-							}
-						};
-						Mentoring.sendMentorMail(mentorPlayer, signOfTutor);
-					}
-				}
-				if (getLevel() >= 86)
-				{
-					sendPacket(new SystemMessage2(SystemMsg.YOU_REACHED_LEVEL_86_RELATIONSHIP_WITH_S1_CAME_TO_AN_END).addString(mentorName));
-					getMenteeMentorList().remove(mentorName, false, false);
-					sendPacket(new ExMentorList(this));
-					if (mentorPlayer != null)
-					{
-						if (mentorPlayer.isOnline())
-						{
-							mentorPlayer.sendPacket(new SystemMessage2(SystemMsg.THE_MENTEE_S1_HAS_REACHED_LEVEL_86).addName(this));
-							mentorPlayer.getMenteeMentorList().remove(_name, true, false);
-							mentorPlayer.sendPacket(new ExMentorList(mentorPlayer));
-						}
-						Mentoring.setTimePenalty(mentorId, System.currentTimeMillis() + (1 * 24 * 3600 * 1000L), -1);
-					}
-					Mentoring.cancelMenteeBuffs(this);
-					Mentoring.cancelMentorBuffs(mentorPlayer);
-				}
-			}
 		}
 		else if (levels < 0)
 		{
@@ -5440,6 +5391,17 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			getParty().recalculatePartyData();
 		}
+		
+		if (getLevel() > 84)
+		{
+			MentorUtil.removeSkills(this);
+		}
+		
+		if ((((getLevel() >= 85) ? 1 : 0) & ((getVar("GermunkusUSM") == null) ? 1 : 0) & ((!(isAwaking())) ? 1 : 0)) != 0)
+		{
+			AwakingManager.getInstance().SendReqToStartQuest(this);
+		}
+		
 		if (_clan != null)
 		{
 			_clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(this));
@@ -5447,6 +5409,50 @@ public final class Player extends Playable implements PlayerGroup
 		if (_matchingRoom != null)
 		{
 			_matchingRoom.broadcastPlayerUpdate(this);
+		}
+		
+		int mentorId = getMentorSystem().getMentor();
+		if (mentorId != 0)
+		{
+			Player mentorPlayer = World.getPlayer(mentorId);
+			
+			if (mentorPlayer != null)
+			{
+				String mentorName = mentorPlayer.getName();
+				if (MentorUtil.SIGN_OF_TUTOR.containsKey(getLevel()))
+				{
+					Map<Integer, Long> signOfTutor = new HashMap<Integer, Long>()
+					{
+						private static final long serialVersionUID = 1L;
+						{
+							put(33804, (long) MentorUtil.SIGN_OF_TUTOR.get(getLevel()));
+						}
+					};
+					MentorUtil.sendMentorMail(mentorPlayer, _name, signOfTutor);
+				}
+				final SubClass cclass = getActiveSubClass();
+				if ((getLevel() > 84) && cclass.isBase() && getClassId().isOfLevel(ClassLevel.Awaking))
+				{
+					getMentorSystem().remove(mentorName, false, true);
+					sendPacket(new SystemMessage2(SystemMsg.YOU_REACHED_LEVEL_86_RELATIONSHIP_WITH_S1_CAME_TO_AN_END).addString(mentorName));
+					
+					mentorPlayer.sendPacket(new SystemMessage2(SystemMsg.THE_MENTEE_S1_HAS_REACHED_LEVEL_86).addName(this));
+					mentorPlayer.getMentorSystem().remove(_name, true, false);
+					if (mentorPlayer.getMentorSystem().getMenteeInfo().size() == 0)
+					{
+						MentorUtil.removeConditions(mentorPlayer);
+						MentorUtil.removeSkills(mentorPlayer);
+						MentorUtil.removeEffectsFromPlayer(mentorPlayer);
+					}
+					MentorUtil.removeEffectsFromPlayer(this);
+					MentorUtil.setTimePenalty(mentorId, System.currentTimeMillis() + (5 * 24 * 3600 * 1000L), -1);
+					this.setVar("graduateMentoring", "true", -1);
+					MentorUtil.removeConditions(this);
+					MentorUtil.removeSkills(this);
+					MentorUtil.graduateMenteeMail(this);
+				}
+				
+			}
 		}
 		rewardSkills(true, false);
 	}
@@ -6408,7 +6414,8 @@ public final class Player extends Playable implements PlayerGroup
 				player.setActiveSubClass(player.getActiveClassId(), false, 0);
 				player.restoreVitality();
 				player.getInventory().restore();
-				player._menteeMentorList.restore();
+				player.getMentorSystem().restore();
+				
 				try
 				{
 					String var = player.getVar("ExpandInventory");
@@ -13451,67 +13458,6 @@ public final class Player extends Playable implements PlayerGroup
 	}
 	
 	/**
-	 * Method getMenteeMentorList.
-	 * @return _menteeMentorList
-	 */
-	public MenteeMentorList getMenteeMentorList()
-	{
-		return _menteeMentorList;
-	}
-	
-	/**
-	 * Method mentoringLoginConditions.
-	 */
-	public void mentoringLoginConditions()
-	{
-		if (getMenteeMentorList().someOneOnline(true))
-		{
-			getMenteeMentorList().notify(true);
-			
-			if ((getClassId().getId() > 138) && (getLevel() > 85))
-			{
-				Mentoring.applyMentorBuffs(this);
-				for (MenteeMentor mentee : getMenteeMentorList().getList().values())
-				{
-					Player menteePlayer = World.getPlayer(mentee.getName());
-					Mentoring.applyMenteeBuffs(menteePlayer);
-				}
-			}
-			else
-			{
-				Mentoring.applyMenteeBuffs(this);
-				Player mentorPlayer = World.getPlayer(getMenteeMentorList().getMentor());
-				Mentoring.applyMentorBuffs(mentorPlayer);
-			}
-		}
-	}
-	
-	/**
-	 * Method mentoringLogoutConditions.
-	 */
-	public void mentoringLogoutConditions()
-	{
-		if (getMenteeMentorList().someOneOnline(false))
-		{
-			getMenteeMentorList().notify(false);
-			
-			if ((getClassId().getId() > 138) && (getLevel() > 85))
-			{
-				for (MenteeMentor mentee : getMenteeMentorList().getList().values())
-				{
-					Player menteePlayer = World.getPlayer(mentee.getName());
-					Mentoring.cancelMenteeBuffs(menteePlayer);
-				}
-			}
-			else
-			{
-				Player mentorPlayer = World.getPlayer(getMenteeMentorList().getMentor());
-				Mentoring.cancelMentorBuffs(mentorPlayer);
-			}
-		}
-	}
-	
-	/**
 	 * Method isNotShowTraders.
 	 * @return boolean
 	 */
@@ -14942,6 +14888,46 @@ public final class Player extends Playable implements PlayerGroup
 			valueToUpdate += itemId + ";";
 		}
 		setVar(ProductHolder.RECENT_PRDCT_LIST_VAR, valueToUpdate, -1);
+	}
+	
+	public MentoringSystem getMentorSystem()
+	{
+		return mentorSystem;
+	}
+	
+	public void mentoringLoginConditions()
+	{
+		if (getMentorSystem().whoIsOnline(true))
+		{
+			getMentorSystem().notify(true);
+			MentorUtil.applyMentoringConditions(this);
+		}
+	}
+	
+	public void mentoringLogoutConditions()
+	{
+		if (getMentorSystem().whoIsOnline(false))
+		{
+			getMentorSystem().notify(false);
+			MentorUtil.removeConditions(this);
+		}
+	}
+	
+	public boolean isMentee()
+	{
+		// return (!isMentor()) && ((getWarehouse().getItemByObjectId(33800) != null) || (getInventory().getItemByItemId(33800) != null));
+		// TODO Check player if have Mentor
+		return (!isMentor());
+	}
+	
+	public boolean isGraduateMentoring()
+	{
+		return Boolean.parseBoolean(getVar("graduateMentoring"));
+	}
+	
+	public boolean isMentor()
+	{
+		return (isAwaking()) && (getLevel() > 84);
 	}
 	
 }

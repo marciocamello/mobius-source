@@ -15,7 +15,7 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.ExMentorList;
-import lineage2.gameserver.utils.Mentoring;
+import lineage2.gameserver.utils.MentorUtil;
 
 /**
  * @author Mobius
@@ -26,7 +26,6 @@ public class RequestMentorCancel extends L2GameClientPacket
 	/**
 	 * Field _mtype.
 	 */
-	@SuppressWarnings("unused")
 	private int _mtype;
 	/**
 	 * Field _charName.
@@ -50,35 +49,16 @@ public class RequestMentorCancel extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
-		int mentorId = activeChar.getMenteeMentorList().getMentor();
-		if (mentorId != 0)
+		Player menteeChar = World.getPlayer(_charName);
+		
+		activeChar.getMentorSystem().remove(_charName, _mtype == 1, true);
+		activeChar.sendPacket(new ExMentorList(activeChar));
+		if ((menteeChar != null) && (menteeChar.isOnline()))
 		{
-			String mentorName = activeChar.getMenteeMentorList().getList().get(mentorId).getName();
-			Player mentorChar = World.getPlayer(mentorName);
-			mentorChar.getMenteeMentorList().remove(activeChar.getName(), true, true);
-			mentorChar.sendPacket(new ExMentorList(mentorChar));
-			if (activeChar.isOnline())
-			{
-				activeChar.getMenteeMentorList().remove(mentorChar.getName(), false, false);
-				activeChar.sendPacket(new ExMentorList(activeChar));
-			}
-			Mentoring.cancelMentorBuffs(mentorChar);
-			Mentoring.cancelMenteeBuffs(activeChar);
-			Mentoring.setTimePenalty(mentorChar.getObjectId(), System.currentTimeMillis() + (2 * 24 * 3600 * 1000L), -1);
+			menteeChar.getMentorSystem().remove(activeChar.getName(), _mtype != 1, false);
+			menteeChar.sendPacket(new ExMentorList(menteeChar));
 		}
-		else
-		{
-			Player menteeChar = World.getPlayer(_charName);
-			activeChar.getMenteeMentorList().remove(_charName, true, true);
-			activeChar.sendPacket(new ExMentorList(activeChar));
-			if ((menteeChar != null) && menteeChar.isOnline())
-			{
-				menteeChar.getMenteeMentorList().remove(activeChar.getName(), false, false);
-				menteeChar.sendPacket(new ExMentorList(menteeChar));
-			}
-			Mentoring.cancelMentorBuffs(activeChar);
-			Mentoring.cancelMenteeBuffs(menteeChar);
-			Mentoring.setTimePenalty(activeChar.getObjectId(), System.currentTimeMillis() + (2 * 24 * 3600 * 1000L), -1);
-		}
+		MentorUtil.removeConditions(activeChar);
+		MentorUtil.setTimePenalty((_mtype == 1) ? activeChar.getObjectId() : activeChar.getMentorSystem().getMentor(), System.currentTimeMillis() + (2 * 24 * 3600 * 1000L), -1);
 	}
 }

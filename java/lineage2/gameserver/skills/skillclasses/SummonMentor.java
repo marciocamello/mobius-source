@@ -101,25 +101,21 @@ public class SummonMentor extends Skill
 			return;
 		}
 		Player player = (Player) activeChar;
-		int mentorId = player.getMenteeMentorList().getMentor();
-		String mentorName = null;
+		int mentorId = player.getMentorSystem().getMentor();
 		if (mentorId != 0)
 		{
-			mentorName = player.getMenteeMentorList().getList().get(mentorId).getName();
-		}
-		Player mentor;
-		if (mentorName != null)
-		{
-			mentor = World.getPlayer(mentorName);
+			Player mentor = World.getPlayer(mentorId);
+			
 			if (mentor == null)
 			{
 				return;
 			}
+			
+			mentor.ask(new ConfirmDlg(SystemMsg.S1, 30000).addString("Teleport to Mentee? " + activeChar.getName()), new MentorAnswerListener(mentor, activeChar.getName()));
 		}
 		else
 		{
 			return;
 		}
-		mentor.ask(new ConfirmDlg(SystemMsg.S1, 30000).addString("Teleport to Mentee? " + activeChar.getName()), new MentorAnswerListener(mentor, activeChar.getName()));
 	}
 }

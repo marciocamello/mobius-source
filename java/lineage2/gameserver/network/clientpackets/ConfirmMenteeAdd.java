@@ -17,7 +17,7 @@ import lineage2.gameserver.model.Request;
 import lineage2.gameserver.network.serverpackets.ExMentorList;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
-import lineage2.gameserver.utils.Mentoring;
+import lineage2.gameserver.utils.MentorUtil;
 
 /**
  * @author Mobius
@@ -29,11 +29,6 @@ public class ConfirmMenteeAdd extends L2GameClientPacket
 	 * Field _answer.
 	 */
 	private int _answer;
-	/**
-	 * Field _mentorName.
-	 */
-	@SuppressWarnings("unused")
-	private String _mentorName;
 	
 	/**
 	 * Method readImpl.
@@ -42,7 +37,7 @@ public class ConfirmMenteeAdd extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_answer = readD();
-		_mentorName = readS();
+		readS();
 	}
 	
 	/**
@@ -103,12 +98,15 @@ public class ConfirmMenteeAdd extends L2GameClientPacket
 		}
 		try
 		{
-			requestor.getMenteeMentorList().addMentee(activeChar);
-			activeChar.getMenteeMentorList().addMentor(requestor);
+			requestor.getMentorSystem().addMentee(activeChar);
+			activeChar.getMentorSystem().addMentor(requestor);
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTOR).addName(requestor), new ExMentorList(activeChar));
 			requestor.sendPacket(new SystemMessage2(SystemMsg.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTEE).addName(activeChar), new ExMentorList(requestor));
-			Mentoring.applyMenteeBuffs(activeChar);
-			Mentoring.applyMentorBuffs(requestor);
+			MentorUtil.applyMentoringConditions(requestor);
+			MentorUtil.applyMentoringConditions(activeChar);
+			MentorUtil.addSkillsToMentor(requestor);
+			MentorUtil.addSkillsToMentee(activeChar);
+			MentorUtil.newMenteeMail(activeChar);
 		}
 		finally
 		{

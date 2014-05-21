@@ -12,28 +12,31 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
+import lineage2.gameserver.model.Player;
+import lineage2.gameserver.network.serverpackets.ListMenteeWaiting;
+
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
  */
 public class RequestMenteeWaitingList extends L2GameClientPacket
 {
-	/**
-	 * Method readImpl.
-	 */
+	private int _minLevel;
+	private int _maxLevel;
+	private int _page;
+	
 	@Override
 	protected void readImpl()
 	{
-		readD();
-		readD();
-		readD();
+		_page = readD();
+		_minLevel = readD();
+		_maxLevel = readD();
 	}
 	
-	/**
-	 * Method runImpl.
-	 */
 	@Override
 	protected void runImpl()
 	{
+		Player activeChar = getClient().getActiveChar();
+		activeChar.sendPacket(new ListMenteeWaiting(activeChar, _page, _minLevel, _maxLevel));
 	}
 }
