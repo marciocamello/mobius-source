@@ -1883,11 +1883,11 @@
 		<table name="#consume">0.5 0.4 0.3 0.2</table>
 		<table name="#reuse">0.95 0.9 0.85 0.8</table>
 		<table name="#magicLevel">85 86 87 88</table>
-		<table name="#mpConsume2">247 248 249 251</table>
+		<table name="#mpConsume2">210 231 255 276</table>
 		<table name="#time">30</table>
 		<table name="#matk">1</table>
 		<set name="reuseDelay" val="180000"/>
-		<set name="hitTime" val="1500"/>
+		<set name="hitTime" val="2000"/>
 		<set name="relationSkillsId" val="434;1238;1232;1047;1078;1457;1338;"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -1896,16 +1896,22 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="aggroPoints" val="#aggroPoints"/>
-		<enchant1 levels="10" name="Cost"/>
+		<enchant1 levels="10" name="Cost">
+			<table name="#mpConsume2">267 258 249 240 231 222 213 204 196 187</table>
+			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant1>
 		<enchant2 levels="10" name="Time">
 			<table name="#time">31 32 33 34 35 36 37 38 39 40</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant2>
 		<enchant3 levels="10" name="Empower">
-			<table name="#time">1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1</table>
+			<table name="#time">30</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+			<table name="#matk">1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1</table>
 		</enchant3>
-		<enchant4 levels="10" name="Chance Fear"/>
+		<enchant4 levels="10" name="Chance Fear">
+			<table name="#fearRate">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant4>
 		<for>
 			<effect name="Buff" time="#time" val="0" stackOrder="1" stackType="double_casting">
 				<mul order="0x40" stat="mReuse" val="#reuse"/>
