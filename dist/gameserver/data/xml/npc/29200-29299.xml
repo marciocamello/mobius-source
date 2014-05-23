@@ -219,7 +219,7 @@
 		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="1"/>
-		<set name="collision_height" value="5.0"/>
+		<set name="collision_height" value="30.0"/>
 		<set name="collision_radius" value="17.0"/>
 		<set name="level" value="99"/>
 		<set name="rewardExp" value="0"/>
@@ -319,7 +319,7 @@
 		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="1"/>
-		<set name="collision_height" value="55.0"/>
+		<set name="collision_height" value="64.0"/>
 		<set name="collision_radius" value="42.0"/>
 		<set name="level" value="99"/>
 		<set name="rewardExp" value="0"/>
@@ -367,7 +367,7 @@
 		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="1"/>
-		<set name="collision_height" value="54.5"/>
+		<set name="collision_height" value="55.0"/>
 		<set name="collision_radius" value="19.0"/>
 		<set name="level" value="99"/>
 		<set name="rewardExp" value="0"/>
@@ -415,7 +415,7 @@
 		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="1"/>
-		<set name="collision_height" value="54.5"/>
+		<set name="collision_height" value="55.0"/>
 		<set name="collision_radius" value="19.0"/>
 		<set name="level" value="99"/>
 		<set name="rewardExp" value="0"/>
@@ -721,7 +721,7 @@
 		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="1"/>
-		<set name="collision_height" value="43.5"/>
+		<set name="collision_height" value="44.0"/>
 		<set name="collision_radius" value="36.0"/>
 		<set name="level" value="97"/>
 		<set name="rewardExp" value="0"/>
@@ -962,7 +962,7 @@
 		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="1"/>
-		<set name="collision_height" value="25.0"/>
+		<set name="collision_height" value="30.0"/>
 		<set name="collision_radius" value="15.0"/>
 		<set name="level" value="98"/>
 		<set name="rewardExp" value="0"/>
@@ -1010,7 +1010,7 @@
 		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="1"/>
-		<set name="collision_height" value="54.5"/>
+		<set name="collision_height" value="55.0"/>
 		<set name="collision_radius" value="19.0"/>
 		<set name="level" value="99"/>
 		<set name="rewardExp" value="0"/>
@@ -1204,7 +1204,7 @@
 		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="1"/>
-		<set name="collision_height" value="54.0"/>
+		<set name="collision_height" value="55.0"/>
 		<set name="collision_radius" value="63.0"/>
 		<set name="level" value="97"/>
 		<set name="rewardExp" value="0"/>
@@ -1255,7 +1255,7 @@
 		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="1"/>
-		<set name="collision_height" value="54.0"/>
+		<set name="collision_height" value="55.0"/>
 		<set name="collision_radius" value="63.0"/>
 		<set name="level" value="97"/>
 		<set name="rewardExp" value="0"/>
@@ -1354,7 +1354,7 @@
 		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="1"/>
-		<set name="collision_height" value="34.5"/>
+		<set name="collision_height" value="35.0"/>
 		<set name="collision_radius" value="42.0"/>
 		<set name="level" value="99"/>
 		<set name="rewardExp" value="0"/>
@@ -1500,7 +1500,7 @@
 		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="1"/>
-		<set name="collision_height" value="44.0"/>
+		<set name="collision_height" value="50.0"/>
 		<set name="collision_radius" value="40.0"/>
 		<set name="level" value="97"/>
 		<set name="rewardExp" value="0"/>
