@@ -13,7 +13,6 @@
 package quests;
 
 import lineage2.commons.util.Rnd;
-import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -27,18 +26,25 @@ import org.apache.commons.lang3.ArrayUtils;
 
 public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 {
+	// NPC
 	private static int ADLER = 32497;
 	private static int ADLER2 = 32510;
 	private static int SINAI = 32500;
 	private static int TINSPECTOR = 32507;
+	
+	// BOSS
 	private static int HILLAS = 18610;
 	private static int PAPION = 18609;
 	private static int GARGOS = 18607;
 	private static int KINSUS = 18608;
 	private static int ADIANTUM = 18620;
+	
+	// MOBS
 	private static int Bloom = 18616;
 	private static int CrystalWaterBottle = 32492;
 	private static int BurningBrazier = 32493;
+	
+	// ITEMS
 	private static int PailakaInstantShield = 13032;
 	private static int QuickHealingPotion = 13033;
 	private static int FireAttributeEnhancer = 13040;
@@ -48,6 +54,7 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 	private static int SwordofIceandFire = 13036;
 	private static int EssenceofWater = 13038;
 	private static int EssenceofFire = 13039;
+	
 	private static int TempleBookofSecrets1 = 13130;
 	private static int TempleBookofSecrets2 = 13131;
 	private static int TempleBookofSecrets3 = 13132;
@@ -55,21 +62,13 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 	private static int TempleBookofSecrets5 = 13134;
 	private static int TempleBookofSecrets6 = 13135;
 	private static int TempleBookofSecrets7 = 13136;
-	private static int[] REWARDS =
-	{
-		32164,
-		32163,
-		32132,
-		31700,
-		31859,
-		31708,
-		31940,
-		31857,
-		31602,
-		31752,
-		31889,
-		31604
-	};
+	
+	// REWARDS
+	private static int PailakaRing = 13294;
+	private static int PailakaEarring = 13293;
+	private static int ScrollofEscape = 736;
+	private static int Adena = 57;
+	
 	private static int[] MOBS = new int[]
 	{
 		18611,
@@ -90,11 +89,13 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 		8604,
 		8605
 	};
+	
 	private static final int izId = 43;
 	
 	public _128_PailakaSongofIceandFire()
 	{
 		super(false);
+		
 		addStartNpc(ADLER);
 		addTalkId(ADLER2, SINAI);
 		addFirstTalkId(TINSPECTOR);
@@ -111,6 +112,7 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 		Player player = st.getPlayer();
 		int refId = player.getReflectionId();
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("Enter"))
 		{
 			enterInstance(player);
@@ -167,13 +169,14 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("32510-02.htm"))
 		{
-			st.giveItems(REWARDS[Rnd.get(REWARDS.length)], 1, false);
+			st.giveItems(PailakaRing, 1);
+			st.giveItems(PailakaEarring, 1);
+			st.giveItems(ScrollofEscape, 1);
+			st.giveItems(Adena, 187200);
 			st.addExpAndSp(1860000, 480000);
-			st.giveItems(ADENA_ID, 187200);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 			player.getReflection().startCollapseTimer(60000);
-			player.setVitality(Config.MAX_VITALITY);
 		}
 		return htmltext;
 	}
@@ -190,7 +193,7 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 		{
 			if (cond == 0)
 			{
-				if ((player.getLevel() < 49) || (player.getLevel() > 55))
+				if ((player.getLevel() < 36) || (player.getLevel() > 49))
 				{
 					htmltext = "32497-no.htm";
 					st.exitCurrentQuest(true);
