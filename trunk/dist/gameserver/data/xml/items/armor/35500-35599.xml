@@ -35,6 +35,8 @@
 			<skill id="8870" level="1"/>
 		</skills>
 		<for>
+			<add stat="defenceUnholy" order="0x10" value="25"/>
+			<add stat="defenceFire" order="0x10" value="25"/>
 			<add stat="mDef" order="0x10" value="94"/>
 			<add stat="maxMp" order="0x10" value="38"/>
 			<enchant stat="mDef" order="0x40" value="0"/>
