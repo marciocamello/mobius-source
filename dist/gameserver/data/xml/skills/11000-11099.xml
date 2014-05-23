@@ -1905,7 +1905,6 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant2>
 		<enchant3 levels="10" name="Empower">
-			<table name="#time">30</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 			<table name="#matk">1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1</table>
 		</enchant3>
