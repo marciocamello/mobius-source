@@ -512,7 +512,8 @@
 	</etcitem>
 	<etcitem id="34949" name="Letter Collector's Gift (8th Anniversary)" add_name="Event">
 		<set name="icon" value="icon.shield_bread_i02"/>
-		<set name="type" value="OTHER"/>
+		<set name="type" value="SCROLL"/>
+		<set name="class" value="CONSUMABLE"/>
 		<set name="weight" value="5"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -522,6 +523,9 @@
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
 		<set name="stackable" value="true"/>
+		<skills>
+			<skill id="9438" level="1"/>
+		</skills>
 	</etcitem>
 	<etcitem id="34950" name="Lv4 Giant Dye Pack" add_name="Event">
 		<set name="icon" value="icon.present_of_destination_event"/>
@@ -1060,6 +1064,36 @@
 		<set name="weight" value="0"/>
 		<skills>
 			<skill id="26068" level="2"/>
+		</skills>
+	</etcitem>
+	<etcitem id="34996" name="Cloak of Radiant Light">
+		<set name="freightable" value="true"/>
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="B"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_pack_of_blessed_spiritshot_b_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="500"/>
+		<skills>
+			<skill id="26068" level="3"/>
+		</skills>
+	</etcitem>
+	<etcitem id="34997" name="Cloak of Cold Darkness">
+		<set name="freightable" value="true"/>
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="A"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="br_cashtex.item.br_cash_pack_of_blessed_spiritshot_a_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="500"/>
+		<skills>
+			<skill id="26068" level="4"/>
 		</skills>
 	</etcitem>
 	<etcitem id="34998" name="Tauti's One-handed Axe">
