@@ -152,10 +152,16 @@
 		<set name="icon" value="BranchSys.br_rudolf_food_orange_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
+		<skills>
+			<skill id="8864" level="1"/>
+		</skills>
 	</armor>
 	<armor id="34985" name="Talisman of Destruction">
 		<set name="crystal_type" value="NONE"/>
@@ -227,8 +233,8 @@
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
 		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
 		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
