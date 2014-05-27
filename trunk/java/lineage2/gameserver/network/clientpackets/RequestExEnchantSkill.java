@@ -33,14 +33,9 @@ import lineage2.gameserver.utils.Log;
  */
 public class RequestExEnchantSkill extends L2GameClientPacket
 {
-	/**
-	 * Field _skillId.
-	 */
 	private int _skillId;
-	/**
-	 * Field _skillLvl.
-	 */
 	private int _skillLvl;
+	private int _type;
 	
 	/**
 	 * Method readImpl.
@@ -48,6 +43,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
+		_type = readD();
 		_skillId = readD();
 		_skillLvl = readD();
 	}
@@ -58,6 +54,21 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
+		switch (_type)
+		{
+			case 0:
+				break;
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+		
+		}
+		
 		Player activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
