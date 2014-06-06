@@ -36,6 +36,7 @@
 		<skills>
 			<skill id="2220" level="1"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7727" name="Small Green Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -49,6 +50,7 @@
 		<skills>
 			<skill id="2220" level="2"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7728" name="Small Green Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -62,6 +64,7 @@
 		<skills>
 			<skill id="2220" level="3"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7729" name="Green Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -75,6 +78,7 @@
 		<skills>
 			<skill id="2220" level="4"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7730" name="Green Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -88,6 +92,7 @@
 		<skills>
 			<skill id="2220" level="5"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7731" name="Green Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -101,6 +106,7 @@
 		<skills>
 			<skill id="2220" level="6"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7732" name="Large Green Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -114,6 +120,7 @@
 		<skills>
 			<skill id="2220" level="7"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7733" name="Large Green Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -127,6 +134,7 @@
 		<skills>
 			<skill id="2220" level="8"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7734" name="Large Green Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -140,6 +148,7 @@
 		<skills>
 			<skill id="2220" level="9"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7735" name="Small Jade Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -153,6 +162,7 @@
 		<skills>
 			<skill id="2221" level="1"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7736" name="Small Jade Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -166,6 +176,7 @@
 		<skills>
 			<skill id="2221" level="2"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7737" name="Small Jade Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -179,6 +190,7 @@
 		<skills>
 			<skill id="2221" level="3"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7738" name="Jade Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -192,6 +204,7 @@
 		<skills>
 			<skill id="2221" level="4"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7739" name="Jade Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -205,6 +218,7 @@
 		<skills>
 			<skill id="2221" level="5"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7740" name="Jade Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -218,6 +232,7 @@
 		<skills>
 			<skill id="2221" level="6"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7741" name="Large Jade Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -231,6 +246,7 @@
 		<skills>
 			<skill id="2221" level="7"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7742" name="Large Jade Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -244,6 +260,7 @@
 		<skills>
 			<skill id="2221" level="8"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7743" name="Large Jade Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -257,6 +274,7 @@
 		<skills>
 			<skill id="2221" level="9"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7744" name="Small Blue Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -270,6 +288,7 @@
 		<skills>
 			<skill id="2222" level="1"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7745" name="Small Blue Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -283,6 +302,7 @@
 		<skills>
 			<skill id="2222" level="2"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7746" name="Small Blue Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -296,6 +316,7 @@
 		<skills>
 			<skill id="2222" level="3"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7747" name="Blue Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -309,6 +330,7 @@
 		<skills>
 			<skill id="2222" level="4"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7748" name="Blue Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -322,6 +344,7 @@
 		<skills>
 			<skill id="2222" level="5"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7749" name="Blue Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -335,6 +358,7 @@
 		<skills>
 			<skill id="2222" level="6"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7750" name="Large Blue Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -348,6 +372,7 @@
 		<skills>
 			<skill id="2222" level="7"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7751" name="Large Blue Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -361,6 +386,7 @@
 		<skills>
 			<skill id="2222" level="8"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7752" name="Large Blue Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -374,6 +400,7 @@
 		<skills>
 			<skill id="2222" level="9"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7753" name="Small Yellow Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -387,6 +414,7 @@
 		<skills>
 			<skill id="2223" level="1"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7754" name="Small Yellow Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -400,6 +428,7 @@
 		<skills>
 			<skill id="2223" level="2"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7755" name="Small Yellow Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -413,6 +442,7 @@
 		<skills>
 			<skill id="2223" level="3"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7756" name="Yellow Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -426,6 +456,7 @@
 		<skills>
 			<skill id="2223" level="4"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7757" name="Yellow Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -439,6 +470,7 @@
 		<skills>
 			<skill id="2223" level="5"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7758" name="Yellow Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -452,6 +484,7 @@
 		<skills>
 			<skill id="2223" level="6"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7759" name="Large Yellow Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -465,6 +498,7 @@
 		<skills>
 			<skill id="2223" level="7"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7760" name="Large Yellow Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -478,6 +512,7 @@
 		<skills>
 			<skill id="2223" level="8"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7761" name="Large Yellow Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -491,6 +526,7 @@
 		<skills>
 			<skill id="2223" level="9"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7762" name="Small Orange Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -504,6 +540,7 @@
 		<skills>
 			<skill id="2224" level="1"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7763" name="Small Orange Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -517,6 +554,7 @@
 		<skills>
 			<skill id="2224" level="2"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7764" name="Small Orange Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -530,6 +568,7 @@
 		<skills>
 			<skill id="2224" level="3"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7765" name="Orange Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -543,6 +582,7 @@
 		<skills>
 			<skill id="2224" level="4"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7766" name="Orange Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -556,6 +596,7 @@
 		<skills>
 			<skill id="2224" level="5"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7767" name="Orange Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -569,6 +610,7 @@
 		<skills>
 			<skill id="2224" level="6"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7768" name="Large Orange Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -582,6 +624,7 @@
 		<skills>
 			<skill id="2224" level="7"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7769" name="Large Orange Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -595,6 +638,7 @@
 		<skills>
 			<skill id="2224" level="8"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7770" name="Large Orange Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -608,6 +652,7 @@
 		<skills>
 			<skill id="2224" level="9"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7771" name="Small Purple Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -621,6 +666,7 @@
 		<skills>
 			<skill id="2225" level="1"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7772" name="Small Purple Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -634,6 +680,7 @@
 		<skills>
 			<skill id="2225" level="2"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7773" name="Small Purple Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -647,6 +694,7 @@
 		<skills>
 			<skill id="2225" level="3"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7774" name="Purple Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -660,6 +708,7 @@
 		<skills>
 			<skill id="2225" level="4"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7775" name="Purple Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -673,6 +722,7 @@
 		<skills>
 			<skill id="2225" level="5"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7776" name="Purple Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -686,6 +736,7 @@
 		<skills>
 			<skill id="2225" level="6"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7777" name="Large Purple Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -699,6 +750,7 @@
 		<skills>
 			<skill id="2225" level="7"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7778" name="Large Purple Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -712,6 +764,7 @@
 		<skills>
 			<skill id="2225" level="8"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7779" name="Large Purple Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -725,6 +778,7 @@
 		<skills>
 			<skill id="2225" level="9"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7780" name="Small Red Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -738,6 +792,7 @@
 		<skills>
 			<skill id="2226" level="1"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7781" name="Small Red Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -751,6 +806,7 @@
 		<skills>
 			<skill id="2226" level="2"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7782" name="Small Red Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -764,6 +820,7 @@
 		<skills>
 			<skill id="2226" level="3"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7783" name="Red Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -777,6 +834,7 @@
 		<skills>
 			<skill id="2226" level="4"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7784" name="Red Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -790,6 +848,7 @@
 		<skills>
 			<skill id="2226" level="5"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7785" name="Red Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -803,6 +862,7 @@
 		<skills>
 			<skill id="2226" level="6"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7786" name="Large Red Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -816,6 +876,7 @@
 		<skills>
 			<skill id="2226" level="7"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7787" name="Large Red Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -829,6 +890,7 @@
 		<skills>
 			<skill id="2226" level="8"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7788" name="Large Red Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -842,6 +904,7 @@
 		<skills>
 			<skill id="2226" level="9"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7789" name="Small White Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -855,6 +918,7 @@
 		<skills>
 			<skill id="2227" level="1"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7790" name="Small White Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -868,6 +932,7 @@
 		<skills>
 			<skill id="2227" level="2"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7791" name="Small White Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -881,6 +946,7 @@
 		<skills>
 			<skill id="2227" level="3"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7792" name="White Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -894,6 +960,7 @@
 		<skills>
 			<skill id="2227" level="4"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7793" name="White Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -907,6 +974,7 @@
 		<skills>
 			<skill id="2227" level="5"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7794" name="White Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -920,6 +988,7 @@
 		<skills>
 			<skill id="2227" level="6"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7795" name="Large White Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -933,6 +1002,7 @@
 		<skills>
 			<skill id="2227" level="7"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7796" name="Large White Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -946,6 +1016,7 @@
 		<skills>
 			<skill id="2227" level="8"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7797" name="Large White Fat Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -959,6 +1030,7 @@
 		<skills>
 			<skill id="2227" level="9"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7798" name="Small Black Nimble Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -972,6 +1044,7 @@
 		<skills>
 			<skill id="2228" level="1"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="7799" name="Small Black Ugly Fish (Novice)">
 		<set name="class" value="OTHER"/>
@@ -985,5 +1058,6 @@
 		<skills>
 			<skill id="2228" level="2"/>
 		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 </list>
