@@ -18,225 +18,188 @@ public class ExBasicActionList extends L2GameServerPacket
 {
 	private static final int[] BasicActions =
 	{
-		0, // Переключатель
-			// Сесть/Встать. (/sit,
-			// /stand)
-		1, // Переключатель Ходьба/Бег. (/walk, /run)
-		2, // Атака выбранной цели (целей). Щелкните с зажатой клавишей
-			// Ctrl, чтобы принудительно атаковать. (/attack, /attackforce)
-		3, // Запрос торговли с выбранным игроком. (/trade)
-		4, // Выбор ближайшей цели для атаки. (/targetnext)
-		5, // Подобрать предметы, расположенные рядом. (/pickup)
-		6, // Переключиться на цель выбранного игрока. (/assist)
-		7, // Пригласить выбранного игрока в вашу группу. (/invite)
-		8, // Покинуть группу. (/leave)
-		9, // Если вы лидер группы, исключить выбранного игрока (игроков) из
-			// группы. (/dismiss)
-		10, // Настроить личный магазин для продажи предметов.(/vendor)
-		11, // Отобразить окно "Подбор Группы" для поиска групп или членов
-			// для вашей группы. (/partymatching)
-		12, // Эмоция: Поприветствовать окружающих. (/socialhello)
-		13, // Эмоция: Показать, что вы или кто-то еще одержал
-			// победу!(/socialvictory)
-		14, // Эмоция: Вдохновить ваших союзников (/socialcharge)
-		15, // Ваш питомец либо следует за вами, либо остается на месте.
-		16, // Атаковать цель.
-		17, // Прервать текущее действие.
-		18, // Подобрать находящиеся рядом предметы.
-		19, // Убирает Питомца в инвентарь.
-		20, // Использовать особое умение.
-		21, // Ваши Миньоны либо следуют за вами, либо остаются на месте.
-		22, // Атаковать цель.
-		23, // Прервать текущее действие.
-		24, // Эмоция: Ответить утвердительно. (/socialyes)
-		25, // Эмоция: Ответить отрицательно. (/socialno)
-		26, // Эмоция: Поклон, в знак уважения. (/socialbow)
-		27, // Использовать особое умение.
-		28, // Настроить личный магазин для покупки предметов. (/buy)
-		29, // Эмоция: Я не понимаю, что происходит. (/socialunaware)
-		30, // Эмоция: Я жду... (/socialwaiting)
-		31, // Эмоция: От души посмеяться. (/sociallaugh)
-		32, // Переключение между режимами атаки/движения.
-		33, // Эмоция: Аплодисменты. (/socialapplause)
-		34, // Эмоция: Покажите всем ваш лучший танец. (/socialdance)
-		35, // Эмоция: Мне грустно. (/socialsad)
-		36, // Ядовитая Газовая Атака.
-		37, // Настроить личную мастерскую для создания предметов с помощью
-			// рецептов Гномов за вознаграждение. (/dwarvenmanufacture)
-		38, // Переключатель оседлать/спешиться, когда вы находитесь рядом с
-			// Питомцем, которого можно оседлать. (/mount, /dismount,
-			// /mountdismount)
-		39, // Атака взрывающимися трупами.
-		40, // Увеличивает оценку цели (/evaluate)
-		41, // Атаковать врата замка, стены или штабы выстрелом из пушки.
-		42, // Возвращает урон обратно врагу.
-		43, // Атаковать врага, создав бурлящий водоворот.
-		44, // Атаковать врага мощным взрывом.
-		45, // Восстанавливает MP призывателя.
-		46, // Атаковать врага, призвав разрушительный шторм.
-		47, // Одновременно повреждает врага и лечит слугу.
-		48, // Атака врага выстрелом из пушки.
-		49, // Атака в приступе ярости.
-		50, // Выбранный член группы становится ее
-			// лидером.(/changepartyleader)
-		51, // Создать предмет, используя обычный рецепт за
-			// вознаграждение.(/generalmanufacture)
-		52, // Снимает узы с миньона и освобождает его.
-		53, // Двигаться к цели.
-		54, // Двигаться к цели.
-		55, // Переключатель записи и остановки записи повторов.
-			// (/start_videorecording, /end_videorecording,
-			// /startend_videorecording)
-		56, // Пригласить выбранную цель в канал команды. (/channelinvite)
-		57, // Высвечивает сообщения личного магазина и личной мастерской,
-			// содержащие искомое слово. (/findprivatestore)
-		58, // Вызвать другого игрока на дуэль. (/duel)
-		59, // Отмена дуэли означает проигрыш. (/withdraw)
-		60, // Вызвать другую группу на дуэль. (/partyduel)
-		61, // Открывает личный магазин для продажи упаковок (/packagesale)
-		62, // Обаятельная поза(/charm)
-		63, // Запускает забавную и простую мини-игру, в которую можно
-			// поиграть в любое время. (команда: /minigame)
-		64, // Открывает окно свободного телепорта, которое позволяет
-			// свободно перемещаться между локациями с телепортами.
-			// (команда: /teleportbookmark)
-		65, // Сообщает о подозрительном поведении объекта, чьи действия
-			// позволяют предположить использование бот-программы.
-		66, // Поза "Смущение" (команда: /shyness)
-		67, // Управление кораблем
-		68, // Прекращение управления кораблем
-		69, // Отправление корабля
-		70, // Спуск с корабля
-		71, // Поклон
-		72, // Дай Пять
-		73, // Танец Вдвоем
-		74, // Вкл/Выкл данные о состоянии
-		75, // Tactical Sign: Heart
-		76, // Приглашение друга
-		77, // Вкл/Выкл. Запись
-		78, // Использование Знака 1
-		79, // Использование Знака 2
-		80, // Использование Знака 3
-		81, // Использование Знака 4
-		82, // Автоприцел Знаком 1
-		83, // Автоприцел Знаком 2
-		84, // Автоприцел Знаком 3
-		85, // Автоприцел Знаком 4
-		86, // Начать/прервать автоматический поиск группы
-		87, // Propose
-		88, // Provoke
-		1000, // Атаковать врата замка, стены и штабы мощным ударом.
-		1001, // Безрассудная, но мощная атака, используйте ее с большой
-				// осторожностью.
-		1002, // Провоцировать окружающих атаковать вас.
-		1003, // Неожиданная атака, наносящая урон и оглушающая оппонента.
-		1004, // Моментально значительно увеличивается Физ. Защ. и Маг. Защ.
-				// Использующий данное умение персонаж не может двигаться.
-		1005, // Магическая Атака
-		1006, // Восстанавливает HP питомца.
-		1007, // В случае успешного применения временно увеличивает силу
-				// атаки группы и шанс на критический удар.
-		1008, // Временно увеличивает Физ. Атк. и точность вашей группы.
-		1009, // Есть шанс снять проклятие с членов группы.
-		1010, // Временно увеличивает регенерацию MP вашей группы.
-		1011, // Временно уменьшает время перезарядки заклинаний вашей
-				// команды.
-		1012, // Снимает проклятие с вашей группы.
-		1013, // Провокация оппонента и удар, накладывающий проклятие,
-				// уменьшающее Физ. Защ. и Маг. Защ.
-		1014, // Провоцирует на атаку множество врагов и наносит удар с
-				// проклятием, понижающим их Физ. Защ. и Маг. Защ.
-		1015, // Жертвует HP для регенерации HP выбранной цели.
-		1016, // Обрушивает на оппонента мощную критическую атаку.
-		1017, // Оглушающий взрыв, наносящий урон и ошеломляющий врага.
-		1018, // Наложение смертельного проклятия, высасывающего HP врага.
-		1019, // Умение №2, используемое Кэт
-		1020, // Умение №2, используемое Мяу
-		1021, // Умение №2, используемое Каем
-		1022, // Умение №2, используемое Юпитером
-		1023, // Умение №2, используемое Миражом
-		1024, // Умение №2, используемое Бекаром
-		1025, // Умение №2, используемое Тенью
-		1026, // Умение №1, используемое Тенью
-		1027, // Умение №2, используемое Гекатой
-		1028, // Умение №1, используемое Воскрешенным
-		1029, // Умение №2, используемое Воскрешенным
-		1030, // Умение №2, используемое Порочным
-		1031, // Король Кошек: Мощная режущая атака. Максимальное поражение.
-		1032, // Король Кошек: Режет окружающих врагов во время вращения в
-				// воздухе. Максимальное поражение.
-		1033, // Король Кошек: Обездвиживает близко стоящих врагов
-		1034, // Магнус: Мощный удар задними ногами, поражающий и оглушающий
-				// врага. Максимальное поражение.
-		1035, // Магнус: Обрушивает на многочисленные цели гигантские массы
-				// воды.
-		1036, // Призрачный Лорд: Врывает труп, поражая рядом стоящих
-				// врагов.
-		1037, // Призрачный Лорд: Клинки в каждой руке наносят
-				// разрушительные повреждения. Максимальное поражение.
-		1038, // Проклятие рядом стоящих врагов, отравляющее и уменьшающее
-				// их Скор. Атк.
-		1039, // Осадное Орудие: Выстреливает снаряд на короткую дистанцию.
-				// Потребляет 4 ед. Сверкающего Пороха.
-		1040, // Осадное Орудие: Выстреливает снаряд на длинную дистанцию.
-				// Потребляет 5 ед. Сверкающего пороха.
-		1041, // Ужасный укус врага
-		1042, // Царапает врага обеими лапами. Вызывает кровотечение.
-		1043, // Подавляет врагов мощным ревом
-		1044, // Пробуждает тайную силу
-		1045, // Понижает Физ. Атк./Маг. Атк. у стоящих рядом врагов.
-		1046, // Понижает Скор. Атк./Скор. Маг. у стоящих рядом врагов.
-		1047, // Ужасный укус врага
-		1048, // Приносит двойные повреждения и одновременно оглушает врага.
-		1049, // Выдыхает огонь в вашем направлении.
-		1050, // Подавляет окружающих врагов мощным ревом.
-		1051, // Временно увеличивает макс. количество HP.
-		1052, // Временно увеличивает макс. количество MP.
-		1053, // Временно увеличивает Скор. Атк.
-		1054, // Временно увеличивает скорость чтения заклинаний.
-		1055, // Временно уменьшает затраты MP выбранной цели. Потребляет
-				// Рунные камни.
-		1056, // Временно увеличивает Маг. Атк.
-		1057, // Временно увеличивает ранг критического удара и силу
-				// магических атак
-		1058, // Временно увеличивает силу критического удара.
-		1059, // Временно увеличивает шанс критического удара
-		1060, // Временно увеличивает точность
-		1061, // Мощная атака из засады. Можно использовать только при
-				// применении навыка "Пробуждение".
-		1062, // Быстрая двойная атака
-		1063, // Сильная крутящая атака наносит не только урон, но и
-				// оглушает противника.
-		1064, // Падающие с неба камни наносят повреждения врагам.
-		1065, // Выводит из скрытого состояния
-		1066, // Атака громовыми силами
-		1067, // Быстрая магическая атака врагов в поле зрения
-		1068, // Атакует нескольких врагов силами молний
-		1069, // Наносит сильный удар из засады. Можно использовать только
-				// при применении навыка "Пробуждение".
-		1070, // Нельзя накладывать положительные эффекты на владельца.
-				// Действует 5 минут.
-		1071, // Мощная атака по объекту
-		1072, // Мощная проникающая атака по объекту
-		1073, // Атака по врагам, разметающая их ряды как под ударом торнадо
-		1074, // Атака по впереди стоящим врагам мощным броском копья
-		1075, // Победный крик, повышающий собственные навыки
-		1076, // Мощная атака по объекту
-		1077, // Атака по впереди стоящим врагам внутренней энергией
-		1078, // Атака по впереди стоящим врагам при помощи электричества
-		1079, // Громкий крик, повышающий собственные навыки
-		1080, // Быстро приближает к врагу и наносит урон
-		1081, // Снимает отрицательные эффекты с объекта
-		1082, // Откидывает пламенем
-		1083, // Мощный укус, наносящий урон врагу
-		1084, // Переключает между атакующим/защитным режимом
-		1086, // Ограничивает количество положительных эффектов до одного
-		1087, // Увеличивает темную сторону до 25
-		1088, // Урезает важные навыки
-		1089, // Атака по впереди стоящим врагам при помощи хвоста.
-		1090, // Ужасный укус врага
-		1091, // Ввергает противника в ужас и заставляет бежать с поля боя.
-		1092, // Увеличивает скорость передвижения.
+		0, // ​​switch Exit. (/Sit, //Stand)
+		1, // switch Run /Walk. (/Walk, /run)
+		2, // ​​Attack the selected goal (s). Click while holding the mouse Ctrl, to force attack. (/Attack, /attackforce)
+		3, // Request for trade with the selected player. (/Trade)
+		4, // Select the nearest target for attack. (/Targetnext)
+		5, // ​​pick up items around. (/Pickup)
+		6, // ​​Switch on the target selected player. (/Assist)
+		7, // Invite selected player in your group. (/Invite)
+		8, // Leave group. (/Leave)
+		9, // If you are the group leader, delete the selected player (s) of group. (/Dismiss)
+		10, // Reset the personal shop for sale items. (/Vendor)
+		11, // Display the window "Selection Panel" to find groups or members of your group. (/Partymatching)
+		12, // Emotion: greet others. (/Socialhello)
+		13, // Emotion: Show that you or someone else won //Win! (/Socialvictory)
+		14, // Emotion: Inspire your allies (/socialcharge)
+		15, // ​​or your pet follows you, or left in place.
+		16, // Attack target.
+		17, // ​​Abort the current action.
+		18, // Find nearby objects.
+		19, // ​​Removes Pet inventory.
+		20, // Use special skill.
+		21, // ​​or your minions follow you, or remain in place.
+		22, // Attack target.
+		23, // ​​Abort the current action.
+		24, // Emotion: Reply in the affirmative. (/Socialyes)
+		25, // Emotion: Reply negatively. (/Socialno)
+		26, // Emotion: bow, as a sign of respect. (/Socialbow)
+		27, // Use special skill.
+		28, // Reset the personal shop to purchase items. (/Buy)
+		29, // Emotion: I do not understand what is happening. (/Socialunaware)
+		30, // Emotion: I'm waiting ... (/socialwaiting)
+		31, // Emotion: From a good laugh. (/Sociallaugh)
+		32, // ​​Toggle between attack /movement.
+		33, // Emotion: Applause. (/Socialapplause)
+		34, // Emotion: Show everyone your best dance. (/Socialdance)
+		35, // Emotion: I am sad. (/Socialsad)
+		36, // Poison Gas Attack.
+		37, // Reset the personal studio to create objects using recipes Dwarves fee. (/Dwarvenmanufacture)
+		38, // Switch to ride /dismount when you are near pet that you can ride. (/Mount, /dismount, Mountdismount)
+		39, // ​​Friendly exploding corpses.
+		40, // ​​Increases score goal (/evaluate)
+		41, // Attack the castle gates, walls or staffs shot from a cannon.
+		42, // Returns the damage back to the enemy.
+		43, // Attack the enemy, creating a swirling vortex.
+		44, // Attack the enemy with a powerful explosion.
+		45, // Restores MP summoner.
+		46, // Attack the enemy, calling destructive storm.
+		47, // At the same time damages the enemy and heal his servant.
+		48, // Attack the enemy shot from a cannon.
+		49, // Attack in a fit of rage.
+		50, // ​​Selected group member becomes the leader. (/Changepartyleader)
+		51, // Create an object using the usual recipe for reward. (/Generalmanufacture)
+		52, // ​​Removes ties with EP and releases it.
+		53, // Move to the target.
+		54, // Move to the target.
+		55, // record switch to stop recording and repeats. (/Start_videorecording, /end_videorecording, //Startend_videorecording)
+		56, // ​​Invite a selected target in command channel. (/Channelinvite)
+		57, // ​​Displays personal messages and store personal workshop containing the desired word. (/Findprivatestore)
+		58, // Call another player to a duel. (/Duel)
+		59, // ​​Cancel the duel means a loss. (/Withdraw)
+		60, // Call another group to a duel. (/Partyduel)
+		61, // Opens personal store packages for sale (/packagesale)
+		62, // Charming posture (/charm)
+		63, // ​​Starts fun and simple mini-game that can be play at any time. (Command: /minigame)
+		64, // Opens a free teleport, which allows to move between locations with teleporters. (Command: /teleportbookmark)
+		65, // ​​report suspicious behavior of an object, whose actions suggest the use of a bot program.
+		66, // Pose "Confusion" (command: /shyness)
+		67, // ​​control ship
+		68, // Termination control of the ship
+		69, // ​​Departure ship
+		70, // Descent from the ship
+		71, // Bow
+		72, // Give Five
+		73, // Dance Together
+		74, // On /Off status data
+		75, // ​​Tactical Sign: Heart
+		76, // ​​Invite a friend
+		77, // On /Off. Record
+		78, // Use the Mark 1
+		79, // Use the Mark 2
+		80, // Use the Mark 3
+		81, // Use the Mark 4
+		82, // avtopritsel Emblem 1
+		83, // 2 avtopritsel Emblem
+		84, // avtopritsel Emblem 3
+		85, // 4 avtopritsel Emblem
+		86, // Start /abort automatic search group
+		87, // ​​Propose
+		88, // ​​Provoke
+		90, // ​​Command: /instancezone
+		1000, // Attack the castle gates, walls and staffs a powerful blow.
+		1001, // Reckless, but powerful attack, use it with great caution.
+		1002, // To provoke others to attack you.
+		1003, // unexpected attack that deals damage and stuns the opponent.
+		1004, // Instant significantly increases P. Def. Def. and Mag. Def. Use this skill can not move.
+		1005, // Magic Attack
+		1006, // Restores HP pet.
+		1007, // In case of a successful application temporarily increases the power attack group and a chance for a critical hit.
+		1008, // Temporarily increases P. Def. Atk. and accuracy of your group.
+		1009, // There is a chance to lift the curse with the group members.
+		1010, // Increases MP regeneration of your group.
+		1011, // Decreases the cooldown of your spells command.
+		1012, // Removes the curse from your group.
+		1013, // Taunt opponent and hit, curse, decreases P. Def. Def. and Mag. Def.
+		1014, // Provokes to attack many enemies and hit with curse, lowering their P.. Def. and Mag. Def.
+		1015, // Sacrifices HP to regenerate HP selected target.
+		1016, // Strikes opponent powerful critical attack.
+		1017, // Stunning explosion, causing damage and stunning the enemy.
+		1018, // Overlay deadly curse, sucking the enemy's HP.
+		1019, // skill number 2, used Cat
+		1020, // skill number 2 used Meow
+		1021, // skill number 2 used Kai
+		1022, // skill number 2 used Jupiter
+		1023, // skill number 2 used Mirage
+		1024, // Skill number 2 used Bekarev
+		1025, // skill number 2 used Shadow
+		1026, // Skill number one used by Shadow
+		1027, // skill number 2 used Hecate
+		1028, // Skill number 1 used Resurrection
+		1029, // Skill number 2 used Resurrection
+		1030, // skill number 2 used vicious
+		1031, // The King of Cats: A powerful cutting attack. Maximum damage.
+		1032, // The King of Cats: Cuts nearby enemies during rotation air. Maximum damage.
+		1033, // The King of Cats: Freezes enemies standing close
+		1034, // Magnus: Slam hind legs, striking and stunning enemy. Maximum damage.
+		1035, // Magnus: Strikes multiple objectives giant masses water.
+		1036, // Wraithlord: corpse bursts, affecting adjacent enemies.
+		1037, // Wraithlord: The blades in each hand applied devastating damage. Maximum damage.
+		1038, // Curse of the adjacent enemies, and reducing toxic them soon. Atk.
+		1039, // Siege Gun: Fires a projectile a short distance. Consumes 4 units. Gunpowder sparkling.
+		1040, // Siege Gun: Fires a shell for a long distance. Consumes 5 units. Sparkling powder.
+		1041, // Horrible bite the enemy
+		1042, // Scratch enemy with both paws. Causes bleeding.
+		1043, // Suppress the enemy with a powerful roar
+		1044, // Wakes secret power
+		1045, // Decreases the P.. Atk. /Mag. Atk. at nearby enemies.
+		1046, // Decreases Speed. Atk. /Sprint. Mag. at nearby enemies.
+		1047, // Horrible bite the enemy
+		1048, // Brings double damage and stuns the enemy simultaneously.
+		1049, // breathe fire in your direction.
+		1050, // Suppresses surrounding enemies powerful roar.
+		1051, // Increases max. amount of HP.
+		1052, // Increases max. number of MP.
+		1053, // Temporarily increases Atk. Atk.
+		1054, // Temporarily increases speed reading spells.
+		1055, // Decreases the MP cost of the selected target. Consumes runestones.
+		1056, // Temporarily increases M. Def. Atk.
+		1057, // Rank Temporarily increases critical strike and force magic attacks
+		1058, // Temporarily increases critical strike.
+		1059, // Increases the critical strike chance
+		1060, // Temporarily increases Accuracy
+		1061, // A strong attack from ambush. You can only use use the skill "Awakening".
+		1062, // Quick double attack
+		1063, // Strong twisting attack does not only damage, but also stun the enemy.
+		1064, // Falling from the sky stones cause damage to enemies.
+		1065, // Exits the latent state
+		1066, // Friendly thunderous forces
+		1067, // Quick magical enemies in sight
+		1068, // Attacks multiple enemies by lightning
+		1069, // slosh ambush. You can only use in the application of skill "Awakening".
+		1070, // Can not impose positive effects on the wearer. Step 5 minutes.
+		1071, // A strong attack on the facility
+		1072, // Powerful penetrating attack on the facility
+		1073, // ​​Attack enemies disperse their ranks as a tornado hit
+		1074, // Attack the enemy standing in front of a powerful throw spears
+		1075, // Victory cry, enhancing their own skills
+		1076, // A strong attack on the facility
+		1077, // Attack the enemy standing in front of the internal energy
+		1078, // Attack front facing enemies using electricity
+		1079, // Shouting, enhancing their own skills
+		1080, // fast approaching the enemy and inflicts
+		1081, // Removes negative effects from the facility
+		1082, // recline flame
+		1083, // A powerful bite, inflicting damage to the enemy
+		1084, // Switches between the attacking /defensive mode
+		1086, // Limit the number of positive effects to one
+		1087, // Increases dark side to 25
+		1088, // Trims important skills
+		1089, // Attack the enemy standing in front with the help of the tail.
+		1090, // Horrible bite the enemy
+		1091, // the enemy plunged into horror and makes escape from the battlefield.
+		1092, // Increases movement speed.
 		1093,
 		1094,
 		1095,
@@ -267,253 +230,181 @@ public class ExBasicActionList extends L2GameServerPacket
 		1120,
 		1121,
 		1122,
-		5000, // Можно
-				// погладить
-				// Рудольфа.
-				// Заполняет
-				// шкалу
-				// верности
-				// на
-				// 25%.
-				// Нельзя
-				// использовать
-				// во
-				// время
-				// перевоплощения!
-		5001, // Увеличивает Макс. HP, Макс. MP и Скорость на 20%,
-				// сопротивление отрицательным эффектам на 10%. Время
-				// повторного использования: 10 мин. При использовании умения
-				// расходуется 3
-				// Эссенции Розы. Нельзя использовать с Запредельным
-				// Искушением. Время действия: 5 мин.
-		5002, // Увеличивает Макс. HP/MP/CP, Физ. Защ. и Маг. Защ. на 30%,
-				// Скорость на 20%, Физ. Атк. на 10%, Маг. Атк. на 20% и
-				// снижает расход MP на 15%. Время повторного использования:
-				// 40 мин.
-				// При использовании умения расходуется 10 Эссенций Розы.
-				// Время действия: 20 мин.
-		5003, // Обрушивает на врагов мощь грома.
-		5004, // Обрушивает на стоящих вблизи врагов молниеносную магическую
-				// атаку.
-		5005, // Обрушивает на окружающих врагов мощь грома.
-		5006, // Не позволяет накладывать на хозяина любые эффекты. Время
-				// действия: 5 мин.
-		5007, // Питомец пронзает врага в смертоносном выпаде.
-		5008, // Атакует окружающих врагов.
-		5009, // Вонзает меч в ряды впередистоящих врагов.
-		5010, // Усиливает свои умения.
-		5011, // Атакует врага мощным ударом.
-		5012, // Обрушивает накопившуюся в теле энергию на ряды
-				// впередистоящих врагов.
-		5013, // Обрушивает шоковую волну на впередистоящего врага.
-		5014, // Значительно усиливает свои умения.
-		5015, // Смена атакующего/вспомогательного состояния питомца.
+		5000, // ​​can pat Rudolf. Fills scale fidelity on 25%. Can not use in time reincarnation!
+		5001, // Increases Max. HP, Max. MP and Speed ​​by 20% resistance to de-buff by 10%. Time reuse: 10 min. When using the skill spent 3 essences Rose. Can not be used with the Beyond temptation. Duration: 5 min.
+		5002, // Increases Max. HP /MP /CP, P.. Def. and Mag. Def. 30% Speed ​​by 20%, P. Def. Atk. 10%, Mag. Atk. 20%, and decreases MP consumption by 15%. Reuse time: 40 min. When using the skill consumes 10 Essences Rose. Duration: 20 min.
+		5003, // Strikes enemies power of thunder.
+		5004, // Strikes enemies standing near lightning magic attack.
+		5005, // Strikes nearby enemies power of thunder.
+		5006, // Do not allow to impose on host any effects. Time for 5 minutes.
+		5007, // Pet pierces the enemy in deadly attacks.
+		5008, // Attacks nearby enemies.
+		5009, // thrust the sword into the ranks vperedistoyaschego enemies.
+		5010, // Enhances your skills.
+		5011, // Attacks the enemy with a powerful blow.
+		5012, // Explodes accumulated in the body for energy ranks Vperedistoyaschego enemies.
+		5013, // Fires a shockwave on vperedistoyaschego enemy.
+		5014, // Greatly enhances their skills.
+		5015, // Change the attacker /auxiliary state pet.
 	};
 	
 	private static final int[] TransformationActions =
 	{
-		1, // Переключатель
-			// Ходьба/Бег.
-			// (/walk, /run)
-		2, // Атака выбранной цели (целей). Щелкните с зажатой клавишей
-			// Ctrl, чтобы принудительно атаковать. (/attack, /attackforce)
-		3, // Запрос торговли с выбранным игроком. (/trade)
-		4, // Выбор ближайшей цели для атаки. (/targetnext)
-		5, // Подобрать предметы, расположенные рядом. (/pickup)
-		6, // Переключиться на цель выбранного игрока. (/assist)
-		7, // Пригласить выбранного игрока в вашу группу. (/invite)
-		8, // Покинуть группу. (/leave)
-		9, // Если вы лидер группы, исключить выбранного игрока (игроков) из
-			// группы. (/dismiss)
-		11, // Отобразить окно "Подбор Группы" для поиска групп или членов
-			// для вашей группы. (/partymatching)
-		15, // Ваш питомец либо следует за вами, либо остается на месте.
-		16, // Атаковать цель.
-		17, // Прервать текущее действие.
-		18, // Подобрать находящиеся рядом предметы.
-		19, // Убирает Питомца в инвентарь.
-		21, // Ваши Миньоны либо следуют за вами, либо остаются на месте.
-		22, // Атаковать цель.
-		23, // Прервать текущее действие.
-		40, // Увеличивает оценку цели (/evaluate)
-		50, // Выбранный член группы становится ее
-			// лидером.(/changepartyleader)
-		52, // Снимает узы с миньона и освобождает его.
-		53, // Двигаться к цели.
-		54, // Двигаться к цели.
-		55, // Переключатель записи и остановки записи повторов.
-			// (/start_videorecording, /end_videorecording,
-			// /startend_videorecording)
-		56, // Пригласить выбранную цель в канал команды. (/channelinvite)
-		57, // Высвечивает сообщения личного магазина и личной мастерской,
-			// содержащие искомое слово. (/findprivatestore)
-		63, // Запускает забавную и простую мини-игру, в которую можно
-			// поиграть в любое время. (команда: /minigame)
-		64, // Открывает окно свободного телепорта, которое позволяет
-			// свободно перемещаться между локациями с телепортами.
-			// (команда: /freeteleport)
-		65, // Сообщает о подозрительном поведении объекта, чьи действия
-			// позволяют предположить использование BOT-программы.
-		67, // Управление кораблем
-		68, // Прекращение управления кораблем
-		69, // Отправление корабля
-		70, // Спуск с корабля
-		74, // Вкл/Выкл данные о состоянии
-		76, // Приглашение друга
-		77, // Вкл/Выкл. Запись
-		78, // Использование Знака 1
-		79, // Использование Знака 2
-		80, // Использование Знака 3
-		81, // Использование Знака 4
-		82, // Автоприцел Знаком 1
-		83, // Автоприцел Знаком 2
-		84, // Автоприцел Знаком 3
-		85, // Автоприцел Знаком 4
-		86, // Начать/прервать автоматический поиск группы
-		87, // Propose
-		88, // Provoke
-		1000, // Атаковать врата замка, стены и штабы мощным ударом.
-		1001, // Безрассудная, но мощная атака, используйте ее с большой
-				// осторожностью.
-		1002, // Провоцировать окружающих атаковать вас.
-		1003, // Неожиданная атака, наносящая урон и оглушающая оппонента.
-		1004, // Моментально значительно увеличивается Физ. Защ. и Маг. Защ.
-				// Использующий данное умение персонаж не может двигаться.
-		1005, // Магическая Атака
-		1006, // Восстанавливает HP питомца.
-		1007, // В случае успешного применения временно увеличивает силу
-				// атаки группы и шанс на критический удар.
-		1008, // Временно увеличивает Физ. Атк. и точность вашей группы.
-		1009, // Есть шанс снять проклятие с членов группы.
-		1010, // Временно увеличивает регенерацию MP вашей группы.
-		1011, // Временно уменьшает время перезарядки заклинаний вашей
-				// команды.
-		1012, // Снимает проклятие с вашей группы.
-		1013, // Провокация оппонента и удар, накладывающий проклятие,
-				// уменьшающее Физ. Защ. и Маг. Защ.
-		1014, // Провоцирует на атаку множество врагов и наносит удар с
-				// проклятием, понижающим их Физ. Защ. и Маг. Защ.
-		1015, // Жертвует HP для регенерации HP выбранной цели.
-		1016, // Обрушивает на оппонента мощную критическую атаку.
-		1017, // Оглушающий взрыв, наносящий урон и ошеломляющий врага.
-		1018, // Наложение смертельного проклятия, высасывающего HP врага.
-		1019, // Умение №2, используемое Кэт
-		1020, // Умение №2, используемое Мяу
-		1021, // Умение №2, используемое Каем
-		1022, // Умение №2, используемое Юпитером
-		1023, // Умение №2, используемое Миражом
-		1024, // Умение №2, используемое Бекаром
-		1025, // Умение №2, используемое Тенью
-		1026, // Умение №1, используемое Тенью
-		1027, // Умение №2, используемое Гекатой
-		1028, // Умение №1, используемое Воскрешенным
-		1029, // Умение №2, используемое Воскрешенным
-		1030, // Умение №2, используемое Порочным
-		1031, // Король Кошек: Мощная режущая атака. Максимальное поражение.
-		1032, // Король Кошек: Режет окружающих врагов во время вращения в
-				// воздухе. Максимальное поражение.
-		1033, // Король Кошек: Обездвиживает близко стоящих врагов
-		1034, // Магнус: Мощный удар задними ногами, поражающий и оглушающий
-				// врага. Максимальное поражение.
-		1035, // Магнус: Обрушивает на многочисленные цели гигантские массы
-				// воды.
-		1036, // Призрачный Лорд: Врывает труп, поражая рядом стоящих
-				// врагов.
-		1037, // Призрачный Лорд: Клинки в каждой руке наносят
-				// разрушительные повреждения. Максимальное поражение.
-		1038, // Проклятие рядом стоящих врагов, отравляющее и уменьшающее
-				// их Скор. Атк.
-		1039, // Осадное Орудие: Выстреливает снаряд на короткую дистанцию.
-				// Потребляет 4 ед. Сверкающего Пороха.
-		1040, // Осадное Орудие: Выстреливает снаряд на длинную дистанцию.
-				// Потребляет 5 ед. Сверкающего пороха.
-		1041, // Ужасный укус врага
-		1042, // Царапает врага обеими лапами. Вызывает кровотечение.
-		1043, // Подавляет врагов мощным ревом
-		1044, // Пробуждает тайную силу
-		1045, // Понижает Физ. Атк./Маг. Атк. у стоящих рядом врагов.
-		1046, // Понижает Скор. Атк./Скор. Маг. у стоящих рядом врагов.
-		1047, // Ужасный укус врага
-		1048, // Приносит двойные повреждения и одновременно оглушает врага.
-		1049, // Выдыхает огонь в вашем направлении.
-		1050, // Подавляет окружающих врагов мощным ревом.
-		1051, // Временно увеличивает макс. количество HP.
-		1052, // Временно увеличивает макс. количество MP.
-		1053, // Временно увеличивает Скор. Атк.
-		1054, // Временно увеличивает скорость чтения заклинаний.
-		1055, // Временно уменьшает затраты MP выбранной цели. Потребляет
-				// Рунные камни.
-		1056, // Временно увеличивает Маг. Атк.
-		1057, // Временно увеличивает ранг критического удара и силу
-				// магических атак
-		1058, // Временно увеличивает силу критического удара.
-		1059, // Временно увеличивает шанс критического удара
-		1060, // Временно увеличивает точность
-		1061, // Мощная атака из засады. Можно использовать только при
-				// применении навыка "Пробуждение".
-		1062, // Быстрая двойная атака
-		1063, // Сильная крутящая атака наносит не только урон, но и
-				// оглушает противника.
-		1064, // Падающие с неба камни наносят повреждения врагам.
-		1065, // Выводит из скрытого состояния
-		1066, // Атака громовыми силами
-		1067, // Быстрая магическая атака врагов в поле зрения
-		1068, // Атакует нескольких врагов силами молний
-		1069, // Наносит сильный удар из засады. Можно использовать только
-				// при применении навыка "Пробуждение".
-		1070, // Нельзя накладывать положительные эффекты на владельца.
-				// Действует 5 минут.
-		1071, // Мощная атака по объекту
-		1072, // Мощная проникающая атака по объекту
-		1073, // Атака по врагам, разметающая их ряды как под ударом торнадо
-		1074, // Атака по впереди стоящим врагам мощным броском копья
-		1075, // Победный крик, повышающий собственные навыки
-		1076, // Мощная атака по объекту
-		1077, // Атака по впереди стоящим врагам внутренней энергией
-		1078, // Атака по впереди стоящим врагам при помощи электричества
-		1079, // Громкий крик, повышающий собственные навыки
-		1080, // Быстро приближает к врагу и наносит урон
-		1081, // Снимает отрицательные эффекты с объекта
-		1082, // Откидывает пламенем
-		1083, // Мощный укус, наносящий урон врагу
-		1084, // Переключает между атакующим/защитным режимом
-		1086, // Ограничивает количество положительных эффектов до одного
-		1087, // Увеличивает темную сторону до 25
-		1088, // Урезает важные навыки
-		1089, // Атака по впереди стоящим врагам при помощи хвоста.
-		1090, // Ужасный укус врага
-		1091, // Ввергает противника в ужас и заставляет бежать с поля боя.
-		1092, // Увеличивает скорость передвижения.
-		5000, // Можно погладить Рудольфа. Заполняет шкалу верности на 25%.
-				// Нельзя использовать во время перевоплощения!
-		5001, // Увеличивает Макс. HP, Макс. MP и Скорость на 20%,
-				// сопротивление отрицательным эффектам на 10%. Время
-				// повторного использования: 10 мин. При использовании умения
-				// расходуется 3
-				// Эссенции Розы. Нельзя использовать с Запредельным
-				// Искушением. Время действия: 5 мин.
-		5002, // Увеличивает Макс. HP/MP/CP, Физ. Защ. и Маг. Защ. на 30%,
-				// Скорость на 20%, Физ. Атк. на 10%, Маг. Атк. на 20% и
-				// снижает расход MP на 15%. Время повторного использования:
-				// 40 мин.
-				// При использовании умения расходуется 10 Эссенций Розы.
-				// Время действия: 20 мин.
-		5003, // Обрушивает на врагов мощь грома.
-		5004, // Обрушивает на стоящих вблизи врагов молниеносную магическую
-				// атаку.
-		5005, // Обрушивает на окружающих врагов мощь грома.
-		5006, // Не позволяет накладывать на хозяина любые эффекты. Время
-				// действия: 5 мин.
-		5007, // Питомец пронзает врага в смертоносном выпаде.
-		5008, // Атакует окружающих врагов.
-		5009, // Вонзает меч в ряды впередистоящих врагов.
-		5010, // Усиливает свои умения.
-		5011, // Атакует врага мощным ударом.
-		5012, // Обрушивает накопившуюся в теле энергию на ряды
-				// впередистоящих врагов.
-		5013, // Обрушивает шоковую волну на впередистоящего врага.
-		5014, // Значительно усиливает свои умения.
-		5015, // Смена атакующего/вспомогательного состояния питомца..
+		1, // switch Run Walk. (/Walk, /run)
+		2, // ​​Attack the selected goal (s). Click while holding the mouse Ctrl, to force attack. (/Attack, /attackforce)
+		3, // Request for trade with the selected player. (/Trade)
+		4, // Select the nearest target for attack. (/Targetnext)
+		5, // ​​pick up items around. (/Pickup)
+		6, // ​​Switch on the target selected player. (/Assist)
+		7, // Invite selected player in your group. (/Invite)
+		8, // Leave group. (/Leave)
+		9, // If you are the group leader, delete the selected player (s) of group. (/Dismiss)
+		11, // Display the window "Selection Panel" to find groups or members for your group. (/Partymatching)
+		15, // ​​or your pet follows you, or left in place.
+		16, // Attack target.
+		17, // ​​Abort the current action.
+		18, // Find nearby objects.
+		19, // ​​Removes Pet inventory.
+		21, // ​​or your minions follow you, or remain in place.
+		22, // Attack target.
+		23, // ​​Abort the current action.
+		40, // ​​Increases score goal (/evaluate)
+		50, // ​​Selected group member becomes the leader. (/Changepartyleader)
+		52, // ​​Removes ties with EP and releases it.
+		53, // Move to the target.
+		54, // Move to the target.
+		55, // record switch to stop recording and repeats. (/Start_videorecording, /end_videorecording, /Startend_videorecording)
+		56, // ​​Invite a selected target in command channel. (/Channelinvite)
+		57, // ​​Displays personal messages and store personal workshop containing the desired word. (/Findprivatestore)
+		63, // ​​Starts fun and simple mini-game that can be play at any time. (Command: /minigame)
+		64, // Opens a free teleport, which allows to move between locations with teleporters. (Command: /freeteleport)
+		65, // ​​report suspicious behavior of an object, whose actions suggest the use of BOT-program.
+		67, // ​​control ship
+		68, // Termination control of the ship
+		69, // ​​Departure ship
+		70, // Descent from the ship
+		74, // On /Off status data
+		76, // ​​Invite a friend
+		77, // On /Off. Record
+		78, // Use the Mark 1
+		79, // Use the Mark 2
+		80, // Use the Mark 3
+		81, // Use the Mark 4
+		82, // avtopritsel Emblem 1
+		83, // 2 avtopritsel Emblem
+		84, // avtopritsel Emblem 3
+		85, // 4 avtopritsel Emblem
+		86, // Start /abort automatic search group
+		87, // ​​Propose
+		88, // ​​Provoke
+		1000, // Attack the castle gates, walls and staffs a powerful blow.
+		1001, // Reckless, but powerful attack, use it with great caution.
+		1002, // To provoke others to attack you.
+		1003, // unexpected attack that deals damage and stuns the opponent.
+		1004, // Instant significantly increases P. Def. Def. and Mag. Def. Use this skill can not move.
+		1005, // Magic Attack
+		1006, // Restores HP pet.
+		1007, // In case of a successful application temporarily increases the power attack group and a chance for a critical hit.
+		1008, // Temporarily increases P. Def. Atk. and accuracy of your group.
+		1009, // There is a chance to lift the curse with the group members.
+		1010, // Increases MP regeneration of your group.
+		1011, // Decreases the cooldown of your spells command.
+		1012, // Removes the curse from your group.
+		1013, // Taunt opponent and hit, curse, Decreases P. Def. Def. and Mag. Def.
+		1014, // Provokes to attack many enemies and hit with curse, lowering their P.. Def. and Mag. Def.
+		1015, // Sacrifices HP to regenerate HP selected target.
+		1016, // Strikes opponent powerful critical attack.
+		1017, // Stunning explosion, causing damage and stunning the enemy.
+		1018, // Overlay deadly curse, sucking the enemy's HP.
+		1019, // skill number 2, used Cat
+		1020, // skill number 2 used Meow
+		1021, // skill number 2 used Kai
+		1022, // skill number 2 used Jupiter
+		1023, // skill number 2 used Mirage
+		1024, // Skill number 2 used Bekarev
+		1025, // skill number 2 used Shadow
+		1026, // Skill number one used by Shadow
+		1027, // skill number 2 used Hecate
+		1028, // Skill number 1 used Resurrection
+		1029, // Skill number 2 used Resurrection
+		1030, // skill number 2 used vicious
+		1031, // The King of Cats: A powerful cutting attack. Maximum damage.
+		1032, // The King of Cats: Cuts nearby enemies during rotation Air. Maximum damage.
+		1033, // The King of Cats: Freezes enemies standing close
+		1034, // Magnus: Slam hind legs, striking and stunning enemy. Maximum damage.
+		1035, // Magnus: Strikes multiple objectives giant masses water.
+		1036, // Wraithlord: corpse bursts, affecting adjacent enemies.
+		1037, // Wraithlord: The blades in each hand applied devastating damage. Maximum damage.
+		1038, // Curse of the adjacent enemies, and reducing toxic them soon. Atk.
+		1039, // Siege Gun: Fires a projectile a short distance. Consumes 4 units. Gunpowder sparkling.
+		1040, // Siege Gun: Fires a shell for a long distance. Consumes 5 units. Sparkling powder.
+		1041, // Horrible bite the enemy
+		1042, // Scratch enemy with both paws. Causes bleeding.
+		1043, // Suppress the enemy with a powerful roar
+		1044, // Wakes secret power
+		1045, // Decreases the P.. Atk. /Mag. Atk. at nearby enemies.
+		1046, // Decreases Speed. Atk. /Sprint. Mag. at nearby enemies.
+		1047, // Horrible bite the enemy
+		1048, // Brings double damage and stuns the enemy simultaneously.
+		1049, // breathe fire in your direction.
+		1050, // Suppresses surrounding enemies powerful roar.
+		1051, // Increases max. amount of HP.
+		1052, // Increases max. number of MP.
+		1053, // Temporarily increases Atk. Atk.
+		1054, // Temporarily increases speed reading spells.
+		1055, // Decreases the MP cost of the selected target. Consumes runestones.
+		1056, // Temporarily increases M. Def. Atk.
+		1057, // Rank Temporarily increases critical strike and force magic attacks
+		1058, // Temporarily increases critical strike.
+		1059, // Increases the critical strike chance
+		1060, // Temporarily increases Accuracy
+		1061, // A strong attack from ambush. You can only use the skill "Awakening".
+		1062, // Quick double attack
+		1063, // Strong twisting attack does not only damage, but also stun the enemy.
+		1064, // Falling from the sky stones cause damage to enemies.
+		1065, // Exits the latent state
+		1066, // Friendly thunderous forces
+		1067, // Quick magical enemies in sight
+		1068, // Attacks multiple enemies by lightning
+		1069, // slosh ambush. You can only use in the application of skill "Awakening".
+		1070, // Can not impose positive effects on the wearer. Step 5 minutes.
+		1071, // A strong attack on the facility
+		1072, // Powerful penetrating attack on the facility
+		1073, // ​​Attack enemies disperse their ranks as a tornado hit
+		1074, // Attack the enemy standing in front of a powerful throw spears
+		1075, // Victory cry, enhancing their own skills
+		1076, // A strong attack on the facility
+		1077, // Attack the enemy standing in front of the internal energy
+		1078, // Attack front facing enemies using electricity
+		1079, // Shouting, enhancing their own skills
+		1080, // fast approaching the enemy and inflicts
+		1081, // Removes negative effects from the facility
+		1082, // recline flame
+		1083, // A powerful bite, inflicting damage to the enemy
+		1084, // Switches between the attacking /defensive mode
+		1086, // Limit the number of positive effects to one
+		1087, // Increases dark side to 25
+		1088, // Trims important skills
+		1089, // Attack the enemy standing in front with the help of the tail.
+		1090, // Horrible bite the enemy
+		1091, // the enemy plunged into horror and makes escape from the battlefield.
+		1092, // Increases movement speed.
+		5000, // You can pat Rudolph. Fills the scale fidelity of 25%. Can not be used during reincarnation!
+		5001, // Increases Max. HP, Max. MP and Speed ​​by 20% Resistance to de-buff by 10%. Time reuse: 10 min. When using the skill spent 3 essences Rose. Can not be used with the Beyond temptation. Duration: 5 min.
+		5002, // Increases Max. HP /MP /CP, P.. Def. and Mag. Def. 30% Speed ​​by 20%, P. Def. Atk. 10%, Mag. Atk. 20%, and decreases MP consumption by 15%. Reuse time: 40 min. When using the skill consumes 10 Essences Rose. Duration: 20 min.
+		5003, // Strikes enemies power of thunder.
+		5004, // Strikes enemies standing near lightning magic attack.
+		5005, // Strikes nearby enemies power of thunder.
+		5006, // Do not allow to impose on host any effects. Time for 5 minutes.
+		5007, // Pet pierces the enemy in deadly attacks.
+		5008, // Attacks nearby enemies.
+		5009, // thrust the sword into the ranks vperedistoyaschego enemies.
+		5010, // Enhances your skills.
+		5011, // Attacks the enemy with a powerful blow.
+		5012, // Explodes accumulated in the body for energy ranks Vperedistoyaschego enemies.
+		5013, // Fires a shockwave on vperedistoyaschego enemy.
+		5014, // Greatly enhances their skills.
+		5015, // Change the attacker /auxiliary state pet ..
 	};
 	
 	private final int[] actions;
