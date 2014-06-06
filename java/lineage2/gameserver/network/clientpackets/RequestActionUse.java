@@ -36,6 +36,7 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ActionFail;
 import lineage2.gameserver.network.serverpackets.ExAirShipTeleportList;
 import lineage2.gameserver.network.serverpackets.ExAskCoupleAction;
+import lineage2.gameserver.network.serverpackets.ExInzoneWaitingInfo;
 import lineage2.gameserver.network.serverpackets.PrivateStoreManageListBuy;
 import lineage2.gameserver.network.serverpackets.PrivateStoreManageListSell;
 import lineage2.gameserver.network.serverpackets.RecipeShopManageList;
@@ -601,11 +602,11 @@ public class RequestActionUse extends L2GameClientPacket
 					case 85:
 						TacticalSignManager.getTargetOnTacticalSign(activeChar, 4);
 						break;
-					case 96:
-						_log.info("96 Accessed");
+					case 90:
+						activeChar.sendPacket(new ExInzoneWaitingInfo(activeChar));
 						break;
-					case 97:
-						_log.info("97 Accessed");
+					default:
+						_log.info("Player action: " + action.id + " - not done.");
 						break;
 				}
 				break;
