@@ -91,6 +91,10 @@
 		<set name="tradeable" value="false"/>
 		<set name="dropable" value="false"/>
 		<set name="stackable" value="true"/>
+		<skills>
+			<skill id="12902" level="1"/>
+		</skills>
+		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="35650" name="Scroll: Summon Bratty Angma">
 		<set name="icon" value="icon.etc_scroll_white_i00"/>
