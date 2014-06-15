@@ -14,7 +14,7 @@ echo GoD Server is ready for installation.
 echo Please perform the initial configuration
 echo ======================================================================
 set DO_INSTALL=Y
-set /P DO_INSTALL=Install the login server[Y/n]
+set /P DO_INSTALL=Install the login server [Y/n]
 if "%DO_INSTALL%"=="N" goto installgame
 if "%DO_INSTALL%"=="n" goto installgame
 set INSTALL_MODE=login
@@ -65,14 +65,14 @@ set ANSWER=Y
 set /P ANSWER=All settings are correct [Y/n]?
 if "%ANSWER%"=="n" goto step1
 if "%ANSWER%"=="N" goto step1
-echo - Install the database, wait ...
+echo - Installing the database, wait...
 for %%i in (sql\%INSTALL_MODE%\*.sql) do mysql %MYSQL_PARAM% %DB_NAME% < %%i
 if "%INSTALL_MODE%"=="login" goto installgame
 goto end
 :installgame
 cls
 set DO_INSTALL=Y
-set /P DO_INSTALL=Install game server[Y/n]
+set /P DO_INSTALL=Install game server [Y/n]
 if "%DO_INSTALL%"=="N" goto end
 if "%DO_INSTALL%"=="n" goto end
 set INSTALL_MODE=server
