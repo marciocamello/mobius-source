@@ -62,7 +62,7 @@ public abstract class ItemTemplate extends StatTemplate
 		EVERY_DAY_AT_6_30(SystemMsg.THERE_ARE_S2_SECONDS_REMAINING_FOR_S1S_REUSE_TIME, SystemMsg.THERE_ARE_S2_MINUTES_S3_SECONDS_REMAINING_FOR_S1S_REUSE_TIME, SystemMsg.THERE_ARE_S2_HOURS_S3_MINUTES_S4_SECONDS_REMAINING_FOR_S1S_REUSE_TIME)
 		{
 			private final SchedulingPattern _pattern = new SchedulingPattern("30 6 * * *");
-			
+
 			@Override
 			public long next(ItemInstance item)
 			{
@@ -73,7 +73,7 @@ public abstract class ItemTemplate extends StatTemplate
 		 * Field _messages.
 		 */
 		private SystemMsg[] _messages;
-		
+
 		/**
 		 * Constructor for ReuseType.
 		 * @param msg SystemMsg[]
@@ -82,14 +82,14 @@ public abstract class ItemTemplate extends StatTemplate
 		{
 			_messages = msg;
 		}
-		
+
 		/**
 		 * Method next.
 		 * @param item ItemInstance
 		 * @return long
 		 */
 		public abstract long next(ItemInstance item);
-		
+
 		/**
 		 * Method getMessages.
 		 * @return SystemMsg[]
@@ -99,7 +99,7 @@ public abstract class ItemTemplate extends StatTemplate
 			return _messages;
 		}
 	}
-	
+
 	/**
 	 * @author Mobius
 	 */
@@ -154,7 +154,7 @@ public abstract class ItemTemplate extends StatTemplate
 		 */
 		OTHER
 	}
-	
+
 	/**
 	 * Field ITEM_ID_PC_BANG_POINTS. (value is -100)
 	 */
@@ -419,7 +419,7 @@ public abstract class ItemTemplate extends StatTemplate
 	 * Field CRYSTAL_R. (value is 17371)
 	 */
 	public static final int CRYSTAL_R = 17371;
-	
+
 	/**
 	 * @author Mobius
 	 */
@@ -477,7 +477,7 @@ public abstract class ItemTemplate extends StatTemplate
 		 * Field externalOrdinal.
 		 */
 		public final int externalOrdinal;
-		
+
 		/**
 		 * Constructor for Grade.
 		 * @param crystal int
@@ -489,7 +489,7 @@ public abstract class ItemTemplate extends StatTemplate
 			externalOrdinal = ext;
 		}
 	}
-	
+
 	/**
 	 * Field ATTRIBUTE_NONE. (value is -2)
 	 */
@@ -654,7 +654,7 @@ public abstract class ItemTemplate extends StatTemplate
 	 * Field _capsuled.
 	 */
 	private final boolean _capsuled;
-	
+
 	/**
 	 * Constructor for ItemTemplate.
 	 * @param set StatsSet
@@ -695,7 +695,7 @@ public abstract class ItemTemplate extends StatTemplate
 		_funcTemplates = FuncTemplate.EMPTY_ARRAY;
 		_skills = Skill.EMPTY_ARRAY;
 	}
-	
+
 	/**
 	 * Method getItemType.
 	 * @return ItemType
@@ -704,7 +704,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return type;
 	}
-	
+
 	/**
 	 * Method getExItemType.
 	 * @return ExItemType
@@ -713,7 +713,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _exItemType;
 	}
-	
+
 	/**
 	 * Method getIcon.
 	 * @return String
@@ -722,7 +722,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _icon;
 	}
-	
+
 	/**
 	 * Method getIcon32.
 	 * @return String
@@ -731,7 +731,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _icon32;
 	}
-	
+
 	/**
 	 * Method getDurability.
 	 * @return int
@@ -740,7 +740,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _durability;
 	}
-	
+
 	/**
 	 * Method isTemporal.
 	 * @return boolean
@@ -749,7 +749,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _temporal;
 	}
-	
+
 	/**
 	 * Method isTemporal.
 	 * @return boolean
@@ -758,7 +758,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _isBlessedEquipment;
 	}
-	
+
 	/**
 	 * Method getItemId.
 	 * @return int
@@ -767,13 +767,13 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _itemId;
 	}
-	
+
 	/**
 	 * Method getItemMask.
 	 * @return long
 	 */
 	public abstract long getItemMask();
-	
+
 	/**
 	 * Method getType2.
 	 * @return int
@@ -782,7 +782,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _type2;
 	}
-	
+
 	/**
 	 * Method getBaseAttributeValue.
 	 * @param element Element
@@ -796,7 +796,7 @@ public abstract class ItemTemplate extends StatTemplate
 		}
 		return _baseAttributes[element.getId()];
 	}
-	
+
 	/**
 	 * Method setBaseAtributeElements.
 	 * @param val int[]
@@ -805,7 +805,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		_baseAttributes = val;
 	}
-	
+
 	/**
 	 * Method getType2ForPackets.
 	 * @return int
@@ -835,7 +835,7 @@ public abstract class ItemTemplate extends StatTemplate
 		}
 		return type2;
 	}
-	
+
 	/**
 	 * Method getWeight.
 	 * @return int
@@ -844,7 +844,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _weight;
 	}
-	
+
 	/**
 	 * Method isCrystallizable.
 	 * @return boolean
@@ -853,7 +853,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _crystallizable && !isStackable() && (getCrystalType() != Grade.NONE) && (getCrystalCount() > 0);
 	}
-	
+
 	/**
 	 * Method getCrystalType.
 	 * @return Grade
@@ -862,7 +862,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _crystalType;
 	}
-	
+
 	/**
 	 * Method getItemGrade.
 	 * @return Grade
@@ -871,7 +871,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return getCrystalType();
 	}
-	
+
 	/**
 	 * Method getCrystalCount.
 	 * @return int
@@ -880,7 +880,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _crystalCount;
 	}
-	
+
 	/**
 	 * Method getName.
 	 * @return String
@@ -889,7 +889,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _name;
 	}
-	
+
 	/**
 	 * Method getAdditionalName.
 	 * @return String
@@ -898,7 +898,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _addname;
 	}
-	
+
 	/**
 	 * Method getBodyPart.
 	 * @return int
@@ -907,7 +907,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _bodyPart;
 	}
-	
+
 	/**
 	 * Method getType1.
 	 * @return int
@@ -916,7 +916,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _type1;
 	}
-	
+
 	/**
 	 * Method isStackable.
 	 * @return boolean
@@ -925,7 +925,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _stackable;
 	}
-	
+
 	/**
 	 * Method getReferencePrice.
 	 * @return int
@@ -934,7 +934,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _referencePrice;
 	}
-	
+
 	/**
 	 * Method isForHatchling.
 	 * @return boolean
@@ -943,7 +943,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _type2 == TYPE2_PET_HATCHLING;
 	}
-	
+
 	/**
 	 * Method isForStrider.
 	 * @return boolean
@@ -952,7 +952,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _type2 == TYPE2_PET_STRIDER;
 	}
-	
+
 	/**
 	 * Method isForWolf.
 	 * @return boolean
@@ -961,7 +961,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _type2 == TYPE2_PET_WOLF;
 	}
-	
+
 	/**
 	 * Method isForPetBaby.
 	 * @return boolean
@@ -970,7 +970,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _type2 == TYPE2_PET_BABY;
 	}
-	
+
 	/**
 	 * Method isForGWolf.
 	 * @return boolean
@@ -979,7 +979,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _type2 == TYPE2_PET_GWOLF;
 	}
-	
+
 	/**
 	 * Method isPendant.
 	 * @return boolean
@@ -988,7 +988,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _type2 == TYPE2_PENDANT;
 	}
-	
+
 	/**
 	 * Method isForPet.
 	 * @return boolean
@@ -997,7 +997,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return (_type2 == TYPE2_PENDANT) || (_type2 == TYPE2_PET_HATCHLING) || (_type2 == TYPE2_PET_WOLF) || (_type2 == TYPE2_PET_STRIDER) || (_type2 == TYPE2_PET_GWOLF) || (_type2 == TYPE2_PET_BABY);
 	}
-	
+
 	/**
 	 * Method attachSkill.
 	 * @param skill Skill
@@ -1006,7 +1006,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		_skills = ArrayUtils.add(_skills, skill);
 	}
-	
+
 	/**
 	 * Method getAttachedSkills.
 	 * @return Skill[]
@@ -1015,7 +1015,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _skills;
 	}
-	
+
 	/**
 	 * Method getFirstSkill.
 	 * @return Skill
@@ -1028,7 +1028,7 @@ public abstract class ItemTemplate extends StatTemplate
 		}
 		return null;
 	}
-	
+
 	/**
 	 * Method getEnchant4Skill.
 	 * @return Skill
@@ -1037,7 +1037,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _enchant4Skill;
 	}
-	
+
 	/**
 	 * Method getEnchant4Skill.
 	 * @return Skill
@@ -1046,7 +1046,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _unequipeSkill;
 	}
-	
+
 	/**
 	 * Method toString.
 	 * @return String
@@ -1056,7 +1056,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _itemId + " " + _name;
 	}
-	
+
 	/**
 	 * Method isShadowItem.
 	 * @return boolean
@@ -1065,7 +1065,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return (_durability > 0) && !isTemporal();
 	}
-	
+
 	/**
 	 * Method isCommonItem.
 	 * @return boolean
@@ -1074,7 +1074,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _name.startsWith("Common Item - ");
 	}
-	
+
 	/**
 	 * Method isSealedItem.
 	 * @return boolean
@@ -1083,7 +1083,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _name.startsWith("Sealed");
 	}
-	
+
 	/**
 	 * Method isAltSeed.
 	 * @return boolean
@@ -1092,7 +1092,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _name.contains("Alternative");
 	}
-	
+
 	/**
 	 * Method getItemClass.
 	 * @return ItemClass
@@ -1101,7 +1101,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _class;
 	}
-	
+
 	/**
 	 * Method isAdena.
 	 * @return boolean
@@ -1110,7 +1110,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return (_itemId == 57) || (_itemId == 6360) || (_itemId == 6361) || (_itemId == 6362);
 	}
-	
+
 	/**
 	 * Method isEquipment.
 	 * @return boolean
@@ -1119,7 +1119,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _type1 != TYPE1_ITEM_QUESTITEM_ADENA;
 	}
-	
+
 	/**
 	 * Method isKeyMatherial.
 	 * @return boolean
@@ -1128,7 +1128,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _class == ItemClass.PIECES;
 	}
-	
+
 	/**
 	 * Method isRecipe.
 	 * @return boolean
@@ -1137,7 +1137,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _class == ItemClass.RECIPIES;
 	}
-	
+
 	/**
 	 * Method isTerritoryAccessory.
 	 * @return boolean
@@ -1146,7 +1146,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return ((_itemId >= 13740) && (_itemId <= 13748)) || ((_itemId >= 14592) && (_itemId <= 14600)) || ((_itemId >= 14664) && (_itemId <= 14672)) || ((_itemId >= 14801) && (_itemId <= 14809)) || ((_itemId >= 15282) && (_itemId <= 15299));
 	}
-	
+
 	/**
 	 * Method isArrow.
 	 * @return boolean
@@ -1155,7 +1155,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return (type == EtcItemType.ARROW) || (type == EtcItemType.UNLIMITED_ARROW);
 	}
-	
+
 	/**
 	 * Method isBelt.
 	 * @return boolean
@@ -1164,7 +1164,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _bodyPart == SLOT_BELT;
 	}
-	
+
 	/**
 	 * Method isBracelet.
 	 * @return boolean
@@ -1173,7 +1173,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return (_bodyPart == SLOT_R_BRACELET) || (_bodyPart == SLOT_L_BRACELET);
 	}
-	
+
 	/**
 	 * Method isUnderwear.
 	 * @return boolean
@@ -1182,7 +1182,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _bodyPart == SLOT_UNDERWEAR;
 	}
-	
+
 	/**
 	 * Method isCloak.
 	 * @return boolean
@@ -1191,7 +1191,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _bodyPart == SLOT_BACK;
 	}
-	
+
 	/**
 	 * Method isTalisman.
 	 * @return boolean
@@ -1200,7 +1200,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _bodyPart == SLOT_DECO;
 	}
-	
+
 	/**
 	 * Method isHerb.
 	 * @return boolean
@@ -1209,7 +1209,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return type == EtcItemType.HERB;
 	}
-	
+
 	/**
 	 * Method isHeroWeapon.
 	 * @return boolean
@@ -1218,7 +1218,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return ((_itemId >= 6611) && (_itemId <= 6621)) || ((_itemId >= 9388) && (_itemId <= 9390));
 	}
-	
+
 	/**
 	 * Method isCursed.
 	 * @return boolean
@@ -1227,7 +1227,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return CursedWeaponsManager.getInstance().isCursed(_itemId);
 	}
-	
+
 	/**
 	 * Method isMercenaryTicket.
 	 * @return boolean
@@ -1236,7 +1236,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return type == EtcItemType.MERCENARY_TICKET;
 	}
-	
+
 	/**
 	 * Method isTerritoryFlag.
 	 * @return boolean
@@ -1245,7 +1245,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return (_itemId == 13560) || (_itemId == 13561) || (_itemId == 13562) || (_itemId == 13563) || (_itemId == 13564) || (_itemId == 13565) || (_itemId == 13566) || (_itemId == 13567) || (_itemId == 13568);
 	}
-	
+
 	/**
 	 * Method isRod.
 	 * @return boolean
@@ -1254,7 +1254,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return getItemType() == WeaponType.ROD;
 	}
-	
+
 	/**
 	 * Method isWeapon.
 	 * @return boolean
@@ -1263,7 +1263,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return getType2() == ItemTemplate.TYPE2_WEAPON;
 	}
-	
+
 	/**
 	 * Method isArmor.
 	 * @return boolean
@@ -1272,7 +1272,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return getType2() == ItemTemplate.TYPE2_SHIELD_ARMOR;
 	}
-	
+
 	/**
 	 * Method isAccessory.
 	 * @return boolean
@@ -1281,7 +1281,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return getType2() == ItemTemplate.TYPE2_ACCESSORY;
 	}
-	
+
 	/**
 	 * Method isQuest.
 	 * @return boolean
@@ -1290,7 +1290,16 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return getType2() == ItemTemplate.TYPE2_QUEST;
 	}
-	
+
+	/**
+	 * Method isHairAccessory.
+	 * @return boolean
+	 */
+	public boolean isHairAccessory()
+	{
+		return (_bodyPart == SLOT_HAIR) || (_bodyPart == SLOT_HAIRALL) || (_bodyPart == SLOT_DHAIR);
+	}
+
 	/**
 	 * Method canBeEnchanted.
 	 * @return boolean
@@ -1311,7 +1320,7 @@ public abstract class ItemTemplate extends StatTemplate
 		}
 		return isEnchantable();
 	}
-	
+
 	/**
 	 * Method isEquipable.
 	 * @return boolean
@@ -1320,7 +1329,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return (getItemType() == EtcItemType.BAIT) || (getItemType() == EtcItemType.ARROW) || (getItemType() == EtcItemType.UNLIMITED_ARROW) || (getItemType() == EtcItemType.BOLT) || !((getBodyPart() == 0) || (this instanceof EtcItemTemplate));
 	}
-	
+
 	/**
 	 * Method setEnchant4Skill.
 	 * @param enchant4Skill Skill
@@ -1329,7 +1338,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		_enchant4Skill = enchant4Skill;
 	}
-	
+
 	/**
 	 * Method setEnchant4Skill.
 	 * @param unequipeSkill
@@ -1338,7 +1347,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		_unequipeSkill = unequipeSkill;
 	}
-	
+
 	/**
 	 * Method testCondition.
 	 * @param player Playable
@@ -1368,7 +1377,7 @@ public abstract class ItemTemplate extends StatTemplate
 		}
 		return res;
 	}
-	
+
 	/**
 	 * Method setCondition.
 	 * @param condition Condition
@@ -1377,7 +1386,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		_condition = condition;
 	}
-	
+
 	/**
 	 * Method isEnchantable.
 	 * @return boolean
@@ -1386,7 +1395,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return hasFlag(ItemFlags.ENCHANTABLE);
 	}
-	
+
 	/**
 	 * Method isTradeable.
 	 * @return boolean
@@ -1395,7 +1404,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return hasFlag(ItemFlags.TRADEABLE);
 	}
-	
+
 	/**
 	 * Method isDestroyable.
 	 * @return boolean
@@ -1404,7 +1413,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return hasFlag(ItemFlags.DESTROYABLE);
 	}
-	
+
 	/**
 	 * Method isDropable.
 	 * @return boolean
@@ -1413,7 +1422,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return hasFlag(ItemFlags.DROPABLE);
 	}
-	
+
 	/**
 	 * Method isSellable.
 	 * @return boolean
@@ -1422,7 +1431,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return hasFlag(ItemFlags.SELLABLE);
 	}
-	
+
 	/**
 	 * Method isAugmentable.
 	 * @return boolean
@@ -1431,7 +1440,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return hasFlag(ItemFlags.AUGMENTABLE);
 	}
-	
+
 	/**
 	 * Method isAttributable.
 	 * @return boolean
@@ -1440,7 +1449,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return hasFlag(ItemFlags.ATTRIBUTABLE);
 	}
-	
+
 	/**
 	 * Method isStoreable.
 	 * @return boolean
@@ -1449,7 +1458,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return hasFlag(ItemFlags.STOREABLE);
 	}
-	
+
 	/**
 	 * Method isFreightable.
 	 * @return boolean
@@ -1458,7 +1467,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return hasFlag(ItemFlags.FREIGHTABLE);
 	}
-	
+
 	/**
 	 * Method hasFlag.
 	 * @param f ItemFlags
@@ -1468,7 +1477,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return (_flags & f.mask()) == f.mask();
 	}
-	
+
 	/**
 	 * Method activeFlag.
 	 * @param f ItemFlags
@@ -1477,7 +1486,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		_flags |= f.mask();
 	}
-	
+
 	/**
 	 * Method getHandler.
 	 * @return IItemHandler
@@ -1486,7 +1495,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _handler;
 	}
-	
+
 	/**
 	 * Method setHandler.
 	 * @param handler IItemHandler
@@ -1495,7 +1504,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		_handler = handler;
 	}
-	
+
 	/**
 	 * Method getReuseDelay.
 	 * @return int
@@ -1504,7 +1513,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _reuseDelay;
 	}
-	
+
 	/**
 	 * Method getReuseGroup.
 	 * @return int
@@ -1513,7 +1522,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _reuseGroup;
 	}
-	
+
 	/**
 	 * Method getDisplayReuseGroup.
 	 * @return int
@@ -1522,7 +1531,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _reuseGroup < 0 ? -1 : _reuseGroup;
 	}
-	
+
 	/**
 	 * Method getAgathionEnergy.
 	 * @return int
@@ -1531,7 +1540,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _agathionEnergy;
 	}
-	
+
 	/**
 	 * Method addEnchantOptions.
 	 * @param level int
@@ -1545,7 +1554,7 @@ public abstract class ItemTemplate extends StatTemplate
 		}
 		_enchantOptions.put(level, options);
 	}
-	
+
 	/**
 	 * Method getEnchantOptions.
 	 * @return IntObjectMap<int[]>
@@ -1554,7 +1563,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _enchantOptions;
 	}
-	
+
 	/**
 	 * Method getReuseType.
 	 * @return ReuseType
@@ -1563,7 +1572,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _reuseType;
 	}
-	
+
 	/**
 	 * Method isBlessed.
 	 * @return boolean
@@ -1572,7 +1581,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _blessed;
 	}
-	
+
 	/**
 	 * Method isCapsuled.
 	 * @return boolean
@@ -1581,7 +1590,7 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return _capsuled;
 	}
-	
+
 	/**
 	 * Method isMagicWeapon.
 	 * @return boolean

@@ -18,4 +18,174 @@
 			</not>
 		</cond>
 	</etcitem>
+	<etcitem id="23189" name="Ninja Top Appearance Stone">
+		<set name="icon" value="BranchSys3.icon1.g_scrl_change_chest"/>
+		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="23190" name="Ninja Pants Appearance Stone">
+		<set name="icon" value="BranchSys3.icon1.g_scrl_change_legs"/>
+		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="23191" name="Ninja Gloves Appearance Stone">
+		<set name="icon" value="BranchSys3.icon1.g_scrl_change_gloves"/>
+		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="23192" name="Ninja Shoes Appearance Stone">
+		<set name="icon" value="BranchSys3.icon1.g_scrl_change_feet"/>
+		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="23193" name="Ninja Hair Accessory Appearance Stone">
+		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_hair2"/>
+		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="23194" name="Traditional Taiwanese Top Appearance Stone">
+		<set name="icon" value="BranchSys3.icon1.g_scrl_change_chest"/>
+		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="23195" name="Traditional Taiwanese Pants Appearance Stone">
+		<set name="icon" value="BranchSys3.icon1.g_scrl_change_legs"/>
+		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="23196" name="Traditional Taiwanese Gloves Appearance Stone">
+		<set name="icon" value="BranchSys3.icon1.g_scrl_change_gloves"/>
+		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="23197" name="Traditional Taiwanese Shoes Appearance Stone">
+		<set name="icon" value="BranchSys3.icon1.g_scrl_change_feet"/>
+		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="23198" name="Traditional Taiwanese Hair Accessory Appearance Stone">
+		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_hair2"/>
+		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
 </list>
