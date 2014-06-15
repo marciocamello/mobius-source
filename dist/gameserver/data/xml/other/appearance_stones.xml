@@ -90,9 +90,9 @@
 	<appearance_stone id="23192" target_type="ARMOR" shifting_type="FIXED" extract_id="23182" item_type="FEET"/>
 	<appearance_stone id="23193" target_type="ACCESSORY" shifting_type="FIXED" extract_id="23183" item_type="HAIR_ACCESSORY"/>
 
-    <appearance_stone id="23194" target_type="ARMOR" shifting_type="FIXED" extract_id="23184" item_type="UPPER_PIECE"/>
-    <appearance_stone id="23195" target_type="ARMOR" shifting_type="FIXED" extract_id="23185" item_type="LOWER_PIECE"/>
-    <appearance_stone id="23196" target_type="ARMOR" shifting_type="FIXED" extract_id="23186" item_type="GLOVES"/>
-    <appearance_stone id="23197" target_type="ARMOR" shifting_type="FIXED" extract_id="23187" item_type="FEET"/>
-    <appearance_stone id="23198" target_type="ACCESSORY" shifting_type="FIXED" extract_id="23188" item_type="HAIR_ACCESSORY"/>
+	<appearance_stone id="23194" target_type="ARMOR" shifting_type="FIXED" extract_id="23184" item_type="UPPER_PIECE"/>
+	<appearance_stone id="23195" target_type="ARMOR" shifting_type="FIXED" extract_id="23185" item_type="LOWER_PIECE"/>
+	<appearance_stone id="23196" target_type="ARMOR" shifting_type="FIXED" extract_id="23186" item_type="GLOVES"/>
+	<appearance_stone id="23197" target_type="ARMOR" shifting_type="FIXED" extract_id="23187" item_type="FEET"/>
+	<appearance_stone id="23198" target_type="ACCESSORY" shifting_type="FIXED" extract_id="23188" item_type="HAIR_ACCESSORY"/>
 </list>
