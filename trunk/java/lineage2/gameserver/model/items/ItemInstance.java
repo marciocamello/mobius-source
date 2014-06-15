@@ -64,17 +64,17 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	 * Field EMPTY_ENCHANT_OPTIONS.
 	 */
 	public static final int[] EMPTY_ENCHANT_OPTIONS = new int[3];
-	
+
 	/**
 	 * Field serialVersionUID. (value is 3162753878915133228)
 	 */
 	private static final long serialVersionUID = 3162753878915133228L;
-	
+
 	/**
 	 * Field _itemsDAO.
 	 */
 	private static final ItemsDAO _itemsDAO = ItemsDAO.getInstance();
-	
+
 	/**
 	 * @author Mobius
 	 */
@@ -126,7 +126,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		 */
 		COMMISSION
 	}
-	
+
 	/**
 	 * Field CHARGED_NONE. (value is 0)
 	 */
@@ -143,7 +143,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	 * Field CHARGED_BLESSED_SPIRITSHOT. (value is 2)
 	 */
 	public static final int CHARGED_BLESSED_SPIRITSHOT = 2;
-	
+
 	/**
 	 * Field FLAG_NO_DROP.
 	 */
@@ -168,7 +168,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	 * Field FLAG_NO_DESTROY.
 	 */
 	public static final int FLAG_NO_DESTROY = 1 << 5;
-	
+
 	/**
 	 * Field ownerId.
 	 */
@@ -229,7 +229,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	 * Field _dropTime.
 	 */
 	private long _dropTime;
-	
+
 	/**
 	 * Field _dropPlayers.
 	 */
@@ -238,7 +238,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	 * Field _dropTimeOwner.
 	 */
 	private long _dropTimeOwner;
-	
+
 	/**
 	 * Field _chargedSoulshot.
 	 */
@@ -247,7 +247,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	 * Field _chargedSpiritshot.
 	 */
 	private int _chargedSpiritshot = CHARGED_NONE;
-	
+
 	/**
 	 * Field _chargedFishtshot.
 	 */
@@ -261,7 +261,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	 * Field _agathionEnergy.
 	 */
 	private int _agathionEnergy;
-	
+
 	/**
 	 * Field _attachment.
 	 */
@@ -270,7 +270,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	 * Field _state.
 	 */
 	private JdbcEntityState _state = JdbcEntityState.CREATED;
-	
+
 	/**
 	 * Constructor for ItemInstance.
 	 * @param objectId int
@@ -279,7 +279,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		super(objectId);
 	}
-	
+
 	/**
 	 * Constructor for ItemInstance.
 	 * @param objectId int
@@ -294,7 +294,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		setLocData(-1);
 		setEnchantLevel(0);
 	}
-	
+
 	/**
 	 * Method getOwnerId.
 	 * @return int
@@ -303,7 +303,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return ownerId;
 	}
-	
+
 	/**
 	 * Method setOwnerId.
 	 * @param ownerId int
@@ -312,7 +312,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		this.ownerId = ownerId;
 	}
-	
+
 	/**
 	 * Method getItemId.
 	 * @return int
@@ -321,7 +321,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return itemId;
 	}
-	
+
 	/**
 	 * Method setItemId.
 	 * @param id int
@@ -332,7 +332,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		template = ItemHolder.getInstance().getTemplate(id);
 		setCustomFlags(getCustomFlags());
 	}
-	
+
 	/**
 	 * Method getCount.
 	 * @return long
@@ -341,7 +341,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return count;
 	}
-	
+
 	/**
 	 * Method setCount.
 	 * @param count long
@@ -352,16 +352,16 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		{
 			count = 0;
 		}
-		
+
 		if (!isStackable() && (count > 1L))
 		{
 			this.count = 1L;
 			return;
 		}
-		
+
 		this.count = count;
 	}
-	
+
 	/**
 	 * Method getEnchantLevel.
 	 * @return int
@@ -370,7 +370,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return enchantLevel;
 	}
-	
+
 	/**
 	 * Method setEnchantLevel.
 	 * @param enchantLevel int
@@ -378,29 +378,29 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	public void setEnchantLevel(int enchantLevel)
 	{
 		final int old = this.enchantLevel;
-		
+
 		this.enchantLevel = enchantLevel;
-		
+
 		if ((old != this.enchantLevel) && (getTemplate().getEnchantOptions().size() > 0))
 		{
 			Player player = GameObjectsStorage.getPlayer(ownerId);
-			
+
 			if (isEquipped() && (player != null))
 			{
 				ItemEnchantOptionsListener.getInstance().onUnequip(getEquipSlot(), this, player);
 			}
-			
+
 			int[] enchantOptions = getTemplate().getEnchantOptions().get(this.enchantLevel);
-			
+
 			_enchantOptions = enchantOptions == null ? EMPTY_ENCHANT_OPTIONS : enchantOptions;
-			
+
 			if (isEquipped() && (player != null))
 			{
 				ItemEnchantOptionsListener.getInstance().onEquip(getEquipSlot(), this, player);
 			}
 		}
 	}
-	
+
 	/**
 	 * Method setLocName.
 	 * @param loc String
@@ -409,7 +409,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		this.loc = ItemLocation.valueOf(loc);
 	}
-	
+
 	/**
 	 * Method getLocName.
 	 * @return String
@@ -418,7 +418,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return loc.name();
 	}
-	
+
 	/**
 	 * Method setLocation.
 	 * @param loc ItemLocation
@@ -427,7 +427,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		this.loc = loc;
 	}
-	
+
 	/**
 	 * Method getLocation.
 	 * @return ItemLocation
@@ -436,7 +436,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return loc;
 	}
-	
+
 	/**
 	 * Method setLocData.
 	 * @param locData int
@@ -445,7 +445,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		this.locData = locData;
 	}
-	
+
 	/**
 	 * Method getLocData.
 	 * @return int
@@ -454,7 +454,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return locData;
 	}
-	
+
 	/**
 	 * Method getCustomType1.
 	 * @return int
@@ -463,7 +463,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return customType1;
 	}
-	
+
 	/**
 	 * Method setCustomType1.
 	 * @param newtype int
@@ -472,7 +472,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		customType1 = newtype;
 	}
-	
+
 	/**
 	 * Method getCustomType2.
 	 * @return int
@@ -481,7 +481,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return customType2;
 	}
-	
+
 	/**
 	 * Method setCustomType2.
 	 * @param newtype int
@@ -490,7 +490,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		customType2 = newtype;
 	}
-	
+
 	/**
 	 * Method getLifeTime.
 	 * @return int
@@ -499,7 +499,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return lifeTime;
 	}
-	
+
 	/**
 	 * Method setLifeTime.
 	 * @param lifeTime int
@@ -508,7 +508,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		this.lifeTime = Math.max(0, lifeTime);
 	}
-	
+
 	/**
 	 * Method getCustomFlags.
 	 * @return int
@@ -517,7 +517,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return customFlags;
 	}
-	
+
 	/**
 	 * Method setCustomFlags.
 	 * @param flags int
@@ -526,7 +526,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		customFlags = flags;
 	}
-	
+
 	/**
 	 * Method getAttributes.
 	 * @return ItemAttributes
@@ -535,7 +535,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return attrs;
 	}
-	
+
 	/**
 	 * Method setAttributes.
 	 * @param attrs ItemAttributes
@@ -544,7 +544,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		this.attrs = attrs;
 	}
-	
+
 	/**
 	 * Method getShadowLifeTime.
 	 * @return int
@@ -557,7 +557,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		}
 		return getLifeTime();
 	}
-	
+
 	/**
 	 * Method getTemporalLifeTime.
 	 * @return int
@@ -570,12 +570,12 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		}
 		return getLifeTime() - (int) (System.currentTimeMillis() / 1000L);
 	}
-	
+
 	/**
 	 * Field _timerTask.
 	 */
 	private ScheduledFuture<?> _timerTask;
-	
+
 	/**
 	 * Method startTimer.
 	 * @param r Runnable
@@ -584,7 +584,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		_timerTask = LazyPrecisionTaskManager.getInstance().scheduleAtFixedRate(r, 0, 60000L);
 	}
-	
+
 	/**
 	 * Method stopTimer.
 	 */
@@ -596,7 +596,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 			_timerTask = null;
 		}
 	}
-	
+
 	/**
 	 * Method isEquipable.
 	 * @return boolean
@@ -605,7 +605,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return template.isEquipable();
 	}
-	
+
 	/**
 	 * Method isEquipped.
 	 * @return boolean
@@ -614,7 +614,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return isEquipped;
 	}
-	
+
 	/**
 	 * Method setEquipped.
 	 * @param isEquipped boolean
@@ -623,7 +623,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		this.isEquipped = isEquipped;
 	}
-	
+
 	/**
 	 * Method getBodyPart.
 	 * @return int
@@ -632,7 +632,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return template.getBodyPart();
 	}
-	
+
 	/**
 	 * Method getEquipSlot.
 	 * @return int
@@ -641,7 +641,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return getLocData();
 	}
-	
+
 	/**
 	 * Method getTemplate.
 	 * @return ItemTemplate
@@ -650,7 +650,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return template;
 	}
-	
+
 	/**
 	 * Method setDropTime.
 	 * @param time long
@@ -659,7 +659,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		_dropTime = time;
 	}
-	
+
 	/**
 	 * Method getLastDropTime.
 	 * @return long
@@ -668,7 +668,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return _dropTime;
 	}
-	
+
 	/**
 	 * Method getDropTimeOwner.
 	 * @return long
@@ -677,7 +677,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return _dropTimeOwner;
 	}
-	
+
 	/**
 	 * Method getItemType.
 	 * @return ItemType
@@ -686,12 +686,12 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return template.getItemType();
 	}
-	
+
 	public ExItemType getExItemType()
 	{
 		return template.getExItemType();
 	}
-	
+
 	/**
 	 * Method isArmor.
 	 * @return boolean
@@ -700,7 +700,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return template.isArmor();
 	}
-	
+
 	/**
 	 * Method isAccessory.
 	 * @return boolean
@@ -709,7 +709,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return template.isAccessory();
 	}
-	
+
 	/**
 	 * Method isWeapon.
 	 * @return boolean
@@ -718,7 +718,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return template.isWeapon();
 	}
-	
+
 	/**
 	 * Method getReferencePrice.
 	 * @return int
@@ -727,7 +727,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return template.getReferencePrice();
 	}
-	
+
 	/**
 	 * Method isStackable.
 	 * @return boolean
@@ -736,7 +736,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return template.isStackable();
 	}
-	
+
 	@Override
 	public void onActionSelect(final Player player, final boolean forced)
 	{
@@ -744,20 +744,20 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		{
 			return;
 		}
-		
+
 		if (player.isAlikeDead())
 		{
 			return;
 		}
-		
+
 		if (player.isCursedWeaponEquipped() && CursedWeaponsManager.getInstance().isCursed(itemId))
 		{
 			return;
 		}
-		
+
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_PICK_UP, this, null);
 	}
-	
+
 	/**
 	 * Method isAugmented.
 	 * @return boolean
@@ -766,7 +766,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return getAugmentationId() != 0;
 	}
-	
+
 	/**
 	 * Method getAugmentationId.
 	 * @return int
@@ -775,7 +775,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return _augmentationId;
 	}
-	
+
 	/**
 	 * Method setAugmentationId.
 	 * @param val int
@@ -784,7 +784,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		_augmentationId = val;
 	}
-	
+
 	/**
 	 * Returns the type of charge with SoulShot of the item.
 	 * @return int (CHARGED_NONE, CHARGED_SOULSHOT)
@@ -793,7 +793,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return _chargedSoulshot;
 	}
-	
+
 	/**
 	 * Method getChargedSpiritshot.
 	 * @return int
@@ -802,7 +802,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return _chargedSpiritshot;
 	}
-	
+
 	/**
 	 * Method getChargedFishshot.
 	 * @return boolean
@@ -811,7 +811,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return _chargedFishtshot;
 	}
-	
+
 	/**
 	 * Method setChargedSoulshot.
 	 * @param type int
@@ -820,7 +820,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		_chargedSoulshot = type;
 	}
-	
+
 	/**
 	 * Method setChargedSpiritshot.
 	 * @param type int
@@ -829,7 +829,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		_chargedSpiritshot = type;
 	}
-	
+
 	/**
 	 * Method setChargedFishshot.
 	 * @param type boolean
@@ -838,7 +838,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		_chargedFishtshot = type;
 	}
-	
+
 	/**
 	 * @author Mobius
 	 */
@@ -848,7 +848,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		 * Field element.
 		 */
 		private final Element element;
-		
+
 		/**
 		 * Constructor for FuncAttack.
 		 * @param element Element
@@ -860,7 +860,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 			super(element.getAttack(), order, owner);
 			this.element = element;
 		}
-		
+
 		/**
 		 * Method calc.
 		 * @param env Env
@@ -871,7 +871,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 			env.value += getAttributeElementValue(element, true);
 		}
 	}
-	
+
 	/**
 	 * @author Mobius
 	 */
@@ -881,7 +881,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		 * Field element.
 		 */
 		private final Element element;
-		
+
 		/**
 		 * Constructor for FuncDefence.
 		 * @param element Element
@@ -893,7 +893,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 			super(element.getDefence(), order, owner);
 			this.element = element;
 		}
-		
+
 		/**
 		 * Method calc.
 		 * @param env Env
@@ -904,7 +904,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 			env.value += getAttributeElementValue(element, true);
 		}
 	}
-	
+
 	/**
 	 * Method getStatFuncs.
 	 * @return Func[]
@@ -912,9 +912,9 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	public Func[] getStatFuncs()
 	{
 		Func[] result = Func.EMPTY_FUNC_ARRAY;
-		
+
 		GArray<Func> funcs = new GArray<>();
-		
+
 		if (template.getAttachedFuncs().length > 0)
 		{
 			for (FuncTemplate t : template.getAttachedFuncs())
@@ -926,7 +926,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 				}
 			}
 		}
-		
+
 		for (Element e : Element.VALUES)
 		{
 			if (isWeapon())
@@ -938,17 +938,17 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 				funcs.add(new FuncDefence(e, 0x40, this));
 			}
 		}
-		
+
 		if (!funcs.isEmpty())
 		{
 			result = funcs.toArray(new Func[funcs.size()]);
 		}
-		
+
 		funcs.clear();
-		
+
 		return result;
 	}
-	
+
 	/**
 	 * Method isHeroWeapon.
 	 * @return boolean
@@ -957,7 +957,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return template.isHeroWeapon();
 	}
-	
+
 	/**
 	 * Method canBeDestroyed.
 	 * @param player Player
@@ -969,35 +969,35 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		{
 			return false;
 		}
-		
+
 		if (isHeroWeapon())
 		{
 			return false;
 		}
-		
+
 		if (PetDataTable.isPetControlItem(this) && player.isMounted())
 		{
 			return false;
 		}
-		
+
 		if (player.getPetControlItem() == this)
 		{
 			return false;
 		}
-		
+
 		if (player.getEnchantScroll() == this)
 		{
 			return false;
 		}
-		
+
 		if (isCursed())
 		{
 			return false;
 		}
-		
+
 		return template.isDestroyable();
 	}
-	
+
 	/**
 	 * Method canBeDropped.
 	 * @param player Player
@@ -1010,35 +1010,35 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		{
 			return true;
 		}
-		
+
 		if ((customFlags & FLAG_NO_DROP) == FLAG_NO_DROP)
 		{
 			return false;
 		}
-		
+
 		if (isShadowItem())
 		{
 			return false;
 		}
-		
+
 		if (isTemporalItem())
 		{
 			return false;
 		}
-		
+
 		if (isAugmented() && (!pk || !Config.DROP_ITEMS_AUGMENTED) && !Config.ALT_ALLOW_DROP_AUGMENTED)
 		{
 			return false;
 		}
-		
+
 		if (!ItemFunctions.checkIfCanDiscard(player, this))
 		{
 			return false;
 		}
-		
+
 		return template.isDropable();
 	}
-	
+
 	/**
 	 * Method canBeTraded.
 	 * @param player Player
@@ -1050,40 +1050,40 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		{
 			return false;
 		}
-		
+
 		if (player.isGM())
 		{
 			return true;
 		}
-		
+
 		if ((customFlags & FLAG_NO_TRADE) == FLAG_NO_TRADE)
 		{
 			return false;
 		}
-		
+
 		if (isShadowItem())
 		{
 			return false;
 		}
-		
+
 		if (isTemporalItem())
 		{
 			return false;
 		}
-		
+
 		if (isAugmented() && !Config.ALT_ALLOW_DROP_AUGMENTED)
 		{
 			return false;
 		}
-		
+
 		if (!ItemFunctions.checkIfCanDiscard(player, this))
 		{
 			return false;
 		}
-		
+
 		return template.isTradeable();
 	}
-	
+
 	/**
 	 * Method canBeSold.
 	 * @param player Player
@@ -1095,45 +1095,45 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		{
 			return false;
 		}
-		
+
 		if (getItemId() == ItemTemplate.ITEM_ID_ADENA)
 		{
 			return false;
 		}
-		
+
 		if (template.getReferencePrice() == 0)
 		{
 			return false;
 		}
-		
+
 		if (isShadowItem())
 		{
 			return false;
 		}
-		
+
 		if (isTemporalItem())
 		{
 			return false;
 		}
-		
+
 		if (isAugmented() && !Config.ALT_ALLOW_DROP_AUGMENTED)
 		{
 			return false;
 		}
-		
+
 		if (isEquipped())
 		{
 			return false;
 		}
-		
+
 		if (!ItemFunctions.checkIfCanDiscard(player, this))
 		{
 			return false;
 		}
-		
+
 		return template.isSellable();
 	}
-	
+
 	/**
 	 * Method canBeStored.
 	 * @param player Player
@@ -1146,35 +1146,35 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		{
 			return false;
 		}
-		
+
 		if (!getTemplate().isStoreable())
 		{
 			return false;
 		}
-		
+
 		if (!privatewh && (isShadowItem() || isTemporalItem()))
 		{
 			return false;
 		}
-		
+
 		if (!privatewh && isAugmented() && !Config.ALT_ALLOW_DROP_AUGMENTED)
 		{
 			return false;
 		}
-		
+
 		if (isEquipped())
 		{
 			return false;
 		}
-		
+
 		if (!ItemFunctions.checkIfCanDiscard(player, this))
 		{
 			return false;
 		}
-		
+
 		return privatewh || template.isTradeable();
 	}
-	
+
 	/**
 	 * Method canBeCrystallized.
 	 * @param player Player
@@ -1186,25 +1186,25 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		{
 			return false;
 		}
-		
+
 		if (isShadowItem())
 		{
 			return false;
 		}
-		
+
 		if (isTemporalItem())
 		{
 			return false;
 		}
-		
+
 		if (!ItemFunctions.checkIfCanDiscard(player, this))
 		{
 			return false;
 		}
-		
+
 		return template.isCrystallizable();
 	}
-	
+
 	/**
 	 * Method canBeEnchanted.
 	 * @return boolean
@@ -1215,10 +1215,10 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		{
 			return false;
 		}
-		
+
 		return template.canBeEnchanted();
 	}
-	
+
 	/**
 	 * Method canBeAugmented.
 	 * @param player Player
@@ -1231,50 +1231,50 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		{
 			return false;
 		}
-		
+
 		if (isAugmented())
 		{
 			return false;
 		}
-		
+
 		if (isCommonItem())
 		{
 			return false;
 		}
-		
+
 		if (isTerritoryAccessory())
 		{
 			return false;
 		}
-		
+
 		if (getTemplate().getItemGrade().ordinal() < Grade.C.ordinal())
 		{
 			return false;
 		}
-		
+
 		if (!getTemplate().isAugmentable())
 		{
 			return false;
 		}
-		
+
 		if (isAccessory())
 		{
 			return lsg == LifeStoneGrade.ACCESSORY;
 		}
-		
+
 		if (isArmor())
 		{
 			return Config.ALT_ALLOW_AUGMENT_ALL;
 		}
-		
+
 		if (isWeapon())
 		{
 			return ((lsg != LifeStoneGrade.ACCESSORY) && (lsg != LifeStoneGrade.UNDERWEAR));
 		}
-		
+
 		return true;
 	}
-	
+
 	/**
 	 * Method canBeExchanged.
 	 * @param player Player
@@ -1286,25 +1286,25 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		{
 			return false;
 		}
-		
+
 		if (isShadowItem())
 		{
 			return false;
 		}
-		
+
 		if (isTemporalItem())
 		{
 			return false;
 		}
-		
+
 		if (!ItemFunctions.checkIfCanDiscard(player, this))
 		{
 			return false;
 		}
-		
+
 		return template.isDestroyable();
 	}
-	
+
 	/**
 	 * Method isTerritoryAccessory.
 	 * @return boolean
@@ -1313,7 +1313,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return template.isTerritoryAccessory();
 	}
-	
+
 	/**
 	 * Method isShadowItem.
 	 * @return boolean
@@ -1322,7 +1322,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return template.isShadowItem();
 	}
-	
+
 	/**
 	 * Method isTemporalItem.
 	 * @return boolean
@@ -1331,7 +1331,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return template.isTemporal();
 	}
-	
+
 	/**
 	 * Method isCommonItem.
 	 * @return boolean
@@ -1340,7 +1340,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return template.isCommonItem();
 	}
-	
+
 	/**
 	 * Method isAltSeed.
 	 * @return boolean
@@ -1349,7 +1349,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return template.isAltSeed();
 	}
-	
+
 	/**
 	 * Method isCursed.
 	 * @return boolean
@@ -1358,7 +1358,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return template.isCursed();
 	}
-	
+
 	/**
 	 * Method dropToTheGround.
 	 * @param lastAttacker Player
@@ -1371,9 +1371,9 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		{
 			dropper = lastAttacker;
 		}
-		
+
 		Location pos = Location.findAroundPosition(dropper, 100);
-		
+
 		if (lastAttacker != null)
 		{
 			_dropPlayers = new HashIntSet(1, 2);
@@ -1381,12 +1381,12 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 			{
 				_dropPlayers.add($member.getObjectId());
 			}
-			
+
 			_dropTimeOwner = System.currentTimeMillis() + Config.NONOWNER_ITEM_PICKUP_DELAY + ((fromNpc != null) && fromNpc.isRaid() ? 285000 : 0);
 		}
-		
+
 		dropMe(dropper, pos);
-		
+
 		if (isHerb())
 		{
 			ItemsAutoDestroy.getInstance().addHerb(this);
@@ -1396,7 +1396,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 			ItemsAutoDestroy.getInstance().addItem(this);
 		}
 	}
-	
+
 	/**
 	 * Method dropToTheGround.
 	 * @param dropper Creature
@@ -1413,7 +1413,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 			dropMe(dropper, dropper.getLoc());
 		}
 	}
-	
+
 	/**
 	 * Method dropToTheGround.
 	 * @param dropper Playable
@@ -1427,7 +1427,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 			setJdbcState(JdbcEntityState.UPDATED);
 			update();
 		}
-		
+
 		if (GeoEngine.canMoveToCoord(dropper.getX(), dropper.getY(), dropper.getZ(), dropPos.x, dropPos.y, dropPos.z, dropper.getGeoIndex()))
 		{
 			dropMe(dropper, dropPos);
@@ -1437,7 +1437,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 			dropMe(dropper, dropper.getLoc());
 		}
 	}
-	
+
 	/**
 	 * Method dropMe.
 	 * @param dropper Creature
@@ -1449,10 +1449,10 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		{
 			setReflection(dropper.getReflection());
 		}
-		
+
 		spawnMe0(loc, dropper);
 	}
-	
+
 	/**
 	 * Method pickupMe.
 	 */
@@ -1461,7 +1461,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		decayMe();
 		setReflection(ReflectionManager.DEFAULT);
 	}
-	
+
 	/**
 	 * Method getItemClass.
 	 * @return ItemClass
@@ -1470,7 +1470,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return template.getItemClass();
 	}
-	
+
 	/**
 	 * Method getDefence.
 	 * @param element Element
@@ -1480,7 +1480,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return isArmor() ? getAttributeElementValue(element, true) : 0;
 	}
-	
+
 	/**
 	 * Method getDefenceFire.
 	 * @return int
@@ -1489,7 +1489,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return getDefence(Element.FIRE);
 	}
-	
+
 	/**
 	 * Method getDefenceWater.
 	 * @return int
@@ -1498,7 +1498,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return getDefence(Element.WATER);
 	}
-	
+
 	/**
 	 * Method getDefenceWind.
 	 * @return int
@@ -1507,7 +1507,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return getDefence(Element.WIND);
 	}
-	
+
 	/**
 	 * Method getDefenceEarth.
 	 * @return int
@@ -1516,7 +1516,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return getDefence(Element.EARTH);
 	}
-	
+
 	/**
 	 * Method getDefenceHoly.
 	 * @return int
@@ -1525,7 +1525,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return getDefence(Element.HOLY);
 	}
-	
+
 	/**
 	 * Method getDefenceUnholy.
 	 * @return int
@@ -1534,7 +1534,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return getDefence(Element.UNHOLY);
 	}
-	
+
 	/**
 	 * Method getAttributeElementValue.
 	 * @param element Element
@@ -1545,7 +1545,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return attrs.getValue(element) + (withBase ? template.getBaseAttributeValue(element) : 0);
 	}
-	
+
 	/**
 	 * Method getAttributeElement.
 	 * @return Element
@@ -1554,7 +1554,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return attrs.getElement();
 	}
-	
+
 	/**
 	 * Method getAttributeElementValue.
 	 * @return int
@@ -1563,7 +1563,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return attrs.getValue();
 	}
-	
+
 	/**
 	 * Method getAttackElement.
 	 * @return Element
@@ -1583,7 +1583,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		}
 		return element;
 	}
-	
+
 	/**
 	 * Method getAttackElementValue.
 	 * @return int
@@ -1592,7 +1592,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return isWeapon() ? getAttributeElementValue(getAttackElement(), true) : 0;
 	}
-	
+
 	/**
 	 * Method setAttributeElement.
 	 * @param element Element
@@ -1602,7 +1602,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		attrs.setValue(element, value);
 	}
-	
+
 	/**
 	 * Method isHerb.
 	 * @return boolean
@@ -1611,7 +1611,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return getTemplate().isHerb();
 	}
-	
+
 	/**
 	 * Method getCrystalType.
 	 * @return Grade
@@ -1620,7 +1620,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return template.getCrystalType();
 	}
-	
+
 	/**
 	 * Method getName.
 	 * @return String
@@ -1630,7 +1630,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return getTemplate().getName();
 	}
-	
+
 	/**
 	 * Method save.
 	 * @see lineage2.commons.dao.JdbcEntity#save()
@@ -1640,7 +1640,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		_itemsDAO.save(this);
 	}
-	
+
 	/**
 	 * Method update.
 	 * @see lineage2.commons.dao.JdbcEntity#update()
@@ -1650,7 +1650,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		_itemsDAO.update(this);
 	}
-	
+
 	/**
 	 * Method delete.
 	 * @see lineage2.commons.dao.JdbcEntity#delete()
@@ -1660,7 +1660,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		_itemsDAO.delete(this);
 	}
-	
+
 	/**
 	 * Method addPacketList.
 	 * @param forPlayer Player
@@ -1679,10 +1679,10 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		{
 			packet = new SpawnItem(this);
 		}
-		
+
 		return Collections.singletonList(packet);
 	}
-	
+
 	/**
 	 * Method toString.
 	 * @return String
@@ -1691,7 +1691,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	public String toString()
 	{
 		StringBuilder sb = new StringBuilder();
-		
+
 		sb.append(getTemplate().getItemId());
 		sb.append(' ');
 		if (getEnchantLevel() > 0)
@@ -1713,11 +1713,11 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		sb.append('[');
 		sb.append(getObjectId());
 		sb.append(']');
-		
+
 		return sb.toString();
-		
+
 	}
-	
+
 	/**
 	 * Method setJdbcState.
 	 * @param state JdbcEntityState
@@ -1728,7 +1728,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		_state = state;
 	}
-	
+
 	/**
 	 * Method getJdbcState.
 	 * @return JdbcEntityState * @see lineage2.commons.dao.JdbcEntity#getJdbcState()
@@ -1738,7 +1738,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return _state;
 	}
-	
+
 	/**
 	 * Method isItem.
 	 * @return boolean
@@ -1748,7 +1748,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return true;
 	}
-	
+
 	/**
 	 * Method getAttachment.
 	 * @return ItemAttachment
@@ -1757,7 +1757,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return _attachment;
 	}
-	
+
 	/**
 	 * Method setAttachment.
 	 * @param attachment ItemAttachment
@@ -1775,7 +1775,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 			old.setItem(null);
 		}
 	}
-	
+
 	/**
 	 * Method getAgathionEnergy.
 	 * @return int
@@ -1784,7 +1784,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return _agathionEnergy;
 	}
-	
+
 	/**
 	 * Method setAgathionEnergy.
 	 * @param agathionEnergy int
@@ -1793,7 +1793,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		_agathionEnergy = agathionEnergy;
 	}
-	
+
 	/**
 	 * Method getEnchantOptions.
 	 * @return int[]
@@ -1802,22 +1802,22 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	{
 		return _enchantOptions;
 	}
-	
+
 	public int getVisualId()
 	{
 		return _visualId;
 	}
-	
+
 	public void setVisualId(int val)
 	{
 		_visualId = val;
 	}
-	
+
 	public IntSet getDropPlayers()
 	{
 		return _dropPlayers;
 	}
-	
+
 	public boolean isOther()
 	{
 		if (!isAccessory() || !isWeapon() || !isArmor())
@@ -1826,10 +1826,15 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		}
 		return false;
 	}
-	
+
+	public boolean isHairAccessory()
+	{
+		return template.isHairAccessory();
+	}
+
 	public boolean canBeAppearance()
 	{
-		if (isAccessory() || isWeapon() || isArmor())
+		if (isHairAccessory() || isAccessory() || isWeapon() || isArmor())
 		{
 			return true;
 		}
