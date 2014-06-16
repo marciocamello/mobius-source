@@ -725,7 +725,7 @@ public class Config
 	public static int MANOR_MAINTENANCE_PERIOD;
 	public static double EVENT_CofferOfShadowsPriceRate;
 	public static double EVENT_CofferOfShadowsRewardRate;
-	public static double EVENT_APIL_FOOLS_DROP_CHANCE;
+	public static double EVENT_APRIL_FOOLS_DROP_CHANCE;
 	public static int ENCHANT_CHANCE_MASTER_YOGI_STAFF;
 	public static int ENCHANT_MAX_MASTER_YOGI_STAFF;
 	public static int SAFE_ENCHANT_MASTER_YOGI_STAFF;
@@ -1919,7 +1919,7 @@ public class Config
 		EVENT_GLITTMEDAL_GLIT_CHANCE = eventSettings.getProperty("GLITTMEDAL_CHANCE", 0.1);
 		EVENT_L2DAY_LETTER_CHANCE = eventSettings.getProperty("L2DAY_LETTER_CHANCE", 1.);
 		EVENT_CHANGE_OF_HEART_CHANCE = eventSettings.getProperty("EVENT_CHANGE_OF_HEART_CHANCE", 5.);
-		EVENT_APIL_FOOLS_DROP_CHANCE = eventSettings.getProperty("AprilFollsDropChance", 50.);
+		EVENT_APRIL_FOOLS_DROP_CHANCE = eventSettings.getProperty("AprilFoolsDropChance", 50.);
 		EVENT_BOUNTY_HUNTERS_ENABLED = eventSettings.getProperty("BountyHuntersEnabled", true);
 		EVENT_SAVING_SNOWMAN_LOTERY_PRICE = eventSettings.getProperty("SavingSnowmanLoteryPrice", 50000);
 		EVENT_SAVING_SNOWMAN_REWARDER_CHANCE = eventSettings.getProperty("SavingSnowmanRewarderChance", 2);

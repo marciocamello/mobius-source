@@ -172,7 +172,7 @@ public class AprilFoolsDay extends Functions implements ScriptFile, OnDeathListe
 	@Override
 	public void onDeath(Creature cha, Creature killer)
 	{
-		if (_active && SimpleCheckDrop(cha, killer) && Rnd.chance(Config.EVENT_APIL_FOOLS_DROP_CHANCE / 10.0D))
+		if (_active && SimpleCheckDrop(cha, killer) && Rnd.chance(Config.EVENT_APRIL_FOOLS_DROP_CHANCE / 10.0D))
 		{
 			((NpcInstance) cha).dropItem(killer.getPlayer(), HERBS[Rnd.get(HERBS.length)], 1);
 		}
