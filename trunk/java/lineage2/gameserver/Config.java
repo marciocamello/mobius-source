@@ -806,7 +806,13 @@ public class Config
 	public static int SAFE_ENCHANT_LVL;
 	public static boolean REMOVE_UNKNOWN_QUEST;
 	public static boolean ALLOW_MENTOR_BUFFS_IN_OFFLINE_MODE;
-	
+	public static boolean STARTING_LOC;
+	public static int STARTING_LOC_X;
+	public static int STARTING_LOC_Y;
+	public static int STARTING_LOC_Z;
+	public static boolean STARTING_ITEMS;
+	public static List<int[]> STARTING_ITEMS_ID_QTY;
+
 	/**
 	 * Method loadServerConfig.
 	 */
@@ -835,9 +841,9 @@ public class Config
 		ACCEPT_ALTERNATE_ID = serverSettings.getProperty("AcceptAlternateID", true);
 		GAMESERVER_HOSTNAME = serverSettings.getProperty("GameserverHostname");
 		PORTS_GAME = serverSettings.getProperty("GameserverPort", new int[]
-		{
+			{
 			7777
-		});
+			});
 		EVERYBODY_HAS_ADMIN_RIGHTS = serverSettings.getProperty("EverybodyHasAdminRights", false);
 		SECOND_AUTH_ENABLED = serverSettings.getProperty("SecondAuth", false);
 		SECOND_AUTH_MAX_ATTEMPTS = serverSettings.getProperty("SecondAuthMaxEnter", 5);
@@ -867,7 +873,7 @@ public class Config
 		RATE_DROP_RAIDBOSS = serverSettings.getProperty("RateRaidBoss", 1.);
 		RATE_DROP_SPOIL = serverSettings.getProperty("RateDropSpoil", 1.);
 		NO_RATE_ITEMS = serverSettings.getProperty("NoRateItemIds", new int[]
-		{
+			{
 			6660,
 			6662,
 			6661,
@@ -880,7 +886,7 @@ public class Config
 			10314,
 			16025,
 			16026
-		});
+			});
 		NO_RATE_EQUIPMENT = serverSettings.getProperty("NoRateEquipment", true);
 		NO_RATE_KEY_MATERIAL = serverSettings.getProperty("NoRateKeyMaterial", true);
 		NO_RATE_RECIPES = serverSettings.getProperty("NoRateRecipes", true);
@@ -950,9 +956,9 @@ public class Config
 		ABUSEWORD_BANCHAT = serverSettings.getProperty("ABUSEWORD_BANCHAT", false);
 		int counter = 0;
 		for (int id : serverSettings.getProperty("ABUSEWORD_BAN_CHANNEL", new int[]
-		{
+			{
 			0
-		}))
+			}))
 		{
 			BAN_CHANNEL_LIST[counter] = id;
 			counter++;
@@ -966,10 +972,10 @@ public class Config
 		CHATFILTER_MIN_LEVEL = serverSettings.getProperty("ChatFilterMinLevel", 0);
 		counter = 0;
 		for (int id : serverSettings.getProperty("ChatFilterChannels", new int[]
-		{
+			{
 			1,
 			8
-		}))
+			}))
 		{
 			CHATFILTER_CHANNELS[counter] = id;
 			counter++;
@@ -1032,7 +1038,7 @@ public class Config
 		RWHO_PRIV_STORE_FACTOR = Float.parseFloat(serverSettings.getProperty("RemotePrivStoreFactor", "0"));
 		RWHO_FORCE_INC = Integer.parseInt(serverSettings.getProperty("RemoteWhoForceInc", "0"));
 	}
-	
+
 	/**
 	 * Method loadCommunityConfig.
 	 */
@@ -1061,25 +1067,25 @@ public class Config
 			COMMUNITYBOARD_BUFF_PICE = communitySettings.getProperty("CommunityBuffPice", 5000);
 			COMMUNITYBOARD_BUFF_SAVE_PICE = communitySettings.getProperty("CommunityBuffSavePice", 50000);
 			for (int id : communitySettings.getProperty("AllowEffect", new int[]
-			{
+				{
 				1085,
 				1048,
 				1045
-			}))
+				}))
 			{
 				COMMUNITYBOARD_BUFF_ALLOW.add(Integer.valueOf(id));
 			}
 			for (int id : communitySettings.getProperty("MageScheme", new int[]
-			{
+				{
 				1085
-			}))
+				}))
 			{
 				COMMUNITI_LIST_MAGE_SUPPORT.add(Integer.valueOf(id));
 			}
 			for (int id : communitySettings.getProperty("FighterScheme", new int[]
-			{
+				{
 				1085
-			}))
+				}))
 			{
 				COMMUNITI_LIST_FIGHTER_SUPPORT.add(Integer.valueOf(id));
 			}
@@ -1099,37 +1105,37 @@ public class Config
 			ENCHANTER_ITEM_ID = communitySettings.getProperty("CBEnchantItem", 4037);
 			MAX_ENCHANT = communitySettings.getProperty("CBEnchantItem", 20);
 			ENCHANT_LEVELS = communitySettings.getProperty("CBEnchantLvl", new int[]
-			{
+				{
 				1
-			});
+				});
 			ENCHANT_PRICE_WPN = communitySettings.getProperty("CBEnchantPriceWeapon", new int[]
-			{
+				{
 				1
-			});
+				});
 			ENCHANT_PRICE_ARM = communitySettings.getProperty("CBEnchantPriceArmor", new int[]
-			{
+				{
 				1
-			});
+				});
 			ENCHANT_ATTRIBUTE_LEVELS = communitySettings.getProperty("CBEnchantAtributeLvlWeapon", new int[]
-			{
+				{
 				1
-			});
+				});
 			ENCHANT_ATTRIBUTE_LEVELS_ARM = communitySettings.getProperty("CBEnchantAtributeLvlArmor", new int[]
-			{
+				{
 				1
-			});
+				});
 			ATTRIBUTE_PRICE_WPN = communitySettings.getProperty("CBEnchantAtributePriceWeapon", new int[]
-			{
+				{
 				1
-			});
+				});
 			ATTRIBUTE_PRICE_ARM = communitySettings.getProperty("CBEnchantAtributePriceArmor", new int[]
-			{
+				{
 				1
-			});
+				});
 			ENCHANT_ATT_PVP = communitySettings.getProperty("CBEnchantAtributePvP", false);
 		}
 	}
-	
+
 	/**
 	 * Method loadTelnetConfig.
 	 */
@@ -1142,7 +1148,7 @@ public class Config
 		TELNET_HOSTNAME = telnetSettings.getProperty("BindAddress", "127.0.0.1");
 		TELNET_PASSWORD = telnetSettings.getProperty("Password", "");
 	}
-	
+
 	/**
 	 * Method loadResidenceConfig.
 	 */
@@ -1161,16 +1167,16 @@ public class Config
 		RESIDENCE_LEASE_FUNC_MULTIPLIER = residenceSettings.getProperty("ResidenceLeaseFuncMultiplier", 1.);
 		RESIDENCE_LEASE_MULTIPLIER = residenceSettings.getProperty("ResidenceLeaseMultiplier", 1.);
 		CASTLE_SELECT_HOURS = residenceSettings.getProperty("CastleSelectHours", new int[]
-		{
+			{
 			16,
 			20
-		});
+			});
 		int[] tempCastleValidatonTime = residenceSettings.getProperty("CastleValidationDate", new int[]
-		{
+			{
 			2,
 			4,
 			2003
-		});
+			});
 		CASTLE_VALIDATION_DATE = Calendar.getInstance();
 		CASTLE_VALIDATION_DATE.set(Calendar.DAY_OF_MONTH, tempCastleValidatonTime[0]);
 		CASTLE_VALIDATION_DATE.set(Calendar.MONTH, tempCastleValidatonTime[1] - 1);
@@ -1180,7 +1186,7 @@ public class Config
 		CASTLE_VALIDATION_DATE.set(Calendar.SECOND, 0);
 		CASTLE_VALIDATION_DATE.set(Calendar.MILLISECOND, 0);
 	}
-	
+
 	/**
 	 * Method loadTopSettings.
 	 */
@@ -1204,7 +1210,7 @@ public class Config
 		MMO_TOP_REWARD = topSettings.getProperty("MMOTopReward", new int[0]);
 		MMO_TOP_REWARD_NO_CLAN = topSettings.getProperty("MMOTopRewardNoClan", new int[0]);
 	}
-	
+
 	/**
 	 * Method loadPaymentConfig.
 	 */
@@ -1221,7 +1227,7 @@ public class Config
 		SMS_PAYMENT_TYPE = paymentSetting.getProperty("SMSPaymentProfitOrSum", true);
 		SMS_PAYMENT_PREFIX = paymentSetting.getProperty("SMSPaymentPrefix", "");
 	}
-	
+
 	/**
 	 * Method loadOtherConfig.
 	 */
@@ -1274,8 +1280,38 @@ public class Config
 		SAFE_ENCHANT_LVL = otherSettings.getProperty("SafeEnchant", 0);
 		REMOVE_UNKNOWN_QUEST = otherSettings.getProperty("RemoveUnknownQuest", false);
 		ALLOW_MENTOR_BUFFS_IN_OFFLINE_MODE = otherSettings.getProperty("AllowMentorBuffsInOfflineMode", false);
+		STARTING_LOC = otherSettings.getProperty("StartingLoc", false);
+		STARTING_LOC_X = otherSettings.getProperty("StartingLocX", -114536);
+		STARTING_LOC_Y = otherSettings.getProperty("StartingLocY", 259928);
+		STARTING_LOC_Z = otherSettings.getProperty("StartingLocZ", -1224);
+		STARTING_ITEMS = otherSettings.getProperty("StartingItems", false);
+		STARTING_ITEMS_ID_QTY = new ArrayList<>();
+		String[] propertySplit = otherSettings.getProperty("StartingItemsIdQty", "20635,1;20638,1").split(";");
+		for (String reward : propertySplit)
+		{
+			String[] rewardSplit = reward.split(",");
+			if (rewardSplit.length != 2)
+			{
+
+			}
+			else
+			{
+				try
+				{
+					STARTING_ITEMS_ID_QTY.add(new int[]
+						{
+						Integer.parseInt(rewardSplit[0]),
+						Integer.parseInt(rewardSplit[1])
+						});
+				}
+				catch (NumberFormatException nfe)
+				{
+
+				}
+			}
+		}
 	}
-	
+
 	/**
 	 * Method loadSpoilConfig.
 	 */
@@ -1299,7 +1335,7 @@ public class Config
 		MANOR_APPROVE_MIN = spoilSettings.getProperty("AltManorApproveMin", 00);
 		MANOR_MAINTENANCE_PERIOD = spoilSettings.getProperty("AltManorMaintenancePeriod", 360000);
 	}
-	
+
 	/**
 	 * Method loadFormulasConfig.
 	 */
@@ -1337,7 +1373,7 @@ public class Config
 		ALT_NPC_MAXMP_MODIFIER = formulasSettings.getProperty("NpcMapMpModifier", 1.11);
 		ALT_POLE_DAMAGE_MODIFIER = formulasSettings.getProperty("PoleDamageModifier", 1.0);
 	}
-	
+
 	/**
 	 * Method loadDevelopSettings.
 	 */
@@ -1345,7 +1381,7 @@ public class Config
 	{
 		load(DEVELOP_FILE);
 	}
-	
+
 	/**
 	 * Method loadExtSettings.
 	 */
@@ -1356,7 +1392,7 @@ public class Config
 		EX_JAPAN_MINIGAME = properties.getProperty("JapanMinigame", false);
 		EX_LECTURE_MARK = properties.getProperty("LectureMark", false);
 	}
-	
+
 	/**
 	 * Method loadAltSettings.
 	 */
@@ -1395,7 +1431,7 @@ public class Config
 		ALT_GAME_RESET_DUALCERTIFICATION_COST = altSettings.getProperty("AltResetDualCertificationCost", 20000000);
 		ALT_GAME_REMOVE_PREVIOUS_CERTIFICATES = altSettings.getProperty("AltRemovePreviousCertificates", false);
 		ALT_GAME_DUALCLASS_REAWAKENING_COST = altSettings.getProperty("AltGameDualClassReawakeningCost", new double[]
-		{
+			{
 			100,
 			90,
 			80,
@@ -1406,12 +1442,12 @@ public class Config
 			30,
 			20,
 			10
-		});
+			});
 		_log.warn("altGameReawakeningCost = " + ALT_GAME_DUALCLASS_REAWAKENING_COST.length);
 		if (ALT_GAME_DUALCLASS_REAWAKENING_COST.length != 10)
 		{
 			double[] DefaultValues = new double[]
-			{
+				{
 				100,
 				90,
 				80,
@@ -1422,7 +1458,7 @@ public class Config
 				30,
 				20,
 				10
-			};
+				};
 			ALT_GAME_DUALCLASS_REAWAKENING_COST = DefaultValues;
 			_log.warn("altGameReawakeningCost = Incorrect values for corresponding levels, loaded default values");
 		}
@@ -1488,7 +1524,7 @@ public class Config
 		ALT_SHOP_PRICE_LIMITS = altSettings.getProperty("ShopPriceLimits", ArrayUtils.EMPTY_INT_ARRAY);
 		ALT_SHOP_UNALLOWED_ITEMS = altSettings.getProperty("ShopUnallowedItems", ArrayUtils.EMPTY_INT_ARRAY);
 		ALT_ALLOWED_PET_POTIONS = altSettings.getProperty("AllowedPetPotions", new int[]
-		{
+			{
 			735,
 			1060,
 			1061,
@@ -1499,7 +1535,7 @@ public class Config
 			1540,
 			6035,
 			6036
-		});
+			});
 		ALLOW_CLANSKILLS = altSettings.getProperty("AllowClanSkills", true);
 		ALLOW_LEARN_TRANS_SKILLS_WO_QUEST = altSettings.getProperty("AllowLearnTransSkillsWOQuest", false);
 		PARTY_LEADER_ONLY_CAN_INVITE = altSettings.getProperty("PartyLeaderOnlyCanInvite", true);
@@ -1535,7 +1571,7 @@ public class Config
 		ALT_MAX_ALLY_SIZE = altSettings.getProperty("AltMaxAllySize", 3);
 		ALT_PARTY_DISTRIBUTION_RANGE = altSettings.getProperty("AltPartyDistributionRange", 1500);
 		ALT_PARTY_BONUS = altSettings.getProperty("AltPartyBonus", new double[]
-		{
+			{
 			1.00,
 			1.10,
 			1.20,
@@ -1545,7 +1581,7 @@ public class Config
 			2.00,
 			2.10,
 			2.20
-		});
+			});
 		ALT_ALL_PHYS_SKILLS_OVERHIT = altSettings.getProperty("AltAllPhysSkillsOverhit", true);
 		ALT_REMOVE_SKILLS_ON_DELEVEL = altSettings.getProperty("AltRemoveSkillsOnDelevel", true);
 		ALLOW_CH_DOOR_OPEN_ON_CLICK = altSettings.getProperty("AllowChDoorOpenOnClick", true);
@@ -1587,7 +1623,7 @@ public class Config
 		SAVE_GM_SPAWN_CUSTOM = altSettings.getProperty("SaveGmSpawnCustom", false);
 		LOAD_GM_SPAWN_CUSTOM = altSettings.getProperty("LoadGmSpawnCustom", false);
 	}
-	
+
 	/**
 	 * Method loadServicesSettings.
 	 */
@@ -1646,45 +1682,45 @@ public class Config
 		SERVICES_CHANGE_NICK_COLOR_PRICE = servicesSettings.getProperty("NickColorChangePrice", 100);
 		SERVICES_CHANGE_NICK_COLOR_ITEM = servicesSettings.getProperty("NickColorChangeItem", 4037);
 		SERVICES_CHANGE_NICK_COLOR_LIST = servicesSettings.getProperty("NickColorChangeList", new String[]
-		{
+			{
 			"00FF00"
-		});
+			});
 		SERVICES_BASH_ENABLED = servicesSettings.getProperty("BashEnabled", false);
 		SERVICES_BASH_SKIP_DOWNLOAD = servicesSettings.getProperty("BashSkipDownload", false);
 		SERVICES_BASH_RELOAD_TIME = servicesSettings.getProperty("BashReloadTime", 24);
 		SERVICES_RATE_TYPE = servicesSettings.getProperty("RateBonusType", Bonus.NO_BONUS);
 		SERVICES_RATE_BONUS_PRICE = servicesSettings.getProperty("RateBonusPrice", new int[]
-		{
+			{
 			1500
-		});
+			});
 		SERVICES_RATE_BONUS_ITEM = servicesSettings.getProperty("RateBonusItem", new int[]
-		{
+			{
 			4037
-		});
+			});
 		SERVICES_RATE_BONUS_VALUE = servicesSettings.getProperty("RateBonusValue", new double[]
-		{
+			{
 			1.25
-		});
+			});
 		SERVICES_RATE_BONUS_DAYS = servicesSettings.getProperty("RateBonusTime", new int[]
-		{
+			{
 			30
-		});
+			});
 		SERVICES_NOBLESS_SELL_ENABLED = servicesSettings.getProperty("NoblessSellEnabled", false);
 		SERVICES_NOBLESS_SELL_PRICE = servicesSettings.getProperty("NoblessSellPrice", 1000);
 		SERVICES_NOBLESS_SELL_ITEM = servicesSettings.getProperty("NoblessSellItem", 4037);
 		SERVICES_HERO_SELL_ENABLED = servicesSettings.getProperty("HeroSellEnabled", false);
 		SERVICES_HERO_SELL_DAY = servicesSettings.getProperty("HeroSellDay", new int[]
-		{
+			{
 			30
-		});
+			});
 		SERVICES_HERO_SELL_PRICE = servicesSettings.getProperty("HeroSellPrice", new int[]
-		{
+			{
 			30
-		});
+			});
 		SERVICES_HERO_SELL_ITEM = servicesSettings.getProperty("HeroSellItem", new int[]
-		{
+			{
 			4037
-		});
+			});
 		SERVICES_EXPAND_INVENTORY_ENABLED = servicesSettings.getProperty("ExpandInventoryEnabled", false);
 		SERVICES_EXPAND_INVENTORY_PRICE = servicesSettings.getProperty("ExpandInventoryPrice", 1000);
 		SERVICES_EXPAND_INVENTORY_ITEM = servicesSettings.getProperty("ExpandInventoryItem", 4037);
@@ -1737,7 +1773,7 @@ public class Config
 		ITEM_BROKER_ITEM_SEARCH = servicesSettings.getProperty("UseItemBrokerItemSearch", false);
 		ALLOW_EVENT_GATEKEEPER = servicesSettings.getProperty("AllowEventGatekeeper", false);
 	}
-	
+
 	/**
 	 * Method loadPvPSettings.
 	 */
@@ -1762,7 +1798,7 @@ public class Config
 		DROPCHANCE_ITEM = pvpSettings.getProperty("ChanceOfDropOther", 80);
 		KARMA_LIST_NONDROPPABLE_ITEMS = new ArrayList<>();
 		for (int id : pvpSettings.getProperty("ListOfNonDroppableItems", new int[]
-		{
+			{
 			57,
 			1147,
 			425,
@@ -1796,7 +1832,7 @@ public class Config
 			7694,
 			6841,
 			8181
-		}))
+			}))
 		{
 			KARMA_LIST_NONDROPPABLE_ITEMS.add(id);
 		}
@@ -1804,7 +1840,7 @@ public class Config
 		REPUTATION_COUNT = pvpSettings.getProperty("CountReputation", 360);
 		PK_KILLER_NAME_COLOUR = Integer.decode("0x" + pvpSettings.getProperty("PKKillerNameColour", "00FF00"));
 	}
-	
+
 	/**
 	 * Method loadAISettings.
 	 */
@@ -1826,7 +1862,7 @@ public class Config
 		MAX_PURSUE_UNDERGROUND_RANGE = aiSettings.getProperty("MaxPursueUndergoundRange", 2000);
 		MAX_PURSUE_RANGE_RAID = aiSettings.getProperty("MaxPursueRangeRaid", 5000);
 	}
-	
+
 	/**
 	 * Method loadGeodataSettings.
 	 */
@@ -1852,7 +1888,7 @@ public class Config
 		PATHFIND_MAX_TIME = geodataSettings.getProperty("PathFindMaxTime", 10000000);
 		PATHFIND_BUFFERS = geodataSettings.getProperty("PathFindBuffers", "8x96;8x128;8x160;8x192;4x224;4x256;4x288;2x320;2x384;2x352;1x512");
 	}
-	
+
 	/**
 	 * Method loadEventsSettings.
 	 */
@@ -1898,7 +1934,7 @@ public class Config
 		TMWAVE1COUNT = eventSettings.getProperty("TMWave1Count", 2);
 		TMWAVE2 = eventSettings.getProperty("TMWave2", 18855);
 	}
-	
+
 	/**
 	 * Method loadOlympiadSettings.
 	 */
@@ -1938,7 +1974,7 @@ public class Config
 		OLYMPIAD_POINTS_WEEKLY = olympSettings.getProperty("OlympiadPointsWeekly", 10);
 		OLYMPIAD_OLDSTYLE_STAT = olympSettings.getProperty("OlympiadOldStyleStat", false);
 	}
-	
+
 	/**
 	 * Method load.
 	 */
@@ -1965,14 +2001,14 @@ public class Config
 		abuseLoad();
 		loadGMAccess();
 	}
-	
+
 	/**
 	 * Constructor for Config.
 	 */
 	private Config()
 	{
 	}
-	
+
 	/**
 	 * Method abuseLoad.
 	 */
@@ -2014,7 +2050,7 @@ public class Config
 			}
 		}
 	}
-	
+
 	/**
 	 * Method loadGMAccess.
 	 */
@@ -2036,7 +2072,7 @@ public class Config
 			}
 		}
 	}
-	
+
 	/**
 	 * Method loadGMAccess.
 	 * @param file File
@@ -2094,7 +2130,7 @@ public class Config
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
 	 * Method getField.
 	 * @param fieldName String
@@ -2119,7 +2155,7 @@ public class Config
 		}
 		return null;
 	}
-	
+
 	/**
 	 * Method setField.
 	 * @param fieldName String
@@ -2170,7 +2206,7 @@ public class Config
 		}
 		return true;
 	}
-	
+
 	/**
 	 * Method load.
 	 * @param filename String
@@ -2180,7 +2216,7 @@ public class Config
 	{
 		return load(new File(filename));
 	}
-	
+
 	/**
 	 * Method load.
 	 * @param file File
@@ -2199,7 +2235,7 @@ public class Config
 		}
 		return result;
 	}
-	
+
 	/**
 	 * Method containsAbuseWord.
 	 * @param s String

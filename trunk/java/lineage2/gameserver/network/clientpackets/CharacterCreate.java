@@ -29,6 +29,7 @@ import lineage2.gameserver.network.serverpackets.CharacterSelectionInfo;
 import lineage2.gameserver.templates.item.StartItem;
 import lineage2.gameserver.templates.player.PlayerTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
+import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Util;
 
 /**
@@ -61,7 +62,7 @@ public class CharacterCreate extends L2GameClientPacket
 	 * Field _face.
 	 */
 	private int _face;
-	
+
 	/**
 	 * Method readImpl.
 	 */
@@ -82,7 +83,7 @@ public class CharacterCreate extends L2GameClientPacket
 		_hairColor = readD();
 		_face = readD();
 	}
-	
+
 	/**
 	 * Method runImpl.
 	 */
@@ -119,7 +120,7 @@ public class CharacterCreate extends L2GameClientPacket
 		sendPacket(CharacterCreateSuccess.STATIC);
 		initNewChar(getClient(), newChar);
 	}
-	
+
 	/**
 	 * Method initNewChar.
 	 * @param client GameClient
@@ -133,7 +134,34 @@ public class CharacterCreate extends L2GameClientPacket
 		{
 			newChar.addAdena(Config.STARTING_ADENA);
 		}
-		newChar.setLoc(template.getStartLocation());
+		if (Config.STARTING_LOC)
+		{
+			newChar.setLoc(new Location(Config.STARTING_LOC_X, Config.STARTING_LOC_Y, Config.STARTING_LOC_Z));
+		}
+		else
+		{
+			newChar.setLoc(template.getStartLocation());
+		}
+		if (Config.STARTING_ITEMS)
+		{
+			for (int[] reward : Config.STARTING_ITEMS_ID_QTY)
+			{
+				ItemInstance startItem = ItemFunctions.createItem(reward[0]);
+				if (startItem.isStackable())
+				{
+					startItem.setCount(reward[1]);
+					newChar.getInventory().addItem(startItem);
+				}
+				else
+				{
+					for (int i = 0; i < reward[1]; ++i)
+					{
+						startItem = ItemFunctions.createItem(reward[0]);
+						newChar.getInventory().addItem(startItem);
+					}
+				}
+			}
+		}
 		if (Config.CHAR_TITLE)
 		{
 			newChar.setTitle(Config.ADD_CHAR_TITLE);
@@ -203,7 +231,7 @@ public class CharacterCreate extends L2GameClientPacket
 		newChar.deleteMe();
 		client.setCharSelection(CharacterSelectionInfo.loadCharacterSelectInfo(client.getLogin()));
 	}
-	
+
 	/**
 	 * Method startTutorialQuest.
 	 * @param player Player
