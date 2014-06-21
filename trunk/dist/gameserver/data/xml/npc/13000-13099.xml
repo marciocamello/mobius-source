@@ -1307,7 +1307,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="13036" name="Treasure Chest" title="">
+	<npc id="13036" name="Treasure Chest" title="Event Chest">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1340,7 +1340,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="SpecialMonster"/>
+		<set name="type" value="Npc"/>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="100.0">
 				<reward item_id="9170" min="1" max="4" chance="100.0000"/>
