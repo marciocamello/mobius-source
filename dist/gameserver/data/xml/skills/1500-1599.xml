@@ -1671,7 +1671,7 @@
 			<effect count="1" name="Buff" stackTypes="sub_job" time="15"/>
 		</for>
 	</skill>
-	<skill id="1571" levels="1" name="Each Class Inventory Increase">
+	<skill id="1571" levels="1" name="Awakened Class Inventory Increase">
 		<set name="icon" val="icon.skill1571"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1682,7 +1682,7 @@
 			<add order="0x40" stat="inventoryLimit" val="18"/>
 		</for>
 	</skill>
-	<skill id="1572" levels="1" name="Each Class Weight Increase">
+	<skill id="1572" levels="1" name="Awakened Class Weight Increase">
 		<set name="icon" val="icon.skill1572"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>

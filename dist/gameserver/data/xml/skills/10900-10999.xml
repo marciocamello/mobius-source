@@ -1,5 +1,75 @@
 <?xml version="1.0"?>
 <list>
+	<skill id="10903" levels="4" name="Hawk Eye">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#pAtkRange">1.05 1.06 1.07 1.10</table>
+		<table name="#pAtk">1.05 1.06 1.07 1.10</table>
+		<table name="#mpConsume2">36 40 41 46</table>
+		<set name="reuseDelay" val="1000"/>
+		<set name="hitTime" val="500"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_TOGGLE"/>
+		<cond msgId="113" addName="1">
+			<using kind="Bow,Crossbow"/>
+		</cond>
+		<for>
+			<effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="stance" time="5" val="0.2">
+				<mul order="0x30" stat="pAtk" val="#pAtk"/>
+				<mul order="0x30" stat="pAtkRange" val="#pAtkRange"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10904" levels="4" name="Superior Skill Mastery">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#pAtkRange">1.05 1.06 1.07 1.10</table>
+		<set name="reuseDelay" val="30000"/>
+		<set name="hitTime" val="500"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkRange" val="#pAtkRange"/>
+		</for>
+	</skill>
+	<skill id="10950" levels="4" name="Vengeful Sniper">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#pvpPhysDmgBonus">1.05 1.06 1.07 1.10</table>
+		<table name="#pAtk">1.05 1.06 1.07 1.10</table>
+		<table name="#mpConsume2">36 40 41 46</table>
+		<set name="reuseDelay" val="1000"/>
+		<set name="hitTime" val="500"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_TOGGLE"/>
+		<cond msgId="113" addName="1">
+			<using kind="Bow,Crossbow"/>
+		</cond>
+		<for>
+			<effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="stance" time="5" val="0.2">
+				<mul order="0x30" stat="pAtk" val="#pAtk"/>
+				<mul order="0x30" stat="pvpPhysDmgBonus" val="#pvpPhysDmgBonus"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10951" levels="4" name="Superior Instinct Mastery">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#pvpPhysDmgBonus">1.05 1.06 1.07 1.10</table>
+		<set name="reuseDelay" val="30000"/>
+		<set name="hitTime" val="500"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="#pvpPhysDmgBonus"/>
+		</for>
+	</skill>
 	<skill id="10997" levels="1" name="Archer - Individual Passive">
 		<table name="#magicLevel">85</table>
 		<set name="reuseDelay" val="8000"/>

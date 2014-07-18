@@ -1315,7 +1315,7 @@
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
 	</skill>
-	<skill id="49" levels="26" name="Divine Strike">
+	<skill id="49" levels="26" name="Holy Strike">
 		<table name="#effectPoint">418 438 448 467 477 495 505 523 532 549 558 566 574 582 590 597 604 611 617 624 630 635 641 646 650 655</table>
 		<table name="#elementPower">0</table>
 		<table name="#mpConsume2">16 17 17 18 18 19 20 20 21 22 22 22 23 23 24 24 24 25 25 26 26 26 27 27 27 28</table>

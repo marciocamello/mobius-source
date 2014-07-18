@@ -119,4 +119,46 @@ insert  into class_list values
 ('FeohWizard', 143, -1, -1),
 ('IssAnchanter', 144, -1, -1),
 ('WynnSummoner', 145, -1, -1),
-('AeoreHealer', 146, -1, -1);
+('AeoreHealer', 146, -1, -1),
+
+('SigelPhoenixKnight', 148, -1, -1),
+('SigelHellKnight', 149, -1, -1),
+('SigelEvaTemplar', 150, -1, -1),
+('SigelShillienTemplar', 151, -1, -1),
+
+('TyrrDuelist', 152, -1, -1),
+('TyrrDreadnought', 153, -1, -1),
+('TyrrTitan', 154, -1, -1),
+('TyrrGrandKhavatari', 155, -1, -1),
+('TyrrMaestro', 156, -1, -1),
+('TyrrDoombringer', 157, -1, -1),
+
+('OthellAdventure', 158, -1, -1),
+('OthellWindRider', 159, -1, -1),
+('OthellGhostHunter', 160, -1, -1),
+('OthellFortuneSeeker', 161, -1, -1),
+
+('YulSaggitarius', 162, -1, -1),
+('YulMoonlightSentinel', 163, -1, -1),
+('YulGhostSentinel', 164, -1, -1),
+('YulTrickster', 165, -1, -1),
+
+('FeohArchmage', 166, -1, -1),
+('FeohSoultaker', 167, -1, -1),
+('FeohMysticMuse', 168, -1, -1),
+('FeohStormScreamer', 169, -1, -1),
+('FeohSOUL_HOUND', 170, -1, -1),
+
+('IssHierophant', 171, -1, -1),
+('IssSwordMuse', 172, -1, -1),
+('IssSpectralDancer', 173, -1, -1),
+('IssDominator', 174, -1, -1),
+('IssDoomcryer', 175, -1, -1),
+
+('WynnArcanaLord', 176, -1, -1),
+('WynnElementalMaster', 177, -1, -1),
+('WynnSpectralMaster', 178, -1, -1),
+
+('AeoreCardinal', 179, -1, -1),
+('AeoreEvaSaint', 180, -1, -1),
+('AeoreShillenSaint', 181, -1, -1);

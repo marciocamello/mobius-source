@@ -621,6 +621,22 @@
 		<set name="skillRadius" val="300"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
+	<skill id="1952" levels="1" name="Block Wynn Force">
+		<!-- Wynn Momentum is not applied. -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+		</for>
+	</skill>
+	<skill id="1953" levels="1" name="Block Aeore Force">
+		<!-- Aeore Momentum is not applied. -->
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+		</for>
+	</skill>
 	<skill id="1954" levels="1" name="Flying Body Reinforcement">
 		<set name="icon" val="icon.skill1954"/>
 		<set name="reuseDelay" val="10000"/>

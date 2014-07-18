@@ -745,7 +745,7 @@
 		<set name="isReuseDelayPermanent" val="true"/>
 	</skill>
 	<skill id="248" levels="6" name="Crystallize">
-		<table name="#magicLevel">20 40 52 60 70</table>
+		<table name="#magicLevel">20 40 52 60 70 85</table>
 		<set name="icon" val="icon.skill0248"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_SELF"/>
