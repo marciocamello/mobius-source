@@ -151,4 +151,79 @@
 			<effect name="DispelOnHit" time="600" val="0"/>
 		</for>
 	</skill>
+	<skill id="10810" levels="4" name="Sniping">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#pDef">1.05 1.06 1.07 1.10</table>
+		<table name="#pAtk">1.05 1.06 1.07 1.10</table>
+		<table name="#pAtkSpd">1.05 1.06 1.07 1.10</table>
+		<table name="#mpConsume2">36 40 41 46</table>
+		<set name="reuseDelay" val="1000"/>
+		<set name="hitTime" val="500"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_TOGGLE"/>
+		<cond msgId="113" addName="1">
+			<using kind="Bow,Crossbow"/>
+		</cond>
+		<for>
+			<effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="stance" time="5" val="0.2">
+				<mul order="0x30" stat="pAtk" val="#pAtk"/>
+				<mul order="0x30" stat="pDef" val="#pDef"/>
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10811" levels="4" name="Superior Hawk Mastery">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#pAtk">1.05 1.06 1.07 1.10</table>
+		<set name="reuseDelay" val="30000"/>
+		<set name="hitTime" val="500"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="3" stackType="pAtk" time="2" val="0">
+				<mul order="0x30" stat="pAtk" val="#pAtk"/>
+				<using kind="Bow,Crossbow"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10856" levels="4" name="Rapid Fire Position">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#pReuse">1.05 1.06 1.07 1.10</table>
+		<table name="#pAtk">1.05 1.06 1.07 1.10</table>
+		<table name="#mpConsume2">36 40 41 46</table>
+		<set name="reuseDelay" val="1000"/>
+		<set name="hitTime" val="500"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_TOGGLE"/>
+		<cond msgId="113" addName="1">
+			<using kind="Bow,Crossbow"/>
+		</cond>
+		<for>
+			<effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="stance" time="5" val="0.2">
+				<mul order="0x30" stat="pAtk" val="#pAtk"/>
+				<div order="0x30" stat="pReuse" val="#pReuse"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10857" levels="4" name="Superior Speed Mastery">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#runSpd">10 12 15 20</table>
+		<set name="reuseDelay" val="30000"/>
+		<set name="hitTime" val="500"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="runSpd" val="#runSpd"/>
+		</for>
+	</skill>
 </list>

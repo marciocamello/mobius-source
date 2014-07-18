@@ -22,6 +22,7 @@ import lineage2.gameserver.data.xml.parser.AirshipDockParser;
 import lineage2.gameserver.data.xml.parser.ArmorItemParser;
 import lineage2.gameserver.data.xml.parser.ArmorSetsParser;
 import lineage2.gameserver.data.xml.parser.BeautyShopParser;
+import lineage2.gameserver.data.xml.parser.ClassDataParser;
 import lineage2.gameserver.data.xml.parser.CubicParser;
 import lineage2.gameserver.data.xml.parser.DomainParser;
 import lineage2.gameserver.data.xml.parser.DoorParser;
@@ -107,8 +108,8 @@ public abstract class Parsers
 		FishTable.getInstance().reload();
 		PetitionGroupParser.getInstance().load();
 		PlayerTemplateParser.getInstance().load();
+		ClassDataParser.getInstance().load();
 		LevelBonusParser.getInstance().load();
-		
 		StatuesSpawnParser.getInstance().load();
 		BeautyShopParser.getInstance().load();
 	}

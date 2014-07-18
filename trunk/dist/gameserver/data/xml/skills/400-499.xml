@@ -1185,10 +1185,11 @@
 		</for>
 	</skill>
 	<skill id="438" levels="1" name="Soul of the Phoenix">
+		<table name="#magicLevel">79</table>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0438"/>
 		<set name="reuseDelay" val="3600000"/>
-		<set name="magicLevel" val="79"/>
+		<set name="magicLevel" val="#magicLevel"/>
 		<set name="hitTime" val="4000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="50"/>

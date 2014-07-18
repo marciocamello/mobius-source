@@ -16,6 +16,9 @@ import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 
+import lineage2.gameserver.data.xml.holder.ClassDataHolder;
+import lineage2.gameserver.templates.player.ClassData;
+
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
@@ -609,7 +612,51 @@ public enum ClassId
 	/**
 	 * Field aeoreHealer.
 	 */
-	aeoreHealer(146, ClassType.PRIEST, null, null, null, ClassLevel.Awaking, ClassType2.Healer);
+	aeoreHealer(146, ClassType.PRIEST, null, null, null, ClassLevel.Awaking, ClassType2.Healer),
+
+	DUMMY_ENTRY_37(147, null, null, null, null, null, null),
+	sigelPhoenixKnight(148, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Knight),
+	sigelHellKnight(149, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Knight),
+	sigelEvaTemplar(150, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Knight),
+	sigelShillienTemplar(151, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Knight),
+
+	tyrrDuelist(152, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Warrior),
+	tyrrDreadnought(153, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Warrior),
+	tyrrTitan(154, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Warrior),
+	tyrrGrandKhavatari(155, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Warrior),
+	tyrrMaestro(156, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Warrior),
+	tyrrDoombringer(157, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Warrior),
+
+	othellAdventure(158, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Rogue),
+	othellWindRider(159, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Rogue),
+	othellGhostHunter(160, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Rogue),
+	othellFortuneSeeker(161, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Rogue),
+
+	yulSaggitarius(162, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Archer),
+	yulMoonlightSentinel(163, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Archer),
+	yulGhostSentinel(164, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Archer),
+	yulTrickster(165, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Archer),
+
+	feohArchmage(166, ClassType.MYSTIC, null, null, null, ClassLevel.Awaking, ClassType2.Wizard),
+	feohSoultaker(167, ClassType.MYSTIC, null, null, null, ClassLevel.Awaking, ClassType2.Wizard),
+	feohMysticMuse(168, ClassType.MYSTIC, null, null, null, ClassLevel.Awaking, ClassType2.Wizard),
+	feohStormScreamer(169, ClassType.MYSTIC, null, null, null, ClassLevel.Awaking, ClassType2.Wizard),
+	feohSOUL_HOUND(170, ClassType.MYSTIC, null, null, null, ClassLevel.Awaking, ClassType2.Wizard),
+
+	issHierophant(171, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Enchanter),
+	issSwordMuse(172, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Enchanter),
+	issSpectralDancer(173, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Enchanter),
+	issDominator(174, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Enchanter),
+	issDoomcryer(175, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Enchanter),
+
+	wynnArcanaLord(176, ClassType.MYSTIC, null, null, null, ClassLevel.Awaking, ClassType2.Summoner),
+	wynnElementalMaster(177, ClassType.MYSTIC, null, null, null, ClassLevel.Awaking, ClassType2.Summoner),
+	wynnSpectralMaster(178, ClassType.MYSTIC, null, null, null, ClassLevel.Awaking, ClassType2.Summoner),
+
+	aeoreCardinal(179, ClassType.PRIEST, null, null, null, ClassLevel.Awaking, ClassType2.Healer),
+	aeoreEvaSaint(180, ClassType.PRIEST, null, null, null, ClassLevel.Awaking, ClassType2.Healer),
+	aeoreShillenSaint(181, ClassType.PRIEST, null, null, null, ClassLevel.Awaking, ClassType2.Healer);
+
 	/**
 	 * Field VALUES.
 	 */
@@ -642,7 +689,7 @@ public enum ClassId
 	 * Field _type2.
 	 */
 	private final ClassType2 _type2;
-	
+
 	/**
 	 * Constructor for ClassId.
 	 * @param id int
@@ -656,7 +703,7 @@ public enum ClassId
 	{
 		this(id, classType, race, parent, null, level, classType2);
 	}
-	
+
 	/**
 	 * Constructor for ClassId.
 	 * @param id int
@@ -677,7 +724,7 @@ public enum ClassId
 		_level = level;
 		_type2 = classType2;
 	}
-	
+
 	/**
 	 * Method getId.
 	 * @return int
@@ -686,7 +733,7 @@ public enum ClassId
 	{
 		return _id;
 	}
-	
+
 	/**
 	 * Method getRace.
 	 * @return Race
@@ -695,7 +742,7 @@ public enum ClassId
 	{
 		return _race;
 	}
-	
+
 	/**
 	 * Method isOfRace.
 	 * @param race Race
@@ -705,7 +752,7 @@ public enum ClassId
 	{
 		return _race == race;
 	}
-	
+
 	/**
 	 * Method getClassLevel.
 	 * @return ClassLevel
@@ -714,7 +761,7 @@ public enum ClassId
 	{
 		return _level;
 	}
-	
+
 	/**
 	 * Method isOfLevel.
 	 * @param level ClassLevel
@@ -724,7 +771,7 @@ public enum ClassId
 	{
 		return _level == level;
 	}
-	
+
 	/**
 	 * Method getType.
 	 * @return ClassType
@@ -733,7 +780,7 @@ public enum ClassId
 	{
 		return _type;
 	}
-	
+
 	/**
 	 * Method isOfType.
 	 * @param type ClassType
@@ -743,7 +790,7 @@ public enum ClassId
 	{
 		return _type == type;
 	}
-	
+
 	/**
 	 * Method getType2.
 	 * @return ClassType2
@@ -752,7 +799,7 @@ public enum ClassId
 	{
 		return _type2;
 	}
-	
+
 	/**
 	 * Method isMage.
 	 * @return boolean
@@ -761,7 +808,7 @@ public enum ClassId
 	{
 		return _type.isMagician();
 	}
-	
+
 	/**
 	 * Method childOf.
 	 * @param cid ClassId
@@ -769,7 +816,11 @@ public enum ClassId
 	 */
 	public final boolean childOf(ClassId cid)
 	{
-		if ((_parent == null) && (_id < 139))
+		if (isOfLevel(ClassLevel.Awaking))
+		{
+			return cid.getType2() == getType2();
+		}
+		if (_parent == null)
 		{
 			return false;
 		}
@@ -777,79 +828,128 @@ public enum ClassId
 		{
 			return true;
 		}
-		if (_id > 138)
-		{
-			return _childClasses.get(this).contains(cid);
-		}
 		return _parent.childOf(cid);
 	}
-	
+
 	/**
 	 * Field _childClasses.
 	 */
 	public static final Map<ClassId, EnumSet<ClassId>> _childClasses = new HashMap<ClassId, EnumSet<ClassId>>()
-	{
+		{
 		/**
-	 * 
-	 */
+		 *
+		 */
 		private static final long serialVersionUID = 1L;
-		
+
 		{
-			put(ClassId.sigelKnight, EnumSet.of(ClassId.PHOENIX_KNIGHT, ClassId.HELL_KNIGHT, ClassId.EVAS_TEMPLAR, ClassId.SHILLIEN_TEMPLAR));
-			put(ClassId.tyrrWarrior, EnumSet.of(ClassId.DUELIST, ClassId.DREADNOUGHT, ClassId.TITAN, ClassId.GRAND_KHAVATARI, ClassId.MAESTRO, ClassId.DOOMBRINGER));
-			put(ClassId.othellRogue, EnumSet.of(ClassId.ADVENTURER, ClassId.WIND_RIDER, ClassId.GHOST_HUNTER, ClassId.FORTUNE_SEEKER));
-			put(ClassId.yulArcher, EnumSet.of(ClassId.SAGITTARIUS, ClassId.MOONLIGHT_SENTINEL, ClassId.GHOST_SENTINEL, ClassId.TRICKSTER));
-			put(ClassId.feohWizard, EnumSet.of(ClassId.ARCHMAGE, ClassId.SOULTAKER, ClassId.MYSTIC_MUSE, ClassId.STORM_SCREAMER, ClassId.M_SOUL_HOUND, ClassId.F_SOUL_HOUND));
-			put(ClassId.issEnchanter, EnumSet.of(ClassId.HIEROPHANT, ClassId.SWORD_MUSE, ClassId.SPECTRAL_DANCER, ClassId.DOMINATOR, ClassId.DOOMCRYER, ClassId.JUDICATOR));
-			put(ClassId.wynnSummoner, EnumSet.of(ClassId.ARCANA_LORD, ClassId.ELEMENTAL_MASTER, ClassId.SPECTRAL_MASTER));
-			put(ClassId.aeoreHealer, EnumSet.of(ClassId.CARDINAL, ClassId.EVAS_SAINT, ClassId.SHILLIEN_SAINT));
+			put(ClassId.sigelPhoenixKnight, EnumSet.of(ClassId.PHOENIX_KNIGHT));
+			put(ClassId.sigelHellKnight, EnumSet.of(ClassId.HELL_KNIGHT));
+			put(ClassId.sigelEvaTemplar, EnumSet.of(ClassId.EVAS_TEMPLAR));
+			put(ClassId.sigelShillienTemplar, EnumSet.of(ClassId.SHILLIEN_TEMPLAR));
+
+			put(ClassId.tyrrDuelist, EnumSet.of(ClassId.DUELIST));
+			put(ClassId.tyrrDreadnought, EnumSet.of(ClassId.DREADNOUGHT));
+			put(ClassId.tyrrTitan, EnumSet.of(ClassId.TITAN));
+			put(ClassId.tyrrGrandKhavatari, EnumSet.of(ClassId.GRAND_KHAVATARI));
+			put(ClassId.tyrrMaestro, EnumSet.of(ClassId.MAESTRO));
+			put(ClassId.tyrrDoombringer, EnumSet.of(ClassId.DOOMBRINGER));
+
+			put(ClassId.othellAdventure, EnumSet.of(ClassId.ADVENTURER));
+			put(ClassId.othellWindRider, EnumSet.of(ClassId.WIND_RIDER));
+			put(ClassId.othellGhostHunter, EnumSet.of(ClassId.GHOST_HUNTER));
+			put(ClassId.othellFortuneSeeker, EnumSet.of(ClassId.FORTUNE_SEEKER));
+
+			put(ClassId.yulSaggitarius, EnumSet.of(ClassId.SAGITTARIUS));
+			put(ClassId.yulMoonlightSentinel, EnumSet.of(ClassId.MOONLIGHT_SENTINEL));
+			put(ClassId.yulGhostSentinel, EnumSet.of(ClassId.GHOST_SENTINEL));
+			put(ClassId.yulTrickster, EnumSet.of(ClassId.TRICKSTER));
+
+			put(ClassId.feohArchmage, EnumSet.of(ClassId.ARCHMAGE));
+			put(ClassId.feohSoultaker, EnumSet.of(ClassId.SOULTAKER));
+			put(ClassId.feohMysticMuse, EnumSet.of(ClassId.MYSTIC_MUSE));
+			put(ClassId.feohStormScreamer, EnumSet.of(ClassId.STORM_SCREAMER));
+			put(ClassId.feohSOUL_HOUND, EnumSet.of(ClassId.M_SOUL_HOUND, ClassId.F_SOUL_HOUND));
+
+			put(ClassId.issHierophant, EnumSet.of(ClassId.HIEROPHANT));
+			put(ClassId.issSwordMuse, EnumSet.of(ClassId.SWORD_MUSE));
+			put(ClassId.issSpectralDancer, EnumSet.of(ClassId.SPECTRAL_DANCER));
+			put(ClassId.issDominator, EnumSet.of(ClassId.DOMINATOR));
+			put(ClassId.issDoomcryer, EnumSet.of(ClassId.DOOMCRYER));
+
+			put(ClassId.wynnArcanaLord, EnumSet.of(ClassId.ARCANA_LORD));
+			put(ClassId.wynnElementalMaster, EnumSet.of(ClassId.ELEMENTAL_MASTER));
+			put(ClassId.wynnSpectralMaster, EnumSet.of(ClassId.SPECTRAL_MASTER));
+
+			put(ClassId.aeoreCardinal, EnumSet.of(ClassId.CARDINAL));
+			put(ClassId.aeoreEvaSaint, EnumSet.of(ClassId.EVAS_SAINT));
+			put(ClassId.aeoreShillenSaint, EnumSet.of(ClassId.SHILLIEN_SAINT));
 		}
-	};
-	
-	/**
-	 * Method equalsOrChildOf.
-	 * @param cid ClassId
-	 * @return boolean
-	 */
-	public final boolean equalsOrChildOf(ClassId cid)
-	{
-		return (this == cid) || (childOf(cid));
-	}
-	
-	/**
-	 * Method getParent.
-	 * @param sex int
-	 * @return ClassId
-	 */
-	public final ClassId getParent(int sex)
-	{
-		return (sex == 0) || (_parent2 == null) ? _parent : _parent2;
-	}
-	
-	static
-	{
-		VALUES = values();
-	}
-	
-	/**
-	 * Method getParent.
-	 * @return ClassId
-	 */
-	public final Integer getParentId()
-	{
-		return _parent.getId();
-	}
-	
-	/**
-	 * Method level.
-	 * @return int
-	 */
-	public final int level()
-	{
-		if (_parent == null)
+		};
+
+		/**
+		 * Method equalsOrChildOf.
+		 * @param cid ClassId
+		 * @return boolean
+		 */
+		public final boolean equalsOrChildOf(ClassId cid)
 		{
-			return 0;
+			return (this == cid) || (childOf(cid));
 		}
-		return 1 + _parent.level();
-	}
+
+		/**
+		 * Method getParent.
+		 * @param sex int
+		 * @return ClassId
+		 */
+		public final ClassId getParent(int sex)
+		{
+			return (sex == 0) || (_parent2 == null) ? _parent : _parent2;
+		}
+
+		public ClassData getClassData()
+		{
+			return ClassDataHolder.getInstance().getClassData(getId());
+		}
+
+		public double getBaseCp(int level)
+		{
+			return getClassData().getLvlUpData(level).getCP();
+		}
+
+		public double getBaseHp(int level)
+		{
+			return getClassData().getLvlUpData(level).getHP();
+		}
+
+		public double getBaseMp(int level)
+		{
+			return getClassData().getLvlUpData(level).getMP();
+		}
+
+		static
+		{
+			VALUES = values();
+		}
+
+		/**
+		 * Method getParent.
+		 * @return ClassId
+		 */
+		public final Integer getParentId()
+		{
+			return _parent.getId();
+		}
+
+		/**
+		 * Method level.
+		 * @return int
+		 */
+		public final int level()
+		{
+			if (_parent == null)
+			{
+				return 0;
+			}
+			return 1 + _parent.level();
+		}
 }

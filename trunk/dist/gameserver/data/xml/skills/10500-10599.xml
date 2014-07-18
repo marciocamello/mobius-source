@@ -1702,4 +1702,76 @@
 			<effect count="1" abnormal="shadow" name="Invisible" stackOrder="-1" stackType="Invisible" time="10" val="0" cancelOnAction="true"/>
 		</for>
 	</skill>
+	<skill id="10558" levels="1" name="Elusive Mirage">
+		<set name="reuseDelay" val="300000"/>
+		<set name="magicLevel" val="85"/>
+		<set name="mpConsume" val="72"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4500"/>
+		<set name="hitCancelTime" val="500"/>
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger"/>
+		</cond>
+		<for>
+			<effect count="1" name="Buff" stackType="Mirage" time="30" val="0">
+				<triggers>
+					<trigger id="10559" level="1" type="RECEIVE_DAMAGE" chance="85">
+						<player damage="1;0"/>
+					</trigger>
+				</triggers>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10559" levels="1" name="Elusive Mirage">
+		<set name="reuseDelay" val="5"/>
+		<set name="magicLevel" val="85"/>
+		<set name="castRange" val="900"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reflectable" val="false"/>
+		<set name="skillRadius" val="600"/>
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger"/>
+		</cond>
+		<for>
+			<effect count="1" name="RemoveTarget" stackOrder="-1" stackType="RemoveTarget" time="2" val="0"/>
+		</for>
+	</skill>
+	<skill id="10560" levels="1" name="Maximum Blow">
+		<table name="#rate">1.1</table>
+		<set name="reuseDelay" val="300000"/>
+		<set name="magicLevel" val="85"/>
+		<set name="mpConsume" val="72"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4500"/>
+		<set name="hitCancelTime" val="500"/>
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger"/>
+		</cond>
+		<for>
+			<effect count="1" name="Buff" time="20" val="0">
+				<add order="0x40" stat="blowRate" val="#rate">
+					<using kind="Dagger,Dual Dagger"/>
+				</add>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10561" levels="4" name="Superior Vitality">
+		<table name="#HP">1.05 1.06 1.07 1.1</table>
+		<table name="#CP">1.05 1.06 1.07 1.1</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="target" val="TARGET_SELF"/>
+		<for>
+			<mul order="0x30" stat="maxHp" val="#HP"/>
+			<mul order="0x30" stat="maxCp" val="#CP"/>
+		</for>
+	</skill>
 </list>

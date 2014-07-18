@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="11600" levels="1" name="Frenzied Prevailing Sonata">
+		<set name="icon" val="icon.skill11600"/>
+		<table name="#time">520</table>
+		<table name="#mpConsume2">170</table>
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="700"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="target" val="TARGET_CLAN"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="magicLevel" val="85"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isDance" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="1001;304;363;276;275"/>
+		<enchant1 levels="10" name="Cost"/>
+		<enchant2 levels="10" name="Time">
+			<table name="#time">550 580 610 640 670 700 730 760 790 820</table>
+		</enchant2>
+		<for>
+			<effect name="Buff" time="#time" val="0" stackOrder="1" stackType="BattleSonata">
+				<mul order="0x30" stat="mAtkSpd" val="1.30"/>
+				<mul order="0x30" stat="pAtkSpd" val="1.15"/>
+				<mul order="0x30" stat="maxHp" val="1.30"/>
+				<mul order="0x30" stat="regMp" val="1.20"/>
+				<mul order="0x30" stat="mpConsum" val="0.90"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11601" levels="1" name="Frenzied Daring Sonata">
+		<set name="icon" val="icon.skill11601"/>
+		<table name="#time">520</table>
+		<table name="#mpConsume2">170</table>
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="700"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="target" val="TARGET_CLAN"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="magicLevel" val="85"/>
+		<set name="isDance" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="1284;305;310"/>
+		<enchant1 levels="10" name="Cost"/>
+		<enchant2 levels="10" name="Time">
+			<table name="#time">550 580 610 640 670 700 730 760 790 820</table>
+		</enchant2>
+		<for>
+			<effect name="Buff" time="#time" val="0" stackOrder="1" stackType="MoveSonata">
+				<mul order="0x30" stat="pAtk" val="1.08"/>
+				<mul order="0x30" stat="mAtk" val="1.16"/>
+				<mul order="0x30" stat="mAtkSpd" val="1.08"/>
+				<mul order="0x30" stat="pAtkSpd" val="1.08"/>
+				<mul order="0x30" stat="pDef" val="0.97"/>
+				<mul order="0x30" stat="mDef" val="0.89"/>
+				<sub order="0x40" stat="rEvas" val="4"/>
+				<add order="0x40" stat="absorbDam" val="8"/>
+				<add order="0x40" stat="reflectDam" val="10"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11602" levels="1" name="Frenzied Refreshing Sonata">
+		<set name="icon" val="icon.skill11602"/>
+		<table name="#time">520</table>
+		<table name="#mpConsume2">170</table>
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="700"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="target" val="TARGET_CLAN"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="magicLevel" val="85"/>
+		<set name="isDance" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="268;266;265;364;1073;272"/>
+		<enchant1 levels="10" name="Cost"/>
+		<enchant2 levels="10" name="Time">
+			<table name="#time">550 580 610 640 670 700 730 760 790 820</table>
+		</enchant2>
+		<for>
+			<effect name="Buff" time="#time" val="0" stackOrder="1" stackType="RelaxSonata">
+				<mul order="0x30" stat="regHp" val="1.20"/>
+				<mul order="0x30" stat="mpConsum" val="0.80"/>
+				<add order="0x30" stat="accCombat" val="4"/>
+				<add order="0x40" stat="runSpd" val="20"/>
+				<mul order="0x30" stat="pReuse" val="0.90"/>
+				<mul order="0x30" stat="mReuse" val="0.90"/>
+				<add order="0x30" stat="rEvas" val="3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11603" levels="4" name="Mass Restriction">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#activateRate">100</table>
+		<table name="#mpConsume2">252 278 306 332</table>
+		<table name="#hp">1.3 1.4 1.5 1.6</table>
+		<table name="#mp">1.3 1.4 1.5 1.6</table>
+		<table name="#Cp">1.3 1.4 1.5 1.6</table>
+		<set name="reuseDelay" val="120000"/>
+		<set name="hitTime" val="2110"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="activateRate" val="#activateRate"/>
+		<set name="effectPoint" val="655"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="save" val="3"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="200"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="2" stackType="Thelastpenalty" time="30" val="0">
+				<set order="0x80" stat="regHp" val="#hp"/>
+				<set order="0x80" stat="regMp" val="#mp"/>
+				<set order="0x80" stat="regCp" val="#Cp"/>
+				<target pvp="true"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11604" levels="4" name="Shocking Blow">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">35 38 41 43</table>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="reuseDelay" val="120000"/>
+		<set name="hitTime" val="2110"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isOffensive" val="false"/>
+		<set name="effectPoint" val="408"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="useSS" val="false"/>
+		<set name="skillRadius" val="900"/>
+		<set name="isHideUseMessage" val="true"/>
+		<for>
+			<effect abnormal="invul2" name="DispelEffects" stackOrder="10" time="10" val="0" cancelOnAction="true">
+				<def name="dispelType" val="cancellation"/>
+				<def name="cancelRate" val="100"/>
+				<def name="negateCount" val="1"/>
+				<target pvp="true"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11605" levels="1" name="Shield Song">
+		<table name="#magicLevel">85</table>
+		<table name="#mpConsume2">70</table>
+		<set name="magicType" val="MUSIC"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="reuseDelay" val="30000"/>
+		<set name="hitTime" val="500"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" time="1800" val="0"/>
+			<mul order="0x30" stat="pDef" val="1.05"/>
+			<mul order="0x30" stat="bowWpnVuln" val="1.10"/>
+			<mul order="0x30" stat="crossbowWpnVuln" val="1.10"/>
+			<add order="0x40" stat="defenceFire" val="20"/>
+			<add order="0x40" stat="defenceWater" val="20"/>
+			<add order="0x40" stat="defenceWind" val="20"/>
+			<add order="0x40" stat="defenceEarth" val="20"/>
+			<add order="0x40" stat="defenceHoly" val="20"/>
+			<add order="0x40" stat="defenceUnholy" val="20"/>
+		</for>
+	</skill>
+	<skill id="11606" levels="1" name="Dance of Might">
+		<table name="#abnormal_time">1800</table>
+		<table name="#mpConsume2">83</table>
+		<table name="#magicLevel">85</table>
+		<set name="magicType" val="MUSIC"/>
+		<set name="reuseDelay" val="30000"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="hitTime" val="1000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="effectPoint" val="467"/>
+		<set name="weaponsAllowed" val="512"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" time="#abnormal_time" val="0" stackOrder="2" stackType="DanceofMight">
+				<add order="0x40" stat="runSpd" val="10"/>
+				<mul order="0x30" stat="pAtk" val="1.05"/>
+				<mul order="0x30" stat="pAtkSpd" val="1.05"/>
+				<mul order="0x30" stat="rCrit" val="1.10"/>
+			</effect>
+		</for>
+	</skill>
+</list>

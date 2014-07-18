@@ -126,7 +126,6 @@ import lineage2.gameserver.model.actor.instances.player.SummonList;
 import lineage2.gameserver.model.actor.listener.PlayerListenerList;
 import lineage2.gameserver.model.actor.recorder.PlayerStatsChangeRecorder;
 import lineage2.gameserver.model.base.AcquireType;
-import lineage2.gameserver.model.base.BaseStats;
 import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.model.base.ClassLevel;
 import lineage2.gameserver.model.base.Element;
@@ -276,7 +275,6 @@ import lineage2.gameserver.stats.Formulas;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.funcs.FuncTemplate;
 import lineage2.gameserver.tables.ClanTable;
-import lineage2.gameserver.tables.LifeParamTable;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.tables.SkillTreeTable;
@@ -326,7 +324,7 @@ import org.slf4j.LoggerFactory;
 public final class Player extends Playable implements PlayerGroup
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -845,7 +843,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Field _olympiadSide.
 	 */
 	private int _olympiadSide = -1;
-	
+
 	private ItemInstance _enchantItem;
 	private ItemInstance _enchantSupportItem;
 	/**
@@ -1012,7 +1010,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Field _ServitorShareRestore.
 	 */
 	boolean _ServitorShareRestore = false;
-	
+
 	Effect _ServitorShareRestoreData = null;
 	/**
 	 * Field _collision_radius.
@@ -1034,7 +1032,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Field mentorSystem.
 	 */
 	private final MentoringSystem mentorSystem;
-	
+
 	/**
 	 * Constructor for Player.
 	 * @param objectId int
@@ -1051,7 +1049,7 @@ public final class Player extends Playable implements PlayerGroup
 		_nameColor = 0xFFFFFF;
 		_titlecolor = 0xFFFF77;
 	}
-	
+
 	/**
 	 * Constructor for Player.
 	 * @param objectId int
@@ -1070,7 +1068,7 @@ public final class Player extends Playable implements PlayerGroup
 			setPlayerAccess(Config.gmlist.get(0));
 		}
 	}
-	
+
 	/**
 	 * Method getRef.
 	 * @return HardReference<Player>
@@ -1081,7 +1079,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (HardReference<Player>) super.getRef();
 	}
-	
+
 	/**
 	 * Method getAccountName.
 	 * @return String
@@ -1094,7 +1092,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return _connection.getLogin();
 	}
-	
+
 	/**
 	 * Method getIP.
 	 * @return String
@@ -1107,7 +1105,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return _connection.getIpAddr();
 	}
-	
+
 	/**
 	 * Method getAccountChars.
 	 * @return Map<Integer,String>
@@ -1116,7 +1114,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _chars;
 	}
-	
+
 	/**
 	 * Method getTemplate.
 	 * @return PlayerTemplate
@@ -1126,7 +1124,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (PlayerTemplate) _template;
 	}
-	
+
 	/**
 	 * Method changeSex.
 	 */
@@ -1134,7 +1132,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_template = PlayerTemplateHolder.getInstance().getPlayerTemplate(getRace(), getClassId(), Sex.VALUES[getSex()].revert());
 	}
-	
+
 	/**
 	 * Method getAI.
 	 * @return PlayerAI
@@ -1144,7 +1142,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (PlayerAI) _ai;
 	}
-	
+
 	/**
 	 * Method doCast.
 	 * @param skill Skill
@@ -1160,7 +1158,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		super.doCast(skill, target, forceUse);
 	}
-	
+
 	/**
 	 * Method sendReuseMessage.
 	 * @param skill Skill
@@ -1198,7 +1196,7 @@ public final class Player extends Playable implements PlayerGroup
 			sendPacket(new SystemMessage(SystemMessage.THERE_ARE_S2_SECONDS_REMAINING_IN_S1S_REUSE_TIME).addSkillName(skill.getId(), skill.getDisplayLevel()).addNumber(seconds));
 		}
 	}
-	
+
 	/**
 	 * Method getLevel.
 	 * @return int
@@ -1208,7 +1206,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getActiveSubClass() == null ? 1 : getActiveSubClass().getLevel();
 	}
-	
+
 	/**
 	 * Method getSex.
 	 * @return int
@@ -1217,7 +1215,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getTemplate().getSex().ordinal();
 	}
-	
+
 	/**
 	 * Method getFace.
 	 * @return int
@@ -1230,7 +1228,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return _faceB;
 	}
-	
+
 	/**
 	 * Method setFace.
 	 * @param face int
@@ -1239,7 +1237,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_face = face;
 	}
-	
+
 	/**
 	 * Method getHairColor.
 	 * @return int
@@ -1252,7 +1250,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return _hairColorB;
 	}
-	
+
 	/**
 	 * Method setHairColor.
 	 * @param hairColor int
@@ -1261,7 +1259,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_hairColor = hairColor;
 	}
-	
+
 	/**
 	 * Method getHairStyle.
 	 * @return int
@@ -1274,7 +1272,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return _hairStyleB;
 	}
-	
+
 	/**
 	 * Method setHairStyle.
 	 * @param hairStyle int
@@ -1283,59 +1281,59 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_hairStyle = hairStyle;
 	}
-	
+
 	public void checkB()
 	{
 		getFace();
 		getHairStyle();
 		getHairColor();
 	}
-	
+
 	public int getNewFace()
 	{
 		return _faceB;
 	}
-	
+
 	public void setNewFace(int face)
 	{
 		_faceB = face;
 	}
-	
+
 	public int getNewHairColor()
 	{
 		return _hairColorB;
 	}
-	
+
 	public void setNewHairColor(int hairColor)
 	{
 		_hairColorB = hairColor;
 	}
-	
+
 	public int getNewHairStyle()
 	{
 		return _hairStyleB;
 	}
-	
+
 	public void setNewHairStyle(int hairStyle)
 	{
 		_hairStyleB = hairStyle;
 	}
-	
+
 	public int getOriginalFace()
 	{
 		return _face;
 	}
-	
+
 	public int getOriginalHairColor()
 	{
 		return _hairColor;
 	}
-	
+
 	public int getOriginalHairStyle()
 	{
 		return _hairStyle;
 	}
-	
+
 	/**
 	 * Method offline.
 	 */
@@ -1390,7 +1388,7 @@ public final class Player extends Playable implements PlayerGroup
 			_log.error("", t);
 		}
 	}
-	
+
 	/**
 	 * Method kick.
 	 */
@@ -1404,7 +1402,7 @@ public final class Player extends Playable implements PlayerGroup
 		prepareToLogout();
 		deleteMe();
 	}
-	
+
 	/**
 	 * Method restart.
 	 */
@@ -1418,7 +1416,7 @@ public final class Player extends Playable implements PlayerGroup
 		prepareToLogout();
 		deleteMe();
 	}
-	
+
 	/**
 	 * Method logout.
 	 */
@@ -1432,7 +1430,7 @@ public final class Player extends Playable implements PlayerGroup
 		prepareToLogout();
 		deleteMe();
 	}
-	
+
 	/**
 	 * Method prepareToLogout.
 	 */
@@ -1563,7 +1561,7 @@ public final class Player extends Playable implements PlayerGroup
 			_log.error("", t);
 		}
 	}
-	
+
 	/**
 	 * Method getDwarvenRecipeBook.
 	 * @return Collection<RecipeTemplate>
@@ -1572,7 +1570,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _recipebook.values();
 	}
-	
+
 	/**
 	 * Method getCommonRecipeBook.
 	 * @return Collection<RecipeTemplate>
@@ -1581,7 +1579,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _commonrecipebook.values();
 	}
-	
+
 	/**
 	 * Method recipesCount.
 	 * @return int
@@ -1590,7 +1588,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _commonrecipebook.size() + _recipebook.size();
 	}
-	
+
 	/**
 	 * Method hasRecipe.
 	 * @param id RecipeTemplate
@@ -1600,7 +1598,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _recipebook.containsValue(id) || _commonrecipebook.containsValue(id);
 	}
-	
+
 	/**
 	 * Method findRecipe.
 	 * @param id int
@@ -1610,7 +1608,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _recipebook.containsKey(id) || _commonrecipebook.containsKey(id);
 	}
-	
+
 	/**
 	 * Method registerRecipe.
 	 * @param recipe RecipeTemplate
@@ -1635,7 +1633,7 @@ public final class Player extends Playable implements PlayerGroup
 			mysql.set("REPLACE INTO character_recipebook (char_id, id) VALUES(?,?)", getObjectId(), recipe.getId());
 		}
 	}
-	
+
 	/**
 	 * Method unregisterRecipe.
 	 * @param RecipeID int
@@ -1657,7 +1655,7 @@ public final class Player extends Playable implements PlayerGroup
 			_log.warn("Attempted to remove unknown RecipeList" + RecipeID);
 		}
 	}
-	
+
 	/**
 	 * Method getQuestState.
 	 * @param quest String
@@ -1675,7 +1673,7 @@ public final class Player extends Playable implements PlayerGroup
 			questRead.unlock();
 		}
 	}
-	
+
 	/**
 	 * Method getQuestState.
 	 * @param quest Class<?>
@@ -1685,7 +1683,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getQuestState(quest.getSimpleName());
 	}
-	
+
 	/**
 	 * Method isQuestCompleted.
 	 * @param quest String
@@ -1696,7 +1694,7 @@ public final class Player extends Playable implements PlayerGroup
 		QuestState q = getQuestState(quest);
 		return (q != null) && q.isCompleted();
 	}
-	
+
 	/**
 	 * Method isQuestCompleted.
 	 * @param quest Class<?>
@@ -1707,7 +1705,7 @@ public final class Player extends Playable implements PlayerGroup
 		QuestState q = getQuestState(quest);
 		return (q != null) && q.isCompleted();
 	}
-	
+
 	/**
 	 * Method setQuestState.
 	 * @param qs QuestState
@@ -1724,7 +1722,7 @@ public final class Player extends Playable implements PlayerGroup
 			questWrite.unlock();
 		}
 	}
-	
+
 	/**
 	 * Method removeQuestState.
 	 * @param quest String
@@ -1741,7 +1739,7 @@ public final class Player extends Playable implements PlayerGroup
 			questWrite.unlock();
 		}
 	}
-	
+
 	/**
 	 * Method getAllActiveQuests.
 	 * @return Quest[]
@@ -1766,7 +1764,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return quests.toArray(new Quest[quests.size()]);
 	}
-	
+
 	/**
 	 * Method getAllQuestsStates.
 	 * @return QuestState[]
@@ -1783,7 +1781,7 @@ public final class Player extends Playable implements PlayerGroup
 			questRead.unlock();
 		}
 	}
-	
+
 	/**
 	 * Method getQuestsForEvent.
 	 * @param npc NpcInstance
@@ -1813,7 +1811,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return states;
 	}
-	
+
 	/**
 	 * Method processQuestEvent.
 	 * @param quest String
@@ -1844,7 +1842,7 @@ public final class Player extends Playable implements PlayerGroup
 		qs.getQuest().notifyEvent(event, qs, npc);
 		sendPacket(new QuestList(this));
 	}
-	
+
 	/**
 	 * Method isQuestContinuationPossible.
 	 * @param msg boolean
@@ -1862,7 +1860,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return true;
 	}
-	
+
 	/**
 	 * Method stopQuestTimers.
 	 */
@@ -1880,7 +1878,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 	}
-	
+
 	/**
 	 * Method resumeQuestTimers.
 	 */
@@ -1891,7 +1889,7 @@ public final class Player extends Playable implements PlayerGroup
 			qs.resumeQuestTimers();
 		}
 	}
-	
+
 	/**
 	 * Method getAllShortCuts.
 	 * @return Collection<ShortCut>
@@ -1900,7 +1898,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _shortCuts.getAllShortCuts();
 	}
-	
+
 	/**
 	 * Method getShortCut.
 	 * @param slot int
@@ -1911,7 +1909,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _shortCuts.getShortCut(slot, page);
 	}
-	
+
 	/**
 	 * Method registerShortCut.
 	 * @param shortcut ShortCut
@@ -1920,7 +1918,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_shortCuts.registerShortCut(shortcut);
 	}
-	
+
 	/**
 	 * Method deleteShortCut.
 	 * @param slot int
@@ -1930,7 +1928,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_shortCuts.deleteShortCut(slot, page);
 	}
-	
+
 	/**
 	 * Method registerMacro.
 	 * @param macro Macro
@@ -1939,7 +1937,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_macroses.registerMacro(macro);
 	}
-	
+
 	/**
 	 * Method deleteMacro.
 	 * @param id int
@@ -1948,7 +1946,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_macroses.deleteMacro(id);
 	}
-	
+
 	/**
 	 * Method getMacroses.
 	 * @return MacroList
@@ -1957,7 +1955,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _macroses;
 	}
-	
+
 	/**
 	 * Method isCastleLord.
 	 * @param castleId int
@@ -1967,7 +1965,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (_clan != null) && isClanLeader() && (_clan.getCastle() == castleId);
 	}
-	
+
 	/**
 	 * Method isFortressLord.
 	 * @param fortressId int
@@ -1977,7 +1975,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (_clan != null) && isClanLeader() && (_clan.getHasFortress() == fortressId);
 	}
-	
+
 	/**
 	 * Method getPkKills.
 	 * @return int
@@ -1986,7 +1984,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _pkKills;
 	}
-	
+
 	/**
 	 * Method setPkKills.
 	 * @param pkKills int
@@ -1995,7 +1993,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_pkKills = pkKills;
 	}
-	
+
 	/**
 	 * Method getCreateTime.
 	 * @return long
@@ -2004,7 +2002,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _createTime;
 	}
-	
+
 	/**
 	 * Method setCreateTime.
 	 * @param createTime long
@@ -2013,7 +2011,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_createTime = createTime;
 	}
-	
+
 	/**
 	 * Method getDeleteTimer.
 	 * @return int
@@ -2022,7 +2020,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _deleteTimer;
 	}
-	
+
 	/**
 	 * Method setDeleteTimer.
 	 * @param deleteTimer int
@@ -2031,7 +2029,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_deleteTimer = deleteTimer;
 	}
-	
+
 	/**
 	 * Method getCurrentLoad.
 	 * @return int
@@ -2040,7 +2038,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getInventory().getTotalWeight();
 	}
-	
+
 	/**
 	 * Method getLastAccess.
 	 * @return long
@@ -2049,7 +2047,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _lastAccess;
 	}
-	
+
 	/**
 	 * Method setLastAccess.
 	 * @param value long
@@ -2058,7 +2056,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_lastAccess = value;
 	}
-	
+
 	/**
 	 * Method getRecomHave.
 	 * @return int
@@ -2067,7 +2065,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _recomHave;
 	}
-	
+
 	/**
 	 * Method setRecomHave.
 	 * @param value int
@@ -2087,7 +2085,7 @@ public final class Player extends Playable implements PlayerGroup
 			_recomHave = value;
 		}
 	}
-	
+
 	/**
 	 * Method getRecomBonusTime.
 	 * @return int
@@ -2100,7 +2098,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return _recomBonusTime;
 	}
-	
+
 	/**
 	 * Method setRecomBonusTime.
 	 * @param val int
@@ -2109,7 +2107,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_recomBonusTime = val;
 	}
-	
+
 	/**
 	 * Method getRecomLeft.
 	 * @return int
@@ -2118,7 +2116,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _recomLeft;
 	}
-	
+
 	/**
 	 * Method setRecomLeft.
 	 * @param value int
@@ -2127,7 +2125,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_recomLeft = value;
 	}
-	
+
 	/**
 	 * Method isHourglassEffected.
 	 * @return boolean
@@ -2136,7 +2134,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _isHourglassEffected;
 	}
-	
+
 	/**
 	 * Method setHourlassEffected.
 	 * @param val boolean
@@ -2145,7 +2143,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_isHourglassEffected = val;
 	}
-	
+
 	/**
 	 * Method startHourglassEffect.
 	 */
@@ -2155,7 +2153,7 @@ public final class Player extends Playable implements PlayerGroup
 		stopRecomBonusTask(true);
 		sendVoteSystemInfo();
 	}
-	
+
 	/**
 	 * Method stopHourglassEffect.
 	 */
@@ -2165,7 +2163,7 @@ public final class Player extends Playable implements PlayerGroup
 		startRecomBonusTask();
 		sendVoteSystemInfo();
 	}
-	
+
 	/**
 	 * Method addRecomLeft.
 	 * @return int
@@ -2186,7 +2184,7 @@ public final class Player extends Playable implements PlayerGroup
 		sendUserInfo();
 		return recoms;
 	}
-	
+
 	/**
 	 * Method getRecomLeftToday.
 	 * @return int
@@ -2195,7 +2193,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _recomLeftToday;
 	}
-	
+
 	/**
 	 * Method setRecomLeftToday.
 	 * @param value int
@@ -2205,7 +2203,7 @@ public final class Player extends Playable implements PlayerGroup
 		_recomLeftToday = value;
 		setVar("recLeftToday", String.valueOf(_recomLeftToday), -1);
 	}
-	
+
 	/**
 	 * Method giveRecom.
 	 * @param target Player
@@ -2223,7 +2221,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		sendUserInfo();
 	}
-	
+
 	/**
 	 * Method addRecomHave.
 	 * @param val int
@@ -2234,7 +2232,7 @@ public final class Player extends Playable implements PlayerGroup
 		broadcastUserInfo();
 		sendVoteSystemInfo();
 	}
-	
+
 	/**
 	 * Method getRecomBonus.
 	 * @return int
@@ -2247,7 +2245,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return 0;
 	}
-	
+
 	/**
 	 * Method getRecomBonusMul.
 	 * @return double
@@ -2260,7 +2258,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return 1;
 	}
-	
+
 	/**
 	 * Method sendVoteSystemInfo.
 	 */
@@ -2268,7 +2266,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		sendPacket(new ExVoteSystemInfo(this));
 	}
-	
+
 	/**
 	 * Method isRecomTimerActive.
 	 * @return boolean
@@ -2277,7 +2275,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _isRecomTimerActive;
 	}
-	
+
 	/**
 	 * Method setRecomTimerActive.
 	 * @param val boolean
@@ -2299,12 +2297,12 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		sendVoteSystemInfo();
 	}
-	
+
 	/**
 	 * Field _recomBonusTask.
 	 */
 	private ScheduledFuture<?> _recomBonusTask;
-	
+
 	/**
 	 * Method startRecomBonusTask.
 	 */
@@ -2315,7 +2313,7 @@ public final class Player extends Playable implements PlayerGroup
 			_recomBonusTask = ThreadPoolManager.getInstance().schedule(new RecomBonusTask(this), getRecomBonusTime() * 1000);
 		}
 	}
-	
+
 	/**
 	 * Method stopRecomBonusTask.
 	 * @param saveTime boolean
@@ -2332,7 +2330,7 @@ public final class Player extends Playable implements PlayerGroup
 			_recomBonusTask = null;
 		}
 	}
-	
+
 	/**
 	 * Method getKarma.
 	 * @return int
@@ -2342,7 +2340,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _karma;
 	}
-	
+
 	/**
 	 * Method setKarma.
 	 * @param karma int
@@ -2360,7 +2358,7 @@ public final class Player extends Playable implements PlayerGroup
 			summon.broadcastCharInfo();
 		}
 	}
-	
+
 	/**
 	 * Method getMaxLoad.
 	 * @return int
@@ -2382,12 +2380,12 @@ public final class Player extends Playable implements PlayerGroup
 			return (int) calcStat(Stats.MAX_LOAD, Math.pow(1.029993928, con) * 30495.627366 * Config.MAXLOAD_MODIFIER, this, null);
 		}
 	}
-	
+
 	/**
 	 * Field _updateEffectIconsTask.
 	 */
 	Future<?> _updateEffectIconsTask;
-	
+
 	/**
 	 * Method restoreVitality.
 	 */
@@ -2437,7 +2435,7 @@ public final class Player extends Playable implements PlayerGroup
 			DbUtils.closeQuietly(con, statement, rset);
 		}
 	}
-	
+
 	/**
 	 * Method sendSkillList.
 	 */
@@ -2446,7 +2444,7 @@ public final class Player extends Playable implements PlayerGroup
 		sendPacket(new SkillList(this));
 		sendPacket(new ExAcquirableSkillListByClass(this));
 	}
-	
+
 	@Override
 	public void onInteract(Player player)
 	{
@@ -2471,7 +2469,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 	}
-	
+
 	/**
 	 * Method getSummonList.
 	 * @return SummonList
@@ -2480,7 +2478,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _summonList;
 	}
-	
+
 	/**
 	 * Method updateEffectIcons.
 	 */
@@ -2495,7 +2493,7 @@ public final class Player extends Playable implements PlayerGroup
 		updateEffectIconsImpl();
 		return;
 	}
-	
+
 	/**
 	 * Method updateEffectIconsImpl.
 	 */
@@ -2555,7 +2553,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 	}
-	
+
 	/**
 	 * Method getWeightPenalty.
 	 * @return int
@@ -2564,7 +2562,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getSkillLevel(4270, 0);
 	}
-	
+
 	/**
 	 * Method refreshOverloaded.
 	 */
@@ -2614,7 +2612,7 @@ public final class Player extends Playable implements PlayerGroup
 		sendEtcStatusUpdate();
 		updateStats();
 	}
-	
+
 	/**
 	 * Method getArmorsExpertisePenalty.
 	 * @return int
@@ -2623,7 +2621,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getSkillLevel(6213, 0);
 	}
-	
+
 	/**
 	 * Method getWeaponsExpertisePenalty.
 	 * @return int
@@ -2632,7 +2630,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getSkillLevel(6209, 0);
 	}
-	
+
 	/**
 	 * Method getExpertisePenalty.
 	 * @param item ItemInstance
@@ -2650,7 +2648,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return 0;
 	}
-	
+
 	/**
 	 * Method refreshExpertisePenalty.
 	 */
@@ -2757,7 +2755,7 @@ public final class Player extends Playable implements PlayerGroup
 			updateStats();
 		}
 	}
-	
+
 	/**
 	 * Method getPvpKills.
 	 * @return int
@@ -2766,7 +2764,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _pvpKills;
 	}
-	
+
 	/**
 	 * Method setPvpKills.
 	 * @param pvpKills int
@@ -2775,7 +2773,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_pvpKills = pvpKills;
 	}
-	
+
 	/**
 	 * Method getClassId.
 	 * @return ClassId
@@ -2784,7 +2782,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return ClassId.VALUES[getActiveClassId()];
 	}
-	
+
 	/**
 	 * Method changeClass.
 	 * @param index int
@@ -2818,7 +2816,7 @@ public final class Player extends Playable implements PlayerGroup
 		sendPacket(new SystemMessage(SystemMessage.THE_TRANSFER_OF_SUB_CLASS_HAS_BEEN_COMPLETED).addClassName(oldClassId).addClassName(classId));
 		abortCast(true, true);
 	}
-	
+
 	/**
 	 * Method checkChangeClassCondition.
 	 * @return SystemMsg
@@ -2851,7 +2849,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return null;
 	}
-	
+
 	/**
 	 * Method getINT.
 	 * @return int
@@ -2861,7 +2859,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return Math.max(getTemplate().getMinAttr().getINT(), Math.min(getTemplate().getMaxAttr().getINT(), super.getINT()));
 	}
-	
+
 	/**
 	 * Method getSTR.
 	 * @return int
@@ -2871,7 +2869,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return Math.max(getTemplate().getMinAttr().getSTR(), Math.min(getTemplate().getMaxAttr().getSTR(), super.getSTR()));
 	}
-	
+
 	/**
 	 * Method getCON.
 	 * @return int
@@ -2881,7 +2879,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return Math.max(getTemplate().getMinAttr().getCON(), Math.min(getTemplate().getMaxAttr().getCON(), super.getCON()));
 	}
-	
+
 	/**
 	 * Method getMEN.
 	 * @return int
@@ -2891,7 +2889,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return Math.max(getTemplate().getMinAttr().getMEN(), Math.min(getTemplate().getMaxAttr().getMEN(), super.getMEN()));
 	}
-	
+
 	/**
 	 * Method getDEX.
 	 * @return int
@@ -2901,7 +2899,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return Math.max(getTemplate().getMinAttr().getDEX(), Math.min(getTemplate().getMaxAttr().getDEX(), super.getDEX()));
 	}
-	
+
 	/**
 	 * Method getWIT.
 	 * @return int
@@ -2911,36 +2909,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return Math.max(getTemplate().getMinAttr().getWIT(), Math.min(getTemplate().getMaxAttr().getWIT(), super.getWIT()));
 	}
-	
-	/**
-	 * Method getDefaultMaxCp.
-	 * @return double
-	 */
-	public double getDefaultMaxCp()
-	{
-		return LifeParamTable.getCp(this) * BaseStats.CON.calcBonus(this);
-	}
-	
-	/**
-	 * Method getDefaultMaxHp.
-	 * @return double
-	 */
-	@Override
-	public double getDefaultMaxHp()
-	{
-		return LifeParamTable.getHp(this) * BaseStats.CON.calcBonus(this);
-	}
-	
-	/**
-	 * Method getDefaultMaxMp.
-	 * @return double
-	 */
-	@Override
-	public double getDefaultMaxMp()
-	{
-		return LifeParamTable.getMp(this) * BaseStats.MEN.calcBonus(this);
-	}
-	
+
 	/**
 	 * Method getMaxCp.
 	 * @return int
@@ -2948,9 +2917,9 @@ public final class Player extends Playable implements PlayerGroup
 	@Override
 	public int getMaxCp()
 	{
-		return (int) calcStat(Stats.MAX_CP, getDefaultMaxCp(), null, null);
+		return (int) calcStat(Stats.MAX_CP, getClassId().getClassData().getLvlUpData(getLevel()).getCP(), null, null);
 	}
-	
+
 	/**
 	 * Method getMaxHp.
 	 * @return int
@@ -2958,9 +2927,9 @@ public final class Player extends Playable implements PlayerGroup
 	@Override
 	public int getMaxHp()
 	{
-		return (int) calcStat(Stats.MAX_HP, getDefaultMaxHp(), null, null);
+		return (int) calcStat(Stats.MAX_HP, getClassId().getClassData().getLvlUpData(getLevel()).getHP(), null, null);
 	}
-	
+
 	/**
 	 * Method getMaxMp.
 	 * @return int
@@ -2968,9 +2937,9 @@ public final class Player extends Playable implements PlayerGroup
 	@Override
 	public int getMaxMp()
 	{
-		return (int) calcStat(Stats.MAX_MP, getDefaultMaxMp(), null, null);
+		return (int) calcStat(Stats.MAX_MP, getClassId().getClassData().getLvlUpData(getLevel()).getMP(), null, null);
 	}
-	
+
 	/**
 	 * Method getRandomDamage.
 	 * @return int
@@ -2985,7 +2954,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return weaponItem.getRandomDamage();
 	}
-	
+
 	/**
 	 * Method getHpRegen.
 	 * @return double
@@ -2995,7 +2964,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return calcStat(Stats.REGENERATE_HP_RATE, getTemplate().getBaseHpReg(getLevel()));
 	}
-	
+
 	/**
 	 * Method getMpRegen.
 	 * @return double
@@ -3005,7 +2974,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return calcStat(Stats.REGENERATE_MP_RATE, getTemplate().getBaseMpReg(getLevel()));
 	}
-	
+
 	/**
 	 * Method getCpRegen.
 	 * @return double
@@ -3015,7 +2984,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return calcStat(Stats.REGENERATE_CP_RATE, getTemplate().getBaseCpReg(getLevel()));
 	}
-	
+
 	/**
 	 * Method useItem.
 	 * @param item ItemInstance
@@ -3040,12 +3009,12 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return success;
 	}
-	
+
 	/**
 	 * Field partySearchStatusIsOn.
 	 */
 	boolean partySearchStatusIsOn = false;
-	
+
 	/**
 	 * Method getPartySearchStatus.
 	 * @return boolean
@@ -3054,7 +3023,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return partySearchStatusIsOn;
 	}
-	
+
 	/**
 	 * Method setPartySearchStatus.
 	 * @param partySearchStatus boolean
@@ -3063,12 +3032,12 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		partySearchStatusIsOn = partySearchStatus;
 	}
-	
+
 	/**
 	 * Field playerForChange.
 	 */
 	Player playerForChange;
-	
+
 	/**
 	 * Method getPlayerForChange.
 	 * @return Player
@@ -3077,7 +3046,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return playerForChange;
 	}
-	
+
 	/**
 	 * Method setPlayerForChange.
 	 * @param _playerForChange Player
@@ -3086,12 +3055,12 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		playerForChange = _playerForChange;
 	}
-	
+
 	/**
 	 * Field _isIgnoringDeath.
 	 */
 	boolean _isIgnoringDeath = false;
-	
+
 	/**
 	 * Method setIsIgnoringDeath.
 	 * @param isIgnoringDeath boolean
@@ -3100,7 +3069,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_isIgnoringDeath = isIgnoringDeath;
 	}
-	
+
 	/**
 	 * Method isIgnoringDeath.
 	 * @return boolean
@@ -3109,7 +3078,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _isIgnoringDeath;
 	}
-	
+
 	/**
 	 * Method addClanPointsOnProfession.
 	 * @param id int
@@ -3137,7 +3106,7 @@ public final class Player extends Playable implements PlayerGroup
 			sendPacket(PledgeShowMemberListDeleteAll.STATIC);
 		}
 	}
-	
+
 	/**
 	 * Method setClassId.
 	 * @param id int
@@ -3205,7 +3174,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		sendPacket(new ExSubjobInfo(this, true));
 	}
-	
+
 	/**
 	 * Method getExp.
 	 * @return long
@@ -3214,7 +3183,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getActiveSubClass() == null ? 0 : getActiveSubClass().getExp();
 	}
-	
+
 	/**
 	 * Method getMaxExp.
 	 * @return long
@@ -3223,7 +3192,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getActiveSubClass() == null ? Experience.LEVEL[Experience.getMaxLevel() + 1] : getActiveSubClass().getMaxExp();
 	}
-	
+
 	/**
 	 * Method setEnchantScroll.
 	 * @param scroll ItemInstance
@@ -3232,7 +3201,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_enchantScroll = scroll;
 	}
-	
+
 	/**
 	 * Method getEnchantScroll.
 	 * @return ItemInstance
@@ -3241,7 +3210,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _enchantScroll;
 	}
-	
+
 	/**
 	 * Method setFistsWeaponItem.
 	 * @param weaponItem WeaponTemplate
@@ -3250,7 +3219,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_fistsWeaponItem = weaponItem;
 	}
-	
+
 	/**
 	 * Method getFistsWeaponItem.
 	 * @return WeaponTemplate
@@ -3259,7 +3228,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _fistsWeaponItem;
 	}
-	
+
 	/**
 	 * Method findFistsWeaponItem.
 	 * @param classId int
@@ -3305,7 +3274,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return null;
 	}
-	
+
 	/**
 	 * Method addExpAndCheckBonus.
 	 * @param mob MonsterInstance
@@ -3351,7 +3320,7 @@ public final class Player extends Playable implements PlayerGroup
 		long spWithoutBonus = (long) (noRateSp * Config.RATE_SP * getRateSp());
 		addExpAndSp(normalExp, normalSp, normalExp - expWithoutBonus, normalSp - spWithoutBonus, false, true);
 	}
-	
+
 	/**
 	 * Method addExpAndSp.
 	 * @param exp long
@@ -3362,7 +3331,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		addExpAndSp(exp, sp, 0, 0, false, false);
 	}
-	
+
 	/**
 	 * Method addExpAndSp.
 	 * @param addToExp long
@@ -3458,7 +3427,7 @@ public final class Player extends Playable implements PlayerGroup
 		WorldStatisticsManager.getInstance().updateStat(this, CategoryType.EXP_ADDED, addToExp);
 		updateStats();
 	}
-	
+
 	/**
 	 * Method rewardSkills.
 	 * @param send boolean
@@ -3524,7 +3493,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		updateStats();
 	}
-	
+
 	/**
 	 * Method getRace.
 	 * @return Race
@@ -3533,7 +3502,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return ClassId.VALUES[getBaseDefaultClassId()].getRace();
 	}
-	
+
 	/**
 	 * Method getIntSp.
 	 * @return int
@@ -3542,7 +3511,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (int) getSp();
 	}
-	
+
 	/**
 	 * Method getSp.
 	 * @return long
@@ -3551,7 +3520,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getActiveSubClass() == null ? 0 : getActiveSubClass().getSp();
 	}
-	
+
 	/**
 	 * Method setSp.
 	 * @param sp long
@@ -3563,7 +3532,7 @@ public final class Player extends Playable implements PlayerGroup
 			getActiveSubClass().setSp(sp);
 		}
 	}
-	
+
 	/**
 	 * Method getClanId.
 	 * @return int
@@ -3572,7 +3541,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _clan == null ? 0 : _clan.getClanId();
 	}
-	
+
 	/**
 	 * Method getLeaveClanTime.
 	 * @return long
@@ -3581,7 +3550,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _leaveClanTime;
 	}
-	
+
 	/**
 	 * Method getDeleteClanTime.
 	 * @return long
@@ -3590,7 +3559,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _deleteClanTime;
 	}
-	
+
 	/**
 	 * Method setLeaveClanTime.
 	 * @param time long
@@ -3599,7 +3568,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_leaveClanTime = time;
 	}
-	
+
 	/**
 	 * Method setDeleteClanTime.
 	 * @param time long
@@ -3608,7 +3577,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_deleteClanTime = time;
 	}
-	
+
 	/**
 	 * Method setOnlineTime.
 	 * @param time long
@@ -3618,7 +3587,7 @@ public final class Player extends Playable implements PlayerGroup
 		_onlineTime = time;
 		_onlineBeginTime = System.currentTimeMillis();
 	}
-	
+
 	/**
 	 * Method setNoChannel.
 	 * @param time long
@@ -3639,7 +3608,7 @@ public final class Player extends Playable implements PlayerGroup
 			_NoChannelBegin = 0;
 		}
 	}
-	
+
 	/**
 	 * Method getNoChannel.
 	 * @return long
@@ -3648,7 +3617,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _NoChannel;
 	}
-	
+
 	/**
 	 * Method getNoChannelRemained.
 	 * @return long
@@ -3673,7 +3642,7 @@ public final class Player extends Playable implements PlayerGroup
 			return remained;
 		}
 	}
-	
+
 	/**
 	 * Method setLeaveClanCurTime.
 	 */
@@ -3681,7 +3650,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_leaveClanTime = System.currentTimeMillis();
 	}
-	
+
 	/**
 	 * Method setDeleteClanCurTime.
 	 */
@@ -3689,7 +3658,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_deleteClanTime = System.currentTimeMillis();
 	}
-	
+
 	/**
 	 * Method canJoinClan.
 	 * @return boolean
@@ -3707,7 +3676,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Method canCreateClan.
 	 * @return boolean
@@ -3725,7 +3694,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Method canJoinParty.
 	 * @param inviter Player
@@ -3771,7 +3740,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return null;
 	}
-	
+
 	/**
 	 * Method getInventory.
 	 * @return PcInventory
@@ -3781,7 +3750,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _inventory;
 	}
-	
+
 	/**
 	 * Method getWearedMask.
 	 * @return long
@@ -3791,7 +3760,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _inventory.getWearedMask();
 	}
-	
+
 	/**
 	 * Method getFreight.
 	 * @return PcFreight
@@ -3800,7 +3769,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _freight;
 	}
-	
+
 	/**
 	 * Method removeItemFromShortCut.
 	 * @param objectId int
@@ -3809,7 +3778,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_shortCuts.deleteShortCutByObjectId(objectId);
 	}
-	
+
 	/**
 	 * Method removeSkillFromShortCut.
 	 * @param skillId int
@@ -3818,7 +3787,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_shortCuts.deleteShortCutBySkillId(skillId);
 	}
-	
+
 	/**
 	 * Method isSitting.
 	 * @return boolean
@@ -3827,7 +3796,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _isSitting;
 	}
-	
+
 	/**
 	 * Method setSitting.
 	 * @param val boolean
@@ -3836,7 +3805,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_isSitting = val;
 	}
-	
+
 	/**
 	 * Method getSittingTask.
 	 * @return boolean
@@ -3845,7 +3814,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return sittingTaskLaunched;
 	}
-	
+
 	/**
 	 * Method sitDown.
 	 * @param throne StaticObjectInstance
@@ -3877,7 +3846,7 @@ public final class Player extends Playable implements PlayerGroup
 		sittingTaskLaunched = true;
 		ThreadPoolManager.getInstance().schedule(new EndSitDownTask(this), 2500);
 	}
-	
+
 	/**
 	 * Method standUp.
 	 */
@@ -3896,7 +3865,7 @@ public final class Player extends Playable implements PlayerGroup
 		sittingTaskLaunched = true;
 		ThreadPoolManager.getInstance().schedule(new EndStandUpTask(this), 2500);
 	}
-	
+
 	/**
 	 * Method updateWaitSitTime.
 	 */
@@ -3907,7 +3876,7 @@ public final class Player extends Playable implements PlayerGroup
 			_waitTimeWhenSit += 2;
 		}
 	}
-	
+
 	/**
 	 * Method getWaitSitTime.
 	 * @return int
@@ -3916,7 +3885,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _waitTimeWhenSit;
 	}
-	
+
 	/**
 	 * Method resetWaitSitTime.
 	 */
@@ -3924,7 +3893,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_waitTimeWhenSit = 0;
 	}
-	
+
 	/**
 	 * Method getWarehouse.
 	 * @return Warehouse
@@ -3933,7 +3902,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _warehouse;
 	}
-	
+
 	/**
 	 * Method getRefund.
 	 * @return ItemContainer
@@ -3942,7 +3911,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _refund;
 	}
-	
+
 	/**
 	 * Method getAdena.
 	 * @return long
@@ -3951,7 +3920,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getInventory().getAdena();
 	}
-	
+
 	/**
 	 * Method getBeautyShopCoin.
 	 * @return long
@@ -3960,7 +3929,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getInventory().getBeautyShopCoin();
 	}
-	
+
 	/**
 	 * Method reduceAdena.
 	 * @param adena long
@@ -3970,7 +3939,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return reduceAdena(adena, false);
 	}
-	
+
 	/**
 	 * Method reduceAdena.
 	 * @param adena long
@@ -3994,7 +3963,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return result;
 	}
-	
+
 	/**
 	 * Method addAdena.
 	 * @param adena long
@@ -4004,7 +3973,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return addAdena(adena, false);
 	}
-	
+
 	/**
 	 * Method addAdena.
 	 * @param adena long
@@ -4024,7 +3993,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return item;
 	}
-	
+
 	/**
 	 * Method getNetConnection.
 	 * @return GameClient
@@ -4033,7 +4002,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _connection;
 	}
-	
+
 	/**
 	 * Method getRevision.
 	 * @return int
@@ -4042,7 +4011,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _connection == null ? 0 : _connection.getRevision();
 	}
-	
+
 	/**
 	 * Method setNetConnection.
 	 * @param connection GameClient
@@ -4051,7 +4020,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_connection = connection;
 	}
-	
+
 	/**
 	 * Method isConnected.
 	 * @return boolean
@@ -4060,7 +4029,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (_connection != null) && _connection.isConnected();
 	}
-	
+
 	/**
 	 * Method broadcastStatusUpdate.
 	 */
@@ -4068,14 +4037,14 @@ public final class Player extends Playable implements PlayerGroup
 	public void broadcastStatusUpdate()
 	{
 		super.broadcastStatusUpdate();
-		
+
 		sendPacket(new StatusUpdate(this).addAttribute(StatusUpdateField.CUR_HP, StatusUpdateField.CUR_MP, StatusUpdateField.CUR_CP, StatusUpdateField.MAX_HP, StatusUpdateField.MAX_MP, StatusUpdateField.MAX_CP));
 		if (isInParty())
-		// Send the Server->Client packet PartySmallWindowUpdate with current HP, MP and Level to all other L2Player of the Party
+			// Send the Server->Client packet PartySmallWindowUpdate with current HP, MP and Level to all other L2Player of the Party
 		{
 			getParty().broadcastToPartyMembers(this, new PartySmallWindowUpdate(this));
 		}
-		
+
 		if (isInOlympiadMode() && isOlympiadCompStart())
 		{
 			if (_olympiadGame != null)
@@ -4084,7 +4053,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 	}
-	
+
 	/**
 	 * Method broadcastCharInfo.
 	 */
@@ -4093,7 +4062,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		broadcastUserInfo();
 	}
-	
+
 	/**
 	 * Method broadcastUserInfo.
 	 */
@@ -4113,12 +4082,12 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return;
 	}
-	
+
 	/**
 	 * Field _polyNpcId.
 	 */
 	private int _polyNpcId;
-	
+
 	/**
 	 * Method setPolyId.
 	 * @param polyid int
@@ -4129,7 +4098,7 @@ public final class Player extends Playable implements PlayerGroup
 		teleToLocation(getLoc());
 		broadcastUserInfo();
 	}
-	
+
 	/**
 	 * Method isPolymorphed.
 	 * @return boolean
@@ -4138,7 +4107,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _polyNpcId != 0;
 	}
-	
+
 	/**
 	 * Method getPolyId.
 	 * @return int
@@ -4147,7 +4116,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _polyNpcId;
 	}
-	
+
 	/**
 	 * Method broadcastRelationChanged.
 	 */
@@ -4162,7 +4131,7 @@ public final class Player extends Playable implements PlayerGroup
 			player.sendPacket(RelationChanged.update(player, this, player));
 		}
 	}
-	
+
 	/**
 	 * Method sendEtcStatusUpdate.
 	 */
@@ -4174,7 +4143,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		sendPacket(new EtcStatusUpdate(this));
 	}
-	
+
 	/**
 	 * Method sendUserInfo.
 	 */
@@ -4187,7 +4156,7 @@ public final class Player extends Playable implements PlayerGroup
 		sendPacket(new UserInfo(this), new ExBR_ExtraUserInfo(this));
 		return;
 	}
-	
+
 	/**
 	 * Method sendStatusUpdate.
 	 * @param broadCast boolean
@@ -4200,14 +4169,14 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			return;
 		}
-		
+
 		StatusUpdate su = new StatusUpdate(this).addAttribute(fields);
-		
+
 		if (su.isEmpty())
 		{
 			return;
 		}
-		
+
 		List<L2GameServerPacket> packets = new ArrayList<>(withPet ? 4 : 1);
 		if (withPet)
 		{
@@ -4230,7 +4199,7 @@ public final class Player extends Playable implements PlayerGroup
 			broadcastPacket(packets);
 		}
 	}
-	
+
 	/**
 	 * Method getAllyId.
 	 * @return int
@@ -4239,7 +4208,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _clan == null ? 0 : _clan.getAllyId();
 	}
-	
+
 	/**
 	 * Method sendPacket.
 	 * @param p IStaticPacket
@@ -4257,7 +4226,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		_connection.sendPacket(p.packet(this));
 	}
-	
+
 	/**
 	 * Method sendPacket.
 	 * @param packets IStaticPacket[]
@@ -4278,7 +4247,7 @@ public final class Player extends Playable implements PlayerGroup
 			_connection.sendPacket(p.packet(this));
 		}
 	}
-	
+
 	/**
 	 * Method isPacketIgnored.
 	 * @param p IStaticPacket
@@ -4296,7 +4265,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Method sendPacket.
 	 * @param packets List<? extends IStaticPacket>
@@ -4313,7 +4282,7 @@ public final class Player extends Playable implements PlayerGroup
 			_connection.sendPacket(p.packet(this));
 		}
 	}
-	
+
 	/**
 	 * Method doAutoLootOrDrop.
 	 * @param item ItemInstance
@@ -4371,7 +4340,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		broadcastPickUpMsg(item);
 	}
-	
+
 	/**
 	 * Method doPickupItem.
 	 * @param object GameObject
@@ -4439,7 +4408,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 	}
-	
+
 	/**
 	 * Method pickupItem.
 	 * @param item ItemInstance
@@ -4478,7 +4447,7 @@ public final class Player extends Playable implements PlayerGroup
 		sendChanges();
 		return true;
 	}
-	
+
 	/**
 	 * Method setTarget.
 	 * @param newTarget GameObject
@@ -4491,9 +4460,9 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			newTarget = null;
 		}
-		
+
 		GameObject oldTarget = getTarget();
-		
+
 		if (oldTarget != null)
 		{
 			if (oldTarget.equals(newTarget))
@@ -4504,28 +4473,28 @@ public final class Player extends Playable implements PlayerGroup
 			{
 				((Creature) oldTarget).removeStatusListener(this);
 			}
-			
+
 			broadcastPacket(new TargetUnselected(this));
 		}
-		
+
 		if (newTarget != null)
 		{
 			if (newTarget.isCreature())
 			{
 				((Creature) newTarget).addStatusListener(this);
-				
+
 				if (newTarget.displayHpBar())
 				{
 					sendPacket(new StatusUpdate(((Creature) newTarget)).addAttribute(StatusUpdateField.MAX_HP, StatusUpdateField.CUR_HP));
 				}
 			}
-			
+
 			updateTargetSelectionInfo(newTarget);
 			broadcastPacketToOthers(new TargetSelected(getObjectId(), newTarget.getObjectId(), getLoc()));
 		}
 		super.setTarget(newTarget);
 	}
-	
+
 	/**
 	 * Method getActiveWeaponInstance.
 	 * @return ItemInstance
@@ -4535,7 +4504,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 	}
-	
+
 	/**
 	 * Method getActiveWeaponItem.
 	 * @return WeaponTemplate
@@ -4550,7 +4519,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return (WeaponTemplate) weapon.getTemplate();
 	}
-	
+
 	/**
 	 * Method getSecondaryWeaponInstance.
 	 * @return ItemInstance
@@ -4560,7 +4529,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 	}
-	
+
 	/**
 	 * Method getSecondaryWeaponItem.
 	 * @return WeaponTemplate
@@ -4580,7 +4549,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return null;
 	}
-	
+
 	/**
 	 * Method isWearingArmor.
 	 * @param armorType ArmorType
@@ -4604,7 +4573,7 @@ public final class Player extends Playable implements PlayerGroup
 		final ItemInstance legs = getInventory().getPaperdollItem(Inventory.PAPERDOLL_LEGS);
 		return legs == null ? armorType == ArmorType.NONE : legs.getItemType() == armorType;
 	}
-	
+
 	/**
 	 * Method reduceCurrentHp.
 	 * @param damage double
@@ -4641,13 +4610,13 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 		super.reduceCurrentHp(damage, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
-		
+
 		if (attacker.getPlayer() == null)
 		{
 			WorldStatisticsManager.getInstance().updateStat(this, CategoryType.DAMAGE_FROM_MONSTERS, getClassId().getId(), (long) damage);
 		}
 	}
-	
+
 	/**
 	 * Method onReduceCurrentHp.
 	 * @param damage double
@@ -4724,7 +4693,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		super.onReduceCurrentHp(damage, attacker, skill, awake, standUp, directHp);
 	}
-	
+
 	/**
 	 * Method altDeathPenalty.
 	 * @param killer Creature
@@ -4741,7 +4710,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		deathPenalty(killer);
 	}
-	
+
 	/**
 	 * Method atWarWith.
 	 * @param player Player
@@ -4751,7 +4720,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (_clan != null) && (player.getClan() != null) && (getPledgeType() != -1) && (player.getPledgeType() != -1) && _clan.isAtWarWith(player.getClan().getClanId());
 	}
-	
+
 	/**
 	 * Method atMutualWarWith.
 	 * @param player Player
@@ -4761,7 +4730,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (_clan != null) && (player.getClan() != null) && (getPledgeType() != -1) && (player.getPledgeType() != -1) && _clan.isAtWarWith(player.getClan().getClanId()) && player.getClan().isAtWarWith(_clan.getClanId());
 	}
-	
+
 	/**
 	 * Method doPurePk.
 	 * @param killer Player
@@ -4774,7 +4743,7 @@ public final class Player extends Playable implements PlayerGroup
 		WorldStatisticsManager.getInstance().updateStat(killer, CategoryType.PK_COUNT, 1);
 		WorldStatisticsManager.getInstance().updateStat(this, CategoryType.KILLED_BY_PK_COUNT, 1);
 	}
-	
+
 	/**
 	 * Method doKillInPeace.
 	 * @param killer Player
@@ -4795,7 +4764,7 @@ public final class Player extends Playable implements PlayerGroup
 			WorldStatisticsManager.getInstance().updateStat(killer, CategoryType.PVP_COUNT, 1);
 		}
 	}
-	
+
 	/**
 	 * Method checkAddItemToDrop.
 	 * @param array List<ItemInstance>
@@ -4809,7 +4778,7 @@ public final class Player extends Playable implements PlayerGroup
 			array.add(items.remove(Rnd.get(items.size())));
 		}
 	}
-	
+
 	/**
 	 * Method getActiveWeaponFlagAttachment.
 	 * @return FlagItemAttachment
@@ -4823,7 +4792,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return (FlagItemAttachment) item.getAttachment();
 	}
-	
+
 	/**
 	 * Method doPKPVPManage.
 	 * @param killer Creature
@@ -4986,7 +4955,7 @@ public final class Player extends Playable implements PlayerGroup
 			getInventory().writeUnlock();
 		}
 	}
-	
+
 	/**
 	 * Method onDeath.
 	 * @param killer Creature
@@ -5053,7 +5022,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		super.onDeath(killer);
 	}
-	
+
 	/**
 	 * Method restoreExp.
 	 */
@@ -5061,7 +5030,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		restoreExp(100.);
 	}
-	
+
 	/**
 	 * Method restoreExp.
 	 * @param percent double
@@ -5084,7 +5053,7 @@ public final class Player extends Playable implements PlayerGroup
 			addExpAndSp((long) ((lostexp * percent) / 100), 0);
 		}
 	}
-	
+
 	/**
 	 * Method deathPenalty.
 	 * @param killer Creature
@@ -5179,7 +5148,7 @@ public final class Player extends Playable implements PlayerGroup
 			setVar("lostexp", String.valueOf(lost), -1);
 		}
 	}
-	
+
 	/**
 	 * Method setRequest.
 	 * @param transaction Request
@@ -5188,7 +5157,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_request = transaction;
 	}
-	
+
 	/**
 	 * Method getRequest.
 	 * @return Request
@@ -5197,7 +5166,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _request;
 	}
-	
+
 	/**
 	 * Method isBusy.
 	 * @return boolean
@@ -5206,7 +5175,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return isProcessingRequest() || isOutOfControl() || isInOlympiadMode() || (getTeam() != TeamType.NONE) || isInStoreMode() || isInDuel() || getMessageRefusal() || isBlockAll() || isInvisible();
 	}
-	
+
 	/**
 	 * Method isProcessingRequest.
 	 * @return boolean
@@ -5223,7 +5192,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return true;
 	}
-	
+
 	/**
 	 * Method isInTrade.
 	 * @return boolean
@@ -5232,7 +5201,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return isProcessingRequest() && getRequest().isTypeOf(L2RequestType.TRADE);
 	}
-	
+
 	/**
 	 * Method addVisibleObject.
 	 * @param object GameObject
@@ -5247,7 +5216,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return object.addPacketList(this, dropper);
 	}
-	
+
 	/**
 	 * Method addPacketList.
 	 * @param forPlayer Player
@@ -5336,7 +5305,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return list;
 	}
-	
+
 	/**
 	 * Method removeVisibleObject.
 	 * @param object GameObject
@@ -5353,7 +5322,7 @@ public final class Player extends Playable implements PlayerGroup
 		getAI().notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, object);
 		return result;
 	}
-	
+
 	/**
 	 * Method levelSet.
 	 * @param levels int
@@ -5391,17 +5360,17 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			getParty().recalculatePartyData();
 		}
-		
+
 		if (getLevel() > 84)
 		{
 			MentorUtil.removeSkills(this);
 		}
-		
+
 		if ((((getLevel() >= 85) ? 1 : 0) & ((getVar("GermunkusUSM") == null) ? 1 : 0) & ((!(isAwaking())) ? 1 : 0)) != 0)
 		{
 			AwakingManager.getInstance().SendReqToStartQuest(this);
 		}
-		
+
 		if (_clan != null)
 		{
 			_clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(this));
@@ -5410,32 +5379,32 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			_matchingRoom.broadcastPlayerUpdate(this);
 		}
-		
+
 		int mentorId = getMentorSystem().getMentor();
 		if (mentorId != 0)
 		{
 			Player mentorPlayer = World.getPlayer(mentorId);
-			
+
 			if (mentorPlayer != null)
 			{
 				String mentorName = mentorPlayer.getName();
 				if (MentorUtil.SIGN_OF_TUTOR.containsKey(getLevel()))
 				{
 					Map<Integer, Long> signOfTutor = new HashMap<Integer, Long>()
-					{
+						{
 						private static final long serialVersionUID = 1L;
 						{
 							put(33804, (long) MentorUtil.SIGN_OF_TUTOR.get(getLevel()));
 						}
-					};
-					MentorUtil.sendMentorMail(mentorPlayer, _name, signOfTutor);
+						};
+						MentorUtil.sendMentorMail(mentorPlayer, _name, signOfTutor);
 				}
 				final SubClass cclass = getActiveSubClass();
 				if ((getLevel() > 84) && cclass.isBase() && getClassId().isOfLevel(ClassLevel.Awaking))
 				{
 					getMentorSystem().remove(mentorName, false, true);
 					sendPacket(new SystemMessage2(SystemMsg.YOU_REACHED_LEVEL_86_RELATIONSHIP_WITH_S1_CAME_TO_AN_END).addString(mentorName));
-					
+
 					mentorPlayer.sendPacket(new SystemMessage2(SystemMsg.THE_MENTEE_S1_HAS_REACHED_LEVEL_86).addName(this));
 					mentorPlayer.getMentorSystem().remove(_name, true, false);
 					if (mentorPlayer.getMentorSystem().getMenteeInfo().size() == 0)
@@ -5451,12 +5420,12 @@ public final class Player extends Playable implements PlayerGroup
 					MentorUtil.removeSkills(this);
 					MentorUtil.graduateMenteeMail(this);
 				}
-				
+
 			}
 		}
 		rewardSkills(true, false);
 	}
-	
+
 	/**
 	 * Method checkSkills.
 	 */
@@ -5467,7 +5436,7 @@ public final class Player extends Playable implements PlayerGroup
 			SkillTreeTable.checkSkill(this, sk);
 		}
 	}
-	
+
 	/**
 	 * Method startTimers.
 	 */
@@ -5479,7 +5448,7 @@ public final class Player extends Playable implements PlayerGroup
 		getInventory().startTimers();
 		resumeQuestTimers();
 	}
-	
+
 	/**
 	 * Method stopAllTimers.
 	 */
@@ -5496,7 +5465,7 @@ public final class Player extends Playable implements PlayerGroup
 		getInventory().stopAllTimers();
 		stopQuestTimers();
 	}
-	
+
 	/**
 	 * Method getSummonPointMax.
 	 * @return int
@@ -5505,7 +5474,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (int) calcStat(Stats.SUMMON_POINT, 0);
 	}
-	
+
 	/**
 	 * Method scheduleDelete.
 	 */
@@ -5518,7 +5487,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		scheduleDelete(time * 1000L);
 	}
-	
+
 	/**
 	 * Method scheduleDelete.
 	 * @param time long
@@ -5543,7 +5512,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}, time);
 	}
-	
+
 	/**
 	 * Method onDelete.
 	 */
@@ -5570,7 +5539,7 @@ public final class Player extends Playable implements PlayerGroup
 		_lastNpc = HardReferences.emptyRef();
 		_observerRegion = null;
 	}
-	
+
 	/**
 	 * Method setTradeList.
 	 * @param list List<TradeItem>
@@ -5579,7 +5548,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_tradeList = list;
 	}
-	
+
 	/**
 	 * Method getTradeList.
 	 * @return List<TradeItem>
@@ -5588,7 +5557,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _tradeList;
 	}
-	
+
 	/**
 	 * Method getSellStoreName.
 	 * @return String
@@ -5597,7 +5566,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _sellStoreName;
 	}
-	
+
 	/**
 	 * Method setSellStoreName.
 	 * @param name String
@@ -5606,7 +5575,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_sellStoreName = Strings.stripToSingleLine(name);
 	}
-	
+
 	/**
 	 * Method setSellList.
 	 * @param packageSell boolean
@@ -5623,7 +5592,7 @@ public final class Player extends Playable implements PlayerGroup
 			_sellList = list;
 		}
 	}
-	
+
 	/**
 	 * Method getSellList.
 	 * @return List<TradeItem>
@@ -5632,7 +5601,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getSellList(_privatestore == STORE_PRIVATE_SELL_PACKAGE);
 	}
-	
+
 	/**
 	 * Method getSellList.
 	 * @param packageSell boolean
@@ -5642,7 +5611,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return packageSell ? _packageSellList : _sellList;
 	}
-	
+
 	/**
 	 * Method getBuyStoreName.
 	 * @return String
@@ -5651,7 +5620,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _buyStoreName;
 	}
-	
+
 	/**
 	 * Method setBuyStoreName.
 	 * @param name String
@@ -5660,7 +5629,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_buyStoreName = Strings.stripToSingleLine(name);
 	}
-	
+
 	/**
 	 * Method setBuyList.
 	 * @param list List<TradeItem>
@@ -5669,7 +5638,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_buyList = list;
 	}
-	
+
 	/**
 	 * Method getBuyList.
 	 * @return List<TradeItem>
@@ -5678,7 +5647,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _buyList;
 	}
-	
+
 	/**
 	 * Method setManufactureName.
 	 * @param name String
@@ -5687,7 +5656,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_manufactureName = Strings.stripToSingleLine(name);
 	}
-	
+
 	/**
 	 * Method getManufactureName.
 	 * @return String
@@ -5696,7 +5665,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _manufactureName;
 	}
-	
+
 	/**
 	 * Method getCreateList.
 	 * @return List<ManufactureItem>
@@ -5705,7 +5674,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _createList;
 	}
-	
+
 	/**
 	 * Method setCreateList.
 	 * @param list List<ManufactureItem>
@@ -5714,7 +5683,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_createList = list;
 	}
-	
+
 	/**
 	 * Method setPrivateStoreType.
 	 * @param type int
@@ -5731,7 +5700,7 @@ public final class Player extends Playable implements PlayerGroup
 			unsetVar("storemode");
 		}
 	}
-	
+
 	/**
 	 * Method isInStoreMode.
 	 * @return boolean
@@ -5740,7 +5709,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _privatestore != STORE_PRIVATE_NONE;
 	}
-	
+
 	/**
 	 * Method getPrivateStoreType.
 	 * @return int
@@ -5749,7 +5718,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _privatestore;
 	}
-	
+
 	/**
 	 * Method setClan.
 	 * @param clan Clan
@@ -5787,7 +5756,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 	}
-	
+
 	/**
 	 * Method getClan.
 	 * @return Clan
@@ -5797,7 +5766,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _clan;
 	}
-	
+
 	/**
 	 * Method getSubUnit.
 	 * @return SubUnit
@@ -5806,7 +5775,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _clan == null ? null : _clan.getSubUnit(_pledgeType);
 	}
-	
+
 	/**
 	 * Method getClanHall.
 	 * @return ClanHall
@@ -5816,7 +5785,7 @@ public final class Player extends Playable implements PlayerGroup
 		int id = _clan != null ? _clan.getHasHideout() : 0;
 		return ResidenceHolder.getInstance().getResidence(ClanHall.class, id);
 	}
-	
+
 	/**
 	 * Method getCastle.
 	 * @return Castle
@@ -5826,7 +5795,7 @@ public final class Player extends Playable implements PlayerGroup
 		int id = _clan != null ? _clan.getCastle() : 0;
 		return ResidenceHolder.getInstance().getResidence(Castle.class, id);
 	}
-	
+
 	/**
 	 * Method getFortress.
 	 * @return Fortress
@@ -5836,7 +5805,7 @@ public final class Player extends Playable implements PlayerGroup
 		int id = _clan != null ? _clan.getHasFortress() : 0;
 		return ResidenceHolder.getInstance().getResidence(Fortress.class, id);
 	}
-	
+
 	/**
 	 * Method getAlliance.
 	 * @return Alliance
@@ -5845,7 +5814,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _clan == null ? null : _clan.getAlliance();
 	}
-	
+
 	/**
 	 * Method isClanLeader.
 	 * @return boolean
@@ -5854,7 +5823,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (_clan != null) && (getObjectId() == _clan.getLeaderId());
 	}
-	
+
 	/**
 	 * Method isAllyLeader.
 	 * @return boolean
@@ -5863,7 +5832,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (getAlliance() != null) && (getAlliance().getLeader().getLeaderId() == getObjectId());
 	}
-	
+
 	/**
 	 * Method reduceArrowCount.
 	 */
@@ -5882,7 +5851,7 @@ public final class Player extends Playable implements PlayerGroup
 			_arrowItem = null;
 		}
 	}
-	
+
 	/**
 	 * Method checkAndEquipArrows.
 	 * @return boolean
@@ -5914,7 +5883,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return _arrowItem != null;
 	}
-	
+
 	/**
 	 * Method setUptime.
 	 * @param time long
@@ -5923,7 +5892,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_uptime = time;
 	}
-	
+
 	/**
 	 * Method getUptime.
 	 * @return long
@@ -5932,7 +5901,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return System.currentTimeMillis() - _uptime;
 	}
-	
+
 	/**
 	 * Method isInParty.
 	 * @return boolean
@@ -5941,7 +5910,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _party != null;
 	}
-	
+
 	/**
 	 * Method setParty.
 	 * @param party Party
@@ -5950,7 +5919,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_party = party;
 	}
-	
+
 	/**
 	 * Method joinParty.
 	 * @param party Party
@@ -5962,7 +5931,7 @@ public final class Player extends Playable implements PlayerGroup
 			party.addPartyMember(this);
 		}
 	}
-	
+
 	/**
 	 * Method leaveParty.
 	 */
@@ -5973,7 +5942,7 @@ public final class Player extends Playable implements PlayerGroup
 			_party.removePartyMember(this, false);
 		}
 	}
-	
+
 	/**
 	 * Method getParty.
 	 * @return Party
@@ -5982,7 +5951,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _party;
 	}
-	
+
 	/**
 	 * Method setLastPartyPosition.
 	 * @param loc Location
@@ -5991,7 +5960,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_lastPartyPosition = loc;
 	}
-	
+
 	/**
 	 * Method getLastPartyPosition.
 	 * @return Location
@@ -6000,7 +5969,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _lastPartyPosition;
 	}
-	
+
 	/**
 	 * Method isGM.
 	 * @return boolean
@@ -6009,7 +5978,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _playerAccess == null ? false : _playerAccess.IsGM;
 	}
-	
+
 	/**
 	 * Method setAccessLevel.
 	 * @param level int
@@ -6018,7 +5987,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_accessLevel = level;
 	}
-	
+
 	/**
 	 * Method getAccessLevel.
 	 * @return int
@@ -6028,7 +5997,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _accessLevel;
 	}
-	
+
 	/**
 	 * Method setPlayerAccess.
 	 * @param pa PlayerAccess
@@ -6045,7 +6014,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		setAccessLevel(isGM() || _playerAccess.Menu ? 100 : 0);
 	}
-	
+
 	/**
 	 * Method getPlayerAccess.
 	 * @return PlayerAccess
@@ -6054,7 +6023,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _playerAccess;
 	}
-	
+
 	/**
 	 * Method getLevelMod.
 	 * @return double
@@ -6064,7 +6033,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (89. + getLevel()) / 100.0;
 	}
-	
+
 	/**
 	 * Method updateStats.
 	 */
@@ -6079,7 +6048,7 @@ public final class Player extends Playable implements PlayerGroup
 		refreshExpertisePenalty();
 		super.updateStats();
 	}
-	
+
 	/**
 	 * Method sendChanges.
 	 */
@@ -6092,7 +6061,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		super.sendChanges();
 	}
-	
+
 	/**
 	 * Method updateKarma.
 	 * @param flagChanged boolean
@@ -6100,13 +6069,13 @@ public final class Player extends Playable implements PlayerGroup
 	public void updateKarma(boolean flagChanged)
 	{
 		sendStatusUpdate(true, true, StatusUpdateField.KARMA);
-		
+
 		if (flagChanged)
 		{
 			broadcastRelationChanged();
 		}
 	}
-	
+
 	/**
 	 * Method isOnline.
 	 * @return boolean
@@ -6115,7 +6084,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _isOnline;
 	}
-	
+
 	/**
 	 * Method setIsOnline.
 	 * @param isOnline boolean
@@ -6124,7 +6093,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_isOnline = isOnline;
 	}
-	
+
 	/**
 	 * Method setOnlineStatus.
 	 * @param isOnline boolean
@@ -6134,7 +6103,7 @@ public final class Player extends Playable implements PlayerGroup
 		_isOnline = isOnline;
 		updateOnlineStatus();
 	}
-	
+
 	/**
 	 * Method updateOnlineStatus.
 	 */
@@ -6160,7 +6129,7 @@ public final class Player extends Playable implements PlayerGroup
 			DbUtils.closeQuietly(con, statement);
 		}
 	}
-	
+
 	/**
 	 * Method increaseKarma.
 	 * @param add_karma long
@@ -6192,7 +6161,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		updateKarma(_karma == 0);
 	}
-	
+
 	/**
 	 * Method decreaseKarma.
 	 * @param i int
@@ -6202,7 +6171,7 @@ public final class Player extends Playable implements PlayerGroup
 		_karma -= i;
 		updateKarma(_karma > 0);
 	}
-	
+
 	/**
 	 * Method create.
 	 * @param classId int
@@ -6233,9 +6202,9 @@ public final class Player extends Playable implements PlayerGroup
 			return null;
 		}
 		int level = 1;
-		double hp = 0;
-		double mp = 0;
-		double cp = 0;
+		double hp = class_id.getBaseHp(level);
+		double mp = class_id.getBaseMp(level);
+		double cp = class_id.getBaseCp(level);
 		long exp = Experience.getExpForLevel(level);
 		int sp = 0;
 		boolean active = true;
@@ -6246,7 +6215,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return player;
 	}
-	
+
 	/**
 	 * Method restore.
 	 * @param objectId int
@@ -6415,7 +6384,7 @@ public final class Player extends Playable implements PlayerGroup
 				player.restoreVitality();
 				player.getInventory().restore();
 				player.getMentorSystem().restore();
-				
+
 				try
 				{
 					String var = player.getVar("ExpandInventory");
@@ -6550,7 +6519,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return player;
 	}
-	
+
 	/**
 	 * Method loadPremiumItemList.
 	 */
@@ -6584,7 +6553,7 @@ public final class Player extends Playable implements PlayerGroup
 			DbUtils.closeQuietly(con, statement, rs);
 		}
 	}
-	
+
 	/**
 	 * Method updatePremiumItem.
 	 * @param itemNum int
@@ -6612,7 +6581,7 @@ public final class Player extends Playable implements PlayerGroup
 			DbUtils.closeQuietly(con, statement);
 		}
 	}
-	
+
 	/**
 	 * Method deletePremiumItem.
 	 * @param itemNum int
@@ -6638,7 +6607,7 @@ public final class Player extends Playable implements PlayerGroup
 			DbUtils.closeQuietly(con, statement);
 		}
 	}
-	
+
 	/**
 	 * Method getPremiumItemList.
 	 * @return Map<Integer,PremiumItem>
@@ -6647,7 +6616,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _premiumItems;
 	}
-	
+
 	/**
 	 * Method store.
 	 * @param fast boolean
@@ -6697,12 +6666,12 @@ public final class Player extends Playable implements PlayerGroup
 				statement.setLong(20, getDeleteClanTime() / 1000L);
 				statement.setLong(21, _NoChannel > 0 ? getNoChannelRemained() / 1000 : _NoChannel);
 				statement.setInt(22, (int) (_onlineBeginTime > 0 ? ((_onlineTime + System.currentTimeMillis()) - _onlineBeginTime) / 1000L : _onlineTime / 1000L));
-				
+
 				if (_onlineBeginTime > 0L)
 				{
 					WorldStatisticsManager.getInstance().updateStat(this, CategoryType.TIME_PLAYED, (System.currentTimeMillis() - _onlineBeginTime) / 1000);
 				}
-				
+
 				statement.setInt(23, getPledgeType());
 				statement.setInt(24, getPowerGrade());
 				statement.setInt(25, getLvlJoinedAcademy());
@@ -6748,7 +6717,7 @@ public final class Player extends Playable implements PlayerGroup
 			_storeLock.unlock();
 		}
 	}
-	
+
 	/**
 	 * Method addCertSkill.
 	 * @param newSkill Skill
@@ -6769,7 +6738,7 @@ public final class Player extends Playable implements PlayerGroup
 		storeCertSkill(newSkill, oldSkill, isDual);
 		return oldSkill;
 	}
-	
+
 	/**
 	 * Method addSkill.
 	 * @param newSkill Skill
@@ -6802,7 +6771,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return oldSkill;
 	}
-	
+
 	/**
 	 * Method removeSkill.
 	 * @param skill Skill
@@ -6817,7 +6786,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return removeSkill(skill.getId(), fromDB);
 	}
-	
+
 	/**
 	 * Method removeSkill.
 	 * @param id int
@@ -6856,7 +6825,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return oldSkill;
 	}
-	
+
 	/**
 	 * Method removeSkills.
 	 * @param SkillToRemove List<Integer>
@@ -6895,7 +6864,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 	}
-	
+
 	/**
 	 * Method storeCertSkill.
 	 * @return
@@ -6947,7 +6916,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return skillList;
 	}
-	
+
 	/**
 	 * Method storeCertSkill.
 	 * @param newSkill Skill
@@ -6988,7 +6957,7 @@ public final class Player extends Playable implements PlayerGroup
 			DbUtils.closeQuietly(con, statement);
 		}
 	}
-	
+
 	/**
 	 * Method removeCertSkill.
 	 * @param skillsRemove
@@ -7029,7 +6998,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 	}
-	
+
 	/**
 	 * Method storeSkill.
 	 * @param newSkill Skill
@@ -7063,7 +7032,7 @@ public final class Player extends Playable implements PlayerGroup
 			DbUtils.closeQuietly(con, statement);
 		}
 	}
-	
+
 	/**
 	 * Method restoreSkills.
 	 */
@@ -7159,9 +7128,9 @@ public final class Player extends Playable implements PlayerGroup
 				}
 				super.addSkill(skill);
 			}
-			
+
 			removeSkills(_SkillToRemove, true);
-			
+
 			if (isNoble())
 			{
 				updateNobleSkills();
@@ -7214,7 +7183,7 @@ public final class Player extends Playable implements PlayerGroup
 			DbUtils.closeQuietly(con, statement, rset);
 		}
 	}
-	
+
 	/**
 	 * Method storeDisableSkills.
 	 */
@@ -7264,7 +7233,7 @@ public final class Player extends Playable implements PlayerGroup
 			DbUtils.closeQuietly(con, statement);
 		}
 	}
-	
+
 	/**
 	 * Method restoreDisableSkills.
 	 */
@@ -7305,7 +7274,7 @@ public final class Player extends Playable implements PlayerGroup
 			DbUtils.closeQuietly(con, statement, rset);
 		}
 	}
-	
+
 	/**
 	 * Method restoreHenna.
 	 */
@@ -7361,7 +7330,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		recalcHennaStats();
 	}
-	
+
 	/**
 	 * Method getHennaEmptySlots.
 	 * @return int
@@ -7382,7 +7351,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return totalSlots;
 	}
-	
+
 	/**
 	 * Method removeHenna.
 	 * @param slot int
@@ -7431,7 +7400,7 @@ public final class Player extends Playable implements PlayerGroup
 		ItemFunctions.addItem(this, dyeID, henna.getDrawCount() / 2, true);
 		return true;
 	}
-	
+
 	/**
 	 * Method addHenna.
 	 * @param henna Henna
@@ -7485,7 +7454,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Method recalcHennaStats.
 	 */
@@ -7540,7 +7509,7 @@ public final class Player extends Playable implements PlayerGroup
 			_hennaDEX = 15;
 		}
 	}
-	
+
 	/**
 	 * Method getHenna.
 	 * @param slot int
@@ -7554,7 +7523,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return _henna[slot - 1];
 	}
-	
+
 	/**
 	 * Method getHennaStatINT.
 	 * @return int
@@ -7563,7 +7532,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _hennaINT;
 	}
-	
+
 	/**
 	 * Method getHennaStatSTR.
 	 * @return int
@@ -7572,7 +7541,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _hennaSTR;
 	}
-	
+
 	/**
 	 * Method getHennaStatCON.
 	 * @return int
@@ -7581,7 +7550,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _hennaCON;
 	}
-	
+
 	/**
 	 * Method getHennaStatMEN.
 	 * @return int
@@ -7590,7 +7559,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _hennaMEN;
 	}
-	
+
 	/**
 	 * Method getHennaStatWIT.
 	 * @return int
@@ -7599,7 +7568,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _hennaWIT;
 	}
-	
+
 	/**
 	 * Method getHennaStatDEX.
 	 * @return int
@@ -7608,7 +7577,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _hennaDEX;
 	}
-	
+
 	/**
 	 * Method consumeItem.
 	 * @param itemConsumeId int
@@ -7625,7 +7594,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Method consumeItemMp.
 	 * @param itemId int
@@ -7651,7 +7620,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Method isMageClass.
 	 * @return boolean
@@ -7661,7 +7630,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getClassId().isMage();
 	}
-	
+
 	/**
 	 * Method isMounted.
 	 * @return boolean
@@ -7670,7 +7639,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _mountNpcId > 0;
 	}
-	
+
 	/**
 	 * Method isRiding.
 	 * @return boolean
@@ -7679,7 +7648,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _riding;
 	}
-	
+
 	/**
 	 * Method setRiding.
 	 * @param mode boolean
@@ -7688,7 +7657,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_riding = mode;
 	}
-	
+
 	/**
 	 * Method checkLandingState.
 	 * @return boolean
@@ -7711,7 +7680,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return true;
 	}
-	
+
 	/**
 	 * Method setMount.
 	 * @param npcId int
@@ -7773,7 +7742,7 @@ public final class Player extends Playable implements PlayerGroup
 		broadcastUserInfo();
 		sendSkillList();
 	}
-	
+
 	/**
 	 * Method unEquipWeapon.
 	 */
@@ -7794,7 +7763,7 @@ public final class Player extends Playable implements PlayerGroup
 		abortAttack(true, true);
 		abortCast(true, true);
 	}
-	
+
 	/**
 	 * Method getSpeed.
 	 * @param baseSpeed double
@@ -7829,7 +7798,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return super.getSpeed(baseSpeed);
 	}
-	
+
 	/**
 	 * Field _mountNpcId.
 	 */
@@ -7842,7 +7811,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Field _mountLevel.
 	 */
 	private int _mountLevel;
-	
+
 	/**
 	 * Method getMountNpcId.
 	 * @return int
@@ -7851,7 +7820,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _mountNpcId;
 	}
-	
+
 	/**
 	 * Method getMountObjId.
 	 * @return int
@@ -7860,7 +7829,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _mountObjId;
 	}
-	
+
 	/**
 	 * Method getMountLevel.
 	 * @return int
@@ -7869,7 +7838,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _mountLevel;
 	}
-	
+
 	/**
 	 * Method sendDisarmMessage.
 	 * @param wpn ItemInstance
@@ -7890,7 +7859,7 @@ public final class Player extends Playable implements PlayerGroup
 			sendPacket(sm);
 		}
 	}
-	
+
 	/**
 	 * Method setUsingWarehouseType.
 	 * @param type WarehouseType
@@ -7899,7 +7868,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_usingWHType = type;
 	}
-	
+
 	/**
 	 * Method getUsingWarehouseType.
 	 * @return WarehouseType
@@ -7908,7 +7877,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _usingWHType;
 	}
-	
+
 	/**
 	 * Method getCubics.
 	 * @return Collection<EffectCubic>
@@ -7917,7 +7886,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _cubics == null ? Collections.<EffectCubic> emptyList() : _cubics.values();
 	}
-	
+
 	/**
 	 * Method addCubic.
 	 * @param cubic EffectCubic
@@ -7930,7 +7899,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		_cubics.put(cubic.getId(), cubic);
 	}
-	
+
 	/**
 	 * Method removeCubic.
 	 * @param id int
@@ -7942,7 +7911,7 @@ public final class Player extends Playable implements PlayerGroup
 			_cubics.remove(id);
 		}
 	}
-	
+
 	/**
 	 * Method getCubic.
 	 * @param id int
@@ -7952,7 +7921,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _cubics == null ? null : _cubics.get(id);
 	}
-	
+
 	/**
 	 * Method toString.
 	 * @return String
@@ -7962,7 +7931,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getName() + "[" + getObjectId() + "]";
 	}
-	
+
 	/**
 	 * Method getEnchantEffect.
 	 * @return int
@@ -7976,7 +7945,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return Math.min(127, wpn.getEnchantLevel());
 	}
-	
+
 	/**
 	 * Method setLastNpc.
 	 * @param npc NpcInstance
@@ -7992,7 +7961,7 @@ public final class Player extends Playable implements PlayerGroup
 			_lastNpc = npc.getRef();
 		}
 	}
-	
+
 	/**
 	 * Method getLastNpc.
 	 * @return NpcInstance
@@ -8001,7 +7970,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _lastNpc.get();
 	}
-	
+
 	/**
 	 * Method setMultisell.
 	 * @param multisell MultiSellListContainer
@@ -8010,7 +7979,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_multisell = multisell;
 	}
-	
+
 	/**
 	 * Method getMultisell.
 	 * @return MultiSellListContainer
@@ -8019,7 +7988,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _multisell;
 	}
-	
+
 	/**
 	 * Method unChargeShots.
 	 * @param spirit boolean
@@ -8044,7 +8013,7 @@ public final class Player extends Playable implements PlayerGroup
 		autoShot();
 		return true;
 	}
-	
+
 	/**
 	 * Method unChargeFishShot.
 	 * @return boolean
@@ -8060,7 +8029,7 @@ public final class Player extends Playable implements PlayerGroup
 		autoShot();
 		return true;
 	}
-	
+
 	/**
 	 * Method autoShot.
 	 */
@@ -8082,7 +8051,7 @@ public final class Player extends Playable implements PlayerGroup
 			handler.useItem(this, item, false);
 		}
 	}
-	
+
 	/**
 	 * Method getChargedFishShot.
 	 * @return boolean
@@ -8092,7 +8061,7 @@ public final class Player extends Playable implements PlayerGroup
 		ItemInstance weapon = getActiveWeaponInstance();
 		return (weapon != null) && weapon.getChargedFishshot();
 	}
-	
+
 	/**
 	 * Method getChargedSoulShot.
 	 * @return boolean
@@ -8103,7 +8072,7 @@ public final class Player extends Playable implements PlayerGroup
 		ItemInstance weapon = getActiveWeaponInstance();
 		return (weapon != null) && (weapon.getChargedSoulshot() == ItemInstance.CHARGED_SOULSHOT);
 	}
-	
+
 	/**
 	 * Method getChargedSpiritShot.
 	 * @return int
@@ -8118,7 +8087,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return weapon.getChargedSpiritshot();
 	}
-	
+
 	/**
 	 * Method addAutoSoulShot.
 	 * @param itemId Integer
@@ -8127,7 +8096,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_activeSoulShots.add(itemId);
 	}
-	
+
 	/**
 	 * Method removeAutoSoulShot.
 	 * @param itemId Integer
@@ -8136,7 +8105,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_activeSoulShots.remove(itemId);
 	}
-	
+
 	/**
 	 * Method getAutoSoulShot.
 	 * @return Set<Integer>
@@ -8145,7 +8114,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _activeSoulShots;
 	}
-	
+
 	/**
 	 * Method setInvisibleType.
 	 * @param vis InvisibleType
@@ -8154,7 +8123,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_invisibleType = vis;
 	}
-	
+
 	/**
 	 * Method getInvisibleType.
 	 * @return InvisibleType
@@ -8164,7 +8133,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _invisibleType;
 	}
-	
+
 	/**
 	 * Method getClanPrivileges.
 	 * @return int
@@ -8190,7 +8159,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return 0;
 	}
-	
+
 	/**
 	 * Method teleToClosestTown.
 	 */
@@ -8198,7 +8167,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		teleToLocation(TeleportUtils.getRestartLocation(this, RestartType.TO_VILLAGE), ReflectionManager.DEFAULT);
 	}
-	
+
 	/**
 	 * Method teleToCastle.
 	 */
@@ -8206,7 +8175,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		teleToLocation(TeleportUtils.getRestartLocation(this, RestartType.TO_CASTLE), ReflectionManager.DEFAULT);
 	}
-	
+
 	/**
 	 * Method teleToFortress.
 	 */
@@ -8214,7 +8183,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		teleToLocation(TeleportUtils.getRestartLocation(this, RestartType.TO_FORTRESS), ReflectionManager.DEFAULT);
 	}
-	
+
 	/**
 	 * Method teleToClanhall.
 	 */
@@ -8222,7 +8191,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		teleToLocation(TeleportUtils.getRestartLocation(this, RestartType.TO_CLANHALL), ReflectionManager.DEFAULT);
 	}
-	
+
 	/**
 	 * Method sendMessage.
 	 * @param message CustomMessage
@@ -8232,7 +8201,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		sendMessage(message.toString());
 	}
-	
+
 	/**
 	 * Method teleToLocation.
 	 * @param x int
@@ -8249,7 +8218,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		super.teleToLocation(x, y, z, refId);
 	}
-	
+
 	/**
 	 * Method onTeleported.
 	 * @return boolean
@@ -8279,7 +8248,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		sendActionFailed();
 		getAI().notifyEvent(CtrlEvent.EVT_TELEPORTED);
-		
+
 		if (isLockedTarget() && (getTarget() != null))
 		{
 			updateTargetSelectionInfo();
@@ -8291,7 +8260,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return true;
 	}
-	
+
 	/**
 	 * Method enterObserverMode.
 	 * @param loc Location
@@ -8318,7 +8287,7 @@ public final class Player extends Playable implements PlayerGroup
 		sendPacket(new ObserverStart(loc));
 		return true;
 	}
-	
+
 	/**
 	 * Method appearObserverMode.
 	 */
@@ -8342,7 +8311,7 @@ public final class Player extends Playable implements PlayerGroup
 			game.broadcastInfo(null, this, true);
 		}
 	}
-	
+
 	/**
 	 * Method leaveObserverMode.
 	 */
@@ -8364,7 +8333,7 @@ public final class Player extends Playable implements PlayerGroup
 		stopMove();
 		sendPacket(new ObserverEnd(getLoc()));
 	}
-	
+
 	/**
 	 * Method returnFromObserverMode.
 	 */
@@ -8382,7 +8351,7 @@ public final class Player extends Playable implements PlayerGroup
 		broadcastCharInfo();
 		World.showObjectsToPlayer(this);
 	}
-	
+
 	/**
 	 * Method enterOlympiadObserverMode.
 	 * @param loc Location
@@ -8420,7 +8389,7 @@ public final class Player extends Playable implements PlayerGroup
 		setReflection(reflect);
 		sendPacket(new TeleportToLocation(this, loc));
 	}
-	
+
 	/**
 	 * Method leaveOlympiadObserverMode.
 	 * @param removeFromGame boolean
@@ -8456,7 +8425,7 @@ public final class Player extends Playable implements PlayerGroup
 		setReflection(ReflectionManager.DEFAULT);
 		sendPacket(new TeleportToLocation(this, getLoc()));
 	}
-	
+
 	/**
 	 * Method setOlympiadSide.
 	 * @param i int
@@ -8465,7 +8434,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_olympiadSide = i;
 	}
-	
+
 	/**
 	 * Method getOlympiadSide.
 	 * @return int
@@ -8474,7 +8443,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _olympiadSide;
 	}
-	
+
 	/**
 	 * Method isInObserverMode.
 	 * @return boolean
@@ -8484,7 +8453,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _observerMode.get() > 0;
 	}
-	
+
 	/**
 	 * Method getObserverMode.
 	 * @return int
@@ -8493,7 +8462,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _observerMode.get();
 	}
-	
+
 	/**
 	 * Method getObserverRegion.
 	 * @return WorldRegion
@@ -8502,7 +8471,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _observerRegion;
 	}
-	
+
 	/**
 	 * Method setObserverRegion.
 	 * @param region WorldRegion
@@ -8511,7 +8480,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_observerRegion = region;
 	}
-	
+
 	/**
 	 * Method getTeleMode.
 	 * @return int
@@ -8520,7 +8489,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _telemode;
 	}
-	
+
 	/**
 	 * Method setTeleMode.
 	 * @param mode int
@@ -8529,7 +8498,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_telemode = mode;
 	}
-	
+
 	/**
 	 * Method setLoto.
 	 * @param i int
@@ -8539,7 +8508,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_loto[i] = val;
 	}
-	
+
 	/**
 	 * Method getLoto.
 	 * @param i int
@@ -8549,7 +8518,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _loto[i];
 	}
-	
+
 	/**
 	 * Method setRace.
 	 * @param i int
@@ -8559,7 +8528,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_race[i] = val;
 	}
-	
+
 	/**
 	 * Method getRace.
 	 * @param i int
@@ -8569,7 +8538,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _race[i];
 	}
-	
+
 	/**
 	 * Method getMessageRefusal.
 	 * @return boolean
@@ -8578,7 +8547,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _messageRefusal;
 	}
-	
+
 	/**
 	 * Method setMessageRefusal.
 	 * @param mode boolean
@@ -8587,7 +8556,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_messageRefusal = mode;
 	}
-	
+
 	/**
 	 * Method setTradeRefusal.
 	 * @param mode boolean
@@ -8596,7 +8565,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_tradeRefusal = mode;
 	}
-	
+
 	/**
 	 * Method getTradeRefusal.
 	 * @return boolean
@@ -8605,7 +8574,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _tradeRefusal;
 	}
-	
+
 	/**
 	 * Method addToBlockList.
 	 * @param charName String
@@ -8644,7 +8613,7 @@ public final class Player extends Playable implements PlayerGroup
 		_blockList.put(charId, charName);
 		sendPacket(new SystemMessage(SystemMessage.S1_HAS_BEEN_ADDED_TO_YOUR_IGNORE_LIST).addString(charName));
 	}
-	
+
 	/**
 	 * Method removeFromBlockList.
 	 * @param charName String
@@ -8672,7 +8641,7 @@ public final class Player extends Playable implements PlayerGroup
 			block_target.sendMessage(getName() + " has removed you from his/her Ignore List.");
 		}
 	}
-	
+
 	/**
 	 * Method isInBlockList.
 	 * @param player Player
@@ -8682,7 +8651,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return isInBlockList(player.getObjectId());
 	}
-	
+
 	/**
 	 * Method isInBlockList.
 	 * @param charId int
@@ -8692,7 +8661,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (_blockList != null) && _blockList.containsKey(charId);
 	}
-	
+
 	/**
 	 * Method isInBlockList.
 	 * @param charName String
@@ -8709,7 +8678,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Method restoreBlockList.
 	 */
@@ -8745,7 +8714,7 @@ public final class Player extends Playable implements PlayerGroup
 			DbUtils.closeQuietly(con, statement, rs);
 		}
 	}
-	
+
 	/**
 	 * Method storeBlockList.
 	 */
@@ -8788,7 +8757,7 @@ public final class Player extends Playable implements PlayerGroup
 			DbUtils.closeQuietly(con, statement);
 		}
 	}
-	
+
 	/**
 	 * Method isBlockAll.
 	 * @return boolean
@@ -8797,7 +8766,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _blockAll;
 	}
-	
+
 	/**
 	 * Method setBlockAll.
 	 * @param state boolean
@@ -8806,7 +8775,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_blockAll = state;
 	}
-	
+
 	/**
 	 * Method getBlockList.
 	 * @return Collection<String>
@@ -8815,7 +8784,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _blockList.values();
 	}
-	
+
 	/**
 	 * Method getBlockListMap.
 	 * @return Map<Integer,String>
@@ -8824,7 +8793,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _blockList;
 	}
-	
+
 	/**
 	 * Method setHero.
 	 * @param hero boolean
@@ -8833,7 +8802,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_hero = hero;
 	}
-	
+
 	/**
 	 * Method isHero.
 	 * @return boolean
@@ -8843,7 +8812,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _hero;
 	}
-	
+
 	/**
 	 * Method setIsInOlympiadMode.
 	 * @param b boolean
@@ -8852,7 +8821,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_inOlympiadMode = b;
 	}
-	
+
 	/**
 	 * Method isInOlympiadMode.
 	 * @return boolean
@@ -8862,7 +8831,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _inOlympiadMode;
 	}
-	
+
 	/**
 	 * Method isOlympiadGameStart.
 	 * @return boolean
@@ -8871,7 +8840,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (_olympiadGame != null) && (_olympiadGame.getState() == 1);
 	}
-	
+
 	/**
 	 * Method isOlympiadCompStart.
 	 * @return boolean
@@ -8880,7 +8849,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (_olympiadGame != null) && (_olympiadGame.getState() == 2);
 	}
-	
+
 	/**
 	 * Method updateNobleSkills.
 	 */
@@ -8908,7 +8877,7 @@ public final class Player extends Playable implements PlayerGroup
 			super.removeSkillById(Skill.SKILL_SYMPHONY_OF_NOBLESSE);
 		}
 	}
-	
+
 	/**
 	 * Method setNoble.
 	 * @param noble boolean
@@ -8921,7 +8890,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		_noble = noble;
 	}
-	
+
 	/**
 	 * Method isNoble.
 	 * @return boolean
@@ -8930,7 +8899,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _noble;
 	}
-	
+
 	/**
 	 * Method getSubLevel.
 	 * @return int
@@ -8939,7 +8908,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return isBaseClassActive() ? 0 : getLevel();
 	}
-	
+
 	/**
 	 * Method updateKetraVarka.
 	 */
@@ -8991,7 +8960,7 @@ public final class Player extends Playable implements PlayerGroup
 			_ketra = 0;
 		}
 	}
-	
+
 	/**
 	 * Method getVarka.
 	 * @return int
@@ -9000,7 +8969,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _varka;
 	}
-	
+
 	/**
 	 * Method getKetra.
 	 * @return int
@@ -9009,7 +8978,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _ketra;
 	}
-	
+
 	/**
 	 * Method updateRam.
 	 */
@@ -9028,7 +8997,7 @@ public final class Player extends Playable implements PlayerGroup
 			_ram = 0;
 		}
 	}
-	
+
 	/**
 	 * Method getRam.
 	 * @return int
@@ -9037,7 +9006,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _ram;
 	}
-	
+
 	/**
 	 * Method setPledgeType.
 	 * @param typeId int
@@ -9046,7 +9015,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_pledgeType = typeId;
 	}
-	
+
 	/**
 	 * Method getPledgeType.
 	 * @return int
@@ -9055,7 +9024,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _pledgeType;
 	}
-	
+
 	/**
 	 * Method setLvlJoinedAcademy.
 	 * @param lvl int
@@ -9064,7 +9033,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_lvlJoinedAcademy = lvl;
 	}
-	
+
 	/**
 	 * Method getLvlJoinedAcademy.
 	 * @return int
@@ -9073,7 +9042,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _lvlJoinedAcademy;
 	}
-	
+
 	/**
 	 * Method getPledgeClass.
 	 * @return int
@@ -9082,7 +9051,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _pledgeClass;
 	}
-	
+
 	/**
 	 * Method updatePledgeClass.
 	 */
@@ -9330,7 +9299,7 @@ public final class Player extends Playable implements PlayerGroup
 			_pledgeClass = RANK_BARON;
 		}
 	}
-	
+
 	/**
 	 * Method setPowerGrade.
 	 * @param grade int
@@ -9339,7 +9308,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_powerGrade = grade;
 	}
-	
+
 	/**
 	 * Method getPowerGrade.
 	 * @return int
@@ -9348,7 +9317,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _powerGrade;
 	}
-	
+
 	/**
 	 * Method setApprentice.
 	 * @param apprentice int
@@ -9357,7 +9326,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_apprentice = apprentice;
 	}
-	
+
 	/**
 	 * Method getApprentice.
 	 * @return int
@@ -9366,7 +9335,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _apprentice;
 	}
-	
+
 	/**
 	 * Method getSponsor.
 	 * @return int
@@ -9375,7 +9344,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _clan == null ? 0 : _clan.getAnyMember(getObjectId()).getSponsor();
 	}
-	
+
 	/**
 	 * Method getNameColor.
 	 * @return int
@@ -9388,7 +9357,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return _nameColor;
 	}
-	
+
 	/**
 	 * Method setNameColor.
 	 * @param nameColor int
@@ -9405,7 +9374,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		_nameColor = nameColor;
 	}
-	
+
 	/**
 	 * Method setNameColor.
 	 * @param red int
@@ -9424,12 +9393,12 @@ public final class Player extends Playable implements PlayerGroup
 			unsetVar("namecolor");
 		}
 	}
-	
+
 	/**
 	 * Field user_variables.
 	 */
 	private final Map<String, String> user_variables = new ConcurrentHashMap<>();
-	
+
 	/**
 	 * Method setVar.
 	 * @param name String
@@ -9441,7 +9410,7 @@ public final class Player extends Playable implements PlayerGroup
 		user_variables.put(name, value);
 		mysql.set("REPLACE INTO character_variables (obj_id, type, name, value, expire_time) VALUES (?,'user-var',?,?,?)", getObjectId(), name, value, expirationTime);
 	}
-	
+
 	/**
 	 * Method setVar.
 	 * @param name String
@@ -9452,7 +9421,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		setVar(name, String.valueOf(value), expirationTime);
 	}
-	
+
 	/**
 	 * Method setVar.
 	 * @param name String
@@ -9463,7 +9432,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		setVar(name, String.valueOf(value), expirationTime);
 	}
-	
+
 	/**
 	 * Method unsetVar.
 	 * @param name String
@@ -9479,7 +9448,7 @@ public final class Player extends Playable implements PlayerGroup
 			mysql.set("DELETE FROM `character_variables` WHERE `obj_id`=? AND `type`='user-var' AND `name`=? LIMIT 1", getObjectId(), name);
 		}
 	}
-	
+
 	/**
 	 * Method getVar.
 	 * @param name String
@@ -9489,7 +9458,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return user_variables.get(name);
 	}
-	
+
 	/**
 	 * Method getVarB.
 	 * @param name String
@@ -9505,7 +9474,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return !(var.equals("0") || var.equalsIgnoreCase("false"));
 	}
-	
+
 	/**
 	 * Method getVarB.
 	 * @param name String
@@ -9516,7 +9485,7 @@ public final class Player extends Playable implements PlayerGroup
 		String var = user_variables.get(name);
 		return !((var == null) || var.equals("0") || var.equalsIgnoreCase("false"));
 	}
-	
+
 	/**
 	 * Method getVarLong.
 	 * @param name String
@@ -9526,7 +9495,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getVarLong(name, 0L);
 	}
-	
+
 	/**
 	 * Method getVarLong.
 	 * @param name String
@@ -9543,7 +9512,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return result;
 	}
-	
+
 	/**
 	 * Method getVarInt.
 	 * @param name String
@@ -9553,7 +9522,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getVarInt(name, 0);
 	}
-	
+
 	/**
 	 * Method getVarInt.
 	 * @param name String
@@ -9570,7 +9539,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return result;
 	}
-	
+
 	/**
 	 * Method getVars.
 	 * @return Map<String,String>
@@ -9579,7 +9548,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return user_variables;
 	}
-	
+
 	/**
 	 * Method loadVariables.
 	 */
@@ -9614,7 +9583,7 @@ public final class Player extends Playable implements PlayerGroup
 			DbUtils.closeQuietly(con, offline, rs);
 		}
 	}
-	
+
 	/**
 	 * Method getVarFromPlayer.
 	 * @param objId int
@@ -9649,7 +9618,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return value;
 	}
-	
+
 	/**
 	 * Method getLang.
 	 * @return String
@@ -9658,7 +9627,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getVar("lang@");
 	}
-	
+
 	/**
 	 * Method getLanguage.
 	 * @return Language
@@ -9667,7 +9636,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return Language.ENGLISH;
 	}
-	
+
 	/**
 	 * Method isAtWarWith.
 	 * @param id Integer
@@ -9677,7 +9646,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (_clan == null) || !_clan.isAtWarWith(id) ? 0 : 1;
 	}
-	
+
 	/**
 	 * Method isAtWar.
 	 * @return int
@@ -9686,7 +9655,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (_clan == null) || (_clan.isAtWarOrUnderAttack() <= 0) ? 0 : 1;
 	}
-	
+
 	/**
 	 * Method stopWaterTask.
 	 */
@@ -9700,7 +9669,7 @@ public final class Player extends Playable implements PlayerGroup
 			sendChanges();
 		}
 	}
-	
+
 	/**
 	 * Method startWaterTask.
 	 */
@@ -9722,7 +9691,7 @@ public final class Player extends Playable implements PlayerGroup
 			sendChanges();
 		}
 	}
-	
+
 	/**
 	 * Method doRevive.
 	 * @param percent double
@@ -9732,7 +9701,7 @@ public final class Player extends Playable implements PlayerGroup
 		restoreExp(percent);
 		doRevive();
 	}
-	
+
 	/**
 	 * Method doRevive.
 	 */
@@ -9746,7 +9715,7 @@ public final class Player extends Playable implements PlayerGroup
 		updateEffectIcons();
 		autoShot();
 	}
-	
+
 	/**
 	 * Method reviveRequest.
 	 * @param reviver Player
@@ -9784,7 +9753,7 @@ public final class Player extends Playable implements PlayerGroup
 		WorldStatisticsManager.getInstance().updateStat(reviver, CategoryType.RESURRECTED_CHAR_COUNT, 1);
 		WorldStatisticsManager.getInstance().updateStat(this, CategoryType.RESURRECTED_BY_OTHER_COUNT, 1);
 	}
-	
+
 	/**
 	 * Method summonCharacterRequest.
 	 * @param summoner Creature
@@ -9797,7 +9766,7 @@ public final class Player extends Playable implements PlayerGroup
 		cd.addName(summoner).addZoneName(loc);
 		ask(cd, new SummonAnswerListener(this, loc, summonConsumeCrystal));
 	}
-	
+
 	/**
 	 * Method scriptRequest.
 	 * @param text String
@@ -9808,7 +9777,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		ask(new ConfirmDlg(SystemMsg.S1, 30000).addString(text), new ScriptAnswerListener(this, scriptName, args));
 	}
-	
+
 	/**
 	 * Method updateNoChannel.
 	 * @param time long
@@ -9837,7 +9806,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		sendPacket(new EtcStatusUpdate(this));
 	}
-	
+
 	/**
 	 * Method checkRecom.
 	 */
@@ -9862,7 +9831,7 @@ public final class Player extends Playable implements PlayerGroup
 			restartRecom();
 		}
 	}
-	
+
 	/**
 	 * Method restartRecom.
 	 */
@@ -9877,7 +9846,7 @@ public final class Player extends Playable implements PlayerGroup
 		sendUserInfo();
 		sendVoteSystemInfo();
 	}
-	
+
 	/**
 	 * Method isInBoat.
 	 * @return boolean
@@ -9887,7 +9856,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _boat != null;
 	}
-	
+
 	/**
 	 * Method getBoat.
 	 * @return Boat
@@ -9897,7 +9866,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _boat;
 	}
-	
+
 	/**
 	 * Method setBoat.
 	 * @param boat Boat
@@ -9907,7 +9876,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_boat = boat;
 	}
-	
+
 	/**
 	 * Method getInBoatPosition.
 	 * @return Location
@@ -9917,7 +9886,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _inBoatPosition;
 	}
-	
+
 	/**
 	 * Method setInBoatPosition.
 	 * @param loc Location
@@ -9927,7 +9896,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_inBoatPosition = loc;
 	}
-	
+
 	/**
 	 * Method getActiveSubClass.
 	 * @return SubClass
@@ -9936,7 +9905,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _subClassList.getActiveSubClass();
 	}
-	
+
 	/**
 	 * Method getActiveClassId.
 	 * @return int
@@ -9949,7 +9918,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return -1;
 	}
-	
+
 	/**
 	 * Method getActiveDefaultClassId.
 	 * @return int
@@ -9962,7 +9931,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return -1;
 	}
-	
+
 	/**
 	 * Method changeClassInDb.
 	 * @param oldclass int
@@ -10053,7 +10022,7 @@ public final class Player extends Playable implements PlayerGroup
 			DbUtils.closeQuietly(con, statement);
 		}
 	}
-	
+
 	/**
 	 * Method storeCharSubClasses.
 	 */
@@ -10072,7 +10041,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		CharacterSubclassDAO.getInstance().store(this);
 	}
-	
+
 	/**
 	 * Method addSubClass.
 	 * @param classId int
@@ -10125,7 +10094,7 @@ public final class Player extends Playable implements PlayerGroup
 		setCurrentCp(getMaxCp());
 		return true;
 	}
-	
+
 	/**
 	 * Method modifySubClass.
 	 * @param oldClassId int
@@ -10191,7 +10160,7 @@ public final class Player extends Playable implements PlayerGroup
 		getSubClassList().removeByClassId(oldClassId);
 		return (newClassId <= 0) || addSubClass(newClassId, false, certification, dual_certification, isDual, index);
 	}
-	
+
 	/**
 	 * Method setActiveSubClass.
 	 * @param subId int
@@ -10224,14 +10193,14 @@ public final class Player extends Playable implements PlayerGroup
 					}
 				}
 			}
-			
+
 			if (store && (oldActiveSub != null))
 			{
 				oldActiveSub.setCp(getCurrentCp());
 				oldActiveSub.setHp(getCurrentHp());
 				oldActiveSub.setMp(getCurrentMp());
 			}
-			
+
 			SubClass newActiveSub = _subClassList.changeActiveSubClass(subId);
 			_template = PlayerTemplateHolder.getInstance().getPlayerTemplate(getRace(), getClassId(), Sex.VALUES[getSex()]);
 			setClassId(subId, true, false);
@@ -10289,7 +10258,7 @@ public final class Player extends Playable implements PlayerGroup
 			_subClassOperationLock.unlock();
 		}
 	}
-	
+
 	/**
 	 * Method startKickTask.
 	 * @param delayMillis long
@@ -10299,7 +10268,7 @@ public final class Player extends Playable implements PlayerGroup
 		stopKickTask();
 		_kickTask = ThreadPoolManager.getInstance().schedule(new KickTask(this), delayMillis);
 	}
-	
+
 	/**
 	 * Method stopKickTask.
 	 */
@@ -10311,7 +10280,7 @@ public final class Player extends Playable implements PlayerGroup
 			_kickTask = null;
 		}
 	}
-	
+
 	/**
 	 * Method startBonusTask.
 	 */
@@ -10340,7 +10309,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 	}
-	
+
 	/**
 	 * Method stopBonusTask.
 	 */
@@ -10352,7 +10321,7 @@ public final class Player extends Playable implements PlayerGroup
 			_bonusExpiration = null;
 		}
 	}
-	
+
 	/**
 	 * Method getInventoryLimit.
 	 * @return int
@@ -10362,7 +10331,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (int) calcStat(Stats.INVENTORY_LIMIT, 0, null, null);
 	}
-	
+
 	/**
 	 * Method getWarehouseLimit.
 	 * @return int
@@ -10371,7 +10340,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (int) calcStat(Stats.STORAGE_LIMIT, 0, null, null);
 	}
-	
+
 	/**
 	 * Method getTradeLimit.
 	 * @return int
@@ -10380,7 +10349,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (int) calcStat(Stats.TRADE_LIMIT, 0, null, null);
 	}
-	
+
 	/**
 	 * Method getDwarvenRecipeLimit.
 	 * @return int
@@ -10389,7 +10358,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (int) calcStat(Stats.DWARVEN_RECIPE_LIMIT, 50, null, null) + Config.ALT_ADD_RECIPES;
 	}
-	
+
 	/**
 	 * Method getCommonRecipeLimit.
 	 * @return int
@@ -10398,7 +10367,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (int) calcStat(Stats.COMMON_RECIPE_LIMIT, 50, null, null) + Config.ALT_ADD_RECIPES;
 	}
-	
+
 	/**
 	 * Method getAttackElement.
 	 * @return Element
@@ -10407,7 +10376,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return Formulas.getAttackElement(this, null);
 	}
-	
+
 	/**
 	 * Method getAttack.
 	 * @param element Element
@@ -10421,7 +10390,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return (int) calcStat(element.getAttack(), 0., null, null);
 	}
-	
+
 	/**
 	 * Method getDefence.
 	 * @param element Element
@@ -10435,7 +10404,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return (int) calcStat(element.getDefence(), 0., null, null);
 	}
-	
+
 	/**
 	 * Method getAndSetLastItemAuctionRequest.
 	 * @return boolean
@@ -10450,7 +10419,7 @@ public final class Player extends Playable implements PlayerGroup
 		_lastItemAuctionInfoRequest = System.currentTimeMillis();
 		return false;
 	}
-	
+
 	/**
 	 * Method getNpcId.
 	 * @return int
@@ -10460,7 +10429,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return -2;
 	}
-	
+
 	/**
 	 * Method getVisibleObject.
 	 * @param id int
@@ -10494,7 +10463,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return (target == null) || target.isInvisible() ? null : target;
 	}
-	
+
 	/**
 	 * Method getPAtk.
 	 * @param target Creature
@@ -10506,7 +10475,7 @@ public final class Player extends Playable implements PlayerGroup
 		double init = getActiveWeaponInstance() == null ? (isMageClass() ? 3 : 4) : 0;
 		return (int) calcStat(Stats.POWER_ATTACK, init, target, null);
 	}
-	
+
 	/**
 	 * Method getPDef.
 	 * @param target Creature
@@ -10547,7 +10516,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return (int) calcStat(Stats.POWER_DEFENCE, init, target, null);
 	}
-	
+
 	/**
 	 * Method getMDef.
 	 * @param target Creature
@@ -10580,7 +10549,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return (int) calcStat(Stats.MAGIC_DEFENCE, init, target, skill);
 	}
-	
+
 	/**
 	 * Method getTitle.
 	 * @return String
@@ -10590,7 +10559,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return super.getTitle();
 	}
-	
+
 	/**
 	 * Method getTitleColor.
 	 * @return int
@@ -10599,7 +10568,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _titlecolor;
 	}
-	
+
 	/**
 	 * Method setTitleColor.
 	 * @param titlecolor int
@@ -10616,7 +10585,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		_titlecolor = titlecolor;
 	}
-	
+
 	/**
 	 * Method isCursedWeaponEquipped.
 	 * @return boolean
@@ -10626,7 +10595,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _cursedWeaponEquippedId != 0;
 	}
-	
+
 	/**
 	 * Method setCursedWeaponEquippedId.
 	 * @param value int
@@ -10635,7 +10604,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_cursedWeaponEquippedId = value;
 	}
-	
+
 	/**
 	 * Method getCursedWeaponEquippedId.
 	 * @return int
@@ -10644,7 +10613,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _cursedWeaponEquippedId;
 	}
-	
+
 	/**
 	 * Method isImmobilized.
 	 * @return boolean
@@ -10654,7 +10623,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return super.isImmobilized() || isOverloaded() || isSitting() || isFishing();
 	}
-	
+
 	/**
 	 * Method isBlocked.
 	 * @return boolean
@@ -10664,7 +10633,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return super.isBlocked() || isInMovie() || isInObserverMode() || isTeleporting() || isLogoutStarted();
 	}
-	
+
 	/**
 	 * Method isInvul.
 	 * @return boolean
@@ -10674,7 +10643,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return super.isInvul() || isInMovie();
 	}
-	
+
 	/**
 	 * Method setOverloaded.
 	 * @param overloaded boolean
@@ -10683,7 +10652,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_overloaded = overloaded;
 	}
-	
+
 	/**
 	 * Method isOverloaded.
 	 * @return boolean
@@ -10692,7 +10661,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _overloaded;
 	}
-	
+
 	/**
 	 * Method isFishing.
 	 * @return boolean
@@ -10701,7 +10670,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _isFishing;
 	}
-	
+
 	/**
 	 * Method getFishing.
 	 * @return Fishing
@@ -10710,7 +10679,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _fishing;
 	}
-	
+
 	/**
 	 * Method setFishing.
 	 * @param value boolean
@@ -10719,7 +10688,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_isFishing = value;
 	}
-	
+
 	/**
 	 * Method startFishing.
 	 * @param fish FishTemplate
@@ -10731,7 +10700,7 @@ public final class Player extends Playable implements PlayerGroup
 		_fishing.setLureId(lureId);
 		_fishing.startFishing();
 	}
-	
+
 	/**
 	 * Method stopFishing.
 	 */
@@ -10739,7 +10708,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_fishing.stopFishing();
 	}
-	
+
 	/**
 	 * Method getFishLoc.
 	 * @return Location
@@ -10748,7 +10717,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _fishing.getFishLoc();
 	}
-	
+
 	/**
 	 * Method getBonus.
 	 * @return Bonus
@@ -10757,7 +10726,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _bonus;
 	}
-	
+
 	/**
 	 * Method hasBonus.
 	 * @return boolean
@@ -10766,7 +10735,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _bonus.getBonusExpire() > (System.currentTimeMillis() / 1000L);
 	}
-	
+
 	/**
 	 * Method getRateAdena.
 	 * @return double
@@ -10776,7 +10745,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _party == null ? _bonus.getDropAdena() : _party._rateAdena;
 	}
-	
+
 	/**
 	 * Method getRateItems.
 	 * @return double
@@ -10786,7 +10755,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _party == null ? _bonus.getDropItems() : _party._rateDrop;
 	}
-	
+
 	/**
 	 * Method getRateExp.
 	 * @return double
@@ -10796,7 +10765,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return calcStat(Stats.EXP, (_party == null ? _bonus.getRateXp() : _party._rateExp), null, null);
 	}
-	
+
 	/**
 	 * Method getRateSp.
 	 * @return double
@@ -10806,7 +10775,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return calcStat(Stats.SP, (_party == null ? _bonus.getRateSp() : _party._rateSp), null, null);
 	}
-	
+
 	/**
 	 * Method getRateSpoil.
 	 * @return double
@@ -10816,7 +10785,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _party == null ? _bonus.getDropSpoil() : _party._rateSpoil;
 	}
-	
+
 	/**
 	 * Field _maried.
 	 */
@@ -10837,7 +10806,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Field _maryaccepted.
 	 */
 	private boolean _maryaccepted = false;
-	
+
 	/**
 	 * Method isMaried.
 	 * @return boolean
@@ -10846,7 +10815,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _maried;
 	}
-	
+
 	/**
 	 * Method setMaried.
 	 * @param state boolean
@@ -10855,7 +10824,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_maried = state;
 	}
-	
+
 	/**
 	 * Method setMaryRequest.
 	 * @param state boolean
@@ -10864,7 +10833,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_maryrequest = state;
 	}
-	
+
 	/**
 	 * Method isMaryRequest.
 	 * @return boolean
@@ -10873,7 +10842,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _maryrequest;
 	}
-	
+
 	/**
 	 * Method setMaryAccepted.
 	 * @param state boolean
@@ -10882,7 +10851,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_maryaccepted = state;
 	}
-	
+
 	/**
 	 * Method isMaryAccepted.
 	 * @return boolean
@@ -10891,7 +10860,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _maryaccepted;
 	}
-	
+
 	/**
 	 * Method getPartnerId.
 	 * @return int
@@ -10900,7 +10869,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _partnerId;
 	}
-	
+
 	/**
 	 * Method setPartnerId.
 	 * @param partnerid int
@@ -10909,7 +10878,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_partnerId = partnerid;
 	}
-	
+
 	/**
 	 * Method getCoupleId.
 	 * @return int
@@ -10918,7 +10887,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _coupleId;
 	}
-	
+
 	/**
 	 * Method setCoupleId.
 	 * @param coupleId int
@@ -10927,7 +10896,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_coupleId = coupleId;
 	}
-	
+
 	/**
 	 * Method setUndying.
 	 * @param val boolean
@@ -10940,7 +10909,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		_isUndying = val;
 	}
-	
+
 	/**
 	 * Method isUndying.
 	 * @return boolean
@@ -10949,7 +10918,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _isUndying;
 	}
-	
+
 	/**
 	 * Method resetReuse.
 	 */
@@ -10958,7 +10927,7 @@ public final class Player extends Playable implements PlayerGroup
 		_skillReuses.clear();
 		_sharedGroupReuses.clear();
 	}
-	
+
 	/**
 	 * Method getDeathPenalty.
 	 * @return DeathPenalty
@@ -10967,12 +10936,12 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getActiveSubClass() == null ? null : getActiveSubClass().getDeathPenalty(this);
 	}
-	
+
 	/**
 	 * Field _charmOfCourage.
 	 */
 	private boolean _charmOfCourage = false;
-	
+
 	/**
 	 * Method isCharmOfCourage.
 	 * @return boolean
@@ -10981,7 +10950,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _charmOfCourage;
 	}
-	
+
 	/**
 	 * Method setCharmOfCourage.
 	 * @param val boolean
@@ -10995,7 +10964,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		sendEtcStatusUpdate();
 	}
-	
+
 	/**
 	 * Field _increasedForce.
 	 */
@@ -11004,7 +10973,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Field _consumedSouls.
 	 */
 	private int _consumedSouls = 0;
-	
+
 	/**
 	 * Method getIncreasedForce.
 	 * @return int
@@ -11014,7 +10983,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _increasedForce;
 	}
-	
+
 	/**
 	 * Method getConsumedSouls.
 	 * @return int
@@ -11024,7 +10993,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _consumedSouls;
 	}
-	
+
 	/**
 	 * Method setConsumedSouls.
 	 * @param i int
@@ -11067,7 +11036,7 @@ public final class Player extends Playable implements PlayerGroup
 		_consumedSouls = i;
 		sendPacket(new EtcStatusUpdate(this));
 	}
-	
+
 	/**
 	 * Method setIncreasedForce.
 	 * @param i int
@@ -11084,12 +11053,12 @@ public final class Player extends Playable implements PlayerGroup
 		_increasedForce = i;
 		sendEtcStatusUpdate();
 	}
-	
+
 	/**
 	 * Field _lastFalling.
 	 */
 	private long _lastFalling;
-	
+
 	/**
 	 * Method isFalling.
 	 * @return boolean
@@ -11098,7 +11067,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (System.currentTimeMillis() - _lastFalling) < 5000;
 	}
-	
+
 	/**
 	 * Method falling.
 	 * @param height int
@@ -11125,7 +11094,7 @@ public final class Player extends Playable implements PlayerGroup
 			sendPacket(new SystemMessage(SystemMessage.YOU_RECEIVED_S1_DAMAGE_FROM_TAKING_A_HIGH_FALL).addNumber(damage));
 		}
 	}
-	
+
 	/**
 	 * Method checkHpMessages.
 	 * @param curHp double
@@ -11202,7 +11171,7 @@ public final class Player extends Playable implements PlayerGroup
 			sendChanges();
 		}
 	}
-	
+
 	/**
 	 * Method checkDayNightMessages.
 	 */
@@ -11222,7 +11191,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		sendChanges();
 	}
-	
+
 	/**
 	 * Method getZoneMask.
 	 * @return int
@@ -11231,7 +11200,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _zoneMask;
 	}
-	
+
 	/**
 	 * Method onUpdateZones.
 	 * @param leaving List<Zone>
@@ -11312,7 +11281,7 @@ public final class Player extends Playable implements PlayerGroup
 			stopWaterTask();
 		}
 	}
-	
+
 	/**
 	 * Method startAutoSaveTask.
 	 */
@@ -11327,7 +11296,7 @@ public final class Player extends Playable implements PlayerGroup
 			_autoSaveTask = AutoSaveManager.getInstance().addAutoSaveTask(this);
 		}
 	}
-	
+
 	/**
 	 * Method stopAutoSaveTask.
 	 */
@@ -11339,7 +11308,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		_autoSaveTask = null;
 	}
-	
+
 	/**
 	 * Method startPcBangPointsTask.
 	 */
@@ -11354,7 +11323,7 @@ public final class Player extends Playable implements PlayerGroup
 			_pcCafePointsTask = LazyPrecisionTaskManager.getInstance().addPCCafePointsTask(this);
 		}
 	}
-	
+
 	/**
 	 * Method stopPcBangPointsTask.
 	 */
@@ -11366,7 +11335,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		_pcCafePointsTask = null;
 	}
-	
+
 	/**
 	 * Method startUnjailTask.
 	 * @param player Player
@@ -11380,7 +11349,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		_unjailTask = ThreadPoolManager.getInstance().schedule(new UnJailTask(player), time * 60000);
 	}
-	
+
 	/**
 	 * Method stopUnjailTask.
 	 */
@@ -11392,7 +11361,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		_unjailTask = null;
 	}
-	
+
 	/**
 	 * Method sendMessage.
 	 * @param message String
@@ -11402,7 +11371,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		sendPacket(new SystemMessage(message));
 	}
-	
+
 	/**
 	 * Field _lastClientPosition.
 	 */
@@ -11411,7 +11380,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Field _lastServerPosition.
 	 */
 	private Location _lastServerPosition;
-	
+
 	/**
 	 * Method setLastClientPosition.
 	 * @param position Location
@@ -11420,7 +11389,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_lastClientPosition = position;
 	}
-	
+
 	/**
 	 * Method getLastClientPosition.
 	 * @return Location
@@ -11429,7 +11398,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _lastClientPosition;
 	}
-	
+
 	/**
 	 * Method setLastServerPosition.
 	 * @param position Location
@@ -11438,7 +11407,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_lastServerPosition = position;
 	}
-	
+
 	/**
 	 * Method getLastServerPosition.
 	 * @return Location
@@ -11447,12 +11416,12 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _lastServerPosition;
 	}
-	
+
 	/**
 	 * Field _useSeed.
 	 */
 	private int _useSeed = 0;
-	
+
 	/**
 	 * Method setUseSeed.
 	 * @param id int
@@ -11461,7 +11430,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_useSeed = id;
 	}
-	
+
 	/**
 	 * Method getUseSeed.
 	 * @return int
@@ -11470,7 +11439,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _useSeed;
 	}
-	
+
 	/**
 	 * Method getRelation.
 	 * @param target Player
@@ -11566,7 +11535,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return result;
 	}
-	
+
 	/**
 	 * Field _pvpFlag.
 	 */
@@ -11579,7 +11548,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Field _lastPvpAttack.
 	 */
 	private long _lastPvpAttack;
-	
+
 	/**
 	 * Method getlastPvpAttack.
 	 * @return long
@@ -11588,7 +11557,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _lastPvpAttack;
 	}
-	
+
 	/**
 	 * Method startPvPFlag.
 	 * @param target Creature
@@ -11616,7 +11585,7 @@ public final class Player extends Playable implements PlayerGroup
 			_PvPRegTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new PvPFlagTask(this), 1000, 1000);
 		}
 	}
-	
+
 	/**
 	 * Method stopPvPFlag.
 	 */
@@ -11629,7 +11598,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		updatePvPFlag(0);
 	}
-	
+
 	/**
 	 * Method updatePvPFlag.
 	 * @param value int
@@ -11648,7 +11617,7 @@ public final class Player extends Playable implements PlayerGroup
 		sendStatusUpdate(true, true, StatusUpdateField.PVP_FLAG);
 		broadcastRelationChanged();
 	}
-	
+
 	/**
 	 * Method setPvpFlag.
 	 * @param pvpFlag int
@@ -11657,7 +11626,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_pvpFlag = pvpFlag;
 	}
-	
+
 	/**
 	 * Method getPvpFlag.
 	 * @return int
@@ -11667,7 +11636,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _pvpFlag;
 	}
-	
+
 	/**
 	 * Method isInDuel.
 	 * @return boolean
@@ -11676,12 +11645,12 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getEvent(DuelEvent.class) != null;
 	}
-	
+
 	/**
 	 * Field _tamedBeasts.
 	 */
 	private final Map<Integer, TamedBeastInstance> _tamedBeasts = new ConcurrentHashMap<>();
-	
+
 	/**
 	 * Method getTrainedBeasts.
 	 * @return Map<Integer,TamedBeastInstance>
@@ -11690,7 +11659,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _tamedBeasts;
 	}
-	
+
 	/**
 	 * Method addTrainedBeast.
 	 * @param tamedBeast TamedBeastInstance
@@ -11699,7 +11668,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_tamedBeasts.put(tamedBeast.getObjectId(), tamedBeast);
 	}
-	
+
 	/**
 	 * Method removeTrainedBeast.
 	 * @param npcId int
@@ -11708,12 +11677,12 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_tamedBeasts.remove(npcId);
 	}
-	
+
 	/**
 	 * Field _lastAttackPacket.
 	 */
 	private long _lastAttackPacket = 0;
-	
+
 	/**
 	 * Method getLastAttackPacket.
 	 * @return long
@@ -11722,7 +11691,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _lastAttackPacket;
 	}
-	
+
 	/**
 	 * Method setLastAttackPacket.
 	 */
@@ -11730,12 +11699,12 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_lastAttackPacket = System.currentTimeMillis();
 	}
-	
+
 	/**
 	 * Field _lastMovePacket.
 	 */
 	private long _lastMovePacket = 0;
-	
+
 	/**
 	 * Method getLastMovePacket.
 	 * @return long
@@ -11744,7 +11713,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _lastMovePacket;
 	}
-	
+
 	/**
 	 * Method setLastMovePacket.
 	 */
@@ -11752,7 +11721,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_lastMovePacket = System.currentTimeMillis();
 	}
-	
+
 	/**
 	 * Method getKeyBindings.
 	 * @return byte[]
@@ -11761,7 +11730,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _keyBindings;
 	}
-	
+
 	/**
 	 * Method setKeyBindings.
 	 * @param keyBindings byte[]
@@ -11774,7 +11743,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		_keyBindings = keyBindings;
 	}
-	
+
 	/**
 	 * Method setTransformation.
 	 * @param transformationId int
@@ -11907,7 +11876,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		broadcastUserInfo();
 	}
-	
+
 	/**
 	 * Method preparateToTransform.
 	 * @param transSkill Skill
@@ -11925,7 +11894,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 	}
-	
+
 	/**
 	 * Method getAllSkills.
 	 * @return Collection<Skill>
@@ -11948,7 +11917,7 @@ public final class Player extends Playable implements PlayerGroup
 		tempSkills.putAll(_transformationSkills);
 		return tempSkills.values();
 	}
-	
+
 	/**
 	 * Method setAgathion.
 	 * @param id int
@@ -11962,7 +11931,7 @@ public final class Player extends Playable implements PlayerGroup
 		_agathionId = id;
 		broadcastCharInfo();
 	}
-	
+
 	/**
 	 * Method getAgathionId.
 	 * @return int
@@ -11971,7 +11940,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _agathionId;
 	}
-	
+
 	/**
 	 * Method getPcBangPoints.
 	 * @return int
@@ -11980,7 +11949,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _pcBangPoints;
 	}
-	
+
 	/**
 	 * Method setPcBangPoints.
 	 * @param val int
@@ -11989,7 +11958,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_pcBangPoints = val;
 	}
-	
+
 	/**
 	 * Method addPcBangPoints.
 	 * @param count int
@@ -12005,7 +11974,7 @@ public final class Player extends Playable implements PlayerGroup
 		sendPacket(new SystemMessage(doublePoints ? SystemMessage.DOUBLE_POINTS_YOU_AQUIRED_S1_PC_BANG_POINT : SystemMessage.YOU_ACQUIRED_S1_PC_BANG_POINT).addNumber(count));
 		sendPacket(new ExPCCafePointInfo(this, count, 1, 2, 12));
 	}
-	
+
 	/**
 	 * Method reducePcBangPoints.
 	 * @param count int
@@ -12022,12 +11991,12 @@ public final class Player extends Playable implements PlayerGroup
 		sendPacket(new ExPCCafePointInfo(this, 0, 1, 2, 12));
 		return true;
 	}
-	
+
 	/**
 	 * Field _groundSkillLoc.
 	 */
 	private Location _groundSkillLoc;
-	
+
 	/**
 	 * Method setGroundSkillLoc.
 	 * @param location Location
@@ -12036,7 +12005,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_groundSkillLoc = location;
 	}
-	
+
 	/**
 	 * Method getGroundSkillLoc.
 	 * @return Location
@@ -12045,7 +12014,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _groundSkillLoc;
 	}
-	
+
 	/**
 	 * Method isLogoutStarted.
 	 * @return boolean
@@ -12054,7 +12023,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _isLogout.get();
 	}
-	
+
 	/**
 	 * Method setOfflineMode.
 	 * @param val boolean
@@ -12067,7 +12036,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		_offline = val;
 	}
-	
+
 	/**
 	 * Method isInOfflineMode.
 	 * @return boolean
@@ -12076,7 +12045,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _offline;
 	}
-	
+
 	/**
 	 * Method saveTradeList.
 	 */
@@ -12151,7 +12120,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 	}
-	
+
 	/**
 	 * Method restoreTradeList.
 	 */
@@ -12294,7 +12263,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 	}
-	
+
 	/**
 	 * Method restoreRecipeBook.
 	 */
@@ -12326,7 +12295,7 @@ public final class Player extends Playable implements PlayerGroup
 			DbUtils.closeQuietly(con, statement, rset);
 		}
 	}
-	
+
 	/**
 	 * Method getDecoy.
 	 * @return DecoyInstance
@@ -12335,7 +12304,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _decoy;
 	}
-	
+
 	/**
 	 * Method setDecoy.
 	 * @param decoy DecoyInstance
@@ -12344,7 +12313,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_decoy = decoy;
 	}
-	
+
 	/**
 	 * Method getMountType.
 	 * @return int
@@ -12370,7 +12339,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return 0;
 	}
-	
+
 	/**
 	 * Method getColRadius.
 	 * @return double
@@ -12404,7 +12373,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return getCollisionRadius();
 	}
-	
+
 	/**
 	 * Method getColHeight.
 	 * @return double
@@ -12438,7 +12407,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return getCollisionHeight();
 	}
-	
+
 	/**
 	 * Method setReflection.
 	 * @param reflection Reflection
@@ -12482,7 +12451,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 	}
-	
+
 	/**
 	 * Method getCollisionRadius.
 	 * @return double
@@ -12491,7 +12460,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _collision_radius;
 	}
-	
+
 	/**
 	 * Method getCollisionHeight.
 	 * @return double
@@ -12500,7 +12469,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _collision_height;
 	}
-	
+
 	/**
 	 * Method isTerritoryFlagEquipped.
 	 * @return boolean
@@ -12510,12 +12479,12 @@ public final class Player extends Playable implements PlayerGroup
 		ItemInstance weapon = getActiveWeaponInstance();
 		return (weapon != null) && weapon.getTemplate().isTerritoryFlag();
 	}
-	
+
 	/**
 	 * Field _buyListId.
 	 */
 	private int _buyListId;
-	
+
 	/**
 	 * Method setBuyListId.
 	 * @param listId int
@@ -12524,7 +12493,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_buyListId = listId;
 	}
-	
+
 	/**
 	 * Method getBuyListId.
 	 * @return int
@@ -12533,7 +12502,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _buyListId;
 	}
-	
+
 	/**
 	 * Method getFame.
 	 * @return int
@@ -12542,7 +12511,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _fame;
 	}
-	
+
 	/**
 	 * Method setFame.
 	 * @param fame int
@@ -12562,7 +12531,7 @@ public final class Player extends Playable implements PlayerGroup
 		_fame = fame;
 		sendChanges();
 	}
-	
+
 	/**
 	 * Method getVitality.
 	 * @return int
@@ -12571,7 +12540,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return Config.ALT_VITALITY_ENABLED ? _vitality : 0;
 	}
-	
+
 	/**
 	 * Method addVitality.
 	 * @param val int
@@ -12580,7 +12549,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		setVitality(getVitality() + val);
 	}
-	
+
 	/**
 	 * Method setVitality.
 	 * @param newVitality int
@@ -12609,7 +12578,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		sendPacket(new ExVitalityPointInfo(_vitality));
 	}
-	
+
 	/**
 	 * Method getVitalityBonus.
 	 * @return double
@@ -12618,12 +12587,12 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getVitality() > 0 ? Config.ALT_VITALITY_RATE : 0.0;
 	}
-	
+
 	/**
 	 * Field _incorrectValidateCount.
 	 */
 	private final int _incorrectValidateCount = 0;
-	
+
 	/**
 	 * Method getIncorrectValidateCount.
 	 * @return int
@@ -12632,7 +12601,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _incorrectValidateCount;
 	}
-	
+
 	/**
 	 * Method setIncorrectValidateCount.
 	 * @param count int
@@ -12642,7 +12611,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _incorrectValidateCount;
 	}
-	
+
 	/**
 	 * Method getExpandInventory.
 	 * @return int
@@ -12651,7 +12620,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _expandInventory;
 	}
-	
+
 	/**
 	 * Method setExpandInventory.
 	 * @param inventory int
@@ -12660,7 +12629,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_expandInventory = inventory;
 	}
-	
+
 	/**
 	 * Method getExpandWarehouse.
 	 * @return int
@@ -12669,7 +12638,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _expandWarehouse;
 	}
-	
+
 	/**
 	 * Method setExpandWarehouse.
 	 * @param warehouse int
@@ -12678,7 +12647,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_expandWarehouse = warehouse;
 	}
-	
+
 	/**
 	 * Method isNotShowBuffAnim.
 	 * @return boolean
@@ -12687,7 +12656,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _notShowBuffAnim;
 	}
-	
+
 	/**
 	 * Method setNotShowBuffAnim.
 	 * @param value boolean
@@ -12696,7 +12665,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_notShowBuffAnim = value;
 	}
-	
+
 	/**
 	 * Method enterMovieMode.
 	 */
@@ -12711,7 +12680,7 @@ public final class Player extends Playable implements PlayerGroup
 		setIsInMovie(true);
 		sendPacket(new CameraMode(1));
 	}
-	
+
 	/**
 	 * Method leaveMovieMode.
 	 */
@@ -12721,7 +12690,7 @@ public final class Player extends Playable implements PlayerGroup
 		sendPacket(new CameraMode(0));
 		broadcastCharInfo();
 	}
-	
+
 	/**
 	 * Method specialCamera.
 	 * @param target GameObject
@@ -12735,7 +12704,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		sendPacket(new SpecialCamera(target.getObjectId(), dist, yaw, pitch, time, duration));
 	}
-	
+
 	/**
 	 * Method specialCamera.
 	 * @param target GameObject
@@ -12753,7 +12722,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		sendPacket(new SpecialCamera(target.getObjectId(), dist, yaw, pitch, time, duration, turn, rise, widescreen, unk));
 	}
-	
+
 	/**
 	 * Field _movieId.
 	 */
@@ -12762,7 +12731,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Field _isInMovie.
 	 */
 	private boolean _isInMovie;
-	
+
 	/**
 	 * Method setMovieId.
 	 * @param id int
@@ -12771,7 +12740,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_movieId = id;
 	}
-	
+
 	/**
 	 * Method getMovieId.
 	 * @return int
@@ -12780,7 +12749,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _movieId;
 	}
-	
+
 	/**
 	 * Method isInMovie.
 	 * @return boolean
@@ -12789,7 +12758,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _isInMovie;
 	}
-	
+
 	/**
 	 * Method setIsInMovie.
 	 * @param state boolean
@@ -12798,7 +12767,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_isInMovie = state;
 	}
-	
+
 	/**
 	 * Method showQuestMovie.
 	 * @param movie SceneMovie
@@ -12816,7 +12785,7 @@ public final class Player extends Playable implements PlayerGroup
 		setIsInMovie(true);
 		sendPacket(movie.packet(this));
 	}
-	
+
 	/**
 	 * Method showQuestMovie.
 	 * @param movieId int
@@ -12834,7 +12803,7 @@ public final class Player extends Playable implements PlayerGroup
 		setIsInMovie(true);
 		sendPacket(new ExStartScenePlayer(movieId));
 	}
-	
+
 	/**
 	 * Method setAutoLoot.
 	 * @param enable boolean
@@ -12847,7 +12816,7 @@ public final class Player extends Playable implements PlayerGroup
 			setVar("AutoLoot", String.valueOf(enable), -1);
 		}
 	}
-	
+
 	/**
 	 * Method setAutoLootHerbs.
 	 * @param enable boolean
@@ -12860,7 +12829,7 @@ public final class Player extends Playable implements PlayerGroup
 			setVar("AutoLootHerbs", String.valueOf(enable), -1);
 		}
 	}
-	
+
 	/**
 	 * Method isAutoLootEnabled.
 	 * @return boolean
@@ -12869,7 +12838,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _autoLoot;
 	}
-	
+
 	/**
 	 * Method isAutoLootHerbsEnabled.
 	 * @return boolean
@@ -12878,7 +12847,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return AutoLootHerbs;
 	}
-	
+
 	/**
 	 * Method reName.
 	 * @param name String
@@ -12893,7 +12862,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		broadcastCharInfo();
 	}
-	
+
 	/**
 	 * Method reName.
 	 * @param name String
@@ -12902,7 +12871,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		reName(name, false);
 	}
-	
+
 	/**
 	 * Method saveNameToDB.
 	 */
@@ -12927,7 +12896,7 @@ public final class Player extends Playable implements PlayerGroup
 			DbUtils.closeQuietly(con, st);
 		}
 	}
-	
+
 	/**
 	 * Method getPlayer.
 	 * @return Player
@@ -12937,7 +12906,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return this;
 	}
-	
+
 	/**
 	 * Method getStoredBypasses.
 	 * @param bbs boolean
@@ -12959,7 +12928,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return bypasses;
 	}
-	
+
 	/**
 	 * Method cleanBypasses.
 	 * @param bbs boolean
@@ -12972,7 +12941,7 @@ public final class Player extends Playable implements PlayerGroup
 			bypassStorage.clear();
 		}
 	}
-	
+
 	/**
 	 * Method encodeBypasses.
 	 * @param htmlCode String
@@ -12987,7 +12956,7 @@ public final class Player extends Playable implements PlayerGroup
 			return BypassManager.encode(htmlCode, bypassStorage, bbs);
 		}
 	}
-	
+
 	/**
 	 * Method decodeBypass.
 	 * @param bypass String
@@ -13018,7 +12987,7 @@ public final class Player extends Playable implements PlayerGroup
 		_log.warn("Direct access to bypass: " + bypass + " / Player: " + getName());
 		return null;
 	}
-	
+
 	/**
 	 * Method getTalismanCount.
 	 * @return int
@@ -13027,7 +12996,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (int) calcStat(Stats.TALISMANS_LIMIT, 0, null, null);
 	}
-	
+
 	/**
 	 * Method getOpenCloak.
 	 * @return boolean
@@ -13040,7 +13009,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return (int) calcStat(Stats.CLOAK_SLOT, 0, null, null) > 0;
 	}
-	
+
 	/**
 	 * Method disableDrop.
 	 * @param time int
@@ -13049,7 +13018,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_dropDisabled = System.currentTimeMillis() + time;
 	}
-	
+
 	/**
 	 * Method isDropDisabled.
 	 * @return boolean
@@ -13058,12 +13027,12 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _dropDisabled > System.currentTimeMillis();
 	}
-	
+
 	/**
 	 * Field _petControlItem.
 	 */
 	private ItemInstance _petControlItem = null;
-	
+
 	/**
 	 * Method setPetControlItem.
 	 * @param itemObjId int
@@ -13072,7 +13041,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		setPetControlItem(getInventory().getItemByObjectId(itemObjId));
 	}
-	
+
 	/**
 	 * Method setPetControlItem.
 	 * @param item ItemInstance
@@ -13081,7 +13050,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_petControlItem = item;
 	}
-	
+
 	/**
 	 * Method getPetControlItem.
 	 * @return ItemInstance
@@ -13090,12 +13059,12 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _petControlItem;
 	}
-	
+
 	/**
 	 * Field isActive.
 	 */
 	private final AtomicBoolean isActive = new AtomicBoolean();
-	
+
 	/**
 	 * Method isActive.
 	 * @return boolean
@@ -13104,7 +13073,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return isActive.get();
 	}
-	
+
 	/**
 	 * Method setActive.
 	 */
@@ -13117,7 +13086,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		onActive();
 	}
-	
+
 	/**
 	 * Method onActive.
 	 */
@@ -13140,12 +13109,12 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		});
 	}
-	
+
 	/**
 	 * Field _traps.
 	 */
 	private Map<Integer, Long> _traps;
-	
+
 	/**
 	 * Method getTraps.
 	 * @return Collection<TrapInstance>
@@ -13171,7 +13140,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return result;
 	}
-	
+
 	/**
 	 * Method getTrapsCount.
 	 * @return int
@@ -13180,7 +13149,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _traps == null ? 0 : _traps.size();
 	}
-	
+
 	/**
 	 * Method addTrap.
 	 * @param trap TrapInstance
@@ -13193,7 +13162,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		_traps.put(trap.getObjectId(), trap.getStoredId());
 	}
-	
+
 	/**
 	 * Method removeTrap.
 	 * @param trap TrapInstance
@@ -13207,7 +13176,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		traps.remove(trap.getObjectId());
 	}
-	
+
 	/**
 	 * Method destroyFirstTrap.
 	 */
@@ -13229,7 +13198,7 @@ public final class Player extends Playable implements PlayerGroup
 			return;
 		}
 	}
-	
+
 	/**
 	 * Method destroyAllTraps.
 	 */
@@ -13253,7 +13222,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 	}
-	
+
 	/**
 	 * Method setBlockCheckerArena.
 	 * @param arena byte
@@ -13262,7 +13231,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_handysBlockCheckerEventArena = arena;
 	}
-	
+
 	/**
 	 * Method getBlockCheckerArena.
 	 * @return int
@@ -13271,7 +13240,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _handysBlockCheckerEventArena;
 	}
-	
+
 	/**
 	 * Method getListeners.
 	 * @return PlayerListenerList
@@ -13291,7 +13260,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return (PlayerListenerList) listeners;
 	}
-	
+
 	/**
 	 * Method getStatsRecorder.
 	 * @return PlayerStatsChangeRecorder
@@ -13311,7 +13280,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return (PlayerStatsChangeRecorder) _statsRecorder;
 	}
-	
+
 	/**
 	 * Field _hourlyTask.
 	 */
@@ -13320,7 +13289,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Field _hoursInGame.
 	 */
 	private int _hoursInGame = 0;
-	
+
 	/**
 	 * Method getHoursInGame.
 	 * @return int
@@ -13330,7 +13299,7 @@ public final class Player extends Playable implements PlayerGroup
 		_hoursInGame++;
 		return _hoursInGame;
 	}
-	
+
 	/**
 	 * Method startHourlyTask.
 	 */
@@ -13338,7 +13307,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_hourlyTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new HourlyTask(this), 3600000L, 3600000L);
 	}
-	
+
 	/**
 	 * Method stopHourlyTask.
 	 */
@@ -13350,7 +13319,7 @@ public final class Player extends Playable implements PlayerGroup
 			_hourlyTask = null;
 		}
 	}
-	
+
 	/**
 	 * Method getPremiumPoints.
 	 * @return long
@@ -13363,7 +13332,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return 0;
 	}
-	
+
 	/**
 	 * Method reducePremiumPoints.
 	 * @param val int
@@ -13375,12 +13344,12 @@ public final class Player extends Playable implements PlayerGroup
 			ItemFunctions.removeItem(this, Config.GAME_POINT_ITEM_ID, val, true);
 		}
 	}
-	
+
 	/**
 	 * Field _agathionResAvailable.
 	 */
 	private boolean _agathionResAvailable = false;
-	
+
 	/**
 	 * Method isAgathionResAvailable.
 	 * @return boolean
@@ -13389,7 +13358,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _agathionResAvailable;
 	}
-	
+
 	/**
 	 * Method setAgathionRes.
 	 * @param val boolean
@@ -13398,7 +13367,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_agathionResAvailable = val;
 	}
-	
+
 	/**
 	 * Method isClanAirShipDriver.
 	 * @return boolean
@@ -13407,12 +13376,12 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return isInBoat() && getBoat().isClanAirShip() && (((ClanAirShip) getBoat()).getDriver() == this);
 	}
-	
+
 	/**
 	 * Field _userSession.
 	 */
 	private Map<String, String> _userSession;
-	
+
 	/**
 	 * Method getSessionVar.
 	 * @param key String
@@ -13426,7 +13395,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return _userSession.get(key);
 	}
-	
+
 	/**
 	 * Method setSessionVar.
 	 * @param key String
@@ -13447,7 +13416,7 @@ public final class Player extends Playable implements PlayerGroup
 			_userSession.put(key, val);
 		}
 	}
-	
+
 	/**
 	 * Method getFriendList.
 	 * @return FriendList
@@ -13456,7 +13425,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _friendList;
 	}
-	
+
 	/**
 	 * Method isNotShowTraders.
 	 * @return boolean
@@ -13465,7 +13434,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _notShowTraders;
 	}
-	
+
 	/**
 	 * Method setNotShowTraders.
 	 * @param notShowTraders boolean
@@ -13474,7 +13443,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_notShowTraders = notShowTraders;
 	}
-	
+
 	/**
 	 * Method isDebug.
 	 * @return boolean
@@ -13483,7 +13452,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _debug;
 	}
-	
+
 	/**
 	 * Method setDebug.
 	 * @param b boolean
@@ -13492,7 +13461,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_debug = b;
 	}
-	
+
 	/**
 	 * Method sendItemList.
 	 * @param show boolean
@@ -13527,7 +13496,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		sendPacket(new ExAdenaInvenCount(this));
 	}
-	
+
 	/**
 	 * Method getBeltInventoryIncrease.
 	 * @return int
@@ -13550,7 +13519,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return 0;
 	}
-	
+
 	/**
 	 * Method isPlayer.
 	 * @return boolean
@@ -13560,7 +13529,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return true;
 	}
-	
+
 	/**
 	 * Method checkCoupleAction.
 	 * @param target Player
@@ -13620,7 +13589,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return true;
 	}
-	
+
 	/**
 	 * Method displayGiveDamageMessage.
 	 * @param target Creature
@@ -13665,7 +13634,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 	}
-	
+
 	/**
 	 * Method displayReceiveDamageMessage.
 	 * @param attacker Creature
@@ -13679,7 +13648,7 @@ public final class Player extends Playable implements PlayerGroup
 			sendPacket(new SystemMessage(SystemMessage.C1_HAS_RECEIVED_DAMAGE_OF_S3_FROM_C2).addName(this).addName(attacker).addNumber((long) damage).addDamage(attacker, attacker, damage));
 		}
 	}
-	
+
 	/**
 	 * Method getPostFriends.
 	 * @return IntObjectMap<String>
@@ -13688,7 +13657,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _postFriends;
 	}
-	
+
 	/**
 	 * Method isSharedGroupDisabled.
 	 * @param groupId int
@@ -13708,7 +13677,7 @@ public final class Player extends Playable implements PlayerGroup
 		_sharedGroupReuses.remove(groupId);
 		return false;
 	}
-	
+
 	/**
 	 * Method getSharedGroupReuse.
 	 * @param groupId int
@@ -13718,7 +13687,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _sharedGroupReuses.get(groupId);
 	}
-	
+
 	/**
 	 * Method addSharedGroupReuse.
 	 * @param group int
@@ -13728,7 +13697,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_sharedGroupReuses.put(group, stamp);
 	}
-	
+
 	/**
 	 * Method getSharedGroupReuses.
 	 * @return Collection<IntObjectMap.Entry<TimeStamp>>
@@ -13737,7 +13706,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _sharedGroupReuses.entrySet();
 	}
-	
+
 	/**
 	 * Method sendReuseMessage.
 	 * @param item ItemInstance
@@ -13766,7 +13735,7 @@ public final class Player extends Playable implements PlayerGroup
 			sendPacket(new SystemMessage2(item.getTemplate().getReuseType().getMessages()[0]).addItemName(item.getTemplate().getItemId()).addInteger(seconds));
 		}
 	}
-	
+
 	/**
 	 * Method ask.
 	 * @param dlg ConfirmDlg
@@ -13783,7 +13752,7 @@ public final class Player extends Playable implements PlayerGroup
 		dlg.setRequestId(rnd);
 		sendPacket(dlg);
 	}
-	
+
 	/**
 	 * Method getAskListener.
 	 * @param clear boolean
@@ -13799,7 +13768,7 @@ public final class Player extends Playable implements PlayerGroup
 		_askDialog = null;
 		return ask;
 	}
-	
+
 	/**
 	 * Method isDead.
 	 * @return boolean
@@ -13809,7 +13778,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (isInOlympiadMode() || isInDuel()) ? getCurrentHp() <= 1. : super.isDead();
 	}
-	
+
 	/**
 	 * Method getAgathionEnergy.
 	 * @return int
@@ -13820,7 +13789,7 @@ public final class Player extends Playable implements PlayerGroup
 		ItemInstance item = getInventory().getPaperdollItem(Inventory.PAPERDOLL_LBRACELET);
 		return item == null ? 0 : item.getAgathionEnergy();
 	}
-	
+
 	/**
 	 * Method setAgathionEnergy.
 	 * @param val int
@@ -13837,7 +13806,7 @@ public final class Player extends Playable implements PlayerGroup
 		item.setJdbcState(JdbcEntityState.UPDATED);
 		sendPacket(new ExBR_AgathionEnergyInfo(1, item));
 	}
-	
+
 	/**
 	 * Method hasPrivilege.
 	 * @param privilege Privilege
@@ -13847,7 +13816,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (_clan != null) && ((getClanPrivileges() & privilege.mask()) == privilege.mask());
 	}
-	
+
 	/**
 	 * Method getMatchingRoom.
 	 * @return MatchingRoom
@@ -13856,7 +13825,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _matchingRoom;
 	}
-	
+
 	/**
 	 * Method setMatchingRoom.
 	 * @param matchingRoom MatchingRoom
@@ -13865,7 +13834,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_matchingRoom = matchingRoom;
 	}
-	
+
 	/**
 	 * Method dispelBuffs.
 	 */
@@ -13890,7 +13859,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 	}
-	
+
 	/**
 	 * Method setInstanceReuse.
 	 * @param id int
@@ -13903,7 +13872,7 @@ public final class Player extends Playable implements PlayerGroup
 		_instancesReuses.put(id, time);
 		mysql.set("REPLACE INTO character_instances (obj_id, id, reuse) VALUES (?,?,?)", getObjectId(), id, time);
 	}
-	
+
 	/**
 	 * Method removeInstanceReuse.
 	 * @param id int
@@ -13915,7 +13884,7 @@ public final class Player extends Playable implements PlayerGroup
 			mysql.set("DELETE FROM `character_instances` WHERE `obj_id`=? AND `id`=? LIMIT 1", getObjectId(), id);
 		}
 	}
-	
+
 	/**
 	 * Method removeAllInstanceReuses.
 	 */
@@ -13924,7 +13893,7 @@ public final class Player extends Playable implements PlayerGroup
 		_instancesReuses.clear();
 		mysql.set("DELETE FROM `character_instances` WHERE `obj_id`=?", getObjectId());
 	}
-	
+
 	/**
 	 * Method removeInstanceReusesByGroupId.
 	 * @param groupId int
@@ -13939,7 +13908,7 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 	}
-	
+
 	/**
 	 * Method getInstanceReuse.
 	 * @param id int
@@ -13949,7 +13918,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _instancesReuses.get(id);
 	}
-	
+
 	/**
 	 * Method getInstanceReuses.
 	 * @return Map<Integer,Long>
@@ -13958,7 +13927,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _instancesReuses;
 	}
-	
+
 	/**
 	 * Method loadInstanceReuses.
 	 */
@@ -13989,7 +13958,7 @@ public final class Player extends Playable implements PlayerGroup
 			DbUtils.closeQuietly(con, offline, rs);
 		}
 	}
-	
+
 	/**
 	 * Method getActiveReflection.
 	 * @return Reflection
@@ -14005,7 +13974,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return null;
 	}
-	
+
 	/**
 	 * Method canEnterInstance.
 	 * @param instancedZoneId int
@@ -14035,7 +14004,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return iz.getEntryType().canEnter(this, iz);
 	}
-	
+
 	/**
 	 * Method canReenterInstance.
 	 * @param instancedZoneId int
@@ -14055,7 +14024,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return iz.getEntryType().canReEnter(this, iz);
 	}
-	
+
 	/**
 	 * Method getBattlefieldChatId.
 	 * @return int
@@ -14064,7 +14033,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _battlefieldChatId;
 	}
-	
+
 	/**
 	 * Method setBattlefieldChatId.
 	 * @param battlefieldChatId int
@@ -14073,7 +14042,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_battlefieldChatId = battlefieldChatId;
 	}
-	
+
 	/**
 	 * Method broadCast.
 	 * @param packet IStaticPacket[]
@@ -14084,7 +14053,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		sendPacket(packet);
 	}
-	
+
 	/**
 	 * Method iterator.
 	 * @return Iterator<Player> * @see java.lang.Iterable#iterator()
@@ -14094,7 +14063,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return Collections.singleton(this).iterator();
 	}
-	
+
 	/**
 	 * Method getPlayerGroup.
 	 * @return PlayerGroup
@@ -14111,7 +14080,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return this;
 	}
-	
+
 	/**
 	 * Method isActionBlocked.
 	 * @param action String
@@ -14121,7 +14090,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _blockedActions.contains(action);
 	}
-	
+
 	/**
 	 * Method blockActions.
 	 * @param actions String[]
@@ -14130,7 +14099,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		Collections.addAll(_blockedActions, actions);
 	}
-	
+
 	/**
 	 * Method unblockActions.
 	 * @param actions String[]
@@ -14142,7 +14111,7 @@ public final class Player extends Playable implements PlayerGroup
 			_blockedActions.remove(action);
 		}
 	}
-	
+
 	/**
 	 * Method getOlympiadGame.
 	 * @return OlympiadGame
@@ -14151,7 +14120,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _olympiadGame;
 	}
-	
+
 	/**
 	 * Method setOlympiadGame.
 	 * @param olympiadGame OlympiadGame
@@ -14160,7 +14129,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_olympiadGame = olympiadGame;
 	}
-	
+
 	/**
 	 * Method getOlympiadObserveGame.
 	 * @return OlympiadGame
@@ -14169,7 +14138,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _olympiadObserveGame;
 	}
-	
+
 	/**
 	 * Method setOlympiadObserveGame.
 	 * @param olympiadObserveGame OlympiadGame
@@ -14178,7 +14147,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_olympiadObserveGame = olympiadObserveGame;
 	}
-	
+
 	/**
 	 * Method addRadar.
 	 * @param x int
@@ -14189,7 +14158,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		sendPacket(new RadarControl(0, 1, x, y, z));
 	}
-	
+
 	/**
 	 * Method addRadarWithMap.
 	 * @param x int
@@ -14200,7 +14169,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		sendPacket(new RadarControl(0, 2, x, y, z));
 	}
-	
+
 	/**
 	 * Method getPetitionGroup.
 	 * @return PetitionMainGroup
@@ -14209,7 +14178,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _petitionGroup;
 	}
-	
+
 	/**
 	 * Method setPetitionGroup.
 	 * @param petitionGroup PetitionMainGroup
@@ -14218,7 +14187,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_petitionGroup = petitionGroup;
 	}
-	
+
 	/**
 	 * Method getLectureMark.
 	 * @return int
@@ -14227,7 +14196,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _lectureMark;
 	}
-	
+
 	/**
 	 * Method setLectureMark.
 	 * @param lectureMark int
@@ -14236,27 +14205,27 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_lectureMark = lectureMark;
 	}
-	
+
 	public void updateTargetSelectionInfo()
 	{
 		final GameObject obj = getTarget();
-		
+
 		if (obj != null)
 		{
 			updateTargetSelectionInfo(obj);
 		}
 	}
-	
+
 	public void updateTargetSelectionInfo(final GameObject ob)
 	{
 		sendPacket(new MyTargetSelected(this, ob));
-		
+
 		if (ob.isCreature() && !ob.isVehicle() && !ob.isDoor())
 		{
 			sendPacket(new ExAbnormalStatusUpdateFromTarget((Creature) ob));
 		}
 	}
-	
+
 	/**
 	 * Method isAwaking.
 	 * @return boolean
@@ -14265,7 +14234,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getActiveClassId() > 138;
 	}
-	
+
 	/**
 	 * Method getCurrentJumpTrack.
 	 * @return JumpTrack
@@ -14274,7 +14243,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _currentJumpTrack;
 	}
-	
+
 	/**
 	 * Method setCurrentJumpTrack.
 	 * @param val JumpTrack
@@ -14283,7 +14252,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_currentJumpTrack = val;
 	}
-	
+
 	/**
 	 * Method getCurrentJumpWay.
 	 * @return JumpWay
@@ -14292,7 +14261,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _currentJumpWay;
 	}
-	
+
 	/**
 	 * Method setCurrentJumpWay.
 	 * @param val JumpWay
@@ -14301,7 +14270,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_currentJumpWay = val;
 	}
-	
+
 	/**
 	 * Method isInJumping.
 	 * @return boolean
@@ -14310,7 +14279,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _currentJumpTrack != null;
 	}
-	
+
 	/**
 	 * Method onJumpingBreak.
 	 */
@@ -14321,12 +14290,12 @@ public final class Player extends Playable implements PlayerGroup
 		setCurrentJumpTrack(null);
 		setCurrentJumpWay(null);
 	}
-	
+
 	/**
 	 * Field is_bbs_use.
 	 */
 	private boolean is_bbs_use = false;
-	
+
 	/**
 	 * Method setIsBBSUse.
 	 * @param value boolean
@@ -14335,7 +14304,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		is_bbs_use = value;
 	}
-	
+
 	/**
 	 * Method isBBSUse.
 	 * @return boolean
@@ -14344,7 +14313,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return is_bbs_use;
 	}
-	
+
 	/**
 	 * Method getSubClassList.
 	 * @return SubClassList
@@ -14353,7 +14322,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _subClassList;
 	}
-	
+
 	/**
 	 * Method getBaseSubClass.
 	 * @return SubClass
@@ -14362,7 +14331,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _subClassList.getBaseSubClass();
 	}
-	
+
 	/**
 	 * Method getBaseClassId.
 	 * @return int
@@ -14375,7 +14344,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return -1;
 	}
-	
+
 	/**
 	 * Method getBaseDefaultClassId.
 	 * @return int
@@ -14388,7 +14357,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return -1;
 	}
-	
+
 	/**
 	 * Method getClassLevel.
 	 * @return int
@@ -14397,7 +14366,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getClassId().getClassLevel().ordinal();
 	}
-	
+
 	/**
 	 * Field _acquiredItemMonthly.
 	 */
@@ -14406,7 +14375,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Field _acquiredItemTotal.
 	 */
 	HashMap<Integer, Long> _acquiredItemTotal = new HashMap<>();
-	
+
 	/**
 	 * Method getAcquiredItem.
 	 * @param category int
@@ -14429,7 +14398,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return 0;
 	}
-	
+
 	/**
 	 * Method setAcquiredItem.
 	 * @param category int
@@ -14453,7 +14422,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		_acquiredItemMonthly.put(category, acquiredXP);
 	}
-	
+
 	/**
 	 * Method getOnlineTime.
 	 * @param isTotalInformation boolean
@@ -14472,12 +14441,12 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return totalOnlineTime;
 	}
-	
+
 	/**
 	 * Field partyTime.
 	 */
 	long partyTime = 0;
-	
+
 	/**
 	 * Method setPartyTime.
 	 * @param _partyTime long
@@ -14486,7 +14455,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		partyTime = _partyTime;
 	}
-	
+
 	/**
 	 * Method getPartyTime.
 	 * @return long
@@ -14495,12 +14464,12 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return partyTime;
 	}
-	
+
 	/**
 	 * Field fullPartyTime.
 	 */
 	long fullPartyTime = 0;
-	
+
 	/**
 	 * Method setFullPartyTime.
 	 * @param _fullPartyTime long
@@ -14509,7 +14478,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		fullPartyTime = _fullPartyTime;
 	}
-	
+
 	/**
 	 * Method getFullPartyTime.
 	 * @return long
@@ -14518,7 +14487,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return fullPartyTime;
 	}
-	
+
 	/**
 	 * Method getStablePoint.
 	 * @return Location
@@ -14527,7 +14496,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _stablePoint;
 	}
-	
+
 	/**
 	 * Method setStablePoint.
 	 * @param point Location
@@ -14536,7 +14505,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_stablePoint = point;
 	}
-	
+
 	/**
 	 * Method checkAllowAction.
 	 * @return boolean
@@ -14600,7 +14569,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return true;
 	}
-	
+
 	/**
 	 * Method isBaseClassActive.
 	 * @return boolean
@@ -14609,7 +14578,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return getActiveSubClass().isBase();
 	}
-	
+
 	/**
 	 * Method getMaxLevel.
 	 * @return int
@@ -14622,7 +14591,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return Experience.getMaxLevel();
 	}
-	
+
 	/**
 	 * Method getTree.
 	 * @return boolean
@@ -14631,7 +14600,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _tree;
 	}
-	
+
 	/**
 	 * Method setTree.
 	 * @param tree boolean
@@ -14640,7 +14609,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_tree = tree;
 	}
-	
+
 	/**
 	 * Method startSkillCastingTask.
 	 * @param skillId int
@@ -14654,7 +14623,7 @@ public final class Player extends Playable implements PlayerGroup
 			_skillCastingTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new SummonSkillCastingTask(this), 100L, _skill.getReuseDelay());
 		}
 	}
-	
+
 	/**
 	 * Method stopSkillCastingTask.
 	 */
@@ -14666,7 +14635,7 @@ public final class Player extends Playable implements PlayerGroup
 			_skillCastingTask = null;
 		}
 	}
-	
+
 	/**
 	 * Field _skillCastingTask.
 	 */
@@ -14675,7 +14644,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Field _skill.
 	 */
 	static Skill _skill;
-	
+
 	/**
 	 * Constructor for SummonSkillCastingTask.
 	 * @author Mobius
@@ -14686,7 +14655,7 @@ public final class Player extends Playable implements PlayerGroup
 		 * Field _caster.
 		 */
 		private final Player _caster;
-		
+
 		/**
 		 * Constructor for SummonSkillCastingTask.
 		 * @param caster Player
@@ -14695,7 +14664,7 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			_caster = caster;
 		}
-		
+
 		/**
 		 * Method run.
 		 * @see java.lang.Runnable#run()
@@ -14715,7 +14684,7 @@ public final class Player extends Playable implements PlayerGroup
 			_caster.doCast(_skill, _caster, true);
 		}
 	}
-	
+
 	/**
 	 * Method setHero.
 	 * @param player Player
@@ -14739,7 +14708,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		player.broadcastUserInfo();
 	}
-	
+
 	/**
 	 * Method setServitorShareRestore.
 	 * @param result
@@ -14750,7 +14719,7 @@ public final class Player extends Playable implements PlayerGroup
 		_ServitorShareRestore = result;
 		_ServitorShareRestoreData = effectToRestore;
 	}
-	
+
 	/**
 	 * Method getPing.
 	 * @return int
@@ -14759,7 +14728,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return _ping;
 	}
-	
+
 	/**
 	 * Method setPing.
 	 * @param ping int
@@ -14768,27 +14737,27 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_ping = ping;
 	}
-	
+
 	public long getStartingTimeInFullParty()
 	{
 		return _startingTimeInFullParty;
 	}
-	
+
 	public void setStartingTimeInFullParty(long time)
 	{
 		_startingTimeInFullParty = time;
 	}
-	
+
 	public long getStartingTimeInParty()
 	{
 		return _startingTimeInParty;
 	}
-	
+
 	public void setStartingTimeInParty(long time)
 	{
 		_startingTimeInParty = time;
 	}
-	
+
 	@Override
 	public Collection<Summon> getPets()
 	{
@@ -14798,34 +14767,34 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		return new ArrayList<>(0);
 	}
-	
+
 	public boolean isChaotic()
 	{
 		return getKarma() < 0;
 	}
-	
+
 	public void setAppearanceStone(final ItemInstance enchantItem)
 	{
 		_enchantItem = enchantItem;
 	}
-	
+
 	public ItemInstance getAppearanceStone()
 	{
 		return _enchantItem;
 	}
-	
+
 	public void setAppearanceExtractItem(final ItemInstance supportItem)
 	{
 		_enchantSupportItem = supportItem;
 	}
-	
+
 	public ItemInstance getAppearanceExtractItem()
 	{
 		return _enchantSupportItem;
 	}
-	
+
 	private int[] _recentProductList = null;
-	
+
 	public int[] getRecentProductList()
 	{
 		if (_recentProductList == null)
@@ -14835,7 +14804,7 @@ public final class Player extends Playable implements PlayerGroup
 			{
 				return null;
 			}
-			
+
 			String[] products_str = value.split(";");
 			int[] result = new int[0];
 			for (String element : products_str)
@@ -14845,14 +14814,14 @@ public final class Player extends Playable implements PlayerGroup
 				{
 					continue;
 				}
-				
+
 				result = ArrayUtils.add(result, productId);
 			}
 			_recentProductList = result;
 		}
 		return _recentProductList;
 	}
-	
+
 	public void updateRecentProductList(final int productId)
 	{
 		if (_recentProductList == null)
@@ -14870,18 +14839,18 @@ public final class Player extends Playable implements PlayerGroup
 				{
 					break;
 				}
-				
+
 				if (ArrayUtils.contains(newProductList, itemId))
 				{
 					continue;
 				}
-				
+
 				newProductList = ArrayUtils.add(newProductList, itemId);
 			}
-			
+
 			_recentProductList = newProductList;
 		}
-		
+
 		String valueToUpdate = "";
 		for (int itemId : _recentProductList)
 		{
@@ -14889,12 +14858,12 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		setVar(ProductHolder.RECENT_PRDCT_LIST_VAR, valueToUpdate, -1);
 	}
-	
+
 	public MentoringSystem getMentorSystem()
 	{
 		return mentorSystem;
 	}
-	
+
 	public void mentoringLoginConditions()
 	{
 		if (getMentorSystem().whoIsOnline(true))
@@ -14903,7 +14872,7 @@ public final class Player extends Playable implements PlayerGroup
 			MentorUtil.applyMentoringConditions(this);
 		}
 	}
-	
+
 	public void mentoringLogoutConditions()
 	{
 		if (getMentorSystem().whoIsOnline(false))
@@ -14912,22 +14881,22 @@ public final class Player extends Playable implements PlayerGroup
 			MentorUtil.removeConditions(this);
 		}
 	}
-	
+
 	public boolean isMentee()
 	{
 		// return (!isMentor()) && ((getWarehouse().getItemByObjectId(33800) != null) || (getInventory().getItemByItemId(33800) != null));
 		// TODO Check player if have Mentor
 		return (!isMentor());
 	}
-	
+
 	public boolean isGraduateMentoring()
 	{
 		return Boolean.parseBoolean(getVar("graduateMentoring"));
 	}
-	
+
 	public boolean isMentor()
 	{
 		return (isAwaking()) && (getLevel() > 84);
 	}
-	
+
 }

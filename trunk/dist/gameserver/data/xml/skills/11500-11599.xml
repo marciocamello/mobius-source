@@ -1842,4 +1842,228 @@
 			<table name="#power">1010 1020 1030 1040 1050 1060 1070 1080 1090 1100</table>
 		</enchant2>
 	</skill>
+	<skill id="11580" levels="4" name="Mass Transform">
+		<table name="#mpConsume2">112 112 120 124</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#runSpd">1.20</table>
+		<table name="#activateRate">85</table>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="activateRate" val="#activateRate"/>
+		<set name="reuseDelay" val="60000"/>
+		<set name="hitTime" val="1500"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="isHandler" val="false"/>
+		<set name="npcId" val="13093"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Transformation" time="20" val="104">
+				<mul order="0x30" stat="runSpd" val="#runSpd"/>
+			</effect>
+			<effect count="1" name="MuteAll" time="20" val="0"/>
+		</for>
+	</skill>
+	<skill id="11581" levels="4" name="Superior Advantage">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mReuse">1.05 1.06 1.07 1.10</table>
+		<table name="#regMp">5 6 7 10</table>
+		<table name="#maxHp">1.05 1.06 1.07 1.10</table>
+		<table name="#maxMp">1.05 1.06 1.07 1.10</table>
+		<table name="#maxCp">1.05 1.06 1.07 1.10</table>
+		<set name="reuseDelay" val="30000"/>
+		<set name="hitTime" val="500"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="regMp" val="#regMp"/>
+			<mul order="0x30" stat="mReuse" val="#mReuse"/>
+			<mul order="0x30" stat="maxHp" val="#maxHp"/>
+			<mul order="0x30" stat="maxMp" val="#maxMp"/>
+			<mul order="0x30" stat="maxCp" val="#maxCp"/>
+		</for>
+	</skill>
+	<skill id="11582" levels="4" name="Mass Song of Silence">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">70 76 80 92</table>
+		<set name="magicType" val="MUSIC"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="reuseDelay" val="30000"/>
+		<set name="hitTime" val="500"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="trait" val="DERANGEMENT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Mute" stackOrder="-1" stackType="Mute" time="10" val="0"/>
+		</for>
+	</skill>
+	<skill id="11583" levels="4" name="Superior Song of Mastery">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#pDef">1.05 1.07 1.10 1.15</table>
+		<table name="#mDef">1.05 1.07 1.10 1.15</table>
+		<table name="#mAtkRange">1.05 1.07 1.10 1.15</table>
+		<set name="magicType" val="MUSIC"/>
+		<set name="reuseDelay" val="30000"/>
+		<set name="hitTime" val="500"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" val="#pDef"/>
+			<mul order="0x30" stat="mDef" val="#mDef"/>
+			<mul order="0x30" stat="mAtkRange" val="#mAtkRange"/>
+		</for>
+	</skill>
+	<skill id="11584" levels="4" name="Mass Medusa's Dance">
+		<table name="#activateRate">40 50 60 70</table>
+		<table name="#time">10 15 20 25</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">126 139 153 166</table>
+		<set name="affectLimit" val="10;10"/>
+		<set name="reuseDelay" val="120000"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="hitTime" val="1400"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="activateRate" val="#activateRate"/>
+		<set name="effectPoint" val="666"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="600"/>
+		<set name="skillType" val="PARALYZE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="saveVs" val="MEN"/>
+		<for>
+			<effect count="1" name="Petrification" stackOrder="-1" stackType="paralyze" time="#time" val="0">
+				<set order="0x80" stat="regHp" val="0"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11585" levels="4" name="Superior Dance of Mastery">
+		<table name="#stat">1.05 1.07 1.10 1.15</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="Buff" val="0" stackOrder="2" stackType="Danc">
+				<mul order="0x30" stat="pAtk" val="#stat"/>
+				<mul order="0x30" stat="mAtk" val="#stat"/>
+				<mul order="0x30" stat="cAtk" val="#stat"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11586" levels="4" name="Pa'agrio's Bravery">
+		<table name="#maxCp">1.05 1.06 1.07 1.1</table>
+		<table name="#Cp">5 6 7 10</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">126 139 153 166</table>
+		<set name="target" val="TARGET_CLAN"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="1410"/>
+		<set name="castRange" val="900"/>
+		<for>
+			<effect name="Buff" time="30" val="0" stackOrder="6" stackType="hp_upp">
+				<mul order="0x30" stat="maxCp" val="#maxCp"/>
+			</effect>
+			<effect count="1" name="HealCPPercent" time="1" val="#Cp"/>
+		</for>
+	</skill>
+	<skill id="11587" levels="4" name="Mass Blockade">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">252 278 306 332</table>
+		<set name="magicType" val="MAGIC"/>
+		<set name="affectLimit" val="15;15"/>
+		<set name="reuseDelay" val="120000"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="hitTime" val="2110"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="skillRadius" val="900"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="trait" val="PHYSICAL_BLOCKADE"/>
+		<set name="skillType" val="MUTE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="trait" val="DERANGEMENT"/>
+		<set name="saveVs" val="MEN"/>
+		<set name="saveVs" val="STR"/>
+		<for>
+			<effect count="1" name="MuteAttack" time="20" val="0"/>
+			<effect count="1" name="Mute" time="20" val="0"/>
+			<target pvp="true"/>
+		</for>
+	</skill>
+	<skill id="11588" levels="4" name="Superior Wizard Mastery">
+		<table name="#maxMp">1.1 1.12 1.15 1.20</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="maxMp" val="#maxMp"/>
+		</for>
+	</skill>
+	<skill id="11598" levels="4" name="Greater Freezing Flame">
+		<table name="#dmg">359 364 378 384</table>
+		<table name="#effectPoint">379 495 597 646</table>
+		<table name="#mpConsume2">42 56 71 80</table>
+		<table name="#mpConsume1">11 14 18 20</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<set name="levelModifier" val="1"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="2000"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="4000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume1" val="#mpConsume1"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="effectPoint" val="#effectPoint"/>
+		<set name="activateRate" val="70"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="fire"/>
+		<set name="skillType" val="DOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="saveVs" val="MEN"/>
+		<for>
+			<effect count="10" name="DamOverTime" time="1" val="#dmg"/>
+		</for>
+	</skill>
+	<skill id="11599" levels="4" name="Combat Cry">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume1">12 24 35 40</table>
+		<table name="#pAtk">1.05 1.06 1.07 1.10</table>
+		<table name="#mAtk">1.05 1.06 1.07 1.10</table>
+		<table name="#pDef">1.05 1.06 1.07 1.10</table>
+		<table name="#mDef">1.05 1.06 1.07 1.10</table>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="mpConsume1" val="#mpConsume1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_TOGGLE"/>
+		<for>
+			<effect count="0x7fffffff" name="DamOverTime" time="1" val="16">
+				<mul order="0x30" stat="skillPower" val="1.05"/>
+				<mul order="0x30" stat="pAtk" val="#pAtk"/>
+				<mul order="0x30" stat="mAtk" val="#mAtk"/>
+				<mul order="0x30" stat="pDef" val="#pDef"/>
+				<mul order="0x30" stat="mDef" val="#mDef"/>
+			</effect>
+		</for>
+	</skill>
 </list>
