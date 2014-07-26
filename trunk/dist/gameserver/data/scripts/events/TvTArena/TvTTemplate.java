@@ -163,17 +163,17 @@ public abstract class TvTTemplate extends Functions
 	 * Field _zoneListener.
 	 */
 	protected ZoneListener _zoneListener;
-	
+
 	/**
 	 * Method onLoad.
 	 */
 	protected abstract void onLoad();
-	
+
 	/**
 	 * Method onReload.
 	 */
 	protected abstract void onReload();
-	
+
 	/**
 	 * Method template_stop.
 	 */
@@ -183,7 +183,7 @@ public abstract class TvTTemplate extends Functions
 		{
 			return;
 		}
-		sayToAll("Бой прерван по техниче�?ким причинам, �?тавки возвращены");
+		sayToAll("Fight interrupted for technical reasons, the rates returned");
 		unParalyzeTeams();
 		ressurectPlayers();
 		returnItemToTeams();
@@ -194,7 +194,7 @@ public abstract class TvTTemplate extends Functions
 		_status = 0;
 		_timeOutTask = false;
 	}
-	
+
 	/**
 	 * Method template_create1.
 	 * @param player Player
@@ -203,17 +203,17 @@ public abstract class TvTTemplate extends Functions
 	{
 		if (_status > 0)
 		{
-			show("Дождите�?�? окончани�? бо�?", player);
+			show("Wait until the end of battle", player);
 			return;
 		}
 		if (player.getTeam() != TeamType.NONE)
 		{
-			show("Вы уже зареги�?трированы", player);
+			show("You are already registered", player);
 			return;
 		}
 		show("scripts/events/TvTArena/" + _managerId + "-1.htm", player);
 	}
-	
+
 	/**
 	 * Method template_register.
 	 * @param player Player
@@ -222,22 +222,22 @@ public abstract class TvTTemplate extends Functions
 	{
 		if (_status == 0)
 		{
-			show("Бой на данный момент не �?оздан", player);
+			show("Fight at the moment is not created", player);
 			return;
 		}
 		if (_status > 1)
 		{
-			show("Дождите�?�? окончани�? бо�?", player);
+			show("Wait until the end of battle", player);
 			return;
 		}
 		if (player.getTeam() != TeamType.NONE)
 		{
-			show("Вы уже зареги�?трированы", player);
+			show("You are already registered", player);
 			return;
 		}
 		show("scripts/events/TvTArena/" + _managerId + "-3.htm", player);
 	}
-	
+
 	/**
 	 * Method template_check1.
 	 * @param player Player
@@ -248,12 +248,12 @@ public abstract class TvTTemplate extends Functions
 	{
 		if (var.length != 8)
 		{
-			show("�?екорректные данные", player);
+			show("invalid data", player);
 			return;
 		}
 		if (_status > 0)
 		{
-			show("Дождите�?�? окончани�? бо�?", player);
+			show("Wait until the end of battle", player);
 			return;
 		}
 		if ((manager == null) || !manager.isNpc())
@@ -275,32 +275,32 @@ public abstract class TvTTemplate extends Functions
 		}
 		catch (Exception e)
 		{
-			show("�?екорректные данные", player);
+			show("invalid data", player);
 			return;
 		}
 		if ((_price < 1) || (_price > 500))
 		{
-			show("�?еправил�?на�? �?тавка", player);
+			show("incorrect rate", player);
 			return;
 		}
 		if ((_team1count < 1) || (_team1count > LENGTH_TEAM) || (_team2count < 1) || (_team2count > LENGTH_TEAM))
 		{
-			show("�?еправил�?ный размер команды", player);
+			show("Wrong size of the team", player);
 			return;
 		}
 		if ((_team1min < 1) || (_team1min > 86) || (_team2min < 1) || (_team2min > 86) || (_team1max < 1) || (_team1max > 86) || (_team2max < 1) || (_team2max > 86) || (_team1min > _team1max) || (_team2min > _team2max))
 		{
-			show("�?еправил�?ный уровен�?", player);
+			show("Wrong level", player);
 			return;
 		}
 		if ((player.getLevel() < _team1min) || (player.getLevel() > _team1max))
 		{
-			show("�?еправил�?ный уровен�?", player);
+			show("Wrong level", player);
 			return;
 		}
 		if ((_timeToStart < 1) || (_timeToStart > 10))
 		{
-			show("�?еправил�?ное врем�?", player);
+			show("wrong time", player);
 			return;
 		}
 		if (getItemCount(player, ITEM_ID) < _price)
@@ -317,10 +317,10 @@ public abstract class TvTTemplate extends Functions
 		_team1live.clear();
 		_team2live.clear();
 		_team1list.add(player.getStoredId());
-		sayToAll(player.getName() + " �?оздал бой " + _team1count + "х" + _team2count + ", " + _team1min + "-" + _team1max + "lv vs " + _team2min + "-" + _team2max + "lv, �?тавка " + _price + " " + ITEM_NAME + ", начало через " + _timeToStart + " мин");
+		sayToAll(player.getName() + " created fight " + _team1count + "х" + _team2count + ", " + _team1min + "-" + _team1max + "lv vs " + _team2min + "-" + _team2max + "lv, rate " + _price + " " + ITEM_NAME + ", start over " + _timeToStart + " Min");
 		executeTask("events.TvTArena." + _className, "announce", new Object[0], 60000);
 	}
-	
+
 	/**
 	 * Method template_register_check.
 	 * @param player Player
@@ -329,22 +329,22 @@ public abstract class TvTTemplate extends Functions
 	{
 		if (_status == 0)
 		{
-			show("Бой на данный момент не �?оздан", player);
+			show("Fight at the moment is not created", player);
 			return;
 		}
 		if (_status > 1)
 		{
-			show("Дождите�?�? окончани�? бо�?", player);
+			show("Wait until the end of battle", player);
 			return;
 		}
 		if (_team1list.contains(player.getStoredId()) || _team2list.contains(player.getStoredId()))
 		{
-			show("Вы уже зареги�?трированы", player);
+			show("You are already registered", player);
 			return;
 		}
 		if (player.getTeam() != TeamType.NONE)
 		{
-			show("Вы уже зареги�?трированы", player);
+			show("You are already registered", player);
 			return;
 		}
 		if (getItemCount(player, ITEM_ID) < _price)
@@ -391,7 +391,7 @@ public abstract class TvTTemplate extends Functions
 			}
 		}
 	}
-	
+
 	/**
 	 * Method tryRegister.
 	 * @param team int
@@ -404,27 +404,27 @@ public abstract class TvTTemplate extends Functions
 		{
 			if ((player.getLevel() < _team1min) || (player.getLevel() > _team1max))
 			{
-				return "Вы не подходите по уровн�?";
+				return "You do not approach the level of";
 			}
 			if (_team1list.size() >= _team1count)
 			{
-				return "�?оманда 1 переполнена";
+				return "Team 1 full";
 			}
 			doRegister(1, player);
 			return null;
 		}
 		if ((player.getLevel() < _team2min) || (player.getLevel() > _team2max))
 		{
-			return "Вы не подходите по уровн�?";
+			return "You do not approach the level of";
 		}
 		if (_team2list.size() >= _team2count)
 		{
-			return "�?оманда 2 переполнена";
+			return "Team 2 full";
 		}
 		doRegister(2, player);
 		return null;
 	}
-	
+
 	/**
 	 * Method doRegister.
 	 * @param team int
@@ -437,21 +437,21 @@ public abstract class TvTTemplate extends Functions
 		{
 			_team1list.add(player.getStoredId());
 			player.setTeam(TeamType.BLUE);
-			sayToAll(player.getName() + " зареги�?трировал�?�? за 1 команду");
+			sayToAll(player.getName() + " registered for team 1");
 		}
 		else
 		{
 			_team2list.add(player.getStoredId());
 			player.setTeam(TeamType.RED);
-			sayToAll(player.getName() + " зареги�?трировал�?�? за 2 команду");
+			sayToAll(player.getName() + " registered for team 2");
 		}
 		if ((_team1list.size() >= _team1count) && (_team2list.size() >= _team2count))
 		{
-			sayToAll("�?оманды готовы, �?тарт через 1 минуту.");
+			sayToAll("Teams are ready, start after 1 minute.");
 			_timeToStart = 1;
 		}
 	}
-	
+
 	/**
 	 * Method template_announce.
 	 */
@@ -465,23 +465,23 @@ public abstract class TvTTemplate extends Functions
 		if (_timeToStart > 1)
 		{
 			_timeToStart--;
-			sayToAll(creator.getName() + " �?оздал бой " + _team1count + "х" + _team2count + ", " + _team1min + "-" + _team1max + "lv vs " + _team2min + "-" + _team2max + "lv, �?тавка " + _price + " " + ITEM_NAME + ", начало через " + _timeToStart + " мин");
+			sayToAll(creator.getName() + " created fight " + _team1count + "х" + _team2count + ", " + _team1min + "-" + _team1max + "lv vs " + _team2min + "-" + _team2max + "lv, rate " + _price + " " + ITEM_NAME + ", start over " + _timeToStart + " Min");
 			executeTask("events.TvTArena." + _className, "announce", new Object[0], 60000);
 		}
 		else if (_team2list.size() > 0)
 		{
-			sayToAll("�?одготовка к бо�?");
+			sayToAll("Prepare for battle");
 			executeTask("events.TvTArena." + _className, "prepare", new Object[0], 5000);
 		}
 		else
 		{
-			sayToAll("Бой не �?о�?то�?л�?�?, нет противников");
+			sayToAll("Fight did not take place, no opponents");
 			_status = 0;
 			returnItemToTeams();
 			clearTeams();
 		}
 	}
-	
+
 	/**
 	 * Method template_prepare.
 	 */
@@ -517,10 +517,10 @@ public abstract class TvTTemplate extends Functions
 		healPlayers();
 		paralyzeTeams();
 		teleportTeamsToArena();
-		sayToAll("Бой начнет�?�? через 30 �?екунд");
+		sayToAll("Fight will start in 30 seconds");
 		executeTask("events.TvTArena." + _className, "start", new Object[0], 30000);
 	}
-	
+
 	/**
 	 * Method template_start.
 	 */
@@ -540,7 +540,7 @@ public abstract class TvTTemplate extends Functions
 		executeTask("events.TvTArena." + _className, "timeOut", new Object[0], 180000);
 		_timeOutTask = true;
 	}
-	
+
 	/**
 	 * Method clearArena.
 	 */
@@ -554,7 +554,7 @@ public abstract class TvTTemplate extends Functions
 			}
 		}
 	}
-	
+
 	/**
 	 * Method checkTeams.
 	 * @return boolean
@@ -573,7 +573,7 @@ public abstract class TvTTemplate extends Functions
 		}
 		return true;
 	}
-	
+
 	/**
 	 * Method saveBackCoords.
 	 */
@@ -588,7 +588,7 @@ public abstract class TvTTemplate extends Functions
 			player.setVar("TvTArena_backCoords", player.getX() + " " + player.getY() + " " + player.getZ() + " " + player.getReflectionId(), -1);
 		}
 	}
-	
+
 	/**
 	 * Method teleportPlayersToSavedCoords.
 	 */
@@ -639,7 +639,7 @@ public abstract class TvTTemplate extends Functions
 			}
 		}
 	}
-	
+
 	/**
 	 * Method healPlayers.
 	 */
@@ -656,7 +656,7 @@ public abstract class TvTTemplate extends Functions
 			player.setCurrentCp(player.getMaxCp());
 		}
 	}
-	
+
 	/**
 	 * Method ressurectPlayers.
 	 */
@@ -685,7 +685,7 @@ public abstract class TvTTemplate extends Functions
 			}
 		}
 	}
-	
+
 	/**
 	 * Method removeBuff.
 	 */
@@ -794,7 +794,7 @@ public abstract class TvTTemplate extends Functions
 			}
 		}
 	}
-	
+
 	/**
 	 * Method backBuff.
 	 */
@@ -873,7 +873,7 @@ public abstract class TvTTemplate extends Functions
 			}
 		}
 	}
-	
+
 	/**
 	 * Method paralyzeTeams.
 	 */
@@ -899,7 +899,7 @@ public abstract class TvTTemplate extends Functions
 			}
 		}
 	}
-	
+
 	/**
 	 * Method unParalyzeTeams.
 	 */
@@ -924,7 +924,7 @@ public abstract class TvTTemplate extends Functions
 			player.leaveParty();
 		}
 	}
-	
+
 	/**
 	 * Method teleportTeamsToArena.
 	 */
@@ -947,7 +947,7 @@ public abstract class TvTTemplate extends Functions
 			n++;
 		}
 	}
-	
+
 	/**
 	 * Method playerHasLost.
 	 * @param player Player
@@ -967,7 +967,7 @@ public abstract class TvTTemplate extends Functions
 		revengeSkill.getEffects(player, player, false, false);
 		return !checkTeams();
 	}
-	
+
 	/**
 	 * Method teamHasLost.
 	 * @param team_id Integer
@@ -976,12 +976,12 @@ public abstract class TvTTemplate extends Functions
 	{
 		if (team_id == 1)
 		{
-			sayToAll("�?оманда 2 победила");
+			sayToAll("Team 2 Wins");
 			payItemToTeam(2);
 		}
 		else
 		{
-			sayToAll("�?оманда 1 победила");
+			sayToAll("Team 1 Wins");
 			payItemToTeam(1);
 		}
 		unParalyzeTeams();
@@ -993,7 +993,7 @@ public abstract class TvTTemplate extends Functions
 		_status = 0;
 		_timeOutTask = false;
 	}
-	
+
 	/**
 	 * Method template_timeOut.
 	 */
@@ -1001,7 +1001,7 @@ public abstract class TvTTemplate extends Functions
 	{
 		if (_timeOutTask && (_status == 3))
 		{
-			sayToAll("Врем�? и�?текло, нич�?�?!");
+			sayToAll("Time out, draw!");
 			returnItemToTeams();
 			unParalyzeTeams();
 			backBuff();
@@ -1013,7 +1013,7 @@ public abstract class TvTTemplate extends Functions
 			_timeOutTask = false;
 		}
 	}
-	
+
 	/**
 	 * Method payItemToTeam.
 	 * @param team_id Integer
@@ -1035,7 +1035,7 @@ public abstract class TvTTemplate extends Functions
 			}
 		}
 	}
-	
+
 	/**
 	 * Method returnItemToTeams.
 	 */
@@ -1050,7 +1050,7 @@ public abstract class TvTTemplate extends Functions
 			addItem(player, ITEM_ID, _price);
 		}
 	}
-	
+
 	/**
 	 * Method clearTeams.
 	 */
@@ -1069,7 +1069,7 @@ public abstract class TvTTemplate extends Functions
 		_team1live.clear();
 		_team2live.clear();
 	}
-	
+
 	/**
 	 * Method onDeath.
 	 * @param self Creature
@@ -1083,22 +1083,22 @@ public abstract class TvTTemplate extends Functions
 			Player kplayer = killer.getPlayer();
 			if (kplayer != null)
 			{
-				sayToAll(kplayer.getName() + " убил " + player.getName());
+				sayToAll(kplayer.getName() + " killed " + player.getName());
 				if ((player.getTeam() == kplayer.getTeam()) || (!_team1list.contains(kplayer.getStoredId()) && !_team2list.contains(kplayer.getStoredId())))
 				{
-					sayToAll("�?ару�?ение правил, игрок " + kplayer.getName() + " о�?трафован на " + _price + " " + ITEM_NAME);
+					sayToAll("Violation of the rules, a player " + kplayer.getName() + " fined " + _price + " " + ITEM_NAME);
 					removeItem(kplayer, ITEM_ID, _price);
 				}
 				playerHasLost(player);
 			}
 			else
 			{
-				sayToAll(player.getName() + " убит");
+				sayToAll(player.getName() + " killed");
 				playerHasLost(player);
 			}
 		}
 	}
-	
+
 	/**
 	 * Method onPlayerExit.
 	 * @param player Player
@@ -1111,10 +1111,10 @@ public abstract class TvTTemplate extends Functions
 			{
 				case 1:
 					removePlayer(player);
-					sayToAll(player.getName() + " ди�?квалифицирован");
+					sayToAll(player.getName() + " disqualified");
 					if (player.getStoredId() == _creatorId)
 					{
-						sayToAll("Бой прерван, �?тавки возвращены");
+						sayToAll("fight interrupted, rates returned");
 						returnItemToTeams();
 						backBuff();
 						teleportPlayersToSavedCoords();
@@ -1130,18 +1130,18 @@ public abstract class TvTTemplate extends Functions
 					break;
 				case 2:
 					removePlayer(player);
-					sayToAll(player.getName() + " ди�?квалифицирован");
+					sayToAll(player.getName() + " disqualified");
 					checkTeams();
 					break;
 				case 3:
 					removePlayer(player);
-					sayToAll(player.getName() + " ди�?квалифицирован");
+					sayToAll(player.getName() + " disqualified");
 					checkTeams();
 					break;
 			}
 		}
 	}
-	
+
 	/**
 	 * Method onTeleport.
 	 * @param player Player
@@ -1153,7 +1153,7 @@ public abstract class TvTTemplate extends Functions
 			onPlayerExit(player);
 		}
 	}
-	
+
 	/**
 	 */
 	public class ZoneListener implements OnZoneEnterLeaveListener
@@ -1173,7 +1173,7 @@ public abstract class TvTTemplate extends Functions
 				ThreadPoolManager.getInstance().schedule(new TeleportTask(cha, _zone.getSpawn()), 3000);
 			}
 		}
-		
+
 		/**
 		 * Method onZoneLeave.
 		 * @param zone Zone
@@ -1195,7 +1195,7 @@ public abstract class TvTTemplate extends Functions
 			}
 		}
 	}
-	
+
 	/**
 	 */
 	public class TeleportTask extends RunnableImpl
@@ -1208,7 +1208,7 @@ public abstract class TvTTemplate extends Functions
 		 * Field target.
 		 */
 		Creature target;
-		
+
 		/**
 		 * Constructor for TeleportTask.
 		 * @param target Creature
@@ -1220,7 +1220,7 @@ public abstract class TvTTemplate extends Functions
 			this.loc = loc;
 			target.block();
 		}
-		
+
 		/**
 		 * Method runImpl.
 		 */
@@ -1231,7 +1231,7 @@ public abstract class TvTTemplate extends Functions
 			target.teleToLocation(loc);
 		}
 	}
-	
+
 	/**
 	 * Method removePlayer.
 	 * @param player Player
@@ -1247,7 +1247,7 @@ public abstract class TvTTemplate extends Functions
 			player.setTeam(TeamType.NONE);
 		}
 	}
-	
+
 	/**
 	 * Method getPlayers.
 	 * @param list List<Long>
@@ -1266,7 +1266,7 @@ public abstract class TvTTemplate extends Functions
 		}
 		return result;
 	}
-	
+
 	/**
 	 * Method sayToAll.
 	 * @param text String
