@@ -210,122 +210,122 @@ public class MeleonAI extends Fighter
 	 */
 	private static final String[] textOnAttack = new String[]
 	{
-		"�?то мен�? ку�?ает? ай! ой! �?й ты, �?ейча�? �? тебе задам!",
-		"Ха-ха-ха! Я выро�? в�?ем на зави�?т�?, тол�?ко по�?мотри!",
-		"Ты �?ов�?ем мазила? �?опа�?т�? во фрукт не може�?�?!",
-		"Это ты так про�?читывае�?�? �?вои удары? �?оищи луч�?е учител�? прицеливани�?...",
-		"�?е трат�? �?вое врем�?, �? бе�?�?мертен!",
-		"Ха! �?равда при�?тный звук?",
-		"�?ока ты атакуе�?�? �? ро�?ту, а выра�?ту, �?тану вы�?е теб�? в два раза!",
-		"Ты б�?е�?�? или щекоче�?�?? �?е могу разобрат�?... Жалкие потуги!",
-		"Тол�?ко музыкал�?ное оружие открывает арбуз. Твое затупленное оружие зде�?�? не помощник!"
-	};
+		"Who is biting me? Ouch! Oops! Hey you, now I'm going to ask you!",
+		"Ha ha ha, I grew all the envy, look!",
+		"You do muff? Past the fruit can not!",
+		"That's what you calculate your beats? Look better targeting teachers ...",
+		"Do not waste your time, I'm immortal!",
+		"Ha! True pleasant sound?",
+		"As long as you attack me grow, and grow up, you'll be up to two times!",
+		"You hit or tickle? Can not make it ... Pathetic attempts!",
+		"Only musical weapon opens watermelon. Your blunt weapon is not an assistant!"
+		};
 	/**
 	 * Field textTooFast.
 	 */
 	private static final String[] textTooFast = new String[]
 	{
-		"Вот �?то удары! Вот �?то техника!",
-		"Эй ты! Твои навыки плачевны, мо�? бабу�?ка дерет�?�? луч�?е! Ха-Ха-Ха!!!",
-		"�?у-ка еще разок удар�?, и �?нова!",
-		"Я твой дом труба �?атал!",
-		"Слы�?�?, а �?емки е�?т�?? �? п�?т�? аден? �? позвонит�?? Хахаха!!!",
-		"�?акие непри�?тойно�?ти! Давай без �?тих �?уточек!",
-		"�?ро�?ви фантази�?, подойди �?зади, что ты там топче�?�?�?�?!",
-		"Разбуди как буде�?�? уходит�?, ты �?ов�?ем уныл и �?кучен..."
-	};
+		"That's what blows! That's technique!",
+		"Hey you! Your skills are deplorable, my grandmother fights better! Ha Ha Ha!",
+		"Lets hit once more, and again!",
+		"I'm your house Shatal pipe!",
+		"Hey, and Semyon there? A five adena? And call? Hahaha!",
+		"What obscenity! Come without these jokes!",
+		"Show imagination, come back, what are you topcheshsya!",
+		"Wake up as you leave, you're quite dull and boring ..."
+		};
 	/**
 	 * Field textSuccess0.
 	 */
 	private static final String[] textSuccess0 = new String[]
 	{
-		"�?рбуз хоро�?о ра�?тет е�?ли его тщател�?но поит�?, ты знае�?�? �?тот �?екрет, не так ли?",
-		"Вот �?то �? понима�? нектар, а то в�?егда какие-то помои!",
-		"Я вижу! Вижу! Это �?итай! �? боже, �? китай�?кий арбуз!!",
-		"Давай наливай еще, между первой и второй перерывчик небол�?�?ой!",
-		"Дозаправка на лету!"
-	};
+		"Watermelon grows well if his drink carefully, you know this secret, is not it?",
+		"That's what I nectar, and there is always some slop!",
+		"I see, I perceive, this is China, oh my God, I am a Chinese watermelon!",
+		"Let's pour more between the first and second pereryvchik small!",
+		"Refueling on the fly!"
+		};
 	/**
 	 * Field textFail0.
 	 */
 	private static final String[] textFail0 = new String[]
 	{
-		"Ты оглох? �?не нужен нектар, а не то что ты л�?е�?�?!",
-		"�?акой же ты неудачник, а выгл�?ди�?�? вроде бы бодро! �?не нужен нектар, ле�� каче�?твенный, иначе получи�?�? �?и�?�?!",
-		"�? �?нова fail, �?кол�?ко же можно? Ты мен�? на�?ме�?ит�? хоче�?�??"
-	};
+		"You deaf? I need nectar, and not something that you pour you!",
+		"What you're a loser and look like cheerfully! I need nectar Leu quality, otherwise get shish!",
+		"And again, fail, how long can? You want me to laugh?"
+		};
 	/**
 	 * Field textSuccess1.
 	 */
 	private static final String[] textSuccess1 = new String[]
 	{
-		"Сейча�? �?по�?! �?рбуууууу-�?-�?-�?-�?!",
-		"Вот так хоро�?о, так очен�? хоро�?о, не о�?танавливай�?�?!",
-		"Я ро�?ту бы�?тро, у�?пее�?�? от�?кочит�?? Ха!",
-		"Да ты ма�?тер �?воего дела! �?родолжай, про�?у!"
-	};
+		"Now sing! Arbuuuuuu-uh-uh!",
+		"That's so good, so very good, do not stop!",
+		"I grow quickly, have time to rebound? Ha!",
+		"You're a master of his craft! More, please!"
+		};
 	/**
 	 * Field textFail1.
 	 */
 	private static final String[] textFail1 = new String[]
 	{
-		"�?у�� железо не отход�? от ка�?�?ы! �? иначе никаких тебе коврижек.",
-		"Ра�?т�?па! �?евежда! �?лух! �?еудачник! �?п�?т�? ты м��е �?кормил помои!",
-		"Давай-ка активней мен�? окучивай, поливай хоро�?ен�?ко! Что �?то за жалкие потуги?",
-		"Ты хоче�?�? чтобы �? так и помер? Давай выращивай правил�?ней!"
-	};
+		"Strike while the iron on the spot! Otherwise, you are no gingerbread.",
+		"Muddler! Ignoramus! Boobies! Loser! Again you fed me slop!",
+		"Let's have actively spud, watered well, what kind of pathetic attempts?",
+		"You want me to so he died? Come to grow right!"
+		};
 	/**
 	 * Field textSuccess2.
 	 */
 	private static final String[] textSuccess2 = new String[]
 	{
-		"Вот! Вот так! Давай же, и �?коро �? пол�?бл�? теб�? нав�?егда!",
-		"Такими темпами �? �?тану императором арб��зов!",
-		"�?чен�? хоро�?о, �?тавл�? тебе зачет по аграрному хоз�?й�?тву, ты �? умом мен�? ра�?ти�?�?!"
-	};
+		"Here! Whew! Come on, and soon I'll love you forever!",
+		"At this rate, I will be the emperor of watermelons!",
+		"Very good, I put you on the Ladder of agriculture, you wisely me grow!"
+		};
 	/**
 	 * Field textFail2.
 	 */
 	private static final String[] textFail2 = new String[]
 	{
-		"�? ты вообще ме�?тный? Ты арбуз в глаза видел? Это провал!",
-		"�?одар�? тебе табличку Лузер Года, тол�?ко неудачник может так плохо �?правл�?т�?�?�? �? таким про�?тым делом!",
-		"�?у покорми мен�?, а? �?ормал�?но тол�?ко, а не вот �?тим �?омнител�?ным нектаром...",
-		"�? ты �?лучаем не террори�?т? �?оже�?�? ты мен�? голодом мори�?�?? Чего тебе надо?!!"
-	};
+		"And you do local? Watermelon eyes You see? It is a failure!",
+		"I'll give you a sign Loser of the Year, just as bad loser can cope with such a simple thing!",
+		"Well, Feed me, huh? Normally only, not here this dubious nectar ...",
+		"And you're not a terrorist event? Can you hunger morish me? What do you want?"
+		};
 	/**
 	 * Field textSuccess3.
 	 */
 	private static final String[] textSuccess3 = new String[]
 	{
-		"Жизн�? налаживает�?�?, лей не жалей!",
-		"Теб�? �?тому мама учила? У теб�? здорово получает�?�?!",
-		"�? зачем ты ро�?ти�?�? мен�?? Е�?т�? буде�?�?? Я буду очен�? �?очным арбузом!"
-	};
+		"Life is getting better, do not be sorry lei!",
+		"You taught this mom do you have a great work!",
+		"Why do you have growth? There be? I will be very juicy watermelon!"
+		};
 	/**
 	 * Field textFail3.
 	 */
 	private static final String[] textFail3 = new String[]
 	{
-		"Это что, водичка из канализации? Ты понимае�?�? что такое нектар?!",
-		"Боги, �?па�?ите мен�? от �?того неумехи, он же в�?е портит!"
-	};
+		"Is that Vodicka of sewage? You know what nectar?",
+		"Gods, save me from this sad sack, he's all the spoils!"
+		};
 	/**
 	 * Field textSuccess4.
 	 */
 	private static final String[] textSuccess4 = new String[]
 	{
-		"Вот �?то зар�?д!! Ты что подме�?ал в нектар? Там точно граду�?ов 40! �?хахаха! Я п�?�?не�?!",
-		"Ты ри�?куе�?�? выра�?тит�? не арбуз, а целу�? ракету! �?одливай, давай еще!"
-	};
+		"That's a charge! Have you slipped into nectar? There's just 40 degrees! Ahahaha I get drunk!",
+		"You're risking not grow watermelon, and the whole rocket! Adds, come again!"
+		};
 	/**
 	 * Field textFail4.
 	 */
 	private static final String[] textFail4 = new String[]
 	{
-		"�?х как �? хочу пит�?... �?ектар, про�?у...",
-		"Лей �?�?да нектар и по�?мотри что получит�?�?!"
-	};
+		"Oh, how I want to drink ... Nectar, please ...",
+		"Lei nectar here and see what happens!"
+		};
 	/**
 	 * Field _npcId.
 	 */
@@ -569,37 +569,37 @@ public class MeleonAI extends Fighter
 		{
 			case Defective_Watermelon:
 				dropMod *= 1;
-				Functions.npcSay(actor, "�?рбуз открывает�?�?!");
-				Functions.npcSay(actor, "�?хо-хо! Да тут жалкие крохи, �?тарай�?�? луч�?е!");
+				Functions.npcSay(actor, "Watermelon is open!");
+				Functions.npcSay(actor, "Oho-ho Yes then crumbs, try better!");
 				break;
 			case Rain_Watermelon:
 				dropMod *= 2;
-				Functions.npcSay(actor, "�?рбуз открывает�?�?!");
-				Functions.npcSay(actor, "�?й-ай-ай! �?еплохой улов!");
+				Functions.npcSay(actor, "Watermelon is open!");
+				Functions.npcSay(actor, "Ay-ay-ay! Good catch!");
 				break;
 			case Large_Rain_Watermelon:
 				dropMod *= 4;
-				Functions.npcSay(actor, "�?рбуз открывает�?�?!");
-				Functions.npcSay(actor, "Вот �?то да! �?акие �?окровища!");
+				Functions.npcSay(actor, "Watermelon is open!");
+				Functions.npcSay(actor, "Wow! What treasures!");
 				break;
 			case Defective_Honey_Watermelon:
 				dropMod *= 12.5;
-				Functions.npcSay(actor, "�?рбуз открывает�?�?!");
-				Functions.npcSay(actor, "�?отратил много, а выудил мало!");
+				Functions.npcSay(actor, "Watermelon is open!");
+				Functions.npcSay(actor, "Spent a lot, and fished out a little!");
 				break;
 			case Rain_Honey_Watermelon:
 				dropMod *= 25;
-				Functions.npcSay(actor, "�?рбуз открывает�?�?!");
-				Functions.npcSay(actor, "Бум-бум-бах! Улов хоро�?!");
+				Functions.npcSay(actor, "Watermelon is open!");
+				Functions.npcSay(actor, "Boom-boom-boom! Nice catch!");
 				break;
 			case Large_Rain_Honey_Watermelon:
 				dropMod *= 50;
-				Functions.npcSay(actor, "�?рбуз открывает�?�?!");
-				Functions.npcSay(actor, "Фанфары! Ты открыл гигант�?кий арбуз! �?е�?метные богат�?тва на земле! Лови их!");
+				Functions.npcSay(actor, "Watermelon is open!");
+				Functions.npcSay(actor, "Fanfare! You have opened a giant watermelon! Untold riches on earth! Catch them!");
 				break;
 			default:
 				dropMod *= 0;
-				Functions.npcSay(actor, "Я вед�? ничего тебе не дам, е�?ли умру вот так...");
+				Functions.npcSay(actor, "I will not give anything to you, if I die like this ...");
 				Functions.npcSay(actor, "Этот позор навеки покроет твое им�?...");
 				break;
 		}
