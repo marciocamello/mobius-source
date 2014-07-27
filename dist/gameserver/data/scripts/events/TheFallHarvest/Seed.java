@@ -41,7 +41,7 @@ public class Seed extends ScriptItemHandler
 		 * Field spawnedPlant.
 		 */
 		SimpleSpawner spawnedPlant = null;
-		
+
 		/**
 		 * Constructor for DeSpawnScheduleTimerTask.
 		 * @param spawn SimpleSpawner
@@ -50,7 +50,7 @@ public class Seed extends ScriptItemHandler
 		{
 			spawnedPlant = spawn;
 		}
-		
+
 		/**
 		 * Method runImpl.
 		 */
@@ -60,7 +60,7 @@ public class Seed extends ScriptItemHandler
 			spawnedPlant.deleteAll();
 		}
 	}
-	
+
 	/**
 	 * Field _itemIds.
 	 */
@@ -77,7 +77,7 @@ public class Seed extends ScriptItemHandler
 		12774,
 		12777
 	};
-	
+
 	/**
 	 * Method useItem.
 	 * @param playable Playable
@@ -96,12 +96,12 @@ public class Seed extends ScriptItemHandler
 		}
 		if (activeChar.isInOlympiadMode())
 		{
-			activeChar.sendMessage("�?ел�?з�? взращиват�? тыкву на �?тадионе.");
+			activeChar.sendMessage("You can not cultivate watermelon at the stadium.");
 			return false;
 		}
 		if (!activeChar.getReflection().isDefault())
 		{
-			activeChar.sendMessage("�?ел�?з�? взращиват�? тыкву в ин�?тан�?е.");
+			activeChar.sendMessage("You can not cultivate watermelon instance.");
 			return false;
 		}
 		NpcTemplate template = null;
@@ -130,7 +130,7 @@ public class Seed extends ScriptItemHandler
 		ThreadPoolManager.getInstance().schedule(new DeSpawnScheduleTimerTask(spawn), 180000);
 		return true;
 	}
-	
+
 	/**
 	 * Method getItemIds.
 	 * @return int[]
