@@ -35,7 +35,7 @@ public class NewYearTimer implements ScriptFile
 	 * Field instance.
 	 */
 	static NewYearTimer instance;
-	
+
 	/**
 	 * Method getInstance.
 	 * @return NewYearTimer
@@ -48,7 +48,7 @@ public class NewYearTimer implements ScriptFile
 		}
 		return instance;
 	}
-	
+
 	/**
 	 * Constructor for NewYearTimer.
 	 */
@@ -75,7 +75,7 @@ public class NewYearTimer implements ScriptFile
 		{
 			c.set(Calendar.YEAR, c.get(Calendar.YEAR) + 1);
 		}
-		ThreadPoolManager.getInstance().schedule(new NewYearAnnouncer("С Новым, " + c.get(Calendar.YEAR) + ", Годом!!!"), getDelay(c));
+		ThreadPoolManager.getInstance().schedule(new NewYearAnnouncer("New, " + c.get(Calendar.YEAR) + ", Year!!!"), getDelay(c));
 		c.add(Calendar.SECOND, -1);
 		ThreadPoolManager.getInstance().schedule(new NewYearAnnouncer("1"), getDelay(c));
 		c.add(Calendar.SECOND, -1);
@@ -87,7 +87,7 @@ public class NewYearTimer implements ScriptFile
 		c.add(Calendar.SECOND, -1);
 		ThreadPoolManager.getInstance().schedule(new NewYearAnnouncer("5"), getDelay(c));
 	}
-	
+
 	/**
 	 * Method getDelay.
 	 * @param c Calendar
@@ -97,7 +97,7 @@ public class NewYearTimer implements ScriptFile
 	{
 		return c.getTime().getTime() - System.currentTimeMillis();
 	}
-	
+
 	/**
 	 * Method onLoad.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
@@ -107,7 +107,7 @@ public class NewYearTimer implements ScriptFile
 	{
 		// empty method
 	}
-	
+
 	/**
 	 * Method onReload.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
@@ -117,7 +117,7 @@ public class NewYearTimer implements ScriptFile
 	{
 		// empty method
 	}
-	
+
 	/**
 	 * Method isActive.
 	 * @return boolean
@@ -126,7 +126,7 @@ public class NewYearTimer implements ScriptFile
 	{
 		return ServerVariables.getString("Christmas", "off").equalsIgnoreCase("on");
 	}
-	
+
 	/**
 	 * Method onShutdown.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
@@ -136,7 +136,7 @@ public class NewYearTimer implements ScriptFile
 	{
 		// empty method
 	}
-	
+
 	/**
 	 * @author Mobius
 	 */
@@ -146,7 +146,7 @@ public class NewYearTimer implements ScriptFile
 		 * Field message.
 		 */
 		private final String message;
-		
+
 		/**
 		 * Constructor for NewYearAnnouncer.
 		 * @param message String
@@ -155,7 +155,7 @@ public class NewYearTimer implements ScriptFile
 		{
 			this.message = message;
 		}
-		
+
 		/**
 		 * Method runImpl.
 		 */
