@@ -1,6 +1,114 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
+	<armor id="22302" name="Antharas's Earring - 3-day limited period (event)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.accessory_earring_of_antaras_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="94"/>
+			<add stat="maxMp" order="0x60" value="37"/>
+		</for>
+	</armor>
+	<armor id="22303" name="Antharas's Earring - 7-day limited period (event)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.accessory_earring_of_antaras_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="94"/>
+			<add stat="maxMp" order="0x60" value="37"/>
+		</for>
+	</armor>
+	<armor id="22304" name="Baium's Ring - 3-day limited period (event)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.accessory_ring_of_baium_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="48"/>
+			<add stat="maxMp" order="0x60" value="21"/>
+		</for>
+	</armor>
+	<armor id="22305" name="Baium's Ring - 7-day limited period (event)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.accessory_ring_of_baium_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="48"/>
+			<add stat="maxMp" order="0x60" value="21"/>
+		</for>
+	</armor>
+	<armor id="22312" name="Top-Grade Magic Pin Cloth Belt">
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_magic_pin_belt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="500"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="10"/>
+		</for>
+	</armor>
+	<armor id="22313" name="Top-Grade Magic Pouch Cloth Belt">
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_magic_pouch_belt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="500"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="10"/>
+		</for>
+	</armor>
+	<armor id="22326" name="Blue Talisman - Buff Cancel">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="65"/>
+		<equip>
+			<slot id="UNDERWEAR"/>
+		</equip>
+	</armor>
+	<armor id="22327" name="Blue Talisman - Buff Steal">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_talisman_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="durability" value="65"/>
+		<equip>
+			<slot id="UNDERWEAR"/>
+		</equip>
+	</armor>
 	<armor id="22355" name="Tame Princess Ant Mounting Bracelet" add_name="7-Day Limited Period">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys3.Icon.g_ant_princess_i00"/>
