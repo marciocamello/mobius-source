@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>	
+	<armor id="35915" name="Draco's Hat" add_name="STR (Event)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_hair_acc"/>
+		<set name="price" value="500000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="35916" name="Draco's Hat" add_name="DEX (Event)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_hair_acc"/>
+		<set name="price" value="500000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="35917" name="Draco's Hat" add_name="CON (Event)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_hair_acc"/>
+		<set name="price" value="500000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="35918" name="Draco's Hat" add_name="MEN (Event)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_hair_acc"/>
+		<set name="price" value="500000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="35919" name="Draco's Hat" add_name="INT (Event)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_hair_acc"/>
+		<set name="price" value="500000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="35920" name="Draco's Hat" add_name="WIT (Event)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_hair_acc"/>
+		<set name="price" value="500000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="35921" name="Draco's Hat" add_name="Critical Rate (Event)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_hair_acc"/>
+		<set name="price" value="500000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="35922" name="Draco's Hat" add_name="Critical Damage (Event)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_hair_acc"/>
+		<set name="price" value="500000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="35923" name="Draco's Hat" add_name="P. Def. (Event)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_hair_acc"/>
+		<set name="price" value="500000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="35924" name="Draco's Hat" add_name="M. Def. (Event)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_hair_acc"/>
+		<set name="price" value="500000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="35925" name="Draco's Hat" add_name="Evasion (Event)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_hair_acc"/>
+		<set name="price" value="500000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="35926" name="Draco's Hat" add_name="P. Atk. (Event)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_hair_acc"/>
+		<set name="price" value="500000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="35927" name="Draco's Hat" add_name="M. Atk. (Event)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_hair_acc"/>
+		<set name="price" value="500000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="35928" name="Draco's Hat" add_name="Accuracy (Event)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_hair_acc"/>
+		<set name="price" value="500000"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="35929" name="Mysterious Ring">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_shiny_couple_ring"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+	</armor>
+	<armor id="35936" name="Star Agathion - Heejin Jang" add_name="15-day">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bracelet_agathion_bm_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="35937" name="Star Agathion - Hyuk Jang" add_name="15-day">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bracelet_agathion_bm_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="35938" name="Star Agathion - Soo-ro Kim" add_name="15-day">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bracelet_agathion_bm_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="35939" name="Star Agathion - Jaebum Park" add_name="15-day">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bracelet_agathion_bm_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="35940" name="Star Agathion - Shin-young Kim" add_name="15-day">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bracelet_agathion_bm_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="35941" name="Star Agathion - Heejin Jang" add_name="30-day">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bracelet_agathion_bm_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="35942" name="Star Agathion - Hyuk Jang" add_name="30-day">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bracelet_agathion_bm_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="35943" name="Star Agathion - Soo-ro Kim" add_name="30-day">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bracelet_agathion_bm_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="35944" name="Star Agathion - Jaebum Park" add_name="30-day">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bracelet_agathion_bm_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="35945" name="Star Agathion - Shin-young Kim" add_name="30-day">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bracelet_agathion_bm_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="LEFT_BRACELET"/>
+		</equip>
+	</armor>
+	<armor id="35978" name="Mysterious Ring: 7-day" add_name="Event">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_shiny_couple_ring"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+	</armor>
+	<armor id="35980" name="Talisman of Annihilation" add_name="3-day (Event)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_extermination_talisman_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+	</armor>
+	<armor id="35981" name="Talisman of Annihilation" add_name="7-day (Event)">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_extermination_talisman_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+	</armor>
+	<armor id="35989" name="Festival's Cloak" add_name="Ceremony of Chaos">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys2.Icon.7anni_cloack_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="220"/>
+		<equip>
+			<slot id="BACK"/>
+		</equip>
+	</armor>
+	<armor id="35990" name="Circlet of Ice" add_name="Ceremony of Chaos">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_ice_circlet_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="35997" name="Test - M. Accuracy Heavy Armor">
+		<set name="crystal_type" value="R99"/>
+		<set name="icon" value="icon.armor_t701_u_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="100"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="385"/>
+		</for>
+	</armor>
+	<armor id="35998" name="Test - M. Evasion Heavy Armor">
+		<set name="crystal_type" value="R99"/>
+		<set name="icon" value="icon.armor_t701_u_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="100"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="385"/>
+		</for>
+	</armor>
+</list>

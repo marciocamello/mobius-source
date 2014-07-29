@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="23442" name="Kokoshnik">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_hair_kokoshnik_f"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="23443" name="Russian Navy Cap">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_hair_peakless_cap_m"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="23444" name="Russian Commemorative Cloak">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_cloak_anniversary"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="220"/>
+		<equip>
+			<slot id="BACK"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="25"/>
+		</for>
+	</armor>
+	<armor id="23445" name="Kokoshnik">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_hair_kokoshnik_f"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="23446" name="Russian Navy Cap">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_hair_peakless_cap_m"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="23447" name="Russian Commemorative Cloak">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_cloak_anniversary"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="220"/>
+		<equip>
+			<slot id="BACK"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="25"/>
+		</for>
+	</armor>
+	<armor id="23448" name="Metal Suit Top">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_co_sf_u"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+	</armor>
+	<armor id="23449" name="Metal Suit Pants">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_co_sf_l"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+	</armor>
+	<armor id="23450" name="Metal Suit Gloves">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_co_sf_g"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+	</armor>
+	<armor id="23451" name="Metal Suit Shoes">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_co_sf_b"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+	</armor>
+	<armor id="23452" name="Metal Suit Hair Accessory">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_co_sf_hair"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="23453" name="Military Top">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_co_military_u"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+	</armor>
+	<armor id="23454" name="Military Pants">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_co_military_l"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+	</armor>
+	<armor id="23455" name="Military Gloves">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_co_military_g"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+	</armor>
+	<armor id="23456" name="Military Shoes">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_co_military_b"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+	</armor>
+	<armor id="23457" name="Military Hair Accessory">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_co_military_hair_m"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="23458" name="Maid Costume">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_co_cutie_maid"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+	</armor>
+	<armor id="23459" name="Maid Hair Accessory">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_co_cutie_maid_hair"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="23482" name="Top Hat">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_magicial_cap_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="23483" name="Butterfly Hairpin">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.Accessary_butterfly_hearpin_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+	</armor>
+	<armor id="23484" name="Wizard Hat">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_magic_cap_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="23485" name="Santa Outfit">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="Branchsys3.icon1.armor_ev_santas_clothes"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+	</armor>
+</list>
