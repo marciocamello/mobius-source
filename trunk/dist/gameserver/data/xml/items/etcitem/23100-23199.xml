@@ -1,6 +1,144 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
+	<etcitem id="23124" name="Vorpal Heavy Armor of Fortune Set Pack (S80-grade)	90-day">
+		<set name="icon" value="icon.etc_equip_item_box_i02"/>
+		<set name="weight" value="100"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23125" name="Vorpal Light Armor of Fortune Set Pack (S80-grade)	90-day">
+		<set name="icon" value="icon.etc_equip_item_box_i02"/>
+		<set name="weight" value="100"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23126" name="Vorpal Robe of Fortune Set Pack (S80-grade)	90-day">
+		<set name="icon" value="icon.etc_equip_item_box_i02"/>
+		<set name="weight" value="100"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23127" name="Armor Pack (S80-grade) (90-day)">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23128" name="Weapon Pack (S80-grade) (90-day)">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23129" name="Accessory Pack (S80-grade) (90-day)">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23133" name="Gender Change Ticket">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23134" name="Name Change Ticket">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23135" name="Awakening Class Change Ticket">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23137" name="Ancient Kartia's Labyrinth Entrance Pass">
+		<set name="icon" value="icon.etc_ticket_red_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23147" name="Exorcist Energy" add_name="Event">
+		<set name="icon" value="icon.etc_water_potion_i00"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23148" name="Exorcist's Mark" add_name="Event">
+		<set name="icon" value="icon.etc_badge_black_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23149" name="Exorcist's Gift" add_name="Event">
+		<set name="icon" value="icon.etc_grave_goods_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23150" name="Einhasad's Gift" add_name="Event">
+		<set name="icon" value="icon.event_july_seven_park_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23151" name="Shilen's Gift" add_name="Event">
+		<set name="icon" value="icon.event_big_july_seven_park_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23164" name="Soul Avatar's Large Placid">
+		<set name="icon" value="BranchSys.icon.br_shield_bread_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23165" name="Chocolate for Red Bean Slushie	Event">
+		<set name="icon" value="BranchSys3.icon1.g_ev_icewater_cho"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23166" name="Cream for Red Bean Slushie	Event">
+		<set name="icon" value="BranchSys3.icon1.g_ev_icewater_cream"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23167" name="Ice for Red Bean Slushie	Event">
+		<set name="icon" value="icon.etc_broken_crystal_white_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23168" name="Biscuits for Red Bean Slushie	Event">
+		<set name="icon" value="icon.etc_candy_basket_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23169" name="Sweet Red Bean Slushie	Event">
+		<set name="icon" value="BranchSys3.icon1.g_ev_sweet_icewater"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23170" name="Fantastic Red Bean Slushie	Event">
+		<set name="icon" value="BranchSys3.icon1.g_ev_sweet_icewater"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
 	<etcitem id="23172" name="Beach Swimsuit Appearance Stone" add_name="Event">
 		<set name="icon" value="BranchSys3.lcon.g_scrl_change_co_swimsuit_01"/>
 		<set name="type" value="OTHER"/>
@@ -17,6 +155,26 @@
 				<player olympiad="true"/>
 			</not>
 		</cond>
+	</etcitem>
+	<etcitem id="23174" name="Herina's Gift Box	Event">
+		<set name="icon" value="icon.event_big_july_seven_park_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23177" name="Brilliant Beach Sun Cap Pack (30-day)	Event">
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23178" name="Stylish Straw Hat Pack (30-day)	Event">
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="23189" name="Ninja Top Appearance Stone">
 		<set name="icon" value="BranchSys3.icon1.g_scrl_change_chest"/>
@@ -187,5 +345,11 @@
 				<player olympiad="true"/>
 			</not>
 		</cond>
+	</etcitem>
+	<etcitem id="23199" name="Ninja Outfit Appearance Stone Pack">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
 	</etcitem>
 </list>
