@@ -127,7 +127,7 @@ public class GvG extends Functions implements ScriptFile
 	 * Field leaderList.
 	 */
 	private static final List<HardReference<Player>> leaderList = new CopyOnWriteArrayList<>();
-	
+
 	/**
 	 * @author Mobius
 	 */
@@ -142,7 +142,7 @@ public class GvG extends Functions implements ScriptFile
 			prepare();
 		}
 	}
-	
+
 	/**
 	 * @author Mobius
 	 */
@@ -152,7 +152,7 @@ public class GvG extends Functions implements ScriptFile
 		 * Field _timer.
 		 */
 		int _timer;
-		
+
 		/**
 		 * Constructor for Countdown.
 		 * @param timer int
@@ -161,7 +161,7 @@ public class GvG extends Functions implements ScriptFile
 		{
 			_timer = timer;
 		}
-		
+
 		/**
 		 * Method runImpl.
 		 */
@@ -171,7 +171,7 @@ public class GvG extends Functions implements ScriptFile
 			Announcements.getInstance().announceToAll("GvG: Until the end of the registration on the tournament remains " + Integer.toString(_timer) + " minutes.");
 		}
 	}
-	
+
 	/**
 	 * Method onLoad.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
@@ -182,7 +182,7 @@ public class GvG extends Functions implements ScriptFile
 		_log.info("Loaded Event: GvG");
 		initTimer();
 	}
-	
+
 	/**
 	 * Method onReload.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
@@ -192,7 +192,7 @@ public class GvG extends Functions implements ScriptFile
 	{
 		// empty method
 	}
-	
+
 	/**
 	 * Method onShutdown.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
@@ -202,7 +202,7 @@ public class GvG extends Functions implements ScriptFile
 	{
 		// empty method
 	}
-	
+
 	/**
 	 * Method initTimer.
 	 */
@@ -224,7 +224,7 @@ public class GvG extends Functions implements ScriptFile
 		}
 		_globalTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Launch(), delay, day);
 	}
-	
+
 	/**
 	 * @author Mobius
 	 */
@@ -239,7 +239,7 @@ public class GvG extends Functions implements ScriptFile
 			activateEvent();
 		}
 	}
-	
+
 	/**
 	 * Method canBeStarted.
 	 * @return boolean
@@ -255,7 +255,7 @@ public class GvG extends Functions implements ScriptFile
 		}
 		return true;
 	}
-	
+
 	/**
 	 * Method isActive.
 	 * @return boolean
@@ -264,7 +264,7 @@ public class GvG extends Functions implements ScriptFile
 	{
 		return _active;
 	}
-	
+
 	/**
 	 * Method activateEvent.
 	 */
@@ -290,7 +290,7 @@ public class GvG extends Functions implements ScriptFile
 			_isRegistrationActive = true;
 		}
 	}
-	
+
 	/**
 	 * Method deactivateEvent.
 	 */
@@ -307,7 +307,7 @@ public class GvG extends Functions implements ScriptFile
 			leaderList.clear();
 		}
 	}
-	
+
 	/**
 	 * Method showStats.
 	 */
@@ -345,7 +345,7 @@ public class GvG extends Functions implements ScriptFile
 			show("There are no participants at the time\n\n" + refresh, player, null);
 		}
 	}
-	
+
 	/**
 	 * Method startNow.
 	 */
@@ -363,7 +363,7 @@ public class GvG extends Functions implements ScriptFile
 		}
 		prepare();
 	}
-	
+
 	/**
 	 * Method addGroup.
 	 */
@@ -407,20 +407,20 @@ public class GvG extends Functions implements ScriptFile
 		final List<Player> party = player.getParty().getPartyMembers();
 		final String[] abuseReason =
 		{
-			"cannot find the game",
-			"cannot find the party",
-			"�?о�?тоит в неполной группе. �?инимал�?ное кол-во членов группы - 6.",
-			"не �?вл�?ет�?�? лидером группы, подавав�?ей за�?вку",
-			"не �?оответ�?твует требовани�?м уровней дл�? турнира",
-			"и�?пол�?зует ездовое животное, что противоречит требовани�?м турнира",
-			"находит�?�? в ду�?ли, что противоречит требовани�?м турнира",
-			"принимает уча�?тие в другом �?венте, что противоречит требовани�?м турнира",
-			"находит�?�? в �?пи�?ке ожидани�? �?лимпиады или принимает уча�?тие в ней",
-			"находит�?�? в �?о�?то�?ни�� телепортации, что противоречит требовани�?м турнира",
-			"находит�?�? в Dimensional Rift, что противоречит требовани�?м турнира",
-			"обладает �?рокл�?тым �?ружием, что противоречит требовани�?м турнира",
-			"не находит�?�? в мирной зоне",
-			"находит�?�? в режиме обозревани�?",
+			"is not online",
+			"is not in the group",
+			"is in not full group. Minimal group member is 6.",
+			"is not group leader that registred to the event",
+			"is not suitible for the event requirements",
+			"is mounted, that is restricted.",
+			"is in duel, that is restricted",
+			"is on another event, that is restricted",
+			"is on the olympiad waiting list or is perticipating in olympiad games",
+			"is teleporting, that is restricted",
+			"is in Dimensional Rift, that is restricted",
+			"is the current owner of the cursed weapon, that is restricted",
+			"is not in peace zone",
+			"is in observing mode",
 		};
 		for (Player eachmember : party)
 		{
@@ -432,9 +432,9 @@ public class GvG extends Functions implements ScriptFile
 			}
 		}
 		leaderList.add(player.getRef());
-		player.getParty().broadcastMessageToPartyMembers("Ва�?а группа вне�?ена в �?пи�?ок ожидани�?. �?ожалуй�?та, не реги�?трируйте�?�? в других ивентах и не уча�?твуйте в ду�?л�?х до начала турнира. �?олный �?пи�?ок требований турнира в Community Board (Alt+B)");
+		player.getParty().broadcastMessageToPartyMembers("Your group is registred in the waiting list. Please do not register in other events, or duels. The full list is availiable in the Community Board (Alt+B)");
 	}
-	
+
 	/**
 	 * Method stopTimers.
 	 */
@@ -461,7 +461,7 @@ public class GvG extends Functions implements ScriptFile
 			_countdownTask3 = null;
 		}
 	}
-	
+
 	/**
 	 * Method prepare.
 	 */
@@ -482,10 +482,10 @@ public class GvG extends Functions implements ScriptFile
 			Announcements.getInstance().announceToAll("GvG: Tournament canceled due lack of partecipant.");
 			return;
 		}
-		Announcements.getInstance().announceToAll("GvG: �?рием за�?вок завер�?ен. Запу�?к турнира.");
+		Announcements.getInstance().announceToAll("GvG: Registration is closed, starting the event!");
 		start();
 	}
-	
+
 	/**
 	 * Method checkPlayer.
 	 * @param player Player
@@ -548,7 +548,7 @@ public class GvG extends Functions implements ScriptFile
 		}
 		return 0;
 	}
-	
+
 	/**
 	 * Method shuffleGroups.
 	 */
@@ -560,7 +560,7 @@ public class GvG extends Functions implements ScriptFile
 			final Player expelled = leaderList.remove(rndindex).get();
 			if (expelled != null)
 			{
-				expelled.sendMessage("�?ри формировании �?пи�?ка уча�?тников турнира ва�?а группа была от�?е�?на. �?рино�?им извинени�?, ��опробуйте в �?леду�?щий раз.");
+				expelled.sendMessage("While we check all the groups, your group is expelled due event rules. we are sorry for the inconvinience, please try again next time.");
 			}
 		}
 		for (int i = 0; i < leaderList.size(); i++)
@@ -569,7 +569,7 @@ public class GvG extends Functions implements ScriptFile
 			leaderList.set(i, leaderList.set(rndindex, leaderList.get(i)));
 		}
 	}
-	
+
 	/**
 	 * Method checkPlayers.
 	 */
@@ -586,14 +586,14 @@ public class GvG extends Functions implements ScriptFile
 			{
 				if (checkPlayer(partymember, false) != 0)
 				{
-					player.sendMessage("Ва�?а группа была ди�?квалифицирована и �?н�?та �? уча�?ти�? в турнире так как один или более членов группы нару�?ил у�?лови�? уча�?ти�?");
+					player.sendMessage("Your group has been disqulified due to violation of some of your group members, you are no longer particiant of this event.");
 					leaderList.remove(player.getRef());
 					break;
 				}
 			}
 		}
 	}
-	
+
 	/**
 	 * Method updateWinner.
 	 * @param winner Player
@@ -618,7 +618,7 @@ public class GvG extends Functions implements ScriptFile
 			DbUtils.closeQuietly(con, statement);
 		}
 	}
-	
+
 	/**
 	 * Method start.
 	 */
