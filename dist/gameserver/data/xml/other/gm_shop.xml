@@ -5126,11 +5126,13 @@
 		<item id="1460"/>
 		<item id="1461"/>
 		<item id="1462"/>
+		<item id="17371"/>
 		<item id="2130"/>
 		<item id="2131"/>
 		<item id="2132"/>
 		<item id="2133"/>
 		<item id="2134"/>
+		<item id="19440"/>
 	</tradelist>
 	<tradelist npc="-1" shop="9940">
 		<item id="6688"/>
@@ -7446,6 +7448,20 @@
 		<item id="22091"/>
 		<item id="22092"/>
 		<item id="22093"/>
+		<item id="32249"/>
+		<item id="32250"/>
+		<item id="32251"/>
+		<item id="32252"/>
+		<item id="32253"/>
+		<item id="32254"/>
+		<item id="32255"/>
+		<item id="32256"/>
+		<item id="32257"/>
+		<item id="32258"/>
+		<item id="32259"/>
+		<item id="32260"/>
+		<item id="32261"/>
+		<item id="32262"/>
 	</tradelist>
 	<tradelist npc="-1" shop="9980">
 		<item id="6611"/>
