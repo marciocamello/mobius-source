@@ -103,6 +103,7 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 		for (int objectId : getParticipants())
 		{
 			Player player = GameObjectsStorage.getPlayer(objectId);
+			
 			if (player != null)
 			{
 				removeParticipant(player);
@@ -126,15 +127,18 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 				{
 					return "dc0014_start001.htm";
 				}
+				
 				return "dc0014_context001.htm";
 			}
 			else if (isSuccessed())
 			{
 				boolean rewardReceived = rewardReceived(player);
+				
 				if (rewardReceived)
 				{
 					return "dc0014_reward_received001.htm";
 				}
+				
 				return "dc0014_reward001.htm";
 			}
 			else
@@ -142,6 +146,7 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 				return "dc0014_failed001.htm";
 			}
 		}
+		
 		return null;
 	}
 	
@@ -153,6 +158,7 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 			addParticipant(player);
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -165,6 +171,7 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 	protected String onDialogEvent(String event, Player player)
 	{
 		String response = null;
+		
 		if (event.equals("Accept"))
 		{
 			addParticipant(player);
@@ -179,6 +186,7 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 		{
 			response = event;
 		}
+		
 		return response;
 	}
 	
@@ -216,6 +224,7 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 			{
 				NpcInstance npc = (NpcInstance) target;
 				double dist = player.getDistance(npc);
+				
 				switch (npc.getNpcId())
 				{
 					case NPC_1:
@@ -225,7 +234,9 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 							ItemFunctions.addItem(player, FIRECRACKER, Rnd.get(1, 3), true);
 							npc.doDie(player);
 						}
+						
 						break;
+					
 					case NPC_2:
 						if ((action.value == SocialAction.APPLAUD) && (dist < 50) && !npc.isDead())
 						{
@@ -233,7 +244,9 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 							ItemFunctions.addItem(player, FIRECRACKER, Rnd.get(1, 3), true);
 							npc.doDie(player);
 						}
+						
 						break;
+					
 					case NPC_3:
 						if ((action.value == SocialAction.APPLAUD) && (dist < 50) && !npc.isDead())
 						{
@@ -241,6 +254,7 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 							ItemFunctions.addItem(player, FIRECRACKER, Rnd.get(1, 3), true);
 							npc.doDie(player);
 						}
+						
 						break;
 				}
 			}
@@ -263,6 +277,7 @@ public class BatCountry extends DynamicQuest implements ScriptFile
 				NpcInstance npc = (NpcInstance) target;
 				double dist = player.getDistance(npc);
 				item = player.getInventory().getItemByItemId(FIRECRACKER);
+				
 				if ((item != null) && (dist < 70) && (npc.getNpcId() == BAT_COLONY) && !npc.isDead())
 				{
 					increaseTaskPoint(KILL_BAT_MOBS, player, 1);

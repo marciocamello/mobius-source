@@ -51,6 +51,7 @@ public class _190_LostDream extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("head_blacksmith_kusto_q0190_03.htm"))
 		{
 			st.playSound(SOUND_ACCEPT);
@@ -66,6 +67,7 @@ public class _190_LostDream extends Quest implements ScriptFile
 			st.setCond(2);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return htmltext;
 	}
 	
@@ -75,6 +77,7 @@ public class _190_LostDream extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (st.getState() == STARTED)
 		{
 			if (npcId == Kusto)
@@ -148,6 +151,7 @@ public class _190_LostDream extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -155,10 +159,12 @@ public class _190_LostDream extends Quest implements ScriptFile
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
 		QuestState qs = player.getQuestState(_187_NikolasHeart.class);
+		
 		if ((qs != null) && qs.isCompleted() && (player.getQuestState(getClass()) == null))
 		{
 			newQuestState(player, STARTED);
 		}
+		
 		return "";
 	}
 }

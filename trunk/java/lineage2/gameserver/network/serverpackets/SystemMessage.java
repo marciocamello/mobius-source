@@ -22164,15 +22164,16 @@ public class SystemMessage extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
 		
 		writeC(0x62);
-		
 		writeD(_messageId);
 		writeD(args.size());
+		
 		for (Arg e : args)
 		{
 			writeD(e.type);
@@ -22185,6 +22186,7 @@ public class SystemMessage extends L2GameServerPacket
 					writeS((String) e.obj);
 					break;
 				}
+				
 				case TYPE_NUMBER:
 				case TYPE_NPC_NAME:
 				case TYPE_ITEM_NAME:
@@ -22198,6 +22200,7 @@ public class SystemMessage extends L2GameServerPacket
 					writeD(((Number) e.obj).intValue());
 					break;
 				}
+				
 				case TYPE_SKILL_NAME:
 				{
 					int[] skill = (int[]) e.obj;
@@ -22205,11 +22208,13 @@ public class SystemMessage extends L2GameServerPacket
 					writeD(skill[1]); // level
 					break;
 				}
+				
 				case TYPE_LONG:
 				{
 					writeQ((Long) e.obj);
 					break;
 				}
+				
 				case TYPE_ZONE_NAME:
 				{
 					Location coord = (Location) e.obj;
@@ -22218,6 +22223,7 @@ public class SystemMessage extends L2GameServerPacket
 					writeD(coord.z);
 					break;
 				}
+				
 				case TYPE_UNKNOWN_8:
 				{
 					writeD(0x00); // ?
@@ -22225,6 +22231,7 @@ public class SystemMessage extends L2GameServerPacket
 					writeH(0x00); // ?
 					break;
 				}
+				
 				case TYPE_DAMAGE:
 				{
 					int[] attr = (int[]) e.obj;

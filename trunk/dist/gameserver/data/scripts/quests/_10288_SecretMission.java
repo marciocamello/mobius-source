@@ -45,7 +45,6 @@ public class _10288_SecretMission extends Quest implements ScriptFile
 	public _10288_SecretMission()
 	{
 		super(false);
-		
 		addStartNpc(_dominic);
 		addStartNpc(_aquilani);
 		addTalkId(_dominic);
@@ -58,6 +57,7 @@ public class _10288_SecretMission extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		int npcId = npc.getNpcId();
+		
 		if (npcId == _dominic)
 		{
 			if (event.equalsIgnoreCase("31350-05.htm"))
@@ -93,6 +93,7 @@ public class _10288_SecretMission extends Quest implements ScriptFile
 				return null;
 			}
 		}
+		
 		return event;
 	}
 	
@@ -101,6 +102,7 @@ public class _10288_SecretMission extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
+		
 		if (npcId == _dominic)
 		{
 			switch (st.getState())
@@ -114,7 +116,9 @@ public class _10288_SecretMission extends Quest implements ScriptFile
 					{
 						htmltext = "31350-00.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					if (st.getCond() == 1)
 					{
@@ -124,7 +128,9 @@ public class _10288_SecretMission extends Quest implements ScriptFile
 					{
 						htmltext = "31350-07.htm";
 					}
+					
 					break;
+				
 				case COMPLETED:
 					htmltext = "31350-08.htm";
 					break;
@@ -153,19 +159,23 @@ public class _10288_SecretMission extends Quest implements ScriptFile
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
 		QuestState st = player.getQuestState(getClass());
+		
 		if (st == null)
 		{
 			newQuestState(player, CREATED);
 			st = player.getQuestState(getClass());
 		}
+		
 		if (npc.getNpcId() == _aquilani)
 		{
 			if (st.getState() == COMPLETED)
 			{
 				return "32780-01.htm";
 			}
+			
 			return "32780-00.htm";
 		}
+		
 		return null;
 	}
 }

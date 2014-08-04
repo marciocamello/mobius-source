@@ -36,7 +36,7 @@ import lineage2.gameserver.utils.NpcUtils;
 public class RainbowGourdInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -65,6 +65,7 @@ public class RainbowGourdInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		reduceCurrentHp(getMaxHp() * 0.2, 0, character, null, false, false, false, false, false, false, false);
 	}
 	
@@ -77,6 +78,7 @@ public class RainbowGourdInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		setCurrentHp(getCurrentHp() + (getMaxHp() * 0.2), false);
 	}
 	
@@ -90,6 +92,7 @@ public class RainbowGourdInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		final double currentHp = getCurrentHp();
 		setCurrentHp(npc.getCurrentHp(), false);
 		npc.setCurrentHp(currentHp, false);
@@ -104,24 +107,30 @@ public class RainbowGourdInstance extends NpcInstance
 	{
 		super.onDeath(killer);
 		ClanHallMiniGameEvent miniGameEvent = getEvent(ClanHallMiniGameEvent.class);
+		
 		if (miniGameEvent == null)
 		{
 			return;
 		}
+		
 		Player player = killer.getPlayer();
 		CMGSiegeClanObject siegeClanObject = miniGameEvent.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
+		
 		if (siegeClanObject == null)
 		{
 			return;
 		}
+		
 		_winner = siegeClanObject;
 		List<CMGSiegeClanObject> attackers = miniGameEvent.getObjects(SiegeEvent.ATTACKERS);
+		
 		for (int i = 0; i < attackers.size(); i++)
 		{
 			if (attackers.get(i) == siegeClanObject)
 			{
 				continue;
 			}
+			
 			String arenaName = "arena_" + i;
 			SpawnExObject spawnEx = miniGameEvent.getFirstObject(arenaName);
 			RainbowYetiInstance yetiInstance = (RainbowYetiInstance) spawnEx.getSpawns().get(0).getFirstSpawned();
@@ -138,14 +147,17 @@ public class RainbowGourdInstance extends NpcInstance
 	{
 		super.onDecay();
 		final ClanHallMiniGameEvent miniGameEvent = getEvent(ClanHallMiniGameEvent.class);
+		
 		if (miniGameEvent == null)
 		{
 			return;
 		}
+		
 		if (_winner == null)
 		{
 			return;
 		}
+		
 		List<CMGSiegeClanObject> attackers = miniGameEvent.getObjects(SiegeEvent.ATTACKERS);
 		int index = attackers.indexOf(_winner);
 		String arenaName = "arena_" + index;
@@ -162,10 +174,12 @@ public class RainbowGourdInstance extends NpcInstance
 			{
 				List<Player> around = World.getAroundPlayers(npc, 750, 100);
 				npc.deleteMe();
+				
 				for (Player player : around)
 				{
 					player.teleToLocation(miniGameEvent.getResidence().getOwnerRestartPoint());
 				}
+				
 				miniGameEvent.processStep(_winner.getClan());
 			}
 		}, 10000L);

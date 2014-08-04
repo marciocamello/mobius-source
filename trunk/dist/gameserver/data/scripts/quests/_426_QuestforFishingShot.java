@@ -342,10 +342,12 @@ public class _426_QuestforFishingShot extends Quest implements ScriptFile
 	public _426_QuestforFishingShot()
 	{
 		super(true);
+		
 		for (int npcId = 31562; npcId <= 31579; npcId++)
 		{
 			addStartNpc(npcId);
 		}
+		
 		addStartNpc(31696);
 		addStartNpc(31697);
 		addStartNpc(31989);
@@ -358,6 +360,7 @@ public class _426_QuestforFishingShot extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("4.htm"))
 		{
 			st.setState(STARTED);
@@ -369,6 +372,7 @@ public class _426_QuestforFishingShot extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -378,6 +382,7 @@ public class _426_QuestforFishingShot extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int condition = st.getCond();
 		int id = st.getState();
+		
 		if (id == CREATED)
 		{
 			htmltext = "1.htm";
@@ -386,6 +391,7 @@ public class _426_QuestforFishingShot extends Quest implements ScriptFile
 		{
 			htmltext = "2.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -393,6 +399,7 @@ public class _426_QuestforFishingShot extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		if (Rnd.chance(30))
 		{
 			if (Arrays.binarySearch(HMOBS, npcId) >= 0)
@@ -403,8 +410,10 @@ public class _426_QuestforFishingShot extends Quest implements ScriptFile
 			{
 				st.giveItems(SWEET_FLUID, Rnd.get(3) + 1);
 			}
+			
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		return null;
 	}
 }

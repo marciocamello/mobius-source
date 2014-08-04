@@ -70,6 +70,7 @@ public class RuinsOfEsagiraMovie implements ScriptFile
 	{
 		_zoneListener = new ZoneListener();
 		Zone zone = ReflectionUtils.getZone(ZONE_NAME);
+		
 		if (zone != null)
 		{
 			zone.addListener(_zoneListener);
@@ -93,6 +94,7 @@ public class RuinsOfEsagiraMovie implements ScriptFile
 			if (cha.isPlayer())
 			{
 				Player player = cha.getPlayer();
+				
 				if (!player.getVarB("@roe_present_video"))
 				{
 					player.showQuestMovie(SceneMovie.si_illusion_03_que);

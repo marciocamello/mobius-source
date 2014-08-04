@@ -83,6 +83,7 @@ public class March8Event extends GlobalEvent
 	public void reCalcNextTime(boolean onInit)
 	{
 		clearActions();
+		
 		if (onInit)
 		{
 			_calendar.set(Calendar.MONTH, Calendar.MARCH);
@@ -90,6 +91,7 @@ public class March8Event extends GlobalEvent
 			_calendar.set(Calendar.HOUR_OF_DAY, 0);
 			_calendar.set(Calendar.MINUTE, 0);
 			_calendar.set(Calendar.SECOND, 0);
+			
 			if ((_calendar.getTimeInMillis() + LENGTH) < System.currentTimeMillis())
 			{
 				_calendar.add(Calendar.YEAR, 1);
@@ -99,6 +101,7 @@ public class March8Event extends GlobalEvent
 		{
 			_calendar.add(Calendar.YEAR, 1);
 		}
+		
 		registerActions();
 	}
 	

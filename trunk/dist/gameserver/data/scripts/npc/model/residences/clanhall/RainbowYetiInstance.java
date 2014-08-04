@@ -41,7 +41,7 @@ import lineage2.gameserver.utils.ItemFunctions;
 public class RainbowYetiInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -192,6 +192,7 @@ public class RainbowYetiInstance extends NpcInstance
 			Word word = WORLD_LIST[_generated];
 			List<Player> around = World.getAroundPlayers(RainbowYetiInstance.this, 750, 100);
 			ExShowScreenMessage msg = new ExShowScreenMessage(NpcString.NONE, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, word.getName());
+			
 			for (Player player : around)
 			{
 				player.sendPacket(msg);
@@ -462,19 +463,24 @@ public class RainbowYetiInstance extends NpcInstance
 	{
 		super.onSpawn();
 		ClanHallMiniGameEvent event = getEvent(ClanHallMiniGameEvent.class);
+		
 		if (event == null)
 		{
 			return;
 		}
+		
 		List<Player> around = World.getAroundPlayers(this, 750, 100);
+		
 		for (Player player : around)
 		{
 			CMGSiegeClanObject siegeClanObject = event.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
+			
 			if ((siegeClanObject == null) || !siegeClanObject.getPlayers().contains(player.getObjectId()))
 			{
 				player.teleToLocation(event.getResidence().getOtherRestartPoint());
 			}
 		}
+		
 		_task = ThreadPoolManager.getInstance().scheduleAtFixedRate(new GenerateTask(), 10000L, 300000L);
 	}
 	
@@ -485,15 +491,18 @@ public class RainbowYetiInstance extends NpcInstance
 	public void onDelete()
 	{
 		super.onDelete();
+		
 		if (_task != null)
 		{
 			_task.cancel(false);
 			_task = null;
 		}
+		
 		for (GameObject object : _mobs)
 		{
 			object.deleteMe();
 		}
+		
 		_mobs.clear();
 	}
 	
@@ -503,11 +512,14 @@ public class RainbowYetiInstance extends NpcInstance
 	public void teleportFromArena()
 	{
 		ClanHallMiniGameEvent event = getEvent(ClanHallMiniGameEvent.class);
+		
 		if (event == null)
 		{
 			return;
 		}
+		
 		List<Player> around = World.getAroundPlayers(this, 750, 100);
+		
 		for (Player player : around)
 		{
 			player.teleToLocation(event.getResidence().getOtherRestartPoint());
@@ -526,10 +538,12 @@ public class RainbowYetiInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("get"))
 		{
 			NpcHtmlMessage msg = new NpcHtmlMessage(player, this);
 			boolean has = true;
+			
 			if (_generated == -1)
 			{
 				has = false;
@@ -537,6 +551,7 @@ public class RainbowYetiInstance extends NpcInstance
 			else
 			{
 				Word word = WORLD_LIST[_generated];
+				
 				for (int[] itemInfo : word.getItems())
 				{
 					if (player.getInventory().getCountOf(itemInfo[0]) < itemInfo[1])
@@ -544,6 +559,7 @@ public class RainbowYetiInstance extends NpcInstance
 						has = false;
 					}
 				}
+				
 				if (has)
 				{
 					for (int[] itemInfo : word.getItems())
@@ -553,7 +569,9 @@ public class RainbowYetiInstance extends NpcInstance
 							return;
 						}
 					}
+					
 					int rnd = Rnd.get(100);
+					
 					if ((_generated >= 0) && (_generated <= 5))
 					{
 						if (rnd < 70)
@@ -594,6 +612,7 @@ public class RainbowYetiInstance extends NpcInstance
 					}
 				}
 			}
+			
 			if (!has)
 			{
 				msg.setFile("residence2/clanhall/watering_manager002.htm");
@@ -602,12 +621,14 @@ public class RainbowYetiInstance extends NpcInstance
 			{
 				msg.setFile("residence2/clanhall/watering_manager004.htm");
 			}
+			
 			player.sendPacket(msg);
 		}
 		else if (command.equalsIgnoreCase("see"))
 		{
 			NpcHtmlMessage msg = new NpcHtmlMessage(player, this);
 			msg.setFile("residence2/clanhall/watering_manager005.htm");
+			
 			if (_generated == -1)
 			{
 				msg.replaceNpcString("%word%", NpcString.UNDECIDED);
@@ -616,6 +637,7 @@ public class RainbowYetiInstance extends NpcInstance
 			{
 				msg.replace("%word%", WORLD_LIST[_generated].getName());
 			}
+			
 			player.sendPacket(msg);
 		}
 		else
@@ -632,10 +654,12 @@ public class RainbowYetiInstance extends NpcInstance
 	private void addItem(Player player, int itemId)
 	{
 		ClanHallMiniGameEvent event = getEvent(ClanHallMiniGameEvent.class);
+		
 		if (event == null)
 		{
 			return;
 		}
+		
 		ItemInstance item = ItemFunctions.createItem(itemId);
 		item.addEvent(event);
 		player.getInventory().addItem(item);

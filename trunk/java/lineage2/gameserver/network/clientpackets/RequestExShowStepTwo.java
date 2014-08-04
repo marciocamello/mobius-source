@@ -45,15 +45,19 @@ public class RequestExShowStepTwo extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if ((player == null) || !Config.EX_NEW_PETITION_SYSTEM)
 		{
 			return;
 		}
+		
 		PetitionMainGroup group = PetitionGroupHolder.getInstance().getPetitionGroup(_petitionGroupId);
+		
 		if (group == null)
 		{
 			return;
 		}
+		
 		player.setPetitionGroup(group);
 		player.sendPacket(new ExResponseShowStepTwo(player, group));
 	}

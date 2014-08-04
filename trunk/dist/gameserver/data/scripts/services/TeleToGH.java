@@ -59,6 +59,7 @@ public class TeleToGH extends Functions implements ScriptFile
 		{
 			return;
 		}
+		
 		ReflectionManager.GIRAN_HARBOR.setCoreLoc(new Location(47416, 186568, -3480));
 		SimpleSpawner spawn = new SimpleSpawner(30086);
 		spawn.setLocx(48059);
@@ -160,10 +161,12 @@ public class TeleToGH extends Functions implements ScriptFile
 	public void onReload()
 	{
 		_zone.removeListener(_zoneListener);
+		
 		for (SimpleSpawner spawn : _spawns)
 		{
 			spawn.deleteAll();
 		}
+		
 		_spawns.clear();
 	}
 	
@@ -183,14 +186,17 @@ public class TeleToGH extends Functions implements ScriptFile
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		if (!NpcInstance.canBypassCheck(player, npc))
 		{
 			return;
 		}
+		
 		player.setVar("backCoords", player.getLoc().toXYZString(), -1);
 		player.teleToLocation(Location.findPointToStay(_zone.getSpawn(), 30, 200, ReflectionManager.GIRAN_HARBOR.getGeoIndex()), ReflectionManager.GIRAN_HARBOR);
 	}
@@ -202,20 +208,25 @@ public class TeleToGH extends Functions implements ScriptFile
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		if (!NpcInstance.canBypassCheck(player, npc))
 		{
 			return;
 		}
+		
 		String var = player.getVar("backCoords");
+		
 		if ((var == null) || var.equals(""))
 		{
 			teleOut();
 			return;
 		}
+		
 		player.teleToLocation(Location.parseLoc(var), 0);
 	}
 	
@@ -226,10 +237,12 @@ public class TeleToGH extends Functions implements ScriptFile
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		player.teleToLocation(46776, 185784, -3528, 0);
 		show("I don't know from where you came here, but I can teleport you the another border side.", player, npc);
 	}
@@ -435,11 +448,14 @@ public class TeleToGH extends Functions implements ScriptFile
 		{
 			return "";
 		}
+		
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return "";
 		}
+		
 		return "<br>[scripts_services.TeleToGH:toGH @811;Giran Harbor|\"I want free admission to Giran Harbor.\"]";
 	}
 	
@@ -464,11 +480,14 @@ public class TeleToGH extends Functions implements ScriptFile
 		{
 			return "";
 		}
+		
 		Player player = getSelf();
+		
 		if ((player == null) || (player.getReflectionId() != -2))
 		{
 			return "";
 		}
+		
 		return "<br>[scripts_services.ManaRegen:DoManaRegen|Full MP Regeneration. (1 MP for 5 Adena)]<br>[scripts_services.TeleToGH:fromGH @811;From Giran Harbor|\"Exit the Giran Harbor.\"]<br>";
 	}
 	
@@ -498,6 +517,7 @@ public class TeleToGH extends Functions implements ScriptFile
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
 			Player player = cha.getPlayer();
+			
 			if (player != null)
 			{
 				if (Config.SERVICES_GIRAN_HARBOR_ENABLED && (player.getReflection() == ReflectionManager.GIRAN_HARBOR) && player.isVisible())

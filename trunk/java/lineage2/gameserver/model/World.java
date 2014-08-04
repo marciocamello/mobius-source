@@ -138,6 +138,7 @@ public class World
 		{
 			x = REGIONS_X;
 		}
+		
 		return x;
 	}
 	
@@ -156,6 +157,7 @@ public class World
 		{
 			y = REGIONS_Y;
 		}
+		
 		return y;
 	}
 	
@@ -174,6 +176,7 @@ public class World
 		{
 			z = REGIONS_Z;
 		}
+		
 		return z;
 	}
 	
@@ -192,6 +195,7 @@ public class World
 		{
 			x = MAP_MAX_X - 1;
 		}
+		
 		return x;
 	}
 	
@@ -210,6 +214,7 @@ public class World
 		{
 			y = MAP_MAX_Y - 1;
 		}
+		
 		return y;
 	}
 	
@@ -228,6 +233,7 @@ public class World
 		{
 			z = MAP_MAX_Z - 1;
 		}
+		
 		return z;
 	}
 	
@@ -308,17 +314,20 @@ public class World
 		WorldRegion[][][] regions = getRegions();
 		WorldRegion region = null;
 		region = regions[x][y][z];
+		
 		if (region == null)
 		{
 			synchronized (regions)
 			{
 				region = regions[x][y][z];
+				
 				if (region == null)
 				{
 					region = regions[x][y][z] = new WorldRegion(x, y, z);
 				}
 			}
 		}
+		
 		return region;
 	}
 	
@@ -353,16 +362,20 @@ public class World
 		{
 			return;
 		}
+		
 		WorldRegion region = getRegion(object);
 		WorldRegion currentRegion = object.getCurrentRegion();
+		
 		if (currentRegion == region)
 		{
 			return;
 		}
+		
 		if (currentRegion == null)
 		{
 			object.setCurrentRegion(region);
 			region.addObject(object);
+			
 			for (int x = validX(region.getX() - 1); x <= validX(region.getX() + 1); x++)
 			{
 				for (int y = validY(region.getY() - 1); y <= validY(region.getY() + 1); y++)
@@ -379,6 +392,7 @@ public class World
 			currentRegion.removeObject(object);
 			object.setCurrentRegion(region);
 			region.addObject(object);
+			
 			for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 			{
 				for (int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -392,6 +406,7 @@ public class World
 					}
 				}
 			}
+			
 			for (int x = validX(region.getX() - 1); x <= validX(region.getX() + 1); x++)
 			{
 				for (int y = validY(region.getY() - 1); y <= validY(region.getY() + 1); y++)
@@ -418,13 +433,17 @@ public class World
 		{
 			return;
 		}
+		
 		WorldRegion currentRegion;
+		
 		if ((currentRegion = object.getCurrentRegion()) == null)
 		{
 			return;
 		}
+		
 		object.setCurrentRegion(null);
 		currentRegion.removeObject(object);
+		
 		for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 		{
 			for (int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -446,10 +465,12 @@ public class World
 	public static GameObject getAroundObjectById(GameObject object, int objId)
 	{
 		WorldRegion currentRegion = object.getCurrentRegion();
+		
 		if (currentRegion == null)
 		{
 			return null;
 		}
+		
 		for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 		{
 			for (int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -466,6 +487,7 @@ public class World
 				}
 			}
 		}
+		
 		return null;
 	}
 	
@@ -477,13 +499,16 @@ public class World
 	public static List<GameObject> getAroundObjects(GameObject object)
 	{
 		WorldRegion currentRegion = object.getCurrentRegion();
+		
 		if (currentRegion == null)
 		{
 			return Collections.emptyList();
 		}
+		
 		int oid = object.getObjectId();
 		int rid = object.getReflectionId();
 		List<GameObject> result = new LazyArrayList<>(128);
+		
 		for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 		{
 			for (int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -496,11 +521,13 @@ public class World
 						{
 							continue;
 						}
+						
 						result.add(obj);
 					}
 				}
 			}
 		}
+		
 		return result;
 	}
 	
@@ -514,10 +541,12 @@ public class World
 	public static List<GameObject> getAroundObjects(GameObject object, int radius, int height)
 	{
 		WorldRegion currentRegion = object.getCurrentRegion();
+		
 		if (currentRegion == null)
 		{
 			return Collections.emptyList();
 		}
+		
 		int oid = object.getObjectId();
 		int rid = object.getReflectionId();
 		int ox = object.getX();
@@ -525,6 +554,7 @@ public class World
 		int oz = object.getZ();
 		int sqrad = radius * radius;
 		List<GameObject> result = new LazyArrayList<>(128);
+		
 		for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 		{
 			for (int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -537,29 +567,37 @@ public class World
 						{
 							continue;
 						}
+						
 						if (Math.abs(obj.getZ() - oz) > height)
 						{
 							continue;
 						}
+						
 						int dx = Math.abs(obj.getX() - ox);
+						
 						if (dx > radius)
 						{
 							continue;
 						}
+						
 						int dy = Math.abs(obj.getY() - oy);
+						
 						if (dy > radius)
 						{
 							continue;
 						}
+						
 						if (((dx * dx) + (dy * dy)) > sqrad)
 						{
 							continue;
 						}
+						
 						result.add(obj);
 					}
 				}
 			}
 		}
+		
 		return result;
 	}
 	
@@ -571,13 +609,16 @@ public class World
 	public static List<Creature> getAroundCharacters(GameObject object)
 	{
 		WorldRegion currentRegion = object.getCurrentRegion();
+		
 		if (currentRegion == null)
 		{
 			return Collections.emptyList();
 		}
+		
 		int oid = object.getObjectId();
 		int rid = object.getReflectionId();
 		List<Creature> result = new LazyArrayList<>(64);
+		
 		for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 		{
 			for (int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -590,11 +631,13 @@ public class World
 						{
 							continue;
 						}
+						
 						result.add((Creature) obj);
 					}
 				}
 			}
 		}
+		
 		return result;
 	}
 	
@@ -608,10 +651,12 @@ public class World
 	public static List<Creature> getAroundCharacters(GameObject object, int radius, int height)
 	{
 		WorldRegion currentRegion = object.getCurrentRegion();
+		
 		if (currentRegion == null)
 		{
 			return Collections.emptyList();
 		}
+		
 		int oid = object.getObjectId();
 		int rid = object.getReflectionId();
 		int ox = object.getX();
@@ -619,6 +664,7 @@ public class World
 		int oz = object.getZ();
 		int sqrad = radius * radius;
 		List<Creature> result = new LazyArrayList<>(64);
+		
 		for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 		{
 			for (int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -631,29 +677,37 @@ public class World
 						{
 							continue;
 						}
+						
 						if (Math.abs(obj.getZ() - oz) > height)
 						{
 							continue;
 						}
+						
 						int dx = Math.abs(obj.getX() - ox);
+						
 						if (dx > radius)
 						{
 							continue;
 						}
+						
 						int dy = Math.abs(obj.getY() - oy);
+						
 						if (dy > radius)
 						{
 							continue;
 						}
+						
 						if (((dx * dx) + (dy * dy)) > sqrad)
 						{
 							continue;
 						}
+						
 						result.add((Creature) obj);
 					}
 				}
 			}
 		}
+		
 		return result;
 	}
 	
@@ -665,13 +719,16 @@ public class World
 	public static List<NpcInstance> getAroundNpc(GameObject object)
 	{
 		WorldRegion currentRegion = object.getCurrentRegion();
+		
 		if (currentRegion == null)
 		{
 			return Collections.emptyList();
 		}
+		
 		int oid = object.getObjectId();
 		int rid = object.getReflectionId();
 		List<NpcInstance> result = new LazyArrayList<>(64);
+		
 		for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 		{
 			for (int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -684,11 +741,13 @@ public class World
 						{
 							continue;
 						}
+						
 						result.add((NpcInstance) obj);
 					}
 				}
 			}
 		}
+		
 		return result;
 	}
 	
@@ -702,10 +761,12 @@ public class World
 	public static List<NpcInstance> getAroundNpc(GameObject object, int radius, int height)
 	{
 		WorldRegion currentRegion = object.getCurrentRegion();
+		
 		if (currentRegion == null)
 		{
 			return Collections.emptyList();
 		}
+		
 		int oid = object.getObjectId();
 		int rid = object.getReflectionId();
 		int ox = object.getX();
@@ -713,6 +774,7 @@ public class World
 		int oz = object.getZ();
 		int sqrad = radius * radius;
 		List<NpcInstance> result = new LazyArrayList<>(64);
+		
 		for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 		{
 			for (int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -725,29 +787,37 @@ public class World
 						{
 							continue;
 						}
+						
 						if (Math.abs(obj.getZ() - oz) > height)
 						{
 							continue;
 						}
+						
 						int dx = Math.abs(obj.getX() - ox);
+						
 						if (dx > radius)
 						{
 							continue;
 						}
+						
 						int dy = Math.abs(obj.getY() - oy);
+						
 						if (dy > radius)
 						{
 							continue;
 						}
+						
 						if (((dx * dx) + (dy * dy)) > sqrad)
 						{
 							continue;
 						}
+						
 						result.add((NpcInstance) obj);
 					}
 				}
 			}
 		}
+		
 		return result;
 	}
 	
@@ -759,13 +829,16 @@ public class World
 	public static List<Playable> getAroundPlayables(GameObject object)
 	{
 		WorldRegion currentRegion = object.getCurrentRegion();
+		
 		if (currentRegion == null)
 		{
 			return Collections.emptyList();
 		}
+		
 		int oid = object.getObjectId();
 		int rid = object.getReflectionId();
 		List<Playable> result = new LazyArrayList<>(64);
+		
 		for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 		{
 			for (int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -778,11 +851,13 @@ public class World
 						{
 							continue;
 						}
+						
 						result.add((Playable) obj);
 					}
 				}
 			}
 		}
+		
 		return result;
 	}
 	
@@ -796,10 +871,12 @@ public class World
 	public static List<Playable> getAroundPlayables(GameObject object, int radius, int height)
 	{
 		WorldRegion currentRegion = object.getCurrentRegion();
+		
 		if (currentRegion == null)
 		{
 			return Collections.emptyList();
 		}
+		
 		int oid = object.getObjectId();
 		int rid = object.getReflectionId();
 		int ox = object.getX();
@@ -807,6 +884,7 @@ public class World
 		int oz = object.getZ();
 		int sqrad = radius * radius;
 		List<Playable> result = new LazyArrayList<>(64);
+		
 		for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 		{
 			for (int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -819,29 +897,37 @@ public class World
 						{
 							continue;
 						}
+						
 						if (Math.abs(obj.getZ() - oz) > height)
 						{
 							continue;
 						}
+						
 						int dx = Math.abs(obj.getX() - ox);
+						
 						if (dx > radius)
 						{
 							continue;
 						}
+						
 						int dy = Math.abs(obj.getY() - oy);
+						
 						if (dy > radius)
 						{
 							continue;
 						}
+						
 						if (((dx * dx) + (dy * dy)) > sqrad)
 						{
 							continue;
 						}
+						
 						result.add((Playable) obj);
 					}
 				}
 			}
 		}
+		
 		return result;
 	}
 	
@@ -853,13 +939,16 @@ public class World
 	public static List<Player> getAroundPlayers(GameObject object)
 	{
 		WorldRegion currentRegion = object.getCurrentRegion();
+		
 		if (currentRegion == null)
 		{
 			return Collections.emptyList();
 		}
+		
 		int oid = object.getObjectId();
 		int rid = object.getReflectionId();
 		List<Player> result = new LazyArrayList<>(64);
+		
 		for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 		{
 			for (int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -872,11 +961,13 @@ public class World
 						{
 							continue;
 						}
+						
 						result.add((Player) obj);
 					}
 				}
 			}
 		}
+		
 		return result;
 	}
 	
@@ -890,10 +981,12 @@ public class World
 	public static List<Player> getAroundPlayers(GameObject object, int radius, int height)
 	{
 		WorldRegion currentRegion = object.getCurrentRegion();
+		
 		if (currentRegion == null)
 		{
 			return Collections.emptyList();
 		}
+		
 		int oid = object.getObjectId();
 		int rid = object.getReflectionId();
 		int ox = object.getX();
@@ -901,6 +994,7 @@ public class World
 		int oz = object.getZ();
 		int sqrad = radius * radius;
 		List<Player> result = new LazyArrayList<>(64);
+		
 		for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 		{
 			for (int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -913,29 +1007,37 @@ public class World
 						{
 							continue;
 						}
+						
 						if (Math.abs(obj.getZ() - oz) > height)
 						{
 							continue;
 						}
+						
 						int dx = Math.abs(obj.getX() - ox);
+						
 						if (dx > radius)
 						{
 							continue;
 						}
+						
 						int dy = Math.abs(obj.getY() - oy);
+						
 						if (dy > radius)
 						{
 							continue;
 						}
+						
 						if (((dx * dx) + (dy * dy)) > sqrad)
 						{
 							continue;
 						}
+						
 						result.add((Player) obj);
 					}
 				}
 			}
 		}
+		
 		return result;
 	}
 	
@@ -959,6 +1061,7 @@ public class World
 				}
 			}
 		}
+		
 		return true;
 	}
 	
@@ -1008,12 +1111,15 @@ public class World
 	public static void showObjectsToPlayer(Player player)
 	{
 		WorldRegion currentRegion = player.isInObserverMode() ? player.getObserverRegion() : player.getCurrentRegion();
+		
 		if (currentRegion == null)
 		{
 			return;
 		}
+		
 		int oid = player.getObjectId();
 		int rid = player.getReflectionId();
+		
 		for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 		{
 			for (int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -1026,6 +1132,7 @@ public class World
 						{
 							continue;
 						}
+						
 						player.sendPacket(player.addVisibleObject(obj, null));
 					}
 				}
@@ -1040,12 +1147,15 @@ public class World
 	public static void removeObjectsFromPlayer(Player player)
 	{
 		WorldRegion currentRegion = player.isInObserverMode() ? player.getObserverRegion() : player.getCurrentRegion();
+		
 		if (currentRegion == null)
 		{
 			return;
 		}
+		
 		int oid = player.getObjectId();
 		int rid = player.getReflectionId();
+		
 		for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 		{
 			for (int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -1058,6 +1168,7 @@ public class World
 						{
 							continue;
 						}
+						
 						player.sendPacket(player.removeVisibleObject(obj, null));
 					}
 				}
@@ -1072,14 +1183,17 @@ public class World
 	public static void removeObjectFromPlayers(GameObject object)
 	{
 		WorldRegion currentRegion = object.getCurrentRegion();
+		
 		if (currentRegion == null)
 		{
 			return;
 		}
+		
 		int oid = object.getObjectId();
 		int rid = object.getReflectionId();
 		Player p;
 		List<L2GameServerPacket> d = null;
+		
 		for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 		{
 			for (int y = validY(currentRegion.getY() - 1); y <= validY(currentRegion.getY() + 1); y++)
@@ -1092,6 +1206,7 @@ public class World
 						{
 							continue;
 						}
+						
 						p = (Player) obj;
 						p.sendPacket(p.removeVisibleObject(object, d == null ? d = object.deletePacketList() : d));
 					}
@@ -1108,11 +1223,13 @@ public class World
 	{
 		Reflection reflection = zone.getReflection();
 		Territory territory = zone.getTerritory();
+		
 		if (territory == null)
 		{
 			_log.info("World: zone - " + zone.getName() + " not has territory.");
 			return;
 		}
+		
 		for (int x = validX(regionX(territory.getXmin())); x <= validX(regionX(territory.getXmax())); x++)
 		{
 			for (int y = validY(regionY(territory.getYmin())); y <= validY(regionY(territory.getYmax())); y++)
@@ -1121,12 +1238,14 @@ public class World
 				{
 					WorldRegion region = getRegion(x, y, z);
 					region.addZone(zone);
+					
 					for (GameObject obj : region)
 					{
 						if (!obj.isCreature() || (obj.getReflection() != reflection))
 						{
 							continue;
 						}
+						
 						((Creature) obj).updateZones();
 					}
 				}
@@ -1142,11 +1261,13 @@ public class World
 	{
 		Reflection reflection = zone.getReflection();
 		Territory territory = zone.getTerritory();
+		
 		if (territory == null)
 		{
 			_log.info("World: zone - " + zone.getName() + " not has territory.");
 			return;
 		}
+		
 		for (int x = validX(regionX(territory.getXmin())); x <= validX(regionX(territory.getXmax())); x++)
 		{
 			for (int y = validY(regionY(territory.getYmin())); y <= validY(regionY(territory.getYmax())); y++)
@@ -1155,12 +1276,14 @@ public class World
 				{
 					WorldRegion region = getRegion(x, y, z);
 					region.removeZone(zone);
+					
 					for (GameObject obj : region)
 					{
 						if (!obj.isCreature() || (obj.getReflection() != reflection))
 						{
 							continue;
 						}
+						
 						((Creature) obj).updateZones();
 					}
 				}
@@ -1178,10 +1301,12 @@ public class World
 	{
 		WorldRegion region = getRegion(loc);
 		Zone[] zones = region.getZones();
+		
 		if (zones.length == 0)
 		{
 			return;
 		}
+		
 		for (Zone zone : zones)
 		{
 			if (zone.checkIfInZone(loc.x, loc.y, loc.z, reflection))
@@ -1212,10 +1337,12 @@ public class World
 	{
 		WorldRegion region = getRegion(loc);
 		Zone[] zones = region.getZones();
+		
 		if (zones.length == 0)
 		{
 			return null;
 		}
+		
 		for (Zone zone : zones)
 		{
 			if ((zone != null) && (zone.getType() == ZoneType.water) && zone.checkIfInZone(loc.x, loc.y, loc.z, reflection))
@@ -1223,6 +1350,7 @@ public class World
 				return zone;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -1234,6 +1362,7 @@ public class World
 	{
 		WorldRegion region;
 		int[] ret = new int[32];
+		
 		for (int x = 0; x <= REGIONS_X; x++)
 		{
 			for (int y = 0; y <= REGIONS_Y; y++)
@@ -1242,6 +1371,7 @@ public class World
 				{
 					ret[0]++;
 					region = _worldRegions[x][y][z];
+					
 					if (region != null)
 					{
 						if (region.isActive())
@@ -1252,16 +1382,20 @@ public class World
 						{
 							ret[2]++;
 						}
+						
 						for (GameObject obj : region)
 						{
 							ret[10]++;
+							
 							if (obj.isCreature())
 							{
 								ret[11]++;
+								
 								if (obj.isPlayer())
 								{
 									ret[12]++;
 									Player p = (Player) obj;
+									
 									if (p.isInOfflineMode())
 									{
 										ret[13]++;
@@ -1270,15 +1404,19 @@ public class World
 								else if (obj.isNpc())
 								{
 									ret[14]++;
+									
 									if (obj.isMonster())
 									{
 										ret[16]++;
+										
 										if (obj.isMinion())
 										{
 											ret[17]++;
 										}
 									}
+									
 									NpcInstance npc = (NpcInstance) obj;
+									
 									if (npc.hasAI())
 									{
 										if (npc.getAI().isActive())
@@ -1309,12 +1447,14 @@ public class World
 				}
 			}
 		}
+		
 		return ret;
 	}
 	
 	public static List<NpcInstance> getAroundNpcCor(Location loc, WorldRegion region, int reflect, int radius, int height)
 	{
 		WorldRegion currentRegion = region;
+		
 		if (currentRegion == null)
 		{
 			return new ArrayList<>(0);
@@ -1325,7 +1465,6 @@ public class World
 		int oy = loc.y;
 		int oz = loc.z;
 		int sqrad = radius * radius;
-		
 		List<NpcInstance> result = new ArrayList<>(64);
 		
 		for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
@@ -1340,20 +1479,26 @@ public class World
 						{
 							continue;
 						}
+						
 						if (Math.abs(obj.getZ() - oz) > height)
 						{
 							continue;
 						}
+						
 						int dx = Math.abs(obj.getX() - ox);
+						
 						if (dx > radius)
 						{
 							continue;
 						}
+						
 						int dy = Math.abs(obj.getY() - oy);
+						
 						if (dy > radius)
 						{
 							continue;
 						}
+						
 						if (((dx * dx) + (dy * dy)) > sqrad)
 						{
 							continue;
@@ -1364,6 +1509,7 @@ public class World
 				}
 			}
 		}
+		
 		return result;
 	}
 }

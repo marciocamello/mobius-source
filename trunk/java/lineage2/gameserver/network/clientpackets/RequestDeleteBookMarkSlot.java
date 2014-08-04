@@ -42,6 +42,7 @@ public class RequestDeleteBookMarkSlot extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar != null)
 		{
 			activeChar.bookmarks.remove(slot);

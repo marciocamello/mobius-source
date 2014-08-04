@@ -92,6 +92,7 @@ public class EnchantingReward extends Functions implements ScriptFile
 	public void buy_staff()
 	{
 		final Player player = getSelf();
+		
 		if ((getItemCount(player, MASTER_YOGI_STAFF) == 0) && (getItemCount(player, ADENA) >= STAFF_PRICE))
 		{
 			removeItem(player, ADENA, STAFF_PRICE);
@@ -114,6 +115,7 @@ public class EnchantingReward extends Functions implements ScriptFile
 		final long _curr_time = System.currentTimeMillis();
 		final String _last_use_time = player.getVar("MasterOfEnch");
 		long _remaining_time;
+		
 		if (_last_use_time != null)
 		{
 			_remaining_time = _curr_time - Long.parseLong(_last_use_time);
@@ -122,6 +124,7 @@ public class EnchantingReward extends Functions implements ScriptFile
 		{
 			_remaining_time = _reuse_time;
 		}
+		
 		if (_remaining_time >= _reuse_time)
 		{
 			if (getItemCount(player, ADENA) >= TIMED_SCROLL_PRICE)
@@ -140,6 +143,7 @@ public class EnchantingReward extends Functions implements ScriptFile
 		{
 			final int hours = (int) (_reuse_time - _remaining_time) / 3600000;
 			final int minutes = ((int) (_reuse_time - _remaining_time) % 3600000) / 60000;
+			
 			if (hours > 0)
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessage.THERE_ARE_S1_HOURSS_AND_S2_MINUTES_REMAINING_UNTIL_THE_TIME_WHEN_THE_ITEM_CAN_BE_PURCHASED);
@@ -175,6 +179,7 @@ public class EnchantingReward extends Functions implements ScriptFile
 	public void buy_scroll_1()
 	{
 		final Player player = getSelf();
+		
 		if (getItemCount(player, ADENA) >= ONE_SCROLL_PRICE)
 		{
 			removeItem(player, ADENA, ONE_SCROLL_PRICE);
@@ -193,6 +198,7 @@ public class EnchantingReward extends Functions implements ScriptFile
 	public void buy_scroll_10()
 	{
 		final Player player = getSelf();
+		
 		if (getItemCount(player, ADENA) >= TEN_SCROLLS_PRICE)
 		{
 			removeItem(player, ADENA, TEN_SCROLLS_PRICE);
@@ -212,13 +218,16 @@ public class EnchantingReward extends Functions implements ScriptFile
 	{
 		final Player player = getSelf();
 		final int Equip_Id = player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND);
+		
 		if (Equip_Id != MASTER_YOGI_STAFF)
 		{
 			show("scripts/events/MasterOfEnchanting/32599-rewardnostaff.htm", player);
 			return;
 		}
+		
 		final ItemInstance enchanteditem = player.getInventory().getItemByItemId(Equip_Id);
 		final int Ench_Lvl = enchanteditem.getEnchantLevel();
+		
 		if ((Equip_Id == MASTER_YOGI_STAFF) && (Ench_Lvl > 3))
 		{
 			switch (Ench_Lvl)
@@ -226,76 +235,98 @@ public class EnchantingReward extends Functions implements ScriptFile
 				case 4:
 					addItem(player, 6406, 1);
 					break;
+				
 				case 5:
 					addItem(player, 6406, 2);
 					addItem(player, 6407, 1);
 					break;
+				
 				case 6:
 					addItem(player, 6406, 3);
 					addItem(player, 6407, 2);
 					break;
+				
 				case 7:
 					addItem(player, HAT_SHADOW[Rnd.get(HAT_SHADOW.length)], 1);
 					break;
+				
 				case 8:
 					addItem(player, 955, 1);
 					break;
+				
 				case 9:
 					addItem(player, 955, 1);
 					addItem(player, 956, 1);
 					break;
+				
 				case 10:
 					addItem(player, 951, 1);
 					break;
+				
 				case 11:
 					addItem(player, 951, 1);
 					addItem(player, 952, 1);
 					break;
+				
 				case 12:
 					addItem(player, 948, 1);
 					break;
+				
 				case 13:
 					addItem(player, 729, 1);
 					break;
+				
 				case 14:
 					addItem(player, HAT_EVENT[Rnd.get(HAT_EVENT.length)], 1);
 					break;
+				
 				case 15:
 					addItem(player, 13992, 1);
 					break;
+				
 				case 16:
 					addItem(player, 8762, 1);
 					break;
+				
 				case 17:
 					addItem(player, 959, 1);
 					break;
+				
 				case 18:
 					addItem(player, 13991, 1);
 					break;
+				
 				case 19:
 					addItem(player, 13990, 1);
 					break;
+				
 				case 20:
 					addItem(player, SOUL_CRYSTALL[Rnd.get(SOUL_CRYSTALL.length)], 1);
 					break;
+				
 				case 21:
 					addItem(player, 8762, 1);
 					addItem(player, 8752, 1);
 					addItem(player, SOUL_CRYSTALL[Rnd.get(SOUL_CRYSTALL.length)], 1);
 					break;
+				
 				case 22:
 					addItem(player, 13989, 1);
 					break;
+				
 				case 23:
 					addItem(player, 13988, 1);
 					break;
+				
 				default:
 					if (Ench_Lvl > 23)
 					{
 						addItem(player, 13988, 1);
 					}
+					
 					break;
 			}
+			
 			removeItem(player, Equip_Id, 1);
 			show("scripts/events/MasterOfEnchanting/32599-rewardok.htm", player);
 		}

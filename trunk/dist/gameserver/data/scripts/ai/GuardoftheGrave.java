@@ -66,11 +66,13 @@ public class GuardoftheGrave extends Fighter
 	protected boolean checkTarget(Creature target, int range)
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((actor != null) && (target != null) && !actor.isInRange(target, actor.getAggroRange()))
 		{
 			actor.getAggroList().remove(target, true);
 			return false;
 		}
+		
 		return super.checkTarget(target, range);
 	}
 	

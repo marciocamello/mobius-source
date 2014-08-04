@@ -69,6 +69,7 @@ public final class GardenDoorInstance extends NpcInstance
 			{
 				timeRespwn1 = System.currentTimeMillis();
 			}
+			
 			if (player.getInventory().getItemByItemId(APHROS_KEY) == null)
 			{
 				showChatWindow(player, "aphros/aphros_door_nokey.htm");
@@ -109,6 +110,7 @@ public final class GardenDoorInstance extends NpcInstance
 			{
 				timeRespwn2 = System.currentTimeMillis();
 			}
+			
 			if (System.currentTimeMillis() >= timeRespwn2)
 			{
 				timeRespwn2 = System.currentTimeMillis() + 14400000;
@@ -127,6 +129,7 @@ public final class GardenDoorInstance extends NpcInstance
 			{
 				timeRespwn3 = System.currentTimeMillis();
 			}
+			
 			if (System.currentTimeMillis() >= timeRespwn3)
 			{
 				timeRespwn3 = System.currentTimeMillis() + 14400000;
@@ -145,6 +148,7 @@ public final class GardenDoorInstance extends NpcInstance
 			{
 				timeRespwn4 = System.currentTimeMillis();
 			}
+			
 			if (System.currentTimeMillis() >= timeRespwn4)
 			{
 				timeRespwn4 = System.currentTimeMillis() + 14400000;
@@ -166,7 +170,7 @@ public final class GardenDoorInstance extends NpcInstance
 	private class runDoorOpener extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public runDoorOpener()
 		{

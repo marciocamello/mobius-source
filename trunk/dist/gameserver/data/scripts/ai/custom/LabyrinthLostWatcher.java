@@ -44,6 +44,7 @@ public class LabyrinthLostWatcher extends Fighter
 	{
 		final NpcInstance actor = getActor();
 		final Reflection r = actor.getReflection();
+		
 		if (!r.isDefault())
 		{
 			if (checkMates(actor.getNpcId()))
@@ -54,6 +55,7 @@ public class LabyrinthLostWatcher extends Fighter
 				}
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 	
@@ -71,6 +73,7 @@ public class LabyrinthLostWatcher extends Fighter
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
@@ -87,6 +90,7 @@ public class LabyrinthLostWatcher extends Fighter
 				return n;
 			}
 		}
+		
 		return null;
 	}
 }

@@ -37,22 +37,28 @@ public class RequestWithDrawalParty extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		Party party = activeChar.getParty();
+		
 		if (party == null)
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (activeChar.isInOlympiadMode())
 		{
 			activeChar.sendMessage("Вы не можете �?ейча�? выйти из группы.");
 			return;
 		}
+		
 		Reflection r = activeChar.getParty().getReflection();
+		
 		if ((r != null) && activeChar.isInCombat())
 		{
 			activeChar.sendMessage("Вы не можете �?ейча�? выйти из группы.");

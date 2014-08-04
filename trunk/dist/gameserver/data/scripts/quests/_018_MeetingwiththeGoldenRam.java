@@ -50,6 +50,7 @@ public class _018_MeetingwiththeGoldenRam extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("warehouse_chief_donal_q0018_0104.htm"))
 		{
 			st.setCond(1);
@@ -70,6 +71,7 @@ public class _018_MeetingwiththeGoldenRam extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -79,6 +81,7 @@ public class _018_MeetingwiththeGoldenRam extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == 31314)
 		{
 			if (cond == 0)
@@ -116,6 +119,7 @@ public class _018_MeetingwiththeGoldenRam extends Quest implements ScriptFile
 				htmltext = "supplier_abercrombie_q0018_0201.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

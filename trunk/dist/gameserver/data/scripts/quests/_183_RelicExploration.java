@@ -53,6 +53,7 @@ public class _183_RelicExploration extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		Player player = st.getPlayer();
+		
 		if (event.equalsIgnoreCase("30512-03.htm"))
 		{
 			st.playSound(SOUND_ACCEPT);
@@ -67,6 +68,7 @@ public class _183_RelicExploration extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("Contract"))
 		{
 			Quest q1 = QuestManager.getQuest(_184_NikolasCooperationContract.class);
+			
 			if (q1 != null)
 			{
 				st.giveItems(ADENA_ID, 26866);
@@ -75,11 +77,13 @@ public class _183_RelicExploration extends Quest implements ScriptFile
 				st.playSound(SOUND_MIDDLE);
 				st.exitCurrentQuest(false);
 			}
+			
 			return null;
 		}
 		else if (event.equalsIgnoreCase("Consideration"))
 		{
 			Quest q2 = QuestManager.getQuest(_185_NikolasCooperationConsideration.class);
+			
 			if (q2 != null)
 			{
 				st.giveItems(ADENA_ID, 18100);
@@ -88,8 +92,10 @@ public class _183_RelicExploration extends Quest implements ScriptFile
 				st.playSound(SOUND_MIDDLE);
 				st.exitCurrentQuest(false);
 			}
+			
 			return null;
 		}
+		
 		return htmltext;
 	}
 	
@@ -99,6 +105,7 @@ public class _183_RelicExploration extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Kusto)
 		{
 			if (st.getState() == CREATED)
@@ -132,6 +139,7 @@ public class _183_RelicExploration extends Quest implements ScriptFile
 		{
 			htmltext = "30621-01.htm";
 		}
+		
 		return htmltext;
 	}
 }

@@ -71,19 +71,24 @@ public class ItemInfoCache
 	{
 		Element element = cache.get(objectId);
 		ItemInfo info = null;
+		
 		if (element != null)
 		{
 			info = (ItemInfo) element.getObjectValue();
 		}
+		
 		Player player = null;
+		
 		if (info != null)
 		{
 			player = World.getPlayer(info.getOwnerId());
 			ItemInstance item = null;
+			
 			if (player != null)
 			{
 				item = player.getInventory().getItemByObjectId(objectId);
 			}
+			
 			if (item != null)
 			{
 				if (item.getItemId() == info.getItemId())
@@ -92,6 +97,7 @@ public class ItemInfoCache
 				}
 			}
 		}
+		
 		return info;
 	}
 }

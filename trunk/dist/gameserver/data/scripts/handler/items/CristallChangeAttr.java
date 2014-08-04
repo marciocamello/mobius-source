@@ -58,33 +58,42 @@ public class CristallChangeAttr extends ScriptItemHandler
 		{
 			return false;
 		}
+		
 		final Player player = (Player) playable;
+		
 		if (player.getPrivateStoreType() != Player.STORE_PRIVATE_NONE)
 		{
 			player.sendPacket(SystemMsg.YOU_CAN_NOT_CHANGE_THE_ATTRIBUTE_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
 			return false;
 		}
+		
 		switch (item.getItemId())
 		{
 			case 33502:
 				sendAttributeItemList(item.getItemId(), player, ItemTemplate.Grade.S, ItemTemplate.Grade.S80);
 				break;
+			
 			case 33833:
 				sendAttributeItemList(item.getItemId(), player, ItemTemplate.Grade.S);
 				break;
+			
 			case 33834:
 				sendAttributeItemList(item.getItemId(), player, ItemTemplate.Grade.S80);
 				break;
+			
 			case 33835:
 				sendAttributeItemList(item.getItemId(), player, ItemTemplate.Grade.R);
 				break;
+			
 			case 33836:
 				sendAttributeItemList(item.getItemId(), player, ItemTemplate.Grade.R95);
 				break;
+			
 			case 33837:
 				sendAttributeItemList(item.getItemId(), player, ItemTemplate.Grade.R99);
 				break;
 		}
+		
 		return true;
 	}
 	
@@ -99,6 +108,7 @@ public class CristallChangeAttr extends ScriptItemHandler
 	{
 		final List<ItemInfo> itemsList = new ArrayList<>();
 		final ItemInstance[] items = player.getInventory().getItems();
+		
 		for (ItemInstance item : items)
 		{
 			if (item.isWeapon() && (item.getAttackElementValue() > 0))
@@ -109,11 +119,13 @@ public class CristallChangeAttr extends ScriptItemHandler
 				}
 			}
 		}
+		
 		if (itemsList.size() == 0)
 		{
 			player.sendPacket(SystemMsg.THE_ITEM_FOR_CHANGING_AN_ATTRIBUTE_DOES_NOT_EXIST);
 			return false;
 		}
+		
 		player.sendPacket(new ExChangeAttributeItemList(itemId, itemsList.toArray(new ItemInfo[itemsList.size()])));
 		return true;
 	}

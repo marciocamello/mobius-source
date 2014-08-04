@@ -34,7 +34,6 @@ public class PartySubstituteTask extends RunnableImpl
 	{
 		ConcurrentMap<Player, Integer> _wPlayers = PartySubstitute.getInstance().getWaitingPlayer();
 		Set<Player> _wPartys = PartySubstitute.getInstance().getWaitingParty();
-		
 		Set<Entry<Player, Integer>> sets = _wPlayers.entrySet();
 		
 		for (Entry<Player, Integer> e : sets)
@@ -59,10 +58,10 @@ public class PartySubstituteTask extends RunnableImpl
 					
 					new Request(L2RequestType.SUBSTITUTE, p, pp).setTimeout(10000L);
 					pp.sendPacket(new ExRegistWaitingSubstituteOk(p.getParty(), p));
-					
 					break;
 				}
 			}
+			
 			PartySubstitute.getInstance().updatePlayerToReplace(p, e.getValue() + 1);
 		}
 	}

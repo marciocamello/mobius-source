@@ -96,89 +96,111 @@ public class AdminAnnouncements implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		if (!activeChar.getPlayerAccess().CanAnnounce)
 		{
 			return false;
 		}
+		
 		switch (command)
 		{
 			case admin_list_announcements:
 				listAnnouncements(activeChar);
 				break;
+			
 			case admin_announce_menu:
 				Announcements.getInstance().announceToAll(fullString.substring(20));
 				listAnnouncements(activeChar);
 				break;
+			
 			case admin_announce_announcements:
 				for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 				{
 					Announcements.getInstance().showAnnouncements(player);
 				}
+				
 				listAnnouncements(activeChar);
 				break;
+			
 			case admin_add_announcement:
 				if (wordList.length < 3)
 				{
 					return false;
 				}
+				
 				try
 				{
 					int time = Integer.parseInt(wordList[1]);
 					StringBuilder builder = new StringBuilder();
+					
 					for (int i = 2; i < wordList.length; i++)
 					{
 						builder.append(' ').append(wordList[i]);
 					}
+					
 					Announcements.getInstance().addAnnouncement(time, builder.toString(), true);
 					listAnnouncements(activeChar);
 				}
 				catch (Exception e)
 				{
 				}
+				
 				break;
+			
 			case admin_del_announcement:
 				if (wordList.length != 2)
 				{
 					return false;
 				}
+				
 				int val = Integer.parseInt(wordList[1]);
 				Announcements.getInstance().delAnnouncement(val);
 				listAnnouncements(activeChar);
 				break;
+			
 			case admin_announce:
 				Announcements.getInstance().announceToAll(fullString.substring(15));
 				break;
+			
 			case admin_a:
 				Announcements.getInstance().announceToAll(fullString.substring(8));
 				break;
+			
 			case admin_crit_announce:
 			case admin_c:
 				if (wordList.length < 2)
 				{
 					return false;
 				}
+				
 				Announcements.getInstance().announceToAll(activeChar.getName() + ": " + fullString.replaceFirst("admin_crit_announce ", "").replaceFirst("admin_c ", ""), ChatType.CRITICAL_ANNOUNCE);
 				break;
+			
 			case admin_toscreen:
 			case admin_s:
 				if (wordList.length < 2)
 				{
 					return false;
 				}
+				
 				String text = activeChar.getName() + ": " + fullString.replaceFirst("admin_toscreen ", "").replaceFirst("admin_s ", "");
 				int time = 3000 + (text.length() * 100);
 				ExShowScreenMessage sm = new ExShowScreenMessage(text, time, ScreenMessageAlign.TOP_CENTER, text.length() < 64);
+				
 				for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 				{
 					player.sendPacket(sm);
 				}
+				
 				break;
+			
 			case admin_reload_announcements:
 				Announcements.getInstance().loadAnnouncements();
 				listAnnouncements(activeChar);
 				activeChar.sendMessage("Announcements reloaded.");
 				break;
 		}
+		
 		return true;
 	}
 	
@@ -207,12 +229,14 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		replyMSG.append("<button value=\"Broadcast\" action=\"bypass -h admin_announce_announcements\" width=70 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\">");
 		replyMSG.append("</td></tr></table></center>");
 		replyMSG.append("<br>");
+		
 		for (int i = 0; i < announcements.size(); i++)
 		{
 			Announcements.Announce announce = announcements.get(i);
 			replyMSG.append("<table width=260><tr><td width=180>" + announce.getAnnounce() + "</td><td width=40>" + announce.getTime() + "</td><<td width=40>");
 			replyMSG.append("<button value=\"Delete\" action=\"bypass -h admin_del_announcement " + i + "\" width=60 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr></table>");
 		}
+		
 		replyMSG.append("</body></html>");
 		adminReply.setHtml(replyMSG.toString());
 		activeChar.sendPacket(adminReply);

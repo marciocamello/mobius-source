@@ -45,16 +45,20 @@ public class TeleToStakatoNest extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		QuestState qs = player.getQuestState(_240_ImTheOnlyOneYouCanTrust.class);
+		
 		if ((qs == null) || !qs.isCompleted())
 		{
 			show("scripts/services/TeleToStakatoNest-no.htm", player);
 			return;
 		}
+		
 		show("scripts/services/TeleToStakatoNest.htm", player);
 	}
 	
@@ -66,16 +70,20 @@ public class TeleToStakatoNest extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		if (args.length != 1)
 		{
 			return;
 		}
+		
 		Location loc = teleports[Integer.parseInt(args[0]) - 1];
 		Party party = player.getParty();
+		
 		if (party == null)
 		{
 			player.teleToLocation(loc);

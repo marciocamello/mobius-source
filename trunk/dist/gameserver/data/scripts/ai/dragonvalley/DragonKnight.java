@@ -42,6 +42,7 @@ public class DragonKnight extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		super.onEvtDead(killer);
+		
 		switch (getActor().getNpcId())
 		{
 			case 22844:
@@ -50,13 +51,16 @@ public class DragonKnight extends Fighter
 					final NpcInstance n = NpcUtils.spawnSingle(22845, getActor().getLoc());
 					n.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, killer, 2);
 				}
+				
 				break;
+			
 			case 22845:
 				if (Rnd.chance(50))
 				{
 					final NpcInstance n = NpcUtils.spawnSingle(22846, getActor().getLoc());
 					n.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, killer, 2);
 				}
+				
 				break;
 		}
 	}

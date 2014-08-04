@@ -66,7 +66,6 @@ public class _245_ComeToMe extends Quest implements ScriptFile
 	public _245_ComeToMe()
 	{
 		super(PARTY_NONE);
-		
 		addStartNpc(NPC_FERRIS);
 		addKillId(monstersSwamp1);
 		addKillId(monstersSwamp2);
@@ -126,6 +125,7 @@ public class _245_ComeToMe extends Quest implements ScriptFile
 				case COMPLETED:
 					htmltext = "30847-03.htm";
 					break;
+				
 				case CREATED:
 					if ((player.getLevel() > 70) && (player.getLevel() < 75) && (player.getPledgeType() == Clan.SUBUNIT_ACADEMY) && (player.getSponsor() != 0))
 					{
@@ -134,17 +134,18 @@ public class _245_ComeToMe extends Quest implements ScriptFile
 					else
 					{
 						htmltext = "30847-02.htm";
-						
 						st.exitCurrentQuest(true);
 					}
 					
 					break;
+				
 				case STARTED:
 					switch (st.getCond())
 					{
 						case 1:
 							htmltext = "30847-05.htm";
 							break;
+						
 						case 2:
 							if (st.getInt("talk") == 1)
 							{
@@ -178,18 +179,19 @@ public class _245_ComeToMe extends Quest implements ScriptFile
 							}
 							
 							break;
+						
 						case 3:
 							htmltext = "30847-17.htm";
-							
 							st.setCond(4);
 							st.playSound("ItemSound.quest_middle");
 							break;
+						
 						case 4:
 							htmltext = "30847-18.htm";
 							break;
+						
 						case 5:
 							htmltext = "30847-19.htm";
-							
 							st.takeAllItems(ITEM_CRYSTAL_OF_EXPERIENCE);
 							st.addExpAndSp(2018733, 200158);
 							st.giveItems(REWARD_RING, 1);

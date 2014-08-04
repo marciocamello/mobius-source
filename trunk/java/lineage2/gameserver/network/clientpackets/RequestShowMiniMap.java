@@ -39,15 +39,18 @@ public class RequestShowMiniMap extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (activeChar.isActionBlocked(Zone.BLOCKED_ACTION_MINIMAP) || (activeChar.isInZone("[Hellbound_territory]") && (Functions.getItemCount(activeChar, 9994) == 0)))
 		{
 			activeChar.sendPacket(Msg.THIS_IS_AN_AREA_WHERE_YOU_CANNOT_USE_THE_MINI_MAP_THE_MINI_MAP_WILL_NOT_BE_OPENED);
 			return;
 		}
+		
 		sendPacket(new ShowMiniMap(activeChar, 0));
 	}
 }

@@ -84,6 +84,7 @@ public class SiegeClanDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -92,12 +93,14 @@ public class SiegeClanDAO
 			statement.setString(2, name);
 			rset = statement.executeQuery();
 			siegeClans = new ArrayList<>();
+			
 			while (rset.next())
 			{
 				int clanId = rset.getInt("clan_id");
 				long param = rset.getLong("param");
 				long date = rset.getLong("date");
 				SiegeClanObject object = residence.<SiegeEvent<?, ?>> getSiegeEvent().newSiegeClan(name, clanId, param, date);
+				
 				if (object != null)
 				{
 					siegeClans.add(object);
@@ -128,6 +131,7 @@ public class SiegeClanDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -158,6 +162,7 @@ public class SiegeClanDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -185,6 +190,7 @@ public class SiegeClanDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -211,6 +217,7 @@ public class SiegeClanDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();

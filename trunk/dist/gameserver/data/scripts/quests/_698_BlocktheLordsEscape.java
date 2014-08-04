@@ -38,6 +38,7 @@ public class _698_BlocktheLordsEscape extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		Player player = st.getPlayer();
+		
 		if (npcId == TEPIOS)
 		{
 			if (st.getState() == CREATED)
@@ -47,11 +48,13 @@ public class _698_BlocktheLordsEscape extends Quest implements ScriptFile
 					st.exitCurrentQuest(true);
 					return "tepios_q698_0.htm";
 				}
+				
 				if (SoIManager.getCurrentStage() != 5)
 				{
 					st.exitCurrentQuest(true);
 					return "tepios_q698_0a.htm";
 				}
+				
 				return "tepios_q698_1.htm";
 			}
 			else if ((st.getCond() == 1) && (st.getInt("defenceDone") == 1))
@@ -66,6 +69,7 @@ public class _698_BlocktheLordsEscape extends Quest implements ScriptFile
 				return "tepios_q698_4.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -75,12 +79,14 @@ public class _698_BlocktheLordsEscape extends Quest implements ScriptFile
 		st.getPlayer();
 		String htmltext = event;
 		st.getCond();
+		
 		if (event.equalsIgnoreCase("tepios_q698_3.htm"))
 		{
 			st.setState(STARTED);
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return htmltext;
 	}
 	

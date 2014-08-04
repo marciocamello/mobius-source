@@ -76,6 +76,7 @@ public class Rogin_19193 extends Dwarvs
 	protected void onEvtArrived()
 	{
 		super.onEvtArrived();
+		
 		if (currentPoint == 0)
 		{
 			addTimer(1, 1600);
@@ -117,38 +118,48 @@ public class Rogin_19193 extends Dwarvs
 	{
 		super.onEvtTimer(timerId, arg1, arg2);
 		final Reflection r = getActor().getReflection();
+		
 		if (r.equals(ReflectionManager.DEFAULT))
 		{
 			return;
 		}
+		
 		List<NpcInstance> list;
+		
 		switch (timerId)
 		{
 			case 1:
 				Functions.npcSayInRange(getActor(), 1500, NpcString.CHIEF_REPORTING_IN);
 				addTimer(2, 1600);
 				break;
+			
 			case 2:
 				Functions.npcSayInRange(getActor(), 1500, NpcString.ENEMIES_ARE_APPROACHING_FROM_THE_SOUTH);
 				list = r.getAllByNpcId(BRONK_ID, true);
+				
 				if (list.size() > 0)
 				{
 					final NpcInstance bronk = list.get(0);
 					bronk.getAI().notifyEvent(CtrlEvent.EVT_SCRIPT_EVENT, "BRONK_1");
 				}
+				
 				break;
+			
 			case 3:
 				Functions.npcSayInRange(getActor(), 1500, NpcString.THE_ELDERS_HAVENT_BEEN_MOVED_TO_SAFETY);
 				addTimer(4, 1600);
 				break;
+			
 			case 4:
 				Functions.npcSayInRange(getActor(), 1500, NpcString.MANY_RESIDENTS_STILL_HAVENT_LEFT_THEIR_HOMES);
 				list = r.getAllByNpcId(BRONK_ID, true);
+				
 				if (list.size() > 0)
 				{
 					final NpcInstance bronk = list.get(0);
 					bronk.getAI().notifyEvent(CtrlEvent.EVT_SCRIPT_EVENT, "BRONK_2");
 				}
+				
 				break;
 		}
 	}

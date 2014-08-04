@@ -62,6 +62,7 @@ public class Obelisk extends DefaultAI
 		final NpcInstance actor = getActor();
 		actor.broadcastPacket(new ExShowScreenMessage("Obelisk has collapsed. Don't let the enemies jump around wildly anymore!!!!", 3000, ScreenMessageAlign.MIDDLE_CENTER, false));
 		actor.stopDecay();
+		
 		for (NpcInstance n : actor.getReflection().getNpcs())
 		{
 			if (n.getNpcId() == 18777)
@@ -69,6 +70,7 @@ public class Obelisk extends DefaultAI
 				n.stopDamageBlocked();
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 	
@@ -81,9 +83,11 @@ public class Obelisk extends DefaultAI
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (_firstTimeAttacked)
 		{
 			_firstTimeAttacked = false;
+			
 			for (int i = 0; i < 8; i++)
 			{
 				for (int mobId : MOBS)
@@ -94,6 +98,7 @@ public class Obelisk extends DefaultAI
 				}
 			}
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 }

@@ -38,7 +38,6 @@ public class MentorUtil
 	public static final Map<Integer, Integer> SIGN_OF_TUTOR = new HashMap<Integer, Integer>()
 	{
 		private static final long serialVersionUID = 1L;
-		
 		{
 			put(10, 2);
 			put(20, 25);
@@ -136,6 +135,7 @@ public class MentorUtil
 				if (menteeInfo.isOnline())
 				{
 					Player mentee = World.getPlayer(menteeInfo.getObjectId());
+					
 					for (int effect : effectsForMentee)
 					{
 						addEffectToPlayer(SkillTable.getInstance().getInfo(effect, 1), mentee);
@@ -149,10 +149,12 @@ public class MentorUtil
 			{
 				addEffectToPlayer(SkillTable.getInstance().getInfo(effect, 1), activeChar);
 			}
+			
 			if (World.getPlayer(activeChar.getMentorSystem().getMentor()) == null)
 			{
 				return;
 			}
+			
 			addEffectToPlayer(SkillTable.getInstance().getInfo(effectForMentor, 1), World.getPlayer(activeChar.getMentorSystem().getMentor()));
 		}
 	}
@@ -173,6 +175,7 @@ public class MentorUtil
 		{
 			return;
 		}
+		
 		for (int skillId : skillsForMentor)
 		{
 			Skill skill = SkillTable.getInstance().getInfo(skillId, 1);
@@ -187,6 +190,7 @@ public class MentorUtil
 		{
 			return;
 		}
+		
 		Skill skill = SkillTable.getInstance().getInfo(skillForMentee, 1);
 		mentee.addSkill(skill, true);
 		mentee.sendSkillList();
@@ -205,9 +209,11 @@ public class MentorUtil
 			{
 				return;
 			}
+			
 			removeEffectsFromPlayer(player);
 			Player mentor = World.getPlayer(player.getMentorSystem().getMentor());
 			int menteeOnline = 0;
+			
 			for (MenteeInfo mentee : mentor.getMentorSystem().getMenteeInfo())
 			{
 				if (mentee.isOnline())
@@ -215,10 +221,12 @@ public class MentorUtil
 					++menteeOnline;
 				}
 			}
+			
 			if (menteeOnline >= 1)
 			{
 				return;
 			}
+			
 			removeEffectsFromPlayer(mentor);
 		}
 	}
@@ -228,6 +236,7 @@ public class MentorUtil
 		for (MenteeInfo mentee : player.getMentorSystem().getMenteeInfo())
 		{
 			Player activeChar = World.getPlayer(mentee.getObjectId());
+			
 			if (activeChar != null)
 			{
 				removeEffectsFromPlayer(activeChar);
@@ -255,6 +264,7 @@ public class MentorUtil
 	public static void setTimePenalty(int mentorId, long timeTo, long expirationTime)
 	{
 		Player mentor = World.getPlayer(mentorId);
+		
 		if ((mentor != null) && mentor.isOnline())
 		{
 			mentor.setVar("mentorPenalty", timeTo, -1);
@@ -268,10 +278,12 @@ public class MentorUtil
 	public static long getTimePenalty(int mentorId)
 	{
 		Player mentor = World.getPlayer(mentorId);
+		
 		if ((mentor != null) && mentor.isOnline())
 		{
 			return mentor.getVarLong("mentorPenalty");
 		}
+		
 		return (long) mysql.get("SELECT value FROM character_variables WHERE obj_id = " + mentorId);
 	}
 	
@@ -281,6 +293,7 @@ public class MentorUtil
 		{
 			return;
 		}
+		
 		Mail mail = new Mail();
 		mail.setSenderId(1);
 		mail.setSenderName("Mentor Guide");
@@ -307,10 +320,12 @@ public class MentorUtil
 		{
 			return;
 		}
+		
 		if (items.keySet().size() > 8)
 		{
 			return;
 		}
+		
 		int lvl = World.getPlayer(mentee).getLevel();
 		Mail mail = new Mail();
 		mail.setSenderId(1);
@@ -318,6 +333,7 @@ public class MentorUtil
 		mail.setReceiverId(receiver.getObjectId());
 		mail.setReceiverName(receiver.getName());
 		mail.setTopic(new CustomMessage("Mentor.title", receiver, new Object[0]).toString());
+		
 		if (lvl < 50)
 		{
 			mail.setBody(new CustomMessage("Mentor.text1", receiver, new Object[0]).addNumber(lvl).addNumber(lvl + 1).addString(mentee).toString());
@@ -326,6 +342,7 @@ public class MentorUtil
 		{
 			mail.setBody(new CustomMessage("Mentor.text2", receiver, new Object[0]).addNumber(lvl).addString(mentee).toString());
 		}
+		
 		for (Map.Entry<Integer, Long> itm : items.entrySet())
 		{
 			ItemInstance item = ItemFunctions.createItem(itm.getKey());
@@ -334,6 +351,7 @@ public class MentorUtil
 			item.save();
 			mail.addAttachment(item);
 		}
+		
 		mail.setType(Mail.SenderType.MENTOR);
 		mail.setUnread(true);
 		mail.setExpireTime((720 * 3600) + (int) (System.currentTimeMillis() / 1000L));
@@ -348,6 +366,7 @@ public class MentorUtil
 		{
 			return;
 		}
+		
 		Mail mail = new Mail();
 		mail.setSenderId(1);
 		mail.setSenderName("Mentor Guide");

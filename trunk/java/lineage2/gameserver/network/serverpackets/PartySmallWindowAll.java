@@ -51,6 +51,7 @@ public class PartySmallWindowAll extends L2GameServerPacket
 		writeD(leaderId); // c3 party leader id
 		writeD(loot); // c3 party loot type (0,1,2,....)
 		writeD(members.size());
+		
 		for (PartySmallWindowMemberInfo member : members)
 		{
 			writeD(member._id);
@@ -70,6 +71,7 @@ public class PartySmallWindowAll extends L2GameServerPacket
 			writeD(0x00);
 			writeD(member.replace);
 			writeD(member._pets.size());
+			
 			for (Summon pet : member._pets)
 			{
 				writeD(pet.getObjectId());

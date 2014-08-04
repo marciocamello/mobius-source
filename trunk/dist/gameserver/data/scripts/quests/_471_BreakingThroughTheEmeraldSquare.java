@@ -56,6 +56,7 @@ public class _471_BreakingThroughTheEmeraldSquare extends Quest implements Scrip
 		String htmltext = event;
 		String str = event;
 		int i = -1;
+		
 		switch (str.hashCode())
 		{
 			case -659506668:
@@ -63,25 +64,31 @@ public class _471_BreakingThroughTheEmeraldSquare extends Quest implements Scrip
 				{
 					break;
 				}
+				
 				i = 0;
 				break;
+			
 			case -656736105:
 				if (!str.equals("33044-07.htm"))
 				{
 					break;
 				}
+				
 				i = 1;
 		}
+		
 		switch (i)
 		{
 			case 0:
 				st.setState(STARTED);
 				break;
+			
 			case 1:
 				st.playSound(SOUND_FINISH);
 				st.giveItems(CON2, 10);
 				st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -92,6 +99,7 @@ public class _471_BreakingThroughTheEmeraldSquare extends Quest implements Scrip
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == CON1)
 		{
 			if (player.getLevel() < 97)
@@ -99,6 +107,7 @@ public class _471_BreakingThroughTheEmeraldSquare extends Quest implements Scrip
 				st.exitCurrentQuest(true);
 				return "33044-02.htm";
 			}
+			
 			if (st.getState() == CREATED)
 			{
 				htmltext = "33044-01.htm";
@@ -119,6 +128,7 @@ public class _471_BreakingThroughTheEmeraldSquare extends Quest implements Scrip
 				htmltext = "33044-08.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -128,15 +138,18 @@ public class _471_BreakingThroughTheEmeraldSquare extends Quest implements Scrip
 		npc.getNpcId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
+		
 		if (cond == 1)
 		{
 			TIntIntHashMap moblist = new TIntIntHashMap();
 			moblist.put(CON3, 1);
+			
 			if (player.getParty() != null)
 			{
 				for (Player partyMember : player.getParty().getPartyMembers())
 				{
 					QuestState pst = partyMember.getQuestState("_471_BreakingThroughTheEmeraldSquare");
+					
 					if ((pst != null) && (pst.isStarted()))
 					{
 						pst.setCond(2);
@@ -152,6 +165,7 @@ public class _471_BreakingThroughTheEmeraldSquare extends Quest implements Scrip
 				player.sendPacket(new ExQuestNpcLogList(st));
 			}
 		}
+		
 		return null;
 	}
 	

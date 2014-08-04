@@ -65,17 +65,21 @@ public class MasterYogi extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (range <= 0)
 		{
 			final List<NpcInstance> around = actor.getAroundNpc(6000, 300);
+			
 			if ((around != null) && !around.isEmpty())
 			{
 				double distance;
+				
 				for (NpcInstance npc : around)
 				{
 					if (npc.getNpcId() == 32599)
 					{
 						distance = actor.getDistance(npc) * 0.50;
+						
 						if (((range > 0) && (distance < range)) || (range == 0))
 						{
 							range = (int) distance;
@@ -88,22 +92,26 @@ public class MasterYogi extends DefaultAI
 				range = 3000;
 			}
 		}
+		
 		if (System.currentTimeMillis() > wait_timeout1)
 		{
 			wait_timeout1 = System.currentTimeMillis() + 180000;
 			Functions.npcSayInRangeCustomMessage(actor, range, "scripts.ai.MasterYogi.Hey");
 			return true;
 		}
+		
 		if (System.currentTimeMillis() > wait_timeout2)
 		{
 			wait_timeout2 = System.currentTimeMillis() + 300000;
 			Functions.npcSayInRangeCustomMessage(actor, range, "scripts.ai.MasterYogi.Hohoho");
 			return true;
 		}
+		
 		if (randomAnimation())
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	

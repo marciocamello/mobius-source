@@ -60,10 +60,12 @@ public class MacroList
 		if (macro.id == 0)
 		{
 			macro.id = _macroId++;
+			
 			while (_macroses.get(macro.id) != null)
 			{
 				macro.id = _macroId++;
 			}
+			
 			_macroses.put(macro.id, macro);
 			registerMacroInDb(macro);
 			player.sendPacket(new SendMacroList(macro, getAllMacroses().length, 0x01, _macroId, false));
@@ -71,10 +73,12 @@ public class MacroList
 		else
 		{
 			Macro old = _macroses.put(macro.id, macro);
+			
 			if (old != null)
 			{
 				deleteMacroFromDb(old);
 			}
+			
 			registerMacroInDb(macro);
 			sendUpdate(0x02, macro.id, false);
 		}
@@ -83,10 +87,12 @@ public class MacroList
 	public void deleteMacro(int id)
 	{
 		Macro toRemove = _macroses.get(id);
+		
 		if (toRemove != null)
 		{
 			deleteMacroFromDb(toRemove);
 		}
+		
 		_macroses.remove(id);
 		sendUpdate(0x00, id, false);
 	}
@@ -94,6 +100,7 @@ public class MacroList
 	public void sendUpdate(int type, int _macroId, boolean first)
 	{
 		Macro[] all = getAllMacroses();
+		
 		if (all.length == 0)
 		{
 			player.sendPacket(new SendMacroList(null, all.length, 0x00, 0, false));
@@ -111,6 +118,7 @@ public class MacroList
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -122,17 +130,21 @@ public class MacroList
 			statement.setString(5, macro.descr);
 			statement.setString(6, macro.acronym);
 			StringBuilder sb = new StringBuilder();
+			
 			for (L2MacroCmd cmd : macro.commands)
 			{
 				sb.append(cmd.type).append(',');
 				sb.append(cmd.d1).append(',');
 				sb.append(cmd.d2);
+				
 				if ((cmd.cmd != null) && (cmd.cmd.length() > 0))
 				{
 					sb.append(',').append(cmd.cmd);
 				}
+				
 				sb.append(';');
 			}
+			
 			statement.setString(7, sb.toString());
 			statement.execute();
 		}
@@ -153,6 +165,7 @@ public class MacroList
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -177,12 +190,14 @@ public class MacroList
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT char_obj_id, id, icon, name, descr, acronym, commands FROM character_macroses WHERE char_obj_id=?");
 			statement.setInt(1, player.getObjectId());
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				int id = rset.getInt("id");
@@ -192,6 +207,7 @@ public class MacroList
 				String acronym = Strings.stripSlashes(rset.getString("acronym"));
 				List<L2MacroCmd> commands = new ArrayList<>();
 				StringTokenizer st1 = new StringTokenizer(rset.getString("commands"), ";");
+				
 				while (st1.hasMoreTokens())
 				{
 					StringTokenizer st = new StringTokenizer(st1.nextToken(), ",");
@@ -199,10 +215,12 @@ public class MacroList
 					int d1 = Integer.parseInt(st.nextToken());
 					int d2 = Integer.parseInt(st.nextToken());
 					String cmd = "";
+					
 					if (st.hasMoreTokens())
 					{
 						cmd = st.nextToken();
 					}
+					
 					L2MacroCmd mcmd = new L2MacroCmd(commands.size(), type, d1, d2, cmd);
 					commands.add(mcmd);
 				}

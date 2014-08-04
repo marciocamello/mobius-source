@@ -32,16 +32,20 @@ public class RequestSaveInventoryOrder extends L2GameClientPacket
 	protected void readImpl()
 	{
 		int size = readD();
+		
 		if (size > 125)
 		{
 			size = 125;
 		}
+		
 		if (((size * 8) > _buf.remaining()) || (size < 1))
 		{
 			_items = null;
 			return;
 		}
+		
 		_items = new int[size][2];
+		
 		for (int i = 0; i < size; i++)
 		{
 			_items[i][0] = readD();
@@ -59,11 +63,14 @@ public class RequestSaveInventoryOrder extends L2GameClientPacket
 		{
 			return;
 		}
+		
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		activeChar.getInventory().sort(_items);
 	}
 }

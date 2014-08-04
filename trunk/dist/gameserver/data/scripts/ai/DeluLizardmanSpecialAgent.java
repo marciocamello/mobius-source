@@ -57,9 +57,11 @@ public class DeluLizardmanSpecialAgent extends Ranger
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (_firstTimeAttacked)
 		{
 			_firstTimeAttacked = false;
+			
 			if (Rnd.chance(25))
 			{
 				Functions.npcSay(actor, "How dare you interrupt our fight! Hey guys, help!");
@@ -69,6 +71,7 @@ public class DeluLizardmanSpecialAgent extends Ranger
 		{
 			Functions.npcSay(actor, "Hey! Were having a duel here!");
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 }

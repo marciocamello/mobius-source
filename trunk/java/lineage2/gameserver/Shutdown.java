@@ -119,25 +119,30 @@ public class Shutdown extends Thread
 						String.valueOf(shutdownCounter / 60)
 					});
 					break;
+				
 				case 30:
 				case 20:
 				case 10:
 				case 5:
 					Announcements.getInstance().announceToAll(new SystemMessage(SystemMessage.THE_SERVER_WILL_BE_COMING_DOWN_IN_S1_SECONDS__PLEASE_FIND_A_SAFE_PLACE_TO_LOG_OUT).addNumber(shutdownCounter));
 					break;
+				
 				case 0:
 					switch (shutdownMode)
 					{
 						case SHUTDOWN:
 							Runtime.getRuntime().exit(SHUTDOWN);
 							break;
+						
 						case RESTART:
 							Runtime.getRuntime().exit(RESTART);
 							break;
 					}
+					
 					cancel();
 					return;
 			}
+			
 			shutdownCounter--;
 		}
 	}
@@ -181,10 +186,12 @@ public class Shutdown extends Thread
 		{
 			return;
 		}
+		
 		if (counter != null)
 		{
 			counter.cancel();
 		}
+		
 		this.shutdownMode = shutdownMode;
 		shutdownCounter = seconds;
 		_log.info("Scheduled server " + (shutdownMode == SHUTDOWN ? "shutdown" : "restart") + " in " + Util.formatTime(seconds) + ".");
@@ -200,6 +207,7 @@ public class Shutdown extends Thread
 	public void schedule(String time, int shutdownMode)
 	{
 		SchedulingPattern cronTime;
+		
 		try
 		{
 			cronTime = new SchedulingPattern(time);
@@ -208,6 +216,7 @@ public class Shutdown extends Thread
 		{
 			return;
 		}
+		
 		int seconds = (int) ((cronTime.next(System.currentTimeMillis()) / 1000L) - (System.currentTimeMillis() / 1000L));
 		schedule(seconds, shutdownMode);
 	}
@@ -218,10 +227,12 @@ public class Shutdown extends Thread
 	public synchronized void cancel()
 	{
 		shutdownMode = NONE;
+		
 		if (counter != null)
 		{
 			counter.cancel();
 		}
+		
 		counter = null;
 	}
 	
@@ -240,6 +251,7 @@ public class Shutdown extends Thread
 		disconnectAllPlayers();
 		System.out.println("Saving data...");
 		saveData();
+		
 		try
 		{
 			System.out.println("Shutting down thread pool...");
@@ -249,7 +261,9 @@ public class Shutdown extends Thread
 		{
 			e.printStackTrace();
 		}
+		
 		System.out.println("Shutting down selector...");
+		
 		if (GameServer.getInstance() != null)
 		{
 			for (SelectorThread<GameClient> st : GameServer.getInstance().getSelectorThreads())
@@ -264,6 +278,7 @@ public class Shutdown extends Thread
 				}
 			}
 		}
+		
 		try
 		{
 			System.out.println("Shutting down database communication...");
@@ -273,6 +288,7 @@ public class Shutdown extends Thread
 		{
 			e.printStackTrace();
 		}
+		
 		System.out.println("Shutdown finished.");
 	}
 	
@@ -293,6 +309,7 @@ public class Shutdown extends Thread
 				e.printStackTrace();
 			}
 		}
+		
 		if (Config.ALLOW_WEDDING)
 		{
 			try
@@ -305,6 +322,7 @@ public class Shutdown extends Thread
 				e.printStackTrace();
 			}
 		}
+		
 		try
 		{
 			FishingChampionShipManager.getInstance().shutdown();
@@ -314,6 +332,7 @@ public class Shutdown extends Thread
 		{
 			e.printStackTrace();
 		}
+		
 		try
 		{
 			Hero.getInstance().shutdown();
@@ -323,6 +342,7 @@ public class Shutdown extends Thread
 		{
 			e.printStackTrace();
 		}
+		
 		if (Config.ALLOW_CURSED_WEAPONS)
 		{
 			try

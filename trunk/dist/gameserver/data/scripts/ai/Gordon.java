@@ -107,10 +107,12 @@ public class Gordon extends Fighter
 		{
 			return false;
 		}
+		
 		if ((getIntention() != CtrlIntention.AI_INTENTION_ACTIVE) && (current_point > -1))
 		{
 			current_point--;
 		}
+		
 		return super.checkAggression(target);
 	}
 	
@@ -122,22 +124,27 @@ public class Gordon extends Fighter
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			if (doTask())
 			{
 				clearTasks();
 			}
+			
 			return true;
 		}
+		
 		if (super.thinkActive())
 		{
 			return true;
 		}
+		
 		if ((System.currentTimeMillis() > wait_timeout) && ((current_point > -1) || Rnd.chance(5)))
 		{
 			if (!wait && (current_point == 31))
@@ -146,22 +153,27 @@ public class Gordon extends Fighter
 				wait = true;
 				return true;
 			}
+			
 			wait_timeout = 0;
 			wait = false;
 			current_point++;
+			
 			if (current_point >= points.length)
 			{
 				current_point = 0;
 			}
+			
 			actor.setWalking();
 			addTaskMove(points[current_point], true);
 			doTask();
 			return true;
 		}
+		
 		if (randomAnimation())
 		{
 			return false;
 		}
+		
 		return false;
 	}
 	

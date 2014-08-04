@@ -59,6 +59,7 @@ public class _10502_CapeEmbroideredSoulTwo extends Quest implements ScriptFile
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return event;
 	}
 	
@@ -67,6 +68,7 @@ public class _10502_CapeEmbroideredSoulTwo extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (cond == 0)
 		{
 			if (st.getPlayer().getLevel() >= 82)
@@ -99,6 +101,7 @@ public class _10502_CapeEmbroideredSoulTwo extends Quest implements ScriptFile
 				st.exitCurrentQuest(false);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -107,18 +110,21 @@ public class _10502_CapeEmbroideredSoulTwo extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if ((cond == 1) && ((npcId == FREYA_NORMAL) || (npcId == FREYA_HARD)))
 		{
 			if (st.getQuestItemsCount(SOUL_FREYA) < 20)
 			{
 				st.giveItems(SOUL_FREYA, Rnd.get(1, 3), false);
 			}
+			
 			if (st.getQuestItemsCount(SOUL_FREYA) >= 20)
 			{
 				st.setCond(2);
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		return null;
 	}
 }

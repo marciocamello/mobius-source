@@ -49,15 +49,18 @@ public class EffectSummonSkill extends Effect
 	public boolean checkCondition()
 	{
 		Player player = _effected.getPlayer();
+		
 		if (player == null)
 		{
 			return false;
 		}
+		
 		if (player.isMounted())
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(_skill.getId(), _skill.getLevel()));
 			return false;
 		}
+		
 		return super.checkCondition();
 	}
 	
@@ -101,7 +104,9 @@ public class EffectSummonSkill extends Effect
 		{
 			return false;
 		}
+		
 		double manaDam = calc();
+		
 		if (manaDam > _effected.getCurrentMp())
 		{
 			if (getSkill().isToggle())
@@ -110,6 +115,7 @@ public class EffectSummonSkill extends Effect
 				return false;
 			}
 		}
+		
 		_effected.reduceCurrentMp(manaDam, null);
 		return true;
 	}

@@ -54,6 +54,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 			case 0: // Normal
 			{
 				Player activeChar = getClient().getActiveChar();
+				
 				if (activeChar == null)
 				{
 					return;
@@ -72,12 +73,14 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				}
 				
 				EnchantSkillLearn sl = SkillTreeTable.getSkillEnchant(_skillId, _skillLvl);
+				
 				if (sl == null)
 				{
 					return;
 				}
 				
 				int slevel = activeChar.getSkillLevel(_skillId);
+				
 				if (slevel == -1)
 				{
 					return;
@@ -98,6 +101,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				}
 				
 				Skill skill = SkillTable.getInstance().getInfo(_skillId, enchantLevel);
+				
 				if (skill == null)
 				{
 					activeChar.sendMessage("Internal error: not found skill level");
@@ -128,6 +132,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 						activeChar.sendPacket(Msg.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT);
 						return;
 					}
+					
 					Functions.removeItem(activeChar, SkillTreeTable.NORMAL_ENCHANT_BOOK, 1);
 				}
 				else if ((_skillId >= 10000) && ((_skillLvl % 100) == 1))
@@ -137,6 +142,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 						activeChar.sendPacket(Msg.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT);
 						return;
 					}
+					
 					Functions.removeItem(activeChar, SkillTreeTable.NEW_ENCHANT_BOOK, 1);
 				}
 				
@@ -153,14 +159,17 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 					activeChar.sendPacket(new SystemMessage(SystemMessage.FAILED_IN_ENCHANTING_SKILL_S1).addSkillName(_skillId, _skillLvl), new ExEnchantSkillResult(0));
 					Log.add(activeChar.getName() + "|Failed to enchant|" + _skillId + "|to+" + _skillLvl + "|" + rate, "enchant_skills");
 				}
+				
 				activeChar.addSkill(skill, true);
 				updateSkillShortcuts(activeChar, _skillId, _skillLvl);
 				activeChar.sendPacket(new ExEnchantSkillInfo(_skillId, activeChar.getSkillDisplayLevel(_skillId)));
 				break;
 			}
+			
 			case 1: // Bless
 			{
 				Player activeChar = getClient().getActiveChar();
+				
 				if (activeChar == null)
 				{
 					return;
@@ -186,6 +195,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				}
 				
 				int slevel = activeChar.getSkillLevel(_skillId);
+				
 				if (slevel == -1)
 				{
 					return;
@@ -206,6 +216,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				}
 				
 				Skill skill = SkillTable.getInstance().getInfo(_skillId, enchantLevel);
+				
 				if (skill == null)
 				{
 					return;
@@ -214,7 +225,6 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				int[] cost = sl.getCost();
 				int requiredSp = cost[1] * SkillTreeTable.SAFE_ENCHANT_COST_MULTIPLIER * sl.getCostMult();
 				int requiredAdena = cost[0] * SkillTreeTable.SAFE_ENCHANT_COST_MULTIPLIER * sl.getCostMult();
-				
 				int rate = sl.getRate(activeChar);
 				
 				if (activeChar.getSp() < requiredSp)
@@ -236,6 +246,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 						activeChar.sendPacket(Msg.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT);
 						return;
 					}
+					
 					Functions.removeItem(activeChar, SkillTreeTable.SAFE_ENCHANT_BOOK, 1);
 				}
 				else if (_skillId >= 10000)
@@ -245,6 +256,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 						activeChar.sendPacket(Msg.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT);
 						return;
 					}
+					
 					Functions.removeItem(activeChar, SkillTreeTable.NEW_SAFE_ENCHANT_BOOK, 1);
 				}
 				
@@ -267,9 +279,11 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				activeChar.sendPacket(new ExEnchantSkillInfo(_skillId, activeChar.getSkillDisplayLevel(_skillId)));
 				break;
 			}
+			
 			case 2: // Oblivion (-1)
 			{
 				Player activeChar = getClient().getActiveChar();
+				
 				if (activeChar == null)
 				{
 					return;
@@ -288,6 +302,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				}
 				
 				int oldSkillLevel = activeChar.getSkillDisplayLevel(_skillId);
+				
 				if (oldSkillLevel == -1)
 				{
 					return;
@@ -299,6 +314,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				}
 				
 				EnchantSkillLearn sl = SkillTreeTable.getSkillEnchant(_skillId, oldSkillLevel);
+				
 				if (sl == null)
 				{
 					return;
@@ -328,7 +344,6 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				}
 				
 				Functions.removeItem(activeChar, SkillTreeTable.UNTRAIN_ENCHANT_BOOK, 1);
-				
 				activeChar.addExpAndSp(0, sl.getCost()[1] * sl.getCostMult());
 				activeChar.addSkill(newSkill, true);
 				
@@ -346,14 +361,15 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				}
 				
 				Log.add(activeChar.getName() + "|Successfully untranes|" + _skillId + "|to+" + _skillLvl + "|---", "enchant_skills");
-				
 				activeChar.sendPacket(new ExEnchantSkillInfo(_skillId, newSkill.getDisplayLevel()), ExEnchantSkillResult.SUCCESS, new SkillList(activeChar));
 				RequestExEnchantSkill.updateSkillShortcuts(activeChar, _skillId, _skillLvl);
 				break;
 			}
+			
 			case 3:
 			{
 				Player activeChar = getClient().getActiveChar();
+				
 				if (activeChar == null)
 				{
 					return;
@@ -372,12 +388,14 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				}
 				
 				EnchantSkillLearn sl = SkillTreeTable.getSkillEnchant(_skillId, _skillLvl);
+				
 				if (sl == null)
 				{
 					return;
 				}
 				
 				int slevel = activeChar.getSkillDisplayLevel(_skillId);
+				
 				if (slevel == -1)
 				{
 					return;
@@ -413,10 +431,9 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				Functions.removeItem(activeChar, SkillTreeTable.CHANGE_ENCHANT_BOOK, 1);
 				Functions.removeItem(activeChar, 57, requiredAdena);
 				activeChar.addExpAndSp(0, -1 * requiredSp);
-				
 				int levelPenalty = Rnd.get(Math.min(4, _skillLvl % 100));
-				
 				_skillLvl -= levelPenalty;
+				
 				if ((_skillLvl % 100) == 0)
 				{
 					_skillLvl = sl.getBaseLevel();
@@ -444,14 +461,15 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				}
 				
 				Log.add(activeChar.getName() + "|Successfully changed route|" + _skillId + "|" + slevel + "|to+" + _skillLvl + "|" + levelPenalty, "enchant_skills");
-				
 				activeChar.sendPacket(new ExEnchantSkillInfo(_skillId, activeChar.getSkillDisplayLevel(_skillId)), new ExEnchantSkillResult(1));
 				RequestExEnchantSkill.updateSkillShortcuts(activeChar, _skillId, _skillLvl);
 				break;
 			}
+			
 			case 4:
 			{
 				Player activeChar = getClient().getActiveChar();
+				
 				if (activeChar == null)
 				{
 					return;
@@ -470,12 +488,14 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				}
 				
 				EnchantSkillLearn sl = SkillTreeTable.getSkillEnchant(_skillId, _skillLvl);
+				
 				if (sl == null)
 				{
 					return;
 				}
 				
 				int slevel = activeChar.getSkillLevel(_skillId);
+				
 				if (slevel == -1)
 				{
 					return;
@@ -496,6 +516,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				}
 				
 				Skill skill = SkillTable.getInstance().getInfo(_skillId, enchantLevel);
+				
 				if (skill == null)
 				{
 					activeChar.sendMessage("Internal error: not found skill level");
@@ -526,6 +547,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 						activeChar.sendPacket(Msg.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT);
 						return;
 					}
+					
 					Functions.removeItem(activeChar, SkillTreeTable.ENCHANT_BOOK_LINDVIOR, 1);
 				}
 				else if ((_skillId >= 10000) && ((_skillLvl % 100) == 1))
@@ -535,6 +557,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 						activeChar.sendPacket(Msg.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT);
 						return;
 					}
+					
 					Functions.removeItem(activeChar, SkillTreeTable.ENCHANT_BOOK_LINDVIOR, 1);
 				}
 				
@@ -551,6 +574,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 					activeChar.sendPacket(new SystemMessage(SystemMessage.FAILED_IN_ENCHANTING_SKILL_S1).addSkillName(_skillId, _skillLvl), new ExEnchantSkillResult(0));
 					Log.add(activeChar.getName() + "|Failed to enchant|" + _skillId + "|to+" + _skillLvl + "|" + rate, "enchant_skills");
 				}
+				
 				activeChar.addSkill(skill, true);
 				updateSkillShortcuts(activeChar, _skillId, _skillLvl);
 				activeChar.sendPacket(new ExEnchantSkillInfo(_skillId, activeChar.getSkillDisplayLevel(_skillId)));

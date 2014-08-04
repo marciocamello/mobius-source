@@ -58,6 +58,7 @@ public class _143_FallenAngelRequestOfDusk extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("start"))
 		{
 			st.setCond(1);
@@ -114,11 +115,13 @@ public class _143_FallenAngelRequestOfDusk extends Quest implements ScriptFile
 			st.giveItems(MESSAGE, 1);
 			st.playSound(SOUND_MIDDLE);
 			NpcInstance n = GameObjectsStorage.getByNpcId(ANGEL);
+			
 			if (n != null)
 			{
 				n.deleteMe();
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -128,6 +131,7 @@ public class _143_FallenAngelRequestOfDusk extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
+		
 		if (npcId == NATOOLS)
 		{
 			if ((cond == 1) || (st.isStarted() && (cond == 0)))
@@ -221,6 +225,7 @@ public class _143_FallenAngelRequestOfDusk extends Quest implements ScriptFile
 		{
 			htmltext = "q_fallen_angel_npc_q0143_14.htm";
 		}
+		
 		return htmltext;
 	}
 }

@@ -178,6 +178,7 @@ public class _458_PerfectForm extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("kelleyia_q458_05.htm"))
 		{
 			st.setState(STARTED);
@@ -191,9 +192,11 @@ public class _458_PerfectForm extends Quest implements ScriptFile
 				case 1:
 					htmltext = "kelleyia_q458_08a.htm";
 					break;
+				
 				case 2:
 					htmltext = "kelleyia_q458_08b.htm";
 					break;
+				
 				case 3:
 					htmltext = "kelleyia_q458_08c.htm";
 					break;
@@ -206,9 +209,11 @@ public class _458_PerfectForm extends Quest implements ScriptFile
 				case 1:
 					htmltext = "kelleyia_q458_09a.htm";
 					break;
+				
 				case 2:
 					htmltext = "kelleyia_q458_09b.htm";
 					break;
+				
 				case 3:
 					htmltext = "kelleyia_q458_09c.htm";
 					break;
@@ -221,9 +226,11 @@ public class _458_PerfectForm extends Quest implements ScriptFile
 				case 1:
 					htmltext = "kelleyia_q458_10a.htm";
 					break;
+				
 				case 2:
 					htmltext = "kelleyia_q458_10b.htm";
 					break;
+				
 				case 3:
 					htmltext = "kelleyia_q458_10c.htm";
 					break;
@@ -232,16 +239,19 @@ public class _458_PerfectForm extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("request_reward"))
 		{
 			int[] reward;
+			
 			switch (st.getInt("contoverhits"))
 			{
 				case 1:
 					reward = Rewards[0][Rnd.get(Rewards[0].length)];
 					st.giveItems(reward[0], reward[1]);
 					break;
+				
 				case 2:
 					reward = Rewards[1][Rnd.get(Rewards[1].length)];
 					st.giveItems(reward[0], reward[1]);
 					break;
+				
 				case 3:
 					reward = Rewards[2][Rnd.get(Rewards[2].length)];
 					st.giveItems(reward[0], reward[1]);
@@ -249,6 +259,7 @@ public class _458_PerfectForm extends Quest implements ScriptFile
 					st.giveItems(15483, 10);
 					break;
 			}
+			
 			htmltext = "kelleyia_q458_11.htm";
 			st.unset(KOOKABURA_VAR);
 			st.unset(COUGAR_VAR);
@@ -261,6 +272,7 @@ public class _458_PerfectForm extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(this);
 		}
+		
 		return htmltext;
 	}
 	
@@ -268,6 +280,7 @@ public class _458_PerfectForm extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
+		
 		if (npc.getNpcId() == Kelleyia)
 		{
 			switch (st.getState())
@@ -288,7 +301,9 @@ public class _458_PerfectForm extends Quest implements ScriptFile
 					{
 						htmltext = "kelleyia_q458_00.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					if (st.getCond() == 1)
 					{
@@ -298,9 +313,11 @@ public class _458_PerfectForm extends Quest implements ScriptFile
 					{
 						htmltext = "kelleyia_q458_07.htm";
 					}
+					
 					break;
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -308,6 +325,7 @@ public class _458_PerfectForm extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		boolean doneCond = updateKill(npc, st);
+		
 		if (doneCond)
 		{
 			st.set("normaloverhits", Rnd.get(1, 3));
@@ -315,6 +333,7 @@ public class _458_PerfectForm extends Quest implements ScriptFile
 			st.set("contoverhits", Rnd.get(1, 3));
 			st.setCond(2);
 		}
+		
 		return null;
 	}
 	

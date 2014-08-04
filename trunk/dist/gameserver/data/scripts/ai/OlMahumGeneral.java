@@ -47,9 +47,11 @@ public class OlMahumGeneral extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (_firstTimeAttacked)
 		{
 			_firstTimeAttacked = false;
+			
 			if (Rnd.chance(25))
 			{
 				Functions.npcSay(actor, "We shall see about that!");
@@ -59,6 +61,7 @@ public class OlMahumGeneral extends Fighter
 		{
 			Functions.npcSay(actor, "I will definitely repay this humiliation!");
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	

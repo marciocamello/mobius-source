@@ -116,15 +116,19 @@ public class _663_SeductiveWhispers extends Quest implements ScriptFile
 		Dialog_WinGame += "<a action=\"bypass -h Quest _663_SeductiveWhispers 30846_03.htm\">Return</a>";
 		Dialog_Rewards += "If you win the game, the master running it owes you the appropriate amount. The higher the round, the bigger the payout. That's why the game anly allows you to win up to 8 round in a row. If -- and that's a big if -- you manage to win 8 straight times, the game will end.<br>";
 		Dialog_Rewards += "Keep in mind that <font color=\"LEVEL\">if you lose any of the rounds, you get nothing</font>. That's fair warning, my friend. Here's how the prize system works:<br>";
+		
 		for (int i = 0; i < rewards.length; i++)
 		{
 			Dialog_Rewards += "<font color=\"LEVEL\">" + String.valueOf(i + 1) + " winning round";
+			
 			if (i > 0)
 			{
 				Dialog_Rewards += "s";
 			}
+			
 			Dialog_Rewards += ": </font>" + rewards[i].toString() + "<br>";
 		}
+		
 		Dialog_Rewards += "<br>My advice is to identify what you'd like to win and then to play for that prize. Any questions?<br>";
 		Dialog_Rewards += "<a action=\"bypass -h Quest _663_SeductiveWhispers 30846_03.htm\">Return</a>";
 	}
@@ -141,6 +145,7 @@ public class _663_SeductiveWhispers extends Quest implements ScriptFile
 	{
 		int _state = st.getState();
 		long Spirit_Bead_Count = st.getQuestItemsCount(Spirit_Bead);
+		
 		if (event.equalsIgnoreCase("30846_04.htm") && (_state == CREATED))
 		{
 			st.setCond(1);
@@ -163,7 +168,9 @@ public class _663_SeductiveWhispers extends Quest implements ScriptFile
 			{
 				return "30846_11.htm";
 			}
+			
 			st.takeItems(Spirit_Bead, 1);
+			
 			if (!Rnd.chance(WinChance))
 			{
 				return "30846_08a.htm";
@@ -172,6 +179,7 @@ public class _663_SeductiveWhispers extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("30846_10.htm") && (_state == STARTED))
 		{
 			st.set("round", "0");
+			
 			if (Spirit_Bead_Count < 50)
 			{
 				return "30846_11.htm";
@@ -180,31 +188,37 @@ public class _663_SeductiveWhispers extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("30846_12.htm") && (_state == STARTED))
 		{
 			int round = st.getInt("round");
+			
 			if (round == 0)
 			{
 				if (Spirit_Bead_Count < 50)
 				{
 					return "30846_11.htm";
 				}
+				
 				st.takeItems(Spirit_Bead, 50);
 			}
+			
 			if (!Rnd.chance(WinChance))
 			{
 				st.set("round", "0");
 				return event;
 			}
+			
 			LevelRewards current_reward = rewards[round];
 			int next_round = round + 1;
 			boolean LastLevel = next_round == rewards.length;
 			String dialog = LastLevel ? Dialog_WinGame : Dialog_WinLevel;
 			dialog = dialog.replaceFirst("%level%", String.valueOf(next_round));
 			dialog = dialog.replaceFirst("%prize%", current_reward.toString());
+			
 			if (LastLevel)
 			{
 				next_round = 0;
 				current_reward.giveRewards(st);
 				st.playSound(SOUND_JACKPOT);
 			}
+			
 			st.set("round", String.valueOf(next_round));
 			return dialog;
 		}
@@ -212,12 +226,15 @@ public class _663_SeductiveWhispers extends Quest implements ScriptFile
 		{
 			int round = st.getInt("round") - 1;
 			st.set("round", "0");
+			
 			if ((round < 0) || (round >= rewards.length))
 			{
 				return "30846_13a.htm";
 			}
+			
 			rewards[round].giveRewards(st);
 		}
+		
 		return event;
 	}
 	
@@ -228,7 +245,9 @@ public class _663_SeductiveWhispers extends Quest implements ScriptFile
 		{
 			return "noquest";
 		}
+		
 		int _state = st.getState();
+		
 		if (_state == CREATED)
 		{
 			if (st.getPlayer().getLevel() < 50)
@@ -236,9 +255,11 @@ public class _663_SeductiveWhispers extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 				return "30846_00.htm";
 			}
+			
 			st.setCond(0);
 			return "30846_01.htm";
 		}
+		
 		return "30846_03.htm";
 	}
 	
@@ -250,6 +271,7 @@ public class _663_SeductiveWhispers extends Quest implements ScriptFile
 			double rand = drop_chance * Experience.penaltyModifier(qs.calculateLevelDiffForDrop(npc.getLevel(), qs.getPlayer().getLevel()), 9) * npc.getTemplate().rateHp;
 			qs.rollAndGive(Spirit_Bead, 1, rand);
 		}
+		
 		return null;
 	}
 	

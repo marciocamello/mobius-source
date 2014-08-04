@@ -51,16 +51,20 @@ public class RequestGetOffVehicle extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		Boat boat = BoatHolder.getInstance().getBoat(_objectId);
+		
 		if ((boat == null) || boat.isMoving)
 		{
 			player.sendActionFailed();
 			return;
 		}
+		
 		boat.oustPlayer(player, _location, false);
 	}
 }

@@ -29,7 +29,7 @@ import lineage2.gameserver.utils.Location;
 public class LogisticsOfficerInstance extends FacilityManagerInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -71,12 +71,15 @@ public class LogisticsOfficerInstance extends FacilityManagerInstance
 		{
 			return;
 		}
+		
 		Fortress fortress = getFortress();
+		
 		if (!player.isClanLeader() || (fortress.getOwnerId() != player.getClanId()))
 		{
 			showChatWindow(player, "residence2/fortress/fortress_not_authorized.htm");
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("guardInfo"))
 		{
 			if (fortress.getContractState() != Fortress.CONTRACT_WITH_CASTLE)
@@ -84,6 +87,7 @@ public class LogisticsOfficerInstance extends FacilityManagerInstance
 				showChatWindow(player, "residence2/fortress/fortress_supply_officer005.htm");
 				return;
 			}
+			
 			showChatWindow(player, "residence2/fortress/fortress_supply_officer002.htm", "%guard_buff_level%", fortress.getFacilityLevel(Fortress.GUARD_BUFF));
 		}
 		else if (command.equalsIgnoreCase("supplyInfo"))
@@ -93,6 +97,7 @@ public class LogisticsOfficerInstance extends FacilityManagerInstance
 				showChatWindow(player, "residence2/fortress/fortress_supply_officer005.htm");
 				return;
 			}
+			
 			showChatWindow(player, "residence2/fortress/fortress_supply_officer009.htm", "%supply_count%", fortress.getSupplyCount());
 		}
 		else if (command.equalsIgnoreCase("rewardInfo"))
@@ -102,6 +107,7 @@ public class LogisticsOfficerInstance extends FacilityManagerInstance
 		else if (command.equalsIgnoreCase("receiveSupply"))
 		{
 			String filename;
+			
 			if (fortress.getSupplyCount() > 0)
 			{
 				filename = "residence2/fortress/fortress_supply_officer016.htm";
@@ -113,6 +119,7 @@ public class LogisticsOfficerInstance extends FacilityManagerInstance
 			{
 				filename = "residence2/fortress/fortress_supply_officer017.htm";
 			}
+			
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile(filename);
 			player.sendPacket(html);
@@ -121,6 +128,7 @@ public class LogisticsOfficerInstance extends FacilityManagerInstance
 		{
 			String filename;
 			int count = fortress.getRewardCount();
+			
 			if (count > 0)
 			{
 				filename = "residence2/fortress/fortress_supply_officer013.htm";
@@ -133,6 +141,7 @@ public class LogisticsOfficerInstance extends FacilityManagerInstance
 			{
 				filename = "residence2/fortress/fortress_supply_officer014.htm";
 			}
+			
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile(filename);
 			player.sendPacket(html);

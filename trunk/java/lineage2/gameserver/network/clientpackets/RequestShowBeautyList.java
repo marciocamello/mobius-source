@@ -32,10 +32,12 @@ public class RequestShowBeautyList extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		activeChar.sendPacket(new ExResponseBeautyListPacket(activeChar, _type));
 	}
 }

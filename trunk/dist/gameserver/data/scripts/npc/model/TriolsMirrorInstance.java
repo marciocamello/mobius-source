@@ -23,7 +23,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class TriolsMirrorInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	

@@ -88,15 +88,18 @@ public class Remy extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			doTask();
 			return true;
 		}
+		
 		if ((System.currentTimeMillis() > wait_timeout) && ((current_point > -1) || Rnd.chance(5)))
 		{
 			if (!wait)
@@ -108,43 +111,52 @@ public class Remy extends DefaultAI
 						Functions.npcSay(actor, "A delivery for Mr. Lector? Very good!");
 						wait = true;
 						return true;
+						
 					case 3:
 						wait_timeout = System.currentTimeMillis() + 15000;
 						Functions.npcSay(actor, "I need a break!");
 						wait = true;
 						return true;
+						
 					case 7:
 						wait_timeout = System.currentTimeMillis() + 15000;
 						Functions.npcSay(actor, "Hello, Mr. Lector! Long time no see, Mr. Jackson!");
 						wait = true;
 						return true;
+						
 					case 12:
 						wait_timeout = System.currentTimeMillis() + 15000;
 						Functions.npcSay(actor, "Lulu!");
 						wait = true;
 						return true;
+						
 					case 15:
 						wait_timeout = System.currentTimeMillis() + 60000;
 						wait = true;
 						return true;
 				}
 			}
+			
 			wait_timeout = 0;
 			wait = false;
 			current_point++;
+			
 			if (current_point >= points.length)
 			{
 				current_point = 0;
 			}
+			
 			actor.setRunning();
 			addTaskMove(points[current_point], true);
 			doTask();
 			return true;
 		}
+		
 		if (randomAnimation())
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	

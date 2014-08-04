@@ -44,9 +44,11 @@ public final class RequestRegistWaitingSubstitute extends L2GameClientPacket
 			case 0:
 				PartySubstitute.getInstance().removePlayerFromParty(activeChar);
 				break;
+			
 			case 1:
 				PartySubstitute.getInstance().addPlayerToParty(activeChar);
 				break;
+			
 			default:
 				System.out.println("RequestRegistWaitingSubstitute: key is " + _key);
 				break;

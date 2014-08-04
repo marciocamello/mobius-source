@@ -49,10 +49,12 @@ public class RequestDispel extends L2GameClientPacket
 	{
 		Player activeChar = getClient().getActiveChar();
 		Creature target = activeChar;
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (activeChar.getObjectId() != _objectId)
 		{
 			for (Summon summon : activeChar.getSummonList())
@@ -63,11 +65,13 @@ public class RequestDispel extends L2GameClientPacket
 					break;
 				}
 			}
+			
 			if (target == null)
 			{
 				return;
 			}
 		}
+		
 		for (Effect e : target.getEffectList().getAllEffects())
 		{
 			if ((e.getDisplayId() == _id) && (e.getDisplayLevel() == _level))

@@ -137,14 +137,17 @@ public class AdminReload implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		if (!activeChar.getPlayerAccess().CanReload)
 		{
 			return false;
 		}
+		
 		switch (command)
 		{
 			case admin_reload:
 				break;
+			
 			case admin_reload_config:
 			{
 				try
@@ -156,9 +159,11 @@ public class AdminReload implements IAdminCommandHandler
 					activeChar.sendMessage("Error: " + e.getMessage() + "!");
 					return false;
 				}
+				
 				activeChar.sendMessage("Config reloaded!");
 				break;
 			}
+			
 			case admin_reload_multisell:
 			{
 				try
@@ -169,14 +174,17 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					return false;
 				}
+				
 				activeChar.sendMessage("Multisell list reloaded!");
 				break;
 			}
+			
 			case admin_reload_gmaccess:
 			{
 				try
 				{
 					Config.loadGMAccess();
+					
 					for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 					{
 						if (!Config.EVERYBODY_HAS_ADMIN_RIGHTS)
@@ -193,15 +201,18 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					return false;
 				}
+				
 				activeChar.sendMessage("GMAccess reloaded!");
 				break;
 			}
+			
 			case admin_reload_htm:
 			{
 				HtmCache.getInstance().clear();
 				activeChar.sendMessage("HTML cache clearned.");
 				break;
 			}
+			
 			case admin_reload_qs:
 			{
 				if (fullString.endsWith("all"))
@@ -214,6 +225,7 @@ public class AdminReload implements IAdminCommandHandler
 				else
 				{
 					GameObject t = activeChar.getTarget();
+					
 					if ((t != null) && t.isPlayer())
 					{
 						Player p = (Player) t;
@@ -224,8 +236,10 @@ public class AdminReload implements IAdminCommandHandler
 						reloadQuestStates(activeChar);
 					}
 				}
+				
 				break;
 			}
+			
 			case admin_reload_qs_help:
 			{
 				activeChar.sendMessage("");
@@ -237,16 +251,19 @@ public class AdminReload implements IAdminCommandHandler
 				activeChar.sendMessage("");
 				break;
 			}
+			
 			case admin_reload_skills:
 			{
 				SkillTable.getInstance().reload();
 				break;
 			}
+			
 			case admin_reload_npc:
 			{
 				NpcParser.getInstance().reload();
 				break;
 			}
+			
 			case admin_reload_spawn:
 			{
 				ThreadPoolManager.getInstance().execute(new RunnableImpl()
@@ -259,52 +276,62 @@ public class AdminReload implements IAdminCommandHandler
 				});
 				break;
 			}
+			
 			case admin_reload_fish:
 			{
 				FishTable.getInstance().reload();
 				break;
 			}
+			
 			case admin_reload_abuse:
 			{
 				Config.abuseLoad();
 				break;
 			}
+			
 			case admin_reload_translit:
 			{
 				Strings.reload();
 				break;
 			}
+			
 			case admin_reload_shops:
 			{
 				BuyListHolder.reload();
 				break;
 			}
+			
 			case admin_reload_static:
 			{
 				break;
 			}
+			
 			case admin_reload_pets:
 			{
 				PetDataTable.getInstance().reload();
 				break;
 			}
+			
 			case admin_reload_locale:
 			{
 				StringHolder.getInstance().reload();
 				break;
 			}
+			
 			case admin_reload_nobles:
 			{
 				OlympiadNobleDAO.getInstance().select();
 				OlympiadDatabase.loadNoblesRank();
 				break;
 			}
+			
 			case admin_reload_im:
 			{
 				ProductHolder.getInstance().reload();
 				break;
 			}
 		}
+		
 		activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/reload.htm"));
 		return true;
 	}
@@ -319,6 +346,7 @@ public class AdminReload implements IAdminCommandHandler
 		{
 			p.removeQuestState(qs.getQuest().getName());
 		}
+		
 		Quest.restoreQuestStates(p);
 	}
 	

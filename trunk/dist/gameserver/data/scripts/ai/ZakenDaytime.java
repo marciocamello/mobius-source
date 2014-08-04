@@ -84,6 +84,7 @@ public class ZakenDaytime extends Fighter
 		if ((_teleportSelfTimer + _teleportSelfReuse) < System.currentTimeMillis())
 		{
 			_teleportSelfTimer = System.currentTimeMillis();
+			
 			if (Rnd.chance(20))
 			{
 				actor.doCast(SkillTable.getInstance().getInfo(4222, 1), actor, false);
@@ -98,6 +99,7 @@ public class ZakenDaytime extends Fighter
 				}, 500);
 			}
 		}
+		
 		super.thinkAttack();
 	}
 	
@@ -110,10 +112,12 @@ public class ZakenDaytime extends Fighter
 	{
 		final Reflection r = actor.getReflection();
 		r.setReenterTime(System.currentTimeMillis());
+		
 		for (Player p : r.getPlayers())
 		{
 			p.sendPacket(new ExSendUIEvent(p, 1, 1, 0, 0));
 		}
+		
 		actor.broadcastPacket(new PlaySound(PlaySound.Type.MUSIC, "BS02_D", 1, actor.getObjectId(), actor.getLoc()));
 		super.onEvtDead(killer);
 	}

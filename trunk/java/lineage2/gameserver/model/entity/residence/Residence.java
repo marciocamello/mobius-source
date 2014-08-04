@@ -53,7 +53,7 @@ import org.slf4j.LoggerFactory;
 public abstract class Residence implements JdbcEntity
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -351,6 +351,7 @@ public abstract class Residence implements JdbcEntity
 			{
 				continue;
 			}
+			
 			player.teleToLocation(getBanishPoint());
 		}
 	}
@@ -361,6 +362,7 @@ public abstract class Residence implements JdbcEntity
 	public void rewardSkills()
 	{
 		Clan owner = getOwner();
+		
 		if (owner != null)
 		{
 			for (Skill skill : _skills)
@@ -377,6 +379,7 @@ public abstract class Residence implements JdbcEntity
 	public void removeSkills()
 	{
 		Clan owner = getOwner();
+		
 		if (owner != null)
 		{
 			for (Skill skill : _skills)
@@ -394,12 +397,14 @@ public abstract class Residence implements JdbcEntity
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rs = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM residence_functions WHERE id = ?");
 			statement.setInt(1, getId());
 			rs = statement.executeQuery();
+			
 			while (rs.next())
 			{
 				ResidenceFunction function = getFunction(rs.getInt("type"));
@@ -428,10 +433,12 @@ public abstract class Residence implements JdbcEntity
 	public boolean isFunctionActive(int type)
 	{
 		ResidenceFunction function = getFunction(type);
+		
 		if ((function != null) && function.isActive() && (function.getLevel() > 0))
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -449,6 +456,7 @@ public abstract class Residence implements JdbcEntity
 				return _functions.get(i);
 			}
 		}
+		
 		return null;
 	}
 	
@@ -461,26 +469,33 @@ public abstract class Residence implements JdbcEntity
 	public boolean updateFunctions(int type, int level)
 	{
 		Clan clan = getOwner();
+		
 		if (clan == null)
 		{
 			return false;
 		}
+		
 		long count = clan.getAdenaCount();
 		ResidenceFunction function = getFunction(type);
+		
 		if (function == null)
 		{
 			return false;
 		}
+		
 		if (function.isActive() && (function.getLevel() == level))
 		{
 			return true;
 		}
+		
 		int lease = level == 0 ? 0 : getFunction(type).getLease(level);
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
+			
 			if (!function.isActive())
 			{
 				if (count >= lease)
@@ -491,6 +506,7 @@ public abstract class Residence implements JdbcEntity
 				{
 					return false;
 				}
+				
 				long time = Calendar.getInstance().getTimeInMillis() + 86400000;
 				statement = con.prepareStatement("REPLACE residence_functions SET id=?, type=?, lvl=?, endTime=?");
 				statement.setInt(1, getId());
@@ -516,6 +532,7 @@ public abstract class Residence implements JdbcEntity
 				{
 					return false;
 				}
+				
 				statement = con.prepareStatement("REPLACE residence_functions SET id=?, type=?, lvl=?");
 				statement.setInt(1, getId());
 				statement.setInt(2, type);
@@ -543,6 +560,7 @@ public abstract class Residence implements JdbcEntity
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -571,11 +589,14 @@ public abstract class Residence implements JdbcEntity
 		{
 			return;
 		}
+		
 		Clan clan = getOwner();
+		
 		if (clan == null)
 		{
 			return;
 		}
+		
 		if (function.getEndTimeInMillis() > System.currentTimeMillis())
 		{
 			ThreadPoolManager.getInstance().schedule(new AutoTaskForFunctions(function), function.getEndTimeInMillis() - System.currentTimeMillis());
@@ -678,11 +699,13 @@ public abstract class Residence implements JdbcEntity
 		_cycle = 0;
 		_paidCycle = 0;
 		_rewardCount = 0;
+		
 		if (_cycleTask != null)
 		{
 			_cycleTask.cancel(false);
 			_cycleTask = null;
 		}
+		
 		setJdbcState(JdbcEntityState.UPDATED);
 	}
 	
@@ -695,16 +718,21 @@ public abstract class Residence implements JdbcEntity
 		{
 			return;
 		}
+		
 		long ownedTime = getOwnDate().getTimeInMillis();
+		
 		if (ownedTime == 0)
 		{
 			return;
 		}
+		
 		long diff = System.currentTimeMillis() - ownedTime;
+		
 		while (diff >= CYCLE_TIME)
 		{
 			diff -= CYCLE_TIME;
 		}
+		
 		_cycleTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new ResidenceCycleTask(), diff, CYCLE_TIME);
 	}
 	
@@ -772,6 +800,7 @@ public abstract class Residence implements JdbcEntity
 		{
 			return null;
 		}
+		
 		return _banishPoints.get(Rnd.get(_banishPoints.size()));
 	}
 	
@@ -785,6 +814,7 @@ public abstract class Residence implements JdbcEntity
 		{
 			return null;
 		}
+		
 		return _ownerRestartPoints.get(Rnd.get(_ownerRestartPoints.size()));
 	}
 	
@@ -798,6 +828,7 @@ public abstract class Residence implements JdbcEntity
 		{
 			return null;
 		}
+		
 		return _otherRestartPoints.get(Rnd.get(_otherRestartPoints.size()));
 	}
 	
@@ -811,6 +842,7 @@ public abstract class Residence implements JdbcEntity
 		{
 			return null;
 		}
+		
 		return _chaosRestartPoints.get(Rnd.get(_chaosRestartPoints.size()));
 	}
 	
@@ -843,6 +875,7 @@ public abstract class Residence implements JdbcEntity
 		{
 			return 0;
 		}
+		
 		return _cycleTask.getDelay(TimeUnit.SECONDS);
 	}
 	

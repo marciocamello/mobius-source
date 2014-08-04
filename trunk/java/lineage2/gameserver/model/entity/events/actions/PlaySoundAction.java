@@ -62,6 +62,7 @@ public class PlaySoundAction implements EventAction
 	{
 		GameObject object = event.getCenterObject();
 		PlaySound packet = null;
+		
 		if (object != null)
 		{
 			packet = new PlaySound(_type, _sound, 1, object.getObjectId(), object.getLoc());
@@ -70,7 +71,9 @@ public class PlaySoundAction implements EventAction
 		{
 			packet = new PlaySound(_type, _sound, 0, 0, 0, 0, 0);
 		}
+		
 		List<Player> players = event.broadcastPlayers(_range);
+		
 		for (Player player : players)
 		{
 			if (player != null)

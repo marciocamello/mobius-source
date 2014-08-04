@@ -29,7 +29,6 @@ public class ExCubeGameChangeTimeToStart extends L2GameServerPacket
 	{
 		writeEx(0x98);
 		writeD(0x03);
-		
 		writeD(_seconds);
 	}
 }

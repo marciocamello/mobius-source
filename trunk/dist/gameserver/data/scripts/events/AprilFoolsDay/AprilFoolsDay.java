@@ -67,14 +67,17 @@ public class AprilFoolsDay extends Functions implements ScriptFile, OnDeathListe
 	public void startEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive("AprilFoolsDay", true))
 		{
 			System.out.println("Event: 'April Fools Day' started.");
 			final ExBR_BroadcastEventState es = new ExBR_BroadcastEventState(ExBR_BroadcastEventState.APRIL_FOOLS, 1);
+			
 			for (Player p : GameObjectsStorage.getAllPlayersForIterate())
 			{
 				p.sendPacket(es);
@@ -84,6 +87,7 @@ public class AprilFoolsDay extends Functions implements ScriptFile, OnDeathListe
 		{
 			player.sendMessage("Event 'April Fools Day' already started.");
 		}
+		
 		_active = true;
 		show("admin/events.htm", player);
 	}
@@ -94,10 +98,12 @@ public class AprilFoolsDay extends Functions implements ScriptFile, OnDeathListe
 	public void stopEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive("AprilFoolsDay", false))
 		{
 			System.out.println("Event: 'April Fools Day' stopped.");
@@ -106,6 +112,7 @@ public class AprilFoolsDay extends Functions implements ScriptFile, OnDeathListe
 		{
 			player.sendMessage("Event: 'April Fools Day' not started.");
 		}
+		
 		_active = false;
 		show("admin/events.htm", player);
 	}
@@ -118,6 +125,7 @@ public class AprilFoolsDay extends Functions implements ScriptFile, OnDeathListe
 	public void onLoad()
 	{
 		CharListenerList.addGlobal(this);
+		
 		if (isActive())
 		{
 			_active = true;

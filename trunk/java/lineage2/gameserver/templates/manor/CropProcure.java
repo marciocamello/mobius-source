@@ -67,6 +67,7 @@ public class CropProcure
 		_rewardType = type;
 		_buy = buy;
 		_price = price;
+		
 		if (_price < 0L)
 		{
 			_price = 0L;

@@ -70,12 +70,14 @@ public class AccountBonusDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_SQL_QUERY);
 			statement.setString(1, account);
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				bonus = rset.getDouble("bonus");
@@ -105,6 +107,7 @@ public class AccountBonusDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -132,6 +135,7 @@ public class AccountBonusDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();

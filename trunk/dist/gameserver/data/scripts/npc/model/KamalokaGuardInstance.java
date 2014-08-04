@@ -26,7 +26,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public final class KamalokaGuardInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -52,10 +52,12 @@ public final class KamalokaGuardInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.startsWith("kamaloka"))
 		{
 			int val = Integer.parseInt(command.substring(9));
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(val))
@@ -75,11 +77,13 @@ public final class KamalokaGuardInstance extends NpcInstance
 				showChatWindow(player, "not_party_leader.htm");
 				return;
 			}
+			
 			player.getReflection().collapse();
 		}
 		else if (command.startsWith("return"))
 		{
 			Reflection r = player.getReflection();
+			
 			if (r.getReturnLoc() != null)
 			{
 				player.teleToLocation(r.getReturnLoc(), ReflectionManager.DEFAULT);
@@ -106,6 +110,7 @@ public final class KamalokaGuardInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String pom;
+		
 		if (val == 0)
 		{
 			pom = "" + npcId;
@@ -114,6 +119,7 @@ public final class KamalokaGuardInstance extends NpcInstance
 		{
 			pom = npcId + "-" + val;
 		}
+		
 		return "instance/kamaloka/" + pom + ".htm";
 	}
 }

@@ -178,6 +178,7 @@ public enum AbnormalEffect
 				return eff;
 			}
 		}
+		
 		throw new NoSuchElementException("AbnormalEffect not found for name: '" + name + "'.\n Please check " + AbnormalEffect.class.getCanonicalName());
 	}
 }

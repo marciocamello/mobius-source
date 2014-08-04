@@ -34,14 +34,17 @@ public abstract class AbstractEnchantPacket extends L2GameClientPacket
 		{
 			return false;
 		}
+		
 		if (player.isInTrade())
 		{
 			return false;
 		}
+		
 		if (player.isInStoreMode())
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -57,26 +60,32 @@ public abstract class AbstractEnchantPacket extends L2GameClientPacket
 		{
 			return false;
 		}
+		
 		if (item.getTemplate().getItemGrade().externalOrdinal != esi.getGrade().externalOrdinal)
 		{
 			return false;
 		}
+		
 		if (item.isArmor() && (esi.getTarget() != EnchantScrollTarget.ARMOR))
 		{
 			return false;
 		}
+		
 		if (item.isWeapon() && (esi.getTarget() != EnchantScrollTarget.WEAPON))
 		{
 			return false;
 		}
+		
 		if (!item.canBeEnchanted())
 		{
 			return false;
 		}
+		
 		if ((item.getLocation() != ItemInstance.ItemLocation.INVENTORY) && (item.getLocation() != ItemInstance.ItemLocation.PAPERDOLL))
 		{
 			return false;
 		}
+		
 		return true;
 	}
 }

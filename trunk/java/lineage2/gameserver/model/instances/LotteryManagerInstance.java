@@ -35,7 +35,7 @@ import lineage2.gameserver.utils.Log;
 public class LotteryManagerInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -61,6 +61,7 @@ public class LotteryManagerInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.startsWith("Loto"))
 		{
 			try
@@ -90,6 +91,7 @@ public class LotteryManagerInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String pom;
+		
 		if (val == 0)
 		{
 			pom = "LotteryManager";
@@ -98,6 +100,7 @@ public class LotteryManagerInstance extends NpcInstance
 		{
 			pom = "LotteryManager-" + val;
 		}
+		
 		return "lottery/" + pom + ".htm";
 	}
 	
@@ -112,6 +115,7 @@ public class LotteryManagerInstance extends NpcInstance
 		String filename;
 		SystemMessage sm;
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
+		
 		if (val == 0)
 		{
 			filename = getHtmlPath(npcId, 1, player);
@@ -124,15 +128,18 @@ public class LotteryManagerInstance extends NpcInstance
 				player.sendPacket(Msg.LOTTERY_TICKETS_ARE_NOT_CURRENTLY_BEING_SOLD);
 				return;
 			}
+			
 			if (!LotteryManager.getInstance().isSellableTickets())
 			{
 				player.sendPacket(Msg.TICKETS_FOR_THE_CURRENT_LOTTERY_ARE_NO_LONGER_AVAILABLE);
 				return;
 			}
+			
 			filename = getHtmlPath(npcId, 5, player);
 			html.setFile(filename);
 			int count = 0;
 			int found = 0;
+			
 			for (int i = 0; i < 5; i++)
 			{
 				if (player.getLoto(i) == val)
@@ -145,6 +152,7 @@ public class LotteryManagerInstance extends NpcInstance
 					count++;
 				}
 			}
+			
 			if ((count < 5) && (found == 0) && (val <= 20))
 			{
 				for (int i = 0; i < 5; i++)
@@ -156,26 +164,32 @@ public class LotteryManagerInstance extends NpcInstance
 					}
 				}
 			}
+			
 			count = 0;
+			
 			for (int i = 0; i < 5; i++)
 			{
 				if (player.getLoto(i) > 0)
 				{
 					count++;
 					String button = String.valueOf(player.getLoto(i));
+					
 					if (player.getLoto(i) < 10)
 					{
 						button = "0" + button;
 					}
+					
 					String search = "fore=\"L2UI.lottoNum" + button + "\" back=\"L2UI.lottoNum" + button + "a_check\"";
 					String replace = "fore=\"L2UI.lottoNum" + button + "a_check\" back=\"L2UI.lottoNum" + button + "\"";
 					html.replace(search, replace);
 				}
 			}
+			
 			if (count == 5)
 			{
 				String search = "";
 				String replace = "";
+				
 				if (player.getVar("lang@").equalsIgnoreCase("en"))
 				{
 					search = "0\">Return";
@@ -186,10 +200,13 @@ public class LotteryManagerInstance extends NpcInstance
 					search = "0\">�?азад";
 					replace = "22\">Выигры�?ные номера выбранные вы�?е.";
 				}
+				
 				html.replace(search, replace);
 			}
+			
 			player.sendPacket(html);
 		}
+		
 		if (val == 22)
 		{
 			if (!LotteryManager.getInstance().isStarted())
@@ -197,21 +214,25 @@ public class LotteryManagerInstance extends NpcInstance
 				player.sendPacket(Msg.LOTTERY_TICKETS_ARE_NOT_CURRENTLY_BEING_SOLD);
 				return;
 			}
+			
 			if (!LotteryManager.getInstance().isSellableTickets())
 			{
 				player.sendPacket(Msg.TICKETS_FOR_THE_CURRENT_LOTTERY_ARE_NO_LONGER_AVAILABLE);
 				return;
 			}
+			
 			int price = Config.SERVICES_ALT_LOTTERY_PRICE;
 			int lotonumber = LotteryManager.getInstance().getId();
 			int enchant = 0;
 			int type2 = 0;
+			
 			for (int i = 0; i < 5; i++)
 			{
 				if (player.getLoto(i) == 0)
 				{
 					return;
 				}
+				
 				if (player.getLoto(i) < 17)
 				{
 					enchant += Math.pow(2, player.getLoto(i) - 1);
@@ -221,11 +242,13 @@ public class LotteryManagerInstance extends NpcInstance
 					type2 += Math.pow(2, player.getLoto(i) - 17);
 				}
 			}
+			
 			if (player.getAdena() < price)
 			{
 				player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 				return;
 			}
+			
 			player.reduceAdena(price, true);
 			sm = new SystemMessage(SystemMessage.ACQUIRED__S1_S2);
 			sm.addNumber(lotonumber);
@@ -250,49 +273,62 @@ public class LotteryManagerInstance extends NpcInstance
 			html.setFile(filename);
 			int lotonumber = LotteryManager.getInstance().getId();
 			String message = "";
+			
 			for (ItemInstance item : player.getInventory().getItems())
 			{
 				if (item == null)
 				{
 					continue;
 				}
+				
 				if ((item.getItemId() == 4442) && (item.getCustomType1() < lotonumber))
 				{
 					message += "<a action=\"bypass -h npc_%objectId%_Loto " + item.getObjectId() + "\">" + item.getCustomType1();
 					message += " " + HtmlUtils.htmlNpcString(NpcString.EVENT_NUMBER) + " ";
 					int[] numbers = LotteryManager.getInstance().decodeNumbers(item.getEnchantLevel(), item.getCustomType2());
+					
 					for (int i = 0; i < 5; i++)
 					{
 						message += numbers[i] + " ";
 					}
+					
 					int[] check = LotteryManager.getInstance().checkTicket(item);
+					
 					if (check[0] > 0)
 					{
 						message += "- ";
+						
 						switch (check[0])
 						{
 							case 1:
 								message += HtmlUtils.htmlNpcString(NpcString.FIRST_PRIZE);
 								break;
+							
 							case 2:
 								message += HtmlUtils.htmlNpcString(NpcString.SECOND_PRIZE);
 								break;
+							
 							case 3:
 								message += HtmlUtils.htmlNpcString(NpcString.THIRD_PRIZE);
 								break;
+							
 							case 4:
 								message += HtmlUtils.htmlNpcString(NpcString.FOURTH_PRIZE);
 								break;
 						}
+						
 						message += " " + check[1] + "a.";
 					}
+					
 					message += "</a>";
 				}
 			}
+			
 			if (message.length() == 0)
 			{
 				message += HtmlUtils.htmlNpcString(NpcString.THERE_HAS_BEEN_NO_WINNING_LOTTERY_TICKET);
 			}
+			
 			html.replace("%result%", message);
 		}
 		else if (val == 25)
@@ -304,22 +340,28 @@ public class LotteryManagerInstance extends NpcInstance
 		{
 			int lotonumber = LotteryManager.getInstance().getId();
 			ItemInstance item = player.getInventory().getItemByObjectId(val);
+			
 			if ((item == null) || (item.getItemId() != 4442) || (item.getCustomType1() >= lotonumber))
 			{
 				return;
 			}
+			
 			int[] check = LotteryManager.getInstance().checkTicket(item);
+			
 			if (player.getInventory().destroyItem(item, 1L))
 			{
 				player.sendPacket(SystemMessage2.removeItems(4442, 1));
 				int adena = check[1];
+				
 				if (adena > 0)
 				{
 					player.addAdena(adena);
 				}
 			}
+			
 			return;
 		}
+		
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%race%", "" + LotteryManager.getInstance().getId());
 		html.replace("%adena%", "" + LotteryManager.getInstance().getPrize());

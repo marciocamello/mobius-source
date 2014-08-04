@@ -32,7 +32,7 @@ import lineage2.gameserver.utils.Location;
 public class DuelSnapshotObject implements Serializable
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -79,19 +79,17 @@ public class DuelSnapshotObject implements Serializable
 		_player = player;
 		_team = team;
 		_returnLoc = player.getReflection().getReturnLoc() == null ? player.getLoc() : player.getReflection().getReturnLoc();
-		
 		_currentCp = player.getCurrentCp();
 		_currentHp = player.getCurrentHp();
 		_currentMp = player.getCurrentMp();
-		
 		List<Effect> effectList = player.getEffectList().getAllEffects();
 		_effects = new ArrayList<>(effectList.size());
+		
 		for (Effect $effect : effectList)
 		{
 			Effect effect = $effect.getTemplate().getEffect(new Env($effect.getEffector(), $effect.getEffected(), $effect.getSkill()));
 			effect.setCount($effect.getCount());
 			effect.setPeriod($effect.getCount() == 1 ? $effect.getPeriod() - $effect.getTime() : $effect.getPeriod());
-			
 			_effects.add(effect);
 		}
 	}
@@ -105,6 +103,7 @@ public class DuelSnapshotObject implements Serializable
 		if (!abnormal)
 		{
 			_player.getEffectList().stopAllEffects();
+			
 			for (Effect e : _effects)
 			{
 				_player.getEffectList().addEffect(e);
@@ -121,6 +120,7 @@ public class DuelSnapshotObject implements Serializable
 	public void teleport()
 	{
 		_player._stablePoint = null;
+		
 		if (_player.isFrozen())
 		{
 			_player.stopFrozen();

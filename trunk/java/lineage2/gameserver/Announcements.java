@@ -177,12 +177,15 @@ public class Announcements
 	public void loadAnnouncements()
 	{
 		_announcements.clear();
+		
 		try
 		{
 			List<String> lines = Arrays.asList(FileUtils.readFileToString(new File("config/announcements.txt"), "UTF-8").split("\n"));
+			
 			for (String line : lines)
 			{
 				StringTokenizer token = new StringTokenizer(line, "\t");
+				
 				if (token.countTokens() > 1)
 				{
 					addAnnouncement(Integer.parseInt(token.nextToken()), token.nextToken(), false);
@@ -222,6 +225,7 @@ public class Announcements
 		Announce announce = new Announce(val, text);
 		announce.start();
 		_announcements.add(announce);
+		
 		if (save)
 		{
 			saveToDisk();
@@ -235,10 +239,12 @@ public class Announcements
 	public void delAnnouncement(int line)
 	{
 		Announce announce = _announcements.remove(line);
+		
 		if (announce != null)
 		{
 			announce.stop();
 		}
+		
 		saveToDisk();
 	}
 	
@@ -251,10 +257,12 @@ public class Announcements
 		{
 			File f = new File("config/announcements.txt");
 			FileWriter writer = new FileWriter(f, false);
+			
 			for (Announce announce : _announcements)
 			{
 				writer.write(announce.getTime() + "\t" + announce.getAnnounce() + "\n");
 			}
+			
 			writer.close();
 		}
 		catch (Exception e)
@@ -284,19 +292,23 @@ public class Announcements
 		int rx = MapUtils.regionX(activeChar);
 		int ry = MapUtils.regionY(activeChar);
 		int offset = Config.SHOUT_OFFSET;
+		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			if ((player == activeChar) || (activeChar.getReflection() != player.getReflection()))
 			{
 				continue;
 			}
+			
 			int tx = MapUtils.regionX(player);
 			int ty = MapUtils.regionY(player);
+			
 			if (((tx >= (rx - offset)) && (tx <= (rx + offset)) && (ty >= (ry - offset)) && (ty <= (ry + offset))) || activeChar.isInRangeZ(player, Config.CHAT_RANGE))
 			{
 				player.sendPacket(cs);
 			}
 		}
+		
 		activeChar.sendPacket(cs);
 	}
 	
@@ -308,6 +320,7 @@ public class Announcements
 	public void announceToAll(String text, ChatType type)
 	{
 		Say2 cs = new Say2(0, type, "", text);
+		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			player.sendPacket(cs);
@@ -358,6 +371,7 @@ public class Announcements
 	public void announceToPlayerByCustomMessage(Player player, String address, String[] replacements)
 	{
 		CustomMessage cm = new CustomMessage(address, player);
+		
 		if (replacements != null)
 		{
 			for (String s : replacements)
@@ -365,6 +379,7 @@ public class Announcements
 				cm.addString(s);
 			}
 		}
+		
 		player.sendPacket(new Say2(0, ChatType.ANNOUNCEMENT, "", cm.toString()));
 	}
 	
@@ -378,6 +393,7 @@ public class Announcements
 	public void announceToPlayerByCustomMessage(Player player, String address, String[] replacements, ChatType type)
 	{
 		CustomMessage cm = new CustomMessage(address, player);
+		
 		if (replacements != null)
 		{
 			for (String s : replacements)
@@ -385,6 +401,7 @@ public class Announcements
 				cm.addString(s);
 			}
 		}
+		
 		player.sendPacket(new Say2(0, type, "", cm.toString()));
 	}
 	

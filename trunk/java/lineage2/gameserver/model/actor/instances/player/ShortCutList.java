@@ -92,6 +92,7 @@ public class ShortCutList
 	public ShortCut getShortCut(int slot, int page)
 	{
 		ShortCut sc = _shortCuts.get(slot + (page * 12));
+		
 		if ((sc != null) && (sc.getType() == ShortCut.TYPE_ITEM))
 		{
 			if (player.getInventory().getItemByObjectId(sc.getId()) == null)
@@ -101,6 +102,7 @@ public class ShortCutList
 				sc = null;
 			}
 		}
+		
 		return sc;
 	}
 	
@@ -125,8 +127,10 @@ public class ShortCutList
 		{
 			deleteShortCutFromDb(oldShortCut);
 		}
+		
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -159,6 +163,7 @@ public class ShortCutList
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -187,14 +192,18 @@ public class ShortCutList
 	public void deleteShortCut(int slot, int page)
 	{
 		ShortCut old = _shortCuts.remove(slot + (page * 12));
+		
 		if (old == null)
 		{
 			return;
 		}
+		
 		deleteShortCutFromDb(old);
+		
 		if (old.getType() == ShortCut.TYPE_SKILL)
 		{
 			player.sendPacket(new ShortCutInit(player));
+			
 			for (int shotId : player.getAutoSoulShot())
 			{
 				player.sendPacket(new ExAutoSoulShot(shotId, true));
@@ -241,6 +250,7 @@ public class ShortCutList
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -248,6 +258,7 @@ public class ShortCutList
 			statement.setInt(1, player.getObjectId());
 			statement.setInt(2, player.getActiveClassId());
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				int slot = rset.getInt("slot");

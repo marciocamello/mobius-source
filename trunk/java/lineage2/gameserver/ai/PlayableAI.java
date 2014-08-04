@@ -202,13 +202,16 @@ public class PlayableAI extends CharacterAI
 		boolean nextAction_arg2 = _nextAction_arg2;
 		boolean nextAction_arg3 = _nextAction_arg3;
 		Playable actor = getActor();
+		
 		if ((nextAction == null) || actor.isActionsDisabled())
 		{
 			return false;
 		}
+		
 		Skill skill;
 		Creature target;
 		GameObject object;
+		
 		switch (nextAction)
 		{
 			case ATTACK:
@@ -216,22 +219,26 @@ public class PlayableAI extends CharacterAI
 				{
 					return false;
 				}
+				
 				target = (Creature) nextAction_arg0;
 				_forceUse = nextAction_arg2;
 				_dontMove = nextAction_arg3;
 				clearNextAction();
 				setIntention(AI_INTENTION_ATTACK, target);
 				break;
+			
 			case CAST:
 				if ((nextAction_arg0 == null) || (nextAction_arg1 == null))
 				{
 					return false;
 				}
+				
 				skill = (Skill) nextAction_arg0;
 				target = (Creature) nextAction_arg1;
 				_forceUse = nextAction_arg2;
 				_dontMove = nextAction_arg3;
 				clearNextAction();
+				
 				if (!skill.checkCondition(actor, target, _forceUse, _dontMove, true))
 				{
 					if ((skill.getNextAction() == NextAction.ATTACK) && !actor.equals(target))
@@ -239,46 +246,57 @@ public class PlayableAI extends CharacterAI
 						setNextAction(PlayableAI.nextAction.ATTACK, target, null, _forceUse, false);
 						return setNextIntention();
 					}
+					
 					return false;
 				}
+				
 				setIntention(AI_INTENTION_CAST, skill, target);
 				break;
+			
 			case MOVE:
 				if ((nextAction_arg0 == null) || (nextAction_arg1 == null))
 				{
 					return false;
 				}
+				
 				Location loc = (Location) nextAction_arg0;
 				Integer offset = (Integer) nextAction_arg1;
 				clearNextAction();
 				actor.moveToLocation(loc, offset, nextAction_arg2);
 				break;
+			
 			case REST:
 				actor.sitDown(null);
 				break;
+			
 			case INTERACT:
 				if (nextAction_arg0 == null)
 				{
 					return false;
 				}
+				
 				object = (GameObject) nextAction_arg0;
 				clearNextAction();
 				onIntentionInteract(object);
 				break;
+			
 			case PICKUP:
 				if (nextAction_arg0 == null)
 				{
 					return false;
 				}
+				
 				object = (GameObject) nextAction_arg0;
 				clearNextAction();
 				onIntentionPickUp(object);
 				break;
+			
 			case COUPLE_ACTION:
 				if ((nextAction_arg0 == null) || (nextAction_arg1 == null))
 				{
 					return false;
 				}
+				
 				target = (Creature) nextAction_arg0;
 				Integer socialId = (Integer) nextAction_arg1;
 				_forceUse = nextAction_arg2;
@@ -286,9 +304,11 @@ public class PlayableAI extends CharacterAI
 				clearNextAction();
 				onIntentionCoupleAction((Player) target, socialId);
 				break;
+			
 			default:
 				return false;
 		}
+		
 		return true;
 	}
 	
@@ -361,12 +381,15 @@ public class PlayableAI extends CharacterAI
 			case AI_INTENTION_ATTACK:
 				thinkAttack(false);
 				break;
+			
 			case AI_INTENTION_CAST:
 				thinkCast(false);
 				break;
+			
 			case AI_INTENTION_FOLLOW:
 				thinkFollow();
 				break;
+			
 			default:
 				onEvtThink();
 				break;
@@ -380,42 +403,53 @@ public class PlayableAI extends CharacterAI
 	protected final void onEvtThink()
 	{
 		Playable actor = getActor();
+		
 		if (actor.isActionsDisabled())
 		{
 			return;
 		}
+		
 		try
 		{
 			if (thinking++ > 1)
 			{
 				return;
 			}
+			
 			switch (getIntention())
 			{
 				case AI_INTENTION_ACTIVE:
 					thinkActive();
 					break;
+				
 				case AI_INTENTION_ATTACK:
 					thinkAttack(true);
 					break;
+				
 				case AI_INTENTION_CAST:
 					thinkCast(true);
 					break;
+				
 				case AI_INTENTION_PICK_UP:
 					thinkPickUp();
 					break;
+				
 				case AI_INTENTION_INTERACT:
 					thinkInteract();
 					break;
+				
 				case AI_INTENTION_FOLLOW:
 					thinkFollow();
 					break;
+				
 				case AI_INTENTION_COUPLE_ACTION:
 					thinkCoupleAction((Player) _intention_arg0, (Integer) _intention_arg1, false);
 					break;
+				
 				case AI_INTENTION_IDLE:
 					thinkIdle();
 					break;
+				
 				case AI_INTENTION_REST:
 					thinkRest();
 					break;
@@ -446,25 +480,30 @@ public class PlayableAI extends CharacterAI
 		Playable actor = getActor();
 		Creature target = (Creature) _intention_arg0;
 		Integer offset = (Integer) _intention_arg1;
+		
 		if ((target == null) || target.isAlikeDead() || (actor.getDistance(target) > 4000) || (offset == null))
 		{
 			clientActionFailed();
 			return;
 		}
+		
 		if (actor.isFollow && (actor.getFollowTarget() == target))
 		{
 			clientActionFailed();
 			return;
 		}
+		
 		if (actor.isInRange(target, offset + 20) || actor.isMovementDisabled())
 		{
 			clientActionFailed();
 		}
+		
 		if (_followTask != null)
 		{
 			_followTask.cancel(false);
 			_followTask = null;
 		}
+		
 		_followTask = ThreadPoolManager.getInstance().schedule(new ThinkFollow(), 250L);
 	}
 	
@@ -480,6 +519,7 @@ public class PlayableAI extends CharacterAI
 		public void runImpl()
 		{
 			Playable actor = getActor();
+			
 			if (getIntention() != AI_INTENTION_FOLLOW)
 			{
 				if (actor.isClone() && (getIntention() == AI_INTENTION_ACTIVE))
@@ -490,25 +530,32 @@ public class PlayableAI extends CharacterAI
 				{
 					((Summon) actor).setFollowMode(false);
 				}
+				
 				return;
 			}
+			
 			Creature target = (Creature) _intention_arg0;
 			int offset = _intention_arg1 instanceof Integer ? (Integer) _intention_arg1 : 0;
+			
 			if ((target == null) || target.isAlikeDead() || (actor.getDistance(target) > 4000))
 			{
 				setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				return;
 			}
+			
 			Player player = actor.getPlayer();
+			
 			if ((player == null) || player.isLogoutStarted() || ((actor.isPet() || actor.isServitor()) && !player.getSummonList().contains(actor) && !actor.isClone()))
 			{
 				setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				return;
 			}
+			
 			if (!actor.isInRange(target, offset + 20) && (!actor.isFollow || (actor.getFollowTarget() != target)))
 			{
 				actor.followToCharacter(target, offset, false);
 			}
+			
 			_followTask = ThreadPoolManager.getInstance().schedule(this, 250L);
 		}
 	}
@@ -563,12 +610,14 @@ public class PlayableAI extends CharacterAI
 	protected void onIntentionInteract(GameObject object)
 	{
 		Playable actor = getActor();
+		
 		if (actor.isActionsDisabled())
 		{
 			setNextAction(nextAction.INTERACT, object, null, false, false);
 			clientActionFailed();
 			return;
 		}
+		
 		clearNextAction();
 		changeIntention(AI_INTENTION_INTERACT, object, null);
 		onEvtThink();
@@ -594,12 +643,15 @@ public class PlayableAI extends CharacterAI
 	{
 		Playable actor = getActor();
 		GameObject target = (GameObject) _intention_arg0;
+		
 		if (target == null)
 		{
 			setIntention(AI_INTENTION_ACTIVE);
 			return;
 		}
+		
 		int range = (int) (Math.max(30, actor.getMinDistance(target)) + 20);
+		
 		if (actor.isInRangeZ(target, range))
 		{
 			if (actor.isPlayer())
@@ -607,6 +659,7 @@ public class PlayableAI extends CharacterAI
 				// ((Player) actor).doInteract(target);
 				target.onActionSelect((Player) actor, false);
 			}
+			
 			setIntention(AI_INTENTION_ACTIVE);
 		}
 		else
@@ -624,12 +677,14 @@ public class PlayableAI extends CharacterAI
 	protected void onIntentionPickUp(GameObject object)
 	{
 		Playable actor = getActor();
+		
 		if (actor.isActionsDisabled())
 		{
 			setNextAction(nextAction.PICKUP, object, null, false, false);
 			clientActionFailed();
 			return;
 		}
+		
 		clearNextAction();
 		changeIntention(AI_INTENTION_PICK_UP, object, null);
 		onEvtThink();
@@ -642,17 +697,20 @@ public class PlayableAI extends CharacterAI
 	{
 		final Playable actor = getActor();
 		final GameObject target = (GameObject) _intention_arg0;
+		
 		if (target == null)
 		{
 			setIntention(AI_INTENTION_ACTIVE);
 			return;
 		}
+		
 		if (actor.isInRange(target, 30) && (Math.abs(actor.getZ() - target.getZ()) < 50))
 		{
 			if (actor.isPlayer() || actor.isPet())
 			{
 				actor.doPickupItem(target);
 			}
+			
 			setIntention(AI_INTENTION_ACTIVE);
 		}
 		else
@@ -677,36 +735,45 @@ public class PlayableAI extends CharacterAI
 	{
 		Playable actor = getActor();
 		Player player = actor.getPlayer();
+		
 		if (player == null)
 		{
 			setIntention(AI_INTENTION_ACTIVE);
 			return;
 		}
+		
 		if (actor.isActionsDisabled() || actor.isAttackingDisabled())
 		{
 			actor.sendActionFailed();
 			return;
 		}
+		
 		boolean isPosessed = (actor instanceof Summon) && ((Summon) actor).isDepressed();
 		Creature attack_target = getAttackTarget();
+		
 		if ((attack_target == null) || attack_target.isDead() || (!isPosessed && !(_forceUse ? attack_target.isAttackable(actor) : attack_target.isAutoAttackable(actor))))
 		{
 			setIntention(AI_INTENTION_ACTIVE);
 			actor.sendActionFailed();
 			return;
 		}
+		
 		if (!checkRange)
 		{
 			clientStopMoving();
 			actor.doAttack(attack_target);
 			return;
 		}
+		
 		int range = actor.getPhysicalAttackRange();
+		
 		if (range < 10)
 		{
 			range = 10;
 		}
+		
 		boolean canSee = GeoEngine.canSeeTarget(actor, attack_target, false);
+		
 		if (!canSee && ((range > 200) || (Math.abs(actor.getZ() - attack_target.getZ()) > 200)))
 		{
 			actor.sendPacket(SystemMsg.CANNOT_SEE_TARGET);
@@ -714,11 +781,14 @@ public class PlayableAI extends CharacterAI
 			actor.sendActionFailed();
 			return;
 		}
+		
 		range += actor.getMinDistance(attack_target);
+		
 		if (actor.isFakeDeath())
 		{
 			actor.breakFakeDeath();
 		}
+		
 		if (actor.isInRangeZ(attack_target, range))
 		{
 			if (!canSee)
@@ -728,6 +798,7 @@ public class PlayableAI extends CharacterAI
 				actor.sendActionFailed();
 				return;
 			}
+			
 			clientStopMoving(false);
 			actor.doAttack(attack_target);
 		}
@@ -749,20 +820,24 @@ public class PlayableAI extends CharacterAI
 	{
 		Playable actor = getActor();
 		Creature target = getAttackTarget();
+		
 		if ((_skill.getSkillType() == SkillType.CRAFT) || _skill.isToggle())
 		{
 			if (_skill.checkCondition(actor, target, _forceUse, _dontMove, true))
 			{
 				actor.doCast(_skill, target, _forceUse);
 			}
+			
 			return;
 		}
+		
 		if ((target == null) || ((target.isDead() != _skill.getCorpse()) && !_skill.isNotTargetAoE()))
 		{
 			setIntention(AI_INTENTION_ACTIVE);
 			actor.sendActionFailed();
 			return;
 		}
+		
 		if (!checkRange)
 		{
 			if ((_skill.getNextAction() == NextAction.ATTACK) && !actor.equals(target))
@@ -773,7 +848,9 @@ public class PlayableAI extends CharacterAI
 			{
 				clearNextAction();
 			}
+			
 			clientStopMoving();
+			
 			if (_skill.checkCondition(actor, target, _forceUse, _dontMove, true))
 			{
 				actor.doCast(_skill, target, _forceUse);
@@ -781,20 +858,26 @@ public class PlayableAI extends CharacterAI
 			else
 			{
 				setNextIntention();
+				
 				if (getIntention() == CtrlIntention.AI_INTENTION_ATTACK)
 				{
 					thinkAttack(true);
 				}
 			}
+			
 			return;
 		}
+		
 		int range = actor.getMagicalAttackRange(_skill);
+		
 		if (range < 10)
 		{
 			range = 10;
 		}
+		
 		boolean canSee = (_skill.getSkillType() == SkillType.TAKECASTLE) || (_skill.getSkillType() == SkillType.TAKEFORTRESS) || GeoEngine.canSeeTarget(actor, target, actor.isFlying());
 		boolean noRangeSkill = _skill.getCastRange() == 32767;
+		
 		if (!noRangeSkill && !canSee && ((range > 200) || (Math.abs(actor.getZ() - target.getZ()) > 200)))
 		{
 			actor.sendPacket(SystemMsg.CANNOT_SEE_TARGET);
@@ -802,11 +885,14 @@ public class PlayableAI extends CharacterAI
 			actor.sendActionFailed();
 			return;
 		}
+		
 		range += actor.getMinDistance(target);
+		
 		if (actor.isFakeDeath())
 		{
 			actor.breakFakeDeath();
 		}
+		
 		if (actor.isInRangeZ(target, range) || noRangeSkill)
 		{
 			if (!noRangeSkill && !canSee)
@@ -816,6 +902,7 @@ public class PlayableAI extends CharacterAI
 				actor.sendActionFailed();
 				return;
 			}
+			
 			if ((_skill.getNextAction() == NextAction.ATTACK) && !actor.equals(target))
 			{
 				setNextAction(nextAction.ATTACK, target, null, _forceUse, false);
@@ -824,6 +911,7 @@ public class PlayableAI extends CharacterAI
 			{
 				clearNextAction();
 			}
+			
 			if (_skill.checkCondition(actor, target, _forceUse, _dontMove, true))
 			{
 				clientStopMoving(false);
@@ -832,6 +920,7 @@ public class PlayableAI extends CharacterAI
 			else
 			{
 				setNextIntention();
+				
 				if (getIntention() == CtrlIntention.AI_INTENTION_ATTACK)
 				{
 					thinkAttack(true);
@@ -902,6 +991,7 @@ public class PlayableAI extends CharacterAI
 	public void lockTarget(Creature target)
 	{
 		Playable actor = getActor();
+		
 		if ((target == null) || target.isDead())
 		{
 			actor.setAggressionTarget(null);
@@ -925,12 +1015,14 @@ public class PlayableAI extends CharacterAI
 	public void Attack(GameObject target, boolean forceUse, boolean dontMove)
 	{
 		Playable actor = getActor();
+		
 		if (target.isCreature() && (actor.isActionsDisabled() || actor.isAttackingDisabled()))
 		{
 			setNextAction(nextAction.ATTACK, target, null, forceUse, false);
 			actor.sendActionFailed();
 			return;
 		}
+		
 		_dontMove = dontMove;
 		_forceUse = forceUse;
 		clearNextAction();
@@ -948,6 +1040,7 @@ public class PlayableAI extends CharacterAI
 	public void Cast(Skill skill, Creature target, boolean forceUse, boolean dontMove)
 	{
 		Playable actor = getActor();
+		
 		if (skill.altUse() || skill.isToggle())
 		{
 			if (((skill.isToggle() && !skill.isAwakeningToggle()) || skill.isHandler()) && (actor.isOutOfControl() || actor.isStunned() || actor.isSleeping() || actor.isParalyzed() || actor.isAlikeDead() || actor.isAirBinded() || actor.isKnockedBack() || actor.isKnockedDown() || actor.isPulledNow()))
@@ -958,14 +1051,17 @@ public class PlayableAI extends CharacterAI
 			{
 				actor.altUseSkill(skill, target);
 			}
+			
 			return;
 		}
+		
 		if (actor.isActionsDisabled())
 		{
 			setNextAction(nextAction.CAST, skill, target, forceUse, dontMove);
 			clientActionFailed();
 			return;
 		}
+		
 		_forceUse = forceUse;
 		_dontMove = dontMove;
 		clearNextAction();

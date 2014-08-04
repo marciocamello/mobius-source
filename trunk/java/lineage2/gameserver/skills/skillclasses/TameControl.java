@@ -55,15 +55,19 @@ public class TameControl extends Skill
 		{
 			activeChar.unChargeShots(isMagic());
 		}
+		
 		if (!activeChar.isPlayer())
 		{
 			return;
 		}
+		
 		Player player = activeChar.getPlayer();
+		
 		if (player.getTrainedBeasts() == null)
 		{
 			return;
 		}
+		
 		if (_type == 0)
 		{
 			for (Creature target : targets)

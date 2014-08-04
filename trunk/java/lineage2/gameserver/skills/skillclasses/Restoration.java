@@ -39,15 +39,18 @@ public class Restoration extends Skill
 		{
 			return false;
 		}
+		
 		if (activeChar.isPlayer())
 		{
 			Player player = (Player) activeChar;
+			
 			if ((player.getWeightPenalty() >= 3) || (player.getInventory().getSize() > (player.getInventoryLimit() - 10)))
 			{
 				player.sendPacket(SystemMsg.THE_CORRESPONDING_WORK_CANNOT_BE_PROCEEDED_BECAUSE_THE_INVENTORY_WEIGHTQUANTITY_LIMIT_HAS_BEEN_EXCEEDED);
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
@@ -58,14 +61,18 @@ public class Restoration extends Skill
 		{
 			return;
 		}
+		
 		RestorationInfo restorationInfo = RestorationInfoHolder.getInstance().getRestorationInfo(this);
+		
 		if (restorationInfo == null)
 		{
 			return;
 		}
+		
 		Playable playable = (Playable) activeChar;
 		int itemConsumeId = restorationInfo.getItemConsumeId();
 		int itemConsumeCount = restorationInfo.getItemConsumeCount();
+		
 		if ((itemConsumeId > 0) && (itemConsumeCount > 0))
 		{
 			if (ItemFunctions.getItemCount(playable, itemConsumeId) < itemConsumeCount)
@@ -78,10 +85,12 @@ public class Restoration extends Skill
 		}
 		
 		List<RestorationItem> restorationItems = restorationInfo.getRandomGroupItems();
+		
 		if ((restorationItems == null) || (restorationItems.size() == 0))
 		{
 			return;
 		}
+		
 		for (Creature target : targets)
 		{
 			if (target != null)
@@ -90,6 +99,7 @@ public class Restoration extends Skill
 				{
 					ItemFunctions.addItem(playable, item.getId(), item.getRandomCount(), true);
 				}
+				
 				getEffects(activeChar, target, false, false);
 			}
 		}

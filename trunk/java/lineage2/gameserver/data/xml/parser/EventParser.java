@@ -136,6 +136,7 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 			String impl = eventElement.attributeValue("impl");
 			EventType type = EventType.valueOf(eventElement.attributeValue("type"));
 			Class<GlobalEvent> eventClass = null;
+			
 			try
 			{
 				eventClass = (Class<GlobalEvent>) Class.forName("lineage2.gameserver.model.entity.events.impl." + impl + "Event");
@@ -145,20 +146,24 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 				info("Not found impl class: " + impl + "; File: " + getCurrentFileName());
 				continue;
 			}
+			
 			Constructor<GlobalEvent> constructor = eventClass.getConstructor(MultiValueSet.class);
 			MultiValueSet<String> set = new MultiValueSet<>();
 			set.set("id", id);
 			set.set("name", name);
+			
 			for (Iterator<?> parameterIterator = eventElement.elementIterator("parameter"); parameterIterator.hasNext();)
 			{
 				Element parameterElement = (Element) parameterIterator.next();
 				set.set(parameterElement.attributeValue("name"), parameterElement.attributeValue("value"));
 			}
+			
 			GlobalEvent event = constructor.newInstance(set);
 			event.addOnStartActions(parseActions(eventElement.element("on_start"), Integer.MAX_VALUE));
 			event.addOnStopActions(parseActions(eventElement.element("on_stop"), Integer.MAX_VALUE));
 			event.addOnInitActions(parseActions(eventElement.element("on_init"), Integer.MAX_VALUE));
 			Element onTime = eventElement.element("on_time");
+			
 			if (onTime != null)
 			{
 				for (Iterator<?> onTimeIterator = onTime.elementIterator("on"); onTimeIterator.hasNext();)
@@ -169,6 +174,7 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 					event.addOnTimeActions(time, actions);
 				}
 			}
+			
 			for (Iterator<?> objectIterator = eventElement.elementIterator("objects"); objectIterator.hasNext();)
 			{
 				Element objectElement = (Element) objectIterator.next();
@@ -176,6 +182,7 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 				List<Serializable> objects = parseObjects(objectElement);
 				event.addObjects(objectsName, objects);
 			}
+			
 			getHolder().addEvent(type, event);
 		}
 	}
@@ -191,11 +198,14 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 		{
 			return Collections.emptyList();
 		}
+		
 		List<Serializable> objects = new ArrayList<>(2);
+		
 		for (Iterator<?> objectsIterator = element.elementIterator(); objectsIterator.hasNext();)
 		{
 			Element objectsElement = (Element) objectsIterator.next();
 			final String nodeName = objectsElement.getName();
+			
 			if (nodeName.equalsIgnoreCase("boat_point"))
 			{
 				objects.add(BoatPoint.parse(objectsElement));
@@ -232,15 +242,19 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 				int z = Integer.parseInt(objectsElement.attributeValue("z"));
 				int hp = Integer.parseInt(objectsElement.attributeValue("hp"));
 				Set<String> set = Collections.emptySet();
+				
 				for (Iterator<?> oIterator = objectsElement.elementIterator(); oIterator.hasNext();)
 				{
 					Element sub = (Element) oIterator.next();
+					
 					if (set.isEmpty())
 					{
 						set = new HashSet<>();
 					}
+					
 					set.add(sub.attributeValue("name"));
 				}
+				
 				objects.add(new SiegeToggleNpcObject(id, fakeId, new Location(x, y, z), hp, set));
 			}
 			else if (nodeName.equalsIgnoreCase("castle_zone"))
@@ -260,6 +274,7 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 				objects.add(new CTBTeamObject(mobId, flagId, loc));
 			}
 		}
+		
 		return objects;
 	}
 	
@@ -275,11 +290,14 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 		{
 			return Collections.emptyList();
 		}
+		
 		IfElseAction lastIf = null;
 		List<EventAction> actions = new ArrayList<>(0);
+		
 		for (Iterator<?> iterator = element.elementIterator(); iterator.hasNext();)
 		{
 			Element actionElement = (Element) iterator.next();
+			
 			if (actionElement.getName().equalsIgnoreCase("start"))
 			{
 				String name = actionElement.attributeValue("name");
@@ -367,11 +385,13 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 			else if (actionElement.getName().equalsIgnoreCase("announce"))
 			{
 				String val = actionElement.attributeValue("val");
+				
 				if ((val == null) && (time == Integer.MAX_VALUE))
 				{
 					info("Can't get announce time." + getCurrentFileName());
 					continue;
 				}
+				
 				int val2 = val == null ? time : Integer.parseInt(val);
 				EventAction action = new AnnounceAction(val2);
 				actions.add(action);
@@ -411,6 +431,7 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 				String text = actionElement.attributeValue("text");
 				SysString sysString = SysString.valueOf2(how);
 				SayAction sayAction = null;
+				
 				if (sysString != null)
 				{
 					sayAction = new SayAction(range, chat, sysString, SystemMsg.valueOf(text));
@@ -419,6 +440,7 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 				{
 					sayAction = new SayAction(range, chat, how, NpcString.valueOf(text));
 				}
+				
 				actions.add(sayAction);
 			}
 			else if (actionElement.getName().equalsIgnoreCase("teleport_players"))
@@ -428,6 +450,7 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 				actions.add(a);
 			}
 		}
+		
 		return actions.isEmpty() ? Collections.<EventAction> emptyList() : actions;
 	}
 }

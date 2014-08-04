@@ -66,12 +66,14 @@ public abstract class DocumentParser
 			_log.warn("Could not parse " + f.getName() + " is not a file or it doesn't exist!");
 			return;
 		}
+		
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		dbf.setNamespaceAware(true);
 		dbf.setValidating(true);
 		dbf.setIgnoringComments(true);
 		_currentDocument = null;
 		_currentFile = f;
+		
 		try
 		{
 			dbf.setAttribute("http://java.sun.com/xml/jaxp/properties/schemaLanguage", "http://www.w3.org/2001/XMLSchema");
@@ -84,6 +86,7 @@ public abstract class DocumentParser
 			_log.warn("Could not parse " + f.getName() + " file: " + e.getMessage());
 			return;
 		}
+		
 		parseDocument();
 	}
 	
@@ -127,11 +130,14 @@ public abstract class DocumentParser
 			_log.warn("Folder " + dir.getAbsolutePath() + " doesn't exist!");
 			return false;
 		}
+		
 		FastList<File> listOfFiles = getAllFileList(dir, "xml");
+		
 		for (File f : listOfFiles)
 		{
 			parseFile(f);
 		}
+		
 		return true;
 	}
 	
@@ -330,14 +336,17 @@ public abstract class DocumentParser
 	public static FastList<File> getAllFileList(File dir, String pathName)
 	{
 		FastList<File> list = new FastList<>();
+		
 		if ((!dir.toString().endsWith("/")) && (!dir.toString().endsWith("\\")))
 		{
 			dir = new File(new StringBuilder().append(dir.toString()).append('/').toString());
 		}
+		
 		if (!dir.exists())
 		{
 			_log.warn(new StringBuilder().append(" Folder ").append(dir.getAbsolutePath()).append(" doesn't exist!").toString());
 		}
+		
 		for (File file : dir.listFiles())
 		{
 			if (file.isDirectory())
@@ -356,9 +365,11 @@ public abstract class DocumentParser
 				{
 					continue;
 				}
+				
 				list.add(file);
 			}
 		}
+		
 		return list;
 	}
 }

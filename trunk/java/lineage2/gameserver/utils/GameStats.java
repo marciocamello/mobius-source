@@ -69,11 +69,13 @@ public class GameStats
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT (SELECT SUM(count) FROM items WHERE item_id=57) + (SELECT SUM(treasury) FROM castle) AS `count`");
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				_adenaSum.addAndGet(rset.getLong("count"));
@@ -130,10 +132,12 @@ public class GameStats
 	public static void addTax(long sum)
 	{
 		long taxSum = _taxSum.addAndGet(sum);
+		
 		if ((System.currentTimeMillis() - _taxLastUpdate) < 10000)
 		{
 			return;
 		}
+		
 		_taxLastUpdate = System.currentTimeMillis();
 		ServerVariables.set("taxsum", taxSum);
 	}
@@ -145,10 +149,12 @@ public class GameStats
 	public static void addRoulette(long sum)
 	{
 		long rouletteSum = _rouletteSum.addAndGet(sum);
+		
 		if ((System.currentTimeMillis() - _rouletteLastUpdate) < 10000)
 		{
 			return;
 		}
+		
 		_rouletteLastUpdate = System.currentTimeMillis();
 		ServerVariables.set("rouletteSum", rouletteSum);
 	}

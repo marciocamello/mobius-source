@@ -96,6 +96,7 @@ public class Seed extends ScriptItemHandler
 		final Player activeChar = (Player) playable;
 		NpcTemplate template = null;
 		final int itemId = item.getItemId();
+		
 		for (int i = 0; i < _itemIds.length; i++)
 		{
 			if (_itemIds[i] == itemId)
@@ -104,6 +105,7 @@ public class Seed extends ScriptItemHandler
 				break;
 			}
 		}
+		
 		for (NpcInstance npc : World.getAroundNpc(activeChar, 300, 200))
 		{
 			if ((npc.getNpcId() == _npcIds[0]) || (npc.getNpcId() == _npcIds[1]))
@@ -112,28 +114,34 @@ public class Seed extends ScriptItemHandler
 				return false;
 			}
 		}
+		
 		if (World.getAroundNpc(activeChar, 100, 200).size() > 0)
 		{
 			activeChar.sendPacket(Msg.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION);
 			return false;
 		}
+		
 		if (template == null)
 		{
 			return false;
 		}
+		
 		if (!activeChar.getInventory().destroyItem(item, 1L))
 		{
 			return false;
 		}
+		
 		final SimpleSpawner spawn = new SimpleSpawner(template);
 		spawn.setLoc(activeChar.getLoc());
 		final NpcInstance npc = spawn.doSpawn(false);
 		npc.setTitle(activeChar.getName());
 		spawn.respawnNpc(npc);
+		
 		if (itemId == 5561)
 		{
 			npc.setAI(new ctreeAI(npc));
 		}
+		
 		ThreadPoolManager.getInstance().schedule(new DeSpawnScheduleTimerTask(spawn), (activeChar.isInPeaceZone() ? DESPAWN_TIME / 3 : DESPAWN_TIME));
 		return true;
 	}

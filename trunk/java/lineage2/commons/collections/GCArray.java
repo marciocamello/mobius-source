@@ -41,10 +41,12 @@ public class GCArray<E> implements Collection<E>
 	public GCArray(int initialCapacity)
 	{
 		super();
+		
 		if (initialCapacity < 0)
 		{
 			throw new IllegalArgumentException("Illegal Capacity: " + initialCapacity);
 		}
+		
 		this.elementData = (E[]) new Object[initialCapacity];
 	}
 	
@@ -63,13 +65,16 @@ public class GCArray<E> implements Collection<E>
 	public void ensureCapacity(int minCapacity)
 	{
 		int oldCapacity = elementData.length;
+		
 		if (minCapacity > oldCapacity)
 		{
 			int newCapacity = ((oldCapacity * 3) / 2) + 1;
+			
 			if (newCapacity < minCapacity)
 			{
 				newCapacity = minCapacity;
 			}
+			
 			elementData = Arrays.copyOf(elementData, newCapacity);
 		}
 	}
@@ -126,11 +131,14 @@ public class GCArray<E> implements Collection<E>
 		{
 			return (T[]) Arrays.copyOf(elementData, size, a.getClass());
 		}
+		
 		System.arraycopy(elementData, 0, a, 0, size);
+		
 		if (a.length > size)
 		{
 			a[size] = null;
 		}
+		
 		return a;
 	}
 	
@@ -188,6 +196,7 @@ public class GCArray<E> implements Collection<E>
 				}
 			}
 		}
+		
 		return false;
 	}
 	
@@ -246,6 +255,7 @@ public class GCArray<E> implements Collection<E>
 				}
 			}
 		}
+		
 		return -1;
 	}
 	
@@ -277,6 +287,7 @@ public class GCArray<E> implements Collection<E>
 				}
 			}
 		}
+		
 		return false;
 	}
 	
@@ -290,6 +301,7 @@ public class GCArray<E> implements Collection<E>
 	{
 		boolean modified = false;
 		Iterator<? extends E> e = c.iterator();
+		
 		while (e.hasNext())
 		{
 			if (add(e.next()))
@@ -297,6 +309,7 @@ public class GCArray<E> implements Collection<E>
 				modified = true;
 			}
 		}
+		
 		return modified;
 	}
 	
@@ -309,6 +322,7 @@ public class GCArray<E> implements Collection<E>
 	public boolean removeAll(Collection<?> c)
 	{
 		boolean modified = false;
+		
 		for (int i = 0; i < size; i++)
 		{
 			if (c.contains(elementData[i]))
@@ -318,6 +332,7 @@ public class GCArray<E> implements Collection<E>
 				modified = true;
 			}
 		}
+		
 		return modified;
 	}
 	
@@ -330,6 +345,7 @@ public class GCArray<E> implements Collection<E>
 	public boolean retainAll(Collection<?> c)
 	{
 		boolean modified = false;
+		
 		for (int i = 0; i < size; i++)
 		{
 			if (!c.contains(elementData[i]))
@@ -339,6 +355,7 @@ public class GCArray<E> implements Collection<E>
 				modified = true;
 			}
 		}
+		
 		return modified;
 	}
 	
@@ -357,6 +374,7 @@ public class GCArray<E> implements Collection<E>
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
@@ -382,6 +400,7 @@ public class GCArray<E> implements Collection<E>
 	{
 		int oldSize = size;
 		size = 0;
+		
 		if (oldSize > 1000)
 		{
 			elementData = (E[]) new Object[10];
@@ -393,6 +412,7 @@ public class GCArray<E> implements Collection<E>
 				elementData[i] = null;
 			}
 		}
+		
 		size = 0;
 	}
 	

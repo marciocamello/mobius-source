@@ -138,10 +138,12 @@ public class InstantZoneParser extends AbstractDirParser<InstantZoneHolder>
 			instanceId = Integer.parseInt(element.attributeValue("id"));
 			name = element.attributeValue("name");
 			String n = element.attributeValue("timelimit");
+			
 			if (n != null)
 			{
 				timelimit = Integer.parseInt(n);
 			}
+			
 			n = element.attributeValue("collapseIfEmpty");
 			collapseIfEmpty = Integer.parseInt(n);
 			n = element.attributeValue("maxChannels");
@@ -151,9 +153,11 @@ public class InstantZoneParser extends AbstractDirParser<InstantZoneHolder>
 			int minLevel = 0, maxLevel = 0, minParty = 1, maxParty = 7;
 			List<Location> teleportLocs = Collections.emptyList();
 			Location ret = null;
+			
 			for (Iterator<Element> subIterator = element.elementIterator(); subIterator.hasNext();)
 			{
 				Element subElement = subIterator.next();
+				
 				if ("level".equalsIgnoreCase(subElement.getName()))
 				{
 					minLevel = Integer.parseInt(subElement.attributeValue("min"));
@@ -179,6 +183,7 @@ public class InstantZoneParser extends AbstractDirParser<InstantZoneHolder>
 					{
 						teleportLocs = new ArrayList<>(1);
 					}
+					
 					teleportLocs.add(Location.parseLoc(subElement.attributeValue("loc")));
 				}
 				else if ("remove".equalsIgnoreCase(subElement.getName()))
@@ -216,6 +221,7 @@ public class InstantZoneParser extends AbstractDirParser<InstantZoneHolder>
 						{
 							doors = new HashIntObjectMap<>();
 						}
+						
 						boolean opened = (e.attributeValue("opened") != null) && Boolean.parseBoolean(e.attributeValue("opened"));
 						boolean invul = (e.attributeValue("invul") == null) || Boolean.parseBoolean(e.attributeValue("invul"));
 						DoorTemplate template = DoorHolder.getInstance().getTemplate(Integer.parseInt(e.attributeValue("id")));
@@ -230,13 +236,16 @@ public class InstantZoneParser extends AbstractDirParser<InstantZoneHolder>
 						{
 							zones = new HashMap<>();
 						}
+						
 						boolean active = (e.attributeValue("active") != null) && Boolean.parseBoolean(e.attributeValue("active"));
 						ZoneTemplate template = ZoneHolder.getInstance().getTemplate(e.attributeValue("name"));
+						
 						if (template == null)
 						{
 							error("Zone: " + e.attributeValue("name") + " not found; file: " + getCurrentFileName());
 							continue;
 						}
+						
 						zones.put(template.getName(), new InstantZone.ZoneInfo(template, active));
 					}
 				}
@@ -259,6 +268,7 @@ public class InstantZoneParser extends AbstractDirParser<InstantZoneHolder>
 							String group = e.attributeValue("name");
 							boolean spawned = (e.attributeValue("spawned") != null) && Boolean.parseBoolean(e.attributeValue("spawned"));
 							List<SpawnTemplate> templates = SpawnHolder.getInstance().getSpawn(group);
+							
 							if (templates == null)
 							{
 								info("not find spawn group: " + group + " in file: " + getCurrentFileName());
@@ -269,6 +279,7 @@ public class InstantZoneParser extends AbstractDirParser<InstantZoneHolder>
 								{
 									spawns2 = new Hashtable<>();
 								}
+								
 								spawns2.put(group, new InstantZone.SpawnInfo2(templates, spawned));
 							}
 						}
@@ -284,6 +295,7 @@ public class InstantZoneParser extends AbstractDirParser<InstantZoneHolder>
 							List<Location> coords = new ArrayList<>();
 							spawnType = 0;
 							String spawnTypeNode = e.attributeValue("type");
+							
 							if ((spawnTypeNode == null) || spawnTypeNode.equalsIgnoreCase("point"))
 							{
 								spawnType = 0;
@@ -300,6 +312,7 @@ public class InstantZoneParser extends AbstractDirParser<InstantZoneHolder>
 							{
 								error("Spawn type  '" + spawnTypeNode + "' is unknown!");
 							}
+							
 							for (Element e2 : e.elements())
 							{
 								if ("coords".equalsIgnoreCase(e2.getName()))
@@ -307,20 +320,26 @@ public class InstantZoneParser extends AbstractDirParser<InstantZoneHolder>
 									coords.add(Location.parseLoc(e2.attributeValue("loc")));
 								}
 							}
+							
 							Territory territory = null;
+							
 							if (spawnType == 2)
 							{
 								Polygon poly = new Polygon();
+								
 								for (Location loc : coords)
 								{
 									poly.add(loc.x, loc.y).setZmin(loc.z).setZmax(loc.z);
 								}
+								
 								if (!poly.validate())
 								{
 									error("invalid spawn territory for instance id : " + instanceId + " - " + poly + "!");
 								}
+								
 								territory = new Territory().add(poly);
 							}
+							
 							for (String mob : mobs)
 							{
 								mobId = Integer.parseInt(mob);
@@ -331,6 +350,7 @@ public class InstantZoneParser extends AbstractDirParser<InstantZoneHolder>
 					}
 				}
 			}
+			
 			InstantZone instancedZone = new InstantZone(instanceId, name, resetReuse, sharedReuseGroup, timelimit, dispelBuffs, minLevel, maxLevel, minParty, maxParty, timer, onPartyDismiss, teleportLocs, ret, mapx, mapy, doors, zones, spawns2, spawns, collapseIfEmpty, maxChannels, removedItemId, removedItemCount, removedItemNecessity, giveItemId, givedItemCount, requiredQuestId, setReuseUponEntry, params);
 			getHolder().addInstantZone(instancedZone);
 		}

@@ -65,13 +65,16 @@ public class MemoryOfDisaster extends Reflection
 		if (!introShowed)
 		{
 			introShowed = true;
+			
 			for (Player p : getPlayers())
 			{
 				p.showQuestMovie(ExStartScenePlayer.SCENE_AWAKENING_OPENING);
 				p.sendPacket(new EventTrigger(23120700, true));
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new TeleportTask(), 29500L);
 		}
+		
 		super.onPlayerEnter(player);
 	}
 	
@@ -107,12 +110,14 @@ public class MemoryOfDisaster extends Reflection
 		{
 			player.showQuestMovie(ExStartScenePlayer.SCENE_AWAKENING_OPENING_C);
 		}
+		
 		ThreadPoolManager.getInstance().schedule(new Scene1(), 32900);
 	}
 	
 	public void dieNextElf()
 	{
 		List<NpcInstance> elves = new ArrayList<>();
+		
 		for (int id : ELVES)
 		{
 			elves.addAll(getAllByNpcId(id, true));
@@ -127,7 +132,7 @@ public class MemoryOfDisaster extends Reflection
 	private class TeleportTask extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public TeleportTask()
 		{
@@ -142,6 +147,7 @@ public class MemoryOfDisaster extends Reflection
 				player.teleToLocation(new Location(116063, -183167, -1488, 64960));
 				player.sendPacket(new EventTrigger(23120700, true));
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcString.WATCH_THE_DWARVEN_VILLAGE_LAST_STAND), 2000);
 			ThreadPoolManager.getInstance().schedule(new SpawnRoginTask(), 7000);
 		}
@@ -169,7 +175,7 @@ public class MemoryOfDisaster extends Reflection
 	private class SpawnRoginTask extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public SpawnRoginTask()
 		{
@@ -186,7 +192,7 @@ public class MemoryOfDisaster extends Reflection
 	private class Scene1 extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public Scene1()
 		{
@@ -201,6 +207,7 @@ public class MemoryOfDisaster extends Reflection
 				player.teleToLocation(new Location(10400, 17092, -4584, 44839));
 				player.showQuestMovie(ExStartScenePlayer.SCENE_AWAKENING_OPENING_D);
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new Runnable()
 			{
 				@Override
@@ -212,7 +219,6 @@ public class MemoryOfDisaster extends Reflection
 					dieNextElf();
 				}
 			}, 20000);
-			
 			ThreadPoolManager.getInstance().schedule(new Scene2(), 83000);
 		}
 	}
@@ -220,7 +226,7 @@ public class MemoryOfDisaster extends Reflection
 	private class Scene2 extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public Scene2()
 		{
@@ -234,6 +240,7 @@ public class MemoryOfDisaster extends Reflection
 			{
 				player.showQuestMovie(ExStartScenePlayer.SCENE_AWAKENING_OPENING_E);
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new Scene3(), 30000);
 		}
 	}
@@ -241,7 +248,7 @@ public class MemoryOfDisaster extends Reflection
 	private class Scene3 extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public Scene3()
 		{
@@ -255,6 +262,7 @@ public class MemoryOfDisaster extends Reflection
 			{
 				player.showQuestMovie(ExStartScenePlayer.SCENE_AWAKENING_OPENING_F);
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new EndInstanceTask(), 38500);
 		}
 	}
@@ -262,7 +270,7 @@ public class MemoryOfDisaster extends Reflection
 	private class EndInstanceTask extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public EndInstanceTask()
 		{
@@ -296,7 +304,9 @@ public class MemoryOfDisaster extends Reflection
 			{
 				return;
 			}
+			
 			QuestState st = player.getQuestState("_255_Tutorial");
+			
 			if (st != null)
 			{
 				st.showTutorialHTML("hermunkus_call.html", TutorialShowHtml.TYPE_HTML);

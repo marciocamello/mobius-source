@@ -49,15 +49,18 @@ public class FieldMachine extends DefaultAI
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((attacker == null) || (attacker.getPlayer() == null))
 		{
 			return;
 		}
+		
 		if ((System.currentTimeMillis() - _lastAction) > 15000)
 		{
 			_lastAction = System.currentTimeMillis();
 			Functions.npcSayCustomMessage(actor, "scripts.ai.FieldMachine." + actor.getNpcId());
 			final List<NpcInstance> around = actor.getAroundNpc(1500, 300);
+			
 			if ((around != null) && !around.isEmpty())
 			{
 				for (NpcInstance npc : around)

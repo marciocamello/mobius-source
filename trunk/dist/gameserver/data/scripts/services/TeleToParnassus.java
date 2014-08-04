@@ -60,6 +60,7 @@ public class TeleToParnassus extends Functions implements ScriptFile
 		{
 			return;
 		}
+		
 		ReflectionManager.PARNASSUS.setCoreLoc(new Location(149384, 171896, -952));
 		SimpleSpawner spawn = new SimpleSpawner(30086);
 		spawn.setLocx(149960);
@@ -142,10 +143,12 @@ public class TeleToParnassus extends Functions implements ScriptFile
 	public void onReload()
 	{
 		_zone.removeListener(_zoneListener);
+		
 		for (SimpleSpawner spawn : _spawns)
 		{
 			spawn.deleteAll();
 		}
+		
 		_spawns.clear();
 	}
 	
@@ -165,19 +168,23 @@ public class TeleToParnassus extends Functions implements ScriptFile
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		if (!NpcInstance.canBypassCheck(player, npc))
 		{
 			return;
 		}
+		
 		if (player.getAdena() < Config.SERVICES_PARNASSUS_PRICE)
 		{
 			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
+		
 		player.reduceAdena(Config.SERVICES_PARNASSUS_PRICE, true);
 		player.setVar("backCoords", player.getLoc().toXYZString(), -1);
 		player.teleToLocation(Location.findPointToStay(_zone.getSpawn(), 30, 200, ReflectionManager.PARNASSUS.getGeoIndex()), ReflectionManager.PARNASSUS);
@@ -190,20 +197,25 @@ public class TeleToParnassus extends Functions implements ScriptFile
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		if (!NpcInstance.canBypassCheck(player, npc))
 		{
 			return;
 		}
+		
 		String var = player.getVar("backCoords");
+		
 		if ((var == null) || var.equals(""))
 		{
 			teleOut();
 			return;
 		}
+		
 		player.teleToLocation(Location.parseLoc(var), 0);
 	}
 	
@@ -214,10 +226,12 @@ public class TeleToParnassus extends Functions implements ScriptFile
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		player.teleToLocation(46776, 185784, -3528, 0);
 		show("I don't know from where you came here, but I can teleport you the another border side.", player, npc);
 	}
@@ -423,11 +437,14 @@ public class TeleToParnassus extends Functions implements ScriptFile
 		{
 			return "";
 		}
+		
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return "";
 		}
+		
 		return "<br>[scripts_services.TeleToParnassus:toParnassus @811;Parnassus|\"Move to Parnassus (offshore zone) - " + Config.SERVICES_PARNASSUS_PRICE + " Adena.\"]";
 	}
 	
@@ -452,11 +469,14 @@ public class TeleToParnassus extends Functions implements ScriptFile
 		{
 			return "";
 		}
+		
 		Player player = getSelf();
+		
 		if ((player == null) || (player.getReflection() != ReflectionManager.PARNASSUS))
 		{
 			return "";
 		}
+		
 		return "<br>[scripts_services.ManaRegen:DoManaRegen|Full MP Regeneration. (1 MP for 5 Adena)]<br>[scripts_services.TeleToParnassus:fromParnassus @811;From Parnassus|\"Exit the Parnassus.\"]<br>";
 	}
 	
@@ -486,6 +506,7 @@ public class TeleToParnassus extends Functions implements ScriptFile
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
 			Player player = cha.getPlayer();
+			
 			if (player != null)
 			{
 				if (Config.SERVICES_PARNASSUS_ENABLED && (player.getReflection() == ReflectionManager.PARNASSUS) && player.isVisible())

@@ -38,10 +38,12 @@ public class Avanguard_Xaok extends DefaultAI
 	protected boolean thinkActive()
 	{
 		NpcInstance actor = getActor();
+		
 		if (Rnd.chance(8))
 		{
 			Functions.npcSay(actor, NpcString.WHAT_DO_I_FEEL_WHEN_I_KILL_SHILENS_MONSTERS_RECOIL);
 		}
+		
 		return false;
 	}
 }

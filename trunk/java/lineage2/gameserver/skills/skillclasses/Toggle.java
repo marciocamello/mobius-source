@@ -47,6 +47,7 @@ public class Toggle extends Skill
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		getEffects(activeChar, activeChar, getActivateRate() > 0, false);
 	}
 }

@@ -56,12 +56,14 @@ public class OlympiadDatabase
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(OlympiadNobleDAO.GET_ALL_CLASSIFIED_NOBLESS);
 			rset = statement.executeQuery();
 			int place = 1;
+			
 			while (rset.next())
 			{
 				tmpPlace.put(rset.getInt(Olympiad.CHAR_ID), place++);
@@ -79,6 +81,7 @@ public class OlympiadDatabase
 		int rank2 = (int) Math.round(tmpPlace.size() * 0.10);
 		int rank3 = (int) Math.round(tmpPlace.size() * 0.25);
 		int rank4 = (int) Math.round(tmpPlace.size() * 0.50);
+		
 		if (rank1 == 0)
 		{
 			rank1 = 1;
@@ -86,6 +89,7 @@ public class OlympiadDatabase
 			rank3++;
 			rank4++;
 		}
+		
 		for (int charId : tmpPlace.keySet())
 		{
 			if (tmpPlace.get(charId) <= rank1)
@@ -119,6 +123,7 @@ public class OlympiadDatabase
 		_log.info("Olympiad: Calculating last period...");
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -138,12 +143,14 @@ public class OlympiadDatabase
 		{
 			DbUtils.closeQuietly(con, statement);
 		}
+		
 		for (Integer nobleId : Olympiad._nobles.keySet())
 		{
 			StatsSet nobleInfo = Olympiad._nobles.get(nobleId);
 			int points = nobleInfo.getInteger(Olympiad.POINTS);
 			int compDone = nobleInfo.getInteger(Olympiad.COMP_DONE);
 			nobleInfo.set(Olympiad.POINTS, Config.OLYMPIAD_POINTS_DEFAULT);
+			
 			if (compDone >= Config.OLYMPIAD_BATTLES_FOR_REWARD)
 			{
 				nobleInfo.set(Olympiad.POINTS_PAST, points);
@@ -154,6 +161,7 @@ public class OlympiadDatabase
 				nobleInfo.set(Olympiad.POINTS_PAST, 0);
 				nobleInfo.set(Olympiad.POINTS_PAST_STATIC, 0);
 			}
+			
 			nobleInfo.set(Olympiad.COMP_DONE, 0);
 			nobleInfo.set(Olympiad.COMP_WIN, 0);
 			nobleInfo.set(Olympiad.COMP_LOOSE, 0);
@@ -173,12 +181,14 @@ public class OlympiadDatabase
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(OlympiadNobleDAO.GET_EACH_CLASS_LEADER);
 			statement.setInt(1, classId);
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				names.add(rset.getString(Olympiad.CHAR_NAME));
@@ -204,14 +214,17 @@ public class OlympiadDatabase
 		{
 			return;
 		}
+		
 		Olympiad._heroesToBe = new ArrayList<>();
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			StatsSet hero;
+			
 			for (ClassId id : ClassId.VALUES)
 			{
 				if (id.getId() > 138)
@@ -220,6 +233,7 @@ public class OlympiadDatabase
 					statement.setInt(1, id.getId());
 					statement.setInt(2, Config.OLYMPIAD_BATTLES_FOR_REWARD);
 					rset = statement.executeQuery();
+					
 					if (rset.next())
 					{
 						hero = new StatsSet();
@@ -228,6 +242,7 @@ public class OlympiadDatabase
 						hero.set(Olympiad.CHAR_NAME, rset.getString(Olympiad.CHAR_NAME));
 						Olympiad._heroesToBe.add(hero);
 					}
+					
 					DbUtils.close(statement, rset);
 				}
 			}
@@ -260,6 +275,7 @@ public class OlympiadDatabase
 		{
 			return;
 		}
+		
 		for (Integer nobleId : Olympiad._nobles.keySet())
 		{
 			saveNobleData(nobleId);

@@ -121,6 +121,7 @@ public enum Element
 				return e;
 			}
 		}
+		
 		return NONE;
 	}
 	
@@ -135,19 +136,26 @@ public enum Element
 		{
 			case WATER:
 				return FIRE;
+				
 			case FIRE:
 				return WATER;
+				
 			case WIND:
 				return EARTH;
+				
 			case EARTH:
 				return WIND;
+				
 			case HOLY:
 				return UNHOLY;
+				
 			case UNHOLY:
 				return HOLY;
+				
 			default:
 				break;
 		}
+		
 		return NONE;
 	}
 	
@@ -165,6 +173,7 @@ public enum Element
 				return e;
 			}
 		}
+		
 		return NONE;
 	}
 }

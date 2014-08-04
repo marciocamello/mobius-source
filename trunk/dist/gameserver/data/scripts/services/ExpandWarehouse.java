@@ -32,15 +32,18 @@ public class ExpandWarehouse extends Functions
 	public void get()
 	{
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (!Config.SERVICES_EXPAND_WAREHOUSE_ENABLED)
 		{
 			show("Expand Warehouse Slots", player);
 			return;
 		}
+		
 		if (player.getInventory().destroyItemByItemId(Config.SERVICES_EXPAND_WAREHOUSE_ITEM, Config.SERVICES_EXPAND_WAREHOUSE_PRICE))
 		{
 			player.setExpandWarehouse(player.getExpandWarehouse() + 1);
@@ -55,6 +58,7 @@ public class ExpandWarehouse extends Functions
 		{
 			player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
 		}
+		
 		/**
 		 * Method show.
 		 */
@@ -64,15 +68,18 @@ public class ExpandWarehouse extends Functions
 	public void show()
 	{
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (!Config.SERVICES_EXPAND_WAREHOUSE_ENABLED)
 		{
 			show("Expand Warehouse Slots", player);
 			return;
 		}
+		
 		ItemTemplate item = ItemHolder.getInstance().getTemplate(Config.SERVICES_EXPAND_WAREHOUSE_ITEM);
 		String out = "";
 		out += "<html><body>Expand Personal Inventory";

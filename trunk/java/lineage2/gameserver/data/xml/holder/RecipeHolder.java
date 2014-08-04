@@ -84,10 +84,12 @@ public final class RecipeHolder extends AbstractHolder
 	public Collection<RecipeTemplate> getRecipes()
 	{
 		Collection<RecipeTemplate> result = new ArrayList<>(size());
+		
 		for (int key : _listByRecipeId.keys())
 		{
 			result.add(_listByRecipeId.get(key));
 		}
+		
 		return result;
 	}
 	

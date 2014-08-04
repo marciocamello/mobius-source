@@ -56,33 +56,42 @@ public class RequestMagicSkillUse extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		activeChar.setActive();
+		
 		if (activeChar.isOutOfControl())
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		Skill skill = SkillTable.getInstance().getInfo(_magicId, activeChar.getSkillLevel(_magicId));
+		
 		if (skill != null)
 		{
 			if (!(skill.isActive() || skill.isToggle()))
 			{
 				return;
 			}
+			
 			FlagItemAttachment attachment = activeChar.getActiveWeaponFlagAttachment();
+			
 			if ((attachment != null) && !attachment.canCast(activeChar, skill))
 			{
 				activeChar.sendActionFailed();
 				return;
 			}
+			
 			if ((activeChar.getTransformation() != 0) && !activeChar.getAllSkills().contains(skill))
 			{
 				return;
 			}
+			
 			if (skill.isToggle())
 			{
 				if (activeChar.getEffectList().getEffectsBySkill(skill) != null)
@@ -92,9 +101,11 @@ public class RequestMagicSkillUse extends L2GameClientPacket
 					return;
 				}
 			}
+			
 			if (skill.getSkillType() == SkillType.EMDAM)
 			{
 				int inc = 0;
+				
 				if (activeChar.getEffectList().getEffectsBySkillId(Skill.SKILL_DUAL_CAST) != null)
 				{
 					inc = 5;
@@ -115,15 +126,19 @@ public class RequestMagicSkillUse extends L2GameClientPacket
 				{
 					inc = 4;
 				}
+				
 				skill = SkillTable.getInstance().getInfo(skill.getId() + inc, skill.getLevel());
 			}
+			
 			Creature target = skill.getAimingTarget(activeChar, activeChar.getTarget());
 			activeChar.setGroundSkillLoc(null);
+			
 			if (activeChar.isStunned() && skill.isCastOverStun())
 			{
 				activeChar.doCast(skill, target, _ctrlPressed);
 				return;
 			}
+			
 			activeChar.getAI().Cast(skill, target, _ctrlPressed, _shiftPressed);
 		}
 		else

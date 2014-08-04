@@ -96,6 +96,7 @@ public class ReflectionManager
 	public Reflection get(int id)
 	{
 		readLock.lock();
+		
 		try
 		{
 			return _reflections.get(id);
@@ -114,6 +115,7 @@ public class ReflectionManager
 	public Reflection add(Reflection ref)
 	{
 		writeLock.lock();
+		
 		try
 		{
 			return _reflections.put(ref.getId(), ref);
@@ -132,6 +134,7 @@ public class ReflectionManager
 	public Reflection remove(Reflection ref)
 	{
 		writeLock.lock();
+		
 		try
 		{
 			return _reflections.remove(ref.getId());
@@ -149,6 +152,7 @@ public class ReflectionManager
 	public Reflection[] getAll()
 	{
 		readLock.lock();
+		
 		try
 		{
 			return _reflections.values(new Reflection[_reflections.size()]);
@@ -167,9 +171,11 @@ public class ReflectionManager
 	public int getCountByIzId(int izId)
 	{
 		readLock.lock();
+		
 		try
 		{
 			int i = 0;
+			
 			for (Reflection r : getAll())
 			{
 				if (r.getInstancedZoneId() == izId)
@@ -177,6 +183,7 @@ public class ReflectionManager
 					i++;
 				}
 			}
+			
 			return i;
 		}
 		finally

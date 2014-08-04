@@ -34,17 +34,17 @@ public class ExListPartyMatchingWaitingRoom extends L2GameServerPacket
 		int first = (page - 1) * 64;
 		int firstNot = page * 64;
 		int i = 0;
-		
 		List<Player> temp = MatchingRoomManager.getInstance().getWaitingList(minLevel, maxLevel, classes);
 		_fullSize = temp.size();
-		
 		_waitingList = new ArrayList<>(_fullSize);
+		
 		for (Player pc : temp)
 		{
 			if ((i < first) || (i >= firstNot))
 			{
 				continue;
 			}
+			
 			_waitingList.add(new PartyMatchingWaitingInfo(pc));
 			i++;
 		}
@@ -54,9 +54,9 @@ public class ExListPartyMatchingWaitingRoom extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0x36);
-		
 		writeD(_fullSize);
 		writeD(_waitingList.size());
+		
 		for (PartyMatchingWaitingInfo waiting_info : _waitingList)
 		{
 			writeS(waiting_info.name);
@@ -64,6 +64,7 @@ public class ExListPartyMatchingWaitingRoom extends L2GameServerPacket
 			writeD(waiting_info.level);
 			writeD(waiting_info.currentInstance);
 			writeD(waiting_info.instanceReuses.length);
+			
 			for (int i : waiting_info.instanceReuses)
 			{
 				writeD(i);

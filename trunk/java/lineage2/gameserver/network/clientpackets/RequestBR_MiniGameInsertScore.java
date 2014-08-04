@@ -43,10 +43,12 @@ public class RequestBR_MiniGameInsertScore extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if ((player == null) || !Config.EX_JAPAN_MINIGAME)
 		{
 			return;
 		}
+		
 		MiniGameScoreManager.getInstance().insertScore(player, _score);
 	}
 }

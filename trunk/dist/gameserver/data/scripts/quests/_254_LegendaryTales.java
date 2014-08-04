@@ -49,6 +49,7 @@ public class _254_LegendaryTales extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("gilmore_q254_05.htm"))
 		{
 			st.setState(STARTED);
@@ -60,44 +61,57 @@ public class _254_LegendaryTales extends Quest implements ScriptFile
 			st.takeAllItems(LargeBone);
 			StringTokenizer tokenizer = new StringTokenizer(event);
 			tokenizer.nextToken();
+			
 			switch (Integer.parseInt(tokenizer.nextToken()))
 			{
 				case 1:
 					st.giveItems(13467, 1);
 					break;
+				
 				case 2:
 					st.giveItems(13462, 1);
 					break;
+				
 				case 3:
 					st.giveItems(13464, 1);
 					break;
+				
 				case 4:
 					st.giveItems(13461, 1);
 					break;
+				
 				case 5:
 					st.giveItems(13465, 1);
 					break;
+				
 				case 6:
 					st.giveItems(13463, 1);
 					break;
+				
 				case 7:
 					st.giveItems(13460, 1);
 					break;
+				
 				case 8:
 					st.giveItems(13466, 1);
 					break;
+				
 				case 9:
 					st.giveItems(13459, 1);
 					break;
+				
 				case 10:
 					st.giveItems(13457, 1);
 					break;
+				
 				case 11:
 					st.giveItems(13458, 1);
 					break;
+				
 				default:
 					break;
 			}
+			
 			st.playSound(SOUND_FINISH);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
@@ -112,6 +126,7 @@ public class _254_LegendaryTales extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (npc.getNpcId() == Gilmore)
 		{
 			if (cond == 0)
@@ -150,31 +165,37 @@ public class _254_LegendaryTales extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if (cond == 1)
 		{
 			int mask = 1;
 			int var = npc.getNpcId();
+			
 			for (int raid : raids)
 			{
 				if (raid == var)
 				{
 					break;
 				}
+				
 				mask = mask << 1;
 			}
 			
 			var = st.getInt("RaidsKilled");
+			
 			if ((var & mask) == 0) // этого босса еще не убивали
 			{
 				var |= mask;
 				st.set("RaidsKilled", var);
 				st.giveItems(LargeBone, 1);
+				
 				if (st.getQuestItemsCount(LargeBone) >= 7)
 				{
 					st.setCond(2);
 				}
 			}
 		}
+		
 		return null;
 	}
 	

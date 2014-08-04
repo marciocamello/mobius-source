@@ -48,11 +48,9 @@ public class _10302_UnsettlingShadowAndRumors extends Quest implements ScriptFil
 		addStartNpc(KANIBYS);
 		addTalkId(KANIBYS);
 		addTalkId(ISHAEL);
-		
 		addTalkId(KES);
 		addTalkId(KEY);
 		addTalkId(KIK);
-		
 		addLevelCheck(90, 99);
 		addQuestCompletedCheck(_10301_ShadowOfTerrorBlackishRedFog.class);
 	}
@@ -61,6 +59,7 @@ public class _10302_UnsettlingShadowAndRumors extends Quest implements ScriptFil
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		st.getPlayer();
+		
 		if (event.equalsIgnoreCase("32898-4.htm"))
 		{
 			st.setCond(1);
@@ -106,6 +105,7 @@ public class _10302_UnsettlingShadowAndRumors extends Quest implements ScriptFil
 			st.playSound(SOUND_MIDDLE);
 			st.setCond(6);
 		}
+		
 		return event;
 	}
 	
@@ -126,7 +126,9 @@ public class _10302_UnsettlingShadowAndRumors extends Quest implements ScriptFil
 		{
 			return "32898-lvl.htm";
 		}
+		
 		QuestState qs = st.getPlayer().getQuestState(_10301_ShadowOfTerrorBlackishRedFog.class);
+		
 		if ((qs == null) || !qs.isCompleted())
 		{
 			return "32898-lvl.htm";
@@ -172,26 +174,28 @@ public class _10302_UnsettlingShadowAndRumors extends Quest implements ScriptFil
 			{
 				return "32901.htm";
 			}
+			
 			return "32901-2.htm";
 		}
-		
 		else if (npcId == KEY)
 		{
 			if (cond == 3)
 			{
 				return "32903.htm";
 			}
+			
 			return "32903-2.htm";
 		}
-		
 		else if (npcId == KIK)
 		{
 			if (cond == 4)
 			{
 				return "32902.htm";
 			}
+			
 			return "32902-2.htm";
 		}
+		
 		return "noquest";
 	}
 }

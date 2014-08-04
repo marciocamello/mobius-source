@@ -62,6 +62,7 @@ public class _452_FindingtheLostSoldiers extends Quest implements ScriptFile
 		{
 			return event;
 		}
+		
 		if (npc.getNpcId() == JAKAN)
 		{
 			if (event.equalsIgnoreCase("32773-3.htm"))
@@ -78,6 +79,7 @@ public class _452_FindingtheLostSoldiers extends Quest implements ScriptFile
 			st.playSound(SOUND_MIDDLE);
 			npc.deleteMe();
 		}
+		
 		return event;
 	}
 	
@@ -85,10 +87,12 @@ public class _452_FindingtheLostSoldiers extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
+		
 		if (npc == null)
 		{
 			return htmltext;
 		}
+		
 		if (npc.getNpcId() == JAKAN)
 		{
 			switch (st.getState())
@@ -109,7 +113,9 @@ public class _452_FindingtheLostSoldiers extends Quest implements ScriptFile
 					{
 						htmltext = "32773-0.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					if (st.getCond() == 1)
 					{
@@ -125,6 +131,7 @@ public class _452_FindingtheLostSoldiers extends Quest implements ScriptFile
 						st.playSound(SOUND_FINISH);
 						st.exitCurrentQuest(this);
 					}
+					
 					break;
 			}
 		}
@@ -135,6 +142,7 @@ public class _452_FindingtheLostSoldiers extends Quest implements ScriptFile
 				htmltext = "corpse-1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

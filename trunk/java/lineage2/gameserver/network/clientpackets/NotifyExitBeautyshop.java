@@ -29,10 +29,12 @@ public class NotifyExitBeautyshop extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		activeChar.broadcastCharInfo();
 	}
 }

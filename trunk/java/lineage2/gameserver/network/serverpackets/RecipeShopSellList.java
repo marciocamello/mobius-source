@@ -41,6 +41,7 @@ public class RecipeShopSellList extends L2GameServerPacket
 		writeD(maxMp);// Creator's MP
 		writeQ(adena);
 		writeD(createList.size());
+		
 		for (ManufactureItem mi : createList)
 		{
 			writeD(mi.getRecipeId());

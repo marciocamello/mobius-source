@@ -29,7 +29,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public final class JiniaNpcInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -63,9 +63,11 @@ public final class JiniaNpcInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("request_normalfreya"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(normalFreyaIzId))
@@ -81,6 +83,7 @@ public final class JiniaNpcInstance extends NpcInstance
 		else if (command.equalsIgnoreCase("request_extremefreya"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(extremeFreyaIzId))

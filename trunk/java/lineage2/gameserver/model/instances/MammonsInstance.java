@@ -30,7 +30,7 @@ import org.slf4j.LoggerFactory;
 public class MammonsInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -69,20 +69,25 @@ public class MammonsInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		super.onBypassFeedback(player, command);
+		
 		if (command.startsWith("bmarket"))
 		{
 			ItemInstance ancientAdena = player.getInventory().getItemByItemId(ANCIENT_ADENA_ID);
 			long ancientAdenaAmount = ancientAdena == null ? 0 : ancientAdena.getCount();
 			int val = Integer.parseInt(command.substring(11, 12).trim());
+			
 			if (command.length() > 12)
 			{
 				val = Integer.parseInt(command.substring(11, 13).trim());
 			}
+			
 			switch (val)
 			{
 				case 1:
 					long ancientAdenaConvert = 0;
+					
 					try
 					{
 						ancientAdenaConvert = Long.parseLong(command.substring(13).trim());
@@ -97,18 +102,22 @@ public class MammonsInstance extends NpcInstance
 						player.sendMessage(new CustomMessage("common.IntegerAmount", player));
 						return;
 					}
+					
 					if ((ancientAdenaAmount < ancientAdenaConvert) || (ancientAdenaConvert < 1))
 					{
 						player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 						return;
 					}
+					
 					if (player.getInventory().destroyItemByItemId(ANCIENT_ADENA_ID, ancientAdenaConvert))
 					{
 						player.addAdena(ancientAdenaConvert);
 						player.sendPacket(SystemMessage2.removeItems(ANCIENT_ADENA_ID, ancientAdenaConvert));
 						player.sendPacket(SystemMessage2.obtainItems(57, ancientAdenaConvert, 0));
 					}
+					
 					break;
+				
 				default:
 					showChatWindow(player, "blkmrkt.htm");
 					break;
@@ -127,23 +136,29 @@ public class MammonsInstance extends NpcInstance
 	{
 		int npcId = getTemplate().npcId;
 		String filename = MAMMONS_HTML_PATH;
+		
 		switch (npcId)
 		{
 			case 33511:
 				filename += "priestmam.htm";
 				break;
+			
 			case 31092:
 				filename += "blkmrkt.htm";
 				break;
+			
 			case 31113:
 				filename += "merchmamm.htm";
 				break;
+			
 			case 31126:
 				filename += "blksmithmam.htm";
 				break;
+			
 			default:
 				filename = getHtmlPath(npcId, val, player);
 		}
+		
 		player.sendPacket(new NpcHtmlMessage(player, this, filename, val));
 	}
 }

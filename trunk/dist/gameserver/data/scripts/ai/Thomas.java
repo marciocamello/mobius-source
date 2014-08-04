@@ -70,15 +70,18 @@ public class Thomas extends Fighter
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (!actor.isInCombat() && ((System.currentTimeMillis() - _lastSay) > 10000))
 		{
 			Functions.npcSay(actor, _stay[Rnd.get(_stay.length)]);
 			_lastSay = System.currentTimeMillis();
 		}
+		
 		return super.thinkActive();
 	}
 	
@@ -91,15 +94,18 @@ public class Thomas extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((attacker == null) || (attacker.getPlayer() == null))
 		{
 			return;
 		}
+		
 		if ((System.currentTimeMillis() - _lastSay) > 5000)
 		{
 			Functions.npcSay(actor, _attacked[Rnd.get(_attacked.length)]);
 			_lastSay = System.currentTimeMillis();
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 }

@@ -63,6 +63,7 @@ public class _381_LetsBecomeARoyalMember extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("warehouse_keeper_sorint_q0381_02.htm"))
 		{
 			if ((st.getPlayer().getLevel() >= 55) && (st.getQuestItemsCount(MEMBERSHIP_1) > 0))
@@ -86,6 +87,7 @@ public class _381_LetsBecomeARoyalMember extends Quest implements ScriptFile
 				st.playSound(SOUND_ACCEPT);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -96,6 +98,7 @@ public class _381_LetsBecomeARoyalMember extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		long album = st.getQuestItemsCount(COIN_ALBUM);
+		
 		if (npcId == SORINT)
 		{
 			if (cond == 0)
@@ -105,6 +108,7 @@ public class _381_LetsBecomeARoyalMember extends Quest implements ScriptFile
 			else if (cond == 1)
 			{
 				long coin = st.getQuestItemsCount(KAILS_COIN);
+				
 				if ((coin > 0) && (album > 0))
 				{
 					st.takeItems(KAILS_COIN, -1);
@@ -127,6 +131,7 @@ public class _381_LetsBecomeARoyalMember extends Quest implements ScriptFile
 		else
 		{
 			long clover = st.getQuestItemsCount(CLOVER_COIN);
+			
 			if (album > 0)
 			{
 				htmltext = "sandra_q0381_05.htm";
@@ -147,6 +152,7 @@ public class _381_LetsBecomeARoyalMember extends Quest implements ScriptFile
 				htmltext = "sandra_q0381_03.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -157,15 +163,18 @@ public class _381_LetsBecomeARoyalMember extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		int npcId = npc.getNpcId();
 		long album = st.getQuestItemsCount(COIN_ALBUM);
 		long coin = st.getQuestItemsCount(KAILS_COIN);
 		long clover = st.getQuestItemsCount(CLOVER_COIN);
+		
 		if ((npcId == ANCIENT_GARGOYLE) && (coin == 0))
 		{
 			if (Rnd.chance(GARGOYLE_CHANCE))
 			{
 				st.giveItems(KAILS_COIN, 1);
+				
 				if ((album > 0) || (clover > 0))
 				{
 					st.playSound(SOUND_MIDDLE);
@@ -181,6 +190,7 @@ public class _381_LetsBecomeARoyalMember extends Quest implements ScriptFile
 			if (Rnd.chance(VEGUS_CHANCE))
 			{
 				st.giveItems(CLOVER_COIN, 1);
+				
 				if (coin > 0)
 				{
 					st.playSound(SOUND_MIDDLE);
@@ -191,6 +201,7 @@ public class _381_LetsBecomeARoyalMember extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 }

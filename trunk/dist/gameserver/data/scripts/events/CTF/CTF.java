@@ -381,7 +381,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	 * Field EVENT_MANAGER_ID.
 	 */
 	private static int EVENT_MANAGER_ID = 31143;
-
+	
 	/**
 	 * Method spawnNpcs.
 	 */
@@ -410,7 +410,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		};
 		SpawnNPCs(EVENT_MANAGER_ID, EVENT_MANAGERS, _spawns);
 	}
-
+	
 	/**
 	 * Method despawnNpcs.
 	 */
@@ -418,7 +418,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	{
 		deSpawnNPCs(_spawns);
 	}
-
+	
 	/**
 	 * Method onPlayerExit.
 	 * @param player Player
@@ -431,26 +431,33 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			return;
 		}
+		
 		if ((_status == 0) && _isRegistrationActive && live_list.contains(player.getStoredId()))
 		{
 			removePlayer(player);
 			return;
 		}
+		
 		if ((_status == 1) && live_list.contains(player.getStoredId()))
 		{
 			removePlayer(player);
+			
 			try
 			{
 				String var = player.getVar("CTF_backCoords");
+				
 				if ((var == null) || var.equals(""))
 				{
 					return;
 				}
+				
 				String[] coords = var.split(" ");
+				
 				if (coords.length != 4)
 				{
 					return;
 				}
+				
 				player.teleToLocation(Integer.parseInt(coords[0]), Integer.parseInt(coords[1]), Integer.parseInt(coords[2]), Integer.parseInt(coords[3]));
 				player.unsetVar("CTF_backCoords");
 			}
@@ -458,30 +465,36 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			{
 				e.printStackTrace();
 			}
+			
 			return;
 		}
+		
 		if ((_status > 1) && (player.getTeam() != TeamType.NONE) && live_list.contains(player.getStoredId()))
 		{
 			removePlayer(player);
 			checkLive();
 		}
 	}
-
+	
 	/**
 	 * Method checkLive.
 	 */
 	public static void checkLive()
 	{
 		List<Long> new_live_list = new CopyOnWriteArrayList<>();
+		
 		for (Long storeId : live_list)
 		{
 			Player player = GameObjectsStorage.getAsPlayer(storeId);
+			
 			if (player != null)
 			{
 				new_live_list.add(storeId);
 			}
 		}
+		
 		live_list = new_live_list;
+		
 		for (Player player : getPlayers(live_list))
 		{
 			if (player.isInZone(_zone) && !player.isDead() && !player.isLogoutStarted())
@@ -493,12 +506,13 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				loosePlayer(player);
 			}
 		}
+		
 		if (live_list.size() <= 1)
 		{
 			endBattle(0);
 		}
 	}
-
+	
 	/**
 	 * Method loosePlayer.
 	 * @param player Player
@@ -512,7 +526,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			show(new CustomMessage("scripts.events.LastHero.YouLose", player), player);
 		}
 	}
-
+	
 	/**
 	 * Method onDeath.
 	 * @param self Creature
@@ -528,13 +542,14 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			Player player = (Player) self;
 			loosePlayer(player);
 			checkLive();
+			
 			if ((killer != null) && killer.isPlayer() && ((killer.getPlayer().expertiseIndex - player.expertiseIndex) > 2) && !killer.getPlayer().getIP().equals(player.getIP()))
 			{
 				addItem((Player) killer, 4657, Math.round(false ? player.getLevel() * 150 : 1 * 150));
 			}
 		}
 	}
-
+	
 	/**
 	 * Method onTeleport.
 	 * @param player Player
@@ -551,13 +566,14 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			return;
 		}
+		
 		if ((_status > 1) && (player.getTeam() != TeamType.NONE) && live_list.contains(player.getStoredId()))
 		{
 			removePlayer(player);
 			checkLive();
 		}
 	}
-
+	
 	/**
 	 * @author Mobius
 	 */
@@ -567,7 +583,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		 * Field endTime.
 		 */
 		private final String endTime;
-
+		
 		/**
 		 * Constructor for StartTask.
 		 * @param endTime String
@@ -576,7 +592,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			this.endTime = endTime;
 		}
-
+		
 		/**
 		 * Method run.
 		 * @see java.lang.Runnable#run()
@@ -589,11 +605,13 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				_log.info("CTF: is not Active");
 				return;
 			}
+			
 			if (isPvPEventStarted())
 			{
 				_log.info("CTF not started: another event is already running");
 				return;
 			}
+			
 			for (Residence c : ResidenceHolder.getInstance().getResidenceList(Castle.class))
 			{
 				if ((c.getSiegeEvent() != null) && c.getSiegeEvent().isInProgress())
@@ -602,16 +620,17 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 					return;
 				}
 			}
+			
 			_log.info("CTF: started, end Time: " + endTime);
 			start(new String[]
-				{
+			{
 				"-1",
 				"-1",
 				endTime
-				});
+			});
 		}
 	}
-
+	
 	/**
 	 * Field startTasks.
 	 */
@@ -728,7 +747,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	 * Field _resurrectionList.
 	 */
 	private static HashMap<Long, ScheduledFuture<?>> _resurrectionList = new HashMap<>();
-
+	
 	/**
 	 * Method canSpawnPet.
 	 * @param player Player
@@ -743,9 +762,10 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				return false;
 			}
 		}
+		
 		return true;
 	}
-
+	
 	/**
 	 * Method onLoad.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
@@ -755,24 +775,28 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	{
 		CharListenerList.addGlobal(this);
 		_zone.addListener(_zoneListener);
+		
 		for (String[] s : startTime)
 		{
 			Calendar cal = Calendar.getInstance();
 			cal.set(Calendar.HOUR_OF_DAY, Integer.valueOf(s[0].split(":")[0]));
 			cal.set(Calendar.MINUTE, Integer.valueOf(s[0].split(":")[1]));
 			cal.set(Calendar.SECOND, 0);
+			
 			while (cal.getTimeInMillis() < System.currentTimeMillis())
 			{
 				cal.add(Calendar.DAY_OF_YEAR, 1);
 			}
+			
 			ScheduledFuture<?> startTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new StartTask(s[1]), cal.getTimeInMillis() - System.currentTimeMillis(), 86400000);
 			startTasks.add(startTask);
 			spawnNpcs();
 		}
+		
 		_active = ServerVariables.getString("CTF", "off").equalsIgnoreCase("on");
 		_log.info("Loaded Event: CTF");
 	}
-
+	
 	/**
 	 * Method onReload.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
@@ -781,13 +805,14 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	public void onReload()
 	{
 		_zone.removeListener(_zoneListener);
+		
 		if (_startTask != null)
 		{
 			_startTask.cancel(false);
 			_startTask = null;
 		}
 	}
-
+	
 	/**
 	 * Method onShutdown.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
@@ -797,12 +822,12 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	{
 		onReload();
 	}
-
+	
 	/**
 	 * Field _active.
 	 */
 	static boolean _active = false;
-
+	
 	/**
 	 * Method isActive.
 	 * @return boolean
@@ -811,17 +836,19 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	{
 		return _active;
 	}
-
+	
 	/**
 	 * Method activateEvent.
 	 */
 	public void activateEvent()
 	{
 		Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (!isActive())
 		{
 			for (String[] s : startTime)
@@ -830,13 +857,16 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				cal.set(Calendar.HOUR_OF_DAY, Integer.valueOf(s[0].split(":")[0]));
 				cal.set(Calendar.MINUTE, Integer.valueOf(s[0].split(":")[1]));
 				cal.set(Calendar.SECOND, 0);
+				
 				while (cal.getTimeInMillis() < System.currentTimeMillis())
 				{
 					cal.add(Calendar.DAY_OF_YEAR, 1);
 				}
+				
 				ScheduledFuture<?> startTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new StartTask(s[1]), cal.getTimeInMillis() - System.currentTimeMillis(), 86400000);
 				startTasks.add(startTask);
 			}
+			
 			ServerVariables.set("CTF", "on");
 			_log.info("Event 'CTF' activated.");
 			Announcements.getInstance().announceByCustomMessage("scripts.events.CTF.AnnounceEventStarted", null);
@@ -845,20 +875,23 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			player.sendMessage("Event 'CTF' already active.");
 		}
+		
 		_active = true;
 		show("admin/events.htm", player);
 	}
-
+	
 	/**
 	 * Method deactivateEvent.
 	 */
 	public void deactivateEvent()
 	{
 		Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (isActive())
 		{
 			startTasks.clear();
@@ -870,10 +903,11 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			player.sendMessage("Event 'CTF' not active.");
 		}
+		
 		_active = false;
 		show("admin/events.htm", player);
 	}
-
+	
 	/**
 	 * Method isRunned.
 	 * @return boolean
@@ -882,7 +916,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	{
 		return _isRegistrationActive || (_status > 0);
 	}
-
+	
 	/**
 	 * Method DialogAppend_31225.
 	 * @param val Integer
@@ -895,9 +929,10 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			Player player = getSelf();
 			show("data/scripts/events/CTF/31225.html", player);
 		}
+		
 		return "";
 	}
-
+	
 	/**
 	 * Method getMinLevelForCategory.
 	 * @param category int
@@ -909,20 +944,26 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			case 1:
 				return 30;
+				
 			case 2:
 				return 40;
+				
 			case 3:
 				return 50;
+				
 			case 4:
 				return 62;
+				
 			case 5:
 				return 72;
+				
 			case 6:
 				return 86;
 		}
+		
 		return 0;
 	}
-
+	
 	/**
 	 * Method getMaxLevelForCategory.
 	 * @param category int
@@ -934,20 +975,26 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			case 1:
 				return 39;
+				
 			case 2:
 				return 49;
+				
 			case 3:
 				return 61;
+				
 			case 4:
 				return 71;
+				
 			case 5:
 				return 85;
+				
 			case 6:
 				return 99;
 		}
+		
 		return 0;
 	}
-
+	
 	/**
 	 * Method getCategory.
 	 * @param level int
@@ -979,9 +1026,10 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			return 6;
 		}
+		
 		return 0;
 	}
-
+	
 	/**
 	 * Method start.
 	 * @param var String[]
@@ -993,8 +1041,10 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			_log.info("Destruction of Flag: Error start, var length: " + var.length);
 			return;
 		}
+		
 		Integer category;
 		Integer autoContinue;
+		
 		try
 		{
 			category = Integer.valueOf(var[0]);
@@ -1005,8 +1055,10 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			e.printStackTrace();
 			return;
 		}
+		
 		_category = category;
 		_autoContinue = autoContinue;
+		
 		if (_category == -1)
 		{
 			_minLevel = 1;
@@ -1017,19 +1069,23 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			_minLevel = getMinLevelForCategory(_category);
 			_maxLevel = getMaxLevelForCategory(_category);
 		}
+		
 		_status = 0;
 		_isRegistrationActive = true;
 		_time_to_start = 3;
 		players_list1 = new LazyArrayList<>();
 		players_list2 = new LazyArrayList<>();
+		
 		if (whiteFlag != null)
 		{
 			whiteFlag.deleteMe();
 		}
+		
 		if (greenFlag != null)
 		{
 			greenFlag.deleteMe();
 		}
+		
 		try
 		{
 			greenFlag = (MonsterInstance) spawn(team1loc, 35426);
@@ -1057,6 +1113,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			e.printStackTrace();
 		}
+		
 		whiteFlag.decayMe();
 		greenFlag.decayMe();
 		yellowFlag.decayMe();
@@ -1070,11 +1127,11 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		sayToAll("scripts.events.CTF.AnnouncePreStart", param);
 		executeTask("events.CTF.CTF", "question", new Object[0], 10000);
 		executeTask("events.CTF.CTF", "announce", new Object[]
-			{
+		{
 			var[2]
-			}, 60000);
+		}, 60000);
 	}
-
+	
 	/**
 	 * Method sayToAll.
 	 * @param address String
@@ -1084,7 +1141,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	{
 		Announcements.getInstance().announceByCustomMessage(address, replacements, ChatType.CRITICAL_ANNOUNCE);
 	}
-
+	
 	/**
 	 * Method question.
 	 */
@@ -1098,7 +1155,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			}
 		}
 	}
-
+	
 	/**
 	 * Method announce.
 	 * @param s String
@@ -1113,6 +1170,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			executeTask("events.CTF.CTF", "autoContinue", new Object[0], 10000);
 			return;
 		}
+		
 		if (_time_to_start > 1)
 		{
 			_time_to_start--;
@@ -1124,9 +1182,9 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			};
 			sayToAll("scripts.events.CTF.AnnouncePreStart", param);
 			executeTask("events.CTF.CTF", "announce", new Object[]
-				{
+			{
 				s
-				}, 60000);
+			}, 60000);
 		}
 		else
 		{
@@ -1134,23 +1192,26 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			_isRegistrationActive = false;
 			sayToAll("scripts.events.CTF.AnnounceEventStarting", null);
 			executeTask("events.CTF.CTF", "prepare", new Object[]
-				{
+			{
 				s
-				}, 5000);
+			}, 5000);
 		}
 	}
-
+	
 	/**
 	 * Method addPlayer.
 	 */
 	public void addPlayer()
 	{
 		Player player = getSelf();
+		
 		if ((player == null) || !checkPlayer(player, true))
 		{
 			return;
 		}
+		
 		int min = Math.min(Math.min(players_list1.size(), players_list2.size()), players_list3.size());
+		
 		if (min == players_list1.size())
 		{
 			players_list1.add(player.getStoredId());
@@ -1163,9 +1224,10 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			players_list3.add(player.getStoredId());
 		}
+		
 		show(new CustomMessage("scripts.events.CTF.Registered", player), player);
 	}
-
+	
 	/**
 	 * Method checkPlayer.
 	 * @param player Player
@@ -1179,53 +1241,63 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			show(new CustomMessage("scripts.events.Late", player), player);
 			return false;
 		}
+		
 		if (first && players_list.contains(player.getStoredId()))
 		{
 			show(new CustomMessage("scripts.events.LastHero.Cancelled", player), player);
 			return false;
 		}
+		
 		if ((player.getLevel() < _minLevel) || (player.getLevel() > _maxLevel))
 		{
 			show(new CustomMessage("scripts.events.LastHero.CancelledLevel", player), player);
 			return false;
 		}
+		
 		if (player.isMounted())
 		{
 			show(new CustomMessage("scripts.events.LastHero.Cancelled", player), player);
 			return false;
 		}
+		
 		if (player.isInDuel())
 		{
 			show(new CustomMessage("scripts.events.LastHero.CancelledDuel", player), player);
 			return false;
 		}
+		
 		if (player.getTeam() != TeamType.NONE)
 		{
 			show(new CustomMessage("scripts.events.LastHero.CancelledOtherEvent", player), player);
 			return false;
 		}
+		
 		if ((player.getOlympiadGame() != null) || (first && Olympiad.isRegistered(player)))
 		{
 			show(new CustomMessage("scripts.events.LastHero.CancelledOlympiad", player), player);
 			return false;
 		}
+		
 		if (player.isTeleporting())
 		{
 			show(new CustomMessage("scripts.events.LastHero.CancelledTeleport", player), player);
 			return false;
 		}
+		
 		if (first && PROTECT_IP_ACTIVE && sameIp(player))
 		{
 			show("You can not participate on the same IP someone already registered newly registered.", player, null);
 			return false;
 		}
+		
 		if (player.getObserverMode() != 0)
 		{
 			return false;
 		}
+		
 		return true;
 	}
-
+	
 	/**
 	 * Method prepare.
 	 * @param s String
@@ -1248,12 +1320,12 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		executeTask("events.CTF.CTF", "paralyzePlayers", new Object[0], 4000);
 		executeTask("events.CTF.CTF", "teleportPlayersToColiseum", new Object[0], 5000);
 		executeTask("events.CTF.CTF", "go", new Object[]
-			{
+		{
 			s
-			}, 60000);
+		}, 60000);
 		sayToAll("scripts.events.CTF.AnnounceFinalCountdown", null);
 	}
-
+	
 	/**
 	 * Method go.
 	 * @param s String
@@ -1266,6 +1338,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			executeTask("events.CTF.CTF", "autoContinue", new Object[0], 1000);
 			return;
 		}
+		
 		_status = 2;
 		upParalyzePlayers();
 		clearArena();
@@ -1274,13 +1347,15 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		cal.set(Calendar.HOUR_OF_DAY, Integer.valueOf(s.split(":")[0]));
 		cal.set(Calendar.MINUTE, Integer.valueOf(s.split(":")[1]));
 		cal.set(Calendar.SECOND, 0);
+		
 		while (cal.getTimeInMillis() < System.currentTimeMillis())
 		{
 			cal.add(Calendar.DAY_OF_YEAR, 1);
 		}
+		
 		ThreadPoolManager.getInstance().schedule(new timer((int) (cal.getTimeInMillis() - System.currentTimeMillis()) / 1000), 0);
 	}
-
+	
 	/**
 	 * Method endBattle.
 	 * @param win int
@@ -1291,33 +1366,40 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			return;
 		}
+		
 		_status = 0;
+		
 		if (whiteFlag != null)
 		{
 			whiteFlag.deleteMe();
 			whiteFlag = null;
 		}
+		
 		if (greenFlag != null)
 		{
 			greenFlag.deleteMe();
 			greenFlag = null;
 		}
+		
 		if (yellowFlag != null)
 		{
 			yellowFlag.deleteMe();
 			yellowFlag = null;
 		}
+		
 		if (blackFlag != null)
 		{
 			blackFlag.deleteMe();
 			blackFlag = null;
 		}
+		
 		ReflectionUtils.getDoor(17160024).closeMe();
 		ReflectionUtils.getDoor(17160023).closeMe();
 		ReflectionUtils.getDoor(17160020).closeMe();
 		ReflectionUtils.getDoor(17160019).closeMe();
 		ReflectionUtils.getDoor(17160022).closeMe();
 		ReflectionUtils.getDoor(17160021).closeMe();
+		
 		if (win != 0)
 		{
 			if (win == 1)
@@ -1345,11 +1427,12 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			Announcements.getInstance().announceToAll("You Did Not Win");
 		}
+		
 		sayToAll("scripts.events.CTF.AnnounceEnd", null);
 		end();
 		_isRegistrationActive = false;
 	}
-
+	
 	/**
 	 * Method end.
 	 */
@@ -1363,7 +1446,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		backBuff();
 		despawnNpcs();
 	}
-
+	
 	/**
 	 * Method autoContinue.
 	 */
@@ -1374,6 +1457,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		players_list3.clear();
 		players_list4.clear();
 		_saveBuffList.clear();
+		
 		if (_autoContinue > 0)
 		{
 			if (_autoContinue >= 6)
@@ -1381,14 +1465,15 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				_autoContinue = 0;
 				return;
 			}
+			
 			start(new String[]
-				{
+			{
 				"" + (_autoContinue + 1),
 				"" + (_autoContinue + 1)
-				});
+			});
 		}
 	}
-
+	
 	/**
 	 * Method giveItemsToWinner.
 	 * @param win int
@@ -1406,6 +1491,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				}
 			}
 		}
+		
 		if (win == 2)
 		{
 			for (Player player : getPlayers(players_list2))
@@ -1416,6 +1502,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				}
 			}
 		}
+		
 		if (win == 3)
 		{
 			for (Player player : getPlayers(players_list3))
@@ -1427,7 +1514,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			}
 		}
 	}
-
+	
 	/**
 	 * Method saveBackCoords.
 	 */
@@ -1438,25 +1525,29 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			player.setVar("CTF_backCoords", player.getX() + " " + player.getY() + " " + player.getZ() + " " + player.getReflection().getId(), 0);
 			player.setVar("CTF_nameColor", Integer.toHexString(player.getNameColor()), 0);
 		}
+		
 		for (Player player : getPlayers(players_list2))
 		{
 			player.setVar("CTF_backCoords", player.getX() + " " + player.getY() + " " + player.getZ() + " " + player.getReflection().getId(), 0);
 			player.setVar("CTF_nameColor", Integer.toHexString(player.getNameColor()), 0);
 		}
+		
 		for (Player player : getPlayers(players_list3))
 		{
 			player.setVar("CTF_backCoords", player.getX() + " " + player.getY() + " " + player.getZ() + " " + player.getReflection().getId(), 0);
 			player.setVar("CTF_nameColor", Integer.toHexString(player.getNameColor()), 0);
 		}
+		
 		for (Player player : getPlayers(players_list4))
 		{
 			player.setVar("CTF_backCoords", player.getX() + " " + player.getY() + " " + player.getZ() + " " + player.getReflection().getId(), 0);
 			player.setVar("CTF_nameColor", Integer.toHexString(player.getNameColor()), 0);
 		}
+		
 		cleanPlayers();
 		clearArena();
 	}
-
+	
 	/**
 	 * Method teleportPlayersToColiseum.
 	 */
@@ -1466,11 +1557,13 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			unRide(player);
 			unSummonPet(player, true);
+			
 			if (REMOVE_BUFFS)
 			{
 				for (int buff[] : BUFFS_TO_REMOVE)
 				{
 					List<Effect> effects;
+					
 					if ((effects = player.getEffectList().getEffectsBySkillId(buff[0])) != null)
 					{
 						if (buff.length == 2)
@@ -1493,7 +1586,9 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 					}
 				}
 			}
+			
 			Location pos = getLocForPlayer(player.getStoredId());
+			
 			if (pos != null)
 			{
 				player.teleToLocation(pos);
@@ -1503,15 +1598,18 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				removePlayer(player);
 			}
 		}
+		
 		for (Player player : getPlayers(players_list2))
 		{
 			unRide(player);
 			unSummonPet(player, true);
+			
 			if (REMOVE_BUFFS)
 			{
 				for (int buff[] : BUFFS_TO_REMOVE)
 				{
 					List<Effect> effects;
+					
 					if ((effects = player.getEffectList().getEffectsBySkillId(buff[0])) != null)
 					{
 						if (buff.length == 2)
@@ -1534,7 +1632,9 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 					}
 				}
 			}
+			
 			Location pos = getLocForPlayer(player.getStoredId());
+			
 			if (pos != null)
 			{
 				player.teleToLocation(pos);
@@ -1544,15 +1644,18 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				removePlayer(player);
 			}
 		}
+		
 		for (Player player : getPlayers(players_list3))
 		{
 			unRide(player);
 			unSummonPet(player, true);
+			
 			if (REMOVE_BUFFS)
 			{
 				for (int buff[] : BUFFS_TO_REMOVE)
 				{
 					List<Effect> effects;
+					
 					if ((effects = player.getEffectList().getEffectsBySkillId(buff[0])) != null)
 					{
 						if (buff.length == 2)
@@ -1575,7 +1678,9 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 					}
 				}
 			}
+			
 			Location pos = getLocForPlayer(player.getStoredId());
+			
 			if (pos != null)
 			{
 				player.teleToLocation(pos);
@@ -1586,7 +1691,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			}
 		}
 	}
-
+	
 	/**
 	 * Method teleportPlayersToSavedCoords.
 	 * @param command int
@@ -1600,28 +1705,35 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				{
 					teleportPlayerToSavedCoords(player);
 				}
+				
 				break;
+			
 			case 2:
 				for (Player player : getPlayers(players_list2))
 				{
 					teleportPlayerToSavedCoords(player);
 				}
+				
 				break;
+			
 			case 3:
 				for (Player player : getPlayers(players_list3))
 				{
 					teleportPlayerToSavedCoords(player);
 				}
+				
 				break;
+			
 			case 4:
 				for (Player player : getPlayers(players_list4))
 				{
 					teleportPlayerToSavedCoords(player);
 				}
+				
 				break;
 		}
 	}
-
+	
 	/**
 	 * Method teleportPlayersToSavedCoordsAll.
 	 */
@@ -1631,20 +1743,23 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			teleportPlayerToSavedCoords(player);
 		}
+		
 		for (Player player : getPlayers(players_list2))
 		{
 			teleportPlayerToSavedCoords(player);
 		}
+		
 		for (Player player : getPlayers(players_list3))
 		{
 			teleportPlayerToSavedCoords(player);
 		}
+		
 		for (Player player : getPlayers(players_list4))
 		{
 			teleportPlayerToSavedCoords(player);
 		}
 	}
-
+	
 	/**
 	 * Method teleportPlayerToSavedCoords.
 	 * @param player Player
@@ -1655,19 +1770,24 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			String var = player.getVar("CTF_backCoords");
 			String color = player.getVar("CTF_nameColor");
+			
 			if (!color.isEmpty())
 			{
 				player.setNameColor(Integer.decode("0x" + color));
 			}
+			
 			if ((var == null) || var.equals(""))
 			{
 				return;
 			}
+			
 			String[] coords = var.split(" ");
+			
 			if (coords.length != 4)
 			{
 				return;
 			}
+			
 			player.teleToLocation(Integer.parseInt(coords[0]), Integer.parseInt(coords[1]), Integer.parseInt(coords[2]), Integer.parseInt(coords[3]));
 			player.unsetVar("CTF_backCoords");
 			player.unsetVar("CTF_nameColor");
@@ -1677,20 +1797,21 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			e.printStackTrace();
 		}
 	}
-
+	
 	/**
 	 * Method paralyzePlayers.
 	 */
 	public static void paralyzePlayers()
 	{
 		Skill revengeSkill = SkillTable.getInstance().getInfo(Skill.SKILL_RAID_CURSE, 1);
+		
 		for (Player player : getPlayers(players_list))
 		{
 			player.getEffectList().stopEffect(Skill.SKILL_MYSTIC_IMMUNITY);
 			revengeSkill.getEffects(player, player, false, false);
 		}
 	}
-
+	
 	/**
 	 * Method upParalyzePlayers.
 	 */
@@ -1702,13 +1823,14 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			player.leaveParty();
 		}
 	}
-
+	
 	/**
 	 * Method removeBuff.
 	 */
 	public static void removeBuff()
 	{
 		saveBuffList();
+		
 		for (Player player : getPlayers(players_list1))
 		{
 			if (player != null)
@@ -1719,6 +1841,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 					{
 						player.abortCast(true, true);
 					}
+					
 					if (!ALLOW_CLAN_SKILL)
 					{
 						if (player.getClan() != null)
@@ -1729,6 +1852,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 							}
 						}
 					}
+					
 					if (!ALLOW_HERO_SKILL)
 					{
 						if (player.isHero())
@@ -1736,11 +1860,13 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 							Hero.removeSkills(player);
 						}
 					}
+					
 					if (!ALLOW_BUFFS)
 					{
 						player.getEffectList().stopAllEffects();
 						ThreadPoolManager.getInstance().schedule(new buffPlayer(player), 0);
 					}
+					
 					player.sendPacket(new SkillList(player));
 				}
 				catch (Exception e)
@@ -1749,6 +1875,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				}
 			}
 		}
+		
 		for (Player player : getPlayers(players_list2))
 		{
 			if (player != null)
@@ -1759,6 +1886,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 					{
 						player.abortCast(true, true);
 					}
+					
 					if (!ALLOW_CLAN_SKILL)
 					{
 						if (player.getClan() != null)
@@ -1769,6 +1897,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 							}
 						}
 					}
+					
 					if (!ALLOW_HERO_SKILL)
 					{
 						if (player.isHero())
@@ -1776,11 +1905,13 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 							Hero.removeSkills(player);
 						}
 					}
+					
 					if (!ALLOW_BUFFS)
 					{
 						player.getEffectList().stopAllEffects();
 						ThreadPoolManager.getInstance().schedule(new buffPlayer(player), 0);
 					}
+					
 					player.sendPacket(new SkillList(player));
 				}
 				catch (Exception e)
@@ -1789,6 +1920,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				}
 			}
 		}
+		
 		for (Player player : getPlayers(players_list3))
 		{
 			if (player != null)
@@ -1799,6 +1931,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 					{
 						player.abortCast(true, true);
 					}
+					
 					if (!ALLOW_CLAN_SKILL)
 					{
 						if (player.getClan() != null)
@@ -1809,6 +1942,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 							}
 						}
 					}
+					
 					if (!ALLOW_HERO_SKILL)
 					{
 						if (player.isHero())
@@ -1816,11 +1950,13 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 							Hero.removeSkills(player);
 						}
 					}
+					
 					if (!ALLOW_BUFFS)
 					{
 						player.getEffectList().stopAllEffects();
 						ThreadPoolManager.getInstance().schedule(new buffPlayer(player), 0);
 					}
+					
 					player.sendPacket(new SkillList(player));
 				}
 				catch (Exception e)
@@ -1830,7 +1966,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			}
 		}
 	}
-
+	
 	/**
 	 * Method backBuff.
 	 */
@@ -1842,9 +1978,11 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			{
 				continue;
 			}
+			
 			try
 			{
 				player.getEffectList().stopAllEffects();
+				
 				if (!ALLOW_CLAN_SKILL)
 				{
 					if (player.getClan() != null)
@@ -1858,6 +1996,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 						}
 					}
 				}
+				
 				if (!ALLOW_HERO_SKILL)
 				{
 					if (player.isHero())
@@ -1865,6 +2004,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 						Hero.addSkills(player);
 					}
 				}
+				
 				player.sendPacket(new SkillList(player));
 			}
 			catch (Exception e)
@@ -1872,15 +2012,18 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				e.printStackTrace();
 			}
 		}
+		
 		for (Player player : getPlayers(players_list2))
 		{
 			if (player == null)
 			{
 				continue;
 			}
+			
 			try
 			{
 				player.getEffectList().stopAllEffects();
+				
 				if (!ALLOW_CLAN_SKILL)
 				{
 					if (player.getClan() != null)
@@ -1894,6 +2037,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 						}
 					}
 				}
+				
 				if (!ALLOW_HERO_SKILL)
 				{
 					if (player.isHero())
@@ -1901,6 +2045,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 						Hero.addSkills(player);
 					}
 				}
+				
 				player.sendPacket(new SkillList(player));
 			}
 			catch (Exception e)
@@ -1908,15 +2053,18 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				e.printStackTrace();
 			}
 		}
+		
 		for (Player player : getPlayers(players_list3))
 		{
 			if (player == null)
 			{
 				continue;
 			}
+			
 			try
 			{
 				player.getEffectList().stopAllEffects();
+				
 				if (!ALLOW_CLAN_SKILL)
 				{
 					if (player.getClan() != null)
@@ -1930,6 +2078,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 						}
 					}
 				}
+				
 				if (!ALLOW_HERO_SKILL)
 				{
 					if (player.isHero())
@@ -1937,6 +2086,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 						Hero.addSkills(player);
 					}
 				}
+				
 				player.sendPacket(new SkillList(player));
 			}
 			catch (Exception e)
@@ -1944,9 +2094,10 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				e.printStackTrace();
 			}
 		}
+		
 		restoreBuffList();
 	}
-
+	
 	/**
 	 * Method ressurectPlayers.
 	 */
@@ -1956,20 +2107,23 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			ressurectPlayer(player);
 		}
+		
 		for (Player player : getPlayers(players_list2))
 		{
 			ressurectPlayer(player);
 		}
+		
 		for (Player player : getPlayers(players_list3))
 		{
 			ressurectPlayer(player);
 		}
+		
 		for (Player player : getPlayers(players_list4))
 		{
 			ressurectPlayer(player);
 		}
 	}
-
+	
 	/**
 	 * Method ressurectPlayer.
 	 * @param player Player
@@ -1985,7 +2139,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			player.broadcastPacket(new Revive(player));
 		}
 	}
-
+	
 	/**
 	 * Method healPlayers.
 	 */
@@ -1996,23 +2150,26 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
 			player.setCurrentCp(player.getMaxCp());
 		}
+		
 		for (Player player : getPlayers(players_list2))
 		{
 			player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
 			player.setCurrentCp(player.getMaxCp());
 		}
+		
 		for (Player player : getPlayers(players_list3))
 		{
 			player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
 			player.setCurrentCp(player.getMaxCp());
 		}
+		
 		for (Player player : getPlayers(players_list4))
 		{
 			player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
 			player.setCurrentCp(player.getMaxCp());
 		}
 	}
-
+	
 	/**
 	 * Method cleanPlayers.
 	 */
@@ -2029,6 +2186,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				setTeam(player);
 			}
 		}
+		
 		for (Player player : getPlayers(players_list2))
 		{
 			if (!checkPlayer(player, false))
@@ -2040,6 +2198,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				setTeam(player);
 			}
 		}
+		
 		for (Player player : getPlayers(players_list3))
 		{
 			if (!checkPlayer(player, false))
@@ -2051,6 +2210,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				setTeam(player);
 			}
 		}
+		
 		for (Player player : getPlayers(players_list4))
 		{
 			if (!checkPlayer(player, false))
@@ -2063,7 +2223,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			}
 		}
 	}
-
+	
 	/**
 	 * Method clearArena.
 	 */
@@ -2074,6 +2234,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			if (obj != null)
 			{
 				Player player = obj.getPlayer();
+				
 				if ((player != null) && (playerInCommand(player.getStoredId()) == 0))
 				{
 					player.teleToLocation(147451, 46728, -3410);
@@ -2081,7 +2242,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			}
 		}
 	}
-
+	
 	/**
 	 * Method doDie.
 	 * @param self Creature
@@ -2093,20 +2254,22 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			return;
 		}
+		
 		if (self.isPlayer() && (playerInCommand(self.getStoredId()) > 0))
 		{
 			self.sendMessage("Wait " + TIME_FOR_RES + " seconds you can resurrect at base.");
 			_resurrectionList.put(self.getStoredId(), executeTask("events.CTF.CTF", "resurrectAtBase", new Object[]
-				{
+			{
 				(Player) self
-				}, TIME_FOR_RES * 100));
+			}, TIME_FOR_RES * 100));
 		}
+		
 		if ((self instanceof MonsterInstance) && ((self == greenFlag) || (self == whiteFlag) || (self == yellowFlag) || (self == blackFlag)))
 		{
 			lossTeam((MonsterInstance) self);
 		}
 	}
-
+	
 	/**
 	 * Method resurrectAtBase.
 	 * @param player Player
@@ -2117,11 +2280,14 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			return;
 		}
+		
 		if (player.isDead())
 		{
 			ressurectPlayer(player);
 		}
+		
 		Location pos = getLocForPlayer(player.getStoredId());
+		
 		if (pos != null)
 		{
 			player.teleToLocation(pos);
@@ -2130,6 +2296,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			removePlayer(player);
 		}
+		
 		if (!ALLOW_BUFFS)
 		{
 			ThreadPoolManager.getInstance().schedule(new buffPlayer(player), 0);
@@ -2139,7 +2306,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			ThreadPoolManager.getInstance().schedule(new restoreBuffListForPlayer(player), 0);
 		}
 	}
-
+	
 	/**
 	 * Method OnEscape.
 	 * @param player Player
@@ -2151,9 +2318,10 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			removePlayer(player);
 		}
+		
 		return null;
 	}
-
+	
 	/**
 	 * Method OnPlayerExit.
 	 * @param player Player
@@ -2164,19 +2332,22 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			return;
 		}
+		
 		if ((_status == 0) && _isRegistrationActive && (playerInCommand(player.getStoredId()) > 0))
 		{
 			removePlayer(player);
 			return;
 		}
+		
 		if ((_status == 1) && (playerInCommand(player.getStoredId()) > 0))
 		{
 			removePlayer(player);
 			return;
 		}
+		
 		OnEscape(player);
 	}
-
+	
 	/**
 	 */
 	public static class TeleportTask implements Runnable
@@ -2189,7 +2360,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		 * Field target.
 		 */
 		Creature target;
-
+		
 		/**
 		 * Constructor for TeleportTask.
 		 * @param target Creature
@@ -2201,7 +2372,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			this.loc = loc;
 			target.startStunning();
 		}
-
+		
 		/**
 		 * Method run.
 		 * @see java.lang.Runnable#run()
@@ -2213,7 +2384,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			target.teleToLocation(loc);
 		}
 	}
-
+	
 	/**
 	 * Method removePlayer.
 	 * @param player Player
@@ -2226,7 +2397,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		players_list4.remove(player.getStoredId());
 		teleportPlayerToSavedCoords(player);
 	}
-
+	
 	/**
 	 * Method getPlayers.
 	 * @param list List<Long>
@@ -2235,38 +2406,45 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	static LazyArrayList<Player> getPlayers(List<Long> list)
 	{
 		LazyArrayList<Player> result = new LazyArrayList<>();
+		
 		for (Long storeId : list)
 		{
 			Player player = GameObjectsStorage.getAsPlayer(storeId);
+			
 			if (player != null)
 			{
 				result.add(player);
 			}
 		}
+		
 		return result;
 	}
-
+	
 	/**
 	 * Method saveBuffList.
 	 */
 	public static void saveBuffList()
 	{
 		Effect skill[];
+		
 		for (Player player : getPlayers(players_list1))
 		{
 			if (player != null)
 			{
 				skill = player.getEffectList().getAllFirstEffects();
+				
 				if (skill.length == 0)
 				{
 					continue;
 				}
+				
 				for (Effect effect : skill)
 				{
 					if (!_saveBuffList.containsKey(player.getStoredId()))
 					{
 						_saveBuffList.put(player.getStoredId(), new LazyArrayList<Effect>());
 					}
+					
 					for (int id : _listAllowSaveBuffs)
 					{
 						if (effect.getSkill().getId() == id)
@@ -2277,21 +2455,25 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				}
 			}
 		}
+		
 		for (Player player : getPlayers(players_list2))
 		{
 			if (player != null)
 			{
 				skill = player.getEffectList().getAllFirstEffects();
+				
 				if (skill.length == 0)
 				{
 					continue;
 				}
+				
 				for (Effect effect : skill)
 				{
 					if (!_saveBuffList.containsKey(player.getStoredId()))
 					{
 						_saveBuffList.put(player.getStoredId(), new LazyArrayList<Effect>());
 					}
+					
 					for (int id : _listAllowSaveBuffs)
 					{
 						if (effect.getSkill().getId() == id)
@@ -2303,20 +2485,21 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			}
 		}
 	}
-
+	
 	/**
 	 * Method restoreBuffList.
 	 */
 	public static void restoreBuffList()
 	{
 		Player player;
+		
 		for (long objId : _saveBuffList.keySet())
 		{
 			player = GameObjectsStorage.getAsPlayer(objId);
 			ThreadPoolManager.getInstance().schedule(new restoreBuffListForPlayer(player), 100);
 		}
 	}
-
+	
 	/**
 	 */
 	public static class restoreBuffListForPlayer implements Runnable
@@ -2325,7 +2508,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		 * Field player.
 		 */
 		Player player;
-
+		
 		/**
 		 * Constructor for restoreBuffListForPlayer.
 		 * @param player Player
@@ -2334,7 +2517,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			this.player = player;
 		}
-
+		
 		/**
 		 * Method run.
 		 * @see java.lang.Runnable#run()
@@ -2346,8 +2529,10 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			{
 				return;
 			}
+			
 			player.getEffectList().stopAllEffects();
 			LazyArrayList<Effect> effects = _saveBuffList.get(player.getStoredId());
+			
 			if ((effects != null) && (effects.size() > 0))
 			{
 				for (Effect effect : effects)
@@ -2360,6 +2545,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 						e.setPeriod(effect.getPeriod());
 						e.getEffected().getEffectList().addEffect(e);
 					}
+					
 					try
 					{
 						Thread.sleep(150);
@@ -2369,12 +2555,13 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 					}
 				}
 			}
+			
 			player.setCurrentCp(player.getMaxCp());
 			player.setCurrentHp(player.getMaxHp(), true);
 			player.setCurrentMp(player.getMaxMp());
 		}
 	}
-
+	
 	/**
 	 */
 	public static class buffPlayer implements Runnable
@@ -2383,7 +2570,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		 * Field player.
 		 */
 		Player player;
-
+		
 		/**
 		 * Constructor for buffPlayer.
 		 * @param player Player
@@ -2392,7 +2579,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			this.player = player;
 		}
-
+		
 		/**
 		 * Method run.
 		 * @see java.lang.Runnable#run()
@@ -2404,10 +2591,13 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			{
 				return;
 			}
+			
 			Skill skill;
+			
 			for (int[] buff : _listBuff[player.isMageClass() ? 1 : 0])
 			{
 				skill = SkillTable.getInstance().getInfo(buff[0], buff[1]);
+				
 				for (EffectTemplate et : skill.getEffectTemplates())
 				{
 					Env env = new Env(player, player, skill);
@@ -2416,6 +2606,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 					e.setPeriod(600000);
 					e.getEffected().getEffectList().addEffect(e);
 				}
+				
 				try
 				{
 					Thread.sleep(150);
@@ -2424,12 +2615,13 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				{
 				}
 			}
+			
 			player.setCurrentCp(player.getMaxCp());
 			player.setCurrentHp(player.getMaxHp(), true);
 			player.setCurrentMp(player.getMaxMp());
 		}
 	}
-
+	
 	/**
 	 */
 	public static class timer implements Runnable
@@ -2438,7 +2630,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		 * Field time.
 		 */
 		int time;
-
+		
 		/**
 		 * Constructor for timer.
 		 * @param time int
@@ -2447,7 +2639,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			this.time = time;
 		}
-
+		
 		/**
 		 * Method run.
 		 * @see java.lang.Runnable#run()
@@ -2457,9 +2649,11 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			int sec;
 			String message;
+			
 			while ((time > 0) && (_status == 2))
 			{
 				sec = time - ((time / 60) * 60);
+				
 				for (Player player : getPlayers(players_list1))
 				{
 					if (sec < 10)
@@ -2470,24 +2664,30 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 					{
 						message = " Ending in Minutes: " + Integer.toString(time / 60) + ":" + Integer.toString(sec) + " ";
 					}
+					
 					if (greenFlag != null)
 					{
 						message += "\n Green Flag: " + greenFlag.getCurrentHp() + " Hp ";
 					}
+					
 					if (whiteFlag != null)
 					{
 						message += "\n White Flag: " + whiteFlag.getCurrentHp() + " Hp ";
 					}
+					
 					if (yellowFlag != null)
 					{
 						message += "\n Yellow Flag: " + yellowFlag.getCurrentHp() + " Hp ";
 					}
+					
 					if (blackFlag != null)
 					{
 						message += "\n Black Flag: " + blackFlag.getCurrentHp() + " Hp ";
 					}
+					
 					player.sendPacket(new ExShowScreenMessage(message, 2000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, false));
 				}
+				
 				for (Player player : getPlayers(players_list2))
 				{
 					if (sec < 10)
@@ -2498,24 +2698,30 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 					{
 						message = " Ending in Minutes: " + Integer.toString(time / 60) + ":" + Integer.toString(sec) + " ";
 					}
+					
 					if (whiteFlag != null)
 					{
 						message += "\n White Flag: " + whiteFlag.getCurrentHp() + " Hp ";
 					}
+					
 					if (greenFlag != null)
 					{
 						message += "\n Green Flag: " + greenFlag.getCurrentHp() + " Hp ";
 					}
+					
 					if (yellowFlag != null)
 					{
 						message += "\n Yellow Flag: " + yellowFlag.getCurrentHp() + " Hp ";
 					}
+					
 					if (blackFlag != null)
 					{
 						message += "\n Black Flag: " + blackFlag.getCurrentHp() + " Hp ";
 					}
+					
 					player.sendPacket(new ExShowScreenMessage(message, 2000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, false));
 				}
+				
 				for (Player player : getPlayers(players_list3))
 				{
 					if (sec < 10)
@@ -2526,24 +2732,30 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 					{
 						message = " Ending in Minutes: " + Integer.toString(time / 60) + ":" + Integer.toString(sec) + " ";
 					}
+					
 					if (blackFlag != null)
 					{
 						message += "\n Black Flag: " + blackFlag.getCurrentHp() + " Hp ";
 					}
+					
 					if (yellowFlag != null)
 					{
 						message += "\n Yellow Flag: " + yellowFlag.getCurrentHp() + " Hp ";
 					}
+					
 					if (greenFlag != null)
 					{
 						message += "\n Green Flag: " + greenFlag.getCurrentHp() + " Hp ";
 					}
+					
 					if (whiteFlag != null)
 					{
 						message += "\n White Flag: " + whiteFlag.getCurrentHp() + " Hp ";
 					}
+					
 					player.sendPacket(new ExShowScreenMessage(message, 2000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, false));
 				}
+				
 				try
 				{
 					Thread.sleep(1000);
@@ -2552,12 +2764,14 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				{
 					e.printStackTrace();
 				}
+				
 				time--;
 			}
+			
 			endBattle(0);
 		}
 	}
-
+	
 	/**
 	 * Method playerInCommand.
 	 * @param objectId long
@@ -2567,7 +2781,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	{
 		return players_list1.contains(objectId) ? 1 : players_list2.contains(objectId) ? 2 : players_list3.contains(objectId) ? 3 : 0;
 	}
-
+	
 	/**
 	 * Method getLocForPlayer.
 	 * @param objectId long
@@ -2579,17 +2793,21 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			case 1:
 				return (Location.coordsRandomize(team1loc, 50, 200));
+				
 			case 2:
 				return (Location.coordsRandomize(team2loc, 50, 200));
+				
 			case 3:
 				return (Location.coordsRandomize(team3loc, 50, 200));
+				
 			case 4:
 				return (Location.coordsRandomize(team4loc, 50, 200));
+				
 			default:
 				return null;
 		}
 	}
-
+	
 	/**
 	 * Method setTeam.
 	 * @param player Player
@@ -2597,14 +2815,16 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	public static void setTeam(Player player)
 	{
 		int command = playerInCommand(player.getStoredId());
+		
 		if ((command < 1) || (command > 3))
 		{
 			removePlayer(player);
 			return;
 		}
+		
 		player.setNameColor(Integer.decode("0x" + colors[playerInCommand(player.getStoredId()) - 1]));
 	}
-
+	
 	/**
 	 * Method lossTeam.
 	 * @param flag MonsterInstance
@@ -2615,6 +2835,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			lossTeam(players_list1);
 			greenFlag.deleteMe();
+			
 			if (players_list2.isEmpty())
 			{
 				endBattle(2);
@@ -2652,10 +2873,12 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				endBattle(4);
 			}
 		}
+		
 		if (flag == whiteFlag)
 		{
 			lossTeam(players_list2);
 			whiteFlag.deleteMe();
+			
 			if (players_list1.isEmpty())
 			{
 				endBattle(1);
@@ -2693,10 +2916,12 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				endBattle(4);
 			}
 		}
+		
 		if (flag == yellowFlag)
 		{
 			lossTeam(players_list3);
 			yellowFlag.deleteMe();
+			
 			if (players_list1.isEmpty())
 			{
 				endBattle(1);
@@ -2734,10 +2959,12 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				endBattle(4);
 			}
 		}
+		
 		if (flag == blackFlag)
 		{
 			lossTeam(players_list4);
 			blackFlag.deleteMe();
+			
 			if (players_list1.isEmpty())
 			{
 				endBattle(1);
@@ -2775,9 +3002,10 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				endBattle(3);
 			}
 		}
+		
 		flag.deleteMe();
 	}
-
+	
 	/**
 	 * Method lossTeam.
 	 * @param team LazyArrayList<Long>
@@ -2785,18 +3013,21 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	public static void lossTeam(LazyArrayList<Long> team)
 	{
 		Player player;
+		
 		for (long objId : team)
 		{
 			player = GameObjectsStorage.getAsPlayer(objId);
+			
 			if (player != null)
 			{
 				removePlayer(player);
 				player.sendMessage("flag - destroyed. You lose.");
 			}
 		}
+		
 		team.clear();
 	}
-
+	
 	/**
 	 * Method canJoinParty.
 	 * @param player Player
@@ -2807,7 +3038,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	{
 		return !((playerInCommand(player.getStoredId()) > 0) || (playerInCommand(target.getStoredId()) > 0)) || (playerInCommand(player.getStoredId()) == playerInCommand(target.getStoredId()));
 	}
-
+	
 	/**
 	 * Method canUseItem.
 	 * @param player Player
@@ -2826,9 +3057,10 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				}
 			}
 		}
+		
 		return true;
 	}
-
+	
 	/**
 	 * Method useSkill.
 	 * @param player Creature
@@ -2840,7 +3072,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	{
 		return checkTarget(player, target, skill);
 	}
-
+	
 	/**
 	 * Method checkTarget.
 	 * @param player Player
@@ -2851,7 +3083,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	{
 		return checkTarget(player, target, null);
 	}
-
+	
 	/**
 	 * Method checkTarget.
 	 * @param character Creature
@@ -2865,6 +3097,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			return true;
 		}
+		
 		if ((character instanceof Player) && (target != null) && (target != character))
 		{
 			if (playerInCommand(character.getStoredId()) > 0)
@@ -2876,8 +3109,10 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 						_log.info("Monster Team: " + getMonsterTeam(target) + " | Player Team: " + playerInCommand(character.getObjectId()));
 						return false;
 					}
+					
 					return true;
 				}
+				
 				if (skill != null)
 				{
 					if (ALLOW_RESTRICT_SKILLS)
@@ -2890,6 +3125,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 								{
 									return character.getStoredId().equals(target.getStoredId());
 								}
+								
 								if (restrict[1] == 1)
 								{
 									return playerInCommand(character.getStoredId()) == playerInCommand(target.getStoredId());
@@ -2897,6 +3133,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 							}
 						}
 					}
+					
 					if (playerInCommand(target.getStoredId()) > 0)
 					{
 						switch (skill.getSkillType())
@@ -2909,6 +3146,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 							case MANAHEAL:
 							case MANAHEAL_PERCENT:
 								return playerInCommand(character.getStoredId()) == playerInCommand(target.getStoredId());
+								
 							default:
 								for (Creature targ : skill.getTargets(character, target, true))
 								{
@@ -2926,6 +3164,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 								}
 						}
 					}
+					
 					if (playerInCommand(target.getStoredId()) == 0)
 					{
 						switch (skill.getSkillType())
@@ -2938,6 +3177,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 							case STUN:
 							case DEBUFF:
 								return playerInCommand(character.getStoredId()) != playerInCommand(target.getStoredId());
+								
 							default:
 								for (Creature targ : skill.getTargets(character, target, true))
 								{
@@ -2955,6 +3195,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 								}
 						}
 					}
+					
 					for (Creature targ : skill.getTargets(character, target, true))
 					{
 						if (targ instanceof Player)
@@ -2970,16 +3211,19 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 						}
 					}
 				}
+				
 				return playerInCommand(character.getStoredId()) != playerInCommand(target.getStoredId());
 			}
+			
 			if ((playerInCommand(target.getStoredId()) > 0) || (getMonsterTeam(target) > 0))
 			{
 				return false;
 			}
 		}
+		
 		return true;
 	}
-
+	
 	/**
 	 * Method getMonsterTeam.
 	 * @param monster Creature
@@ -3008,7 +3252,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			return 0;
 		}
 	}
-
+	
 	/**
 	 * Method sameIp.
 	 * @param player Player
@@ -3017,57 +3261,70 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	public static boolean sameIp(Player player)
 	{
 		Player part;
+		
 		for (long objId : players_list1)
 		{
 			part = GameObjectsStorage.getAsPlayer(objId);
+			
 			if (part == null)
 			{
 				continue;
 			}
+			
 			if (player.getNetConnection().getIpAddr().equals(part.getNetConnection().getIpAddr()))
 			{
 				return true;
 			}
 		}
+		
 		for (long objId : players_list2)
 		{
 			part = GameObjectsStorage.getAsPlayer(objId);
+			
 			if (part == null)
 			{
 				continue;
 			}
+			
 			if (player.getNetConnection().getIpAddr().startsWith(part.getNetConnection().getIpAddr()))
 			{
 				return true;
 			}
 		}
+		
 		for (long objId : players_list3)
 		{
 			part = GameObjectsStorage.getAsPlayer(objId);
+			
 			if (part == null)
 			{
 				continue;
 			}
+			
 			if (player.getNetConnection().getIpAddr().startsWith(part.getNetConnection().getIpAddr()))
 			{
 				return true;
 			}
 		}
+		
 		for (long objId : players_list4)
 		{
 			part = GameObjectsStorage.getAsPlayer(objId);
+			
 			if (part == null)
 			{
 				continue;
 			}
+			
 			if (player.getNetConnection().getIpAddr().startsWith(part.getNetConnection().getIpAddr()))
 			{
 				return true;
 			}
 		}
+		
 		return false;
 	}
-
+	
 	/**
 	 */
 	private static class ZoneListener implements OnZoneEnterLeaveListener
@@ -3079,7 +3336,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			// TODO Auto-generated constructor stub
 		}
-
+		
 		/**
 		 * Method onZoneEnter.
 		 * @param zone Zone
@@ -3093,13 +3350,15 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			{
 				return;
 			}
+			
 			Player player = cha.getPlayer();
+			
 			if ((_status > 0) && (player != null) && !live_list.contains(player.getStoredId()))
 			{
 				ThreadPoolManager.getInstance().schedule(new TeleportTask(cha, new Location(147451, 46728, -3410)), 3000);
 			}
 		}
-
+		
 		/**
 		 * Method onZoneLeave.
 		 * @param zone Zone
@@ -3113,7 +3372,9 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			{
 				return;
 			}
+			
 			Player player = cha.getPlayer();
+			
 			if ((_status > 1) && (player != null) && (player.getTeam() != TeamType.NONE) && live_list.contains(player.getStoredId()))
 			{
 				double angle = PositionUtils.convertHeadingToDegree(cha.getHeading());

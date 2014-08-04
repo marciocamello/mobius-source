@@ -102,9 +102,11 @@ public class TeredorLairEggs extends Fighter
 			ThreadPoolManager.getInstance().schedule(new TaskSetBlue(actor, player, ref), (timeToBlue + Rnd.get(maxRandomTimeBlue)) * 1000);
 			_activated = true;
 		}
+		
 		if (!_poisoned)
 		{
 			final Player player = (Player) actor.getAggroList().getMostHated();
+			
 			if (player.getParty() != null)
 			{
 				for (Playable playable : player.getParty().getPartyMembersWithPets())
@@ -115,8 +117,10 @@ public class TeredorLairEggs extends Fighter
 					}
 				}
 			}
+			
 			_poisoned = true;
 		}
+		
 		super.thinkAttack();
 	}
 	

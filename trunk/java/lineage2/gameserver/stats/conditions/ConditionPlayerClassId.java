@@ -33,6 +33,7 @@ public class ConditionPlayerClassId extends Condition
 	public ConditionPlayerClassId(String[] ids)
 	{
 		_classIds = new int[ids.length];
+		
 		for (int i = 0; i < ids.length; i++)
 		{
 			_classIds[i] = Integer.parseInt(ids[i]);
@@ -51,7 +52,9 @@ public class ConditionPlayerClassId extends Condition
 		{
 			return false;
 		}
+		
 		int playerClassId = ((Player) env.character).getActiveClassId();
+		
 		for (int id : _classIds)
 		{
 			if (playerClassId == id)
@@ -59,6 +62,7 @@ public class ConditionPlayerClassId extends Condition
 				return true;
 			}
 		}
+		
 		return false;
 	}
 }

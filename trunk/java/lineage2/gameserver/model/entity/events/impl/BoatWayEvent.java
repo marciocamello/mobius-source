@@ -75,6 +75,7 @@ public class BoatWayEvent extends GlobalEvent
 		_ticketId = set.getInteger("ticketId", 0);
 		_returnLoc = Location.parseLoc(set.getString("return_point"));
 		String className = set.getString("class", null);
+		
 		if (className != null)
 		{
 			_boat = BoatHolder.getInstance().initBoat(getName(), className);
@@ -86,6 +87,7 @@ public class BoatWayEvent extends GlobalEvent
 		{
 			_boat = BoatHolder.getInstance().getBoat(getName());
 		}
+		
 		_boat.setWay(className != null ? 1 : 0, this);
 	}
 	
@@ -104,6 +106,7 @@ public class BoatWayEvent extends GlobalEvent
 	public void startEvent()
 	{
 		L2GameServerPacket startPacket = _boat.startPacket();
+		
 		for (Player player : _boat.getPlayers())
 		{
 			if (_ticketId > 0)
@@ -129,6 +132,7 @@ public class BoatWayEvent extends GlobalEvent
 				}
 			}
 		}
+		
 		moveNext();
 	}
 	
@@ -138,25 +142,32 @@ public class BoatWayEvent extends GlobalEvent
 	public void moveNext()
 	{
 		List<BoatPoint> points = getObjects(BOAT_POINTS);
+		
 		if (_boat.getRunState() >= points.size())
 		{
 			_boat.trajetEnded(true);
 			return;
 		}
+		
 		final BoatPoint bp = points.get(_boat.getRunState());
+		
 		if (bp.getSpeed1() >= 0)
 		{
 			_boat.setMoveSpeed(bp.getSpeed1());
 		}
+		
 		if (bp.getSpeed2() >= 0)
 		{
 			_boat.setRotationSpeed(bp.getSpeed2());
 		}
+		
 		if (_boat.getRunState() == 0)
 		{
 			_boat.broadcastCharInfo();
 		}
+		
 		_boat.setRunState(_boat.getRunState() + 1);
+		
 		if (bp.isTeleport())
 		{
 			_boat.teleportShip(bp.getX(), bp.getY(), bp.getZ());
@@ -201,21 +212,26 @@ public class BoatWayEvent extends GlobalEvent
 			int rx = MapUtils.regionX(_boat.getX());
 			int ry = MapUtils.regionY(_boat.getY());
 			int offset = Config.SHOUT_OFFSET;
+			
 			for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 			{
 				if (player.getReflection() != _boat.getReflection())
 				{
 					continue;
 				}
+				
 				int tx = MapUtils.regionX(player);
 				int ty = MapUtils.regionY(player);
+				
 				if ((tx >= (rx - offset)) && (tx <= (rx + offset)) && (ty >= (ry - offset)) && (ty <= (ry + offset)))
 				{
 					list.add(player);
 				}
 			}
+			
 			return list;
 		}
+		
 		return World.getAroundPlayers(_boat, range, Math.max(range / 2, 200));
 	}
 	

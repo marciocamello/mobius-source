@@ -40,17 +40,20 @@ public class EquipableItem extends ScriptItemHandler
 	public EquipableItem()
 	{
 		final TIntHashSet set = new TIntHashSet();
+		
 		for (ItemTemplate template : ItemHolder.getInstance().getAllTemplates())
 		{
 			if (template == null)
 			{
 				continue;
 			}
+			
 			if (template.isEquipable())
 			{
 				set.add(template.getItemId());
 			}
 		}
+		
 		_itemIds = set.toArray();
 	}
 	
@@ -68,18 +71,23 @@ public class EquipableItem extends ScriptItemHandler
 		{
 			return false;
 		}
+		
 		final Player player = playable.getPlayer();
+		
 		if (player.isCastingNow())
 		{
 			player.sendPacket(Msg.YOU_MAY_NOT_EQUIP_ITEMS_WHILE_CASTING_OR_PERFORMING_A_SKILL);
 			return false;
 		}
+		
 		if (player.isStunned() || player.isSleeping() || player.isParalyzed() || player.isAlikeDead() || player.isWeaponEquipBlocked() || player.isAirBinded() || player.isKnockedBack() || player.isKnockedDown() || player.isPulledNow())
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getItemId()));
 			return false;
 		}
+		
 		final int bodyPart = item.getBodyPart();
+		
 		if ((bodyPart == ItemTemplate.SLOT_LR_HAND) || (bodyPart == ItemTemplate.SLOT_L_HAND) || (bodyPart == ItemTemplate.SLOT_R_HAND))
 		{
 			if (player.isMounted() || player.isCursedWeaponEquipped() || (player.getActiveWeaponFlagAttachment() != null) || player.isClanAirShipDriver())
@@ -88,41 +96,52 @@ public class EquipableItem extends ScriptItemHandler
 				return false;
 			}
 		}
+		
 		if (item.isCursed())
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getItemId()));
 			return false;
 		}
+		
 		if (player.isInOlympiadMode() && item.isHeroWeapon())
 		{
 			player.sendActionFailed();
 			return false;
 		}
+		
 		if (item.isEquipped())
 		{
 			final ItemInstance weapon = player.getActiveWeaponInstance();
+			
 			if (item.equals(weapon))
 			{
 				player.abortAttack(true, true);
 				player.abortCast(true, true);
 			}
+			
 			player.sendDisarmMessage(item);
 			player.getInventory().unEquipItem(item);
 			return false;
 		}
+		
 		final L2GameServerPacket p = ItemFunctions.checkIfCanEquip(player, item);
+		
 		if (p != null)
 		{
 			player.sendPacket(p);
 			return false;
 		}
+		
 		player.getInventory().equipItem(item);
+		
 		if (!item.isEquipped())
 		{
 			player.sendActionFailed();
 			return false;
 		}
+		
 		SystemMessage sm;
+		
 		if (item.getEnchantLevel() > 0)
 		{
 			sm = new SystemMessage(SystemMessage.EQUIPPED__S1_S2);
@@ -133,6 +152,7 @@ public class EquipableItem extends ScriptItemHandler
 		{
 			sm = new SystemMessage(SystemMessage.YOU_HAVE_EQUIPPED_YOUR_S1).addItemName(item.getItemId());
 		}
+		
 		player.sendPacket(sm);
 		return true;
 	}

@@ -58,7 +58,6 @@ public class KartiaLabyrinth90Party extends Reflection
 	protected void onCreate()
 	{
 		super.onCreate();
-		
 		getZone("[kartia_zone1]").addListener(_epicZoneListener);
 		getZone("[kartia_zone2]").addListener(_landingZoneListener);
 	}
@@ -113,11 +112,14 @@ public class KartiaLabyrinth90Party extends Reflection
 			{
 				return;
 			}
+			
 			Player player = cha.getPlayer();
+			
 			if ((player == null) || (!cha.isPlayer()))
 			{
 				return;
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new StartKartiaParty90(), 30000L);
 			_startLaunched = true;
 		}
@@ -161,6 +163,7 @@ public class KartiaLabyrinth90Party extends Reflection
 		{
 			startCollapseTimer(300000L);
 			doCleanup();
+			
 			for (Player p : getPlayers())
 			{
 				p.sendPacket(new SystemMessage(2106).addNumber(5));
@@ -181,6 +184,7 @@ public class KartiaLabyrinth90Party extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_7, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111848, -15560, -11445), 0);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-111656, -15528, -11444), 0);
 			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111432, -15496, -11443), 0);
@@ -205,6 +209,7 @@ public class KartiaLabyrinth90Party extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_6, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111848, -15560, -11445), 0);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-111848, -15560, -11445), 0);
 			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111656, -15528, -11444), 0);
@@ -235,6 +240,7 @@ public class KartiaLabyrinth90Party extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_5, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111848, -15560, -11445), 0);
 			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111656, -15528, -11444), 0);
 			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111432, -15496, -11443), 0);
@@ -259,6 +265,7 @@ public class KartiaLabyrinth90Party extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_4, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111848, -15560, -11445), 0);
 			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111656, -15528, -11444), 0);
 			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111432, -15496, -11443), 0);
@@ -283,6 +290,7 @@ public class KartiaLabyrinth90Party extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_3, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111848, -15560, -11445), 0);
 			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111656, -15528, -11444), 0);
 			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111432, -15496, -11443), 0);
@@ -307,6 +315,7 @@ public class KartiaLabyrinth90Party extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_2, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			closeDoor(DOOR2_ID);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-111848, -15560, -11445), 0);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-111656, -15528, -11444), 0);
@@ -332,10 +341,12 @@ public class KartiaLabyrinth90Party extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_1, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			for (NpcInstance n : getNpcs())
 			{
 				n.deleteMe();
 			}
+			
 			openDoor(DOOR2_ID);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-111848, -15560, -11445), 0);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-111656, -15528, -11444), 0);
@@ -443,6 +454,7 @@ public class KartiaLabyrinth90Party extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_7, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10488, -11910), 0);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
@@ -516,6 +528,7 @@ public class KartiaLabyrinth90Party extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_6, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10488, -11910), 0);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
@@ -584,6 +597,7 @@ public class KartiaLabyrinth90Party extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_5, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10488, -11910), 0);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
@@ -650,6 +664,7 @@ public class KartiaLabyrinth90Party extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_4, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10488, -11910), 0);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
@@ -711,6 +726,7 @@ public class KartiaLabyrinth90Party extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_3, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10488, -11910), 0);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110584, -10280, -11917), 0);
@@ -752,6 +768,7 @@ public class KartiaLabyrinth90Party extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_2, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10312, -11889), 0);
@@ -774,6 +791,7 @@ public class KartiaLabyrinth90Party extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_1, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10376, -11910), 0);
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110664, -10312, -11889), 0);

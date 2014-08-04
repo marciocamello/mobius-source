@@ -52,6 +52,7 @@ public class KukuruInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.startsWith("gokukuru"))
 		{
 			Skill skill = SkillTable.getInstance().getInfo(9209, 1);

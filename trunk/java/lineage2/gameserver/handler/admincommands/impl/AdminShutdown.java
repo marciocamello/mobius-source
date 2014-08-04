@@ -63,10 +63,12 @@ public class AdminShutdown implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		if (!activeChar.getPlayerAccess().CanRestart)
 		{
 			return false;
 		}
+		
 		try
 		{
 			switch (command)
@@ -74,9 +76,11 @@ public class AdminShutdown implements IAdminCommandHandler
 				case admin_server_shutdown:
 					Shutdown.getInstance().schedule(NumberUtils.toInt(wordList[1], -1), Shutdown.SHUTDOWN);
 					break;
+				
 				case admin_server_restart:
 					Shutdown.getInstance().schedule(NumberUtils.toInt(wordList[1], -1), Shutdown.RESTART);
 					break;
+				
 				case admin_server_abort:
 					Shutdown.getInstance().cancel();
 					break;
@@ -86,6 +90,7 @@ public class AdminShutdown implements IAdminCommandHandler
 		{
 			sendHtmlForm(activeChar);
 		}
+		
 		return true;
 	}
 	

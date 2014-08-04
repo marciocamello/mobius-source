@@ -245,6 +245,7 @@ public class DefaultAI extends CharacterAI
 			{
 				return 0;
 			}
+			
 			return o2.weight - o1.weight;
 		}
 	}
@@ -275,6 +276,7 @@ public class DefaultAI extends CharacterAI
 		public void runImpl()
 		{
 			NpcInstance actor = getActor();
+			
 			if (actor != null)
 			{
 				actor.teleToLocation(_destination);
@@ -294,10 +296,12 @@ public class DefaultAI extends CharacterAI
 		public void runImpl()
 		{
 			NpcInstance actor = getActor();
+			
 			if (actor != null)
 			{
 				actor.setRunning();
 			}
+			
 			_runningTask = null;
 		}
 	}
@@ -314,10 +318,12 @@ public class DefaultAI extends CharacterAI
 		public void runImpl()
 		{
 			NpcInstance actor = getActor();
+			
 			if (actor != null)
 			{
 				actor.stopConfused();
 			}
+			
 			_madnessTask = null;
 		}
 	}
@@ -351,10 +357,12 @@ public class DefaultAI extends CharacterAI
 		public int compare(Creature o1, Creature o2)
 		{
 			double diff = actor.getDistance3D(o1) - actor.getDistance3D(o2);
+			
 			if (diff < 0)
 			{
 				return -1;
 			}
+			
 			return diff > 0 ? 1 : 0;
 		}
 	}
@@ -470,17 +478,20 @@ public class DefaultAI extends CharacterAI
 		{
 			return;
 		}
+		
 		if (!isGlobalAI() && ((System.currentTimeMillis() - _lastActiveCheck) > 60000L))
 		{
 			_lastActiveCheck = System.currentTimeMillis();
 			NpcInstance actor = getActor();
 			WorldRegion region = actor == null ? null : actor.getCurrentRegion();
+			
 			if ((region == null) || !region.isActive())
 			{
 				stopAITask();
 				return;
 			}
 		}
+		
 		onEvtThink();
 	}
 	
@@ -507,6 +518,7 @@ public class DefaultAI extends CharacterAI
 		{
 			return;
 		}
+		
 		if (AI_TASK_DELAY_CURRENT != NEW_DELAY)
 		{
 			_aiTask.cancel(false);
@@ -539,6 +551,7 @@ public class DefaultAI extends CharacterAI
 		{
 			return true;
 		}
+		
 		return !target.isSilentMoving();
 	}
 	
@@ -553,6 +566,7 @@ public class DefaultAI extends CharacterAI
 		{
 			return true;
 		}
+		
 		return !target.isInvisible();
 	}
 	
@@ -564,54 +578,67 @@ public class DefaultAI extends CharacterAI
 	protected boolean checkAggression(Creature target)
 	{
 		NpcInstance actor = getActor();
+		
 		if ((getIntention() != CtrlIntention.AI_INTENTION_ACTIVE) || !isGlobalAggro())
 		{
 			return false;
 		}
+		
 		if (target.isAlikeDead())
 		{
 			return false;
 		}
+		
 		if (target.isNpc() && target.isInvul())
 		{
 			return false;
 		}
+		
 		if (target.isPlayable())
 		{
 			if (!canSeeInSilentMove((Playable) target))
 			{
 				return false;
 			}
+			
 			if (!canSeeInHide((Playable) target))
 			{
 				return false;
 			}
+			
 			if (actor.getFaction().getName().equalsIgnoreCase("varka_silenos_clan") && (target.getPlayer().getVarka() > 0))
 			{
 				return false;
 			}
+			
 			if (actor.getFaction().getName().equalsIgnoreCase("ketra_orc_clan") && (target.getPlayer().getKetra() > 0))
 			{
 				return false;
 			}
+			
 			if (target.isPlayer() && ((Player) target).isGM() && target.isInvisible())
 			{
 				return false;
 			}
+			
 			if (((Playable) target).getNonAggroTime() > System.currentTimeMillis())
 			{
 				return false;
 			}
+			
 			if (target.isPlayer() && !target.getPlayer().isActive())
 			{
 				return false;
 			}
+			
 			if (actor.isMonster() && target.isInZonePeace())
 			{
 				return false;
 			}
 		}
+		
 		AggroInfo ai = actor.getAggroList().get(target);
+		
 		if ((ai != null) && (ai.hate > 0))
 		{
 			if (!target.isInRangeZ(actor.getSpawnedLoc(), MAX_PURSUE_RANGE))
@@ -623,19 +650,24 @@ public class DefaultAI extends CharacterAI
 		{
 			return false;
 		}
+		
 		if (!canAttackCharacter(target))
 		{
 			return false;
 		}
+		
 		if (!GeoEngine.canSeeTarget(actor, target, false))
 		{
 			return false;
 		}
+		
 		actor.getAggroList().addDamageHate(target, 0, 2);
+		
 		if ((target.isServitor() || target.isPet()))
 		{
 			actor.getAggroList().addDamageHate(target.getPlayer(), 0, 1);
 		}
+		
 		startRunningTask(AI_TASK_ATTACK_DELAY);
 		setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 		return true;
@@ -657,16 +689,19 @@ public class DefaultAI extends CharacterAI
 	protected boolean randomAnimation()
 	{
 		NpcInstance actor = getActor();
+		
 		if (actor.getParameter("noRandomAnimation", false))
 		{
 			return false;
 		}
+		
 		if (actor.hasRandomAnimation() && !actor.isActionsDisabled() && !actor.isMoving && !actor.isInCombat() && Rnd.chance(Config.RND_ANIMATION_RATE))
 		{
 			setIsInRandomAnimation(3000);
 			actor.onRandomAnimation();
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -677,10 +712,12 @@ public class DefaultAI extends CharacterAI
 	protected boolean randomWalk()
 	{
 		NpcInstance actor = getActor();
+		
 		if (actor.getParameter("noRandomWalk", false))
 		{
 			return false;
 		}
+		
 		return !actor.isMoving && maybeMoveToHome();
 	}
 	
@@ -691,31 +728,39 @@ public class DefaultAI extends CharacterAI
 	protected boolean thinkActive()
 	{
 		NpcInstance actor = getActor();
+		
 		if (actor.isActionsDisabled())
 		{
 			return true;
 		}
+		
 		if (_randomAnimationEnd > System.currentTimeMillis())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			if (doTask())
 			{
 				clearTasks();
 			}
+			
 			return true;
 		}
+		
 		long now = System.currentTimeMillis();
+		
 		if ((now - _checkAggroTimestamp) > Config.AGGRO_CHECK_INTERVAL)
 		{
 			_checkAggroTimestamp = now;
 			boolean aggressive = Rnd.chance(actor.getParameter("SelfAggressive", actor.isAggressive() ? 100 : 0));
+			
 			if (!actor.getAggroList().isEmpty() || aggressive)
 			{
 				List<Creature> chars = World.getAroundCharacters(actor);
 				CollectionUtils.eqSort(chars, _nearestTargetComparator);
+				
 				for (Creature cha : chars)
 				{
 					if (aggressive || (actor.getAggroList().get(cha) != null))
@@ -728,12 +773,15 @@ public class DefaultAI extends CharacterAI
 				}
 			}
 		}
+		
 		if (actor.isMinion())
 		{
 			MonsterInstance leader = ((MinionInstance) actor).getLeader();
+			
 			if (leader != null)
 			{
 				double distance = actor.getDistance(leader.getX(), leader.getY());
+				
 				if (distance > 1000)
 				{
 					actor.teleToLocation(leader.getMinionPosition());
@@ -742,17 +790,21 @@ public class DefaultAI extends CharacterAI
 				{
 					addTaskMove(leader.getMinionPosition(), false);
 				}
+				
 				return true;
 			}
 		}
+		
 		if (randomAnimation())
 		{
 			return true;
 		}
+		
 		if (randomWalk())
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -780,11 +832,13 @@ public class DefaultAI extends CharacterAI
 		NpcInstance actor = getActor();
 		actor.stopMove();
 		setAttackTimeout(Long.MAX_VALUE);
+		
 		if (getIntention() != CtrlIntention.AI_INTENTION_ACTIVE)
 		{
 			switchAITask(AI_TASK_ACTIVE_DELAY);
 			changeIntention(CtrlIntention.AI_INTENTION_ACTIVE, null, null);
 		}
+		
 		onEvtThink();
 	}
 	
@@ -801,11 +855,13 @@ public class DefaultAI extends CharacterAI
 		setAttackTarget(target);
 		setAttackTimeout(getMaxAttackTimeout() + System.currentTimeMillis());
 		setGlobalAggro(0);
+		
 		if (getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
 		{
 			changeIntention(CtrlIntention.AI_INTENTION_ATTACK, target, null);
 			switchAITask(AI_TASK_ATTACK_DELAY);
 		}
+		
 		onEvtThink();
 	}
 	
@@ -828,18 +884,23 @@ public class DefaultAI extends CharacterAI
 	protected boolean checkTarget(Creature target, int range)
 	{
 		NpcInstance actor = getActor();
+		
 		if ((target == null) || target.isAlikeDead() || !actor.isInRangeZ(target, range))
 		{
 			return false;
 		}
+		
 		final boolean hided = target.isPlayable() && !canSeeInHide((Playable) target);
+		
 		if (!hided && actor.isConfused())
 		{
 			return true;
 		}
+		
 		if (getIntention() == CtrlIntention.AI_INTENTION_ATTACK)
 		{
 			AggroInfo ai = actor.getAggroList().get(target);
+			
 			if (ai != null)
 			{
 				if (hided)
@@ -847,10 +908,13 @@ public class DefaultAI extends CharacterAI
 					ai.hate = 0;
 					return false;
 				}
+				
 				return ai.hate > 0;
 			}
+			
 			return false;
 		}
+		
 		return canAttackCharacter(target);
 	}
 	
@@ -879,10 +943,12 @@ public class DefaultAI extends CharacterAI
 	protected void thinkAttack(boolean returnHome)
 	{
 		NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return;
 		}
+		
 		if (doTask() && !actor.isAttackingNow() && !actor.isCastingNow())
 		{
 			if (!createNewTask())
@@ -901,16 +967,20 @@ public class DefaultAI extends CharacterAI
 	protected void thinkAttack()
 	{
 		NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return;
 		}
+		
 		Location loc = actor.getSpawnedLoc();
+		
 		if (!actor.isInRange(loc, MAX_PURSUE_RANGE))
 		{
 			teleportHome();
 			return;
 		}
+		
 		if (doTask() && !actor.isAttackingNow() && !actor.isCastingNow())
 		{
 			if (!createNewTask())
@@ -979,29 +1049,37 @@ public class DefaultAI extends CharacterAI
 	protected boolean tryMoveToTarget(Creature target, int range)
 	{
 		NpcInstance actor = getActor();
+		
 		if (!actor.followToCharacter(target, actor.getPhysicalAttackRange(), true))
 		{
 			_pathfindFails++;
 		}
+		
 		if ((_pathfindFails >= getMaxPathfindFails()) && (System.currentTimeMillis() > ((getAttackTimeout() - getMaxAttackTimeout()) + getTeleportTimeout())) && actor.isInRange(target, MAX_PURSUE_RANGE))
 		{
 			_pathfindFails = 0;
+			
 			if (target.isPlayable())
 			{
 				AggroInfo hate = actor.getAggroList().get(target);
+				
 				if ((hate == null) || (hate.hate < 100))
 				{
 					returnHome();
 					return false;
 				}
 			}
+			
 			Location loc = GeoEngine.moveCheckForAI(target.getLoc(), actor.getLoc(), actor.getGeoIndex());
+			
 			if (!GeoEngine.canMoveToCoord(actor.getX(), actor.getY(), actor.getZ(), loc.x, loc.y, loc.z, actor.getGeoIndex()))
 			{
 				loc = target.getLoc();
 			}
+			
 			actor.teleToLocation(loc);
 		}
+		
 		return true;
 	}
 	
@@ -1013,10 +1091,12 @@ public class DefaultAI extends CharacterAI
 	protected boolean maybeNextTask(Task currentTask)
 	{
 		_tasks.remove(currentTask);
+		
 		if (_tasks.size() == 0)
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -1027,20 +1107,25 @@ public class DefaultAI extends CharacterAI
 	protected boolean doTask()
 	{
 		NpcInstance actor = getActor();
+		
 		if (!_def_think)
 		{
 			return true;
 		}
+		
 		Task currentTask = _tasks.pollFirst();
+		
 		if (currentTask == null)
 		{
 			clearTasks();
 			return true;
 		}
+		
 		if (actor.isDead() || actor.isAttackingNow() || actor.isCastingNow())
 		{
 			return false;
 		}
+		
 		switch (currentTask.type)
 		{
 			case MOVE:
@@ -1049,14 +1134,17 @@ public class DefaultAI extends CharacterAI
 				{
 					return true;
 				}
+				
 				if (actor.isInRange(currentTask.loc, 100))
 				{
 					return maybeNextTask(currentTask);
 				}
+				
 				if (actor.isMoving)
 				{
 					return false;
 				}
+				
 				if (!actor.moveToLocation(currentTask.loc, 0, currentTask.pathfind))
 				{
 					clientStopMoving();
@@ -1066,18 +1154,23 @@ public class DefaultAI extends CharacterAI
 				}
 			}
 				break;
+			
 			case ATTACK:
 			{
 				Creature target = currentTask.target.get();
+				
 				if (!checkTarget(target, MAX_PURSUE_RANGE))
 				{
 					return true;
 				}
+				
 				setAttackTarget(target);
+				
 				if (actor.isMoving)
 				{
 					return Rnd.chance(25);
 				}
+				
 				if ((actor.getRealDistance3D(target) <= (actor.getPhysicalAttackRange() + 40)) && GeoEngine.canSeeTarget(actor, target, false))
 				{
 					clientStopMoving();
@@ -1086,27 +1179,35 @@ public class DefaultAI extends CharacterAI
 					actor.doAttack(target);
 					return maybeNextTask(currentTask);
 				}
+				
 				if (actor.isMovementDisabled() || !getIsMobile())
 				{
 					return true;
 				}
+				
 				tryMoveToTarget(target);
 			}
 				break;
+			
 			case CAST:
 			{
 				Creature target = currentTask.target.get();
+				
 				if (actor.isMuted(currentTask.skill) || actor.isSkillDisabled(currentTask.skill) || actor.isUnActiveSkill(currentTask.skill.getId()))
 				{
 					return true;
 				}
+				
 				boolean isAoE = currentTask.skill.getTargetType() == Skill.SkillTargetType.TARGET_AURA;
 				int castRange = currentTask.skill.getAOECastRange();
+				
 				if (!checkTarget(target, MAX_PURSUE_RANGE + castRange))
 				{
 					return true;
 				}
+				
 				setAttackTarget(target);
+				
 				if ((actor.getRealDistance3D(target) <= (castRange + 60)) && GeoEngine.canSeeTarget(actor, target, false))
 				{
 					clientStopMoving();
@@ -1115,34 +1216,43 @@ public class DefaultAI extends CharacterAI
 					actor.doCast(currentTask.skill, isAoE ? actor : target, !target.isPlayable());
 					return maybeNextTask(currentTask);
 				}
+				
 				if (actor.isMoving)
 				{
 					return Rnd.chance(10);
 				}
+				
 				if (actor.isMovementDisabled() || !getIsMobile())
 				{
 					return true;
 				}
+				
 				tryMoveToTarget(target, castRange);
 			}
 				break;
+			
 			case BUFF:
 			{
 				Creature target = currentTask.target.get();
+				
 				if (actor.isMuted(currentTask.skill) || actor.isSkillDisabled(currentTask.skill) || actor.isUnActiveSkill(currentTask.skill.getId()))
 				{
 					return true;
 				}
+				
 				if ((target == null) || target.isAlikeDead() || !actor.isInRange(target, 2000))
 				{
 					return true;
 				}
+				
 				boolean isAoE = currentTask.skill.getTargetType() == Skill.SkillTargetType.TARGET_AURA;
 				int castRange = currentTask.skill.getAOECastRange();
+				
 				if (actor.isMoving)
 				{
 					return Rnd.chance(10);
 				}
+				
 				if ((actor.getRealDistance3D(target) <= (castRange + 60)) && GeoEngine.canSeeTarget(actor, target, false))
 				{
 					clientStopMoving();
@@ -1150,14 +1260,17 @@ public class DefaultAI extends CharacterAI
 					actor.doCast(currentTask.skill, isAoE ? actor : target, !target.isPlayable());
 					return maybeNextTask(currentTask);
 				}
+				
 				if (actor.isMovementDisabled() || !getIsMobile())
 				{
 					return true;
 				}
+				
 				tryMoveToTarget(target);
 			}
 				break;
 		}
+		
 		return false;
 	}
 	
@@ -1179,10 +1292,12 @@ public class DefaultAI extends CharacterAI
 		clearTasks();
 		NpcInstance actor = getActor();
 		Creature target;
+		
 		if ((actor == null) || ((target = prepareTarget()) == null))
 		{
 			return false;
 		}
+		
 		double distance = actor.getDistance(target);
 		return chooseTaskAndTargets(null, target, distance);
 	}
@@ -1194,20 +1309,25 @@ public class DefaultAI extends CharacterAI
 	protected void onEvtThink()
 	{
 		NpcInstance actor = getActor();
+		
 		if (_thinking || (actor == null) || actor.isActionsDisabled() || actor.isAfraid())
 		{
 			return;
 		}
+		
 		if (_randomAnimationEnd > System.currentTimeMillis())
 		{
 			return;
 		}
+		
 		if (actor.isRaid() && (actor.isInZonePeace() || actor.isInZoneBattle() || actor.isInZone(ZoneType.SIEGE)))
 		{
 			teleportHome();
 			return;
 		}
+		
 		_thinking = true;
+		
 		try
 		{
 			if (!Config.BLOCK_ACTIVE_TASKS && (getIntention() == CtrlIntention.AI_INTENTION_ACTIVE))
@@ -1235,9 +1355,11 @@ public class DefaultAI extends CharacterAI
 		NpcInstance actor = getActor();
 		int transformer = actor.getParameter("transformOnDead", 0);
 		int chance = actor.getParameter("transformChance", 100);
+		
 		if ((transformer > 0) && Rnd.chance(chance))
 		{
 			NpcInstance npc = NpcUtils.spawnSingle(transformer, actor.getLoc(), actor.getReflection());
+			
 			if ((killer != null) && killer.isPlayable())
 			{
 				npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, killer, 100);
@@ -1245,6 +1367,7 @@ public class DefaultAI extends CharacterAI
 				killer.sendPacket(new StatusUpdate(npc).addAttribute(StatusUpdateField.CUR_HP, StatusUpdateField.MAX_HP));
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 	
@@ -1261,6 +1384,7 @@ public class DefaultAI extends CharacterAI
 		{
 			return;
 		}
+		
 		notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 2);
 	}
 	
@@ -1273,14 +1397,18 @@ public class DefaultAI extends CharacterAI
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		NpcInstance actor = getActor();
+		
 		if ((attacker == null) || actor.isDead())
 		{
 			return;
 		}
+		
 		int transformer = actor.getParameter("transformOnUnderAttack", 0);
+		
 		if (transformer > 0)
 		{
 			int chance = actor.getParameter("transformChance", 5);
+			
 			if ((chance == 100) || ((((MonsterInstance) actor).getChampion() == 0) && (actor.getCurrentHpPercents() > 50) && Rnd.chance(chance)))
 			{
 				MonsterInstance npc = (MonsterInstance) NpcHolder.getInstance().getTemplate(transformer).getNewInstance();
@@ -1297,10 +1425,13 @@ public class DefaultAI extends CharacterAI
 				return;
 			}
 		}
+		
 		Player player = attacker.getPlayer();
+		
 		if (player != null)
 		{
 			List<QuestState> quests = player.getQuestsForEvent(actor, QuestEventType.ATTACKED_WITH_QUEST, false);
+			
 			if (quests != null)
 			{
 				for (QuestState qs : quests)
@@ -1309,19 +1440,24 @@ public class DefaultAI extends CharacterAI
 				}
 			}
 		}
+		
 		actor.getAggroList().addDamageHate(attacker, 0, damage);
+		
 		if ((damage > 0) && (attacker.isServitor() || attacker.isPet()))
 		{
 			actor.getAggroList().addDamageHate(attacker.getPlayer(), 0, actor.getParameter("searchingMaster", false) ? damage : 1);
 		}
+		
 		if (getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
 		{
 			if (!actor.isRunning())
 			{
 				startRunningTask(AI_TASK_ATTACK_DELAY);
 			}
+			
 			setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
 		}
+		
 		notifyFriends(attacker, damage);
 	}
 	
@@ -1334,21 +1470,26 @@ public class DefaultAI extends CharacterAI
 	protected void onEvtAggression(Creature attacker, int aggro)
 	{
 		NpcInstance actor = getActor();
+		
 		if ((attacker == null) || actor.isDead())
 		{
 			return;
 		}
+		
 		actor.getAggroList().addDamageHate(attacker, 0, aggro);
+		
 		if ((aggro > 0) && (attacker.isServitor() || attacker.isPet()))
 		{
 			actor.getAggroList().addDamageHate(attacker.getPlayer(), 0, actor.getParameter("searchingMaster", false) ? aggro : 1);
 		}
+		
 		if (getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
 		{
 			if (!actor.isRunning())
 			{
 				startRunningTask(AI_TASK_ATTACK_DELAY);
 			}
+			
 			setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
 		}
 	}
@@ -1360,27 +1501,35 @@ public class DefaultAI extends CharacterAI
 	protected boolean maybeMoveToHome()
 	{
 		NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return false;
 		}
+		
 		boolean randomWalk = actor.hasRandomWalk();
 		Location sloc = actor.getSpawnedLoc();
+		
 		if (randomWalk && (!Config.RND_WALK || !Rnd.chance(Config.RND_WALK_RATE)))
 		{
 			return false;
 		}
+		
 		boolean isInRange = actor.isInRangeZ(sloc, Config.MAX_DRIFT_RANGE);
+		
 		if (!randomWalk && isInRange)
 		{
 			return false;
 		}
+		
 		Location pos = Location.findPointToStay(actor, sloc, 0, Config.MAX_DRIFT_RANGE);
 		actor.setWalking();
+		
 		if (!actor.moveToLocation(pos.x, pos.y, pos.z, 0, true) && !isInRange)
 		{
 			teleportHome();
 		}
+		
 		return true;
 	}
 	
@@ -1411,13 +1560,16 @@ public class DefaultAI extends CharacterAI
 		Location sloc = actor.getSpawnedLoc();
 		clearTasks();
 		actor.stopMove();
+		
 		if (clearAggro)
 		{
 			actor.getAggroList().clear(true);
 		}
+		
 		setAttackTimeout(Long.MAX_VALUE);
 		setAttackTarget(null);
 		changeIntention(CtrlIntention.AI_INTENTION_ACTIVE, null, null);
+		
 		if (teleport)
 		{
 			actor.broadcastPacketToOthers(new MagicSkillUse(actor, actor, 2036, 1, 500, 0));
@@ -1433,6 +1585,7 @@ public class DefaultAI extends CharacterAI
 			{
 				actor.setWalking();
 			}
+			
 			addTaskMove(sloc, false);
 		}
 	}
@@ -1444,26 +1597,33 @@ public class DefaultAI extends CharacterAI
 	protected Creature prepareTarget()
 	{
 		NpcInstance actor = getActor();
+		
 		if (actor.isConfused())
 		{
 			return getAttackTarget();
 		}
+		
 		if (Rnd.chance(actor.getParameter("isMadness", 0)))
 		{
 			Creature randomHated = actor.getAggroList().getRandomHated();
+			
 			if (randomHated != null)
 			{
 				setAttackTarget(randomHated);
+				
 				if ((_madnessTask == null) && !actor.isConfused())
 				{
 					actor.startConfused();
 					_madnessTask = ThreadPoolManager.getInstance().schedule(new MadnessTask(), 10000);
 				}
+				
 				return randomHated;
 			}
 		}
+		
 		List<Creature> hateList = actor.getAggroList().getHateList();
 		Creature hated = null;
+		
 		for (Creature cha : hateList)
 		{
 			if (!checkTarget(cha, MAX_PURSUE_RANGE))
@@ -1471,14 +1631,17 @@ public class DefaultAI extends CharacterAI
 				actor.getAggroList().remove(cha, true);
 				continue;
 			}
+			
 			hated = cha;
 			break;
 		}
+		
 		if (hated != null)
 		{
 			setAttackTarget(hated);
 			return hated;
 		}
+		
 		return null;
 	}
 	
@@ -1492,24 +1655,31 @@ public class DefaultAI extends CharacterAI
 	protected boolean canUseSkill(Skill skill, Creature target, double distance)
 	{
 		NpcInstance actor = getActor();
+		
 		if ((skill == null) || skill.isNotUsedByAI())
 		{
 			return false;
 		}
+		
 		if ((skill.getTargetType() == Skill.SkillTargetType.TARGET_SELF) && (target != actor))
 		{
 			return false;
 		}
+		
 		int castRange = skill.getAOECastRange();
+		
 		if ((castRange <= 200) && (distance > 200))
 		{
 			return false;
 		}
+		
 		if (actor.isSkillDisabled(skill) || actor.isMuted(skill) || actor.isUnActiveSkill(skill.getId()))
 		{
 			return false;
 		}
+		
 		double mpConsume2 = skill.getMpConsume2();
+		
 		if (skill.isMagic())
 		{
 			mpConsume2 = actor.calcStat(Stats.MP_MAGIC_SKILL_CONSUME, mpConsume2, target, skill);
@@ -1518,14 +1688,17 @@ public class DefaultAI extends CharacterAI
 		{
 			mpConsume2 = actor.calcStat(Stats.MP_PHYSICAL_SKILL_CONSUME, mpConsume2, target, skill);
 		}
+		
 		if (actor.getCurrentMp() < mpConsume2)
 		{
 			return false;
 		}
+		
 		if (target.getEffectList().getEffectsCountForSkill(skill.getId()) != 0)
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -1553,8 +1726,10 @@ public class DefaultAI extends CharacterAI
 		{
 			return null;
 		}
+		
 		Skill[] ret = null;
 		int usable = 0;
+		
 		for (Skill skill : skills)
 		{
 			if (canUseSkill(skill, target, distance))
@@ -1563,17 +1738,21 @@ public class DefaultAI extends CharacterAI
 				{
 					ret = new Skill[skills.length];
 				}
+				
 				ret[usable++] = skill;
 			}
 		}
+		
 		if ((ret == null) || (usable == skills.length))
 		{
 			return ret;
 		}
+		
 		if (usable == 0)
 		{
 			return null;
 		}
+		
 		ret = Arrays.copyOf(ret, usable);
 		return ret;
 	}
@@ -1592,21 +1771,27 @@ public class DefaultAI extends CharacterAI
 		{
 			return null;
 		}
+		
 		if (skills.length == 1)
 		{
 			return skills[0];
 		}
+		
 		RndSelector<Skill> rnd = new RndSelector<>(skills.length);
 		double weight;
+		
 		for (Skill skill : skills)
 		{
 			weight = (skill.getSimpleDamage(actor, target) * skill.getAOECastRange()) / distance;
+			
 			if (weight < 1.)
 			{
 				weight = 1.;
 			}
+			
 			rnd.add(skill, (int) weight);
 		}
+		
 		return rnd.select();
 	}
 	
@@ -1624,24 +1809,30 @@ public class DefaultAI extends CharacterAI
 		{
 			return null;
 		}
+		
 		if (skills.length == 1)
 		{
 			return skills[0];
 		}
+		
 		RndSelector<Skill> rnd = new RndSelector<>(skills.length);
 		double weight;
+		
 		for (Skill skill : skills)
 		{
 			if (skill.getSameByStackType(target) != null)
 			{
 				continue;
 			}
+			
 			if ((weight = (100. * skill.getAOECastRange()) / distance) <= 0)
 			{
 				weight = 1;
 			}
+			
 			rnd.add(skill, (int) weight);
 		}
+		
 		return rnd.select();
 	}
 	
@@ -1657,24 +1848,30 @@ public class DefaultAI extends CharacterAI
 		{
 			return null;
 		}
+		
 		if (skills.length == 1)
 		{
 			return skills[0];
 		}
+		
 		RndSelector<Skill> rnd = new RndSelector<>(skills.length);
 		double weight;
+		
 		for (Skill skill : skills)
 		{
 			if (skill.getSameByStackType(target) != null)
 			{
 				continue;
 			}
+			
 			if ((weight = skill.getPower()) <= 0)
 			{
 				weight = 1;
 			}
+			
 			rnd.add(skill, (int) weight);
 		}
+		
 		return rnd.select();
 	}
 	
@@ -1690,25 +1887,32 @@ public class DefaultAI extends CharacterAI
 		{
 			return null;
 		}
+		
 		double hpReduced = target.getMaxHp() - target.getCurrentHp();
+		
 		if (hpReduced < 1)
 		{
 			return null;
 		}
+		
 		if (skills.length == 1)
 		{
 			return skills[0];
 		}
+		
 		RndSelector<Skill> rnd = new RndSelector<>(skills.length);
 		double weight;
+		
 		for (Skill skill : skills)
 		{
 			if ((weight = Math.abs(skill.getPower() - hpReduced)) <= 0)
 			{
 				weight = 1;
 			}
+			
 			rnd.add(skill, (int) weight);
 		}
+		
 		return rnd.select();
 	}
 	
@@ -1725,6 +1929,7 @@ public class DefaultAI extends CharacterAI
 		{
 			return;
 		}
+		
 		for (Skill sk : skills)
 		{
 			addDesiredSkill(skillMap, target, distance, sk);
@@ -1744,7 +1949,9 @@ public class DefaultAI extends CharacterAI
 		{
 			return;
 		}
+		
 		int weight = (int) -Math.abs(skill.getAOECastRange() - distance);
+		
 		if (skill.getAOECastRange() >= distance)
 		{
 			weight += 1000000;
@@ -1753,6 +1960,7 @@ public class DefaultAI extends CharacterAI
 		{
 			return;
 		}
+		
 		skillMap.put(skill, weight);
 	}
 	
@@ -1767,23 +1975,29 @@ public class DefaultAI extends CharacterAI
 		{
 			return;
 		}
+		
 		NpcInstance actor = getActor();
 		double hpReduced = actor.getMaxHp() - actor.getCurrentHp();
 		double hpPercent = actor.getCurrentHpPercents();
+		
 		if (hpReduced < 1)
 		{
 			return;
 		}
+		
 		int weight;
+		
 		for (Skill sk : skills)
 		{
 			if (canUseSkill(sk, actor) && (sk.getPower() <= hpReduced))
 			{
 				weight = (int) sk.getPower();
+				
 				if (hpPercent < 50)
 				{
 					weight += 1000000;
 				}
+				
 				skillMap.put(sk, weight);
 			}
 		}
@@ -1800,7 +2014,9 @@ public class DefaultAI extends CharacterAI
 		{
 			return;
 		}
+		
 		NpcInstance actor = getActor();
+		
 		for (Skill sk : skills)
 		{
 			if (canUseSkill(sk, actor))
@@ -1821,7 +2037,9 @@ public class DefaultAI extends CharacterAI
 		{
 			return null;
 		}
+		
 		int nWeight, topWeight = Integer.MIN_VALUE;
+		
 		for (Skill next : skillMap.keySet())
 		{
 			if ((nWeight = skillMap.get(next)) > topWeight)
@@ -1829,20 +2047,25 @@ public class DefaultAI extends CharacterAI
 				topWeight = nWeight;
 			}
 		}
+		
 		if (topWeight == Integer.MIN_VALUE)
 		{
 			return null;
 		}
+		
 		Skill[] skills = new Skill[skillMap.size()];
 		nWeight = 0;
+		
 		for (Map.Entry<Skill, Integer> e : skillMap.entrySet())
 		{
 			if (e.getValue() < topWeight)
 			{
 				continue;
 			}
+			
 			skills[nWeight++] = e.getKey();
 		}
+		
 		return skills[Rnd.get(nWeight)];
 	}
 	
@@ -1856,33 +2079,41 @@ public class DefaultAI extends CharacterAI
 	protected boolean chooseTaskAndTargets(Skill skill, Creature target, double distance)
 	{
 		NpcInstance actor = getActor();
+		
 		if (skill != null)
 		{
 			if (actor.isMovementDisabled() && (distance > (skill.getAOECastRange() + 60)))
 			{
 				target = null;
+				
 				if (skill.isOffensive())
 				{
 					LazyArrayList<Creature> targets = LazyArrayList.newInstance();
+					
 					for (Creature cha : actor.getAggroList().getHateList())
 					{
 						if (!checkTarget(cha, skill.getAOECastRange() + 60) || !canUseSkill(skill, cha))
 						{
 							continue;
 						}
+						
 						targets.add(cha);
 					}
+					
 					if (!targets.isEmpty())
 					{
 						target = targets.get(Rnd.get(targets.size()));
 					}
+					
 					LazyArrayList.recycle(targets);
 				}
 			}
+			
 			if (target == null)
 			{
 				return false;
 			}
+			
 			if (skill.isOffensive())
 			{
 				addTaskCast(target, skill);
@@ -1891,30 +2122,38 @@ public class DefaultAI extends CharacterAI
 			{
 				addTaskBuff(target, skill);
 			}
+			
 			return true;
 		}
+		
 		if (actor.isMovementDisabled() && (distance > (actor.getPhysicalAttackRange() + 40)))
 		{
 			target = null;
 			LazyArrayList<Creature> targets = LazyArrayList.newInstance();
+			
 			for (Creature cha : actor.getAggroList().getHateList())
 			{
 				if (!checkTarget(cha, actor.getPhysicalAttackRange() + 40))
 				{
 					continue;
 				}
+				
 				targets.add(cha);
 			}
+			
 			if (!targets.isEmpty())
 			{
 				target = targets.get(Rnd.get(targets.size()));
 			}
+			
 			LazyArrayList.recycle(targets);
 		}
+		
 		if (target == null)
 		{
 			return false;
 		}
+		
 		addTaskAttack(target);
 		return true;
 	}
@@ -1945,6 +2184,7 @@ public class DefaultAI extends CharacterAI
 	protected void startRunningTask(long interval)
 	{
 		NpcInstance actor = getActor();
+		
 		if ((actor != null) && (_runningTask == null) && !actor.isRunning())
 		{
 			_runningTask = ThreadPoolManager.getInstance().schedule(new RunningTask(), interval);
@@ -1961,11 +2201,13 @@ public class DefaultAI extends CharacterAI
 		{
 			return true;
 		}
+		
 		if (_globalAggro <= System.currentTimeMillis())
 		{
 			_globalAggro = 0;
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -2006,19 +2248,24 @@ public class DefaultAI extends CharacterAI
 	protected void notifyFriends(Creature attacker, int damage)
 	{
 		NpcInstance actor = getActor();
+		
 		if ((System.currentTimeMillis() - _lastFactionNotifyTime) > _minFactionNotifyInterval)
 		{
 			_lastFactionNotifyTime = System.currentTimeMillis();
+			
 			if (actor.isMinion())
 			{
 				MonsterInstance master = ((MinionInstance) actor).getLeader();
+				
 				if (master != null)
 				{
 					if (!master.isDead() && master.isVisible())
 					{
 						master.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, damage);
 					}
+					
 					MinionList minionList = master.getMinionList();
+					
 					if (minionList != null)
 					{
 						for (MinionInstance minion : minionList.getAliveMinions())
@@ -2031,7 +2278,9 @@ public class DefaultAI extends CharacterAI
 					}
 				}
 			}
+			
 			MinionList minionList = actor.getMinionList();
+			
 			if ((minionList != null) && minionList.hasAliveMinions())
 			{
 				for (MinionInstance minion : minionList.getAliveMinions())
@@ -2039,6 +2288,7 @@ public class DefaultAI extends CharacterAI
 					minion.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, damage);
 				}
 			}
+			
 			for (NpcInstance npc : activeFactionTargets())
 			{
 				npc.getAI().notifyEvent(CtrlEvent.EVT_CLAN_ATTACKED, actor, attacker, damage);
@@ -2053,11 +2303,14 @@ public class DefaultAI extends CharacterAI
 	protected List<NpcInstance> activeFactionTargets()
 	{
 		NpcInstance actor = getActor();
+		
 		if (actor.getFaction().isNone())
 		{
 			return Collections.emptyList();
 		}
+		
 		List<NpcInstance> npcFriends = new LazyArrayList<>();
+		
 		for (NpcInstance npc : World.getAroundNpc(actor))
 		{
 			if (!npc.isDead())
@@ -2074,6 +2327,7 @@ public class DefaultAI extends CharacterAI
 				}
 			}
 		}
+		
 		return npcFriends;
 	}
 	
@@ -2086,37 +2340,45 @@ public class DefaultAI extends CharacterAI
 	protected boolean defaultThinkBuff(int rateSelf, int rateFriends)
 	{
 		NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (Rnd.chance(rateSelf))
 		{
 			double actorHp = actor.getCurrentHpPercents();
 			Skill[] skills = actorHp < 50 ? selectUsableSkills(actor, 0, _healSkills) : selectUsableSkills(actor, 0, _buffSkills);
+			
 			if ((skills == null) || (skills.length == 0))
 			{
 				return false;
 			}
+			
 			Skill skill = skills[Rnd.get(skills.length)];
 			addTaskBuff(actor, skill);
 			return true;
 		}
+		
 		if (Rnd.chance(rateFriends))
 		{
 			for (NpcInstance npc : activeFactionTargets())
 			{
 				double targetHp = npc.getCurrentHpPercents();
 				Skill[] skills = targetHp < 50 ? selectUsableSkills(actor, 0, _healSkills) : selectUsableSkills(actor, 0, _buffSkills);
+				
 				if ((skills == null) || (skills.length == 0))
 				{
 					continue;
 				}
+				
 				Skill skill = skills[Rnd.get(skills.length)];
 				addTaskBuff(actor, skill);
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -2128,15 +2390,19 @@ public class DefaultAI extends CharacterAI
 	{
 		clearTasks();
 		NpcInstance actor = getActor();
+		
 		if (actor.isDead() || actor.isAMuted())
 		{
 			return false;
 		}
+		
 		Creature target;
+		
 		if ((target = prepareTarget()) == null)
 		{
 			return false;
 		}
+		
 		double distance = actor.getDistance(target);
 		double targetHp = target.getCurrentHpPercents();
 		double actorHp = actor.getCurrentHpPercents();
@@ -2147,10 +2413,12 @@ public class DefaultAI extends CharacterAI
 		Skill[] heal = actorHp < 50 ? Rnd.chance(getRateHEAL()) ? selectUsableSkills(actor, 0, _healSkills) : null : null;
 		Skill[] buff = Rnd.chance(getRateBUFF()) ? selectUsableSkills(actor, 0, _buffSkills) : null;
 		RndSelector<Skill[]> rnd = new RndSelector<>();
+		
 		if (!actor.isAMuted())
 		{
 			rnd.add(null, getRatePHYS());
 		}
+		
 		rnd.add(dam, getRateDAM());
 		rnd.add(dot, getRateDOT());
 		rnd.add(debuff, getRateDEBUFF());
@@ -2158,25 +2426,30 @@ public class DefaultAI extends CharacterAI
 		rnd.add(buff, getRateBUFF());
 		rnd.add(stun, getRateSTUN());
 		Skill[] selected = rnd.select();
+		
 		if (selected != null)
 		{
 			if ((selected == dam) || (selected == dot))
 			{
 				return chooseTaskAndTargets(selectTopSkillByDamage(actor, target, distance, selected), target, distance);
 			}
+			
 			if ((selected == debuff) || (selected == stun))
 			{
 				return chooseTaskAndTargets(selectTopSkillByDebuff(actor, target, distance, selected), target, distance);
 			}
+			
 			if (selected == buff)
 			{
 				return chooseTaskAndTargets(selectTopSkillByBuff(actor, selected), actor, distance);
 			}
+			
 			if (selected == heal)
 			{
 				return chooseTaskAndTargets(selectTopSkillByHeal(actor, selected), actor, distance);
 			}
 		}
+		
 		return chooseTaskAndTargets(null, target, distance);
 	}
 	

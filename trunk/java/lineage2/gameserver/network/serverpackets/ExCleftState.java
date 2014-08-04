@@ -27,6 +27,7 @@ public class ExCleftState extends L2GameServerPacket
 	{
 		writeEx(0x96);
 		writeD(CleftState);
+		
 		switch (CleftState)
 		{
 			case CleftState_Total:
@@ -37,17 +38,21 @@ public class ExCleftState extends L2GameServerPacket
 				// RedTeam: d[dddd] - Total List TeamID:%d PlayerID:%d Kill:%d
 				// Death:%d Tower:%d
 				break;
+			
 			case CleftState_TowerDestroy:
 				// ddddddddd - RemainSec:%d BlueTeamPt:%d RedTeamPt:%d TeamID:%d
 				// TowerType:%d PlayerID:%d CleftTowerCount:%d KillCount:%d
 				// DeathCount:%d
 				break;
+			
 			case CleftState_CatUpdate:
 				// dddS - RemainSec:%d TeamID:%d CatID:%d CatName:%s
 				break;
+			
 			case CleftState_Result:
 				// dd - WinTeamID:%d LoseTeamID:%d
 				break;
+			
 			case CleftState_PvPKill:
 				// ddd - BTeamPoint:%d RTeamPoint:%d
 				// ddddd - PvPKill01 TeamID:%d PlayerID:%d CleftTowerCount:%d

@@ -104,10 +104,12 @@ public class PcCafePointsExchange extends Functions implements ScriptFile
 	public void startEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive(EVENT_NAME, true))
 		{
 			spawnEventManagers();
@@ -117,6 +119,7 @@ public class PcCafePointsExchange extends Functions implements ScriptFile
 		{
 			player.sendMessage("Event 'PcCafePointsExchange' already started.");
 		}
+		
 		show("admin/events.htm", player);
 	}
 	
@@ -126,10 +129,12 @@ public class PcCafePointsExchange extends Functions implements ScriptFile
 	public void stopEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive(EVENT_NAME, false))
 		{
 			unSpawnEventManagers();
@@ -139,6 +144,7 @@ public class PcCafePointsExchange extends Functions implements ScriptFile
 		{
 			player.sendMessage("Event: 'PcCafePointsExchange' not started.");
 		}
+		
 		show("admin/events.htm", player);
 	}
 	

@@ -63,11 +63,14 @@ public class BufferNoobs extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return true;
 		}
+		
 		Skill skill;
+		
 		for (Player player : World.getAroundPlayers(actor, 200, 200))
 		{
 			if (checkBuff(player))
@@ -80,9 +83,11 @@ public class BufferNoobs extends DefaultAI
 					actor.broadcastPacket(new MagicSkillUse(actor, player, skillId, 0, 0, 0));
 					actor.callSkill(skill, target, true);
 				}
+				
 				player.sendPacket(new ExShowScreenMessage(NpcString.NEWBIE_HELPER_HAS_CASTED_BUFFS_ON_$S1, 800, ScreenMessageAlign.TOP_CENTER, player.getName()));
 			}
 		}
+		
 		return true;
 	}
 	
@@ -100,6 +105,7 @@ public class BufferNoobs extends DefaultAI
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	

@@ -54,6 +54,7 @@ public class _290_ThreatRemoval extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("pinaps_q290_02.htm"))
 		{
 			st.setState(STARTED);
@@ -63,27 +64,34 @@ public class _290_ThreatRemoval extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("pinaps_q290_05.htm"))
 		{
 			st.takeItems(SelMahumIDTag, 400);
+			
 			switch (Rnd.get(1, 6))
 			{
 				case 1:
 					st.giveItems(959, 1);
 					break;
+				
 				case 2:
 					st.giveItems(960, 1);
 					break;
+				
 				case 3:
 					st.giveItems(960, 2);
 					break;
+				
 				case 4:
 					st.giveItems(960, 3);
 					break;
+				
 				case 5:
 					st.giveItems(9552, 1);
 					break;
+				
 				case 6:
 					st.giveItems(9552, 2);
 					break;
 			}
+			
 			st.playSound(SOUND_MIDDLE);
 		}
 		else if (event.equalsIgnoreCase("continue"))
@@ -95,6 +103,7 @@ public class _290_ThreatRemoval extends Quest implements ScriptFile
 			htmltext = "pinaps_q290_07.htm";
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -103,11 +112,13 @@ public class _290_ThreatRemoval extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (npc.getNpcId() == GuardPinaps)
 		{
 			if (cond == 0)
 			{
 				QuestState qs = st.getPlayer().getQuestState(_251_NoSecrets.class);
+				
 				if ((st.getPlayer().getLevel() >= 82) && (qs != null) && qs.isCompleted())
 				{
 					htmltext = "pinaps_q290_01.htm";
@@ -127,6 +138,7 @@ public class _290_ThreatRemoval extends Quest implements ScriptFile
 				htmltext = "pinaps_q290_04.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -134,6 +146,7 @@ public class _290_ThreatRemoval extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if (cond == 1)
 		{
 			if (ArrayUtils.contains(SelMahumTrainers, npc.getNpcId()))
@@ -145,6 +158,7 @@ public class _290_ThreatRemoval extends Quest implements ScriptFile
 				st.rollAndGive(SelMahumIDTag, 1, 36.3);
 			}
 		}
+		
 		return null;
 	}
 	

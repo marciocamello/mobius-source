@@ -90,6 +90,7 @@ public class GiranArena extends Functions implements ScriptFile, OnDeathListener
 			{
 				template_stop();
 			}
+			
 			_zone.removeListener(_zoneListener);
 		}
 	}
@@ -109,6 +110,7 @@ public class GiranArena extends Functions implements ScriptFile, OnDeathListener
 		{
 			_instance = new GiranArenaImpl();
 		}
+		
 		return _instance;
 	}
 	
@@ -192,12 +194,15 @@ public class GiranArena extends Functions implements ScriptFile, OnDeathListener
 		if (val == 0)
 		{
 			final Player player = getSelf();
+			
 			if (player.isGM())
 			{
 				return HtmCache.getInstance().getNotNull("scripts/events/arena/22220001.htm", player) + HtmCache.getInstance().getNotNull("scripts/events/arena/22220001-4.htm", player);
 			}
+			
 			return HtmCache.getInstance().getNotNull("scripts/events/arena/22220001.htm", player);
 		}
+		
 		return "";
 	}
 	

@@ -58,6 +58,7 @@ public class _10364_ObligationsOfSeeker extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -65,12 +66,14 @@ public class _10364_ObligationsOfSeeker extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "0-3.htm";
 		}
+		
 		if (event.equalsIgnoreCase("papper"))
 		{
 			st.setCond(2);
 			st.playSound(SOUND_MIDDLE);
 			htmltext = "0-3.htm";
 		}
+		
 		if (event.equalsIgnoreCase("quest_rev"))
 		{
 			st.takeAllItems(papper);
@@ -82,6 +85,7 @@ public class _10364_ObligationsOfSeeker extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -91,6 +95,7 @@ public class _10364_ObligationsOfSeeker extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == celin)
 		{
 			if (st.isCompleted())
@@ -156,6 +161,7 @@ public class _10364_ObligationsOfSeeker extends Quest implements ScriptFile
 				htmltext = "2-1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -163,16 +169,19 @@ public class _10364_ObligationsOfSeeker extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		if (((st.getCond() == 2) && (st.getQuestItemsCount(papper) < 5) && (npcId == warper)) || (npcId == avian))
 		{
 			st.rollAndGive(papper, 1, 35);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		if (st.getQuestItemsCount(papper) >= 5)
 		{
 			st.setCond(3);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return null;
 	}
 }

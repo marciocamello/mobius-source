@@ -42,7 +42,7 @@ import lineage2.gameserver.utils.Location;
 public class ClanAirShip extends AirShip
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -134,6 +134,7 @@ public class ClanAirShip extends AirShip
 		{
 			setDriver(null);
 		}
+		
 		super.oustPlayer(player, loc, teleport);
 	}
 	
@@ -144,14 +145,17 @@ public class ClanAirShip extends AirShip
 	{
 		BoatWayEvent arrivalWay = new BoatWayEvent(this);
 		BoatWayEvent departWay = new BoatWayEvent(this);
+		
 		for (BoatPoint p : _platform.getArrivalPoints())
 		{
 			arrivalWay.addObject(BoatWayEvent.BOAT_POINTS, p);
 		}
+		
 		for (BoatPoint p : _platform.getDepartPoints())
 		{
 			departWay.addObject(BoatWayEvent.BOAT_POINTS, p);
 		}
+		
 		arrivalWay.addOnTimeAction(0, new StartStopAction(StartStopAction.EVENT, true));
 		departWay.addOnTimeAction(300, new StartStopAction(StartStopAction.EVENT, true));
 		setWay(0, arrivalWay);
@@ -169,11 +173,13 @@ public class ClanAirShip extends AirShip
 			_deleteTask.cancel(true);
 			_deleteTask = null;
 		}
+		
 		for (Player player : _players)
 		{
 			player.showQuestMovie(_platform.getOustMovie());
 			oustPlayer(player, getReturnLoc(), true);
 		}
+		
 		deleteMe();
 	}
 	
@@ -188,6 +194,7 @@ public class ClanAirShip extends AirShip
 		{
 			return;
 		}
+		
 		if (id == 0)
 		{
 			getCurrentWay().clearActions();
@@ -196,11 +203,13 @@ public class ClanAirShip extends AirShip
 		else
 		{
 			BoatPoint point = getDock().getTeleportList().get(id);
+			
 			if (getCurrentFuel() < point.getFuel())
 			{
 				player.sendPacket(SystemMsg.YOUR_SHIP_CANNOT_TELEPORT_BECAUSE_IT_DOES_NOT_HAVE_ENOUGH_FUEL_FOR_THE_TRIP);
 				return;
 			}
+			
 			setCurrentFuel(getCurrentFuel() - point.getFuel());
 			getCurrentWay().clearActions();
 			getCurrentWay().addObject(BoatWayEvent.BOAT_POINTS, point);
@@ -216,6 +225,7 @@ public class ClanAirShip extends AirShip
 	public void trajetEnded(boolean oust)
 	{
 		_runState = 0;
+		
 		if (_fromHome == 0)
 		{
 			_fromHome = 1;
@@ -252,69 +262,83 @@ public class ClanAirShip extends AirShip
 			{
 				return;
 			}
+			
 			if (player.getTargetId() != _controlKey.getObjectId())
 			{
 				player.sendPacket(SystemMsg.YOU_MUST_TARGET_THE_ONE_YOU_WISH_TO_CONTROL);
 				return;
 			}
+			
 			final int x = player.getInBoatPosition().x - 0x16e;
 			final int y = player.getInBoatPosition().y;
 			final int z = player.getInBoatPosition().z - 0x6b;
+			
 			if (((x * x) + (y * y) + (z * z)) > 2500)
 			{
 				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_BECAUSE_YOU_ARE_TOO_FAR);
 				return;
 			}
+			
 			if (player.getTransformation() != 0)
 			{
 				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHILE_TRANSFORMED);
 				return;
 			}
+			
 			if (player.isParalyzed())
 			{
 				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHILE_YOU_ARE_PETRIFIED);
 				return;
 			}
+			
 			if (player.isDead() || player.isFakeDeath())
 			{
 				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHEN_YOU_ARE_DEAD);
 				return;
 			}
+			
 			if (player.isFishing())
 			{
 				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHILE_FISHING);
 				return;
 			}
+			
 			if (player.isInCombat())
 			{
 				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_BATTLE);
 				return;
 			}
+			
 			if (player.isInDuel())
 			{
 				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_DUEL);
 				return;
 			}
+			
 			if (player.isSitting())
 			{
 				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_SITTING_POSITION);
 				return;
 			}
+			
 			if (player.isCastingNow())
 			{
 				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHILE_USING_A_SKILL);
 				return;
 			}
+			
 			if (player.isCursedWeaponEquipped())
 			{
 				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHILE_A_CURSED_WEAPON_IS_EQUIPPED);
 				return;
 			}
+			
 			if (player.getActiveWeaponFlagAttachment() != null)
 			{
 				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHILE_HOLDING_A_FLAG);
 				return;
 			}
+			
 			_driverRef = player.getRef();
 			player.setLockedTarget(true);
 			player.unEquipWeapon();
@@ -324,12 +348,14 @@ public class ClanAirShip extends AirShip
 		{
 			Player oldDriver = getDriver();
 			_driverRef = HardReferences.emptyRef();
+			
 			if (oldDriver != null)
 			{
 				oldDriver.setLockedTarget(false);
 				oldDriver.broadcastCharInfo();
 			}
 		}
+		
 		broadcastCharInfo();
 	}
 	
@@ -341,6 +367,7 @@ public class ClanAirShip extends AirShip
 	{
 		final int old = _currentFuel;
 		_currentFuel = fuel;
+		
 		if (_currentFuel <= 0)
 		{
 			_currentFuel = 0;
@@ -351,6 +378,7 @@ public class ClanAirShip extends AirShip
 		{
 			_currentFuel = MAX_FUEL;
 		}
+		
 		if ((_currentFuel == 0) && (old > 0))
 		{
 			broadcastPacketToPassengers(SystemMsg.THE_AIRSHIPS_FUEL_EP_HAS_RUN_OUT);
@@ -359,6 +387,7 @@ public class ClanAirShip extends AirShip
 		{
 			broadcastPacketToPassengers(SystemMsg.THE_AIRSHIPS_FUEL_EP_WILL_SOON_RUN_OUT);
 		}
+		
 		broadcastCharInfo();
 	}
 	
@@ -521,6 +550,7 @@ public class ClanAirShip extends AirShip
 		public void runImpl()
 		{
 			boolean empty = true;
+			
 			for (Player player : _players)
 			{
 				if (player.isOnline())
@@ -528,6 +558,7 @@ public class ClanAirShip extends AirShip
 					empty = false;
 				}
 			}
+			
 			if (empty)
 			{
 				deleteMe();

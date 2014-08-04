@@ -28,7 +28,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public final class ZakenGatekeeperInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -66,9 +66,11 @@ public final class ZakenGatekeeperInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("request_nightzaken"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(nightZakenIzId))
@@ -84,6 +86,7 @@ public final class ZakenGatekeeperInstance extends NpcInstance
 		else if (command.equalsIgnoreCase("request_dayzaken"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(dayZakenIzId))
@@ -99,6 +102,7 @@ public final class ZakenGatekeeperInstance extends NpcInstance
 		else if (command.equalsIgnoreCase("request_ultrazaken"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(ultraZakenIzId))

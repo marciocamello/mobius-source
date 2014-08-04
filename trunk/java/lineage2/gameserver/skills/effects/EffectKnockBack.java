@@ -52,34 +52,40 @@ public class EffectKnockBack extends Effect
 		Location playerLoc = _effected.getLoc();
 		Location tagetLoc = getEffector().getLoc();
 		double distance = playerLoc.distance(tagetLoc);
+		
 		if ((distance > 2000) || (distance < 1))
 		{
 			return;
 		}
+		
 		double dx = tagetLoc.x - playerLoc.x;
 		double dy = tagetLoc.y - playerLoc.y;
 		double dz = tagetLoc.z - playerLoc.z;
 		int offset = Math.min((int) distance + getSkill().getFlyRadius(), 1400);
 		offset = (int) (offset + Math.abs(dz));
+		
 		if (offset < 5)
 		{
 			offset = 5;
 		}
+		
 		double sin = dy / distance;
 		double cos = dx / distance;
 		_x = (tagetLoc.x - (int) (offset * cos));
 		_y = (tagetLoc.y - (int) (offset * sin));
 		_z = tagetLoc.z;
-		
 		_loc = GeoEngine.moveCheck(tagetLoc.x, tagetLoc.y, tagetLoc.z, _x, _y, _effected.getGeoIndex());
+		
 		if (!_effected.isKnockedBack())
 		{
 			_effected.startKnockingback();
 		}
+		
 		if (_loc == null)
 		{
 			_log.info("EffectKnockBack Loc null check this!");
 		}
+		
 		_effected.broadcastPacket(new FlyToLocation(_effected, _loc, FlyType.PUSH_HORIZONTAL, getSkill().getFlySpeed()));
 		_effected.abortAttack(true, true);
 		_effected.abortCast(true, true);
@@ -96,6 +102,7 @@ public class EffectKnockBack extends Effect
 		super.onExit();
 		_effected.setXYZ(_loc.getX(), _loc.getY(), _loc.getZ());
 		_effected.broadcastPacket(new ValidateLocation(_effected));
+		
 		if (_effected.isKnockedBack())
 		{
 			_effected.stopKnockingback();

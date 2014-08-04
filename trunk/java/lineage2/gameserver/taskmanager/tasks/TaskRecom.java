@@ -55,10 +55,12 @@ public class TaskRecom extends Task
 	public void onTimeElapsed(ExecutedTask task)
 	{
 		_log.info("Recommendation Global Task: launched.");
+		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			player.restartRecom();
 		}
+		
 		_log.info("Recommendation Global Task: completed.");
 	}
 	

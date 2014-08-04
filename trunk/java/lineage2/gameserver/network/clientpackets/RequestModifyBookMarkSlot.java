@@ -50,9 +50,11 @@ public class RequestModifyBookMarkSlot extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar != null)
 		{
 			final BookMark mark = activeChar.bookmarks.get(slot);
+			
 			if (mark != null)
 			{
 				mark.setName(name);

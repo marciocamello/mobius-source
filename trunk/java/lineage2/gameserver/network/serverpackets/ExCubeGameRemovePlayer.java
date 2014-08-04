@@ -33,9 +33,7 @@ public class ExCubeGameRemovePlayer extends L2GameServerPacket
 	{
 		writeEx(0x98);
 		writeD(0x02);
-		
 		writeD(0xffffffff);
-		
 		writeD(_isRedTeam ? 0x01 : 0x00);
 		writeD(_objectId);
 	}

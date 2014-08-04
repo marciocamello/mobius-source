@@ -37,6 +37,7 @@ public class ExResponseBeautyListPacket extends L2GameServerPacket
 		{
 			return;
 		}
+		
 		int i = 0;
 		
 		if (type == 0)
@@ -72,10 +73,12 @@ public class ExResponseBeautyListPacket extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0x13F);
+		
 		if (!(_send))
 		{
 			return;
 		}
+		
 		writeQ(_adena);
 		writeQ(_coins);
 		writeD(_type);

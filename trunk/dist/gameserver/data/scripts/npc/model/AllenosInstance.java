@@ -26,7 +26,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public final class AllenosInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -56,11 +56,13 @@ public final class AllenosInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("enter_seed"))
 		{
 			if (SoDManager.isAttackStage())
 			{
 				Reflection r = player.getActiveReflection();
+				
 				if (r != null)
 				{
 					if (player.canReenterInstance(tiatIzId))

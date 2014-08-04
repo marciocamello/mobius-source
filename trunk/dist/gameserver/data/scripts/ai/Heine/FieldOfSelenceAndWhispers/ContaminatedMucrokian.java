@@ -46,14 +46,17 @@ public class ContaminatedMucrokian extends Fighter
 	protected void onIntentionAttack(Creature target)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		if (getIntention() == CtrlIntention.AI_INTENTION_ACTIVE)
 		{
 			Functions.npcSay(actor, NpcString.NAIA_WAGANAGEL_PEUTAGUN, ChatType.ALL, 5000);
 		}
+		
 		super.onIntentionAttack(target);
 	}
 	
@@ -66,6 +69,7 @@ public class ContaminatedMucrokian extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((actor != null) && !actor.isDead())
 		{
 			if (attacker != null)
@@ -75,15 +79,18 @@ public class ContaminatedMucrokian extends Fighter
 					if (Rnd.chance(25))
 					{
 						final Location pos = Location.findPointToStay(actor, 200, 300);
+						
 						if (GeoEngine.canMoveToCoord(actor.getX(), actor.getY(), actor.getZ(), pos.x, pos.y, pos.z, actor.getGeoIndex()))
 						{
 							actor.setRunning();
 						}
+						
 						addTaskMove(pos, false);
 					}
 				}
 			}
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 }

@@ -58,6 +58,7 @@ public class Continuous extends Skill
 	{
 		Creature realTarget;
 		boolean reflected;
+		
 		for (Creature target : targets)
 		{
 			if (target != null)
@@ -69,11 +70,13 @@ public class Continuous extends Skill
 						continue;
 					}
 				}
+				
 				reflected = target.checkReflectSkill(activeChar, this);
 				realTarget = reflected ? activeChar : target;
 				double mult = 0.01 * realTarget.calcStat(Stats.DEATH_VULNERABILITY, activeChar, this);
 				double lethal1 = _lethal1 * mult;
 				double lethal2 = _lethal2 * mult;
+				
 				if ((lethal1 > 0) && Rnd.chance(lethal1))
 				{
 					if (realTarget.isPlayer())
@@ -102,9 +105,11 @@ public class Continuous extends Skill
 						activeChar.sendPacket(SystemMsg.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
 					}
 				}
+				
 				getEffects(activeChar, target, getActivateRate() > 0, false, reflected);
 			}
 		}
+		
 		if (isSSPossible())
 		{
 			if (!(Config.SAVING_SPS && (_skillType == SkillType.BUFF)))

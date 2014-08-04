@@ -64,6 +64,7 @@ public class EffectGiantForceAura extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if (forceSkillId > 0)
 		{
 			startEffectTask = ThreadPoolManager.getInstance().schedule(new RunnableImpl()
@@ -84,6 +85,7 @@ public class EffectGiantForceAura extends Effect
 	public void onExit()
 	{
 		super.onExit();
+		
 		if (startEffectTask != null)
 		{
 			startEffectTask.cancel(false);
@@ -98,11 +100,14 @@ public class EffectGiantForceAura extends Effect
 		Creature effector = getEffector();
 		Skill forceSkill = SkillTable.getInstance().getInfo(forceSkillId, 1);
 		Skill auraSkill = getSkill();
+		
 		if ((effector == null) || (forceSkill == null) || (auraSkill == null))
 		{
 			return;
 		}
+		
 		List<Creature> targets = forceSkill.getTargets(effector, effector, false);
+		
 		for (Creature target : targets)
 		{
 			if (target.getEffectList().getEffectsBySkillId(forceSkillId) == null)
@@ -123,6 +128,7 @@ public class EffectGiantForceAura extends Effect
 		{
 			return false;
 		}
+		
 		if (forceSkillId > 0)
 		{
 			updateAura();
@@ -130,11 +136,13 @@ public class EffectGiantForceAura extends Effect
 		else if (auraSkillId > 0)
 		{
 			Creature effector = getEffector();
+			
 			if ((effector == null) || (effector.getEffectList().getEffectsBySkillId(auraSkillId) == null))
 			{
 				return false;
 			}
 		}
+		
 		if (getEffected() instanceof Player)
 		{
 			if (!getEffected().getPlayer().isInParty() && (getEffected() != getEffector()))
@@ -146,10 +154,12 @@ public class EffectGiantForceAura extends Effect
 				return false;
 			}
 		}
+		
 		// Count Active Aura
 		int activeAura = 0;
 		boolean psActive = false;
 		Effect psEffect = null;
+		
 		if (getEffected().getEffectList() != null)
 		{
 			for (Effect e : getEffected().getEffectList().getAllEffects())
@@ -158,10 +168,12 @@ public class EffectGiantForceAura extends Effect
 				{
 					continue;
 				}
+				
 				if ((e.getEffectType() == EffectType.GiantForceAura) && !e.getStackType().contains("PartySolidarity") && !e.getSkill().isAuraSkill())
 				{
 					activeAura++;
 				}
+				
 				if (e.getStackType().contains("PartySolidarity"))
 				{
 					psEffect = e;
@@ -169,6 +181,7 @@ public class EffectGiantForceAura extends Effect
 				}
 			}
 		}
+		
 		if (activeAura >= 4)
 		{
 			if (!psActive || ((psEffect != null) && (psEffect.getSkill().getLevel() < Math.min((activeAura - 3), 3))) || ((psEffect != null) && (psEffect.getSkill().getLevel() > Math.min((activeAura - 3), 3))))
@@ -181,6 +194,7 @@ public class EffectGiantForceAura extends Effect
 		{
 			psEffect.exit();
 		}
+		
 		return true;
 	}
 }

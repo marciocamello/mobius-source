@@ -216,6 +216,7 @@ public class ItemAttributes implements Serializable
 		{
 			return Element.UNHOLY;
 		}
+		
 		return Element.NONE;
 	}
 	
@@ -249,6 +250,7 @@ public class ItemAttributes implements Serializable
 		{
 			return unholy;
 		}
+		
 		return 0;
 	}
 	
@@ -264,21 +266,27 @@ public class ItemAttributes implements Serializable
 			case FIRE:
 				fire = value;
 				break;
+			
 			case WATER:
 				water = value;
 				break;
+			
 			case WIND:
 				wind = value;
 				break;
+			
 			case EARTH:
 				earth = value;
 				break;
+			
 			case HOLY:
 				holy = value;
 				break;
+			
 			case UNHOLY:
 				unholy = value;
 				break;
+			
 			case NONE:
 				break;
 		}
@@ -295,16 +303,22 @@ public class ItemAttributes implements Serializable
 		{
 			case FIRE:
 				return fire;
+				
 			case WATER:
 				return water;
+				
 			case WIND:
 				return wind;
+				
 			case EARTH:
 				return earth;
+				
 			case HOLY:
 				return holy;
+				
 			case UNHOLY:
 				return unholy;
+				
 			default:
 				return 0;
 		}

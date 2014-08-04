@@ -117,6 +117,7 @@ public final class DocumentSkill extends DocumentBase
 				}
 			}
 		}
+		
 		usedTables.clear();
 		super.resetTable();
 	}
@@ -151,10 +152,12 @@ public final class DocumentSkill extends DocumentBase
 		{
 			usedTables.add(name);
 			Object[] a = tables.get(name);
+			
 			if ((a.length - 1) >= currentSkill.currentLevel)
 			{
 				return a[currentSkill.currentLevel];
 			}
+			
 			return a[a.length - 1];
 		}
 		catch (RuntimeException e)
@@ -174,14 +177,17 @@ public final class DocumentSkill extends DocumentBase
 	protected Object getTableValue(String name, int idx)
 	{
 		idx--;
+		
 		try
 		{
 			usedTables.add(name);
 			Object[] a = tables.get(name);
+			
 			if ((a.length - 1) >= idx)
 			{
 				return a[idx];
 			}
+			
 			return a[a.length - 1];
 		}
 		catch (Exception e)
@@ -233,22 +239,25 @@ public final class DocumentSkill extends DocumentBase
 		String skillName = attrs.getNamedItem("name").getNodeValue();
 		String levels = attrs.getNamedItem("levels").getNodeValue();
 		int lastLvl = Integer.parseInt(levels);
+		
 		try
 		{
 			Map<Integer, Integer> displayLevels = new HashMap<>();
 			Node enchant = null;
 			Map<String, Object[]> etables = new HashMap<>();
 			int[] realEnchantRoute = new int[10];
-			
 			int count = 0, eLevels = 0;
 			Node d = n.cloneNode(true);
+			
 			for (int k = 0; k < d.getChildNodes().getLength(); k++)
 			{
 				enchant = d.getChildNodes().item(k);
+				
 				if (!enchant.getNodeName().startsWith("enchant"))
 				{
 					continue;
 				}
+				
 				if (eLevels == 0)
 				{
 					if (enchant.getAttributes().getNamedItem("levels") != null)
@@ -260,8 +269,10 @@ public final class DocumentSkill extends DocumentBase
 						eLevels = 30;
 					}
 				}
+				
 				String ename = enchant.getAttributes().getNamedItem("name").getNodeValue();
 				int enchRoute = 0;
+				
 				if (enchant.getAttributes().getNamedItem("enchRoute") != null)
 				{
 					enchRoute = Integer.parseInt(enchant.getAttributes().getNamedItem("enchRoute").getNodeValue());
@@ -270,10 +281,12 @@ public final class DocumentSkill extends DocumentBase
 				{
 					enchRoute = count + 1;
 				}
+				
 				for (int r = 1; r <= eLevels; r++)
 				{
 					int level;
 					int levelskilllearn;
+					
 					if (Config.ENCHANT_SKILLSID_RETAIL)
 					{
 						level = (enchRoute * 100) + r;
@@ -284,21 +297,25 @@ public final class DocumentSkill extends DocumentBase
 						level = lastLvl + (eLevels * count) + r;
 						levelskilllearn = (100 * (count + 1)) + r;
 					}
+					
 					EnchantSkillLearn e = new EnchantSkillLearn(skillId, levelskilllearn, skillName, "+" + r + " " + ename, r == 1 ? lastLvl : levelskilllearn - 1, lastLvl, eLevels);
 					List<EnchantSkillLearn> t = SkillTreeTable._enchant.get(skillId);
+					
 					if (t == null)
 					{
 						t = new ArrayList<>();
 					}
+					
 					t.add(e);
 					SkillTreeTable._enchant.put(skillId, t);
 					displayLevels.put(level, levelskilllearn);
 				}
+				
 				count++;
 				realEnchantRoute[count] = enchRoute;
-				
 				Node first = enchant.getFirstChild();
 				Node curr = null;
+				
 				for (curr = first; curr != null; curr = curr.getNextSibling())
 				{
 					if ("table".equalsIgnoreCase(curr.getNodeName()))
@@ -308,26 +325,32 @@ public final class DocumentSkill extends DocumentBase
 						Object[] table = parseTable(curr);
 						table = fillTableToSize(table, eLevels);
 						Object[] fulltable = etables.get(name);
+						
 						if (fulltable == null)
 						{
 							fulltable = new Object[lastLvl + (eLevels * 9) + 1];
 						}
+						
 						System.arraycopy(table, 0, fulltable, lastLvl + ((count - 1) * eLevels), eLevels);
 						etables.put(name, fulltable);
 					}
 				}
 			}
+			
 			lastLvl += eLevels * count;
 			currentSkill.id = skillId;
 			currentSkill.name = skillName;
 			currentSkill.sets = new StatsSet[lastLvl];
 			int bLevels = Integer.parseInt(levels);
+			
 			for (int i = 0; i < lastLvl; i++)
 			{
 				int skilllevel = i + 1;
+				
 				if (Config.ENCHANT_SKILLSID_RETAIL)
 				{
 					int current = i + 1;
+					
 					if ((current - bLevels) > 0) // is enchant
 					{
 						int tmplvl = current - bLevels - 1;
@@ -336,17 +359,21 @@ public final class DocumentSkill extends DocumentBase
 						skilllevel = (100 * (realEnchantRoute[enchantRoute + 1])) + enchantLevel + 1;
 					}
 				}
+				
 				currentSkill.sets[i] = new StatsSet();
 				currentSkill.sets[i].set("skill_id", currentSkill.id);
 				currentSkill.sets[i].set("level", skilllevel);
 				currentSkill.sets[i].set("name", currentSkill.name);
 				currentSkill.sets[i].set("base_level", levels);
 			}
+			
 			if (currentSkill.sets.length != lastLvl)
 			{
 				throw new RuntimeException("Skill id=" + skillId + " number of levels missmatch, " + lastLvl + " levels expected");
 			}
+			
 			Node first = n.getFirstChild();
+			
 			for (n = first; n != null; n = n.getNextSibling())
 			{
 				if ("table".equalsIgnoreCase(n.getNodeName()))
@@ -354,14 +381,17 @@ public final class DocumentSkill extends DocumentBase
 					parseTable(n);
 				}
 			}
+			
 			for (String tn : tables.keySet())
 			{
 				Object[] et = etables.get(tn);
+				
 				if (et != null)
 				{
 					Object[] t = tables.get(tn);
 					Object max = t[t.length - 1];
 					System.arraycopy(t, 0, et, 0, t.length);
+					
 					for (int j = 0; j < et.length; j++)
 					{
 						if (et[j] == null)
@@ -369,9 +399,11 @@ public final class DocumentSkill extends DocumentBase
 							et[j] = max;
 						}
 					}
+					
 					tables.put(tn, et);
 				}
 			}
+			
 			for (int i = 1; i <= lastLvl; i++)
 			{
 				for (n = first; n != null; n = n.getNextSibling())
@@ -382,31 +414,38 @@ public final class DocumentSkill extends DocumentBase
 					}
 				}
 			}
+			
 			makeSkills();
+			
 			for (int i = 0; i < lastLvl; i++)
 			{
 				int skilllevel = i;
 				currentSkill.currentLevel = skilllevel;
-				
 				lineage2.gameserver.model.Skill current = currentSkill.currentSkills.get(i);
+				
 				if (displayLevels.get(current.getLevel()) != null)
 				{
 					current.setDisplayLevel(displayLevels.get(current.getLevel()));
 				}
+				
 				current.setEnchantLevelCount(eLevels);
+				
 				for (n = first; n != null; n = n.getNextSibling())
 				{
 					if ("cond".equalsIgnoreCase(n.getNodeName()))
 					{
 						Condition condition = parseCondition(n.getFirstChild());
+						
 						if (condition != null)
 						{
 							Node msgAttribute = n.getAttributes().getNamedItem("msgId");
+							
 							if (msgAttribute != null)
 							{
 								int msgId = parseNumber(msgAttribute.getNodeValue()).intValue();
 								condition.setSystemMsg(msgId);
 							}
+							
 							current.attach(condition);
 						}
 					}
@@ -420,6 +459,7 @@ public final class DocumentSkill extends DocumentBase
 					}
 				}
 			}
+			
 			currentSkill.skills.addAll(currentSkill.currentSkills);
 		}
 		catch (Exception e)
@@ -442,6 +482,7 @@ public final class DocumentSkill extends DocumentBase
 			System.arraycopy(table, 0, ret, 0, table.length);
 			table = ret;
 		}
+		
 		for (int j = 1; j < size; j++)
 		{
 			if (table[j] == null)
@@ -449,6 +490,7 @@ public final class DocumentSkill extends DocumentBase
 				table[j] = table[j - 1];
 			}
 		}
+		
 		return table;
 	}
 	
@@ -458,6 +500,7 @@ public final class DocumentSkill extends DocumentBase
 	private void makeSkills()
 	{
 		currentSkill.currentSkills = new ArrayList<>(currentSkill.sets.length);
+		
 		for (int i = 0; i < currentSkill.sets.length; i++)
 		{
 			currentSkill.currentSkills.add(i, currentSkill.sets[i].getEnum("skillType", SkillType.class).makeSkill(currentSkill.sets[i]));

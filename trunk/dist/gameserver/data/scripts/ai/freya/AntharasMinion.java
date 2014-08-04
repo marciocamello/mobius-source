@@ -43,6 +43,7 @@ public class AntharasMinion extends Fighter
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
+		
 		for (Player p : AntharasManager.getZone().getInsidePlayers())
 		{
 			notifyEvent(CtrlEvent.EVT_AGGRESSION, p, 5000);

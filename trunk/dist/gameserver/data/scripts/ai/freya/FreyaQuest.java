@@ -43,10 +43,12 @@ public class FreyaQuest extends Fighter
 	{
 		super.onEvtSpawn();
 		final Reflection r = getActor().getReflection();
+		
 		for (Player p : r.getPlayers())
 		{
 			this.notifyEvent(CtrlEvent.EVT_ATTACKED, p, 300);
 		}
+		
 		Functions.npcSayCustomMessage(getActor(), "scripts.ai.freya.FreyaQuest.onEvtSpawn");
 	}
 	

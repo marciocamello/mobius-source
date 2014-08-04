@@ -61,6 +61,7 @@ public class EnchantScrollManager
 		factory.setIgnoringComments(true);
 		File file = new File(Config.DATAPACK_ROOT, "data/xml/asc/model/etcitems/EnchantScroll.xml");
 		Document doc = null;
+		
 		if (file.exists())
 		{
 			try
@@ -72,6 +73,7 @@ public class EnchantScrollManager
 				_log.warn("Could not parse EnchantScroll.xml file: " + e.getMessage(), e);
 				return;
 			}
+			
 			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 			{
 				if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -83,45 +85,61 @@ public class EnchantScrollManager
 							NamedNodeMap attrs = d.getAttributes();
 							Node att;
 							att = attrs.getNamedItem("id");
+							
 							if (att != null)
 							{
 								_itemId = Integer.parseInt(att.getNodeValue());
 							}
+							
 							att = attrs.getNamedItem("type");
+							
 							if (att != null)
 							{
 								_type = EnchantScrollType.valueOf(att.getNodeValue());
 							}
+							
 							att = attrs.getNamedItem("target");
+							
 							if (att != null)
 							{
 								_target = EnchantScrollTarget.valueOf(att.getNodeValue());
 							}
+							
 							att = attrs.getNamedItem("grade");
+							
 							if (att != null)
 							{
 								_grade = Grade.valueOf(att.getNodeValue());
 							}
+							
 							att = attrs.getNamedItem("chance");
+							
 							if (att != null)
 							{
 								_chance = Integer.parseInt(att.getNodeValue());
 							}
+							
 							att = attrs.getNamedItem("min");
+							
 							if (att != null)
 							{
 								_min = Integer.parseInt(att.getNodeValue());
 							}
+							
 							att = attrs.getNamedItem("safe");
+							
 							if (att != null)
 							{
 								_safe = Integer.parseInt(att.getNodeValue());
 							}
+							
 							att = attrs.getNamedItem("max");
+							
 							if (att != null)
 							{
 								_max = Integer.parseInt(att.getNodeValue());
 							}
+							
 							EnchantScrollInfo esi = new EnchantScrollInfo();
 							esi.setItemId(_itemId);
 							esi.setType(_type);
@@ -137,6 +155,7 @@ public class EnchantScrollManager
 				}
 			}
 		}
+		
 		_log.info("EnchantScrollManager: Loaded " + _scrolls.size() + " scrolls data...");
 	}
 	

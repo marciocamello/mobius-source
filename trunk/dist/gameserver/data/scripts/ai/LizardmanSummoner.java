@@ -68,6 +68,7 @@ public class LizardmanSummoner extends Mystic
 		if (!spawnedMobs && attacker.isPlayable())
 		{
 			final NpcInstance actor = getActor();
+			
 			for (int i = 0; i < SPAWN_COUNT; i++)
 			{
 				try
@@ -85,8 +86,10 @@ public class LizardmanSummoner extends Mystic
 					e.printStackTrace();
 				}
 			}
+			
 			spawnedMobs = true;
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 }

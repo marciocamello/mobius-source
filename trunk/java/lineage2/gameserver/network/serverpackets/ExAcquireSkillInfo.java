@@ -44,16 +44,20 @@ public class ExAcquireSkillInfo extends L2GameServerPacket
 		writeH(skillLearn.getMinLevel());
 		writeH(0); // Tauti
 		writeD(skillLearn.getRequiredItems().size());
+		
 		for (int itemId : skillLearn.getRequiredItems().keySet())
 		{
 			writeD(itemId);
 			writeQ(skillLearn.getRequiredItems().get(itemId));
 		}
+		
 		Skill skkill = SkillTable.getInstance().getInfo(skillLearn.getId(), skillLearn.getLevel());
+		
 		if (skkill.isRelationSkill())
 		{
 			int[] _ss = skkill.getRelationSkills();
 			writeD(_ss.length);
+			
 			for (int skillId : _ss)
 			{
 				writeD(skillId);

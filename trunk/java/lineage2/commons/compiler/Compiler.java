@@ -71,16 +71,19 @@ public class Compiler
 	public boolean compile(File... files)
 	{
 		List<String> options = new ArrayList<>();
-		options.add("-1.7");
 		options.add("-Xlint:all");
-		options.add("-warn:none");
+		options.add("-warn:none"); // options.add("-warn:-enumSwitch");
 		options.add("-g");
+		options.add("-deprecation");
+		options.add("-1.8");
 		Writer writer = new StringWriter();
 		JavaCompiler.CompilationTask compile = javac.getTask(writer, memFileManager, listener, options, null, fileManager.getJavaFileObjects(files));
+		
 		if (compile.call())
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	

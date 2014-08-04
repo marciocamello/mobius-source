@@ -51,12 +51,14 @@ public final class AutoBan
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT MAX(endban) AS endban FROM bans WHERE obj_Id=? AND endban IS NOT NULL");
 			statement.setInt(1, ObjectId);
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				Long endban = rset.getLong("endban") * 1000L;
@@ -84,6 +86,7 @@ public final class AutoBan
 	public static void Banned(Player actor, int period, String msg, String GM)
 	{
 		int endban = 0;
+		
 		if (period == -1)
 		{
 			endban = Integer.MAX_VALUE;
@@ -99,15 +102,19 @@ public final class AutoBan
 			_log.warn("Negative ban period: " + period);
 			return;
 		}
+		
 		String date = new SimpleDateFormat("yy.MM.dd H:mm:ss").format(new Date());
 		String enddate = new SimpleDateFormat("yy.MM.dd H:mm:ss").format(new Date(endban * 1000L));
+		
 		if ((endban * 1000L) <= Calendar.getInstance().getTimeInMillis())
 		{
 			_log.warn("Negative ban period | From " + date + " to " + enddate);
 			return;
 		}
+		
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -145,13 +152,16 @@ public final class AutoBan
 		boolean res;
 		int obj_id = CharacterDAO.getInstance().getObjectIdByName(actor);
 		res = obj_id > 0;
+		
 		if (!res)
 		{
 			return false;
 		}
+		
 		Connection con = null;
 		PreparedStatement statement = null;
 		PreparedStatement statement2 = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -160,9 +170,11 @@ public final class AutoBan
 			statement.setInt(2, obj_id);
 			statement.executeUpdate();
 			DbUtils.close(statement);
+			
 			if (acc_level < 0)
 			{
 				int endban = 0;
+				
 				if (period == -1)
 				{
 					endban = Integer.MAX_VALUE;
@@ -178,13 +190,16 @@ public final class AutoBan
 					_log.warn("Negative ban period: " + period);
 					return false;
 				}
+				
 				String date = new SimpleDateFormat("yy.MM.dd H:mm:ss").format(new Date());
 				String enddate = new SimpleDateFormat("yy.MM.dd H:mm:ss").format(new Date(endban * 1000L));
+				
 				if ((endban * 1000L) <= Calendar.getInstance().getTimeInMillis())
 				{
 					_log.warn("Negative ban period | From " + date + " to " + enddate);
 					return false;
 				}
+				
 				statement = con.prepareStatement("INSERT INTO bans (obj_id, baned, unban, reason, GM, endban) VALUES(?,?,?,?,?,?)");
 				statement.setInt(1, obj_id);
 				statement.setString(2, date);
@@ -226,6 +241,7 @@ public final class AutoBan
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			String date = new SimpleDateFormat("yy.MM.dd H:mm:ss").format(new Date());
@@ -273,13 +289,16 @@ public final class AutoBan
 		boolean res = true;
 		long NoChannel = period * 60000;
 		int obj_id = CharacterDAO.getInstance().getObjectIdByName(actor);
+		
 		if (obj_id == 0)
 		{
 			return false;
 		}
+		
 		Player plyr = World.getPlayer(actor);
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		if (plyr != null)
 		{
 			plyr.sendMessage(new CustomMessage("lineage2.Util.AutoBan.ChatBan", plyr).addString(GM).addNumber(period));
@@ -305,6 +324,7 @@ public final class AutoBan
 				DbUtils.closeQuietly(con, statement);
 			}
 		}
+		
 		return res;
 	}
 	
@@ -319,12 +339,15 @@ public final class AutoBan
 		boolean res = true;
 		Player plyr = World.getPlayer(actor);
 		int obj_id = CharacterDAO.getInstance().getObjectIdByName(actor);
+		
 		if (obj_id == 0)
 		{
 			return false;
 		}
+		
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		if (plyr != null)
 		{
 			plyr.sendMessage(new CustomMessage("lineage2.Util.AutoBan.ChatUnBan", plyr).addString(GM));
@@ -350,6 +373,7 @@ public final class AutoBan
 				DbUtils.closeQuietly(con, statement);
 			}
 		}
+		
 		return res;
 	}
 }

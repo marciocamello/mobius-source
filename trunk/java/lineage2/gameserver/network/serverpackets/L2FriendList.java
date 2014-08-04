@@ -28,6 +28,7 @@ public class L2FriendList extends L2GameServerPacket
 	{
 		Map<Integer, Friend> list = player.getFriendList().getList();
 		_list = new ArrayList<>(list.size());
+		
 		for (Map.Entry<Integer, Friend> entry : list.entrySet())
 		{
 			FriendInfo f = new FriendInfo();
@@ -43,6 +44,7 @@ public class L2FriendList extends L2GameServerPacket
 	{
 		writeC(0x75);
 		writeD(_list.size());
+		
 		for (FriendInfo friendInfo : _list)
 		{
 			writeD(0);
@@ -55,7 +57,7 @@ public class L2FriendList extends L2GameServerPacket
 	private static class FriendInfo
 	{
 		/**
-		 * 
+		 *
 		 */
 		public FriendInfo()
 		{

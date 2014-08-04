@@ -72,14 +72,17 @@ public class ChangePassword extends ReceivablePacket
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rs = null;
+		
 		try
 		{
 			con = L2DatabaseFactory.getInstance().getConnection();
+			
 			try
 			{
 				statement = con.prepareStatement("SELECT * FROM accounts WHERE login = ?");
 				statement.setString(1, accname);
 				rs = statement.executeQuery();
+				
 				if (rs.next())
 				{
 					dbPassword = rs.getString("password");
@@ -93,6 +96,7 @@ public class ChangePassword extends ReceivablePacket
 			{
 				DbUtils.closeQuietly(statement, rs);
 			}
+			
 			try
 			{
 				if (!Config.DEFAULT_CRYPT.compare(oldPass, dbPassword))

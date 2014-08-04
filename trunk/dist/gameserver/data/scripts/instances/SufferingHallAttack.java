@@ -48,7 +48,7 @@ public class SufferingHallAttack extends Reflection
 	private class DeathListener implements OnDeathListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public DeathListener()
 		{
@@ -62,6 +62,7 @@ public class SufferingHallAttack extends Reflection
 			{
 				return;
 			}
+			
 			if (self.getNpcId() == AliveTumor)
 			{
 				if (self.isInZone("[soi_hos_attack_1]"))
@@ -114,11 +115,13 @@ public class SufferingHallAttack extends Reflection
 					{
 						spawnRoom(7);
 						setReenterTime(System.currentTimeMillis());
+						
 						for (Player p : getPlayers())
 						{
 							p.sendPacket(new ExSendUIEvent(p, 1, 1, 0, 0));
 							p.sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(5));
 						}
+						
 						startCollapseTimer(5 * 60 * 1000L);
 						timeSpent = (int) (System.currentTimeMillis() - _savedTime) / 1000;
 					}
@@ -144,37 +147,45 @@ public class SufferingHallAttack extends Reflection
 				getZone("[soi_hos_attack_attackup_1]").setActive(true);
 				getZone("[soi_hos_attack_defenceup_1]").setActive(true);
 				break;
+			
 			case 2:
 				spawnByGroup("soi_hos_attack_2");
 				getZone("[soi_hos_attack_attackup_2]").setActive(true);
 				getZone("[soi_hos_attack_defenceup_2]").setActive(true);
 				break;
+			
 			case 3:
 				spawnByGroup("soi_hos_attack_3");
 				getZone("[soi_hos_attack_attackup_3]").setActive(true);
 				getZone("[soi_hos_attack_defenceup_3]").setActive(true);
 				break;
+			
 			case 4:
 				spawnByGroup("soi_hos_attack_4");
 				getZone("[soi_hos_attack_attackup_4]").setActive(true);
 				getZone("[soi_hos_attack_defenceup_4]").setActive(true);
 				break;
+			
 			case 5:
 				spawnByGroup("soi_hos_attack_5");
 				getZone("[soi_hos_attack_attackup_5]").setActive(true);
 				getZone("[soi_hos_attack_defenceup_5]").setActive(true);
 				break;
+			
 			case 6:
 				spawnByGroup("soi_hos_attack_6");
 				getZone("[soi_hos_attack_pcbuff_6]").setActive(true);
 				break;
+			
 			case 7:
 				spawnByGroup("soi_hos_attack_7");
 				getZone("[soi_hos_attack_pcbuff_6]").setActive(false);
 				break;
+			
 			default:
 				break;
 		}
+		
 		invokeDeathListener();
 	}
 	

@@ -52,6 +52,7 @@ public class _033_MakeAPairOfDressShoes extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("30838-1.htm"))
 		{
 			st.setCond(1);
@@ -98,6 +99,7 @@ public class _033_MakeAPairOfDressShoes extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -107,6 +109,7 @@ public class _033_MakeAPairOfDressShoes extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == 30838)
 		{
 			if ((cond == 0) && (st.getQuestItemsCount(DRESS_SHOES_BOX) == 0))
@@ -114,6 +117,7 @@ public class _033_MakeAPairOfDressShoes extends Quest implements ScriptFile
 				if (st.getPlayer().getLevel() >= 60)
 				{
 					QuestState fwear = st.getPlayer().getQuestState(_037_PleaseMakeMeFormalWear.class);
+					
 					if ((fwear != null) && (fwear.getCond() == 7))
 					{
 						htmltext = "30838-0.htm";
@@ -175,6 +179,7 @@ public class _033_MakeAPairOfDressShoes extends Quest implements ScriptFile
 				htmltext = "30164-2.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

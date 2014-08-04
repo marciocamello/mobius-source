@@ -47,12 +47,15 @@ public class OlympiadStat implements IUserCommandHandler
 		{
 			return false;
 		}
+		
 		GameObject objectTarget = Config.OLYMPIAD_OLDSTYLE_STAT ? activeChar : activeChar.getTarget();
+		
 		if ((objectTarget == null) || !objectTarget.isPlayer() || !objectTarget.getPlayer().isNoble())
 		{
 			activeChar.sendPacket(SystemMsg.THIS_COMMAND_CAN_ONLY_BE_USED_BY_A_NOBLESSE);
 			return true;
 		}
+		
 		Player playerTarget = objectTarget.getPlayer();
 		SystemMessage2 sm = new SystemMessage2(SystemMsg.FOR_THE_CURRENT_GRAND_OLYMPIAD_YOU_HAVE_PARTICIPATED_IN_S1_MATCHES_S2_WINS_S3_DEFEATS_YOU_CURRENTLY_HAVE_S4_OLYMPIAD_POINTS);
 		sm.addInteger(Olympiad.getCompetitionDone(playerTarget.getObjectId()));

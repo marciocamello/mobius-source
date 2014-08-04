@@ -80,20 +80,6 @@ public class GameObjectsStorage
 	}
 	
 	/**
-	 * Method getStorageSummons.
-	 * @return GameObjectArray<Playable>
-	 */
-	@SuppressWarnings(
-	{
-		"unchecked",
-		"unused"
-	})
-	private static GameObjectArray<Playable> getStorageSummons()
-	{
-		return storages[STORAGE_SUMMONS];
-	}
-	
-	/**
 	 * Method getStorageNpcs.
 	 * @return GameObjectArray<NpcInstance>
 	 */
@@ -114,10 +100,12 @@ public class GameObjectsStorage
 		{
 			return STORAGE_NPCS;
 		}
+		
 		if (o.isPlayable())
 		{
 			return o.isPlayer() ? STORAGE_PLAYERS : STORAGE_SUMMONS;
 		}
+		
 		return STORAGE_OTHER;
 	}
 	
@@ -129,10 +117,12 @@ public class GameObjectsStorage
 	public static GameObject get(long storedId)
 	{
 		int STORAGE_ID;
+		
 		if ((storedId == 0) || ((STORAGE_ID = getStorageID(storedId)) == STORAGE_NONE))
 		{
 			return null;
 		}
+		
 		GameObject result = storages[STORAGE_ID].get(getStoredIndex(storedId));
 		return (result != null) && (result.getObjectId() == getStoredObjectId(storedId)) ? result : null;
 	}
@@ -145,10 +135,12 @@ public class GameObjectsStorage
 	public static GameObject get(Long storedId)
 	{
 		int STORAGE_ID;
+		
 		if ((storedId == null) || (storedId == 0) || ((STORAGE_ID = getStorageID(storedId)) == STORAGE_NONE))
 		{
 			return null;
 		}
+		
 		GameObject result = storages[STORAGE_ID].get(getStoredIndex(storedId));
 		return (result != null) && (result.getObjectId() == getStoredObjectId(storedId)) ? result : null;
 	}
@@ -161,10 +153,12 @@ public class GameObjectsStorage
 	public static boolean isStored(long storedId)
 	{
 		int STORAGE_ID;
+		
 		if ((storedId == 0) || ((STORAGE_ID = getStorageID(storedId)) == STORAGE_NONE))
 		{
 			return false;
 		}
+		
 		GameObject o = storages[STORAGE_ID].get(getStoredIndex(storedId));
 		return (o != null) && (o.getObjectId() == getStoredObjectId(storedId));
 	}
@@ -313,6 +307,7 @@ public class GameObjectsStorage
 	public static int getAllObjectsCount()
 	{
 		int result = 0;
+		
 		for (GameObjectArray<?> storage : storages)
 		{
 			if (storage != null)
@@ -320,6 +315,7 @@ public class GameObjectsStorage
 				result += storage.getRealSize();
 			}
 		}
+		
 		return result;
 	}
 	
@@ -335,6 +331,7 @@ public class GameObjectsStorage
 	public static List<GameObject> getAllObjects()
 	{
 		List<GameObject> result = new ArrayList<>(getAllObjectsCount());
+		
 		for (GameObjectArray storage : storages)
 		{
 			if (storage != null)
@@ -342,6 +339,7 @@ public class GameObjectsStorage
 				storage.getAll(result);
 			}
 		}
+		
 		return result;
 	}
 	
@@ -353,6 +351,7 @@ public class GameObjectsStorage
 	public static GameObject findObject(int objId)
 	{
 		GameObject result = null;
+		
 		for (GameObjectArray<?> storage : storages)
 		{
 			if (storage != null)
@@ -363,6 +362,7 @@ public class GameObjectsStorage
 				}
 			}
 		}
+		
 		return null;
 	}
 	
@@ -385,11 +385,14 @@ public class GameObjectsStorage
 		{
 			return 0;
 		}
+		
 		long now = System.currentTimeMillis();
+		
 		if (now > offline_refresh)
 		{
 			offline_refresh = now + 10000;
 			offline_count = 0;
+			
 			for (Player player : getStoragePlayers())
 			{
 				if (player.isInOfflineMode())
@@ -398,6 +401,7 @@ public class GameObjectsStorage
 				}
 			}
 		}
+		
 		return offline_count;
 	}
 	
@@ -427,6 +431,7 @@ public class GameObjectsStorage
 	public static NpcInstance getByNpcId(int npc_id)
 	{
 		NpcInstance result = null;
+		
 		for (NpcInstance temp : getStorageNpcs())
 		{
 			if (npc_id == temp.getNpcId())
@@ -435,9 +440,11 @@ public class GameObjectsStorage
 				{
 					return temp;
 				}
+				
 				result = temp;
 			}
 		}
+		
 		return result;
 	}
 	
@@ -450,6 +457,7 @@ public class GameObjectsStorage
 	public static List<NpcInstance> getAllByNpcId(int npc_id, boolean justAlive)
 	{
 		List<NpcInstance> result = new ArrayList<>();
+		
 		for (NpcInstance temp : getStorageNpcs())
 		{
 			if ((temp.getTemplate() != null) && (npc_id == temp.getTemplate().getNpcId()) && (!justAlive || !temp.isDead()))
@@ -457,6 +465,7 @@ public class GameObjectsStorage
 				result.add(temp);
 			}
 		}
+		
 		return result;
 	}
 	
@@ -469,6 +478,7 @@ public class GameObjectsStorage
 	public static List<NpcInstance> getAllByNpcId(int[] npc_ids, boolean justAlive)
 	{
 		List<NpcInstance> result = new ArrayList<>();
+		
 		for (NpcInstance temp : getStorageNpcs())
 		{
 			if (!justAlive || !temp.isDead())
@@ -482,6 +492,7 @@ public class GameObjectsStorage
 				}
 			}
 		}
+		
 		return result;
 	}
 	
@@ -493,10 +504,12 @@ public class GameObjectsStorage
 	public static NpcInstance getNpc(String s)
 	{
 		List<NpcInstance> npcs = getStorageNpcs().findAllByName(s);
+		
 		if (npcs.size() == 0)
 		{
 			return null;
 		}
+		
 		for (NpcInstance temp : npcs)
 		{
 			if (!temp.isDead())
@@ -504,10 +517,12 @@ public class GameObjectsStorage
 				return temp;
 			}
 		}
+		
 		if (npcs.size() > 0)
 		{
 			return npcs.remove(npcs.size() - 1);
 		}
+		
 		return null;
 	}
 	
@@ -612,12 +627,14 @@ public class GameObjectsStorage
 	{
 		StrTable table = new StrTable("L2 Objects Storage Stats");
 		GameObjectArray<?> storage;
+		
 		for (int i = 0; i < storages.length; i++)
 		{
 			if ((storage = storages[i]) == null)
 			{
 				continue;
 			}
+			
 			synchronized (storage)
 			{
 				table.set(i, "Name", storage.name);
@@ -625,6 +642,7 @@ public class GameObjectsStorage
 				table.set(i, "Capacity / init", storage.capacity() + " / " + storage.initCapacity);
 			}
 		}
+		
 		return table;
 	}
 }

@@ -805,10 +805,12 @@ public enum Stats
 		{
 			return _min;
 		}
+		
 		if (val > _max)
 		{
 			return _max;
 		}
+		
 		return val;
 	}
 	
@@ -826,6 +828,7 @@ public enum Stats
 				return s;
 			}
 		}
+		
 		throw new NoSuchElementException("Unknown name '" + name + "' for enum BaseStats");
 	}
 	

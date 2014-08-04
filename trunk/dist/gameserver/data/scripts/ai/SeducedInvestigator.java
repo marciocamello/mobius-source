@@ -71,11 +71,14 @@ public class SeducedInvestigator extends Fighter
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return false;
 		}
+		
 		final List<NpcInstance> around = actor.getAroundNpc(1000, 300);
+		
 		if ((around != null) && !around.isEmpty())
 		{
 			for (NpcInstance npc : around)
@@ -86,14 +89,18 @@ public class SeducedInvestigator extends Fighter
 				}
 			}
 		}
+		
 		if (Rnd.chance(0.1) && ((_reuse + 30000) < System.currentTimeMillis()))
 		{
 			final List<Player> players = World.getAroundPlayers(actor, 500, 200);
+			
 			if ((players == null) || (players.size() < 1))
 			{
 				return false;
 			}
+			
 			final Player player = players.get(Rnd.get(players.size()));
+			
 			if (player.getReflectionId() == actor.getReflectionId())
 			{
 				_reuse = System.currentTimeMillis();
@@ -104,6 +111,7 @@ public class SeducedInvestigator extends Fighter
 					5972,
 					5973
 				};
+				
 				if (actor.getNpcId() == 36562)
 				{
 					actor.doCast(SkillTable.getInstance().getInfo(buffs[0], 1), player, true);
@@ -122,6 +130,7 @@ public class SeducedInvestigator extends Fighter
 				}
 			}
 		}
+		
 		return true;
 	}
 	
@@ -135,10 +144,12 @@ public class SeducedInvestigator extends Fighter
 		final NpcInstance actor = getActor();
 		final Reflection r = actor.getReflection();
 		final List<Player> players = r.getPlayers();
+		
 		for (Player p : players)
 		{
 			p.sendPacket(new ExShowScreenMessage("The Investigator has been killed. The mission is failed.", 3000, ScreenMessageAlign.TOP_CENTER, true));
 		}
+		
 		r.startCollapseTimer(5 * 1000L);
 		super.onEvtDead(killer);
 	}
@@ -152,18 +163,22 @@ public class SeducedInvestigator extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (attacker == null)
 		{
 			return;
 		}
+		
 		if (attacker.isPlayable())
 		{
 			return;
 		}
+		
 		if ((attacker.getNpcId() == 25659) || (attacker.getNpcId() == 25660) || (attacker.getNpcId() == 25661))
 		{
 			actor.getAggroList().addDamageHate(attacker, 0, 20);
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	
@@ -179,6 +194,7 @@ public class SeducedInvestigator extends Fighter
 		{
 			return;
 		}
+		
 		super.onEvtAggression(target, aggro);
 	}
 	
@@ -194,6 +210,7 @@ public class SeducedInvestigator extends Fighter
 		{
 			return false;
 		}
+		
 		return super.checkAggression(target);
 	}
 }

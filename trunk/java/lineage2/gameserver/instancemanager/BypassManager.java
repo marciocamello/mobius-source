@@ -70,13 +70,16 @@ public class BypassManager
 		{
 			case '0':
 				return BypassType.ENCODED;
+				
 			case '1':
 				return BypassType.ENCODED_BBS;
+				
 			default:
 				if (Strings.matches(bypass, "^(_mrsl|_diary|_match|manor_menu_select|_match|_olympiad).*", Pattern.DOTALL))
 				{
 					return BypassType.SIMPLE;
 				}
+				
 				return BypassType.SIMPLE_DIRECT;
 		}
 	}
@@ -92,6 +95,7 @@ public class BypassManager
 	{
 		Matcher m = p.matcher(html);
 		StringBuffer sb = new StringBuffer();
+		
 		while (m.find())
 		{
 			String bypass = m.group(2);
@@ -99,11 +103,13 @@ public class BypassManager
 			String params = "";
 			int i = bypass.indexOf(" $");
 			boolean use_params = i >= 0;
+			
 			if (use_params)
 			{
 				code = bypass.substring(0, i);
 				params = bypass.substring(i).replace("$", "\\$");
 			}
+			
 			if (bbs)
 			{
 				m.appendReplacement(sb, "\"bypass -h 1" + Integer.toHexString(bypassStorage.size()) + params + "\"");
@@ -112,8 +118,10 @@ public class BypassManager
 			{
 				m.appendReplacement(sb, "\"bypass -h 0" + Integer.toHexString(bypassStorage.size()) + params + "\"");
 			}
+			
 			bypassStorage.add(code);
 		}
+		
 		m.appendTail(sb);
 		return sb.toString();
 	}
@@ -133,6 +141,7 @@ public class BypassManager
 			String[] bypass_parsed = bypass.split(" ");
 			int idx = Integer.parseInt(bypass_parsed[0].substring(1), 16);
 			String bp;
+			
 			try
 			{
 				bp = bypassStorage.get(idx);
@@ -141,17 +150,21 @@ public class BypassManager
 			{
 				bp = null;
 			}
+			
 			if (bp == null)
 			{
 				Log.add("Can't decode bypass (bypass not exists): " + (bbs ? "[bbs] " : "") + bypass + " / Player: " + player.getName() + " / Npc: " + (player.getLastNpc() == null ? "null" : player.getLastNpc().getName()), "debug_bypass");
 				return null;
 			}
+			
 			DecodedBypass result = null;
 			result = new DecodedBypass(bp, bbs);
+			
 			for (int i = 1; i < bypass_parsed.length; i++)
 			{
 				result.bypass += " " + bypass_parsed[i];
 			}
+			
 			result.trim();
 			return result;
 		}

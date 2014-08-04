@@ -128,6 +128,7 @@ public class SMSWayToPay
 		{
 			_instance = new SMSWayToPay();
 		}
+		
 		return _instance;
 	}
 	
@@ -149,6 +150,7 @@ public class SMSWayToPay
 	private static String pageToString(String address)
 	{
 		String str = null;
+		
 		try
 		{
 			URL url = new URL(address);
@@ -158,15 +160,19 @@ public class SMSWayToPay
 			String charset = m.matches() ? m.group(1) : "ISO-8859-1";
 			Reader r = new InputStreamReader(con.getInputStream(), charset);
 			StringBuilder buf = new StringBuilder();
+			
 			while (true)
 			{
 				int ch = r.read();
+				
 				if (ch < 0)
 				{
 					break;
 				}
+				
 				buf.append((char) ch);
 			}
+			
 			str = buf.toString();
 		}
 		catch (MalformedURLException e)
@@ -175,6 +181,7 @@ public class SMSWayToPay
 		catch (Exception e)
 		{
 		}
+		
 		return str;
 	}
 	
@@ -185,13 +192,16 @@ public class SMSWayToPay
 	{
 		ArrayList<DataContainer> Containers = new ArrayList<>();
 		String[] arrayedDatas = pageToString(Config.SMS_PAYMENT_WEB_ADDRESS).split("\\{");
+		
 		for (String arrayedData : arrayedDatas)
 		{
 			if (!arrayedData.contains("}") || (arrayedData.replace(" ", "").length() < 30))
 			{
 				continue;
 			}
+			
 			String[] formedStr = arrayedData.substring(arrayedData.indexOf('}')).replace("\n", "").replace("}", "").split(";");
+			
 			if (formedStr.length > 1)
 			{
 				DataContainer dc = new DataContainer();
@@ -208,9 +218,11 @@ public class SMSWayToPay
 				Containers.add(dc);
 				StringTokenizer inputST = new StringTokenizer(dc.client_params, ",");
 				Hashtable<String, String> outputCollection = new Hashtable<>();
+				
 				while (inputST.hasMoreTokens())
 				{
 					String s1 = inputST.nextToken();
+					
 					if ((s1.length() > 0) && (s1.charAt(0) == '{'))
 					{
 						s1 = s1.substring(1);
@@ -219,22 +231,28 @@ public class SMSWayToPay
 					{
 						s1 = s1.substring(0, s1.length() - 1);
 					}
+					
 					StringTokenizer subST = new StringTokenizer(s1, ":");
+					
 					while (subST.hasMoreTokens())
 					{
 						String key = subST.nextToken();
 						String value = subST.nextToken();
+						
 						if (((key.length() > 0) && (key.charAt(0) == '"')) && key.endsWith("\""))
 						{
 							key = key.substring(1, key.length() - 1);
 						}
+						
 						if (((value.length() > 0) && (value.charAt(0) == '"')) && value.endsWith("\""))
 						{
 							value = value.substring(1, value.length() - 1);
 						}
+						
 						outputCollection.put(key, value);
 					}
 				}
+				
 				if ((dc.time + (Config.SMS_PAYMENT_SAVE_DAYS * 86400)) > (System.currentTimeMillis() / 1000))
 				{
 					checkAndSave(dc.id, dc.service_id, dc.status, dc.time, dc.curr_id, dc.sum, dc.profit, dc.email, dc.client_id, Integer.parseInt(outputCollection.get("wNumber")), outputCollection.get("wPhone"), outputCollection.get("wText"), Float.parseFloat(outputCollection.get("wCost")), Float.parseFloat(outputCollection.get("wProfit")), outputCollection.get("wCountry"));
@@ -267,21 +285,25 @@ public class SMSWayToPay
 		Connection con = null;
 		PreparedStatement selectPlayerStatement = null, selectSmsDataStatement = null, insertSmsStatement = null;
 		ResultSet rsetPlayer = null, rsetSms = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			selectPlayerStatement = con.prepareStatement(SELECT_PLAYER_OBJID);
 			selectPlayerStatement.setString(1, wText);
 			rsetPlayer = selectPlayerStatement.executeQuery();
+			
 			if (rsetPlayer.next())
 			{
 				objId = rsetPlayer.getInt("obj_Id");
+				
 				if (objId > 0)
 				{
 					selectSmsDataStatement = con.prepareStatement(SELECT_CHARACTER_SMS_DATA);
 					selectSmsDataStatement.setInt(1, id);
 					selectSmsDataStatement.setString(2, wText);
 					rsetSms = selectSmsDataStatement.executeQuery();
+					
 					if (!rsetSms.next())
 					{
 						insertSmsStatement = con.prepareStatement(INSERT_SMS_DATA);
@@ -327,6 +349,7 @@ public class SMSWayToPay
 		calendar.add(Calendar.DAY_OF_YEAR, -Config.SMS_PAYMENT_SAVE_DAYS);
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -352,9 +375,11 @@ public class SMSWayToPay
 		Connection con = null;
 		PreparedStatement selectStatement = null, updateStatement = null;
 		ResultSet rsetProfit = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
+			
 			for (Player player : GameObjectsStorage.getAllPlayers())
 			{
 				String wText = player.getName();
@@ -362,6 +387,7 @@ public class SMSWayToPay
 				selectStatement = con.prepareStatement(SELECT_RPOFIT_SMS_DATA);
 				selectStatement.setString(1, wText);
 				rsetProfit = selectStatement.executeQuery();
+				
 				if (Config.SMS_PAYMENT_TYPE)
 				{
 					while (rsetProfit.next())
@@ -376,12 +402,14 @@ public class SMSWayToPay
 						profit += rsetProfit.getFloat("wCost");
 					}
 				}
+				
 				if (profit > 0)
 				{
 					updateStatement = con.prepareStatement(UPDATE_SMS_DATA);
 					updateStatement.setString(1, wText);
 					updateStatement.executeUpdate();
 					player.sendMessage("Thank you for your SMS. Best regards " + Config.SMS_PAYMENT_SERVER_ADDRESS);
+					
 					for (int i = 0; i < Config.SMS_PAYMENT_REWARD.length; i += 2)
 					{
 						if (Config.SMS_PAYMENT_REWARD[i] == -100)

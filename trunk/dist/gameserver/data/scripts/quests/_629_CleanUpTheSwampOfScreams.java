@@ -85,10 +85,12 @@ public class _629_CleanUpTheSwampOfScreams extends Quest implements ScriptFile
 	{
 		super(false);
 		addStartNpc(CAPTAIN);
+		
 		for (int npcId = 21508; npcId < 21518; npcId++)
 		{
 			addKillId(npcId);
 		}
+		
 		addQuestItem(CLAWS);
 	}
 	
@@ -96,6 +98,7 @@ public class _629_CleanUpTheSwampOfScreams extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("merc_cap_peace_q0629_0104.htm"))
 		{
 			st.setCond(1);
@@ -120,6 +123,7 @@ public class _629_CleanUpTheSwampOfScreams extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -128,6 +132,7 @@ public class _629_CleanUpTheSwampOfScreams extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if ((st.getQuestItemsCount(7246) > 0) || (st.getQuestItemsCount(7247) > 0))
 		{
 			if (cond == 0)
@@ -159,6 +164,7 @@ public class _629_CleanUpTheSwampOfScreams extends Quest implements ScriptFile
 			htmltext = "merc_cap_peace_q0629_0205.htm";
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -169,6 +175,7 @@ public class _629_CleanUpTheSwampOfScreams extends Quest implements ScriptFile
 		{
 			st.rollAndGive(CLAWS, 1, CHANCE[npc.getNpcId() - 21508][1]);
 		}
+		
 		return null;
 	}
 }

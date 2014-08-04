@@ -43,7 +43,9 @@ public class Pushkin extends Functions
 		{
 			return "";
 		}
+		
 		StringBuilder append = new StringBuilder();
+		
 		if (Config.ALT_SIMPLE_SIGNS)
 		{
 			append.append("<br><center>Seven Signs options:</center><br>");
@@ -64,10 +66,12 @@ public class Pushkin extends Functions
 			append.append("<center>[npc_%objectId%_Multisell 400|Exchange Seal Stones]</center><br1>");
 			append.append("<center>[npc_%objectId%_Multisell 500|Purchase consumable items]</center><br1>");
 		}
+		
 		if (Config.ALT_BS_CRYSTALLIZE)
 		{
 			append.append("<br1>[scripts_services.Pushkin:doCrystallize|Crystallize]");
 		}
+		
 		return append.toString();
 	}
 	
@@ -92,6 +96,7 @@ public class Pushkin extends Functions
 		{
 			return "";
 		}
+		
 		return "<br>[npc_%objectId%_Multisell 6500|Buy tattoo]";
 	}
 	
@@ -109,6 +114,7 @@ public class Pushkin extends Functions
 		list.setNoTax(false);
 		int entry = 0;
 		final Inventory inv = player.getInventory();
+		
 		for (final ItemInstance itm : inv.getItems())
 		{
 			if (itm.canBeCrystallized(player))
@@ -120,6 +126,7 @@ public class Pushkin extends Functions
 				list.addEntry(possibleEntry);
 			}
 		}
+		
 		MultiSellHolder.getInstance().SeparateAndSend(list, player, castle == null ? 0. : castle.getTaxRate());
 	}
 }

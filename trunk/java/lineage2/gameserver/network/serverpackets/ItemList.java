@@ -38,8 +38,8 @@ public class ItemList extends L2GameServerPacket
 	{
 		writeC(0x11);
 		writeH(_showWindow ? 1 : 0);
-		
 		writeH(_size);
+		
 		for (ItemInstance temp : _items)
 		{
 			if (temp.getTemplate().isQuest())
@@ -51,9 +51,11 @@ public class ItemList extends L2GameServerPacket
 		}
 		
 		writeH(_lockItems.length);
+		
 		if (_lockItems.length > 0)
 		{
 			writeC(_lockType.ordinal());
+			
 			for (int i : _lockItems)
 			{
 				writeD(i);

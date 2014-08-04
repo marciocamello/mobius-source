@@ -125,82 +125,107 @@ public class AdminEnchant implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		if (!activeChar.getPlayerAccess().CanEditChar)
 		{
 			return false;
 		}
+		
 		int armorType = -1;
+		
 		switch (command)
 		{
 			case admin_enchant:
 				showMainPage(activeChar);
 				return true;
+				
 			case admin_seteh:
 				armorType = Inventory.PAPERDOLL_HEAD;
 				break;
+			
 			case admin_setec:
 				armorType = Inventory.PAPERDOLL_CHEST;
 				break;
+			
 			case admin_seteg:
 				armorType = Inventory.PAPERDOLL_GLOVES;
 				break;
+			
 			case admin_seteb:
 				armorType = Inventory.PAPERDOLL_FEET;
 				break;
+			
 			case admin_setel:
 				armorType = Inventory.PAPERDOLL_LEGS;
 				break;
+			
 			case admin_setew:
 				armorType = Inventory.PAPERDOLL_RHAND;
 				break;
+			
 			case admin_setes:
 				armorType = Inventory.PAPERDOLL_LHAND;
 				break;
+			
 			case admin_setle:
 				armorType = Inventory.PAPERDOLL_LEAR;
 				break;
+			
 			case admin_setre:
 				armorType = Inventory.PAPERDOLL_REAR;
 				break;
+			
 			case admin_setlf:
 				armorType = Inventory.PAPERDOLL_LFINGER;
 				break;
+			
 			case admin_setrf:
 				armorType = Inventory.PAPERDOLL_RFINGER;
 				break;
+			
 			case admin_seten:
 				armorType = Inventory.PAPERDOLL_NECK;
 				break;
+			
 			case admin_setun:
 				armorType = Inventory.PAPERDOLL_UNDER;
 				break;
+			
 			case admin_setba:
 				armorType = Inventory.PAPERDOLL_BACK;
 				break;
+			
 			case admin_setha:
 				armorType = Inventory.PAPERDOLL_HAIR;
 				break;
+			
 			case admin_setdha:
 				armorType = Inventory.PAPERDOLL_HAIR;
 				break;
+			
 			case admin_setlbr:
 				armorType = Inventory.PAPERDOLL_LBRACELET;
 				break;
+			
 			case admin_setrbr:
 				armorType = Inventory.PAPERDOLL_RBRACELET;
 				break;
+			
 			case admin_setbelt:
 				armorType = Inventory.PAPERDOLL_BELT;
 				break;
 		}
+		
 		if ((armorType == -1) || (wordList.length < 2))
 		{
 			showMainPage(activeChar);
 			return true;
 		}
+		
 		try
 		{
 			int ench = Integer.parseInt(wordList[1]);
+			
 			if ((ench < 0) || (ench > 65535))
 			{
 				activeChar.sendMessage("You must set the enchant level to be between 0-65535.");
@@ -218,6 +243,7 @@ public class AdminEnchant implements IAdminCommandHandler
 		{
 			activeChar.sendMessage("Please specify a valid new enchant value.");
 		}
+		
 		showMainPage(activeChar);
 		return true;
 	}
@@ -231,18 +257,22 @@ public class AdminEnchant implements IAdminCommandHandler
 	private void setEnchant(Player activeChar, int ench, int armorType)
 	{
 		GameObject target = activeChar.getTarget();
+		
 		if (target == null)
 		{
 			target = activeChar;
 		}
+		
 		if (!target.isPlayer())
 		{
 			activeChar.sendMessage("Wrong target type.");
 			return;
 		}
+		
 		Player player = (Player) target;
 		int curEnchant = 0;
 		ItemInstance itemInstance = player.getInventory().getPaperdollItem(armorType);
+		
 		if (itemInstance != null)
 		{
 			curEnchant = itemInstance.getEnchantLevel();
@@ -263,15 +293,19 @@ public class AdminEnchant implements IAdminCommandHandler
 	public void showMainPage(Player activeChar)
 	{
 		GameObject target = activeChar.getTarget();
+		
 		if (target == null)
 		{
 			target = activeChar;
 		}
+		
 		Player player = activeChar;
+		
 		if (target.isPlayer())
 		{
 			player = (Player) target;
 		}
+		
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		StringBuilder replyMSG = new StringBuilder("<html><body>");
 		replyMSG.append("<center><table width=260><tr><td width=40>");

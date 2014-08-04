@@ -44,17 +44,20 @@ public class Quest024Fighter extends Fighter
 	protected boolean thinkActive()
 	{
 		final Quest q = QuestManager.getQuest(_024_InhabitantsOfTheForestOfTheDead.class);
+		
 		if (q != null)
 		{
 			for (Player player : World.getAroundPlayers(getActor(), 300, 200))
 			{
 				QuestState questState = player.getQuestState(_024_InhabitantsOfTheForestOfTheDead.class);
+				
 				if ((questState != null) && (questState.getCond() == 3))
 				{
 					q.notifyEvent("seePlayer", questState, getActor());
 				}
 			}
 		}
+		
 		return super.thinkActive();
 	}
 }

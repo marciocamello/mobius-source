@@ -56,8 +56,8 @@ public class ExShowTrace extends L2GameServerPacket
 		double xy_dist = Math.sqrt((x_diff * x_diff) + (y_diff * y_diff));
 		double full_dist = Math.sqrt((xy_dist * xy_dist) + (z_diff * z_diff));
 		int steps = (int) (full_dist / step);
-		
 		addTrace(from_x, from_y, from_z, time);
+		
 		if (steps > 1)
 		{
 			int step_x = x_diff / steps;
@@ -69,6 +69,7 @@ public class ExShowTrace extends L2GameServerPacket
 				addTrace(from_x + (step_x * i), from_y + (step_y * i), from_z + (step_z * i), time);
 			}
 		}
+		
 		addTrace(to_x, to_y, to_z, time);
 	}
 	
@@ -81,8 +82,8 @@ public class ExShowTrace extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeEx(0x68);
-		
 		writeH(_traces.size());
+		
 		for (Trace t : _traces)
 		{
 			writeD(t._x);

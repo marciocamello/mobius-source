@@ -63,6 +63,7 @@ public final class EffectHellBinding extends Effect
 		{
 			return false;
 		}
+		
 		return super.checkCondition();
 	}
 	
@@ -73,6 +74,7 @@ public final class EffectHellBinding extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		for (Player playerNearEffected : World.getAroundPlayers(_effected, 1200, 400))
 		{
 			if ((playerNearEffected.getTarget() == _effected) && playerNearEffected.isAwaking())
@@ -82,10 +84,12 @@ public final class EffectHellBinding extends Effect
 				playerNearEffected.sendPacket(new ExAlterSkillRequest(chainSkill, temporalReplaceSkill, 5));
 			}
 		}
+		
 		if (!_effected.isAirBinded())
 		{
 			_effected.startAirbinding();
 		}
+		
 		_effected.abortAttack(true, true);
 		_effected.abortCast(true, true);
 		_effected.stopMove();
@@ -98,6 +102,7 @@ public final class EffectHellBinding extends Effect
 	public void onExit()
 	{
 		super.onExit();
+		
 		if (_effected.isAirBinded())
 		{
 			_effected.stopAirbinding();

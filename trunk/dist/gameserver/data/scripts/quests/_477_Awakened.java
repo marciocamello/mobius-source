@@ -69,12 +69,14 @@ public class _477_Awakened extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		st.getPlayer();
+		
 		if (event.equalsIgnoreCase("33463-3.htm"))
 		{
 			st.setCond(1);
 			st.setState(2);
 			st.playSound("ItemSound.quest_accept");
 		}
+		
 		return event;
 	}
 	
@@ -85,6 +87,7 @@ public class _477_Awakened extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int state = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == 33463)
 		{
 			if (state == 1)
@@ -93,26 +96,31 @@ public class _477_Awakened extends Quest implements ScriptFile
 				{
 					return "33463-comp.htm";
 				}
+				
 				return "33463.htm";
 			}
+			
 			if (state == 2)
 			{
 				if (cond == 1)
 				{
 					return "33463-4.htm";
 				}
+				
 				if (cond == 2)
 				{
 					return "33463-5.htm";
 				}
 			}
 		}
+		
 		if ((npcId == 31282) && (state == 2))
 		{
 			if (cond == 1)
 			{
 				return "31282-1.htm";
 			}
+			
 			if (cond == 2)
 			{
 				st.giveItems(57, 334560L);
@@ -124,6 +132,7 @@ public class _477_Awakened extends Quest implements ScriptFile
 				return "31282.htm";
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -141,18 +150,22 @@ public class _477_Awakened extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if ((cond != 1) || (npc == null))
 		{
 			return null;
 		}
+		
 		if ((ArrayUtils.contains(Mobs, npc.getNpcId())) && (Rnd.chance(50)))
 		{
 			st.giveItems(19496, 1L);
 		}
+		
 		if (st.getQuestItemsCount(19496) >= 45L)
 		{
 			st.setCond(2);
 		}
+		
 		return null;
 	}
 }

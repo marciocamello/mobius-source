@@ -34,10 +34,12 @@ public class RequestJoinCuriousHouse extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		player.sendPacket(new ExCuriousHouseEnter());
 		_log.info("[IMPLEMENT ME!] RequestJoinCuriousHouse (maybe trigger)");
 	}

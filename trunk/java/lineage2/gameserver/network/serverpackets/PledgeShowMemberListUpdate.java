@@ -40,6 +40,7 @@ public class PledgeShowMemberListUpdate extends L2GameServerPacket
 		_pledgeType = player.getPledgeType();
 		SubUnit subUnit = player.getSubUnit();
 		UnitMember member = subUnit == null ? null : subUnit.getUnitMember(_objectId);
+		
 		if (member != null)
 		{
 			_isApprentice = member.hasSponsor() ? 1 : 0;
@@ -68,6 +69,7 @@ public class PledgeShowMemberListUpdate extends L2GameServerPacket
 		writeD(_classId);
 		writeD(_sex);
 		writeD(_race);
+		
 		if (_isOnline)
 		{
 			writeD(_objectId);
@@ -78,6 +80,7 @@ public class PledgeShowMemberListUpdate extends L2GameServerPacket
 			writeD(0);
 			writeD(0);
 		}
+		
 		writeD(_isApprentice); // does a clan member have a sponsor
 	}
 }

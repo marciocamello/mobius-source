@@ -31,8 +31,10 @@ public class Clan extends Functions
 		{
 			return;
 		}
+		
 		Player pl = getSelf();
 		String htmltext = "clan-02.htm";
+		
 		if (pl.getLevel() <= 9)
 		{
 			htmltext = "clan-06.htm";
@@ -45,6 +47,7 @@ public class Clan extends Functions
 		{
 			htmltext = "clan-09.htm";
 		}
+		
 		((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/clan/" + htmltext);
 	}
 	
@@ -57,8 +60,10 @@ public class Clan extends Functions
 		{
 			return;
 		}
+		
 		Player pl = getSelf();
 		String htmltext = "clan-01.htm";
+		
 		if (pl.isClanLeader())
 		{
 			htmltext = "clan-04.htm";
@@ -71,6 +76,7 @@ public class Clan extends Functions
 		{
 			htmltext = "clan-11.htm";
 		}
+		
 		((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/clan/" + htmltext);
 	}
 }

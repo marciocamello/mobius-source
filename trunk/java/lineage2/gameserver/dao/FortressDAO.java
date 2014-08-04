@@ -65,12 +65,14 @@ public class FortressDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_SQL_QUERY);
 			statement.setInt(1, fortress.getId());
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				fortress.setFortState(rset.getInt("state"), rset.getInt("castle_id"));
@@ -81,6 +83,7 @@ public class FortressDAO
 				fortress.getSiegeDate().setTimeInMillis(rset.getLong("siege_date"));
 				fortress.getLastSiegeDate().setTimeInMillis(rset.getLong("last_siege_date"));
 				fortress.getOwnDate().setTimeInMillis(rset.getLong("own_date"));
+				
 				for (int i = 0; i < Fortress.FACILITY_MAX; i++)
 				{
 					fortress.setFacilityLevel(i, rset.getInt("facility_" + i));
@@ -107,6 +110,7 @@ public class FortressDAO
 		{
 			return;
 		}
+		
 		fortress.setJdbcState(JdbcEntityState.STORED);
 		update0(fortress);
 	}
@@ -119,6 +123,7 @@ public class FortressDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -132,10 +137,12 @@ public class FortressDAO
 			statement.setLong(7, fortress.getSiegeDate().getTimeInMillis());
 			statement.setLong(8, fortress.getLastSiegeDate().getTimeInMillis());
 			statement.setLong(9, fortress.getOwnDate().getTimeInMillis());
+			
 			for (int i = 0; i < Fortress.FACILITY_MAX; i++)
 			{
 				statement.setInt(10 + i, fortress.getFacilityLevel(i));
 			}
+			
 			statement.setInt(10 + Fortress.FACILITY_MAX, fortress.getId());
 			statement.execute();
 		}

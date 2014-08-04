@@ -52,15 +52,18 @@ public class NpcMageAI extends Mystic
 		{
 			Functions.npcSay(actor, NpcString.I_M_ON_FIRE_NO_WAIT_THAT_WOULD_BE_YOU);
 		}
+		
 		return startAttack();
 	}
 	
 	private boolean startAttack()
 	{
 		NpcInstance actor = getActor();
+		
 		if (target == null)
 		{
 			List<NpcInstance> around = actor.getAroundNpc(3000, 150);
+			
 			if ((around != null) && !around.isEmpty())
 			{
 				for (NpcInstance npc : around)
@@ -97,6 +100,7 @@ public class NpcMageAI extends Mystic
 		{
 			return false;
 		}
+		
 		int _id = target.getNpcId();
 		
 		if ((_id == 33170) || (_id == 33171) || (_id == 33172) || (_id == 33173) || (_id == 33174) || (_id == 33414) || (_id == 33415) || (_id == 33416))

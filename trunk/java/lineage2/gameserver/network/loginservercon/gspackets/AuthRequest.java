@@ -40,10 +40,12 @@ public class AuthRequest extends SendablePacket
 		writeS(Config.EXTERNAL_HOSTNAME);
 		writeS(Config.INTERNAL_HOSTNAME);
 		writeH(Config.PORTS_GAME.length);
+		
 		for (int PORT_GAME : Config.PORTS_GAME)
 		{
 			writeH(PORT_GAME);
 		}
+		
 		writeD(Config.MAXIMUM_ONLINE_USERS);
 	}
 }

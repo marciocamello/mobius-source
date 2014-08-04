@@ -134,22 +134,27 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		_zone[1] = ReflectionUtils.getZone("[FourSepulchers2]");
 		_zone[2] = ReflectionUtils.getZone("[FourSepulchers3]");
 		_zone[3] = ReflectionUtils.getZone("[FourSepulchers4]");
+		
 		if (_changeCoolDownTimeTask != null)
 		{
 			_changeCoolDownTimeTask.cancel(false);
 		}
+		
 		if (_changeEntryTimeTask != null)
 		{
 			_changeEntryTimeTask.cancel(false);
 		}
+		
 		if (_changeWarmUpTimeTask != null)
 		{
 			_changeWarmUpTimeTask.cancel(false);
 		}
+		
 		if (_changeAttackTimeTask != null)
 		{
 			_changeAttackTimeTask.cancel(false);
 		}
+		
 		_changeCoolDownTimeTask = null;
 		_changeEntryTimeTask = null;
 		_changeWarmUpTimeTask = null;
@@ -168,6 +173,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 	{
 		timeCalculator();
 		final long currentTime = System.currentTimeMillis();
+		
 		if ((currentTime >= _coolDownTimeEnd) && (currentTime < _entryTimeEnd))
 		{
 			cleanUp();
@@ -199,10 +205,12 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 	private static void timeCalculator()
 	{
 		final Calendar tmp = Calendar.getInstance();
+		
 		if (tmp.get(Calendar.MINUTE) < _newCycleMin)
 		{
 			tmp.set(Calendar.HOUR, Calendar.getInstance().get(Calendar.HOUR) - 1);
 		}
+		
 		tmp.set(Calendar.MINUTE, _newCycleMin);
 		_coolDownTimeEnd = tmp.getTimeInMillis();
 		_entryTimeEnd = _coolDownTimeEnd + (3 * 60000);
@@ -219,6 +227,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		{
 			player.teleToClosestTown();
 		}
+		
 		FourSepulchersSpawn.deleteAllMobs();
 		FourSepulchersSpawn.closeAllDoors();
 		FourSepulchersSpawn._hallInUse.clear();
@@ -226,9 +235,11 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		FourSepulchersSpawn._hallInUse.put(31922, false);
 		FourSepulchersSpawn._hallInUse.put(31923, false);
 		FourSepulchersSpawn._hallInUse.put(31924, false);
+		
 		if (!FourSepulchersSpawn._archonSpawned.isEmpty())
 		{
 			final Set<Integer> npcIdSet = FourSepulchersSpawn._archonSpawned.keySet();
+			
 			for (int npcId : npcIdSet)
 			{
 				FourSepulchersSpawn._archonSpawned.put(npcId, false);
@@ -262,6 +273,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 	public static synchronized void tryEntry(NpcInstance npc, Player player)
 	{
 		final int npcId = npc.getNpcId();
+		
 		switch (npcId)
 		{
 			case 31921:
@@ -269,51 +281,62 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 			case 31923:
 			case 31924:
 				break;
+			
 			default:
 				return;
 		}
+		
 		if (FourSepulchersSpawn._hallInUse.get(npcId))
 		{
 			showHtmlFile(player, npcId + "-FULL.htm", npc, null);
 			return;
 		}
+		
 		if (!player.isInParty() || (player.getParty().getMemberCount() < 4))
 		{
 			showHtmlFile(player, npcId + "-SP.htm", npc, null);
 			return;
 		}
+		
 		if (!player.getParty().isLeader(player))
 		{
 			showHtmlFile(player, npcId + "-NL.htm", npc, null);
 			return;
 		}
+		
 		for (Player mem : player.getParty().getPartyMembers())
 		{
 			QuestState qs = mem.getQuestState(QUEST_ID);
+			
 			if ((qs == null) || (!qs.isStarted() && !qs.isCompleted()))
 			{
 				showHtmlFile(player, npcId + "-NS.htm", npc, mem);
 				return;
 			}
+			
 			if (mem.getInventory().getItemByItemId(ENTRANCE_PASS) == null)
 			{
 				showHtmlFile(player, npcId + "-SE.htm", npc, mem);
 				return;
 			}
+			
 			if (!mem.isQuestContinuationPossible(true))
 			{
 				return;
 			}
+			
 			if (mem.isDead() || !mem.isInRange(player, 700))
 			{
 				return;
 			}
 		}
+		
 		if (!isEntryTime())
 		{
 			showHtmlFile(player, npcId + "-NE.htm", npc, null);
 			return;
 		}
+		
 		showHtmlFile(player, npcId + "-OK.htm", npc, null);
 		entry(npcId, player);
 	}
@@ -326,16 +349,20 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 	private static void entry(int npcId, Player player)
 	{
 		final Location loc = FourSepulchersSpawn._startHallSpawns.get(npcId);
+		
 		for (Player member : player.getParty().getPartyMembers())
 		{
 			member.teleToLocation(Location.findPointToStay(member, loc, 0, 80));
 			Functions.removeItem(member, ENTRANCE_PASS, 1);
+			
 			if (member.getInventory().getItemByItemId(ANTIQUE_BROOCH) == null)
 			{
 				Functions.addItem(member, USED_PASS, 1);
 			}
+			
 			Functions.removeItem(member, CHAPEL_KEY, 999999);
 		}
+		
 		FourSepulchersSpawn._hallInUse.put(npcId, true);
 	}
 	
@@ -375,6 +402,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 							{
 								break;
 							}
+							
 							mem.teleToLocation(169589 + Rnd.get(-80, 80), -90493 + Rnd.get(-80, 80), -2914);
 						}
 					}
@@ -398,12 +426,16 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		{
 			case 0:
 				return min;
+				
 			case 1:
 				return min - 1;
+				
 			case 2:
 				return min - 2;
+				
 			case 3:
 				return min + 2;
+				
 			default:
 				return min + 1;
 		}
@@ -421,18 +453,22 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 			{
 				return;
 			}
+			
 			min = minuteSelect(min);
 			String msg = min + " minute(s) have passed.";
+			
 			if (min == 90)
 			{
 				msg = "Game over. The teleport will appear momentarily";
 			}
+			
 			for (SepulcherNpcInstance npc : FourSepulchersSpawn._managers)
 			{
 				if (!FourSepulchersSpawn._hallInUse.get(npc.getNpcId()))
 				{
 					continue;
 				}
+				
 				npc.sayInShout(msg);
 			}
 		}
@@ -440,6 +476,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		{
 			final String msg1 = "You may now enter the Sepulcher";
 			final String msg2 = "If you place your hand on the stone statue in front of each sepulcher," + " you will be able to enter";
+			
 			for (SepulcherNpcInstance npc : FourSepulchersSpawn._managers)
 			{
 				npc.sayInShout(msg1);
@@ -471,6 +508,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 			{
 				final Calendar tmp = Calendar.getInstance();
 				tmp.setTimeInMillis(System.currentTimeMillis() - _warmUpTimeEnd);
+				
 				if ((tmp.get(Calendar.MINUTE) + 5) < 50)
 				{
 					managerSay(tmp.get(Calendar.MINUTE));
@@ -510,6 +548,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 			_inEntryTime = true;
 			_inAttackTime = false;
 			long interval = 0;
+			
 			if (_firstTimeRun)
 			{
 				interval = _entryTimeEnd - System.currentTimeMillis();
@@ -518,8 +557,10 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 			{
 				interval = 3 * 60000;
 			}
+			
 			ThreadPoolManager.getInstance().execute(new ManagerSay());
 			_changeWarmUpTimeTask = ThreadPoolManager.getInstance().schedule(new ChangeWarmUpTime(), interval);
+			
 			if (_changeEntryTimeTask != null)
 			{
 				_changeEntryTimeTask.cancel(false);
@@ -550,6 +591,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 			_inEntryTime = true;
 			_inAttackTime = false;
 			long interval = 0;
+			
 			if (_firstTimeRun)
 			{
 				interval = _warmUpTimeEnd - System.currentTimeMillis();
@@ -558,7 +600,9 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 			{
 				interval = 2 * 60000;
 			}
+			
 			_changeAttackTimeTask = ThreadPoolManager.getInstance().schedule(new ChangeAttackTime(), interval);
+			
 			if (_changeWarmUpTimeTask != null)
 			{
 				_changeWarmUpTimeTask.cancel(false);
@@ -588,22 +632,27 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 		{
 			_inEntryTime = false;
 			_inAttackTime = true;
+			
 			for (GateKeeper gk : FourSepulchersSpawn._GateKeepers)
 			{
 				SepulcherNpcInstance npc = new SepulcherNpcInstance(IdFactory.getInstance().getNextId(), gk.template);
 				npc.spawnMe(gk);
 				FourSepulchersSpawn._allMobs.add(npc);
 			}
+			
 			FourSepulchersSpawn.locationShadowSpawns();
 			FourSepulchersSpawn.spawnMysteriousBox(31921);
 			FourSepulchersSpawn.spawnMysteriousBox(31922);
 			FourSepulchersSpawn.spawnMysteriousBox(31923);
 			FourSepulchersSpawn.spawnMysteriousBox(31924);
+			
 			if (!_firstTimeRun)
 			{
 				_warmUpTimeEnd = System.currentTimeMillis();
 			}
+			
 			long interval = 0;
+			
 			if (_firstTimeRun)
 			{
 				for (double min = Calendar.getInstance().get(Calendar.MINUTE); min < _newCycleMin; min++)
@@ -622,6 +671,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 			{
 				ThreadPoolManager.getInstance().schedule(new ManagerSay(), 5 * 60400);
 			}
+			
 			if (_firstTimeRun)
 			{
 				interval = _attackTimeEnd - System.currentTimeMillis();
@@ -630,7 +680,9 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 			{
 				interval = 50 * 60000;
 			}
+			
 			_changeCoolDownTimeTask = ThreadPoolManager.getInstance().schedule(new ChangeCoolDownTime(), interval);
+			
 			if (_changeAttackTimeTask != null)
 			{
 				_changeAttackTimeTask.cancel(false);
@@ -662,18 +714,23 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 			_inAttackTime = false;
 			cleanUp();
 			final Calendar time = Calendar.getInstance();
+			
 			if ((Calendar.getInstance().get(Calendar.MINUTE) > _newCycleMin) && !_firstTimeRun)
 			{
 				time.set(Calendar.HOUR, Calendar.getInstance().get(Calendar.HOUR) + 1);
 			}
+			
 			time.set(Calendar.MINUTE, _newCycleMin);
 			_log.info("FourSepulchersManager: Entry time: " + time.getTime());
+			
 			if (_firstTimeRun)
 			{
 				_firstTimeRun = false;
 			}
+			
 			final long interval = time.getTimeInMillis() - System.currentTimeMillis();
 			_changeEntryTimeTask = ThreadPoolManager.getInstance().schedule(new ChangeEntryTime(), interval);
+			
 			if (_changeCoolDownTimeTask != null)
 			{
 				_changeCoolDownTimeTask.cancel(false);
@@ -696,6 +753,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 				return gk;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -710,10 +768,12 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		html.setFile("SepulcherNpc/" + file);
+		
 		if (member != null)
 		{
 			html.replace("%member%", member.getName());
 		}
+		
 		player.sendPacket(html);
 	}
 	
@@ -730,6 +790,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
@@ -740,10 +801,12 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 	private static List<Player> getPlayersInside()
 	{
 		final List<Player> result = new ArrayList<>();
+		
 		for (Zone zone : getZones())
 		{
 			result.addAll(zone.getInsidePlayers());
 		}
+		
 		return result;
 	}
 	
@@ -761,6 +824,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	

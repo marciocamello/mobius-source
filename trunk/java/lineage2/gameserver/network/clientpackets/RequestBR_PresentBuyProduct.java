@@ -67,43 +67,55 @@ public class RequestBR_PresentBuyProduct extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if ((count > 99) || (count < 0))
 		{
 			return;
 		}
+		
 		ProductItem product = ProductHolder.getInstance().getProduct(productId);
+		
 		if (product == null)
 		{
 			activeChar.sendPacket(new ExBR_PresentBuyProductPacket(ExBR_PresentBuyProductPacket.RESULT_WRONG_PRODUCT));
 			return;
 		}
+		
 		if ((System.currentTimeMillis() < product.getStartTimeSale()) || (System.currentTimeMillis() > product.getEndTimeSale()))
 		{
 			activeChar.sendPacket(new ExBR_PresentBuyProductPacket(ExBR_PresentBuyProductPacket.RESULT_SALE_PERIOD_ENDED));
 			return;
 		}
+		
 		int totalPoints = product.getPoints() * count;
+		
 		if (totalPoints < 0)
 		{
 			activeChar.sendPacket(new ExBR_PresentBuyProductPacket(ExBR_PresentBuyProductPacket.RESULT_WRONG_PRODUCT));
 			return;
 		}
+		
 		final long gamePointSize = activeChar.getPremiumPoints();
+		
 		if (totalPoints > gamePointSize)
 		{
 			activeChar.sendPacket(new ExBR_PresentBuyProductPacket(ExBR_PresentBuyProductPacket.RESULT_NOT_ENOUGH_POINTS));
 			return;
 		}
+		
 		int recieverId;
 		Player target = World.getPlayer(receiverName);
+		
 		if (target != null)
 		{
 			recieverId = target.getObjectId();
 			receiverName = target.getName();
+			
 			if (target.isInBlockList(activeChar))
 			{
 				activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_S1_).addString(receiverName));
@@ -113,6 +125,7 @@ public class RequestBR_PresentBuyProduct extends L2GameClientPacket
 		else
 		{
 			recieverId = CharacterDAO.getInstance().getObjectIdByName(receiverName);
+			
 			if (recieverId > 0)
 			{
 				if (mysql.simple_get_int("target_Id", "character_blocklist", "obj_Id=" + recieverId + " AND target_Id=" + activeChar.getObjectId()) > 0)
@@ -122,19 +135,23 @@ public class RequestBR_PresentBuyProduct extends L2GameClientPacket
 				}
 			}
 		}
+		
 		if (recieverId == 0)
 		{
 			activeChar.sendPacket(Msg.WHEN_THE_RECIPIENT_DOESN_T_EXIST_OR_THE_CHARACTER_HAS_BEEN_DELETED_SENDING_MAIL_IS_NOT_POSSIBLE);
 			return;
 		}
+		
 		activeChar.reducePremiumPoints(totalPoints);
 		List<ItemInstance> attachments = new ArrayList<>();
+		
 		for (ProductItemComponent comp : product.getComponents())
 		{
 			ItemInstance item = ItemFunctions.createItem(comp.getItemId());
 			item.setCount(comp.getCount());
 			item.setOwnerId(activeChar.getObjectId());
 			item.setLocation(ItemInstance.ItemLocation.MAIL);
+			
 			if (item.getJdbcState().isSavable())
 			{
 				item.save();
@@ -144,8 +161,10 @@ public class RequestBR_PresentBuyProduct extends L2GameClientPacket
 				item.setJdbcState(JdbcEntityState.UPDATED);
 				item.update();
 			}
+			
 			attachments.add(item);
 		}
+		
 		Mail mail = new Mail();
 		mail.setSenderId(activeChar.getObjectId());
 		mail.setSenderName(activeChar.getName());
@@ -157,14 +176,17 @@ public class RequestBR_PresentBuyProduct extends L2GameClientPacket
 		mail.setUnread(true);
 		mail.setType(Mail.SenderType.PRESENT);
 		mail.setExpireTime((720 * 3600) + (int) (System.currentTimeMillis() / 1000L));
+		
 		for (ItemInstance item : attachments)
 		{
 			mail.addAttachment(item);
 		}
+		
 		mail.save();
 		activeChar.sendPacket(new ExBR_GamePoint(activeChar));
 		activeChar.sendPacket(new ExBR_PresentBuyProductPacket(ExBR_PresentBuyProductPacket.RESULT_OK));
 		activeChar.sendChanges();
+		
 		if (target != null)
 		{
 			target.sendPacket(ExNoticePostArrived.STATIC_TRUE);

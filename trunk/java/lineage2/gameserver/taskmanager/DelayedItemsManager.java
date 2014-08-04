@@ -66,6 +66,7 @@ public class DelayedItemsManager extends RunnableImpl
 		{
 			_instance = new DelayedItemsManager();
 		}
+		
 		return _instance;
 	}
 	
@@ -75,6 +76,7 @@ public class DelayedItemsManager extends RunnableImpl
 	public DelayedItemsManager()
 	{
 		Connection con = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -101,10 +103,12 @@ public class DelayedItemsManager extends RunnableImpl
 		PreparedStatement st = null;
 		ResultSet rset = null;
 		int result = last_payment_id;
+		
 		try
 		{
 			st = con.prepareStatement("SELECT MAX(payment_id) AS last FROM items_delayed");
 			rset = st.executeQuery();
+			
 			if (rset.next())
 			{
 				result = rset.getInt("last");
@@ -131,10 +135,12 @@ public class DelayedItemsManager extends RunnableImpl
 		Connection con = null;
 		PreparedStatement st = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			int last_payment_id_temp = get_last_payment_id(con);
+			
 			if (last_payment_id_temp != last_payment_id)
 			{
 				synchronized (_lock)
@@ -142,6 +148,7 @@ public class DelayedItemsManager extends RunnableImpl
 					st = con.prepareStatement("SELECT DISTINCT owner_id FROM items_delayed WHERE payment_status=0 AND payment_id > ?");
 					st.setInt(1, last_payment_id);
 					rset = st.executeQuery();
+					
 					while (rset.next())
 					{
 						if ((player = GameObjectsStorage.getPlayer(rset.getInt("owner_id"))) != null)
@@ -149,6 +156,7 @@ public class DelayedItemsManager extends RunnableImpl
 							loadDelayed(player, true);
 						}
 					}
+					
 					last_payment_id = last_payment_id_temp;
 				}
 			}
@@ -176,12 +184,15 @@ public class DelayedItemsManager extends RunnableImpl
 		{
 			return 0;
 		}
+		
 		final int player_id = player.getObjectId();
 		final PcInventory inv = player.getInventory();
+		
 		if (inv == null)
 		{
 			return 0;
 		}
+		
 		int restored_counter = 0;
 		Connection con = null;
 		PreparedStatement st = null, st_delete = null;
@@ -196,6 +207,7 @@ public class DelayedItemsManager extends RunnableImpl
 				rset = st.executeQuery();
 				ItemInstance item, newItem;
 				st_delete = con.prepareStatement("UPDATE items_delayed SET payment_status=1 WHERE payment_id=?");
+				
 				while (rset.next())
 				{
 					final int ITEM_ID = rset.getInt("item_id");
@@ -207,9 +219,11 @@ public class DelayedItemsManager extends RunnableImpl
 					rset.getInt("attribute_level");
 					boolean stackable = ItemHolder.getInstance().getTemplate(ITEM_ID).isStackable();
 					boolean success = false;
+					
 					for (int i = 0; i < (stackable ? 1 : ITEM_COUNT); i++)
 					{
 						item = ItemFunctions.createItem(ITEM_ID);
+						
 						if (item.isStackable())
 						{
 							item.setCount(ITEM_COUNT);
@@ -218,28 +232,35 @@ public class DelayedItemsManager extends RunnableImpl
 						{
 							item.setEnchantLevel(ITEM_ENCHANT);
 						}
+						
 						item.setLocation(ItemLocation.INVENTORY);
 						item.setCustomFlags(FLAGS);
+						
 						if (ITEM_COUNT > 0)
 						{
 							newItem = inv.addItem(item);
+							
 							if (newItem == null)
 							{
 								_log.warn("Unable to delayed create item " + ITEM_ID + " request " + PAYMENT_ID);
 								continue;
 							}
 						}
+						
 						success = true;
 						restored_counter++;
+						
 						if (notify && (ITEM_COUNT > 0))
 						{
 							player.sendPacket(SystemMessage2.obtainItems(ITEM_ID, stackable ? ITEM_COUNT : 1, ITEM_ENCHANT));
 						}
 					}
+					
 					if (!success)
 					{
 						continue;
 					}
+					
 					Log.add("<add owner_id=" + player_id + " item_id=" + ITEM_ID + " count=" + ITEM_COUNT + " enchant_level=" + ITEM_ENCHANT + " payment_id=" + PAYMENT_ID + "/>", "delayed_add");
 					st_delete.setInt(1, PAYMENT_ID);
 					st_delete.execute();

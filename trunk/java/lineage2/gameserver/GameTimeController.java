@@ -78,6 +78,7 @@ public class GameTimeController
 			{
 				getInstance().getListenerEngine().onDay();
 			}
+			
 			for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 			{
 				player.checkDayNightMessages();
@@ -169,12 +170,15 @@ public class GameTimeController
 		msg.append("GameTimeController: initialized.").append(' ');
 		msg.append("Current time is ");
 		msg.append(getGameHour()).append(':');
+		
 		if (getGameMin() < 10)
 		{
 			msg.append('0');
 		}
+		
 		msg.append(getGameMin());
 		msg.append(" in the ");
+		
 		if (isNowNight())
 		{
 			msg.append("night");
@@ -183,18 +187,22 @@ public class GameTimeController
 		{
 			msg.append("day");
 		}
+		
 		msg.append('.');
 		_log.info(msg.toString());
 		long nightStart = 0;
 		long dayStart = 60 * 60 * 1000;
+		
 		while ((_gameStartTime + nightStart) < System.currentTimeMillis())
 		{
 			nightStart += 4 * 60 * 60 * 1000;
 		}
+		
 		while ((_gameStartTime + dayStart) < System.currentTimeMillis())
 		{
 			dayStart += 4 * 60 * 60 * 1000;
 		}
+		
 		dayStart -= System.currentTimeMillis() - _gameStartTime;
 		nightStart -= System.currentTimeMillis() - _gameStartTime;
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(_dayChangeNotify, nightStart, 4 * 60 * 60 * 1000L);

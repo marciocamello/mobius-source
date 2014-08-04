@@ -44,11 +44,14 @@ public class RequestHennaItemInfo extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		Henna henna = HennaHolder.getInstance().getHenna(_symbolId);
+		
 		if (henna != null)
 		{
 			player.sendPacket(new HennaItemInfo(henna, player));

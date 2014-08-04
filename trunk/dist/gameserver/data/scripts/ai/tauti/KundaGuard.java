@@ -34,12 +34,14 @@ public class KundaGuard extends Fighter
 	protected boolean thinkActive()
 	{
 		NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return false;
 		}
 		
 		List<NpcInstance> around = actor.getAroundNpc(500, 300);
+		
 		if ((around != null) && !around.isEmpty() && Rnd.chance(40))
 		{
 			for (NpcInstance npc : around)
@@ -50,6 +52,7 @@ public class KundaGuard extends Fighter
 				}
 			}
 		}
+		
 		return true;
 	}
 	

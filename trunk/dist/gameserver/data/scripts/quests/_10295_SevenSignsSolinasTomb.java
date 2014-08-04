@@ -70,38 +70,22 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 	
 	static
 	{
-		@SuppressWarnings("unused")
-		Location[] minions1 =
-		{
-			new Location(55672, -252120, -6760),
-			new Location(55752, -252120, -6760),
-			new Location(55656, -252216, -6760),
-			new Location(55736, -252216, -6760)
-		};
-		@SuppressWarnings("unused")
-		Location[] minions2 =
-		{
-			new Location(55672, -252728, -6760),
-			new Location(55752, -252840, -6760),
-			new Location(55768, -252840, -6760),
-			new Location(55752, -252712, -6760)
-		};
-		@SuppressWarnings("unused")
-		Location[] minions3 =
-		{
-			new Location(56504, -252840, -6760),
-			new Location(56504, -252728, -6760),
-			new Location(56392, -252728, -6760),
-			new Location(56408, -252840, -6760)
-		};
-		@SuppressWarnings("unused")
-		Location[] minions4 =
-		{
-			new Location(56520, -252232, -6760),
-			new Location(56520, -252104, -6760),
-			new Location(56424, -252104, -6760),
-			new Location(56440, -252216, -6760)
-		};
+		new Location(55672, -252120, -6760);
+		new Location(55752, -252120, -6760);
+		new Location(55656, -252216, -6760);
+		new Location(55736, -252216, -6760);
+		new Location(55672, -252728, -6760);
+		new Location(55752, -252840, -6760);
+		new Location(55768, -252840, -6760);
+		new Location(55752, -252712, -6760);
+		new Location(56504, -252840, -6760);
+		new Location(56504, -252728, -6760);
+		new Location(56392, -252728, -6760);
+		new Location(56408, -252840, -6760);
+		new Location(56520, -252232, -6760);
+		new Location(56520, -252104, -6760);
+		new Location(56424, -252104, -6760);
+		new Location(56440, -252216, -6760);
 	}
 	
 	public _10295_SevenSignsSolinasTomb()
@@ -121,6 +105,7 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 	{
 		Player player = st.getPlayer();
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("eris_q10295_5.htm"))
 		{
 			st.setCond(1);
@@ -148,6 +133,7 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 				removeInvincibility(player, 18953);
 				return null;
 			}
+			
 			htmltext = "powerful_q10295_0.htm";
 		}
 		else if (event.equalsIgnoreCase("use_book"))
@@ -159,6 +145,7 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 				removeInvincibility(player, 18954);
 				return null;
 			}
+			
 			htmltext = "powerful_q10295_0.htm";
 		}
 		else if (event.equalsIgnoreCase("use_sword"))
@@ -170,6 +157,7 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 				removeInvincibility(player, 18955);
 				return null;
 			}
+			
 			htmltext = "powerful_q10295_0.htm";
 		}
 		else if (event.equalsIgnoreCase("use_shield"))
@@ -181,6 +169,7 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 				removeInvincibility(player, 18952);
 				return null;
 			}
+			
 			htmltext = "powerful_q10295_0.htm";
 		}
 		else if (event.equalsIgnoreCase("altarstaff_q10295_2.htm"))
@@ -261,6 +250,7 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 			st.setCond(3);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return htmltext;
 	}
 	
@@ -271,15 +261,18 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
+		
 		if (!player.isBaseClassActive())
 		{
 			return "no_subclass_allowed.htm";
 		}
+		
 		if (npcId == ErisEvilThoughts)
 		{
 			if (cond == 0)
 			{
 				QuestState qs = player.getQuestState(_10294_SevenSignsMonasteryofSilence.class);
+				
 				if ((player.getLevel() >= 81) && (qs != null) && qs.isCompleted())
 				{
 					htmltext = "eris_q10295_1.htm";
@@ -328,7 +321,6 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 			{
 				htmltext = "teleport_device_q10295_2.htm";
 			}
-			
 		}
 		else if (npcId == PowerfulDeviceStaff)
 		{
@@ -389,6 +381,7 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 				htmltext = "solina_q10295_8.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -397,34 +390,41 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		Player player = st.getPlayer();
+		
 		if (ArrayUtils.contains(SolinaGuardians, npcId) && checkGuardians(player, SolinaGuardians))
 		{
 			player.broadcastPacket(new EventTrigger(21100100, false));
 			player.showQuestMovie(ExStartScenePlayer.SCENE_SSQ2_SOLINA_TOMB_CLOSING);
 			player.broadcastPacket(new EventTrigger(21100102, true));
 		}
+		
 		if (ArrayUtils.contains(TombGuardians, npcId))
 		{
 			if (checkGuardians(player, TombGuardians))
 			{
 				player.getReflection().openDoor(21100018);
 			}
+			
 			switch (npcId)
 			{
 				case 18956:
 					player.getReflection().despawnByGroup("tombguards3");
 					break;
+				
 				case 18957:
 					player.getReflection().despawnByGroup("tombguards2");
 					break;
+				
 				case 18958:
 					player.getReflection().despawnByGroup("tombguards1");
 					break;
+				
 				case 18959:
 					player.getReflection().despawnByGroup("tombguards4");
 					break;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -465,12 +465,14 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
 	private void activateTombGuards(Player player)
 	{
 		Reflection r = player.getReflection();
+		
 		if ((r == null) || r.isDefault())
 		{
 			return;

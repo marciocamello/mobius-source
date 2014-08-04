@@ -21,7 +21,6 @@ public class ExPVPMatchUserDie extends L2GameServerPacket
 	
 	public ExPVPMatchUserDie()
 	{
-		
 	}
 	
 	@Override

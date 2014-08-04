@@ -58,28 +58,35 @@ public final class RequestRefine extends AbstractRefinePacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if ((activeChar == null) || (_gemstoneCount < 1))
 		{
 			return;
 		}
+		
 		ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
 		ItemInstance refinerItem = activeChar.getInventory().getItemByObjectId(_refinerItemObjId);
 		ItemInstance gemstoneItem = activeChar.getInventory().getItemByObjectId(_gemstoneItemObjId);
+		
 		if ((targetItem == null) || (refinerItem == null) || (gemstoneItem == null))
 		{
 			activeChar.sendPacket(Msg.THIS_IS_NOT_A_SUITABLE_ITEM);
 			return;
 		}
+		
 		LifeStoneInfo lsi = LifeStoneManager.getStoneInfo(refinerItem.getItemId());
+		
 		if (lsi == null)
 		{
 			return;
 		}
+		
 		if (!isValid(activeChar, targetItem, refinerItem, gemstoneItem))
 		{
 			activeChar.sendPacket(new ExVariationResult(0, 0, 0), Msg.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS);
 			return;
 		}
+		
 		if (TryAugmentItem(activeChar, targetItem, lsi))
 		{
 			int stat12 = 0x0000FFFF & targetItem.getAugmentationId();
@@ -105,24 +112,31 @@ public final class RequestRefine extends AbstractRefinePacket
 		{
 			return false;
 		}
+		
 		if (!player.getInventory().destroyItemByObjectId(_refinerItemObjId, 1L))
 		{
 			return false;
 		}
+		
 		int augmentation = AugmentationData.getInstance().generateRandomAugmentation(lsi.getLevel(), lsi.getGrade(), targetItem.getTemplate().getBodyPart());
 		boolean equipped = targetItem.isEquipped();
+		
 		if (equipped)
 		{
 			player.getInventory().unEquipItem(targetItem);
 		}
+		
 		targetItem.setAugmentationId(augmentation);
 		targetItem.setJdbcState(JdbcEntityState.UPDATED);
 		targetItem.update();
+		
 		if (equipped)
 		{
 			player.getInventory().equipItem(targetItem);
 		}
+		
 		player.sendPacket(new InventoryUpdate().addModifiedItem(targetItem));
+		
 		for (ShortCut sc : player.getAllShortCuts())
 		{
 			if ((sc.getId() == targetItem.getObjectId()) && (sc.getType() == ShortCut.TYPE_ITEM))
@@ -130,6 +144,7 @@ public final class RequestRefine extends AbstractRefinePacket
 				player.sendPacket(new ShortCutRegister(player, sc));
 			}
 		}
+		
 		player.sendChanges();
 		return true;
 	}

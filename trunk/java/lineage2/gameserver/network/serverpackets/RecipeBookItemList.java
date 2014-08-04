@@ -27,6 +27,7 @@ public class RecipeBookItemList extends L2GameServerPacket
 	{
 		_isDwarvenCraft = isDwarvenCraft;
 		_currentMp = (int) player.getCurrentMp();
+		
 		if (isDwarvenCraft)
 		{
 			_recipes = player.getDwarvenRecipeBook();
@@ -43,7 +44,6 @@ public class RecipeBookItemList extends L2GameServerPacket
 		writeC(0xdc);
 		writeD(_isDwarvenCraft ? 0x00 : 0x01);
 		writeD(_currentMp);
-		
 		writeD(_recipes.size());
 		
 		for (RecipeTemplate recipe : _recipes)

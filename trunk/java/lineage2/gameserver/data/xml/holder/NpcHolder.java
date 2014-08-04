@@ -83,11 +83,13 @@ public final class NpcHolder extends AbstractHolder
 	public NpcTemplate getTemplate(int id)
 	{
 		NpcTemplate npc = ArrayUtils.valid(_allTemplates, id);
+		
 		if (npc == null)
 		{
 			warn("Not defined npc id : " + id + ", or out of range!", new Exception());
 			return null;
 		}
+		
 		return _allTemplates[id];
 	}
 	
@@ -128,6 +130,7 @@ public final class NpcHolder extends AbstractHolder
 		_npcsByLevel = new TIntObjectHashMap<>();
 		_npcsNames = new HashMap<>();
 		int highestId = 0;
+		
 		for (int id : _npcs.keys())
 		{
 			if (id > highestId)
@@ -135,7 +138,9 @@ public final class NpcHolder extends AbstractHolder
 				highestId = id;
 			}
 		}
+		
 		_allTemplates = new NpcTemplate[highestId + 1];
+		
 		for (TIntObjectIterator<NpcTemplate> iterator = _npcs.iterator(); iterator.hasNext();)
 		{
 			iterator.advance();
@@ -143,10 +148,12 @@ public final class NpcHolder extends AbstractHolder
 			NpcTemplate npc = iterator.value();
 			_allTemplates[npcId] = npc;
 			List<NpcTemplate> byLevel;
+			
 			if ((byLevel = _npcsByLevel.get(npc.level)) == null)
 			{
 				_npcsByLevel.put(npcId, byLevel = new ArrayList<>());
 			}
+			
 			byLevel.add(npc);
 			_npcsNames.put(npc.name.toLowerCase(), npc);
 		}

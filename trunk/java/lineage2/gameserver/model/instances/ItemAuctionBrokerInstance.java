@@ -31,7 +31,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public final class ItemAuctionBrokerInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -78,26 +78,32 @@ public final class ItemAuctionBrokerInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		final String[] params = command.split(" ");
+		
 		if (params.length == 1)
 		{
 			return;
 		}
+		
 		if (params[0].equals("auction"))
 		{
 			if (_instance == null)
 			{
 				_instance = ItemAuctionManager.getInstance().getManagerInstance(getTemplate().npcId);
+				
 				if (_instance == null)
 				{
 					return;
 				}
 			}
+			
 			if (params[1].equals("cancel"))
 			{
 				if (params.length == 3)
 				{
 					int auctionId = 0;
+					
 					try
 					{
 						auctionId = Integer.parseInt(params[2]);
@@ -107,7 +113,9 @@ public final class ItemAuctionBrokerInstance extends NpcInstance
 						e.printStackTrace();
 						return;
 					}
+					
 					final ItemAuction auction = _instance.getAuction(auctionId);
+					
 					if (auction != null)
 					{
 						auction.cancelBid(player);
@@ -120,6 +128,7 @@ public final class ItemAuctionBrokerInstance extends NpcInstance
 				else
 				{
 					final ItemAuction[] auctions = _instance.getAuctionsByBidder(player.getObjectId());
+					
 					for (final ItemAuction auction : auctions)
 					{
 						auction.cancelBid(player);
@@ -130,20 +139,25 @@ public final class ItemAuctionBrokerInstance extends NpcInstance
 			{
 				final ItemAuction currentAuction = _instance.getCurrentAuction();
 				final ItemAuction nextAuction = _instance.getNextAuction();
+				
 				if (currentAuction == null)
 				{
 					player.sendPacket(Msg.IT_IS_NOT_AN_AUCTION_PERIOD);
+					
 					if (nextAuction != null)
 					{
 						player.sendMessage("The next auction will begin on the " + fmt.format(new Date(nextAuction.getStartingTime())) + ".");
 					}
+					
 					return;
 				}
+				
 				if (!player.getAndSetLastItemAuctionRequest())
 				{
 					player.sendPacket(Msg.THERE_ARE_NO_OFFERINGS_I_OWN_OR_I_MADE_A_BID_FOR);
 					return;
 				}
+				
 				player.sendPacket(new ExItemAuctionInfo(false, currentAuction, nextAuction));
 			}
 		}

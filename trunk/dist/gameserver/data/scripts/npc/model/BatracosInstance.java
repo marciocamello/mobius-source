@@ -26,7 +26,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public final class BatracosInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -56,6 +56,7 @@ public final class BatracosInstance extends NpcInstance
 		if (val == 0)
 		{
 			String htmlpath = null;
+			
 			if (getReflection().isDefault())
 			{
 				htmlpath = "default/32740.htm";
@@ -64,6 +65,7 @@ public final class BatracosInstance extends NpcInstance
 			{
 				htmlpath = "default/32740-4.htm";
 			}
+			
 			player.sendPacket(new NpcHtmlMessage(player, this, htmlpath, val));
 		}
 		else
@@ -84,9 +86,11 @@ public final class BatracosInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("request_seer"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(urogosIzId))

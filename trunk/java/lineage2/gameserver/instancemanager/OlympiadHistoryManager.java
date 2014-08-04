@@ -64,6 +64,7 @@ public class OlympiadHistoryManager
 	OlympiadHistoryManager()
 	{
 		Map<Boolean, List<OlympiadHistory>> historyList = OlympiadHistoryDAO.getInstance().select();
+		
 		for (Map.Entry<Boolean, List<OlympiadHistory>> entry : historyList.entrySet())
 		{
 			for (OlympiadHistory history : entry.getValue())
@@ -115,10 +116,12 @@ public class OlympiadHistoryManager
 	private void addHistory0(IntObjectMap<List<OlympiadHistory>> map, int objectId, OlympiadHistory history)
 	{
 		List<OlympiadHistory> historySet = map.get(objectId);
+		
 		if (historySet == null)
 		{
 			map.put(objectId, historySet = new CopyOnWriteArrayList<>());
 		}
+		
 		historySet.add(history);
 	}
 	
@@ -132,21 +135,26 @@ public class OlympiadHistoryManager
 	{
 		final int perpage = 15;
 		Map.Entry<Integer, StatsSet> entry = Hero.getInstance().getHeroStats(targetClassId);
+		
 		if (entry == null)
 		{
 			return;
 		}
+		
 		List<OlympiadHistory> historyList = _historyOld.get(entry.getKey());
+		
 		if (historyList == null)
 		{
 			historyList = Collections.emptyList();
 		}
+		
 		NpcHtmlMessage html = new NpcHtmlMessage(player, null);
 		html.setFile("olympiad/monument_hero_info.htm");
 		html.replace("%title%", StringHolder.getInstance().getNotNull(player, "hero.history"));
 		int allStatWinner = 0;
 		int allStatLoss = 0;
 		int allStatTie = 0;
+		
 		for (OlympiadHistory h : historyList)
 		{
 			if (h.getGameStatus() == 0)
@@ -156,6 +164,7 @@ public class OlympiadHistoryManager
 			else
 			{
 				int team = entry.getKey() == h.getObjectId1() ? 1 : 2;
+				
 				if (h.getGameStatus() == team)
 				{
 					allStatWinner++;
@@ -166,6 +175,7 @@ public class OlympiadHistoryManager
 				}
 			}
 		}
+		
 		html.replace("%wins%", String.valueOf(allStatWinner));
 		html.replace("%ties%", String.valueOf(allStatTie));
 		html.replace("%losses%", String.valueOf(allStatLoss));
@@ -175,9 +185,11 @@ public class OlympiadHistoryManager
 		int currentLoss = 0;
 		int currentTie = 0;
 		final StringBuilder b = new StringBuilder(500);
+		
 		for (int i = 0; i < historyList.size(); i++)
 		{
 			OlympiadHistory history = historyList.get(i);
+			
 			if (history.getGameStatus() == 0)
 			{
 				currentTie++;
@@ -185,6 +197,7 @@ public class OlympiadHistoryManager
 			else
 			{
 				int team = entry.getKey() == history.getObjectId1() ? 1 : 2;
+				
 				if (history.getGameStatus() == team)
 				{
 					currentWinner++;
@@ -194,18 +207,22 @@ public class OlympiadHistoryManager
 					currentLoss++;
 				}
 			}
+			
 			if (i < min)
 			{
 				continue;
 			}
+			
 			if (i >= max)
 			{
 				break;
 			}
+			
 			b.append("<tr><td>");
 			b.append(history.toString(player, entry.getKey(), currentWinner, currentLoss, currentTie));
 			b.append("</td></tr");
 		}
+		
 		if (min > 0)
 		{
 			html.replace("%buttprev%", HtmlUtils.PREV_BUTTON);
@@ -215,6 +232,7 @@ public class OlympiadHistoryManager
 		{
 			html.replace("%buttprev%", StringUtils.EMPTY);
 		}
+		
 		if (historyList.size() > max)
 		{
 			html.replace("%buttnext%", HtmlUtils.NEXT_BUTTON);
@@ -224,6 +242,7 @@ public class OlympiadHistoryManager
 		{
 			html.replace("%buttnext%", StringUtils.EMPTY);
 		}
+		
 		html.replace("%list%", b.toString());
 		player.sendPacket(html);
 	}

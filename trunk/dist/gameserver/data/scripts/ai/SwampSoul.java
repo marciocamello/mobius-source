@@ -37,10 +37,8 @@ public class SwampSoul extends Mystic
 	protected boolean thinkActive()
 	{
 		NpcInstance actor = getActor();
-		
 		actor.deleteMe();
 		return false;
-		
 		// return super.thinkActive();
 	}
 }

@@ -41,10 +41,12 @@ public class GrandIsleofPrayerRace extends Functions
 		Skill skill = SkillTable.getInstance().getInfo(Skill.SKILL_EVENT_TIMER, 1);
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((skill == null) || (player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		getNpc().altUseSkill(skill, player);
 		removeItem(player, RACE_STAMP, getItemCount(player, RACE_STAMP));
 		show("default/32349-2.htm", player, npc);
@@ -58,19 +60,24 @@ public class GrandIsleofPrayerRace extends Functions
 	public String DialogAppend_32349(Integer val)
 	{
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return "";
 		}
+		
 		if (player.getEffectList().getEffectsBySkillId(Skill.SKILL_EVENT_TIMER) == null)
 		{
 			return "<br>[scripts_services.GrandIsleofPrayerRace:startRace|Start the Race.]";
 		}
+		
 		long raceStampsCount = getItemCount(player, RACE_STAMP);
+		
 		if (raceStampsCount < 4)
 		{
 			return "<br>*Race in progress, hurry!*";
 		}
+		
 		removeItem(player, RACE_STAMP, raceStampsCount);
 		addItem(player, SECRET_KEY, 3);
 		player.getEffectList().stopEffect(Skill.SKILL_EVENT_TIMER);

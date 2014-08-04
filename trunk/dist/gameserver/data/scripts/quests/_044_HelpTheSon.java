@@ -59,6 +59,7 @@ public class _044_HelpTheSon extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("1"))
 		{
 			htmltext = "pet_manager_lundy_q0044_0104.htm";
@@ -91,6 +92,7 @@ public class _044_HelpTheSon extends Quest implements ScriptFile
 			st.giveItems(PET_TICKET, 1);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -100,6 +102,7 @@ public class _044_HelpTheSon extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
 		int id = st.getState();
+		
 		if (id == CREATED)
 		{
 			if (st.getPlayer().getLevel() >= 24)
@@ -115,6 +118,7 @@ public class _044_HelpTheSon extends Quest implements ScriptFile
 		else if (id == STARTED)
 		{
 			int cond = st.getCond();
+			
 			if (npcId == LUNDY)
 			{
 				if (cond == 1)
@@ -157,6 +161,7 @@ public class _044_HelpTheSon extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -164,9 +169,11 @@ public class _044_HelpTheSon extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if ((cond == 2) && (st.getQuestItemsCount(GEMSTONE_FRAGMENT) < 30))
 		{
 			st.giveItems(GEMSTONE_FRAGMENT, 1);
+			
 			if (st.getQuestItemsCount(GEMSTONE_FRAGMENT) >= 30)
 			{
 				st.playSound(SOUND_MIDDLE);
@@ -178,6 +185,7 @@ public class _044_HelpTheSon extends Quest implements ScriptFile
 				st.playSound(SOUND_ITEMGET);
 			}
 		}
+		
 		return null;
 	}
 }

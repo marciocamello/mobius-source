@@ -51,19 +51,23 @@ public class NevitVoice extends SimpleItemHandler
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
 		final int itemId = item.getItemId();
+		
 		if (!useItem(player, item, 1))
 		{
 			return false;
 		}
+		
 		switch (itemId)
 		{
 			case 17094:
 				player.addRecomHave(10);
 				Functions.addItem(player, 57, 100000);
 				break;
+			
 			default:
 				return false;
 		}
+		
 		return true;
 	}
 }

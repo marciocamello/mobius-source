@@ -28,7 +28,7 @@ import lineage2.gameserver.utils.WarehouseFunctions;
 public final class NpcFriendInstance extends MerchantInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -60,7 +60,6 @@ public final class NpcFriendInstance extends MerchantInstance
 		if (((getNpcId() >= 31370) && (getNpcId() <= 31376) && (player.getVarka() > 0)) || ((getNpcId() >= 31377) && (getNpcId() < 31384) && (player.getKetra() > 0)))
 		{
 			filename = "npc_friend/" + getNpcId() + "-nofriend.htm";
-			
 			showChatWindow(player, filename);
 			return;
 		}
@@ -77,6 +76,7 @@ public final class NpcFriendInstance extends MerchantInstance
 			case 31554:
 				filename = "npc_friend/" + getNpcId() + ".htm";
 				break;
+			
 			case 31372:
 				if (player.getKetra() > 2)
 				{
@@ -88,6 +88,7 @@ public final class NpcFriendInstance extends MerchantInstance
 				}
 				
 				break;
+			
 			case 31379:
 				if (player.getVarka() > 2)
 				{
@@ -99,6 +100,7 @@ public final class NpcFriendInstance extends MerchantInstance
 				}
 				
 				break;
+			
 			case 31374:
 				if (player.getKetra() > 1)
 				{
@@ -110,6 +112,7 @@ public final class NpcFriendInstance extends MerchantInstance
 				}
 				
 				break;
+			
 			case 31381:
 				if (player.getVarka() > 1)
 				{
@@ -121,6 +124,7 @@ public final class NpcFriendInstance extends MerchantInstance
 				}
 				
 				break;
+			
 			case 31375:
 				if ((player.getKetra() == 3) || (player.getKetra() == 4))
 				{
@@ -136,6 +140,7 @@ public final class NpcFriendInstance extends MerchantInstance
 				}
 				
 				break;
+			
 			case 31382:
 				if ((player.getVarka() == 3) || (player.getVarka() == 4))
 				{
@@ -151,6 +156,7 @@ public final class NpcFriendInstance extends MerchantInstance
 				}
 				
 				break;
+			
 			case 31376:
 				if (player.getKetra() == 4)
 				{
@@ -166,6 +172,7 @@ public final class NpcFriendInstance extends MerchantInstance
 				}
 				
 				break;
+			
 			case 31383:
 				if (player.getVarka() == 4)
 				{
@@ -181,6 +188,7 @@ public final class NpcFriendInstance extends MerchantInstance
 				}
 				
 				break;
+			
 			case 31555:
 				if (player.getRam() == 1)
 				{
@@ -196,6 +204,7 @@ public final class NpcFriendInstance extends MerchantInstance
 				}
 				
 				break;
+			
 			case 31556:
 				if (player.getRam() == 2)
 				{
@@ -222,31 +231,39 @@ public final class NpcFriendInstance extends MerchantInstance
 		{
 			return;
 		}
+		
 		StringTokenizer st = new StringTokenizer(command, " ");
 		String actualCommand = st.nextToken();
+		
 		if (actualCommand.equalsIgnoreCase("Buff"))
 		{
 			if (st.countTokens() < 1)
 			{
 				return;
 			}
+			
 			int val = Integer.parseInt(st.nextToken());
 			int item = 0;
+			
 			switch (getNpcId())
 			{
 				case 31372:
 					item = 7186;
 					break;
+				
 				case 31379:
 					item = 7187;
 					break;
+				
 				case 31556:
 					item = 7251;
 					break;
 			}
+			
 			int skill = 0;
 			int level = 0;
 			long count = 0;
+			
 			switch (val)
 			{
 				case 1:
@@ -254,42 +271,50 @@ public final class NpcFriendInstance extends MerchantInstance
 					level = 2;
 					count = 2;
 					break;
+				
 				case 2:
 					skill = 4360;
 					level = 2;
 					count = 2;
 					break;
+				
 				case 3:
 					skill = 4345;
 					level = 3;
 					count = 3;
 					break;
+				
 				case 4:
 					skill = 4355;
 					level = 2;
 					count = 3;
 					break;
+				
 				case 5:
 					skill = 4352;
 					level = 1;
 					count = 3;
 					break;
+				
 				case 6:
 					skill = 4354;
 					level = 3;
 					count = 3;
 					break;
+				
 				case 7:
 					skill = 4356;
 					level = 1;
 					count = 6;
 					break;
+				
 				case 8:
 					skill = 4357;
 					level = 2;
 					count = 6;
 					break;
 			}
+			
 			if ((skill != 0) && player.getInventory().destroyItemByItemId(item, count))
 			{
 				player.doCast(SkillTable.getInstance().getInfo(skill, level), player, true);
@@ -304,6 +329,7 @@ public final class NpcFriendInstance extends MerchantInstance
 			int val = Integer.parseInt(command.substring(5));
 			String fname = "";
 			fname = "npc_friend/" + getNpcId() + "-" + val + ".htm";
+			
 			if (!fname.equals(""))
 			{
 				showChatWindow(player, fname);
@@ -321,6 +347,7 @@ public final class NpcFriendInstance extends MerchantInstance
 		else if (command.startsWith("WithdrawP"))
 		{
 			int val = Integer.parseInt(command.substring(10));
+			
 			if (val == 99)
 			{
 				NpcHtmlMessage html = new NpcHtmlMessage(player, this);

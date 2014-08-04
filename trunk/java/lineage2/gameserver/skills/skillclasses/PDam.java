@@ -70,6 +70,7 @@ public class PDam extends Skill
 		boolean ss = activeChar.getChargedSoulShot() && isSSPossible();
 		Creature realTarget;
 		boolean reflected;
+		
 		for (Creature target : targets)
 		{
 			if ((target != null) && !target.isDead())
@@ -81,24 +82,30 @@ public class PDam extends Skill
 					target.setHeading(activeChar.getHeading());
 					target.sendPacket(new SystemMessage(SystemMessage.S1_S2S_EFFECT_CAN_BE_FELT).addSkillName(_displayId, _displayLevel));
 				}
+				
 				reflected = target.checkReflectSkill(activeChar, this);
 				realTarget = reflected ? activeChar : target;
 				AttackInfo info = Formulas.calcPhysDam(activeChar, realTarget, this, false, _blow, ss, _onCrit);
+				
 				if (info.lethal_dmg > 0)
 				{
 					realTarget.reduceCurrentHp(info.lethal_dmg, info.reflectableDamage, activeChar, this, true, true, false, false, false, false, false);
 				}
+				
 				if (!info.miss || (info.damage >= 1))
 				{
 					realTarget.reduceCurrentHp(info.damage, info.reflectableDamage, activeChar, this, true, true, info.lethal ? false : _directHp, true, false, false, getPower() != 0);
 				}
+				
 				if (!reflected)
 				{
 					realTarget.doCounterAttack(this, activeChar, _blow);
 				}
+				
 				getEffects(activeChar, target, getActivateRate() > 0, false, reflected);
 			}
 		}
+		
 		if (isSuicideAttack())
 		{
 			activeChar.doDie(null);

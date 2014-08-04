@@ -67,12 +67,15 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 	{
 		_oldOwner = getResidence().getOwner();
 		List<CMGSiegeClanObject> siegeClans = getObjects(ATTACKERS);
+		
 		if (siegeClans.size() < 2)
 		{
 			CMGSiegeClanObject siegeClan = CollectionUtils.safeGet(siegeClans, 0);
+			
 			if (siegeClan != null)
 			{
 				CMGSiegeClanObject oldSiegeClan = getSiegeClan(REFUND, siegeClan.getObjectId());
+				
 				if (oldSiegeClan != null)
 				{
 					SiegeClanDAO.getInstance().delete(getResidence(), siegeClan);
@@ -87,18 +90,22 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 					SiegeClanDAO.getInstance().update(getResidence(), siegeClan);
 				}
 			}
+			
 			siegeClans.clear();
 			broadcastTo(SystemMsg.THIS_CLAN_HALL_WAR_HAS_BEEN_CANCELLED, ATTACKERS);
 			broadcastInZone2(new SystemMessage2(SystemMsg.THE_SIEGE_OF_S1_HAS_ENDED_IN_A_DRAW).addResidenceName(getResidence()));
 			reCalcNextTime(false);
 			return;
 		}
+		
 		CMGSiegeClanObject[] clans = siegeClans.toArray(new CMGSiegeClanObject[siegeClans.size()]);
 		Arrays.sort(clans, SiegeClanObject.SiegeClanComparatorImpl.getInstance());
 		List<CMGSiegeClanObject> temp = new ArrayList<>(4);
+		
 		for (CMGSiegeClanObject siegeClan : clans)
 		{
 			SiegeClanDAO.getInstance().delete(getResidence(), siegeClan);
+			
 			if (temp.size() == 4)
 			{
 				siegeClans.remove(siegeClan);
@@ -110,6 +117,7 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 				siegeClan.broadcast(SystemMsg.YOU_HAVE_BEEN_REGISTERED_FOR_A_CLAN_HALL_WAR);
 			}
 		}
+		
 		_arenaClosed = false;
 		super.startEvent();
 	}
@@ -123,6 +131,7 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 	{
 		removeBanishItems();
 		Clan newOwner = getResidence().getOwner();
+		
 		if (newOwner != null)
 		{
 			if (_oldOwner != newOwner)
@@ -130,6 +139,7 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 				newOwner.broadcastToOnlineMembers(PlaySound.SIEGE_VICTORY);
 				newOwner.incReputation(1700, false, toString());
 			}
+			
 			broadcastTo(new SystemMessage2(SystemMsg.S1_CLAN_HAS_DEFEATED_S2).addString(newOwner.getName()).addResidenceName(getResidence()), ATTACKERS, DEFENDERS);
 			broadcastTo(new SystemMessage2(SystemMsg.THE_SIEGE_OF_S1_IS_FINISHED).addResidenceName(getResidence()), ATTACKERS, DEFENDERS);
 		}
@@ -137,6 +147,7 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 		{
 			broadcastTo(new SystemMessage2(SystemMsg.THE_SIEGE_OF_S1_HAS_ENDED_IN_A_DRAW).addResidenceName(getResidence()), ATTACKERS);
 		}
+		
 		updateParticles(false, ATTACKERS);
 		removeObjects(ATTACKERS);
 		super.stopEvent(step);
@@ -149,10 +160,12 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 	public void nextStep()
 	{
 		List<CMGSiegeClanObject> siegeClans = getObjects(ATTACKERS);
+		
 		for (int i = 0; i < siegeClans.size(); i++)
 		{
 			spawnAction("arena_" + i, true);
 		}
+		
 		_arenaClosed = true;
 		updateParticles(true, ATTACKERS);
 		broadcastTo(new SystemMessage2(SystemMsg.THE_SIEGE_TO_CONQUER_S1_HAS_BEGUN).addResidenceName(getResidence()), ATTACKERS);
@@ -169,6 +182,7 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 		{
 			broadcastTo(SystemMsg.THE_REGISTRATION_PERIOD_FOR_A_CLAN_HALL_WAR_HAS_ENDED, ATTACKERS);
 		}
+		
 		super.setRegistrationOver(b);
 	}
 	
@@ -196,6 +210,7 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 	{
 		int seconds = val % 60;
 		int min = val / 60;
+		
 		if (min > 0)
 		{
 			SystemMsg msg = min > 10 ? SystemMsg.IN_S1_MINUTES_THE_GAME_WILL_BEGIN_ALL_PLAYERS_MUST_HURRY_AND_MOVE_TO_THE_LEFT_SIDE_OF_THE_CLAN_HALLS_ARENA : SystemMsg.IN_S1_MINUTES_THE_GAME_WILL_BEGIN_ALL_PLAYERS_PLEASE_ENTER_THE_ARENA_NOW;
@@ -218,6 +233,7 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 		{
 			getResidence().changeOwner(clan);
 		}
+		
 		stopEvent(true);
 	}
 	

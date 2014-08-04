@@ -221,6 +221,7 @@ public class ResidenceFunction
 		setEndTimeInMillis(System.currentTimeMillis() + 86400000);
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -280,6 +281,7 @@ public class ResidenceFunction
 		{
 			return 0;
 		}
+		
 		return getLease(_level);
 	}
 	

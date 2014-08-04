@@ -47,6 +47,7 @@ public class MatchBerserker extends MatchFighter
 	public void onEvtAttacked(Creature attacker, int dam)
 	{
 		super.onEvtAttacked(attacker, dam);
+		
 		if (Rnd.chance(10))
 		{
 			addTaskCast(attacker, ATTACK_SKILL);

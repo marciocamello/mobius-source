@@ -51,6 +51,7 @@ public class _650_ABrokenDream extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_accept"))
 		{
 			htmltext = "ghost_of_railroadman_q0650_0103.htm";
@@ -65,6 +66,7 @@ public class _650_ABrokenDream extends Quest implements ScriptFile
 			st.exitCurrentQuest(true);
 			st.unset("cond");
 		}
+		
 		return htmltext;
 	}
 	
@@ -73,9 +75,11 @@ public class _650_ABrokenDream extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		String htmltext = "noquest";
+		
 		if (cond == 0)
 		{
 			QuestState OceanOfDistantStar = st.getPlayer().getQuestState(_117_OceanOfDistantStar.class);
+			
 			if (OceanOfDistantStar != null)
 			{
 				if (OceanOfDistantStar.isCompleted())
@@ -106,6 +110,7 @@ public class _650_ABrokenDream extends Quest implements ScriptFile
 		{
 			htmltext = "ghost_of_railroadman_q0650_0202.htm";
 		}
+		
 		return htmltext;
 	}
 	

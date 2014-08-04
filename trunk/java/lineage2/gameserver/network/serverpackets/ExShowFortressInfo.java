@@ -30,6 +30,7 @@ public class ExShowFortressInfo extends L2GameServerPacket
 	{
 		List<Fortress> forts = ResidenceHolder.getInstance().getResidenceList(Fortress.class);
 		_infos = new ArrayList<>(forts.size());
+		
 		for (Fortress fortress : forts)
 		{
 			Clan owner = fortress.getOwner();
@@ -42,6 +43,7 @@ public class ExShowFortressInfo extends L2GameServerPacket
 	{
 		writeEx(0x15);
 		writeD(_infos.size());
+		
 		for (FortressInfo _info : _infos)
 		{
 			writeD(_info._id);

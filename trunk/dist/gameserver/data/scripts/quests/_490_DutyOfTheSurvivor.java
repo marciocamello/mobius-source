@@ -80,6 +80,7 @@ public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return event;
 	}
 	
@@ -90,6 +91,7 @@ public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int state = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == VOLODOS)
 		{
 			if (state == 1)
@@ -98,18 +100,22 @@ public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 				{
 					return "30137-lvl.htm";
 				}
+				
 				if (!st.isNowAvailable())
 				{
 					return "30137-comp.htm";
 				}
+				
 				return "30137.htm";
 			}
+			
 			if (state == 2)
 			{
 				if (cond == 1)
 				{
 					return "30137-7.htm";
 				}
+				
 				if (cond == 2)
 				{
 					st.giveItems(57, 505062);
@@ -121,6 +127,7 @@ public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -128,6 +135,7 @@ public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if ((cond != 1) || (npc == null))
 		{
 			return null;
@@ -148,12 +156,14 @@ public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 				{
 					st.giveItems(Blood, 1);
 				}
+				
 				if ((st.getQuestItemsCount(Zhelch) >= 20) && (st.getQuestItemsCount(Blood) >= 20))
 				{
 					st.setCond(2);
 				}
 			}
 		}
+		
 		return null;
 	}
 }

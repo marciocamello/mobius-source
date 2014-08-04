@@ -52,6 +52,7 @@ public class DefuseTrap extends Skill
 			activeChar.sendPacket(Msg.INVALID_TARGET);
 			return false;
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
@@ -68,12 +69,14 @@ public class DefuseTrap extends Skill
 			if ((target != null) && target.isTrap())
 			{
 				TrapInstance trap = (TrapInstance) target;
+				
 				if (trap.getLevel() <= getPower())
 				{
 					trap.deleteMe();
 				}
 			}
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());

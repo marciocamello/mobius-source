@@ -56,7 +56,6 @@ public class _462_StuffedAncientHeroes extends Quest implements ScriptFile
 	{
 		super(true);
 		addStartNpc(32892); // Tipia
-		
 		addLevelCheck(95, 100);
 		addQuestCompletedCheck(_10317_OrbisWitch.class); // to replace for witch quest
 	}
@@ -82,6 +81,7 @@ public class _462_StuffedAncientHeroes extends Quest implements ScriptFile
 			st.exitCurrentQuest(this);
 			return "32892-11.htm";
 		}
+		
 		return event;
 	}
 	
@@ -92,6 +92,7 @@ public class _462_StuffedAncientHeroes extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int state = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == 32892)
 		{
 			if (state == 1)
@@ -100,18 +101,22 @@ public class _462_StuffedAncientHeroes extends Quest implements ScriptFile
 				{
 					return "32892-lvl.htm";
 				}
+				
 				if (!st.isNowAvailable())
 				{
 					return "32892-comp.htm";
 				}
+				
 				if (st.getPlayer().getLevel() < 95)
 				{
 					return "32892-lvl.htm";
 				}
+				
 				String htmltext = HtmCache.getInstance().getNotNull("quests/_462_StuffedAncientHeroes/32892.htm", st.getPlayer());
 				htmltext.replace("%name%", player.getName());
 				return htmltext;
 			}
+			
 			if (state == 2)
 			{
 				if (cond == 1)
@@ -123,12 +128,14 @@ public class _462_StuffedAncientHeroes extends Quest implements ScriptFile
 				{
 					return "32892-8.htm";
 				}
+				
 				if (cond == 2)
 				{
 					return "reward";
 				}
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -136,10 +143,12 @@ public class _462_StuffedAncientHeroes extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if ((cond != 1) || (cond != 3))
 		{
 			return null;
 		}
+		
 		if ((npc != null) && ArrayUtils.contains(Bosses, npc.getNpcId()))
 		{
 			if (st.getInt("1bk") == 1)
@@ -153,6 +162,7 @@ public class _462_StuffedAncientHeroes extends Quest implements ScriptFile
 				st.setCond(3);
 			}
 		}
+		
 		return null;
 	}
 }

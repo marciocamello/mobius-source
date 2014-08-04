@@ -34,7 +34,6 @@ public class ExMoveToTargetInAirShip extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeEx(0x72);
-		
 		writeD(char_id); // ID:%d
 		writeD(target_id); // TargetID:%d
 		writeD(_dist); // Dist:%d

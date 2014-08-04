@@ -97,6 +97,7 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 		{
 			return false;
 		}
+		
 		loadData();
 		activeChar.sendMessage("Bash service reloaded.");
 		return true;
@@ -110,12 +111,15 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 	{
 		Player player = getSelf();
 		NpcInstance lastNpc = player.getLastNpc();
+		
 		if (!NpcInstance.canBypassCheck(player, lastNpc))
 		{
 			return;
 		}
+		
 		int page = 1;
 		int totalPages = quotes.size();
+		
 		try
 		{
 			page = Integer.parseInt(var[0]);
@@ -125,16 +129,19 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 			show(HtmCache.getInstance().getNotNull(wrongPage, player) + navBar(1, totalPages), player, lastNpc);
 			return;
 		}
+		
 		if ((page > totalPages) && (page == 1))
 		{
 			show(notPage, player, lastNpc);
 			return;
 		}
+		
 		if ((page > totalPages) || (page < 1))
 		{
 			show(HtmCache.getInstance().getNotNull(wrongPage, player) + navBar(1, totalPages), player, lastNpc);
 			return;
 		}
+		
 		String html = HtmCache.getInstance().getNotNull(readPage, player);
 		html = html.replaceFirst("%quote%", quotes.get(page - 1));
 		html = html.replaceFirst("%page%", String.valueOf(page));
@@ -153,6 +160,7 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 		factory.setValidating(false);
 		factory.setIgnoringComments(true);
 		Document doc = null;
+		
 		try
 		{
 			doc = factory.newDocumentBuilder().parse(new File(xmlData));
@@ -161,12 +169,15 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 		{
 			e.printStackTrace();
 		}
+		
 		if (doc == null)
 		{
 			return 0;
 		}
+		
 		quotes.clear();
 		int quotesCounter = 0;
+		
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("rss".equalsIgnoreCase(n.getNodeName()))
@@ -193,6 +204,7 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 				}
 			}
 		}
+		
 		return quotesCounter;
 	}
 	
@@ -206,6 +218,7 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 	{
 		StringBuilder buf = new StringBuilder();
 		Socket s;
+		
 		try
 		{
 			try
@@ -216,33 +229,39 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 			{
 				return null;
 			}
+			
 			s.setSoTimeout(30000);
 			BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream(), "Cp1251"));
 			PrintWriter out = new PrintWriter(new OutputStreamWriter(s.getOutputStream(), "UTF-8"));
 			out.print("GET http://" + url_server + "/" + url_document + " HTTP/1.1\r\n" + "User-Agent: MMoCore\r\n" + "Host: " + url_server + "\r\n" + "Accept: */*\r\n" + "Connection: close\r\n" + "\r\n");
 			out.flush();
 			boolean header = true;
+			
 			for (String line = in.readLine(); line != null; line = in.readLine())
 			{
 				if (header && line.startsWith("<?xml "))
 				{
 					header = false;
 				}
+				
 				if (!header)
 				{
 					buf.append(line).append("\r\n");
 				}
+				
 				if (!header && line.startsWith("</rss>"))
 				{
 					break;
 				}
 			}
+			
 			s.close();
 		}
 		catch (IOException e)
 		{
 			e.printStackTrace();
 		}
+		
 		return buf.toString();
 	}
 	
@@ -256,25 +275,33 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 	{
 		String html;
 		html = "<br><center><table border=0 width=240><tr><td widht=30>";
+		
 		if (curPage > 1)
 		{
 			html += "<a action=\"bypass -h scripts_services.Bash:showQuote " + (curPage - 1) + "\">";
 		}
+		
 		html += "&lt;&lt;&lt; �?азад";
+		
 		if (curPage > 1)
 		{
 			html += "</a>";
 		}
+		
 		html += "</td><td widht=160>&nbsp;[" + curPage + "]&nbsp;</td><td widht=40>";
+		
 		if (curPage < totalPages)
 		{
 			html += "<a action=\"bypass -h scripts_services.Bash:showQuote " + (curPage + 1) + "\">";
 		}
+		
 		html += "Вперед &gt;&gt;&gt;";
+		
 		if (curPage < totalPages)
 		{
 			html += "</a>";
 		}
+		
 		html += "</td></tr></table></center>";
 		html += "<table border=0 width=240><tr><td width=150>";
 		html += "�?ерейти на �?траницу:</td><td><edit var=\"page\" width=40></td><td>";
@@ -294,6 +321,7 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 		{
 			return "";
 		}
+		
 		return "<br><center><a action=\"bypass -h scripts_services.Bash:showQuote 1\">�?оч��тат�? Bash.ORG.RU</a></center>";
 	}
 	
@@ -306,7 +334,9 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 		{
 			executeTask("services.Bash", "loadData", new Object[0], Config.SERVICES_BASH_RELOAD_TIME * 60 * 60 * 1000L);
 		}
+		
 		String data;
+		
 		try
 		{
 			data = getPage("bash.im", "rss/");
@@ -315,11 +345,13 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 		{
 			data = null;
 		}
+		
 		if (data == null)
 		{
 			if (Config.SERVICES_BASH_SKIP_DOWNLOAD)
 			{
 				int parse = parseRSS();
+				
 				if (parse == 0)
 				{
 					_log.warn("Service: Bash - RSS data parse error.");
@@ -329,20 +361,26 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 			{
 				_log.info("Service: Bash - RSS data download failed.");
 			}
+			
 			return;
 		}
+		
 		data = data.replaceFirst("windows-1251", "utf-8");
+		
 		if (!Config.SERVICES_BASH_SKIP_DOWNLOAD)
 		{
 			Files.writeFile(xmlData, data);
 			_log.info("Service: Bash - RSS data download completed.");
 		}
+		
 		int parse = parseRSS();
+		
 		if (parse == 0)
 		{
 			_log.warn("Service: Bash - RSS data parse error.");
 			return;
 		}
+		
 		_log.info("Service: Bash - RSS data parsed: loaded " + parse + " quotes.");
 	}
 	
@@ -354,6 +392,7 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 	public void onLoad()
 	{
 		_log.info("Loaded Service: Bash [" + (Config.SERVICES_BASH_ENABLED ? "enabled]" : "disabled]"));
+		
 		if (Config.SERVICES_BASH_ENABLED)
 		{
 			AdminCommandHandler.getInstance().registerAdminCommandHandler(this);

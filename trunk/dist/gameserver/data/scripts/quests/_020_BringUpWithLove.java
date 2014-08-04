@@ -63,6 +63,7 @@ public class _020_BringUpWithLove extends Quest implements ScriptFile
 				{
 					return "31537-03a.htm";
 				}
+				
 				st.giveItems(BEAST_WHIP, 1);
 			}
 			else if (event.equalsIgnoreCase("31537-15.htm"))
@@ -75,6 +76,7 @@ public class _020_BringUpWithLove extends Quest implements ScriptFile
 				st.exitCurrentQuest(false);
 			}
 		}
+		
 		return event;
 	}
 	
@@ -82,6 +84,7 @@ public class _020_BringUpWithLove extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmtext = "noquest";
+		
 		if (npc.getNpcId() == TUNATUN)
 		{
 			switch (st.getState())
@@ -95,7 +98,9 @@ public class _020_BringUpWithLove extends Quest implements ScriptFile
 					{
 						htmtext = "31537-00.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					if (st.getCond() == 1)
 					{
@@ -105,9 +110,11 @@ public class _020_BringUpWithLove extends Quest implements ScriptFile
 					{
 						htmtext = "31537-14.htm";
 					}
+					
 					break;
 			}
 		}
+		
 		return htmtext;
 	}
 }

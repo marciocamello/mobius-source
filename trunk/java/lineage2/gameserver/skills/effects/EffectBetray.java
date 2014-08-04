@@ -40,6 +40,7 @@ public class EffectBetray extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if ((_effected != null) && _effected.isServitor())
 		{
 			Summon summon = (Summon) _effected;
@@ -55,6 +56,7 @@ public class EffectBetray extends Effect
 	public void onExit()
 	{
 		super.onExit();
+		
 		if ((_effected != null) && _effected.isServitor())
 		{
 			Summon summon = (Summon) _effected;

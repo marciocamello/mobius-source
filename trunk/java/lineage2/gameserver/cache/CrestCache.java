@@ -119,11 +119,13 @@ public class CrestCache
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT clan_id, crest FROM clan_data WHERE crest IS NOT NULL");
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				count++;
@@ -133,9 +135,11 @@ public class CrestCache
 				_pledgeCrestId.put(pledgeId, crestId);
 				_pledgeCrest.put(crestId, crest);
 			}
+			
 			DbUtils.close(statement, rset);
 			statement = con.prepareStatement("SELECT clan_id, largecrest FROM clan_data WHERE largecrest IS NOT NULL");
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				count++;
@@ -145,9 +149,11 @@ public class CrestCache
 				_pledgeCrestLargeId.put(pledgeId, crestId);
 				get_pledgeCrestLarge().put(crestId, crest);
 			}
+			
 			DbUtils.close(statement, rset);
 			statement = con.prepareStatement("SELECT ally_id, crest FROM ally_data WHERE crest IS NOT NULL");
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				count++;
@@ -189,6 +195,7 @@ public class CrestCache
 	{
 		byte[] crest = null;
 		readLock.lock();
+		
 		try
 		{
 			crest = _pledgeCrest.get(crestId);
@@ -209,6 +216,7 @@ public class CrestCache
 	{
 		byte[] crest = null;
 		readLock.lock();
+		
 		try
 		{
 			crest = get_pledgeCrestLarge().get(crestId);
@@ -229,6 +237,7 @@ public class CrestCache
 	{
 		byte[] crest = null;
 		readLock.lock();
+		
 		try
 		{
 			crest = _allyCrest.get(crestId);
@@ -249,6 +258,7 @@ public class CrestCache
 	{
 		int crestId = 0;
 		readLock.lock();
+		
 		try
 		{
 			crestId = _pledgeCrestId.get(pledgeId);
@@ -269,6 +279,7 @@ public class CrestCache
 	{
 		int crestId = 0;
 		readLock.lock();
+		
 		try
 		{
 			crestId = _pledgeCrestLargeId.get(pledgeId);
@@ -289,6 +300,7 @@ public class CrestCache
 	{
 		int crestId = 0;
 		readLock.lock();
+		
 		try
 		{
 			crestId = _allyCrestId.get(pledgeId);
@@ -307,6 +319,7 @@ public class CrestCache
 	public void removePledgeCrest(int pledgeId)
 	{
 		writeLock.lock();
+		
 		try
 		{
 			_pledgeCrest.remove(_pledgeCrestId.remove(pledgeId));
@@ -317,6 +330,7 @@ public class CrestCache
 		}
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -342,6 +356,7 @@ public class CrestCache
 	public void removePledgeCrestLarge(int pledgeId)
 	{
 		writeLock.lock();
+		
 		try
 		{
 			get_pledgeCrestLarge().remove(_pledgeCrestLargeId.remove(pledgeId));
@@ -352,6 +367,7 @@ public class CrestCache
 		}
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -377,6 +393,7 @@ public class CrestCache
 	public void removeAllyCrest(int pledgeId)
 	{
 		writeLock.lock();
+		
 		try
 		{
 			_allyCrest.remove(_allyCrestId.remove(pledgeId));
@@ -387,6 +404,7 @@ public class CrestCache
 		}
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -415,6 +433,7 @@ public class CrestCache
 	{
 		int crestId = getCrestId(pledgeId, crest);
 		writeLock.lock();
+		
 		try
 		{
 			_pledgeCrestId.put(pledgeId, crestId);
@@ -426,6 +445,7 @@ public class CrestCache
 		}
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -455,6 +475,7 @@ public class CrestCache
 	{
 		int crestId = getCrestId(pledgeId, crest);
 		writeLock.lock();
+		
 		try
 		{
 			_pledgeCrestLargeId.put(pledgeId, crestId);
@@ -466,6 +487,7 @@ public class CrestCache
 		}
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -495,6 +517,7 @@ public class CrestCache
 	{
 		int crestId = getCrestId(pledgeId, crest);
 		writeLock.lock();
+		
 		try
 		{
 			_allyCrestId.put(pledgeId, crestId);
@@ -506,6 +529,7 @@ public class CrestCache
 		}
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();

@@ -120,14 +120,17 @@ public class FafurionKindred extends Fighter
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead() || (skill == null))
 		{
 			return;
 		}
+		
 		if (skill.getId() == Spirit_of_the_Lake)
 		{
 			actor.setCurrentHp(actor.getCurrentHp() + 3000, false);
 		}
+		
 		actor.getAggroList().remove(caster, true);
 	}
 	
@@ -151,15 +154,18 @@ public class FafurionKindred extends Fighter
 			poisonTask.cancel(false);
 			poisonTask = null;
 		}
+		
 		if (despawnTask != null)
 		{
 			despawnTask.cancel(false);
 			despawnTask = null;
 		}
+		
 		for (SimpleSpawner spawn : spawns)
 		{
 			spawn.deleteAll();
 		}
+		
 		spawns.clear();
 	}
 	
@@ -242,10 +248,12 @@ public class FafurionKindred extends Fighter
 		{
 			final NpcInstance actor = getActor();
 			dropItem(actor, Water_Dragon_Scale, Rnd.get(1, 2));
+			
 			if (Rnd.chance(36))
 			{
 				dropItem(actor, Water_Dragon_Claw, Rnd.get(1, 3));
 			}
+			
 			cleanUp();
 			actor.deleteMe();
 		}

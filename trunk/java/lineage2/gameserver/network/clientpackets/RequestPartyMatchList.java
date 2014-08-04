@@ -68,11 +68,14 @@ public class RequestPartyMatchList extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		MatchingRoom room = player.getMatchingRoom();
+		
 		if (room == null)
 		{
 			new PartyMatchingRoom(player, _minLevel, _maxLevel, _maxMembers, _lootDist, _roomTitle);

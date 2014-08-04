@@ -84,6 +84,7 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 	static
 	{
 		final PrintfFormat fmt = new PrintfFormat("<br><a action=\"bypass -h scripts_events.heart.heart:play %d\">\"%s!\"</a>");
+		
 		for (int i = 0; i < variants.length; i++)
 		{
 			links_en += fmt.sprintf(new Object[]
@@ -150,10 +151,12 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 	public void startEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive("heart", true))
 		{
 			spawnEventManagers();
@@ -164,6 +167,7 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		{
 			player.sendMessage("Event 'Change of Heart' already started.");
 		}
+		
 		_active = true;
 		show("admin/events.htm", player);
 	}
@@ -174,10 +178,12 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 	public void stopEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive("heart", false))
 		{
 			unSpawnEventManagers();
@@ -188,6 +194,7 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		{
 			player.sendMessage("Event 'Change of Heart' not started.");
 		}
+		
 		_active = false;
 		show("admin/events.htm", player);
 	}
@@ -198,11 +205,14 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 	public void letsplay()
 	{
 		final Player player = getSelf();
+		
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;
 		}
+		
 		zeroGuesses(player);
+		
 		if (haveAllHearts(player))
 		{
 			show(link(HtmCache.getInstance().getNotNull("scripts/events/heart/hearts_01.htm", player), false), player);
@@ -220,10 +230,12 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 	public void play(String[] var)
 	{
 		final Player player = getSelf();
+		
 		if (!player.isQuestContinuationPossible(true) || (var.length == 0))
 		{
 			return;
 		}
+		
 		if (!haveAllHearts(player))
 		{
 			if (var[0].equalsIgnoreCase("Quit"))
@@ -234,8 +246,10 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 			{
 				show("scripts/events/heart/hearts_00a.htm", player);
 			}
+			
 			return;
 		}
+		
 		if (var[0].equalsIgnoreCase("Quit"))
 		{
 			final int curr_guesses = getGuesses(player);
@@ -245,8 +259,10 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 			zeroGuesses(player);
 			return;
 		}
+		
 		final int var_cat = Rnd.get(variants.length);
 		int var_player = 0;
+		
 		try
 		{
 			var_player = Integer.parseInt(var[0]);
@@ -256,24 +272,29 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 			e.printStackTrace();
 			return;
 		}
+		
 		if (var_player == var_cat)
 		{
 			show(fillvars(HtmCache.getInstance().getNotNull("scripts/events/heart/hearts_same.htm", player), var_player, var_cat, player), player);
 			return;
 		}
+		
 		if (playerWins(var_player, var_cat))
 		{
 			incGuesses(player);
 			final int curr_guesses = getGuesses(player);
+			
 			if (curr_guesses == 10)
 			{
 				takeHeartsSet(player);
 				reward(player, curr_guesses);
 				zeroGuesses(player);
 			}
+			
 			show(fillvars(HtmCache.getInstance().getNotNull("scripts/events/heart/hearts_level_" + curr_guesses + ".htm", player), var_player, var_cat, player), player);
 			return;
 		}
+		
 		takeHeartsSet(player);
 		reward(player, getGuesses(player) - 1);
 		show(fillvars(HtmCache.getInstance().getNotNull("scripts/events/heart/hearts_loose.htm", player), var_player, var_cat, player), player);
@@ -293,33 +314,43 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 			case 0:
 				addItem(player, scrolls[Rnd.get(scrolls.length)], 1);
 				break;
+			
 			case 1:
 				addItem(player, potions[Rnd.get(potions.length)], 10);
 				break;
+			
 			case 2:
 				addItem(player, 1538, 1);
 				break;
+			
 			case 3:
 				addItem(player, 3936, 1);
 				break;
+			
 			case 4:
 				addItem(player, 951, 2);
 				break;
+			
 			case 5:
 				addItem(player, 948, 4);
 				break;
+			
 			case 6:
 				addItem(player, 947, 1);
 				break;
+			
 			case 7:
 				addItem(player, 730, 3);
 				break;
+			
 			case 8:
 				addItem(player, 729, 1);
 				break;
+			
 			case 9:
 				addItem(player, 960, 2);
 				break;
+			
 			case 10:
 				addItem(player, 959, 1);
 				break;
@@ -363,14 +394,17 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 		{
 			return var_cat == 1;
 		}
+		
 		if (var_player == 1)
 		{
 			return var_cat == 2;
 		}
+		
 		if (var_player == 2)
 		{
 			return var_cat == 0;
 		}
+		
 		return false;
 	}
 	
@@ -391,10 +425,12 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 	private void incGuesses(Player player)
 	{
 		int val = 1;
+		
 		if (Guesses.containsKey(player.getObjectId()))
 		{
 			val = Guesses.remove(player.getObjectId()) + 1;
 		}
+		
 		Guesses.put(player.getObjectId(), val);
 	}
 	
@@ -436,6 +472,7 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
@@ -554,6 +591,7 @@ public class heart extends Functions implements ScriptFile, OnDeathListener, OnP
 	public void onLoad()
 	{
 		CharListenerList.addGlobal(this);
+		
 		if (isActive())
 		{
 			_active = true;

@@ -30,10 +30,12 @@ public class ProclaimerBuff extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if (player.getKarma() > 0)
 		{
 			return;
 		}
+		
 		npc.doCast(SkillTable.getInstance().getInfo(19036, 1), player, true);
 	}
 }

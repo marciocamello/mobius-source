@@ -57,11 +57,13 @@ public class OctavisFollower extends DefaultAI
 	{
 		NpcInstance actor = getActor();
 		Creature octavis = _octavisRef.get();
+		
 		if (octavis == null)
 		{
 			if (System.currentTimeMillis() > _wait_timeout)
 			{
 				_wait_timeout = System.currentTimeMillis() + 1000;
+				
 				for (NpcInstance npc : World.getAroundNpc(actor))
 				{
 					if (npc.getNpcId() == Rider)
@@ -77,22 +79,20 @@ public class OctavisFollower extends DefaultAI
 			int x = (octavis.getX() + Rnd.get(2 * DRIFT_DISTANCE)) - DRIFT_DISTANCE;
 			int y = (octavis.getY() + Rnd.get(2 * DRIFT_DISTANCE)) - DRIFT_DISTANCE;
 			int z = octavis.getZ();
-			
 			actor.setRunning();
 			actor.moveToLocation(x, y, z, 0, true);
-			
 			startSkillAttackTask();
-			
 			return true;
 		}
+		
 		return false;
 	}
 	
 	private void startSkillAttackTask()
 	{
 		NpcInstance npc = getActor();
-		
 		Skill skill = SkillTable.getInstance().getInfo(14285, 1); // TODO[K] - Skills lighting Octavis
+		
 		for (Creature creature : npc.getAroundCharacters(10000, 100))
 		{
 			if (Rnd.chance(30))

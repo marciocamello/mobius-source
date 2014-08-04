@@ -50,6 +50,7 @@ public class _122_OminousNews extends Quest implements ScriptFile
 		String htmltext = event;
 		int cond = st.getCond();
 		htmltext = event;
+		
 		if (htmltext.equalsIgnoreCase("seer_moirase_q0122_0104.htm") && (cond == 0))
 		{
 			st.setCond(1);
@@ -70,6 +71,7 @@ public class _122_OminousNews extends Quest implements ScriptFile
 				htmltext = "noquest";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -79,6 +81,7 @@ public class _122_OminousNews extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (npcId == MOIRA)
 		{
 			if (cond == 0)
@@ -102,6 +105,7 @@ public class _122_OminousNews extends Quest implements ScriptFile
 		{
 			htmltext = "karuda_q0122_0101.htm";
 		}
+		
 		return htmltext;
 	}
 }

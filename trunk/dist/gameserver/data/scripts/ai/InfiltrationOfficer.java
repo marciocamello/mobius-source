@@ -55,18 +55,11 @@ public class InfiltrationOfficer extends Guard implements OnAttackListener, OnMa
 		 */
 		AI_NEXT_STEP(3);
 		/**
-		 * Field _id.
-		 */
-		@SuppressWarnings("unused")
-		private final int _id;
-		
-		/**
 		 * Constructor for State.
 		 * @param id int
 		 */
 		State(int id)
 		{
-			_id = id;
 		}
 	}
 	
@@ -241,16 +234,21 @@ public class InfiltrationOfficer extends Guard implements OnAttackListener, OnMa
 		{
 			return false;
 		}
+		
 		final NpcInstance actor = getActor();
+		
 		if (player == null)
 		{
 			player = actor.getFollowTarget().getPlayer();
 		}
+		
 		if (player == null)
 		{
 			return false;
 		}
+		
 		actor.setRunning();
+		
 		if (isUnderState(State.AI_FOLLOW) && actor.getAggroList().isEmpty() && ((System.currentTimeMillis() - lastFollowPlayer) > 2000))
 		{
 			lastFollowPlayer = System.currentTimeMillis();
@@ -265,6 +263,7 @@ public class InfiltrationOfficer extends Guard implements OnAttackListener, OnMa
 				actor.moveToLocation(new Location(POINTS[_step][0], POINTS[_step][1], POINTS[_step][2]), 0, true);
 				++_step;
 			}
+			
 			setState(State.AI_IDLE);
 		}
 		else if (isUnderState(State.AI_ATTACK_GENERATOR))
@@ -276,12 +275,14 @@ public class InfiltrationOfficer extends Guard implements OnAttackListener, OnMa
 				setIntention(CtrlIntention.AI_INTENTION_ATTACK);
 				attacksGenerator = true;
 			}
+			
 			if ((System.currentTimeMillis() - lastOfficerSay) > 3000)
 			{
 				actor.broadcastPacket(new NpcSay(actor, ChatType.ALL, NpcString.DONT_COME_BACK_HERE));
 				lastOfficerSay = System.currentTimeMillis();
 			}
 		}
+		
 		return false;
 	}
 	

@@ -89,6 +89,7 @@ public class _10322_SearchingfortheMysteriousPower extends Quest implements Scri
 	{
 		String htmltext = event;
 		Player player = st.getPlayer();
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -97,11 +98,13 @@ public class _10322_SearchingfortheMysteriousPower extends Quest implements Scri
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "0-3.htm";
 		}
+		
 		if (event.equalsIgnoreCase("bufs"))
 		{
 			SkillTable.getInstance().getInfo(4322, 1).getEffects(player, player, false, false);
 			SkillTable.getInstance().getInfo(4323, 1).getEffects(player, player, false, false);
 			SkillTable.getInstance().getInfo(5637, 1).getEffects(player, player, false, false);
+			
 			if (!player.isMageClass() || (player.getTemplate().getRace() == Race.orc))
 			{
 				SkillTable.getInstance().getInfo(4324, 1).getEffects(player, player, false, false);
@@ -116,10 +119,12 @@ public class _10322_SearchingfortheMysteriousPower extends Quest implements Scri
 				SkillTable.getInstance().getInfo(4330, 1).getEffects(player, player, false, false);
 				SkillTable.getInstance().getInfo(4331, 1).getEffects(player, player, false, false);
 			}
+			
 			st.setCond(5);
 			st.playSound(SOUND_MIDDLE);
 			htmltext = "2-2.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -129,6 +134,7 @@ public class _10322_SearchingfortheMysteriousPower extends Quest implements Scri
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == shenon)
 		{
 			if (st.isCompleted())
@@ -217,6 +223,7 @@ public class _10322_SearchingfortheMysteriousPower extends Quest implements Scri
 				htmltext = "2-3.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -224,6 +231,7 @@ public class _10322_SearchingfortheMysteriousPower extends Quest implements Scri
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		if ((st.getCond() == 2) && (npcId == crow))
 		{
 			st.playSound(SOUND_MIDDLE);
@@ -234,6 +242,7 @@ public class _10322_SearchingfortheMysteriousPower extends Quest implements Scri
 			st.setCond(6);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return null;
 	}
 }

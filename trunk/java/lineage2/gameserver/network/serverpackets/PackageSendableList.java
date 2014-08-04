@@ -35,10 +35,10 @@ public class PackageSendableList extends L2GameServerPacket
 	{
 		_adena = cha.getAdena();
 		_targetObjectId = objectId;
-		
 		ItemInstance[] items = cha.getInventory().getItems();
 		ArrayUtils.eqSort(items, Warehouse.ItemClassComparator.getInstance());
 		_itemList = new ArrayList<>(items.length);
+		
 		for (ItemInstance item : items)
 		{
 			if (item.getTemplate().isFreightable())
@@ -55,6 +55,7 @@ public class PackageSendableList extends L2GameServerPacket
 		writeD(_targetObjectId);
 		writeQ(_adena);
 		writeD(_itemList.size());
+		
 		for (ItemInfo item : _itemList)
 		{
 			writeItemInfo(item);

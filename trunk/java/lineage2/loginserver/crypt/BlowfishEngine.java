@@ -1157,14 +1157,17 @@ public class BlowfishEngine
 		{
 			throw new IllegalStateException("Blowfish not initialised");
 		}
+		
 		if ((inOff + BLOCK_SIZE) > in.length)
 		{
 			throw new IOException("input buffer too short");
 		}
+		
 		if ((outOff + BLOCK_SIZE) > out.length)
 		{
 			throw new IOException("output buffer too short");
 		}
+		
 		if (encrypting)
 		{
 			encryptBlock(in, inOff, out, outOff);
@@ -1211,14 +1214,17 @@ public class BlowfishEngine
 	private void processTable(int xl, int xr, int[] table)
 	{
 		int size = table.length;
+		
 		for (int s = 0; s < size; s += 2)
 		{
 			xl ^= P[0];
+			
 			for (int i = 1; i < ROUNDS; i += 2)
 			{
 				xr ^= F(xl) ^ P[i];
 				xl ^= F(xr) ^ P[i + 1];
 			}
+			
 			xr ^= P[ROUNDS + 1];
 			table[s] = xr;
 			table[s + 1] = xl;
@@ -1240,19 +1246,24 @@ public class BlowfishEngine
 		System.arraycopy(KP, 0, P, 0, P_SZ);
 		int keyLength = key.length;
 		int keyIndex = 0;
+		
 		for (int i = 0; i < P_SZ; i++)
 		{
 			int data = 0x0000000;
+			
 			for (int j = 0; j < 4; j++)
 			{
 				data = (data << 8) | (key[keyIndex++] & 0xff);
+				
 				if (keyIndex >= keyLength)
 				{
 					keyIndex = 0;
 				}
 			}
+			
 			P[i] ^= data;
 		}
+		
 		processTable(0, 0, P);
 		processTable(P[P_SZ - 2], P[P_SZ - 1], S0);
 		processTable(S0[SBOX_SK - 2], S0[SBOX_SK - 1], S1);
@@ -1272,11 +1283,13 @@ public class BlowfishEngine
 		int xl = BytesTo32bits(src, srcIndex);
 		int xr = BytesTo32bits(src, srcIndex + 4);
 		xl ^= P[0];
+		
 		for (int i = 1; i < ROUNDS; i += 2)
 		{
 			xr ^= F(xl) ^ P[i];
 			xl ^= F(xr) ^ P[i + 1];
 		}
+		
 		xr ^= P[ROUNDS + 1];
 		Bits32ToBytes(xr, dst, dstIndex);
 		Bits32ToBytes(xl, dst, dstIndex + 4);
@@ -1294,11 +1307,13 @@ public class BlowfishEngine
 		int xl = BytesTo32bits(src, srcIndex);
 		int xr = BytesTo32bits(src, srcIndex + 4);
 		xl ^= P[ROUNDS + 1];
+		
 		for (int i = ROUNDS; i > 0; i -= 2)
 		{
 			xr ^= F(xl) ^ P[i];
 			xl ^= F(xr) ^ P[i - 1];
 		}
+		
 		xr ^= P[0];
 		Bits32ToBytes(xr, dst, dstIndex);
 		Bits32ToBytes(xl, dst, dstIndex + 4);

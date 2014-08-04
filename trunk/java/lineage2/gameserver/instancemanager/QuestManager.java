@@ -74,6 +74,7 @@ public class QuestManager
 		{
 			return _questsByName.get(nameOrId);
 		}
+		
 		try
 		{
 			int questId = Integer.valueOf(nameOrId);

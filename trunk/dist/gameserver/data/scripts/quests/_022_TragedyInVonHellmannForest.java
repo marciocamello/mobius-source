@@ -108,10 +108,12 @@ public class _022_TragedyInVonHellmannForest extends Quest implements ScriptFile
 		addTalkId(GhostOfAdventurer);
 		addTalkId(Well);
 		addKillId(SoulOfWell);
+		
 		for (int npcId = 21547; npcId <= 21578; npcId++)
 		{
 			addKillId(npcId);
 		}
+		
 		addQuestItem(LostSkullOfElf);
 	}
 	
@@ -145,6 +147,7 @@ public class _022_TragedyInVonHellmannForest extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("31334-03.htm"))
 		{
 			st.setState(STARTED);
@@ -226,6 +229,7 @@ public class _022_TragedyInVonHellmannForest extends Quest implements ScriptFile
 		{
 			st.setCond(18);
 		}
+		
 		return htmltext;
 	}
 	
@@ -235,11 +239,13 @@ public class _022_TragedyInVonHellmannForest extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		String htmltext = "noquest";
+		
 		if (npcId == Tifaren)
 		{
 			if (cond == 0)
 			{
 				QuestState hiddenTruth = st.getPlayer().getQuestState(_021_HiddenTruth.class);
+				
 				if (hiddenTruth != null)
 				{
 					if (hiddenTruth.isCompleted())
@@ -304,6 +310,7 @@ public class _022_TragedyInVonHellmannForest extends Quest implements ScriptFile
 			{
 				htmltext = "31328-17.htm";
 			}
+			
 			if (cond == 8)
 			{
 				htmltext = "31328-00.htm";
@@ -330,6 +337,7 @@ public class _022_TragedyInVonHellmannForest extends Quest implements ScriptFile
 				{
 					st.setCond(16);
 				}
+				
 				htmltext = "31328-09.htm";
 			}
 		}
@@ -391,6 +399,7 @@ public class _022_TragedyInVonHellmannForest extends Quest implements ScriptFile
 			st.setCond(13);
 			st.giveItems(SealedReportBox, 1);
 		}
+		
 		return htmltext;
 	}
 	
@@ -399,6 +408,7 @@ public class _022_TragedyInVonHellmannForest extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (Mobs.contains(npcId))
 		{
 			if ((cond == 4) && Rnd.chance(99))
@@ -408,6 +418,7 @@ public class _022_TragedyInVonHellmannForest extends Quest implements ScriptFile
 				st.setCond(5);
 			}
 		}
+		
 		if (npcId == SoulOfWell)
 		{
 			if (cond == 10)
@@ -418,6 +429,7 @@ public class _022_TragedyInVonHellmannForest extends Quest implements ScriptFile
 				st.cancelQuestTimer("attack_timer");
 			}
 		}
+		
 		return null;
 	}
 }

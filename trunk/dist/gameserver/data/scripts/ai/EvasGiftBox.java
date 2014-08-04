@@ -59,14 +59,17 @@ public class EvasGiftBox extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (killer != null)
 		{
 			final Player player = killer.getPlayer();
+			
 			if ((player != null) && player.getEffectList().containEffectFromSkills(KISS_OF_EVA))
 			{
 				actor.dropItem(player, Rnd.chance(50) ? Red_Coral : Crystal_Fragment, 1);
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 	

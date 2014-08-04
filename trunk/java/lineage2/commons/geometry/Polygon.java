@@ -58,6 +58,7 @@ public class Polygon extends AbstractShape
 			max.x = Math.max(max.x, p.x);
 			max.y = Math.max(max.y, p.y);
 		}
+		
 		points = (ArrayUtils.add(points, p));
 		return this;
 	}
@@ -99,24 +100,30 @@ public class Polygon extends AbstractShape
 		{
 			return false;
 		}
+		
 		int hits = 0;
 		int npoints = points.length;
 		Point2D last = points[npoints - 1];
 		Point2D cur;
+		
 		for (int i = 0; i < npoints; last = cur, i++)
 		{
 			cur = points[i];
+			
 			if (cur.y == last.y)
 			{
 				continue;
 			}
+			
 			int leftx;
+			
 			if (cur.x < last.x)
 			{
 				if (x >= last.x)
 				{
 					continue;
 				}
+				
 				leftx = cur.x;
 			}
 			else
@@ -125,20 +132,25 @@ public class Polygon extends AbstractShape
 				{
 					continue;
 				}
+				
 				leftx = last.x;
 			}
+			
 			double test1, test2;
+			
 			if (cur.y < last.y)
 			{
 				if ((y < cur.y) || (y >= last.y))
 				{
 					continue;
 				}
+				
 				if (x < leftx)
 				{
 					hits++;
 					continue;
 				}
+				
 				test1 = x - cur.x;
 				test2 = y - cur.y;
 			}
@@ -148,19 +160,23 @@ public class Polygon extends AbstractShape
 				{
 					continue;
 				}
+				
 				if (x < leftx)
 				{
 					hits++;
 					continue;
 				}
+				
 				test1 = x - last.x;
 				test2 = y - last.y;
 			}
+			
 			if (test1 < ((test2 / (last.y - cur.y)) * (last.x - cur.x)))
 			{
 				hits++;
 			}
 		}
+		
 		return ((hits & 1) != 0);
 	}
 	
@@ -174,16 +190,19 @@ public class Polygon extends AbstractShape
 		{
 			return false;
 		}
+		
 		if (points.length > 3)
 		{
 			for (int i = 1; i < points.length; i++)
 			{
 				int ii = (i + 1) < points.length ? i + 1 : 0;
+				
 				for (int n = i; n < points.length; n++)
 				{
 					if (Math.abs(n - i) > 1)
 					{
 						int nn = (n + 1) < points.length ? n + 1 : 0;
+						
 						if (GeometryUtils.checkIfLineSegementsIntersects(points[i], points[ii], points[n], points[nn]))
 						{
 							return false;
@@ -192,6 +211,7 @@ public class Polygon extends AbstractShape
 				}
 			}
 		}
+		
 		return true;
 	}
 	
@@ -204,14 +224,17 @@ public class Polygon extends AbstractShape
 	{
 		StringBuilder sb = new StringBuilder();
 		sb.append('[');
+		
 		for (int i = 0; i < points.length; i++)
 		{
 			sb.append(points[i]);
+			
 			if (i < (points.length - 1))
 			{
 				sb.append(',');
 			}
 		}
+		
 		sb.append(']');
 		return sb.toString();
 	}

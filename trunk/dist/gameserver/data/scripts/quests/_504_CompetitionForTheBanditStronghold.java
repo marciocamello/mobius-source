@@ -52,6 +52,7 @@ public class _504_CompetitionForTheBanditStronghold extends Quest implements Scr
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmlText = event;
+		
 		if (event.equalsIgnoreCase("azit_messenger_q0504_02.htm"))
 		{
 			st.setCond(1);
@@ -59,6 +60,7 @@ public class _504_CompetitionForTheBanditStronghold extends Quest implements Scr
 			st.giveItems(CONTEST_CERTIFICATE, 1);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return htmlText;
 	}
 	
@@ -70,6 +72,7 @@ public class _504_CompetitionForTheBanditStronghold extends Quest implements Scr
 		Player player = st.getPlayer();
 		Clan clan = player.getClan();
 		ClanHall clanhall = ResidenceHolder.getInstance().getResidence(35);
+		
 		if (clanhall.getSiegeEvent().isRegistrationOver())
 		{
 			htmltext = null;
@@ -115,6 +118,7 @@ public class _504_CompetitionForTheBanditStronghold extends Quest implements Scr
 				htmltext = "azit_messenger_q0504_08.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -126,6 +130,7 @@ public class _504_CompetitionForTheBanditStronghold extends Quest implements Scr
 			st.giveItems(AMULET, 1);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		return null;
 	}
 	

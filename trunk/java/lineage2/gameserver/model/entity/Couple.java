@@ -116,6 +116,7 @@ public class Couple
 	public void store(Connection con)
 	{
 		PreparedStatement statement = null;
+		
 		try
 		{
 			statement = con.prepareStatement("REPLACE INTO couples (id, player1Id, player2Id, maried, affiancedDate, weddingDate) VALUES (?, ?, ?, ?, ?, ?)");

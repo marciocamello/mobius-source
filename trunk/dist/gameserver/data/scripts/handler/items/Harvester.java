@@ -55,23 +55,29 @@ public class Harvester extends SimpleItemHandler
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
 		final GameObject target = player.getTarget();
+		
 		if ((target == null) || !target.isMonster())
 		{
 			player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
 			return false;
 		}
+		
 		final MonsterInstance monster = (MonsterInstance) player.getTarget();
+		
 		if (!monster.isDead())
 		{
 			player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
 			return false;
 		}
+		
 		final Skill skill = SkillTable.getInstance().getInfo(2098, 1);
+		
 		if ((skill != null) && skill.checkCondition(player, monster, false, false, true))
 		{
 			player.getAI().Cast(skill, monster);
 			return true;
 		}
+		
 		return false;
 	}
 }

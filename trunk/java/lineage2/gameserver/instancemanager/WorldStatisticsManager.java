@@ -46,6 +46,7 @@ public class WorldStatisticsManager
 		{
 			_instance = new WorldStatisticsManager();
 		}
+		
 		return _instance;
 	}
 	
@@ -53,9 +54,11 @@ public class WorldStatisticsManager
 	{
 		Map<CategoryType, List<Location>> spawnLocations = StatuesHolder.getInstance().getSpawnLocations();
 		List<StatuesSpawnTemplate> templates = WorldStatisticDAO.getInstance().getStatueTemplates(spawnLocations.keySet());
+		
 		for (StatuesSpawnTemplate template : templates)
 		{
 			List<Location> locations = spawnLocations.get(template.getCategoryType());
+			
 			for (Location loc : locations)
 			{
 				WinnerStatueInstance statue = new WinnerStatueInstance(IdFactory.getInstance().getNextId(), template);
@@ -72,12 +75,14 @@ public class WorldStatisticsManager
 		{
 			statue.deleteMe();
 		}
+		
 		spawnedStatues.clear();
 	}
 	
 	public final void updateStat(Player player, CategoryType categoryType, int subCategory, long valueAdd)
 	{
 		categoryType = CategoryType.getCategoryById(categoryType.getClientId(), subCategory);
+		
 		if (categoryType != null)
 		{
 			WorldStatisticDAO.getInstance().updateStatisticFor(player, categoryType, valueAdd);

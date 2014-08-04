@@ -67,10 +67,12 @@ public class Ekimus extends Mystic
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		for (NpcInstance npc : actor.getReflection().getAllByNpcId(29151, true))
 		{
 			npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, damage);
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	
@@ -83,11 +85,13 @@ public class Ekimus extends Mystic
 		if ((delayTimer + 5000) < System.currentTimeMillis())
 		{
 			delayTimer = System.currentTimeMillis();
+			
 			if (getActor().getReflection().getInstancedZoneId() == 121)
 			{
 				((HeartInfinityAttack) getActor().getReflection()).notifyEkimusAttack();
 			}
 		}
+		
 		super.thinkAttack();
 	}
 	
@@ -101,11 +105,13 @@ public class Ekimus extends Mystic
 		if ((delayTimer + 5000) < System.currentTimeMillis())
 		{
 			delayTimer = System.currentTimeMillis();
+			
 			if (getActor().getReflection().getInstancedZoneId() == 121)
 			{
 				((HeartInfinityAttack) getActor().getReflection()).notifyEkimusIdle();
 			}
 		}
+		
 		return super.thinkActive();
 	}
 }

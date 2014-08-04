@@ -77,6 +77,7 @@ public class PetInfo extends L2GameServerPacket
 		Accuracy = summon.getAccuracy();
 		Evasion = summon.getEvasionRate(null);
 		Crit = summon.getCriticalHit(null, null);
+		
 		if (summon.getPlayer().getTransformation() != 0)
 		{
 			rideable = 0; // not rideable
@@ -85,6 +86,7 @@ public class PetInfo extends L2GameServerPacket
 		{
 			rideable = PetDataTable.isMountable(npc_id) ? 1 : 0;
 		}
+		
 		_team = summon.getTeam();
 		ss = summon.getSoulshotConsumeCount();
 		sps = summon.getSpiritshotConsumeCount();
@@ -139,15 +141,15 @@ public class PetInfo extends L2GameServerPacket
 		writeC(incombat); // attacking 1=true
 		writeC(dead); // dead 1=true
 		writeC(_showSpawnAnimation); // invisible ?? 0=false 1=true 2=summoned
-										// (only works if model has a summon
-										// animation)
+		// (only works if model has a summon
+		// animation)
 		writeD(-1);
 		writeS(_name);
 		writeD(-1);
 		writeS(title);
 		writeD(1);
 		writeD(pvp_flag); // 0=white, 1=purple, 2=purpleblink, if its greater
-							// then karma = purple
+		// then karma = purple
 		writeD(karma); // hmm karma ??
 		writeD(curFed); // how fed it is
 		writeD(maxFed); // max fed it can be
@@ -157,11 +159,9 @@ public class PetInfo extends L2GameServerPacket
 		writeD(maxMp); // max mp
 		writeD(_sp); // sp
 		writeD(level);// lvl
-		
 		writeQ(exp);
 		writeQ(exp_this_lvl); // 0% absolute value
 		writeQ(exp_next_lvl); // 100% absoulte value
-		
 		writeD(curLoad); // weight
 		writeD(maxLoad); // max weight it can carry
 		writeD(PAtk);// patk
@@ -186,9 +186,11 @@ public class PetInfo extends L2GameServerPacket
 		writeD(0x00); // id
 		writeD(sumPoint);
 		writeD(maxSumPoint);
+		
 		if (_aveList != null)
 		{
 			writeD(_aveList.size());
+			
 			for (int i : _aveList)
 			{
 				writeD(i);
@@ -198,6 +200,7 @@ public class PetInfo extends L2GameServerPacket
 		{
 			writeD(0x00);
 		}
+		
 		writeC(0);
 	}
 }

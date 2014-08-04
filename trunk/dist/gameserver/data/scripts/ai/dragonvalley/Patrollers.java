@@ -79,11 +79,13 @@ public class Patrollers extends Fighter
 	public boolean checkAggression(Creature target)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (target.isPlayable() && !target.isDead() && !target.isInvisible())
 		{
 			actor.getAggroList().addDamageHate(target, 0, 1);
 			setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 		}
+		
 		return true;
 	}
 	
@@ -98,10 +100,12 @@ public class Patrollers extends Fighter
 		{
 			return true;
 		}
+		
 		if (!getActor().isMoving)
 		{
 			startMoveTask();
 		}
+		
 		return true;
 	}
 	
@@ -121,6 +125,7 @@ public class Patrollers extends Fighter
 	private void startMoveTask()
 	{
 		final NpcInstance npc = getActor();
+		
 		if (_firstThought)
 		{
 			_lastPoint = getIndex(Location.findNearest(npc, _points));
@@ -130,19 +135,24 @@ public class Patrollers extends Fighter
 		{
 			_lastPoint++;
 		}
+		
 		if (_lastPoint >= _points.length)
 		{
 			_lastPoint = 0;
+			
 			if (ArrayUtils.contains(_teleporters, npc.getNpcId()))
 			{
 				npc.teleToLocation(_points[_lastPoint]);
 			}
 		}
+		
 		npc.setRunning();
+		
 		if (Rnd.chance(30))
 		{
 			npc.altOnMagicUseTimer(npc, SkillTable.getInstance().getInfo(6757, 1));
 		}
+		
 		try
 		{
 			addTaskMove(Location.findPointToStay(_points[_lastPoint], 250, npc.getGeoIndex()), true);
@@ -151,6 +161,7 @@ public class Patrollers extends Fighter
 		{
 			// empty catch clause
 		}
+		
 		doTask();
 	}
 	
@@ -168,6 +179,7 @@ public class Patrollers extends Fighter
 				return i;
 			}
 		}
+		
 		return 0;
 	}
 	

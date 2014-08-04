@@ -51,10 +51,12 @@ public class EffectTargetToMe extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if (!_effected.isPulledNow())
 		{
 			_effected.startPulling();
 		}
+		
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
 			@Override
@@ -76,7 +78,6 @@ public class EffectTargetToMe extends Effect
 				_effected.setXYZ(flyLoc.getX(), flyLoc.getY(), flyLoc.getZ());
 				_effected.broadcastPacket(new ValidateLocation(_effected));
 			}
-			
 		}, 500L);
 	}
 	
@@ -89,6 +90,7 @@ public class EffectTargetToMe extends Effect
 		super.onExit();
 		_effected.setXYZ(_x, _y, _z);
 		_effected.broadcastPacket(new ValidateLocation(_effected));
+		
 		if (_effected.isPulledNow())
 		{
 			_effected.stopPulling();

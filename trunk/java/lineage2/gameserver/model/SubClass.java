@@ -225,6 +225,7 @@ public class SubClass
 		{
 			return;
 		}
+		
 		_classId = id;
 		refreshInfo();
 	}
@@ -393,6 +394,7 @@ public class SubClass
 		{
 			return;
 		}
+		
 		_type = type;
 		refreshInfo();
 	}
@@ -444,6 +446,7 @@ public class SubClass
 		{
 			_dp = new DeathPenalty(player, 0);
 		}
+		
 		return _dp;
 	}
 	
@@ -588,9 +591,11 @@ public class SubClass
 			{
 				_maxLvl = Experience.getMaxLevel();
 			}
+			
 			_maxExp = Experience.LEVEL[_maxLvl + 1] - 1;
 			_level = Math.min(Math.max(1, _level), _maxLvl);
 		}
+		
 		_exp = Math.min(Math.max(Experience.LEVEL[_level], _exp), _maxExp);
 	}
 	

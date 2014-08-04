@@ -113,6 +113,7 @@ public class _136_MoreThanMeetsTheEye extends Quest implements ScriptFile
 			Ectoplasm,
 			GlassJaguarCrystal
 		});
+		
 		for (int[] element : DROPLIST_COND)
 		{
 			addKillId(element[2]);
@@ -123,6 +124,7 @@ public class _136_MoreThanMeetsTheEye extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("hardin_q0136_08.htm"))
 		{
 			st.setCond(2);
@@ -155,6 +157,7 @@ public class _136_MoreThanMeetsTheEye extends Quest implements ScriptFile
 			st.unset("cond");
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -164,6 +167,7 @@ public class _136_MoreThanMeetsTheEye extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (npcId == HARDIN)
 		{
 			if (cond == 0)
@@ -261,6 +265,7 @@ public class _136_MoreThanMeetsTheEye extends Quest implements ScriptFile
 				htmltext = "magister_clayton_q0136_14.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -269,6 +274,7 @@ public class _136_MoreThanMeetsTheEye extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		for (int[] element : DROPLIST_COND)
 		{
 			if ((cond == element[0]) && (npcId == element[2]))
@@ -276,12 +282,15 @@ public class _136_MoreThanMeetsTheEye extends Quest implements ScriptFile
 				if ((element[3] == 0) || (st.getQuestItemsCount(element[3]) > 0))
 				{
 					long count = st.getQuestItemsCount(element[4]);
+					
 					if ((element[5] > count) && Rnd.chance(element[6]))
 					{
 						long random = 0;
+						
 						if (element[7] > 1)
 						{
 							random = Rnd.get(element[7]) + 1;
+							
 							if ((count + random) > element[5])
 							{
 								random = element[5] - count;
@@ -291,6 +300,7 @@ public class _136_MoreThanMeetsTheEye extends Quest implements ScriptFile
 						{
 							random = 1;
 						}
+						
 						if (cond == 3)
 						{
 							if (random == 1)
@@ -304,15 +314,19 @@ public class _136_MoreThanMeetsTheEye extends Quest implements ScriptFile
 							{
 								random = 3;
 							}
+							
 							if ((count + random) > element[5])
 							{
 								random = element[5] - count;
 							}
 						}
+						
 						st.giveItems(element[4], random);
+						
 						if ((count + random) == element[5])
 						{
 							st.playSound(SOUND_MIDDLE);
+							
 							if (element[1] != 0)
 							{
 								st.setCond(Integer.valueOf(element[1]));
@@ -327,6 +341,7 @@ public class _136_MoreThanMeetsTheEye extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 }

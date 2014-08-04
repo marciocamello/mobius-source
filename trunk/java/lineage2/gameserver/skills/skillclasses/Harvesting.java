@@ -55,7 +55,9 @@ public class Harvesting extends Skill
 		{
 			return;
 		}
+		
 		Player player = (Player) activeChar;
+		
 		for (Creature target : targets)
 		{
 			if (target != null)
@@ -64,43 +66,55 @@ public class Harvesting extends Skill
 				{
 					continue;
 				}
+				
 				MonsterInstance monster = (MonsterInstance) target;
+				
 				if (!monster.isSeeded())
 				{
 					activeChar.sendPacket(Msg.THE_HARVEST_FAILED_BECAUSE_THE_SEED_WAS_NOT_SOWN);
 					continue;
 				}
+				
 				if (!monster.isSeeded(player))
 				{
 					activeChar.sendPacket(Msg.YOU_ARE_NOT_AUTHORIZED_TO_HARVEST);
 					continue;
 				}
+				
 				double SuccessRate = Config.MANOR_HARVESTING_BASIC_SUCCESS;
 				int diffPlayerTarget = Math.abs(activeChar.getLevel() - monster.getLevel());
+				
 				if (diffPlayerTarget > Config.MANOR_DIFF_PLAYER_TARGET)
 				{
 					SuccessRate -= (diffPlayerTarget - Config.MANOR_DIFF_PLAYER_TARGET) * Config.MANOR_DIFF_PLAYER_TARGET_PENALTY;
 				}
+				
 				if (SuccessRate < 1)
 				{
 					SuccessRate = 1;
 				}
+				
 				if (player.isGM())
 				{
 					player.sendMessage(new CustomMessage("lineage2.gameserver.skills.skillclasses.Harvesting.Chance", player).addNumber((long) SuccessRate));
 				}
+				
 				if (!Rnd.chance(SuccessRate))
 				{
 					activeChar.sendPacket(Msg.THE_HARVEST_HAS_FAILED);
 					monster.clearHarvest();
 					continue;
 				}
+				
 				RewardItem item = monster.takeHarvest();
+				
 				if (item == null)
 				{
 					continue;
 				}
+				
 				ItemInstance harvest;
+				
 				if (!player.getInventory().validateCapacity(item.itemId, item.count) || !player.getInventory().validateWeight(item.itemId, item.count))
 				{
 					harvest = ItemFunctions.createItem(item.itemId);
@@ -108,8 +122,10 @@ public class Harvesting extends Skill
 					harvest.dropToTheGround(player, monster);
 					continue;
 				}
+				
 				player.getInventory().addItem(item.itemId, item.count);
 				player.sendPacket(new SystemMessage(SystemMessage.S1_HARVESTED_S3_S2_S).addName(player).addNumber(item.count).addItemName(item.itemId));
+				
 				if (player.isInParty())
 				{
 					SystemMessage smsg = new SystemMessage(SystemMessage.S1_HARVESTED_S3_S2_S).addString(player.getName()).addNumber(item.count).addItemName(item.itemId);

@@ -31,7 +31,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class MainMachineInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -57,10 +57,12 @@ public class MainMachineInstance extends NpcInstance
 	{
 		super.onSpawn();
 		FortressSiegeEvent siegeEvent = getEvent(FortressSiegeEvent.class);
+		
 		if (siegeEvent == null)
 		{
 			return;
 		}
+		
 		siegeEvent.barrackAction(3, false);
 	}
 	
@@ -76,16 +78,20 @@ public class MainMachineInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (_powerUnits != 0)
 		{
 			return;
 		}
+		
 		Functions.npcShout(this, NpcString.FORTRESS_POWER_DISABLED);
 		FortressSiegeEvent siegeEvent = getEvent(FortressSiegeEvent.class);
+		
 		if (siegeEvent == null)
 		{
 			return;
 		}
+		
 		siegeEvent.spawnAction(FortressSiegeEvent.IN_POWER_UNITS, false);
 		siegeEvent.barrackAction(3, true);
 		siegeEvent.broadcastTo(SystemMsg.THE_BARRACKS_HAVE_BEEN_SEIZED, SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
@@ -102,29 +108,37 @@ public class MainMachineInstance extends NpcInstance
 		FortressSiegeEvent event = getEvent(FortressSiegeEvent.class);
 		SpawnExObject exObject = event.getFirstObject(FortressSiegeEvent.IN_POWER_UNITS);
 		int machineNumber = -1;
+		
 		for (int i = 0; i < 3; i++)
 		{
 			Spawner spawn = exObject.getSpawns().get(i);
+			
 			if (spawn == powerUnit.getSpawn())
 			{
 				machineNumber = i;
 			}
 		}
+		
 		NpcString msg = null;
+		
 		switch (machineNumber)
 		{
 			case 0:
 				msg = NpcString.MACHINE_NO_1_POWER_OFF;
 				break;
+			
 			case 1:
 				msg = NpcString.MACHINE_NO_2_POWER_OFF;
 				break;
+			
 			case 2:
 				msg = NpcString.MACHINE_NO_3_POWER_OFF;
 				break;
+			
 			default:
 				throw new IllegalArgumentException("Wrong spawn at fortress: " + event.getName());
 		}
+		
 		_powerUnits--;
 		Functions.npcShout(this, msg);
 	}
@@ -139,6 +153,7 @@ public class MainMachineInstance extends NpcInstance
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 		NpcHtmlMessage message = new NpcHtmlMessage(player, this);
+		
 		if (_powerUnits != 0)
 		{
 			message.setFile("residence2/fortress/fortress_mainpower002.htm");
@@ -147,6 +162,7 @@ public class MainMachineInstance extends NpcInstance
 		{
 			message.setFile("residence2/fortress/fortress_mainpower001.htm");
 		}
+		
 		player.sendPacket(message);
 	}
 }

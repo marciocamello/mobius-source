@@ -45,6 +45,7 @@ public class ExMpccRoomMember extends L2GameServerPacket
 		writeEx(0xA0);
 		writeD(_type);
 		writeD(_members.size());
+		
 		for (MpccRoomMemberInfo member : _members)
 		{
 			writeD(member.objectId);

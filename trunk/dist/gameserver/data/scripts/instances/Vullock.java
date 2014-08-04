@@ -58,13 +58,12 @@ public class Vullock extends Reflection
 		super.onPlayerEnter(player);
 		ThreadPoolManager.getInstance().schedule(new FirstStage(), BeforeDelayVDO);
 		ThreadPoolManager.getInstance().schedule(new VullockSpawn(this), BeforeDelay);
-		
 	}
 	
 	private class DeathListener implements OnDeathListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public DeathListener()
 		{
@@ -80,6 +79,7 @@ public class Vullock extends Reflection
 				{
 					p.sendPacket(new SystemMessage2(SystemMsg.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addInteger(5));
 				}
+				
 				startCollapseTimer(5 * 60 * 1000L);
 			}
 		}
@@ -88,7 +88,7 @@ public class Vullock extends Reflection
 	private class FirstStage extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public FirstStage()
 		{
@@ -155,7 +155,6 @@ public class Vullock extends Reflection
 			Slave5.getAI().Attack(player, true, false);
 			NpcInstance Slave6 = addSpawnWithoutRespawn(VullockSlave, Territory.getRandomLoc(centralRoomPoint, getGeoIndex()), 150);
 			Slave6.getAI().Attack(player, true, false);
-			
 		}
 	}
 	

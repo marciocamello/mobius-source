@@ -45,6 +45,7 @@ public class VitalityHeal extends Skill
 	{
 		int fullPoints = Config.MAX_VITALITY;
 		double percent = _power;
+		
 		for (Creature target : targets)
 		{
 			if (target.isPlayer())
@@ -53,8 +54,10 @@ public class VitalityHeal extends Skill
 				int points = (int) ((fullPoints / 100) * percent);
 				player.addVitality(points);
 			}
+			
 			getEffects(activeChar, target, getActivateRate() > 0, false);
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());

@@ -134,6 +134,7 @@ public final class NaiaCoreManager
 		{
 			return;
 		}
+		
 		_active = true;
 		ReflectionUtils.getDoor(18250025).closeMe();
 		_zone.setActive(true);
@@ -180,7 +181,9 @@ public final class NaiaCoreManager
 		{
 			return;
 		}
+		
 		int epidostospawn = 0;
+		
 		switch (index)
 		{
 			case 1:
@@ -188,24 +191,29 @@ public final class NaiaCoreManager
 				epidostospawn = fireEpidos;
 				break;
 			}
+			
 			case 2:
 			{
 				epidostospawn = waterEpidos;
 				break;
 			}
+			
 			case 3:
 			{
 				epidostospawn = windEpidos;
 				break;
 			}
+			
 			case 4:
 			{
 				epidostospawn = earthEpidos;
 				break;
 			}
+			
 			default:
 				break;
 		}
+		
 		try
 		{
 			SimpleSpawner sp = new SimpleSpawner(epidostospawn);
@@ -241,10 +249,12 @@ public final class NaiaCoreManager
 			windSpore,
 			earthSpore
 		};
+		
 		for (NpcInstance spore : GameObjectsStorage.getAllByNpcId(spores, false))
 		{
 			spore.deleteMe();
 		}
+		
 		try
 		{
 			SimpleSpawner sp = new SimpleSpawner(teleCube);
@@ -292,14 +302,17 @@ public final class NaiaCoreManager
 				windEpidos,
 				earthEpidos
 			};
+			
 			for (NpcInstance spore : GameObjectsStorage.getAllByNpcId(spores, false))
 			{
 				spore.deleteMe();
 			}
+			
 			for (NpcInstance epidos : GameObjectsStorage.getAllByNpcId(epidoses, false))
 			{
 				epidos.deleteMe();
 			}
+			
 			_active = false;
 			ReflectionUtils.getDoor(18250025).openMe();
 			_zone.setActive(false);

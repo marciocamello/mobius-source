@@ -58,6 +58,7 @@ public class _10501_CapeEmbroideredSoulOne extends Quest implements ScriptFile
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return event;
 	}
 	
@@ -66,6 +67,7 @@ public class _10501_CapeEmbroideredSoulOne extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (cond == 0)
 		{
 			if (st.getPlayer().getLevel() >= 78)
@@ -98,6 +100,7 @@ public class _10501_CapeEmbroideredSoulOne extends Quest implements ScriptFile
 				st.exitCurrentQuest(false);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -106,18 +109,21 @@ public class _10501_CapeEmbroideredSoulOne extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if ((cond == 1) && (npcId == ZAKEN_HIGH))
 		{
 			if (st.getQuestItemsCount(SOUL_ZAKEN) < 20)
 			{
 				st.giveItems(SOUL_ZAKEN, Rnd.get(1, 3), false);
 			}
+			
 			if (st.getQuestItemsCount(SOUL_ZAKEN) >= 20)
 			{
 				st.setCond(2);
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		return null;
 	}
 }

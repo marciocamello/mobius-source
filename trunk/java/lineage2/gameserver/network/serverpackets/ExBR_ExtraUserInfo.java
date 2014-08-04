@@ -35,6 +35,7 @@ public class ExBR_ExtraUserInfo extends L2GameServerPacket
 		if (_effect != null)
 		{
 			writeD(_effect.size());
+			
 			for (int i : _effect)
 			{
 				writeD(i);

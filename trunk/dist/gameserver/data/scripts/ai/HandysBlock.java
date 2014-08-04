@@ -52,25 +52,31 @@ public class HandysBlock extends DefaultAI
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
 		final BlockInstance actor = (BlockInstance) getActor();
+		
 		if (caster == null)
 		{
 			return;
 		}
+		
 		if (!caster.isPlayer())
 		{
 			return;
 		}
+		
 		final Player player = caster.getPlayer();
 		final int arena = player.getBlockCheckerArena();
+		
 		if ((arena == -1) || (arena > 3))
 		{
 			return;
 		}
+		
 		if (player.getTarget().equals(actor))
 		{
 			if ((skill.getId() == 5852) || (skill.getId() == 5853))
 			{
 				final ArenaParticipantsHolder holder = HandysBlockCheckerManager.getInstance().getHolder(arena);
+				
 				if ((holder.getPlayerTeam(player) == 0) && !actor.isRed())
 				{
 					actor.changeColor();
@@ -85,7 +91,9 @@ public class HandysBlock extends DefaultAI
 				{
 					return;
 				}
+				
 				final int random = Rnd.get(100);
+				
 				if ((random > 69) && (random <= 84))
 				{
 					dropItem(actor, 13787, holder.getEvent(), player);

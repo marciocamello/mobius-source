@@ -30,7 +30,7 @@ import lineage2.gameserver.utils.Location;
 public final class GunPrisionInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -98,7 +98,6 @@ public final class GunPrisionInstance extends NpcInstance
 				}
 			}, 3100);
 			setTitle("Cannon is loading");
-			
 			Location loc = point_bombs[getNpcId() - 32939];
 			
 			for (NpcInstance monster : World.getAroundNpcCor(loc, getCurrentRegion(), getReflectionId(), 650, 500))
@@ -161,7 +160,6 @@ public final class GunPrisionInstance extends NpcInstance
 				}
 			}, 3100);
 			setTitle("Cannon is loading");
-			
 			Location loc = point_bombs_spezion[getNpcId() - 33288];
 			
 			for (NpcInstance monster : World.getAroundNpcCor(loc, getCurrentRegion(), getReflectionId(), 700, 500))
@@ -170,6 +168,7 @@ public final class GunPrisionInstance extends NpcInstance
 				{
 					continue;
 				}
+				
 				monster.getEffectList().stopEffect(SkillTable.getInstance().getInfo(14190, 1));
 				monster.setNpcState(2);
 				ThreadPoolManager.getInstance().schedule(new Buff(monster), 60 * 1000L);
@@ -202,7 +201,7 @@ public final class GunPrisionInstance extends NpcInstance
 	private class Shot extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public Shot()
 		{

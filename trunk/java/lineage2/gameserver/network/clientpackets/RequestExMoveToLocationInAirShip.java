@@ -58,21 +58,26 @@ public class RequestExMoveToLocationInAirShip extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		Boat boat = BoatHolder.getInstance().getBoat(_boatObjectId);
+		
 		if (boat == null)
 		{
 			player.sendActionFailed();
 			return;
 		}
+		
 		if (player.isClanAirShipDriver())
 		{
 			player.sendActionFailed();
 			return;
 		}
+		
 		boat.moveInBoat(player, _originPos, _pos);
 	}
 }

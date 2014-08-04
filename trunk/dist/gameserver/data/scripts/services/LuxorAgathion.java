@@ -125,10 +125,12 @@ public class LuxorAgathion extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		for (int[] ingridient : INGRIDIENTS)
 		{
 			if (getItemCount(player, ingridient[0]) < ingridient[1])
@@ -137,13 +139,16 @@ public class LuxorAgathion extends Functions
 				return;
 			}
 		}
+		
 		for (int[] ingridient : INGRIDIENTS)
 		{
 			removeItem(player, ingridient[0], ingridient[1]);
 		}
+		
 		if (!Rnd.chance(SUCCESS_RATE))
 		{
 			addItem(player, OldAgathion, 1);
+			
 			if (type == 1)
 			{
 				addItem(player, ShadowPurpleVikingCirclet, 1);
@@ -152,9 +157,11 @@ public class LuxorAgathion extends Functions
 			{
 				addItem(player, ShadowGoldenVikingCirclet, 1);
 			}
+			
 			show("merchant/30098-3.htm", player, npc);
 			return;
 		}
+		
 		addItem(player, braceletes[Rnd.chance(RARE_RATE) ? 0 : Rnd.get(1, braceletes.length - 1)], 1);
 		show("merchant/30098-4.htm", player, npc);
 	}

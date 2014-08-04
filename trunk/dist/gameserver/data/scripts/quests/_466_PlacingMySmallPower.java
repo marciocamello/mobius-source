@@ -98,10 +98,12 @@ public class _466_PlacingMySmallPower extends Quest implements ScriptFile
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		if (event.equalsIgnoreCase("32895-4.htm"))
 		{
 			st.setCond(2);
 		}
+		
 		return event;
 	}
 	
@@ -112,6 +114,7 @@ public class _466_PlacingMySmallPower extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int state = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == ASTERIOS)
 		{
 			if (state == 1)
@@ -120,16 +123,20 @@ public class _466_PlacingMySmallPower extends Quest implements ScriptFile
 				{
 					return "30154-lvl.htm";
 				}
+				
 				if (!st.isNowAvailable())
 				{
 					return "30154-comp.htm";
 				}
+				
 				if (st.getPlayer().getLevel() < 90)
 				{
 					return "30154-lvl.htm";
 				}
+				
 				return "30154.htm";
 			}
+			
 			if (state == 2)
 			{
 				if (cond == 1)
@@ -148,36 +155,43 @@ public class _466_PlacingMySmallPower extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		if ((npcId == NOEM_MILID) && (state == 2))
 		{
 			if (cond == 1)
 			{
 				return "32895.htm";
 			}
+			
 			if (cond == 2)
 			{
 				return "32895-5.htm";
 			}
+			
 			if (cond == 3)
 			{
 				st.setCond(4);
 				st.giveItems(NavozRecipe, 1);
 				return "32895-6.htm";
 			}
+			
 			if ((cond == 4) && (st.getQuestItemsCount(NavozItem) == 0))
 			{
 				return "32895-7.htm";
 			}
+			
 			if ((cond == 4) && (st.getQuestItemsCount(NavozItem) != 0))
 			{
 				st.setCond(5);
 				return "32895-8.htm";
 			}
+			
 			if (cond == 5)
 			{
 				return "32895-10.htm";
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -185,22 +199,27 @@ public class _466_PlacingMySmallPower extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if ((cond != 2) || (npc == null))
 		{
 			return null;
 		}
+		
 		if (ArrayUtils.contains(WingMobs, npc.getNpcId()) && Rnd.chance(7))
 		{
 			st.giveItems(WingI, 1);
 		}
+		
 		if (ArrayUtils.contains(CoconMobs, npc.getNpcId()) && Rnd.chance(10))
 		{
 			st.giveItems(CoconI, 1);
 		}
+		
 		if (ArrayUtils.contains(BreathMobs, npc.getNpcId()) && Rnd.chance(12))
 		{
 			st.giveItems(BreathI, 1);
 		}
+		
 		checkCond(st);
 		return null;
 	}

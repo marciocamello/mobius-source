@@ -107,11 +107,13 @@ public class EssagirWarriors extends DefaultAI
 		final int[][] coords;
 		coords = SMP_COORDS;
 		actor.setRunning();
+		
 		if ((actor.getTarget() == null) || (currentState >= coords.length) || (currentState == 0))
 		{
 			if (currentState < coords.length)
 			{
 				actor.moveToLocation(coords[currentState][0], coords[currentState][1], coords[currentState][2], Rnd.get(0, 50), true);
+				
 				if (actor.getDestination() == null)
 				{
 					++currentState;
@@ -122,11 +124,13 @@ public class EssagirWarriors extends DefaultAI
 				actor.doDie(actor);
 			}
 		}
+		
 		if ((lastSayTimer + SAY_RAFF) < System.currentTimeMillis())
 		{
 			lastSayTimer = System.currentTimeMillis();
 			Functions.npcSay(actor, NpcString.IT_S_HERE, ChatType.NPC_SAY, 800);
 		}
+		
 		return true;
 	}
 	

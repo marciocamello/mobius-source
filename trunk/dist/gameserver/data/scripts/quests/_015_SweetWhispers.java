@@ -46,6 +46,7 @@ public class _015_SweetWhispers extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("trader_vladimir_q0015_0104.htm"))
 		{
 			st.setCond(1);
@@ -62,6 +63,7 @@ public class _015_SweetWhispers extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -71,6 +73,7 @@ public class _015_SweetWhispers extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == 31302)
 		{
 			if (cond == 0)
@@ -108,6 +111,7 @@ public class _015_SweetWhispers extends Quest implements ScriptFile
 				htmltext = "dark_presbyter_q0015_0201.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	

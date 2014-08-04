@@ -45,9 +45,11 @@ public class Bingo
 	public Bingo(String template_choice)
 	{
 		_template_choice = template_choice;
+		
 		while (board.size() < 9)
 		{
 			int num = Rnd.get(1, 9);
+			
 			if (!board.contains(num))
 			{
 				board.add(num);
@@ -73,15 +75,19 @@ public class Bingo
 		{
 			return null;
 		}
+		
 		if (guesses.contains(choise))
 		{
 			return getDialog(msg_again);
 		}
+		
 		guesses.add(choise);
+		
 		if (guesses.size() == 6)
 		{
 			return getFinal();
 		}
+		
 		return getDialog("");
 	}
 	
@@ -91,11 +97,14 @@ public class Bingo
 		{
 			return "";
 		}
+		
 		String result = template_board;
+		
 		for (int i = 1; i <= 9; i++)
 		{
 			String cell = "%cell" + String.valueOf(i) + "%";
 			int num = board.get(i - 1);
+			
 			if (guesses.contains(num))
 			{
 				result = result.replaceFirst(cell, "<font color=\"" + (guesses.size() == 6 ? "ff0000" : "ffff00") + "\">" + String.valueOf(num) + "</font>");
@@ -105,12 +114,14 @@ public class Bingo
 				result = result.replaceFirst(cell, "?");
 			}
 		}
+		
 		return result;
 	}
 	
 	public String getDialog(String _msg)
 	{
 		String result = template;
+		
 		if (guesses.size() == 0)
 		{
 			result = result.replaceFirst("%msg%", msg_begin);
@@ -119,8 +130,10 @@ public class Bingo
 		{
 			result = result.replaceFirst("%msg%", _msg.equalsIgnoreCase("") ? msg_next : _msg);
 		}
+		
 		result = result.replaceFirst("%choicenum%", nums[guesses.size()]);
 		StringBuilder choices = new StringBuilder();
+		
 		for (int i = 1; i <= 9; i++)
 		{
 			if (!guesses.contains(i))
@@ -128,6 +141,7 @@ public class Bingo
 				choices.append(_template_choice.replaceAll("%n%", String.valueOf(i)));
 			}
 		}
+		
 		result = result.replaceFirst("%choices%", choices.toString());
 		result = result.replaceFirst("%board%", getBoard());
 		return result;
@@ -137,6 +151,7 @@ public class Bingo
 	{
 		String result = template_final.replaceFirst("%board%", getBoard());
 		calcLines();
+		
 		if (lines == 3)
 		{
 			result = result.replaceFirst("%msg%", msg_3lines);
@@ -149,6 +164,7 @@ public class Bingo
 		{
 			result = result.replaceFirst("%msg%", msg_lose);
 		}
+		
 		return result;
 	}
 	

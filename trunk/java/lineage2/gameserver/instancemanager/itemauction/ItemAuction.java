@@ -123,6 +123,7 @@ public class ItemAuction
 	void addBid(ItemAuctionBid bid)
 	{
 		_auctionBids.put(bid.getCharId(), bid);
+		
 		if ((_highestBid == null) || (_highestBid.getLastBid() < bid.getLastBid()))
 		{
 			_highestBid = bid;
@@ -150,6 +151,7 @@ public class ItemAuction
 		{
 			return false;
 		}
+		
 		_auctionState = wanted;
 		store();
 		return true;
@@ -290,6 +292,7 @@ public class ItemAuction
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -335,9 +338,11 @@ public class ItemAuction
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
+			
 			if (delete)
 			{
 				statement = con.prepareStatement("DELETE FROM item_auction_bid WHERE auctionId=? AND playerObjId=?");
@@ -352,6 +357,7 @@ public class ItemAuction
 				statement.setLong(3, bid.getLastBid());
 				statement.setLong(4, bid.getLastBid());
 			}
+			
 			statement.execute();
 			statement.close();
 		}
@@ -376,11 +382,13 @@ public class ItemAuction
 		{
 			throw new NullPointerException();
 		}
+		
 		if (newBid < getAuctionInitBid())
 		{
 			player.sendPacket(Msg.YOUR_BID_PRICE_MUST_BE_HIGHER_THAN_THE_MINIMUM_PRICE_THAT_CAN_BE_BID);
 			return;
 		}
+		
 		if (newBid > Config.ALT_ITEM_AUCTION_MAX_BID)
 		{
 			if (Config.ALT_ITEM_AUCTION_MAX_BID == 100000000000L)
@@ -391,12 +399,15 @@ public class ItemAuction
 			{
 				player.sendMessage("Your bid cannot exceed " + Config.ALT_ITEM_AUCTION_MAX_BID);
 			}
+			
 			return;
 		}
+		
 		if (getAuctionState() != ItemAuctionState.STARTED)
 		{
 			return;
 		}
+		
 		int charId = player.getObjectId();
 		synchronized (_auctionBids)
 		{
@@ -405,13 +416,16 @@ public class ItemAuction
 				player.sendPacket(Msg.YOUR_BID_MUST_BE_HIGHER_THAN_THE_CURRENT_HIGHEST_BID);
 				return;
 			}
+			
 			ItemAuctionBid bid = getBidFor(charId);
+			
 			if (bid == null)
 			{
 				if (!reduceItemCount(player, newBid))
 				{
 					return;
 				}
+				
 				bid = new ItemAuctionBid(charId, newBid);
 				_auctionBids.put(charId, bid);
 				onPlayerBid(player, bid);
@@ -419,20 +433,24 @@ public class ItemAuction
 				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_SUBMITTED_A_BID_IN_THE_AUCTION_OF_S1).addNumber(newBid));
 				return;
 			}
+			
 			if (!Config.ALT_ITEM_AUCTION_CAN_REBID)
 			{
 				player.sendPacket(Msg.SINCE_YOU_HAVE_ALREADY_SUBMITTED_A_BID_YOU_ARE_NOT_ALLOWED_TO_PARTICIPATE_IN_ANOTHER_AUCTION_AT_THIS_TIME);
 				return;
 			}
+			
 			if (bid.getLastBid() >= newBid)
 			{
 				player.sendPacket(Msg.THE_SECOND_BID_AMOUNT_MUST_BE_HIGHER_THAN_THE_ORIGINAL);
 				return;
 			}
+			
 			if (!reduceItemCount(player, newBid - bid.getLastBid()))
 			{
 				return;
 			}
+			
 			bid.setLastBid(newBid);
 			onPlayerBid(player, bid);
 			updatePlayerBid(bid, false);
@@ -454,12 +472,15 @@ public class ItemAuction
 		else if (_highestBid.getLastBid() < bid.getLastBid())
 		{
 			Player old = _highestBid.getPlayer();
+			
 			if (old != null)
 			{
 				old.sendPacket(Msg.YOU_HAVE_BEEN_OUTBID);
 			}
+			
 			_highestBid = bid;
 		}
+		
 		if ((getEndingTime() - System.currentTimeMillis()) <= (1000 * 60 * 10))
 		{
 			if (_auctionEndingExtendState == 0)
@@ -483,11 +504,13 @@ public class ItemAuction
 	{
 		TIntObjectIterator<ItemAuctionBid> itr = _auctionBids.iterator();
 		ItemAuctionBid bid;
+		
 		while (itr.hasNext())
 		{
 			itr.advance();
 			bid = itr.value();
 			Player player = bid.getPlayer();
+			
 			if (player != null)
 			{
 				player.sendPacket(packet);
@@ -505,21 +528,26 @@ public class ItemAuction
 		{
 			throw new NullPointerException();
 		}
+		
 		switch (getAuctionState())
 		{
 			case CREATED:
 				player.sendPacket(Msg.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU);
 				return;
+				
 			case FINISHED:
 				if (_startingTime < (System.currentTimeMillis() - Config.ALT_ITEM_AUCTION_MAX_CANCEL_TIME_IN_MILLIS))
 				{
 					player.sendPacket(Msg.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU);
 					return;
 				}
+				
 				break;
+			
 			default:
 				break;
 		}
+		
 		int charId = player.getObjectId();
 		synchronized (_auctionBids)
 		{
@@ -528,19 +556,24 @@ public class ItemAuction
 				player.sendPacket(Msg.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU);
 				return;
 			}
+			
 			ItemAuctionBid bid = getBidFor(charId);
+			
 			if ((bid == null) || bid.isCanceled())
 			{
 				player.sendPacket(Msg.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU);
 				return;
 			}
+			
 			if (bid.getCharId() == _highestBid.getCharId())
 			{
 				player.sendMessage("You cannot cancel you bid: You have the highest bid.");
 				return;
 			}
+			
 			increaseItemCount(player, bid.getLastBid());
 			player.sendPacket(Msg.YOU_HAVE_CANCELED_YOUR_BID);
+			
 			if (Config.ALT_ITEM_AUCTION_CAN_REBID)
 			{
 				_auctionBids.remove(charId);
@@ -569,8 +602,10 @@ public class ItemAuction
 				player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA_FOR_THIS_BID);
 				return false;
 			}
+			
 			return true;
 		}
+		
 		return player.getInventory().destroyItemByItemId(Config.ALT_ITEM_AUCTION_BID_ITEM_ID, count);
 	}
 	
@@ -589,6 +624,7 @@ public class ItemAuction
 		{
 			player.getInventory().addItem(Config.ALT_ITEM_AUCTION_BID_ITEM_ID, count);
 		}
+		
 		player.sendPacket(SystemMessage2.obtainItems(Config.ALT_ITEM_AUCTION_BID_ITEM_ID, count, 0));
 	}
 	

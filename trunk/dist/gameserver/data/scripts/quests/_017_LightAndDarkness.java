@@ -49,6 +49,7 @@ public class _017_LightAndDarkness extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("dark_presbyter_q0017_04.htm"))
 		{
 			st.setState(STARTED);
@@ -80,6 +81,7 @@ public class _017_LightAndDarkness extends Quest implements ScriptFile
 			st.setCond(5);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return htmltext;
 	}
 	
@@ -89,6 +91,7 @@ public class _017_LightAndDarkness extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == 31517)
 		{
 			if (cond == 0)
@@ -193,6 +196,7 @@ public class _017_LightAndDarkness extends Quest implements ScriptFile
 				htmltext = "blessed_altar4_q0017_05.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

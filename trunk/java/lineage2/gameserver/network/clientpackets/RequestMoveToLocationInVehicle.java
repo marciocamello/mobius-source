@@ -58,16 +58,20 @@ public class RequestMoveToLocationInVehicle extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		Boat boat = BoatHolder.getInstance().getBoat(_boatObjectId);
+		
 		if (boat == null)
 		{
 			player.sendActionFailed();
 			return;
 		}
+		
 		boat.moveInBoat(player, _originPos, _pos);
 	}
 }

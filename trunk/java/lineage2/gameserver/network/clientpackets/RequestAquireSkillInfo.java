@@ -60,20 +60,26 @@ public class RequestAquireSkillInfo extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if ((player == null) || (player.getTransformation() != 0) || (SkillTable.getInstance().getInfo(_id, _level) == null) || (_type == null))
 		{
 			return;
 		}
+		
 		NpcInstance trainer = player.getLastNpc();
+		
 		if (((trainer == null) || (player.getDistance(trainer.getX(), trainer.getY()) > Creature.INTERACTION_DISTANCE)) && !player.isGM() && (_type != AcquireType.NORMAL))
 		{
 			return;
 		}
+		
 		SkillLearn skillLearn = SkillAcquireHolder.getInstance().getSkillLearn(player, _id, _level, _type);
+		
 		if (skillLearn == null)
 		{
 			return;
 		}
+		
 		if (_type == AcquireType.NORMAL)
 		{
 			sendPacket(new ExAcquireSkillInfo(player, skillLearn));

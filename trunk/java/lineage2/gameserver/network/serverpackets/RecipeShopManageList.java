@@ -32,6 +32,7 @@ public class RecipeShopManageList extends L2GameServerPacket
 		sellerId = seller.getObjectId();
 		adena = seller.getAdena();
 		isDwarven = isDwarvenCraft;
+		
 		if (isDwarven)
 		{
 			recipes = seller.getDwarvenRecipeBook();
@@ -40,7 +41,9 @@ public class RecipeShopManageList extends L2GameServerPacket
 		{
 			recipes = seller.getCommonRecipeBook();
 		}
+		
 		createList = seller.getCreateList();
+		
 		for (ManufactureItem mi : createList)
 		{
 			if (!seller.findRecipe(mi.getRecipeId()))
@@ -59,12 +62,15 @@ public class RecipeShopManageList extends L2GameServerPacket
 		writeD(isDwarven ? 0x00 : 0x01);
 		writeD(recipes.size());
 		int i = 1;
+		
 		for (RecipeTemplate recipe : recipes)
 		{
 			writeD(recipe.getId());
 			writeD(i++);
 		}
+		
 		writeD(createList.size());
+		
 		for (ManufactureItem mi : createList)
 		{
 			writeD(mi.getRecipeId());

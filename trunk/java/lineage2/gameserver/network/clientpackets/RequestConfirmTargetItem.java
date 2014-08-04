@@ -45,11 +45,13 @@ public class RequestConfirmTargetItem extends AbstractRefinePacket
 	{
 		Player activeChar = getClient().getActiveChar();
 		ItemInstance item = activeChar.getInventory().getItemByObjectId(_itemObjId);
+		
 		if (item == null)
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (!isValid(activeChar, item))
 		{
 			if (item.isAugmented())
@@ -57,9 +59,11 @@ public class RequestConfirmTargetItem extends AbstractRefinePacket
 				activeChar.sendPacket(Msg.ONCE_AN_ITEM_IS_AUGMENTED_IT_CANNOT_BE_AUGMENTED_AGAIN);
 				return;
 			}
+			
 			activeChar.sendPacket(Msg.THIS_IS_NOT_A_SUITABLE_ITEM);
 			return;
 		}
+		
 		activeChar.sendPacket(new ExPutItemResultForVariationMake(_itemObjId), Msg.SELECT_THE_CATALYST_FOR_AUGMENTATION);
 	}
 }

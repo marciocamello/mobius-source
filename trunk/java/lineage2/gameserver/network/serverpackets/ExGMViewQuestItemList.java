@@ -43,6 +43,7 @@ public class ExGMViewQuestItemList extends L2GameServerPacket
 		writeS(_name);
 		writeD(_limit);
 		writeH(_size);
+		
 		for (ItemInstance temp : _items)
 		{
 			if (temp.getTemplate().isQuest())

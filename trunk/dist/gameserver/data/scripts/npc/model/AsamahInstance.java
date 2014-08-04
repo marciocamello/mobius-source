@@ -26,7 +26,7 @@ import quests._111_ElrokianHuntersProof;
 public class AsamahInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -60,10 +60,12 @@ public class AsamahInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equals("buyTrap"))
 		{
 			String htmltext = null;
 			QuestState ElrokianHuntersProof = player.getQuestState(_111_ElrokianHuntersProof.class);
+			
 			if ((player.getLevel() >= 75) && (ElrokianHuntersProof != null) && ElrokianHuntersProof.isCompleted() && (Functions.getItemCount(player, 57) > 1000000))
 			{
 				if (Functions.getItemCount(player, ElrokianTrap) > 0)
@@ -81,12 +83,14 @@ public class AsamahInstance extends NpcInstance
 			{
 				htmltext = getNpcId() + "-cant.htm";
 			}
+			
 			showChatWindow(player, "default/" + htmltext);
 		}
 		else if (command.equals("buyStones"))
 		{
 			String htmltext = null;
 			QuestState ElrokianHuntersProof = player.getQuestState(_111_ElrokianHuntersProof.class);
+			
 			if ((player.getLevel() >= 75) && (ElrokianHuntersProof != null) && ElrokianHuntersProof.isCompleted() && (Functions.getItemCount(player, 57) > 1000000))
 			{
 				Functions.removeItem(player, 57, 1000000);
@@ -97,6 +101,7 @@ public class AsamahInstance extends NpcInstance
 			{
 				htmltext = getNpcId() + "-cant.htm";
 			}
+			
 			showChatWindow(player, "default/" + htmltext);
 		}
 		else

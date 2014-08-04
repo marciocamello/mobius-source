@@ -128,6 +128,7 @@ public class MatchingRoomManager
 	public List<Player> getWaitingList(int minLevel, int maxLevel, int[] classes)
 	{
 		List<Player> res = new ArrayList<>();
+		
 		for (Player $member : _players)
 		{
 			if (($member.getLevel() >= minLevel) && ($member.getLevel() <= maxLevel))
@@ -153,6 +154,7 @@ public class MatchingRoomManager
 	public List<MatchingRoom> getMatchingRooms(int type, int region, boolean allLevels, Player activeChar)
 	{
 		List<MatchingRoom> res = new ArrayList<>();
+		
 		for (MatchingRoom room : _holder[type]._rooms.values())
 		{
 			if ((region > 0) && (room.getLocationId() != region))
@@ -163,12 +165,15 @@ public class MatchingRoomManager
 			{
 				continue;
 			}
+			
 			if (!allLevels && ((room.getMinLevel() > activeChar.getLevel()) || (room.getMaxLevel() < activeChar.getLevel())))
 			{
 				continue;
 			}
+			
 			res.add(room);
 		}
+		
 		return res;
 	}
 	
@@ -215,6 +220,7 @@ public class MatchingRoomManager
 		}
 		
 		RestartArea ra = MapRegionManager.getInstance().getRegionData(RestartArea.class, player);
+		
 		if (ra != null)
 		{
 			RestartPoint rp = ra.getRestartPoint().get(player.getRace());

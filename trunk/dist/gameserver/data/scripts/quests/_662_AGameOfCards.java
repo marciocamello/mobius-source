@@ -89,6 +89,7 @@ public class _662_AGameOfCards extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		int _state = st.getState();
+		
 		if (event.equalsIgnoreCase("30845_02.htm") && (_state == CREATED))
 		{
 			st.setCond(1);
@@ -110,30 +111,37 @@ public class _662_AGameOfCards extends Quest implements ScriptFile
 			{
 				return "30845_10a.htm";
 			}
+			
 			st.takeItems(RED_GEM, 50);
 			int player_id = st.getPlayer().getObjectId();
+			
 			if (Games.containsKey(player_id))
 			{
 				Games.remove(player_id);
 			}
+			
 			Games.put(player_id, new CardGame(player_id));
 		}
 		else if (event.equalsIgnoreCase("play") && (_state == STARTED))
 		{
 			int player_id = st.getPlayer().getObjectId();
+			
 			if (!Games.containsKey(player_id))
 			{
 				return null;
 			}
+			
 			return Games.get(player_id).playField();
 		}
 		else if (event.startsWith("card") && (_state == STARTED))
 		{
 			int player_id = st.getPlayer().getObjectId();
+			
 			if (!Games.containsKey(player_id))
 			{
 				return null;
 			}
+			
 			try
 			{
 				int cardn = Integer.valueOf(event.replaceAll("card", ""));
@@ -144,6 +152,7 @@ public class _662_AGameOfCards extends Quest implements ScriptFile
 				return null;
 			}
 		}
+		
 		return event;
 	}
 	
@@ -154,7 +163,9 @@ public class _662_AGameOfCards extends Quest implements ScriptFile
 		{
 			return "noquest";
 		}
+		
 		int _state = st.getState();
+		
 		if (_state == CREATED)
 		{
 			if (st.getPlayer().getLevel() < 61)
@@ -162,6 +173,7 @@ public class _662_AGameOfCards extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 				return "30845_00.htm";
 			}
+			
 			st.setCond(0);
 			return "30845_01.htm";
 		}
@@ -169,6 +181,7 @@ public class _662_AGameOfCards extends Quest implements ScriptFile
 		{
 			return st.getQuestItemsCount(RED_GEM) < 50 ? "30845_03.htm" : "30845_04.htm";
 		}
+		
 		return "noquest";
 	}
 	
@@ -179,6 +192,7 @@ public class _662_AGameOfCards extends Quest implements ScriptFile
 		{
 			qs.rollAndGive(RED_GEM, 1, drop_chance);
 		}
+		
 		return null;
 	}
 	
@@ -228,6 +242,7 @@ public class _662_AGameOfCards extends Quest implements ScriptFile
 		public CardGame(int _player_id)
 		{
 			player_id = _player_id;
+			
 			for (int i = 0; i < cards.length; i++)
 			{
 				cards[i] = "<a action=\"bypass -h Quest _662_AGameOfCards card" + i + "\">?</a>";
@@ -240,7 +255,9 @@ public class _662_AGameOfCards extends Quest implements ScriptFile
 			{
 				return null;
 			}
+			
 			cards[cardn] = card_chars[Rnd.get(card_chars.length)];
+			
 			for (String card : cards)
 			{
 				if (card.startsWith("<a"))
@@ -248,6 +265,7 @@ public class _662_AGameOfCards extends Quest implements ScriptFile
 					return playField();
 				}
 			}
+			
 			return finish(st);
 		}
 		
@@ -255,12 +273,14 @@ public class _662_AGameOfCards extends Quest implements ScriptFile
 		{
 			String result = html_header + table_header;
 			Map<String, Integer> matches = new HashMap<>();
+			
 			for (String card : cards)
 			{
 				int count = matches.containsKey(card) ? matches.remove(card) : 0;
 				count++;
 				matches.put(card, count);
 			}
+			
 			for (String card : cards)
 			{
 				if (matches.get(card) < 2)
@@ -268,9 +288,11 @@ public class _662_AGameOfCards extends Quest implements ScriptFile
 					matches.remove(card);
 				}
 			}
+			
 			String[] smatches = matches.keySet().toArray(new String[matches.size()]);
 			Integer[] cmatches = matches.values().toArray(new Integer[matches.size()]);
 			String txt = "Hmmm...? This is... No pair? Tough luck, my friend! Want to try again? Perhaps your luck will take a turn for the better...";
+			
 			if (cmatches.length == 1)
 			{
 				if (cmatches[0] == 5)
@@ -312,6 +334,7 @@ public class _662_AGameOfCards extends Quest implements ScriptFile
 					st.giveItems(Enchant_Weapon_C, 1);
 				}
 			}
+			
 			for (String card : cards)
 			{
 				if ((smatches.length > 0) && smatches[0].equalsIgnoreCase(card))
@@ -327,11 +350,14 @@ public class _662_AGameOfCards extends Quest implements ScriptFile
 					result += td_begin + card + td_end;
 				}
 			}
+			
 			result += table_footer + txt;
+			
 			if (st.getQuestItemsCount(RED_GEM) >= 50)
 			{
 				result += "<br><br><a action=\"bypass -h Quest _662_AGameOfCards 30845_10.htm\">Play Again!</a>";
 			}
+			
 			result += html_footer;
 			Games.remove(player_id);
 			return result;
@@ -340,10 +366,12 @@ public class _662_AGameOfCards extends Quest implements ScriptFile
 		public String playField()
 		{
 			String result = html_header + table_header;
+			
 			for (String card : cards)
 			{
 				result += td_begin + card + td_end;
 			}
+			
 			result += table_footer + "Check your next card." + html_footer;
 			return result;
 		}

@@ -52,10 +52,12 @@ public final class EffectTransformation extends Effect
 		{
 			return false;
 		}
+		
 		if (isFlyingTransform && (_effected.getX() > -166168))
 		{
 			return false;
 		}
+		
 		return super.checkCondition();
 	}
 	
@@ -68,22 +70,28 @@ public final class EffectTransformation extends Effect
 		super.onStart();
 		Player player = (Player) _effected;
 		player.setTransformationTemplate(getSkill().getNpcId());
+		
 		if (getSkill() instanceof Transformation)
 		{
 			player.setTransformationName(((Transformation) getSkill()).transformationName);
 		}
+		
 		int id = (int) calc();
+		
 		if (isFlyingTransform)
 		{
 			boolean isVisible = player.isVisible();
+			
 			for (Summon summon : player.getSummonList())
 			{
 				summon.unSummon();
 			}
+			
 			player.decayMe();
 			player.setFlying(true);
 			player.setLoc(player.getLoc().changeZ(300));
 			player.setTransformation(id);
+			
 			if (isVisible)
 			{
 				player.spawnMe();
@@ -102,13 +110,16 @@ public final class EffectTransformation extends Effect
 	public void onExit()
 	{
 		super.onExit();
+		
 		if (_effected.isPlayer())
 		{
 			Player player = (Player) _effected;
+			
 			if (getSkill() instanceof Transformation)
 			{
 				player.setTransformationName(null);
 			}
+			
 			if (isFlyingTransform)
 			{
 				boolean isVisible = player.isVisible();
@@ -116,6 +127,7 @@ public final class EffectTransformation extends Effect
 				player.setFlying(false);
 				player.setLoc(player.getLoc().correctGeoZ());
 				player.setTransformation(0);
+				
 				if (isVisible)
 				{
 					player.spawnMe();

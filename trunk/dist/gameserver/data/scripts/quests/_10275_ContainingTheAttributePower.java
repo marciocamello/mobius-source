@@ -67,6 +67,7 @@ public class _10275_ContainingTheAttributePower extends Quest implements ScriptF
 	{
 		String htmltext = event;
 		Player player = st.getPlayer();
+		
 		if (event.equalsIgnoreCase("30839-02.htm") || event.equalsIgnoreCase("31307-02.htm"))
 		{
 			st.setCond(1);
@@ -102,6 +103,7 @@ public class _10275_ContainingTheAttributePower extends Quest implements ScriptF
 				st.takeItems(YinSword, 1);
 				htmltext = "32325-07.htm";
 			}
+			
 			st.giveItems(YinSword, 1, Element.FIRE, 10);
 		}
 		else if (event.equalsIgnoreCase("32326-06.htm"))
@@ -111,6 +113,7 @@ public class _10275_ContainingTheAttributePower extends Quest implements ScriptF
 				st.takeItems(YangSword, 1);
 				htmltext = "32326-07.htm";
 			}
+			
 			st.giveItems(YangSword, 1, Element.EARTH, 10);
 		}
 		else if (event.equalsIgnoreCase("32325-09.htm"))
@@ -130,6 +133,7 @@ public class _10275_ContainingTheAttributePower extends Quest implements ScriptF
 		else
 		{
 			int item = 0;
+			
 			if (event.equalsIgnoreCase("1"))
 			{
 				item = 10521;
@@ -154,12 +158,14 @@ public class _10275_ContainingTheAttributePower extends Quest implements ScriptF
 			{
 				item = 10526;
 			}
+			
 			if (item > 0)
 			{
 				st.giveItems(item, 2, true);
 				st.addExpAndSp(10000000, 11200000);
 				st.exitCurrentQuest(false);
 				st.playSound(SOUND_FINISH);
+				
 				if (npc != null)
 				{
 					htmltext = str(npc.getNpcId()) + "-1" + event + ".htm";
@@ -170,6 +176,7 @@ public class _10275_ContainingTheAttributePower extends Quest implements ScriptF
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -180,6 +187,7 @@ public class _10275_ContainingTheAttributePower extends Quest implements ScriptF
 		int id = st.getState();
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
+		
 		if (id == COMPLETED)
 		{
 			if (npcId == Holly)
@@ -277,6 +285,7 @@ public class _10275_ContainingTheAttributePower extends Quest implements ScriptF
 				htmltext = "32326-10.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -287,13 +296,16 @@ public class _10275_ContainingTheAttributePower extends Quest implements ScriptF
 		{
 			return null;
 		}
+		
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
+		
 		if (npcId == Air)
 		{
 			if ((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YangSword) && ((cond == 8) || (cond == 10)) && (st.getQuestItemsCount(SoulPieceAir) < 6) && Rnd.chance(30))
 			{
 				st.giveItems(SoulPieceAir, 1, false);
+				
 				if (st.getQuestItemsCount(SoulPieceAir) >= 6)
 				{
 					st.setCond(cond + 1);
@@ -306,6 +318,7 @@ public class _10275_ContainingTheAttributePower extends Quest implements ScriptF
 			if ((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YinSword) && ((cond == 3) || (cond == 5)) && (st.getQuestItemsCount(SoulPieceWater) < 6) && Rnd.chance(30))
 			{
 				st.giveItems(SoulPieceWater, 1, false);
+				
 				if (st.getQuestItemsCount(SoulPieceWater) >= 6)
 				{
 					st.setCond(cond + 1);
@@ -313,6 +326,7 @@ public class _10275_ContainingTheAttributePower extends Quest implements ScriptF
 				}
 			}
 		}
+		
 		return null;
 	}
 }

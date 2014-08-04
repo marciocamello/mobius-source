@@ -57,9 +57,11 @@ public class KarulBugbear extends Ranger
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (_firstTimeAttacked)
 		{
 			_firstTimeAttacked = false;
+			
 			if (Rnd.chance(25))
 			{
 				Functions.npcSay(actor, "Your rear is practically unguarded!");
@@ -69,6 +71,7 @@ public class KarulBugbear extends Ranger
 		{
 			Functions.npcSay(actor, "Watch your back!");
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 }

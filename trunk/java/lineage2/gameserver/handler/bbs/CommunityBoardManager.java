@@ -72,6 +72,7 @@ public class CommunityBoardManager
 			{
 				_log.warn("CommunityBoard: dublicate bypass registered! First handler: " + _handlers.get(bypass).getClass().getSimpleName() + " second: " + commHandler.getClass().getSimpleName());
 			}
+			
 			_handlers.put(bypass, commHandler);
 		}
 	}
@@ -86,6 +87,7 @@ public class CommunityBoardManager
 		{
 			_handlers.remove(bypass);
 		}
+		
 		_log.info("CommunityBoard: " + handler.getClass().getSimpleName() + " unloaded.");
 	}
 	
@@ -100,6 +102,7 @@ public class CommunityBoardManager
 		{
 			return null;
 		}
+		
 		for (Map.Entry<String, ICommunityBoardHandler> entry : _handlers.entrySet())
 		{
 			if (bypass.contains(entry.getKey()))
@@ -107,6 +110,7 @@ public class CommunityBoardManager
 				return entry.getValue();
 			}
 		}
+		
 		return null;
 	}
 	

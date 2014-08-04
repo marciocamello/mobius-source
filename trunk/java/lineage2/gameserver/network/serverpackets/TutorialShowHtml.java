@@ -63,10 +63,12 @@ public class TutorialShowHtml extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xa6);
+		
 		if (_type > 0)
 		{
 			writeD(_type);
 		}
+		
 		writeS(_html);
 	}
 }

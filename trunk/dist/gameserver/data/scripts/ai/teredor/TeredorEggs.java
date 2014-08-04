@@ -85,6 +85,7 @@ public class TeredorEggs extends Fighter
 			final Player player = (Player) actor.getAggroList().getMostHated();
 			final Reflection ref = actor.getReflection();
 			ThreadPoolManager.getInstance().schedule(new SpawnMonster(actor, player, ref), monsterSpawnDelay * 1000);
+			
 			if (player.getParty() != null)
 			{
 				for (Playable playable : player.getParty().getPartyMembersWithPets())
@@ -95,8 +96,10 @@ public class TeredorEggs extends Fighter
 					}
 				}
 			}
+			
 			_activated = true;
 		}
+		
 		super.thinkAttack();
 	}
 	
@@ -145,6 +148,7 @@ public class TeredorEggs extends Fighter
 					final int chosenMonster = eggMonsters[Rnd.get(eggMonsters.length)];
 					final Location coords = Location.findPointToStay(actor, 100, 120);
 					final NpcInstance npc = _ref.addSpawnWithoutRespawn(chosenMonster, coords, 0);
+					
 					if (npc.getNpcId() == 18994)
 					{
 						npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _player, Rnd.get(1, 100));

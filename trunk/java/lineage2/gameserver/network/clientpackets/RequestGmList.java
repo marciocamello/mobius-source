@@ -36,6 +36,7 @@ public class RequestGmList extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar != null)
 		{
 			GmListTable.sendListToPlayer(activeChar);

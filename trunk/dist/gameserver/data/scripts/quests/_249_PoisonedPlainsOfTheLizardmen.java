@@ -49,6 +49,7 @@ public class _249_PoisonedPlainsOfTheLizardmen extends Quest implements ScriptFi
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (npc.getNpcId() == MOUEN)
 		{
 			if (event.equalsIgnoreCase("30196-03.htm"))
@@ -66,6 +67,7 @@ public class _249_PoisonedPlainsOfTheLizardmen extends Quest implements ScriptFi
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -75,6 +77,7 @@ public class _249_PoisonedPlainsOfTheLizardmen extends Quest implements ScriptFi
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == MOUEN)
 		{
 			switch (st.getState())
@@ -88,13 +91,17 @@ public class _249_PoisonedPlainsOfTheLizardmen extends Quest implements ScriptFi
 					{
 						htmltext = "30196-00.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					if (cond == 1)
 					{
 						htmltext = "30196-04.htm";
 					}
+					
 					break;
+				
 				case COMPLETED:
 					htmltext = "30196-05.htm";
 					break;
@@ -111,6 +118,7 @@ public class _249_PoisonedPlainsOfTheLizardmen extends Quest implements ScriptFi
 				htmltext = "32744-04.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

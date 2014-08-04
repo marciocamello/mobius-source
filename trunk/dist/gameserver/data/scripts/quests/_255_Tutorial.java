@@ -202,19 +202,24 @@ public class _255_Tutorial extends Quest implements ScriptFile, OnPlayerEnterLis
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		Player player = st.getPlayer();
+		
 		if (player == null)
 		{
 			return null;
 		}
+		
 		String html = "";
 		int classId = player.getActiveClassId();
 		int Ex = st.getInt("Ex");
+		
 		if (event.startsWith("UC"))
 		{
 			int level = player.getLevel();
+			
 			if ((level < 6) && (st.getInt("onlyone") == 0))
 			{
 				int uc = st.getInt("ucMemo");
+				
 				if (uc == 0)
 				{
 					st.set("ucMemo", "0");
@@ -312,10 +317,12 @@ public class _255_Tutorial extends Quest implements ScriptFile, OnPlayerEnterLis
 		{
 			st.cancelQuestTimer("TE");
 			int event_id = 0;
+			
 			if (!event.equalsIgnoreCase("TE"))
 			{
 				event_id = Integer.valueOf(event.substring(2));
 			}
+			
 			if (event_id == 0)
 			{
 				player.sendPacket(TutorialCloseHtml.STATIC);
@@ -393,6 +400,7 @@ public class _255_Tutorial extends Quest implements ScriptFile, OnPlayerEnterLis
 		else if (event.startsWith("CE"))
 		{
 			int event_id = Integer.valueOf(event.substring(2));
+			
 			if ((event_id == 1) && (player.getLevel() < 6))
 			{
 				st.playTutorialVoice("tutorial_voice_004");
@@ -443,6 +451,7 @@ public class _255_Tutorial extends Quest implements ScriptFile, OnPlayerEnterLis
 						st.set("lvl", "5");
 					}
 				}
+				
 				if (player.getLevel() == 6)
 				{
 					if ((st.getInt("lvl") < 6) && (player.getClassLevel() == 0))
@@ -607,6 +616,7 @@ public class _255_Tutorial extends Quest implements ScriptFile, OnPlayerEnterLis
 		else if (event.startsWith("QM"))
 		{
 			int MarkId = Integer.valueOf(event.substring(2));
+			
 			if (MarkId == 1)
 			{
 				st.set("Ex", "-5");
@@ -635,6 +645,7 @@ public class _255_Tutorial extends Quest implements ScriptFile, OnPlayerEnterLis
 				int x = 0;
 				int y = 0;
 				int z = 0;
+				
 				for (String[] element : QMCa)
 				{
 					if (classId == Integer.valueOf(element[0]))
@@ -645,6 +656,7 @@ public class _255_Tutorial extends Quest implements ScriptFile, OnPlayerEnterLis
 						z = Integer.valueOf(element[4]);
 					}
 				}
+				
 				if (x != 0)
 				{
 					st.addRadar(x, y, z);
@@ -659,6 +671,7 @@ public class _255_Tutorial extends Quest implements ScriptFile, OnPlayerEnterLis
 				int x = 0;
 				int y = 0;
 				int z = 0;
+				
 				for (String[] element : QMCa)
 				{
 					if (classId == Integer.valueOf(element[0]))
@@ -669,6 +682,7 @@ public class _255_Tutorial extends Quest implements ScriptFile, OnPlayerEnterLis
 						z = Integer.valueOf(element[4]);
 					}
 				}
+				
 				if (x != 0)
 				{
 					st.addRadar(x, y, z);
@@ -717,6 +731,7 @@ public class _255_Tutorial extends Quest implements ScriptFile, OnPlayerEnterLis
 			else if (MarkId == 36)
 			{
 				int lvl = player.getLevel();
+				
 				if (lvl == 20)
 				{
 					html = "tutorial_kama_20.htm";
@@ -747,10 +762,12 @@ public class _255_Tutorial extends Quest implements ScriptFile, OnPlayerEnterLis
 				}
 			}
 		}
+		
 		if (html.isEmpty())
 		{
 			return null;
 		}
+		
 		st.showTutorialHTML(html, TutorialShowHtml.TYPE_HTML);
 		return null;
 	}
@@ -770,10 +787,12 @@ public class _255_Tutorial extends Quest implements ScriptFile, OnPlayerEnterLis
 		public void onCurrentHpDamage(Creature actor, double damage, Creature attacker, Skill skill)
 		{
 			Player player = actor.getPlayer();
+			
 			if (player.getCurrentHpPercents() < 25)
 			{
 				player.removeListener(_tutorialShowListener);
 				Quest q = QuestManager.getQuest(255);
+				
 				if (q != null)
 				{
 					player.processQuestEvent(q.getName(), "CE45", null);

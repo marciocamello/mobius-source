@@ -166,7 +166,6 @@ public class Base64
 		// --------| || || || | Six bit groups to index ALPHABET
 		// >>18 >>12 >> 6 >> 0 Right shift necessary
 		// 0x3f 0x3f 0x3f Additional AND
-		
 		// Create buffer with zero-padding if there are only one or two
 		// significant bytes passed in the array.
 		// We have to shift left 24 in order to flush out the 1's that appear
@@ -220,7 +219,7 @@ public class Base64
 	 * If the object cannot be serialized or there is another error, the method will return <tt>null</tt>.
 	 * <p>
 	 * Valid options:
-	 * 
+	 *
 	 * <pre>
 	 *   GZIP: gzip-compresses object before encoding it.
 	 *   DONT_BREAK_LINES: don't break lines at 76 characters
@@ -245,6 +244,7 @@ public class Base64
 		int dontBreakLines = (options & DONT_BREAK_LINES);
 		// ObjectOutputStream -> (GZIP) -> Base64 -> ByteArrayOutputStream
 		byte[] value = null;
+		
 		try (ByteArrayOutputStream baos = new ByteArrayOutputStream();
 			Base64.OutputStream b64os = new Base64.OutputStream(baos, ENCODE | dontBreakLines);
 			GZIPOutputStream gzipOutputStream = new GZIPOutputStream(b64os);
@@ -278,7 +278,7 @@ public class Base64
 	 * Encodes a byte array into Base64 notation.
 	 * <p>
 	 * Valid options:
-	 * 
+	 *
 	 * <pre>
 	 *   GZIP: gzip-compresses object before encoding it.
 	 *   DONT_BREAK_LINES: don't break lines at 76 characters
@@ -317,7 +317,7 @@ public class Base64
 	 * Encodes a byte array into Base64 notation.
 	 * <p>
 	 * Valid options:
-	 * 
+	 *
 	 * <pre>
 	 *   GZIP: gzip-compresses object before encoding it.
 	 *   DONT_BREAK_LINES: don't break lines at 76 characters
@@ -347,6 +347,7 @@ public class Base64
 		{
 			// GZip -> Base64 -> ByteArray
 			byte[] value = null;
+			
 			try (ByteArrayOutputStream baos = new ByteArrayOutputStream();
 				Base64.OutputStream b64os = new Base64.OutputStream(baos, ENCODE | dontBreakLines);
 				GZIPOutputStream gzos = new GZIPOutputStream(b64os))
@@ -369,7 +370,6 @@ public class Base64
 		
 		// Convert option to boolean in way that code likes it.
 		boolean breakLines = dontBreakLines == 0;
-		
 		int len43 = (len * 4) / 3;
 		byte[] outBuff = new byte[(len43) // Main 4:3
 			+ ((len % 3) > 0 ? 4 : 0) // Account for padding
@@ -378,11 +378,12 @@ public class Base64
 		int e = 0;
 		int len2 = len - 2;
 		int lineLength = 0;
+		
 		for (; d < len2; d += 3, e += 4)
 		{
 			encode3to4(source, d + off, 3, outBuff, e);
-			
 			lineLength += 4;
+			
 			if (breakLines && (lineLength == MAX_LINE_LENGTH))
 			{
 				outBuff[e + 4] = NEW_LINE;
@@ -423,11 +424,9 @@ public class Base64
 			// )
 			// | ( ( DECODABET[ source[ srcOffset + 1] ] << 24 ) >>> 12 );
 			int outBuff = ((DECODABET[source[srcOffset]] & 0xFF) << 18) | ((DECODABET[source[srcOffset + 1]] & 0xFF) << 12);
-			
 			destination[destOffset] = (byte) (outBuff >>> 16);
 			return 1;
 		}
-		
 		// Example: DkL=
 		else if (source[srcOffset + 3] == EQUALS_SIGN)
 		{
@@ -437,12 +436,10 @@ public class Base64
 			// | ( ( DECODABET[ source[ srcOffset + 1 ] ] << 24 ) >>> 12 )
 			// | ( ( DECODABET[ source[ srcOffset + 2 ] ] << 24 ) >>> 18 );
 			int outBuff = ((DECODABET[source[srcOffset]] & 0xFF) << 18) | ((DECODABET[source[srcOffset + 1]] & 0xFF) << 12) | ((DECODABET[source[srcOffset + 2]] & 0xFF) << 6);
-			
 			destination[destOffset] = (byte) (outBuff >>> 16);
 			destination[destOffset + 1] = (byte) (outBuff >>> 8);
 			return 2;
 		}
-		
 		// Example: DkLE
 		else
 		{
@@ -456,11 +453,9 @@ public class Base64
 				// | ( ( DECODABET[ source[ srcOffset + 2 ] ] << 24 ) >>> 18 )
 				// | ( ( DECODABET[ source[ srcOffset + 3 ] ] << 24 ) >>> 24 );
 				int outBuff = ((DECODABET[source[srcOffset]] & 0xFF) << 18) | ((DECODABET[source[srcOffset + 1]] & 0xFF) << 12) | ((DECODABET[source[srcOffset + 2]] & 0xFF) << 6) | ((DECODABET[source[srcOffset + 3]] & 0xFF));
-				
 				destination[destOffset] = (byte) (outBuff >> 16);
 				destination[destOffset + 1] = (byte) (outBuff >> 8);
 				destination[destOffset + 2] = (byte) (outBuff);
-				
 				return 3;
 			}
 			catch (Exception e)
@@ -483,12 +478,12 @@ public class Base64
 		int len34 = (len * 3) / 4;
 		byte[] outBuff = new byte[len34]; // Upper limit on size of output
 		int outBuffPosn = 0;
-		
 		byte[] b4 = new byte[4];
 		int b4Posn = 0;
 		int i = 0;
 		byte sbiCrop = 0;
 		byte sbiDecode = 0;
+		
 		for (i = off; i < (off + len); i++)
 		{
 			sbiCrop = (byte) (source[i] & 0x7f); // Only the low seven bits
@@ -499,6 +494,7 @@ public class Base64
 				if (sbiDecode >= EQUALS_SIGN_ENC)
 				{
 					b4[b4Posn++] = sbiCrop;
+					
 					if (b4Posn > 3)
 					{
 						outBuffPosn += decode4to3(b4, 0, outBuff, outBuffPosn);
@@ -510,9 +506,7 @@ public class Base64
 							break;
 						}
 					} // end if: quartet built
-					
 				} // end if: equals sign or better
-				
 			} // end if: white space, equals sign or better
 			else
 			{
@@ -534,7 +528,6 @@ public class Base64
 	public static byte[] decode(String s)
 	{
 		byte[] bytes = s.getBytes(PREFERRED_ENCODING);
-		
 		// Decode
 		bytes = decode(bytes, 0, bytes.length);
 		
@@ -544,11 +537,13 @@ public class Base64
 		if ((bytes != null) && (bytes.length >= 2))
 		{
 			final int head = (bytes[0] & 0xff) | ((bytes[1] << 8) & 0xff00);
+			
 			// Don't want to get ArrayIndexOutOfBounds exception
 			if ((bytes.length >= 4) && (GZIPInputStream.GZIP_MAGIC == head))
 			{
 				byte[] buffer = new byte[2048];
 				int length = 0;
+				
 				try (ByteArrayInputStream bais = new ByteArrayInputStream(bytes);
 					GZIPInputStream gzis = new GZIPInputStream(bais);
 					ByteArrayOutputStream baos = new ByteArrayOutputStream())
@@ -560,7 +555,6 @@ public class Base64
 					
 					// No error? Get new bytes.
 					bytes = baos.toByteArray();
-					
 				}
 				catch (IOException e)
 				{
@@ -568,6 +562,7 @@ public class Base64
 				}
 			}
 		}
+		
 		return bytes;
 	}
 	
@@ -582,6 +577,7 @@ public class Base64
 		// Decode and gunzip if necessary
 		byte[] objBytes = decode(encodedObject);
 		Object obj = null;
+		
 		try (ByteArrayInputStream bais = new ByteArrayInputStream(objBytes);
 			ObjectInputStream ois = new ObjectInputStream(bais))
 		{
@@ -595,6 +591,7 @@ public class Base64
 		{
 			_log.warning("Base64: " + e.getMessage());
 		}
+		
 		return obj;
 	}
 	
@@ -631,7 +628,7 @@ public class Base64
 		 * Constructs a {@link #InputStream} in either ENCODE or DECODE mode.
 		 * <p>
 		 * Valid options:
-		 * 
+		 *
 		 * <pre>
 		 *   ENCODE or DECODE: Encode or Decode as data is read.
 		 *   DONT_BREAK_LINES: don't break lines at 76 characters
@@ -674,6 +671,7 @@ public class Base64
 				{
 					byte[] b3 = new byte[3];
 					int numBinaryBytes = 0;
+					
 					for (int i = 0; i < 3; i++)
 					{
 						try
@@ -686,7 +684,6 @@ public class Base64
 								b3[i] = (byte) b;
 								numBinaryBytes++;
 							}
-							
 						}
 						catch (IOException e)
 						{
@@ -695,7 +692,6 @@ public class Base64
 							{
 								throw e;
 							}
-							
 						}
 					}
 					
@@ -714,10 +710,12 @@ public class Base64
 				{
 					byte[] b4 = new byte[4];
 					int i = 0;
+					
 					for (i = 0; i < 4; i++)
 					{
 						// Read four "meaningful" bytes:
 						int b = 0;
+						
 						do
 						{
 							b = in.read();
@@ -753,7 +751,7 @@ public class Base64
 			if (position >= 0)
 			{
 				// End of relevant data?
-				if ( /* !encode && */position >= numSigBytes)
+				if (/* !encode && */position >= numSigBytes)
 				{
 					return -1;
 				}
@@ -763,15 +761,16 @@ public class Base64
 					lineLength = 0;
 					return NEW_LINE;
 				}
+				
 				// This isn't important when decoding but throwing an extra "if" seems just as wasteful.
 				lineLength++;
-				
 				int b = buffer[position++];
 				
 				if (position >= bufferLength)
 				{
 					position = -1;
 				}
+				
 				// This is how you "cast" a byte that's intended to be unsigned.
 				return b & 0xFF;
 			}
@@ -793,6 +792,7 @@ public class Base64
 		{
 			int i;
 			int b;
+			
 			for (i = 0; i < len; i++)
 			{
 				b = read();
@@ -813,6 +813,7 @@ public class Base64
 					break;
 				}
 			}
+			
 			return i;
 		}
 		
@@ -852,7 +853,7 @@ public class Base64
 		 * Constructs a {@link #OutputStream} in either ENCODE or DECODE mode.
 		 * <p>
 		 * Valid options:
-		 * 
+		 *
 		 * <pre>
 		 *   ENCODE or DECODE: Encode or Decode as data is read.
 		 *   DONT_BREAK_LINES: don't break lines at 76 characters
@@ -901,16 +902,18 @@ public class Base64
 			if (encode)
 			{
 				buffer[position++] = (byte) theByte;
+				
 				if (position >= bufferLength) // Enough to encode.
 				{
 					out.write(encode3to4(b4, buffer, bufferLength));
-					
 					lineLength += 4;
+					
 					if (breakLines && (lineLength >= MAX_LINE_LENGTH))
 					{
 						out.write(NEW_LINE);
 						lineLength = 0;
 					}
+					
 					position = 0;
 				}
 			}
@@ -920,6 +923,7 @@ public class Base64
 				if (DECODABET[theByte & 0x7f] > WHITE_SPACE_ENC)
 				{
 					buffer[position++] = (byte) theByte;
+					
 					if (position >= bufferLength) // Enough to output.
 					{
 						int len = Base64.decode4to3(buffer, 0, b4, 0);

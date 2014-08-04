@@ -34,6 +34,7 @@ public class DeleteObject extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if ((activeChar == null) || (activeChar.getObjectId() == _objectId))
 		{
 			return;
@@ -42,7 +43,7 @@ public class DeleteObject extends L2GameServerPacket
 		writeC(0x08);
 		writeD(_objectId);
 		writeD(0x01); // Что-то странное. Если объект сидит верхом то при 0 он
-						// сперва будет ссажен, при 1 просто пропадет.
+		// сперва будет ссажен, при 1 просто пропадет.
 	}
 	
 	@Override

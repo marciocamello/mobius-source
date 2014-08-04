@@ -40,9 +40,11 @@ public final class EffectBuff extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if (getEffected().isPlayer())
 		{
 			final Player player = (Player) getEffected();
+			
 			if (player.getEffectList().getEffectsBySkillId(Skill.SKILL_DUAL_CAST) != null)
 			{
 				player.setIsEnabledDoubleCast(true);
@@ -57,9 +59,11 @@ public final class EffectBuff extends Effect
 	public void onExit()
 	{
 		super.onExit();
+		
 		if (getEffected().isPlayer())
 		{
 			final Player player = (Player) getEffected();
+			
 			if (player.getEffectList().getEffectsBySkillId(Skill.SKILL_DUAL_CAST) != null)
 			{
 				player.setIsEnabledDoubleCast(false);

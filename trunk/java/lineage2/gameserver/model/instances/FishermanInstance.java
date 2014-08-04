@@ -24,7 +24,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class FishermanInstance extends MerchantInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -49,6 +49,7 @@ public class FishermanInstance extends MerchantInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String pom = "";
+		
 		if (val == 0)
 		{
 			pom = "" + npcId;
@@ -57,6 +58,7 @@ public class FishermanInstance extends MerchantInstance
 		{
 			pom = npcId + "-" + val;
 		}
+		
 		return "fisherman/" + pom + ".htm";
 	}
 	
@@ -72,6 +74,7 @@ public class FishermanInstance extends MerchantInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("FishingSkillList"))
 		{
 			showFishingSkillList(player);

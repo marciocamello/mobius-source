@@ -54,6 +54,7 @@ public class _10273_GoodDayToFly extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		Player player = st.getPlayer();
+		
 		if (event.equalsIgnoreCase("32557-06.htm"))
 		{
 			st.setCond(1);
@@ -67,6 +68,7 @@ public class _10273_GoodDayToFly extends Quest implements ScriptFile
 				player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 				return null;
 			}
+			
 			st.set("transform", "1");
 			SkillTable.getInstance().getInfo(5982, 1).getEffects(player, player, false, false);
 		}
@@ -77,6 +79,7 @@ public class _10273_GoodDayToFly extends Quest implements ScriptFile
 				player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 				return null;
 			}
+			
 			SkillTable.getInstance().getInfo(5983, 1).getEffects(player, player, false, false);
 		}
 		else if (event.equalsIgnoreCase("32557-13.htm"))
@@ -86,6 +89,7 @@ public class _10273_GoodDayToFly extends Quest implements ScriptFile
 				player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 				return null;
 			}
+			
 			if (st.getInt("transform") == 1)
 			{
 				SkillTable.getInstance().getInfo(5982, 1).getEffects(player, player, false, false);
@@ -95,6 +99,7 @@ public class _10273_GoodDayToFly extends Quest implements ScriptFile
 				SkillTable.getInstance().getInfo(5983, 1).getEffects(player, player, false, false);
 			}
 		}
+		
 		return event;
 	}
 	
@@ -104,6 +109,7 @@ public class _10273_GoodDayToFly extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int id = st.getState();
 		int transform = st.getInt("transform");
+		
 		if (id == COMPLETED)
 		{
 			htmltext = "32557-0a.htm";
@@ -122,6 +128,7 @@ public class _10273_GoodDayToFly extends Quest implements ScriptFile
 		else if (st.getQuestItemsCount(Mark) >= 5)
 		{
 			htmltext = "32557-14.htm";
+			
 			if (transform == 1)
 			{
 				st.giveItems(13553, 1);
@@ -130,6 +137,7 @@ public class _10273_GoodDayToFly extends Quest implements ScriptFile
 			{
 				st.giveItems(13554, 1);
 			}
+			
 			st.takeAllItems(Mark);
 			st.giveItems(13857, 1);
 			st.addExpAndSp(6660000, 7375000);
@@ -144,6 +152,7 @@ public class _10273_GoodDayToFly extends Quest implements ScriptFile
 		{
 			htmltext = "32557-11.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -154,11 +163,14 @@ public class _10273_GoodDayToFly extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		int cond = st.getCond();
 		long count = st.getQuestItemsCount(Mark);
+		
 		if ((cond == 1) && (count < 5))
 		{
 			st.giveItems(Mark, 1);
+			
 			if (count == 4)
 			{
 				st.playSound(SOUND_MIDDLE);
@@ -169,6 +181,7 @@ public class _10273_GoodDayToFly extends Quest implements ScriptFile
 				st.playSound(SOUND_ITEMGET);
 			}
 		}
+		
 		return null;
 	}
 }

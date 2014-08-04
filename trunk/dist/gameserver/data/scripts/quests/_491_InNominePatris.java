@@ -102,6 +102,7 @@ public class _491_InNominePatris extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -109,12 +110,14 @@ public class _491_InNominePatris extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "0-4.htm";
 		}
+		
 		if (event.equalsIgnoreCase("qet_rev"))
 		{
 			htmltext = "0-7.htm";
 			st.takeAllItems(Fragment);
 			st.exitCurrentQuest(this);
 			st.playSound(SOUND_FINISH);
+			
 			if (Rnd.chance(50))
 			{
 				st.getPlayer().addExpAndSp(19000000, 21328000);
@@ -124,6 +127,7 @@ public class _491_InNominePatris extends Quest implements ScriptFile
 				st.getPlayer().addExpAndSp(14000000, 15171500);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -135,6 +139,7 @@ public class _491_InNominePatris extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		Player player = st.getPlayer();
 		int classid = player.getClassId().getId();
+		
 		if (npcId == sirik)
 		{
 			if ((cond == 0) && ArrayUtils.contains(classesav, classid))
@@ -164,6 +169,7 @@ public class _491_InNominePatris extends Quest implements ScriptFile
 				htmltext = "0-6.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -171,16 +177,19 @@ public class _491_InNominePatris extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		if ((st.getCond() == 1) && ArrayUtils.contains(mobstohunt, npcId) && (st.getQuestItemsCount(Fragment) < 50))
 		{
 			st.rollAndGive(Fragment, 1, chance);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		if (st.getQuestItemsCount(Fragment) >= 50)
 		{
 			st.setCond(2);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return null;
 	}
 }

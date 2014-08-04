@@ -56,14 +56,17 @@ public class ReviveAnswerListener implements OnAnswerListener
 	public void sayYes()
 	{
 		Player player = _playerRef.get();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if ((!player.isDead() && !_forPet) || (_forPet && (player.getSummonList().getPet() != null) && !player.getSummonList().getPet().isDead()))
 		{
 			return;
 		}
+		
 		if (!_forPet)
 		{
 			player.doRevive(_power);

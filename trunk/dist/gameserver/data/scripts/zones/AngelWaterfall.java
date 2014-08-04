@@ -40,6 +40,7 @@ public class AngelWaterfall implements ScriptFile
 	private void init()
 	{
 		_zoneListener = new ZoneListener();
+		
 		for (String s : zones)
 		{
 			Zone zone = ReflectionUtils.getZone(s);
@@ -93,17 +94,20 @@ public class AngelWaterfall implements ScriptFile
 			{
 				return;
 			}
+			
 			if (cha == null)
 			{
 				return;
 			}
+			
 			if (!cha.isPlayer())
 			{
 				return;
 			}
-			Player player = cha.getPlayer();
 			
+			Player player = cha.getPlayer();
 			QuestState qs = player.getQuestState(_10301_ShadowOfTerrorBlackishRedFog.class);
+			
 			if ((qs != null) && (qs.getCond() == 3) && (player.getVar("instance10301") == null))
 			{
 				Quest q = QuestManager.getQuest(10301);
@@ -111,11 +115,13 @@ public class AngelWaterfall implements ScriptFile
 				// player.setVar("instance10301", "true", -1);
 				return;
 			}
+			
 			if (!player.getVarB("@25_20_telzone_to_magmeld"))
 			{
 				player.showQuestMovie(SceneMovie.si_arkan_enter);
 				player.setVar("@25_20_telzone_to_magmeld", "true", -1);
 			}
+			
 			cha.teleToLocation(Location.parseLoc(zone.getParams().getString("tele")));
 		}
 		

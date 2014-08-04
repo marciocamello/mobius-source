@@ -75,10 +75,12 @@ public class _298_LizardmensConspiracy extends Quest implements ScriptFile
 		addStartNpc(PRAGA);
 		addTalkId(PRAGA);
 		addTalkId(ROHMER);
+		
 		for (int[] element : MobsTable)
 		{
 			addKillId(element[0]);
 		}
+		
 		addQuestItem(new int[]
 		{
 			REPORT,
@@ -91,6 +93,7 @@ public class _298_LizardmensConspiracy extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("guard_praga_q0298_0104.htm"))
 		{
 			st.setState(STARTED);
@@ -112,6 +115,7 @@ public class _298_LizardmensConspiracy extends Quest implements ScriptFile
 			st.exitCurrentQuest(true);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -121,6 +125,7 @@ public class _298_LizardmensConspiracy extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == PRAGA)
 		{
 			if (cond < 1)
@@ -135,6 +140,7 @@ public class _298_LizardmensConspiracy extends Quest implements ScriptFile
 					htmltext = "guard_praga_q0298_0101.htm";
 				}
 			}
+			
 			if (cond == 1)
 			{
 				htmltext = "guard_praga_q0298_0105.htm";
@@ -160,6 +166,7 @@ public class _298_LizardmensConspiracy extends Quest implements ScriptFile
 				htmltext = "magister_rohmer_q0298_0203.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -168,6 +175,7 @@ public class _298_LizardmensConspiracy extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int rand = Rnd.get(10);
+		
 		if (st.getCond() == 2)
 		{
 			for (int[] element : MobsTable)
@@ -184,6 +192,7 @@ public class _298_LizardmensConspiracy extends Quest implements ScriptFile
 						{
 							st.giveItems(element[1], 1);
 						}
+						
 						if ((st.getQuestItemsCount(SHINING_GEM) + st.getQuestItemsCount(SHINING_RED_GEM)) > 99)
 						{
 							st.setCond(3);
@@ -197,6 +206,7 @@ public class _298_LizardmensConspiracy extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 }

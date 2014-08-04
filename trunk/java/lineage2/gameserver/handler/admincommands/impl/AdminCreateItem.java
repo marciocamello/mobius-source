@@ -69,15 +69,18 @@ public class AdminCreateItem implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		if (!activeChar.getPlayerAccess().UseGMShop)
 		{
 			return false;
 		}
+		
 		switch (command)
 		{
 			case admin_itemcreate:
 				activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/itemcreation.htm"));
 				break;
+			
 			case admin_ci:
 			case admin_create_item:
 				try
@@ -87,6 +90,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 						activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/itemcreation.htm"));
 						return false;
 					}
+					
 					int item_id = Integer.parseInt(wordList[1]);
 					long item_count = wordList.length < 3 ? 1 : Long.parseLong(wordList[2]);
 					createItem(activeChar, item_id, item_count);
@@ -95,14 +99,17 @@ public class AdminCreateItem implements IAdminCommandHandler
 				{
 					activeChar.sendMessage("USAGE: create_item id [count]");
 				}
+				
 				activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/itemcreation.htm"));
 				break;
+			
 			case admin_spreaditem:
 				try
 				{
 					int id = Integer.parseInt(wordList[1]);
 					int num = wordList.length > 2 ? Integer.parseInt(wordList[2]) : 1;
 					long count = wordList.length > 3 ? Long.parseLong(wordList[3]) : 1;
+					
 					for (int i = 0; i < num; i++)
 					{
 						ItemInstance createditem = ItemFunctions.createItem(id);
@@ -118,7 +125,9 @@ public class AdminCreateItem implements IAdminCommandHandler
 				{
 					activeChar.sendMessage("Can't create this item.");
 				}
+				
 				break;
+			
 			case admin_create_item_element:
 				try
 				{
@@ -127,19 +136,23 @@ public class AdminCreateItem implements IAdminCommandHandler
 						activeChar.sendMessage("USAGE: create_item_attribue [id] [element id] [value]");
 						return false;
 					}
+					
 					int item_id = Integer.parseInt(wordList[1]);
 					int elementId = Integer.parseInt(wordList[2]);
 					int value = Integer.parseInt(wordList[3]);
+					
 					if ((elementId > 5) || (elementId < 0))
 					{
 						activeChar.sendMessage("Improper element Id");
 						return false;
 					}
+					
 					if ((value < 1) || (value > 300))
 					{
 						activeChar.sendMessage("Improper element value");
 						return false;
 					}
+					
 					ItemInstance item = createItem(activeChar, item_id, 1);
 					Element element = Element.getElementById(elementId);
 					item.setAttributeElement(element, item.getAttributeElementValue(element, false) + value);
@@ -151,9 +164,11 @@ public class AdminCreateItem implements IAdminCommandHandler
 				{
 					activeChar.sendMessage("USAGE: create_item id [count]");
 				}
+				
 				activeChar.sendPacket(new NpcHtmlMessage(5).setFile("data/html/admin/itemcreation.htm"));
 				break;
 		}
+		
 		return true;
 	}
 	
@@ -180,6 +195,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 		createditem.setCount(count);
 		Log.LogItem(activeChar, Log.Create, createditem);
 		activeChar.getInventory().addItem(createditem);
+		
 		if (!createditem.isStackable())
 		{
 			for (long i = 0; i < (count - 1); i++)
@@ -189,6 +205,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				activeChar.getInventory().addItem(createditem);
 			}
 		}
+		
 		activeChar.sendPacket(SystemMessage2.obtainItems(itemId, count, 0));
 		return createditem;
 	}

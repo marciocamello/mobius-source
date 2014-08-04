@@ -61,6 +61,7 @@ public final class DualClassTable
 		{
 			_instance = new DualClassTable();
 		}
+		
 		return _instance;
 	}
 	
@@ -70,28 +71,35 @@ public final class DualClassTable
 	private void init()
 	{
 		_dualClasses = new TIntObjectHashMap<>();
+		
 		for (ClassId baseClassId : ClassId.VALUES)
 		{
 			if (!baseClassId.isOfLevel(ClassLevel.Awaking))
 			{
 				continue;
 			}
+			
 			TIntArrayList availSubs = new TIntArrayList();
+			
 			for (ClassId subClassId : ClassId.VALUES)
 			{
 				if (!subClassId.isOfLevel(ClassLevel.Awaking))
 				{
 					continue;
 				}
+				
 				if (subClassId == baseClassId)
 				{
 					continue;
 				}
+				
 				availSubs.add(subClassId.getId());
 			}
+			
 			availSubs.sort();
 			_dualClasses.put(baseClassId.getId(), availSubs);
 		}
+		
 		_log.info("DualClassTable: Loaded " + _dualClasses.size() + " dual-classes variations.");
 	}
 	
@@ -105,6 +113,7 @@ public final class DualClassTable
 	{
 		TIntArrayList dualClassesList = _dualClasses.get(classId);
 		SubClassType haveDouble = null;
+		
 		for (SubClass sc : player.getSubClassList().values())
 		{
 			if (sc.isDouble())
@@ -112,20 +121,25 @@ public final class DualClassTable
 				haveDouble = sc.getType();
 			}
 		}
+		
 		if ((dualClassesList == null) || dualClassesList.isEmpty() || (haveDouble == null))
 		{
 			return new int[0];
 		}
+		
 		loop:
+		
 		for (int clsId : dualClassesList.toArray())
 		{
 			int baseClassId = player.getBaseSubClass().getClassId();
+			
 			if (clsId == baseClassId)
 			{
 				dualClassesList.remove(clsId);
 				continue loop;
 			}
 		}
+		
 		return dualClassesList.toArray();
 	}
 }

@@ -40,27 +40,35 @@ public class RequestFlyMoveStart extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		Zone zone = activeChar.getZone(ZoneType.JUMPING);
+		
 		if (zone == null)
 		{
 			return;
 		}
+		
 		JumpTrack track = JumpTracksHolder.getInstance().getTrack(zone.getTemplate().getJumpTrackId());
+		
 		if (track == null)
 		{
 			return;
 		}
+		
 		Location destLoc = track.getStartLocation();
 		activeChar.sendPacket(new FlyToLocation(activeChar, destLoc, FlyToLocation.FlyType.DUMMY, 0));
 		JumpWay way = track.getWay(0);
+		
 		if (way == null)
 		{
 			return;
 		}
+		
 		activeChar.sendPacket(new ExFlyMove(activeChar.getObjectId(), way.getPoints(), track.getId()));
 		activeChar.broadcastPacketToOthers(new ExFlyMoveBroadcast(activeChar, 2, destLoc));
 		activeChar.setVar("@safe_jump_loc", activeChar.getLoc().toXYZString(), -1);

@@ -133,20 +133,24 @@ public class OlympiadGameTask extends RunnableImpl
 		{
 			return;
 		}
+		
 		OlympiadGameTask task = null;
 		int gameId = _game.getId();
+		
 		try
 		{
 			if (!Olympiad.inCompPeriod())
 			{
 				return;
 			}
+			
 			if (!_game.checkPlayersOnline() && (_status != BattleStatus.ValidateWinner) && (_status != BattleStatus.Ending))
 			{
 				Log.add("Player is offline for game " + gameId + ", status: " + _status, "olympiad");
 				_game.endGame(1000, true);
 				return;
 			}
+			
 			switch (_status)
 			{
 				case Begining:
@@ -155,9 +159,11 @@ public class OlympiadGameTask extends RunnableImpl
 					task = new OlympiadGameTask(_game, BattleStatus.Begin_Countdown, 60, 60000);
 					break;
 				}
+				
 				case Begin_Countdown:
 				{
 					_game.broadcastPacket(new SystemMessage(SystemMessage.YOU_WILL_ENTER_THE_OLYMPIAD_STADIUM_IN_S1_SECOND_S).addNumber(_count), true, false);
+					
 					if (_count == 60)
 					{
 						task = new OlympiadGameTask(_game, BattleStatus.Begin_Countdown, 30, 30000);
@@ -178,8 +184,10 @@ public class OlympiadGameTask extends RunnableImpl
 					{
 						task = new OlympiadGameTask(_game, BattleStatus.PortPlayers, 0, 1000);
 					}
+					
 					break;
 				}
+				
 				case PortPlayers:
 				{
 					_game.portPlayersToArena();
@@ -187,6 +195,7 @@ public class OlympiadGameTask extends RunnableImpl
 					task = new OlympiadGameTask(_game, BattleStatus.Started, 60, 1000);
 					break;
 				}
+				
 				case Started:
 				{
 					if (_count == 60)
@@ -195,21 +204,26 @@ public class OlympiadGameTask extends RunnableImpl
 						_game.preparePlayers();
 						_game.addBuffers();
 					}
+					
 					_game.broadcastPacket(new SystemMessage(SystemMessage.THE_GAME_WILL_START_IN_S1_SECOND_S).addNumber(_count), true, true);
 					_count -= 10;
+					
 					if (_count > 0)
 					{
 						task = new OlympiadGameTask(_game, BattleStatus.Started, _count, 10000);
 						break;
 					}
+					
 					_game.openDoors();
 					task = new OlympiadGameTask(_game, BattleStatus.CountDown, 5, 5000);
 					break;
 				}
+				
 				case CountDown:
 				{
 					_game.broadcastPacket(new SystemMessage(SystemMessage.THE_GAME_WILL_START_IN_S1_SECOND_S).addNumber(_count), true, true);
 					_count--;
+					
 					if (_count <= 0)
 					{
 						task = new OlympiadGameTask(_game, BattleStatus.StartComp, 36, 1000);
@@ -218,18 +232,23 @@ public class OlympiadGameTask extends RunnableImpl
 					{
 						task = new OlympiadGameTask(_game, BattleStatus.CountDown, _count, 1000);
 					}
+					
 					break;
 				}
+				
 				case StartComp:
 				{
 					_game.deleteBuffers();
+					
 					if (_count == 36)
 					{
 						_game.setState(2);
 						_game.broadcastPacket(Msg.STARTS_THE_GAME, true, true);
 						_game.broadcastInfo(null, null, false);
 					}
+					
 					_count--;
+					
 					if (_count == 0)
 					{
 						task = new OlympiadGameTask(_game, BattleStatus.ValidateWinner, 0, 10000);
@@ -238,8 +257,10 @@ public class OlympiadGameTask extends RunnableImpl
 					{
 						task = new OlympiadGameTask(_game, BattleStatus.StartComp, _count, 10000);
 					}
+					
 					break;
 				}
+				
 				case ValidateWinner:
 				{
 					try
@@ -250,20 +271,25 @@ public class OlympiadGameTask extends RunnableImpl
 					{
 						_log.error("", e);
 					}
+					
 					task = new OlympiadGameTask(_game, BattleStatus.Ending, 0, 20000);
 					break;
 				}
+				
 				case Ending:
 				{
 					_game.collapse();
 					_terminated = true;
+					
 					if (Olympiad._manager != null)
 					{
 						Olympiad._manager.freeOlympiadInstance(_game.getId());
 					}
+					
 					return;
 				}
 			}
+			
 			if (task == null)
 			{
 				Log.add("task == null for game " + gameId, "olympiad");
@@ -271,6 +297,7 @@ public class OlympiadGameTask extends RunnableImpl
 				_game.endGame(1000, true);
 				return;
 			}
+			
 			_game.sheduleTask(task);
 		}
 		catch (Exception e)

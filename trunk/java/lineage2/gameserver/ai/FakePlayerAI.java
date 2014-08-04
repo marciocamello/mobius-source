@@ -88,23 +88,28 @@ public class FakePlayerAI extends CharacterAI
 	protected final void onEvtThink()
 	{
 		FakePlayer actor = getActor();
+		
 		if (actor.isActionsDisabled())
 		{
 			return;
 		}
+		
 		try
 		{
 			if (thinking++ > 1)
 			{
 				return;
 			}
+			
 			switch (getIntention().ordinal())
 			{
 				case 1:
 					break;
+				
 				case 2:
 					thinkAttack(true);
 					break;
+				
 				case 3:
 					thinkFollow();
 			}
@@ -127,25 +132,30 @@ public class FakePlayerAI extends CharacterAI
 		FakePlayer actor = getActor();
 		Creature target = (Creature) _intention_arg0;
 		Integer offset = (Integer) _intention_arg1;
+		
 		if ((target == null) || target.isAlikeDead() || (actor.getDistance(target) > 4000.0D) || (offset == null))
 		{
 			clientActionFailed();
 			return;
 		}
+		
 		if (actor.isFollow && (actor.getFollowTarget() == target))
 		{
 			clientActionFailed();
 			return;
 		}
+		
 		if (actor.isInRange(target, offset.intValue() + 20) || actor.isMovementDisabled())
 		{
 			clientActionFailed();
 		}
+		
 		if (_followTask != null)
 		{
 			_followTask.cancel(false);
 			_followTask = null;
 		}
+		
 		_followTask = ThreadPoolManager.getInstance().schedule(new ThinkFollow(), 250L);
 	}
 	
@@ -157,43 +167,55 @@ public class FakePlayerAI extends CharacterAI
 	{
 		FakePlayer actor = getActor();
 		Player player = actor.getPlayer();
+		
 		if (player == null)
 		{
 			setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 			return;
 		}
+		
 		if (actor.isActionsDisabled() || actor.isAttackingDisabled())
 		{
 			return;
 		}
+		
 		Creature attack_target = getAttackTarget();
+		
 		if ((attack_target == null) || (attack_target.isDead()))
 		{
 			setIntention(CtrlIntention.AI_INTENTION_FOLLOW);
 			return;
 		}
+		
 		if (!checkRange)
 		{
 			clientStopMoving();
 			actor.doAttack(attack_target);
 			return;
 		}
+		
 		int range = actor.getPhysicalAttackRange();
+		
 		if (range < 10)
 		{
 			range = 10;
 		}
+		
 		boolean canSee = GeoEngine.canSeeTarget(actor, attack_target, false);
+		
 		if ((!canSee && (range > 200)) || (Math.abs(actor.getZ() - attack_target.getZ()) > 200))
 		{
 			setIntention(CtrlIntention.AI_INTENTION_FOLLOW);
 			return;
 		}
+		
 		range = (int) (range + actor.getMinDistance(attack_target));
+		
 		if (actor.isFakeDeath())
 		{
 			actor.breakFakeDeath();
 		}
+		
 		if (actor.isInRangeZ(attack_target, range))
 		{
 			if (!canSee)
@@ -201,6 +223,7 @@ public class FakePlayerAI extends CharacterAI
 				setIntention(CtrlIntention.AI_INTENTION_FOLLOW);
 				return;
 			}
+			
 			clientStopMoving(false);
 			actor.doAttack(attack_target);
 		}
@@ -235,27 +258,34 @@ public class FakePlayerAI extends CharacterAI
 		public void runImpl()
 		{
 			FakePlayer actor = getActor();
+			
 			if (getIntention() != CtrlIntention.AI_INTENTION_FOLLOW)
 			{
 				return;
 			}
+			
 			Creature target = (Creature) _intention_arg0;
 			int offset = (_intention_arg1 instanceof Integer) ? ((Integer) _intention_arg1).intValue() : 0;
+			
 			if ((target == null) || target.isAlikeDead() || (actor.getDistance(target) > 4000.0D))
 			{
 				setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				return;
 			}
+			
 			Player player = actor.getPlayer();
+			
 			if ((player == null) || player.isLogoutStarted())
 			{
 				setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				return;
 			}
+			
 			if (!actor.isInRange(target, offset + 20) && (!actor.isFollow || (actor.getFollowTarget() != target)))
 			{
 				actor.followToCharacter(target, offset, false);
 			}
+			
 			_followTask = ThreadPoolManager.getInstance().schedule(this, 250L);
 		}
 	}

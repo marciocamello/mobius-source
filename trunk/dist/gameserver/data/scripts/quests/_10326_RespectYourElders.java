@@ -36,6 +36,7 @@ public class _10326_RespectYourElders extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		// Player player = st.getPlayer();
 		if (event.equalsIgnoreCase("3.htm"))
 		{
@@ -50,6 +51,7 @@ public class _10326_RespectYourElders extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -60,6 +62,7 @@ public class _10326_RespectYourElders extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getInt("cond");
 		Player player = st.getPlayer();
+		
 		if (npcId == GALLINT)
 		{
 			if ((cond == 0) && isAvailableFor(st.getPlayer()))
@@ -71,6 +74,7 @@ public class _10326_RespectYourElders extends Quest implements ScriptFile
 			{
 				htmltext = "3.htm";
 				st.giveItems(57, 12000);
+				
 				if (player.isMageClass())
 				{
 					st.giveItems(2509, 1000);
@@ -79,6 +83,7 @@ public class _10326_RespectYourElders extends Quest implements ScriptFile
 				{
 					st.giveItems(1835, 1000);
 				}
+				
 				st.addExpAndSp(3254, 2400);
 				st.playSound(SOUND_FINISH);
 				st.exitCurrentQuest(false);
@@ -91,6 +96,7 @@ public class _10326_RespectYourElders extends Quest implements ScriptFile
 				htmltext = "4.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	

@@ -32,7 +32,7 @@ import lineage2.gameserver.utils.Location;
 public class RainbowCoordinatorInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -58,47 +58,58 @@ public class RainbowCoordinatorInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		ClanHall clanHall = getClanHall();
 		ClanHallMiniGameEvent miniGameEvent = clanHall.getSiegeEvent();
+		
 		if (miniGameEvent == null)
 		{
 			return;
 		}
+		
 		if (miniGameEvent.isArenaClosed())
 		{
 			showChatWindow(player, "residence2/clanhall/game_manager003.htm");
 			return;
 		}
+		
 		List<CMGSiegeClanObject> siegeClans = miniGameEvent.getObjects(SiegeEvent.ATTACKERS);
 		CMGSiegeClanObject siegeClan = miniGameEvent.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
+		
 		if (siegeClan == null)
 		{
 			showChatWindow(player, "residence2/clanhall/game_manager014.htm");
 			return;
 		}
+		
 		if (siegeClan.getPlayers().isEmpty())
 		{
 			Party party = player.getParty();
+			
 			if (party == null)
 			{
 				showChatWindow(player, player.isClanLeader() ? "residence2/clanhall/game_manager005.htm" : "residence2/clanhall/game_manager002.htm");
 				return;
 			}
+			
 			if (!player.isClanLeader())
 			{
 				showChatWindow(player, "residence2/clanhall/game_manager004.htm");
 				return;
 			}
+			
 			if (party.getMemberCount() < 5)
 			{
 				showChatWindow(player, "residence2/clanhall/game_manager003.htm");
 				return;
 			}
+			
 			if (party.getPartyLeader() != player)
 			{
 				showChatWindow(player, "residence2/clanhall/game_manager006.htm");
 				return;
 			}
+			
 			for (Player member : party.getPartyMembers())
 			{
 				if (member.getClan() != player.getClan())
@@ -107,9 +118,11 @@ public class RainbowCoordinatorInstance extends NpcInstance
 					return;
 				}
 			}
+			
 			int index = siegeClans.indexOf(siegeClan);
 			SpawnExObject spawnEx = miniGameEvent.getFirstObject("arena_" + index);
 			Location loc = (Location) spawnEx.getSpawns().get(0).getCurrentSpawnRange();
+			
 			for (Player member : party.getPartyMembers())
 			{
 				siegeClan.addPlayer(member.getObjectId());

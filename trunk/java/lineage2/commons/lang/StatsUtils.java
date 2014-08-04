@@ -145,30 +145,37 @@ public final class StatsUtils
 	public static CharSequence getThreadStats(boolean lockedMonitors, boolean lockedSynchronizers, boolean stackTrace)
 	{
 		StringBuilder list = new StringBuilder();
+		
 		for (ThreadInfo info : threadMXbean.dumpAllThreads(lockedMonitors, lockedSynchronizers))
 		{
 			list.append("Thread #").append(info.getThreadId()).append(" (").append(info.getThreadName()).append(')').append('\n');
 			list.append("=================================================\n");
 			list.append("\tgetThreadState: ...... ").append(info.getThreadState()).append('\n');
+			
 			for (MonitorInfo monitorInfo : info.getLockedMonitors())
 			{
 				list.append("\tLocked monitor: ....... ").append(monitorInfo).append('\n');
 				list.append("\t\t[").append(monitorInfo.getLockedStackDepth()).append(".]: at ").append(monitorInfo.getLockedStackFrame()).append('\n');
 			}
+			
 			for (LockInfo lockInfo : info.getLockedSynchronizers())
 			{
 				list.append("\tLocked synchronizer: ...").append(lockInfo).append('\n');
 			}
+			
 			if (stackTrace)
 			{
 				list.append("\tgetStackTace: ..........\n");
+				
 				for (StackTraceElement trace : info.getStackTrace())
 				{
 					list.append("\t\tat ").append(trace).append('\n');
 				}
 			}
+			
 			list.append("=================================================\n");
 		}
+		
 		return list;
 	}
 	
@@ -179,6 +186,7 @@ public final class StatsUtils
 	public static CharSequence getGCStats()
 	{
 		StringBuilder list = new StringBuilder();
+		
 		for (GarbageCollectorMXBean gcBean : ManagementFactory.getGarbageCollectorMXBeans())
 		{
 			list.append("GarbageCollector (").append(gcBean.getName()).append(")\n");
@@ -187,6 +195,7 @@ public final class StatsUtils
 			list.append("getCollectionTime: ...... ").append(gcBean.getCollectionTime()).append(" ms").append('\n');
 			list.append("=================================================\n");
 		}
+		
 		return list;
 	}
 }

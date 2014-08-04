@@ -56,11 +56,14 @@ public class Darnel extends DefaultAI
 		public void runImpl()
 		{
 			final NpcInstance actor = getActor();
+			
 			if (actor.isDead())
 			{
 				return;
 			}
+			
 			TrapInstance trap;
+			
 			for (int i = 0; i < 10; i++)
 			{
 				trap = new TrapInstance(IdFactory.getInstance().getNextId(), NpcHolder.getInstance().getTemplate(13037), actor, trapSkills[Rnd.get(trapSkills.length)], new Location(Rnd.get(151896, 153608), Rnd.get(145032, 146808), -12584));
@@ -109,27 +112,35 @@ public class Darnel extends DefaultAI
 	{
 		clearTasks();
 		final Creature target = prepareTarget();
+		
 		if (target == null)
 		{
 			return false;
 		}
+		
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return false;
 		}
+		
 		final int rnd_per = Rnd.get(100);
+		
 		if (rnd_per < 5)
 		{
 			actor.broadcastPacketToOthers(new MagicSkillUse(actor, actor, 5440, 1, 3000, 0));
 			ThreadPoolManager.getInstance().schedule(new TrapTask(), 3000);
 			return true;
 		}
+		
 		final double distance = actor.getDistance(target);
+		
 		if (!actor.isAMuted() && (rnd_per < 75))
 		{
 			return chooseTaskAndTargets(null, target, distance);
 		}
+		
 		final Map<Skill, Integer> d_skill = new HashMap<>();
 		addDesiredSkill(d_skill, target, distance, Poison);
 		addDesiredSkill(d_skill, target, distance, Paralysis);

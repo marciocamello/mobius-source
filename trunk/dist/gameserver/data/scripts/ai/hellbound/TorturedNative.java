@@ -40,10 +40,12 @@ public class TorturedNative extends Fighter
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (Rnd.chance(1))
 		{
 			if (Rnd.chance(10))
@@ -55,6 +57,7 @@ public class TorturedNative extends Fighter
 				Functions.npcSay(actor, "It... will... kill... everyone...!");
 			}
 		}
+		
 		return super.thinkActive();
 	}
 }

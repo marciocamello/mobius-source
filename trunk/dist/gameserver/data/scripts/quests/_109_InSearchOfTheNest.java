@@ -55,6 +55,7 @@ public class _109_InSearchOfTheNest extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		int cond = st.getCond();
+		
 		if (event.equalsIgnoreCase("Memo") && (cond == 1))
 		{
 			st.giveItems(MEMO, 1);
@@ -67,6 +68,7 @@ public class _109_InSearchOfTheNest extends Quest implements ScriptFile
 			st.takeItems(MEMO, -1);
 			st.setCond(3);
 		}
+		
 		return htmltext;
 	}
 	
@@ -75,12 +77,15 @@ public class _109_InSearchOfTheNest extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int id = st.getState();
+		
 		if (id == COMPLETED)
 		{
 			return "completed";
 		}
+		
 		int cond = st.getCond();
 		String htmltext = "noquest";
+		
 		if (id == CREATED)
 		{
 			if ((st.getPlayer().getLevel() >= 66) && (npcId == PIERCE) && ((st.getQuestItemsCount(GOLDEN_BADGE_RECRUIT) > 0) || (st.getQuestItemsCount(GOLDEN_BADGE_SOLDIER) > 0)))
@@ -133,6 +138,7 @@ public class _109_InSearchOfTheNest extends Quest implements ScriptFile
 				st.playSound(SOUND_FINISH);
 			}
 		}
+		
 		return htmltext;
 	}
 	

@@ -47,6 +47,7 @@ public class ConditionLogicAnd extends Condition
 		{
 			return;
 		}
+		
 		final int len = _conditions.length;
 		final Condition[] tmp = new Condition[len + 1];
 		System.arraycopy(_conditions, 0, tmp, 0, len);
@@ -69,6 +70,7 @@ public class ConditionLogicAnd extends Condition
 				return false;
 			}
 		}
+		
 		return true;
 	}
 }

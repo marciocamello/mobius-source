@@ -24,7 +24,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class KegorNpcInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -49,6 +49,7 @@ public class KegorNpcInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String htmlpath = null;
+		
 		if (getReflection().isDefault())
 		{
 			htmlpath = "default/32761-default.htm";
@@ -57,6 +58,7 @@ public class KegorNpcInstance extends NpcInstance
 		{
 			htmlpath = "default/32761.htm";
 		}
+		
 		return htmlpath;
 	}
 	
@@ -72,6 +74,7 @@ public class KegorNpcInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("request_stone"))
 		{
 			if ((player.getInventory().getCountOf(15469) == 0) && (player.getInventory().getCountOf(15470) == 0))

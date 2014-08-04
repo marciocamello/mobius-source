@@ -105,19 +105,23 @@ public class AdminSpawn implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		if (!activeChar.getPlayerAccess().CanEditNPC)
 		{
 			return false;
 		}
+		
 		StringTokenizer st;
 		NpcInstance target;
 		Spawner spawn;
 		NpcInstance npc;
+		
 		switch (command)
 		{
 			case admin_show_spawns:
 				activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/spawns.htm"));
 				break;
+			
 			case admin_spawn_index:
 				try
 				{
@@ -127,63 +131,80 @@ public class AdminSpawn implements IAdminCommandHandler
 				catch (StringIndexOutOfBoundsException e)
 				{
 				}
+				
 				break;
+			
 			case admin_spawn1:
 				st = new StringTokenizer(fullString, " ");
+				
 				try
 				{
 					st.nextToken();
 					String id = st.nextToken();
 					int mobCount = 1;
+					
 					if (st.hasMoreTokens())
 					{
 						mobCount = Integer.parseInt(st.nextToken());
 					}
+					
 					spawnMonster(activeChar, id, 0, mobCount);
 				}
 				catch (Exception e)
 				{
 				}
+				
 				break;
+			
 			case admin_spawn:
 			case admin_spawn_monster:
 				st = new StringTokenizer(fullString, " ");
+				
 				try
 				{
 					st.nextToken();
 					String id = st.nextToken();
 					int respawnTime = 30;
 					int mobCount = 1;
+					
 					if (st.hasMoreTokens())
 					{
 						mobCount = Integer.parseInt(st.nextToken());
 					}
+					
 					if (st.hasMoreTokens())
 					{
 						respawnTime = Integer.parseInt(st.nextToken());
 					}
+					
 					spawnMonster(activeChar, id, respawnTime, mobCount);
 				}
 				catch (Exception e)
 				{
 				}
+				
 				break;
+			
 			case admin_setai:
 				if ((activeChar.getTarget() == null) || !activeChar.getTarget().isNpc())
 				{
 					activeChar.sendMessage("Please select target NPC or mob.");
 					return false;
 				}
+				
 				st = new StringTokenizer(fullString, " ");
 				st.nextToken();
+				
 				if (!st.hasMoreTokens())
 				{
 					activeChar.sendMessage("Please specify AI name.");
 					return false;
 				}
+				
 				String aiName = st.nextToken();
 				target = (NpcInstance) activeChar.getTarget();
 				Constructor<?> aiConstructor = null;
+				
 				try
 				{
 					if (!aiName.equalsIgnoreCase("npc"))
@@ -203,6 +224,7 @@ public class AdminSpawn implements IAdminCommandHandler
 						return false;
 					}
 				}
+				
 				if (aiConstructor != null)
 				{
 					try
@@ -216,30 +238,38 @@ public class AdminSpawn implements IAdminCommandHandler
 					{
 						e.printStackTrace();
 					}
+					
 					target.getAI().startAITask();
 				}
+				
 				break;
+			
 			case admin_setaiparam:
 				if ((activeChar.getTarget() == null) || !activeChar.getTarget().isNpc())
 				{
 					activeChar.sendMessage("Please select target NPC or mob.");
 					return false;
 				}
+				
 				st = new StringTokenizer(fullString, " ");
 				st.nextToken();
+				
 				if (!st.hasMoreTokens())
 				{
 					activeChar.sendMessage("Please specify AI parameter name.");
 					activeChar.sendMessage("USAGE: //setaiparam <param> <value>");
 					return false;
 				}
+				
 				String paramName = st.nextToken();
+				
 				if (!st.hasMoreTokens())
 				{
 					activeChar.sendMessage("Please specify AI parameter value.");
 					activeChar.sendMessage("USAGE: //setaiparam <param> <value>");
 					return false;
 				}
+				
 				String paramValue = st.nextToken();
 				target = (NpcInstance) activeChar.getTarget();
 				target.setParameter(paramName, paramValue);
@@ -247,14 +277,17 @@ public class AdminSpawn implements IAdminCommandHandler
 				target.spawnMe();
 				activeChar.sendMessage("AI parameter " + paramName + " succesfully setted to " + paramValue);
 				break;
+			
 			case admin_dumpparams:
 				if ((activeChar.getTarget() == null) || !activeChar.getTarget().isNpc())
 				{
 					activeChar.sendMessage("Please select target NPC or mob.");
 					return false;
 				}
+				
 				target = (NpcInstance) activeChar.getTarget();
 				MultiValueSet<String> set = target.getParameters();
+				
 				if (!set.isEmpty())
 				{
 					System.out.println("Dump of Parameters:\r\n" + set.toString());
@@ -263,38 +296,48 @@ public class AdminSpawn implements IAdminCommandHandler
 				{
 					System.out.println("Parameters is empty.");
 				}
+				
 				break;
+			
 			case admin_setheading:
 				GameObject obj = activeChar.getTarget();
+				
 				if (!obj.isNpc())
 				{
 					activeChar.sendMessage("Target is incorrect!");
 					return false;
 				}
+				
 				npc = (NpcInstance) obj;
 				npc.setHeading(activeChar.getHeading());
 				npc.decayMe();
 				npc.spawnMe();
 				activeChar.sendMessage("New heading : " + activeChar.getHeading());
 				spawn = npc.getSpawn();
+				
 				if (spawn == null)
 				{
 					activeChar.sendMessage("Spawn for this npc == null!");
 					return false;
 				}
+				
 				break;
+			
 			case admin_generate_loc:
 				if (wordList.length < 2)
 				{
 					activeChar.sendMessage("Incorrect argument count!");
 					return false;
 				}
+				
 				int id = Integer.parseInt(wordList[1]);
 				int id2 = 0;
+				
 				if (wordList.length > 2)
 				{
 					id2 = Integer.parseInt(wordList[2]);
 				}
+				
 				int min_x = Integer.MIN_VALUE;
 				int min_y = Integer.MIN_VALUE;
 				int min_z = Integer.MIN_VALUE;
@@ -302,6 +345,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				int max_y = Integer.MAX_VALUE;
 				int max_z = Integer.MAX_VALUE;
 				String name = "";
+				
 				for (NpcInstance _npc : World.getAroundNpc(activeChar))
 				{
 					if ((_npc.getNpcId() == id) || (_npc.getNpcId() == id2))
@@ -315,6 +359,7 @@ public class AdminSpawn implements IAdminCommandHandler
 						max_z = Math.max(max_z, _npc.getZ());
 					}
 				}
+				
 				min_x -= 500;
 				min_y -= 500;
 				max_x += 500;
@@ -325,8 +370,10 @@ public class AdminSpawn implements IAdminCommandHandler
 				System.out.println("(0,'" + name + "'," + max_x + "," + min_y + "," + min_z + "," + max_z + ",0),");
 				System.out.println("delete from spawnlist where npc_templateid in (" + id + ", " + id2 + ")" + " and locx <= " + min_x + " and locy <= " + min_y + " and locz <= " + min_z + " and locx >= " + max_x + " and locy >= " + max_y + " and locz >= " + max_z + ";");
 				break;
+			
 			case admin_dumpspawn:
 				st = new StringTokenizer(fullString, " ");
+				
 				try
 				{
 					st.nextToken();
@@ -334,14 +381,17 @@ public class AdminSpawn implements IAdminCommandHandler
 					int respawnTime = 30;
 					int mobCount = 1;
 					spawnMonster(activeChar, id3, respawnTime, mobCount);
+					
 					try
 					{
 						new File("dumps").mkdir();
 						File f = new File("dumps/spawndump.txt");
+						
 						if (!f.exists())
 						{
 							f.createNewFile();
 						}
+						
 						FileWriter writer = new FileWriter(f, true);
 						writer.write("<spawn count=\"1\" respawn=\"60\" respawn_random=\"0\" period_of_day=\"none\">\n\t" + "<point x=\"" + activeChar.getLoc().x + "\" y=\"" + activeChar.getLoc().y + "\" z=\"" + activeChar.getLoc().z + "\" h=\"" + activeChar.getLoc().h + "\" />\n\t" + "<npc id=\"" + Integer.parseInt(id3) + "\" /><!--" + NpcHolder.getInstance().getTemplate(Integer.parseInt(id3)).getName() + "-->\n" + "</spawn>\n");
 						writer.close();
@@ -353,8 +403,10 @@ public class AdminSpawn implements IAdminCommandHandler
 				catch (Exception e)
 				{
 				}
+				
 				break;
 		}
+		
 		return true;
 	}
 	
@@ -379,13 +431,16 @@ public class AdminSpawn implements IAdminCommandHandler
 	private void spawnMonster(Player activeChar, String monsterId, int respawnTime, int mobCount)
 	{
 		GameObject target = activeChar.getTarget();
+		
 		if (target == null)
 		{
 			target = activeChar;
 		}
+		
 		Pattern pattern = Pattern.compile("[0-9]*");
 		Matcher regexp = pattern.matcher(monsterId);
 		NpcTemplate template;
+		
 		if (regexp.matches())
 		{
 			int monsterTemplate = Integer.parseInt(monsterId);
@@ -396,11 +451,13 @@ public class AdminSpawn implements IAdminCommandHandler
 			monsterId = monsterId.replace('_', ' ');
 			template = NpcHolder.getInstance().getTemplateByName(monsterId);
 		}
+		
 		if (template == null)
 		{
 			activeChar.sendMessage("Incorrect monster template.");
 			return;
 		}
+		
 		try
 		{
 			SimpleSpawner spawn = new SimpleSpawner(template);
@@ -409,6 +466,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			spawn.setHeading(activeChar.getHeading());
 			spawn.setRespawnDelay(respawnTime);
 			spawn.setReflection(activeChar.getReflection());
+			
 			if (RaidBossSpawnManager.getInstance().isDefined(template.getNpcId()))
 			{
 				activeChar.sendMessage("Raid Boss " + template.name + " already spawned.");
@@ -419,11 +477,14 @@ public class AdminSpawn implements IAdminCommandHandler
 				{
 					CustomSpawnTable.getInstance().addNewSpawn(spawn);
 				}
+				
 				spawn.init();
+				
 				if (respawnTime == 0)
 				{
 					spawn.stopRespawn();
 				}
+				
 				activeChar.sendMessage("Created " + template.name + " on " + target.getObjectId() + ".");
 			}
 		}

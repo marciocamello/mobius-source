@@ -41,20 +41,24 @@ public class _553_OlympiadUndefeated extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		switch (npcId)
 		{
 			case OLYMPIAD_MANAGER:
 				Player player = st.getPlayer();
+				
 				if (!player.isNoble() || (player.getLevel() < 75) || (player.getClassLevel() < 4))
 				{
 					return "olympiad_operator_q0553_08.htm";
 				}
+				
 				if (st.isCreated())
 				{
 					if (st.isNowAvailableByTime())
 					{
 						return "olympiad_operator_q0553_01.htm";
 					}
+					
 					return "olympiad_operator_q0553_06.htm";
 				}
 				else if (st.isStarted())
@@ -63,6 +67,7 @@ public class _553_OlympiadUndefeated extends Quest implements ScriptFile
 					{
 						return "olympiad_operator_q0553_04.htm";
 					}
+					
 					if (st.getQuestItemsCount(WINS_CONFIRMATION3) > 0)
 					{
 						st.giveItems(OLYMPIAD_CHEST, 6);
@@ -74,10 +79,13 @@ public class _553_OlympiadUndefeated extends Quest implements ScriptFile
 						st.exitCurrentQuest(this);
 						return "olympiad_operator_q0553_07.htm";
 					}
+					
 					return "olympiad_operator_q0553_05.htm";
 				}
+				
 				break;
 		}
+		
 		return null;
 	}
 	
@@ -90,6 +98,7 @@ public class _553_OlympiadUndefeated extends Quest implements ScriptFile
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		if (event.equalsIgnoreCase("olympiad_operator_q0553_07.htm"))
 		{
 			if (st.getQuestItemsCount(WINS_CONFIRMATION3) > 0)
@@ -124,6 +133,7 @@ public class _553_OlympiadUndefeated extends Quest implements ScriptFile
 				st.exitCurrentQuest(this);
 			}
 		}
+		
 		return event;
 	}
 	
@@ -134,6 +144,7 @@ public class _553_OlympiadUndefeated extends Quest implements ScriptFile
 		{
 			int count = qs.getInt("count");
 			OlympiadTeam winner = og.getWinnerTeam();
+			
 			if ((winner != null) && winner.contains(qs.getPlayer().getObjectId()))
 			{
 				count++;
@@ -142,7 +153,9 @@ public class _553_OlympiadUndefeated extends Quest implements ScriptFile
 			{
 				count = 0;
 			}
+			
 			qs.set("count", count);
+			
 			if ((count == 2) && (qs.getQuestItemsCount(WINS_CONFIRMATION1) == 0))
 			{
 				qs.giveItems(WINS_CONFIRMATION1, 1);
@@ -159,14 +172,17 @@ public class _553_OlympiadUndefeated extends Quest implements ScriptFile
 				qs.setCond(2);
 				qs.playSound(SOUND_MIDDLE);
 			}
+			
 			if ((count < 10) && (qs.getQuestItemsCount(WINS_CONFIRMATION3) > 0))
 			{
 				qs.takeItems(WINS_CONFIRMATION3, -1);
 			}
+			
 			if ((count < 5) && (qs.getQuestItemsCount(WINS_CONFIRMATION2) > 0))
 			{
 				qs.takeItems(WINS_CONFIRMATION2, -1);
 			}
+			
 			if ((count < 2) && (qs.getQuestItemsCount(WINS_CONFIRMATION1) > 0))
 			{
 				qs.takeItems(WINS_CONFIRMATION1, -1);

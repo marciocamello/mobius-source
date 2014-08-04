@@ -69,6 +69,7 @@ public class _312_TakeAdvantageOfTheCrisis extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("30535-06.htm"))
 		{
 			st.setCond(1);
@@ -83,6 +84,7 @@ public class _312_TakeAdvantageOfTheCrisis extends Quest implements ScriptFile
 		else
 		{
 			int id = 0;
+			
 			try
 			{
 				id = Integer.parseInt(event);
@@ -90,41 +92,52 @@ public class _312_TakeAdvantageOfTheCrisis extends Quest implements ScriptFile
 			catch (Exception e)
 			{
 			}
+			
 			if (id > 0)
 			{
 				int count = 0;
+				
 				switch (id)
 				{
 					case 9487:
 						count = 366;
 						break;
+					
 					case 9488:
 						count = 229;
 						break;
+					
 					case 9489:
 						count = 183;
 						break;
+					
 					case 9490:
 					case 9491:
 						count = 122;
 						break;
+					
 					case 9497:
 						count = 129;
 						break;
+					
 					case 9625:
 						count = 667;
 						break;
+					
 					case 9626:
 						count = 1000;
 						break;
+					
 					case 9628:
 					case 9629:
 						count = 24;
 						break;
+					
 					case 9630:
 						count = 36;
 						break;
 				}
+				
 				if (count > 0)
 				{
 					if (st.getQuestItemsCount(MINERAL_FRAGMENT) >= count)
@@ -134,10 +147,12 @@ public class _312_TakeAdvantageOfTheCrisis extends Quest implements ScriptFile
 						st.playSound(SOUND_MIDDLE);
 						return "30535-16.htm";
 					}
+					
 					return "30535-15.htm";
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -148,6 +163,7 @@ public class _312_TakeAdvantageOfTheCrisis extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int id = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == FILAUR)
 		{
 			if (cond == 0)
@@ -174,6 +190,7 @@ public class _312_TakeAdvantageOfTheCrisis extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -182,6 +199,7 @@ public class _312_TakeAdvantageOfTheCrisis extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if ((cond == 1) && ArrayUtils.contains(MINE_MOBS, npcId))
 		{
 			if (Rnd.chance(DROP_CHANCE))
@@ -190,6 +208,7 @@ public class _312_TakeAdvantageOfTheCrisis extends Quest implements ScriptFile
 				st.playSound(SOUND_ITEMGET);
 			}
 		}
+		
 		return null;
 	}
 }

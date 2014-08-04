@@ -329,6 +329,7 @@ public class _386_StolenDignity extends Quest implements ScriptFile
 		dropchances.put(21113, 25);
 		dropchances.put(21114, 23);
 		dropchances.put(21116, 25);
+		
 		for (int kill_id : dropchances.keySet())
 		{
 			addKillId(kill_id);
@@ -355,12 +356,15 @@ public class _386_StolenDignity extends Quest implements ScriptFile
 			{
 				return "warehouse_keeper_romp_q0386_11.htm";
 			}
+			
 			st.takeItems(Stolen_Infernium_Ore, Required_Stolen_Infernium_Ore);
 			int char_obj_id = st.getPlayer().getObjectId();
+			
 			if (bingos.containsKey(char_obj_id))
 			{
 				bingos.remove(char_obj_id);
 			}
+			
 			Bingo bingo = new Bingo(st);
 			bingos.put(char_obj_id, bingo);
 			return bingo.getDialog("");
@@ -368,13 +372,16 @@ public class _386_StolenDignity extends Quest implements ScriptFile
 		else if (event.contains("choice-"))
 		{
 			int char_obj_id = st.getPlayer().getObjectId();
+			
 			if (!bingos.containsKey(char_obj_id))
 			{
 				return null;
 			}
+			
 			Bingo bingo = bingos.get(char_obj_id);
 			return bingo.Select(event.replaceFirst("choice-", ""));
 		}
+		
 		return event;
 	}
 	
@@ -388,8 +395,10 @@ public class _386_StolenDignity extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 				return "warehouse_keeper_romp_q0386_04.htm";
 			}
+			
 			return "warehouse_keeper_romp_q0386_01.htm";
 		}
+		
 		return st.getQuestItemsCount(Stolen_Infernium_Ore) < Required_Stolen_Infernium_Ore ? "warehouse_keeper_romp_q0386_06.htm" : "warehouse_keeper_romp_q0386_07.htm";
 	}
 	
@@ -397,10 +406,12 @@ public class _386_StolenDignity extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState qs)
 	{
 		Integer _chance = dropchances.get(npc.getNpcId());
+		
 		if (_chance != null)
 		{
 			qs.rollAndGive(Stolen_Infernium_Ore, 1, _chance);
 		}
+		
 		return null;
 	}
 	
@@ -439,6 +450,7 @@ public class _386_StolenDignity extends Quest implements ScriptFile
 		protected String getFinal()
 		{
 			String result = super.getFinal();
+			
 			if (lines == 3)
 			{
 				reward(Rewards_Win);
@@ -447,6 +459,7 @@ public class _386_StolenDignity extends Quest implements ScriptFile
 			{
 				reward(Rewards_Lose);
 			}
+			
 			bingos.remove(_qs.getPlayer().getObjectId());
 			return result;
 		}

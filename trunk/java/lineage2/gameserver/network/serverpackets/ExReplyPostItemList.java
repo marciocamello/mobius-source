@@ -30,6 +30,7 @@ public class ExReplyPostItemList extends L2GameServerPacket
 	public ExReplyPostItemList(Player activeChar)
 	{
 		ItemInstance[] items = activeChar.getInventory().getItems();
+		
 		for (ItemInstance item : items)
 		{
 			if (item.canBeTraded(activeChar))
@@ -44,6 +45,7 @@ public class ExReplyPostItemList extends L2GameServerPacket
 	{
 		writeEx(0xB3);
 		writeD(_itemsList.size());
+		
 		for (ItemInfo item : _itemsList)
 		{
 			writeItemInfo(item);

@@ -192,6 +192,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -213,19 +214,24 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 			rset = statement.getGeneratedKeys();
 			rset.next();
 			mail.setMessageId(rset.getInt(1));
+			
 			if (!mail.getAttachments().isEmpty())
 			{
 				DbUtils.close(statement);
 				statement = con.prepareStatement(STORE_MAIL_ATTACHMENT);
+				
 				for (ItemInstance item : mail.getAttachments())
 				{
 					statement.setInt(1, mail.getMessageId());
 					statement.setInt(2, item.getObjectId());
 					statement.addBatch();
 				}
+				
 				statement.executeBatch();
 			}
+			
 			DbUtils.close(statement);
+			
 			if (mail.getType() == Mail.SenderType.NORMAL)
 			{
 				statement = con.prepareStatement(STORE_OWN_MAIL);
@@ -234,6 +240,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 				statement.setBoolean(3, true);
 				statement.execute();
 			}
+			
 			DbUtils.close(statement);
 			statement = con.prepareStatement(STORE_OWN_MAIL);
 			statement.setInt(1, mail.getReceiverId());
@@ -259,12 +266,14 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(RESTORE_MAIL);
 			statement.setInt(1, messageId);
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				mail = new Mail();
@@ -288,10 +297,12 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 				rset = statement.executeQuery();
 				ItemInstance item;
 				int objectId;
+				
 				while (rset.next())
 				{
 					objectId = rset.getInt(1);
 					item = ItemsDAO.getInstance().load(objectId);
+					
 					if (item != null)
 					{
 						mail.addAttachment(item);
@@ -321,6 +332,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -340,6 +352,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 			statement.setInt(13, mail.getSystemMsg1());
 			statement.setInt(14, mail.getSystemMsg2());
 			statement.execute();
+			
 			if (mail.getAttachments().isEmpty())
 			{
 				DbUtils.close(statement);
@@ -371,6 +384,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 			statement.setInt(3, 1);
 			statement.execute();
 		}
+		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(REMOVE_OWN_MAIL);)
 		{
@@ -379,6 +393,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 			statement.setInt(3, 0);
 			statement.execute();
 		}
+		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(REMOVE_MAIL);)
 		{
@@ -386,6 +401,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 			statement.setInt(1, mail.getMessageId());
 			statement.execute();
 		}
+		
 		delete.incrementAndGet();
 	}
 	
@@ -401,6 +417,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -409,6 +426,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 			statement.setBoolean(2, sent);
 			rset = statement.executeQuery();
 			messageIds = new ArrayList<>();
+			
 			while (rset.next())
 			{
 				messageIds.add(rset.getInt(1));
@@ -437,6 +455,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -486,6 +505,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 	public Mail getReceivedMailByMailId(int receiverId, int messageId)
 	{
 		List<Mail> list = getMailByOwnerId(receiverId, false);
+		
 		for (Mail mail : list)
 		{
 			if (mail.getMessageId() == messageId)
@@ -493,6 +513,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 				return mail;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -505,6 +526,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 	public Mail getSentMailByMailId(int senderId, int messageId)
 	{
 		List<Mail> list = getMailByOwnerId(senderId, true);
+		
 		for (Mail mail : list)
 		{
 			if (mail.getMessageId() == messageId)
@@ -512,6 +534,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 				return mail;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -548,6 +571,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -555,6 +579,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 			statement.setInt(1, expireTime);
 			rset = statement.executeQuery();
 			messageIds = new ArrayList<>();
+			
 			while (rset.next())
 			{
 				messageIds.add(rset.getInt(1));
@@ -582,12 +607,15 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 	{
 		Mail mail;
 		Element ce = cache.get(id);
+		
 		if (ce != null)
 		{
 			mail = (Mail) ce.getObjectValue();
 			return mail;
 		}
+		
 		mail = load0(id);
+		
 		if (mail == null)
 		{
 			_log.warn("Mail load error id:" + id);
@@ -597,6 +625,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 			mail.setJdbcState(JdbcEntityState.STORED);
 			cache.put(new Element(mail.getMessageId(), mail));
 		}
+		
 		return mail;
 	}
 	
@@ -611,16 +640,20 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		{
 			return Collections.emptyList();
 		}
+		
 		List<Mail> list = new ArrayList<>(messageIds.size());
 		Mail mail;
+		
 		for (Integer messageId : messageIds)
 		{
 			mail = load(messageId);
+			
 			if (mail != null)
 			{
 				list.add(mail);
 			}
 		}
+		
 		return list;
 	}
 	
@@ -635,6 +668,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		{
 			return;
 		}
+		
 		try
 		{
 			save0(mail);
@@ -645,6 +679,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 			_log.error("Error while saving mail!", e);
 			return;
 		}
+		
 		cache.put(new Element(mail.getMessageId(), mail));
 	}
 	
@@ -659,6 +694,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		{
 			return;
 		}
+		
 		try
 		{
 			update0(mail);
@@ -669,6 +705,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 			_log.error("Error while updating mail : " + mail.getMessageId(), e);
 			return;
 		}
+		
 		cache.putIfAbsent(new Element(mail.getMessageId(), mail));
 	}
 	
@@ -700,6 +737,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		{
 			return;
 		}
+		
 		try
 		{
 			delete0(mail);
@@ -710,6 +748,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 			_log.error("Error while deleting mail : " + mail.getMessageId(), e);
 			return;
 		}
+		
 		cache.remove(mail.getExpireTime());
 	}
 }

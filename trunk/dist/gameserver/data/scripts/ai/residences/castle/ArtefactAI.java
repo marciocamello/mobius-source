@@ -50,13 +50,16 @@ public class ArtefactAI extends CharacterAI
 	{
 		final NpcInstance actor = (NpcInstance) getActor();
 		final Player player = attacker.getPlayer();
+		
 		if ((player == null) || (actor == null))
 		{
 			return;
 		}
+		
 		final SiegeEvent<?, ?> siegeEvent1 = actor.getEvent(SiegeEvent.class);
 		final SiegeEvent<?, ?> siegeEvent2 = player.getEvent(SiegeEvent.class);
 		final SiegeClanObject siegeClan = siegeEvent1.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
+		
 		if ((siegeEvent2 == null) || ((siegeEvent1.equals(siegeEvent2)) && (siegeClan != null)))
 		{
 			ThreadPoolManager.getInstance().schedule(new notifyGuard(player), 1000);
@@ -90,10 +93,12 @@ public class ArtefactAI extends CharacterAI
 		{
 			final NpcInstance actor = (NpcInstance) getActor();
 			final Player attacker = _playerRef.get();
+			
 			if ((attacker == null) || (actor == null))
 			{
 				return;
 			}
+			
 			for (NpcInstance npc : actor.getAroundNpc(1500, 200))
 			{
 				if (npc.isSiegeGuard() && Rnd.chance(20))
@@ -101,6 +106,7 @@ public class ArtefactAI extends CharacterAI
 					npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 5000);
 				}
 			}
+			
 			if ((attacker.getCastingSkill() != null) && (attacker.getCastingSkill().getTargetType() == Skill.SkillTargetType.TARGET_HOLY))
 			{
 				ThreadPoolManager.getInstance().schedule(this, 10000);

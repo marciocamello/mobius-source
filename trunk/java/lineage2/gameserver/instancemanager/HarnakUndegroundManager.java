@@ -54,6 +54,7 @@ public class HarnakUndegroundManager
 		{
 			_instance = new HarnakUndegroundManager();
 		}
+		
 		return _instance;
 	}
 	
@@ -65,6 +66,7 @@ public class HarnakUndegroundManager
 			{
 				secondStageAltarCount++;
 			}
+			
 			if (secondStageAltarCount == 8)
 			{
 				ThreadPoolManager.getInstance().schedule(new Runnable()
@@ -88,13 +90,16 @@ public class HarnakUndegroundManager
 							player.sendPacket(new ExShowScreenMessage(NpcString.ALL_SEALS_HAVE_BEEN_BROKEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 							player.broadcastPacket(new Earthquake(player.getLoc(), 50, 4));
 						}
+						
 						secondStageAltarCount = 0;
 						NpcUtils.spawnSingle(HARNAK, -114712, 149256, -10800, 47671, 1800000L);
 					}
 				}, 10000L);
 			}
+			
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -106,6 +111,7 @@ public class HarnakUndegroundManager
 			{
 				thirdStageAltarCount++;
 			}
+			
 			if (thirdStageAltarCount == 8)
 			{
 				ThreadPoolManager.getInstance().schedule(new Runnable()
@@ -129,6 +135,7 @@ public class HarnakUndegroundManager
 							player.sendPacket(new ExShowScreenMessage(NpcString.ALL_JAILS_ARE_OPEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 							player.broadcastPacket(new Earthquake(player.getLoc(), 50, 4));
 						}
+						
 						thirdStageAltarCount = 0;
 						NpcUtils.spawnSingle(ANGRY_HARNAK, -114712, 183352, -13820, 49151, 1800000L);
 						NpcUtils.spawnSingle(DEMONIC_NOKTUM, -114696, 182872, -13846, 48112, 1800000L);
@@ -142,8 +149,10 @@ public class HarnakUndegroundManager
 					}
 				}, 10000L);
 			}
+			
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -154,12 +163,14 @@ public class HarnakUndegroundManager
 			npcListIdSecond.put(npcId, Integer.valueOf(npcId));
 			return true;
 		}
+		
 		return false;
 	}
 	
 	public void requestRemoveNpcFromListSecond(int npcId)
 	{
 		npcListIdSecond.remove(npcId);
+		
 		if (secondStageAltarCount > 0)
 		{
 			secondStageAltarCount--;
@@ -173,12 +184,14 @@ public class HarnakUndegroundManager
 			npcListIdThird.put(npcId, Integer.valueOf(npcId));
 			return true;
 		}
+		
 		return false;
 	}
 	
 	public void requestRemoveNpcFromListThird(int npcId)
 	{
 		npcListIdThird.remove(npcId);
+		
 		if (thirdStageAltarCount > 0)
 		{
 			thirdStageAltarCount--;

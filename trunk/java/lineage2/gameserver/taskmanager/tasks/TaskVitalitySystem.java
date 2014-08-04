@@ -61,11 +61,13 @@ public class TaskVitalitySystem extends Task
 		if (Calendar.getInstance().get(Calendar.DAY_OF_WEEK) == Calendar.WEDNESDAY)
 		{
 			_log.info("Vitality System Global Task: launched.");
+			
 			for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 			{
 				player.setVitality(Config.MAX_VITALITY);
 				player.sendPacket(new ExVitalityPointInfo(player.getVitality()));
 			}
+			
 			_log.info("Vitality System Task: completed.");
 		}
 	}

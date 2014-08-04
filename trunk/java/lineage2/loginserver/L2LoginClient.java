@@ -127,6 +127,7 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 	public boolean decrypt(ByteBuffer buf, int size)
 	{
 		boolean ret;
+		
 		try
 		{
 			ret = _loginCrypt.decrypt(buf.array(), buf.position(), size);
@@ -137,10 +138,12 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 			closeNow(true);
 			return false;
 		}
+		
 		if (!ret)
 		{
 			closeNow(true);
 		}
+		
 		return ret;
 	}
 	
@@ -154,6 +157,7 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 	public boolean encrypt(ByteBuffer buf, int size)
 	{
 		final int offset = buf.position();
+		
 		try
 		{
 			size = _loginCrypt.encrypt(buf.array(), offset, size);
@@ -163,6 +167,7 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 			_log.error("", e);
 			return false;
 		}
+		
 		buf.position(offset + size);
 		return true;
 	}
@@ -356,6 +361,7 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 		{
 			case AUTHED:
 				return "[ Account : " + getLogin() + " IP: " + getIpAddress() + "]";
+				
 			default:
 				return "[ State : " + getState() + " IP: " + getIpAddress() + "]";
 		}

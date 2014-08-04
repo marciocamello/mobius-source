@@ -60,8 +60,8 @@ public class KamalokaNightmare extends Reflection
 	protected void onCreate()
 	{
 		super.onCreate();
-		
 		InstantZone iz = getInstancedZone();
+		
 		if (iz != null)
 		{
 			int time_limit = iz.getTimelimit() * 1000 * 60;
@@ -74,7 +74,6 @@ public class KamalokaNightmare extends Reflection
 	protected void onCollapse()
 	{
 		super.onCollapse();
-		
 		stopPathfinderTimer();
 	}
 	
@@ -85,9 +84,11 @@ public class KamalokaNightmare extends Reflection
 			case 1:
 				killedKanabions++;
 				break;
+			
 			case 2:
 				killedDoplers++;
 				break;
+			
 			case 3:
 				killedVoiders++;
 				break;
@@ -97,6 +98,7 @@ public class KamalokaNightmare extends Reflection
 	public int getRank()
 	{
 		int total = (killedKanabions * 10) + (killedDoplers * 20) + (killedVoiders * 50);
+		
 		if (total >= RANK_6_MIN_POINTS)
 		{
 			return 6;
@@ -143,15 +145,16 @@ public class KamalokaNightmare extends Reflection
 				try
 				{
 					is_spawn_possible = false;
+					
 					for (Spawner s : KamalokaNightmare.this.getSpawns().toArray(new Spawner[KamalokaNightmare.this.getSpawns().size()]))
 					{
 						s.deleteAll();
 					}
 					
 					KamalokaNightmare.this.getSpawns().clear();
-					
 					List<GameObject> delete = new ArrayList<>();
 					lock.lock();
+					
 					try
 					{
 						for (GameObject o : _objects)
@@ -173,14 +176,16 @@ public class KamalokaNightmare extends Reflection
 					}
 					
 					Player p = (Player) GameObjectsStorage.findObject(getPlayerId());
+					
 					if (p != null)
 					{
 						p.getPlayer().sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(delay_after_spawn / 60000));
-						
 						InstantZone iz = KamalokaNightmare.this.getInstancedZone();
+						
 						if (iz != null)
 						{
 							String loc = iz.getAddParams().getString("pathfinder_loc", null);
+							
 							if (loc != null)
 							{
 								PathfinderInstance npc = new PathfinderInstance(IdFactory.getInstance().getNextId(), NpcHolder.getInstance().getTemplate(PATHFINDER));

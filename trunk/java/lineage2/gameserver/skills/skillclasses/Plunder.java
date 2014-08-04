@@ -57,15 +57,18 @@ public class Plunder extends Skill
 		{
 			return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 		}
+		
 		if (target == null)
 		{
 			return false;
 		}
+		
 		if (!target.isMonster())
 		{
 			activeChar.sendPacket(Msg.INVALID_TARGET);
 			return false;
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
@@ -81,11 +84,14 @@ public class Plunder extends Skill
 		{
 			return;
 		}
+		
 		int ss = isSSPossible() ? (isMagic() ? activeChar.getChargedSpiritShot() : activeChar.getChargedSoulShot() ? 2 : 0) : 0;
+		
 		if ((ss > 0) && (getPower() > 0))
 		{
 			activeChar.unChargeShots(false);
 		}
+		
 		for (Creature target : targets)
 		{
 			// SPOIL PART
@@ -98,6 +104,7 @@ public class Plunder extends Skill
 						MonsterInstance monster = (MonsterInstance) target;
 						boolean success;
 						success = Formulas.calcSkillSuccess(activeChar, target, this, getActivateRate());
+						
 						if (success && monster.setSpoiled((Player) activeChar))
 						{
 							activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HAS_SUCCEEDED).addSkillName(_id, getDisplayLevel()));
@@ -109,9 +116,11 @@ public class Plunder extends Skill
 						}
 					}
 				}
+				
 				if (getPower() > 0)
 				{
 					double damage, reflectableDamage = 0;
+					
 					if (isMagic())
 					{
 						AttackInfo info = Formulas.calcMagicDam(activeChar, target, this, ss);
@@ -123,45 +132,57 @@ public class Plunder extends Skill
 						AttackInfo info = Formulas.calcPhysDam(activeChar, target, this, false, false, ss > 0, false);
 						damage = info.damage;
 						reflectableDamage = info.reflectableDamage;
+						
 						if (info.lethal_dmg > 0)
 						{
 							target.reduceCurrentHp(info.lethal_dmg, reflectableDamage, activeChar, this, true, true, false, false, false, false, false);
 						}
 					}
+					
 					target.reduceCurrentHp(damage, reflectableDamage, activeChar, this, true, true, false, true, false, false, true);
 					target.doCounterAttack(this, activeChar, false);
 				}
+				
 				getEffects(activeChar, target, false, false);
 				target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, activeChar, Math.max(_effectPoint, 1));
 			}
+			
 			// SWEEP PART
 			Player player = (Player) activeChar;
+			
 			if ((target == null) || !target.isMonster())
 			{
 				continue;
 			}
+			
 			MonsterInstance targetMonster = (MonsterInstance) target;
 			List<RewardItem> items = targetMonster.takeSweep();
+			
 			if (items == null)
 			{
 				continue;
 			}
+			
 			for (RewardItem item : items)
 			{
 				ItemInstance sweep = ItemFunctions.createItem(item.itemId);
 				sweep.setCount(item.count);
+				
 				if (player.isInParty() && player.getParty().isDistributeSpoilLoot())
 				{
 					player.getParty().distributeItem(player, sweep, null);
 					continue;
 				}
+				
 				if (!player.getInventory().validateCapacity(sweep) || !player.getInventory().validateWeight(sweep))
 				{
 					sweep.dropToTheGround(player, targetMonster);
 					continue;
 				}
+				
 				player.getInventory().addItem(sweep);
 				SystemMessage smsg;
+				
 				if (item.count == 1)
 				{
 					smsg = new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1);

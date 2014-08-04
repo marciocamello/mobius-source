@@ -77,7 +77,9 @@ public final class EffectFakeDeath extends Effect
 		{
 			return false;
 		}
+		
 		double manaDam = calc();
+		
 		if (manaDam > getEffected().getCurrentMp())
 		{
 			if (getSkill().isToggle())
@@ -87,6 +89,7 @@ public final class EffectFakeDeath extends Effect
 				return false;
 			}
 		}
+		
 		getEffected().reduceCurrentMp(manaDam, null);
 		return true;
 	}

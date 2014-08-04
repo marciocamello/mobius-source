@@ -65,6 +65,7 @@ public class SoDManager
 		{
 			_instance = new SoDManager();
 		}
+		
 		return _instance;
 	}
 	
@@ -75,6 +76,7 @@ public class SoDManager
 	{
 		_log.info("Seed of Destruction Manager: Loaded");
 		_zone = ReflectionUtils.getZone("[inner_destruction01]");
+		
 		if (!isAttackStage())
 		{
 			openSeed(getOpenedTimeLimit());
@@ -99,6 +101,7 @@ public class SoDManager
 		{
 			return;
 		}
+		
 		if (getTiatKills() < 9)
 		{
 			ServerVariables.set("Tial_kills", getTiatKills() + 1);
@@ -174,6 +177,7 @@ public class SoDManager
 		{
 			return;
 		}
+		
 		_isOpened = true;
 		ServerVariables.unset("Tial_kills");
 		ServerVariables.set("SoD_opened", (System.currentTimeMillis() + timelimit) / 1000L);
@@ -199,14 +203,17 @@ public class SoDManager
 		{
 			return;
 		}
+		
 		_isOpened = false;
 		_log.info("Seed of Destruction Manager: Closing the seed.");
 		ServerVariables.unset("SoD_opened");
 		SpawnManager.getInstance().despawn(SPAWN_GROUP);
+		
 		for (Playable p : getZone().getInsidePlayables())
 		{
 			p.teleToLocation(getZone().getRestartPoints().get(0));
 		}
+		
 		handleDoors(false);
 	}
 }

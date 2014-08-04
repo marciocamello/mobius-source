@@ -95,7 +95,6 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 	public _128_PailakaSongofIceandFire()
 	{
 		super(false);
-		
 		addStartNpc(ADLER);
 		addTalkId(ADLER2, SINAI);
 		addFirstTalkId(TINSPECTOR);
@@ -137,6 +136,7 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 			st.playSound(SOUND_MIDDLE);
 			st.takeItems(TempleBookofSecrets2, -1);
 			st.giveItems(TempleBookofSecrets3, 1);
+			
 			if (st.getQuestItemsCount(EssenceofWater) == 0)
 			{
 				htmltext = "32507-01.htm";
@@ -147,6 +147,7 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 				st.takeItems(EssenceofWater, -1);
 				st.giveItems(EnhancedSpritesSword, 1);
 			}
+			
 			addSpawnToInstance(PAPION, new Location(-53903, 181484, -4555, 30456), 0, refId);
 		}
 		else if (event.equalsIgnoreCase("32507-07.htm"))
@@ -155,6 +156,7 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 			st.playSound(SOUND_MIDDLE);
 			st.takeItems(TempleBookofSecrets5, -1);
 			st.giveItems(TempleBookofSecrets6, 1);
+			
 			if (st.getQuestItemsCount(EssenceofFire) == 0)
 			{
 				htmltext = "32507-04.htm";
@@ -165,6 +167,7 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 				st.takeItems(EssenceofFire, -1);
 				st.giveItems(SwordofIceandFire, 1);
 			}
+			
 			addSpawnToInstance(GARGOS, new Location(-61354, 183624, -4821, 63613), 0, refId);
 		}
 		else if (event.equalsIgnoreCase("32510-02.htm"))
@@ -178,6 +181,7 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			player.getReflection().startCollapseTimer(60000);
 		}
+		
 		return htmltext;
 	}
 	
@@ -189,6 +193,7 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int id = st.getState();
 		Player player = st.getPlayer();
+		
 		if (npcId == ADLER)
 		{
 			if (cond == 0)
@@ -234,6 +239,7 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 				htmltext = "32510-02.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -242,12 +248,15 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		QuestState st = player.getQuestState(getName());
+		
 		if ((st == null) || st.isCompleted())
 		{
 			return htmltext;
 		}
+		
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == TINSPECTOR)
 		{
 			if (cond == 2)
@@ -267,6 +276,7 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 				htmltext = "32507-04.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -277,13 +287,16 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		int refId = player.getReflectionId();
+		
 		if (ArrayUtils.contains(MOBS, npcId))
 		{
 			int herbRnd = Rnd.get(2);
+			
 			if (Rnd.get(100) < 50)
 			{
 				st.dropItem(npc, HPHERBS[herbRnd], 1);
 			}
+			
 			if (Rnd.get(100) < 50)
 			{
 				st.dropItem(npc, MPHERBS[herbRnd], 1);
@@ -334,6 +347,7 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 			{
 				st.dropItem(npc, PailakaInstantShield, Rnd.get(1, 7));
 			}
+			
 			if (Rnd.chance(30))
 			{
 				st.dropItem(npc, QuickHealingPotion, Rnd.get(1, 7));
@@ -345,10 +359,12 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 			{
 				st.dropItem(npc, PailakaInstantShield, Rnd.get(1, 10));
 			}
+			
 			if (Rnd.chance(30))
 			{
 				st.dropItem(npc, QuickHealingPotion, Rnd.get(1, 10));
 			}
+			
 			if (Rnd.chance(10))
 			{
 				st.dropItem(npc, WaterAttributeEnhancer, Rnd.get(1, 5));
@@ -360,21 +376,25 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 			{
 				st.dropItem(npc, PailakaInstantShield, Rnd.get(1, 10));
 			}
+			
 			if (Rnd.chance(30))
 			{
 				st.dropItem(npc, QuickHealingPotion, Rnd.get(1, 10));
 			}
+			
 			if (Rnd.chance(10))
 			{
 				st.dropItem(npc, FireAttributeEnhancer, Rnd.get(1, 5));
 			}
 		}
+		
 		return null;
 	}
 	
 	private void enterInstance(Player player)
 	{
 		Reflection r = player.getActiveReflection();
+		
 		if (r != null)
 		{
 			if (player.canReenterInstance(izId))

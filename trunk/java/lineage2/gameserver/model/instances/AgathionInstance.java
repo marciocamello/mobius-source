@@ -90,33 +90,41 @@ public class AgathionInstance extends NpcInstance
 		public void runImpl()
 		{
 			AgathionInstance agat = (AgathionInstance) _agatRef.get();
+			
 			if (agat == null)
 			{
 				return;
 			}
+			
 			Player owner = agat.getOwner();
+			
 			if (owner == null)
 			{
 				return;
 			}
+			
 			List<Creature> targets = new ArrayList<>(10);
+			
 			for (Player target : World.getAroundPlayers(agat, 600, 200))
 			{
 				if (targets.size() > 10)
 				{
 					break;
 				}
+				
 				if (target == owner)
 				{
 					targets.add(target);
 					agat.broadcastPacket(new MagicSkillUse(agat, target, agat._skill.getId(), agat._skill.getLevel(), 0, 0));
 				}
+				
 				if ((target.getParty() != null) && (owner.getParty() == target.getParty()))
 				{
 					targets.add(target);
 					agat.broadcastPacket(new MagicSkillUse(agat, target, agat._skill.getId(), agat._skill.getLevel(), 0, 0));
 				}
 			}
+			
 			agat.callSkill(agat._skill, targets, true);
 		}
 	}
@@ -127,6 +135,7 @@ public class AgathionInstance extends NpcInstance
 		super.onSpawn();
 		EffectTaskManager.getInstance().schedule(new RemoveAgathion(_owner), _lifetimeCountdown);
 		_destroyTask = ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(this), _lifetimeCountdown);
+		
 		if (_skill != null)
 		{
 			_targetTask = EffectTaskManager.getInstance().scheduleAtFixedRate(new CastTask(this), 1000L, 5000L);
@@ -137,19 +146,24 @@ public class AgathionInstance extends NpcInstance
 	protected void onDelete()
 	{
 		Player owner = getOwner();
+		
 		if (owner != null)
 		{
 			owner.setTree(false);
 		}
+		
 		if (_destroyTask != null)
 		{
 			_destroyTask.cancel(false);
 		}
+		
 		_destroyTask = null;
+		
 		if (_targetTask != null)
 		{
 			_targetTask.cancel(false);
 		}
+		
 		_targetTask = null;
 		super.onDelete();
 	}

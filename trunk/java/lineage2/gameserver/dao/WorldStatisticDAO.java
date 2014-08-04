@@ -81,10 +81,12 @@ public class WorldStatisticDAO
 		PreparedStatement statement = null;
 		ResultSet rset = null;
 		writeLock.lock();
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			long globalValue = value;
+			
 			if (categoryType.getSaveMode() == UPDATE_STATISTIC_MODE_ADD)
 			{
 				statement = con.prepareStatement(SELECT_GLOBAL_RESULT);
@@ -92,10 +94,12 @@ public class WorldStatisticDAO
 				statement.setInt(2, categoryType.getClientId());
 				statement.setInt(3, categoryType.getSubcat());
 				rset = statement.executeQuery();
+				
 				if (rset.next())
 				{
 					globalValue += rset.getLong(1);
 				}
+				
 				DbUtils.closeQuietly(statement, rset);
 			}
 			else if (categoryType.getSaveMode() == UPDATE_STATISTIC_MODE_INSERT_MAX)
@@ -105,18 +109,21 @@ public class WorldStatisticDAO
 				statement.setInt(2, categoryType.getClientId());
 				statement.setInt(3, categoryType.getSubcat());
 				rset = statement.executeQuery();
+				
 				if (rset.next())
 				{
 					long currentValue = rset.getLong(1);
+					
 					if (currentValue >= value)
 					{
 						return;
 					}
 				}
+				
 				DbUtils.closeQuietly(statement, rset);
 			}
-			updateMonthlyStatistic(player, categoryType, value);
 			
+			updateMonthlyStatistic(player, categoryType, value);
 			// update global statistic
 			statement = con.prepareStatement(UPDATE_GLOBAL_STATISTIC);
 			statement.setInt(1, player.getObjectId());
@@ -125,7 +132,6 @@ public class WorldStatisticDAO
 			statement.setLong(4, globalValue);
 			statement.setLong(5, System.currentTimeMillis());
 			statement.execute();
-			
 		}
 		catch (Exception e)
 		{
@@ -143,9 +149,11 @@ public class WorldStatisticDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
+			
 			if (categoryType.getSaveMode() == UPDATE_STATISTIC_MODE_ADD)
 			{
 				statement = con.prepareStatement(SELECT_MONTHLY_RESULT);
@@ -153,10 +161,12 @@ public class WorldStatisticDAO
 				statement.setInt(2, categoryType.getClientId());
 				statement.setInt(3, categoryType.getSubcat());
 				rset = statement.executeQuery();
+				
 				if (rset.next())
 				{
 					value += rset.getLong(1);
 				}
+				
 				DbUtils.closeQuietly(statement, rset);
 			}
 			else if (categoryType.getSaveMode() == UPDATE_STATISTIC_MODE_INSERT_MAX)
@@ -166,16 +176,20 @@ public class WorldStatisticDAO
 				statement.setInt(2, categoryType.getClientId());
 				statement.setInt(3, categoryType.getSubcat());
 				rset = statement.executeQuery();
+				
 				if (rset.next())
 				{
 					long currentValue = rset.getLong(1);
+					
 					if (currentValue >= value)
 					{
 						return;
 					}
 				}
+				
 				DbUtils.closeQuietly(statement, rset);
 			}
+			
 			// update monthly statistic
 			statement = con.prepareStatement(UPDATE_MONTHLY_STATISTIC);
 			statement.setInt(1, player.getObjectId());
@@ -201,7 +215,6 @@ public class WorldStatisticDAO
 			statement.setInt(21, player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_DHAIR));
 			statement.setLong(22, System.currentTimeMillis());
 			statement.execute();
-			
 		}
 		catch (Exception e)
 		{
@@ -218,16 +231,15 @@ public class WorldStatisticDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		writeLock.lock();
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
-			
 			statement = con.prepareStatement(RESET_MONTHLY_WINNERS_STATISTIC);
 			statement.execute();
 			DbUtils.closeQuietly(statement);
 			statement = con.prepareStatement(RESET_GLOBAL_WINNERS_STATISTIC);
 			statement.execute();
-			
 		}
 		catch (Exception e)
 		{
@@ -243,14 +255,15 @@ public class WorldStatisticDAO
 	public void recalculateWinners()
 	{
 		resetWinnersStatistic();
-		
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			writeLock.lock();
 			con = DatabaseFactory.getInstance().getConnection();
+			
 			for (CategoryType type : CategoryType.values())
 			{
 				statement = con.prepareStatement(UPDATE_MONTHLY_WINNERS);
@@ -259,7 +272,6 @@ public class WorldStatisticDAO
 				statement.setInt(3, STATUES_TOP_PLAYER_LIMIT);
 				statement.executeUpdate();
 				DbUtils.closeQuietly(statement, rset);
-				
 				statement = con.prepareStatement(UPDATE_GLOBAL_WINNERS);
 				statement.setInt(1, type.getClientId());
 				statement.setInt(2, type.getSubcat());
@@ -284,12 +296,14 @@ public class WorldStatisticDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_PERSONAL_STATISTIC);
 			statement.setInt(1, charId);
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				CategoryType categoryType = CategoryType.getCategoryById(rset.getInt(1), rset.getInt(2));
@@ -314,6 +328,7 @@ public class WorldStatisticDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -337,7 +352,6 @@ public class WorldStatisticDAO
 		{
 			DbUtils.closeQuietly(con, statement, rset);
 		}
-		
 		return statistics;
 	}
 	
@@ -347,15 +361,18 @@ public class WorldStatisticDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
+			
 			for (CategoryType categoryType : categoryTypes)
 			{
 				statement = con.prepareStatement(SELECT_WINNER_INFOS);
 				statement.setInt(1, categoryType.getClientId());
 				statement.setInt(2, STATUE_SPAWN_SELECT_LIMIT);
 				rset = statement.executeQuery();
+				
 				if (rset.next())
 				{
 					StatuesSpawnTemplate template = new StatuesSpawnTemplate(categoryType);
@@ -380,7 +397,6 @@ public class WorldStatisticDAO
 					templates.add(template);
 				}
 			}
-			
 		}
 		catch (Exception e)
 		{
@@ -390,7 +406,6 @@ public class WorldStatisticDAO
 		{
 			DbUtils.closeQuietly(con, statement, rset);
 		}
-		
 		return templates;
 	}
 	
@@ -401,6 +416,7 @@ public class WorldStatisticDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -423,7 +439,6 @@ public class WorldStatisticDAO
 		{
 			DbUtils.closeQuietly(con, statement, rset);
 		}
-		
 		return statistics;
 	}
 }

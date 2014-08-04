@@ -51,24 +51,30 @@ public class RollingDice extends ScriptItemHandler
 		{
 			return false;
 		}
+		
 		final Player player = (Player) playable;
 		final int itemId = item.getItemId();
+		
 		if (player.isInOlympiadMode())
 		{
 			player.sendPacket(Msg.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 			return false;
 		}
+		
 		if (player.isSitting())
 		{
 			player.sendPacket(Msg.YOU_CANNOT_MOVE_WHILE_SITTING);
 			return false;
 		}
+		
 		final int number = Rnd.get(1, 6);
+		
 		if (number == 0)
 		{
 			player.sendPacket(Msg.YOU_MAY_NOT_THROW_THE_DICE_AT_THIS_TIMETRY_AGAIN_LATER);
 			return false;
 		}
+		
 		player.broadcastPacket(new Dice(player.getObjectId(), itemId, number, player.getX() - 30, player.getY() - 30, player.getZ()), new SystemMessage(SystemMessage.S1_HAS_ROLLED_S2).addString(player.getName()).addNumber(number));
 		return true;
 	}

@@ -40,7 +40,6 @@ public class ExResponseCommissionList extends L2GameServerPacket
 		this.type = type;
 		this.part = part;
 		this.items = items;
-		
 		currentTime = (int) (System.currentTimeMillis() / 1000);
 	}
 	
@@ -48,31 +47,33 @@ public class ExResponseCommissionList extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0xF7);
-		
 		writeD(type); // List type. -2 при пустов листе, 02 - итемы,
-						// выставленные персонажем, 03 - все итемы
+		
+		// выставленные персонажем, 03 - все итемы
 		if (type == EMPTY_LIST)
 		{
 			return;
 		}
+		
 		writeD(currentTime); // current time
 		writeD(part); // part
 		writeD(items.size()); // items count
+		
 		for (CommissionItemInfo itemInfo : items)
 		{
 			writeQ(itemInfo.getAuctionId()); // auctionId
 			writeQ(itemInfo.getRegisteredPrice()); // item price
 			writeD(itemInfo.getExItemType().ordinal()); // Тип продаваемой вещи
 			writeD(itemInfo.getSaleDays()); // sale days, 0 - 1 день, 1 - 3 дня,
-											// 2 - 5 дней, 3 - 7 дней.
+			// 2 - 5 дней, 3 - 7 дней.
 			writeD((int) (itemInfo.getSaleEndTime() / 1000)); // Sale end time
 			writeS(itemInfo.getSellerName()); // seller name
 			writeD(0); // unknown (вероятно objectId итема), на евро всегда 0
 			writeD(itemInfo.getItem().getItemId()); // item_id
 			writeQ(itemInfo.getItem().getCount()); // count
 			writeH(itemInfo.getItem().getTemplate().getType2ForPackets()); // itemType2
-																			// or
-																			// equipSlot
+			// or
+			// equipSlot
 			writeD(itemInfo.getItem().getBodyPart()); // bodypart
 			writeH(itemInfo.getItem().getEnchantLevel()); // enchant_lvl
 			writeH(itemInfo.getItem().getCustomType2()); // custom_type2

@@ -65,6 +65,7 @@ public class RubentisSubAI extends DefaultAI
 		{
 			startMoveTask();
 		}
+		
 		return true;
 	}
 	
@@ -75,10 +76,12 @@ public class RubentisSubAI extends DefaultAI
 	protected void onEvtArrived()
 	{
 		startMoveTask();
+		
 		if (Rnd.chance(59))
 		{
 			sayRndMsg();
 		}
+		
 		super.onEvtArrived();
 	}
 	
@@ -88,10 +91,12 @@ public class RubentisSubAI extends DefaultAI
 	private void startMoveTask()
 	{
 		_lastPoint++;
+		
 		if (_lastPoint >= _points.length)
 		{
 			_lastPoint = 0;
 		}
+		
 		addTaskMove(_points[_lastPoint], false);
 		doTask();
 	}
@@ -102,32 +107,41 @@ public class RubentisSubAI extends DefaultAI
 	private void sayRndMsg()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		NpcString ns;
+		
 		switch (Rnd.get(6))
 		{
 			case 1:
 				ns = NpcString.HUNTING_AT_THE_BEACH_IS_A_BAD_IDEA;
 				break;
+			
 			case 2:
 				ns = NpcString.ONLY_THE_STRONG_SURVIVE_AT_YE_SAGIRA_RUINS;
 				break;
+			
 			case 3:
 				ns = NpcString.HUNTING_AT_THE_BEACH_IS_A_BAD_IDEA;
 				break;
+			
 			case 4:
 				ns = NpcString.ONLY_THE_STRONG_SURVIVE_AT_YE_SAGIRA_RUINS;
 				break;
+			
 			case 5:
 				ns = NpcString.HUNTING_AT_THE_BEACH_IS_A_BAD_IDEA;
 				break;
+			
 			default:
 				ns = NpcString.ONLY_THE_STRONG_SURVIVE_AT_YE_SAGIRA_RUINS;
 				break;
 		}
+		
 		Functions.npcSay(actor, ns);
 	}
 	

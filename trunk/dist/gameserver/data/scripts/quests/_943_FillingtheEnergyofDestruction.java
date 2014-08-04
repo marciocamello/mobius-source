@@ -61,6 +61,7 @@ public class _943_FillingtheEnergyofDestruction extends Quest implements ScriptF
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("seed_talisman_manager_q0943_03.htm"))
 		{
 			st.setCond(1);
@@ -73,6 +74,7 @@ public class _943_FillingtheEnergyofDestruction extends Quest implements ScriptF
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(this);
 		}
+		
 		return htmltext;
 	}
 	
@@ -82,6 +84,7 @@ public class _943_FillingtheEnergyofDestruction extends Quest implements ScriptF
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		String htmltext = "noquest";
+		
 		if (npcId == SEED_TALISMAN_SUPERVISOR)
 		{
 			if (st.isStarted())
@@ -114,6 +117,7 @@ public class _943_FillingtheEnergyofDestruction extends Quest implements ScriptF
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -122,6 +126,7 @@ public class _943_FillingtheEnergyofDestruction extends Quest implements ScriptF
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (ArrayUtils.contains(RAID_BOSSES, npcId))
 		{
 			if (cond == 1)
@@ -131,6 +136,7 @@ public class _943_FillingtheEnergyofDestruction extends Quest implements ScriptF
 				st.setCond(2);
 			}
 		}
+		
 		return null;
 	}
 	

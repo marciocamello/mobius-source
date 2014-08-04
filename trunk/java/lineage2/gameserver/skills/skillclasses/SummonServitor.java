@@ -91,15 +91,18 @@ public class SummonServitor extends Skill
 	public boolean checkCondition(Creature activeChar, Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
 		Player player = activeChar.getPlayer();
+		
 		if (player == null)
 		{
 			return false;
 		}
+		
 		if (player.isProcessingRequest())
 		{
 			player.sendPacket(Msg.PETS_AND_SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
 			return false;
 		}
+		
 		switch (_summonType)
 		{
 			case TRAP:
@@ -108,7 +111,9 @@ public class SummonServitor extends Skill
 					activeChar.sendPacket(Msg.A_MALICIOUS_SKILL_CANNOT_BE_USED_IN_A_PEACE_ZONE);
 					return false;
 				}
+				
 				break;
+			
 			case SERVITOR:
 			case MULTI_SERVITOR:
 			case SIEGE_SUMMON:
@@ -118,20 +123,26 @@ public class SummonServitor extends Skill
 					player.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 					return false;
 				}
+				
 				break;
+			
 			case AGATHION:
 				if ((player.getAgathionId() > 0) && (_npcId != 0))
 				{
 					player.sendPacket(SystemMsg.AN_AGATHION_HAS_ALREADY_BEEN_SUMMONED);
 					return false;
 				}
+				
 				break;
+			
 			case CLONE:
 			case NPC:
 				break;
+			
 			default:
 				break;
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
@@ -144,10 +155,12 @@ public class SummonServitor extends Skill
 	public void useSkill(Creature caster, List<Creature> targets)
 	{
 		Player activeChar = caster.getPlayer();
+		
 		switch (_summonType)
 		{
 			case AGATHION:
 				activeChar.setAgathion(getNpcId());
+				
 				// If have lifeTime this is a servitor agathion...
 				if (_lifeTime > 0)
 				{
@@ -161,21 +174,27 @@ public class SummonServitor extends Skill
 					agat.setRunning();
 					ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(agat), _lifeTime);
 				}
+				
 				break;
+			
 			case TRAP:
 				Skill trapSkill = getFirstAddedSkill();
+				
 				if (activeChar.getTrapsCount() >= 5)
 				{
 					activeChar.destroyFirstTrap();
 				}
+				
 				TrapInstance trap = new TrapInstance(IdFactory.getInstance().getNextId(), NpcHolder.getInstance().getTemplate(getNpcId()), activeChar, trapSkill);
 				activeChar.addTrap(trap);
 				trap.spawnMe();
 				break;
+			
 			case SERVITOR:
 			case MULTI_SERVITOR:
 			case SIEGE_SUMMON:
 				Location loc = null;
+				
 				if (_targetType == SkillTargetType.TARGET_CORPSE)
 				{
 					for (Creature target : targets)
@@ -184,6 +203,7 @@ public class SummonServitor extends Skill
 						{
 							activeChar.getAI().setAttackTarget(null);
 							loc = target.getLoc();
+							
 							if (target.isNpc())
 							{
 								((NpcInstance) target).endDecayTask();
@@ -199,10 +219,12 @@ public class SummonServitor extends Skill
 						}
 					}
 				}
+				
 				if (activeChar.isMounted() || !activeChar.getSummonList().canSummon(_summonType, _summonPoint))
 				{
 					return;
 				}
+				
 				NpcTemplate summonTemplate = NpcHolder.getInstance().getTemplate(getNpcId());
 				SummonInstance summon = new SummonInstance(IdFactory.getInstance().getNextId(), summonTemplate, activeChar, _lifeTime, _summonPoint, this);
 				activeChar.getSummonList().addSummon(summon);
@@ -213,30 +235,38 @@ public class SummonServitor extends Skill
 				summon.spawnMe(loc == null ? Location.findAroundPosition(activeChar, 50, 70) : loc);
 				summon.setRunning();
 				summon.setFollowMode(true);
+				
 				if (summon.getSkillLevel(4140) > 0)
 				{
 					summon.altUseSkill(SkillTable.getInstance().getInfo(4140, summon.getSkillLevel(4140)), activeChar);
 				}
+				
 				if (summon.getName().equalsIgnoreCase("Shadow"))
 				{
 					summon.addStatFunc(new FuncAdd(Stats.ABSORB_DAMAGE_PERCENT, 0x40, this, 15));
 				}
+				
 				if (activeChar.isInOlympiadMode())
 				{
 					summon.getEffectList().stopAllEffects();
 				}
+				
 				summon.setCurrentHpMp(summon.getMaxHp(), summon.getMaxMp(), false);
+				
 				if (_summonType == SummonType.SIEGE_SUMMON)
 				{
 					SiegeEvent<?, ?> siegeEvent = activeChar.getEvent(SiegeEvent.class);
 					siegeEvent.addSiegeSummon(summon);
 				}
+				
 				break;
+			
 			case MERCHANT:
 				if ((activeChar.getSummonList().size() > 0) || activeChar.isMounted())
 				{
 					return;
 				}
+				
 				NpcTemplate merchantTemplate = NpcHolder.getInstance().getTemplate(getNpcId());
 				MerchantInstance merchant = new MerchantInstance(IdFactory.getInstance().getNextId(), merchantTemplate);
 				merchant.setCurrentHp(merchant.getMaxHp(), false);
@@ -246,13 +276,16 @@ public class SummonServitor extends Skill
 				merchant.spawnMe(activeChar.getLoc());
 				ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(merchant), _lifeTime);
 				break;
+			
 			case TREE:
 				if (activeChar.isMounted() || !activeChar.getSummonList().canSummon(_summonType, _summonPoint))
 				{
 					return;
 				}
+				
 				NpcTemplate treeTemplate = NpcHolder.getInstance().getTemplate(getNpcId());
 				Location SummonLoc;
+				
 				if (activeChar.getGroundSkillLoc() != null)
 				{
 					SummonLoc = activeChar.getGroundSkillLoc();
@@ -261,6 +294,7 @@ public class SummonServitor extends Skill
 				{
 					SummonLoc = activeChar.getLoc();
 				}
+				
 				Skill summonSkill = getFirstAddedSkill();
 				TreeInstance tree = new TreeInstance(IdFactory.getInstance().getNextId(), treeTemplate, activeChar, _lifeTime, summonSkill, SummonLoc);
 				activeChar.getSummonList().addSummon(tree);
@@ -272,13 +306,16 @@ public class SummonServitor extends Skill
 				tree.spawnMe(SummonLoc);
 				ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(tree), _lifeTime);
 				break;
+			
 			case SYMBOL:
 				if (activeChar.isMounted())
 				{
 					return;
 				}
+				
 				NpcTemplate symbolTemplate = NpcHolder.getInstance().getTemplate(getNpcId());
 				Location symbolLoc;
+				
 				if (activeChar.getGroundSkillLoc() != null)
 				{
 					symbolLoc = activeChar.getGroundSkillLoc();
@@ -287,6 +324,7 @@ public class SummonServitor extends Skill
 				{
 					symbolLoc = activeChar.getLoc();
 				}
+				
 				Skill symbolSkill = getFirstAddedSkill();
 				SymbolInstance symbol = new SymbolInstance(IdFactory.getInstance().getNextId(), symbolTemplate, activeChar, symbolSkill);
 				symbol.setReflection(activeChar.getReflection());
@@ -294,11 +332,13 @@ public class SummonServitor extends Skill
 				symbol.spawnMe(symbolLoc);
 				ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(symbol), _lifeTime);
 				break;
+			
 			case CLONE:
 				if (activeChar.isMounted())
 				{
 					return;
 				}
+				
 				Location cloneLoc = Location.findAroundPosition(activeChar, 50, 70);
 				CloneInstance clone = new CloneInstance(IdFactory.getInstance().getNextId(), activeChar.getTemplate(), activeChar, _lifeTime, cloneLoc);
 				clone.setHeading(activeChar.getHeading());
@@ -308,7 +348,6 @@ public class SummonServitor extends Skill
 				clone.spawnMe(cloneLoc);
 				clone.setRunning();
 				clone.setFollowMode(true);
-				
 				cloneLoc = Location.findAroundPosition(activeChar, 50, 70);
 				clone = new CloneInstance(IdFactory.getInstance().getNextId(), activeChar.getTemplate(), activeChar, _lifeTime, cloneLoc);
 				clone.setHeading(activeChar.getHeading());
@@ -318,7 +357,6 @@ public class SummonServitor extends Skill
 				clone.spawnMe(cloneLoc);
 				clone.setRunning();
 				clone.setFollowMode(true);
-				
 				cloneLoc = Location.findAroundPosition(activeChar, 50, 70);
 				clone = new CloneInstance(IdFactory.getInstance().getNextId(), activeChar.getTemplate(), activeChar, _lifeTime, cloneLoc);
 				clone.setHeading(activeChar.getHeading());
@@ -330,11 +368,13 @@ public class SummonServitor extends Skill
 				clone.setFollowMode(true);
 				ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(clone), _lifeTime);
 				break;
+			
 			case NPC:
 				if (activeChar.isMounted())
 				{
 					return;
 				}
+				
 				NpcTemplate npcTemplate = NpcHolder.getInstance().getTemplate(getNpcId());
 				NpcInstance normalnpc = new NpcInstance(IdFactory.getInstance().getNextId(), npcTemplate);
 				normalnpc.setCurrentHp(normalnpc.getMaxHp(), false);
@@ -344,9 +384,11 @@ public class SummonServitor extends Skill
 				normalnpc.spawnMe(activeChar.getLoc());
 				ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(normalnpc), _lifeTime);
 				break;
+			
 			default:
 				break;
 		}
+		
 		if (isSSPossible())
 		{
 			caster.unChargeShots(isMagic());

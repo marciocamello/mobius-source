@@ -31,6 +31,7 @@ public class InfiltrationOfficerInstance extends NpcInstance
 	protected void onDeath(Creature killer)
 	{
 		Reflection reflection = getReflection();
+		
 		if (reflection != ReflectionManager.DEFAULT)
 		{
 			reflection.collapse();

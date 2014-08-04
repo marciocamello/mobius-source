@@ -76,7 +76,9 @@ public final class ItemFunctions
 		{
 			return;
 		}
+		
 		Playable player;
+		
 		if (playable.isServitor())
 		{
 			player = playable.getPlayer();
@@ -85,7 +87,9 @@ public final class ItemFunctions
 		{
 			player = playable;
 		}
+		
 		ItemTemplate t = ItemHolder.getInstance().getTemplate(itemId);
+		
 		if (t.isStackable())
 		{
 			player.getInventory().addItem(itemId, count);
@@ -97,6 +101,7 @@ public final class ItemFunctions
 				player.getInventory().addItem(itemId, 1);
 			}
 		}
+		
 		if (notify)
 		{
 			player.sendPacket(SystemMessage2.obtainItems(itemId, count, 0));
@@ -115,6 +120,7 @@ public final class ItemFunctions
 		{
 			return 0;
 		}
+		
 		Playable player = playable.getPlayer();
 		return player.getInventory().getCountOf(itemId);
 	}
@@ -130,12 +136,15 @@ public final class ItemFunctions
 	public static long removeItem(Playable playable, int itemId, long count, boolean notify)
 	{
 		long removed = 0;
+		
 		if ((playable == null) || (count < 1))
 		{
 			return removed;
 		}
+		
 		Playable player = playable.getPlayer();
 		ItemTemplate t = ItemHolder.getInstance().getTemplate(itemId);
+		
 		if (t.isStackable())
 		{
 			if (player.getInventory().destroyItemByItemId(itemId, count))
@@ -153,10 +162,12 @@ public final class ItemFunctions
 				}
 			}
 		}
+		
 		if ((removed > 0) && notify)
 		{
 			player.sendPacket(SystemMessage2.removeItems(itemId, removed));
 		}
+		
 		return removed;
 	}
 	
@@ -182,11 +193,14 @@ public final class ItemFunctions
 		{
 			return Msg.ITEM_NOT_AVAILABLE_FOR_PETS;
 		}
+		
 		int petId = pet.getNpcId();
+		
 		if (item.getTemplate().isPendant() || (PetDataTable.isWolf(petId) && item.getTemplate().isForWolf()) || (PetDataTable.isHatchling(petId) && item.getTemplate().isForHatchling()) || (PetDataTable.isStrider(petId) && item.getTemplate().isForStrider()) || (PetDataTable.isGWolf(petId) && item.getTemplate().isForGWolf()) || (PetDataTable.isBabyPet(petId) && item.getTemplate().isForPetBaby()) || (PetDataTable.isImprovedBabyPet(petId) && item.getTemplate().isForPetBaby()))
 		{
 			return null;
 		}
+		
 		return Msg.ITEM_NOT_AVAILABLE_FOR_PETS;
 	}
 	
@@ -201,84 +215,103 @@ public final class ItemFunctions
 		int itemId = item.getItemId();
 		int targetSlot = item.getTemplate().getBodyPart();
 		Clan clan = player.getClan();
+		
 		if ((item.isHeroWeapon() || (item.getItemId() == 6842)) && !player.isHero())
 		{
 			return Msg.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM;
 		}
+		
 		if (!player.isAwaking())
 		{
 			if ((player.getRace() == Race.kamael) && ((item.getItemType() == ArmorType.HEAVY) || (item.getItemType() == ArmorType.MAGIC) || (item.getItemType() == ArmorType.SIGIL) || (item.getItemType() == WeaponType.NONE)))
 			{
 				return Msg.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM;
 			}
+			
 			if ((player.getRace() != Race.kamael) && ((item.getItemType() == WeaponType.CROSSBOW) || (item.getItemType() == WeaponType.RAPIER) || (item.getItemType() == WeaponType.ANCIENTSWORD)))
 			{
 				return Msg.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM;
 			}
 		}
+		
 		if ((itemId >= 7850) && (itemId <= 7859) && (player.getLvlJoinedAcademy() == 0))
 		{
 			return Msg.THIS_ITEM_CAN_ONLY_BE_WORN_BY_A_MEMBER_OF_THE_CLAN_ACADEMY;
 		}
+		
 		if (isClanApellaItem(itemId) && (player.getPledgeClass() < Player.RANK_WISEMAN))
 		{
 			return Msg.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM;
 		}
+		
 		if ((item.getItemType() == WeaponType.DUALDAGGER) && ((player.getSkillLevel(923) < 1) && (player.getSkillLevel(10502) < 1)))
 		{
 			return Msg.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM;
 		}
+		
 		if (ArrayUtils.contains(ItemTemplate.ITEM_ID_CASTLE_CIRCLET, itemId) && ((clan == null) || (itemId != ItemTemplate.ITEM_ID_CASTLE_CIRCLET[clan.getCastle()])))
 		{
 			return Msg.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM;
 		}
+		
 		if ((itemId == 6841) && ((clan == null) || !player.isClanLeader() || (clan.getCastle() == 0)))
 		{
 			return Msg.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM;
 		}
+		
 		if ((targetSlot == ItemTemplate.SLOT_LR_HAND) || (targetSlot == ItemTemplate.SLOT_L_HAND) || (targetSlot == ItemTemplate.SLOT_R_HAND))
 		{
 			if ((itemId != player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND)) && CursedWeaponsManager.getInstance().isCursed(player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND)))
 			{
 				return Msg.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM;
 			}
+			
 			if (player.isCursedWeaponEquipped() && (itemId != player.getCursedWeaponEquippedId()))
 			{
 				return Msg.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM;
 			}
 		}
+		
 		if (item.getTemplate().isCloak())
 		{
 			if (item.getName().contains("Knight") && ((player.getPledgeClass() < Player.RANK_KNIGHT) || (player.getCastle() == null)))
 			{
 				return Msg.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM;
 			}
+			
 			if (item.getName().contains("Kamael") && (player.getRace() != Race.kamael))
 			{
 				return Msg.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM;
 			}
+			
 			if (!player.getOpenCloak())
 			{
 				return Msg.THE_CLOAK_CANNOT_BE_EQUIPPED_BECAUSE_A_NECESSARY_ITEM_IS_NOT_EQUIPPED;
 			}
 		}
+		
 		if (targetSlot == ItemTemplate.SLOT_DECO)
 		{
 			int count = player.getTalismanCount();
+			
 			if (count <= 0)
 			{
 				return new SystemMessage2(SystemMsg.YOU_CANNOT_WEAR_S1_BECAUSE_YOU_ARE_NOT_WEARING_A_BRACELET).addItemName(itemId);
 			}
+			
 			ItemInstance deco;
+			
 			for (int slot = Inventory.PAPERDOLL_DECO1; slot <= Inventory.PAPERDOLL_DECO6; slot++)
 			{
 				deco = player.getInventory().getPaperdollItem(slot);
+				
 				if (deco != null)
 				{
 					if (deco == item)
 					{
 						return null;
 					}
+					
 					if ((--count <= 0) || (deco.getItemId() == itemId))
 					{
 						return new SystemMessage2(SystemMsg.YOU_CANNOT_EQUIP_S1_BECAUSE_YOU_DO_NOT_HAVE_ANY_AVAILABLE_SLOTS).addItemName(itemId);
@@ -286,6 +319,7 @@ public final class ItemFunctions
 				}
 			}
 		}
+		
 		return null;
 	}
 	
@@ -314,20 +348,25 @@ public final class ItemFunctions
 			player.sendPacket(Msg.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
 			return false;
 		}
+		
 		if (!player.getInventory().validateCapacity(item))
 		{
 			player.sendPacket(Msg.YOUR_INVENTORY_IS_FULL);
 			return false;
 		}
+		
 		if (!item.getTemplate().getHandler().pickupItem(player, item))
 		{
 			return false;
 		}
+		
 		PickableAttachment attachment = item.getAttachment() instanceof PickableAttachment ? (PickableAttachment) item.getAttachment() : null;
+		
 		if ((attachment != null) && !attachment.canPickUp(player))
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -343,26 +382,32 @@ public final class ItemFunctions
 		{
 			return false;
 		}
+		
 		if (PetDataTable.isPetControlItem(item) && player.isMounted())
 		{
 			return false;
 		}
+		
 		if (player.getPetControlItem() == item)
 		{
 			return false;
 		}
+		
 		if (player.getEnchantScroll() == item)
 		{
 			return false;
 		}
+		
 		if (item.isCursed())
 		{
 			return false;
 		}
+		
 		if (item.getTemplate().isQuest())
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -390,6 +435,7 @@ public final class ItemFunctions
 			case 21582:
 				return true;
 		}
+		
 		return false;
 	}
 	
@@ -410,6 +456,7 @@ public final class ItemFunctions
 			case 20520:
 				return true;
 		}
+		
 		return false;
 	}
 	
@@ -429,6 +476,7 @@ public final class ItemFunctions
 			case 22229:
 				return true;
 		}
+		
 		return false;
 	}
 	
@@ -448,6 +496,7 @@ public final class ItemFunctions
 			case 22230:
 				return true;
 		}
+		
 		return false;
 	}
 	
@@ -471,6 +520,7 @@ public final class ItemFunctions
 			case 20517:
 			case 20518:
 				return true;
+				
 			default:
 				return isAncientEnchantScroll(itemId);
 		}
@@ -493,6 +543,7 @@ public final class ItemFunctions
 			case 20522:
 				return true;
 		}
+		
 		return false;
 	}
 	
@@ -517,6 +568,7 @@ public final class ItemFunctions
 			case 962:
 				return true;
 		}
+		
 		return false;
 	}
 	
@@ -537,6 +589,7 @@ public final class ItemFunctions
 			case 19440:
 				return true;
 		}
+		
 		return false;
 	}
 	
@@ -550,6 +603,7 @@ public final class ItemFunctions
 	public final static int getEnchantCrystalId(ItemInstance item, ItemInstance scroll, ItemInstance catalyst)
 	{
 		boolean scrollValid = false, catalystValid = false;
+		
 		for (int scrollId : getEnchantScrollId(item))
 		{
 			if (scroll.getItemId() == scrollId)
@@ -558,6 +612,7 @@ public final class ItemFunctions
 				break;
 			}
 		}
+		
 		if (catalyst == null)
 		{
 			catalystValid = true;
@@ -573,26 +628,34 @@ public final class ItemFunctions
 				}
 			}
 		}
+		
 		if (scrollValid && catalystValid)
 		{
 			switch (item.getCrystalType().cry)
 			{
 				case ItemTemplate.CRYSTAL_NONE:
 					return 0;
+					
 				case ItemTemplate.CRYSTAL_D:
 					return 1458;
+					
 				case ItemTemplate.CRYSTAL_C:
 					return 1459;
+					
 				case ItemTemplate.CRYSTAL_B:
 					return 1460;
+					
 				case ItemTemplate.CRYSTAL_A:
 					return 1461;
+					
 				case ItemTemplate.CRYSTAL_S:
 					return 1462;
+					
 				case ItemTemplate.CRYSTAL_R:
 					return 17371;
 			}
 		}
+		
 		return -1;
 	}
 	
@@ -740,6 +803,7 @@ public final class ItemFunctions
 					};
 			}
 		}
+		
 		return new int[0];
 	}
 	
@@ -838,14 +902,19 @@ public final class ItemFunctions
 			{
 				case ItemTemplate.CRYSTAL_R:
 					return catalyst[10];
+					
 				case ItemTemplate.CRYSTAL_S:
 					return catalyst[4];
+					
 				case ItemTemplate.CRYSTAL_A:
 					return catalyst[3];
+					
 				case ItemTemplate.CRYSTAL_B:
 					return catalyst[2];
+					
 				case ItemTemplate.CRYSTAL_C:
 					return catalyst[1];
+					
 				case ItemTemplate.CRYSTAL_D:
 					return catalyst[0];
 			}
@@ -856,18 +925,24 @@ public final class ItemFunctions
 			{
 				case ItemTemplate.CRYSTAL_R:
 					return catalyst[11];
+					
 				case ItemTemplate.CRYSTAL_S:
 					return catalyst[9];
+					
 				case ItemTemplate.CRYSTAL_A:
 					return catalyst[8];
+					
 				case ItemTemplate.CRYSTAL_B:
 					return catalyst[7];
+					
 				case ItemTemplate.CRYSTAL_C:
 					return catalyst[6];
+					
 				case ItemTemplate.CRYSTAL_D:
 					return catalyst[5];
 			}
 		}
+		
 		return new int[]
 		{
 			0,
@@ -893,32 +968,44 @@ public final class ItemFunctions
 					{
 						case 0:
 							return 20;
+							
 						case 1:
 							return 18;
+							
 						case 2:
 							return 15;
+							
 						case 3:
 							return 12;
+							
 						case 4:
 							return 10;
+							
 						case 10:
 							return 10;
+							
 						case 5:
 							return 35;
+							
 						case 6:
 							return 27;
+							
 						case 7:
 							return 23;
+							
 						case 8:
 							return 18;
+							
 						case 9:
 							return 15;
+							
 						case 11:
 							return 15;
 					}
 				}
 			}
 		}
+		
 		return 0;
 	}
 	
@@ -934,11 +1021,14 @@ public final class ItemFunctions
 		{
 			return false;
 		}
+		
 		int current = item.getEnchantLevel();
+		
 		if ((current < (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR ? 4 : 3)) || (current > 8))
 		{
 			return false;
 		}
+		
 		for (int catalystRequired : getEnchantCatalystId(item))
 		{
 			if (catalystRequired == catalyst.getItemId())
@@ -946,6 +1036,7 @@ public final class ItemFunctions
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -994,6 +1085,7 @@ public final class ItemFunctions
 			case 16160:
 			case 16164:
 				return 0;
+				
 			case 8733:
 			case 8734:
 			case 8735:
@@ -1010,6 +1102,7 @@ public final class ItemFunctions
 			case 16161:
 			case 16165:
 				return 1;
+				
 			case 8743:
 			case 8744:
 			case 8745:
@@ -1026,6 +1119,7 @@ public final class ItemFunctions
 			case 16162:
 			case 16166:
 				return 2;
+				
 			case 8753:
 			case 8754:
 			case 8755:
@@ -1042,6 +1136,7 @@ public final class ItemFunctions
 			case 16163:
 			case 16167:
 				return 3;
+				
 			default:
 				return 0;
 		}
@@ -1063,6 +1158,7 @@ public final class ItemFunctions
 			case 12754:
 			case 12840:
 				return 1;
+				
 			case 8724:
 			case 8734:
 			case 8744:
@@ -1070,6 +1166,7 @@ public final class ItemFunctions
 			case 12755:
 			case 12841:
 				return 2;
+				
 			case 8725:
 			case 8735:
 			case 8745:
@@ -1077,6 +1174,7 @@ public final class ItemFunctions
 			case 12756:
 			case 12842:
 				return 3;
+				
 			case 8726:
 			case 8736:
 			case 8746:
@@ -1084,6 +1182,7 @@ public final class ItemFunctions
 			case 12757:
 			case 12843:
 				return 4;
+				
 			case 8727:
 			case 8737:
 			case 8747:
@@ -1091,6 +1190,7 @@ public final class ItemFunctions
 			case 12758:
 			case 12844:
 				return 5;
+				
 			case 8728:
 			case 8738:
 			case 8748:
@@ -1098,6 +1198,7 @@ public final class ItemFunctions
 			case 12759:
 			case 12845:
 				return 6;
+				
 			case 8729:
 			case 8739:
 			case 8749:
@@ -1105,6 +1206,7 @@ public final class ItemFunctions
 			case 12760:
 			case 12846:
 				return 7;
+				
 			case 8730:
 			case 8740:
 			case 8750:
@@ -1112,6 +1214,7 @@ public final class ItemFunctions
 			case 12761:
 			case 12847:
 				return 8;
+				
 			case 8731:
 			case 8741:
 			case 8751:
@@ -1119,6 +1222,7 @@ public final class ItemFunctions
 			case 12762:
 			case 12848:
 				return 9;
+				
 			case 8732:
 			case 8742:
 			case 8752:
@@ -1126,6 +1230,7 @@ public final class ItemFunctions
 			case 12763:
 			case 12849:
 				return 10;
+				
 			case 9573:
 			case 9574:
 			case 9575:
@@ -1133,6 +1238,7 @@ public final class ItemFunctions
 			case 12821:
 			case 12850:
 				return 11;
+				
 			case 10483:
 			case 10484:
 			case 10485:
@@ -1140,24 +1246,28 @@ public final class ItemFunctions
 			case 12822:
 			case 12851:
 				return 12;
+				
 			case 14008:
 			case 14166:
 			case 14167:
 			case 14168:
 			case 14169:
 				return 13;
+				
 			case 16160:
 			case 16161:
 			case 16162:
 			case 16163:
 			case 16177:
 				return 14;
+				
 			case 16164:
 			case 16165:
 			case 16166:
 			case 16167:
 			case 16178:
 				return 15;
+				
 			default:
 				return 1;
 		}
@@ -1172,6 +1282,7 @@ public final class ItemFunctions
 	public static Element getEnchantAttributeStoneElement(int itemId, boolean isArmor)
 	{
 		Element element = Element.NONE;
+		
 		switch (itemId)
 		{
 			case 9546:
@@ -1179,36 +1290,43 @@ public final class ItemFunctions
 			case 10521:
 				element = Element.FIRE;
 				break;
+			
 			case 9547:
 			case 9553:
 			case 10522:
 				element = Element.WATER;
 				break;
+			
 			case 9548:
 			case 9554:
 			case 10523:
 				element = Element.EARTH;
 				break;
+			
 			case 9549:
 			case 9555:
 			case 10524:
 				element = Element.WIND;
 				break;
+			
 			case 9550:
 			case 9556:
 			case 10525:
 				element = Element.UNHOLY;
 				break;
+			
 			case 9551:
 			case 9557:
 			case 10526:
 				element = Element.HOLY;
 				break;
 		}
+		
 		if (isArmor)
 		{
 			return Element.getReverseElement(element);
 		}
+		
 		return element;
 	}
 }

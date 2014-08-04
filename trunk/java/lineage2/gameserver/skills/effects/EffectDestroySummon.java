@@ -43,6 +43,7 @@ public final class EffectDestroySummon extends Effect
 		{
 			return false;
 		}
+		
 		return super.checkCondition();
 	}
 	

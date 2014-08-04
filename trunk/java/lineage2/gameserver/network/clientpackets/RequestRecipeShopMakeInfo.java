@@ -49,22 +49,28 @@ public class RequestRecipeShopMakeInfo extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (activeChar.isActionsDisabled())
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		Player manufacturer = (Player) activeChar.getVisibleObject(_manufacturerId);
+		
 		if ((manufacturer == null) || (manufacturer.getPrivateStoreType() != Player.STORE_PRIVATE_MANUFACTURE) || !manufacturer.isInRangeZ(activeChar, Creature.INTERACTION_DISTANCE))
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		long price = -1;
+		
 		for (ManufactureItem i : manufacturer.getCreateList())
 		{
 			if (i.getRecipeId() == _recipeId)
@@ -73,11 +79,13 @@ public class RequestRecipeShopMakeInfo extends L2GameClientPacket
 				break;
 			}
 		}
+		
 		if (price == -1)
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		activeChar.sendPacket(new RecipeShopItemInfo(activeChar, manufacturer, _recipeId, price, 0xFFFFFFFF));
 	}
 }

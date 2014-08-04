@@ -67,8 +67,8 @@ public class AdminMammon implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
 		npcIds.clear();
+		
 		if (!activeChar.getPlayerAccess().Menu)
 		{
 			return false;
@@ -79,6 +79,7 @@ public class AdminMammon implements IAdminCommandHandler
 			npcIds.add(31126);
 			npcIds.add(31092);
 			int teleportIndex = -1;
+			
 			try
 			{
 				if (fullString.length() > 16)
@@ -89,6 +90,7 @@ public class AdminMammon implements IAdminCommandHandler
 			catch (Exception NumberFormatException)
 			{
 			}
+			
 			findAdminNPCs(activeChar, npcIds, teleportIndex, -1);
 		}
 		else if (fullString.equals("admin_show_mammon"))
@@ -106,6 +108,7 @@ public class AdminMammon implements IAdminCommandHandler
 		else if (fullString.startsWith("admin_list_spawns"))
 		{
 			int npcId = 0;
+			
 			try
 			{
 				npcId = Integer.parseInt(fullString.substring(18).trim());
@@ -114,6 +117,7 @@ public class AdminMammon implements IAdminCommandHandler
 			{
 				activeChar.sendMessage("Command format is //list_spawns <NPC_ID>");
 			}
+			
 			npcIds.add(npcId);
 			findAdminNPCs(activeChar, npcIds, -1, -1);
 		}
@@ -121,6 +125,7 @@ public class AdminMammon implements IAdminCommandHandler
 		{
 			activeChar.sendPacket(new SystemMessage(Integer.parseInt(fullString.substring(10).trim())));
 		}
+		
 		return true;
 	}
 	
@@ -144,9 +149,11 @@ public class AdminMammon implements IAdminCommandHandler
 	public void findAdminNPCs(Player activeChar, List<Integer> npcIdList, int teleportIndex, int makeVisible)
 	{
 		int index = 0;
+		
 		for (NpcInstance npcInst : GameObjectsStorage.getAllNpcsForIterate())
 		{
 			int npcId = npcInst.getNpcId();
+			
 			if (npcIdList.contains(npcId))
 			{
 				if (makeVisible == 1)
@@ -157,9 +164,11 @@ public class AdminMammon implements IAdminCommandHandler
 				{
 					npcInst.decayMe();
 				}
+				
 				if (npcInst.isVisible())
 				{
 					index++;
+					
 					if (teleportIndex > -1)
 					{
 						if (teleportIndex == index)

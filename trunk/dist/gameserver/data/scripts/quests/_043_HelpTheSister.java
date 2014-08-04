@@ -57,6 +57,7 @@ public class _043_HelpTheSister extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("1"))
 		{
 			htmltext = "pet_manager_cooper_q0043_0104.htm";
@@ -90,6 +91,7 @@ public class _043_HelpTheSister extends Quest implements ScriptFile
 			st.setCond(0);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -99,6 +101,7 @@ public class _043_HelpTheSister extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
 		int id = st.getState();
+		
 		if (id == CREATED)
 		{
 			if (st.getPlayer().getLevel() >= 26)
@@ -114,6 +117,7 @@ public class _043_HelpTheSister extends Quest implements ScriptFile
 		else if (id == STARTED)
 		{
 			int cond = st.getCond();
+			
 			if (npcId == COOPER)
 			{
 				if (cond == 1)
@@ -152,6 +156,7 @@ public class _043_HelpTheSister extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -159,12 +164,15 @@ public class _043_HelpTheSister extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if (cond == 2)
 		{
 			long pieces = st.getQuestItemsCount(MAP_PIECE);
+			
 			if (pieces < MAX_COUNT)
 			{
 				st.giveItems(MAP_PIECE, 1);
+				
 				if (pieces < (MAX_COUNT - 1))
 				{
 					st.playSound(SOUND_ITEMGET);
@@ -176,6 +184,7 @@ public class _043_HelpTheSister extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 }

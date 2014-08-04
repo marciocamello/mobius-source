@@ -88,11 +88,14 @@ public class EffectDamOverTime extends Effect
 		{
 			return false;
 		}
+		
 		double damage = calc();
+		
 		if (_percent)
 		{
 			damage = _effected.getMaxHp() * _template._value * 0.01;
 		}
+		
 		if ((damage < 2) && (getStackOrder() != -1))
 		{
 			switch (getEffectType())
@@ -100,22 +103,28 @@ public class EffectDamOverTime extends Effect
 				case Poison:
 					damage = (poison[getStackOrder() - 1] * getPeriod()) / 1000;
 					break;
+				
 				case Bleed:
 					damage = (bleed[getStackOrder() - 1] * getPeriod()) / 1000;
 					break;
+				
 				default:
 					break;
 			}
 		}
+		
 		damage = _effector.calcStat(getSkill().isMagic() ? Stats.MAGIC_DAMAGE : Stats.PHYSICAL_DAMAGE, damage, _effected, getSkill());
+		
 		if ((damage > (_effected.getCurrentHp() - 1)) && !_effected.isNpc())
 		{
 			if (!getSkill().isOffensive())
 			{
 				_effected.sendPacket(Msg.NOT_ENOUGH_HP);
 			}
+			
 			return false;
 		}
+		
 		if (_effected.isNpc() && (_effected.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK))
 		{
 			NpcInstance npcAggro = (NpcInstance) _effected;
@@ -123,10 +132,12 @@ public class EffectDamOverTime extends Effect
 			npcAggro.setRunning();
 			npcAggro.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _effector);
 		}
+		
 		if (getSkill().getAbsorbPart() > 0)
 		{
 			_effector.setCurrentHp((getSkill().getAbsorbPart() * Math.min(_effected.getCurrentHp(), damage)) + _effector.getCurrentHp(), false);
 		}
+		
 		_effected.reduceCurrentHp(damage, 0, _effector, getSkill(), !_effected.isNpc() && (_effected != _effector), _effected != _effector, _effector.isNpc() || (_effected == _effector), false, false, true, false);
 		return true;
 	}

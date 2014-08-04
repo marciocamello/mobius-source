@@ -81,15 +81,18 @@ public class Rogin extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			doTask();
 			return true;
 		}
+		
 		if ((System.currentTimeMillis() > wait_timeout) && ((current_point > -1) || Rnd.chance(5)))
 		{
 			if (!wait)
@@ -101,37 +104,45 @@ public class Rogin extends DefaultAI
 						Functions.npcSay(actor, "Have you seen Torocco today?");
 						wait = true;
 						return true;
+						
 					case 6:
 						wait_timeout = System.currentTimeMillis() + 15000;
 						Functions.npcSay(actor, "Have you seen Torocco?");
 						wait = true;
 						return true;
+						
 					case 7:
 						wait_timeout = System.currentTimeMillis() + 15000;
 						Functions.npcSay(actor, "Where is that fool hiding?");
 						wait = true;
 						return true;
+						
 					case 8:
 						wait_timeout = System.currentTimeMillis() + 60000;
 						wait = true;
 						return true;
 				}
 			}
+			
 			wait_timeout = 0;
 			wait = false;
 			current_point++;
+			
 			if (current_point >= points.length)
 			{
 				current_point = 0;
 			}
+			
 			addTaskMove(points[current_point], true);
 			doTask();
 			return true;
 		}
+		
 		if (randomAnimation())
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	

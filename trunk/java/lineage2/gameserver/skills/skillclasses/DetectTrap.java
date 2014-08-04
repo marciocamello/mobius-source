@@ -50,9 +50,11 @@ public class DetectTrap extends Skill
 			if ((target != null) && target.isTrap())
 			{
 				TrapInstance trap = (TrapInstance) target;
+				
 				if (trap.getLevel() <= getPower())
 				{
 					trap.setDetected(true);
+					
 					for (Player player : World.getAroundPlayers(trap))
 					{
 						player.sendPacket(new NpcInfo(trap, player));
@@ -60,6 +62,7 @@ public class DetectTrap extends Skill
 				}
 			}
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());

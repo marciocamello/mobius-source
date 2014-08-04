@@ -26,7 +26,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class BlacksmithInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -64,6 +64,7 @@ public class BlacksmithInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (CastleManorManager.getInstance().isDisabled())
 		{
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
@@ -71,20 +72,25 @@ public class BlacksmithInstance extends NpcInstance
 			player.sendPacket(html);
 			return;
 		}
+		
 		int condition = validateCondition(player);
+		
 		if (condition <= COND_ALL_FALSE)
 		{
 			return;
 		}
+		
 		if (condition == COND_BUSY_BECAUSE_OF_SIEGE)
 		{
 			return;
 		}
+		
 		if (condition == COND_OWNER)
 		{
 			if (command.startsWith("Chat"))
 			{
 				int val = 0;
+				
 				try
 				{
 					val = Integer.parseInt(command.substring(5));
@@ -95,6 +101,7 @@ public class BlacksmithInstance extends NpcInstance
 				catch (NumberFormatException nfe)
 				{
 				}
+				
 				showMessageWindow(player, val);
 			}
 			else
@@ -114,6 +121,7 @@ public class BlacksmithInstance extends NpcInstance
 		player.sendActionFailed();
 		String filename = "castle/blacksmith/castleblacksmith-no.htm";
 		int condition = validateCondition(player);
+		
 		if (condition > COND_ALL_FALSE)
 		{
 			if (condition == COND_BUSY_BECAUSE_OF_SIEGE)
@@ -132,6 +140,7 @@ public class BlacksmithInstance extends NpcInstance
 				}
 			}
 		}
+		
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		html.setFile(filename);
 		html.replace("%castleid%", Integer.toString(getCastle().getId()));
@@ -149,6 +158,7 @@ public class BlacksmithInstance extends NpcInstance
 		{
 			return COND_OWNER;
 		}
+		
 		if ((getCastle() != null) && (getCastle().getId() > 0))
 		{
 			if (player.getClan() != null)
@@ -163,6 +173,7 @@ public class BlacksmithInstance extends NpcInstance
 				}
 			}
 		}
+		
 		return COND_ALL_FALSE;
 	}
 }

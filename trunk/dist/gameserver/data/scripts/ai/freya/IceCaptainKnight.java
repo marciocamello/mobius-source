@@ -42,6 +42,7 @@ public class IceCaptainKnight extends Fighter
 	{
 		super.onEvtSpawn();
 		final Reflection r = getActor().getReflection();
+		
 		for (Player p : r.getPlayers())
 		{
 			this.notifyEvent(CtrlEvent.EVT_AGGRESSION, p, 5);

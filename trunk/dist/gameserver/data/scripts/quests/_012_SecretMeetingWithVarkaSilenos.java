@@ -52,6 +52,7 @@ public class _012_SecretMeetingWithVarkaSilenos extends Quest implements ScriptF
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("guard_cadmon_q0012_0104.htm"))
 		{
 			st.setCond(1);
@@ -71,6 +72,7 @@ public class _012_SecretMeetingWithVarkaSilenos extends Quest implements ScriptF
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -80,6 +82,7 @@ public class _012_SecretMeetingWithVarkaSilenos extends Quest implements ScriptF
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == CADMON)
 		{
 			if (cond == 0)
@@ -117,6 +120,7 @@ public class _012_SecretMeetingWithVarkaSilenos extends Quest implements ScriptF
 				htmltext = "herald_naran_q0012_0201.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

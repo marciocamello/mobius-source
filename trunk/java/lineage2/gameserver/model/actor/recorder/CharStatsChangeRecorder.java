@@ -129,6 +129,7 @@ public class CharStatsChangeRecorder<T extends Creature>
 		{
 			_changes |= flag;
 		}
+		
 		return newValue;
 	}
 	
@@ -145,6 +146,7 @@ public class CharStatsChangeRecorder<T extends Creature>
 		{
 			_changes |= flag;
 		}
+		
 		return newValue;
 	}
 	
@@ -161,6 +163,7 @@ public class CharStatsChangeRecorder<T extends Creature>
 		{
 			_changes |= flag;
 		}
+		
 		return newValue;
 	}
 	
@@ -178,6 +181,7 @@ public class CharStatsChangeRecorder<T extends Creature>
 		{
 			_changes |= flag;
 		}
+		
 		return newValue;
 	}
 	
@@ -196,6 +200,7 @@ public class CharStatsChangeRecorder<T extends Creature>
 			oldValue.clear();
 			oldValue.addAll(newValue);
 		}
+		
 		return oldValue;
 	}
 	

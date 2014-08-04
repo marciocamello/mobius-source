@@ -36,6 +36,7 @@ public class _10291_FireDragonDestroyer extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("klein_q10291_04.htm"))
 		{
 			st.setState(STARTED);
@@ -43,6 +44,7 @@ public class _10291_FireDragonDestroyer extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			st.giveItems(PoorNecklace, 1);
 		}
+		
 		return htmltext;
 	}
 	
@@ -52,6 +54,7 @@ public class _10291_FireDragonDestroyer extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Klein)
 		{
 			if (cond == 0)
@@ -92,6 +95,7 @@ public class _10291_FireDragonDestroyer extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -100,12 +104,14 @@ public class _10291_FireDragonDestroyer extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if ((cond == 1) && (npcId == Valakas))
 		{
 			st.takeAllItems(PoorNecklace);
 			st.giveItems(ValorNecklace, 1);
 			st.setCond(2);
 		}
+		
 		return null;
 	}
 	

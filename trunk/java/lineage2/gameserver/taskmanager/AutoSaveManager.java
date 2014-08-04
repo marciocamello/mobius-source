@@ -74,6 +74,7 @@ public class AutoSaveManager extends SteppingRunnableQueueManager
 				{
 					return;
 				}
+				
 				player.store(true);
 			}
 		}, delay, delay);

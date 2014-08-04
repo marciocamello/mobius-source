@@ -113,34 +113,41 @@ public class KashaNegate implements ScriptFile
 	public void onLoad()
 	{
 		_zoneListener = new ZoneListener();
+		
 		for (String element : ZONES)
 		{
 			int random = Rnd.get(60 * 1000 * 1, 60 * 1000 * 7);
 			int message;
 			Zone zone = ReflectionUtils.getZone(element);
 			ThreadPoolManager.getInstance().schedule(new CampDestroyTask(zone), random);
+			
 			if (random > (5 * 60000))
 			{
 				message = random - (5 * 60000);
 				ThreadPoolManager.getInstance().schedule(new BroadcastMessageTask(0, zone), message);
 			}
+			
 			if (random > (3 * 60000))
 			{
 				message = random - (3 * 60000);
 				ThreadPoolManager.getInstance().schedule(new BroadcastMessageTask(0, zone), message);
 			}
+			
 			if (random > 60000)
 			{
 				message = random - 60000;
 				ThreadPoolManager.getInstance().schedule(new BroadcastMessageTask(0, zone), message);
 			}
+			
 			if (random > 15000)
 			{
 				message = random - 15000;
 				ThreadPoolManager.getInstance().schedule(new BroadcastMessageTask(1, zone), message);
 			}
+			
 			zone.addListener(_zoneListener);
 		}
+		
 		_buffTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new BuffTask(), TICK_BUFF_DELAY, TICK_BUFF_DELAY);
 	}
 	
@@ -156,6 +163,7 @@ public class KashaNegate implements ScriptFile
 			Zone zone = ReflectionUtils.getZone(element);
 			zone.removeListener(_zoneListener);
 		}
+		
 		if (_buffTask != null)
 		{
 			_buffTask.cancel(false);
@@ -184,9 +192,11 @@ public class KashaNegate implements ScriptFile
 			actor.setDisplayId(npcId);
 			DeleteObject d = new DeleteObject(actor);
 			L2GameServerPacket su = new StatusUpdate(actor).addAttribute(StatusUpdateField.CUR_HP, StatusUpdateField.MAX_HP);
+			
 			for (Player player : World.getAroundPlayers(actor))
 			{
 				player.sendPacket(d, new NpcInfo(actor, player));
+				
 				if (player.getTarget() == actor)
 				{
 					player.setTarget(null);
@@ -204,6 +214,7 @@ public class KashaNegate implements ScriptFile
 	void destroyKashaInCamp(Zone zone)
 	{
 		boolean _debuffed = false;
+		
 		for (Creature c : zone.getObjects())
 		{
 			if (c.isMonster())
@@ -222,8 +233,10 @@ public class KashaNegate implements ScriptFile
 									_debuffed = true;
 								}
 							}
+							
 							c.doDie(null);
 						}
+						
 						ThreadPoolManager.getInstance().schedule(new KashaRespawn((NpcInstance) c), 10000L);
 					}
 				}
@@ -245,6 +258,7 @@ public class KashaNegate implements ScriptFile
 				case 0:
 					c.sendPacket(Msg.I_CAN_FEEL_THAT_THE_ENERGY_BEING_FLOWN_IN_THE_KASHA_S_EYE_IS_GETTING_STRONGER_RAPIDLY);
 					break;
+				
 				case 1:
 					c.sendPacket(Msg.KASHA_S_EYE_PITCHES_AND_TOSSES_LIKE_IT_S_ABOUT_TO_EXPLODE);
 					break;
@@ -278,6 +292,7 @@ public class KashaNegate implements ScriptFile
 		public void runImpl()
 		{
 			int npcId = getRealNpcId(_n);
+			
 			if (KASHARESPAWN.containsKey(npcId))
 			{
 				changeAura(_n, KASHARESPAWN.get(npcId));
@@ -419,11 +434,13 @@ public class KashaNegate implements ScriptFile
 			{
 				Zone zone = ReflectionUtils.getZone(element);
 				NpcInstance npc = getKasha(zone);
+				
 				if ((npc != null) && (zone != null))
 				{
 					int curseLvl = 0;
 					int yearningLvl = 0;
 					int despairLvl = 0;
+					
 					for (Creature c : zone.getObjects())
 					{
 						if (c.isMonster() && !c.isDead())
@@ -442,11 +459,13 @@ public class KashaNegate implements ScriptFile
 							}
 						}
 					}
+					
 					if ((yearningLvl > 0) || (curseLvl > 0) || (despairLvl > 0))
 					{
 						for (Creature cha : zone.getInsidePlayables())
 						{
 							boolean casted = false;
+							
 							if (curseLvl > 0)
 							{
 								addEffect(npc, cha.getPlayer(), SkillTable.getInstance().getInfo(_buffs[0], curseLvl), true);
@@ -456,6 +475,7 @@ public class KashaNegate implements ScriptFile
 							{
 								cha.getEffectList().stopEffect(_buffs[0]);
 							}
+							
 							if (yearningLvl > 0)
 							{
 								addEffect(npc, cha.getPlayer(), SkillTable.getInstance().getInfo(_buffs[1], yearningLvl), true);
@@ -465,6 +485,7 @@ public class KashaNegate implements ScriptFile
 							{
 								cha.getEffectList().stopEffect(_buffs[1]);
 							}
+							
 							if (despairLvl > 0)
 							{
 								addEffect(npc, cha.getPlayer(), SkillTable.getInstance().getInfo(_buffs[2], despairLvl), true);
@@ -474,6 +495,7 @@ public class KashaNegate implements ScriptFile
 							{
 								cha.getEffectList().stopEffect(_buffs[2]);
 							}
+							
 							if (casted && Rnd.chance(10))
 							{
 								cha.sendPacket(Msg.THE_KASHA_S_EYE_GIVES_YOU_A_STRANGE_FEELING);
@@ -493,6 +515,7 @@ public class KashaNegate implements ScriptFile
 	NpcInstance getKasha(Zone zone)
 	{
 		List<NpcInstance> mob = new ArrayList<>();
+		
 		for (Creature c : zone.getObjects())
 		{
 			if (c.isMonster() && !c.isDead())
@@ -506,6 +529,7 @@ public class KashaNegate implements ScriptFile
 				}
 			}
 		}
+		
 		return mob.size() > 0 ? mob.get(Rnd.get(mob.size())) : null;
 	}
 	
@@ -519,13 +543,16 @@ public class KashaNegate implements ScriptFile
 	void addEffect(NpcInstance actor, Creature player, Skill skill, boolean animation)
 	{
 		List<Effect> effect = player.getEffectList().getEffectsBySkillId(skill.getId());
+		
 		if (skill.getLevel() > 0)
 		{
 			if (effect != null)
 			{
 				effect.get(0).exit();
 			}
+			
 			skill.getEffects(actor, player, false, false);
+			
 			if (animation)
 			{
 				actor.broadcastPacket(new MagicSkillUse(actor, player, skill.getId(), skill.getLevel(), skill.getHitTime(), 0));
@@ -544,6 +571,7 @@ public class KashaNegate implements ScriptFile
 		{
 			return npc.getDisplayId();
 		}
+		
 		return npc.getNpcId();
 	}
 }

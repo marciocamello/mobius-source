@@ -58,11 +58,13 @@ public class SecondaryPasswordAuth
 		long _unBanTime = 0;
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_PARAMS);
 			statement.setString(1, login);
+			
 			for (ResultSet rs = statement.executeQuery(); rs.next();)
 			{
 				_unBanTime = rs.getLong("banTime");
@@ -89,6 +91,7 @@ public class SecondaryPasswordAuth
 		long _unBanTime = System.currentTimeMillis() + (banTime * 60000);
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = L2DatabaseFactory.getInstance().getConnection();
@@ -117,11 +120,13 @@ public class SecondaryPasswordAuth
 		int _loginAttempts = 0;
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_PARAMS);
 			statement.setString(1, login);
+			
 			for (ResultSet rs = statement.executeQuery(); rs.next();)
 			{
 				_loginAttempts = rs.getInt("wrongAttempts");
@@ -147,6 +152,7 @@ public class SecondaryPasswordAuth
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = L2DatabaseFactory.getInstance().getConnection();
@@ -175,11 +181,13 @@ public class SecondaryPasswordAuth
 		String _password = null;
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_PARAMS);
 			statement.setString(1, login);
+			
 			for (ResultSet rs = statement.executeQuery(); rs.next();)
 			{
 				_password = rs.getString("account_password");
@@ -205,6 +213,7 @@ public class SecondaryPasswordAuth
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = L2DatabaseFactory.getInstance().getConnection();

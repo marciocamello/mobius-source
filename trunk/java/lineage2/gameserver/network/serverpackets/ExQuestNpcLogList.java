@@ -33,12 +33,14 @@ public class ExQuestNpcLogList extends L2GameServerPacket
 		_questId = state.getQuest().getQuestIntId();
 		int cond = state.getCond();
 		List<QuestNpcLogInfo> vars = state.getQuest().getNpcLogList(cond);
+		
 		if (vars == null)
 		{
 			return;
 		}
 		
 		_logList = new ArrayList<>(vars.size());
+		
 		for (QuestNpcLogInfo entry : vars)
 		{
 			int[] i = new int[2];
@@ -54,6 +56,7 @@ public class ExQuestNpcLogList extends L2GameServerPacket
 		writeEx(0xC6);
 		writeD(_questId);
 		writeC(_logList.size());
+		
 		for (int i = 0; i < _logList.size(); i++)
 		{
 			int[] values = _logList.get(i);

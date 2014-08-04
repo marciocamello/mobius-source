@@ -61,10 +61,12 @@ public class _138_TempleChampionPart2 extends Quest implements ScriptFile
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
 		QuestState qs = player.getQuestState(_137_TempleChampionPart1.class);
+		
 		if ((qs != null) && qs.isCompleted() && (player.getQuestState(getClass()) == null))
 		{
 			newQuestState(player, STARTED);
 		}
+		
 		return "";
 	}
 	
@@ -72,6 +74,7 @@ public class _138_TempleChampionPart2 extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("sylvain_q0138_04.htm"))
 		{
 			st.setCond(1);
@@ -122,6 +125,7 @@ public class _138_TempleChampionPart2 extends Quest implements ScriptFile
 			st.playSound(SOUND_MIDDLE);
 			st.unset("talk");
 		}
+		
 		return htmltext;
 	}
 	
@@ -131,6 +135,7 @@ public class _138_TempleChampionPart2 extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == SYLVAIN)
 		{
 			if (cond == 0)
@@ -225,6 +230,7 @@ public class _138_TempleChampionPart2 extends Quest implements ScriptFile
 				htmltext = "preacher_sla_q0138_13.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -235,11 +241,13 @@ public class _138_TempleChampionPart2 extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		if (st.getCond() == 4)
 		{
 			if (st.getQuestItemsCount(RELIC) < 10)
 			{
 				st.giveItems(RELIC, 1);
+				
 				if (st.getQuestItemsCount(RELIC) >= 10)
 				{
 					st.playSound(SOUND_MIDDLE);
@@ -250,6 +258,7 @@ public class _138_TempleChampionPart2 extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 }

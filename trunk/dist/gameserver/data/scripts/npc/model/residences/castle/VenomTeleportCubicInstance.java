@@ -25,7 +25,7 @@ import lineage2.gameserver.utils.Location;
 public class VenomTeleportCubicInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -59,6 +59,7 @@ public class VenomTeleportCubicInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		player.teleToLocation(LOCS[Rnd.get(LOCS.length)]);
 	}
 	

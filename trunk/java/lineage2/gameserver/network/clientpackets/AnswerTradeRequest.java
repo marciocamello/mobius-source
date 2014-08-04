@@ -50,29 +50,36 @@ public class AnswerTradeRequest extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		Request request = activeChar.getRequest();
+		
 		if ((request == null) || !request.isTypeOf(L2RequestType.TRADE_REQUEST))
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (!request.isInProgress())
 		{
 			request.cancel();
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (activeChar.isOutOfControl())
 		{
 			request.cancel();
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		Player requestor = request.getRequestor();
+		
 		if (requestor == null)
 		{
 			request.cancel();
@@ -80,24 +87,28 @@ public class AnswerTradeRequest extends L2GameClientPacket
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (requestor.getRequest() != request)
 		{
 			request.cancel();
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (_response == 0)
 		{
 			request.cancel();
 			requestor.sendPacket(new SystemMessage2(SystemMsg.C1_HAS_DENIED_YOUR_REQUEST_TO_TRADE).addString(activeChar.getName()));
 			return;
 		}
+		
 		if (!activeChar.isInRangeZ(requestor, Creature.INTERACTION_DISTANCE))
 		{
 			request.cancel();
 			activeChar.sendPacket(SystemMsg.YOUR_TARGET_IS_OUT_OF_RANGE);
 			return;
 		}
+		
 		if (requestor.isActionsDisabled())
 		{
 			request.cancel();
@@ -105,6 +116,7 @@ public class AnswerTradeRequest extends L2GameClientPacket
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		try
 		{
 			new Request(L2RequestType.TRADE, activeChar, requestor);

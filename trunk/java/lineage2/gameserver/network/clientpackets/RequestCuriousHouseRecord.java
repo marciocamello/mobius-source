@@ -28,17 +28,18 @@ public class RequestCuriousHouseRecord extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		
 	}
 	
 	@Override
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		player.sendPacket(new ExCuriousHouseResult());
 		_log.info("[IMPLEMENT ME!] RequestCuriousHouseRecord (maybe trigger)");
 	}

@@ -43,6 +43,7 @@ public class _10504_JewelOfAntharas extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("antharas_watchman_theodric_q10504_04.htm"))
 		{
 			st.setState(STARTED);
@@ -50,6 +51,7 @@ public class _10504_JewelOfAntharas extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			st.giveItems(CLEAR_CRYSTAL, 1);
 		}
+		
 		return htmltext;
 	}
 	
@@ -59,6 +61,7 @@ public class _10504_JewelOfAntharas extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == THEODRIC)
 		{
 			if (cond == 0)
@@ -108,6 +111,7 @@ public class _10504_JewelOfAntharas extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -123,6 +127,7 @@ public class _10504_JewelOfAntharas extends Quest implements ScriptFile
 			st.giveItems(FILLED_CRYSTAL_ANTHARAS, 1);
 			st.setCond(2);
 		}
+		
 		return null;
 	}
 	

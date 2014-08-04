@@ -29,15 +29,10 @@ public class _150_ExtremeChallengePrimalMotherResurrected extends Quest implemen
 	public _150_ExtremeChallengePrimalMotherResurrected()
 	{
 		super(false);
-		
 		addStartNpc(LIMIER);
-		
 		addTalkId(LIMIER);
-		
 		addKillId(ISXINA_EXTRIM);
-		
 		addQuestItem(SIGN_OF_SHILEN);
-		
 		addLevelCheck(97, 100);
 	}
 	
@@ -45,12 +40,14 @@ public class _150_ExtremeChallengePrimalMotherResurrected extends Quest implemen
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("33293-5.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return htmltext;
 	}
 	
@@ -85,10 +82,12 @@ public class _150_ExtremeChallengePrimalMotherResurrected extends Quest implemen
 			{
 				return "33293.htm";
 			}
+			
 			if (cond == 1)
 			{
 				return "33293-7.htm";
 			}
+			
 			if (cond == 2)
 			{
 				st.takeItems(SIGN_OF_SHILEN, -1);
@@ -98,6 +97,7 @@ public class _150_ExtremeChallengePrimalMotherResurrected extends Quest implemen
 				return "33293-9.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -109,8 +109,8 @@ public class _150_ExtremeChallengePrimalMotherResurrected extends Quest implemen
 			st.giveItems(SIGN_OF_SHILEN, 1);
 			st.setCond(2);
 		}
-		return null;
 		
+		return null;
 	}
 	
 	@Override

@@ -31,7 +31,7 @@ import org.apache.commons.lang3.StringUtils;
 public abstract class CTBBossInstance extends MonsterInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -76,6 +76,7 @@ public abstract class CTBBossInstance extends MonsterInstance
 			doCast(SKILL, attacker, false);
 			return;
 		}
+		
 		super.reduceCurrentHp(damage, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
 	}
 	
@@ -88,14 +89,17 @@ public abstract class CTBBossInstance extends MonsterInstance
 	public boolean isAttackable(Creature attacker)
 	{
 		CTBSiegeClanObject clan = _matchTeamObject.getSiegeClan();
+		
 		if ((clan != null) && attacker.isPlayable())
 		{
 			Player player = attacker.getPlayer();
+			
 			if (player.getClan() == clan.getClan())
 			{
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	

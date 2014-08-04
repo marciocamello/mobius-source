@@ -36,10 +36,12 @@ public class RequestReload extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		player.sendUserInfo();
 		World.showObjectsToPlayer(player);
 	}

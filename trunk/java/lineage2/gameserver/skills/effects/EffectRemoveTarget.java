@@ -60,11 +60,14 @@ public final class EffectRemoveTarget extends Effect
 		{
 			((DefaultAI) getEffected().getAI()).setGlobalAggro(System.currentTimeMillis() + 3000L);
 		}
+		
 		getEffected().setTarget(null);
+		
 		if (_doStopTarget)
 		{
 			getEffected().stopMove();
 		}
+		
 		getEffected().abortAttack(true, true);
 		getEffected().abortCast(true, true);
 		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, getEffector());

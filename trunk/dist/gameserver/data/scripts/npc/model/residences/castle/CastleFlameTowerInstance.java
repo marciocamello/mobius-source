@@ -28,7 +28,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class CastleFlameTowerInstance extends SiegeToggleNpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -54,13 +54,16 @@ public class CastleFlameTowerInstance extends SiegeToggleNpcInstance
 	public void onDeathImpl(Creature killer)
 	{
 		CastleSiegeEvent event = getEvent(CastleSiegeEvent.class);
+		
 		if ((event == null) || !event.isInProgress())
 		{
 			return;
 		}
+		
 		for (String s : _zoneList)
 		{
 			List<CastleDamageZoneObject> objects = event.getObjects(s);
+			
 			for (CastleDamageZoneObject zone : objects)
 			{
 				zone.getZone().setActive(false);

@@ -34,7 +34,6 @@ public class ExBR_ProductInfo extends L2GameServerPacket
 		}
 		
 		writeEx(0xD8);
-		
 		writeD(_productId.getProductId()); // product id
 		writeD(_productId.getPoints()); // points
 		writeD(_productId.getComponents().size()); // size

@@ -22,7 +22,6 @@ public class ExGetCrystalizingFail extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0xE2);
-		
 	}
 	
 }

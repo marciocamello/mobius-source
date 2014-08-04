@@ -47,29 +47,36 @@ public class ConfirmMenteeAdd extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		Request request = activeChar.getRequest();
+		
 		if ((request == null) || !request.isTypeOf(Request.L2RequestType.MENTEE))
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (!request.isInProgress())
 		{
 			request.cancel();
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (activeChar.isOutOfControl())
 		{
 			request.cancel();
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		Player requestor = request.getRequestor();
+		
 		if (requestor == null)
 		{
 			request.cancel();
@@ -77,18 +84,21 @@ public class ConfirmMenteeAdd extends L2GameClientPacket
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (requestor.getRequest() != request)
 		{
 			request.cancel();
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (_answer == 0)
 		{
 			request.cancel();
 			requestor.sendPacket(new SystemMessage2(SystemMsg.S1_HAS_DECLINED_BECOMING_YOUR_MENTEE).addString(activeChar.getName()));
 			return;
 		}
+		
 		if (requestor.isActionsDisabled())
 		{
 			request.cancel();
@@ -96,6 +106,7 @@ public class ConfirmMenteeAdd extends L2GameClientPacket
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		try
 		{
 			requestor.getMentorSystem().addMentee(activeChar);

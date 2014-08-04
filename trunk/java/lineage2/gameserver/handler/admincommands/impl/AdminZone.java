@@ -70,10 +70,12 @@ public class AdminZone implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		if ((activeChar == null) || !activeChar.getPlayerAccess().CanTeleport)
 		{
 			return false;
 		}
+		
 		switch (command)
 		{
 			case admin_zone_check:
@@ -82,16 +84,20 @@ public class AdminZone implements IAdminCommandHandler
 				activeChar.sendMessage("Zone list:");
 				List<Zone> zones = new ArrayList<>();
 				World.getZones(zones, activeChar.getLoc(), activeChar.getReflection());
+				
 				for (Zone zone : zones)
 				{
 					activeChar.sendMessage(zone.getType().toString() + ", name: " + zone.getName() + ", state: " + (zone.isActive() ? "active" : "not active") + ", inside: " + zone.checkIfInZone(activeChar) + "/" + zone.checkIfInZone(activeChar.getX(), activeChar.getY(), activeChar.getZ()));
 				}
+				
 				break;
 			}
+			
 			case admin_region:
 			{
 				activeChar.sendMessage("Current region: " + activeChar.getCurrentRegion());
 				activeChar.sendMessage("Objects list:");
+				
 				for (GameObject o : activeChar.getCurrentRegion())
 				{
 					if (o != null)
@@ -99,24 +105,29 @@ public class AdminZone implements IAdminCommandHandler
 						activeChar.sendMessage(o.toString());
 					}
 				}
+				
 				break;
 			}
+			
 			case admin_vis_count:
 			{
 				activeChar.sendMessage("Current region: " + activeChar.getCurrentRegion());
 				activeChar.sendMessage("Players count: " + World.getAroundPlayers(activeChar).size());
 				break;
 			}
+			
 			case admin_pos:
 			{
 				String pos = activeChar.getX() + ", " + activeChar.getY() + ", " + activeChar.getZ() + ", " + activeChar.getHeading() + " Geo [" + ((activeChar.getX() - World.MAP_MIN_X) >> 4) + ", " + ((activeChar.getY() - World.MAP_MIN_Y) >> 4) + "] Ref " + activeChar.getReflectionId();
 				activeChar.sendMessage("Pos: " + pos);
 				break;
 			}
+			
 			case admin_domain:
 			{
 				DomainArea domain = MapRegionManager.getInstance().getRegionData(DomainArea.class, activeChar);
 				Castle castle = domain != null ? ResidenceHolder.getInstance().getResidence(Castle.class, domain.getId()) : null;
+				
 				if (castle != null)
 				{
 					activeChar.sendMessage("Domain: " + castle.getName());
@@ -127,6 +138,7 @@ public class AdminZone implements IAdminCommandHandler
 				}
 			}
 		}
+		
 		return true;
 	}
 	

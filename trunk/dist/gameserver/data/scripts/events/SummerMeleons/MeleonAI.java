@@ -49,11 +49,14 @@ public class MeleonAI extends Fighter
 		public void runImpl()
 		{
 			final MeleonInstance actor = getActor();
+			
 			if (actor == null)
 			{
 				return;
 			}
+			
 			SimpleSpawner spawn = null;
+			
 			try
 			{
 				spawn = new SimpleSpawner(NpcHolder.getInstance().getTemplate(_npcId));
@@ -66,6 +69,7 @@ public class MeleonAI extends Fighter
 			{
 				e.printStackTrace();
 			}
+			
 			_timeToUnspawn = Long.MAX_VALUE;
 			actor.deleteMe();
 		}
@@ -219,7 +223,7 @@ public class MeleonAI extends Fighter
 		"As long as you attack me grow, and grow up, you'll be up to two times!",
 		"You hit or tickle? Can not make it ... Pathetic attempts!",
 		"Only musical weapon opens watermelon. Your blunt weapon is not an assistant!"
-		};
+	};
 	/**
 	 * Field textTooFast.
 	 */
@@ -233,7 +237,7 @@ public class MeleonAI extends Fighter
 		"What obscenity! Come without these jokes!",
 		"Show imagination, come back, what are you topcheshsya!",
 		"Wake up as you leave, you're quite dull and boring ..."
-		};
+	};
 	/**
 	 * Field textSuccess0.
 	 */
@@ -244,7 +248,7 @@ public class MeleonAI extends Fighter
 		"I see, I perceive, this is China, oh my God, I am a Chinese watermelon!",
 		"Let's pour more between the first and second pereryvchik small!",
 		"Refueling on the fly!"
-		};
+	};
 	/**
 	 * Field textFail0.
 	 */
@@ -253,7 +257,7 @@ public class MeleonAI extends Fighter
 		"You deaf? I need nectar, and not something that you pour you!",
 		"What you're a loser and look like cheerfully! I need nectar Leu quality, otherwise get shish!",
 		"And again, fail, how long can? You want me to laugh?"
-		};
+	};
 	/**
 	 * Field textSuccess1.
 	 */
@@ -263,7 +267,7 @@ public class MeleonAI extends Fighter
 		"That's so good, so very good, do not stop!",
 		"I grow quickly, have time to rebound? Ha!",
 		"You're a master of his craft! More, please!"
-		};
+	};
 	/**
 	 * Field textFail1.
 	 */
@@ -273,7 +277,7 @@ public class MeleonAI extends Fighter
 		"Muddler! Ignoramus! Boobies! Loser! Again you fed me slop!",
 		"Let's have actively spud, watered well, what kind of pathetic attempts?",
 		"You want me to so he died? Come to grow right!"
-		};
+	};
 	/**
 	 * Field textSuccess2.
 	 */
@@ -282,7 +286,7 @@ public class MeleonAI extends Fighter
 		"Here! Whew! Come on, and soon I'll love you forever!",
 		"At this rate, I will be the emperor of watermelons!",
 		"Very good, I put you on the Ladder of agriculture, you wisely me grow!"
-		};
+	};
 	/**
 	 * Field textFail2.
 	 */
@@ -292,7 +296,7 @@ public class MeleonAI extends Fighter
 		"I'll give you a sign Loser of the Year, just as bad loser can cope with such a simple thing!",
 		"Well, Feed me, huh? Normally only, not here this dubious nectar ...",
 		"And you're not a terrorist event? Can you hunger morish me? What do you want?"
-		};
+	};
 	/**
 	 * Field textSuccess3.
 	 */
@@ -301,7 +305,7 @@ public class MeleonAI extends Fighter
 		"Life is getting better, do not be sorry lei!",
 		"You taught this mom do you have a great work!",
 		"Why do you have growth? There be? I will be very juicy watermelon!"
-		};
+	};
 	/**
 	 * Field textFail3.
 	 */
@@ -309,7 +313,7 @@ public class MeleonAI extends Fighter
 	{
 		"Is that Vodicka of sewage? You know what nectar?",
 		"Gods, save me from this sad sack, he's all the spoils!"
-		};
+	};
 	/**
 	 * Field textSuccess4.
 	 */
@@ -317,7 +321,7 @@ public class MeleonAI extends Fighter
 	{
 		"That's a charge! Have you slipped into nectar? There's just 40 degrees! Ahahaha I get drunk!",
 		"You're risking not grow watermelon, and the whole rocket! Adds, come again!"
-		};
+	};
 	/**
 	 * Field textFail4.
 	 */
@@ -325,7 +329,7 @@ public class MeleonAI extends Fighter
 	{
 		"Oh, how I want to drink ... Nectar, please ...",
 		"Lei nectar here and see what happens!"
-		};
+	};
 	/**
 	 * Field _npcId.
 	 */
@@ -377,14 +381,17 @@ public class MeleonAI extends Fighter
 		if (System.currentTimeMillis() > _timeToUnspawn)
 		{
 			_timeToUnspawn = Long.MAX_VALUE;
+			
 			if (_polimorphTask != null)
 			{
 				_polimorphTask.cancel(false);
 				_polimorphTask = null;
 			}
+			
 			final MeleonInstance actor = getActor();
 			actor.deleteMe();
 		}
+		
 		return false;
 	}
 	
@@ -397,19 +404,23 @@ public class MeleonAI extends Fighter
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
 		final MeleonInstance actor = getActor();
+		
 		if ((actor == null) || (skill.getId() != 2005))
 		{
 			return;
 		}
+		
 		if ((actor.getNpcId() != Young_Watermelon) && (actor.getNpcId() != Young_Honey_Watermelon))
 		{
 			return;
 		}
+		
 		switch (_tryCount)
 		{
 			case 0:
 				_tryCount++;
 				_lastNectarUse = System.currentTimeMillis();
+				
 				if (Rnd.chance(50))
 				{
 					_nectar++;
@@ -421,15 +432,19 @@ public class MeleonAI extends Fighter
 					Functions.npcSay(actor, textFail0[Rnd.get(textFail0.length)]);
 					actor.broadcastPacket(new MagicSkillUse(actor, actor, Squash_Poisoned, 1, NECTAR_REUSE, 0));
 				}
+				
 				break;
+			
 			case 1:
 				if ((System.currentTimeMillis() - _lastNectarUse) < NECTAR_REUSE)
 				{
 					Functions.npcSay(actor, textTooFast[Rnd.get(textTooFast.length)]);
 					return;
 				}
+				
 				_tryCount++;
 				_lastNectarUse = System.currentTimeMillis();
+				
 				if (Rnd.chance(50))
 				{
 					_nectar++;
@@ -441,15 +456,19 @@ public class MeleonAI extends Fighter
 					Functions.npcSay(actor, textFail1[Rnd.get(textFail1.length)]);
 					actor.broadcastPacket(new MagicSkillUse(actor, actor, Squash_Poisoned, 1, NECTAR_REUSE, 0));
 				}
+				
 				break;
+			
 			case 2:
 				if ((System.currentTimeMillis() - _lastNectarUse) < NECTAR_REUSE)
 				{
 					Functions.npcSay(actor, textTooFast[Rnd.get(textTooFast.length)]);
 					return;
 				}
+				
 				_tryCount++;
 				_lastNectarUse = System.currentTimeMillis();
+				
 				if (Rnd.chance(50))
 				{
 					_nectar++;
@@ -461,15 +480,19 @@ public class MeleonAI extends Fighter
 					Functions.npcSay(actor, textFail2[Rnd.get(textFail2.length)]);
 					actor.broadcastPacket(new MagicSkillUse(actor, actor, Squash_Poisoned, 1, NECTAR_REUSE, 0));
 				}
+				
 				break;
+			
 			case 3:
 				if ((System.currentTimeMillis() - _lastNectarUse) < NECTAR_REUSE)
 				{
 					Functions.npcSay(actor, textTooFast[Rnd.get(textTooFast.length)]);
 					return;
 				}
+				
 				_tryCount++;
 				_lastNectarUse = System.currentTimeMillis();
+				
 				if (Rnd.chance(50))
 				{
 					_nectar++;
@@ -481,15 +504,19 @@ public class MeleonAI extends Fighter
 					Functions.npcSay(actor, textFail3[Rnd.get(textFail3.length)]);
 					actor.broadcastPacket(new MagicSkillUse(actor, actor, Squash_Poisoned, 1, NECTAR_REUSE, 0));
 				}
+				
 				break;
+			
 			case 4:
 				if ((System.currentTimeMillis() - _lastNectarUse) < NECTAR_REUSE)
 				{
 					Functions.npcSay(actor, textTooFast[Rnd.get(textTooFast.length)]);
 					return;
 				}
+				
 				_tryCount++;
 				_lastNectarUse = System.currentTimeMillis();
+				
 				if (Rnd.chance(50))
 				{
 					_nectar++;
@@ -501,6 +528,7 @@ public class MeleonAI extends Fighter
 					Functions.npcSay(actor, textFail4[Rnd.get(textFail4.length)]);
 					actor.broadcastPacket(new MagicSkillUse(actor, actor, Squash_Poisoned, 1, NECTAR_REUSE, 0));
 				}
+				
 				if (_npcId == Young_Watermelon)
 				{
 					if (_nectar < 3)
@@ -531,6 +559,7 @@ public class MeleonAI extends Fighter
 						_npcId = Rain_Honey_Watermelon;
 					}
 				}
+				
 				_polimorphTask = ThreadPoolManager.getInstance().schedule(new PolimorphTask(), NECTAR_REUSE);
 				break;
 		}
@@ -545,6 +574,7 @@ public class MeleonAI extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final MeleonInstance actor = getActor();
+		
 		if ((actor != null) && Rnd.chance(5))
 		{
 			Functions.npcSay(actor, textOnAttack[Rnd.get(textOnAttack.length)]);
@@ -560,11 +590,14 @@ public class MeleonAI extends Fighter
 	{
 		_tryCount = -1;
 		final MeleonInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		double dropMod = 1.5;
+		
 		switch (_npcId)
 		{
 			case Defective_Watermelon:
@@ -572,38 +605,46 @@ public class MeleonAI extends Fighter
 				Functions.npcSay(actor, "Watermelon is open!");
 				Functions.npcSay(actor, "Oho-ho Yes then crumbs, try better!");
 				break;
+			
 			case Rain_Watermelon:
 				dropMod *= 2;
 				Functions.npcSay(actor, "Watermelon is open!");
 				Functions.npcSay(actor, "Ay-ay-ay! Good catch!");
 				break;
+			
 			case Large_Rain_Watermelon:
 				dropMod *= 4;
 				Functions.npcSay(actor, "Watermelon is open!");
 				Functions.npcSay(actor, "Wow! What treasures!");
 				break;
+			
 			case Defective_Honey_Watermelon:
 				dropMod *= 12.5;
 				Functions.npcSay(actor, "Watermelon is open!");
 				Functions.npcSay(actor, "Spent a lot, and fished out a little!");
 				break;
+			
 			case Rain_Honey_Watermelon:
 				dropMod *= 25;
 				Functions.npcSay(actor, "Watermelon is open!");
 				Functions.npcSay(actor, "Boom-boom-boom! Nice catch!");
 				break;
+			
 			case Large_Rain_Honey_Watermelon:
 				dropMod *= 50;
 				Functions.npcSay(actor, "Watermelon is open!");
 				Functions.npcSay(actor, "Fanfare! You have opened a giant watermelon! Untold riches on earth! Catch them!");
 				break;
+			
 			default:
 				dropMod *= 0;
 				Functions.npcSay(actor, "I will not give anything to you, if I die like this ...");
 				Functions.npcSay(actor, "Этот позор навеки покроет твое им�?...");
 				break;
 		}
+		
 		super.onEvtDead(actor);
+		
 		if (dropMod > 0)
 		{
 			if (_polimorphTask != null)
@@ -613,9 +654,11 @@ public class MeleonAI extends Fighter
 				Log.add("SummerMeleons :: Player " + actor.getSpawner().getName() + " tried to use cheat (SquashAI clone): killed " + actor + " after polymorfing started", "illegal-actions");
 				return;
 			}
+			
 			for (RewardData d : _dropList)
 			{
 				List<RewardItem> itd = d.roll(null, dropMod);
+				
 				for (RewardItem i : itd)
 				{
 					actor.dropItem(actor.getSpawner(), i.itemId, i.count);

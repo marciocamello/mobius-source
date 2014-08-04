@@ -1134,6 +1134,7 @@ public final class EnchantSkillLearn
 	{
 		int level = _level % 100;
 		int chance;
+		
 		switch (_maxLvl)
 		{
 			case 10:
@@ -1141,16 +1142,19 @@ public final class EnchantSkillLearn
 				chance = Math.min(_chance10[level].length - 1, ply.getLevel() - 85);
 				return _chance10[level][chance];
 			}
+			
 			case 15:
 			{
 				chance = Math.min(_chance15[level].length - 1, ply.getLevel() - 76);
 				return _chance15[level][chance];
 			}
+			
 			default:
 			{
 				chance = Math.min(_chance[level].length - 1, ply.getLevel() - 76);
 			}
 		}
+		
 		return _chance[level][chance];
 	}
 	
@@ -1198,18 +1202,22 @@ public final class EnchantSkillLearn
 		{
 			return true;
 		}
+		
 		if (obj == null)
 		{
 			return false;
 		}
+		
 		if (getClass() != obj.getClass())
 		{
 			return false;
 		}
+		
 		if (!(obj instanceof EnchantSkillLearn))
 		{
 			return false;
 		}
+		
 		EnchantSkillLearn other = (EnchantSkillLearn) obj;
 		return (getId() == other.getId()) && (getLevel() == other.getLevel());
 	}

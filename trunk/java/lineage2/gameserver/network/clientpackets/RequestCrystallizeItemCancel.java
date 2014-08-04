@@ -33,6 +33,7 @@ public class RequestCrystallizeItemCancel extends L2GameClientPacket
 		{
 			return;
 		}
+		
 		activeChar.sendActionFailed();
 	}
 }

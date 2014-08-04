@@ -66,6 +66,7 @@ public class _117_OceanOfDistantStar extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("railman_abu_q0117_0104.htm"))
 		{
 			st.setCond(1);
@@ -114,6 +115,7 @@ public class _117_OceanOfDistantStar extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -124,10 +126,12 @@ public class _117_OceanOfDistantStar extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int id = st.getState();
 		int cond = 0;
+		
 		if (id != CREATED)
 		{
 			cond = st.getCond();
 		}
+		
 		if (npcId == Abey)
 		{
 			if (cond == 0)
@@ -193,6 +197,7 @@ public class _117_OceanOfDistantStar extends Quest implements ScriptFile
 		{
 			htmltext = "ghost_of_railroadman_q0117_0901.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -206,9 +211,11 @@ public class _117_OceanOfDistantStar extends Quest implements ScriptFile
 				st.giveItems(BookOfGreyStar, 1);
 				st.playSound(SOUND_ITEMGET);
 			}
+			
 			st.setCond(8);
 			st.setState(STARTED);
 		}
+		
 		return null;
 	}
 }

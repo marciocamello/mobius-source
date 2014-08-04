@@ -113,6 +113,7 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 	public void onLoad()
 	{
 		CharListenerList.addGlobal(this);
+		
 		if (isActive())
 		{
 			_active = true;
@@ -141,10 +142,12 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 	public void startEvent()
 	{
 		Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive("glitter", true))
 		{
 			loadMultiSell();
@@ -156,6 +159,7 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 		{
 			player.sendMessage("Event 'L2 Medal Collection Event' already started.");
 		}
+		
 		_active = true;
 		show("admin/events.htm", player);
 	}
@@ -166,10 +170,12 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 	public void stopEvent()
 	{
 		Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive("glitter", false))
 		{
 			unSpawnEventManagers();
@@ -180,6 +186,7 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 		{
 			player.sendMessage("Event 'L2 Medal Collection Event' not started.");
 		}
+		
 		_active = false;
 		show("admin/events.htm", player);
 	}
@@ -410,10 +417,12 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 		{
 			return;
 		}
+		
 		for (File f : multiSellFiles)
 		{
 			MultiSellHolder.getInstance().parseFile(f);
 		}
+		
 		MultiSellLoaded = true;
 	}
 	
@@ -425,12 +434,14 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 	public void onReload()
 	{
 		unSpawnEventManagers();
+		
 		if (MultiSellLoaded)
 		{
 			for (File f : multiSellFiles)
 			{
 				MultiSellHolder.getInstance().remove(f);
 			}
+			
 			MultiSellLoaded = false;
 		}
 	}
@@ -457,10 +468,12 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 		if (_active && SimpleCheckDrop(cha, killer))
 		{
 			long count = Util.rollDrop(1, 1, Config.EVENT_GLITTMEDAL_NORMAL_CHANCE * killer.getPlayer().getRateItems() * ((MonsterInstance) cha).getTemplate().rateHp * 10000L, true);
+			
 			if (count > 0)
 			{
 				addItem(killer.getPlayer(), EVENT_MEDAL, count);
 			}
+			
 			if ((killer.getPlayer().getInventory().getCountOf(Badge_of_Wolf) == 0) && Rnd.chance(Config.EVENT_GLITTMEDAL_GLIT_CHANCE * killer.getPlayer().getRateItems() * ((MonsterInstance) cha).getTemplate().rateHp))
 			{
 				addItem(killer.getPlayer(), EVENT_GLITTMEDAL, 1);
@@ -474,16 +487,19 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 	public void glitchang()
 	{
 		Player player = getSelf();
+		
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;
 		}
+		
 		if (getItemCount(player, EVENT_MEDAL) >= 1000)
 		{
 			removeItem(player, EVENT_MEDAL, 1000);
 			addItem(player, EVENT_GLITTMEDAL, 10);
 			return;
 		}
+		
 		player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
 	}
 	
@@ -493,10 +509,12 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 	public void medal()
 	{
 		Player player = getSelf();
+		
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;
 		}
+		
 		if (getItemCount(player, Badge_of_Wolf) >= 1)
 		{
 			show("scripts/events/glitmedal/event_col_agent1_q0996_05.htm", player);
@@ -517,6 +535,7 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 			show("scripts/events/glitmedal/event_col_agent1_q0996_02.htm", player);
 			return;
 		}
+		
 		show("scripts/events/glitmedal/event_col_agent1_q0996_01.htm", player);
 	}
 	
@@ -526,10 +545,12 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 	public void medalb()
 	{
 		Player player = getSelf();
+		
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;
 		}
+		
 		if (getItemCount(player, Badge_of_Wolf) >= 1)
 		{
 			show("scripts/events/glitmedal/event_col_agent2_q0996_05.htm", player);
@@ -550,6 +571,7 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 			show("scripts/events/glitmedal/event_col_agent2_q0996_02.htm", player);
 			return;
 		}
+		
 		show("scripts/events/glitmedal/event_col_agent2_q0996_01.htm", player);
 		return;
 	}
@@ -560,10 +582,12 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 	public void game()
 	{
 		Player player = getSelf();
+		
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;
 		}
+		
 		if (getItemCount(player, Badge_of_Fox) >= 1)
 		{
 			if (getItemCount(player, EVENT_GLITTMEDAL) >= 40)
@@ -571,6 +595,7 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 				show("scripts/events/glitmedal/event_col_agent2_q0996_11.htm", player);
 				return;
 			}
+			
 			show("scripts/events/glitmedal/event_col_agent2_q0996_12.htm", player);
 			return;
 		}
@@ -581,6 +606,7 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 				show("scripts/events/glitmedal/event_col_agent2_q0996_11.htm", player);
 				return;
 			}
+			
 			show("scripts/events/glitmedal/event_col_agent2_q0996_12.htm", player);
 			return;
 		}
@@ -591,6 +617,7 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 				show("scripts/events/glitmedal/event_col_agent2_q0996_11.htm", player);
 				return;
 			}
+			
 			show("scripts/events/glitmedal/event_col_agent2_q0996_12.htm", player);
 			return;
 		}
@@ -599,6 +626,7 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 			show("scripts/events/glitmedal/event_col_agent2_q0996_11.htm", player);
 			return;
 		}
+		
 		show("scripts/events/glitmedal/event_col_agent2_q0996_12.htm", player);
 	}
 	
@@ -608,11 +636,14 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 	public void gamea()
 	{
 		Player player = getSelf();
+		
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;
 		}
+		
 		isTalker = Rnd.get(2);
+		
 		if (getItemCount(player, Badge_of_Fox) >= 1)
 		{
 			if (getItemCount(player, EVENT_GLITTMEDAL) >= 40)
@@ -632,6 +663,7 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 					return;
 				}
 			}
+			
 			show("scripts/events/glitmedal/event_col_agent2_q0996_26.htm", player);
 			return;
 		}
@@ -654,6 +686,7 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 					return;
 				}
 			}
+			
 			show("scripts/events/glitmedal/event_col_agent2_q0996_26.htm", player);
 			return;
 		}
@@ -676,9 +709,11 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 					return;
 				}
 			}
+			
 			show("scripts/events/glitmedal/event_col_agent2_q0996_26.htm", player);
 			return;
 		}
+		
 		if (getItemCount(player, EVENT_GLITTMEDAL) >= 5)
 		{
 			if (isTalker == 1)
@@ -695,6 +730,7 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 				return;
 			}
 		}
+		
 		show("scripts/events/glitmedal/event_col_agent2_q0996_26.htm", player);
 	}
 	
@@ -704,11 +740,14 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 	public void gameb()
 	{
 		Player player = getSelf();
+		
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;
 		}
+		
 		isTalker = Rnd.get(2);
+		
 		if (getItemCount(player, Badge_of_Fox) >= 1)
 		{
 			if (getItemCount(player, EVENT_GLITTMEDAL) >= 40)
@@ -728,6 +767,7 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 					return;
 				}
 			}
+			
 			show("scripts/events/glitmedal/event_col_agent2_q0996_26.htm", player);
 			return;
 		}
@@ -750,6 +790,7 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 					return;
 				}
 			}
+			
 			show("scripts/events/glitmedal/event_col_agent2_q0996_26.htm", player);
 			return;
 		}
@@ -772,9 +813,11 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 					return;
 				}
 			}
+			
 			show("scripts/events/glitmedal/event_col_agent2_q0996_26.htm", player);
 			return;
 		}
+		
 		if (getItemCount(player, EVENT_GLITTMEDAL) >= 5)
 		{
 			if (isTalker == 1)
@@ -791,6 +834,7 @@ public class glitmedal extends Functions implements ScriptFile, OnDeathListener,
 				return;
 			}
 		}
+		
 		show("scripts/events/glitmedal/event_col_agent2_q0996_26.htm", player);
 		return;
 	}

@@ -53,13 +53,17 @@ public class _10338_SeizeYourDestiny extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		Player player = qs.getPlayer();
+		
 		if (player == null)
 		{
 			return null;
 		}
+		
 		String htmltext = null;
 		int cond = qs.getCond();
+		
 		switch (npc.getNpcId())
 		{
 			case CELLPHINE_ID:
@@ -75,39 +79,50 @@ public class _10338_SeizeYourDestiny extends Quest implements ScriptFile
 					{
 						qs.exitCurrentQuest(true);
 					}
+					
 					switch (cond)
 					{
 						case 0:
 							htmltext = "start.htm";
 							break;
+						
 						case 1:
 							htmltext = "0-3.htm";
 					}
 				}
+				
 				break;
+			
 			case HADEL_ID:
 				htmltext = "noqu.htm";
+				
 				switch (cond)
 				{
 					case 1:
 						htmltext = "1-1.htm";
 						break;
+					
 					case 2:
 					case 3:
 						htmltext = "1-5.htm";
 						break;
 				}
+				
 				break;
+			
 			case HERMUNKUS_ID:
 				htmltext = "noqu.htm";
+				
 				switch (cond)
 				{
 					case 3:
 						htmltext = "2-2.htm";
 						break;
 				}
+				
 				break;
 		}
+		
 		return htmltext;
 	}
 	
@@ -115,18 +130,23 @@ public class _10338_SeizeYourDestiny extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (st == null)
 		{
 			return htmltext;
 		}
+		
 		Player player = st.getPlayer();
+		
 		if (player == null)
 		{
 			return htmltext;
 		}
+		
 		if (event.equalsIgnoreCase("MemoryOfDisaster"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(MEMORY_OF_DISASTER_ID))
@@ -138,12 +158,15 @@ public class _10338_SeizeYourDestiny extends Quest implements ScriptFile
 			{
 				ReflectionUtils.enterReflection(player, new MemoryOfDisaster(player), MEMORY_OF_DISASTER_ID);
 			}
+			
 			htmltext = null;
 		}
+		
 		if (npc == null)
 		{
 			return htmltext;
 		}
+		
 		switch (npc.getNpcId())
 		{
 			case CELLPHINE_ID:
@@ -154,7 +177,9 @@ public class _10338_SeizeYourDestiny extends Quest implements ScriptFile
 					st.playSound(SOUND_ACCEPT);
 					htmltext = "0-2.htm";
 				}
+				
 				break;
+			
 			case HADEL_ID:
 				if (event.equalsIgnoreCase("1-5.htm"))
 				{
@@ -164,6 +189,7 @@ public class _10338_SeizeYourDestiny extends Quest implements ScriptFile
 				else if (event.equalsIgnoreCase("EnterInstance"))
 				{
 					Reflection r = player.getActiveReflection();
+					
 					if (r != null)
 					{
 						if (player.canReenterInstance(INSTANCE_ID))
@@ -182,9 +208,12 @@ public class _10338_SeizeYourDestiny extends Quest implements ScriptFile
 							ReflectionUtils.enterReflection(player, new HarnakUndergroundRuins(2), INSTANCE_ID);
 						}
 					}
+					
 					htmltext = null;
 				}
+				
 				break;
+			
 			case HERMUNKUS_ID:
 				if (event.equalsIgnoreCase("accept_scroll"))
 				{
@@ -194,8 +223,10 @@ public class _10338_SeizeYourDestiny extends Quest implements ScriptFile
 					st.exitCurrentQuest(false);
 					htmltext = "2-3.htm";
 				}
+				
 				break;
 		}
+		
 		return htmltext;
 	}
 	
@@ -207,6 +238,7 @@ public class _10338_SeizeYourDestiny extends Quest implements ScriptFile
 			qs.setCond(3);
 			qs.playSound(SOUND_MIDDLE);
 		}
+		
 		return null;
 	}
 	
@@ -214,10 +246,12 @@ public class _10338_SeizeYourDestiny extends Quest implements ScriptFile
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
 		QuestState st = player.getQuestState(getClass());
+		
 		if (st == null)
 		{
 			return null;
 		}
+		
 		if (npc.getNpcId() == HERMUNKUS_ID)
 		{
 			if (npc.getNpcState() == 1)
@@ -233,6 +267,7 @@ public class _10338_SeizeYourDestiny extends Quest implements ScriptFile
 				return "2-3.htm";
 			}
 		}
+		
 		return null;
 	}
 	

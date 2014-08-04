@@ -68,6 +68,7 @@ public class _488_WondersofCaring extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -75,10 +76,12 @@ public class _488_WondersofCaring extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "0-4.htm";
 		}
+		
 		if (event.equalsIgnoreCase("qet_rev"))
 		{
 			htmltext = "1-3.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -88,6 +91,7 @@ public class _488_WondersofCaring extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == Adventurequid)
 		{
 			if (cond == 0)
@@ -147,6 +151,7 @@ public class _488_WondersofCaring extends Quest implements ScriptFile
 				st.playSound(SOUND_FINISH);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -154,16 +159,19 @@ public class _488_WondersofCaring extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		if ((st.getCond() == 1) && ArrayUtils.contains(mobstohunt, npcId) && (st.getQuestItemsCount(Box) < 50))
 		{
 			st.rollAndGive(Box, 1, chance);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		if (st.getQuestItemsCount(Box) >= 50)
 		{
 			st.setCond(2);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return null;
 	}
 }

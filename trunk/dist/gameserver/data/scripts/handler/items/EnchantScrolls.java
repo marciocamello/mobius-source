@@ -38,11 +38,14 @@ public class EnchantScrolls extends ScriptItemHandler
 		{
 			return false;
 		}
+		
 		final Player player = (Player) playable;
+		
 		if (player.getEnchantScroll() != null)
 		{
 			return false;
 		}
+		
 		player.setEnchantScroll(item);
 		player.sendPacket(new ChooseInventoryItem(item.getItemId()));
 		return true;

@@ -49,11 +49,14 @@ public class SquashAI extends Fighter
 		public void runImpl()
 		{
 			final SquashInstance actor = getActor();
+			
 			if (actor == null)
 			{
 				return;
 			}
+			
 			SimpleSpawner spawn = null;
+			
 			try
 			{
 				spawn = new SimpleSpawner(NpcHolder.getInstance().getTemplate(_npcId));
@@ -66,16 +69,17 @@ public class SquashAI extends Fighter
 			{
 				e.printStackTrace();
 			}
+			
 			_timeToUnspawn = Long.MAX_VALUE;
 			actor.deleteMe();
 		}
 	}
-
+	
 	/**
 	 * Field _dropList.
 	 */
 	protected static final RewardData[] _dropList = new RewardData[]
-		{
+	{
 		new RewardData(1539, 1, 5, 15000),
 		new RewardData(1374, 1, 3, 15000),
 		new RewardData(4411, 1, 1, 5000),
@@ -155,7 +159,7 @@ public class SquashAI extends Fighter
 		new RewardData(730, 1, 1, 500),
 		new RewardData(959, 1, 1, 50),
 		new RewardData(960, 1, 1, 300),
-		};
+	};
 	/**
 	 * Field Young_Squash. (value is 12774)
 	 */
@@ -200,16 +204,16 @@ public class SquashAI extends Fighter
 	 * Field textOnSpawn.
 	 */
 	private static final String[] textOnSpawn = new String[]
-		{
+	{
 		"scripts.events.TheFallHarvest.SquashAI.textOnSpawn.0",
 		"scripts.events.TheFallHarvest.SquashAI.textOnSpawn.1",
 		"scripts.events.TheFallHarvest.SquashAI.textOnSpawn.2"
-		};
+	};
 	/**
 	 * Field textOnAttack.
 	 */
 	private static final String[] textOnAttack = new String[]
-		{
+	{
 		"Bites rat-a-tat... to change... body...!",
 		"Ha ha, grew up! Completely on all!",
 		"Cannot to aim all? Had a look all to flow out...",
@@ -219,12 +223,12 @@ public class SquashAI extends Fighter
 		"I eat your attack to grow!",
 		"Time to hit again! Come again!",
 		"Only useful music can open big pumpkin... It can not be opened with weapon!"
-		};
+	};
 	/**
 	 * Field textTooFast.
 	 */
 	private static final String[] textTooFast = new String[]
-		{
+	{
 		"heh heh,looks well hit!",
 		"yo yo? Your skill is mediocre?",
 		"Time to hit again! Come again!",
@@ -233,99 +237,99 @@ public class SquashAI extends Fighter
 		"What is this kind of degree to want to open me? Really is indulges in fantasy!",
 		"Good fighting method. Evidently flies away the fly also can overcome.",
 		"Strives to excel strength oh! But waste your time..."
-		};
+	};
 	/**
 	 * Field textSuccess0.
 	 */
 	private static final String[] textSuccess0 = new String[]
-		{
+	{
 		"The lovely pumpkin young fruit start to glisten when taken to the threshing ground! From now on will be able to grow healthy and strong!",
 		"Oh, Haven't seen for a long time?",
 		"Suddenly, thought as soon as to see my beautiful appearance?",
 		"Well! This is something! Is the nectar?",
 		"Refuels! Drink 5 bottles to be able to grow into the big pumpkin oh!"
-		};
+	};
 	/**
 	 * Field textFail0.
 	 */
 	private static final String[] textFail0 = new String[]
-		{
+	{
 		"If I drink nectar, I can grow up faster!",
 		"Come, believe me, sprinkle a nectar! I can certainly turn the big pumpkin!!!",
 		"Take nectar to come, pumpkin nectar!"
-		};
+	};
 	/**
 	 * Field textSuccess1.
 	 */
 	private static final String[] textSuccess1 = new String[]
-		{
+	{
 		"Wish the big pumpkin!",
 		"completely became the recreation area! Really good!",
 		"Guessed I am mature or am rotten?",
 		"Nectar is just the best! Ha! Ha! Ha!"
-		};
+	};
 	/**
 	 * Field textFail1.
 	 */
 	private static final String[] textFail1 = new String[]
-		{
+	{
 		"oh! Randomly missed! Too quickly sprinkles the nectar?",
 		"If I die like this, you only could get young pumpkin...",
 		"Cultivate a bit faster! The good speech becomes the big pumpkin, the young pumpkin is not good!",
 		"The such small pumpkin you all must eat? Bring the nectar, I can be bigger!"
-		};
+	};
 	/**
 	 * Field textSuccess2.
 	 */
 	private static final String[] textSuccess2 = new String[]
-		{
+	{
 		"Young pumpkin wishing! Has how already grown up?",
 		"Already grew up! Quickly sneaked off...",
 		"Graciousness, is very good. Come again to see, now felt more and more well"
-		};
+	};
 	/**
 	 * Field textFail2.
 	 */
 	private static final String[] textFail2 = new String[]
-		{
+	{
 		"Hey! Was not there! Here is! Here! Not because I can not properly care? Small!",
 		"Wow, stops? Like this got down to have to thank",
 		"Hungry for a nectar oh...",
 		"Do you want the big pumpkin? But I like young pumpkin..."
-		};
+	};
 	/**
 	 * Field textSuccess3.
 	 */
 	private static final String[] textSuccess3 = new String[]
-		{
+	{
 		"Big pumpkin wishing! Ask, to sober!",
 		"Rumble rumble... it's really tasty! Hasn't it?",
 		"Cultivating me just to eat? Good, is casual your... not to give the manna on the suicide!"
-		};
+	};
 	/**
 	 * Field textFail3.
 	 */
 	private static final String[] textFail3 = new String[]
-		{
+	{
 		"Isn't it the water you add? What flavor?",
 		"Master, rescue my... I don't have the nectar flavor, I must die..."
-		};
+	};
 	/**
 	 * Field textSuccess4.
 	 */
 	private static final String[] textSuccess4 = new String[]
-		{
+	{
 		"is very good, does extremely well! Knew what next step should make?",
 		"If you catch me, I give you 10 million adena!!! Agree?"
-		};
+	};
 	/**
 	 * Field textFail4.
 	 */
 	private static final String[] textFail4 = new String[]
-		{
+	{
 		"Hungry for a nectar oh...",
 		"If I drink nectar, I can grow up faster!"
-		};
+	};
 	/**
 	 * Field _npcId.
 	 */
@@ -354,7 +358,7 @@ public class SquashAI extends Fighter
 	 * Field NECTAR_REUSE.
 	 */
 	private static final int NECTAR_REUSE = 3000;
-
+	
 	/**
 	 * Constructor for SquashAI.
 	 * @param actor NpcInstance
@@ -366,7 +370,7 @@ public class SquashAI extends Fighter
 		Functions.npcSayCustomMessage(getActor(), textOnSpawn[Rnd.get(textOnSpawn.length)]);
 		_timeToUnspawn = System.currentTimeMillis() + 120000;
 	}
-
+	
 	/**
 	 * Method thinkActive.
 	 * @return boolean
@@ -377,20 +381,24 @@ public class SquashAI extends Fighter
 		if (System.currentTimeMillis() > _timeToUnspawn)
 		{
 			_timeToUnspawn = Long.MAX_VALUE;
+			
 			if (_polimorphTask != null)
 			{
 				_polimorphTask.cancel(false);
 				_polimorphTask = null;
 			}
+			
 			final SquashInstance actor = getActor();
+			
 			if (actor != null)
 			{
 				actor.deleteMe();
 			}
 		}
+		
 		return false;
 	}
-
+	
 	/**
 	 * Method onEvtSeeSpell.
 	 * @param skill Skill
@@ -400,15 +408,18 @@ public class SquashAI extends Fighter
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
 		final SquashInstance actor = getActor();
+		
 		if ((actor == null) || (skill.getId() != 2005))
 		{
 			return;
 		}
+		
 		switch (_tryCount)
 		{
 			case 0:
 				_tryCount++;
 				_lastNectarUse = System.currentTimeMillis();
+				
 				if (Rnd.chance(50))
 				{
 					_nectar++;
@@ -420,15 +431,19 @@ public class SquashAI extends Fighter
 					Functions.npcSay(actor, textFail0[Rnd.get(textFail0.length)]);
 					actor.broadcastPacket(new MagicSkillUse(actor, actor, Squash_Poisoned, 1, NECTAR_REUSE, 0));
 				}
+				
 				break;
+			
 			case 1:
 				if ((System.currentTimeMillis() - _lastNectarUse) < NECTAR_REUSE)
 				{
 					Functions.npcSay(actor, textTooFast[Rnd.get(textTooFast.length)]);
 					return;
 				}
+				
 				_tryCount++;
 				_lastNectarUse = System.currentTimeMillis();
+				
 				if (Rnd.chance(50))
 				{
 					_nectar++;
@@ -440,15 +455,19 @@ public class SquashAI extends Fighter
 					Functions.npcSay(actor, textFail1[Rnd.get(textFail1.length)]);
 					actor.broadcastPacket(new MagicSkillUse(actor, actor, Squash_Poisoned, 1, NECTAR_REUSE, 0));
 				}
+				
 				break;
+			
 			case 2:
 				if ((System.currentTimeMillis() - _lastNectarUse) < NECTAR_REUSE)
 				{
 					Functions.npcSay(actor, textTooFast[Rnd.get(textTooFast.length)]);
 					return;
 				}
+				
 				_tryCount++;
 				_lastNectarUse = System.currentTimeMillis();
+				
 				if (Rnd.chance(50))
 				{
 					_nectar++;
@@ -460,15 +479,19 @@ public class SquashAI extends Fighter
 					Functions.npcSay(actor, textFail2[Rnd.get(textFail2.length)]);
 					actor.broadcastPacket(new MagicSkillUse(actor, actor, Squash_Poisoned, 1, NECTAR_REUSE, 0));
 				}
+				
 				break;
+			
 			case 3:
 				if ((System.currentTimeMillis() - _lastNectarUse) < NECTAR_REUSE)
 				{
 					Functions.npcSay(actor, textTooFast[Rnd.get(textTooFast.length)]);
 					return;
 				}
+				
 				_tryCount++;
 				_lastNectarUse = System.currentTimeMillis();
+				
 				if (Rnd.chance(50))
 				{
 					_nectar++;
@@ -480,15 +503,19 @@ public class SquashAI extends Fighter
 					Functions.npcSay(actor, textFail3[Rnd.get(textFail3.length)]);
 					actor.broadcastPacket(new MagicSkillUse(actor, actor, Squash_Poisoned, 1, NECTAR_REUSE, 0));
 				}
+				
 				break;
+			
 			case 4:
 				if ((System.currentTimeMillis() - _lastNectarUse) < NECTAR_REUSE)
 				{
 					Functions.npcSay(actor, textTooFast[Rnd.get(textTooFast.length)]);
 					return;
 				}
+				
 				_tryCount++;
 				_lastNectarUse = System.currentTimeMillis();
+				
 				if (Rnd.chance(50))
 				{
 					_nectar++;
@@ -500,6 +527,7 @@ public class SquashAI extends Fighter
 					Functions.npcSay(actor, textFail4[Rnd.get(textFail4.length)]);
 					actor.broadcastPacket(new MagicSkillUse(actor, actor, Squash_Poisoned, 1, NECTAR_REUSE, 0));
 				}
+				
 				if (_npcId == Young_Squash)
 				{
 					if (_nectar < 3)
@@ -530,11 +558,12 @@ public class SquashAI extends Fighter
 						_npcId = High_Quality_Large_Squash;
 					}
 				}
+				
 				_polimorphTask = ThreadPoolManager.getInstance().schedule(new PolimorphTask(), NECTAR_REUSE);
 				break;
 		}
 	}
-
+	
 	/**
 	 * Method onEvtAttacked.
 	 * @param attacker Creature
@@ -544,12 +573,13 @@ public class SquashAI extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final SquashInstance actor = getActor();
+		
 		if ((actor != null) && Rnd.chance(5))
 		{
 			Functions.npcSay(actor, textOnAttack[Rnd.get(textOnAttack.length)]);
 		}
 	}
-
+	
 	/**
 	 * Method onEvtDead.
 	 * @param killer Creature
@@ -559,11 +589,14 @@ public class SquashAI extends Fighter
 	{
 		_tryCount = -1;
 		final SquashInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		double dropMod = 1.5;
+		
 		switch (_npcId)
 		{
 			case Low_Quality_Squash:
@@ -571,38 +604,46 @@ public class SquashAI extends Fighter
 				Functions.npcSay(actor, "The pumpkin opens!!!");
 				Functions.npcSay(actor, "ya yo! Opens! Good thing many...");
 				break;
+			
 			case High_Quality_Squash:
 				dropMod *= 2;
 				Functions.npcSay(actor, "The pumpkin opens!!!");
 				Functions.npcSay(actor, "ya yo! Opens! Good thing many...");
 				break;
+			
 			case King_Squash:
 				dropMod *= 4;
 				Functions.npcSay(actor, "The pumpkin opens!!!");
 				Functions.npcSay(actor, "ya yo! Opens! Good thing many...");
 				break;
+			
 			case Low_Quality_Large_Squash:
 				dropMod *= 12.5;
 				Functions.npcSay(actor, "The pumpkin opens!!!");
 				Functions.npcSay(actor, "ya yo! Opens! Good thing many...");
 				break;
+			
 			case High_Quality_Large_Squash:
 				dropMod *= 25;
 				Functions.npcSay(actor, "The pumpkin opens!!!");
 				Functions.npcSay(actor, "ya yo! Opens! Good thing many...");
 				break;
+			
 			case Emperor_Squash:
 				dropMod *= 50;
 				Functions.npcSay(actor, "The pumpkin opens!!!");
 				Functions.npcSay(actor, "ya yo! Opens! Good thing many...");
 				break;
+			
 			default:
 				dropMod *= 0;
 				Functions.npcSay(actor, "Ouch, if I had died like this, you could obtain nothing!");
 				Functions.npcSay(actor, "The news about my death shouldn't spread, oh!");
 				break;
 		}
+		
 		super.onEvtDead(actor);
+		
 		if (dropMod > 0)
 		{
 			if (_polimorphTask != null)
@@ -612,9 +653,11 @@ public class SquashAI extends Fighter
 				Log.add("TheFallHarvest :: Player " + actor.getSpawner().getName() + " tried to use cheat (SquashAI clone): killed " + actor + " after polymorfing started", "illegal-actions");
 				return;
 			}
+			
 			for (RewardData d : _dropList)
 			{
 				List<RewardItem> itd = d.roll(null, dropMod);
+				
 				for (RewardItem i : itd)
 				{
 					actor.dropItem(actor.getSpawner(), i.itemId, i.count);
@@ -622,7 +665,7 @@ public class SquashAI extends Fighter
 			}
 		}
 	}
-
+	
 	/**
 	 * Method randomAnimation.
 	 * @return boolean
@@ -632,7 +675,7 @@ public class SquashAI extends Fighter
 	{
 		return false;
 	}
-
+	
 	/**
 	 * Method randomWalk.
 	 * @return boolean
@@ -642,7 +685,7 @@ public class SquashAI extends Fighter
 	{
 		return false;
 	}
-
+	
 	/**
 	 * Method getActor.
 	 * @return SquashInstance

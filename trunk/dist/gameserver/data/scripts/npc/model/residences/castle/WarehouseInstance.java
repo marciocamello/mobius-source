@@ -33,7 +33,7 @@ import lineage2.gameserver.utils.WarehouseFunctions;
 public class WarehouseInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -79,20 +79,24 @@ public class WarehouseInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if ((player.getClanPrivileges() & Clan.CP_CS_USE_FUNCTIONS) != Clan.CP_CS_USE_FUNCTIONS)
 		{
 			player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			return;
 		}
+		
 		if (player.getEnchantScroll() != null)
 		{
 			Log.add("Player " + player.getName() + " trying to use enchant exploit[CastleWarehouse], ban this player!", "illegal-actions");
 			player.kick();
 			return;
 		}
+		
 		if (command.startsWith("WithdrawP"))
 		{
 			int val = Integer.parseInt(command.substring(10));
+			
 			if (val == 99)
 			{
 				NpcHtmlMessage html = new NpcHtmlMessage(player, this);
@@ -111,6 +115,7 @@ public class WarehouseInstance extends NpcInstance
 		else if (command.startsWith("WithdrawC"))
 		{
 			int val = Integer.parseInt(command.substring(10));
+			
 			if (val == 99)
 			{
 				NpcHtmlMessage html = new NpcHtmlMessage(player, this);
@@ -129,6 +134,7 @@ public class WarehouseInstance extends NpcInstance
 		else if (command.equalsIgnoreCase("CheckHonoraryItems"))
 		{
 			String filename;
+			
 			if (!player.isClanLeader())
 			{
 				filename = "castle/warehouse/castlewarehouse-notcl.htm";
@@ -137,6 +143,7 @@ public class WarehouseInstance extends NpcInstance
 			{
 				filename = "castle/warehouse/castlewarehouse-5.htm";
 			}
+			
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile(filename);
 			html.replace("%total_items%", String.valueOf(getCastle().getRewardCount()));
@@ -164,6 +171,7 @@ public class WarehouseInstance extends NpcInstance
 			Castle castle = getCastle();
 			String filename;
 			int count = castle.getRewardCount();
+			
 			if (!player.isClanLeader())
 			{
 				filename = "castle/warehouse/castlewarehouse-notcl.htm";
@@ -180,6 +188,7 @@ public class WarehouseInstance extends NpcInstance
 			{
 				filename = "castle/warehouse/castlewarehouse-4.htm";
 			}
+			
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile(filename);
 			player.sendPacket(html);
@@ -187,6 +196,7 @@ public class WarehouseInstance extends NpcInstance
 		else if (command.startsWith("Chat"))
 		{
 			int val = 0;
+			
 			try
 			{
 				val = Integer.parseInt(command.substring(5));
@@ -197,6 +207,7 @@ public class WarehouseInstance extends NpcInstance
 			catch (NumberFormatException nfe)
 			{
 			}
+			
 			showChatWindow(player, val);
 		}
 		else
@@ -217,6 +228,7 @@ public class WarehouseInstance extends NpcInstance
 		player.sendActionFailed();
 		String filename = "castle/warehouse/castlewarehouse-no.htm";
 		int condition = validateCondition(player);
+		
 		if (condition > COND_ALL_FALSE)
 		{
 			if (condition == COND_BUSY_BECAUSE_OF_SIEGE)
@@ -235,6 +247,7 @@ public class WarehouseInstance extends NpcInstance
 				}
 			}
 		}
+		
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		html.setFile(filename);
 		player.sendPacket(html);
@@ -251,6 +264,7 @@ public class WarehouseInstance extends NpcInstance
 		{
 			return COND_OWNER;
 		}
+		
 		if ((getCastle() != null) && (getCastle().getId() > 0))
 		{
 			if (player.getClan() != null)
@@ -265,6 +279,7 @@ public class WarehouseInstance extends NpcInstance
 				}
 			}
 		}
+		
 		return COND_ALL_FALSE;
 	}
 }

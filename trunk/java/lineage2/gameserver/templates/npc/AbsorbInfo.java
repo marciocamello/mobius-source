@@ -80,6 +80,7 @@ public class AbsorbInfo
 		_chance = chance;
 		_cursedChance = cursedChance;
 		_levels = new TIntHashSet(max - min);
+		
 		for (int i = min; i <= max; i++)
 		{
 			_levels.add(i);

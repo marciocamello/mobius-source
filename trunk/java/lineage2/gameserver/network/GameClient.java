@@ -89,11 +89,13 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		setState(GameClientState.DISCONNECTED);
 		player = getActiveChar();
 		setActiveChar(null);
+		
 		if (player != null)
 		{
 			player.setNetConnection(null);
 			player.scheduleDelete();
 		}
+		
 		if (getSessionKey() != null)
 		{
 			if (isAuthed())
@@ -132,16 +134,20 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 	public void markRestoredChar(int charslot)
 	{
 		int objid = getObjectIdForSlot(charslot);
+		
 		if (objid < 0)
 		{
 			return;
 		}
+		
 		if ((_activeChar != null) && (_activeChar.getObjectId() == objid))
 		{
 			_activeChar.setDeleteTimer(0);
 		}
+		
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -166,16 +172,20 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 	public void markToDeleteChar(int charslot)
 	{
 		int objid = getObjectIdForSlot(charslot);
+		
 		if (objid < 0)
 		{
 			return;
 		}
+		
 		if ((_activeChar != null) && (_activeChar.getObjectId() == objid))
 		{
 			_activeChar.setDeleteTimer((int) (System.currentTimeMillis() / 1000));
 		}
+		
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -204,11 +214,14 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		{
 			return;
 		}
+		
 		int objid = getObjectIdForSlot(charslot);
+		
 		if (objid == -1)
 		{
 			return;
 		}
+		
 		CharacterDAO.getInstance().deleteCharByObjId(objid);
 	}
 	
@@ -220,12 +233,15 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 	public Player loadCharFromDisk(int charslot)
 	{
 		int objectId = getObjectIdForSlot(charslot);
+		
 		if (objectId == -1)
 		{
 			return null;
 		}
+		
 		Player character = null;
 		Player oldPlayer = GameObjectsStorage.getPlayer(objectId);
+		
 		if (oldPlayer != null)
 		{
 			if (oldPlayer.isInOfflineMode() || oldPlayer.isLogoutStarted())
@@ -233,20 +249,25 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 				oldPlayer.kick();
 				return null;
 			}
+			
 			oldPlayer.sendPacket(Msg.ANOTHER_PERSON_HAS_LOGGED_IN_WITH_THE_SAME_ACCOUNT);
 			GameClient oldClient = oldPlayer.getNetConnection();
+			
 			if (oldClient != null)
 			{
 				oldClient.setActiveChar(null);
 				oldClient.closeNow(false);
 			}
+			
 			oldPlayer.setNetConnection(this);
 			character = oldPlayer;
 		}
+		
 		if (character == null)
 		{
 			character = Player.restore(objectId);
 		}
+		
 		if (character != null)
 		{
 			setActiveChar(character);
@@ -255,6 +276,7 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		{
 			_log.warn("could not restore obj_id: " + objectId + " in slot:" + charslot);
 		}
+		
 		return character;
 	}
 	
@@ -270,6 +292,7 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 			_log.warn(getLogin() + " tried to modify Character in slot " + charslot + " but no characters exits at that slot.");
 			return -1;
 		}
+		
 		return _charSlotMapping.get(charslot);
 	}
 	
@@ -325,6 +348,7 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 	public void setActiveChar(Player player)
 	{
 		_activeChar = player;
+		
 		if (player != null)
 		{
 			player.setNetConnection(this);
@@ -347,6 +371,7 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 	public void setCharSelection(CharSelectionInfo selectionInfo)
 	{
 		_charSlotMapping.clear();
+		
 		for (CharSelectInfoPackage element : selectionInfo)
 		{
 			int objectId = element.getObjectId();
@@ -538,6 +563,7 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		if (_failedPackets++ >= 10)
 		{
 			_log.warn("Too many client packet fails, connection closed : " + this);
+			
 			if (!Config.ALLOW_PACKET_FAIL)
 			{
 				closeNow(true);
@@ -553,6 +579,7 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		if (_unknownPackets++ >= 10)
 		{
 			_log.warn("Too many client unknown packets, connection closed : " + this);
+			
 			if (!Config.ALLOW_PACKET_FAIL)
 			{
 				closeNow(true);

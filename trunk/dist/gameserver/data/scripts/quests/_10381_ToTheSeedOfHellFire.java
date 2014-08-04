@@ -46,12 +46,9 @@ public class _10381_ToTheSeedOfHellFire extends Quest implements ScriptFile
 	public _10381_ToTheSeedOfHellFire()
 	{
 		super(false);
-		
 		addStartNpc(KEUCEREUS);
-		
 		addTalkId(KBALDIR);
 		addTalkId(SIZRAK);
-		
 		addLevelCheck(97, 99);
 	}
 	
@@ -67,12 +64,14 @@ public class _10381_ToTheSeedOfHellFire extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "kserth_q10381_03.htm";
 		}
+		
 		if (event.equalsIgnoreCase("quest_next"))
 		{
 			st.setCond(2);
 			st.playSound(SOUND_MIDDLE);
 			htmltext = "kbarldire_q10381_03.htm";
 		}
+		
 		if (event.equalsIgnoreCase("quest_done"))
 		{
 			st.giveItems(ADENA_ID, 3256740);
@@ -81,6 +80,7 @@ public class _10381_ToTheSeedOfHellFire extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			htmltext = "sofa_sizraku_q10381_03.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -110,6 +110,7 @@ public class _10381_ToTheSeedOfHellFire extends Quest implements ScriptFile
 				htmltext = "kserth_q10381_04.htm";
 			}
 		}
+		
 		if (npcId == KBALDIR)
 		{
 			if (cond == 2)
@@ -121,6 +122,7 @@ public class _10381_ToTheSeedOfHellFire extends Quest implements ScriptFile
 				htmltext = "kbarldire_q10381_01.htm";
 			}
 		}
+		
 		if (npcId == SIZRAK)
 		{
 			if (cond == 2)
@@ -128,6 +130,7 @@ public class _10381_ToTheSeedOfHellFire extends Quest implements ScriptFile
 				htmltext = "sofa_sizraku_q10381_01.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

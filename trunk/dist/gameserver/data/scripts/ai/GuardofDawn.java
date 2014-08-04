@@ -119,16 +119,20 @@ public class GuardofDawn extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (!noCheckPlayers)
 		{
 			checkAroundPlayers(actor);
 		}
+		
 		if (_def_think)
 		{
 			doTask();
 			return true;
 		}
+		
 		moveToEnd = !moveToEnd;
+		
 		if (!moveToEnd)
 		{
 			addTaskMove(getEndPoint(), true);
@@ -137,6 +141,7 @@ public class GuardofDawn extends DefaultAI
 		{
 			addTaskMove(getStartPoint(), true);
 		}
+		
 		doTask();
 		return true;
 	}
@@ -159,6 +164,7 @@ public class GuardofDawn extends DefaultAI
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	

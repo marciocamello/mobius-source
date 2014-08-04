@@ -41,7 +41,7 @@ import org.slf4j.LoggerFactory;
 public abstract class Spawner extends EventOwner implements Cloneable
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -195,6 +195,7 @@ public abstract class Spawner extends EventOwner implements Cloneable
 		{
 			_referenceCount = amount;
 		}
+		
 		_maximumCount = amount;
 	}
 	
@@ -204,10 +205,12 @@ public abstract class Spawner extends EventOwner implements Cloneable
 	public void deleteAll()
 	{
 		stopRespawn();
+		
 		for (NpcInstance npc : _spawned)
 		{
 			npc.deleteMe();
 		}
+		
 		_spawned.clear();
 		_respawnTime = 0;
 		_scheduledCount = 0;
@@ -264,6 +267,7 @@ public abstract class Spawner extends EventOwner implements Cloneable
 		{
 			doSpawn(false);
 		}
+		
 		_doRespawn = true;
 		return _currentCount;
 	}
@@ -323,6 +327,7 @@ public abstract class Spawner extends EventOwner implements Cloneable
 		{
 			_log.warn("respawn delay is negative");
 		}
+		
 		_nativeRespawnDelay = respawnDelay;
 		_respawnDelay = respawnDelay;
 		_respawnDelayRandom = respawnDelayRandom;
@@ -360,15 +365,19 @@ public abstract class Spawner extends EventOwner implements Cloneable
 			_currentCount++;
 			return null;
 		}
+		
 		NpcInstance tmp = template.getNewInstance();
+		
 		if (tmp == null)
 		{
 			return null;
 		}
+		
 		if (!spawn)
 		{
 			spawn = _respawnTime <= ((System.currentTimeMillis() / 1000) + MIN_RESPAWN_DELAY);
 		}
+		
 		return initNpc(tmp, spawn, set);
 	}
 	
@@ -387,17 +396,21 @@ public abstract class Spawner extends EventOwner implements Cloneable
 		mob.setSpawn(this);
 		mob.setSpawnedLoc(newLoc);
 		mob.setUnderground(GeoEngine.getHeight(newLoc, getReflection().getGeoIndex()) < GeoEngine.getHeight(newLoc.clone().changeZ(5000), getReflection().getGeoIndex()));
+		
 		for (GlobalEvent e : getEvents())
 		{
 			mob.addEvent(e);
 		}
+		
 		if (spawn)
 		{
 			mob.setReflection(getReflection());
+			
 			if (mob.isMonster())
 			{
 				((MonsterInstance) mob).setChampion();
 			}
+			
 			mob.spawnMe(newLoc);
 			_currentCount++;
 		}
@@ -407,6 +420,7 @@ public abstract class Spawner extends EventOwner implements Cloneable
 			_scheduledCount++;
 			SpawnTaskManager.getInstance().addSpawnTask(mob, (_respawnTime * 1000L) - System.currentTimeMillis());
 		}
+		
 		_spawned.add(mob);
 		_lastSpawn = mob;
 		return mob;
@@ -421,14 +435,17 @@ public abstract class Spawner extends EventOwner implements Cloneable
 	public void decreaseCount0(NpcTemplate template, NpcInstance spawnedNpc, long deadTime)
 	{
 		_currentCount--;
+		
 		if (_currentCount < 0)
 		{
 			_currentCount = 0;
 		}
+		
 		if (_respawnDelay == 0)
 		{
 			return;
 		}
+		
 		if (_doRespawn && ((_scheduledCount + _currentCount) < _maximumCount))
 		{
 			_scheduledCount++;

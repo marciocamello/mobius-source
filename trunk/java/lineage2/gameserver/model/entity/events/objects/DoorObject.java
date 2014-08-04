@@ -24,7 +24,7 @@ import lineage2.gameserver.model.instances.DoorInstance;
 public class DoorObject implements SpawnableObject, InitableObject
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -80,6 +80,7 @@ public class DoorObject implements SpawnableObject, InitableObject
 	public void despawnObject(GlobalEvent event)
 	{
 		Reflection ref = event.getReflection();
+		
 		if (ref == ReflectionManager.DEFAULT)
 		{
 			refreshObject(event);
@@ -105,11 +106,13 @@ public class DoorObject implements SpawnableObject, InitableObject
 		{
 			_door.addEvent(event);
 		}
+		
 		if (_door.getCurrentHp() <= 0)
 		{
 			_door.decayMe();
 			_door.spawnMe();
 		}
+		
 		_door.setCurrentHp(_door.getMaxHp() * (isWeak() ? 0.5 : 1.), true);
 		close(event);
 	}

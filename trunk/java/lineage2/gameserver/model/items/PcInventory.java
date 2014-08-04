@@ -109,10 +109,12 @@ public class PcInventory extends Inventory
 	public long getAdena()
 	{
 		ItemInstance _adena = getItemByItemId(57);
+		
 		if (_adena == null)
 		{
 			return 0;
 		}
+		
 		return _adena.getCount();
 	}
 	
@@ -123,10 +125,12 @@ public class PcInventory extends Inventory
 	public long getBeautyShopCoin()
 	{
 		ItemInstance _bscoin = getItemByItemId(Config.BEAUTY_SHOP_COIN_ITEM_ID);
+		
 		if (_bscoin == null)
 		{
 			return 0;
 		}
+		
 		return _bscoin.getCount();
 	}
 	
@@ -158,10 +162,12 @@ public class PcInventory extends Inventory
 	public int getPaperdollAugmentationId(int slot)
 	{
 		ItemInstance item = _paperdoll[slot];
+		
 		if ((item != null) && item.isAugmented())
 		{
 			return item.getAugmentationId();
 		}
+		
 		return 0;
 	}
 	
@@ -175,10 +181,12 @@ public class PcInventory extends Inventory
 	{
 		Player player = getActor();
 		int itemId = super.getPaperdollItemId(slot);
+		
 		if ((slot == PAPERDOLL_RHAND) && (itemId == 0) && player.isClanAirShipDriver())
 		{
 			itemId = 13556;
 		}
+		
 		return itemId;
 	}
 	
@@ -187,10 +195,12 @@ public class PcInventory extends Inventory
 	{
 		Player player = getActor();
 		int itemId = super.getVisualItemId(slot);
+		
 		if ((slot == PAPERDOLL_RHAND) && (itemId == 0) && player.isClanAirShipDriver())
 		{
 			itemId = 13556;
 		}
+		
 		return itemId;
 	}
 	
@@ -229,10 +239,13 @@ public class PcInventory extends Inventory
 			{
 				continue;
 			}
+			
 			boolean needUnequipSkills = getActor().getWeaponsExpertisePenalty() > 0;
+			
 			if (item.getTemplate().getAttachedSkills().length > 0)
 			{
 				boolean has = getActor().getSkillLevel(item.getTemplate().getAttachedSkills()[0].getId()) > 0;
+				
 				if (needUnequipSkills && has)
 				{
 					ItemSkillsListener.getInstance().onUnequip(item.getEquipSlot(), item, getActor());
@@ -245,6 +258,7 @@ public class PcInventory extends Inventory
 			else if (item.getTemplate().getEnchant4Skill() != null)
 			{
 				boolean has = getActor().getSkillLevel(item.getTemplate().getEnchant4Skill().getId()) > 0;
+				
 				if (needUnequipSkills && has)
 				{
 					ItemSkillsListener.getInstance().onUnequip(item.getEquipSlot(), item, getActor());
@@ -279,6 +293,7 @@ public class PcInventory extends Inventory
 	public void refreshEquip()
 	{
 		isRefresh = true;
+		
 		for (ItemInstance item : getItems())
 		{
 			if (item.isEquipped())
@@ -293,6 +308,7 @@ public class PcInventory extends Inventory
 				_listeners.onEquip(-1, item);
 			}
 		}
+		
 		isRefresh = false;
 	}
 	
@@ -303,25 +319,31 @@ public class PcInventory extends Inventory
 	public void sort(int[][] order)
 	{
 		boolean needSort = false;
+		
 		for (int[] element : order)
 		{
 			ItemInstance item = getItemByObjectId(element[0]);
+			
 			if (item == null)
 			{
 				continue;
 			}
+			
 			if (item.getLocation() != ItemLocation.INVENTORY)
 			{
 				continue;
 			}
+			
 			if (item.getLocData() == element[1])
 			{
 				continue;
 			}
+			
 			item.setLocData(element[1]);
 			item.setJdbcState(JdbcEntityState.UPDATED);
 			needSort = true;
 		}
+		
 		if (needSort)
 		{
 			CollectionUtils.eqSort(_items, ItemOrderComparator.getInstance());
@@ -377,6 +399,7 @@ public class PcInventory extends Inventory
 	{
 		int[] arrowsId = arrows[bow.getCrystalType().externalOrdinal];
 		ItemInstance ret = null;
+		
 		for (int id : arrowsId)
 		{
 			if ((ret = getItemByItemId(id)) != null)
@@ -384,6 +407,7 @@ public class PcInventory extends Inventory
 				return ret;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -436,6 +460,7 @@ public class PcInventory extends Inventory
 	{
 		int[] boltsId = bolts[xbow.getCrystalType().externalOrdinal];
 		ItemInstance ret = null;
+		
 		for (int id : boltsId)
 		{
 			if ((ret = getItemByItemId(id)) != null)
@@ -443,6 +468,7 @@ public class PcInventory extends Inventory
 				return ret;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -456,10 +482,12 @@ public class PcInventory extends Inventory
 		int last_lure = 0;
 		Player owner = getActor();
 		String LastLure = owner.getVar("LastLure");
+		
 		if ((LastLure != null) && !LastLure.isEmpty())
 		{
 			last_lure = Integer.valueOf(LastLure);
 		}
+		
 		for (ItemInstance temp : getItems())
 		{
 			if (temp.getItemType() == EtcItemType.BAIT)
@@ -474,6 +502,7 @@ public class PcInventory extends Inventory
 				}
 			}
 		}
+		
 		return res;
 	}
 	
@@ -488,6 +517,7 @@ public class PcInventory extends Inventory
 		{
 			return;
 		}
+		
 		_lockType = lock;
 		_lockItems = items;
 		getActor().sendItemList(false);
@@ -502,6 +532,7 @@ public class PcInventory extends Inventory
 		{
 			return;
 		}
+		
 		_lockType = LockType.NONE;
 		_lockItems = ArrayUtils.EMPTY_INT_ARRAY;
 		getActor().sendItemList(false);
@@ -518,8 +549,10 @@ public class PcInventory extends Inventory
 		{
 			case INCLUDE:
 				return ArrayUtils.contains(_lockItems, item.getItemId());
+				
 			case EXCLUDE:
 				return !ArrayUtils.contains(_lockItems, item.getItemId());
+				
 			default:
 				return false;
 		}
@@ -551,14 +584,17 @@ public class PcInventory extends Inventory
 	protected void onRestoreItem(ItemInstance item)
 	{
 		super.onRestoreItem(item);
+		
 		if (item.getItemType() == EtcItemType.RUNE)
 		{
 			_listeners.onEquip(-1, item);
 		}
+		
 		if (item.isTemporalItem())
 		{
 			item.startTimer(new LifeTimeTask(item));
 		}
+		
 		if (item.isCursed())
 		{
 			CursedWeaponsManager.getInstance().checkPlayer(getActor(), item);
@@ -573,14 +609,17 @@ public class PcInventory extends Inventory
 	protected void onAddItem(ItemInstance item)
 	{
 		super.onAddItem(item);
+		
 		if (item.getItemType() == EtcItemType.RUNE)
 		{
 			_listeners.onEquip(-1, item);
 		}
+		
 		if (item.isTemporalItem())
 		{
 			item.startTimer(new LifeTimeTask(item));
 		}
+		
 		if (item.isCursed())
 		{
 			CursedWeaponsManager.getInstance().checkPlayer(getActor(), item);
@@ -596,10 +635,12 @@ public class PcInventory extends Inventory
 	{
 		super.onRemoveItem(item);
 		getActor().removeItemFromShortCut(item.getObjectId());
+		
 		if (item.getItemType() == EtcItemType.RUNE)
 		{
 			_listeners.onUnequip(-1, item);
 		}
+		
 		if (item.isTemporalItem())
 		{
 			item.stopTimer();
@@ -615,6 +656,7 @@ public class PcInventory extends Inventory
 	protected void onEquip(int slot, ItemInstance item)
 	{
 		super.onEquip(slot, item);
+		
 		if (item.isShadowItem())
 		{
 			item.startTimer(new ShadowLifeTimeTask(item));
@@ -630,6 +672,7 @@ public class PcInventory extends Inventory
 	protected void onUnequip(int slot, ItemInstance item)
 	{
 		super.onUnequip(slot, item);
+		
 		if (item.isShadowItem())
 		{
 			item.stopTimer();
@@ -644,20 +687,25 @@ public class PcInventory extends Inventory
 	{
 		final int ownerId = getOwnerId();
 		writeLock();
+		
 		try
 		{
 			Collection<ItemInstance> items = _itemsDAO.getItemsByOwnerIdAndLoc(ownerId, getBaseLocation());
+			
 			for (ItemInstance item : items)
 			{
 				_items.add(item);
 				onRestoreItem(item);
 			}
+			
 			CollectionUtils.eqSort(_items, ItemOrderComparator.getInstance());
 			items = _itemsDAO.getItemsByOwnerIdAndLoc(ownerId, getEquipLocation());
+			
 			for (ItemInstance item : items)
 			{
 				_items.add(item);
 				onRestoreItem(item);
+				
 				if (item.getEquipSlot() >= PAPERDOLL_MAX)
 				{
 					item.setLocation(getBaseLocation());
@@ -665,6 +713,7 @@ public class PcInventory extends Inventory
 					item.setEquipped(false);
 					continue;
 				}
+				
 				setPaperdollItem(item.getEquipSlot(), item);
 			}
 		}
@@ -683,6 +732,7 @@ public class PcInventory extends Inventory
 	public void store()
 	{
 		writeLock();
+		
 		try
 		{
 			_itemsDAO.update(_items);
@@ -702,6 +752,7 @@ public class PcInventory extends Inventory
 	{
 		Player actor = getActor();
 		actor.sendPacket(new InventoryUpdate().addNewItem(item));
+		
 		if (item.getTemplate().getAgathionEnergy() > 0)
 		{
 			actor.sendPacket(new ExBR_AgathionEnergyInfo(1, item));
@@ -717,6 +768,7 @@ public class PcInventory extends Inventory
 	{
 		Player actor = getActor();
 		actor.sendPacket(new InventoryUpdate().addModifiedItem(item));
+		
 		if (item.getTemplate().getAgathionEnergy() > 0)
 		{
 			actor.sendPacket(new ExBR_AgathionEnergyInfo(1, item));
@@ -780,21 +832,25 @@ public class PcInventory extends Inventory
 		public void runImpl()
 		{
 			Player player = getActor();
+			
 			if (!item.isEquipped())
 			{
 				return;
 			}
+			
 			int mana;
 			synchronized (item)
 			{
 				item.setLifeTime(item.getLifeTime() - 1);
 				mana = item.getShadowLifeTime();
+				
 				if (mana <= 0)
 				{
 					destroyItem(item);
 				}
 			}
 			SystemMessage sm = null;
+			
 			if (mana == 10)
 			{
 				sm = new SystemMessage(SystemMessage.S1S_REMAINING_MANA_IS_NOW_10);
@@ -815,6 +871,7 @@ public class PcInventory extends Inventory
 			{
 				player.sendPacket(new InventoryUpdate().addModifiedItem(item));
 			}
+			
 			if (sm != null)
 			{
 				sm.addItemName(item.getItemId());
@@ -853,11 +910,13 @@ public class PcInventory extends Inventory
 			synchronized (item)
 			{
 				left = item.getTemporalLifeTime();
+				
 				if (left <= 0)
 				{
 					destroyItem(item);
 				}
 			}
+			
 			if (left <= 0)
 			{
 				player.sendPacket(new SystemMessage(SystemMessage.THE_LIMITED_TIME_ITEM_HAS_BEEN_DELETED).addItemName(item.getItemId()));

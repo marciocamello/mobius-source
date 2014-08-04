@@ -100,19 +100,23 @@ public class SuspiciousMerchantAntharas extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			doTask();
 			return true;
 		}
+		
 		if (actor.isMoving)
 		{
 			return true;
 		}
+		
 		if ((System.currentTimeMillis() > wait_timeout) && ((current_point > -1) || Rnd.chance(5)))
 		{
 			if (!wait)
@@ -123,23 +127,29 @@ public class SuspiciousMerchantAntharas extends DefaultAI
 						wait_timeout = System.currentTimeMillis() + 30000;
 						wait = true;
 						return true;
+						
 					case 5:
 						wait_timeout = System.currentTimeMillis() + 15000;
+						
 						switch (Rnd.get(4))
 						{
 							case 0:
 								Functions.npcSay(actor, "�?ак погода?");
 								break;
+							
 							case 1:
 								Functions.npcSay(actor, "�?ак жизн�??");
 								break;
+							
 							case 2:
 								Functions.npcSay(actor, "�?огода �?егодн�? хоро�?а�?.");
 								break;
+							
 							case 3:
 								Functions.npcSay(actor, "�? у ва�? крепкие ворота?");
 								break;
 						}
+						
 						wait = true;
 						return true;
 				}
@@ -151,18 +161,22 @@ public class SuspiciousMerchantAntharas extends DefaultAI
 					case 0:
 						Functions.npcSay(actor, "�?адо разведат�? об�?тановку...");
 						break;
+					
 					case 5:
 						Functions.npcSay(actor, "�?ойду прогул�?�?�?�?...");
 						break;
 				}
 			}
+			
 			wait_timeout = 0;
 			wait = false;
 			current_point++;
+			
 			if (current_point >= points.length)
 			{
 				current_point = 0;
 			}
+			
 			addTaskMove(points[current_point], false);
 			doTask()/**
 			 * Method onEvtAttacked.
@@ -172,10 +186,12 @@ public class SuspiciousMerchantAntharas extends DefaultAI
 			;
 			return true;
 		}
+		
 		if (randomAnimation())
 		{
 			return true;
 		}
+		
 		return /**
 		 * Method onEvtAggression.
 		 * @param target Creature

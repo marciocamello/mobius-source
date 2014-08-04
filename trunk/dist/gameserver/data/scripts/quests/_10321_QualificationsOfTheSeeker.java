@@ -51,6 +51,7 @@ public class _10321_QualificationsOfTheSeeker extends Quest implements ScriptFil
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -58,6 +59,7 @@ public class _10321_QualificationsOfTheSeeker extends Quest implements ScriptFil
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "0-2.htm";
 		}
+		
 		if (event.equalsIgnoreCase("qet_rev"))
 		{
 			htmltext = "1-2.htm";
@@ -66,6 +68,7 @@ public class _10321_QualificationsOfTheSeeker extends Quest implements ScriptFil
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -75,6 +78,7 @@ public class _10321_QualificationsOfTheSeeker extends Quest implements ScriptFil
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == TEODOR)
 		{
 			if (st.isCompleted())
@@ -109,6 +113,7 @@ public class _10321_QualificationsOfTheSeeker extends Quest implements ScriptFil
 				htmltext = "1-1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

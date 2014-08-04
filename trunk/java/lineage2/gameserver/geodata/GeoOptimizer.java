@@ -107,16 +107,19 @@ public class GeoOptimizer
 		{
 			log.info("Saving matches to: " + fileName);
 			File f = new File(Config.DATAPACK_ROOT, fileName);
+			
 			if (f.exists())
 			{
 				f.delete();
 			}
+			
 			try (RandomAccessFile raf = new RandomAccessFile(f, "rw");
 				FileChannel wChannel = raf.getChannel())
 			{
 				ByteBuffer buffer = wChannel.map(FileChannel.MapMode.READ_WRITE, 0, (links.length * 6) + 1);
 				buffer.order(ByteOrder.LITTLE_ENDIAN);
 				buffer.put(version);
+				
 				for (BlockLink link : links)
 				{
 					buffer.putShort((short) link.blockIndex);
@@ -142,16 +145,20 @@ public class GeoOptimizer
 		private void calcMatches(int[] curr_checkSums, int mapX, int mapY, List<BlockLink> putlinks, boolean[] notready)
 		{
 			int[] next_checkSums = checkSums[mapX][mapY];
+			
 			if (next_checkSums == null)
 			{
 				return;
 			}
+			
 			int startIdx2;
+			
 			for (int blockIdx = 0; blockIdx < GeoEngine.BLOCKS_IN_MAP; blockIdx++)
 			{
 				if (notready[blockIdx])
 				{
 					startIdx2 = next_checkSums == curr_checkSums ? blockIdx + 1 : 0;
+					
 					for (int blockIdx2 = startIdx2; blockIdx2 < GeoEngine.BLOCKS_IN_MAP; blockIdx2++)
 					{
 						if (curr_checkSums[blockIdx] == next_checkSums[blockIdx2])
@@ -177,26 +184,32 @@ public class GeoOptimizer
 			log.info("Searching matches for " + rx + "_" + ry);
 			long started = System.currentTimeMillis();
 			boolean[] notready = new boolean[GeoEngine.BLOCKS_IN_MAP];
+			
 			for (int i = 0; i < GeoEngine.BLOCKS_IN_MAP; i++)
 			{
 				notready[i] = true;
 			}
+			
 			List<BlockLink> links = new ArrayList<>();
 			int[] _checkSums = checkSums[geoX][geoY];
 			int n = 0;
+			
 			for (int mapX = geoX; mapX < World.WORLD_SIZE_X; mapX++)
 			{
 				int startgeoY = mapX == geoX ? geoY : 0;
+				
 				for (int mapY = startgeoY; mapY < World.WORLD_SIZE_Y; mapY++)
 				{
 					calcMatches(_checkSums, mapX, mapY, links, notready);
 					n++;
+					
 					if ((maxScanRegions > 0) && (maxScanRegions == n))
 					{
 						return links.toArray(new BlockLink[links.size()]);
 					}
 				}
 			}
+			
 			started = System.currentTimeMillis() - started;
 			log.info("Founded " + links.size() + " matches for " + rx + "_" + ry + " in " + (started / 1000f) + "s");
 			return links.toArray(new BlockLink[links.size()]);
@@ -267,10 +280,12 @@ public class GeoOptimizer
 		private boolean loadFromFile()
 		{
 			File GeoCrc = new File(Config.DATAPACK_ROOT, fileName);
+			
 			if (!GeoCrc.exists())
 			{
 				return false;
 			}
+			
 			try (RandomAccessFile raf = new RandomAccessFile(GeoCrc, "r");
 				FileChannel roChannel = raf.getChannel();)
 			{
@@ -278,13 +293,16 @@ public class GeoOptimizer
 				{
 					return false;
 				}
+				
 				ByteBuffer buffer = roChannel.map(FileChannel.MapMode.READ_ONLY, 0, roChannel.size());
 				buffer.order(ByteOrder.LITTLE_ENDIAN);
 				int[] _checkSums = new int[GeoEngine.BLOCKS_IN_MAP];
+				
 				for (int i = 0; i < GeoEngine.BLOCKS_IN_MAP; i++)
 				{
 					_checkSums[i] = buffer.getInt();
 				}
+				
 				checkSums[geoX][geoY] = _checkSums;
 				return true;
 			}
@@ -302,16 +320,19 @@ public class GeoOptimizer
 		{
 			log.info("Saving checksums to: " + fileName);
 			File f = new File(Config.DATAPACK_ROOT, fileName);
+			
 			if (f.exists())
 			{
 				f.delete();
 			}
+			
 			try (RandomAccessFile raf = new RandomAccessFile(f, "rw");
 				FileChannel wChannel = raf.getChannel())
 			{
 				ByteBuffer buffer = wChannel.map(FileChannel.MapMode.READ_WRITE, 0, GeoEngine.BLOCKS_IN_MAP * 4);
 				buffer.order(ByteOrder.LITTLE_ENDIAN);
 				int[] _checkSums = checkSums[geoX][geoY];
+				
 				for (int i = 0; i < GeoEngine.BLOCKS_IN_MAP; i++)
 				{
 					buffer.putInt(_checkSums[i]);
@@ -331,12 +352,14 @@ public class GeoOptimizer
 			log.info("Generating checksums for " + rx + "_" + ry);
 			int[] _checkSums = new int[GeoEngine.BLOCKS_IN_MAP];
 			CRC32 crc32 = new CRC32();
+			
 			for (int i = 0; i < GeoEngine.BLOCKS_IN_MAP; i++)
 			{
 				crc32.update(region[i][0]);
 				_checkSums[i] = (int) (crc32.getValue() ^ 0xFFFFFFFF);
 				crc32.reset();
 			}
+			
 			checkSums[geoX][geoY] = _checkSums;
 		}
 		
@@ -413,25 +436,31 @@ public class GeoOptimizer
 	public static BlockLink[] loadBlockMatches(String fileName)
 	{
 		File f = new File(Config.DATAPACK_ROOT, fileName);
+		
 		if (!f.exists())
 		{
 			return null;
 		}
+		
 		try (RandomAccessFile raf = new RandomAccessFile(f, "r");
 			FileChannel roChannel = raf.getChannel())
 		{
 			int count = (int) ((roChannel.size() - 1) / 6);
 			ByteBuffer buffer = roChannel.map(FileChannel.MapMode.READ_ONLY, 0, roChannel.size());
 			buffer.order(ByteOrder.LITTLE_ENDIAN);
+			
 			if (buffer.get() != version)
 			{
 				return null;
 			}
+			
 			BlockLink[] links = new BlockLink[count];
+			
 			for (int i = 0; i < links.length; i++)
 			{
 				links[i] = new BlockLink(buffer.getShort(), buffer.get(), buffer.get(), buffer.getShort());
 			}
+			
 			return links;
 		}
 		catch (Exception e)

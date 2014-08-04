@@ -46,6 +46,7 @@ public class AnnihilationFighter extends Fighter
 		{
 			NpcUtils.spawnSingle(18839, Location.findPointToStay(getActor(), 40, 120), getActor().getReflection());
 		}
+		
 		super.onEvtDead(killer);
 	}
 	

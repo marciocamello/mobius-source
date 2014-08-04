@@ -144,15 +144,19 @@ public class CharacterAI extends AbstractAI
 	protected void onEvtArrivedBlocked(Location blocked_at_pos)
 	{
 		Creature actor = getActor();
+		
 		if (actor.isPlayer())
 		{
 			Location loc = ((Player) actor).getLastServerPosition();
+			
 			if (loc != null)
 			{
 				actor.setLoc(loc, true);
 			}
+			
 			actor.stopMove();
 		}
+		
 		onEvtThink();
 	}
 	
@@ -167,23 +171,29 @@ public class CharacterAI extends AbstractAI
 		{
 			return;
 		}
+		
 		Creature actor = getActor();
+		
 		if (actor.isAttackingNow() && (getAttackTarget() == object))
 		{
 			actor.abortAttack(true, true);
 		}
+		
 		if (actor.isCastingNow() && (getAttackTarget() == object))
 		{
 			actor.abortCast(true, true);
 		}
+		
 		if (getAttackTarget() == object)
 		{
 			setAttackTarget(null);
 		}
+		
 		if (actor.getTargetId() == object.getObjectId())
 		{
 			actor.setTarget(null);
 		}
+		
 		if (actor.getFollowTarget() == object)
 		{
 			actor.setFollowTarget(null);
@@ -543,6 +553,7 @@ public class CharacterAI extends AbstractAI
 	protected void broadCastScriptEvent(String event, Object arg1, Object arg2, int radius)
 	{
 		List<NpcInstance> npcs = World.getAroundNpc(getActor(), radius, radius);
+		
 		for (NpcInstance npc : npcs)
 		{
 			npc.getAI().notifyEvent(CtrlEvent.EVT_SCRIPT_EVENT, event, arg1, arg2);

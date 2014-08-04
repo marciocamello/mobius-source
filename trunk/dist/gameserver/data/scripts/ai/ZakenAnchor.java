@@ -55,6 +55,7 @@ public class ZakenAnchor extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		for (NpcInstance npc : actor.getAroundNpc(1000, 100))
 		{
 			if ((npc.getNpcId() == Candle) && (npc.getRightHandItem() == 15302))
@@ -62,16 +63,19 @@ public class ZakenAnchor extends DefaultAI
 				i++;
 			}
 		}
+		
 		if (i >= 4)
 		{
 			if (actor.getReflection().getInstancedZoneId() == 133)
 			{
 				actor.getReflection().addSpawnWithoutRespawn(DayZaken, actor.getLoc(), 0);
+				
 				for (int i = 0; i < 4; i++)
 				{
 					actor.getReflection().addSpawnWithoutRespawn(20845, actor.getLoc(), 200);
 					actor.getReflection().addSpawnWithoutRespawn(20847, actor.getLoc(), 200);
 				}
+				
 				actor.deleteMe();
 				return true;
 			}
@@ -85,11 +89,13 @@ public class ZakenAnchor extends DefaultAI
 						npc.teleToLocation(actor.getLoc());
 					}
 				}
+				
 				for (int i = 0; i < 4; i++)
 				{
 					actor.getReflection().addSpawnWithoutRespawn(29184, actor.getLoc(), 300);
 					actor.getReflection().addSpawnWithoutRespawn(29183, actor.getLoc(), 300);
 				}
+				
 				actor.deleteMe();
 				return true;
 			}
@@ -98,6 +104,7 @@ public class ZakenAnchor extends DefaultAI
 		{
 			i = 0;
 		}
+		
 		return false;
 	}
 }

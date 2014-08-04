@@ -60,6 +60,7 @@ public class _618_IntoTheFlame extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		int cond = st.getCond();
+		
 		if (event.equalsIgnoreCase("watcher_valakas_klein_q0618_0104.htm") && (cond == 0))
 		{
 			st.setState(STARTED);
@@ -98,6 +99,7 @@ public class _618_IntoTheFlame extends Quest implements ScriptFile
 				htmltext = "blacksmith_hilda_q0618_0203.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -107,6 +109,7 @@ public class _618_IntoTheFlame extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == KLEIN)
 		{
 			if (cond == 0)
@@ -149,6 +152,7 @@ public class _618_IntoTheFlame extends Quest implements ScriptFile
 				htmltext = "blacksmith_hilda_q0618_0203.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -156,9 +160,11 @@ public class _618_IntoTheFlame extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		long count = st.getQuestItemsCount(VACUALITE_ORE);
+		
 		if (Rnd.chance(CHANCE_FOR_QUEST_ITEMS) && (count < 50))
 		{
 			st.giveItems(VACUALITE_ORE, 1);
+			
 			if (count == 49)
 			{
 				st.setCond(3);
@@ -169,6 +175,7 @@ public class _618_IntoTheFlame extends Quest implements ScriptFile
 				st.playSound(SOUND_ITEMGET);
 			}
 		}
+		
 		return null;
 	}
 }

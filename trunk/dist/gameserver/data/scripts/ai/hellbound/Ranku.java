@@ -64,6 +64,7 @@ public class Ranku extends Fighter
 	{
 		super.onEvtSpawn();
 		final Reflection r = getActor().getReflection();
+		
 		if (r != null)
 		{
 			for (int i = 0; i < 4; i++)
@@ -80,19 +81,23 @@ public class Ranku extends Fighter
 	protected void thinkAttack()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return;
 		}
+		
 		if ((_massacreTimer + _massacreDelay) < System.currentTimeMillis())
 		{
 			final NpcInstance victim = getScapegoat();
 			_massacreTimer = System.currentTimeMillis();
+			
 			if (victim != null)
 			{
 				actor.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, victim, getMaximumHate() + 200000);
 			}
 		}
+		
 		super.thinkAttack();
 	}
 	
@@ -104,11 +109,13 @@ public class Ranku extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.getReflection() != null)
 		{
 			actor.getReflection().setReenterTime(System.currentTimeMillis());
 			actor.getReflection().addSpawnWithoutRespawn(TELEPORTATION_CUBIC_ID, CUBIC_POSITION, 0);
 		}
+		
 		super.onEvtDead(killer);
 	}
 	
@@ -125,6 +132,7 @@ public class Ranku extends Fighter
 				return n;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -136,14 +144,17 @@ public class Ranku extends Fighter
 	{
 		final NpcInstance actor = getActor();
 		final Creature cha = actor.getAggroList().getMostHated();
+		
 		if (cha != null)
 		{
 			final AggroInfo ai = actor.getAggroList().get(cha);
+			
 			if (ai != null)
 			{
 				return ai.hate;
 			}
 		}
+		
 		return 0;
 	}
 }

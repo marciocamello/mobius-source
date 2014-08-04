@@ -46,30 +46,38 @@ public class RequestPetGetItem extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (activeChar.isOutOfControl())
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		PetInstance pet = activeChar.getSummonList().getPet();
+		
 		if ((pet == null) || pet.isDead() || pet.isActionsDisabled())
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		ItemInstance item = (ItemInstance) activeChar.getVisibleObject(_objectId);
+		
 		if (item == null)
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (!ItemFunctions.checkIfCanPickup(pet, item))
 		{
 			SystemMessage sm;
+			
 			if (item.getItemId() == 57)
 			{
 				sm = new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
@@ -80,10 +88,12 @@ public class RequestPetGetItem extends L2GameClientPacket
 				sm = new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_PICK_UP_S1);
 				sm.addItemName(item.getItemId());
 			}
+			
 			sendPacket(sm);
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		pet.getAI().setIntention(CtrlIntention.AI_INTENTION_PICK_UP, item, null);
 	}
 }

@@ -49,10 +49,12 @@ public final class EffectStun extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if (!_effected.isStunned())
 		{
 			_effected.startStunning();
 		}
+		
 		_effected.abortAttack(true, true);
 		_effected.abortCast(true, true);
 		_effected.stopMove();
@@ -65,6 +67,7 @@ public final class EffectStun extends Effect
 	public void onExit()
 	{
 		super.onExit();
+		
 		if (_effected.isStunned())
 		{
 			_effected.stopStunning();

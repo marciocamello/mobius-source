@@ -39,16 +39,12 @@ public class ExFlyMoveBroadcast extends L2GameServerPacket
 	{
 		writeEx(0x10D);
 		writeD(_objId);
-		
 		writeD(flyType);
 		writeD(0x00); // TODO: [K1mel]
-		
 		writeD(_loc.getX());
 		writeD(_loc.getY());
 		writeD(_loc.getZ());
-		
 		writeD(0x00); // TODO: [K1mel]
-		
 		writeD(_destLoc.getX());
 		writeD(_destLoc.getY());
 		writeD(_destLoc.getZ());

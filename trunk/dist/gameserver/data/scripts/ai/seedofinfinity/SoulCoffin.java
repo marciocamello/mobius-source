@@ -52,6 +52,7 @@ public class SoulCoffin extends DefaultAI
 	{
 		final NpcInstance actor = getActor();
 		final Reflection r = actor.getReflection();
+		
 		if (!r.isDefault())
 		{
 			if (actor.getNpcId() == 18711)
@@ -74,6 +75,7 @@ public class SoulCoffin extends DefaultAI
 				}
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 	
@@ -85,11 +87,13 @@ public class SoulCoffin extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((actor.getNpcId() == 18706) && (actor.getReflection().getInstancedZoneId() == 116) && ((checkTimer + 10000) < System.currentTimeMillis()))
 		{
 			checkTimer = System.currentTimeMillis();
 			((SufferingHallDefence) actor.getReflection()).notifyCoffinActivity();
 		}
+		
 		return super.thinkActive();
 	}
 	

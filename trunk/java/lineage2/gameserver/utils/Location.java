@@ -31,7 +31,7 @@ import org.dom4j.Element;
 public class Location extends Point3D implements SpawnRange, Serializable
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -316,10 +316,12 @@ public class Location extends Point3D implements SpawnRange, Serializable
 	public static Location parseLoc(String s) throws IllegalArgumentException
 	{
 		String[] xyzh = s.split("[\\s,;]+");
+		
 		if (xyzh.length < 3)
 		{
 			throw new IllegalArgumentException("Can't parse location from string: " + s);
 		}
+		
 		int x = Integer.parseInt(xyzh[0]);
 		int y = Integer.parseInt(xyzh[1]);
 		int z = Integer.parseInt(xyzh[2]);
@@ -355,17 +357,21 @@ public class Location extends Point3D implements SpawnRange, Serializable
 		{
 			return new Location(obj);
 		}
+		
 		double collision = obj.getColRadius() + obj2.getColRadius();
 		int randomRadius, randomAngle, tempz;
 		int minangle = 0;
 		int maxangle = 360;
+		
 		if (!obj.equals(obj2))
 		{
 			double angle = PositionUtils.calculateAngleFrom(obj, obj2);
 			minangle = (int) angle - 45;
 			maxangle = (int) angle + 45;
 		}
+		
 		Location pos = new Location();
+		
 		for (int i = 0; i < 100; i++)
 		{
 			randomRadius = Rnd.get(radiusmin, radiusmax);
@@ -374,9 +380,11 @@ public class Location extends Point3D implements SpawnRange, Serializable
 			pos.y = obj.getY() + (int) ((collision + randomRadius) * Math.sin(Math.toRadians(randomAngle)));
 			pos.z = obj.getZ();
 			tempz = GeoEngine.getHeight(pos.x, pos.y, pos.z, obj.getGeoIndex());
+			
 			if ((Math.abs(pos.z - tempz) < 200) && (GeoEngine.getNSWE(pos.x, pos.y, tempz, obj.getGeoIndex()) == GeoEngine.NSWE_ALL))
 			{
 				pos.z = tempz;
+				
 				if (!obj.equals(obj2))
 				{
 					pos.h = PositionUtils.getHeadingTo(pos, obj2.getLoc());
@@ -385,9 +393,11 @@ public class Location extends Point3D implements SpawnRange, Serializable
 				{
 					pos.h = obj.getHeading();
 				}
+				
 				return pos;
 			}
 		}
+		
 		return new Location(obj);
 	}
 	
@@ -405,16 +415,19 @@ public class Location extends Point3D implements SpawnRange, Serializable
 	{
 		Location pos;
 		int tempz;
+		
 		for (int i = 0; i < 100; i++)
 		{
 			pos = Location.coordsRandomize(x, y, z, 0, radiusmin, radiusmax);
 			tempz = GeoEngine.getHeight(pos.x, pos.y, pos.z, geoIndex);
+			
 			if (GeoEngine.canMoveToCoord(x, y, z, pos.x, pos.y, tempz, geoIndex) && GeoEngine.canMoveToCoord(pos.x, pos.y, tempz, x, y, z, geoIndex))
 			{
 				pos.z = tempz;
 				return pos;
 			}
 		}
+		
 		return new Location(x, y, z);
 	}
 	
@@ -493,16 +506,19 @@ public class Location extends Point3D implements SpawnRange, Serializable
 	{
 		Location pos;
 		int tempz;
+		
 		for (int i = 0; i < 100; i++)
 		{
 			pos = Location.coordsRandomize(x, y, z, 0, radiusmin, radiusmax);
 			tempz = GeoEngine.getHeight(pos.x, pos.y, pos.z, geoIndex);
+			
 			if ((Math.abs(pos.z - tempz) < 200) && (GeoEngine.getNSWE(pos.x, pos.y, tempz, geoIndex) == GeoEngine.NSWE_ALL))
 			{
 				pos.z = tempz;
 				return pos;
 			}
 		}
+		
 		return new Location(x, y, z);
 	}
 	
@@ -595,6 +611,7 @@ public class Location extends Point3D implements SpawnRange, Serializable
 		{
 			return new Location(x, y, z, heading);
 		}
+		
 		int radius = Rnd.get(radiusmin, radiusmax);
 		double angle = Rnd.nextDouble() * 2 * Math.PI;
 		return new Location((int) (x + (radius * Math.cos(angle))), (int) (y + (radius * Math.sin(angle))), z, heading);
@@ -609,6 +626,7 @@ public class Location extends Point3D implements SpawnRange, Serializable
 	public static Location findNearest(Creature creature, Location[] locs)
 	{
 		Location defloc = null;
+		
 		for (Location loc : locs)
 		{
 			if (defloc == null)
@@ -620,6 +638,7 @@ public class Location extends Point3D implements SpawnRange, Serializable
 				defloc = loc;
 			}
 		}
+		
 		return defloc;
 	}
 	

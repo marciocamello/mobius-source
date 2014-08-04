@@ -41,6 +41,7 @@ class CompStartTask extends RunnableImpl
 		{
 			return;
 		}
+		
 		Olympiad._manager = new OlympiadManager();
 		Olympiad._inCompPeriod = true;
 		new Thread(Olympiad._manager).start();

@@ -36,9 +36,11 @@ public class ExGetPremiumItemList extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0x87);
+		
 		if (!_list.isEmpty())
 		{
 			writeD(_list.size());
+			
 			for (Map.Entry<Integer, PremiumItem> entry : _list.entrySet())
 			{
 				writeD(entry.getKey());

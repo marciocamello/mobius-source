@@ -48,7 +48,6 @@ public class PowerfulDeviceInstance extends NpcInstance
 		_NPC.put(33397, 149);
 		_NPC.put(33397, 150);
 		_NPC.put(33397, 151);
-		
 		// tyrrWarrior
 		_NPC.put(33398, 152);
 		_NPC.put(33398, 153);
@@ -56,43 +55,36 @@ public class PowerfulDeviceInstance extends NpcInstance
 		_NPC.put(33398, 155);
 		_NPC.put(33398, 156);
 		_NPC.put(33398, 157);
-		
 		// othellRogue
 		_NPC.put(33399, 158);
 		_NPC.put(33399, 159);
 		_NPC.put(33399, 160);
 		_NPC.put(33399, 161);
-		
 		// yulArcher
 		_NPC.put(33400, 162);
 		_NPC.put(33400, 163);
 		_NPC.put(33400, 164);
 		_NPC.put(33400, 165);
-		
 		// feohWizard
 		_NPC.put(33401, 166);
 		_NPC.put(33401, 167);
 		_NPC.put(33401, 168);
 		_NPC.put(33401, 169);
 		_NPC.put(33401, 170);
-		
 		// issEnchanter
 		_NPC.put(33402, 171);
 		_NPC.put(33402, 172);
 		_NPC.put(33402, 173);
 		_NPC.put(33402, 174);
 		_NPC.put(33402, 175);
-		
 		// wynnSummoner
 		_NPC.put(33403, 176);
 		_NPC.put(33403, 177);
 		_NPC.put(33403, 178);
-		
 		// aeoreHealer
 		_NPC.put(33404, 179);
 		_NPC.put(33404, 180);
 		_NPC.put(33404, 181);
-		
 		// Knights
 		_DESTINYCHANGECLASSES.put(148, 90);
 		_DESTINYCHANGECLASSES.put(149, 91);
@@ -105,19 +97,16 @@ public class PowerfulDeviceInstance extends NpcInstance
 		_DESTINYCHANGECLASSES.put(155, 114);
 		_DESTINYCHANGECLASSES.put(156, 118);
 		_DESTINYCHANGECLASSES.put(157, 131);
-		
 		// Daggers
 		_DESTINYCHANGECLASSES.put(158, 93);
 		_DESTINYCHANGECLASSES.put(159, 101);
 		_DESTINYCHANGECLASSES.put(160, 108);
 		_DESTINYCHANGECLASSES.put(161, 117);
-		
 		// Archers
 		_DESTINYCHANGECLASSES.put(162, 92);
 		_DESTINYCHANGECLASSES.put(163, 102);
 		_DESTINYCHANGECLASSES.put(164, 109);
 		_DESTINYCHANGECLASSES.put(165, 134);
-		
 		// Wizards
 		_DESTINYCHANGECLASSES.put(166, 94);
 		_DESTINYCHANGECLASSES.put(167, 95);
@@ -125,24 +114,20 @@ public class PowerfulDeviceInstance extends NpcInstance
 		_DESTINYCHANGECLASSES.put(169, 110);
 		_DESTINYCHANGECLASSES.put(170, 132);
 		_DESTINYCHANGECLASSES.put(170, 133);
-		
 		// Dancers
 		_DESTINYCHANGECLASSES.put(171, 98);
 		_DESTINYCHANGECLASSES.put(172, 100);
 		_DESTINYCHANGECLASSES.put(173, 107);
 		_DESTINYCHANGECLASSES.put(174, 115);
 		_DESTINYCHANGECLASSES.put(175, 116);
-		
 		// Summoners
 		_DESTINYCHANGECLASSES.put(176, 96);
 		_DESTINYCHANGECLASSES.put(177, 104);
 		_DESTINYCHANGECLASSES.put(178, 111);
-		
 		// Healers
 		_DESTINYCHANGECLASSES.put(179, 97);
 		_DESTINYCHANGECLASSES.put(180, 105);
 		_DESTINYCHANGECLASSES.put(181, 112);
-		
 		_NAMECLASSES.put(90, "Phoenix Knight");
 		_NAMECLASSES.put(91, "Hell Knight");
 		_NAMECLASSES.put(99, "Eva Templar");
@@ -178,7 +163,6 @@ public class PowerfulDeviceInstance extends NpcInstance
 		_NAMECLASSES.put(97, "Cardinal");
 		_NAMECLASSES.put(105, "Eva Saint");
 		_NAMECLASSES.put(112, "Shillien Saint");
-		
 		_NAMECLASSES.put(148, "Sigel Phoenix Knight");
 		_NAMECLASSES.put(149, "Sigel Hell Knight");
 		_NAMECLASSES.put(150, "Sigel Eva Templar");
@@ -219,6 +203,7 @@ public class PowerfulDeviceInstance extends NpcInstance
 	{
 		String format = " ";
 		String prefix = "icon.skill";
+		
 		if ((skillId > 0) && (skillId < 10))
 		{
 			format = "000" + skillId;
@@ -300,6 +285,7 @@ public class PowerfulDeviceInstance extends NpcInstance
 		{
 			format = String.valueOf(skillId);
 		}
+		
 		String finalCompose = prefix + format;
 		return finalCompose;
 	}
@@ -308,92 +294,121 @@ public class PowerfulDeviceInstance extends NpcInstance
 	public void onBypassFeedback(Player player, String command)
 	{
 		int NextClassId1 = 0;
+		
 		switch (player.getClassId().getId())
 		{
 			case 88:
 				NextClassId1 = 152;
 				break;
+			
 			case 89:
 				NextClassId1 = 153;
 				break;
+			
 			case 113:
 				NextClassId1 = 154;
 				break;
+			
 			case 114:
 				NextClassId1 = 155;
 				break;
+			
 			case 118:
 				NextClassId1 = 156;
 				break;
+			
 			case 131:
 				NextClassId1 = 157;
 				break;
+			
 			case 90:
 				NextClassId1 = 148;
 				break;
+			
 			case 91:
 				NextClassId1 = 149;
 				break;
+			
 			case 99:
 				NextClassId1 = 150;
 				break;
+			
 			case 106:
 				NextClassId1 = 151;
 				break;
+			
 			case 93:
 				NextClassId1 = 158;
 				break;
+			
 			case 101:
 				NextClassId1 = 159;
 				break;
+			
 			case 108:
 				NextClassId1 = 160;
 				break;
+			
 			case 117:
 				NextClassId1 = 161;
 				break;
+			
 			case 92:
 				NextClassId1 = 162;
 				break;
+			
 			case 102:
 				NextClassId1 = 163;
 				break;
+			
 			case 109:
 				NextClassId1 = 164;
 				break;
+			
 			case 134:
 				NextClassId1 = 165;
 				break;
+			
 			case 94:
 				NextClassId1 = 166;
 				break;
+			
 			case 95:
 				NextClassId1 = 167;
 				break;
+			
 			case 103:
 				NextClassId1 = 168;
 				break;
+			
 			case 110:
 				NextClassId1 = 169;
 				break;
+			
 			case 132:
 				NextClassId1 = 170;
 				break;
+			
 			case 133:
 				NextClassId1 = 170;
 				break;
+			
 			case 98:
 				NextClassId1 = 171;
 				break;
+			
 			case 100:
 				NextClassId1 = 172;
 				break;
+			
 			case 115:
 				NextClassId1 = 174;
 				break;
+			
 			case 116:
 				NextClassId1 = 175;
 				break;
+			
 			case 107:
 				NextClassId1 = 173;
 				break;
@@ -403,24 +418,31 @@ public class PowerfulDeviceInstance extends NpcInstance
 			case 96:
 				NextClassId1 = 176;
 				break;
+			
 			case 104:
 				NextClassId1 = 177;
 				break;
+			
 			case 111:
 				NextClassId1 = 178;
 				break;
+			
 			case 97:
 				NextClassId1 = 179;
 				break;
+			
 			case 105:
 				NextClassId1 = 180;
 				break;
+			
 			case 112:
 				NextClassId1 = 181;
 				break;
 		}
+		
 		int oldClassId = 0;
 		int newClassId = AwakingManager.getInstance().childOf(player.getClassId());
+		
 		if (!canBypassCheck(player, this))
 		{
 			return;
@@ -433,6 +455,7 @@ public class PowerfulDeviceInstance extends NpcInstance
 			htmlMessage.replace("%SP%", String.valueOf(sp));
 			htmlMessage.replace("%ESSENCES%", String.valueOf(essencesCount));
 			String transferData = new String();
+			
 			if (_NPC.get(getNpcId()) != newClassId)
 			{
 				// newClassId = _NPC.get(getNpcId());
@@ -447,6 +470,7 @@ public class PowerfulDeviceInstance extends NpcInstance
 				oldClassId = player.getClassId().getId();
 				transferData = "You are not strong enough to receive the giant's power. You need to choose between the giant's power and the god's power.<br>In other words, you should be in the best shape to obtain all the power from the giant. Come back when you are ready.";
 			}
+			
 			htmlMessage.replace("%TRANSFERDATA%", transferData);
 			htmlMessage.setFile("default/" + getNpcId() + "-4.htm");
 			player.sendPacket(htmlMessage);
@@ -456,6 +480,7 @@ public class PowerfulDeviceInstance extends NpcInstance
 			NpcHtmlMessage htmlMessage = new NpcHtmlMessage(getObjectId());
 			String skillList = new String();
 			skillList = skillList + "<table border=0 cellpading=8 cellspacing=4>";
+			
 			if (_NPC.get(getNpcId()) != newClassId)
 			{
 				// newClassId = _NPC.get(getNpcId());
@@ -468,12 +493,15 @@ public class PowerfulDeviceInstance extends NpcInstance
 			{
 				oldClassId = player.getClassId().getId();
 			}
+			
 			List<Integer> skillListId = SkillAcquireHolder.getInstance().getMaintainSkillOnAwake(oldClassId, newClassId);
+			
 			for (int sId : skillListId)
 			{
 				String iconData = obtainIcon(sId);
 				String name = new String();
 				Skill skl = SkillTable.getInstance().getInfo(sId, SkillTable.getInstance().getBaseLevel(sId));
+				
 				if (skl != null)
 				{
 					name = skl.getName();
@@ -482,8 +510,10 @@ public class PowerfulDeviceInstance extends NpcInstance
 				{
 					continue;
 				}
+				
 				skillList = skillList + "<tr><td width=34 height=34><img src=" + iconData + " width=32 height=32></td><td width=200> " + name + " </td></tr><tr><td colspan=2><br></td></tr>";
 			}
+			
 			skillList = skillList + "</table>";
 			htmlMessage.replace("%SKILLIST%", skillList);
 			htmlMessage.setFile("default/" + getNpcId() + "-5.htm");
@@ -492,116 +522,152 @@ public class PowerfulDeviceInstance extends NpcInstance
 		else if (command.equalsIgnoreCase("Awaken2"))
 		{
 			int NextClassId = 0;
+			
 			switch (player.getClassId().getId())
 			{
 				case 88:
 					NextClassId = 152;
 					break;
+				
 				case 89:
 					NextClassId = 153;
 					break;
+				
 				case 113:
 					NextClassId = 154;
 					break;
+				
 				case 114:
 					NextClassId = 155;
 					break;
+				
 				case 118:
 					NextClassId = 156;
 					break;
+				
 				case 131:
 					NextClassId = 157;
 					break;
+				
 				case 90:
 					NextClassId = 148;
 					break;
+				
 				case 91:
 					NextClassId = 149;
 					break;
+				
 				case 99:
 					NextClassId = 150;
 					break;
+				
 				case 106:
 					NextClassId = 151;
 					break;
+				
 				case 93:
 					NextClassId = 158;
 					break;
+				
 				case 101:
 					NextClassId = 159;
 					break;
+				
 				case 108:
 					NextClassId = 160;
 					break;
+				
 				case 117:
 					NextClassId = 161;
 					break;
+				
 				case 92:
 					NextClassId = 162;
 					break;
+				
 				case 102:
 					NextClassId = 163;
 					break;
+				
 				case 109:
 					NextClassId = 164;
 					break;
+				
 				case 134:
 					NextClassId = 165;
 					break;
+				
 				case 94:
 					NextClassId = 166;
 					break;
+				
 				case 95:
 					NextClassId = 167;
 					break;
+				
 				case 103:
 					NextClassId = 168;
 					break;
+				
 				case 110:
 					NextClassId = 169;
 					break;
+				
 				case 132:
 					NextClassId = 170;
 					break;
+				
 				case 133:
 					NextClassId = 170;
 					break;
+				
 				case 98:
 					NextClassId = 171;
 					break;
+				
 				case 100:
 					NextClassId = 172;
 					break;
+				
 				case 115:
 					NextClassId = 174;
 					break;
+				
 				case 116:
 					NextClassId = 175;
 					break;
+				
 				case 107:
 					NextClassId = 173;
 					break;
+				
 				// case 136:
 				// NextClassId = 176);
 				case 96:
 					NextClassId = 176;
 					break;
+				
 				case 104:
 					NextClassId = 177;
 					break;
+				
 				case 111:
 					NextClassId = 178;
 					break;
+				
 				case 97:
 					NextClassId = 179;
 					break;
+				
 				case 105:
 					NextClassId = 180;
 					break;
+				
 				case 112:
 					NextClassId = 181;
 					break;
 			}
+			
 			player.setVar("AwakenPrepared", "true", -1);
 			player.setVar("AwakenedID", NextClassId, -1);
 			player.sendPacket(new ExChangeToAwakenedClass(NextClassId));
@@ -615,20 +681,20 @@ public class PowerfulDeviceInstance extends NpcInstance
 	public void showChatWindow(Player player, int val, Object... replace)
 	{
 		String htmlpath;
+		
 		if (val == 0)
 		{
 			if ((player.getClassLevel() == 4) && (player.getInventory().getCountOf(17600) > 0))
 			{
-				@SuppressWarnings("unused")
-				int classId = 0;
 				for (ClassId classId1 : ClassId.VALUES)
 				{
 					if ((player.getClassId().getClassLevel() == ClassLevel.Fourth) && classId1.childOf(player.getClassId()))
 					{
-						classId = classId1.getId();
+						classId1.getId();
 						break;
 					}
 				}
+				
 				if (player.getPets().size() > 0)
 				{
 					htmlpath = getHtmlPath(getNpcId(), 1, player);
@@ -647,6 +713,7 @@ public class PowerfulDeviceInstance extends NpcInstance
 					{
 						player.setVar("AwakenedOldIDClass", player.getClassId().getId(), -1);
 					}
+					
 					htmlpath = getHtmlPath(getNpcId(), 3, player);
 				}
 				
@@ -665,13 +732,14 @@ public class PowerfulDeviceInstance extends NpcInstance
 		{
 			htmlpath = getHtmlPath(getNpcId(), val, player);
 		}
-		showChatWindow(player, htmlpath, replace);
 		
+		showChatWindow(player, htmlpath, replace);
 	}
 	
 	private boolean classSynk(Player player)
 	{
 		int oldId = player.getClassId().getId();
+		
 		switch (getNpcId())
 		{
 			case 33397:
@@ -680,66 +748,81 @@ public class PowerfulDeviceInstance extends NpcInstance
 				{
 					return true;
 				}
+				
 				break;
 			}
+			
 			case 33398:
 			{
 				if ((oldId == 88) || (oldId == 89) || (oldId == 113) || (oldId == 114) || (oldId == 118) || (oldId == 131))
 				{
 					return true;
 				}
+				
 				break;
 			}
+			
 			case 33399:
 			{
 				if ((oldId == 93) || (oldId == 101) || (oldId == 108) || (oldId == 117))
 				{
 					return true;
 				}
+				
 				break;
 			}
+			
 			case 33400:
 			{
 				if ((oldId == 92) || (oldId == 102) || (oldId == 109) || (oldId == 134))
 				{
 					return true;
 				}
+				
 				break;
 			}
+			
 			case 33401:
 			{
 				if ((oldId == 94) || (oldId == 95) || (oldId == 103) || (oldId == 110) || (oldId == 132) || (oldId == 133))
 				{
 					return true;
 				}
+				
 				break;
 			}
+			
 			case 33402:
 			{
 				if ((oldId == 98) || (oldId == 116) || (oldId == 115) || (oldId == 100) || (oldId == 107) || (oldId == 136))
 				{
 					return true;
 				}
+				
 				break;
 			}
+			
 			case 33403:
 			{
 				if ((oldId == 96) || (oldId == 104) || (oldId == 111))
 				{
 					return true;
 				}
+				
 				break;
 			}
+			
 			case 33404:
 			{
 				if ((oldId == 97) || (oldId == 105) || (oldId == 112))
 				{
 					return true;
 				}
+				
 				break;
 			}
-			
 		}
+		
 		return false;
 	}
 	

@@ -26,7 +26,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class MeleonInstance extends SpecialMonsterInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -115,13 +115,16 @@ public class MeleonInstance extends SpecialMonsterInstance
 		{
 			return;
 		}
+		
 		int weaponId = attacker.getActiveWeaponInstance().getItemId();
+		
 		if ((getNpcId() == Defective_Honey_Watermelon) || (getNpcId() == Rain_Honey_Watermelon) || (getNpcId() == Large_Rain_Honey_Watermelon))
 		{
 			if ((weaponId != 4202) && (weaponId != 5133) && (weaponId != 5817) && (weaponId != 7058) && (weaponId != 8350))
 			{
 				return;
 			}
+			
 			i = 1;
 		}
 		else if ((getNpcId() == Rain_Watermelon) || (getNpcId() == Defective_Watermelon) || (getNpcId() == Large_Rain_Watermelon))
@@ -132,6 +135,7 @@ public class MeleonInstance extends SpecialMonsterInstance
 		{
 			return;
 		}
+		
 		super.reduceCurrentHp(i, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
 	}
 	

@@ -58,28 +58,35 @@ public class AnswerCoupleAction extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		Request request = activeChar.getRequest();
+		
 		if ((request == null) || !request.isTypeOf(L2RequestType.COUPLE_ACTION))
 		{
 			return;
 		}
+		
 		if (!request.isInProgress())
 		{
 			request.cancel();
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (activeChar.isOutOfControl())
 		{
 			request.cancel();
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		Player requestor = request.getRequestor();
+		
 		if (requestor == null)
 		{
 			request.cancel();
@@ -87,24 +94,28 @@ public class AnswerCoupleAction extends L2GameClientPacket
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if ((requestor.getObjectId() != _charObjId) || (requestor.getRequest() != request))
 		{
 			request.cancel();
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		switch (_answer)
 		{
 			case -1:
 				requestor.sendPacket(new SystemMessage2(SystemMsg.C1_IS_SET_TO_REFUSE_COUPLE_ACTIONS_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION).addName(activeChar));
 				request.cancel();
 				break;
+			
 			case 0:
 				activeChar.sendPacket(SystemMsg.THE_COUPLE_ACTION_WAS_DENIED);
 				requestor.sendPacket(SystemMsg.THE_COUPLE_ACTION_WAS_CANCELLED);
 				requestor.sendActionFailed();
 				request.cancel();
 				break;
+			
 			case 1:
 				try
 				{
@@ -112,6 +123,7 @@ public class AnswerCoupleAction extends L2GameClientPacket
 					{
 						return;
 					}
+					
 					Location loc = requestor.applyOffset(activeChar.getLoc(), 25);
 					loc = GeoEngine.moveCheck(requestor.getX(), requestor.getY(), requestor.getZ(), loc.x, loc.y, requestor.getGeoIndex());
 					requestor.moveToLocation(loc, 0, false);
@@ -138,6 +150,7 @@ public class AnswerCoupleAction extends L2GameClientPacket
 			activeChar.sendPacket(SystemMsg.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);
 			return false;
 		}
+		
 		return activeChar.checkCoupleAction(requestor);
 	}
 }

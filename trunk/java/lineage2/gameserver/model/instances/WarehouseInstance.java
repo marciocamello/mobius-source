@@ -25,7 +25,7 @@ import lineage2.gameserver.utils.WarehouseFunctions;
 public class WarehouseInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -50,6 +50,7 @@ public class WarehouseInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String pom = "";
+		
 		if (val == 0)
 		{
 			pom = "" + npcId;
@@ -58,10 +59,12 @@ public class WarehouseInstance extends NpcInstance
 		{
 			pom = npcId + "-" + val;
 		}
+		
 		if (getTemplate().getHtmRoot() != null)
 		{
 			return getTemplate().getHtmRoot() + pom + ".htm";
 		}
+		
 		return "warehouse/" + pom + ".htm";
 	}
 	
@@ -77,15 +80,18 @@ public class WarehouseInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (player.getEnchantScroll() != null)
 		{
 			Log.add("Player " + player.getName() + " trying to use enchant exploit[Warehouse], ban this player!", "illegal-actions");
 			player.setEnchantScroll(null);
 			return;
 		}
+		
 		if (command.startsWith("WithdrawP"))
 		{
 			int val = Integer.parseInt(command.substring(10));
+			
 			if (val == 99)
 			{
 				NpcHtmlMessage html = new NpcHtmlMessage(player, this);
@@ -105,6 +111,7 @@ public class WarehouseInstance extends NpcInstance
 		else if (command.startsWith("WithdrawC"))
 		{
 			int val = Integer.parseInt(command.substring(10));
+			
 			if (val == 99)
 			{
 				NpcHtmlMessage html = new NpcHtmlMessage(player, this);

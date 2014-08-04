@@ -76,12 +76,14 @@ public class CastleHiredGuardDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_SQL_QUERY);
 			statement.setInt(1, r.getId());
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				int itemId = rset.getInt("item_id");
@@ -111,6 +113,7 @@ public class CastleHiredGuardDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -141,6 +144,7 @@ public class CastleHiredGuardDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -170,6 +174,7 @@ public class CastleHiredGuardDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();

@@ -88,15 +88,18 @@ public class Tate extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			doTask();
 			return true;
 		}
+		
 		if ((System.currentTimeMillis() > wait_timeout) && ((current_point > -1) || Rnd.chance(5)))
 		{
 			if (!wait)
@@ -108,11 +111,13 @@ public class Tate extends DefaultAI
 						Functions.npcSay(actor, "Care to go a round?");
 						wait = true;
 						return true;
+						
 					case 7:
 						wait_timeout = System.currentTimeMillis() + 15000;
 						Functions.npcSay(actor, "Have a nice day, Mr. Garita and Mion!");
 						wait = true;
 						return true;
+						
 					case 11:
 						wait_timeout = System.currentTimeMillis() + 30000;
 						Functions.npcSay(actor, "Mr. Lid, Murdoc, and Airy! How are you doing?");
@@ -120,21 +125,26 @@ public class Tate extends DefaultAI
 						return true;
 				}
 			}
+			
 			wait_timeout = 0;
 			wait = false;
 			current_point++;
+			
 			if (current_point >= points.length)
 			{
 				current_point = 0;
 			}
+			
 			addTaskMove(points[current_point], true);
 			doTask();
 			return true;
 		}
+		
 		if (randomAnimation())
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	

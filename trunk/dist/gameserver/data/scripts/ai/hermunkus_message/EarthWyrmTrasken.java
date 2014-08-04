@@ -73,6 +73,7 @@ public class EarthWyrmTrasken extends DefaultAI
 	{
 		super.onEvtTimer(timerId, arg1, arg2);
 		Skill sk;
+		
 		switch (timerId)
 		{
 			case 1:
@@ -80,11 +81,13 @@ public class EarthWyrmTrasken extends DefaultAI
 				addTaskBuff(getActor(), sk);
 				doTask();
 				break;
+			
 			case 2:
 				sk = SkillTable.getInstance().getInfo(BODY_STRIKE_SKILL_ID_1, 1);
 				addTaskBuff(getActor(), sk);
 				doTask();
 				break;
+			
 			case 3:
 				sk = SkillTable.getInstance().getInfo(BODY_STRIKE_SKILL_ID_2, 1);
 				addTaskBuff(getActor(), sk);
@@ -104,10 +107,12 @@ public class EarthWyrmTrasken extends DefaultAI
 		if (skill_id == ENRAGED_SKILL_ID)
 		{
 			final Reflection r = getActor().getReflection();
+			
 			if (r instanceof MemoryOfDisaster)
 			{
 				((MemoryOfDisaster) r).startFinalScene();
 			}
+			
 			addTimer(2, 50);
 		}
 		else if (skill_id == BODY_STRIKE_SKILL_ID_1)

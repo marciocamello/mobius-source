@@ -30,7 +30,6 @@ public class GMViewQuestInfo extends L2GameServerPacket
 	{
 		writeC(0x99);
 		writeS(_cha.getName());
-		
 		Quest[] quests = _cha.getAllActiveQuests();
 		
 		if (quests.length == 0)
@@ -41,6 +40,7 @@ public class GMViewQuestInfo extends L2GameServerPacket
 		}
 		
 		writeH(quests.length);
+		
 		for (Quest q : quests)
 		{
 			writeD(q.getQuestIntId());
@@ -49,6 +49,6 @@ public class GMViewQuestInfo extends L2GameServerPacket
 		}
 		
 		writeH(0); // количество элементов типа: ddQd , как-то связано с
-					// предметами
+		// предметами
 	}
 }

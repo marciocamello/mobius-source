@@ -66,19 +66,24 @@ public class Call extends Skill
 			{
 				return false;
 			}
+			
 			SystemMessage msg = canSummonHere((Player) activeChar);
+			
 			if (msg != null)
 			{
 				activeChar.sendPacket(msg);
 				return false;
 			}
+			
 			if (!_party)
 			{
 				if (activeChar == target)
 				{
 					return false;
 				}
+				
 				msg = canBeSummoned(target);
+				
 				if (msg != null)
 				{
 					activeChar.sendPacket(msg);
@@ -86,6 +91,7 @@ public class Call extends Skill
 				}
 			}
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
@@ -101,12 +107,15 @@ public class Call extends Skill
 		{
 			return;
 		}
+		
 		SystemMessage msg = canSummonHere((Player) activeChar);
+		
 		if (msg != null)
 		{
 			activeChar.sendPacket(msg);
 			return;
 		}
+		
 		if (_party)
 		{
 			if (((Player) activeChar).getParty() != null)
@@ -121,12 +130,15 @@ public class Call extends Skill
 					}
 				}
 			}
+			
 			if (isSSPossible())
 			{
 				activeChar.unChargeShots(isMagic());
 			}
+			
 			return;
 		}
+		
 		for (Creature target : targets)
 		{
 			if (target != null)
@@ -135,10 +147,12 @@ public class Call extends Skill
 				{
 					continue;
 				}
+				
 				((Player) target).summonCharacterRequest(activeChar, Location.findAroundPosition(activeChar, 100, 150), (getId() == 1403) || (getId() == 1404) ? 1 : 0);
 				getEffects(activeChar, target, getActivateRate() > 0, false);
 			}
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());
@@ -156,14 +170,17 @@ public class Call extends Skill
 		{
 			return Msg.NOTHING_HAPPENED;
 		}
+		
 		if (activeChar.isInZoneBattle() || activeChar.isInZone(Zone.ZoneType.SIEGE) || activeChar.isInZone(no_restart) || activeChar.isInZone(no_summon) || activeChar.isInBoat() || (activeChar.getReflection() != ReflectionManager.DEFAULT))
 		{
 			return Msg.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION;
 		}
+		
 		if (activeChar.isInStoreMode() || activeChar.isProcessingRequest())
 		{
 			return Msg.YOU_CANNOT_SUMMON_DURING_A_TRADE_OR_WHILE_USING_THE_PRIVATE_SHOPS;
 		}
+		
 		return null;
 	}
 	
@@ -178,27 +195,34 @@ public class Call extends Skill
 		{
 			return Msg.INVALID_TARGET;
 		}
+		
 		if (target.isInOlympiadMode())
 		{
 			return Msg.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_CURRENTLY_PARTICIPATING_IN_THE_GRAND_OLYMPIAD;
 		}
+		
 		if (target.isInZoneBattle() || target.isInZone(Zone.ZoneType.SIEGE) || target.isInZone(no_restart) || target.isInZone(no_summon) || (target.getReflection() != ReflectionManager.DEFAULT) || target.isInBoat())
 		{
 			return Msg.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING;
 		}
+		
 		if (target.isAlikeDead())
 		{
 			return new SystemMessage(SystemMessage.S1_IS_DEAD_AT_THE_MOMENT_AND_CANNOT_BE_SUMMONED).addString(target.getName());
 		}
+		
 		if ((target.getPvpFlag() != 0) || target.isInCombat())
 		{
 			return new SystemMessage(SystemMessage.S1_IS_ENGAGED_IN_COMBAT_AND_CANNOT_BE_SUMMONED).addString(target.getName());
 		}
+		
 		Player pTarget = (Player) target;
+		
 		if ((pTarget.getPrivateStoreType() != Player.STORE_PRIVATE_NONE) || pTarget.isProcessingRequest())
 		{
 			return new SystemMessage(SystemMessage.S1_IS_CURRENTLY_TRADING_OR_OPERATING_A_PRIVATE_STORE_AND_CANNOT_BE_SUMMONED).addString(target.getName());
 		}
+		
 		return null;
 	}
 }

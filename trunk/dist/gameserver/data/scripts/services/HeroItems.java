@@ -264,12 +264,15 @@ public class HeroItems extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		String fileName = OLYMPIAD_HTML_PATH;
 		boolean succ = true;
+		
 		if (!player.isHero())
 		{
 			fileName += "monument_weapon_no_hero.htm";
@@ -280,6 +283,7 @@ public class HeroItems extends Functions
 			for (String heroItem[] : HERO_ITEMS)
 			{
 				int itemId = Integer.parseInt(heroItem[0]);
+				
 				if (player.getInventory().getItemByItemId(itemId) != null)
 				{
 					fileName += "monument_weapon_have.htm";
@@ -288,16 +292,20 @@ public class HeroItems extends Functions
 				}
 			}
 		}
+		
 		if (!succ)
 		{
 			npc.showChatWindow(player, fileName);
 			return;
 		}
+		
 		boolean isKamael = player.getRace() == Race.kamael;
 		String htmltext = "";
+		
 		if (val[0].equalsIgnoreCase("list"))
 		{
 			htmltext = "<html><body><font color=\"LEVEL\">List of Hero Weapons:</font><table border=0 width=270><tr><td>";
+			
 			for (int i = isKamael ? 11 : 0; i < (isKamael ? HERO_ITEMS.length : HERO_ITEMS.length - 3); i++)
 			{
 				htmltext += "<tr><td width=32 height=45 valign=top>";
@@ -306,6 +314,7 @@ public class HeroItems extends Functions
 				htmltext += "Type: " + HERO_ITEMS[i][5] + ", Patk/Matk: " + HERO_ITEMS[i][4];
 				htmltext += "</td></tr>";
 			}
+			
 			htmltext += "</table>";
 		}
 		else if ((Integer.parseInt(val[0]) >= 0) && (Integer.parseInt(val[0]) <= HERO_ITEMS.length))
@@ -325,6 +334,7 @@ public class HeroItems extends Functions
 			htmltext += "<img src=\"L2UI.SquareWhite\" width=270 height=1><br><br>";
 			htmltext += "<CENTER><button value=Back action=\"bypass -h scripts_services.HeroItems:rendershop list\" width=40 height=15 back=L2UI_CT1.Button_DF fore=L2UI_CT1.Button_DF></CENTER>";
 		}
+		
 		show(htmltext, player, npc);
 	}
 	
@@ -335,28 +345,37 @@ public class HeroItems extends Functions
 	public void getweapon(String[] var)
 	{
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		int item = Integer.parseInt(var[0]);
+		
 		if (((item < 6611) && (item > 6621)) || ((item < 9388) && (item > 9390)) || ((item < 30392) && (item > 30405)))
 		{
 			System.out.println(player.getName() + " tried to obtain non hero item using hero weapon service. Ban him!");
 			return;
 		}
+		
 		NpcInstance npc = getNpc();
+		
 		if (npc == null)
 		{
 			return;
 		}
+		
 		String fileName = OLYMPIAD_HTML_PATH;
+		
 		if (player.isHero())
 		{
 			boolean have = false;
+			
 			for (String heroItem[] : HERO_ITEMS)
 			{
 				int itemId = Integer.parseInt(heroItem[0]);
+				
 				if (player.getInventory().getItemByItemId(itemId) != null)
 				{
 					fileName += "monument_weapon_have.htm";
@@ -364,6 +383,7 @@ public class HeroItems extends Functions
 					break;
 				}
 			}
+			
 			if (!have)
 			{
 				ItemFunctions.addItem(player, item, 1, true);
@@ -374,6 +394,7 @@ public class HeroItems extends Functions
 		{
 			fileName += "monument_weapon_no_hero.htm";
 		}
+		
 		npc.showChatWindow(player, fileName);
 	}
 	
@@ -384,16 +405,21 @@ public class HeroItems extends Functions
 	public String getcir()
 	{
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return null;
 		}
+		
 		NpcInstance npc = getNpc();
+		
 		if (npc == null)
 		{
 			return null;
 		}
+		
 		String fileName = OLYMPIAD_HTML_PATH;
+		
 		if (player.isHero())
 		{
 			if (player.getInventory().getItemByItemId(6842) != null)
@@ -410,6 +436,7 @@ public class HeroItems extends Functions
 		{
 			fileName += "monument_circlet_no_hero.htm";
 		}
+		
 		npc.showChatWindow(player, fileName);
 		return null;
 	}

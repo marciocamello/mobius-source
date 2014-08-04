@@ -40,20 +40,24 @@ public class _551_OlympiadStarter extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		switch (npcId)
 		{
 			case OLYMPIAD_MANAGER:
 				Player player = st.getPlayer();
+				
 				if (!player.isNoble() || (player.getLevel() < 75) || (player.getClassLevel() < 4))
 				{
 					return "olympiad_operator_q0551_08.htm";
 				}
+				
 				if (st.isCreated())
 				{
 					if (st.isNowAvailableByTime())
 					{
 						return "olympiad_operator_q0551_01.htm";
 					}
+					
 					return "olympiad_operator_q0551_06.htm";
 				}
 				else if (st.isStarted())
@@ -62,6 +66,7 @@ public class _551_OlympiadStarter extends Quest implements ScriptFile
 					{
 						return "olympiad_operator_q0551_04.htm";
 					}
+					
 					if (st.getQuestItemsCount(OLYMPIAD_CERT3) > 0)
 					{
 						st.giveItems(OLYMPIAD_CHEST, 2);
@@ -73,10 +78,13 @@ public class _551_OlympiadStarter extends Quest implements ScriptFile
 						st.exitCurrentQuest(this);
 						return "olympiad_operator_q0551_07.htm";
 					}
+					
 					return "olympiad_operator_q0551_05.htm";
 				}
+				
 				break;
 		}
+		
 		return null;
 	}
 	
@@ -123,6 +131,7 @@ public class _551_OlympiadStarter extends Quest implements ScriptFile
 				st.exitCurrentQuest(this);
 			}
 		}
+		
 		return event;
 	}
 	
@@ -133,6 +142,7 @@ public class _551_OlympiadStarter extends Quest implements ScriptFile
 		{
 			int count = qs.getInt("count") + 1;
 			qs.set("count", count);
+			
 			if (count == 3)
 			{
 				qs.giveItems(OLYMPIAD_CERT1, 1);

@@ -66,6 +66,7 @@ public class _10270_BirthOfTheSeed extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		String htmltext = event;
+		
 		if (event.equals("take") && (cond == 0))
 		{
 			st.setCond(1);
@@ -110,6 +111,7 @@ public class _10270_BirthOfTheSeed extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -119,6 +121,7 @@ public class _10270_BirthOfTheSeed extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == PLENOS)
 		{
 			if (cond == 0)
@@ -171,6 +174,7 @@ public class _10270_BirthOfTheSeed extends Quest implements ScriptFile
 				htmltext = "lelikia_q10270_1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -179,6 +183,7 @@ public class _10270_BirthOfTheSeed extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (cond == 2)
 		{
 			if ((npcId == Yehan_Klodekus) && (st.getQuestItemsCount(Yehan_Klodekus_Badge) < 1))
@@ -197,6 +202,7 @@ public class _10270_BirthOfTheSeed extends Quest implements ScriptFile
 				st.playSound(SOUND_ITEMGET);
 			}
 		}
+		
 		return null;
 	}
 }

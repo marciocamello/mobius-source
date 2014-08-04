@@ -67,13 +67,16 @@ public class _10363_RequestOfSeeker extends Quest implements ScriptFile
 	{
 		Player player = st.getPlayer();
 		GameObject npc1 = player.getTarget();
+		
 		if ((player.getTarget() == null) || !player.getTarget().isNpc() || ((NpcInstance) npc1).isDead())
 		{
 			return;
 		}
+		
 		int target = ((NpcInstance) npc1).getNpcId();
 		double dist = player.getDistance(npc1);
 		int cond = st.getCond();
+		
 		if (actionId == SocialAction.SORROW)
 		{
 			if ((dist < 70) && ((target == corps1) || (target == corps2) || (target == corps3) || (target == corps4)))
@@ -113,6 +116,7 @@ public class _10363_RequestOfSeeker extends Quest implements ScriptFile
 					st.playSound(SOUND_MIDDLE);
 					((NpcInstance) npc1).doDie(player);
 				}
+				
 				if (cond == 6)
 				{
 					player.sendPacket(new ExShowScreenMessage(NpcString.GRUDGE_OF_YE_SAGIRA_VICTIMS_HAVE_BEEN_RELIEVED_WITH_YOUR_TEARS, 4500, ScreenMessageAlign.TOP_CENTER));
@@ -151,6 +155,7 @@ public class _10363_RequestOfSeeker extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -158,6 +163,7 @@ public class _10363_RequestOfSeeker extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "0-3.htm";
 		}
+		
 		if (event.equalsIgnoreCase("qet_rev"))
 		{
 			htmltext = "1-3.htm";
@@ -168,6 +174,7 @@ public class _10363_RequestOfSeeker extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -177,6 +184,7 @@ public class _10363_RequestOfSeeker extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == nagel)
 		{
 			if (st.isCompleted())
@@ -205,6 +213,7 @@ public class _10363_RequestOfSeeker extends Quest implements ScriptFile
 				htmltext = TODO_FIND_HTML;
 			}
 		}
+		
 		if (npcId == celin)
 		{
 			if (st.isCompleted())
@@ -220,6 +229,7 @@ public class _10363_RequestOfSeeker extends Quest implements ScriptFile
 				htmltext = "1-1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

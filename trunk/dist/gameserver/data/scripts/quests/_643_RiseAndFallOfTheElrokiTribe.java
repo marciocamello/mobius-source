@@ -74,10 +74,12 @@ public class _643_RiseAndFallOfTheElrokiTribe extends Quest implements ScriptFil
 		super(true);
 		addStartNpc(32106);
 		addTalkId(32117);
+		
 		for (int npc : PLAIN_DINOSAURS)
 		{
 			addKillId(npc);
 		}
+		
 		addQuestItem(BONES_OF_A_PLAINS_DINOSAUR);
 	}
 	
@@ -86,6 +88,7 @@ public class _643_RiseAndFallOfTheElrokiTribe extends Quest implements ScriptFil
 	{
 		String htmltext = event;
 		long count = st.getQuestItemsCount(BONES_OF_A_PLAINS_DINOSAUR);
+		
 		if (event.equalsIgnoreCase("singsing_q0643_05.htm"))
 		{
 			st.setCond(1);
@@ -114,6 +117,7 @@ public class _643_RiseAndFallOfTheElrokiTribe extends Quest implements ScriptFil
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -122,6 +126,7 @@ public class _643_RiseAndFallOfTheElrokiTribe extends Quest implements ScriptFil
 	{
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
+		
 		if (st.getCond() == 0)
 		{
 			if (st.getPlayer().getLevel() >= 75)
@@ -139,6 +144,7 @@ public class _643_RiseAndFallOfTheElrokiTribe extends Quest implements ScriptFil
 			if (npcId == 32106)
 			{
 				long count = st.getQuestItemsCount(BONES_OF_A_PLAINS_DINOSAUR);
+				
 				if (count == 0)
 				{
 					htmltext = "singsing_q0643_08.htm";
@@ -155,6 +161,7 @@ public class _643_RiseAndFallOfTheElrokiTribe extends Quest implements ScriptFil
 				htmltext = "shaman_caracawe_q0643_02.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -165,6 +172,7 @@ public class _643_RiseAndFallOfTheElrokiTribe extends Quest implements ScriptFil
 		{
 			st.rollAndGive(BONES_OF_A_PLAINS_DINOSAUR, 1, DROP_CHANCE);
 		}
+		
 		return null;
 	}
 }

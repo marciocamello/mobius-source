@@ -44,6 +44,7 @@ public class RequestExRqItemLink extends L2GameClientPacket
 	protected void runImpl()
 	{
 		ItemInfo item;
+		
 		if ((item = ItemInfoCache.getInstance().get(_objectId)) == null)
 		{
 			sendPacket(ActionFail.STATIC);

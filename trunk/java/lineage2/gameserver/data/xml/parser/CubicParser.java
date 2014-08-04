@@ -92,11 +92,13 @@ public final class CubicParser extends AbstractFileParser<CubicHolder>
 			int delay = Integer.parseInt(cubicElement.attributeValue("delay"));
 			CubicTemplate template = new CubicTemplate(id, level, delay);
 			getHolder().addCubicTemplate(template);
+			
 			for (Iterator<?> skillsIterator = cubicElement.elementIterator(); skillsIterator.hasNext();)
 			{
 				Element skillsElement = (Element) skillsIterator.next();
 				int chance = Integer.parseInt(skillsElement.attributeValue("chance"));
 				List<CubicTemplate.SkillInfo> skills = new ArrayList<>(1);
+				
 				for (Iterator<?> skillIterator = skillsElement.elementIterator(); skillIterator.hasNext();)
 				{
 					Element skillElement = (Element) skillIterator.next();
@@ -106,28 +108,34 @@ public final class CubicParser extends AbstractFileParser<CubicHolder>
 					boolean canAttackDoor = Boolean.parseBoolean(skillElement.attributeValue("can_attack_door"));
 					CubicTemplate.ActionType type = CubicTemplate.ActionType.valueOf(skillElement.attributeValue("action_type"));
 					TIntIntHashMap set = new TIntIntHashMap();
+					
 					for (Iterator<?> chanceIterator = skillElement.elementIterator(); chanceIterator.hasNext();)
 					{
 						Element chanceElement = (Element) chanceIterator.next();
 						int min = Integer.parseInt(chanceElement.attributeValue("min"));
 						int max = Integer.parseInt(chanceElement.attributeValue("max"));
 						int value = Integer.parseInt(chanceElement.attributeValue("value"));
+						
 						for (int i = min; i <= max; i++)
 						{
 							set.put(i, value);
 						}
 					}
+					
 					if ((chance2 == 0) && set.isEmpty())
 					{
 						warn("Wrong skill chance. Cubic: " + id + "/" + level);
 					}
+					
 					Skill skill = SkillTable.getInstance().getInfo(id2, level2);
+					
 					if (skill != null)
 					{
 						skill.setCubicSkill(true);
 						skills.add(new CubicTemplate.SkillInfo(skill, chance2, type, canAttackDoor, set));
 					}
 				}
+				
 				template.putSkills(chance, skills);
 			}
 		}

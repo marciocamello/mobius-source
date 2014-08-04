@@ -54,10 +54,12 @@ public class RequestExBR_LectureMark extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if ((player == null) || !Config.EX_LECTURE_MARK)
 		{
 			return;
 		}
+		
 		switch (_mark)
 		{
 			case INITIAL_MARK:

@@ -45,12 +45,15 @@ public interface IItemHandler
 				player.getInventory().unEquipItem(item);
 				player.sendUserInfo();
 			}
+			
 			item = player.getInventory().removeItemByObjectId(item.getObjectId(), count);
+			
 			if (item == null)
 			{
 				player.sendActionFailed();
 				return;
 			}
+			
 			Log.LogItem(player, Log.Drop, item);
 			item.dropToTheGround(player, loc);
 			player.disableDrop(1000);

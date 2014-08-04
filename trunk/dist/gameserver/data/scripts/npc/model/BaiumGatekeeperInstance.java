@@ -28,7 +28,7 @@ import bosses.BaiumManager;
 public final class BaiumGatekeeperInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -70,22 +70,27 @@ public final class BaiumGatekeeperInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.startsWith("request_entrance"))
 		{
 			if (ItemFunctions.getItemCount(player, BloodedFabric) > 0)
 			{
 				NpcInstance baiumBoss = GameObjectsStorage.getByNpcId(Baium);
+				
 				if (baiumBoss != null)
 				{
 					showChatWindow(player, "default/31862-1.htm");
 					return;
 				}
+				
 				NpcInstance baiumNpc = GameObjectsStorage.getByNpcId(BaiumNpc);
+				
 				if (baiumNpc == null)
 				{
 					showChatWindow(player, "default/31862-2.htm");
 					return;
 				}
+				
 				ItemFunctions.removeItem(player, BloodedFabric, 1, true);
 				player.setVar("baiumPermission", "granted", -1);
 				player.teleToLocation(TELEPORT_POSITION);
@@ -102,10 +107,12 @@ public final class BaiumGatekeeperInstance extends NpcInstance
 				showChatWindow(player, "default/29025-1.htm");
 				return;
 			}
+			
 			if (isBusy())
 			{
 				showChatWindow(player, "default/29025-2.htm");
 			}
+			
 			setBusy(true);
 			Functions.npcSay(this, "You called my name! Now you gonna die!");
 			BaiumManager.spawnBaium(this, player);

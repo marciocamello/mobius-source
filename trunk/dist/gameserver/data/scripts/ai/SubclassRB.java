@@ -45,12 +45,15 @@ public class SubclassRB extends Fighter
 			case SHILLEN_MESSAGER:
 				chestSelect(actor, CABRIOCOFFER);
 				break;
+			
 			case DEATH_LORD:
 				chestSelect(actor, CHEST_HALLATE);
 				break;
+			
 			case KERNON:
 				chestSelect(actor, CHEST_KERNON);
 				break;
+			
 			case LONGHORN:
 				chestSelect(actor, CHEST_GOLKONDA);
 				break;
@@ -62,7 +65,6 @@ public class SubclassRB extends Fighter
 	private void chestSelect(NpcInstance actor, int npcId)
 	{
 		NpcInstance chest = NpcHolder.getInstance().getTemplate(npcId).getNewInstance();
-		
 		chest.spawnMe(actor.getLoc());
 		ThreadPoolManager.getInstance().schedule(new ChestDespawnTask(chest), 120 * 1000);
 	}

@@ -52,16 +52,19 @@ public class RequestCharacterNameCreatable extends L2GameClientPacket
 			sendPacket(new ExIsCharNameCreatable(ExIsCharNameCreatable.REASON_TOO_MANY_CHARACTERS));
 			return;
 		}
+		
 		if (!Util.isMatchingRegexp(_nickname, Config.CNAME_TEMPLATE))
 		{
 			sendPacket(new ExIsCharNameCreatable(ExIsCharNameCreatable.REASON_16_ENG_CHARS));
 			return;
 		}
+		
 		if (CharacterDAO.getInstance().getObjectIdByName(_nickname) > 0)
 		{
 			sendPacket(new ExIsCharNameCreatable(ExIsCharNameCreatable.REASON_NAME_ALREADY_EXISTS));
 			return;
 		}
+		
 		sendPacket(new ExIsCharNameCreatable(ExIsCharNameCreatable.REASON_CREATION_OK));
 	}
 	

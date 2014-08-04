@@ -29,7 +29,6 @@ import lineage2.gameserver.templates.manor.SeedProduction;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-@SuppressWarnings("unused")
 public class AdminManor implements IAdminCommandHandler
 {
 	/**
@@ -66,13 +65,14 @@ public class AdminManor implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
 		if (!activeChar.getPlayerAccess().Menu)
 		{
 			return false;
 		}
+		
 		StringTokenizer st = new StringTokenizer(fullString);
 		fullString = st.nextToken();
+		
 		if (fullString.equals("admin_manor"))
 		{
 			showMainPage(activeChar);
@@ -80,6 +80,7 @@ public class AdminManor implements IAdminCommandHandler
 		else if (fullString.equals("admin_manor_reset"))
 		{
 			int castleId = 0;
+			
 			try
 			{
 				castleId = Integer.parseInt(st.nextToken());
@@ -87,6 +88,7 @@ public class AdminManor implements IAdminCommandHandler
 			catch (Exception e)
 			{
 			}
+			
 			if (castleId > 0)
 			{
 				Castle castle = ResidenceHolder.getInstance().getResidence(Castle.class, castleId);
@@ -109,8 +111,10 @@ public class AdminManor implements IAdminCommandHandler
 					castle.saveCropData();
 					castle.saveSeedData();
 				}
+				
 				activeChar.sendMessage("Manor data was nulled");
 			}
+			
 			showMainPage(activeChar);
 		}
 		else if (fullString.equals("admin_manor_save"))
@@ -123,6 +127,7 @@ public class AdminManor implements IAdminCommandHandler
 		{
 			boolean mode = CastleManorManager.getInstance().isDisabled();
 			CastleManorManager.getInstance().setDisabled(!mode);
+			
 			if (mode)
 			{
 				activeChar.sendMessage("Manor System: enabled");
@@ -131,8 +136,10 @@ public class AdminManor implements IAdminCommandHandler
 			{
 				activeChar.sendMessage("Manor System: disabled");
 			}
+			
 			showMainPage(activeChar);
 		}
+		
 		return true;
 	}
 	
@@ -168,10 +175,12 @@ public class AdminManor implements IAdminCommandHandler
 		replyMSG.append("</table></center>");
 		replyMSG.append("<br><center>Castle Information:<table width=\"100%\">");
 		replyMSG.append("<tr><td></td><td>Current Period</td><td>Next Period</td></tr>");
+		
 		for (Castle c : ResidenceHolder.getInstance().getResidenceList(Castle.class))
 		{
 			replyMSG.append("<tr><td>" + c.getName() + "</td>" + "<td>" + c.getManorCost(CastleManorManager.PERIOD_CURRENT) + "a</td>" + "<td>" + c.getManorCost(CastleManorManager.PERIOD_NEXT) + "a</td>" + "</tr>");
 		}
+		
 		replyMSG.append("</table><br>");
 		replyMSG.append("</body></html>");
 		adminReply.setHtml(replyMSG.toString());

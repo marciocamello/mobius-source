@@ -62,6 +62,7 @@ public class _357_WarehouseKeepersAmbition extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("warehouse_keeper_silva_q0357_04.htm"))
 		{
 			st.setCond(1);
@@ -71,13 +72,16 @@ public class _357_WarehouseKeepersAmbition extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("warehouse_keeper_silva_q0357_08.htm"))
 		{
 			long count = st.getQuestItemsCount(JADE_CRYSTAL);
+			
 			if (count > 0)
 			{
 				long reward = count * REWARD1;
+				
 				if (count >= 100)
 				{
 					reward = reward + REWARD2;
 				}
+				
 				st.takeItems(JADE_CRYSTAL, -1);
 				st.giveItems(ADENA_ID, reward);
 			}
@@ -91,6 +95,7 @@ public class _357_WarehouseKeepersAmbition extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -101,6 +106,7 @@ public class _357_WarehouseKeepersAmbition extends Quest implements ScriptFile
 		int id = st.getState();
 		int cond = st.getCond();
 		long jade = st.getQuestItemsCount(JADE_CRYSTAL);
+		
 		if ((cond == 0) || (id == CREATED))
 		{
 			if (st.getPlayer().getLevel() >= 47)
@@ -121,6 +127,7 @@ public class _357_WarehouseKeepersAmbition extends Quest implements ScriptFile
 		{
 			htmltext = "warehouse_keeper_silva_q0357_07.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -132,6 +139,7 @@ public class _357_WarehouseKeepersAmbition extends Quest implements ScriptFile
 			st.giveItems(JADE_CRYSTAL, 1);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		return null;
 	}
 }

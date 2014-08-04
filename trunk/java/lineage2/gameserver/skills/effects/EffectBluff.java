@@ -46,6 +46,7 @@ public final class EffectBluff extends Effect
 		{
 			return false;
 		}
+		
 		return super.checkCondition();
 	}
 	

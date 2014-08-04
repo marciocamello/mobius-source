@@ -52,6 +52,7 @@ public class _029_ChestCaughtWithABaitOfEarth extends Quest implements ScriptFil
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("fisher_willeri_q0029_0104.htm"))
 		{
 			st.setState(STARTED);
@@ -88,6 +89,7 @@ public class _029_ChestCaughtWithABaitOfEarth extends Quest implements ScriptFil
 				st.exitCurrentQuest(true);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -98,6 +100,7 @@ public class _029_ChestCaughtWithABaitOfEarth extends Quest implements ScriptFil
 		String htmltext = "noquest";
 		int id = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == Willie)
 		{
 			if (id == CREATED)
@@ -110,6 +113,7 @@ public class _029_ChestCaughtWithABaitOfEarth extends Quest implements ScriptFil
 				else
 				{
 					QuestState WilliesSpecialBait = st.getPlayer().getQuestState(_052_WilliesSpecialBait.class);
+					
 					if (WilliesSpecialBait != null)
 					{
 						if (WilliesSpecialBait.isCompleted())
@@ -132,6 +136,7 @@ public class _029_ChestCaughtWithABaitOfEarth extends Quest implements ScriptFil
 			else if (cond == 1)
 			{
 				htmltext = "fisher_willeri_q0029_0105.htm";
+				
 				if (st.getQuestItemsCount(SmallPurpleTreasureChest) == 0)
 				{
 					htmltext = "fisher_willeri_q0029_0106.htm";
@@ -153,6 +158,7 @@ public class _029_ChestCaughtWithABaitOfEarth extends Quest implements ScriptFil
 				htmltext = "magister_anabel_q0029_0302.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

@@ -48,18 +48,24 @@ public class ClanPenalty implements IUserCommandHandler
 		{
 			return false;
 		}
+		
 		long leaveClan = 0;
+		
 		if (activeChar.getLeaveClanTime() != 0)
 		{
 			leaveClan = activeChar.getLeaveClanTime() + (1 * 24 * 60 * 60 * 1000L);
 		}
+		
 		long deleteClan = 0;
+		
 		if (activeChar.getDeleteClanTime() != 0)
 		{
 			deleteClan = activeChar.getDeleteClanTime() + (10 * 24 * 60 * 60 * 1000L);
 		}
+		
 		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
 		String html = HtmCache.getInstance().getNotNull("command/penalty.htm", activeChar);
+		
 		if (activeChar.getClanId() == 0)
 		{
 			if ((leaveClan == 0) && (deleteClan == 0))
@@ -88,6 +94,7 @@ public class ClanPenalty implements IUserCommandHandler
 			html = html.replaceFirst("%reason%", "Penalty for expelling clan member.");
 			html = html.replaceFirst("%expiration%", format.format(activeChar.getClan().getExpelledMemberTime()));
 		}
+		
 		NpcHtmlMessage msg = new NpcHtmlMessage(5);
 		msg.setHtml(Strings.bbParse(html));
 		activeChar.sendPacket(msg);

@@ -45,7 +45,7 @@ import org.slf4j.LoggerFactory;
 public class MerchantInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -74,6 +74,7 @@ public class MerchantInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String pom;
+		
 		if (val == 0)
 		{
 			pom = "" + npcId;
@@ -82,25 +83,33 @@ public class MerchantInstance extends NpcInstance
 		{
 			pom = npcId + "-" + val;
 		}
+		
 		if (getTemplate().getHtmRoot() != null)
 		{
 			return getTemplate().getHtmRoot() + pom + ".htm";
 		}
+		
 		String temp = "merchant/" + pom + ".htm";
+		
 		if (HtmCache.getInstance().getNullable(temp, player) != null)
 		{
 			return temp;
 		}
+		
 		temp = "teleporter/" + pom + ".htm";
+		
 		if (HtmCache.getInstance().getNullable(temp, player) != null)
 		{
 			return temp;
 		}
+		
 		temp = "petmanager/" + pom + ".htm";
+		
 		if (HtmCache.getInstance().getNullable(temp, player) != null)
 		{
 			return temp;
 		}
+		
 		return "default/" + pom + ".htm";
 	}
 	
@@ -115,7 +124,9 @@ public class MerchantInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		NpcTradeList list = BuyListHolder.getInstance().getBuyList(val);
+		
 		if (list != null)
 		{
 			ShopPreviewList bl = new ShopPreviewList(list, player);
@@ -140,16 +151,21 @@ public class MerchantInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		double taxRate = 0;
+		
 		if (tax)
 		{
 			Castle castle = getCastle(player);
+			
 			if (castle != null)
 			{
 				taxRate = castle.getTaxRate();
 			}
 		}
+		
 		NpcTradeList list = BuyListHolder.getInstance().getBuyList(listId);
+		
 		if ((list == null) || (list.getNpcId() == getNpcId()))
 		{
 			player.sendPacket(new ExBuySellList.BuyList(list, player, taxRate), new ExBuySellList.SellRefundList(player, false));
@@ -182,15 +198,19 @@ public class MerchantInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		StringTokenizer st = new StringTokenizer(command, " ");
 		String actualCommand = st.nextToken();
+		
 		if (actualCommand.equalsIgnoreCase("Buy") || actualCommand.equalsIgnoreCase("Sell"))
 		{
 			int val = 0;
+			
 			if (st.countTokens() > 0)
 			{
 				val = Integer.parseInt(st.nextToken());
 			}
+			
 			showShopWindow(player, val, true);
 		}
 		else if (actualCommand.equalsIgnoreCase("Wear"))
@@ -199,6 +219,7 @@ public class MerchantInstance extends NpcInstance
 			{
 				return;
 			}
+			
 			int val = Integer.parseInt(st.nextToken());
 			showWearWindow(player, val);
 		}
@@ -208,6 +229,7 @@ public class MerchantInstance extends NpcInstance
 			{
 				return;
 			}
+			
 			int val = Integer.parseInt(st.nextToken());
 			Castle castle = getCastle(player);
 			MultiSellHolder.getInstance().SeparateAndSend(val, player, castle != null ? castle.getTaxRate() : 0);
@@ -219,6 +241,7 @@ public class MerchantInstance extends NpcInstance
 				player.sendPacket(Msg.THERE_ARE_NO_MORE_VITAMIN_ITEMS_TO_BE_FOUND);
 				return;
 			}
+			
 			player.sendPacket(new ExGetPremiumItemList(player));
 		}
 		else if (actualCommand.equalsIgnoreCase("MenteeCertGet"))
@@ -263,20 +286,25 @@ public class MerchantInstance extends NpcInstance
 		{
 			return null;
 		}
+		
 		if ((getReflection() == ReflectionManager.GIRAN_HARBOR) || (getReflection() == ReflectionManager.PARNASSUS))
 		{
 			String var = player.getVar("backCoords");
+			
 			if ((var != null) && !var.isEmpty())
 			{
 				Location loc = Location.parseLoc(var);
 				DomainArea domain = MapRegionManager.getInstance().getRegionData(DomainArea.class, loc);
+				
 				if (domain != null)
 				{
 					return ResidenceHolder.getInstance().getResidence(Castle.class, domain.getId());
 				}
 			}
+			
 			return super.getCastle();
 		}
+		
 		return super.getCastle(player);
 	}
 	

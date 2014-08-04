@@ -63,6 +63,7 @@ public class ProductHolder
 		{
 			_instance = new ProductHolder();
 		}
+		
 		return _instance;
 	}
 	
@@ -80,6 +81,7 @@ public class ProductHolder
 	private ProductHolder()
 	{
 		_itemsList = new TreeMap<>();
+		
 		try
 		{
 			File file = new File(Config.DATAPACK_ROOT, "data/xml/other/item-mall.xml");
@@ -87,6 +89,7 @@ public class ProductHolder
 			factory1.setValidating(false);
 			factory1.setIgnoringComments(true);
 			Document doc1 = factory1.newDocumentBuilder().parse(file);
+			
 			for (Node n1 = doc1.getFirstChild(); n1 != null; n1 = n1.getNextSibling())
 			{
 				if ("list".equalsIgnoreCase(n1.getNodeName()))
@@ -97,10 +100,12 @@ public class ProductHolder
 						{
 							Node onSaleNode = d1.getAttributes().getNamedItem("on_sale");
 							Boolean onSale = (onSaleNode != null) && Boolean.parseBoolean(onSaleNode.getNodeValue());
+							
 							if (!onSale)
 							{
 								continue;
 							}
+							
 							int productId = Integer.parseInt(d1.getAttributes().getNamedItem("id").getNodeValue());
 							Node categoryNode = d1.getAttributes().getNamedItem("category");
 							int category = categoryNode != null ? Integer.parseInt(categoryNode.getNodeValue()) : 5;
@@ -119,6 +124,7 @@ public class ProductHolder
 							long endTimeSale = endTimeNode != null ? getMillisecondsFromString(endTimeNode.getNodeValue()) : 0;
 							ArrayList<ProductItemComponent> components = new ArrayList<>();
 							ProductItem pr = new ProductItem(productId, category, price, tabId, startTimeSale, endTimeSale);
+							
 							for (Node t1 = d1.getFirstChild(); t1 != null; t1 = t1.getNextSibling())
 							{
 								if ("component".equalsIgnoreCase(t1.getNodeName()))
@@ -129,12 +135,14 @@ public class ProductHolder
 									components.add(component);
 								}
 							}
+							
 							pr.setComponents(components);
 							_itemsList.put(productId, pr);
 						}
 					}
 				}
 			}
+			
 			_log.info(String.format("ProductItemTable: Loaded %d product item on sale.", _itemsList.size()));
 		}
 		catch (Exception e)
@@ -157,14 +165,17 @@ public class ProductHolder
 		{
 			return 3;
 		}
+		
 		if (isEvent)
 		{
 			return 1;
 		}
+		
 		if (isBest)
 		{
 			return 2;
 		}
+		
 		return 4;
 	}
 	
@@ -176,6 +187,7 @@ public class ProductHolder
 	private static long getMillisecondsFromString(String datetime)
 	{
 		DateFormat df = new SimpleDateFormat("dd.MM.yyyy HH:mm");
+		
 		try
 		{
 			Date time = df.parse(datetime);
@@ -187,6 +199,7 @@ public class ProductHolder
 		{
 			e.printStackTrace();
 		}
+		
 		return 0;
 	}
 	

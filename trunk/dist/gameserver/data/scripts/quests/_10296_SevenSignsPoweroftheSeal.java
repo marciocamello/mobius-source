@@ -50,6 +50,7 @@ public class _10296_SevenSignsPoweroftheSeal extends Quest implements ScriptFile
 	{
 		Player player = st.getPlayer();
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("eris_q10296_3.htm"))
 		{
 			st.setCond(1);
@@ -98,6 +99,7 @@ public class _10296_SevenSignsPoweroftheSeal extends Quest implements ScriptFile
 				htmltext = "franz_q10296_0.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -108,6 +110,7 @@ public class _10296_SevenSignsPoweroftheSeal extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
+		
 		if (!player.isBaseClassActive())
 		{
 			return "no_subclass_allowed.htm";
@@ -118,6 +121,7 @@ public class _10296_SevenSignsPoweroftheSeal extends Quest implements ScriptFile
 			if (cond == 0)
 			{
 				QuestState qs = player.getQuestState(_10295_SevenSignsSolinasTomb.class);
+				
 				if ((player.getLevel() >= 81) && (qs != null) && qs.isCompleted())
 				{
 					htmltext = "eris_q10296_1.htm";
@@ -200,6 +204,7 @@ public class _10296_SevenSignsPoweroftheSeal extends Quest implements ScriptFile
 				htmltext = "franz_q10296_1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -207,9 +212,11 @@ public class _10296_SevenSignsPoweroftheSeal extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		if (npcId == EtisEtina)
 		{
 			st.set("EtisKilled", 1);
+			
 			for (NpcInstance n : st.getPlayer().getReflection().getNpcs())
 			{
 				if (n.getNpcId() == ElcardiaInzone1)
@@ -217,9 +224,11 @@ public class _10296_SevenSignsPoweroftheSeal extends Quest implements ScriptFile
 					n.teleToLocation(new Location(120664, -86968, -3392));
 				}
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new ElcardiaTeleport(st.getPlayer()), 60500L);
 			st.getPlayer().showQuestMovie(ExStartScenePlayer.SCENE_SSQ2_BOSS_CLOSING);
 		}
+		
 		return null;
 	}
 	
@@ -230,6 +239,7 @@ public class _10296_SevenSignsPoweroftheSeal extends Quest implements ScriptFile
 			if (n.getNpcId() == ElcardiaInzone1)
 			{
 				n.teleToLocation(Location.findPointToStay(player, 60));
+				
 				if (n.isBlocked())
 				{
 					n.unblock();

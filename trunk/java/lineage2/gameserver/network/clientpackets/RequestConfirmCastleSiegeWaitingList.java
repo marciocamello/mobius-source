@@ -60,47 +60,60 @@ public class RequestConfirmCastleSiegeWaitingList extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (player.getClan() == null)
 		{
 			return;
 		}
+		
 		Castle castle = ResidenceHolder.getInstance().getResidence(Castle.class, _unitId);
+		
 		if ((castle == null) || (player.getClan().getCastle() != castle.getId()))
 		{
 			player.sendActionFailed();
 			return;
 		}
+		
 		CastleSiegeEvent siegeEvent = castle.getSiegeEvent();
 		SiegeClanObject siegeClan = siegeEvent.getSiegeClan(CastleSiegeEvent.DEFENDERS_WAITING, _clanId);
+		
 		if (siegeClan == null)
 		{
 			siegeClan = siegeEvent.getSiegeClan(SiegeEvent.DEFENDERS, _clanId);
 		}
+		
 		if (siegeClan == null)
 		{
 			return;
 		}
+		
 		if ((player.getClanPrivileges() & Clan.CP_CS_MANAGE_SIEGE) != Clan.CP_CS_MANAGE_SIEGE)
 		{
 			player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_THE_AUTHORITY_TO_MODIFY_THE_CASTLE_DEFENDER_LIST);
 			return;
 		}
+		
 		if (siegeEvent.isRegistrationOver())
 		{
 			player.sendPacket(SystemMsg.THIS_IS_NOT_THE_TIME_FOR_SIEGE_REGISTRATION_AND_SO_REGISTRATIONS_CANNOT_BE_ACCEPTED_OR_REJECTED);
 			return;
 		}
+		
 		int allSize = siegeEvent.getObjects(SiegeEvent.DEFENDERS).size();
+		
 		if (allSize >= CastleSiegeEvent.MAX_SIEGE_CLANS)
 		{
 			player.sendPacket(SystemMsg.NO_MORE_REGISTRATIONS_MAY_BE_ACCEPTED_FOR_THE_DEFENDER_SIDE);
 			return;
 		}
+		
 		siegeEvent.removeObject(siegeClan.getType(), siegeClan);
+		
 		if (_approved)
 		{
 			siegeClan.setType(SiegeEvent.DEFENDERS);
@@ -109,6 +122,7 @@ public class RequestConfirmCastleSiegeWaitingList extends L2GameClientPacket
 		{
 			siegeClan.setType(CastleSiegeEvent.DEFENDERS_REFUSED);
 		}
+		
 		siegeEvent.addObject(siegeClan.getType(), siegeClan);
 		SiegeClanDAO.getInstance().update(castle, siegeClan);
 		player.sendPacket(new CastleSiegeDefenderList(castle));

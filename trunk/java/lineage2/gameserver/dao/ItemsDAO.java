@@ -147,6 +147,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -172,6 +173,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 	private ItemInstance load0(ResultSet rset) throws SQLException
 	{
 		ItemInstance item = null;
+		
 		if (rset.next())
 		{
 			int objectId = rset.getInt(1);
@@ -196,6 +198,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 			item.setAgathionEnergy(rset.getInt(19));
 			item.setVisualId(rset.getInt(20));
 		}
+		
 		return item;
 	}
 	
@@ -238,6 +241,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -272,6 +276,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -325,6 +330,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -349,18 +355,22 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 	{
 		ItemInstance item;
 		Element ce = cache.get(objectId);
+		
 		if (ce != null)
 		{
 			item = (ItemInstance) ce.getObjectValue();
 			return item;
 		}
+		
 		try
 		{
 			item = load0(objectId);
+			
 			if (item == null)
 			{
 				return null;
 			}
+			
 			item.setJdbcState(JdbcEntityState.STORED);
 		}
 		catch (SQLException e)
@@ -368,6 +378,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 			_log.error("Error while restoring item : " + objectId, e);
 			return null;
 		}
+		
 		cache.put(new Element(item.getObjectId(), item));
 		return item;
 	}
@@ -380,20 +391,25 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 	public Collection<ItemInstance> load(Collection<Integer> objectIds)
 	{
 		Collection<ItemInstance> list = Collections.emptyList();
+		
 		if (objectIds.isEmpty())
 		{
 			return list;
 		}
+		
 		list = new ArrayList<>(objectIds.size());
 		ItemInstance item;
+		
 		for (Integer objectId : objectIds)
 		{
 			item = load(objectId);
+			
 			if (item != null)
 			{
 				list.add(item);
 			}
 		}
+		
 		return list;
 	}
 	
@@ -408,6 +424,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		{
 			return;
 		}
+		
 		try
 		{
 			save0(item);
@@ -418,6 +435,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 			_log.error("Error while saving item : " + item, e);
 			return;
 		}
+		
 		cache.put(new Element(item.getObjectId(), item));
 	}
 	
@@ -431,6 +449,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		{
 			return;
 		}
+		
 		for (ItemInstance item : items)
 		{
 			save(item);
@@ -448,6 +467,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		{
 			return;
 		}
+		
 		try
 		{
 			update0(item);
@@ -458,6 +478,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 			_log.error("Error while updating item : " + item, e);
 			return;
 		}
+		
 		cache.putIfAbsent(new Element(item.getObjectId(), item));
 	}
 	
@@ -471,6 +492,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		{
 			return;
 		}
+		
 		for (ItemInstance item : items)
 		{
 			update(item);
@@ -504,6 +526,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		{
 			return;
 		}
+		
 		for (ItemInstance item : items)
 		{
 			saveOrUpdate(item);
@@ -521,6 +544,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		{
 			return;
 		}
+		
 		try
 		{
 			delete0(item);
@@ -531,6 +555,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 			_log.error("Error while deleting item : " + item, e);
 			return;
 		}
+		
 		cache.remove(item.getObjectId());
 	}
 	
@@ -544,6 +569,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		{
 			return;
 		}
+		
 		for (ItemInstance item : items)
 		{
 			delete(item);
@@ -562,6 +588,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -570,6 +597,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 			statement.setString(2, loc.name());
 			rset = statement.executeQuery();
 			objectIds = new ArrayList<>();
+			
 			while (rset.next())
 			{
 				objectIds.add(rset.getInt(1));
@@ -598,6 +626,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -605,6 +634,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 			statement.setString(1, loc.name());
 			rset = statement.executeQuery();
 			objectIds = new ArrayList<>();
+			
 			while (rset.next())
 			{
 				objectIds.add(rset.getInt(1));

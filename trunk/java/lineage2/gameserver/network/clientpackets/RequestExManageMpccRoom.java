@@ -64,19 +64,24 @@ public class RequestExManageMpccRoom extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		MatchingRoom room = player.getMatchingRoom();
+		
 		if ((room == null) || (room.getId() != _id) || (room.getType() != MatchingRoom.CC_MATCHING))
 		{
 			return;
 		}
+		
 		if (room.getLeader() != player)
 		{
 			return;
 		}
+		
 		room.setTopic(_topic);
 		room.setMaxMemberSize(_memberSize);
 		room.setMinLevel(_minLevel);

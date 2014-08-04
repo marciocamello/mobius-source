@@ -37,10 +37,8 @@ public class _753_ForcedSituation extends Quest implements ScriptFile
 		super(false);
 		addTalkId(BERNA);
 		addQuestItem(KEY);
-		
 		addKillId(23270, 23271, 23272, 23272, 23274, 23275, 23276);
 		addKillNpcWithLog(1, GOLEM_KILL, 5, 19296);
-		
 		addLevelCheck(93, 100);
 		addQuestCompletedCheck(_10386_PathOfMystery.class);
 	}
@@ -66,6 +64,7 @@ public class _753_ForcedSituation extends Quest implements ScriptFile
 			st.exitCurrentQuest(this);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -76,10 +75,12 @@ public class _753_ForcedSituation extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
 		QuestState Mj = st.getPlayer().getQuestState(_10386_PathOfMystery.class);
+		
 		if ((Mj == null) || !Mj.isCompleted())
 		{
 			return "you cannot procceed with this quest until you have completed the Mystrerious Journey quest";
 		}
+		
 		if (st.isNowAvailable())
 		{
 			if (npcId == BERNA)
@@ -118,6 +119,7 @@ public class _753_ForcedSituation extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		if (qs.getCond() != 1)
 		{
 			return null;
@@ -127,16 +129,20 @@ public class _753_ForcedSituation extends Quest implements ScriptFile
 		{
 			qs.giveItems(KEY, 1);
 		}
+		
 		if ((qs.getQuestItemsCount(KEY) >= 30) && qs.getPlayer().getVarB("q753doneKill"))
 		{
 			qs.setCond(2);
 		}
+		
 		if ((npc.getNpcId() == 19296) && !qs.getPlayer().getVarB("q753doneKill"))
 		{
 			boolean doneKill = updateKill(npc, qs);
+			
 			if (doneKill)
 			{
 				qs.unset(GOLEM_KILL);
+				
 				if (qs.getQuestItemsCount(KEY) >= 30)
 				{
 					qs.setCond(2);
@@ -147,6 +153,7 @@ public class _753_ForcedSituation extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 	

@@ -59,10 +59,12 @@ public class TimakOrcTroopLeader extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (!actor.isDead() && _firstTimeAttacked)
 		{
 			_firstTimeAttacked = false;
 			Functions.npcSay(actor, "Show yourselves!");
+			
 			for (int bro : BROTHERS)
 			{
 				try
@@ -80,6 +82,7 @@ public class TimakOrcTroopLeader extends Fighter
 				}
 			}
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	

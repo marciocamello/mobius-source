@@ -27,6 +27,7 @@ public class ExCleftList extends L2GameServerPacket
 	{
 		writeEx(0x95);
 		writeD(CleftType);
+		
 		switch (CleftType)
 		{
 			case CleftType_Total:
@@ -34,15 +35,19 @@ public class ExCleftList extends L2GameServerPacket
 				// BlueTeam: d[dS] (PlayerID:%d PlayerName:%s)
 				// RedTeam: d[dS] (PlayerID:%d PlayerName:%s)
 				break;
+			
 			case CleftType_Add:
 				// ddS - TeamID:%d PlayerID:%d PlayerName:%s
 				break;
+			
 			case CleftType_Remove:
 				// dd - TeamID:%d PlayerID:%d
 				break;
+			
 			case CleftType_TeamChange:
 				// ddd - PlayerID:%d From:%d To:%d
 				break;
+			
 			case CleftType_Close:
 				break;
 		}

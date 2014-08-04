@@ -106,6 +106,7 @@ public class FishingChampionShipManager
 		restoreData();
 		refreshWinResult();
 		recalculateMinLength();
+		
 		if (_enddate <= System.currentTimeMillis())
 		{
 			_enddate = System.currentTimeMillis();
@@ -140,23 +141,28 @@ public class FishingChampionShipManager
 		_enddate = ServerVariables.getLong("fishChampionshipEnd", 0);
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT `PlayerName`, `fishLength`, `rewarded` FROM fishing_championship");
 			ResultSet rs = statement.executeQuery();
+			
 			while (rs.next())
 			{
 				int rewarded = rs.getInt("rewarded");
+				
 				if (rewarded == 0)
 				{
 					_tmpPlayers.add(new Fisher(rs.getString("PlayerName"), rs.getDouble("fishLength"), 0));
 				}
+				
 				if (rewarded > 0)
 				{
 					_winPlayers.add(new Fisher(rs.getString("PlayerName"), rs.getDouble("fishLength"), rewarded));
 				}
 			}
+			
 			rs.close();
 		}
 		catch (SQLException e)
@@ -180,16 +186,21 @@ public class FishingChampionShipManager
 		{
 			return;
 		}
+		
 		double p1 = Rnd.get(60, 80);
+		
 		if ((p1 < 90) && (lureId > 8484) && (lureId < 8486))
 		{
 			long diff = Math.round(90 - p1);
+			
 			if (diff > 1)
 			{
 				p1 += Rnd.get(1, diff);
 			}
 		}
+		
 		double len = (Rnd.get(100, 999) / 1000.) + p1;
+		
 		if (_tmpPlayers.size() < 5)
 		{
 			for (Fisher fisher : _tmpPlayers)
@@ -202,9 +213,11 @@ public class FishingChampionShipManager
 						pl.sendMessage(new CustomMessage("lineage2.gameserver.instancemanager.games.FishingChampionShipManager.ResultImproveOn", pl));
 						recalculateMinLength();
 					}
+					
 					return;
 				}
 			}
+			
 			_tmpPlayers.add(new Fisher(pl.getName(), len, 0));
 			pl.sendMessage(new CustomMessage("lineage2.gameserver.instancemanager.games.FishingChampionShipManager.YouInAPrizeList", pl));
 			recalculateMinLength();
@@ -221,11 +234,14 @@ public class FishingChampionShipManager
 						pl.sendMessage(new CustomMessage("lineage2.gameserver.instancemanager.games.FishingChampionShipManager.ResultImproveOn", pl));
 						recalculateMinLength();
 					}
+					
 					return;
 				}
 			}
+			
 			Fisher minFisher = null;
 			double minLen = 99999.;
+			
 			for (Fisher fisher : _tmpPlayers)
 			{
 				if (fisher.getLength() < minLen)
@@ -234,6 +250,7 @@ public class FishingChampionShipManager
 					minLen = minFisher.getLength();
 				}
 			}
+			
 			_tmpPlayers.remove(minFisher);
 			_tmpPlayers.add(new Fisher(pl.getName(), len, 0));
 			pl.sendMessage(new CustomMessage("lineage2.gameserver.instancemanager.games.FishingChampionShipManager.YouInAPrizeList", pl));
@@ -247,6 +264,7 @@ public class FishingChampionShipManager
 	private void recalculateMinLength()
 	{
 		double minLen = 99999.;
+		
 		for (Fisher fisher : _tmpPlayers)
 		{
 			if (fisher.getLength() < minLen)
@@ -254,6 +272,7 @@ public class FishingChampionShipManager
 				minLen = fisher.getLength();
 			}
 		}
+		
 		_minFishLength = minLen;
 	}
 	
@@ -277,6 +296,7 @@ public class FishingChampionShipManager
 		{
 			return _winPlayersName.get(par - 1);
 		}
+		
 		return "—";
 	}
 	
@@ -292,6 +312,7 @@ public class FishingChampionShipManager
 		{
 			return _playersName.get(par - 1);
 		}
+		
 		return "—";
 	}
 	
@@ -307,6 +328,7 @@ public class FishingChampionShipManager
 		{
 			return _winFishLength.get(par - 1);
 		}
+		
 		return "0";
 	}
 	
@@ -322,6 +344,7 @@ public class FishingChampionShipManager
 		{
 			return _fishLength.get(par - 1);
 		}
+		
 		return "0";
 	}
 	
@@ -336,6 +359,7 @@ public class FishingChampionShipManager
 		NpcHtmlMessage html = new NpcHtmlMessage(pl.getObjectId());
 		html.setFile(filename);
 		pl.sendPacket(html);
+		
 		for (Fisher fisher : _winPlayers)
 		{
 			if (fisher._name.equalsIgnoreCase(pl.getName()))
@@ -343,6 +367,7 @@ public class FishingChampionShipManager
 				if (fisher.getRewardType() != 2)
 				{
 					int rewardCnt = 0;
+					
 					for (int x = 0; x < _winPlayersName.size(); x++)
 					{
 						if (_winPlayersName.get(x).equalsIgnoreCase(pl.getName()))
@@ -352,22 +377,28 @@ public class FishingChampionShipManager
 								case 0:
 									rewardCnt = Config.ALT_FISH_CHAMPIONSHIP_REWARD_1;
 									break;
+								
 								case 1:
 									rewardCnt = Config.ALT_FISH_CHAMPIONSHIP_REWARD_2;
 									break;
+								
 								case 2:
 									rewardCnt = Config.ALT_FISH_CHAMPIONSHIP_REWARD_3;
 									break;
+								
 								case 3:
 									rewardCnt = Config.ALT_FISH_CHAMPIONSHIP_REWARD_4;
 									break;
+								
 								case 4:
 									rewardCnt = Config.ALT_FISH_CHAMPIONSHIP_REWARD_5;
 									break;
 							}
 						}
 					}
+					
 					fisher.setRewardType(2);
+					
 					if (rewardCnt > 0)
 					{
 						SystemMessage smsg = new SystemMessage(SystemMessage.YOU_HAVE_EARNED_S2_S1S).addItemName(Config.ALT_FISH_CHAMPIONSHIP_REWARD_ITEM).addNumber(rewardCnt);
@@ -392,16 +423,19 @@ public class FishingChampionShipManager
 			refreshResult();
 			ThreadPoolManager.getInstance().schedule(new needRefresh(), 60000);
 		}
+		
 		NpcHtmlMessage html = new NpcHtmlMessage(pl.getObjectId());
 		String filename = "fisherman/championship/MidResult.htm";
 		html.setFile(filename);
 		String str = null;
+		
 		for (int x = 1; x <= 5; x++)
 		{
 			str += "<tr><td width=70 align=center>" + x + " Position:" + "</td>";
 			str += "<td width=110 align=center>" + getCurrentName(x) + "</td>";
 			str += "<td width=80 align=center>" + getCurrentFishLength(x) + "</td></tr>";
 		}
+		
 		html.replace("%TABLE%", str);
 		html.replace("%prizeItem%", ItemHolder.getInstance().getTemplate(Config.ALT_FISH_CHAMPIONSHIP_REWARD_ITEM).getName());
 		html.replace("%prizeFirst%", String.valueOf(Config.ALT_FISH_CHAMPIONSHIP_REWARD_1));
@@ -424,12 +458,14 @@ public class FishingChampionShipManager
 		String filename = "fisherman/championship/champScreen.htm";
 		html.setFile(filename);
 		String str = null;
+		
 		for (int x = 1; x <= 5; x++)
 		{
 			str += "<tr><td width=70 align=center>" + x + " Position:" + "</td>";
 			str += "<td width=110 align=center>" + getWinnerName(x) + "</td>";
 			str += "<td width=80 align=center>" + getFishLength(x) + "</td></tr>";
 		}
+		
 		html.replace("%TABLE%", str);
 		html.replace("%prizeItem%", ItemHolder.getInstance().getTemplate(Config.ALT_FISH_CHAMPIONSHIP_REWARD_ITEM).getName());
 		html.replace("%prizeFirst%", String.valueOf(Config.ALT_FISH_CHAMPIONSHIP_REWARD_1));
@@ -451,12 +487,14 @@ public class FishingChampionShipManager
 		ServerVariables.set("fishChampionshipEnd", _enddate);
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM fishing_championship");
 			statement.execute();
 			statement.close();
+			
 			for (Fisher fisher : _winPlayers)
 			{
 				statement = con.prepareStatement("INSERT INTO fishing_championship(PlayerName,fishLength,rewarded) VALUES (?,?,?)");
@@ -466,6 +504,7 @@ public class FishingChampionShipManager
 				statement.execute();
 				statement.close();
 			}
+			
 			for (Fisher fisher : _tmpPlayers)
 			{
 				statement = con.prepareStatement("INSERT INTO fishing_championship(PlayerName,fishLength,rewarded) VALUES (?,?,?)");
@@ -497,12 +536,14 @@ public class FishingChampionShipManager
 		_fishLength.clear();
 		Fisher fisher1 = null;
 		Fisher fisher2 = null;
+		
 		for (int x = 0; x <= (_tmpPlayers.size() - 1); x++)
 		{
 			for (int y = 0; y <= (_tmpPlayers.size() - 2); y++)
 			{
 				fisher1 = _tmpPlayers.get(y);
 				fisher2 = _tmpPlayers.get(y + 1);
+				
 				if (fisher1.getLength() < fisher2.getLength())
 				{
 					_tmpPlayers.set(y, fisher2);
@@ -510,6 +551,7 @@ public class FishingChampionShipManager
 				}
 			}
 		}
+		
 		for (int x = 0; x <= (_tmpPlayers.size() - 1); x++)
 		{
 			_playersName.add(_tmpPlayers.get(x)._name);
@@ -527,12 +569,14 @@ public class FishingChampionShipManager
 		_winFishLength.clear();
 		Fisher fisher1 = null;
 		Fisher fisher2 = null;
+		
 		for (int x = 0; x <= (_winPlayers.size() - 1); x++)
 		{
 			for (int y = 0; y <= (_winPlayers.size() - 2); y++)
 			{
 				fisher1 = _winPlayers.get(y);
 				fisher2 = _winPlayers.get(y + 1);
+				
 				if (fisher1.getLength() < fisher2.getLength())
 				{
 					_winPlayers.set(y, fisher2);
@@ -540,6 +584,7 @@ public class FishingChampionShipManager
 				}
 			}
 		}
+		
 		for (int x = 0; x <= (_winPlayers.size() - 1); x++)
 		{
 			_winPlayersName.add(_winPlayers.get(x)._name);
@@ -570,11 +615,13 @@ public class FishingChampionShipManager
 		public void runImpl()
 		{
 			_winPlayers.clear();
+			
 			for (Fisher fisher : _tmpPlayers)
 			{
 				fisher.setRewardType(1);
 				_winPlayers.add(fisher);
 			}
+			
 			_tmpPlayers.clear();
 			refreshWinResult();
 			setEndOfChamp();

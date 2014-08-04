@@ -58,6 +58,7 @@ public class _042_HelpTheUncle extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("1"))
 		{
 			htmltext = "pet_manager_waters_q0042_0104.htm";
@@ -91,6 +92,7 @@ public class _042_HelpTheUncle extends Quest implements ScriptFile
 			st.unset("cond");
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -101,6 +103,7 @@ public class _042_HelpTheUncle extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int id = st.getState();
 		int cond = st.getCond();
+		
 		if (id == CREATED)
 		{
 			if (st.getPlayer().getLevel() >= 25)
@@ -157,6 +160,7 @@ public class _042_HelpTheUncle extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -164,9 +168,11 @@ public class _042_HelpTheUncle extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if (cond == 2)
 		{
 			long pieces = st.getQuestItemsCount(MAP_PIECE);
+			
 			if (pieces < (MAX_COUNT - 1))
 			{
 				st.giveItems(MAP_PIECE, 1);
@@ -179,6 +185,7 @@ public class _042_HelpTheUncle extends Quest implements ScriptFile
 				st.setCond(3);
 			}
 		}
+		
 		return null;
 	}
 }

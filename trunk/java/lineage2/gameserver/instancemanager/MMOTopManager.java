@@ -78,6 +78,7 @@ public class MMOTopManager
 		{
 			_instance = new MMOTopManager();
 		}
+		
 		return _instance;
 	}
 	
@@ -116,9 +117,11 @@ public class MMOTopManager
 		try
 		{
 			String line;
+			
 			while ((line = reader.readLine()) != null)
 			{
 				StringTokenizer st = new StringTokenizer(line, "\t. :");
+				
 				while (st.hasMoreTokens())
 				{
 					try
@@ -145,6 +148,7 @@ public class MMOTopManager
 						calendar.set(13, second);
 						calendar.set(14, 0);
 						long voteTime = calendar.getTimeInMillis() / 1000;
+						
 						if ((voteTime + (Config.MMO_TOP_SAVE_DAYS * 86400)) > (System.currentTimeMillis() / 1000))
 						{
 							checkAndSave(voteTime, charName, voteType);
@@ -173,6 +177,7 @@ public class MMOTopManager
 		Connection con = null;
 		PreparedStatement selectObjectStatement = null, selectMmotopStatement = null, insertStatement = null;
 		ResultSet rsetObject = null, rsetMmotop = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -180,10 +185,12 @@ public class MMOTopManager
 			selectObjectStatement.setString(1, charName);
 			rsetObject = selectObjectStatement.executeQuery();
 			int objId = 0;
+			
 			if (rsetObject.next())
 			{
 				objId = rsetObject.getInt("obj_Id");
 			}
+			
 			if (objId > 0)
 			{
 				selectMmotopStatement = con.prepareStatement(SELECT_CHARACTER_MMOTOP_DATA);
@@ -191,6 +198,7 @@ public class MMOTopManager
 				selectMmotopStatement.setLong(2, voteTime);
 				selectMmotopStatement.setInt(3, voteType);
 				rsetMmotop = selectMmotopStatement.executeQuery();
+				
 				if (!rsetMmotop.next())
 				{
 					insertStatement = con.prepareStatement(INSERT_MMOTOP_DATA);
@@ -224,6 +232,7 @@ public class MMOTopManager
 		calendar.add(Calendar.DAY_OF_YEAR, -Config.MMO_TOP_SAVE_DAYS);
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -249,9 +258,11 @@ public class MMOTopManager
 		Connection con = null;
 		PreparedStatement selectMultStatement = null, updateStatement = null;
 		ResultSet rsetMult = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
+			
 			for (Player player : GameObjectsStorage.getAllPlayers())
 			{
 				int objId = player.getObjectId();
@@ -259,16 +270,19 @@ public class MMOTopManager
 				selectMultStatement = con.prepareStatement(SELECT_MULTIPLER_MMOTOP_DATA);
 				selectMultStatement.setInt(1, objId);
 				rsetMult = selectMultStatement.executeQuery();
+				
 				while (rsetMult.next())
 				{
 					mult += rsetMult.getInt("multipler");
 				}
+				
 				if (mult > 0)
 				{
 					updateStatement = con.prepareStatement(UPDATE_MMOTOP_DATA);
 					updateStatement.setInt(1, objId);
 					updateStatement.executeUpdate();
 					player.sendMessage("Thank you for your vote in MMOTop raiting. Best regards " + Config.L2_TOP_SERVER_ADDRESS);
+					
 					for (int i = 0; i < Config.MMO_TOP_REWARD.length; i += 2)
 					{
 						if (Config.MMO_TOP_REWARD[i] == -100)

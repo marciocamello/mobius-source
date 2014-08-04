@@ -79,6 +79,7 @@ public class OlympiadHistoryDAO
 		Connection con = null;
 		Statement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -87,6 +88,7 @@ public class OlympiadHistoryDAO
 			map = new HashMap<>(2);
 			map.put(Boolean.TRUE, new ArrayList<OlympiadHistory>());
 			map.put(Boolean.FALSE, new ArrayList<OlympiadHistory>());
+			
 			while (rset.next())
 			{
 				int objectId1 = rset.getInt("object_id_1");
@@ -120,6 +122,7 @@ public class OlympiadHistoryDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -154,6 +157,7 @@ public class OlympiadHistoryDAO
 	{
 		Connection con = null;
 		Statement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();

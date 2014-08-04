@@ -35,6 +35,7 @@ public class ConditionTargetNpcClass extends Condition
 	public ConditionTargetNpcClass(String name)
 	{
 		Class<NpcInstance> classType = null;
+		
 		try
 		{
 			classType = (Class<NpcInstance>) Class.forName("lineage2.gameserver.model.instances." + name + "Instance");
@@ -43,10 +44,12 @@ public class ConditionTargetNpcClass extends Condition
 		{
 			classType = (Class<NpcInstance>) Scripts.getInstance().getClasses().get("npc.model." + name + "Instance");
 		}
+		
 		if (classType == null)
 		{
 			throw new IllegalArgumentException("Not found type class for type: " + name + ".");
 		}
+		
 		_npcClass = classType;
 	}
 	

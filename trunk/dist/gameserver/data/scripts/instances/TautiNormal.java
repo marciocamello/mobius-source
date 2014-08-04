@@ -168,6 +168,7 @@ public class TautiNormal extends Reflection
 			}
 			
 			Player player = cha.getPlayer();
+			
 			if ((player == null) || !cha.isPlayer())
 			{
 				return;
@@ -178,7 +179,6 @@ public class TautiNormal extends Reflection
 				ThreadPoolManager.getInstance().schedule(new StartNormalTauti(), 30000L);
 				_startLaunched = true;
 				_log.info("Party in Tauti zone");
-				
 			}
 		}
 		
@@ -191,7 +191,7 @@ public class TautiNormal extends Reflection
 	private class StartNormalTauti extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public StartNormalTauti()
 		{
@@ -204,7 +204,6 @@ public class TautiNormal extends Reflection
 			_entryLocked = true;
 			_sayLocked = true;
 			_stage = 2;
-			
 			closeDoor(DOOR_HALL);
 			closeDoor(DOOR_TAUTI_ROOM);
 			
@@ -228,7 +227,7 @@ public class TautiNormal extends Reflection
 	private class DeathListener implements OnDeathListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public DeathListener()
 		{
@@ -248,7 +247,7 @@ public class TautiNormal extends Reflection
 	private class TautiDeath extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public TautiDeath()
 		{
@@ -263,6 +262,7 @@ public class TautiNormal extends Reflection
 				player.showQuestMovie(ExStartScenePlayer.SCENE_SC_TAUTI_ENDING);
 				WorldStatisticsManager.getInstance().updateStat(player, CategoryType.EPIC_BOSS_KILLS, 1);
 			}
+			
 			clearReflection(5, true);
 		}
 	}
@@ -282,10 +282,12 @@ public class TautiNormal extends Reflection
 		public void runImpl()
 		{
 			List<NpcInstance> npc = getAllByNpcId(npcId, true);
+			
 			if (!npc.isEmpty())
 			{
 				npc.get(0).broadcastPacket(new NpcSay(npc.get(0), ChatType.NPC_SAY, msg));
 			}
+			
 			if (!_sayLocked && !npc.isEmpty())
 			{
 				ThreadPoolManager.getInstance().schedule(this, Rnd.get(SAY_TIMER));
@@ -301,13 +303,16 @@ public class TautiNormal extends Reflection
 			if (actor.getNpcId() == TAUTI_NORMAL)
 			{
 				double HpPercent = actor.getCurrentHpPercents();
+				
 				if ((HpPercent <= 50.) && !_hpListenerLocked)
 				{
 					_hpListenerLocked = true;
+					
 					for (Player player : getPlayers())
 					{
 						player.sendPacket(new ExShowScreenMessage(NpcString.JAHAK_IS_INFUSING_ITS_PETRA_TO_TAUTI, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 					}
+					
 					ThreadPoolManager.getInstance().schedule(new Runnable()
 					{
 						@Override
@@ -315,10 +320,12 @@ public class TautiNormal extends Reflection
 						{
 							addSpawnWithoutRespawn(JAHAK, TAUTI.getLoc(), 50);
 							addSpawnWithoutRespawn(JAHAK, TAUTI.getLoc(), 50);
+							
 							for (Player player : getPlayers())
 							{
 								player.sendPacket(new ExShowScreenMessage(NpcString.LORD_TAUTI_REVEIVE_MY_PETRA_AND_BE_STRENGTHENED_THEN_DEFEAT_THESE_FEEBLE_WRETCHES, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 							}
+							
 							for (NpcInstance npc : getAllByNpcId(JAHAK, true))
 							{
 								Skill skill = SkillTable.getInstance().getInfo(14625, 1);
@@ -328,12 +335,14 @@ public class TautiNormal extends Reflection
 						}
 					}, 5000L);
 				}
+				
 				if (HpPercent <= 15.)
 				{
 					for (Player player : getPlayers())
 					{
 						player.showQuestMovie(ExStartScenePlayer.SCENE_SC_TAUTI_PHASE);
 					}
+					
 					TAUTI.teleToLocation(-149244, 209882, -10199, TAUTI.getReflection());
 					ThreadPoolManager.getInstance().schedule(new Runnable()
 					{

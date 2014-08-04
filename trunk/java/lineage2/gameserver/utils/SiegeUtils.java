@@ -28,6 +28,7 @@ public class SiegeUtils
 		character.addSkill(SkillTable.getInstance().getInfo(19034, 1), false); // Печать Света
 		character.addSkill(SkillTable.getInstance().getInfo(19035, 1), false); // Печать Тьмы
 		character.addSkill(SkillTable.getInstance().getInfo(247, 1), false);
+		
 		if (character.isNoble())
 		{
 			character.addSkill(SkillTable.getInstance().getInfo(326, 1), false);
@@ -63,6 +64,7 @@ public class SiegeUtils
 				return false;
 			}
 		}
+		
 		return true;
 	}
 }

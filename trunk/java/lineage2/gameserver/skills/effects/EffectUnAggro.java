@@ -39,6 +39,7 @@ public class EffectUnAggro extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if (_effected.isNpc())
 		{
 			((NpcInstance) _effected).setUnAggred(true);
@@ -52,6 +53,7 @@ public class EffectUnAggro extends Effect
 	public void onExit()
 	{
 		super.onExit();
+		
 		if (_effected.isNpc())
 		{
 			((NpcInstance) _effected).setUnAggred(false);

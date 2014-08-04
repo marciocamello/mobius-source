@@ -35,10 +35,12 @@ public class RequestOlympiadObserverEnd extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (activeChar.getObserverMode() == Player.OBSERVER_STARTED)
 		{
 			if (activeChar.getOlympiadObserveGame() != null)

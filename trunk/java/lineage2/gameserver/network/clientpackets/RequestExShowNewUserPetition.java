@@ -37,10 +37,12 @@ public class RequestExShowNewUserPetition extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if ((player == null) || !Config.EX_NEW_PETITION_SYSTEM)
 		{
 			return;
 		}
+		
 		player.sendPacket(new ExResponseShowStepOne(player));
 	}
 }

@@ -34,9 +34,11 @@ public class ExGoodsInventoryInfo extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0x112);
+		
 		if (!_premiumItemMap.isEmpty())
 		{
 			writeH(_premiumItemMap.size());
+			
 			for (Map.Entry entry : _premiumItemMap.entrySet())
 			{
 				writeQ((Integer) entry.getKey());
@@ -47,10 +49,8 @@ public class ExGoodsInventoryInfo extends L2GameServerPacket
 				writeQ(0);
 				writeC(2);
 				writeC(0);
-				
 				writeS(null);
 				writeS(null);
-				
 				writeH(1);
 				writeD(((PremiumItem) entry.getValue()).getItemId());
 				writeD((int) ((PremiumItem) entry.getValue()).getCount());

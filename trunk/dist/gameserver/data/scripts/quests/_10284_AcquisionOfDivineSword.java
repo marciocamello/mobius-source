@@ -46,6 +46,7 @@ public class _10284_AcquisionOfDivineSword extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("rafforty_q10284_02.htm"))
 		{
 			st.setState(STARTED);
@@ -65,6 +66,7 @@ public class _10284_AcquisionOfDivineSword extends Quest implements ScriptFile
 				st.getPlayer().getReflection().startCollapseTimer(60 * 1000L);
 				st.getPlayer().sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(1));
 			}
+			
 			st.setCond(3);
 		}
 		else if (event.equalsIgnoreCase("leaveinstance"))
@@ -75,10 +77,12 @@ public class _10284_AcquisionOfDivineSword extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("entermines"))
 		{
 			st.setCond(4);
+			
 			if (st.getQuestItemsCount(ColdResistancePotion) < 1)
 			{
 				st.giveItems(ColdResistancePotion, 1);
 			}
+			
 			enterInstance(st.getPlayer(), 138);
 			return null;
 		}
@@ -92,6 +96,7 @@ public class _10284_AcquisionOfDivineSword extends Quest implements ScriptFile
 			st.getPlayer().getReflection().collapse();
 			return null;
 		}
+		
 		return htmltext;
 	}
 	
@@ -101,11 +106,13 @@ public class _10284_AcquisionOfDivineSword extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Rafforty)
 		{
 			if (cond == 0)
 			{
 				QuestState qs = st.getPlayer().getQuestState(_10283_RequestOfIceMerchant.class);
+				
 				if ((st.getPlayer().getLevel() >= 82) && (qs != null) && qs.isCompleted())
 				{
 					htmltext = "rafforty_q10284_01.htm";
@@ -146,6 +153,7 @@ public class _10284_AcquisionOfDivineSword extends Quest implements ScriptFile
 				st.takeAllItems(ColdResistancePotion);
 				st.setCond(5);
 				htmltext = "kegor_q10284_01.htm";
+				
 				for (int i = 0; i < 4; i++)
 				{
 					NpcInstance mob = st.getPlayer().getReflection().addSpawnWithoutRespawn(MithrilMillipede, Location.findPointToStay(st.getPlayer(), 50, 100), st.getPlayer().getGeoIndex());
@@ -161,6 +169,7 @@ public class _10284_AcquisionOfDivineSword extends Quest implements ScriptFile
 				htmltext = "kegor_q10284_03.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -169,6 +178,7 @@ public class _10284_AcquisionOfDivineSword extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if ((cond == 5) && (npcId == MithrilMillipede))
 		{
 			if (_count < 3)
@@ -182,12 +192,14 @@ public class _10284_AcquisionOfDivineSword extends Quest implements ScriptFile
 				st.getPlayer().sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(3));
 			}
 		}
+		
 		return null;
 	}
 	
 	private void enterInstance(Player player, int izId)
 	{
 		Reflection r = player.getActiveReflection();
+		
 		if (r != null)
 		{
 			if (player.canReenterInstance(izId))

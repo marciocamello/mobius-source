@@ -41,14 +41,17 @@ public class SSQInfo extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x73);
+		
 		switch (_state)
 		{
 			case 1:
 				writeH(257);
 				break;
+			
 			case 2:
 				writeH(258);
 				break;
+			
 			default:
 				writeH(256);
 				break;

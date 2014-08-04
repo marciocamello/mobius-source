@@ -42,12 +42,14 @@ public class _278_HomeSecurity extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("tunatun_q278_03.htm"))
 		{
 			st.setState(STARTED);
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return htmltext;
 	}
 	
@@ -57,6 +59,7 @@ public class _278_HomeSecurity extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Tunatun)
 		{
 			if (cond == 0)
@@ -81,48 +84,62 @@ public class _278_HomeSecurity extends Quest implements ScriptFile
 				{
 					htmltext = "tunatun_q278_05.htm";
 					st.takeAllItems(SelMahumMane);
+					
 					switch (Rnd.get(1, 13))
 					{
 						case 1:
 							st.giveItems(960, 1);
 							break;
+						
 						case 2:
 							st.giveItems(960, 2);
 							break;
+						
 						case 3:
 							st.giveItems(960, 3);
 							break;
+						
 						case 4:
 							st.giveItems(960, 4);
 							break;
+						
 						case 5:
 							st.giveItems(960, 5);
 							break;
+						
 						case 6:
 							st.giveItems(960, 6);
 							break;
+						
 						case 7:
 							st.giveItems(960, 7);
 							break;
+						
 						case 8:
 							st.giveItems(960, 8);
 							break;
+						
 						case 9:
 							st.giveItems(960, 9);
 							break;
+						
 						case 10:
 							st.giveItems(960, 10);
 							break;
+						
 						case 11:
 							st.giveItems(9553, 1);
 							break;
+						
 						case 12:
 							st.giveItems(9553, 2);
 							break;
+						
 						case 13:
 							st.giveItems(959, 1);
 							break;
 					}
+					
 					st.playSound(SOUND_FINISH);
 					st.exitCurrentQuest(true);
 				}
@@ -132,6 +149,7 @@ public class _278_HomeSecurity extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -140,17 +158,20 @@ public class _278_HomeSecurity extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (cond == 1)
 		{
 			if (ArrayUtils.contains(FarmMonsters, npcId) && (st.getQuestItemsCount(SelMahumMane) < 300))
 			{
 				st.giveItems(SelMahumMane, 1, true);
+				
 				if (st.getQuestItemsCount(SelMahumMane) >= 300)
 				{
 					st.setCond(2);
 				}
 			}
 		}
+		
 		return null;
 	}
 	

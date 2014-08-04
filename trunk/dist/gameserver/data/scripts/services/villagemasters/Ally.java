@@ -27,12 +27,15 @@ public class Ally extends Functions
 		{
 			return;
 		}
+		
 		Player pl = getSelf();
 		String htmltext = "ally-01.htm";
+		
 		if (pl.isClanLeader())
 		{
 			htmltext = "ally-02.htm";
 		}
+		
 		((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/ally/" + htmltext);
 	}
 	
@@ -45,12 +48,15 @@ public class Ally extends Functions
 		{
 			return;
 		}
+		
 		Player pl = getSelf();
 		String htmltext = "ally-01.htm";
+		
 		if (pl.isAllyLeader())
 		{
 			htmltext = "ally-03.htm";
 		}
+		
 		((VillageMasterInstance) getNpc()).showChatWindow(pl, "villagemaster/ally/" + htmltext);
 	}
 }

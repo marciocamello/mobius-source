@@ -51,15 +51,19 @@ public class RequestGetOnVehicle extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		Boat boat = BoatHolder.getInstance().getBoat(_objectId);
+		
 		if (boat == null)
 		{
 			return;
 		}
+		
 		player._stablePoint = boat.getCurrentWay().getReturnLoc();
 		boat.addPlayer(player, _loc);
 	}

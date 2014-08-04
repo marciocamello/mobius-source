@@ -102,6 +102,7 @@ public class MasterFestina extends Fighter
 	protected void onEvtSpawn()
 	{
 		final NpcInstance actor = getActor();
+		
 		for (Location loc : _mysticSpawnPoints)
 		{
 			MonsterInstance mob = new MonsterInstance(IdFactory.getInstance().getNextId(), NpcHolder.getInstance().getTemplate(FOUNDRY_MYSTIC_ID));
@@ -110,6 +111,7 @@ public class MasterFestina extends Fighter
 			mob.setCurrentHpMp(mob.getMaxHp(), mob.getMaxMp(), true);
 			mob.spawnMe(mob.getSpawnedLoc());
 		}
+		
 		for (Location loc : _spiritGuardSpawnPoints)
 		{
 			MonsterInstance mob = new MonsterInstance(IdFactory.getInstance().getNextId(), NpcHolder.getInstance().getTemplate(FOUNDRY_SPIRIT_GUARD_ID));
@@ -118,6 +120,7 @@ public class MasterFestina extends Fighter
 			mob.setCurrentHpMp(mob.getMaxHp(), mob.getMaxMp(), true);
 			mob.spawnMe(mob.getSpawnedLoc());
 		}
+		
 		setZoneInactive();
 		super.onEvtSpawn();
 	}
@@ -131,9 +134,11 @@ public class MasterFestina extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((System.currentTimeMillis() - lastFactionNotifyTime) > _minFactionNotifyInterval)
 		{
 			lastFactionNotifyTime = System.currentTimeMillis();
+			
 			for (NpcInstance npc : actor.getAroundNpc(3000, 500))
 			{
 				if ((npc.getNpcId() == FOUNDRY_MYSTIC_ID) || (npc.getNpcId() == FOUNDRY_SPIRIT_GUARD_ID))
@@ -142,6 +147,7 @@ public class MasterFestina extends Fighter
 				}
 			}
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	
@@ -154,6 +160,7 @@ public class MasterFestina extends Fighter
 	{
 		final NpcInstance actor = getActor();
 		lastFactionNotifyTime = 0;
+		
 		for (NpcInstance npc : actor.getAroundNpc(3000, 500))
 		{
 			if ((npc.getNpcId() == FOUNDRY_MYSTIC_ID) || (npc.getNpcId() == FOUNDRY_SPIRIT_GUARD_ID))
@@ -161,6 +168,7 @@ public class MasterFestina extends Fighter
 				npc.deleteMe();
 			}
 		}
+		
 		setZoneActive();
 		super.onEvtDead(killer);
 	}

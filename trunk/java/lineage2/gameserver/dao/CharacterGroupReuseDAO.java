@@ -72,24 +72,28 @@ public class CharacterGroupReuseDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_SQL_QUERY);
 			statement.setInt(1, player.getObjectId());
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				int group = rset.getInt("reuse_group");
 				int item_id = rset.getInt("item_id");
 				long endTime = rset.getLong("end_time");
 				long reuse = rset.getLong("reuse");
+				
 				if ((endTime - curTime) > 500)
 				{
 					TimeStamp stamp = new TimeStamp(item_id, endTime, reuse);
 					player.addSharedGroupReuse(group, stamp);
 				}
 			}
+			
 			DbUtils.close(statement);
 			statement = con.prepareStatement(DELETE_SQL_QUERY);
 			statement.setInt(1, player.getObjectId());
@@ -113,16 +117,19 @@ public class CharacterGroupReuseDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(DELETE_SQL_QUERY);
 			statement.setInt(1, player.getObjectId());
 			statement.execute();
+			
 			if (player.getSharedGroupReuses().isEmpty())
 			{
 				return;
 			}
+			
 			SqlBatch b = new SqlBatch(INSERT_SQL_QUERY);
 			synchronized (player.getSharedGroupReuses())
 			{
@@ -130,6 +137,7 @@ public class CharacterGroupReuseDAO
 				{
 					int group = entry.getKey();
 					TimeStamp timeStamp = entry.getValue();
+					
 					if (timeStamp.hasNotPassed())
 					{
 						StringBuilder sb = new StringBuilder("(");
@@ -142,6 +150,7 @@ public class CharacterGroupReuseDAO
 					}
 				}
 			}
+			
 			if (!b.isEmpty())
 			{
 				statement.executeUpdate(b.close());

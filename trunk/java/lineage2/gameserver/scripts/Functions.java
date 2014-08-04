@@ -188,7 +188,9 @@ public class Functions
 		{
 			return;
 		}
+		
 		NpcHtmlMessage msg = new NpcHtmlMessage(self, npc);
+		
 		if (text.endsWith(".html") || text.endsWith(".htm"))
 		{
 			msg.setFile(text);
@@ -197,6 +199,7 @@ public class Functions
 		{
 			msg.setHtml(Strings.bbParse(text));
 		}
+		
 		if ((arg != null) && ((arg.length % 2) == 0))
 		{
 			for (int i = 0; i < arg.length; i = +2)
@@ -204,6 +207,7 @@ public class Functions
 				msg.replace(String.valueOf(arg[i]), String.valueOf(arg[i + 1]));
 			}
 		}
+		
 		self.sendPacket(msg);
 	}
 	
@@ -261,7 +265,9 @@ public class Functions
 		{
 			return;
 		}
+		
 		NpcSay cs = new NpcSay(npc, ChatType.NPC_SAY, fStringId, params);
+		
 		for (Player player : World.getAroundPlayers(npc, range, Math.max(range / 2, 200)))
 		{
 			if (npc.getReflection() == player.getReflection())
@@ -305,6 +311,7 @@ public class Functions
 		{
 			return;
 		}
+		
 		for (Player player : World.getAroundPlayers(npc, range, Math.max(range / 2, 200)))
 		{
 			if (npc.getReflection() == player.getReflection())
@@ -349,6 +356,7 @@ public class Functions
 		{
 			return;
 		}
+		
 		npcSayToPlayer(npc, player, npcString, ChatType.TELL, params);
 	}
 	
@@ -366,6 +374,7 @@ public class Functions
 		{
 			return;
 		}
+		
 		player.sendPacket(new NpcSay(npc, chatType, npcString, params));
 	}
 	
@@ -391,18 +400,22 @@ public class Functions
 		{
 			return;
 		}
+		
 		NpcSay cs = new NpcSay(npc, ChatType.SHOUT, npcString, params);
 		int rx = MapUtils.regionX(npc);
 		int ry = MapUtils.regionY(npc);
 		int offset = Config.SHOUT_OFFSET;
+		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			if (player.getReflection() != npc.getReflection())
 			{
 				continue;
 			}
+			
 			int tx = MapUtils.regionX(player);
 			int ty = MapUtils.regionY(player);
+			
 			if ((tx >= (rx - offset)) && (tx <= (rx + offset)) && (ty >= (ry - offset)) && (ty <= (ry + offset)))
 			{
 				player.sendPacket(cs);
@@ -422,17 +435,21 @@ public class Functions
 		{
 			return;
 		}
+		
 		int rx = MapUtils.regionX(npc);
 		int ry = MapUtils.regionY(npc);
 		int offset = Config.SHOUT_OFFSET;
+		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			if (player.getReflection() != npc.getReflection())
 			{
 				continue;
 			}
+			
 			int tx = MapUtils.regionX(player);
 			int ty = MapUtils.regionY(player);
+			
 			if (((tx >= (rx - offset)) && (tx <= (rx + offset)) && (ty >= (ry - offset)) && (ty <= (ry + offset))) || npc.isInRange(player, Config.CHAT_RANGE))
 			{
 				player.sendPacket(new NpcSay(npc, ChatType.SHOUT, new CustomMessage(address, player, replacements).toString()));
@@ -454,6 +471,7 @@ public class Functions
 		{
 			return;
 		}
+		
 		for (Player player : World.getAroundPlayers(npc, range, Math.max(range / 2, 200)))
 		{
 			if (player.getReflection() == npc.getReflection())
@@ -509,11 +527,13 @@ public class Functions
 		{
 			player.setMount(0, 0, 0);
 		}
+		
 		if (player.getSummonList().getPet() != null)
 		{
 			player.sendPacket(Msg.YOU_ALREADY_HAVE_A_PET);
 			return false;
 		}
+		
 		player.setMount(pet, 0, 0);
 		return true;
 	}
@@ -598,12 +618,14 @@ public class Functions
 	public static void SpawnNPCs(int npcId, int[][] locations, List<SimpleSpawner> list)
 	{
 		NpcTemplate template = NpcHolder.getInstance().getTemplate(npcId);
+		
 		if (template == null)
 		{
 			System.out.println("WARNING! Functions.SpawnNPCs template is null for npc: " + npcId);
 			Thread.dumpStack();
 			return;
 		}
+		
 		for (int[] location : locations)
 		{
 			SimpleSpawner sp = new SimpleSpawner(template);
@@ -611,6 +633,7 @@ public class Functions
 			sp.setAmount(1);
 			sp.setRespawnDelay(0);
 			sp.init();
+			
 			if (list != null)
 			{
 				list.add(sp);
@@ -628,6 +651,7 @@ public class Functions
 		{
 			sp.deleteAll();
 		}
+		
 		list.clear();
 	}
 	
@@ -653,6 +677,7 @@ public class Functions
 		{
 			return false;
 		}
+		
 		if (active)
 		{
 			ServerVariables.set(name, "on");
@@ -661,6 +686,7 @@ public class Functions
 		{
 			ServerVariables.unset(name);
 		}
+		
 		return true;
 	}
 	
@@ -685,6 +711,7 @@ public class Functions
 		{
 			return true;
 		}
+		
 		if ((Boolean) callScripts("events.lastHero.LastHero", "isRunned", new Object[] {}))
 		{
 			return true;
@@ -703,6 +730,7 @@ public class Functions
 		{
 			return;
 		}
+		
 		player.sendMessage(message);
 	}
 	
@@ -719,14 +747,17 @@ public class Functions
 		{
 			return;
 		}
+		
 		if (title == null)
 		{
 			return;
 		}
+		
 		if (items.keySet().size() > 8)
 		{
 			return;
 		}
+		
 		Mail mail = new Mail();
 		mail.setSenderId(1);
 		mail.setSenderName("Admin");
@@ -734,6 +765,7 @@ public class Functions
 		mail.setReceiverName(receiver.getName());
 		mail.setTopic(title);
 		mail.setBody(body);
+		
 		for (Map.Entry<Integer, Long> itm : items.entrySet())
 		{
 			ItemInstance item = ItemFunctions.createItem(itm.getKey());
@@ -742,6 +774,7 @@ public class Functions
 			item.save();
 			mail.addAttachment(item);
 		}
+		
 		mail.setType(Mail.SenderType.NEWS_INFORMER);
 		mail.setUnread(true);
 		mail.setExpireTime((720 * 3600) + (int) (System.currentTimeMillis() / 1000L));
@@ -758,26 +791,32 @@ public class Functions
 	public static String GetStringCount(long count)
 	{
 		String scount = Long.toString(count);
+		
 		if (count < 1000)
 		{
 			return scount;
 		}
+		
 		if ((count > 999) && (count < 1000000))
 		{
 			return scount.substring(0, scount.length() - 3) + "к";
 		}
+		
 		if ((count > 999999) && (count < 1000000000))
 		{
 			return scount.substring(0, scount.length() - 6) + "кк";
 		}
+		
 		if (count > 999999999)
 		{
 			return scount.substring(0, scount.length() - 9) + "ккк";
 		}
+		
 		if (count == 0)
 		{
 			return "00.00";
 		}
+		
 		return "ERROR";
 	}
 }

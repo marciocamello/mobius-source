@@ -35,11 +35,12 @@ public class ExShowSellCropList extends L2GameServerPacket
 		_manorId = manorId;
 		_castleCrops = new TreeMap<>();
 		_cropsItems = new TreeMap<>();
-		
 		List<Integer> allCrops = Manor.getInstance().getAllCrops();
+		
 		for (int cropId : allCrops)
 		{
 			ItemInstance item = player.getInventory().getItemByItemId(cropId);
+			
 			if (item != null)
 			{
 				_cropsItems.put(cropId, item);
@@ -53,14 +54,12 @@ public class ExShowSellCropList extends L2GameServerPacket
 				_castleCrops.put(crop.getId(), crop);
 			}
 		}
-		
 	}
 	
 	@Override
 	public void writeImpl()
 	{
 		writeEx(0x2c);
-		
 		writeD(_manorId); // manor id
 		writeD(_cropsItems.size()); // size
 		
@@ -69,17 +68,15 @@ public class ExShowSellCropList extends L2GameServerPacket
 			writeD(item.getObjectId()); // Object id
 			writeD(item.getItemId()); // crop id
 			writeD(Manor.getInstance().getSeedLevelByCrop(item.getItemId())); // seed
-																				// level
-			
+			// level
 			writeC(1);
 			writeD(Manor.getInstance().getRewardItem(item.getItemId(), 1)); // reward
-																			// 1
-																			// id
-			
+			// 1
+			// id
 			writeC(1);
 			writeD(Manor.getInstance().getRewardItem(item.getItemId(), 2)); // reward
-																			// 2
-																			// id
+			// 2
+			// id
 			
 			if (_castleCrops.containsKey(item.getItemId()))
 			{
@@ -96,6 +93,7 @@ public class ExShowSellCropList extends L2GameServerPacket
 				writeQ(0); // buy price
 				writeC(0); // reward
 			}
+			
 			writeQ(item.getCount()); // my crops
 		}
 	}

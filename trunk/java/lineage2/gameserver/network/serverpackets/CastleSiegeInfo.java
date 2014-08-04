@@ -58,9 +58,9 @@ public class CastleSiegeInfo extends L2GameServerPacket
 	public CastleSiegeInfo(Castle castle, Player player)
 	{
 		this((Residence) castle, player);
-		
 		CastleSiegeEvent siegeEvent = castle.getSiegeEvent();
 		long siegeTimeMillis = castle.getSiegeDate().getTimeInMillis();
+		
 		if (siegeTimeMillis == 0)
 		{
 			_nextTimeMillis = siegeEvent.getNextSiegeTimes();
@@ -74,7 +74,6 @@ public class CastleSiegeInfo extends L2GameServerPacket
 	public CastleSiegeInfo(ClanHall ch, Player player)
 	{
 		this((Residence) ch, player);
-		
 		_startTime = (int) (ch.getSiegeDate().getTimeInMillis() / 1000);
 	}
 	
@@ -83,12 +82,14 @@ public class CastleSiegeInfo extends L2GameServerPacket
 		_id = residence.getId();
 		_ownerObjectId = residence.getOwnerId();
 		Clan owner = residence.getOwner();
+		
 		if (owner != null)
 		{
 			_isLeader = player.isGM() || (owner.getLeaderId(Clan.SUBUNIT_MAIN_CLAN) == player.getObjectId());
 			_ownerName = owner.getName();
 			_leaderName = owner.getLeaderName(Clan.SUBUNIT_MAIN_CLAN);
 			Alliance ally = owner.getAlliance();
+			
 			if (ally != null)
 			{
 				_allyId = ally.getAllyId();
@@ -110,6 +111,7 @@ public class CastleSiegeInfo extends L2GameServerPacket
 		writeS(_allyName); // Ally Name
 		writeD((int) (Calendar.getInstance().getTimeInMillis() / 1000));
 		writeD((int) _startTime);
+		
 		if (_startTime == 0)
 		{
 			writeDD(_nextTimeMillis, true);

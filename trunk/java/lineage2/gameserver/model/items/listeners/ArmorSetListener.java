@@ -60,35 +60,44 @@ public final class ArmorSetListener implements OnEquipListener
 		{
 			return;
 		}
+		
 		Player player = (Player) actor;
 		ArmorSet armorSet = ArmorSetsHolder.getInstance().getArmorSet(item.getItemId());
+		
 		if (armorSet == null)
 		{
 			return;
 		}
+		
 		boolean update = false;
+		
 		if (armorSet.containItem(slot, item.getItemId()))
 		{
 			List<Skill> skills = armorSet.getSkills(armorSet.getEquipedSetPartsCount(player));
+			
 			for (Skill skill : skills)
 			{
 				player.addSkill(skill, false);
 				update = true;
 			}
+			
 			if (armorSet.containAll(player))
 			{
 				if (armorSet.containShield(player))
 				{
 					skills = armorSet.getShieldSkills();
+					
 					for (Skill skill : skills)
 					{
 						player.addSkill(skill, false);
 						update = true;
 					}
 				}
+				
 				if (armorSet.isEnchanted6(player))
 				{
 					skills = armorSet.getEnchant6skills();
+					
 					for (Skill skill : skills)
 					{
 						player.addSkill(skill, false);
@@ -100,12 +109,14 @@ public final class ArmorSetListener implements OnEquipListener
 		else if (armorSet.containShield(item.getItemId()) && armorSet.containAll(player))
 		{
 			List<Skill> skills = armorSet.getShieldSkills();
+			
 			for (Skill skill : skills)
 			{
 				player.addSkill(skill, false);
 				update = true;
 			}
 		}
+		
 		if (update)
 		{
 			player.sendPacket(new SkillList(player));
@@ -127,16 +138,19 @@ public final class ArmorSetListener implements OnEquipListener
 		{
 			return;
 		}
+		
 		Player player = (Player) actor;
 		boolean remove = false;
 		List<Skill> removeSkillId1 = new ArrayList<>();
 		List<Skill> removeSkillId2 = new ArrayList<>();
 		List<Skill> removeSkillId3 = new ArrayList<>();
 		ArmorSet armorSet = ArmorSetsHolder.getInstance().getArmorSet(item.getItemId());
+		
 		if (armorSet == null)
 		{
 			return;
 		}
+		
 		if (armorSet.containItem(slot, item.getItemId()))
 		{
 			remove = true;
@@ -149,7 +163,9 @@ public final class ArmorSetListener implements OnEquipListener
 			remove = true;
 			removeSkillId2 = armorSet.getShieldSkills();
 		}
+		
 		boolean update = false;
+		
 		if (remove)
 		{
 			for (Skill skill : removeSkillId1)
@@ -157,23 +173,28 @@ public final class ArmorSetListener implements OnEquipListener
 				player.removeSkill(skill, false);
 				update = true;
 			}
+			
 			for (Skill skill : removeSkillId2)
 			{
 				player.removeSkill(skill);
 				update = true;
 			}
+			
 			for (Skill skill : removeSkillId3)
 			{
 				player.removeSkill(skill);
 				update = true;
 			}
 		}
+		
 		List<Skill> skills = armorSet.getSkills(armorSet.getEquipedSetPartsCount(player));
+		
 		for (Skill skill : skills)
 		{
 			player.addSkill(skill, false);
 			update = true;
 		}
+		
 		if (update)
 		{
 			if (!player.getInventory().isRefresh)
@@ -183,6 +204,7 @@ public final class ArmorSetListener implements OnEquipListener
 					player.sendPacket(SystemMsg.YOUR_CLOAK_HAS_BEEN_UNEQUIPPED_BECAUSE_YOUR_ARMOR_SET_IS_NO_LONGER_COMPLETE);
 				}
 			}
+			
 			player.sendPacket(new SkillList(player));
 			player.updateStats();
 		}

@@ -51,10 +51,12 @@ public class AdminGmChat implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		if (!activeChar.getPlayerAccess().CanAnnounce)
 		{
 			return false;
 		}
+		
 		switch (command)
 		{
 			case admin_gmchat:
@@ -67,11 +69,14 @@ public class AdminGmChat implements IAdminCommandHandler
 				catch (StringIndexOutOfBoundsException e)
 				{
 				}
+				
 				break;
+			
 			case admin_snoop:
 			{
 			}
 		}
+		
 		return true;
 	}
 	

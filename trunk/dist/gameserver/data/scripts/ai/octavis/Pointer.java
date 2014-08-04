@@ -37,11 +37,11 @@ public class Pointer extends DefaultAI
 	@Override
 	protected boolean thinkActive()
 	{
-		
 		if (!_def_think)
 		{
 			startMoveTask();
 		}
+		
 		return true;
 	}
 	
@@ -72,9 +72,7 @@ public class Pointer extends DefaultAI
 		}
 		
 		addTaskMove(Location.findPointToStay(_points[_lastPoint], 1, npc.getGeoIndex()), true);
-		
 		npc.setRunning();
-		
 		doTask();
 	}
 	
@@ -87,6 +85,7 @@ public class Pointer extends DefaultAI
 				return i;
 			}
 		}
+		
 		return 0;
 	}
 	

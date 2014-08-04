@@ -48,10 +48,12 @@ public class KukuruInstance extends Functions
 	{
 		List<Creature> target = new ArrayList<>();
 		target.add(player);
+		
 		if (player.isCursedWeaponEquipped())
 		{
 			return;
 		}
+		
 		npc.broadcastPacket(new MagicSkillUse(npc, player, 9209, 1, 0, 0));
 		npc.callSkill(SkillTable.getInstance().getInfo(9209, 1), target, true);
 	}

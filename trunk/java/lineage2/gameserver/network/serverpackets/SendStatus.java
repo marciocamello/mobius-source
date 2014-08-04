@@ -31,17 +31,21 @@ public final class SendStatus extends L2GameServerPacket
 		{
 			return;
 		}
+		
 		last_update = System.currentTimeMillis();
 		int i = 0;
 		int j = 0;
+		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			i++;
+			
 			if (player.isInStoreMode() && (!Config.SENDSTATUS_TRADE_JUST_OFFLINE || player.isInOfflineMode()))
 			{
 				j++;
 			}
 		}
+		
 		online_players = i;
 		online_priv_store = (int) Math.floor(j * Config.SENDSTATUS_TRADE_MOD);
 		max_online_players = Math.max(max_online_players, online_players);
@@ -56,13 +60,14 @@ public final class SendStatus extends L2GameServerPacket
 		writeD(online_players); // Current Online
 		writeD(online_players); // Current Online
 		writeD(online_priv_store); // Priv.Store Chars
-		
 		// SEND TRASH
 		writeD(0x002C0030);
+		
 		for (int x = 0; x < 10; x++)
 		{
 			writeH(41 + Rnd.get(17));
 		}
+		
 		writeD(43 + Rnd.get(17));
 		int z = 36219 + Rnd.get(1987);
 		writeD(z);

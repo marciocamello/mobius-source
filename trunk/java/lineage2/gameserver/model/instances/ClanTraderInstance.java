@@ -25,7 +25,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public final class ClanTraderInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -51,7 +51,9 @@ public final class ClanTraderInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
+		
 		if (command.equalsIgnoreCase("crp"))
 		{
 			if ((player.getClan() != null) && (player.getClan().getLevel() > 4))
@@ -62,6 +64,7 @@ public final class ClanTraderInstance extends NpcInstance
 			{
 				html.setFile("default/" + getNpcId() + "-1.htm");
 			}
+			
 			html.replace("%objectId%", String.valueOf(getObjectId()));
 			player.sendPacket(html);
 		}
@@ -74,24 +77,29 @@ public final class ClanTraderInstance extends NpcInstance
 				player.sendPacket(html);
 				return;
 			}
+			
 			int itemId = Integer.parseInt(command.substring(9).trim());
 			int reputation = 0;
 			long itemCount = 0;
+			
 			switch (itemId)
 			{
 				case 9911:
 					reputation = 500;
 					itemCount = 1;
 					break;
+				
 				case 9910:
 					reputation = 200;
 					itemCount = 10;
 					break;
+				
 				case 9912:
 					reputation = 20;
 					itemCount = 100;
 					break;
 			}
+			
 			if (player.getInventory().destroyItemByItemId(itemId, itemCount))
 			{
 				player.getClan().incReputation(reputation, false, "ClanTrader " + itemId + " from " + player.getName());
@@ -103,6 +111,7 @@ public final class ClanTraderInstance extends NpcInstance
 			{
 				html.setFile("default/" + getNpcId() + "-ExchangeFailed.htm");
 			}
+			
 			html.replace("%objectId%", String.valueOf(getObjectId()));
 			player.sendPacket(html);
 		}

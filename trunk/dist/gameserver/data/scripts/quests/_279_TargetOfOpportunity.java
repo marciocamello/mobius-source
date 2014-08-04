@@ -42,6 +42,7 @@ public class _279_TargetOfOpportunity extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("jerian_q279_04.htm"))
 		{
 			st.setState(STARTED);
@@ -56,6 +57,7 @@ public class _279_TargetOfOpportunity extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -65,6 +67,7 @@ public class _279_TargetOfOpportunity extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Jerian)
 		{
 			if (cond == 0)
@@ -88,6 +91,7 @@ public class _279_TargetOfOpportunity extends Quest implements ScriptFile
 				htmltext = "jerian_q279_06.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -96,6 +100,7 @@ public class _279_TargetOfOpportunity extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (cond == 1)
 		{
 			if ((npcId == CosmicScout) && (st.getQuestItemsCount(SealComponentsPart1) < 1) && Rnd.chance(15))
@@ -114,11 +119,13 @@ public class _279_TargetOfOpportunity extends Quest implements ScriptFile
 			{
 				st.giveItems(SealComponentsPart4, 1);
 			}
+			
 			if ((st.getQuestItemsCount(SealComponentsPart1) >= 1) && (st.getQuestItemsCount(SealComponentsPart2) >= 1) && (st.getQuestItemsCount(SealComponentsPart3) >= 1) && (st.getQuestItemsCount(SealComponentsPart4) >= 1))
 			{
 				st.setCond(2);
 			}
 		}
+		
 		return null;
 	}
 	

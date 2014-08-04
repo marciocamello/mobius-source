@@ -36,15 +36,18 @@ public class RequestItemList extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (!activeChar.getPlayerAccess().UseInventory || activeChar.isBlocked())
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		activeChar.sendItemList(true);
 		activeChar.sendStatusUpdate(false, false, StatusUpdateField.CUR_LOAD);
 	}

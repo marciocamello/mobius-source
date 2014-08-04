@@ -53,10 +53,12 @@ public class _024_InhabitantsOfTheForestOfTheDead extends Quest implements Scrip
 		addTalkId(TOMBSTONE);
 		addTalkId(MAID_OF_LIDIA);
 		addTalkId(MYSTERIOUS_WIZARD);
+		
 		for (int npcId : MOBS)
 		{
 			addKillId(npcId);
 		}
+		
 		addQuestItem(SUSPICIOUS_TOTEM_DOLL);
 	}
 	
@@ -66,11 +68,13 @@ public class _024_InhabitantsOfTheForestOfTheDead extends Quest implements Scrip
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = qs.getCond();
+		
 		if (npcId == DORIAN)
 		{
 			if (cond == 0)
 			{
 				QuestState LidiasHeart = qs.getPlayer().getQuestState(_023_LidiasHeart.class);
+				
 				if (LidiasHeart != null)
 				{
 					if (LidiasHeart.isCompleted() && (qs.getPlayer().getLevel() >= 65))
@@ -144,6 +148,7 @@ public class _024_InhabitantsOfTheForestOfTheDead extends Quest implements Scrip
 			{
 				htmltext = "31532-10.htm";
 			}
+			
 			qs.takeItems(LIDIA_HAIR_PIN, -1);
 		}
 		else if (npcId == MYSTERIOUS_WIZARD)
@@ -161,6 +166,7 @@ public class _024_InhabitantsOfTheForestOfTheDead extends Quest implements Scrip
 				htmltext = "31522-22.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -175,6 +181,7 @@ public class _024_InhabitantsOfTheForestOfTheDead extends Quest implements Scrip
 				qs.playSound(SOUND_HORROR2);
 				qs.setCond(4);
 			}
+			
 			event = null;
 		}
 		else if (event.equalsIgnoreCase("31389-03.htm"))
@@ -237,6 +244,7 @@ public class _024_InhabitantsOfTheForestOfTheDead extends Quest implements Scrip
 			qs.exitCurrentQuest(false);
 			return "31522-22.htm";
 		}
+		
 		return event;
 	}
 	
@@ -247,12 +255,15 @@ public class _024_InhabitantsOfTheForestOfTheDead extends Quest implements Scrip
 		{
 			return null;
 		}
+		
 		if (qs.getState() != STARTED)
 		{
 			return null;
 		}
+		
 		int npcId = npc.getNpcId();
 		int cond = qs.getCond();
+		
 		if (ArrayUtils.contains(MOBS, npcId))
 		{
 			if ((cond == 9) && Rnd.chance(70))
@@ -262,6 +273,7 @@ public class _024_InhabitantsOfTheForestOfTheDead extends Quest implements Scrip
 				qs.setCond(10);
 			}
 		}
+		
 		return null;
 	}
 	

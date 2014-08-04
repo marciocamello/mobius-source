@@ -28,7 +28,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class CannibalisticStakatoChiefInstance extends RaidBossInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -58,22 +58,29 @@ public class CannibalisticStakatoChiefInstance extends RaidBossInstance
 	protected void onDeath(Creature killer)
 	{
 		super.onDeath(killer);
+		
 		if (killer == null)
 		{
 			return;
 		}
+		
 		Creature topdam = getAggroList().getTopDamager();
+		
 		if (topdam == null)
 		{
 			topdam = killer;
 		}
+		
 		Player pc = topdam.getPlayer();
+		
 		if (pc == null)
 		{
 			return;
 		}
+		
 		Party party = pc.getParty();
 		int itemId;
+		
 		if (party != null)
 		{
 			for (Player partyMember : party.getPartyMembers())

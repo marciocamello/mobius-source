@@ -41,7 +41,7 @@ import lineage2.gameserver.utils.Location;
 public class RaceManagerInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -146,6 +146,7 @@ public class RaceManagerInstance extends NpcInstance
 	public RaceManagerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
+		
 		if (notInitialized)
 		{
 			notInitialized = false;
@@ -174,6 +175,7 @@ public class RaceManagerInstance extends NpcInstance
 			s.scheduleAtFixedRate(new Announcement(SystemMessage.THE_RACE_WILL_BEGIN_IN_S1_SECONDS), (8 * MINUTE) + (59 * SECOND), 10 * MINUTE);
 			s.scheduleAtFixedRate(new Announcement(SystemMessage.THEYRE_OFF), 9 * MINUTE, 10 * MINUTE);
 		}
+		
 		managers.add(this);
 	}
 	
@@ -225,6 +227,7 @@ public class RaceManagerInstance extends NpcInstance
 	public void makeAnnouncement(int type)
 	{
 		SystemMessage sm = new SystemMessage(type);
+		
 		switch (type)
 		{
 			case SystemMessage.TICKETS_ARE_NOW_AVAILABLE_FOR_THE_S1TH_MONSTER_RACE:
@@ -234,8 +237,10 @@ public class RaceManagerInstance extends NpcInstance
 					state = ACCEPTING_BETS;
 					startRace();
 				}
+				
 				sm.addNumber(_raceNumber);
 				break;
+			
 			case SystemMessage.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_CEASE_IN_S1_MINUTE_S:
 			case SystemMessage.THE_S2TH_MONSTER_RACE_WILL_BEGIN_IN_S1_MINUTES:
 			case SystemMessage.THE_RACE_WILL_BEGIN_IN_S1_SECONDS:
@@ -243,23 +248,28 @@ public class RaceManagerInstance extends NpcInstance
 				sm.addNumber(_raceNumber);
 				minutes--;
 				break;
+			
 			case SystemMessage.TICKETS_SALES_ARE_CLOSED_FOR_THE_S1TH_MONSTER_RACE_ODDS_ARE_POSTED:
 				sm.addNumber(_raceNumber);
 				state = WAITING;
 				minutes = 2;
 				break;
+			
 			case SystemMessage.THE_S1TH_MONSTER_RACE_IS_ABOUT_TO_BEGIN_COUNTDOWN_IN_FIVE_SECONDS:
 			case SystemMessage.MONSTER_RACE_S1_IS_FINISHED:
 				sm.addNumber(_raceNumber);
 				minutes = 5;
 				break;
+			
 			case SystemMessage.FIRST_PRIZE_GOES_TO_THE_PLAYER_IN_LANE_S1_SECOND_PRIZE_GOES_TO_THE_PLAYER_IN_LANE_S2:
 				state = RACE_END;
 				sm.addNumber(MonsterRace.getInstance().getFirstPlace());
 				sm.addNumber(MonsterRace.getInstance().getSecondPlace());
 				break;
 		}
+		
 		broadcast(sm);
+		
 		if (type == SystemMessage.THEYRE_OFF)
 		{
 			state = STARTING_RACE;
@@ -297,6 +307,7 @@ public class RaceManagerInstance extends NpcInstance
 	private void startRace()
 	{
 		MonsterRace race = MonsterRace.getInstance();
+		
 		if (state == STARTING_RACE)
 		{
 			PlaySound SRace = new PlaySound("S_Race");
@@ -328,28 +339,34 @@ public class RaceManagerInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.startsWith("BuyTicket") && (state != ACCEPTING_BETS))
 		{
 			player.sendPacket(Msg.MONSTER_RACE_TICKETS_ARE_NO_LONGER_AVAILABLE);
 			command = "Chat 0";
 		}
+		
 		if (command.startsWith("ShowOdds") && (state == ACCEPTING_BETS))
 		{
 			player.sendPacket(Msg.MONSTER_RACE_PAYOUT_INFORMATION_IS_NOT_AVAILABLE_WHILE_TICKETS_ARE_BEING_SOLD);
 			command = "Chat 0";
 		}
+		
 		if (command.startsWith("BuyTicket"))
 		{
 			int val = Integer.parseInt(command.substring(10));
+			
 			if (val == 0)
 			{
 				player.setRace(0, 0);
 				player.setRace(1, 0);
 			}
+			
 			if (((val == 10) && (player.getRace(0) == 0)) || ((val == 20) && (player.getRace(0) == 0) && (player.getRace(1) == 0)))
 			{
 				val = 0;
 			}
+			
 			showBuyTicket(player, val);
 		}
 		else if (command.equals("ShowOdds"))
@@ -382,17 +399,20 @@ public class RaceManagerInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		int npcId = getTemplate().npcId;
 		String filename, search;
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		filename = getHtmlPath(npcId, 5, player);
 		html.setFile(filename);
+		
 		for (int i = 0; i < 8; i++)
 		{
 			int n = i + 1;
 			search = "Mob" + n;
 			html.replace(search, MonsterRace.getInstance().getMonsters()[i].getTemplate().name);
 		}
+		
 		html.replace("1race", String.valueOf(_raceNumber));
 		player.sendPacket(html);
 		player.sendActionFailed();
@@ -409,12 +429,14 @@ public class RaceManagerInstance extends NpcInstance
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		filename = getHtmlPath(npcId, 6, player);
 		html.setFile(filename);
+		
 		for (int i = 0; i < 8; i++)
 		{
 			int n = i + 1;
 			search = "Mob" + n;
 			html.replace(search, MonsterRace.getInstance().getMonsters()[i].getTemplate().name);
 		}
+		
 		player.sendPacket(html);
 		player.sendActionFailed();
 	}
@@ -430,20 +452,25 @@ public class RaceManagerInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		int npcId = getTemplate().npcId;
 		String filename, search, replace;
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
+		
 		if (val < 10)
 		{
 			filename = getHtmlPath(npcId, 2, player);
 			html.setFile(filename);
+			
 			for (int i = 0; i < 8; i++)
 			{
 				int n = i + 1;
 				search = "Mob" + n;
 				html.replace(search, MonsterRace.getInstance().getMonsters()[i].getTemplate().name);
 			}
+			
 			search = "No1";
+			
 			if (val == 0)
 			{
 				html.replace(search, "");
@@ -460,6 +487,7 @@ public class RaceManagerInstance extends NpcInstance
 			{
 				return;
 			}
+			
 			filename = getHtmlPath(npcId, 3, player);
 			html.setFile(filename);
 			html.replace("0place", "" + player.getRace(0));
@@ -467,6 +495,7 @@ public class RaceManagerInstance extends NpcInstance
 			replace = MonsterRace.getInstance().getMonsters()[player.getRace(0) - 1].getTemplate().name;
 			html.replace(search, replace);
 			search = "0adena";
+			
 			if (val == 10)
 			{
 				html.replace(search, "");
@@ -483,6 +512,7 @@ public class RaceManagerInstance extends NpcInstance
 			{
 				return;
 			}
+			
 			filename = getHtmlPath(npcId, 4, player);
 			html.setFile(filename);
 			html.replace("0place", "" + player.getRace(0));
@@ -505,11 +535,13 @@ public class RaceManagerInstance extends NpcInstance
 			{
 				return;
 			}
+			
 			if (player.getAdena() < cost[player.getRace(1) - 1])
 			{
 				player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 				return;
 			}
+			
 			int ticket = player.getRace(0);
 			int priceId = player.getRace(1);
 			player.setRace(0, 0);
@@ -526,6 +558,7 @@ public class RaceManagerInstance extends NpcInstance
 			player.getInventory().addItem(item);
 			return;
 		}
+		
 		html.replace("1race", String.valueOf(_raceNumber));
 		player.sendPacket(html);
 		player.sendActionFailed();
@@ -667,6 +700,7 @@ public class RaceManagerInstance extends NpcInstance
 			makeAnnouncement(SystemMessage.MONSTER_RACE_S1_IS_FINISHED);
 			_raceNumber++;
 			ServerVariables.set("monster_race", _raceNumber);
+			
 			for (int i = 0; i < 8; i++)
 			{
 				broadcast(new DeleteObject(MonsterRace.getInstance().getMonsters()[i]));

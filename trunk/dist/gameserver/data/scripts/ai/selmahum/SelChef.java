@@ -64,15 +64,18 @@ public class SelChef extends Fighter
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			doTask();
 			return true;
 		}
+		
 		if (System.currentTimeMillis() > wait_timeout)
 		{
 			wait_timeout = System.currentTimeMillis() + 2000;
@@ -82,6 +85,7 @@ public class SelChef extends Fighter
 			doTask();
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -94,6 +98,7 @@ public class SelChef extends Fighter
 	{
 		Location loc = new Location();
 		final List<NpcInstance> list = new ArrayList<>();
+		
 		for (NpcInstance npc : actor.getAroundNpc(3000, 600))
 		{
 			if ((npc.getNpcId() == 18927) && GeoEngine.canSeeTarget(actor, npc, false))
@@ -101,6 +106,7 @@ public class SelChef extends Fighter
 				list.add(npc);
 			}
 		}
+		
 		if (!list.isEmpty())
 		{
 			loc = list.get(Rnd.get(list.size())).getLoc();
@@ -109,6 +115,7 @@ public class SelChef extends Fighter
 		{
 			loc = Location.findPointToStay(actor, 1000, 1500);
 		}
+		
 		return loc;
 	}
 	

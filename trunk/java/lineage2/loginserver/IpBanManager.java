@@ -102,12 +102,15 @@ public class IpBanManager
 			{
 				long currentMillis = System.currentTimeMillis();
 				writeLock.lock();
+				
 				try
 				{
 					IpSession session;
+					
 					for (Iterator<IpSession> itr = ips.values().iterator(); itr.hasNext();)
 					{
 						session = itr.next();
+						
 						if ((session.banExpire < currentMillis) && (session.lastTry < (currentMillis - Config.LOGIN_TRY_TIMEOUT)))
 						{
 							itr.remove();
@@ -130,13 +133,16 @@ public class IpBanManager
 	public boolean isIpBanned(String ip)
 	{
 		readLock.lock();
+		
 		try
 		{
 			IpSession ipsession;
+			
 			if ((ipsession = ips.get(ip)) == null)
 			{
 				return false;
 			}
+			
 			return ipsession.banExpire > System.currentTimeMillis();
 		}
 		finally
@@ -154,18 +160,23 @@ public class IpBanManager
 	public boolean tryLogin(String ip, boolean success)
 	{
 		writeLock.lock();
+		
 		try
 		{
 			IpSession ipsession;
+			
 			if ((ipsession = ips.get(ip)) == null)
 			{
 				ips.put(ip, ipsession = new IpSession());
 			}
+			
 			long currentMillis = System.currentTimeMillis();
+			
 			if ((currentMillis - ipsession.lastTry) < Config.LOGIN_TRY_TIMEOUT)
 			{
 				success = false;
 			}
+			
 			if (success)
 			{
 				if (ipsession.tryCount > 0)
@@ -180,13 +191,16 @@ public class IpBanManager
 					ipsession.tryCount++;
 				}
 			}
+			
 			ipsession.lastTry = currentMillis;
+			
 			if (ipsession.tryCount == Config.LOGIN_TRY_BEFORE_BAN)
 			{
 				_log.warn("IpBanManager: " + ip + " banned for " + (Config.IP_BAN_TIME / 1000L) + " seconds.");
 				ipsession.banExpire = currentMillis + Config.IP_BAN_TIME;
 				return false;
 			}
+			
 			return true;
 		}
 		finally

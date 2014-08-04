@@ -144,6 +144,7 @@ public class _617_GatherTheFlames extends Quest implements ScriptFile
 		super(true);
 		addStartNpc(VULCAN);
 		addStartNpc(HILDA);
+		
 		for (int[] element : DROPLIST)
 		{
 			addKillId(element[0]);
@@ -154,12 +155,14 @@ public class _617_GatherTheFlames extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("warsmith_vulcan_q0617_03.htm"))
 		{
 			if (st.getPlayer().getLevel() < 74)
 			{
 				return "warsmith_vulcan_q0617_02.htm";
 			}
+			
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 			st.setCond(1);
@@ -170,6 +173,7 @@ public class _617_GatherTheFlames extends Quest implements ScriptFile
 			{
 				return "blacksmith_hilda_q0617_02.htm";
 			}
+			
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 			st.setCond(1);
@@ -186,10 +190,12 @@ public class _617_GatherTheFlames extends Quest implements ScriptFile
 			{
 				return "warsmith_vulcan_q0617_05.htm";
 			}
+			
 			st.takeItems(TORCH, 1000);
 			st.giveItems(Recipes[Rnd.get(Recipes.length)], 1);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return htmltext;
 	}
 	
@@ -199,6 +205,7 @@ public class _617_GatherTheFlames extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == VULCAN)
 		{
 			if (cond == 0)
@@ -229,6 +236,7 @@ public class _617_GatherTheFlames extends Quest implements ScriptFile
 				htmltext = "blacksmith_hilda_q0617_04.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -243,6 +251,7 @@ public class _617_GatherTheFlames extends Quest implements ScriptFile
 				return null;
 			}
 		}
+		
 		return null;
 	}
 }

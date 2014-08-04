@@ -22,7 +22,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public final class TrainerInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -47,6 +47,7 @@ public final class TrainerInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String pom = "";
+		
 		if (val == 0)
 		{
 			pom = "" + npcId;
@@ -55,6 +56,7 @@ public final class TrainerInstance extends NpcInstance
 		{
 			pom = npcId + "-" + val;
 		}
+		
 		return "trainer/" + pom + ".htm";
 	}
 }

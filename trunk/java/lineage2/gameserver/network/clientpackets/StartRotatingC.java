@@ -47,10 +47,12 @@ public class StartRotatingC extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		activeChar.setHeading(_degree);
 		activeChar.broadcastPacket(new StartRotating(activeChar, _degree, _side, 0));
 	}

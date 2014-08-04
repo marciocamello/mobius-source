@@ -65,6 +65,7 @@ public class AtomicState
 		{
 			throw new IllegalStateException();
 		}
+		
 		return value > 0;
 	}
 	
@@ -79,6 +80,7 @@ public class AtomicState
 		{
 			return getBool(stateUpdater.incrementAndGet(this));
 		}
+		
 		return getBool(stateUpdater.decrementAndGet(this));
 	}
 	
@@ -93,6 +95,7 @@ public class AtomicState
 		{
 			return getBool(stateUpdater.getAndIncrement(this));
 		}
+		
 		return getBool(stateUpdater.getAndDecrement(this));
 	}
 }

@@ -46,6 +46,7 @@ public class ResidenceDoor extends DoorAI
 	{
 		final DoorInstance door = getActor();
 		final Residence residence = ResidenceHolder.getInstance().getResidence(door.getTemplate().getAIParams().getInteger("residence_id"));
+		
 		if ((residence.getOwner() != null) && (player.getClan() != null) && (player.getClan().equals(residence.getOwner())) && ((player.getClanPrivileges() & Clan.CP_CS_ENTRY_EXIT) == Clan.CP_CS_ENTRY_EXIT))
 		{
 			final SystemMsg msg = door.isOpen() ? SystemMsg.WOULD_YOU_LIKE_TO_CLOSE_THE_GATE : SystemMsg.WOULD_YOU_LIKE_TO_OPEN_THE_GATE;

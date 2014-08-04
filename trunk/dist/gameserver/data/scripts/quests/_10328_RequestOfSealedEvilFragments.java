@@ -52,17 +52,20 @@ public class _10328_RequestOfSealedEvilFragments extends Quest implements Script
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "0-4.htm";
+			
 			if (st.getQuestItemsCount(evil) < 1)
 			{
 				st.giveItems(evil, 1, false);
 			}
 		}
+		
 		if (event.equalsIgnoreCase("qet_rev"))
 		{
 			htmltext = "1-3.htm";
@@ -71,6 +74,7 @@ public class _10328_RequestOfSealedEvilFragments extends Quest implements Script
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -80,6 +84,7 @@ public class _10328_RequestOfSealedEvilFragments extends Quest implements Script
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == panteleon)
 		{
 			if (st.isCompleted())
@@ -115,6 +120,7 @@ public class _10328_RequestOfSealedEvilFragments extends Quest implements Script
 				htmltext = "1-1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

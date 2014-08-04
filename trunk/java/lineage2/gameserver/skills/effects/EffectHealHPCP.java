@@ -41,6 +41,7 @@ public class EffectHealHPCP extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if (getEffected().isPlayer() && (getCount() > 0) && (getPeriod() > 0))
 		{
 			getEffected().sendPacket(new ExRegenMax(calc(), (int) ((getCount() * getPeriod()) / 1000), Math.round(getPeriod() / 1000)));
@@ -58,9 +59,11 @@ public class EffectHealHPCP extends Effect
 		{
 			return false;
 		}
+		
 		double newHp = (calc() * _effected.calcStat(Stats.HEAL_EFFECTIVNESS, 100, _effector, getSkill())) / 100;
 		double addToHp = Math.max(0, Math.min(newHp, ((_effected.calcStat(Stats.HP_LIMIT, null, null) * _effected.getMaxHp()) / 100.) - _effected.getCurrentHp()));
 		_effected.sendPacket(new SystemMessage(SystemMessage.S1_HPS_HAVE_BEEN_RESTORED).addNumber(Math.round(addToHp)));
+		
 		if (addToHp > 0)
 		{
 			_effected.setCurrentHp(addToHp + _effected.getCurrentHp(), false);
@@ -70,11 +73,13 @@ public class EffectHealHPCP extends Effect
 			double newCp = (calc() * _effected.getMaxCp()) / 100;
 			double addToCp = Math.max(0, Math.min(newCp, ((_effected.calcStat(Stats.CP_LIMIT, null, null) * _effected.getMaxCp()) / 100.) - _effected.getCurrentCp()));
 			_effected.sendPacket(new SystemMessage(SystemMessage.S1_WILL_RESTORE_S2S_CP).addNumber((long) addToCp));
+			
 			if (addToCp > 0)
 			{
 				_effected.setCurrentCp(addToCp + _effected.getCurrentCp());
 			}
 		}
+		
 		return true;
 	}
 }

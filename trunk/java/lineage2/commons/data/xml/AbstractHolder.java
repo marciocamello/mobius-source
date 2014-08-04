@@ -55,14 +55,17 @@ public abstract class AbstractHolder extends LoggerObject
 	{
 		char[] chars = st.toCharArray();
 		StringBuffer buf = new StringBuffer(chars.length);
+		
 		for (char ch : chars)
 		{
 			if (Character.isUpperCase(ch))
 			{
 				buf.append(' ');
 			}
+			
 			buf.append(Character.toLowerCase(ch));
 		}
+		
 		return buf.toString();
 	}
 }

@@ -35,6 +35,7 @@ public class PackageToList extends L2GameServerPacket
 	{
 		writeC(0xC8);
 		writeD(_characters.size());
+		
 		for (Map.Entry<Integer, String> entry : _characters.entrySet())
 		{
 			writeD(entry.getKey());

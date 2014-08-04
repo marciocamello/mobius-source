@@ -44,6 +44,7 @@ public class RequestEx2ndPasswordVerify extends L2GameClientPacket
 		{
 			return;
 		}
+		
 		getClient().getSecondaryAuth().checkPassword(_password, false);
 	}
 }

@@ -40,6 +40,7 @@ public class _10330_ToTheYeSagiraRuins extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		Player player = st.getPlayer();
+		
 		if (event.equalsIgnoreCase("3.htm"))
 		{
 			st.set("cond", "1", true);
@@ -56,6 +57,7 @@ public class _10330_ToTheYeSagiraRuins extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -65,6 +67,7 @@ public class _10330_ToTheYeSagiraRuins extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getInt("cond");
+		
 		if (npcId == ATRAN)
 		{
 			if ((cond == 0) && isAvailableFor(st.getPlayer()))
@@ -84,6 +87,7 @@ public class _10330_ToTheYeSagiraRuins extends Quest implements ScriptFile
 				htmltext = "4.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	

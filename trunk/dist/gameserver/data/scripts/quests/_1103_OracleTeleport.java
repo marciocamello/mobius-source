@@ -61,22 +61,27 @@ public class _1103_OracleTeleport extends Quest implements ScriptFile
 	public _1103_OracleTeleport()
 	{
 		super(false);
+		
 		for (int i = 31078; i <= 31091; i++)
 		{
 			addStartNpc(i);
 		}
+		
 		for (int i = 31168; i <= 31170; i++)
 		{
 			addStartNpc(i);
 		}
+		
 		for (int i = 31692; i <= 31696; i++)
 		{
 			addStartNpc(i);
 		}
+		
 		for (int i = 31997; i <= 31999; i++)
 		{
 			addStartNpc(i);
 		}
+		
 		for (int j = 31127; j <= 31142; j++)
 		{
 			addStartNpc(j);
@@ -89,199 +94,236 @@ public class _1103_OracleTeleport extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		Player player = st.getPlayer();
 		String back = player.getVar("FestivalBackCoords");
+		
 		if (back == null)
 		{
 			back = "1";
 		}
+		
 		String htmltext = "Started.htm";
+		
 		if (npcId == GLUDIN_DAWN)
 		{
 			player.teleToLocation(-80157, 111344, -4901);
 			player.setVar("id", "1", -1);
 			return htmltext;
 		}
+		
 		if (npcId == GLUDIO_DAWN)
 		{
 			player.teleToLocation(-80157, 111344, -4901);
 			player.setVar("id", "2", -1);
 			return htmltext;
 		}
+		
 		if (npcId == DION_DAWN)
 		{
 			player.teleToLocation(-80157, 111344, -4901);
 			player.setVar("id", "3", -1);
 			return htmltext;
 		}
+		
 		if (npcId == GIRAN_DAWN)
 		{
 			player.teleToLocation(-80157, 111344, -4901);
 			player.setVar("id", "4", -1);
 			return htmltext;
 		}
+		
 		if (npcId == OREN_DAWN)
 		{
 			player.teleToLocation(-80157, 111344, -4901);
 			player.setVar("id", "5", -1);
 			return htmltext;
 		}
+		
 		if (npcId == ADEN_DAWN)
 		{
 			player.teleToLocation(-80157, 111344, -4901);
 			player.setVar("id", "6", -1);
 			return htmltext;
 		}
+		
 		if (npcId == HEINE_DAWN)
 		{
 			player.teleToLocation(-80157, 111344, -4901);
 			player.setVar("id", "7", -1);
 			return htmltext;
 		}
+		
 		if (npcId == GODDARD_DAWN)
 		{
 			player.teleToLocation(-80157, 111344, -4901);
 			player.setVar("id", "8", -1);
 			return htmltext;
 		}
+		
 		if (npcId == RUNE_DAWN)
 		{
 			player.teleToLocation(-80157, 111344, -4901);
 			player.setVar("id", "9", -1);
 			return htmltext;
 		}
+		
 		if (npcId == SCHUTTGART_DAWN)
 		{
 			player.teleToLocation(-80157, 111344, -4901);
 			player.setVar("id", "10", -1);
 			return htmltext;
 		}
+		
 		if (npcId == HV_DAWN)
 		{
 			player.teleToLocation(-80157, 111344, -4901);
 			player.setVar("id", "11", -1);
 			return htmltext;
 		}
+		
 		if (npcId == GLUDIN_DUSK)
 		{
 			player.teleToLocation(-81261, 86531, -5157);
 			player.setVar("id", "1", -1);
 			return htmltext;
 		}
+		
 		if (npcId == GLUDIO_DUSK)
 		{
 			player.teleToLocation(-81261, 86531, -5157);
 			player.setVar("id", "2", -1);
 			return htmltext;
 		}
+		
 		if (npcId == DION_DUSK)
 		{
 			player.teleToLocation(-81261, 86531, -5157);
 			player.setVar("id", "3", -1);
 			return htmltext;
 		}
+		
 		if (npcId == GIRAN_DUSK)
 		{
 			player.teleToLocation(-81261, 86531, -5157);
 			player.setVar("id", "4", -1);
 			return htmltext;
 		}
+		
 		if (npcId == OREN_DUSK)
 		{
 			player.teleToLocation(-81261, 86531, -5157);
 			player.setVar("id", "5", -1);
 			return htmltext;
 		}
+		
 		if (npcId == ADEN_DUSK)
 		{
 			player.teleToLocation(-81261, 86531, -5157);
 			player.setVar("id", "6", -1);
 			return htmltext;
 		}
+		
 		if (npcId == HEINE_DUSK)
 		{
 			player.teleToLocation(-81261, 86531, -5157);
 			player.setVar("id", "7", -1);
 			return htmltext;
 		}
+		
 		if (npcId == GODDARD_DUSK)
 		{
 			player.teleToLocation(-81261, 86531, -5157);
 			player.setVar("id", "8", -1);
 			return htmltext;
 		}
+		
 		if (npcId == RUNE_DUSK)
 		{
 			player.teleToLocation(-81261, 86531, -5157);
 			player.setVar("id", "9", -1);
 			return htmltext;
 		}
+		
 		if (npcId == SCHUTTGART_DUSK)
 		{
 			player.teleToLocation(-81261, 86531, -5157);
 			player.setVar("id", "10", -1);
 			return htmltext;
 		}
+		
 		if (npcId == HV_DUSK)
 		{
 			player.teleToLocation(-81261, 86531, -5157);
 			player.setVar("id", "11", -1);
 			return htmltext;
 		}
+		
 		htmltext = "Completed.htm";
+		
 		if (back.equals("1"))
 		{
 			player.teleToLocation(-80826, 149775, -3043);
 			return htmltext;
 		}
+		
 		if (back.equals("2"))
 		{
 			player.teleToLocation(-12672, 122776, -3116);
 			return htmltext;
 		}
+		
 		if (back.equals("3"))
 		{
 			player.teleToLocation(15670, 142983, -2705);
 			return htmltext;
 		}
+		
 		if (back.equals("4"))
 		{
 			player.teleToLocation(83400, 147943, -3404);
 			return htmltext;
 		}
+		
 		if (back.equals("5"))
 		{
 			player.teleToLocation(82956, 53162, -1495);
 			return htmltext;
 		}
+		
 		if (back.equals("6"))
 		{
 			player.teleToLocation(146331, 25762, -2018);
 			return htmltext;
 		}
+		
 		if (back.equals("7"))
 		{
 			player.teleToLocation(111409, 219364, -3545);
 			return htmltext;
 		}
+		
 		if (back.equals("8"))
 		{
 			player.teleToLocation(147928, -55273, -2734);
 			return htmltext;
 		}
+		
 		if (back.equals("9"))
 		{
 			player.teleToLocation(43799, -47727, -798);
 			return htmltext;
 		}
+		
 		if (back.equals("10"))
 		{
 			player.teleToLocation(87386, -143246, -1293);
 			return htmltext;
 		}
+		
 		if (back.equals("11"))
 		{
 			player.teleToLocation(116819, 76994, -2714);
 			return htmltext;
 		}
+		
 		return htmltext;
 	}
 }

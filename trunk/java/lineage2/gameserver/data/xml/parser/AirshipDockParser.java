@@ -88,13 +88,16 @@ public final class AirshipDockParser extends AbstractFileParser<AirshipDockHolde
 			Element dockElement = (Element) iterator.next();
 			int id = Integer.parseInt(dockElement.attributeValue("id"));
 			List<BoatPoint> teleportList = parsePoints(dockElement.element("teleportlist"));
+			
 			for (BoatPoint point : teleportList)
 			{
 				point.setTeleport(true);
 				point.setSpeed1(-1);
 				point.setSpeed2(-1);
 			}
+			
 			List<AirshipDock.AirshipPlatform> platformList = new ArrayList<>(2);
+			
 			for (Iterator<?> platformIterator = dockElement.elementIterator("platform"); platformIterator.hasNext();)
 			{
 				Element platformElement = (Element) platformIterator.next();
@@ -106,6 +109,7 @@ public final class AirshipDockParser extends AbstractFileParser<AirshipDockHolde
 				AirshipDock.AirshipPlatform platform = new AirshipDock.AirshipPlatform(movie, oustLoc, spawnLoc, arrivalList, departList);
 				platformList.add(platform);
 			}
+			
 			getHolder().addDock(new AirshipDock(id, teleportList, platformList));
 		}
 	}
@@ -121,11 +125,14 @@ public final class AirshipDockParser extends AbstractFileParser<AirshipDockHolde
 		{
 			return Collections.emptyList();
 		}
+		
 		List<BoatPoint> list = new ArrayList<>(5);
+		
 		for (Iterator<?> iterator = listElement.elementIterator(); iterator.hasNext();)
 		{
 			list.add(BoatPoint.parse((Element) iterator.next()));
 		}
+		
 		return list.isEmpty() ? Collections.<BoatPoint> emptyList() : list;
 	}
 }

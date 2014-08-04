@@ -188,6 +188,7 @@ public class _619_RelicsOfTheOldEmpire extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 				return "explorer_ghost_a_q0619_02.htm";
 			}
+			
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
@@ -198,6 +199,7 @@ public class _619_RelicsOfTheOldEmpire extends Quest implements ScriptFile
 			{
 				return st.getQuestItemsCount(Entrance_Pass_to_the_Sepulcher) > 0 ? "explorer_ghost_a_q0619_06.htm" : "explorer_ghost_a_q0619_07.htm";
 			}
+			
 			st.takeItems(Broken_Relic_Part, 1000);
 			st.giveItems(Recipes[Rnd.get(Recipes.length)], 1);
 			return "explorer_ghost_a_q0619_09.htm";
@@ -207,6 +209,7 @@ public class _619_RelicsOfTheOldEmpire extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return event;
 	}
 	
@@ -220,13 +223,16 @@ public class _619_RelicsOfTheOldEmpire extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 				return "explorer_ghost_a_q0619_02.htm";
 			}
+			
 			st.setCond(0);
 			return "explorer_ghost_a_q0619_01.htm";
 		}
+		
 		if (st.getQuestItemsCount(Broken_Relic_Part) >= 1000)
 		{
 			return "explorer_ghost_a_q0619_04.htm";
 		}
+		
 		return st.getQuestItemsCount(Entrance_Pass_to_the_Sepulcher) > 0 ? "explorer_ghost_a_q0619_06.htm" : "explorer_ghost_a_q0619_07.htm";
 	}
 	
@@ -235,15 +241,19 @@ public class _619_RelicsOfTheOldEmpire extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		Integer Broken_Relic_Part_chance = drops.get(npcId);
+		
 		if (Broken_Relic_Part_chance == null)
 		{
 			return null;
 		}
+		
 		st.rollAndGive(Broken_Relic_Part, 1, Broken_Relic_Part_chance);
+		
 		if (npcId > 20000)
 		{
 			st.rollAndGive(Entrance_Pass_to_the_Sepulcher, 1, 3);
 		}
+		
 		return null;
 	}
 	

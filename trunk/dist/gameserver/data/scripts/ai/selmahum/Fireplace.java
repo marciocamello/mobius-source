@@ -47,10 +47,12 @@ public class Fireplace extends DefaultAI
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
+		
 		if (Rnd.chance(60))
 		{
 			getActor().setNpcState(1);
 		}
+		
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new Switch(), 10000L, delay);
 	}
 	
@@ -66,6 +68,7 @@ public class Fireplace extends DefaultAI
 		public void runImpl()
 		{
 			final NpcInstance actor = getActor();
+			
 			if (actor.getNpcState() == 1)
 			{
 				actor.setNpcState(0);
@@ -73,6 +76,7 @@ public class Fireplace extends DefaultAI
 			else
 			{
 				actor.setNpcState(1);
+				
 				if (Rnd.chance(70))
 				{
 					NpcUtils.spawnSingle(18933, actor.getLoc(), delay >> 1);

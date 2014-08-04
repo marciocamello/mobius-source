@@ -111,13 +111,16 @@ public class CommunityBoard implements ScriptFile, ICommunityBoardHandler
 			player.sendMessage(new CustomMessage("scripts.services.community.CommunityBoard.NotUse", player));
 			return;
 		}
+		
 		StringTokenizer st = new StringTokenizer(bypass, "_");
 		String cmd = st.nextToken();
 		String html = "";
+		
 		if ("bbshome".equals(cmd))
 		{
 			StringTokenizer p = new StringTokenizer(Config.BBS_DEFAULT, "_");
 			String dafault = p.nextToken();
+			
 			if (dafault.equals(cmd))
 			{
 				html = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/main.htm", player);
@@ -147,17 +150,21 @@ public class CommunityBoard implements ScriptFile, ICommunityBoardHandler
 			{
 				return;
 			}
+			
 			StringTokenizer st2 = new StringTokenizer(bypass, ";");
 			String[] mBypass = st2.nextToken().split(":");
 			String pBypass = st2.hasMoreTokens() ? st2.nextToken() : null;
+			
 			if (pBypass != null)
 			{
 				ICommunityBoardHandler handler = CommunityBoardManager.getInstance().getCommunityHandler(pBypass);
+				
 				if (handler != null)
 				{
 					handler.onBypassCommand(player, pBypass);
 				}
 			}
+			
 			int listId = Integer.parseInt(mBypass[1]);
 			MultiSellHolder.getInstance().SeparateAndSend(listId, player, 0);
 			return;
@@ -167,14 +174,17 @@ public class CommunityBoard implements ScriptFile, ICommunityBoardHandler
 			StringTokenizer st2 = new StringTokenizer(bypass, ";");
 			st2.nextToken().split(":");
 			String pBypass = st2.hasMoreTokens() ? st2.nextToken() : null;
+			
 			if (pBypass != null)
 			{
 				ICommunityBoardHandler handler = CommunityBoardManager.getInstance().getCommunityHandler(pBypass);
+				
 				if (handler != null)
 				{
 					handler.onBypassCommand(player, pBypass);
 				}
 			}
+			
 			player.setIsBBSUse(true);
 			NpcTradeList list = BuyListHolder.getInstance().getBuyList(-1);
 			player.sendPacket(new ExBuySellList.BuyList(list, player, 0.), new ExBuySellList.SellRefundList(player, false));
@@ -186,27 +196,33 @@ public class CommunityBoard implements ScriptFile, ICommunityBoardHandler
 			StringTokenizer st2 = new StringTokenizer(bypass, ";");
 			String sBypass = st2.nextToken().substring(12);
 			String pBypass = st2.hasMoreTokens() ? st2.nextToken() : null;
+			
 			if (pBypass != null)
 			{
 				ICommunityBoardHandler handler = CommunityBoardManager.getInstance().getCommunityHandler(pBypass);
+				
 				if (handler != null)
 				{
 					handler.onBypassCommand(player, pBypass);
 				}
 			}
+			
 			String[] word = sBypass.split("\\s+");
 			String[] args = sBypass.substring(word[0].length()).trim().split("\\s+");
 			String[] path = word[0].split(":");
+			
 			if (path.length != 2)
 			{
 				return;
 			}
+			
 			Scripts.getInstance().callScripts(player, path[0], path[1], word.length == 1 ? new Object[] {} : new Object[]
 			{
 				args
 			});
 			return;
 		}
+		
 		ShowBoard.separateAndSend(html, player);
 	}
 	
@@ -222,6 +238,7 @@ public class CommunityBoard implements ScriptFile, ICommunityBoardHandler
 			player.sendMessage("During combat, you can not use this feature.");
 			return false;
 		}
+		
 		return true;
 	}
 	

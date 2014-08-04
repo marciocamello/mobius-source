@@ -21,7 +21,7 @@ import lineage2.gameserver.model.pledge.Clan;
 public class AuctionSiegeClanObject extends SiegeClanObject
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**

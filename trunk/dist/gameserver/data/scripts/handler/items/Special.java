@@ -86,46 +86,61 @@ public class Special extends SimpleItemHandler
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
 		final int itemId = item.getItemId();
+		
 		switch (itemId)
 		{
 		// Key of Enigma
 			case 8060:
 				return use8060(player, ctrl);
+				
 				// Dewdrop of Destruction
 			case 8556:
 				return use8556(player, ctrl);
+				
 				// DestroyedDarknessFragmentPowder -> DestroyedLightFragmentPowder
 			case 13853:
 				return use13853(player, ctrl);
+				
 				// Holy Water for SSQ 2nd quest
 			case 13808:
 				return use13808(player, ctrl);
+				
 				// Court Mag Staff for SSQ 2nd quest
 			case 13809:
 				return use13809(player, ctrl);
+				
 			case 14835:
 				return use14835(player, ctrl);
+				
 				// Strongbox of Promise
 			case 15537:
 				return use15537(player, ctrl);
+				
 				// Antharas Blood Crystal
 			case 17268:
 				return use17268(player, ctrl);
+				
 				// cruma quest
 				// case 17619:
 				// return use17619(player, ctrl);
 			case 21899:
 				return use21899(player, ctrl);
+				
 			case 21900:
 				return use21900(player, ctrl);
+				
 			case 21901:
 				return use21901(player, ctrl);
+				
 			case 21902:
 				return use21902(player, ctrl);
+				
 			case 21903:
 				return use21903(player, ctrl);
+				
 			case 21904:
 				return use21904(player, ctrl);
+				
 				// megameld quest
 				// case 34033:
 				// return use34033(player, ctrl);
@@ -142,6 +157,7 @@ public class Special extends SimpleItemHandler
 			Functions.addItem(player, 8059, 1);
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -154,16 +170,19 @@ public class Special extends SimpleItemHandler
 			29049
 		};
 		final GameObject t = player.getTarget();
+		
 		if ((t == null) || !t.isNpc() || !ArrayUtils.contains(npcs, ((NpcInstance) t).getNpcId()))
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(8556));
 			return false;
 		}
+		
 		if (player.getDistance(t) > 200)
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.YOUR_TARGET_IS_OUT_OF_RANGE));
 			return false;
 		}
+		
 		useItem(player, 8556, 1);
 		((NpcInstance) t).doDie(player);
 		return true;
@@ -177,6 +196,7 @@ public class Special extends SimpleItemHandler
 			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
 			return false;
 		}
+		
 		useItem(player, 13853, 1);
 		Functions.addItem(player, 13854, 1);
 		return true;
@@ -197,13 +217,16 @@ public class Special extends SimpleItemHandler
 			17240109
 		};
 		final GameObject target = player.getTarget();
+		
 		if (player.getDistance(target) > 150)
 		{
 			return false;
 		}
+		
 		if ((target != null) && target.isDoor())
 		{
 			final int _door = ((DoorInstance) target).getDoorId();
+			
 			if (ArrayUtils.contains(allowedDoors, _door))
 			{
 				player.getReflection().openDoor(_door);
@@ -219,6 +242,7 @@ public class Special extends SimpleItemHandler
 			player.sendPacket(Msg.INVALID_TARGET);
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -236,18 +260,22 @@ public class Special extends SimpleItemHandler
 			17240107
 		};
 		final GameObject target = player.getTarget();
+		
 		if ((target != null) && target.isDoor())
 		{
 			final int _door = ((DoorInstance) target).getDoorId();
+			
 			if (ArrayUtils.contains(allowedDoors, _door))
 			{
 				useItem(player, 13809, 1);
 				player.getReflection().openDoor(_door);
 				return false;
 			}
+			
 			player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
 			return false;
 		}
+		
 		player.sendPacket(Msg.INVALID_TARGET);
 		return false;
 	}
@@ -265,6 +293,7 @@ public class Special extends SimpleItemHandler
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(14835));
 			return false;
 		}
+		
 		useItem(player, 14835, 1);
 		player.teleToLocation(89464, -44712, -2167, ReflectionManager.DEFAULT);
 		return true;
@@ -279,6 +308,7 @@ public class Special extends SimpleItemHandler
 	private boolean use15537(Player player, boolean ctrl)
 	{
 		final QuestState qs = player.getQuestState(_464_Oath.class);
+		
 		if ((player.getLevel() >= 82) && (qs == null))
 		{
 			useItem(player, 15537, 1);
@@ -293,6 +323,7 @@ public class Special extends SimpleItemHandler
 			player.sendMessage(new CustomMessage("Quest._464_Oath.QuestCannotBeTaken", player));
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -304,6 +335,7 @@ public class Special extends SimpleItemHandler
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(21899));
 			return false;
 		}
+		
 		Functions.spawn(Location.findPointToStay(player.getLoc(), 50, 100, player.getGeoIndex()), 143);
 		return true;
 	}
@@ -316,6 +348,7 @@ public class Special extends SimpleItemHandler
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(21900));
 			return false;
 		}
+		
 		Functions.spawn(Location.findPointToStay(player.getLoc(), 50, 100, player.getGeoIndex()), 144);
 		return true;
 	}
@@ -328,6 +361,7 @@ public class Special extends SimpleItemHandler
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(21901));
 			return false;
 		}
+		
 		Functions.spawn(Location.findPointToStay(player.getLoc(), 50, 100, player.getGeoIndex()), 145);
 		return true;
 	}
@@ -340,6 +374,7 @@ public class Special extends SimpleItemHandler
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(21902));
 			return false;
 		}
+		
 		Functions.spawn(Location.findPointToStay(player.getLoc(), 50, 100, player.getGeoIndex()), 146);
 		return true;
 	}
@@ -352,6 +387,7 @@ public class Special extends SimpleItemHandler
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(21903));
 			return false;
 		}
+		
 		player.doCast(SkillTable.getInstance().getInfo(22298, 1), player, false);
 		Functions.removeItem(player, 21903, 1);
 		return true;
@@ -365,6 +401,7 @@ public class Special extends SimpleItemHandler
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(21904));
 			return false;
 		}
+		
 		player.doCast(SkillTable.getInstance().getInfo(22299, 1), player, false);
 		Functions.removeItem(player, 21904, 1);
 		return true;
@@ -378,6 +415,7 @@ public class Special extends SimpleItemHandler
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(17268));
 			return false;
 		}
+		
 		player.doCast(SkillTable.getInstance().getInfo(9179, 1), player, false);
 		Functions.removeItem(player, 17268, 1);
 		return true;

@@ -45,10 +45,12 @@ public class AdminHelpPage implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		if (!activeChar.getPlayerAccess().Menu)
 		{
 			return false;
 		}
+		
 		switch (command)
 		{
 			case admin_showhtml:
@@ -57,9 +59,11 @@ public class AdminHelpPage implements IAdminCommandHandler
 					activeChar.sendMessage("Usage: //showhtml <file>");
 					return false;
 				}
+				
 				activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/" + wordList[1]));
 				break;
 		}
+		
 		return true;
 	}
 	

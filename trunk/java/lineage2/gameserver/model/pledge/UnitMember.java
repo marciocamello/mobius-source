@@ -110,6 +110,7 @@ public class UnitMember
 		_apprentice = apprentice;
 		_sex = sex;
 		_leaderOf = leaderOf;
+		
 		if (powerGrade != 0)
 		{
 			RankPrivs r = clan.getRankPrivs(powerGrade);
@@ -135,10 +136,12 @@ public class UnitMember
 	public void setPlayerInstance(Player player, boolean exit)
 	{
 		_player = exit ? null : player;
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		_clan = player.getClan();
 		_name = player.getName();
 		_title = player.getTitle();
@@ -252,6 +255,7 @@ public class UnitMember
 	{
 		Player player = getPlayer();
 		_title = title;
+		
 		if (player != null)
 		{
 			player.setTitle(title);
@@ -261,6 +265,7 @@ public class UnitMember
 		{
 			Connection con = null;
 			PreparedStatement statement = null;
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
@@ -307,6 +312,7 @@ public class UnitMember
 	{
 		Player player = getPlayer();
 		_pledgeType = pledgeType;
+		
 		if (player != null)
 		{
 			player.setPledgeType(pledgeType);
@@ -324,6 +330,7 @@ public class UnitMember
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -361,6 +368,7 @@ public class UnitMember
 		Player player = getPlayer();
 		int oldPowerGrade = getPowerGrade();
 		_powerGrade = newPowerGrade;
+		
 		if (player != null)
 		{
 			player.setPowerGrade(newPowerGrade);
@@ -369,6 +377,7 @@ public class UnitMember
 		{
 			updatePowerGrade();
 		}
+		
 		updatePowerGradeParty(oldPowerGrade, newPowerGrade);
 	}
 	
@@ -384,6 +393,7 @@ public class UnitMember
 			RankPrivs r1 = getClan().getRankPrivs(oldGrade);
 			r1.setParty(getClan().countMembersByRank(oldGrade));
 		}
+		
 		if (newGrade != 0)
 		{
 			RankPrivs r2 = getClan().getRankPrivs(newGrade);
@@ -398,6 +408,7 @@ public class UnitMember
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -434,6 +445,7 @@ public class UnitMember
 	{
 		Player player = getPlayer();
 		_apprentice = apprentice;
+		
 		if (player != null)
 		{
 			player.setApprentice(apprentice);
@@ -451,6 +463,7 @@ public class UnitMember
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -482,6 +495,7 @@ public class UnitMember
 				return getClan().getAnyMember(getApprentice()).getName();
 			}
 		}
+		
 		return "";
 	}
 	
@@ -504,7 +518,9 @@ public class UnitMember
 		{
 			return 0;
 		}
+		
 		int id = getObjectId();
+		
 		for (UnitMember element : getClan())
 		{
 			if (element.getApprentice() == id)
@@ -512,6 +528,7 @@ public class UnitMember
 				return element.getObjectId();
 			}
 		}
+		
 		return 0;
 	}
 	
@@ -522,6 +539,7 @@ public class UnitMember
 	private String getSponsorName()
 	{
 		int sponsorId = getSponsor();
+		
 		if (sponsorId == 0)
 		{
 			return "";
@@ -530,6 +548,7 @@ public class UnitMember
 		{
 			return getClan().getAnyMember(sponsorId).getName();
 		}
+		
 		return "";
 	}
 	
@@ -552,6 +571,7 @@ public class UnitMember
 		{
 			return getSponsorName();
 		}
+		
 		return getApprenticeName();
 	}
 	
@@ -578,6 +598,7 @@ public class UnitMember
 				return pledge.getType();
 			}
 		}
+		
 		return 0;
 	}
 	

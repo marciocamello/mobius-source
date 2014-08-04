@@ -38,6 +38,7 @@ public class EffectCharmOfCourage extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if (_effected.isPlayer())
 		{
 			_effected.getPlayer().setCharmOfCourage(true);

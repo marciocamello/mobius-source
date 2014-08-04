@@ -65,12 +65,14 @@ public class _465_WeAreFriends extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		st.getPlayer();
+		
 		if (event.equalsIgnoreCase("32921-4.htm"))
 		{
 			st.setCond(1);
 			st.setState(2);
 			st.playSound("ItemSound.quest_accept");
 		}
+		
 		if (event.equalsIgnoreCase("32922-4.htm"))
 		{
 			st.setCond(2);
@@ -84,6 +86,7 @@ public class _465_WeAreFriends extends Quest implements ScriptFile
 			{
 				return null;
 			}
+			
 			st.unset("q465feya");
 			npcFeya.deleteMe();
 			npcFeya = null;
@@ -125,18 +128,22 @@ public class _465_WeAreFriends extends Quest implements ScriptFile
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
 		QuestState st = player.getQuestState(getClass());
+		
 		if (st == null)
 		{
 			return "32922.htm";
 		}
+		
 		if ((st.get("q465feya") != null) && (Integer.parseInt(st.get("q465feya")) != npc.getObjectId()))
 		{
 			return "32922-1.htm";
 		}
+		
 		if (st.get("q465feya") == null)
 		{
 			return "32922-1.htm";
 		}
+		
 		return "32922-3.htm";
 	}
 	
@@ -147,6 +154,7 @@ public class _465_WeAreFriends extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int state = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == FEYA_STARTER)
 		{
 			if (state == 1)
@@ -155,28 +163,34 @@ public class _465_WeAreFriends extends Quest implements ScriptFile
 				{
 					return "32921-lvl.htm";
 				}
+				
 				if (!st.isNowAvailableByTime())
 				{
 					return "32921-comp.htm";
 				}
+				
 				if (st.getPlayer().getLevel() < 90)
 				{
 					return "32921-lvl.htm";
 				}
+				
 				return "32921.htm";
 			}
+			
 			if (state == 2)
 			{
 				if (cond == 1)
 				{
 					return "32921-5.htm";
 				}
+				
 				if (cond == 2)
 				{
 					return "32921-6.htm";
 				}
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -197,12 +211,14 @@ public class _465_WeAreFriends extends Quest implements ScriptFile
 		{
 			st.getPlayer().sendMessage("onKill We Are Friend... ok");
 		}
+		
 		if (Rnd.chance(5))
 		{
 			npcFeya = Functions.spawn(Location.findPointToStay(st.getPlayer(), 50, 100), 32922);
 			st.set("q465feya", "" + npcFeya.getObjectId() + "");
 			st.startQuestTimer("despawn_task", 180000L);
 		}
+		
 		return null;
 	}
 }

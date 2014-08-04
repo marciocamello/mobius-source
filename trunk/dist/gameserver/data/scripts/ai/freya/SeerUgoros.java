@@ -55,6 +55,7 @@ public class SeerUgoros extends Mystic
 	protected boolean thinkActive()
 	{
 		super.thinkActive();
+		
 		if (!getActor().getReflection().isDefault() && !getActor().getReflection().getPlayers().isEmpty())
 		{
 			for (Player p : getActor().getReflection().getPlayers())
@@ -62,6 +63,7 @@ public class SeerUgoros extends Mystic
 				notifyEvent(CtrlEvent.EVT_AGGRESSION, p, 5000);
 			}
 		}
+		
 		return true;
 	}
 	
@@ -72,6 +74,7 @@ public class SeerUgoros extends Mystic
 	protected void thinkAttack()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (!actor.isMuted(_skill) && (actor.getCurrentHpPercents() < 80))
 		{
 			for (NpcInstance n : actor.getAroundNpc(2000, 300))
@@ -86,6 +89,7 @@ public class SeerUgoros extends Mystic
 				}
 			}
 		}
+		
 		super.thinkAttack();
 	}
 	
@@ -97,6 +101,7 @@ public class SeerUgoros extends Mystic
 	protected void onEvtDead(Creature killer)
 	{
 		final QuestState qs = killer.getPlayer().getQuestState(_288_HandleWithCare.class);
+		
 		if ((qs != null) && (qs.getCond() == 1))
 		{
 			if (_weeds < 5)
@@ -110,11 +115,14 @@ public class SeerUgoros extends Mystic
 				qs.setCond(2);
 			}
 		}
+		
 		_weeds = 0;
+		
 		if (!getActor().getReflection().isDefault())
 		{
 			getActor().getReflection().addSpawnWithoutRespawn(32740, new Location(95688, 85688, -3757, 0), 0);
 		}
+		
 		super.onEvtDead(killer);
 	}
 }

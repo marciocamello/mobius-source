@@ -67,6 +67,7 @@ public class _142_FallenAngelRequestOfDawn extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("start"))
 		{
 			st.setCond(1);
@@ -109,6 +110,7 @@ public class _142_FallenAngelRequestOfDawn extends Quest implements ScriptFile
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -118,6 +120,7 @@ public class _142_FallenAngelRequestOfDawn extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
+		
 		if (npcId == NATOOLS)
 		{
 			if ((cond == 1) || (st.isStarted() && (cond == 0)))
@@ -176,6 +179,7 @@ public class _142_FallenAngelRequestOfDawn extends Quest implements ScriptFile
 			else if (cond == 5)
 			{
 				htmltext = "stained_rock_q0142_02.htm";
+				
 				if (st.getInt("talk") != 1)
 				{
 					st.takeItems(BLOOD, -1);
@@ -187,6 +191,7 @@ public class _142_FallenAngelRequestOfDawn extends Quest implements ScriptFile
 				htmltext = "stained_rock_q0142_06.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -194,6 +199,7 @@ public class _142_FallenAngelRequestOfDawn extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if (npc.getNpcId() == FallenAngel)
 		{
 			if (cond == 5)
@@ -207,12 +213,14 @@ public class _142_FallenAngelRequestOfDawn extends Quest implements ScriptFile
 		else if ((cond == 4) && (st.getQuestItemsCount(FRAGMENT) < 30))
 		{
 			st.rollAndGive(FRAGMENT, 1, 1, 30, 20);
+			
 			if (st.getQuestItemsCount(FRAGMENT) >= 30)
 			{
 				st.setCond(5);
 				st.setState(STARTED);
 			}
 		}
+		
 		return null;
 	}
 }

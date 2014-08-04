@@ -53,7 +53,7 @@ public class Baylor extends Reflection
 	private class FirstStage extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public FirstStage()
 		{
@@ -63,15 +63,13 @@ public class Baylor extends Reflection
 		@Override
 		public void runImpl()
 		{
-			
 			// closeDoor(Door);
-			
 			for (Player player : getPlayers())
 			{
 				player.showQuestMovie(ExStartScenePlayer.SCENE_SC_NOBLE_OPENING);
 			}
-			_log.info("43 Video");
 			
+			_log.info("43 Video");
 		}
 	}
 	

@@ -41,6 +41,7 @@ public class RequestTeleportBookMark extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar != null)
 		{
 			activeChar.bookmarks.tryTeleport(slot);

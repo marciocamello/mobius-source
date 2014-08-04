@@ -120,10 +120,12 @@ public class EvilIncubator extends Reflection
 		addSpawnWithoutRespawn(GUARD1, new Location(56367, -175707, -7981, 53248), 0);
 		addSpawnWithoutRespawn(GUARD2, new Location(55982, -175707, -7981, 53248), 0);
 		List<NpcInstance> npc = getAllByNpcId(ADOLPH_NPC, true);
+		
 		if (!npc.isEmpty())
 		{
 			npc.get(0).deleteMe();
 		}
+		
 		addSpawnWithoutRespawn(ADOLPH_NPC, START_BATTLE_LOCATION, 0);
 		ADOLPH = getAllByNpcId(ADOLPH_NPC, true);
 		addSpawnWithoutRespawn(VAN_ARCHER, new Location(55982, -176068, -7981, 53248), 0);
@@ -163,6 +165,7 @@ public class EvilIncubator extends Reflection
 	public void deleteSelectedHelper(int npcId)
 	{
 		List<NpcInstance> npc = getAllByNpcId(npcId, true);
+		
 		if (!npc.isEmpty())
 		{
 			npc.get(0).deleteMe();
@@ -176,6 +179,7 @@ public class EvilIncubator extends Reflection
 		npc.addAll(getAllByNpcId(ADOLPH_HELPERS2, true));
 		npc.addAll(getAllByNpcId(ADOLPH_HELPERS3, true));
 		npc.addAll(getAllByNpcId(ADOLPH_HELPERS4, true));
+		
 		if (!npc.isEmpty())
 		{
 			npc.get(0).deleteMe();
@@ -188,15 +192,18 @@ public class EvilIncubator extends Reflection
 		if (state == 1)
 		{
 			ADOLPH.get(0).broadcastPacket(new NpcSay(ADOLPH.get(0), ChatType.NPC_SAY, NpcString.CREATURES_HAVE_STOPPED_ATTACKING_USE_THIS_TIME_TO_REST_AND_RECOVER));
+			
 			for (Player player : getPlayers())
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_HAVE_STOPPER_THEIR_ATTACK_REST_AND_THEN_SPEEAK_WITH_ADOLPH, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 			}
 		}
+		
 		if (state == 2)
 		{
 			ADOLPH.get(0).broadcastPacket(new NpcSay(ADOLPH.get(0), ChatType.NPC_SAY, NpcString.THE_CRY_OF_FATE_PENDANT_WILL_BE_HELPFUL_TO_YOU_PLEASE_EQUIP_IT_AND_BRING_OUT_THE_POWER_OF_THE_PENDANT_TO_PREPARE_FOR_THE_NEXT_FIGHT));
 		}
+		
 		if (state == 3)
 		{
 			for (Player player : getPlayers())
@@ -217,15 +224,19 @@ public class EvilIncubator extends Reflection
 	void spawnMonsters()
 	{
 		Location coords = MONSTERS_WAVE_COORDS[Rnd.get(MONSTERS_WAVE_COORDS.length)];
+		
 		for (int element : MONSTERS)
 		{
 			addSpawnWithoutRespawn(element, coords, 50);
+			
 			if (secondWaveMonsters == 9)
 			{
 				addSpawnWithoutRespawn(DEATH_WOUND, coords, 50);
 			}
+			
 			invokeDeathListener();
 		}
+		
 		if (secondWaveMonsters == 9)
 		{
 			addSpawnWithoutRespawn(DEATH_WOUND, coords, 50);
@@ -259,10 +270,12 @@ public class EvilIncubator extends Reflection
 		public void runImpl()
 		{
 			List<NpcInstance> npc = getAllByNpcId(npcId, true);
+			
 			if (!npc.isEmpty())
 			{
 				npc.get(0).broadcastPacket(new NpcSay(npc.get(0), ChatType.NPC_SAY, msg));
 			}
+			
 			if (!sayLocker && !npc.isEmpty())
 			{
 				ThreadPoolManager.getInstance().schedule(this, 8000);
@@ -273,7 +286,7 @@ public class EvilIncubator extends Reflection
 	private class FirstWaveTask extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public FirstWaveTask()
 		{
@@ -284,12 +297,14 @@ public class EvilIncubator extends Reflection
 		public void runImpl()
 		{
 			firstWaveMonsters++;
+			
 			if (firstWaveMonsters != 6)
 			{
 				for (Player player : getPlayers())
 				{
 					player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 				}
+				
 				spawnMonsters();
 				ThreadPoolManager.getInstance().schedule(this, 40000);
 			}
@@ -308,7 +323,7 @@ public class EvilIncubator extends Reflection
 	private class SecondWaveTask extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public SecondWaveTask()
 		{
@@ -319,12 +334,14 @@ public class EvilIncubator extends Reflection
 		public void runImpl()
 		{
 			secondWaveMonsters++;
+			
 			if (secondWaveMonsters != 9)
 			{
 				for (Player player : getPlayers())
 				{
 					player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 				}
+				
 				spawnMonsters();
 				ThreadPoolManager.getInstance().schedule(this, 30000);
 			}
@@ -335,6 +352,7 @@ public class EvilIncubator extends Reflection
 					player.sendPacket(new ExShowScreenMessage(NpcString.I_DEATH_WOUND_CHAMPION_OF_SHILEN_SHALL_END_YOUR_WORLD, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 					player.broadcastPacket(new Earthquake(ADOLPH.get(0).getLoc(), 50, 4));
 				}
+				
 				spawnMonsters();
 			}
 		}
@@ -343,7 +361,7 @@ public class EvilIncubator extends Reflection
 	private class DeathListener implements OnDeathListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public DeathListener()
 		{
@@ -357,15 +375,18 @@ public class EvilIncubator extends Reflection
 			{
 				return;
 			}
+			
 			if ((self.getNpcId() == 27430) || (self.getNpcId() == 27431) || (self.getNpcId() == 27432) || (self.getNpcId() == 27433) || (self.getNpcId() == 27434) || (self.getNpcId() == 27429))
 			{
 				mobKilled++;
+				
 				if ((mobKilled >= 30) && (instanceStage == 1))
 				{
 					mobKilled = 0;
 					setQuestCond(9);
 					sendInstanceState(1);
 				}
+				
 				if ((mobKilled >= 46) && (instanceStage == 2))
 				{
 					mobKilled = 0;

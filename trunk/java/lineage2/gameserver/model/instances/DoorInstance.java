@@ -44,7 +44,7 @@ import lineage2.gameserver.templates.item.WeaponTemplate;
 public final class DoorInstance extends Creature implements GeoCollision
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -183,6 +183,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 		{
 			return false;
 		}
+		
 		_open = open;
 		return true;
 	}
@@ -199,6 +200,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 			_autoActionTask.cancel(false);
 			_autoActionTask = null;
 		}
+		
 		_autoActionTask = ThreadPoolManager.getInstance().schedule(new AutoOpenClose(open), actionDelay);
 	}
 	
@@ -235,7 +237,9 @@ public final class DoorInstance extends Creature implements GeoCollision
 		{
 			return false;
 		}
+		
 		SiegeEvent<?, ?> siegeEvent = getEvent(SiegeEvent.class);
+		
 		switch (getDoorType())
 		{
 			case WALL:
@@ -243,13 +247,17 @@ public final class DoorInstance extends Creature implements GeoCollision
 				{
 					return false;
 				}
+				
 				break;
+			
 			case DOOR:
 				Player player = attacker.getPlayer();
+				
 				if (player == null)
 				{
 					return false;
 				}
+				
 				if (siegeEvent != null)
 				{
 					if (siegeEvent.getSiegeClan(SiegeEvent.DEFENDERS, player.getClan()) != null)
@@ -257,8 +265,10 @@ public final class DoorInstance extends Creature implements GeoCollision
 						return false;
 					}
 				}
+				
 				break;
 		}
+		
 		return !isInvul();
 	}
 	
@@ -360,12 +370,14 @@ public final class DoorInstance extends Creature implements GeoCollision
 	public boolean openMe(Player opener, boolean autoClose)
 	{
 		_openLock.lock();
+		
 		try
 		{
 			if (!setOpen(true))
 			{
 				return false;
 			}
+			
 			setGeoOpen(true);
 		}
 		finally
@@ -373,11 +385,14 @@ public final class DoorInstance extends Creature implements GeoCollision
 			_openLock.unlock();
 		}
 		broadcastStatusUpdate();
+		
 		if (autoClose && (getTemplate().getCloseTime() > 0))
 		{
 			scheduleAutoAction(false, getTemplate().getCloseTime() * 1000L);
 		}
+		
 		getAI().onEvtOpen(opener);
+		
 		for (Listener<Creature> l : getListeners().getListeners())
 		{
 			if (l instanceof OnOpenCloseListener)
@@ -385,6 +400,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 				((OnOpenCloseListener) l).onOpen(this);
 			}
 		}
+		
 		return true;
 	}
 	
@@ -409,13 +425,16 @@ public final class DoorInstance extends Creature implements GeoCollision
 		{
 			return false;
 		}
+		
 		_openLock.lock();
+		
 		try
 		{
 			if (!setOpen(false))
 			{
 				return false;
 			}
+			
 			setGeoOpen(false);
 		}
 		finally
@@ -423,16 +442,21 @@ public final class DoorInstance extends Creature implements GeoCollision
 			_openLock.unlock();
 		}
 		broadcastStatusUpdate();
+		
 		if (autoOpen && (getTemplate().getOpenTime() > 0))
 		{
 			long openDelay = getTemplate().getOpenTime() * 1000L;
+			
 			if (getTemplate().getRandomTime() > 0)
 			{
 				openDelay += Rnd.get(0, getTemplate().getRandomTime()) * 1000L;
 			}
+			
 			scheduleAutoAction(true, openDelay);
 		}
+		
 		getAI().onEvtClose(closer);
+		
 		for (Listener<Creature> l : getListeners().getListeners())
 		{
 			if (l instanceof OnOpenCloseListener)
@@ -440,6 +464,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 				((OnOpenCloseListener) l).onClose(this);
 			}
 		}
+		
 		return true;
 	}
 	
@@ -461,6 +486,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 	protected void onDeath(Creature killer)
 	{
 		_openLock.lock();
+		
 		try
 		{
 			setGeoOpen(true);
@@ -480,6 +506,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 	{
 		super.onRevive();
 		_openLock.lock();
+		
 		try
 		{
 			if (!isOpen())
@@ -515,6 +542,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 			_autoActionTask.cancel(false);
 			_autoActionTask = null;
 		}
+		
 		super.onDespawn();
 	}
 	
@@ -589,11 +617,14 @@ public final class DoorInstance extends Creature implements GeoCollision
 		{
 			return true;
 		}
+		
 		SiegeEvent<?, ?> siegeEvent = getEvent(SiegeEvent.class);
+		
 		if ((siegeEvent != null) && siegeEvent.isInProgress())
 		{
 			return false;
 		}
+		
 		return super.isInvul();
 	}
 	
@@ -608,7 +639,9 @@ public final class DoorInstance extends Creature implements GeoCollision
 		{
 			return false;
 		}
+		
 		_geoOpen = open;
+		
 		if (Config.ALLOW_GEODATA)
 		{
 			if (open)
@@ -620,6 +653,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 				GeoEngine.applyGeoCollision(this, getGeoIndex());
 			}
 		}
+		
 		return true;
 	}
 	

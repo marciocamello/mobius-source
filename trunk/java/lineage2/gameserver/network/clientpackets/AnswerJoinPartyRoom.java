@@ -52,28 +52,35 @@ public class AnswerJoinPartyRoom extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		Request request = activeChar.getRequest();
+		
 		if ((request == null) || !request.isTypeOf(L2RequestType.PARTY_ROOM))
 		{
 			return;
 		}
+		
 		if (!request.isInProgress())
 		{
 			request.cancel();
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (activeChar.isOutOfControl())
 		{
 			request.cancel();
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		Player requestor = request.getRequestor();
+		
 		if (requestor == null)
 		{
 			request.cancel();
@@ -81,31 +88,37 @@ public class AnswerJoinPartyRoom extends L2GameClientPacket
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (requestor.getRequest() != request)
 		{
 			request.cancel();
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (_response == 0)
 		{
 			request.cancel();
 			requestor.sendPacket(SystemMsg.THE_PLAYER_DECLINED_TO_JOIN_YOUR_PARTY);
 			return;
 		}
+		
 		if (activeChar.getMatchingRoom() != null)
 		{
 			request.cancel();
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		try
 		{
 			MatchingRoom room = requestor.getMatchingRoom();
+			
 			if ((room == null) || (room.getType() != MatchingRoom.PARTY_MATCHING))
 			{
 				return;
 			}
+			
 			room.addMember(activeChar);
 		}
 		finally

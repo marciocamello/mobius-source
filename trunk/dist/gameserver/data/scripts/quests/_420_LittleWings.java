@@ -162,15 +162,18 @@ public class _420_LittleWings extends Quest implements ScriptFile
 		addTalkId(Byron);
 		addTalkId(Maria);
 		addKillId(Toad_Lord);
+		
 		for (int Enchanted_Valey_id = Enchanted_Valey_First; Enchanted_Valey_id <= Enchanted_Valey_Last; Enchanted_Valey_id++)
 		{
 			addKillId(Enchanted_Valey_id);
 		}
+		
 		for (int[] wyrm : wyrms)
 		{
 			addTalkId(wyrm[1]);
 			addKillId(wyrm[0]);
 		}
+		
 		addQuestItem(Fairy_Dust);
 		addQuestItem(Fairy_Stone);
 		addQuestItem(Deluxe_Fairy_Stone);
@@ -195,6 +198,7 @@ public class _420_LittleWings extends Quest implements ScriptFile
 	{
 		int _state = st.getState();
 		int cond = st.getCond();
+		
 		if (event.equalsIgnoreCase("30829-02.htm") && (_state == CREATED))
 		{
 			st.setState(STARTED);
@@ -253,10 +257,12 @@ public class _420_LittleWings extends Quest implements ScriptFile
 		{
 			st.setCond(4);
 			st.playSound(SOUND_MIDDLE);
+			
 			if (st.getQuestItemsCount(Deluxe_Fairy_Stone) > 0)
 			{
 				return st.getInt("broken") == 1 ? "30711-04a.htm" : "30711-03a.htm";
 			}
+			
 			if (st.getInt("broken") == 1)
 			{
 				return "30711-04.htm";
@@ -319,6 +325,7 @@ public class _420_LittleWings extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("30747-09.htm") && (_state == STARTED) && (cond == 7))
 		{
 			int egg_id = 0;
+			
 			for (int[] wyrm : wyrms)
 			{
 				if ((st.getQuestItemsCount(wyrm[2]) == 0) && (st.getQuestItemsCount(wyrm[3]) >= 1))
@@ -327,17 +334,21 @@ public class _420_LittleWings extends Quest implements ScriptFile
 					break;
 				}
 			}
+			
 			if (egg_id == 0)
 			{
 				return "noquest";
 			}
+			
 			st.takeItems(egg_id, -1);
 			st.giveItems(Rnd.get(Dragonflute_of_Wind, Dragonflute_of_Twilight), 1);
+			
 			if (st.getQuestItemsCount(Fairy_Dust) > 0)
 			{
 				st.playSound(SOUND_MIDDLE);
 				return "30747-09a.htm";
 			}
+			
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
@@ -350,18 +361,23 @@ public class _420_LittleWings extends Quest implements ScriptFile
 		{
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
+			
 			if (st.getQuestItemsCount(Fairy_Dust) == 0)
 			{
 				return "30747-10.htm";
 			}
+			
 			st.takeItems(Fairy_Dust, -1);
+			
 			if (Rnd.chance(Pet_Armor_Chance))
 			{
 				int armor_id = Hatchlings_Soft_Leather + Rnd.get((int) st.getRateQuestsReward());
+				
 				if (armor_id > Hatchlings_Mithril_Coat)
 				{
 					armor_id = Hatchlings_Mithril_Coat;
 				}
+				
 				st.giveItems(armor_id, 1);
 			}
 			else
@@ -369,6 +385,7 @@ public class _420_LittleWings extends Quest implements ScriptFile
 				st.giveItems(Food_For_Hatchling, 20, true);
 			}
 		}
+		
 		return event;
 	}
 	
@@ -377,57 +394,70 @@ public class _420_LittleWings extends Quest implements ScriptFile
 	{
 		int _state = st.getState();
 		int npcId = npc.getNpcId();
+		
 		if (_state == CREATED)
 		{
 			if (npcId != Cooper)
 			{
 				return "noquest";
 			}
+			
 			if (st.getPlayer().getLevel() < 35)
 			{
 				st.exitCurrentQuest(true);
 				return "30829-00.htm";
 			}
+			
 			st.setCond(0);
 			return "30829-01.htm";
 		}
+		
 		if (_state != STARTED)
 		{
 			return "noquest";
 		}
+		
 		int cond = st.getCond();
 		int broken = st.getInt("broken");
+		
 		if (npcId == Cooper)
 		{
 			if (cond == 1)
 			{
 				return "30829-02.htm";
 			}
+			
 			return "30829-03.htm";
 		}
+		
 		if (npcId == Cronos)
 		{
 			if (cond == 1)
 			{
 				return broken == 1 ? "30610-10.htm" : "30610-01.htm";
 			}
+			
 			if (cond == 2)
 			{
 				return "30610-07.htm";
 			}
+			
 			if (cond == 3)
 			{
 				return broken == 1 ? "30610-14.htm" : "30610-08.htm";
 			}
+			
 			if (cond == 4)
 			{
 				return "30610-09.htm";
 			}
+			
 			if (cond > 4)
 			{
 				return "30610-11.htm";
 			}
 		}
+		
 		if (npcId == Maria)
 		{
 			if (cond == 2)
@@ -436,6 +466,7 @@ public class _420_LittleWings extends Quest implements ScriptFile
 				{
 					return CheckFairyStoneItems(st, Delux_Fairy_Stone_Items) ? "30608-02a.htm" : "30608-01a.htm";
 				}
+				
 				if (st.getQuestItemsCount(Fairy_Stone_List) > 0)
 				{
 					return CheckFairyStoneItems(st, Fairy_Stone_Items) ? "30608-02.htm" : "30608-01.htm";
@@ -446,43 +477,52 @@ public class _420_LittleWings extends Quest implements ScriptFile
 				return "30608-04.htm";
 			}
 		}
+		
 		if (npcId == Byron)
 		{
 			if ((cond == 1) && (broken == 1))
 			{
 				return "30711-06.htm";
 			}
+			
 			if ((cond == 2) && (broken == 1))
 			{
 				return "30711-07.htm";
 			}
+			
 			if ((cond == 3) && ((st.getQuestItemsCount(Fairy_Stone) + st.getQuestItemsCount(Deluxe_Fairy_Stone)) > 0))
 			{
 				return "30711-01.htm";
 			}
+			
 			if ((cond >= 4) && (st.getQuestItemsCount(Deluxe_Fairy_Stone) > 0))
 			{
 				return "30711-05a.htm";
 			}
+			
 			if ((cond >= 4) && (st.getQuestItemsCount(Fairy_Stone) > 0))
 			{
 				return "30711-05.htm";
 			}
 		}
+		
 		if (npcId == Mimyu)
 		{
 			if ((cond == 4) && (st.getQuestItemsCount(Deluxe_Fairy_Stone) > 0))
 			{
 				return "30747-01a.htm";
 			}
+			
 			if ((cond == 4) && (st.getQuestItemsCount(Fairy_Stone) > 0))
 			{
 				return "30747-01.htm";
 			}
+			
 			if (cond == 5)
 			{
 				return "30747-05.htm";
 			}
+			
 			if (cond == 6)
 			{
 				for (int[] wyrm : wyrms)
@@ -492,8 +532,10 @@ public class _420_LittleWings extends Quest implements ScriptFile
 						return "30747-07.htm";
 					}
 				}
+				
 				return "30747-06.htm";
 			}
+			
 			if (cond == 7)
 			{
 				for (int[] wyrm : wyrms)
@@ -505,30 +547,36 @@ public class _420_LittleWings extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		if ((npcId >= Exarion) && (npcId <= Shamhai))
 		{
 			if ((cond == 5) && (st.getQuestItemsCount(Juice_of_Monkshood) > 0))
 			{
 				return String.valueOf(npcId) + "-01.htm";
 			}
+			
 			if ((cond == 6) && (st.getQuestItemsCount(getWyrmScale(npcId)) > 0))
 			{
 				int egg_id = getWyrmEgg(npcId);
+				
 				if (st.getQuestItemsCount(egg_id) < 20)
 				{
 					return String.valueOf(npcId) + "-03.htm";
 				}
+				
 				st.takeItems(getWyrmScale(npcId), -1);
 				st.takeItems(egg_id, -1);
 				st.giveItems(egg_id, 1);
 				st.setCond(7);
 				return String.valueOf(npcId) + "-04.htm";
 			}
+			
 			if ((cond == 7) && (st.getQuestItemsCount(getWyrmEgg(npcId)) == 1))
 			{
 				return String.valueOf(npcId) + "-05.htm";
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -539,18 +587,23 @@ public class _420_LittleWings extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if ((cond == 2) && (npcId == Toad_Lord))
 		{
 			int needed_skins = getNeededSkins(st);
+			
 			if ((st.getQuestItemsCount(Toad_Lord_Back_Skin) < needed_skins) && Rnd.chance(Toad_Lord_Back_Skin_Chance))
 			{
 				st.giveItems(Toad_Lord_Back_Skin, 1);
 				st.playSound(st.getQuestItemsCount(Toad_Lord_Back_Skin) < needed_skins ? SOUND_ITEMGET : SOUND_MIDDLE);
 			}
+			
 			return null;
 		}
+		
 		if ((npcId >= Enchanted_Valey_First) && (npcId <= Enchanted_Valey_Last) && (st.getQuestItemsCount(Deluxe_Fairy_Stone) > 0))
 		{
 			st.takeItems(Deluxe_Fairy_Stone, 1);
@@ -558,15 +611,18 @@ public class _420_LittleWings extends Quest implements ScriptFile
 			st.setCond(1);
 			return "You lost fairy stone deluxe!";
 		}
+		
 		if (cond == 6)
 		{
 			int wyrm_id = isWyrmStoler(npcId);
+			
 			if ((wyrm_id > 0) && (st.getQuestItemsCount(getWyrmScale(wyrm_id)) > 0) && (st.getQuestItemsCount(getWyrmEgg(wyrm_id)) < 20) && Rnd.chance(Egg_Chance))
 			{
 				st.giveItems(getWyrmEgg(wyrm_id), 1);
 				st.playSound(st.getQuestItemsCount(getWyrmEgg(wyrm_id)) < 20 ? SOUND_ITEMGET : SOUND_MIDDLE);
 			}
 		}
+		
 		return null;
 	}
 	
@@ -594,6 +650,7 @@ public class _420_LittleWings extends Quest implements ScriptFile
 				return wyrm[2];
 			}
 		}
+		
 		return 0;
 	}
 	
@@ -606,6 +663,7 @@ public class _420_LittleWings extends Quest implements ScriptFile
 				return wyrm[3];
 			}
 		}
+		
 		return 0;
 	}
 	
@@ -618,6 +676,7 @@ public class _420_LittleWings extends Quest implements ScriptFile
 				return wyrm[1];
 			}
 		}
+		
 		return 0;
 	}
 	
@@ -627,10 +686,12 @@ public class _420_LittleWings extends Quest implements ScriptFile
 		{
 			return 20;
 		}
+		
 		if (st.getQuestItemsCount(Fairy_Stone_List) > 0)
 		{
 			return 10;
 		}
+		
 		return -1;
 	}
 	
@@ -643,6 +704,7 @@ public class _420_LittleWings extends Quest implements ScriptFile
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	

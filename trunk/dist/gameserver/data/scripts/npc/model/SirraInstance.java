@@ -28,7 +28,7 @@ import org.apache.commons.lang3.ArrayUtils;
 public class SirraInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -70,6 +70,7 @@ public class SirraInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String htmlpath = null;
+		
 		if (ArrayUtils.contains(questInstances, getReflection().getInstancedZoneId()))
 		{
 			htmlpath = "default/32762.htm";
@@ -77,6 +78,7 @@ public class SirraInstance extends NpcInstance
 		else if (ArrayUtils.contains(warInstances, getReflection().getInstancedZoneId()))
 		{
 			DoorInstance door = getReflection().getDoor(23140101);
+			
 			if (door.isOpen())
 			{
 				htmlpath = "default/32762_opened.htm";
@@ -90,6 +92,7 @@ public class SirraInstance extends NpcInstance
 		{
 			htmlpath = "default/32762.htm";
 		}
+		
 		return htmlpath;
 	}
 	
@@ -105,6 +108,7 @@ public class SirraInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("teleport_in"))
 		{
 			for (NpcInstance n : getReflection().getNpcs())
@@ -114,6 +118,7 @@ public class SirraInstance extends NpcInstance
 					player.sendPacket(new ExChangeClientEffectInfo(2));
 				}
 			}
+			
 			player.teleToLocation(new Location(114712, -113544, -11225));
 		}
 		else

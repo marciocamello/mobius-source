@@ -37,6 +37,7 @@ public class ExResponseShowStepOne extends L2GameServerPacket
 		writeEx(0xAF);
 		Collection<PetitionMainGroup> petitionGroups = PetitionGroupHolder.getInstance().getPetitionGroups();
 		writeD(petitionGroups.size());
+		
 		for (PetitionMainGroup group : petitionGroups)
 		{
 			writeC(group.getId());

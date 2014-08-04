@@ -194,17 +194,22 @@ public class Request extends MultiValueSet<String>
 	public void cancel()
 	{
 		_isCancelled = true;
+		
 		if (_timeoutTask != null)
 		{
 			_timeoutTask.cancel(false);
 		}
+		
 		_timeoutTask = null;
 		Player player = getRequestor();
+		
 		if ((player != null) && (player.getRequest() == this))
 		{
 			player.setRequest(null);
 		}
+		
 		player = getReceiver();
+		
 		if ((player != null) && (player.getRequest() == this))
 		{
 			player.setRequest(null);
@@ -217,17 +222,22 @@ public class Request extends MultiValueSet<String>
 	public void done()
 	{
 		_isDone = true;
+		
 		if (_timeoutTask != null)
 		{
 			_timeoutTask.cancel(false);
 		}
+		
 		_timeoutTask = null;
 		Player player = getRequestor();
+		
 		if ((player != null) && (player.getRequest() == this))
 		{
 			player.setRequest(null);
 		}
+		
 		player = getReceiver();
+		
 		if ((player != null) && (player.getRequest() == this))
 		{
 			player.setRequest(null);
@@ -240,6 +250,7 @@ public class Request extends MultiValueSet<String>
 	public void timeout()
 	{
 		Player player = getReceiver();
+		
 		if (player != null)
 		{
 			if (player.getRequest() == this)
@@ -247,6 +258,7 @@ public class Request extends MultiValueSet<String>
 				player.sendPacket(Msg.TIME_EXPIRED);
 			}
 		}
+		
 		cancel();
 	}
 	
@@ -261,10 +273,12 @@ public class Request extends MultiValueSet<String>
 		{
 			return getReceiver();
 		}
+		
 		if (player == getReceiver())
 		{
 			return getRequestor();
 		}
+		
 		return null;
 	}
 	
@@ -296,18 +310,22 @@ public class Request extends MultiValueSet<String>
 		{
 			return false;
 		}
+		
 		if (_isDone)
 		{
 			return false;
 		}
+		
 		if (_timeout == 0)
 		{
 			return true;
 		}
+		
 		if (_timeout > System.currentTimeMillis())
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -352,6 +370,7 @@ public class Request extends MultiValueSet<String>
 		{
 			return _isRecieverConfirmed;
 		}
+		
 		return false;
 	}
 }

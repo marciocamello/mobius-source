@@ -169,6 +169,7 @@ public class TheFlowOfTheHorror extends Functions implements ScriptFile
 		points33.add(new Location(77989, 116811, -3849));
 		points33.add(new Location(76009, 117405, -3800));
 		points33.add(new Location(74113, 117441, -3797));
+		
 		if (isActive())
 		{
 			activateAI();
@@ -221,6 +222,7 @@ public class TheFlowOfTheHorror extends Functions implements ScriptFile
 	private void activateAI()
 	{
 		NpcInstance target = GameObjectsStorage.getByNpcId(Gilmore);
+		
 		if (target != null)
 		{
 			_oldGilmoreRef = target.getRef();
@@ -248,7 +250,9 @@ public class TheFlowOfTheHorror extends Functions implements ScriptFile
 				monster.deleteMe();
 			}
 		}
+		
 		NpcInstance GilmoreInstance = _oldGilmoreRef.get();
+		
 		if (GilmoreInstance != null)
 		{
 			GilmoreInstance.spawnMe();
@@ -270,10 +274,12 @@ public class TheFlowOfTheHorror extends Functions implements ScriptFile
 	public void startEvent()
 	{
 		Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (!isActive())
 		{
 			ServerVariables.set("TheFlowOfTheHorror", "on");
@@ -284,6 +290,7 @@ public class TheFlowOfTheHorror extends Functions implements ScriptFile
 		{
 			player.sendMessage("Event 'The Flow Of The Horror' already started.");
 		}
+		
 		show("admin/events.htm", player);
 	}
 	
@@ -293,10 +300,12 @@ public class TheFlowOfTheHorror extends Functions implements ScriptFile
 	public void stopEvent()
 	{
 		Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (isActive())
 		{
 			ServerVariables.unset("TheFlowOfTheHorror");
@@ -307,6 +316,7 @@ public class TheFlowOfTheHorror extends Functions implements ScriptFile
 		{
 			player.sendMessage("Event 'The Flow Of The Horror' not started.");
 		}
+		
 		show("admin/events.htm", player);
 	}
 	

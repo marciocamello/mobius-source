@@ -72,6 +72,7 @@ public class OctavisRider extends DefaultAI
 		{
 			startMoveTask();
 		}
+		
 		return true;
 	}
 	
@@ -92,10 +93,12 @@ public class OctavisRider extends DefaultAI
 	{
 		final NpcInstance npc = getActor();
 		_lastPoint++;
+		
 		if (_lastPoint >= _points.length)
 		{
 			_lastPoint = 0;
 		}
+		
 		npc.setRunning();
 		addTaskMove(_points[_lastPoint], false);
 		doTask();

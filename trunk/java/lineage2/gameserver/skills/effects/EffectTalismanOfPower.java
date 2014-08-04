@@ -39,15 +39,19 @@ public class EffectTalismanOfPower extends Effect
 			case 2:
 				getEffected().startAbnormalEffect(AbnormalEffect.TALISMAN_POWER1);
 				break;
+			
 			case 3:
 				getEffected().startAbnormalEffect(AbnormalEffect.TALISMAN_POWER2);
 				break;
+			
 			case 4:
 				getEffected().startAbnormalEffect(AbnormalEffect.TALISMAN_POWER3);
 				break;
+			
 			case 5:
 				getEffected().startAbnormalEffect(AbnormalEffect.TALISMAN_POWER4);
 				break;
+			
 			case 6:
 				getEffected().startAbnormalEffect(AbnormalEffect.TALISMAN_POWER5);
 				break;

@@ -43,7 +43,6 @@ public class _10305_UnstoppableFutileEfforts extends Quest implements ScriptFile
 		super(false);
 		addStartNpc(NOETI);
 		addTalkId(NOETI);
-		
 		addLevelCheck(90, 99);
 		addQuestCompletedCheck(_10302_UnsettlingShadowAndRumors.class);
 		addKillNpcWithLog(1, A_LIST, 5, 22866, 22882, 22890, 22898, 22890, 22874, 22870, 22886, 22910, 22902, 22894, 22878);
@@ -53,12 +52,14 @@ public class _10305_UnstoppableFutileEfforts extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		st.getPlayer();
+		
 		if (event.equalsIgnoreCase("32895-6.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return event;
 	}
 	
@@ -79,7 +80,9 @@ public class _10305_UnstoppableFutileEfforts extends Quest implements ScriptFile
 		{
 			return "32895-lvl.htm";
 		}
+		
 		QuestState qs = st.getPlayer().getQuestState(_10302_UnsettlingShadowAndRumors.class);
+		
 		if ((qs == null) || !qs.isCompleted())
 		{
 			return "32895-lvl.htm";
@@ -104,6 +107,7 @@ public class _10305_UnstoppableFutileEfforts extends Quest implements ScriptFile
 				return "32895-8.htm";
 			}
 		}
+		
 		return "noquest";
 	}
 	

@@ -120,6 +120,7 @@ public abstract class IdFactory
 	{
 		Connection con = null;
 		Statement st = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -148,20 +149,25 @@ public abstract class IdFactory
 		Connection con = null;
 		Statement st = null;
 		ResultSet rs = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			st = con.createStatement();
+			
 			for (String[] table : EXTRACT_OBJ_ID_TABLES)
 			{
 				rs = st.executeQuery("SELECT " + table[1] + " FROM " + table[0]);
 				int size = objectIds.size();
+				
 				while (rs.next())
 				{
 					objectIds.add(rs.getInt(1));
 				}
+				
 				DbUtils.close(rs);
 				size = objectIds.size() - size;
+				
 				if (size > 0)
 				{
 					_log.info("IdFactory: Extracted " + size + " used id's from " + table[0]);

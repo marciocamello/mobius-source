@@ -110,30 +110,35 @@ public class MagicSkillUse extends L2GameServerPacket
 			case 11015:
 			case 11016:
 				return 11011;
+				
 			case 11018:
 			case 11019:
 			case 11020:
 			case 11021:
 			case 11022:
 				return 11017;
+				
 			case 11024:
 			case 11025:
 			case 11026:
 			case 11027:
 			case 11028:
 				return 11023;
+				
 			case 11035:
 			case 11036:
 			case 11037:
 			case 11038:
 			case 11039:
 				return 11034;
+				
 			case 11041:
 			case 11042:
 			case 11043:
 			case 11044:
 			case 11045:
 				return 11040;
+				
 			default:
 				return -1;
 		}

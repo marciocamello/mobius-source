@@ -54,6 +54,7 @@ public class ShuttleWayEvent extends GlobalEvent
 	{
 		super(set);
 		int shuttleId = set.getInteger("shuttle_id", -1);
+		
 		if (shuttleId > 0)
 		{
 			_shuttle = BoatHolder.getInstance().initShuttle(getName(), shuttleId);
@@ -65,6 +66,7 @@ public class ShuttleWayEvent extends GlobalEvent
 		{
 			_shuttle = (Shuttle) BoatHolder.getInstance().getBoat(getName());
 		}
+		
 		_nextFloorLoc = Location.parseLoc(set.getString("next_floor_loc"));
 		_floorDoorsId.add(set.getIntegerArray("floor_doors_id"));
 		_speed = set.getInteger("speed");
@@ -107,6 +109,7 @@ public class ShuttleWayEvent extends GlobalEvent
 		{
 			return;
 		}
+		
 		clearActions();
 		registerActions();
 	}

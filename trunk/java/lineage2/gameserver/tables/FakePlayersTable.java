@@ -50,6 +50,7 @@ public class FakePlayersTable
 					if (Rnd.chance(10))
 					{
 						String player = _fakePlayers[Rnd.get(_fakePlayers.length)];
+						
 						if ((player != null) && !_activeFakePlayers.contains(player))
 						{
 							_activeFakePlayers.add(player);
@@ -95,6 +96,7 @@ public class FakePlayersTable
 		{
 			_instance = new FakePlayersTable();
 		}
+		
 		return _instance;
 	}
 	
@@ -116,20 +118,24 @@ public class FakePlayersTable
 	private void parseData()
 	{
 		LineNumberReader lnr = null;
+		
 		try
 		{
 			File doorData = new File(Config.FAKE_PLAYERS_LIST);
 			lnr = new LineNumberReader(new BufferedReader(new FileReader(doorData)));
 			String line;
 			GArray<String> players_list = new GArray<>();
+			
 			while ((line = lnr.readLine()) != null)
 			{
 				if ((line.trim().length() == 0) || ((line.length() > 0) && (line.charAt(0) == '#')))
 				{
 					continue;
 				}
+				
 				players_list.add(line);
 			}
+			
 			_fakePlayers = players_list.toArray(new String[players_list.size()]);
 			_log.config("FakePlayersTable: Loaded " + _fakePlayers.length + " Fake Players.");
 		}

@@ -45,20 +45,26 @@ public class RequestAddExpandQuestAlarm extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		Quest quest = QuestManager.getQuest(_questId);
+		
 		if (quest == null)
 		{
 			return;
 		}
+		
 		QuestState state = player.getQuestState(quest.getClass());
+		
 		if (state == null)
 		{
 			return;
 		}
+		
 		player.sendPacket(new ExQuestNpcLogList(state));
 	}
 }

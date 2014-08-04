@@ -64,15 +64,19 @@ public class RequestCommissionList extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		NpcInstance npc = player.getLastNpc();
+		
 		if ((npc == null) || !npc.isInRangeZ(npc, Creature.INTERACTION_DISTANCE))
 		{
 			return;
 		}
+		
 		CommissionShopManager.getInstance().showItems(listType, category, rareType, itemGrade, searchName, player);
 	}
 }

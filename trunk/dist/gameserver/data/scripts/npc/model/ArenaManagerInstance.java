@@ -33,7 +33,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class ArenaManagerInstance extends WarehouseInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -101,22 +101,27 @@ public class ArenaManagerInstance extends WarehouseInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("ArenaBuff"))
 		{
 			if (player.isCursedWeaponEquipped() || player.isInZone(Zone.ZoneType.battle_zone))
 			{
 				return;
 			}
+			
 			int neededmoney = 2000;
 			long currentmoney = player.getAdena();
+			
 			if (neededmoney > currentmoney)
 			{
 				player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 				return;
 			}
+			
 			player.reduceAdena(neededmoney, true);
 			List<Creature> target = new ArrayList<>();
 			target.add(player);
+			
 			for (int[] buff : _arenaBuff)
 			{
 				if (player.isMageClass() && (player.getTemplate().getRace() != Race.orc))
@@ -143,13 +148,16 @@ public class ArenaManagerInstance extends WarehouseInstance
 			{
 				return;
 			}
+			
 			int neededmoney = 1000;
 			long currentmoney = player.getAdena();
+			
 			if (neededmoney > currentmoney)
 			{
 				player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 				return;
 			}
+			
 			player.reduceAdena(neededmoney, true);
 			player.setCurrentCp(player.getMaxCp());
 			player.sendPacket(new SystemMessage2(SystemMsg.S1_CP_HAS_BEEN_RESTORED).addName(player));
@@ -160,13 +168,16 @@ public class ArenaManagerInstance extends WarehouseInstance
 			{
 				return;
 			}
+			
 			int neededmoney = 1000;
 			long currentmoney = player.getAdena();
+			
 			if (neededmoney > currentmoney)
 			{
 				player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 				return;
 			}
+			
 			player.reduceAdena(neededmoney, true);
 			player.setCurrentHp(player.getMaxHp(), false);
 			player.sendPacket(new SystemMessage2(SystemMsg.S1_HP_HAS_BEEN_RESTORED).addName(player));

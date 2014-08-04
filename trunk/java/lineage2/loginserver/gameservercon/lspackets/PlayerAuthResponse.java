@@ -79,6 +79,7 @@ public class PlayerAuthResponse extends SendablePacket
 		Account account = session.getAccount();
 		login = account.getLogin();
 		this.authed = authed;
+		
 		if (authed)
 		{
 			SessionKey skey = session.getSessionKey();
@@ -113,6 +114,7 @@ public class PlayerAuthResponse extends SendablePacket
 		writeC(0x02);
 		writeS(login);
 		writeC(authed ? 1 : 0);
+		
 		if (authed)
 		{
 			writeD(playOkID1);

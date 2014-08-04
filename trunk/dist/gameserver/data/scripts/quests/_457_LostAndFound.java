@@ -42,20 +42,23 @@ public class _457_LostAndFound extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		Player player = st.getPlayer();
+		
 		if (event.equalsIgnoreCase("lost_villager_q0457_06.htm"))
 		{
 			st.setCond(1);
 			st.setState(2);
 			st.playSound("ItemSound.quest_accept");
-			
 			npc.setFollowTarget(st.getPlayer());
+			
 			if (_followTask != null)
 			{
 				_followTask.cancel(false);
 				_followTask = null;
 			}
+			
 			_followTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Follow(npc, player, st), 0L, 1000L);
 		}
+		
 		return event;
 	}
 	
@@ -66,6 +69,7 @@ public class _457_LostAndFound extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int state = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == 32759)
 		{
 			if (state == 1)
@@ -74,30 +78,35 @@ public class _457_LostAndFound extends Quest implements ScriptFile
 				{
 					return "lost_villager_q0457_01a.htm";
 				}
+				
 				if (st.getPlayer().getLevel() >= 82)
 				{
 					if (st.isNowAvailableByTime())
 					{
 						return "lost_villager_q0457_01.htm";
 					}
+					
 					return "lost_villager_q0457_02.htm";
 				}
+				
 				return "lost_villager_q0457_03.htm";
 			}
+			
 			if (state == 2)
 			{
 				if ((npc.getFollowTarget() != null) && (npc.getFollowTarget() != player))
 				{
 					return "lost_villager_q0457_01a.htm";
 				}
+				
 				if (cond == 1)
 				{
 					return "lost_villager_q0457_08.htm";
 				}
+				
 				if (cond == 2)
 				{
 					npc.deleteMe();
-					
 					st.giveItems(15716, 1L);
 					st.unset("cond");
 					st.playSound("ItemSound.quest_finish");
@@ -106,6 +115,7 @@ public class _457_LostAndFound extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -122,13 +132,16 @@ public class _457_LostAndFound extends Quest implements ScriptFile
 	void checkInRadius(int id, QuestState st, NpcInstance npc)
 	{
 		NpcInstance quest0457 = GameObjectsStorage.getByNpcId(id);
+		
 		if (npc.getRealDistance3D(quest0457) <= 150.0D)
 		{
 			st.setCond(2);
+			
 			if (_followTask != null)
 			{
 				_followTask.cancel(false);
 			}
+			
 			_followTask = null;
 			npc.stopMove();
 		}

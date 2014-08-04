@@ -58,8 +58,10 @@ public class CharacterDAO
 		{
 			return;
 		}
+		
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -86,6 +88,7 @@ public class CharacterDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -138,12 +141,14 @@ public class CharacterDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT obj_Id FROM characters WHERE char_name=?");
 			statement.setString(1, name);
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				result = rset.getInt(1);
@@ -171,12 +176,14 @@ public class CharacterDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT char_name FROM characters WHERE obj_Id=?");
 			statement.setInt(1, objectId);
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				result = rset.getString(1);
@@ -204,12 +211,14 @@ public class CharacterDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT COUNT(char_name) FROM characters WHERE account_name=?");
 			statement.setString(1, account);
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				number = rset.getInt(1);

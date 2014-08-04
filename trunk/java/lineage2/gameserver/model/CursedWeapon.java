@@ -137,19 +137,23 @@ public class CursedWeapon
 	public void create(NpcInstance attackable, Player killer)
 	{
 		_item = ItemFunctions.createItem(_itemId);
+		
 		if (_item != null)
 		{
 			zeroOwner();
 			setState(CursedWeaponState.DROPPED);
+			
 			if (_endTime == 0)
 			{
 				_endTime = System.currentTimeMillis() + (getRndDuration() * 60000);
 			}
+			
 			_item.dropToTheGround(attackable, Location.findPointToStay(attackable, 100));
 			_loc = _item.getLoc();
 			_item.setDropTime(0);
 			L2GameServerPacket redSky = new ExRedSky(10);
 			L2GameServerPacket eq = new Earthquake(killer.getLoc(), 30, 12);
+			
 			for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 			{
 				player.sendPacket(redSky, eq);
@@ -170,20 +174,26 @@ public class CursedWeapon
 		{
 			return false;
 		}
+		
 		Player player = getOnlineOwner();
+		
 		if (player == null)
 		{
 			if (owner == null)
 			{
 				return false;
 			}
+			
 			player = owner;
 		}
+		
 		ItemInstance oldItem;
+		
 		if ((oldItem = player.getInventory().removeItemByItemId(_itemId, 1L)) == null)
 		{
 			return false;
 		}
+		
 		player.setKarma(_playerKarma);
 		player.setPkKills(_playerPkKills);
 		player.setCursedWeaponEquippedId(0);
@@ -191,6 +201,7 @@ public class CursedWeapon
 		player.setTransformationName(null);
 		player.validateLocation(0);
 		Skill skill = SkillTable.getInstance().getInfo(_skillId, player.getSkillLevel(_skillId));
+		
 		if (skill != null)
 		{
 			for (AddedSkill s : skill.getAddedSkills())
@@ -198,6 +209,7 @@ public class CursedWeapon
 				player.removeSkillById(s.id);
 			}
 		}
+		
 		player.removeSkillById(_skillId);
 		player.abortAttack(true, false);
 		zeroOwner();
@@ -223,6 +235,7 @@ public class CursedWeapon
 			player.addSkill(s, false);
 			player._transformationSkills.put(s.getId(), s);
 		}
+		
 		player.sendSkillList();
 	}
 	
@@ -234,17 +247,21 @@ public class CursedWeapon
 	private Collection<Skill> getSkills(Player player)
 	{
 		int level = 1 + (_nbKills / _stageKills);
+		
 		if (level > _skillMaxLevel)
 		{
 			level = _skillMaxLevel;
 		}
+		
 		Skill skill = SkillTable.getInstance().getInfo(_skillId, level);
 		List<Skill> ret = new ArrayList<>();
 		ret.add(skill);
+		
 		for (AddedSkill s : skill.getAddedSkills())
 		{
 			ret.add(SkillTable.getInstance().getInfo(s.id, s.level));
 		}
+		
 		return ret;
 	}
 	
@@ -260,14 +277,17 @@ public class CursedWeapon
 			{
 				setState(CursedWeaponState.ACTIVATED);
 			}
+			
 			return false;
 		}
+		
 		if (getPlayerId() == 0)
 		{
 			if ((_loc == null) || ((_item = ItemFunctions.createItem(_itemId)) == null))
 			{
 				return false;
 			}
+			
 			_item.dropMe(null, _loc);
 			_item.setDropTime(0);
 			setState(CursedWeaponState.DROPPED);
@@ -276,6 +296,7 @@ public class CursedWeapon
 		{
 			setState(CursedWeaponState.ACTIVATED);
 		}
+		
 		return true;
 	}
 	
@@ -291,13 +312,16 @@ public class CursedWeapon
 			_playerKarma = player.getKarma();
 			_playerPkKills = player.getPkKills();
 		}
+		
 		setPlayer(player);
 		setState(CursedWeaponState.ACTIVATED);
 		player.leaveParty();
+		
 		if (player.isMounted())
 		{
 			player.setMount(0, 0, 0);
 		}
+		
 		_item = item;
 		player.getInventory().setPaperdollItem(Inventory.PAPERDOLL_LHAND, null);
 		player.getInventory().setPaperdollItem(Inventory.PAPERDOLL_RHAND, null);
@@ -309,10 +333,12 @@ public class CursedWeapon
 		player.setTransformationName(_transformationName);
 		player.setTransformationTemplate(_transformationTemplateId);
 		player.setPkKills(_nbKills);
+		
 		if (_endTime == 0)
 		{
 			_endTime = System.currentTimeMillis() + (getRndDuration() * 60000);
 		}
+		
 		giveSkill(player);
 		player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
 		player.setCurrentCp(player.getMaxCp());
@@ -325,17 +351,21 @@ public class CursedWeapon
 	public void increaseKills()
 	{
 		Player player = getOnlineOwner();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		_nbKills++;
 		player.setPkKills(_nbKills);
 		player.updateStats();
+		
 		if (((_nbKills % _stageKills) == 0) && (_nbKills <= (_stageKills * (_skillMaxLevel - 1))))
 		{
 			giveSkill(player);
 		}
+		
 		_endTime -= _durationLost * 60000;
 	}
 	
@@ -681,6 +711,7 @@ public class CursedWeapon
 		{
 			_durationMax = 2 * _durationMin;
 		}
+		
 		return Rnd.get(_durationMin, _durationMax);
 	}
 	
@@ -720,6 +751,7 @@ public class CursedWeapon
 		if (isActivated())
 		{
 			Player player = getOnlineOwner();
+			
 			if (player != null)
 			{
 				return player.getLoc();
@@ -732,6 +764,7 @@ public class CursedWeapon
 				return _item.getLoc();
 			}
 		}
+		
 		return null;
 	}
 	

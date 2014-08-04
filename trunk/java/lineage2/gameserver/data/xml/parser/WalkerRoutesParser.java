@@ -82,6 +82,7 @@ public final class WalkerRoutesParser extends AbstractFileParser<WalkerRoutesHol
 		for (Iterator<Element> routeIterator = rootElement.elementIterator(); routeIterator.hasNext();)
 		{
 			Element routeElement = routeIterator.next();
+			
 			if (routeElement.getName().equalsIgnoreCase("route"))
 			{
 				int npcId = Integer.parseInt(routeElement.attributeValue("npcId"));
@@ -90,9 +91,11 @@ public final class WalkerRoutesParser extends AbstractFileParser<WalkerRoutesHol
 				boolean isRunning = Boolean.parseBoolean(routeElement.attributeValue("isRunning"));
 				int walkRange = Integer.parseInt(routeElement.attributeValue("walkRange"));
 				WalkerRouteTemplate template = new WalkerRouteTemplate(npcId, baseDelay, type, isRunning, walkRange);
+				
 				for (Iterator<Element> subIterator = routeElement.elementIterator(); subIterator.hasNext();)
 				{
 					Element subElement = subIterator.next();
+					
 					if (subElement.getName().equalsIgnoreCase("point"))
 					{
 						int x = Integer.parseInt(subElement.attributeValue("x"));
@@ -104,6 +107,7 @@ public final class WalkerRoutesParser extends AbstractFileParser<WalkerRoutesHol
 						template.setRoute(x, y, z, h, delay, end);
 					}
 				}
+				
 				getHolder().addSpawn(template);
 			}
 		}

@@ -25,7 +25,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public class BorderOutpostDoormanInstance extends GuardInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -51,6 +51,7 @@ public class BorderOutpostDoormanInstance extends GuardInstance
 		{
 			return;
 		}
+		
 		if (command.equals("openDoor"))
 		{
 			DoorInstance door = ReflectionUtils.getDoor(24170001);

@@ -55,6 +55,7 @@ public class _10340_RevivedPowerOfTheGiant extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("32978-04.htm"))
 		{
 			st.setState(STARTED);
@@ -82,6 +83,7 @@ public class _10340_RevivedPowerOfTheGiant extends Quest implements ScriptFile
 			st.giveItems(REWARD_TEAL_FRAGMENT, 1);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -92,6 +94,7 @@ public class _10340_RevivedPowerOfTheGiant extends Quest implements ScriptFile
 		npc.getNpcId();
 		Player player = st.getPlayer();
 		String htmltext = "noquest";
+		
 		if (npc.getNpcId() == NPC_SEBIO)
 		{
 			switch (st.getState())
@@ -99,6 +102,7 @@ public class _10340_RevivedPowerOfTheGiant extends Quest implements ScriptFile
 				case COMPLETED:
 					htmltext = "32978-06.htm";
 					break;
+				
 				case CREATED:
 					if (player.getLevel() < 85)
 					{
@@ -109,18 +113,22 @@ public class _10340_RevivedPowerOfTheGiant extends Quest implements ScriptFile
 						htmltext = "32978-01.htm";
 						st.exitCurrentQuest(true);
 					}
+					
 					break;
+				
 				case STARTED:
 					switch (st.getCond())
 					{
 						case 1:
 							htmltext = "32978-04.htm";
 							break;
+						
 						case 2:
 							htmltext = "32978-07.htm";
 							st.playSound("ItemSound.quest_middle");
 							st.setCond(3);
 							break;
+						
 						case 3:
 							htmltext = "32978-08.htm";
 					}
@@ -133,6 +141,7 @@ public class _10340_RevivedPowerOfTheGiant extends Quest implements ScriptFile
 				htmltext = "32972-01.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -144,6 +153,7 @@ public class _10340_RevivedPowerOfTheGiant extends Quest implements ScriptFile
 			st.setCond(2);
 			st.playSound("ItemSound.quest_middle");
 		}
+		
 		return null;
 	}
 }

@@ -48,11 +48,14 @@ public class ibkookaburra extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		Summon pet = player.getSummonList().getPet();
+		
 		if (player.getInventory().getItemByItemId(BABY_KOOKABURRA_OCARINA) == null)
 		{
 			show("scripts/services/petevolve/no_item.htm", player, npc);
@@ -63,21 +66,25 @@ public class ibkookaburra extends Functions
 			show("scripts/services/petevolve/evolve_no.htm", player, npc);
 			return;
 		}
+		
 		if (pet.getNpcId() != BABY_KOOKABURRA)
 		{
 			show("scripts/services/petevolve/no_pet.htm", player, npc);
 			return;
 		}
+		
 		if (Config.ALT_IMPROVED_PETS_LIMITED_USE && !player.isMageClass())
 		{
 			show("scripts/services/petevolve/no_class_m.htm", player, npc);
 			return;
 		}
+		
 		if (pet.getLevel() < 55)
 		{
 			show("scripts/services/petevolve/no_level.htm", player, npc);
 			return;
 		}
+		
 		int controlItemId = pet.getControlItemObjId();
 		player.getSummonList().unsummonPet(false);
 		ItemInstance control = player.getInventory().getItemByObjectId(controlItemId);

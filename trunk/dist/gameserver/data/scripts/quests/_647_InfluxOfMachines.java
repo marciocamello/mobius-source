@@ -56,10 +56,12 @@ public class _647_InfluxOfMachines extends Quest implements ScriptFile
 		super(true);
 		addStartNpc(32069);
 		addTalkId(32069);
+		
 		for (int i = 22801; i < 22812; i++)
 		{
 			addKillId(i);
 		}
+		
 		addQuestItem(BROKEN_GOLEM_FRAGMENT);
 	}
 	
@@ -67,6 +69,7 @@ public class _647_InfluxOfMachines extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_accept"))
 		{
 			htmltext = "collecter_gutenhagen_q0647_0103.htm";
@@ -89,6 +92,7 @@ public class _647_InfluxOfMachines extends Quest implements ScriptFile
 				htmltext = "collecter_gutenhagen_q0647_0106.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -98,6 +102,7 @@ public class _647_InfluxOfMachines extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		long count = st.getQuestItemsCount(BROKEN_GOLEM_FRAGMENT);
+		
 		if (cond == 0)
 		{
 			if (st.getPlayer().getLevel() >= 70)
@@ -118,6 +123,7 @@ public class _647_InfluxOfMachines extends Quest implements ScriptFile
 		{
 			htmltext = "collecter_gutenhagen_q0647_0105.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -128,6 +134,7 @@ public class _647_InfluxOfMachines extends Quest implements ScriptFile
 		{
 			st.setCond(2);
 		}
+		
 		return null;
 	}
 }

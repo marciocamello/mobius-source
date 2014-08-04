@@ -50,6 +50,7 @@ public class _119_LastImperialPrince extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("31453-4.htm"))
 		{
 			st.setCond(1);
@@ -76,6 +77,7 @@ public class _119_LastImperialPrince extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -85,6 +87,7 @@ public class _119_LastImperialPrince extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (st.getPlayer().getLevel() < 74)
 		{
 			htmltext = "<html><body>Quest for characters level 74 and above.</body></html>";
@@ -97,6 +100,7 @@ public class _119_LastImperialPrince extends Quest implements ScriptFile
 			st.exitCurrentQuest(true);
 			return htmltext;
 		}
+		
 		if (npcId == SPIRIT)
 		{
 			if (cond == 0)
@@ -116,6 +120,7 @@ public class _119_LastImperialPrince extends Quest implements ScriptFile
 		{
 			htmltext = "32009-1.htm";
 		}
+		
 		return htmltext;
 	}
 }

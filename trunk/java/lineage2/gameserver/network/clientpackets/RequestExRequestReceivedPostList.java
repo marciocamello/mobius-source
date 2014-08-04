@@ -36,6 +36,7 @@ public class RequestExRequestReceivedPostList extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player cha = getClient().getActiveChar();
+		
 		if (cha != null)
 		{
 			cha.sendPacket(new ExShowReceivedPostList(cha));

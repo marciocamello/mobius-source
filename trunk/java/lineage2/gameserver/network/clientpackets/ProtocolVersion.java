@@ -57,10 +57,12 @@ public class ProtocolVersion extends L2GameClientPacket
 		else if ((_version == 65533) || (_version == -3))
 		{
 			_log.info("Status request from IP : " + getClient().getIpAddr());
+			
 			if (Config.RWHO_LOG)
 			{
 				_log.info(getClient().toString() + " RWHO received");
 			}
+			
 			getClient().close(new SendStatus());
 			return;
 		}
@@ -70,6 +72,7 @@ public class ProtocolVersion extends L2GameClientPacket
 			getClient().close(new KeyPacket(null));
 			return;
 		}
+		
 		getClient().setRevision(_version);
 		sendPacket(new KeyPacket(_client.enableCrypt()));
 	}

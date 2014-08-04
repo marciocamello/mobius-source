@@ -62,6 +62,7 @@ public class _610_MagicalPowerofWater2 extends Quest implements ScriptFile
 	{
 		NpcInstance isQuest = GameObjectsStorage.getByNpcId(SoulOfWaterAshutar);
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_accept"))
 		{
 			htmltext = "shaman_asefa_q0610_0104.htm";
@@ -102,6 +103,7 @@ public class _610_MagicalPowerofWater2 extends Quest implements ScriptFile
 				htmltext = "shaman_asefa_q0610_0302.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -112,6 +114,7 @@ public class _610_MagicalPowerofWater2 extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == ASEFA)
 		{
 			if (cond == 0)
@@ -171,6 +174,7 @@ public class _610_MagicalPowerofWater2 extends Quest implements ScriptFile
 				htmltext = "totem_of_barka_q0610_0202.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -195,12 +199,15 @@ public class _610_MagicalPowerofWater2 extends Quest implements ScriptFile
 		{
 			st.giveItems(ICE_HEART_OF_ASHUTAR, 1);
 			st.setCond(3);
+			
 			if (SoulOfWaterAshutarSpawn != null)
 			{
 				SoulOfWaterAshutarSpawn.deleteMe();
 			}
+			
 			SoulOfWaterAshutarSpawn = null;
 		}
+		
 		return null;
 	}
 }

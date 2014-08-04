@@ -160,14 +160,17 @@ public class MultiSellEntry
 	public MultiSellEntry clone()
 	{
 		MultiSellEntry ret = new MultiSellEntry(_entryId);
+		
 		for (MultiSellIngredient i : _ingredients)
 		{
 			ret.addIngredient(i.clone());
 		}
+		
 		for (MultiSellIngredient i : _production)
 		{
 			ret.addProduct(i.clone());
 		}
+		
 		return ret;
 	}
 }

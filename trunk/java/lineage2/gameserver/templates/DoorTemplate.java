@@ -157,6 +157,7 @@ public class DoorTemplate extends CharTemplate
 	private void setAI(String ai)
 	{
 		Class<DoorAI> classAI = null;
+		
 		try
 		{
 			classAI = (Class<DoorAI>) Class.forName("lineage2.gameserver.ai." + ai);
@@ -165,6 +166,7 @@ public class DoorTemplate extends CharTemplate
 		{
 			classAI = (Class<DoorAI>) Scripts.getInstance().getClasses().get("ai.door." + ai);
 		}
+		
 		if (classAI == null)
 		{
 			_log.error("Not found ai class for ai: " + ai + ". DoorId: " + _id);
@@ -174,6 +176,7 @@ public class DoorTemplate extends CharTemplate
 			_classAI = classAI;
 			_constructorAI = (Constructor<DoorAI>) _classAI.getConstructors()[0];
 		}
+		
 		if (_classAI.isAnnotationPresent(Deprecated.class))
 		{
 			_log.error("Ai type: " + ai + ", is deprecated. DoorId: " + _id);
@@ -195,6 +198,7 @@ public class DoorTemplate extends CharTemplate
 		{
 			_log.error("Unable to create ai of doorId " + _id, e);
 		}
+		
 		return new DoorAI(door);
 	}
 	

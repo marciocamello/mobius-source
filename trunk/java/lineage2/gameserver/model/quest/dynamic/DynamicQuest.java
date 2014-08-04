@@ -111,11 +111,14 @@ public abstract class DynamicQuest
 	{
 		lock.lock();
 		started = true;
+		
 		for (String group : spawnGroups)
 		{
 			SpawnManager.getInstance().spawn(group);
 		}
+		
 		CharListenerList.addGlobal(playerEnterListener);
+		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			if (isAvailableFor(player))
@@ -123,6 +126,7 @@ public abstract class DynamicQuest
 				sendQuestInfo(player);
 			}
 		}
+		
 		lock.unlock();
 		onStart();
 		endTask = ThreadPoolManager.getInstance().schedule(finisher, getDuration() * 1000);
@@ -134,25 +138,32 @@ public abstract class DynamicQuest
 		{
 			endTask.cancel(false);
 		}
+		
 		endTask = ThreadPoolManager.getInstance().schedule(finalizer, QUEST_FINALIZE_TIME);
 		lock.lock();
+		
 		if (started)
 		{
 			onStop(success);
 		}
+		
 		started = false;
 		successed = success;
+		
 		for (String group : spawnGroups)
 		{
 			SpawnManager.getInstance().despawn(group);
 		}
+		
 		if (success)
 		{
 			List<DynamicQuestParticipant> ps = new ArrayList<>(participants.values());
 			Collections.sort(ps);
+			
 			for (int i = 0; i < ps.size(); i++)
 			{
 				List<DynamicQuestReward> rs = new ArrayList<>();
+				
 				for (DynamicQuestReward elite : eliteReward)
 				{
 					if (i < elite.firstPlayersCount)
@@ -160,30 +171,36 @@ public abstract class DynamicQuest
 						rs.add(elite);
 					}
 				}
+				
 				rs.addAll(reward);
 				rewardReceiver.put(ps.get(i), rs);
 			}
 		}
+		
 		lock.unlock();
 	}
 	
 	void finish()
 	{
 		lock.lock();
+		
 		if (!started)
 		{
 			CharListenerList.removeGlobal(playerEnterListener);
 			setCurrentStep(0);
 			participants.clear();
 			rewardReceiver.clear();
+			
 			for (DynamicQuestTask task : tasks.values())
 			{
 				task.clear();
 			}
+			
 			successed = false;
 			endTask = null;
 			onFinish();
 		}
+		
 		lock.unlock();
 	}
 	
@@ -242,12 +259,14 @@ public abstract class DynamicQuest
 	public final void addParticipant(Player player)
 	{
 		lock.lock();
+		
 		if (started)
 		{
 			participants.put(player.getObjectId(), new DynamicQuestParticipant(player.getName()));
 			onAddParticipant(player);
 			sendQuestInfo(player);
 		}
+		
 		lock.unlock();
 	}
 	
@@ -257,12 +276,14 @@ public abstract class DynamicQuest
 	protected final void removeParticipant(Player player)
 	{
 		lock.lock();
+		
 		if (started)
 		{
 			participants.remove(player.getName());
 			sendQuestInfo(player);
 			onRemoveParticipant(player);
 		}
+		
 		lock.unlock();
 	}
 	
@@ -304,6 +325,7 @@ public abstract class DynamicQuest
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
@@ -332,19 +354,24 @@ public abstract class DynamicQuest
 	protected final void tryReward(Player player)
 	{
 		lock.lock();
+		
 		if (participants.containsKey(player.getObjectId()))
 		{
 			DynamicQuestParticipant participant = participants.get(player.getObjectId());
+			
 			if (rewardReceiver.containsKey(participant))
 			{
 				List<DynamicQuestReward> rewardList = rewardReceiver.get(participant);
+				
 				for (DynamicQuestReward reward : rewardList)
 				{
 					ItemFunctions.addItem(player, reward.itemId, reward.count, true);
 				}
+				
 				rewardReceiver.remove(participant);
 			}
 		}
+		
 		lock.unlock();
 	}
 	
@@ -356,14 +383,17 @@ public abstract class DynamicQuest
 	{
 		lock.lock();
 		boolean response = true;
+		
 		if (participants.containsKey(player.getObjectId()))
 		{
 			DynamicQuestParticipant participant = participants.get(player.getObjectId());
+			
 			if (rewardReceiver.containsKey(participant))
 			{
 				response = false;
 			}
 		}
+		
 		lock.unlock();
 		return response;
 	}
@@ -371,9 +401,11 @@ public abstract class DynamicQuest
 	void requestHtml(int step, Player player)
 	{
 		lock.lock();
+		
 		if (currentStep == step)
 		{
 			String response = onRequestHtml(player, participants.containsKey(player.getObjectId()));
+			
 			if (response != null)
 			{
 				NpcHtmlMessage packet = new NpcHtmlMessage(5);
@@ -381,6 +413,7 @@ public abstract class DynamicQuest
 				player.sendPacket(packet);
 			}
 		}
+		
 		lock.unlock();
 	}
 	
@@ -397,6 +430,7 @@ public abstract class DynamicQuest
 	void playerEnter(Player player)
 	{
 		lock.lock();
+		
 		if (isAvailableFor(player))
 		{
 			boolean enterRequest = onPlayerEnter(player);
@@ -406,6 +440,7 @@ public abstract class DynamicQuest
 				sendQuestInfo(player);
 			}
 		}
+		
 		lock.unlock();
 	}
 	
@@ -414,6 +449,7 @@ public abstract class DynamicQuest
 		onTaskCompleted(taskId);
 		lock.lock();
 		int completedTasks = 0;
+		
 		for (DynamicQuestTask task : tasks.values())
 		{
 			if (task.isCompleted())
@@ -421,10 +457,12 @@ public abstract class DynamicQuest
 				completedTasks++;
 			}
 		}
+		
 		if (completedTasks == tasks.size())
 		{
 			DynamicQuestController.getInstance().endQuest(questId, true);
 		}
+		
 		lock.unlock();
 	}
 	
@@ -437,6 +475,7 @@ public abstract class DynamicQuest
 		else
 		{
 			String response = onDialogEvent(event, player);
+			
 			if ((response != null) && response.endsWith(".htm"))
 			{
 				NpcHtmlMessage packet = new NpcHtmlMessage(5);
@@ -450,6 +489,7 @@ public abstract class DynamicQuest
 	{
 		lock.lock();
 		DynamicQuestInfo questInfo;
+		
 		if (currentStep > 0)
 		{
 			if (started)
@@ -486,6 +526,7 @@ public abstract class DynamicQuest
 		{
 			questInfo = new DynamicQuestInfo(QUEST_ENDED);
 		}
+		
 		questInfo.questType = isZoneQuest() ? 1 : 0;
 		questInfo.questId = getQuestId();
 		questInfo.step = currentStep;
@@ -501,7 +542,6 @@ public abstract class DynamicQuest
 			List<DynamicQuestParticipant> ps = new ArrayList<>(participants.values());
 			Collections.sort(ps);
 			DynamicQuestInfo questInfo = new ScoreBoardInfo((int) endTask.getDelay(TimeUnit.SECONDS), 0, ps);
-			
 			questInfo.questType = isZoneQuest() ? 1 : 0;
 			questInfo.questId = getQuestId();
 			questInfo.step = currentStep;
@@ -602,7 +642,7 @@ public abstract class DynamicQuest
 	private class OnPlayerEnterListenerImpl implements OnPlayerEnterListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public OnPlayerEnterListenerImpl()
 		{
@@ -653,6 +693,7 @@ public abstract class DynamicQuest
 					return true;
 				}
 			}
+			
 			return false;
 		}
 	}

@@ -65,6 +65,7 @@ public class NihilInvaderChest extends DefaultAI
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.getNpcId() == 18820)
 		{
 			if (Rnd.chance(40))
@@ -83,6 +84,7 @@ public class NihilInvaderChest extends DefaultAI
 				actor.doDie(null);
 			}
 		}
+		
 		for (NpcInstance npc : actor.getReflection().getNpcs())
 		{
 			if (npc.getNpcId() == actor.getNpcId())
@@ -90,6 +92,7 @@ public class NihilInvaderChest extends DefaultAI
 				npc.deleteMe();
 			}
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	

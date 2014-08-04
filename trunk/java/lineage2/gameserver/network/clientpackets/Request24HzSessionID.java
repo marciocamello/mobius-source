@@ -20,12 +20,10 @@ public class Request24HzSessionID extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		
 	}
 }

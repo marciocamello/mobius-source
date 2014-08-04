@@ -49,29 +49,25 @@ public class EffectShadowStep extends Effect
 	public void onStart()
 	{
 		super.onStart();
-		
 		int px = _effected.getX();
 		int py = _effected.getY();
-		
 		double ph = Util.convertHeadingToDegree(_effected.getHeading());
 		ph += 180;
+		
 		if (ph > 360)
 		{
 			ph -= 360;
 		}
-		ph = (Math.PI * ph) / 180;
 		
+		ph = (Math.PI * ph) / 180;
 		_x = (int) (px + (30 * Math.cos(ph)));
 		_y = (int) (py + (30 * Math.sin(ph)));
 		_z = _effected.getZ();
-		
 		Location loc = new Location(_x, _y, _z);
 		loc = GeoEngine.moveCheck(_effector.getX(), _effector.getY(), _effector.getZ(), _x, _y, _effector.getGeoIndex());
-		
 		_x = loc.getX();
 		_y = loc.getY();
 		_z = loc.getZ();
-		
 		_effector.broadcastPacket(new FlyToLocation(_effector, loc, FlyType.DUMMY, getSkill().getFlySpeed()));
 		_effector.abortAttack(true, false);
 		_effector.abortCast(true, false);

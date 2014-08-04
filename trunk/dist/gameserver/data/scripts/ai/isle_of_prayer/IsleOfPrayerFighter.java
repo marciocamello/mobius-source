@@ -69,12 +69,15 @@ public class IsleOfPrayerFighter extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (_penaltyMobsNotSpawned && attacker.isPlayable() && (attacker.getPlayer() != null))
 		{
 			final Party party = attacker.getPlayer().getParty();
+			
 			if ((party != null) && (party.getMemberCount() > 2))
 			{
 				_penaltyMobsNotSpawned = false;
+				
 				for (int i = 0; i < 2; i++)
 				{
 					MonsterInstance npc = new MonsterInstance(IdFactory.getInstance().getNextId(), NpcHolder.getInstance().getTemplate(PENALTY_MOBS[Rnd.get(PENALTY_MOBS.length)]));
@@ -86,6 +89,7 @@ public class IsleOfPrayerFighter extends Fighter
 				}
 			}
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	
@@ -97,12 +101,15 @@ public class IsleOfPrayerFighter extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		_penaltyMobsNotSpawned = true;
+		
 		if (killer != null)
 		{
 			final Player player = killer.getPlayer();
+			
 			if (player != null)
 			{
 				final NpcInstance actor = getActor();
+				
 				switch (actor.getNpcId())
 				{
 					case 22259:
@@ -110,16 +117,20 @@ public class IsleOfPrayerFighter extends Fighter
 						{
 							actor.dropItem(player, YELLOW_CRYSTAL, 1);
 						}
+						
 						break;
+					
 					case 22263:
 						if (Rnd.chance(14))
 						{
 							actor.dropItem(player, GREEN_CRYSTAL, 1);
 						}
+						
 						break;
 				}
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 }

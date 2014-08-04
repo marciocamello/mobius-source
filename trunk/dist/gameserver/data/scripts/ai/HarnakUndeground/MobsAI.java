@@ -67,6 +67,7 @@ public class MobsAI extends Fighter
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
+		
 		if (ROOM_ID == 2)
 		{
 			if (MSG2_ID > 0)
@@ -77,6 +78,7 @@ public class MobsAI extends Fighter
 		else if (ROOM_ID == 3)
 		{
 			Reflection r = getActor().getReflection();
+			
 			if (!(r instanceof HarnakUndergroundRuins))
 			{
 				return;
@@ -93,10 +95,12 @@ public class MobsAI extends Fighter
 	public void selectMe()
 	{
 		selected = true;
+		
 		if (MSG1_ID > 0)
 		{
 			Functions.npcSayInRange(getActor(), 1500, NpcString.valueOf(MSG1_ID));
 		}
+		
 		addTaskMove(ROOM_ID == 1 ? moveLoc1 : moveLoc2, false);
 		doTask();
 		addTimer(1, 3000);
@@ -106,6 +110,7 @@ public class MobsAI extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		super.onEvtAttacked(attacker, damage);
+		
 		if (!selected)
 		{
 			broadCastScriptEvent("ATTACK_HIM", attacker, 1500);
@@ -116,6 +121,7 @@ public class MobsAI extends Fighter
 			if (Rnd.chance(5))
 			{
 				int SKILL_ID = SKILL_IDS[0];
+				
 				if (getActor().getCurrentHpPercents() < 60)
 				{
 					SKILL_ID = SKILL_IDS[1];
@@ -129,6 +135,7 @@ public class MobsAI extends Fighter
 				skill.getEffects(getActor(), getActor(), false, false);
 			}
 		}
+		
 		if (ROOM_ID == 2)
 		{
 			if (IS_LAST_GROUP && (getActor().getCurrentHpPercents() < 80) && (getActor().getEffectList().getEffectsBySkillId(ULTIMATE_BUFF_ID) == null))
@@ -143,6 +150,7 @@ public class MobsAI extends Fighter
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
 		super.onEvtScriptEvent(event, arg1, arg2);
+		
 		if (event.equalsIgnoreCase("ATTACK_HIM"))
 		{
 			selected = false;
@@ -167,8 +175,8 @@ public class MobsAI extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		super.onEvtDead(killer);
-		
 		Reflection r = getActor().getReflection();
+		
 		if (!(r instanceof HarnakUndergroundRuins))
 		{
 			return;
@@ -177,12 +185,15 @@ public class MobsAI extends Fighter
 		if (ROOM_ID == 1)
 		{
 			((HarnakUndergroundRuins) r).decreaseFirstRoomMobsCount();
+			
 			if (selected)
 			{
 				selected = false;
+				
 				if (NEXT_MOB_ID > 0)
 				{
 					List<NpcInstance> npcs = r.getAllByNpcId(NEXT_MOB_ID, true);
+					
 					if (!npcs.isEmpty())
 					{
 						npcs.get(0).getAI().notifyEvent(CtrlEvent.EVT_SCRIPT_EVENT, "SELECT_ME");
@@ -209,10 +220,12 @@ public class MobsAI extends Fighter
 	protected void onEvtTimer(int timerId, Object arg1, Object arg2)
 	{
 		super.onEvtTimer(timerId, arg1, arg2);
+		
 		if (!isActive())
 		{
 			return;
 		}
+		
 		if (timerId == 1)
 		{
 			if (MSG2_ID > 0)

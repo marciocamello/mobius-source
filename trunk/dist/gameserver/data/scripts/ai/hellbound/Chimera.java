@@ -46,16 +46,20 @@ public class Chimera extends Fighter
 		{
 			return;
 		}
+		
 		final NpcInstance actor = getActor();
+		
 		if (!actor.isDead() && (actor.getCurrentHpPercents() > 10))
 		{
 			return;
 		}
+		
 		switch (actor.getNpcId())
 		{
 			case 22353:
 				actor.dropItem(caster.getPlayer(), 9682, 1);
 				break;
+			
 			case 22349:
 			case 22350:
 			case 22351:
@@ -71,8 +75,10 @@ public class Chimera extends Fighter
 						actor.dropItem(caster.getPlayer(), 9680, 1);
 					}
 				}
+				
 				break;
 		}
+		
 		actor.doDie(null);
 		actor.endDecayTask();
 	}
@@ -90,6 +96,7 @@ public class Chimera extends Fighter
 			attacker.teleToLocation(-11272, 236464, -3248);
 			return;
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 }

@@ -68,15 +68,19 @@ public class TrulyFree extends SimpleItemHandler
 			case 18549:
 				use18549(player, ctrl);
 				break;
+			
 			case 32263:
 				use32263(player, ctrl);
 				break;
+			
 			case 34760:
 				use34760(player, ctrl);
 				break;
+			
 			case 35548:
 				use35548(player, ctrl);
 				break;
+			
 			// case 35700:
 			// use35700(player, ctrl);
 			// break;
@@ -89,18 +93,23 @@ public class TrulyFree extends SimpleItemHandler
 			case 35709:
 				use35709(player, ctrl);
 				break;
+			
 			case 35720:
 				use35720(player, ctrl);
 				break;
+			
 			case 35721:
 				use35721(player, ctrl);
 				break;
+			
 			case 35745:
 				use35745(player, ctrl);
 				break;
+			
 			case 35751:
 				use35751(player, ctrl);
 				break;
+			
 			default:
 				return false;
 		}
@@ -257,16 +266,6 @@ public class TrulyFree extends SimpleItemHandler
 		Functions.addItem(player, 13722, 250);
 		Functions.addItem(player, 30297, 1);
 		Functions.addItem(player, 13722, 250);
-	}
-	
-	@SuppressWarnings("unused")
-	private void use32741(Player player, boolean ctrl)
-	// http://l2central.info/wiki/%D0%9A%D0%BE%D1%80%D0%BE%D0%B1%D0%BA%D0%B0_%D0%AD%D0%BB%D0%B8%D0%BA%D1%81%D0%B8%D1%80%D0%BE%D0%B2_(A)
-	{
-		Functions.addItem(player, 34702, 1);
-		Functions.addItem(player, 8638, 1);
-		Functions.addItem(player, 8626, 1);
-		Functions.addItem(player, 8632, 1);
 	}
 	
 	private void use34760(Player player, boolean ctrl)
@@ -484,6 +483,7 @@ public class TrulyFree extends SimpleItemHandler
 			player.sendPacket(Msg.YOUR_INVENTORY_IS_FULL, new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getItemId()));
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -495,6 +495,7 @@ public class TrulyFree extends SimpleItemHandler
 		}
 		
 		double extractChance = 0;
+		
 		for (double c : chances)
 		{
 			extractChance += c;
@@ -503,6 +504,7 @@ public class TrulyFree extends SimpleItemHandler
 		if (Rnd.chance(extractChance))
 		{
 			int[] successfulItems = new int[0];
+			
 			while (successfulItems.length == 0)
 			{
 				for (int i = 0; i < items.length; i++)
@@ -513,7 +515,9 @@ public class TrulyFree extends SimpleItemHandler
 					}
 				}
 			}
+			
 			int[] item = items[successfulItems[Rnd.get(successfulItems.length)]];
+			
 			if (item.length < 2)
 			{
 				return false;
@@ -521,6 +525,7 @@ public class TrulyFree extends SimpleItemHandler
 			
 			Functions.addItem(player, item[0], item[1]);
 		}
+		
 		return true;
 	}
 }

@@ -40,6 +40,7 @@ public class _10286_ReunionWithSirra extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("rafforty_q10286_02.htm"))
 		{
 			st.setState(STARTED);
@@ -71,6 +72,7 @@ public class _10286_ReunionWithSirra extends Quest implements ScriptFile
 			st.getPlayer().getReflection().collapse();
 			return null;
 		}
+		
 		return htmltext;
 	}
 	
@@ -80,11 +82,13 @@ public class _10286_ReunionWithSirra extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Rafforty)
 		{
 			if (cond == 0)
 			{
 				QuestState qs = st.getPlayer().getQuestState(_10285_MeetingSirra.class);
+				
 				if ((st.getPlayer().getLevel() >= 82) && (qs != null) && qs.isCompleted())
 				{
 					htmltext = "rafforty_q10286_01.htm";
@@ -140,12 +144,14 @@ public class _10286_ReunionWithSirra extends Quest implements ScriptFile
 				st.exitCurrentQuest(false);
 			}
 		}
+		
 		return htmltext;
 	}
 	
 	private void enterInstance(Player player, int izId)
 	{
 		Reflection r = player.getActiveReflection();
+		
 		if (r != null)
 		{
 			if (player.canReenterInstance(izId))

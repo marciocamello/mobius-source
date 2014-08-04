@@ -1385,6 +1385,7 @@ public class ItemBroker extends Functions
 			this.enchant = enchant;
 			rare = org.apache.commons.lang3.ArrayUtils.contains(RARE_ITEMS, itemId);
 			StringBuilder out = new StringBuilder(70);
+			
 			if (enchant > 0)
 			{
 				if (rare)
@@ -1395,6 +1396,7 @@ public class ItemBroker extends Functions
 				{
 					out.append("<font color=\"7CFC00\">+");
 				}
+				
 				out.append(enchant);
 				out.append(' ');
 			}
@@ -1406,35 +1408,44 @@ public class ItemBroker extends Functions
 			{
 				out.append("<font color=\"LEVEL\">");
 			}
+			
 			out.append(itemName);
 			out.append("</font>]");
+			
 			if (item != null)
 			{
 				if (item.getAttackElement() != Element.NONE.getId())
 				{
 					out.append(" &nbsp;<font color=\"7CFC00\">+");
 					out.append(item.getAttackElementValue());
+					
 					switch (item.getAttackElement())
 					{
 						case ItemTemplate.ATTRIBUTE_FIRE:
 							out.append(" Fire");
 							break;
+						
 						case ItemTemplate.ATTRIBUTE_WATER:
 							out.append(" Water");
 							break;
+						
 						case ItemTemplate.ATTRIBUTE_WIND:
 							out.append(" Wind");
 							break;
+						
 						case ItemTemplate.ATTRIBUTE_EARTH:
 							out.append(" Earth");
 							break;
+						
 						case ItemTemplate.ATTRIBUTE_HOLY:
 							out.append(" Holy");
 							break;
+						
 						case ItemTemplate.ATTRIBUTE_DARK:
 							out.append(" Unholy");
 							break;
 					}
+					
 					out.append("</font>");
 				}
 				else
@@ -1445,49 +1456,58 @@ public class ItemBroker extends Functions
 					final int earth = item.getDefenceEarth();
 					final int holy = item.getDefenceHoly();
 					final int unholy = item.getDefenceUnholy();
+					
 					if ((fire + water + wind + earth + holy + unholy) > 0)
 					{
 						out.append("&nbsp;<font color=\"7CFC00\">");
+						
 						if (fire > 0)
 						{
 							out.append('+');
 							out.append(fire);
 							out.append(" Fire ");
 						}
+						
 						if (water > 0)
 						{
 							out.append('+');
 							out.append(water);
 							out.append(" Water ");
 						}
+						
 						if (wind > 0)
 						{
 							out.append('+');
 							out.append(wind);
 							out.append(" Wind ");
 						}
+						
 						if (earth > 0)
 						{
 							out.append('+');
 							out.append(earth);
 							out.append(" Earth ");
 						}
+						
 						if (holy > 0)
 						{
 							out.append('+');
 							out.append(holy);
 							out.append(" Holy ");
 						}
+						
 						if (unholy > 0)
 						{
 							out.append('+');
 							out.append(unholy);
 							out.append(" Unholy ");
 						}
+						
 						out.append("</font>");
 					}
 				}
 			}
+			
 			name = out.toString();
 			merchantStoredId = storedId;
 			this.merchantName = merchantName;
@@ -1506,25 +1526,32 @@ public class ItemBroker extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return null;
 		}
+		
 		updateInfo(player, npc);
 		NpcInfo info = _npcInfos.get(getNpc().getObjectId());
+		
 		if (info == null)
 		{
 			return null;
 		}
+		
 		switch (type)
 		{
 			case Player.STORE_PRIVATE_SELL:
 				return info.bestSellItems;
+				
 			case Player.STORE_PRIVATE_BUY:
 				return info.bestBuyItems;
+				
 			case Player.STORE_PRIVATE_MANUFACTURE:
 				return info.bestCraftItems;
 		}
+		
 		return null;
 	}
 	
@@ -1569,9 +1596,11 @@ public class ItemBroker extends Functions
 		{
 			return "";
 		}
+		
 		StringBuilder append = new StringBuilder();
 		int type = 0;
 		String typeNameEn = "";
+		
 		switch (val)
 		{
 			case 0:
@@ -1580,18 +1609,22 @@ public class ItemBroker extends Functions
 				append.append("[npc_%objectId%_Chat 13|<font color=\"FF9900\">The list of goods to buy</font>]<br1>");
 				append.append("[npc_%objectId%_Chat 15|<font color=\"FF9900\">The list of goods to craft</font>]<br1>");
 				break;
+			
 			case 10 + Player.STORE_PRIVATE_SELL:
 				type = Player.STORE_PRIVATE_SELL;
 				typeNameEn = "sell";
 				break;
+			
 			case 10 + Player.STORE_PRIVATE_BUY:
 				type = Player.STORE_PRIVATE_BUY;
 				typeNameEn = "buy";
 				break;
+			
 			case 10 + Player.STORE_PRIVATE_MANUFACTURE:
 				type = Player.STORE_PRIVATE_MANUFACTURE;
 				typeNameEn = "craft";
 				break;
+			
 			case 20 + Player.STORE_PRIVATE_SELL:
 			case 20 + Player.STORE_PRIVATE_BUY:
 			case 20 + Player.STORE_PRIVATE_MANUFACTURE:
@@ -1603,6 +1636,7 @@ public class ItemBroker extends Functions
 				append.append("[scripts_services.ItemBroker:list ").append(type).append(" 4 1 0 0|<font color=\"FF9900\">Accessories</font>]<br1>");
 				append.append("<br>[npc_%objectId%_Chat ").append(10 + type).append("|<font color=\"FF9900\">Back</font>]");
 				return append.toString();
+				
 			case 30 + Player.STORE_PRIVATE_SELL:
 			case 30 + Player.STORE_PRIVATE_BUY:
 			case 30 + Player.STORE_PRIVATE_MANUFACTURE:
@@ -1615,19 +1649,23 @@ public class ItemBroker extends Functions
 				append.append("<br>[npc_%objectId%_Chat ").append(10 + type).append("|<font color=\"FF9900\">Back</font>]");
 				return append.toString();
 		}
+		
 		if (type > 0)
 		{
 			append.append("!The list of goods to ").append(typeNameEn).append(":<br>");
 			append.append("[scripts_services.ItemBroker:list ").append(type).append(" 0 1 0 0|<font color=\"FF9900\">List all</font>]<br1>");
 			append.append("[npc_%objectId%_Chat ").append(type + 20).append("|<font color=\"FF9900\">Equipment</font>]<br1>");
+			
 			if (type == Player.STORE_PRIVATE_SELL)
 			{
 				append.append("[npc_%objectId%_Chat ").append(type + 30).append("|<font color=\"FF9900\">Equipment +4 and more</font>]<br1>");
 			}
+			
 			if (type != Player.STORE_PRIVATE_MANUFACTURE)
 			{
 				append.append("[scripts_services.ItemBroker:list ").append(type).append(" 0 1 0 1|<font color=\"FF9900\">Rare equipment</font>]<br1>");
 			}
+			
 			append.append("[scripts_services.ItemBroker:list ").append(type).append(" 5 1 0 0|<font color=\"FF9900\">Consumable</font>]<br1>");
 			append.append("[scripts_services.ItemBroker:list ").append(type).append(" 6 1 0 0|<font color=\"FF9900\">Matherials</font>]<br1>");
 			append.append("[scripts_services.ItemBroker:list ").append(type).append(" 7 1 0 0|<font color=\"FF9900\">Key matherials</font>]<br1>");
@@ -1635,14 +1673,17 @@ public class ItemBroker extends Functions
 			append.append("[scripts_services.ItemBroker:list ").append(type).append(" 9 1 0 0|<font color=\"FF9900\">Books and amulets</font>]<br1>");
 			append.append("[scripts_services.ItemBroker:list ").append(type).append(" 10 1 0 0|<font color=\"FF9900\">Enchant items</font>]<br1>");
 			append.append("[scripts_services.ItemBroker:list ").append(type).append(" 11 1 0 0|<font color=\"FF9900\">Other</font>]<br1>");
+			
 			if (type != Player.STORE_PRIVATE_MANUFACTURE)
 			{
 				append.append("[scripts_services.ItemBroker:list ").append(type).append(" 90 1 0 0|<font color=\"FF9900\">Commons</font>]<br1>");
 			}
+			
 			append.append("<edit var=\"tofind\" width=100><br1>");
 			append.append("[scripts_services.ItemBroker:find ").append(type).append(" 1 $tofind|<font color=\"FF9900\">Find</font>]<br1>");
 			append.append("<br>[npc_%objectId%_Chat 0|<font color=\"FF9900\">Back</font>]");
 		}
+		
 		return append.toString();
 	}
 	
@@ -1654,20 +1695,24 @@ public class ItemBroker extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		if (var.length != 5)
 		{
 			show("Incorrect data length", player, npc);
 			return;
 		}
+		
 		int type;
 		int itemType;
 		int currentPage;
 		int minEnchant;
 		int rare;
+		
 		try
 		{
 			type = Integer.valueOf(var[0]);
@@ -1681,53 +1726,69 @@ public class ItemBroker extends Functions
 			show("incorrect data", player, npc);
 			return;
 		}
+		
 		ItemClass itemClass = itemType >= ItemClass.values().length ? null : ItemClass.values()[itemType];
 		TreeMap<String, TreeMap<Long, Item>> allItems = getItems(type);
+		
 		if (allItems == null)
 		{
 			show("Error - this type of objects found", player, npc);
 			return;
 		}
+		
 		List<Item> items = new ArrayList<>(allItems.size() * 10);
+		
 		for (TreeMap<Long, Item> tempItems : allItems.values())
 		{
 			TreeMap<Long, Item> tempItems2 = new TreeMap<>();
+			
 			for (Entry<Long, Item> entry : tempItems.entrySet())
 			{
 				Item tempItem = entry.getValue();
+				
 				if (tempItem == null)
 				{
 					continue;
 				}
+				
 				if (tempItem.enchant < minEnchant)
 				{
 					continue;
 				}
+				
 				ItemTemplate temp = tempItem.item != null ? tempItem.item.getItem() : ItemHolder.getInstance().getTemplate(tempItem.itemId);
+				
 				if ((temp == null) || ((rare > 0) && !tempItem.rare))
 				{
 					continue;
 				}
+				
 				if (itemClass == null ? !temp.isCommonItem() : temp.isCommonItem())
 				{
 					continue;
 				}
+				
 				if ((itemClass != null) && (itemClass != ItemClass.ALL) && (temp.getItemClass() != itemClass))
 				{
 					continue;
 				}
+				
 				tempItems2.put(entry.getKey(), tempItem);
 			}
+			
 			if (tempItems2.isEmpty())
 			{
 				continue;
 			}
+			
 			Item item = type == Player.STORE_PRIVATE_BUY ? tempItems2.lastEntry().getValue() : tempItems2.firstEntry().getValue();
+			
 			if (item != null)
 			{
 				items.add(item);
 			}
 		}
+		
 		StringBuilder out = new StringBuilder(200);
 		out.append("[npc_%objectId%_Chat 1");
 		out.append(type);
@@ -1736,21 +1797,26 @@ public class ItemBroker extends Functions
 		totalPages = (totalPages / MAX_ITEMS_PER_PAGE) + ((totalPages % MAX_ITEMS_PER_PAGE) > 0 ? 1 : 0);
 		totalPages = Math.max(1, totalPages);
 		currentPage = Math.min(totalPages, Math.max(1, currentPage));
+		
 		if (totalPages > 1)
 		{
 			int page = Math.max(1, Math.min((totalPages - MAX_PAGES_PER_LIST) + 1, currentPage - (MAX_PAGES_PER_LIST / 2)));
+			
 			if (page > 1)
 			{
 				listPageNum(out, type, itemType, 1, minEnchant, rare, "1");
 			}
+			
 			if (currentPage > 11)
 			{
 				listPageNum(out, type, itemType, currentPage - 10, minEnchant, rare, String.valueOf(currentPage - 10));
 			}
+			
 			if (currentPage > 1)
 			{
 				listPageNum(out, type, itemType, currentPage - 1, minEnchant, rare, "<");
 			}
+			
 			for (int count = 0; (count < MAX_PAGES_PER_LIST) && (page <= totalPages); count++, page++)
 			{
 				if (page == currentPage)
@@ -1762,32 +1828,40 @@ public class ItemBroker extends Functions
 					listPageNum(out, type, itemType, page, minEnchant, rare, String.valueOf(page));
 				}
 			}
+			
 			if (currentPage < totalPages)
 			{
 				listPageNum(out, type, itemType, currentPage + 1, minEnchant, rare, ">");
 			}
+			
 			if (currentPage < (totalPages - 10))
 			{
 				listPageNum(out, type, itemType, currentPage + 10, minEnchant, rare, String.valueOf(currentPage + 10));
 			}
+			
 			if (page <= totalPages)
 			{
 				listPageNum(out, type, itemType, totalPages, minEnchant, rare, String.valueOf(totalPages));
 			}
 		}
+		
 		out.append("<table width=100%>");
+		
 		if (items.size() > 0)
 		{
 			int count = 0;
 			ListIterator<Item> iter = items.listIterator((currentPage - 1) * MAX_ITEMS_PER_PAGE);
+			
 			while (iter.hasNext() && (count < MAX_ITEMS_PER_PAGE))
 			{
 				Item item = iter.next();
 				ItemTemplate temp = item.item != null ? item.item.getItem() : ItemHolder.getInstance().getTemplate(item.itemId);
+				
 				if (temp == null)
 				{
 					continue;
 				}
+				
 				out.append("<tr><td>");
 				out.append(temp.getIcon32());
 				out.append("</td><td><table width=100%><tr><td>[scripts_services.ItemBroker:listForItem ");
@@ -1806,10 +1880,12 @@ public class ItemBroker extends Functions
 				out.append(item.name);
 				out.append("</td></tr><tr><td>price: ");
 				out.append(Util.formatAdena(item.price));
+				
 				if (temp.isStackable())
 				{
 					out.append(", count: ").append(Util.formatAdena(item.count));
 				}
+				
 				out.append("</td></tr></table></td></tr>");
 				count++;
 			}
@@ -1818,6 +1894,7 @@ public class ItemBroker extends Functions
 		{
 			out.append("<tr><td colspan=2>Nothing found.</td></tr>");
 		}
+		
 		out.append("</table><br>&nbsp;");
 		show(out.toString(), player, npc);
 	}
@@ -1857,15 +1934,18 @@ public class ItemBroker extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		if ((var.length < 7) || (var.length > 12))
 		{
 			show("Incorrect data length", player, npc);
 			return;
 		}
+		
 		int type;
 		int itemId;
 		int minEnchant;
@@ -1874,6 +1954,7 @@ public class ItemBroker extends Functions
 		int currentPage;
 		int returnPage;
 		String[] search = null;
+		
 		try
 		{
 			type = Integer.valueOf(var[0]);
@@ -1883,6 +1964,7 @@ public class ItemBroker extends Functions
 			itemType = Integer.valueOf(var[4]);
 			currentPage = Integer.valueOf(var[5]);
 			returnPage = Integer.valueOf(var[6]);
+			
 			if (var.length > 7)
 			{
 				search = new String[var.length - 7];
@@ -1894,25 +1976,33 @@ public class ItemBroker extends Functions
 			show("Incorrect data", player, npc);
 			return;
 		}
+		
 		ItemTemplate template = ItemHolder.getInstance().getTemplate(itemId);
+		
 		if (template == null)
 		{
 			show("Error - itemId not specified.", player, npc);
 			return;
 		}
+		
 		TreeMap<String, TreeMap<Long, Item>> tmpItems = getItems(type);
+		
 		if (tmpItems == null)
 		{
 			show("Error - this type of subject matter is not.", player, npc);
 			return;
 		}
+		
 		TreeMap<Long, Item> allItems = tmpItems.get(template.getName());
+		
 		if (allItems == null)
 		{
 			show("Error - items with the same name found.", player, npc);
 			return;
 		}
+		
 		StringBuilder out = new StringBuilder(200);
+		
 		if (search == null)
 		{
 			listPageNum(out, type, itemType, returnPage, minEnchant, rare, "��");
@@ -1921,41 +2011,52 @@ public class ItemBroker extends Functions
 		{
 			findPageNum(out, type, returnPage, search, "��");
 		}
+		
 		out.append("&nbsp;&nbsp;");
 		NavigableMap<Long, Item> sortedItems = type == Player.STORE_PRIVATE_BUY ? allItems.descendingMap() : allItems;
+		
 		if (sortedItems == null)
 		{
 			show("Error - No results.", player, npc);
 			return;
 		}
+		
 		List<Item> items = new ArrayList<>(sortedItems.size());
+		
 		for (Item item : sortedItems.values())
 		{
 			if ((item == null) || (item.enchant < minEnchant) || ((rare > 0) && !item.rare))
 			{
 				continue;
 			}
+			
 			items.add(item);
 		}
+		
 		int totalPages = items.size();
 		totalPages = (totalPages / MAX_ITEMS_PER_PAGE) + ((totalPages % MAX_ITEMS_PER_PAGE) > 0 ? 1 : 0);
 		totalPages = Math.max(1, totalPages);
 		currentPage = Math.min(totalPages, Math.max(1, currentPage));
+		
 		if (totalPages > 1)
 		{
 			int page = Math.max(1, Math.min((totalPages - MAX_PAGES_PER_LIST) + 1, currentPage - (MAX_PAGES_PER_LIST / 2)));
+			
 			if (page > 1)
 			{
 				listForItemPageNum(out, type, itemId, minEnchant, rare, itemType, 1, returnPage, search, "1");
 			}
+			
 			if (currentPage > 11)
 			{
 				listForItemPageNum(out, type, itemId, minEnchant, rare, itemType, currentPage - 10, returnPage, search, String.valueOf(currentPage - 10));
 			}
+			
 			if (currentPage > 1)
 			{
 				listForItemPageNum(out, type, itemId, minEnchant, rare, itemType, currentPage - 1, returnPage, search, "<");
 			}
+			
 			for (int count = 0; (count < MAX_PAGES_PER_LIST) && (page <= totalPages); count++, page++)
 			{
 				if (page == currentPage)
@@ -1967,32 +2068,40 @@ public class ItemBroker extends Functions
 					listForItemPageNum(out, type, itemId, minEnchant, rare, itemType, page, returnPage, search, String.valueOf(page));
 				}
 			}
+			
 			if (currentPage < totalPages)
 			{
 				listForItemPageNum(out, type, itemId, minEnchant, rare, itemType, currentPage + 1, returnPage, search, ">");
 			}
+			
 			if (currentPage < (totalPages - 10))
 			{
 				listForItemPageNum(out, type, itemId, minEnchant, rare, itemType, currentPage + 10, returnPage, search, String.valueOf(currentPage + 10));
 			}
+			
 			if (page <= totalPages)
 			{
 				listForItemPageNum(out, type, itemId, minEnchant, rare, itemType, totalPages, returnPage, search, String.valueOf(totalPages));
 			}
 		}
+		
 		out.append("<table width=100%>");
+		
 		if (items.size() > 0)
 		{
 			int count = 0;
 			ListIterator<Item> iter = items.listIterator((currentPage - 1) * MAX_ITEMS_PER_PAGE);
+			
 			while (iter.hasNext() && (count < MAX_ITEMS_PER_PAGE))
 			{
 				Item item = iter.next();
 				ItemTemplate temp = item.item != null ? item.item.getItem() : ItemHolder.getInstance().getTemplate(item.itemId);
+				
 				if (temp == null)
 				{
 					continue;
 				}
+				
 				out.append("<tr><td>");
 				out.append(temp.getIcon32());
 				out.append("</td><td><table width=100%><tr><td>[scripts_services.ItemBroker:path ");
@@ -2005,10 +2114,12 @@ public class ItemBroker extends Functions
 				out.append(item.name);
 				out.append("</td></tr><tr><td>price: ");
 				out.append(Util.formatAdena(item.price));
+				
 				if (temp.isStackable())
 				{
 					out.append(", count: ").append(Util.formatAdena(item.count));
 				}
+				
 				out.append(", owner: ").append(item.merchantName);
 				out.append("</td></tr></table></td></tr>");
 				count++;
@@ -2018,6 +2129,7 @@ public class ItemBroker extends Functions
 		{
 			out.append("<tr><td colspan=2>Nothing found.</td></tr>");
 		}
+		
 		out.append("</table><br>&nbsp;");
 		show(out.toString(), player, npc);
 	}
@@ -2051,6 +2163,7 @@ public class ItemBroker extends Functions
 		out.append(page);
 		out.append(' ');
 		out.append(returnPage);
+		
 		if (search != null)
 		{
 			for (String element : search)
@@ -2059,6 +2172,7 @@ public class ItemBroker extends Functions
 				out.append(element);
 			}
 		}
+		
 		out.append('|');
 		out.append(letter);
 		out.append("]&nbsp;");
@@ -2072,18 +2186,22 @@ public class ItemBroker extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		if (var.length != 3)
 		{
 			show("Incorrect data length", player, npc);
 			return;
 		}
+		
 		int type;
 		int itemId;
 		int itemObjId;
+		
 		try
 		{
 			type = Integer.valueOf(var[0]);
@@ -2095,25 +2213,33 @@ public class ItemBroker extends Functions
 			show("Incorrect data", player, npc);
 			return;
 		}
+		
 		ItemTemplate temp = ItemHolder.getInstance().getTemplate(itemId);
+		
 		if (temp == null)
 		{
 			show("Error - itemId not specified.", player, npc);
 			return;
 		}
+		
 		TreeMap<String, TreeMap<Long, Item>> allItems = getItems(type);
+		
 		if (allItems == null)
 		{
 			show("Error - this type of objects found.", player, npc);
 			return;
 		}
+		
 		TreeMap<Long, Item> items = allItems.get(temp.getName());
+		
 		if (items == null)
 		{
 			show("Error - items with the same name found.", player, npc);
 			return;
 		}
+		
 		Item item = null;
+		
 		for (Item i : items.values())
 		{
 			if (i.itemObjId == itemObjId)
@@ -2122,18 +2248,22 @@ public class ItemBroker extends Functions
 				break;
 			}
 		}
+		
 		if (item == null)
 		{
 			show("Error - object not found.", player, npc);
 			return;
 		}
+		
 		boolean found = false;
 		Player trader = GameObjectsStorage.getAsPlayer(item.merchantStoredId);
+		
 		if (trader == null)
 		{
 			show("Merchant not found, maybe he got out of the.", player, npc);
 			return;
 		}
+		
 		switch (type)
 		{
 			case Player.STORE_PRIVATE_SELL:
@@ -2148,7 +2278,9 @@ public class ItemBroker extends Functions
 						}
 					}
 				}
+				
 				break;
+			
 			case Player.STORE_PRIVATE_BUY:
 				if (trader.getBuyList() != null)
 				{
@@ -2161,23 +2293,29 @@ public class ItemBroker extends Functions
 						}
 					}
 				}
+				
 				break;
+			
 			case Player.STORE_PRIVATE_MANUFACTURE:
 				found = true;
 				break;
 		}
+		
 		if (!found)
 		{
 			show("Caution, price or item was changed, please be careful !", player, npc);
 		}
+		
 		ExShowTrace trace = new ExShowTrace();
 		trace.addLine(item.player, item.player, 30, 60000);
 		player.sendPacket(trace);
 		RadarControl rc = new RadarControl(0, 1, item.player);
 		player.sendPacket(rc);
+		
 		if (player.getVarB(Player.NO_TRADERS_VAR))
 		{
 			player.sendPacket(new CharInfo(trader));
+			
 			if (trader.getPrivateStoreType() == Player.STORE_PRIVATE_BUY)
 			{
 				player.sendPacket(new PrivateStoreMsgBuy(trader));
@@ -2191,6 +2329,7 @@ public class ItemBroker extends Functions
 				player.sendPacket(new RecipeShopMsg(trader));
 			}
 		}
+		
 		player.setTarget(trader);
 	}
 	
@@ -2202,6 +2341,7 @@ public class ItemBroker extends Functions
 	public void updateInfo(Player player, NpcInstance npc)
 	{
 		NpcInfo info = _npcInfos.get(npc.getObjectId());
+		
 		if ((info == null) || (info.lastUpdate < (System.currentTimeMillis() - 300000)))
 		{
 			info = new NpcInfo();
@@ -2210,106 +2350,140 @@ public class ItemBroker extends Functions
 			info.bestSellItems = new TreeMap<>();
 			info.bestCraftItems = new TreeMap<>();
 			int itemObjId = 0;
+			
 			for (Player pl : World.getAroundPlayers(npc, 4000, 400))
 			{
 				int type = pl.getPrivateStoreType();
+				
 				if ((type == Player.STORE_PRIVATE_SELL) || (type == Player.STORE_PRIVATE_BUY) || (type == Player.STORE_PRIVATE_MANUFACTURE))
 				{
 					TreeMap<String, TreeMap<Long, Item>> items = null;
 					List<TradeItem> tradeList = null;
+					
 					switch (type)
 					{
 						case Player.STORE_PRIVATE_SELL:
 							items = info.bestSellItems;
 							tradeList = pl.getSellList();
+							
 							for (TradeItem item : tradeList)
 							{
 								ItemTemplate temp = item.getItem();
+								
 								if (temp == null)
 								{
 									continue;
 								}
+								
 								TreeMap<Long, Item> oldItems = items.get(temp.getName());
+								
 								if (oldItems == null)
 								{
 									oldItems = new TreeMap<>();
 									items.put(temp.getName(), oldItems);
 								}
+								
 								Item newItem = new Item(item.getItemId(), type, item.getOwnersPrice(), item.getCount(), item.getEnchantLevel(), temp.getName(), pl.getStoredId(), pl.getName(), pl.getLoc(), item.getObjectId(), item);
 								long key = newItem.price * 100;
+								
 								while ((key < ((newItem.price * 100) + 100)) && oldItems.containsKey(key))
 								{
 									key++;
 								}
+								
 								oldItems.put(key, newItem);
 							}
+							
 							break;
+						
 						case Player.STORE_PRIVATE_BUY:
 							items = info.bestBuyItems;
 							tradeList = pl.getBuyList();
+							
 							for (TradeItem item : tradeList)
 							{
 								ItemTemplate temp = item.getItem();
+								
 								if (temp == null)
 								{
 									continue;
 								}
+								
 								TreeMap<Long, Item> oldItems = items.get(temp.getName());
+								
 								if (oldItems == null)
 								{
 									oldItems = new TreeMap<>();
 									items.put(temp.getName(), oldItems);
 								}
+								
 								Item newItem = new Item(item.getItemId(), type, item.getOwnersPrice(), item.getCount(), item.getEnchantLevel(), temp.getName(), pl.getStoredId(), pl.getName(), pl.getLoc(), itemObjId++, item);
 								long key = newItem.price * 100;
+								
 								while ((key < ((newItem.price * 100) + 100)) && oldItems.containsKey(key))
 								{
 									key++;
 								}
+								
 								oldItems.put(key, newItem);
 							}
+							
 							break;
+						
 						case Player.STORE_PRIVATE_MANUFACTURE:
 							items = info.bestCraftItems;
 							List<ManufactureItem> createList = pl.getCreateList();
+							
 							if (createList == null)
 							{
 								continue;
 							}
+							
 							for (ManufactureItem mitem : createList)
 							{
 								int recipeId = mitem.getRecipeId();
 								RecipeTemplate recipe = RecipeHolder.getInstance().getRecipeByRecipeId(recipeId);
+								
 								if ((recipe == null) || (recipe.getProducts().length == 0))
 								{
 									continue;
 								}
+								
 								RecipeComponent product = recipe.getProducts()[0];
 								ItemTemplate temp = ItemHolder.getInstance().getTemplate(product.getItemId());
+								
 								if (temp == null)
 								{
 									continue;
 								}
+								
 								TreeMap<Long, Item> oldItems = items.get(temp.getName());
+								
 								if (oldItems == null)
 								{
 									oldItems = new TreeMap<>();
 									items.put(temp.getName(), oldItems);
 								}
+								
 								Item newItem = new Item(product.getItemId(), type, mitem.getCost(), product.getCount(), 0, temp.getName(), pl.getStoredId(), pl.getName(), pl.getLoc(), itemObjId++, null);
 								long key = newItem.price * 100;
+								
 								while ((key < ((newItem.price * 100) + 100)) && oldItems.containsKey(key))
 								{
 									key++;
 								}
+								
 								oldItems.put(key, newItem);
 							}
+							
 							break;
+						
 						default:
 							continue;
 					}
 				}
 			}
+			
 			_npcInfos.put(npc.getObjectId(), info);
 		}
 	}
@@ -2322,29 +2496,35 @@ public class ItemBroker extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		if ((var.length < 3) || (var.length > 7))
 		{
 			show("Please enter from 1 up to 16 symbols.<br>[npc_%objectId%_Chat 0|<font color=\"FF9900\">Back</font>]", player, npc);
 			return;
 		}
+		
 		int type;
 		int currentPage;
 		int minEnchant = 0;
 		String[] search = null;
+		
 		try
 		{
 			type = Integer.valueOf(var[0]);
 			currentPage = Integer.valueOf(var[1]);
 			search = new String[var.length - 2];
 			String line;
+			
 			for (int i = 0; i < search.length; i++)
 			{
 				line = var[i + 2].trim().toLowerCase();
 				search[i] = line;
+				
 				if ((line.length() > 1) && ((line.length() > 0) && (line.charAt(0) == '+')))
 				{
 					minEnchant = Integer.valueOf(line.substring(1));
@@ -2356,33 +2536,41 @@ public class ItemBroker extends Functions
 			show("incorrect data", player, npc);
 			return;
 		}
+		
 		TreeMap<String, TreeMap<Long, Item>> allItems = getItems(type);
+		
 		if (allItems == null)
 		{
 			show("Error - with this type of objects found.", player, npc);
 			return;
 		}
+		
 		List<Item> items = new ArrayList<>();
 		String line;
 		TreeMap<Long, Item> itemMap;
 		Item item;
 		mainLoop:
+		
 		for (Entry<String, TreeMap<Long, Item>> entry : allItems.entrySet())
 		{
 			for (String aSearch : search)
 			{
 				line = aSearch;
+				
 				if ((line.length() > 0) && (line.charAt(0) == '+'))
 				{
 					continue;
 				}
+				
 				if (!entry.getKey().toLowerCase().contains(line))
 				{
 					continue mainLoop;
 				}
 			}
+			
 			itemMap = entry.getValue();
 			item = null;
+			
 			for (Item itm : itemMap.values())
 			{
 				if ((itm != null) && (itm.enchant >= minEnchant))
@@ -2391,11 +2579,13 @@ public class ItemBroker extends Functions
 					break;
 				}
 			}
+			
 			if (item != null)
 			{
 				items.add(item);
 			}
 		}
+		
 		StringBuilder out = new StringBuilder(200);
 		out.append("[npc_%objectId%_Chat 1");
 		out.append(type);
@@ -2404,21 +2594,26 @@ public class ItemBroker extends Functions
 		totalPages = (totalPages / MAX_ITEMS_PER_PAGE) + ((totalPages % MAX_ITEMS_PER_PAGE) > 0 ? 1 : 0);
 		totalPages = Math.max(1, totalPages);
 		currentPage = Math.min(totalPages, Math.max(1, currentPage));
+		
 		if (totalPages > 1)
 		{
 			int page = Math.max(1, Math.min((totalPages - MAX_PAGES_PER_LIST) + 1, currentPage - (MAX_PAGES_PER_LIST / 2)));
+			
 			if (page > 1)
 			{
 				findPageNum(out, type, 1, search, "1");
 			}
+			
 			if (currentPage > 11)
 			{
 				findPageNum(out, type, currentPage - 10, search, String.valueOf(currentPage - 10));
 			}
+			
 			if (currentPage > 1)
 			{
 				findPageNum(out, type, currentPage - 1, search, "<");
 			}
+			
 			for (int count = 0; (count < MAX_PAGES_PER_LIST) && (page <= totalPages); count++, page++)
 			{
 				if (page == currentPage)
@@ -2430,32 +2625,40 @@ public class ItemBroker extends Functions
 					findPageNum(out, type, page, search, String.valueOf(page));
 				}
 			}
+			
 			if (currentPage < totalPages)
 			{
 				findPageNum(out, type, currentPage + 1, search, ">");
 			}
+			
 			if (currentPage < (totalPages - 10))
 			{
 				findPageNum(out, type, currentPage + 10, search, String.valueOf(currentPage + 10));
 			}
+			
 			if (page <= totalPages)
 			{
 				findPageNum(out, type, totalPages, search, String.valueOf(totalPages));
 			}
 		}
+		
 		out.append("<table width=100%>");
+		
 		if (items.size() > 0)
 		{
 			int count = 0;
 			ListIterator<Item> iter = items.listIterator((currentPage - 1) * MAX_ITEMS_PER_PAGE);
+			
 			while (iter.hasNext() && (count < MAX_ITEMS_PER_PAGE))
 			{
 				item = iter.next();
 				ItemTemplate temp = item.item != null ? item.item.getItem() : ItemHolder.getInstance().getTemplate(item.itemId);
+				
 				if (temp == null)
 				{
 					continue;
 				}
+				
 				out.append("<tr><td>");
 				out.append(temp.getIcon32());
 				out.append("</td><td><table width=100%><tr><td>[scripts_services.ItemBroker:listForItem ");
@@ -2486,6 +2689,7 @@ public class ItemBroker extends Functions
 		{
 			out.append("<tr><td colspan=2>Nothing found.</td></tr>");
 		}
+		
 		out.append("</table><br>&nbsp;");
 		show(out.toString(), player, npc);
 	}
@@ -2504,6 +2708,7 @@ public class ItemBroker extends Functions
 		out.append(type);
 		out.append(' ');
 		out.append(page);
+		
 		if (search != null)
 		{
 			for (String element : search)
@@ -2512,6 +2717,7 @@ public class ItemBroker extends Functions
 				out.append(element);
 			}
 		}
+		
 		out.append('|');
 		out.append(letter);
 		out.append("]&nbsp;");

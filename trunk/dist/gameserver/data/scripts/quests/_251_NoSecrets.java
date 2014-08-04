@@ -53,12 +53,14 @@ public class _251_NoSecrets extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("pinaps_q251_03.htm"))
 		{
 			st.setState(STARTED);
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return htmltext;
 	}
 	
@@ -67,6 +69,7 @@ public class _251_NoSecrets extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (npc.getNpcId() == GuardPinaps)
 		{
 			if (cond == 0)
@@ -95,6 +98,7 @@ public class _251_NoSecrets extends Quest implements ScriptFile
 				st.exitCurrentQuest(false);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -102,6 +106,7 @@ public class _251_NoSecrets extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if (cond == 1)
 		{
 			if ((st.getQuestItemsCount(SelMahumTrainingDiary) < 10) && ArrayUtils.contains(SelMahumTrainers, npc.getNpcId()))
@@ -112,11 +117,13 @@ public class _251_NoSecrets extends Quest implements ScriptFile
 			{
 				st.rollAndGive(SelMahumTrainingTimetable, 1, 25);
 			}
+			
 			if ((st.getQuestItemsCount(SelMahumTrainingDiary) >= 10) && (st.getQuestItemsCount(SelMahumTrainingTimetable) >= 5))
 			{
 				st.setCond(2);
 			}
 		}
+		
 		return null;
 	}
 	

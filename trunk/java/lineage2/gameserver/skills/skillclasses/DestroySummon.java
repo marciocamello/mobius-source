@@ -53,6 +53,7 @@ public class DestroySummon extends Skill
 					activeChar.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(target.getName()).addSkillName(getId(), getLevel()));
 					continue;
 				}
+				
 				if (target.isServitor())
 				{
 					((Summon) target).saveEffects();
@@ -61,6 +62,7 @@ public class DestroySummon extends Skill
 				}
 			}
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());

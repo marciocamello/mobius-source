@@ -51,14 +51,17 @@ public class Ranger extends DefaultAI
 	{
 		super.onEvtAttacked(attacker, damage);
 		NpcInstance actor = getActor();
+		
 		if (actor.isDead() || (attacker == null) || (actor.getDistance(attacker) > 200))
 		{
 			return;
 		}
+		
 		if (actor.isMoving)
 		{
 			return;
 		}
+		
 		int posX = actor.getX();
 		int posY = actor.getY();
 		int posZ = actor.getZ();
@@ -71,6 +74,7 @@ public class Ranger extends DefaultAI
 		posX += signx * range;
 		posY += signy * range;
 		posZ = GeoEngine.getHeight(posX, posY, posZ, actor.getGeoIndex());
+		
 		if (GeoEngine.canMoveToCoord(old_posX, old_posY, old_posZ, posX, posY, posZ, actor.getGeoIndex()))
 		{
 			addTaskMove(posX, posY, posZ, false);

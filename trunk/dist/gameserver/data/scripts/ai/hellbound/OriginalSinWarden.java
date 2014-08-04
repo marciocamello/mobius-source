@@ -79,6 +79,7 @@ public class OriginalSinWarden extends Fighter
 	{
 		super.onEvtSpawn();
 		final NpcInstance actor = getActor();
+		
 		switch (actor.getNpcId())
 		{
 			case 22423:
@@ -98,8 +99,10 @@ public class OriginalSinWarden extends Fighter
 						e.printStackTrace();
 					}
 				}
+				
 				break;
 			}
+			
 			case 22431:
 			{
 				for (int element : servants2)
@@ -117,8 +120,10 @@ public class OriginalSinWarden extends Fighter
 						e.printStackTrace();
 					}
 				}
+				
 				break;
 			}
+			
 			default:
 				break;
 		}
@@ -132,6 +137,7 @@ public class OriginalSinWarden extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (Rnd.chance(15))
 		{
 			try
@@ -147,6 +153,7 @@ public class OriginalSinWarden extends Fighter
 				e.printStackTrace();
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 }

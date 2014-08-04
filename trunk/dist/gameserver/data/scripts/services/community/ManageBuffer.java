@@ -121,23 +121,27 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 		{
 			return;
 		}
+		
 		if (bypass.startsWith("_bbsbuff"))
 		{
 			StringTokenizer st2 = new StringTokenizer(bypass, ";");
 			String[] mBypass = st2.nextToken().split(":");
 			ShowHtml(mBypass.length == 1 ? "index" : mBypass[1], player);
 		}
+		
 		if (bypass.startsWith("_bbsblist"))
 		{
 			StringTokenizer st2 = new StringTokenizer(bypass, ";");
 			String[] mBypass = st2.nextToken().split(":");
 			int pice = Config.COMMUNITYBOARD_BUFF_PICE * (mBypass[1].startsWith("mage") ? Config.COMMUNITI_LIST_MAGE_SUPPORT.size() : Config.COMMUNITI_LIST_FIGHTER_SUPPORT.size());
+			
 			if (player.getAdena() < pice)
 			{
 				player.sendMessage("It is not enough money!");
 				ShowHtml(mBypass[2], player);
 				return;
 			}
+			
 			GroupBuff(player, mBypass[1].startsWith("mage") ? Config.COMMUNITI_LIST_MAGE_SUPPORT : Config.COMMUNITI_LIST_FIGHTER_SUPPORT);
 			player.reduceAdena(pice);
 			ShowHtml(mBypass[2], player);
@@ -151,19 +155,23 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 			int time = Config.COMMUNITYBOARD_BUFF_TIME;
 			int pice = Config.COMMUNITYBOARD_BUFF_PICE;
 			String page = mBypass[3];
+			
 			if (player.getAdena() < pice)
 			{
 				player.sendMessage("It is not enough money!");
 				ShowHtml(page, player);
 				return;
 			}
+			
 			if (!Config.COMMUNITYBOARD_BUFF_ALLOW.contains(id))
 			{
 				player.sendMessage("Invalid effect!");
 				ShowHtml(page, player);
 				return;
 			}
+			
 			Skill skill = SkillTable.getInstance().getInfo(id, lvl);
+			
 			if (!player.getVarB("isPlayerBuff"))
 			{
 				for (Summon summon : player.getSummonList())
@@ -189,6 +197,7 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 					player.updateEffectIconsImpl();
 				}
 			}
+			
 			player.reduceAdena(pice);
 			ShowHtml(page, player);
 		}
@@ -204,12 +213,14 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 			StringTokenizer st2 = new StringTokenizer(bypass, ";");
 			String[] mBypass = st2.nextToken().split(":");
 			int pice = Config.COMMUNITYBOARD_BUFF_PICE;
+			
 			if (player.getAdena() < (pice * 10))
 			{
 				player.sendMessage("It is not enough money!");
 				ShowHtml(mBypass[1], player);
 				return;
 			}
+			
 			if (!player.getVarB("isPlayerBuff"))
 			{
 				if (player.getSummonList().getServitors() != null)
@@ -226,6 +237,7 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 				player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
 				player.setCurrentCp(player.getMaxCp());
 			}
+			
 			player.reduceAdena(pice * 10);
 			ShowHtml(mBypass[1], player);
 		}
@@ -233,6 +245,7 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 		{
 			StringTokenizer st2 = new StringTokenizer(bypass, ";");
 			String[] mBypass = st2.nextToken().split(":");
+			
 			if (player.getVarB("isPlayerBuff") && (player.getEffectList().getEffectsBySkillId(Skill.SKILL_RAID_CURSE) == null))
 			{
 				player.getEffectList().stopAllEffects();
@@ -244,6 +257,7 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 					summon.getEffectList().stopAllEffects();
 				}
 			}
+			
 			ShowHtml(mBypass[1], player);
 		}
 		else if (bypass.startsWith("_bbsbsave"))
@@ -251,6 +265,7 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 			StringTokenizer st2 = new StringTokenizer(bypass, ";");
 			String[] mBypass = st2.nextToken().split(":");
 			String name = "";
+			
 			try
 			{
 				if (mBypass[2].length() > 1)
@@ -263,28 +278,34 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 				player.sendMessage("You did not enter a name to save!");
 				return;
 			}
+			
 			SBufferScheme scheme = new SBufferScheme();
+			
 			if (ManageBbsBuffer.getCountOnePlayer(player.getObjectId()) >= 3)
 			{
 				player.sendMessage("Exceeded the number of schemes!");
 				ShowHtml(mBypass[1], player);
 				return;
 			}
+			
 			if (ManageBbsBuffer.existName(player.getObjectId(), name))
 			{
 				player.sendMessage("Scheme with that name already exists!");
 				ShowHtml(mBypass[1], player);
 				return;
 			}
+			
 			if (name.length() > 15)
 			{
 				name = name.substring(0, 15);
 			}
+			
 			if (name.length() > 0)
 			{
 				scheme.obj_id = player.getObjectId();
 				scheme.name = name;
 				Effect skill[] = player.getEffectList().getAllFirstEffects();
+				
 				if (skill != null)
 				{
 					for (Effect element : skill)
@@ -294,12 +315,14 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 							scheme.skills_id.add(element.getSkill().getId());
 						}
 					}
+					
 					if (scheme.skills_id != null)
 					{
 						CommunityBufferDAO.getInstance().insert(scheme);
 					}
 				}
 			}
+			
 			ShowHtml(mBypass[1], player);
 		}
 		else if (bypass.startsWith("_bbsbdelete"))
@@ -314,12 +337,14 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 			StringTokenizer st2 = new StringTokenizer(bypass, ";");
 			String[] mBypass = st2.nextToken().split(":");
 			int pice = Config.COMMUNITYBOARD_BUFF_SAVE_PICE;
+			
 			if (player.getAdena() < pice)
 			{
 				player.sendMessage("It is not enough money!");
 				ShowHtml(mBypass[3], player);
 				return;
 			}
+			
 			SBufferScheme scheme = ManageBbsBuffer.getScheme(Integer.parseInt(mBypass[1]), player.getObjectId());
 			GroupBuff(player, scheme.skills_id);
 			player.reduceAdena(pice);
@@ -356,6 +381,7 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 		html = html.replace("%group_pice%", GetStringCount(Config.COMMUNITYBOARD_BUFF_SAVE_PICE));
 		StringBuilder content = new StringBuilder("");
 		content.append("<table width=120>");
+		
 		for (SBufferScheme sm : ManageBbsBuffer.getSchemePlayer(player.getObjectId()))
 		{
 			content.append("<tr>");
@@ -367,6 +393,7 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 			content.append("</td>");
 			content.append("</tr>");
 		}
+		
 		content.append("</table>");
 		html = html.replace("%list_sheme%", content.toString());
 		html = BbsUtil.htmlBuff(html, player);
@@ -382,14 +409,18 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 	{
 		int time = Config.COMMUNITYBOARD_BUFF_TIME;
 		Skill skill = null;
+		
 		for (int i : list)
 		{
 			int lvl = SkillTable.getInstance().getBaseLevel(i);
+			
 			if (!Config.COMMUNITYBOARD_BUFF_ALLOW.contains(i))
 			{
 				continue;
 			}
+			
 			skill = SkillTable.getInstance().getInfo(i, lvl);
+			
 			if (!player.getVarB("isPlayerBuff") && (player.getSummonList().getServitors() != null))
 			{
 				for (EffectTemplate et : skill.getEffectTemplates())
@@ -429,26 +460,31 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 		{
 			return false;
 		}
+		
 		if (!Config.USE_BBS_BUFER_IS_COMBAT && ((player.getPvpFlag() != 0) || player.isInDuel() || player.isInCombat() || player.isAttackingNow()))
 		{
 			player.sendMessage("During combat, you can not use this feature.");
 			return false;
 		}
+		
 		if (player.isInOlympiadMode())
 		{
 			player.sendMessage("During the Olympics you can not use this feature.");
 			return false;
 		}
+		
 		if ((player.getReflection().getId() != 0) && !Config.COMMUNITYBOARD_INSTANCE_ENABLED)
 		{
 			player.sendMessage("Buff is only available in the real world.");
 			return false;
 		}
+		
 		if (!Config.COMMUNITYBOARD_BUFFER_ENABLED)
 		{
 			player.sendMessage("Buff off function.");
 			return false;
 		}
+		
 		if (!Config.COMMUNITYBOARD_EVENTS_ENABLED)
 		{
 			if (player.getTeam() != TeamType.NONE)
@@ -457,6 +493,7 @@ public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoa
 				return false;
 			}
 		}
+		
 		return true;
 	}
 }

@@ -180,8 +180,8 @@ public enum CategoryType
 	
 	// Clan section
 	MEMBERS_COUNT(3000, UPDATE_STATISTIC_MODE_REPLACE), // TODO[K] - released
-														// this category in
-														// WSManager
+	// this category in
+	// WSManager
 	INVITED_COUNT(3001), // TODO[K] - released this category in WSManager
 	LEAVED_COUNT(3002), // TODO[K] - released this category in WSManager
 	REPUTATION_COUNT(3003), // TODO[K] - released this category in WSManager
@@ -197,7 +197,6 @@ public enum CategoryType
 		_id = id;
 		_subcat = 0;
 		_saveMode = UPDATE_STATISTIC_MODE_ADD;
-		
 	}
 	
 	private CategoryType(int id, int subcat)
@@ -223,6 +222,7 @@ public enum CategoryType
 				return category;
 			}
 		}
+		
 		return null;
 	}
 	

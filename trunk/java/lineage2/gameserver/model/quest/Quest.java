@@ -205,10 +205,12 @@ public class Quest
 			{
 				ItemTemplate i = null;
 				i = ItemHolder.getInstance().getTemplate(id);
+				
 				if (_questItems.contains(id))
 				{
 					_log.warn("Item " + i + " multiple times in quest drop in " + getName());
 				}
+				
 				_questItems.add(id);
 			}
 		}
@@ -251,12 +253,15 @@ public class Quest
 	public static void updateQuestVarInDb(QuestState qs, String var, String value)
 	{
 		Player player = qs.getPlayer();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -285,6 +290,7 @@ public class Quest
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -312,6 +318,7 @@ public class Quest
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -341,6 +348,7 @@ public class Quest
 		PreparedStatement statement = null;
 		PreparedStatement invalidQuestData = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -349,10 +357,12 @@ public class Quest
 			statement.setInt(1, player.getObjectId());
 			statement.setString(2, "<state>");
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				String questId = rset.getString("name");
 				String state = rset.getString("value");
+				
 				if (state.equalsIgnoreCase("Start"))
 				{
 					invalidQuestData.setInt(1, player.getObjectId());
@@ -360,12 +370,15 @@ public class Quest
 					invalidQuestData.executeUpdate();
 					continue;
 				}
+				
 				Quest q = QuestManager.getQuest(questId);
+				
 				if (q == null)
 				{
 					if (!Config.DONTLOADQUEST)
 					{
 						_log.warn("Unknown quest " + questId + " for player " + player.getName());
+						
 						if (Config.REMOVE_UNKNOWN_QUEST)
 						{
 							invalidQuestData.setInt(1, player.getObjectId());
@@ -373,28 +386,35 @@ public class Quest
 							invalidQuestData.executeUpdate();
 						}
 					}
+					
 					continue;
 				}
+				
 				new QuestState(q, player, getStateId(state));
 			}
+			
 			DbUtils.close(statement, rset);
 			statement = con.prepareStatement("SELECT name,var,value FROM character_quests WHERE char_id=?");
 			statement.setInt(1, player.getObjectId());
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				String questId = rset.getString("name");
 				String var = rset.getString("var");
 				String value = rset.getString("value");
 				QuestState qs = player.getQuestState(questId);
+				
 				if (qs == null)
 				{
 					continue;
 				}
+				
 				if (var.equals("cond") && (Integer.parseInt(value) < 0))
 				{
 					value = String.valueOf(Integer.parseInt(value) | 1);
 				}
+				
 				qs.set(var, value, false);
 			}
 		}
@@ -449,13 +469,17 @@ public class Quest
 		{
 			case CREATED:
 				return "Start";
+				
 			case STARTED:
 				return "Started";
+				
 			case COMPLETED:
 				return "Completed";
+				
 			case DELAYED:
 				return "Delayed";
 		}
+		
 		return "Start";
 	}
 	
@@ -482,6 +506,7 @@ public class Quest
 		{
 			return DELAYED;
 		}
+		
 		return CREATED;
 	}
 	
@@ -539,10 +564,12 @@ public class Quest
 		try
 		{
 			NpcTemplate t = NpcHolder.getInstance().getTemplate(npcId);
+			
 			if (t != null)
 			{
 				t.addQuestEvent(eventType, this);
 			}
+			
 			return t;
 		}
 		catch (Exception e)
@@ -577,16 +604,21 @@ public class Quest
 		{
 			throw new IllegalArgumentException("Npc list cant be empty!");
 		}
+		
 		addKillId(killIds);
+		
 		if (_npcLogList.isEmpty())
 		{
 			_npcLogList = new TIntObjectHashMap<>(5);
 		}
+		
 		List<QuestNpcLogInfo> vars = _npcLogList.get(cond);
+		
 		if (vars == null)
 		{
 			_npcLogList.put(cond, (vars = new ArrayList<>(5)));
 		}
+		
 		vars.add(new QuestNpcLogInfo(killIds, varName, max));
 	}
 	
@@ -599,34 +631,43 @@ public class Quest
 	public boolean updateKill(NpcInstance npc, QuestState st)
 	{
 		Player player = st.getPlayer();
+		
 		if (player == null)
 		{
 			return false;
 		}
+		
 		List<QuestNpcLogInfo> vars = getNpcLogList(st.getCond());
+		
 		if (vars == null)
 		{
 			return false;
 		}
+		
 		boolean done = true;
 		boolean find = false;
+		
 		for (QuestNpcLogInfo info : vars)
 		{
 			int count = st.getInt(info.getVarName());
+			
 			if (!find && ArrayUtils.contains(info.getNpcIds(), npc.getNpcId()))
 			{
 				find = true;
+				
 				if (count < info.getMaxCount())
 				{
 					st.set(info.getVarName(), ++count);
 					player.sendPacket(new ExQuestNpcLogList(st));
 				}
 			}
+			
 			if (count != info.getMaxCount())
 			{
 				done = false;
 			}
 		}
+		
 		return done;
 	}
 	
@@ -759,22 +800,28 @@ public class Quest
 		{
 			return null;
 		}
+		
 		int state = getDescrState(player, isStartNpc);
 		String font = FONT_QUEST_AVAILABLE;
+		
 		switch (state)
 		{
 			case 3:
 				font = FONT_QUEST_DONE;
 				break;
+			
 			case 4:
 				font = FONT_QUEST_NOT_AVAILABLE;
 				break;
 		}
+		
 		int fStringId = getQuestIntId();
+		
 		if (fStringId >= 10000)
 		{
 			fStringId -= 5000;
 		}
+		
 		fStringId = (fStringId * 100) + state;
 		return font.concat("[").concat(HtmlUtils.htmlNpcString(fStringId)).concat("]</font>");
 	}
@@ -789,6 +836,7 @@ public class Quest
 	{
 		QuestState qs = player.getQuestState(getName());
 		int state = 4;
+		
 		if (isAvailableFor(player) && isStartNpc && ((qs == null) || (qs.isCreated() && qs.isNowAvailableByTime())))
 		{
 			state = 1;
@@ -801,6 +849,7 @@ public class Quest
 		{
 			state = 3;
 		}
+		
 		return state;
 	}
 	
@@ -863,6 +912,7 @@ public class Quest
 	public void notifyAttack(NpcInstance npc, QuestState qs)
 	{
 		String res = null;
+		
 		try
 		{
 			res = onAttack(npc, qs);
@@ -872,6 +922,7 @@ public class Quest
 			showError(qs.getPlayer(), e);
 			return;
 		}
+		
 		showResult(npc, qs.getPlayer(), res);
 	}
 	
@@ -884,6 +935,7 @@ public class Quest
 	public void notifyDeath(Creature killer, Creature victim, QuestState qs)
 	{
 		String res = null;
+		
 		try
 		{
 			res = onDeath(killer, victim, qs);
@@ -893,6 +945,7 @@ public class Quest
 			showError(qs.getPlayer(), e);
 			return;
 		}
+		
 		showResult(null, qs.getPlayer(), res);
 	}
 	
@@ -905,6 +958,7 @@ public class Quest
 	public void notifyEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String res = null;
+		
 		try
 		{
 			res = onEvent(event, qs, npc);
@@ -914,6 +968,7 @@ public class Quest
 			showError(qs.getPlayer(), e);
 			return;
 		}
+		
 		showResult(npc, qs.getPlayer(), res);
 	}
 	
@@ -925,6 +980,7 @@ public class Quest
 	public void notifyKill(NpcInstance npc, QuestState qs)
 	{
 		String res = null;
+		
 		try
 		{
 			res = onKill(npc, qs);
@@ -934,6 +990,7 @@ public class Quest
 			showError(qs.getPlayer(), e);
 			return;
 		}
+		
 		showResult(npc, qs.getPlayer(), res);
 	}
 	
@@ -945,6 +1002,7 @@ public class Quest
 	public void notifyKill(Player target, QuestState qs)
 	{
 		String res = null;
+		
 		try
 		{
 			res = onKill(target, qs);
@@ -954,6 +1012,7 @@ public class Quest
 			showError(qs.getPlayer(), e);
 			return;
 		}
+		
 		showResult(null, qs.getPlayer(), res);
 	}
 	
@@ -966,6 +1025,7 @@ public class Quest
 	public final boolean notifyFirstTalk(NpcInstance npc, Player player)
 	{
 		String res = null;
+		
 		try
 		{
 			res = onFirstTalk(npc, player);
@@ -975,6 +1035,7 @@ public class Quest
 			showError(player, e);
 			return true;
 		}
+		
 		return showResult(npc, player, res, true);
 	}
 	
@@ -987,6 +1048,7 @@ public class Quest
 	public boolean notifyTalk(NpcInstance npc, QuestState qs)
 	{
 		String res = null;
+		
 		try
 		{
 			res = onTalk(npc, qs);
@@ -996,6 +1058,7 @@ public class Quest
 			showError(qs.getPlayer(), e);
 			return true;
 		}
+		
 		return showResult(npc, qs.getPlayer(), res);
 	}
 	
@@ -1009,6 +1072,7 @@ public class Quest
 	public boolean notifySkillUse(NpcInstance npc, Skill skill, QuestState qs)
 	{
 		String res = null;
+		
 		try
 		{
 			res = onSkillUse(npc, skill, qs);
@@ -1018,6 +1082,7 @@ public class Quest
 			showError(qs.getPlayer(), e);
 			return true;
 		}
+		
 		return showResult(npc, qs.getPlayer(), res);
 	}
 	
@@ -1196,6 +1261,7 @@ public class Quest
 	private void showError(Player player, Throwable t)
 	{
 		_log.error("", t);
+		
 		if ((player != null) && player.isGM())
 		{
 			String res = "<html><body><title>Script error</title>" + LogUtils.dumpStack(t).replace("\n", "<br>") + "</body></html>";
@@ -1227,9 +1293,11 @@ public class Quest
 		{
 			return;
 		}
+		
 		GameObject target = player.getTarget();
 		NpcHtmlMessage npcReply = showQuestInfo ? new ExNpcQuestHtmlMessage(target == null ? 5 : target.getObjectId(), getQuestIntId()) : new NpcHtmlMessage(target == null ? 5 : target.getObjectId());
 		npcReply.setFile("quests/" + getClass().getSimpleName() + "/" + fileName);
+		
 		if ((arg.length % 2) == 0)
 		{
 			for (int i = 0; i < arg.length; i += 2)
@@ -1237,6 +1305,7 @@ public class Quest
 				npcReply.replace(String.valueOf(arg[i]), String.valueOf(arg[i + 1]));
 			}
 		}
+		
 		player.sendPacket(npcReply);
 	}
 	
@@ -1251,6 +1320,7 @@ public class Quest
 		{
 			return;
 		}
+		
 		NpcHtmlMessage npcReply = new NpcHtmlMessage(5);
 		npcReply.setFile(fileName);
 		player.sendPacket(npcReply);
@@ -1279,18 +1349,22 @@ public class Quest
 	private boolean showResult(NpcInstance npc, Player player, String res, boolean isFirstTalk)
 	{
 		boolean showQuestInfo = showQuestInfo(player);
+		
 		if (isFirstTalk)
 		{
 			showQuestInfo = false;
 		}
+		
 		if (res == null)
 		{
 			return true;
 		}
+		
 		if (res.isEmpty())
 		{
 			return false;
 		}
+		
 		if (res.startsWith("no_quest") || res.equalsIgnoreCase("noquest") || res.equalsIgnoreCase("no-quest"))
 		{
 			showSimpleHtmFile(player, "no-quest.htm");
@@ -1309,6 +1383,7 @@ public class Quest
 			npcReply.setHtml(res);
 			player.sendPacket(npcReply);
 		}
+		
 		return true;
 	}
 	
@@ -1320,14 +1395,17 @@ public class Quest
 	private boolean showQuestInfo(Player player)
 	{
 		QuestState qs = player.getQuestState(getName());
+		
 		if ((qs != null) && (qs.getState() != CREATED))
 		{
 			return false;
 		}
+		
 		if (!isVisible(player))
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -1341,11 +1419,13 @@ public class Quest
 		{
 			return;
 		}
+		
 		for (QuestTimer timer : qs.getTimers().values())
 		{
 			timer.setQuestState(null);
 			timer.pause();
 		}
+		
 		_pausedQuestTimers.put(qs.getPlayer().getObjectId(), qs.getTimers());
 	}
 	
@@ -1356,11 +1436,14 @@ public class Quest
 	void resumeQuestTimers(QuestState qs)
 	{
 		Map<String, QuestTimer> timers = _pausedQuestTimers.remove(qs.getPlayer().getObjectId());
+		
 		if (timers == null)
 		{
 			return;
 		}
+		
 		qs.getTimers().putAll(timers);
+		
 		for (QuestTimer timer : qs.getTimers().values())
 		{
 			timer.setQuestState(qs);
@@ -1444,10 +1527,12 @@ public class Quest
 	public NpcInstance addSpawn(int npcId, Location loc, int randomOffset, int despawnDelay)
 	{
 		NpcInstance result = Functions.spawn(randomOffset > 50 ? Location.findPointToStay(loc, 0, randomOffset, ReflectionManager.DEFAULT.getGeoIndex()) : loc, npcId);
+		
 		if ((despawnDelay > 0) && (result != null))
 		{
 			ThreadPoolManager.getInstance().schedule(new DeSpawnScheduleTimerTask(result), despawnDelay);
 		}
+		
 		return result;
 	}
 	
@@ -1480,6 +1565,7 @@ public class Quest
 		try
 		{
 			NpcTemplate template = NpcHolder.getInstance().getTemplate(npcId);
+			
 			if (template != null)
 			{
 				NpcInstance npc = NpcHolder.getInstance().getTemplate(npcId).getNewInstance();
@@ -1493,6 +1579,7 @@ public class Quest
 		{
 			_log.warn("Could not spawn Npc " + npcId);
 		}
+		
 		return null;
 	}
 	
@@ -1520,17 +1607,21 @@ public class Quest
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
 	protected final void enterInstance(QuestState st, int instancedZoneId)
 	{
 		Player player = st.getPlayer();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		Reflection reflection = player.getActiveReflection();
+		
 		if (reflection != null)
 		{
 			if (player.canReenterInstance(instancedZoneId))

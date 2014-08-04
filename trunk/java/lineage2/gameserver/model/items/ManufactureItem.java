@@ -68,14 +68,17 @@ public class ManufactureItem
 		{
 			return true;
 		}
+		
 		if (o == null)
 		{
 			return false;
 		}
+		
 		if (o.getClass() != this.getClass())
 		{
 			return false;
 		}
+		
 		return ((ManufactureItem) o).getRecipeId() == getRecipeId();
 	}
 }

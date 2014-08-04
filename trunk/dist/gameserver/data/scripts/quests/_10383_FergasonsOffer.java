@@ -66,16 +66,11 @@ public class _10383_FergasonsOffer extends Quest implements ScriptFile
 	public _10383_FergasonsOffer()
 	{
 		super(2);
-		
 		addStartNpc(SIZRAK);
-		
 		addTalkId(FERGASON);
 		addTalkId(AKU);
-		
 		addKillId(COUCH);
-		
 		addQuestItem(UNSTABLE_PETRA);
-		
 		addLevelCheck(97, 99);
 		addQuestCompletedCheck(_10381_ToTheSeedOfHellFire.class);
 	}
@@ -92,12 +87,14 @@ public class _10383_FergasonsOffer extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "sofa_sizraku_q10383_03.htm";
 		}
+		
 		if (event.equalsIgnoreCase("quest_next"))
 		{
 			st.setCond(2);
 			st.playSound(SOUND_MIDDLE);
 			htmltext = "maestro_ferguson_q10383_04.htm";
 		}
+		
 		if (event.equalsIgnoreCase("quest_done"))
 		{
 			st.giveItems(ADENA_ID, 3256740);
@@ -106,6 +103,7 @@ public class _10383_FergasonsOffer extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			htmltext = "sofa_aku_q10383_03.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -139,6 +137,7 @@ public class _10383_FergasonsOffer extends Quest implements ScriptFile
 				htmltext = "sofa_sizraku_q10383_04.htm";
 			}
 		}
+		
 		if (npcId == FERGASON)
 		{
 			if (cond == 1)
@@ -150,6 +149,7 @@ public class _10383_FergasonsOffer extends Quest implements ScriptFile
 				htmltext = "maestro_ferguson_q10383_05.htm";
 			}
 		}
+		
 		if (npcId == AKU)
 		{
 			if (cond == 2)
@@ -161,6 +161,7 @@ public class _10383_FergasonsOffer extends Quest implements ScriptFile
 				htmltext = "sofa_aku_q10383_02.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -169,15 +170,18 @@ public class _10383_FergasonsOffer extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if ((cond == 2) && (ArrayUtils.contains(COUCH, npcId) & (st.getQuestItemsCount(UNSTABLE_PETRA) <= 20)))
 		{
 			st.rollAndGive(UNSTABLE_PETRA, 1, 30);
+			
 			if (st.getQuestItemsCount(UNSTABLE_PETRA) == 20)
 			{
 				st.setCond(3);
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		return null;
 	}
 }

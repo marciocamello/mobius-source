@@ -41,14 +41,17 @@ public class GuardRndWalkAndAnim extends Guard
 		{
 			return true;
 		}
+		
 		if (randomAnimation())
 		{
 			return true;
 		}
+		
 		if (randomWalk())
 		{
 			return true;
 		}
+		
 		return false;
 	}
 }

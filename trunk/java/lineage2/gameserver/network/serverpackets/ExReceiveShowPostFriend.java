@@ -34,6 +34,7 @@ public class ExReceiveShowPostFriend extends L2GameServerPacket
 	{
 		writeEx(0xD4);
 		writeD(_list.size());
+		
 		for (String t : _list.values())
 		{
 			writeS(t);

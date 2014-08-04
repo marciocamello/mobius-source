@@ -33,11 +33,13 @@ public class RequestSaveKeyMapping extends L2GameClientPacket
 	protected void readImpl()
 	{
 		int length = readD();
+		
 		if ((length > _buf.remaining()) || (length > Short.MAX_VALUE) || (length < 0))
 		{
 			_data = null;
 			return;
 		}
+		
 		_data = new byte[length];
 		readB(_data);
 	}
@@ -49,10 +51,12 @@ public class RequestSaveKeyMapping extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if ((activeChar == null) || (_data == null))
 		{
 			return;
 		}
+		
 		activeChar.setKeyBindings(_data);
 		activeChar.sendPacket(new ExUISetting(activeChar));
 	}

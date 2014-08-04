@@ -49,14 +49,17 @@ public class PrisonGuard extends Fighter
 	public boolean checkAggression(Creature target)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead() || (actor.getNpcId() == 18367))
 		{
 			return false;
 		}
+		
 		if (target.getEffectList().getEffectsCountForSkill(Skill.SKILL_EVENT_TIMER) == 0)
 		{
 			return false;
 		}
+		
 		return super.checkAggression(target);
 	}
 	
@@ -69,14 +72,17 @@ public class PrisonGuard extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return;
 		}
+		
 		if (attacker.isServitor() || attacker.isPet())
 		{
 			attacker = attacker.getPlayer();
 		}
+		
 		if (attacker.getEffectList().getEffectsCountForSkill(Skill.SKILL_EVENT_TIMER) == 0)
 		{
 			if (actor.getNpcId() == 18367)
@@ -87,19 +93,24 @@ public class PrisonGuard extends Fighter
 			{
 				Functions.npcSay(actor, "You're out of mind comming here...");
 			}
+			
 			final Skill petrification = SkillTable.getInstance().getInfo(4578, 1);
 			actor.doCast(petrification, attacker, true);
+			
 			for (Summon summon : attacker.getPlayer().getSummonList())
 			{
 				actor.doCast(petrification, summon, true);
 			}
+			
 			return;
 		}
+		
 		if (actor.getNpcId() == 18367)
 		{
 			notifyFriends(attacker, damage);
 			return;
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	
@@ -111,14 +122,17 @@ public class PrisonGuard extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		if ((actor.getNpcId() == 18367) && (killer.getPlayer().getEffectList().getEffectsBySkillId(Skill.SKILL_EVENT_TIMER) != null))
 		{
 			Functions.addItem(killer.getPlayer(), RACE_STAMP, 1);
 		}
+		
 		super.onEvtDead(killer);
 	}
 }

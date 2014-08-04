@@ -29,8 +29,8 @@ public class HennaEquipList extends L2GameServerPacket
 	{
 		_adena = player.getAdena();
 		_emptySlots = player.getHennaEmptySlots();
-		
 		List<Henna> list = HennaHolder.getInstance().generateList(player);
+		
 		for (Henna element : list)
 		{
 			if (player.getInventory().getItemByItemId(element.getDyeId()) != null)
@@ -44,12 +44,13 @@ public class HennaEquipList extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xee);
-		
 		writeQ(_adena);
 		writeD(_emptySlots);
+		
 		if (_hennas.size() != 0)
 		{
 			writeD(_hennas.size());
+			
 			for (Henna henna : _hennas)
 			{
 				writeD(henna.getSymbolId()); // symbolid

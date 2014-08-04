@@ -56,7 +56,9 @@ public class _10283_RequestOfIceMerchant extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		int npcId = npc.getNpcId();
+		
 		if (npcId == _rafforty)
 		{
 			if (event.equalsIgnoreCase("32020-03.htm"))
@@ -84,6 +86,7 @@ public class _10283_RequestOfIceMerchant extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			npc.deleteMe();
 		}
+		
 		return event;
 	}
 	
@@ -92,12 +95,14 @@ public class _10283_RequestOfIceMerchant extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
+		
 		if (npcId == _rafforty)
 		{
 			switch (st.getState())
 			{
 				case CREATED:
 					QuestState _prev = st.getPlayer().getQuestState(_115_TheOtherSideOfTruth.class);
+					
 					if ((_prev != null) && _prev.isCompleted() && (st.getPlayer().getLevel() >= 82))
 					{
 						htmltext = "32020-01.htm";
@@ -107,7 +112,9 @@ public class _10283_RequestOfIceMerchant extends Quest implements ScriptFile
 						htmltext = "32020-00.htm";
 						st.exitCurrentQuest(true);
 					}
+					
 					break;
+				
 				case STARTED:
 					if (st.getCond() == 1)
 					{
@@ -117,7 +124,9 @@ public class _10283_RequestOfIceMerchant extends Quest implements ScriptFile
 					{
 						htmltext = "32020-08.htm";
 					}
+					
 					break;
+				
 				case COMPLETED:
 					htmltext = "31350-08.htm";
 					break;
@@ -131,6 +140,7 @@ public class _10283_RequestOfIceMerchant extends Quest implements ScriptFile
 		{
 			htmltext = "32760-02.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -138,14 +148,17 @@ public class _10283_RequestOfIceMerchant extends Quest implements ScriptFile
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
 		QuestState st = player.getQuestState(getClass());
+		
 		if (st == null)
 		{
 			return null;
 		}
+		
 		if ((npc.getNpcId() == _jinia) && (st.getCond() == 2))
 		{
 			return "32760-01.htm";
 		}
+		
 		return null;
 	}
 }

@@ -288,10 +288,12 @@ public final class PrimeFinder
 	public static final int nextPrime(int desiredCapacity)
 	{
 		int i = Arrays.binarySearch(primeCapacities, desiredCapacity);
+		
 		if (i < 0)
 		{
 			i = -i - 1;
 		}
+		
 		return primeCapacities[i];
 	}
 }

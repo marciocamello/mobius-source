@@ -46,14 +46,18 @@ public class AttackMobNotPlayerFighter extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (attacker == null)
 		{
 			return;
 		}
+		
 		final Player player = attacker.getPlayer();
+		
 		if (player != null)
 		{
 			final List<QuestState> quests = player.getQuestsForEvent(actor, QuestEventType.ATTACKED_WITH_QUEST, false);
+			
 			if (quests != null)
 			{
 				for (QuestState qs : quests)
@@ -62,6 +66,7 @@ public class AttackMobNotPlayerFighter extends Fighter
 				}
 			}
 		}
+		
 		onEvtAggression(attacker, damage);
 	}
 	
@@ -74,14 +79,17 @@ public class AttackMobNotPlayerFighter extends Fighter
 	protected void onEvtAggression(Creature attacker, int aggro)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (attacker == null)
 		{
 			return;
 		}
+		
 		if (!actor.isRunning())
 		{
 			startRunningTask(AI_TASK_ATTACK_DELAY);
 		}
+		
 		if (getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
 		{
 			setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);

@@ -49,15 +49,18 @@ public class RequestLinkHtml extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player actor = getClient().getActiveChar();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		if (_link.contains("..") || !_link.endsWith(".htm"))
 		{
 			_log.warn("[RequestLinkHtml] hack? link contains prohibited characters: '" + _link + "', skipped");
 			return;
 		}
+		
 		try
 		{
 			NpcHtmlMessage msg = new NpcHtmlMessage(0);

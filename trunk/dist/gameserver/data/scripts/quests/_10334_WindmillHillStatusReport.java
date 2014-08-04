@@ -58,6 +58,7 @@ public class _10334_WindmillHillStatusReport extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		Player player = st.getPlayer();
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -65,6 +66,7 @@ public class _10334_WindmillHillStatusReport extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "0-3.htm";
 		}
+		
 		if (event.equalsIgnoreCase("qet_rev"))
 		{
 			htmltext = "1-3.htm";
@@ -73,6 +75,7 @@ public class _10334_WindmillHillStatusReport extends Quest implements ScriptFile
 			st.giveItems(57, 85000);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
+			
 			if (player.isMageClass())
 			{
 				st.giveItems(atuba, 1, false);
@@ -86,6 +89,7 @@ public class _10334_WindmillHillStatusReport extends Quest implements ScriptFile
 				st.giveItems(sword, 1, false);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -95,6 +99,7 @@ public class _10334_WindmillHillStatusReport extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == shnain)
 		{
 			if (st.isCompleted())
@@ -125,6 +130,7 @@ public class _10334_WindmillHillStatusReport extends Quest implements ScriptFile
 				htmltext = "1-1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

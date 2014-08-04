@@ -48,10 +48,12 @@ public class ConditionTargetForbiddenClassId extends Condition
 	protected boolean testImpl(Env env)
 	{
 		Creature target = env.target;
+		
 		if (!target.isPlayable())
 		{
 			return false;
 		}
+		
 		return !target.isPlayer() || !_classIds.contains(target.getPlayer().getActiveClassId());
 	}
 }

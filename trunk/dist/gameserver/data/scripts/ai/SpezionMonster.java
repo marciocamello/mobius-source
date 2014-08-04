@@ -34,9 +34,11 @@ public class SpezionMonster extends Mystic
 	protected void onEvtDead(Creature killer)
 	{
 		NpcInstance actor = getActor();
+		
 		if (actor.getNpcId() == 22985)
 		{
 			Reflection r = actor.getReflection();
+			
 			if (r instanceof SpezionNormal)
 			{
 				SpezionNormal spezion = (SpezionNormal) r;
@@ -52,10 +54,12 @@ public class SpezionMonster extends Mystic
 	{
 		NpcInstance actor = getActor();
 		Creature randomHated = actor.getAggroList().getRandomHated();
+		
 		if (((randomHated != null) && (actor.getNpcId() == 22971)) || (actor.getNpcId() == 22972))
 		{
 			actor.doCast(SkillTable.getInstance().getInfo(14139, 1), randomHated, true);
 		}
+		
 		super.thinkAttack();
 	}
 }

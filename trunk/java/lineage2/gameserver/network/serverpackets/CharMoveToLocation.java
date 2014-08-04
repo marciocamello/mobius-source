@@ -29,10 +29,12 @@ public class CharMoveToLocation extends L2GameServerPacket
 		_objectId = cha.getObjectId();
 		_current = cha.getLoc();
 		_destination = cha.getDestination();
+		
 		if (!cha.isFlying())
 		{
 			_client_z_shift = Config.CLIENT_Z_SHIFT;
 		}
+		
 		if (cha.isInWater())
 		{
 			_client_z_shift += Config.CLIENT_Z_SHIFT;
@@ -56,13 +58,10 @@ public class CharMoveToLocation extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x2f);
-		
 		writeD(_objectId);
-		
 		writeD(_destination.x);
 		writeD(_destination.y);
 		writeD(_destination.z + _client_z_shift);
-		
 		writeD(_current.x);
 		writeD(_current.y);
 		writeD(_current.z + _client_z_shift);

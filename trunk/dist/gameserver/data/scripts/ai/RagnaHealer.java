@@ -48,14 +48,17 @@ public class RagnaHealer extends Priest
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (attacker == null)
 		{
 			return;
 		}
+		
 		if ((System.currentTimeMillis() - lastFactionNotifyTime) > 10000)
 		{
 			lastFactionNotifyTime = System.currentTimeMillis();
 			final List<NpcInstance> around = actor.getAroundNpc(500, 300);
+			
 			if ((around != null) && !around.isEmpty())
 			{
 				for (NpcInstance npc : around)
@@ -67,6 +70,7 @@ public class RagnaHealer extends Priest
 				}
 			}
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 }

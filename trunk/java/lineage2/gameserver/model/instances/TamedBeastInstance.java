@@ -42,7 +42,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public final class TamedBeastInstance extends FeedableBeastInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -152,6 +152,7 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 	void onReceiveFood()
 	{
 		_remainingTime = _remainingTime + DURATION_INCREASE_INTERVAL;
+		
 		if (_remainingTime > MAX_DURATION)
 		{
 			_remainingTime = MAX_DURATION;
@@ -193,9 +194,11 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 		Map.Entry<NpcString, int[]> type = TAMED_DATA[Rnd.get(TAMED_DATA.length)];
 		setNameNpcString(type.getKey());
 		setName("#" + getNameNpcStringByNpcId().getId());
+		
 		for (int skillId : type.getValue())
 		{
 			Skill sk = SkillTable.getInstance().getInfo(skillId, 1);
+			
 			if (sk != null)
 			{
 				_skills.add(sk);
@@ -213,13 +216,17 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 		{
 			case 18869:
 				return NpcString.ALPEN_KOOKABURRA;
+				
 			case 18870:
 				return NpcString.ALPEN_COUGAR;
+				
 			case 18871:
 				return NpcString.ALPEN_BUFFALO;
+				
 			case 18872:
 				return NpcString.ALPEN_GRENDEL;
 		}
+		
 		return NpcString.NONE;
 	}
 	
@@ -234,7 +241,9 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 			getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, getPlayer(), Config.FOLLOW_RANGE);
 			return;
 		}
+		
 		int delay = 0;
+		
 		for (Skill skill : _skills)
 		{
 			ThreadPoolManager.getInstance().schedule(new Buff(this, getPlayer(), skill), delay);
@@ -295,10 +304,12 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 		if (foodItemId > 0)
 		{
 			_foodSkillId = foodItemId;
+			
 			if (_durationCheckTask != null)
 			{
 				_durationCheckTask.cancel(false);
 			}
+			
 			_durationCheckTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new CheckDuration(this), DURATION_CHECK_INTERVAL, DURATION_CHECK_INTERVAL);
 		}
 	}
@@ -311,16 +322,20 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 	protected void onDeath(Creature killer)
 	{
 		super.onDeath(killer);
+		
 		if (_durationCheckTask != null)
 		{
 			_durationCheckTask.cancel(false);
 			_durationCheckTask = null;
 		}
+		
 		Player owner = getPlayer();
+		
 		if (owner != null)
 		{
 			owner.removeTrainedBeast(getObjectId());
 		}
+		
 		_foodSkillId = 0;
 		_remainingTime = 0;
 	}
@@ -342,14 +357,17 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 	public void setOwner(Player owner)
 	{
 		_playerRef = owner == null ? HardReferences.<Player> emptyRef() : owner.getRef();
+		
 		if (owner != null)
 		{
 			setTitle(owner.getName());
 			owner.addTrainedBeast(this);
+			
 			for (Player player : World.getAroundPlayers(this))
 			{
 				player.sendPacket(new NpcInfo(this, player));
 			}
+			
 			setFollowTarget(getPlayer());
 			getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, owner, Config.FOLLOW_RANGE);
 		}
@@ -381,16 +399,20 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 	public void doDespawn()
 	{
 		stopMove();
+		
 		if (_durationCheckTask != null)
 		{
 			_durationCheckTask.cancel(false);
 			_durationCheckTask = null;
 		}
+		
 		Player owner = getPlayer();
+		
 		if (owner != null)
 		{
 			owner.removeTrainedBeast(getObjectId());
 		}
+		
 		setTarget(null);
 		_foodSkillId = 0;
 		_remainingTime = 0;
@@ -423,24 +445,29 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 		public void runImpl()
 		{
 			Player owner = _tamedBeast.getPlayer();
+			
 			if ((owner == null) || !owner.isOnline())
 			{
 				_tamedBeast.doDespawn();
 				return;
 			}
+			
 			if (_tamedBeast.getDistance(owner) > MAX_DISTANCE_FROM_OWNER)
 			{
 				_tamedBeast.doDespawn();
 				return;
 			}
+			
 			int foodTypeSkillId = _tamedBeast.getFoodType();
 			_tamedBeast.setRemainingTime(_tamedBeast.getRemainingTime() - DURATION_CHECK_INTERVAL);
 			ItemInstance item = null;
 			int foodItemId = _tamedBeast.getItemIdBySkillId(foodTypeSkillId);
+			
 			if (foodItemId > 0)
 			{
 				item = owner.getInventory().getItemByItemId(foodItemId);
 			}
+			
 			if ((item != null) && (item.getCount() >= 1))
 			{
 				_tamedBeast.onReceiveFood();
@@ -450,6 +477,7 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 			{
 				_tamedBeast.setRemainingTime(-1);
 			}
+			
 			if (_tamedBeast.getRemainingTime() <= 0)
 			{
 				_tamedBeast.doDespawn();

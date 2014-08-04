@@ -137,15 +137,19 @@ public class TreeInstance extends Summon
 		public void runImpl()
 		{
 			TreeInstance tree = (TreeInstance) _trapRef.get();
+			
 			if (tree == null)
 			{
 				return;
 			}
+			
 			Player owner = tree.getOwner();
+			
 			if (owner == null)
 			{
 				return;
 			}
+			
 			List<Creature> targets = new ArrayList<>(10);
 			
 			if (tree._skill.isOffensive())
@@ -156,12 +160,14 @@ public class TreeInstance extends Summon
 					{
 						break;
 					}
+					
 					if (target.isAutoAttackable(tree))
 					{
 						targets.add(target);
 						tree.broadcastPacket(new MagicSkillUse(tree, target, tree._skill.getId(), tree._skill.getLevel(), tree._skill.getHitTime(), tree._skill.getReuseDelay()));
 					}
 				}
+				
 				tree.callSkill(tree._skill, targets, true);
 			}
 			else
@@ -172,11 +178,13 @@ public class TreeInstance extends Summon
 					{
 						break;
 					}
+					
 					if (target == owner)
 					{
 						targets.add(target);
 						tree.broadcastPacket(new MagicSkillUse(tree, target, tree._skill.getId(), tree._skill.getLevel(), tree._skill.getHitTime(), tree._skill.getReuseDelay()));
 					}
+					
 					if ((target instanceof Player) && (((Player) target).getParty() != null) && (owner.getParty() == ((Player) target).getParty()))
 					{
 						targets.add(target);
@@ -184,6 +192,7 @@ public class TreeInstance extends Summon
 					}
 				}
 			}
+			
 			tree.callSkill(tree._skill, targets, true);
 		}
 	}
@@ -206,19 +215,24 @@ public class TreeInstance extends Summon
 	protected void onDelete()
 	{
 		Player owner = getOwner();
+		
 		if (owner != null)
 		{
 			owner.setTree(false);
 		}
+		
 		if (_destroyTask != null)
 		{
 			_destroyTask.cancel(false);
 		}
+		
 		_destroyTask = null;
+		
 		if (_targetTask != null)
 		{
 			_targetTask.cancel(false);
 		}
+		
 		_targetTask = null;
 		getPlayer().getSummonList().removeSummon(this);
 		super.onDelete();
@@ -233,15 +247,18 @@ public class TreeInstance extends Summon
 	{
 		super.onDeath(killer);
 		saveEffects();
+		
 		if (_destroyTask != null)
 		{
 			_destroyTask.cancel(false);
 			_destroyTask = null;
 		}
+		
 		if (_targetTask != null)
 		{
 			_targetTask.cancel(false);
 		}
+		
 		getPlayer().getSummonList().removeSummon(this);
 	}
 	
@@ -255,10 +272,12 @@ public class TreeInstance extends Summon
 			_destroyTask.cancel(false);
 			_destroyTask = null;
 		}
+		
 		if (_targetTask != null)
 		{
 			_targetTask.cancel(false);
 		}
+		
 		getPlayer().getSummonList().removeSummon(this);
 	}
 	
@@ -347,7 +366,6 @@ public class TreeInstance extends Summon
 	@Override
 	public void displayGiveDamageMessage(Creature target, int damage, boolean crit, boolean miss, boolean shld, boolean magic)
 	{
-		
 	}
 	
 	/**

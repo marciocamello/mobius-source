@@ -178,10 +178,12 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 	public void startEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive(EVENT_NAME, true))
 		{
 			spawnEventManagers();
@@ -192,6 +194,7 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 		{
 			player.sendMessage("Event 'March 8' already started.");
 		}
+		
 		_active = true;
 		show("admin/events.htm", player);
 	}
@@ -202,10 +205,12 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 	public void stopEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive(EVENT_NAME, false))
 		{
 			unSpawnEventManagers();
@@ -216,6 +221,7 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 		{
 			player.sendMessage("Event 'March 8' not started.");
 		}
+		
 		_active = false;
 		show("admin/events.htm", player);
 	}
@@ -226,20 +232,25 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 	public void buyrecipe()
 	{
 		final Player player = getSelf();
+		
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;
 		}
+		
 		if (!NpcInstance.canBypassCheck(player, player.getLastNpc()))
 		{
 			return;
 		}
+		
 		final long need_adena = (long) (RECIPE_PRICE * Config.EVENT_MARCH8_PRICE_RATE);
+		
 		if (player.getAdena() < need_adena)
 		{
 			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
+		
 		player.reduceAdena(need_adena, true);
 		Functions.addItem(player, RECIPE_ID, 1);
 	}
@@ -255,6 +266,7 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 		{
 			return "";
 		}
+		
 		final String price;
 		String append = "";
 		price = Util.formatAdena((long) (RECIPE_PRICE * Config.EVENT_MARCH8_PRICE_RATE));
@@ -272,6 +284,7 @@ public class March8 extends Functions implements ScriptFile, OnDeathListener, On
 	public void onLoad()
 	{
 		CharListenerList.addGlobal(this);
+		
 		if (isActive())
 		{
 			_active = true;

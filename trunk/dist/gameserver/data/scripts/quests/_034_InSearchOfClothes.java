@@ -56,6 +56,7 @@ public class _034_InSearchOfClothes extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		int cond = st.getCond();
+		
 		if (event.equals("30088-1.htm"))
 		{
 			st.setCond(1);
@@ -103,6 +104,7 @@ public class _034_InSearchOfClothes extends Quest implements ScriptFile
 				htmltext = "30088-havent.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -112,6 +114,7 @@ public class _034_InSearchOfClothes extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == 30088)
 		{
 			if ((cond == 0) && (st.getQuestItemsCount(MYSTERIOUS_CLOTH) == 0))
@@ -119,6 +122,7 @@ public class _034_InSearchOfClothes extends Quest implements ScriptFile
 				if (st.getPlayer().getLevel() >= 60)
 				{
 					QuestState fwear = st.getPlayer().getQuestState(_037_PleaseMakeMeFormalWear.class);
+					
 					if ((fwear != null) && (fwear.getCond() == 6))
 					{
 						htmltext = "30088-0.htm";
@@ -184,6 +188,7 @@ public class _034_InSearchOfClothes extends Quest implements ScriptFile
 				htmltext = "30165-3r.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -193,6 +198,7 @@ public class _034_InSearchOfClothes extends Quest implements ScriptFile
 		if (st.getQuestItemsCount(SPINNERET) < 10)
 		{
 			st.giveItems(SPINNERET, 1);
+			
 			if (st.getQuestItemsCount(SPINNERET) == 10)
 			{
 				st.playSound(SOUND_MIDDLE);
@@ -203,6 +209,7 @@ public class _034_InSearchOfClothes extends Quest implements ScriptFile
 				st.playSound(SOUND_ITEMGET);
 			}
 		}
+		
 		return null;
 	}
 }

@@ -90,12 +90,14 @@ public class _470_Divinity_Protector extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		st.getPlayer();
+		
 		if (event.equalsIgnoreCase("33463-3.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return event;
 	}
 	
@@ -106,6 +108,7 @@ public class _470_Divinity_Protector extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int state = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == GUIDE)
 		{
 			if (state == 1)
@@ -114,23 +117,26 @@ public class _470_Divinity_Protector extends Quest implements ScriptFile
 				{
 					return "33463-comp.htm";
 				}
+				
 				return "33463.htm";
 			}
+			
 			if (state == 2)
 			{
 				if (cond == 1)
 				{
 					return "33463-4.htm";
 				}
-				
 			}
 		}
+		
 		if ((npcId == APRIGEL) && (state == 2))
 		{
 			if (cond == 1)
 			{
 				return "31348-1.htm";
 			}
+			
 			if (cond == 2)
 			{
 				st.giveItems(57, 194000);
@@ -142,6 +148,7 @@ public class _470_Divinity_Protector extends Quest implements ScriptFile
 				return "31348.htm"; // no further html do here
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -149,15 +156,18 @@ public class _470_Divinity_Protector extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if ((cond != 1) || (npc == null))
 		{
 			return null;
 		}
+		
 		if (ArrayUtils.contains(Mobs, npc.getNpcId()) && Rnd.chance(50))
 		{
 			st.giveItems(COLORLESS_SOUL, 1);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		if (st.getQuestItemsCount(COLORLESS_SOUL) >= 20)
 		{
 			st.setCond(2);

@@ -65,16 +65,19 @@ public class exchange extends Functions
 	public void exch_1()
 	{
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (getItemCount(player, PEticketB) >= 1)
 		{
 			removeItem(player, PEticketB, 1);
 			addItem(player, BbuffaloP, 1);
 			return;
 		}
+		
 		show("scripts/services/petevolve/exchange_no.htm", player);
 	}
 	
@@ -84,16 +87,19 @@ public class exchange extends Functions
 	public void exch_2()
 	{
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (getItemCount(player, PEticketC) >= 1)
 		{
 			removeItem(player, PEticketC, 1);
 			addItem(player, BcougarC, 1);
 			return;
 		}
+		
 		show("scripts/services/petevolve/exchange_no.htm", player);
 	}
 	
@@ -103,16 +109,19 @@ public class exchange extends Functions
 	public void exch_3()
 	{
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (getItemCount(player, PEticketK) >= 1)
 		{
 			removeItem(player, PEticketK, 1);
 			addItem(player, BkookaburraO, 1);
 			return;
 		}
+		
 		show("scripts/services/petevolve/exchange_no.htm", player);
 	}
 	
@@ -122,15 +131,18 @@ public class exchange extends Functions
 	public void showBabyPetExchange()
 	{
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (!Config.SERVICES_EXCHANGE_BABY_PET_ENABLED)
 		{
 			show("Серви�? откл�?чен.", player);
 			return;
 		}
+		
 		ItemTemplate item = ItemHolder.getInstance().getTemplate(Config.SERVICES_EXCHANGE_BABY_PET_ITEM);
 		String out = "";
 		out += "<html><body>Exchange Baby Pet";
@@ -148,15 +160,18 @@ public class exchange extends Functions
 	public void showErasePetName()
 	{
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (!Config.SERVICES_CHANGE_PET_NAME_ENABLED)
 		{
 			show("Exchange Pet", player);
 			return;
 		}
+		
 		ItemTemplate item = ItemHolder.getInstance().getTemplate(Config.SERVICES_CHANGE_PET_NAME_ITEM);
 		String out = "";
 		out += "<html><body>Text Change";
@@ -172,27 +187,33 @@ public class exchange extends Functions
 	public void erasePetName()
 	{
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (!Config.SERVICES_CHANGE_PET_NAME_ENABLED)
 		{
 			show("Серви�? откл�?чен.", player);
 			return;
 		}
+		
 		Summon pl_pet = player.getSummonList().getPet();
+		
 		if ((pl_pet == null) || !pl_pet.isPet())
 		{
 			show("�?итомец должен быт�? вызван.", player);
 			return;
 		}
+		
 		if (player.getInventory().destroyItemByItemId(Config.SERVICES_CHANGE_PET_NAME_ITEM, Config.SERVICES_CHANGE_PET_NAME_PRICE))
 		{
 			pl_pet.setName(pl_pet.getTemplate().name);
 			pl_pet.broadcastCharInfo();
 			PetInstance _pet = (PetInstance) pl_pet;
 			ItemInstance control = _pet.getControlItem();
+			
 			if (control != null)
 			{
 				control.setCustomType2(1);
@@ -200,6 +221,7 @@ public class exchange extends Functions
 				control.update();
 				player.sendPacket(new InventoryUpdate().addModifiedItem(control));
 			}
+			
 			show("�?м�? �?терто.", player);
 		}
 		else if (Config.SERVICES_CHANGE_PET_NAME_ITEM == 57)
@@ -218,21 +240,26 @@ public class exchange extends Functions
 	public void exToCougar()
 	{
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (!Config.SERVICES_EXCHANGE_BABY_PET_ENABLED)
 		{
 			show("Серви�? откл�?чен.", player);
 			return;
 		}
+		
 		Summon pl_pet = player.getSummonList().getPet();
+		
 		if ((pl_pet == null) || pl_pet.isDead() || !((pl_pet.getNpcId() == PetDataTable.IMPROVED_BABY_BUFFALO_ID) || (pl_pet.getNpcId() == PetDataTable.IMPROVED_BABY_KOOKABURRA_ID)))
 		{
 			show("�?ет должен быт�? вызван.", player);
 			return;
 		}
+		
 		if (player.getInventory().destroyItemByItemId(Config.SERVICES_EXCHANGE_BABY_PET_ITEM, Config.SERVICES_EXCHANGE_BABY_PET_PRICE))
 		{
 			ItemInstance control = player.getInventory().getItemByObjectId(pl_pet.getControlItemObjId());
@@ -259,26 +286,32 @@ public class exchange extends Functions
 	public void exToBuffalo()
 	{
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (!Config.SERVICES_EXCHANGE_BABY_PET_ENABLED)
 		{
 			show("Серви�? откл�?чен.", player);
 			return;
 		}
+		
 		Summon pl_pet = player.getSummonList().getPet();
+		
 		if ((pl_pet == null) || pl_pet.isDead() || !((pl_pet.getNpcId() == PetDataTable.IMPROVED_BABY_COUGAR_ID) || (pl_pet.getNpcId() == PetDataTable.IMPROVED_BABY_KOOKABURRA_ID)))
 		{
 			show("�?ет должен быт�? вызван.", player);
 			return;
 		}
+		
 		if (Config.ALT_IMPROVED_PETS_LIMITED_USE && player.isMageClass())
 		{
 			show("Этот пет тол�?ко дл�? воинов.", player);
 			return;
 		}
+		
 		if (player.getInventory().destroyItemByItemId(Config.SERVICES_EXCHANGE_BABY_PET_ITEM, Config.SERVICES_EXCHANGE_BABY_PET_PRICE))
 		{
 			ItemInstance control = player.getInventory().getItemByObjectId(pl_pet.getControlItemObjId());
@@ -305,26 +338,32 @@ public class exchange extends Functions
 	public void exToKookaburra()
 	{
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (!Config.SERVICES_EXCHANGE_BABY_PET_ENABLED)
 		{
 			show("Серви�? откл�?чен.", player);
 			return;
 		}
+		
 		Summon pl_pet = player.getSummonList().getPet();
+		
 		if ((pl_pet == null) || pl_pet.isDead() || !((pl_pet.getNpcId() == PetDataTable.IMPROVED_BABY_BUFFALO_ID) || (pl_pet.getNpcId() == PetDataTable.IMPROVED_BABY_COUGAR_ID)))
 		{
 			show("�?ет должен быт�? вызван.", player);
 			return;
 		}
+		
 		if (Config.ALT_IMPROVED_PETS_LIMITED_USE && !player.isMageClass())
 		{
 			show("Этот пет тол�?ко дл�? магов.", player);
 			return;
 		}
+		
 		if (player.getInventory().destroyItemByItemId(Config.SERVICES_EXCHANGE_BABY_PET_ITEM, Config.SERVICES_EXCHANGE_BABY_PET_PRICE))
 		{
 			ItemInstance control = player.getInventory().getItemByObjectId(pl_pet.getControlItemObjId());
@@ -463,18 +502,22 @@ public class exchange extends Functions
 	private static String getHtmlAppends(Integer val)
 	{
 		String ret = "";
+		
 		if (val != 0)
 		{
 			return ret;
 		}
+		
 		if (Config.SERVICES_CHANGE_PET_NAME_ENABLED)
 		{
 			ret = "<br>[scripts_services.petevolve.exchange:showErasePetName|�?бнулит�? им�? у пета]";
 		}
+		
 		if (Config.SERVICES_EXCHANGE_BABY_PET_ENABLED)
 		{
 			ret += "<br>[scripts_services.petevolve.exchange:showBabyPetExchange|�?бмен�?т�? Improved Baby пета]";
 		}
+		
 		return ret;
 	}
 }

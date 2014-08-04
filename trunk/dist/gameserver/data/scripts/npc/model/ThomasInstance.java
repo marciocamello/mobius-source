@@ -25,7 +25,7 @@ import events.SavingSnowman.SavingSnowman;
 public class ThomasInstance extends MonsterInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -57,6 +57,7 @@ public class ThomasInstance extends MonsterInstance
 	public void reduceCurrentHp(double i, double reflectableDamage, Creature attacker, Skill skill, boolean awake, boolean standUp, boolean directHp, boolean canReflect, boolean transferDamage, boolean isDot, boolean sendMessage)
 	{
 		i = 10;
+		
 		if (attacker.getActiveWeaponInstance() != null)
 		{
 			switch (attacker.getActiveWeaponInstance().getItemId())
@@ -68,10 +69,12 @@ public class ThomasInstance extends MonsterInstance
 				case 8350:
 					i = 100;
 					break;
+				
 				default:
 					i = 10;
 			}
 		}
+		
 		super.reduceCurrentHp(i, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
 	}
 	
@@ -83,10 +86,12 @@ public class ThomasInstance extends MonsterInstance
 	protected void onDeath(Creature killer)
 	{
 		Creature topdam = getAggroList().getTopDamager();
+		
 		if (topdam == null)
 		{
 			topdam = killer;
 		}
+		
 		SavingSnowman.freeSnowman(topdam);
 		super.onDeath(killer);
 	}

@@ -38,10 +38,12 @@ public class Avanguard_Ellia extends DefaultAI
 	protected boolean thinkActive()
 	{
 		NpcInstance actor = getActor();
+		
 		if (Rnd.chance(8))
 		{
 			Functions.npcSay(actor, NpcString.MY_SUMMONS_ARE_NOT_AFRAID_OF_SHILENS_MONSTER);
 		}
+		
 		return false;
 	}
 }

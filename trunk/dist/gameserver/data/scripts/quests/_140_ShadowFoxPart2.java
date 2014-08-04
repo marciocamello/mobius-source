@@ -60,10 +60,12 @@ public class _140_ShadowFoxPart2 extends Quest implements ScriptFile
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
 		QuestState qs = player.getQuestState(_139_ShadowFoxPart1.class);
+		
 		if ((qs != null) && qs.isCompleted() && (player.getQuestState(getClass()) == null))
 		{
 			newQuestState(player, STARTED);
 		}
+		
 		return "";
 	}
 	
@@ -71,6 +73,7 @@ public class _140_ShadowFoxPart2 extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("30895-02.htm"))
 		{
 			st.setCond(1);
@@ -88,10 +91,12 @@ public class _140_ShadowFoxPart2 extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.giveItems(ADENA_ID, 18775);
 			Quest q = QuestManager.getQuest(_141_ShadowFoxPart3.class);
+			
 			if (q != null)
 			{
 				q.newQuestState(st.getPlayer(), STARTED);
 			}
+			
 			st.exitCurrentQuest(false);
 		}
 		else if (event.equalsIgnoreCase("30912-07.htm"))
@@ -103,9 +108,11 @@ public class _140_ShadowFoxPart2 extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("30912-09.htm"))
 		{
 			st.takeItems(CRYSTAL, 5);
+			
 			if (Rnd.chance(60))
 			{
 				st.giveItems(OXYDE, 1);
+				
 				if (st.getQuestItemsCount(OXYDE) >= 3)
 				{
 					htmltext = "30912-09b.htm";
@@ -122,6 +129,7 @@ public class _140_ShadowFoxPart2 extends Quest implements ScriptFile
 				htmltext = "30912-09a.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -131,6 +139,7 @@ public class _140_ShadowFoxPart2 extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		String htmltext = "noquest";
+		
 		if (npcId == KLUCK)
 		{
 			if (cond == 0)
@@ -188,6 +197,7 @@ public class _140_ShadowFoxPart2 extends Quest implements ScriptFile
 				htmltext = "30912-10.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -198,6 +208,7 @@ public class _140_ShadowFoxPart2 extends Quest implements ScriptFile
 		{
 			st.rollAndGive(CRYSTAL, 1, 80 * npc.getTemplate().rateHp);
 		}
+		
 		return null;
 	}
 }

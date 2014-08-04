@@ -158,10 +158,12 @@ public class _631_DeliciousTopChoiceMeat extends Quest implements ScriptFile
 		super(false);
 		addStartNpc(TUNATUN);
 		addTalkId(TUNATUN);
+		
 		for (int i : MOB_LIST)
 		{
 			addKillId(i);
 		}
+		
 		addQuestItem(PRIME_MEAT);
 	}
 	
@@ -169,6 +171,7 @@ public class _631_DeliciousTopChoiceMeat extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("beast_herder_tunatun_q0631_0104.htm"))
 		{
 			st.setCond(1);
@@ -192,6 +195,7 @@ public class _631_DeliciousTopChoiceMeat extends Quest implements ScriptFile
 				st.setCond(1);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -200,6 +204,7 @@ public class _631_DeliciousTopChoiceMeat extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (cond < 1)
 		{
 			if (st.getPlayer().getLevel() < 82)
@@ -228,6 +233,7 @@ public class _631_DeliciousTopChoiceMeat extends Quest implements ScriptFile
 				htmltext = "beast_herder_tunatun_q0631_0105.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -237,6 +243,7 @@ public class _631_DeliciousTopChoiceMeat extends Quest implements ScriptFile
 		if ((st.getCond() == 1) && Rnd.chance(MEAT_DROP_CHANCE))
 		{
 			st.giveItems(PRIME_MEAT, 1, true);
+			
 			if (st.getQuestItemsCount(PRIME_MEAT) < 120)
 			{
 				st.playSound(SOUND_ITEMGET);
@@ -247,6 +254,7 @@ public class _631_DeliciousTopChoiceMeat extends Quest implements ScriptFile
 				st.setCond(2);
 			}
 		}
+		
 		return null;
 	}
 }

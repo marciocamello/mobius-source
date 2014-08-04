@@ -74,15 +74,18 @@ public class SessionKey
 		{
 			return true;
 		}
+		
 		if (o == null)
 		{
 			return false;
 		}
+		
 		if (o.getClass() == this.getClass())
 		{
 			SessionKey skey = (SessionKey) o;
 			return (playOkID1 == skey.playOkID1) && (playOkID2 == skey.playOkID2) && (loginOkID1 == skey.loginOkID1) && (loginOkID2 == skey.loginOkID2);
 		}
+		
 		return false;
 	}
 	

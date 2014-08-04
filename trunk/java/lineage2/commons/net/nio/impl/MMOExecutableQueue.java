@@ -75,10 +75,12 @@ public class MMOExecutableQueue<T extends MMOClient> implements Queue<Receivable
 				for (;;)
 				{
 					final Runnable t = poll();
+					
 					if (t == null)
 					{
 						break;
 					}
+					
 					t.run();
 				}
 			}
@@ -234,10 +236,12 @@ public class MMOExecutableQueue<T extends MMOClient> implements Queue<Receivable
 				return false;
 			}
 		}
+		
 		if (_state.getAndSet(QUEUED) == NONE)
 		{
 			_executor.execute(this);
 		}
+		
 		return true;
 	}
 	

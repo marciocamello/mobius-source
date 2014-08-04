@@ -102,10 +102,12 @@ public class GraveRobberSummoner extends Mystic
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final MonsterInstance actor = (MonsterInstance) getActor();
+		
 		if (actor.isDead())
 		{
 			return;
 		}
+		
 		_lastMinionCount = Math.max(actor.getMinionList().getAliveMinions().size(), 1);
 		super.onEvtAttacked(attacker, damage);
 	}

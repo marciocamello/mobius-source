@@ -48,7 +48,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 	 * Field _log.
 	 */
 	private static final Logger _log = LoggerFactory.getLogger(TvTArena2.class);
-
+	
 	/**
 	 * @author Mobius
 	 */
@@ -61,7 +61,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 		{
 			// TODO Auto-generated constructor stub
 		}
-
+		
 		/**
 		 * Method onLoad.
 		 */
@@ -105,7 +105,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 			_team2points.add(new Location(-77953, -47599, -11518, -11418));
 			_team2points.add(new Location(-77844, -47747, -11518, -11418));
 		}
-
+		
 		/**
 		 * Method onReload.
 		 */
@@ -116,15 +116,16 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 			{
 				template_stop();
 			}
+			
 			_zone.removeListener(_zoneListener);
 		}
 	}
-
+	
 	/**
 	 * Field _instance.
 	 */
 	private static TvTTemplate _instance;
-
+	
 	/**
 	 * Method getInstance.
 	 * @return TvTTemplate
@@ -135,9 +136,10 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 		{
 			_instance = new TvTArena2Impl();
 		}
+		
 		return _instance;
 	}
-
+	
 	/**
 	 * Method onLoad.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
@@ -147,6 +149,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 	{
 		CharListenerList.addGlobal(this);
 		getInstance().onLoad();
+		
 		if (isActive())
 		{
 			spawnEventManagers();
@@ -157,7 +160,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 			_log.info("Loaded Event: TvT Arena 2 [state: deactivated]");
 		}
 	}
-
+	
 	/**
 	 * Method onReload.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
@@ -169,7 +172,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 		unSpawnEventManagers();
 		_instance = null;
 	}
-
+	
 	/**
 	 * Method onShutdown.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
@@ -179,7 +182,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 	{
 		// empty method
 	}
-
+	
 	/**
 	 * Method onDeath.
 	 * @param cha Creature
@@ -191,7 +194,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 	{
 		getInstance().onDeath(cha, killer);
 	}
-
+	
 	/**
 	 * Method onPlayerExit.
 	 * @param player Player
@@ -202,7 +205,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 	{
 		getInstance().onPlayerExit(player);
 	}
-
+	
 	/**
 	 * Method onTeleport.
 	 * @param player Player
@@ -217,7 +220,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 	{
 		getInstance().onTeleport(player);
 	}
-
+	
 	/**
 	 * Method DialogAppend_31391.
 	 * @param val Integer
@@ -228,15 +231,18 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 		if (val == 0)
 		{
 			final Player player = getSelf();
+			
 			if (player.isGM())
 			{
 				return HtmCache.getInstance().getNotNull("scripts/events/TvTArena/31391.htm", player) + HtmCache.getInstance().getNotNull("scripts/events/TvTArena/31391-4.htm", player);
 			}
+			
 			return HtmCache.getInstance().getNotNull("scripts/events/TvTArena/31391.htm", player);
 		}
+		
 		return "";
 	}
-
+	
 	/**
 	 * Method create1.
 	 */
@@ -244,7 +250,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 	{
 		getInstance().template_create1(getSelf());
 	}
-
+	
 	/**
 	 * Method register.
 	 */
@@ -252,7 +258,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 	{
 		getInstance().template_register(getSelf());
 	}
-
+	
 	/**
 	 * Method check1.
 	 * @param var String[]
@@ -261,7 +267,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 	{
 		getInstance().template_check1(getSelf(), getNpc(), var);
 	}
-
+	
 	/**
 	 * Method register_check.
 	 */
@@ -269,7 +275,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 	{
 		getInstance().template_register_check(getSelf());
 	}
-
+	
 	/**
 	 * Method stop.
 	 */
@@ -277,7 +283,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 	{
 		getInstance().template_stop();
 	}
-
+	
 	/**
 	 * Method announce.
 	 */
@@ -285,7 +291,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 	{
 		getInstance().template_announce();
 	}
-
+	
 	/**
 	 * Method prepare.
 	 */
@@ -293,7 +299,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 	{
 		getInstance().template_prepare();
 	}
-
+	
 	/**
 	 * Method start.
 	 */
@@ -301,7 +307,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 	{
 		getInstance().template_start();
 	}
-
+	
 	/**
 	 * Method timeOut.
 	 */
@@ -309,12 +315,12 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 	{
 		getInstance().template_timeOut();
 	}
-
+	
 	/**
 	 * Field _spawns.
 	 */
 	private final List<NpcInstance> _spawns = new ArrayList<>();
-
+	
 	/**
 	 * Method isActive.
 	 * @return boolean
@@ -323,17 +329,19 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 	{
 		return IsActive("TvT Arena 2");
 	}
-
+	
 	/**
 	 * Method startEvent.
 	 */
 	public void startEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive("TvT Arena 2", true))
 		{
 			spawnEventManagers();
@@ -344,19 +352,22 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 		{
 			player.sendMessage("TvT Arena 2 Event already started.");
 		}
+		
 		show("admin/events.htm", player);
 	}
-
+	
 	/**
 	 * Method stopEvent.
 	 */
 	public void stopEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive("TvT Arena 2", false))
 		{
 			ServerVariables.unset("TvT Arena 2");
@@ -369,9 +380,10 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 		{
 			player.sendMessage("TvT Arena 2 Event not started.");
 		}
+		
 		show("admin/events.htm", player);
 	}
-
+	
 	/**
 	 * Method spawnEventManagers.
 	 */
@@ -387,6 +399,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 			}
 		};
 		final NpcTemplate template = NpcHolder.getInstance().getTemplate(31391);
+		
 		for (int[] element : EVENT_MANAGERS)
 		{
 			SimpleSpawner sp = new SimpleSpawner(template);
@@ -400,7 +413,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 			_spawns.add(npc);
 		}
 	}
-
+	
 	/**
 	 * Method unSpawnEventManagers.
 	 */
@@ -410,6 +423,7 @@ public class TvTArena2 extends Functions implements ScriptFile, OnDeathListener,
 		{
 			npc.deleteMe();
 		}
+		
 		_spawns.clear();
 	}
 }

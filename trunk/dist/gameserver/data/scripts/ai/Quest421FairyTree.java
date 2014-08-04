@@ -67,6 +67,7 @@ public class Quest421FairyTree extends Fighter
 	protected void onEvtAggression(Creature attacker, int aggro)
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((attacker != null) && attacker.isPlayer())
 		{
 			final Skill skill = SkillTable.getInstance().getInfo(5423, 12);

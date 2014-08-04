@@ -33,6 +33,7 @@ public class ExLoadStatUser extends L2GameServerPacket
 	{
 		writeEx(0x102);
 		writeD(list.size());
+		
 		for (CharacterStatisticElement stat : list)
 		{
 			writeD(stat.getCategoryType().getClientId());

@@ -29,6 +29,7 @@ public class TeleToGracia extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player != null) && (npc != null))
 		{
 			if (player.getLevel() < 75)

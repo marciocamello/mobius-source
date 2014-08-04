@@ -60,6 +60,7 @@ public class CertificationFunctions
 		{
 			_instance = new CertificationFunctions();
 		}
+		
 		return _instance;
 	}
 	
@@ -89,12 +90,15 @@ public class CertificationFunctions
 			Functions.show(PATH + (level < 85 ? "certificateSkillList-nobase.htm" : "dualcertificateSkillList-nobase.htm"), player, npc);
 			return false;
 		}
+		
 		int certificate = level < 85 ? CERTIFICATE : DUAL_CERTIFICATE;
+		
 		if (player.getInventory().getItemByItemId(certificate) == null)
 		{
 			Functions.show(PATH + (level < 85 ? "certificateSkillList-nocertificate.htm" : "dualcertificateSkillList-nocertificate.htm"), player, npc);
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -110,6 +114,7 @@ public class CertificationFunctions
 		{
 			return;
 		}
+		
 		Functions.show(PATH + (level < 85 ? "certificatelist.htm" : "dualcertificatelist.htm"), player, npc);
 	}
 	
@@ -125,17 +130,21 @@ public class CertificationFunctions
 		{
 			return;
 		}
+		
 		SubClass clzz = player.getActiveSubClass();
+		
 		if ((clzz.isCertificationGet(SubClass.CERTIFICATION_65) && (level == 65)) || (clzz.isDualCertificationGet(SubClass.DUALCERTIFICATION_85) && (level == 85)) || (level < 85) ? clzz.isCertificationGet(_certificationList.get(level)) : clzz.isDualCertificationGet(_certificationList.get(level)))
 		{
 			Functions.show(PATH + "certificate-already.htm", player, npc);
 			return;
 		}
+		
 		if ((((level > 65) && (level <= 80)) && !clzz.isCertificationGet(SubClass.CERTIFICATION_65)) || (((level > 85) && (level <= 99)) && !clzz.isDualCertificationGet(SubClass.DUALCERTIFICATION_85)))
 		{
 			Functions.show(PATH + ((level > 65) && (level <= 80) ? "certificate-fail.htm" : "dualcertificate-fail.htm"), player, npc);
 			return;
 		}
+		
 		Functions.show(PATH + "certificate-confirmation.htm", player, npc, "<?LEVEL?>", String.valueOf(level));
 	}
 	
@@ -149,6 +158,7 @@ public class CertificationFunctions
 	{
 		SubClass clzz = player.getActiveSubClass();
 		Functions.addItem(player, level < 85 ? CERTIFICATE : DUAL_CERTIFICATE, 1);
+		
 		if (level < 85)
 		{
 			clzz.addCertification(_certificationList.get(level));
@@ -157,6 +167,7 @@ public class CertificationFunctions
 		{
 			clzz.addDualCertification(_certificationList.get(level));
 		}
+		
 		Functions.show(PATH + "certificate-sucess.htm", player, npc);
 		player.store(true);
 	}
@@ -173,29 +184,36 @@ public class CertificationFunctions
 		Integer adenaCost = isDualClassReset ? 0 : isDualCertification ? Config.ALT_GAME_RESET_DUALCERTIFICATION_COST : Config.ALT_GAME_RESET_CERTIFICATION_COST;
 		AcquireType cancelAcquireType = isDualCertification ? AcquireType.DUAL_CERTIFICATION : AcquireType.CERTIFICATION;
 		Integer DestroyItems = !isDualCertification ? CERTIFICATE : DUAL_CERTIFICATE;
+		
 		if (player.getInventory().getAdena() < adenaCost)
 		{
 			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
+		
 		List<Integer> SkillIdToRemove = new ArrayList<>();
 		Collection<SkillLearn> skillLearnList = SkillAcquireHolder.getInstance().getAvailableSkills(null, cancelAcquireType);
+		
 		for (SkillLearn learn : skillLearnList)
 		{
 			Skill skill = player.getKnownSkill(learn.getId());
+			
 			if (skill != null)
 			{
 				SkillIdToRemove.add(skill.getId());
 			}
 		}
+		
 		if ((SkillIdToRemove.size() <= 0) && !isDualClassReset)
 		{
 			Functions.show(PATH + "certificate-nohaveskills.htm", player, npc);
 			return;
 		}
+		
 		player.removeCertSkill(SkillIdToRemove);
 		player.getInventory().reduceAdena(adenaCost);
 		player.getInventory().destroyItemByItemId(DestroyItems, player.getInventory().getCountOf(DestroyItems));
+		
 		for (SubClass subClass : player.getSubClassList().values())
 		{
 			if (isDualCertification)
@@ -213,8 +231,10 @@ public class CertificationFunctions
 				}
 			}
 		}
+		
 		player.sendSkillList();
 		CharacterSubclassDAO.getInstance().store(player);
+		
 		if (!isDualClassReset)
 		{
 			Functions.show(new CustomMessage("scripts.services.SubclassSkills.SkillsDeleted", player), player);
@@ -232,14 +252,17 @@ public class CertificationFunctions
 	public static boolean checkConditions(int level, NpcInstance npc, Player player, boolean first)
 	{
 		String typeCertificate = new String();
+		
 		if (level < 85)
 		{
 			typeCertificate = "certificate";
+			
 			if (player.getLevel() < level)
 			{
 				Functions.show(PATH + typeCertificate + "-nolevel.htm", player, npc, "%level%", level);
 				return false;
 			}
+			
 			if (player.getActiveSubClass().isBase())
 			{
 				Functions.show(PATH + typeCertificate + "-nosub.htm", player, npc);
@@ -250,6 +273,7 @@ public class CertificationFunctions
 		{
 			typeCertificate = "dualcertificate";
 			int levelMain = 0, levelDual = 0;
+			
 			for (SubClass sc : player.getSubClassList().values())
 			{
 				if (sc.getType() == SubClassType.BASE_CLASS)
@@ -261,26 +285,31 @@ public class CertificationFunctions
 					levelDual = sc.getLevel();
 				}
 			}
+			
 			if (levelDual == 0)
 			{
 				Functions.show(PATH + typeCertificate + "-nodualoncharacter.htm", player, npc);
 				return false;
 			}
+			
 			if ((levelMain < level) || (levelDual < level))
 			{
 				Functions.show(PATH + typeCertificate + "-nolevel.htm", player, npc, "%level%", level);
 				return false;
 			}
+			
 			if (!player.getActiveSubClass().isDouble())
 			{
 				Functions.show(PATH + typeCertificate + "-nodual.htm", player, npc);
 				return false;
 			}
 		}
+		
 		if (first)
 		{
 			return true;
 		}
+		
 		return true;
 	}
 }

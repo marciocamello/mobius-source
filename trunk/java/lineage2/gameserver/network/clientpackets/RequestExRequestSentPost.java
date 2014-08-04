@@ -45,16 +45,20 @@ public class RequestExRequestSentPost extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		Mail mail = MailDAO.getInstance().getSentMailByMailId(activeChar.getObjectId(), postId);
+		
 		if (mail != null)
 		{
 			activeChar.sendPacket(new ExReplySentPost(mail));
 			return;
 		}
+		
 		activeChar.sendPacket(new ExShowSentPostList(activeChar));
 	}
 }

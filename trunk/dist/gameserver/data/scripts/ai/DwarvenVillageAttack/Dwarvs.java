@@ -83,14 +83,17 @@ public class Dwarvs extends Fighter
 	{
 		super(actor);
 		AI_TASK_ATTACK_DELAY = 10;
+		
 		switch (getActor().getParameter("wayType", 1))
 		{
 			case 1:
 				way = WAY_1;
 				break;
+			
 			case 2:
 				way = WAY_2;
 				break;
+			
 			case 3:
 				way = WAY_3;
 				break;
@@ -101,6 +104,7 @@ public class Dwarvs extends Fighter
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
 		super.onEvtScriptEvent(event, arg1, arg2);
+		
 		if (event.equalsIgnoreCase("SHOUT_ALL_1"))
 		{
 			int msg = MESSAGES_1[Rnd.get(MESSAGES_1.length)];
@@ -122,6 +126,7 @@ public class Dwarvs extends Fighter
 	protected void onEvtArrived()
 	{
 		super.onEvtArrived();
+		
 		if ((loc != null) && (getActor().getDistance(loc) <= 100))
 		{
 			if (currentPoint <= (MOVE_LOC.length - 1))
@@ -132,6 +137,7 @@ public class Dwarvs extends Fighter
 			{
 				currentPoint2++;
 			}
+			
 			loc = null;
 		}
 	}
@@ -140,11 +146,13 @@ public class Dwarvs extends Fighter
 	protected boolean canAttackCharacter(Creature target)
 	{
 		NpcInstance actor = getActor();
+		
 		if (getIntention() == CtrlIntention.AI_INTENTION_ATTACK)
 		{
 			AggroList.AggroInfo ai = actor.getAggroList().get(target);
 			return (ai != null) && (ai.hate > 0);
 		}
+		
 		if (!startBattle)
 		{
 			return false;
@@ -178,6 +186,7 @@ public class Dwarvs extends Fighter
 	protected boolean thinkActive()
 	{
 		NpcInstance actor = getActor();
+		
 		if ((actor == null) || actor.isDead())
 		{
 			return true;
@@ -192,6 +201,7 @@ public class Dwarvs extends Fighter
 		if ((diedTentacle < 3) || (currentPoint > (MOVE_LOC.length - 1)))
 		{
 			List<Creature> list = World.getAroundCharacters(getActor(), getActor().getAggroRange(), getActor().getAggroRange());
+			
 			for (Creature target : list)
 			{
 				if ((target != null) && !target.isDead() && ArrayUtils.contains(ATTACK_IDS, target.getNpcId()))
@@ -209,12 +219,14 @@ public class Dwarvs extends Fighter
 				{
 					loc = new Location((way[currentPoint2].getX() + Rnd.get(50)) - Rnd.get(50), (way[currentPoint2].getY() + Rnd.get(50)) - Rnd.get(50), (way[currentPoint2].getZ() + Rnd.get(50)) - Rnd.get(50));
 				}
+				
 				actor.setRunning();
 				clearTasks();
 				addTaskMove(loc, true);
 				doTask();
 				return true;
 			}
+			
 			return false;
 		}
 		else if ((diedTentacle >= 3) && (currentPoint <= (MOVE_LOC.length - 1)))
@@ -223,12 +235,14 @@ public class Dwarvs extends Fighter
 			{
 				loc = new Location((MOVE_LOC[currentPoint].getX() + Rnd.get(50)) - Rnd.get(50), (MOVE_LOC[currentPoint].getY() + Rnd.get(50)) - Rnd.get(50), (MOVE_LOC[currentPoint].getZ() + Rnd.get(50)) - Rnd.get(50));
 			}
+			
 			actor.setRunning();
 			clearTasks();
 			addTaskMove(loc, true);
 			doTask();
 			return true;
 		}
+		
 		return false;
 	}
 	

@@ -129,6 +129,7 @@ public final class DoorParser extends AbstractDirParser<DoorHolder>
 		for (Iterator<Element> iterator = rootElement.elementIterator(); iterator.hasNext();)
 		{
 			Element doorElement = iterator.next();
+			
 			if ("door".equals(doorElement.getName()))
 			{
 				StatsSet doorSet = initBaseStats();
@@ -153,9 +154,11 @@ public final class DoorParser extends AbstractDirParser<DoorHolder>
 				shape.setZmax(maxz);
 				doorSet.set("shape", shape);
 				doorPos.setZ(minz + 32);
+				
 				for (Iterator<Element> i = doorElement.elementIterator(); i.hasNext();)
 				{
 					Element n = i.next();
+					
 					if ("set".equals(n.getName()))
 					{
 						doorSet.set(n.attributeValue("name"), n.attributeValue("value"));
@@ -167,6 +170,7 @@ public final class DoorParser extends AbstractDirParser<DoorHolder>
 							aiParams = new StatsSet();
 							doorSet.set("ai_params", aiParams);
 						}
+						
 						for (Iterator<Element> aiParamsIterator = n.elementIterator(); aiParamsIterator.hasNext();)
 						{
 							Element aiParamElement = aiParamsIterator.next();
@@ -174,6 +178,7 @@ public final class DoorParser extends AbstractDirParser<DoorHolder>
 						}
 					}
 				}
+				
 				doorSet.set("uid", doorElement.attributeValue("id"));
 				doorSet.set("name", doorElement.attributeValue("name"));
 				doorSet.set("baseHpMax", doorElement.attributeValue("hp"));

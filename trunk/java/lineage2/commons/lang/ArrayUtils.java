@@ -40,10 +40,12 @@ public final class ArrayUtils
 		{
 			return null;
 		}
+		
 		if ((index < 0) || (array.length <= index))
 		{
 			return null;
 		}
+		
 		return array[index];
 	}
 	
@@ -84,6 +86,7 @@ public final class ArrayUtils
 			System.arraycopy(array, 0, newArray, 0, arrayLength);
 			return newArray;
 		}
+		
 		return (T[]) Array.newInstance(type, 1);
 	}
 	
@@ -100,6 +103,7 @@ public final class ArrayUtils
 		{
 			return false;
 		}
+		
 		for (T element : array)
 		{
 			if (value == element)
@@ -107,6 +111,7 @@ public final class ArrayUtils
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -124,6 +129,7 @@ public final class ArrayUtils
 		{
 			return INDEX_NOT_FOUND;
 		}
+		
 		for (int i = index; i < array.length; i++)
 		{
 			if (value == array[i])
@@ -131,6 +137,7 @@ public final class ArrayUtils
 				return i;
 			}
 		}
+		
 		return INDEX_NOT_FOUND;
 	}
 	
@@ -148,18 +155,23 @@ public final class ArrayUtils
 		{
 			return null;
 		}
+		
 		int index = indexOf(array, value, 0);
+		
 		if (index == INDEX_NOT_FOUND)
 		{
 			return array;
 		}
+		
 		int length = array.length;
 		T[] newArray = (T[]) Array.newInstance(array.getClass().getComponentType(), length - 1);
 		System.arraycopy(array, 0, newArray, 0, index);
+		
 		if (index < (length - 1))
 		{
 			System.arraycopy(array, index + 1, newArray, index, length - index - 1);
 		}
+		
 		return newArray;
 	}
 	
@@ -185,12 +197,14 @@ public final class ArrayUtils
 		{
 			int pmin = a[lo].compareTo(a[lo + 1]) < 0 ? lo : lo + 1;
 			pmin = a[pmin].compareTo(a[lo + 2]) < 0 ? pmin : lo + 2;
+			
 			if (pmin != lo)
 			{
 				T e = a[lo];
 				a[lo] = a[pmin];
 				a[pmin] = e;
 			}
+			
 			eqBrute(a, lo + 1, hi);
 		}
 		else if ((hi - lo) == 3)
@@ -198,20 +212,24 @@ public final class ArrayUtils
 			int pmin = a[lo].compareTo(a[lo + 1]) < 0 ? lo : lo + 1;
 			pmin = a[pmin].compareTo(a[lo + 2]) < 0 ? pmin : lo + 2;
 			pmin = a[pmin].compareTo(a[lo + 3]) < 0 ? pmin : lo + 3;
+			
 			if (pmin != lo)
 			{
 				T e = a[lo];
 				a[lo] = a[pmin];
 				a[pmin] = e;
 			}
+			
 			int pmax = a[hi].compareTo(a[hi - 1]) > 0 ? hi : hi - 1;
 			pmax = a[pmax].compareTo(a[hi - 2]) > 0 ? pmax : hi - 2;
+			
 			if (pmax != hi)
 			{
 				T e = a[hi];
 				a[hi] = a[pmax];
 				a[pmax] = e;
 			}
+			
 			eqBrute(a, lo + 1, hi - 1);
 		}
 	}
@@ -227,24 +245,29 @@ public final class ArrayUtils
 	{
 		int lo = lo0;
 		int hi = hi0;
+		
 		if ((hi - lo) <= 3)
 		{
 			eqBrute(a, lo, hi);
 			return;
 		}
+		
 		T pivot = a[(lo + hi) / 2];
 		a[(lo + hi) / 2] = a[hi];
 		a[hi] = pivot;
+		
 		while (lo < hi)
 		{
 			while ((a[lo].compareTo(pivot) <= 0) && (lo < hi))
 			{
 				lo++;
 			}
+			
 			while ((pivot.compareTo(a[hi]) <= 0) && (lo < hi))
 			{
 				hi--;
 			}
+			
 			if (lo < hi)
 			{
 				T e = a[lo];
@@ -252,6 +275,7 @@ public final class ArrayUtils
 				a[hi] = e;
 			}
 		}
+		
 		a[hi0] = a[hi];
 		a[hi] = pivot;
 		eqSort(a, lo0, lo - 1);
@@ -291,12 +315,14 @@ public final class ArrayUtils
 		{
 			int pmin = c.compare(a[lo], a[lo + 1]) < 0 ? lo : lo + 1;
 			pmin = c.compare(a[pmin], a[lo + 2]) < 0 ? pmin : lo + 2;
+			
 			if (pmin != lo)
 			{
 				T e = a[lo];
 				a[lo] = a[pmin];
 				a[pmin] = e;
 			}
+			
 			eqBrute(a, lo + 1, hi, c);
 		}
 		else if ((hi - lo) == 3)
@@ -304,20 +330,24 @@ public final class ArrayUtils
 			int pmin = c.compare(a[lo], a[lo + 1]) < 0 ? lo : lo + 1;
 			pmin = c.compare(a[pmin], a[lo + 2]) < 0 ? pmin : lo + 2;
 			pmin = c.compare(a[pmin], a[lo + 3]) < 0 ? pmin : lo + 3;
+			
 			if (pmin != lo)
 			{
 				T e = a[lo];
 				a[lo] = a[pmin];
 				a[pmin] = e;
 			}
+			
 			int pmax = c.compare(a[hi], a[hi - 1]) > 0 ? hi : hi - 1;
 			pmax = c.compare(a[pmax], a[hi - 2]) > 0 ? pmax : hi - 2;
+			
 			if (pmax != hi)
 			{
 				T e = a[hi];
 				a[hi] = a[pmax];
 				a[pmax] = e;
 			}
+			
 			eqBrute(a, lo + 1, hi - 1, c);
 		}
 	}
@@ -334,24 +364,29 @@ public final class ArrayUtils
 	{
 		int lo = lo0;
 		int hi = hi0;
+		
 		if ((hi - lo) <= 3)
 		{
 			eqBrute(a, lo, hi, c);
 			return;
 		}
+		
 		T pivot = a[(lo + hi) / 2];
 		a[(lo + hi) / 2] = a[hi];
 		a[hi] = pivot;
+		
 		while (lo < hi)
 		{
 			while ((c.compare(a[lo], pivot) <= 0) && (lo < hi))
 			{
 				lo++;
 			}
+			
 			while ((c.compare(pivot, a[hi]) <= 0) && (lo < hi))
 			{
 				hi--;
 			}
+			
 			if (lo < hi)
 			{
 				T e = a[lo];
@@ -359,6 +394,7 @@ public final class ArrayUtils
 				a[hi] = e;
 			}
 		}
+		
 		a[hi0] = a[hi];
 		a[hi] = pivot;
 		eqSort(a, lo0, lo - 1, c);
@@ -385,10 +421,12 @@ public final class ArrayUtils
 	{
 		int[] ar = new int[collection.size()];
 		int i = 0;
+		
 		for (Integer t : collection)
 		{
 			ar[i++] = t;
 		}
+		
 		return ar;
 	}
 	
@@ -403,10 +441,12 @@ public final class ArrayUtils
 		int length = max - min;
 		int[] array = new int[length + 1];
 		int x = 0;
+		
 		for (int i = min; i <= max; i++, x++)
 		{
 			array[x] = i;
 		}
+		
 		return array;
 	}
 }

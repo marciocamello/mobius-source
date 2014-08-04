@@ -36,12 +36,15 @@ public abstract class ExReceiveOlympiad extends L2GameServerPacket
 		{
 			super(0);
 			OlympiadManager manager = Olympiad._manager;
+			
 			if (manager != null)
 			{
 				_arenaList = new ArrayList<>();
+				
 				for (int i = 0; i < Olympiad.STADIUMS.length; i++)
 				{
 					OlympiadGame game = manager.getOlympiadInstance(i);
+					
 					if ((game != null) && (game.getState() > 0))
 					{
 						_arenaList.add(new ArenaInfo(i, game.getState(), game.getType().ordinal(), game.getTeamName1(), game.getTeamName2()));
@@ -56,6 +59,7 @@ public abstract class ExReceiveOlympiad extends L2GameServerPacket
 			super.writeImpl();
 			writeD(_arenaList.size());
 			writeD(0x00); // unknown
+			
 			for (ArenaInfo arena : _arenaList)
 			{
 				writeD(arena._id);
@@ -102,8 +106,8 @@ public abstract class ExReceiveOlympiad extends L2GameServerPacket
 		public void addPlayer(int team, TeamMember member, int gameResultPoints)
 		{
 			int points = Config.OLYMPIAD_OLDSTYLE_STAT ? 0 : member.getStat().getInteger(Olympiad.POINTS, 0);
-			
 			PlayerInfo playerInfo = new PlayerInfo(member.getName(), member.getClanName(), member.getClassId(), points, gameResultPoints, (int) member.getDamage());
+			
 			if (_players[team] == null)
 			{
 				_players[team] = new ArrayList<>(2);
@@ -118,11 +122,13 @@ public abstract class ExReceiveOlympiad extends L2GameServerPacket
 			super.writeImpl();
 			writeD(_tie);
 			writeS(_name);
+			
 			for (int i = 0; i < _players.length; i++)
 			{
 				writeD(i + 1);
 				List<PlayerInfo> players = _players[i] == null ? Collections.<PlayerInfo> emptyList() : _players[i];
 				writeD(players.size());
+				
 				for (PlayerInfo playerInfo : players)
 				{
 					writeS(playerInfo._name);

@@ -86,28 +86,34 @@ public class MonstersAI extends Fighter
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((actor == null) || actor.isDead())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			doTask();
 			return true;
 		}
+		
 		if ((current_point > -1) || Rnd.chance(5))
 		{
 			if (current_point >= (_points.size() - 1))
 			{
 				final Creature target = GameObjectsStorage.getByNpcId(30754);
+				
 				if ((target != null) && !target.isDead())
 				{
 					clearTasks();
 					setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 					return true;
 				}
+				
 				return true;
 			}
+			
 			current_point++;
 			actor.setRunning();
 			clearTasks();
@@ -115,10 +121,12 @@ public class MonstersAI extends Fighter
 			doTask();
 			return true;
 		}
+		
 		if (randomAnimation())
 		{
 			return true;
 		}
+		
 		return false;
 	}
 }

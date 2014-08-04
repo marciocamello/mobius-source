@@ -41,16 +41,20 @@ public class Wispes extends DefaultAI
 		if (!_def_think)
 		{
 			NpcInstance npc = getActor();
+			
 			if (npc == null)
 			{
 				return true;
 			}
+			
 			List<Creature> target = new ArrayList<>();
+			
 			for (Player player : World.getAroundPlayers(npc, 300, 300))
 			{
 				if (player.getEffectList().getEffectsBySkillId(12001) == null)
 				{
 					target.add(player);
+					
 					if (npc.getNpcId() == 32915)
 					{
 						npc.broadcastPacket(new MagicSkillUse(npc, player, 14064, 1, 0, 0));
@@ -62,6 +66,7 @@ public class Wispes extends DefaultAI
 						npc.callSkill(SkillTable.getInstance().getInfo(14065, 1), target, true);
 					}
 				}
+				
 				if (target.size() > 0)
 				{
 					target.clear();
@@ -69,6 +74,7 @@ public class Wispes extends DefaultAI
 				}
 			}
 		}
+		
 		return true;
 	}
 	

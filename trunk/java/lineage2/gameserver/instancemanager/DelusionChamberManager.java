@@ -69,6 +69,7 @@ public class DelusionChamberManager
 		{
 			_instance = new DelusionChamberManager();
 		}
+		
 		return _instance;
 	}
 	
@@ -107,16 +108,19 @@ public class DelusionChamberManager
 	public void load()
 	{
 		int countGood = 0, countBad = 0;
+		
 		try
 		{
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
 			File file = new File(Config.DATAPACK_ROOT, "data/xml/other/delusion_chamber.xml");
+			
 			if (!file.exists())
 			{
 				throw new IOException();
 			}
+			
 			Document doc = factory.newDocumentBuilder().parse(file);
 			NamedNodeMap attrs;
 			int type;
@@ -127,6 +131,7 @@ public class DelusionChamberManager
 			Location tele = new Location();
 			int xMin = 0, xMax = 0, yMin = 0, yMax = 0, zMin = 0, zMax = 0;
 			boolean isBossRoom;
+			
 			for (Node rift = doc.getFirstChild(); rift != null; rift = rift.getNextSibling())
 			{
 				if ("rift".equalsIgnoreCase(rift.getNodeName()))
@@ -137,6 +142,7 @@ public class DelusionChamberManager
 						{
 							attrs = area.getAttributes();
 							type = Integer.parseInt(attrs.getNamedItem("type").getNodeValue());
+							
 							for (Node room = area.getFirstChild(); room != null; room = room.getNextSibling())
 							{
 								if ("room".equalsIgnoreCase(room.getNodeName()))
@@ -146,6 +152,7 @@ public class DelusionChamberManager
 									Node boss = attrs.getNamedItem("isBossRoom");
 									isBossRoom = (boss != null) && Boolean.parseBoolean(boss.getNodeValue());
 									Territory territory = null;
+									
 									for (Node coord = room.getFirstChild(); coord != null; coord = coord.getNextSibling())
 									{
 										if ("teleport".equalsIgnoreCase(coord.getNodeName()))
@@ -165,15 +172,19 @@ public class DelusionChamberManager
 											territory = new Territory().add(new Rectangle(xMin, yMin, xMax, yMax).setZmin(zMin).setZmax(zMax));
 										}
 									}
+									
 									if (territory == null)
 									{
 										_log.error("DimensionalRiftManager: invalid spawn data for room id " + roomId + "!");
 									}
+									
 									if (!_rooms.containsKey(type))
 									{
 										_rooms.put(type, new ConcurrentHashMap<Integer, DelusionChamberRoom>());
 									}
+									
 									_rooms.get(type).put(roomId, new DelusionChamberRoom(territory, tele, isBossRoom));
+									
 									for (Node spawn = room.getFirstChild(); spawn != null; spawn = spawn.getNextSibling())
 									{
 										if ("spawn".equalsIgnoreCase(spawn.getNodeName()))
@@ -183,10 +194,12 @@ public class DelusionChamberManager
 											delay = Integer.parseInt(attrs.getNamedItem("delay").getNodeValue());
 											count = Integer.parseInt(attrs.getNamedItem("count").getNodeValue());
 											template = NpcHolder.getInstance().getTemplate(mobId);
+											
 											if (template == null)
 											{
 												_log.warn("Template " + mobId + " not found!");
 											}
+											
 											if (!_rooms.containsKey(type))
 											{
 												_log.warn("Type " + type + " not found!");
@@ -195,6 +208,7 @@ public class DelusionChamberManager
 											{
 												_log.warn("Room " + roomId + " in Type " + type + " not found!");
 											}
+											
 											if ((template != null) && _rooms.containsKey(type) && _rooms.get(type).containsKey(roomId))
 											{
 												spawnDat = new SimpleSpawner(template);
@@ -222,12 +236,15 @@ public class DelusionChamberManager
 		{
 			_log.error("DelusionChamberManager: Error on loading delusion chamber spawns!", e);
 		}
+		
 		int typeSize = _rooms.keySet().size();
 		int roomSize = 0;
+		
 		for (int b : _rooms.keySet())
 		{
 			roomSize += _rooms.get(b).keySet().size();
 		}
+		
 		_log.info("DelusionChamberManager: Loaded " + typeSize + " room types with " + roomSize + " rooms.");
 		_log.info("DelusionChamberManager: Loaded " + countGood + " delusion chamber spawns, " + countBad + " errors.");
 	}
@@ -241,6 +258,7 @@ public class DelusionChamberManager
 		{
 			_rooms.get(b).clear();
 		}
+		
 		_rooms.clear();
 		load();
 	}
@@ -366,20 +384,25 @@ public class DelusionChamberManager
 		{
 			return;
 		}
+		
 		player.setIsTeleporting(true);
 		player.setTarget(null);
 		player.stopMove();
+		
 		if (player.isInBoat())
 		{
 			player.setBoat(null);
 		}
+		
 		player.breakFakeDeath();
 		player.decayMe();
 		player.setLoc(loc);
+		
 		if (ref == null)
 		{
 			player.setReflection(ReflectionManager.DEFAULT);
 		}
+		
 		player.setLastClientPosition(null);
 		player.setLastServerPosition(null);
 		player.sendPacket(new TeleportToLocation(player, loc));

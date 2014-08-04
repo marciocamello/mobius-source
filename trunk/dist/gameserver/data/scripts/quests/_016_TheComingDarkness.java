@@ -64,10 +64,12 @@ public class _016_TheComingDarkness extends Quest implements ScriptFile
 	{
 		super(false);
 		addStartNpc(HIERARCH);
+		
 		for (int[] element : ALTAR_LIST)
 		{
 			addTalkId(element[0]);
 		}
+		
 		addQuestItem(CRYSTAL_OF_SEAL);
 	}
 	
@@ -75,6 +77,7 @@ public class _016_TheComingDarkness extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("31517-02.htm"))
 		{
 			st.setState(STARTED);
@@ -82,6 +85,7 @@ public class _016_TheComingDarkness extends Quest implements ScriptFile
 			st.giveItems(CRYSTAL_OF_SEAL, 5);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		for (int[] element : ALTAR_LIST)
 		{
 			if (event.equalsIgnoreCase(String.valueOf(element[0]) + "-02.htm"))
@@ -91,6 +95,7 @@ public class _016_TheComingDarkness extends Quest implements ScriptFile
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -100,6 +105,7 @@ public class _016_TheComingDarkness extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == 31517)
 		{
 			if (cond < 1)
@@ -131,6 +137,7 @@ public class _016_TheComingDarkness extends Quest implements ScriptFile
 				st.exitCurrentQuest(false);
 			}
 		}
+		
 		for (int[] element : ALTAR_LIST)
 		{
 			if (npcId == element[0])
@@ -152,6 +159,7 @@ public class _016_TheComingDarkness extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 }

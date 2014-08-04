@@ -30,7 +30,6 @@ public class ExVitalityEffectInfo extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0x11E);
-		
 		writeD(points);
 		writeD(expBonus);
 		writeD(5);// TODO: Remaining items count

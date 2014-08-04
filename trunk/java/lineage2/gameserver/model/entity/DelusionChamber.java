@@ -100,12 +100,14 @@ public class DelusionChamber extends Reflection
 		Location coords = getRoomCoord(_choosenRoom);
 		setReturnLoc(party.getPartyLeader().getLoc());
 		setTeleportLoc(coords);
+		
 		for (Player p : party.getPartyMembers())
 		{
 			p.setVar("backCoords", getReturnLoc().toXYZString(), -1);
 			DelusionChamberManager.teleToLocation(p, Location.findPointToStay(coords, 50, 100, getGeoIndex()), this);
 			p.setReflection(this);
 		}
+		
 		createSpawnTimer(_choosenRoom);
 		createTeleporterTimer();
 	}
@@ -121,6 +123,7 @@ public class DelusionChamber extends Reflection
 			spawnTask.cancel(false);
 			spawnTask = null;
 		}
+		
 		final DelusionChamberRoom riftRoom = DelusionChamberManager.getInstance().getRoom(_roomType, room);
 		spawnTask = ThreadPoolManager.getInstance().schedule(new RunnableImpl()
 		{
@@ -132,15 +135,18 @@ public class DelusionChamber extends Reflection
 					SimpleSpawner sp = s.clone();
 					sp.setReflection(DelusionChamber.this);
 					addSpawn(sp);
+					
 					if (!isBossRoom)
 					{
 						sp.startRespawn();
 					}
+					
 					for (int i = 0; i < sp.getAmount(); i++)
 					{
 						sp.doSpawn(true);
 					}
 				}
+				
 				DelusionChamber.this.addSpawnWithoutRespawn(getManagerId(), riftRoom.getTeleportCoords(), 0);
 			}
 		}, 10000);
@@ -156,6 +162,7 @@ public class DelusionChamber extends Reflection
 			teleporterTask.cancel(false);
 			teleporterTask = null;
 		}
+		
 		teleporterTask = ThreadPoolManager.getInstance().schedule(new RunnableImpl()
 		{
 			@Override
@@ -185,6 +192,7 @@ public class DelusionChamber extends Reflection
 		{
 			return 60 * MILLISECONDS_IN_MINUTE;
 		}
+		
 		return (8 * MILLISECONDS_IN_MINUTE) + Rnd.get(120000);
 	}
 	
@@ -208,6 +216,7 @@ public class DelusionChamber extends Reflection
 			killChamberTask.cancel(false);
 			killChamberTask = null;
 		}
+		
 		killChamberTask = ThreadPoolManager.getInstance().schedule(new RunnableImpl()
 		{
 			@Override
@@ -220,15 +229,18 @@ public class DelusionChamber extends Reflection
 						if (p.getReflection() == DelusionChamber.this)
 						{
 							String var = p.getVar("backCoords");
+							
 							if ((var == null) || var.equals(""))
 							{
 								continue;
 							}
+							
 							p.teleToLocation(Location.parseLoc(var), ReflectionManager.DEFAULT);
 							p.unsetVar("backCoords");
 						}
 					}
 				}
+				
 				collapse();
 			}
 		}, 100L);
@@ -249,11 +261,14 @@ public class DelusionChamber extends Reflection
 	protected void teleportToNextRoom()
 	{
 		_completedRooms.add(_choosenRoom);
+		
 		for (Spawner s : getSpawns())
 		{
 			s.deleteAll();
 		}
+		
 		int size = DelusionChamberManager.getInstance().getRooms(_roomType).size();
+		
 		if ((getType() >= 11) && (jumps_current == 4))
 		{
 			_choosenRoom = 9;
@@ -261,6 +276,7 @@ public class DelusionChamber extends Reflection
 		else
 		{
 			List<Integer> notCompletedRooms = new ArrayList<>();
+			
 			for (int i = 1; i <= size; i++)
 			{
 				if (!_completedRooms.contains(i))
@@ -268,10 +284,13 @@ public class DelusionChamber extends Reflection
 					notCompletedRooms.add(i);
 				}
 			}
+			
 			_choosenRoom = notCompletedRooms.get(Rnd.get(notCompletedRooms.size()));
 		}
+		
 		checkBossRoom(_choosenRoom);
 		setTeleportLoc(getRoomCoord(_choosenRoom));
+		
 		for (Player p : getParty().getPartyMembers())
 		{
 			if (p.getReflection() == this)
@@ -279,6 +298,7 @@ public class DelusionChamber extends Reflection
 				DelusionChamberManager.teleToLocation(p, Location.findPointToStay(getRoomCoord(_choosenRoom), 50, 100, DelusionChamber.this.getGeoIndex()), this);
 			}
 		}
+		
 		createSpawnTimer(_choosenRoom);
 	}
 	
@@ -306,7 +326,9 @@ public class DelusionChamber extends Reflection
 		{
 			return 0;
 		}
+		
 		int sum = 0;
+		
 		for (Player p : getPlayers())
 		{
 			if (!alive || !p.isDead())
@@ -314,6 +336,7 @@ public class DelusionChamber extends Reflection
 				sum++;
 			}
 		}
+		
 		return sum;
 	}
 	
@@ -328,11 +351,13 @@ public class DelusionChamber extends Reflection
 		{
 			return;
 		}
+		
 		if (!player.getParty().isLeader(player))
 		{
 			DelusionChamberManager.getInstance().showHtmlFile(player, "delusionchamber/NotPartyLeader.htm", npc);
 			return;
 		}
+		
 		createNewKillChamberTimer();
 	}
 	
@@ -376,11 +401,13 @@ public class DelusionChamber extends Reflection
 		{
 			return;
 		}
+		
 		if (!player.getParty().isLeader(player))
 		{
 			DelusionChamberManager.getInstance().showHtmlFile(player, "delusionchamber/NotPartyLeader.htm", npc);
 			return;
 		}
+		
 		if (!isBossRoom)
 		{
 			if (_hasJumped)
@@ -388,6 +415,7 @@ public class DelusionChamber extends Reflection
 				DelusionChamberManager.getInstance().showHtmlFile(player, "delusionchamber/AlreadyTeleported.htm", npc);
 				return;
 			}
+			
 			_hasJumped = true;
 		}
 		else
@@ -395,6 +423,7 @@ public class DelusionChamber extends Reflection
 			manualExitChamber(player, npc);
 			return;
 		}
+		
 		teleportToNextRoom();
 	}
 }

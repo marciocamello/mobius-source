@@ -57,15 +57,14 @@ public class _10368_RebellionofMonsters extends Quest implements ScriptFile
 		addKillNpcWithLog(1, jagav_item, 15, jagav);
 		addKillNpcWithLog(1, incect_item, 15, incect);
 		addKillNpcWithLog(1, incectl_item, 20, incectl);
-		
 		addLevelCheck(34, 40);
-		
 	}
 	
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -73,6 +72,7 @@ public class _10368_RebellionofMonsters extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "0-3.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -123,6 +123,7 @@ public class _10368_RebellionofMonsters extends Quest implements ScriptFile
 			st.unset(incectl_item);
 			st.setCond(2);
 		}
+		
 		return null;
 	}
 }

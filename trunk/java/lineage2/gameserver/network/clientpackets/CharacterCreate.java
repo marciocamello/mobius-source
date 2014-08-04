@@ -62,7 +62,7 @@ public class CharacterCreate extends L2GameClientPacket
 	 * Field _face.
 	 */
 	private int _face;
-
+	
 	/**
 	 * Method readImpl.
 	 */
@@ -83,7 +83,7 @@ public class CharacterCreate extends L2GameClientPacket
 		_hairColor = readD();
 		_face = readD();
 	}
-
+	
 	/**
 	 * Method runImpl.
 	 */
@@ -97,11 +97,13 @@ public class CharacterCreate extends L2GameClientPacket
 				return;
 			}
 		}
+		
 		if (CharacterDAO.getInstance().accountCharNumber(getClient().getLogin()) >= 8)
 		{
 			sendPacket(CharacterCreateFail.REASON_TOO_MANY_CHARACTERS);
 			return;
 		}
+		
 		if (!Util.isMatchingRegexp(_name, Config.CNAME_TEMPLATE))
 		{
 			sendPacket(CharacterCreateFail.REASON_16_ENG_CHARS);
@@ -112,15 +114,18 @@ public class CharacterCreate extends L2GameClientPacket
 			sendPacket(CharacterCreateFail.REASON_NAME_ALREADY_EXISTS);
 			return;
 		}
+		
 		Player newChar = Player.create(_classId, _sex, getClient().getLogin(), _name, _hairStyle, _hairColor, _face);
+		
 		if (newChar == null)
 		{
 			return;
 		}
+		
 		sendPacket(CharacterCreateSuccess.STATIC);
 		initNewChar(getClient(), newChar);
 	}
-
+	
 	/**
 	 * Method initNewChar.
 	 * @param client GameClient
@@ -130,10 +135,12 @@ public class CharacterCreate extends L2GameClientPacket
 	{
 		PlayerTemplate template = newChar.getTemplate();
 		newChar.getSubClassList().restore();
+		
 		if (Config.STARTING_ADENA > 0)
 		{
 			newChar.addAdena(Config.STARTING_ADENA);
 		}
+		
 		if (Config.STARTING_LOC)
 		{
 			newChar.setLoc(new Location(Config.STARTING_LOC_X, Config.STARTING_LOC_Y, Config.STARTING_LOC_Z));
@@ -142,11 +149,13 @@ public class CharacterCreate extends L2GameClientPacket
 		{
 			newChar.setLoc(template.getStartLocation());
 		}
+		
 		if (Config.STARTING_ITEMS)
 		{
 			for (int[] reward : Config.STARTING_ITEMS_ID_QTY)
 			{
 				ItemInstance startItem = ItemFunctions.createItem(reward[0]);
+				
 				if (startItem.isStackable())
 				{
 					startItem.setCount(reward[1]);
@@ -162,6 +171,7 @@ public class CharacterCreate extends L2GameClientPacket
 				}
 			}
 		}
+		
 		if (Config.CHAR_TITLE)
 		{
 			newChar.setTitle(Config.ADD_CHAR_TITLE);
@@ -170,10 +180,12 @@ public class CharacterCreate extends L2GameClientPacket
 		{
 			newChar.setTitle("");
 		}
+		
 		for (StartItem i : template.getStartItems())
 		{
 			ItemInstance item = ItemFunctions.createItem(i.getItemId());
 			long count = i.getCount();
+			
 			if (item.isStackable())
 			{
 				item.setCount(count);
@@ -186,29 +198,36 @@ public class CharacterCreate extends L2GameClientPacket
 					item = ItemFunctions.createItem(i.getItemId());
 					newChar.getInventory().addItem(item);
 				}
+				
 				if (item.isEquipable() && i.isEquiped())
 				{
 					newChar.getInventory().equipItem(item);
 				}
 			}
+			
 			if (item.getItemId() == 5588)
 			{
 				newChar.registerShortCut(new ShortCut(11, 0, ShortCut.TYPE_ITEM, item.getObjectId(), -1, 1));
 			}
 		}
+		
 		newChar.rewardSkills(false, false);
+		
 		if (newChar.getSkillLevel(1001) > 0)
 		{
 			newChar.registerShortCut(new ShortCut(1, 0, ShortCut.TYPE_SKILL, 1001, 1, 1));
 		}
+		
 		if (newChar.getSkillLevel(1177) > 0)
 		{
 			newChar.registerShortCut(new ShortCut(1, 0, ShortCut.TYPE_SKILL, 1177, 1, 1));
 		}
+		
 		if (newChar.getSkillLevel(1216) > 0)
 		{
 			newChar.registerShortCut(new ShortCut(9, 0, ShortCut.TYPE_SKILL, 1216, 1, 1));
 		}
+		
 		newChar.registerShortCut(new ShortCut(0, 0, ShortCut.TYPE_ACTION, 2, -1, 1));
 		newChar.registerShortCut(new ShortCut(3, 0, ShortCut.TYPE_ACTION, 5, -1, 1));
 		newChar.registerShortCut(new ShortCut(10, 0, ShortCut.TYPE_ACTION, 0, -1, 1));
@@ -217,10 +236,12 @@ public class CharacterCreate extends L2GameClientPacket
 		newChar.registerShortCut(new ShortCut(4, ShortCut.PAGE_FLY_TRANSFORM, ShortCut.TYPE_SKILL, 885, 1, 1));
 		newChar.registerShortCut(new ShortCut(0, ShortCut.PAGE_AIRSHIP, ShortCut.TYPE_ACTION, 70, 0, 1));
 		startTutorialQuest(newChar);
+		
 		if ((Config.STARTING_LEVEL > 1) && (Config.STARTING_LEVEL <= Experience.getMaxLevel()))
 		{
 			newChar.addExpAndSp(Experience.LEVEL[(Config.STARTING_LEVEL + 1)] - 1L, 0L);
 		}
+		
 		newChar.setCurrentHpMp(newChar.getMaxHp(), newChar.getMaxMp());
 		newChar.setCurrentCp(0);
 		newChar.setOnlineStatus(false);
@@ -231,7 +252,7 @@ public class CharacterCreate extends L2GameClientPacket
 		newChar.deleteMe();
 		client.setCharSelection(CharacterSelectionInfo.loadCharacterSelectInfo(client.getLogin()));
 	}
-
+	
 	/**
 	 * Method startTutorialQuest.
 	 * @param player Player
@@ -239,6 +260,7 @@ public class CharacterCreate extends L2GameClientPacket
 	public static void startTutorialQuest(Player player)
 	{
 		Quest q = QuestManager.getQuest(255);
+		
 		if (q != null)
 		{
 			q.newQuestState(player, Quest.CREATED);

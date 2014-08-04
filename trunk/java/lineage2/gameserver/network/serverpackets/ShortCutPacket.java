@@ -27,6 +27,7 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 	{
 		ShortcutInfo shortcutInfo = null;
 		int page = shortCut.getSlot() + (shortCut.getPage() * 12);
+		
 		switch (shortCut.getType())
 		{
 			case ShortCut.TYPE_ITEM:
@@ -35,13 +36,16 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 				reuse = 0,
 				augmentationId = 0;
 				ItemInstance item = player.getInventory().getItemByObjectId(shortCut.getId());
+				
 				if (item != null)
 				{
 					augmentationId = item.getAugmentationId();
 					reuseGroup = item.getTemplate().getDisplayReuseGroup();
+					
 					if (item.getTemplate().getReuseDelay() > 0)
 					{
 						TimeStamp timeStamp = player.getSharedGroupReuse(item.getTemplate().getReuseGroup());
+						
 						if (timeStamp != null)
 						{
 							currentReuse = (int) (timeStamp.getReuseCurrent() / 1000L);
@@ -49,15 +53,19 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 						}
 					}
 				}
+				
 				shortcutInfo = new ItemShortcutInfo(shortCut.getType(), page, shortCut.getId(), reuseGroup, currentReuse, reuse, augmentationId, shortCut.getCharacterType());
 				break;
+			
 			case ShortCut.TYPE_SKILL:
 				shortcutInfo = new SkillShortcutInfo(shortCut.getType(), page, shortCut.getId(), shortCut.getLevel(), shortCut.getCharacterType());
 				break;
+			
 			default:
 				shortcutInfo = new ShortcutInfo(shortCut.getType(), page, shortCut.getId(), shortCut.getCharacterType());
 				break;
 		}
+		
 		return shortcutInfo;
 	}
 	

@@ -53,6 +53,7 @@ public class _191_VainConclusion extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("30970-03.htm"))
 		{
 			st.playSound(SOUND_ACCEPT);
@@ -76,6 +77,7 @@ public class _191_VainConclusion extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -85,6 +87,7 @@ public class _191_VainConclusion extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (st.getState() == STARTED)
 		{
 			if (npcId == Dorothy)
@@ -145,6 +148,7 @@ public class _191_VainConclusion extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -152,10 +156,12 @@ public class _191_VainConclusion extends Quest implements ScriptFile
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
 		QuestState qs = player.getQuestState(_188_SealRemoval.class);
+		
 		if ((qs != null) && qs.isCompleted() && (player.getQuestState(getClass()) == null))
 		{
 			newQuestState(player, STARTED);
 		}
+		
 		return "";
 	}
 }

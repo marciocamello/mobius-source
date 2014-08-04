@@ -42,11 +42,13 @@ public final class TransportationAssistantInstance extends NpcInstance
 			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOVE_IN_THIS_STATE));
 			return;
 		}
+		
 		if (player.isDead())
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOVE_IN_THIS_STATE));
 			return;
 		}
+		
 		if (player.isCastingNow() || player.isInCombat() || player.isAttackingNow())
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOVE_IN_THIS_STATE));
@@ -57,14 +59,17 @@ public final class TransportationAssistantInstance extends NpcInstance
 		{
 			player.teleToLocation(-147711, 152768, -14056);
 		}
+		
 		if (command.equalsIgnoreCase("goto1ls"))
 		{
 			player.teleToLocation(-147867, 250710, -14024);
 		}
+		
 		if (command.equalsIgnoreCase("goto2ln"))
 		{
 			player.teleToLocation(-150131, 143145, -11960);
 		}
+		
 		if (command.equalsIgnoreCase("goto2ls"))
 		{
 			player.teleToLocation(-150169, 241022, -11928);

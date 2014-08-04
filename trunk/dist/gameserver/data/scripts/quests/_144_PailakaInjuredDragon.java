@@ -173,6 +173,7 @@ public class _144_PailakaInjuredDragon extends Quest implements ScriptFile
 	{
 		Player player = st.getPlayer();
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("Enter"))
 		{
 			enterInstance(player);
@@ -181,6 +182,7 @@ public class _144_PailakaInjuredDragon extends Quest implements ScriptFile
 		else if (event.startsWith("buff"))
 		{
 			int[] skill = BUFFS[Integer.parseInt(event.split("buff")[1])];
+			
 			if (st.getInt("spells") < 4)
 			{
 				makeBuff(npc, player, skill[0], skill[1]);
@@ -188,6 +190,7 @@ public class _144_PailakaInjuredDragon extends Quest implements ScriptFile
 				htmltext = "32509-06.htm";
 				return htmltext;
 			}
+			
 			if (st.getInt("spells") == 4)
 			{
 				makeBuff(npc, player, skill[0], skill[1]);
@@ -206,6 +209,7 @@ public class _144_PailakaInjuredDragon extends Quest implements ScriptFile
 			{
 				htmltext = "32509-04.htm";
 			}
+			
 			return htmltext;
 		}
 		else if (event.equalsIgnoreCase("32499-02.htm"))
@@ -233,6 +237,7 @@ public class _144_PailakaInjuredDragon extends Quest implements ScriptFile
 			st.takeItems(ENCHSPEAR, 1);
 			st.takeItems(LASTSPEAR, 1);
 		}
+		
 		return htmltext;
 	}
 	
@@ -244,6 +249,7 @@ public class _144_PailakaInjuredDragon extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int id = st.getState();
 		Player player = st.getPlayer();
+		
 		if (npcId == KETRAOSHAMAN)
 		{
 			if (cond == 0)
@@ -288,26 +294,32 @@ public class _144_PailakaInjuredDragon extends Quest implements ScriptFile
 			{
 				htmltext = "32509-01.htm";
 			}
+			
 			if ((st.getQuestItemsCount(ENCHSPEAR) > 0) && (st.getQuestItemsCount(STAGE2) == 0))
 			{
 				htmltext = "32509-01.htm";
 			}
+			
 			if ((st.getQuestItemsCount(SPEAR) == 0) && (st.getQuestItemsCount(STAGE1) > 0))
 			{
 				htmltext = "32509-07.htm";
 			}
+			
 			if ((st.getQuestItemsCount(ENCHSPEAR) == 0) && (st.getQuestItemsCount(STAGE2) > 0))
 			{
 				htmltext = "32509-07.htm";
 			}
+			
 			if ((st.getQuestItemsCount(SPEAR) == 0) && (st.getQuestItemsCount(ENCHSPEAR) == 0))
 			{
 				htmltext = "32509-07.htm";
 			}
+			
 			if ((st.getQuestItemsCount(STAGE1) == 0) && (st.getQuestItemsCount(STAGE2) == 0))
 			{
 				htmltext = "32509-01.htm";
 			}
+			
 			if ((st.getQuestItemsCount(SPEAR) > 0) && (st.getQuestItemsCount(STAGE1) > 0))
 			{
 				st.takeItems(SPEAR, 1);
@@ -315,6 +327,7 @@ public class _144_PailakaInjuredDragon extends Quest implements ScriptFile
 				st.giveItems(ENCHSPEAR, 1);
 				htmltext = "32509-02.htm";
 			}
+			
 			if ((st.getQuestItemsCount(ENCHSPEAR) > 0) && (st.getQuestItemsCount(STAGE2) > 0))
 			{
 				st.takeItems(ENCHSPEAR, 1);
@@ -322,6 +335,7 @@ public class _144_PailakaInjuredDragon extends Quest implements ScriptFile
 				st.giveItems(LASTSPEAR, 1);
 				htmltext = "32509-03.htm";
 			}
+			
 			if (st.getQuestItemsCount(LASTSPEAR) > 0)
 			{
 				htmltext = "32509-03.htm";
@@ -348,6 +362,7 @@ public class _144_PailakaInjuredDragon extends Quest implements ScriptFile
 				htmltext = "32512-03.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -357,6 +372,7 @@ public class _144_PailakaInjuredDragon extends Quest implements ScriptFile
 		Player player = st.getPlayer();
 		int npcId = npc.getNpcId();
 		int refId = player.getReflectionId();
+		
 		switch (npcId)
 		{
 			case VSWARRIOR1:
@@ -365,42 +381,53 @@ public class _144_PailakaInjuredDragon extends Quest implements ScriptFile
 				{
 					st.set("stage", "2");
 				}
+				
 				break;
+			
 			case VSCOMMAO1:
 			case VSCOMMAO2:
 				if (st.getInt("stage") == 2)
 				{
 					st.set("stage", "3");
 				}
+				
 				if ((st.getQuestItemsCount(SPEAR) > 0) && (st.getQuestItemsCount(STAGE1) == 0))
 				{
 					st.giveItems(STAGE1, 1);
 				}
+				
 				break;
+			
 			case VSGMAG1:
 			case VSGMAG2:
 				if (st.getInt("stage") == 3)
 				{
 					st.set("stage", "4");
 				}
+				
 				if ((st.getQuestItemsCount(ENCHSPEAR) > 0) && (st.getQuestItemsCount(STAGE2) == 0))
 				{
 					st.giveItems(STAGE2, 1);
 				}
+				
 				break;
+			
 			case VSHGAPG1:
 			case VSHGAPG2:
 				if (st.getInt("stage") == 4)
 				{
 					st.set("stage", "5");
 				}
+				
 				break;
+			
 			case LATANA:
 				st.setCond(4);
 				st.playSound(SOUND_MIDDLE);
 				addSpawnToInstance(KOSUPPORTER2, npc.getLoc(), 0, refId);
 				break;
 		}
+		
 		if (ArrayUtils.contains(Pailaka3rd, npcId))
 		{
 			if (Rnd.get(100) < 30)
@@ -408,10 +435,12 @@ public class _144_PailakaInjuredDragon extends Quest implements ScriptFile
 				st.dropItem(npc, PAILAKA3DROP[Rnd.get(PAILAKA3DROP.length)], 1);
 			}
 		}
+		
 		if (ArrayUtils.contains(Antelopes, npcId))
 		{
 			st.dropItem(npc, ANTELOPDROP[Rnd.get(ANTELOPDROP.length)], Rnd.get(1, 10));
 		}
+		
 		return null;
 	}
 	
@@ -420,6 +449,7 @@ public class _144_PailakaInjuredDragon extends Quest implements ScriptFile
 	{
 		Player player = st.getPlayer();
 		int npcId = npc.getNpcId();
+		
 		switch (npcId)
 		{
 			case VSCOMMAO1:
@@ -429,7 +459,9 @@ public class _144_PailakaInjuredDragon extends Quest implements ScriptFile
 					player.teleToLocation(122789, -45692, -3036);
 					return null;
 				}
+				
 				break;
+			
 			case VSGMAG1:
 			case VSGMAG2:
 				if (st.getInt("stage") == 1)
@@ -442,7 +474,9 @@ public class _144_PailakaInjuredDragon extends Quest implements ScriptFile
 					player.teleToLocation(116948, -46445, -2673);
 					return null;
 				}
+				
 				break;
+			
 			case VSHGAPG1:
 			case VSHGAPG2:
 				if (st.getInt("stage") == 1)
@@ -460,7 +494,9 @@ public class _144_PailakaInjuredDragon extends Quest implements ScriptFile
 					player.teleToLocation(112445, -44118, -2700);
 					return null;
 				}
+				
 				break;
+			
 			case LATANA:
 				if (st.getInt("stage") == 1)
 				{
@@ -482,14 +518,17 @@ public class _144_PailakaInjuredDragon extends Quest implements ScriptFile
 					player.teleToLocation(109947, -41433, -2311);
 					return null;
 				}
+				
 				break;
 		}
+		
 		return null;
 	}
 	
 	private void enterInstance(Player player)
 	{
 		Reflection r = player.getActiveReflection();
+		
 		if (r != null)
 		{
 			if (player.canReenterInstance(izId))

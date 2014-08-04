@@ -107,18 +107,22 @@ public class GuardPustosh extends Fighter
 		final NpcInstance actor = getActor();
 		final int actorId = actor.getNpcId();
 		actor.setRunning();
+		
 		if (actorId != SELON)
 		{
 			boolean monsterFound = false;
 			NpcInstance poslofAttacker = null;
+			
 			for (NpcInstance npc : actor.getAroundNpc(1000, 1000))
 			{
 				int npcId = npc.getNpcId();
+				
 				if ((npcId == KANILOV) || (npcId == POSLOF) || (npcId == SAKUM))
 				{
 					monsterFound = true;
 					actor.getAggroList().addDamageHate(npc, 0, 1000);
 					setIntention(CtrlIntention.AI_INTENTION_ATTACK);
+					
 					if (actorId == SCHUAZEN)
 					{
 						NpcUtils.spawnSingle(POSLOF_OFFICER, -29533, 187059, -3912, 45362);
@@ -129,11 +133,13 @@ public class GuardPustosh extends Fighter
 					poslofAttacker = npc;
 				}
 			}
+			
 			if (!monsterFound && (poslofAttacker != null))
 			{
 				poslofAttacker.deleteMe();
 			}
 		}
+		
 		return true;
 	}
 	
@@ -148,6 +154,7 @@ public class GuardPustosh extends Fighter
 		final int currentNpcId = actor.getNpcId();
 		final int respawnNpcId = (currentNpcId == COMMANDO) ? COMMANDO_CAPTAIN : COMMANDO;
 		boolean needRespawn = true;
+		
 		for (NpcInstance npc : actor.getAroundNpc(1000, 1000))
 		{
 			if ((npc.getNpcId() == currentNpcId) && !npc.isDead())
@@ -155,6 +162,7 @@ public class GuardPustosh extends Fighter
 				needRespawn = false;
 			}
 		}
+		
 		if (needRespawn)
 		{
 			for (int[] element : COMMANDO_SPAWNS)
@@ -162,6 +170,7 @@ public class GuardPustosh extends Fighter
 				NpcUtils.spawnSingle(respawnNpcId, new Location(element[0], element[1], element[2]));
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 }

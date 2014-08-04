@@ -37,10 +37,10 @@ public class WareHouseDepositList extends L2GameServerPacket
 	{
 		_whtype = whtype.ordinal();
 		_adena = cha.getAdena();
-		
 		ItemInstance[] items = cha.getInventory().getItems();
 		ArrayUtils.eqSort(items, ItemClassComparator.getInstance());
 		_itemList = new ArrayList<>(items.length);
+		
 		for (ItemInstance item : items)
 		{
 			if (item.canBeStored(cha, _whtype == 1))
@@ -48,18 +48,22 @@ public class WareHouseDepositList extends L2GameServerPacket
 				_itemList.add(new ItemInfo(item));
 			}
 		}
+		
 		switch (_whtype)
 		{
 			case 1:
 				_depositedItemsCount = cha.getWarehouse().getSize();
 				break;
+			
 			case 2:
 				_depositedItemsCount = cha.getFreight().getSize();
 				break;
+			
 			case 3:
 			case 4:
 				_depositedItemsCount = cha.getClan().getWarehouse().getSize();
 				break;
+			
 			default:
 				_depositedItemsCount = 0;
 				return;
@@ -75,6 +79,7 @@ public class WareHouseDepositList extends L2GameServerPacket
 		writeH(_depositedItemsCount);
 		writeD(0);
 		writeH(_itemList.size());
+		
 		for (ItemInfo item : _itemList)
 		{
 			writeItemInfo(item);

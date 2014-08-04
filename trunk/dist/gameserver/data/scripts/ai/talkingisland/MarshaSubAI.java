@@ -65,6 +65,7 @@ public class MarshaSubAI extends DefaultAI
 		{
 			startMoveTask();
 		}
+		
 		return true;
 	}
 	
@@ -75,10 +76,12 @@ public class MarshaSubAI extends DefaultAI
 	protected void onEvtArrived()
 	{
 		startMoveTask();
+		
 		if (Rnd.chance(52))
 		{
 			sayRndMsg();
 		}
+		
 		super.onEvtArrived();
 	}
 	
@@ -88,10 +91,12 @@ public class MarshaSubAI extends DefaultAI
 	private void startMoveTask()
 	{
 		_lastPoint++;
+		
 		if (_lastPoint >= _points.length)
 		{
 			_lastPoint = 0;
 		}
+		
 		addTaskMove(_points[_lastPoint], false);
 		doTask();
 	}
@@ -102,32 +107,41 @@ public class MarshaSubAI extends DefaultAI
 	private void sayRndMsg()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		NpcString ns;
+		
 		switch (Rnd.get(6))
 		{
 			case 1:
 				ns = NpcString.ISN_T_THERE_AN_EASIER_WAY_TO_GET_THERE;
 				break;
+			
 			case 2:
 				ns = NpcString.ISN_T_THERE_AN_EASIER_WAY_TO_GET_THERE;
 				break;
+			
 			case 3:
 				ns = NpcString.ISN_T_THERE_AN_EASIER_WAY_TO_GET_THERE;
 				break;
+			
 			case 4:
 				ns = NpcString.ISN_T_THERE_AN_EASIER_WAY_TO_GET_THERE;
 				break;
+			
 			case 5:
 				ns = NpcString.ISN_T_THERE_AN_EASIER_WAY_TO_GET_THERE;
 				break;
+			
 			default:
 				ns = NpcString.ISN_T_THERE_AN_EASIER_WAY_TO_GET_THERE;
 				break;
 		}
+		
 		Functions.npcSay(actor, ns);
 	}
 	

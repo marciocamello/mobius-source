@@ -101,10 +101,12 @@ public class _611_AllianceWithVarkaSilenos extends Quest implements ScriptFile
 		VARKA_NPC_LIST[17] = 21372;
 		VARKA_NPC_LIST[18] = 21373;
 		VARKA_NPC_LIST[19] = 21374;
+		
 		for (int npcId : VARKA_NPC_LIST)
 		{
 			addKillId(npcId);
 		}
+		
 		addKillId(RAIDER);
 		addKillId(FOOTMAN);
 		addKillId(SCOUT);
@@ -140,6 +142,7 @@ public class _611_AllianceWithVarkaSilenos extends Quest implements ScriptFile
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -149,6 +152,7 @@ public class _611_AllianceWithVarkaSilenos extends Quest implements ScriptFile
 		{
 			return;
 		}
+		
 		if (st.getQuestItemsCount(MARK_OF_VARKA_ALLIANCE5) > 0)
 		{
 			st.setCond(6);
@@ -181,38 +185,47 @@ public class _611_AllianceWithVarkaSilenos extends Quest implements ScriptFile
 		{
 			return false;
 		}
+		
 		if ((capitan_count > 0) && (st.getQuestItemsCount(KB_CAPTAIN) < capitan_count))
 		{
 			return false;
 		}
+		
 		if ((general_count > 0) && (st.getQuestItemsCount(KB_GENERAL) < general_count))
 		{
 			return false;
 		}
+		
 		if ((other_item > 0) && (st.getQuestItemsCount(other_item) < 1))
 		{
 			return false;
 		}
+		
 		if (take)
 		{
 			if (soilder_count > 0)
 			{
 				st.takeItems(KB_SOLDIER, soilder_count);
 			}
+			
 			if (capitan_count > 0)
 			{
 				st.takeItems(KB_CAPTAIN, capitan_count);
 			}
+			
 			if (general_count > 0)
 			{
 				st.takeItems(KB_GENERAL, general_count);
 			}
+			
 			if (other_item > 0)
 			{
 				st.takeItems(other_item, 1);
 			}
+			
 			takeAllMarks(st);
 		}
+		
 		return true;
 	}
 	
@@ -235,8 +248,10 @@ public class _611_AllianceWithVarkaSilenos extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			return event;
 		}
+		
 		checkMarks(st);
 		int cond = st.getCond();
+		
 		if (event.equalsIgnoreCase("herald_naran_q0611_12.htm") && (cond == 1) && CheckNextLevel(st, 100, 0, 0, 0, true))
 		{
 			st.giveItems(MARK_OF_VARKA_ALLIANCE1, 1);
@@ -280,6 +295,7 @@ public class _611_AllianceWithVarkaSilenos extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return event;
 	}
 	
@@ -291,13 +307,17 @@ public class _611_AllianceWithVarkaSilenos extends Quest implements ScriptFile
 			st.exitCurrentQuest(true);
 			return "herald_naran_q0611_02.htm";
 		}
+		
 		int npcId = npc.getNpcId();
 		checkMarks(st);
+		
 		if (st.getState() == CREATED)
 		{
 			st.setCond(0);
 		}
+		
 		int cond = st.getCond();
+		
 		if (npcId == 31378)
 		{
 			if (cond == 0)
@@ -307,33 +327,41 @@ public class _611_AllianceWithVarkaSilenos extends Quest implements ScriptFile
 					st.exitCurrentQuest(true);
 					return "herald_naran_q0611_03.htm";
 				}
+				
 				return "herald_naran_q0611_01.htm";
 			}
+			
 			if (cond == 1)
 			{
 				return CheckNextLevel(st, 100, 0, 0, 0, false) ? "herald_naran_q0611_11.htm" : "herald_naran_q0611_10.htm";
 			}
+			
 			if (cond == 2)
 			{
 				return CheckNextLevel(st, 200, 100, 0, 0, false) ? "herald_naran_q0611_14.htm" : "herald_naran_q0611_13.htm";
 			}
+			
 			if (cond == 3)
 			{
 				return CheckNextLevel(st, 300, 200, 100, 0, false) ? "herald_naran_q0611_17.htm" : "herald_naran_q0611_16.htm";
 			}
+			
 			if (cond == 4)
 			{
 				return CheckNextLevel(st, 300, 300, 200, TOTEM_OF_VALOR, false) ? "herald_naran_q0611_20.htm" : "herald_naran_q0611_19.htm";
 			}
+			
 			if (cond == 5)
 			{
 				return CheckNextLevel(st, 400, 400, 200, TOTEM_OF_WISDOM, false) ? "herald_naran_q0611_27.htm" : "herald_naran_q0611_22.htm";
 			}
+			
 			if (cond == 6)
 			{
 				return "herald_naran_q0611_24.htm";
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -341,6 +369,7 @@ public class _611_AllianceWithVarkaSilenos extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		if (isVarkaNpc(npcId))
 		{
 			if (st.getQuestItemsCount(MARK_OF_VARKA_ALLIANCE5) > 0)
@@ -384,11 +413,14 @@ public class _611_AllianceWithVarkaSilenos extends Quest implements ScriptFile
 				return "herald_naran_q0611_26.htm";
 			}
 		}
+		
 		if (st.getQuestItemsCount(MARK_OF_VARKA_ALLIANCE5) > 0)
 		{
 			return null;
 		}
+		
 		int cond = st.getCond();
+		
 		if ((npcId == RAIDER) || (npcId == FOOTMAN) || (npcId == SCOUT) || (npcId == WAR_HOUND) || (npcId == SHAMAN))
 		{
 			if (cond > 0)
@@ -410,6 +442,7 @@ public class _611_AllianceWithVarkaSilenos extends Quest implements ScriptFile
 				st.rollAndGive(KB_GENERAL, 1, 80);
 			}
 		}
+		
 		return null;
 	}
 }

@@ -33,7 +33,7 @@ import lineage2.gameserver.utils.TimeUtils;
 public class RainbowMessengerInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -63,8 +63,10 @@ public class RainbowMessengerInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		ClanHall clanHall = getClanHall();
 		ClanHallMiniGameEvent miniGameEvent = clanHall.getSiegeEvent();
+		
 		if (command.equalsIgnoreCase("register"))
 		{
 			if (miniGameEvent.isRegistrationOver())
@@ -72,28 +74,35 @@ public class RainbowMessengerInstance extends NpcInstance
 				showChatWindow(player, "residence2/clanhall/messenger_yetti014.htm");
 				return;
 			}
+			
 			Clan clan = player.getClan();
+			
 			if ((clan == null) || (clan.getLevel() < 3) || (clan.getAllSize() <= 5))
 			{
 				showChatWindow(player, "residence2/clanhall/messenger_yetti011.htm");
 				return;
 			}
+			
 			if (clan.getLeaderId() != player.getObjectId())
 			{
 				showChatWindow(player, "residence2/clanhall/messenger_yetti010.htm");
 				return;
 			}
+			
 			if (clan.getHasHideout() > 0)
 			{
 				showChatWindow(player, "residence2/clanhall/messenger_yetti012.htm");
 				return;
 			}
+			
 			if (miniGameEvent.getSiegeClan(SiegeEvent.ATTACKERS, clan) != null)
 			{
 				showChatWindow(player, "residence2/clanhall/messenger_yetti013.htm");
 				return;
 			}
+			
 			long count = player.getInventory().getCountOf(ITEM_ID);
+			
 			if (count == 0)
 			{
 				showChatWindow(player, "residence2/clanhall/messenger_yetti008.htm");
@@ -104,6 +113,7 @@ public class RainbowMessengerInstance extends NpcInstance
 				{
 					return;
 				}
+				
 				CMGSiegeClanObject siegeClanObject = new CMGSiegeClanObject(SiegeEvent.ATTACKERS, clan, count);
 				miniGameEvent.addObject(SiegeEvent.ATTACKERS, siegeClanObject);
 				SiegeClanDAO.getInstance().insert(clanHall, siegeClanObject);
@@ -117,18 +127,23 @@ public class RainbowMessengerInstance extends NpcInstance
 				showChatWindow(player, "residence2/clanhall/messenger_yetti017.htm");
 				return;
 			}
+			
 			Clan clan = player.getClan();
+			
 			if ((clan == null) || (clan.getLevel() < 3))
 			{
 				showChatWindow(player, "residence2/clanhall/messenger_yetti011.htm");
 				return;
 			}
+			
 			if (clan.getLeaderId() != player.getObjectId())
 			{
 				showChatWindow(player, "residence2/clanhall/messenger_yetti010.htm");
 				return;
 			}
+			
 			SiegeClanObject siegeClanObject = miniGameEvent.getSiegeClan(SiegeEvent.ATTACKERS, clan);
+			
 			if (siegeClanObject == null)
 			{
 				showChatWindow(player, "residence2/clanhall/messenger_yetti016.htm");
@@ -148,18 +163,23 @@ public class RainbowMessengerInstance extends NpcInstance
 				showChatWindow(player, "residence2/clanhall/messenger_yetti010.htm");
 				return;
 			}
+			
 			Clan clan = player.getClan();
+			
 			if ((clan == null) || (clan.getLevel() < 3))
 			{
 				showChatWindow(player, "residence2/clanhall/messenger_yetti011.htm");
 				return;
 			}
+			
 			if (clan.getLeaderId() != player.getObjectId())
 			{
 				showChatWindow(player, "residence2/clanhall/messenger_yetti010.htm");
 				return;
 			}
+			
 			SiegeClanObject siegeClanObject = miniGameEvent.getSiegeClan(ClanHallMiniGameEvent.REFUND, clan);
+			
 			if (siegeClanObject == null)
 			{
 				showChatWindow(player, "residence2/clanhall/messenger_yetti020.htm");
@@ -190,6 +210,7 @@ public class RainbowMessengerInstance extends NpcInstance
 		ClanHall clanHall = getClanHall();
 		Clan clan = clanHall.getOwner();
 		NpcHtmlMessage msg = new NpcHtmlMessage(player, this);
+		
 		if (clan != null)
 		{
 			msg.setFile("residence2/clanhall/messenger_yetti001.htm");
@@ -199,6 +220,7 @@ public class RainbowMessengerInstance extends NpcInstance
 		{
 			msg.setFile("residence2/clanhall/messenger_yetti001a.htm");
 		}
+		
 		msg.replace("%siege_date%", TimeUtils.toSimpleFormat(clanHall.getSiegeDate()));
 		player.sendPacket(msg);
 	}

@@ -40,6 +40,7 @@ public class SummonAI extends PlayableAI
 	{
 		Summon actor = getActor();
 		clearNextAction();
+		
 		if (actor.isDepressed())
 		{
 			setAttackTarget(actor.getPlayer());
@@ -55,6 +56,7 @@ public class SummonAI extends PlayableAI
 		{
 			actor.setFollowMode(true);
 		}
+		
 		super.thinkActive();
 	}
 	
@@ -66,10 +68,12 @@ public class SummonAI extends PlayableAI
 	protected void thinkAttack(boolean checkRange)
 	{
 		Summon actor = getActor();
+		
 		if (actor.isDepressed())
 		{
 			setAttackTarget(actor.getPlayer());
 		}
+		
 		super.thinkAttack(checkRange);
 	}
 	
@@ -82,18 +86,22 @@ public class SummonAI extends PlayableAI
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		Summon actor = getActor();
+		
 		if ((attacker != null) && actor.getPlayer().isDead() && !actor.isDepressed())
 		{
 			Attack(attacker, false, false);
 		}
+		
 		if (actor.getPlayer().isDebug() && (null != attacker))
 		{
 			actor.getPlayer().sendMessage("SummonAI onEvtAttacked isDefendMode:" + actor.isDefendMode() + " isDepressed:" + actor.isDepressed() + " " + attacker.getName());
 		}
+		
 		if ((attacker != null) && actor.isDefendMode() && !actor.isDepressed())
 		{
 			Attack(attacker, false, false);
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	

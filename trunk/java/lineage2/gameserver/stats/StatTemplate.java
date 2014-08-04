@@ -55,6 +55,7 @@ public class StatTemplate
 		{
 			_triggerList = new ArrayList<>(4);
 		}
+		
 		_triggerList.add(f);
 	}
 	
@@ -87,11 +88,14 @@ public class StatTemplate
 		{
 			return Func.EMPTY_FUNC_ARRAY;
 		}
+		
 		Func[] funcs = new Func[_funcTemplates.length];
+		
 		for (int i = 0; i < funcs.length; i++)
 		{
 			funcs[i] = _funcTemplates[i].getFunc(owner);
 		}
+		
 		return funcs;
 	}
 }

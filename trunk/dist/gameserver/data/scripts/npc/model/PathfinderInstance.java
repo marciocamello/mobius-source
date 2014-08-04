@@ -33,7 +33,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public class PathfinderInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -70,6 +70,7 @@ public class PathfinderInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String pom;
+		
 		if (val == 0)
 		{
 			pom = "" + npcId;
@@ -78,6 +79,7 @@ public class PathfinderInstance extends NpcInstance
 		{
 			pom = npcId + "-" + val;
 		}
+		
 		return "instance/soloKamaloka/" + pom + ".htm";
 	}
 	
@@ -93,9 +95,11 @@ public class PathfinderInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.startsWith("ExitSoloKama"))
 		{
 			Reflection r = getReflection();
+			
 			if (r.getReturnLoc() != null)
 			{
 				player.teleToLocation(r.getReturnLoc(), ReflectionManager.DEFAULT);
@@ -104,6 +108,7 @@ public class PathfinderInstance extends NpcInstance
 			{
 				player.setReflection(ReflectionManager.DEFAULT);
 			}
+			
 			player.unsetVar("backCoords");
 			r.startCollapseTimer(1000);
 		}
@@ -114,8 +119,10 @@ public class PathfinderInstance extends NpcInstance
 				showChatWindow(player, "instance/soloKamaloka/32484-no.htm");
 				return;
 			}
+			
 			DomainArea domain = MapRegionManager.getInstance().getRegionData(DomainArea.class, this);
 			String htmlpath = "instance/soloKamaloka/" + getNpcId();
+			
 			if (domain != null)
 			{
 				switch (domain.getId())
@@ -123,49 +130,62 @@ public class PathfinderInstance extends NpcInstance
 					case 1:
 						htmlpath += "-gludio";
 						break;
+					
 					case 2:
 						htmlpath += "-dion";
 						break;
+					
 					case 4:
 						htmlpath += "-oren";
 						break;
+					
 					case 6:
 						htmlpath += "-heine";
 						break;
+					
 					case 8:
 						htmlpath += "-rune";
 						break;
+					
 					case 9:
 						htmlpath += "-schuttgart";
 						break;
 				}
 			}
+			
 			htmlpath += ".htm";
 			showChatWindow(player, htmlpath);
 		}
 		else if (command.startsWith("ShowResults"))
 		{
 			String htmlpath = "instance/soloKamaloka/" + getNpcId();
+			
 			switch (getRewardRank())
 			{
 				case 0:
 					htmlpath += "-F";
 					break;
+				
 				case 1:
 					htmlpath += "-D";
 					break;
+				
 				case 2:
 					htmlpath += "-C";
 					break;
+				
 				case 3:
 					htmlpath += "-B";
 					break;
+				
 				case 4:
 					htmlpath += "-A";
 					break;
+				
 				case 5:
 					htmlpath += "-S";
 					break;
+				
 				case 6:
 					if (getReflection().getInstancedZoneId() == INSTANCE_75LVL_ID)
 					{
@@ -175,8 +195,10 @@ public class PathfinderInstance extends NpcInstance
 					{
 						htmlpath += "-S";
 					}
+					
 					break;
 			}
+			
 			htmlpath += ".htm";
 			showChatWindow(player, htmlpath);
 		}
@@ -185,6 +207,7 @@ public class PathfinderInstance extends NpcInstance
 			if (!_rewarded)
 			{
 				int[][] rewards = getRewardList(getRewardRank(), getReflection().getInstancedZone());
+				
 				if (rewards != null)
 				{
 					for (int[] item : rewards)
@@ -193,6 +216,7 @@ public class PathfinderInstance extends NpcInstance
 						{
 							int id = item[0];
 							int count = item[1];
+							
 							if ((id > 0) && (count > 0))
 							{
 								Functions.addItem(player, id, count);
@@ -200,8 +224,10 @@ public class PathfinderInstance extends NpcInstance
 						}
 					}
 				}
+				
 				_rewarded = true;
 			}
+			
 			showChatWindow(player, 1);
 		}
 		else if (command.startsWith("Chat"))
@@ -214,6 +240,7 @@ public class PathfinderInstance extends NpcInstance
 			catch (NumberFormatException nfe)
 			{
 				String filename = command.substring(5).trim();
+				
 				if (filename.length() == 0)
 				{
 					showChatWindow(player, "npcdefault.htm");
@@ -228,6 +255,7 @@ public class PathfinderInstance extends NpcInstance
 		{
 			int val = Integer.parseInt(command.substring(14));
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(val))
@@ -256,7 +284,9 @@ public class PathfinderInstance extends NpcInstance
 		{
 			return _rank;
 		}
+		
 		Reflection r = getReflection();
+		
 		if (r instanceof KamalokaNightmare)
 		{
 			_rank = ((KamalokaNightmare) r).getRank();
@@ -265,6 +295,7 @@ public class PathfinderInstance extends NpcInstance
 		{
 			_rank = 0;
 		}
+		
 		return _rank;
 	}
 	
@@ -287,6 +318,7 @@ public class PathfinderInstance extends NpcInstance
 		for (int i = rank; i >= 0; i--)
 		{
 			rewards = params.getString("reward_lvl_" + i, null);
+			
 			if (rewards != null)
 			{
 				break;
@@ -305,10 +337,12 @@ public class PathfinderInstance extends NpcInstance
 		for (int i = 0; i < rewards_count; i++)
 		{
 			String[] item_s = items_list[i].split("-");
+			
 			if (item_s.length != 2)
 			{
 				continue;
 			}
+			
 			int[] item = new int[2];
 			item[0] = Integer.parseInt(item_s[0]);
 			item[1] = Integer.parseInt(item_s[1]);

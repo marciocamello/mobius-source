@@ -139,6 +139,7 @@ public class OlympiadHistory
 	{
 		int team = _objectId1 == target ? 1 : 2;
 		String main = null;
+		
 		if (_gameStatus == 0)
 		{
 			main = StringHolder.getInstance().getNotNull(player, "hero.history.tie");
@@ -151,6 +152,7 @@ public class OlympiadHistory
 		{
 			main = StringHolder.getInstance().getNotNull(player, "hero.history.loss");
 		}
+		
 		main = main.replace("%classId%", String.valueOf(team == 1 ? _classId2 : _classId1));
 		main = main.replace("%name%", team == 1 ? _name2 : _name1);
 		main = main.replace("%date%", TimeUtils.toSimpleFormat(_gameStartTime));

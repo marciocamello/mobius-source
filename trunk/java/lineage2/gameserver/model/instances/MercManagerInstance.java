@@ -26,7 +26,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public final class MercManagerInstance extends MerchantInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -64,26 +64,32 @@ public final class MercManagerInstance extends MerchantInstance
 		{
 			return;
 		}
+		
 		int condition = validateCondition(player);
+		
 		if ((condition <= COND_ALL_FALSE) || (condition == COND_BUSY_BECAUSE_OF_SIEGE))
 		{
 			return;
 		}
+		
 		if (condition == COND_OWNER)
 		{
 			StringTokenizer st = new StringTokenizer(command, " ");
 			String actualCommand = st.nextToken();
 			String val = "";
+			
 			if (st.countTokens() >= 1)
 			{
 				val = st.nextToken();
 			}
+			
 			if (actualCommand.equalsIgnoreCase("hire"))
 			{
 				if (val.equals(""))
 				{
 					return;
 				}
+				
 				showShopWindow(player, Integer.parseInt(val), false);
 			}
 			else
@@ -104,6 +110,7 @@ public final class MercManagerInstance extends MerchantInstance
 	{
 		String filename = "castle/mercmanager/mercmanager-no.htm";
 		int condition = validateCondition(player);
+		
 		if (condition == COND_BUSY_BECAUSE_OF_SIEGE)
 		{
 			filename = "castle/mercmanager/mercmanager-busy.htm";
@@ -112,6 +119,7 @@ public final class MercManagerInstance extends MerchantInstance
 		{
 			filename = "castle/mercmanager/mercmanager.htm";
 		}
+		
 		player.sendPacket(new NpcHtmlMessage(player, this, filename, val));
 	}
 	
@@ -126,6 +134,7 @@ public final class MercManagerInstance extends MerchantInstance
 		{
 			return COND_OWNER;
 		}
+		
 		if ((getCastle() != null) && (getCastle().getId() > 0))
 		{
 			if (player.getClan() != null)
@@ -140,6 +149,7 @@ public final class MercManagerInstance extends MerchantInstance
 				}
 			}
 		}
+		
 		return COND_ALL_FALSE;
 	}
 }

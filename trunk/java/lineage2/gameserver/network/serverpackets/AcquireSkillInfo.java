@@ -32,6 +32,7 @@ public class AcquireSkillInfo extends L2GameServerPacket
 	{
 		_type = type;
 		_learn = learn;
+		
 		if (_learn.getItemId() != 0)
 		{
 			_reqs = new ArrayList<>(1);
@@ -47,7 +48,6 @@ public class AcquireSkillInfo extends L2GameServerPacket
 		writeD(_learn.getLevel());
 		writeD(_learn.getCost()); // sp/rep
 		writeD(_type.ordinal());
-		
 		writeD(_reqs.size()); // requires size
 		
 		for (Require temp : _reqs)

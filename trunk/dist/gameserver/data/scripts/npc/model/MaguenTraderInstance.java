@@ -26,7 +26,7 @@ import lineage2.gameserver.utils.NpcUtils;
 public final class MaguenTraderInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -52,6 +52,7 @@ public final class MaguenTraderInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("request_collector"))
 		{
 			if (Functions.getItemCount(player, 15487) > 0)

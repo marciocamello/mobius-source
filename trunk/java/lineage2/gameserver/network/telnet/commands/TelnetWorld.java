@@ -55,21 +55,25 @@ public class TelnetWorld implements TelnetCommandHolder
 				{
 					return null;
 				}
+				
 				Iterable<Player> players = GameObjectsStorage.getAllPlayersForIterate();
 				Iterator<Player> itr = players.iterator();
 				StringBuilder sb = new StringBuilder();
 				int count = 0;
 				Player player;
 				Pattern pattern = Pattern.compile(args[0] + "\\S+", Pattern.CASE_INSENSITIVE);
+				
 				while (itr.hasNext())
 				{
 					player = itr.next();
+					
 					if (pattern.matcher(player.getName()).matches())
 					{
 						count++;
 						sb.append(player).append('\n');
 					}
 				}
+				
 				if (count == 0)
 				{
 					sb.append("Player not found.").append('\n');
@@ -79,6 +83,7 @@ public class TelnetWorld implements TelnetCommandHolder
 					sb.append("=================================================\n");
 					sb.append("Found: ").append(count).append(" players.").append('\n');
 				}
+				
 				return sb.toString();
 			}
 		});
@@ -97,11 +102,14 @@ public class TelnetWorld implements TelnetCommandHolder
 				{
 					return null;
 				}
+				
 				Player player = GameObjectsStorage.getPlayer(args[0]);
+				
 				if (player == null)
 				{
 					return "Player not found.\n";
 				}
+				
 				StringBuilder sb = new StringBuilder();
 				sb.append("Name: .................... ").append(player.getName()).append('\n');
 				sb.append("ID: ...................... ").append(player.getObjectId()).append('\n');
@@ -109,14 +117,17 @@ public class TelnetWorld implements TelnetCommandHolder
 				sb.append("IP: ...................... ").append(player.getIP()).append('\n');
 				sb.append("Level: ................... ").append(player.getLevel()).append('\n');
 				sb.append("Location: ................ ").append(player.getLoc()).append('\n');
+				
 				if (player.getClan() != null)
 				{
 					sb.append("Clan: .................... ").append(player.getClan().getName()).append('\n');
+					
 					if (player.getAlliance() != null)
 					{
 						sb.append("Ally: .................... ").append(player.getAlliance().getAllyName()).append('\n');
 					}
 				}
+				
 				sb.append("Offline: ................. ").append(player.isInOfflineMode()).append('\n');
 				sb.append(player.toString()).append('\n');
 				return sb.toString();
@@ -135,15 +146,19 @@ public class TelnetWorld implements TelnetCommandHolder
 			{
 				List<Player> gms = GmListTable.getAllGMs();
 				int count = gms.size();
+				
 				if (count == 0)
 				{
 					return "GMs not found.\n";
 				}
+				
 				StringBuilder sb = new StringBuilder();
+				
 				for (int i = 0; i < count; i++)
 				{
 					sb.append(gms.get(i)).append('\n');
 				}
+				
 				sb.append("Found: ").append(count).append(" GMs.").append('\n');
 				return sb.toString();
 			}

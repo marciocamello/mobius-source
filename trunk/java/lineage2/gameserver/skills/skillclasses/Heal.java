@@ -66,6 +66,7 @@ public class Heal extends Skill
 		{
 			return false;
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
@@ -78,11 +79,14 @@ public class Heal extends Skill
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{
 		double hp = _power;
+		
 		if (!_staticPower)
 		{
 			hp += 0.1 * _power * Math.sqrt(activeChar.getMAtk(null, this) / 333);
 		}
+		
 		int sps = isSSPossible() && (getHpConsume() == 0) ? activeChar.getChargedSpiritShot() : 0;
+		
 		if (sps == 2)
 		{
 			hp *= 1.5;
@@ -91,11 +95,13 @@ public class Heal extends Skill
 		{
 			hp *= 1.3;
 		}
+		
 		if ((activeChar.getSkillMastery(getId()) == 3) && !_staticPower)
 		{
 			activeChar.removeSkillMastery(getId());
 			hp *= 3.;
 		}
+		
 		for (Creature target : targets)
 		{
 			if (target != null)
@@ -104,6 +110,7 @@ public class Heal extends Skill
 				{
 					continue;
 				}
+				
 				if (target != activeChar)
 				{
 					if (target.isPlayer() && target.isCursedWeaponEquipped())
@@ -115,7 +122,9 @@ public class Heal extends Skill
 						continue;
 					}
 				}
+				
 				double addToHp = 0;
+				
 				if (_staticPower)
 				{
 					addToHp = _power;
@@ -125,11 +134,14 @@ public class Heal extends Skill
 					addToHp = (hp * (!_ignoreHpEff ? target.calcStat(Stats.HEAL_EFFECTIVNESS, 100., activeChar, this) : 100.)) / 100.;
 					addToHp = activeChar.calcStat(Stats.HEAL_POWER, addToHp, target, this);
 				}
+				
 				addToHp = Math.max(0, Math.min(addToHp, ((target.calcStat(Stats.HP_LIMIT, null, null) * target.getMaxHp()) / 100.) - target.getCurrentHp()));
+				
 				if (addToHp > 0)
 				{
 					target.setCurrentHp(addToHp + target.getCurrentHp(), false);
 				}
+				
 				if (getId() == 4051)
 				{
 					target.sendPacket(Msg.REJUVENATING_HP);
@@ -148,6 +160,7 @@ public class Heal extends Skill
 				else if (target.isServitor() || target.isPet())
 				{
 					Player owner = target.getPlayer();
+					
 					if (owner != null)
 					{
 						if (activeChar == target)
@@ -164,9 +177,11 @@ public class Heal extends Skill
 						}
 					}
 				}
+				
 				getEffects(activeChar, target, getActivateRate() > 0, false);
 			}
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());

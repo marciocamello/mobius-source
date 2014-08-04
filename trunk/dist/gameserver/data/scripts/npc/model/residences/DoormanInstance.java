@@ -27,7 +27,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public abstract class DoormanInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -93,7 +93,9 @@ public abstract class DoormanInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		int cond = getCond(player);
+		
 		switch (cond)
 		{
 			case COND_OWNER:
@@ -111,10 +113,13 @@ public abstract class DoormanInstance extends NpcInstance
 						ReflectionUtils.getDoor(i).closeMe();
 					}
 				}
+				
 				break;
+			
 			case COND_SIEGE:
 				player.sendPacket(new NpcHtmlMessage(player, this, _siegeDialog, 0));
 				break;
+			
 			case COND_FAIL:
 				player.sendPacket(new NpcHtmlMessage(player, this, _failDialog, 0));
 				break;
@@ -132,18 +137,22 @@ public abstract class DoormanInstance extends NpcInstance
 	{
 		String filename = null;
 		int cond = getCond(player);
+		
 		switch (cond)
 		{
 			case COND_OWNER:
 				filename = _mainDialog;
 				break;
+			
 			case COND_SIEGE:
 				filename = _siegeDialog;
 				break;
+			
 			case COND_FAIL:
 				filename = _failDialog;
 				break;
 		}
+		
 		player.sendPacket(new NpcHtmlMessage(player, this, filename, val));
 	}
 	
@@ -156,14 +165,17 @@ public abstract class DoormanInstance extends NpcInstance
 	{
 		Residence residence = getResidence();
 		Clan residenceOwner = residence.getOwner();
+		
 		if ((residenceOwner != null) && (player.getClan() == residenceOwner) && ((player.getClanPrivileges() & getOpenPriv()) == getOpenPriv()))
 		{
 			if (residence.getSiegeEvent().isInProgress())
 			{
 				return COND_SIEGE;
 			}
+			
 			return COND_OWNER;
 		}
+		
 		return COND_FAIL;
 	}
 	

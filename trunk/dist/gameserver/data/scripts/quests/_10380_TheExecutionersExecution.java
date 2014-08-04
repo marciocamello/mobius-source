@@ -44,6 +44,7 @@ public class _10380_TheExecutionersExecution extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("warden_endrigo_q10380_06.htm"))
 		{
 			st.setCond(1);
@@ -57,6 +58,7 @@ public class _10380_TheExecutionersExecution extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -66,6 +68,7 @@ public class _10380_TheExecutionersExecution extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		String htmltext = "noquest";
+		
 		if (npcId == ENDRIGO)
 		{
 			if (st.isCompleted())
@@ -95,6 +98,7 @@ public class _10380_TheExecutionersExecution extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -103,6 +107,7 @@ public class _10380_TheExecutionersExecution extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == GUILLOTINE_OF_DEATH)
 		{
 			if (cond == 1)
@@ -111,6 +116,7 @@ public class _10380_TheExecutionersExecution extends Quest implements ScriptFile
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		return null;
 	}
 	

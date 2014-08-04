@@ -38,6 +38,7 @@ public class Attack extends L2GameServerPacket
 			_targetId = target.getObjectId();
 			_damage = damage;
 			_flags = FLAG;
+			
 			if (miss)
 			{
 				_flags = FLAG_MISS;
@@ -91,10 +92,8 @@ public class Attack extends L2GameServerPacket
 	{
 		// Get the last position in the hits table
 		int pos = hits.length;
-		
 		// Create a new Hit object
 		Hit[] tmp = new Hit[pos + 1];
-		
 		// Add the new Hit object to hits table
 		System.arraycopy(hits, 0, tmp, 0, hits.length);
 		tmp[pos] = new Hit(target, damage, miss, crit, shld);
@@ -115,7 +114,6 @@ public class Attack extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x33);
-		
 		writeD(_attackerId);
 		writeD(hits[0]._targetId);
 		writeC(0x00); // L2WT GOD
@@ -126,6 +124,7 @@ public class Attack extends L2GameServerPacket
 		writeD(_y);
 		writeD(_z);
 		writeH(hits.length - 1);
+		
 		for (int i = 1; i < hits.length; i++)
 		{
 			writeD(hits[i]._targetId);
@@ -133,6 +132,7 @@ public class Attack extends L2GameServerPacket
 			writeD(hits[i]._flags);
 			writeD(_grade);
 		}
+		
 		writeD(_tx);
 		writeD(_ty);
 		writeD(_tz);

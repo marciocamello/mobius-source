@@ -54,16 +54,19 @@ public class _238_SuccessFailureOfBusiness extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("32641-03.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 		}
+		
 		if (event.equalsIgnoreCase("32641-06.htm"))
 		{
 			st.takeAllItems(BrokenPieveOfMagicForce);
 			st.setCond(3);
 		}
+		
 		return htmltext;
 	}
 	
@@ -74,6 +77,7 @@ public class _238_SuccessFailureOfBusiness extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int id = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == Helvetica)
 		{
 			if (id == CREATED)
@@ -119,6 +123,7 @@ public class _238_SuccessFailureOfBusiness extends Quest implements ScriptFile
 				htmltext = "32641-08.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -126,9 +131,11 @@ public class _238_SuccessFailureOfBusiness extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if ((cond == 1) && (npc.getNpcId() == BrazierOfPurity))
 		{
 			st.giveItems(BrokenPieveOfMagicForce, 1);
+			
 			if (st.getQuestItemsCount(BrokenPieveOfMagicForce) >= 10)
 			{
 				st.setCond(2);
@@ -137,11 +144,13 @@ public class _238_SuccessFailureOfBusiness extends Quest implements ScriptFile
 		else if ((cond == 3) && ((npc.getNpcId() == EvilSpirit) || (npc.getNpcId() == GuardianSpirit)))
 		{
 			st.giveItems(GuardianSpiritFragment, 1);
+			
 			if (st.getQuestItemsCount(GuardianSpiritFragment) >= 20)
 			{
 				st.setCond(4);
 			}
 		}
+		
 		return null;
 	}
 }

@@ -75,6 +75,7 @@ public class PlayerAI extends PlayableAI
 	public void onIntentionInteract(GameObject object)
 	{
 		Player actor = getActor();
+		
 		if (actor.getSittingTask())
 		{
 			setNextAction(nextAction.INTERACT, object, null, false, false);
@@ -86,6 +87,7 @@ public class PlayerAI extends PlayableAI
 			clientActionFailed();
 			return;
 		}
+		
 		super.onIntentionInteract(object);
 	}
 	
@@ -97,6 +99,7 @@ public class PlayerAI extends PlayableAI
 	public void onIntentionPickUp(GameObject object)
 	{
 		Player actor = getActor();
+		
 		if (actor.getSittingTask())
 		{
 			setNextAction(nextAction.PICKUP, object, null, false, false);
@@ -108,6 +111,7 @@ public class PlayerAI extends PlayableAI
 			clientActionFailed();
 			return;
 		}
+		
 		super.onIntentionPickUp(object);
 	}
 	
@@ -122,7 +126,9 @@ public class PlayerAI extends PlayableAI
 		{
 			return;
 		}
+		
 		super.onEvtForgetObject(object);
+		
 		for (Summon summon : getActor().getSummonList())
 		{
 			summon.getAI().notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, object);
@@ -137,24 +143,29 @@ public class PlayerAI extends PlayableAI
 	protected void thinkAttack(boolean checkRange)
 	{
 		Player actor = getActor();
+		
 		if (actor.isInFlyingTransform())
 		{
 			setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 			return;
 		}
+		
 		FlagItemAttachment attachment = actor.getActiveWeaponFlagAttachment();
+		
 		if ((attachment != null) && !attachment.canAttack(actor))
 		{
 			setIntention(AI_INTENTION_ACTIVE);
 			actor.sendActionFailed();
 			return;
 		}
+		
 		if (actor.isFrozen())
 		{
 			setIntention(AI_INTENTION_ACTIVE);
 			actor.sendPacket(SystemMsg.YOU_CANNOT_MOVE_WHILE_FROZEN, ActionFail.STATIC);
 			return;
 		}
+		
 		super.thinkAttack(checkRange);
 	}
 	
@@ -167,18 +178,21 @@ public class PlayerAI extends PlayableAI
 	{
 		Player actor = getActor();
 		FlagItemAttachment attachment = actor.getActiveWeaponFlagAttachment();
+		
 		if ((attachment != null) && !attachment.canCast(actor, _skill))
 		{
 			setIntention(AI_INTENTION_ACTIVE);
 			actor.sendActionFailed();
 			return;
 		}
+		
 		if (actor.isFrozen())
 		{
 			setIntention(AI_INTENTION_ACTIVE);
 			actor.sendPacket(SystemMsg.YOU_CANNOT_MOVE_WHILE_FROZEN, ActionFail.STATIC);
 			return;
 		}
+		
 		super.thinkCast(checkRange);
 	}
 	
@@ -192,21 +206,25 @@ public class PlayerAI extends PlayableAI
 	protected void thinkCoupleAction(Player target, Integer socialId, boolean cancel)
 	{
 		Player actor = getActor();
+		
 		if ((target == null) || !target.isOnline())
 		{
 			actor.sendPacket(Msg.COUPLE_ACTION_WAS_CANCELED);
 			return;
 		}
+		
 		if (cancel || !actor.isInRange(target, 50) || actor.isInRange(target, 20) || (actor.getReflection() != target.getReflection()) || !GeoEngine.canSeeTarget(actor, target, false))
 		{
 			target.sendPacket(Msg.COUPLE_ACTION_WAS_CANCELED);
 			actor.sendPacket(Msg.COUPLE_ACTION_WAS_CANCELED);
 			return;
 		}
+		
 		if (_forceUse)
 		{
 			target.getAI().setIntention(CtrlIntention.AI_INTENTION_COUPLE_ACTION, actor, socialId);
 		}
+		
 		int heading = actor.calcHeading(target.getX(), target.getY());
 		actor.setHeading(heading);
 		actor.broadcastPacket(new ExRotation(actor.getObjectId(), heading));
@@ -223,17 +241,21 @@ public class PlayerAI extends PlayableAI
 	public void Attack(GameObject target, boolean forceUse, boolean dontMove)
 	{
 		Player actor = getActor();
+		
 		if (actor.isInFlyingTransform())
 		{
 			actor.sendActionFailed();
 			return;
 		}
+		
 		if ((System.currentTimeMillis() - actor.getLastAttackPacket()) < Config.ATTACK_PACKET_DELAY)
 		{
 			actor.sendActionFailed();
 			return;
 		}
+		
 		actor.setLastAttackPacket();
+		
 		if (actor.getSittingTask())
 		{
 			setNextAction(nextAction.ATTACK, target, null, forceUse, false);
@@ -245,6 +267,7 @@ public class PlayerAI extends PlayableAI
 			clientActionFailed();
 			return;
 		}
+		
 		super.Attack(target, forceUse, dontMove);
 	}
 	
@@ -259,6 +282,7 @@ public class PlayerAI extends PlayableAI
 	public void Cast(Skill skill, Creature target, boolean forceUse, boolean dontMove)
 	{
 		Player actor = getActor();
+		
 		if (!skill.altUse() && !skill.isToggle() && !((skill.getSkillType() == SkillType.CRAFT) && Config.ALLOW_TALK_WHILE_SITTING))
 		{
 			if (actor.getSittingTask())
@@ -283,10 +307,12 @@ public class PlayerAI extends PlayableAI
 				{
 					actor.sendPacket(Msg.YOU_CANNOT_MOVE_WHILE_SITTING);
 				}
+				
 				clientActionFailed();
 				return;
 			}
 		}
+		
 		super.Cast(skill, target, forceUse, dontMove);
 	}
 	
@@ -299,9 +325,11 @@ public class PlayerAI extends PlayableAI
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		Player actor = getActor();
+		
 		if ((attacker != null) && (actor.getSummonList().size() > 0))
 		{
 			List<Summon> servitors = actor.getSummonList().getServitors();
+			
 			for (Summon summon : servitors)
 			{
 				if (!summon.isDead() && summon.isDefendMode() && !summon.isDepressed())
@@ -310,6 +338,7 @@ public class PlayerAI extends PlayableAI
 				}
 			}
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	

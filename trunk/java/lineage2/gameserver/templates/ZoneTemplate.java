@@ -159,11 +159,13 @@ public class ZoneTemplate
 		_affectRace = set.getString("affect_race", "all").equals("all") ? null : Race.valueOf(set.getString("affect_race"));
 		String s = set.getString("skill_name", null);
 		Skill skill = null;
+		
 		if (s != null)
 		{
 			String[] sk = s.split("[\\s,;]+");
 			skill = SkillTable.getInstance().getInfo(Integer.parseInt(sk[0]), Integer.parseInt(sk[1]));
 		}
+		
 		_skill = skill;
 		_skillProb = set.getInteger("skill_prob", 100);
 		_initialDelay = set.getInteger("initial_delay", 1);
@@ -181,6 +183,7 @@ public class ZoneTemplate
 		_PKrestartPoints = (List<Location>) set.get("PKrestart_points");
 		_restartTime = set.getLong("restart_time", 0L);
 		s = (String) set.get("blocked_actions");
+		
 		if (s != null)
 		{
 			_blockedActions = s.split(ExProperties.defaultDelimiter);
@@ -189,6 +192,7 @@ public class ZoneTemplate
 		{
 			_blockedActions = null;
 		}
+		
 		_index = set.getInteger("index", 0);
 		_taxById = set.getInteger("taxById", 0);
 		_jumpingTrackId = set.getInteger("jumping_track", -1);

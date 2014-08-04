@@ -116,6 +116,7 @@ public class CommissionShopManager
 	{
 		ItemInstance[] items = player.getInventory().getItems();
 		List<TradeItem> registrableItems = new ArrayList<>(items.length);
+		
 		for (ItemInstance item : items)
 		{
 			if (item.canBeSold(player))
@@ -123,6 +124,7 @@ public class CommissionShopManager
 				registrableItems.add(new TradeItem(item));
 			}
 		}
+		
 		player.sendPacket(new ExResponseCommissionItemList(registrableItems));
 	}
 	
@@ -143,6 +145,7 @@ public class CommissionShopManager
 	public void showCommissionInfo(Player player, int itemObjId)
 	{
 		ItemInstance item = player.getInventory().getItemByObjectId(itemObjId);
+		
 		if ((item != null) && item.canBeSold(player))
 		{
 			player.sendPacket(new ExResponseCommissionInfo(item));
@@ -160,6 +163,7 @@ public class CommissionShopManager
 	public void showPlayerRegisteredItems(Player player)
 	{
 		List<CommissionItemInfo> items = CommissionShopDAO.getInstance().getRegisteredItemsFor(player);
+		
 		if (items.size() == 0)
 		{
 			player.sendPacket(new ExResponseCommissionList(ExResponseCommissionList.EMPTY_LIST));
@@ -183,27 +187,34 @@ public class CommissionShopManager
 	{
 		PcInventory inventory = player.getInventory();
 		ItemInstance item = inventory.getItemByObjectId(objectId);
+		
 		if ((item == null) || (item.getCount() < count) || !item.canBeSold(player))
 		{
 			return;
 		}
+		
 		int days = (sale_days * 2) + 1;
+		
 		if ((days <= 0) || (days > 7))
 		{
 			return;
 		}
+		
 		inventory.writeLock();
 		container.writeLock();
+		
 		try
 		{
 			long total = SafeMath.mulAndCheck(price, count);
 			long fee = Math.round(SafeMath.mulAndCheck(total, days) * REGISTRATION_FEE);
 			fee = Math.max(fee, MIN_FEE);
+			
 			if ((fee > player.getAdena()) || !player.reduceAdena(fee, false))
 			{
 				player.sendPacket(new SystemMessage2(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA_TO_REGISTER_THE_ITEM));
 				return;
 			}
+			
 			ItemInstance cItem = inventory.removeItemByObjectId(objectId, count);
 			container.addItem(cItem);
 			String item_type = cItem.getTemplate().getExItemType().name();
@@ -236,9 +247,11 @@ public class CommissionShopManager
 	{
 		Queue<List<CommissionItemInfo>> list = new ArrayDeque<>();
 		container.readLock();
+		
 		try
 		{
 			ExItemType[] types;
+			
 			if (listType == 1)
 			{
 				types = ExItemType.getTypesForMask(category);
@@ -254,6 +267,7 @@ public class CommissionShopManager
 			{
 				return;
 			}
+			
 			list = CommissionShopDAO.getInstance().getRegisteredItems(types, rareType, grade, searchName);
 		}
 		catch (Exception e)
@@ -264,11 +278,13 @@ public class CommissionShopManager
 		{
 			container.readUnlock();
 		}
+		
 		if ((list.size() == 1) && list.peek().isEmpty())
 		{
 			player.sendPacket(new ExResponseCommissionList(ExResponseCommissionList.EMPTY_LIST));
 			return;
 		}
+		
 		while (list.size() > 0)
 		{
 			List<CommissionItemInfo> part = list.poll();
@@ -288,7 +304,9 @@ public class CommissionShopManager
 		{
 			return;
 		}
+		
 		CommissionItemInfo itemInfo = CommissionShopDAO.getInstance().getCommissionItemInfo(auctionId, ExItemType.values()[exItemType]);
+		
 		if (itemInfo != null)
 		{
 			player.sendPacket(new ExResponseCommissionBuyInfo(itemInfo));
@@ -304,13 +322,16 @@ public class CommissionShopManager
 	public void returnBuyItem(Player player, long auctionId, int exItemType)
 	{
 		CommissionItemInfo itemInfo = CommissionShopDAO.getInstance().getCommissionItemInfo(auctionId, ExItemType.values()[exItemType]);
+		
 		if (itemInfo == null)
 		{
 			return;
 		}
+		
 		PcInventory inventory = player.getInventory();
 		container.writeLock();
 		inventory.writeLock();
+		
 		try
 		{
 			if (itemInfo.getItem().getOwnerId() != player.getObjectId())
@@ -318,10 +339,12 @@ public class CommissionShopManager
 				player.sendPacket(new SystemMessage2(SystemMsg.ITEM_PURCHASE_HAS_FAILED));
 				return;
 			}
+			
 			if (!CommissionShopDAO.getInstance().removeItem(auctionId))
 			{
 				return;
 			}
+			
 			container.removeItem(itemInfo.getItem());
 			inventory.addItem(itemInfo.getItem());
 			Log.LogItem(player, Log.CommissionItemDelete, itemInfo.getItem());
@@ -348,13 +371,16 @@ public class CommissionShopManager
 	public void requestBuyItem(Player player, long auctionId, int exItemType)
 	{
 		CommissionItemInfo itemInfo = CommissionShopDAO.getInstance().getCommissionItemInfo(auctionId, ExItemType.values()[exItemType]);
+		
 		if (itemInfo == null)
 		{
 			return;
 		}
+		
 		PcInventory inventory = player.getInventory();
 		container.writeLock();
 		inventory.writeLock();
+		
 		try
 		{
 			if (itemInfo.getItem().getOwnerId() == player.getObjectId())
@@ -363,22 +389,27 @@ public class CommissionShopManager
 				player.sendPacket(ExResponseCommissionBuyItem.FAILED);
 				return;
 			}
+			
 			if (!inventory.validateCapacity(itemInfo.getItem()) || !inventory.validateWeight(itemInfo.getItem()))
 			{
 				player.sendPacket(ExResponseCommissionBuyItem.FAILED);
 				return;
 			}
+			
 			long price = itemInfo.getRegisteredPrice() * itemInfo.getItem().getCount();
+			
 			if (price > player.getAdena())
 			{
 				player.sendPacket(ExResponseCommissionBuyItem.FAILED);
 				return;
 			}
+			
 			if (!CommissionShopDAO.getInstance().removeItem(auctionId))
 			{
 				player.sendPacket(ExResponseCommissionBuyItem.FAILED);
 				return;
 			}
+			
 			int receiverId = itemInfo.getItem().getOwnerId();
 			inventory.reduceAdena(price);
 			container.removeItem(itemInfo.getItem());
@@ -397,22 +428,26 @@ public class CommissionShopManager
 			ItemInstance item = ItemFunctions.createItem(ItemTemplate.ITEM_ID_ADENA);
 			item.setLocation(ItemInstance.ItemLocation.MAIL);
 			item.setCount(price - fee);
+			
 			if (item.getCount() > 0)
 			{
 				item.save();
 				mail.addAttachment(item);
 			}
+			
 			mail.setType(Mail.SenderType.SYSTEM);
 			mail.setUnread(true);
 			mail.setReturnable(false);
 			mail.setExpireTime((360 * 3600) + (int) (System.currentTimeMillis() / 1000L));
 			mail.save();
 			Player receiver = World.getPlayer(receiverId);
+			
 			if (receiver != null)
 			{
 				receiver.sendPacket(ExNoticePostArrived.STATIC_TRUE);
 				receiver.sendPacket(Msg.THE_MAIL_HAS_ARRIVED);
 			}
+			
 			Log.LogItem(player, Log.CommissionItemSold, itemInfo.getItem());
 		}
 		catch (Exception e)
@@ -432,9 +467,11 @@ public class CommissionShopManager
 	public void returnExpiredItems()
 	{
 		container.writeLock();
+		
 		try
 		{
 			List<CommissionItemInfo> expiredItems = CommissionShopDAO.getInstance().removeExpiredItems(System.currentTimeMillis());
+			
 			for (CommissionItemInfo itemInfo : expiredItems)
 			{
 				Mail mail = new Mail();
@@ -455,6 +492,7 @@ public class CommissionShopManager
 				mail.setExpireTime((360 * 3600) + (int) (System.currentTimeMillis() / 1000L));
 				mail.save();
 				Player receiver = World.getPlayer(itemInfo.getItem().getOwnerId());
+				
 				if (receiver != null)
 				{
 					receiver.sendPacket(ExNoticePostArrived.STATIC_TRUE);

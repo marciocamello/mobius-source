@@ -46,6 +46,7 @@ public class _10312_AbandonedGodsCreature extends Quest implements ScriptFile
 		{
 			return "noquest";
 		}
+		
 		if (event.equalsIgnoreCase("33031-06.htm"))
 		{
 			st.setCond(1);
@@ -76,6 +77,7 @@ public class _10312_AbandonedGodsCreature extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return event;
 	}
 	
@@ -83,12 +85,15 @@ public class _10312_AbandonedGodsCreature extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
+		
 		if (st == null)
 		{
 			return htmltext;
 		}
+		
 		Player player = st.getPlayer();
 		QuestState previous = player.getQuestState(_10310_CreationOfTwistedSpiral.class);
+		
 		if (npc.getNpcId() == 33031)
 		{
 			if ((previous == null) || (!previous.isCompleted()) || (player.getLevel() < 90))
@@ -96,14 +101,17 @@ public class _10312_AbandonedGodsCreature extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 				return "33031-03.htm";
 			}
+			
 			switch (st.getState())
 			{
 				case COMPLETED:
 					htmltext = "33031-02.htm";
 					break;
+				
 				case CREATED:
 					htmltext = "33031-01.htm";
 					break;
+				
 				case STARTED:
 					if (st.getCond() == 1)
 					{
@@ -115,10 +123,12 @@ public class _10312_AbandonedGodsCreature extends Quest implements ScriptFile
 						{
 							break;
 						}
+						
 						htmltext = "33031-09.htm";
 					}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -129,12 +139,14 @@ public class _10312_AbandonedGodsCreature extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		if (updateKill(npc, st))
 		{
 			st.setCond(2);
 			st.playSound(SOUND_MIDDLE);
 			st.unset("Arphos");
 		}
+		
 		return null;
 	}
 	

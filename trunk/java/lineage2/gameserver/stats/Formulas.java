@@ -47,6 +47,7 @@ public class Formulas
 	public static double calcHpRegen(Creature cha)
 	{
 		double init;
+		
 		if (cha.isPlayer())
 		{
 			init = cha.getPlayer().getTemplate().getBaseHpReg(cha.getLevel());
@@ -55,14 +56,17 @@ public class Formulas
 		{
 			init = cha.getTemplate().getBaseHpReg();
 		}
+		
 		if (cha.isPlayable())
 		{
 			init *= BaseStats.CON.calcBonus(cha);
+			
 			if (cha.isServitor())
 			{
 				init *= 2;
 			}
 		}
+		
 		return cha.calcStat(Stats.REGENERATE_HP_RATE, init);
 	}
 	
@@ -74,6 +78,7 @@ public class Formulas
 	public static double calcMpRegen(Creature cha)
 	{
 		double init;
+		
 		if (cha.isPlayer())
 		{
 			init = cha.getPlayer().getTemplate().getBaseMpReg(cha.getLevel());
@@ -82,14 +87,17 @@ public class Formulas
 		{
 			init = cha.getTemplate().getBaseMpReg();
 		}
+		
 		if (cha.isPlayable())
 		{
 			init *= BaseStats.MEN.calcBonus(cha);
+			
 			if (cha.isServitor())
 			{
 				init *= 2;
 			}
 		}
+		
 		return cha.calcStat(Stats.REGENERATE_MP_RATE, init);
 	}
 	
@@ -101,10 +109,12 @@ public class Formulas
 	public static double calcCpRegen(Creature cha)
 	{
 		double init = 0.0;
+		
 		if (cha.isPlayer())
 		{
 			init = cha.getPlayer().getTemplate().getBaseCpReg(cha.getLevel()) * BaseStats.CON.calcBonus(cha);
 		}
+		
 		return cha.calcStat(Stats.REGENERATE_CP_RATE, init);
 	}
 	
@@ -188,11 +198,14 @@ public class Formulas
 		info.lethal = false;
 		info.miss = false;
 		boolean isPvP = attacker.isPlayable() && target.isPlayable();
+		
 		if (info.shld)
 		{
 			info.defence += target.getShldDef();
 		}
+		
 		info.defence = Math.max(info.defence, 1);
+		
 		if (skill != null)
 		{
 			if (!blow && !target.isLethalImmune())
@@ -209,6 +222,7 @@ public class Formulas
 					{
 						info.lethal_dmg = target.getCurrentHp() / 2;
 					}
+					
 					attacker.sendPacket(Msg.HALF_KILL);
 				}
 				else if (Rnd.chance(info.lethal2))
@@ -223,37 +237,46 @@ public class Formulas
 					{
 						info.lethal_dmg = target.getCurrentHp() - 1;
 					}
+					
 					attacker.sendPacket(SystemMsg.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
 				}
 			}
+			
 			if (skill.getPower(target) == 0)
 			{
 				info.damage = 0;
 				return info;
 			}
+			
 			if (blow && !skill.isBehind() && ss)
 			{
 				info.damage *= 2.04;
 			}
+			
 			info.damage += Math.max(0., skill.getPower(target) * attacker.calcStat(Stats.SKILL_POWER, 1, null, null));
+			
 			if (blow && skill.isBehind() && ss)
 			{
 				info.damage *= 1.5;
 			}
+			
 			if (!skill.isChargeBoost())
 			{
 				info.damage *= 1 + (((Rnd.get() * attacker.getRandomDamage() * 2) - attacker.getRandomDamage()) / 100);
 			}
+			
 			if (blow)
 			{
 				info.damage *= 0.01 * attacker.calcStat(Stats.CRITICAL_DAMAGE, target, skill);
 				info.damage = target.calcStat(Stats.CRIT_DAMAGE_RECEPTIVE, info.damage, attacker, skill);
 				info.damage += 6.1 * info.crit_static;
 			}
+			
 			if (skill.isChargeBoost())
 			{
 				info.damage *= 0.8 + (0.2 * attacker.getIncreasedForce());
 			}
+			
 			if (skill.getSkillType() == SkillType.CHARGE)
 			{
 				info.damage *= 2;
@@ -262,7 +285,9 @@ public class Formulas
 			{
 				info.damage *= 1.0 + (0.06 * Math.min(attacker.getConsumedSouls(), 5));
 			}
+			
 			info.damage *= 1.10113;
+			
 			if (info.crit)
 			{
 				if (skill.isChargeBoost() || (skill.getSkillType() == SkillType.CHARGE))
@@ -278,10 +303,12 @@ public class Formulas
 		else
 		{
 			info.damage *= 1 + (((Rnd.get() * attacker.getRandomDamage() * 2) - attacker.getRandomDamage()) / 100);
+			
 			if (dual)
 			{
 				info.damage /= 2.;
 			}
+			
 			if (info.crit)
 			{
 				info.damage *= 0.01 * attacker.calcStat(Stats.CRITICAL_DAMAGE, target, skill);
@@ -289,9 +316,11 @@ public class Formulas
 				info.damage += info.crit_static;
 			}
 		}
+		
 		if (info.crit)
 		{
 			int chance = attacker.getSkillLevel(Skill.SKILL_SOUL_MASTERY);
+			
 			if (chance > 0)
 			{
 				if (chance >= 21)
@@ -310,34 +339,42 @@ public class Formulas
 				{
 					chance = 15;
 				}
+				
 				if (Rnd.chance(chance))
 				{
 					attacker.setConsumedSouls(attacker.getConsumedSouls() + 1, null);
 				}
 			}
 		}
+		
 		switch (PositionUtils.getDirectionTo(target, attacker))
 		{
 			case BEHIND:
 				info.damage *= 1.2;
 				break;
+			
 			case SIDE:
 				info.damage *= 1.1;
 				break;
+			
 			default:
 				break;
 		}
+		
 		if (ss)
 		{
 			info.damage *= blow ? 1.0 : 2.0;
 		}
+		
 		info.damage *= 70. / info.defence;
 		info.damage = attacker.calcStat(Stats.PHYSICAL_DAMAGE, info.damage, target, skill);
 		info.damage += attacker.calcStat(Stats.PHYS_SKILL_DMG_STATIC, 1, target, skill);
+		
 		if (info.shld && Rnd.chance(5))
 		{
 			info.damage = 1;
 		}
+		
 		if (isPvP)
 		{
 			if (skill == null)
@@ -351,6 +388,7 @@ public class Formulas
 				info.damage /= target.calcStat(Stats.PVP_PHYS_SKILL_DEFENCE_BONUS, 1, null, null);
 			}
 		}
+		
 		if (skill != null)
 		{
 			if (info.shld)
@@ -364,22 +402,26 @@ public class Formulas
 					target.sendPacket(SystemMsg.YOUR_SHIELD_DEFENSE_HAS_SUCCEEDED);
 				}
 			}
+			
 			if ((info.damage > 1) && !skill.hasEffects() && Rnd.chance(target.calcStat(Stats.PSKILL_EVASION, 0, attacker, skill)))
 			{
 				attacker.sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addName(attacker));
 				target.sendPacket(new SystemMessage(SystemMessage.C1_HAS_EVADED_C2S_ATTACK).addName(target).addName(attacker));
 				info.damage = 0;
 			}
+			
 			if ((info.damage > 1) && skill.isDeathlink())
 			{
 				info.damage *= 1.8 * (1.0 - attacker.getCurrentHpRatio());
 			}
+			
 			if (onCrit && !calcBlow(attacker, target, skill))
 			{
 				info.miss = true;
 				info.damage = 0;
 				attacker.sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addName(attacker));
 			}
+			
 			if (blow)
 			{
 				if (Rnd.chance(info.lethal1))
@@ -398,6 +440,7 @@ public class Formulas
 					{
 						info.lethal_dmg = target.getCurrentHp() / 2;
 					}
+					
 					attacker.sendPacket(Msg.HALF_KILL);
 				}
 				else if (Rnd.chance(info.lethal2))
@@ -416,34 +459,42 @@ public class Formulas
 					{
 						info.lethal_dmg = target.getCurrentHp() - 1;
 					}
+					
 					attacker.sendPacket(SystemMsg.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
 				}
 			}
+			
 			if (skill.isPowerModified())
 			{
 				double percentMod = skill.getWeaponModifiedPower(attacker);
 				info.damage *= percentMod;
 			}
+			
 			if (info.damage > 0)
 			{
 				attacker.displayGiveDamageMessage(target, (int) info.damage, info.crit || blow, false, false, false);
 			}
+			
 			if (target.isStunned() && calcStunBreak(info.crit))
 			{
 				target.getEffectList().stopEffects(EffectType.Stun);
 			}
+			
 			if (calcCastBreak(target, info.crit))
 			{
 				target.abortCast(false, true);
 			}
 		}
+		
 		double receiveDamageLimit = target.calcStat(Stats.RECEIVE_DAMAGE_LIMIT, 0, target, skill);
 		info.reflectableDamage = info.damage;
+		
 		if ((receiveDamageLimit > 0) && (info.damage > receiveDamageLimit))
 		{
 			info.reflectableDamage = info.damage - receiveDamageLimit;
 			info.damage = receiveDamageLimit;
 		}
+		
 		return info;
 	}
 	
@@ -463,6 +514,7 @@ public class Formulas
 		info.shld = skill.getShieldIgnore() && calcShldUse(attacker, target);
 		info.miss = false;
 		double mAtk = attacker.getMAtk(target, skill);
+		
 		if (sps == 2)
 		{
 			mAtk *= 4;
@@ -471,17 +523,22 @@ public class Formulas
 		{
 			mAtk *= 2;
 		}
+		
 		double mdef = target.getMDef(null, skill);
+		
 		if (info.shld)
 		{
 			mdef += target.getShldDef();
 		}
+		
 		if (mdef == 0)
 		{
 			mdef = 1;
 		}
+		
 		double power = skill.getPower(target);
 		info.lethal_dmg = 0;
+		
 		if (Rnd.chance(skill.getLethal1()))
 		{
 			if (target.isPlayer())
@@ -499,6 +556,7 @@ public class Formulas
 			{
 				power *= 2;
 			}
+			
 			attacker.sendPacket(Msg.HALF_KILL);
 		}
 		else if (Rnd.chance(skill.getLethal2()))
@@ -518,29 +576,37 @@ public class Formulas
 			{
 				power *= 3;
 			}
+			
 			attacker.sendPacket(SystemMsg.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
 		}
+		
 		if (power == 0)
 		{
 			if (info.lethal_dmg > 0)
 			{
 				attacker.displayGiveDamageMessage(target, (int) info.lethal_dmg, false, false, false, false);
 			}
+			
 			return info;
 		}
+		
 		if (skill.isSoulBoost())
 		{
 			power *= 1.0 + (0.06 * Math.min(attacker.getConsumedSouls(), 5));
 		}
+		
 		info.damage = (91 * power * Math.sqrt(mAtk)) / mdef;
 		info.damage *= 1 + (((Rnd.get() * attacker.getRandomDamage() * 2) - attacker.getRandomDamage()) / 100);
 		info.crit = calcMCrit(attacker.getMagicCriticalRate(target, skill));
+		
 		if (info.crit)
 		{
 			info.damage *= attacker.getMagicCriticalDmg(target, skill);
 			info.damage += info.crit_static;
 		}
+		
 		info.damage = attacker.calcStat(Stats.MAGIC_DAMAGE, info.damage, target, skill);
+		
 		if (info.shld)
 		{
 			if (Rnd.chance(5))
@@ -555,27 +621,35 @@ public class Formulas
 				attacker.sendPacket(new SystemMessage(SystemMessage.YOUR_OPPONENT_HAS_RESISTANCE_TO_MAGIC_THE_DAMAGE_WAS_DECREASED));
 			}
 		}
+		
 		int levelDiff = target.getLevel() - attacker.getLevel();
+		
 		if ((info.damage > 1) && skill.isDeathlink())
 		{
 			info.damage *= 1.8 * (1.0 - attacker.getCurrentHpRatio());
 		}
+		
 		if ((info.damage > 1) && skill.isBasedOnTargetDebuff())
 		{
 			info.damage *= 1 + (0.05 * target.getEffectList().getAllEffects().size());
 		}
+		
 		info.damage += info.lethal_dmg;
+		
 		if (skill.getSkillType() == SkillType.MANADAM)
 		{
 			info.damage = Math.max(1, info.damage / 4.);
 		}
+		
 		if (isPvP && (info.damage > 1))
 		{
 			info.damage *= attacker.calcStat(Stats.PVP_MAGIC_SKILL_DMG_BONUS, 1, null, null);
 			info.damage /= target.calcStat(Stats.PVP_MAGIC_SKILL_DEFENCE_BONUS, 1, null, null);
 		}
+		
 		double magic_rcpt = target.calcStat(Stats.MAGIC_RESIST, attacker, skill) - attacker.calcStat(Stats.MAGIC_POWER, target, skill);
 		double failChance = 4. * Math.max(1., levelDiff) * (1. + (magic_rcpt / 100.));
+		
 		if (Rnd.chance(failChance))
 		{
 			if (levelDiff > 9)
@@ -593,27 +667,33 @@ public class Formulas
 				target.sendPacket(msg);
 			}
 		}
+		
 		if ((info.damage > 1) && skill.isMagic() && calcMagicMiss(attacker, target))
 		{
 			attacker.sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addName(attacker));
 			target.sendPacket(new SystemMessage(SystemMessage.C1_HAS_EVADED_C2S_ATTACK).addName(target).addName(attacker));
 			info.damage = 0;
 		}
+		
 		if (info.damage > 0)
 		{
 			attacker.displayGiveDamageMessage(target, (int) info.damage, info.crit, false, false, true);
 		}
+		
 		if (calcCastBreak(target, info.crit))
 		{
 			target.abortCast(false, true);
 		}
+		
 		double receiveDamageLimit = target.calcStat(Stats.RECEIVE_DAMAGE_LIMIT, 0, target, skill);
 		info.reflectableDamage = info.damage;
+		
 		if ((receiveDamageLimit > 0) && (info.damage > receiveDamageLimit))
 		{
 			info.reflectableDamage = info.damage - receiveDamageLimit;
 			info.damage = receiveDamageLimit;
 		}
+		
 		if (skill.isMarkDamage())
 		{
 			int boost = 1;
@@ -625,6 +705,7 @@ public class Formulas
 				11261,
 				11262
 			};
+			
 			for (int id : list)
 			{
 				if (target.getEffectList().containEffectFromSkillId(id, true))
@@ -632,9 +713,11 @@ public class Formulas
 					boost += 1;
 				}
 			}
+			
 			// TODO CHECK RETAIL INFO ABOUT BOOST DAMAGE
 			info.damage *= boost;
 		}
+		
 		return info;
 	}
 	
@@ -663,27 +746,34 @@ public class Formulas
 		double buffs_mult = activeChar.calcStat(Stats.FATALBLOW_RATE, target, skill);
 		double skill_mod = skill.isBehind() ? 5 : 4;
 		double chance = base_weapon_crit * buffs_mult * crit_height_bonus * skill_mod;
+		
 		if (!target.isInCombat())
 		{
 			chance *= 1.1;
 		}
+		
 		switch (PositionUtils.getDirectionTo(target, activeChar))
 		{
 			case BEHIND:
 				chance *= 1.3;
 				break;
+			
 			case SIDE:
 				chance *= 1.1;
 				break;
+			
 			case FRONT:
 				if (skill.isBehind())
 				{
 					chance = 3.0;
 				}
+				
 				break;
+			
 			default:
 				break;
 		}
+		
 		chance = Math.min(skill.isBehind() ? 100 : 80, chance);
 		return Rnd.chance(chance);
 	}
@@ -702,22 +792,28 @@ public class Formulas
 		{
 			return 0;
 		}
+		
 		if (skill != null)
 		{
 			return skill.getCriticalRate() * (blow ? BaseStats.DEX.calcBonus(attacker) : BaseStats.STR.calcBonus(attacker)) * 0.01 * attacker.calcStat(Stats.SKILL_CRIT_CHANCE_MOD, target, skill);
 		}
+		
 		double rate = attacker.getCriticalHit(target, null) * 0.01 * target.calcStat(Stats.CRIT_CHANCE_RECEPTIVE, attacker, skill);
+		
 		switch (PositionUtils.getDirectionTo(target, attacker))
 		{
 			case BEHIND:
 				rate *= 1.4;
 				break;
+			
 			case SIDE:
 				rate *= 1.2;
 				break;
+			
 			default:
 				break;
 		}
+		
 		return rate / 10;
 	}
 	
@@ -743,11 +839,14 @@ public class Formulas
 		{
 			return false;
 		}
+		
 		Skill skill = target.getCastingSkill();
+		
 		if ((skill != null) && ((skill.getSkillType() == SkillType.TAKECASTLE) || (skill.getSkillType() == SkillType.TAKEFORTRESS)))
 		{
 			return false;
 		}
+		
 		return Rnd.chance(target.calcStat(Stats.CAST_INTERRUPT, crit ? 75 : 10, null, skill));
 	}
 	
@@ -774,6 +873,7 @@ public class Formulas
 		{
 			return (int) ((skillTime * 333) / Math.max(attacker.getMAtkSpd(), 1));
 		}
+		
 		return (int) ((skillTime * 333) / Math.max(attacker.getPAtkSpd(), 1));
 	}
 	
@@ -786,27 +886,33 @@ public class Formulas
 	public static long calcSkillReuseDelay(Creature actor, Skill skill)
 	{
 		long reuseDelay = skill.getReuseDelay();
+		
 		if (actor.isMonster())
 		{
 			reuseDelay = skill.getReuseForMonsters();
 		}
+		
 		if (skill.isReuseDelayPermanent() || skill.isHandler() || skill.isItemSkill())
 		{
 			return reuseDelay;
 		}
+		
 		if (actor.getSkillMastery(skill.getId()) == 1)
 		{
 			actor.removeSkillMastery(skill.getId());
 			return 0;
 		}
+		
 		if (skill.isMusic())
 		{
 			return (long) actor.calcStat(Stats.MUSIC_REUSE_RATE, reuseDelay, null, skill);
 		}
+		
 		if (skill.isMagic())
 		{
 			return (long) actor.calcStat(Stats.MAGIC_REUSE_RATE, reuseDelay, null, skill);
 		}
+		
 		return (long) actor.calcStat(Stats.PHYSIC_REUSE_RATE, reuseDelay, null, skill);
 	}
 	
@@ -822,17 +928,21 @@ public class Formulas
 		chanceToHit = Math.max(chanceToHit, 28);
 		chanceToHit = Math.min(chanceToHit, 98);
 		PositionUtils.TargetDirection direction = PositionUtils.getDirectionTo(attacker, target);
+		
 		switch (direction)
 		{
 			case BEHIND:
 				chanceToHit *= 1.2;
 				break;
+			
 			case SIDE:
 				chanceToHit *= 1.1;
 				break;
+			
 			default:
 				break;
 		}
+		
 		return !Rnd.chance(chanceToHit);
 	}
 	
@@ -859,15 +969,19 @@ public class Formulas
 	public static boolean calcShldUse(Creature attacker, Creature target)
 	{
 		WeaponTemplate template = target.getSecondaryWeaponItem();
+		
 		if ((template == null) || (template.getItemType() != WeaponTemplate.WeaponType.NONE))
 		{
 			return false;
 		}
+		
 		int angle = (int) target.calcStat(Stats.SHIELD_ANGLE, attacker, null);
+		
 		if (!PositionUtils.isFacing(target, attacker, angle))
 		{
 			return false;
 		}
+		
 		return Rnd.chance((int) target.calcStat(Stats.SHIELD_RATE, attacker, null));
 	}
 	
@@ -884,18 +998,22 @@ public class Formulas
 		{
 			return true;
 		}
+		
 		env.value = Math.max(Math.min(env.value, 100), 1);
 		final double base = env.value;
 		final Skill skill = env.skill;
+		
 		if (!skill.isOffensive())
 		{
 			return Rnd.chance(env.value);
 		}
+		
 		final Creature caster = env.character;
 		final Creature target = env.target;
 		boolean debugCaster = false;
 		boolean debugTarget = false;
 		boolean debugGlobal = false;
+		
 		if (Config.ALT_DEBUG_ENABLED)
 		{
 			debugCaster = (caster.getPlayer() != null) && caster.getPlayer().isDebug();
@@ -903,19 +1021,24 @@ public class Formulas
 			final boolean debugPvP = Config.ALT_DEBUG_PVP_ENABLED && (debugCaster && debugTarget) && (!Config.ALT_DEBUG_PVP_DUEL_ONLY || (caster.getPlayer().isInDuel() && target.getPlayer().isInDuel()));
 			debugGlobal = debugPvP || (Config.ALT_DEBUG_PVE_ENABLED && ((debugCaster && target.isMonster()) || (debugTarget && caster.isMonster())));
 		}
+		
 		double statMod = 1.;
+		
 		if (skill.getSaveVs() != null)
 		{
 			statMod = skill.getSaveVs().calcChanceMod(target);
 			env.value *= statMod;
 		}
+		
 		env.value = Math.max(env.value, 1);
 		double mAtkMod = 1.;
 		int ssMod = 0;
+		
 		if (skill.isMagic())
 		{
 			int mdef = Math.max(1, target.getMDef(target, skill));
 			double matk = caster.getMAtk(target, skill);
+			
 			if (skill.isSSPossible())
 			{
 				switch (spiritshot)
@@ -923,23 +1046,30 @@ public class Formulas
 					case ItemInstance.CHARGED_BLESSED_SPIRITSHOT:
 						ssMod = 4;
 						break;
+					
 					case ItemInstance.CHARGED_SPIRITSHOT:
 						ssMod = 2;
 						break;
+					
 					default:
 						ssMod = 1;
 				}
+				
 				matk *= ssMod;
 			}
+			
 			mAtkMod = (Config.SKILLS_CHANCE_MOD * Math.pow(matk, Config.SKILLS_CHANCE_POW)) / mdef;
 			env.value *= mAtkMod;
 			env.value = Math.max(env.value, 1);
 		}
+		
 		double lvlDependMod = skill.getLevelModifier();
+		
 		if (lvlDependMod != 0)
 		{
 			final int attackLevel = skill.getMagicLevel() > 0 ? skill.getMagicLevel() : caster.getLevel();
 			lvlDependMod = 1. + ((attackLevel - target.getLevel()) * 0.03 * lvlDependMod);
+			
 			if (lvlDependMod < 0)
 			{
 				lvlDependMod = 0;
@@ -948,15 +1078,19 @@ public class Formulas
 			{
 				lvlDependMod = 2;
 			}
+			
 			env.value *= lvlDependMod;
 		}
+		
 		double vulnMod = 0;
 		double profMod = 0;
 		double resMod = 1.;
 		double debuffMod = 1.;
+		
 		if (!skill.isIgnoreResists())
 		{
 			debuffMod = 1. - (target.calcStat(Stats.DEBUFF_RESIST, caster, skill) / 120.);
+			
 			if (debuffMod != 1)
 			{
 				if (debuffMod == Double.NEGATIVE_INFINITY)
@@ -967,13 +1101,16 @@ public class Formulas
 						{
 							caster.getPlayer().sendMessage("Full debuff immunity");
 						}
+						
 						if (debugTarget)
 						{
 							target.getPlayer().sendMessage("Full debuff immunity");
 						}
 					}
+					
 					return false;
 				}
+				
 				if (debuffMod == Double.POSITIVE_INFINITY)
 				{
 					if (debugGlobal)
@@ -982,17 +1119,22 @@ public class Formulas
 						{
 							caster.getPlayer().sendMessage("Full debuff vulnerability");
 						}
+						
 						if (debugTarget)
 						{
 							target.getPlayer().sendMessage("Full debuff vulnerability");
 						}
 					}
+					
 					return true;
 				}
+				
 				debuffMod = Math.max(debuffMod, 0);
 				env.value *= debuffMod;
 			}
+			
 			SkillTrait trait = skill.getTraitType();
+			
 			if (trait != null)
 			{
 				vulnMod = trait.calcVuln(env);
@@ -1000,6 +1142,7 @@ public class Formulas
 				final double maxResist = 90 + (profMod * 0.85);
 				resMod = (maxResist - vulnMod) / 60.;
 			}
+			
 			if (resMod != 1)
 			{
 				if (resMod == Double.NEGATIVE_INFINITY)
@@ -1010,13 +1153,16 @@ public class Formulas
 						{
 							caster.getPlayer().sendMessage("Full immunity");
 						}
+						
 						if (debugTarget)
 						{
 							target.getPlayer().sendMessage("Full immunity");
 						}
 					}
+					
 					return false;
 				}
+				
 				if (resMod == Double.POSITIVE_INFINITY)
 				{
 					if (debugGlobal)
@@ -1025,37 +1171,47 @@ public class Formulas
 						{
 							caster.getPlayer().sendMessage("Full vulnerability");
 						}
+						
 						if (debugTarget)
 						{
 							target.getPlayer().sendMessage("Full vulnerability");
 						}
 					}
+					
 					return true;
 				}
+				
 				resMod = Math.max(resMod, 0);
 				env.value *= resMod;
 			}
 		}
+		
 		double elementMod = 0;
 		final Element element = skill.getElement();
+		
 		if (element != Element.NONE)
 		{
 			elementMod = skill.getElementPower();
 			Element attackElement = getAttackElement(caster, target);
+			
 			if (attackElement == element)
 			{
 				elementMod += caster.calcStat(element.getAttack(), 0);
 			}
+			
 			elementMod -= target.calcStat(element.getDefence(), 0);
 			elementMod = Math.round(elementMod / 10);
 			env.value += elementMod;
 		}
+		
 		env.value = Math.max(env.value, Math.min(base, Config.SKILLS_CHANCE_MIN));
 		env.value = Math.max(Math.min(env.value, Config.SKILLS_CHANCE_CAP), 1);
 		final boolean result = Rnd.chance((int) env.value);
+		
 		if (debugGlobal)
 		{
 			StringBuilder stat = new StringBuilder(100);
+			
 			if (et == null)
 			{
 				stat.append(skill.getName());
@@ -1064,56 +1220,67 @@ public class Formulas
 			{
 				stat.append(et._effectType.name());
 			}
+			
 			stat.append(" AR:");
 			stat.append((int) base);
 			stat.append(' ');
+			
 			if (skill.getSaveVs() != null)
 			{
 				stat.append(skill.getSaveVs().name());
 				stat.append(':');
 				stat.append(String.format("%1.1f", statMod));
 			}
+			
 			if (skill.isMagic())
 			{
 				stat.append(' ');
 				stat.append(" mAtk:");
 				stat.append(String.format("%1.1f", mAtkMod));
 			}
+			
 			if (skill.getTraitType() != null)
 			{
 				stat.append(' ');
 				stat.append(skill.getTraitType().name());
 			}
+			
 			stat.append(' ');
 			stat.append(String.format("%1.1f", resMod));
 			stat.append('(');
 			stat.append(String.format("%1.1f", profMod));
 			stat.append('/');
 			stat.append(String.format("%1.1f", vulnMod));
+			
 			if (debuffMod != 0)
 			{
 				stat.append('+');
 				stat.append(String.format("%1.1f", debuffMod));
 			}
+			
 			stat.append(") lvl:");
 			stat.append(String.format("%1.1f", lvlDependMod));
 			stat.append(" elem:");
 			stat.append((int) elementMod);
 			stat.append(" Chance:");
 			stat.append(String.format("%1.1f", env.value));
+			
 			if (!result)
 			{
 				stat.append(" failed");
 			}
+			
 			if (debugCaster)
 			{
 				caster.getPlayer().sendMessage(stat.toString());
 			}
+			
 			if (debugTarget)
 			{
 				target.getPlayer().sendMessage(stat.toString());
 			}
 		}
+		
 		return result;
 	}
 	
@@ -1146,10 +1313,12 @@ public class Formulas
 		{
 			return;
 		}
+		
 		if (((activeChar.getSkillLevel(331) > 0) && (activeChar.calcStat(Stats.SKILL_MASTERY, activeChar.getINT(), null, skill) >= Rnd.get(1000))) || (((activeChar.getSkillLevel(330) > 0) || (activeChar.getSkillLevel(10501) > 0)) && (activeChar.calcStat(Stats.SKILL_MASTERY, activeChar.getSTR(), null, skill) >= Rnd.get(1000))))
 		{
 			int masteryLevel;
 			Skill.SkillType type = skill.getSkillType();
+			
 			if (skill.isMusic() || (type == Skill.SkillType.BUFF) || (type == Skill.SkillType.HOT) || (type == Skill.SkillType.HEAL_PERCENT))
 			{
 				masteryLevel = 2;
@@ -1162,6 +1331,7 @@ public class Formulas
 			{
 				masteryLevel = 1;
 			}
+			
 			if (masteryLevel > 0)
 			{
 				activeChar.setSkillMastery(skill.getId(), masteryLevel);
@@ -1183,6 +1353,7 @@ public class Formulas
 		{
 			return value;
 		}
+		
 		if (attacker.isBoss())
 		{
 			value *= Config.RATE_EPIC_ATTACK;
@@ -1191,6 +1362,7 @@ public class Formulas
 		{
 			value *= Config.RATE_RAID_ATTACK;
 		}
+		
 		if (defender.isBoss())
 		{
 			value /= Config.RATE_EPIC_DEFENSE;
@@ -1199,14 +1371,18 @@ public class Formulas
 		{
 			value /= Config.RATE_RAID_DEFENSE;
 		}
+		
 		Player pAttacker = attacker.getPlayer();
 		int diff = defender.getLevel() - (pAttacker != null ? pAttacker.getLevel() : attacker.getLevel());
+		
 		if (attacker.isPlayable() && defender.isMonster() && (defender.getLevel() >= 78) && (diff > 2))
 		{
 			value *= .7 / Math.pow(diff - 2, .25);
 		}
+		
 		Element element = Element.NONE;
 		double power = 0.;
+		
 		if (skill != null)
 		{
 			element = skill.getElement();
@@ -1216,11 +1392,14 @@ public class Formulas
 		{
 			element = getAttackElement(attacker, defender);
 		}
+		
 		if (element == Element.NONE)
 		{
 			return value;
 		}
+		
 		Double attDiff = attacker.calcStat(element.getAttack(), power) - defender.calcStat(element.getDefence(), 0.);
+		
 		if ((pAttacker != null) && pAttacker.isDebug())
 		{
 			pAttacker.sendMessage("Element: " + element.name());
@@ -1228,10 +1407,12 @@ public class Formulas
 			pAttacker.sendMessage("Defence: " + defender.calcStat(element.getDefence(), 0.));
 			pAttacker.sendMessage("Modifier: " + (attDiff < 0 ? "On defense " : "On attack ") + AttributeDamageResistTable.getInstance().getAttributeBonus(attDiff));
 		}
+		
 		if (attDiff < 0)
 		{
 			return value / AttributeDamageResistTable.getInstance().getAttributeBonus(attDiff);
 		}
+		
 		return value * AttributeDamageResistTable.getInstance().getAttributeBonus(attDiff);
 	}
 	
@@ -1246,9 +1427,11 @@ public class Formulas
 		double val, max = Double.MIN_VALUE, maxElementDefenseVal = Double.MIN_VALUE;
 		Element maxElementDefense = Element.NONE;
 		Element result = Element.NONE;
+		
 		for (Element e : Element.VALUES)
 		{
 			val = attacker.calcStat(e.getAttack(), 0., null, null);
+			
 			if (val <= 0.)
 			{
 				if ((target != null) && ((target.calcStat(e.getDefence(), 0., null, null)) > maxElementDefenseVal))
@@ -1256,18 +1439,22 @@ public class Formulas
 					maxElementDefenseVal = target.calcStat(e.getDefence(), 0., null, null);
 					maxElementDefense = e;
 				}
+				
 				continue;
 			}
+			
 			if (val > max)
 			{
 				max = val;
 				result = e;
 			}
 		}
+		
 		if ((result == Element.NONE) && (target != null))
 		{
 			return maxElementDefense;
 		}
+		
 		return result;
 	}
 }

@@ -69,6 +69,7 @@ public class MultiSellList extends L2GameServerPacket
 		writeD(_list.size());
 		writeC(0x00);
 		List<MultiSellIngredient> ingredients;
+		
 		for (MultiSellEntry ent : _list)
 		{
 			ingredients = fixIngredients(ent.getIngredients());
@@ -80,6 +81,7 @@ public class MultiSellList extends L2GameServerPacket
 			writeItemElements();
 			writeH(ent.getProduction().size());
 			writeH(ingredients.size());
+			
 			for (MultiSellIngredient prod : ent.getProduction())
 			{
 				int itemId = prod.getItemId();
@@ -94,6 +96,7 @@ public class MultiSellList extends L2GameServerPacket
 				writeD(0x00);
 				writeItemElements(prod);
 			}
+			
 			for (MultiSellIngredient i : ingredients)
 			{
 				int itemId = i.getItemId();
@@ -117,6 +120,7 @@ public class MultiSellList extends L2GameServerPacket
 	private static List<MultiSellIngredient> fixIngredients(List<MultiSellIngredient> ingredients)
 	{
 		int needFix = 0;
+		
 		for (MultiSellIngredient ingredient : ingredients)
 		{
 			if (ingredient.getItemCount() > Integer.MAX_VALUE)
@@ -124,15 +128,19 @@ public class MultiSellList extends L2GameServerPacket
 				needFix++;
 			}
 		}
+		
 		if (needFix == 0)
 		{
 			return ingredients;
 		}
+		
 		MultiSellIngredient temp;
 		List<MultiSellIngredient> result = new ArrayList<>(ingredients.size() + needFix);
+		
 		for (MultiSellIngredient ingredient : ingredients)
 		{
 			ingredient = ingredient.clone();
+			
 			while (ingredient.getItemCount() > Integer.MAX_VALUE)
 			{
 				temp = ingredient.clone();
@@ -140,11 +148,13 @@ public class MultiSellList extends L2GameServerPacket
 				result.add(temp);
 				ingredient.setItemCount(ingredient.getItemCount() - 2000000000);
 			}
+			
 			if (ingredient.getItemCount() > 0)
 			{
 				result.add(ingredient);
 			}
 		}
+		
 		return result;
 	}
 }

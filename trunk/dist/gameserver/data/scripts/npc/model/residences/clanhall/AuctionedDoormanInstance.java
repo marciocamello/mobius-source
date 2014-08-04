@@ -33,7 +33,7 @@ import org.apache.commons.lang3.ArrayUtils;
 public class AuctionedDoormanInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -69,7 +69,9 @@ public class AuctionedDoormanInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		ClanHall clanHall = getClanHall();
+		
 		if (command.equalsIgnoreCase("openDoors"))
 		{
 			if (player.hasPrivilege(Privilege.CH_ENTER_EXIT) && (player.getClan().getHasHideout() == clanHall.getId()))
@@ -78,6 +80,7 @@ public class AuctionedDoormanInstance extends NpcInstance
 				{
 					ReflectionUtils.getDoor(d).openMe();
 				}
+				
 				showChatWindow(player, "residence2/clanhall/agitafterdooropen.htm");
 			}
 			else
@@ -93,6 +96,7 @@ public class AuctionedDoormanInstance extends NpcInstance
 				{
 					ReflectionUtils.getDoor(d).closeMe(player, true);
 				}
+				
 				showChatWindow(player, "residence2/clanhall/agitafterdoorclose.htm");
 			}
 			else
@@ -128,9 +132,11 @@ public class AuctionedDoormanInstance extends NpcInstance
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 		ClanHall clanHall = getClanHall();
+		
 		if (clanHall != null)
 		{
 			Clan playerClan = player.getClan();
+			
 			if ((playerClan != null) && (playerClan.getHasHideout() == clanHall.getId()))
 			{
 				showChatWindow(player, _elite ? "residence2/clanhall/WyvernAgitJanitorHi.htm" : "residence2/clanhall/AgitJanitorHi.htm", "%owner%", playerClan.getName());

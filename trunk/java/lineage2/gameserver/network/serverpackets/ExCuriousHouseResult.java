@@ -25,12 +25,9 @@ public class ExCuriousHouseResult extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0x12A);
-		
 		writeD(0);
 		writeH(1);
-		
 		writeD(1);
-		
 		writeD(268483021);
 		writeD(1);
 		writeD(146);

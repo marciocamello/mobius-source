@@ -38,6 +38,7 @@ public class EffectInterrupt extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if (!getEffected().isRaid())
 		{
 			getEffected().abortCast(false, true);

@@ -54,12 +54,14 @@ public class Say2 extends NpcStringContainer
 		writeC(0x4A);
 		writeD(_objectId);
 		writeD(_type.ordinal());
+		
 		switch (_type)
 		{
 			case SYSTEM_MESSAGE:
 				writeD(_sysString.getId());
 				writeD(_systemMsg.getId());
 				break;
+			
 			default:
 				writeS(_charName);
 				writeElements();

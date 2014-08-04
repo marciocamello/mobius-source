@@ -34,6 +34,7 @@ public class ExResponseCommissionItemList extends L2GameServerPacket
 	{
 		writeEx(0xF3);
 		writeD(items.size());// itemsSize
+		
 		for (TradeItem item : items)
 		{
 			writeItemInfo(item);

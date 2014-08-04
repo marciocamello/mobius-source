@@ -54,17 +54,21 @@ public final class RequestExCubeGameReadyAnswer extends L2GameClientPacket
 	public void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		switch (_answer)
 		{
 			case 0:
 				break;
+			
 			case 1:
 				HandysBlockCheckerManager.getInstance().increaseArenaVotes(_arena);
 				break;
+			
 			default:
 				_log.warn("Unknown Cube Game Answer ID: " + _answer);
 				break;

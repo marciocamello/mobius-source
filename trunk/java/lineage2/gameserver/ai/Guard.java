@@ -41,11 +41,13 @@ public class Guard extends Fighter
 	public boolean canAttackCharacter(Creature target)
 	{
 		NpcInstance actor = getActor();
+		
 		if (getIntention() == CtrlIntention.AI_INTENTION_ATTACK)
 		{
 			AggroInfo ai = actor.getAggroList().get(target);
 			return (ai != null) && (ai.hate > 0);
 		}
+		
 		return target.isMonster() || target.isPlayable();
 	}
 	
@@ -58,10 +60,12 @@ public class Guard extends Fighter
 	public boolean checkAggression(Creature target)
 	{
 		NpcInstance actor = getActor();
+		
 		if ((getIntention() != CtrlIntention.AI_INTENTION_ACTIVE) || !isGlobalAggro())
 		{
 			return false;
 		}
+		
 		if (target.isPlayable())
 		{
 			if ((target.getKarma() >= 0) || (actor.getParameter("evilGuard", false) && (target.getPvpFlag() > 0)))
@@ -69,12 +73,14 @@ public class Guard extends Fighter
 				return false;
 			}
 		}
+		
 		if (target.isNpc())
 		{
 			if (((NpcInstance) target).isInFaction(actor))
 			{
 				return false;
 			}
+			
 			if (target.isMonster())
 			{
 				if (!((MonsterInstance) target).isAggressive())
@@ -83,6 +89,7 @@ public class Guard extends Fighter
 				}
 			}
 		}
+		
 		return super.checkAggression(target);
 	}
 	

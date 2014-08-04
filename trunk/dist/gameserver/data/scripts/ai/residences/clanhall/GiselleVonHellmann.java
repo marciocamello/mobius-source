@@ -79,12 +79,15 @@ public class GiselleVonHellmann extends SiegeGuardMystic
 		ZONE_2.setActive(false);
 		Functions.npcShout(actor, NpcString.AARGH_IF_I_DIE_THEN_THE_MAGIC_FORCE_FIELD_OF_BLOOD_WILL);
 		final ClanHallSiegeEvent siegeEvent = actor.getEvent(ClanHallSiegeEvent.class);
+		
 		if (siegeEvent == null)
 		{
 			return;
 		}
+		
 		final SpawnExObject spawnExObject = siegeEvent.getFirstObject(ClanHallSiegeEvent.BOSS);
 		final NpcInstance lidiaNpc = spawnExObject.getFirstSpawned();
+		
 		if (lidiaNpc.getCurrentHpRatio() == 1.)
 		{
 			lidiaNpc.setCurrentHp(lidiaNpc.getMaxHp() >> 1, true);
@@ -101,6 +104,7 @@ public class GiselleVonHellmann extends SiegeGuardMystic
 	{
 		final NpcInstance actor = getActor();
 		super.onEvtAttacked(attacker, damage);
+		
 		if ((PositionUtils.calculateDistance(attacker, actor, false) > 300.) && Rnd.chance(0.13))
 		{
 			addTaskCast(attacker, DAMAGE_SKILL);

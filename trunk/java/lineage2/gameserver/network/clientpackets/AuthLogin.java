@@ -73,6 +73,7 @@ public class AuthLogin extends L2GameClientPacket
 		SessionKey key = new SessionKey(_loginKey1, _loginKey2, _playKey1, _playKey2);
 		client.setSessionId(key);
 		client.setLoginName(_loginName);
+		
 		if ((Shutdown.getInstance().getMode() != Shutdown.NONE) && (Shutdown.getInstance().getSeconds() <= 15))
 		{
 			client.closeNow(false);
@@ -84,11 +85,14 @@ public class AuthLogin extends L2GameClientPacket
 				client.close(new LoginFail(LoginFail.SYSTEM_ERROR_LOGIN_LATER));
 				return;
 			}
+			
 			GameClient oldClient = LoginServerCommunication.getInstance().addWaitingClient(client);
+			
 			if (oldClient != null)
 			{
 				oldClient.close(ServerClose.STATIC);
 			}
+			
 			LoginServerCommunication.getInstance().sendPacket(new PlayerAuthRequest(client));
 		}
 	}

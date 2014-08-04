@@ -71,12 +71,14 @@ public class _755_InNeedofPetras extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("sofa_aku_q0755_04.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return htmltext;
 	}
 	
@@ -86,6 +88,7 @@ public class _755_InNeedofPetras extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		String htmltext = "noquest";
+		
 		if (npcId == AKU)
 		{
 			if (st.isStarted())
@@ -122,6 +125,7 @@ public class _755_InNeedofPetras extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -130,6 +134,7 @@ public class _755_InNeedofPetras extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (ArrayUtils.contains(MONSTERS, npcId))
 		{
 			if (cond == 1)
@@ -137,6 +142,7 @@ public class _755_InNeedofPetras extends Quest implements ScriptFile
 				if (Rnd.chance(PETRA_DROP_CHANCE))
 				{
 					st.giveItems(PETRA, 1);
+					
 					if (st.getQuestItemsCount(PETRA) >= 50)
 					{
 						st.setCond(2);
@@ -149,6 +155,7 @@ public class _755_InNeedofPetras extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 	

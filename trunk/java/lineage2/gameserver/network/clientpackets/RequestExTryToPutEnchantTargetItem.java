@@ -48,32 +48,39 @@ public class RequestExTryToPutEnchantTargetItem extends AbstractEnchantPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (!isValidPlayer(player))
 		{
 			player.sendPacket(ExPutEnchantTargetItemResult.FAIL);
 			player.setEnchantScroll(null);
 			return;
 		}
+		
 		PcInventory inventory = player.getInventory();
 		ItemInstance itemToEnchant = inventory.getItemByObjectId(_objectId);
 		ItemInstance scroll = player.getEnchantScroll();
+		
 		if ((itemToEnchant == null) || (scroll == null))
 		{
 			player.sendPacket(ExPutEnchantTargetItemResult.FAIL);
 			player.setEnchantScroll(null);
 			return;
 		}
+		
 		Log.add(player.getName() + "|Trying to put enchant|" + itemToEnchant.getItemId() + "|+" + itemToEnchant.getEnchantLevel() + "|" + itemToEnchant.getObjectId(), "enchants");
 		EnchantScrollInfo esi = EnchantScrollManager.getScrollInfo(scroll.getItemId());
+		
 		if (esi == null)
 		{
 			player.sendActionFailed();
 			return;
 		}
+		
 		if (!checkItem(itemToEnchant, esi))
 		{
 			player.sendPacket(ExPutEnchantTargetItemResult.FAIL);
@@ -81,12 +88,14 @@ public class RequestExTryToPutEnchantTargetItem extends AbstractEnchantPacket
 			player.setEnchantScroll(null);
 			return;
 		}
+		
 		if ((scroll = inventory.getItemByObjectId(scroll.getObjectId())) == null)
 		{
 			player.sendPacket(ExPutEnchantTargetItemResult.FAIL);
 			player.setEnchantScroll(null);
 			return;
 		}
+		
 		if ((itemToEnchant.getEnchantLevel() >= esi.getMax()) || (itemToEnchant.getEnchantLevel() < esi.getMin()))
 		{
 			player.sendPacket(ExPutEnchantTargetItemResult.FAIL);
@@ -94,12 +103,14 @@ public class RequestExTryToPutEnchantTargetItem extends AbstractEnchantPacket
 			player.setEnchantScroll(null);
 			return;
 		}
+		
 		if (itemToEnchant.getOwnerId() != player.getObjectId())
 		{
 			player.sendPacket(ExPutEnchantTargetItemResult.FAIL);
 			player.setEnchantScroll(null);
 			return;
 		}
+		
 		player.sendPacket(ExPutEnchantTargetItemResult.SUCCESS);
 	}
 }

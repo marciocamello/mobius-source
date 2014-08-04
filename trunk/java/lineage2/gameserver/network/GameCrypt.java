@@ -60,13 +60,16 @@ public class GameCrypt
 		{
 			return true;
 		}
+		
 		int temp = 0;
+		
 		for (int i = 0; i < size; i++)
 		{
 			int temp2 = raw[offset + i] & 0xFF;
 			raw[offset + i] = (byte) (temp2 ^ _inKey[i & 15] ^ temp);
 			temp = temp2;
 		}
+		
 		int old = _inKey[8] & 0xff;
 		old |= (_inKey[9] << 8) & 0xff00;
 		old |= (_inKey[10] << 0x10) & 0xff0000;
@@ -92,13 +95,16 @@ public class GameCrypt
 			_isEnabled = true;
 			return;
 		}
+		
 		int temp = 0;
+		
 		for (int i = 0; i < size; i++)
 		{
 			int temp2 = raw[offset + i] & 0xFF;
 			temp = temp2 ^ _outKey[i & 15] ^ temp;
 			raw[offset + i] = (byte) temp;
 		}
+		
 		int old = _outKey[8] & 0xff;
 		old |= (_outKey[9] << 8) & 0xff00;
 		old |= (_outKey[10] << 0x10) & 0xff0000;

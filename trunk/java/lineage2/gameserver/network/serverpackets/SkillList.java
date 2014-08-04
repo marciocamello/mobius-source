@@ -61,6 +61,7 @@ public class SkillList extends L2GameServerPacket
 			writeC(activeChar.isUnActiveSkill(temp.getId()) ? 0x01 : 0x00);
 			writeC(canEnchant ? SkillTreeTable.isEnchantable(temp) : 0);
 		}
+		
 		writeD(_learnedSkill);
 	}
 }

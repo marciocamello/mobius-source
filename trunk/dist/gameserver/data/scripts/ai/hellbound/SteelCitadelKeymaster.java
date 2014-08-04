@@ -52,14 +52,17 @@ public class SteelCitadelKeymaster extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return;
 		}
+		
 		if (_firstTimeAttacked)
 		{
 			_firstTimeAttacked = false;
 			Functions.npcSay(actor, "You have done well in finding me, but I cannot just hand you the key!");
+			
 			for (NpcInstance npc : World.getAroundNpc(actor))
 			{
 				if ((npc.getNpcId() == AMASKARI_ID) && (npc.getReflectionId() == actor.getReflectionId()) && !npc.isDead())
@@ -69,6 +72,7 @@ public class SteelCitadelKeymaster extends Fighter
 				}
 			}
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	

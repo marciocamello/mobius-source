@@ -37,6 +37,7 @@ public final class BeautyShopHolder extends AbstractHolder
 		{
 			warn("Duplicate set declaration, set id - " + set.getId());
 		}
+		
 		_sets.put(set.getId(), set);
 	}
 	
@@ -48,6 +49,7 @@ public final class BeautyShopHolder extends AbstractHolder
 	public BeautyShopSet getSet(Player player)
 	{
 		int id = -1;
+		
 		if (player.getRace() == Race.human)
 		{
 			if (!(player.getClassId().isMage()))
@@ -57,10 +59,10 @@ public final class BeautyShopHolder extends AbstractHolder
 					case 0:
 						id = 1;
 						break;
+					
 					case 1:
 						id = 0;
 				}
-				
 			}
 			else
 			{
@@ -69,12 +71,11 @@ public final class BeautyShopHolder extends AbstractHolder
 					case 0:
 						id = 9;
 						break;
+					
 					case 1:
 						id = 8;
 				}
-				
 			}
-			
 		}
 		else if (player.getRace() == Race.darkelf)
 		{
@@ -83,10 +84,10 @@ public final class BeautyShopHolder extends AbstractHolder
 				case 0:
 					id = 3;
 					break;
+				
 				case 1:
 					id = 2;
 			}
-			
 		}
 		else if (player.getRace() == Race.dwarf)
 		{
@@ -95,10 +96,10 @@ public final class BeautyShopHolder extends AbstractHolder
 				case 0:
 					id = 5;
 					break;
+				
 				case 1:
 					id = 4;
 			}
-			
 		}
 		else if (player.getRace() == Race.elf)
 		{
@@ -107,10 +108,10 @@ public final class BeautyShopHolder extends AbstractHolder
 				case 0:
 					id = 7;
 					break;
+				
 				case 1:
 					id = 6;
 			}
-			
 		}
 		else if (player.getRace() == Race.orc)
 		{
@@ -121,10 +122,10 @@ public final class BeautyShopHolder extends AbstractHolder
 					case 0:
 						id = 11;
 						break;
+					
 					case 1:
 						id = 10;
 				}
-				
 			}
 			else
 			{
@@ -133,12 +134,11 @@ public final class BeautyShopHolder extends AbstractHolder
 					case 0:
 						id = 13;
 						break;
+					
 					case 1:
 						id = 12;
 				}
-				
 			}
-			
 		}
 		else if (player.getRace() == Race.kamael)
 		{
@@ -147,10 +147,10 @@ public final class BeautyShopHolder extends AbstractHolder
 				case 0:
 					id = 15;
 					break;
+				
 				case 1:
 					id = 14;
 			}
-			
 		}
 		
 		return getSet(id);

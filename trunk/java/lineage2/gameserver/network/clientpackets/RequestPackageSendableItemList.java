@@ -42,10 +42,12 @@ public class RequestPackageSendableItemList extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		player.sendPacket(new PackageSendableList(_objectId, player));
 	}
 }

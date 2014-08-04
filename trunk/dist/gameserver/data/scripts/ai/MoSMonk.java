@@ -42,10 +42,12 @@ public class MoSMonk extends Fighter
 	protected void onIntentionAttack(Creature target)
 	{
 		getActor();
+		
 		if ((getIntention() == CtrlIntention.AI_INTENTION_ACTIVE) && Rnd.chance(20))
 		{
 			Functions.npcSayCustomMessage(getActor(), "scripts.ai.MoSMonk.onIntentionAttack");
 		}
+		
 		super.onIntentionAttack(target);
 	}
 	
@@ -61,6 +63,7 @@ public class MoSMonk extends Fighter
 		{
 			return false;
 		}
+		
 		return super.checkAggression(target);
 	}
 }

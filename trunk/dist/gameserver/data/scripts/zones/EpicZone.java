@@ -80,12 +80,14 @@ public class EpicZone implements ScriptFile
 			{
 				return;
 			}
+			
 			if (cha.getLevel() > zone.getParams().getInteger("levelLimit"))
 			{
 				if (cha.isPlayer())
 				{
 					cha.getPlayer().sendMessage(new CustomMessage("scripts.zones.epic.banishMsg", (Player) cha));
 				}
+				
 				cha.teleToLocation(Location.parseLoc(zone.getParams().getString("tele")));
 			}
 		}

@@ -120,9 +120,11 @@ public class TiatsTrap extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (!actor.getAroundCharacters(200, 150).isEmpty())
 		{
 			Skill skill = null;
+			
 			if (ArrayUtils.contains(holdTraps, actor.getNpcId()))
 			{
 				skill = SkillTable.getInstance().getInfo(4186, 9);
@@ -139,6 +141,7 @@ public class TiatsTrap extends DefaultAI
 			{
 				return false;
 			}
+			
 			actor.doCast(skill, actor, true);
 			ThreadPoolManager.getInstance().schedule(new RunnableImpl()
 			{
@@ -150,6 +153,7 @@ public class TiatsTrap extends DefaultAI
 			}, 5000);
 			return true;
 		}
+		
 		return true;
 	}
 }

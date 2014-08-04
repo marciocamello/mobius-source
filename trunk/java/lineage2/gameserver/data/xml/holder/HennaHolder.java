@@ -72,15 +72,18 @@ public final class HennaHolder extends AbstractHolder
 	public List<Henna> generateList(Player player)
 	{
 		List<Henna> list = new ArrayList<>();
+		
 		for (TIntObjectIterator<Henna> iterator = _hennas.iterator(); iterator.hasNext();)
 		{
 			iterator.advance();
 			Henna h = iterator.value();
+			
 			if (h.isForThisClass(player))
 			{
 				list.add(h);
 			}
 		}
+		
 		return list;
 	}
 	

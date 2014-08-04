@@ -69,14 +69,17 @@ public class PositionUtils
 		{
 			return TargetDirection.NONE;
 		}
+		
 		if (isBehind(target, attacker))
 		{
 			return TargetDirection.BEHIND;
 		}
+		
 		if (isInFrontOf(target, attacker))
 		{
 			return TargetDirection.FRONT;
 		}
+		
 		return TargetDirection.SIDE;
 	}
 	
@@ -92,22 +95,27 @@ public class PositionUtils
 		{
 			return false;
 		}
+		
 		double angleChar, angleTarget, angleDiff;
 		angleTarget = calculateAngleFrom(target, attacker);
 		angleChar = convertHeadingToDegree(target.getHeading());
 		angleDiff = angleChar - angleTarget;
+		
 		if (angleDiff <= (-MAX_ANGLE + FRONT_MAX_ANGLE))
 		{
 			angleDiff += MAX_ANGLE;
 		}
+		
 		if (angleDiff >= (MAX_ANGLE - FRONT_MAX_ANGLE))
 		{
 			angleDiff -= MAX_ANGLE;
 		}
+		
 		if (Math.abs(angleDiff) <= FRONT_MAX_ANGLE)
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -123,22 +131,27 @@ public class PositionUtils
 		{
 			return false;
 		}
+		
 		double angleChar, angleTarget, angleDiff;
 		angleChar = calculateAngleFrom(attacker, target);
 		angleTarget = convertHeadingToDegree(target.getHeading());
 		angleDiff = angleChar - angleTarget;
+		
 		if (angleDiff <= (-MAX_ANGLE + BACK_MAX_ANGLE))
 		{
 			angleDiff += MAX_ANGLE;
 		}
+		
 		if (angleDiff >= (MAX_ANGLE - BACK_MAX_ANGLE))
 		{
 			angleDiff -= MAX_ANGLE;
 		}
+		
 		if (Math.abs(angleDiff) <= BACK_MAX_ANGLE)
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -152,26 +165,32 @@ public class PositionUtils
 	public static boolean isFacing(Creature attacker, GameObject target, int maxAngle)
 	{
 		double angleChar, angleTarget, angleDiff, maxAngleDiff;
+		
 		if (target == null)
 		{
 			return false;
 		}
+		
 		maxAngleDiff = maxAngle / 2;
 		angleTarget = calculateAngleFrom(attacker, target);
 		angleChar = convertHeadingToDegree(attacker.getHeading());
 		angleDiff = angleChar - angleTarget;
+		
 		if (angleDiff <= (-360 + maxAngleDiff))
 		{
 			angleDiff += 360;
 		}
+		
 		if (angleDiff >= (360 - maxAngleDiff))
 		{
 			angleDiff -= 360;
 		}
+		
 		if (Math.abs(angleDiff) <= maxAngleDiff)
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -197,10 +216,12 @@ public class PositionUtils
 	public static int calculateHeadingFrom(int obj1X, int obj1Y, int obj2X, int obj2Y)
 	{
 		double angleTarget = Math.toDegrees(Math.atan2(obj2Y - obj1Y, obj2X - obj1X));
+		
 		if (angleTarget < 0)
 		{
 			angleTarget = MAX_ANGLE + angleTarget;
 		}
+		
 		return (int) (angleTarget * 182.044444444);
 	}
 	
@@ -226,10 +247,12 @@ public class PositionUtils
 	public static double calculateAngleFrom(int obj1X, int obj1Y, int obj2X, int obj2Y)
 	{
 		double angleTarget = Math.toDegrees(Math.atan2(obj2Y - obj1Y, obj2X - obj1X));
+		
 		if (angleTarget < 0)
 		{
 			angleTarget = 360 + angleTarget;
 		}
+		
 		return angleTarget;
 	}
 	
@@ -263,11 +286,13 @@ public class PositionUtils
 	{
 		long dx = x1 - x2;
 		long dy = y1 - y2;
+		
 		if (includeZAxis)
 		{
 			long dz = z1 - z2;
 			return ((dx * dx) + (dy * dy) + (dz * dz)) <= (range * range);
 		}
+		
 		return ((dx * dx) + (dy * dy)) <= (range * range);
 	}
 	
@@ -285,6 +310,7 @@ public class PositionUtils
 		{
 			return false;
 		}
+		
 		return checkIfInRange(range, obj1.getX(), obj1.getY(), obj1.getZ(), obj2.getX(), obj2.getY(), obj2.getZ(), includeZAxis);
 	}
 	
@@ -319,6 +345,7 @@ public class PositionUtils
 		{
 			degree = 360 + degree;
 		}
+		
 		return (int) (degree * 182.044444444);
 	}
 	
@@ -351,11 +378,13 @@ public class PositionUtils
 	{
 		long dx = x1 - x2;
 		long dy = y1 - y2;
+		
 		if (includeZAxis)
 		{
 			long dz = z1 - z2;
 			return Math.sqrt((dx * dx) + (dy * dy) + (dz * dz));
 		}
+		
 		return Math.sqrt((dx * dx) + (dy * dy));
 	}
 	
@@ -372,6 +401,7 @@ public class PositionUtils
 		{
 			return Integer.MAX_VALUE;
 		}
+		
 		return calculateDistance(obj1.getX(), obj1.getY(), obj1.getZ(), obj2.getX(), obj2.getY(), obj2.getZ(), includeZAxis);
 	}
 	
@@ -422,6 +452,7 @@ public class PositionUtils
 		{
 			return -1;
 		}
+		
 		return getHeadingTo(actor.getLoc(), target.getLoc());
 	}
 	
@@ -437,9 +468,11 @@ public class PositionUtils
 		{
 			return -1;
 		}
+		
 		int dx = target.x - actor.x;
 		int dy = target.y - actor.y;
 		int heading = target.h - (int) ((Math.atan2(-dy, -dx) * Creature.HEADINGS_IN_PI) + 32768);
+		
 		if (heading < 0)
 		{
 			heading = (heading + 1 + Integer.MAX_VALUE) & 0xFFFF;
@@ -448,6 +481,7 @@ public class PositionUtils
 		{
 			heading &= 0xFFFF;
 		}
+		
 		return heading;
 	}
 }

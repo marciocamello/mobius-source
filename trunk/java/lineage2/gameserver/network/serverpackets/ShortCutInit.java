@@ -28,6 +28,7 @@ public class ShortCutInit extends ShortCutPacket
 	{
 		Collection<ShortCut> shortCuts = pl.getAllShortCuts();
 		_shortCuts = new ArrayList<>(shortCuts.size());
+		
 		for (ShortCut shortCut : shortCuts)
 		{
 			_shortCuts.add(convert(pl, shortCut));

@@ -60,6 +60,7 @@ public class _702_ATrapForRevenge extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		String htmltext = event;
+		
 		if (event.equals("take") && (cond == 0))
 		{
 			st.setCond(1);
@@ -78,6 +79,7 @@ public class _702_ATrapForRevenge extends Quest implements ScriptFile
 			int rand = Rnd.get(1, 3);
 			htmltext = "tenius_q702_6.htm";
 			st.takeItems(DRAKES_FLESH, -1);
+			
 			if (rand == 1)
 			{
 				st.giveItems(LEONARD, 3);
@@ -90,10 +92,12 @@ public class _702_ATrapForRevenge extends Quest implements ScriptFile
 			{
 				st.giveItems(ORICHALCUM, 3);
 			}
+			
 			st.giveItems(ADENA_ID, 157200);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -104,6 +108,7 @@ public class _702_ATrapForRevenge extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		QuestState GoodDayToFly = st.getPlayer().getQuestState(_10273_GoodDayToFly.class);
+		
 		if (npcId == PLENOS)
 		{
 			if (cond == 0)
@@ -145,6 +150,7 @@ public class _702_ATrapForRevenge extends Quest implements ScriptFile
 				htmltext = "tenius_q702_5.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -153,11 +159,13 @@ public class _702_ATrapForRevenge extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if ((cond == 2) && ((npcId == DRAK) || (npcId == MUTATED_DRAKE_WING)) && (st.getQuestItemsCount(DRAKES_FLESH) <= 100))
 		{
 			st.giveItems(DRAKES_FLESH, 1);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		return null;
 	}
 }

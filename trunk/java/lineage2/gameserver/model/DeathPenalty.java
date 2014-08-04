@@ -82,10 +82,12 @@ public class DeathPenalty
 		{
 			_level = 5;
 		}
+		
 		if (_level < 0)
 		{
 			_level = 0;
 		}
+		
 		return Config.ALLOW_DEATH_PENALTY_C5 ? _level : 0;
 	}
 	
@@ -102,12 +104,15 @@ public class DeathPenalty
 			{
 				_level = 5;
 			}
+			
 			if (_level < 0)
 			{
 				_level = 0;
 			}
+			
 			return _level;
 		}
+		
 		return 0;
 	}
 	
@@ -121,25 +126,32 @@ public class DeathPenalty
 		{
 			return;
 		}
+		
 		if (_hasCharmOfLuck)
 		{
 			_hasCharmOfLuck = false;
 			return;
 		}
+		
 		if ((killer == null) || killer.isPlayable())
 		{
 			return;
 		}
+		
 		Player player = getPlayer();
+		
 		if ((player == null) || (player.getLevel() <= 9))
 		{
 			return;
 		}
+		
 		int karmaBonus = player.getKarma() / Config.ALT_DEATH_PENALTY_C5_KARMA_PENALTY;
+		
 		if (karmaBonus < 0)
 		{
 			karmaBonus = 0;
 		}
+		
 		if (Rnd.chance(Config.ALT_DEATH_PENALTY_C5_CHANCE + karmaBonus))
 		{
 			addLevel();
@@ -163,20 +175,25 @@ public class DeathPenalty
 				}
 			}
 		}
+		
 		if (!Config.ALLOW_DEATH_PENALTY_C5)
 		{
 			return;
 		}
+		
 		if (getLevel(player) > 0)
 		{
 			Skill skill = SkillTable.getInstance().getInfo(_skillId, _level);
+			
 			if (skill == null)
 			{
 				return;
 			}
+			
 			skill.getEffects(player, player, false, false);
 			player.sendPacket(new SystemMessage(SystemMessage.THE_LEVEL_S1_SHILENS_BREATH_WILL_BE_ASSESSED).addNumber(getLevel(player)));
 		}
+		
 		player.updateStats();
 	}
 	
@@ -186,10 +203,12 @@ public class DeathPenalty
 	public void addLevel()
 	{
 		Player player = getPlayer();
+		
 		if ((player == null) || (getLevel(player) >= 5))
 		{
 			return;
 		}
+		
 		if (player.getEffectList().getEffectsBySkillId(_skillId) != null)
 		{
 			for (Effect e : player.getEffectList().getAllEffects())
@@ -201,6 +220,7 @@ public class DeathPenalty
 				}
 			}
 		}
+		
 		_level++;
 	}
 	
@@ -213,10 +233,12 @@ public class DeathPenalty
 		if (getLevel(player) > 0)
 		{
 			Skill skill = SkillTable.getInstance().getInfo(_skillId, getLevel(player));
+			
 			if (skill == null)
 			{
 				return;
 			}
+			
 			skill.getEffects(player, player, false, false);
 			player.sendPacket(new SystemMessage(SystemMessage.THE_LEVEL_S1_SHILENS_BREATH_WILL_BE_ASSESSED).addNumber(getLevel(player)));
 			player.updateStats();
@@ -229,10 +251,12 @@ public class DeathPenalty
 	public void reduceLevel()
 	{
 		Player player = getPlayer();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		for (Effect e : player.getEffectList().getAllEffects())
 		{
 			if (e.getSkill().getId() == _skillId)
@@ -245,7 +269,9 @@ public class DeathPenalty
 				return;
 			}
 		}
+		
 		_level--;
+		
 		if (getLevel(player) > 0)
 		{
 			player.broadcastPacket(new MagicSkillUse(player, player, _skillId, getLevel(player), 0, 0));
@@ -255,6 +281,7 @@ public class DeathPenalty
 		{
 			player.sendPacket(Msg.THE_DEATH_PENALTY_HAS_BEEN_LIFTED);
 		}
+		
 		player.updateStats();
 	}
 	
@@ -264,6 +291,7 @@ public class DeathPenalty
 	public void checkCharmOfLuck()
 	{
 		Player player = getPlayer();
+		
 		if (player != null)
 		{
 			for (Effect e : player.getEffectList().getAllEffects())
@@ -275,6 +303,7 @@ public class DeathPenalty
 				}
 			}
 		}
+		
 		_hasCharmOfLuck = false;
 	}
 }

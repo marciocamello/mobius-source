@@ -150,11 +150,14 @@ public class Account
 	{
 		allowedIpList.clear();
 		this.allowedIP = allowedIP;
+		
 		if (allowedIP.isEmpty())
 		{
 			return;
 		}
+		
 		String[] masks = allowedIP.split("[\\s,;]+");
+		
 		for (String mask : masks)
 		{
 			allowedIpList.add(Net.valueOf(mask));
@@ -326,12 +329,14 @@ public class Account
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT password, access_level, ban_expire, allow_ip, bonus, bonus_expire, last_server, last_ip, last_access FROM accounts WHERE login = ?");
 			statement.setString(1, login);
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				setPasswordHash(rset.getString("password"));
@@ -362,6 +367,7 @@ public class Account
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = L2DatabaseFactory.getInstance().getConnection();
@@ -387,6 +393,7 @@ public class Account
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = L2DatabaseFactory.getInstance().getConnection();

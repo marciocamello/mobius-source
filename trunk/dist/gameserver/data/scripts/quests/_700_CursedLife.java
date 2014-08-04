@@ -62,6 +62,7 @@ public class _700_CursedLife extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		String htmltext = event;
+		
 		if (event.equals("orbyu_q700_2.htm") && (cond == 0))
 		{
 			st.setCond(1);
@@ -74,18 +75,22 @@ public class _700_CursedLife extends Quest implements ScriptFile
 			{
 				long _adenatogive = (st.getQuestItemsCount(SwallowedSkull) * _skullprice) + (st.getQuestItemsCount(SwallowedSternum) * _sternumprice) + (st.getQuestItemsCount(SwallowedBones) * _bonesprice);
 				st.giveItems(ADENA_ID, _adenatogive);
+				
 				if (st.getQuestItemsCount(SwallowedSkull) >= 1)
 				{
 					st.takeItems(SwallowedSkull, -1);
 				}
+				
 				if (st.getQuestItemsCount(SwallowedSternum) >= 1)
 				{
 					st.takeItems(SwallowedSternum, -1);
 				}
+				
 				if (st.getQuestItemsCount(SwallowedBones) >= 1)
 				{
 					st.takeItems(SwallowedBones, -1);
 				}
+				
 				htmltext = "orbyu_q700_4.htm";
 			}
 			else
@@ -93,6 +98,7 @@ public class _700_CursedLife extends Quest implements ScriptFile
 				htmltext = "orbyu_q700_3a.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -103,6 +109,7 @@ public class _700_CursedLife extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		QuestState GoodDayToFly = st.getPlayer().getQuestState(_10273_GoodDayToFly.class);
+		
 		if (npcId == Orbyu)
 		{
 			if (cond == 0)
@@ -129,6 +136,7 @@ public class _700_CursedLife extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -137,12 +145,14 @@ public class _700_CursedLife extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (cond == 1)
 		{
 			if ((npcId == MutantBird1) || (npcId == MutantBird2) || (npcId == DraHawk1) || (npcId == DraHawk2))
 			{
 				st.giveItems(SwallowedBones, 1);
 				st.playSound(SOUND_ITEMGET);
+				
 				if (Rnd.chance(20))
 				{
 					st.giveItems(SwallowedSkull, 1);
@@ -160,6 +170,7 @@ public class _700_CursedLife extends Quest implements ScriptFile
 				st.playSound(SOUND_ITEMGET);
 			}
 		}
+		
 		return null;
 	}
 }

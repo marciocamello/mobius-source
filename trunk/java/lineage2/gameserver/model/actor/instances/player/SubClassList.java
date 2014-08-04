@@ -80,21 +80,25 @@ public class SubClassList
 		_listByClassId.clear();
 		List<SubClass> subclasses = CharacterSubclassDAO.getInstance().restore(_owner);
 		int lastFreeIndex = 2;
+		
 		for (SubClass sub : subclasses)
 		{
 			if (sub == null)
 			{
 				continue;
 			}
+			
 			if (size() >= MAX_SUB_COUNT)
 			{
 				_log.warn("SubClassList:restore: Limit is subclass! Player: " + _owner.getName() + "(" + _owner.getObjectId() + ")");
 				break;
 			}
+			
 			if (sub.isActive())
 			{
 				_activeSubClass = sub;
 			}
+			
 			if (sub.isBase())
 			{
 				_baseSubClass = sub;
@@ -105,18 +109,24 @@ public class SubClassList
 				sub.setIndex(lastFreeIndex);
 				lastFreeIndex++;
 			}
+			
 			if (_listByIndex.containsKey(sub.getIndex()))
 			{
 				_log.warn("SubClassList:restore: Duplicate index in player subclasses! Player: " + _owner.getName() + "(" + _owner.getObjectId() + ")");
 			}
+			
 			_listByIndex.put(sub.getIndex(), sub);
+			
 			if (_listByClassId.containsKey(sub.getClassId()))
 			{
 				_log.warn("SubClassList:restore: Duplicate class_id in player subclasses! Player: " + _owner.getName() + "(" + _owner.getObjectId() + ")");
 			}
+			
 			_listByClassId.put(sub.getClassId(), sub);
 		}
+		
 		_lastFreeIndex = lastFreeIndex;
+		
 		if (_listByIndex.size() != _listByClassId.size())
 		{
 			_log.warn("SubClassList:restore: The size of the lists do not match! Player: " + _owner.getName() + "(" + _owner.getObjectId() + ")");
@@ -162,6 +172,7 @@ public class SubClassList
 		{
 			return;
 		}
+		
 		int index = _listByClassId.get(classId).getIndex();
 		_listByIndex.remove(index);
 		_listByClassId.remove(classId);
@@ -225,6 +236,7 @@ public class SubClassList
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -240,10 +252,12 @@ public class SubClassList
 		{
 			return false;
 		}
+		
 		if (_listByClassId.containsKey(newClassId))
 		{
 			return false;
 		}
+		
 		SubClass sub = _listByClassId.get(oldClassId);
 		sub.setClassId(newClassId);
 		_listByClassId.remove(oldClassId);
@@ -262,14 +276,17 @@ public class SubClassList
 		{
 			return false;
 		}
+		
 		if (size() >= MAX_SUB_COUNT)
 		{
 			return false;
 		}
+		
 		if (_listByClassId.containsKey(sub.getClassId()))
 		{
 			return false;
 		}
+		
 		sub.setIndex(_lastFreeIndex);
 		_lastFreeIndex++;
 		_listByIndex.put(sub.getIndex(), sub);
@@ -289,18 +306,22 @@ public class SubClassList
 		{
 			return false;
 		}
+		
 		if (size() >= MAX_SUB_COUNT)
 		{
 			return false;
 		}
+		
 		if (_listByClassId.containsKey(sub.getClassId()))
 		{
 			return false;
 		}
+		
 		if ((index < 1) && (index > 4))
 		{
 			return false;
 		}
+		
 		sub.setIndex(index);
 		_listByIndex.put(sub.getIndex(), sub);
 		_listByClassId.put(sub.getClassId(), sub);
@@ -318,10 +339,12 @@ public class SubClassList
 		{
 			return null;
 		}
+		
 		if (_activeSubClass == null)
 		{
 			return null;
 		}
+		
 		_activeSubClass.setActive(false);
 		SubClass sub = _listByClassId.get(classId);
 		sub.setActive(true);

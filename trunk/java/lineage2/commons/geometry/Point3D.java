@@ -77,14 +77,17 @@ public class Point3D extends Point2D
 		{
 			return true;
 		}
+		
 		if (o == null)
 		{
 			return false;
 		}
+		
 		if (o.getClass() != getClass())
 		{
 			return false;
 		}
+		
 		return equals((Point3D) o);
 	}
 	

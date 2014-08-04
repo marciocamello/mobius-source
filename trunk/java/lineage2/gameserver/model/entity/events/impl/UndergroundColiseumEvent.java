@@ -47,11 +47,6 @@ public class UndergroundColiseumEvent extends GlobalEvent
 	 * Field _maxLevel.
 	 */
 	private final int _maxLevel;
-	/**
-	 * Field _battleEvent.
-	 */
-	@SuppressWarnings("unused")
-	private UndergroundColiseumBattleEvent _battleEvent;
 	
 	/**
 	 * Constructor for UndergroundColiseumEvent.

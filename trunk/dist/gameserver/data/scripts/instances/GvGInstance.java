@@ -136,7 +136,6 @@ public class GvGInstance extends Reflection
 		
 		addSpawnWithoutRespawn(35423, new Location(139640, 139736, -15264), 0); // Red team flag
 		addSpawnWithoutRespawn(35426, new Location(139672, 145896, -15264), 0); // Blue team flag
-		
 		_bossSpawnTask = ThreadPoolManager.getInstance().schedule(new BossSpawn(), bossSpawnTime); //
 		_countDownTask = ThreadPoolManager.getInstance().schedule(new CountingDown(), (eventTime - 1) * 1000L);
 		_battleEndTask = ThreadPoolManager.getInstance().schedule(new BattleEnd(), (eventTime - 6) * 1000L); // -6 is about to prevent built-in BlockChecker countdown task
@@ -159,7 +158,6 @@ public class GvGInstance extends Reflection
 		}
 		
 		startTime = System.currentTimeMillis() + (eventTime * 1000L); // Used in packet broadcasting
-		
 		// Forming packets to send everybody
 		final ExCubeGameChangePoints initialPoints = new ExCubeGameChangePoints(eventTime, team1Score, team2Score);
 		final ExCubeGameCloseUI cui = new ExCubeGameCloseUI();
@@ -168,7 +166,6 @@ public class GvGInstance extends Reflection
 		for (Player tm : HardReferences.unwrap(bothTeams))
 		{
 			score.put(tm.getObjectId(), new MutableInt());
-			
 			tm.setCurrentCp(tm.getMaxCp());
 			tm.setCurrentHp(tm.getMaxHp(), false);
 			tm.setCurrentMp(tm.getMaxMp());
@@ -212,6 +209,7 @@ public class GvGInstance extends Reflection
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -221,9 +219,7 @@ public class GvGInstance extends Reflection
 	void end()
 	{
 		active = false;
-		
 		startCollapseTimer(60 * 1000L);
-		
 		paralyzePlayers();
 		ThreadPoolManager.getInstance().schedule(new Finish(), 55 * 1000L);
 		
@@ -232,11 +228,13 @@ public class GvGInstance extends Reflection
 			_bossSpawnTask.cancel(false);
 			_bossSpawnTask = null;
 		}
+		
 		if (_countDownTask != null)
 		{
 			_countDownTask.cancel(false);
 			_countDownTask = null;
 		}
+		
 		if (_battleEndTask != null)
 		{
 			_battleEndTask.cancel(false);
@@ -244,15 +242,11 @@ public class GvGInstance extends Reflection
 		}
 		
 		boolean isRedWinner = false;
-		
 		isRedWinner = getRedScore() >= getBlueScore();
-		
 		final ExCubeGameEnd end = new ExCubeGameEnd(isRedWinner);
 		broadCastPacketToBothTeams(end);
-		
 		reward(isRedWinner ? team2 : team1);
 		GvG.updateWinner(isRedWinner ? team2.getPartyLeader() : team1.getPartyLeader());
-		
 		zonepvp.setActive(false);
 		peace1.setActive(false);
 		peace2.setActive(false);
@@ -271,7 +265,7 @@ public class GvGInstance extends Reflection
 	private class DeathListener implements OnDeathListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public DeathListener()
 		{
@@ -303,6 +297,7 @@ public class GvGInstance extends Reflection
 					addPlayerScore(killer.getPlayer());
 					changeScore(2, SCORE_KILL, SCORE_DEATH, true, true, killer.getPlayer());
 				}
+				
 				resurrectAtBase(self.getPlayer());
 			}
 			else if (self.isPlayer() && !killer.isPlayable())
@@ -351,34 +346,42 @@ public class GvGInstance extends Reflection
 	synchronized void changeScore(int teamId, int toAdd, int toSub, boolean subbing, boolean affectAnotherTeam, Player player)
 	{
 		int timeLeft = (int) ((startTime - System.currentTimeMillis()) / 1000);
+		
 		if (teamId == 1)
 		{
 			if (subbing)
 			{
 				team1Score -= toSub;
+				
 				if (team1Score < 0)
 				{
 					team1Score = 0;
 				}
+				
 				if (affectAnotherTeam)
 				{
 					team2Score += toAdd;
 					broadCastPacketToBothTeams(new ExCubeGameExtendedChangePoints(timeLeft, team1Score, team2Score, true, player, getPlayerScore(player)));
 				}
+				
 				broadCastPacketToBothTeams(new ExCubeGameExtendedChangePoints(timeLeft, team1Score, team2Score, false, player, getPlayerScore(player)));
 			}
 			else
 			{
 				team1Score += toAdd;
+				
 				if (affectAnotherTeam)
 				{
 					team2Score -= toSub;
+					
 					if (team2Score < 0)
 					{
 						team2Score = 0;
 					}
+					
 					broadCastPacketToBothTeams(new ExCubeGameExtendedChangePoints(timeLeft, team1Score, team2Score, true, player, getPlayerScore(player)));
 				}
+				
 				broadCastPacketToBothTeams(new ExCubeGameExtendedChangePoints(timeLeft, team1Score, team2Score, false, player, getPlayerScore(player)));
 			}
 		}
@@ -387,29 +390,36 @@ public class GvGInstance extends Reflection
 			if (subbing)
 			{
 				team2Score -= toSub;
+				
 				if (team2Score < 0)
 				{
 					team2Score = 0;
 				}
+				
 				if (affectAnotherTeam)
 				{
 					team1Score += toAdd;
 					broadCastPacketToBothTeams(new ExCubeGameExtendedChangePoints(timeLeft, team1Score, team2Score, false, player, getPlayerScore(player)));
 				}
+				
 				broadCastPacketToBothTeams(new ExCubeGameExtendedChangePoints(timeLeft, team1Score, team2Score, true, player, getPlayerScore(player)));
 			}
 			else
 			{
 				team2Score += toAdd;
+				
 				if (affectAnotherTeam)
 				{
 					team1Score -= toSub;
+					
 					if (team1Score < 0)
 					{
 						team1Score = 0;
 					}
+					
 					broadCastPacketToBothTeams(new ExCubeGameExtendedChangePoints(timeLeft, team1Score, team2Score, false, player, getPlayerScore(player)));
 				}
+				
 				broadCastPacketToBothTeams(new ExCubeGameExtendedChangePoints(timeLeft, team1Score, team2Score, true, player, getPlayerScore(player)));
 			}
 		}
@@ -453,7 +463,6 @@ public class GvGInstance extends Reflection
 			
 			tm.setCurrentMp(tm.getMaxMp());
 			tm.setCurrentCp(tm.getMaxCp());
-			
 			tm.getEffectList().stopEffect(Skill.SKILL_MYSTIC_IMMUNITY);
 			tm.block();
 		}
@@ -496,9 +505,10 @@ public class GvGInstance extends Reflection
 			// player.setCurrentMp(player.getMaxMp());
 			player.broadcastPacket(new Revive(player));
 		}
-		player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(5660, 2)); // Battlefield Death Syndrome
 		
+		player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(5660, 2)); // Battlefield Death Syndrome
 		Location pos;
+		
 		if (team1.containsMember(player))
 		{
 			pos = Location.findPointToStay(GvG.TEAM1_LOC, 0, 150, getGeoIndex());
@@ -518,16 +528,17 @@ public class GvGInstance extends Reflection
 	void removePlayer(Player player, boolean legalQuit)
 	{
 		bothTeams.remove(player.getRef());
-		
 		broadCastPacketToBothTeams(new ExCubeGameRemovePlayer(player, isRedTeam(player)));
 		player.removeListener(_deathListener);
 		player.removeListener(_teleportListener);
 		player.removeListener(_playerPartyLeaveListener);
 		player.leaveParty();
+		
 		if (!legalQuit)
 		{
 			player.sendPacket(new ExCubeGameEnd(false));
 		}
+		
 		player.teleToLocation(Location.findPointToStay(GvG.RETURN_LOC, 0, 150, ReflectionManager.DEFAULT.getGeoIndex()), 0);
 	}
 	
@@ -630,7 +641,7 @@ public class GvGInstance extends Reflection
 	private class TeleportListener implements OnTeleportListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public TeleportListener()
 		{
@@ -656,7 +667,7 @@ public class GvGInstance extends Reflection
 	private class PlayerPartyLeaveListener implements OnPlayerPartyLeaveListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public PlayerPartyLeaveListener()
 		{

@@ -52,9 +52,11 @@ public class ExQuestItemList extends L2GameServerPacket
 		}
 		
 		writeH(_lockItems.length);
+		
 		if (_lockItems.length > 0)
 		{
 			writeC(_lockType.ordinal());
+			
 			for (int i : _lockItems)
 			{
 				writeD(i);

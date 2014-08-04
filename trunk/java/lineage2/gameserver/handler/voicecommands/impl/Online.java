@@ -57,23 +57,28 @@ public class Online extends Functions implements IVoicedCommandHandler
 		{
 			return false;
 		}
+		
 		if (command.equals("online"))
 		{
 			int i = 0;
 			int j = 0;
+			
 			for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 			{
 				i++;
+				
 				if (player.isInOfflineMode())
 				{
 					j++;
 				}
 			}
+			
 			i += FakePlayersTable.getFakePlayersCount();
 			activeChar.sendMessage("There are " + i + " online players.");
 			activeChar.sendMessage("Of them " + j + " are offline shops.");
 			return true;
 		}
+		
 		return false;
 	}
 }

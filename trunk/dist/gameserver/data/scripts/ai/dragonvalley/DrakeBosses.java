@@ -44,13 +44,16 @@ public class DrakeBosses extends Fighter
 			case 25725:
 				NpcUtils.spawnSingle(32884, getActor().getLoc(), 300000);
 				break;
+			
 			case 25726:
 				NpcUtils.spawnSingle(32885, getActor().getLoc(), 300000);
 				break;
+			
 			case 25727:
 				NpcUtils.spawnSingle(32886, getActor().getLoc(), 300000);
 				break;
 		}
+		
 		super.onEvtDead(killer);
 		getActor().endDecayTask();
 	}

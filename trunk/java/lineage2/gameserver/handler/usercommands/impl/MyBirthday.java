@@ -46,13 +46,16 @@ public class MyBirthday implements IUserCommandHandler
 		{
 			return false;
 		}
+		
 		Calendar c = Calendar.getInstance();
 		c.setTimeInMillis(activeChar.getCreateTime());
 		activeChar.sendPacket(new SystemMessage2(SystemMsg.C1S_BIRTHDAY_IS_S3S4S2).addName(activeChar).addInteger(c.get(Calendar.YEAR)).addInteger(c.get(Calendar.MONTH) + 1).addInteger(c.get(Calendar.DAY_OF_MONTH)));
+		
 		if ((c.get(Calendar.MONTH) == Calendar.FEBRUARY) && (c.get(Calendar.DAY_OF_WEEK) == 29))
 		{
 			activeChar.sendPacket(SystemMsg.A_CHARACTER_BORN_ON_FEBRUARY_29_WILL_RECEIVE_A_GIFT_ON_FEBRUARY_28);
 		}
+		
 		return true;
 	}
 	

@@ -222,11 +222,13 @@ public class GameServer
 		Class.forName(Config.DATABASE_DRIVER).newInstance();
 		DatabaseFactory.getInstance().getConnection().close();
 		IdFactory _idFactory = IdFactory.getInstance();
+		
 		if (!_idFactory.isInitialized())
 		{
 			_log.error("Could not read object IDs from DB. Please Check Your Data.");
 			throw new Exception("Could not initialize the ID factory");
 		}
+		
 		CacheManager.getInstance();
 		ThreadPoolManager.getInstance();
 		AttributeStoneManager.load();
@@ -260,23 +262,29 @@ public class GameServer
 		Announcements.getInstance();
 		LotteryManager.getInstance();
 		PlayerMessageStack.getInstance();
+		
 		if (Config.AUTODESTROY_ITEM_AFTER > 0)
 		{
 			ItemsAutoDestroy.getInstance();
 		}
+		
 		MonsterRace.getInstance();
+		
 		if (Config.ENABLE_OLYMPIAD)
 		{
 			Olympiad.load();
 			Hero.getInstance();
 		}
+		
 		PetitionManager.getInstance();
 		CursedWeaponsManager.getInstance();
+		
 		if (!Config.ALLOW_WEDDING)
 		{
 			CoupleManager.getInstance();
 			_log.info("CoupleManager initialized");
 		}
+		
 		ItemHandler.getInstance();
 		AdminCommandHandler.getInstance().log();
 		UserCommandHandler.getInstance().log();
@@ -291,10 +299,12 @@ public class GameServer
 		Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
 		_log.info("IdFactory: Free ObjectID's remaining: " + IdFactory.getInstance().size());
 		CoupleManager.getInstance();
+		
 		if (Config.ALT_FISH_CHAMPIONSHIP_ENABLED)
 		{
 			FishingChampionShipManager.getInstance();
 		}
+		
 		HellboundManager.getInstance();
 		NaiaTowerManager.getInstance();
 		NaiaCoreManager.getInstance();
@@ -316,28 +326,35 @@ public class GameServer
 		
 		SubClassTable.getInstance();
 		DualClassTable.getInstance();
+		
 		if (Config.GARBAGE_COLLECTOR_INTERVAL > 0)
 		{
 			Class.forName(GarbageCollector.class.getName());
 		}
+		
 		Shutdown.getInstance().schedule(Config.RESTART_AT_TIME, Shutdown.RESTART);
 		_log.info("GameServer Started");
 		_log.info("Maximum Numbers of Connected Players: " + Config.MAXIMUM_ONLINE_USERS);
 		GamePacketHandler gph = new GamePacketHandler();
 		InetAddress serverAddr = Config.GAMESERVER_HOSTNAME.equalsIgnoreCase("*") ? null : InetAddress.getByName(Config.GAMESERVER_HOSTNAME);
 		_selectorThreads = new SelectorThread[Config.PORTS_GAME.length];
+		
 		for (int i = 0; i < Config.PORTS_GAME.length; i++)
 		{
 			_selectorThreads[i] = new SelectorThread<>(Config.SELECTOR_CONFIG, gph, gph, gph, null);
 			_selectorThreads[i].openServerSocket(serverAddr, Config.PORTS_GAME[i]);
 			_selectorThreads[i].start();
 		}
+		
 		LoginServerCommunication.getInstance().start();
+		
 		if (Config.SERVICES_OFFLINE_TRADE_RESTORE_AFTER_RESTART)
 		{
 			ThreadPoolManager.getInstance().schedule(new RestoreOfflineTraders(), 30000L);
 		}
+		
 		getListeners().onStart();
+		
 		if (Config.IS_TELNET_ENABLED)
 		{
 			statusServer = new TelnetServer();
@@ -348,10 +365,12 @@ public class GameServer
 		}
 		_log.info("=================================================");
 		String memUsage = new StringBuilder().append(StatsUtils.getMemUsage()).toString();
+		
 		for (String line : memUsage.split("\n"))
 		{
 			_log.info(line);
 		}
+		
 		_log.info("=================================================");
 	}
 	
@@ -401,6 +420,7 @@ public class GameServer
 	public static void checkFreePorts()
 	{
 		boolean binded = false;
+		
 		while (!binded)
 		{
 			for (int PORT_GAME : Config.PORTS_GAME)
@@ -408,6 +428,7 @@ public class GameServer
 				try
 				{
 					ServerSocket ss;
+					
 					if (Config.GAMESERVER_HOSTNAME.equalsIgnoreCase("*"))
 					{
 						ss = new ServerSocket(PORT_GAME);
@@ -416,6 +437,7 @@ public class GameServer
 					{
 						ss = new ServerSocket(PORT_GAME, 50, InetAddress.getByName(Config.GAMESERVER_HOSTNAME));
 					}
+					
 					ss.close();
 					binded = true;
 				}
@@ -423,6 +445,7 @@ public class GameServer
 				{
 					_log.warn("Port " + PORT_GAME + " is allready binded. Please free it and restart server.");
 					binded = false;
+					
 					try
 					{
 						Thread.sleep(1000);

@@ -43,6 +43,7 @@ public class _464_Oath extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("bookowner"))
 		{
 			switch (Rnd.get(2, 8))
@@ -51,35 +52,43 @@ public class _464_Oath extends Quest implements ScriptFile
 					st.setCond(2);
 					htmltext = "sophia_q464_04a.htm";
 					break;
+				
 				case 3:
 					st.setCond(3);
 					htmltext = "sophia_q464_04b.htm";
 					break;
+				
 				case 4:
 					st.setCond(4);
 					htmltext = "sophia_q464_04c.htm";
 					break;
+				
 				case 5:
 					st.setCond(5);
 					htmltext = "sophia_q464_04d.htm";
 					break;
+				
 				case 6:
 					st.setCond(6);
 					htmltext = "sophia_q464_04e.htm";
 					break;
+				
 				case 7:
 					st.setCond(7);
 					htmltext = "sophia_q464_04f.htm";
 					break;
+				
 				case 8:
 					st.setCond(8);
 					htmltext = "sophia_q464_04g.htm";
 					break;
+				
 				case 9:
 					st.setCond(9);
 					htmltext = "sophia_q464_04h.htm";
 					break;
 			}
+			
 			st.takeAllItems(BookofSilence1);
 			st.giveItems(BookofSilence2, 1);
 		}
@@ -90,34 +99,43 @@ public class _464_Oath extends Quest implements ScriptFile
 				case Seresin:
 					htmltext = "seresin_q464_02.htm";
 					break;
+				
 				case Holly:
 					htmltext = "holly_q464_02.htm";
 					break;
+				
 				case Flauen:
 					htmltext = "flauen_q464_02.htm";
 					break;
+				
 				case Dominic:
 					htmltext = "dominic_q464_02.htm";
 					break;
+				
 				case Chichirin:
 					htmltext = "chichirin_q464_02.htm";
 					break;
+				
 				case Tobias:
 					htmltext = "tobias_q464_02.htm";
 					break;
+				
 				case Blacksmith:
 					htmltext = "blacksmith_q464_02.htm";
 					break;
+				
 				case Agnes:
 					htmltext = "agnes_q464_02.htm";
 					break;
 			}
+			
 			st.giveItems(ADENA_ID, Rnd.get(45000, 90000));
 			st.addExpAndSp(Rnd.get(15450, 1200000), Rnd.get(15000, 200000));
 			st.takeAllItems(BookofSilence2);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -127,6 +145,7 @@ public class _464_Oath extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
+		
 		if (npcId == Sophia)
 		{
 			switch (cond)
@@ -134,27 +153,35 @@ public class _464_Oath extends Quest implements ScriptFile
 				case 1:
 					htmltext = "sophia_q464_01.htm";
 					break;
+				
 				case 2:
 					htmltext = "sophia_q464_05a.htm";
 					break;
+				
 				case 3:
 					htmltext = "sophia_q464_05b.htm";
 					break;
+				
 				case 4:
 					htmltext = "sophia_q464_05c.htm";
 					break;
+				
 				case 5:
 					htmltext = "sophia_q464_05d.htm";
 					break;
+				
 				case 6:
 					htmltext = "sophia_q464_05e.htm";
 					break;
+				
 				case 7:
 					htmltext = "sophia_q464_05f.htm";
 					break;
+				
 				case 8:
 					htmltext = "sophia_q464_05g.htm";
 					break;
+				
 				case 9:
 					htmltext = "sophia_q464_05h.htm";
 					break;
@@ -216,6 +243,7 @@ public class _464_Oath extends Quest implements ScriptFile
 				htmltext = "agnes_q464_01.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	

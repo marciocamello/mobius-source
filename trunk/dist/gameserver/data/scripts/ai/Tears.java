@@ -65,6 +65,7 @@ public class Tears extends DefaultAI
 					npc.deleteMe();
 				}
 			}
+			
 			spawns.clear();
 			despawnTask = null;
 		}
@@ -156,30 +157,38 @@ public class Tears extends DefaultAI
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead() || (skill == null) || (caster == null))
 		{
 			return;
 		}
+		
 		if ((System.currentTimeMillis() - _last_scale_time) > 5000)
 		{
 			_scale_count = 0;
 		}
+		
 		if (skill.getId() == Water_Dragon_Scale)
 		{
 			_scale_count++;
 			_last_scale_time = System.currentTimeMillis();
 		}
+		
 		final Player player = caster.getPlayer();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		int count = 1;
 		final Party party = player.getParty();
+		
 		if (party != null)
 		{
 			count = party.getMemberCount();
 		}
+		
 		if (_scale_count >= count)
 		{
 			_scale_count = 0;
@@ -196,18 +205,23 @@ public class Tears extends DefaultAI
 	{
 		clearTasks();
 		final Creature target = prepareTarget();
+		
 		if (target == null)
 		{
 			return false;
 		}
+		
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return false;
 		}
+		
 		final double distance = actor.getDistance(target);
 		final double actor_hp_precent = actor.getCurrentHpPercents();
 		final int rnd_per = Rnd.get(100);
+		
 		if ((actor_hp_precent < 15) && !_isUsedInvincible)
 		{
 			_isUsedInvincible = true;
@@ -215,16 +229,19 @@ public class Tears extends DefaultAI
 			Functions.npcSay(actor, "Готов�?те�?�? к �?мерти!!!");
 			return true;
 		}
+		
 		if ((rnd_per < 5) && (spawnTask == null) && (despawnTask == null))
 		{
 			actor.broadcastPacketToOthers(new MagicSkillUse(actor, actor, 5441, 1, 3000, 0));
 			spawnTask = ThreadPoolManager.getInstance().schedule(new SpawnMobsTask(), 3000);
 			return true;
 		}
+		
 		if (!actor.isAMuted() && (rnd_per < 75))
 		{
 			return chooseTaskAndTargets(null, target, distance);
 		}
+		
 		return chooseTaskAndTargets(Freezing, target, distance);
 	}
 	
@@ -236,6 +253,7 @@ public class Tears extends DefaultAI
 		final NpcInstance actor = getActor();
 		Location pos;
 		Creature hated;
+		
 		for (int i = 0; i < 9; i++)
 		{
 			try
@@ -247,6 +265,7 @@ public class Tears extends DefaultAI
 				NpcInstance copy = sp.doSpawn(true);
 				spawns.add(copy);
 				hated = actor.getAggroList().getRandomHated();
+				
 				if (hated != null)
 				{
 					copy.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, hated, Rnd.get(1, 100));
@@ -257,17 +276,21 @@ public class Tears extends DefaultAI
 				e.printStackTrace();
 			}
 		}
+		
 		pos = Location.findPointToStay(144298, 154420, -11854, 300, 320, actor.getReflectionId());
 		actor.teleToLocation(pos);
 		hated = actor.getAggroList().getRandomHated();
+		
 		if (hated != null)
 		{
 			actor.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, hated, Rnd.get(1, 100));
 		}
+		
 		if (despawnTask != null)
 		{
 			despawnTask.cancel(false);
 		}
+		
 		despawnTask = ThreadPoolManager.getInstance().schedule(new DeSpawnTask(), 30000);
 	}
 	

@@ -74,30 +74,37 @@ public class BlessedSpiritShot extends ScriptItemHandler
 		{
 			return false;
 		}
+		
 		final Player player = (Player) playable;
 		final ItemInstance weaponInst = player.getActiveWeaponInstance();
 		final WeaponTemplate weaponItem = player.getActiveWeaponItem();
 		final int SoulshotId = item.getItemId();
 		boolean isAutoSoulShot = false;
+		
 		if (player.getAutoSoulShot().contains(SoulshotId))
 		{
 			isAutoSoulShot = true;
 		}
+		
 		if (weaponInst == null)
 		{
 			if (!isAutoSoulShot)
 			{
 				player.sendPacket(Msg.CANNOT_USE_SPIRITSHOTS);
 			}
+			
 			return false;
 		}
+		
 		if (weaponInst.getChargedSpiritshot() == ItemInstance.CHARGED_BLESSED_SPIRITSHOT)
 		{
 			return false;
 		}
+		
 		final int spiritshotId = item.getItemId();
 		final int grade = weaponItem.getCrystalType().externalOrdinal;
 		final int blessedsoulSpiritConsumption = weaponItem.getSpiritShotCount();
+		
 		if (blessedsoulSpiritConsumption == 0)
 		{
 			if (isAutoSoulShot)
@@ -106,18 +113,22 @@ public class BlessedSpiritShot extends ScriptItemHandler
 				player.sendPacket(new ExAutoSoulShot(SoulshotId, false), new SystemMessage(SystemMessage.THE_AUTOMATIC_USE_OF_S1_WILL_NOW_BE_CANCELLED).addItemName(spiritshotId));
 				return false;
 			}
+			
 			player.sendPacket(Msg.CANNOT_USE_SPIRITSHOTS);
 			return false;
 		}
+		
 		if (((grade == 0) && (spiritshotId != 3947)) || ((grade == 1) && (spiritshotId != 3948) && (spiritshotId != 22072)) || ((grade == 2) && (spiritshotId != 3949) && (spiritshotId != 22073)) || ((grade == 3) && (spiritshotId != 3950) && (spiritshotId != 22074)) || ((grade == 4) && (spiritshotId != 3951) && (spiritshotId != 22075)) || ((grade == 5) && (spiritshotId != 3952) && (spiritshotId != 22076)) || ((grade == 6) && (spiritshotId != 19442)))
 		{
 			if (isAutoSoulShot)
 			{
 				return false;
 			}
+			
 			player.sendPacket(Msg.SPIRITSHOT_DOES_NOT_MATCH_WEAPON_GRADE);
 			return false;
 		}
+		
 		if (!player.getInventory().destroyItem(item, blessedsoulSpiritConsumption))
 		{
 			if (isAutoSoulShot)
@@ -126,9 +137,11 @@ public class BlessedSpiritShot extends ScriptItemHandler
 				player.sendPacket(new ExAutoSoulShot(SoulshotId, false), new SystemMessage(SystemMessage.THE_AUTOMATIC_USE_OF_S1_WILL_NOW_BE_CANCELLED).addItemName(spiritshotId));
 				return false;
 			}
+			
 			player.sendPacket(Msg.NOT_ENOUGH_SPIRITSHOTS);
 			return false;
 		}
+		
 		weaponInst.setChargedSpiritshot(ItemInstance.CHARGED_BLESSED_SPIRITSHOT);
 		player.sendPacket(Msg.POWER_OF_MANA_ENABLED);
 		player.broadcastPacket(new MagicSkillUse(player, player, _skillIds[grade], 1, 0, 0));

@@ -39,6 +39,7 @@ public class MentoringInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.startsWith("changediploma"))
 		{
 			if (player.isAwaking() && (player.getLevel() >= 85))

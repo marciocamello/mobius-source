@@ -35,6 +35,7 @@ public class _288_HandleWithCare extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("ankumi_q288_03.htm"))
 		{
 			st.setState(STARTED);
@@ -46,52 +47,64 @@ public class _288_HandleWithCare extends Quest implements ScriptFile
 			if ((st.getCond() == 2) && (st.getQuestItemsCount(MiddleGradeLizardScale) >= 1))
 			{
 				st.takeAllItems(MiddleGradeLizardScale);
+				
 				switch (Rnd.get(1, 6))
 				{
 					case 1:
 						st.giveItems(959, 1);
 						break;
+					
 					case 2:
 						st.giveItems(960, 1);
 						break;
+					
 					case 3:
 						st.giveItems(960, 2);
 						break;
+					
 					case 4:
 						st.giveItems(960, 3);
 						break;
+					
 					case 5:
 						st.giveItems(9557, 1);
 						break;
+					
 					case 6:
 						st.giveItems(9557, 2);
 						break;
 				}
+				
 				htmltext = "ankumi_q288_06.htm";
 				st.exitCurrentQuest(true);
 			}
 			else if ((st.getCond() == 3) && (st.getQuestItemsCount(HighestGradeLizardScale) >= 1))
 			{
 				st.takeAllItems(HighestGradeLizardScale);
+				
 				switch (Rnd.get(1, 4))
 				{
 					case 1:
 						st.giveItems(959, 1);
 						st.giveItems(9557, 1);
 						break;
+					
 					case 2:
 						st.giveItems(960, 1);
 						st.giveItems(9557, 1);
 						break;
+					
 					case 3:
 						st.giveItems(960, 2);
 						st.giveItems(9557, 1);
 						break;
+					
 					case 4:
 						st.giveItems(960, 3);
 						st.giveItems(9557, 1);
 						break;
 				}
+				
 				htmltext = "ankumi_q288_06.htm";
 				st.exitCurrentQuest(true);
 			}
@@ -101,6 +114,7 @@ public class _288_HandleWithCare extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -110,6 +124,7 @@ public class _288_HandleWithCare extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Ankumi)
 		{
 			if (cond == 0)
@@ -133,6 +148,7 @@ public class _288_HandleWithCare extends Quest implements ScriptFile
 				htmltext = "ankumi_q288_05.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	

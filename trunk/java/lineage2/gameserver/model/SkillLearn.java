@@ -193,6 +193,7 @@ public final class SkillLearn implements Comparable<SkillLearn>
 		{
 			return getLevel() - o.getLevel();
 		}
+		
 		return getId() - o.getId();
 	}
 	
@@ -222,6 +223,7 @@ public final class SkillLearn implements Comparable<SkillLearn>
 	public List<Skill> getRemovedSkillsForPlayer(Player player)
 	{
 		List<Skill> skills = new ArrayList<>();
+		
 		for (int skill_id : getDeleteSkills())
 		{
 			if (player.getKnownSkill(skill_id) != null)
@@ -229,6 +231,7 @@ public final class SkillLearn implements Comparable<SkillLearn>
 				skills.add(player.getKnownSkill(skill_id));
 			}
 		}
+		
 		return skills;
 	}
 }

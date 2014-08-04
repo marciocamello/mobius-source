@@ -30,7 +30,7 @@ import lineage2.gameserver.utils.Location;
 public final class MoonlightTombstoneInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -68,7 +68,9 @@ public final class MoonlightTombstoneInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		StringTokenizer st = new StringTokenizer(command);
+		
 		if (st.nextToken().equals("insertKey"))
 		{
 			if (player.getParty() == null)
@@ -76,12 +78,15 @@ public final class MoonlightTombstoneInstance extends NpcInstance
 				player.sendPacket(Msg.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
 				return;
 			}
+			
 			if (!player.getParty().isLeader(player))
 			{
 				player.sendPacket(Msg.ONLY_A_PARTY_LEADER_CAN_TRY_TO_ENTER);
 				return;
 			}
+			
 			List<Player> partyMembers = player.getParty().getPartyMembers();
+			
 			for (Player partyMember : partyMembers)
 			{
 				if (!isInRange(partyMember, INTERACTION_DISTANCE * 2))
@@ -90,11 +95,13 @@ public final class MoonlightTombstoneInstance extends NpcInstance
 					return;
 				}
 			}
+			
 			if (_activated)
 			{
 				Functions.show("default/32343-1.htm", player, this);
 				return;
 			}
+			
 			if (Functions.getItemCount(player, KEY_ID) > 0)
 			{
 				Functions.removeItem(player, KEY_ID, 1);
@@ -106,9 +113,11 @@ public final class MoonlightTombstoneInstance extends NpcInstance
 				Functions.show("default/32343-1.htm", player, this);
 				return;
 			}
+			
 			Functions.show("default/32343-2.htm", player, this);
 			return;
 		}
+		
 		super.onBypassFeedback(player, command);
 	}
 }

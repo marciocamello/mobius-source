@@ -34,6 +34,7 @@ public class GmListTable
 	public static List<Player> getAllGMs()
 	{
 		List<Player> gmList = new ArrayList<>();
+		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			if (player.isGM())
@@ -41,6 +42,7 @@ public class GmListTable
 				gmList.add(player);
 			}
 		}
+		
 		return gmList;
 	}
 	
@@ -51,6 +53,7 @@ public class GmListTable
 	public static List<Player> getAllVisibleGMs()
 	{
 		List<Player> gmList = new ArrayList<>();
+		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			if (player.isGM() && !player.isInvisible())
@@ -58,6 +61,7 @@ public class GmListTable
 				gmList.add(player);
 			}
 		}
+		
 		return gmList;
 	}
 	
@@ -68,12 +72,15 @@ public class GmListTable
 	public static void sendListToPlayer(Player player)
 	{
 		List<Player> gmList = getAllVisibleGMs();
+		
 		if (gmList.isEmpty())
 		{
 			player.sendPacket(Msg.THERE_ARE_NOT_ANY_GMS_THAT_ARE_PROVIDING_CUSTOMER_SERVICE_CURRENTLY);
 			return;
 		}
+		
 		player.sendPacket(Msg._GM_LIST_);
+		
 		for (Player gm : gmList)
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.GM_S1).addString(gm.getName()));

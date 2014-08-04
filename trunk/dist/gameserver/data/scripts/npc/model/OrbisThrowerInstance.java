@@ -18,7 +18,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public final class OrbisThrowerInstance extends MonsterInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	private final int _weaponId;

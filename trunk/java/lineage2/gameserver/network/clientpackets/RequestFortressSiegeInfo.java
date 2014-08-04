@@ -40,11 +40,14 @@ public class RequestFortressSiegeInfo extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		List<Fortress> fortressList = ResidenceHolder.getInstance().getResidenceList(Fortress.class);
+		
 		for (Fortress fort : fortressList)
 		{
 			if ((fort != null) && fort.getSiegeEvent().isInProgress())

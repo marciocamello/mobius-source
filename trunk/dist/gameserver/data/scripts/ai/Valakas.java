@@ -91,10 +91,12 @@ public class Valakas extends DefaultAI
 	{
 		final NpcInstance actor = getActor();
 		ValakasManager.setLastAttackTime();
+		
 		for (Playable p : ValakasManager.getZone().getInsidePlayables())
 		{
 			notifyEvent(CtrlEvent.EVT_AGGRESSION, p, 1);
 		}
+		
 		if (damage > 100)
 		{
 			if (attacker.getDistance(actor) > 400)
@@ -106,6 +108,7 @@ public class Valakas extends DefaultAI
 				_counterAttackIndex += damage / 1000D;
 			}
 		}
+		
 		_attacksIndex += damage / 1000D;
 		super.onEvtAttacked(attacker, damage);
 	}
@@ -119,17 +122,22 @@ public class Valakas extends DefaultAI
 	{
 		clearTasks();
 		Creature target = prepareTarget();
+		
 		if (target == null)
 		{
 			return false;
 		}
+		
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return false;
 		}
+		
 		final double distance = actor.getDistance(target);
 		final double chp = actor.getCurrentHpPercents();
+		
 		if (_hpStage == 0)
 		{
 			actor.altOnMagicUseTimer(actor, getSkill(4691, 1));
@@ -156,12 +164,14 @@ public class Valakas extends DefaultAI
 			actor.altOnMagicUseTimer(actor, getSkill(4691, 5));
 			_hpStage = 5;
 		}
+		
 		if ((getAliveMinionsCount() < 100) && Rnd.chance(5))
 		{
 			final NpcInstance minion = Functions.spawn(Location.findPointToStay(actor.getLoc(), 400, 700, actor.getGeoIndex()), 29029);
 			minions.add(minion);
 			ValakasManager.addValakasMinion(minion);
 		}
+		
 		if (_counterAttackIndex > 2000)
 		{
 			ValakasManager.broadcastScreenMessage(NpcString.VALAKAS_HEIGHTENED_BY_COUNTERATTACKS);
@@ -173,6 +183,7 @@ public class Valakas extends DefaultAI
 			if (Rnd.chance(60))
 			{
 				final Creature randomHated = actor.getAggroList().getRandomHated();
+				
 				if (randomHated != null)
 				{
 					setAttackTarget(randomHated);
@@ -183,14 +194,17 @@ public class Valakas extends DefaultAI
 						public void runImpl()
 						{
 							final NpcInstance actor = getActor();
+							
 							if (actor != null)
 							{
 								actor.stopConfused();
 							}
+							
 							_madnessTask = null;
 						}
 					}, 20000L);
 				}
+				
 				ValakasManager.broadcastScreenMessage(NpcString.VALAKAS_RANGED_ATTACKS_ENRAGED_TARGET_FREE);
 				_rangedAttacksIndex = 0;
 			}
@@ -213,11 +227,14 @@ public class Valakas extends DefaultAI
 			defenceDownTimer = System.currentTimeMillis() + defenceDownReuse + (Rnd.get(60) * 1000L);
 			return chooseTaskAndTargets(s_fear, target, distance);
 		}
+		
 		if (Rnd.chance(50))
 		{
 			return chooseTaskAndTargets(Rnd.chance(50) ? s_tremple_left : s_tremple_right, target, distance);
 		}
+		
 		final Map<Skill, Integer> d_skill = new HashMap<>();
+		
 		switch (_hpStage)
 		{
 			case 1:
@@ -226,6 +243,7 @@ public class Valakas extends DefaultAI
 				addDesiredSkill(d_skill, target, distance, s_meteor);
 				addDesiredSkill(d_skill, target, distance, s_fear);
 				break;
+			
 			case 2:
 			case 3:
 				addDesiredSkill(d_skill, target, distance, s_breath_low);
@@ -237,6 +255,7 @@ public class Valakas extends DefaultAI
 				addDesiredSkill(d_skill, target, distance, s_meteor);
 				addDesiredSkill(d_skill, target, distance, s_fear);
 				break;
+			
 			case 4:
 			case 5:
 				addDesiredSkill(d_skill, target, distance, s_breath_low);
@@ -250,11 +269,14 @@ public class Valakas extends DefaultAI
 				addDesiredSkill(d_skill, target, distance, Rnd.chance(60) ? s_destroy_soul2 : s_destroy_body2);
 				break;
 		}
+		
 		final Skill r_skill = selectTopSkill(d_skill);
+		
 		if ((r_skill != null) && !r_skill.isOffensive())
 		{
 			target = actor;
 		}
+		
 		return chooseTaskAndTargets(r_skill, target, distance);
 	}
 	
@@ -265,6 +287,7 @@ public class Valakas extends DefaultAI
 	protected void thinkAttack()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isInZone(Zone.ZoneType.poison))
 		{
 			if ((actor.getEffectList() != null) && (actor.getEffectList().getEffectsBySkill(s_lava_skin) == null))
@@ -272,6 +295,7 @@ public class Valakas extends DefaultAI
 				actor.altOnMagicUseTimer(actor, s_lava_skin);
 			}
 		}
+		
 		super.thinkAttack();
 	}
 	
@@ -293,6 +317,7 @@ public class Valakas extends DefaultAI
 	private int getAliveMinionsCount()
 	{
 		int i = 0;
+		
 		for (NpcInstance n : minions)
 		{
 			if ((n != null) && !n.isDead())
@@ -300,6 +325,7 @@ public class Valakas extends DefaultAI
 				i++;
 			}
 		}
+		
 		return i;
 	}
 	
@@ -317,6 +343,7 @@ public class Valakas extends DefaultAI
 				n.deleteMe();
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 }

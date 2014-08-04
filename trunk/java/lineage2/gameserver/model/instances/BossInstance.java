@@ -25,7 +25,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class BossInstance extends RaidBossInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -73,6 +73,7 @@ public class BossInstance extends RaidBossInstance
 		if (killer.isPlayable())
 		{
 			Player player = killer.getPlayer();
+			
 			if (player.isInParty())
 			{
 				for (Player member : player.getParty().getPartyMembers())
@@ -88,6 +89,7 @@ public class BossInstance extends RaidBossInstance
 				Hero.getInstance().addHeroDiary(player.getObjectId(), HeroDiary.ACTION_RAID_KILLED, getNpcId());
 			}
 		}
+		
 		super.onDeath(killer);
 	}
 	

@@ -36,15 +36,19 @@ public class RequestExStartShowCrataeCubeRank extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		KrateisCubeEvent cubeEvent = player.getEvent(KrateisCubeEvent.class);
+		
 		if (cubeEvent == null)
 		{
 			return;
 		}
+		
 		cubeEvent.showRank(player);
 	}
 }

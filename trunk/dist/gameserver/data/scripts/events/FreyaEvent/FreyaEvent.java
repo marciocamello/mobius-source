@@ -324,6 +324,7 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 	public void onLoad()
 	{
 		CharListenerList.addGlobal(this);
+		
 		if (isActive())
 		{
 			_active = true;
@@ -393,6 +394,7 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 		if (_active && SimpleCheckDrop(cha, killer))
 		{
 			final int itemId = DROP_LIST[Rnd.get(DROP_LIST.length)];
+			
 			if (Rnd.chance(DROP_CHANCE))
 			{
 				((NpcInstance) cha).dropItem(killer.getPlayer(), itemId, 1);
@@ -406,10 +408,12 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 	public void startEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive(_name, true))
 		{
 			spawnEventManagers();
@@ -420,6 +424,7 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 		{
 			player.sendMessage("Event '" + _name + "' already started.");
 		}
+		
 		_active = true;
 		show("admin/events.htm", player);
 	}
@@ -430,10 +435,12 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 	public void stopEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive(_name, false))
 		{
 			unSpawnEventManagers();
@@ -444,6 +451,7 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 		{
 			player.sendMessage("Event '" + _name + "' not started.");
 		}
+		
 		_active = false;
 		show("admin/events.htm", player);
 	}
@@ -472,6 +480,7 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 		final long _reuse_time = GIFT_RECEIVE_DELAY * 60 * 60 * 1000;
 		final long _curr_time = System.currentTimeMillis();
 		final String _last_use_time = player.getVar("FreyaCelebration");
+		
 		if (_last_use_time != null)
 		{
 			_remaining_time = _curr_time - Long.parseLong(_last_use_time);
@@ -480,6 +489,7 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 		{
 			_remaining_time = _reuse_time;
 		}
+		
 		if (_remaining_time >= _reuse_time)
 		{
 			if (getItemCount(player, ADENA) >= GIFT_PRICE)
@@ -497,6 +507,7 @@ public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener
 		{
 			final int hours = (int) (_reuse_time - _remaining_time) / 3600000;
 			final int minutes = ((int) (_reuse_time - _remaining_time) % 3600000) / 60000;
+			
 			if (hours > 0)
 			{
 				player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_S1_HOURSS_AND_S2_MINUTES_REMAINING_UNTIL_THE_TIME_WHEN_THE_ITEM_CAN_BE_PURCHASED).addNumber(hours).addNumber(minutes));

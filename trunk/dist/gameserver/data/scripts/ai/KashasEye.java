@@ -62,6 +62,7 @@ public class KashasEye extends DefaultAI
 	{
 		super.onEvtDead(killer);
 		final NpcInstance actor = getActor();
+		
 		if ((actor != null) && (killer != null) && (!actor.equals(killer)) && Rnd.chance(35))
 		{
 			actor.setDisplayId(Rnd.get(18812, 18814));

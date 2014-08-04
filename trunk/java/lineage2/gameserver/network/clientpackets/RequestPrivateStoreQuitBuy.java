@@ -35,15 +35,18 @@ public class RequestPrivateStoreQuitBuy extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (!activeChar.isInStoreMode() || (activeChar.getPrivateStoreType() != Player.STORE_PRIVATE_BUY))
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		activeChar.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
 		activeChar.standUp();
 		activeChar.broadcastCharInfo();

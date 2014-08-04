@@ -49,28 +49,35 @@ public class RequestExMPCCAcceptJoin extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		Request request = activeChar.getRequest();
+		
 		if ((request == null) || !request.isTypeOf(L2RequestType.CHANNEL))
 		{
 			return;
 		}
+		
 		if (!request.isInProgress())
 		{
 			request.cancel();
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (activeChar.isOutOfControl())
 		{
 			request.cancel();
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		Player requestor = request.getRequestor();
+		
 		if (requestor == null)
 		{
 			request.cancel();
@@ -78,24 +85,28 @@ public class RequestExMPCCAcceptJoin extends L2GameClientPacket
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (requestor.getRequest() != request)
 		{
 			request.cancel();
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (_response == 0)
 		{
 			request.cancel();
 			requestor.sendPacket(new SystemMessage(SystemMessage.S1_HAS_DECLINED_THE_CHANNEL_INVITATION).addString(activeChar.getName()));
 			return;
 		}
+		
 		if (!requestor.isInParty() || !activeChar.isInParty() || activeChar.getParty().isInCommandChannel())
 		{
 			request.cancel();
 			requestor.sendPacket(Msg.NO_USER_HAS_BEEN_INVITED_TO_THE_COMMAND_CHANNEL);
 			return;
 		}
+		
 		if (activeChar.isTeleporting())
 		{
 			request.cancel();
@@ -103,6 +114,7 @@ public class RequestExMPCCAcceptJoin extends L2GameClientPacket
 			requestor.sendPacket(Msg.NO_USER_HAS_BEEN_INVITED_TO_THE_COMMAND_CHANNEL);
 			return;
 		}
+		
 		try
 		{
 			if (requestor.getParty().isInCommandChannel())
@@ -113,18 +125,22 @@ public class RequestExMPCCAcceptJoin extends L2GameClientPacket
 			{
 				boolean haveSkill = requestor.getSkillLevel(CommandChannel.CLAN_IMPERIUM_ID) > 0;
 				boolean haveItem = false;
+				
 				if (!haveSkill)
 				{
 					haveItem = requestor.getInventory().destroyItemByItemId(CommandChannel.STRATEGY_GUIDE_ID, 1);
+					
 					if (haveItem)
 					{
 						requestor.sendPacket(SystemMessage2.removeItems(CommandChannel.STRATEGY_GUIDE_ID, 1));
 					}
 				}
+				
 				if (!haveSkill && !haveItem)
 				{
 					return;
 				}
+				
 				CommandChannel channel = new CommandChannel(requestor);
 				requestor.sendPacket(Msg.THE_COMMAND_CHANNEL_HAS_BEEN_FORMED);
 				channel.addParty(activeChar.getParty());

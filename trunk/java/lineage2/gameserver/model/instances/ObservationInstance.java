@@ -31,7 +31,7 @@ import lineage2.gameserver.utils.Location;
 public final class ObservationInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -57,10 +57,12 @@ public final class ObservationInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (player.getOlympiadGame() != null)
 		{
 			return;
 		}
+		
 		if (command.startsWith("observeSiege"))
 		{
 			String val = command.substring(13);
@@ -68,6 +70,7 @@ public final class ObservationInstance extends NpcInstance
 			st.nextToken();
 			List<Zone> zones = new ArrayList<>();
 			World.getZones(zones, new Location(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())), ReflectionManager.DEFAULT);
+			
 			for (Zone z : zones)
 			{
 				if ((z.getType() == Zone.ZoneType.SIEGE) && z.isActive())
@@ -76,6 +79,7 @@ public final class ObservationInstance extends NpcInstance
 					return;
 				}
 			}
+			
 			player.sendPacket(SystemMsg.OBSERVATION_IS_ONLY_POSSIBLE_DURING_A_SIEGE);
 		}
 		else if (command.startsWith("observe"))
@@ -99,6 +103,7 @@ public final class ObservationInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String pom = "";
+		
 		if (val == 0)
 		{
 			pom = "" + npcId;
@@ -107,6 +112,7 @@ public final class ObservationInstance extends NpcInstance
 		{
 			pom = npcId + "-" + val;
 		}
+		
 		return "observation/" + pom + ".htm";
 	}
 	
@@ -122,12 +128,14 @@ public final class ObservationInstance extends NpcInstance
 		int x = Integer.parseInt(st.nextToken());
 		int y = Integer.parseInt(st.nextToken());
 		int z = Integer.parseInt(st.nextToken());
+		
 		if (!player.reduceAdena(cost, true))
 		{
 			player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			player.sendActionFailed();
 			return;
 		}
+		
 		player.enterObserverMode(new Location(x, y, z));
 	}
 }

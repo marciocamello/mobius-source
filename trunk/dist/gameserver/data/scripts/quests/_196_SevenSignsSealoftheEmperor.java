@@ -59,6 +59,7 @@ public class _196_SevenSignsSealoftheEmperor extends Quest implements ScriptFile
 		Player player = st.getPlayer();
 		String htmltext = event;
 		Reflection ref = player.getReflection();
+		
 		if (event.equalsIgnoreCase("iasonheine_q196_1d.htm"))
 		{
 			st.setCond(1);
@@ -80,6 +81,7 @@ public class _196_SevenSignsSealoftheEmperor extends Quest implements ScriptFile
 				MerchantofMammonSpawn.deleteMe();
 				MerchantofMammonSpawn = null;
 			}
+			
 			st.setCond(2);
 			st.playSound(SOUND_MIDDLE);
 		}
@@ -93,6 +95,7 @@ public class _196_SevenSignsSealoftheEmperor extends Quest implements ScriptFile
 			{
 				player.sendMessage("You can only access the Necropolis of Dawn while carrying Seal of the Emperor quest.");
 			}
+			
 			return null;
 		}
 		else if (event.equalsIgnoreCase("collapse_instance"))
@@ -155,6 +158,7 @@ public class _196_SevenSignsSealoftheEmperor extends Quest implements ScriptFile
 				return "subclass_forbidden.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -165,9 +169,11 @@ public class _196_SevenSignsSealoftheEmperor extends Quest implements ScriptFile
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		String htmltext = "noquest";
+		
 		if (npcId == IasonHeine)
 		{
 			QuestState qs = player.getQuestState(_195_SevenSignsSecretRitualofthePriests.class);
+			
 			if (cond == 0)
 			{
 				if ((player.getLevel() >= 79) && (qs != null) && qs.isCompleted())
@@ -269,12 +275,14 @@ public class _196_SevenSignsSealoftheEmperor extends Quest implements ScriptFile
 				htmltext = "wood_q196_1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
 	private void enterInstance(Player player)
 	{
 		Reflection r = player.getActiveReflection();
+		
 		if (r != null)
 		{
 			if (player.canReenterInstance(izId))

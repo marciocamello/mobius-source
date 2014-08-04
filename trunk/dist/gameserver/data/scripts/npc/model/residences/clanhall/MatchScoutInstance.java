@@ -25,7 +25,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class MatchScoutInstance extends CTBBossInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -97,6 +97,7 @@ public class MatchScoutInstance extends CTBBossInstance
 		{
 			_massiveDamage = System.currentTimeMillis() + 5000L;
 		}
+		
 		super.reduceCurrentHp(damage, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
 	}
 }

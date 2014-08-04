@@ -245,6 +245,7 @@ public abstract class Inventory extends ItemContainer
 			{
 				return 0;
 			}
+			
 			return o1.getLocData() - o2.getLocData();
 		}
 	}
@@ -326,6 +327,7 @@ public abstract class Inventory extends ItemContainer
 		item.setOwnerId(getOwnerId());
 		item.setLocation(getBaseLocation());
 		item.setLocData(findSlot());
+		
 		if (item.getJdbcState().isSavable())
 		{
 			item.save();
@@ -335,6 +337,7 @@ public abstract class Inventory extends ItemContainer
 			item.setJdbcState(JdbcEntityState.UPDATED);
 			item.update();
 		}
+		
 		sendAddItem(item);
 		refreshWeight();
 	}
@@ -363,6 +366,7 @@ public abstract class Inventory extends ItemContainer
 		{
 			unEquipItem(item);
 		}
+		
 		sendRemoveItem(item);
 		item.setLocData(-1);
 		refreshWeight();
@@ -422,22 +426,27 @@ public abstract class Inventory extends ItemContainer
 		ItemInstance item;
 		int slot = 0;
 		loop:
+		
 		for (slot = 0; slot < _items.size(); slot++)
 		{
 			for (int i = 0; i < _items.size(); i++)
 			{
 				item = _items.get(i);
+				
 				if (item.isEquipped() || item.getTemplate().isQuest())
 				{
 					continue;
 				}
+				
 				if (item.getEquipSlot() == slot)
 				{
 					continue loop;
 				}
 			}
+			
 			break;
 		}
+		
 		return slot;
 	}
 	
@@ -468,6 +477,7 @@ public abstract class Inventory extends ItemContainer
 	public int getPaperdollItemId(int slot)
 	{
 		ItemInstance item = getPaperdollItem(slot);
+		
 		if (item != null)
 		{
 			return item.getItemId();
@@ -475,17 +485,20 @@ public abstract class Inventory extends ItemContainer
 		else if (slot == PAPERDOLL_HAIR)
 		{
 			item = _paperdoll[PAPERDOLL_DHAIR];
+			
 			if (item != null)
 			{
 				return item.getItemId();
 			}
 		}
+		
 		return 0;
 	}
 	
 	public int getVisualItemId(int slot)
 	{
 		ItemInstance item = getPaperdollItem(slot);
+		
 		if (item != null)
 		{
 			return item.getVisualId();
@@ -493,6 +506,7 @@ public abstract class Inventory extends ItemContainer
 		else if (slot == PAPERDOLL_HAIR)
 		{
 			item = _paperdoll[PAPERDOLL_DHAIR];
+			
 			if (item != null)
 			{
 				return item.getVisualId();
@@ -510,6 +524,7 @@ public abstract class Inventory extends ItemContainer
 	public int getPaperdollObjectId(int slot)
 	{
 		ItemInstance item = _paperdoll[slot];
+		
 		if (item != null)
 		{
 			return item.getObjectId();
@@ -517,11 +532,13 @@ public abstract class Inventory extends ItemContainer
 		else if (slot == PAPERDOLL_HAIR)
 		{
 			item = _paperdoll[PAPERDOLL_DHAIR];
+			
 			if (item != null)
 			{
 				return item.getObjectId();
 			}
 		}
+		
 		return 0;
 	}
 	
@@ -553,9 +570,11 @@ public abstract class Inventory extends ItemContainer
 	{
 		ItemInstance old;
 		writeLock();
+		
 		try
 		{
 			old = _paperdoll[slot];
+			
 			if (old != item)
 			{
 				if (old != null)
@@ -563,6 +582,7 @@ public abstract class Inventory extends ItemContainer
 					_paperdoll[slot] = null;
 					onUnequip(slot, old);
 				}
+				
 				if (item != null)
 				{
 					_paperdoll[slot] = item;
@@ -615,100 +635,129 @@ public abstract class Inventory extends ItemContainer
 	private void unEquipItemInBodySlot(int bodySlot, ItemInstance item)
 	{
 		int pdollSlot = -1;
+		
 		switch (bodySlot)
 		{
 			case ItemTemplate.SLOT_NECK:
 				pdollSlot = PAPERDOLL_NECK;
 				break;
+			
 			case ItemTemplate.SLOT_L_EAR:
 				pdollSlot = PAPERDOLL_LEAR;
 				break;
+			
 			case ItemTemplate.SLOT_R_EAR:
 				pdollSlot = PAPERDOLL_REAR;
 				break;
+			
 			case ItemTemplate.SLOT_L_EAR | ItemTemplate.SLOT_R_EAR:
 				if (item == null)
 				{
 					return;
 				}
+				
 				if (getPaperdollItem(PAPERDOLL_LEAR) == item)
 				{
 					pdollSlot = PAPERDOLL_LEAR;
 				}
+				
 				if (getPaperdollItem(PAPERDOLL_REAR) == item)
 				{
 					pdollSlot = PAPERDOLL_REAR;
 				}
+				
 				break;
+			
 			case ItemTemplate.SLOT_L_FINGER:
 				pdollSlot = PAPERDOLL_LFINGER;
 				break;
+			
 			case ItemTemplate.SLOT_R_FINGER:
 				pdollSlot = PAPERDOLL_RFINGER;
 				break;
+			
 			case ItemTemplate.SLOT_L_FINGER | ItemTemplate.SLOT_R_FINGER:
 				if (item == null)
 				{
 					return;
 				}
+				
 				if (getPaperdollItem(PAPERDOLL_LFINGER) == item)
 				{
 					pdollSlot = PAPERDOLL_LFINGER;
 				}
+				
 				if (getPaperdollItem(PAPERDOLL_RFINGER) == item)
 				{
 					pdollSlot = PAPERDOLL_RFINGER;
 				}
+				
 				break;
+			
 			case ItemTemplate.SLOT_HAIR:
 				pdollSlot = PAPERDOLL_HAIR;
 				break;
+			
 			case ItemTemplate.SLOT_DHAIR:
 				pdollSlot = PAPERDOLL_DHAIR;
 				break;
+			
 			case ItemTemplate.SLOT_HAIRALL:
 				setPaperdollItem(PAPERDOLL_DHAIR, null);
 				pdollSlot = PAPERDOLL_HAIR;
 				break;
+			
 			case ItemTemplate.SLOT_HEAD:
 				pdollSlot = PAPERDOLL_HEAD;
 				break;
+			
 			case ItemTemplate.SLOT_R_HAND:
 				pdollSlot = PAPERDOLL_RHAND;
 				break;
+			
 			case ItemTemplate.SLOT_L_HAND:
 				pdollSlot = PAPERDOLL_LHAND;
 				break;
+			
 			case ItemTemplate.SLOT_GLOVES:
 				pdollSlot = PAPERDOLL_GLOVES;
 				break;
+			
 			case ItemTemplate.SLOT_LEGS:
 				pdollSlot = PAPERDOLL_LEGS;
 				break;
+			
 			case ItemTemplate.SLOT_CHEST:
 			case ItemTemplate.SLOT_FULL_ARMOR:
 			case ItemTemplate.SLOT_FORMAL_WEAR:
 				pdollSlot = PAPERDOLL_CHEST;
 				break;
+			
 			case ItemTemplate.SLOT_BACK:
 				pdollSlot = PAPERDOLL_BACK;
 				break;
+			
 			case ItemTemplate.SLOT_FEET:
 				pdollSlot = PAPERDOLL_FEET;
 				break;
+			
 			case ItemTemplate.SLOT_UNDERWEAR:
 				pdollSlot = PAPERDOLL_UNDER;
 				break;
+			
 			case ItemTemplate.SLOT_BELT:
 				pdollSlot = PAPERDOLL_BELT;
 				break;
+			
 			case ItemTemplate.SLOT_LR_HAND:
 				setPaperdollItem(PAPERDOLL_LHAND, null);
 				pdollSlot = PAPERDOLL_RHAND;
 				break;
+			
 			case ItemTemplate.SLOT_L_BRACELET:
 				pdollSlot = PAPERDOLL_LBRACELET;
 				break;
+			
 			case ItemTemplate.SLOT_R_BRACELET:
 				pdollSlot = PAPERDOLL_RBRACELET;
 				setPaperdollItem(Inventory.PAPERDOLL_DECO1, null);
@@ -718,6 +767,7 @@ public abstract class Inventory extends ItemContainer
 				setPaperdollItem(Inventory.PAPERDOLL_DECO5, null);
 				setPaperdollItem(Inventory.PAPERDOLL_DECO6, null);
 				break;
+			
 			case ItemTemplate.SLOT_DECO:
 				if (item == null)
 				{
@@ -747,11 +797,14 @@ public abstract class Inventory extends ItemContainer
 				{
 					pdollSlot = PAPERDOLL_DECO6;
 				}
+				
 				break;
+			
 			default:
 				_log.warn("Requested invalid body slot: " + bodySlot + ", Item: " + item + ", ownerId: '" + getOwnerId() + "'");
 				return;
 		}
+		
 		if (pdollSlot >= 0)
 		{
 			setPaperdollItem(pdollSlot, null);
@@ -768,6 +821,7 @@ public abstract class Inventory extends ItemContainer
 		double hp = getActor().getCurrentHp();
 		double mp = getActor().getCurrentMp();
 		double cp = getActor().getCurrentCp();
+		
 		switch (bodySlot)
 		{
 			case ItemTemplate.SLOT_LR_HAND:
@@ -776,21 +830,25 @@ public abstract class Inventory extends ItemContainer
 				setPaperdollItem(PAPERDOLL_RHAND, item);
 				break;
 			}
+			
 			case ItemTemplate.SLOT_L_HAND:
 			{
 				final ItemInstance rHandItem = getPaperdollItem(PAPERDOLL_RHAND);
 				final ItemTemplate rHandItemTemplate = rHandItem == null ? null : rHandItem.getTemplate();
 				final ItemTemplate newItem = item.getTemplate();
+				
 				if (newItem.getItemType() == EtcItemType.ARROW)
 				{
 					if (rHandItemTemplate == null)
 					{
 						return;
 					}
+					
 					if (rHandItemTemplate.getItemType() != WeaponType.BOW)
 					{
 						return;
 					}
+					
 					if (rHandItemTemplate.getCrystalType() != newItem.getCrystalType())
 					{
 						return;
@@ -802,10 +860,12 @@ public abstract class Inventory extends ItemContainer
 					{
 						return;
 					}
+					
 					if (rHandItemTemplate.getItemType() != WeaponType.CROSSBOW)
 					{
 						return;
 					}
+					
 					if (rHandItemTemplate.getCrystalType() != newItem.getCrystalType())
 					{
 						return;
@@ -817,14 +877,17 @@ public abstract class Inventory extends ItemContainer
 					{
 						return;
 					}
+					
 					if (rHandItemTemplate.getItemType() != WeaponType.ROD)
 					{
 						return;
 					}
+					
 					if (!getActor().isPlayer())
 					{
 						return;
 					}
+					
 					Player owner = (Player) getActor();
 					owner.setVar("LastLure", String.valueOf(item.getObjectId()), -1);
 				}
@@ -835,14 +898,17 @@ public abstract class Inventory extends ItemContainer
 						setPaperdollItem(PAPERDOLL_RHAND, null);
 					}
 				}
+				
 				setPaperdollItem(PAPERDOLL_LHAND, item);
 				break;
 			}
+			
 			case ItemTemplate.SLOT_R_HAND:
 			{
 				setPaperdollItem(PAPERDOLL_RHAND, item);
 				break;
 			}
+			
 			case ItemTemplate.SLOT_L_EAR:
 			case ItemTemplate.SLOT_R_EAR:
 			case ItemTemplate.SLOT_L_EAR | ItemTemplate.SLOT_R_EAR:
@@ -859,8 +925,10 @@ public abstract class Inventory extends ItemContainer
 				{
 					setPaperdollItem(PAPERDOLL_LEAR, item);
 				}
+				
 				break;
 			}
+			
 			case ItemTemplate.SLOT_L_FINGER:
 			case ItemTemplate.SLOT_R_FINGER:
 			case ItemTemplate.SLOT_L_FINGER | ItemTemplate.SLOT_R_FINGER:
@@ -877,21 +945,27 @@ public abstract class Inventory extends ItemContainer
 				{
 					setPaperdollItem(PAPERDOLL_LFINGER, item);
 				}
+				
 				break;
 			}
+			
 			case ItemTemplate.SLOT_NECK:
 				setPaperdollItem(PAPERDOLL_NECK, item);
 				break;
+			
 			case ItemTemplate.SLOT_FULL_ARMOR:
 				setPaperdollItem(PAPERDOLL_LEGS, null);
 				setPaperdollItem(PAPERDOLL_CHEST, item);
 				break;
+			
 			case ItemTemplate.SLOT_CHEST:
 				setPaperdollItem(PAPERDOLL_CHEST, item);
 				break;
+			
 			case ItemTemplate.SLOT_LEGS:
 			{
 				ItemInstance chest = getPaperdollItem(PAPERDOLL_CHEST);
+				
 				if ((chest != null) && (chest.getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR))
 				{
 					setPaperdollItem(PAPERDOLL_CHEST, null);
@@ -900,65 +974,85 @@ public abstract class Inventory extends ItemContainer
 				{
 					setPaperdollItem(PAPERDOLL_CHEST, null);
 				}
+				
 				setPaperdollItem(PAPERDOLL_LEGS, item);
 				break;
 			}
+			
 			case ItemTemplate.SLOT_FEET:
 				if (getPaperdollItemId(PAPERDOLL_CHEST) == ItemTemplate.ITEM_ID_FORMAL_WEAR)
 				{
 					setPaperdollItem(PAPERDOLL_CHEST, null);
 				}
+				
 				setPaperdollItem(PAPERDOLL_FEET, item);
 				break;
+			
 			case ItemTemplate.SLOT_GLOVES:
 				if (getPaperdollItemId(PAPERDOLL_CHEST) == ItemTemplate.ITEM_ID_FORMAL_WEAR)
 				{
 					setPaperdollItem(PAPERDOLL_CHEST, null);
 				}
+				
 				setPaperdollItem(PAPERDOLL_GLOVES, item);
 				break;
+			
 			case ItemTemplate.SLOT_HEAD:
 				if (getPaperdollItemId(PAPERDOLL_CHEST) == ItemTemplate.ITEM_ID_FORMAL_WEAR)
 				{
 					setPaperdollItem(PAPERDOLL_CHEST, null);
 				}
+				
 				setPaperdollItem(PAPERDOLL_HEAD, item);
 				break;
+			
 			case ItemTemplate.SLOT_HAIR:
 				ItemInstance old = getPaperdollItem(PAPERDOLL_DHAIR);
+				
 				if ((old != null) && (old.getBodyPart() == ItemTemplate.SLOT_HAIRALL))
 				{
 					setPaperdollItem(PAPERDOLL_DHAIR, null);
 				}
+				
 				setPaperdollItem(PAPERDOLL_HAIR, item);
 				break;
+			
 			case ItemTemplate.SLOT_DHAIR:
 				ItemInstance slot2 = getPaperdollItem(PAPERDOLL_DHAIR);
+				
 				if ((slot2 != null) && (slot2.getBodyPart() == ItemTemplate.SLOT_HAIRALL))
 				{
 					setPaperdollItem(PAPERDOLL_HAIR, null);
 				}
+				
 				setPaperdollItem(PAPERDOLL_DHAIR, item);
 				break;
+			
 			case ItemTemplate.SLOT_HAIRALL:
 				setPaperdollItem(PAPERDOLL_HAIR, null);
 				setPaperdollItem(PAPERDOLL_DHAIR, item);
 				break;
+			
 			case ItemTemplate.SLOT_R_BRACELET:
 				setPaperdollItem(PAPERDOLL_RBRACELET, item);
 				break;
+			
 			case ItemTemplate.SLOT_L_BRACELET:
 				setPaperdollItem(PAPERDOLL_LBRACELET, item);
 				break;
+			
 			case ItemTemplate.SLOT_UNDERWEAR:
 				setPaperdollItem(PAPERDOLL_UNDER, item);
 				break;
+			
 			case ItemTemplate.SLOT_BACK:
 				setPaperdollItem(PAPERDOLL_BACK, item);
 				break;
+			
 			case ItemTemplate.SLOT_BELT:
 				setPaperdollItem(PAPERDOLL_BELT, item);
 				break;
+			
 			case ItemTemplate.SLOT_DECO:
 				if (_paperdoll[PAPERDOLL_DECO1] == null)
 				{
@@ -988,7 +1082,9 @@ public abstract class Inventory extends ItemContainer
 				{
 					setPaperdollItem(PAPERDOLL_DECO1, item);
 				}
+				
 				break;
+			
 			case ItemTemplate.SLOT_FORMAL_WEAR:
 				setPaperdollItem(PAPERDOLL_LEGS, null);
 				setPaperdollItem(PAPERDOLL_HEAD, null);
@@ -996,13 +1092,16 @@ public abstract class Inventory extends ItemContainer
 				setPaperdollItem(PAPERDOLL_GLOVES, null);
 				setPaperdollItem(PAPERDOLL_CHEST, item);
 				break;
+			
 			default:
 				_log.warn("unknown body slot:" + bodySlot + " for item id: " + item.getItemId());
 				return;
 		}
+		
 		getActor().setCurrentHp(hp, false);
 		getActor().setCurrentMp(mp);
 		getActor().setCurrentCp(cp);
+		
 		if (getActor().isPlayer())
 		{
 			((Player) getActor()).autoShot();
@@ -1034,9 +1133,11 @@ public abstract class Inventory extends ItemContainer
 	{
 		int weight = 0;
 		readLock();
+		
 		try
 		{
 			ItemInstance item;
+			
 			for (int i = 0; i < _items.size(); i++)
 			{
 				item = _items.get(i);
@@ -1047,10 +1148,12 @@ public abstract class Inventory extends ItemContainer
 		{
 			readUnlock();
 		}
+		
 		if (_totalWeight == weight)
 		{
 			return;
 		}
+		
 		_totalWeight = weight;
 		onRefreshWeight();
 	}
@@ -1077,10 +1180,12 @@ public abstract class Inventory extends ItemContainer
 	public boolean validateCapacity(ItemInstance item)
 	{
 		long slots = 0;
+		
 		if (!item.isStackable() || (getItemByItemId(item.getItemId()) == null))
 		{
 			slots++;
 		}
+		
 		return validateCapacity(slots);
 	}
 	
@@ -1105,10 +1210,12 @@ public abstract class Inventory extends ItemContainer
 	public boolean validateCapacity(ItemTemplate item, long count)
 	{
 		long slots = 0;
+		
 		if (!item.isStackable() || (getItemByItemId(item.getItemId()) == null))
 		{
 			slots = count;
 		}
+		
 		return validateCapacity(slots);
 	}
 	
@@ -1123,14 +1230,17 @@ public abstract class Inventory extends ItemContainer
 		{
 			return true;
 		}
+		
 		if ((slots < Integer.MIN_VALUE) || (slots > Integer.MAX_VALUE))
 		{
 			return false;
 		}
+		
 		if ((getSize() + (int) slots) < 0)
 		{
 			return false;
 		}
+		
 		return (getSize() + slots) <= getActor().getInventoryLimit();
 	}
 	
@@ -1180,14 +1290,17 @@ public abstract class Inventory extends ItemContainer
 		{
 			return true;
 		}
+		
 		if ((weight < Integer.MIN_VALUE) || (weight > Integer.MAX_VALUE))
 		{
 			return false;
 		}
+		
 		if ((getTotalWeight() + (int) weight) < 0)
 		{
 			return false;
 		}
+		
 		return (getTotalWeight() + weight) <= getActor().getMaxLoad();
 	}
 	
@@ -1212,50 +1325,71 @@ public abstract class Inventory extends ItemContainer
 		{
 			case ItemTemplate.SLOT_UNDERWEAR:
 				return PAPERDOLL_UNDER;
+				
 			case ItemTemplate.SLOT_R_EAR:
 				return PAPERDOLL_REAR;
+				
 			case ItemTemplate.SLOT_L_EAR:
 				return PAPERDOLL_LEAR;
+				
 			case ItemTemplate.SLOT_NECK:
 				return PAPERDOLL_NECK;
+				
 			case ItemTemplate.SLOT_R_FINGER:
 				return PAPERDOLL_RFINGER;
+				
 			case ItemTemplate.SLOT_L_FINGER:
 				return PAPERDOLL_LFINGER;
+				
 			case ItemTemplate.SLOT_HEAD:
 				return PAPERDOLL_HEAD;
+				
 			case ItemTemplate.SLOT_R_HAND:
 				return PAPERDOLL_RHAND;
+				
 			case ItemTemplate.SLOT_L_HAND:
 				return PAPERDOLL_LHAND;
+				
 			case ItemTemplate.SLOT_LR_HAND:
 				return PAPERDOLL_LRHAND;
+				
 			case ItemTemplate.SLOT_GLOVES:
 				return PAPERDOLL_GLOVES;
+				
 			case ItemTemplate.SLOT_CHEST:
 			case ItemTemplate.SLOT_FULL_ARMOR:
 			case ItemTemplate.SLOT_FORMAL_WEAR:
 				return PAPERDOLL_CHEST;
+				
 			case ItemTemplate.SLOT_LEGS:
 				return PAPERDOLL_LEGS;
+				
 			case ItemTemplate.SLOT_FEET:
 				return PAPERDOLL_FEET;
+				
 			case ItemTemplate.SLOT_BACK:
 				return PAPERDOLL_BACK;
+				
 			case ItemTemplate.SLOT_HAIR:
 			case ItemTemplate.SLOT_HAIRALL:
 				return PAPERDOLL_HAIR;
+				
 			case ItemTemplate.SLOT_DHAIR:
 				return PAPERDOLL_DHAIR;
+				
 			case ItemTemplate.SLOT_R_BRACELET:
 				return PAPERDOLL_RBRACELET;
+				
 			case ItemTemplate.SLOT_L_BRACELET:
 				return PAPERDOLL_LBRACELET;
+				
 			case ItemTemplate.SLOT_DECO:
 				return PAPERDOLL_DECO1;
+				
 			case ItemTemplate.SLOT_BELT:
 				return PAPERDOLL_BELT;
 		}
+		
 		return -1;
 	}
 	
@@ -1285,6 +1419,7 @@ public abstract class Inventory extends ItemContainer
 	public int getQuestSize()
 	{
 		int size = 0;
+		
 		for (ItemInstance item : getItems())
 		{
 			if (item.getTemplate().isQuest())
@@ -1292,6 +1427,7 @@ public abstract class Inventory extends ItemContainer
 				size++;
 			}
 		}
+		
 		return size;
 	}
 }

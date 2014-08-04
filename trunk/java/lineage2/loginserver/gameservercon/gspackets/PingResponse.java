@@ -49,12 +49,15 @@ public class PingResponse extends ReceivablePacket
 	protected void runImpl()
 	{
 		GameServer gameServer = getGameServer();
+		
 		if (!gameServer.isAuthed())
 		{
 			return;
 		}
+		
 		gameServer.getConnection().onPingResponse();
 		long diff = System.currentTimeMillis() - _serverTime;
+		
 		if (Math.abs(diff) > 999)
 		{
 			_log.warn("Gameserver " + gameServer.getId() + " [" + gameServer.getName() + "] : time offset " + diff + " ms.");

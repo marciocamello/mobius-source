@@ -59,6 +59,7 @@ public class CaughtMystic extends Mystic
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
+		
 		if (Rnd.chance(75))
 		{
 			Functions.npcSayCustomMessage(getActor(), "scripts.ai.CaughtMob.spawn");
@@ -76,6 +77,7 @@ public class CaughtMystic extends Mystic
 		{
 			Functions.npcSayCustomMessage(getActor(), "scripts.ai.CaughtMob.death");
 		}
+		
 		super.onEvtDead(killer);
 	}
 	
@@ -87,11 +89,13 @@ public class CaughtMystic extends Mystic
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (System.currentTimeMillis() >= TIME_TO_DIE)
 		{
 			actor.deleteMe();
 			return false;
 		}
+		
 		return super.thinkActive();
 	}
 }

@@ -52,10 +52,12 @@ public class RequestExListMpccWaiting extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		player.sendPacket(new ExListMpccWaiting(player, _listId, _locationId, _allLevels));
 	}
 }

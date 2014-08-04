@@ -121,18 +121,22 @@ public class ItemAuctionInstance
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT auctionId FROM item_auction WHERE instanceId=?");
 			statement.setInt(1, _instanceId);
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				int auctionId = rset.getInt(1);
+				
 				try
 				{
 					ItemAuction auction = loadAuction(auctionId);
+					
 					if (auction != null)
 					{
 						_auctions.put(auctionId, auction);
@@ -183,6 +187,7 @@ public class ItemAuctionInstance
 	public void shutdown()
 	{
 		ScheduledFuture<?> stateTask = _stateTask;
+		
 		if (stateTask != null)
 		{
 			stateTask.cancel(false);
@@ -201,6 +206,7 @@ public class ItemAuctionInstance
 			try
 			{
 				AuctionItem item = _items.get(i);
+				
 				if (item.getAuctionItemId() == auctionItemId)
 				{
 					return item;
@@ -210,6 +216,7 @@ public class ItemAuctionInstance
 			{
 			}
 		}
+		
 		return null;
 	}
 	
@@ -221,6 +228,7 @@ public class ItemAuctionInstance
 		ItemAuction[] auctions = _auctions.values(new ItemAuction[_auctions.size()]);
 		ItemAuction currentAuction = null;
 		ItemAuction nextAuction = null;
+		
 		switch (auctions.length)
 		{
 			case 0:
@@ -228,6 +236,7 @@ public class ItemAuctionInstance
 				nextAuction = createAuction(System.currentTimeMillis() + START_TIME_SPACE);
 				break;
 			}
+			
 			case 1:
 			{
 				switch (auctions[0].getAuctionState())
@@ -243,25 +252,31 @@ public class ItemAuctionInstance
 						{
 							nextAuction = auctions[0];
 						}
+						
 						break;
 					}
+					
 					case STARTED:
 					{
 						currentAuction = auctions[0];
 						nextAuction = createAuction(Math.max(currentAuction.getEndingTime() + FINISH_TIME_SPACE, System.currentTimeMillis() + START_TIME_SPACE));
 						break;
 					}
+					
 					case FINISHED:
 					{
 						currentAuction = auctions[0];
 						nextAuction = createAuction(System.currentTimeMillis() + START_TIME_SPACE);
 						break;
 					}
+					
 					default:
 						throw new IllegalArgumentException();
 				}
+				
 				break;
 			}
+			
 			default:
 			{
 				Arrays.sort(auctions, new Comparator<ItemAuction>()
@@ -273,14 +288,17 @@ public class ItemAuctionInstance
 						{
 							return 1;
 						}
+						
 						if (o2.getStartingTime() < o1.getStartingTime())
 						{
 							return -1;
 						}
+						
 						return 0;
 					}
 				});
 				long currentTime = System.currentTimeMillis();
+				
 				for (ItemAuction auction : auctions)
 				{
 					if (auction.getAuctionState() == ItemAuctionState.STARTED)
@@ -294,6 +312,7 @@ public class ItemAuctionInstance
 						break;
 					}
 				}
+				
 				for (ItemAuction auction : auctions)
 				{
 					if ((auction.getStartingTime() > currentTime) && (currentAuction != auction))
@@ -302,16 +321,20 @@ public class ItemAuctionInstance
 						break;
 					}
 				}
+				
 				if (nextAuction == null)
 				{
 					nextAuction = createAuction(System.currentTimeMillis() + START_TIME_SPACE);
 				}
+				
 				break;
 			}
 		}
+		
 		_auctions.put(nextAuction.getAuctionId(), nextAuction);
 		_currentAuction = currentAuction;
 		_nextAuction = nextAuction;
+		
 		if ((currentAuction != null) && (currentAuction.getAuctionState() == ItemAuctionState.STARTED))
 		{
 			setStateTask(ThreadPoolManager.getInstance().schedule(new ScheduleAuctionTask(currentAuction), Math.max(currentAuction.getEndingTime() - System.currentTimeMillis(), 0L)));
@@ -343,17 +366,20 @@ public class ItemAuctionInstance
 	{
 		ItemAuction[] auctions = getAuctions();
 		List<ItemAuction> stack = new ArrayList<>(auctions.length);
+		
 		for (ItemAuction auction : getAuctions())
 		{
 			if (auction.getAuctionState() != ItemAuctionState.CREATED)
 			{
 				ItemAuctionBid bid = auction.getBidFor(bidderObjId);
+				
 				if (bid != null)
 				{
 					stack.add(auction);
 				}
 			}
 		}
+		
 		return stack.toArray(new ItemAuction[stack.size()]);
 	}
 	
@@ -396,6 +422,7 @@ public class ItemAuctionInstance
 		public void runImpl() throws Exception
 		{
 			ItemAuctionState state = _auction.getAuctionState();
+			
 			switch (state)
 			{
 				case CREATED:
@@ -404,15 +431,19 @@ public class ItemAuctionInstance
 					{
 						throw new IllegalStateException("Could not set auction state: " + ItemAuctionState.STARTED.toString() + ", expected: " + state.toString());
 					}
+					
 					_log.info("ItemAuction: Auction " + _auction.getAuctionId() + " has started for instance " + _auction.getInstanceId());
+					
 					if (Config.ALT_ITEM_AUCTION_START_ANNOUNCE)
 					{
 						String[] params = {};
 						Announcements.getInstance().announceByCustomMessage("lineage2.gameserver.model.instances.L2ItemAuctionBrokerInstance.announce." + _auction.getInstanceId(), params);
 					}
+					
 					checkAndSetCurrentAndNextAuction();
 					break;
 				}
+				
 				case STARTED:
 				{
 					switch (_auction.getAuctionEndingExtendState())
@@ -425,8 +456,10 @@ public class ItemAuctionInstance
 								setStateTask(ThreadPoolManager.getInstance().schedule(this, Math.max(_auction.getEndingTime() - System.currentTimeMillis(), 0L)));
 								return;
 							}
+							
 							break;
 						}
+						
 						case 2:
 						{
 							if (_auction.getScheduledAuctionEndingExtendState() != 2)
@@ -435,17 +468,21 @@ public class ItemAuctionInstance
 								setStateTask(ThreadPoolManager.getInstance().schedule(this, Math.max(_auction.getEndingTime() - System.currentTimeMillis(), 0L)));
 								return;
 							}
+							
 							break;
 						}
 					}
+					
 					if (!_auction.setAuctionState(state, ItemAuctionState.FINISHED))
 					{
 						throw new IllegalStateException("Could not set auction state: " + ItemAuctionState.FINISHED.toString() + ", expected: " + state.toString());
 					}
+					
 					onAuctionFinished(_auction);
 					checkAndSetCurrentAndNextAuction();
 					break;
 				}
+				
 				default:
 					throw new IllegalStateException("Invalid state: " + state);
 			}
@@ -460,10 +497,12 @@ public class ItemAuctionInstance
 	{
 		auction.broadcastToAllBidders(new SystemMessage(SystemMessage.S1_S_AUCTION_HAS_ENDED).addNumber(auction.getAuctionId()));
 		ItemAuctionBid bid = auction.getHighestBid();
+		
 		if (bid != null)
 		{
 			ItemInstance item = auction.createNewItemInstance();
 			Player player = bid.getPlayer();
+			
 			if (player != null)
 			{
 				player.getWarehouse().addItem(item);
@@ -492,10 +531,12 @@ public class ItemAuctionInstance
 	void setStateTask(ScheduledFuture<?> future)
 	{
 		ScheduledFuture<?> stateTask = _stateTask;
+		
 		if (stateTask != null)
 		{
 			stateTask.cancel(false);
 		}
+		
 		_stateTask = future;
 	}
 	
@@ -526,43 +567,53 @@ public class ItemAuctionInstance
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT auctionItemId,startingTime,endingTime,auctionStateId FROM item_auction WHERE auctionId=?");
 			statement.setInt(1, auctionId);
 			rset = statement.executeQuery();
+			
 			if (!rset.next())
 			{
 				_log.warn("ItemAuction: Auction data not found for auction: " + auctionId);
 				return null;
 			}
+			
 			int auctionItemId = rset.getInt(1);
 			long startingTime = rset.getLong(2);
 			long endingTime = rset.getLong(3);
 			int auctionStateId = rset.getInt(4);
 			DbUtils.close(statement, rset);
+			
 			if (startingTime >= endingTime)
 			{
 				_log.warn("ItemAuction: Invalid starting/ending paramaters for auction: " + auctionId);
 				return null;
 			}
+			
 			AuctionItem auctionItem = getAuctionItem(auctionItemId);
+			
 			if (auctionItem == null)
 			{
 				_log.warn("ItemAuction: AuctionItem: " + auctionItemId + ", not found for auction: " + auctionId);
 				return null;
 			}
+			
 			ItemAuctionState auctionState = ItemAuctionState.stateForStateId(auctionStateId);
+			
 			if (auctionState == null)
 			{
 				_log.warn("ItemAuction: Invalid auctionStateId: " + auctionStateId + ", for auction: " + auctionId);
 				return null;
 			}
+			
 			ItemAuction auction = new ItemAuction(auctionId, _instanceId, startingTime, endingTime, auctionItem, auctionState);
 			statement = con.prepareStatement("SELECT playerObjId,playerBid FROM item_auction_bid WHERE auctionId=?");
 			statement.setInt(1, auctionId);
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				int charId = rset.getInt(1);
@@ -570,6 +621,7 @@ public class ItemAuctionInstance
 				ItemAuctionBid bid = new ItemAuctionBid(charId, playerBid);
 				auction.addBid(bid);
 			}
+			
 			return auction;
 		}
 		finally

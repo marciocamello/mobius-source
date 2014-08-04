@@ -139,6 +139,7 @@ public final class TaskManager
 			_lastActivation = System.currentTimeMillis();
 			Connection con = null;
 			PreparedStatement statement = null;
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
@@ -155,6 +156,7 @@ public final class TaskManager
 			{
 				DbUtils.closeQuietly(con, statement);
 			}
+			
 			if ((_type == TYPE_SHEDULED) || (_type == TYPE_TIME))
 			{
 				stopTask();
@@ -223,10 +225,12 @@ public final class TaskManager
 		public void stopTask()
 		{
 			_task.onDestroy();
+			
 			if (_scheduled != null)
 			{
 				_scheduled.cancel(false);
 			}
+			
 			_currentTasks.remove(this);
 		}
 	}
@@ -241,6 +245,7 @@ public final class TaskManager
 		{
 			_instance = new TaskManager();
 		}
+		
 		return _instance;
 	}
 	
@@ -271,6 +276,7 @@ public final class TaskManager
 	public void registerTask(Task task)
 	{
 		int key = task.getName().hashCode();
+		
 		if (!_tasks.containsKey(key))
 		{
 			_tasks.put(key, task);
@@ -286,22 +292,28 @@ public final class TaskManager
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SQL_STATEMENTS[0]);
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				Task task = _tasks.get(rset.getString("task").trim().toLowerCase().hashCode());
+				
 				if (task == null)
 				{
 					continue;
 				}
+				
 				TaskTypes type = TaskTypes.valueOf(rset.getString("type"));
+				
 				if (type != TYPE_NONE)
 				{
 					ExecutedTask current = new ExecutedTask(task, type, rset);
+					
 					if (launchTask(current))
 					{
 						_currentTasks.add(current);
@@ -329,6 +341,7 @@ public final class TaskManager
 	{
 		final ThreadPoolManager scheduler = ThreadPoolManager.getInstance();
 		final TaskTypes type = task.getType();
+		
 		if (type == TYPE_STARTUP)
 		{
 			task.run();
@@ -353,11 +366,13 @@ public final class TaskManager
 			{
 				Date desired = DateFormat.getInstance().parse(task.getParams()[0]);
 				long diff = desired.getTime() - System.currentTimeMillis();
+				
 				if (diff >= 0)
 				{
 					task._scheduled = scheduler.schedule(task, diff);
 					return true;
 				}
+				
 				_log.info("Task " + task.getId() + " is obsoleted.");
 			}
 			catch (Exception e)
@@ -367,6 +382,7 @@ public final class TaskManager
 		else if (type == TYPE_SPECIAL)
 		{
 			ScheduledFuture<?> result = task.getTask().launchSpecial(task);
+			
 			if (result != null)
 			{
 				task._scheduled = result;
@@ -377,14 +393,17 @@ public final class TaskManager
 		{
 			long interval = Long.valueOf(task.getParams()[0]) * 86400000L;
 			String[] hour = task.getParams()[1].split(":");
+			
 			if (hour.length != 3)
 			{
 				_log.warn("Task " + task.getId() + " has incorrect parameters");
 				return false;
 			}
+			
 			Calendar check = Calendar.getInstance();
 			check.setTimeInMillis(task.getLastActivation() + interval);
 			Calendar min = Calendar.getInstance();
+			
 			try
 			{
 				min.set(Calendar.HOUR_OF_DAY, Integer.valueOf(hour[0]));
@@ -396,14 +415,18 @@ public final class TaskManager
 				_log.warn("Bad parameter on task " + task.getId() + ": " + e.getMessage());
 				return false;
 			}
+			
 			long delay = min.getTimeInMillis() - System.currentTimeMillis();
+			
 			if (check.after(min) || (delay < 0))
 			{
 				delay += interval;
 			}
+			
 			task._scheduled = scheduler.scheduleAtFixedRate(task, delay, interval);
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -436,6 +459,7 @@ public final class TaskManager
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -444,6 +468,7 @@ public final class TaskManager
 			rset = statement.executeQuery();
 			boolean exists = rset.next();
 			DbUtils.close(statement, rset);
+			
 			if (!exists)
 			{
 				statement = con.prepareStatement(SQL_STATEMENTS[3]);
@@ -455,6 +480,7 @@ public final class TaskManager
 				statement.setString(6, param3);
 				statement.execute();
 			}
+			
 			return true;
 		}
 		catch (SQLException e)
@@ -496,6 +522,7 @@ public final class TaskManager
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();

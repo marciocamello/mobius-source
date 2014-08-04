@@ -51,6 +51,7 @@ public class _026_TiredOfWaiting extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_accept"))
 		{
 			htmltext = "isael_q0026_05.htm";
@@ -79,6 +80,7 @@ public class _026_TiredOfWaiting extends Quest implements ScriptFile
 			qs.playSound(SOUND_FINISH);
 			qs.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -88,6 +90,7 @@ public class _026_TiredOfWaiting extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		switch (npcId)
 		{
 			case ISAEL:
@@ -107,15 +110,19 @@ public class _026_TiredOfWaiting extends Quest implements ScriptFile
 				{
 					htmltext = "isael_q0026_03.htm";
 				}
+				
 				break;
+			
 			case KITZKA:
 				if (cond == 1)
 				{
 					htmltext = "kitzka_q0026_01.htm";
 					st.playSound(SOUND_MIDDLE);
 				}
+				
 				break;
 		}
+		
 		return htmltext;
 	}
 }

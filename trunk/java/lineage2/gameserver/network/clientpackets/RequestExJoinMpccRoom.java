@@ -43,19 +43,24 @@ public class RequestExJoinMpccRoom extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (player.getMatchingRoom() != null)
 		{
 			return;
 		}
+		
 		MatchingRoom room = MatchingRoomManager.getInstance().getMatchingRoom(MatchingRoom.CC_MATCHING, _roomId);
+		
 		if (room == null)
 		{
 			return;
 		}
+		
 		room.addMember(player);
 	}
 }

@@ -113,6 +113,7 @@ public class PavelRuins extends Fighter
 			if (Rnd.chance(70))
 			{
 				Location loc = _actor.getLoc();
+				
 				switch (_actor.getNpcId())
 				{
 					case PAVEL_SAFETY_DEVICE:
@@ -121,15 +122,19 @@ public class PavelRuins extends Fighter
 						loc = new Location(loc.x + -30, loc.y + 30, loc.z);
 						spawnNextMob(DRILL_GOLEM_OF_TERROR_3, _killer, loc);
 						break;
+					
 					case CRUEL_PINCER_GOLEM_1:
 						spawnNextMob(CRUEL_PINCER_GOLEM_2, _killer, loc);
 						break;
+					
 					case CRUEL_PINCER_GOLEM_3:
 						spawnNextMob(CRUEL_PINCER_GOLEM_1, _killer, loc);
 						break;
+					
 					case DRILL_GOLEM_OF_TERROR_1:
 						spawnNextMob(DRILL_GOLEM_OF_TERROR_2, _killer, loc);
 						break;
+					
 					case DRILL_GOLEM_OF_TERROR_3:
 						spawnNextMob(DRILL_GOLEM_OF_TERROR_1, _killer, loc);
 						break;

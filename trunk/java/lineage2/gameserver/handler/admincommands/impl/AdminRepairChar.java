@@ -25,7 +25,6 @@ import lineage2.gameserver.model.Player;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-@SuppressWarnings("unused")
 public class AdminRepairChar implements IAdminCommandHandler
 {
 	/**
@@ -54,18 +53,20 @@ public class AdminRepairChar implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
 		if ((activeChar.getPlayerAccess() == null) || !activeChar.getPlayerAccess().CanEditChar)
 		{
 			return false;
 		}
+		
 		if (wordList.length != 2)
 		{
 			return false;
 		}
+		
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -77,15 +78,19 @@ public class AdminRepairChar implements IAdminCommandHandler
 			statement.setString(1, wordList[1]);
 			rset = statement.executeQuery();
 			int objId = 0;
+			
 			if (rset.next())
 			{
 				objId = rset.getInt(1);
 			}
+			
 			DbUtils.close(statement, rset);
+			
 			if (objId == 0)
 			{
 				return false;
 			}
+			
 			statement = con.prepareStatement("DELETE FROM character_shortcuts WHERE object_id=?");
 			statement.setInt(1, objId);
 			statement.execute();

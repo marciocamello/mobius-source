@@ -702,6 +702,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 		super(true);
 		addStartNpc(WESLEY);
 		addTalkId(URN);
+		
 		for (int[] element : DROPLIST_COND)
 		{
 			addKillId(element[2]);
@@ -714,6 +715,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 		int stone = st.getInt("mixing");
 		int ingredient = st.getInt("ingredient");
 		int catalyst = st.getInt("catalyst");
+		
 		if (page == null)
 		{
 			html = "<html>" + "<body>Alchemists Mixing Urn:" + "<br><table border=0 width=300><tr>" + "<tr><td width=50%>" + "<a action=\"bypass -h Quest _373_SupplierOfReagents U_M_MACT\">MACT Mixing Stone</a></td><td></td></tr>" + "<tr><td><a action=\"bypass -h Quest _373_SupplierOfReagents U_I_IACT\">IACT Ingredients</a></td><td>(current: INGR)</td></tr>" + "<tr><td><a action=\"bypass -h Quest _373_SupplierOfReagents U_C_CACT\">CACT Catalyst</a></td><td>(current: CATA)</td></tr>" + "<tr><td><a action=\"bypass -h Quest _373_SupplierOfReagents 31149-5.htm\">Select Temperature</a></td>" + "<td>(current: TEMP)</td></tr><tr><td><a action=\"bypass -h Quest _373_SupplierOfReagents 31149-6.htm\">Mix Ingredients</a></td><td></td></tr></table></body></html>";
@@ -721,6 +723,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 			int cata = st.getInt("catalyst");
 			String temp = st.get("temp");
 			String r_ingr = "";
+			
 			if (ingr != 0)
 			{
 				for (Object[] element : ITEMS)
@@ -735,7 +738,9 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 			{
 				r_ingr = "None";
 			}
+			
 			String r_cata = "";
+			
 			if (cata != 0)
 			{
 				for (Object[] element : ITEMS)
@@ -750,7 +755,9 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 			{
 				r_cata = "None";
 			}
+			
 			html = html.replace("INGR", r_ingr).replace("CATA", r_cata).replace("TEMP", temp);
+			
 			if (stone != 0)
 			{
 				html = html.replace("MACT", "Retrieve");
@@ -759,6 +766,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 			{
 				html = html.replace("MACT", "Insert");
 			}
+			
 			if (ingredient != 0)
 			{
 				html = html.replace("IACT", "Retrieve");
@@ -767,6 +775,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 			{
 				html = html.replace("IACT", "Insert");
 			}
+			
 			if (catalyst != 0)
 			{
 				html = html.replace("CACT", "Retrieve");
@@ -781,9 +790,11 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 			html = "<html><body>Insert:<table border=0>";
 			int amt = 0;
 			int item = 0;
+			
 			for (Object[] element : ITEMS)
 			{
 				item = (Integer) element[0];
+				
 				if (((item >= 6011) && (item <= 6031)) || ((item >= 6320) && (item <= 6321)))
 				{
 					if (st.getQuestItemsCount(item) > 0)
@@ -793,12 +804,14 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 					}
 				}
 			}
+			
 			if (amt == 0)
 			{
 				html += "<tr><td>You don't have any material that could be used with this Urn. Read the Mixing Manual.</td></tr>";
 				html += "</table><center><a action=\"bypass -h Quest _373_SupplierOfReagents urn\">Back</a></center></body></html>";
 			}
 		}
+		
 		return html;
 	}
 	
@@ -806,6 +819,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("30166-4.htm"))
 		{
 			st.setCond(1);
@@ -832,6 +846,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 		else if ((event.length() > 0) && (event.charAt(0) == 'U'))
 		{
 			String[] s_event = event.split("_");
+			
 			if (s_event[1].equals("M"))
 			{
 				if (s_event[2].equals("Insert"))
@@ -854,6 +869,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 						st.set("mixing", "0");
 						st.set("temp", "0");
 						st.giveItems(MIXING_STONE1, 1);
+						
 						if ((st.getInt("ingredient") > 0) || (st.getInt("catalyst") > 0))
 						{
 							htmltext = "31149-2c.htm";
@@ -877,6 +893,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 			{
 				int item = 0;
 				int qty = 0;
+				
 				if (s_event[1].equals("I"))
 				{
 					item = st.getInt("ingredient");
@@ -891,6 +908,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 					st.set("catalyst", "0");
 					st.set("c_qty", "0");
 				}
+				
 				if ((item > 0) && (qty > 0))
 				{
 					st.giveItems(item, qty);
@@ -910,6 +928,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 			int item = Integer.valueOf(s_event[3]);
 			String dest;
 			String count;
+			
 			if (qty == 2)
 			{
 				qty = 10;
@@ -918,6 +937,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 			{
 				qty = 1;
 			}
+			
 			if (st.getQuestItemsCount(item) >= qty)
 			{
 				if (dst.equals("I"))
@@ -930,6 +950,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 					dest = "catalyst";
 					count = "c_qty";
 				}
+				
 				st.takeItems(item, qty);
 				st.set(dest, String.valueOf(item));
 				st.set(count, String.valueOf(qty));
@@ -950,6 +971,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 			if (st.getInt("mixing") > 0)
 			{
 				int temp = st.getInt("temp");
+				
 				if (temp != 0)
 				{
 					int ingredient = st.getInt("ingredient");
@@ -962,6 +984,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 					st.set("c_qty", "0");
 					st.set("temp", "0");
 					int item = 0;
+					
 					for (int[] element : FORMULAS)
 					{
 						if (((ingredient == element[1]) && (catalyst == element[3]) && (iq == element[2]) && (cq == element[4])) || ((ingredient == element[3]) && (catalyst == element[1]) && (iq == element[4]) && (cq == element[2])))
@@ -970,10 +993,12 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 							break;
 						}
 					}
+					
 					if ((item == PURE_SILVER) && (temp != 1))
 					{
 						return "31149-7c.htm";
 					}
+					
 					if (item == MIMIRS_ELIXIR)
 					{
 						if (temp == 3)
@@ -992,10 +1017,12 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 							return "31149-7b.htm";
 						}
 					}
+					
 					if (item > 0)
 					{
 						int chance = 0;
 						int qty = 0;
+						
 						for (int[] element : TEMPERATURE)
 						{
 							if (element[0] == temp)
@@ -1004,11 +1031,13 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 								qty = element[2];
 							}
 						}
+						
 						if (item == MIMIRS_ELIXIR)
 						{
 							chance = 100;
 							qty = 1;
 						}
+						
 						if (Rnd.chance(chance))
 						{
 							st.giveItems(item, qty);
@@ -1033,6 +1062,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 				htmltext = "31149-6a.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -1042,6 +1072,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (npcId == WESLEY)
 		{
 			if (cond == 0)
@@ -1065,6 +1096,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 		{
 			htmltext = render_urn(st, null);
 		}
+		
 		return htmltext;
 	}
 	
@@ -1072,6 +1104,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		for (int[] i : DROPLIST_COND)
 		{
 			if (npcId == i[2])
@@ -1079,6 +1112,7 @@ public class _373_SupplierOfReagents extends Quest implements ScriptFile
 				st.rollAndGive(i[4], i[7], i[6]);
 			}
 		}
+		
 		return null;
 	}
 }

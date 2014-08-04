@@ -43,6 +43,7 @@ public class _192_SevenSignSeriesOfDoubt extends Quest implements ScriptFile
 	{
 		Player player = st.getPlayer();
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("30676-03.htm"))
 		{
 			st.setCond(1);
@@ -98,6 +99,7 @@ public class _192_SevenSignSeriesOfDoubt extends Quest implements ScriptFile
 				return "subclass_forbidden.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -109,6 +111,7 @@ public class _192_SevenSignSeriesOfDoubt extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int id = st.getState();
 		Player player = st.getPlayer();
+		
 		if (npcId == CROOP)
 		{
 			if ((id == CREATED) && (player.getLevel() >= 79))
@@ -150,6 +153,7 @@ public class _192_SevenSignSeriesOfDoubt extends Quest implements ScriptFile
 			{
 				htmltext = "30197-01.htm";
 			}
+			
 			if ((cond >= 4) && (cond <= 7))
 			{
 				htmltext = "30197-04.htm";
@@ -161,6 +165,7 @@ public class _192_SevenSignSeriesOfDoubt extends Quest implements ScriptFile
 			{
 				htmltext = "30200-01.htm";
 			}
+			
 			if ((cond >= 5) && (cond <= 7))
 			{
 				htmltext = "30200-05.htm";
@@ -180,6 +185,7 @@ public class _192_SevenSignSeriesOfDoubt extends Quest implements ScriptFile
 				htmltext = "30191-01.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	

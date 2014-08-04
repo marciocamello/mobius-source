@@ -51,7 +51,9 @@ public class Ride extends Skill
 		{
 			return false;
 		}
+		
 		Player player = (Player) activeChar;
+		
 		if (getNpcId() != 0)
 		{
 			if (player.isInOlympiadMode())
@@ -59,6 +61,7 @@ public class Ride extends Skill
 				player.sendPacket(Msg.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 				return false;
 			}
+			
 			if (player.isInDuel() || player.isSitting() || player.isInCombat() || player.isFishing() || player.isCursedWeaponEquipped() || (player.getTransformation() != 0) || (player.getSummonList().size() > 0) || player.isMounted() || player.isInBoat())
 			{
 				player.sendPacket(Msg.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
@@ -69,6 +72,7 @@ public class Ride extends Skill
 		{
 			return false;
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
@@ -84,6 +88,7 @@ public class Ride extends Skill
 		{
 			return;
 		}
+		
 		Player activeChar = (Player) caster;
 		activeChar.setMount(getNpcId(), 0, 0);
 	}

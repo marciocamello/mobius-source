@@ -66,23 +66,28 @@ public class Resurrect extends Skill
 		{
 			return false;
 		}
+		
 		if ((target == null) || ((target != activeChar) && !target.isDead()))
 		{
 			activeChar.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
 			return false;
 		}
+		
 		Player player = (Player) activeChar;
 		Player pcTarget = target.getPlayer();
+		
 		if (pcTarget == null)
 		{
 			player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
 			return false;
 		}
+		
 		if (player.isInOlympiadMode() || pcTarget.isInOlympiadMode())
 		{
 			player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
 			return false;
 		}
+		
 		for (GlobalEvent e : player.getEvents())
 		{
 			if (!e.canRessurect(player, target, forceUse))
@@ -91,12 +96,14 @@ public class Resurrect extends Skill
 				return false;
 			}
 		}
+		
 		if (oneTarget())
 		{
 			if (target.isPet())
 			{
 				Pair<Integer, OnAnswerListener> ask = pcTarget.getAskListener(false);
 				ReviveAnswerListener reviveAsk = (ask != null) && (ask.getValue() instanceof ReviveAnswerListener) ? (ReviveAnswerListener) ask.getValue() : null;
+				
 				if (reviveAsk != null)
 				{
 					if (reviveAsk.isForPet())
@@ -107,8 +114,10 @@ public class Resurrect extends Skill
 					{
 						activeChar.sendPacket(Msg.SINCE_THE_MASTER_WAS_IN_THE_PROCESS_OF_BEING_RESURRECTED_THE_ATTEMPT_TO_RESURRECT_THE_PET_HAS_BEEN_CANCELLED);
 					}
+					
 					return false;
 				}
+				
 				if (!(_canPet || (_targetType == SkillTargetType.TARGET_PET)))
 				{
 					player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
@@ -119,6 +128,7 @@ public class Resurrect extends Skill
 			{
 				Pair<Integer, OnAnswerListener> ask = pcTarget.getAskListener(false);
 				ReviveAnswerListener reviveAsk = (ask != null) && (ask.getValue() instanceof ReviveAnswerListener) ? (ReviveAnswerListener) ask.getValue() : null;
+				
 				if (reviveAsk != null)
 				{
 					if (reviveAsk.isForPet())
@@ -129,8 +139,10 @@ public class Resurrect extends Skill
 					{
 						activeChar.sendPacket(Msg.BETTER_RESURRECTION_HAS_BEEN_ALREADY_PROPOSED);
 					}
+					
 					return false;
 				}
+				
 				if (_targetType == SkillTargetType.TARGET_PET)
 				{
 					player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
@@ -138,6 +150,7 @@ public class Resurrect extends Skill
 				}
 			}
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
@@ -150,24 +163,29 @@ public class Resurrect extends Skill
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{
 		double percent = _power;
+		
 		if ((percent < 100) && !isHandler())
 		{
 			double wit_bonus = _power * (BaseStats.WIT.calcBonus(activeChar) - 1);
 			percent += wit_bonus > 20 ? 20 : wit_bonus;
+			
 			if (percent > 90)
 			{
 				percent = 90;
 			}
 		}
+		
 		for (Creature target : targets)
 		{
 			Loop:
+			
 			if (target != null)
 			{
 				if (target.getPlayer() == null)
 				{
 					continue;
 				}
+				
 				for (GlobalEvent e : target.getEvents())
 				{
 					if (!e.canRessurect((Player) activeChar, target, true))
@@ -175,6 +193,7 @@ public class Resurrect extends Skill
 						break Loop;
 					}
 				}
+				
 				if (target.isPet() && _canPet)
 				{
 					if (target.getPlayer() == activeChar)
@@ -192,22 +211,27 @@ public class Resurrect extends Skill
 					{
 						continue;
 					}
+					
 					Player targetPlayer = (Player) target;
 					Pair<Integer, OnAnswerListener> ask = targetPlayer.getAskListener(false);
 					ReviveAnswerListener reviveAsk = (ask != null) && (ask.getValue() instanceof ReviveAnswerListener) ? (ReviveAnswerListener) ask.getValue() : null;
+					
 					if (reviveAsk != null)
 					{
 						continue;
 					}
+					
 					targetPlayer.reviveRequest((Player) activeChar, percent, false);
 				}
 				else
 				{
 					continue;
 				}
+				
 				getEffects(activeChar, target, getActivateRate() > 0, false);
 			}
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());

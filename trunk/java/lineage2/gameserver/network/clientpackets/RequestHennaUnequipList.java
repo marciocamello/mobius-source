@@ -43,10 +43,12 @@ public class RequestHennaUnequipList extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		HennaUnequipList he = new HennaUnequipList(activeChar);
 		activeChar.sendPacket(he);
 	}

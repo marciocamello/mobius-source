@@ -57,12 +57,14 @@ public class _10308_NotToBeForgotten extends Quest implements ScriptFile
 		{
 			return "noquest";
 		}
+		
 		if (event.equalsIgnoreCase("33463-04.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return event;
 	}
 	
@@ -70,11 +72,14 @@ public class _10308_NotToBeForgotten extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
+		
 		if (st == null)
 		{
 			return htmltext;
 		}
+		
 		Player player = st.getPlayer();
+		
 		if (npc.getNpcId() == NPC_ADVENTURER_HELPER)
 		{
 			if ((player.getLevel() < 55) || (player.getLevel() > 59))
@@ -114,6 +119,7 @@ public class _10308_NotToBeForgotten extends Quest implements ScriptFile
 				htmltext = "30870-02.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -124,6 +130,7 @@ public class _10308_NotToBeForgotten extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		if (ArrayUtils.contains(MONSTERS, npc.getNpcId()) && (st.getCond() == 1))
 		{
 			if (st.rollAndGive(ITEM_LEGACY_CORE, 1, 3, 40, DROP_CHANCE))
@@ -132,6 +139,7 @@ public class _10308_NotToBeForgotten extends Quest implements ScriptFile
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		return null;
 	}
 	

@@ -34,7 +34,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class SymbolInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -94,6 +94,7 @@ public class SymbolInstance extends NpcInstance
 			public void runImpl()
 			{
 				List<Creature> targets = new ArrayList<>();
+				
 				if (!_skill.isAoE())
 				{
 					for (Creature target : getAroundCharacters(200, 200))
@@ -115,9 +116,11 @@ public class SymbolInstance extends NpcInstance
 							{
 								continue;
 							}
+							
 							targets.add(t);
 						}
 					}
+					
 					broadcastPacket(new MagicSkillUse(SymbolInstance.this, SymbolInstance.this, _skill.getId(), _skill.getLevel(), 0, 0));
 					_skill.useSkill(SymbolInstance.this, targets);
 				}
@@ -135,11 +138,14 @@ public class SymbolInstance extends NpcInstance
 		{
 			_destroyTask.cancel(false);
 		}
+		
 		_destroyTask = null;
+		
 		if (_targetTask != null)
 		{
 			_targetTask.cancel(false);
 		}
+		
 		_targetTask = null;
 		super.onDelete();
 	}

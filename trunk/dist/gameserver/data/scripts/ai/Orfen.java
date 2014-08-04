@@ -64,12 +64,15 @@ public class Orfen extends Fighter
 		{
 			return true;
 		}
+		
 		final OrfenInstance actor = getActor();
+		
 		if (actor.isTeleported() && (actor.getCurrentHpPercents() > 95))
 		{
 			actor.setTeleported(false);
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -93,16 +96,20 @@ public class Orfen extends Fighter
 	{
 		super.onEvtAttacked(attacker, damage);
 		final OrfenInstance actor = getActor();
+		
 		if (actor.isCastingNow())
 		{
 			return;
 		}
+		
 		final double distance = actor.getDistance(attacker);
+		
 		if ((distance > 300) && (distance < 1000) && (_damSkills.length > 0) && Rnd.chance(10))
 		{
 			Functions.npcSay(actor, MsgOnRecall[Rnd.get(MsgOnRecall.length - 1)].sprintf(attacker.getName()));
 			teleToLocation(attacker, Location.findFrontPosition(actor, attacker, 0, 50));
 			final Skill r_skill = _damSkills[Rnd.get(_damSkills.length)];
+			
 			if (canUseSkill(r_skill, attacker, -1))
 			{
 				addTaskAttack(attacker, r_skill, 1000000);
@@ -111,6 +118,7 @@ public class Orfen extends Fighter
 		else if ((_paralyze.length > 0) && Rnd.chance(20))
 		{
 			final Skill r_skill = _paralyze[Rnd.get(_paralyze.length)];
+			
 			if (canUseSkill(r_skill, attacker, -1))
 			{
 				addTaskAttack(attacker, r_skill, 1000000);
@@ -128,16 +136,20 @@ public class Orfen extends Fighter
 	{
 		super.onEvtSeeSpell(skill, caster);
 		final OrfenInstance actor = getActor();
+		
 		if (actor.isCastingNow())
 		{
 			return;
 		}
+		
 		final double distance = actor.getDistance(caster);
+		
 		if ((_damSkills.length > 0) && (skill.getEffectPoint() > 0) && (distance < 1000) && Rnd.chance(20))
 		{
 			Functions.npcSay(actor, MsgOnRecall[Rnd.get(MsgOnRecall.length)].sprintf(caster.getName()));
 			teleToLocation(caster, Location.findFrontPosition(actor, caster, 0, 50));
 			final Skill r_skill = _damSkills[Rnd.get(_damSkills.length)];
+			
 			if (canUseSkill(r_skill, caster, -1))
 			{
 				addTaskAttack(caster, r_skill, 1000000);

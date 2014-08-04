@@ -43,7 +43,7 @@ import lineage2.gameserver.utils.PositionUtils;
 public abstract class Boat extends Creature
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -154,6 +154,7 @@ public abstract class Boat extends Creature
 			player.setLoc(getLoc(), true);
 			player.setInBoatPosition(boatLoc);
 			player.broadcastPacket(getOnPacket(player, boatLoc));
+			
 			if (isShuttle())
 			{
 				for (Summon summon : player.getSummonList())
@@ -178,26 +179,32 @@ public abstract class Boat extends Creature
 		{
 			return;
 		}
+		
 		Player player = playable.getPlayer();
+		
 		if (player.getSummonList().size() > 0)
 		{
 			player.sendPacket(SystemMsg.YOU_SHOULD_RELEASE_YOUR_PET_OR_SERVITOR_SO_THAT_IT_DOES_NOT_FALL_OFF_OF_THE_BOAT_AND_DROWN, ActionFail.STATIC);
 			return;
 		}
+		
 		if (player.getTransformation() != 0)
 		{
 			player.sendPacket(SystemMsg.YOU_CANNOT_BOARD_A_SHIP_WHILE_YOU_ARE_POLYMORPHED, ActionFail.STATIC);
 			return;
 		}
+		
 		if (player.isMovementDisabled() || player.isSitting())
 		{
 			player.sendActionFailed();
 			return;
 		}
+		
 		if (!player.isInBoat())
 		{
 			player.setBoat(this);
 		}
+		
 		loc.h = PositionUtils.getHeadingTo(ori, loc);
 		player.setInBoatPosition(loc);
 		player.broadcastPacket(inMovePacket(player, ori, loc));
@@ -212,10 +219,12 @@ public abstract class Boat extends Creature
 		_runState = 0;
 		_fromHome = _fromHome == 1 ? 0 : 1;
 		L2GameServerPacket checkLocation = checkLocationPacket();
+		
 		if (checkLocation != null)
 		{
 			broadcastPacket(infoPacket(), checkLocation);
 		}
+		
 		if (oust)
 		{
 			oustPlayers();
@@ -235,10 +244,12 @@ public abstract class Boat extends Creature
 		{
 			stopMove(false);
 		}
+		
 		for (Player player : _players)
 		{
 			player.teleToLocation(x, y, z);
 		}
+		
 		setHeading(calcHeading(x, y));
 		setXYZ(x, y, z, true);
 		getCurrentWay().moveNext();
@@ -258,10 +269,12 @@ public abstract class Boat extends Creature
 			player.setBoat(null);
 			player.setInBoatPosition(null);
 			player.broadcastPacket(getOffPacket(player, loc));
+			
 			if (teleport)
 			{
 				player.teleToLocation(loc);
 			}
+			
 			if (isShuttle())
 			{
 				for (Summon summon : player.getSummonList())
@@ -271,6 +284,7 @@ public abstract class Boat extends Creature
 					summon.broadcastPacket(getOffPacket(summon, loc));
 				}
 			}
+			
 			_players.remove(player);
 		}
 	}
@@ -386,6 +400,7 @@ public abstract class Boat extends Creature
 		{
 			_ai = new BoatAI(this);
 		}
+		
 		return _ai;
 	}
 	
@@ -408,6 +423,7 @@ public abstract class Boat extends Creature
 		List<Player> players = new ArrayList<>();
 		players.addAll(_players);
 		players.addAll(World.getAroundPlayers(this));
+		
 		for (Player player : players)
 		{
 			if (player != null)
@@ -629,6 +645,7 @@ public abstract class Boat extends Creature
 		{
 			return Collections.singletonList(infoPacket());
 		}
+		
 		List<L2GameServerPacket> list = new ArrayList<>(2);
 		list.add(infoPacket());
 		list.add(movePacket());

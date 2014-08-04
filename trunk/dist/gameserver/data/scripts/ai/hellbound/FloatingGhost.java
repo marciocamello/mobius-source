@@ -40,10 +40,12 @@ public class FloatingGhost extends Fighter
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isMoving)
 		{
 			return false;
 		}
+		
 		randomWalk();
 		return false;
 	}
@@ -58,11 +60,13 @@ public class FloatingGhost extends Fighter
 		final NpcInstance actor = getActor();
 		final Location sloc = actor.getSpawnedLoc();
 		final Location pos = Location.findPointToStay(actor, sloc, 50, 300);
+		
 		if (GeoEngine.canMoveToCoord(actor.getX(), actor.getY(), actor.getZ(), pos.x, pos.y, pos.z, actor.getGeoIndex()))
 		{
 			actor.setRunning();
 			addTaskMove(pos, false);
 		}
+		
 		return true;
 	}
 }

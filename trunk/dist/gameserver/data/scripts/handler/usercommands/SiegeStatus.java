@@ -45,11 +45,14 @@ public class SiegeStatus extends ScriptUserCommand
 			player.sendPacket(SystemMsg.ONLY_THE_CLAN_LEADER_MAY_ISSUE_COMMANDS);
 			return false;
 		}
+		
 		Castle castle = player.getCastle();
+		
 		if (castle == null)
 		{
 			return false;
 		}
+		
 		if (castle.getSiegeEvent().isInProgress())
 		{
 			if (!player.isNoble())
@@ -58,6 +61,7 @@ public class SiegeStatus extends ScriptUserCommand
 				return false;
 			}
 		}
+		
 		NpcHtmlMessage msg = new NpcHtmlMessage(5);
 		msg.setFile("siege_status.htm");
 		msg.replace("%name%", player.getName());

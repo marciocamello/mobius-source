@@ -50,10 +50,12 @@ public class TelnetBan implements TelnetCommandHolder
 				{
 					return null;
 				}
+				
 				if (AdminFunctions.kick(args[0], "telnet"))
 				{
 					return "Player kicked.\n";
 				}
+				
 				return "Player not found.\n";
 			}
 		});

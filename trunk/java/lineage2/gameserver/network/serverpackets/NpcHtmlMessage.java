@@ -51,9 +51,11 @@ public class NpcHtmlMessage extends L2GameServerPacket
 	public NpcHtmlMessage(Player player, int npcId, String filename, int val)
 	{
 		List<ScriptClassAndMethod> appends = Scripts.dialogAppends.get(npcId);
+		
 		if ((appends != null) && (appends.size() > 0))
 		{
 			have_appends = true;
+			
 			if ((filename != null) && filename.equalsIgnoreCase("npcdefault.htm"))
 			{
 				setHtml(""); // контент задается скриптами через DialogAppend_
@@ -64,15 +66,16 @@ public class NpcHtmlMessage extends L2GameServerPacket
 			}
 			
 			String replaces = "";
-			
 			// Добавить в конец странички текст, определенный в скриптах.
 			Object[] script_args = new Object[]
 			{
 				new Integer(val)
 			};
+			
 			for (ScriptClassAndMethod append : appends)
 			{
 				Object obj = Scripts.getInstance().callScripts(player, append.className, append.methodName, script_args);
+				
 				if (obj != null)
 				{
 					replaces += obj;
@@ -93,12 +96,9 @@ public class NpcHtmlMessage extends L2GameServerPacket
 	public NpcHtmlMessage(Player player, NpcInstance npc, String filename, int val)
 	{
 		this(player, npc.getNpcId(), filename, val);
-		
 		_npcObjId = npc.getObjectId();
-		
 		// FIXME [G1ta0] не есть истина, исправить
 		player.setLastNpc(npc);
-		
 		replace("%npcId%", String.valueOf(npc.getNpcId()));
 		replace("%npcname%", npc.getName());
 	}
@@ -128,6 +128,7 @@ public class NpcHtmlMessage extends L2GameServerPacket
 		{
 			text = "<html><body>" + text + "</body></html>"; // <title>Message:</title>
 		}
+		
 		// <br><br><br>
 		_html = text;
 		return this;
@@ -136,11 +137,13 @@ public class NpcHtmlMessage extends L2GameServerPacket
 	public final NpcHtmlMessage setFile(String file)
 	{
 		_file = file;
+		
 		if (_file.startsWith("data/html/"))
 		{
 			_log.info("NpcHtmlMessage: need fix : " + file, new Exception());
 			_file = _file.replace("data/html/", "");
 		}
+		
 		return this;
 	}
 	
@@ -150,6 +153,7 @@ public class NpcHtmlMessage extends L2GameServerPacket
 		{
 			return this;
 		}
+		
 		_replaces.add(pattern);
 		_replaces.add(value);
 		return this;
@@ -162,6 +166,7 @@ public class NpcHtmlMessage extends L2GameServerPacket
 		{
 			return this;
 		}
+		
 		if (npcString.getSize() != arg.length)
 		{
 			throw new IllegalArgumentException("Not valid size of parameters: " + npcString);
@@ -176,20 +181,23 @@ public class NpcHtmlMessage extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
 		
 		if (_file != null) // TODO может быть не очень хорошо здесь это
-							// делать...
+		// делать...
 		{
 			if (player.isGM())
 			{
 				Functions.sendDebugMessage(player, "HTML: " + _file);
 			}
+			
 			String content = HtmCache.getInstance().getNotNull(_file, player);
 			String content2 = HtmCache.getInstance().getNullable(_file, player);
+			
 			if (content2 == null)
 			{
 				setHtml(have_appends && _file.endsWith(".htm") ? "" : content);
@@ -211,16 +219,15 @@ public class NpcHtmlMessage extends L2GameServerPacket
 		}
 		
 		Matcher m = objectId.matcher(_html);
+		
 		if (m != null)
 		{
 			_html = m.replaceAll(String.valueOf(_npcObjId));
 		}
 		
 		_html = playername.matcher(_html).replaceAll(player.getName());
-		
 		player.cleanBypasses(false);
 		_html = player.encodeBypasses(_html, false);
-		
 		writeC(0x19);
 		writeD(_npcObjId);
 		writeS(_html);

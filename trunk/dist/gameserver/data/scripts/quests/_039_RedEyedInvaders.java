@@ -67,6 +67,7 @@ public class _039_RedEyedInvaders extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("guard_babenco_q0039_0104.htm"))
 		{
 			st.setCond(1);
@@ -111,6 +112,7 @@ public class _039_RedEyedInvaders extends Quest implements ScriptFile
 				htmltext = "captain_bathia_q0039_0304.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -120,6 +122,7 @@ public class _039_RedEyedInvaders extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (npcId == 30334)
 		{
 			if (cond == 0)
@@ -162,6 +165,7 @@ public class _039_RedEyedInvaders extends Quest implements ScriptFile
 				htmltext = "captain_bathia_q0039_0303.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -170,6 +174,7 @@ public class _039_RedEyedInvaders extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (cond == 2)
 		{
 			if (((npcId == 20919) || (npcId == 20920)) && (st.getQuestItemsCount(BBN) <= 99))
@@ -180,13 +185,16 @@ public class _039_RedEyedInvaders extends Quest implements ScriptFile
 			{
 				st.giveItems(RBN, 1);
 			}
+			
 			st.playSound(SOUND_ITEMGET);
+			
 			if ((st.getQuestItemsCount(BBN) + st.getQuestItemsCount(RBN)) == 200)
 			{
 				st.setCond(3);
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		if (cond == 4)
 		{
 			if (((npcId == 20920) || (npcId == 20921)) && (st.getQuestItemsCount(IP) <= 29))
@@ -197,13 +205,16 @@ public class _039_RedEyedInvaders extends Quest implements ScriptFile
 			{
 				st.giveItems(GML, 1);
 			}
+			
 			st.playSound(SOUND_ITEMGET);
+			
 			if ((st.getQuestItemsCount(IP) + st.getQuestItemsCount(GML)) == 60)
 			{
 				st.setCond(5);
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		return null;
 	}
 }

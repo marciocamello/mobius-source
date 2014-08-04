@@ -62,16 +62,21 @@ public class Kama56Boss extends Fighter
 			_lastMinionsTargetRef = HardReferences.emptyRef();
 			return;
 		}
+		
 		final MinionList ml = actor.getMinionList();
+		
 		if ((ml == null) || !ml.hasMinions())
 		{
 			_lastMinionsTargetRef = HardReferences.emptyRef();
 			return;
 		}
+		
 		final long now = System.currentTimeMillis();
+		
 		if ((_nextOrderTime > now) && (_lastMinionsTargetRef.get() != null))
 		{
 			final Player old_target = _lastMinionsTargetRef.get();
+			
 			if ((old_target != null) && !old_target.isAlikeDead())
 			{
 				for (MinionInstance m : ml.getAliveMinions())
@@ -81,17 +86,22 @@ public class Kama56Boss extends Fighter
 						m.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, old_target, 10000000);
 					}
 				}
+				
 				return;
 			}
 		}
+		
 		_nextOrderTime = now + 30000;
 		final List<Player> pl = World.getAroundPlayers(actor);
+		
 		if (pl.isEmpty())
 		{
 			_lastMinionsTargetRef = HardReferences.emptyRef();
 			return;
 		}
+		
 		final List<Player> alive = new LazyArrayList<>();
+		
 		for (Player p : pl)
 		{
 			if (!p.isAlikeDead())
@@ -99,14 +109,17 @@ public class Kama56Boss extends Fighter
 				alive.add(p);
 			}
 		}
+		
 		if (alive.isEmpty())
 		{
 			_lastMinionsTargetRef = HardReferences.emptyRef();
 			return;
 		}
+		
 		final Player target = alive.get(Rnd.get(alive.size()));
 		_lastMinionsTargetRef = target.getRef();
 		Functions.npcSayCustomMessage(actor, "Kama56Boss.attack", target.getName());
+		
 		for (MinionInstance m : ml.getAliveMinions())
 		{
 			m.getAggroList().clear();
@@ -121,10 +134,12 @@ public class Kama56Boss extends Fighter
 	protected void thinkAttack()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		sendOrderToMinions(actor);
 		super.thinkAttack();
 	}

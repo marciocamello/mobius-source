@@ -85,9 +85,11 @@ public class PetitionGroupParser extends AbstractFileParser<PetitionGroupHolder>
 			Element groupElement = iterator.next();
 			PetitionMainGroup group = new PetitionMainGroup(Integer.parseInt(groupElement.attributeValue("id")));
 			getHolder().addPetitionGroup(group);
+			
 			for (Iterator<Element> subIterator = groupElement.elementIterator(); subIterator.hasNext();)
 			{
 				Element subElement = subIterator.next();
+				
 				if ("name".equals(subElement.getName()))
 				{
 					group.setName(Language.valueOf(subElement.attributeValue("lang")), subElement.getText());
@@ -100,9 +102,11 @@ public class PetitionGroupParser extends AbstractFileParser<PetitionGroupHolder>
 				{
 					PetitionSubGroup subGroup = new PetitionSubGroup(Integer.parseInt(subElement.attributeValue("id")), subElement.attributeValue("handler"));
 					group.addSubGroup(subGroup);
+					
 					for (Iterator<Element> sub2Iterator = subElement.elementIterator(); sub2Iterator.hasNext();)
 					{
 						Element sub2Element = sub2Iterator.next();
+						
 						if ("name".equals(sub2Element.getName()))
 						{
 							subGroup.setName(Language.valueOf(sub2Element.attributeValue("lang")), sub2Element.getText());

@@ -113,8 +113,10 @@ public final class SubClassManagerInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		StringTokenizer st = new StringTokenizer(command, "_");
 		String cmd = st.nextToken();
+		
 		if (cmd.equalsIgnoreCase("subclass"))
 		{
 			if (player.getSummonList().size() > 0)
@@ -122,22 +124,27 @@ public final class SubClassManagerInstance extends NpcInstance
 				showChatWindow(player, "default/" + getNpcId() + "-no_servitor.htm");
 				return;
 			}
+			
 			if (player.getTransformation() != 0)
 			{
 				showChatWindow(player, "default/" + getNpcId() + "-no_transform.htm");
 				return;
 			}
+			
 			if ((player.getWeightPenalty() >= 3) || ((player.getInventoryLimit() * 0.8) < player.getInventory().getSize()))
 			{
 				showChatWindow(player, "default/" + getNpcId() + "-no_weight.htm");
 				return;
 			}
+			
 			if (player.getLevel() < 40)
 			{
 				showChatWindow(player, "default/" + getNpcId() + "-no_level.htm");
 				return;
 			}
+			
 			String cmd2 = st.nextToken();
+			
 			if (cmd2.equalsIgnoreCase("add"))
 			{
 				if (player.getSubClassList().size() >= SubClassList.MAX_SUB_COUNT)
@@ -145,7 +152,9 @@ public final class SubClassManagerInstance extends NpcInstance
 					showChatWindow(player, "default/" + getNpcId() + "-add_no_limit.htm");
 					return;
 				}
+				
 				Collection<SubClass> subClasses = player.getSubClassList().values();
+				
 				for (SubClass subClass : subClasses)
 				{
 					if (subClass.getLevel() < Config.ALT_GAME_LEVEL_TO_GET_SUBCLASS)
@@ -154,25 +163,32 @@ public final class SubClassManagerInstance extends NpcInstance
 						return;
 					}
 				}
+				
 				if (!st.hasMoreTokens())
 				{
 					StringBuilder availSubList = new StringBuilder();
 					Set<ClassId> availSubClasses = SubClassInfo.getAvailableSubClasses(player, null, null, true);
+					
 					for (ClassId subClsId : availSubClasses)
 					{
 						availSubList.append("<a action=\"bypass -h npc_%objectId%_subclass_add_" + subClsId.getId() + "\">" + HtmlUtils.htmlClassName(subClsId.getId()) + "/" + HtmlUtils.htmlClassName(getChildClass(subClsId.getId())) + "</a><br>");
 					}
+					
 					showChatWindow(player, "default/" + getNpcId() + "-add_list.htm", "<?ADD_SUB_LIST?>", availSubList.toString());
 					return;
 				}
+				
 				int addSubClassId = Integer.parseInt(st.nextToken());
+				
 				if (!st.hasMoreTokens())
 				{
 					String addSubConfirm = "<a action=\"bypass -h npc_%objectId%_subclass_add_" + addSubClassId + "_confirm\">" + HtmlUtils.htmlClassName(addSubClassId) + "/" + HtmlUtils.htmlClassName(getChildClass(addSubClassId)) + "</a>";
 					showChatWindow(player, "default/" + getNpcId() + "-add_confirm.htm", "<?ADD_SUB_CONFIRM?>", addSubConfirm);
 					return;
 				}
+				
 				String cmd3 = st.nextToken();
+				
 				if (cmd3.equalsIgnoreCase("confirm"))
 				{
 					if (Config.ENABLE_OLYMPIAD && Olympiad.isRegisteredInComp(player))
@@ -180,6 +196,7 @@ public final class SubClassManagerInstance extends NpcInstance
 						player.sendPacket(SystemMsg.C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_SUBCLASS_CHARACTER_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD);
 						return;
 					}
+					
 					if (player.addSubClass(addSubClassId, true, 0, 0, false, 0))
 					{
 						player.rewardSkills(false, true);
@@ -188,6 +205,7 @@ public final class SubClassManagerInstance extends NpcInstance
 						showChatWindow(player, "default/" + getNpcId() + "-add_success.htm");
 						return;
 					}
+					
 					showChatWindow(player, "default/" + getNpcId() + "-add_error.htm");
 					return;
 				}
@@ -199,6 +217,7 @@ public final class SubClassManagerInstance extends NpcInstance
 					showChatWindow(player, "default/" + getNpcId() + "-no_quest.htm");
 					return;
 				}
+				
 				if (ItemFunctions.getItemCount(player, CERTIFICATE_ID) == 0)
 				{
 					showChatWindow(player, "default/" + getNpcId() + "-no_certificate.htm");
@@ -212,50 +231,64 @@ public final class SubClassManagerInstance extends NpcInstance
 					showChatWindow(player, "default/" + getNpcId() + "-cancel_no_subs.htm");
 					return;
 				}
+				
 				if (!st.hasMoreTokens())
 				{
 					StringBuilder mySubList = new StringBuilder();
 					Collection<SubClass> subClasses = player.getSubClassList().values();
+					
 					for (SubClass sub : subClasses)
 					{
 						if (sub == null)
 						{
 							continue;
 						}
+						
 						if (sub.isBase())
 						{
 							continue;
 						}
+						
 						if (sub.isDouble())
 						{
 							continue;
 						}
+						
 						int classId = sub.getClassId();
 						mySubList.append("<a action=\"bypass -h npc_%objectId%_subclass_cancel_" + classId + "\">" + HtmlUtils.htmlClassName(classId) + "/" + HtmlUtils.htmlClassName(getChildClass(classId)) + "</a><br>");
 					}
+					
 					showChatWindow(player, "default/" + getNpcId() + "-cancel_list.htm", "<?CANCEL_SUB_LIST?>", mySubList.toString());
 					return;
 				}
+				
 				int cancelClassId = Integer.parseInt(st.nextToken());
+				
 				if (!st.hasMoreTokens())
 				{
 					StringBuilder availSubList = new StringBuilder();
 					int[] availSubClasses = SubClassTable.getInstance().getAvailableSubClasses(player, cancelClassId);
+					
 					for (int subClsId : availSubClasses)
 					{
 						availSubList.append("<a action=\"bypass -h npc_%objectId%_subclass_cancel_" + cancelClassId + "_" + subClsId + "\">" + HtmlUtils.htmlClassName(subClsId) + "/" + HtmlUtils.htmlClassName(getChildClass(subClsId)) + "</a><br>");
 					}
+					
 					showChatWindow(player, "default/" + getNpcId() + "-cancel_change_list.htm", "<?CANCEL_CHANGE_SUB_LIST?>", availSubList.toString());
 					return;
 				}
+				
 				int newSubClassId = Integer.parseInt(st.nextToken());
+				
 				if (!st.hasMoreTokens())
 				{
 					String newSubConfirm = "<a action=\"bypass -h npc_%objectId%_subclass_cancel_" + cancelClassId + "_" + newSubClassId + "_confirm\">" + HtmlUtils.htmlClassName(newSubClassId) + "/" + HtmlUtils.htmlClassName(getChildClass(newSubClassId)) + "</a>";
 					showChatWindow(player, "default/" + getNpcId() + "-cancel_confirm.htm", "<?CANCEL_SUB_CONFIRM?>", newSubConfirm);
 					return;
 				}
+				
 				String cmd3 = st.nextToken();
+				
 				if (cmd3.equalsIgnoreCase("confirm"))
 				{
 					if (player.modifySubClass(cancelClassId, newSubClassId, false))
@@ -266,6 +299,7 @@ public final class SubClassManagerInstance extends NpcInstance
 						showChatWindow(player, "default/" + getNpcId() + "-add_success.htm");
 						return;
 					}
+					
 					showChatWindow(player, "default/" + getNpcId() + "-add_error.htm");
 					return;
 				}
@@ -277,49 +311,63 @@ public final class SubClassManagerInstance extends NpcInstance
 					showChatWindow(player, "default/" + getNpcId() + "-reawaken_nodual.htm");
 					return;
 				}
+				
 				if (!st.hasMoreTokens())
 				{
 					StringBuilder costList = new StringBuilder();
+					
 					for (Entry<Integer, Double> entry : _REAWAKENINGCOST.entrySet())
 					{
 						Map.Entry<Integer, Double> e = entry;
 						costList.append("<tr><td><center><font color=\"LEVEL\">" + e.getKey() + (e.getKey() == 94 ? "+" : " ") + "</font></center></td><td><center><font color=\"LEVEL\">" + e.getValue() + " Million</font></center></td></tr>");
 					}
+					
 					showChatWindow(player, "default/" + getNpcId() + "-reawaken_cost.htm", "<?COST?>", costList.toString());
 					return;
 				}
+				
 				st.nextToken();
+				
 				if (!st.hasMoreTokens())
 				{
 					StringBuilder availSubList = new StringBuilder();
 					int[] availDualAwakenClasses = DualClassTable.getInstance().getAvailableDualClasses(player, player.getActiveSubClass().getClassId());
+					
 					for (int subClsId : availDualAwakenClasses)
 					{
 						availSubList.append("<a action=\"bypass -h npc_%objectId%_subclass_reawakendualclass_select_" + subClsId + "\">" + HtmlUtils.htmlClassName(subClsId) + "</a><br>");
 					}
+					
 					showChatWindow(player, "default/" + getNpcId() + "-reawaken_list.htm", "<?CANCEL_CHANGE_SUB_LIST?>", availSubList.toString());
 					return;
 				}
+				
 				int newSubClassId = Integer.parseInt(st.nextToken());
+				
 				if (!st.hasMoreTokens())
 				{
 					String newSubConfirm = "<a action=\"bypass -h npc_%objectId%_subclass_reawakendualclass_select_" + newSubClassId + "_confirm\">" + HtmlUtils.htmlClassName(newSubClassId) + "</a>";
 					showChatWindow(player, "default/" + getNpcId() + "-reawaken_confirm.htm", "<?CANCEL_SUB_CONFIRM?>", newSubConfirm);
 					return;
 				}
+				
 				String cmd3 = st.nextToken();
+				
 				if (cmd3.equalsIgnoreCase("confirm"))
 				{
 					long reawakeningCost = Math.round(_REAWAKENINGCOST.get(player.getLevel() < 95 ? player.getLevel() : 94) * 1000000);
+					
 					if (player.getInventory().getAdena() < reawakeningCost)
 					{
 						player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 						return;
 					}
+					
 					player.getInventory().reduceAdena(reawakeningCost);
 					int previousClassId = player.getActiveSubClass().getClassId();
 					CertificationFunctions.cancelCertification(this, player, true, true);
 					int humanSkillClassId = _DESTINYCHANGECLASSES.get(newSubClassId);
+					
 					if (player.modifySubClass(previousClassId, newSubClassId, true))
 					{
 						AwakingManager.getInstance().onTransferOnlyRemoveSkills(player, newSubClassId, humanSkillClassId);
@@ -330,6 +378,7 @@ public final class SubClassManagerInstance extends NpcInstance
 						player.sendSkillList();
 						return;
 					}
+					
 					showChatWindow(player, "default/" + getNpcId() + "-add_error.htm");
 					return;
 				}
@@ -340,6 +389,7 @@ public final class SubClassManagerInstance extends NpcInstance
 				{
 					showTransformationSkillList(player, AcquireType.CERTIFICATION);
 				}
+				
 				return;
 			}
 			else if (cmd2.equalsIgnoreCase("DualCertificationSkillList"))
@@ -348,6 +398,7 @@ public final class SubClassManagerInstance extends NpcInstance
 				{
 					showTransformationSkillList(player, AcquireType.DUAL_CERTIFICATION);
 				}
+				
 				return;
 			}
 			else if (cmd2.equalsIgnoreCase("CancelRequest"))
@@ -361,6 +412,7 @@ public final class SubClassManagerInstance extends NpcInstance
 				{
 					return;
 				}
+				
 				int levelCertification = Integer.parseInt(st.nextToken());
 				CertificationFunctions.showCertificationList(this, player, levelCertification);
 			}
@@ -370,7 +422,9 @@ public final class SubClassManagerInstance extends NpcInstance
 				{
 					return;
 				}
+				
 				int levelCertification = Integer.parseInt(st.nextToken());
+				
 				if ((((levelCertification >= 65) && (levelCertification <= 95)) && ((levelCertification % 5) == 0)) || (levelCertification == 99))
 				{
 					CertificationFunctions.getInstance();
@@ -388,7 +442,9 @@ public final class SubClassManagerInstance extends NpcInstance
 				{
 					return;
 				}
+				
 				int levelCertification = Integer.parseInt(st.nextToken());
+				
 				if ((((levelCertification >= 65) && (levelCertification <= 95)) && ((levelCertification % 5) == 0)) || (levelCertification == 99))
 				{
 					CertificationFunctions.confirmCertification(levelCertification, this, player);
@@ -398,7 +454,6 @@ public final class SubClassManagerInstance extends NpcInstance
 					_log.info("Condition level are incorrect");
 					return;
 				}
-				
 			}
 			else if (cmd2.equalsIgnoreCase("CertificationCancel"))
 			{
@@ -407,7 +462,9 @@ public final class SubClassManagerInstance extends NpcInstance
 					showChatWindow(player, "default/" + getNpcId() + "-certification_cancel.htm", "<?COST?>", Config.ALT_GAME_RESET_CERTIFICATION_COST / 1000000);
 					return;
 				}
+				
 				boolean confirm = Boolean.parseBoolean(st.nextToken());
+				
 				if (confirm)
 				{
 					CertificationFunctions.cancelCertification(this, player, false, false);
@@ -420,7 +477,9 @@ public final class SubClassManagerInstance extends NpcInstance
 					showChatWindow(player, "default/" + getNpcId() + "-dualcertification_cancel.htm", "<?COST?>", Config.ALT_GAME_RESET_DUALCERTIFICATION_COST / 1000000);
 					return;
 				}
+				
 				boolean confirm = Boolean.parseBoolean(st.nextToken());
+				
 				if (confirm)
 				{
 					CertificationFunctions.cancelCertification(this, player, true, false);
@@ -448,6 +507,7 @@ public final class SubClassManagerInstance extends NpcInstance
 				return;
 			}
 		}
+		
 		showAcquireList(type, player);
 	}
 	
@@ -461,28 +521,33 @@ public final class SubClassManagerInstance extends NpcInstance
 		List<K> keys = new LinkedList<>(map.keySet());
 		Collections.sort(keys);
 		Map<K, V> sortedMap = new LinkedHashMap<>();
+		
 		for (K key : keys)
 		{
 			sortedMap.put(key, map.get(key));
 		}
+		
 		return sortedMap;
 	}
 	
 	private static Integer getChildClass(Integer previousClass)
 	{
 		int childClass = 0;
+		
 		for (ClassId clid : ClassId.values())
 		{
 			if (!clid.isOfLevel(ClassLevel.Fourth))
 			{
 				continue;
 			}
+			
 			if (clid.getParentId() == previousClass)
 			{
 				childClass = clid.getId();
 				break;
 			}
 		}
+		
 		return childClass;
 	}
 }

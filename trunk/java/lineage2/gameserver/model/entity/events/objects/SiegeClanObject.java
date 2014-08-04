@@ -30,7 +30,7 @@ import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 public class SiegeClanObject implements Serializable
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	

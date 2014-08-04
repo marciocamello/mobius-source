@@ -70,6 +70,7 @@ public class _038_DragonFangs extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		int cond = st.getCond();
+		
 		if (event.equals("guard_luis_q0038_0104.htm"))
 		{
 			if (cond == 0)
@@ -79,6 +80,7 @@ public class _038_DragonFangs extends Quest implements ScriptFile
 				st.playSound(SOUND_ACCEPT);
 			}
 		}
+		
 		if (event.equals("guard_luis_q0038_0201.htm"))
 		{
 			if (cond == 2)
@@ -89,6 +91,7 @@ public class _038_DragonFangs extends Quest implements ScriptFile
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		if (event.equals("iris_q0038_0301.htm"))
 		{
 			if (cond == 3)
@@ -99,6 +102,7 @@ public class _038_DragonFangs extends Quest implements ScriptFile
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		if (event.equals("magister_roh_q0038_0401.htm"))
 		{
 			if (cond == 4)
@@ -109,6 +113,7 @@ public class _038_DragonFangs extends Quest implements ScriptFile
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		if (event.equals("iris_q0038_0501.htm"))
 		{
 			if (cond == 5)
@@ -118,32 +123,38 @@ public class _038_DragonFangs extends Quest implements ScriptFile
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		if (event.equals("iris_q0038_0601.htm"))
 		{
 			if (cond == 7)
 			{
 				st.takeItems(TOOTH_OF_DRAGON, 50);
 				int luck = Rnd.get(3);
+				
 				if (luck == 0)
 				{
 					st.giveItems(BLUE_BUCKSKIN_BOOTS, 1);
 					st.giveItems(ADENA_ID, 1500);
 				}
+				
 				if (luck == 1)
 				{
 					st.giveItems(BONE_HELMET, 1);
 					st.giveItems(ADENA_ID, 5200);
 				}
+				
 				if (luck == 2)
 				{
 					st.giveItems(ASSAULT_BOOTS, 1);
 					st.giveItems(ADENA_ID, 1500);
 				}
+				
 				st.addExpAndSp(435117, 23977);
 				st.playSound(SOUND_FINISH);
 				st.exitCurrentQuest(false);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -153,6 +164,7 @@ public class _038_DragonFangs extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if ((npcId == LUIS) && (cond == 0))
 		{
 			if (st.getPlayer().getLevel() < 19)
@@ -165,46 +177,57 @@ public class _038_DragonFangs extends Quest implements ScriptFile
 				htmltext = "guard_luis_q0038_0101.htm";
 			}
 		}
+		
 		if ((npcId == LUIS) && (cond == 1))
 		{
 			htmltext = "guard_luis_q0038_0202.htm";
 		}
+		
 		if ((npcId == LUIS) && (cond == 2) && (st.getQuestItemsCount(FEATHER_ORNAMENT) == 100))
 		{
 			htmltext = "guard_luis_q0038_0105.htm";
 		}
+		
 		if ((npcId == LUIS) && (cond == 3))
 		{
 			htmltext = "guard_luis_q0038_0203.htm";
 		}
+		
 		if ((npcId == IRIS) && (cond == 3) && (st.getQuestItemsCount(TOOTH_OF_TOTEM) == 1))
 		{
 			htmltext = "iris_q0038_0201.htm";
 		}
+		
 		if ((npcId == IRIS) && (cond == 4))
 		{
 			htmltext = "iris_q0038_0303.htm";
 		}
+		
 		if ((npcId == IRIS) && (cond == 5) && (st.getQuestItemsCount(LETTER_OF_ROHMER) == 1))
 		{
 			htmltext = "iris_q0038_0401.htm";
 		}
+		
 		if ((npcId == IRIS) && (cond == 6))
 		{
 			htmltext = "iris_q0038_0602.htm";
 		}
+		
 		if ((npcId == IRIS) && (cond == 7) && (st.getQuestItemsCount(TOOTH_OF_DRAGON) == 50))
 		{
 			htmltext = "iris_q0038_0503.htm";
 		}
+		
 		if ((npcId == ROHMER) && (cond == 4) && (st.getQuestItemsCount(LETTER_OF_IRIS) == 1))
 		{
 			htmltext = "magister_roh_q0038_0301.htm";
 		}
+		
 		if ((npcId == ROHMER) && (cond == 5))
 		{
 			htmltext = "magister_roh_q0038_0403.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -214,11 +237,13 @@ public class _038_DragonFangs extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		boolean chance = Rnd.chance(CHANCE_FOR_QUEST_ITEMS);
 		int cond = st.getCond();
+		
 		if ((npcId == 20357) || (npcId == 21100))
 		{
 			if ((cond == 1) && chance && (st.getQuestItemsCount(FEATHER_ORNAMENT) < 100))
 			{
 				st.giveItems(FEATHER_ORNAMENT, 1);
+				
 				if (st.getQuestItemsCount(FEATHER_ORNAMENT) == 100)
 				{
 					st.playSound(SOUND_MIDDLE);
@@ -230,11 +255,13 @@ public class _038_DragonFangs extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		if ((npcId == 20356) || (npcId == 21101))
 		{
 			if ((cond == 6) && chance && (st.getQuestItemsCount(TOOTH_OF_DRAGON) < 50))
 			{
 				st.giveItems(TOOTH_OF_DRAGON, 1);
+				
 				if (st.getQuestItemsCount(TOOTH_OF_DRAGON) == 50)
 				{
 					st.playSound(SOUND_MIDDLE);
@@ -246,6 +273,7 @@ public class _038_DragonFangs extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 }

@@ -263,6 +263,7 @@ public abstract class GlobalEvent extends LoggerObject
 	public void addOnTimeAction(int time, EventAction action)
 	{
 		List<EventAction> list = _onTimeActions.get(time);
+		
 		if (list != null)
 		{
 			list.add(action);
@@ -286,7 +287,9 @@ public abstract class GlobalEvent extends LoggerObject
 		{
 			return;
 		}
+		
 		List<EventAction> list = _onTimeActions.get(time);
+		
 		if (list != null)
 		{
 			list.addAll(actions);
@@ -304,11 +307,13 @@ public abstract class GlobalEvent extends LoggerObject
 	public void timeActions(int time)
 	{
 		List<EventAction> actions = _onTimeActions.get(time);
+		
 		if (actions == null)
 		{
 			info("Undefined time : " + time);
 			return;
 		}
+		
 		callActions(actions);
 	}
 	
@@ -327,10 +332,12 @@ public abstract class GlobalEvent extends LoggerObject
 	public void registerActions()
 	{
 		long t = startTimeMillis();
+		
 		if (t == 0)
 		{
 			return;
 		}
+		
 		for (int key : _onTimeActions.keySet().toArray())
 		{
 			ActionRunner.getInstance().register(t + (key * 1000L), new EventWrapper(_timerName, this, key));
@@ -381,7 +388,9 @@ public abstract class GlobalEvent extends LoggerObject
 		{
 			return;
 		}
+		
 		List<Serializable> list = _objects.get(name);
+		
 		if (list != null)
 		{
 			list.add(object);
@@ -405,7 +414,9 @@ public abstract class GlobalEvent extends LoggerObject
 		{
 			return;
 		}
+		
 		List<Serializable> list = _objects.get(name);
+		
 		if (list != null)
 		{
 			list.remove(o);
@@ -437,7 +448,9 @@ public abstract class GlobalEvent extends LoggerObject
 		{
 			return;
 		}
+		
 		List<Serializable> list = _objects.get(name);
+		
 		if (list != null)
 		{
 			list.addAll(objects);
@@ -465,11 +478,13 @@ public abstract class GlobalEvent extends LoggerObject
 	public void spawnAction(String name, boolean spawn)
 	{
 		List<Serializable> objects = getObjects(name);
+		
 		if (objects.isEmpty())
 		{
 			info("Undefined objects: " + name);
 			return;
 		}
+		
 		for (Serializable object : objects)
 		{
 			if (object instanceof SpawnableObject)
@@ -494,11 +509,13 @@ public abstract class GlobalEvent extends LoggerObject
 	public void doorAction(String name, boolean open)
 	{
 		List<Serializable> objects = getObjects(name);
+		
 		if (objects.isEmpty())
 		{
 			info("Undefined objects: " + name);
 			return;
 		}
+		
 		for (Serializable object : objects)
 		{
 			if (object instanceof DoorObject)
@@ -523,11 +540,13 @@ public abstract class GlobalEvent extends LoggerObject
 	public void zoneAction(String name, boolean active)
 	{
 		List<Serializable> objects = getObjects(name);
+		
 		if (objects.isEmpty())
 		{
 			info("Undefined objects: " + name);
 			return;
 		}
+		
 		for (Serializable object : objects)
 		{
 			if (object instanceof ZoneObject)
@@ -544,11 +563,13 @@ public abstract class GlobalEvent extends LoggerObject
 	public void initAction(String name)
 	{
 		List<Serializable> objects = getObjects(name);
+		
 		if (objects.isEmpty())
 		{
 			info("Undefined objects: " + name);
 			return;
 		}
+		
 		for (Serializable object : objects)
 		{
 			if (object instanceof InitableObject)
@@ -585,11 +606,13 @@ public abstract class GlobalEvent extends LoggerObject
 	public void refreshAction(String name)
 	{
 		List<Serializable> objects = getObjects(name);
+		
 		if (objects.isEmpty())
 		{
 			info("Undefined objects: " + name);
 			return;
 		}
+		
 		for (Serializable object : objects)
 		{
 			if (object instanceof SpawnableObject)
@@ -815,6 +838,7 @@ public abstract class GlobalEvent extends LoggerObject
 			case ItemTemplate.ITEM_ID_FAME:
 				player.setFame(player.getFame() + (int) count, toString());
 				break;
+			
 			default:
 				Functions.addItem(player, itemId, count);
 				break;
@@ -869,6 +893,7 @@ public abstract class GlobalEvent extends LoggerObject
 		{
 			_banishedItems = new CHashIntObjectMap<>();
 		}
+		
 		_banishedItems.put(item.getObjectId(), item);
 	}
 	
@@ -878,28 +903,33 @@ public abstract class GlobalEvent extends LoggerObject
 	public void removeBanishItems()
 	{
 		Iterator<IntObjectMap.Entry<ItemInstance>> iterator = _banishedItems.entrySet().iterator();
+		
 		while (iterator.hasNext())
 		{
 			IntObjectMap.Entry<ItemInstance> entry = iterator.next();
 			iterator.remove();
 			ItemInstance item = ItemsDAO.getInstance().load(entry.getKey());
+			
 			if (item != null)
 			{
 				if (item.getOwnerId() > 0)
 				{
 					GameObject object = GameObjectsStorage.findObject(item.getOwnerId());
+					
 					if ((object != null) && object.isPlayable())
 					{
 						((Playable) object).getInventory().destroyItem(item);
 						object.getPlayer().sendPacket(SystemMessage2.removeItems(item));
 					}
 				}
+				
 				item.delete();
 			}
 			else
 			{
 				item = entry.getValue();
 			}
+			
 			item.deleteMe();
 		}
 	}
@@ -932,14 +962,17 @@ public abstract class GlobalEvent extends LoggerObject
 		{
 			e._onInitActions.add(a);
 		}
+		
 		for (EventAction a : _onStartActions)
 		{
 			e._onStartActions.add(a);
 		}
+		
 		for (EventAction a : _onStopActions)
 		{
 			e._onStopActions.add(a);
 		}
+		
 		for (IntObjectMap.Entry<List<EventAction>> entry : _onTimeActions.entrySet())
 		{
 			e.addOnTimeActions(entry.getKey(), entry.getValue());

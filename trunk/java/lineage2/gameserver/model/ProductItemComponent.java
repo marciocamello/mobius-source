@@ -48,6 +48,7 @@ public class ProductItemComponent
 		_itemId = item_id;
 		_count = count;
 		ItemTemplate item = ItemHolder.getInstance().getTemplate(item_id);
+		
 		if (item != null)
 		{
 			_weight = item.getWeight();

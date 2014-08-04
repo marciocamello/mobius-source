@@ -51,9 +51,7 @@ public class Apherus extends Fighter
 	public Apherus(NpcInstance actor)
 	{
 		super(actor);
-		
 		TIntObjectHashMap<Skill> skills = getActor().getTemplate().getSkills();
-		
 		GroundStrike = skills.get(5227);
 		JumpAttack = skills.get(5228);
 	}
@@ -63,12 +61,14 @@ public class Apherus extends Fighter
 	{
 		clearTasks();
 		Creature target;
+		
 		if ((target = prepareTarget()) == null)
 		{
 			return false;
 		}
 		
 		NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return false;
@@ -96,11 +96,10 @@ public class Apherus extends Fighter
 		}
 		
 		Map<Skill, Integer> skills = new HashMap<>();
-		
 		addDesiredSkill(skills, target, distance, GroundStrike);
 		addDesiredSkill(skills, target, distance, JumpAttack);
-		
 		Skill skill = selectTopSkill(skills);
+		
 		if ((skill != null) && !skill.isOffensive())
 		{
 			target = actor;
@@ -181,7 +180,7 @@ public class Apherus extends Fighter
 	private class runDoorOpener extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public runDoorOpener()
 		{
@@ -203,7 +202,6 @@ public class Apherus extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		ThreadPoolManager.getInstance().schedule(new runDoorOpener(), 120000L);
-		
 		super.onEvtDead(killer);
 	}
 }

@@ -25,7 +25,7 @@ import lineage2.gameserver.model.reference.L2Reference;
 public class ControlKeyInstance extends GameObject
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**

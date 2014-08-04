@@ -83,29 +83,36 @@ public class SoulShots extends ScriptItemHandler
 		{
 			return false;
 		}
+		
 		final Player player = (Player) playable;
 		final WeaponTemplate weaponItem = player.getActiveWeaponItem();
 		final ItemInstance weaponInst = player.getActiveWeaponInstance();
 		final int SoulshotId = item.getItemId();
 		boolean isAutoSoulShot = false;
+		
 		if (player.getAutoSoulShot().contains(SoulshotId))
 		{
 			isAutoSoulShot = true;
 		}
+		
 		if (weaponInst == null)
 		{
 			if (!isAutoSoulShot)
 			{
 				player.sendPacket(Msg.CANNOT_USE_SOULSHOTS);
 			}
+			
 			return false;
 		}
+		
 		if (weaponInst.getChargedSoulshot() != ItemInstance.CHARGED_NONE)
 		{
 			return false;
 		}
+		
 		final int grade = weaponItem.getCrystalType().externalOrdinal;
 		int soulShotConsumption = weaponItem.getSoulShotCount();
+		
 		if (soulShotConsumption == 0)
 		{
 			if (isAutoSoulShot)
@@ -114,31 +121,38 @@ public class SoulShots extends ScriptItemHandler
 				player.sendPacket(new ExAutoSoulShot(SoulshotId, false), new SystemMessage(SystemMessage.THE_AUTOMATIC_USE_OF_S1_WILL_NOW_BE_CANCELLED).addItemName(SoulshotId));
 				return false;
 			}
+			
 			player.sendPacket(Msg.CANNOT_USE_SOULSHOTS);
 			return false;
 		}
+		
 		if (((grade == 0) && (SoulshotId != 5789) && (SoulshotId != 1835)) || ((grade == 1) && (SoulshotId != 1463) && (SoulshotId != 22082) && (SoulshotId != 13037)) || ((grade == 2) && (SoulshotId != 1464) && (SoulshotId != 22083) && (SoulshotId != 13045)) || ((grade == 3) && (SoulshotId != 1465) && (SoulshotId != 22084)) || ((grade == 4) && (SoulshotId != 1466) && (SoulshotId != 22085) && (SoulshotId != 13055)) || ((grade == 5) && (SoulshotId != 1467) && (SoulshotId != 22086)) || ((grade == 6) && (SoulshotId != 17754) && (SoulshotId != 33780)))
 		{
 			if (isAutoSoulShot)
 			{
 				return false;
 			}
+			
 			player.sendPacket(Msg.SOULSHOT_DOES_NOT_MATCH_WEAPON_GRADE);
 			return false;
 		}
+		
 		if ((weaponItem.getItemType() == WeaponType.BOW) || (weaponItem.getItemType() == WeaponType.CROSSBOW))
 		{
 			final int newSS = (int) player.calcStat(Stats.SS_USE_BOW, soulShotConsumption, null, null);
+			
 			if ((newSS < soulShotConsumption) && Rnd.chance(player.calcStat(Stats.SS_USE_BOW_CHANCE, soulShotConsumption, null, null)))
 			{
 				soulShotConsumption = newSS;
 			}
 		}
+		
 		if (!player.getInventory().destroyItem(item, soulShotConsumption))
 		{
 			player.sendPacket(Msg.NOT_ENOUGH_SOULSHOTS);
 			return false;
 		}
+		
 		weaponInst.setChargedSoulshot(ItemInstance.CHARGED_SOULSHOT);
 		player.sendPacket(Msg.POWER_OF_THE_SPIRITS_ENABLED);
 		player.broadcastPacket(new MagicSkillUse(player, player, _skillIds[grade], 1, 0, 0));

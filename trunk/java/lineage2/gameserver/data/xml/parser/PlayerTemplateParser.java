@@ -118,9 +118,11 @@ public final class PlayerTemplateParser extends AbstractDirParser<PlayerTemplate
 			List<StartItem> start_items = new ArrayList<>();
 			List<Location> start_locations = new ArrayList<>();
 			TIntObjectHashMap<LvlUpData> lvl_up_data = new TIntObjectHashMap<>();
+			
 			for (Iterator<Element> subIterator = element.elementIterator(); subIterator.hasNext();)
 			{
 				Element subElement = subIterator.next();
+				
 				if ("creation_data".equalsIgnoreCase(subElement.getName()))
 				{
 					for (Element e : subElement.elements())
@@ -163,6 +165,7 @@ public final class PlayerTemplateParser extends AbstractDirParser<PlayerTemplate
 							int dex = Integer.parseInt(e.attributeValue("dex"));
 							int wit = Integer.parseInt(e.attributeValue("wit"));
 							StatAttributes attr = new StatAttributes(_int, str, con, men, dex, wit);
+							
 							if ("min_attributes".equalsIgnoreCase(e.getName()))
 							{
 								min_attr = attr;
@@ -223,6 +226,7 @@ public final class PlayerTemplateParser extends AbstractDirParser<PlayerTemplate
 					}
 				}
 			}
+			
 			PlayerTemplate template = new PlayerTemplate(stats_set, race, sex, min_attr, max_attr, base_attr, arm_defence, jewl_defence, start_locations, start_items, lvl_up_data);
 			getHolder().addPlayerTemplate(race, classtype, sex, template);
 		}

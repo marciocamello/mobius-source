@@ -108,12 +108,15 @@ public final class ResidenceParser extends AbstractDirParser<ResidenceHolder>
 		String impl = rootElement.attributeValue("impl");
 		Class<?> clazz = null;
 		StatsSet set = new StatsSet();
+		
 		for (Iterator<Attribute> iterator = rootElement.attributeIterator(); iterator.hasNext();)
 		{
 			Attribute element = iterator.next();
 			set.set(element.getName(), element.getValue());
 		}
+		
 		Residence residence = null;
+		
 		try
 		{
 			clazz = Class.forName("lineage2.gameserver.model.entity.residence." + impl);
@@ -126,6 +129,7 @@ public final class ResidenceParser extends AbstractDirParser<ResidenceHolder>
 			error("fail to init: " + getCurrentFileName(), e);
 			return;
 		}
+		
 		for (Iterator<Element> iterator = rootElement.elementIterator(); iterator.hasNext();)
 		{
 			Element element = iterator.next();
@@ -135,13 +139,16 @@ public final class ResidenceParser extends AbstractDirParser<ResidenceHolder>
 			int npcId = element.attributeValue("npcId") == null ? 0 : Integer.valueOf(element.attributeValue("npcId"));
 			int listId = element.attributeValue("listId") == null ? 0 : Integer.valueOf(element.attributeValue("listId"));
 			ResidenceFunction function = null;
+			
 			if (nodeName.equalsIgnoreCase("teleport"))
 			{
 				function = checkAndGetFunction(residence, ResidenceFunction.TELEPORT);
 				List<TeleportLocation> targets = new ArrayList<>();
+				
 				for (Iterator<Element> it2 = element.elementIterator(); it2.hasNext();)
 				{
 					Element teleportElement = it2.next();
+					
 					if ("target".equalsIgnoreCase(teleportElement.getName()))
 					{
 						int npcStringId = Integer.parseInt(teleportElement.attributeValue("name"));
@@ -152,6 +159,7 @@ public final class ResidenceParser extends AbstractDirParser<ResidenceHolder>
 						targets.add(loc);
 					}
 				}
+				
 				function.addTeleports(level, targets.toArray(new TeleportLocation[targets.size()]));
 			}
 			else if (nodeName.equalsIgnoreCase("support"))
@@ -160,6 +168,7 @@ public final class ResidenceParser extends AbstractDirParser<ResidenceHolder>
 				{
 					continue;
 				}
+				
 				function = checkAndGetFunction(residence, ResidenceFunction.SUPPORT);
 				function.addBuffs(level);
 			}
@@ -200,6 +209,7 @@ public final class ResidenceParser extends AbstractDirParser<ResidenceHolder>
 					int id2 = Integer.parseInt(nextElement.attributeValue("id"));
 					int level2 = Integer.parseInt(nextElement.attributeValue("level"));
 					Skill skill = SkillTable.getInstance().getInfo(id2, level2);
+					
 					if (skill != null)
 					{
 						residence.addSkill(skill);
@@ -243,6 +253,7 @@ public final class ResidenceParser extends AbstractDirParser<ResidenceHolder>
 				for (Iterator<Element> subElementIterator = element.elementIterator(); subElementIterator.hasNext();)
 				{
 					Element subElement = subElementIterator.next();
+					
 					if (subElement.getName().equalsIgnoreCase("domain"))
 					{
 						((Castle) residence).addRelatedFortress(Fortress.DOMAIN, Integer.parseInt(subElement.attributeValue("fortress")));
@@ -263,6 +274,7 @@ public final class ResidenceParser extends AbstractDirParser<ResidenceHolder>
 					int maxGuard = Integer.parseInt(subElement.attributeValue("max"));
 					IntSet intSet = new HashIntSet(3);
 					String[] ssq = subElement.attributeValue("ssq").split(";");
+					
 					for (String q : ssq)
 					{
 						if (q.equalsIgnoreCase("cabal_null"))
@@ -270,9 +282,11 @@ public final class ResidenceParser extends AbstractDirParser<ResidenceHolder>
 							intSet.add(0);
 						}
 					}
+					
 					((Castle) residence).addMerchantGuard(new MerchantGuard(itemId, npcId2, maxGuard, intSet));
 				}
 			}
+			
 			if (function != null)
 			{
 				function.addLease(level, lease);
@@ -289,11 +303,13 @@ public final class ResidenceParser extends AbstractDirParser<ResidenceHolder>
 	private ResidenceFunction checkAndGetFunction(Residence residence, int type)
 	{
 		ResidenceFunction function = residence.getFunction(type);
+		
 		if (function == null)
 		{
 			function = new ResidenceFunction(residence.getId(), type);
 			residence.addFunction(function);
 		}
+		
 		return function;
 	}
 }

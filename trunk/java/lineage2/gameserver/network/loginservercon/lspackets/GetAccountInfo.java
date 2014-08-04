@@ -64,22 +64,26 @@ public class GetAccountInfo extends ReceivablePacket
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT deletetime FROM characters WHERE account_name=?");
 			statement.setString(1, _account);
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				playerSize++;
 				int d = rset.getInt("deletetime");
+				
 				if (d > 0)
 				{
 					if (deleteChars.isEmpty())
 					{
 						deleteChars = new ArrayIntList(3);
 					}
+					
 					deleteChars.add(d + (Config.DELETE_DAYS * 24 * 60 * 60));
 				}
 			}

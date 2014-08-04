@@ -23,12 +23,6 @@ public class _608_SlayTheEnemyCommander extends Quest implements ScriptFile
 	private static final int VARKAS_COMMANDER_MOS = 25312;
 	private static final int HEAD_OF_MOS = 7236;
 	private static final int TOTEM_OF_WISDOM = 7220;
-	@SuppressWarnings("unused")
-	private static final int MARK_OF_KETRA_ALLIANCE1 = 7211;
-	@SuppressWarnings("unused")
-	private static final int MARK_OF_KETRA_ALLIANCE2 = 7212;
-	@SuppressWarnings("unused")
-	private static final int MARK_OF_KETRA_ALLIANCE3 = 7213;
 	private static final int MARK_OF_KETRA_ALLIANCE4 = 7214;
 	private static final int MARK_OF_KETRA_ALLIANCE5 = 7215;
 	
@@ -59,6 +53,7 @@ public class _608_SlayTheEnemyCommander extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_accept"))
 		{
 			htmltext = "elder_kadun_zu_ketra_q0608_0104.htm";
@@ -83,6 +78,7 @@ public class _608_SlayTheEnemyCommander extends Quest implements ScriptFile
 				htmltext = "elder_kadun_zu_ketra_q0608_0106.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -91,6 +87,7 @@ public class _608_SlayTheEnemyCommander extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (cond == 0)
 		{
 			if (st.getPlayer().getLevel() >= 75)
@@ -119,6 +116,7 @@ public class _608_SlayTheEnemyCommander extends Quest implements ScriptFile
 		{
 			htmltext = "elder_kadun_zu_ketra_q0608_0105.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -131,6 +129,7 @@ public class _608_SlayTheEnemyCommander extends Quest implements ScriptFile
 			st.setCond(2);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		return null;
 	}
 }

@@ -176,6 +176,7 @@ public class Fishing
 		{
 			return;
 		}
+		
 		_fisher.setFishing(true);
 		_fisher.broadcastCharInfo();
 		_fisher.broadcastPacket(new ExFishingStart(_fisher, _fish.getType(), _fisher.getFishLoc(), isNightLure(_lureId)));
@@ -192,6 +193,7 @@ public class Fishing
 		{
 			return;
 		}
+		
 		stopFishingTask();
 		_fisher.setFishing(false);
 		_fisher.broadcastPacket(new ExFishingEnd(_fisher, false));
@@ -209,6 +211,7 @@ public class Fishing
 		{
 			return;
 		}
+		
 		stopFishingTask();
 		_fisher.setFishing(false);
 		_fisher.broadcastPacket(new ExFishingEnd(_fisher, win));
@@ -259,6 +262,7 @@ public class Fishing
 				endFishing(false);
 				return;
 			}
+			
 			if (!GameTimeController.getInstance().isNowNight() && isNightLure(_lureId))
 			{
 				_fisher.sendPacket(Msg.BAITS_HAVE_BEEN_LOST_BECAUSE_THE_FISH_GOT_AWAY);
@@ -266,7 +270,9 @@ public class Fishing
 				endFishing(false);
 				return;
 			}
+			
 			int check = Rnd.get(1000);
+			
 			if (_fish.getFishGuts() > check)
 			{
 				stopFishingTask();
@@ -284,19 +290,24 @@ public class Fishing
 		{
 			return;
 		}
+		
 		long checkDelay = 10000L;
+		
 		switch (_fish.getGroup())
 		{
 			case 0:
 				checkDelay = Math.round(_fish.getGutsCheckTime() * 1.33);
 				break;
+			
 			case 1:
 				checkDelay = _fish.getGutsCheckTime();
 				break;
+			
 			case 2:
 				checkDelay = Math.round(_fish.getGutsCheckTime() * 0.66);
 				break;
 		}
+		
 		_fishingTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new LookingForFishTask(), 10000L, checkDelay);
 	}
 	
@@ -332,17 +343,21 @@ public class Fishing
 			else
 			{
 				_time--;
+				
 				if (((_combatMode == 1) && (_deceptiveMode == 0)) || ((_combatMode == 0) && (_deceptiveMode == 1)))
 				{
 					_fishCurHP += _fish.getHpRegen();
 				}
+				
 				if (_stop == 0)
 				{
 					_stop = 1;
+					
 					if (Rnd.chance(30))
 					{
 						_combatMode = _combatMode == 0 ? 1 : 0;
 					}
+					
 					if (_fish.getGroup() == 2)
 					{
 						if (Rnd.chance(10))
@@ -355,7 +370,9 @@ public class Fishing
 				{
 					_stop--;
 				}
+				
 				ExFishingHpRegen efhr = new ExFishingHpRegen(_fisher, _time, _fishCurHP, _combatMode, 0, _anim, 0, _deceptiveMode);
+				
 				if (_anim != 0)
 				{
 					_fisher.broadcastPacket(efhr);
@@ -386,22 +403,26 @@ public class Fishing
 		{
 			return;
 		}
+		
 		_stop = 0;
 		_gooduse = 0;
 		_anim = 0;
 		_time = _fish.getCombatTime() / 1000;
 		_fishCurHP = _fish.getHP();
 		_combatMode = Rnd.chance(20) ? 1 : 0;
+		
 		switch (getLureGrade(_lureId))
 		{
 			case 0:
 			case 1:
 				_deceptiveMode = 0;
 				break;
+			
 			case 2:
 				_deceptiveMode = Rnd.chance(10) ? 1 : 0;
 				break;
 		}
+		
 		ExFishingStartCombat efsc = new ExFishingStartCombat(_fisher, _time, _fish.getHP(), _combatMode, _fish.getGroup(), _deceptiveMode);
 		_fisher.broadcastPacket(efsc);
 		_fisher.sendPacket(Msg.SUCCEEDED_IN_GETTING_A_BITE);
@@ -416,13 +437,16 @@ public class Fishing
 	private void changeHp(int hp, int pen)
 	{
 		_fishCurHP -= hp;
+		
 		if (_fishCurHP < 0)
 		{
 			_fishCurHP = 0;
 		}
+		
 		_fisher.broadcastPacket(new ExFishingHpRegen(_fisher, _time, _fishCurHP, _combatMode, _gooduse, _anim, pen, _deceptiveMode));
 		_gooduse = 0;
 		_anim = 0;
+		
 		if (_fishCurHP > (_fish.getHP() * 2))
 		{
 			_fishCurHP = _fish.getHP() * 2;
@@ -441,6 +465,7 @@ public class Fishing
 	void doDie(boolean win)
 	{
 		stopFishingTask();
+		
 		if (win)
 		{
 			if (!_fisher.isInPeaceZone() && Rnd.chance(5))
@@ -456,6 +481,7 @@ public class Fishing
 				FishingChampionShipManager.getInstance().newFish(_fisher, _lureId);
 			}
 		}
+		
 		endFishing(win);
 	}
 	
@@ -471,7 +497,9 @@ public class Fishing
 		{
 			return;
 		}
+		
 		int mode;
+		
 		if ((skillType == SkillType.REELING) && !GameTimeController.getInstance().isNowNight())
 		{
 			mode = 1;
@@ -484,7 +512,9 @@ public class Fishing
 		{
 			mode = 0;
 		}
+		
 		_anim = mode + 1;
+		
 		if (Rnd.chance(10))
 		{
 			_fisher.sendPacket(Msg.FISH_HAS_RESISTED);
@@ -492,6 +522,7 @@ public class Fishing
 			changeHp(0, pen);
 			return;
 		}
+		
 		if (_combatMode == mode)
 		{
 			if (_deceptiveMode == 0)
@@ -537,6 +568,7 @@ public class Fishing
 				if (skillType == SkillType.PUMPING)
 				{
 					fisher.sendPacket(new SystemMessage(SystemMessage.PUMPING_IS_SUCCESSFUL_DAMAGE_S1).addNumber(dmg));
+					
 					if (pen == 50)
 					{
 						fisher.sendPacket(new SystemMessage(SystemMessage.YOUR_PUMPING_WAS_SUCCESSFUL_MASTERY_PENALTYS1_).addNumber(pen));
@@ -545,12 +577,15 @@ public class Fishing
 				else
 				{
 					fisher.sendPacket(new SystemMessage(SystemMessage.REELING_IS_SUCCESSFUL_DAMAGE_S1).addNumber(dmg));
+					
 					if (pen == 50)
 					{
 						fisher.sendPacket(new SystemMessage(SystemMessage.YOUR_REELING_WAS_SUCCESSFUL_MASTERY_PENALTYS1_).addNumber(pen));
 					}
 				}
+				
 				break;
+			
 			case 2:
 				if (skillType == SkillType.PUMPING)
 				{
@@ -560,11 +595,14 @@ public class Fishing
 				{
 					fisher.sendPacket(new SystemMessage(SystemMessage.REELING_FAILED_DAMAGE_S1).addNumber(dmg));
 				}
+				
 				break;
+			
 			case 3:
 				if (skillType == SkillType.PUMPING)
 				{
 					fisher.sendPacket(new SystemMessage(SystemMessage.PUMPING_IS_SUCCESSFUL_DAMAGE_S1).addNumber(dmg));
+					
 					if (pen == 50)
 					{
 						fisher.sendPacket(new SystemMessage(SystemMessage.YOUR_PUMPING_WAS_SUCCESSFUL_MASTERY_PENALTYS1_).addNumber(pen));
@@ -573,12 +611,15 @@ public class Fishing
 				else
 				{
 					fisher.sendPacket(new SystemMessage(SystemMessage.REELING_IS_SUCCESSFUL_DAMAGE_S1).addNumber(dmg));
+					
 					if (pen == 50)
 					{
 						fisher.sendPacket(new SystemMessage(SystemMessage.YOUR_REELING_WAS_SUCCESSFUL_MASTERY_PENALTYS1_).addNumber(pen));
 					}
 				}
+				
 				break;
+			
 			default:
 				break;
 		}
@@ -608,6 +649,7 @@ public class Fishing
 	{
 		int check = Rnd.get(100);
 		int type;
+		
 		switch (lureId)
 		{
 			case 7807:
@@ -623,7 +665,9 @@ public class Fishing
 				{
 					type = 6;
 				}
+				
 				break;
+			
 			case 7808:
 				if (check <= 54)
 				{
@@ -637,7 +681,9 @@ public class Fishing
 				{
 					type = 5;
 				}
+				
 				break;
+			
 			case 7809:
 				if (check <= 54)
 				{
@@ -651,7 +697,9 @@ public class Fishing
 				{
 					type = 4;
 				}
+				
 				break;
+			
 			case 8486:
 				if (check <= 33)
 				{
@@ -665,7 +713,9 @@ public class Fishing
 				{
 					type = 6;
 				}
+				
 				break;
+			
 			case 7610:
 			case 7611:
 			case 7612:
@@ -682,6 +732,7 @@ public class Fishing
 			case 8548:
 				type = 3;
 				break;
+			
 			case 6519:
 			case 8505:
 			case 6520:
@@ -703,7 +754,9 @@ public class Fishing
 				{
 					type = 3;
 				}
+				
 				break;
+			
 			case 6522:
 			case 6523:
 			case 6524:
@@ -725,7 +778,9 @@ public class Fishing
 				{
 					type = 3;
 				}
+				
 				break;
+			
 			case 6525:
 			case 6526:
 			case 6527:
@@ -747,7 +802,9 @@ public class Fishing
 				{
 					type = 3;
 				}
+				
 				break;
+			
 			case 8484:
 				if (check <= 33)
 				{
@@ -761,7 +818,9 @@ public class Fishing
 				{
 					type = 2;
 				}
+				
 				break;
+			
 			case 8506:
 				if (check <= 54)
 				{
@@ -775,7 +834,9 @@ public class Fishing
 				{
 					type = 9;
 				}
+				
 				break;
+			
 			case 8509:
 				if (check <= 54)
 				{
@@ -789,7 +850,9 @@ public class Fishing
 				{
 					type = 8;
 				}
+				
 				break;
+			
 			case 8512:
 				if (check <= 54)
 				{
@@ -803,7 +866,9 @@ public class Fishing
 				{
 					type = 7;
 				}
+				
 				break;
+			
 			case 8485:
 				if (check <= 33)
 				{
@@ -817,11 +882,14 @@ public class Fishing
 				{
 					type = 9;
 				}
+				
 				break;
+			
 			default:
 				type = 1;
 				break;
 		}
+		
 		return type;
 	}
 	
@@ -834,6 +902,7 @@ public class Fishing
 	{
 		int skilllvl = 0;
 		Effect effect = player.getEffectList().getEffectByStackType("fishPot");
+		
 		if (effect != null)
 		{
 			skilllvl = (int) effect.getSkill().getPower();
@@ -842,12 +911,15 @@ public class Fishing
 		{
 			skilllvl = player.getSkillLevel(1315);
 		}
+		
 		if (skilllvl <= 0)
 		{
 			return 1;
 		}
+		
 		int randomlvl;
 		int check = Rnd.get(100);
+		
 		if (check < 50)
 		{
 			randomlvl = skilllvl;
@@ -855,6 +927,7 @@ public class Fishing
 		else if (check <= 85)
 		{
 			randomlvl = skilllvl - 1;
+			
 			if (randomlvl <= 0)
 			{
 				randomlvl = 1;
@@ -864,6 +937,7 @@ public class Fishing
 		{
 			randomlvl = skilllvl + 1;
 		}
+		
 		randomlvl = Math.min(27, Math.max(1, randomlvl));
 		return randomlvl;
 	}
@@ -882,11 +956,13 @@ public class Fishing
 			case 7809:
 			case 8486:
 				return 0;
+				
 			case 8506:
 			case 8509:
 			case 8512:
 			case 8485:
 				return 2;
+				
 			default:
 				return 1;
 		}
@@ -908,6 +984,7 @@ public class Fishing
 			case 8508:
 			case 8511:
 				return 0;
+				
 			case 6520:
 			case 6523:
 			case 6526:
@@ -935,6 +1012,7 @@ public class Fishing
 			case 8509:
 			case 8512:
 				return 1;
+				
 			case 6521:
 			case 6524:
 			case 6527:
@@ -942,6 +1020,7 @@ public class Fishing
 			case 8510:
 			case 8513:
 				return 2;
+				
 			default:
 				return -1;
 		}
@@ -960,6 +1039,7 @@ public class Fishing
 			case 8508:
 			case 8511:
 				return true;
+				
 			case 8496:
 			case 8497:
 			case 8498:
@@ -970,15 +1050,19 @@ public class Fishing
 			case 8503:
 			case 8504:
 				return true;
+				
 			case 8506:
 			case 8509:
 			case 8512:
 				return true;
+				
 			case 8510:
 			case 8513:
 				return true;
+				
 			case 8485:
 				return true;
+				
 			default:
 				return false;
 		}

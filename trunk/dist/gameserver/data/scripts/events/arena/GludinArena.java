@@ -90,6 +90,7 @@ public class GludinArena extends Functions implements ScriptFile, OnDeathListene
 			{
 				template_stop();
 			}
+			
 			_zone.removeListener(_zoneListener);
 		}
 	}
@@ -109,6 +110,7 @@ public class GludinArena extends Functions implements ScriptFile, OnDeathListene
 		{
 			_instance = new GludinArenaImpl();
 		}
+		
 		return _instance;
 	}
 	
@@ -154,12 +156,15 @@ public class GludinArena extends Functions implements ScriptFile, OnDeathListene
 		if (val == 0)
 		{
 			final Player player = getSelf();
+			
 			if (player.isGM())
 			{
 				return HtmCache.getInstance().getNotNull("scripts/events/arena/17220015.htm", player) + HtmCache.getInstance().getNotNull("scripts/events/arena/17220015-4.htm", player);
 			}
+			
 			return HtmCache.getInstance().getNotNull("scripts/events/arena/17220015.htm", player);
 		}
+		
 		return "";
 	}
 	

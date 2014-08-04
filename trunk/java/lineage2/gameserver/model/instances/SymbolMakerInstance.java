@@ -24,7 +24,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class SymbolMakerInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -50,6 +50,7 @@ public class SymbolMakerInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equals("Draw"))
 		{
 			player.sendPacket(new HennaEquipList(player));
@@ -75,6 +76,7 @@ public class SymbolMakerInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String pom;
+		
 		if (val == 0)
 		{
 			pom = "SymbolMaker";
@@ -83,6 +85,7 @@ public class SymbolMakerInstance extends NpcInstance
 		{
 			pom = "SymbolMaker-" + val;
 		}
+		
 		return "symbolmaker/" + pom + ".htm";
 	}
 }

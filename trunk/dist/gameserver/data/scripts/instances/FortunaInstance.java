@@ -78,11 +78,14 @@ public class FortunaInstance extends Reflection
 			{
 				return;
 			}
+			
 			Player player = cha.getPlayer();
+			
 			if ((player == null) || (!cha.isPlayer()))
 			{
 				return;
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new FortunaInstance.StartFortunaInstance(), 30000L);
 			_startLaunched = true;
 		}
@@ -161,6 +164,7 @@ public class FortunaInstance extends Reflection
 		{
 			startCollapseTimer(300000L);
 			doCleanup();
+			
 			for (Player p : getPlayers())
 			{
 				p.sendPacket(new SystemMessage2(SystemMsg.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addInteger(5.0D));
@@ -219,6 +223,7 @@ public class FortunaInstance extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.YOTEMAK, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
+			
 			NpcInstance hornapiraid = addSpawnWithoutRespawn(25846, new Location(42104, -175320, -7974, 15956), 0);
 			hornapiraid.addListener(_deathListener);
 			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FinalStageMainMob2SubStage(), 11500L);
@@ -238,6 +243,7 @@ public class FortunaInstance extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.LAST_STAGE, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(23085, new Location(41448, -175608, -7974), 0);
 			addSpawnWithoutRespawn(23082, new Location(42808, -175608, -7974), 0);
 			addSpawnWithoutRespawn(19084, new Location(42104, -176344, -7974), 0);
@@ -261,6 +267,7 @@ public class FortunaInstance extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.VELIKOPLEPNO, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FinalStageMainMob1SubStage(), 10000L);
 		}
 	}
@@ -278,6 +285,7 @@ public class FortunaInstance extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.MUKSHUANDHOPNAP, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(25838, new Location(42102, -175325, -7974), 0);
 			NpcInstance hornapiraid = addSpawnWithoutRespawn(25839, new Location(42104, -175320, -7974, 15956), 0);
 			hornapiraid.addListener(_deathListener);
@@ -392,6 +400,7 @@ public class FortunaInstance extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_7, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(23085, new Location(41448, -175608, -7974), 0);
 			addSpawnWithoutRespawn(23082, new Location(42808, -175608, -7974), 0);
 			addSpawnWithoutRespawn(19084, new Location(42104, -176344, -7974), 0);
@@ -415,6 +424,7 @@ public class FortunaInstance extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.POGLOTIVSE, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new FortunaInstance.SevenStageMainMob1SubStage(), 10000L);
 		}
 	}
@@ -432,6 +442,7 @@ public class FortunaInstance extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.RESINA, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
+			
 			NpcInstance resindaraid = addSpawnWithoutRespawn(25841, new Location(42104, -175320, -7974, 15956), 0);
 			resindaraid.addListener(_deathListener);
 		}
@@ -546,6 +557,7 @@ public class FortunaInstance extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_6, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(23081, new Location(41448, -175608, -7974), 0);
 			addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
 			addSpawnWithoutRespawn(23081, new Location(42104, -176344, -7974), 0);
@@ -566,6 +578,7 @@ public class FortunaInstance extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.VSETOLKONACHINAETSA, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new FortunaInstance.SixStageMainMob1SubStage(), 10000L);
 		}
 	}
@@ -661,6 +674,7 @@ public class FortunaInstance extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.BONUS_STAGE, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(23081, new Location(41448, -175608, -7974), 0);
 			addSpawnWithoutRespawn(23081, new Location(42808, -175608, -7974), 0);
 			addSpawnWithoutRespawn(23081, new Location(42104, -176344, -7974), 0);
@@ -694,6 +708,7 @@ public class FortunaInstance extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.KONYAR, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
+			
 			NpcInstance konyarraid = addSpawnWithoutRespawn(25843, new Location(42104, -175320, -7974, 15956), 0);
 			konyarraid.addListener(_deathListener);
 		}
@@ -773,9 +788,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 10 */addSpawnWithoutRespawn(23076, new Location(41448, -175608, -7974), 0);
-			/* 11 */addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
-			/* 12 */addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
-			/* 13 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FiveStageMainMob5SubStage(), 12500L);
+			/* 11 */
+			addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
+			/* 12 */
+			addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
+			/* 13 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FiveStageMainMob5SubStage(), 12500L);
 		}
 	}
 	
@@ -789,9 +807,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 98 */addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
-			/* 99 */addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
-			/* 00 */addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
-			/* 01 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FiveStageMainMob4SubStage(), 12500L);
+			/* 99 */
+			addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
+			/* 00 */
+			addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
+			/* 01 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FiveStageMainMob4SubStage(), 12500L);
 		}
 	}
 	
@@ -824,6 +845,7 @@ public class FortunaInstance extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_5, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
 			addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
 			addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
@@ -844,6 +866,7 @@ public class FortunaInstance extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.PRIDETSAOTPRAVITNEMNOGO, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FiveStageMainMob1SubStage(), 10000L);
 		}
 	}
@@ -861,6 +884,7 @@ public class FortunaInstance extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.KINEN, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
+			
 			NpcInstance plaksaraid = addSpawnWithoutRespawn(25840, new Location(42104, -175320, -7974, 15956), 0);
 			plaksaraid.addListener(_deathListener);
 		}
@@ -876,9 +900,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 33 */addSpawnWithoutRespawn(23076, new Location(41448, -175608, -7974), 0);
-			/* 34 */addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
-			/* 35 */addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
-			/* 36 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.KinnenSpawn(), 19500L);
+			/* 34 */
+			addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
+			/* 35 */
+			addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
+			/* 36 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.KinnenSpawn(), 19500L);
 		}
 	}
 	
@@ -892,9 +919,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 21 */addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
-			/* 22 */addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
-			/* 23 */addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
-			/* 24 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FourStageMainMob7SubStage(), 12500L);
+			/* 22 */
+			addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
+			/* 23 */
+			addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
+			/* 24 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FourStageMainMob7SubStage(), 12500L);
 		}
 	}
 	
@@ -908,9 +938,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 09 */addSpawnWithoutRespawn(23076, new Location(41448, -175608, -7974), 0);
-			/* 10 */addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
-			/* 11 */addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
-			/* 12 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FourStageMainMob6SubStage(), 12500L);
+			/* 10 */
+			addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
+			/* 11 */
+			addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
+			/* 12 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FourStageMainMob6SubStage(), 12500L);
 		}
 	}
 	
@@ -924,9 +957,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 97 */addSpawnWithoutRespawn(23076, new Location(41448, -175608, -7974), 0);
-			/* 98 */addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
-			/* 99 */addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
-			/* 00 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FourStageMainMob5SubStage(), 12500L);
+			/* 98 */
+			addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
+			/* 99 */
+			addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
+			/* 00 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FourStageMainMob5SubStage(), 12500L);
 		}
 	}
 	
@@ -940,9 +976,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 85 */addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
-			/* 86 */addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
-			/* 87 */addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
-			/* 88 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FourStageMainMob4SubStage(), 12500L);
+			/* 86 */
+			addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
+			/* 87 */
+			addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
+			/* 88 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FourStageMainMob4SubStage(), 12500L);
 		}
 	}
 	
@@ -956,9 +995,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 73 */addSpawnWithoutRespawn(23076, new Location(41448, -175608, -7974), 0);
-			/* 74 */addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
-			/* 75 */addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
-			/* 76 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FourStageMainMob3SubStage(), 12500L);
+			/* 74 */
+			addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
+			/* 75 */
+			addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
+			/* 76 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FourStageMainMob3SubStage(), 12500L);
 		}
 	}
 	
@@ -975,6 +1017,7 @@ public class FortunaInstance extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_4, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
 			addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
 			addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
@@ -995,6 +1038,7 @@ public class FortunaInstance extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.POGLOTITESVET, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FourStageMainMob1SubStage(), 10000L);
 		}
 	}
@@ -1012,6 +1056,7 @@ public class FortunaInstance extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.PLAKSA, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
+			
 			NpcInstance plaksaraid = addSpawnWithoutRespawn(25837, new Location(42104, -175320, -7974, 15956), 0);
 			plaksaraid.addListener(_deathListener);
 		}
@@ -1027,9 +1072,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 19 */addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
-			/* 20 */addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
-			/* 21 */addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
-			/* 22 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.PlaksaSpawn(), 19500L);
+			/* 20 */
+			addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
+			/* 21 */
+			addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
+			/* 22 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.PlaksaSpawn(), 19500L);
 		}
 	}
 	
@@ -1043,9 +1091,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 07 */addSpawnWithoutRespawn(23076, new Location(41448, -175608, -7974), 0);
-			/* 08 */addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
-			/* 09 */addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
-			/* 10 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FreeStageMainMob7SubStage(), 12500L);
+			/* 08 */
+			addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
+			/* 09 */
+			addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
+			/* 10 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FreeStageMainMob7SubStage(), 12500L);
 		}
 	}
 	
@@ -1059,9 +1110,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 95 */addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
-			/* 96 */addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
-			/* 97 */addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
-			/* 98 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FreeStageMainMob6SubStage(), 12500L);
+			/* 96 */
+			addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
+			/* 97 */
+			addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
+			/* 98 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FreeStageMainMob6SubStage(), 12500L);
 		}
 	}
 	
@@ -1075,9 +1129,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 83 */addSpawnWithoutRespawn(23076, new Location(41448, -175608, -7974), 0);
-			/* 84 */addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
-			/* 85 */addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
-			/* 86 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FreeStageMainMob5SubStage(), 12500L);
+			/* 84 */
+			addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
+			/* 85 */
+			addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
+			/* 86 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FreeStageMainMob5SubStage(), 12500L);
 		}
 	}
 	
@@ -1091,9 +1148,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 71 */addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
-			/* 72 */addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
-			/* 73 */addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
-			/* 74 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FreeStageMainMob4SubStage(), 12500L);
+			/* 72 */
+			addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
+			/* 73 */
+			addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
+			/* 74 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FreeStageMainMob4SubStage(), 12500L);
 		}
 	}
 	
@@ -1107,9 +1167,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 59 */addSpawnWithoutRespawn(23076, new Location(41448, -175608, -7974), 0);
-			/* 60 */addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
-			/* 61 */addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
-			/* 62 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FreeStageMainMob3SubStage(), 12500L);
+			/* 60 */
+			addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
+			/* 61 */
+			addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
+			/* 62 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FreeStageMainMob3SubStage(), 12500L);
 		}
 	}
 	
@@ -1126,10 +1189,14 @@ public class FortunaInstance extends Reflection
 			{
 				/* 45 */player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_3, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
+			
 			/* 47 */addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
-			/* 48 */addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
-			/* 49 */addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
-			/* 50 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FreeStageMainMob2SubStage(), 12500L);
+			/* 48 */
+			addSpawnWithoutRespawn(23078, new Location(42808, -175608, -7974), 0);
+			/* 49 */
+			addSpawnWithoutRespawn(23078, new Location(42104, -176344, -7974), 0);
+			/* 50 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FreeStageMainMob2SubStage(), 12500L);
 		}
 	}
 	
@@ -1146,6 +1213,7 @@ public class FortunaInstance extends Reflection
 			{
 				/* 33 */player.sendPacket(new ExShowScreenMessage(NpcString.POSMOTRIM, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			/* 35 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FreeStageMainMob1SubStage(), 10000L);
 		}
 	}
@@ -1160,7 +1228,8 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 21 */NpcInstance voitelSpecial = addSpawnWithoutRespawn(52001, new Location(42104, -176344, -7974, 15956), 0);
-			/* 22 */voitelSpecial.addListener(_deathListener);
+			/* 22 */
+			voitelSpecial.addListener(_deathListener);
 		}
 	}
 	
@@ -1174,9 +1243,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 09 */addSpawnWithoutRespawn(23076, new Location(41448, -175608, -7974), 0);
-			/* 10 */addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
-			/* 11 */addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
-			/* 12 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.EndTwoStageMob(), 1400L);
+			/* 10 */
+			addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
+			/* 11 */
+			addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
+			/* 12 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.EndTwoStageMob(), 1400L);
 		}
 	}
 	
@@ -1190,9 +1262,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 97 */addSpawnWithoutRespawn(23077, new Location(41448, -175608, -7974), 0);
-			/* 98 */addSpawnWithoutRespawn(23077, new Location(42808, -175608, -7974), 0);
-			/* 99 */addSpawnWithoutRespawn(23077, new Location(42104, -176344, -7974), 0);
-			/* 00 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.TwoStageMainMob6SubStage(), 13000L);
+			/* 98 */
+			addSpawnWithoutRespawn(23077, new Location(42808, -175608, -7974), 0);
+			/* 99 */
+			addSpawnWithoutRespawn(23077, new Location(42104, -176344, -7974), 0);
+			/* 00 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.TwoStageMainMob6SubStage(), 13000L);
 		}
 	}
 	
@@ -1206,9 +1281,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 85 */addSpawnWithoutRespawn(23076, new Location(41448, -175608, -7974), 0);
-			/* 86 */addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
-			/* 87 */addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
-			/* 88 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.TwoStageMainMob5SubStage(), 13000L);
+			/* 86 */
+			addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
+			/* 87 */
+			addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
+			/* 88 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.TwoStageMainMob5SubStage(), 13000L);
 		}
 	}
 	
@@ -1222,9 +1300,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 73 */addSpawnWithoutRespawn(23077, new Location(41448, -175608, -7974), 0);
-			/* 74 */addSpawnWithoutRespawn(23077, new Location(42808, -175608, -7974), 0);
-			/* 75 */addSpawnWithoutRespawn(23077, new Location(42104, -176344, -7974), 0);
-			/* 76 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.TwoStageMainMob4SubStage(), 13000L);
+			/* 74 */
+			addSpawnWithoutRespawn(23077, new Location(42808, -175608, -7974), 0);
+			/* 75 */
+			addSpawnWithoutRespawn(23077, new Location(42104, -176344, -7974), 0);
+			/* 76 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.TwoStageMainMob4SubStage(), 13000L);
 		}
 	}
 	
@@ -1238,9 +1319,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 61 */addSpawnWithoutRespawn(23076, new Location(41448, -175608, -7974), 0);
-			/* 62 */addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
-			/* 63 */addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
-			/* 64 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.TwoStageMainMob3SubStage(), 13000L);
+			/* 62 */
+			addSpawnWithoutRespawn(23076, new Location(42808, -175608, -7974), 0);
+			/* 63 */
+			addSpawnWithoutRespawn(23076, new Location(42104, -176344, -7974), 0);
+			/* 64 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.TwoStageMainMob3SubStage(), 13000L);
 		}
 	}
 	
@@ -1257,10 +1341,14 @@ public class FortunaInstance extends Reflection
 			{
 				/* 47 */player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_2, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
+			
 			/* 49 */addSpawnWithoutRespawn(23077, new Location(41448, -175608, -7974), 0);
-			/* 50 */addSpawnWithoutRespawn(23077, new Location(42808, -175608, -7974), 0);
-			/* 51 */addSpawnWithoutRespawn(23077, new Location(42104, -176344, -7974), 0);
-			/* 52 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.TwoStageMainMob2SubStage(), 13000L);
+			/* 50 */
+			addSpawnWithoutRespawn(23077, new Location(42808, -175608, -7974), 0);
+			/* 51 */
+			addSpawnWithoutRespawn(23077, new Location(42104, -176344, -7974), 0);
+			/* 52 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.TwoStageMainMob2SubStage(), 13000L);
 		}
 	}
 	
@@ -1277,6 +1365,7 @@ public class FortunaInstance extends Reflection
 			{
 				/* 35 */player.sendPacket(new ExShowScreenMessage(NpcString.AETTEKTO, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			/* 37 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.TwoStageMainMob1SubStage(), 30000L);
 		}
 	}
@@ -1315,6 +1404,7 @@ public class FortunaInstance extends Reflection
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.ZAVECHNIYPOKOI, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			addSpawnWithoutRespawn(33589, new Location(42104, -175320, -7974), 0);
 			ThreadPoolManager.getInstance().schedule(new FortunaInstance.SpawnCubics(), 11000L);
 		}
@@ -1330,7 +1420,8 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 88 */NpcInstance yarostSpecial = addSpawnWithoutRespawn(52000, new Location(42104, -176344, -7974, 15956), 0);
-			/* 89 */yarostSpecial.addListener(_deathListener);
+			/* 89 */
+			yarostSpecial.addListener(_deathListener);
 		}
 	}
 	
@@ -1344,9 +1435,10 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 74 */addSpawnWithoutRespawn(23077, new Location(41448, -175608, -7974), 0);
-			/* 75 */addSpawnWithoutRespawn(23077, new Location(42808, -175608, -7974), 0);
-			
-			/* 77 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.EndOneStageMob(), 700L);
+			/* 75 */
+			addSpawnWithoutRespawn(23077, new Location(42808, -175608, -7974), 0);
+			/* 77 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.EndOneStageMob(), 700L);
 		}
 	}
 	
@@ -1360,9 +1452,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 62 */addSpawnWithoutRespawn(23077, new Location(41448, -175608, -7974), 0);
-			/* 63 */addSpawnWithoutRespawn(23077, new Location(42808, -175608, -7974), 0);
-			/* 64 */addSpawnWithoutRespawn(23077, new Location(42104, -176344, -7974), 0);
-			/* 65 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.OneStageMainMob7SubStage(), 11400L);
+			/* 63 */
+			addSpawnWithoutRespawn(23077, new Location(42808, -175608, -7974), 0);
+			/* 64 */
+			addSpawnWithoutRespawn(23077, new Location(42104, -176344, -7974), 0);
+			/* 65 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.OneStageMainMob7SubStage(), 11400L);
 		}
 	}
 	
@@ -1376,9 +1471,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 50 */addSpawnWithoutRespawn(23077, new Location(41448, -175608, -7974), 0);
-			/* 51 */addSpawnWithoutRespawn(23077, new Location(42808, -175608, -7974), 0);
-			/* 52 */addSpawnWithoutRespawn(23077, new Location(42104, -176344, -7974), 0);
-			/* 53 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.OneStageMainMob6SubStage(), 11400L);
+			/* 51 */
+			addSpawnWithoutRespawn(23077, new Location(42808, -175608, -7974), 0);
+			/* 52 */
+			addSpawnWithoutRespawn(23077, new Location(42104, -176344, -7974), 0);
+			/* 53 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.OneStageMainMob6SubStage(), 11400L);
 		}
 	}
 	
@@ -1392,9 +1490,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 38 */addSpawnWithoutRespawn(23077, new Location(41448, -175608, -7974), 0);
-			/* 39 */addSpawnWithoutRespawn(23077, new Location(42808, -175608, -7974), 0);
-			/* 40 */addSpawnWithoutRespawn(23077, new Location(42104, -176344, -7974), 0);
-			/* 41 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.OneStageMainMob5SubStage(), 11400L);
+			/* 39 */
+			addSpawnWithoutRespawn(23077, new Location(42808, -175608, -7974), 0);
+			/* 40 */
+			addSpawnWithoutRespawn(23077, new Location(42104, -176344, -7974), 0);
+			/* 41 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.OneStageMainMob5SubStage(), 11400L);
 		}
 	}
 	
@@ -1408,9 +1509,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			/* 26 */addSpawnWithoutRespawn(23077, new Location(41448, -175608, -7974), 0);
-			/* 27 */addSpawnWithoutRespawn(23077, new Location(42808, -175608, -7974), 0);
-			/* 28 */addSpawnWithoutRespawn(23077, new Location(42104, -176344, -7974), 0);
-			/* 29 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.OneStageMainMob4SubStage(), 11400L);
+			/* 27 */
+			addSpawnWithoutRespawn(23077, new Location(42808, -175608, -7974), 0);
+			/* 28 */
+			addSpawnWithoutRespawn(23077, new Location(42104, -176344, -7974), 0);
+			/* 29 */
+			ThreadPoolManager.getInstance().schedule(new FortunaInstance.OneStageMainMob4SubStage(), 11400L);
 		}
 	}
 	
@@ -1456,10 +1560,12 @@ public class FortunaInstance extends Reflection
 		public void runImpl()
 		{
 			openDoor(21120001);
+			
 			for (Player player : getPlayers())
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.WHO_POTR_OUR_SAFETY, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new FortunaInstance.OneStageMain(), 20000L);
 		}
 	}

@@ -46,7 +46,6 @@ public class _754_AssistingTheRebelForces extends Quest implements ScriptFile
 		addKillNpcWithLog(1, KUNDA_GUARDIAN_KILL, 5, KUNDA_GUARDIAN);
 		addKillNpcWithLog(1, KUNDA_BERSERKER_KILL, 5, KUNDA_BERSERKER);
 		addKillNpcWithLog(1, KUNDA_EXECUTOR_KILL, 5, KUNDA_EXECUTOR);
-		
 		addLevelCheck(97, 99);
 	}
 	
@@ -62,6 +61,7 @@ public class _754_AssistingTheRebelForces extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "sofa_sizraku_q0754_04.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -100,6 +100,7 @@ public class _754_AssistingTheRebelForces extends Quest implements ScriptFile
 				htmltext = "sofa_sizraku_q0754_05.htm";
 			}
 		}
+		
 		if (npcId == COMMUNICATION)
 		{
 			if (cond == 2)
@@ -112,6 +113,7 @@ public class _754_AssistingTheRebelForces extends Quest implements ScriptFile
 				htmltext = "sofa_sizraku_q0754_08.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -128,6 +130,7 @@ public class _754_AssistingTheRebelForces extends Quest implements ScriptFile
 			st.playSound(SOUND_MIDDLE);
 			st.setCond(2);
 		}
+		
 		return null;
 	}
 	

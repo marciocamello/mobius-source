@@ -69,14 +69,17 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 		name = _name;
 		resizeStep = _resizeStep;
 		initCapacity = initialCapacity;
+		
 		if (initialCapacity < 0)
 		{
 			throw new IllegalArgumentException("Illegal Capacity (" + name + "): " + initialCapacity);
 		}
+		
 		if (resizeStep < 1)
 		{
 			throw new IllegalArgumentException("Illegal resize step (" + name + "): " + resizeStep);
 		}
+		
 		freeIndexes = new ArrayList<>(resizeStep);
 		elementData = (E[]) new GameObject[initialCapacity];
 	}
@@ -116,22 +119,26 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 	public synchronized int add(E e)
 	{
 		Integer freeIndex = null;
+		
 		if (freeIndexes.size() > 0)
 		{
 			freeIndex = freeIndexes.remove(freeIndexes.size() - 1);
 		}
+		
 		if (freeIndex != null)
 		{
 			real_size++;
 			elementData[freeIndex] = e;
 			return freeIndex;
 		}
+		
 		if (elementData.length <= size)
 		{
 			int newCapacity = elementData.length + resizeStep;
 			_log.warn("Object array [" + name + "] resized: " + elementData.length + " -> " + newCapacity);
 			elementData = Arrays.copyOf(elementData, newCapacity);
 		}
+		
 		elementData[size++] = e;
 		real_size++;
 		return size - 1;
@@ -149,13 +156,17 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 		{
 			return null;
 		}
+		
 		E old = elementData[index];
+		
 		if ((old == null) || (old.getObjectId() != expectedObjId))
 		{
 			return null;
 		}
+		
 		elementData[index] = null;
 		real_size--;
+		
 		if (index == (size - 1))
 		{
 			size--;
@@ -164,6 +175,7 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 		{
 			freeIndexes.add(index);
 		}
+		
 		return old;
 	}
 	
@@ -188,15 +200,19 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 		{
 			return null;
 		}
+		
 		E o;
+		
 		for (int i = 0; i < size; i++)
 		{
 			o = elementData[i];
+			
 			if ((o != null) && (o.getObjectId() == objId))
 			{
 				return o;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -211,15 +227,19 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 		{
 			return null;
 		}
+		
 		E o;
+		
 		for (int i = 0; i < size; i++)
 		{
 			o = elementData[i];
+			
 			if ((o != null) && s.equalsIgnoreCase(o.getName()))
 			{
 				return o;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -234,16 +254,20 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 		{
 			return null;
 		}
+		
 		List<E> result = new ArrayList<>();
 		E o;
+		
 		for (int i = 0; i < size; i++)
 		{
 			o = elementData[i];
+			
 			if ((o != null) && s.equalsIgnoreCase(o.getName()))
 			{
 				result.add(o);
 			}
 		}
+		
 		return result;
 	}
 	
@@ -264,14 +288,17 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 	public List<E> getAll(List<E> list)
 	{
 		E o;
+		
 		for (int i = 0; i < size; i++)
 		{
 			o = elementData[i];
+			
 			if (o != null)
 			{
 				list.add(o);
 			}
 		}
+		
 		return list;
 	}
 	
@@ -286,6 +313,7 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 		{
 			return -1;
 		}
+		
 		for (int i = 0; i < size; i++)
 		{
 			if (o.equals(elementData[i]))
@@ -293,6 +321,7 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 				return i;
 			}
 		}
+		
 		return -1;
 	}
 	
@@ -355,6 +384,7 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 					return true;
 				}
 			}
+			
 			return false;
 		}
 		
@@ -367,10 +397,12 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 		{
 			E result = _next;
 			_next = null;
+			
 			if (result == null)
 			{
 				throw new NoSuchElementException();
 			}
+			
 			return result;
 		}
 		

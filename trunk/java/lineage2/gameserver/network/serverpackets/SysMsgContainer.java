@@ -87,6 +87,7 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		
 		writeD(_message.getId());
 		writeD(_arguments.size());
+		
 		for (IArgument argument : _arguments)
 		{
 			argument.write(this);
@@ -223,7 +224,6 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 	protected T add(IArgument arg)
 	{
 		_arguments.add(arg);
-		
 		return (T) this;
 	}
 	
@@ -232,7 +232,6 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		void write(SysMsgContainer<?> m)
 		{
 			m.writeD(getType().ordinal());
-			
 			writeData(m);
 		}
 		

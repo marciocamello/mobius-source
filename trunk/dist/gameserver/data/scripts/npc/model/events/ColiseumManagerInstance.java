@@ -32,7 +32,7 @@ import org.apache.commons.lang3.StringUtils;
 public class ColiseumManagerInstance extends ColiseumHelperInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -52,7 +52,6 @@ public class ColiseumManagerInstance extends ColiseumHelperInstance
 	public ColiseumManagerInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
-		
 		_startHtm = getParameter("start_htm", StringUtils.EMPTY);
 		_coliseumId = getParameter("coliseum_id", 0);
 	}
@@ -75,6 +74,7 @@ public class ColiseumManagerInstance extends ColiseumHelperInstance
 		if (command.equals("register"))
 		{
 			Party party = player.getParty();
+			
 			if (party == null)
 			{
 				showChatWindow(player, "events/kerthang_manager008.htm");
@@ -97,15 +97,13 @@ public class ColiseumManagerInstance extends ColiseumHelperInstance
 		}
 		else if (command.equals("viewTeams"))
 		{
-			
 			List<Player> reg = coliseumEvent.getRegisteredPlayers();
-			
 			NpcHtmlMessage msg = new NpcHtmlMessage(player, this);
 			msg.setFile("events/kerthang_manager003.htm");
+			
 			for (int i = 0; i < 5; i++)
 			{
 				Player $player = CollectionUtils.safeGet(reg, i);
-				
 				msg.replace("%team" + i + "%", $player == null ? StringUtils.EMPTY : $player.getName());
 			}
 			

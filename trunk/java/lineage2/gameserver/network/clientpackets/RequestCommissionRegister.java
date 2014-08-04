@@ -62,15 +62,19 @@ public class RequestCommissionRegister extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		NpcInstance npc = player.getLastNpc();
+		
 		if ((npc == null) || !npc.isInRangeZ(npc, Creature.INTERACTION_DISTANCE))
 		{
 			return;
 		}
+		
 		CommissionShopManager.getInstance().registerItem(player, objectId, itemName, price, count, days);
 	}
 }

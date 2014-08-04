@@ -43,19 +43,23 @@ public class RequestTargetCanceld extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (activeChar.isLockedTarget())
 		{
 			if (activeChar.isClanAirShipDriver())
 			{
 				activeChar.sendPacket(SystemMsg.THIS_ACTION_IS_PROHIBITED_WHILE_STEERING);
 			}
+			
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (_unselect == 0)
 		{
 			if (activeChar.isCastingNow())

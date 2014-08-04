@@ -33,7 +33,6 @@ public class ExCubeGameChangeTeam extends L2GameServerPacket
 	{
 		writeEx(0x98);
 		writeD(0x05);
-		
 		writeD(_objectId);
 		writeD(_fromRedTeam ? 0x01 : 0x00);
 		writeD(_fromRedTeam ? 0x00 : 0x01);

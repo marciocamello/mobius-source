@@ -88,46 +88,56 @@ public class FishDataParser extends AbstractFileParser<FishDataHolder>
 		for (Iterator<Element> iterator = rootElement.elementIterator(); iterator.hasNext();)
 		{
 			Element e = iterator.next();
+			
 			if ("fish".equals(e.getName()))
 			{
 				MultiValueSet<String> map = new MultiValueSet<>();
+				
 				for (Iterator<Attribute> attributeIterator = e.attributeIterator(); attributeIterator.hasNext();)
 				{
 					Attribute attribute = attributeIterator.next();
 					map.put(attribute.getName(), attribute.getValue());
 				}
+				
 				getHolder().addFish(new FishTemplate(map));
 			}
 			else if ("lure".equals(e.getName()))
 			{
 				MultiValueSet<String> map = new MultiValueSet<>();
+				
 				for (Iterator<Attribute> attributeIterator = e.attributeIterator(); attributeIterator.hasNext();)
 				{
 					Attribute attribute = attributeIterator.next();
 					map.put(attribute.getName(), attribute.getValue());
 				}
+				
 				Map<FishGroup, Integer> chances = new HashMap<>();
+				
 				for (Iterator<Element> elementIterator = e.elementIterator(); elementIterator.hasNext();)
 				{
 					Element chanceElement = elementIterator.next();
 					chances.put(FishGroup.valueOf(chanceElement.attributeValue("type")), Integer.parseInt(chanceElement.attributeValue("value")));
 				}
+				
 				map.put("chances", chances);
 				getHolder().addLure(new LureTemplate(map));
 			}
 			else if ("distribution".equals(e.getName()))
 			{
 				int id = Integer.parseInt(e.attributeValue("id"));
+				
 				for (Iterator<Element> forLureIterator = e.elementIterator(); forLureIterator.hasNext();)
 				{
 					Element forLureElement = forLureIterator.next();
 					LureType lureType = LureType.valueOf(forLureElement.attributeValue("type"));
 					Map<FishGroup, Integer> chances = new HashMap<>();
+					
 					for (Iterator<Element> chanceIterator = forLureElement.elementIterator(); chanceIterator.hasNext();)
 					{
 						Element chanceElement = chanceIterator.next();
 						chances.put(FishGroup.valueOf(chanceElement.attributeValue("type")), Integer.parseInt(chanceElement.attributeValue("value")));
 					}
+					
 					getHolder().addDistribution(id, lureType, chances);
 				}
 			}

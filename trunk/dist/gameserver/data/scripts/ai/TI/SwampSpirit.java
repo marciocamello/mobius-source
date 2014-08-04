@@ -54,10 +54,12 @@ public class SwampSpirit extends DefaultAI
 		if (!_def_think)
 		{
 			final NpcInstance npc = getActor();
+			
 			if (npc == null)
 			{
 				return true;
 			}
+			
 			for (Player player : World.getAroundPlayers(npc, 200, 200))
 			{
 				switch (npc.getNpcId())
@@ -70,7 +72,9 @@ public class SwampSpirit extends DefaultAI
 							npc.broadcastPacket(new MagicSkillUse(npc, player, healSkill.getId(), healSkill.getLevel(), 0, 0));
 							npc.callSkill(SkillTable.getInstance().getInfo(healSkill.getId(), healSkill.getLevel()), target, true);
 						}
+						
 						break;
+					
 					case 32916:
 						if (player.getEffectList().getEffectsBySkillId(healSkillBig.getId()) == null)
 						{
@@ -79,7 +83,9 @@ public class SwampSpirit extends DefaultAI
 							npc.broadcastPacket(new MagicSkillUse(npc, player, healSkillBig.getId(), healSkillBig.getLevel(), 0, 0));
 							npc.callSkill(SkillTable.getInstance().getInfo(healSkillBig.getId(), healSkillBig.getLevel()), target, true);
 						}
+						
 						break;
+					
 					case 32938:
 						List<Creature> target = new ArrayList<>();
 						target.add(npc);
@@ -89,6 +95,7 @@ public class SwampSpirit extends DefaultAI
 				}
 			}
 		}
+		
 		return true;
 	}
 	

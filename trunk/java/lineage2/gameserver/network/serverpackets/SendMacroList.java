@@ -35,7 +35,6 @@ public class SendMacroList extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xe8);
-		
 		writeC(_type);
 		writeD(_first ? 0x00 : _macroId);
 		writeC(_count);
@@ -48,7 +47,6 @@ public class SendMacroList extends L2GameServerPacket
 			writeS(_macro.descr); // Desc
 			writeS(_macro.acronym); // acronym
 			writeC(_macro.icon); // icon
-			
 			writeC(_macro.commands.length); // count
 			
 			for (int i = 0; i < _macro.commands.length; i++)

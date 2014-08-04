@@ -72,6 +72,7 @@ public class TheFallHarvest extends Functions implements ScriptFile, OnDeathList
 	public void onLoad()
 	{
 		CharListenerList.addGlobal(this);
+		
 		if (isActive())
 		{
 			_active = true;
@@ -100,10 +101,12 @@ public class TheFallHarvest extends Functions implements ScriptFile, OnDeathList
 	public void startEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive("TheFallHarvest", true))
 		{
 			loadMultiSell();
@@ -115,6 +118,7 @@ public class TheFallHarvest extends Functions implements ScriptFile, OnDeathList
 		{
 			player.sendMessage("Event 'The Fall Harvest' already started.");
 		}
+		
 		_active = true;
 		show("admin/events.htm", player);
 	}
@@ -125,10 +129,12 @@ public class TheFallHarvest extends Functions implements ScriptFile, OnDeathList
 	public void stopEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive("TheFallHarvest", false))
 		{
 			unSpawnEventManagers();
@@ -139,6 +145,7 @@ public class TheFallHarvest extends Functions implements ScriptFile, OnDeathList
 		{
 			player.sendMessage("Event 'The Fall Harvest' not started.");
 		}
+		
 		_active = false;
 		show("admin/events.htm", player);
 	}
@@ -243,6 +250,7 @@ public class TheFallHarvest extends Functions implements ScriptFile, OnDeathList
 		{
 			return;
 		}
+		
 		MultiSellHolder.getInstance().parseFile(multiSellFile);
 		MultiSellLoaded = true;
 	}
@@ -255,6 +263,7 @@ public class TheFallHarvest extends Functions implements ScriptFile, OnDeathList
 	public void onReload()
 	{
 		unSpawnEventManagers();
+		
 		if (MultiSellLoaded)
 		{
 			MultiSellHolder.getInstance().remove(multiSellFile);

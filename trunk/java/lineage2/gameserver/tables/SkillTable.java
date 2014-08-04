@@ -147,15 +147,18 @@ public class SkillTable
 	{
 		_maxLevelsTable = new TIntIntHashMap();
 		_baseLevelsTable = new TIntIntHashMap();
+		
 		for (Skill s : _skills.values())
 		{
 			int skillId = s.getId();
 			int level = s.getLevel();
 			int maxLevel = _maxLevelsTable.get(skillId);
+			
 			if (level > maxLevel)
 			{
 				_maxLevelsTable.put(skillId, level);
 			}
+			
 			if (_baseLevelsTable.get(skillId) == 0)
 			{
 				_baseLevelsTable.put(skillId, s.getBaseLevel());
@@ -169,18 +172,21 @@ public class SkillTable
 	public void loadAlfaData()
 	{
 		LineNumberReader lnr = null;
+		
 		try
 		{
 			File rsData = new File(Config.DATAPACK_ROOT, "data/xml/asc/skills.txt");
 			lnr = new LineNumberReader(new BufferedReader(new FileReader(rsData)));
 			String line = null;
 			loop:
+			
 			while ((line = lnr.readLine()) != null)
 			{
 				if ((line.trim().length() == 0) || ((line.length() > 0) && (line.charAt(0) == '#')))
 				{
 					continue;
 				}
+				
 				String args[] = line.split("\t", -1);
 				int id = getInt(args[0]);
 				int lvl = getInt(args[1]);
@@ -190,51 +196,64 @@ public class SkillTable
 				int cool = getInt(args[5]);
 				int reuse = getInt(args[6]);
 				boolean is_magic = (getInt(args[7]) == 1) || (getInt(args[7]) == 2);
+				
 				if (lvl > 100)
 				{
 					EnchantSkillLearn sl = SkillTreeTable.getSkillEnchant(id, lvl);
+					
 					if (sl == null)
 					{
 						for (int i = 1; i < 8; i++)
 						{
 							int l = lvl - (i * 100);
+							
 							if (l < 100)
 							{
 								continue;
 							}
+							
 							sl = SkillTreeTable.getSkillEnchant(id, l);
+							
 							if (sl != null)
 							{
 								lvl = l;
 								break;
 							}
 						}
+						
 						if (sl == null)
 						{
 							continue loop;
 						}
 					}
+					
 					lvl = SkillTreeTable.convertEnchantLevel(sl.getBaseLevel(), lvl, sl.getMaxLevel());
 				}
+				
 				Skill s = getInfo(id, lvl);
+				
 				if (s != null)
 				{
 					if (reuse > 0)
 					{
 						s.setReuseDelay(reuse);
 					}
+					
 					if (cool > 0)
 					{
 						s.setCoolTime(cool);
 					}
+					
 					if (hit_time > 0)
 					{
 						s.setHitTime(hit_time);
 					}
+					
 					if (s.getSkillInterruptTime() == 0)
 					{
 						s.setSkillInterruptTime((s.getHitTime() * 3) / 4);
 					}
+					
 					if (mp_consume > 0)
 					{
 						if (((mp_consume / 4) >= 1) && is_magic)
@@ -247,6 +266,7 @@ public class SkillTable
 							s.setMpConsume2(mp_consume);
 						}
 					}
+					
 					if (cast_range > 0)
 					{
 						s.setCastRange(cast_range);

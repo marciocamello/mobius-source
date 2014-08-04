@@ -61,6 +61,7 @@ public class Glacier extends Fighter
 				cha.altOnMagicUseTimer(cha, SkillTable.getInstance().getInfo(6301, 1));
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 	

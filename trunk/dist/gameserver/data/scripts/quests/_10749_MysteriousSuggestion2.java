@@ -42,12 +42,14 @@ public class _10749_MysteriousSuggestion2 extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("grankain_lumiere_q10749_03.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return htmltext;
 	}
 	
@@ -57,6 +59,7 @@ public class _10749_MysteriousSuggestion2 extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		String htmltext = "noquest";
+		
 		if (npcId == MUSTERIOUS_BUTLER)
 		{
 			if (st.isStarted())

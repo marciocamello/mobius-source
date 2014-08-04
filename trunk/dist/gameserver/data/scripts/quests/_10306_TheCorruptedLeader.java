@@ -49,6 +49,7 @@ public class _10306_TheCorruptedLeader extends Quest implements ScriptFile
 		{
 			return event;
 		}
+		
 		if (event.equalsIgnoreCase("32896-05.htm"))
 		{
 			st.setCond(1);
@@ -62,6 +63,7 @@ public class _10306_TheCorruptedLeader extends Quest implements ScriptFile
 			st.giveItems(CRYSTALS[Rnd.get(CRYSTALS.length)], 1);
 			st.exitCurrentQuest(false);
 		}
+		
 		return event;
 	}
 	
@@ -69,12 +71,15 @@ public class _10306_TheCorruptedLeader extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
+		
 		if (st == null)
 		{
 			return htmltext;
 		}
+		
 		Player player = st.getPlayer();
 		QuestState prevst = player.getQuestState(_10305_UnstoppableFutileEfforts.class);
+		
 		if (npc.getNpcId() == NPC_NAOMI_KASHERON)
 		{
 			switch (st.getState())
@@ -82,6 +87,7 @@ public class _10306_TheCorruptedLeader extends Quest implements ScriptFile
 				case COMPLETED:
 					htmltext = "32896-02.htm";
 					break;
+				
 				case CREATED:
 					if (player.getLevel() >= 90)
 					{
@@ -100,7 +106,9 @@ public class _10306_TheCorruptedLeader extends Quest implements ScriptFile
 						st.exitCurrentQuest(true);
 						htmltext = "32896-03.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					if (st.getCond() == 1)
 					{
@@ -112,10 +120,12 @@ public class _10306_TheCorruptedLeader extends Quest implements ScriptFile
 						{
 							break;
 						}
+						
 						htmltext = "32896-07.htm";
 					}
 			}
 		}
+		
 		return htmltext;
 	}
 	

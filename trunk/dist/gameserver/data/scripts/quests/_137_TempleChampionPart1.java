@@ -57,6 +57,7 @@ public class _137_TempleChampionPart1 extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("sylvain_q0137_04.htm"))
 		{
 			st.takeItems(BadgeTempleExecutor, -1);
@@ -86,6 +87,7 @@ public class _137_TempleChampionPart1 extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -95,6 +97,7 @@ public class _137_TempleChampionPart1 extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == SYLVAIN)
 		{
 			if (cond == 0)
@@ -139,6 +142,7 @@ public class _137_TempleChampionPart1 extends Quest implements ScriptFile
 				htmltext = "sylvain_q0137_16.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -150,6 +154,7 @@ public class _137_TempleChampionPart1 extends Quest implements ScriptFile
 			if (st.getQuestItemsCount(FRAGMENT) < 30)
 			{
 				st.giveItems(FRAGMENT, 1);
+				
 				if (st.getQuestItemsCount(FRAGMENT) >= 30)
 				{
 					st.setCond(3);
@@ -161,6 +166,7 @@ public class _137_TempleChampionPart1 extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 }

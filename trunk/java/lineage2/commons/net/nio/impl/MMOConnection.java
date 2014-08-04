@@ -134,10 +134,12 @@ public class MMOConnection<T extends MMOClient>
 		{
 			return;
 		}
+		
 		if (isClosed())
 		{
 			return;
 		}
+		
 		_recvQueue.add(rp);
 	}
 	
@@ -151,12 +153,14 @@ public class MMOConnection<T extends MMOClient>
 		{
 			return;
 		}
+		
 		synchronized (this)
 		{
 			if (isClosed())
 			{
 				return;
 			}
+			
 			_sendQueue.add(sp);
 		}
 		scheduleWriteInterest();
@@ -173,12 +177,14 @@ public class MMOConnection<T extends MMOClient>
 		{
 			return;
 		}
+		
 		synchronized (this)
 		{
 			if (isClosed())
 			{
 				return;
 			}
+			
 			for (SendablePacket<T> sp : args)
 			{
 				if (sp != null)
@@ -200,6 +206,7 @@ public class MMOConnection<T extends MMOClient>
 		{
 			return;
 		}
+		
 		SendablePacket<T> sp;
 		synchronized (this)
 		{
@@ -207,6 +214,7 @@ public class MMOConnection<T extends MMOClient>
 			{
 				return;
 			}
+			
 			for (int i = 0; i < args.size(); i++)
 			{
 				if ((sp = args.get(i)) != null)
@@ -367,6 +375,7 @@ public class MMOConnection<T extends MMOClient>
 			int remaining = temp.remaining();
 			_primaryWriteBuffer.flip();
 			int limit = _primaryWriteBuffer.limit();
+			
 			if (remaining >= _primaryWriteBuffer.remaining())
 			{
 				temp.put(_primaryWriteBuffer);
@@ -473,6 +482,7 @@ public class MMOConnection<T extends MMOClient>
 			{
 				return;
 			}
+			
 			_sendQueue.clear();
 			_pendingClose = true;
 			_pendingCloseTime = System.currentTimeMillis();
@@ -493,6 +503,7 @@ public class MMOConnection<T extends MMOClient>
 			{
 				return;
 			}
+			
 			_sendQueue.clear();
 			sendPacket(sp);
 			_pendingClose = true;
@@ -512,6 +523,7 @@ public class MMOConnection<T extends MMOClient>
 			{
 				return;
 			}
+			
 			_pendingClose = true;
 			_pendingCloseTime = System.currentTimeMillis();
 		}
@@ -526,12 +538,14 @@ public class MMOConnection<T extends MMOClient>
 		{
 			_selectorThread.recycleBuffer(_primaryWriteBuffer);
 			_primaryWriteBuffer = null;
+			
 			if (_secondaryWriteBuffer != null)
 			{
 				_selectorThread.recycleBuffer(_secondaryWriteBuffer);
 				_secondaryWriteBuffer = null;
 			}
 		}
+		
 		if (_readBuffer != null)
 		{
 			_selectorThread.recycleBuffer(_readBuffer);

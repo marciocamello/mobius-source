@@ -30,7 +30,7 @@ import bosses.BelethManager;
 public final class BelethCoffinInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -60,7 +60,9 @@ public final class BelethCoffinInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		StringTokenizer st = new StringTokenizer(command);
+		
 		if (st.nextToken().equals("request_ring"))
 		{
 			if (!BelethManager.isRingAvailable())
@@ -68,16 +70,19 @@ public final class BelethCoffinInstance extends NpcInstance
 				player.sendPacket(new NpcHtmlMessage(player, this).setHtml("Stone Coffin:<br><br>Ring is not available. Get lost!"));
 				return;
 			}
+			
 			if ((player.getParty() == null) || (player.getParty().getCommandChannel() == null))
 			{
 				player.sendPacket(new NpcHtmlMessage(player, this).setHtml("Stone Coffin:<br><br>You are not allowed to take the ring. Are are not the group or Command Channel."));
 				return;
 			}
+			
 			if (player.getParty().getCommandChannel().getChannelLeader() != player)
 			{
 				player.sendPacket(new NpcHtmlMessage(player, this).setHtml("Stone Coffin:<br><br>You are not leader or the Command Channel."));
 				return;
 			}
+			
 			CommandChannel channel = player.getParty().getCommandChannel();
 			Functions.addItem(player, RING, 1);
 			SystemMessage smsg = new SystemMessage(SystemMessage.S1_HAS_OBTAINED_S2);

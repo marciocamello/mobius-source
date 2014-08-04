@@ -62,6 +62,7 @@ public class _624_TheFinestIngredientsPart1 extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("jeremy_q0624_0104.htm"))
 		{
 			if (st.getPlayer().getLevel() >= 73)
@@ -95,6 +96,7 @@ public class _624_TheFinestIngredientsPart1 extends Quest implements ScriptFile
 				st.setCond(1);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -103,6 +105,7 @@ public class _624_TheFinestIngredientsPart1 extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (cond == 0)
 		{
 			htmltext = "jeremy_q0624_0101.htm";
@@ -115,6 +118,7 @@ public class _624_TheFinestIngredientsPart1 extends Quest implements ScriptFile
 		{
 			htmltext = "jeremy_q0624_0105.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -125,7 +129,9 @@ public class _624_TheFinestIngredientsPart1 extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		int npcId = npc.getNpcId();
+		
 		if (st.getCond() == 1)
 		{
 			if ((npcId == HOT_SPRINGS_NEPENTHES) && (st.getQuestItemsCount(TRUNK_OF_NEPENTHES) < 50))
@@ -140,8 +146,10 @@ public class _624_TheFinestIngredientsPart1 extends Quest implements ScriptFile
 			{
 				st.rollAndGive(SECRET_SPICE, 1, 1, 50, 100);
 			}
+			
 			onKillCheck(st);
 		}
+		
 		return null;
 	}
 	

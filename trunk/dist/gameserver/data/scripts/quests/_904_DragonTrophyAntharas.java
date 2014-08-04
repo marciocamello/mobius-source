@@ -34,6 +34,7 @@ public class _904_DragonTrophyAntharas extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("theodric_q904_04.htm"))
 		{
 			st.setState(STARTED);
@@ -47,6 +48,7 @@ public class _904_DragonTrophyAntharas extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -55,6 +57,7 @@ public class _904_DragonTrophyAntharas extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (npc.getNpcId() == Theodric)
 		{
 			switch (st.getState())
@@ -76,7 +79,9 @@ public class _904_DragonTrophyAntharas extends Quest implements ScriptFile
 						htmltext = "theodric_q904_00.htm";
 						st.exitCurrentQuest(true);
 					}
+					
 					break;
+				
 				case STARTED:
 					if (cond == 1)
 					{
@@ -86,9 +91,11 @@ public class _904_DragonTrophyAntharas extends Quest implements ScriptFile
 					{
 						htmltext = "theodric_q904_06.htm";
 					}
+					
 					break;
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -96,6 +103,7 @@ public class _904_DragonTrophyAntharas extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if (cond == 1)
 		{
 			if (npc.getNpcId() == AntharasMax)
@@ -103,6 +111,7 @@ public class _904_DragonTrophyAntharas extends Quest implements ScriptFile
 				st.setCond(2);
 			}
 		}
+		
 		return null;
 	}
 	

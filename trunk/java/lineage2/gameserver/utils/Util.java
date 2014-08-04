@@ -63,6 +63,7 @@ public class Util
 	public static boolean isMatchingRegexp(String text, String template)
 	{
 		Pattern pattern = null;
+		
 		try
 		{
 			pattern = Pattern.compile(template);
@@ -71,10 +72,12 @@ public class Util
 		{
 			e.printStackTrace();
 		}
+		
 		if (pattern == null)
 		{
 			return false;
 		}
+		
 		Matcher regexp = pattern.matcher(text);
 		return regexp.matches();
 	}
@@ -92,14 +95,17 @@ public class Util
 		{
 			return nanString;
 		}
+		
 		if (forceExponents)
 		{
 			return df.format(x);
 		}
+		
 		if ((long) x == x)
 		{
 			return String.valueOf((long) x);
 		}
+		
 		return String.valueOf(x);
 	}
 	
@@ -124,6 +130,7 @@ public class Util
 		{
 			return "now";
 		}
+		
 		time = Math.abs(time);
 		String ret = "";
 		long numDays = time / 86400;
@@ -133,22 +140,27 @@ public class Util
 		long numMins = time / 60;
 		time -= numMins * 60;
 		long numSeconds = time;
+		
 		if (numDays > 0)
 		{
 			ret += numDays + "d ";
 		}
+		
 		if (numHours > 0)
 		{
 			ret += numHours + "h ";
 		}
+		
 		if (numMins > 0)
 		{
 			ret += numMins + "m ";
 		}
+		
 		if (numSeconds > 0)
 		{
 			ret += numSeconds + "s";
 		}
+		
 		return ret.trim();
 	}
 	
@@ -166,11 +178,14 @@ public class Util
 		{
 			return 0;
 		}
+		
 		int dropmult = 1;
+		
 		if (rate)
 		{
 			calcChance *= Config.RATE_DROP_ITEMS;
 		}
+		
 		if (calcChance > RewardList.MAX_CHANCE)
 		{
 			if ((calcChance % RewardList.MAX_CHANCE) == 0)
@@ -183,6 +198,7 @@ public class Util
 				calcChance = calcChance / dropmult;
 			}
 		}
+		
 		return Rnd.chance(calcChance / 10000.) ? Rnd.get(min * dropmult, max * dropmult) : 0;
 	}
 	
@@ -196,19 +212,24 @@ public class Util
 	public static int packInt(int[] a, int bits) throws Exception
 	{
 		int m = 32 / bits;
+		
 		if (a.length > m)
 		{
 			throw new Exception("Overflow");
 		}
+		
 		int result = 0;
 		int next;
 		int mval = (int) Math.pow(2, bits);
+		
 		for (int i = 0; i < m; i++)
 		{
 			result <<= bits;
+			
 			if (a.length > i)
 			{
 				next = a[i];
+				
 				if ((next >= mval) || (next < 0))
 				{
 					throw new Exception("Overload, value is out of range");
@@ -218,8 +239,10 @@ public class Util
 			{
 				next = 0;
 			}
+			
 			result += next;
 		}
+		
 		return result;
 	}
 	
@@ -233,19 +256,24 @@ public class Util
 	public static long packLong(int[] a, int bits) throws Exception
 	{
 		int m = 64 / bits;
+		
 		if (a.length > m)
 		{
 			throw new Exception("Overflow");
 		}
+		
 		long result = 0;
 		int next;
 		int mval = (int) Math.pow(2, bits);
+		
 		for (int i = 0; i < m; i++)
 		{
 			result <<= bits;
+			
 			if (a.length > i)
 			{
 				next = a[i];
+				
 				if ((next >= mval) || (next < 0))
 				{
 					throw new Exception("Overload, value is out of range");
@@ -255,8 +283,10 @@ public class Util
 			{
 				next = 0;
 			}
+			
 			result += next;
 		}
+		
 		return result;
 	}
 	
@@ -272,12 +302,14 @@ public class Util
 		int mval = (int) Math.pow(2, bits);
 		int[] result = new int[m];
 		int next;
+		
 		for (int i = m; i > 0; i--)
 		{
 			next = a;
 			a = a >> bits;
 			result[i - 1] = next - (a * mval);
 		}
+		
 		return result;
 	}
 	
@@ -293,12 +325,14 @@ public class Util
 		int mval = (int) Math.pow(2, bits);
 		int[] result = new int[m];
 		long next;
+		
 		for (int i = m; i > 0; i--)
 		{
 			next = a;
 			a = a >> bits;
 			result[i - 1] = (int) (next - (a * mval));
 		}
+		
 		return result;
 	}
 	
@@ -342,6 +376,7 @@ public class Util
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -359,6 +394,7 @@ public class Util
 		String val, type, result = "[" + (simpleTypes ? cls.getSimpleName() : cls.getName()) + "\n";
 		Object fldObj;
 		List<Field> fields = new ArrayList<>();
+		
 		while (cls != null)
 		{
 			for (Field fld : cls.getDeclaredFields())
@@ -369,21 +405,27 @@ public class Util
 					{
 						continue;
 					}
+					
 					fields.add(fld);
 				}
 			}
+			
 			cls = cls.getSuperclass();
+			
 			if (!parentFields)
 			{
 				break;
 			}
 		}
+		
 		for (Field fld : fields)
 		{
 			fld.setAccessible(true);
+			
 			try
 			{
 				fldObj = fld.get(o);
+				
 				if (fldObj == null)
 				{
 					val = "NULL";
@@ -398,9 +440,11 @@ public class Util
 				e.printStackTrace();
 				val = "<ERROR>";
 			}
+			
 			type = simpleTypes ? fld.getType().getSimpleName() : fld.getType().toString();
 			result += String.format("\t%s [%s] = %s;\n", fld.getName(), type, val);
 		}
+		
 		result += "]\n";
 		return result;
 	}
@@ -419,11 +463,13 @@ public class Util
 	{
 		Matcher m = _pattern.matcher(html);
 		HashMap<Integer, String> tpls = new HashMap<>();
+		
 		while (m.find())
 		{
 			tpls.put(Integer.parseInt(m.group(1)), m.group(2));
 			html = html.replace(m.group(0), "");
 		}
+		
 		tpls.put(0, html);
 		return tpls;
 	}
@@ -436,113 +482,149 @@ public class Util
 	public static int getThirdClassForId(int classId)
 	{
 		int result = -1;
+		
 		switch (classId)
 		{
 			case 30:
 				result = 150;
 				break;
+			
 			case 20:
 				result = 99;
 				break;
+			
 			case 8:
 				result = 93;
 				break;
+			
 			case 14:
 				result = 96;
 				break;
+			
 			case 12:
 				result = 94;
 				break;
+			
 			case 16:
 				result = 97;
 				break;
+			
 			case 51:
 				result = 115;
 				break;
+			
 			case 127:
 				result = 131;
 				break;
+			
 			case 52:
 				result = 116;
 				break;
+			
 			case 3:
 				result = 89;
 				break;
+			
 			case 2:
 				result = 88;
 				break;
+			
 			case 28:
 				result = 104;
 				break;
+			
 			case 55:
 				result = 117;
 				break;
+			
 			case 36:
 				result = 108;
 				break;
+			
 			case 37:
 				result = 109;
 				break;
+			
 			case 48:
 				result = 114;
 				break;
+			
 			case 6:
 				result = 91;
 				break;
+			
 			case 17:
 				result = 98;
 				break;
+			
 			case 57:
 				result = 118;
 				break;
+			
 			case 24:
 				result = 102;
 				break;
+			
 			case 27:
 				result = 103;
 				break;
+			
 			case 5:
 				result = 90;
 				break;
+			
 			case 9:
 				result = 92;
 				break;
+			
 			case 43:
 				result = 112;
 				break;
+			
 			case 33:
 				result = 106;
 				break;
+			
 			case 128:
 				result = 132;
 				break;
+			
 			case 129:
 				result = 133;
 				break;
+			
 			case 13:
 				result = 95;
 				break;
+			
 			case 34:
 				result = 107;
 				break;
+			
 			case 41:
 				result = 111;
 				break;
+			
 			case 40:
 				result = 110;
 				break;
+			
 			case 21:
 				result = 100;
 				break;
+			
 			case 46:
 				result = 113;
 				break;
+			
 			case 130:
 				result = 134;
 				break;
+			
 			case 23:
 				result = 101;
 				break;
+			
 			case 4:
 			case 7:
 			case 10:
@@ -638,6 +720,7 @@ public class Util
 			case 125:
 			case 126:
 		}
+		
 		return result;
 	}
 	

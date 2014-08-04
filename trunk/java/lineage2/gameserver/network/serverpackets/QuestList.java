@@ -40,6 +40,7 @@ public class QuestList extends L2GameServerPacket
 	{
 		QuestState[] allQuestStates = player.getAllQuestsStates();
 		questlist = new ArrayList<>(allQuestStates.length);
+		
 		for (QuestState quest : allQuestStates)
 		{
 			if (quest.getQuest().isVisible(player) && quest.isStarted())
@@ -58,11 +59,13 @@ public class QuestList extends L2GameServerPacket
 	{
 		writeC(0x86);
 		writeH(questlist.size());
+		
 		for (int[] q : questlist)
 		{
 			writeD(q[0]);
 			writeD(q[1]);
 		}
+		
 		writeB(unk);
 	}
 }

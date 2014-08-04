@@ -30,7 +30,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public final class EkimusMouthInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -72,9 +72,11 @@ public final class EkimusMouthInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("hos_enter"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (SoIManager.getCurrentStage() == 1)
 			{
 				if (r != null)
@@ -107,6 +109,7 @@ public final class EkimusMouthInstance extends NpcInstance
 		else if (command.equalsIgnoreCase("hoe_enter"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (SoIManager.getCurrentStage() == 1)
 			{
 				if (r != null)

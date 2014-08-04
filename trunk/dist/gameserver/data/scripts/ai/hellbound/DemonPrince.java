@@ -64,12 +64,14 @@ public class DemonPrince extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (_notUsedUltimateDefense && (actor.getCurrentHpPercents() < 10))
 		{
 			_notUsedUltimateDefense = false;
 			clearTasks();
 			addTaskBuff(actor, ULTIMATE_DEFENSE_SKILL);
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	

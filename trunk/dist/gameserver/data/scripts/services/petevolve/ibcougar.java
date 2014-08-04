@@ -47,31 +47,38 @@ public class ibcougar extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		Summon pl_pet = player.getSummonList().getPet();
+		
 		if (player.getInventory().getItemByItemId(BABY_COUGAR_CHIME) == null)
 		{
 			show("scripts/services/petevolve/no_item.htm", player, npc);
 			return;
 		}
+		
 		if ((pl_pet == null) || pl_pet.isDead())
 		{
 			show("scripts/services/petevolve/evolve_no.htm", player, npc);
 			return;
 		}
+		
 		if (pl_pet.getNpcId() != BABY_COUGAR)
 		{
 			show("scripts/services/petevolve/no_pet.htm", player, npc);
 			return;
 		}
+		
 		if (pl_pet.getLevel() < 55)
 		{
 			show("scripts/services/petevolve/no_level.htm", player, npc);
 			return;
 		}
+		
 		int controlItemId = pl_pet.getControlItemObjId();
 		player.getSummonList().unsummonPet(false);
 		ItemInstance control = player.getInventory().getItemByObjectId(controlItemId);

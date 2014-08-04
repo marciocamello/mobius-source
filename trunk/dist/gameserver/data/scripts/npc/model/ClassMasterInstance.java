@@ -35,7 +35,7 @@ import lineage2.gameserver.utils.Util;
 public final class ClassMasterInstance extends MerchantInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -65,28 +65,34 @@ public final class ClassMasterInstance extends MerchantInstance
 		jobLevel = player.getClassLevel();
 		int level = player.getLevel();
 		StringBuilder html = new StringBuilder();
+		
 		if (Config.ALLOW_CLASS_MASTERS_LIST.isEmpty() || !Config.ALLOW_CLASS_MASTERS_LIST.contains(jobLevel))
 		{
 			jobLevel = 5;
 		}
+		
 		if ((((level >= 20) && (jobLevel == 1)) || ((level >= 40) && (jobLevel == 2)) || ((level >= 76) && (jobLevel == 3)) || ((level >= 85) && (jobLevel == 4))) && Config.ALLOW_CLASS_MASTERS_LIST.contains(jobLevel))
 		{
 			ItemTemplate item = ItemHolder.getInstance().getTemplate(Config.CLASS_MASTERS_PRICE_ITEM_LIST[jobLevel]);
+			
 			if (Config.CLASS_MASTERS_PRICE_LIST[jobLevel] > 0)
 			{
 				html.append("Price: ").append(Util.formatAdena(Config.CLASS_MASTERS_PRICE_LIST[jobLevel])).append(' ').append(item.getName()).append("<br1>");
 			}
+			
 			for (ClassId cid : ClassId.VALUES)
 			{
 				if (cid == ClassId.INSPECTOR)
 				{
 					continue;
 				}
+				
 				if (cid.childOf(classId) && (cid.getClassLevel().ordinal() == (classId.getClassLevel().ordinal() + 1)))
 				{
 					html.append("<a action=\"bypass -h npc_").append(getObjectId()).append("_change_class ").append(cid.getId()).append(' ').append(Config.CLASS_MASTERS_PRICE_LIST[jobLevel]).append("\">").append(HtmlUtils.htmlClassName(cid.getId())).append("</a><br>");
 				}
 			}
+			
 			player.sendPacket(new NpcHtmlMessage(player, this).setHtml(html.toString()));
 		}
 		else
@@ -96,20 +102,25 @@ public final class ClassMasterInstance extends MerchantInstance
 				case 1:
 					html.append("Come back here when you reached level 20 to change your class.");
 					break;
+				
 				case 2:
 					html.append("Come back here when you reached level 40 to change your class.");
 					break;
+				
 				case 3:
 					html.append("Come back here when you reached level 76 to change your class.");
 					break;
+				
 				case 4:
 					html.append("Come back here when you reached level 85 to change your class.");
 					break;
+				
 				case 5:
 					html.append("There is no class changes for you any more.");
 					break;
 			}
 		}
+		
 		return html.toString();
 	}
 	
@@ -140,11 +151,14 @@ public final class ClassMasterInstance extends MerchantInstance
 		{
 			return;
 		}
+		
 		StringTokenizer st = new StringTokenizer(command);
+		
 		if (st.nextToken().equals("change_class"))
 		{
 			int val = Integer.parseInt(st.nextToken());
 			long price = Long.parseLong(st.nextToken());
+			
 			if (player.getInventory().destroyItemByItemId(Config.CLASS_MASTERS_PRICE_ITEM_LIST[jobLevel], price))
 			{
 				changeClass(player, val);
@@ -179,6 +193,7 @@ public final class ClassMasterInstance extends MerchantInstance
 		{
 			player.sendPacket(SystemMsg.CONGRATULATIONS__YOUVE_COMPLETED_A_CLASS_TRANSFER);
 		}
+		
 		player.setClassId(val, false, false);
 		player.broadcastCharInfo();
 	}

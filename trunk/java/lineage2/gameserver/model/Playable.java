@@ -52,7 +52,7 @@ import lineage2.gameserver.utils.Location;
 public abstract class Playable extends Creature
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -128,46 +128,57 @@ public abstract class Playable extends Creature
 	public boolean checkPvP(final Creature target, Skill skill)
 	{
 		Player player = getPlayer();
+		
 		if (isDead() || (target == null) || (player == null) || (target == this) || (target == player) || player.getSummonList().contains(target) || (player.getKarma() < 0))
 		{
 			return false;
 		}
+		
 		if (skill != null)
 		{
 			if (skill.altUse())
 			{
 				return false;
 			}
+			
 			if (skill.getTargetType() == SkillTargetType.TARGET_FEEDABLE_BEAST)
 			{
 				return false;
 			}
+			
 			if (skill.getTargetType() == SkillTargetType.TARGET_UNLOCKABLE)
 			{
 				return false;
 			}
+			
 			if (skill.getTargetType() == SkillTargetType.TARGET_CHEST)
 			{
 				return false;
 			}
 		}
+		
 		DuelEvent duelEvent = getEvent(DuelEvent.class);
+		
 		if ((duelEvent != null) && (duelEvent == target.getEvent(DuelEvent.class)))
 		{
 			return false;
 		}
+		
 		if (isInZonePeace() && target.isInZonePeace())
 		{
 			return false;
 		}
+		
 		if (isInZoneBattle() && target.isInZoneBattle())
 		{
 			return false;
 		}
+		
 		if (isInZone(ZoneType.SIEGE) && target.isInZone(ZoneType.SIEGE))
 		{
 			return false;
 		}
+		
 		if ((skill == null) || skill.isOffensive())
 		{
 			if (target.getKarma() < 0)
@@ -183,6 +194,7 @@ public abstract class Playable extends Creature
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -194,43 +206,52 @@ public abstract class Playable extends Creature
 	public boolean checkTarget(Creature target)
 	{
 		Player player = getPlayer();
+		
 		if (player == null)
 		{
 			return false;
 		}
+		
 		if ((target == null) || target.isDead())
 		{
 			player.sendPacket(Msg.INVALID_TARGET);
 			return false;
 		}
+		
 		if (!isInRange(target, 2000))
 		{
 			player.sendPacket(Msg.YOUR_TARGET_IS_OUT_OF_RANGE);
 			return false;
 		}
+		
 		if (target.isDoor() && !target.isAttackable(this))
 		{
 			player.sendPacket(Msg.INVALID_TARGET);
 			return false;
 		}
+		
 		if (target.paralizeOnAttack(this))
 		{
 			if (Config.PARALIZE_ON_RAID_DIFF)
 			{
 				paralizeMe(target);
 			}
+			
 			return false;
 		}
+		
 		if (target.isInvisible() || (getReflection() != target.getReflection()) || !GeoEngine.canSeeTarget(this, target, false))
 		{
 			player.sendPacket(SystemMsg.CANNOT_SEE_TARGET);
 			return false;
 		}
+		
 		if (player.isInZone(ZoneType.epic) != target.isInZone(ZoneType.epic))
 		{
 			player.sendPacket(Msg.INVALID_TARGET);
 			return false;
 		}
+		
 		if (target.isPlayable())
 		{
 			if (isInZoneBattle() != target.isInZoneBattle())
@@ -238,16 +259,19 @@ public abstract class Playable extends Creature
 				player.sendPacket(Msg.INVALID_TARGET);
 				return false;
 			}
+			
 			if (isInZonePeace() || target.isInZonePeace())
 			{
 				player.sendPacket(Msg.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
 				return false;
 			}
+			
 			if (player.isInOlympiadMode() && !player.isOlympiadCompStart())
 			{
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
@@ -259,42 +283,53 @@ public abstract class Playable extends Creature
 	public void doAttack(Creature target)
 	{
 		Player player = getPlayer();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (isAMuted() || isAttackingNow())
 		{
 			player.sendActionFailed();
 			return;
 		}
+		
 		if (player.isInObserverMode())
 		{
 			player.sendMessage(new CustomMessage("lineage2.gameserver.model.L2Playable.OutOfControl.ObserverNoAttack", player));
 			return;
 		}
+		
 		if (!checkTarget(target))
 		{
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null, null);
 			player.sendActionFailed();
 			return;
 		}
+		
 		DuelEvent duelEvent = getEvent(DuelEvent.class);
+		
 		if ((duelEvent != null) && (target.getEvent(DuelEvent.class) != duelEvent))
 		{
 			duelEvent.abortDuel(getPlayer());
 		}
+		
 		WeaponTemplate weaponItem = getActiveWeaponItem();
+		
 		if ((weaponItem != null) && ((weaponItem.getItemType() == WeaponType.BOW) || (weaponItem.getItemType() == WeaponType.CROSSBOW)))
 		{
 			double bowMpConsume = weaponItem.getMpConsume();
+			
 			if (bowMpConsume > 0)
 			{
 				double chance = calcStat(Stats.MP_USE_BOW_CHANCE, 0., target, null);
+				
 				if ((chance > 0) && Rnd.chance(chance))
 				{
 					bowMpConsume = calcStat(Stats.MP_USE_BOW, bowMpConsume, target, null);
 				}
+				
 				if (_currentMp < bowMpConsume)
 				{
 					getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null, null);
@@ -302,8 +337,10 @@ public abstract class Playable extends Creature
 					player.sendActionFailed();
 					return;
 				}
+				
 				reduceCurrentMp(bowMpConsume, null);
 			}
+			
 			if (!player.checkAndEquipArrows())
 			{
 				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null, null);
@@ -312,6 +349,7 @@ public abstract class Playable extends Creature
 				return;
 			}
 		}
+		
 		super.doAttack(target);
 	}
 	
@@ -328,21 +366,26 @@ public abstract class Playable extends Creature
 		{
 			return;
 		}
+		
 		DuelEvent duelEvent = getEvent(DuelEvent.class);
+		
 		if ((duelEvent != null) && (target.getEvent(DuelEvent.class) != duelEvent))
 		{
 			duelEvent.abortDuel(getPlayer());
 		}
+		
 		if (skill.isAoE() && isInPeaceZone())
 		{
 			getPlayer().sendPacket(Msg.A_MALICIOUS_SKILL_CANNOT_BE_USED_IN_A_PEACE_ZONE);
 			return;
 		}
+		
 		if ((skill.getSkillType() == SkillType.DEBUFF) && target.isNpc() && target.isInvul() && !target.isMonster())
 		{
 			getPlayer().sendPacket(Msg.INVALID_TARGET);
 			return;
 		}
+		
 		super.doCast(skill, target, forceUse);
 	}
 	
@@ -367,22 +410,27 @@ public abstract class Playable extends Creature
 		{
 			return;
 		}
+		
 		if (isDamageBlocked() && transferDamage)
 		{
 			return;
 		}
+		
 		if (isDamageBlocked() && (attacker != this))
 		{
 			if (sendMessage)
 			{
 				attacker.sendPacket(Msg.THE_ATTACK_HAS_BEEN_BLOCKED);
 			}
+			
 			return;
 		}
+		
 		if ((attacker != this) && attacker.isPlayable())
 		{
 			Player player = getPlayer();
 			Player pcAttacker = attacker.getPlayer();
+			
 			if (pcAttacker != player)
 			{
 				if (player.isInOlympiadMode() && !player.isOlympiadCompStart())
@@ -391,23 +439,29 @@ public abstract class Playable extends Creature
 					{
 						pcAttacker.sendPacket(Msg.INVALID_TARGET);
 					}
+					
 					return;
 				}
 			}
+			
 			if (isInZoneBattle() != attacker.isInZoneBattle())
 			{
 				if (sendMessage)
 				{
 					attacker.getPlayer().sendPacket(Msg.INVALID_TARGET);
 				}
+				
 				return;
 			}
+			
 			DuelEvent duelEvent = getEvent(DuelEvent.class);
+			
 			if ((duelEvent != null) && (attacker.getEvent(DuelEvent.class) != duelEvent))
 			{
 				duelEvent.abortDuel(player);
 			}
 		}
+		
 		super.reduceCurrentHp(damage, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
 	}
 	
@@ -446,6 +500,7 @@ public abstract class Playable extends Creature
 		{
 			return skill.getMatak();
 		}
+		
 		final double init = getActiveWeaponInstance() == null ? _template.getBaseMAtk() : 0;
 		return (int) calcStat(Stats.MAGIC_ATTACK, init, target, skill);
 	}
@@ -482,18 +537,22 @@ public abstract class Playable extends Creature
 	public boolean isCtrlAttackable(Creature attacker, boolean force, boolean witchCtrl)
 	{
 		Player player = getPlayer();
+		
 		if ((attacker == null) || (player == null) || (attacker == this) || ((attacker == player) && !force) || isAlikeDead() || attacker.isAlikeDead())
 		{
 			return false;
 		}
+		
 		if (isInvisible() || (getReflection() != attacker.getReflection()))
 		{
 			return false;
 		}
+		
 		if (isInBoat())
 		{
 			return false;
 		}
+		
 		for (GlobalEvent e : getEvents())
 		{
 			if (e.checkForAttack(this, attacker, null, force) != null)
@@ -501,6 +560,7 @@ public abstract class Playable extends Creature
 				return false;
 			}
 		}
+		
 		for (GlobalEvent e : player.getEvents())
 		{
 			if (e.canAttack(this, attacker, null, force))
@@ -508,75 +568,94 @@ public abstract class Playable extends Creature
 				return true;
 			}
 		}
+		
 		Player pcAttacker = attacker.getPlayer();
+		
 		if ((pcAttacker != null) && (pcAttacker != player))
 		{
 			if (pcAttacker.isInBoat())
 			{
 				return false;
 			}
+			
 			if ((pcAttacker.getBlockCheckerArena() > -1) || (player.getBlockCheckerArena() > -1))
 			{
 				return false;
 			}
+			
 			if ((pcAttacker.isCursedWeaponEquipped() && (player.getLevel() < 21)) || (player.isCursedWeaponEquipped() && (pcAttacker.getLevel() < 21)))
 			{
 				return false;
 			}
+			
 			if (player.isInZone(ZoneType.epic) != pcAttacker.isInZone(ZoneType.epic))
 			{
 				return false;
 			}
+			
 			if ((player.isInOlympiadMode() || pcAttacker.isInOlympiadMode()) && (player.getOlympiadGame() != pcAttacker.getOlympiadGame()))
 			{
 				return false;
 			}
+			
 			if (player.isInOlympiadMode() && !player.isOlympiadCompStart())
 			{
 				return false;
 			}
+			
 			if (player.isInOlympiadMode() && player.isOlympiadCompStart() && (player.getOlympiadSide() == pcAttacker.getOlympiadSide()) && !force)
 			{
 				return false;
 			}
+			
 			if (isInZonePeace())
 			{
 				return false;
 			}
+			
 			if (!force && (player.getParty() != null) && (player.getParty() == pcAttacker.getParty()))
 			{
 				return false;
 			}
+			
 			if (isInZoneBattle())
 			{
 				return true;
 			}
+			
 			if (!force && (player.getClan() != null) && (player.getClan() == pcAttacker.getClan()))
 			{
 				return false;
 			}
+			
 			if (isInZone(ZoneType.SIEGE))
 			{
 				return true;
 			}
+			
 			if (pcAttacker.atMutualWarWith(player))
 			{
 				return true;
 			}
+			
 			if ((player.getKarma() < 0) || (player.getPvpFlag() != 0))
 			{
 				return true;
 			}
+			
 			if (witchCtrl && (player.getPvpFlag() > 0))
 			{
 				return true;
 			}
+			
 			return force;
 		}
+		
 		if ((pcAttacker != null) && (pcAttacker == player))
 		{
 			return force;
 		}
+		
 		return true;
 	}
 	
@@ -601,10 +680,12 @@ public abstract class Playable extends Creature
 	public void callSkill(Skill skill, List<Creature> targets, boolean useActionSkills)
 	{
 		Player player = getPlayer();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (useActionSkills && !skill.altUse() && !skill.getSkillType().equals(SkillType.BEAST_FEED))
 		{
 			for (Creature target : targets)
@@ -619,14 +700,17 @@ public abstract class Playable extends Creature
 							{
 								paralizeMe(target);
 							}
+							
 							return;
 						}
+						
 						if (!skill.isAI())
 						{
 							int damage = skill.getEffectPoint() != 0 ? skill.getEffectPoint() : 1;
 							target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, this, damage);
 						}
 					}
+					
 					target.getAI().notifyEvent(CtrlEvent.EVT_SEE_SPELL, skill, this);
 				}
 				else
@@ -635,35 +719,43 @@ public abstract class Playable extends Creature
 					{
 						int aggro = skill.getEffectPoint() != 0 ? skill.getEffectPoint() : Math.max(1, (int) skill.getPower());
 						List<NpcInstance> npcs = World.getAroundNpc(target);
+						
 						for (NpcInstance npc : npcs)
 						{
 							if (npc.isDead() || !npc.isInRangeZ(this, 2000))
 							{
 								continue;
 							}
+							
 							npc.getAI().notifyEvent(CtrlEvent.EVT_SEE_SPELL, skill, this);
 							AggroInfo ai = npc.getAggroList().get(target);
+							
 							if (ai == null)
 							{
 								continue;
 							}
+							
 							if (!skill.isHandler() && npc.paralizeOnAttack(player))
 							{
 								if (Config.PARALIZE_ON_RAID_DIFF)
 								{
 									paralizeMe(npc);
 								}
+								
 								return;
 							}
+							
 							if (ai.hate < 100)
 							{
 								continue;
 							}
+							
 							if (GeoEngine.canSeeTarget(npc, target, false))
 							{
 								npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, this, ai.damage == 0 ? aggro / 2 : aggro);
 							}
 						}
+						
 						// Notify Attack also on skill
 						if ((target.isServitor() || target.isPlayer()) && skill.isOffensive())
 						{
@@ -673,15 +765,18 @@ public abstract class Playable extends Creature
 								target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, this, damage);
 							}
 						}
+						
 						// Notify Attack on Skill End
 					}
 				}
+				
 				if (checkPvP(target, skill))
 				{
 					startPvPFlag(target);
 				}
 			}
 		}
+		
 		super.callSkill(skill, targets, useActionSkills);
 	}
 	
@@ -692,14 +787,17 @@ public abstract class Playable extends Creature
 	public void broadcastPickUpMsg(ItemInstance item)
 	{
 		Player player = getPlayer();
+		
 		if ((item == null) || (player == null) || player.isInvisible())
 		{
 			return;
 		}
+		
 		if (item.isEquipable() && !(item.getTemplate() instanceof EtcItemTemplate))
 		{
 			SystemMessage msg = null;
 			String player_name = player.getName();
+			
 			if (item.getEnchantLevel() > 0)
 			{
 				int msg_id = isPlayer() ? SystemMessage.ATTENTION_S1_PICKED_UP__S2_S3 : SystemMessage.ATTENTION_S1_PET_PICKED_UP__S2_S3;
@@ -710,6 +808,7 @@ public abstract class Playable extends Creature
 				int msg_id = isPlayer() ? SystemMessage.ATTENTION_S1_PICKED_UP_S2 : SystemMessage.ATTENTION_S1_PET_PICKED_UP__S2_S3;
 				msg = new SystemMessage(msg_id).addString(player_name).addItemName(item.getItemId());
 			}
+			
 			player.broadcastPacket(msg);
 		}
 	}
@@ -751,6 +850,7 @@ public abstract class Playable extends Creature
 		{
 			setPendingRevive(false);
 			setNonAggroTime(System.currentTimeMillis() + Config.NONAGGRO_TIME_ONTELEPORT);
+			
 			if (isSalvation())
 			{
 				for (Effect e : getEffectList().getAllEffects())
@@ -761,6 +861,7 @@ public abstract class Playable extends Creature
 						break;
 					}
 				}
+				
 				setCurrentHp(getMaxHp(), true);
 				setCurrentMp(getMaxMp());
 				setCurrentCp(getMaxCp());
@@ -771,12 +872,15 @@ public abstract class Playable extends Creature
 				{
 					setCurrentCp(getMaxCp() * Config.RESPAWN_RESTORE_CP);
 				}
+				
 				setCurrentHp(Math.max(1, getMaxHp() * Config.RESPAWN_RESTORE_HP), true);
+				
 				if (Config.RESPAWN_RESTORE_MP >= 0)
 				{
 					setCurrentMp(getMaxMp() * Config.RESPAWN_RESTORE_MP);
 				}
 			}
+			
 			broadcastPacket(new Revive(this));
 		}
 		else

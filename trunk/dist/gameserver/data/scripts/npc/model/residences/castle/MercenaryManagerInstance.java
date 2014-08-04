@@ -22,7 +22,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class MercenaryManagerInstance extends MerchantInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	

@@ -74,6 +74,7 @@ public final class FuncTemplate
 		_stat = stat;
 		_order = order;
 		_value = value;
+		
 		try
 		{
 			_func = Class.forName("lineage2.gameserver.stats.funcs.Func" + func);
@@ -101,10 +102,12 @@ public final class FuncTemplate
 		try
 		{
 			Func f = (Func) _constructor.newInstance(_stat, _order, owner, _value);
+			
 			if (_applyCond != null)
 			{
 				f.setCondition(_applyCond);
 			}
+			
 			return f;
 		}
 		catch (IllegalAccessException e)

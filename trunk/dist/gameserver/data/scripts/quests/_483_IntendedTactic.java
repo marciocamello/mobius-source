@@ -75,12 +75,14 @@ public class _483_IntendedTactic extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("33357-08.htm"))
 		{
 			st.setState(STARTED);
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return htmltext;
 	}
 	
@@ -91,6 +93,7 @@ public class _483_IntendedTactic extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == CON1)
 		{
 			if (st.getState() == CREATED)
@@ -105,6 +108,7 @@ public class _483_IntendedTactic extends Quest implements ScriptFile
 					st.exitCurrentQuest(true);
 				}
 			}
+			
 			if (st.getState() == STARTED)
 			{
 				if (cond == 1)
@@ -134,11 +138,13 @@ public class _483_IntendedTactic extends Quest implements ScriptFile
 					}
 				}
 			}
+			
 			if (st.getState() == COMPLETED)
 			{
 				htmltext = "33357-03.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -147,12 +153,14 @@ public class _483_IntendedTactic extends Quest implements ScriptFile
 	{
 		npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (cond == 1)
 		{
 			if ((ArrayUtils.contains(CON5, npc.getNpcId())) && (Rnd.chance(25)))
 			{
 				st.giveItems(CON2, 1);
 				st.playSound("SOUND_ITEMGET");
+				
 				if (st.getQuestItemsCount(CON2) >= 10L)
 				{
 					st.setCond(2);
@@ -179,6 +187,7 @@ public class _483_IntendedTactic extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 }

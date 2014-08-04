@@ -53,9 +53,11 @@ public class MonsterWarrior extends Fighter
 	private boolean startAttack()
 	{
 		NpcInstance actor = getActor();
+		
 		if (target == null)
 		{
 			List<Creature> around = actor.getAroundCharacters(3000, 150);
+			
 			if ((around != null) && !around.isEmpty())
 			{
 				for (Creature obj : around)
@@ -92,6 +94,7 @@ public class MonsterWarrior extends Fighter
 		{
 			return false;
 		}
+		
 		if (target.isPlayer())
 		{
 			return true;
@@ -101,11 +104,13 @@ public class MonsterWarrior extends Fighter
 		{
 			NpcInstance npc = (NpcInstance) target;
 			int _id = npc.getNpcId();
+			
 			if ((_id == 27430) || (_id == 27431) || (_id == 27432) || (_id == 27433) || (_id == 27434) || (_id == 27425) || (_id == 33416))
 			{
 				return false;
 			}
 		}
+		
 		return true;
 	}
 }

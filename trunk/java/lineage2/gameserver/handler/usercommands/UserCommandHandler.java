@@ -74,6 +74,7 @@ public class UserCommandHandler extends AbstractHolder
 	public void registerUserCommandHandler(IUserCommandHandler handler)
 	{
 		int[] ids = handler.getUserCommandList();
+		
 		for (int element : ids)
 		{
 			_datatable.put(element, handler);

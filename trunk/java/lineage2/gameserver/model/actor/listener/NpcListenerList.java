@@ -58,6 +58,7 @@ public class NpcListenerList extends CharListenerList
 				}
 			}
 		}
+		
 		if (!getListeners().isEmpty())
 		{
 			for (Listener<Creature> listener : getListeners())
@@ -85,6 +86,7 @@ public class NpcListenerList extends CharListenerList
 				}
 			}
 		}
+		
 		if (!getListeners().isEmpty())
 		{
 			for (Listener<Creature> listener : getListeners())

@@ -53,27 +53,34 @@ public class RequestConfirmRefinerItem extends AbstractRefinePacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
 		ItemInstance refinerItem = activeChar.getInventory().getItemByObjectId(_refinerItemObjId);
+		
 		if ((targetItem == null) || (refinerItem == null))
 		{
 			activeChar.sendPacket(Msg.THIS_IS_NOT_A_SUITABLE_ITEM);
 			return;
 		}
+		
 		LifeStoneInfo lsi = LifeStoneManager.getStoneInfo(refinerItem.getItemId());
+		
 		if (lsi == null)
 		{
 			return;
 		}
+		
 		if (!isValid(activeChar, targetItem, refinerItem))
 		{
 			activeChar.sendPacket(Msg.THIS_IS_NOT_A_SUITABLE_ITEM);
 			return;
 		}
+		
 		final int refinerItemId = refinerItem.getItemId();
 		final Grade grade = targetItem.getTemplate().getItemGrade();
 		final int gemStoneId = getGemStoneId(grade);

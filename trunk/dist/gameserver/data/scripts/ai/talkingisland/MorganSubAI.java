@@ -65,6 +65,7 @@ public class MorganSubAI extends DefaultAI
 		{
 			startMoveTask();
 		}
+		
 		return true;
 	}
 	
@@ -75,10 +76,12 @@ public class MorganSubAI extends DefaultAI
 	protected void onEvtArrived()
 	{
 		startMoveTask();
+		
 		if (Rnd.chance(52))
 		{
 			sayRndMsg();
 		}
+		
 		super.onEvtArrived();
 	}
 	
@@ -88,10 +91,12 @@ public class MorganSubAI extends DefaultAI
 	private void startMoveTask()
 	{
 		_lastPoint++;
+		
 		if (_lastPoint >= _points.length)
 		{
 			_lastPoint = 0;
 		}
+		
 		addTaskMove(_points[_lastPoint], false);
 		doTask();
 	}
@@ -102,32 +107,41 @@ public class MorganSubAI extends DefaultAI
 	private void sayRndMsg()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		NpcString ns;
+		
 		switch (Rnd.get(6))
 		{
 			case 1:
 				ns = NpcString.DON_T_GO_HUNTING_WITHOUT_SOULSHOT;
 				break;
+			
 			case 2:
 				ns = NpcString.BELOW_LEVEL_75_BE_SURE_TO_RECEIVE_NEWBIE_BUFFS;
 				break;
+			
 			case 3:
 				ns = NpcString.DON_T_GO_HUNTING_WITHOUT_SOULSHOT;
 				break;
+			
 			case 4:
 				ns = NpcString.BELOW_LEVEL_75_BE_SURE_TO_RECEIVE_NEWBIE_BUFFS;
 				break;
+			
 			case 5:
 				ns = NpcString.DON_T_GO_HUNTING_WITHOUT_SOULSHOT;
 				break;
+			
 			default:
 				ns = NpcString.BELOW_LEVEL_75_BE_SURE_TO_RECEIVE_NEWBIE_BUFFS;
 				break;
 		}
+		
 		Functions.npcSay(actor, ns);
 	}
 	

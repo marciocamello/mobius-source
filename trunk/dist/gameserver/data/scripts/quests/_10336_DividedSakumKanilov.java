@@ -54,6 +54,7 @@ public class _10336_DividedSakumKanilov extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -61,6 +62,7 @@ public class _10336_DividedSakumKanilov extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "0-3.htm";
 		}
+		
 		if (event.equalsIgnoreCase("qet_rev"))
 		{
 			htmltext = "1-3.htm";
@@ -71,6 +73,7 @@ public class _10336_DividedSakumKanilov extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -80,6 +83,7 @@ public class _10336_DividedSakumKanilov extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == jena)
 		{
 			if (st.isCompleted())
@@ -128,6 +132,7 @@ public class _10336_DividedSakumKanilov extends Quest implements ScriptFile
 				htmltext = "1-1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -135,9 +140,11 @@ public class _10336_DividedSakumKanilov extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		if ((npcId == kanilov) && (st.getCond() == 1))
 		{
 			++killedkanilov;
+			
 			if (killedkanilov >= 1)
 			{
 				st.setCond(2);
@@ -145,6 +152,7 @@ public class _10336_DividedSakumKanilov extends Quest implements ScriptFile
 				killedkanilov = 0;
 			}
 		}
+		
 		return null;
 	}
 }

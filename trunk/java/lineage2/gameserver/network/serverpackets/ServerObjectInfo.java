@@ -102,20 +102,16 @@ public class ServerObjectInfo extends L2GameServerPacket
 		writeD(0); // Max HP
 		writeD(7); // Color
 		writeD(0x00);
-		
 		writeD(categoryId);
 		writeD(0x00);
 		writeD(0x00); // Social ID
 		writeD(0x00); // Social frame
-		
 		writeD(classId);
 		writeD(raceId);
 		writeD(sex);
-		
 		writeD(hairstyle);
 		writeD(haircolor);
 		writeD(face);
-		
 		writeD(necklace);
 		writeD(head);
 		writeD(rhand);

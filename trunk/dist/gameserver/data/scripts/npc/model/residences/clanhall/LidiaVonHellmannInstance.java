@@ -32,7 +32,7 @@ import npc.model.residences.SiegeGuardInstance;
 public class LidiaVonHellmannInstance extends SiegeGuardInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -54,10 +54,12 @@ public class LidiaVonHellmannInstance extends SiegeGuardInstance
 	public void onDeath(Creature killer)
 	{
 		SiegeEvent<?, ?> siegeEvent = getEvent(SiegeEvent.class);
+		
 		if (siegeEvent == null)
 		{
 			return;
 		}
+		
 		siegeEvent.processStep(getMostDamagedClan());
 		super.onDeath(killer);
 	}
@@ -71,10 +73,12 @@ public class LidiaVonHellmannInstance extends SiegeGuardInstance
 		ClanHallSiegeEvent siegeEvent = getEvent(ClanHallSiegeEvent.class);
 		Player temp = null;
 		Map<Player, Integer> damageMap = new HashMap<>();
+		
 		for (AggroList.HateInfo info : getAggroList().getPlayableMap().values())
 		{
 			Playable killer = (Playable) info.attacker;
 			int damage = info.damage;
+			
 			if (killer.isPet() || killer.isServitor())
 			{
 				temp = killer.getPlayer();
@@ -83,10 +87,12 @@ public class LidiaVonHellmannInstance extends SiegeGuardInstance
 			{
 				temp = (Player) killer;
 			}
+			
 			if ((temp == null) || (siegeEvent.getSiegeClan(SiegeEvent.ATTACKERS, temp.getClan()) == null))
 			{
 				continue;
 			}
+			
 			if (!damageMap.containsKey(temp))
 			{
 				damageMap.put(temp, damage);
@@ -97,18 +103,22 @@ public class LidiaVonHellmannInstance extends SiegeGuardInstance
 				damageMap.put(temp, dmg);
 			}
 		}
+		
 		int mostDamage = 0;
 		Player player = null;
+		
 		for (Map.Entry<Player, Integer> entry : damageMap.entrySet())
 		{
 			int damage = entry.getValue();
 			Player t = entry.getKey();
+			
 			if (damage > mostDamage)
 			{
 				mostDamage = damage;
 				player = t;
 			}
 		}
+		
 		return player == null ? null : player.getClan();
 	}
 	

@@ -84,11 +84,13 @@ public final class ArmorSet
 		_gloves.addAll(parseItemIDs(gloves));
 		_feet.addAll(parseItemIDs(feet));
 		_shield.addAll(parseItemIDs(shield));
+		
 		if (shield_skills != null)
 		{
 			for (String skill : shield_skills)
 			{
 				StringTokenizer st = new StringTokenizer(skill, "-");
+				
 				if (st.hasMoreTokens())
 				{
 					int skillId = Integer.parseInt(st.nextToken());
@@ -97,11 +99,13 @@ public final class ArmorSet
 				}
 			}
 		}
+		
 		if (enchant6skills != null)
 		{
 			for (String skill : enchant6skills)
 			{
 				StringTokenizer st = new StringTokenizer(skill, "-");
+				
 				if (st.hasMoreTokens())
 				{
 					int skillId = Integer.parseInt(st.nextToken());
@@ -120,17 +124,20 @@ public final class ArmorSet
 	private static int[] parseItemIDs(String[] items)
 	{
 		TIntHashSet result = new TIntHashSet();
+		
 		if (items != null)
 		{
 			for (String s_id : items)
 			{
 				int id = Integer.parseInt(s_id);
+				
 				if (id > 0)
 				{
 					result.add(id);
 				}
 			}
 		}
+		
 		return result.toArray();
 	}
 	
@@ -142,11 +149,13 @@ public final class ArmorSet
 	public void addSkills(int partsCount, String[] skills)
 	{
 		List<Skill> skillList = new ArrayList<>();
+		
 		if (skills != null)
 		{
 			for (String skill : skills)
 			{
 				StringTokenizer st = new StringTokenizer(skill, "-");
+				
 				if (st.hasMoreTokens())
 				{
 					int skillId = Integer.parseInt(st.nextToken());
@@ -155,6 +164,7 @@ public final class ArmorSet
 				}
 			}
 		}
+		
 		_skills.put(partsCount, skillList);
 	}
 	
@@ -176,26 +186,32 @@ public final class ArmorSet
 		int head = 0;
 		int gloves = 0;
 		int feet = 0;
+		
 		if (chestItem != null)
 		{
 			chest = chestItem.getItemId();
 		}
+		
 		if (legsItem != null)
 		{
 			legs = legsItem.getItemId();
 		}
+		
 		if (headItem != null)
 		{
 			head = headItem.getItemId();
 		}
+		
 		if (glovesItem != null)
 		{
 			gloves = glovesItem.getItemId();
 		}
+		
 		if (feetItem != null)
 		{
 			feet = feetItem.getItemId();
 		}
+		
 		return containAll(chest, legs, head, gloves, feet);
 	}
 	
@@ -214,22 +230,27 @@ public final class ArmorSet
 		{
 			return false;
 		}
+		
 		if (!_legs.isEmpty() && !_legs.contains(legs))
 		{
 			return false;
 		}
+		
 		if (!_head.isEmpty() && !_head.contains(head))
 		{
 			return false;
 		}
+		
 		if (!_gloves.isEmpty() && !_gloves.contains(gloves))
 		{
 			return false;
 		}
+		
 		if (!_feet.isEmpty() && !_feet.contains(feet))
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -245,14 +266,19 @@ public final class ArmorSet
 		{
 			case Inventory.PAPERDOLL_CHEST:
 				return _chests.contains(itemId);
+				
 			case Inventory.PAPERDOLL_LEGS:
 				return _legs.contains(itemId);
+				
 			case Inventory.PAPERDOLL_HEAD:
 				return _head.contains(itemId);
+				
 			case Inventory.PAPERDOLL_GLOVES:
 				return _gloves.contains(itemId);
+				
 			case Inventory.PAPERDOLL_FEET:
 				return _feet.contains(itemId);
+				
 			default:
 				return false;
 		}
@@ -276,47 +302,59 @@ public final class ArmorSet
 		int head = 0;
 		int gloves = 0;
 		int feet = 0;
+		
 		if (chestItem != null)
 		{
 			chest = chestItem.getItemId();
 		}
+		
 		if (legsItem != null)
 		{
 			legs = legsItem.getItemId();
 		}
+		
 		if (headItem != null)
 		{
 			head = headItem.getItemId();
 		}
+		
 		if (glovesItem != null)
 		{
 			gloves = glovesItem.getItemId();
 		}
+		
 		if (feetItem != null)
 		{
 			feet = feetItem.getItemId();
 		}
+		
 		int result = 0;
+		
 		if (!_chests.isEmpty() && _chests.contains(chest))
 		{
 			result++;
 		}
+		
 		if (!_legs.isEmpty() && _legs.contains(legs))
 		{
 			result++;
 		}
+		
 		if (!_head.isEmpty() && _head.contains(head))
 		{
 			result++;
 		}
+		
 		if (!_gloves.isEmpty() && _gloves.contains(gloves))
 		{
 			result++;
 		}
+		
 		if (!_feet.isEmpty() && _feet.contains(feet))
 		{
 			result++;
 		}
+		
 		return result;
 	}
 	
@@ -331,6 +369,7 @@ public final class ArmorSet
 		{
 			return new ArrayList<>();
 		}
+		
 		return _skills.get(partsCount);
 	}
 	
@@ -341,9 +380,11 @@ public final class ArmorSet
 	public List<Skill> getSkillsToRemove()
 	{
 		List<Skill> result = new ArrayList<>();
+		
 		for (int i : _skills.keys())
 		{
 			List<Skill> skills = _skills.get(i);
+			
 			if (skills != null)
 			{
 				for (Skill skill : skills)
@@ -352,6 +393,7 @@ public final class ArmorSet
 				}
 			}
 		}
+		
 		return result;
 	}
 	
@@ -382,10 +424,12 @@ public final class ArmorSet
 	{
 		Inventory inv = player.getInventory();
 		ItemInstance shieldItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+		
 		if ((shieldItem != null) && _shield.contains(shieldItem.getItemId()))
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -400,6 +444,7 @@ public final class ArmorSet
 		{
 			return false;
 		}
+		
 		return _shield.contains(shield_id);
 	}
 	
@@ -414,32 +459,39 @@ public final class ArmorSet
 		{
 			return false;
 		}
+		
 		Inventory inv = player.getInventory();
 		ItemInstance chestItem = inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST);
 		ItemInstance legsItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LEGS);
 		ItemInstance headItem = inv.getPaperdollItem(Inventory.PAPERDOLL_HEAD);
 		ItemInstance glovesItem = inv.getPaperdollItem(Inventory.PAPERDOLL_GLOVES);
 		ItemInstance feetItem = inv.getPaperdollItem(Inventory.PAPERDOLL_FEET);
+		
 		if (!_chests.isEmpty() && (chestItem.getEnchantLevel() < 6))
 		{
 			return false;
 		}
+		
 		if (!_legs.isEmpty() && (legsItem.getEnchantLevel() < 6))
 		{
 			return false;
 		}
+		
 		if (!_gloves.isEmpty() && (glovesItem.getEnchantLevel() < 6))
 		{
 			return false;
 		}
+		
 		if (!_head.isEmpty() && (headItem.getEnchantLevel() < 6))
 		{
 			return false;
 		}
+		
 		if (!_feet.isEmpty() && (feetItem.getEnchantLevel() < 6))
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	

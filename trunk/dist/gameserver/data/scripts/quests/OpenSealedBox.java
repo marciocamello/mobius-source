@@ -43,35 +43,44 @@ public class OpenSealedBox
 	public OpenSealedBox(QuestState st, int count)
 	{
 		this.st = st;
+		
 		if (count < 1)
 		{
 			return;
 		}
+		
 		takecount = count;
+		
 		if (st.getQuestItemsCount(_620_FourGoblets.Sealed_Box) < count)
 		{
 			result = count == 1 ? "I don't see a box... Come back when you find one!" : "I don't see enougth boxes... Come back when you find enougth!";
 			return;
 		}
+		
 		int not_disintegrated = 0;
+		
 		for (int i = 0; i < count; i++)
 		{
 			not_disintegrated += Rnd.get(2);
 		}
+		
 		if (not_disintegrated == 0)
 		{
 			result = count == 1 ? "I'm so sorry! The box just disintegrated!" : "I'm so sorry! The boxes just disintegrated!";
 			return;
 		}
+		
 		for (int i = 0; i < not_disintegrated; i++)
 		{
 			rewardgroups[Rnd.get(rewardgroups.length)].apply(rewards);
 		}
+		
 		if (rewards.size() == 0)
 		{
 			result = count == 1 ? "Hmm. The box is empty." : "Hmm. All boxes is empty.";
 			return;
 		}
+		
 		result = "Wow! Something came out of it!";
 	}
 	
@@ -83,12 +92,15 @@ public class OpenSealedBox
 			{
 				return "You haven't enougth free slots in your inventory.";
 			}
+			
 			st.takeItems(_620_FourGoblets.Sealed_Box, takecount);
+			
 			for (Integer itemId : rewards.keySet())
 			{
 				st.giveItems(itemId, rewards.get(itemId), false);
 			}
 		}
+		
 		rewards.clear();
 		return result;
 	}
@@ -96,14 +108,17 @@ public class OpenSealedBox
 	private boolean canGiveReward()
 	{
 		int FreeInvSlots = st.getPlayer().getInventoryLimit() - st.getPlayer().getInventory().getSize();
+		
 		for (Integer itemId : rewards.keySet())
 		{
 			ItemInstance item = st.getPlayer().getInventory().getItemByItemId(itemId);
+			
 			if ((item == null) || !item.isStackable())
 			{
 				FreeInvSlots--;
 			}
 		}
+		
 		return FreeInvSlots > 0;
 	}
 	
@@ -117,6 +132,7 @@ public class OpenSealedBox
 			{
 				count += rewards.remove(item_id);
 			}
+			
 			rewards.put(item_id, count);
 		}
 	}
@@ -138,6 +154,7 @@ public class OpenSealedBox
 			if (Rnd.chance(84.8))
 			{
 				int i1 = Rnd.get(1000);
+				
 				if (i1 < 43)
 				{
 					putReward(rewards, 1884, 42);
@@ -179,9 +196,11 @@ public class OpenSealedBox
 					putReward(rewards, 4043, 1);
 				}
 			}
+			
 			if (Rnd.chance(32.3))
 			{
 				int i1 = Rnd.get(1000);
+				
 				if (i1 < 335)
 				{
 					putReward(rewards, 1888, 1);
@@ -222,6 +241,7 @@ public class OpenSealedBox
 			if (Rnd.chance(84.7))
 			{
 				int i1 = Rnd.get(1000);
+				
 				if (i1 < 148)
 				{
 					putReward(rewards, 1878, 8);
@@ -263,9 +283,11 @@ public class OpenSealedBox
 					putReward(rewards, 4044, 1);
 				}
 			}
+			
 			if (Rnd.chance(25.1))
 			{
 				int i1 = Rnd.get(1000);
+				
 				if (i1 < 350)
 				{
 					putReward(rewards, 1887, 1);
@@ -306,6 +328,7 @@ public class OpenSealedBox
 			if (Rnd.chance(3.1))
 			{
 				int i1 = Rnd.get(1000);
+				
 				if (i1 < 223)
 				{
 					putReward(rewards, 730, 1);
@@ -319,9 +342,11 @@ public class OpenSealedBox
 					putReward(rewards, 960, 1);
 				}
 			}
+			
 			if (Rnd.chance(0.5))
 			{
 				int i1 = Rnd.get(1000);
+				
 				if (i1 < 202)
 				{
 					putReward(rewards, 729, 1);
@@ -346,6 +371,7 @@ public class OpenSealedBox
 			if (Rnd.chance(32.9))
 			{
 				int i1 = Rnd.get(1000);
+				
 				if (i1 < 88)
 				{
 					putReward(rewards, 6698, 1);
@@ -415,9 +441,11 @@ public class OpenSealedBox
 					putReward(rewards, 6714, 1);
 				}
 			}
+			
 			if (Rnd.chance(5.4))
 			{
 				int i1 = Rnd.get(1000);
+				
 				if (i1 < 100)
 				{
 					putReward(rewards, 6688, 1);

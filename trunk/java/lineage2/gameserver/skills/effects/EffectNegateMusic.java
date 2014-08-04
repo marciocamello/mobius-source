@@ -63,6 +63,7 @@ public class EffectNegateMusic extends Effect
 				e.exit();
 			}
 		}
+		
 		return false;
 	}
 }

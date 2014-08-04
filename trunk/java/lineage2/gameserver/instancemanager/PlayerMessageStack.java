@@ -46,6 +46,7 @@ public class PlayerMessageStack
 		{
 			_instance = new PlayerMessageStack();
 		}
+		
 		return _instance;
 	}
 	
@@ -64,14 +65,17 @@ public class PlayerMessageStack
 	public void mailto(int char_obj_id, L2GameServerPacket message)
 	{
 		Player cha = GameObjectsStorage.getPlayer(char_obj_id);
+		
 		if (cha != null)
 		{
 			cha.sendPacket(message);
 			return;
 		}
+		
 		synchronized (_stack)
 		{
 			List<L2GameServerPacket> messages;
+			
 			if (_stack.containsKey(char_obj_id))
 			{
 				messages = _stack.remove(char_obj_id);
@@ -80,6 +84,7 @@ public class PlayerMessageStack
 			{
 				messages = new ArrayList<>();
 			}
+			
 			messages.add(message);
 			_stack.put(char_obj_id, messages);
 		}
@@ -98,12 +103,15 @@ public class PlayerMessageStack
 			{
 				return;
 			}
+			
 			messages = _stack.remove(cha.getObjectId());
 		}
+		
 		if ((messages == null) || (messages.size() == 0))
 		{
 			return;
 		}
+		
 		for (L2GameServerPacket message : messages)
 		{
 			cha.sendPacket(message);

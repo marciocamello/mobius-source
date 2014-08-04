@@ -86,11 +86,13 @@ public class PetSkillsTable
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM pets_skills ORDER BY templateId");
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				npcId = rset.getInt("templateId");
@@ -98,10 +100,12 @@ public class PetSkillsTable
 				lvl = rset.getInt("skillLvl");
 				minLvl = rset.getInt("minLvl");
 				List<SkillLearn> list = _skillTrees.get(npcId);
+				
 				if (list == null)
 				{
 					_skillTrees.put(npcId, list = new ArrayList<>());
 				}
+				
 				SkillLearn skillLearn = new SkillLearn(id, lvl, minLvl, 0, 0, 0, false, false, null, new HashMap<Integer, Long>(), new ArrayList<Integer>());
 				list.add(skillLearn);
 				count++;
@@ -127,22 +131,27 @@ public class PetSkillsTable
 	public int getAvailableLevel(Summon cha, int skillId)
 	{
 		List<SkillLearn> skills = _skillTrees.get(cha.getNpcId());
+		
 		if (skills == null)
 		{
 			return 0;
 		}
+		
 		int lvl = 0;
+		
 		for (SkillLearn temp : skills)
 		{
 			if (temp.getId() != skillId)
 			{
 				continue;
 			}
+			
 			if (temp.getLevel() == 0)
 			{
 				if (cha.getLevel() < 70)
 				{
 					lvl = cha.getLevel() / 10;
+					
 					if (lvl <= 0)
 					{
 						lvl = 1;
@@ -152,11 +161,14 @@ public class PetSkillsTable
 				{
 					lvl = 7 + ((cha.getLevel() - 70) / 5);
 				}
+				
 				int maxLvl = SkillTable.getInstance().getMaxLevel(temp.getId());
+				
 				if (lvl > maxLvl)
 				{
 					lvl = maxLvl;
 				}
+				
 				break;
 			}
 			else if (temp.getMinLevel() <= cha.getLevel())
@@ -167,6 +179,7 @@ public class PetSkillsTable
 				}
 			}
 		}
+		
 		return lvl;
 	}
 }

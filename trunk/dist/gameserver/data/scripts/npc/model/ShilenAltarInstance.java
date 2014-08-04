@@ -15,7 +15,7 @@ public final class ShilenAltarInstance extends NpcInstance
 {
 	private static final long serialVersionUID = 1L;
 	/**
-	 * 
+	 *
 	 */
 	// private static final int DoorEnter1 = 25180001;
 	// private static final int DoorEnter2 = 25180002;
@@ -49,7 +49,6 @@ public final class ShilenAltarInstance extends NpcInstance
 		}
 		else if (command.startsWith("start2"))
 		{
-			
 			for (Player party : GameObjectsStorage.getAllPlayersForIterate())
 			{
 				party.unsetVar("Altar1");
@@ -65,7 +64,6 @@ public final class ShilenAltarInstance extends NpcInstance
 				party.setVar("Altar3", "true", -1);
 				party.teleToLocation(FLOOR3, player.getReflection());
 			}
-			
 		}
 		else if (command.startsWith("exit"))
 		{
@@ -86,14 +84,17 @@ public final class ShilenAltarInstance extends NpcInstance
 	{
 		NpcHtmlMessage htmlMessage = new NpcHtmlMessage(getObjectId());
 		htmlMessage.setFile("default/33785.htm");
+		
 		if (player.getVar("Altar1") != null)
 		{
 			htmlMessage.setFile("default/33785-2.htm");
 		}
+		
 		if (player.getVar("Altar2") != null)
 		{
 			htmlMessage.setFile("default/33785-3.htm");
 		}
+		
 		if (player.getVar("Altar3") != null)
 		{
 			htmlMessage.setFile("default/33785-e.htm");

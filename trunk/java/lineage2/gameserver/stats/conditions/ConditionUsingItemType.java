@@ -47,6 +47,7 @@ public final class ConditionUsingItemType extends Condition
 		{
 			return false;
 		}
+		
 		return (_mask & ((Playable) env.character).getWearedMask()) != 0;
 	}
 }

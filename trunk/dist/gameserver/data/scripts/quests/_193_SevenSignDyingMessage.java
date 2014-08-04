@@ -51,6 +51,7 @@ public class _193_SevenSignDyingMessage extends Quest implements ScriptFile
 	{
 		Player player = st.getPlayer();
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("30191-02.htm"))
 		{
 			st.setCond(1);
@@ -105,6 +106,7 @@ public class _193_SevenSignDyingMessage extends Quest implements ScriptFile
 			st.takeItems(SculptureofDoubt, -1);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return htmltext;
 	}
 	
@@ -115,6 +117,7 @@ public class _193_SevenSignDyingMessage extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int id = st.getState();
 		Player player = st.getPlayer();
+		
 		if (npcId == Hollint)
 		{
 			if (id == CREATED)
@@ -124,12 +127,15 @@ public class _193_SevenSignDyingMessage extends Quest implements ScriptFile
 					st.exitCurrentQuest(true);
 					return "30191-00.htm";
 				}
+				
 				QuestState qs = player.getQuestState(_192_SevenSignSeriesOfDoubt.class);
+				
 				if ((qs == null) || !qs.isCompleted())
 				{
 					st.exitCurrentQuest(true);
 					return "noquest";
 				}
+				
 				return "30191-01.htm";
 			}
 			else if (cond == 1)
@@ -155,10 +161,12 @@ public class _193_SevenSignDyingMessage extends Quest implements ScriptFile
 			{
 				Integer obj_id = spawns.get(player.getObjectId());
 				NpcInstance mob = obj_id != null ? GameObjectsStorage.getNpc(obj_id) : null;
+				
 				if ((mob == null) || mob.isDead())
 				{
 					return "32569-08.htm";
 				}
+				
 				return "32569-09.htm";
 			}
 			else if (cond == 5)
@@ -188,6 +196,7 @@ public class _193_SevenSignDyingMessage extends Quest implements ScriptFile
 				return "30760-01.htm";
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -197,13 +206,16 @@ public class _193_SevenSignDyingMessage extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
+		
 		if (player == null)
 		{
 			return null;
 		}
+		
 		if ((npcId == ShilensEvilThoughts) && (cond == 4))
 		{
 			Integer obj_id = spawns.get(player.getObjectId());
+			
 			if ((obj_id != null) && (obj_id.intValue() == npc.getObjectId()))
 			{
 				spawns.remove(player.getObjectId());
@@ -212,6 +224,7 @@ public class _193_SevenSignDyingMessage extends Quest implements ScriptFile
 				st.giveItems(SculptureofDoubt, 1);
 			}
 		}
+		
 		return null;
 	}
 	

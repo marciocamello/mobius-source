@@ -93,6 +93,7 @@ public class CommandChannel implements PlayerGroup
 		for (Player $member : party)
 		{
 			$member.sendPacket(ExMPCCOpen.STATIC);
+			
 			if (_matchingRoom != null)
 			{
 				_matchingRoom.broadcastPlayerUpdate($member);
@@ -111,6 +112,7 @@ public class CommandChannel implements PlayerGroup
 		party.setCommandChannel(null);
 		party.broadCast(ExMPCCClose.STATIC);
 		Reflection reflection = getReflection();
+		
 		if (reflection != null)
 		{
 			for (Player player : party.getPartyMembers())
@@ -128,6 +130,7 @@ public class CommandChannel implements PlayerGroup
 			for (Player $member : party)
 			{
 				$member.sendPacket(new ExMPCCPartyInfoUpdate(party, 0));
+				
 				if (_matchingRoom != null)
 				{
 					_matchingRoom.broadcastPlayerUpdate($member);
@@ -142,16 +145,20 @@ public class CommandChannel implements PlayerGroup
 	public void disbandChannel()
 	{
 		broadCast(Msg.THE_COMMAND_CHANNEL_HAS_BEEN_DISBANDED);
+		
 		for (Party party : _commandChannelParties)
 		{
 			party.setCommandChannel(null);
 			party.broadCast(ExMPCCClose.STATIC);
+			
 			if (isInReflection())
 			{
 				party.broadCast(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(1));
 			}
 		}
+		
 		Reflection reflection = getReflection();
+		
 		if (reflection != null)
 		{
 			reflection.startCollapseTimer(60000L);
@@ -162,6 +169,7 @@ public class CommandChannel implements PlayerGroup
 		{
 			_matchingRoom.disband();
 		}
+		
 		_commandChannelParties.clear();
 		_commandChannelLeader = null;
 	}
@@ -173,10 +181,12 @@ public class CommandChannel implements PlayerGroup
 	public int getMemberCount()
 	{
 		int count = 0;
+		
 		for (Party party : _commandChannelParties)
 		{
 			count += party.getMemberCount();
 		}
+		
 		return count;
 	}
 	
@@ -203,6 +213,7 @@ public class CommandChannel implements PlayerGroup
 		for (Party party : _commandChannelParties)
 		{
 			Player leader = party.getPartyLeader();
+			
 			if (leader != null)
 			{
 				leader.sendPacket(gsp);
@@ -223,14 +234,15 @@ public class CommandChannel implements PlayerGroup
 	 * Method getMembers.
 	 * @return List<Player>
 	 */
-	@Deprecated
 	public List<Player> getMembers()
 	{
 		List<Player> members = new ArrayList<>(_commandChannelParties.size());
+		
 		for (Party party : getParties())
 		{
 			members.addAll(party.getPartyMembers());
 		}
+		
 		return members;
 	}
 	
@@ -242,10 +254,12 @@ public class CommandChannel implements PlayerGroup
 	public Iterator<Player> iterator()
 	{
 		List<Iterator<Player>> iterators = new ArrayList<>(_commandChannelParties.size());
+		
 		for (Party p : getParties())
 		{
 			iterators.add(p.getPartyMembers().iterator());
 		}
+		
 		return new JoinedIterator<>(iterators);
 	}
 	
@@ -288,7 +302,9 @@ public class CommandChannel implements PlayerGroup
 		{
 			return false;
 		}
+		
 		int npcId = npc.getNpcId();
+		
 		switch (npcId)
 		{
 			case 29001: // Queen Ant
@@ -296,12 +312,16 @@ public class CommandChannel implements PlayerGroup
 			case 29014: // Orfen
 			case 29022: // Zaken
 				return getMemberCount() > 36;
+				
 			case 29020: // Baium
 				return getMemberCount() > 56;
+				
 			case 29019: // Antharas
 				return getMemberCount() > 225;
+				
 			case 29028: // Valakas
 				return getMemberCount() > 99;
+				
 			default: // normal Raidboss
 				return getMemberCount() > 18;
 		}
@@ -313,6 +333,7 @@ public class CommandChannel implements PlayerGroup
 	private void refreshLevel()
 	{
 		_commandChannelLvl = 0;
+		
 		for (Party pty : _commandChannelParties)
 		{
 			if (pty.getLevel() > _commandChannelLvl)
@@ -363,7 +384,6 @@ public class CommandChannel implements PlayerGroup
 		}
 		
 		boolean haveSkill = creator.getSkillLevel(CLAN_IMPERIUM_ID) > 0;
-		
 		boolean haveItem = creator.getInventory().getItemByItemId(STRATEGY_GUIDE_ID) != null;
 		
 		if (!haveSkill && !haveItem)

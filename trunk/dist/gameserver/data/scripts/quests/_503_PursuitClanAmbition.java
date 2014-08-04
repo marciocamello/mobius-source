@@ -109,14 +109,17 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 		addTalkId(Cleo);
 		addKillId(ThunderWyrm1, ThunderWyrm2, Drake1, Drake2, BlitzWyrm, SpitefulSoulLeader, GraveGuard, GraveKeymaster, ImperialGravekeeper);
 		addAttackId(ImperialGravekeeper);
+		
 		for (int i = 3839; i <= 3848; i++)
 		{
 			addQuestItem(i);
 		}
+		
 		for (int i = 3866; i <= 3869; i++)
 		{
 			addQuestItem(i);
 		}
+		
 		addQuestItem(Recipe_Spiteful_Soul_Energy, Spiteful_Soul_Energy, Spiteful_Soul_Vengeance);
 	}
 	
@@ -126,6 +129,7 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 		Connection con = null;
 		PreparedStatement offline = null, insertion = null;
 		ResultSet rs = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -133,9 +137,11 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 			insertion = con.prepareStatement("REPLACE INTO character_quests (char_id,name,var,value) VALUES (?,?,?,?)");
 			offline.setInt(1, clan);
 			rs = offline.executeQuery();
+			
 			while (rs.next())
 			{
 				int char_id = rs.getInt("obj_Id");
+				
 				try
 				{
 					insertion.setInt(1, char_id);
@@ -166,6 +172,7 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 		int clan = st.getPlayer().getClan().getClanId();
 		Connection con = null;
 		PreparedStatement offline = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -187,30 +194,37 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 	public Player getLeader(QuestState st)
 	{
 		Player player = st.getPlayer();
+		
 		if (player == null)
 		{
 			return null;
 		}
+		
 		Clan clan = player.getClan();
+		
 		if (clan == null)
 		{
 			return null;
 		}
+		
 		return clan.getLeader().getPlayer();
 	}
 	
 	public int getLeaderVar(QuestState st, String var)
 	{
 		final boolean cond = "cond".equalsIgnoreCase(var);
+		
 		try
 		{
 			Player leader = getLeader(st);
+			
 			if (leader != null)
 			{
 				if (cond)
 				{
 					return leader.getQuestState(getName()).getCond();
 				}
+				
 				return leader.getQuestState(getName()).getInt(var);
 			}
 		}
@@ -218,13 +232,17 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 		{
 			return -1;
 		}
+		
 		Clan clan = st.getPlayer().getClan();
+		
 		if (clan == null)
 		{
 			return -1;
 		}
+		
 		int leaderId = clan.getLeaderId();
 		ResultSet rs = null;
+		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement offline = con.prepareStatement("SELECT value FROM character_quests WHERE char_id=? AND var=? AND name=?");)
 		{
@@ -233,15 +251,19 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 			offline.setString(3, getName());
 			int val = -1;
 			rs = offline.executeQuery();
+			
 			if (rs.next())
 			{
 				val = rs.getInt("value");
+				
 				if (cond && ((val & 0x80000000) != 0))
 				{
 					val &= 0x7fffffff;
+					
 					for (int i = 1; i < 32; i++)
 					{
 						val = (val >> 1);
+						
 						if (val == 0)
 						{
 							return i;
@@ -249,6 +271,7 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 					}
 				}
 			}
+			
 			return val;
 		}
 		catch (Exception e)
@@ -268,11 +291,14 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 	public void setLeaderVar(QuestState st, String var, String value)
 	{
 		Clan clan = st.getPlayer().getClan();
+		
 		if (clan == null)
 		{
 			return;
 		}
+		
 		Player leader = clan.getLeader().getPlayer();
+		
 		if (leader != null)
 		{
 			if ("cond".equalsIgnoreCase(var))
@@ -289,6 +315,7 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 			int leaderId = st.getPlayer().getClan().getLeaderId();
 			Connection con = null;
 			PreparedStatement offline = null;
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
@@ -313,6 +340,7 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 	public boolean checkEggs(QuestState st)
 	{
 		int count = 0;
+		
 		for (int item : EggList)
 		{
 			if (st.getQuestItemsCount(item) > 9)
@@ -320,34 +348,44 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 				count += 1;
 			}
 		}
+		
 		return count > 3;
 	}
 	
 	public void giveItem(int item, long maxcount, QuestState st)
 	{
 		Player player = st.getPlayer();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		Player leader = getLeader(st);
+		
 		if (leader == null)
 		{
 			return;
 		}
+		
 		if (player.getDistance(leader) > Config.ALT_PARTY_DISTRIBUTION_RANGE)
 		{
 			return;
 		}
+		
 		QuestState qs = leader.getQuestState(getClass());
+		
 		if (qs == null)
 		{
 			return;
 		}
+		
 		long count = qs.getQuestItemsCount(item);
+		
 		if (count < maxcount)
 		{
 			qs.giveItems(item, 1);
+			
 			if (count == (maxcount - 1))
 			{
 				qs.playSound(SOUND_MIDDLE);
@@ -376,28 +414,35 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 		{
 			st.exitCurrentQuest(true);
 		}
+		
 		st.takeItems(Scepter_Judgement, -1);
+		
 		try
 		{
 			List<Player> members = st.getPlayer().getClan().getOnlineMembers(0);
+			
 			for (Player player : members)
 			{
 				if (player == null)
 				{
 					continue;
 				}
+				
 				QuestState qs = player.getQuestState(getName());
+				
 				if (qs != null)
 				{
 					qs.exitCurrentQuest(true);
 				}
 			}
+			
 			offlineMemberExit(st);
 		}
 		catch (Exception e)
 		{
 			return "You dont have any members in your Clan, so you can't finish the Pursuit of Aspiration";
 		}
+		
 		return "Congratulations, you have finished the Pursuit of Clan Ambition";
 	}
 	
@@ -405,6 +450,7 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("30760-08.htm"))
 		{
 			st.giveItems(G_Let_Martien, 1);
@@ -443,6 +489,7 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 			st.setCond(2);
 			suscribe_members(st);
 			List<Player> members = st.getPlayer().getClan().getOnlineMembers(st.getPlayer().getObjectId());
+			
 			for (Player player : members)
 			{
 				newQuestState(player, STARTED);
@@ -461,6 +508,7 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("30762-03.htm"))
 		{
 			int lutz = st.getInt("Lutz");
+			
 			if (lutz == 1)
 			{
 				htmltext = "30762-02.htm";
@@ -468,18 +516,21 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 				st.giveItems(Bl_Wyrm_Eggs, 3);
 				st.set("Lutz", "2");
 			}
+			
 			st.addSpawn(BlitzWyrm, npc.getLoc().x, npc.getLoc().y, npc.getLoc().z, Location.getRandomHeading(), 300, 120000);
 			st.addSpawn(BlitzWyrm, npc.getLoc().x, npc.getLoc().y, npc.getLoc().z, Location.getRandomHeading(), 300, 120000);
 		}
 		else if (event.equalsIgnoreCase("30761-03.htm"))
 		{
 			int fritz = st.getInt("Fritz");
+			
 			if (fritz == 1)
 			{
 				htmltext = "30761-02.htm";
 				st.giveItems(Bl_Wyrm_Eggs, 3);
 				st.set("Fritz", "2");
 			}
+			
 			st.addSpawn(BlitzWyrm, npc.getLoc().x, npc.getLoc().y, npc.getLoc().z, Location.getRandomHeading(), 300, 120000);
 			st.addSpawn(BlitzWyrm, npc.getLoc().x, npc.getLoc().y, npc.getLoc().z, Location.getRandomHeading(), 300, 120000);
 		}
@@ -523,16 +574,21 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 		{
 			st.setCond(9);
 			NpcInstance n = st.findTemplate(Cleo);
+			
 			if (n != null)
 			{
 				Functions.npcSay(n, "Blood and Honour");
 			}
+			
 			n = st.findTemplate(Kalis);
+			
 			if (n != null)
 			{
 				Functions.npcSay(n, "Ambition and Power");
 			}
+			
 			n = st.findTemplate(Athrea);
+			
 			if (n != null)
 			{
 				Functions.npcSay(n, "War and Death");
@@ -543,6 +599,7 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 			st.takeItems(Scepter_Judgement, -1);
 			exit503(false, st);
 		}
+		
 		return htmltext;
 	}
 	
@@ -553,6 +610,7 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 		int id = st.getState();
 		String htmltext = "noquest";
 		boolean isLeader = st.getPlayer().isClanLeader();
+		
 		if ((id == CREATED) && (npcId == Gustaf))
 		{
 			if (st.getPlayer().getClan() != null)
@@ -560,6 +618,7 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 				if (isLeader)
 				{
 					int clanLevel = st.getPlayer().getClan().getLevel();
+					
 					if (st.getQuestItemsCount(Proof_Aspiration) > 0)
 					{
 						htmltext = "30760-03.htm";
@@ -586,6 +645,7 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 				htmltext = "30760-01.htm";
 				st.exitCurrentQuest(true);
 			}
+			
 			return htmltext;
 		}
 		else if ((st.getPlayer().getClan() != null) && (st.getPlayer().getClan().getLevel() == 5))
@@ -598,22 +658,27 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 			{
 				st.setCond(1);
 			}
+			
 			if (st.get("Kurtz") == null)
 			{
 				st.set("Kurtz", "1");
 			}
+			
 			if (st.get("Lutz") == null)
 			{
 				st.set("Lutz", "1");
 			}
+			
 			if (st.get("Fritz") == null)
 			{
 				st.set("Fritz", "1");
 			}
+			
 			int cond = st.getCond();
 			int kurtz = st.getInt("Kurtz");
 			int lutz = st.getInt("Lutz");
 			int fritz = st.getInt("Fritz");
+			
 			if (npcId == Gustaf)
 			{
 				if (cond == 1)
@@ -669,6 +734,7 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 					{
 						htmltext = "30645-05.htm";
 						st.setCond(3);
+						
 						for (int item : EggList)
 						{
 							st.takeItems(item, -1);
@@ -826,11 +892,13 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 			{
 				htmltext = "30758-01.htm";
 			}
+			
 			return htmltext;
 		}
 		else
 		{
 			int cond = getLeaderVar(st, "cond");
+			
 			if ((npcId == Martien) && ((cond == 1) || (cond == 2) || (cond == 3)))
 			{
 				htmltext = "30645-01.htm";
@@ -881,6 +949,7 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 					htmltext = "30766-24t.htm";
 				}
 			}
+			
 			return htmltext;
 		}
 	}
@@ -893,20 +962,24 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 			if (Rnd.chance(4))
 			{
 				int ImpGraveKepperStat = getLeaderVar(st, "ImpGraveKeeper");
+				
 				if (ImpGraveKepperStat == 1)
 				{
 					for (int i = 1; i <= 4; i++)
 					{
 						st.addSpawn(27180, 120000);
 					}
+					
 					setLeaderVar(st, "ImpGraveKeeper", "2");
 				}
 				else
 				{
 					List<Player> players = World.getAroundPlayers(npc, 900, 200);
+					
 					if (players.size() > 0)
 					{
 						Player player = players.get(Rnd.get(players.size()));
+						
 						if (player != null)
 						{
 							player.teleToLocation(185462, 20342, -3250);
@@ -915,6 +988,7 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 	
@@ -923,6 +997,7 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = getLeaderVar(st, "cond");
+		
 		switch (cond)
 		{
 			case 2:
@@ -933,30 +1008,40 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 						{
 							giveItem(Th_Wyrm_Eggs, 10, st);
 						}
+						
 						break;
+					
 					case ThunderWyrm2:
 						if (Rnd.chance(15))
 						{
 							giveItem(Th_Wyrm_Eggs, 10, st);
 						}
+						
 						break;
+					
 					case Drake1:
 						if (Rnd.chance(20))
 						{
 							giveItem(Drake_Eggs, 10, st);
 						}
+						
 						break;
+					
 					case Drake2:
 						if (Rnd.chance(25))
 						{
 							giveItem(Drake_Eggs, 10, st);
 						}
+						
 						break;
+					
 					case BlitzWyrm:
 						giveItem(Bl_Wyrm_Eggs, 10, st);
 						break;
 				}
+				
 				break;
+			
 			case 5:
 				if ((npcId == SpitefulSoulLeader) && Rnd.chance(25))
 				{
@@ -966,6 +1051,7 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 						{
 							return null;
 						}
+						
 						giveItem(Spiteful_Soul_Vengeance, 40, st);
 					}
 					else
@@ -973,7 +1059,9 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 						giveItem(Spiteful_Soul_Energy, 10, st);
 					}
 				}
+				
 				break;
+			
 			case 10:
 				switch (npcId)
 				{
@@ -982,21 +1070,27 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 						{
 							st.addSpawn(GraveKeymaster, 120000);
 						}
+						
 						break;
+					
 					case GraveKeymaster:
 						if (Rnd.chance(80))
 						{
 							giveItem(Imp_Keys, 6, st);
 						}
+						
 						break;
+					
 					case ImperialGravekeeper:
 						NpcInstance spawnedNpc = st.addSpawn(Coffer, 120000);
 						Functions.npcSay(spawnedNpc, "Curse of the gods on the one that defiles the property of the empire!");
 						setLeaderVar(st, "ImpGraveKeeper", "3");
 						break;
 				}
+				
 				break;
 		}
+		
 		return null;
 	}
 }

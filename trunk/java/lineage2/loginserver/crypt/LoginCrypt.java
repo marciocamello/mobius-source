@@ -92,6 +92,7 @@ public class LoginCrypt
 	public int encrypt(byte[] raw, final int offset, int size) throws IOException
 	{
 		size += 4;
+		
 		if (_static)
 		{
 			size += 4;

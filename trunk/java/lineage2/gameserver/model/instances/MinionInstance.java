@@ -23,7 +23,7 @@ import lineage2.gameserver.utils.Location;
 public class MinionInstance extends MonsterInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -79,6 +79,7 @@ public class MinionInstance extends MonsterInstance
 		{
 			getLeader().notifyMinionDied(this);
 		}
+		
 		super.onDeath(killer);
 	}
 	

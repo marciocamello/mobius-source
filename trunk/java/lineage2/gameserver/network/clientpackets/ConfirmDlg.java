@@ -46,16 +46,21 @@ public class ConfirmDlg extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		Pair<Integer, OnAnswerListener> entry = activeChar.getAskListener(true);
+		
 		if ((entry == null) || (entry.getKey() != _requestId))
 		{
 			return;
 		}
+		
 		OnAnswerListener listener = entry.getValue();
+		
 		if (_answer == 1)
 		{
 			listener.sayYes();

@@ -51,6 +51,7 @@ public class _431_WeddingMarch extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_accept"))
 		{
 			htmltext = "muzyk_q0431_0104.htm";
@@ -73,6 +74,7 @@ public class _431_WeddingMarch extends Quest implements ScriptFile
 				htmltext = "muzyk_q0431_0202.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -83,6 +85,7 @@ public class _431_WeddingMarch extends Quest implements ScriptFile
 		int condition = st.getCond();
 		int npcId = npc.getNpcId();
 		int id = st.getState();
+		
 		if (npcId == MELODY_MAESTRO_KANTABILON)
 		{
 			if (id != STARTED)
@@ -106,6 +109,7 @@ public class _431_WeddingMarch extends Quest implements ScriptFile
 				htmltext = "muzyk_q0431_0105.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -116,12 +120,15 @@ public class _431_WeddingMarch extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		int npcId = npc.getNpcId();
+		
 		if ((npcId == 20786) || (npcId == 20787))
 		{
 			if ((st.getCond() == 1) && (st.getQuestItemsCount(SILVER_CRYSTAL) < 50))
 			{
 				st.giveItems(SILVER_CRYSTAL, 1);
+				
 				if (st.getQuestItemsCount(SILVER_CRYSTAL) == 50)
 				{
 					st.playSound(SOUND_MIDDLE);
@@ -133,6 +140,7 @@ public class _431_WeddingMarch extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 }

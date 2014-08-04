@@ -38,7 +38,7 @@ import org.slf4j.LoggerFactory;
 public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttachment
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -80,6 +80,7 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 			_log.info("FortressCombatFlagObject: can't spawn twice: " + event);
 			return;
 		}
+		
 		_item = ItemFunctions.createItem(9819);
 		_item.setAttachment(this);
 		_item.dropMe(null, _location);
@@ -99,12 +100,15 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 		{
 			return;
 		}
+		
 		Player owner = GameObjectsStorage.getPlayer(_item.getOwnerId());
+		
 		if (owner != null)
 		{
 			owner.getInventory().destroyItem(_item);
 			owner.sendDisarmMessage(_item);
 		}
+		
 		_item.setAttachment(null);
 		_item.setJdbcState(JdbcEntityState.UPDATED);
 		_item.delete();
@@ -164,16 +168,21 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 		{
 			return false;
 		}
+		
 		FortressSiegeEvent event = player.getEvent(FortressSiegeEvent.class);
+		
 		if (event == null)
 		{
 			return false;
 		}
+		
 		SiegeClanObject object = event.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
+		
 		if (object == null)
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -212,11 +221,13 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 	public boolean canCast(Player player, Skill skill)
 	{
 		Skill[] skills = player.getActiveWeaponItem().getAttachedSkills();
+		
 		if (!ArrayUtils.contains(skills, skill))
 		{
 			player.sendPacket(SystemMsg.THAT_WEAPON_CANNOT_USE_ANY_OTHER_SKILL_EXCEPT_THE_WEAPONS_SKILL);
 			return false;
 		}
+		
 		return true;
 	}
 	

@@ -99,14 +99,17 @@ public class Attachment
 		{
 			return true;
 		}
+		
 		if (o == null)
 		{
 			return false;
 		}
+		
 		if (o.getClass() != this.getClass())
 		{
 			return false;
 		}
+		
 		return ((Attachment) o).getItem() == getItem();
 	}
 }

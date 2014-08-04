@@ -44,11 +44,14 @@ public final class EffectDisarm extends Effect
 		{
 			return false;
 		}
+		
 		Player player = _effected.getPlayer();
+		
 		if (player.isCursedWeaponEquipped() || (player.getActiveWeaponFlagAttachment() != null))
 		{
 			return false;
 		}
+		
 		return super.checkCondition();
 	}
 	
@@ -61,11 +64,13 @@ public final class EffectDisarm extends Effect
 		super.onStart();
 		Player player = (Player) _effected;
 		ItemInstance wpn = player.getActiveWeaponInstance();
+		
 		if (wpn != null)
 		{
 			player.getInventory().unEquipItem(wpn);
 			player.sendDisarmMessage(wpn);
 		}
+		
 		player.startWeaponEquipBlocked();
 	}
 	

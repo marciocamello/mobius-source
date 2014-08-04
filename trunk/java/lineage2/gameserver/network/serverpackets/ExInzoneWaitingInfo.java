@@ -29,13 +29,16 @@ public class ExInzoneWaitingInfo extends L2GameServerPacket
 	public ExInzoneWaitingInfo(Player player)
 	{
 		collapseInstanceTime = new FastMap<>();
+		
 		if (player.getActiveReflection() != null)
 		{
 			instanceZoneId = player.getActiveReflection().getInstancedZoneId();
 		}
+		
 		for (int i : player.getInstanceReuses().keySet())
 		{
 			int timeToCollapse = InstantZoneHolder.getInstance().getMinutesToNextEntrance(i, player);
+			
 			if (timeToCollapse > 0)
 			{
 				collapseInstanceTime.put(i, timeToCollapse * 60);
@@ -49,6 +52,7 @@ public class ExInzoneWaitingInfo extends L2GameServerPacket
 		writeEx(0x124);
 		writeD(instanceZoneId);
 		writeD(collapseInstanceTime.size());
+		
 		for (Integer integer : collapseInstanceTime.keySet())
 		{
 			int currentInstanceId = integer.intValue();

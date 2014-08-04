@@ -36,7 +36,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class SuspiciousMerchantInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -69,6 +69,7 @@ public class SuspiciousMerchantInstance extends NpcInstance
 		if (command.equalsIgnoreCase("register"))
 		{
 			Clan clan = player.getClan();
+			
 			if (clan == null)
 			{
 				showChatWindow(player, "residence2/fortress/fortress_ordery002.htm");
@@ -90,6 +91,7 @@ public class SuspiciousMerchantInstance extends NpcInstance
 			if (clan.getCastle() > 0)
 			{
 				Castle relatedCastle = null;
+				
 				for (Castle castle : fortress.getRelatedCastles())
 				{
 					if (castle.getId() == clan.getCastle())
@@ -131,6 +133,7 @@ public class SuspiciousMerchantInstance extends NpcInstance
 			}
 			
 			SiegeClanObject siegeClan = siegeEvent.getSiegeClan(SiegeEvent.ATTACKERS, clan);
+			
 			if (siegeClan != null)
 			{
 				showChatWindow(player, "residence2/fortress/fortress_ordery007.htm");
@@ -155,15 +158,14 @@ public class SuspiciousMerchantInstance extends NpcInstance
 			siegeClan = new SiegeClanObject(SiegeEvent.ATTACKERS, clan, 0);
 			siegeEvent.addObject(SiegeEvent.ATTACKERS, siegeClan);
 			SiegeClanDAO.getInstance().insert(fortress, siegeClan);
-			
 			siegeEvent.reCalcNextTime(false);
-			
 			player.sendPacket(new SystemMessage2(SystemMsg.YOUR_CLAN_HAS_BEEN_REGISTERED_TO_S1S_FORTRESS_BATTLE).addResidenceName(fortress));
 			showChatWindow(player, "residence2/fortress/fortress_ordery005.htm");
 		}
 		else if (command.equalsIgnoreCase("cancel"))
 		{
 			Clan clan = player.getClan();
+			
 			if ((clan == null) || !player.hasPrivilege(Privilege.CS_FS_SIEGE_WAR))
 			{
 				showChatWindow(player, "residence2/fortress/fortress_ordery010.htm");
@@ -171,13 +173,12 @@ public class SuspiciousMerchantInstance extends NpcInstance
 			}
 			
 			SiegeClanObject siegeClan = siegeEvent.getSiegeClan(SiegeEvent.ATTACKERS, clan);
+			
 			if (siegeClan != null)
 			{
 				siegeEvent.removeObject(SiegeEvent.ATTACKERS, siegeClan);
 				SiegeClanDAO.getInstance().delete(fortress, siegeClan);
-				
 				siegeEvent.reCalcNextTime(false);
-				
 				showChatWindow(player, "residence2/fortress/fortress_ordery009.htm");
 			}
 			else
@@ -188,6 +189,7 @@ public class SuspiciousMerchantInstance extends NpcInstance
 		else if (command.equalsIgnoreCase("state"))
 		{
 			int attackersSize = siegeEvent.getObjects(SiegeEvent.ATTACKERS).size();
+			
 			if (attackersSize == 0)
 			{
 				showChatWindow(player, "residence2/fortress/fortress_ordery019.htm");
@@ -214,6 +216,7 @@ public class SuspiciousMerchantInstance extends NpcInstance
 	{
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		Fortress fortress = getFortress();
+		
 		if (fortress.getOwner() != null)
 		{
 			html.setFile("residence2/fortress/fortress_ordery001a.htm");

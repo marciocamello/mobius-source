@@ -66,11 +66,13 @@ public class PlayerAuthRequest extends ReceivablePacket
 	{
 		SessionKey skey = new SessionKey(loginOkId1, loginOkId2, playOkId1, playOkId2);
 		Session session = SessionManager.getInstance().closeSession(skey);
+		
 		if ((session == null) || !session.getAccount().getLogin().equals(account))
 		{
 			sendPacket(new PlayerAuthResponse(account));
 			return;
 		}
+		
 		sendPacket(new PlayerAuthResponse(session, session.getSessionKey().equals(skey)));
 	}
 }

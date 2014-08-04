@@ -65,6 +65,7 @@ public class _032_AnObviousLie extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("30120-1.htm"))
 		{
 			st.setCond(1);
@@ -127,6 +128,7 @@ public class _032_AnObviousLie extends Quest implements ScriptFile
 			{
 				st.takeItems(THREAD, 1000);
 				st.takeItems(SUEDE, 500);
+				
 				if (event.equalsIgnoreCase("cat"))
 				{
 					st.giveItems(CAT_EAR, 1);
@@ -139,6 +141,7 @@ public class _032_AnObviousLie extends Quest implements ScriptFile
 				{
 					st.giveItems(RABBIT_EAR, 1);
 				}
+				
 				st.unset("cond");
 				st.playSound(SOUND_FINISH);
 				htmltext = "30094-14.htm";
@@ -149,6 +152,7 @@ public class _032_AnObviousLie extends Quest implements ScriptFile
 				htmltext = "You don't have enough materials";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -158,6 +162,7 @@ public class _032_AnObviousLie extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == MAXIMILIAN)
 		{
 			if (cond == 0)
@@ -177,6 +182,7 @@ public class _032_AnObviousLie extends Quest implements ScriptFile
 				htmltext = "30120-2.htm";
 			}
 		}
+		
 		if (npcId == GENTLER)
 		{
 			if (cond == 1)
@@ -220,6 +226,7 @@ public class _032_AnObviousLie extends Quest implements ScriptFile
 				htmltext = "30094-12.htm";
 			}
 		}
+		
 		if (npcId == MIKI_THE_CAT)
 		{
 			if (cond == 2)
@@ -239,6 +246,7 @@ public class _032_AnObviousLie extends Quest implements ScriptFile
 				htmltext = "31706-5.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -246,11 +254,13 @@ public class _032_AnObviousLie extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		long count = st.getQuestItemsCount(MEDICINAL_HERB);
+		
 		if (Rnd.chance(CHANCE_FOR_DROP) && (st.getCond() == 3))
 		{
 			if (count < 20)
 			{
 				st.giveItems(MEDICINAL_HERB, 1);
+				
 				if (count == 19)
 				{
 					st.playSound(SOUND_MIDDLE);
@@ -262,6 +272,7 @@ public class _032_AnObviousLie extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 }

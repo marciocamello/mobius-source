@@ -76,6 +76,7 @@ public class _691_MatrasSuspiciousRequest extends Quest implements ScriptFile
 			qs.playSound(SOUND_FINISH);
 			qs.exitCurrentQuest(true);
 		}
+		
 		return event;
 	}
 	
@@ -84,6 +85,7 @@ public class _691_MatrasSuspiciousRequest extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (cond == 0)
 		{
 			if (st.getPlayer().getLevel() >= 76)
@@ -94,6 +96,7 @@ public class _691_MatrasSuspiciousRequest extends Quest implements ScriptFile
 			{
 				htmltext = "32245-00.htm";
 			}
+			
 			st.exitCurrentQuest(true);
 		}
 		else if (st.getQuestItemsCount(RED_STONE) < RED_STONES_COUNT)
@@ -104,6 +107,7 @@ public class _691_MatrasSuspiciousRequest extends Quest implements ScriptFile
 		{
 			htmltext = "32245-04.htm";
 		}
+		
 		return htmltext;
 	}
 	

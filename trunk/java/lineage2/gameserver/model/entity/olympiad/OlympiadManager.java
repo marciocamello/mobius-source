@@ -64,6 +64,7 @@ public class OlympiadManager extends RunnableImpl
 		{
 			return;
 		}
+		
 		while (Olympiad.inCompPeriod())
 		{
 			if (Olympiad._nobles.isEmpty())
@@ -71,12 +72,14 @@ public class OlympiadManager extends RunnableImpl
 				sleep(60000);
 				continue;
 			}
+			
 			while (Olympiad.inCompPeriod())
 			{
 				if (Olympiad._nonClassBasedRegisters.size() >= Config.NONCLASS_GAME_MIN)
 				{
 					prepareBattles(CompType.NON_CLASSED, Olympiad._nonClassBasedRegisters);
 				}
+				
 				for (Map.Entry<Integer, List<Integer>> entry : Olympiad._classBasedRegisters.entrySet())
 				{
 					if (entry.getValue().size() >= Config.CLASS_GAME_MIN)
@@ -84,21 +87,28 @@ public class OlympiadManager extends RunnableImpl
 						prepareBattles(CompType.CLASSED, entry.getValue());
 					}
 				}
+				
 				sleep(30000);
 			}
+			
 			sleep(30000);
 		}
+		
 		Olympiad._classBasedRegisters.clear();
 		Olympiad._nonClassBasedRegisters.clear();
 		boolean allGamesTerminated = false;
+		
 		while (!allGamesTerminated)
 		{
 			sleep(30000);
+			
 			if (_olympiadInstances.isEmpty())
 			{
 				break;
 			}
+			
 			allGamesTerminated = true;
+			
 			for (OlympiadGame game : _olympiadInstances.values())
 			{
 				if ((game.getTask() != null) && !game.getTask().isTerminated())
@@ -107,6 +117,7 @@ public class OlympiadManager extends RunnableImpl
 				}
 			}
 		}
+		
 		_olympiadInstances.clear();
 	}
 	
@@ -125,10 +136,12 @@ public class OlympiadManager extends RunnableImpl
 				{
 					continue;
 				}
+				
 				if (list.size() < type.getMinSize())
 				{
 					break;
 				}
+				
 				OlympiadGame game = new OlympiadGame(i, type, nextOpponents(list, type));
 				game.sheduleTask(new OlympiadGameTask(game, BattleStatus.Begining, 0, 1));
 				_olympiadInstances.put(i, game);
@@ -180,12 +193,14 @@ public class OlympiadManager extends RunnableImpl
 	{
 		List<Integer> opponents = new CopyOnWriteArrayList<>();
 		Integer noble;
+		
 		for (int i = 0; i < type.getMinSize(); i++)
 		{
 			noble = list.remove(Rnd.get(list.size()));
 			opponents.add(noble);
 			removeOpponent(noble);
 		}
+		
 		return opponents;
 	}
 	

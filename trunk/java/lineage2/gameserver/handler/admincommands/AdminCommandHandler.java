@@ -171,10 +171,12 @@ public class AdminCommandHandler extends AbstractHolder
 	public IAdminCommandHandler getAdminCommandHandler(String adminCommand)
 	{
 		String command = adminCommand;
+		
 		if (adminCommand.contains(" "))
 		{
 			command = adminCommand.substring(0, adminCommand.indexOf(" "));
 		}
+		
 		return _datatable.get(command);
 	}
 	
@@ -190,11 +192,14 @@ public class AdminCommandHandler extends AbstractHolder
 			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.SendBypassBuildCmd.NoCommandOrAccess", activeChar).addString(adminCommand));
 			return;
 		}
+		
 		String[] wordList = adminCommand.split(" ");
 		IAdminCommandHandler handler = _datatable.get(wordList[0]);
+		
 		if (handler != null)
 		{
 			boolean success = false;
+			
 			try
 			{
 				for (Enum<?> e : handler.getAdminCommandEnum())
@@ -210,6 +215,7 @@ public class AdminCommandHandler extends AbstractHolder
 			{
 				error("", e);
 			}
+			
 			Log.LogCommand(activeChar, activeChar.getTarget(), adminCommand, success);
 		}
 	}

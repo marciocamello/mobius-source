@@ -57,16 +57,20 @@ public class CombatPointHeal extends Skill
 				{
 					continue;
 				}
+				
 				double maxNewCp = (_power * (!_ignoreCpEff ? target.calcStat(Stats.CPHEAL_EFFECTIVNESS, 100., activeChar, this) : 100.)) / 100.;
 				double addToCp = Math.max(0, Math.min(maxNewCp, ((target.calcStat(Stats.CP_LIMIT, null, null) * target.getMaxCp()) / 100.) - target.getCurrentCp()));
+				
 				if (addToCp > 0)
 				{
 					target.setCurrentCp(addToCp + target.getCurrentCp());
 				}
+				
 				target.sendPacket(new SystemMessage(SystemMessage.S1_CPS_WILL_BE_RESTORED).addNumber((long) addToCp));
 				getEffects(activeChar, target, getActivateRate() > 0, false);
 			}
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());

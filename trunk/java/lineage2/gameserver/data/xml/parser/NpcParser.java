@@ -122,9 +122,11 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 			set.set("title", title);
 			set.set("baseCpReg", 0);
 			set.set("baseCpMax", 0);
+			
 			for (Iterator<org.dom4j.Element> firstIterator = npcElement.elementIterator(); firstIterator.hasNext();)
 			{
 				org.dom4j.Element firstElement = firstIterator.next();
+				
 				if (firstElement.getName().equalsIgnoreCase("set"))
 				{
 					set.set(firstElement.attributeValue("name"), firstElement.attributeValue("value"));
@@ -140,21 +142,25 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 				else if (firstElement.getName().equalsIgnoreCase("ai_params"))
 				{
 					StatsSet ai = new StatsSet();
+					
 					for (Iterator<org.dom4j.Element> eIterator = firstElement.elementIterator(); eIterator.hasNext();)
 					{
 						org.dom4j.Element eElement = eIterator.next();
 						ai.set(eElement.attributeValue("name"), eElement.attributeValue("value"));
 					}
+					
 					set.set("aiParams", ai);
 				}
 				else if (firstElement.getName().equalsIgnoreCase("attributes"))
 				{
 					int[] attributeAttack = new int[6];
 					int[] attributeDefence = new int[6];
+					
 					for (Iterator<org.dom4j.Element> eIterator = firstElement.elementIterator(); eIterator.hasNext();)
 					{
 						org.dom4j.Element eElement = eIterator.next();
 						Element element;
+						
 						if (eElement.getName().equalsIgnoreCase("defence"))
 						{
 							element = Element.getElementByName(eElement.attributeValue("attribute"));
@@ -166,27 +172,33 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 							attributeAttack[element.getId()] = Integer.parseInt(eElement.attributeValue("value"));
 						}
 					}
+					
 					set.set("baseAttributeAttack", attributeAttack);
 					set.set("baseAttributeDefence", attributeDefence);
 				}
 			}
+			
 			NpcTemplate template = new NpcTemplate(set);
+			
 			for (Iterator<org.dom4j.Element> secondIterator = npcElement.elementIterator(); secondIterator.hasNext();)
 			{
 				org.dom4j.Element secondElement = secondIterator.next();
 				String nodeName = secondElement.getName();
+				
 				if (nodeName.equalsIgnoreCase("faction"))
 				{
 					String factionId = secondElement.attributeValue("name");
 					Faction faction = new Faction(factionId);
 					int factionRange = Integer.parseInt(secondElement.attributeValue("range"));
 					faction.setRange(factionRange);
+					
 					for (Iterator<org.dom4j.Element> nextIterator = secondElement.elementIterator(); nextIterator.hasNext();)
 					{
 						final org.dom4j.Element nextElement = nextIterator.next();
 						int ignoreId = Integer.parseInt(nextElement.attributeValue("npc_id"));
 						faction.addIgnoreNpcId(ignoreId);
 					}
+					
 					template.setFaction(faction);
 				}
 				else if (nodeName.equalsIgnoreCase("rewardlist"))
@@ -194,18 +206,22 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 					RewardType type = RewardType.valueOf(secondElement.attributeValue("type"));
 					boolean autoLoot = (secondElement.attributeValue("auto_loot") != null) && Boolean.parseBoolean(secondElement.attributeValue("auto_loot"));
 					RewardList list = new RewardList(type, autoLoot);
+					
 					for (Iterator<org.dom4j.Element> nextIterator = secondElement.elementIterator(); nextIterator.hasNext();)
 					{
 						final org.dom4j.Element nextElement = nextIterator.next();
 						final String nextName = nextElement.getName();
+						
 						if (nextName.equalsIgnoreCase("group"))
 						{
 							double enterChance = nextElement.attributeValue("chance") == null ? RewardList.MAX_CHANCE : Double.parseDouble(nextElement.attributeValue("chance")) * 10000;
 							RewardGroup group = (type == RewardType.SWEEP) || (type == RewardType.NOT_RATED_NOT_GROUPED) ? null : new RewardGroup(enterChance);
+							
 							for (Iterator<org.dom4j.Element> rewardIterator = nextElement.elementIterator(); rewardIterator.hasNext();)
 							{
 								org.dom4j.Element rewardElement = rewardIterator.next();
 								RewardData data = parseReward(rewardElement);
+								
 								if ((type == RewardType.SWEEP) || (type == RewardType.NOT_RATED_NOT_GROUPED))
 								{
 									warn("Can't load rewardlist from group: " + npcId + "; type: " + type);
@@ -215,6 +231,7 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 									group.addData(data);
 								}
 							}
+							
 							if (group != null)
 							{
 								list.add(group);
@@ -227,12 +244,14 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 								warn("Reward can't be without group(and not grouped): " + npcId + "; type: " + type);
 								continue;
 							}
+							
 							RewardData data = parseReward(nextElement);
 							RewardGroup g = new RewardGroup(RewardList.MAX_CHANCE);
 							g.addData(data);
 							list.add(g);
 						}
 					}
+					
 					if ((type == RewardType.RATED_GROUPED) || (type == RewardType.NOT_RATED_GROUPED))
 					{
 						if (!list.validate())
@@ -240,6 +259,7 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 							warn("Problems with rewardlist for npc: " + npcId + "; type: " + type);
 						}
 					}
+					
 					template.putRewardList(type, list);
 				}
 				else if (nodeName.equalsIgnoreCase("skills"))
@@ -249,15 +269,19 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 						org.dom4j.Element nextElement = nextIterator.next();
 						int id = Integer.parseInt(nextElement.attributeValue("id"));
 						int level = Integer.parseInt(nextElement.attributeValue("level"));
+						
 						if (id == 4416)
 						{
 							template.setRace(level);
 						}
+						
 						Skill skill = SkillTable.getInstance().getInfo(id, level);
+						
 						if (skill == null)
 						{
 							continue;
 						}
+						
 						template.addSkill(skill);
 					}
 				}
@@ -301,6 +325,7 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 						org.dom4j.Element subListElement = sublistIterator.next();
 						int id = Integer.parseInt(subListElement.attributeValue("id"));
 						List<TeleportLocation> list = new ArrayList<>();
+						
 						for (Iterator<org.dom4j.Element> targetIterator = subListElement.elementIterator(); targetIterator.hasNext();)
 						{
 							org.dom4j.Element targetElement = targetIterator.next();
@@ -312,6 +337,7 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 							loc.set(Location.parseLoc(targetElement.attributeValue("loc")));
 							list.add(loc);
 						}
+						
 						template.addTeleportList(id, list.toArray(new TeleportLocation[list.size()]));
 					}
 				}
@@ -320,6 +346,7 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 					int id = Integer.parseInt(secondElement.attributeValue("id"));
 					WalkerRouteType type = secondElement.attributeValue("type") == null ? WalkerRouteType.LENGTH : WalkerRouteType.valueOf(secondElement.attributeValue("type").toUpperCase());
 					WalkerRoute walkerRoute = new WalkerRoute(id, type);
+					
 					for (Iterator<?> nextIterator = secondElement.elementIterator(); nextIterator.hasNext();)
 					{
 						org.dom4j.Element nextElement = (org.dom4j.Element) nextIterator.next();
@@ -330,12 +357,14 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 						boolean running = nextElement.attributeValue("running") == null ? false : Boolean.parseBoolean(nextElement.attributeValue("running"));
 						walkerRoute.addPoint(new WalkerRoutePoint(loc, phrase, socialActionId, delay, running));
 					}
+					
 					template.addWalkerRoute(walkerRoute);
 				}
 				else if (nodeName.equalsIgnoreCase("random_actions"))
 				{
 					boolean random_order = secondElement.attributeValue("random_order") == null ? false : Boolean.parseBoolean(secondElement.attributeValue("random_order"));
 					RandomActions randomActions = new RandomActions(random_order);
+					
 					for (Iterator<?> nextIterator = secondElement.elementIterator(); nextIterator.hasNext();)
 					{
 						org.dom4j.Element nextElement = (org.dom4j.Element) nextIterator.next();
@@ -345,9 +374,11 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 						int delay = nextElement.attributeValue("delay") == null ? 0 : Integer.parseInt(nextElement.attributeValue("delay"));
 						randomActions.addAction(new RandomActions.Action(id, phrase, socialActionId, delay));
 					}
+					
 					template.setRandomActions(randomActions);
 				}
 			}
+			
 			getHolder().addTemplate(template);
 		}
 	}
@@ -364,6 +395,7 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 		int max = Integer.parseInt(rewardElement.attributeValue("max"));
 		int chance = (int) (Double.parseDouble(rewardElement.attributeValue("chance")) * 10000);
 		RewardData data = new RewardData(itemId);
+		
 		if (data.getItem().isCommonItem())
 		{
 			data.setChance(chance * Config.RATE_DROP_COMMON_ITEMS);
@@ -372,6 +404,7 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 		{
 			data.setChance(chance);
 		}
+		
 		data.setMinDrop(min);
 		data.setMaxDrop(max);
 		return data;

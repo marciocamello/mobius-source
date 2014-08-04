@@ -30,7 +30,7 @@ import org.apache.commons.lang3.StringUtils;
 public class SiegeFlagInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -92,10 +92,12 @@ public class SiegeFlagInstance extends NpcInstance
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		Player player = attacker.getPlayer();
+		
 		if ((player == null) || isInvul())
 		{
 			return false;
 		}
+		
 		Clan clan = player.getClan();
 		return (clan == null) || (_owner.getClan() != clan);
 	}
@@ -139,6 +141,7 @@ public class SiegeFlagInstance extends NpcInstance
 			_lastAnnouncedAttackedTime = System.currentTimeMillis();
 			_owner.getClan().broadcastToOnlineMembers(SystemMsg.YOUR_BASE_IS_BEING_ATTACKED);
 		}
+		
 		super.onReduceCurrentHp(damage, attacker, skill, awake, standUp, directHp);
 	}
 	

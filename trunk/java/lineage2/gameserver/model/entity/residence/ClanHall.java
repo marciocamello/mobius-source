@@ -38,7 +38,7 @@ import org.slf4j.LoggerFactory;
 public class ClanHall extends Residence
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -102,6 +102,7 @@ public class ClanHall extends Residence
 		loadData();
 		loadFunctions();
 		rewardSkills();
+		
 		if ((getSiegeEvent().getClass() == ClanHallAuctionEvent.class) && (_owner != null) && (getAuctionLength() == 0))
 		{
 			startCycleTask();
@@ -116,15 +117,18 @@ public class ClanHall extends Residence
 	public void changeOwner(Clan clan)
 	{
 		Clan oldOwner = getOwner();
+		
 		if ((oldOwner != null) && ((clan == null) || (clan.getClanId() != oldOwner.getClanId())))
 		{
 			removeSkills();
 			oldOwner.setHasHideout(0);
 			cancelCycleTask();
 		}
+		
 		updateOwnerInDB(clan);
 		rewardSkills();
 		update();
+		
 		if ((clan == null) && (getSiegeEvent().getClass() == ClanHallAuctionEvent.class))
 		{
 			getSiegeEvent().reCalcNextTime(false);
@@ -160,6 +164,7 @@ public class ClanHall extends Residence
 		_owner = clan;
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -176,6 +181,7 @@ public class ClanHall extends Residence
 			statement.setInt(1, getId());
 			statement.execute();
 			DbUtils.close(statement);
+			
 			if (clan != null)
 			{
 				clan.setHasHideout(getId());
@@ -300,6 +306,7 @@ public class ClanHall extends Residence
 	{
 		super.chanceCycle();
 		setPaidCycle(getPaidCycle() + 1);
+		
 		if (getPaidCycle() >= REWARD_CYCLE)
 		{
 			if (_owner.getWarehouse().getCountOf(ItemTemplate.ITEM_ID_ADENA) > _rentalFee)
@@ -310,6 +317,7 @@ public class ClanHall extends Residence
 			else
 			{
 				UnitMember member = _owner.getLeader();
+				
 				if (member.isOnline())
 				{
 					member.getPlayer().sendPacket(SystemMsg.THE_CLAN_HALL_FEE_IS_ONE_WEEK_OVERDUE_THEREFORE_THE_CLAN_HALL_OWNERSHIP_HAS_BEEN_REVOKED);
@@ -318,6 +326,7 @@ public class ClanHall extends Residence
 				{
 					PlayerMessageStack.getInstance().mailto(member.getObjectId(), SystemMsg.THE_CLAN_HALL_FEE_IS_ONE_WEEK_OVERDUE_THEREFORE_THE_CLAN_HALL_OWNERSHIP_HAS_BEEN_REVOKED.packet(null));
 				}
+				
 				changeOwner(null);
 			}
 		}

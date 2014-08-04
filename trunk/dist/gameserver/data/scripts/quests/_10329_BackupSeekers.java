@@ -80,6 +80,7 @@ public class _10329_BackupSeekers extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		Player player = st.getPlayer();
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -88,6 +89,7 @@ public class _10329_BackupSeekers extends Quest implements ScriptFile
 			htmltext = "0-3.htm";
 			spawnsolder(st);
 		}
+		
 		if (event.equalsIgnoreCase("qet_rev"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.GOING_INTO_REAL_WAR_SOULSHOTS_ADDED, 4500, ScreenMessageAlign.TOP_CENTER));
@@ -100,6 +102,7 @@ public class _10329_BackupSeekers extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -109,6 +112,7 @@ public class _10329_BackupSeekers extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == kakai)
 		{
 			if (st.isCompleted())
@@ -128,6 +132,7 @@ public class _10329_BackupSeekers extends Quest implements ScriptFile
 				htmltext = "0-nc.htm";
 			}
 		}
+		
 		if (npcId == atran)
 		{
 			if (st.isCompleted())
@@ -143,6 +148,7 @@ public class _10329_BackupSeekers extends Quest implements ScriptFile
 				htmltext = "1-1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

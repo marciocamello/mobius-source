@@ -30,7 +30,7 @@ import lineage2.gameserver.utils.ItemFunctions;
 public final class AngelCatInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	private static final String VAR_DATA = "angelCat_buff";
@@ -72,8 +72,8 @@ public final class AngelCatInstance extends NpcInstance
 	private boolean loadInfo(Player player)
 	{
 		String value = null;
-		
 		ResultSet rs = null;
+		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(SELECT_DATA);)
 		{
@@ -84,10 +84,12 @@ public final class AngelCatInstance extends NpcInstance
 			{
 				value = rs.getString("value");
 				long l = (System.currentTimeMillis() - Long.parseLong(value)) / 1000;
+				
 				if (l < 86400)
 				{
 					return false;
 				}
+				
 				deleteInfo(player.getAccountName());
 			}
 		}
@@ -109,6 +111,7 @@ public final class AngelCatInstance extends NpcInstance
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -132,6 +135,7 @@ public final class AngelCatInstance extends NpcInstance
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();

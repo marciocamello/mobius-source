@@ -44,23 +44,29 @@ public class RequestOustFromPartyRoom extends L2GameClientPacket
 	{
 		Player player = getClient().getActiveChar();
 		MatchingRoom room = player.getMatchingRoom();
+		
 		if ((room == null) || (room.getType() != MatchingRoom.PARTY_MATCHING))
 		{
 			return;
 		}
+		
 		if (room.getLeader() != player)
 		{
 			return;
 		}
+		
 		Player member = GameObjectsStorage.getPlayer(_objectId);
+		
 		if (member == null)
 		{
 			return;
 		}
+		
 		if (member == room.getLeader())
 		{
 			return;
 		}
+		
 		room.removeMember(member, true);
 	}
 }

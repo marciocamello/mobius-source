@@ -50,33 +50,40 @@ public final class RestorationInfo
 	public List<RestorationItem> getRandomGroupItems()
 	{
 		double chancesAmount = 0.0D;
+		
 		for (RestorationGroup group : _restorationGroups)
 		{
 			chancesAmount += group.getChance();
 		}
+		
 		if (Rnd.chance(chancesAmount))
 		{
 			double chanceMod = (100.0D - chancesAmount) / _restorationGroups.size();
 			List<RestorationGroup> successGroups = new ArrayList<>();
 			int tryCount = 0;
+			
 			while (successGroups.isEmpty())
 			{
 				tryCount++;
+				
 				for (RestorationGroup group : _restorationGroups)
 				{
 					if ((tryCount % 10) == 0)
 					{
 						chanceMod += 1.0D;
 					}
+					
 					if (Rnd.chance(group.getChance() + chanceMod))
 					{
 						successGroups.add(group);
 					}
 				}
 			}
+			
 			RestorationGroup[] groupsArray = successGroups.toArray(new RestorationGroup[successGroups.size()]);
 			return groupsArray[Rnd.get(groupsArray.length)].getRestorationItems();
 		}
+		
 		return new ArrayList<>(0);
 	}
 }

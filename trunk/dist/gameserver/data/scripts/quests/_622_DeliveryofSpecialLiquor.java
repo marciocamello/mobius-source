@@ -63,6 +63,7 @@ public class _622_DeliveryofSpecialLiquor extends Quest implements ScriptFile
 		int _state = st.getState();
 		int cond = st.getCond();
 		long SpecialDrink_count = st.getQuestItemsCount(SpecialDrink);
+		
 		if (event.equalsIgnoreCase("jeremy_q0622_0104.htm") && (_state == CREATED))
 		{
 			st.setState(STARTED);
@@ -100,6 +101,7 @@ public class _622_DeliveryofSpecialLiquor extends Quest implements ScriptFile
 		{
 			st.takeItems(SpecialDrink, -1);
 			st.takeItems(FeeOfSpecialDrink, -1);
+			
 			if (Rnd.chance(Tateossian_CHANCE))
 			{
 				if (Rnd.chance(40))
@@ -120,9 +122,11 @@ public class _622_DeliveryofSpecialLiquor extends Quest implements ScriptFile
 				st.giveItems(ADENA_ID, 18800);
 				st.giveItems(HastePotion, 1, true);
 			}
+			
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return event;
 	}
 	
@@ -131,23 +135,28 @@ public class _622_DeliveryofSpecialLiquor extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
+		
 		if (st.getState() == CREATED)
 		{
 			if (npcId != JEREMY)
 			{
 				return htmltext;
 			}
+			
 			if (st.getPlayer().getLevel() >= 68)
 			{
 				st.setCond(0);
 				return "jeremy_q0622_0101.htm";
 			}
+			
 			st.exitCurrentQuest(true);
 			return "jeremy_q0622_0103.htm";
 		}
+		
 		int cond = st.getCond();
 		long SpecialDrink_count = st.getQuestItemsCount(SpecialDrink);
 		long FeeOfSpecialDrink_count = st.getQuestItemsCount(FeeOfSpecialDrink);
+		
 		if ((cond == 1) && (npcId == BEOLIN) && (SpecialDrink_count > 0))
 		{
 			htmltext = "beolin_q0622_0101.htm";
@@ -184,6 +193,7 @@ public class _622_DeliveryofSpecialLiquor extends Quest implements ScriptFile
 		{
 			htmltext = "jeremy_q0622_0104.htm";
 		}
+		
 		return htmltext;
 	}
 	

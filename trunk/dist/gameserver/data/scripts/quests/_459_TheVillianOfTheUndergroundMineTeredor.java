@@ -28,7 +28,6 @@ public class _459_TheVillianOfTheUndergroundMineTeredor extends Quest implements
 	public _459_TheVillianOfTheUndergroundMineTeredor()
 	{
 		super(PARTY_ALL);
-		
 		addStartNpc(NPC_FILAUR);
 		addKillId(MOB_HENCHMAN);
 		addLevelCheck(85, 99);
@@ -66,9 +65,11 @@ public class _459_TheVillianOfTheUndergroundMineTeredor extends Quest implements
 			{
 				default:
 					break;
+				
 				case COMPLETED:
 					htmltext = "completed";
 					break;
+				
 				case CREATED:
 					if (st.getPlayer().getLevel() >= 85)
 					{
@@ -87,6 +88,7 @@ public class _459_TheVillianOfTheUndergroundMineTeredor extends Quest implements
 					}
 					
 					break;
+				
 				case STARTED:
 					if (st.getCond() == 1)
 					{

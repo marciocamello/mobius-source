@@ -49,16 +49,18 @@ public class Newbie extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((actor.getDistance(actor.getTarget()) < 100) && ((System.currentTimeMillis() - lastebuff) > 30000))
 		{
 			lastebuff = System.currentTimeMillis();
+			
 			for (Player player : World.getAroundPlayers(actor, 300, 200))
 			{
 				SupportMagic.doSupportMagic(actor, player, false);
 				player.sendPacket(new ExShowScreenMessage(NpcString.NEWBIE_HELPER_HAS_CASTED_BUFFS_ON_$S1, 4000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, player.getName()));
-				
 			}
 		}
+		
 		return true;
 	}
 	

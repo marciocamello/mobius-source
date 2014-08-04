@@ -91,11 +91,13 @@ public class EdwinFollower extends DefaultAI
 	{
 		final NpcInstance actor = getActor();
 		final Creature edwin = _edwinRef.get();
+		
 		if (edwin == null)
 		{
 			if (System.currentTimeMillis() > _wait_timeout)
 			{
 				_wait_timeout = System.currentTimeMillis() + 15000;
+				
 				for (NpcInstance npc : World.getAroundNpc(actor))
 				{
 					if (npc.getNpcId() == EDWIN_ID)
@@ -115,6 +117,7 @@ public class EdwinFollower extends DefaultAI
 			actor.moveToLocation(x, y, z, 0, true);
 			return true;
 		}
+		
 		return false;
 	}
 	

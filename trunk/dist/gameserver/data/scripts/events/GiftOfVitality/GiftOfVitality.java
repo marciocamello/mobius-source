@@ -279,10 +279,12 @@ public class GiftOfVitality extends Functions implements ScriptFile
 	public void startEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive(EVENT_NAME, true))
 		{
 			spawnEventManagers();
@@ -293,6 +295,7 @@ public class GiftOfVitality extends Functions implements ScriptFile
 		{
 			player.sendMessage("Event 'Gift Of Vitality' already started.");
 		}
+		
 		show("admin/events.htm", player);
 	}
 	
@@ -302,10 +305,12 @@ public class GiftOfVitality extends Functions implements ScriptFile
 	public void stopEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive(EVENT_NAME, false))
 		{
 			unSpawnEventManagers();
@@ -316,6 +321,7 @@ public class GiftOfVitality extends Functions implements ScriptFile
 		{
 			player.sendMessage("Event: 'Gift Of Vitality' not started.");
 		}
+		
 		show("admin/events.htm", player);
 	}
 	
@@ -367,10 +373,12 @@ public class GiftOfVitality extends Functions implements ScriptFile
 		{
 			return;
 		}
+		
 		String htmltext = null;
 		final Player player = getSelf().getPlayer();
 		final NpcInstance npc = getNpc();
 		final String var = player.getVar("govEventTime");
+		
 		switch (type)
 		{
 			case VITALITY:
@@ -386,7 +394,9 @@ public class GiftOfVitality extends Functions implements ScriptFile
 					player.setVitality(Config.MAX_VITALITY);
 					htmltext = "jack-okvitality.htm";
 				}
+				
 				break;
+			
 			case PLAYER:
 				if (player.getLevel() < 76)
 				{
@@ -410,12 +420,16 @@ public class GiftOfVitality extends Functions implements ScriptFile
 							player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(buff[0], buff[1]));
 						}
 					}
+					
 					htmltext = "jack-okbuff.htm";
 				}
+				
 				break;
+			
 			default:
 				break;
 		}
+		
 		show("scripts/events/GiftOfVitality/" + htmltext, getSelf().getPlayer());
 	}
 	

@@ -37,7 +37,7 @@ import org.slf4j.LoggerFactory;
 public class NewbieGuideInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -75,12 +75,15 @@ public class NewbieGuideInstance extends NpcInstance
 				if (player.getVar("NewGuidReward") == null)
 				{
 					QuestState qs = player.getQuestState("_999_T1Tutorial");
+					
 					if (qs != null)
 					{
 						qs.unset("step");
 					}
+					
 					player.setVar("NewGuidReward", "1", -1);
 					boolean isMage = (player.getRace() != Race.orc) && player.getClassId().isMage();
+					
 					if (isMage)
 					{
 						player.sendPacket(new PlaySound("tutorial_voice_027"));
@@ -91,7 +94,9 @@ public class NewbieGuideInstance extends NpcInstance
 						player.sendPacket(new PlaySound("tutorial_voice_026"));
 						Functions.addItem(player, 5789, 200);
 					}
+					
 					Functions.addItem(player, 8594, 2);
+					
 					if (player.getLevel() == 1)
 					{
 						player.addExpAndSp(Experience.LEVEL[2] - player.getExp(), 50, 0, 0, true, false);
@@ -101,6 +106,7 @@ public class NewbieGuideInstance extends NpcInstance
 						player.addExpAndSp(0, 50, 0, 0, true, false);
 					}
 				}
+				
 				if (player.getLevel() < 6)
 				{
 					if (player.isQuestCompleted("_001_LettersOfLove") || player.isQuestCompleted("_002_WhatWomenWant") || player.isQuestCompleted("_004_LongLivethePaagrioLord") || player.isQuestCompleted("_005_MinersFavor") || player.isQuestCompleted("_166_DarkMass") || player.isQuestCompleted("_174_SupplyCheck"))
@@ -112,12 +118,15 @@ public class NewbieGuideInstance extends NpcInstance
 							player.addExpAndSp(Experience.LEVEL[6] - player.getExp(), 127, 0, 0, true, false);
 							player.addAdena(11567);
 						}
+						
 						player.sendPacket(new NpcHtmlMessage(player, this, "newbiehelper/q1-2.htm", val));
 						return;
 					}
+					
 					player.sendPacket(new NpcHtmlMessage(player, this, "newbiehelper/q1-1.htm", val).replace("%tonpc%", getQuestNpc(1, player)));
 					return;
 				}
+				
 				if (player.getLevel() < 10)
 				{
 					if (player.getVarB("p1q2"))
@@ -129,12 +138,15 @@ public class NewbieGuideInstance extends NpcInstance
 							long addexp = Experience.LEVEL[10] - player.getExp();
 							player.addExpAndSp(addexp, addexp / 24, 0, 0, true, false);
 						}
+						
 						player.sendPacket(new NpcHtmlMessage(player, this, "newbiehelper/q3-1.htm", val).replace("%tonpc%", getQuestNpc(3, player)));
 						return;
 					}
+					
 					player.sendPacket(new NpcHtmlMessage(player, this, "newbiehelper/q2-1.htm", val).replace("%tonpc%", getQuestNpc(2, player)));
 					return;
 				}
+				
 				if (player.getLevel() < 15)
 				{
 					if (player.getVarB("p1q3"))
@@ -147,12 +159,15 @@ public class NewbieGuideInstance extends NpcInstance
 							player.addExpAndSp(addexp, addexp / 22, 0, 0, true, false);
 							player.addAdena(38180);
 						}
+						
 						player.sendPacket(new NpcHtmlMessage(player, this, "newbiehelper/q4-1.htm", val).replace("%tonpc%", getQuestNpc(4, player)));
 						return;
 					}
+					
 					player.sendPacket(new NpcHtmlMessage(player, this, "newbiehelper/q3-1.htm", val).replace("%tonpc%", getQuestNpc(3, player)));
 					return;
 				}
+				
 				if (player.getLevel() < 18)
 				{
 					if (player.getVarB("p1q4"))
@@ -165,18 +180,23 @@ public class NewbieGuideInstance extends NpcInstance
 							player.addExpAndSp(addexp, addexp / 5, 0, 0, true, false);
 							player.addAdena(10018);
 						}
+						
 						player.sendPacket(new NpcHtmlMessage(player, this, "newbiehelper/q4-2.htm", val));
 						return;
 					}
+					
 					player.sendPacket(new NpcHtmlMessage(player, this, "newbiehelper/q4-1.htm", val).replace("%tonpc%", getQuestNpc(4, player)));
 					return;
 				}
+				
 				player.sendPacket(new NpcHtmlMessage(player, this, "newbiehelper/q-no.htm", val));
 				return;
 			}
+			
 			player.sendPacket(new NpcHtmlMessage(player, this, "newbiehelper/q-no.htm", val));
 			return;
 		}
+		
 		super.showChatWindow(player, val);
 	}
 	
@@ -189,6 +209,7 @@ public class NewbieGuideInstance extends NpcInstance
 	public String getQuestNpc(int quest, Player player)
 	{
 		int val = 0;
+		
 		switch (quest)
 		{
 			case 1:
@@ -197,112 +218,145 @@ public class NewbieGuideInstance extends NpcInstance
 					case 30598:
 						val = 30048;
 						break;
+					
 					case 30599:
 						val = 30223;
 						break;
+					
 					case 30600:
 						val = 30130;
 						break;
+					
 					case 30601:
 						val = 30554;
 						break;
+					
 					case 30602:
 						val = 30578;
 						break;
+					
 					case 32135:
 						val = 32173;
 						break;
 				}
+				
 				break;
+			
 			case 2:
 				switch (getNpcId())
 				{
 					case 30598:
 						val = 30039;
 						break;
+					
 					case 30599:
 						val = 30221;
 						break;
+					
 					case 30600:
 						val = 30357;
 						break;
+					
 					case 30601:
 						val = 30535;
 						break;
+					
 					case 30602:
 						val = 30566;
 						break;
+					
 					case 32135:
 						val = 32173;
 						break;
 				}
+				
 				break;
+			
 			case 3:
 				switch (player.getClassId())
 				{
 					case HUMAN_FIGHTER:
 						val = 30008;
 						break;
+					
 					case HUMAN_MAGE:
 						val = 30017;
 						break;
+					
 					case ELVEN_FIGHTER:
 					case ELVEN_MAGE:
 						val = 30218;
 						break;
+					
 					case DARK_FIGHTER:
 					case DARK_MAGE:
 						val = 30358;
 						break;
+					
 					case ORC_FIGHTER:
 					case ORC_MAGE:
 						val = 30568;
 						break;
+					
 					case DWARVEN_FIGHTER:
 						val = 30523;
 						break;
+					
 					case KAMAEL_M_SOLDIER:
 					case KAMAEL_F_SOLDIER:
 						val = 32138;
 						break;
+					
 					default:
 						break;
 				}
+				
 				break;
+			
 			case 4:
 				switch (getNpcId())
 				{
 					case 30598:
 						val = 30050;
 						break;
+					
 					case 30599:
 						val = 30222;
 						break;
+					
 					case 30600:
 						val = 30145;
 						break;
+					
 					case 30601:
 						val = 30519;
 						break;
+					
 					case 30602:
 						val = 30571;
 						break;
+					
 					case 32135:
 						val = 32133;
 						break;
 				}
+				
 				break;
 		}
+		
 		if (val == 0)
 		{
 			_log.warn("WTF? L2NewbieGuideInstance " + getNpcId() + " not found next step " + quest + " for " + player.getClassId());
 			return null;
 		}
+		
 		NpcInstance npc = GameObjectsStorage.getByNpcId(val);
+		
 		if (npc == null)
 		{
 			return "";
 		}
+		
 		player.sendPacket(new RadarControl(2, 1, npc.getLoc()));
 		player.sendPacket(new RadarControl(0, 2, npc.getLoc()));
 		return npc.getName();
@@ -319,6 +373,7 @@ public class NewbieGuideInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String pom;
+		
 		if (val == 0)
 		{
 			pom = "" + npcId;
@@ -327,6 +382,7 @@ public class NewbieGuideInstance extends NpcInstance
 		{
 			pom = npcId + "-" + val;
 		}
+		
 		return "newbiehelper/" + pom + ".htm";
 	}
 }

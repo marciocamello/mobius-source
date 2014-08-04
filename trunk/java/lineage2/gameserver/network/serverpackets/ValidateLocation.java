@@ -34,7 +34,6 @@ public class ValidateLocation extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x79);
-		
 		writeD(_chaObjId);
 		writeD(_loc.x);
 		writeD(_loc.y);

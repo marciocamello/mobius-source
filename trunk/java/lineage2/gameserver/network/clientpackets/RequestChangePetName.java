@@ -44,10 +44,12 @@ public class RequestChangePetName extends L2GameClientPacket
 	{
 		Player activeChar = getClient().getActiveChar();
 		PetInstance pet = activeChar.getSummonList().getPet();
+		
 		if (pet == null)
 		{
 			return;
 		}
+		
 		if (pet.isDefaultName())
 		{
 			if ((_name.length() < 1) || (_name.length() > 8))
@@ -55,6 +57,7 @@ public class RequestChangePetName extends L2GameClientPacket
 				sendPacket(Msg.YOUR_PETS_NAME_CAN_BE_UP_TO_8_CHARACTERS);
 				return;
 			}
+			
 			pet.setName(_name);
 			pet.broadcastCharInfo();
 			pet.updateControlItem();

@@ -73,10 +73,12 @@ public class NewCrypt
 		{
 			return false;
 		}
+		
 		long chksum = 0;
 		int count = size - 4;
 		long check = -1;
 		int i;
+		
 		for (i = offset; i < count; i += 4)
 		{
 			check = raw[i] & 0xff;
@@ -85,6 +87,7 @@ public class NewCrypt
 			check |= (raw[i + 3] << 0x18) & 0xff000000;
 			chksum ^= check;
 		}
+		
 		check = raw[i] & 0xff;
 		check |= (raw[i + 1] << 8) & 0xff00;
 		check |= (raw[i + 2] << 0x10) & 0xff0000;
@@ -113,6 +116,7 @@ public class NewCrypt
 		int count = size - 4;
 		long ecx;
 		int i;
+		
 		for (i = offset; i < count; i += 4)
 		{
 			ecx = raw[i] & 0xff;
@@ -121,6 +125,7 @@ public class NewCrypt
 			ecx |= (raw[i + 3] << 0x18) & 0xff000000;
 			chksum ^= ecx;
 		}
+		
 		ecx = raw[i] & 0xff;
 		ecx |= (raw[i + 1] << 8) & 0xff00;
 		ecx |= (raw[i + 2] << 0x10) & 0xff0000;
@@ -154,6 +159,7 @@ public class NewCrypt
 		int pos = 4 + offset;
 		int edx;
 		int ecx = key;
+		
 		while (pos < stop)
 		{
 			edx = raw[pos] & 0xFF;
@@ -167,6 +173,7 @@ public class NewCrypt
 			raw[pos++] = (byte) ((edx >> 16) & 0xFF);
 			raw[pos++] = (byte) ((edx >> 24) & 0xFF);
 		}
+		
 		raw[pos++] = (byte) (ecx & 0xFF);
 		raw[pos++] = (byte) ((ecx >> 8) & 0xFF);
 		raw[pos++] = (byte) ((ecx >> 16) & 0xFF);
@@ -183,10 +190,12 @@ public class NewCrypt
 	{
 		byte[] result = new byte[raw.length];
 		int count = raw.length / 8;
+		
 		for (int i = 0; i < count; i++)
 		{
 			_decrypt.processBlock(raw, i * 8, result, i * 8);
 		}
+		
 		return result;
 	}
 	
@@ -201,10 +210,12 @@ public class NewCrypt
 	{
 		byte[] result = new byte[size];
 		int count = size / 8;
+		
 		for (int i = 0; i < count; i++)
 		{
 			_decrypt.processBlock(raw, offset + (i * 8), result, i * 8);
 		}
+		
 		System.arraycopy(result, 0, raw, offset, size);
 	}
 	
@@ -218,10 +229,12 @@ public class NewCrypt
 	{
 		int count = raw.length / 8;
 		byte[] result = new byte[raw.length];
+		
 		for (int i = 0; i < count; i++)
 		{
 			_crypt.processBlock(raw, i * 8, result, i * 8);
 		}
+		
 		return result;
 	}
 	
@@ -236,10 +249,12 @@ public class NewCrypt
 	{
 		int count = size / 8;
 		byte[] result = new byte[size];
+		
 		for (int i = 0; i < count; i++)
 		{
 			_crypt.processBlock(raw, offset + (i * 8), result, i * 8);
 		}
+		
 		System.arraycopy(result, 0, raw, offset, size);
 	}
 }

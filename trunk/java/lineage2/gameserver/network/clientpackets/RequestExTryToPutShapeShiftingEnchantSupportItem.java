@@ -38,6 +38,7 @@ public class RequestExTryToPutShapeShiftingEnchantSupportItem extends L2GameClie
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
@@ -54,6 +55,7 @@ public class RequestExTryToPutShapeShiftingEnchantSupportItem extends L2GameClie
 		ItemInstance targetItem = inventory.getItemByObjectId(_targetItemObjId);
 		ItemInstance extracItem = inventory.getItemByObjectId(_extracItemObjId);
 		ItemInstance stone = player.getAppearanceStone();
+		
 		if ((targetItem == null) || (extracItem == null) || (stone == null))
 		{
 			player.sendPacket(ExShapeShiftingResult.FAIL);
@@ -82,6 +84,7 @@ public class RequestExTryToPutShapeShiftingEnchantSupportItem extends L2GameClie
 		}
 		
 		AppearanceStone appearanceStone = EnchantItemHolder.getInstance().getAppearanceStone(stone.getItemId());
+		
 		if (appearanceStone == null)
 		{
 			player.sendPacket(ExShapeShiftingResult.FAIL);

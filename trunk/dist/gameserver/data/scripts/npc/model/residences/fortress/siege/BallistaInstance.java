@@ -26,7 +26,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class BallistaInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -48,15 +48,19 @@ public class BallistaInstance extends NpcInstance
 	protected void onDeath(Creature killer)
 	{
 		super.onDeath(killer);
+		
 		if ((killer == null) || !killer.isPlayer())
 		{
 			return;
 		}
+		
 		Player player = killer.getPlayer();
+		
 		if (player.getClan() == null)
 		{
 			return;
 		}
+		
 		player.getClan().incReputation(30, false, "Ballista " + getTitle());
 		player.sendPacket(new SystemMessage2(SystemMsg.THE_BALLISTA_HAS_BEEN_SUCCESSFULLY_DESTROYED));
 	}

@@ -47,10 +47,12 @@ public class ConditionPlayerAgathion extends Condition
 		{
 			return false;
 		}
+		
 		if ((((Player) env.character).getAgathionId() > 0) && (_agathionId == -1))
 		{
 			return true;
 		}
+		
 		return ((Player) env.character).getAgathionId() == _agathionId;
 	}
 }

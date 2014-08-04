@@ -44,11 +44,14 @@ public class RequestFortressMapInfo extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		Fortress fortress = ResidenceHolder.getInstance().getResidence(Fortress.class, _fortressId);
+		
 		if (fortress != null)
 		{
 			sendPacket(new ExShowFortressMapInfo(fortress));

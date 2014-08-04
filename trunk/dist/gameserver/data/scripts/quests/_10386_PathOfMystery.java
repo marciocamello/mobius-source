@@ -34,7 +34,6 @@ public class _10386_PathOfMystery extends Quest implements ScriptFile
 		addTalkId(TOPOI);
 		addTalkId(HESET);
 		addTalkId(BERNA);
-		
 		addLevelCheck(93, 100);
 	}
 	
@@ -49,14 +48,17 @@ public class _10386_PathOfMystery extends Quest implements ScriptFile
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		if (event.equalsIgnoreCase("acceptedHeset.htm"))
 		{
 			st.setCond(3);
 		}
+		
 		if (event.equalsIgnoreCase("acceptedBerma.htm"))
 		{
 			st.setCond(4);
 		}
+		
 		if (event.equalsIgnoreCase("endquest.htm"))
 		{
 			st.getPlayer().addExpAndSp(27244350, 2724435);
@@ -64,6 +66,7 @@ public class _10386_PathOfMystery extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -73,6 +76,7 @@ public class _10386_PathOfMystery extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == TOPOI)
 		{
 			if (cond == 0)
@@ -86,6 +90,7 @@ public class _10386_PathOfMystery extends Quest implements ScriptFile
 			{
 				htmltext = "hesetCond1.htm";
 			}
+			
 			if (cond == 4)
 			{
 				htmltext = "collected.htm";
@@ -97,8 +102,8 @@ public class _10386_PathOfMystery extends Quest implements ScriptFile
 			{
 				htmltext = "berna.htm";
 			}
-			
 		}
+		
 		return htmltext;
 	}
 	

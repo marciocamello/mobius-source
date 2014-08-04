@@ -42,10 +42,12 @@ public class TownGuard extends Fighter
 	protected void onIntentionAttack(Creature target)
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((getIntention() == CtrlIntention.AI_INTENTION_ACTIVE) && Rnd.chance(50))
 		{
 			Functions.npcSay(actor, "Invader!");
 		}
+		
 		super.onIntentionAttack(target);
 	}
 }

@@ -102,6 +102,7 @@ public class ZakenNightly extends Fighter
 		if ((_teleportSelfTimer + _teleportSelfReuse) < System.currentTimeMillis())
 		{
 			_teleportSelfTimer = System.currentTimeMillis();
+			
 			if (Rnd.chance(20))
 			{
 				actor.doCast(SkillTable.getInstance().getInfo(4222, 1), actor, false);
@@ -116,8 +117,10 @@ public class ZakenNightly extends Fighter
 				}, 500);
 			}
 		}
+		
 		final double actor_hp_precent = actor.getCurrentHpPercents();
 		final Reflection r = actor.getReflection();
+		
 		switch (_stage)
 		{
 			case 0:
@@ -126,14 +129,18 @@ public class ZakenNightly extends Fighter
 					r.addSpawnWithoutRespawn(pirates_zombie_captain_b, actor.getLoc(), 300);
 					_stage++;
 				}
+				
 				break;
+			
 			case 1:
 				if (actor_hp_precent < 80)
 				{
 					r.addSpawnWithoutRespawn(doll_blader_b, actor.getLoc(), 300);
 					_stage++;
 				}
+				
 				break;
+			
 			case 2:
 				if (actor_hp_precent < 70)
 				{
@@ -141,7 +148,9 @@ public class ZakenNightly extends Fighter
 					r.addSpawnWithoutRespawn(vale_master_b, actor.getLoc(), 300);
 					_stage++;
 				}
+				
 				break;
+			
 			case 3:
 				if (actor_hp_precent < 60)
 				{
@@ -149,9 +158,12 @@ public class ZakenNightly extends Fighter
 					{
 						r.addSpawnWithoutRespawn(pirates_zombie_b, actor.getLoc(), 300);
 					}
+					
 					_stage++;
 				}
+				
 				break;
+			
 			case 4:
 				if (actor_hp_precent < 50)
 				{
@@ -162,9 +174,12 @@ public class ZakenNightly extends Fighter
 						r.addSpawnWithoutRespawn(vale_master_b, actor.getLoc(), 300);
 						r.addSpawnWithoutRespawn(pirates_zombie_captain_b, actor.getLoc(), 300);
 					}
+					
 					_stage++;
 				}
+				
 				break;
+			
 			case 5:
 				if (actor_hp_precent < 40)
 				{
@@ -175,9 +190,12 @@ public class ZakenNightly extends Fighter
 						r.addSpawnWithoutRespawn(vale_master_b, actor.getLoc(), 300);
 						r.addSpawnWithoutRespawn(pirates_zombie_captain_b, actor.getLoc(), 300);
 					}
+					
 					_stage++;
 				}
+				
 				break;
+			
 			case 6:
 				if (actor_hp_precent < 30)
 				{
@@ -188,12 +206,16 @@ public class ZakenNightly extends Fighter
 						r.addSpawnWithoutRespawn(vale_master_b, actor.getLoc(), 300);
 						r.addSpawnWithoutRespawn(pirates_zombie_captain_b, actor.getLoc(), 300);
 					}
+					
 					_stage++;
 				}
+				
 				break;
+			
 			default:
 				break;
 		}
+		
 		super.thinkAttack();
 	}
 	

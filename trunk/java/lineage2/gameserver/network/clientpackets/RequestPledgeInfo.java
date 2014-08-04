@@ -44,21 +44,26 @@ public class RequestPledgeInfo extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (_clanId < 10000000)
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		Clan clan = ClanTable.getInstance().getClan(_clanId);
+		
 		if (clan == null)
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		activeChar.sendPacket(new PledgeInfo(clan));
 	}
 }

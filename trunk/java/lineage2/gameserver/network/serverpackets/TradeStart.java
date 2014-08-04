@@ -27,8 +27,8 @@ public class TradeStart extends L2GameServerPacket
 	public TradeStart(Player player, Player target)
 	{
 		targetId = target.getObjectId();
-		
 		ItemInstance[] items = player.getInventory().getItems();
+		
 		for (ItemInstance item : items)
 		{
 			if (item.canBeTraded(player))
@@ -44,6 +44,7 @@ public class TradeStart extends L2GameServerPacket
 		writeC(0x14);
 		writeD(targetId);
 		writeH(_tradelist.size());
+		
 		for (ItemInfo item : _tradelist)
 		{
 			writeItemInfo(item);

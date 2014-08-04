@@ -68,7 +68,7 @@ public class ZakenDay83 extends Reflection
 	private class DeathListener implements OnDeathListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public DeathListener()
 		{
@@ -81,6 +81,7 @@ public class ZakenDay83 extends Reflection
 			if (self.isNpc() && (self.getNpcId() == UltraDayZaken))
 			{
 				long _timePassed = System.currentTimeMillis() - _savedTime;
+				
 				for (Player p : getPlayers())
 				{
 					if (_timePassed < (5 * 60 * 1000))
@@ -105,6 +106,7 @@ public class ZakenDay83 extends Reflection
 						}
 					}
 				}
+				
 				for (Player p : getPlayers())
 				{
 					p.sendPacket(new ExSendUIEvent(p, 1, 1, 0, 0));

@@ -65,6 +65,7 @@ public class HeraSubAI extends DefaultAI
 		{
 			startMoveTask();
 		}
+		
 		return true;
 	}
 	
@@ -75,10 +76,12 @@ public class HeraSubAI extends DefaultAI
 	protected void onEvtArrived()
 	{
 		startMoveTask();
+		
 		if (Rnd.chance(52))
 		{
 			sayRndMsg();
 		}
+		
 		super.onEvtArrived();
 	}
 	
@@ -88,10 +91,12 @@ public class HeraSubAI extends DefaultAI
 	private void startMoveTask()
 	{
 		_lastPoint++;
+		
 		if (_lastPoint >= _points.length)
 		{
 			_lastPoint = 0;
 		}
+		
 		addTaskMove(_points[_lastPoint], false);
 		doTask();
 	}
@@ -102,35 +107,45 @@ public class HeraSubAI extends DefaultAI
 	private void sayRndMsg()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		NpcString ns;
+		
 		switch (Rnd.get(7))
 		{
 			case 1:
 				ns = NpcString.WHY_HAVE_THE_HEROES_ABANDONED_US;
 				break;
+			
 			case 2:
 				ns = NpcString.WHY_HAVE_THE_HEROES_ABANDONED_US;
 				break;
+			
 			case 3:
 				ns = NpcString.WHY_HAVE_THE_HEROES_ABANDONED_US;
 				break;
+			
 			case 4:
 				ns = NpcString.WHY_HAVE_THE_HEROES_ABANDONED_US;
 				break;
+			
 			case 5:
 				ns = NpcString.WHY_HAVE_THE_HEROES_ABANDONED_US;
 				break;
+			
 			case 6:
 				ns = NpcString.WHY_HAVE_THE_HEROES_ABANDONED_US;
 				break;
+			
 			default:
 				ns = NpcString.WHY_HAVE_THE_HEROES_ABANDONED_US;
 				break;
 		}
+		
 		Functions.npcSay(actor, ns);
 	}
 	

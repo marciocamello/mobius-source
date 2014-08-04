@@ -367,8 +367,10 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 					_state.update();
 					_socialTask = ThreadPoolManager.getInstance().schedule(new SpawnDespawn(2), 16);
 					break;
+				
 				case 2:
 					_valakas.broadcastPacket(new SocialAction(_valakas.getObjectId(), 1));
+					
 					for (Player pc : _players)
 					{
 						if (pc.getDistance(_valakas) <= _distance)
@@ -381,8 +383,10 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new SpawnDespawn(3), 1500);
 					break;
+				
 				case 3:
 					for (Player pc : _players)
 					{
@@ -396,8 +400,10 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new SpawnDespawn(4), 3300);
 					break;
+				
 				case 4:
 					for (Player pc : _players)
 					{
@@ -411,8 +417,10 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new SpawnDespawn(5), 2900);
 					break;
+				
 				case 5:
 					for (Player pc : _players)
 					{
@@ -426,8 +434,10 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new SpawnDespawn(6), 2700);
 					break;
+				
 				case 6:
 					for (Player pc : _players)
 					{
@@ -441,8 +451,10 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new SpawnDespawn(7), 1);
 					break;
+				
 				case 7:
 					for (Player pc : _players)
 					{
@@ -456,8 +468,10 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new SpawnDespawn(8), 3200);
 					break;
+				
 				case 8:
 					for (Player pc : _players)
 					{
@@ -471,8 +485,10 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new SpawnDespawn(9), 1400);
 					break;
+				
 				case 9:
 					for (Player pc : _players)
 					{
@@ -486,8 +502,10 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new SpawnDespawn(10), 6700);
 					break;
+				
 				case 10:
 					for (Player pc : _players)
 					{
@@ -501,25 +519,32 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new SpawnDespawn(11), 5700);
 					break;
+				
 				case 11:
 					for (Player pc : _players)
 					{
 						pc.leaveMovieMode();
 					}
+					
 					_valakas.unblock();
 					broadcastScreenMessage(NpcString.VALAKAS_ARROGAANT_FOOL_YOU_DARE_TO_CHALLENGE_ME);
+					
 					if (_valakas.getAI().getIntention() == AI_INTENTION_ACTIVE)
 					{
 						_valakas.moveToLocation(new Location(Rnd.get(211080, 214909), Rnd.get(-115841, -112822), -1662, 0), 0, false);
 					}
+					
 					_sleepCheckTask = ThreadPoolManager.getInstance().schedule(new CheckLastAttack(), 600000);
 					break;
+				
 				case 12:
 					_valakas.broadcastPacket(new PlaySound(PlaySound.Type.MUSIC, "B03_D", 1, _valakas.getObjectId(), _valakas.getLoc()));
 					broadcastScreenMessage(NpcString.VALAKAS_THE_EVIL_FIRE_DRAGON_VALAKAS_DEFEATED);
 					onValakasDie();
+					
 					for (Player pc : _players)
 					{
 						if (pc.getDistance(_valakas) <= _distance)
@@ -532,8 +557,10 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new SpawnDespawn(13), 500);
 					break;
+				
 				case 13:
 					for (Player pc : _players)
 					{
@@ -547,8 +574,10 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new SpawnDespawn(14), 3500);
 					break;
+				
 				case 14:
 					for (Player pc : _players)
 					{
@@ -562,8 +591,10 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new SpawnDespawn(15), 4500);
 					break;
+				
 				case 15:
 					for (Player pc : _players)
 					{
@@ -577,8 +608,10 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new SpawnDespawn(16), 500);
 					break;
+				
 				case 16:
 					for (Player pc : _players)
 					{
@@ -592,8 +625,10 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new SpawnDespawn(17), 4600);
 					break;
+				
 				case 17:
 					for (Player pc : _players)
 					{
@@ -607,8 +642,10 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new SpawnDespawn(18), 750);
 					break;
+				
 				case 18:
 					for (Player pc : _players)
 					{
@@ -622,14 +659,17 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new SpawnDespawn(19), 2500);
 					break;
+				
 				case 19:
 					for (Player pc : _players)
 					{
 						pc.leaveMovieMode();
 						pc.altOnMagicUseTimer(pc, SkillTable.getInstance().getInfo(23312, 1));
 					}
+					
 					break;
 			}
 		}
@@ -697,6 +737,7 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
@@ -728,15 +769,18 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		{
 			return;
 		}
+		
 		Dying = true;
 		_state.setRespawnDate(getRespawnInterval());
 		_state.setState(EpicBossState.State.INTERVAL);
 		_state.update();
 		_entryLocked = false;
+		
 		for (int[] ints : _teleportCubeLocation)
 		{
 			_teleportCube.add(Functions.spawn(new Location(ints[0], ints[1], ints[2], ints[3]), _teleportCubeId));
 		}
+		
 		Log.add("Valakas died", "bosses");
 	}
 	
@@ -746,18 +790,21 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 	private static void setIntervalEndTask()
 	{
 		setUnspawn();
+		
 		if (_state.getState().equals(EpicBossState.State.ALIVE))
 		{
 			_state.setState(EpicBossState.State.NOTSPAWN);
 			_state.update();
 			return;
 		}
+		
 		if (!_state.getState().equals(EpicBossState.State.INTERVAL))
 		{
 			_state.setRespawnDate(getRespawnInterval());
 			_state.setState(EpicBossState.State.INTERVAL);
 			_state.update();
 		}
+		
 		_intervalEndTask = ThreadPoolManager.getInstance().schedule(new IntervalEnd(), _state.getInterval());
 	}
 	
@@ -768,55 +815,67 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 	{
 		banishForeigners();
 		_entryLocked = false;
+		
 		if (_valakas != null)
 		{
 			_valakas.deleteMe();
 		}
+		
 		for (NpcInstance npc : _spawnedMinions)
 		{
 			npc.deleteMe();
 		}
+		
 		for (NpcInstance cube : _teleportCube)
 		{
 			cube.getSpawn().stopRespawn();
 			cube.deleteMe();
 		}
+		
 		_teleportCube.clear();
+		
 		if (_valakasSpawnTask != null)
 		{
 			_valakasSpawnTask.cancel(false);
 			_valakasSpawnTask = null;
 		}
+		
 		if (_intervalEndTask != null)
 		{
 			_intervalEndTask.cancel(false);
 			_intervalEndTask = null;
 		}
+		
 		if (_socialTask != null)
 		{
 			_socialTask.cancel(false);
 			_socialTask = null;
 		}
+		
 		if (_mobiliseTask != null)
 		{
 			_mobiliseTask.cancel(false);
 			_mobiliseTask = null;
 		}
+		
 		if (_moveAtRandomTask != null)
 		{
 			_moveAtRandomTask.cancel(false);
 			_moveAtRandomTask = null;
 		}
+		
 		if (_sleepCheckTask != null)
 		{
 			_sleepCheckTask.cancel(false);
 			_sleepCheckTask = null;
 		}
+		
 		if (_respawnValakasTask != null)
 		{
 			_respawnValakasTask.cancel(false);
 			_respawnValakasTask = null;
 		}
+		
 		if (_onAnnihilatedTask != null)
 		{
 			_onAnnihilatedTask.cancel(false);
@@ -830,6 +889,7 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 	static void sleep()
 	{
 		setUnspawn();
+		
 		if (_state.getState().equals(EpicBossState.State.ALIVE))
 		{
 			_state.setState(EpicBossState.State.NOTSPAWN);
@@ -854,6 +914,7 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		{
 			_valakasSpawnTask = ThreadPoolManager.getInstance().schedule(new SpawnDespawn(1), FWV_APPTIMEOFVALAKAS);
 		}
+		
 		_entryLocked = true;
 	}
 	
@@ -896,10 +957,12 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		_state = new EpicBossState(Valakas);
 		_zone = ReflectionUtils.getZone("[valakas_epic]");
 		_log.info("ValakasManager: State of Valakas is " + _state.getState() + ".");
+		
 		if (!_state.getState().equals(EpicBossState.State.NOTSPAWN))
 		{
 			setIntervalEndTask();
 		}
+		
 		_log.info("ValakasManager: Next spawn date of Valakas is " + TimeUtils.toSimpleFormat(_state.getRespawnDate()) + ".");
 	}
 	
@@ -913,32 +976,39 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 		{
 			return;
 		}
+		
 		if ((ccleader.getParty() == null) || !ccleader.getParty().isInCommandChannel())
 		{
 			ccleader.sendPacket(Msg.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_IN_A_CURRENT_COMMAND_CHANNEL);
 			return;
 		}
+		
 		CommandChannel cc = ccleader.getParty().getCommandChannel();
+		
 		if (cc.getChannelLeader() != ccleader)
 		{
 			ccleader.sendPacket(Msg.ONLY_THE_ALLIANCE_CHANNEL_LEADER_CAN_ATTEMPT_ENTRY);
 			return;
 		}
+		
 		if (cc.getMemberCount() > 200)
 		{
 			ccleader.sendMessage("The maximum of 200 players can invade the Valakas Nest");
 			return;
 		}
+		
 		if (_state.getState() != EpicBossState.State.NOTSPAWN)
 		{
 			ccleader.sendMessage("Valakas is still reborning. You cannot invade the nest now");
 			return;
 		}
+		
 		if (_entryLocked || (_state.getState() == EpicBossState.State.ALIVE))
 		{
 			ccleader.sendMessage("Valakas has already been reborned and is being attacked. The entrance is sealed.");
 			return;
 		}
+		
 		for (Player p : cc)
 		{
 			if (p.isDead() || p.isFlying() || p.isCursedWeaponEquipped() || !p.isInRange(ccleader, 500))
@@ -947,10 +1017,12 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 				return;
 			}
 		}
+		
 		for (Player p : cc)
 		{
 			p.teleToLocation(TELEPORT_POSITION);
 		}
+		
 		setValakasSpawnTask();
 	}
 	

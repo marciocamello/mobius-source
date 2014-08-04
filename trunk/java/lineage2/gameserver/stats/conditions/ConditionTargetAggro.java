@@ -45,18 +45,22 @@ public class ConditionTargetAggro extends Condition
 	protected boolean testImpl(Env env)
 	{
 		Creature target = env.target;
+		
 		if (target == null)
 		{
 			return false;
 		}
+		
 		if (target.isMonster())
 		{
 			return ((MonsterInstance) target).isAggressive() == _isAggro;
 		}
+		
 		if (target.isPlayer())
 		{
 			return target.getKarma() < 0;
 		}
+		
 		return false;
 	}
 }

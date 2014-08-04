@@ -70,13 +70,13 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 	public void stopEvent()
 	{
 		clearActions();
-		
 		updatePlayers(false, false);
 		
 		for (DuelSnapshotObject d : this)
 		{
 			d.getPlayer().sendPacket(new ExDuelEnd(this));
 			GameObject target = d.getPlayer().getTarget();
+			
 			if (target != null)
 			{
 				d.getPlayer().getAI().notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, target);
@@ -88,12 +88,13 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 			case NONE:
 				sendPacket(SystemMsg.THE_DUEL_HAS_ENDED_IN_A_TIE);
 				break;
+			
 			case RED:
 			case BLUE:
 				List<DuelSnapshotObject> winners = getObjects(_winner.name());
 				List<DuelSnapshotObject> lossers = getObjects(_winner.revert().name());
-				
 				DuelSnapshotObject winner = CollectionUtils.safeGet(winners, 0);
+				
 				if (winner != null)
 				{
 					sendPacket(new SystemMessage2(SystemMsg.C1S_PARTY_HAS_WON_THE_DUEL).addName(winners.get(0).getPlayer()));
@@ -107,6 +108,7 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 				{
 					sendPacket(SystemMsg.THE_DUEL_HAS_ENDED_IN_A_TIE);
 				}
+				
 				break;
 		}
 		
@@ -123,16 +125,13 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 	public void teleportPlayers(String name)
 	{
 		InstantZone instantZone = InstantZoneHolder.getInstance().getInstantZone(1);
-		
 		Reflection reflection = new Reflection();
 		reflection.init(instantZone);
-		
 		List<DuelSnapshotObject> team = getObjects(BLUE_TEAM);
 		
 		for (int i = 0; i < team.size(); i++)
 		{
 			DuelSnapshotObject $member = team.get(i);
-			
 			$member.getPlayer().addEvent(this);
 			$member.getPlayer()._stablePoint = $member.getLoc();
 			$member.getPlayer().teleToLocation(instantZone.getTeleportCoords().get(i), reflection);
@@ -143,7 +142,6 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 		for (int i = 0; i < team.size(); i++)
 		{
 			DuelSnapshotObject $member = team.get(i);
-			
 			$member.getPlayer().addEvent(this);
 			$member.getPlayer()._stablePoint = $member.getLoc();
 			$member.getPlayer().teleToLocation(instantZone.getTeleportCoords().get(9 + i), reflection);
@@ -174,6 +172,7 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 		
 		Party party1 = player.getParty();
 		Party party2 = target.getParty();
+		
 		if ((player != party1.getPartyLeader()) || (target != party2.getPartyLeader()))
 		{
 			player.sendPacket(SystemMsg.YOU_ARE_UNABLE_TO_REQUEST_A_DUEL_AT_THIS_TIME);
@@ -181,11 +180,12 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 		}
 		
 		Iterator<Player> iterator = new JoinedIterator<>(party1.iterator(), party2.iterator());
+		
 		while (iterator.hasNext())
 		{
 			Player $member = iterator.next();
-			
 			IStaticPacket packet = null;
+			
 			if ((packet = canDuel0(player, $member)) != null)
 			{
 				player.sendPacket(packet);
@@ -193,6 +193,7 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
@@ -208,7 +209,6 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 		request.set("duelType", 1);
 		player.setRequest(request);
 		target.setRequest(request);
-		
 		player.sendPacket(new SystemMessage2(SystemMsg.C1S_PARTY_HAS_BEEN_CHALLENGED_TO_A_DUEL).addName(target));
 		target.sendPacket(new SystemMessage2(SystemMsg.C1S_PARTY_HAS_CHALLENGED_YOUR_PARTY_TO_A_DUEL).addName(player), new ExDuelAskStart(player.getName(), 1));
 	}
@@ -253,6 +253,7 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 			}
 			
 			List<DuelSnapshotObject> objects = getObjects($snapshot.getTeam().name());
+			
 			if (objects.isEmpty())
 			{
 				_winner = $snapshot.getTeam().revert();
@@ -278,13 +279,13 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 	public void onDie(Player player)
 	{
 		TeamType team = player.getTeam();
+		
 		if ((team == TeamType.NONE) || _aborted)
 		{
 			return;
 		}
 		
 		sendPacket(SystemMsg.THE_OTHER_PARTY_IS_FROZEN, team.revert().name());
-		
 		player.stopAttackStanceTask();
 		player.startFrozen();
 		player.setTeam(TeamType.NONE);
@@ -292,15 +293,17 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 		for (Player $player : World.getAroundPlayers(player))
 		{
 			$player.getAI().notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, player);
+			
 			for (Summon summon : player.getSummonList())
 			{
 				$player.getAI().notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, summon);
 			}
 		}
-		player.sendChanges();
 		
+		player.sendChanges();
 		boolean allDead = true;
 		List<DuelSnapshotObject> objs = getObjects(team.name());
+		
 		for (DuelSnapshotObject obj : objs)
 		{
 			if (obj.getPlayer() == player)
@@ -317,7 +320,6 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 		if (allDead)
 		{
 			_winner = team.revert();
-			
 			stopEvent();
 		}
 	}

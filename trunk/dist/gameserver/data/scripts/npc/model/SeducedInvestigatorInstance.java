@@ -25,7 +25,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class SeducedInvestigatorInstance extends MonsterInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -61,14 +61,17 @@ public class SeducedInvestigatorInstance extends MonsterInstance
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		Player player = attacker.getPlayer();
+		
 		if (player == null)
 		{
 			return false;
 		}
+		
 		if (player.isPlayable())
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	

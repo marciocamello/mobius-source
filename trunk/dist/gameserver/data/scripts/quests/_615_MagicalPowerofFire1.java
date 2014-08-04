@@ -75,6 +75,7 @@ public class _615_MagicalPowerofFire1 extends Quest implements ScriptFile
 		KETRA_NPC_LIST[16] = 21345;
 		KETRA_NPC_LIST[17] = 21346;
 		KETRA_NPC_LIST[18] = 21347;
+		
 		for (int npcId : KETRA_NPC_LIST)
 		{
 			addAttackId(npcId);
@@ -85,6 +86,7 @@ public class _615_MagicalPowerofFire1 extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_accept"))
 		{
 			htmltext = "herald_naran_q0615_02.htm";
@@ -111,6 +113,7 @@ public class _615_MagicalPowerofFire1 extends Quest implements ScriptFile
 				st.setCond(3);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -121,6 +124,7 @@ public class _615_MagicalPowerofFire1 extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		int proval = st.getInt("proval");
+		
 		switch (npcId)
 		{
 			case NARAN:
@@ -156,7 +160,9 @@ public class _615_MagicalPowerofFire1 extends Quest implements ScriptFile
 				{
 					htmltext = "herald_naran_q0615_03.htm";
 				}
+				
 				break;
+			
 			case UDAN:
 				if (cond == 1)
 				{
@@ -178,14 +184,18 @@ public class _615_MagicalPowerofFire1 extends Quest implements ScriptFile
 					st.playSound(SOUND_FINISH);
 					st.exitCurrentQuest(true);
 				}
+				
 				break;
+			
 			case BOX_OF_ASEFA:
 				if (cond == 2)
 				{
 					htmltext = "asefas_box_q0615_01.htm";
 				}
+				
 				break;
 		}
+		
 		return htmltext;
 	}
 	
@@ -194,11 +204,13 @@ public class _615_MagicalPowerofFire1 extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		int proval = st.getInt("proval");
+		
 		if ((cond == 2) && (proval == 0))
 		{
 			npc.doCast(SkillTable.getInstance().getInfo(4547, 1), st.getPlayer(), true);
 			st.set("proval", "1");
 		}
+		
 		return null;
 	}
 }

@@ -75,17 +75,21 @@ public final class HandysBlockCheckerManager
 	{
 		int newVotes = _arenaVotes.get(arena) + 1;
 		ArenaParticipantsHolder holder = _arenaPlayers[arena];
+		
 		if ((newVotes > (holder.getAllPlayers().size() / 2)) && !holder.getEvent().isStarted())
 		{
 			clearArenaVotes(arena);
+			
 			if ((holder.getBlueTeamSize() == 0) || (holder.getRedTeamSize() == 0))
 			{
 				return;
 			}
+			
 			if (Config.ALT_HBCE_FAIR_PLAY)
 			{
 				holder.checkAndShuffle();
 			}
+			
 			ThreadPoolManager.getInstance().execute(holder.getEvent().new StartEvent());
 		}
 		else
@@ -134,6 +138,7 @@ public final class HandysBlockCheckerManager
 	public void startUpParticipantsQueue()
 	{
 		_arenaPlayers = new ArenaParticipantsHolder[4];
+		
 		for (int i = 0; i < 4; ++i)
 		{
 			_arenaPlayers[i] = new ArenaParticipantsHolder(i);
@@ -152,32 +157,39 @@ public final class HandysBlockCheckerManager
 		synchronized (holder)
 		{
 			boolean isRed;
+			
 			if (isRegistered(player))
 			{
 				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_ALREADY_BEEN_REGISTERED_IN_A_WAITING_LIST_OF_AN_EVENT).addName(player));
 				return false;
 			}
+			
 			if (player.isCursedWeaponEquipped())
 			{
 				player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_REGISTER_WHILE_POSSESSING_A_CURSED_WEAPON));
 				return false;
 			}
+			
 			KrateisCubeRunnerEvent krateis = EventHolder.getInstance().getEvent(EventType.MAIN_EVENT, 2);
+			
 			if (krateis.isRegistered(player))
 			{
 				player.sendPacket(Msg.APPLICANTS_FOR_THE_OLYMPIAD_UNDERGROUND_COLISEUM_OR_KRATEI_S_CUBE_MATCHES_CANNOT_REGISTER);
 				return false;
 			}
+			
 			if (Olympiad.isRegistered(player))
 			{
 				player.sendPacket(Msg.APPLICANTS_FOR_THE_OLYMPIAD_UNDERGROUND_COLISEUM_OR_KRATEI_S_CUBE_MATCHES_CANNOT_REGISTER);
 				return false;
 			}
+			
 			if (_registrationPenalty.contains(player.getObjectId()))
 			{
 				player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MAKE_ANOTHER_REQUEST_FOR_10_SECONDS_AFTER_CANCELLING_A_MATCH_REGISTRATION));
 				return false;
 			}
+			
 			if (holder.getBlueTeamSize() < holder.getRedTeamSize())
 			{
 				holder.addPlayer(player, 1);
@@ -188,6 +200,7 @@ public final class HandysBlockCheckerManager
 				holder.addPlayer(player, 0);
 				isRed = true;
 			}
+			
 			holder.broadCastPacketToTeam(new ExCubeGameAddPlayer(player, isRed));
 			return true;
 		}
@@ -208,15 +221,19 @@ public final class HandysBlockCheckerManager
 			holder.removePlayer(player, team);
 			holder.broadCastPacketToTeam(new ExCubeGameRemovePlayer(player, isRed));
 			int teamSize = isRed ? holder.getRedTeamSize() : holder.getBlueTeamSize();
+			
 			if (teamSize == 0)
 			{
 				holder.getEvent().endEventAbnormally();
 			}
+			
 			Integer objId = player.getObjectId();
+			
 			if (!_registrationPenalty.contains(objId))
 			{
 				_registrationPenalty.add(objId);
 			}
+			
 			schedulePenaltyRemoval(objId);
 		}
 	}
@@ -233,6 +250,7 @@ public final class HandysBlockCheckerManager
 		synchronized (holder)
 		{
 			boolean isFromRed = holder._redPlayers.contains(player);
+			
 			if (isFromRed && (holder.getBlueTeamSize() == 6))
 			{
 				player.sendMessage("The team is full");
@@ -243,8 +261,10 @@ public final class HandysBlockCheckerManager
 				player.sendMessage("The team is full");
 				return;
 			}
+			
 			int futureTeam = isFromRed ? 1 : 0;
 			holder.addPlayer(player, futureTeam);
+			
 			if (isFromRed)
 			{
 				holder.removePlayer(player, 0);
@@ -253,6 +273,7 @@ public final class HandysBlockCheckerManager
 			{
 				holder.removePlayer(player, 1);
 			}
+			
 			holder.broadCastPacketToTeam(new ExCubeGameChangeTeam(player, isFromRed));
 		}
 	}
@@ -280,6 +301,7 @@ public final class HandysBlockCheckerManager
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -294,6 +316,7 @@ public final class HandysBlockCheckerManager
 		{
 			return false;
 		}
+		
 		return _arenaStatus.get(arenaId);
 	}
 	
@@ -481,6 +504,7 @@ public final class HandysBlockCheckerManager
 			ArrayList<Player> team = new ArrayList<>(12);
 			team.addAll(_redPlayers);
 			team.addAll(_bluePlayers);
+			
 			for (Player p : team)
 			{
 				p.sendPacket(packet);
@@ -520,17 +544,21 @@ public final class HandysBlockCheckerManager
 		{
 			int redSize = _redPlayers.size();
 			int blueSize = _bluePlayers.size();
+			
 			if (redSize > (blueSize + 1))
 			{
 				broadCastPacketToTeam(new SystemMessage(SystemMessage.THE_TEAM_WAS_ADJUSTED_BECAUSE_THE_POPULATION_RATIO_WAS_NOT_CORRECT));
 				int needed = redSize - (blueSize + 1);
+				
 				for (int i = 0; i < (needed + 1); i++)
 				{
 					Player plr = _redPlayers.get(i);
+					
 					if (plr == null)
 					{
 						continue;
 					}
+					
 					changePlayerToTeam(plr, _arena, 1);
 				}
 			}
@@ -538,13 +566,16 @@ public final class HandysBlockCheckerManager
 			{
 				broadCastPacketToTeam(new SystemMessage(SystemMessage.THE_TEAM_WAS_ADJUSTED_BECAUSE_THE_POPULATION_RATIO_WAS_NOT_CORRECT));
 				int needed = blueSize - (redSize + 1);
+				
 				for (int i = 0; i < (needed + 1); i++)
 				{
 					Player plr = _bluePlayers.get(i);
+					
 					if (plr == null)
 					{
 						continue;
 					}
+					
 					changePlayerToTeam(plr, _arena, 0);
 				}
 			}

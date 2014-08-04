@@ -60,7 +60,6 @@ public class _10352_LegacyofCrumaTower extends Quest implements ScriptFile
 		addKillId(MARTES_RB);
 		addQuestItem(TRESURE_TOOL);
 		addQuestItem(MARTES_CORE);
-		
 		addLevelCheck(38, 100);
 	}
 	
@@ -68,6 +67,7 @@ public class _10352_LegacyofCrumaTower extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		Player player = st.getPlayer();
+		
 		if (event.equalsIgnoreCase("33155-9.htm"))
 		{
 			SupportMagic.doSupportMagic(npc, player, false);
@@ -84,6 +84,7 @@ public class _10352_LegacyofCrumaTower extends Quest implements ScriptFile
 			{
 				st.setCond(3);
 			}
+			
 			return null;
 		}
 		
@@ -95,6 +96,7 @@ public class _10352_LegacyofCrumaTower extends Quest implements ScriptFile
 			player.teleToLocation(17192, 114173, -3439);
 			return null;
 		}
+		
 		if (event.equalsIgnoreCase("33163-8.htm"))
 		{
 			if (st.getQuestItemsCount(TRESURE_TOOL) == 0)
@@ -115,9 +117,11 @@ public class _10352_LegacyofCrumaTower extends Quest implements ScriptFile
 				player.sendMessage("You cannot enter without party!"); // pts message?
 				return null;
 			}
+			
 			for (Player member : player.getParty().getPartyMembers())
 			{
 				QuestState qs = member.getQuestState(_10352_LegacyofCrumaTower.class);
+				
 				if ((qs == null) || (qs.getCond() != 3))
 				{
 				} // nothing as I've seen everybody can enter this instance
@@ -126,9 +130,11 @@ public class _10352_LegacyofCrumaTower extends Quest implements ScriptFile
 					qs.setCond(4);
 				}
 			}
+			
 			ReflectionUtils.enterReflection(player, 198);
 			return null;
 		}
+		
 		if (event.equalsIgnoreCase("LeaveInstance"))
 		{
 			player.teleToLocation(17192, 114173, -3439, ReflectionManager.DEFAULT);
@@ -144,10 +150,12 @@ public class _10352_LegacyofCrumaTower extends Quest implements ScriptFile
 		Player player = st.getPlayer();
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (player.getLevel() < 38)
 		{
 			return "33155-lvl.htm";
 		}
+		
 		if (npcId == LILEJ)
 		{
 			if (cond < 5)
@@ -155,16 +163,19 @@ public class _10352_LegacyofCrumaTower extends Quest implements ScriptFile
 				return "33155.htm";
 			}
 		}
+		
 		if (npcId == LINKENS)
 		{
 			if (cond == 1)
 			{
 				return "33163.htm";
 			}
+			
 			if (cond == 2)
 			{
 				return "33163-5.htm";
 			}
+			
 			if (cond == 5)
 			{
 				if (st.getQuestItemsCount(MARTES_CORE) == 0)
@@ -180,20 +191,22 @@ public class _10352_LegacyofCrumaTower extends Quest implements ScriptFile
 					st.exitCurrentQuest(false);
 					return "33163-15.htm";
 				}
-				
 			}
 		}
+		
 		if (npcId == MARTES_NPC)
 		{
 			if (cond == 3)
 			{
 				return "25829.htm";
 			}
+			
 			if (cond == 5)
 			{
 				return "25829-1.htm";
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -211,13 +224,16 @@ public class _10352_LegacyofCrumaTower extends Quest implements ScriptFile
 			for (Player member : player.getParty().getPartyMembers())
 			{
 				QuestState qs = member.getQuestState(_10352_LegacyofCrumaTower.class);
+				
 				if ((qs == null) || (qs.getCond() != 4))
 				{
 					continue;
 				}
+				
 				qs.setCond(5);
 			}
 		}
+		
 		st.getPlayer().getReflection().addSpawnWithoutRespawn(MARTES_NPC, Location.findPointToStay(st.getPlayer(), 50, 100), st.getPlayer().getGeoIndex());
 		return null;
 	}

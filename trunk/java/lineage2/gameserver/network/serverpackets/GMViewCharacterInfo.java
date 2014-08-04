@@ -100,7 +100,6 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		//
 		ally_id = alliance == null ? 0 : alliance.getAllyId();
 		// ally_crest_id = alliance == null ? 0 : alliance.getAllyCrestId();
-		
 		private_store = cha.isInObserverMode() ? Player.STORE_OBSERVING_GAMES : cha.getPrivateStoreType();
 		DwarvenCraftLevel = Math.max(cha.getSkillLevel(1320), 0);
 		pk_kills = cha.getPkKills();
@@ -128,6 +127,7 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		talismans = cha.getTalismanCount();
 		openCloak = cha.getOpenCloak();
 		_inv = new int[Inventory.PAPERDOLL_MAX][3];
+		
 		for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
 		{
 			_inv[PAPERDOLL_ID][0] = cha.getInventory().getPaperdollObjectId(PAPERDOLL_ID);
@@ -140,7 +140,6 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x95);
-		
 		writeD(_loc.x);
 		writeD(_loc.y);
 		writeD(_loc.z);
@@ -185,7 +184,6 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		
 		writeD(talismans);
 		writeD(openCloak ? 0x01 : 0x00);
-		
 		writeD(_patk);
 		writeD(_patkspd);
 		writeD(_pdef);
@@ -236,7 +234,6 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeC(hero);
 		writeD(name_color);
 		writeD(title_color);
-		
 		writeH(attackElement.getId());
 		writeH(attackElementValue);
 		writeH(defenceFire);
@@ -245,7 +242,6 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeH(defenceEarth);
 		writeH(defenceHoly);
 		writeH(defenceUnholy);
-		
 		writeD(fame);
 		writeD(vitality);
 	}

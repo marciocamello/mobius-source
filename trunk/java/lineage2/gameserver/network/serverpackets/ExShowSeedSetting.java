@@ -37,6 +37,7 @@ public class ExShowSeedSetting extends L2GameServerPacket
 		_count = seeds.size();
 		_seedData = new long[_count * 12];
 		int i = 0;
+		
 		for (int s : seeds)
 		{
 			_seedData[(i * 12) + 0] = s;
@@ -48,6 +49,7 @@ public class ExShowSeedSetting extends L2GameServerPacket
 			_seedData[(i * 12) + 6] = (Manor.getInstance().getSeedBasicPrice(s) * 60) / 100;
 			_seedData[(i * 12) + 7] = Manor.getInstance().getSeedBasicPrice(s) * 10;
 			SeedProduction seedPr = c.getSeed(s, CastleManorManager.PERIOD_CURRENT);
+			
 			if (seedPr != null)
 			{
 				_seedData[(i * 12) + 8] = seedPr.getStartProduce();
@@ -58,7 +60,9 @@ public class ExShowSeedSetting extends L2GameServerPacket
 				_seedData[(i * 12) + 8] = 0;
 				_seedData[(i * 12) + 9] = 0;
 			}
+			
 			seedPr = c.getSeed(s, CastleManorManager.PERIOD_NEXT);
+			
 			if (seedPr != null)
 			{
 				_seedData[(i * 12) + 10] = seedPr.getStartProduce();
@@ -69,6 +73,7 @@ public class ExShowSeedSetting extends L2GameServerPacket
 				_seedData[(i * 12) + 10] = 0;
 				_seedData[(i * 12) + 11] = 0;
 			}
+			
 			i++;
 		}
 	}
@@ -77,7 +82,6 @@ public class ExShowSeedSetting extends L2GameServerPacket
 	public void writeImpl()
 	{
 		writeEx(0x26); // SubId
-		
 		writeD(_manorId); // manor id
 		writeD(_count); // size
 		
@@ -85,19 +89,15 @@ public class ExShowSeedSetting extends L2GameServerPacket
 		{
 			writeD((int) _seedData[(i * 12) + 0]); // seed id
 			writeD((int) _seedData[(i * 12) + 1]); // level
-			
 			writeC(1);
 			writeD((int) _seedData[(i * 12) + 2]); // reward 1 id
-			
 			writeC(1);
 			writeD((int) _seedData[(i * 12) + 3]); // reward 2 id
-			
 			writeD((int) _seedData[(i * 12) + 4]); // next sale limit
 			writeD((int) _seedData[(i * 12) + 5]); // price for castle to produce
-													// 1
+			// 1
 			writeD((int) _seedData[(i * 12) + 6]); // min seed price
 			writeD((int) _seedData[(i * 12) + 7]); // max seed price
-			
 			writeQ(_seedData[(i * 12) + 8]); // today sales
 			writeQ(_seedData[(i * 12) + 9]); // today price
 			writeQ(_seedData[(i * 12) + 10]); // next sales

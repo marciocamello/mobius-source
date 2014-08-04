@@ -33,11 +33,12 @@ public class ExShowProcureCropDetail extends L2GameServerPacket
 	{
 		_cropId = cropId;
 		_castleCrops = new TreeMap<>();
-		
 		List<Castle> castleList = ResidenceHolder.getInstance().getResidenceList(Castle.class);
+		
 		for (Castle c : castleList)
 		{
 			CropProcure cropItem = c.getCrop(_cropId, CastleManorManager.PERIOD_CURRENT);
+			
 			if ((cropItem != null) && (cropItem.getAmount() > 0))
 			{
 				_castleCrops.put(c.getId(), cropItem);
@@ -49,7 +50,6 @@ public class ExShowProcureCropDetail extends L2GameServerPacket
 	public void writeImpl()
 	{
 		writeEx(0x79);
-		
 		writeD(_cropId); // crop id
 		writeD(_castleCrops.size()); // size
 		

@@ -42,35 +42,42 @@ public class RequestRestart extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (activeChar.isInObserverMode())
 		{
 			activeChar.sendPacket(Msg.OBSERVERS_CANNOT_PARTICIPATE, RestartResponse.FAIL, ActionFail.STATIC);
 			return;
 		}
+		
 		if (activeChar.isInCombat())
 		{
 			activeChar.sendPacket(Msg.YOU_CANNOT_RESTART_WHILE_IN_COMBAT, RestartResponse.FAIL, ActionFail.STATIC);
 			return;
 		}
+		
 		if (activeChar.isFishing())
 		{
 			activeChar.sendPacket(Msg.YOU_CANNOT_DO_ANYTHING_ELSE_WHILE_FISHING, RestartResponse.FAIL, ActionFail.STATIC);
 			return;
 		}
+		
 		if (activeChar.isBlocked() && !activeChar.isFlying())
 		{
 			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestRestart.OutOfControl", activeChar));
 			activeChar.sendPacket(RestartResponse.FAIL, ActionFail.STATIC);
 			return;
 		}
+		
 		if (getClient() != null)
 		{
 			getClient().setState(GameClientState.AUTHED);
 		}
+		
 		activeChar.restart();
 		CharacterSelectionInfo cl = new CharacterSelectionInfo(getClient().getLogin(), getClient().getSessionKey().playOkID1);
 		ExLoginVitalityEffectInfo vl = new ExLoginVitalityEffectInfo(cl.getCharInfo());

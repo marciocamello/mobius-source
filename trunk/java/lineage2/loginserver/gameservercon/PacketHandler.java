@@ -52,6 +52,7 @@ public class PacketHandler
 	{
 		ReceivablePacket packet = null;
 		int id = buf.get() & 0xff;
+		
 		if (!gs.isAuthed())
 		{
 			switch (id)
@@ -59,6 +60,7 @@ public class PacketHandler
 				case 0x00:
 					packet = new AuthRequest();
 					break;
+				
 				default:
 					_log.error("Received unknown packet: " + Integer.toHexString(id));
 			}
@@ -70,43 +72,56 @@ public class PacketHandler
 				case 0x01:
 					packet = new OnlineStatus();
 					break;
+				
 				case 0x02:
 					packet = new PlayerAuthRequest();
 					break;
+				
 				case 0x03:
 					packet = new PlayerInGame();
 					break;
+				
 				case 0x04:
 					packet = new PlayerLogout();
 					break;
+				
 				case 0x05:
 					packet = new SetAccountInfo();
 					break;
+				
 				case 0x08:
 					packet = new ChangePassword();
 					break;
+				
 				case 0x10:
 					packet = new BonusRequest();
 					break;
+				
 				case 0x11:
 					packet = new ChangeAccessLevel();
 					break;
+				
 				case 0x15:
 					packet = new Player2ndAuthSetPassword();
 					break;
+				
 				case 0x16:
 					packet = new Player2ndAuthSetAttempts();
 					break;
+				
 				case 0x17:
 					packet = new Player2ndAuthSetBanTime();
 					break;
+				
 				case 0xff:
 					packet = new PingResponse();
 					break;
+				
 				default:
 					_log.error("Received unknown packet: " + Integer.toHexString(id));
 			}
 		}
+		
 		return packet;
 	}
 }

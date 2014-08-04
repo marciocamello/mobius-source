@@ -85,6 +85,7 @@ public class ForgeoftheGods extends Fighter
 	public ForgeoftheGods(NpcInstance actor)
 	{
 		super(actor);
+		
 		if (actor.getNpcId() == TAR_BEETLE)
 		{
 			AI_TASK_ATTACK_DELAY = 1250;
@@ -105,19 +106,24 @@ public class ForgeoftheGods extends Fighter
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.getNpcId() != TAR_BEETLE)
 		{
 			return super.thinkActive();
 		}
+		
 		if (actor.isDead() || !Rnd.chance(TAR_BEETLE_ACTIVATE_SKILL_CHANGE))
 		{
 			return false;
 		}
+		
 		final List<Player> players = World.getAroundPlayers(actor, TAR_BEETLE_SEARCH_RADIUS, 200);
+		
 		if ((players == null) || (players.size() < 1))
 		{
 			return false;
 		}
+		
 		actor.doCast(SkillTable.getInstance().getInfo(6142, Rnd.get(1, 3)), players.get(Rnd.get(players.size())), false);
 		return true;
 	}
@@ -130,6 +136,7 @@ public class ForgeoftheGods extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (ArrayUtils.contains(FOG_MOBS, actor.getNpcId()))
 		{
 			try
@@ -146,6 +153,7 @@ public class ForgeoftheGods extends Fighter
 				e.printStackTrace();
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 	
@@ -161,6 +169,7 @@ public class ForgeoftheGods extends Fighter
 		{
 			return;
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	
@@ -176,6 +185,7 @@ public class ForgeoftheGods extends Fighter
 		{
 			return;
 		}
+		
 		super.onEvtAggression(target, aggro);
 	}
 	
@@ -189,11 +199,13 @@ public class ForgeoftheGods extends Fighter
 	protected boolean checkTarget(Creature target, int range)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (ArrayUtils.contains(RANDOM_SPAWN_MOBS, getActor().getNpcId()) && (target != null) && !actor.isInRange(target, actor.getAggroRange()))
 		{
 			actor.getAggroList().remove(target, true);
 			return false;
 		}
+		
 		return super.checkTarget(target, range);
 	}
 	

@@ -54,6 +54,7 @@ public class WardofDeath extends DefaultAI
 	protected boolean checkAggression(Creature target)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (target.isInRange(actor, actor.getAggroRange()) && target.isPlayable() && !target.isDead() && !target.isInvisible())
 		{
 			if (actor.getNpcId() == 18667)
@@ -67,9 +68,11 @@ public class WardofDeath extends DefaultAI
 				{
 					actor.getReflection().addSpawnWithoutRespawn(mobs[Rnd.get(mobs.length)], actor.getLoc(), 100);
 				}
+				
 				actor.doDie(null);
 			}
 		}
+		
 		return true;
 	}
 }

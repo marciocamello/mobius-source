@@ -65,12 +65,14 @@ public class ClanHallDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_SQL_QUERY);
 			statement.setInt(1, clanHall.getId());
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				clanHall.getSiegeDate().setTimeInMillis(rset.getLong("siege_date"));
@@ -103,6 +105,7 @@ public class ClanHallDAO
 		{
 			return;
 		}
+		
 		c.setJdbcState(JdbcEntityState.STORED);
 		update0(c);
 	}
@@ -115,6 +118,7 @@ public class ClanHallDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();

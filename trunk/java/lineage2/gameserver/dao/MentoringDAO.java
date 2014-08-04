@@ -74,6 +74,7 @@ public class MentoringDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -81,6 +82,7 @@ public class MentoringDAO
 			statement = con.prepareStatement((clid > 138) ? mentorList : menteeList);
 			statement.setInt(1, listOwner.getObjectId());
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				int objectId = rset.getInt("charid");
@@ -110,6 +112,7 @@ public class MentoringDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -137,6 +140,7 @@ public class MentoringDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -161,12 +165,14 @@ public class MentoringDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(providedCertificate);
 			statement.setString(1, accountName);
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				provided = rset.getBoolean("status");
@@ -187,6 +193,7 @@ public class MentoringDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();

@@ -45,12 +45,14 @@ public class _461_RumbleInTheBase extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("stan_q461_03.htm"))
 		{
 			st.setState(STARTED);
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return htmltext;
 	}
 	
@@ -59,12 +61,14 @@ public class _461_RumbleInTheBase extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (npc.getNpcId() == Stan)
 		{
 			switch (st.getState())
 			{
 				case CREATED:
 					QuestState qs = st.getPlayer().getQuestState(_252_GoodSmell.class);
+					
 					if ((st.getPlayer().getLevel() >= 82) && (qs != null) && qs.isCompleted())
 					{
 						if (st.isNowAvailableByTime())
@@ -80,7 +84,9 @@ public class _461_RumbleInTheBase extends Quest implements ScriptFile
 					{
 						htmltext = "stan_q461_00.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					if (cond == 1)
 					{
@@ -96,9 +102,11 @@ public class _461_RumbleInTheBase extends Quest implements ScriptFile
 						st.playSound(SOUND_FINISH);
 						st.exitCurrentQuest(this);
 					}
+					
 					break;
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -107,6 +115,7 @@ public class _461_RumbleInTheBase extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
+		
 		if (cond == 1)
 		{
 			if ((st.getQuestItemsCount(ShoesStringofSelMahum) < 10) && (st.getQuestItemsCount(ShinySalmon) < 5))
@@ -115,6 +124,7 @@ public class _461_RumbleInTheBase extends Quest implements ScriptFile
 				{
 					st.rollAndGive(ShoesStringofSelMahum, 1, 20);
 				}
+				
 				if ((st.getQuestItemsCount(ShinySalmon) < 5) && (npcId == SelChef))
 				{
 					st.rollAndGive(ShinySalmon, 1, 10);
@@ -125,6 +135,7 @@ public class _461_RumbleInTheBase extends Quest implements ScriptFile
 				st.setCond(2);
 			}
 		}
+		
 		return null;
 	}
 	

@@ -26,12 +26,14 @@ public class PledgeReceiveWarList extends L2GameServerPacket
 	{
 		_updateType = type;
 		List<Clan> clans = _updateType == 1 ? clan.getAttackerClans() : clan.getEnemyClans();
+		
 		for (Clan _clan : clans)
 		{
 			if (_clan == null)
 			{
 				continue;
 			}
+			
 			infos.add(new WarInfo(_clan.getName(), _updateType, 0));
 		}
 	}
@@ -41,10 +43,11 @@ public class PledgeReceiveWarList extends L2GameServerPacket
 	{
 		writeEx(0x3f);
 		writeD(_updateType); // which type of war list sould be revamped by this
-								// packet
+		// packet
 		writeD(0x00); // page number goes here(_page ), made it static cuz not
-						// sure how many war to add to one page so TODO here
+		// sure how many war to add to one page so TODO here
 		writeD(infos.size());
+		
 		for (WarInfo _info : infos)
 		{
 			writeS(_info.clan_name);

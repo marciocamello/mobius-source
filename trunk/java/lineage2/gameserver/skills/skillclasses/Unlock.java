@@ -61,36 +61,44 @@ public class Unlock extends Skill
 			activeChar.sendPacket(Msg.INVALID_TARGET);
 			return false;
 		}
+		
 		if ((target instanceof ChestInstance) && activeChar.isPlayer())
 		{
 			return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 		}
+		
 		if (!target.isDoor() || (_unlockPower == 0))
 		{
 			activeChar.sendPacket(Msg.INVALID_TARGET);
 			return false;
 		}
+		
 		DoorInstance door = (DoorInstance) target;
+		
 		if (door.isOpen())
 		{
 			activeChar.sendPacket(Msg.IT_IS_NOT_LOCKED);
 			return false;
 		}
+		
 		if (!door.isUnlockable())
 		{
 			activeChar.sendPacket(Msg.YOU_ARE_UNABLE_TO_UNLOCK_THE_DOOR);
 			return false;
 		}
+		
 		if (door.getKey() > 0)
 		{
 			activeChar.sendPacket(Msg.YOU_ARE_UNABLE_TO_UNLOCK_THE_DOOR);
 			return false;
 		}
+		
 		if ((_unlockPower - (door.getLevel() * 100)) < 0)
 		{
 			activeChar.sendPacket(Msg.YOU_ARE_UNABLE_TO_UNLOCK_THE_DOOR);
 			return false;
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
@@ -109,6 +117,7 @@ public class Unlock extends Skill
 				if (targ.isDoor())
 				{
 					DoorInstance target = (DoorInstance) targ;
+					
 					if (!target.isOpen() && ((target.getKey() > 0) || Rnd.chance(_unlockPower - (target.getLevel() * 100))))
 					{
 						target.openMe((Player) activeChar, true);
@@ -121,6 +130,7 @@ public class Unlock extends Skill
 				else if (targ instanceof ChestInstance)
 				{
 					ChestInstance target = (ChestInstance) targ;
+					
 					if (!target.isDead())
 					{
 						target.tryOpen((Player) activeChar, this);

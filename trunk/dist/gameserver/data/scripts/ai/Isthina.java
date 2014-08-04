@@ -191,6 +191,7 @@ public class Isthina extends Fighter
 	protected void thinkAttack()
 	{
 		final NpcInstance npc = getActor();
+		
 		if (_effectCheckTask == null)
 		{
 			_effectCheckTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new EffectCheckTask(npc), 0, 2000);
@@ -199,9 +200,11 @@ public class Isthina extends Fighter
 		{
 			ThreadPoolManager.getInstance().scheduleAtFixedRate(new EffectCheckTask(npc), 0, 2000);
 		}
+		
 		final double damage = (npc.getMaxHp() - npc.getCurrentHp());
 		final double lastPercentHp = (npc.getCurrentHp() + damage) / npc.getMaxHp();
 		final double currentPercentHp = npc.getCurrentHp() / npc.getMaxHp();
+		
 		if ((lastPercentHp > 0.9D) && (currentPercentHp <= 0.9D))
 		{
 			onPercentHpReached(npc, 90);
@@ -269,11 +272,13 @@ public class Isthina extends Fighter
 		else
 		{
 			final double seed = Rnd.get();
+			
 			if ((seed < 0.005D) && (!_authorityLock))
 			{
 				authorityField(npc);
 			}
 		}
+		
 		super.thinkAttack();
 	}
 	
@@ -288,8 +293,10 @@ public class Isthina extends Fighter
 		{
 			return;
 		}
+		
 		Skill skillToCast;
 		final NpcInstance npcs = npc;
+		
 		if (!npc.isCastingNow())
 		{
 			if ((Rnd.get() <= 0.4D) && (ACID_ERUPTION1_TIMER < System.currentTimeMillis()))
@@ -311,6 +318,7 @@ public class Isthina extends Fighter
 				npc.doCast(skillToCast, npc, false);
 			}
 		}
+		
 		if (((percent >= 50) && ((percent % 10) == 0) && !npc.isCastingNow()) || ((percent < 50) && ((percent % 5) == 0) && !npc.isCastingNow()))
 		{
 			if ((npcs.getEffectList().getEffectsBySkill(FLOOD) != null) && !npc.isCastingNow())
@@ -318,6 +326,7 @@ public class Isthina extends Fighter
 				npc.doCast(FLOOD, npc, false);
 			}
 		}
+		
 		if ((npcs.getEffectList().getEffectsBySkill(BARRIER_OF_REFLECTION) == null) && !npc.isCastingNow())
 		{
 			npcs.doCast(BARRIER_OF_REFLECTION, npcs, false);
@@ -334,6 +343,7 @@ public class Isthina extends Fighter
 		final double seed = Rnd.get();
 		final int ring = ((seed >= 0.33D) && (seed < 0.66D)) ? 1 : (seed < 0.33D) ? 0 : 2;
 		_ring = ring;
+		
 		if (seed < 0.33D)
 		{
 			npc.broadcastPacket(new ExShowScreenMessage(NpcString.ISTINA_SOUL_STONE_STARTS_POWERFULLY_ILLUMINATING_IN_GREEN, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true));
@@ -349,6 +359,7 @@ public class Isthina extends Fighter
 				npc.broadcastPacket(new ExShowScreenMessage(NpcString.ISTINA_SOUL_STONE_STARTS_POWERFULLY_ILLUMINATING_IN_RED, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true));
 			}
 		}
+		
 		npc.broadcastPacket(new PlaySound("istina.istina_voice_01"));
 		ThreadPoolManager.getInstance().schedule(new runAuthorityRing(npc), 10000L);
 	}
@@ -386,11 +397,14 @@ public class Isthina extends Fighter
 					_effectCheckTask.cancel(false);
 				}
 			}
+			
 			boolean hasBarrier = false;
 			boolean hasFlood = false;
+			
 			if (_npc.getEffectList().getEffectsBySkillId(BARRIER_OF_REFLECTION.getId()) != null)
 			{
 				hasBarrier = true;
+				
 				if (hasFlood)
 				{
 					return;
@@ -402,11 +416,13 @@ public class Isthina extends Fighter
 				{
 					hasFlood = true;
 				}
+				
 				if (hasBarrier)
 				{
 					return;
 				}
 			}
+			
 			if ((_hasBarrier) && (!hasBarrier))
 			{
 				_npc.setNpcState(2);
@@ -417,6 +433,7 @@ public class Isthina extends Fighter
 			{
 				_npc.setNpcState(1);
 			}
+			
 			if ((_hasFlood) && (hasFlood))
 			{
 				_npc.broadcastPacket(new ExShowScreenMessage(NpcString.ISTINA_GETS_FURIOUS_AND_RECKLESSLY_CRAZY, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true));
@@ -455,6 +472,7 @@ public class Isthina extends Fighter
 		{
 			final NpcInstance npc = _npc;
 			Zone zones;
+			
 			if (_ring != 0)
 			{
 				npc.broadcastPacket(new EventTrigger(GREEN_RING, true));
@@ -473,6 +491,7 @@ public class Isthina extends Fighter
 				npc.broadcastPacket(new EventTrigger(BLUE_RING, true));
 				zones = GREEN_RING_LOC;
 			}
+			
 			for (Player player : _zone.getInsidePlayers())
 			{
 				if (!player.isInZone(zones))

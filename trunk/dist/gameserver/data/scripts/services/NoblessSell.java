@@ -31,15 +31,18 @@ public class NoblessSell extends Functions
 	public void get()
 	{
 		Player player = getSelf();
+		
 		if (player.isNoble())
 		{
 			return;
 		}
+		
 		if (player.getSubLevel() < 75)
 		{
 			player.sendMessage("You must make sub class level 75 first.");
 			return;
 		}
+		
 		if (player.getInventory().destroyItemByItemId(Config.SERVICES_NOBLESS_SELL_ITEM, Config.SERVICES_NOBLESS_SELL_PRICE))
 		{
 			becomeNoble();
@@ -60,10 +63,12 @@ public class NoblessSell extends Functions
 	public void becomeNoble()
 	{
 		Player player = getSelf();
+		
 		if ((player == null) || player.isNoble())
 		{
 			return;
 		}
+		
 		Olympiad.addNoble(player);
 		player.setNoble(true);
 		player.updatePledgeClass();

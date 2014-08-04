@@ -50,13 +50,16 @@ public class RequestExTryToPutEnchantSupportItem extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		PcInventory inventory = activeChar.getInventory();
 		ItemInstance itemToEnchant = inventory.getItemByObjectId(_itemId);
 		ItemInstance catalyst = inventory.getItemByObjectId(_catalystId);
+		
 		if (ItemFunctions.checkCatalyst(itemToEnchant, catalyst))
 		{
 			activeChar.sendPacket(new ExPutEnchantSupportItemResult(1));

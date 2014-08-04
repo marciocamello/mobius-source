@@ -46,6 +46,7 @@ public class EffectHealOverTime extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if (getEffected().isPlayer() && (getCount() > 0) && (getPeriod() > 0))
 		{
 			getEffected().sendPacket(new ExRegenMax(calc(), (int) ((getCount() * getPeriod()) / 1000), Math.round(getPeriod() / 1000)));
@@ -63,13 +64,16 @@ public class EffectHealOverTime extends Effect
 		{
 			return true;
 		}
+		
 		double hp = calc();
 		double newHp = (hp * (!_ignoreHpEff ? _effected.calcStat(Stats.HEAL_EFFECTIVNESS, 100., _effector, getSkill()) : 100.)) / 100.;
 		double addToHp = Math.max(0, Math.min(newHp, ((_effected.calcStat(Stats.HP_LIMIT, null, null) * _effected.getMaxHp()) / 100.) - _effected.getCurrentHp()));
+		
 		if (addToHp > 0)
 		{
 			getEffected().setCurrentHp(_effected.getCurrentHp() + addToHp, false);
 		}
+		
 		return true;
 	}
 }

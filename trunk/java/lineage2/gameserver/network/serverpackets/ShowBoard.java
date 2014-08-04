@@ -58,6 +58,7 @@ public class ShowBoard extends L2GameServerPacket
 			_htmlCode = "<html><body>Html was too long</body></html>";
 			return;
 		}
+		
 		_id = id;
 		
 		if (player.getSessionVar("add_fav") != null)
@@ -101,6 +102,7 @@ public class ShowBoard extends L2GameServerPacket
 		writeS("bypass _friendlist_0_");
 		writeS(_addFav);
 		String str = _id + "\u0008";
+		
 		if (!_id.equals("1002"))
 		{
 			if (_htmlCode != null)
@@ -115,6 +117,7 @@ public class ShowBoard extends L2GameServerPacket
 				str += arg + " \u0008";
 			}
 		}
+		
 		writeS(str);
 	}
 }

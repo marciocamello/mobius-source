@@ -70,16 +70,17 @@ public class BasicDataSource implements DataSource
 		connectionPool.setNumTestsPerEvictionRun(maxActive);
 		connectionPool.setMinEvictableIdleTimeMillis(idleTimeOut * 1000L);
 		GenericKeyedObjectPoolFactory<?, ?> statementPoolFactory = null;
+		
 		if (poolPreparedStatements)
 		{
 			statementPoolFactory = new GenericKeyedObjectPoolFactory<>(null, -1, GenericObjectPool.WHEN_EXHAUSTED_FAIL, 0L, 1, GenericKeyedObjectPool.DEFAULT_MAX_TOTAL);
 		}
+		
 		Properties connectionProperties = new Properties();
 		connectionProperties.put("user", uname);
 		connectionProperties.put("password", passwd);
 		ConnectionFactory connectionFactory = new DriverManagerConnectionFactory(connectURI, connectionProperties);
-		@SuppressWarnings("unused")
-		PoolableConnectionFactory poolableConnectionFactory = new PoolableConnectionFactory(connectionFactory, connectionPool, statementPoolFactory, "SELECT 1", false, true);
+		new PoolableConnectionFactory(connectionFactory, connectionPool, statementPoolFactory, "SELECT 1", false, true);
 		PoolingDataSource dataSource = new PoolingDataSource(connectionPool);
 		_connectionPool = connectionPool;
 		_source = dataSource;

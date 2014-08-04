@@ -47,11 +47,13 @@ public class ExShowSeedMapInfo extends L2GameServerPacket
 	{
 		writeEx(0xA2);
 		writeD(ENTRANCES.length);
+		
 		for (Location loc : ENTRANCES)
 		{
 			writeD(loc.x);
 			writeD(loc.y);
 			writeD(loc.z);
+			
 			switch (loc.h)
 			{
 				case 1: // Seed of Destruction
@@ -63,7 +65,9 @@ public class ExShowSeedMapInfo extends L2GameServerPacket
 					{
 						writeD(2772);
 					}
+					
 					break;
+				
 				case 2: // Seed of Immortality
 					writeD(SoIManager.getCurrentStage() + 2765);
 					break;

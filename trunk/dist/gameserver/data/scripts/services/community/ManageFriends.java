@@ -110,16 +110,19 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 		String cmd = st.nextToken();
 		String html = HtmCache.getInstance().getNotNull(cmd.startsWith("friendbloc") ? "scripts/services/community/bbs_block_list.htm" : "scripts/services/community/bbs_friend_list.htm", player);
 		player.setSessionVar("add_fav", null);
+		
 		if (cmd.equals("friendlist"))
 		{
 			String act = st.nextToken();
 			html = html.replace("%friend_list%", getFriendList(player));
+			
 			if (act.equals("0"))
 			{
 				if (player.getSessionVar("selFriends") != null)
 				{
 					player.setSessionVar("selFriends", null);
 				}
+				
 				html = html.replace("%selected_friend_list%", "");
 				html = html.replace("%delete_all_msg%", "");
 			}
@@ -127,6 +130,7 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 			{
 				String objId = st.nextToken();
 				String selected;
+				
 				if ((selected = player.getSessionVar("selFriends")) == null)
 				{
 					selected = objId + ";";
@@ -135,6 +139,7 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 				{
 					selected += objId + ";";
 				}
+				
 				player.setSessionVar("selFriends", selected);
 				html = html.replace("%selected_friend_list%", getSelectedList(player));
 				html = html.replace("%delete_all_msg%", "");
@@ -143,11 +148,13 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 			{
 				String objId = st.nextToken();
 				String selected = player.getSessionVar("selFriends");
+				
 				if (selected != null)
 				{
 					selected = selected.replace(objId + ";", "");
 					player.setSessionVar("selFriends", selected);
 				}
+				
 				html = html.replace("%selected_friend_list%", getSelectedList(player));
 				html = html.replace("%delete_all_msg%", "");
 			}
@@ -161,6 +168,7 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 		else if (cmd.equals("frienddelete"))
 		{
 			String selected = player.getSessionVar("selFriends");
+			
 			if (selected != null)
 			{
 				for (String objId : selected.split(";"))
@@ -171,6 +179,7 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 					}
 				}
 			}
+			
 			player.setSessionVar("selFriends", null);
 			html = html.replace("%friend_list%", getFriendList(player));
 			html = html.replace("%selected_friend_list%", "");
@@ -180,10 +189,12 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 		{
 			List<Friend> friends = new ArrayList<>(1);
 			friends.addAll(player.getFriendList().getList().values());
+			
 			for (Friend friend : friends)
 			{
 				player.getFriendList().removeFriend(friend.getName());
 			}
+			
 			player.setSessionVar("selFriends", null);
 			html = html.replace("%friend_list%", "");
 			html = html.replace("%selected_friend_list%", "");
@@ -202,15 +213,18 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 		else if (cmd.equals("friendblockdelete"))
 		{
 			String objId = st.nextToken();
+			
 			if ((objId != null) && !objId.isEmpty())
 			{
 				int objectId = Integer.parseInt(objId);
 				String name = player.getBlockListMap().get(objectId);
+				
 				if (name != null)
 				{
 					player.removeFromBlockList(name);
 				}
 			}
+			
 			html = html.replace("%block_list%", getBlockList(player));
 			html = html.replace("%delete_all_msg%", "");
 		}
@@ -218,13 +232,16 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 		{
 			List<String> bl = new ArrayList<>(1);
 			bl.addAll(player.getBlockList());
+			
 			for (String name : bl)
 			{
 				player.removeFromBlockList(name);
 			}
+			
 			html = html.replace("%block_list%", "");
 			html = html.replace("%delete_all_msg%", "");
 		}
+		
 		ShowBoard.separateAndSend(html, player);
 	}
 	
@@ -243,10 +260,12 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 	public void onWriteCommand(Player player, String bypass, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
 		String html = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_block_list.htm", player);
+		
 		if ("_friendblockadd_".equals(bypass) && (arg3 != null) && !arg3.isEmpty())
 		{
 			player.addToBlockList(arg3);
 		}
+		
 		html = html.replace("%block_list%", getBlockList(player));
 		html = html.replace("%delete_all_msg%", "");
 		ShowBoard.separateAndSend(html, player);
@@ -261,10 +280,12 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 	{
 		StringBuilder friendList = new StringBuilder("");
 		Map<Integer, Friend> fl = player.getFriendList().getList();
+		
 		for (Map.Entry<Integer, Friend> entry : fl.entrySet())
 		{
 			friendList.append("<a action=\"bypass _friendlist_1_").append(entry.getKey()).append("\">").append(entry.getValue().getName()).append("</a> (").append(entry.getValue().isOnline() ? "on" : "off").append(") &nbsp;");
 		}
+		
 		return friendList.toString();
 	}
 	
@@ -276,12 +297,15 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 	private static String getSelectedList(Player player)
 	{
 		String selected = player.getSessionVar("selFriends");
+		
 		if (selected == null)
 		{
 			return "";
 		}
+		
 		String[] sels = selected.split(";");
 		StringBuilder selectedList = new StringBuilder("");
+		
 		for (String objectId : sels)
 		{
 			if (!objectId.isEmpty())
@@ -289,6 +313,7 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 				selectedList.append("<a action=\"bypass _friendlist_2_").append(objectId).append("\">").append(player.getFriendList().getList().get(Integer.parseInt(objectId)).getName()).append("</a>;");
 			}
 		}
+		
 		return selectedList.toString();
 	}
 	
@@ -301,10 +326,12 @@ public class ManageFriends implements ScriptFile, ICommunityBoardHandler
 	{
 		StringBuilder blockList = new StringBuilder("");
 		Map<Integer, String> bl = player.getBlockListMap();
+		
 		for (Integer objectId : bl.keySet())
 		{
 			blockList.append(bl.get(objectId)).append("&nbsp; <a action=\"bypass _friendblockdelete_").append(objectId).append("\">Delete</a>&nbsp;&nbsp;");
 		}
+		
 		return blockList.toString();
 	}
 }

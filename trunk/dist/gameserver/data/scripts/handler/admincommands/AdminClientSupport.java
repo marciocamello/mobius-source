@@ -68,6 +68,7 @@ public class AdminClientSupport extends ScriptAdminCommand
 	{
 		final Commands c = (Commands) comm;
 		GameObject target = player.getTarget();
+		
 		switch (c)
 		{
 			case admin_setskill:
@@ -75,14 +76,17 @@ public class AdminClientSupport extends ScriptAdminCommand
 				{
 					return false;
 				}
+				
 				if (!player.getPlayerAccess().CanEditChar)
 				{
 					return false;
 				}
+				
 				if ((target == null) || !target.isPlayer())
 				{
 					return false;
 				}
+				
 				try
 				{
 					final Skill skill = SkillTable.getInstance().getInfo(Integer.parseInt(wordList[1]), Integer.parseInt(wordList[2]));
@@ -94,27 +98,34 @@ public class AdminClientSupport extends ScriptAdminCommand
 					_log.info("AdminClientSupport:useAdminCommand(Enum,String[],String,L2Player): " + e, e);
 					return false;
 				}
+				
 				break;
+			
 			case admin_summon:
 				if (wordList.length != 3)
 				{
 					return false;
 				}
+				
 				if (!player.getPlayerAccess().CanEditChar)
 				{
 					return false;
 				}
+				
 				try
 				{
 					final int id = Integer.parseInt(wordList[1]);
 					final long count = Long.parseLong(wordList[2]);
+					
 					if (id >= 1000000)
 					{
 						if (target == null)
 						{
 							target = player;
 						}
+						
 						final NpcTemplate template = NpcHolder.getInstance().getTemplate(id - 1000000);
+						
 						for (int i = 0; i < count; i++)
 						{
 							NpcInstance npc = template.getNewInstance();
@@ -129,15 +140,19 @@ public class AdminClientSupport extends ScriptAdminCommand
 						{
 							target = player;
 						}
+						
 						if (!target.isPlayer())
 						{
 							return false;
 						}
+						
 						final ItemTemplate template = ItemHolder.getInstance().getTemplate(id);
+						
 						if (template == null)
 						{
 							return false;
 						}
+						
 						if (template.isStackable())
 						{
 							final ItemInstance item = ItemFunctions.createItem(id);
@@ -161,8 +176,10 @@ public class AdminClientSupport extends ScriptAdminCommand
 					_log.info("AdminClientSupport:useAdminCommand(Enum,String[],String,L2Player): " + e, e);
 					return false;
 				}
+				
 				break;
 		}
+		
 		return true;
 	}
 	

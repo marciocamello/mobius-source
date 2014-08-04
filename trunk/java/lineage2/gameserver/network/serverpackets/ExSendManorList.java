@@ -26,6 +26,7 @@ public class ExSendManorList extends L2GameServerPacket
 		writeEx(0x22);
 		Collection<Castle> residences = ResidenceHolder.getInstance().getResidenceList(Castle.class);
 		writeD(residences.size());
+		
 		for (Residence castle : residences)
 		{
 			writeD(castle.getId());

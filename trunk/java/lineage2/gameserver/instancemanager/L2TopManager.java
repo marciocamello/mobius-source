@@ -88,6 +88,7 @@ public class L2TopManager
 		{
 			_instance = new L2TopManager();
 		}
+		
 		return _instance;
 	}
 	
@@ -112,6 +113,7 @@ public class L2TopManager
 		File web = new File(voteWeb);
 		FileWriter SaveWeb = null;
 		FileWriter SaveSms = null;
+		
 		try
 		{
 			SaveSms = new FileWriter(sms);
@@ -131,6 +133,7 @@ public class L2TopManager
 				{
 					SaveSms.close();
 				}
+				
 				if (SaveWeb != null)
 				{
 					SaveWeb.close();
@@ -152,6 +155,7 @@ public class L2TopManager
 	{
 		StringBuffer buf = new StringBuffer();
 		Socket s;
+		
 		try
 		{
 			s = new Socket("l2top.ru", 80);
@@ -159,17 +163,20 @@ public class L2TopManager
 			String request = "GET " + address + " HTTP/1.1\r\n" + "User-Agent: http:\\" + Config.EXTERNAL_HOSTNAME + " server\r\n" + "Host: http:\\" + Config.EXTERNAL_HOSTNAME + " \r\n" + "Accept: */*\r\n" + "Connection: close\r\n" + "\r\n";
 			s.getOutputStream().write(request.getBytes());
 			BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream(), "Cp1251"));
+			
 			for (String line = in.readLine(); line != null; line = in.readLine())
 			{
 				buf.append(line);
 				buf.append("\r\n");
 			}
+			
 			s.close();
 		}
 		catch (Exception e)
 		{
 			buf.append("Connection error");
 		}
+		
 		return buf.toString();
 	}
 	
@@ -180,19 +187,23 @@ public class L2TopManager
 	void parse(boolean sms)
 	{
 		String nick = "";
+		
 		try
 		{
 			BufferedReader in = new BufferedReader(new FileReader(sms ? voteSms : voteWeb));
 			String line = in.readLine();
+			
 			while (line != null)
 			{
 				Calendar cal = Calendar.getInstance();
 				int year = cal.get(Calendar.YEAR);
+				
 				if (line.startsWith("" + year))
 				{
 					try
 					{
 						StringTokenizer st = new StringTokenizer(line, "- :\t");
+						
 						if (st.countTokens() == 7)
 						{
 							cal.set(Calendar.YEAR, Integer.parseInt(st.nextToken()));
@@ -216,11 +227,14 @@ public class L2TopManager
 							st.nextToken();
 							nick = st.nextToken();
 						}
+						
 						int mult = 1;
+						
 						if (sms)
 						{
 							mult = Integer.parseInt(new StringBuffer(st.nextToken()).delete(0, 1).toString());
 						}
+						
 						if ((cal.getTimeInMillis() + (Config.L2_TOP_SAVE_DAYS * 86400)) > System.currentTimeMillis())
 						{
 							checkAndSaveFromDb(cal.getTimeInMillis(), nick, mult);
@@ -231,8 +245,10 @@ public class L2TopManager
 						continue;
 					}
 				}
+				
 				line = in.readLine();
 			}
+			
 			in.close();
 		}
 		catch (Exception e)
@@ -250,6 +266,7 @@ public class L2TopManager
 		cal.add(Calendar.DAY_OF_YEAR, -Config.L2_TOP_SAVE_DAYS);
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -278,6 +295,7 @@ public class L2TopManager
 		Connection con = null;
 		PreparedStatement selectObjectStatement = null, selectL2topStatement = null, insertStatement = null;
 		ResultSet rsetObject = null, rsetL2top = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -285,10 +303,12 @@ public class L2TopManager
 			selectObjectStatement.setString(1, nick);
 			rsetObject = selectObjectStatement.executeQuery();
 			int objId = 0;
+			
 			if (rsetObject.next())
 			{
 				objId = rsetObject.getInt("obj_Id");
 			}
+			
 			if (objId > 0)
 			{
 				selectL2topStatement = con.prepareStatement(SELECT_CHARACTER_MMOTOP_DATA);
@@ -296,6 +316,7 @@ public class L2TopManager
 				selectL2topStatement.setLong(2, date);
 				selectL2topStatement.setInt(3, mult);
 				rsetL2top = selectL2topStatement.executeQuery();
+				
 				if (!rsetL2top.next())
 				{
 					insertStatement = con.prepareStatement(INSERT_L2TOP_DATA);
@@ -328,9 +349,11 @@ public class L2TopManager
 		Connection con = null;
 		PreparedStatement selectMultStatement = null, updateStatement = null;
 		ResultSet rsetMult = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
+			
 			for (Player player : GameObjectsStorage.getAllPlayers())
 			{
 				int objId = player.getObjectId();
@@ -338,16 +361,20 @@ public class L2TopManager
 				selectMultStatement = con.prepareStatement(SELECT_MULTIPLER_L2TOP_DATA);
 				selectMultStatement.setInt(1, objId);
 				rsetMult = selectMultStatement.executeQuery();
+				
 				while (rsetMult.next())
 				{
 					mult += rsetMult.getInt("multipler");
 				}
+				
 				updateStatement = con.prepareStatement(UPDATE_L2TOP_DATA);
 				updateStatement.setInt(1, objId);
 				updateStatement.executeUpdate();
+				
 				if (mult > 0)
 				{
 					player.sendMessage("Thank you for your vote in L2Top raiting. Best regards " + Config.L2_TOP_SERVER_ADDRESS);
+					
 					for (int i = 0; i < Config.L2_TOP_REWARD.length; i += 2)
 					{
 						if (Config.L2_TOP_REWARD[i] == -100)

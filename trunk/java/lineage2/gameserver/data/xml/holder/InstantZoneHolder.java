@@ -87,14 +87,18 @@ public class InstantZoneHolder extends AbstractHolder
 	public int getMinutesToNextEntrance(int id, Player player)
 	{
 		SchedulingPattern resetReuse = getResetReuseById(id);
+		
 		if (resetReuse == null)
 		{
 			return 0;
 		}
+		
 		Long time = null;
+		
 		if ((getSharedReuseInstanceIds(id) != null) && !getSharedReuseInstanceIds(id).isEmpty())
 		{
 			List<Long> reuses = new ArrayList<>();
+			
 			for (int i : getSharedReuseInstanceIds(id))
 			{
 				if (player.getInstanceReuse(i) != null)
@@ -102,6 +106,7 @@ public class InstantZoneHolder extends AbstractHolder
 					reuses.add(player.getInstanceReuse(i));
 				}
 			}
+			
 			if (!reuses.isEmpty())
 			{
 				Collections.sort(reuses);
@@ -112,10 +117,12 @@ public class InstantZoneHolder extends AbstractHolder
 		{
 			time = player.getInstanceReuse(id);
 		}
+		
 		if (time == null)
 		{
 			return 0;
 		}
+		
 		return (int) Math.max((resetReuse.next(time) - System.currentTimeMillis()) / 60000L, 0);
 	}
 	
@@ -130,7 +137,9 @@ public class InstantZoneHolder extends AbstractHolder
 		{
 			return null;
 		}
+		
 		List<Integer> sharedInstanceIds = new ArrayList<>();
+		
 		for (InstantZone iz : _zones.values())
 		{
 			if ((iz.getSharedReuseGroup() > 0) && (getInstantZone(id).getSharedReuseGroup() > 0) && (iz.getSharedReuseGroup() == getInstantZone(id).getSharedReuseGroup()))
@@ -138,6 +147,7 @@ public class InstantZoneHolder extends AbstractHolder
 				sharedInstanceIds.add(iz.getId());
 			}
 		}
+		
 		return sharedInstanceIds;
 	}
 	
@@ -152,7 +162,9 @@ public class InstantZoneHolder extends AbstractHolder
 		{
 			return null;
 		}
+		
 		List<Integer> sharedInstanceIds = new ArrayList<>();
+		
 		for (InstantZone iz : _zones.values())
 		{
 			if ((iz.getSharedReuseGroup() > 0) && (iz.getSharedReuseGroup() == groupId))
@@ -160,6 +172,7 @@ public class InstantZoneHolder extends AbstractHolder
 				sharedInstanceIds.add(iz.getId());
 			}
 		}
+		
 		return sharedInstanceIds;
 	}
 	

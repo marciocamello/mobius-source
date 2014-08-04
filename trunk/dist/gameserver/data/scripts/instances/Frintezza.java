@@ -172,7 +172,6 @@ public class Frintezza extends Reflection
 	protected void onCreate()
 	{
 		super.onCreate();
-		
 		getZone("[Frintezza]").addListener(_zoneListener);
 		
 		for (NpcInstance n : getNpcs())
@@ -186,7 +185,7 @@ public class Frintezza extends Reflection
 	private class FrintezzaStart extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public FrintezzaStart()
 		{
@@ -220,115 +219,142 @@ public class Frintezza extends Reflection
 						_frintezzaDummy = spawn(new NpcLocation(-87784, -155096, -9080, 16048, 29059));
 						ThreadPoolManager.getInstance().schedule(new Spawn(2), 1000);
 						break;
+					
 					case 2:
 						closeDoor(corridorBDoors[1]);
 						frintezza = spawn(frintezzaSpawn);
 						showSocialActionMovie(frintezza, 500, 90, 0, 6500, 8000, 0);
+						
 						for (int i = 0; i < 4; i++)
 						{
 							portraits[i] = spawn(portraitSpawns[i]);
 							portraits[i].startImmobilized();
 							demons[i] = spawn(demonSpawns[i]);
 						}
+						
 						blockAll(true);
 						ThreadPoolManager.getInstance().schedule(new Spawn(3), 6500);
 						break;
+					
 					case 3:
 						showSocialActionMovie(_frintezzaDummy, 1800, 90, 8, 6500, 7000, 0);
 						ThreadPoolManager.getInstance().schedule(new Spawn(4), 900);
 						break;
+					
 					case 4:
 						showSocialActionMovie(_frintezzaDummy, 140, 90, 10, 2500, 4500, 0);
 						ThreadPoolManager.getInstance().schedule(new Spawn(5), 4000);
 						break;
+					
 					case 5:
 						showSocialActionMovie(frintezza, 40, 75, -10, 0, 1000, 0);
 						showSocialActionMovie(frintezza, 40, 75, -10, 0, 12000, 0);
 						ThreadPoolManager.getInstance().schedule(new Spawn(6), 1350);
 						break;
+					
 					case 6:
 						frintezza.broadcastPacket(new SocialAction(frintezza.getObjectId(), 2));
 						ThreadPoolManager.getInstance().schedule(new Spawn(7), 7000);
 						break;
+					
 					case 7:
 						_frintezzaDummy.deleteMe();
 						_frintezzaDummy = null;
 						ThreadPoolManager.getInstance().schedule(new Spawn(8), 1000);
 						break;
+					
 					case 8:
 						showSocialActionMovie(demons[0], 140, 0, 3, 22000, 3000, 1);
 						ThreadPoolManager.getInstance().schedule(new Spawn(9), 2800);
 						break;
+					
 					case 9:
 						showSocialActionMovie(demons[1], 140, 0, 3, 22000, 3000, 1);
 						ThreadPoolManager.getInstance().schedule(new Spawn(10), 2800);
 						break;
+					
 					case 10:
 						showSocialActionMovie(demons[2], 140, 180, 3, 22000, 3000, 1);
 						ThreadPoolManager.getInstance().schedule(new Spawn(11), 2800);
 						break;
+					
 					case 11:
 						showSocialActionMovie(demons[3], 140, 180, 3, 22000, 3000, 1);
 						ThreadPoolManager.getInstance().schedule(new Spawn(12), 3000);
 						break;
+					
 					case 12:
 						showSocialActionMovie(frintezza, 240, 90, 0, 0, 1000, 0);
 						showSocialActionMovie(frintezza, 240, 90, 25, 5500, 10000, 3);
 						ThreadPoolManager.getInstance().schedule(new Spawn(13), 3000);
 						break;
+					
 					case 13:
 						showSocialActionMovie(frintezza, 100, 195, 35, 0, 10000, 0);
 						ThreadPoolManager.getInstance().schedule(new Spawn(14), 700);
 						break;
+					
 					case 14:
 						showSocialActionMovie(frintezza, 100, 195, 35, 0, 10000, 0);
 						ThreadPoolManager.getInstance().schedule(new Spawn(15), 1300);
 						break;
+					
 					case 15:
 						showSocialActionMovie(frintezza, 120, 180, 45, 1500, 10000, 0);
 						frintezza.broadcastPacket(new MagicSkillUse(frintezza, frintezza, 5006, 1, 34000, 0));
 						ThreadPoolManager.getInstance().schedule(new Spawn(16), 1500);
 						break;
+					
 					case 16:
 						showSocialActionMovie(frintezza, 520, 135, 45, 8000, 10000, 0);
 						ThreadPoolManager.getInstance().schedule(new Spawn(17), 7500);
 						break;
+					
 					case 17:
 						showSocialActionMovie(frintezza, 1500, 110, 25, 10000, 13000, 0);
 						ThreadPoolManager.getInstance().schedule(new Spawn(18), 9500);
 						break;
+					
 					case 18:
 						weakScarlet = spawn(scarletSpawnWeak);
 						block(weakScarlet, true);
 						weakScarlet.addListener(_currentHpListener);
 						weakScarlet.broadcastPacket(new MagicSkillUse(weakScarlet, weakScarlet, 5016, 1, 3000, 0));
 						Earthquake eq = new Earthquake(weakScarlet.getLoc(), 50, 6);
+						
 						for (Player pc : getPlayers())
 						{
 							pc.broadcastPacket(eq);
 						}
+						
 						showSocialActionMovie(weakScarlet, 1000, 160, 20, 6000, 6000, 0);
 						ThreadPoolManager.getInstance().schedule(new Spawn(19), 5500);
 						break;
+					
 					case 19:
 						showSocialActionMovie(weakScarlet, 800, 160, 5, 1000, 10000, 2);
 						ThreadPoolManager.getInstance().schedule(new Spawn(20), 2100);
 						break;
+					
 					case 20:
 						showSocialActionMovie(weakScarlet, 300, 60, 8, 0, 10000, 0);
 						ThreadPoolManager.getInstance().schedule(new Spawn(21), 2000);
 						break;
+					
 					case 21:
 						showSocialActionMovie(weakScarlet, 1000, 90, 10, 3000, 5000, 0);
 						ThreadPoolManager.getInstance().schedule(new Spawn(22), 3000);
 						break;
+					
 					case 22:
 						for (Player pc : getPlayers())
 						{
 							pc.leaveMovieMode();
 						}
+						
 						ThreadPoolManager.getInstance().schedule(new Spawn(23), 2000);
 						break;
+					
 					case 23:
 						blockAll(false);
 						spawn(new NpcLocation(-87904, -141296, -9168, 0, TeleportCube));
@@ -347,7 +373,7 @@ public class Frintezza extends Reflection
 	private class Music extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public Music()
 		{
@@ -361,25 +387,32 @@ public class Frintezza extends Reflection
 			{
 				return;
 			}
+			
 			int song = Math.max(1, Math.min(4, getSong()));
 			NpcString song_name;
+			
 			switch (song)
 			{
 				case 1:
 					song_name = NpcString.REQUIEM_OF_HATRED;
 					break;
+				
 				case 2:
 					song_name = NpcString.FRENETIC_TOCCATA;
 					break;
+				
 				case 3:
 					song_name = NpcString.FUGUE_OF_JUBILATION;
 					break;
+				
 				case 4:
 					song_name = NpcString.MOURNFUL_CHORALE_PRELUDE;
 					break;
+				
 				default:
 					return;
 			}
+			
 			if (!frintezza.isBlocked())
 			{
 				frintezza.broadcastPacket(new ExShowScreenMessage(song_name, 3000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
@@ -387,6 +420,7 @@ public class Frintezza extends Reflection
 				// Launch the song's effects (they start about 10 seconds after he starts to play)
 				ThreadPoolManager.getInstance().schedule(new SongEffectLaunched(getSongTargets(song), song, 10000), 10000);
 			}
+			
 			// Schedule a new song to be played in 30-40 seconds...
 			musicTask = ThreadPoolManager.getInstance().schedule(new Music(), _intervalOfFrintezzaSongs + Rnd.get(10000));
 		}
@@ -399,22 +433,26 @@ public class Frintezza extends Reflection
 		private List<Creature> getSongTargets(int songId)
 		{
 			List<Creature> targets = new ArrayList<>();
+			
 			if (songId < 4) // Target is the minions
 			{
 				if ((weakScarlet != null) && !weakScarlet.isDead())
 				{
 					targets.add(weakScarlet);
 				}
+				
 				if ((strongScarlet != null) && !strongScarlet.isDead())
 				{
 					targets.add(strongScarlet);
 				}
+				
 				for (int i = 0; i < 4; i++)
 				{
 					if ((portraits[i] != null) && !portraits[i].isDead())
 					{
 						targets.add(portraits[i]);
 					}
+					
 					if ((demons[i] != null) && !demons[i].isDead())
 					{
 						targets.add(demons[i]);
@@ -432,6 +470,7 @@ public class Frintezza extends Reflection
 					}
 				}
 			}
+			
 			return targets;
 		}
 		
@@ -445,6 +484,7 @@ public class Frintezza extends Reflection
 			{
 				return 1;
 			}
+			
 			return Rnd.get(2, 4);
 		}
 		
@@ -458,25 +498,30 @@ public class Frintezza extends Reflection
 			{
 				return false;
 			}
+			
 			if ((weakScarlet != null) && !weakScarlet.isAlikeDead() && (weakScarlet.getCurrentHp() < ((weakScarlet.getMaxHp() * 2) / 3)))
 			{
 				return true;
 			}
+			
 			if ((strongScarlet != null) && !strongScarlet.isAlikeDead() && (strongScarlet.getCurrentHp() < ((strongScarlet.getMaxHp() * 2) / 3)))
 			{
 				return true;
 			}
+			
 			for (int i = 0; i < 4; i++)
 			{
 				if ((portraits[i] != null) && !portraits[i].isDead() && (portraits[i].getCurrentHp() < (portraits[i].getMaxHp() / 3)))
 				{
 					return true;
 				}
+				
 				if ((demons[i] != null) && !demons[i].isDead() && (demons[i].getCurrentHp() < (demons[i].getMaxHp() / 3)))
 				{
 					return true;
 				}
 			}
+			
 			return false;
 		}
 	}
@@ -508,11 +553,13 @@ public class Frintezza extends Reflection
 			{
 				return;
 			}
+			
 			// If the song time is over stop this loop
 			if (_currentTime > _intervalOfFrintezzaSongs)
 			{
 				return;
 			}
+			
 			// Skills are consecutive, so call them again
 			SongEffectLaunched songLaunched = new SongEffectLaunched(_targets, _song, _currentTime + (_intervalOfFrintezzaSongs / 10));
 			ThreadPoolManager.getInstance().schedule(songLaunched, _intervalOfFrintezzaSongs / 10);
@@ -541,6 +588,7 @@ public class Frintezza extends Reflection
 		{
 			return;
 		}
+		
 		for (Player pc : getPlayers())
 		{
 			if (pc.getDistance(target) <= 2550)
@@ -553,6 +601,7 @@ public class Frintezza extends Reflection
 				pc.leaveMovieMode();
 			}
 		}
+		
 		if ((socialAction > 0) && (socialAction < 5))
 		{
 			target.broadcastPacket(new SocialAction(target.getObjectId(), socialAction));
@@ -564,6 +613,7 @@ public class Frintezza extends Reflection
 		block(frintezza, flag);
 		block(weakScarlet, flag);
 		block(strongScarlet, flag);
+		
 		for (int i = 0; i < 4; i++)
 		{
 			block(portraits[i], flag);
@@ -577,21 +627,25 @@ public class Frintezza extends Reflection
 		{
 			return;
 		}
+		
 		if (flag)
 		{
 			npc.abortAttack(true, false);
 			npc.abortCast(true, true);
 			npc.setTarget(null);
+			
 			if (npc.isMoving)
 			{
 				npc.stopMove();
 			}
+			
 			npc.block();
 		}
 		else
 		{
 			npc.unblock();
 		}
+		
 		npc.setIsInvul(flag);
 	}
 	
@@ -613,14 +667,17 @@ public class Frintezza extends Reflection
 				{
 					case 1:
 						int angle = Math.abs((weakScarlet.getHeading() < 32768 ? 180 : 540) - (int) (weakScarlet.getHeading() / 182.044444444));
+						
 						for (Player pc : getPlayers())
 						{
 							pc.enterMovieMode();
 						}
+						
 						blockAll(true);
 						showSocialActionMovie(weakScarlet, 500, angle, 5, 500, 15000, 0);
 						ThreadPoolManager.getInstance().schedule(new SecondMorph(2), 2000);
 						break;
+					
 					case 2:
 						weakScarlet.broadcastPacket(new SocialAction(weakScarlet.getObjectId(), 1));
 						weakScarlet.setCurrentHp((weakScarlet.getMaxHp() * 3) / 4, false);
@@ -628,15 +685,18 @@ public class Frintezza extends Reflection
 						weakScarlet.broadcastCharInfo();
 						ThreadPoolManager.getInstance().schedule(new SecondMorph(3), 5500);
 						break;
+					
 					case 3:
 						weakScarlet.broadcastPacket(new SocialAction(weakScarlet.getObjectId(), 4));
 						blockAll(false);
 						Skill skill = SkillTable.getInstance().getInfo(5017, 1);
 						skill.getEffects(weakScarlet, weakScarlet, false, false);
+						
 						for (Player pc : getPlayers())
 						{
 							pc.leaveMovieMode();
 						}
+						
 						break;
 				}
 			}
@@ -666,39 +726,47 @@ public class Frintezza extends Reflection
 				{
 					case 1:
 						_angle = Math.abs((weakScarlet.getHeading() < 32768 ? 180 : 540) - (int) (weakScarlet.getHeading() / 182.044444444));
+						
 						for (Player pc : getPlayers())
 						{
 							pc.enterMovieMode();
 						}
+						
 						blockAll(true);
 						frintezza.broadcastPacket(new MagicSkillCanceled(frintezza.getObjectId()));
 						frintezza.broadcastPacket(new SocialAction(frintezza.getObjectId(), 4));
 						ThreadPoolManager.getInstance().schedule(new ThirdMorph(2), 100);
 						break;
+					
 					case 2:
 						showSocialActionMovie(frintezza, 250, 120, 15, 0, 1000, 0);
 						showSocialActionMovie(frintezza, 250, 120, 15, 0, 10000, 0);
 						ThreadPoolManager.getInstance().schedule(new ThirdMorph(3), 6500);
 						break;
+					
 					case 3:
 						frintezza.broadcastPacket(new MagicSkillUse(frintezza, frintezza, 5006, 1, 34000, 0));
 						showSocialActionMovie(frintezza, 500, 70, 15, 3000, 10000, 0);
 						ThreadPoolManager.getInstance().schedule(new ThirdMorph(4), 3000);
 						break;
+					
 					case 4:
 						showSocialActionMovie(frintezza, 2500, 90, 12, 6000, 10000, 0);
 						ThreadPoolManager.getInstance().schedule(new ThirdMorph(5), 3000);
 						break;
+					
 					case 5:
 						showSocialActionMovie(weakScarlet, 250, _angle, 12, 0, 1000, 0);
 						showSocialActionMovie(weakScarlet, 250, _angle, 12, 0, 10000, 0);
 						ThreadPoolManager.getInstance().schedule(new ThirdMorph(6), 500);
 						break;
+					
 					case 6:
 						weakScarlet.doDie(weakScarlet);
 						showSocialActionMovie(weakScarlet, 450, _angle, 14, 8000, 8000, 0);
 						ThreadPoolManager.getInstance().schedule(new ThirdMorph(7), 6250);
 						break;
+					
 					case 7:
 						NpcLocation loc = new NpcLocation();
 						loc.set(weakScarlet.getLoc());
@@ -711,12 +779,15 @@ public class Frintezza extends Reflection
 						showSocialActionMovie(strongScarlet, 450, _angle, 12, 500, 14000, 2);
 						ThreadPoolManager.getInstance().schedule(new ThirdMorph(9), 5000);
 						break;
+					
 					case 9:
 						blockAll(false);
+						
 						for (Player pc : getPlayers())
 						{
 							pc.leaveMovieMode();
 						}
+						
 						Skill skill = SkillTable.getInstance().getInfo(5017, 1);
 						skill.getEffects(strongScarlet, strongScarlet, false, false);
 						break;
@@ -752,22 +823,26 @@ public class Frintezza extends Reflection
 						showSocialActionMovie(strongScarlet, 200, _angle, 85, 4000, 10000, 0);
 						ThreadPoolManager.getInstance().schedule(new Die(2), 7500);
 						break;
+					
 					case 2:
 						showSocialActionMovie(frintezza, 100, 120, 5, 0, 7000, 0);
 						showSocialActionMovie(frintezza, 100, 90, 5, 5000, 15000, 0);
 						ThreadPoolManager.getInstance().schedule(new Die(3), 6000);
 						break;
+					
 					case 3:
 						showSocialActionMovie(frintezza, 900, 90, 25, 7000, 10000, 0);
 						frintezza.doDie(frintezza);
 						frintezza = null;
 						ThreadPoolManager.getInstance().schedule(new Die(4), 7000);
 						break;
+					
 					case 4:
 						for (Player pc : getPlayers())
 						{
 							pc.leaveMovieMode();
 						}
+						
 						cleanUp();
 						break;
 				}
@@ -782,10 +857,12 @@ public class Frintezza extends Reflection
 	void cleanUp()
 	{
 		startCollapseTimer(15 * 60 * 1000L);
+		
 		for (Player p : getPlayers())
 		{
 			p.sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(15));
 		}
+		
 		for (NpcInstance n : getNpcs())
 		{
 			n.deleteMe();
@@ -822,8 +899,10 @@ public class Frintezza extends Reflection
 			{
 				return;
 			}
+			
 			double newHp = actor.getCurrentHp() - damage;
 			double maxHp = actor.getMaxHp();
+			
 			switch (_scarletMorph)
 			{
 				case 1:
@@ -832,13 +911,16 @@ public class Frintezza extends Reflection
 						_scarletMorph = 2;
 						ThreadPoolManager.getInstance().schedule(new SecondMorph(1), 1100);
 					}
+					
 					break;
+				
 				case 2:
 					if (newHp < (0.1 * maxHp))
 					{
 						_scarletMorph = 3;
 						ThreadPoolManager.getInstance().schedule(new ThirdMorph(1), 2000);
 					}
+					
 					break;
 			}
 		}
@@ -847,7 +929,7 @@ public class Frintezza extends Reflection
 	private class DeathListener implements OnDeathListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public DeathListener()
 		{
@@ -865,7 +947,9 @@ public class Frintezza extends Reflection
 					{
 						openDoor(hallADoor);
 					}
+					
 					blockUnblockNpcs(false, blockANpcs);
+					
 					for (NpcInstance n : getNpcs())
 					{
 						if (ArrayUtils.contains(blockANpcs, n.getNpcId()))
@@ -884,10 +968,12 @@ public class Frintezza extends Reflection
 							return;
 						}
 					}
+					
 					for (int corridorADoor : corridorADoors)
 					{
 						openDoor(corridorADoor);
 					}
+					
 					blockUnblockNpcs(true, blockBNpcs);
 				}
 				else if (self.getNpcId() == DarkChoirPlayer)
@@ -899,10 +985,12 @@ public class Frintezza extends Reflection
 							return;
 						}
 					}
+					
 					for (int hallBDoor : hallBDoors)
 					{
 						openDoor(hallBDoor);
 					}
+					
 					blockUnblockNpcs(false, blockBNpcs);
 				}
 				else if (ArrayUtils.contains(blockBNpcs, self.getNpcId()))
@@ -911,6 +999,7 @@ public class Frintezza extends Reflection
 					{
 						((NpcInstance) self).dropItem(killer.getPlayer(), DewdropItem, 1);
 					}
+					
 					// ToCheck: find easier way
 					for (NpcInstance n : getNpcs())
 					{
@@ -919,10 +1008,12 @@ public class Frintezza extends Reflection
 							return;
 						}
 					}
+					
 					for (int corridorBDoor : corridorBDoors)
 					{
 						openDoor(corridorBDoor);
 					}
+					
 					ThreadPoolManager.getInstance().schedule(new FrintezzaStart(), battleStartDelay);
 				}
 				else if (self.getNpcId() == _weakScarletId)

@@ -42,6 +42,7 @@ public class Keys extends ScriptItemHandler
 	public Keys()
 	{
 		final TIntHashSet keys = new TIntHashSet();
+		
 		for (DoorTemplate door : DoorHolder.getInstance().getDoors().values())
 		{
 			if ((door != null) && (door.getKey() > 0))
@@ -49,6 +50,7 @@ public class Keys extends ScriptItemHandler
 				keys.add(door.getKey());
 			}
 		}
+		
 		_itemIds = keys.toArray();
 	}
 	
@@ -66,34 +68,42 @@ public class Keys extends ScriptItemHandler
 		{
 			return false;
 		}
+		
 		final Player player = playable.getPlayer();
 		final GameObject target = player.getTarget();
+		
 		if ((target == null) || !target.isDoor())
 		{
 			player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
 			return false;
 		}
+		
 		final DoorInstance door = (DoorInstance) target;
+		
 		if (door.isOpen())
 		{
 			player.sendPacket(Msg.IT_IS_NOT_LOCKED);
 			return false;
 		}
+		
 		if ((door.getKey() <= 0) || (item.getItemId() != door.getKey()))
 		{
 			player.sendPacket(Msg.YOU_ARE_UNABLE_TO_UNLOCK_THE_DOOR);
 			return false;
 		}
+		
 		if (player.getDistance(door) > 300)
 		{
 			player.sendPacket(Msg.YOU_CANNOT_CONTROL_BECAUSE_YOU_ARE_TOO_FAR);
 			return false;
 		}
+		
 		if (!player.getInventory().destroyItem(item, 1L))
 		{
 			player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
 			return false;
 		}
+		
 		player.sendPacket(SystemMessage2.removeItems(item.getItemId(), 1));
 		player.sendMessage(new CustomMessage("lineage2.gameserver.skills.skillclasses.Unlock.Success", player));
 		door.openMe(player, true);

@@ -74,6 +74,7 @@ public class VoicedCommandHandler extends AbstractHolder
 	public void registerVoicedCommandHandler(IVoicedCommandHandler handler)
 	{
 		String[] ids = handler.getVoicedCommandList();
+		
 		for (String element : ids)
 		{
 			_datatable.put(element, handler);
@@ -88,10 +89,12 @@ public class VoicedCommandHandler extends AbstractHolder
 	public IVoicedCommandHandler getVoicedCommandHandler(String voicedCommand)
 	{
 		String command = voicedCommand;
+		
 		if (voicedCommand.contains(" "))
 		{
 			command = voicedCommand.substring(0, voicedCommand.indexOf(" "));
 		}
+		
 		return _datatable.get(command);
 	}
 	

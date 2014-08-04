@@ -127,7 +127,7 @@ public class GvG extends Functions implements ScriptFile
 	 * Field leaderList.
 	 */
 	private static final List<HardReference<Player>> leaderList = new CopyOnWriteArrayList<>();
-
+	
 	/**
 	 * @author Mobius
 	 */
@@ -142,7 +142,7 @@ public class GvG extends Functions implements ScriptFile
 			prepare();
 		}
 	}
-
+	
 	/**
 	 * @author Mobius
 	 */
@@ -152,7 +152,7 @@ public class GvG extends Functions implements ScriptFile
 		 * Field _timer.
 		 */
 		int _timer;
-
+		
 		/**
 		 * Constructor for Countdown.
 		 * @param timer int
@@ -161,7 +161,7 @@ public class GvG extends Functions implements ScriptFile
 		{
 			_timer = timer;
 		}
-
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -171,7 +171,7 @@ public class GvG extends Functions implements ScriptFile
 			Announcements.getInstance().announceToAll("GvG: Until the end of the registration on the tournament remains " + Integer.toString(_timer) + " minutes.");
 		}
 	}
-
+	
 	/**
 	 * Method onLoad.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
@@ -182,7 +182,7 @@ public class GvG extends Functions implements ScriptFile
 		_log.info("Loaded Event: GvG");
 		initTimer();
 	}
-
+	
 	/**
 	 * Method onReload.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
@@ -192,7 +192,7 @@ public class GvG extends Functions implements ScriptFile
 	{
 		// empty method
 	}
-
+	
 	/**
 	 * Method onShutdown.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
@@ -202,7 +202,7 @@ public class GvG extends Functions implements ScriptFile
 	{
 		// empty method
 	}
-
+	
 	/**
 	 * Method initTimer.
 	 */
@@ -214,17 +214,20 @@ public class GvG extends Functions implements ScriptFile
 		ci.set(Calendar.MINUTE, everydayStartTime[1]);
 		ci.set(Calendar.SECOND, everydayStartTime[2]);
 		long delay = ci.getTimeInMillis() - System.currentTimeMillis();
+		
 		if (delay < 0)
 		{
 			delay += day;
 		}
+		
 		if (_globalTask != null)
 		{
 			_globalTask.cancel(true);
 		}
+		
 		_globalTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Launch(), delay, day);
 	}
-
+	
 	/**
 	 * @author Mobius
 	 */
@@ -239,7 +242,7 @@ public class GvG extends Functions implements ScriptFile
 			activateEvent();
 		}
 	}
-
+	
 	/**
 	 * Method canBeStarted.
 	 * @return boolean
@@ -253,9 +256,10 @@ public class GvG extends Functions implements ScriptFile
 				return false;
 			}
 		}
+		
 		return true;
 	}
-
+	
 	/**
 	 * Method isActive.
 	 * @return boolean
@@ -264,7 +268,7 @@ public class GvG extends Functions implements ScriptFile
 	{
 		return _active;
 	}
-
+	
 	/**
 	 * Method activateEvent.
 	 */
@@ -273,15 +277,18 @@ public class GvG extends Functions implements ScriptFile
 		if (!isActive() && canBeStarted())
 		{
 			_regTask = ThreadPoolManager.getInstance().schedule(new RegTask(), regActiveTime);
+			
 			if (regActiveTime > (2 * 60 * 1000L))
 			{
 				if (regActiveTime > (5 * 60 * 1000L))
 				{
 					_countdownTask3 = ThreadPoolManager.getInstance().schedule(new Countdown(5), regActiveTime - (300 * 1000));
 				}
+				
 				_countdownTask1 = ThreadPoolManager.getInstance().schedule(new Countdown(2), regActiveTime - (120 * 1000));
 				_countdownTask2 = ThreadPoolManager.getInstance().schedule(new Countdown(1), regActiveTime - (60 * 1000));
 			}
+			
 			ServerVariables.set("GvG", "on");
 			_log.info("Event 'GvG' activated.");
 			Announcements.getInstance().announceToAll("Registration on GvG tournament start, Community Board (Alt + B) -> Event -> GvG (Registration Group)");
@@ -290,7 +297,7 @@ public class GvG extends Functions implements ScriptFile
 			_isRegistrationActive = true;
 		}
 	}
-
+	
 	/**
 	 * Method deactivateEvent.
 	 */
@@ -307,26 +314,30 @@ public class GvG extends Functions implements ScriptFile
 			leaderList.clear();
 		}
 	}
-
+	
 	/**
 	 * Method showStats.
 	 */
 	public void showStats()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (!isActive())
 		{
 			player.sendMessage("GvG event is not launched");
 			return;
 		}
+		
 		final StringBuilder string = new StringBuilder(32);
 		final String refresh = "<button value=\"Refresh\" action=\"bypass -h scripts_events.GvG.GvG:showStats\" width=60 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">";
 		final String start = "<button value=\"Start Now\" action=\"bypass -h scripts_events.GvG.GvG:startNow\" width=60 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">";
 		int i = 0;
+		
 		if (!leaderList.isEmpty())
 		{
 			for (Player leader : HardReferences.unwrap(leaderList))
@@ -335,9 +346,11 @@ public class GvG extends Functions implements ScriptFile
 				{
 					continue;
 				}
+				
 				string.append('*').append(leader.getName()).append('*').append(" | group members: ").append(leader.getParty().getMemberCount()).append("\n\n");
 				i++;
 			}
+			
 			show("There are " + i + " group leaders who registered for the event:\n\n" + string + "\n\n" + refresh + "\n\n" + start, player, null);
 		}
 		else
@@ -345,65 +358,76 @@ public class GvG extends Functions implements ScriptFile
 			show("There are no participants at the time\n\n" + refresh, player, null);
 		}
 	}
-
+	
 	/**
 	 * Method startNow.
 	 */
 	public void startNow()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (!isActive() || !canBeStarted())
 		{
 			player.sendMessage("GvG event is not launched");
 			return;
 		}
+		
 		prepare();
 	}
-
+	
 	/**
 	 * Method addGroup.
 	 */
 	public void addGroup()
 	{
 		final Player player = getSelf();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (!_isRegistrationActive)
 		{
 			player.sendMessage("GvG tournament inactive.");
 			return;
 		}
+		
 		if (leaderList.contains(player.getRef()))
 		{
 			player.sendMessage("You are already registered on GvG Tournament.");
 			return;
 		}
+		
 		if (!player.isInParty())
 		{
 			player.sendMessage("You are not in party.");
 			return;
 		}
+		
 		if (!player.getParty().isLeader(player))
 		{
 			player.sendMessage("You are not the party Leader.");
 			return;
 		}
+		
 		if (player.getParty().isInCommandChannel())
 		{
 			player.sendMessage("To register in the tournament you have to leave the command channel.");
 			return;
 		}
+		
 		if (leaderList.size() >= _groupsLimit)
 		{
 			player.sendMessage("The tournament reached the limit number.");
 			return;
 		}
+		
 		final List<Player> party = player.getParty().getPartyMembers();
 		final String[] abuseReason =
 		{
@@ -422,19 +446,22 @@ public class GvG extends Functions implements ScriptFile
 			"is not in peace zone",
 			"is in observing mode",
 		};
+		
 		for (Player eachmember : party)
 		{
 			int abuseId = checkPlayer(eachmember, false);
+			
 			if (abuseId != 0)
 			{
 				player.sendMessage("Player " + eachmember.getName() + " " + abuseReason[abuseId - 1]);
 				return;
 			}
 		}
+		
 		leaderList.add(player.getRef());
 		player.getParty().broadcastMessageToPartyMembers("Your group is registred in the waiting list. Please do not register in other events, or duels. The full list is availiable in the Community Board (Alt+B)");
 	}
-
+	
 	/**
 	 * Method stopTimers.
 	 */
@@ -445,23 +472,26 @@ public class GvG extends Functions implements ScriptFile
 			_regTask.cancel(false);
 			_regTask = null;
 		}
+		
 		if (_countdownTask1 != null)
 		{
 			_countdownTask1.cancel(false);
 			_countdownTask1 = null;
 		}
+		
 		if (_countdownTask2 != null)
 		{
 			_countdownTask2.cancel(false);
 			_countdownTask2 = null;
 		}
+		
 		if (_countdownTask3 != null)
 		{
 			_countdownTask3.cancel(false);
 			_countdownTask3 = null;
 		}
 	}
-
+	
 	/**
 	 * Method prepare.
 	 */
@@ -469,6 +499,7 @@ public class GvG extends Functions implements ScriptFile
 	{
 		checkPlayers();
 		shuffleGroups();
+		
 		if (isActive())
 		{
 			stopTimers();
@@ -476,16 +507,18 @@ public class GvG extends Functions implements ScriptFile
 			_active = false;
 			_isRegistrationActive = false;
 		}
+		
 		if (leaderList.size() < 2)
 		{
 			leaderList.clear();
 			Announcements.getInstance().announceToAll("GvG: Tournament canceled due lack of partecipant.");
 			return;
 		}
+		
 		Announcements.getInstance().announceToAll("GvG: Registration is closed, starting the event!");
 		start();
 	}
-
+	
 	/**
 	 * Method checkPlayer.
 	 * @param player Player
@@ -498,57 +531,70 @@ public class GvG extends Functions implements ScriptFile
 		{
 			return 1;
 		}
+		
 		if (!player.isInParty())
 		{
 			return 2;
 		}
+		
 		if (doCheckLeadership && ((player.getParty() == null) || !player.getParty().isLeader(player)))
 		{
 			return 4;
 		}
+		
 		if ((player.getParty() == null) || (player.getParty().getMemberCount() < _minPartyMembers))
 		{
 			return 3;
 		}
+		
 		if ((player.getLevel() < _minLevel) || (player.getLevel() > _maxLevel))
 		{
 			return 5;
 		}
+		
 		if (player.isMounted())
 		{
 			return 6;
 		}
+		
 		if (player.isInDuel())
 		{
 			return 7;
 		}
+		
 		if (player.getTeam() != TeamType.NONE)
 		{
 			return 8;
 		}
+		
 		if ((player.getOlympiadGame() != null) || Olympiad.isRegistered(player))
 		{
 			return 9;
 		}
+		
 		if (player.isTeleporting())
 		{
 			return 10;
 		}
+		
 		if (player.isCursedWeaponEquipped())
 		{
 			return 11;
 		}
+		
 		if (!player.isInPeaceZone())
 		{
 			return 12;
 		}
+		
 		if (player.isInObserverMode())
 		{
 			return 13;
 		}
+		
 		return 0;
 	}
-
+	
 	/**
 	 * Method shuffleGroups.
 	 */
@@ -558,18 +604,20 @@ public class GvG extends Functions implements ScriptFile
 		{
 			final int rndindex = Rnd.get(leaderList.size());
 			final Player expelled = leaderList.remove(rndindex).get();
+			
 			if (expelled != null)
 			{
 				expelled.sendMessage("While we check all the groups, your group is expelled due event rules. we are sorry for the inconvinience, please try again next time.");
 			}
 		}
+		
 		for (int i = 0; i < leaderList.size(); i++)
 		{
 			int rndindex = Rnd.get(leaderList.size());
 			leaderList.set(i, leaderList.set(rndindex, leaderList.get(i)));
 		}
 	}
-
+	
 	/**
 	 * Method checkPlayers.
 	 */
@@ -582,6 +630,7 @@ public class GvG extends Functions implements ScriptFile
 				leaderList.remove(player.getRef());
 				continue;
 			}
+			
 			for (Player partymember : player.getParty().getPartyMembers())
 			{
 				if (checkPlayer(partymember, false) != 0)
@@ -593,7 +642,7 @@ public class GvG extends Functions implements ScriptFile
 			}
 		}
 	}
-
+	
 	/**
 	 * Method updateWinner.
 	 * @param winner Player
@@ -602,6 +651,7 @@ public class GvG extends Functions implements ScriptFile
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -618,7 +668,7 @@ public class GvG extends Functions implements ScriptFile
 			DbUtils.closeQuietly(con, statement);
 		}
 	}
-
+	
 	/**
 	 * Method start.
 	 */
@@ -626,11 +676,13 @@ public class GvG extends Functions implements ScriptFile
 	{
 		final int instancedZoneId = 504;
 		final InstantZone iz = InstantZoneHolder.getInstance().getInstantZone(instancedZoneId);
+		
 		if (iz == null)
 		{
 			_log.warn("GvG: InstanceZone : " + instancedZoneId + " not found!");
 			return;
 		}
+		
 		for (int i = 0; i < leaderList.size(); i += 2)
 		{
 			Player team1Leader = leaderList.get(i).get();
@@ -640,6 +692,7 @@ public class GvG extends Functions implements ScriptFile
 			r.setTeam2(team2Leader.getParty());
 			r.init(iz);
 			r.setReturnLoc(GvG.RETURN_LOC);
+			
 			for (Player member : team1Leader.getParty().getPartyMembers())
 			{
 				Functions.unRide(member);
@@ -649,6 +702,7 @@ public class GvG extends Functions implements ScriptFile
 				member.dispelBuffs();
 				member.teleToLocation(Location.findPointToStay(GvG.TEAM1_LOC, 0, 150, r.getGeoIndex()), r);
 			}
+			
 			for (Player member : team2Leader.getParty().getPartyMembers())
 			{
 				Functions.unRide(member);
@@ -658,8 +712,10 @@ public class GvG extends Functions implements ScriptFile
 				member.dispelBuffs();
 				member.teleToLocation(Location.findPointToStay(GvG.TEAM2_LOC, 0, 150, r.getGeoIndex()), r);
 			}
+			
 			r.start();
 		}
+		
 		leaderList.clear();
 		_log.info("GvG: Event started successfuly.");
 	}

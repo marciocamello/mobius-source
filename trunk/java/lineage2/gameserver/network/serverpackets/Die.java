@@ -45,12 +45,13 @@ public class Die extends L2GameServerPacket
 			put(RestartType.FIXED, player.getPlayerAccess().ResurectFixed || (((player.getInventory().getCountOf(10649) > 0) || (player.getInventory().getCountOf(13300) > 0)) && !player.isOnSiegeField()));
 			put(RestartType.AGATHION, player.isAgathionResAvailable());
 			put(RestartType.TO_VILLAGE, true);
-			
 			Clan clan = null;
+			
 			if (get(RestartType.TO_VILLAGE))
 			{
 				clan = player.getClan();
 			}
+			
 			if (clan != null)
 			{
 				put(RestartType.TO_CLANHALL, clan.getHasHideout() > 0);

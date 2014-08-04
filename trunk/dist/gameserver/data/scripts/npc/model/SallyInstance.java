@@ -25,7 +25,7 @@ import quests._250_WatchWhatYouEat;
 public class SallyInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -51,9 +51,11 @@ public class SallyInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equals("ask_about_rare_plants"))
 		{
 			QuestState qs = player.getQuestState(_250_WatchWhatYouEat.class);
+			
 			if ((qs != null) && qs.isCompleted())
 			{
 				showChatWindow(player, 3);

@@ -50,22 +50,27 @@ public final class ArmorSetsHolder extends AbstractHolder
 		{
 			_armorSets.put(id, armorset);
 		}
+		
 		for (int id : armorset.getLegIds())
 		{
 			_armorSets.put(id, armorset);
 		}
+		
 		for (int id : armorset.getHeadIds())
 		{
 			_armorSets.put(id, armorset);
 		}
+		
 		for (int id : armorset.getGlovesIds())
 		{
 			_armorSets.put(id, armorset);
 		}
+		
 		for (int id : armorset.getFeetIds())
 		{
 			_armorSets.put(id, armorset);
 		}
+		
 		for (int id : armorset.getShieldIds())
 		{
 			_armorSets.put(id, armorset);

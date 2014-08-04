@@ -64,14 +64,17 @@ public class Suppressor extends Fighter
 	protected void onIntentionAttack(Creature target)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		if (getIntention() == CtrlIntention.AI_INTENTION_ACTIVE)
 		{
 			Functions.npcSay(actor, NpcString.TARGET_RECOGNITION_ACHIEVED_ATTACK_SEQUENCE_COMMENCING, ChatType.SHOUT, 5000);
 		}
+		
 		super.onIntentionAttack(target);
 	}
 	
@@ -83,13 +86,16 @@ public class Suppressor extends Fighter
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((actor == null) || actor.isDead())
 		{
 			return true;
 		}
+		
 		if (mob == null)
 		{
 			final List<NpcInstance> around = getActor().getAroundNpc(300, 300);
+			
 			if ((around != null) && !around.isEmpty())
 			{
 				for (NpcInstance npc : around)
@@ -104,6 +110,7 @@ public class Suppressor extends Fighter
 				}
 			}
 		}
+		
 		if (mob != null)
 		{
 			actor.stopMove();
@@ -111,6 +118,7 @@ public class Suppressor extends Fighter
 			getActor().getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, mob, 1);
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -123,13 +131,16 @@ public class Suppressor extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		if (_firstTimeAttacked)
 		{
 			_firstTimeAttacked = false;
+			
 			if (Rnd.chance(25))
 			{
 				Functions.npcSay(actor, Rnd.get(MsgText), ChatType.ALL, 5000);
@@ -139,6 +150,7 @@ public class Suppressor extends Fighter
 		{
 			Functions.npcSay(actor, NpcString.TARGET_RECOGNITION_ACHIEVED_ATTACK_SEQUENCE_COMMENCING, ChatType.SHOUT, 5000);
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	

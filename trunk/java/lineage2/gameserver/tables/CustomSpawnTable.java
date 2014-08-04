@@ -56,6 +56,7 @@ public class CustomSpawnTable
 		{
 			new CustomSpawnTable();
 		}
+		
 		return _instance;
 	}
 	
@@ -65,10 +66,12 @@ public class CustomSpawnTable
 	private CustomSpawnTable()
 	{
 		_instance = this;
+		
 		if (Config.LOAD_GM_SPAWN_CUSTOM)
 		{
 			fillCustomSpawnTable();
 		}
+		
 		fillSpawnTable();
 	}
 	
@@ -80,12 +83,14 @@ public class CustomSpawnTable
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM spawnlist ORDER by npc_templateid");
 			rset = statement.executeQuery();
 			SpawnTemplate template;
+			
 			while (rset.next())
 			{
 				int count = rset.getInt("count");
@@ -121,12 +126,14 @@ public class CustomSpawnTable
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM custom_spawnlist ORDER by npc_templateid");
 			rset = statement.executeQuery();
 			SpawnTemplate template;
+			
 			while (rset.next())
 			{
 				int count = rset.getInt("count");
@@ -163,6 +170,7 @@ public class CustomSpawnTable
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -195,6 +203,7 @@ public class CustomSpawnTable
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();

@@ -128,7 +128,6 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 			}
 			
 			ItemData i = (ItemData) obj;
-			
 			return (_id == i._id) && (_count == i._count) && (_item == i._item);
 		}
 	}
@@ -151,12 +150,14 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if ((activeChar == null) || (_amount < 1))
 		{
 			return;
 		}
 		
 		MultiSellListContainer list1 = activeChar.getMultisell();
+		
 		if (list1 == null)
 		{
 			activeChar.sendActionFailed();
@@ -202,6 +203,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 		}
 		
 		MultiSellEntry entry = null;
+		
 		for (MultiSellEntry $entry : list1.getEntries())
 		{
 			if ($entry.getEntryId() == _entryId)
@@ -219,30 +221,28 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 		final boolean keepenchant = list1.isKeepEnchant();
 		final boolean notax = list1.isNoTax();
 		final List<ItemData> items = new ArrayList<>();
-		
 		PcInventory inventory = activeChar.getInventory();
-		
 		long totalPrice = 0;
-		
 		NpcInstance merchant = activeChar.getLastNpc();
 		Castle castle = merchant != null ? merchant.getCastle(activeChar) : null;
-		
 		inventory.writeLock();
+		
 		try
 		{
 			long tax = SafeMath.mulAndCheck(entry.getTax(), _amount);
-			
 			long slots = 0;
 			long weight = 0;
+			
 			for (MultiSellIngredient i : entry.getProduction())
 			{
 				if (i.getItemId() <= 0)
 				{
 					continue;
 				}
-				ItemTemplate item = ItemHolder.getInstance().getTemplate(i.getItemId());
 				
+				ItemTemplate item = ItemHolder.getInstance().getTemplate(i.getItemId());
 				weight = SafeMath.addAndCheck(weight, SafeMath.mulAndCheck(SafeMath.mulAndCheck(i.getItemCount(), _amount), item.getWeight()));
+				
 				if (item.isStackable())
 				{
 					if (inventory.getItemByItemId(i.getItemId()) == null)
@@ -303,6 +303,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 						activeChar.sendPacket(new SystemMessage(SystemMessage.S1_IS_NOT_A_CLAN_LEADER).addString(activeChar.getName()));
 						return;
 					}
+					
 					if (!ingridient.getMantainIngredient())
 					{
 						items.add(new ItemData(ingridientItemId, totalAmount, null));
@@ -315,6 +316,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 						activeChar.sendPacket(Msg.YOU_ARE_SHORT_OF_ACCUMULATED_POINTS);
 						return;
 					}
+					
 					if (!ingridient.getMantainIngredient())
 					{
 						items.add(new ItemData(ingridientItemId, totalAmount, null));
@@ -327,6 +329,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 						activeChar.sendPacket(Msg.NOT_ENOUGH_FAME_POINTS);
 						return;
 					}
+					
 					if (!ingridient.getMantainIngredient())
 					{
 						items.add(new ItemData(ingridientItemId, totalAmount, null));
@@ -341,12 +344,15 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 						for (int i = 0; i < (ingridientItemCount * _amount); i++)
 						{
 							List<ItemInstance> list = inventory.getItemsByItemId(ingridientItemId);
+							
 							if (keepenchant)
 							{
 								ItemInstance itemToTake = null;
+								
 								for (ItemInstance item : list)
 								{
 									ItemData itmd = new ItemData(item.getItemId(), item.getCount(), item);
+									
 									if (((item.getEnchantLevel() == ingridientEnchant) || !item.getTemplate().isEquipment()) && !items.contains(itmd) && item.canBeExchanged(activeChar))
 									{
 										itemToTake = item;
@@ -368,11 +374,13 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 							else
 							{
 								ItemInstance itemToTake = null;
+								
 								for (ItemInstance item : list)
 								{
 									if (!items.contains(new ItemData(item.getItemId(), item.getCount(), item)) && ((itemToTake == null) || (item.getEnchantLevel() < itemToTake.getEnchantLevel())) && !item.isShadowItem() && !item.isTemporalItem() && (!item.isAugmented() || Config.ALT_ALLOW_DROP_AUGMENTED) && ItemFunctions.checkIfCanDiscard(activeChar, item))
 									{
 										itemToTake = item;
+										
 										if (itemToTake.getEnchantLevel() == 0)
 										{
 											break;
@@ -399,6 +407,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 						{
 							totalPrice = SafeMath.addAndCheck(totalPrice, SafeMath.mulAndCheck(ingridientItemCount, _amount));
 						}
+						
 						ItemInstance item = inventory.getItemByItemId(ingridientItemId);
 						
 						if ((item == null) || (item.getCount() < totalAmount))
@@ -424,9 +433,11 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 			int enchantLevel = 0;
 			ItemAttributes attributes = null;
 			int augmentationId = 0;
+			
 			for (ItemData id : items)
 			{
 				long count = id.getCount();
+				
 				if (count > 0)
 				{
 					if (id.getId() == ItemTemplate.ITEM_ID_CLAN_REPUTATION_SCORE)
@@ -457,6 +468,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 							activeChar.sendPacket(SystemMessage2.removeItems(id.getId(), count));
 							continue;
 						}
+						
 						return;
 					}
 				}
@@ -467,16 +479,19 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 				if (castle != null)
 				{
 					activeChar.sendMessage(new CustomMessage("trade.HavePaidTax", activeChar).addNumber(tax));
+					
 					if ((merchant != null) && (merchant.getReflection() == ReflectionManager.DEFAULT))
 					{
 						castle.addToTreasury(tax, true, false);
 					}
 				}
 			}
+			
 			double rndNum = 100.0D * Rnd.nextDouble();
 			double chance = 0.0D;
 			double chanceFrom = 0.0D;
 			cycle1:
+			
 			for (MultiSellIngredient in : entry.getProduction())
 			{
 				if (in.getItemId() <= 0)
@@ -497,8 +512,8 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 				}
 				else if (ItemHolder.getInstance().getTemplate(in.getItemId()).isStackable())
 				{
-					
 					long total = SafeMath.mulAndLimit(in.getItemCount(), _amount);
+					
 					if (in.getChance() >= 0)
 					{
 						chance = in.getChance();
@@ -508,13 +523,13 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 							ItemFunctions.addItem(activeChar, in.getItemId(), total, true);
 							break;
 						}
+						
 						chanceFrom += chance;
 					}
 					else
 					{
 						ItemFunctions.addItem(activeChar, in.getItemId(), total, true);
 					}
-					
 				}
 				else
 				{
@@ -531,32 +546,38 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 								if ((rndNum >= chanceFrom) && (rndNum <= (chance + chanceFrom)))
 								{
 									product.setEnchantLevel(enchantLevel);
+									
 									if (attributes != null)
 									{
 										product.setAttributes(attributes.clone());
 									}
+									
 									if (augmentationId != 0)
 									{
 										product.setAugmentationId(augmentationId);
 									}
+									
 									inventory.addItem(product);
 									activeChar.sendPacket(SystemMessage2.obtainItems(product));
 									break cycle1;
-									
 								}
+								
 								chanceFrom += chance;
 							}
 							else
 							{
 								product.setEnchantLevel(enchantLevel);
+								
 								if (attributes != null)
 								{
 									product.setAttributes(attributes.clone());
 								}
+								
 								if (augmentationId != 0)
 								{
 									product.setAugmentationId(augmentationId);
 								}
+								
 								inventory.addItem(product);
 								activeChar.sendPacket(SystemMessage2.obtainItems(product));
 							}
@@ -565,6 +586,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 						{
 							product.setEnchantLevel(in.getItemEnchant());
 							product.setAttributes(in.getItemAttributes().clone());
+							
 							if (in.getChance() >= 0)
 							{
 								chance = in.getChance();
@@ -574,6 +596,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 									ItemFunctions.addItem(activeChar, in.getItemId(), in.getItemCount(), true);
 									break;
 								}
+								
 								chanceFrom += chance;
 							}
 							else
@@ -595,7 +618,6 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 		{
 			inventory.writeUnlock();
 		}
-		
 		activeChar.sendChanges();
 		
 		if (!list1.isShowAll())

@@ -37,10 +37,8 @@ public class _10342_DayOfDestinyElvenFate extends SagasSuperclass implements Scr
 	public _10342_DayOfDestinyElvenFate()
 	{
 		super(false);
-		
 		StartNPC = 30856;
 		StartRace = Race.elf;
-		
 		init();
 	}
 	

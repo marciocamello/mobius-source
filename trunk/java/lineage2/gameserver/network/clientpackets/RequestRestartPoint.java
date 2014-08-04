@@ -61,20 +61,24 @@ public class RequestRestartPoint extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if ((_restartType == null) || (activeChar == null))
 		{
 			return;
 		}
+		
 		if (activeChar.isFakeDeath())
 		{
 			activeChar.breakFakeDeath();
 			return;
 		}
+		
 		if (!activeChar.isDead() && !activeChar.isGM())
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		switch (_restartType)
 		{
 			case AGATHION:
@@ -86,7 +90,9 @@ public class RequestRestartPoint extends L2GameClientPacket
 				{
 					activeChar.sendPacket(ActionFail.STATIC, new Die(activeChar));
 				}
+				
 				break;
+			
 			case FIXED:
 				if (activeChar.getPlayerAccess().ResurectFixed)
 				{
@@ -106,10 +112,13 @@ public class RequestRestartPoint extends L2GameClientPacket
 				{
 					activeChar.sendPacket(ActionFail.STATIC, new Die(activeChar));
 				}
+				
 				break;
+			
 			default:
 				Location loc = null;
 				Reflection ref = activeChar.getReflection();
+				
 				if (ref == ReflectionManager.DEFAULT)
 				{
 					for (GlobalEvent e : activeChar.getEvents())
@@ -117,17 +126,21 @@ public class RequestRestartPoint extends L2GameClientPacket
 						loc = e.getRestartLoc(activeChar, _restartType);
 					}
 				}
+				
 				if (loc == null)
 				{
 					loc = defaultLoc(_restartType, activeChar);
 				}
+				
 				if (loc != null)
 				{
 					Pair<Integer, OnAnswerListener> ask = activeChar.getAskListener(false);
+					
 					if ((ask != null) && (ask.getValue() instanceof ReviveAnswerListener) && !((ReviveAnswerListener) ask.getValue()).isForPet())
 					{
 						activeChar.getAskListener(true);
 					}
+					
 					activeChar.setPendingRevive(true);
 					activeChar.teleToLocation(loc, ReflectionManager.DEFAULT);
 				}
@@ -135,6 +148,7 @@ public class RequestRestartPoint extends L2GameClientPacket
 				{
 					activeChar.sendPacket(ActionFail.STATIC, new Die(activeChar));
 				}
+				
 				break;
 		}
 	}
@@ -149,6 +163,7 @@ public class RequestRestartPoint extends L2GameClientPacket
 	{
 		Location loc = null;
 		Clan clan = activeChar.getClan();
+		
 		switch (restartType)
 		{
 			case TO_CLANHALL:
@@ -156,39 +171,49 @@ public class RequestRestartPoint extends L2GameClientPacket
 				{
 					ClanHall clanHall = activeChar.getClanHall();
 					loc = TeleportUtils.getRestartLocation(activeChar, RestartType.TO_CLANHALL);
+					
 					if (clanHall.getFunction(ResidenceFunction.RESTORE_EXP) != null)
 					{
 						activeChar.restoreExp(clanHall.getFunction(ResidenceFunction.RESTORE_EXP).getLevel());
 					}
 				}
+				
 				break;
+			
 			case TO_CASTLE:
 				if ((clan != null) && (clan.getCastle() != 0))
 				{
 					Castle castle = activeChar.getCastle();
 					loc = TeleportUtils.getRestartLocation(activeChar, RestartType.TO_CASTLE);
+					
 					if (castle.getFunction(ResidenceFunction.RESTORE_EXP) != null)
 					{
 						activeChar.restoreExp(castle.getFunction(ResidenceFunction.RESTORE_EXP).getLevel());
 					}
 				}
+				
 				break;
+			
 			case TO_FORTRESS:
 				if ((clan != null) && (clan.getHasFortress() != 0))
 				{
 					Fortress fort = activeChar.getFortress();
 					loc = TeleportUtils.getRestartLocation(activeChar, RestartType.TO_FORTRESS);
+					
 					if (fort.getFunction(ResidenceFunction.RESTORE_EXP) != null)
 					{
 						activeChar.restoreExp(fort.getFunction(ResidenceFunction.RESTORE_EXP).getLevel());
 					}
 				}
+				
 				break;
+			
 			case TO_VILLAGE:
 			default:
 				loc = TeleportUtils.getRestartLocation(activeChar, RestartType.TO_VILLAGE);
 				break;
 		}
+		
 		return loc;
 	}
 }

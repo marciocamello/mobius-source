@@ -28,17 +28,21 @@ public class SkillCoolTime extends L2GameServerPacket
 	{
 		Collection<TimeStamp> list = player.getSkillReuses();
 		_list = new ArrayList<>(list.size());
+		
 		for (TimeStamp stamp : list)
 		{
 			if (!stamp.hasNotPassed())
 			{
 				continue;
 			}
+			
 			lineage2.gameserver.model.Skill skill = player.getKnownSkill(stamp.getId());
+			
 			if (skill == null)
 			{
 				continue;
 			}
+			
 			Skill sk = new Skill();
 			sk.skillId = skill.getId();
 			sk.level = skill.getLevel();
@@ -53,6 +57,7 @@ public class SkillCoolTime extends L2GameServerPacket
 	{
 		writeC(0xc7); // packet type
 		writeD(_list.size()); // Size of list
+		
 		for (int i = 0; i < _list.size(); i++)
 		{
 			Skill sk = _list.get(i);
@@ -66,7 +71,7 @@ public class SkillCoolTime extends L2GameServerPacket
 	private static class Skill
 	{
 		/**
-		 * 
+		 *
 		 */
 		public Skill()
 		{

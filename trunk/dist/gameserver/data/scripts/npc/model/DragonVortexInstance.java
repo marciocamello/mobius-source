@@ -27,7 +27,7 @@ import lineage2.gameserver.utils.NpcUtils;
 public final class DragonVortexInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -70,6 +70,7 @@ public final class DragonVortexInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.startsWith("request_boss"))
 		{
 			if ((boss != null) && !boss.isDead())
@@ -77,6 +78,7 @@ public final class DragonVortexInstance extends NpcInstance
 				showChatWindow(player, "default/32871-3.htm");
 				return;
 			}
+			
 			if (ItemFunctions.getItemCount(player, 17248) > 0)
 			{
 				ItemFunctions.removeItem(player, 17248, 1, true);

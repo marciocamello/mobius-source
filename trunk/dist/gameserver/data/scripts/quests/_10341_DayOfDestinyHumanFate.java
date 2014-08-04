@@ -18,7 +18,7 @@ import lineage2.gameserver.scripts.ScriptFile;
 public class _10341_DayOfDestinyHumanFate extends SagasSuperclass implements ScriptFile
 {
 	private final int questId = 10341;
-
+	
 	@Override
 	public void onLoad()
 	{
@@ -37,10 +37,8 @@ public class _10341_DayOfDestinyHumanFate extends SagasSuperclass implements Scr
 	public _10341_DayOfDestinyHumanFate()
 	{
 		super(false);
-		
 		StartNPC = 30857;
 		StartRace = Race.human;
-		
 		init();
 	}
 	

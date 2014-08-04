@@ -51,12 +51,15 @@ public class RequestGetBossRecord extends L2GameClientPacket
 		Player activeChar = getClient().getActiveChar();
 		int totalPoints = 0;
 		int ranking = 0;
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		List<BossRecordInfo> list = new ArrayList<>();
 		Map<Integer, Integer> points = RaidBossSpawnManager.getInstance().getPointsForOwnerId(activeChar.getObjectId());
+		
 		if ((points != null) && !points.isEmpty())
 		{
 			for (Map.Entry<Integer, Integer> e : points.entrySet())
@@ -66,14 +69,17 @@ public class RequestGetBossRecord extends L2GameClientPacket
 					case -1:
 						ranking = e.getValue();
 						break;
+					
 					case 0:
 						totalPoints = e.getValue();
 						break;
+					
 					default:
 						list.add(new BossRecordInfo(e.getKey(), e.getValue(), 0));
 				}
 			}
 		}
+		
 		activeChar.sendPacket(new ExGetBossRecord(ranking, totalPoints, list));
 	}
 }

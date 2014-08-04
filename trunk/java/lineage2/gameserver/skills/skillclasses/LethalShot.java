@@ -44,12 +44,15 @@ public class LethalShot extends Skill
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{
 		boolean ss = activeChar.getChargedSoulShot() && isSSPossible();
+		
 		if (ss)
 		{
 			activeChar.unChargeShots(false);
 		}
+		
 		Creature realTarget;
 		boolean reflected;
+		
 		for (Creature target : targets)
 		{
 			if (target != null)
@@ -58,21 +61,27 @@ public class LethalShot extends Skill
 				{
 					continue;
 				}
+				
 				reflected = target.checkReflectSkill(activeChar, this);
 				realTarget = reflected ? activeChar : target;
+				
 				if (getPower() > 0)
 				{
 					AttackInfo info = Formulas.calcPhysDam(activeChar, realTarget, this, false, false, ss, false);
+					
 					if (info.lethal_dmg > 0)
 					{
 						realTarget.reduceCurrentHp(info.lethal_dmg, info.reflectableDamage, activeChar, this, true, true, false, false, false, false, false);
 					}
+					
 					realTarget.reduceCurrentHp(info.damage, info.reflectableDamage, activeChar, this, true, true, false, true, false, false, true);
+					
 					if (!reflected)
 					{
 						realTarget.doCounterAttack(this, activeChar, false);
 					}
 				}
+				
 				getEffects(activeChar, target, getActivateRate() > 0, false, reflected);
 			}
 		}

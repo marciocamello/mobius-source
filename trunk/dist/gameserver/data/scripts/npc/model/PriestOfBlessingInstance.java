@@ -32,7 +32,7 @@ import lineage2.gameserver.utils.Util;
 public class PriestOfBlessingInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -160,6 +160,7 @@ public class PriestOfBlessingInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.startsWith("BuyHourglass"))
 		{
 			int val = Integer.parseInt(command.substring(13));
@@ -189,6 +190,7 @@ public class PriestOfBlessingInstance extends NpcInstance
 		if (val == 0)
 		{
 			Hourglass hg = getHourglass(player);
+			
 			if (hg != null)
 			{
 				NpcHtmlMessage html = new NpcHtmlMessage(player, this);
@@ -199,8 +201,10 @@ public class PriestOfBlessingInstance extends NpcInstance
 				html.replace("%maxLvl%", String.valueOf(hg.maxLevel));
 				player.sendPacket(html);
 			}
+			
 			return;
 		}
+		
 		super.showChatWindow(player, val);
 	}
 	
@@ -218,6 +222,7 @@ public class PriestOfBlessingInstance extends NpcInstance
 				return hg;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -246,15 +251,19 @@ public class PriestOfBlessingInstance extends NpcInstance
 		long _reuse_time = 20 * 60 * 60 * 1000;
 		long _curr_time = System.currentTimeMillis();
 		String _last_use_time = player.getVar(var);
+		
 		if (isGlobalVar)
 		{
 			Map<Integer, String> chars = player.getAccountChars();
+			
 			if (chars != null)
 			{
 				long use_time = 0;
+				
 				for (int objId : chars.keySet())
 				{
 					String val = Player.getVarFromPlayer(objId, var);
+					
 					if (val != null)
 					{
 						if (Long.parseLong(val) > use_time)
@@ -263,12 +272,14 @@ public class PriestOfBlessingInstance extends NpcInstance
 						}
 					}
 				}
+				
 				if (use_time > 0)
 				{
 					_last_use_time = String.valueOf(use_time);
 				}
 			}
 		}
+		
 		if (_last_use_time != null)
 		{
 			_remaining_time = _curr_time - Long.parseLong(_last_use_time);
@@ -277,6 +288,7 @@ public class PriestOfBlessingInstance extends NpcInstance
 		{
 			_remaining_time = _reuse_time;
 		}
+		
 		if (_remaining_time >= _reuse_time)
 		{
 			if (player.reduceAdena(price, true))
@@ -293,6 +305,7 @@ public class PriestOfBlessingInstance extends NpcInstance
 		{
 			int hours = (int) (_reuse_time - _remaining_time) / 3600000;
 			int minutes = ((int) (_reuse_time - _remaining_time) % 3600000) / 60000;
+			
 			if (hours > 0)
 			{
 				player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_S1_HOURSS_AND_S2_MINUTES_REMAINING_UNTIL_THE_TIME_WHEN_THE_ITEM_CAN_BE_PURCHASED).addNumber(hours).addNumber(minutes));

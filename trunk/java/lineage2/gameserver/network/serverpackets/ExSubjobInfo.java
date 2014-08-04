@@ -45,6 +45,7 @@ public class ExSubjobInfo extends L2GameServerPacket
 		writeD(_classId);
 		writeD(_raceId);
 		writeD(_subClasses.size());
+		
 		for (SubClass subClass : _subClasses)
 		{
 			writeD(subClass.getIndex());

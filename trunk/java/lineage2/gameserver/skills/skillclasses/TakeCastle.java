@@ -57,41 +57,51 @@ public class TakeCastle extends Skill
 		{
 			return false;
 		}
+		
 		if ((activeChar == null) || !activeChar.isPlayer())
 		{
 			return false;
 		}
+		
 		Player player = (Player) activeChar;
+		
 		if ((player.getClan() == null) || !player.isClanLeader())
 		{
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 			return false;
 		}
+		
 		CastleSiegeEvent siegeEvent = player.getEvent(CastleSiegeEvent.class);
+		
 		if (siegeEvent == null)
 		{
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 			return false;
 		}
+		
 		if (siegeEvent.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan()) == null)
 		{
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 			return false;
 		}
+		
 		if (player.isMounted())
 		{
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 			return false;
 		}
+		
 		if (!player.isInRangeZ(target, 185))
 		{
 			player.sendPacket(SystemMsg.YOUR_TARGET_IS_OUT_OF_RANGE);
 			return false;
 		}
+		
 		if (first)
 		{
 			siegeEvent.broadcastTo(SystemMsg.THE_OPPOSING_CLAN_HAS_STARTED_TO_ENGRAVE_THE_HOLY_ARTIFACT, SiegeEvent.DEFENDERS);
 		}
+		
 		return true;
 	}
 	
@@ -111,8 +121,10 @@ public class TakeCastle extends Skill
 				{
 					continue;
 				}
+				
 				Player player = (Player) activeChar;
 				CastleSiegeEvent siegeEvent = player.getEvent(CastleSiegeEvent.class);
+				
 				if (siegeEvent != null)
 				{
 					siegeEvent.broadcastTo(new SystemMessage2(SystemMsg.CLAN_S1_HAS_SUCCESSFULLY_ENGRAVED_THE_HOLY_ARTIFACT).addString(player.getClan().getName()), SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);

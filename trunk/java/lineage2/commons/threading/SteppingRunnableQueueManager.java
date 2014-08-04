@@ -277,12 +277,14 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 			_log.warn("Slow running queue, managed by " + this + ", queue size : " + queue.size() + "!");
 			return;
 		}
+		
 		try
 		{
 			if (queue.isEmpty())
 			{
 				return;
 			}
+			
 			for (SteppingScheduledFuture<?> sr : queue)
 			{
 				if (!sr.isDone())
@@ -303,6 +305,7 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 	public void purge()
 	{
 		LazyArrayList<SteppingScheduledFuture<?>> purge = LazyArrayList.newInstance();
+		
 		for (SteppingScheduledFuture<?> sr : queue)
 		{
 			if (sr.isDone())
@@ -310,6 +313,7 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 				purge.add(sr);
 			}
 		}
+		
 		queue.removeAll(purge);
 		LazyArrayList.recycle(purge);
 	}
@@ -324,6 +328,7 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 		Map<String, MutableLong> stats = new TreeMap<>();
 		int total = 0;
 		int done = 0;
+		
 		for (SteppingScheduledFuture<?> sr : queue)
 		{
 			if (sr.isDone())
@@ -331,8 +336,10 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 				done++;
 				continue;
 			}
+			
 			total++;
 			MutableLong count = stats.get(sr.r.getClass().getName());
+			
 			if (count == null)
 			{
 				stats.put(sr.r.getClass().getName(), count = new MutableLong(1L));
@@ -342,10 +349,12 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 				count.increment();
 			}
 		}
+		
 		for (Map.Entry<String, MutableLong> e : stats.entrySet())
 		{
 			list.append('\t').append(e.getKey()).append(" : ").append(e.getValue().longValue()).append('\n');
 		}
+		
 		list.append("Scheduled: ....... ").append(total).append('\n');
 		list.append("Done/Cancelled: .. ").append(done).append('\n');
 		return list;

@@ -24,7 +24,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class VenomTeleporterInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -47,6 +47,7 @@ public class VenomTeleporterInstance extends NpcInstance
 	public void onBypassFeedback(Player player, String command)
 	{
 		Castle castle = getCastle();
+		
 		if (castle.getSiegeEvent().isInProgress())
 		{
 			showChatWindow(player, "residence2/castle/rune_massymore_teleporter002.htm");

@@ -47,6 +47,7 @@ public class ConditionPlayerMaxPK extends Condition
 		{
 			return ((Player) env.character).getPkKills() <= _pk;
 		}
+		
 		return false;
 	}
 }

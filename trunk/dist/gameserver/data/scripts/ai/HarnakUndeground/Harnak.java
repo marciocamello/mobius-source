@@ -54,22 +54,27 @@ public class Harnak extends Fighter
 		if (event.equalsIgnoreCase("SEAL_ACTIVATED"))
 		{
 			seal_active++;
+			
 			if (seal_active == 2)
 			{
 				Reflection r = getActor().getReflection();
+				
 				if (!(r instanceof HarnakUndergroundRuins))
 				{
 					return;
 				}
+				
 				for (Player p : r.getPlayers())
 				{
 					QuestState st = p.getQuestState(_10338_SeizeYourDestiny.class);
+					
 					if (st != null)
 					{
 						st.setCond(3);
 						st.playSound(Quest.SOUND_MIDDLE);
 					}
 				}
+				
 				((HarnakUndergroundRuins) r).successEndInstance();
 			}
 		}
@@ -99,15 +104,19 @@ public class Harnak extends Fighter
 		{
 			sealLaunched = true;
 			Reflection r = getActor().getReflection();
+			
 			if (!(r instanceof HarnakUndergroundRuins))
 			{
 				return;
 			}
+			
 			((HarnakUndergroundRuins) r).startLastStage();
 		}
+		
 		if (Rnd.chance(10))
 		{
 			int SKILL_ID = SKILL_IDS[0];
+			
 			if (getActor().getCurrentHpPercents() < 90)
 			{
 				SKILL_ID = SKILL_IDS[1];
@@ -127,10 +136,12 @@ public class Harnak extends Fighter
 	{
 		super.onEvtDead(killer);
 		Reflection r = getActor().getReflection();
+		
 		if (!(r instanceof HarnakUndergroundRuins))
 		{
 			return;
 		}
+		
 		((HarnakUndergroundRuins) r).successEndInstance();
 	}
 }

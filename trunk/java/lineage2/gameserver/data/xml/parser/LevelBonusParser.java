@@ -80,6 +80,7 @@ public final class LevelBonusParser extends AbstractFileParser<LevelBonusHolder>
 		for (Iterator<Element> iterator = rootElement.elementIterator(); iterator.hasNext();)
 		{
 			Element element = iterator.next();
+			
 			if ("lvl_bonus".equalsIgnoreCase(element.getName()))
 			{
 				for (Element e : element.elements())

@@ -35,10 +35,12 @@ public class RequestResetNickname extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (activeChar.getTitleColor() != Player.DEFAULT_TITLE_COLOR)
 		{
 			activeChar.setTitleColor(Player.DEFAULT_TITLE_COLOR);

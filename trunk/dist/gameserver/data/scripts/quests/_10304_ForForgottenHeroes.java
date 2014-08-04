@@ -29,8 +29,6 @@ public class _10304_ForForgottenHeroes extends Quest implements ScriptFile
 	private static final int CON7 = 25843;
 	private static final int CON8 = 25846;
 	private static final int CON9 = 25824;
-	@SuppressWarnings("unused")
-	private static final int CON10 = 34033;
 	private static final int CON11 = 34034;
 	private static final int CON12 = 33467;
 	private static final int CON13 = 33466;
@@ -52,6 +50,7 @@ public class _10304_ForForgottenHeroes extends Quest implements ScriptFile
 		{
 			return event;
 		}
+		
 		if (event.equalsIgnoreCase("32894-01.htm"))
 		{
 			st.takeItems(34034, -1L);
@@ -65,8 +64,10 @@ public class _10304_ForForgottenHeroes extends Quest implements ScriptFile
 				{
 					return "32894-enter.htm";
 				}
+				
 				return "32894-no7.htm";
 			}
+			
 			if (event.equalsIgnoreCase("32894-04.htm"))
 			{
 				st.unset("one");
@@ -86,6 +87,7 @@ public class _10304_ForForgottenHeroes extends Quest implements ScriptFile
 				st.exitCurrentQuest(false);
 			}
 		}
+		
 		return event;
 	}
 	
@@ -94,6 +96,7 @@ public class _10304_ForForgottenHeroes extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		QuestState prevst = st.getPlayer().getQuestState("10302_TheShadowOfAnxiety");
+		
 		if (npc.getNpcId() == 32894)
 		{
 			switch (st.getState())
@@ -101,6 +104,7 @@ public class _10304_ForForgottenHeroes extends Quest implements ScriptFile
 				case 2:
 					htmltext = "32894-completed.htm";
 					break;
+				
 				case 1:
 					switch (st.getCond())
 					{
@@ -122,10 +126,13 @@ public class _10304_ForForgottenHeroes extends Quest implements ScriptFile
 								htmltext = "32894-nolvl.htm";
 								st.exitCurrentQuest(true);
 							}
+							
 							break;
+						
 						case 2:
 							htmltext = "32894-01a.htm";
 							break;
+						
 						case 3:
 						case 4:
 						case 5:
@@ -134,11 +141,13 @@ public class _10304_ForForgottenHeroes extends Quest implements ScriptFile
 						case 8:
 							htmltext = "32894-02.htm";
 							break;
+						
 						case 9:
 							htmltext = "32894-03.htm";
 					}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -146,11 +155,14 @@ public class _10304_ForForgottenHeroes extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		TIntIntHashMap moblist = new TIntIntHashMap();
+		
 		if ((npc == null) || (st == null))
 		{
 			return null;
 		}
+		
 		int cond = st.getCond();
+		
 		if ((cond >= 2) && (cond < 9))
 		{
 			int ONE = st.getInt("one");
@@ -161,6 +173,7 @@ public class _10304_ForForgottenHeroes extends Quest implements ScriptFile
 			int SIX = st.getInt("six");
 			int SEVEN = st.getInt("seven");
 			int EIGHT = st.getInt("eight");
+			
 			if ((npc.getNpcId() == 25837) && (cond == 2))
 			{
 				ONE++;
@@ -189,6 +202,7 @@ public class _10304_ForForgottenHeroes extends Quest implements ScriptFile
 				st.setCond(6);
 				st.playSound("ItemSound.quest_middle");
 			}
+			
 			if (cond == 6)
 			{
 				if (npc.getNpcId() == 25838)
@@ -201,6 +215,7 @@ public class _10304_ForForgottenHeroes extends Quest implements ScriptFile
 					SIX++;
 					st.set("six", String.valueOf(SIX));
 				}
+				
 				if ((FIVE > 0) && (SIX > 0))
 				{
 					st.setCond(7);
@@ -221,6 +236,7 @@ public class _10304_ForForgottenHeroes extends Quest implements ScriptFile
 				st.setCond(9);
 				st.playSound("ItemSound.quest_middle");
 			}
+			
 			moblist.put(25837, ONE);
 			moblist.put(25840, TWO);
 			moblist.put(25845, THREE);
@@ -230,6 +246,7 @@ public class _10304_ForForgottenHeroes extends Quest implements ScriptFile
 			moblist.put(25846, SEVEN);
 			moblist.put(25825, EIGHT);
 		}
+		
 		return null;
 	}
 	

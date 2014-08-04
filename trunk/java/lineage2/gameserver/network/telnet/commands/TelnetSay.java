@@ -54,6 +54,7 @@ public class TelnetSay implements TelnetCommandHolder
 				{
 					return null;
 				}
+				
 				Announcements.getInstance().announceToAll(args[0]);
 				return "Announcement sent.\n";
 			}
@@ -73,11 +74,14 @@ public class TelnetSay implements TelnetCommandHolder
 				{
 					return null;
 				}
+				
 				Player player = World.getPlayer(args[0]);
+				
 				if (player == null)
 				{
 					return "Player not found.\n";
 				}
+				
 				Say2 cs = new Say2(0, ChatType.TELL, "[Admin]", args[1]);
 				player.sendPacket(cs);
 				return "Message sent.\n";

@@ -69,6 +69,7 @@ public class _10365_SeekerEscort extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -77,11 +78,13 @@ public class _10365_SeekerEscort extends Quest implements ScriptFile
 			htmltext = "0-3.htm";
 			spawnseeker(st);
 		}
+		
 		if (event.equalsIgnoreCase("king"))
 		{
 			htmltext = "";
 			spawnseeker(st);
 		}
+		
 		if (event.equalsIgnoreCase("qet_rev")) // Russian emu QuestEvent. DO NOT EDIT THIS LINE!
 		{
 			htmltext = "1-2.htm";
@@ -90,6 +93,7 @@ public class _10365_SeekerEscort extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -100,6 +104,7 @@ public class _10365_SeekerEscort extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
 		int seeksp = st.getInt("seeksp");
+		
 		if (npcId == dep)
 		{
 			if (st.isCompleted())
@@ -142,6 +147,7 @@ public class _10365_SeekerEscort extends Quest implements ScriptFile
 				htmltext = "1-1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

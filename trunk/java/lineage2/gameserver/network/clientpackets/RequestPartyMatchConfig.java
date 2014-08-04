@@ -57,12 +57,15 @@ public class RequestPartyMatchConfig extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		Party party = player.getParty();
 		CommandChannel channel = party != null ? party.getCommandChannel() : null;
+		
 		if ((channel != null) && (channel.getChannelLeader() == player))
 		{
 			if ((channel.getMatchingRoom() == null) && (party != null))

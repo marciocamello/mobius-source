@@ -75,6 +75,7 @@ public class MonsterRace
 		{
 			_instance = new MonsterRace();
 		}
+		
 		return _instance;
 	}
 	
@@ -84,10 +85,12 @@ public class MonsterRace
 	public void newRace()
 	{
 		int random = 0;
+		
 		for (int i = 0; i < 8; i++)
 		{
 			int id = 31003;
 			random = Rnd.get(24);
+			
 			for (int j = i - 1; j >= 0; j--)
 			{
 				if (monsters[j].getTemplate().npcId == (id + random))
@@ -95,6 +98,7 @@ public class MonsterRace
 					random = Rnd.get(24);
 				}
 			}
+			
 			try
 			{
 				NpcTemplate template = NpcHolder.getInstance().getTemplate(id + random);
@@ -107,6 +111,7 @@ public class MonsterRace
 				_log.error("", e);
 			}
 		}
+		
 		newSpeeds();
 	}
 	
@@ -119,9 +124,11 @@ public class MonsterRace
 		int total = 0;
 		first[1] = 0;
 		second[1] = 0;
+		
 		for (int i = 0; i < 8; i++)
 		{
 			total = 0;
+			
 			for (int j = 0; j < 20; j++)
 			{
 				if (j == 19)
@@ -132,8 +139,10 @@ public class MonsterRace
 				{
 					speeds[i][j] = Rnd.get(65, 124);
 				}
+				
 				total += speeds[i][j];
 			}
+			
 			if (total >= first[1])
 			{
 				second[0] = first[0];

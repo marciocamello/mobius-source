@@ -44,21 +44,26 @@ public class OlympiadEndTask extends RunnableImpl
 			ThreadPoolManager.getInstance().schedule(new OlympiadEndTask(), 60000);
 			return;
 		}
+		
 		Announcements.getInstance().announceToAll(new SystemMessage(SystemMessage.OLYMPIAD_PERIOD_S1_HAS_ENDED).addNumber(Olympiad._currentCycle));
 		Announcements.getInstance().announceToAll("Olympiad Validation Period has began");
 		Olympiad._isOlympiadEnd = true;
+		
 		if (Olympiad._scheduledManagerTask != null)
 		{
 			Olympiad._scheduledManagerTask.cancel(false);
 		}
+		
 		if (Olympiad._scheduledWeeklyTask != null)
 		{
 			Olympiad._scheduledWeeklyTask.cancel(false);
 		}
+		
 		Olympiad._validationEnd = Olympiad._olympiadEnd + Config.ALT_OLY_VPERIOD;
 		OlympiadDatabase.saveNobleData();
 		Olympiad._period = 1;
 		Hero.getInstance().clearHeroes();
+		
 		try
 		{
 			OlympiadDatabase.save();
@@ -67,11 +72,14 @@ public class OlympiadEndTask extends RunnableImpl
 		{
 			_log.error("Olympiad System: Failed to save Olympiad configuration!", e);
 		}
+		
 		_log.info("Olympiad System: Starting Validation period. Time to end validation:" + (Olympiad.getMillisToValidationEnd() / (60 * 1000)));
+		
 		if (Olympiad._scheduledValdationTask != null)
 		{
 			Olympiad._scheduledValdationTask.cancel(false);
 		}
+		
 		Olympiad._scheduledValdationTask = ThreadPoolManager.getInstance().schedule(new ValidationTask(), Olympiad.getMillisToValidationEnd());
 	}
 }

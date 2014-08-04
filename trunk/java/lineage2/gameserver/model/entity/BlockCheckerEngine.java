@@ -184,14 +184,17 @@ public final class BlockCheckerEngine
 	public BlockCheckerEngine(HandysBlockCheckerManager.ArenaParticipantsHolder holder, int arena)
 	{
 		_holder = holder;
+		
 		if ((arena > -1) && (arena < 4))
 		{
 			_arena = arena;
 		}
+		
 		for (Player player : holder.getRedPlayers())
 		{
 			_redTeamPoints.put(player, 0);
 		}
+		
 		for (Player player : holder.getBluePlayers())
 		{
 			_blueTeamPoints.put(player, 0);
@@ -270,10 +273,12 @@ public final class BlockCheckerEngine
 		{
 			return 0;
 		}
+		
 		if (isRed)
 		{
 			return _redTeamPoints.get(player);
 		}
+		
 		return _blueTeamPoints.get(player);
 	}
 	
@@ -288,6 +293,7 @@ public final class BlockCheckerEngine
 		{
 			return;
 		}
+		
 		if (team == 0)
 		{
 			int points = getPlayerPoints(player, true) + 1;
@@ -347,10 +353,12 @@ public final class BlockCheckerEngine
 			synchronized (this)
 			{
 				_isStarted = false;
+				
 				if (_task != null)
 				{
 					_task.cancel(true);
 				}
+				
 				_abnormalEnd = true;
 				ThreadPoolManager.getInstance().execute(new EndEvent());
 			}
@@ -368,6 +376,7 @@ public final class BlockCheckerEngine
 	public void clearArena(String zoneName)
 	{
 		Zone zone = ReflectionUtils.getZone(zoneName);
+		
 		if (zone != null)
 		{
 			for (Creature cha : zone.getObjects())
@@ -424,12 +433,14 @@ public final class BlockCheckerEngine
 			_bluePoints = _spawns.size() / 2;
 			final ExCubeGameChangePoints initialPoints = new ExCubeGameChangePoints(300, _bluePoints, _redPoints);
 			ExCubeGameExtendedChangePoints clientSetUp;
+			
 			for (Player player : _holder.getAllPlayers())
 			{
 				if (player == null)
 				{
 					continue;
 				}
+				
 				player.addListener(_listener);
 				boolean isRed = _holder.getRedPlayers().contains(player);
 				clientSetUp = new ExCubeGameExtendedChangePoints(300, _bluePoints, _redPoints, isRed, player, 0);
@@ -439,6 +450,7 @@ public final class BlockCheckerEngine
 				int x = _arenaCoordinates[_arena][tc];
 				int y = _arenaCoordinates[_arena][tc + 1];
 				player.teleToLocation(x, y, _zCoord);
+				
 				if (isRed)
 				{
 					_redTeamPoints.put(player, 0);
@@ -449,12 +461,16 @@ public final class BlockCheckerEngine
 					_blueTeamPoints.put(player, 0);
 					player.setTeam(TeamType.BLUE);
 				}
+				
 				player.getEffectList().stopAllEffects();
+				
 				for (Summon summon : player.getSummonList())
 				{
 					summon.unSummon();
 				}
+				
 				_freeze.getEffects(player, player, false, false);
+				
 				if (_holder.getPlayerTeam(player) == 0)
 				{
 					_transformationRed.getEffects(player, player, false, false);
@@ -463,6 +479,7 @@ public final class BlockCheckerEngine
 				{
 					_transformationBlue.getEffects(player, player, false, false);
 				}
+				
 				player.setBlockCheckerArena((byte) _arena);
 				player.sendPacket(initialPoints);
 				player.sendPacket(_closeUserInterface);
@@ -483,10 +500,12 @@ public final class BlockCheckerEngine
 				_log.error("Couldnt set up the arena Id for the Block Checker event, cancelling event...");
 				return;
 			}
+			
 			if (isStarted())
 			{
 				return;
 			}
+			
 			clearArena(zoneNames[_arena]);
 			_isStarted = true;
 			ThreadPoolManager.getInstance().execute(new SpawnRound(16, 1));
@@ -530,20 +549,25 @@ public final class BlockCheckerEngine
 			{
 				return;
 			}
+			
 			switch (_round)
 			{
 				case 1:
 					_task = ThreadPoolManager.getInstance().schedule(new SpawnRound(20, 2), 60000);
 					break;
+				
 				case 2:
 					_task = ThreadPoolManager.getInstance().schedule(new SpawnRound(14, 3), 60000);
 					break;
+				
 				case 3:
 					_task = ThreadPoolManager.getInstance().schedule(new CountDown(), 175000);
 					break;
 			}
+			
 			byte random = 2;
 			final NpcTemplate template = NpcHolder.getInstance().getTemplate(18672);
+			
 			try
 			{
 				for (int i = 0; i < _numOfBoxes; i++)
@@ -565,9 +589,11 @@ public final class BlockCheckerEngine
 			{
 				e.printStackTrace();
 			}
+			
 			if ((_round == 1) || (_round == 2))
 			{
 				NpcTemplate girl = NpcHolder.getInstance().getTemplate(18676);
+				
 				try
 				{
 					final SimpleSpawner girlSpawn = new SimpleSpawner(girl);
@@ -589,6 +615,7 @@ public final class BlockCheckerEngine
 							{
 								return;
 							}
+							
 							_girlNpc.deleteMe();
 						}
 					}, 9000);
@@ -598,6 +625,7 @@ public final class BlockCheckerEngine
 					_log.warn("Couldnt Spawn Block Checker NPCs! Wrong instance type at npc table?" + e);
 				}
 			}
+			
 			_redPoints += _numOfBoxes / 2;
 			_bluePoints += _numOfBoxes / 2;
 			int timeLeft = (int) ((getStarterTime() - System.currentTimeMillis()) / 1000);
@@ -627,19 +655,24 @@ public final class BlockCheckerEngine
 				case 5:
 					_holder.broadCastPacketToTeam(new SystemMessage(SystemMessage.BLOCK_CHECKER_WILL_END_IN_5_SECONDS));
 					break;
+				
 				case 4:
 					_holder.broadCastPacketToTeam(new SystemMessage(SystemMessage.BLOCK_CHECKER_WILL_END_IN_4_SECONDS));
 					break;
+				
 				case 3:
 					_holder.broadCastPacketToTeam(new SystemMessage(SystemMessage.BLOCK_CHECKER_WILL_END_IN_3_SECONDS));
 					break;
+				
 				case 2:
 					_holder.broadCastPacketToTeam(new SystemMessage(SystemMessage.BLOCK_CHECKER_WILL_END_IN_2_SECONDS));
 					break;
+				
 				case 1:
 					_holder.broadCastPacketToTeam(new SystemMessage(SystemMessage.BLOCK_CHECKER_WILL_END_IN_1_SECOND));
 					break;
 			}
+			
 			if (--seconds > 0)
 			{
 				ThreadPoolManager.getInstance().schedule(this, 1000L);
@@ -662,35 +695,44 @@ public final class BlockCheckerEngine
 		private void clearMe()
 		{
 			HandysBlockCheckerManager.getInstance().clearPaticipantQueueByArenaId(_arena);
+			
 			for (Player player : _holder.getAllPlayers())
 			{
 				if (player == null)
 				{
 					continue;
 				}
+				
 				player.removeListener(_listener);
 			}
+			
 			_holder.clearPlayers();
 			_blueTeamPoints.clear();
 			_redTeamPoints.clear();
 			HandysBlockCheckerManager.getInstance().setArenaFree(_arena);
+			
 			for (SimpleSpawner spawn : _spawns)
 			{
 				spawn.deleteAll();
 			}
+			
 			_spawns.clear();
+			
 			for (ItemInstance item : _drops)
 			{
 				if (item == null)
 				{
 					continue;
 				}
+				
 				if (!item.isVisible() || (item.getOwnerId() != 0))
 				{
 					continue;
 				}
+				
 				item.deleteMe();
 			}
+			
 			_drops.clear();
 		}
 		
@@ -703,7 +745,9 @@ public final class BlockCheckerEngine
 			{
 				return;
 			}
+			
 			_isRedWinner = _redPoints > _bluePoints ? true : false;
+			
 			if (_isRedWinner)
 			{
 				rewardAsWinner(true);
@@ -744,12 +788,14 @@ public final class BlockCheckerEngine
 		private void rewardAsWinner(boolean isRed)
 		{
 			Map<Player, Integer> tempPoints = isRed ? _redTeamPoints : _blueTeamPoints;
+			
 			for (Player pc : tempPoints.keySet())
 			{
 				if (pc == null)
 				{
 					continue;
 				}
+				
 				if (tempPoints.get(pc) >= 10)
 				{
 					addRewardItemWithMessage(13067, 2, pc);
@@ -759,11 +805,14 @@ public final class BlockCheckerEngine
 					tempPoints.remove(pc);
 				}
 			}
+			
 			int first = 0, second = 0;
 			Player winner1 = null, winner2 = null;
+			
 			for (Player pc : tempPoints.keySet())
 			{
 				int pcPoints = tempPoints.get(pc);
+				
 				if (pcPoints > first)
 				{
 					second = first;
@@ -777,10 +826,12 @@ public final class BlockCheckerEngine
 					winner2 = pc;
 				}
 			}
+			
 			if (winner1 != null)
 			{
 				addRewardItemWithMessage(13067, 8, winner1);
 			}
+			
 			if (winner2 != null)
 			{
 				addRewardItemWithMessage(13067, 5, winner2);
@@ -794,6 +845,7 @@ public final class BlockCheckerEngine
 		private void rewardAsLooser(boolean isRed)
 		{
 			Map<Player, Integer> tempPoints = isRed ? _redTeamPoints : _blueTeamPoints;
+			
 			for (Player player : tempPoints.keySet())
 			{
 				if ((player != null) && (tempPoints.get(player) >= 10))
@@ -809,12 +861,14 @@ public final class BlockCheckerEngine
 		private void setPlayersBack()
 		{
 			final ExCubeGameEnd end = new ExCubeGameEnd(_isRedWinner);
+			
 			for (Player player : _holder.getAllPlayers())
 			{
 				if (player == null)
 				{
 					continue;
 				}
+				
 				player.getEffectList().stopAllEffects();
 				player.setTeam(TeamType.NONE);
 				player.setBlockCheckerArena(DEFAULT_ARENA);
@@ -838,6 +892,7 @@ public final class BlockCheckerEngine
 			{
 				rewardPlayers();
 			}
+			
 			_isStarted = false;
 			setPlayersBack();
 			clearMe();
@@ -884,6 +939,7 @@ public final class BlockCheckerEngine
 			{
 				return;
 			}
+			
 			onPlayerExit(player);
 		}
 		
@@ -899,6 +955,7 @@ public final class BlockCheckerEngine
 			{
 				return;
 			}
+			
 			_isExit = true;
 			player.teleToLocation(-57478, -60367, -2370);
 			player.setTransformation(0);

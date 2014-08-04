@@ -73,11 +73,14 @@ public class TautiInstance extends Reflection
 			{
 				return;
 			}
+			
 			Player player = cha.getPlayer();
+			
 			if ((player == null) || (!cha.isPlayer()))
 			{
 				return;
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new TautiInstance.StartTautiInstance(), 30000L);
 			_startLaunched = true;
 		}
@@ -114,6 +117,7 @@ public class TautiInstance extends Reflection
 			{
 				player.showQuestMovie(SceneMovie.sc_tauti_opening_b);
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new TautiInstance.FirstStage(), 500L);
 		}
 	}

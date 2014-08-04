@@ -56,6 +56,7 @@ public class _356_DigUpTheSeaOfSpores extends Quest implements ScriptFile
 		String htmltext = event;
 		long carn = st.getQuestItemsCount(CARNIVORE_SPORE);
 		long herb = st.getQuestItemsCount(HERBIBOROUS_SPORE);
+		
 		if (event.equalsIgnoreCase("magister_gauen_q0356_06.htm"))
 		{
 			if (st.getPlayer().getLevel() >= 43)
@@ -76,6 +77,7 @@ public class _356_DigUpTheSeaOfSpores extends Quest implements ScriptFile
 			st.takeItems(HERBIBOROUS_SPORE, -1);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
+			
 			if (event.equalsIgnoreCase("magister_gauen_q0356_17.htm"))
 			{
 				st.giveItems(ADENA_ID, 44000);
@@ -85,6 +87,7 @@ public class _356_DigUpTheSeaOfSpores extends Quest implements ScriptFile
 				st.addExpAndSp(36000, 2600);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -93,6 +96,7 @@ public class _356_DigUpTheSeaOfSpores extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (cond == 0)
 		{
 			htmltext = "magister_gauen_q0356_02.htm";
@@ -105,6 +109,7 @@ public class _356_DigUpTheSeaOfSpores extends Quest implements ScriptFile
 		{
 			htmltext = "magister_gauen_q0356_10.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -114,14 +119,17 @@ public class _356_DigUpTheSeaOfSpores extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		long carn = st.getQuestItemsCount(CARNIVORE_SPORE);
 		long herb = st.getQuestItemsCount(HERBIBOROUS_SPORE);
+		
 		if (npcId == SPORE_ZOMBIE)
 		{
 			if (carn < 50)
 			{
 				st.giveItems(CARNIVORE_SPORE, 1);
+				
 				if (carn == 49)
 				{
 					st.playSound(SOUND_MIDDLE);
+					
 					if (herb >= 50)
 					{
 						st.setCond(3);
@@ -139,9 +147,11 @@ public class _356_DigUpTheSeaOfSpores extends Quest implements ScriptFile
 			if (herb < 50)
 			{
 				st.giveItems(HERBIBOROUS_SPORE, 1);
+				
 				if (herb == 49)
 				{
 					st.playSound(SOUND_MIDDLE);
+					
 					if (carn >= 50)
 					{
 						st.setCond(3);
@@ -154,6 +164,7 @@ public class _356_DigUpTheSeaOfSpores extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 }

@@ -29,6 +29,7 @@ public class Certificate extends Functions
 		{
 			return;
 		}
+		
 		Player pl = getSelf();
 		NpcInstance npc = getNpc();
 		
@@ -141,6 +142,7 @@ public class Certificate extends Functions
 		{
 			return;
 		}
+		
 		Player pl = getSelf();
 		NpcInstance npc = getNpc();
 		

@@ -27,7 +27,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public final class PailakaGatekeeperInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -57,9 +57,11 @@ public final class PailakaGatekeeperInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("rimentrance"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(rimIzId))
@@ -96,17 +98,20 @@ public final class PailakaGatekeeperInstance extends NpcInstance
 		{
 			return false;
 		}
+		
 		for (Player member : p.getParty().getPartyMembers())
 		{
 			if (member.getClan() == null)
 			{
 				return false;
 			}
+			
 			if ((member.getClan().getResidenceId(ResidenceType.Castle) == 0) && (member.getClan().getResidenceId(ResidenceType.Fortress) == 0))
 			{
 				return false;
 			}
 		}
+		
 		return true;
 	}
 }

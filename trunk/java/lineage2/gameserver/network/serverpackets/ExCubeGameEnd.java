@@ -29,7 +29,6 @@ public class ExCubeGameEnd extends L2GameServerPacket
 	{
 		writeEx(0x99);
 		writeD(0x01);
-		
 		writeD(_isRedTeamWin ? 0x01 : 0x00);
 	}
 }

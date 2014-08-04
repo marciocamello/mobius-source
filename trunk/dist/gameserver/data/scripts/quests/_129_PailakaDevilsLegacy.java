@@ -82,6 +82,7 @@ public class _129_PailakaDevilsLegacy extends Quest implements ScriptFile
 	{
 		Player player = st.getPlayer();
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("Enter"))
 		{
 			enterInstance(player);
@@ -104,6 +105,7 @@ public class _129_PailakaDevilsLegacy extends Quest implements ScriptFile
 			st.playSound(SOUND_MIDDLE);
 			st.giveItems(SWORD, 1);
 		}
+		
 		return htmltext;
 	}
 	
@@ -115,6 +117,7 @@ public class _129_PailakaDevilsLegacy extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int id = st.getState();
 		Player player = st.getPlayer();
+		
 		if (npcId == DISURVIVOR)
 		{
 			if (cond == 0)
@@ -159,30 +162,37 @@ public class _129_PailakaDevilsLegacy extends Quest implements ScriptFile
 			{
 				htmltext = "32508-01.htm";
 			}
+			
 			if ((st.getQuestItemsCount(ENCHSWORD) > 0) && (st.getQuestItemsCount(ADROP) == 0))
 			{
 				htmltext = "32508-01.htm";
 			}
+			
 			if ((st.getQuestItemsCount(SWORD) == 0) && (st.getQuestItemsCount(KDROP) > 0))
 			{
 				htmltext = "32508-05.htm";
 			}
+			
 			if ((st.getQuestItemsCount(ENCHSWORD) == 0) && (st.getQuestItemsCount(ADROP) > 0))
 			{
 				htmltext = "32508-05.htm";
 			}
+			
 			if ((st.getQuestItemsCount(SWORD) == 0) && (st.getQuestItemsCount(ENCHSWORD) == 0))
 			{
 				htmltext = "32508-05.htm";
 			}
+			
 			if ((st.getQuestItemsCount(KDROP) == 0) && (st.getQuestItemsCount(ADROP) == 0))
 			{
 				htmltext = "32508-01.htm";
 			}
+			
 			if (player.getSummonList().size() > 0)
 			{
 				htmltext = "32508-04.htm";
 			}
+			
 			if ((st.getQuestItemsCount(SWORD) > 0) && (st.getQuestItemsCount(KDROP) > 0))
 			{
 				st.takeItems(SWORD, 1);
@@ -190,6 +200,7 @@ public class _129_PailakaDevilsLegacy extends Quest implements ScriptFile
 				st.giveItems(ENCHSWORD, 1);
 				htmltext = "32508-02.htm";
 			}
+			
 			if ((st.getQuestItemsCount(ENCHSWORD) > 0) && (st.getQuestItemsCount(ADROP) > 0))
 			{
 				st.takeItems(ENCHSWORD, 1);
@@ -197,6 +208,7 @@ public class _129_PailakaDevilsLegacy extends Quest implements ScriptFile
 				st.giveItems(LASTSWORD, 1);
 				htmltext = "32508-03.htm";
 			}
+			
 			if (st.getQuestItemsCount(LASTSWORD) > 0)
 			{
 				htmltext = "32508-03.htm";
@@ -230,6 +242,7 @@ public class _129_PailakaDevilsLegacy extends Quest implements ScriptFile
 				htmltext = "32511-02.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -239,6 +252,7 @@ public class _129_PailakaDevilsLegacy extends Quest implements ScriptFile
 		Player player = st.getPlayer();
 		int npcId = npc.getNpcId();
 		int refId = player.getReflectionId();
+		
 		if ((npcId == KAMS) && (st.getQuestItemsCount(KDROP) == 0))
 		{
 			st.giveItems(KDROP, 1);
@@ -267,12 +281,14 @@ public class _129_PailakaDevilsLegacy extends Quest implements ScriptFile
 				st.dropItem(npc, CHESTDROP[Rnd.get(CHESTDROP.length)], Rnd.get(1, 10));
 			}
 		}
+		
 		return null;
 	}
 	
 	private void enterInstance(Player player)
 	{
 		Reflection r = player.getActiveReflection();
+		
 		if (r != null)
 		{
 			if (player.canReenterInstance(izId))

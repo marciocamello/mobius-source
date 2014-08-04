@@ -87,30 +87,40 @@ public class ConditionPlayerState extends Condition
 				{
 					return ((Player) env.character).isSitting() == _required;
 				}
+				
 				return !_required;
+				
 			case MOVING:
 				return env.character.isMoving == _required;
+				
 			case RUNNING:
 				return (env.character.isMoving && env.character.isRunning()) == _required;
+				
 			case STANDING:
 				if (env.character.isPlayer())
 				{
 					return (((Player) env.character).isSitting() != _required) && (env.character.isMoving != _required);
 				}
+				
 				return env.character.isMoving != _required;
+				
 			case FLYING:
 				if (env.character.isPlayer())
 				{
 					return env.character.isFlying() == _required;
 				}
+				
 				return !_required;
+				
 			case FLYING_TRANSFORM:
 				if (env.character.isPlayer())
 				{
 					return ((Player) env.character).isInFlyingTransform() == _required;
 				}
+				
 				return !_required;
 		}
+		
 		return !_required;
 	}
 }

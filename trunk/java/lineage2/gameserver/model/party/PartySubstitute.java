@@ -107,7 +107,7 @@ public class PartySubstitute
 	private class SubstituteListeners implements OnPlayerExitListener, OnPlayerPartyLeaveListener, OnPlayerPartyInviteListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public SubstituteListeners()
 		{
@@ -165,9 +165,7 @@ public class PartySubstitute
 		}
 		
 		Location loc = leader.getLoc();
-		
 		replaceTo.setLoc(loc);
-		
 		Skill skill = SkillTable.getInstance().getInfo(SKILL_INVUL_ID, 1);
 		
 		for (Player pp : p.getPartyMembers())
@@ -186,7 +184,6 @@ public class PartySubstitute
 	{
 		int plvl = a.getLevel();
 		int tlvl = b.getLevel();
-		
 		int d_lvl = Math.abs(plvl - tlvl);
 		
 		if (d_lvl > LEVEL_DIFF)

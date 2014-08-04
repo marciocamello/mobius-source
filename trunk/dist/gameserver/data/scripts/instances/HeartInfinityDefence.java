@@ -72,6 +72,7 @@ public class HeartInfinityDefence extends Reflection
 		{
 			p.sendPacket(new ExShowScreenMessage(NpcString.YOU_CAN_HEAR_THE_UNDEAD_OF_EKIMUS_RUSHING_TOWARD_YOU, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, "#" + NpcString.HEART_OF_IMMORTALITY.getId(), "#" + NpcString.DEFEND.getId()));
 		}
+		
 		spawnByGroup("soi_hoi_defence_mob_1");
 		spawnByGroup("soi_hoi_defence_mob_2");
 		spawnByGroup("soi_hoi_defence_mob_3");
@@ -106,10 +107,12 @@ public class HeartInfinityDefence extends Reflection
 					despawnByGroup("soi_hoi_defence_tumors");
 					spawnByGroup("soi_hoi_defence_alivetumors");
 					handleTumorHp(0.5);
+					
 					for (Player p : getPlayers())
 					{
 						p.sendPacket(new ExShowScreenMessage(NpcString.THE_TUMOR_INSIDE_S1_HAS_COMPLETELY_REVIVED__, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, "#" + NpcString.HEART_OF_IMMORTALITY.getId()));
 					}
+					
 					invokeDeathListener();
 				}
 			}
@@ -150,7 +153,7 @@ public class HeartInfinityDefence extends Reflection
 	private class DeathListener implements OnDeathListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public DeathListener()
 		{
@@ -164,16 +167,19 @@ public class HeartInfinityDefence extends Reflection
 			{
 				return;
 			}
+			
 			if (self.getNpcId() == AliveTumor)
 			{
 				((NpcInstance) self).dropItem(killer.getPlayer(), 13797, Rnd.get(2, 5));
 				final NpcInstance deadTumor = addSpawnWithoutRespawn(DeadTumor, self.getLoc(), 0);
 				wagonRespawnTime += 10000L;
 				self.deleteMe();
+				
 				for (Player p : getPlayers())
 				{
 					p.sendPacket(new ExShowScreenMessage(NpcString.THE_TUMOR_INSIDE_S1_HAS_BEEN_DESTROYED_NTHE_SPEED_THAT_EKIMUS_CALLS_OUT_HIS_PREY_HAS_SLOWED_DOWN, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, "#" + NpcString.HEART_OF_IMMORTALITY.getId()));
 				}
+				
 				ThreadPoolManager.getInstance().schedule(new RunnableImpl()
 				{
 					@Override
@@ -184,6 +190,7 @@ public class HeartInfinityDefence extends Reflection
 						wagonRespawnTime -= 10000L;
 						handleTumorHp(0.25);
 						invokeDeathListener();
+						
 						for (Player p : getPlayers())
 						{
 							p.sendPacket(new ExShowScreenMessage(NpcString.THE_TUMOR_INSIDE_S1_HAS_COMPLETELY_REVIVED_, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, "#" + NpcString.HALL_OF_EROSION.getId()));
@@ -197,7 +204,7 @@ public class HeartInfinityDefence extends Reflection
 	private class TimerTask extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public TimerTask()
 		{
@@ -208,6 +215,7 @@ public class HeartInfinityDefence extends Reflection
 		public void runImpl()
 		{
 			long time = ((startTime + (25 * 60 * 1000L)) - System.currentTimeMillis()) / 60000;
+			
 			if (time == 0)
 			{
 				conquestConclusion(true);
@@ -218,6 +226,7 @@ public class HeartInfinityDefence extends Reflection
 				{
 					spawnByGroup("soi_hoi_defence_bosses");
 				}
+				
 				for (Player p : getPlayers())
 				{
 					p.sendPacket(new ExShowScreenMessage(NpcString.S1_MINUTES_ARE_REMAINING, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, String.valueOf(((startTime + (25 * 60 * 1000L)) - System.currentTimeMillis()) / 60000)));
@@ -229,6 +238,7 @@ public class HeartInfinityDefence extends Reflection
 	public void notifyWagonArrived()
 	{
 		coffinsCreated++;
+		
 		if (coffinsCreated == 20)
 		{
 			conquestConclusion(false);
@@ -236,10 +246,12 @@ public class HeartInfinityDefence extends Reflection
 		else
 		{
 			Functions.npcShout(preawakenedEchmus, NpcString.BRING_MORE_MORE_SOULS);
+			
 			for (Player p : getPlayers())
 			{
 				p.sendPacket(new ExShowScreenMessage(NpcString.THE_SOUL_COFFIN_HAS_AWAKENED_EKIMUS, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, String.valueOf(maxCoffins - coffinsCreated)));
 			}
+			
 			addSpawnWithoutRespawn(EchmusCoffin, getZone("[soi_hoi_attack_echmusroom]").getTerritory().getRandomLoc(getGeoIndex()), 0);
 		}
 	}
@@ -250,23 +262,28 @@ public class HeartInfinityDefence extends Reflection
 		{
 			return;
 		}
+		
 		cancelTimers();
 		conquestEnded = true;
 		clearReflection(15, true);
+		
 		if (win)
 		{
 			setReenterTime(System.currentTimeMillis());
 		}
+		
 		for (Player p : getPlayers())
 		{
 			if (win)
 			{
 				QuestState qs = p.getQuestState(_698_BlocktheLordsEscape.class);
+				
 				if ((qs != null) && (qs.getCond() == 1))
 				{
 					qs.set("defenceDone", 1);
 				}
 			}
+			
 			p.sendPacket(new ExShowScreenMessage(win ? NpcString.CONGRATULATIONS_YOU_HAVE_SUCCEEDED_AT_S1_S2_THE_INSTANCE_WILL_SHORTLY_EXPIRE : NpcString.YOU_HAVE_FAILED_AT_S1_S2, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, "#" + NpcString.HEART_OF_IMMORTALITY.getId(), "#" + NpcString.DEFEND.getId()));
 		}
 	}
@@ -282,14 +299,17 @@ public class HeartInfinityDefence extends Reflection
 		{
 			timerTask.cancel(false);
 		}
+		
 		if (coffinSpawnTask != null)
 		{
 			coffinSpawnTask.cancel(false);
 		}
+		
 		if (aliveTumorSpawnTask != null)
 		{
 			aliveTumorSpawnTask.cancel(false);
 		}
+		
 		if (wagonSpawnTask != null)
 		{
 			wagonSpawnTask.cancel(false);

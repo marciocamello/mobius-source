@@ -58,13 +58,13 @@ public class EtcStatusUpdate extends L2GameServerPacket
 		writeD(MessageRefusal); // skill id 4269, 1 lvl
 		writeD(DangerArea); // skill id 4268, 1 lvl
 		writeD(weaponExpertisePenalty); // weapon grade penalty, skill 6209 in
-										// epilogue
+		// epilogue
 		writeD(armorExpertisePenalty); // armor grade penalty, skill 6213 in
-										// epilogue
+		// epilogue
 		writeD(CharmOfCourage); // Charm of Courage,
-								// "Prevents experience value decreasing if killed during a siege war".
+		// "Prevents experience value decreasing if killed during a siege war".
 		writeD(DeathPenaltyLevel); // Death Penalty max lvl 15,
-									// "Combat ability is decreased due to death."
+		// "Combat ability is decreased due to death."
 		writeD(ConsumedSouls);
 	}
 }

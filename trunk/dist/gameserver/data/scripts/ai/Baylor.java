@@ -132,6 +132,7 @@ public class Baylor extends DefaultAI
 		public void runImpl()
 		{
 			final NpcInstance actor = getActor();
+			
 			if (actor != null)
 			{
 				actor.broadcastPacketToOthers(new MagicSkillUse(actor, actor, PresentationBalor2, 1, 4000, 0));
@@ -177,30 +178,38 @@ public class Baylor extends DefaultAI
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead() || (skill == null) || (caster == null))
 		{
 			return;
 		}
+		
 		if ((System.currentTimeMillis() - _last_claw_time) > 5000)
 		{
 			_claw_count = 0;
 		}
+		
 		if (skill.getId() == Water_Dragon_Claw)
 		{
 			_claw_count++;
 			_last_claw_time = System.currentTimeMillis();
 		}
+		
 		final Player player = caster.getPlayer();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		int count = 1;
 		final Party party = player.getParty();
+		
 		if (party != null)
 		{
 			count = party.getMemberCount();
 		}
+		
 		if (_claw_count >= count)
 		{
 			_claw_count = 0;
@@ -218,17 +227,22 @@ public class Baylor extends DefaultAI
 	{
 		clearTasks();
 		Creature target = prepareTarget();
+		
 		if (target == null)
 		{
 			return false;
 		}
+		
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return false;
 		}
+		
 		final double distance = actor.getDistance(target);
 		final double actor_hp_precent = actor.getCurrentHpPercents();
+		
 		if ((actor_hp_precent < 30) && !_isUsedInvincible)
 		{
 			_isUsedInvincible = true;
@@ -236,21 +250,26 @@ public class Baylor extends DefaultAI
 			Functions.npcSay(actor, "�?хаха! Тепер�? вы в�?е умрете.");
 			return true;
 		}
+		
 		final int rnd_per = Rnd.get(100);
+		
 		if ((rnd_per < 7) && (actor.getEffectList().getEffectsBySkill(Berserk) == null))
 		{
 			addTaskBuff(actor, Berserk);
 			Functions.npcSay(actor, "Beleth, дай мне �?илу!");
 			return true;
 		}
+		
 		if ((rnd_per < 15) || ((rnd_per < 33) && (actor.getEffectList().getEffectsBySkill(Berserk) != null)))
 		{
 			return chooseTaskAndTargets(StrongPunch, target, distance);
 		}
+		
 		if (!actor.isAMuted() && (rnd_per < 50))
 		{
 			return chooseTaskAndTargets(null, target, distance);
 		}
+		
 		final Map<Skill, Integer> skills = new HashMap<>();
 		addDesiredSkill(skills, target, distance, GroundStrike);
 		addDesiredSkill(skills, target, distance, JumpAttack);
@@ -259,10 +278,12 @@ public class Baylor extends DefaultAI
 		addDesiredSkill(skills, target, distance, Stun2);
 		addDesiredSkill(skills, target, distance, Stun3);
 		final Skill skill = selectTopSkill(skills);
+		
 		if ((skill != null) && !skill.isOffensive())
 		{
 			target = actor;
 		}
+		
 		return chooseTaskAndTargets(skill, target, distance);
 	}
 	
@@ -287,6 +308,7 @@ public class Baylor extends DefaultAI
 		{
 			HellboundManager.setConfidence(1);
 		}
+		
 		super.onEvtDead(killer);
 	}
 }

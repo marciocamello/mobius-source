@@ -45,8 +45,10 @@ public class Loc implements IUserCommandHandler
 		{
 			return false;
 		}
+		
 		RestartArea ra = MapRegionManager.getInstance().getRegionData(RestartArea.class, activeChar);
 		int msgId = ra != null ? ra.getRestartPoint().get(activeChar.getRace()).getMsgId() : 0;
+		
 		if (msgId > 0)
 		{
 			activeChar.sendPacket(new SystemMessage(msgId).addNumber(activeChar.getX()).addNumber(activeChar.getY()).addNumber(activeChar.getZ()));
@@ -55,6 +57,7 @@ public class Loc implements IUserCommandHandler
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessage.S1).addString("Current location : " + activeChar.getX() + ", " + activeChar.getY() + ", " + activeChar.getZ()));
 		}
+		
 		return true;
 	}
 	

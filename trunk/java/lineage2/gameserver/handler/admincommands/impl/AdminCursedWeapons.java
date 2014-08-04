@@ -69,12 +69,15 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		if (!activeChar.getPlayerAccess().Menu)
 		{
 			return false;
 		}
+		
 		CursedWeaponsManager cwm = CursedWeaponsManager.getInstance();
 		CursedWeapon cw = null;
+		
 		switch (command)
 		{
 			case admin_cw_remove:
@@ -86,6 +89,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 					activeChar.sendMessage("Вы не указали id");
 					return false;
 				}
+				
 				for (CursedWeapon cwp : CursedWeaponsManager.getInstance().getCursedWeapons())
 				{
 					if (cwp.getName().toLowerCase().contains(wordList[1].toLowerCase()))
@@ -93,22 +97,28 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 						cw = cwp;
 					}
 				}
+				
 				if (cw == null)
 				{
 					activeChar.sendMessage("�?еизве�?тный id");
 					return false;
 				}
+				
 				break;
+			
 			default:
 				break;
 		}
+		
 		switch (command)
 		{
 			case admin_cw_info:
 				activeChar.sendMessage("======= Cursed Weapons: =======");
+				
 				for (CursedWeapon c : cwm.getCursedWeapons())
 				{
 					activeChar.sendMessage("> " + c.getName() + " (" + c.getItemId() + ")");
+					
 					if (c.isActivated())
 					{
 						Player pl = c.getPlayer();
@@ -128,29 +138,37 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 						activeChar.sendMessage("  Don't exist in the world.");
 					}
 				}
+				
 				break;
+			
 			case admin_cw_reload:
 				activeChar.sendMessage("Cursed weapons can't be reloaded.");
 				break;
+			
 			case admin_cw_remove:
 				if (cw == null)
 				{
 					return false;
 				}
+				
 				CursedWeaponsManager.getInstance().endOfLife(cw);
 				break;
+			
 			case admin_cw_goto:
 				if (cw == null)
 				{
 					return false;
 				}
+				
 				activeChar.teleToLocation(cw.getLoc());
 				break;
+			
 			case admin_cw_add:
 				if (cw == null)
 				{
 					return false;
 				}
+				
 				if (cw.isActive())
 				{
 					activeChar.sendMessage("This cursed weapon is already active.");
@@ -158,6 +176,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 				else
 				{
 					GameObject target = activeChar.getTarget();
+					
 					if ((target != null) && target.isPlayer() && !((Player) target).isInOlympiadMode())
 					{
 						Player player = (Player) target;
@@ -166,12 +185,15 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 						cwm.showUsageTime(player, cw);
 					}
 				}
+				
 				break;
+			
 			case admin_cw_drop:
 				if (cw == null)
 				{
 					return false;
 				}
+				
 				if (cw.isActive())
 				{
 					activeChar.sendMessage("This cursed weapon is already active.");
@@ -179,20 +201,22 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 				else
 				{
 					GameObject target = activeChar.getTarget();
+					
 					if ((target != null) && target.isPlayer() && !((Player) target).isInOlympiadMode())
 					{
 						Player player = (Player) target;
 						cw.create(null, player);
 					}
 				}
+				
 				break;
 		}
+		
 		/**
 		 * Method getAdminCommandEnum.
 		 * @return Enum[]
 		 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
 		 */
-		
 		/**
 		 * Method getAdminCommandEnum.
 		 * @return Enum[]

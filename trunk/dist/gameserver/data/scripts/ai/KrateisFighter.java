@@ -43,15 +43,19 @@ public class KrateisFighter extends Fighter
 	{
 		super.onEvtDead(killer);
 		final Player player = killer.getPlayer();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		final KrateisCubeEvent cubeEvent = getActor().getEvent(KrateisCubeEvent.class);
+		
 		if (cubeEvent == null)
 		{
 			return;
 		}
+		
 		final KrateisCubePlayerObject particlePlayer = cubeEvent.getParticlePlayer(player);
 		particlePlayer.setPoints(particlePlayer.getPoints() + 3);
 		cubeEvent.updatePoints(particlePlayer);

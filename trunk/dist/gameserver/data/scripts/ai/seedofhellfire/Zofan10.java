@@ -33,6 +33,7 @@ public class Zofan10 extends Fighter
 		{
 			return;
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	
@@ -43,6 +44,7 @@ public class Zofan10 extends Fighter
 		{
 			return false;
 		}
+		
 		return super.checkAggression(target);
 	}
 	
@@ -50,11 +52,14 @@ public class Zofan10 extends Fighter
 	protected boolean thinkActive()
 	{
 		NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return false;
 		}
+		
 		List<NpcInstance> around = actor.getAroundNpc(800, 500);
+		
 		if ((around != null) && (!around.isEmpty()))
 		{
 			for (NpcInstance npc : around)
@@ -65,6 +70,7 @@ public class Zofan10 extends Fighter
 				}
 			}
 		}
+		
 		return true;
 	}
 }

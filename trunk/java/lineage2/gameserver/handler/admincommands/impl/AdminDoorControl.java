@@ -52,11 +52,14 @@ public class AdminDoorControl implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		if (!activeChar.getPlayerAccess().Door)
 		{
 			return false;
 		}
+		
 		GameObject target;
+		
 		switch (command)
 		{
 			case admin_open:
@@ -68,6 +71,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 				{
 					target = activeChar.getTarget();
 				}
+				
 				if ((target != null) && target.isDoor())
 				{
 					((DoorInstance) target).openMe();
@@ -76,7 +80,9 @@ public class AdminDoorControl implements IAdminCommandHandler
 				{
 					activeChar.sendPacket(Msg.INVALID_TARGET);
 				}
+				
 				break;
+			
 			case admin_close:
 				if (wordList.length > 1)
 				{
@@ -86,6 +92,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 				{
 					target = activeChar.getTarget();
 				}
+				
 				if ((target != null) && target.isDoor())
 				{
 					((DoorInstance) target).closeMe();
@@ -94,8 +101,10 @@ public class AdminDoorControl implements IAdminCommandHandler
 				{
 					activeChar.sendPacket(Msg.INVALID_TARGET);
 				}
+				
 				break;
 		}
+		
 		return true;
 	}
 	

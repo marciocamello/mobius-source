@@ -52,10 +52,12 @@ public class StatFunctions
 		static Func getFunc(Stats stat)
 		{
 			int pos = stat.ordinal();
+			
 			if (func[pos] == null)
 			{
 				func[pos] = new FuncMultRegenResting(stat);
 			}
+			
 			return func[pos];
 		}
 		
@@ -105,10 +107,12 @@ public class StatFunctions
 		static Func getFunc(Stats stat)
 		{
 			int pos = stat.ordinal();
+			
 			if (func[pos] == null)
 			{
 				func[pos] = new FuncMultRegenStanding(stat);
 			}
+			
 			return func[pos];
 		}
 		
@@ -151,10 +155,12 @@ public class StatFunctions
 		static Func getFunc(Stats stat)
 		{
 			int pos = stat.ordinal();
+			
 			if (func[pos] == null)
 			{
 				func[pos] = new FuncMultRegenRunning(stat);
 			}
+			
 			return func[pos];
 		}
 		
@@ -323,6 +329,7 @@ public class StatFunctions
 		public void calc(Env env)
 		{
 			WeaponTemplate weapon = env.character.getActiveWeaponItem();
+			
 			if (weapon != null)
 			{
 				env.value += weapon.getAttackRange();
@@ -359,6 +366,7 @@ public class StatFunctions
 			{
 				return;
 			}
+			
 			env.value += (Math.sqrt(env.character.getWIT()) * 3) + (env.character.getLevel() * 2);
 		}
 	}
@@ -421,19 +429,24 @@ public class StatFunctions
 			{
 				return;
 			}
+			
 			env.value += (Math.sqrt(env.character.getDEX()) * 5.5) + env.character.getLevel();
+			
 			if (env.character.isServitor())
 			{
 				env.value += env.character.getLevel() < 60 ? 4 : 5;
 			}
+			
 			if ((env.character.getLevel() > 77) && (env.character.getLevel() < 85))
 			{
 				env.value += env.character.getLevel() - 77;
 			}
+			
 			if ((env.character.getLevel() > 69) && (env.character.getLevel() < 85))
 			{
 				env.value += env.character.getLevel() - 69;
 			}
+			
 			if (env.character.getLevel() > 84)
 			{
 				env.value += 24;
@@ -467,10 +480,12 @@ public class StatFunctions
 		public void calc(Env env)
 		{
 			env.value += (Math.sqrt(env.character.getDEX()) * 5.5) + env.character.getLevel();
+			
 			if ((env.character.getLevel() > 69) && (env.character.getLevel() < 85))
 			{
 				env.value += env.character.getLevel() - 69;
 			}
+			
 			if (env.character.getLevel() > 84)
 			{
 				env.value += 16;
@@ -536,6 +551,7 @@ public class StatFunctions
 			{
 				env.value *= BaseStats.DEX.calcBonus(env.character);
 			}
+			
 			env.value *= 0.01 * env.character.calcStat(Stats.CRITICAL_RATE, env.target, env.skill);
 		}
 	}
@@ -652,6 +668,7 @@ public class StatFunctions
 		public void calc(Env env)
 		{
 			Player pc = (Player) env.character;
+			
 			if (pc != null)
 			{
 				env.value = Math.max(1, env.value + pc.getHennaStatSTR());
@@ -685,6 +702,7 @@ public class StatFunctions
 		public void calc(Env env)
 		{
 			Player pc = (Player) env.character;
+			
 			if (pc != null)
 			{
 				env.value = Math.max(1, env.value + pc.getHennaStatDEX());
@@ -718,6 +736,7 @@ public class StatFunctions
 		public void calc(Env env)
 		{
 			Player pc = (Player) env.character;
+			
 			if (pc != null)
 			{
 				env.value = Math.max(1, env.value + pc.getHennaStatINT());
@@ -751,6 +770,7 @@ public class StatFunctions
 		public void calc(Env env)
 		{
 			Player pc = (Player) env.character;
+			
 			if (pc != null)
 			{
 				env.value = Math.max(1, env.value + pc.getHennaStatMEN());
@@ -784,6 +804,7 @@ public class StatFunctions
 		public void calc(Env env)
 		{
 			Player pc = (Player) env.character;
+			
 			if (pc != null)
 			{
 				env.value = Math.max(1, env.value + pc.getHennaStatCON());
@@ -817,6 +838,7 @@ public class StatFunctions
 		public void calc(Env env)
 		{
 			Player pc = (Player) env.character;
+			
 			if (pc != null)
 			{
 				env.value = Math.max(1, env.value + pc.getHennaStatWIT());
@@ -941,7 +963,9 @@ public class StatFunctions
 				env.value = 1;
 				return;
 			}
+			
 			WeaponTemplate weapon = env.character.getActiveWeaponItem();
+			
 			if (weapon == null)
 			{
 				env.value *= 0.01 * env.target.calcStat(Stats.FIST_WPN_VULNERABILITY, env.character, env.skill);
@@ -950,6 +974,7 @@ public class StatFunctions
 			{
 				env.value *= 0.01 * env.target.calcStat(weapon.getItemType().getDefence(), env.character, env.skill);
 			}
+			
 			env.value = Formulas.calcDamageResists(env.skill, env.character, env.target, env.value);
 		}
 	}
@@ -984,6 +1009,7 @@ public class StatFunctions
 				env.value = 1;
 				return;
 			}
+			
 			env.value = Formulas.calcDamageResists(env.skill, env.character, env.target, env.value);
 		}
 	}
@@ -1014,6 +1040,7 @@ public class StatFunctions
 		public void calc(Env env)
 		{
 			Player player = (Player) env.character;
+			
 			if (player.isGM())
 			{
 				env.value = Config.INVENTORY_MAXIMUM_GM;
@@ -1026,6 +1053,7 @@ public class StatFunctions
 			{
 				env.value = Config.INVENTORY_MAXIMUM_NO_DWARF;
 			}
+			
 			env.value += player.getExpandInventory();
 			env.value = Math.min(env.value, Config.SERVICES_EXPAND_INVENTORY_MAX);
 		}
@@ -1057,6 +1085,7 @@ public class StatFunctions
 		public void calc(Env env)
 		{
 			Player player = (Player) env.character;
+			
 			if (player.getTemplate().getRace() == Race.dwarf)
 			{
 				env.value = Config.WAREHOUSE_SLOTS_DWARF;
@@ -1065,6 +1094,7 @@ public class StatFunctions
 			{
 				env.value = Config.WAREHOUSE_SLOTS_NO_DWARF;
 			}
+			
 			env.value += player.getExpandWarehouse();
 		}
 	}
@@ -1095,6 +1125,7 @@ public class StatFunctions
 		public void calc(Env env)
 		{
 			Player _cha = (Player) env.character;
+			
 			if (_cha.getRace() == Race.dwarf)
 			{
 				env.value = Config.MAX_PVTSTORE_SLOTS_DWARF;
@@ -1165,10 +1196,13 @@ public class StatFunctions
 			{
 				return;
 			}
+			
 			Creature target = env.target;
+			
 			if (target != null)
 			{
 				WeaponTemplate weapon = target.getActiveWeaponItem();
+				
 				if (weapon != null)
 				{
 					switch (weapon.getItemType())
@@ -1177,10 +1211,12 @@ public class StatFunctions
 						case CROSSBOW:
 							env.value += 30.;
 							break;
+						
 						case DAGGER:
 						case DUALDAGGER:
 							env.value += 12.;
 							break;
+						
 						default:
 							break;
 					}
@@ -1218,12 +1254,15 @@ public class StatFunctions
 			{
 				return;
 			}
+			
 			Creature cha = env.character;
 			ItemInstance shld = ((Player) cha).getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+			
 			if ((shld == null) || (shld.getItemType() != WeaponType.NONE))
 			{
 				return;
 			}
+			
 			env.value *= BaseStats.DEX.calcBonus(env.character);
 		}
 	}
@@ -1973,6 +2012,7 @@ public class StatFunctions
 			cha.addStatFunc(FuncPAtkLimit.func);
 			cha.addStatFunc(FuncMAtkLimit.func);
 		}
+		
 		if (cha.isPlayer() || cha.isPet())
 		{
 			cha.addStatFunc(FuncPAtkMul.func);
@@ -1980,6 +2020,7 @@ public class StatFunctions
 			cha.addStatFunc(FuncPDefMul.func);
 			cha.addStatFunc(FuncMDefMul.func);
 		}
+		
 		if (cha.isServitor())
 		{
 			cha.addStatFunc(FuncAttributeAttackSet.getFunc(Element.FIRE));
@@ -1995,6 +2036,7 @@ public class StatFunctions
 			cha.addStatFunc(FuncAttributeDefenceSet.getFunc(Element.HOLY));
 			cha.addStatFunc(FuncAttributeDefenceSet.getFunc(Element.UNHOLY));
 		}
+		
 		if (!cha.isPet())
 		{
 			cha.addStatFunc(FuncAccuracyAdd.func);
@@ -2002,6 +2044,7 @@ public class StatFunctions
 			cha.addStatFunc(FuncMEvasionAdd.func);
 			cha.addStatFunc(FuncMAccuracyAdd.func);
 		}
+		
 		if (!cha.isPet() && !cha.isServitor())
 		{
 			cha.addStatFunc(FuncPAtkSpeedMul.func);
@@ -2009,6 +2052,7 @@ public class StatFunctions
 			cha.addStatFunc(FuncSDefInit.func);
 			cha.addStatFunc(FuncSDefAll.func);
 		}
+		
 		cha.addStatFunc(FuncPAtkSpdLimit.func);
 		cha.addStatFunc(FuncMAtkSpdLimit.func);
 		cha.addStatFunc(FuncCAtkLimit.func);

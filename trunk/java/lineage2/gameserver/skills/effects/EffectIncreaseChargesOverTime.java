@@ -43,7 +43,9 @@ public class EffectIncreaseChargesOverTime extends Effect
 		{
 			return false;
 		}
+		
 		double damage = calc();
+		
 		if (damage >= (getEffected().getCurrentHp() - 1))
 		{
 			if (getSkill().isToggle())
@@ -52,13 +54,16 @@ public class EffectIncreaseChargesOverTime extends Effect
 				return false;
 			}
 		}
+		
 		int increaseCount = 1;
 		int chargeMaxCount = 10;
+		
 		if (getEffected().getIncreasedForce() < chargeMaxCount)
 		{
 			getEffected().reduceCurrentHp(damage, 0, getEffector(), getSkill(), true, true, true, false, false, false, true);
 			(getEffected()).setIncreasedForce(getEffected().getIncreasedForce() + increaseCount);
 		}
+		
 		return true;
 	}
 }

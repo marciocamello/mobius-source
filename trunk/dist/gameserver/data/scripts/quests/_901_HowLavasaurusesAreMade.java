@@ -53,6 +53,7 @@ public class _901_HowLavasaurusesAreMade extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("blacksmith_rooney_q901_03.htm"))
 		{
 			st.setState(STARTED);
@@ -87,6 +88,7 @@ public class _901_HowLavasaurusesAreMade extends Quest implements ScriptFile
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(this);
 		}
+		
 		return htmltext;
 	}
 	
@@ -96,6 +98,7 @@ public class _901_HowLavasaurusesAreMade extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == ROONEY)
 		{
 			if (cond == 0)
@@ -141,6 +144,7 @@ public class _901_HowLavasaurusesAreMade extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -153,28 +157,34 @@ public class _901_HowLavasaurusesAreMade extends Quest implements ScriptFile
 			{
 				return null;
 			}
+			
 			if (!st.haveQuestItem(LAVASAURUS_STONE_FRAGMENT, 10))
 			{
 				st.rollAndGive(LAVASAURUS_STONE_FRAGMENT, 1, DROP_CHANCE);
 			}
+			
 			if (!st.haveQuestItem(LAVASAURUS_HEAD_FRAGMENT, 10))
 			{
 				st.rollAndGive(LAVASAURUS_HEAD_FRAGMENT, 1, DROP_CHANCE);
 			}
+			
 			if (!st.haveQuestItem(LAVASAURUS_BODY_FRAGMENT, 10))
 			{
 				st.rollAndGive(LAVASAURUS_BODY_FRAGMENT, 1, DROP_CHANCE);
 			}
+			
 			if (!st.haveQuestItem(LAVASAURUS_HORN_FRAGMENT, 10))
 			{
 				st.rollAndGive(LAVASAURUS_HORN_FRAGMENT, 1, DROP_CHANCE);
 			}
+			
 			if (st.haveQuestItem(LAVASAURUS_STONE_FRAGMENT, 10) && st.haveQuestItem(LAVASAURUS_HEAD_FRAGMENT, 10) && st.haveQuestItem(LAVASAURUS_BODY_FRAGMENT, 10) && st.haveQuestItem(LAVASAURUS_HORN_FRAGMENT, 10))
 			{
 				st.setCond(2);
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		return null;
 	}
 	

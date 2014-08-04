@@ -56,6 +56,7 @@ public class Hellbound extends Functions implements IVoicedCommandHandler
 			activeChar.sendMessage("Hellbound level: " + HellboundManager.getHellboundLevel());
 			activeChar.sendMessage("Confidence: " + HellboundManager.getConfidence());
 		}
+		
 		return false;
 	}
 }

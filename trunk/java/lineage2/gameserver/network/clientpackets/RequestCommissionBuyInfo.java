@@ -47,10 +47,12 @@ public class RequestCommissionBuyInfo extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		CommissionShopManager.getInstance().showCommissionBuyInfo(player, auctionId, exItemType);
 	}
 }

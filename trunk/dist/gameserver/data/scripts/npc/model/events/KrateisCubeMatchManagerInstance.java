@@ -29,7 +29,7 @@ import lineage2.gameserver.utils.Location;
 public class KrateisCubeMatchManagerInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -52,10 +52,12 @@ public class KrateisCubeMatchManagerInstance extends NpcInstance
 	public void onBypassFeedback(Player player, String command)
 	{
 		KrateisCubeEvent cubeEvent = player.getEvent(KrateisCubeEvent.class);
+		
 		if (cubeEvent == null)
 		{
 			return;
 		}
+		
 		if (command.startsWith("KrateiEnter"))
 		{
 			if (!cubeEvent.isInProgress())

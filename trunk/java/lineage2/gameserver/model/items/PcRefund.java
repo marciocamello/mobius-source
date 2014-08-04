@@ -37,11 +37,13 @@ public class PcRefund extends ItemContainer
 	protected void onAddItem(ItemInstance item)
 	{
 		item.setLocation(ItemInstance.ItemLocation.VOID);
+		
 		if (item.getJdbcState().isPersisted())
 		{
 			item.setJdbcState(JdbcEntityState.UPDATED);
 			item.update();
 		}
+		
 		if (_items.size() > 12)
 		{
 			destroyItem(_items.remove(0));
@@ -84,6 +86,7 @@ public class PcRefund extends ItemContainer
 	public void clear()
 	{
 		writeLock();
+		
 		try
 		{
 			_itemsDAO.delete(_items);

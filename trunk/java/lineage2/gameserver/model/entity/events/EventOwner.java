@@ -23,7 +23,7 @@ import java.util.Set;
 public abstract class EventOwner implements Serializable
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -46,11 +46,13 @@ public abstract class EventOwner implements Serializable
 			{
 				return (E) e;
 			}
+			
 			if (eventClass.isAssignableFrom(e.getClass()))
 			{
 				return (E) e;
 			}
 		}
+		
 		return null;
 	}
 	

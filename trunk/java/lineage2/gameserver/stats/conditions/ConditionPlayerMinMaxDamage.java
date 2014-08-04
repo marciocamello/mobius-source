@@ -52,10 +52,12 @@ public class ConditionPlayerMinMaxDamage extends Condition
 		{
 			return false;
 		}
+		
 		if ((_max > 0) && (env.value > _max))
 		{
 			return false;
 		}
+		
 		return true;
 	}
 }

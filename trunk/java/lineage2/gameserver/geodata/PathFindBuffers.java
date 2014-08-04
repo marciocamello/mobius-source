@@ -59,6 +59,7 @@ public class PathFindBuffers
 	{
 		TIntIntHashMap config = new TIntIntHashMap();
 		String[] k;
+		
 		for (String e : Config.PATHFIND_BUFFERS.split(";"))
 		{
 			if (!e.isEmpty() && ((k = e.split("x")).length == 2))
@@ -66,19 +67,24 @@ public class PathFindBuffers
 				config.put(Integer.valueOf(k[1]), Integer.valueOf(k[0]));
 			}
 		}
+		
 		TIntIntIterator itr = config.iterator();
+		
 		while (itr.hasNext())
 		{
 			itr.advance();
 			int size = itr.key();
 			int count = itr.value();
 			PathFindBuffer[] buff = new PathFindBuffer[count];
+			
 			for (int i = 0; i < count; i++)
 			{
 				buff[i] = new PathFindBuffer(size);
 			}
+			
 			buffers.put(size, buff);
 		}
+		
 		sizes = config.keys();
 		Arrays.sort(sizes);
 	}
@@ -91,10 +97,12 @@ public class PathFindBuffers
 	private static PathFindBuffer create(int mapSize)
 	{
 		lock.lock();
+		
 		try
 		{
 			PathFindBuffer buffer;
 			PathFindBuffer[] buff = buffers.get(mapSize);
+			
 			if (buff != null)
 			{
 				buff = lineage2.commons.lang.ArrayUtils.add(buff, buffer = new PathFindBuffer(mapSize));
@@ -108,6 +116,7 @@ public class PathFindBuffers
 				sizes = org.apache.commons.lang3.ArrayUtils.add(sizes, mapSize);
 				Arrays.sort(sizes);
 			}
+			
 			buffers.put(mapSize, buff);
 			buffer.inUse = true;
 			return buffer;
@@ -126,9 +135,11 @@ public class PathFindBuffers
 	private static PathFindBuffer get(int mapSize)
 	{
 		lock.lock();
+		
 		try
 		{
 			PathFindBuffer[] buff = buffers.get(mapSize);
+			
 			for (PathFindBuffer buffer : buff)
 			{
 				if (!buffer.inUse)
@@ -137,6 +148,7 @@ public class PathFindBuffers
 					return buffer;
 				}
 			}
+			
 			return null;
 		}
 		finally
@@ -156,12 +168,16 @@ public class PathFindBuffers
 		{
 			return null;
 		}
+		
 		mapSize += STEP_MAP_SIZE;
+		
 		if (mapSize < MIN_MAP_SIZE)
 		{
 			mapSize = MIN_MAP_SIZE;
 		}
+		
 		PathFindBuffer buffer = null;
+		
 		for (int size : sizes)
 		{
 			if (size >= mapSize)
@@ -171,6 +187,7 @@ public class PathFindBuffers
 				break;
 			}
 		}
+		
 		if (buffer == null)
 		{
 			for (int size = MIN_MAP_SIZE; size < MAX_MAP_SIZE; size += STEP_MAP_SIZE)
@@ -183,6 +200,7 @@ public class PathFindBuffers
 				}
 			}
 		}
+		
 		return buffer;
 	}
 	
@@ -193,6 +211,7 @@ public class PathFindBuffers
 	public static void recycle(PathFindBuffer buffer)
 	{
 		lock.lock();
+		
 		try
 		{
 			buffer.inUse = false;
@@ -211,6 +230,7 @@ public class PathFindBuffers
 	{
 		StrTable table = new StrTable("PathFind Buffers Stats");
 		lock.lock();
+		
 		try
 		{
 			long totalUses = 0, totalPlayable = 0, totalTime = 0;
@@ -222,6 +242,7 @@ public class PathFindBuffers
 			long success;
 			long overtime;
 			long time;
+			
 			for (int size : sizes)
 			{
 				index++;
@@ -232,6 +253,7 @@ public class PathFindBuffers
 				success = 0;
 				overtime = 0;
 				time = 0;
+				
 				for (PathFindBuffer buff : buffers.get(size))
 				{
 					count++;
@@ -242,6 +264,7 @@ public class PathFindBuffers
 					time += buff.totalTime / 1000000;
 					itrs += buff.totalItr;
 				}
+				
 				totalUses += uses;
 				totalPlayable += playable;
 				totalTime += time;
@@ -253,6 +276,7 @@ public class PathFindBuffers
 				table.set(index, "Iter., avg", (uses > 0) ? itrs / uses : 0);
 				table.set(index, "Time, avg (ms)", String.format("%1.3f", (uses > 0) ? (double) time / uses : 0.));
 			}
+			
 			table.addTitle("Uses, total / playable  : " + totalUses + " / " + totalPlayable);
 			table.addTitle("Uses, total time / avg (ms) : " + totalTime + " / " + String.format("%1.3f", totalUses > 0 ? (double) totalTime / totalUses : 0));
 		}
@@ -325,6 +349,7 @@ public class PathFindBuffers
 			open = new PriorityQueue<>(mapSize);
 			this.mapSize = mapSize;
 			nodes = new GeoNode[mapSize][mapSize];
+			
 			for (int i = 0; i < nodes.length; i++)
 			{
 				for (int j = 0; j < nodes[i].length; j++)
@@ -340,6 +365,7 @@ public class PathFindBuffers
 		public void free()
 		{
 			open.clear();
+			
 			for (GeoNode[] node : nodes)
 			{
 				for (GeoNode element : node)
@@ -476,10 +502,12 @@ public class PathFindBuffers
 			{
 				return 1;
 			}
+			
 			if (totalCost < o.totalCost)
 			{
 				return -1;
 			}
+			
 			return 0;
 		}
 	}

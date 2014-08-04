@@ -55,13 +55,16 @@ public class HotSpringsMob extends Mystic
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((attacker != null) && Rnd.chance(5))
 		{
 			final int DeBuff = DeBuffs[Rnd.get(DeBuffs.length)];
 			final List<Effect> effect = attacker.getEffectList().getEffectsBySkillId(DeBuff);
+			
 			if (effect != null)
 			{
 				final int level = effect.get(0).getSkill().getLevel();
+				
 				if (level < 10)
 				{
 					effect.get(0).exit();
@@ -72,6 +75,7 @@ public class HotSpringsMob extends Mystic
 			else
 			{
 				final Skill skill = SkillTable.getInstance().getInfo(DeBuff, 1);
+				
 				if (skill != null)
 				{
 					skill.getEffects(actor, attacker, false, false);
@@ -82,6 +86,7 @@ public class HotSpringsMob extends Mystic
 				}
 			}
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 }

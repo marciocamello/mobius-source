@@ -47,9 +47,11 @@ public class RestoreOfflineTraders extends RunnableImpl
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
+			
 			if (Config.SERVICES_OFFLINE_TRADE_SECONDS_TO_KICK > 0)
 			{
 				int expireTimeSecs = (int) ((System.currentTimeMillis() / 1000L) - Config.SERVICES_OFFLINE_TRADE_SECONDS_TO_KICK);
@@ -58,6 +60,7 @@ public class RestoreOfflineTraders extends RunnableImpl
 				statement.executeUpdate();
 				DbUtils.close(statement);
 			}
+			
 			statement = con.prepareStatement("DELETE FROM character_variables WHERE name = 'offline' AND obj_id IN (SELECT obj_id FROM characters WHERE accessLevel < 0)");
 			statement.executeUpdate();
 			DbUtils.close(statement);
@@ -66,32 +69,39 @@ public class RestoreOfflineTraders extends RunnableImpl
 			int objectId;
 			int expireTimeSecs;
 			Player p;
+			
 			while (rset.next())
 			{
 				objectId = rset.getInt("obj_id");
 				expireTimeSecs = rset.getInt("value");
 				p = Player.restore(objectId);
+				
 				if (p == null)
 				{
 					continue;
 				}
+				
 				if (p.isDead())
 				{
 					p.kick();
 					continue;
 				}
+				
 				p.setNameColor(Config.SERVICES_OFFLINE_TRADE_NAME_COLOR);
 				p.setOfflineMode(true);
 				p.setIsOnline(true);
 				p.spawnMe();
+				
 				if ((p.getClan() != null) && (p.getClan().getAnyMember(p.getObjectId()) != null))
 				{
 					p.getClan().getAnyMember(p.getObjectId()).setPlayerInstance(p, false);
 				}
+				
 				if (Config.SERVICES_OFFLINE_TRADE_SECONDS_TO_KICK > 0)
 				{
 					p.startKickTask(((Config.SERVICES_OFFLINE_TRADE_SECONDS_TO_KICK + expireTimeSecs) - (System.currentTimeMillis() / 1000L)) * 1000L);
 				}
+				
 				if (Config.SERVICES_TRADE_ONLY_FAR)
 				{
 					for (Player player : World.getAroundPlayers(p, Config.SERVICES_TRADE_RADIUS, 200))
@@ -113,6 +123,7 @@ public class RestoreOfflineTraders extends RunnableImpl
 						}
 					}
 				}
+				
 				count++;
 			}
 		}

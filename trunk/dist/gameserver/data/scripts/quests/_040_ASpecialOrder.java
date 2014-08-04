@@ -62,9 +62,11 @@ public class _040_ASpecialOrder extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("take"))
 		{
 			int rand = Rnd.get(1, 2);
+			
 			if (rand == 1)
 			{
 				st.setCond(2);
@@ -85,6 +87,7 @@ public class _040_ASpecialOrder extends Quest implements ScriptFile
 			st.setCond(6);
 			htmltext = "Gesto-3.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -94,6 +97,7 @@ public class _040_ASpecialOrder extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Helvetia)
 		{
 			if (cond == 0)
@@ -182,6 +186,7 @@ public class _040_ASpecialOrder extends Quest implements ScriptFile
 				htmltext = "Gesto-6.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

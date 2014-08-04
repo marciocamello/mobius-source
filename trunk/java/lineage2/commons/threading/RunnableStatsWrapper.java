@@ -66,6 +66,7 @@ public class RunnableStatsWrapper implements Runnable
 	public static void execute(Runnable runnable)
 	{
 		long begin = System.nanoTime();
+		
 		try
 		{
 			runnable.run();

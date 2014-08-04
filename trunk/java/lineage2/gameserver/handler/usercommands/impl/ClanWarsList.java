@@ -51,14 +51,18 @@ public class ClanWarsList implements IUserCommandHandler
 		{
 			return false;
 		}
+		
 		Clan clan = activeChar.getClan();
+		
 		if (clan == null)
 		{
 			activeChar.sendPacket(Msg.NOT_JOINED_IN_ANY_CLAN);
 			return false;
 		}
+		
 		SystemMessage sm;
 		List<Clan> data = new ArrayList<>();
+		
 		if (id == 88)
 		{
 			activeChar.sendPacket(Msg._ATTACK_LIST_);
@@ -72,6 +76,7 @@ public class ClanWarsList implements IUserCommandHandler
 		else
 		{
 			activeChar.sendPacket(Msg._WAR_LIST_);
+			
 			for (Clan c : clan.getEnemyClans())
 			{
 				if (clan.getAttackerClans().contains(c))
@@ -80,10 +85,12 @@ public class ClanWarsList implements IUserCommandHandler
 				}
 			}
 		}
+		
 		for (Clan c : data)
 		{
 			String clanName = c.getName();
 			Alliance alliance = c.getAlliance();
+			
 			if (alliance != null)
 			{
 				sm = new SystemMessage(SystemMessage.S1_S2_ALLIANCE).addString(clanName).addString(alliance.getAllyName());
@@ -92,8 +99,10 @@ public class ClanWarsList implements IUserCommandHandler
 			{
 				sm = new SystemMessage(SystemMessage.S1_NO_ALLIANCE_EXISTS).addString(clanName);
 			}
+			
 			activeChar.sendPacket(sm);
 		}
+		
 		activeChar.sendPacket(Msg.__EQUALS__);
 		return true;
 	}

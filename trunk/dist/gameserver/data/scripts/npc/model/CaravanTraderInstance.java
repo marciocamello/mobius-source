@@ -37,7 +37,7 @@ import lineage2.gameserver.utils.Util;
 public final class CaravanTraderInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -131,9 +131,11 @@ public final class CaravanTraderInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.startsWith("Chat"))
 		{
 			int val = 0;
+			
 			try
 			{
 				val = Integer.parseInt(command.substring(5));
@@ -144,6 +146,7 @@ public final class CaravanTraderInstance extends NpcInstance
 			catch (NumberFormatException nfe)
 			{
 			}
+			
 			showDialog(player, getHtmlPath(getNpcId(), val, player));
 			return;
 		}
@@ -156,6 +159,7 @@ public final class CaravanTraderInstance extends NpcInstance
 				showDialog(player, getHtmlPath(getNpcId(), 3, player));
 				return;
 			}
+			
 			showDialog(player, getHtmlPath(getNpcId(), 4, player));
 			return;
 		}
@@ -166,6 +170,7 @@ public final class CaravanTraderInstance extends NpcInstance
 				showDialog(player, getHtmlPath(getNpcId(), 10, player));
 				return;
 			}
+			
 			if (player.getInventory().getCountOf(DarionsBadge) >= 5)
 			{
 				Functions.removeItem(player, DarionsBadge, 5);
@@ -173,6 +178,7 @@ public final class CaravanTraderInstance extends NpcInstance
 				showDialog(player, getHtmlPath(getNpcId(), 6, player));
 				return;
 			}
+			
 			showDialog(player, getHtmlPath(getNpcId(), 3, player));
 			return;
 		}
@@ -185,6 +191,7 @@ public final class CaravanTraderInstance extends NpcInstance
 				showDialog(player, getHtmlPath(getNpcId(), 8, player));
 				return;
 			}
+			
 			showDialog(player, getHtmlPath(getNpcId(), 9, player));
 			return;
 		}
@@ -195,6 +202,7 @@ public final class CaravanTraderInstance extends NpcInstance
 				showDialog(player, getHtmlPath(getNpcId(), 3, player));
 				return;
 			}
+			
 			if (player.getInventory().getCountOf(DarionsBadge) >= 20)
 			{
 				Functions.removeItem(player, DarionsBadge, 20);
@@ -202,6 +210,7 @@ public final class CaravanTraderInstance extends NpcInstance
 				showDialog(player, getHtmlPath(getNpcId(), 4, player));
 				return;
 			}
+			
 			showDialog(player, getHtmlPath(getNpcId(), 5, player));
 			return;
 		}
@@ -211,27 +220,34 @@ public final class CaravanTraderInstance extends NpcInstance
 			{
 				StringTokenizer st = new StringTokenizer(command);
 				st.nextToken();
+				
 				if (!st.hasMoreTokens())
 				{
 					return;
 				}
+				
 				String param = st.nextToken();
+				
 				if ((param.length() < 1) || !Util.isNumber(param))
 				{
 					player.sendMessage("Incorrect count");
 					return;
 				}
+				
 				int val = Integer.parseInt(param);
+				
 				if (val <= 0)
 				{
 					player.sendMessage("Incorrect count");
 					return;
 				}
+				
 				if (player.getInventory().getCountOf(DarionsBadge) < val)
 				{
 					showDialog(player, getHtmlPath(getNpcId(), 2, player));
 					return;
 				}
+				
 				Functions.removeItem(player, DarionsBadge, val);
 				HellboundManager.addConfidence(val * 10L);
 				showDialog(player, getHtmlPath(getNpcId(), 3, player));
@@ -252,6 +268,7 @@ public final class CaravanTraderInstance extends NpcInstance
 				showDialog(player, getHtmlPath(getNpcId(), 6, player));
 				return;
 			}
+			
 			showDialog(player, getHtmlPath(getNpcId(), 7, player));
 			return;
 		}
@@ -260,10 +277,12 @@ public final class CaravanTraderInstance extends NpcInstance
 			try
 			{
 				int val = Integer.parseInt(command.substring(5));
+				
 				if (val <= 0)
 				{
 					return;
 				}
+				
 				switch (val)
 				{
 					case 1:
@@ -272,26 +291,31 @@ public final class CaravanTraderInstance extends NpcInstance
 							showDialog(player, getHtmlPath(getNpcId(), 2, player));
 							return;
 						}
+						
 						Functions.removeItem(player, LifeForce, 10);
 						HellboundManager.addConfidence(100);
 						showDialog(player, getHtmlPath(getNpcId(), 3, player));
 						break;
+					
 					case 2:
 						if (player.getInventory().getCountOf(DimLifeForce) < 5)
 						{
 							showDialog(player, getHtmlPath(getNpcId(), 2, player));
 							return;
 						}
+						
 						Functions.removeItem(player, DimLifeForce, 5);
 						HellboundManager.addConfidence(100);
 						showDialog(player, getHtmlPath(getNpcId(), 3, player));
 						break;
+					
 					case 3:
 						if (player.getInventory().getCountOf(ContainedLifeForce) < 1)
 						{
 							showDialog(player, getHtmlPath(getNpcId(), 2, player));
 							return;
 						}
+						
 						Functions.removeItem(player, ContainedLifeForce, 1);
 						HellboundManager.addConfidence(50);
 						showDialog(player, getHtmlPath(getNpcId(), 3, player));
@@ -308,15 +332,18 @@ public final class CaravanTraderInstance extends NpcInstance
 			try
 			{
 				int val = Integer.parseInt(command.substring(5));
+				
 				if (val <= 0)
 				{
 					return;
 				}
+				
 				if (player.getInventory().getCountOf(DarionsBadge) < 10)
 				{
 					showDialog(player, getHtmlPath(getNpcId(), 3, player));
 					return;
 				}
+				
 				switch (val)
 				{
 					case 1:
@@ -324,11 +351,13 @@ public final class CaravanTraderInstance extends NpcInstance
 						Functions.addItem(player, NativeHelmet, 1);
 						showDialog(player, getHtmlPath(getNpcId(), 4, player));
 						break;
+					
 					case 2:
 						Functions.removeItem(player, DarionsBadge, 10);
 						Functions.addItem(player, NativeTunic, 1);
 						showDialog(player, getHtmlPath(getNpcId(), 4, player));
 						break;
+					
 					case 3:
 						Functions.removeItem(player, DarionsBadge, 10);
 						Functions.addItem(player, NativePants, 1);
@@ -352,6 +381,7 @@ public final class CaravanTraderInstance extends NpcInstance
 				showDialog(player, getHtmlPath(getNpcId(), 3, player));
 				return;
 			}
+			
 			showDialog(player, getHtmlPath(getNpcId(), 4, player));
 			return;
 		}
@@ -372,6 +402,7 @@ public final class CaravanTraderInstance extends NpcInstance
 				showDialog(player, getHtmlPath(getNpcId(), 6, player));
 				return;
 			}
+			
 			showDialog(player, getHtmlPath(getNpcId(), 4, player));
 			return;
 		}
@@ -404,6 +435,7 @@ public final class CaravanTraderInstance extends NpcInstance
 				showDialog(player, getHtmlPath(getNpcId(), 2, player));
 				return;
 			}
+			
 			showDialog(player, getHtmlPath(getNpcId(), 3, player));
 			return;
 		}
@@ -414,6 +446,7 @@ public final class CaravanTraderInstance extends NpcInstance
 				player.teleToLocation(new Location(17947, 283205, -9696));
 				return;
 			}
+			
 			showDialog(player, getHtmlPath(getNpcId(), 1, player));
 			return;
 		}
@@ -424,7 +457,9 @@ public final class CaravanTraderInstance extends NpcInstance
 				showDialog(player, getHtmlPath(getNpcId(), 1, player));
 				return;
 			}
+			
 			List<Player> members = player.getParty().getPartyMembers();
+			
 			for (Player member : members)
 			{
 				if ((member == null) || !isInRange(member, 500) || (member.getEffectList().getEffectsBySkillId(FieryDemonBloodSkill) == null))
@@ -433,10 +468,12 @@ public final class CaravanTraderInstance extends NpcInstance
 					return;
 				}
 			}
+			
 			for (Player member : members)
 			{
 				member.teleToLocation(new Location(-22204, 277056, -15045));
 			}
+			
 			return;
 		}
 		else if (command.startsWith("tully_dorian_entrance"))
@@ -446,7 +483,9 @@ public final class CaravanTraderInstance extends NpcInstance
 				showDialog(player, getHtmlPath(getNpcId(), 2, player));
 				return;
 			}
+			
 			List<Player> members = player.getParty().getPartyMembers();
+			
 			for (Player member : members)
 			{
 				if ((member == null) || !isInRange(member, 500) || !member.isQuestCompleted("_132_MatrasCuriosity"))
@@ -455,6 +494,7 @@ public final class CaravanTraderInstance extends NpcInstance
 					return;
 				}
 			}
+			
 			for (Player member : members)
 			{
 				member.teleToLocation(new Location(-13400, 272827, -15304));
@@ -463,6 +503,7 @@ public final class CaravanTraderInstance extends NpcInstance
 		else if (command.startsWith("enter_urban"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(2))
@@ -491,6 +532,7 @@ public final class CaravanTraderInstance extends NpcInstance
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 		String htmlpath = null;
+		
 		switch (getNpcId())
 		{
 			case 32356:
@@ -510,7 +552,9 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getNpcId(), 2, player);
 				}
+				
 				break;
+			
 			case 32300:
 				if (player.getTransformation() != 101)
 				{
@@ -532,7 +576,9 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getNpcId(), 7, player);
 				}
+				
 				break;
+			
 			case 32297:
 				if (HellboundManager.getHellboundLevel() <= 1)
 				{
@@ -542,7 +588,9 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getNpcId(), 1, player);
 				}
+				
 				break;
+			
 			case 32354:
 				if (HellboundManager.getHellboundLevel() <= 1)
 				{
@@ -568,7 +616,9 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getNpcId(), 8, player);
 				}
+				
 				break;
+			
 			case 32345:
 				if (HellboundManager.getHellboundLevel() <= 1)
 				{
@@ -590,7 +640,9 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getNpcId(), 1, player);
 				}
+				
 				break;
+			
 			case 32355:
 				if (HellboundManager.getHellboundLevel() == 5)
 				{
@@ -600,7 +652,9 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getNpcId(), 0, player);
 				}
+				
 				break;
+			
 			case 32298:
 				if (HellboundManager.getHellboundLevel() <= 1)
 				{
@@ -622,7 +676,9 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getNpcId(), 8, player);
 				}
+				
 				break;
+			
 			case 32364:
 				if (HellboundManager.getHellboundLevel() == 5)
 				{
@@ -632,7 +688,9 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getNpcId(), 6, player);
 				}
+				
 				break;
+			
 			case 32357:
 				if (HellboundManager.getHellboundLevel() == 9)
 				{
@@ -646,7 +704,9 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getNpcId(), 0, player);
 				}
+				
 				break;
+			
 			case 32346:
 				if (HellboundManager.getHellboundLevel() >= 10)
 				{
@@ -656,7 +716,9 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getNpcId(), 3, player);
 				}
+				
 				break;
+			
 			case 32313:
 				if (HellboundManager.getHellboundLevel() >= 11)
 				{
@@ -666,7 +728,9 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getNpcId(), 2, player);
 				}
+				
 				break;
+			
 			case 32302:
 				if (HellboundManager.getHellboundLevel() >= 11)
 				{
@@ -676,7 +740,9 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getNpcId(), 3, player);
 				}
+				
 				break;
+			
 			case 32373:
 				if (HellboundManager.getHellboundLevel() >= 11)
 				{
@@ -686,13 +752,17 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getNpcId(), 3, player);
 				}
+				
 				break;
 		}
+		
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
+		
 		if (htmlpath == null)
 		{
 			htmlpath = getHtmlPath(getNpcId(), 0, player);
 		}
+		
 		html.setFile(htmlpath);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%npcname%", getName());
@@ -710,6 +780,7 @@ public final class CaravanTraderInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String pom;
+		
 		if (val == 0)
 		{
 			pom = "" + npcId;
@@ -718,6 +789,7 @@ public final class CaravanTraderInstance extends NpcInstance
 		{
 			pom = npcId + "-" + val;
 		}
+		
 		return "hellbound/" + pom + ".htm";
 	}
 	
@@ -749,28 +821,37 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					return true;
 				}
+				
 				break;
+			
 			case 2:
 				if ((player.getInventory().getCountOf(SecondMark) != 0) || (player.getInventory().getCountOf(ThirdMark) != 0) || (player.getInventory().getCountOf(ForthMark) != 0))
 				{
 					return true;
 				}
+				
 				break;
+			
 			case 3:
 				if ((player.getInventory().getCountOf(ThirdMark) != 0) || (player.getInventory().getCountOf(ForthMark) != 0))
 				{
 					return true;
 				}
+				
 				break;
+			
 			case 4:
 				if (player.getInventory().getCountOf(ForthMark) != 0)
 				{
 					return true;
 				}
+				
 				break;
+			
 			default:
 				break;
 		}
+		
 		return false;
 	}
 	

@@ -85,17 +85,12 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagic
 	public _10385_RedThreadofFate()
 	{
 		super(false);
-		
 		addStartNpc(Rean);
 		addTalkId(Morelin, Lania, HeineWaterSource, Ladyofthelike, Nerupa, Innocentin, Enfeux, Vulkan, Urn, Wesley, DesertedDwarvenHouse, PaagrioTemple, AltarofShilen, ShilensMessenger, CaveofSouls, MotherTree, Darin, Roxxy, BiotinHighPriest, MysteriousDarkKnight);
-		
 		addQuestItem(MysteriosLetter, Waterfromthegardenofeva, Clearestwater, Brightestlight, Purestsoul, Vulkangold, Vulkansilver, Vulkanfire, Fiercestflame, Fondestheart, SOEDwarvenvillage, DimensionalDiamond);
-		
 		addKillId(ShilensMessenger);
-		
 		addLevelCheck(85, 100);
 		// addQuestCompletedCheck(_10338_SeizeYourDestiny.class);
-		
 		_zoneListener = new ZoneListener();
 	}
 	
@@ -122,16 +117,19 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagic
 		{
 			return;
 		}
+		
 		QuestState st = actor.getPlayer().getQuestState(_10385_RedThreadofFate.class);
 		
 		if (st == null)
 		{
 			return;
 		}
+		
 		NpcInstance npc = (NpcInstance) target;
 		Player player = st.getPlayer();
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
+		
 		switch (skill.getId())
 		{
 			case water:
@@ -141,7 +139,9 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagic
 					enterInstance(st.getPlayer());
 					st.setCond(19);
 				}
+				
 				break;
+			
 			case light:
 				if ((npcId == AltarofShilen) && (cond == 16))
 				{
@@ -151,27 +151,34 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagic
 					NpcInstance mob = st.addSpawn(ShilensMessenger, 28760, 11032, -4252);
 					mob.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, player, 100000);
 				}
+				
 				break;
+			
 			case soul:
 				if ((npcId == CaveofSouls) && (cond == 17))
 				{
 					ItemFunctions.removeItem(st.getPlayer(), Purestsoul, 1L, true);
 					st.setCond(18);
 				}
+				
 				break;
+			
 			case flame:
 				if ((npcId == PaagrioTemple) && (cond == 15))
 				{
 					ItemFunctions.removeItem(st.getPlayer(), Fiercestflame, 1L, true);
 					st.setCond(16);
 				}
+				
 				break;
+			
 			case love:
 				if ((npcId == DesertedDwarvenHouse) && (cond == 14))
 				{
 					ItemFunctions.removeItem(st.getPlayer(), Fondestheart, 1L, true);
 					st.setCond(15);
 				}
+				
 				break;
 		}
 	}
@@ -181,8 +188,8 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagic
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
-		
 		Player player = st.getPlayer();
+		
 		if (player == null)
 		{
 			return null;
@@ -193,6 +200,7 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagic
 			st.setCond(17);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		return null;
 	}
 	
@@ -202,6 +210,7 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagic
 		Player player = st.getPlayer();
 		String htmltext = event;
 		int cond = st.getCond();
+		
 		if ((cond == 0) && event.equalsIgnoreCase("Rean_q10385_03.htm"))
 		{
 			st.setState(2);
@@ -280,6 +289,7 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagic
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.TALK_TO_ROXXIE, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
 		}
+		
 		if ((cond == 19) && event.equalsIgnoreCase("Roxxy_q10385_02.htm"))
 		{
 			st.setCond(20);
@@ -292,6 +302,7 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagic
 			st.setCond(21);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		if ((cond == 21) && event.equalsIgnoreCase("showMovie"))
 		{
 			st.getPlayer().showQuestMovie(ExStartScenePlayer.SCENE_SC_SUB_QUEST);
@@ -312,6 +323,7 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagic
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -321,6 +333,7 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagic
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (st.getPlayer().getVar("q10338") == null)
 		{
 			return "<html><head><body>You didn't complete quest Seize Your Destiny1...</body></html>";
@@ -341,13 +354,17 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagic
 				{
 					htmltext = "Rean_q10385_0.htm";
 				}
+				
 				break;
+			
 			case Morelin:
 				if (cond == 1)
 				{
 					htmltext = "Morelin_q10385_01.htm";
 				}
+				
 				break;
+			
 			case Lania:
 				if (cond == 4)
 				{
@@ -363,7 +380,9 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagic
 				{
 					htmltext = "Lania_q10385_02.htm";
 				}
+				
 				break;
+			
 			case HeineWaterSource:
 				if (cond == 5)
 				{
@@ -372,31 +391,41 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagic
 					st.setCond(6);
 					st.playSound(SOUND_MIDDLE);
 				}
+				
 				break;
+			
 			case Ladyofthelike:
 				if (cond == 6)
 				{
 					htmltext = "Ladyofthelike_q10385_01.htm";
 				}
+				
 				break;
+			
 			case Nerupa:
 				if (cond == 7)
 				{
 					htmltext = "Nerupa_q10385_01.htm";
 				}
+				
 				break;
+			
 			case Enfeux:
 				if (cond == 8)
 				{
 					htmltext = "Enfeux_q10385_01.htm";
 				}
+				
 				break;
+			
 			case Innocentin:
 				if (cond == 9)
 				{
 					htmltext = "Innocentin_q10385_01.htm";
 				}
+				
 				break;
+			
 			case Vulkan:
 				if (cond == 10)
 				{
@@ -406,13 +435,17 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagic
 				{
 					htmltext = "Vulkan_q10385_05.htm";
 				}
+				
 				break;
+			
 			case Urn:
 				if (cond == 11)
 				{
 					htmltext = "Urn_q10385_01.htm";
 				}
+				
 				break;
+			
 			case Wesley:
 				if (cond == 12)
 				{
@@ -420,32 +453,41 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagic
 					st.setCond(13);
 					st.playSound(SOUND_MIDDLE);
 				}
+				
 				break;
+			
 			case Darin:
 				if (cond == 19)
 				{
 					htmltext = "Darin_q10385_01.htm";
 				}
+				
 				break;
+			
 			case Roxxy:
 				if (cond == 19)
 				{
 					htmltext = "Roxxy_q10385_01.htm";
 				}
+				
 				break;
+			
 			case BiotinHighPriest:
 				if (cond == 20)
 				{
 					htmltext = "Biotin_q10385_01.htm";
 				}
+				
 				break;
 		}
+		
 		return htmltext;
 	}
 	
 	private void enterInstance(Player player)
 	{
 		Reflection r = player.getActiveReflection();
+		
 		if (r != null)
 		{
 			if (player.canReenterInstance(INSTANCE_ID))
@@ -494,15 +536,19 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagic
 			{
 				return;
 			}
+			
 			Player player = actor.getPlayer();
 			QuestState st = player.getQuestState(_10385_RedThreadofFate.class);
+			
 			if (st == null)
 			{
 				return;
 			}
+			
 			if (st.getCond() == 21)
 			{
 				Location loc = zone.getName().contains("Q10385_EXIT_1") ? new Location(210632, 15576, -3754) : new Location(210632, 15576, -3754);
+				
 				if (player.getReflection().getAllByNpcId(MysteriousDarkKnight, true).isEmpty())
 				{
 					NpcUtils.spawnSingle(MysteriousDarkKnight, loc, player.getReflection());

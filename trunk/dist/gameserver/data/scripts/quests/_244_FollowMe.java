@@ -65,7 +65,6 @@ public class _244_FollowMe extends Quest implements ScriptFile
 	public _244_FollowMe()
 	{
 		super(false);
-		
 		addStartNpc(NPC_ISAEL);
 		addKillId(monstersOrcs);
 		addKillId(monstersValley);
@@ -125,6 +124,7 @@ public class _244_FollowMe extends Quest implements ScriptFile
 				case COMPLETED:
 					htmltext = "30655-03.htm";
 					break;
+				
 				case CREATED:
 					if ((player.getLevel() > 40) && (player.getLevel() < 50) && (player.getPledgeType() == Clan.SUBUNIT_ACADEMY) && (player.getSponsor() != 0))
 					{
@@ -133,17 +133,18 @@ public class _244_FollowMe extends Quest implements ScriptFile
 					else
 					{
 						htmltext = "30655-02.htm";
-						
 						st.exitCurrentQuest(true);
 					}
 					
 					break;
+				
 				case STARTED:
 					switch (st.getCond())
 					{
 						case 1:
 							htmltext = "30655-05.htm";
 							break;
+						
 						case 2:
 							if (st.getInt("talk") == 1)
 							{
@@ -177,18 +178,19 @@ public class _244_FollowMe extends Quest implements ScriptFile
 							}
 							
 							break;
+						
 						case 3:
 							htmltext = "30655-17.htm";
-							
 							st.setCond(4);
 							st.playSound("ItemSound.quest_middle");
 							break;
+						
 						case 4:
 							htmltext = "30655-18.htm";
 							break;
+						
 						case 5:
 							htmltext = "30655-19.htm";
-							
 							st.takeAllItems(ITEM_MEMORIAL_CRYSTAL);
 							st.addExpAndSp(606680, 39200);
 							st.giveItems(REWARD_ACADEMY_CIRCLET, 1);

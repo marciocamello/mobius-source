@@ -55,6 +55,7 @@ public class _10268_ToTheSeedOfInfinity extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			st.giveItems(Introduction, 1);
 		}
+		
 		return event;
 	}
 	
@@ -64,6 +65,7 @@ public class _10268_ToTheSeedOfInfinity extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int id = st.getState();
 		int npcId = npc.getNpcId();
+		
 		switch (id)
 		{
 			case CREATED:
@@ -78,7 +80,9 @@ public class _10268_ToTheSeedOfInfinity extends Quest implements ScriptFile
 						htmltext = "32548-01.htm";
 					}
 				}
+				
 				break;
+			
 			case STARTED:
 				if (npcId == Keucereus)
 				{
@@ -92,8 +96,10 @@ public class _10268_ToTheSeedOfInfinity extends Quest implements ScriptFile
 					st.exitCurrentQuest(false);
 					st.playSound(SOUND_FINISH);
 				}
+				
 				break;
 		}
+		
 		return htmltext;
 	}
 }

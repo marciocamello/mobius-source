@@ -90,6 +90,7 @@ public class NaiaLock extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (!_attacked)
 		{
 			for (int i = 0; i < 4; i++)
@@ -107,6 +108,7 @@ public class NaiaLock extends Fighter
 					e.printStackTrace();
 				}
 			}
+			
 			_attacked = true;
 		}
 	}

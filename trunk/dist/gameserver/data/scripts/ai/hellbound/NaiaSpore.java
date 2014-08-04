@@ -56,6 +56,7 @@ public class NaiaSpore extends Fighter
 	{
 		final NpcInstance actor = getActor();
 		final int npcId = actor.getNpcId();
+		
 		switch (npcId)
 		{
 			case 25605:
@@ -63,28 +64,34 @@ public class NaiaSpore extends Fighter
 				epidosIndex.put(1, epidosIndex.get(1) + 1);
 				break;
 			}
+			
 			case 25606:
 			{
 				epidosIndex.put(2, epidosIndex.get(2) + 1);
 				break;
 			}
+			
 			case 25607:
 			{
 				epidosIndex.put(3, epidosIndex.get(3) + 1);
 				break;
 			}
+			
 			case 25608:
 			{
 				epidosIndex.put(4, epidosIndex.get(4) + 1);
 				break;
 			}
+			
 			default:
 				break;
 		}
+		
 		if ((isBossSpawnCondMet() != 0) && !NaiaCoreManager.isBossSpawned())
 		{
 			NaiaCoreManager.spawnEpidos(isBossSpawnCondMet());
 		}
+		
 		super.onEvtDead(killer);
 	}
 	
@@ -101,6 +108,7 @@ public class NaiaSpore extends Fighter
 				return i;
 			}
 		}
+		
 		return 0;
 	}
 }

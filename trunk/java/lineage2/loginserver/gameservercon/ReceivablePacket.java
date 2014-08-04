@@ -98,6 +98,7 @@ public abstract class ReceivablePacket extends lineage2.commons.net.nio.Receivab
 		{
 			_log.error("", e);
 		}
+		
 		return true;
 	}
 	

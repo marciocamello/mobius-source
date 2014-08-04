@@ -34,7 +34,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class SiegeGuardInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -78,21 +78,26 @@ public class SiegeGuardInstance extends NpcInstance
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		Player player = attacker.getPlayer();
+		
 		if (player == null)
 		{
 			return false;
 		}
+		
 		SiegeEvent<?, ?> siegeEvent = getEvent(SiegeEvent.class);
 		SiegeEvent<?, ?> siegeEvent2 = attacker.getEvent(SiegeEvent.class);
 		Clan clan = player.getClan();
+		
 		if (siegeEvent == null)
 		{
 			return false;
 		}
+		
 		if ((clan != null) && (siegeEvent == siegeEvent2) && (siegeEvent.getSiegeClan(SiegeEvent.DEFENDERS, clan) != null))
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -124,20 +129,25 @@ public class SiegeGuardInstance extends NpcInstance
 	protected void onDeath(Creature killer)
 	{
 		SiegeEvent<?, ?> siegeEvent = getEvent(SiegeEvent.class);
+		
 		if (killer != null)
 		{
 			Player player = killer.getPlayer();
+			
 			if ((siegeEvent != null) && (player != null))
 			{
 				Clan clan = player.getClan();
 				SiegeEvent<?, ?> siegeEvent2 = killer.getEvent(SiegeEvent.class);
+				
 				if ((clan != null) && (siegeEvent == siegeEvent2) && (siegeEvent.getSiegeClan(SiegeEvent.DEFENDERS, clan) == null))
 				{
 					Creature topdam = getAggroList().getTopDamager();
+					
 					if (topdam == null)
 					{
 						topdam = killer;
 					}
+					
 					for (Map.Entry<RewardType, RewardList> entry : getTemplate().getRewards().entrySet())
 					{
 						rollRewards(entry, killer, topdam);
@@ -145,6 +155,7 @@ public class SiegeGuardInstance extends NpcInstance
 				}
 			}
 		}
+		
 		super.onDeath(killer);
 	}
 	
@@ -158,14 +169,17 @@ public class SiegeGuardInstance extends NpcInstance
 	{
 		RewardList list = entry.getValue();
 		final Player activePlayer = topDamager.getPlayer();
+		
 		if (activePlayer == null)
 		{
 			return;
 		}
+		
 		final int diff = calculateLevelDiffForDrop(topDamager.getLevel());
 		double mod = calcStat(Stats.REWARD_MULTIPLIER, 1., topDamager, null);
 		mod *= Experience.penaltyModifier(diff, 9);
 		List<RewardItem> rewardItems = list.roll(activePlayer, mod, false, true);
+		
 		for (RewardItem drop : rewardItems)
 		{
 			dropItem(activePlayer, drop.itemId, drop.count);

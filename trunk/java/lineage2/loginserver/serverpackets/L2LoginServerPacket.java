@@ -45,6 +45,7 @@ public abstract class L2LoginServerPacket extends SendablePacket<L2LoginClient>
 		{
 			_log.error("Client: " + getClient() + " - Failed writing: " + getClass().getSimpleName() + "!", e);
 		}
+		
 		return false;
 	}
 	

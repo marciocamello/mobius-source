@@ -53,7 +53,6 @@ public class SquareMobs extends Mystic
 	public SquareMobs(NpcInstance actor)
 	{
 		super(actor);
-		
 		actor.addStatFunc(new FuncMulMinionCount(Stats.MAGIC_DEFENCE, 0x30, actor));
 		actor.addStatFunc(new FuncMulMinionCount(Stats.POWER_DEFENCE, 0x30, actor));
 	}
@@ -62,7 +61,6 @@ public class SquareMobs extends Mystic
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		
 		NpcInstance actor = getActor();
 		actor.getMinionList().addMinion(new MinionData(Servitors[Rnd.get(Servitors.length)], Rnd.get(2)));
 		_lastMinionCount = Math.max(actor.getMinionList().getAliveMinions().size(), 1);
@@ -72,10 +70,12 @@ public class SquareMobs extends Mystic
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		MonsterInstance actor = (MonsterInstance) getActor();
+		
 		if (actor.isDead())
 		{
 			return;
 		}
+		
 		_lastMinionCount = Math.max(actor.getMinionList().getAliveMinions().size(), 1);
 		super.onEvtAttacked(attacker, damage);
 	}

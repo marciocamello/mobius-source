@@ -54,23 +54,28 @@ public final class AccessoryListener implements OnEquipListener
 		{
 			return;
 		}
+		
 		Player player = (Player) actor;
+		
 		if ((item.getBodyPart() == ItemTemplate.SLOT_L_BRACELET) && (item.getTemplate().getAttachedSkills().length > 0))
 		{
 			int agathionId = player.getAgathionId();
 			int transformNpcId = player.getTransformationTemplate();
+			
 			for (Skill skill : item.getTemplate().getAttachedSkills())
 			{
 				if ((agathionId > 0) && (skill.getNpcId() == agathionId))
 				{
 					player.setAgathion(0);
 				}
+				
 				if ((skill.getNpcId() == transformNpcId) && (skill.getSkillType() == SkillType.TRANSFORMATION))
 				{
 					player.setTransformation(0);
 				}
 			}
 		}
+		
 		if (item.isAccessory() || item.getTemplate().isTalisman() || item.getTemplate().isBracelet())
 		{
 			player.sendUserInfo();
@@ -95,7 +100,9 @@ public final class AccessoryListener implements OnEquipListener
 		{
 			return;
 		}
+		
 		Player player = (Player) actor;
+		
 		if (item.isAccessory() || item.getTemplate().isTalisman() || item.getTemplate().isBracelet())
 		{
 			player.sendUserInfo();

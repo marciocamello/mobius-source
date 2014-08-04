@@ -30,7 +30,7 @@ import org.slf4j.LoggerFactory;
 public final class WyvernManagerInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -61,9 +61,11 @@ public final class WyvernManagerInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		StringTokenizer st = new StringTokenizer(command, " ");
 		String actualCommand = st.nextToken();
 		boolean condition = validateCondition(player);
+		
 		if (actualCommand.equalsIgnoreCase("RideHelp"))
 		{
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
@@ -72,6 +74,7 @@ public final class WyvernManagerInstance extends NpcInstance
 			player.sendPacket(html);
 			player.sendActionFailed();
 		}
+		
 		if (condition)
 		{
 			if (actualCommand.equalsIgnoreCase("RideWyvern") && player.isClanLeader())
@@ -124,6 +127,7 @@ public final class WyvernManagerInstance extends NpcInstance
 			player.sendActionFailed();
 			return;
 		}
+		
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		html.setFile("wyvern/lord_here.htm");
 		html.replace("%Char_name%", String.valueOf(player.getName()));
@@ -140,6 +144,7 @@ public final class WyvernManagerInstance extends NpcInstance
 	private boolean validateCondition(Player player)
 	{
 		Residence residence = getCastle();
+		
 		if ((residence != null) && (residence.getId() > 0))
 		{
 			if (player.getClan() != null)
@@ -150,7 +155,9 @@ public final class WyvernManagerInstance extends NpcInstance
 				}
 			}
 		}
+		
 		residence = getFortress();
+		
 		if ((residence != null) && (residence.getId() > 0))
 		{
 			if (player.getClan() != null)
@@ -161,7 +168,9 @@ public final class WyvernManagerInstance extends NpcInstance
 				}
 			}
 		}
+		
 		residence = getClanHall();
+		
 		if ((residence != null) && (residence.getId() > 0))
 		{
 			if (player.getClan() != null)
@@ -172,6 +181,7 @@ public final class WyvernManagerInstance extends NpcInstance
 				}
 			}
 		}
+		
 		return false;
 	}
 }

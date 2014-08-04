@@ -34,7 +34,6 @@ public class _756_TopQualityPetra extends Quest implements ScriptFile
 		super(false);
 		addTalkId(AKU);
 		addQuestItem(TOP_QUALITY_PETRA);
-		
 		addLevelCheck(97, 99);
 	}
 	
@@ -51,6 +50,7 @@ public class _756_TopQualityPetra extends Quest implements ScriptFile
 			st.exitCurrentQuest(this);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -72,6 +72,7 @@ public class _756_TopQualityPetra extends Quest implements ScriptFile
 				htmltext = "sofa_aku_q0756_03.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	

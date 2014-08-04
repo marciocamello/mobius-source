@@ -46,6 +46,7 @@ public class PrivateStoreListSell extends L2GameServerPacket
 		writeQ(_adena);
 		writeD(0x00); // L2WT GOD
 		writeD(_sellList.size());
+		
 		for (TradeItem si : _sellList)
 		{
 			writeItemInfo(si);

@@ -45,7 +45,9 @@ public class RequestAllyCrest extends L2GameClientPacket
 		{
 			return;
 		}
+		
 		byte[] data = CrestCache.getInstance().getAllyCrest(_crestId);
+		
 		if (data != null)
 		{
 			AllianceCrest ac = new AllianceCrest(_crestId, data);

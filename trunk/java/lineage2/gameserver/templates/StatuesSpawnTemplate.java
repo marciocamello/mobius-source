@@ -199,7 +199,6 @@ public class StatuesSpawnTemplate
 	public void setHair2(int hair2)
 	{
 		this.hair2 = hair2;
-		
 	}
 	
 	public void setRHand(int RHand)

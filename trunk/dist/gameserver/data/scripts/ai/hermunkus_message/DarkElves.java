@@ -81,11 +81,14 @@ public class DarkElves extends DefaultAI
 			{
 				Functions.npcSayInRange(getActor(), 1000, TEXT[Rnd.get(TEXT.length)]);
 			}
+			
 			final Reflection r = getActor().getReflection();
+			
 			if (r instanceof MemoryOfDisaster)
 			{
 				((MemoryOfDisaster) r).dieNextElf();
 			}
+			
 			getActor().doDie(getActor());
 		}
 	}

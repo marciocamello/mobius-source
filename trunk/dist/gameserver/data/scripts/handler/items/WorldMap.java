@@ -47,6 +47,7 @@ public class WorldMap extends ScriptItemHandler
 		{
 			return false;
 		}
+		
 		Player player = (Player) playable;
 		player.sendPacket(new ShowMiniMap(player, item.getItemId()));
 		return true;

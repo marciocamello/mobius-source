@@ -29,7 +29,7 @@ import lineage2.gameserver.utils.Location;
 public class CourtInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -67,7 +67,9 @@ public class CourtInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		int condition = validateCondition(player);
+		
 		if (condition <= COND_ALL_FALSE)
 		{
 			return;
@@ -86,6 +88,7 @@ public class CourtInstance extends NpcInstance
 			if (command.startsWith("Chat"))
 			{
 				int val = 0;
+				
 				try
 				{
 					val = Integer.parseInt(command.substring(5));
@@ -96,30 +99,37 @@ public class CourtInstance extends NpcInstance
 				catch (NumberFormatException nfe)
 				{
 				}
+				
 				showChatWindow(player, val);
 				return;
 			}
+			
 			if (command.startsWith("gotoleader"))
 			{
 				if (player.getClan() != null)
 				{
 					Player clanLeader = player.getClan().getLeader().getPlayer();
+					
 					if (clanLeader == null)
 					{
 						return;
 					}
+					
 					if (clanLeader.getEffectList().getEffectsBySkillId(3632) != null)
 					{
 						if (Call.canSummonHere(clanLeader) != null)
 						{
 							return;
 						}
+						
 						if (Call.canBeSummoned(player) == null)
 						{
 							player.teleToLocation(Location.findAroundPosition(clanLeader, 100));
 						}
+						
 						return;
 					}
+					
 					showChatWindow(player, "castle/CourtMagician/CourtMagician-nogate.htm");
 				}
 			}
@@ -167,7 +177,6 @@ public class CourtInstance extends NpcInstance
 						}
 					}
 				}
-				
 			}
 			else
 			{
@@ -188,6 +197,7 @@ public class CourtInstance extends NpcInstance
 		player.sendActionFailed();
 		String filename = "castle/CourtMagician/CourtMagician-no.htm";
 		int condition = validateCondition(player);
+		
 		if (condition > COND_ALL_FALSE)
 		{
 			if (condition == COND_BUSY_BECAUSE_OF_SIEGE)
@@ -206,6 +216,7 @@ public class CourtInstance extends NpcInstance
 				}
 			}
 		}
+		
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		html.setFile(filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
@@ -224,6 +235,7 @@ public class CourtInstance extends NpcInstance
 		{
 			return COND_OWNER;
 		}
+		
 		if ((getCastle() != null) && (getCastle().getId() > 0))
 		{
 			if (player.getClan() != null)
@@ -238,6 +250,7 @@ public class CourtInstance extends NpcInstance
 				}
 			}
 		}
+		
 		return COND_ALL_FALSE;
 	}
 }

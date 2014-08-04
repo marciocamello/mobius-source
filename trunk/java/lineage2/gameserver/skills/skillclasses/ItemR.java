@@ -69,12 +69,14 @@ public class ItemR extends Skill
 		{
 			return;
 		}
+		
 		Player player = (Player) activeChar;
 		
 		if ((_item_r1 != 0) && (_item_r2 != 0) && (_item_r3 != 0))
 		{
 			player.getInventory().destroyItemByItemId(_item_del, 1);
 			player.sendPacket(new SystemMessage(SystemMessage.S2_S1_HAS_DISAPPEARED).addItemName(_item_del));
+			
 			if (Rnd.chance(90))
 			{
 				player.getInventory().addItem(_item_r1, 1);
@@ -95,6 +97,7 @@ public class ItemR extends Skill
 		{
 			player.getInventory().destroyItemByItemId(_item_del, 1);
 			player.sendPacket(new SystemMessage(SystemMessage.S2_S1_HAS_DISAPPEARED).addItemName(_item_del));
+			
 			if (Rnd.chance(90))
 			{
 				player.getInventory().addItem(_item_r1, 1);

@@ -172,11 +172,14 @@ public class DragonValley implements ScriptFile
 		{
 			return 0;
 		}
+		
 		Party party = pc.getParty();
+		
 		if (party.getMemberCount() < 5)
 		{
 			return 0;
 		}
+		
 		for (Player p : party)
 		{
 			if ((p.getLevel() < 80) || !p.isInZone(zone))
@@ -184,12 +187,15 @@ public class DragonValley implements ScriptFile
 				return 0;
 			}
 		}
+		
 		double points = 0;
 		int count = party.getMemberCount();
+		
 		for (Player p : party)
 		{
 			points += weight.get(p.getClassId());
 		}
+		
 		return (int) Math.max(0, Math.min(3, Math.round(points * getCoefficient(count))));
 	}
 	
@@ -201,29 +207,37 @@ public class DragonValley implements ScriptFile
 	private double getCoefficient(int count)
 	{
 		double cf;
+		
 		switch (count)
 		{
 			case 4:
 				cf = 0.7;
 				break;
+			
 			case 5:
 				cf = 0.75;
 				break;
+			
 			case 6:
 				cf = 0.8;
 				break;
+			
 			case 7:
 				cf = 0.85;
 				break;
+			
 			case 8:
 				cf = 0.9;
 				break;
+			
 			case 9:
 				cf = 0.95;
 				break;
+			
 			default:
 				cf = 1;
 		}
+		
 		return cf;
 	}
 	

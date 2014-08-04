@@ -60,6 +60,7 @@ public class MonsterTrap implements ScriptFile
 	public void onLoad()
 	{
 		_zoneListener = new ZoneListener();
+		
 		for (String s : zones)
 		{
 			Zone zone = ReflectionUtils.getZone(s);
@@ -108,36 +109,45 @@ public class MonsterTrap implements ScriptFile
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
 			Player player = cha.getPlayer();
+			
 			if ((player == null) || (zone.getParams() == null))
 			{
 				return;
 			}
+			
 			String[] params;
 			int reuse = zone.getParams().getInteger("reuse");
 			int despawn = zone.getParams().getInteger("despawn", 5 * 60);
 			boolean attackOnSpawn = zone.getParams().getBool("attackOnSpawn", true);
 			long currentMillis = System.currentTimeMillis();
 			long nextReuse = zone.getParams().getLong("nextReuse", currentMillis);
+			
 			if (nextReuse > currentMillis)
 			{
 				return;
 			}
+			
 			zone.getParams().set("nextReuse", currentMillis + (reuse * 1000L));
 			String[] groups = zone.getParams().getString("monsters").split(";");
 			RndSelector<int[]> rnd = new RndSelector<>();
+			
 			for (String group : groups)
 			{
 				params = group.split(":");
 				int chance = Integer.parseInt(params[0]);
 				params = params[1].split(",");
 				int[] mobs = new int[params.length];
+				
 				for (int j = 0; j < params.length; j++)
 				{
 					mobs[j] = Integer.parseInt(params[j]);
 				}
+				
 				rnd.add(mobs, chance);
 			}
+			
 			int[] mobs = rnd.chance();
+			
 			for (int npcId : mobs)
 			{
 				try
@@ -148,9 +158,11 @@ public class MonsterTrap implements ScriptFile
 					spawn.setReflection(player.getReflection());
 					spawn.stopRespawn();
 					NpcInstance mob = spawn.doSpawn(true);
+					
 					if (mob != null)
 					{
 						ThreadPoolManager.getInstance().schedule(new UnSpawnTask(spawn), despawn * 1000L);
+						
 						if (mob.isAggressive() && attackOnSpawn)
 						{
 							mob.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, player, 100);

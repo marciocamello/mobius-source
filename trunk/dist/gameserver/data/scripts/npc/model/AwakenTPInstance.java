@@ -25,7 +25,7 @@ import lineage2.gameserver.utils.Location;
 public class AwakenTPInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -57,30 +57,39 @@ public class AwakenTPInstance extends NpcInstance
 			case 33563:
 				player.sendPacket(new NpcHtmlMessage(player, this, "default/33563.htm", val));
 				break;
+			
 			case 33562:
 				player.sendPacket(new NpcHtmlMessage(player, this, "default/33562.htm", val));
 				break;
+			
 			case 33564:
 				player.sendPacket(new NpcHtmlMessage(player, this, "default/33564.htm", val));
 				break;
+			
 			case 33565:
 				player.sendPacket(new NpcHtmlMessage(player, this, "default/33565.htm", val));
 				break;
+			
 			case 33560:
 				player.sendPacket(new NpcHtmlMessage(player, this, "default/33560.htm", val));
 				break;
+			
 			case 33561:
 				player.sendPacket(new NpcHtmlMessage(player, this, "default/33561.htm", val));
 				break;
+			
 			case 33566:
 				player.sendPacket(new NpcHtmlMessage(player, this, "default/33566.htm", val));
 				break;
+			
 			case 33567:
 				player.sendPacket(new NpcHtmlMessage(player, this, "default/33567.htm", val));
 				break;
+			
 			case 33568:
 				player.sendPacket(new NpcHtmlMessage(player, this, "default/33568.htm", val));
 				break;
+			
 			case 33569:
 				player.sendPacket(new NpcHtmlMessage(player, this, "default/33569.htm", val));
 				break;
@@ -99,11 +108,13 @@ public class AwakenTPInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (!player.isAwaking())
 		{
 			player.sendMessage("You do not mean? Put it? REBIRTH!");
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("Town_of_Shuttgart"))
 		{
 			player.reduceAdena(150000);
@@ -118,6 +129,7 @@ public class AwakenTPInstance extends NpcInstance
 				player.teleToLocation(new Location(-116021, 236167, -3088));
 				return;
 			}
+			
 			doNotLvl(player);
 		}
 		else if (command.equalsIgnoreCase("Seed_of_Annihilation"))
@@ -128,6 +140,7 @@ public class AwakenTPInstance extends NpcInstance
 				player.teleToLocation(new Location(-178455, 154057, 2568));
 				return;
 			}
+			
 			doNotLvl(player);
 		}
 		else if (command.equalsIgnoreCase("Bloody_Swampland"))
@@ -138,6 +151,7 @@ public class AwakenTPInstance extends NpcInstance
 				player.teleToLocation(new Location(-15826, 30477, -3616));
 				return;
 			}
+			
 			doNotLvl(player);
 		}
 		else if (command.equalsIgnoreCase("Ancient_City_Arcan"))
@@ -154,6 +168,7 @@ public class AwakenTPInstance extends NpcInstance
 				player.teleToLocation(new Location(207129, 111132, -2040));
 				return;
 			}
+			
 			doNotLvl(player);
 		}
 		else if (command.equalsIgnoreCase("Fayry_Settlement"))
@@ -164,6 +179,7 @@ public class AwakenTPInstance extends NpcInstance
 				player.teleToLocation(new Location(214432, 79587, 824));
 				return;
 			}
+			
 			doNotLvl(player);
 		}
 		else if (command.equalsIgnoreCase("Seal_of_Shilen"))
@@ -174,6 +190,7 @@ public class AwakenTPInstance extends NpcInstance
 				player.teleToLocation(new Location(187383, 20498, -3584));
 				return;
 			}
+			
 			doNotLvl(player);
 		}
 		else if (command.equalsIgnoreCase("Guilloutine_Fortress"))
@@ -184,6 +201,7 @@ public class AwakenTPInstance extends NpcInstance
 				player.teleToLocation(new Location(33446, 145486, -3432));
 				return;
 			}
+			
 			doNotLvl(player);
 		}
 		else if (command.equalsIgnoreCase("Parnassus"))
@@ -194,6 +212,7 @@ public class AwakenTPInstance extends NpcInstance
 				player.teleToLocation(new Location(149358, 172479, -952));
 				return;
 			}
+			
 			doNotLvl(player);
 		}
 		else if (command.equalsIgnoreCase("Orbis_Temple_Entrance"))
@@ -204,6 +223,7 @@ public class AwakenTPInstance extends NpcInstance
 				player.teleToLocation(new Location(198703, 86034, -192));
 				return;
 			}
+			
 			doNotLvl(player);
 		}
 		else if (command.equalsIgnoreCase("teleport"))
@@ -213,30 +233,39 @@ public class AwakenTPInstance extends NpcInstance
 				case 33563:
 					player.sendPacket(new NpcHtmlMessage(player, this, "default/33563-1.htm", val));
 					break;
+				
 				case 33562:
 					player.sendPacket(new NpcHtmlMessage(player, this, "default/33562-1.htm", val));
 					break;
+				
 				case 33564:
 					player.sendPacket(new NpcHtmlMessage(player, this, "default/33564-1.htm", val));
 					break;
+				
 				case 33565:
 					player.sendPacket(new NpcHtmlMessage(player, this, "default/33565-1.htm", val));
 					break;
+				
 				case 33560:
 					player.sendPacket(new NpcHtmlMessage(player, this, "default/33560-1.htm", val));
 					break;
+				
 				case 33561:
 					player.sendPacket(new NpcHtmlMessage(player, this, "default/33561-1.htm", val));
 					break;
+				
 				case 33566:
 					player.sendPacket(new NpcHtmlMessage(player, this, "default/33566-1.htm", val));
 					break;
+				
 				case 33567:
 					player.sendPacket(new NpcHtmlMessage(player, this, "default/33567-1.htm", val));
 					break;
+				
 				case 33568:
 					player.sendPacket(new NpcHtmlMessage(player, this, "default/33568-1.htm", val));
 					break;
+				
 				case 33569:
 					player.sendPacket(new NpcHtmlMessage(player, this, "default/33569-1.htm", val));
 					break;

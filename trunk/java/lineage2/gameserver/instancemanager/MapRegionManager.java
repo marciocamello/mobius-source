@@ -41,6 +41,7 @@ public class MapRegionManager extends AbstractHolder
 		{
 			_instance = new MapRegionManager();
 		}
+		
 		return _instance;
 	}
 	
@@ -133,11 +134,13 @@ public class MapRegionManager extends AbstractHolder
 			{
 				continue;
 			}
+			
 			if (rd.getTerritory().isInside(x, y, z))
 			{
 				return (T) rd;
 			}
 		}
+		
 		return null;
 	}
 	

@@ -38,6 +38,7 @@ public final class EffectHourglass extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if (_effected.isPlayer())
 		{
 			_effected.getPlayer().startHourglassEffect();
@@ -51,6 +52,7 @@ public final class EffectHourglass extends Effect
 	public void onExit()
 	{
 		super.onExit();
+		
 		if (_effected.isPlayer())
 		{
 			_effected.getPlayer().stopHourglassEffect();

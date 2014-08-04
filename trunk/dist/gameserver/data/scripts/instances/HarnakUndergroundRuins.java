@@ -78,6 +78,7 @@ public class HarnakUndergroundRuins extends Reflection
 	public void onPlayerEnter(Player player)
 	{
 		super.onPlayerEnter(player);
+		
 		if (state == 1)
 		{
 			if (!introShowed)
@@ -87,6 +88,7 @@ public class HarnakUndergroundRuins extends Reflection
 				ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcString.PROVE_YOUR_WORTH), 7500);
 				ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcString.ONLY_THOSE_STRONG_ENOUGH_SHALL_PROCEED), 8500);
 				ThreadPoolManager.getInstance().schedule(new SpawnNpcTask(), 7500);
+				
 				for (ClassId classId1 : ClassId.VALUES)
 				{
 					if ((classId1.getClassLevel() == ClassLevel.Awaking) && classId1.childOf(player.getClassId()))
@@ -95,6 +97,7 @@ public class HarnakUndergroundRuins extends Reflection
 						break;
 					}
 				}
+				
 				introShowed = true;
 			}
 		}
@@ -113,6 +116,7 @@ public class HarnakUndergroundRuins extends Reflection
 			openDoor(DOOR1_ID);
 			spawnByGroup(FIRST_ROOM_SECOND_GROUP);
 			Zone z = getZone(ZONE_1);
+			
 			if (z != null)
 			{
 				z.setActive(true);
@@ -124,20 +128,24 @@ public class HarnakUndergroundRuins extends Reflection
 	public void increaseSecondRoomGroup()
 	{
 		secondRoomGroup++;
+		
 		if (secondRoomGroup == 2)
 		{
 			ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcString.I_MUST_GO_HELP_SOME_MORE), 100);
 			Skill skill = SkillTable.getInstance().getInfo(DEFENSE_SKILL_ID, 1);
+			
 			for (Player player : getPlayers())
 			{
 				skill.getEffects(player, player, false, false);
 			}
+			
 			spawnByGroup(SECOND_ROOM_SOURCE_POWER);
 		}
 		else if (secondRoomGroup == 4)
 		{
 			openDoor(DOOR2_ID);
 			Zone z = getZone(ZONE_2);
+			
 			if (z != null)
 			{
 				z.setActive(true);
@@ -153,6 +161,7 @@ public class HarnakUndergroundRuins extends Reflection
 			player.sendPacket(new ExSendUIEvent(player, 0, 0, 60, 0, NpcString.REMAINING_TIME));
 			player.sendPacket(new ExShowScreenMessage(NpcString.NO_THE_SEAL_CONTROLS_HAVE_BEEN_EXPOSED_GUARDS_PROTECT_THE_SEAL_CONTROLS, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
 		}
+		
 		ThreadPoolManager.getInstance().schedule(new SpawnNpcByPlayerClass(THIRD_ROOM_MINIONS), 1);
 		failTask = ThreadPoolManager.getInstance().schedule(new FailTask(), 60000);
 		spawnByGroup(THIRD_ROOM_SEALS);
@@ -164,14 +173,17 @@ public class HarnakUndergroundRuins extends Reflection
 		{
 			failTask.cancel(true);
 		}
+		
 		despawnByGroup(THIRD_ROOM_SEALS);
 		despawnByGroup(THIRD_ROOM_GROUP);
 		despawnByGroup(THIRD_ROOM_MINIONS + "_" + classId);
 		despawnByGroup(HERMUNKUS_GROUP);
+		
 		for (Player p : getPlayers())
 		{
 			p.showQuestMovie(ExStartScenePlayer.SCENE_AWAKENING_BOSS_ENDING_A);
 		}
+		
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
 			@Override
@@ -204,7 +216,7 @@ public class HarnakUndergroundRuins extends Reflection
 	private class SpawnNpcTask extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public SpawnNpcTask()
 		{
@@ -221,13 +233,13 @@ public class HarnakUndergroundRuins extends Reflection
 				public void run()
 				{
 					List<NpcInstance> npcs = getAllByNpcId(RAKZAN_ID, true);
+					
 					if (!npcs.isEmpty())
 					{
 						npcs.get(0).getAI().notifyEvent(CtrlEvent.EVT_SCRIPT_EVENT, "SELECT_ME");
 					}
 				}
 			}, 3000);
-			
 		}
 	}
 	
@@ -271,12 +283,14 @@ public class HarnakUndergroundRuins extends Reflection
 				else if (state == 2)
 				{
 					ThreadPoolManager.getInstance().schedule(new SpawnThirdRoom(), 28000);
+					
 					for (Player p : getPlayers())
 					{
 						p.showQuestMovie(ExStartScenePlayer.SCENE_AWAKENING_BOSS_OPENING);
 					}
 				}
 			}
+			
 			zone.setActive(false);
 			zone.removeListener(this);
 		}
@@ -290,7 +304,7 @@ public class HarnakUndergroundRuins extends Reflection
 	private class SpawnThirdRoom extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public SpawnThirdRoom()
 		{
@@ -307,7 +321,7 @@ public class HarnakUndergroundRuins extends Reflection
 	private class FailTask extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public FailTask()
 		{
@@ -321,10 +335,12 @@ public class HarnakUndergroundRuins extends Reflection
 			{
 				npc.getAI().notifyEvent(CtrlEvent.EVT_SCRIPT_EVENT, "FAIL_INSTANCE");
 			}
+			
 			for (Player p : getPlayers())
 			{
 				p.showQuestMovie(ExStartScenePlayer.SCENE_AWAKENING_BOSS_ENDING_B);
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new EndTask(), 13500);
 		}
 	}
@@ -332,7 +348,7 @@ public class HarnakUndergroundRuins extends Reflection
 	private class EndTask extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public EndTask()
 		{

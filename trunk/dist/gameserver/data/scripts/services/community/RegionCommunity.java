@@ -208,10 +208,12 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 		StringTokenizer st = new StringTokenizer(bypass, "_");
 		String cmd = st.nextToken();
 		player.setSessionVar("add_fav", null);
+		
 		if ("bbsloc".equals(cmd))
 		{
 			String tpl = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_regiontpl.htm", player);
 			StringBuilder rl = new StringBuilder("");
+			
 			for (int townId = 0; townId < _towns.length; townId++)
 			{
 				int[] town = _towns[townId];
@@ -223,10 +225,12 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 				int rx = town[1];
 				int ry = town[2];
 				int offset = 0;
+				
 				for (Player seller : GameObjectsStorage.getAllPlayersForIterate())
 				{
 					int tx = MapUtils.regionX(seller);
 					int ty = MapUtils.regionY(seller);
+					
 					if ((tx >= (rx - offset)) && (tx <= (rx + offset)) && (ty >= (ry - offset)) && (ty <= (ry + offset)))
 					{
 						if ((seller.getPrivateStoreType() > 0) && (seller.getPrivateStoreType() != Player.STORE_OBSERVING_GAMES))
@@ -235,9 +239,11 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 						}
 					}
 				}
+				
 				reg = reg.replace("%sellers_count%", String.valueOf(sellers));
 				rl.append(reg);
 			}
+			
 			HashMap<Integer, String> tpls = Util.parseTemplate(HtmCache.getInstance().getNotNull("scripts/services/community/bbs_region_list.htm", player));
 			String html = tpls.get(0);
 			html = html.replace("%REGION_LIST%", rl.toString());
@@ -251,6 +257,7 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 			StringBuilder rl = new StringBuilder("");
 			int[] town = _towns[townId];
 			player.setSessionVar("add_fav", bypass + "&Region " + townId);
+			
 			for (int type = 0; type < _regionTypes.length; type++)
 			{
 				String reg = tpl.replace("%region_bypass%", "_bbsreglist_" + townId + "_" + type + "_1_0_");
@@ -261,10 +268,12 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 				int rx = town[1];
 				int ry = town[2];
 				int offset = 0;
+				
 				for (Player seller : GameObjectsStorage.getAllPlayersForIterate())
 				{
 					int tx = MapUtils.regionX(seller);
 					int ty = MapUtils.regionY(seller);
+					
 					if ((tx >= (rx - offset)) && (tx <= (rx + offset)) && (ty >= (ry - offset)) && (ty <= (ry + offset)))
 					{
 						if ((type == 0) && ((seller.getPrivateStoreType() == Player.STORE_PRIVATE_SELL) || (seller.getPrivateStoreType() == Player.STORE_PRIVATE_SELL_PACKAGE)))
@@ -281,9 +290,11 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 						}
 					}
 				}
+				
 				reg = reg.replace("%sellers_count%", String.valueOf(sellers));
 				rl.append(reg);
 			}
+			
 			HashMap<Integer, String> tpls = Util.parseTemplate(HtmCache.getInstance().getNotNull("scripts/services/community/bbs_region_list.htm", player));
 			String html = tpls.get(0);
 			html = html.replace("%REGION_LIST%", rl.toString());
@@ -303,6 +314,7 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 			int start = (page - 1) * SELLER_PER_PAGE;
 			int end = Math.min(page * SELLER_PER_PAGE, sellers.size());
 			String html = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_region_sellers.htm", player);
+			
 			if (page == 1)
 			{
 				html = html.replace("%ACTION_GO_LEFT%", "");
@@ -314,26 +326,33 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 				html = html.replace("%ACTION_GO_LEFT%", "bypass _bbsreglist_" + townId + "_" + type + "_" + (page - 1) + "_" + byItem + "_" + search);
 				html = html.replace("%NPAGE%", String.valueOf(page));
 				StringBuilder goList = new StringBuilder("");
+				
 				for (int i = page > 10 ? page - 10 : 1; i < page; i++)
 				{
 					goList.append("<td><a action=\"bypass _bbsreglist_").append(townId).append('_').append(type).append('_').append(i).append('_').append(byItem).append('_').append(search).append("\"> ").append(i).append(" </a> </td>\n\n");
 				}
+				
 				html = html.replace("%GO_LIST%", goList.toString());
 			}
+			
 			int pages = Math.max(sellers.size() / SELLER_PER_PAGE, 1);
+			
 			if (sellers.size() > (pages * SELLER_PER_PAGE))
 			{
 				pages++;
 			}
+			
 			if (pages > page)
 			{
 				html = html.replace("%ACTION_GO_RIGHT%", "bypass _bbsreglist_" + townId + "_" + type + "_" + (page + 1) + "_" + byItem + "_" + search);
 				int ep = Math.min(page + 10, pages);
 				StringBuilder goList = new StringBuilder("");
+				
 				for (int i = page + 1; i <= ep; i++)
 				{
 					goList.append("<td><a action=\"bypass _bbsreglist_").append(townId).append('_').append(type).append('_').append(i).append('_').append(byItem).append('_').append(search).append("\"> ").append(i).append(" </a> </td>\n\n");
 				}
+				
 				html = html.replace("%GO_LIST2%", goList.toString());
 			}
 			else
@@ -341,21 +360,26 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 				html = html.replace("%ACTION_GO_RIGHT%", "");
 				html = html.replace("%GO_LIST2%", "");
 			}
+			
 			StringBuilder seller_list = new StringBuilder("");
 			String tpl = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_region_stpl.htm", player);
+			
 			for (int i = start; i < end; i++)
 			{
 				Player seller = sellers.get(i);
 				List<TradeItem> tl = seller.getTradeList();
 				List<ManufactureItem> cl = seller.getCreateList();
+				
 				if ((tl == null) && (cl == null))
 				{
 					continue;
 				}
+				
 				String stpl = tpl;
 				stpl = stpl.replace("%view_bypass%", "bypass _bbsregview_" + townId + "_" + type + "_" + page + "_" + seller.getObjectId() + "_" + byItem + "_" + search);
 				stpl = stpl.replace("%seller_name%", seller.getName());
 				String title = "-";
+				
 				if (type == 0)
 				{
 					title = (tl != null) && (seller.getSellStoreName() != null) && !seller.getSellStoreName().isEmpty() ? seller.getSellStoreName() : "-";
@@ -368,17 +392,21 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 				{
 					title = (cl != null) && (seller.getManufactureName() != null) && !seller.getManufactureName().isEmpty() ? seller.getManufactureName() : "-";
 				}
+				
 				title = title.replace("<", "");
 				title = title.replace(">", "");
 				title = title.replace("&", "");
 				title = title.replace("$", "");
+				
 				if (title.isEmpty())
 				{
 					title = "-";
 				}
+				
 				stpl = stpl.replace("%seller_title%", title);
 				seller_list.append(stpl);
 			}
+			
 			html = html.replace("%SELLER_LIST%", seller_list.toString());
 			html = html.replace("%search_bypass%", "_bbsregsearch_" + townId + "_" + type);
 			html = html.replace("%TREE%", "&nbsp;>&nbsp;<a action=\"bypass _bbsregion_" + townId + "\">" + HtmlUtils.htmlNpcString(town[0]) + "</a>&nbsp;>&nbsp;" + _regionTypes[type]);
@@ -394,23 +422,28 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 			String search = st.hasMoreTokens() ? st.nextToken().toLowerCase() : "";
 			int[] town = _towns[townId];
 			Player seller = World.getPlayer(objectId);
+			
 			if ((seller == null) || (seller.getPrivateStoreType() == 0))
 			{
 				onBypassCommand(player, "_bbsreglist_" + townId + "_" + type + "_" + page + "_" + byItem + "_" + search);
 				return;
 			}
+			
 			String title = "-";
 			String tpl = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_region_storetpl.htm", player);
 			StringBuilder sb = new StringBuilder("");
+			
 			if (type < 2)
 			{
 				List<TradeItem> sl = type == 0 ? seller.getSellList() : seller.getBuyList();
 				List<TradeItem> tl = seller.getTradeList();
+				
 				if ((sl == null) || sl.isEmpty() || (tl == null))
 				{
 					onBypassCommand(player, "_bbsreglist_" + townId + "_" + type + "_" + page + "_" + byItem + "_" + search);
 					return;
 				}
+				
 				if ((type == 0) && (seller.getSellStoreName() != null) && !seller.getSellStoreName().isEmpty())
 				{
 					title = seller.getSellStoreName();
@@ -419,9 +452,11 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 				{
 					title = seller.getBuyStoreName();
 				}
+				
 				for (TradeItem ti : sl)
 				{
 					ItemTemplate item = ItemHolder.getInstance().getTemplate(ti.getItemId());
+					
 					if (item != null)
 					{
 						String stpl = tpl.replace("%item_name%", item.getName() + (item.isEquipment() && (ti.getEnchantLevel() > 0) ? " +" + ti.getEnchantLevel() : ""));
@@ -429,11 +464,13 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 						stpl = stpl.replace("%item_count%", String.valueOf(ti.getCount()));
 						stpl = stpl.replace("%item_price%", String.format("%,3d", ti.getOwnersPrice()).replace(" ", ","));
 						String desc = "";
+						
 						if (item.getCrystalType() != ItemTemplate.Grade.NONE)
 						{
 							desc = _grade[item.getCrystalType().ordinal() - 1];
 							desc += item.getCrystalCount() > 0 ? " Crystals: " + item.getCrystalCount() + ";&nbsp;" : ";&nbsp;";
 						}
+						
 						if (item.isEquipment())
 						{
 							if ((ti.getAttackElement() >= 0) && (ti.getAttackElementValue() > 0))
@@ -443,48 +480,59 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 							else if ((ti.getDefenceFire() > 0) || (ti.getDefenceWater() > 0) || (ti.getDefenceWind() > 0) || (ti.getDefenceEarth() > 0) || (ti.getDefenceHoly() > 0) || (ti.getDefenceUnholy() > 0))
 							{
 								desc += "&$1651;:";
+								
 								if (ti.getDefenceFire() > 0)
 								{
 									desc += " &$1622; +" + ti.getDefenceFire() + ";&nbsp;";
 								}
+								
 								if (ti.getDefenceWater() > 0)
 								{
 									desc += " &$1623; +" + ti.getDefenceWater() + ";&nbsp;";
 								}
+								
 								if (ti.getDefenceWind() > 0)
 								{
 									desc += " &$1624; +" + ti.getDefenceWind() + ";&nbsp;";
 								}
+								
 								if (ti.getDefenceEarth() > 0)
 								{
 									desc += " &$1625; +" + ti.getDefenceEarth() + ";&nbsp;";
 								}
+								
 								if (ti.getDefenceHoly() > 0)
 								{
 									desc += " &$1626; +" + ti.getDefenceHoly() + ";&nbsp;";
 								}
+								
 								if (ti.getDefenceUnholy() > 0)
 								{
 									desc += " &$1627; +" + ti.getDefenceUnholy() + ";&nbsp;";
 								}
 							}
 						}
+						
 						if (item.isStackable())
 						{
 							desc += "Stackable;&nbsp;";
 						}
+						
 						if (item.isSealedItem())
 						{
 							desc += "Sealed;&nbsp;";
 						}
+						
 						if (item.isShadowItem())
 						{
 							desc += "Shadow item;&nbsp;";
 						}
+						
 						if (item.isTemporal())
 						{
 							desc += "Temporal;&nbsp;";
 						}
+						
 						stpl = stpl.replace("%item_desc%", desc);
 						sb.append(stpl);
 					}
@@ -493,58 +541,72 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 			else
 			{
 				List<ManufactureItem> cl = seller.getCreateList();
+				
 				if (cl == null)
 				{
 					onBypassCommand(player, "_bbsreglist_" + townId + "_" + type + "_" + page + "_" + byItem + "_" + search);
 					return;
 				}
+				
 				if ((title = seller.getManufactureName()) == null)
 				{
 					title = "-";
 				}
+				
 				for (ManufactureItem mi : cl)
 				{
 					RecipeTemplate rec = RecipeHolder.getInstance().getRecipeByRecipeId(mi.getRecipeId() - 1);
+					
 					if (rec == null)
 					{
 						continue;
 					}
+					
 					ItemTemplate item = ItemHolder.getInstance().getTemplate(rec.getItemId());
+					
 					if (item == null)
 					{
 						continue;
 					}
+					
 					String stpl = tpl.replace("%item_name%", item.getName());
 					stpl = stpl.replace("%item_img%", item.getIcon());
 					stpl = stpl.replace("%item_count%", "N/A");
 					stpl = stpl.replace("%item_price%", String.format("%,3d", mi.getCost()).replace(" ", ","));
 					String desc = "";
+					
 					if (item.getCrystalType() != ItemTemplate.Grade.NONE)
 					{
 						desc = _grade[item.getCrystalType().ordinal() - 1] + (item.getCrystalCount() > 0 ? " Crystals: " + item.getCrystalCount() + ";&nbsp;" : ";&nbsp;");
 					}
+					
 					if (item.isStackable())
 					{
 						desc = "Stackable;&nbsp;";
 					}
+					
 					if (item.isSealedItem())
 					{
 						desc += "Sealed;&nbsp;";
 					}
+					
 					stpl = stpl.replace("%item_desc%", desc);
 					sb.append(stpl);
 				}
 			}
+			
 			String html = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_region_view.htm", player);
 			html = html.replace("%sell_type%", _regionTypes[type]);
 			title = title.replace("<", "");
 			title = title.replace(">", "");
 			title = title.replace("&", "");
 			title = title.replace("$", "");
+			
 			if (title.isEmpty())
 			{
 				title = "-";
 			}
+			
 			html = html.replace("%title%", title);
 			html = html.replace("%char_name%", seller.getName());
 			html = html.replace("%object_id%", String.valueOf(seller.getObjectId()));
@@ -557,9 +619,11 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 		{
 			int objectId = Integer.parseInt(st.nextToken());
 			Player seller = World.getPlayer(objectId);
+			
 			if (seller != null)
 			{
 				player.sendPacket(new RadarControl(0, 2, seller.getLoc()));
+				
 				if (player.knowsObject(seller))
 				{
 					player.setTarget(seller);
@@ -590,23 +654,28 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 	{
 		StringTokenizer st = new StringTokenizer(bypass, "_");
 		String cmd = st.nextToken();
+		
 		if ("bbsregsearch".equals(cmd))
 		{
 			int townId = Integer.parseInt(st.nextToken());
 			int type = Integer.parseInt(st.nextToken());
 			String byItem = "Item".equals(arg4) ? "1" : "0";
+			
 			if (arg3 == null)
 			{
 				arg3 = "";
 			}
+			
 			arg3 = arg3.replace("<", "");
 			arg3 = arg3.replace(">", "");
 			arg3 = arg3.replace("&", "");
 			arg3 = arg3.replace("$", "");
+			
 			if (arg3.length() > 30)
 			{
 				arg3 = arg3.substring(0, 30);
 			}
+			
 			onBypassCommand(player, "_bbsreglist_" + townId + "_" + type + "_1_" + byItem + "_" + arg3);
 		}
 	}
@@ -627,14 +696,17 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 		int rx = town[1];
 		int ry = town[2];
 		int offset = 0;
+		
 		for (Player seller : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			int tx = MapUtils.regionX(seller);
 			int ty = MapUtils.regionY(seller);
+			
 			if ((tx >= (rx - offset)) && (tx <= (rx + offset)) && (ty >= (ry - offset)) && (ty <= (ry + offset)))
 			{
 				List<TradeItem> tl = seller.getTradeList();
 				List<ManufactureItem> cl = seller.getCreateList();
+				
 				if (seller.getPrivateStoreType() > 0)
 				{
 					if ((type == 0) && (tl != null) && ((seller.getPrivateStoreType() == Player.STORE_PRIVATE_SELL) || (seller.getPrivateStoreType() == Player.STORE_PRIVATE_SELL_PACKAGE)))
@@ -652,23 +724,28 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 				}
 			}
 		}
+		
 		if (!search.isEmpty() && !list.isEmpty())
 		{
 			List<Player> s_list = new ArrayList<>();
+			
 			for (Player seller : list)
 			{
 				List<TradeItem> tl = seller.getTradeList();
 				List<ManufactureItem> cl = seller.getCreateList();
+				
 				if (byItem)
 				{
 					if (((type == 0) || (type == 1)) && (tl != null))
 					{
 						List<TradeItem> sl = type == 0 ? seller.getSellList() : seller.getBuyList();
+						
 						if (sl != null)
 						{
 							for (TradeItem ti : sl)
 							{
 								ItemTemplate item = ItemHolder.getInstance().getTemplate(ti.getItemId());
+								
 								if ((item != null) && (item.getName() != null) && item.getName().toLowerCase().contains(search))
 								{
 									s_list.add(seller);
@@ -682,9 +759,11 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 						for (ManufactureItem mi : cl)
 						{
 							RecipeTemplate recipe = RecipeHolder.getInstance().getRecipeByRecipeId(mi.getRecipeId() - 1);
+							
 							if (recipe != null)
 							{
 								ItemTemplate item = ItemHolder.getInstance().getTemplate(recipe.getItemId());
+								
 								if ((item != null) && (item.getName() != null) && item.getName().toLowerCase().contains(search))
 								{
 									s_list.add(seller);
@@ -707,8 +786,10 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 					s_list.add(seller);
 				}
 			}
+			
 			list = s_list;
 		}
+		
 		if (!list.isEmpty())
 		{
 			Player[] players = new Player[list.size()];
@@ -717,6 +798,7 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 			list.clear();
 			list.addAll(Arrays.asList(players));
 		}
+		
 		return list;
 	}
 	
@@ -749,6 +831,7 @@ public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 				Player p2 = (Player) o2;
 				return p1.getName().compareTo(p2.getName());
 			}
+			
 			return 0;
 		}
 	}

@@ -66,10 +66,12 @@ public class DynamicQuestController
 	{
 		DynamicQuest quest = dynamicQuestsMap.get(questId);
 		quest.setCurrentStep(step);
+		
 		if (quest.isStartCondition())
 		{
 			quest.start(new QuestEnder(questId));
 		}
+		
 		System.out.println("Condition == " + quest.isStartCondition());
 	}
 	
@@ -103,6 +105,7 @@ public class DynamicQuestController
 			log.warn("DynamicQuestController#initSchedulingPattern(int, SchedulingPattern): Not found quest with id: " + questId);
 			return;
 		}
+		
 		long nextLaunchTime = pattern.next(System.currentTimeMillis());
 		ThreadPoolManager.getInstance().schedule(new QuestStarter(questId, pattern), nextLaunchTime - System.currentTimeMillis());
 	}

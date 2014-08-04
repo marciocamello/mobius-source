@@ -73,12 +73,15 @@ public class IsleOfPrayerMystic extends Mystic
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (_penaltyMobsNotSpawned && attacker.isPlayable() && (attacker.getPlayer() != null))
 		{
 			final Party party = attacker.getPlayer().getParty();
+			
 			if ((party != null) && (party.getMemberCount() > 2))
 			{
 				_penaltyMobsNotSpawned = false;
+				
 				for (int i = 0; i < 2; i++)
 				{
 					try
@@ -97,6 +100,7 @@ public class IsleOfPrayerMystic extends Mystic
 				}
 			}
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	
@@ -108,12 +112,15 @@ public class IsleOfPrayerMystic extends Mystic
 	protected void onEvtDead(Creature killer)
 	{
 		_penaltyMobsNotSpawned = true;
+		
 		if (killer != null)
 		{
 			final Player player = killer.getPlayer();
+			
 			if (player != null)
 			{
 				final NpcInstance actor = getActor();
+				
 				switch (actor.getNpcId())
 				{
 					case 22261:
@@ -121,52 +128,68 @@ public class IsleOfPrayerMystic extends Mystic
 						{
 							actor.dropItem(player, GREEN_CRYSTAL, 1);
 						}
+						
 						break;
+					
 					case 22265:
 						if (Rnd.chance(6))
 						{
 							actor.dropItem(player, RED_CRYSTAL, 1);
 						}
+						
 						break;
+					
 					case 22260:
 						if (Rnd.chance(23))
 						{
 							actor.dropItem(player, YELLOW_CRYSTAL, 1);
 						}
+						
 						break;
+					
 					case 22262:
 						if (Rnd.chance(12))
 						{
 							actor.dropItem(player, GREEN_CRYSTAL, 1);
 						}
+						
 						break;
+					
 					case 22264:
 						if (Rnd.chance(12))
 						{
 							actor.dropItem(player, GREEN_CRYSTAL, 1);
 						}
+						
 						break;
+					
 					case 22266:
 						if (Rnd.chance(5))
 						{
 							actor.dropItem(player, RED_CRYSTAL, 1);
 						}
+						
 						break;
+					
 					case 22257:
 						if (Rnd.chance(21))
 						{
 							actor.dropItem(player, YELLOW_CRYSTAL, 1);
 						}
+						
 						break;
+					
 					case 22258:
 						if (Rnd.chance(22))
 						{
 							actor.dropItem(player, YELLOW_CRYSTAL, 1);
 						}
+						
 						break;
 				}
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 }

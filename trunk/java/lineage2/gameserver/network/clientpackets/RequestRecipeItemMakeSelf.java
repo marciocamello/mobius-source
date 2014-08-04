@@ -55,79 +55,98 @@ public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (activeChar.isActionsDisabled())
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (activeChar.isInStoreMode())
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (activeChar.isProcessingRequest())
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (activeChar.isFishing())
 		{
 			activeChar.sendPacket(SystemMsg.YOU_CANNOT_DO_THAT_WHILE_FISHING_);
 			return;
 		}
+		
 		RecipeTemplate recipe = RecipeHolder.getInstance().getRecipeByRecipeId(_recipeId);
+		
 		if ((recipe == null) || (recipe.getMaterials().length == 0))
 		{
 			activeChar.sendPacket(SystemMsg.THE_RECIPE_IS_INCORRECT);
 			return;
 		}
+		
 		if (activeChar.getCurrentMp() < recipe.getMpConsume())
 		{
 			activeChar.sendPacket(SystemMsg.NOT_ENOUGH_MP, new RecipeItemMakeInfo(activeChar, recipe, 0));
 			return;
 		}
+		
 		if (!activeChar.findRecipe(_recipeId))
 		{
 			activeChar.sendPacket(SystemMsg.PLEASE_REGISTER_A_RECIPE, ActionFail.STATIC);
 			return;
 		}
+		
 		activeChar.getInventory().writeLock();
+		
 		try
 		{
 			RecipeComponent[] materials = recipe.getMaterials();
+			
 			for (RecipeComponent material : materials)
 			{
 				if (material.getCount() == 0)
 				{
 					continue;
 				}
+				
 				if (Config.ALT_GAME_UNREGISTER_RECIPE && (ItemHolder.getInstance().getTemplate(material.getItemId()).getItemType() == EtcItemType.RECIPE))
 				{
 					RecipeTemplate rp = RecipeHolder.getInstance().getRecipeByRecipeItem(material.getItemId());
+					
 					if (activeChar.hasRecipe(rp))
 					{
 						continue;
 					}
+					
 					activeChar.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_MATERIALS_TO_PERFORM_THAT_ACTION, new RecipeItemMakeInfo(activeChar, recipe, 0));
 					return;
 				}
+				
 				ItemInstance item = activeChar.getInventory().getItemByItemId(material.getItemId());
+				
 				if ((item == null) || (item.getCount() < material.getCount()))
 				{
 					activeChar.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_MATERIALS_TO_PERFORM_THAT_ACTION, new RecipeItemMakeInfo(activeChar, recipe, 0));
 					return;
 				}
 			}
+			
 			for (RecipeComponent material : materials)
 			{
 				if (material.getCount() == 0)
 				{
 					continue;
 				}
+				
 				if (Config.ALT_GAME_UNREGISTER_RECIPE && (ItemHolder.getInstance().getTemplate(material.getItemId()).getItemType() == EtcItemType.RECIPE))
 				{
 					activeChar.unregisterRecipe(RecipeHolder.getInstance().getRecipeByRecipeItem(material.getItemId()).getId());
@@ -138,6 +157,7 @@ public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 					{
 						continue;
 					}
+					
 					activeChar.sendPacket(SystemMessage2.removeItems(material.getItemId(), material.getCount()));
 				}
 			}
@@ -152,6 +172,7 @@ public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 		int itemId = product.getItemId();
 		long itemsCount = product.getCount();
 		int success = 0;
+		
 		if (Rnd.chance(recipe.getSuccessRate()))
 		{
 			ItemFunctions.addItem(activeChar, itemId, itemsCount, true);
@@ -161,6 +182,7 @@ public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessage.S1_MANUFACTURING_FAILURE).addItemName(itemId));
 		}
+		
 		activeChar.sendPacket(new RecipeItemMakeInfo(activeChar, recipe, success));
 	}
 }

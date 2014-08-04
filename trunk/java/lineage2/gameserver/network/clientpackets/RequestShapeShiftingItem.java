@@ -46,6 +46,7 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
@@ -62,6 +63,7 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 		PcInventory inventory = player.getInventory();
 		ItemInstance targetItem = inventory.getItemByObjectId(_targetItemObjId);
 		ItemInstance stone = player.getAppearanceStone();
+		
 		if ((targetItem == null) || (stone == null))
 		{
 			player.sendPacket(ExShapeShiftingResult.FAIL);
@@ -103,6 +105,7 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 		}
 		
 		AppearanceStone appearanceStone = EnchantItemHolder.getInstance().getAppearanceStone(stone.getItemId());
+		
 		if (appearanceStone == null)
 		{
 			player.sendPacket(ExShapeShiftingResult.FAIL);
@@ -128,6 +131,7 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 		}
 		
 		Grade[] stoneGrades = appearanceStone.getGrades();
+		
 		if ((stoneGrades != null) && (stoneGrades.length > 0))
 		{
 			if (!ArrayUtils.contains(stoneGrades, targetItem.getTemplate().getItemGrade()))
@@ -140,6 +144,7 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 		}
 		
 		ShapeTargetType[] targetTypes = appearanceStone.getTargetTypes();
+		
 		if ((targetTypes == null) || (targetTypes.length == 0))
 		{
 			player.sendPacket(ExShapeShiftingResult.FAIL);
@@ -183,6 +188,7 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 		}
 		
 		ExItemType[] itemTypes = appearanceStone.getItemTypes();
+		
 		if ((itemTypes != null) && (itemTypes.length > 0))
 		{
 			if (!ArrayUtils.contains(itemTypes, targetItem.getExItemType()))
@@ -196,6 +202,7 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 		
 		ItemInstance extracItem = player.getAppearanceExtractItem();
 		int extracItemId = 0;
+		
 		if ((appearanceStone.getType() != ShapeType.RESTORE) && (appearanceStone.getType() != ShapeType.FIXED))
 		{
 			if (extracItem == null)
@@ -257,6 +264,7 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 				player.setAppearanceExtractItem(null);
 				return;
 			}
+			
 			extracItemId = extracItem.getItemId();
 		}
 		
@@ -269,9 +277,11 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 		}
 		
 		inventory.writeLock();
+		
 		try
 		{
 			long cost = appearanceStone.getCost();
+			
 			if (cost > player.getAdena())
 			{
 				player.sendPacket(SystemMsg.YOU_CANNOT_MODIFY_AS_YOU_DO_NOT_HAVE_ENOUGH_ADENA);
@@ -302,11 +312,11 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 			
 			inventory.destroyItem(stone, 1L);
 			player.reduceAdena(cost);
-			
 			// TODO Check
 			// boolean equipped = false;
 			// if (equipped = targetItem.isEquipped()) ???
 			boolean equipped = targetItem.isEquipped();
+			
 			if (!equipped)
 			{
 				inventory.isRefresh = true;
@@ -318,15 +328,19 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 				case RESTORE:
 					targetItem.setVisualId(0);
 					break;
+				
 				case NORMAL:
 					targetItem.setVisualId(extracItem.getItemId());
 					break;
+				
 				case BLESSED:
 					targetItem.setVisualId(extracItem.getItemId());
 					break;
+				
 				case FIXED:
 					targetItem.setVisualId(appearanceStone.getExtractItemId());
 					break;
+				
 				default:
 					break;
 			}
@@ -339,17 +353,16 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 				inventory.equipItem(targetItem);
 				inventory.isRefresh = false;
 			}
+			
 			player.sendPacket(new SystemMessage2(SystemMsg.YOU_HAVE_SPENT_S1_ON_A_SUCCESSFUL_APPEARANCE_MODIFICATION).addLong(cost));
 		}
 		finally
 		{
 			inventory.writeUnlock();
 		}
-		
 		// player.sendPacket(new InventoryUpdate().addModifiedItem(player, targetItem));
 		player.sendPacket(new InventoryUpdate().addModifiedItem(targetItem));
 		// player.sendPacket(new IStaticPacket[] { new ExShapeShiftingResult(targetItem.getItemId(), extracItem.getVisualId()), new UserInfo(player), new ExBR_ExtraUserInfo(player) });
-		
 		player.setAppearanceStone(null);
 		player.setAppearanceExtractItem(null);
 		player.sendPacket(new ExShapeShiftingResult(ExShapeShiftingResult.SUCCESS_RESULT, targetItem.getItemId(), extracItemId));

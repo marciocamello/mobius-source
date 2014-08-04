@@ -28,7 +28,6 @@ public class ExShowFortressMapInfo extends L2GameServerPacket
 	{
 		_fortressId = fortress.getId();
 		_fortressStatus = fortress.getSiegeEvent().isInProgress();
-		
 		FortressSiegeEvent siegeEvent = fortress.getSiegeEvent();
 		_commanders = siegeEvent.getBarrackStatus();
 	}
@@ -37,10 +36,10 @@ public class ExShowFortressMapInfo extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeEx(0x7E);
-		
 		writeD(_fortressId);
 		writeD(_fortressStatus);
 		writeD(_commanders.length);
+		
 		for (boolean b : _commanders)
 		{
 			writeD(b);

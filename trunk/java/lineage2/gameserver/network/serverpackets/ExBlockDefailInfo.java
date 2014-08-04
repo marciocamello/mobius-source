@@ -24,7 +24,6 @@ public class ExBlockDefailInfo extends L2GameServerPacket
 	{
 		_blockName = name;
 		_blockMemo = memo;
-		
 	}
 	
 	@Override

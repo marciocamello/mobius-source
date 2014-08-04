@@ -43,10 +43,12 @@ public class Furance extends DefaultAI
 	{
 		super.onEvtSpawn();
 		final NpcInstance actor = getActor();
+		
 		if (Rnd.chance(50))
 		{
 			actor.setNpcState(1);
 		}
+		
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new Switch(), 5 * 60 * 1000L, 5 * 60 * 1000L);
 	}
 	
@@ -62,6 +64,7 @@ public class Furance extends DefaultAI
 		public void runImpl()
 		{
 			final NpcInstance actor = getActor();
+			
 			if (actor.getNpcState() == 1)
 			{
 				actor.setNpcState(2);

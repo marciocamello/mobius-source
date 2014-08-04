@@ -154,6 +154,7 @@ public class AdminAdmin implements IAdminCommandHandler
 	{
 		Commands command = (Commands) comm;
 		StringTokenizer st;
+		
 		if (activeChar.getPlayerAccess().Menu)
 		{
 			switch (command)
@@ -161,6 +162,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				case admin_admin:
 					activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/admin.htm"));
 					break;
+				
 				case admin_play_sounds:
 					if (wordList.length == 1)
 					{
@@ -176,7 +178,9 @@ public class AdminAdmin implements IAdminCommandHandler
 						{
 						}
 					}
+					
 					break;
+				
 				case admin_play_sound:
 					try
 					{
@@ -185,7 +189,9 @@ public class AdminAdmin implements IAdminCommandHandler
 					catch (StringIndexOutOfBoundsException e)
 					{
 					}
+					
 					break;
+				
 				case admin_silence:
 					if (activeChar.getMessageRefusal())
 					{
@@ -200,11 +206,14 @@ public class AdminAdmin implements IAdminCommandHandler
 						{
 							activeChar.setVar("gm_silence", "true", -1);
 						}
+						
 						activeChar.setMessageRefusal(true);
 						activeChar.sendPacket(Msg.MESSAGE_REFUSAL_MODE);
 						activeChar.sendEtcStatusUpdate();
 					}
+					
 					break;
+				
 				case admin_tradeoff:
 					try
 					{
@@ -230,9 +239,12 @@ public class AdminAdmin implements IAdminCommandHandler
 							Functions.sendDebugMessage(activeChar, "tradeoff currently disabled");
 						}
 					}
+					
 					break;
+				
 				case admin_show_html:
 					String html = wordList[1];
+					
 					try
 					{
 						if (html != null)
@@ -248,15 +260,19 @@ public class AdminAdmin implements IAdminCommandHandler
 					{
 						Functions.sendDebugMessage(activeChar, "Html page not found");
 					}
+					
 					break;
+				
 				case admin_setnpcstate:
 					if (wordList.length < 2)
 					{
 						Functions.sendDebugMessage(activeChar, "USAGE: //setnpcstate state");
 						return false;
 					}
+					
 					int state;
 					GameObject target = activeChar.getTarget();
+					
 					try
 					{
 						state = Integer.parseInt(wordList[1]);
@@ -266,14 +282,17 @@ public class AdminAdmin implements IAdminCommandHandler
 						Functions.sendDebugMessage(activeChar, "You must specify state");
 						return false;
 					}
+					
 					if (!target.isNpc())
 					{
 						Functions.sendDebugMessage(activeChar, "You must target an NPC");
 						return false;
 					}
+					
 					NpcInstance npc = (NpcInstance) target;
 					npc.setNpcState(state);
 					break;
+				
 				case admin_setareanpcstate:
 					try
 					{
@@ -281,6 +300,7 @@ public class AdminAdmin implements IAdminCommandHandler
 						String[] vals = val.split(" ");
 						int range = NumberUtils.toInt(vals[0], 0);
 						int astate = vals.length > 1 ? NumberUtils.toInt(vals[1], 0) : 0;
+						
 						for (NpcInstance n : activeChar.getAroundNpc(range, 200))
 						{
 							n.setNpcState(astate);
@@ -290,14 +310,18 @@ public class AdminAdmin implements IAdminCommandHandler
 					{
 						Functions.sendDebugMessage(activeChar, "Usage: //setareanpcstate [range] [state]");
 					}
+					
 					break;
+				
 				case admin_showmovie:
 					if (wordList.length < 2)
 					{
 						Functions.sendDebugMessage(activeChar, "USAGE: //showmovie id");
 						return false;
 					}
+					
 					int id;
+					
 					try
 					{
 						id = Integer.parseInt(wordList[1]);
@@ -307,15 +331,19 @@ public class AdminAdmin implements IAdminCommandHandler
 						Functions.sendDebugMessage(activeChar, "You must specify id");
 						return false;
 					}
+					
 					activeChar.showQuestMovie(id);
 					break;
+				
 				case admin_setzoneinfo:
 					if (wordList.length < 2)
 					{
 						Functions.sendDebugMessage(activeChar, "USAGE: //setzoneinfo id");
 						return false;
 					}
+					
 					int stateid;
+					
 					try
 					{
 						stateid = Integer.parseInt(wordList[1]);
@@ -325,15 +353,19 @@ public class AdminAdmin implements IAdminCommandHandler
 						Functions.sendDebugMessage(activeChar, "You must specify id");
 						return false;
 					}
+					
 					activeChar.broadcastPacket(new ExChangeClientEffectInfo(stateid));
 					break;
+				
 				case admin_eventtrigger:
 					if (wordList.length < 2)
 					{
 						Functions.sendDebugMessage(activeChar, "USAGE: //eventtrigger id");
 						return false;
 					}
+					
 					int triggerid;
+					
 					try
 					{
 						triggerid = Integer.parseInt(wordList[1]);
@@ -343,15 +375,19 @@ public class AdminAdmin implements IAdminCommandHandler
 						Functions.sendDebugMessage(activeChar, "You must specify id");
 						return false;
 					}
+					
 					activeChar.broadcastPacket(new EventTrigger(triggerid, true));
 					break;
+				
 				case admin_debug:
 					GameObject ob = activeChar.getTarget();
+					
 					if (!ob.isPlayer())
 					{
 						Functions.sendDebugMessage(activeChar, "Only player target is allowed");
 						return false;
 					}
+					
 					Player pl = ob.getPlayer();
 					List<String> _s = new ArrayList<>();
 					_s.add("==========TARGET STATS:");
@@ -398,22 +434,27 @@ public class AdminAdmin implements IAdminCommandHandler
 					_s.add("==Pole Attack Angle: " + pl.calcStat(Stats.POLE_ATTACK_ANGLE, null, null));
 					_s.add("==Pole Target Count: " + pl.calcStat(Stats.POLE_TARGET_COUNT, 1, null, null));
 					_s.add("==========DONE.");
+					
 					for (String s : _s)
 					{
 						Functions.sendDebugMessage(activeChar, s);
 					}
+					
 					break;
+				
 				case admin_uievent:
 					if (wordList.length < 5)
 					{
 						Functions.sendDebugMessage(activeChar, "USAGE: //uievent isHide doIncrease startTime endTime Text");
 						return false;
 					}
+					
 					int hide;
 					int increase;
 					int startTime;
 					int endTime;
 					String text;
+					
 					try
 					{
 						hide = Integer.parseInt(wordList[1]);
@@ -427,71 +468,91 @@ public class AdminAdmin implements IAdminCommandHandler
 						Functions.sendDebugMessage(activeChar, "Invalid format");
 						return false;
 					}
+					
 					activeChar.broadcastPacket(new ExSendUIEvent(activeChar, hide, increase, startTime, endTime, text));
 					break;
+				
 				case admin_opensod:
 					if (wordList.length < 1)
 					{
 						Functions.sendDebugMessage(activeChar, "USAGE: //opensod minutes");
 						return false;
 					}
+					
 					SoDManager.openSeed(Integer.parseInt(wordList[1]) * 60 * 1000L);
 					break;
+				
 				case admin_closesod:
 					SoDManager.closeSeed();
 					break;
+				
 				case admin_setsoistage:
 					if (wordList.length < 1)
 					{
 						Functions.sendDebugMessage(activeChar, "USAGE: //setsoistage stage[1-5]");
 						return false;
 					}
+					
 					SoIManager.setCurrentStage(Integer.parseInt(wordList[1]));
 					break;
+				
 				case admin_soinotify:
 					if (wordList.length < 1)
 					{
 						Functions.sendDebugMessage(activeChar, "USAGE: //soinotify [1-3]");
 						return false;
 					}
+					
 					switch (Integer.parseInt(wordList[1]))
 					{
 						case 1:
 							SoIManager.notifyCohemenesKill();
 							break;
+						
 						case 2:
 							SoIManager.notifyEkimusKill();
 							break;
+						
 						case 3:
 							SoIManager.notifyHoEDefSuccess();
 							break;
 					}
+					
 					break;
+				
 				case admin_forcenpcinfo:
 					GameObject obj2 = activeChar.getTarget();
+					
 					if (!obj2.isNpc())
 					{
 						Functions.sendDebugMessage(activeChar, "Only NPC target is allowed");
 						return false;
 					}
+					
 					((NpcInstance) obj2).broadcastCharInfo();
 					break;
+				
 				case admin_loc:
 					Functions.sendDebugMessage(activeChar, "Coords: X:" + activeChar.getLoc().x + " Y:" + activeChar.getLoc().y + " Z:" + activeChar.getLoc().z + " H:" + activeChar.getLoc().h);
 					break;
+				
 				case admin_locdump:
 					st = new StringTokenizer(fullString, " ");
+					
 					try
 					{
 						st.nextToken();
+						
 						try
 						{
 							new File("dumps").mkdir();
 							File f = new File("dumps/locdump.txt");
+							
 							if (!f.exists())
 							{
 								f.createNewFile();
 							}
+							
 							Functions.sendDebugMessage(activeChar, "Coords: X:" + activeChar.getLoc().x + " Y:" + activeChar.getLoc().y + " Z:" + activeChar.getLoc().z + " H:" + activeChar.getLoc().h);
 							FileWriter writer = new FileWriter(f, true);
 							writer.write("Loc: " + activeChar.getLoc().x + ", " + activeChar.getLoc().y + ", " + activeChar.getLoc().z + "\n");
@@ -504,7 +565,9 @@ public class AdminAdmin implements IAdminCommandHandler
 					catch (Exception e)
 					{
 					}
+					
 					break;
+				
 				case admin_undying:
 					if (activeChar.isUndying())
 					{
@@ -516,19 +579,24 @@ public class AdminAdmin implements IAdminCommandHandler
 						activeChar.setUndying(true);
 						Functions.sendDebugMessage(activeChar, "Undying state has been enabled.");
 					}
+					
 					break;
+				
 				default:
 					activeChar.sendMessage("Command isn't implemented yet.");
 					break;
 			}
+			
 			return true;
 		}
+		
 		if (activeChar.getPlayerAccess().CanTeleport)
 		{
 			switch (command)
 			{
 				case admin_show_html:
 					String html = wordList[1];
+					
 					try
 					{
 						if (html != null)
@@ -551,12 +619,16 @@ public class AdminAdmin implements IAdminCommandHandler
 					{
 						activeChar.sendMessage("Html page not found");
 					}
+					
 					break;
+				
 				default:
 					break;
 			}
+			
 			return true;
 		}
+		
 		return false;
 	}
 	

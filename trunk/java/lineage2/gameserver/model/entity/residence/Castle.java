@@ -47,7 +47,7 @@ import org.slf4j.LoggerFactory;
 public class Castle extends Residence
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -94,23 +94,25 @@ public class Castle extends Residence
 		for (IntObjectMap.Entry<List> entry : _relatedFortresses.entrySet())
 		{
 			_relatedFortresses.remove(entry.getKey());
-			
 			List<Integer> list = entry.getValue();
 			List<Fortress> list2 = new ArrayList<>(list.size());
+			
 			for (int i : list)
 			{
 				Fortress fortress = ResidenceHolder.getInstance().getResidence(Fortress.class, i);
+				
 				if (fortress == null)
 				{
 					continue;
 				}
 				
 				list2.add(fortress);
-				
 				fortress.addRelatedCastle(this);
 			}
+			
 			_relatedFortresses.put(entry.getKey(), list2);
 		}
+		
 		broadcastResidenceState();
 	}
 	
@@ -129,14 +131,17 @@ public class Castle extends Residence
 			if (newOwner.getHasFortress() != 0)
 			{
 				Fortress oldFortress = ResidenceHolder.getInstance().getResidence(Fortress.class, newOwner.getHasFortress());
+				
 				if (oldFortress != null)
 				{
 					oldFortress.changeOwner(null);
 				}
 			}
+			
 			if (newOwner.getCastle() != 0)
 			{
 				Castle oldCastle = ResidenceHolder.getInstance().getResidence(Castle.class, newOwner.getCastle());
+				
 				if (oldCastle != null)
 				{
 					oldCastle.changeOwner(null);
@@ -145,20 +150,22 @@ public class Castle extends Residence
 		}
 		
 		Clan oldOwner = null;
+		
 		if ((getOwnerId() > 0) && ((newOwner == null) || (newOwner.getClanId() != getOwnerId())))
 		{
 			removeSkills();
-			
 			setTaxPercent(null, 0);
 			cancelCycleTask();
-			
 			oldOwner = getOwner();
+			
 			if (oldOwner != null)
 			{
 				long amount = getTreasury();
+				
 				if (amount > 0)
 				{
 					Warehouse warehouse = oldOwner.getWarehouse();
+					
 					if (warehouse != null)
 					{
 						warehouse.addItem(ItemTemplate.ITEM_ID_ADENA, amount);
@@ -185,9 +192,7 @@ public class Castle extends Residence
 		}
 		
 		updateOwnerInDB(newOwner);
-		
 		rewardSkills();
-		
 		update();
 	}
 	
@@ -203,7 +208,6 @@ public class Castle extends Residence
 		_procureNext = new ArrayList<>();
 		_productionNext = new ArrayList<>();
 		_isNextPeriodApproved = false;
-		
 		_owner = ClanDataDAO.getInstance().getOwner(this);
 		CastleDAO.getInstance().select(this);
 		CastleHiredGuardDAO.getInstance().load(this);
@@ -223,9 +227,9 @@ public class Castle extends Residence
 	private void updateOwnerInDB(Clan clan)
 	{
 		_owner = clan; // Update owner id property
-		
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -240,7 +244,6 @@ public class Castle extends Residence
 				statement.setInt(1, getId());
 				statement.setInt(2, getOwnerId());
 				statement.execute();
-				
 				clan.broadcastClanStatus(true, false, false);
 			}
 		}
@@ -260,6 +263,7 @@ public class Castle extends Residence
 		{
 			_TaxPercent = 30;
 		}
+		
 		return _TaxPercent;
 	}
 	
@@ -311,12 +315,15 @@ public class Castle extends Residence
 		if ((amount > 1) && (_id != 5) && (_id != 8)) // If current castle instance is not Aden or Rune
 		{
 			Castle royal = ResidenceHolder.getInstance().getResidence(Castle.class, _id >= 7 ? 8 : 5);
+			
 			if (royal != null)
 			{
 				long royalTax = (long) (amount * royal.getTaxRate()); // Find out what royal castle gets from the current castle instance's income
+				
 				if (royal.getOwnerId() > 0)
 				{
 					royal.addToTreasury(royalTax, shop, seed); // Only bother to really add the tax to the treasury if not npc owned
+					
 					if (_id == 5)
 					{
 						Log.add("Aden|" + royalTax + "|Castle:adenTax", "treasury");
@@ -353,7 +360,6 @@ public class Castle extends Residence
 		}
 		
 		GameStats.addAdena(amount);
-		
 		// Add to the current treasury total. Use "-" to substract from treasury
 		_treasury = SafeMath.addAndLimit(_treasury, amount);
 		
@@ -374,6 +380,7 @@ public class Castle extends Residence
 	public int getCropRewardType(int crop)
 	{
 		int rw = 0;
+		
 		for (CropProcure cp : _procure)
 		{
 			if (cp.getId() == crop)
@@ -381,6 +388,7 @@ public class Castle extends Residence
 				rw = cp.getReward();
 			}
 		}
+		
 		return rw;
 	}
 	
@@ -388,7 +396,6 @@ public class Castle extends Residence
 	public void setTaxPercent(Player activeChar, int taxPercent)
 	{
 		setTaxPercent(taxPercent);
-		
 		setJdbcState(JdbcEntityState.UPDATED);
 		update();
 		
@@ -404,6 +411,7 @@ public class Castle extends Residence
 		{
 			_TaxRate = 0.15;
 		}
+		
 		return _TaxRate;
 	}
 	
@@ -455,6 +463,7 @@ public class Castle extends Residence
 				return seed;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -467,6 +476,7 @@ public class Castle extends Residence
 				return crop;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -487,6 +497,7 @@ public class Castle extends Residence
 		}
 		
 		long total = 0;
+		
 		if (production != null)
 		{
 			for (SeedProduction seed : production)
@@ -494,6 +505,7 @@ public class Castle extends Residence
 				total += Manor.getInstance().getSeedBuyPrice(seed.getId()) * seed.getStartProduce();
 			}
 		}
+		
 		if (procure != null)
 		{
 			for (CropProcure crop : procure)
@@ -501,6 +513,7 @@ public class Castle extends Residence
 				total += crop.getPrice() * crop.getStartAmount();
 			}
 		}
+		
 		return total;
 	}
 	
@@ -509,6 +522,7 @@ public class Castle extends Residence
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -522,18 +536,22 @@ public class Castle extends Residence
 				int count = 0;
 				String query = "INSERT INTO castle_manor_production VALUES ";
 				String values[] = new String[_production.size()];
+				
 				for (SeedProduction s : _production)
 				{
 					values[count] = "(" + getId() + "," + s.getId() + "," + s.getCanProduce() + "," + s.getStartProduce() + "," + s.getPrice() + "," + CastleManorManager.PERIOD_CURRENT + ")";
 					count++;
 				}
+				
 				if (values.length > 0)
 				{
 					query += values[0];
+					
 					for (int i = 1; i < values.length; i++)
 					{
 						query += "," + values[i];
 					}
+					
 					statement = con.prepareStatement(query);
 					statement.execute();
 					DbUtils.close(statement);
@@ -545,18 +563,22 @@ public class Castle extends Residence
 				int count = 0;
 				String query = "INSERT INTO castle_manor_production VALUES ";
 				String values[] = new String[_productionNext.size()];
+				
 				for (SeedProduction s : _productionNext)
 				{
 					values[count] = "(" + getId() + "," + s.getId() + "," + s.getCanProduce() + "," + s.getStartProduce() + "," + s.getPrice() + "," + CastleManorManager.PERIOD_NEXT + ")";
 					count++;
 				}
+				
 				if (values.length > 0)
 				{
 					query += values[0];
+					
 					for (int i = 1; i < values.length; i++)
 					{
 						query += "," + values[i];
 					}
+					
 					statement = con.prepareStatement(query);
 					statement.execute();
 					DbUtils.close(statement);
@@ -578,6 +600,7 @@ public class Castle extends Residence
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -586,7 +609,6 @@ public class Castle extends Residence
 			statement.setInt(2, period);
 			statement.execute();
 			DbUtils.close(statement);
-			
 			List<SeedProduction> prod = null;
 			prod = getSeedProduction(period);
 			
@@ -595,18 +617,22 @@ public class Castle extends Residence
 				int count = 0;
 				String query = "INSERT INTO castle_manor_production VALUES ";
 				String values[] = new String[prod.size()];
+				
 				for (SeedProduction s : prod)
 				{
 					values[count] = "(" + getId() + "," + s.getId() + "," + s.getCanProduce() + "," + s.getStartProduce() + "," + s.getPrice() + "," + period + ")";
 					count++;
 				}
+				
 				if (values.length > 0)
 				{
 					query += values[0];
+					
 					for (int i = 1; i < values.length; i++)
 					{
 						query += "," + values[i];
 					}
+					
 					statement = con.prepareStatement(query);
 					statement.execute();
 					DbUtils.close(statement);
@@ -628,6 +654,7 @@ public class Castle extends Residence
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -635,45 +662,55 @@ public class Castle extends Residence
 			statement.setInt(1, getId());
 			statement.execute();
 			DbUtils.close(statement);
+			
 			if (_procure != null)
 			{
 				int count = 0;
 				String query = "INSERT INTO castle_manor_procure VALUES ";
 				String values[] = new String[_procure.size()];
+				
 				for (CropProcure cp : _procure)
 				{
 					values[count] = "(" + getId() + "," + cp.getId() + "," + cp.getAmount() + "," + cp.getStartAmount() + "," + cp.getPrice() + "," + cp.getReward() + "," + CastleManorManager.PERIOD_CURRENT + ")";
 					count++;
 				}
+				
 				if (values.length > 0)
 				{
 					query += values[0];
+					
 					for (int i = 1; i < values.length; i++)
 					{
 						query += "," + values[i];
 					}
+					
 					statement = con.prepareStatement(query);
 					statement.execute();
 					DbUtils.close(statement);
 				}
 			}
+			
 			if (_procureNext != null)
 			{
 				int count = 0;
 				String query = "INSERT INTO castle_manor_procure VALUES ";
 				String values[] = new String[_procureNext.size()];
+				
 				for (CropProcure cp : _procureNext)
 				{
 					values[count] = "(" + getId() + "," + cp.getId() + "," + cp.getAmount() + "," + cp.getStartAmount() + "," + cp.getPrice() + "," + cp.getReward() + "," + CastleManorManager.PERIOD_NEXT + ")";
 					count++;
 				}
+				
 				if (values.length > 0)
 				{
 					query += values[0];
+					
 					for (int i = 1; i < values.length; i++)
 					{
 						query += "," + values[i];
 					}
+					
 					statement = con.prepareStatement(query);
 					statement.execute();
 					DbUtils.close(statement);
@@ -695,6 +732,7 @@ public class Castle extends Residence
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -703,7 +741,6 @@ public class Castle extends Residence
 			statement.setInt(2, period);
 			statement.execute();
 			DbUtils.close(statement);
-			
 			List<CropProcure> proc = null;
 			proc = getCropProcure(period);
 			
@@ -718,13 +755,16 @@ public class Castle extends Residence
 					values[count] = "(" + getId() + "," + cp.getId() + "," + cp.getAmount() + "," + cp.getStartAmount() + "," + cp.getPrice() + "," + cp.getReward() + "," + period + ")";
 					count++;
 				}
+				
 				if (values.length > 0)
 				{
 					query += values[0];
+					
 					for (int i = 1; i < values.length; i++)
 					{
 						query += "," + values[i];
 					}
+					
 					statement = con.prepareStatement(query);
 					statement.execute();
 					DbUtils.close(statement);
@@ -745,6 +785,7 @@ public class Castle extends Residence
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -769,6 +810,7 @@ public class Castle extends Residence
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -802,6 +844,7 @@ public class Castle extends Residence
 	public void addRelatedFortress(int type, int fortress)
 	{
 		List<Integer> fortresses = _relatedFortresses.get(type);
+		
 		if (fortresses == null)
 		{
 			_relatedFortresses.put(type, fortresses = new ArrayList<>());
@@ -813,10 +856,12 @@ public class Castle extends Residence
 	public int getDomainFortressContract()
 	{
 		List<Fortress> list = _relatedFortresses.get(Fortress.DOMAIN);
+		
 		if (list == null)
 		{
 			return 0;
 		}
+		
 		for (Fortress f : list)
 		{
 			if ((f.getContractState() == Fortress.CONTRACT_WITH_CASTLE) && (f.getCastleId() == getId()))
@@ -824,6 +869,7 @@ public class Castle extends Residence
 				return f.getId();
 			}
 		}
+		
 		return 0;
 	}
 	
@@ -872,7 +918,6 @@ public class Castle extends Residence
 	public void setResidenceSide(ResidenceSide side)
 	{
 		_residenceSide = side;
-		
 		setJdbcState(JdbcEntityState.UPDATED);
 		update();
 	}
@@ -890,6 +935,7 @@ public class Castle extends Residence
 	public void broadcastResidenceState()
 	{
 		L2GameServerPacket trigger = new ExCastleState(this);
+		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			player.sendPacket(trigger);
@@ -924,8 +970,10 @@ public class Castle extends Residence
 				setTaxPercent(null, 30);
 				_log.info("Territory of Gludio Castle is on Dark Side");
 			}
+			
 			return;
 		}
+		
 		if (getId() == 2)
 		{
 			//
@@ -948,8 +996,10 @@ public class Castle extends Residence
 				setTaxPercent(null, 30);
 				_log.info("Territory of Dion Castle is on Dark Side");
 			}
+			
 			return;
 		}
+		
 		if (getId() == 3)
 		{
 			if ((getResidenceSide().ordinal() == 1) || (getResidenceSide().ordinal() == 0))
@@ -971,8 +1021,10 @@ public class Castle extends Residence
 				setTaxPercent(null, 30);
 				_log.info("Territory of Giran Castle is on Dark Side");
 			}
+			
 			return;
 		}
+		
 		if (getId() == 4)
 		{
 			if ((getResidenceSide().ordinal() == 1) || (getResidenceSide().ordinal() == 0))
@@ -994,8 +1046,10 @@ public class Castle extends Residence
 				setTaxPercent(null, 30);
 				_log.info("Territory of Oren Castle is on Dark Side");
 			}
+			
 			return;
 		}
+		
 		if (getId() == 5)
 		{
 			if ((getResidenceSide().ordinal() == 1) || (getResidenceSide().ordinal() == 0))
@@ -1017,8 +1071,10 @@ public class Castle extends Residence
 				setTaxPercent(null, 30);
 				_log.info("Territory of Aden Castle is on Dark Side");
 			}
+			
 			return;
 		}
+		
 		if (getId() == 6)
 		{
 			if ((getResidenceSide().ordinal() == 1) || (getResidenceSide().ordinal() == 0))
@@ -1040,8 +1096,10 @@ public class Castle extends Residence
 				setTaxPercent(null, 30);
 				_log.info("Territory of Innadril Castle is on Dark Side");
 			}
+			
 			return;
 		}
+		
 		if (getId() == 7)
 		{
 			if ((getResidenceSide().ordinal() == 1) || (getResidenceSide().ordinal() == 0))
@@ -1063,8 +1121,10 @@ public class Castle extends Residence
 				setTaxPercent(null, 30);
 				_log.info("Territory of Schuttgart Castle is on Dark Side");
 			}
+			
 			return;
 		}
+		
 		if (getId() == 8)
 		{
 			if ((getResidenceSide().ordinal() == 1) || (getResidenceSide().ordinal() == 0))
@@ -1086,8 +1146,10 @@ public class Castle extends Residence
 				setTaxPercent(null, 30);
 				_log.info("Territory of Rune Castle is on Dark Side");
 			}
+			
 			return;
 		}
+		
 		if (getId() == 9)
 		{
 			if ((getResidenceSide().ordinal() == 1) || (getResidenceSide().ordinal() == 0))
@@ -1109,6 +1171,7 @@ public class Castle extends Residence
 				setTaxPercent(null, 30);
 				_log.info("Territory of Goddard Castle is on Dark Side");
 			}
+			
 			return;
 		}
 	}
@@ -1119,10 +1182,10 @@ public class Castle extends Residence
 		// _b = b;
 		// _message = message;
 		L2GameServerPacket trigger = new EventTrigger(value, b);
+		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			player.sendPacket(trigger);
 		}
-		
 	}
 }

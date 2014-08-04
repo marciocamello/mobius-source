@@ -45,7 +45,7 @@ public class ExResponseCommissionBuyInfo extends L2GameServerPacket
 		writeH(_itemInfo.getItem().getEnchantLevel());
 		writeH(_itemInfo.getItem().getCustomType2());
 		writeD(_itemInfo.getItem().getAugmentationId()); // L2WT TEST!!! D =
-															// [HH] [00 00] [00 00]
+		// [HH] [00 00] [00 00]
 		writeD(_itemInfo.getItem().getShadowLifeTime());
 		writeD(_itemInfo.getItem().getTemporalLifeTime());
 		writeH(0x01); // L2WT GOD

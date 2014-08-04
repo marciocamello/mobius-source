@@ -59,6 +59,7 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 		{
 			_Instance = new EnchantCommunity();
 		}
+		
 		return _Instance;
 	}
 	
@@ -129,13 +130,16 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 			sb.append("<table width=400>");
 			ItemInstance[] arr = activeChar.getInventory().getItems();
 			int len = arr.length;
+			
 			for (int i = 0; i < len; i++)
 			{
 				ItemInstance _item = arr[i];
+				
 				if ((_item == null) || (_item.getTemplate() instanceof EtcItemTemplate) || _item.getTemplate().isBelt() || _item.getTemplate().isUnderwear() || !_item.isEquipped() || _item.isHeroWeapon() || _item.getTemplate().isBracelet() || _item.getTemplate().isCloak() || (_item.getTemplate().getCrystalType() == ItemTemplate.Grade.NONE) || ((_item.getItemId() >= 7816) && (_item.getItemId() <= 7831)) || _item.isShadowItem() || _item.isCommonItem() || _item.isTemporalItem() || (_item.getEnchantLevel() >= (Config.MAX_ENCHANT + 1)))
 				{
 					continue;
 				}
+				
 				sb.append("<tr><td><img src=icon." + _item.getTemplate().getIcon() + " width=32 height=32></td><td>");
 				sb.append("<font color=\"LEVEL\">" + _item.getTemplate().getName() + " " + (_item.getEnchantLevel() <= 0 ? "" : "</font><br><font color=3293F3>Enchanted to: +" + _item.getEnchantLevel()) + "</font><br1>");
 				sb.append("Enchant for: <font color=\"LEVEL\">" + name + "</font>");
@@ -146,11 +150,13 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 				sb.append("<button value=\"Attribute\" action=\"bypass _bbsechant;enchlistpageAtrChus;" + _item.getObjectId() + "\" width=75 height=18 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 				sb.append("</td></tr>");
 			}
+			
 			sb.append("</table>");
 			String content = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/enchanter.htm", activeChar);
 			content = content.replace("%enchanter%", sb.toString());
 			ShowBoard.separateAndSend(BbsUtil.htmlAll(content, activeChar), activeChar);
 		}
+		
 		if (command.startsWith("_bbsechant;enchlistpage;"))
 		{
 			StringTokenizer st = new StringTokenizer(command, ";");
@@ -172,16 +178,19 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 			sb.append("<br>");
 			sb.append("<br>");
 			sb.append("<table border=0 width=400><tr><td width=200>");
+			
 			for (int i = 0; i < Config.ENCHANT_LEVELS.length; i++)
 			{
 				sb.append("<center><button value=\"Add +" + Config.ENCHANT_LEVELS[i] + " (Price:" + (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_PRICE_WPN[i] : Config.ENCHANT_PRICE_ARM[i]) + " " + name + ")\" action=\"bypass _bbsechant;enchantgo;" + Config.ENCHANT_LEVELS[i] + ";" + (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_PRICE_WPN[i] : Config.ENCHANT_PRICE_ARM[i]) + ";" + ItemForEchantObjID + "\" width=200 height=20 back=\"L2UI_CT1.Button_DF\" fore=\"L2UI_CT1.Button_DF\">");
 				sb.append("<br1>");
 			}
+			
 			sb.append("</td></tr></table><br1><button value=\"Back\" action=\"bypass _bbsechant;\" width=70 height=18 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 			String content = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/enchanter.htm", activeChar);
 			content = content.replace("%enchanter%", sb.toString());
 			ShowBoard.separateAndSend(BbsUtil.htmlAll(content, activeChar), activeChar);
 		}
+		
 		if (command.startsWith("_bbsechant;enchlistpageAtrChus;"))
 		{
 			StringTokenizer st = new StringTokenizer(command, ";");
@@ -221,6 +230,7 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 			content = content.replace("%enchanter%", sb.toString());
 			ShowBoard.separateAndSend(BbsUtil.htmlAll(content, activeChar), activeChar);
 		}
+		
 		if (command.startsWith("_bbsechant;enchlistpageAtr;"))
 		{
 			StringTokenizer st = new StringTokenizer(command, ";");
@@ -229,6 +239,7 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 			int AtributType = Integer.parseInt(st.nextToken());
 			int ItemForEchantObjID = Integer.parseInt(st.nextToken());
 			String ElementName = "";
+			
 			if (AtributType == 0)
 			{
 				ElementName = "Fire";
@@ -253,6 +264,7 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 			{
 				ElementName = "Dark";
 			}
+			
 			String name = "None Name";
 			name = ItemHolder.getInstance().getTemplate(Config.ENCHANTER_ITEM_ID).getName();
 			ItemInstance EhchantItem = activeChar.getInventory().getItemByObjectId(ItemForEchantObjID);
@@ -267,24 +279,29 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 			sb.append("</table>");
 			sb.append("<br1>");
 			sb.append("<br1>");
+			
 			if (!EhchantItem.getTemplate().getName().contains("PvP") && ((EhchantItem.getTemplate().getCrystalType() == ItemTemplate.Grade.S) || (EhchantItem.getTemplate().getCrystalType() == ItemTemplate.Grade.S80) || (EhchantItem.getTemplate().getCrystalType() == ItemTemplate.Grade.S84) || (EhchantItem.getTemplate().getCrystalType() == ItemTemplate.Grade.R) || (EhchantItem.getTemplate().getCrystalType() == ItemTemplate.Grade.R95) || (EhchantItem.getTemplate().getCrystalType() == ItemTemplate.Grade.R99)))
 			{
 				sb.append("<table border=0 width=400><tr><td width=200>");
+				
 				for (int i = 0; i < (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_ATTRIBUTE_LEVELS.length : Config.ENCHANT_ATTRIBUTE_LEVELS_ARM.length); i++)
 				{
 					sb.append("<center><button value=\"Add +" + (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_ATTRIBUTE_LEVELS[i] : Config.ENCHANT_ATTRIBUTE_LEVELS_ARM[i]) + " (Price:" + (EhchantItem.getTemplate().isWeapon() ? Config.ATTRIBUTE_PRICE_WPN[i] : Config.ATTRIBUTE_PRICE_ARM[i]) + " " + name + ")\" action=\"bypass _bbsechant;enchantgoAtr;" + (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_ATTRIBUTE_LEVELS[i] : Config.ENCHANT_ATTRIBUTE_LEVELS_ARM[i]) + ";" + AtributType + ";" + (EhchantItem.getTemplate().isWeapon() ? Config.ATTRIBUTE_PRICE_WPN[i] : Config.ATTRIBUTE_PRICE_ARM[i]) + ";" + ItemForEchantObjID + "\" width=200 height=20 back=\"L2UI_CT1.Button_DF\" fore=\"L2UI_CT1.Button_DF\">");
 					sb.append("<br1>");
 				}
+				
 				sb.append("</td></tr></table><br1>");
 			}
 			else if (EhchantItem.getTemplate().getName().contains("PvP") && Config.ENCHANT_ATT_PVP && ((EhchantItem.getTemplate().getCrystalType() == ItemTemplate.Grade.S) || (EhchantItem.getTemplate().getCrystalType() == ItemTemplate.Grade.S80) || (EhchantItem.getTemplate().getCrystalType() == ItemTemplate.Grade.S84) || (EhchantItem.getTemplate().getCrystalType() == ItemTemplate.Grade.R) || (EhchantItem.getTemplate().getCrystalType() == ItemTemplate.Grade.R95) || (EhchantItem.getTemplate().getCrystalType() == ItemTemplate.Grade.R99)))
 			{
 				sb.append("<table border=0 width=400><tr><td width=200>");
+				
 				for (int i = 0; i < (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_ATTRIBUTE_LEVELS.length : Config.ENCHANT_ATTRIBUTE_LEVELS_ARM.length); i++)
 				{
 					sb.append("<center><button value=\"Add +" + (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_ATTRIBUTE_LEVELS[i] : Config.ENCHANT_ATTRIBUTE_LEVELS_ARM[i]) + " (Price:" + (EhchantItem.getTemplate().isWeapon() ? Config.ATTRIBUTE_PRICE_WPN[i] : Config.ATTRIBUTE_PRICE_ARM[i]) + " " + name + ")\" action=\"bypass _bbsechant;enchantgoAtr;" + (EhchantItem.getTemplate().isWeapon() ? Config.ENCHANT_ATTRIBUTE_LEVELS[i] : Config.ENCHANT_ATTRIBUTE_LEVELS_ARM[i]) + ";" + AtributType + ";" + (EhchantItem.getTemplate().isWeapon() ? Config.ATTRIBUTE_PRICE_WPN[i] : Config.ATTRIBUTE_PRICE_ARM[i]) + ";" + ItemForEchantObjID + "\" width=200 height=20 back=\"L2UI_CT1.Button_DF\" fore=\"L2UI_CT1.Button_DF\">");
 					sb.append("<br1>");
 				}
+				
 				sb.append("</td></tr></table><br1>");
 			}
 			else
@@ -301,11 +318,13 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 				sb.append("<br1>");
 				sb.append("</td></tr></table><br>");
 			}
+			
 			sb.append("<button value=\"Back\" action=\"bypass _bbsechant;\" width=70 height=18 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 			String content = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/enchanter.htm", activeChar);
 			content = content.replace("%enchanter%", sb.toString());
 			ShowBoard.separateAndSend(BbsUtil.htmlAll(content, activeChar), activeChar);
 		}
+		
 		if (command.startsWith("_bbsechant;enchantgo;"))
 		{
 			StringTokenizer st = new StringTokenizer(command, ";");
@@ -317,13 +336,16 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 			ItemTemplate item = ItemHolder.getInstance().getTemplate(Config.ENCHANTER_ITEM_ID);
 			ItemInstance pay = activeChar.getInventory().getItemByItemId(item.getItemId());
 			ItemInstance EhchantItem = activeChar.getInventory().getItemByObjectId(EchantObjID);
+			
 			if ((pay != null) && (pay.getCount() >= EchantPrice))
 			{
 				activeChar.getInventory().destroyItem(pay, EchantPrice);
+				
 				if (EhchantItem.isEquipped())
 				{
 					activeChar.getInventory().unEquipItemInBodySlot(EhchantItem.getEquipSlot());
 				}
+				
 				EhchantItem.setEnchantLevel(EchantVal);
 				activeChar.getInventory().equipItem(EhchantItem);
 				activeChar.sendPacket(new InventoryUpdate().addModifiedItem(EhchantItem));
@@ -336,6 +358,7 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 				activeChar.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
 			}
 		}
+		
 		if (command.startsWith("_bbsechant;enchantgoAtr;"))
 		{
 			StringTokenizer st = new StringTokenizer(command, ";");
@@ -349,15 +372,18 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 			ItemTemplate item = ItemHolder.getInstance().getTemplate(Config.ENCHANTER_ITEM_ID);
 			ItemInstance pay = activeChar.getInventory().getItemByItemId(item.getItemId());
 			ItemInstance EhchantItem = activeChar.getInventory().getItemByObjectId(EchantObjID);
+			
 			if (EhchantItem.isWeapon())
 			{
 				if ((pay != null) && (pay.getCount() >= EchantPrice))
 				{
 					activeChar.getInventory().destroyItem(pay, EchantPrice);
+					
 					if (EhchantItem.isEquipped())
 					{
 						activeChar.getInventory().unEquipItemInBodySlot(EhchantItem.getEquipSlot());
 					}
+					
 					EhchantItem.setAttributeElement(el, EchantVal);
 					activeChar.getInventory().equipItem(EhchantItem);
 					activeChar.sendPacket(new InventoryUpdate().addModifiedItem(EhchantItem));
@@ -378,13 +404,16 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 					onBypassCommand(activeChar, "_bbsechant;");
 					return;
 				}
+				
 				if ((pay != null) && (pay.getCount() >= EchantPrice))
 				{
 					activeChar.getInventory().destroyItem(pay, EchantPrice);
+					
 					if (EhchantItem.isEquipped())
 					{
 						activeChar.getInventory().unEquipItemInBodySlot(EhchantItem.getEquipSlot());
 					}
+					
 					EhchantItem.setAttributeElement(el, EchantVal);
 					activeChar.getInventory().equipItem(EhchantItem);
 					activeChar.sendPacket(new InventoryUpdate().addModifiedItem(EhchantItem));
@@ -418,10 +447,10 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 	 * @param item ItemInstance
 	 * @return boolean
 	 */
-	@SuppressWarnings("unused")
 	private boolean canEnchantArmorAttribute(int attr, ItemInstance item)
 	{
-		Element elm = Element.getElementById(attr);
+		Element.getElementById(attr);
+		
 		switch (attr)
 		{
 			case 0:
@@ -429,38 +458,50 @@ public class EnchantCommunity extends Functions implements ScriptFile, ICommunit
 				{
 					return false;
 				}
+				
 				break;
+			
 			case 1:
 				if (item.getDefenceFire() != 0)
 				{
 					return false;
 				}
+				
 				break;
+			
 			case 2:
 				if (item.getDefenceEarth() != 0)
 				{
 					return false;
 				}
+				
 				break;
+			
 			case 3:
 				if (item.getDefenceWind() != 0)
 				{
 					return false;
 				}
+				
 				break;
+			
 			case 4:
 				if (item.getDefenceUnholy() != 0)
 				{
 					return false;
 				}
+				
 				break;
+			
 			case 5:
 				if (item.getDefenceHoly() != 0)
 				{
 					return false;
 				}
+				
 				break;
 		}
+		
 		return true;
 	}
 }

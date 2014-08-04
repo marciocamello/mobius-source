@@ -44,6 +44,7 @@ public class _252_GoodSmell extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("stan_q252_03.htm"))
 		{
 			st.setState(STARTED);
@@ -59,6 +60,7 @@ public class _252_GoodSmell extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -67,6 +69,7 @@ public class _252_GoodSmell extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (npc.getNpcId() == GuardStan)
 		{
 			if (cond == 0)
@@ -89,6 +92,7 @@ public class _252_GoodSmell extends Quest implements ScriptFile
 				htmltext = "stan_q252_05.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -96,21 +100,25 @@ public class _252_GoodSmell extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if (cond == 1)
 		{
 			if ((st.getQuestItemsCount(SelMahumDiary) < 10) && ArrayUtils.contains(SelMahums, npc.getNpcId()))
 			{
 				st.rollAndGive(SelMahumDiary, 1, 15);
 			}
+			
 			if ((st.getQuestItemsCount(SelMahumCookbookPage) < 5) && (npc.getNpcId() == SelChef))
 			{
 				st.rollAndGive(SelMahumCookbookPage, 1, 10);
 			}
+			
 			if ((st.getQuestItemsCount(SelMahumDiary) >= 10) && (st.getQuestItemsCount(SelMahumCookbookPage) >= 5))
 			{
 				st.setCond(2);
 			}
 		}
+		
 		return null;
 	}
 	

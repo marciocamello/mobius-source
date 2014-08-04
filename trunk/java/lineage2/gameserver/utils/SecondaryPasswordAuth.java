@@ -115,11 +115,13 @@ public class SecondaryPasswordAuth
 			_activeClient.closeNow(false);
 			return false;
 		}
+		
 		if (!validatePassword(password))
 		{
 			_activeClient.sendPacket(new Ex2ndPasswordAck(Ex2ndPasswordAck.WRONG_PATTERN));
 			return false;
 		}
+		
 		password = cryptPassword(password);
 		LoginServerCommunication.getInstance().sendPacket(new Player2ndAuthSetPassword(_activeClient.getLogin(), password));
 		_password = password;
@@ -151,15 +153,18 @@ public class SecondaryPasswordAuth
 			_activeClient.closeNow(false);
 			return false;
 		}
+		
 		if (!checkPassword(oldPassword, true))
 		{
 			return false;
 		}
+		
 		if (!validatePassword(newPassword))
 		{
 			_activeClient.sendPacket(new Ex2ndPasswordAck(Ex2ndPasswordAck.WRONG_PATTERN));
 			return false;
 		}
+		
 		newPassword = cryptPassword(newPassword);
 		LoginServerCommunication.getInstance().sendPacket(new Player2ndAuthSetPassword(_activeClient.getLogin(), newPassword));
 		_password = newPassword;
@@ -176,9 +181,11 @@ public class SecondaryPasswordAuth
 	public boolean checkPassword(String password, boolean skipAuth)
 	{
 		password = cryptPassword(password);
+		
 		if (!password.equals(_password))
 		{
 			_wrongAttempts++;
+			
 			if (_wrongAttempts < Config.SECOND_AUTH_MAX_ATTEMPTS)
 			{
 				_activeClient.sendPacket(new Ex2ndPasswordVerify(Ex2ndPasswordVerify.PASSWORD_WRONG, Config.SECOND_AUTH_MAX_ATTEMPTS - _wrongAttempts));
@@ -191,13 +198,16 @@ public class SecondaryPasswordAuth
 				insertWrongAttempt(0);
 				_activeClient.sendPacket(new Ex2ndPasswordVerify(Ex2ndPasswordVerify.PASSWORD_BAN, Config.SECOND_AUTH_MAX_ATTEMPTS));
 			}
+			
 			return false;
 		}
+		
 		if (!skipAuth)
 		{
 			_authed = true;
 			_activeClient.sendPacket(new Ex2ndPasswordVerify(Ex2ndPasswordVerify.PASSWORD_OK, _wrongAttempts));
 		}
+		
 		insertWrongAttempt(0);
 		return true;
 	}
@@ -271,6 +281,7 @@ public class SecondaryPasswordAuth
 		{
 			_log.severe("[SecondaryPasswordAuth]Unsupported Encoding");
 		}
+		
 		return null;
 	}
 	
@@ -285,10 +296,12 @@ public class SecondaryPasswordAuth
 		{
 			return false;
 		}
+		
 		if ((password.length() < 6) || (password.length() > 8))
 		{
 			return false;
 		}
+		
 		_wrongAttempts = 0;
 		return true;
 	}

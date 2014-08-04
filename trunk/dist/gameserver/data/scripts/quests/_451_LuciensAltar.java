@@ -71,6 +71,7 @@ public class _451_LuciensAltar extends Quest implements ScriptFile
 			st.giveItems(REPLENISHED_BEAD, 5);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return event;
 	}
 	
@@ -81,6 +82,7 @@ public class _451_LuciensAltar extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
+		
 		if (npcId == DAICHIR)
 		{
 			if (cond == 0)
@@ -152,6 +154,7 @@ public class _451_LuciensAltar extends Quest implements ScriptFile
 				htmltext = "findother.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -160,6 +163,7 @@ public class _451_LuciensAltar extends Quest implements ScriptFile
 		st.takeItems(REPLENISHED_BEAD, 1);
 		st.giveItems(DISCHARGED_BEAD, 1);
 		st.playSound(SOUND_ITEMGET);
+		
 		if (st.getQuestItemsCount(DISCHARGED_BEAD) >= 5)
 		{
 			st.setCond(2);
@@ -173,11 +177,14 @@ public class _451_LuciensAltar extends Quest implements ScriptFile
 		{
 			return true;
 		}
+		
 		String var = player.getVar(getName());
+		
 		if (var == null)
 		{
 			return true;
 		}
+		
 		return (Long.parseLong(var) - System.currentTimeMillis()) > (24 * 60 * 60 * 1000);
 	}
 }

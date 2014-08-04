@@ -32,20 +32,24 @@ public class ExpandCWH extends Functions
 	public void get()
 	{
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (!Config.SERVICES_EXPAND_CWH_ENABLED)
 		{
 			show("Clan WH Enabled", player);
 			return;
 		}
+		
 		if (player.getClan() == null)
 		{
 			player.sendMessage("You must be in clan.");
 			return;
 		}
+		
 		if (player.getInventory().destroyItemByItemId(Config.SERVICES_EXPAND_CWH_ITEM, Config.SERVICES_EXPAND_CWH_PRICE))
 		{
 			player.getClan().setWhBonus(player.getClan().getWhBonus() + 1);
@@ -59,6 +63,7 @@ public class ExpandCWH extends Functions
 		{
 			player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
 		}
+		
 		/**
 		 * Method show.
 		 */
@@ -68,20 +73,24 @@ public class ExpandCWH extends Functions
 	public void show()
 	{
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (!Config.SERVICES_EXPAND_WAREHOUSE_ENABLED)
 		{
 			show("Warehouse Enabled", player);
 			return;
 		}
+		
 		if (player.getClan() == null)
 		{
 			player.sendMessage("You must be in clan.");
 			return;
 		}
+		
 		ItemTemplate item = ItemHolder.getInstance().getTemplate(Config.SERVICES_EXPAND_CWH_ITEM);
 		String out = "";
 		out += "<html><body>Expand Clan Warehouse Slots";

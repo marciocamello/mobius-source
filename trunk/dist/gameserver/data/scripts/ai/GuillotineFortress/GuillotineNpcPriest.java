@@ -34,6 +34,7 @@ public class GuillotineNpcPriest extends DefaultAI
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
 		super.onEvtScriptEvent(event, arg1, arg2);
+		
 		if (event.equalsIgnoreCase("SHOUT_PRIEST_1"))
 		{
 			Functions.npcSayInRange(getActor(), 1000, NpcString.IT_LEFT_NOTHING_BEHIND);
@@ -41,7 +42,6 @@ public class GuillotineNpcPriest extends DefaultAI
 		else if (event.equalsIgnoreCase("SHOUT_PRIEST_2"))
 		{
 			Functions.npcSayInRange(getActor(), 1000, NpcString.IM_IN_A_PICKLE_WE_CANT_GO_BACK_LETS_LOOK_FURTHER);
-			
 		}
 		else if (event.equalsIgnoreCase("SHOUT_PRIEST_3"))
 		{

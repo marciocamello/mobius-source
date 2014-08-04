@@ -36,7 +36,6 @@ public class HennaItemInfo extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		
 		writeC(0xe4);
 		writeD(_henna.getSymbolId()); // symbol Id
 		writeD(_henna.getDyeId()); // item id of dye

@@ -62,6 +62,7 @@ public class _126_IntheNameofEvilPart2 extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("asamah_q126_4.htm"))
 		{
 			st.setState(STARTED);
@@ -190,6 +191,7 @@ public class _126_IntheNameofEvilPart2 extends Quest implements ScriptFile
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -199,11 +201,13 @@ public class _126_IntheNameofEvilPart2 extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Asamah)
 		{
 			if (cond == 0)
 			{
 				QuestState qs = st.getPlayer().getQuestState(_125_InTheNameOfEvilPart1.class);
+				
 				if ((st.getPlayer().getLevel() >= 77) && (qs != null) && qs.isCompleted())
 				{
 					htmltext = "asamah_q126_1.htm";
@@ -377,6 +381,7 @@ public class _126_IntheNameofEvilPart2 extends Quest implements ScriptFile
 				htmltext = "mushika_q126_0.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

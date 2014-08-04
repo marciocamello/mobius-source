@@ -56,6 +56,7 @@ public class NegateEffects extends Skill
 	{
 		super(set);
 		String[] negateEffectsString = set.getString("negateEffects", "").split(";");
+		
 		for (int i = 0; i < negateEffectsString.length; i++)
 		{
 			if (!negateEffectsString[i].isEmpty())
@@ -64,7 +65,9 @@ public class NegateEffects extends Skill
 				_negateEffects.put(Enum.valueOf(EffectType.class, entry[0]), entry.length > 1 ? Integer.decode(entry[1]) : Integer.MAX_VALUE);
 			}
 		}
+		
 		String[] negateStackTypeString = set.getString("negateStackType", "").split(";");
+		
 		for (int i = 0; i < negateStackTypeString.length; i++)
 		{
 			if (!negateStackTypeString[i].isEmpty())
@@ -73,6 +76,7 @@ public class NegateEffects extends Skill
 				_negateStackType.put(entry[0], entry.length > 1 ? Integer.decode(entry[1]) : Integer.MAX_VALUE);
 			}
 		}
+		
 		_onlyPhysical = set.getBool("onlyPhysical", false);
 		_negateDebuffs = set.getBool("negateDebuffs", true);
 	}
@@ -94,6 +98,7 @@ public class NegateEffects extends Skill
 					activeChar.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(target.getName()).addSkillName(getId(), getLevel()));
 					continue;
 				}
+				
 				if (!_negateEffects.isEmpty())
 				{
 					for (Map.Entry<EffectType, Integer> e : _negateEffects.entrySet())
@@ -101,6 +106,7 @@ public class NegateEffects extends Skill
 						negateEffectAtPower(target, e.getKey(), e.getValue().intValue());
 					}
 				}
+				
 				if (!_negateStackType.isEmpty())
 				{
 					for (Map.Entry<String, Integer> e : _negateStackType.entrySet())
@@ -108,9 +114,11 @@ public class NegateEffects extends Skill
 						negateEffectAtPower(target, e.getKey(), e.getValue().intValue());
 					}
 				}
+				
 				getEffects(activeChar, target, getActivateRate() > 0, false);
 			}
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());
@@ -128,14 +136,17 @@ public class NegateEffects extends Skill
 		for (Effect e : target.getEffectList().getAllEffects())
 		{
 			Skill skill = e.getSkill();
+			
 			if ((_onlyPhysical && skill.isMagic()) || !skill.isCancelable() || (skill.isOffensive() && !_negateDebuffs))
 			{
 				continue;
 			}
+			
 			if (!skill.isOffensive() && (skill.getMagicLevel() > getMagicLevel()) && Rnd.chance(skill.getMagicLevel() - getMagicLevel()))
 			{
 				continue;
 			}
+			
 			if ((e.getEffectType() == type) && (e.getStackOrder() <= power))
 			{
 				e.exit();
@@ -154,14 +165,17 @@ public class NegateEffects extends Skill
 		for (Effect e : target.getEffectList().getAllEffects())
 		{
 			Skill skill = e.getSkill();
+			
 			if ((_onlyPhysical && skill.isMagic()) || !skill.isCancelable() || (skill.isOffensive() && !_negateDebuffs))
 			{
 				continue;
 			}
+			
 			if (!skill.isOffensive() && (skill.getMagicLevel() > getMagicLevel()) && Rnd.chance(skill.getMagicLevel() - getMagicLevel()))
 			{
 				continue;
 			}
+			
 			if (e.checkStackType(stackType) && (e.getStackOrder() <= power))
 			{
 				e.exit();

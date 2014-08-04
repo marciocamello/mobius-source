@@ -51,6 +51,7 @@ public class _432_BirthdayPartySong extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("muzyko_q0432_0104.htm"))
 		{
 			st.setState(STARTED);
@@ -71,6 +72,7 @@ public class _432_BirthdayPartySong extends Quest implements ScriptFile
 				htmltext = "muzyko_q0432_0202.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -80,6 +82,7 @@ public class _432_BirthdayPartySong extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int condition = st.getCond();
 		int npcId = npc.getNpcId();
+		
 		if (npcId == MELODY_MAESTRO_OCTAVIA)
 		{
 			if (condition == 0)
@@ -103,6 +106,7 @@ public class _432_BirthdayPartySong extends Quest implements ScriptFile
 				htmltext = "muzyko_q0432_0105.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -113,12 +117,15 @@ public class _432_BirthdayPartySong extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		int npcId = npc.getNpcId();
+		
 		if (npcId == ROUGH_HEWN_ROCK_GOLEMS)
 		{
 			if ((st.getCond() == 1) && (st.getQuestItemsCount(RED_CRYSTALS) < 50))
 			{
 				st.giveItems(RED_CRYSTALS, 1);
+				
 				if (st.getQuestItemsCount(RED_CRYSTALS) == 50)
 				{
 					st.playSound(SOUND_MIDDLE);
@@ -130,6 +137,7 @@ public class _432_BirthdayPartySong extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 }

@@ -42,17 +42,21 @@ public class TutorialGuides extends ScriptItemHandler
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
 		final int itemId = item.getItemId();
+		
 		switch (itemId)
 		{
 			case 32777:
 				playable.getPlayer().sendPacket(new TutorialShowHtml(TutorialShowHtml.GUIDE_ADVENTURER, 0x02));
 				break;
+			
 			case 32778:
 				playable.getPlayer().sendPacket(new TutorialShowHtml(TutorialShowHtml.GUIDE_AWAKING, 0x02));
 				break;
+			
 			default:
 				return false;
 		}
+		
 		return true;
 	}
 	

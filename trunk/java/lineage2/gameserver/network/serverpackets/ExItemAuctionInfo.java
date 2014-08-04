@@ -40,7 +40,7 @@ public class ExItemAuctionInfo extends L2GameServerPacket
 		else
 		{
 			_timeRemaining = (int) (currentAuction.getFinishingTimeRemaining() / 1000); // in
-																						// seconds
+			// seconds
 		}
 		
 		_refresh = refresh;
@@ -54,10 +54,8 @@ public class ExItemAuctionInfo extends L2GameServerPacket
 		writeEx(0x69);
 		writeC(_refresh ? 0x00 : 0x01);
 		writeD(_currentAuction.getInstanceId());
-		
 		ItemAuctionBid highestBid = _currentAuction.getHighestBid();
 		writeQ(highestBid != null ? highestBid.getLastBid() : _currentAuction.getAuctionInitBid());
-		
 		writeD(_timeRemaining);
 		writeItemInfo(_currentAuction.getAuctionItem());
 		
@@ -65,8 +63,8 @@ public class ExItemAuctionInfo extends L2GameServerPacket
 		{
 			writeQ(_nextAuction.getAuctionInitBid());
 			writeD((int) (_nextAuction.getStartingTime() / 1000L)); // unix time
-																	// in
-																	// seconds
+			// in
+			// seconds
 			writeItemInfo(_nextAuction.getAuctionItem());
 		}
 	}

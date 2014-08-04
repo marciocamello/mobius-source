@@ -49,14 +49,17 @@ public class GuardCaption extends SiegeGuardFighter
 		super.onEvtSpawn();
 		final SiegeGuardInstance actor = getActor();
 		final FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
+		
 		if (siegeEvent == null)
 		{
 			return;
 		}
+		
 		if (siegeEvent.getResidence().getFacilityLevel(Fortress.GUARD_BUFF) > 0)
 		{
 			actor.doCast(SkillTable.getInstance().getInfo(5432, siegeEvent.getResidence().getFacilityLevel(Fortress.GUARD_BUFF)), actor, false);
 		}
+		
 		siegeEvent.barrackAction(1, false);
 	}
 	
@@ -69,10 +72,12 @@ public class GuardCaption extends SiegeGuardFighter
 	{
 		final SiegeGuardInstance actor = getActor();
 		final FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
+		
 		if (siegeEvent == null)
 		{
 			return;
 		}
+		
 		siegeEvent.barrackAction(1, true);
 		siegeEvent.broadcastTo(SystemMsg.THE_BARRACKS_HAVE_BEEN_SEIZED, SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
 		Functions.npcShout(actor, NpcString.AIIEEEE_COMMAND_CENTER_THIS_IS_GUARD_UNIT_WE_NEED_BACKUP_RIGHT_AWAY);

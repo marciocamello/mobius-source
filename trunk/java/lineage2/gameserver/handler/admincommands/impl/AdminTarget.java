@@ -21,7 +21,6 @@ import lineage2.gameserver.model.World;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-@SuppressWarnings("unused")
 public class AdminTarget implements IAdminCommandHandler
 {
 	/**
@@ -46,15 +45,16 @@ public class AdminTarget implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
 		if (!activeChar.getPlayerAccess().CanViewChar)
 		{
 			return false;
 		}
+		
 		try
 		{
 			String targetName = wordList[1];
 			GameObject obj = World.getPlayer(targetName);
+			
 			if ((obj != null) && obj.isPlayer())
 			{
 				obj.onActionSelect(activeChar, false);
@@ -68,6 +68,7 @@ public class AdminTarget implements IAdminCommandHandler
 		{
 			activeChar.sendMessage("Please specify correct name.");
 		}
+		
 		return true;
 	}
 	

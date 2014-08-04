@@ -25,7 +25,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public final class SpezionNpcInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -45,6 +45,7 @@ public final class SpezionNpcInstance extends NpcInstance
 		if (command.equalsIgnoreCase("normal_spezion"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(159))

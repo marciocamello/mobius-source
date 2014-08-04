@@ -48,6 +48,7 @@ public class _10307_TheCorruptedLeaderHisTruth extends Quest implements ScriptFi
 		{
 			return "noquest";
 		}
+		
 		if (event.equalsIgnoreCase("32896-05.htm"))
 		{
 			st.setCond(1);
@@ -66,6 +67,7 @@ public class _10307_TheCorruptedLeaderHisTruth extends Quest implements ScriptFi
 			st.giveItems(REWARD_ENCHANT_ARMOR_R, 1);
 			st.exitCurrentQuest(false);
 		}
+		
 		return event;
 	}
 	
@@ -73,12 +75,15 @@ public class _10307_TheCorruptedLeaderHisTruth extends Quest implements ScriptFi
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
+		
 		if (st == null)
 		{
 			return htmltext;
 		}
+		
 		Player player = st.getPlayer();
 		QuestState prevst = player.getQuestState(_10306_TheCorruptedLeader.class);
+		
 		if (npc.getNpcId() == NPC_NAOMI_KASHERON)
 		{
 			switch (st.getState())
@@ -86,6 +91,7 @@ public class _10307_TheCorruptedLeaderHisTruth extends Quest implements ScriptFi
 				case COMPLETED:
 					htmltext = "32896-02.htm";
 					break;
+				
 				case CREATED:
 					if (player.getLevel() >= 90)
 					{
@@ -104,7 +110,9 @@ public class _10307_TheCorruptedLeaderHisTruth extends Quest implements ScriptFi
 						st.exitCurrentQuest(true);
 						htmltext = "32896-03.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					if (st.getCond() == 1)
 					{
@@ -116,6 +124,7 @@ public class _10307_TheCorruptedLeaderHisTruth extends Quest implements ScriptFi
 						{
 							break;
 						}
+						
 						htmltext = "32896-06.htm";
 					}
 			}
@@ -134,6 +143,7 @@ public class _10307_TheCorruptedLeaderHisTruth extends Quest implements ScriptFi
 				htmltext = "32895-05.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -144,6 +154,7 @@ public class _10307_TheCorruptedLeaderHisTruth extends Quest implements ScriptFi
 		{
 			return null;
 		}
+		
 		if (ArrayUtils.contains(MOB_KIMERIAN, npc.getNpcId()))
 		{
 			if (st.getCond() == 1)
@@ -152,6 +163,7 @@ public class _10307_TheCorruptedLeaderHisTruth extends Quest implements ScriptFi
 				st.setCond(2);
 			}
 		}
+		
 		return null;
 	}
 	

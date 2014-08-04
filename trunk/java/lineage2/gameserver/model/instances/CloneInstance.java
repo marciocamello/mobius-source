@@ -89,11 +89,14 @@ public class CloneInstance extends ClonePlayer
 		{
 			_destroyTask.cancel(false);
 		}
+		
 		_destroyTask = null;
+		
 		if (_targetTask != null)
 		{
 			_targetTask.cancel(false);
 		}
+		
 		_targetTask = null;
 		super.onDelete();
 	}
@@ -106,11 +109,13 @@ public class CloneInstance extends ClonePlayer
 	protected void onDeath(Creature killer)
 	{
 		super.onDeath(killer);
+		
 		if (_destroyTask != null)
 		{
 			_destroyTask.cancel(false);
 			_destroyTask = null;
 		}
+		
 		if (_targetTask != null)
 		{
 			_targetTask.cancel(false);
@@ -127,6 +132,7 @@ public class CloneInstance extends ClonePlayer
 			_destroyTask.cancel(false);
 			_destroyTask = null;
 		}
+		
 		if (_targetTask != null)
 		{
 			_targetTask.cancel(false);
@@ -146,14 +152,17 @@ public class CloneInstance extends ClonePlayer
 	public void displayGiveDamageMessage(Creature target, int damage, boolean crit, boolean miss, boolean shld, boolean magic)
 	{
 		Player owner = getPlayer();
+		
 		if (owner == null)
 		{
 			return;
 		}
+		
 		if (crit)
 		{
 			owner.sendPacket(SystemMsg.SUMMONED_MONSTERS_CRITICAL_HIT);
 		}
+		
 		if (miss)
 		{
 			owner.sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addString("Clone of " + owner.getName()));

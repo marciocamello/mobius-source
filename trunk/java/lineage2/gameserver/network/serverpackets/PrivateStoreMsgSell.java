@@ -44,6 +44,7 @@ public class PrivateStoreMsgSell extends L2GameServerPacket
 		{
 			writeC(0xA2);
 		}
+		
 		writeD(_objId);
 		writeS(_name);
 	}

@@ -43,6 +43,7 @@ public class CharacterRestore extends L2GameClientPacket
 	protected void runImpl()
 	{
 		GameClient client = getClient();
+		
 		try
 		{
 			client.markRestoredChar(_charSlot);
@@ -50,6 +51,7 @@ public class CharacterRestore extends L2GameClientPacket
 		catch (Exception e)
 		{
 		}
+		
 		CharacterSelectionInfo cl = new CharacterSelectionInfo(client.getLogin(), client.getSessionKey().playOkID1);
 		ExLoginVitalityEffectInfo vl = new ExLoginVitalityEffectInfo(cl.getCharInfo());
 		sendPacket(cl, vl);

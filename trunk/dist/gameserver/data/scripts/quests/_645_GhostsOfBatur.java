@@ -50,10 +50,12 @@ public class _645_GhostsOfBatur extends Quest implements ScriptFile
 	{
 		super(true);
 		addStartNpc(Karuda);
+		
 		for (int i : MOBS)
 		{
 			addKillId(i);
 		}
+		
 		addQuestItem(CursedBurialItems);
 	}
 	
@@ -61,12 +63,14 @@ public class _645_GhostsOfBatur extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("karuda_q0645_0103.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return htmltext;
 	}
 	
@@ -75,6 +79,7 @@ public class _645_GhostsOfBatur extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (cond == 0)
 		{
 			if (st.getPlayer().getLevel() < 61)
@@ -93,6 +98,7 @@ public class _645_GhostsOfBatur extends Quest implements ScriptFile
 			{
 				st.setCond(1);
 			}
+			
 			if (st.getQuestItemsCount(CursedBurialItems) == 0)
 			{
 				htmltext = "karuda_q0645_0106.htm";
@@ -102,6 +108,7 @@ public class _645_GhostsOfBatur extends Quest implements ScriptFile
 				htmltext = "karuda_q0645_0105.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -115,6 +122,7 @@ public class _645_GhostsOfBatur extends Quest implements ScriptFile
 				st.giveItems(CursedBurialItems, 1, true);
 			}
 		}
+		
 		return null;
 	}
 }

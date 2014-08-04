@@ -79,10 +79,12 @@ public class SelSquadLeader extends Fighter
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (!isBusy)
 		{
 			if (System.currentTimeMillis() > idleTimeout)
@@ -96,6 +98,7 @@ public class SelSquadLeader extends Fighter
 						actor.setNpcState(1);
 						busyTimeout = System.currentTimeMillis() + ((60 + Rnd.get(15)) * 1000L);
 						addTaskMove(Location.findPointToStay(npc, 50, 150), true);
+						
 						if (Rnd.chance(40))
 						{
 							Functions.npcSay(actor, phrase[Rnd.get(2)]);
@@ -121,10 +124,12 @@ public class SelSquadLeader extends Fighter
 				return true;
 			}
 		}
+		
 		if (isImmobilized)
 		{
 			return true;
 		}
+		
 		return super.thinkActive();
 	}
 	
@@ -134,11 +139,13 @@ public class SelSquadLeader extends Fighter
 	private void wakeUp()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (isBusy)
 		{
 			isBusy = false;
 			busyTimeout = 0;
 			idleTimeout = System.currentTimeMillis() + (Rnd.get(3 * 60, 5 * 60) * 1000L);
+			
 			if (isImmobilized)
 			{
 				isImmobilized = false;
@@ -158,6 +165,7 @@ public class SelSquadLeader extends Fighter
 	{
 		final NpcInstance actor = getActor();
 		super.onEvtArrived();
+		
 		if (isBusy)
 		{
 			isImmobilized = true;

@@ -119,6 +119,7 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 		{
 			return;
 		}
+		
 		if (bypass.equals(_commands[0]))
 		{
 			String html = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/career.htm", player);
@@ -130,6 +131,7 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 			String[] args = bypass.split(" ", -1);
 			int val = Integer.parseInt(args[1]);
 			long price = Long.parseLong(args[2]);
+			
 			if (player.getInventory().destroyItemByItemId(Config.CLASS_MASTERS_PRICE_ITEM_LIST[jobLevel], price))
 			{
 				changeClass(player, val);
@@ -151,11 +153,13 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 				player.sendMessage("You are too weak! Come get a Level 80!");
 				return;
 			}
+			
 			if (player.getActiveSubClass().isBase())
 			{
 				player.sendMessage("You must be on a Sub-Class!");
 				return;
 			}
+			
 			for (SubClass s : player.getSubClassList().values())
 			{
 				if (s.isDouble())
@@ -164,6 +168,7 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 					return;
 				}
 			}
+			
 			player.getActiveSubClass().setType(SubClassType.DOUBLE_SUBCLASS);
 			AwakingManager.getInstance().onPlayerEnter(player);
 			player.sendMessage("Congratulations! You have Dual-Classl.");
@@ -201,27 +206,32 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 		html.append("<br>");
 		html.append("<table width=600>");
 		html.append("<tr><td>");
+		
 		if (Config.ALLOW_CLASS_MASTERS_LIST.isEmpty() || !Config.ALLOW_CLASS_MASTERS_LIST.contains(jobLevel))
 		{
 			jobLevel = 5;
 		}
+		
 		if (((level >= 20) && (jobLevel == 1)) || ((level >= 40) && (jobLevel == 2)) || ((level >= 76) && (jobLevel == 3)) || ((level >= 85) && (jobLevel == 4) && Config.ALLOW_CLASS_MASTERS_LIST.contains(jobLevel)))
 		{
 			ItemTemplate item = ItemHolder.getInstance().getTemplate(Config.CLASS_MASTERS_PRICE_ITEM_LIST[jobLevel]);
 			html.append("You have to pay: <font color=\"LEVEL\">");
 			html.append(Config.CLASS_MASTERS_PRICE_LIST[jobLevel] + "</font> <font color=\"LEVEL\">" + item.getName() + "</font> for a Class Change.<br>");
 			html.append("<center><table width=600><tr>");
+			
 			for (ClassId cid : ClassId.values())
 			{
 				if (cid == ClassId.INSPECTOR)
 				{
 					continue;
 				}
+				
 				if (cid.childOf(classId) && (cid.getClassLevel().ordinal() == (classId.getClassLevel().ordinal() + 1)))
 				{
 					html.append("<td><center><button value=\"" + cid.name() + "\" action=\"bypass _bbsclass_change " + cid.getId() + " " + Config.CLASS_MASTERS_PRICE_LIST[jobLevel] + "\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center></td>");
 				}
 			}
+			
 			html.append("</tr>");
 			html.append("<tr><td><center><button value=\"Dual-Class\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center></td></tr>");
 			html.append("</table></center>");
@@ -240,6 +250,7 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 					html.append("To activate the Sub-Class you must reach <font color=F2C202>Level 76.</font><br>");
 					html.append("In order to become a Nobless, you have to pump the <font color=F2C202>Sub-Class Level 76.</font><br>");
 					break;
+				
 				case 2:
 					html.append("<center><button value=\"Dual-Class\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center>");
 					html.append("Welcome, <font color=F2C202>" + player.getName() + "</font>. Your current Class is <font color=F2C202>" + player.getClassId().name() + "</font><br>");
@@ -247,6 +258,7 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 					html.append("To activate the Sub-Class you must reach <font color=F2C202>Level 76.</font><br>");
 					html.append("In order to become a Nobless, you have to pump the <font color=F2C202>Sub-Class Level 76.</font><br>");
 					break;
+				
 				case 3:
 					html.append("<center><button value=\"Dual-Class\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center>");
 					html.append("Welcome, <font color=F2C202>" + player.getName() + "</font>. Your current Class is <font color=F2C202>" + player.getClassId().name() + "</font><br>");
@@ -254,15 +266,19 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 					html.append("To activate the Sub-Class you must reach <font color=F2C202>Level 76.</font><br>");
 					html.append("In order to become a Nobless, you have to pump the <font color=F2C202>Sub-Class Level 76.</font><br>");
 					break;
+				
 				case 4:
 					html.append("<center><button value=\"Dual-Class\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center>");
 					html.append("Welcome, <font color=F2C202>" + player.getName() + "</font>. Your current Class is <font color=F2C202>" + player.getClassId().name() + "</font><br>");
 					html.append("To change your Class, you have to reach <font color=F2C202>Level 85.</font><br>");
+					
 					if (level < 76)
 					{
 						break;
 					}
+					
 					html.append("You have reached <font color=F2C202>Level 76</font>, the activation of a Sub-Class is now available.<br>");
+					
 					if (!player.isNoble())
 					{
 						html.append("You can get a Noblesse. Visit the 'Shop'.<br>");
@@ -271,16 +287,21 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 					{
 						html.append("You already Nobless. Getting the nobless no longer available.<br>");
 					}
+					
 					break;
+				
 				case 5:
 					html.append("<center><button value=\"Dual-Class\" action=\"bypass _bbsclass_upgrade\" width=150 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center>");
 					html.append("Welcome, <font color=F2C202>" + player.getName() + "</font>. Your current Class is <font color=F2C202>" + player.getClassId().name() + "</font><br>");
 					html.append("For you there are no more jobs available, or Class-Master is not currently available.<br>");
+					
 					if (level < 76)
 					{
 						break;
 					}
+					
 					html.append("You have reached <font color=F2C202>Level 76</font>, the activation of a Sub-Class is now available.<br>");
+					
 					if (!player.isNoble())
 					{
 						html.append("You can get a Noblesse. Visit the 'Shop'.<br>");
@@ -289,9 +310,11 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 					{
 						html.append("You already Nobless. Getting the nobless no longer available.<br>");
 					}
+					
 					break;
 			}
 		}
+		
 		return html.toString();
 	}
 	
@@ -310,6 +333,7 @@ public class ManageProf implements ScriptFile, ICommunityBoardHandler
 		{
 			player.sendPacket(Msg.CONGRATULATIONS_YOU_HAVE_TRANSFERRED_TO_A_NEW_CLASS);
 		}
+		
 		player.setClassId(val, false, false);
 		// AwakingManager.getInstance().getRaceSkill(player);
 		player.broadcastCharInfo();

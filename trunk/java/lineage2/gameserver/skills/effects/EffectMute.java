@@ -39,9 +39,11 @@ public class EffectMute extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if (!_effected.startMuted())
 		{
 			Skill castingSkill = _effected.getCastingSkill();
+			
 			if ((castingSkill != null) && castingSkill.isMagic())
 			{
 				_effected.abortCast(true, true);

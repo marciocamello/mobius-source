@@ -41,20 +41,17 @@ public class _177_StartTheNewDestiny extends Quest implements ScriptFile
 	public _177_StartTheNewDestiny()
 	{
 		super(false);
-		
 		_Mobs1.clear();
 		_Mobs1.add(21547);
 		_Mobs1.add(21548);
 		_Mobs1.add(21549);
 		_Mobs1.add(21550);
 		_Mobs1.add(21587);
-		
 		_Mobs2.clear();
 		_Mobs2.add(22257);
 		_Mobs2.add(22258);
 		_Mobs2.add(22259);
 		_Mobs2.add(22260);
-		
 		addStartNpc(Hadel);
 		addTalkId(Hadel);
 		addTalkId(Ishuma);
@@ -69,6 +66,7 @@ public class _177_StartTheNewDestiny extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("33344_03.htm"))
 		{
 			st.setState(STARTED);
@@ -108,6 +106,7 @@ public class _177_StartTheNewDestiny extends Quest implements ScriptFile
 			st.getPlayer().sendPacket(new ExSubjobInfo(st.getPlayer(), true));
 			htmltext = "33344_16.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -118,6 +117,7 @@ public class _177_StartTheNewDestiny extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Hadel)
 		{
 			if (!(st.getState() == Quest.COMPLETED))
@@ -227,6 +227,7 @@ public class _177_StartTheNewDestiny extends Quest implements ScriptFile
 				htmltext = "32615_completed.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -236,6 +237,7 @@ public class _177_StartTheNewDestiny extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		int subclassId = st.getInt("subClassId");
+		
 		if ((st.getPlayer().getActiveSubClass().getClassId() == subclassId) && (st.getState() == Quest.STARTED))
 		{
 			if ((cond == 1) && _Mobs1.contains(npcId) && Rnd.chance(chanceGetItem))
@@ -254,6 +256,7 @@ public class _177_StartTheNewDestiny extends Quest implements ScriptFile
 					st.giveItems(questitem_03, 1);
 					st.playSound(SOUND_ITEMGET);
 				}
+				
 				if (st.getQuestItemsCount(questitem_03) >= 10)
 				{
 					st.playSound(SOUND_MIDDLE);
@@ -276,6 +279,7 @@ public class _177_StartTheNewDestiny extends Quest implements ScriptFile
 					st.giveItems(questitem_04, 1);
 					st.playSound(SOUND_ITEMGET);
 				}
+				
 				if (st.getQuestItemsCount(questitem_04) >= 10)
 				{
 					st.playSound(SOUND_MIDDLE);
@@ -290,6 +294,7 @@ public class _177_StartTheNewDestiny extends Quest implements ScriptFile
 				st.getPlayer().sendMessage("You cannot obtain the quest items if you are in different subclass to which started the quest.");
 			}
 		}
+		
 		return null;
 	}
 	

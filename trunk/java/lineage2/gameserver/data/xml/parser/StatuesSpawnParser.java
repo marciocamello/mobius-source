@@ -60,13 +60,14 @@ public class StatuesSpawnParser extends AbstractFileParser<StatuesHolder>
 		{
 			int type = Integer.parseInt(statuesElement.attributeValue("type"));
 			CategoryType categoryType = CategoryType.getCategoryById(type, 0);
-			
 			List<Location> locations = new ArrayList<>();
+			
 			for (Element spawnElement : statuesElement.elements())
 			{
 				String[] loc = spawnElement.attributeValue("loc").split(",");
 				locations.add(new Location(Integer.parseInt(loc[0]), Integer.parseInt(loc[1]), Integer.parseInt(loc[2]), Integer.parseInt(loc[3])));
 			}
+			
 			StatuesHolder.getInstance().addSpawnInfo(categoryType, locations);
 		}
 	}

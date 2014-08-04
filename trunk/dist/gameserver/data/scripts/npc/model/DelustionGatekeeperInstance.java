@@ -32,7 +32,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public final class DelustionGatekeeperInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -58,17 +58,21 @@ public final class DelustionGatekeeperInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.startsWith("enterDC"))
 		{
 			int izId = Integer.parseInt(command.substring(8));
 			int type = izId - 120;
 			Map<Integer, DelusionChamberRoom> rooms = DelusionChamberManager.getInstance().getRooms(type);
+			
 			if (rooms == null)
 			{
 				player.sendPacket(Msg.SYSTEM_ERROR);
 				return;
 			}
+			
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(izId))
@@ -79,6 +83,7 @@ public final class DelustionGatekeeperInstance extends NpcInstance
 			else if (player.canEnterInstance(izId))
 			{
 				Party party = player.getParty();
+				
 				if (party != null)
 				{
 					new DelusionChamber(party, type, Rnd.get(1, rooms.size() - 1));

@@ -26,7 +26,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public class CellphineInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -56,9 +56,11 @@ public class CellphineInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("Call_Hermuncus"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(INSTANCE_ID))

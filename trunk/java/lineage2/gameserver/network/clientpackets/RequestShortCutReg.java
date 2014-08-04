@@ -49,15 +49,18 @@ public class RequestShortCutReg extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if ((_page < 0) || (_page > ShortCut.PAGE_MAX))
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		ShortCut shortCut = new ShortCut(_slot, _page, _type, _id, _lvl, _characterType);
 		activeChar.sendPacket(new ShortCutRegister(activeChar, shortCut));
 		activeChar.registerShortCut(shortCut);

@@ -64,7 +64,7 @@ import gnu.trove.iterator.TIntObjectIterator;
 public abstract class Summon extends Playable
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -110,6 +110,7 @@ public abstract class Summon extends Playable
 	{
 		super(objectId, template);
 		_owner = owner;
+		
 		if (template.getSkills().size() > 0)
 		{
 			for (TIntObjectIterator<Skill> iterator = template.getSkills().iterator(); iterator.hasNext();)
@@ -118,6 +119,7 @@ public abstract class Summon extends Playable
 				addSkill(iterator.value());
 			}
 		}
+		
 		setXYZ(owner.getX() + Rnd.get(-100, 100), owner.getY() + Rnd.get(-100, 100), owner.getZ());
 	}
 	
@@ -131,10 +133,12 @@ public abstract class Summon extends Playable
 		_spawnAnimation = 0;
 		Player owner = getPlayer();
 		Party party = owner.getParty();
+		
 		if (party != null)
 		{
 			party.broadcastToPartyMembers(owner, new ExPartyPetWindowAdd(this));
 		}
+		
 		if (owner.getEffectList().getEffectByStackType("ServitorShare") != null)
 		{
 			final Creature SummonEffect = this;
@@ -147,18 +151,22 @@ public abstract class Summon extends Playable
 					final Skill skl = owner.getEffectList().getEffectByStackType("ServitorShare").getSkill();
 					long currenttime = owner.getEffectList().getEffectByStackType("ServitorShare").getTime();
 					long duration = owner.getEffectList().getEffectByStackType("ServitorShare").getDuration();
+					
 					for (EffectTemplate et : skl.getEffectTemplates())
 					{
 						if ((et == null) || (et.getEffectType() != EffectType.ServitorShare))
 						{
 							continue;
 						}
+						
 						Env env = new Env(owner, SummonEffect, skl);
 						final Effect effect = et.getEffect(env);
+						
 						if (effect == null)
 						{
 							continue;
 						}
+						
 						effect.setCount(1);
 						effect.setPeriod(duration - currenttime);
 						effect.schedule();
@@ -166,6 +174,7 @@ public abstract class Summon extends Playable
 				}
 			});
 		}
+		
 		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 	}
 	
@@ -186,6 +195,7 @@ public abstract class Summon extends Playable
 				}
 			}
 		}
+		
 		return (SummonAI) _ai;
 	}
 	
@@ -352,26 +362,33 @@ public abstract class Summon extends Playable
 		super.onDeath(killer);
 		startDecay(8500L);
 		Player owner = getPlayer();
+		
 		if ((killer == null) || (killer == owner) || (killer == this) || isInZoneBattle() || killer.isInZoneBattle())
 		{
 			return;
 		}
+		
 		if (killer instanceof Summon)
 		{
 			killer = killer.getPlayer();
 		}
+		
 		if (killer == null)
 		{
 			return;
 		}
+		
 		if (killer.isPlayer())
 		{
 			Player pk = (Player) killer;
+			
 			if (isInZone(ZoneType.SIEGE))
 			{
 				return;
 			}
+			
 			DuelEvent duelEvent = getEvent(DuelEvent.class);
+			
 			if ((owner.getPvpFlag() > 0) || owner.atMutualWarWith(pk))
 			{
 				pk.setPvpKills(pk.getPvpKills() + 1);
@@ -381,6 +398,7 @@ public abstract class Summon extends Playable
 				int pkCountMulti = Math.max(pk.getPkKills() / 2, 1);
 				pk.increaseKarma(Config.KARMA_MIN_KARMA * pkCountMulti);
 			}
+			
 			pk.sendChanges();
 		}
 	}
@@ -432,11 +450,8 @@ public abstract class Summon extends Playable
 	public void broadcastStatusUpdate()
 	{
 		super.broadcastStatusUpdate();
-		
 		Player owner = getPlayer();
-		
 		sendStatusUpdate();
-		
 		Party party = owner.getParty();
 		
 		if (party != null)
@@ -462,10 +477,12 @@ public abstract class Summon extends Playable
 	{
 		Player owner = getPlayer();
 		Party party = owner.getParty();
+		
 		if (party != null)
 		{
 			party.broadcastToPartyMembers(owner, new ExPartyPetWindowDelete(this));
 		}
+		
 		owner.sendPacket(new PetDelete(getSummonType(), getObjectId()));
 		stopDecay();
 		super.onDelete();
@@ -485,14 +502,17 @@ public abstract class Summon extends Playable
 	public void saveEffects()
 	{
 		Player owner = getPlayer();
+		
 		if (owner == null)
 		{
 			return;
 		}
+		
 		if (owner.isInOlympiadMode())
 		{
 			getEffectList().stopAllEffects();
 		}
+		
 		EffectsDAO.getInstance().insert(this);
 	}
 	
@@ -504,6 +524,7 @@ public abstract class Summon extends Playable
 	{
 		Player owner = getPlayer();
 		_follow = state;
+		
 		if (_follow)
 		{
 			if (getAI().getIntention() == CtrlIntention.AI_INTENTION_ACTIVE)
@@ -574,6 +595,7 @@ public abstract class Summon extends Playable
 		Player owner = getPlayer();
 		PartySpelled ps = new PartySpelled(this, true);
 		Party party = owner.getParty();
+		
 		if (party != null)
 		{
 			party.broadCast(ps);
@@ -693,6 +715,7 @@ public abstract class Summon extends Playable
 	public boolean unChargeShots(final boolean spirit)
 	{
 		Player owner = getPlayer();
+		
 		if (spirit)
 		{
 			if (_spsCharged != 0)
@@ -708,6 +731,7 @@ public abstract class Summon extends Playable
 			owner.autoShot();
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -801,6 +825,7 @@ public abstract class Summon extends Playable
 	{
 		Player owner = getPlayer();
 		setNonAggroTime(System.currentTimeMillis() + Config.NONAGGRO_TIME_ONTELEPORT);
+		
 		if (owner.isInOlympiadMode())
 		{
 			teleToLocation(owner.getLoc(), owner.getReflection());
@@ -809,6 +834,7 @@ public abstract class Summon extends Playable
 		{
 			teleToLocation(Location.findPointToStay(owner, 50, 150), owner.getReflection());
 		}
+		
 		if (!isDead() && _follow)
 		{
 			getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, owner, Config.FOLLOW_RANGE);
@@ -822,6 +848,7 @@ public abstract class Summon extends Playable
 	public void broadcastCharInfo()
 	{
 		Player owner = getPlayer();
+		
 		for (Player player : World.getAroundPlayers(this))
 		{
 			if (player == owner)
@@ -931,6 +958,7 @@ public abstract class Summon extends Playable
 				}
 			}
 		}
+		
 		return (SummonStatsChangeRecorder) _statsRecorder;
 	}
 	
@@ -945,10 +973,12 @@ public abstract class Summon extends Playable
 	{
 		List<L2GameServerPacket> list = new ArrayList<>();
 		Player owner = getPlayer();
+		
 		if (owner == forPlayer)
 		{
 			list.add(new PetInfo(this));
 			list.add(new PartySpelled(this, true));
+			
 			if (isPet())
 			{
 				list.add(new PetItemList((PetInstance) this));
@@ -957,25 +987,32 @@ public abstract class Summon extends Playable
 		else
 		{
 			Party party = forPlayer.getParty();
+			
 			if ((getReflection() == ReflectionManager.GIRAN_HARBOR) && ((owner == null) || (party == null) || (party != owner.getParty())))
 			{
 				return list;
 			}
+			
 			list.add(new NpcInfo(this, forPlayer));
+			
 			if ((owner != null) && (party != null) && (party == owner.getParty()))
 			{
 				list.add(new PartySpelled(this, true));
 			}
+			
 			list.add(RelationChanged.update(forPlayer, this, forPlayer));
 		}
+		
 		if (isInCombat())
 		{
 			list.add(new AutoAttackStart(getObjectId()));
 		}
+		
 		if (isMoving || isFollow)
 		{
 			list.add(movePacket());
 		}
+		
 		return list;
 	}
 	
@@ -987,6 +1024,7 @@ public abstract class Summon extends Playable
 	{
 		startAttackStanceTask0();
 		Player player = getPlayer();
+		
 		if (player != null)
 		{
 			player.startAttackStanceTask0();
@@ -1002,10 +1040,12 @@ public abstract class Summon extends Playable
 	public <E extends GlobalEvent> E getEvent(Class<E> eventClass)
 	{
 		Player player = getPlayer();
+		
 		if (player != null)
 		{
 			return player.getEvent(eventClass);
 		}
+		
 		return super.getEvent(eventClass);
 	}
 	
@@ -1017,10 +1057,12 @@ public abstract class Summon extends Playable
 	public Set<GlobalEvent> getEvents()
 	{
 		Player player = getPlayer();
+		
 		if (player != null)
 		{
 			return player.getEvents();
 		}
+		
 		return super.getEvents();
 	}
 	
@@ -1032,6 +1074,7 @@ public abstract class Summon extends Playable
 	public void sendReuseMessage(Skill skill)
 	{
 		Player player = getPlayer();
+		
 		if ((player != null) && isSkillDisabled(skill))
 		{
 			player.sendPacket(SystemMsg.THAT_PET_SERVITOR_SKILL_CANNOT_BE_USED_BECAUSE_IT_IS_RECHARGING);

@@ -58,15 +58,16 @@ public class AdminMonsterRace implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
 		if (fullString.equalsIgnoreCase("admin_mons"))
 		{
 			if (!activeChar.getPlayerAccess().MonsterRace)
 			{
 				return false;
 			}
+			
 			handleSendPacket(activeChar);
 		}
+		
 		return true;
 	}
 	
@@ -106,6 +107,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 			}
 		};
 		MonsterRace race = MonsterRace.getInstance();
+		
 		if (state == -1)
 		{
 			state++;
@@ -188,11 +190,13 @@ public class AdminMonsterRace implements IAdminCommandHandler
 		public void runImpl() throws Exception
 		{
 			NpcInstance obj;
+			
 			for (int i = 0; i < 8; i++)
 			{
 				obj = MonsterRace.getInstance().getMonsters()[i];
 				activeChar.broadcastPacket(new DeleteObject(obj));
 			}
+			
 			state = -1;
 		}
 	}

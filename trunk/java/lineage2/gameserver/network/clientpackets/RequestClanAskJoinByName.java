@@ -33,10 +33,12 @@ public class RequestClanAskJoinByName extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		_log.info("[IMPLEMENT ME!] RequestClanAskJoinByName (maybe trigger)");
 	}
 }

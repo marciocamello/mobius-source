@@ -65,17 +65,21 @@ public class PlayerVsPlayerDuelEvent extends DuelEvent
 	public boolean canDuel(Player player, Player target, boolean first)
 	{
 		IStaticPacket sm = canDuel0(player, target);
+		
 		if (sm != null)
 		{
 			player.sendPacket(sm);
 			return false;
 		}
+		
 		sm = canDuel0(target, player);
+		
 		if (sm != null)
 		{
 			player.sendPacket(SystemMsg.YOU_ARE_UNABLE_TO_REQUEST_A_DUEL_AT_THIS_TIME);
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -119,31 +123,38 @@ public class PlayerVsPlayerDuelEvent extends DuelEvent
 	{
 		clearActions();
 		updatePlayers(false, false);
+		
 		for (DuelSnapshotObject d : this)
 		{
 			d.getPlayer().sendPacket(new ExDuelEnd(this));
 			GameObject target = d.getPlayer().getTarget();
+			
 			if (target != null)
 			{
 				d.getPlayer().getAI().notifyEvent(CtrlEvent.EVT_FORGET_OBJECT, target);
 			}
 		}
+		
 		switch (_winner)
 		{
 			case NONE:
 				sendPacket(SystemMsg.THE_DUEL_HAS_ENDED_IN_A_TIE);
 				break;
+			
 			case RED:
 			case BLUE:
 				List<DuelSnapshotObject> winners = getObjects(_winner.name());
 				List<DuelSnapshotObject> lossers = getObjects(_winner.revert().name());
 				sendPacket(new SystemMessage2(SystemMsg.C1_HAS_WON_THE_DUEL).addName(winners.get(0).getPlayer()));
+				
 				for (DuelSnapshotObject d : lossers)
 				{
 					d.getPlayer().broadcastPacket(new SocialAction(d.getPlayer().getObjectId(), SocialAction.BOW));
 				}
+				
 				break;
 		}
+		
 		removeObjects(RED_TEAM);
 		removeObjects(BLUE_TEAM);
 	}
@@ -156,23 +167,28 @@ public class PlayerVsPlayerDuelEvent extends DuelEvent
 	public void onDie(Player player)
 	{
 		TeamType team = player.getTeam();
+		
 		if ((team == TeamType.NONE) || _aborted)
 		{
 			return;
 		}
+		
 		boolean allDead = true;
 		List<DuelSnapshotObject> objs = getObjects(team.name());
+		
 		for (DuelSnapshotObject obj : objs)
 		{
 			if (obj.getPlayer() == player)
 			{
 				obj.setDead();
 			}
+			
 			if (!obj.isDead())
 			{
 				allDead = false;
 			}
 		}
+		
 		if (allDead)
 		{
 			_winner = team.revert();
@@ -201,6 +217,7 @@ public class PlayerVsPlayerDuelEvent extends DuelEvent
 		{
 			return;
 		}
+		
 		_winner = player.getTeam().revert();
 		_aborted = false;
 		stopEvent();

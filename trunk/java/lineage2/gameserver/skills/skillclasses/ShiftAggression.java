@@ -49,6 +49,7 @@ public class ShiftAggression extends Skill
 		{
 			return;
 		}
+		
 		for (Creature target : targets)
 		{
 			if (target != null)
@@ -57,19 +58,24 @@ public class ShiftAggression extends Skill
 				{
 					continue;
 				}
+				
 				Player player = (Player) target;
+				
 				for (NpcInstance npc : World.getAroundNpc(activeChar, getSkillRadius(), getSkillRadius()))
 				{
 					AggroInfo ai = npc.getAggroList().get(activeChar);
+					
 					if (ai == null)
 					{
 						continue;
 					}
+					
 					npc.getAggroList().addDamageHate(player, 0, ai.hate);
 					npc.getAggroList().remove(activeChar, true);
 				}
 			}
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());
