@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="36400" name="XP Buff 50% (1-hour)">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36401" name="Lucky Pouch - Event">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36402" name="Lucky Pouch (High-grade) - Event">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36403" name="Lucky Pouch (Top-grade) - Event">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36404" name="Scroll: Midsummer Passion - Event">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36405" name="Rare Accessory Pack (Expiratory) - Event">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36406" name="Rare Accessory Pack (Permanent) - Event">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36407" name="Weapon Pack (R99-grade) - Event">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36408" name="Unbind Scroll Pack - Event">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36414" name="Dragon Claw">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36415" name="Dragon Blood">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36416" name="Dragon Tooth">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+</list>
