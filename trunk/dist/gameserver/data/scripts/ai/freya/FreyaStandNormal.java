@@ -334,6 +334,5 @@ public class FreyaStandNormal extends Fighter
 	@Override
 	protected void teleportHome()
 	{
-		return;
 	}
 }

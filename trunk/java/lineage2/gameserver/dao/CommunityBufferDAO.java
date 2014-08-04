@@ -137,7 +137,7 @@ public class CommunityBufferDAO
 		
 		try
 		{
-			if ((buff_list != "") || !buff_list.isEmpty())
+			if ((!buff_list.equals("")) || !buff_list.isEmpty())
 			{
 				con = DatabaseFactory.getInstance().getConnection();
 				stmt = con.prepareStatement(INSERT_SQL_QUERY);

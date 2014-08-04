@@ -171,7 +171,6 @@ public class Teredor extends Fighter
 	@Override
 	protected void teleportHome()
 	{
-		return;
 	}
 	
 	/**

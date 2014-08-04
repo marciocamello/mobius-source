@@ -131,6 +131,5 @@ public class Beleth extends Mystic
 	@Override
 	public void addTaskAttack(Creature target)
 	{
-		return;
 	}
 }

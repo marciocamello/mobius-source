@@ -251,6 +251,5 @@ public class OctavisNormalStage2 extends Fighter
 	@Override
 	protected void teleportHome()
 	{
-		return;
 	}
 }

@@ -151,6 +151,5 @@ public class EssagirWarriors extends DefaultAI
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		return;
 	}
 }

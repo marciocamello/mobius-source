@@ -82,6 +82,5 @@ public final class SpecialMinionInstance extends MonsterInstance
 	@Override
 	public void onRandomAnimation()
 	{
-		return;
 	}
 }

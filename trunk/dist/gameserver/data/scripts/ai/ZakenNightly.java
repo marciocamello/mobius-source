@@ -238,6 +238,5 @@ public class ZakenNightly extends Fighter
 	@Override
 	protected void teleportHome()
 	{
-		return;
 	}
 }

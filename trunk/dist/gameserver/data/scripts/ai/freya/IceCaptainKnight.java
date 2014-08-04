@@ -55,6 +55,5 @@ public class IceCaptainKnight extends Fighter
 	@Override
 	protected void teleportHome()
 	{
-		return;
 	}
 }

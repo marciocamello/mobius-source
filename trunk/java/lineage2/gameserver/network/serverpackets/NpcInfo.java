@@ -57,12 +57,12 @@ public class NpcInfo extends L2GameServerPacket
 		_rhand = cha.getRightHandItem();
 		_lhand = cha.getLeftHandItem();
 		
-		if (Config.SERVER_SIDE_NPC_NAME || (cha.getTemplate().displayId != 0) || (cha.getName() != cha.getTemplate().name))
+		if (Config.SERVER_SIDE_NPC_NAME || (cha.getTemplate().displayId != 0) || (!cha.getName().equals(cha.getTemplate().name)))
 		{
 			_name = cha.getName();
 		}
 		
-		if (Config.SERVER_SIDE_NPC_TITLE || (cha.getTemplate().displayId != 0) || (cha.getTitle() != cha.getTemplate().title))
+		if (Config.SERVER_SIDE_NPC_TITLE || (cha.getTemplate().displayId != 0) || (!cha.getTitle().equals(cha.getTemplate().title)))
 		{
 			_title = cha.getTitle();
 			

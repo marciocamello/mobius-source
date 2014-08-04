@@ -38,6 +38,5 @@ public class CorpsRuin extends DefaultAI
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		return;
 	}
 }

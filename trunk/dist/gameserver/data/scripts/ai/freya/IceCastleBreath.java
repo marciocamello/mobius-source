@@ -58,6 +58,5 @@ public class IceCastleBreath extends Fighter
 	@Override
 	protected void teleportHome()
 	{
-		return;
 	}
 }
