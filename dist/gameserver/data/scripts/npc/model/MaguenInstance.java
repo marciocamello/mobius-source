@@ -46,6 +46,5 @@ public final class MaguenInstance extends NpcInstance
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
-		return;
 	}
 }

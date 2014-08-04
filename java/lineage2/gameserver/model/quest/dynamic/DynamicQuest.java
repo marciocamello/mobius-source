@@ -435,7 +435,7 @@ public abstract class DynamicQuest
 		{
 			boolean enterRequest = onPlayerEnter(player);
 			
-			if (enterRequest == true)
+			if (enterRequest)
 			{
 				sendQuestInfo(player);
 			}

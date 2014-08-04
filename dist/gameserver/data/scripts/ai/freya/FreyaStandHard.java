@@ -312,6 +312,5 @@ public class FreyaStandHard extends Fighter
 	@Override
 	protected void teleportHome()
 	{
-		return;
 	}
 }

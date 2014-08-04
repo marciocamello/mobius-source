@@ -65,6 +65,5 @@ public final class NativeCorpseInstance extends NpcInstance
 	@Override
 	public void onRandomAnimation()
 	{
-		return;
 	}
 }

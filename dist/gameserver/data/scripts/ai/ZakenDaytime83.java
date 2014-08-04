@@ -120,6 +120,5 @@ public class ZakenDaytime83 extends Fighter
 	@Override
 	protected void teleportHome()
 	{
-		return;
 	}
 }

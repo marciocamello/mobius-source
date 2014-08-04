@@ -81,6 +81,5 @@ public class BelethClone extends Mystic
 	@Override
 	public void addTaskAttack(Creature target)
 	{
-		return;
 	}
 }

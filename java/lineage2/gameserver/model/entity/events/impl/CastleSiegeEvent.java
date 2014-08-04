@@ -595,7 +595,7 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 			targetSiegeClan = siegeEvent.getSiegeClan(DEFENDERS, targetPlayer.getClan());
 		}
 		
-		if (targetSiegeClan.getType() == ATTACKERS)
+		if (targetSiegeClan.getType().equals(ATTACKERS))
 		{
 			if (targetSiegeClan.getFlag() == null)
 			{

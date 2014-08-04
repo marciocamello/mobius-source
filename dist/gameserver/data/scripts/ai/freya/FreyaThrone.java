@@ -290,6 +290,5 @@ public class FreyaThrone extends Fighter
 	@Override
 	protected void teleportHome()
 	{
-		return;
 	}
 }

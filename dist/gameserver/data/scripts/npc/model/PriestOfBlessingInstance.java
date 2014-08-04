@@ -166,7 +166,7 @@ public class PriestOfBlessingInstance extends NpcInstance
 			int val = Integer.parseInt(command.substring(13));
 			Hourglass hg = getHourglass(player);
 			int itemId = getHourglassId(hg);
-			buyLimitedItem(player, "hourglass" + hg.minLevel + hg.maxLevel, itemId, val, false);
+			buyLimitedItem(player, "hourglass" + hg.minLevel + "" + hg.maxLevel, itemId, val, false);
 		}
 		else if (command.startsWith("BuyVoice"))
 		{

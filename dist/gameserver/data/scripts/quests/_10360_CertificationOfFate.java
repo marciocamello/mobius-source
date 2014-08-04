@@ -642,7 +642,7 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 			
 			if (cid.childOf(classId) && (cid.getClassLevel().ordinal() == (classId.getClassLevel().ordinal() + 1)))
 			{
-				html.append("<a action=\"bypass -h Quest ").append(getClass().getSimpleName()).append(" changeclass ").append(cid.getId()).append(" ").append("\">").append(HtmlUtils.htmlClassName(cid.getId())).append("</a><br>");
+				html.append("<a action=\"bypass -h Quest ").append(getClass().getSimpleName()).append(" changeclass ").append(cid.getId()).append(' ').append("\">").append(HtmlUtils.htmlClassName(cid.getId())).append("</a><br>");
 			}
 		}
 		
