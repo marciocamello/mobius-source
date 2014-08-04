@@ -56,35 +56,45 @@ public final class RequestExEnchantSkillUntrain extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (activeChar.getTransformation() != 0)
 		{
 			activeChar.sendMessage("You must leave transformation mode first.");
 			return;
 		}
+		
 		if ((activeChar.getLevel() < 76) || (activeChar.getClassLevel() < 4))
 		{
 			activeChar.sendMessage("You must have 3rd class change quest completed.");
 			return;
 		}
+		
 		int oldSkillLevel = activeChar.getSkillDisplayLevel(_skillId);
+		
 		if (oldSkillLevel == -1)
 		{
 			return;
 		}
+		
 		if ((_skillLvl != (oldSkillLevel - 1)) || ((_skillLvl / 100) != (oldSkillLevel / 100)))
 		{
 			return;
 		}
+		
 		EnchantSkillLearn sl = SkillTreeTable.getSkillEnchant(_skillId, oldSkillLevel);
+		
 		if (sl == null)
 		{
 			return;
 		}
+		
 		Skill newSkill;
+		
 		if ((_skillLvl % 100) == 0)
 		{
 			_skillLvl = sl.getBaseLevel();
@@ -94,10 +104,12 @@ public final class RequestExEnchantSkillUntrain extends L2GameClientPacket
 		{
 			newSkill = SkillTable.getInstance().getInfo(_skillId, SkillTreeTable.convertEnchantLevel(sl.getBaseLevel(), _skillLvl, sl.getMaxLevel()));
 		}
+		
 		if (newSkill == null)
 		{
 			return;
 		}
+		
 		if (_skillId < 10000)
 		{
 			if (Functions.getItemCount(activeChar, SkillTreeTable.UNTRAIN_ENCHANT_BOOK) == 0)
@@ -105,6 +117,7 @@ public final class RequestExEnchantSkillUntrain extends L2GameClientPacket
 				activeChar.sendPacket(Msg.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT);
 				return;
 			}
+			
 			Functions.removeItem(activeChar, SkillTreeTable.UNTRAIN_ENCHANT_BOOK, 1);
 		}
 		else if (_skillId >= 10000)
@@ -114,10 +127,13 @@ public final class RequestExEnchantSkillUntrain extends L2GameClientPacket
 				activeChar.sendPacket(Msg.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT);
 				return;
 			}
+			
 			Functions.removeItem(activeChar, SkillTreeTable.UNTRAIN_NEW_ENCHANT_BOOK, 1);
 		}
+		
 		activeChar.addExpAndSp(0, sl.getCost()[1] * sl.getCostMult());
 		activeChar.addSkill(newSkill, true);
+		
 		if (_skillLvl > 100)
 		{
 			SystemMessage sm = new SystemMessage(SystemMessage.Untrain_of_enchant_skill_was_successful_Current_level_of_enchant_skill_S1_has_been_decreased_by_1);
@@ -130,6 +146,7 @@ public final class RequestExEnchantSkillUntrain extends L2GameClientPacket
 			sm.addSkillName(_skillId, _skillLvl);
 			activeChar.sendPacket(sm);
 		}
+		
 		Log.add(activeChar.getName() + "|Successfully untranes|" + _skillId + "|to+" + _skillLvl + "|---", "enchant_skills");
 		activeChar.sendPacket(new ExEnchantSkillInfo(_skillId, newSkill.getDisplayLevel()), ExEnchantSkillResult.SUCCESS);
 		activeChar.sendSkillList();

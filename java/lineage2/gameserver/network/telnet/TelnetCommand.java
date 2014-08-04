@@ -94,6 +94,7 @@ public abstract class TelnetCommand implements Comparable<TelnetCommand>
 				return true;
 			}
 		}
+		
 		return this.command.equalsIgnoreCase(command);
 	}
 	
@@ -119,14 +120,17 @@ public abstract class TelnetCommand implements Comparable<TelnetCommand>
 		{
 			return true;
 		}
+		
 		if (o == null)
 		{
 			return true;
 		}
+		
 		if (o instanceof TelnetCommand)
 		{
 			return command.equals(((TelnetCommand) o).command);
 		}
+		
 		return false;
 	}
 	

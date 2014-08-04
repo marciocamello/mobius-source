@@ -33,22 +33,27 @@ public class Leadergate implements IVoicedCommandHandler, ScriptFile
 			if (activeChar.getClan() != null)
 			{
 				Player clanLeader = activeChar.getClan().getLeader().getPlayer();
+				
 				if (clanLeader == null)
 				{
 					return false;
 				}
+				
 				if (clanLeader.getEffectList().getEffectByType(EffectType.Immobilize) != null)
 				{
 					if (!validateGateCondition(clanLeader, activeChar))
 					{
 						return false;
 					}
+					
 					activeChar.teleToLocation(clanLeader.getX(), clanLeader.getY(), clanLeader.getZ());
 					return true;
 				}
+				
 				activeChar.sendMessage("I cannot find the lord's signal right now, so it is impossible to cast the spell.");
 			}
 		}
+		
 		return true;
 	}
 	
@@ -60,24 +65,28 @@ public class Leadergate implements IVoicedCommandHandler, ScriptFile
 			player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
 			return false;
 		}
+		
 		if (clanLeader.isInStoreMode())
 		{
 			// Need retail message if there's one.
 			player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
 			return false;
 		}
+		
 		if (clanLeader.isRooted() || clanLeader.isInCombat())
 		{
 			// Need retail message if there's one.
 			player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
 			return false;
 		}
+		
 		if (clanLeader.isInOlympiadMode())
 		{
 			// Need retail message if there's one.
 			player.sendMessage("Couldn't teleport to clan leader. The requirements was not meet.");
 			return false;
 		}
+		
 		if (clanLeader.isInObserverMode())
 		{
 			// Need retail message if there's one.
@@ -86,7 +95,6 @@ public class Leadergate implements IVoicedCommandHandler, ScriptFile
 		}
 		
 		return true;
-		
 	}
 	
 	@Override
@@ -98,13 +106,11 @@ public class Leadergate implements IVoicedCommandHandler, ScriptFile
 	@Override
 	public void onReload()
 	{
-		
 	}
 	
 	@Override
 	public void onShutdown()
 	{
-		
 	}
 	
 	@Override

@@ -51,12 +51,14 @@ public class EffectHealAndDamage extends Effect
 		List<Creature> targetsHeal = new ArrayList<>();
 		getSkill().addTargetsToLakcis(targetsDamage, _effected, false);
 		getSkill().addTargetsToLakcis(targetsHeal, _effected, true);
+		
 		for (Creature targetHeal : targetsHeal)
 		{
 			double hp = getSkill().getPower();
 			hp = (hp * (targetHeal.calcStat(Stats.HEAL_EFFECTIVNESS, 100., _effected, getSkill()))) / 100;
 			hp = Math.max(0, Math.min(hp, ((targetHeal.calcStat(Stats.HP_LIMIT, null, null) * targetHeal.getMaxHp()) / 100.) - targetHeal.getCurrentHp()));
 			targetHeal.setCurrentHp(hp + targetHeal.getCurrentHp(), false);
+			
 			if (hp > 0)
 			{
 				if (_effected == targetHeal)
@@ -70,14 +72,17 @@ public class EffectHealAndDamage extends Effect
 				}
 			}
 		}
+		
 		for (Creature targetDamage : targetsDamage)
 		{
 			double damage = getSkill().getPower2();
 			damage = targetDamage.calcStat(Stats.MAGIC_DAMAGE, damage, _effected, getSkill());
+			
 			if ((damage > (targetDamage.getCurrentHp() - 1)) && !targetDamage.isNpc())
 			{
 				return;
 			}
+			
 			if (targetDamage.isNpc())
 			{
 				NpcInstance npcAggro = (NpcInstance) targetDamage;
@@ -85,6 +90,7 @@ public class EffectHealAndDamage extends Effect
 				npcAggro.setRunning();
 				npcAggro.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _effected);
 			}
+			
 			targetDamage.reduceCurrentHp(damage, 0, _effected, getSkill(), false, false, targetDamage.isNpc(), false, false, true, false);
 			getEffected().broadcastPacket(new MagicSkillUse(_effected, targetDamage, getSkill().getId(), getSkill().getLevel(), 0, 0));
 		}

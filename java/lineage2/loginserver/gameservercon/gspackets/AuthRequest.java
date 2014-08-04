@@ -97,10 +97,12 @@ public class AuthRequest extends ReceivablePacket
 		externalIp = readS();
 		internalIp = readS();
 		ports = new int[readH()];
+		
 		for (int i = 0; i < ports.length; i++)
 		{
 			ports[i] = readH();
 		}
+		
 		maxOnline = readD();
 	}
 	
@@ -113,6 +115,7 @@ public class AuthRequest extends ReceivablePacket
 		_log.info("Trying to register gameserver: " + requestId + " [" + getGameServer().getConnection().getIpAddress() + "]");
 		int failReason = 0;
 		GameServer gs = getGameServer();
+		
 		if (GameServerManager.getInstance().registerGameServer(requestId, gs))
 		{
 			gs.setPorts(ports);
@@ -154,12 +157,14 @@ public class AuthRequest extends ReceivablePacket
 		{
 			failReason = LoginServerFail.REASON_ID_RESERVED;
 		}
+		
 		if (failReason != 0)
 		{
 			_log.info("Gameserver registration failed.");
 			sendPacket(new LoginServerFail(failReason));
 			return;
 		}
+		
 		_log.info("Gameserver registration successful.");
 		sendPacket(new AuthResponse(gs));
 	}

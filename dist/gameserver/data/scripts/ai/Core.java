@@ -68,6 +68,7 @@ public class Core extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (_firstTimeAttacked)
 		{
 			Functions.npcSay(actor, "A non-permitted target has been discovered.");
@@ -92,6 +93,7 @@ public class Core extends Fighter
 		Functions.npcSay(actor, "A fatal error has occurred");
 		Functions.npcSay(actor, "System is being shut down...");
 		Functions.npcSay(actor, "......");
+		
 		try
 		{
 			final NpcInstance cubic1 = NpcHolder.getInstance().getTemplate(TELEPORTATION_CUBIC_ID).getNewInstance();
@@ -108,6 +110,7 @@ public class Core extends Fighter
 		{
 			e.printStackTrace();
 		}
+		
 		_firstTimeAttacked = true;
 		super.onEvtDead(killer);
 	}

@@ -60,6 +60,7 @@ public class SkillTreeTable
 		{
 			_instance = new SkillTreeTable();
 		}
+		
 		return _instance;
 	}
 	
@@ -79,29 +80,37 @@ public class SkillTreeTable
 	public static void checkSkill(Player player, Skill skill)
 	{
 		SkillLearn learn = SkillAcquireHolder.getInstance().getSkillLearn(player, skill.getId(), levelWithoutEnchant(skill), AcquireType.NORMAL);
+		
 		if (learn == null)
 		{
 			return;
 		}
+		
 		if (player.isAwaking())
 		{
 			return;
 		}
+		
 		if (learn.getMinLevel() > (player.getLevel() + 10))
 		{
 			player.removeSkill(skill, true);
+			
 			for (int i = skill.getBaseLevel(); i != 0; i--)
 			{
 				SkillLearn learn2 = SkillAcquireHolder.getInstance().getSkillLearn(player, skill.getId(), i, AcquireType.NORMAL);
+				
 				if (learn2 == null)
 				{
 					continue;
 				}
+				
 				if (learn2.getMinLevel() > (player.getLevel() + 10))
 				{
 					continue;
 				}
+				
 				Skill newSkill = SkillTable.getInstance().getInfo(skill.getId(), i);
+				
 				if (newSkill != null)
 				{
 					player.addSkill(newSkill, true);
@@ -130,10 +139,12 @@ public class SkillTreeTable
 	{
 		List<EnchantSkillLearn> result = new ArrayList<>();
 		List<EnchantSkillLearn> enchants = _enchant.get(skillid);
+		
 		if (enchants == null)
 		{
 			return result;
 		}
+		
 		for (EnchantSkillLearn e : enchants)
 		{
 			if ((e.getLevel() % 100) == 1)
@@ -141,6 +152,7 @@ public class SkillTreeTable
 				result.add(e);
 			}
 		}
+		
 		return result;
 	}
 	
@@ -152,10 +164,12 @@ public class SkillTreeTable
 	public static int isEnchantable(Skill skill)
 	{
 		List<EnchantSkillLearn> enchants = _enchant.get(skill.getId());
+		
 		if (enchants == null)
 		{
 			return 0;
 		}
+		
 		for (EnchantSkillLearn e : enchants)
 		{
 			if (e.getBaseLevel() <= skill.getLevel())
@@ -163,6 +177,7 @@ public class SkillTreeTable
 				return 1;
 			}
 		}
+		
 		return 0;
 	}
 	
@@ -176,10 +191,12 @@ public class SkillTreeTable
 	{
 		List<EnchantSkillLearn> result = new ArrayList<>();
 		List<EnchantSkillLearn> enchants = _enchant.get(skillid);
+		
 		if (enchants == null)
 		{
 			return result;
 		}
+		
 		for (EnchantSkillLearn e : enchants)
 		{
 			if ((e.getLevel() % 100) == (level % 100))
@@ -187,6 +204,7 @@ public class SkillTreeTable
 				result.add(e);
 			}
 		}
+		
 		return result;
 	}
 	
@@ -199,10 +217,12 @@ public class SkillTreeTable
 	public static EnchantSkillLearn getSkillEnchant(int skillid, int level)
 	{
 		List<EnchantSkillLearn> enchants = _enchant.get(skillid);
+		
 		if (enchants == null)
 		{
 			return null;
 		}
+		
 		for (EnchantSkillLearn e : enchants)
 		{
 			if (e.getLevel() == level)
@@ -210,6 +230,7 @@ public class SkillTreeTable
 				return e;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -226,10 +247,12 @@ public class SkillTreeTable
 		{
 			return level;
 		}
+		
 		if (level < 100)
 		{
 			return level;
 		}
+		
 		return baseLevel + ((((level - (level % 100)) / 100) - 1) * enchantlevels) + (level % 100);
 	}
 	
@@ -242,6 +265,7 @@ public class SkillTreeTable
 		{
 			_instance = null;
 		}
+		
 		_enchant.clear();
 	}
 }

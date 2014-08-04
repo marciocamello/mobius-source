@@ -27,7 +27,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public final class CrystalPrisonTPInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	private static final int VullockInstance = 167;
@@ -49,6 +49,7 @@ public final class CrystalPrisonTPInstance extends NpcInstance
 		if (command.startsWith("request_vallock"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(VullockInstance))
@@ -64,6 +65,7 @@ public final class CrystalPrisonTPInstance extends NpcInstance
 		else if (command.equalsIgnoreCase("request_Baylor"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(BaylorInstance))

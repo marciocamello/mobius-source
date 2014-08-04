@@ -46,6 +46,7 @@ public class ExBR_MiniGameLoadScores extends L2GameServerPacket
 			for (String name : entry.getValue())
 			{
 				List<Map.Entry<String, Integer>> set = _entries.get(i);
+				
 				if (set == null)
 				{
 					_entries.put(i, set = new ArrayList<>());
@@ -61,9 +62,7 @@ public class ExBR_MiniGameLoadScores extends L2GameServerPacket
 				}
 				
 				set.add(new AbstractMap.SimpleImmutableEntry<>(name, entry.getKey()));
-				
 				i++;
-				
 				_lastScore = entry.getKey();
 				
 				if (i > 100)
@@ -82,6 +81,7 @@ public class ExBR_MiniGameLoadScores extends L2GameServerPacket
 		writeD(_score); // last big score of player
 		writeD(0x00); // ?
 		writeD(_lastScore); // last score of list
+		
 		for (IntObjectMap.Entry<List<Map.Entry<String, Integer>>> entry : _entries.entrySet())
 		{
 			for (Map.Entry<String, Integer> scoreEntry : entry.getValue())

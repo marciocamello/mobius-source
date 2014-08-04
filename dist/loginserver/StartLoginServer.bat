@@ -3,7 +3,7 @@ title GoD: Login Server Console
 :start
 echo Starting LoginServer.
 echo.
-java -version:1.7 -server -Dfile.encoding=UTF-8 -Xms64m -Xmx64m -cp config/xml;../libs/*; lineage2.loginserver.LoginServer
+java -version:1.8 -server -Dfile.encoding=UTF-8 -Xms64m -Xmx64m -cp config/xml;../libs/*; lineage2.loginserver.LoginServer
 if ERRORLEVEL 2 goto restart
 if ERRORLEVEL 1 goto error
 goto end

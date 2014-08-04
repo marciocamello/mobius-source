@@ -23,7 +23,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public final class PassagewayMobWithHerbInstance extends MonsterInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -53,7 +53,9 @@ public final class PassagewayMobWithHerbInstance extends MonsterInstance
 		{
 			return;
 		}
+		
 		super.calculateRewards(lastAttacker);
+		
 		if (lastAttacker.isPlayable())
 		{
 			dropItem(lastAttacker.getPlayer(), FieryDemonBloodHerb, 1);

@@ -43,6 +43,7 @@ public final class LoggingRejectedExecutionHandler implements RejectedExecutionH
 		{
 			return;
 		}
+		
 		_log.error(r + " from " + executor, new RejectedExecutionException());
 	}
 }

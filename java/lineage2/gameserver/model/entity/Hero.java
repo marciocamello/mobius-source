@@ -129,6 +129,7 @@ public class Hero
 		{
 			_instance = new Hero();
 		}
+		
 		return _instance;
 	}
 	
@@ -167,11 +168,13 @@ public class Hero
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(GET_HEROES);
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				StatsSet hero = new StatsSet();
@@ -186,9 +189,11 @@ public class Hero
 				loadMessage(charId);
 				_heroes.put(charId, hero);
 			}
+			
 			DbUtils.close(statement, rset);
 			statement = con.prepareStatement(GET_ALL_HEROES);
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				StatsSet hero = new StatsSet();
@@ -229,6 +234,7 @@ public class Hero
 	public synchronized void clearHeroes()
 	{
 		mysql.set("UPDATE heroes SET played = 0, active = 0");
+		
 		if (!_heroes.isEmpty())
 		{
 			for (StatsSet hero : _heroes.values())
@@ -237,12 +243,15 @@ public class Hero
 				{
 					continue;
 				}
+				
 				String name = hero.getString(Olympiad.CHAR_NAME);
 				Player player = World.getPlayer(name);
+				
 				if (player != null)
 				{
 					PcInventory inventory = player.getInventory();
 					inventory.writeLock();
+					
 					try
 					{
 						for (ItemInstance item : player.getInventory().getItems())
@@ -263,6 +272,7 @@ public class Hero
 				}
 			}
 		}
+		
 		_heroes.clear();
 		_herodiary.clear();
 	}
@@ -278,11 +288,14 @@ public class Hero
 		{
 			return true;
 		}
+		
 		Map<Integer, StatsSet> heroes = new ConcurrentHashMap<>();
 		boolean error = false;
+		
 		for (StatsSet hero : newHeroes)
 		{
 			int charId = hero.getInteger(Olympiad.CHAR_ID);
+			
 			if ((_completeHeroes != null) && _completeHeroes.containsKey(charId))
 			{
 				StatsSet oldHero = _completeHeroes.get(charId);
@@ -302,9 +315,11 @@ public class Hero
 				newHero.set(ACTIVE, 0);
 				heroes.put(charId, newHero);
 			}
+			
 			addHeroDiary(charId, HeroDiary.ACTION_HERO_GAINED, 0);
 			loadDiary(charId);
 		}
+		
 		_heroes.putAll(heroes);
 		heroes.clear();
 		updateHeroes(0);
@@ -319,22 +334,26 @@ public class Hero
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("REPLACE INTO heroes (char_id, count, played, active) VALUES (?,?,?,?)");
+			
 			for (Integer heroId : _heroes.keySet())
 			{
 				if ((id > 0) && (heroId != id))
 				{
 					continue;
 				}
+				
 				StatsSet hero = _heroes.get(heroId);
 				statement.setInt(1, heroId);
 				statement.setInt(2, hero.getInteger(COUNT));
 				statement.setInt(3, hero.getInteger(PLAYED));
 				statement.setInt(4, hero.getInteger(ACTIVE));
 				statement.execute();
+				
 				if ((_completeHeroes != null) && !_completeHeroes.containsKey(heroId))
 				{
 					HeroSetClanAndAlly(heroId, hero);
@@ -364,10 +383,12 @@ public class Hero
 		{
 			return false;
 		}
+		
 		if (_heroes.containsKey(id) && (_heroes.get(id).getInteger(ACTIVE) == 1))
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -382,10 +403,12 @@ public class Hero
 		{
 			return false;
 		}
+		
 		if (_heroes.containsKey(id) && (_heroes.get(id).getInteger(ACTIVE) == 0))
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -399,18 +422,22 @@ public class Hero
 		hero.set(ACTIVE, 1);
 		_heroes.remove(player.getObjectId());
 		_heroes.put(player.getObjectId(), hero);
+		
 		if (player.getBaseClassId() == player.getActiveClassId())
 		{
 			addSkills(player);
 		}
+		
 		player.setHero(true);
 		player.updatePledgeClass();
 		player.broadcastPacket(new SocialAction(player.getObjectId(), SocialAction.GIVE_HERO));
+		
 		if ((player.getClan() != null) && (player.getClan().getLevel() >= 5))
 		{
 			player.getClan().incReputation(5000, true, "Hero:activateHero:" + player);
 			player.getClan().broadcastToOtherOnlineMembers(new SystemMessage(SystemMessage.CLAN_MEMBER_S1_WAS_NAMED_A_HERO_2S_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION_SCORE).addString(player.getName()).addNumber(Math.round(5000 * Config.RATE_CLAN_REP_SCORE)), player);
 		}
+		
 		player.broadcastUserInfo();
 		updateHeroes(player.getObjectId());
 	}
@@ -451,12 +478,14 @@ public class Hero
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM  heroes_diary WHERE charId=? ORDER BY time ASC");
 			statement.setInt(1, charId);
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				long time = rset.getLong("time");
@@ -465,7 +494,9 @@ public class Hero
 				HeroDiary d = new HeroDiary(action, time, param);
 				diary.add(d);
 			}
+			
 			_herodiary.put(charId, diary);
+			
 			if (Config.DEBUG)
 			{
 				_log.info("Hero System: Loaded " + diary.size() + " diary entries for Hero(object id: #" + charId + ")");
@@ -492,6 +523,7 @@ public class Hero
 	{
 		final int perpage = 10;
 		List<HeroDiary> mainlist = _herodiary.get(charid);
+		
 		if (mainlist != null)
 		{
 			NpcHtmlMessage html = new NpcHtmlMessage(activeChar, null);
@@ -505,12 +537,14 @@ public class Hero
 			final StringBuilder fList = new StringBuilder(500);
 			int counter = 0;
 			int breakat = 0;
+			
 			for (int i = (page - 1) * perpage; i < list.size(); i++)
 			{
 				breakat = i;
 				HeroDiary diary = list.get(i);
 				Map.Entry<String, String> entry = diary.toString(activeChar);
 				fList.append("<tr><td>");
+				
 				if (color)
 				{
 					fList.append("<table width=270 bgcolor=\"131210\">");
@@ -519,17 +553,20 @@ public class Hero
 				{
 					fList.append("<table width=270>");
 				}
+				
 				fList.append("<tr><td width=270><font color=\"LEVEL\">" + entry.getKey() + "</font></td></tr>");
 				fList.append("<tr><td width=270>" + entry.getValue() + "</td></tr>");
 				fList.append("<tr><td>&nbsp;</td></tr></table>");
 				fList.append("</td></tr>");
 				color = !color;
 				counter++;
+				
 				if (counter >= perpage)
 				{
 					break;
 				}
 			}
+			
 			if (breakat < (list.size() - 1))
 			{
 				html.replace("%buttprev%", HtmlUtils.PREV_BUTTON);
@@ -539,6 +576,7 @@ public class Hero
 			{
 				html.replace("%buttprev%", StringUtils.EMPTY);
 			}
+			
 			if (page > 1)
 			{
 				html.replace("%buttnext%", HtmlUtils.NEXT_BUTTON);
@@ -548,6 +586,7 @@ public class Hero
 			{
 				html.replace("%buttnext%", StringUtils.EMPTY);
 			}
+			
 			html.replace("%list%", fList.toString());
 			activeChar.sendPacket(html);
 		}
@@ -563,6 +602,7 @@ public class Hero
 	{
 		insertHeroDiary(playerId, id, param);
 		List<HeroDiary> list = _herodiary.get(playerId);
+		
 		if (list != null)
 		{
 			list.add(new HeroDiary(id, System.currentTimeMillis(), param));
@@ -579,6 +619,7 @@ public class Hero
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -609,6 +650,7 @@ public class Hero
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			String message = null;
@@ -650,8 +692,10 @@ public class Hero
 		{
 			return;
 		}
+		
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -694,12 +738,14 @@ public class Hero
 			for (Integer heroId : _heroes.keySet())
 			{
 				StatsSet hero = _heroes.get(heroId);
+				
 				if (hero.getInteger(Olympiad.CLASS_ID) == classid)
 				{
 					return heroId;
 				}
 			}
 		}
+		
 		return 0;
 	}
 	
@@ -720,6 +766,7 @@ public class Hero
 				}
 			}
 		}
+		
 		return null;
 	}
 	
@@ -731,23 +778,28 @@ public class Hero
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("REPLACE INTO heroes (char_id, count, played, active) VALUES (?,?,?,?)");
+			
 			for (Integer heroId : _heroes.keySet())
 			{
 				int id = player.getObjectId();
+				
 				if ((id > 0) && (heroId != id))
 				{
 					continue;
 				}
+				
 				StatsSet hero = _heroes.get(heroId);
 				statement.setInt(1, heroId);
 				statement.setInt(2, hero.getInteger(COUNT));
 				statement.setInt(3, hero.getInteger(PLAYED));
 				statement.setInt(4, 0);
 				statement.execute();
+				
 				if ((_completeHeroes != null) && !_completeHeroes.containsKey(heroId))
 				{
 					_completeHeroes.remove(heroId);

@@ -56,13 +56,16 @@ public class NpcInfo extends L2GameServerPacket
 		_isAttackable = (attacker != null) && cha.isAutoAttackable(attacker);
 		_rhand = cha.getRightHandItem();
 		_lhand = cha.getLeftHandItem();
+		
 		if (Config.SERVER_SIDE_NPC_NAME || (cha.getTemplate().displayId != 0) || (cha.getName() != cha.getTemplate().name))
 		{
 			_name = cha.getName();
 		}
+		
 		if (Config.SERVER_SIDE_NPC_TITLE || (cha.getTemplate().displayId != 0) || (cha.getTitle() != cha.getTemplate().title))
 		{
 			_title = cha.getTitle();
+			
 			if (Config.SERVER_SIDE_NPC_TITLE_ETC)
 			{
 				if (cha.isMonster())
@@ -85,7 +88,6 @@ public class NpcInfo extends L2GameServerPacket
 		_maxHP = cha.getMaxHp();
 		_maxMP = cha.getMaxMp();
 		_maxCP = cha.getMaxCp();
-		
 		_showSpawnAnimation = cha.getSpawnAnimation();
 		_showName = cha.isShowName();
 		_canTarget = cha.isTargetable();
@@ -111,7 +113,6 @@ public class NpcInfo extends L2GameServerPacket
 		_name = cha.getName();
 		_title = cha.getTitle();
 		_showSpawnAnimation = cha.getSpawnAnimation();
-		
 		common(cha);
 	}
 	
@@ -133,7 +134,6 @@ public class NpcInfo extends L2GameServerPacket
 		//
 		ally_id = alliance == null ? 0 : alliance.getAllyId();
 		ally_crest_id = alliance == null ? 0 : alliance.getAllyCrestId();
-		
 		_runSpd = cha.getRunSpeed();
 		_walkSpd = cha.getWalkSpeed();
 		karma = cha.getKarma();
@@ -192,45 +192,37 @@ public class NpcInfo extends L2GameServerPacket
 		writeD(0); // TODO chest
 		writeD(_lhand); // left hand weapon
 		writeC(_isNameAbove ? 1 : 0); // 2.2: name above char 1=true ... ??;
-										// 2.3: 1 - normal, 2 - dead
+		// 2.3: 1 - normal, 2 - dead
 		writeC(running);
 		writeC(incombat);
 		writeC(dead);
 		writeC(_showSpawnAnimation); // invisible ?? 0=false 1=true 2=summoned
-										// (only works if model has a summon
-										// animation)
+		// (only works if model has a summon
+		// animation)
 		writeD(_nameNpcString.getId());
 		writeS(_name);
 		writeD(_titleNpcString.getId());
 		writeS(_title);
-		
 		writeD(_titleColor);
-		
 		writeD(pvp_flag);
 		writeD(karma); // hmm karma ??
-		
 		writeD(clan_id);
 		writeD(clan_crest_id);
 		writeD(ally_id);
 		writeD(ally_crest_id);
 		writeD(0x00);
-		
 		writeC(isFlying ? 2 : 0); // C2
 		writeC(_team.ordinal()); // team aura 1-blue, 2-red
-		
 		writeF(currentColRadius);
 		writeF(currentColHeight);
-		
 		writeD(_enchantEffect); // C4
 		writeD(isFlying ? 1 : 0);
 		writeD(0x00);
 		writeD(_formId);
-		
 		writeC(_canTarget ? 0x01 : 0x00); // show name
 		writeC(_showName ? 0x01 : 0x00); // show title
 		writeD(_state);
 		writeD(_transformId);
-		
 		writeD(_HP);
 		writeD(_maxHP);
 		writeD(_MP);
@@ -244,6 +236,7 @@ public class NpcInfo extends L2GameServerPacket
 		if (_aveList != null)
 		{
 			writeD(_aveList.size());
+			
 			for (int i : _aveList)
 			{
 				writeD(i);

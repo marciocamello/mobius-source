@@ -82,16 +82,19 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 			{
 				return;
 			}
+			
 			if (isPvPEventStarted())
 			{
 				_log.info("TvT not started: another event is already running");
 				return;
 			}
+			
 			if (!Rnd.chance(Config.EVENT_TvTChanceToStart))
 			{
 				_log.debug("TvT not started: chance");
 				return;
 			}
+			
 			for (Residence c : ResidenceHolder.getInstance().getResidenceList(Castle.class))
 			{
 				if ((c.getSiegeEvent() != null) && c.getSiegeEvent().isInProgress())
@@ -100,6 +103,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 					return;
 				}
 			}
+			
 			start(new String[]
 			{
 				"1",
@@ -199,6 +203,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 	public void onReload()
 	{
 		_zone.removeListener(_zoneListener);
+		
 		if (_startTask != null)
 		{
 			_startTask.cancel(false);
@@ -236,16 +241,19 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 	public void activateEvent()
 	{
 		Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (!isActive())
 		{
 			if (_startTask == null)
 			{
 				_startTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new StartTask(), 3600000, 3600000);
 			}
+			
 			ServerVariables.set("TvT", "on");
 			_log.info("Event 'TvT' activated.");
 			Announcements.getInstance().announceByCustomMessage("scripts.events.TvT.AnnounceEventStarted", null);
@@ -254,6 +262,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			player.sendMessage("Event 'TvT' already active.");
 		}
+		
 		_active = true;
 		show("admin/events.htm", player);
 	}
@@ -264,10 +273,12 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 	public void deactivateEvent()
 	{
 		Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (isActive())
 		{
 			if (_startTask != null)
@@ -275,6 +286,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 				_startTask.cancel(false);
 				_startTask = null;
 			}
+			
 			ServerVariables.unset("TvT");
 			_log.info("Event 'TvT' deactivated.");
 			Announcements.getInstance().announceByCustomMessage("scripts.events.TvT.AnnounceEventStoped", null);
@@ -283,6 +295,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			player.sendMessage("Event 'TvT' not active.");
 		}
+		
 		_active = false;
 		show("admin/events.htm", player);
 	}
@@ -307,19 +320,26 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			case 1:
 				return 20;
+				
 			case 2:
 				return 30;
+				
 			case 3:
 				return 40;
+				
 			case 4:
 				return 52;
+				
 			case 5:
 				return 62;
+				
 			case 6:
 				return 76;
+				
 			case 7:
 				return 86;
 		}
+		
 		return 0;
 	}
 	
@@ -334,19 +354,26 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			case 1:
 				return 29;
+				
 			case 2:
 				return 39;
+				
 			case 3:
 				return 51;
+				
 			case 4:
 				return 61;
+				
 			case 5:
 				return 75;
+				
 			case 6:
 				return 85;
+				
 			case 7:
 				return 99;
 		}
+		
 		return 0;
 	}
 	
@@ -385,6 +412,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			return 7;
 		}
+		
 		return 0;
 	}
 	
@@ -395,13 +423,16 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 	public void start(String[] var)
 	{
 		Player player = getSelf();
+		
 		if (var.length != 2)
 		{
 			show(new CustomMessage("common.Error", player), player);
 			return;
 		}
+		
 		Integer category;
 		Integer autoContinue;
+		
 		try
 		{
 			category = Integer.valueOf(var[0]);
@@ -412,8 +443,10 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 			show(new CustomMessage("common.Error", player), player);
 			return;
 		}
+		
 		_category = category;
 		_autoContinue = autoContinue;
+		
 		if (_category == -1)
 		{
 			_minLevel = 1;
@@ -424,11 +457,13 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 			_minLevel = getMinLevelForCategory(_category);
 			_maxLevel = getMaxLevelForCategory(_category);
 		}
+		
 		if (_endTask != null)
 		{
 			show(new CustomMessage("common.TryLater", player), player);
 			return;
 		}
+		
 		_status = 0;
 		_isRegistrationActive = true;
 		_time_to_start = Config.EVENT_TvTTime;
@@ -484,6 +519,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 			executeTask("events.TvT.TvT", "autoContinue", new Object[0], 10000);
 			return;
 		}
+		
 		if (_time_to_start > 1)
 		{
 			_time_to_start--;
@@ -511,11 +547,14 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 	public void addPlayer()
 	{
 		Player player = getSelf();
+		
 		if ((player == null) || !checkPlayer(player, true))
 		{
 			return;
 		}
+		
 		int team = 0, size1 = players_list1.size(), size2 = players_list2.size();
+		
 		if (size1 > size2)
 		{
 			team = 2;
@@ -528,6 +567,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			team = Rnd.get(1, 2);
 		}
+		
 		if (team == 1)
 		{
 			players_list1.add(player.getStoredId());
@@ -559,41 +599,49 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 			show(new CustomMessage("scripts.events.Late", player), player);
 			return false;
 		}
+		
 		if (first && (players_list1.contains(player.getStoredId()) || players_list2.contains(player.getStoredId())))
 		{
 			show(new CustomMessage("scripts.events.TvT.Cancelled", player), player);
 			return false;
 		}
+		
 		if ((player.getLevel() < _minLevel) || (player.getLevel() > _maxLevel))
 		{
 			show(new CustomMessage("scripts.events.TvT.CancelledLevel", player), player);
 			return false;
 		}
+		
 		if (player.isMounted())
 		{
 			show(new CustomMessage("scripts.events.TvT.Cancelled", player), player);
 			return false;
 		}
+		
 		if (player.isInDuel())
 		{
 			show(new CustomMessage("scripts.events.TvT.CancelledDuel", player), player);
 			return false;
 		}
+		
 		if (player.getTeam() != TeamType.NONE)
 		{
 			show(new CustomMessage("scripts.events.TvT.CancelledOtherEvent", player), player);
 			return false;
 		}
+		
 		if ((player.getOlympiadGame() != null) || (first && Olympiad.isRegistered(player)))
 		{
 			show(new CustomMessage("scripts.events.TvT.CancelledOlympiad", player), player);
 			return false;
 		}
+		
 		if (player.isTeleporting())
 		{
 			show(new CustomMessage("scripts.events.TvT.CancelledTeleport", player), player);
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -636,6 +684,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		ReflectionUtils.getDoor(24190003).openMe();
 		_status = 0;
 		removeAura();
+		
 		if (live_list1.isEmpty())
 		{
 			sayToAll("scripts.events.TvT.AnnounceFinishedBlueWins", null);
@@ -661,9 +710,11 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 			sayToAll("scripts.events.TvT.AnnounceFinishedDraw", null);
 			giveItemsToWinner(true, true, 0.5);
 		}
+		
 		sayToAll("scripts.events.TvT.AnnounceEnd", null);
 		executeTask("events.TvT.TvT", "end", new Object[0], 30000);
 		_isRegistrationActive = false;
+		
 		if (_endTask != null)
 		{
 			_endTask.cancel(false);
@@ -691,6 +742,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		live_list2.clear();
 		players_list1.clear();
 		players_list2.clear();
+		
 		if (_autoContinue > 0)
 		{
 			if (_autoContinue >= 7)
@@ -698,6 +750,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 				_autoContinue = 0;
 				return;
 			}
+			
 			start(new String[]
 			{
 				"" + (_autoContinue + 1),
@@ -721,6 +774,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 				addItem(player, Config.EVENT_TvTItemID, Math.round((Config.EVENT_TvT_rate ? player.getLevel() : 1) * Config.EVENT_TvTItemCOUNT * rate));
 			}
 		}
+		
 		if (team2)
 		{
 			for (Player player : getPlayers(players_list2))
@@ -741,6 +795,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 			unSummonPet(player, true);
 			player.teleToLocation(Territory.getRandomLoc(team1spawn));
 		}
+		
 		for (Player player : getPlayers(players_list2))
 		{
 			unRide(player);
@@ -758,6 +813,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			player.teleToLocation(151480, 46712, -3400);
 		}
+		
 		for (Player player : getPlayers(players_list2))
 		{
 			player.teleToLocation(147640, 46712, -3400);
@@ -770,19 +826,23 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 	public static void paralyzePlayers()
 	{
 		Skill revengeSkill = SkillTable.getInstance().getInfo(Skill.SKILL_RAID_CURSE, 1);
+		
 		for (Player player : getPlayers(players_list1))
 		{
 			player.getEffectList().stopEffect(Skill.SKILL_MYSTIC_IMMUNITY);
 			revengeSkill.getEffects(player, player, false, false);
+			
 			for (Summon summon : player.getSummonList())
 			{
 				revengeSkill.getEffects(player, summon, false, false);
 			}
 		}
+		
 		for (Player player : getPlayers(players_list2))
 		{
 			player.getEffectList().stopEffect(Skill.SKILL_MYSTIC_IMMUNITY);
 			revengeSkill.getEffects(player, player, false, false);
+			
 			for (Summon summon : player.getSummonList())
 			{
 				revengeSkill.getEffects(player, summon, false, false);
@@ -798,19 +858,24 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		for (Player player : getPlayers(players_list1))
 		{
 			player.getEffectList().stopEffect(Skill.SKILL_RAID_CURSE);
+			
 			for (Summon summon : player.getSummonList())
 			{
 				summon.getEffectList().stopEffect(Skill.SKILL_RAID_CURSE);
 			}
+			
 			player.leaveParty();
 		}
+		
 		for (Player player : getPlayers(players_list2))
 		{
 			player.getEffectList().stopEffect(Skill.SKILL_RAID_CURSE);
+			
 			for (Summon summon : player.getSummonList())
 			{
 				summon.getEffectList().stopEffect(Skill.SKILL_RAID_CURSE);
 			}
+			
 			player.leaveParty();
 		}
 	}
@@ -831,6 +896,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 				player.broadcastPacket(new Revive(player));
 			}
 		}
+		
 		for (Player player : getPlayers(players_list2))
 		{
 			if (player.isDead())
@@ -854,6 +920,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 			player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
 			player.setCurrentCp(player.getMaxCp());
 		}
+		
 		for (Player player : getPlayers(players_list2))
 		{
 			player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
@@ -873,6 +940,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 				removePlayer(player);
 			}
 		}
+		
 		for (Player player : getPlayers(players_list2))
 		{
 			if (!checkPlayer(player, false))
@@ -889,24 +957,30 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 	{
 		List<Long> new_live_list1 = new CopyOnWriteArrayList<>();
 		List<Long> new_live_list2 = new CopyOnWriteArrayList<>();
+		
 		for (Long storeId : live_list1)
 		{
 			Player player = GameObjectsStorage.getAsPlayer(storeId);
+			
 			if (player != null)
 			{
 				new_live_list1.add(storeId);
 			}
 		}
+		
 		for (Long storeId : live_list2)
 		{
 			Player player = GameObjectsStorage.getAsPlayer(storeId);
+			
 			if (player != null)
 			{
 				new_live_list2.add(storeId);
 			}
 		}
+		
 		live_list1 = new_live_list1;
 		live_list2 = new_live_list2;
+		
 		for (Player player : getPlayers(live_list1))
 		{
 			if (player.isInZone(_zone) && !player.isDead() && !player.isLogoutStarted())
@@ -918,6 +992,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 				loosePlayer(player);
 			}
 		}
+		
 		for (Player player : getPlayers(live_list2))
 		{
 			if (player.isInZone(_zone) && !player.isDead() && !player.isLogoutStarted())
@@ -929,6 +1004,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 				loosePlayer(player);
 			}
 		}
+		
 		if ((live_list1.size() < 1) || (live_list2.size() < 1))
 		{
 			endBattle();
@@ -944,6 +1020,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			player.setTeam(TeamType.NONE);
 		}
+		
 		for (Player player : getPlayers(live_list2))
 		{
 			player.setTeam(TeamType.NONE);
@@ -960,6 +1037,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 			if (obj != null)
 			{
 				Player player = obj.getPlayer();
+				
 				if ((player != null) && !live_list1.contains(player.getStoredId()) && !live_list2.contains(player.getStoredId()))
 				{
 					player.teleToLocation(147451, 46728, -3410);
@@ -1000,6 +1078,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			return;
 		}
+		
 		if ((_status > 1) && (player != null) && (player.getTeam() != TeamType.NONE) && (live_list1.contains(player.getStoredId()) || live_list2.contains(player.getStoredId())))
 		{
 			removePlayer(player);
@@ -1019,26 +1098,33 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			return;
 		}
+		
 		if ((_status == 0) && _isRegistrationActive && (player.getTeam() != TeamType.NONE) && (live_list1.contains(player.getStoredId()) || live_list2.contains(player.getStoredId())))
 		{
 			removePlayer(player);
 			return;
 		}
+		
 		if ((_status == 1) && (live_list1.contains(player.getStoredId()) || live_list2.contains(player.getStoredId())))
 		{
 			removePlayer(player);
+			
 			try
 			{
 				String var = player.getVar("TvT_backCoords");
+				
 				if ((var == null) || var.equals(""))
 				{
 					return;
 				}
+				
 				String[] coords = var.split(" ");
+				
 				if (coords.length != 4)
 				{
 					return;
 				}
+				
 				player.teleToLocation(Integer.parseInt(coords[0]), Integer.parseInt(coords[1]), Integer.parseInt(coords[2]), Integer.parseInt(coords[3]));
 				player.unsetVar("TvT_backCoords");
 			}
@@ -1046,6 +1132,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 			{
 				e.printStackTrace();
 			}
+			
 			return;
 		}
 		
@@ -1082,7 +1169,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 			{
 				return;
 			}
+			
 			Player player = cha.getPlayer();
+			
 			if ((_status > 0) && (player != null) && !live_list1.contains(player.getStoredId()) && !live_list2.contains(player.getStoredId()))
 			{
 				ThreadPoolManager.getInstance().schedule(new TeleportTask(cha, new Location(147451, 46728, -3410)), 3000);
@@ -1102,7 +1191,9 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 			{
 				return;
 			}
+			
 			Player player = cha.getPlayer();
+			
 			if ((_status > 1) && (player != null) && (player.getTeam() != TeamType.NONE) && (live_list1.contains(player.getStoredId()) || live_list2.contains(player.getStoredId())))
 			{
 				double angle = PositionUtils.convertHeadingToDegree(cha.getHeading());
@@ -1191,14 +1282,17 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 	private static List<Player> getPlayers(List<Long> list)
 	{
 		List<Player> result = new ArrayList<>();
+		
 		for (Long storeId : list)
 		{
 			Player player = GameObjectsStorage.getAsPlayer(storeId);
+			
 			if (player != null)
 			{
 				result.add(player);
 			}
 		}
+		
 		return result;
 	}
 }

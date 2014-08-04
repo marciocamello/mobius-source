@@ -117,15 +117,18 @@ public class GilmoreAI extends Fighter
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((actor == null) || actor.isDead())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			doTask();
 			return true;
 		}
+		
 		if (System.currentTimeMillis() > wait_timeout)
 		{
 			if (!wait)
@@ -141,7 +144,9 @@ public class GilmoreAI extends Fighter
 							wait = true;
 							return true;
 						}
+						
 						break;
+					
 					case 2:
 						switch (step_stage2)
 						{
@@ -150,15 +155,19 @@ public class GilmoreAI extends Fighter
 								wait_timeout = System.currentTimeMillis() + 10000;
 								wait = true;
 								return true;
+								
 							case 2:
 								break;
 						}
+						
 						break;
 				}
 			}
+			
 			wait_timeout = 0;
 			wait = false;
 			actor.setRunning();
+			
 			switch (TheFlowOfTheHorror.getStage())
 			{
 				case 1:
@@ -166,6 +175,7 @@ public class GilmoreAI extends Fighter
 					addTaskMove(points_stage1[index], true);
 					doTask();
 					return true;
+					
 				case 2:
 					switch (step_stage2)
 					{
@@ -175,12 +185,14 @@ public class GilmoreAI extends Fighter
 							doTask();
 							step_stage2 = 2;
 							return true;
+							
 						case 2:
 							actor.setHeading(0);
 							actor.stopMove();
 							actor.broadcastPacketToOthers(new MagicSkillUse(actor, actor, 454, 1, 3000, 0));
 							step_stage2 = 3;
 							return true;
+							
 						case 3:
 							actor.addStatFunc(new FuncMul(Stats.MAGIC_ATTACK_SPEED, 0x40, actor, 5));
 							actor.addStatFunc(new FuncMul(Stats.MAGIC_DAMAGE, 0x40, actor, 10));
@@ -190,9 +202,11 @@ public class GilmoreAI extends Fighter
 							actor.sendChanges();
 							step_stage2 = 4;
 							return true;
+							
 						case 4:
 							setIntention(CtrlIntention.AI_INTENTION_ATTACK, null);
 							return true;
+							
 						case 10:
 							actor.removeStatsOwner(this);
 							step_stage2 = 11;
@@ -200,6 +214,7 @@ public class GilmoreAI extends Fighter
 					}
 			}
 		}
+		
 		return false;
 	}
 	
@@ -212,15 +227,18 @@ public class GilmoreAI extends Fighter
 	{
 		clearTasks();
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return true;
 		}
+		
 		for (NpcInstance npc : World.getAroundNpc(actor, 1000, 200))
 		{
 			if (Rnd.chance(10) && (npc != null) && (npc.getNpcId() == 20235))
 			{
 				MonsterInstance monster = (MonsterInstance) npc;
+				
 				if (Rnd.chance(20))
 				{
 					addTaskCast(monster, actor.getKnownSkill(1467));
@@ -229,9 +247,11 @@ public class GilmoreAI extends Fighter
 				{
 					addTaskAttack(monster);
 				}
+				
 				return true;
 			}
 		}
+		
 		return true;
 	}
 }

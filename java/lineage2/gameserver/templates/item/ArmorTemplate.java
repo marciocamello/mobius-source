@@ -144,6 +144,7 @@ public final class ArmorTemplate extends ItemTemplate
 	{
 		super(set);
 		type = set.getEnum("type", ArmorType.class);
+		
 		if ((_bodyPart == SLOT_NECK) || ((_bodyPart & SLOT_L_EAR) != 0) || ((_bodyPart & SLOT_L_FINGER) != 0))
 		{
 			_type1 = TYPE1_WEAPON_RING_EARRING_NECKLACE;
@@ -159,31 +160,38 @@ public final class ArmorTemplate extends ItemTemplate
 			_type1 = TYPE1_SHIELD_ARMOR;
 			_type2 = TYPE2_SHIELD_ARMOR;
 		}
+		
 		if (getItemType() == ArmorType.PET)
 		{
 			_type1 = TYPE1_SHIELD_ARMOR;
+			
 			switch (_bodyPart)
 			{
 				case SLOT_WOLF:
 					_type2 = TYPE2_PET_WOLF;
 					_bodyPart = SLOT_CHEST;
 					break;
+				
 				case SLOT_GWOLF:
 					_type2 = TYPE2_PET_GWOLF;
 					_bodyPart = SLOT_CHEST;
 					break;
+				
 				case SLOT_HATCHLING:
 					_type2 = TYPE2_PET_HATCHLING;
 					_bodyPart = SLOT_CHEST;
 					break;
+				
 				case SLOT_PENDANT:
 					_type2 = TYPE2_PENDANT;
 					_bodyPart = SLOT_NECK;
 					break;
+				
 				case SLOT_BABYPET:
 					_type2 = TYPE2_PET_BABY;
 					_bodyPart = SLOT_CHEST;
 					break;
+				
 				default:
 					_type2 = TYPE2_PET_STRIDER;
 					_bodyPart = SLOT_CHEST;

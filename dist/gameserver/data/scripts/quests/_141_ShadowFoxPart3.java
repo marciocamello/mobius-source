@@ -55,10 +55,12 @@ public class _141_ShadowFoxPart3 extends Quest implements ScriptFile
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
 		QuestState qs = player.getQuestState(_140_ShadowFoxPart2.class);
+		
 		if ((qs != null) && qs.isCompleted() && (player.getQuestState(getClass()) == null))
 		{
 			newQuestState(player, STARTED);
 		}
+		
 		return "";
 	}
 	
@@ -66,6 +68,7 @@ public class _141_ShadowFoxPart3 extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("30894-02.htm"))
 		{
 			st.setCond(1);
@@ -102,6 +105,7 @@ public class _141_ShadowFoxPart3 extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("dawn"))
 		{
 			Quest q1 = QuestManager.getQuest(_142_FallenAngelRequestOfDawn.class);
+			
 			if (q1 != null)
 			{
 				st.exitCurrentQuest(false);
@@ -113,6 +117,7 @@ public class _141_ShadowFoxPart3 extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("dusk"))
 		{
 			Quest q1 = QuestManager.getQuest(_143_FallenAngelRequestOfDusk.class);
+			
 			if (q1 != null)
 			{
 				st.exitCurrentQuest(false);
@@ -121,6 +126,7 @@ public class _141_ShadowFoxPart3 extends Quest implements ScriptFile
 				return null;
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -129,6 +135,7 @@ public class _141_ShadowFoxPart3 extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		String htmltext = "noquest";
+		
 		if (cond == 0)
 		{
 			if (st.getPlayer().getLevel() >= 37)
@@ -165,6 +172,7 @@ public class _141_ShadowFoxPart3 extends Quest implements ScriptFile
 		{
 			htmltext = "30894-16.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -175,6 +183,7 @@ public class _141_ShadowFoxPart3 extends Quest implements ScriptFile
 		{
 			st.setCond(3);
 		}
+		
 		return null;
 	}
 }

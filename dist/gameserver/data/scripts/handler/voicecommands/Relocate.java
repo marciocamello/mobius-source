@@ -51,6 +51,7 @@ public class Relocate implements IVoicedCommandHandler, ScriptFile
 			}
 			
 			SystemMessage msg = Call.canSummonHere(activeChar);
+			
 			if (msg != null)
 			{
 				activeChar.sendPacket(msg);
@@ -75,6 +76,7 @@ public class Relocate implements IVoicedCommandHandler, ScriptFile
 			
 			return true;
 		}
+		
 		return false;
 	}
 	

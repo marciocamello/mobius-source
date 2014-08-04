@@ -128,13 +128,16 @@ public class SessionManager
 			public void runImpl()
 			{
 				lock.lock();
+				
 				try
 				{
 					long currentMillis = System.currentTimeMillis();
 					Session session;
+					
 					for (Iterator<Session> itr = sessions.values().iterator(); itr.hasNext();)
 					{
 						session = itr.next();
+						
 						if (session.getExpireTime() < currentMillis)
 						{
 							itr.remove();
@@ -157,6 +160,7 @@ public class SessionManager
 	public Session openSession(Account account)
 	{
 		lock.lock();
+		
 		try
 		{
 			Session session = new Session(account);
@@ -177,6 +181,7 @@ public class SessionManager
 	public Session closeSession(SessionKey skey)
 	{
 		lock.lock();
+		
 		try
 		{
 			return sessions.remove(skey);
@@ -201,6 +206,7 @@ public class SessionManager
 				return session;
 			}
 		}
+		
 		return null;
 	}
 }

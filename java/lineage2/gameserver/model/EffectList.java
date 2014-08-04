@@ -102,7 +102,9 @@ public class EffectList
 		{
 			return 0;
 		}
+		
 		int count = 0;
+		
 		for (Effect e : _effects)
 		{
 			if (e.getSkill().getId() == skill_id)
@@ -110,6 +112,7 @@ public class EffectList
 				count++;
 			}
 		}
+		
 		return count;
 	}
 	
@@ -124,6 +127,7 @@ public class EffectList
 		{
 			return null;
 		}
+		
 		for (Effect e : _effects)
 		{
 			if (e.getEffectType() == et)
@@ -131,6 +135,7 @@ public class EffectList
 				return e;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -145,6 +150,7 @@ public class EffectList
 		{
 			return null;
 		}
+		
 		return getEffectsBySkillId(skill.getId());
 	}
 	
@@ -159,7 +165,9 @@ public class EffectList
 		{
 			return null;
 		}
+		
 		List<Effect> list = new ArrayList<>(2);
+		
 		for (Effect e : _effects)
 		{
 			if (e.getSkill().getId() == skillId)
@@ -167,6 +175,7 @@ public class EffectList
 				list.add(e);
 			}
 		}
+		
 		return list.isEmpty() ? null : list;
 	}
 	
@@ -182,6 +191,7 @@ public class EffectList
 		{
 			return null;
 		}
+		
 		for (Effect e : _effects)
 		{
 			if ((e.getSkill().getId() == skillId) && (e.getEffectType() == type))
@@ -189,6 +199,7 @@ public class EffectList
 				return e;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -203,6 +214,7 @@ public class EffectList
 		{
 			return null;
 		}
+		
 		for (Effect e : _effects)
 		{
 			if (e.getStackType().contains(type))
@@ -210,6 +222,7 @@ public class EffectList
 				return e;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -224,15 +237,19 @@ public class EffectList
 		{
 			return false;
 		}
+		
 		int skillId;
+		
 		for (Effect e : _effects)
 		{
 			skillId = e.getSkill().getId();
+			
 			if (ArrayUtils.contains(skillIds, skillId))
 			{
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -245,10 +262,12 @@ public class EffectList
 	public boolean containEffectFromSkillId(int skillId, boolean removeEffects)
 	{
 		boolean contain = false;
+		
 		if (isEmpty())
 		{
 			return contain;
 		}
+		
 		for (Effect e : _effects)
 		{
 			if (skillId == e.getSkill().getId())
@@ -257,6 +276,7 @@ public class EffectList
 				e.exit();
 			}
 		}
+		
 		return contain;
 	}
 	
@@ -270,6 +290,7 @@ public class EffectList
 		{
 			return Collections.emptyList();
 		}
+		
 		return new ArrayList<>(_effects);
 	}
 	
@@ -292,11 +313,14 @@ public class EffectList
 		{
 			return Effect.EMPTY_L2EFFECT_ARRAY;
 		}
+		
 		TIntObjectHashMap<Effect> map = new TIntObjectHashMap<>();
+		
 		for (Effect e : _effects)
 		{
 			map.put(e.getSkill().getId(), e);
 		}
+		
 		return map.values(new Effect[map.size()]);
 	}
 	
@@ -310,13 +334,17 @@ public class EffectList
 		{
 			return;
 		}
+		
 		int slotType = getSlotType(newEffect);
+		
 		if (slotType == NONE_SLOT_TYPE)
 		{
 			return;
 		}
+		
 		int size = 0;
 		TIntArrayList skillIds = new TIntArrayList();
+		
 		for (Effect e : _effects)
 		{
 			if (e.isInUse())
@@ -325,9 +353,11 @@ public class EffectList
 				{
 					return;
 				}
+				
 				if (!skillIds.contains(e.getSkill().getId()))
 				{
 					int subType = getSlotType(e);
+					
 					if (subType == slotType)
 					{
 						size++;
@@ -336,27 +366,35 @@ public class EffectList
 				}
 			}
 		}
+		
 		int limit = 0;
+		
 		switch (slotType)
 		{
 			case BUFF_SLOT_TYPE:
 				limit = _actor.getBuffLimit();
 				break;
+			
 			case MUSIC_SLOT_TYPE:
 				limit = MUSIC_LIMIT;
 				break;
+			
 			case DEBUFF_SLOT_TYPE:
 				limit = DEBUFF_LIMIT;
 				break;
+			
 			case TRIGGER_SLOT_TYPE:
 				limit = TRIGGER_LIMIT;
 				break;
 		}
+		
 		if (size < limit)
 		{
 			return;
 		}
+		
 		int skillId = 0;
+		
 		for (Effect e : _effects)
 		{
 			if (e.isInUse())
@@ -368,6 +406,7 @@ public class EffectList
 				}
 			}
 		}
+		
 		if (skillId != 0)
 		{
 			stopEffect(skillId);
@@ -421,6 +460,7 @@ public class EffectList
 				}
 			}
 		}
+		
 		return false;
 	}
 	
@@ -435,12 +475,14 @@ public class EffectList
 		double cp = _actor.getCurrentCp();
 		boolean add = false;
 		lock.lock();
+		
 		try
 		{
 			if (_effects == null)
 			{
 				_effects = new CopyOnWriteArrayList<>();
 			}
+			
 			if (effect.getStackType().contains(EffectTemplate.NO_STACK))
 			{
 				for (Effect e : _effects)
@@ -449,6 +491,7 @@ public class EffectList
 					{
 						continue;
 					}
+					
 					if (e.getStackType().contains(EffectTemplate.NO_STACK) && (e.getSkill().getId() == effect.getSkill().getId()) && (e.getEffectType() == effect.getEffectType()))
 					{
 						if (effect.getTimeLeft() > e.getTimeLeft())
@@ -470,26 +513,32 @@ public class EffectList
 					{
 						continue;
 					}
+					
 					if (!checkStackType(e.getTemplate(), effect.getTemplate()))
 					{
 						continue;
 					}
+					
 					if ((e.getSkill().getId() == effect.getSkill().getId()) && (e.getEffectType() != effect.getEffectType()))
 					{
 						break;
 					}
+					
 					if (e.getStackOrder() == -1)
 					{
 						return;
 					}
+					
 					if (!e.maybeScheduleNext(effect))
 					{
 						return;
 					}
 				}
 			}
+			
 			checkSlotLimit(effect);
 			add = _effects.add(effect);
+			
 			if (add)
 			{
 				effect.setInUse(true);
@@ -499,11 +548,14 @@ public class EffectList
 		{
 			lock.unlock();
 		}
+		
 		if (!add)
 		{
 			return;
 		}
+		
 		effect.start();
+		
 		for (FuncTemplate ft : effect.getTemplate().getAttachedFuncs())
 		{
 			if (ft._stat == Stats.MAX_HP)
@@ -519,6 +571,7 @@ public class EffectList
 				_actor.setCurrentCp(cp);
 			}
 		}
+		
 		_actor.updateStats();
 		_actor.updateEffectIcons();
 	}
@@ -533,14 +586,17 @@ public class EffectList
 		{
 			return;
 		}
+		
 		boolean remove = false;
 		lock.lock();
+		
 		try
 		{
 			if (_effects == null)
 			{
 				return;
 			}
+			
 			if (!((remove = _effects.remove(effect))))
 			{
 				return;
@@ -550,10 +606,12 @@ public class EffectList
 		{
 			lock.unlock();
 		}
+		
 		if (!remove)
 		{
 			return;
 		}
+		
 		_actor.updateStats();
 		_actor.updateEffectIcons();
 	}
@@ -568,18 +626,21 @@ public class EffectList
 		{
 			return;
 		}
+		
 		for (Effect e : _effects)
 		{
 			if (e.getSkill().getId() == skillId)
 			{
 				boolean remove = false;
 				lock.lock();
+				
 				try
 				{
 					if (_effects == null)
 					{
 						return;
 					}
+					
 					if (!((remove = _effects.remove(e))))
 					{
 						return;
@@ -589,10 +650,12 @@ public class EffectList
 				{
 					lock.unlock();
 				}
+				
 				if (!remove)
 				{
 					return;
 				}
+				
 				_actor.updateStats();
 				_actor.updateEffectIcons();
 			}
@@ -608,7 +671,9 @@ public class EffectList
 		{
 			return;
 		}
+		
 		lock.lock();
+		
 		try
 		{
 			for (Effect e : _effects)
@@ -634,6 +699,7 @@ public class EffectList
 		{
 			return;
 		}
+		
 		for (Effect e : _effects)
 		{
 			if (e.getSkill().getId() == skillId)
@@ -665,6 +731,7 @@ public class EffectList
 		{
 			return;
 		}
+		
 		for (Effect e : _effects)
 		{
 			if (e.getSkill().getDisplayId() == skillId)
@@ -684,6 +751,7 @@ public class EffectList
 		{
 			return;
 		}
+		
 		for (Effect e : _effects)
 		{
 			if (e.getEffectType() == type)
@@ -703,7 +771,9 @@ public class EffectList
 		{
 			return;
 		}
+		
 		TIntHashSet skillIds = new TIntHashSet();
+		
 		for (Effect e : _effects)
 		{
 			if (e.getEffectType() == type)
@@ -711,6 +781,7 @@ public class EffectList
 				skillIds.add(e.getSkill().getId());
 			}
 		}
+		
 		for (int skillId : skillIds.toArray())
 		{
 			stopEffect(skillId);

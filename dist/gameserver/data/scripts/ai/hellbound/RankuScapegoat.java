@@ -48,14 +48,17 @@ public class RankuScapegoat extends DefaultAI
 		final NpcInstance actor = getActor();
 		final NpcInstance mob = actor.getReflection().addSpawnWithoutRespawn(Eidolon_ID, actor.getLoc(), 0);
 		final NpcInstance boss = getBoss();
+		
 		if ((mob != null) && (boss != null))
 		{
 			final Creature cha = boss.getAggroList().getTopDamager();
+			
 			if (cha != null)
 			{
 				mob.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, cha, 100000);
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 	
@@ -66,6 +69,7 @@ public class RankuScapegoat extends DefaultAI
 	private NpcInstance getBoss()
 	{
 		final Reflection r = getActor().getReflection();
+		
 		if (!r.isDefault())
 		{
 			for (NpcInstance n : r.getNpcs())
@@ -76,6 +80,7 @@ public class RankuScapegoat extends DefaultAI
 				}
 			}
 		}
+		
 		return null;
 	}
 }

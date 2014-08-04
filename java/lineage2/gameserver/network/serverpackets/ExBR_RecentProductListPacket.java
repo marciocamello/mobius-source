@@ -27,11 +27,13 @@ public class ExBR_RecentProductListPacket extends L2GameServerPacket
 	{
 		_products = new ArrayList<>();
 		int[] products = activeChar.getRecentProductList();
+		
 		if (products != null)
 		{
 			for (int productId : products)
 			{
 				ProductItem product = ProductHolder.getInstance().getProduct(productId);
+				
 				if (product == null)
 				{
 					continue;
@@ -47,6 +49,7 @@ public class ExBR_RecentProductListPacket extends L2GameServerPacket
 	{
 		writeEx(0xDD);
 		writeD(_products.size());
+		
 		for (ProductItem template : _products)
 		{
 			writeD(template.getProductId()); // product id

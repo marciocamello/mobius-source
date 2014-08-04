@@ -38,20 +38,24 @@ public class RequestExPostItemList extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (activeChar.isActionsDisabled())
 		{
 			activeChar.sendActionFailed();
 		}
+		
 		if (!Config.ALLOW_MAIL)
 		{
 			activeChar.sendMessage(new CustomMessage("mail.Disabled", activeChar));
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		activeChar.sendPacket(new ExReplyPostItemList(activeChar));
 	}
 }

@@ -63,6 +63,7 @@ public class YehanBrother extends Fighter
 	{
 		final NpcInstance actor = getActor();
 		int brotherId = 0;
+		
 		if (actor.getNpcId() == 25665)
 		{
 			brotherId = 25666;
@@ -71,6 +72,7 @@ public class YehanBrother extends Fighter
 		{
 			brotherId = 25665;
 		}
+		
 		for (NpcInstance npc : actor.getReflection().getNpcs())
 		{
 			if (npc.getNpcId() == brotherId)
@@ -78,6 +80,7 @@ public class YehanBrother extends Fighter
 				return npc;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -89,6 +92,7 @@ public class YehanBrother extends Fighter
 	{
 		final NpcInstance actor = getActor();
 		final NpcInstance brother = getBrother();
+		
 		if (!brother.isDead() && !actor.isInRange(brother, 300))
 		{
 			actor.altOnMagicUseTimer(getActor(), SkillTable.getInstance().getInfo(6371, 1));
@@ -97,12 +101,14 @@ public class YehanBrother extends Fighter
 		{
 			removeInvul(actor);
 		}
+		
 		if ((_spawnTimer + 40000) < System.currentTimeMillis())
 		{
 			_spawnTimer = System.currentTimeMillis();
 			final NpcInstance mob = actor.getReflection().addSpawnWithoutRespawn(_minions[Rnd.get(_minions.length)], Location.findAroundPosition(actor, 300), 0);
 			mob.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, actor.getAggressionTarget(), 1000);
 		}
+		
 		super.thinkAttack();
 	}
 	

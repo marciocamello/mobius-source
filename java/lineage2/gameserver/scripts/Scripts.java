@@ -105,19 +105,19 @@ public class Scripts
 	private void load()
 	{
 		_log.info("Scripts: Loading...");
-		
 		List<Class<?>> classes = new ArrayList<>();
-		
 		boolean result = false;
-		
 		File f = new File("../libs/lineage2-scripts.jar");
+		
 		if (f.exists())
 		{
 			JarInputStream stream = null;
+			
 			try
 			{
 				stream = new JarInputStream(new FileInputStream(f));
 				JarEntry entry = null;
+				
 				while ((entry = stream.getNextJarEntry()) != null)
 				{
 					if (entry.getName().contains(ClassUtils.INNER_CLASS_SEPARATOR) || !entry.getName().endsWith(".class"))
@@ -126,14 +126,16 @@ public class Scripts
 					}
 					
 					String name = entry.getName().replace(".class", "").replace("/", ".");
-					
 					Class<?> clazz = Class.forName(name);
+					
 					if (Modifier.isAbstract(clazz.getModifiers()))
 					{
 						continue;
 					}
+					
 					classes.add(clazz);
 				}
+				
 				result = true;
 			}
 			catch (Exception e)
@@ -160,8 +162,8 @@ public class Scripts
 		}
 		
 		_log.info("Scripts: Loaded " + classes.size() + " classes.");
-		
 		Class<?> clazz;
+		
 		for (int i = 0; i < classes.size(); i++)
 		{
 			clazz = classes.get(i);
@@ -207,7 +209,6 @@ public class Scripts
 	public boolean reload()
 	{
 		_log.info("Scripts: Reloading...");
-		
 		return reload("");
 	}
 	
@@ -231,11 +232,12 @@ public class Scripts
 		}
 		
 		Class<?> clazz, prevClazz;
+		
 		for (int i = 0; i < classes.size(); i++)
 		{
 			clazz = classes.get(i);
-			
 			prevClazz = _classes.put(clazz.getName(), clazz);
+			
 			if (prevClazz != null)
 			{
 				if (ClassUtils.isAssignable(prevClazz, ScriptFile.class))
@@ -314,8 +316,8 @@ public class Scripts
 	private boolean load(List<Class<?>> classes, String target)
 	{
 		Collection<File> scriptFiles = Collections.emptyList();
-		
 		File file = new File(Config.DATAPACK_ROOT, "data/scripts/" + target.replace(".", "/") + ".java");
+		
 		if (file.isFile())
 		{
 			scriptFiles = new ArrayList<>(1);
@@ -324,6 +326,7 @@ public class Scripts
 		else
 		{
 			file = new File(Config.DATAPACK_ROOT, "data/scripts/" + target);
+			
 			if (file.isDirectory())
 			{
 				scriptFiles = FileUtils.listFiles(file, FileFilterUtils.suffixFileFilter(".java"), FileFilterUtils.directoryFileFilter());
@@ -337,9 +340,11 @@ public class Scripts
 		
 		Class<?> clazz;
 		boolean success = compiler.compile(scriptFiles);
+		
 		if (success)
 		{
 			MemoryClassLoader classLoader = compiler.getClassLoader();
+			
 			for (String name : classLoader.getLoadedClasses())
 			{
 				if (name.contains(ClassUtils.INNER_CLASS_SEPARATOR))
@@ -350,10 +355,12 @@ public class Scripts
 				try
 				{
 					clazz = classLoader.loadClass(name);
+					
 					if (Modifier.isAbstract(clazz.getModifiers()))
 					{
 						continue;
 					}
+					
 					classes.add(clazz);
 				}
 				catch (ClassNotFoundException e)
@@ -362,6 +369,7 @@ public class Scripts
 					_log.error("Scripts: Can't load script class: " + name, e);
 				}
 			}
+			
 			classLoader.clear();
 		}
 		
@@ -382,11 +390,13 @@ public class Scripts
 				{
 					Integer id = Integer.parseInt(method.getName().substring(13));
 					List<ScriptClassAndMethod> handlers = dialogAppends.get(id);
+					
 					if (handlers == null)
 					{
 						handlers = new ArrayList<>();
 						dialogAppends.put(id, handlers);
 					}
+					
 					handlers.add(new ScriptClassAndMethod(clazz.getName(), method.getName()));
 				}
 				else if (method.getName().contains("OnAction_"))
@@ -418,6 +428,7 @@ public class Scripts
 			for (List<ScriptClassAndMethod> entry : dialogAppends.values())
 			{
 				List<ScriptClassAndMethod> toRemove = new ArrayList<>();
+				
 				for (ScriptClassAndMethod sc : entry)
 				{
 					if (sc.className.equals(script.getName()))
@@ -425,6 +436,7 @@ public class Scripts
 						toRemove.add(sc);
 					}
 				}
+				
 				for (ScriptClassAndMethod sc : toRemove)
 				{
 					entry.remove(sc);
@@ -432,6 +444,7 @@ public class Scripts
 			}
 			
 			List<String> toRemove = new ArrayList<>();
+			
 			for (Map.Entry<String, ScriptClassAndMethod> entry : onAction.entrySet())
 			{
 				if (entry.getValue().className.equals(script.getName()))
@@ -439,12 +452,14 @@ public class Scripts
 					toRemove.add(entry.getKey());
 				}
 			}
+			
 			for (String key : toRemove)
 			{
 				onAction.remove(key);
 			}
 			
 			toRemove = new ArrayList<>();
+			
 			for (Map.Entry<String, ScriptClassAndMethod> entry : onActionShift.entrySet())
 			{
 				if (entry.getValue().className.equals(script.getName()))
@@ -452,6 +467,7 @@ public class Scripts
 					toRemove.add(entry.getKey());
 				}
 			}
+			
 			for (String key : toRemove)
 			{
 				onActionShift.remove(key);
@@ -562,8 +578,8 @@ public class Scripts
 	{
 		Object o;
 		Class<?> clazz;
-		
 		clazz = _classes.get(className);
+		
 		if (clazz == null)
 		{
 			_log.error("Script class " + className + " not found!");
@@ -600,6 +616,7 @@ public class Scripts
 			try
 			{
 				Field field = null;
+				
 				if ((field = FieldUtils.getField(clazz, "self")) != null)
 				{
 					FieldUtils.writeField(field, o, caller.getRef());
@@ -612,9 +629,11 @@ public class Scripts
 		}
 		
 		Object ret = null;
+		
 		try
 		{
 			Class<?>[] parameterTypes = new Class<?>[args.length];
+			
 			for (int i = 0; i < args.length; i++)
 			{
 				parameterTypes[i] = args[i] != null ? args[i].getClass() : null;

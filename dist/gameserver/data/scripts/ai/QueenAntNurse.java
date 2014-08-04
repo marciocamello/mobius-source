@@ -47,32 +47,40 @@ public class QueenAntNurse extends Priest
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			if (doTask())
 			{
 				clearTasks();
 			}
+			
 			return true;
 		}
+		
 		final Creature top_desire_target = getTopDesireTarget();
+		
 		if (top_desire_target == null)
 		{
 			return false;
 		}
+		
 		if ((actor.getDistance(top_desire_target) - top_desire_target.getColRadius() - actor.getColRadius()) > 200)
 		{
 			moveOrTeleportToLocation(Location.findFrontPosition(top_desire_target, actor, 100, 150));
 			return false;
 		}
+		
 		if (!top_desire_target.isCurrentHpFull() && doTask())
 		{
 			return createNewTask();
 		}
+		
 		return false;
 	}
 	
@@ -86,20 +94,25 @@ public class QueenAntNurse extends Priest
 		clearTasks();
 		final NpcInstance actor = getActor();
 		final Creature top_desire_target = getTopDesireTarget();
+		
 		if (actor.isDead() || (top_desire_target == null))
 		{
 			return false;
 		}
+		
 		if (!top_desire_target.isCurrentHpFull())
 		{
 			final Skill skill = _healSkills[Rnd.get(_healSkills.length)];
+			
 			if (skill.getAOECastRange() < actor.getDistance(top_desire_target))
 			{
 				moveOrTeleportToLocation(Location.findFrontPosition(top_desire_target, actor, skill.getAOECastRange() - 30, skill.getAOECastRange() - 10));
 			}
+			
 			addTaskBuff(top_desire_target, skill);
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -121,10 +134,12 @@ public class QueenAntNurse extends Priest
 	{
 		final NpcInstance actor = getActor();
 		actor.setRunning();
+		
 		if (actor.moveToLocation(loc, 0, true))
 		{
 			return;
 		}
+		
 		clientStopMoving();
 		_pathfindFails = 0;
 		actor.broadcastPacketToOthers(new MagicSkillUse(actor, actor, 2036, 1, 500, 600000));
@@ -139,15 +154,19 @@ public class QueenAntNurse extends Priest
 	{
 		final NpcInstance actor = getActor();
 		final QueenAntInstance queen_ant = (QueenAntInstance) ((MinionInstance) actor).getLeader();
+		
 		if (queen_ant == null)
 		{
 			return null;
 		}
+		
 		final Creature Larva = queen_ant.getLarva();
+		
 		if ((Larva != null) && (Larva.getCurrentHpPercents() < 5))
 		{
 			return Larva;
 		}
+		
 		return queen_ant;
 	}
 	

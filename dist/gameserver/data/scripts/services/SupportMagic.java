@@ -265,15 +265,18 @@ public class SupportMagic extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if (player.getKarma() > 0)
 		{
 			return;
 		}
+		
 		if ((player.getLevel() > 39) || player.getClassId().isOfLevel(ClassLevel.Second))
 		{
 			show("default/newbie_blessing_no.htm", player, npc);
 			return;
 		}
+		
 		npc.doCast(SkillTable.getInstance().getInfo(5182, 1), player, true);
 	}
 	
@@ -289,28 +292,35 @@ public class SupportMagic extends Functions
 		{
 			return;
 		}
+		
 		int lvl = player.getLevel();
+		
 		if (servitor && (player.getSummonList().getFirstServitor() == null))
 		{
 			show("default/newbie_nosupport_servitor.htm", player, npc);
 			return;
 		}
+		
 		if (lvl < minSupLvl)
 		{
 			show("default/newbie_nosupport_min.htm", player, npc);
 			return;
 		}
+		
 		if (lvl > maxSupLvl)
 		{
 			show("default/newbie_nosupport_max.htm", player, npc);
 			return;
 		}
+		
 		List<Creature> target = new ArrayList<>();
+		
 		if (servitor)
 		{
 			for (Summon summon : player.getSummonList())
 			{
 				target.add(summon);
+				
 				for (int[] buff : _summonBuff)
 				{
 					if ((lvl >= buff[0]) && (lvl <= buff[1]))
@@ -324,6 +334,7 @@ public class SupportMagic extends Functions
 		else
 		{
 			target.add(player);
+			
 			if (!player.isMageClass() || (player.getTemplate().getRace() == Race.orc))
 			{
 				for (int[] buff : _warrBuff)

@@ -33,6 +33,7 @@ public class ShopPreviewList extends L2GameServerPacket
 		_money = player.getAdena();
 		List<TradeItem> tradeList = list.getItems();
 		_itemList = new ArrayList<>(tradeList.size());
+		
 		for (TradeItem item : list.getItems())
 		{
 			if (item.getItem().isEquipable())
@@ -69,20 +70,27 @@ public class ShopPreviewList extends L2GameServerPacket
 		{
 			case D:
 				return 50;
+				
 			case C:
 				return 100;
+				
 				// TODO: Не известно сколько на оффе стоит примерка B - S84
 				// ранга.
 			case B:
 				return 200;
+				
 			case A:
 				return 500;
+				
 			case S:
 				return 1000;
+				
 			case S80:
 				return 2000;
+				
 			case S84:
 				return 2500;
+				
 			default:
 				return 10;
 		}

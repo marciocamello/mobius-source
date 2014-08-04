@@ -63,6 +63,7 @@ public class CoupleManager
 		{
 			new CoupleManager();
 		}
+		
 		return _instance;
 	}
 	
@@ -85,11 +86,13 @@ public class CoupleManager
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rs = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM couples ORDER BY id");
 			rs = statement.executeQuery();
+			
 			while (rs.next())
 			{
 				Couple c = new Couple(rs.getInt("id"));
@@ -100,6 +103,7 @@ public class CoupleManager
 				c.setWeddingDate(rs.getLong("weddingDate"));
 				getCouples().add(c);
 			}
+			
 			_log.info("Loaded: " + getCouples().size() + " couples(s)");
 		}
 		catch (Exception e)
@@ -126,6 +130,7 @@ public class CoupleManager
 				return c;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -136,6 +141,7 @@ public class CoupleManager
 	public void engage(Player cha)
 	{
 		int chaId = cha.getObjectId();
+		
 		for (Couple cl : getCouples())
 		{
 			if (cl != null)
@@ -146,7 +152,9 @@ public class CoupleManager
 					{
 						cha.setMaried(true);
 					}
+					
 					cha.setCoupleId(cl.getId());
+					
 					if (cl.getPlayer1Id() == chaId)
 					{
 						cha.setPartnerId(cl.getPlayer2Id());
@@ -169,6 +177,7 @@ public class CoupleManager
 		if (cha.getPartnerId() != 0)
 		{
 			Player partner = GameObjectsStorage.getPlayer(cha.getPartnerId());
+			
 			if (partner != null)
 			{
 				partner.sendMessage(new CustomMessage("lineage2.gameserver.instancemanager.CoupleManager.PartnerEntered", partner));
@@ -202,6 +211,7 @@ public class CoupleManager
 		{
 			_couples = new CopyOnWriteArrayList<>();
 		}
+		
 		return _couples;
 	}
 	
@@ -215,6 +225,7 @@ public class CoupleManager
 		{
 			_deletedCouples = new CopyOnWriteArrayList<>();
 		}
+		
 		return _deletedCouples;
 	}
 	
@@ -225,19 +236,24 @@ public class CoupleManager
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
+			
 			if ((_deletedCouples != null) && !_deletedCouples.isEmpty())
 			{
 				statement = con.prepareStatement("DELETE FROM couples WHERE id = ?");
+				
 				for (Couple c : _deletedCouples)
 				{
 					statement.setInt(1, c.getId());
 					statement.execute();
 				}
+				
 				_deletedCouples.clear();
 			}
+			
 			if ((_couples != null) && !_couples.isEmpty())
 			{
 				for (Couple c : _couples)

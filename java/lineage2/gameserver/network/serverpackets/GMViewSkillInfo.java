@@ -37,6 +37,7 @@ public class GMViewSkillInfo extends L2GameServerPacket
 		writeC(0x97);
 		writeS(_charName);
 		writeD(_skills.size());
+		
 		for (Skill skill : _skills)
 		{
 			writeD(skill.isPassive() ? 1 : 0);

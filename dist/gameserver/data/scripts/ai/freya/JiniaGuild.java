@@ -42,11 +42,14 @@ public class JiniaGuild extends Fighter
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return false;
 		}
+		
 		final List<NpcInstance> around = actor.getAroundNpc(4000, 300);
+		
 		if ((around != null) && !around.isEmpty())
 		{
 			for (NpcInstance npc : around)
@@ -57,6 +60,7 @@ public class JiniaGuild extends Fighter
 				}
 			}
 		}
+		
 		return true;
 	}
 	
@@ -72,6 +76,7 @@ public class JiniaGuild extends Fighter
 		{
 			return;
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	
@@ -87,6 +92,7 @@ public class JiniaGuild extends Fighter
 		{
 			return false;
 		}
+		
 		return super.checkAggression(target);
 	}
 }

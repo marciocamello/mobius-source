@@ -68,6 +68,7 @@ public final class ItemHolder extends AbstractHolder
 	private void buildFastLookupTable()
 	{
 		int highestId = 0;
+		
 		for (int id : _items.keys())
 		{
 			if (id > highestId)
@@ -75,7 +76,9 @@ public final class ItemHolder extends AbstractHolder
 				highestId = id;
 			}
 		}
+		
 		_allTemplates = new ItemTemplate[highestId + 1];
+		
 		for (TIntObjectIterator<ItemTemplate> iterator = _items.iterator(); iterator.hasNext();)
 		{
 			iterator.advance();
@@ -91,11 +94,13 @@ public final class ItemHolder extends AbstractHolder
 	public ItemTemplate getTemplate(int id)
 	{
 		ItemTemplate item = ArrayUtils.valid(_allTemplates, id);
+		
 		if (item == null)
 		{
 			warn("Not defined item id : " + id + ", or out of range!", new Exception());
 			return null;
 		}
+		
 		return _allTemplates[id];
 	}
 	

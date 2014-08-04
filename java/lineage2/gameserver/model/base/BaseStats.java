@@ -221,6 +221,7 @@ public enum BaseStats
 	public static final BaseStats valueOfXml(String name)
 	{
 		name = name.intern();
+		
 		for (BaseStats s : VALUES)
 		{
 			if (s.toString().equalsIgnoreCase(name))
@@ -229,9 +230,11 @@ public enum BaseStats
 				{
 					return null;
 				}
+				
 				return s;
 			}
 		}
+		
 		throw new NoSuchElementException("Unknown name '" + name + "' for enum BaseStats");
 	}
 	
@@ -242,6 +245,7 @@ public enum BaseStats
 		factory.setIgnoringComments(true);
 		File file = new File(Config.DATAPACK_ROOT, "data/xml/asc/model/player/BaseStatBonusData.xml");
 		Document doc = null;
+		
 		try
 		{
 			doc = factory.newDocumentBuilder().parse(file);
@@ -258,8 +262,10 @@ public enum BaseStats
 		{
 			_log.error("", e);
 		}
+		
 		int i;
 		double val;
+		
 		if (doc != null)
 		{
 			for (Node z = doc.getFirstChild(); z != null; z = z.getNextSibling())
@@ -271,6 +277,7 @@ public enum BaseStats
 						for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 						{
 							String node = d.getNodeName();
+							
 							if (node.equalsIgnoreCase("stat"))
 							{
 								i = Integer.valueOf(d.getAttributes().getNamedItem("value").getNodeValue());
@@ -279,11 +286,13 @@ public enum BaseStats
 							}
 						}
 					}
+					
 					if (n.getNodeName().equalsIgnoreCase("INT"))
 					{
 						for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 						{
 							String node = d.getNodeName();
+							
 							if (node.equalsIgnoreCase("stat"))
 							{
 								i = Integer.valueOf(d.getAttributes().getNamedItem("value").getNodeValue());
@@ -292,11 +301,13 @@ public enum BaseStats
 							}
 						}
 					}
+					
 					if (n.getNodeName().equalsIgnoreCase("CON"))
 					{
 						for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 						{
 							String node = d.getNodeName();
+							
 							if (node.equalsIgnoreCase("stat"))
 							{
 								i = Integer.valueOf(d.getAttributes().getNamedItem("value").getNodeValue());
@@ -305,11 +316,13 @@ public enum BaseStats
 							}
 						}
 					}
+					
 					if (n.getNodeName().equalsIgnoreCase("MEN"))
 					{
 						for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 						{
 							String node = d.getNodeName();
+							
 							if (node.equalsIgnoreCase("stat"))
 							{
 								i = Integer.valueOf(d.getAttributes().getNamedItem("value").getNodeValue());
@@ -318,11 +331,13 @@ public enum BaseStats
 							}
 						}
 					}
+					
 					if (n.getNodeName().equalsIgnoreCase("DEX"))
 					{
 						for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 						{
 							String node = d.getNodeName();
+							
 							if (node.equalsIgnoreCase("stat"))
 							{
 								i = Integer.valueOf(d.getAttributes().getNamedItem("value").getNodeValue());
@@ -331,11 +346,13 @@ public enum BaseStats
 							}
 						}
 					}
+					
 					if (n.getNodeName().equalsIgnoreCase("WIT"))
 					{
 						for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 						{
 							String node = d.getNodeName();
+							
 							if (node.equalsIgnoreCase("stat"))
 							{
 								i = Integer.valueOf(d.getAttributes().getNamedItem("value").getNodeValue());

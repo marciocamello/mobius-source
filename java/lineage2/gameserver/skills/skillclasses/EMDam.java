@@ -61,14 +61,17 @@ public class EMDam extends Skill
 		{
 			return false;
 		}
+		
 		if (!activeChar.getEffectList().containEffectFromSkills(TRUE_ELEMENTS))
 		{
 			if (activeChar.isPlayer())
 			{
 				activeChar.sendMessage("No Stance Activated...");
 			}
+			
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -83,6 +86,7 @@ public class EMDam extends Skill
 		int sps = isSSPossible() ? isMagic() ? activeChar.getChargedSpiritShot() : activeChar.getChargedSoulShot() ? 2 : 0 : 0;
 		Creature realTarget;
 		boolean reflected;
+		
 		for (Creature target : targets)
 		{
 			if (target != null)
@@ -91,16 +95,20 @@ public class EMDam extends Skill
 				{
 					continue;
 				}
+				
 				reflected = target.checkReflectSkill(activeChar, this);
 				realTarget = reflected ? activeChar : target;
 				Formulas.AttackInfo info = Formulas.calcMagicDam(activeChar, realTarget, this, sps);
+				
 				if (info.damage >= 1)
 				{
 					realTarget.reduceCurrentHp(info.damage, info.reflectableDamage, activeChar, this, true, true, false, true, false, false, true);
 				}
+				
 				getEffects(activeChar, target, getActivateRate() > 0, false, reflected);
 			}
 		}
+		
 		if (isSuicideAttack())
 		{
 			activeChar.doDie(null);

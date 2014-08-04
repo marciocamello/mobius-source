@@ -83,6 +83,7 @@ public class ServitorsDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -116,12 +117,14 @@ public class ServitorsDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_SQL_QUERY);
 			statement.setInt(1, owner.getObjectId());
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				int objId = rset.getInt("objId");
@@ -130,20 +133,24 @@ public class ServitorsDAO
 				int skill_id = rset.getInt("skill_id");
 				int skill_lvl = rset.getInt("skill_lvl");
 				Skill skill = SkillTable.getInstance().getInfo(skill_id, skill_lvl);
+				
 				if (skill == null)
 				{
 					continue;
 				}
+				
 				if (skill.getSkillType() != Skill.SkillType.SUMMON)
 				{
 					continue;
 				}
+				
 				NpcTemplate template = NpcHolder.getInstance().getTemplate(skill.getNpcId());
 				SummonInstance s = new SummonInstance(objId, template, owner, ((SummonServitor) skill).getLifeTime(), ((SummonServitor) skill).getSummonPoint(), skill);
 				s.setCurrentHp(curHp, true);
 				s.setCurrentMp(curMp, true);
 				summons.add(s);
 			}
+			
 			DbUtils.closeQuietly(statement, rset);
 			statement = con.prepareStatement(DELETE_SQL_QUERY);
 			statement.setInt(1, owner.getObjectId());

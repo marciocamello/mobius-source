@@ -62,6 +62,7 @@ public class _023_LidiasHeart extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("31328-02.htm"))
 		{
 			st.giveItems(MapForestofDeadman, 1);
@@ -81,6 +82,7 @@ public class _023_LidiasHeart extends Quest implements ScriptFile
 		else if (event.equals("31526-05.htm"))
 		{
 			st.giveItems(LidiaHairPin, 1);
+			
 			if (st.getQuestItemsCount(LidiaDiary) != 0)
 			{
 				st.setCond(4);
@@ -89,6 +91,7 @@ public class _023_LidiasHeart extends Quest implements ScriptFile
 		else if (event.equals("31526-11.htm"))
 		{
 			st.giveItems(LidiaDiary, 1);
+			
 			if (st.getQuestItemsCount(LidiaHairPin) != 0)
 			{
 				st.setCond(4);
@@ -134,6 +137,7 @@ public class _023_LidiasHeart extends Quest implements ScriptFile
 		{
 			htmltext = "i7064.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -143,11 +147,13 @@ public class _023_LidiasHeart extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Innocentin)
 		{
 			if (cond == 0)
 			{
 				QuestState TragedyInVonHellmannForest = st.getPlayer().getQuestState(_022_TragedyInVonHellmannForest.class);
+				
 				if (TragedyInVonHellmannForest != null)
 				{
 					if (TragedyInVonHellmannForest.isCompleted() && (st.getPlayer().getLevel() >= 64))
@@ -230,6 +236,7 @@ public class _023_LidiasHeart extends Quest implements ScriptFile
 					htmltext = "31523-01.htm";
 				}
 			}
+			
 			if (cond == 7)
 			{
 				htmltext = "31523-04.htm";
@@ -284,6 +291,7 @@ public class _023_LidiasHeart extends Quest implements ScriptFile
 				htmltext = "31386-03.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	

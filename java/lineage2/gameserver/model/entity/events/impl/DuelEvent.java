@@ -167,7 +167,6 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 	public void startEvent()
 	{
 		updatePlayers(true, false);
-		
 		sendPackets(new ExDuelStart(this), PlaySound.B04_S01, SystemMsg.LET_THE_DUEL_BEGIN);
 		
 		for (DuelSnapshotObject $snapshot : this)
@@ -223,7 +222,6 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 	{
 		_aborted = true;
 		_winner = TeamType.NONE;
-		
 		stopEvent();
 	}
 	
@@ -236,6 +234,7 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 	protected IStaticPacket canDuel0(Player requestor, Player target)
 	{
 		IStaticPacket packet = null;
+		
 		if (target.isInCombat())
 		{
 			packet = new SystemMessage2(SystemMsg.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_BATTLE).addName(target);
@@ -288,6 +287,7 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 		{
 			packet = new SystemMessage2(SystemMsg.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_POLYMORPHED).addName(target);
 		}
+		
 		return packet;
 	}
 	
@@ -315,7 +315,6 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 				{
 					$snapshot.getPlayer().removeEvent(this);
 					$snapshot.restore(_aborted);
-					
 					$snapshot.getPlayer().setTeam(TeamType.NONE);
 				}
 			}
@@ -339,6 +338,7 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 		}
 		
 		DuelEvent duelEvent = target.getEvent(DuelEvent.class);
+		
 		if ((duelEvent == null) || (duelEvent != this))
 		{
 			return SystemMsg.INVALID_TARGET;

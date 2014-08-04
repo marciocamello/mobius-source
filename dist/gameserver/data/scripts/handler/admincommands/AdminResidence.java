@@ -95,20 +95,24 @@ public class AdminResidence extends ScriptAdminCommand
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		final Commands command = (Commands) comm;
+		
 		if (!activeChar.getPlayerAccess().CanEditNPC)
 		{
 			return false;
 		}
+		
 		final Residence r;
 		final SiegeEvent<?, ?> event;
 		Calendar calendar;
 		NpcHtmlMessage msg;
+		
 		switch (command)
 		{
 			case admin_residence_list:
 				msg = new NpcHtmlMessage(5);
 				msg.setFile("admin/residence/residence_list.htm");
 				final StringBuilder replyMSG = new StringBuilder(200);
+				
 				for (Residence residence : ResidenceHolder.getInstance().getResidences())
 				{
 					if (residence != null)
@@ -117,6 +121,7 @@ public class AdminResidence extends ScriptAdminCommand
 						replyMSG.append("<a action=\"bypass -h admin_residence ").append(residence.getId()).append("\">").append(HtmlUtils.htmlResidenceName(residence.getId())).append("</a>");
 						replyMSG.append("</td><td>");
 						Clan owner = residence.getOwner();
+						
 						if (owner == null)
 						{
 							replyMSG.append("NPC");
@@ -125,22 +130,28 @@ public class AdminResidence extends ScriptAdminCommand
 						{
 							replyMSG.append(owner.getName());
 						}
+						
 						replyMSG.append("</td></tr>");
 					}
 				}
+				
 				msg.replace("%residence_list%", replyMSG.toString());
 				activeChar.sendPacket(msg);
 				break;
+			
 			case admin_residence:
 				if (wordList.length != 2)
 				{
 					return false;
 				}
+				
 				r = ResidenceHolder.getInstance().getResidence(Integer.parseInt(wordList[1]));
+				
 				if (r == null)
 				{
 					return false;
 				}
+				
 				event = r.getSiegeEvent();
 				msg = new NpcHtmlMessage(5);
 				msg.setFile("admin/residence/siege_info.htm");
@@ -152,6 +163,7 @@ public class AdminResidence extends ScriptAdminCommand
 				msg.replace("%reward_count%", String.valueOf(r.getRewardCount()));
 				msg.replace("%left_time%", String.valueOf(r.getCycleDelay()));
 				final StringBuilder clans = new StringBuilder(100);
+				
 				for (Map.Entry<String, List<Serializable>> entry : event.getObjects().entrySet())
 				{
 					for (Serializable o : entry.getValue())
@@ -163,6 +175,7 @@ public class AdminResidence extends ScriptAdminCommand
 						}
 					}
 				}
+				
 				msg.replace("%clans%", clans.toString());
 				msg.replace("%hour%", String.valueOf(r.getSiegeDate().get(Calendar.HOUR_OF_DAY)));
 				msg.replace("%minute%", String.valueOf(r.getSiegeDate().get(Calendar.MINUTE)));
@@ -171,21 +184,27 @@ public class AdminResidence extends ScriptAdminCommand
 				msg.replace("%year%", String.valueOf(r.getSiegeDate().get(Calendar.YEAR)));
 				activeChar.sendPacket(msg);
 				break;
+			
 			case admin_set_owner:
 				if (wordList.length != 3)
 				{
 					return false;
 				}
+				
 				r = ResidenceHolder.getInstance().getResidence(Integer.parseInt(wordList[1]));
+				
 				if (r == null)
 				{
 					return false;
 				}
+				
 				Clan clan = null;
 				final String clanName = wordList[2];
+				
 				if (!clanName.equalsIgnoreCase("npc"))
 				{
 					clan = ClanTable.getInstance().getClanByName(clanName);
+					
 					if (clan == null)
 					{
 						activeChar.sendPacket(SystemMsg.INCORRECT_NAME);
@@ -193,6 +212,7 @@ public class AdminResidence extends ScriptAdminCommand
 						return false;
 					}
 				}
+				
 				event = r.getSiegeEvent();
 				event.clearActions();
 				r.getLastSiegeDate().setTimeInMillis((clan == null) ? 0 : System.currentTimeMillis());
@@ -200,40 +220,52 @@ public class AdminResidence extends ScriptAdminCommand
 				r.changeOwner(clan);
 				event.reCalcNextTime(false);
 				break;
+			
 			case admin_set_siege_time:
 				r = ResidenceHolder.getInstance().getResidence(Integer.parseInt(wordList[1]));
+				
 				if (r == null)
 				{
 					return false;
 				}
+				
 				calendar = (Calendar) r.getSiegeDate().clone();
+				
 				for (int i = 2; i < wordList.length; i++)
 				{
 					int type;
 					int val = Integer.parseInt(wordList[i]);
+					
 					switch (i)
 					{
 						case 2:
 							type = Calendar.HOUR_OF_DAY;
 							break;
+						
 						case 3:
 							type = Calendar.MINUTE;
 							break;
+						
 						case 4:
 							type = Calendar.DAY_OF_MONTH;
 							break;
+						
 						case 5:
 							type = Calendar.MONTH;
 							val -= 1;
 							break;
+						
 						case 6:
 							type = Calendar.YEAR;
 							break;
+						
 						default:
 							continue;
 					}
+					
 					calendar.set(type, val);
 				}
+				
 				event = r.getSiegeEvent();
 				event.clearActions();
 				r.getSiegeDate().setTimeInMillis(calendar.getTimeInMillis());
@@ -242,17 +274,22 @@ public class AdminResidence extends ScriptAdminCommand
 				r.update();
 				AdminCommandHandler.getInstance().useAdminCommandHandler(activeChar, "admin_residence " + r.getId());
 				break;
+			
 			case admin_quick_siege_start:
 				r = ResidenceHolder.getInstance().getResidence(Integer.parseInt(wordList[1]));
+				
 				if (r == null)
 				{
 					return false;
 				}
+				
 				calendar = Calendar.getInstance();
+				
 				if (wordList.length >= 3)
 				{
 					calendar.set(Calendar.SECOND, -Integer.parseInt(wordList[2]));
 				}
+				
 				event = r.getSiegeEvent();
 				event.clearActions();
 				r.getSiegeDate().setTimeInMillis(calendar.getTimeInMillis());
@@ -261,12 +298,15 @@ public class AdminResidence extends ScriptAdminCommand
 				r.update();
 				AdminCommandHandler.getInstance().useAdminCommandHandler(activeChar, "admin_residence " + r.getId());
 				break;
+			
 			case admin_quick_siege_stop:
 				r = ResidenceHolder.getInstance().getResidence(Integer.parseInt(wordList[1]));
+				
 				if (r == null)
 				{
 					return false;
 				}
+				
 				event = r.getSiegeEvent();
 				event.clearActions();
 				ThreadPoolManager.getInstance().execute(new RunnableImpl()
@@ -279,13 +319,17 @@ public class AdminResidence extends ScriptAdminCommand
 				});
 				AdminCommandHandler.getInstance().useAdminCommandHandler(activeChar, "admin_residence " + r.getId());
 				break;
+			
 			case admin_backup_unit_info:
 				final GameObject target = activeChar.getTarget();
+				
 				if (!(target instanceof PowerControlUnitInstance) && !(target instanceof BackupPowerUnitInstance))
 				{
 					return false;
 				}
+				
 				final List<String> t = new ArrayList<>(3);
+				
 				if (target instanceof PowerControlUnitInstance)
 				{
 					for (int i : ((PowerControlUnitInstance) target).getGenerated())
@@ -300,31 +344,41 @@ public class AdminResidence extends ScriptAdminCommand
 						t.add((i == 0) ? "A" : (i == 1) ? "B" : (i == 2) ? "C" : "D");
 					}
 				}
+				
 				activeChar.sendMessage("Password: " + t.toString());
 				return true;
+				
 			case admin_fortress_spawn_flags:
 				if (wordList.length != 2)
 				{
 					return false;
 				}
+				
 				final Fortress fortress = ResidenceHolder.getInstance().getResidence(Fortress.class, Integer.parseInt(wordList[1]));
+				
 				if (fortress == null)
 				{
 					return false;
 				}
+				
 				final FortressSiegeEvent siegeEvent = fortress.getSiegeEvent();
+				
 				if (!siegeEvent.isInProgress())
 				{
 					return false;
 				}
+				
 				final boolean[] f = siegeEvent.getBarrackStatus();
+				
 				for (int i = 0; i < f.length; i++)
 				{
 					siegeEvent.barrackAction(i, true);
 				}
+				
 				siegeEvent.spawnFlags();
 				return true;
 		}
+		
 		return true;
 	}
 	

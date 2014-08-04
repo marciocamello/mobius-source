@@ -36,6 +36,7 @@ public class _906_TheCallofValakas extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("klein_q906_04.htm"))
 		{
 			st.setState(STARTED);
@@ -50,6 +51,7 @@ public class _906_TheCallofValakas extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(this);
 		}
+		
 		return htmltext;
 	}
 	
@@ -58,6 +60,7 @@ public class _906_TheCallofValakas extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (npc.getNpcId() == Klein)
 		{
 			switch (st.getState())
@@ -86,7 +89,9 @@ public class _906_TheCallofValakas extends Quest implements ScriptFile
 					{
 						htmltext = "klein_q906_00a.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					if (cond == 1)
 					{
@@ -96,9 +101,11 @@ public class _906_TheCallofValakas extends Quest implements ScriptFile
 					{
 						htmltext = "klein_q906_06.htm";
 					}
+					
 					break;
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -106,6 +113,7 @@ public class _906_TheCallofValakas extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if (cond == 1)
 		{
 			if ((npc.getNpcId() == ValakasMinion) && Rnd.chance(40))
@@ -114,6 +122,7 @@ public class _906_TheCallofValakas extends Quest implements ScriptFile
 				st.setCond(2);
 			}
 		}
+		
 		return null;
 	}
 	

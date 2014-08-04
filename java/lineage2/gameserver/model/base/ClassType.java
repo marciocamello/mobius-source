@@ -62,6 +62,7 @@ public enum ClassType
 		{
 			return MYSTIC;
 		}
+		
 		return this;
 	}
 	

@@ -28,7 +28,6 @@ public class ShortCutRegister extends ShortCutPacket
 	protected final void writeImpl()
 	{
 		writeC(0x44);
-		
 		_shortcutInfo.write(this);
 	}
 }

@@ -64,25 +64,32 @@ public class RequestChangeNicknameColor extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		int storedId = activeChar.getVarInt("NameColorItemOID");
 		activeChar.unsetVar("NameColorItemOID");
+		
 		if (storedId != _itemObjectId)
 		{
 			return;
 		}
+		
 		if ((_colorNum < 0) || (_colorNum >= COLORS.length))
 		{
 			return;
 		}
+		
 		ItemInstance item = activeChar.getInventory().getItemByObjectId(_itemObjectId);
+		
 		if (item == null)
 		{
 			return;
 		}
+		
 		if (activeChar.consumeItem(item.getItemId(), 1))
 		{
 			activeChar.setTitleColor(COLORS[_colorNum]);

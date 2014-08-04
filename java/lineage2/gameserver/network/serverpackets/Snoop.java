@@ -35,13 +35,13 @@ public class Snoop extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xdb);
-		
 		writeD(_convoID);
 		writeS(_name);
 		writeD(0x00); // ??
 		writeD(_type);
 		writeS(_speaker);
 		writeD(_fStringId);
+		
 		for (String param : _params)
 		{
 			writeS(param);

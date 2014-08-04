@@ -45,10 +45,12 @@ public class RequestRecipeBookOpen extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		sendPacket(new RecipeBookItemList(activeChar, isDwarvenCraft));
 	}
 }

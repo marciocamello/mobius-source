@@ -57,6 +57,7 @@ public class _037_PleaseMakeMeFormalWear extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("30842-1.htm"))
 		{
 			st.setCond(1);
@@ -118,6 +119,7 @@ public class _037_PleaseMakeMeFormalWear extends Quest implements ScriptFile
 				htmltext = "You don't have enough materials";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -127,6 +129,7 @@ public class _037_PleaseMakeMeFormalWear extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == 30842)
 		{
 			if (cond == 0)
@@ -206,6 +209,7 @@ public class _037_PleaseMakeMeFormalWear extends Quest implements ScriptFile
 		{
 			htmltext = "31627-0.htm";
 		}
+		
 		return htmltext;
 	}
 }

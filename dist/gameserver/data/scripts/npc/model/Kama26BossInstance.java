@@ -31,7 +31,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class Kama26BossInstance extends KamalokaBossInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -85,6 +85,7 @@ public class Kama26BossInstance extends KamalokaBossInstance
 		{
 			_spawner.cancel(false);
 		}
+		
 		_spawner = null;
 		super.onDeath(killer);
 	}

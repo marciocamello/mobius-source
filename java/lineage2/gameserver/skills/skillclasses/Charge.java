@@ -71,7 +71,9 @@ public class Charge extends Skill
 		{
 			return false;
 		}
+		
 		Player player = (Player) activeChar;
+		
 		if ((getPower() <= 0) && (getId() != 2165) && (player.getIncreasedForce() >= _charges))
 		{
 			activeChar.sendPacket(Msg.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY_);
@@ -81,6 +83,7 @@ public class Charge extends Skill
 		{
 			player.sendPacket(new MagicSkillUse(player, player, 2165, 1, 0, 0));
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
@@ -96,36 +99,47 @@ public class Charge extends Skill
 		{
 			return;
 		}
+		
 		boolean ss = activeChar.getChargedSoulShot() && isSSPossible();
+		
 		if (ss && (getTargetType() != SkillTargetType.TARGET_SELF))
 		{
 			activeChar.unChargeShots(false);
 		}
+		
 		Creature realTarget;
 		boolean reflected;
+		
 		for (Creature target : targets)
 		{
 			if (target.isDead() || (target == activeChar))
 			{
 				continue;
 			}
+			
 			reflected = target.checkReflectSkill(activeChar, this);
 			realTarget = reflected ? activeChar : target;
+			
 			if (getPower() > 0)
 			{
 				AttackInfo info = Formulas.calcPhysDam(activeChar, realTarget, this, false, false, ss, false);
+				
 				if (info.lethal_dmg > 0)
 				{
 					realTarget.reduceCurrentHp(info.lethal_dmg, info.reflectableDamage, activeChar, this, true, true, false, false, false, false, false);
 				}
+				
 				realTarget.reduceCurrentHp(info.damage, info.reflectableDamage, activeChar, this, true, true, false, true, false, false, true);
+				
 				if (!reflected)
 				{
 					realTarget.doCounterAttack(this, activeChar, false);
 				}
 			}
+			
 			getEffects(activeChar, target, getActivateRate() > 0, false, reflected);
 		}
+		
 		chargePlayer((Player) activeChar, getId());
 	}
 	
@@ -141,6 +155,7 @@ public class Charge extends Skill
 			player.sendPacket(Msg.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY_);
 			return;
 		}
+		
 		if (_fullCharge)
 		{
 			player.setIncreasedForce(_charges);

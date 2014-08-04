@@ -66,6 +66,7 @@ public class _603_DaimontheWhiteEyedPart1 extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("31683-02.htm"))
 		{
 			if (st.getPlayer().getLevel() < 73)
@@ -143,6 +144,7 @@ public class _603_DaimontheWhiteEyedPart1 extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -152,6 +154,7 @@ public class _603_DaimontheWhiteEyedPart1 extends Quest implements ScriptFile
 		String htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (cond == 0)
 		{
 			if (npcId == EYE)
@@ -255,6 +258,7 @@ public class _603_DaimontheWhiteEyedPart1 extends Quest implements ScriptFile
 				htmltext = "31683-06.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -262,11 +266,13 @@ public class _603_DaimontheWhiteEyedPart1 extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		st.rollAndGive(EVIL_SPIRIT, 1, 1, 200, 100);
+		
 		if (st.getQuestItemsCount(EVIL_SPIRIT) == 200)
 		{
 			st.setCond(8);
 			st.setState(STARTED);
 		}
+		
 		return null;
 	}
 }

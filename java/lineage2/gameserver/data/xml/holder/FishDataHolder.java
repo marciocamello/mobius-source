@@ -85,10 +85,12 @@ public class FishDataHolder extends AbstractHolder
 	public void addDistribution(int id, LureType lureType, Map<FishGroup, Integer> map)
 	{
 		Map<LureType, Map<FishGroup, Integer>> byLureType = _distributionsForZones.get(id);
+		
 		if (byLureType == null)
 		{
 			_distributionsForZones.put(id, (byLureType = new HashMap<>()));
 		}
+		
 		byLureType.put(lureType, map);
 	}
 	

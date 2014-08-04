@@ -51,10 +51,12 @@ public class AdminCamera implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		if (!activeChar.getPlayerAccess().Menu)
 		{
 			return false;
 		}
+		
 		switch (command)
 		{
 			case admin_freelook:
@@ -68,7 +70,9 @@ public class AdminCamera implements IAdminCommandHandler
 					activeChar.sendMessage("Usage: //freelook 1 or //freelook 0");
 					return false;
 				}
+				
 				int mode = Integer.parseInt(fullString);
+				
 				if (mode == 1)
 				{
 					activeChar.setInvisibleType(InvisibleType.NORMAL);
@@ -83,9 +87,11 @@ public class AdminCamera implements IAdminCommandHandler
 					activeChar.setNoChannel(0);
 					activeChar.setFlying(false);
 				}
+				
 				activeChar.sendPacket(new CameraMode(mode));
 				break;
 			}
+			
 			case admin_cinematic:
 			{
 				int id = Integer.parseInt(wordList[1]);
@@ -98,6 +104,7 @@ public class AdminCamera implements IAdminCommandHandler
 				break;
 			}
 		}
+		
 		return true;
 	}
 	

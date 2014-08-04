@@ -116,6 +116,7 @@ public class ReentrantLock
 	{
 		final Thread current = Thread.currentThread();
 		int c = getState();
+		
 		if (c == 0)
 		{
 			if (compareAndSetState(0, 1))
@@ -127,13 +128,16 @@ public class ReentrantLock
 		else if (current == getExclusiveOwnerThread())
 		{
 			int nextc = c + 1;
+			
 			if (nextc < 0)
 			{
 				throw new Error("Maximum lock count exceeded");
 			}
+			
 			setState(nextc);
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -144,16 +148,20 @@ public class ReentrantLock
 	public boolean unlock()
 	{
 		int c = getState() - 1;
+		
 		if (Thread.currentThread() != getExclusiveOwnerThread())
 		{
 			throw new IllegalMonitorStateException();
 		}
+		
 		boolean free = false;
+		
 		if (c == 0)
 		{
 			free = true;
 			setExclusiveOwnerThread(null);
 		}
+		
 		setState(c);
 		return free;
 	}

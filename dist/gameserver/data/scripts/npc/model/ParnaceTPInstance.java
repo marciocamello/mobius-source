@@ -28,7 +28,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public final class ParnaceTPInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	private static final int CrystalHallInstance = 163;
@@ -51,6 +51,7 @@ public final class ParnaceTPInstance extends NpcInstance
 		if (command.startsWith("request_ch"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(CrystalHallInstance))
@@ -66,6 +67,7 @@ public final class ParnaceTPInstance extends NpcInstance
 		else if (command.startsWith("request_vallock"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(VullockInstance))
@@ -81,6 +83,7 @@ public final class ParnaceTPInstance extends NpcInstance
 		else if (command.startsWith("request_Baylor"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(BaylorInstance))

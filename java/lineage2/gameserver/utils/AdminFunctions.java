@@ -48,10 +48,12 @@ public final class AdminFunctions
 	public static boolean kick(String player, String reason)
 	{
 		Player plyr = World.getPlayer(player);
+		
 		if (plyr == null)
 		{
 			return false;
 		}
+		
 		return kick(plyr, reason);
 	}
 	
@@ -71,6 +73,7 @@ public final class AdminFunctions
 				CursedWeaponsManager.getInstance().dropPlayer(player);
 			}
 		}
+		
 		player.kick();
 		return true;
 	}
@@ -86,6 +89,7 @@ public final class AdminFunctions
 	public static boolean give(String charName, int itemid, int amount, String reason)
 	{
 		Player player = World.getPlayer(charName);
+		
 		if (player != null)
 		{
 			if (player.getInventory().addItem(itemid, amount) != null)
@@ -93,6 +97,7 @@ public final class AdminFunctions
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -108,6 +113,7 @@ public final class AdminFunctions
 	public static String banChat(Player adminChar, String adminName, String charName, int val, String reason)
 	{
 		Player player = World.getPlayer(charName);
+		
 		if (player != null)
 		{
 			charName = player.getName();
@@ -116,25 +122,31 @@ public final class AdminFunctions
 		{
 			return "�?грок " + charName + " не найден.";
 		}
+		
 		if (((adminName == null) || adminName.isEmpty()) && (adminChar != null))
 		{
 			adminName = adminChar.getName();
 		}
+		
 		if ((reason == null) || reason.isEmpty())
 		{
 			reason = "не указана";
 		}
+		
 		String result, announce = null;
+		
 		if (val == 0)
 		{
 			if ((adminChar != null) && !adminChar.getPlayerAccess().CanUnBanChat)
 			{
 				return "Вы не имеете прав на �?н�?тие бана чата.";
 			}
+			
 			if (Config.BANCHAT_ANNOUNCE)
 			{
 				announce = Config.BANCHAT_ANNOUNCE_NICK && (adminName != null) && !adminName.isEmpty() ? adminName + " �?н�?л бан чата �? игрока " + charName + "." : "С игрока " + charName + " �?н�?т бан чата.";
 			}
+			
 			Log.add(adminName + " �?н�?л бан чата �? игрока " + charName + ".", "banchat", adminChar);
 			result = "Вы �?н�?ли бан чата �? игрока " + charName + ".";
 		}
@@ -144,10 +156,12 @@ public final class AdminFunctions
 			{
 				return "Вы можете банит�? не более чем на " + adminChar.getPlayerAccess().BanChatMaxValue + " минут.";
 			}
+			
 			if (Config.BANCHAT_ANNOUNCE)
 			{
 				announce = Config.BANCHAT_ANNOUNCE_NICK && (adminName != null) && !adminName.isEmpty() ? adminName + " забанил чат игроку " + charName + " на бе�?�?рочный период, причина: " + reason + "." : "Забанен чат игроку " + charName + " на бе�?�?рочный период, причина: " + reason + ".";
 			}
+			
 			Log.add(adminName + " забанил чат игроку " + charName + " на бе�?�?рочный период, причина: " + reason + ".", "banchat", adminChar);
 			result = "Вы забанили чат игроку " + charName + " на бе�?�?рочный период.";
 		}
@@ -157,14 +171,17 @@ public final class AdminFunctions
 			{
 				return "Вы не имеете права измен�?т�? врем�? бана.";
 			}
+			
 			if ((adminChar != null) && (adminChar.getPlayerAccess().BanChatMaxValue != -1) && (val > adminChar.getPlayerAccess().BanChatMaxValue))
 			{
 				return "Вы можете банит�? не более чем на " + adminChar.getPlayerAccess().BanChatMaxValue + " минут.";
 			}
+			
 			if (Config.BANCHAT_ANNOUNCE)
 			{
 				announce = Config.BANCHAT_ANNOUNCE_NICK && (adminName != null) && !adminName.isEmpty() ? adminName + " забанил чат игроку " + charName + " на " + val + " минут, причина: " + reason + "." : "Забанен чат игроку " + charName + " на " + val + " минут, причина: " + reason + ".";
 			}
+			
 			Log.add(adminName + " забанил чат игроку " + charName + " на " + val + " минут, причина: " + reason + ".", "banchat", adminChar);
 			result /**
 			 * Method updateNoChannel.
@@ -174,6 +191,7 @@ public final class AdminFunctions
 			 */
 			= "Вы забанили чат игроку " + charName + " на " + val + " минут.";
 		}
+		
 		if (player != null)
 		{
 			updateNoChannel(player, val, reason);
@@ -182,6 +200,7 @@ public final class AdminFunctions
 		{
 			AutoBan.ChatBan(charName, val, reason, adminName);
 		}
+		
 		if (announce != null)
 		{
 			if (Config.BANCHAT_ANNOUNCE_FOR_ALL_WORLD)
@@ -193,12 +212,14 @@ public final class AdminFunctions
 				Announcements.shout(adminChar, announce, ChatType.CRITICAL_ANNOUNCE);
 			}
 		}
+		
 		return result;
 	}
 	
 	private static void updateNoChannel(Player player, int time, String reason)
 	{
 		player.updateNoChannel(time * 60000);
+		
 		if (time == 0)
 		{
 			player.sendMessage(new CustomMessage("common.ChatUnBanned", player));

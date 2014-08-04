@@ -56,6 +56,7 @@ public class _10271_TheEnvelopingDarkness extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("orbyu_q10271_3.htm") && (cond == 0))
 		{
 			st.setCond(1);
@@ -87,6 +88,7 @@ public class _10271_TheEnvelopingDarkness extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -98,6 +100,7 @@ public class _10271_TheEnvelopingDarkness extends Quest implements ScriptFile
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		QuestState ToTheSeedOfDestruction = player.getQuestState(_10269_ToTheSeedOfDestruction.class);
+		
 		if (npcId == Orbyu)
 		{
 			if (cond == 0)
@@ -139,6 +142,7 @@ public class _10271_TheEnvelopingDarkness extends Quest implements ScriptFile
 				htmltext = "medibalscorpse_q10271_1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

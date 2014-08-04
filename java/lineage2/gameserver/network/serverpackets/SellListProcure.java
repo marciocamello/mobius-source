@@ -35,9 +35,11 @@ public class SellListProcure extends L2GameServerPacket
 		_money = player.getAdena();
 		_castle = castleId;
 		_procureList = ResidenceHolder.getInstance().getResidence(Castle.class, _castle).getCropProcure(0);
+		
 		for (CropProcure c : _procureList)
 		{
 			ItemInstance item = player.getInventory().getItemByItemId(c.getId());
+			
 			if ((item != null) && (c.getAmount() > 0))
 			{
 				_sellList.put(item, c.getAmount());
@@ -62,7 +64,7 @@ public class SellListProcure extends L2GameServerPacket
 			writeH(item.getTemplate().getType2ForPackets());
 			writeH(0); // size of [dhhh]
 			writeQ(0); // price, u shouldnt get any adena for crops, only raw
-						// materials
+			// materials
 		}
 	}
 }

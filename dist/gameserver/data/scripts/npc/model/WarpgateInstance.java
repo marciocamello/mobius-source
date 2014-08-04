@@ -24,7 +24,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class WarpgateInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -50,6 +50,7 @@ public class WarpgateInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.startsWith("enter_hellbound"))
 		{
 			if ((HellboundManager.getHellboundLevel() != 0) && player.isQuestCompleted("_130_PathToHellbound"))
@@ -57,9 +58,11 @@ public class WarpgateInstance extends NpcInstance
 				player.teleToLocation(-11272, 236464, -3248);
 				return;
 			}
+			
 			showChatWindow(player, "default/32318-1.htm");
 			return;
 		}
+		
 		super.onBypassFeedback(player, command);
 	}
 }

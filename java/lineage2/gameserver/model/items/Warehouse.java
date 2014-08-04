@@ -93,19 +93,24 @@ public abstract class Warehouse extends ItemContainer
 			{
 				return 0;
 			}
+			
 			int diff = o1.getItemClass().ordinal() - o2.getItemClass().ordinal();
+			
 			if (diff == 0)
 			{
 				diff = o1.getCrystalType().ordinal() - o2.getCrystalType().ordinal();
 			}
+			
 			if (diff == 0)
 			{
 				diff = o1.getItemId() - o2.getItemId();
 			}
+			
 			if (diff == 0)
 			{
 				diff = o1.getEnchantLevel() - o2.getEnchantLevel();
 			}
+			
 			return diff;
 		}
 	}
@@ -148,12 +153,15 @@ public abstract class Warehouse extends ItemContainer
 	{
 		List<ItemInstance> result = new ArrayList<>();
 		readLock();
+		
 		try
 		{
 			ItemInstance item;
+			
 			for (int i = 0; i < _items.size(); i++)
 			{
 				item = _items.get(i);
+				
 				if (((itemClass == null) || (itemClass == ItemClass.ALL)) || (item.getItemClass() == itemClass))
 				{
 					result.add(item);
@@ -186,6 +194,7 @@ public abstract class Warehouse extends ItemContainer
 		item.setOwnerId(getOwnerId());
 		item.setLocation(getItemLocation());
 		item.setLocData(0);
+		
 		if (item.getJdbcState().isSavable())
 		{
 			item.save();
@@ -236,9 +245,11 @@ public abstract class Warehouse extends ItemContainer
 	{
 		final int ownerId = getOwnerId();
 		writeLock();
+		
 		try
 		{
 			Collection<ItemInstance> items = _itemsDAO.getItemsByOwnerIdAndLoc(ownerId, getItemLocation());
+			
 			for (ItemInstance item : items)
 			{
 				_items.add(item);

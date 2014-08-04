@@ -49,14 +49,17 @@ public class ArcherCaption extends SiegeGuardRanger
 		super.onEvtSpawn();
 		final SiegeGuardInstance actor = getActor();
 		final FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
+		
 		if (siegeEvent == null)
 		{
 			return;
 		}
+		
 		if (siegeEvent.getResidence().getFacilityLevel(Fortress.GUARD_BUFF) > 0)
 		{
 			actor.doCast(SkillTable.getInstance().getInfo(5432, siegeEvent.getResidence().getFacilityLevel(Fortress.GUARD_BUFF)), actor, false);
 		}
+		
 		siegeEvent.barrackAction(0, false);
 	}
 	
@@ -69,10 +72,12 @@ public class ArcherCaption extends SiegeGuardRanger
 	{
 		final SiegeGuardInstance actor = getActor();
 		final FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
+		
 		if (siegeEvent == null)
 		{
 			return;
 		}
+		
 		siegeEvent.barrackAction(0, true);
 		siegeEvent.broadcastTo(SystemMsg.THE_BARRACKS_HAVE_BEEN_SEIZED, SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
 		Functions.npcShout(actor, NpcString.YOU_MAY_HAVE_BROKEN_OUR_ARROWS_BUT_YOU_WILL_NEVER_BREAK_OUR_WILL_ARCHERS_RETREAT);

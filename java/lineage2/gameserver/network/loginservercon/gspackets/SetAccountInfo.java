@@ -56,6 +56,7 @@ public class SetAccountInfo extends SendablePacket
 		writeS(_account);
 		writeC(_size);
 		writeD(_deleteChars.length);
+		
 		for (int i : _deleteChars)
 		{
 			writeD(i);

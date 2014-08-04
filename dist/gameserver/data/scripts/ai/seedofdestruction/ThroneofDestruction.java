@@ -67,11 +67,13 @@ public class ThroneofDestruction extends DefaultAI
 	{
 		final NpcInstance actor = getActor();
 		final Reflection ref = actor.getReflection();
+		
 		if (checkAllDestroyed(actor.getNpcId()))
 		{
 			ref.openDoor(DOOR);
 			ref.addSpawnWithoutRespawn(TIAT_NPC_ID, TIAT_LOC, 0);
 		}
+		
 		super.onEvtDead(killer);
 	}
 	
@@ -89,6 +91,7 @@ public class ThroneofDestruction extends DefaultAI
 				return false;
 			}
 		}
+		
 		return true;
 	}
 }

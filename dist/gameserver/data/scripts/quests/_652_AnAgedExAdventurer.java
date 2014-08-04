@@ -52,6 +52,7 @@ public class _652_AnAgedExAdventurer extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("retired_oldman_tantan_q0652_03.htm") && (st.getQuestItemsCount(SoulshotCgrade) >= 100))
 		{
 			st.setCond(1);
@@ -66,6 +67,7 @@ public class _652_AnAgedExAdventurer extends Quest implements ScriptFile
 			st.exitCurrentQuest(true);
 			st.playSound(SOUND_GIVEUP);
 		}
+		
 		return htmltext;
 	}
 	
@@ -75,6 +77,7 @@ public class _652_AnAgedExAdventurer extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (npcId == Tantan)
 		{
 			if (cond == 0)
@@ -99,6 +102,7 @@ public class _652_AnAgedExAdventurer extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 }

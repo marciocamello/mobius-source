@@ -43,6 +43,7 @@ public class Refill extends Skill
 			activeChar.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(_id, _level));
 			return false;
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
@@ -69,9 +70,11 @@ public class Refill extends Skill
 			{
 				continue;
 			}
+			
 			ClanAirShip airship = (ClanAirShip) target.getPlayer().getBoat();
 			airship.setCurrentFuel(airship.getCurrentFuel() + (int) _power);
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());

@@ -25,7 +25,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-@SuppressWarnings("unused")
 public class AdminRes implements IAdminCommandHandler
 {
 	/**
@@ -50,19 +49,21 @@ public class AdminRes implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
 		if (!activeChar.getPlayerAccess().Res)
 		{
 			return false;
 		}
+		
 		if (fullString.startsWith("admin_res "))
 		{
 			handleRes(activeChar, wordList[1]);
 		}
+		
 		if (fullString.equals("admin_res"))
 		{
 			handleRes(activeChar);
 		}
+		
 		return true;
 	}
 	
@@ -93,9 +94,11 @@ public class AdminRes implements IAdminCommandHandler
 	private void handleRes(Player activeChar, String player)
 	{
 		GameObject obj = activeChar.getTarget();
+		
 		if (player != null)
 		{
 			Player plyr = World.getPlayer(player);
+			
 			if (plyr != null)
 			{
 				obj = plyr;
@@ -105,10 +108,12 @@ public class AdminRes implements IAdminCommandHandler
 				try
 				{
 					int radius = Math.max(Integer.parseInt(player), 100);
+					
 					for (Creature character : activeChar.getAroundCharacters(radius, radius))
 					{
 						handleRes(character);
 					}
+					
 					activeChar.sendMessage("Resurrected within " + radius + " unit radius.");
 					return;
 				}
@@ -119,10 +124,12 @@ public class AdminRes implements IAdminCommandHandler
 				}
 			}
 		}
+		
 		if (obj == null)
 		{
 			obj = activeChar;
 		}
+		
 		if (obj instanceof Creature)
 		{
 			handleRes((Creature) obj);
@@ -143,6 +150,7 @@ public class AdminRes implements IAdminCommandHandler
 		{
 			return;
 		}
+		
 		if (target.isPlayable())
 		{
 			if (target.isPlayer())
@@ -158,6 +166,7 @@ public class AdminRes implements IAdminCommandHandler
 		{
 			((NpcInstance) target).stopDecay();
 		}
+		
 		target.setCurrentHpMp(target.getMaxHp(), target.getMaxMp(), true);
 		target.setCurrentCp(target.getMaxCp());
 	}

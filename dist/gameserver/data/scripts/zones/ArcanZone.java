@@ -69,6 +69,7 @@ public class ArcanZone implements ScriptFile
 			if (cha instanceof Player)
 			{
 				Player player = cha.getPlayer();
+				
 				if (ArcanManager.getStage() == _RED)
 				{
 					player.sendPacket(new EventTrigger(_BLUE, false));

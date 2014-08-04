@@ -41,7 +41,7 @@ public class Seed extends ScriptItemHandler
 		 * Field spawnedPlant.
 		 */
 		SimpleSpawner spawnedPlant = null;
-
+		
 		/**
 		 * Constructor for DeSpawnScheduleTimerTask.
 		 * @param spawn SimpleSpawner
@@ -50,7 +50,7 @@ public class Seed extends ScriptItemHandler
 		{
 			spawnedPlant = spawn;
 		}
-
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -60,7 +60,7 @@ public class Seed extends ScriptItemHandler
 			spawnedPlant.deleteAll();
 		}
 	}
-
+	
 	/**
 	 * Field _itemIds.
 	 */
@@ -77,7 +77,7 @@ public class Seed extends ScriptItemHandler
 		12774,
 		12777
 	};
-
+	
 	/**
 	 * Method useItem.
 	 * @param playable Playable
@@ -90,22 +90,27 @@ public class Seed extends ScriptItemHandler
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
 		final Player activeChar = (Player) playable;
+		
 		if (activeChar.isInZone(ZoneType.RESIDENCE))
 		{
 			return false;
 		}
+		
 		if (activeChar.isInOlympiadMode())
 		{
 			activeChar.sendMessage("You can not cultivate watermelon at the stadium.");
 			return false;
 		}
+		
 		if (!activeChar.getReflection().isDefault())
 		{
 			activeChar.sendMessage("You can not cultivate watermelon instance.");
 			return false;
 		}
+		
 		NpcTemplate template = null;
 		final int itemId = item.getItemId();
+		
 		for (int i = 0; i < _itemIds.length; i++)
 		{
 			if (_itemIds[i] == itemId)
@@ -114,14 +119,17 @@ public class Seed extends ScriptItemHandler
 				break;
 			}
 		}
+		
 		if (template == null)
 		{
 			return false;
 		}
+		
 		if (!activeChar.getInventory().destroyItem(item, 1L))
 		{
 			return false;
 		}
+		
 		final SimpleSpawner spawn = new SimpleSpawner(template);
 		spawn.setLoc(Location.findPointToStay(activeChar, 30, 70));
 		final NpcInstance npc = spawn.doSpawn(true);
@@ -130,7 +138,7 @@ public class Seed extends ScriptItemHandler
 		ThreadPoolManager.getInstance().schedule(new DeSpawnScheduleTimerTask(spawn), 180000);
 		return true;
 	}
-
+	
 	/**
 	 * Method getItemIds.
 	 * @return int[]

@@ -67,6 +67,7 @@ public class Shuttle extends Boat
 			{
 				return;
 			}
+			
 			_shuttle.getCurrentFloor().stopEvent();
 			_shuttle.getNextFloor().reCalcNextTime(false);
 		}
@@ -238,6 +239,7 @@ public class Shuttle extends Boat
 		{
 			return null;
 		}
+		
 		return new ExShuttleGetOnPacket(playable, this, location);
 	}
 	
@@ -315,9 +317,11 @@ public class Shuttle extends Boat
 	ShuttleWayEvent getNextFloor()
 	{
 		int floors = _floors.size() - 1;
+		
 		if (!_moveBack)
 		{
 			_currentWay++;
+			
 			if (_currentWay > floors)
 			{
 				_currentWay = floors - 1;
@@ -327,12 +331,14 @@ public class Shuttle extends Boat
 		else
 		{
 			_currentWay--;
+			
 			if (_currentWay < 0)
 			{
 				_currentWay = 1;
 				_moveBack = false;
 			}
 		}
+		
 		return _floors.get(_currentWay);
 	}
 }

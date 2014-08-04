@@ -67,6 +67,7 @@ public class _10272_LightFragment extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("orbyu_q10272_2.htm") && (cond == 0))
 		{
 			st.setCond(1);
@@ -91,6 +92,7 @@ public class _10272_LightFragment extends Quest implements ScriptFile
 				st.getPlayer().teleToLocation(LELIKIA_POSITION);
 				return null;
 			}
+			
 			st.getPlayer().sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return null;
 		}
@@ -141,6 +143,7 @@ public class _10272_LightFragment extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -151,6 +154,7 @@ public class _10272_LightFragment extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		QuestState TheEnvelopingDarkness = st.getPlayer().getQuestState(_10271_TheEnvelopingDarkness.class);
+		
 		if (npcId == Orbyu)
 		{
 			if (cond == 0)
@@ -236,6 +240,7 @@ public class _10272_LightFragment extends Quest implements ScriptFile
 				htmltext = "lekon_q10272_1a.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -250,6 +255,7 @@ public class _10272_LightFragment extends Quest implements ScriptFile
 				st.playSound(SOUND_ITEMGET);
 			}
 		}
+		
 		return null;
 	}
 }

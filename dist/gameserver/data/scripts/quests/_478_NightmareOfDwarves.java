@@ -61,6 +61,7 @@ public class _478_NightmareOfDwarves extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		Player player = st.getPlayer();
+		
 		if (event.equalsIgnoreCase("30537-6.htm"))
 		{
 			if ((player.getLevel() >= 85) && (player.getLevel() <= 94))
@@ -75,6 +76,7 @@ public class _478_NightmareOfDwarves extends Quest implements ScriptFile
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return event;
 	}
 	
@@ -85,6 +87,7 @@ public class _478_NightmareOfDwarves extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int state = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == DAICHIR)
 		{
 			if (state == 1)
@@ -93,6 +96,7 @@ public class _478_NightmareOfDwarves extends Quest implements ScriptFile
 				{
 					return "30537-lvl.htm";
 				}
+				
 				if (!st.isNowAvailableByTime())
 				{
 					return "30537-comp.htm";
@@ -105,12 +109,14 @@ public class _478_NightmareOfDwarves extends Quest implements ScriptFile
 				
 				return "30537.htm";
 			}
+			
 			if (state == 2)
 			{
 				if ((cond == 2) || (cond == 3))
 				{
 					return "30537-7.htm";
 				}
+				
 				if (cond == 4)
 				{
 					int reward = getReward();
@@ -119,8 +125,8 @@ public class _478_NightmareOfDwarves extends Quest implements ScriptFile
 					st.playSound(SOUND_FINISH);
 					st.exitCurrentQuest(this);
 					return "30537-16.htm";
-					
 				}
+				
 				if (cond == 5)
 				{
 					st.giveItems(57, 550000);
@@ -131,12 +137,14 @@ public class _478_NightmareOfDwarves extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return "noquest";
 	}
 	
 	private static int getReward()
 	{
 		int chance = Rnd.get(100);
+		
 		if ((chance > 0) && (chance <= 15))
 		{
 			return 4342;
@@ -176,17 +184,19 @@ public class _478_NightmareOfDwarves extends Quest implements ScriptFile
 		{
 			return 15559;
 		}
-		return 0;
 		
+		return 0;
 	}
 	
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if (cond == 2)
 		{
 			boolean doneKill = updateKill(npc, st);
+			
 			if (doneKill)
 			{
 				st.unset(WPL);
@@ -202,6 +212,7 @@ public class _478_NightmareOfDwarves extends Quest implements ScriptFile
 				st.setCond(4);
 			}
 		}
+		
 		return null;
 	}
 }

@@ -47,13 +47,16 @@ public class RequestShowBoard extends L2GameClientPacket
 	public void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (Config.COMMUNITYBOARD_ENABLED)
 		{
 			ICommunityBoardHandler handler = CommunityBoardManager.getInstance().getCommunityHandler(Config.BBS_DEFAULT);
+			
 			if (handler != null)
 			{
 				handler.onBypassCommand(activeChar, Config.BBS_DEFAULT);

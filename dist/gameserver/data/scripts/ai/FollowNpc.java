@@ -60,6 +60,7 @@ public class FollowNpc extends DefaultAI
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -70,11 +71,14 @@ public class FollowNpc extends DefaultAI
 	protected void onEvtThink()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (_thinking || actor.isActionsDisabled() || actor.isAfraid() || actor.isDead() || actor.isMovementDisabled())
 		{
 			return;
 		}
+		
 		_thinking = true;
+		
 		try
 		{
 			if (!Config.BLOCK_ACTIVE_TASKS && ((getIntention() == CtrlIntention.AI_INTENTION_ACTIVE) || (getIntention() == CtrlIntention.AI_INTENTION_IDLE)))
@@ -103,25 +107,30 @@ public class FollowNpc extends DefaultAI
 	{
 		final NpcInstance actor = getActor();
 		final Creature target = actor.getFollowTarget();
+		
 		if ((target == null) || target.isAlikeDead() || (actor.getDistance(target) > 4000) || actor.isMovementDisabled())
 		{
 			clientActionFailed();
 			return;
 		}
+		
 		if (actor.isFollow && (actor.getFollowTarget().equals(target)))
 		{
 			clientActionFailed();
 			return;
 		}
+		
 		if (actor.isInRange(target, Config.FOLLOW_RANGE + 20))
 		{
 			clientActionFailed();
 		}
+		
 		if (_followTask != null)
 		{
 			_followTask.cancel(false);
 			_followTask = null;
 		}
+		
 		_followTask = ThreadPoolManager.getInstance().schedule(new ThinkFollow(), 250L);
 	}
 	
@@ -146,21 +155,26 @@ public class FollowNpc extends DefaultAI
 		public void runImpl()
 		{
 			final NpcInstance actor = getActor();
+			
 			if (actor == null)
 			{
 				return;
 			}
+			
 			final Creature target = actor.getFollowTarget();
+			
 			if ((target == null) || target.isAlikeDead() || (actor.getDistance(target) > 4000))
 			{
 				setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				return;
 			}
+			
 			if (!actor.isInRange(target, Config.FOLLOW_RANGE + 20) && (!actor.isFollow || (!actor.getFollowTarget().equals(target))))
 			{
 				final Location loc = new Location(target.getX() + Rnd.get(-60, 60), target.getY() + Rnd.get(-60, 60), target.getZ());
 				actor.followToCharacter(loc, target, Config.FOLLOW_RANGE, false);
 			}
+			
 			_followTask = ThreadPoolManager.getInstance().schedule(this, 250L);
 		}
 	}

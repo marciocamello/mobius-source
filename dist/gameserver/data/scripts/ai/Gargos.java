@@ -61,6 +61,7 @@ public class Gargos extends Fighter
 			_lastFire = System.currentTimeMillis();
 			return true;
 		}
+		
 		return false;
 	}
 }

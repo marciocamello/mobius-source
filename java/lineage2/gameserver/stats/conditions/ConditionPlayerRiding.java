@@ -66,18 +66,22 @@ public class ConditionPlayerRiding extends Condition
 		{
 			return false;
 		}
+		
 		if ((_riding == CheckPlayerRiding.STRIDER) && ((Player) env.character).isRiding())
 		{
 			return true;
 		}
+		
 		if ((_riding == CheckPlayerRiding.WYVERN) && ((Player) env.character).isFlying())
 		{
 			return true;
 		}
+		
 		if ((_riding == CheckPlayerRiding.NONE) && !((Player) env.character).isRiding() && !((Player) env.character).isFlying())
 		{
 			return true;
 		}
+		
 		return false;
 	}
 }

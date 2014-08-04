@@ -52,16 +52,19 @@ public class WaterDragonDetractor extends Fighter
 		if (killer != null)
 		{
 			final Player player = killer.getPlayer();
+			
 			if (player != null)
 			{
 				final NpcInstance actor = getActor();
 				actor.dropItem(player, SPIRIT_OF_LAKE, 1);
+				
 				if (Rnd.chance(10))
 				{
 					actor.dropItem(player, BLUE_CRYSTAL, 1);
 				}
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 }

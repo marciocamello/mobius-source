@@ -297,10 +297,12 @@ public class MasterOfEnchanting extends Functions implements ScriptFile, OnPlaye
 	public void startEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive(EVENT_NAME, true))
 		{
 			spawnEventManagers();
@@ -311,6 +313,7 @@ public class MasterOfEnchanting extends Functions implements ScriptFile, OnPlaye
 		{
 			player.sendMessage("Event 'Master of Enchanting' already started.");
 		}
+		
 		_active = true;
 		show("admin/events.htm", player);
 	}
@@ -321,10 +324,12 @@ public class MasterOfEnchanting extends Functions implements ScriptFile, OnPlaye
 	public void stopEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive(EVENT_NAME, false))
 		{
 			unSpawnEventManagers();
@@ -335,6 +340,7 @@ public class MasterOfEnchanting extends Functions implements ScriptFile, OnPlaye
 		{
 			player.sendMessage("Event 'Master of Enchanting' not started.");
 		}
+		
 		_active = false;
 		show("html/admin/events.htm", player);
 	}
@@ -347,6 +353,7 @@ public class MasterOfEnchanting extends Functions implements ScriptFile, OnPlaye
 	public void onLoad()
 	{
 		CharListenerList.addGlobal(this);
+		
 		if (isActive())
 		{
 			_active = true;

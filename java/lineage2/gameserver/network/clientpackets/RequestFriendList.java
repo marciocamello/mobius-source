@@ -41,15 +41,19 @@ public class RequestFriendList extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		activeChar.sendPacket(Msg._FRIENDS_LIST_);
 		Map<Integer, Friend> _list = activeChar.getFriendList().getList();
+		
 		for (Map.Entry<Integer, Friend> entry : _list.entrySet())
 		{
 			Player friend = World.getPlayer(entry.getKey());
+			
 			if (friend != null)
 			{
 				activeChar.sendPacket(new SystemMessage(SystemMessage.S1_CURRENTLY_ONLINE).addName(friend));
@@ -59,6 +63,7 @@ public class RequestFriendList extends L2GameClientPacket
 				activeChar.sendPacket(new SystemMessage(SystemMessage.S1_CURRENTLY_OFFLINE).addString(entry.getValue().getName()));
 			}
 		}
+		
 		activeChar.sendPacket(Msg.__EQUALS__);
 	}
 }

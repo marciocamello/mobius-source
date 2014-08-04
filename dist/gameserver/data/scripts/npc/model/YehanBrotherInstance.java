@@ -25,7 +25,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class YehanBrotherInstance extends RaidBossInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -55,6 +55,7 @@ public class YehanBrotherInstance extends RaidBossInstance
 		{
 			damage = getCurrentHp() - 1;
 		}
+		
 		super.onReduceCurrentHp(damage, attacker, skill, awake, standUp, directHp);
 	}
 	
@@ -66,6 +67,7 @@ public class YehanBrotherInstance extends RaidBossInstance
 	protected void onDeath(Creature killer)
 	{
 		super.onDeath(killer);
+		
 		if (!getBrother().isDead())
 		{
 			getBrother().doDie(killer);
@@ -79,6 +81,7 @@ public class YehanBrotherInstance extends RaidBossInstance
 	private NpcInstance getBrother()
 	{
 		int brotherId = 0;
+		
 		if (getNpcId() == 25665)
 		{
 			brotherId = 25666;
@@ -87,6 +90,7 @@ public class YehanBrotherInstance extends RaidBossInstance
 		{
 			brotherId = 25665;
 		}
+		
 		for (NpcInstance npc : getReflection().getNpcs())
 		{
 			if (npc.getNpcId() == brotherId)
@@ -94,6 +98,7 @@ public class YehanBrotherInstance extends RaidBossInstance
 				return npc;
 			}
 		}
+		
 		return null;
 	}
 }

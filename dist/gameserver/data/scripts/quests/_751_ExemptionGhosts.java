@@ -65,6 +65,7 @@ public class _751_ExemptionGhosts extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("30631-3.htm"))
 		{
 			st.setState(STARTED);
@@ -80,6 +81,7 @@ public class _751_ExemptionGhosts extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(this);
 		}
+		
 		return htmltext;
 	}
 	
@@ -88,6 +90,7 @@ public class _751_ExemptionGhosts extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (npc.getNpcId() == Roderik)
 		{
 			switch (st.getState())
@@ -109,7 +112,9 @@ public class _751_ExemptionGhosts extends Quest implements ScriptFile
 						htmltext = "lvl.htm";
 						st.exitCurrentQuest(true);
 					}
+					
 					break;
+				
 				case STARTED:
 					if (cond == 1)
 					{
@@ -119,6 +124,7 @@ public class _751_ExemptionGhosts extends Quest implements ScriptFile
 					{
 						htmltext = "30631-4.htm";
 					}
+					
 					break;
 			}
 		}
@@ -131,22 +137,26 @@ public class _751_ExemptionGhosts extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		boolean doneKill = updateKill(npc, st);
+		
 		if (cond == 1)
 		{
 			if (ArrayUtils.contains(Mobs, npc.getNpcId()))
 			{
 				Party party = st.getPlayer().getParty();
+				
 				if (party != null)
 				{
 					for (Player member : party.getPartyMembers())
 					{
 						QuestState qs = member.getQuestState(getClass());
+						
 						if ((qs != null) && qs.isStarted())
 						{
 							if (st.getQuestItemsCount(Deadmans_Flesh) < 40)
 							{
 								qs.giveItems(Deadmans_Flesh, 1);
 								qs.playSound(SOUND_ITEMGET);
+								
 								if (doneKill && (st.getQuestItemsCount(Deadmans_Flesh) == 40))
 								{
 									st.setCond(2);
@@ -161,6 +171,7 @@ public class _751_ExemptionGhosts extends Quest implements ScriptFile
 					{
 						st.giveItems(Deadmans_Flesh, 1);
 						st.playSound(SOUND_ITEMGET);
+						
 						if (doneKill && (st.getQuestItemsCount(Deadmans_Flesh) == 40))
 						{
 							st.setCond(2);
@@ -168,17 +179,21 @@ public class _751_ExemptionGhosts extends Quest implements ScriptFile
 					}
 				}
 			}
+			
 			if (npc.getNpcId() == Scaldisect)
 			{
 				Party party = st.getPlayer().getParty();
+				
 				if (party != null)
 				{
 					for (Player member : party.getPartyMembers())
 					{
 						QuestState qs = member.getQuestState(getClass());
+						
 						if ((qs != null) && qs.isStarted())
 						{
 							updateKill(npc, st);
+							
 							if (st.getQuestItemsCount(Deadmans_Flesh) == 40)
 							{
 								st.setCond(2);
@@ -189,6 +204,7 @@ public class _751_ExemptionGhosts extends Quest implements ScriptFile
 				else
 				{
 					updateKill(npc, st);
+					
 					if (st.getQuestItemsCount(Deadmans_Flesh) == 40)
 					{
 						st.setCond(2);
@@ -196,6 +212,7 @@ public class _751_ExemptionGhosts extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 	

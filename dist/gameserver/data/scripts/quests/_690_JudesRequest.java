@@ -73,12 +73,14 @@ public class _690_JudesRequest extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("jude_q0690_03.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return htmltext;
 	}
 	
@@ -92,6 +94,7 @@ public class _690_JudesRequest extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (cond == 0)
 		{
 			if (st.getPlayer().getLevel() >= 78)
@@ -102,11 +105,13 @@ public class _690_JudesRequest extends Quest implements ScriptFile
 			{
 				htmltext = "jude_q0690_02.htm";
 			}
+			
 			st.exitCurrentQuest(true);
 		}
 		else if ((cond == 1) && (st.getQuestItemsCount(EVIL_WEAPON) >= 5))
 		{
 			int reward = Rnd.get(8);
+			
 			if (st.getQuestItemsCount(EVIL_WEAPON) >= 100)
 			{
 				if (reward == 0)
@@ -145,6 +150,7 @@ public class _690_JudesRequest extends Quest implements ScriptFile
 				{
 					giveReward(st, ISpitter, 1);
 				}
+				
 				st.playSound(SOUND_FINISH);
 				st.takeItems(EVIL_WEAPON, 100);
 				htmltext = "jude_q0690_07.htm";
@@ -187,6 +193,7 @@ public class _690_JudesRequest extends Quest implements ScriptFile
 				{
 					st.giveItems(ISpitterP, 1);
 				}
+				
 				st.playSound(SOUND_FINISH);
 				st.takeItems(EVIL_WEAPON, 5);
 				htmltext = "jude_q0690_09.htm";
@@ -196,6 +203,7 @@ public class _690_JudesRequest extends Quest implements ScriptFile
 		{
 			htmltext = "jude_q0690_10.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -203,19 +211,23 @@ public class _690_JudesRequest extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		Player player = st.getRandomPartyMember(STARTED, Config.ALT_PARTY_DISTRIBUTION_RANGE);
+		
 		if (st.getState() != STARTED)
 		{
 			return null;
 		}
+		
 		if (player != null)
 		{
 			QuestState sts = player.getQuestState(st.getQuest().getName());
+			
 			if ((sts != null) && Rnd.chance(EVIL_WEAPON_CHANCE))
 			{
 				st.giveItems(EVIL_WEAPON, 1);
 				st.playSound(SOUND_ITEMGET);
 			}
 		}
+		
 		return null;
 	}
 }

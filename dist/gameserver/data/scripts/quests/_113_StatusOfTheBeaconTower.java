@@ -50,6 +50,7 @@ public class _113_StatusOfTheBeaconTower extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("seer_moirase_q0113_0104.htm"))
 		{
 			st.setCond(1);
@@ -65,6 +66,7 @@ public class _113_StatusOfTheBeaconTower extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -75,6 +77,7 @@ public class _113_StatusOfTheBeaconTower extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int id = st.getState();
 		int cond = st.getCond();
+		
 		if (id == COMPLETED)
 		{
 			htmltext = "completed";
@@ -102,6 +105,7 @@ public class _113_StatusOfTheBeaconTower extends Quest implements ScriptFile
 		{
 			htmltext = "torant_q0113_0101.htm";
 		}
+		
 		return htmltext;
 	}
 }

@@ -61,6 +61,7 @@ public class _10366_RuinsStatusUpdate extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("qet_rev"))
 		{
 			st.getPlayer().addExpAndSp(150000, 30000);
@@ -98,6 +99,7 @@ public class _10366_RuinsStatusUpdate extends Quest implements ScriptFile
 		{
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
+			
 			if (st.getPlayer().getRace() == Race.human)
 			{
 				st.setCond(2);
@@ -129,6 +131,7 @@ public class _10366_RuinsStatusUpdate extends Quest implements ScriptFile
 				htmltext = "0-4o.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -138,6 +141,7 @@ public class _10366_RuinsStatusUpdate extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == sebion)
 		{
 			if (st.isCompleted())
@@ -312,6 +316,7 @@ public class _10366_RuinsStatusUpdate extends Quest implements ScriptFile
 				htmltext = "1-2o.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

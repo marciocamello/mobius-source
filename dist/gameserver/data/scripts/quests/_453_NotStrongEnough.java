@@ -89,6 +89,7 @@ public class _453_NotStrongEnough extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("klemis_q453_03.htm"))
 		{
 			st.setState(STARTED);
@@ -110,6 +111,7 @@ public class _453_NotStrongEnough extends Quest implements ScriptFile
 			htmltext = "klemis_q453_07.htm";
 			st.setCond(4);
 		}
+		
 		return htmltext;
 	}
 	
@@ -119,6 +121,7 @@ public class _453_NotStrongEnough extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Klemis)
 		{
 			switch (st.getState())
@@ -126,6 +129,7 @@ public class _453_NotStrongEnough extends Quest implements ScriptFile
 				case CREATED:
 				{
 					QuestState qs = st.getPlayer().getQuestState(_10282_ToTheSeedOfAnnihilation.class);
+					
 					if ((st.getPlayer().getLevel() >= 84) && (qs != null) && qs.isCompleted())
 					{
 						if (st.isNowAvailableByTime())
@@ -141,8 +145,10 @@ public class _453_NotStrongEnough extends Quest implements ScriptFile
 					{
 						htmltext = "klemis_q453_00.htm";
 					}
+					
 					break;
 				}
+				
 				case STARTED:
 				{
 					if (cond == 1)
@@ -169,10 +175,12 @@ public class _453_NotStrongEnough extends Quest implements ScriptFile
 						st.playSound(SOUND_FINISH);
 						st.exitCurrentQuest(this);
 					}
+					
 					break;
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -180,6 +188,7 @@ public class _453_NotStrongEnough extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		boolean doneKill = updateKill(npc, st);
+		
 		if (doneKill)
 		{
 			st.unset(A_MOBS);
@@ -188,6 +197,7 @@ public class _453_NotStrongEnough extends Quest implements ScriptFile
 			st.unset(E_MOBS);
 			st.setCond(5);
 		}
+		
 		return null;
 	}
 	

@@ -71,6 +71,7 @@ public class LindviorMovie implements ScriptFile
 		public void runImpl()
 		{
 			List<Player> insideZoners = _zone.getInsidePlayers();
+			
 			if ((insideZoners != null) && !insideZoners.isEmpty())
 			{
 				for (Player player : insideZoners)

@@ -56,6 +56,7 @@ public class MasterZelos extends Fighter
 	{
 		setZoneInactive();
 		super.onEvtSpawn();
+		
 		for (int door2 : doors)
 		{
 			DoorInstance door = ReflectionUtils.getDoor(door2);
@@ -75,6 +76,7 @@ public class MasterZelos extends Fighter
 			DoorInstance door = ReflectionUtils.getDoor(door2);
 			door.openMe();
 		}
+		
 		super.onEvtDead(killer);
 		setZoneActive();
 	}

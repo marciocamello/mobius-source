@@ -57,6 +57,7 @@ public class _727_HopewithintheDarkness extends Quest implements ScriptFile
 		int cond = st.getCond();
 		String htmltext = event;
 		Player player = st.getPlayer();
+		
 		if (event.equals("dcw_q727_4.htm") && (cond == 0))
 		{
 			st.setCond(1);
@@ -71,6 +72,7 @@ public class _727_HopewithintheDarkness extends Quest implements ScriptFile
 			st.exitCurrentQuest(true);
 			return null;
 		}
+		
 		return htmltext;
 	}
 	
@@ -81,11 +83,13 @@ public class _727_HopewithintheDarkness extends Quest implements ScriptFile
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		QuestState qs726 = player.getQuestState(_726_LightwithintheDarkness.class);
+		
 		if (!check(st.getPlayer()))
 		{
 			st.exitCurrentQuest(true);
 			return "dcw_q727_1a.htm";
 		}
+		
 		if (qs726 != null)
 		{
 			st.exitCurrentQuest(true);
@@ -114,6 +118,7 @@ public class _727_HopewithintheDarkness extends Quest implements ScriptFile
 				htmltext = "dcw_q727_5.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -124,6 +129,7 @@ public class _727_HopewithintheDarkness extends Quest implements ScriptFile
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		Party party = player.getParty();
+		
 		if ((cond == 1) && (npcId == KanadisGuide3) && checkAllDestroyed(KanadisGuide3, player.getReflectionId()))
 		{
 			if (player.isInParty())
@@ -137,8 +143,10 @@ public class _727_HopewithintheDarkness extends Quest implements ScriptFile
 					}
 				}
 			}
+			
 			player.getReflection().startCollapseTimer(5 * 60 * 1000L);
 		}
+		
 		return null;
 	}
 	
@@ -151,25 +159,31 @@ public class _727_HopewithintheDarkness extends Quest implements ScriptFile
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
 	private boolean check(Player player)
 	{
 		Castle castle = ResidenceHolder.getInstance().getResidenceByObject(Castle.class, player);
+		
 		if (castle == null)
 		{
 			return false;
 		}
+		
 		Clan clan = player.getClan();
+		
 		if (clan == null)
 		{
 			return false;
 		}
+		
 		if (clan.getClanId() != castle.getOwnerId())
 		{
 			return false;
 		}
+		
 		return true;
 	}
 }

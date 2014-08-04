@@ -212,18 +212,23 @@ public class AggroList
 	public void addDamageHate(Creature attacker, int damage, int aggro)
 	{
 		damage = Math.max(damage, 0);
+		
 		if ((damage == 0) && (aggro == 0))
 		{
 			return;
 		}
+		
 		writeLock.lock();
+		
 		try
 		{
 			AggroInfo ai;
+			
 			if ((ai = hateList.get(attacker.getObjectId())) == null)
 			{
 				hateList.put(attacker.getObjectId(), ai = new AggroInfo(attacker));
 			}
+			
 			ai.damage += damage;
 			ai.hate += aggro;
 			ai.damage = Math.max(ai.damage, 0);
@@ -243,6 +248,7 @@ public class AggroList
 	public AggroInfo get(Creature attacker)
 	{
 		readLock.lock();
+		
 		try
 		{
 			return hateList.get(attacker.getObjectId());
@@ -261,6 +267,7 @@ public class AggroList
 	public void remove(Creature attacker, boolean onlyHate)
 	{
 		writeLock.lock();
+		
 		try
 		{
 			if (!onlyHate)
@@ -268,7 +275,9 @@ public class AggroList
 				hateList.remove(attacker.getObjectId());
 				return;
 			}
+			
 			AggroInfo ai = hateList.get(attacker.getObjectId());
+			
 			if (ai != null)
 			{
 				ai.hate = 0;
@@ -295,23 +304,28 @@ public class AggroList
 	public void clear(boolean onlyHate)
 	{
 		writeLock.lock();
+		
 		try
 		{
 			if (hateList.isEmpty())
 			{
 				return;
 			}
+			
 			if (!onlyHate)
 			{
 				hateList.clear();
 				return;
 			}
+			
 			AggroInfo ai;
+			
 			for (TIntObjectIterator<AggroInfo> itr = hateList.iterator(); itr.hasNext();)
 			{
 				itr.advance();
 				ai = itr.value();
 				ai.hate = 0;
+				
 				if (ai.damage == 0)
 				{
 					itr.remove();
@@ -331,6 +345,7 @@ public class AggroList
 	public boolean isEmpty()
 	{
 		readLock.lock();
+		
 		try
 		{
 			return hateList.isEmpty();
@@ -349,12 +364,14 @@ public class AggroList
 	{
 		AggroInfo[] hated;
 		readLock.lock();
+		
 		try
 		{
 			if (hateList.isEmpty())
 			{
 				return Collections.emptyList();
 			}
+			
 			hated = hateList.values(new AggroInfo[hateList.size()]);
 		}
 		finally
@@ -362,20 +379,25 @@ public class AggroList
 			readLock.unlock();
 		}
 		Arrays.sort(hated, HateComparator.getInstance());
+		
 		if (hated[0].hate == 0)
 		{
 			return Collections.emptyList();
 		}
+		
 		List<Creature> hateList = new LazyArrayList<>();
 		List<Creature> chars = World.getAroundCharacters(npc);
 		AggroInfo ai;
+		
 		for (AggroInfo element : hated)
 		{
 			ai = element;
+			
 			if (ai.hate == 0)
 			{
 				continue;
 			}
+			
 			for (Creature cha : chars)
 			{
 				if (cha.getObjectId() == ai.attackerId)
@@ -385,6 +407,7 @@ public class AggroList
 				}
 			}
 		}
+		
 		return hateList;
 	}
 	
@@ -396,12 +419,14 @@ public class AggroList
 	{
 		AggroInfo[] hated;
 		readLock.lock();
+		
 		try
 		{
 			if (hateList.isEmpty())
 			{
 				return null;
 			}
+			
 			hated = hateList.values(new AggroInfo[hateList.size()]);
 		}
 		finally
@@ -409,20 +434,25 @@ public class AggroList
 			readLock.unlock();
 		}
 		Arrays.sort(hated, HateComparator.getInstance());
+		
 		if (hated[0].hate == 0)
 		{
 			return null;
 		}
+		
 		List<Creature> chars = World.getAroundCharacters(npc);
 		AggroInfo ai;
 		loop:
+		
 		for (int i = 0; i < hated.length; i++)
 		{
 			ai = hated[i];
+			
 			if (ai.hate == 0)
 			{
 				continue;
 			}
+			
 			for (Creature cha : chars)
 			{
 				if (cha.getObjectId() == ai.attackerId)
@@ -431,10 +461,12 @@ public class AggroList
 					{
 						continue loop;
 					}
+					
 					return cha;
 				}
 			}
 		}
+		
 		return null;
 	}
 	
@@ -446,12 +478,14 @@ public class AggroList
 	{
 		AggroInfo[] hated;
 		readLock.lock();
+		
 		try
 		{
 			if (hateList.isEmpty())
 			{
 				return null;
 			}
+			
 			hated = hateList.values(new AggroInfo[hateList.size()]);
 		}
 		finally
@@ -459,22 +493,27 @@ public class AggroList
 			readLock.unlock();
 		}
 		Arrays.sort(hated, HateComparator.getInstance());
+		
 		if (hated[0].hate == 0)
 		{
 			return null;
 		}
+		
 		List<Creature> chars = World.getAroundCharacters(npc);
 		LazyArrayList<Creature> randomHated = LazyArrayList.newInstance();
 		AggroInfo ai;
 		Creature mostHated;
 		loop:
+		
 		for (int i = 0; i < hated.length; i++)
 		{
 			ai = hated[i];
+			
 			if (ai.hate == 0)
 			{
 				continue;
 			}
+			
 			for (Creature cha : chars)
 			{
 				if (cha.getObjectId() == ai.attackerId)
@@ -483,11 +522,13 @@ public class AggroList
 					{
 						continue loop;
 					}
+					
 					randomHated.add(cha);
 					break;
 				}
 			}
 		}
+		
 		if (randomHated.isEmpty())
 		{
 			mostHated = null;
@@ -496,6 +537,7 @@ public class AggroList
 		{
 			mostHated = randomHated.get(Rnd.get(randomHated.size()));
 		}
+		
 		LazyArrayList.recycle(randomHated);
 		return mostHated;
 	}
@@ -508,12 +550,14 @@ public class AggroList
 	{
 		AggroInfo[] hated;
 		readLock.lock();
+		
 		try
 		{
 			if (hateList.isEmpty())
 			{
 				return null;
 			}
+			
 			hated = hateList.values(new AggroInfo[hateList.size()]);
 		}
 		finally
@@ -522,19 +566,24 @@ public class AggroList
 		}
 		Creature topDamager = null;
 		Arrays.sort(hated, DamageComparator.getInstance());
+		
 		if (hated[0].damage == 0)
 		{
 			return null;
 		}
+		
 		List<Creature> chars = World.getAroundCharacters(npc);
 		AggroInfo ai;
+		
 		for (AggroInfo element : hated)
 		{
 			ai = element;
+			
 			if (ai.damage == 0)
 			{
 				continue;
 			}
+			
 			for (Creature cha : chars)
 			{
 				if (cha.getObjectId() == ai.attackerId)
@@ -544,6 +593,7 @@ public class AggroList
 				}
 			}
 		}
+		
 		return null;
 	}
 	
@@ -557,20 +607,25 @@ public class AggroList
 		{
 			return Collections.emptyMap();
 		}
+		
 		Map<Creature, HateInfo> aggroMap = new HashMap<>();
 		List<Creature> chars = World.getAroundCharacters(npc);
 		readLock.lock();
+		
 		try
 		{
 			AggroInfo ai;
+			
 			for (TIntObjectIterator<AggroInfo> itr = hateList.iterator(); itr.hasNext();)
 			{
 				itr.advance();
 				ai = itr.value();
+				
 				if ((ai.damage == 0) && (ai.hate == 0))
 				{
 					continue;
 				}
+				
 				for (Creature attacker : chars)
 				{
 					if (attacker.getObjectId() == ai.attackerId)
@@ -598,20 +653,25 @@ public class AggroList
 		{
 			return Collections.emptyMap();
 		}
+		
 		Map<Playable, HateInfo> aggroMap = new HashMap<>();
 		List<Playable> chars = World.getAroundPlayables(npc);
 		readLock.lock();
+		
 		try
 		{
 			AggroInfo ai;
+			
 			for (TIntObjectIterator<AggroInfo> itr = hateList.iterator(); itr.hasNext();)
 			{
 				itr.advance();
 				ai = itr.value();
+				
 				if ((ai.damage == 0) && (ai.hate == 0))
 				{
 					continue;
 				}
+				
 				for (Playable attacker : chars)
 				{
 					if (attacker.getObjectId() == ai.attackerId)

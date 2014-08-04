@@ -41,7 +41,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 public class FeedableBeastInstance extends MonsterInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -367,10 +367,12 @@ public class FeedableBeastInstance extends MonsterInstance
 			0,
 			18900
 		}));
+		
 		for (int i = 18869; i <= 18872; i++)
 		{
 			tamedBeasts.add(i);
 		}
+		
 		for (int i = 18869; i <= 18900; i++)
 		{
 			feedableBeasts.add(i);
@@ -432,6 +434,7 @@ public class FeedableBeastInstance extends MonsterInstance
 		{
 			return 9049;
 		}
+		
 		return 9050;
 	}
 	
@@ -443,29 +446,37 @@ public class FeedableBeastInstance extends MonsterInstance
 	public int getItemIdBySkillId(int skillId)
 	{
 		int itemId = 0;
+		
 		switch (skillId)
 		{
 			case 9049:
 				itemId = 15474;
 				break;
+			
 			case 9050:
 				itemId = 15475;
 				break;
+			
 			case 9051:
 				itemId = 15476;
 				break;
+			
 			case 9052:
 				itemId = 15477;
 				break;
+			
 			case 9053:
 				itemId = 15478;
 				break;
+			
 			case 9054:
 				itemId = 15479;
 				break;
+			
 			default:
 				itemId = 0;
 		}
+		
 		return itemId;
 	}
 	
@@ -491,10 +502,12 @@ public class FeedableBeastInstance extends MonsterInstance
 		int npcId = getNpcId();
 		int nextNpcId = 0;
 		int tameChance = growthCapableMobs.get(npcId).tameinfo[1];
+		
 		if (isBlessed(skill_id))
 		{
 			tameChance = 90;
 		}
+		
 		if (Rnd.chance(tameChance))
 		{
 			nextNpcId = growthCapableMobs.get(npcId).tameinfo[0];
@@ -503,15 +516,19 @@ public class FeedableBeastInstance extends MonsterInstance
 		{
 			nextNpcId = growthCapableMobs.get(npcId).spice[food];
 		}
+		
 		if (isSGrade(skill_id) && Rnd.chance(90))
 		{
 			nextNpcId = growthCapableMobs.get(npcId).adultId[food];
 		}
+		
 		if (nextNpcId == 0)
 		{
 			return;
 		}
+		
 		feedInfo.remove(getObjectId());
+		
 		if (growthCapableMobs.get(npcId).growth_level == 0)
 		{
 			onDecay();
@@ -520,12 +537,14 @@ public class FeedableBeastInstance extends MonsterInstance
 		{
 			deleteMe();
 		}
+		
 		if (tamedBeasts.contains(nextNpcId))
 		{
 			if (player.getTrainedBeasts().size() >= 7)
 			{
 				return;
 			}
+			
 			NpcTemplate template = NpcHolder.getInstance().getTemplate(nextNpcId);
 			TamedBeastInstance nextNpc = new TamedBeastInstance(IdFactory.getInstance().getNextId(), template);
 			Location loc = player.getLoc();
@@ -537,12 +556,15 @@ public class FeedableBeastInstance extends MonsterInstance
 			nextNpc.setRunning();
 			nextNpc.setOwner(player);
 			QuestState st = player.getQuestState("_020_BringUpWithLove");
+			
 			if ((st != null) && !st.isCompleted() && Rnd.chance(5) && (st.getQuestItemsCount(7185) == 0))
 			{
 				st.giveItems(7185, 1);
 				st.setCond(2);
 			}
+			
 			st = player.getQuestState("_655_AGrandPlanForTamingWildBeasts");
+			
 			if ((st != null) && !st.isCompleted() && (st.getCond() == 1))
 			{
 				if (st.getQuestItemsCount(8084) < 10)
@@ -627,6 +649,7 @@ public class FeedableBeastInstance extends MonsterInstance
 		{
 			_log.error("Could not spawn Npc " + npcId, e);
 		}
+		
 		return null;
 	}
 	
@@ -638,24 +661,30 @@ public class FeedableBeastInstance extends MonsterInstance
 	public void onSkillUse(Player player, int skillId)
 	{
 		int npcId = getNpcId();
+		
 		if (!feedableBeasts.contains(npcId))
 		{
 			return;
 		}
+		
 		if (isGoldenSpice(skillId) && isCrystalSpice(skillId))
 		{
 			return;
 		}
+		
 		int food = isGoldenSpice(skillId) ? 0 : 1;
 		int objectId = getObjectId();
 		broadcastPacket(new SocialAction(objectId, 2));
+		
 		if (growthCapableMobs.containsKey(npcId))
 		{
 			if (growthCapableMobs.get(npcId).spice[food] == 0)
 			{
 				return;
 			}
+			
 			int growthLevel = growthCapableMobs.get(npcId).growth_level;
+			
 			if (growthLevel > 0)
 			{
 				if ((feedInfo.get(objectId) != null) && (feedInfo.get(objectId) != player.getObjectId()))
@@ -663,6 +692,7 @@ public class FeedableBeastInstance extends MonsterInstance
 					return;
 				}
 			}
+			
 			if (Rnd.chance(growthCapableMobs.get(npcId).growth_chance))
 			{
 				spawnNext(player, growthLevel, food, skillId);

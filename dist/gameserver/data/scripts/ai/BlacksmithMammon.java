@@ -59,15 +59,18 @@ public class BlacksmithMammon extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if ((_chatVar + chatDelay) < System.currentTimeMillis())
 		{
 			_chatVar = System.currentTimeMillis();
 			Functions.npcShout(actor, mamonText[Rnd.get(mamonText.length)]);
 		}
+		
 		return false;
 	}
 	

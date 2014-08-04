@@ -40,10 +40,8 @@ public final class BuyListSeed extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xe9);
-		
 		writeQ(_money); // current money
 		writeD(_manorId); // manor id
-		
 		writeH(_list.size()); // list length
 		
 		for (TradeItem item : _list)

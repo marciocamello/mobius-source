@@ -52,6 +52,7 @@ public class _188_SealRemoval extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("researcher_lorain_q0188_03.htm"))
 		{
 			st.playSound(SOUND_ACCEPT);
@@ -69,6 +70,7 @@ public class _188_SealRemoval extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -78,6 +80,7 @@ public class _188_SealRemoval extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (st.getState() == STARTED)
 		{
 			if (npcId == Lorain)
@@ -117,6 +120,7 @@ public class _188_SealRemoval extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -125,10 +129,12 @@ public class _188_SealRemoval extends Quest implements ScriptFile
 	{
 		QuestState qs1 = player.getQuestState(_186_ContractExecution.class);
 		QuestState qs2 = player.getQuestState(_187_NikolasHeart.class);
+		
 		if ((((qs1 != null) && qs1.isCompleted()) || ((qs2 != null) && qs2.isCompleted())) && (player.getQuestState(getClass()) == null))
 		{
 			newQuestState(player, STARTED);
 		}
+		
 		return "";
 	}
 }

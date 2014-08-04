@@ -75,6 +75,7 @@ public class _609_MagicalPowerofWater1 extends Quest implements ScriptFile
 		VARKA_NPC_LIST[17] = 21372;
 		VARKA_NPC_LIST[18] = 21373;
 		VARKA_NPC_LIST[19] = 21374;
+		
 		for (int npcId : VARKA_NPC_LIST)
 		{
 			addAttackId(npcId);
@@ -85,6 +86,7 @@ public class _609_MagicalPowerofWater1 extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("quest_accept"))
 		{
 			htmltext = "herald_wakan_q0609_02.htm";
@@ -114,6 +116,7 @@ public class _609_MagicalPowerofWater1 extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -124,6 +127,7 @@ public class _609_MagicalPowerofWater1 extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		int proval = st.getInt("proval");
+		
 		if (npcId == WAHKAN)
 		{
 			if (cond == 0)
@@ -186,6 +190,7 @@ public class _609_MagicalPowerofWater1 extends Quest implements ScriptFile
 		{
 			htmltext = "udans_box_q0609_01.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -197,6 +202,7 @@ public class _609_MagicalPowerofWater1 extends Quest implements ScriptFile
 			npc.doCast(SkillTable.getInstance().getInfo(4547, 1), st.getPlayer(), true);
 			st.set("proval", "1");
 		}
+		
 		return null;
 	}
 }

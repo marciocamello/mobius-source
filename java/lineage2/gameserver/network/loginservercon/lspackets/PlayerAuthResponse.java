@@ -87,6 +87,7 @@ public class PlayerAuthResponse extends ReceivablePacket
 	{
 		account = readS();
 		authed = readC() == 1;
+		
 		if (authed)
 		{
 			playOkId1 = readD();
@@ -109,37 +110,46 @@ public class PlayerAuthResponse extends ReceivablePacket
 	{
 		SessionKey skey = new SessionKey(loginOkId1, loginOkId2, playOkId1, playOkId2);
 		GameClient client = LoginServerCommunication.getInstance().removeWaitingClient(account);
+		
 		if (client == null)
 		{
 			return;
 		}
+		
 		if (authed && client.getSessionKey().equals(skey))
 		{
 			client.setAuthed(true);
 			client.setState(GameClient.GameClientState.AUTHED);
+			
 			switch (Config.SERVICES_RATE_TYPE)
 			{
 				case Bonus.NO_BONUS:
 					bonus = 1.;
 					bonusExpire = 0;
 					break;
+				
 				case Bonus.BONUS_GLOBAL_ON_GAMESERVER:
 					double[] bonuses = AccountBonusDAO.getInstance().select(account);
 					bonus = bonuses[0];
 					bonusExpire = (int) bonuses[1];
 					break;
 			}
+			
 			client.setBonus(bonus);
 			client.setBonusExpire(bonusExpire);
+			
 			if (Config.SECOND_AUTH_ENABLED)
 			{
 				client.setSecondaryAuth(new SecondaryPasswordAuth(client, _2ndPassword, _2ndWrongAttempts, _2ndUnbanTime));
 			}
+			
 			GameClient oldClient = LoginServerCommunication.getInstance().addAuthedClient(client);
+			
 			if (oldClient != null)
 			{
 				oldClient.setAuthed(false);
 				Player activeChar = oldClient.getActiveChar();
+				
 				if (activeChar != null)
 				{
 					activeChar.sendPacket(Msg.ANOTHER_PERSON_HAS_LOGGED_IN_WITH_THE_SAME_ACCOUNT);
@@ -150,6 +160,7 @@ public class PlayerAuthResponse extends ReceivablePacket
 					oldClient.close(ServerClose.STATIC);
 				}
 			}
+			
 			sendPacket(new PlayerInGame(client.getLogin()));
 			CharacterSelectionInfo csi = new CharacterSelectionInfo(client.getLogin(), client.getSessionKey().playOkID1);
 			ExLoginVitalityEffectInfo vl = new ExLoginVitalityEffectInfo(csi.getCharInfo());

@@ -104,10 +104,12 @@ public class GuardofDawnStat extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (!noCheckPlayers)
 		{
 			checkAroundPlayers(actor);
 		}
+		
 		return true;
 	}
 	
@@ -129,6 +131,7 @@ public class GuardofDawnStat extends DefaultAI
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	

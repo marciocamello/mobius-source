@@ -25,7 +25,6 @@ public class JoinPledge extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x2d);
-		
 		writeD(_pledgeId);
 	}
 }

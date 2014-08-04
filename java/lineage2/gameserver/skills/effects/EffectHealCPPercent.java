@@ -50,6 +50,7 @@ public class EffectHealCPPercent extends Effect
 		{
 			return false;
 		}
+		
 		return super.checkCondition();
 	}
 	
@@ -60,14 +61,17 @@ public class EffectHealCPPercent extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if (_effected.isHealBlocked())
 		{
 			return;
 		}
+		
 		double cp = (calc() * _effected.getMaxCp()) / 100.;
 		double newCp = (cp * (!_ignoreCpEff ? _effected.calcStat(Stats.CPHEAL_EFFECTIVNESS, 100., _effector, getSkill()) : 100.)) / 100.;
 		double addToCp = Math.max(0, Math.min(newCp, ((_effected.calcStat(Stats.CP_LIMIT, null, null) * _effected.getMaxCp()) / 100.) - _effected.getCurrentCp()));
 		_effected.sendPacket(new SystemMessage(SystemMessage.S1_WILL_RESTORE_S2S_CP).addNumber((long) addToCp));
+		
 		if (addToCp > 0)
 		{
 			_effected.setCurrentCp(addToCp + _effected.getCurrentCp());

@@ -34,6 +34,7 @@ public class _907_DragonTrophyValakas extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("klein_q907_04.htm"))
 		{
 			st.setState(STARTED);
@@ -47,6 +48,7 @@ public class _907_DragonTrophyValakas extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -55,6 +57,7 @@ public class _907_DragonTrophyValakas extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (npc.getNpcId() == Klein)
 		{
 			switch (st.getState())
@@ -76,7 +79,9 @@ public class _907_DragonTrophyValakas extends Quest implements ScriptFile
 						htmltext = "klein_q907_00.htm";
 						st.exitCurrentQuest(true);
 					}
+					
 					break;
+				
 				case STARTED:
 					if (cond == 1)
 					{
@@ -86,9 +91,11 @@ public class _907_DragonTrophyValakas extends Quest implements ScriptFile
 					{
 						htmltext = "klein_q907_06.htm";
 					}
+					
 					break;
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -96,6 +103,7 @@ public class _907_DragonTrophyValakas extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if (cond == 1)
 		{
 			if (npc.getNpcId() == Valakas)
@@ -103,6 +111,7 @@ public class _907_DragonTrophyValakas extends Quest implements ScriptFile
 				st.setCond(2);
 			}
 		}
+		
 		return null;
 	}
 	

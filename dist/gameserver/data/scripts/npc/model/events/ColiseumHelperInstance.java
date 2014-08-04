@@ -26,7 +26,7 @@ import services.TeleToFantasyIsle;
 public class ColiseumHelperInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -78,6 +78,7 @@ public class ColiseumHelperInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equals("teleOut"))
 		{
 			player.teleToLocation(TeleToFantasyIsle.POINTS[Rnd.get(TeleToFantasyIsle.POINTS.length)]);

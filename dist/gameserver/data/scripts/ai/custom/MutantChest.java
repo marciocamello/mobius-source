@@ -42,10 +42,12 @@ public class MutantChest extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (Rnd.chance(30))
 		{
 			Functions.npcSay(actor, "Враги! В�?�?ду враги! В�?е �?�?да, враги зде�?�?!");
 		}
+		
 		actor.deleteMe();
 	}
 }

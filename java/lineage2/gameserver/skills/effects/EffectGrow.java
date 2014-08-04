@@ -39,6 +39,7 @@ public final class EffectGrow extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if (_effected.isNpc())
 		{
 			NpcInstance npc = (NpcInstance) _effected;
@@ -54,6 +55,7 @@ public final class EffectGrow extends Effect
 	public void onExit()
 	{
 		super.onExit();
+		
 		if (_effected.isNpc())
 		{
 			NpcInstance npc = (NpcInstance) _effected;

@@ -55,6 +55,7 @@ public class LifeStoneManager
 		factory.setIgnoringComments(true);
 		File file = new File(Config.DATAPACK_ROOT, "data/xml/asc/model/etcitems/LifeStone.xml");
 		Document doc = null;
+		
 		if (file.exists())
 		{
 			try
@@ -66,6 +67,7 @@ public class LifeStoneManager
 				_log.warn("Could not parse AttributeStone.xml file: " + e.getMessage(), e);
 				return;
 			}
+			
 			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 			{
 				if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -77,20 +79,26 @@ public class LifeStoneManager
 							NamedNodeMap attrs = d.getAttributes();
 							Node att;
 							att = attrs.getNamedItem("id");
+							
 							if (att != null)
 							{
 								_itemId = Integer.parseInt(att.getNodeValue());
 							}
+							
 							att = attrs.getNamedItem("level");
+							
 							if (att != null)
 							{
 								_level = Integer.parseInt(att.getNodeValue());
 							}
+							
 							att = attrs.getNamedItem("grade");
+							
 							if (att != null)
 							{
 								_grade = LifeStoneGrade.valueOf(att.getNodeValue());
 							}
+							
 							LifeStoneInfo lsi = new LifeStoneInfo();
 							lsi.setItemId(_itemId);
 							lsi.setLevel(_level);
@@ -101,6 +109,7 @@ public class LifeStoneManager
 				}
 			}
 		}
+		
 		_log.info("LifeStoneManager: Loaded " + _stones.size() + " stone data...");
 	}
 	

@@ -101,6 +101,7 @@ public class SchedulingPattern
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -142,18 +143,22 @@ public class SchedulingPattern
 	{
 		asString = pattern;
 		StringTokenizer st1 = new StringTokenizer(pattern, "|");
+		
 		if (st1.countTokens() < 1)
 		{
 			throw new InvalidPatternException("invalid pattern: \"" + pattern + "\"");
 		}
+		
 		while (st1.hasMoreTokens())
 		{
 			String localPattern = st1.nextToken();
 			StringTokenizer st2 = new StringTokenizer(localPattern, " \t");
+			
 			if (st2.countTokens() != 5)
 			{
 				throw new InvalidPatternException("invalid pattern: \"" + localPattern + "\"");
 			}
+			
 			try
 			{
 				minuteMatchers.add(buildValueMatcher(st2.nextToken(), MINUTE_VALUE_PARSER));
@@ -162,6 +167,7 @@ public class SchedulingPattern
 			{
 				throw new InvalidPatternException("invalid pattern \"" + localPattern + "\". Error parsing minutes field: " + e.getMessage() + ".");
 			}
+			
 			try
 			{
 				hourMatchers.add(buildValueMatcher(st2.nextToken(), HOUR_VALUE_PARSER));
@@ -170,6 +176,7 @@ public class SchedulingPattern
 			{
 				throw new InvalidPatternException("invalid pattern \"" + localPattern + "\". Error parsing hours field: " + e.getMessage() + ".");
 			}
+			
 			try
 			{
 				dayOfMonthMatchers.add(buildValueMatcher(st2.nextToken(), DAY_OF_MONTH_VALUE_PARSER));
@@ -178,6 +185,7 @@ public class SchedulingPattern
 			{
 				throw new InvalidPatternException("invalid pattern \"" + localPattern + "\". Error parsing days of month field: " + e.getMessage() + ".");
 			}
+			
 			try
 			{
 				monthMatchers.add(buildValueMatcher(st2.nextToken(), MONTH_VALUE_PARSER));
@@ -186,6 +194,7 @@ public class SchedulingPattern
 			{
 				throw new InvalidPatternException("invalid pattern \"" + localPattern + "\". Error parsing months field: " + e.getMessage() + ".");
 			}
+			
 			try
 			{
 				dayOfWeekMatchers.add(buildValueMatcher(st2.nextToken(), DAY_OF_WEEK_VALUE_PARSER));
@@ -194,6 +203,7 @@ public class SchedulingPattern
 			{
 				throw new InvalidPatternException("invalid pattern \"" + localPattern + "\". Error parsing days of week field: " + e.getMessage() + ".");
 			}
+			
 			matcherSize++;
 		}
 	}
@@ -211,12 +221,15 @@ public class SchedulingPattern
 		{
 			return new AlwaysTrueValueMatcher();
 		}
+		
 		List<Integer> values = new ArrayList<>();
 		StringTokenizer st = new StringTokenizer(str, ",");
+		
 		while (st.hasMoreTokens())
 		{
 			String element = st.nextToken();
 			List<Integer> local;
+			
 			try
 			{
 				local = parseListElement(element, parser);
@@ -225,6 +238,7 @@ public class SchedulingPattern
 			{
 				throw new Exception("invalid field \"" + str + "\", invalid element \"" + element + "\", " + e.getMessage());
 			}
+			
 			for (Integer value : local)
 			{
 				if (!values.contains(value))
@@ -233,14 +247,17 @@ public class SchedulingPattern
 				}
 			}
 		}
+		
 		if (values.size() == 0)
 		{
 			throw new Exception("invalid field \"" + str + "\"");
 		}
+		
 		if (parser == DAY_OF_MONTH_VALUE_PARSER)
 		{
 			return new DayOfMonthValueMatcher(values);
 		}
+		
 		return new IntArrayValueMatcher(values);
 	}
 	
@@ -255,11 +272,14 @@ public class SchedulingPattern
 	{
 		StringTokenizer st = new StringTokenizer(str, "/");
 		int size = st.countTokens();
+		
 		if ((size < 1) || (size > 2))
 		{
 			throw new Exception("syntax error");
 		}
+		
 		List<Integer> values;
+		
 		try
 		{
 			values = parseRange(st.nextToken(), parser);
@@ -268,10 +288,12 @@ public class SchedulingPattern
 		{
 			throw new Exception("invalid range, " + e.getMessage());
 		}
+		
 		if (size == 2)
 		{
 			String dStr = st.nextToken();
 			int div;
+			
 			try
 			{
 				div = Integer.parseInt(dStr);
@@ -280,17 +302,22 @@ public class SchedulingPattern
 			{
 				throw new Exception("invalid divisor \"" + dStr + "\"");
 			}
+			
 			if (div < 1)
 			{
 				throw new Exception("non positive divisor \"" + div + "\"");
 			}
+			
 			List<Integer> values2 = new ArrayList<>();
+			
 			for (int i = 0; i < values.size(); i += div)
 			{
 				values2.add(values.get(i));
 			}
+			
 			return values2;
 		}
+		
 		return values;
 	}
 	
@@ -308,20 +335,26 @@ public class SchedulingPattern
 			int min = parser.getMinValue();
 			int max = parser.getMaxValue();
 			List<Integer> values = new ArrayList<>();
+			
 			for (int i = min; i <= max; i++)
 			{
 				values.add(new Integer(i));
 			}
+			
 			return values;
 		}
+		
 		StringTokenizer st = new StringTokenizer(str, "-");
 		int size = st.countTokens();
+		
 		if ((size < 1) || (size > 2))
 		{
 			throw new Exception("syntax error");
 		}
+		
 		String v1Str = st.nextToken();
 		int v1;
+		
 		try
 		{
 			v1 = parser.parse(v1Str);
@@ -330,14 +363,17 @@ public class SchedulingPattern
 		{
 			throw new Exception("invalid value \"" + v1Str + "\", " + e.getMessage());
 		}
+		
 		if (size == 1)
 		{
 			List<Integer> values = new ArrayList<>();
 			values.add(new Integer(v1));
 			return values;
 		}
+		
 		String v2Str = st.nextToken();
 		int v2;
+		
 		try
 		{
 			v2 = parser.parse(v2Str);
@@ -346,7 +382,9 @@ public class SchedulingPattern
 		{
 			throw new Exception("invalid value \"" + v2Str + "\", " + e.getMessage());
 		}
+		
 		List<Integer> values = new ArrayList<>();
+		
 		if (v1 < v2)
 		{
 			for (int i = v1; i <= v2; i++)
@@ -358,10 +396,12 @@ public class SchedulingPattern
 		{
 			int min = parser.getMinValue();
 			int max = parser.getMaxValue();
+			
 			for (int i = v1; i <= max; i++)
 			{
 				values.add(new Integer(i));
 			}
+			
 			for (int i = min; i <= v2; i++)
 			{
 				values.add(new Integer(i));
@@ -392,6 +432,7 @@ public class SchedulingPattern
 		int month = gc.get(Calendar.MONTH) + 1;
 		int dayOfWeek = gc.get(Calendar.DAY_OF_WEEK) - 1;
 		int year = gc.get(Calendar.YEAR);
+		
 		for (int i = 0; i < matcherSize; i++)
 		{
 			ValueMatcher minuteMatcher = minuteMatchers.get(i);
@@ -400,11 +441,13 @@ public class SchedulingPattern
 			ValueMatcher monthMatcher = monthMatchers.get(i);
 			ValueMatcher dayOfWeekMatcher = dayOfWeekMatchers.get(i);
 			boolean eval = minuteMatcher.match(minute) && hourMatcher.match(hour) && ((dayOfMonthMatcher instanceof DayOfMonthValueMatcher) ? ((DayOfMonthValueMatcher) dayOfMonthMatcher).match(dayOfMonth, month, gc.isLeapYear(year)) : dayOfMonthMatcher.match(dayOfMonth)) && monthMatcher.match(month) && dayOfWeekMatcher.match(dayOfWeek);
+			
 			if (eval)
 			{
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -427,6 +470,7 @@ public class SchedulingPattern
 	public long next(TimeZone timezone, long millis)
 	{
 		long next = -1L;
+		
 		for (int i = 0; i < matcherSize; i++)
 		{
 			GregorianCalendar gc = new GregorianCalendar(timezone);
@@ -439,22 +483,26 @@ public class SchedulingPattern
 			ValueMatcher monthMatcher = monthMatchers.get(i);
 			ValueMatcher dayOfWeekMatcher = dayOfWeekMatchers.get(i);
 			loop:
+			
 			for (;;)
 			{
 				int year = gc.get(Calendar.YEAR);
 				boolean isLeapYear = gc.isLeapYear(year);
+				
 				for (int month = gc.get(Calendar.MONTH) + 1; month <= MONTH_MAX_VALUE; month++)
 				{
 					if (monthMatcher.match(month))
 					{
 						gc.set(Calendar.MONTH, month - 1);
 						int maxDayOfMonth = DayOfMonthValueMatcher.getLastDayOfMonth(month, isLeapYear);
+						
 						for (int dayOfMonth = gc.get(Calendar.DAY_OF_MONTH); dayOfMonth <= maxDayOfMonth; dayOfMonth++)
 						{
 							if ((dayOfMonthMatcher instanceof DayOfMonthValueMatcher) ? ((DayOfMonthValueMatcher) dayOfMonthMatcher).match(dayOfMonth, month, isLeapYear) : dayOfMonthMatcher.match(dayOfMonth))
 							{
 								gc.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 								int dayOfWeek = gc.get(Calendar.DAY_OF_WEEK) - 1;
+								
 								if (dayOfWeekMatcher.match(dayOfWeek))
 								{
 									for (int hour = gc.get(Calendar.HOUR_OF_DAY); hour <= HOUR_MAX_VALUE; hour++)
@@ -462,38 +510,46 @@ public class SchedulingPattern
 										if (hourMatcher.match(hour))
 										{
 											gc.set(Calendar.HOUR_OF_DAY, hour);
+											
 											for (int minute = gc.get(Calendar.MINUTE); minute <= MINUTE_MAX_VALUE; minute++)
 											{
 												if (minuteMatcher.match(minute))
 												{
 													gc.set(Calendar.MINUTE, minute);
 													long next0 = gc.getTimeInMillis();
+													
 													if ((next == -1L) || (next0 < next))
 													{
 														next = next0;
 													}
+													
 													break loop;
 												}
 											}
 										}
+										
 										gc.set(Calendar.MINUTE, MINUTE_MIN_VALUE);
 									}
 								}
 							}
+							
 							gc.set(Calendar.HOUR_OF_DAY, HOUR_MIN_VALUE);
 							gc.set(Calendar.MINUTE, MINUTE_MIN_VALUE);
 						}
 					}
+					
 					gc.set(Calendar.DAY_OF_MONTH, DAY_OF_MONTH_MIN_VALUE);
 					gc.set(Calendar.HOUR_OF_DAY, HOUR_MIN_VALUE);
 					gc.set(Calendar.MINUTE, MINUTE_MIN_VALUE);
 				}
+				
 				gc.set(Calendar.MONTH, MONTH_MIN_VALUE - 1);
 				gc.set(Calendar.HOUR_OF_DAY, HOUR_MIN_VALUE);
 				gc.set(Calendar.MINUTE, MINUTE_MIN_VALUE);
 				gc.roll(Calendar.YEAR, true);
 			}
 		}
+		
 		return next;
 	}
 	
@@ -534,6 +590,7 @@ public class SchedulingPattern
 				return offset + i;
 			}
 		}
+		
 		throw new Exception("invalid alias \"" + value + "\"");
 	}
 	
@@ -624,6 +681,7 @@ public class SchedulingPattern
 		public int parse(String value) throws Exception
 		{
 			int i;
+			
 			try
 			{
 				i = Integer.parseInt(value);
@@ -632,10 +690,12 @@ public class SchedulingPattern
 			{
 				throw new Exception("invalid integer value");
 			}
+			
 			if ((i < minValue) || (i > maxValue))
 			{
 				throw new Exception("value out of range");
 			}
+			
 			return i;
 		}
 		
@@ -713,6 +773,7 @@ public class SchedulingPattern
 			{
 				return 32;
 			}
+			
 			return super.parse(value);
 		}
 	}
@@ -870,6 +931,7 @@ public class SchedulingPattern
 		{
 			int size = integers.size();
 			values = new int[size];
+			
 			for (int i = 0; i < size; i++)
 			{
 				try
@@ -898,6 +960,7 @@ public class SchedulingPattern
 					return true;
 				}
 			}
+			
 			return false;
 		}
 	}
@@ -959,6 +1022,7 @@ public class SchedulingPattern
 			{
 				return 29;
 			}
+			
 			return lastDays[month - 1];
 		}
 		

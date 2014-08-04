@@ -73,6 +73,7 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 	public void onLoad()
 	{
 		CharListenerList.addGlobal(_listener);
+		
 		if (Config.COMMUNITYBOARD_ENABLED)
 		{
 			_log.info("CommunityBoard: Clan Community service loaded.");
@@ -137,14 +138,17 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 		StringTokenizer st = new StringTokenizer(bypass, "_");
 		String cmd = st.nextToken();
 		player.setSessionVar("add_fav", null);
+		
 		if ("bbsclan".equals(cmd))
 		{
 			Clan clan = player.getClan();
+			
 			if ((clan != null) && (clan.getLevel() > 1))
 			{
 				onBypassCommand(player, "_clbbsclan_" + player.getClanId());
 				return;
 			}
+			
 			onBypassCommand(player, "_clbbslist_1_0_");
 		}
 		else if ("clbbslist".equals(cmd))
@@ -155,6 +159,7 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 			HashMap<Integer, String> tpls = Util.parseTemplate(HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "bbs_clanlist.htm", player));
 			String html = tpls.get(0);
 			Clan playerClan = player.getClan();
+			
 			if (playerClan != null)
 			{
 				String my_clan = tpls.get(1);
@@ -166,9 +171,11 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 			{
 				html = html.replace("<?my_clan_link?>", "");
 			}
+			
 			List<Clan> clanList = getClanList(search, byCL == 1);
 			int start = (page - 1) * CLANS_PER_PAGE;
 			int end = Math.min(page * CLANS_PER_PAGE, clanList.size());
+			
 			if (page == 1)
 			{
 				html = html.replace("%ACTION_GO_LEFT%", "");
@@ -180,26 +187,33 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 				html = html.replace("%ACTION_GO_LEFT%", "bypass _clbbslist_" + (page - 1) + "_" + byCL + "_" + search);
 				html = html.replace("%NPAGE%", String.valueOf(page));
 				StringBuilder goList = new StringBuilder("");
+				
 				for (int i = page > 10 ? page - 10 : 1; i < page; i++)
 				{
 					goList.append("<td><a action=\"bypass _clbbslist_").append(i).append('_').append(byCL).append('_').append(search).append("\"> ").append(i).append(" </a> </td>\n\n");
 				}
+				
 				html = html.replace("%GO_LIST%", goList.toString());
 			}
+			
 			int pages = Math.max(clanList.size() / CLANS_PER_PAGE, 1);
+			
 			if (clanList.size() > (pages * CLANS_PER_PAGE))
 			{
 				pages++;
 			}
+			
 			if (pages > page)
 			{
 				html = html.replace("%ACTION_GO_RIGHT%", "bypass _clbbslist_" + (page + 1) + "_" + byCL + "_" + search);
 				int ep = Math.min(page + 10, pages);
 				StringBuilder goList = new StringBuilder("");
+				
 				for (int i = page + 1; i <= ep; i++)
 				{
 					goList.append("<td><a action=\"bypass _clbbslist_").append(i).append('_').append(byCL).append('_').append(search).append("\"> ").append(i).append(" </a> </td>\n\n");
 				}
+				
 				html = html.replace("%GO_LIST2%", goList.toString());
 			}
 			else
@@ -207,8 +221,10 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 				html = html.replace("%ACTION_GO_RIGHT%", "");
 				html = html.replace("%GO_LIST2%", "");
 			}
+			
 			StringBuilder cl = new StringBuilder("");
 			String tpl = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "bbs_clantpl.htm", player);
+			
 			for (int i = start; i < end; i++)
 			{
 				Clan clan = clanList.get(i);
@@ -220,40 +236,48 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 				clantpl = clantpl.replace("%member_count%", String.valueOf(clan.getAllSize()));
 				cl.append(clantpl);
 			}
+			
 			html = html.replace("%CLAN_LIST%", cl.toString());
 			ShowBoard.separateAndSend(html, player);
 		}
 		else if ("clbbsclan".equals(cmd))
 		{
 			int clanId = Integer.parseInt(st.nextToken());
+			
 			if (clanId == 0)
 			{
 				player.sendPacket(new SystemMessage(SystemMessage.NOT_JOINED_IN_ANY_CLAN));
 				onBypassCommand(player, "_clbbslist_1_0");
 				return;
 			}
+			
 			Clan clan = ClanTable.getInstance().getClan(clanId);
+			
 			if (clan == null)
 			{
 				onBypassCommand(player, "_clbbslist_1_0");
 				return;
 			}
+			
 			if (clan.getLevel() < 2)
 			{
 				player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_COMMUNITIES_IN_MY_CLAN_CLAN_COMMUNITIES_ARE_ALLOWED_FOR_CLANS_WITH_SKILL_LEVELS_OF_2_AND_HIGHER));
 				onBypassCommand(player, "_clbbslist_1_0");
 				return;
 			}
+			
 			Connection con = null;
 			PreparedStatement statement = null;
 			ResultSet rset = null;
 			String intro = "";
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("SELECT * FROM `bbs_clannotice` WHERE `clan_id` = ? and type = 2");
 				statement.setInt(1, clanId);
 				rset = statement.executeQuery();
+				
 				if (rset.next())
 				{
 					intro = rset.getString("notice");
@@ -271,6 +295,7 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 			html = html.replace("%PLEDGE_ID%", String.valueOf(clanId));
 			html = html.replace("%ACTION_ANN%", "");
 			html = html.replace("%ACTION_FREE%", "");
+			
 			if ((player.getClanId() == clanId) && player.isClanLeader())
 			{
 				html = html.replace("<?menu?>", tpls.get(1));
@@ -279,6 +304,7 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 			{
 				html = html.replace("<?menu?>", "");
 			}
+			
 			html = html.replace("%CLAN_INTRO%", intro.replace("\n", "<br1>"));
 			html = html.replace("%CLAN_NAME%", clan.getName());
 			html = html.replace("%SKILL_LEVEL%", String.valueOf(clan.getLevel()));
@@ -292,11 +318,13 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 		else if ("clbbsadmi".equals(cmd))
 		{
 			Clan clan = player.getClan();
+			
 			if ((clan == null) || (clan.getLevel() < 2) || !player.isClanLeader())
 			{
 				onBypassCommand(player, "_clbbsclan_" + player.getClanId());
 				return;
 			}
+			
 			String html = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "bbs_clanadmin.htm", player);
 			html = html.replace("%PLEDGE_ID%", String.valueOf(clan.getClanId()));
 			html = html.replace("%ACTION_ANN%", "");
@@ -307,12 +335,14 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 			PreparedStatement statement = null;
 			ResultSet rset = null;
 			String intro = "";
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("SELECT * FROM `bbs_clannotice` WHERE `clan_id` = ? and type = 2");
 				statement.setInt(1, clan.getClanId());
 				rset = statement.executeQuery();
+				
 				if (rset.next())
 				{
 					intro = rset.getString("notice");
@@ -350,11 +380,13 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 		else if ("mailwritepledgeform".equals(cmd))
 		{
 			Clan clan = player.getClan();
+			
 			if ((clan == null) || (clan.getLevel() < 2) || !player.isClanLeader())
 			{
 				onBypassCommand(player, "_clbbsclan_" + player.getClanId());
 				return;
 			}
+			
 			String html = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "bbs_pledge_mail_write.htm", player);
 			html = html.replace("%PLEDGE_ID%", String.valueOf(clan.getClanId()));
 			html = html.replace("%pledge_id%", String.valueOf(clan.getClanId()));
@@ -364,11 +396,13 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 		else if ("announcepledgewriteform".equals(cmd))
 		{
 			Clan clan = player.getClan();
+			
 			if ((clan == null) || (clan.getLevel() < 2) || !player.isClanLeader())
 			{
 				onBypassCommand(player, "_clbbsclan_" + player.getClanId());
 				return;
 			}
+			
 			HashMap<Integer, String> tpls = Util.parseTemplate(HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "bbs_clanannounce.htm", player));
 			String html = tpls.get(0);
 			html = html.replace("%PLEDGE_ID%", String.valueOf(clan.getClanId()));
@@ -379,12 +413,14 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 			ResultSet rset = null;
 			String notice = "";
 			int type = 0;
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("SELECT * FROM `bbs_clannotice` WHERE `clan_id` = ? and type != 2");
 				statement.setInt(1, clan.getClanId());
 				rset = statement.executeQuery();
+				
 				if (rset.next())
 				{
 					notice = rset.getString("notice");
@@ -398,6 +434,7 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 			{
 				DbUtils.closeQuietly(con, statement, rset);
 			}
+			
 			if (type == 0)
 			{
 				html = html.replace("<?usage?>", tpls.get(1));
@@ -406,6 +443,7 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 			{
 				html = html.replace("<?usage?>", tpls.get(2));
 			}
+			
 			html = html.replace("%flag%", String.valueOf(type));
 			List<String> args = new ArrayList<>();
 			args.add("0");
@@ -432,14 +470,17 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 		else if ("announcepledgeswitchshowflag".equals(cmd))
 		{
 			Clan clan = player.getClan();
+			
 			if ((clan == null) || (clan.getLevel() < 2) || !player.isClanLeader())
 			{
 				onBypassCommand(player, "_clbbsclan_" + player.getClanId());
 				return;
 			}
+			
 			int type = Integer.parseInt(st.nextToken());
 			Connection con = null;
 			PreparedStatement statement = null;
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
@@ -477,32 +518,39 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 	{
 		StringTokenizer st = new StringTokenizer(bypass, "_");
 		String cmd = st.nextToken();
+		
 		if ("clsearch".equals(cmd))
 		{
 			if (arg3 == null)
 			{
 				arg3 = "";
 			}
+			
 			onBypassCommand(player, "_clbbslist_1_" + ("Ruler".equals(arg4) ? "1" : "0") + "_" + arg3);
 		}
 		else if ("clwriteintro".equals(cmd))
 		{
 			Clan clan = player.getClan();
+			
 			if ((clan == null) || (clan.getLevel() < 2) || !player.isClanLeader() || (arg3 == null) || arg3.isEmpty())
 			{
 				onBypassCommand(player, "_clbbsclan_" + player.getClanId());
 				return;
 			}
+			
 			arg3 = arg3.replace("<", "");
 			arg3 = arg3.replace(">", "");
 			arg3 = arg3.replace("&", "");
 			arg3 = arg3.replace("$", "");
+			
 			if (arg3.length() > 3000)
 			{
 				arg3 = arg3.substring(0, 3000);
 			}
+			
 			Connection con = null;
 			PreparedStatement statement = null;
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
@@ -524,17 +572,20 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 		else if ("clwritemail".equals(cmd))
 		{
 			Clan clan = player.getClan();
+			
 			if ((clan == null) || (clan.getLevel() < 2) || !player.isClanLeader())
 			{
 				onBypassCommand(player, "_clbbsclan_" + player.getClanId());
 				return;
 			}
+			
 			if ((arg3 == null) || (arg4 == null))
 			{
 				player.sendPacket(Msg.THE_MESSAGE_WAS_NOT_SENT);
 				onBypassCommand(player, "_clbbsclan_" + player.getClanId());
 				return;
 			}
+			
 			arg3 = arg3.replace("<", "");
 			arg3 = arg3.replace(">", "");
 			arg3 = arg3.replace("&", "");
@@ -543,26 +594,32 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 			arg5 = arg5.replace(">", "");
 			arg5 = arg5.replace("&", "");
 			arg5 = arg5.replace("$", "");
+			
 			if (arg3.isEmpty() || arg4.isEmpty())
 			{
 				player.sendPacket(Msg.THE_MESSAGE_WAS_NOT_SENT);
 				onBypassCommand(player, "_clbbsclan_" + player.getClanId());
 				return;
 			}
+			
 			if (arg3.length() > 128)
 			{
 				arg3 = arg3.substring(0, 128);
 			}
+			
 			if (arg4.length() > 3000)
 			{
 				arg5 = arg5.substring(0, 3000);
 			}
+			
 			Connection con = null;
 			PreparedStatement statement = null;
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement("INSERT INTO `bbs_mail`(to_name, to_object_id, from_name, from_object_id, title, message, post_date, box_type) VALUES(?, ?, ?, ?, ?, ?, ?, 0)");
+				
 				for (UnitMember clm : clan)
 				{
 					statement.setString(1, clan.getName());
@@ -574,6 +631,7 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 					statement.setInt(7, (int) (System.currentTimeMillis() / 1000));
 					statement.execute();
 				}
+				
 				statement.close();
 				statement = con.prepareStatement("INSERT INTO `bbs_mail`(to_name, to_object_id, from_name, from_object_id, title, message, post_date, box_type) VALUES(?, ?, ?, ?, ?, ?, ?, 1)");
 				statement.setString(1, clan.getName());
@@ -596,42 +654,51 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 				DbUtils.closeQuietly(con, statement);
 			}
 			player.sendPacket(Msg.YOUVE_SENT_MAIL);
+			
 			for (Player member : clan.getOnlineMembers(0))
 			{
 				member.sendPacket(Msg.YOUVE_GOT_MAIL);
 				member.sendPacket(ExMailArrived.STATIC);
 			}
+			
 			onBypassCommand(player, "_clbbsclan_" + player.getClanId());
 		}
 		else if ("announcepledgewrite".equals(cmd))
 		{
 			Clan clan = player.getClan();
+			
 			if ((clan == null) || (clan.getLevel() < 2) || !player.isClanLeader())
 			{
 				onBypassCommand(player, "_clbbsclan_" + player.getClanId());
 				return;
 			}
+			
 			if ((arg3 == null) || arg3.isEmpty())
 			{
 				onBypassCommand(player, "_announcepledgewriteform");
 				return;
 			}
+			
 			arg3 = arg3.replace("<", "");
 			arg3 = arg3.replace(">", "");
 			arg3 = arg3.replace("&", "");
 			arg3 = arg3.replace("$", "");
+			
 			if (arg3.isEmpty())
 			{
 				onBypassCommand(player, "_announcepledgewriteform");
 				return;
 			}
+			
 			if (arg3.length() > 3000)
 			{
 				arg3 = arg3.substring(0, 3000);
 			}
+			
 			int type = Integer.parseInt(st.nextToken());
 			Connection con = null;
 			PreparedStatement statement = null;
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
@@ -651,6 +718,7 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 			{
 				DbUtils.closeQuietly(con, statement);
 			}
+			
 			if (type == 1)
 			{
 				clan.setNotice(arg3.replace("\n", "<br1>"));
@@ -659,6 +727,7 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 			{
 				clan.setNotice("");
 			}
+			
 			player.sendPacket(Msg.NOTICE_HAS_BEEN_SAVED);
 			onBypassCommand(player, "_announcepledgewriteform");
 		}
@@ -686,10 +755,12 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 		public void onPlayerEnter(Player player)
 		{
 			Clan clan = player.getClan();
+			
 			if ((clan == null) || (clan.getLevel() < 2))
 			{
 				return;
 			}
+			
 			if (clan.getNotice() == null)
 			{
 				Connection con = null;
@@ -697,12 +768,14 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 				ResultSet rset = null;
 				String notice = "";
 				int type = 0;
+				
 				try
 				{
 					con = DatabaseFactory.getInstance().getConnection();
 					statement = con.prepareStatement("SELECT * FROM `bbs_clannotice` WHERE `clan_id` = ? and type != 2");
 					statement.setInt(1, clan.getClanId());
 					rset = statement.executeQuery();
+					
 					if (rset.next())
 					{
 						notice = rset.getString("notice");
@@ -718,6 +791,7 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 				}
 				clan.setNotice(type == 1 ? notice.replace("\n", "<br1>\n") : "");
 			}
+			
 			if (!clan.getNotice().isEmpty())
 			{
 				String html = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "clan_popup.htm", player);
@@ -739,6 +813,7 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 		ArrayList<Clan> clanList = new ArrayList<>();
 		Clan[] clans = ClanTable.getInstance().getClans();
 		Arrays.sort(clans, new ClansComparator<Clan>());
+		
 		for (Clan clan : clans)
 		{
 			if (clan.getLevel() > 1)
@@ -746,9 +821,11 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 				clanList.add(clan);
 			}
 		}
+		
 		if (!search.isEmpty())
 		{
 			ArrayList<Clan> searchList = new ArrayList<>();
+			
 			for (Clan clan : clanList)
 			{
 				if (byCL && clan.getLeaderName().toLowerCase().contains(search.toLowerCase()))
@@ -760,8 +837,10 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 					searchList.add(clan);
 				}
 			}
+			
 			clanList = searchList;
 		}
+		
 		return clanList;
 	}
 	
@@ -794,6 +873,7 @@ public class ClanCommunity extends Functions implements ScriptFile, ICommunityBo
 				Clan p2 = (Clan) o2;
 				return p1.getName().compareTo(p2.getName());
 			}
+			
 			return 0;
 		}
 	}

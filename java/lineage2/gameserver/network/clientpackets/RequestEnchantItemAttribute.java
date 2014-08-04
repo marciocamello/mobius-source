@@ -54,62 +54,77 @@ public class RequestEnchantItemAttribute extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (_objectId == -1)
 		{
 			activeChar.setEnchantScroll(null);
 			activeChar.sendPacket(Msg.ELEMENTAL_POWER_ENCHANCER_USAGE_HAS_BEEN_CANCELLED);
 			return;
 		}
+		
 		if (activeChar.isActionsDisabled())
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (activeChar.isInStoreMode())
 		{
 			activeChar.sendPacket(Msg.YOU_CANNOT_ADD_ELEMENTAL_POWER_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP, ActionFail.STATIC);
 			return;
 		}
+		
 		if (activeChar.isInTrade())
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		PcInventory inventory = activeChar.getInventory();
 		ItemInstance itemToEnchant = inventory.getItemByObjectId(_objectId);
 		ItemInstance stone = activeChar.getEnchantScroll();
 		activeChar.setEnchantScroll(null);
+		
 		if ((itemToEnchant == null) || (stone == null))
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		ItemTemplate item = itemToEnchant.getTemplate();
+		
 		if (!itemToEnchant.canBeEnchanted() || (item.getCrystalType().cry < ItemTemplate.CRYSTAL_S))
 		{
 			activeChar.sendPacket(Msg.INAPPROPRIATE_ENCHANT_CONDITIONS, ActionFail.STATIC);
 			return;
 		}
+		
 		if ((itemToEnchant.getLocation() != ItemInstance.ItemLocation.INVENTORY) && (itemToEnchant.getLocation() != ItemInstance.ItemLocation.PAPERDOLL))
 		{
 			activeChar.sendPacket(Msg.INAPPROPRIATE_ENCHANT_CONDITIONS, ActionFail.STATIC);
 			return;
 		}
+		
 		if (itemToEnchant.isStackable() || ((stone = inventory.getItemByObjectId(stone.getObjectId())) == null))
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		AttributeStoneInfo asi = AttributeStoneManager.getStoneInfo(stone.getItemId());
+		
 		if (asi == null)
 		{
 			return;
 		}
+		
 		Element element = itemToEnchant.isArmor() ? Element.getReverseElement(asi.getElement()) : asi.getElement();
+		
 		if (itemToEnchant.isArmor())
 		{
 			if (itemToEnchant.getAttributeElementValue(Element.getReverseElement(element), false) != 0)
@@ -131,29 +146,35 @@ public class RequestEnchantItemAttribute extends L2GameClientPacket
 			activeChar.sendPacket(Msg.INAPPROPRIATE_ENCHANT_CONDITIONS, ActionFail.STATIC);
 			return;
 		}
+		
 		if (item.isUnderwear() || item.isCloak() || item.isBracelet() || item.isBelt() || !item.isAttributable())
 		{
 			activeChar.sendPacket(Msg.INAPPROPRIATE_ENCHANT_CONDITIONS, ActionFail.STATIC);
 			return;
 		}
+		
 		int maxValue = itemToEnchant.isWeapon() ? asi.getMaxWeapon() : asi.getMaxArmor();
 		int minValue = itemToEnchant.isWeapon() ? asi.getMinWeapon() : asi.getMinArmor();
 		int currentValue = itemToEnchant.getAttributeElementValue(element, false);
+		
 		if ((currentValue >= maxValue) || (currentValue < minValue))
 		{
 			activeChar.sendPacket(Msg.ELEMENTAL_POWER_ENCHANCER_USAGE_HAS_BEEN_CANCELLED, ActionFail.STATIC);
 			return;
 		}
+		
 		if (itemToEnchant.getOwnerId() != activeChar.getObjectId())
 		{
 			activeChar.sendPacket(Msg.INAPPROPRIATE_ENCHANT_CONDITIONS, ActionFail.STATIC);
 			return;
 		}
+		
 		if (!inventory.destroyItem(stone, 1L))
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (Rnd.chance(asi.getChance()))
 		{
 			if (itemToEnchant.getEnchantLevel() == 0)
@@ -171,25 +192,32 @@ public class RequestEnchantItemAttribute extends L2GameClientPacket
 				sm.addItemName(stone.getItemId());
 				activeChar.sendPacket(sm);
 			}
+			
 			int value = itemToEnchant.isWeapon() ? asi.getIncWeapon() : asi.getIncArmor();
+			
 			if ((itemToEnchant.getAttributeElementValue(element, false) == 0) && itemToEnchant.isWeapon())
 			{
 				value = 20;
 			}
+			
 			boolean equipped = itemToEnchant.isEquipped();
+			
 			if (equipped)
 			{
 				activeChar.getInventory().isRefresh = true;
 				activeChar.getInventory().unEquipItem(itemToEnchant);
 			}
+			
 			itemToEnchant.setAttributeElement(element, itemToEnchant.getAttributeElementValue(element, false) + value);
 			itemToEnchant.setJdbcState(JdbcEntityState.UPDATED);
 			itemToEnchant.update();
+			
 			if (equipped)
 			{
 				activeChar.getInventory().equipItem(itemToEnchant);
 				activeChar.getInventory().isRefresh = false;
 			}
+			
 			activeChar.sendPacket(new InventoryUpdate().addModifiedItem(itemToEnchant));
 			activeChar.sendPacket(new ExAttributeEnchantResult(value));
 		}
@@ -197,6 +225,7 @@ public class RequestEnchantItemAttribute extends L2GameClientPacket
 		{
 			activeChar.sendPacket(Msg.YOU_HAVE_FAILED_TO_ADD_ELEMENTAL_POWER);
 		}
+		
 		activeChar.setEnchantScroll(null);
 		activeChar.updateStats();
 	}

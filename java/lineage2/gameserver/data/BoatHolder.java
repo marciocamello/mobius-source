@@ -58,6 +58,7 @@ public final class BoatHolder extends AbstractHolder
 	public void spawnAll()
 	{
 		log();
+		
 		for (TIntObjectIterator<Boat> iterator = _boats.iterator(); iterator.hasNext();)
 		{
 			iterator.advance();
@@ -87,6 +88,7 @@ public final class BoatHolder extends AbstractHolder
 		{
 			error("Fail to init boat: " + clazz, e);
 		}
+		
 		return null;
 	}
 	
@@ -110,6 +112,7 @@ public final class BoatHolder extends AbstractHolder
 		{
 			error("Fail to init shuttle id: " + shuttleId, e);
 		}
+		
 		return null;
 	}
 	
@@ -123,11 +126,13 @@ public final class BoatHolder extends AbstractHolder
 		for (TIntObjectIterator<Boat> iterator = _boats.iterator(); iterator.hasNext();)
 		{
 			iterator.advance();
+			
 			if (iterator.value().getName().equals(name))
 			{
 				return iterator.value();
 			}
 		}
+		
 		return null;
 	}
 	

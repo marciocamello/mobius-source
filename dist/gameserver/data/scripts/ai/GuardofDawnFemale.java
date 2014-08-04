@@ -105,10 +105,12 @@ public class GuardofDawnFemale extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (!noCheckPlayers)
 		{
 			checkAroundPlayers(actor);
 		}
+		
 		return true;
 	}
 	
@@ -130,6 +132,7 @@ public class GuardofDawnFemale extends DefaultAI
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	

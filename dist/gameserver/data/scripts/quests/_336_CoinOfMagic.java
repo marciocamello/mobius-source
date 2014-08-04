@@ -18,7 +18,6 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 
-@SuppressWarnings("unused")
 public class _336_CoinOfMagic extends Quest implements ScriptFile
 {
 	@Override
@@ -46,28 +45,16 @@ public class _336_CoinOfMagic extends Quest implements ScriptFile
 	private static final int BLOOD_BASILISK = 3474;
 	private static final int BLOOD_DREVANUL = 3475;
 	private static final int BLOOD_SUCCUBUS = 3476;
-	private static final int BLOOD_DRAGON = 3477;
-	private static final int BELETHS_BLOOD = 3478;
-	private static final int MANAKS_BLOOD_WEREWOLF = 3479;
-	private static final int NIAS_BLOOD_MEDUSA = 3480;
-	private static final int GOLD_DRAGON = 3481;
 	private static final int GOLD_WYVERN = 3482;
 	private static final int GOLD_KNIGHT = 3483;
 	private static final int GOLD_GIANT = 3484;
 	private static final int GOLD_DRAKE = 3485;
 	private static final int GOLD_WYRM = 3486;
-	private static final int BELETHS_GOLD = 3487;
-	private static final int MANAKS_GOLD_GIANT = 3488;
-	private static final int NIAS_GOLD_WYVERN = 3489;
 	private static final int SILVER_UNICORN = 3490;
 	private static final int SILVER_FAIRY = 3491;
 	private static final int SILVER_DRYAD = 3492;
-	private static final int SILVER_DRAGON = 3493;
 	private static final int SILVER_GOLEM = 3494;
 	private static final int SILVER_UNDINE = 3495;
-	private static final int BELETHS_SILVER = 3496;
-	private static final int MANAKS_SILVER_DRYAD = 3497;
-	private static final int NIAS_SILVER_FAIRY = 3498;
 	private static final int[] BASIC_COINS =
 	{
 		BLOOD_MEDUSA,
@@ -104,10 +91,6 @@ public class _336_CoinOfMagic extends Quest implements ScriptFile
 	private static final int OelMahumWarrior = 20575;
 	private static final int HaritLizardmanMatriarch = 20645;
 	private static final int HaritLizardmanShaman = 20644;
-	private static final int Shackle2 = 20279;
-	private static final int HeadlessKnight2 = 20280;
-	private static final int MalrukSuccubusTuren2 = 20284;
-	private static final int RoyalCaveServant2 = 20276;
 	private static final int GraveLich = 21003;
 	private static final int DoomServant = 21006;
 	private static final int DoomArcher = 21008;
@@ -309,10 +292,12 @@ public class _336_CoinOfMagic extends Quest implements ScriptFile
 			DUNING,
 			LORAIN
 		});
+		
 		for (int mob[] : DROPLIST)
 		{
 			addKillId(mob[0]);
 		}
+		
 		addKillId(UNKNOWN);
 		addKillId(HaritLizardmanMatriarch);
 		addKillId(HaritLizardmanShaman);
@@ -331,6 +316,7 @@ public class _336_CoinOfMagic extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		int cond = st.getCond();
+		
 		if (event.equalsIgnoreCase("30702-06.htm"))
 		{
 			if (cond < 7)
@@ -373,6 +359,7 @@ public class _336_CoinOfMagic extends Quest implements ScriptFile
 		{
 			htmltext = promote(st);
 		}
+		
 		return htmltext;
 	}
 	
@@ -380,6 +367,7 @@ public class _336_CoinOfMagic extends Quest implements ScriptFile
 	{
 		int grade = st.getInt("grade");
 		String html;
+		
 		if (grade == 1)
 		{
 			html = "30232-15.htm";
@@ -387,6 +375,7 @@ public class _336_CoinOfMagic extends Quest implements ScriptFile
 		else
 		{
 			int h = 0;
+			
 			for (int i : PROMOTE[grade])
 			{
 				if (st.getQuestItemsCount(i) > 0)
@@ -394,16 +383,19 @@ public class _336_CoinOfMagic extends Quest implements ScriptFile
 					h += 1;
 				}
 			}
+			
 			if (h == 6)
 			{
 				for (int i : PROMOTE[grade])
 				{
 					st.takeItems(i, 1);
 				}
+				
 				html = "30232-" + str(19 - grade) + ".htm";
 				st.takeItems(3812 + grade, -1);
 				st.giveItems(3811 + grade, 1);
 				st.set("grade", str(grade - 1));
+				
 				if (grade == 3)
 				{
 					st.setCond(9);
@@ -412,11 +404,13 @@ public class _336_CoinOfMagic extends Quest implements ScriptFile
 				{
 					st.setCond(11);
 				}
+				
 				st.playSound(SOUND_FANFARE_MIDDLE);
 			}
 			else
 			{
 				html = "30232-" + str(16 - grade) + ".htm";
+				
 				if (grade == 3)
 				{
 					st.setCond(8);
@@ -427,6 +421,7 @@ public class _336_CoinOfMagic extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return html;
 	}
 	
@@ -437,6 +432,7 @@ public class _336_CoinOfMagic extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int id = st.getState();
 		int grade = st.getInt("grade");
+		
 		if (npcId == SORINT)
 		{
 			if (id == CREATED)
@@ -502,6 +498,7 @@ public class _336_CoinOfMagic extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -512,6 +509,7 @@ public class _336_CoinOfMagic extends Quest implements ScriptFile
 		int grade = st.getInt("grade");
 		int chance = (npc.getLevel() + (grade * 3)) - 20;
 		int npcId = npc.getNpcId();
+		
 		if ((npcId == HaritLizardmanMatriarch) || (npcId == HaritLizardmanShaman))
 		{
 			if (cond == 2)
@@ -521,8 +519,10 @@ public class _336_CoinOfMagic extends Quest implements ScriptFile
 					st.setCond(3);
 				}
 			}
+			
 			return null;
 		}
+		
 		for (int[] e : DROPLIST)
 		{
 			if (e[0] == npcId)
@@ -531,6 +531,7 @@ public class _336_CoinOfMagic extends Quest implements ScriptFile
 				return null;
 			}
 		}
+		
 		for (int u : UNKNOWN)
 		{
 			if (u == npcId)
@@ -539,6 +540,7 @@ public class _336_CoinOfMagic extends Quest implements ScriptFile
 				return null;
 			}
 		}
+		
 		return null;
 	}
 }

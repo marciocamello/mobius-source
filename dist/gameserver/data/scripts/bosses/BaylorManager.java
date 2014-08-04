@@ -122,10 +122,12 @@ public class BaylorManager extends Functions implements ScriptFile
 			{
 				case CrystalPrisonGuard:
 					final Reflection ref = ReflectionManager.getInstance().get(currentReflection);
+					
 					for (int doorId : doors)
 					{
 						ref.openDoor(doorId);
 					}
+					
 					for (int i = 0; i < _crystalineLocation.length; i++)
 					{
 						_crystaline[i] = baylor_spawn(_crystalineLocation[i], CrystalPrisonGuard);
@@ -133,7 +135,9 @@ public class BaylorManager extends Functions implements ScriptFile
 						_crystaline[i].moveToLocation(_pos, 300, false);
 						ThreadPoolManager.getInstance().schedule(new Social(_crystaline[i], 2), 15000);
 					}
+					
 					break;
+				
 				case Baylor:
 					Dying = false;
 					_baylor = baylor_spawn(new Location(153569, 142075, -12732, 59864), Baylor);
@@ -141,23 +145,29 @@ public class BaylorManager extends Functions implements ScriptFile
 					_state.setRespawnDate(getRespawnInterval() + FWBA_ACTIVITYTIMEOFMOBS);
 					_state.setState(EpicBossState.State.ALIVE);
 					_state.update();
+					
 					if (_socialTask != null)
 					{
 						_socialTask.cancel(false);
 						_socialTask = null;
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new Social(_baylor, 1), 500);
+					
 					if (_endSceneTask != null)
 					{
 						_endSceneTask.cancel(false);
 						_endSceneTask = null;
 					}
+					
 					_endSceneTask = ThreadPoolManager.getInstance().schedule(new EndScene(), 23000);
+					
 					if (_activityTimeEndTask != null)
 					{
 						_activityTimeEndTask.cancel(false);
 						_activityTimeEndTask = null;
 					}
+					
 					_activityTimeEndTask = ThreadPoolManager.getInstance().schedule(new ActivityTimeEnd(), FWBA_ACTIVITYTIMEOFMOBS);
 					break;
 			}
@@ -245,6 +255,7 @@ public class BaylorManager extends Functions implements ScriptFile
 			for (Player player : getPlayersInside())
 			{
 				player.unblock();
+				
 				if (_baylor != null)
 				{
 					double angle = PositionUtils.convertHeadingToDegree(_baylor.getHeading());
@@ -256,6 +267,7 @@ public class BaylorManager extends Functions implements ScriptFile
 					player.broadcastPacket(new FlyToLocation(player, flyLoc, FlyType.THROW_HORIZONTAL, 0));
 				}
 			}
+			
 			for (NpcInstance npc : _crystaline)
 			{
 				if (npc != null)
@@ -404,6 +416,7 @@ public class BaylorManager extends Functions implements ScriptFile
 		{
 			return 0;
 		}
+		
 		if (!FWBA_ENABLESINGLEPLAYER && !pc.isInParty())
 		{
 			return 4;
@@ -452,6 +465,7 @@ public class BaylorManager extends Functions implements ScriptFile
 		ReflectionManager.getInstance().get(currentReflection).closeDoor(24220008);
 		ThreadPoolManager.getInstance().schedule(new BaylorSpawn(CrystalPrisonGuard), 20000);
 		ThreadPoolManager.getInstance().schedule(new BaylorSpawn(Baylor), 40000);
+		
 		if (pc.getParty() == null)
 		{
 			pc.teleToLocation(153569 + Rnd.get(-80, 80), 142075 + Rnd.get(-80, 80), -12732);
@@ -460,6 +474,7 @@ public class BaylorManager extends Functions implements ScriptFile
 		else
 		{
 			final List<Player> members = new ArrayList<>();
+			
 			for (Player mem : pc.getParty().getPartyMembers())
 			{
 				if (!mem.isDead() && mem.isInRange(pc, 1500))
@@ -467,12 +482,14 @@ public class BaylorManager extends Functions implements ScriptFile
 					members.add(mem);
 				}
 			}
+			
 			for (Player mem : members)
 			{
 				mem.teleToLocation(153569 + Rnd.get(-80, 80), 142075 + Rnd.get(-80, 80), -12732);
 				mem.block();
 			}
 		}
+		
 		_isAlreadyEnteredOtherParty = true;
 	}
 	
@@ -483,10 +500,12 @@ public class BaylorManager extends Functions implements ScriptFile
 	static List<Player> getPlayersInside()
 	{
 		final List<Player> result = new ArrayList<>();
+		
 		for (Player player : getZone().getInsidePlayers())
 		{
 			result.add(player);
 		}
+		
 		return result;
 	}
 	
@@ -518,10 +537,12 @@ public class BaylorManager extends Functions implements ScriptFile
 		_zone.addListener(BaylorZoneListener.getInstance());
 		_isAlreadyEnteredOtherParty = false;
 		Log.add("BaylorManager : State of Baylor is " + _state.getState() + ".", "bosses");
+		
 		if (!_state.getState().equals(EpicBossState.State.NOTSPAWN))
 		{
 			setIntervalEndTask();
 		}
+		
 		final Date dt = new Date(_state.getRespawnDate());
 		Log.add("BaylorManager : Next spawn date of Baylor is " + dt + ".", "bosses");
 		Log.add("BaylorManager : Init BaylorManager.", "bosses");
@@ -540,6 +561,7 @@ public class BaylorManager extends Functions implements ScriptFile
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
@@ -552,6 +574,7 @@ public class BaylorManager extends Functions implements ScriptFile
 		{
 			return;
 		}
+		
 		Dying = true;
 		_state.setRespawnDate(getRespawnInterval());
 		_state.setState(EpicBossState.State.INTERVAL);
@@ -683,18 +706,21 @@ public class BaylorManager extends Functions implements ScriptFile
 	static void setIntervalEndTask()
 	{
 		setUnspawn();
+		
 		if (_state.getState().equals(EpicBossState.State.ALIVE))
 		{
 			_state.setState(EpicBossState.State.NOTSPAWN);
 			_state.update();
 			return;
 		}
+		
 		if (!_state.getState().equals(EpicBossState.State.INTERVAL))
 		{
 			_state.setRespawnDate(getRespawnInterval());
 			_state.setState(EpicBossState.State.INTERVAL);
 			_state.update();
 		}
+		
 		_intervalEndTask = ThreadPoolManager.getInstance().schedule(new IntervalEnd(), _state.getInterval());
 	}
 	
@@ -707,13 +733,17 @@ public class BaylorManager extends Functions implements ScriptFile
 		{
 			return;
 		}
+		
 		_isAlreadyEnteredOtherParty = false;
 		startCollapse();
+		
 		if (_baylor != null)
 		{
 			_baylor.deleteMe();
 		}
+		
 		_baylor = null;
+		
 		for (NpcInstance npc : _crystaline)
 		{
 			if (npc != null)
@@ -721,11 +751,13 @@ public class BaylorManager extends Functions implements ScriptFile
 				npc.deleteMe();
 			}
 		}
+		
 		if (_intervalEndTask != null)
 		{
 			_intervalEndTask.cancel(false);
 			_intervalEndTask = null;
 		}
+		
 		if (_activityTimeEndTask != null)
 		{
 			_activityTimeEndTask.cancel(false);
@@ -741,10 +773,12 @@ public class BaylorManager extends Functions implements ScriptFile
 		if (currentReflection > 0)
 		{
 			final Reflection reflection = ReflectionManager.getInstance().get(currentReflection);
+			
 			if (reflection != null)
 			{
 				reflection.startCollapseTimer(300000);
 			}
+			
 			currentReflection = 0;
 		}
 	}

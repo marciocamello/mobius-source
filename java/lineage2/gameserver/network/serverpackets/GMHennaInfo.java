@@ -29,16 +29,18 @@ public class GMHennaInfo extends L2GameServerPacket
 		_int = cha.getHennaStatINT();
 		_wit = cha.getHennaStatWIT();
 		_men = cha.getHennaStatMEN();
-		
 		int j = 0;
+		
 		for (int i = 0; i < 3; i++)
 		{
 			Henna h = cha.getHenna(i + 1);
+			
 			if (h != null)
 			{
 				_hennas[j++] = h;
 			}
 		}
+		
 		_count = j;
 	}
 	
@@ -46,7 +48,6 @@ public class GMHennaInfo extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xf0);
-		
 		writeC(_int);
 		writeC(_str);
 		writeC(_con);
@@ -55,6 +56,7 @@ public class GMHennaInfo extends L2GameServerPacket
 		writeC(_wit);
 		writeD(3);
 		writeD(_count);
+		
 		for (int i = 0; i < _count; i++)
 		{
 			writeD(_hennas[i].getSymbolId());

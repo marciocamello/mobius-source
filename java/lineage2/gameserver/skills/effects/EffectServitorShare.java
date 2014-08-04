@@ -71,10 +71,12 @@ public class EffectServitorShare extends Effect
 	{
 		FuncTemplate[] funcTemplates = getTemplate().getAttachedFuncs();
 		Func[] funcs = new Func[funcTemplates.length];
+		
 		for (int i = 0; i < funcs.length; i++)
 		{
 			funcs[i] = new FuncShare(funcTemplates[i]._stat, funcTemplates[i]._order, this, funcTemplates[i]._value);
 		}
+		
 		return funcs;
 	}
 	

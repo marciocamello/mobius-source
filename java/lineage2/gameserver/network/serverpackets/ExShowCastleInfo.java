@@ -28,9 +28,9 @@ public class ExShowCastleInfo extends L2GameServerPacket
 	{
 		String ownerName;
 		int id, tax, nextSiege;
-		
 		List<Castle> castles = ResidenceHolder.getInstance().getResidenceList(Castle.class);
 		_infos = new ArrayList<>(castles.size());
+		
 		for (Castle castle : castles)
 		{
 			ownerName = ClanTable.getInstance().getClanName(castle.getOwnerId());
@@ -46,6 +46,7 @@ public class ExShowCastleInfo extends L2GameServerPacket
 	{
 		writeEx(0x14);
 		writeD(_infos.size());
+		
 		for (CastleInfo info : _infos)
 		{
 			writeD(info._id);
@@ -53,6 +54,7 @@ public class ExShowCastleInfo extends L2GameServerPacket
 			writeD(info._tax);
 			writeD(info._nextSiege);
 		}
+		
 		_infos.clear();
 	}
 	

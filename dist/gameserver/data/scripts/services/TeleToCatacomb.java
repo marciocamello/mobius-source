@@ -193,11 +193,13 @@ public class TeleToCatacomb extends Functions
 		{
 			return "";
 		}
+		
 		Player player = getSelf();
 		String append = "";
 		append += "<br>";
 		append += "Teleport to catacomb or necropolis.<br1> ";
 		append += "You may teleport to any of the following hunting locations.<br>";
+		
 		if (player.getLevel() <= Config.GATEKEEPER_FREE)
 		{
 			append += "[scripts_Util:Gatekeeper -41567 209463 -5080 0|Necropolis of Sacrifice (20-30)]<br1>";
@@ -232,6 +234,7 @@ public class TeleToCatacomb extends Functions
 			append += "[scripts_Util:Gatekeeper -19827 13509 -4901 60000|Catacomb of Dark Omens (70-80) - 60000 Adena]<br1>";
 			append += "[scripts_Util:Gatekeeper 113573 84513 -6541 60000|Catacomb of the Forbidden Path (70-80) - 60000 Adena]";
 		}
+		
 		return append;
 	}
 }

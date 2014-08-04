@@ -25,7 +25,7 @@ import bosses.ValakasManager;
 public final class ValakasGatekeeperInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -59,6 +59,7 @@ public final class ValakasGatekeeperInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("request_passage"))
 		{
 			if (!ValakasManager.isEnableEnterToLair())
@@ -66,11 +67,13 @@ public final class ValakasGatekeeperInstance extends NpcInstance
 				player.sendMessage("Valakas is now reborning and there's no way to enter the hall now.");
 				return;
 			}
+			
 			if (player.getInventory().getCountOf(FLOATING_STONE) < 1)
 			{
 				player.sendMessage("In order to enter the Hall of Flames you should carry at least one Flotaing Stone");
 				return;
 			}
+			
 			player.teleToLocation(TELEPORT_POSITION1);
 			return;
 		}

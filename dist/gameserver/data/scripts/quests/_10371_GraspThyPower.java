@@ -106,6 +106,7 @@ public class _10371_GraspThyPower extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -121,6 +122,7 @@ public class _10371_GraspThyPower extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -132,6 +134,7 @@ public class _10371_GraspThyPower extends Quest implements ScriptFile
 		Player player = st.getPlayer();
 		int classid = player.getClassId().getId();
 		String htmltext = "noquest";
+		
 		if (npcId == gerkenshtein)
 		{
 			if (st.isCompleted())
@@ -158,6 +161,7 @@ public class _10371_GraspThyPower extends Quest implements ScriptFile
 				htmltext = "0-6.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -165,6 +169,7 @@ public class _10371_GraspThyPower extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		boolean doneKill = updateKill(npc, st);
+		
 		if (doneKill)
 		{
 			st.unset(Soldier_item);
@@ -174,6 +179,7 @@ public class _10371_GraspThyPower extends Quest implements ScriptFile
 			st.unset(Archer_item);
 			st.setCond(2);
 		}
+		
 		return null;
 	}
 }

@@ -36,12 +36,14 @@ public class _697_DefendtheHallofErosion extends Quest implements ScriptFile
 	{
 		st.getPlayer();
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("tepios_q697_3.htm"))
 		{
 			st.setState(STARTED);
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return htmltext;
 	}
 	
@@ -52,6 +54,7 @@ public class _697_DefendtheHallofErosion extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		Player player = st.getPlayer();
 		int cond = st.getCond();
+		
 		if (npcId == TEPIOS)
 		{
 			if (cond == 0)
@@ -61,11 +64,13 @@ public class _697_DefendtheHallofErosion extends Quest implements ScriptFile
 					st.exitCurrentQuest(true);
 					return "tepios_q697_0.htm";
 				}
+				
 				if (SoIManager.getCurrentStage() != 4)
 				{
 					st.exitCurrentQuest(true);
 					return "tepios_q697_0a.htm";
 				}
+				
 				htmltext = "tepios_q697_1.htm";
 			}
 			else if ((cond == 1) && (st.getInt("defenceDone") == 0))
@@ -81,6 +86,7 @@ public class _697_DefendtheHallofErosion extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 			}
 		}
+		
 		return htmltext;
 	}
 	

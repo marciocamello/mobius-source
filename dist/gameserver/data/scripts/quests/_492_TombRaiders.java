@@ -73,6 +73,7 @@ public class _492_TombRaiders extends Quest implements ScriptFile
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return event;
 	}
 	
@@ -83,30 +84,36 @@ public class _492_TombRaiders extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int state = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == ZENIA)
 		{
 			if (player.getLevel() < 80)
 			{
 				return "32140-lvl.htm";
 			}
+			
 			if (!player.getClassId().isOfLevel(ClassLevel.Third))
 			{
 				return "32140-class.htm";
 			}
+			
 			if (state == 1)
 			{
 				if (!st.isNowAvailable())
 				{
 					return "32140-comp.htm";
 				}
+				
 				return "32140.htm";
 			}
+			
 			if (state == 2)
 			{
 				if (cond == 1)
 				{
 					return "32140-6.htm";
 				}
+				
 				if (cond == 2)
 				{
 					st.addExpAndSp(9009000, 8997060); // Unknown!!!!!
@@ -118,6 +125,7 @@ public class _492_TombRaiders extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -125,14 +133,17 @@ public class _492_TombRaiders extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if ((cond != 1) || (npc == null))
 		{
 			return null;
 		}
+		
 		if (ArrayUtils.contains(Mobs, npc.getNpcId()) && Rnd.chance(25))
 		{
 			st.giveItems(ANCIENT_REL, 1);
 		}
+		
 		if (st.getQuestItemsCount(ANCIENT_REL) >= 50)
 		{
 			st.setCond(2);

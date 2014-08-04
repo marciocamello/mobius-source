@@ -78,7 +78,6 @@ public class _10300_OlMahumTranscender extends Quest implements ScriptFile
 		addStartNpc(Adventurequid);
 		addTalkId(Adventurequid);
 		addTalkId(mouen);
-		
 		addKillId(Basilisk);
 		addKillId(gnols);
 		addKillId(OelMahum);
@@ -89,12 +88,14 @@ public class _10300_OlMahumTranscender extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("0-3.htm"))
 		{
 			st.setState(STARTED);
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		if (event.equalsIgnoreCase("1-2.htm"))
 		{
 			st.setCond(1);
@@ -125,6 +126,7 @@ public class _10300_OlMahumTranscender extends Quest implements ScriptFile
 				htmltext = "noquest";
 			}
 		}
+		
 		if (npcId == mouen)
 		{
 			if ((cond == 2) && (st.getQuestItemsCount(markofshaman) >= 30))
@@ -143,6 +145,7 @@ public class _10300_OlMahumTranscender extends Quest implements ScriptFile
 				htmltext = "1-2.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -166,10 +169,12 @@ public class _10300_OlMahumTranscender extends Quest implements ScriptFile
 			st.giveItems(proofmonstr, 1);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		if ((st.getQuestItemsCount(markofbandit) >= 30) && (st.getQuestItemsCount(markofshaman) >= 30) && (st.getQuestItemsCount(proofmonstr) >= 30))
 		{
 			st.setCond(2);
 		}
+		
 		st.playSound(SOUND_MIDDLE);
 		return null;
 	}

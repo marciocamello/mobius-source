@@ -127,19 +127,24 @@ public class PetInventory extends Inventory
 	{
 		final int ownerId = getOwnerId();
 		writeLock();
+		
 		try
 		{
 			Collection<ItemInstance> items = _itemsDAO.getItemsByOwnerIdAndLoc(ownerId, getBaseLocation());
+			
 			for (ItemInstance item : items)
 			{
 				_items.add(item);
 				onRestoreItem(item);
 			}
+			
 			items = _itemsDAO.getItemsByOwnerIdAndLoc(ownerId, getEquipLocation());
+			
 			for (ItemInstance item : items)
 			{
 				_items.add(item);
 				onRestoreItem(item);
+				
 				if (ItemFunctions.checkIfCanEquip(getActor(), item) == null)
 				{
 					setPaperdollItem(item.getEquipSlot(), item);
@@ -160,6 +165,7 @@ public class PetInventory extends Inventory
 	public void store()
 	{
 		writeLock();
+		
 		try
 		{
 			_itemsDAO.update(_items);

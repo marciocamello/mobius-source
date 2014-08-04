@@ -37,7 +37,6 @@ public class SizrakInstance extends NpcInstance
 		super(objectId, template);
 	}
 	
-	@SuppressWarnings("deprecation")
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -53,36 +52,43 @@ public class SizrakInstance extends NpcInstance
 				showChatWindow(player, "tauti/sofa_sizraku002h.htm");
 				return;
 			}
+			
 			if (player.getParty() == null)
 			{
 				player.sendPacket(new SystemMessage(SystemMessage.ONLY_A_PARTY_LEADER_CAN_TRY_TO_ENTER));
 				return;
 			}
+			
 			if (player.getParty().getCommandChannel() == null)
 			{
 				showChatWindow(player, "tauti/sofa_sizraku002e.htm");
 				return;
 			}
+			
 			if (!player.getParty().getCommandChannel().isLeaderCommandChannel(player))
 			{
 				showChatWindow(player, "tauti/sofa_sizraku002d.htm");
 				return;
 			}
+			
 			if (player.getParty().getCommandChannel().getMemberCount() > 35)
 			{
 				showChatWindow(player, "tauti/sofa_sizraku002c.htm");
 				return;
 			}
+			
 			for (Player commandChannel : player.getParty().getCommandChannel().getMembers())
 			{
 				if (commandChannel.getLevel() < 97)
 				{
 					showChatWindow(player, "tauti/sofa_sizraku002b.htm");
 				}
+				
 				return;
 			}
 			
 			Reflection reflection = player.getActiveReflection();
+			
 			if (reflection != null)
 			{
 				if (player.canReenterInstance(normalTautiInstanceId))
@@ -96,14 +102,17 @@ public class SizrakInstance extends NpcInstance
 				showChatWindow(player, "tauti/sofa_sizraku002a.htm");
 			}
 		}
+		
 		if (command.startsWith("reenter_tauti_normal_battle"))
 		{
 			Reflection reflection = player.getActiveReflection();
+			
 			if (reflection != null)
 			{
 				if (player.canReenterInstance(normalTautiInstanceId))
 				{
 					TautiNormal instance = (TautiNormal) reflection;
+					
 					if (instance.getInstanceStage() == 2)
 					{
 						player.teleToLocation(TAUTI_ROOM_TELEPORT, reflection);
@@ -112,6 +121,7 @@ public class SizrakInstance extends NpcInstance
 					{
 						player.teleToLocation(reflection.getTeleportLoc(), reflection);
 					}
+					
 					showChatWindow(player, "tauti/sofa_sizraku002f.htm");
 				}
 			}

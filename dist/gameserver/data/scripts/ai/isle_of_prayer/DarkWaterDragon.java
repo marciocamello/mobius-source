@@ -79,6 +79,7 @@ public class DarkWaterDragon extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (!actor.isDead())
 		{
 			switch (_mobsSpawned)
@@ -87,15 +88,18 @@ public class DarkWaterDragon extends Fighter
 					_mobsSpawned = 1;
 					spawnShades(attacker);
 					break;
+				
 				case 1:
 					if (actor.getCurrentHp() < (actor.getMaxHp() >> 1))
 					{
 						_mobsSpawned = 2;
 						spawnShades(attacker);
 					}
+					
 					break;
 			}
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	
@@ -106,6 +110,7 @@ public class DarkWaterDragon extends Fighter
 	private void spawnShades(Creature attacker)
 	{
 		final NpcInstance actor = getActor();
+		
 		for (int i = 0; i < MOBS_COUNT; i++)
 		{
 			try
@@ -131,6 +136,7 @@ public class DarkWaterDragon extends Fighter
 	{
 		_mobsSpawned = 0;
 		final NpcInstance actor = getActor();
+		
 		try
 		{
 			final SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(FAFURION));
@@ -141,9 +147,11 @@ public class DarkWaterDragon extends Fighter
 		{
 			e.printStackTrace();
 		}
+		
 		if (killer != null)
 		{
 			final Player player = killer.getPlayer();
+			
 			if (player != null)
 			{
 				if (Rnd.chance(77))
@@ -152,6 +160,7 @@ public class DarkWaterDragon extends Fighter
 				}
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 	

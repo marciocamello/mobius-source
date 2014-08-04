@@ -27,7 +27,7 @@ import org.napile.primitive.sets.impl.HashIntSet;
 public class CMGSiegeClanObject extends SiegeClanObject
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -105,6 +105,7 @@ public class CMGSiegeClanObject extends SiegeClanObject
 		for (int i : _players.toArray())
 		{
 			Player player = GameObjectsStorage.getPlayer(i);
+			
 			if (player != null)
 			{
 				if (start)
@@ -115,6 +116,7 @@ public class CMGSiegeClanObject extends SiegeClanObject
 				{
 					player.removeEvent(event);
 				}
+				
 				player.broadcastCharInfo();
 			}
 		}

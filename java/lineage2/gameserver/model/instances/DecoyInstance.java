@@ -40,7 +40,7 @@ import org.slf4j.LoggerFactory;
 public class DecoyInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -87,11 +87,13 @@ public class DecoyInstance extends NpcInstance
 	protected void onDeath(Creature killer)
 	{
 		super.onDeath(killer);
+		
 		if (_hateSpam != null)
 		{
 			_hateSpam.cancel(false);
 			_hateSpam = null;
 		}
+		
 		_lifeTime = 0;
 	}
 	
@@ -111,6 +113,7 @@ public class DecoyInstance extends NpcInstance
 				double newTimeRemaining;
 				decTimeRemaining(1000);
 				newTimeRemaining = getTimeRemaining();
+				
 				if (newTimeRemaining < 0)
 				{
 					unSummon();
@@ -170,11 +173,13 @@ public class DecoyInstance extends NpcInstance
 			_decoyLifeTask.cancel(false);
 			_decoyLifeTask = null;
 		}
+		
 		if (_hateSpam != null)
 		{
 			_hateSpam.cancel(false);
 			_hateSpam = null;
 		}
+		
 		deleteMe();
 	}
 	
@@ -246,10 +251,12 @@ public class DecoyInstance extends NpcInstance
 	protected void onDelete()
 	{
 		Player owner = getPlayer();
+		
 		if (owner != null)
 		{
 			owner.setDecoy(null);
 		}
+		
 		super.onDelete();
 	}
 	
@@ -261,14 +268,17 @@ public class DecoyInstance extends NpcInstance
 	public double getColRadius()
 	{
 		Player player = getPlayer();
+		
 		if (player == null)
 		{
 			return 0;
 		}
+		
 		if ((player.getTransformation() != 0) && (player.getTransformationTemplate() != 0))
 		{
 			return NpcHolder.getInstance().getTemplate(player.getTransformationTemplate()).getCollisionRadius();
 		}
+		
 		return player.getTemplate().getCollisionRadius();
 	}
 	
@@ -280,14 +290,17 @@ public class DecoyInstance extends NpcInstance
 	public double getColHeight()
 	{
 		Player player = getPlayer();
+		
 		if (player == null)
 		{
 			return 0;
 		}
+		
 		if ((player.getTransformation() != 0) && (player.getTransformationTemplate() != 0))
 		{
 			return NpcHolder.getInstance().getTemplate(player.getTransformationTemplate()).getCollisionHeight();
 		}
+		
 		return player.getTemplate().getCollisionHeight();
 	}
 	
@@ -304,6 +317,7 @@ public class DecoyInstance extends NpcInstance
 		{
 			return Collections.<L2GameServerPacket> singletonList(new CharInfo(this));
 		}
+		
 		List<L2GameServerPacket> list = new ArrayList<>(2);
 		list.add(new CharInfo(this));
 		list.add(new AutoAttackStart(objectId));

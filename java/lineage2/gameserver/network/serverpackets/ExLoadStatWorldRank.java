@@ -38,11 +38,10 @@ public class ExLoadStatWorldRank extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0x101);
-		
 		writeD(_section);
 		writeD(_subSection);
-		
 		writeD(_monthlyData.size());
+		
 		for (int i = 0, monthlyDataSize = _monthlyData.size(); i < monthlyDataSize; i++)
 		{
 			CharacterStatistic statistic = _monthlyData.get(i);
@@ -56,6 +55,7 @@ public class ExLoadStatWorldRank extends L2GameServerPacket
 		}
 		
 		writeD(_generalData.size());
+		
 		for (int i = 0, generalDataSize = _generalData.size(); i < generalDataSize; i++)
 		{
 			CharacterStatistic statistic = _generalData.get(i);

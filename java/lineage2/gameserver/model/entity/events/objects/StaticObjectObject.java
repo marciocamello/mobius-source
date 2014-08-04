@@ -23,7 +23,7 @@ import lineage2.gameserver.model.instances.StaticObjectInstance;
 public class StaticObjectObject implements SpawnableObject
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**

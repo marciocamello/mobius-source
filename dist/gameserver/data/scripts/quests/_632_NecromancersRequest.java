@@ -90,6 +90,7 @@ public class _632_NecromancersRequest extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("632_4"))
 		{
 			st.playSound(SOUND_FINISH);
@@ -129,6 +130,7 @@ public class _632_NecromancersRequest extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -138,6 +140,7 @@ public class _632_NecromancersRequest extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (cond == 0)
 		{
 			if (npcId == WIZARD)
@@ -145,10 +148,12 @@ public class _632_NecromancersRequest extends Quest implements ScriptFile
 				htmltext = "shadow_hardin_q0632_0101.htm";
 			}
 		}
+		
 		if (cond == 1)
 		{
 			htmltext = "shadow_hardin_q0632_0202.htm";
 		}
+		
 		if (cond == 2)
 		{
 			if (st.getQuestItemsCount(V_HEART) > 199)
@@ -156,6 +161,7 @@ public class _632_NecromancersRequest extends Quest implements ScriptFile
 				htmltext = "shadow_hardin_q0632_0105.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -169,14 +175,17 @@ public class _632_NecromancersRequest extends Quest implements ScriptFile
 				if ((st.getCond() < 2) && Rnd.chance(50))
 				{
 					st.giveItems(V_HEART, 1, false);
+					
 					if (st.getQuestItemsCount(V_HEART) > 199)
 					{
 						st.setCond(2);
 					}
 				}
+				
 				return null;
 			}
 		}
+		
 		st.rollAndGive(Z_BRAIN, 1, 33);
 		return null;
 	}

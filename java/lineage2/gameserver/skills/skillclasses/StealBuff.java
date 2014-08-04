@@ -66,6 +66,7 @@ public class StealBuff extends Skill
 			activeChar.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
 			return false;
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
@@ -85,13 +86,16 @@ public class StealBuff extends Skill
 				{
 					int stealCount = Rnd.get(1, _stealCount);
 					int counter = 0;
+					
 					if (!target.isPlayer())
 					{
 						continue;
 					}
+					
 					List<Effect> effectsList = target.getEffectList().getAllEffects();
 					Collections.sort(effectsList, EffectsComparator.getInstance());
 					Collections.reverse(effectsList);
+					
 					for (Effect e : effectsList)
 					{
 						if (counter < stealCount)
@@ -99,10 +103,12 @@ public class StealBuff extends Skill
 							if (canSteal(e))
 							{
 								Effect stolenEffect = cloneEffect(activeChar, e);
+								
 								if (stolenEffect != null)
 								{
 									activeChar.getEffectList().addEffect(stolenEffect);
 								}
+								
 								e.exit();
 								counter++;
 							}
@@ -118,9 +124,11 @@ public class StealBuff extends Skill
 					activeChar.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(target.getName()).addSkillName(getId(), getLevel()));
 					continue;
 				}
+				
 				getEffects(activeChar, target, getActivateRate() > 0, false);
 			}
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());
@@ -160,9 +168,11 @@ public class StealBuff extends Skill
 	private Effect cloneEffect(Creature cha, Effect eff)
 	{
 		Skill skill = eff.getSkill();
+		
 		for (EffectTemplate et : skill.getEffectTemplates())
 		{
 			Effect effect = et.getEffect(new Env(cha, cha, skill));
+			
 			if (effect != null)
 			{
 				effect.setCount(eff.getCount());
@@ -170,6 +180,7 @@ public class StealBuff extends Skill
 				return effect;
 			}
 		}
+		
 		return null;
 	}
 }

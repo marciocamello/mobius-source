@@ -25,7 +25,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class BlackJudeInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -51,6 +51,7 @@ public class BlackJudeInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equals("tryRemovePenalty"))
 		{
 			if (player.getDeathPenalty().getLevel(player) > 0)
@@ -95,6 +96,7 @@ public class BlackJudeInstance extends NpcInstance
 	public int getPrice(Player player)
 	{
 		int playerLvl = player.getLevel();
+		
 		if (playerLvl <= 19)
 		{
 			return 3600;

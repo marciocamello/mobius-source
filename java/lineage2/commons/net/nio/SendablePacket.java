@@ -82,11 +82,13 @@ public abstract class SendablePacket<T> extends AbstractPacket<T>
 		if (charSequence != null)
 		{
 			int length = charSequence.length();
+			
 			for (int i = 0; i < length; i++)
 			{
 				getByteBuffer().putChar(charSequence.charAt(i));
 			}
 		}
+		
 		getByteBuffer().putChar('\000');
 	}
 	

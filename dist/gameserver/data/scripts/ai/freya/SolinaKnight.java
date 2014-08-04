@@ -58,6 +58,7 @@ public class SolinaKnight extends Fighter
 		if (scarecrow == null)
 		{
 			final List<NpcInstance> around = getActor().getAroundNpc(300, 100);
+			
 			if ((around != null) && !around.isEmpty())
 			{
 				for (NpcInstance npc : around)
@@ -72,11 +73,13 @@ public class SolinaKnight extends Fighter
 				}
 			}
 		}
+		
 		if (scarecrow != null)
 		{
 			getActor().getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, scarecrow, 1);
 			return true;
 		}
+		
 		return false;
 	}
 }

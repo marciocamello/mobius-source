@@ -37,9 +37,7 @@ public class _752_SecretReviliance extends Quest implements ScriptFile
 		addTalkId(HESET);
 		addQuestItem(SOUL);
 		addQuestItem(INIE);
-		
 		addKillId(23252, 23253, 23254, 23257, 23255, 23256, 23258, 23259);
-		
 		addLevelCheck(93, 100);
 		addQuestCompletedCheck(_10386_PathOfMystery.class);
 	}
@@ -65,6 +63,7 @@ public class _752_SecretReviliance extends Quest implements ScriptFile
 			st.exitCurrentQuest(this);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -75,10 +74,12 @@ public class _752_SecretReviliance extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
 		QuestState Mj = st.getPlayer().getQuestState(_10386_PathOfMystery.class);
+		
 		if ((Mj == null) || !Mj.isCompleted())
 		{
 			return "you cannot procceed with this quest until you have completed the Mystrerious Journey quest";
 		}
+		
 		if (st.isNowAvailable())
 		{
 			if (npcId == HESET)
@@ -122,14 +123,17 @@ public class _752_SecretReviliance extends Quest implements ScriptFile
 		{
 			qs.giveItems(SOUL, 1);
 		}
+		
 		if ((qs.getQuestItemsCount(INIE) < 20) && Rnd.chance(10))
 		{
 			qs.giveItems(INIE, 1);
 		}
+		
 		if ((qs.getQuestItemsCount(SOUL) >= 10) && (qs.getQuestItemsCount(INIE) >= 20))
 		{
 			qs.setCond(2);
 		}
+		
 		return null;
 	}
 	

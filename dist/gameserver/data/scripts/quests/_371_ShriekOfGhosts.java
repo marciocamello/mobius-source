@@ -62,6 +62,7 @@ public class _371_ShriekOfGhosts extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		int _state = st.getState();
+		
 		if (event.equalsIgnoreCase("30867-03.htm") && (_state == CREATED))
 		{
 			st.setState(STARTED);
@@ -71,16 +72,19 @@ public class _371_ShriekOfGhosts extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("30867-10.htm") && (_state == STARTED))
 		{
 			long Ancient_Ash_Urn_count = st.getQuestItemsCount(Ancient_Ash_Urn);
+			
 			if (Ancient_Ash_Urn_count > 0)
 			{
 				st.takeItems(Ancient_Ash_Urn, -1);
 				st.giveItems(ADENA_ID, Ancient_Ash_Urn_count * 1000L);
 			}
+			
 			st.exitCurrentQuest(true);
 		}
 		else if (event.equalsIgnoreCase("30867-TRADE") && (_state == STARTED))
 		{
 			long Ancient_Ash_Urn_count = st.getQuestItemsCount(Ancient_Ash_Urn);
+			
 			if (Ancient_Ash_Urn_count > 0)
 			{
 				htmltext = Ancient_Ash_Urn_count > 100 ? "30867-08.htm" : "30867-07.htm";
@@ -96,10 +100,12 @@ public class _371_ShriekOfGhosts extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("30929-TRADE") && (_state == STARTED))
 		{
 			long Ancient_Porcelain_count = st.getQuestItemsCount(Ancient_Porcelain);
+			
 			if (Ancient_Porcelain_count > 0)
 			{
 				st.takeItems(Ancient_Porcelain, 1);
 				int chance = Rnd.get(100);
+				
 				if (chance < Ancient_Porcelain__Excellent_Chance)
 				{
 					st.giveItems(Ancient_Porcelain__Excellent, 1);
@@ -130,6 +136,7 @@ public class _371_ShriekOfGhosts extends Quest implements ScriptFile
 				htmltext = "30929-02.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -139,12 +146,14 @@ public class _371_ShriekOfGhosts extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int _state = st.getState();
 		int npcId = npc.getNpcId();
+		
 		if (_state == CREATED)
 		{
 			if (npcId != REVA)
 			{
 				return htmltext;
 			}
+			
 			if (st.getPlayer().getLevel() >= 59)
 			{
 				htmltext = "30867-02.htm";
@@ -164,6 +173,7 @@ public class _371_ShriekOfGhosts extends Quest implements ScriptFile
 		{
 			htmltext = "30929-01.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -171,21 +181,26 @@ public class _371_ShriekOfGhosts extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState qs)
 	{
 		Player player = qs.getRandomPartyMember(STARTED, Config.ALT_PARTY_DISTRIBUTION_RANGE);
+		
 		if (player == null)
 		{
 			return null;
 		}
+		
 		QuestState st = player.getQuestState(qs.getQuest().getName());
 		Integer _chance = common_chances.get(npc.getNpcId());
+		
 		if (_chance == null)
 		{
 			return null;
 		}
+		
 		if (Rnd.chance(_chance))
 		{
 			st.giveItems(Rnd.chance(Urn_Chance) ? Ancient_Ash_Urn : Ancient_Porcelain, 1);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		return null;
 	}
 	

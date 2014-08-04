@@ -65,10 +65,12 @@ public class MultiValueIntegerMap
 	public List<Integer> allValues()
 	{
 		List<Integer> result = new ArrayList<>();
+		
 		for (Map.Entry<Integer, List<Integer>> entry : map.entrySet())
 		{
 			result.addAll(entry.getValue());
 		}
+		
 		return result;
 	}
 	
@@ -146,19 +148,24 @@ public class MultiValueIntegerMap
 	public Integer remove(Integer key, Integer value)
 	{
 		List<Integer> valuesForKey = map.get(key);
+		
 		if (valuesForKey == null)
 		{
 			return null;
 		}
+		
 		boolean removed = valuesForKey.remove(value);
+		
 		if (!removed)
 		{
 			return null;
 		}
+		
 		if (valuesForKey.isEmpty())
 		{
 			remove(key);
 		}
+		
 		return value;
 	}
 	
@@ -170,18 +177,22 @@ public class MultiValueIntegerMap
 	public Integer removeValue(Integer value)
 	{
 		List<Integer> toRemove = new ArrayList<>(1);
+		
 		for (Map.Entry<Integer, List<Integer>> entry : map.entrySet())
 		{
 			entry.getValue().remove(value);
+			
 			if (entry.getValue().isEmpty())
 			{
 				toRemove.add(entry.getKey());
 			}
 		}
+		
 		for (Integer key : toRemove)
 		{
 			remove(key);
 		}
+		
 		return value;
 	}
 	
@@ -194,11 +205,13 @@ public class MultiValueIntegerMap
 	public Integer put(Integer key, Integer value)
 	{
 		List<Integer> coll = map.get(key);
+		
 		if (coll == null)
 		{
 			coll = new CopyOnWriteArrayList<>();
 			map.put(key, coll);
 		}
+		
 		coll.add(value);
 		return value;
 	}
@@ -217,6 +230,7 @@ public class MultiValueIntegerMap
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -229,10 +243,12 @@ public class MultiValueIntegerMap
 	public boolean containsValue(Integer key, Integer value)
 	{
 		List<Integer> coll = map.get(key);
+		
 		if (coll == null)
 		{
 			return false;
 		}
+		
 		return coll.contains(value);
 	}
 	
@@ -244,10 +260,12 @@ public class MultiValueIntegerMap
 	public int size(Integer key)
 	{
 		List<Integer> coll = map.get(key);
+		
 		if (coll == null)
 		{
 			return 0;
 		}
+		
 		return coll.size();
 	}
 	
@@ -263,12 +281,15 @@ public class MultiValueIntegerMap
 		{
 			return false;
 		}
+		
 		boolean result = false;
 		List<Integer> coll = map.get(key);
+		
 		if (coll == null)
 		{
 			coll = new CopyOnWriteArrayList<>();
 			coll.addAll(values);
+			
 			if (coll.size() > 0)
 			{
 				map.put(key, coll);
@@ -279,6 +300,7 @@ public class MultiValueIntegerMap
 		{
 			result = coll.addAll(values);
 		}
+		
 		return result;
 	}
 	
@@ -289,10 +311,12 @@ public class MultiValueIntegerMap
 	public int totalSize()
 	{
 		int total = 0;
+		
 		for (Map.Entry<Integer, List<Integer>> entry : map.entrySet())
 		{
 			total += entry.getValue().size();
 		}
+		
 		return total;
 	}
 }

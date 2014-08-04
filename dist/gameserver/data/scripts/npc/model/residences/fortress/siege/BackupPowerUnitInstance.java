@@ -31,7 +31,7 @@ import org.apache.commons.lang3.ArrayUtils;
 public class BackupPowerUnitInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -97,9 +97,11 @@ public class BackupPowerUnitInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		StringTokenizer token = new StringTokenizer(command);
 		token.nextToken();
 		int val = Integer.parseInt(token.nextToken());
+		
 		if ((player.getClassId() == ClassId.WARSMITH) || (player.getClassId() == ClassId.MAESTRO))
 		{
 			if (_tryCount == 0)
@@ -122,6 +124,7 @@ public class BackupPowerUnitInstance extends NpcInstance
 				_tryCount++;
 			}
 		}
+		
 		showChatWindow(player, 0);
 	}
 	
@@ -145,33 +148,41 @@ public class BackupPowerUnitInstance extends NpcInstance
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 		NpcHtmlMessage message = new NpcHtmlMessage(player, this);
+		
 		if ((_invalidatePeriod > 0) && (_invalidatePeriod < System.currentTimeMillis()))
 		{
 			generate();
 		}
+		
 		int cond = getCond();
+		
 		switch (cond)
 		{
 			case COND_ALL_OK:
 				message.setFile("residence2/fortress/fortress_subpower002.htm");
 				onDecay();
 				break;
+			
 			case COND_TIMEOUT:
 				message.setFile("residence2/fortress/fortress_subpower003.htm");
 				break;
+			
 			case COND_FAIL:
 				message.setFile("residence2/fortress/fortress_subpower003.htm");
 				_invalidatePeriod = System.currentTimeMillis() + 30000L;
 				break;
+			
 			case COND_ENTERED:
 				message.setFile("residence2/fortress/fortress_subpower004.htm");
 				message.replaceNpcString("%password%", _index == 0 ? NpcString.THE_MARKS_HAVE_NOT_BEEN_ASSEMBLED : _index == 1 ? NpcString.THE_1ST_MARK_IS_CORRECT : NpcString.THE_2ND_MARK_IS_CORRECT);
 				message.replaceNpcString("%try_count%", NpcString.ATTEMPT_S1__3_IS_IN_PROGRESS, _tryCount);
 				break;
+			
 			case COND_NO_ENTERED:
 				message.setFile("residence2/fortress/fortress_subpower001.htm");
 				break;
 		}
+		
 		player.sendPacket(message);
 	}
 	
@@ -183,18 +194,23 @@ public class BackupPowerUnitInstance extends NpcInstance
 		_invalidatePeriod = 0;
 		_tryCount = 0;
 		_index = 0;
+		
 		for (int i = 0; i < _generated.length; i++)
 		{
 			_generated[i] = -1;
 		}
+		
 		int j = 0;
+		
 		while (j != LIMIT)
 		{
 			int val = Rnd.get(0, LIMIT);
+			
 			if (ArrayUtils.contains(_generated, val))
 			{
 				continue;
 			}
+			
 			_generated[j++] = val;
 		}
 	}

@@ -81,7 +81,6 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 		teleCoords.put(Integer.valueOf(33311), new Location(-116710, 151179, -7680));
 		teleCoords.put(Integer.valueOf(33312), new Location(-118080, 147916, -7680));
 		teleCoords.put(Integer.valueOf(33313), new Location(-116610, 146042, -7680));
-		
 		teleCoords.put(Integer.valueOf(33314), new Location(-114712, 147016, -10760));
 		teleCoords.put(Integer.valueOf(33315), new Location(-113128, 147720, -10760));
 		teleCoords.put(Integer.valueOf(33316), new Location(-111768, 149272, -10760));
@@ -90,7 +89,6 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 		teleCoords.put(Integer.valueOf(33319), new Location(-116712, 152056, -10760));
 		teleCoords.put(Integer.valueOf(33320), new Location(-117672, 149256, -10760));
 		teleCoords.put(Integer.valueOf(33321), new Location(-116456, 147560, -10760));
-		
 		teleCoords.put(Integer.valueOf(33322), new Location(-114689, 180723, -13808));
 		teleCoords.put(Integer.valueOf(33323), new Location(-112841, 181530, -13808));
 		teleCoords.put(Integer.valueOf(33324), new Location(-111350, 183341, -13800));
@@ -120,26 +118,31 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 				showChatWindow(player, "default/33344-noreq.htm");
 			}
 		}
+		
 		if (command.startsWith("teleport_first_floor"))
 		{
 			player.teleToLocation(-114712, 147848, -7740);
 		}
+		
 		if (command.startsWith("teleport_second_floor"))
 		{
 			player.teleToLocation(-114712, 149160, -10800);
 		}
+		
 		if (command.startsWith("teleport_third_floor"))
 		{
 			player.teleToLocation(-114728, 183288, -13860);
 		}
+		
 		if (command.startsWith("teleport_outside"))
 		{
 			player.teleToLocation(-116160, 236370, -3088);
 		}
+		
 		if (command.startsWith("teleport_next"))
 		{
-			
 			List<int[]> lst = Arrays.asList(cycleEndTeleports);
+			
 			if (lst.contains(getNpcId()))
 			{
 				player.teleToLocation(teleCoords.get(Integer.valueOf(getNpcId() - 7)));
@@ -149,9 +152,11 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 				player.teleToLocation(teleCoords.get(Integer.valueOf(getNpcId() + 1)));
 			}
 		}
+		
 		if (command.startsWith("teleport_prev"))
 		{
 			List<int[]> lst = Arrays.asList(cycleStartTeleports);
+			
 			if (lst.contains(getNpcId()))
 			{
 				player.teleToLocation(teleCoords.get(Integer.valueOf(getNpcId() + 7)));
@@ -161,6 +166,7 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 				player.teleToLocation(teleCoords.get(Integer.valueOf(getNpcId() - 1)));
 			}
 		}
+		
 		if (command.startsWith("key_altar"))
 		{
 			if (player.getInventory().getItemByItemId(SEALED_HARNAK_KEY) != null)
@@ -170,10 +176,12 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 					showChatWindow(player, "default/altar-ok.htm");
 					player.getInventory().removeItemByItemId(30429, 1);
 					sayScreenMessage(player);
+					
 					if (getNpcState() == 0)
 					{
 						ThreadPoolManager.getInstance().schedule(new runNpcStateChangeSecond(), 1000L);
 					}
+					
 					NpcInstance Noktum = NpcUtils.spawnSingle(NOKTUM, player.getLoc().getX() + 15, player.getLoc().getY(), player.getLoc().getZ(), 1800000L);
 					Noktum.addListener(_deathListener);
 				}
@@ -193,6 +201,7 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 				showChatWindow(player, "default/" + getNpcId() + "-1.htm");
 			}
 		}
+		
 		if (command.startsWith("key_prison"))
 		{
 			if (player.getInventory().getItemByItemId(HARNAK_KEY) != null)
@@ -202,10 +211,12 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 					showChatWindow(player, "default/prison-ok.htm");
 					player.getInventory().removeItemByItemId(30430, 1);
 					sayScreenMessage(player);
+					
 					if (getNpcState() == 0)
 					{
 						ThreadPoolManager.getInstance().schedule(new runNpcStateChangeThird(), 1000L);
 					}
+					
 					NpcInstance demonikNoktum = NpcUtils.spawnSingle(DEMONIC_NOKTUM, player.getLoc().getX() + 15, player.getLoc().getY(), player.getLoc().getZ(), 1800000L);
 					demonikNoktum.addListener(_deathListener);
 				}
@@ -234,7 +245,7 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 	private class runNpcStateChangeSecond extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public runNpcStateChangeSecond()
 		{
@@ -245,18 +256,21 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 		public void runImpl()
 		{
 			int npcState = getNpcState();
+			
 			if (npcState == 0)
 			{
 				_stateSecond = 1;
 				setNpcState(npcState + 1);
 				ThreadPoolManager.getInstance().schedule(this, 180000L);
 			}
+			
 			if ((npcState >= 1) && (npcState < 8))
 			{
 				_stateSecond++;
 				setNpcState(_stateSecond);
 				ThreadPoolManager.getInstance().schedule(this, 120000L);
 			}
+			
 			if (npcState == 8)
 			{
 				_stateSecond = 0;
@@ -283,13 +297,12 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 		{
 			player.sendPacket(new ExShowScreenMessage(Rnd.get(FUCKED_HARNAK), 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 		}
-		
 	}
 	
 	private class runNpcStateChangeThird extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public runNpcStateChangeThird()
 		{
@@ -300,18 +313,21 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 		public void runImpl()
 		{
 			int npcState = getNpcState();
+			
 			if (npcState == 0)
 			{
 				_stateThird = 1;
 				setNpcState(_stateThird);
 				ThreadPoolManager.getInstance().schedule(this, 180000L);
 			}
+			
 			if ((npcState >= 1) && (npcState < 8))
 			{
 				_stateThird++;
 				setNpcState(_stateThird);
 				ThreadPoolManager.getInstance().schedule(this, 120000L);
 			}
+			
 			if (npcState == 8)
 			{
 				_stateThird = 0;
@@ -325,7 +341,7 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 	private class DeathListener implements OnDeathListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public DeathListener()
 		{
@@ -339,8 +355,8 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 			{
 				self.broadcastPacketToOthers(new ExShowScreenMessage(NpcString.GHOST_OF_HARNAK_CAN_ONLY_BE_HIT_NEAR_SOUL_CIRCLE, 5000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
 				self.removeListener(_deathListener);
-				
 			}
+			
 			if (self.isNpc() && (self.getNpcId() == DEMONIC_NOKTUM))
 			{
 				self.broadcastPacketToOthers(new ExShowScreenMessage(NpcString.GHOST_OF_HARNAK_CAN_ONLY_BE_HIT_NEAR_SOUL_CIRCLE, 5000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));

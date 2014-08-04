@@ -23,7 +23,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class MatchLeaderInstance extends MatchBerserkerInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -62,6 +62,7 @@ public class MatchLeaderInstance extends MatchBerserkerInstance
 		{
 			damage = ((damage / getMaxHp()) / 0.05) * 10;
 		}
+		
 		super.reduceCurrentHp(damage, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
 	}
 }

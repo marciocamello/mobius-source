@@ -157,6 +157,7 @@ public class SubUnit
 		{
 			return null;
 		}
+		
 		return _members.get(obj);
 	}
 	
@@ -174,6 +175,7 @@ public class SubUnit
 				return m;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -184,18 +186,22 @@ public class SubUnit
 	public void removeUnitMember(int objectId)
 	{
 		UnitMember m = _members.remove(objectId);
+		
 		if (m == null)
 		{
 			return;
 		}
+		
 		if (objectId == getLeaderObjectId())
 		{
 			setLeader(null, true);
 		}
+		
 		if (m.hasSponsor())
 		{
 			_clan.getAnyMember(m.getSponsor()).setApprentice(0);
 		}
+		
 		removeMemberInDatabase(m);
 		m.setPlayerInstance(null, true);
 	}
@@ -208,17 +214,22 @@ public class SubUnit
 	public void replace(int objectId, int newUnitId)
 	{
 		SubUnit newUnit = _clan.getSubUnit(newUnitId);
+		
 		if (newUnit == null)
 		{
 			return;
 		}
+		
 		UnitMember m = _members.remove(objectId);
+		
 		if (m == null)
 		{
 			return;
 		}
+		
 		m.setPledgeType(newUnitId);
 		newUnit.addUnitMember(m);
+		
 		if (m.getPowerGrade() > 5)
 		{
 			m.setPowerGrade(_clan.getAffiliationRank(m.getPledgeType()));
@@ -260,20 +271,25 @@ public class SubUnit
 	public void setLeader(UnitMember newLeader, boolean updateDB)
 	{
 		final UnitMember old = _leader;
+		
 		if (old != null)
 		{
 			old.setLeaderOf(Clan.SUBUNIT_NONE);
 		}
+		
 		_leader = newLeader;
 		_leaderObjectId = newLeader == null ? 0 : newLeader.getObjectId();
+		
 		if (newLeader != null)
 		{
 			newLeader.setLeaderOf(_type);
 		}
+		
 		if (updateDB)
 		{
 			Connection con = null;
 			PreparedStatement statement = null;
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
@@ -302,10 +318,12 @@ public class SubUnit
 	public void setName(String name, boolean updateDB)
 	{
 		_name = name;
+		
 		if (updateDB)
 		{
 			Connection con = null;
 			PreparedStatement statement = null;
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
@@ -344,16 +362,20 @@ public class SubUnit
 	public Skill addSkill(Skill newSkill, boolean store)
 	{
 		Skill oldSkill = null;
+		
 		if (newSkill != null)
 		{
 			oldSkill = _skills.put(newSkill.getId(), newSkill);
+			
 			if (store)
 			{
 				Connection con = null;
 				PreparedStatement statement = null;
+				
 				try
 				{
 					con = DatabaseFactory.getInstance().getConnection();
+					
 					if (oldSkill != null)
 					{
 						statement = con.prepareStatement("UPDATE clan_subpledges_skills SET skill_level=? WHERE skill_id=? AND clan_id=? AND type=?");
@@ -382,15 +404,19 @@ public class SubUnit
 					DbUtils.closeQuietly(con, statement);
 				}
 			}
+			
 			ExSubPledgeSkillAdd packet = new ExSubPledgeSkillAdd(_type, newSkill.getId(), newSkill.getLevel());
+			
 			for (UnitMember temp : _clan)
 			{
 				if (temp.isOnline())
 				{
 					Player player = temp.getPlayer();
+					
 					if (player != null)
 					{
 						player.sendPacket(packet);
+						
 						if (player.getPledgeType() == _type)
 						{
 							addSkill(player, newSkill);
@@ -399,6 +425,7 @@ public class SubUnit
 				}
 			}
 		}
+		
 		return oldSkill;
 	}
 	
@@ -451,6 +478,7 @@ public class SubUnit
 		if (skill.getMinRank() <= player.getPledgeClass())
 		{
 			player.addSkill(skill, false);
+			
 			if ((_clan.getReputationScore() < 0) || player.isInOlympiadMode())
 			{
 				player.addUnActiveSkill(skill);
@@ -475,6 +503,7 @@ public class SubUnit
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -502,6 +531,7 @@ public class SubUnit
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -509,15 +539,18 @@ public class SubUnit
 			statement.setInt(1, _clan.getClanId());
 			statement.setInt(2, _type);
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				UnitMember member = new UnitMember(_clan, rset.getString("char_name"), rset.getString("title"), rset.getInt("level"), rset.getInt("classid"), rset.getInt("obj_Id"), _type, rset.getInt("pledge_rank"), rset.getInt("apprentice"), rset.getInt("sex"), Clan.SUBUNIT_NONE);
 				addUnitMember(member);
 			}
+			
 			if (_type != Clan.SUBUNIT_ACADEMY)
 			{
 				SubUnit mainClan = _clan.getSubUnit(Clan.SUBUNIT_MAIN_CLAN);
 				UnitMember leader = mainClan.getUnitMember(_leaderObjectId);
+				
 				if (leader != null)
 				{
 					setLeader(leader, false);
@@ -546,6 +579,7 @@ public class SubUnit
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -553,6 +587,7 @@ public class SubUnit
 			statement.setInt(1, _clan.getClanId());
 			statement.setInt(2, _type);
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				int id = rset.getInt("skill_id");

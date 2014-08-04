@@ -26,7 +26,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public class SteelCitadelTeleporterInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -52,21 +52,25 @@ public class SteelCitadelTeleporterInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (!player.isInParty())
 		{
 			showChatWindow(player, "default/32745-1.htm");
 			return;
 		}
+		
 		if (player.getParty().getPartyLeader() != player)
 		{
 			showChatWindow(player, "default/32745-2.htm");
 			return;
 		}
+		
 		if (!rangeCheck(player))
 		{
 			showChatWindow(player, "default/32745-2.htm");
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("01_up"))
 		{
 			player.getParty().Teleport(new Location(-22208, 277122, -13376));
@@ -177,6 +181,7 @@ public class SteelCitadelTeleporterInstance extends NpcInstance
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
@@ -191,6 +196,7 @@ public class SteelCitadelTeleporterInstance extends NpcInstance
 		{
 			return 3;
 		}
+		
 		return 4;
 	}
 	
@@ -202,6 +208,7 @@ public class SteelCitadelTeleporterInstance extends NpcInstance
 	private void enterInstance(Player player, int floor)
 	{
 		Reflection r = player.getActiveReflection();
+		
 		if (r != null)
 		{
 			if (player.canReenterInstance(getIz(floor)))

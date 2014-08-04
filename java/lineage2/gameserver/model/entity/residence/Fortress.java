@@ -38,7 +38,7 @@ import org.slf4j.LoggerFactory;
 public class Fortress extends Residence
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -153,35 +153,43 @@ public class Fortress extends Residence
 			if (clan.getHasFortress() != 0)
 			{
 				Fortress oldFortress = ResidenceHolder.getInstance().getResidence(Fortress.class, clan.getHasFortress());
+				
 				if (oldFortress != null)
 				{
 					oldFortress.changeOwner(null);
 				}
 			}
+			
 			if (clan.getCastle() != 0)
 			{
 				Castle oldCastle = ResidenceHolder.getInstance().getResidence(Castle.class, clan.getCastle());
+				
 				if (oldCastle != null)
 				{
 					oldCastle.changeOwner(null);
 				}
 			}
 		}
+		
 		if ((getOwnerId() > 0) && ((clan == null) || (clan.getClanId() != getOwnerId())))
 		{
 			removeSkills();
 			Clan oldOwner = getOwner();
+			
 			if (oldOwner != null)
 			{
 				oldOwner.setHasFortress(0);
 			}
+			
 			cancelCycleTask();
 			clearFacility();
 		}
+		
 		if (clan != null)
 		{
 			clan.setHasFortress(getId());
 		}
+		
 		updateOwnerInDB(clan);
 		rewardSkills();
 		setFortState(NOT_DECIDED, 0);
@@ -208,6 +216,7 @@ public class Fortress extends Residence
 		_owner = clan;
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -215,6 +224,7 @@ public class Fortress extends Residence
 			statement.setInt(1, getId());
 			statement.execute();
 			DbUtils.close(statement);
+			
 			if (clan != null)
 			{
 				statement = con.prepareStatement("UPDATE clan_data SET hasFortress=? WHERE clan_id=? LIMIT 1");
@@ -270,20 +280,25 @@ public class Fortress extends Residence
 	public void chanceCycle()
 	{
 		super.chanceCycle();
+		
 		if (getCycle() >= REMOVE_CYCLE)
 		{
 			getOwner().broadcastToOnlineMembers(SystemMsg.ENEMY_BLOOD_PLEDGES_HAVE_INTRUDED_INTO_THE_FORTRESS);
 			changeOwner(null);
 			return;
 		}
+		
 		setPaidCycle(getPaidCycle() + 1);
+		
 		if ((getPaidCycle() % REWARD_CYCLE) == 0)
 		{
 			setPaidCycle(0);
 			setRewardCount(getRewardCount() + 1);
+			
 			if (getContractState() == CONTRACT_WITH_CASTLE)
 			{
 				Castle castle = ResidenceHolder.getInstance().getResidence(Castle.class, _castleId);
+				
 				if ((castle.getOwner() == null) || (castle.getOwner().getReputationScore() < 2) || (_owner.getWarehouse().getCountOf(ItemTemplate.ITEM_ID_ADENA) > CASTLE_FEE))
 				{
 					setSupplyCount(0);

@@ -83,17 +83,21 @@ public class BitSetIDFactory extends IdFactory
 			freeIds = new BitSet(PrimeFinder.nextPrime(100000));
 			freeIds.clear();
 			freeIdCount = new AtomicInteger(FREE_OBJECT_ID_SIZE);
+			
 			for (int usedObjectId : extractUsedObjectIDTable())
 			{
 				int objectID = usedObjectId - FIRST_OID;
+				
 				if (objectID < 0)
 				{
 					_log.warn("Object ID " + usedObjectId + " in DB is less than minimum ID of " + FIRST_OID);
 					continue;
 				}
+				
 				freeIds.set(usedObjectId - FIRST_OID);
 				freeIdCount.decrementAndGet();
 			}
+			
 			nextFreeId = new AtomicInteger(freeIds.nextClearBit(0));
 			initialized = true;
 			_log.info("IdFactory: " + freeIds.size() + " id's available.");
@@ -135,10 +139,12 @@ public class BitSetIDFactory extends IdFactory
 		freeIds.set(newID);
 		freeIdCount.decrementAndGet();
 		int nextFree = freeIds.nextClearBit(newID);
+		
 		if (nextFree < 0)
 		{
 			nextFree = freeIds.nextClearBit(0);
 		}
+		
 		if (nextFree < 0)
 		{
 			if (freeIds.size() < FREE_OBJECT_ID_SIZE)
@@ -150,6 +156,7 @@ public class BitSetIDFactory extends IdFactory
 				throw new NullPointerException("Ran out of valid Id's.");
 			}
 		}
+		
 		nextFreeId.set(nextFree);
 		return newID + FIRST_OID;
 	}

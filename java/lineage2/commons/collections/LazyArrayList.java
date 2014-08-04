@@ -124,6 +124,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		{
 			e.printStackTrace();
 		}
+		
 		return new LazyArrayList<>();
 	}
 	
@@ -215,11 +216,13 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	public E set(int index, E element)
 	{
 		E e = null;
+		
 		if ((index >= 0) && (index < size))
 		{
 			e = (E) elementData[index];
 			elementData[index] = element;
 		}
+		
 		return e;
 	}
 	
@@ -253,20 +256,24 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		{
 			return false;
 		}
+		
 		if ((index >= 0) && (index < size))
 		{
 			Object[] a = c.toArray();
 			int numNew = a.length;
 			ensureCapacity(size + numNew);
 			int numMoved = size - index;
+			
 			if (numMoved > 0)
 			{
 				System.arraycopy(elementData, index, elementData, index + numNew, numMoved);
 			}
+			
 			System.arraycopy(a, 0, elementData, index, numNew);
 			size += numNew;
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -292,11 +299,14 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 					capacity = (capacity * 3) / 2;
 				}
 			}
+			
 			Object[] elementDataResized = new Object[capacity];
+			
 			if (elementData != null)
 			{
 				System.arraycopy(elementData, 0, elementDataResized, 0, size);
 			}
+			
 			elementData = elementDataResized;
 		}
 		else if (elementData == null)
@@ -314,6 +324,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	public E remove(int index)
 	{
 		E e = null;
+		
 		if ((index >= 0) && (index < size))
 		{
 			size--;
@@ -322,6 +333,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 			elementData[size] = null;
 			trim();
 		}
+		
 		return e;
 	}
 	
@@ -337,7 +349,9 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		{
 			return false;
 		}
+		
 		int index = -1;
+		
 		for (int i = 0; i < size; i++)
 		{
 			if (elementData[i] == o)
@@ -346,10 +360,12 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 				break;
 			}
 		}
+		
 		if (index == -1)
 		{
 			return false;
 		}
+		
 		size--;
 		elementData[index] = elementData[size];
 		elementData[size] = null;
@@ -369,6 +385,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		{
 			return false;
 		}
+		
 		for (int i = 0; i < size; i++)
 		{
 			if (elementData[i] == o)
@@ -376,6 +393,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -391,7 +409,9 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		{
 			return -1;
 		}
+		
 		int index = -1;
+		
 		for (int i = 0; i < size; i++)
 		{
 			if (elementData[i] == o)
@@ -400,6 +420,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 				break;
 			}
 		}
+		
 		return index;
 	}
 	
@@ -415,7 +436,9 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		{
 			return -1;
 		}
+		
 		int index = -1;
+		
 		for (int i = 0; i < size; i++)
 		{
 			if (elementData[i] == o)
@@ -423,6 +446,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 				index = i;
 			}
 		}
+		
 		return index;
 	}
 	
@@ -445,6 +469,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		{
 			return (E) elementData[index];
 		}
+		
 		return null;
 	}
 	
@@ -456,12 +481,14 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	public Object clone()
 	{
 		LazyArrayList<E> clone = new LazyArrayList<>();
+		
 		if (size > 0)
 		{
 			clone.capacity = capacity;
 			clone.elementData = new Object[elementData.length];
 			System.arraycopy(elementData, 0, clone.elementData, 0, size);
 		}
+		
 		return clone;
 	}
 	
@@ -476,10 +503,12 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		{
 			return;
 		}
+		
 		for (int i = 0; i < size; i++)
 		{
 			elementData[i] = null;
 		}
+		
 		size = 0;
 		trim();
 	}
@@ -525,6 +554,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		{
 			return false;
 		}
+		
 		Object[] a = c.toArray();
 		int numNew = a.length;
 		ensureCapacity(size + numNew);
@@ -545,11 +575,14 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		{
 			return false;
 		}
+		
 		if (c.isEmpty())
 		{
 			return true;
 		}
+		
 		Iterator<?> e = c.iterator();
+		
 		while (e.hasNext())
 		{
 			if (!contains(e.next()))
@@ -557,6 +590,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
@@ -572,8 +606,10 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		{
 			return false;
 		}
+		
 		boolean modified = false;
 		Iterator<E> e = iterator();
+		
 		while (e.hasNext())
 		{
 			if (!c.contains(e.next()))
@@ -582,6 +618,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 				modified = true;
 			}
 		}
+		
 		return modified;
 	}
 	
@@ -597,8 +634,10 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		{
 			return false;
 		}
+		
 		boolean modified = false;
 		Iterator<?> e = iterator();
+		
 		while (e.hasNext())
 		{
 			if (c.contains(e.next()))
@@ -607,6 +646,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 				modified = true;
 			}
 		}
+		
 		return modified;
 	}
 	
@@ -618,10 +658,12 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	public Object[] toArray()
 	{
 		Object[] r = new Object[size];
+		
 		if (size > 0)
 		{
 			System.arraycopy(elementData, 0, r, 0, size);
 		}
+		
 		return r;
 	}
 	
@@ -634,14 +676,17 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	public <T> T[] toArray(T[] a)
 	{
 		T[] r = a.length >= size ? a : (T[]) java.lang.reflect.Array.newInstance(a.getClass().getComponentType(), size);
+		
 		if (size > 0)
 		{
 			System.arraycopy(elementData, 0, r, 0, size);
 		}
+		
 		if (r.length > size)
 		{
 			r[size] = null;
 		}
+		
 		return r;
 	}
 	
@@ -731,11 +776,14 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 			{
 				throw new IllegalStateException();
 			}
+			
 			LazyArrayList.this.remove(lastRet);
+			
 			if (lastRet < cursor)
 			{
 				cursor--;
 			}
+			
 			lastRet = -1;
 		}
 	}
@@ -808,6 +856,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 			{
 				throw new IllegalStateException();
 			}
+			
 			LazyArrayList.this.set(lastRet, e);
 		}
 		
@@ -834,12 +883,15 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		{
 			return "[]";
 		}
+		
 		StringBuilder sb = new StringBuilder();
 		sb.append('[');
+		
 		for (int i = 0; i < size; i++)
 		{
 			Object e = elementData[i];
 			sb.append(e == this ? "this" : e);
+			
 			if (i == (size - 1))
 			{
 				sb.append(']').toString();
@@ -849,6 +901,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 				sb.append(", ");
 			}
 		}
+		
 		return sb.toString();
 	}
 	

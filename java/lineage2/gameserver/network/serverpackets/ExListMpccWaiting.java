@@ -39,6 +39,7 @@ public class ExListMpccWaiting extends L2GameServerPacket
 		Collection<MatchingRoom> all = MatchingRoomManager.getInstance().getMatchingRooms(MatchingRoom.CC_MATCHING, location, allLevels, player);
 		_fullSize = all.size();
 		_list = new ArrayList<>(PAGE_SIZE);
+		
 		for (MatchingRoom c : all)
 		{
 			if ((i < first) || (i >= firstNot))
@@ -57,6 +58,7 @@ public class ExListMpccWaiting extends L2GameServerPacket
 		writeEx(0x9D);
 		writeD(_fullSize);
 		writeD(_list.size());
+		
 		for (MatchingRoom room : _list)
 		{
 			writeD(room.getId());

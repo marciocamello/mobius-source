@@ -74,11 +74,14 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 			{
 				return;
 			}
+			
 			DoorInstance door = (DoorInstance) actor;
+			
 			if (door.getDoorType() == DoorTemplate.DoorType.WALL)
 			{
 				return;
 			}
+			
 			broadcastTo(SystemMsg.THE_CASTLE_GATE_HAS_BEEN_DESTROYED, SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
 		}
 	}
@@ -98,10 +101,12 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		public void onKill(Creature actor, Creature victim)
 		{
 			Player winner = actor.getPlayer();
+			
 			if ((winner == null) || !victim.isPlayer() || (winner.getLevel() < 40) || (winner == victim) || (victim.getEvent(SiegeEvent.this.getClass()) != SiegeEvent.this) || !checkIfInZone(actor) || !checkIfInZone(victim))
 			{
 				return;
 			}
+			
 			winner.setFame(winner.getFame() + Rnd.get(10, 20), SiegeEvent.this.toString());
 		}
 		
@@ -256,6 +261,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	{
 		clearActions();
 		final Calendar startSiegeDate = getResidence().getSiegeDate();
+		
 		if (onInit)
 		{
 			if (startSiegeDate.getTimeInMillis() <= System.currentTimeMillis())
@@ -271,6 +277,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 			startSiegeDate.add(Calendar.WEEK_OF_YEAR, 2);
 			getResidence().setJdbcState(JdbcEntityState.UPDATED);
 		}
+		
 		registerActions();
 		getResidence().update();
 	}
@@ -285,6 +292,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		calendar.set(Calendar.MINUTE, 0);
 		calendar.set(Calendar.SECOND, 0);
 		calendar.set(Calendar.MILLISECOND, 0);
+		
 		while (calendar.getTimeInMillis() < System.currentTimeMillis())
 		{
 			calendar.add(Calendar.WEEK_OF_YEAR, add);
@@ -310,6 +318,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	{
 		List<Player> players = new ArrayList<>();
 		Clan ownerClan = getResidence().getOwner();
+		
 		if (t.equalsIgnoreCase(OWNER))
 		{
 			if (ownerClan != null)
@@ -328,6 +337,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 			for (Player player : getPlayersInZone())
 			{
 				S siegeClan = getSiegeClan(ATTACKERS, player.getClan());
+				
 				if ((siegeClan != null) && siegeClan.isParticle(player))
 				{
 					players.add(player);
@@ -342,7 +352,9 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 				{
 					continue;
 				}
+				
 				S siegeClan = getSiegeClan(DEFENDERS, player.getClan());
+				
 				if ((siegeClan != null) && siegeClan.isParticle(player))
 				{
 					players.add(player);
@@ -357,6 +369,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 				{
 					continue;
 				}
+				
 				if ((player.getClan() == null) || ((getSiegeClan(ATTACKERS, player.getClan()) == null) && (getSiegeClan(DEFENDERS, player.getClan()) == null)))
 				{
 					players.add(player);
@@ -367,9 +380,11 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		{
 			players = getPlayersInZone();
 		}
+		
 		for (Player player : players)
 		{
 			Location loc = null;
+			
 			if (t.equalsIgnoreCase(OWNER) || t.equalsIgnoreCase(DEFENDERS))
 			{
 				loc = getResidence().getOwnerRestartPoint();
@@ -378,6 +393,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 			{
 				loc = getResidence().getNotOwnerRestartPoint(player);
 			}
+			
 			player.teleToLocation(loc, ReflectionManager.DEFAULT);
 		}
 	}
@@ -390,10 +406,12 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	{
 		List<ZoneObject> zones = getObjects(SIEGE_ZONES);
 		List<Player> result = new LazyArrayList<>();
+		
 		for (ZoneObject zone : zones)
 		{
 			result.addAll(zone.getInsidePlayers());
 		}
+		
 		return result;
 	}
 	
@@ -429,6 +447,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	public boolean checkIfInZone(Creature character)
 	{
 		List<ZoneObject> zones = getObjects(SIEGE_ZONES);
+		
 		for (ZoneObject zone : zones)
 		{
 			if (zone.checkIfInZone(character))
@@ -436,6 +455,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -497,6 +517,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		for (String a : arg)
 		{
 			List<SiegeClanObject> siegeClans = getObjects(a);
+			
 			for (SiegeClanObject s : siegeClans)
 			{
 				s.setEvent(start, this);
@@ -516,6 +537,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		{
 			return null;
 		}
+		
 		return getSiegeClan(name, clan.getClanId());
 	}
 	
@@ -529,18 +551,22 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	public S getSiegeClan(String name, int objectId)
 	{
 		List<SiegeClanObject> siegeClanList = getObjects(name);
+		
 		if (siegeClanList.isEmpty())
 		{
 			return null;
 		}
+		
 		for (int i = 0; i < siegeClanList.size(); i++)
 		{
 			SiegeClanObject siegeClan = siegeClanList.get(i);
+			
 			if (siegeClan.getObjectId() == objectId)
 			{
 				return (S) siegeClan;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -554,6 +580,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		for (String type : types)
 		{
 			List<SiegeClanObject> siegeClans = getObjects(type);
+			
 			for (SiegeClanObject siegeClan : siegeClans)
 			{
 				siegeClan.broadcast(packet);
@@ -571,6 +598,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		for (String type : types)
 		{
 			List<SiegeClanObject> siegeClans = getObjects(type);
+			
 			for (SiegeClanObject siegeClan : siegeClans)
 			{
 				siegeClan.broadcast(packet);
@@ -598,6 +626,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	protected void printInfo()
 	{
 		final long startSiegeMillis = startTimeMillis();
+		
 		if (startSiegeMillis == 0)
 		{
 			info(getName() + " time - undefined");
@@ -620,10 +649,12 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		{
 			return getResidence().getOwner() != null;
 		}
+		
 		if (name.equals(OLD_OWNER))
 		{
 			return _oldOwner != null;
 		}
+		
 		return false;
 	}
 	
@@ -639,6 +670,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		{
 			return false;
 		}
+		
 		return (getSiegeClan(ATTACKERS, player.getClan()) != null) || (getSiegeClan(DEFENDERS, player.getClan()) != null);
 	}
 	
@@ -654,7 +686,9 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		{
 			return;
 		}
+		
 		S clan = getSiegeClan(ATTACKERS, player.getClan());
+		
 		if (clan != null)
 		{
 			if (clan.getFlag() != null)
@@ -675,6 +709,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	{
 		S attackerClan = getSiegeClan(ATTACKERS, player.getClan());
 		Location loc = null;
+		
 		switch (type)
 		{
 			case TO_FLAG:
@@ -686,10 +721,13 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 				{
 					player.sendPacket(SystemMsg.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE);
 				}
+				
 				break;
+			
 			default:
 				break;
 		}
+		
 		return loc;
 	}
 	
@@ -705,16 +743,20 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	{
 		Clan clan1 = thisPlayer.getClan();
 		Clan clan2 = targetPlayer.getClan();
+		
 		if ((clan1 == null) || (clan2 == null))
 		{
 			return result;
 		}
+		
 		SiegeEvent<?, ?> siegeEvent2 = targetPlayer.getEvent(SiegeEvent.class);
+		
 		if (this == siegeEvent2)
 		{
 			result |= RelationChanged.RELATION_INSIEGE;
 			SiegeClanObject siegeClan1 = getSiegeClan(SiegeEvent.ATTACKERS, clan1);
 			SiegeClanObject siegeClan2 = getSiegeClan(SiegeEvent.ATTACKERS, clan2);
+			
 			if (((siegeClan1 == null) && (siegeClan2 == null)) || ((siegeClan1 != null) && (siegeClan2 != null) && isAttackersInAlly()))
 			{
 				result |= RelationChanged.RELATION_ALLY;
@@ -723,11 +765,13 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 			{
 				result |= RelationChanged.RELATION_ENEMY;
 			}
+			
 			if (siegeClan1 != null)
 			{
 				result |= RelationChanged.RELATION_ATTACKER;
 			}
 		}
+		
 		return result;
 	}
 	
@@ -741,6 +785,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	public int getUserRelation(Player thisPlayer, int oldRelation)
 	{
 		SiegeClanObject siegeClan = getSiegeClan(SiegeEvent.ATTACKERS, thisPlayer.getClan());
+		
 		if (siegeClan != null)
 		{
 			oldRelation |= 0x180;
@@ -749,6 +794,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		{
 			oldRelation |= 0x80;
 		}
+		
 		return oldRelation;
 	}
 	
@@ -764,38 +810,50 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	public SystemMsg checkForAttack(Creature target, Creature attacker, Skill skill, boolean force)
 	{
 		SiegeEvent<?, ?> siegeEvent = target.getEvent(SiegeEvent.class);
+		
 		if (this != siegeEvent)
 		{
 			return null;
 		}
+		
 		if (!checkIfInZone(target) || !checkIfInZone(attacker))
 		{
 			return null;
 		}
+		
 		Player player = target.getPlayer();
+		
 		if (player == null)
 		{
 			return null;
 		}
+		
 		SiegeClanObject siegeClan1 = getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
+		
 		if ((siegeClan1 == null) && attacker.isSiegeGuard())
 		{
 			return SystemMsg.INVALID_TARGET;
 		}
+		
 		Player playerAttacker = attacker.getPlayer();
+		
 		if (playerAttacker == null)
 		{
 			return SystemMsg.INVALID_TARGET;
 		}
+		
 		SiegeClanObject siegeClan2 = getSiegeClan(SiegeEvent.ATTACKERS, playerAttacker.getClan());
+		
 		if ((siegeClan1 != null) && (siegeClan2 != null) && isAttackersInAlly())
 		{
 			return SystemMsg.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE;
 		}
+		
 		if ((siegeClan1 == null) && (siegeClan2 == null))
 		{
 			return SystemMsg.INVALID_TARGET;
 		}
+		
 		return null;
 	}
 	
@@ -847,6 +905,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		{
 			return;
 		}
+		
 		if (object.isPlayer())
 		{
 			((Player) object).addListener(_killListener);
@@ -864,6 +923,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		{
 			return;
 		}
+		
 		if (object.isPlayer())
 		{
 			((Player) object).removeListener(_killListener);
@@ -890,6 +950,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	{
 		List<Player> playersInZone = getPlayersInZone();
 		List<Player> list = new LazyArrayList<>(playersInZone.size());
+		
 		for (Player player : getPlayersInZone())
 		{
 			if (player.getEvent(getClass()) == this)
@@ -897,6 +958,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 				list.add(player);
 			}
 		}
+		
 		return list;
 	}
 	
@@ -908,14 +970,17 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	public Location getEnterLoc(Player player)
 	{
 		S siegeClan = getSiegeClan(ATTACKERS, player.getClan());
+		
 		if (siegeClan != null)
 		{
 			if (siegeClan.getFlag() != null)
 			{
 				return Location.findAroundPosition(siegeClan.getFlag(), 50, 75);
 			}
+			
 			return getResidence().getNotOwnerRestartPoint(player);
 		}
+		
 		return getResidence().getOwnerRestartPoint();
 	}
 	
@@ -982,11 +1047,13 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		for (HardReference<SummonInstance> ref : _siegeSummons)
 		{
 			SummonInstance summon = ref.get();
+			
 			if (summon != null)
 			{
 				summon.unSummon();
 			}
 		}
+		
 		_siegeSummons.clear();
 	}
 }

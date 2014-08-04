@@ -89,6 +89,7 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 	public void onLoad()
 	{
 		CharListenerList.addGlobal(this);
+		
 		if (isActive())
 		{
 			_active = true;
@@ -116,10 +117,12 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 	public void startEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive("Christmas", true))
 		{
 			spawnEventManagers();
@@ -130,6 +133,7 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 		{
 			player.sendMessage("Event 'Christmas' already started.");
 		}
+		
 		_active = true;
 		show("admin/events.htm", player);
 	}
@@ -140,10 +144,12 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 	public void stopEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive("Christmas", false))
 		{
 			unSpawnEventManagers();
@@ -154,6 +160,7 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 		{
 			player.sendMessage("Event 'Christmas' not started.");
 		}
+		
 		_active = false;
 		show("admin/events.htm", player);
 	}
@@ -357,12 +364,14 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 		if (_active && SimpleCheckDrop(cha, killer))
 		{
 			int dropCounter = 0;
+			
 			for (int[] drop : _dropdata)
 			{
 				if (Rnd.chance(drop[1] * killer.getPlayer().getRateItems() * Config.RATE_DROP_ITEMS * 0.1))
 				{
 					dropCounter++;
 					((NpcInstance) cha).dropItem(killer.getPlayer(), drop[0], 1);
+					
 					if (dropCounter > 2)
 					{
 						break;
@@ -379,14 +388,17 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 	public void exchange(String[] var)
 	{
 		final Player player = getSelf();
+		
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;
 		}
+		
 		if (player.isActionsDisabled() || player.isSitting() || (player.getLastNpc() == null) || (player.getLastNpc().getDistance(player) > 300))
 		{
 			return;
 		}
+		
 		if (var[0].equalsIgnoreCase("0"))
 		{
 			if ((getItemCount(player, 5556) >= 4) && (getItemCount(player, 5557) >= 4) && (getItemCount(player, 5558) >= 10) && (getItemCount(player, 5559) >= 1))
@@ -398,8 +410,10 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 				addItem(player, 5560, 1);
 				return;
 			}
+			
 			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
 		}
+		
 		if (var[0].equalsIgnoreCase("1"))
 		{
 			if (getItemCount(player, 5560) >= 10)
@@ -408,8 +422,10 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 				addItem(player, 5561, 1);
 				return;
 			}
+			
 			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
 		}
+		
 		if (var[0].equalsIgnoreCase("2"))
 		{
 			if (getItemCount(player, 5560) >= 10)
@@ -418,8 +434,10 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 				addItem(player, 7836, 1);
 				return;
 			}
+			
 			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
 		}
+		
 		if (var[0].equalsIgnoreCase("3"))
 		{
 			if (getItemCount(player, 5560) >= 10)
@@ -428,8 +446,10 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 				addItem(player, 8936, 1);
 				return;
 			}
+			
 			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
 		}
+		
 		if (var[0].equalsIgnoreCase("4"))
 		{
 			if (getItemCount(player, 5560) >= 20)
@@ -438,6 +458,7 @@ public class Christmas extends Functions implements ScriptFile, OnDeathListener,
 				addItem(player, 10606, 1);
 				return;
 			}
+			
 			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
 		}
 	}

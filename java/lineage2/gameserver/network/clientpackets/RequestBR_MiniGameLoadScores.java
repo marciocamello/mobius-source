@@ -37,10 +37,12 @@ public class RequestBR_MiniGameLoadScores extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if ((player == null) || !Config.EX_JAPAN_MINIGAME)
 		{
 			return;
 		}
+		
 		player.sendPacket(new ExBR_MiniGameLoadScores(player));
 	}
 }

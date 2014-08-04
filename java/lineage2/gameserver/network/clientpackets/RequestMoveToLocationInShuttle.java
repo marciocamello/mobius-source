@@ -58,16 +58,20 @@ public class RequestMoveToLocationInShuttle extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		Boat boat = BoatHolder.getInstance().getBoat(_shuttleId);
+		
 		if (boat == null)
 		{
 			player.sendActionFailed();
 			return;
 		}
+		
 		boat.moveInBoat(player, _originPos, _pos);
 	}
 }

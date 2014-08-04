@@ -25,10 +25,10 @@ public class ExShowUsmVideo extends L2GameServerPacket
 	public static final int Q003 = 0x04; // Какие то типа церберы
 	public static final int Q004 = 0x05; // Ниче не показывает
 	public static final int Q005 = 0x06; // Богиня разрушения предлагает славу
-											// тьмы
+	// тьмы
 	public static final int Q006 = 0x07; // Богиня разрушения... отомстить...
 	public static final int Q007 = 0x08; // Богиня разрушения... Принеси тьме
-											// велику. жертву
+	// велику. жертву
 	public static final int Q009 = 0x09; // ниче нету
 	public static final int Q010 = 0x0A; // Пробуждение, начало
 	public static final int Q011 = 0x0B; //

@@ -30,7 +30,7 @@ import npc.model.residences.fortress.FacilityManagerInstance;
 public class GuardCaptionInstance extends FacilityManagerInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -56,7 +56,9 @@ public class GuardCaptionInstance extends FacilityManagerInstance
 		{
 			return;
 		}
+		
 		Fortress fortress = getFortress();
+		
 		if (command.equalsIgnoreCase("defenceInfo"))
 		{
 			if ((player.getClanPrivileges() & Clan.CP_CS_MANAGE_SIEGE) != Clan.CP_CS_MANAGE_SIEGE)
@@ -64,11 +66,13 @@ public class GuardCaptionInstance extends FacilityManagerInstance
 				showChatWindow(player, "residence2/fortress/fortress_not_authorized.htm");
 				return;
 			}
+			
 			if (fortress.getContractState() != Fortress.CONTRACT_WITH_CASTLE)
 			{
 				showChatWindow(player, "residence2/fortress/fortress_supply_officer005.htm");
 				return;
 			}
+			
 			showChatWindow(player, "residence2/fortress/fortress_garrison002.htm", "%facility_0%", fortress.getFacilityLevel(Fortress.REINFORCE), "%facility_2%", fortress.getFacilityLevel(Fortress.DOOR_UPGRADE), "%facility_3%", fortress.getFacilityLevel(Fortress.DWARVENS), "%facility_4%", fortress.getFacilityLevel(Fortress.SCOUT));
 		}
 		else if (command.equalsIgnoreCase("defenceUp1") || command.equalsIgnoreCase("defenceUp2"))
@@ -82,9 +86,11 @@ public class GuardCaptionInstance extends FacilityManagerInstance
 		else if (command.equalsIgnoreCase("doorUpgrade"))
 		{
 			boolean buy = buyFacility(player, Fortress.DOOR_UPGRADE, 1, 200000);
+			
 			if (buy)
 			{
 				List<DoorObject> doorObjects = fortress.getSiegeEvent().getObjects(FortressSiegeEvent.UPGRADEABLE_DOORS);
+				
 				for (DoorObject d : doorObjects)
 				{
 					d.setUpgradeValue(fortress.<SiegeEvent<?, ?>> getSiegeEvent(), d.getDoor().getMaxHp() * fortress.getFacilityLevel(Fortress.DOOR_UPGRADE));

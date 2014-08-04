@@ -70,14 +70,17 @@ public class HardReferences
 	public static <T> Collection<T> unwrap(Collection<HardReference<T>> refs)
 	{
 		List<T> result = new ArrayList<>(refs.size());
+		
 		for (HardReference<T> ref : refs)
 		{
 			T obj = ref.get();
+			
 			if (obj != null)
 			{
 				result.add(obj);
 			}
 		}
+		
 		return result;
 	}
 	

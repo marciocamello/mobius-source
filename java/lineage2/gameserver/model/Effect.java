@@ -232,6 +232,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		{
 			return System.currentTimeMillis();
 		}
+		
 		return _startTimeMillis;
 	}
 	
@@ -343,10 +344,12 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	public boolean checkStackType(Effect param)
 	{
 		boolean r = false;
+		
 		for (String arg : param.getStackType())
 		{
 			r = checkStackType(arg);
 		}
+		
 		return r;
 	}
 	
@@ -537,26 +540,32 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		{
 			getEffected().startAbnormalEffect(getEffectType().getAbnormal());
 		}
+		
 		if (getTemplate()._abnormalEffect2 != AbnormalEffect.NULL)
 		{
 			getEffected().startAbnormalEffect(getTemplate()._abnormalEffect2);
 		}
+		
 		if (getTemplate()._abnormalEffect3 != AbnormalEffect.NULL)
 		{
 			getEffected().startAbnormalEffect(getTemplate()._abnormalEffect3);
 		}
+		
 		if (_template._cancelOnAction)
 		{
 			getEffected().addListener(_actionlistener = new ActionDispelListener());
 		}
+		
 		if (_template._cancelOnAttacked)
 		{
 			getEffected().addListener(_attackedlistener = new AttackedDispelListener());
 		}
+		
 		if (getEffected().isPlayer() && !getSkill().canUseTeleport())
 		{
 			getEffected().getPlayer().getPlayerAccess().UseTeleport = false;
 		}
+		
 		getEffected().broadcastEffectsStatusToListeners();
 	}
 	
@@ -573,6 +582,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	{
 		getEffected().removeStatsOwner(this);
 		getEffected().removeTriggers(getTemplate());
+		
 		if (getTemplate()._abnormalEffect != AbnormalEffect.NULL)
 		{
 			getEffected().stopAbnormalEffect(getTemplate()._abnormalEffect);
@@ -581,30 +591,37 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		{
 			getEffected().stopAbnormalEffect(getEffectType().getAbnormal());
 		}
+		
 		if (getTemplate()._abnormalEffect2 != AbnormalEffect.NULL)
 		{
 			getEffected().stopAbnormalEffect(getTemplate()._abnormalEffect2);
 		}
+		
 		if (getTemplate()._abnormalEffect3 != AbnormalEffect.NULL)
 		{
 			getEffected().stopAbnormalEffect(getTemplate()._abnormalEffect3);
 		}
+		
 		if (_template._cancelOnAction)
 		{
 			getEffected().removeListener(_actionlistener);
 		}
+		
 		if (_template._cancelOnAttacked)
 		{
 			getEffected().removeListener(_attackedlistener);
 		}
+		
 		if (getEffected().isPlayer() && getStackType().contains(EffectTemplate.HP_RECOVER_CAST))
 		{
 			getEffected().sendPacket(new ShortBuffStatusUpdate());
 		}
+		
 		if (getEffected().isPlayer() && !getSkill().canUseTeleport() && !getEffected().getPlayer().getPlayerAccess().UseTeleport)
 		{
 			getEffected().getPlayer().getPlayerAccess().UseTeleport = true;
 		}
+		
 		if (getEffected().isPlayer() && (getEffected().getPlayer().getSummonList() != null))
 		{
 			for (Summon sm : getEffected().getPlayer().getSummonList())
@@ -615,6 +632,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 				}
 			}
 		}
+		
 		getEffected().broadcastEffectsStatusToListeners();
 	}
 	
@@ -647,14 +665,17 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	public final void schedule()
 	{
 		Creature effected = getEffected();
+		
 		if (effected == null)
 		{
 			return;
 		}
+		
 		if (!checkCondition())
 		{
 			return;
 		}
+		
 		getEffected().getEffectList().addEffect(this);
 	}
 	
@@ -699,6 +720,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 				}
 			}
 		}
+		
 		run();
 	}
 	
@@ -714,36 +736,44 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 			{
 				getEffected().sendPacket(new SystemMessage(SystemMessage.S1_S2S_EFFECT_CAN_BE_FELT).addSkillName(_displayId, _displayLevel));
 			}
+			
 			return;
 		}
+		
 		if (getState() == SUSPENDED)
 		{
 			if (isTimeLeft())
 			{
 				_count--;
+				
 				if (isTimeLeft())
 				{
 					return;
 				}
 			}
+			
 			exit();
 			return;
 		}
+		
 		if (getState() == ACTING)
 		{
 			if (isTimeLeft())
 			{
 				_count--;
+				
 				if ((!isActive() || onActionTime()) && isTimeLeft())
 				{
 					return;
 				}
 			}
 		}
+		
 		if (setState(ACTING, FINISHING))
 		{
 			setInUse(false);
 		}
+		
 		if (setState(FINISHING, FINISHED))
 		{
 			synchronized (this)
@@ -753,6 +783,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 				onExit();
 			}
 			Effect next = getNext();
+			
 			if (next != null)
 			{
 				if (next.setState(SUSPENDED, STARTING))
@@ -760,12 +791,15 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 					next.schedule();
 				}
 			}
+			
 			if (getSkill().getDelayedEffect() > 0)
 			{
 				SkillTable.getInstance().getInfo(getSkill().getDelayedEffect(), 1).getEffects(_effector, _effected, false, false);
 			}
+			
 			boolean msg = !isHidden() && (getEffected().getEffectList().getEffectsCountForSkill(getSkill().getId()) == 1);
 			getEffected().getEffectList().removeEffect(this);
+			
 			if (msg)
 			{
 				getEffected().sendPacket(new SystemMessage(SystemMessage.S1_HAS_WORN_OFF).addSkillName(_displayId, _displayLevel));
@@ -779,11 +813,14 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	public final void exit()
 	{
 		Effect next = getNext();
+		
 		if (next != null)
 		{
 			next.exit();
 		}
+		
 		removeNext();
+		
 		if (setState(STARTING, FINISHED))
 		{
 			getEffected().getEffectList().removeEffect(this);
@@ -819,11 +856,14 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		{
 			return false;
 		}
+		
 		Effect next = getNext();
+		
 		if ((next != null) && !next.maybeScheduleNext(e))
 		{
 			return false;
 		}
+		
 		_next = e;
 		return true;
 	}
@@ -859,6 +899,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 				newEffect.suspend();
 				scheduleNext(newEffect);
 			}
+			
 			return false;
 		}
 		else if (newEffect.getTimeLeft() >= getTimeLeft())
@@ -868,6 +909,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 				newEffect.scheduleNext(getNext());
 				removeNext();
 			}
+			
 			exit();
 		}
 		else
@@ -875,6 +917,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 			suspend();
 			newEffect.scheduleNext(this);
 		}
+		
 		return true;
 	}
 	
@@ -897,6 +940,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		{
 			return;
 		}
+		
 		int duration = _skill.isToggle() ? AbnormalStatusUpdate.INFINITIVE_EFFECT : getTimeLeft();
 		ps.addIconEffect(_displayId, _displayLevel, duration, getEffectorObj());
 	}
@@ -912,6 +956,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		{
 			return;
 		}
+		
 		int duration = _skill.isToggle() ? AbnormalStatusUpdate.INFINITIVE_EFFECT : getTimeLeft();
 		os.addSpellRecivedPlayer(player);
 		os.addEffect(_displayId, _displayLevel, duration);
@@ -956,6 +1001,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		{
 			return 0;
 		}
+		
 		return 1;
 	}
 	

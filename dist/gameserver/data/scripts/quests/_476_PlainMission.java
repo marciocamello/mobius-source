@@ -48,12 +48,10 @@ public class _476_PlainMission extends Quest implements ScriptFile
 		super(true);
 		addStartNpc(GUIDE);
 		addTalkId(ANDREI);
-		
 		addKillNpcWithLog(1, A_LIST, 12, 21278, 21279, 21280);
 		addKillNpcWithLog(1, B_LIST, 12, 21282, 21283, 21284);
 		addKillNpcWithLog(1, C_LIST, 12, 21286, 21287, 21288);
 		addKillNpcWithLog(1, D_LIST, 12, 21290, 21291, 21292);
-		
 		addLevelCheck(65, 69);
 	}
 	
@@ -61,12 +59,14 @@ public class _476_PlainMission extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		st.getPlayer();
+		
 		if (event.equalsIgnoreCase("33463-3.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return event;
 	}
 	
@@ -77,6 +77,7 @@ public class _476_PlainMission extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int state = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == GUIDE)
 		{
 			if (state == 1)
@@ -85,27 +86,31 @@ public class _476_PlainMission extends Quest implements ScriptFile
 				{
 					return "33463-comp.htm";
 				}
+				
 				return "33463.htm";
 			}
+			
 			if (state == 2)
 			{
 				if (cond == 1)
 				{
 					return "33463-4.htm";
 				}
+				
 				if (cond == 2)
 				{
 					return "33463-5.htm";
 				}
 			}
-			
 		}
+		
 		if ((npcId == ANDREI) && (state == 2))
 		{
 			if (cond == 1)
 			{
 				return "31292-1.htm";
 			}
+			
 			if (cond == 2)
 			{
 				st.giveItems(57, 142200);
@@ -116,6 +121,7 @@ public class _476_PlainMission extends Quest implements ScriptFile
 				return "31292.htm"; // no further html do here
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -123,11 +129,14 @@ public class _476_PlainMission extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if ((cond != 1) || (npc == null))
 		{
 			return null;
 		}
+		
 		boolean doneKill = updateKill(npc, st);
+		
 		if (doneKill)
 		{
 			st.unset(A_LIST);

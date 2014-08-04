@@ -42,11 +42,13 @@ public class NoLandingZoneListener implements OnZoneEnterLeaveListener
 	public void onZoneEnter(Zone zone, Creature actor)
 	{
 		Player player = actor.getPlayer();
+		
 		if (player != null)
 		{
 			if (player.isFlying() && (player.getMountNpcId() == PetDataTable.WYVERN_ID))
 			{
 				Residence residence = ResidenceHolder.getInstance().getResidence(zone.getParams().getInteger("residence", 0));
+				
 				if ((residence != null) && (player.getClan() != null) && (residence.getOwner() == player.getClan()))
 				{
 				}

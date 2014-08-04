@@ -52,11 +52,13 @@ public class _10376_BloodyGoodTime extends Quest implements ScriptFile
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		if (event.equalsIgnoreCase("32139-03.htm"))
 		{
 			st.setCond(2);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		if (event.equalsIgnoreCase("enterInstance"))
 		{
 			st.setCond(3);
@@ -66,21 +68,25 @@ public class _10376_BloodyGoodTime extends Quest implements ScriptFile
 			BloodyVein.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, st.getPlayer(), 100000);
 			return "";
 		}
+		
 		if (event.equalsIgnoreCase("32139-08.htm"))
 		{
 			st.setCond(5);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		if (event.equalsIgnoreCase("teleport_goddard"))
 		{
 			st.getPlayer().teleToLocation(149597, -57249, -2976);
 			return "";
 		}
+		
 		if (event.equalsIgnoreCase("31588-03.htm"))
 		{
 			st.setCond(6);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		if (event.equalsIgnoreCase("31292-03.htm"))
 		{
 			st.addExpAndSp(121297500, 48433200);
@@ -88,6 +94,7 @@ public class _10376_BloodyGoodTime extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return event;
 	}
 	
@@ -97,6 +104,7 @@ public class _10376_BloodyGoodTime extends Quest implements ScriptFile
 		st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == NPC_ZENYA)
 		{
 			switch (st.getState())
@@ -104,10 +112,12 @@ public class _10376_BloodyGoodTime extends Quest implements ScriptFile
 				case COMPLETED:
 					htmltext = "32140-05.htm";
 					break;
+				
 				case CREATED:
 					if (st.getPlayer().getLevel() >= 80)
 					{
 						QuestState qs = st.getPlayer().getQuestState(_10375_SuccubusDisciples.class);
+						
 						if ((st.getPlayer().getClassId().level() == 4) && (qs != null) && qs.isCompleted())
 						{
 							htmltext = "32140-01.htm";
@@ -122,7 +132,9 @@ public class _10376_BloodyGoodTime extends Quest implements ScriptFile
 					{
 						htmltext = "32140-04.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					htmltext = "32140-07.htm";
 			}
@@ -136,11 +148,13 @@ public class _10376_BloodyGoodTime extends Quest implements ScriptFile
 					case 1:
 						htmltext = "32139-02.htm";
 						break;
+					
 					case 2:
 					case 3:
 						htmltext = "32139-03.htm";
 						Integer obj_id = spawns.get(st.getPlayer().getObjectId());
 						NpcInstance mob = obj_id != null ? GameObjectsStorage.getNpc(obj_id) : null;
+						
 						if ((mob == null) || mob.isDead())
 						{
 							htmltext = "32139-03.htm";
@@ -149,10 +163,13 @@ public class _10376_BloodyGoodTime extends Quest implements ScriptFile
 						{
 							htmltext = "noquest";
 						}
+						
 						break;
+					
 					case 4:
 						htmltext = "32139-04.htm";
 						break;
+					
 					case 5:
 						htmltext = "32139-08.htm";
 				}
@@ -182,6 +199,7 @@ public class _10376_BloodyGoodTime extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -192,12 +210,14 @@ public class _10376_BloodyGoodTime extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		if (updateKill(npc, st))
 		{
 			st.unset(_bloodyVein);
 			st.setCond(4);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return null;
 	}
 	

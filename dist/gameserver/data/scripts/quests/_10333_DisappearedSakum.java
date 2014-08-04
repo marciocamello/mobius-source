@@ -64,6 +64,7 @@ public class _10333_DisappearedSakum extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -85,6 +86,7 @@ public class _10333_DisappearedSakum extends Quest implements ScriptFile
 			st.setCond(2);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return htmltext;
 	}
 	
@@ -94,6 +96,7 @@ public class _10333_DisappearedSakum extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == batis)
 		{
 			if (st.isCompleted())
@@ -155,6 +158,7 @@ public class _10333_DisappearedSakum extends Quest implements ScriptFile
 				htmltext = "2-1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -162,10 +166,12 @@ public class _10333_DisappearedSakum extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		boolean doneKill = updateKill(npc, st);
+		
 		if (((npc.getNpcId() == spider) || (npc.getNpcId() == bigspider) || (npc.getNpcId() == arach)) && (st.getQuestItemsCount(mark) < 5) && (st.getCond() == 2))
 		{
 			st.giveItems(mark, 1, false);
 		}
+		
 		if (doneKill && (st.getQuestItemsCount(mark) >= 5))
 		{
 			st.unset(vooko_item);
@@ -173,6 +179,7 @@ public class _10333_DisappearedSakum extends Quest implements ScriptFile
 			st.setCond(3);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return null;
 	}
 }

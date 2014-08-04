@@ -53,13 +53,17 @@ public class ChargeSoul extends Skill
 		{
 			return;
 		}
+		
 		boolean ss = activeChar.getChargedSoulShot() && isSSPossible();
+		
 		if (ss && (getTargetType() != SkillTargetType.TARGET_SELF))
 		{
 			activeChar.unChargeShots(false);
 		}
+		
 		Creature realTarget;
 		boolean reflected;
+		
 		for (Creature target : targets)
 		{
 			if (target != null)
@@ -68,28 +72,36 @@ public class ChargeSoul extends Skill
 				{
 					continue;
 				}
+				
 				reflected = (target != activeChar) && target.checkReflectSkill(activeChar, this);
 				realTarget = reflected ? activeChar : target;
+				
 				if (getPower() > 0)
 				{
 					AttackInfo info = Formulas.calcPhysDam(activeChar, realTarget, this, false, false, ss, false);
+					
 					if (info.lethal_dmg > 0)
 					{
 						realTarget.reduceCurrentHp(info.lethal_dmg, info.reflectableDamage, activeChar, this, true, true, false, false, false, false, false);
 					}
+					
 					realTarget.reduceCurrentHp(info.damage, info.reflectableDamage, activeChar, this, true, true, false, true, false, false, true);
+					
 					if (!reflected)
 					{
 						realTarget.doCounterAttack(this, activeChar, false);
 					}
 				}
+				
 				if (realTarget.isPlayable() || realTarget.isMonster())
 				{
 					activeChar.setConsumedSouls(activeChar.getConsumedSouls() + _numSouls, null);
 				}
+				
 				getEffects(activeChar, target, getActivateRate() > 0, false, reflected);
 			}
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());

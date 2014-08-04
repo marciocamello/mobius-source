@@ -28,7 +28,7 @@ import lineage2.gameserver.utils.Location;
 public class LostCaptainInstance extends ReflectionBossInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -57,9 +57,11 @@ public class LostCaptainInstance extends ReflectionBossInstance
 		r.setReenterTime(System.currentTimeMillis());
 		super.onDeath(killer);
 		InstantZone iz = r.getInstancedZone();
+		
 		if (iz != null)
 		{
 			String tele_device_loc = iz.getAddParams().getString("tele_device_loc", null);
+			
 			if (tele_device_loc != null)
 			{
 				KamalokaGuardInstance npc = new KamalokaGuardInstance(IdFactory.getInstance().getNextId(), NpcHolder.getInstance().getTemplate(TELE_DEVICE_ID));

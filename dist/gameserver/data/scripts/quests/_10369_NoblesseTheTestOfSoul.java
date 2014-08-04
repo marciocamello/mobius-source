@@ -126,28 +126,34 @@ public class _10369_NoblesseTheTestOfSoul extends Quest implements ScriptFile, O
 		{
 			return;
 		}
+		
 		QuestState st = ((Player) actor).getQuestState(_10369_NoblesseTheTestOfSoul.class);
 		
 		if (st == null)
 		{
 			return;
 		}
+		
 		NpcInstance npc = (NpcInstance) target;
 		Player player = st.getPlayer();
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
+		
 		switch (skill.getId())
 		{
 			case HelpingS:
 				if ((npcId == Helping) && (cond == 16)) // Aden Castle
 				{
 					ItemFunctions.removeItem(st.getPlayer(), HelpingSeed, 1L, true);
-					/* NpcInstance mob = */st.addSpawn(HelpingTree, 148216, 14856, -1393);
+					/* NpcInstance mob = */
+					st.addSpawn(HelpingTree, 148216, 14856, -1393);
 					st.giveItems(Ashes, 1);
 					st.playSound("ItemSound.quest_middle");
 					st.setCond(17);
 				}
+				
 				break;
+			
 			case Trower:
 				if ((st.getCond() == 10) && (npcId == FlameFlower) && !npc.isDead())
 				{
@@ -155,6 +161,7 @@ public class _10369_NoblesseTheTestOfSoul extends Quest implements ScriptFile, O
 					st.playSound("ItemSound.quest_itemget");
 					npc.doDie(player);
 				}
+				
 				if ((st.getQuestItemsCount(EnergyOfFire) >= 5))
 				{
 					st.playSound(SOUND_MIDDLE);
@@ -169,21 +176,25 @@ public class _10369_NoblesseTheTestOfSoul extends Quest implements ScriptFile, O
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
+		
 		if (player == null)
 		{
 			return null;
 		}
+		
 		if ((npcId == OneWho) && (cond == 2))
 		{
 			st.giveItems(NovellProphecy, 1);
 			st.playSound("ItemSound.quest_itemget");
 			st.setCond(3);
 		}
+		
 		if ((st.getCond() == 8) && ArrayUtils.contains(HotSprings, npcId) && Rnd.chance(40))
 		{
 			st.giveItems(HardLeather, 1);
 			st.playSound("ItemSound.quest_itemget");
 		}
+		
 		if ((st.getQuestItemsCount(HardLeather) >= 10))
 		{
 			st.setCond(9);
@@ -195,11 +206,13 @@ public class _10369_NoblesseTheTestOfSoul extends Quest implements ScriptFile, O
 			st.giveItems(HfCeoW, 1);
 			st.playSound("ItemSound.quest_itemget");
 		}
+		
 		if ((st.getQuestItemsCount(HfCeoW) >= 10))
 		{
 			st.setCond(13);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return null;
 	}
 	
@@ -209,6 +222,7 @@ public class _10369_NoblesseTheTestOfSoul extends Quest implements ScriptFile, O
 		Player player = st.getPlayer();
 		String htmltext = event;
 		int cond = st.getCond();
+		
 		if ((cond == 0) && event.equalsIgnoreCase("showMovie"))
 		{
 			st.setState(STARTED);
@@ -296,6 +310,7 @@ public class _10369_NoblesseTheTestOfSoul extends Quest implements ScriptFile, O
 				st.playSound(SOUND_FINISH);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -306,6 +321,7 @@ public class _10369_NoblesseTheTestOfSoul extends Quest implements ScriptFile, O
 		Player player = st.getPlayer();
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
+		
 		switch (npcId)
 		{
 			case Cerenas:
@@ -315,10 +331,12 @@ public class _10369_NoblesseTheTestOfSoul extends Quest implements ScriptFile, O
 					{
 						return "Subclass only!";
 					}
+					
 					if (st.getPlayer().getSubClassList().size() < 2)
 					{
 						return "You do not have subclass!";
 					}
+					
 					if (st.getPlayer().getLevel() >= 75)
 					{
 						htmltext = "Cerenas-1.htm";
@@ -355,7 +373,9 @@ public class _10369_NoblesseTheTestOfSoul extends Quest implements ScriptFile, O
 					player.teleToLocation(new Location(-122136, -116552, -5797));
 					st.setCond(18);
 				}
+				
 				break;
+			
 			case Lanya:
 				if ((cond == 6) && (st.getQuestItemsCount(HotFull) == 1))
 				{
@@ -386,22 +406,28 @@ public class _10369_NoblesseTheTestOfSoul extends Quest implements ScriptFile, O
 					st.playSound("ItemSound.quest_middle");
 					st.setCond(14);
 				}
+				
 				break;
+			
 			case EvasAltar:
 				if (cond == 5)
 				{
 					htmltext = "Evas-1.htm";
 				}
+				
 				if (cond == 15)
 				{
 					htmltext = "Evas-4.htm";
 				}
+				
 				if (cond == 18)
 				{
 					htmltext = "Evas-6.htm";
 				}
+				
 				break;
 		}
+		
 		return htmltext;
 	}
 }

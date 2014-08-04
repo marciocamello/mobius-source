@@ -41,6 +41,7 @@ public class ValakasMinion extends Mystic
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
+		
 		for (Player p : ValakasManager.getZone().getInsidePlayers())
 		{
 			notifyEvent(CtrlEvent.EVT_AGGRESSION, p, 5000);

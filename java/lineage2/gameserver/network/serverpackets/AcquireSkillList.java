@@ -75,6 +75,7 @@ public class AcquireSkillList extends L2GameServerPacket
 			writeD(temp.maxLevel);
 			writeD(temp.cost);
 			writeD(temp.requirements);
+			
 			if (_type == AcquireType.SUB_UNIT)
 			{
 				writeD(temp.subUnit);

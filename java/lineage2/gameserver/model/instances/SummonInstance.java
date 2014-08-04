@@ -35,7 +35,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class SummonInstance extends Summon
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -173,14 +173,17 @@ public class SummonInstance extends Summon
 		public void runImpl()
 		{
 			Player owner = getPlayer();
+			
 			if (owner == null)
 			{
 				_disappearTask = null;
 				unSummon();
 				return;
 			}
+			
 			int usedtime = isInCombat() ? CYCLE : CYCLE / 4;
 			_lifetimeCountdown -= usedtime;
+			
 			if (_lifetimeCountdown <= 0)
 			{
 				owner.sendPacket(Msg.SERVITOR_DISAPPEASR_BECAUSE_THE_SUMMONING_TIME_IS_OVER);
@@ -188,6 +191,7 @@ public class SummonInstance extends Summon
 				unSummon();
 				return;
 			}
+			
 			owner.sendPacket(new SetSummonRemainTime(SummonInstance.this));
 			_disappearTask = ThreadPoolManager.getInstance().schedule(this, CYCLE);
 		}
@@ -202,11 +206,13 @@ public class SummonInstance extends Summon
 	{
 		super.onDeath(killer);
 		saveEffects();
+		
 		if (_disappearTask != null)
 		{
 			_disappearTask.cancel(false);
 			_disappearTask = null;
 		}
+		
 		getPlayer().getSummonList().removeSummon(this);
 	}
 	
@@ -220,6 +226,7 @@ public class SummonInstance extends Summon
 			_disappearTask.cancel(false);
 			_disappearTask = null;
 		}
+		
 		getPlayer().getSummonList().removeSummon(this);
 	}
 	
@@ -256,14 +263,17 @@ public class SummonInstance extends Summon
 	public void displayGiveDamageMessage(Creature target, int damage, boolean crit, boolean miss, boolean shld, boolean magic)
 	{
 		Player owner = getPlayer();
+		
 		if (owner == null)
 		{
 			return;
 		}
+		
 		if (crit)
 		{
 			owner.sendPacket(SystemMsg.SUMMONED_MONSTERS_CRITICAL_HIT);
 		}
+		
 		if (miss)
 		{
 			owner.sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addName(this));

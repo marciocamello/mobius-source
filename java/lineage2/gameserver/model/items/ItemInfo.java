@@ -197,6 +197,7 @@ public class ItemInfo
 	public void setItemId(int itemId)
 	{
 		this.itemId = itemId;
+		
 		if (itemId > 0)
 		{
 			item = ItemHolder.getInstance().getTemplate(getItemId());
@@ -205,6 +206,7 @@ public class ItemInfo
 		{
 			item = null;
 		}
+		
 		if (item != null)
 		{
 			setType1(item.getType1());
@@ -612,18 +614,22 @@ public class ItemInfo
 		{
 			return true;
 		}
+		
 		if (obj == null)
 		{
 			return false;
 		}
+		
 		if (getClass() != obj.getClass())
 		{
 			return false;
 		}
+		
 		if (getObjectId() == 0)
 		{
 			return getItemId() == ((ItemInfo) obj).getItemId();
 		}
+		
 		return getObjectId() == ((ItemInfo) obj).getObjectId();
 	}
 	

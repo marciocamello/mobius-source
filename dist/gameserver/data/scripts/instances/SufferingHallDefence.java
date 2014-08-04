@@ -92,7 +92,7 @@ public class SufferingHallDefence extends Reflection
 	private class DeathListener implements OnDeathListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public DeathListener()
 		{
@@ -106,12 +106,14 @@ public class SufferingHallDefence extends Reflection
 			{
 				return;
 			}
+			
 			if (ArrayUtils.contains(monsters, self.getNpcId()) && !checkAliveMonsters())
 			{
 				if (monstersSpawnTask != null)
 				{
 					monstersSpawnTask.cancel(false);
 				}
+				
 				monstersSpawnTask = ThreadPoolManager.getInstance().schedule(new RunnableImpl()
 				{
 					@Override
@@ -121,6 +123,7 @@ public class SufferingHallDefence extends Reflection
 					}
 				}, 40000L);
 			}
+			
 			if (self.getNpcId() == AliveTumor)
 			{
 				self.deleteMe();
@@ -139,14 +142,16 @@ public class SufferingHallDefence extends Reflection
 						{
 							monstersSpawnTask.cancel(false);
 						}
+						
 						if (coffinSpawnTask != null)
 						{
 							coffinSpawnTask.cancel(false);
 						}
+						
 						clearReflection(5, true);
 						spawnByGroup("soi_hos_defence_tepios");
-						
 						setReenterTime(System.currentTimeMillis());
+						
 						for (Player p : getPlayers())
 						{
 							p.sendPacket(new ExSendUIEvent(p, 1, 1, 0, 0));
@@ -173,7 +178,9 @@ public class SufferingHallDefence extends Reflection
 		{
 			return;
 		}
+		
 		tumorIndex -= 5;
+		
 		if (tumorIndex == 100)
 		{
 			for (Player p : getPlayers())
@@ -188,12 +195,14 @@ public class SufferingHallDefence extends Reflection
 				p.sendPacket(new ExShowScreenMessage(NpcString.YOU_CAN_FEEL_THE_SURGING_ENERGY_OF_DEATH_FROM_THE_TUMOR, 8000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, false, 1, -1, false));
 			}
 		}
+		
 		if (tumorIndex <= 0)
 		{
 			if (getTumor(DeadTumor) != null)
 			{
 				getTumor(DeadTumor).deleteMe();
 			}
+			
 			NpcInstance alivetumor = addSpawnWithoutRespawn(AliveTumor, roomCenter, 0);
 			alivetumor.setCurrentHp(alivetumor.getMaxHp() * .4, false);
 			doCountCoffinNotifications = false;
@@ -207,7 +216,9 @@ public class SufferingHallDefence extends Reflection
 		{
 			return;
 		}
+		
 		String group = null;
+		
 		switch (stage)
 		{
 			case 1:
@@ -215,6 +226,7 @@ public class SufferingHallDefence extends Reflection
 				getZone("[soi_hos_defence_attackup_1]").setActive(true);
 				getZone("[soi_hos_defence_defenceup_1]").setActive(true);
 				break;
+			
 			case 2:
 				group = "soi_hos_defence_mobs_2";
 				getZone("[soi_hos_defence_attackup_1]").setActive(false);
@@ -222,6 +234,7 @@ public class SufferingHallDefence extends Reflection
 				getZone("[soi_hos_defence_attackup_2]").setActive(true);
 				getZone("[soi_hos_defence_defenceup_2]").setActive(true);
 				break;
+			
 			case 3:
 				group = "soi_hos_defence_mobs_3";
 				getZone("[soi_hos_defence_attackup_2]").setActive(false);
@@ -229,6 +242,7 @@ public class SufferingHallDefence extends Reflection
 				getZone("[soi_hos_defence_attackup_3]").setActive(true);
 				getZone("[soi_hos_defence_defenceup_3]").setActive(true);
 				break;
+			
 			case 4:
 				group = "soi_hos_defence_mobs_4";
 				getZone("[soi_hos_defence_attackup_3]").setActive(false);
@@ -236,6 +250,7 @@ public class SufferingHallDefence extends Reflection
 				getZone("[soi_hos_defence_attackup_4]").setActive(true);
 				getZone("[soi_hos_defence_defenceup_4]").setActive(true);
 				break;
+			
 			case 5:
 				group = "soi_hos_defence_mobs_5";
 				getZone("[soi_hos_defence_attackup_4]").setActive(false);
@@ -243,20 +258,25 @@ public class SufferingHallDefence extends Reflection
 				getZone("[soi_hos_defence_attackup_5]").setActive(true);
 				getZone("[soi_hos_defence_defenceup_5]").setActive(true);
 				break;
+			
 			case 6:
 				doCountCoffinNotifications = false;
 				group = "soi_hos_defence_brothers";
 				getZone("[soi_hos_defence_attackup_5]").setActive(false);
 				getZone("[soi_hos_defence_defenceup_5]").setActive(false);
 				break;
+			
 			default:
 				break;
 		}
+		
 		stage++;
+		
 		if (group != null)
 		{
 			spawnByGroup(group);
 		}
+		
 		for (NpcInstance n : getNpcs())
 		{
 			if (n.isMonster() && ArrayUtils.contains(monsters, n.getNpcId()))
@@ -265,6 +285,7 @@ public class SufferingHallDefence extends Reflection
 				n.moveToLocation(roomCenter, 200, false);
 			}
 		}
+		
 		invokeDeathListener();
 	}
 	
@@ -277,6 +298,7 @@ public class SufferingHallDefence extends Reflection
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -289,6 +311,7 @@ public class SufferingHallDefence extends Reflection
 				return npc;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -313,10 +336,12 @@ public class SufferingHallDefence extends Reflection
 		{
 			coffinSpawnTask.cancel(false);
 		}
+		
 		if (monstersSpawnTask != null)
 		{
 			monstersSpawnTask.cancel(false);
 		}
+		
 		super.onCollapse();
 	}
 	

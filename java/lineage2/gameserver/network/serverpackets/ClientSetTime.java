@@ -23,9 +23,9 @@ public class ClientSetTime extends L2GameServerPacket
 	{
 		writeC(0xf2);
 		writeD(GameTimeController.getInstance().getGameTime()); // time in
-																// client
-																// minutes
+		// client
+		// minutes
 		writeD(6); // constant to match the server time( this determines the
-					// speed of the client clock)
+		// speed of the client clock)
 	}
 }

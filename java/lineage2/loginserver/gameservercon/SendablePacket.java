@@ -98,6 +98,7 @@ public abstract class SendablePacket extends lineage2.commons.net.nio.SendablePa
 		{
 			_log.error("", e);
 		}
+		
 		return true;
 	}
 	

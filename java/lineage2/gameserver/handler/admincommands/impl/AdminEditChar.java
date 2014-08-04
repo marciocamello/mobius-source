@@ -183,10 +183,12 @@ public class AdminEditChar implements IAdminCommandHandler
 					String val = fullString.substring(15);
 					GameObject target = activeChar.getTarget();
 					Player player = null;
+					
 					if (target == null)
 					{
 						return false;
 					}
+					
 					if (target.isPlayer())
 					{
 						player = (Player) target;
@@ -200,6 +202,7 @@ public class AdminEditChar implements IAdminCommandHandler
 						target.decayMe();
 						target.spawnMe();
 					}
+					
 					return true;
 				}
 				catch (StringIndexOutOfBoundsException e)
@@ -215,15 +218,18 @@ public class AdminEditChar implements IAdminCommandHandler
 					String val = fullString.substring(15);
 					int id = Integer.parseInt(val.trim());
 					GameObject target = activeChar.getTarget();
+					
 					if ((target == null) || !target.isPlayer())
 					{
 						target = activeChar;
 					}
+					
 					if (id > (ClassId.VALUES.length - 1))
 					{
 						activeChar.sendMessage("There are no classes over " + String.valueOf(ClassId.VALUES.length - 1) + "  id.");
 						return false;
 					}
+					
 					Player player = target.getPlayer();
 					player.setClassId(id, true, false);
 					player.sendMessage("Your class has been changed by a GM");
@@ -243,6 +249,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					String val = fullString.substring(14);
 					GameObject target = activeChar.getTarget();
 					Player player;
+					
 					if ((target != null) && target.isPlayer())
 					{
 						player = (Player) target;
@@ -251,11 +258,13 @@ public class AdminEditChar implements IAdminCommandHandler
 					{
 						return false;
 					}
+					
 					if (mysql.simple_get_int("count(*)", "characters", "`char_name` like '" + val + "'") > 0)
 					{
 						activeChar.sendMessage("Name already exist.");
 						return false;
 					}
+					
 					Log.add("Character " + player.getName() + " renamed to " + val + " by GM " + activeChar.getName(), "renames");
 					player.reName(val);
 					player.sendMessage("Your name has been changed by a GM");
@@ -268,10 +277,12 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 			}
 		}
+		
 		if (!activeChar.getPlayerAccess().CanEditChar && !activeChar.getPlayerAccess().CanViewChar)
 		{
 			return false;
 		}
+		
 		if (fullString.equals("admin_current_player"))
 		{
 			showCharacterList(activeChar, null);
@@ -359,6 +370,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			GameObject target = activeChar.getTarget();
 			Player player = null;
+			
 			if ((target != null) && target.isPlayer())
 			{
 				player = (Player) target;
@@ -367,6 +379,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				return false;
 			}
+			
 			player.setRecomHave(player.getRecomHave() + 1);
 			player.sendMessage("You have been recommended by a GM");
 			player.broadcastCharInfo();
@@ -379,6 +392,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				int recVal = Integer.parseInt(val);
 				GameObject target = activeChar.getTarget();
 				Player player = null;
+				
 				if ((target != null) && target.isPlayer())
 				{
 					player = (Player) target;
@@ -387,6 +401,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				{
 					return false;
 				}
+				
 				player.setRecomHave(player.getRecomHave() + recVal);
 				player.sendMessage("You have been recommended by a GM");
 				player.broadcastCharInfo();
@@ -400,9 +415,11 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			GameObject target = activeChar.getTarget();
 			Player player;
+			
 			if ((wordList.length > 1) && (wordList[1] != null))
 			{
 				player = GameObjectsStorage.getPlayer(wordList[1]);
+				
 				if (player == null)
 				{
 					activeChar.sendMessage("Character " + wordList[1] + " not found in game.");
@@ -418,6 +435,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				activeChar.sendMessage("You must specify the name or target character.");
 				return false;
 			}
+			
 			if (player.isHero())
 			{
 				player.setHero(false);
@@ -438,6 +456,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				player.addSkill(SkillTable.getInstance().getInfo(1375, 1));
 				player.addSkill(SkillTable.getInstance().getInfo(1376, 1));
 			}
+			
 			player.sendSkillList();
 			player.sendMessage("Admin has changed your hero status.");
 			player.broadcastUserInfo();
@@ -446,9 +465,11 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			GameObject target = activeChar.getTarget();
 			Player player;
+			
 			if ((wordList.length > 1) && (wordList[1] != null))
 			{
 				player = GameObjectsStorage.getPlayer(wordList[1]);
+				
 				if (player == null)
 				{
 					activeChar.sendMessage("Character " + wordList[1] + " not found in game.");
@@ -464,6 +485,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				activeChar.sendMessage("You must specify the name or target character.");
 				return false;
 			}
+			
 			if (player.isNoble())
 			{
 				Olympiad.removeNoble(player);
@@ -476,6 +498,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				player.setNoble(true);
 				player.sendMessage("Admin changed your noble status, now you are Nobless.");
 			}
+			
 			player.updatePledgeClass();
 			player.updateNobleSkills();
 			player.sendSkillList();
@@ -485,6 +508,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			GameObject target = activeChar.getTarget();
 			Player player = null;
+			
 			if ((target != null) && target.isPlayer())
 			{
 				player = (Player) target;
@@ -493,6 +517,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				return false;
 			}
+			
 			player.changeSex();
 			player.sendMessage("Your gender has been changed by a GM");
 			player.broadcastUserInfo();
@@ -504,6 +529,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				String val = fullString.substring(15);
 				GameObject target = activeChar.getTarget();
 				Player player = null;
+				
 				if ((target != null) && target.isPlayer())
 				{
 					player = (Player) target;
@@ -512,6 +538,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				{
 					return false;
 				}
+				
 				player.setNameColor(Integer.decode("0x" + val));
 				player.sendMessage("Your name color has been changed by a GM");
 				player.broadcastUserInfo();
@@ -543,10 +570,12 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (fullString.startsWith("admin_trans"))
 		{
 			StringTokenizer st = new StringTokenizer(fullString);
+			
 			if (st.countTokens() > 1)
 			{
 				st.nextToken();
 				int transformId = 0;
+				
 				try
 				{
 					transformId = Integer.parseInt(st.nextToken());
@@ -556,11 +585,13 @@ public class AdminEditChar implements IAdminCommandHandler
 					activeChar.sendMessage("Specify a valid integer value.");
 					return false;
 				}
+				
 				if ((transformId != 0) && (activeChar.getTransformation() != 0))
 				{
 					activeChar.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 					return false;
 				}
+				
 				activeChar.setTransformation(transformId);
 				activeChar.sendMessage("Transforming...");
 			}
@@ -572,22 +603,27 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (fullString.startsWith("admin_setsubclass"))
 		{
 			final GameObject target = activeChar.getTarget();
+			
 			if ((target == null) || !target.isPlayer())
 			{
 				activeChar.sendPacket(Msg.SELECT_TARGET);
 				return false;
 			}
+			
 			final Player player = (Player) target;
 			StringTokenizer st = new StringTokenizer(fullString);
+			
 			if (st.countTokens() > 1)
 			{
 				st.nextToken();
 				int classId = Short.parseShort(st.nextToken());
+				
 				if (!player.addSubClass(classId, true, 0, 0, false, 0))
 				{
 					activeChar.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.SubclassCouldNotBeAdded", activeChar));
 					return false;
 				}
+				
 				player.sendPacket(Msg.CONGRATULATIONS_YOU_HAVE_TRANSFERRED_TO_A_NEW_CLASS);
 			}
 			else
@@ -612,12 +648,15 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			String msgUsage = "Usage: //setbday YYYY-MM-DD";
 			String date = fullString.substring(14);
+			
 			if ((date.length() != 10) || !Util.isMatchingRegexp(date, "[0-9]{4}-[0-9]{2}-[0-9]{2}"))
 			{
 				activeChar.sendMessage(msgUsage);
 				return false;
 			}
+			
 			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+			
 			try
 			{
 				dateFormat.parse(date);
@@ -626,16 +665,19 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				activeChar.sendMessage(msgUsage);
 			}
+			
 			if ((activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer())
 			{
 				activeChar.sendMessage("Please select a character.");
 				return false;
 			}
+			
 			if (!mysql.set("update characters set createtime = UNIX_TIMESTAMP('" + date + "') where obj_Id = " + activeChar.getTarget().getObjectId()))
 			{
 				activeChar.sendMessage(msgUsage);
 				return false;
 			}
+			
 			activeChar.sendMessage("New Birthday for " + activeChar.getTarget().getName() + ": " + date);
 			activeChar.getTarget().getPlayer().sendMessage("Admin changed your birthday to: " + date);
 		}
@@ -646,13 +688,16 @@ public class AdminEditChar implements IAdminCommandHandler
 				activeChar.sendMessage("Usage: //give_item id count <target>");
 				return false;
 			}
+			
 			int id = Integer.parseInt(wordList[1]);
 			int count = Integer.parseInt(wordList[2]);
+			
 			if ((id < 1) || (count < 1) || (activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer())
 			{
 				activeChar.sendMessage("Usage: //give_item id count <target>");
 				return false;
 			}
+			
 			ItemFunctions.addItem(activeChar.getTarget().getPlayer(), id, count, true);
 		}
 		else if (fullString.startsWith("admin_add_bang"))
@@ -662,17 +707,21 @@ public class AdminEditChar implements IAdminCommandHandler
 				activeChar.sendMessage("Error! Pc Bang Points service disabled!");
 				return true;
 			}
+			
 			if (wordList.length < 1)
 			{
 				activeChar.sendMessage("Usage: //add_bang count <target>");
 				return false;
 			}
+			
 			int count = Integer.parseInt(wordList[1]);
+			
 			if ((count < 1) || (activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer())
 			{
 				activeChar.sendMessage("Usage: //add_bang count <target>");
 				return false;
 			}
+			
 			Player target = activeChar.getTarget().getPlayer();
 			target.addPcBangPoints(count, false);
 			activeChar.sendMessage("You have added " + count + " Pc Bang Points to " + target.getName());
@@ -684,17 +733,21 @@ public class AdminEditChar implements IAdminCommandHandler
 				activeChar.sendMessage("Error! Pc Bang Points service disabled!");
 				return true;
 			}
+			
 			if (wordList.length < 1)
 			{
 				activeChar.sendMessage("Usage: //set_bang count <target>");
 				return false;
 			}
+			
 			int count = Integer.parseInt(wordList[1]);
+			
 			if ((count < 1) || (activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer())
 			{
 				activeChar.sendMessage("Usage: //set_bang count <target>");
 				return false;
 			}
+			
 			Player target = activeChar.getTarget().getPlayer();
 			target.setPcBangPoints(count);
 			target.sendMessage("Your Pc Bang Points count is now " + count);
@@ -708,6 +761,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				activeChar.sendMessage("You have no target selected.");
 				return false;
 			}
+			
 			if (MentorUtil.getTimePenalty(activeChar.getTargetId()) > 0)
 			{
 				MentorUtil.setTimePenalty(activeChar.getTargetId(), 0, -1);
@@ -720,6 +774,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
@@ -743,20 +798,25 @@ public class AdminEditChar implements IAdminCommandHandler
 		List<Player> players = GameObjectsStorage.getAllPlayers();
 		int MaxCharactersPerPage = 20;
 		int MaxPages = players.size() / MaxCharactersPerPage;
+		
 		if (players.size() > (MaxCharactersPerPage * MaxPages))
 		{
 			MaxPages++;
 		}
+		
 		if (page > MaxPages)
 		{
 			page = MaxPages;
 		}
+		
 		int CharactersStart = MaxCharactersPerPage * page;
 		int CharactersEnd = players.size();
+		
 		if ((CharactersEnd - CharactersStart) > MaxCharactersPerPage)
 		{
 			CharactersEnd = CharactersStart + MaxCharactersPerPage;
 		}
+		
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		StringBuilder replyMSG = new StringBuilder("<html><body>");
 		replyMSG.append("<table width=260><tr>");
@@ -773,19 +833,23 @@ public class AdminEditChar implements IAdminCommandHandler
 		replyMSG.append("<center><table><tr><td>");
 		replyMSG.append("<edit var=\"character_name\" width=80></td><td><button value=\"Find\" action=\"bypass -h admin_find_character $character_name\" width=40 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\">");
 		replyMSG.append("</td></tr></table></center><br><br>");
+		
 		for (int x = 0; x < MaxPages; x++)
 		{
 			int pagenr = x + 1;
 			replyMSG.append("<center><a action=\"bypass -h admin_show_characters " + x + "\">Page " + pagenr + "</a></center>");
 		}
+		
 		replyMSG.append("<br>");
 		replyMSG.append("<table width=270>");
 		replyMSG.append("<tr><td width=80>Name:</td><td width=110>Class:</td><td width=40>Level:</td></tr>");
+		
 		for (int i = CharactersStart; i < CharactersEnd; i++)
 		{
 			Player p = players.get(i);
 			replyMSG.append("<tr><td width=80>" + "<a action=\"bypass -h admin_character_list " + p.getName() + "\">" + p.getName() + "</a></td><td width=110>" + HtmlUtils.htmlClassName(p.getClassId().getId()) + "</td><td width=40>" + p.getLevel() + "</td></tr>");
 		}
+		
 		replyMSG.append("</table>");
 		replyMSG.append("</body></html>");
 		adminReply.setHtml(replyMSG.toString());
@@ -802,6 +866,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		if (player == null)
 		{
 			GameObject target = activeChar.getTarget();
+			
 			if ((target != null) && target.isPlayer())
 			{
 				player = (Player) target;
@@ -815,11 +880,14 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			activeChar.setTarget(player);
 		}
+		
 		String clanName = "No Clan";
+		
 		if (player.getClan() != null)
 		{
 			clanName = player.getClan().getName() + "/" + player.getClan().getLevel();
 		}
+		
 		NumberFormat df = NumberFormat.getNumberInstance(Locale.ENGLISH);
 		df.setMaximumFractionDigits(4);
 		df.setMinimumFractionDigits(1);
@@ -872,12 +940,15 @@ public class AdminEditChar implements IAdminCommandHandler
 	private void setTargetKarma(Player activeChar, int newKarma)
 	{
 		GameObject target = activeChar.getTarget();
+		
 		if (target == null)
 		{
 			activeChar.sendPacket(Msg.INVALID_TARGET);
 			return;
 		}
+		
 		Player player;
+		
 		if (target.isPlayer())
 		{
 			player = (Player) target;
@@ -886,6 +957,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			return;
 		}
+		
 		if (newKarma >= 0)
 		{
 			int oldKarma = player.getKarma();
@@ -907,12 +979,15 @@ public class AdminEditChar implements IAdminCommandHandler
 	private void setTargetFame(Player activeChar, int newFame)
 	{
 		GameObject target = activeChar.getTarget();
+		
 		if (target == null)
 		{
 			activeChar.sendPacket(Msg.INVALID_TARGET);
 			return;
 		}
+		
 		Player player;
+		
 		if (target.isPlayer())
 		{
 			player = (Player) target;
@@ -921,6 +996,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			return;
 		}
+		
 		if (newFame >= 0)
 		{
 			int oldFame = player.getFame();
@@ -942,43 +1018,53 @@ public class AdminEditChar implements IAdminCommandHandler
 	private void adminModifyCharacter(Player activeChar, String modifications)
 	{
 		GameObject target = activeChar.getTarget();
+		
 		if ((target == null) || !target.isPlayer())
 		{
 			activeChar.sendPacket(Msg.SELECT_TARGET);
 			return;
 		}
+		
 		Player player = (Player) target;
 		String[] strvals = modifications.split("&");
 		Integer[] vals = new Integer[strvals.length];
+		
 		for (int i = 0; i < strvals.length; i++)
 		{
 			strvals[i] = strvals[i].trim();
 			vals[i] = strvals[i].isEmpty() ? null : Integer.valueOf(strvals[i]);
 		}
+		
 		if (vals[0] != null)
 		{
 			player.setCurrentHp(vals[0], false);
 		}
+		
 		if (vals[1] != null)
 		{
 			player.setCurrentMp(vals[1]);
 		}
+		
 		if (vals[2] != null)
 		{
 			player.setKarma(vals[2]);
 		}
+		
 		if (vals[3] != null)
 		{
 			player.setPvpFlag(vals[3]);
 		}
+		
 		if (vals[4] != null)
 		{
 			player.setPvpKills(vals[4]);
 		}
+		
 		if (vals[5] != null)
 		{
 			player.setClassId(vals[5], true, false);
 		}
+		
 		editCharacter(activeChar);
 		player.broadcastCharInfo();
 		player.decayMe();
@@ -992,11 +1078,13 @@ public class AdminEditChar implements IAdminCommandHandler
 	private void editCharacter(Player activeChar)
 	{
 		GameObject target = activeChar.getTarget();
+		
 		if ((target == null) || !target.isPlayer())
 		{
 			activeChar.sendPacket(Msg.SELECT_TARGET);
 			return;
 		}
+		
 		Player player = (Player) target;
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		StringBuilder replyMSG = new StringBuilder("<html><body>");
@@ -1036,6 +1124,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	{
 		GameObject target = activeChar.getTarget();
 		Player player;
+		
 		if ((target != null) && target.isPlayer())
 		{
 			player = (Player) target;
@@ -1044,6 +1133,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			return;
 		}
+		
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		StringBuilder replyMSG = new StringBuilder("<html><body>");
 		replyMSG.append("<table width=260><tr>");
@@ -1080,6 +1170,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		replyMSG.append("<td width=40><button value=\"Back\" action=\"bypass -h admin_show_characters 0\" width=40 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
 		replyMSG.append("</tr></table>");
 		replyMSG.append("<br><br>");
+		
 		for (Player element : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			if (element.getName().startsWith(CharacterToFind))
@@ -1091,6 +1182,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				replyMSG.append("</table>");
 			}
 		}
+		
 		if (CharactersFound == 0)
 		{
 			replyMSG.append("<table width=270>");
@@ -1104,6 +1196,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		else
 		{
 			replyMSG.append("<center><br>Found " + CharactersFound + " character");
+			
 			if (CharactersFound == 1)
 			{
 				replyMSG.append('.');
@@ -1113,6 +1206,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				replyMSG.append("s.");
 			}
 		}
+		
 		replyMSG.append("</center></body></html>");
 		adminReply.setHtml(replyMSG.toString());
 		activeChar.sendPacket(adminReply);
@@ -1126,6 +1220,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	{
 		final GameObject target = activeChar.getTarget();
 		Player player;
+		
 		if ((target != null) && target.isPlayer() && ((activeChar == target) || activeChar.getPlayerAccess().CanEditCharAll))
 		{
 			player = (Player) target;
@@ -1135,6 +1230,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			activeChar.sendPacket(Msg.INVALID_TARGET);
 			return;
 		}
+		
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		final StringBuilder replyMSG = new StringBuilder("<html><body>");
 		replyMSG.append("<table width=260><tr>");
@@ -1178,17 +1274,21 @@ public class AdminEditChar implements IAdminCommandHandler
 			activeChar.sendMessage("You have not enough privileges, for use this function.");
 			return;
 		}
+		
 		final GameObject target = activeChar.getTarget();
+		
 		if (target == null)
 		{
 			activeChar.sendPacket(Msg.SELECT_TARGET);
 			return;
 		}
+		
 		if (!target.isPlayable())
 		{
 			activeChar.sendPacket(Msg.INVALID_TARGET);
 			return;
 		}
+		
 		Playable playable = (Playable) target;
 		playable.addExpAndSp(exp, sp);
 		activeChar.sendMessage("Added " + exp + " experience and " + sp + " SP to " + playable.getName() + ".");
@@ -1204,9 +1304,11 @@ public class AdminEditChar implements IAdminCommandHandler
 		StringBuilder content = new StringBuilder("<html><body>");
 		NpcHtmlMessage html = new NpcHtmlMessage(5);
 		Set<ClassId> subsAvailable = SubClassInfo.getAvailableSubClasses(player, null, null, true);
+		
 		if ((subsAvailable != null) && !subsAvailable.isEmpty())
 		{
 			content.append("Add Subclass:<br>Which subclass do you wish to add?<br>");
+			
 			for (ClassId subClass : subsAvailable)
 			{
 				content.append("<a action=\"bypass -h admin_setsubclass " + subClass.ordinal() + "\">" + formatClassForDisplay(subClass) + "</a><br>");
@@ -1217,6 +1319,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.NoSubAtThisTime", activeChar));
 			return;
 		}
+		
 		content.append("</body></html>");
 		html.setHtml(content.toString());
 		activeChar.sendPacket(html);
@@ -1231,6 +1334,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	{
 		String classNameStr = className.toString();
 		char[] charArray = classNameStr.toCharArray();
+		
 		for (int i = 1; i < charArray.length; i++)
 		{
 			if (Character.isUpperCase(charArray[i]))
@@ -1238,6 +1342,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				classNameStr = classNameStr.substring(0, i) + " " + classNameStr.substring(i);
 			}
 		}
+		
 		return classNameStr;
 	}
 }

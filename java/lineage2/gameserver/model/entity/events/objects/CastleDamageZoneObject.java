@@ -19,7 +19,7 @@ package lineage2.gameserver.model.entity.events.objects;
 public class CastleDamageZoneObject extends ZoneObject
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**

@@ -43,11 +43,14 @@ public class RequestTutorialPassCmdToServer extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		Quest tutorial = QuestManager.getQuest(255);
+		
 		if (tutorial != null)
 		{
 			player.processQuestEvent(tutorial.getName(), _bypass, null);

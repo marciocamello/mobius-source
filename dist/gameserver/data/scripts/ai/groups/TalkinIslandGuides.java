@@ -209,15 +209,18 @@ public class TalkinIslandGuides extends DefaultAI
 	{
 		final NpcInstance actor = getActor();
 		final Creature target = actor.getFollowTarget();
+		
 		if ((target == null) || !(target instanceof Player))
 		{
 			actor.deleteMe();
 			return false;
 		}
+		
 		final int npcId = actor.getNpcId();
 		int[][] coords;
 		NpcString string;
 		NpcString end_String;
+		
 		switch (npcId)
 		{
 			case SEARCHING_MYST_POWER_SOLDIER:
@@ -225,14 +228,17 @@ public class TalkinIslandGuides extends DefaultAI
 				string = SEARCHING_MYST_POWER_STRING;
 				end_String = NpcString.S1_THAT_MAN_IN_FRONT_IS_IBANE;
 				break;
+			
 			case BACKUP_SEEKERS_ASSASSIN:
 				coords = BS_COORDS;
 				string = BACKUP_SEEKERS_STRING;
 				end_String = NpcString.TALK_TO_THAT_APPRENTICE_AND_GET_ON_KOOKARU;
 				break;
+			
 			case GOING_INTO_REAL_WAR_SOLDIER:
 				final double distLeft = target.getDistance(GRW_COORDS_LEFT[0][0], GRW_COORDS_LEFT[0][1], GRW_COORDS_LEFT[0][2]);
 				final double distRight = target.getDistance(GRW_COORDS_RIGHT[0][0], GRW_COORDS_RIGHT[0][1], GRW_COORDS_RIGHT[0][2]);
+				
 				if (distLeft <= distRight)
 				{
 					coords = GRW_COORDS_LEFT;
@@ -241,18 +247,23 @@ public class TalkinIslandGuides extends DefaultAI
 				{
 					coords = GRW_COORDS_RIGHT;
 				}
+				
 				string = GOING_INTO_REAL_WAR_STRING;
 				end_String = NpcString.S1_THAT_MAN_IN_FRONT_IS_HOLDEN;
 				break;
+			
 			default:
 				return false;
 		}
+		
 		actor.setRunning();
+		
 		if ((actor.getDistance(target) < 100) || (currentState == 0) || (currentState >= coords.length))
 		{
 			if (currentState < coords.length)
 			{
 				actor.moveToLocation(coords[currentState][0], coords[currentState][1], coords[currentState][2], Rnd.get(0, 50), true);
+				
 				if (actor.getDestination() == null)
 				{
 					++currentState;
@@ -272,6 +283,7 @@ public class TalkinIslandGuides extends DefaultAI
 			lastSayTime = System.currentTimeMillis();
 			Functions.npcSay(actor, string, ChatType.NPC_SAY, 800, target.getName());
 		}
+		
 		return true;
 	}
 	

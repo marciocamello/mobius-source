@@ -57,12 +57,15 @@ public final class ConditionSlotItemId extends ConditionInventory
 		{
 			return false;
 		}
+		
 		Inventory inv = ((Player) env.character).getInventory();
 		ItemInstance item = inv.getPaperdollItem(_slot);
+		
 		if (item == null)
 		{
 			return _itemId == 0;
 		}
+		
 		return (item.getItemId() == _itemId) && (item.getEnchantLevel() >= _enchantLevel);
 	}
 }

@@ -54,16 +54,19 @@ public class _239_WontYouJoinUs extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("32643-03.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 		}
+		
 		if (event.equalsIgnoreCase("32643-07.htm"))
 		{
 			st.takeAllItems(DestroyedMachinePiece);
 			st.setCond(3);
 		}
+		
 		return htmltext;
 	}
 	
@@ -74,6 +77,7 @@ public class _239_WontYouJoinUs extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int id = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == Athenia)
 		{
 			if (id == CREATED)
@@ -82,10 +86,12 @@ public class _239_WontYouJoinUs extends Quest implements ScriptFile
 				{
 					return "32643-00.htm";
 				}
+				
 				if (st.getQuestItemsCount(CertificateOfSupport) == 0)
 				{
 					return "32643-12.htm";
 				}
+				
 				return "32643-01.htm";
 			}
 			else if (id == COMPLETED)
@@ -115,6 +121,7 @@ public class _239_WontYouJoinUs extends Quest implements ScriptFile
 				return "32643-10.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -122,9 +129,11 @@ public class _239_WontYouJoinUs extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if ((cond == 1) && (npc.getNpcId() == WasteLandfillMachine))
 		{
 			st.giveItems(DestroyedMachinePiece, 1);
+			
 			if (st.getQuestItemsCount(DestroyedMachinePiece) >= 10)
 			{
 				st.setCond(2);
@@ -133,11 +142,13 @@ public class _239_WontYouJoinUs extends Quest implements ScriptFile
 		else if ((cond == 3) && ((npc.getNpcId() == Suppressor) || (npc.getNpcId() == Exterminator)))
 		{
 			st.giveItems(EnchantedGolemFragment, 1);
+			
 			if (st.getQuestItemsCount(EnchantedGolemFragment) >= 20)
 			{
 				st.setCond(4);
 			}
 		}
+		
 		return null;
 	}
 }

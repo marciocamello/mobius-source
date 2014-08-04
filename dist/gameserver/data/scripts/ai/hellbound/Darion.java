@@ -58,6 +58,7 @@ public class Darion extends Fighter
 	{
 		super.onEvtSpawn();
 		final NpcInstance actor = getActor();
+		
 		for (int i = 0; i < 5; i++)
 		{
 			try
@@ -72,6 +73,7 @@ public class Darion extends Fighter
 				e.printStackTrace();
 			}
 		}
+		
 		for (int door2 : doors)
 		{
 			DoorInstance door = ReflectionUtils.getDoor(door2);
@@ -91,14 +93,17 @@ public class Darion extends Fighter
 			DoorInstance door = ReflectionUtils.getDoor(door2);
 			door.openMe();
 		}
+		
 		for (NpcInstance npc : GameObjectsStorage.getAllByNpcId(25614, false))
 		{
 			npc.deleteMe();
 		}
+		
 		for (NpcInstance npc : GameObjectsStorage.getAllByNpcId(25615, false))
 		{
 			npc.deleteMe();
 		}
+		
 		super.onEvtDead(killer);
 	}
 }

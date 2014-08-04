@@ -1138,339 +1138,451 @@ public class Extractable extends SimpleItemHandler
 			case 17086:
 				use17086(player, ctrl);
 				break;
+			
 			case 17085:
 				use17085(player, ctrl);
 				break;
+			
 			case 17084:
 				use17084(player, ctrl);
 				break;
+			
 			case 17083:
 				use17083(player, ctrl);
 				break;
+			
 			case 17082:
 				use17082(player, ctrl);
 				break;
+			
 			case 17066:
 				use17066(player, ctrl);
 				break;
+			
 			case 17048:
 				use17048(player, ctrl);
 				break;
+			
 			case 17047:
 				use17047(player, ctrl);
 				break;
+			
 			case 17046:
 				use17046(player, ctrl);
 				break;
+			
 			case 17045:
 				use17045(player, ctrl);
 				break;
+			
 			case 17044:
 				use17044(player, ctrl);
 				break;
+			
 			case 17043:
 				use17043(player, ctrl);
 				break;
+			
 			case 17042:
 				use17042(player, ctrl);
 				break;
+			
 			case 17041:
 				use17041(player, ctrl);
 				break;
+			
 			case 17040:
 				use17040(player, ctrl);
 				break;
+			
 			case 17032:
 				use17032(player, ctrl);
 				break;
+			
 			case 17031:
 				use17031(player, ctrl);
 				break;
+			
 			case 17029:
 				use17029(player, ctrl);
 				break;
+			
 			case 17028:
 				use17028(player, ctrl);
 				break;
+			
 			case 17027:
 				use17027(player, ctrl);
 				break;
+			
 			case 17026:
 				use17026(player, ctrl);
 				break;
+			
 			case 17025:
 				use17025(player, ctrl);
 				break;
+			
 			case 17024:
 				use17024(player, ctrl);
 				break;
+			
 			case 17023:
 				use17023(player, ctrl);
 				break;
+			
 			case 17022:
 				use17022(player, ctrl);
 				break;
+			
 			case 17021:
 				use17021(player, ctrl);
 				break;
+			
 			case 17020:
 				use17020(player, ctrl);
 				break;
+			
 			case 17019:
 				use17019(player, ctrl);
 				break;
+			
 			case 17002:
 				use17002(player, ctrl);
 				break;
+			
 			case 17001:
 				use17001(player, ctrl);
 				break;
+			
 			case 17000:
 				use17000(player, ctrl);
 				break;
+			
 			case 14768:
 				use14768(player, ctrl);
 				break;
+			
 			case 14767:
 				use14767(player, ctrl);
 				break;
+			
 			case 14766:
 				use14766(player, ctrl);
 				break;
+			
 			case 14740:
 				use14740(player, ctrl);
 				break;
+			
 			case 14729:
 				use14729(player, ctrl);
 				break;
+			
 			case 14719:
 				use14719(player, ctrl);
 				break;
+			
 			case 14291:
 				use14291(player, ctrl);
 				break;
+			
 			case 14290:
 				use14290(player, ctrl);
 				break;
+			
 			case 14289:
 				use14289(player, ctrl);
 				break;
+			
 			case 14288:
 				use14288(player, ctrl);
 				break;
+			
 			case 14287:
 				use14287(player, ctrl);
 				break;
+			
 			case 14286:
 				use14286(player, ctrl);
 				break;
+			
 			case 14285:
 				use14285(player, ctrl);
 				break;
+			
 			case 14284:
 				use14284(player, ctrl);
 				break;
+			
 			case 14283:
 				use14283(player, ctrl);
 				break;
+			
 			case 14282:
 				use14282(player, ctrl);
 				break;
+			
 			case 14281:
 				use14281(player, ctrl);
 				break;
+			
 			case 14280:
 				use14280(player, ctrl);
 				break;
+			
 			case 14279:
 				use14279(player, ctrl);
 				break;
+			
 			case 14278:
 				use14278(player, ctrl);
 				break;
+			
 			case 14277:
 				use14277(player, ctrl);
 				break;
+			
 			case 14276:
 				use14276(player, ctrl);
 				break;
+			
 			case 14275:
 				use14275(player, ctrl);
 				break;
+			
 			case 14274:
 				use14274(player, ctrl);
 				break;
+			
 			case 14273:
 				use14273(player, ctrl);
 				break;
+			
 			case 14272:
 				use14272(player, ctrl);
 				break;
+			
 			case 14271:
 				use14271(player, ctrl);
 				break;
+			
 			case 14270:
 				use14270(player, ctrl);
 				break;
+			
 			case 14266:
 				use14266(player, ctrl);
 				break;
+			
 			case 14265:
 				use14265(player, ctrl);
 				break;
+			
 			case 14264:
 				use14264(player, ctrl);
 				break;
+			
 			case 14263:
 				use14263(player, ctrl);
 				break;
+			
 			case 14262:
 				use14262(player, ctrl);
 				break;
+			
 			case 14261:
 				use14261(player, ctrl);
 				break;
+			
 			case 14260:
 				use14260(player, ctrl);
 				break;
+			
 			case 14259:
 				use14259(player, ctrl);
 				break;
+			
 			case 14258:
 				use14258(player, ctrl);
 				break;
+			
 			case 14257:
 				use14257(player, ctrl);
 				break;
+			
 			case 14256:
 				use14256(player, ctrl);
 				break;
+			
 			case 14255:
 				use14255(player, ctrl);
 				break;
+			
 			case 14254:
 				use14254(player, ctrl);
 				break;
+			
 			case 14253:
 				use14253(player, ctrl);
 				break;
+			
 			case 14252:
 				use14252(player, ctrl);
 				break;
+			
 			case 14251:
 				use14251(player, ctrl);
 				break;
+			
 			case 14250:
 				use14250(player, ctrl);
 				break;
+			
 			case 14249:
 				use14249(player, ctrl);
 				break;
+			
 			case 14248:
 				use14248(player, ctrl);
 				break;
+			
 			case 14247:
 				use14247(player, ctrl);
 				break;
+			
 			case 14246:
 				use14246(player, ctrl);
 				break;
+			
 			case 14245:
 				use14245(player, ctrl);
 				break;
+			
 			case 14244:
 				use14244(player, ctrl);
 				break;
+			
 			case 14243:
 				use14243(player, ctrl);
 				break;
+			
 			case 14242:
 				use14242(player, ctrl);
 				break;
+			
 			case 14241:
 				use14241(player, ctrl);
 				break;
+			
 			case 14240:
 				use14240(player, ctrl);
 				break;
+			
 			case 14239:
 				use14239(player, ctrl);
 				break;
+			
 			case 14238:
 				use14238(player, ctrl);
 				break;
+			
 			case 14237:
 				use14237(player, ctrl);
 				break;
+			
 			case 14236:
 				use14236(player, ctrl);
 				break;
+			
 			case 14235:
 				use14235(player, ctrl);
 				break;
+			
 			case 14234:
 				use14234(player, ctrl);
 				break;
+			
 			case 14233:
 				use14233(player, ctrl);
 				break;
+			
 			case 14230:
 				use14230(player, ctrl);
 				break;
+			
 			case 14229:
 				use14229(player, ctrl);
 				break;
+			
 			case 14228:
 				use14228(player, ctrl);
 				break;
+			
 			case 20999:
 				use20999(player, ctrl);
 				break;
+			
 			case 20998:
 				use20998(player, ctrl);
 				break;
+			
 			case 20997:
 				use20997(player, ctrl);
 				break;
+			
 			case 20996:
 				use20996(player, ctrl);
 				break;
+			
 			case 20995:
 				use20995(player, ctrl);
 				break;
+			
 			case 20994:
 				use20994(player, ctrl);
 				break;
+			
 			case 20969:
 				use20969(player, ctrl);
 				break;
+			
 			case 20967:
 				use20967(player, ctrl);
 				break;
+			
 			case 20966:
 				use20966(player, ctrl);
 				break;
+			
 			case 20965:
 				use20965(player, ctrl);
 				break;
+			
 			case 20964:
 				use20964(player, ctrl);
 				break;
+			
 			case 20963:
 				use20963(player, ctrl);
 				break;
+			
 			case 20962:
 				use20962(player, ctrl);
 				break;
+			
 			case 20961:
 				use20961(player, ctrl);
 				break;
+			
 			case 20960:
 				use20960(player, ctrl);
 				break;
+			
 			case 20959:
 				use20959(player, ctrl);
 				break;
+			
 			case 20957:
 				use20957(player, ctrl);
 				break;
@@ -1478,24 +1590,31 @@ public class Extractable extends SimpleItemHandler
 			case 20953:
 				use20953(player, ctrl);
 				break;
+			
 			case 20952:
 				use20952(player, ctrl);
 				break;
+			
 			case 20951:
 				use20951(player, ctrl);
 				break;
+			
 			case 20950:
 				use20950(player, ctrl);
 				break;
+			
 			case 20949:
 				use20949(player, ctrl);
 				break;
+			
 			case 20948:
 				use20948(player, ctrl);
 				break;
+			
 			case 20947:
 				use20947(player, ctrl);
 				break;
+			
 			case 20946:
 				use20946(player, ctrl);
 				break;
@@ -1503,21 +1622,27 @@ public class Extractable extends SimpleItemHandler
 			case 20902:
 				use20902(player, ctrl);
 				break;
+			
 			case 20901:
 				use20901(player, ctrl);
 				break;
+			
 			case 17168:
 				use17168(player, ctrl);
 				break;
+			
 			case 17167:
 				use17167(player, ctrl);
 				break;
+			
 			case 17166:
 				use17166(player, ctrl);
 				break;
+			
 			case 17165:
 				use17165(player, ctrl);
 				break;
+			
 			case 17164:
 				use17164(player, ctrl);
 				break;
@@ -1525,60 +1650,79 @@ public class Extractable extends SimpleItemHandler
 			case 20097:
 				use20097(player, ctrl);
 				break;
+			
 			case 20096:
 				use20096(player, ctrl);
 				break;
+			
 			case 20092:
 				use20092(player, ctrl);
 				break;
+			
 			case 20080:
 				use20080(player, ctrl);
 				break;
+			
 			case 20079:
 				use20079(player, ctrl);
 				break;
+			
 			case 20062:
 				use20062(player, ctrl);
 				break;
+			
 			case 20058:
 				use20058(player, ctrl);
 				break;
+			
 			case 20057:
 				use20057(player, ctrl);
 				break;
+			
 			case 20056:
 				use20056(player, ctrl);
 				break;
+			
 			case 20055:
 				use20055(player, ctrl);
 				break;
+			
 			case 20054:
 				use20054(player, ctrl);
 				break;
+			
 			case 20053:
 				use20053(player, ctrl);
 				break;
+			
 			case 20052:
 				use20052(player, ctrl);
 				break;
+			
 			case 20051:
 				use20051(player, ctrl);
 				break;
+			
 			case 20050:
 				use20050(player, ctrl);
 				break;
+			
 			case 20049:
 				use20049(player, ctrl);
 				break;
+			
 			case 20048:
 				use20048(player, ctrl);
 				break;
+			
 			case 20047:
 				use20047(player, ctrl);
 				break;
+			
 			case 20046:
 				use20046(player, ctrl);
 				break;
+			
 			case 20045:
 				use20045(player, ctrl);
 				break;
@@ -1586,237 +1730,315 @@ public class Extractable extends SimpleItemHandler
 			case 20599:
 				use20599(player, ctrl);
 				break;
+			
 			case 20598:
 				use20598(player, ctrl);
 				break;
+			
 			case 20590:
 				use20590(player, ctrl);
 				break;
+			
 			case 20589:
 				use20589(player, ctrl);
 				break;
+			
 			case 20588:
 				use20588(player, ctrl);
 				break;
+			
 			case 20587:
 				use20587(player, ctrl);
 				break;
+			
 			case 20581:
 				use20581(player, ctrl);
 				break;
+			
 			case 20580:
 				use20580(player, ctrl);
 				break;
+			
 			case 20579:
 				use20579(player, ctrl);
 				break;
+			
 			case 20578:
 				use20578(player, ctrl);
 				break;
+			
 			case 20577:
 				use20577(player, ctrl);
 				break;
+			
 			case 20576:
 				use20576(player, ctrl);
 				break;
+			
 			case 20574:
 				use20574(player, ctrl);
 				break;
+			
 			case 20566:
 				use20566(player, ctrl);
 				break;
+			
 			case 20565:
 				use20565(player, ctrl);
 				break;
+			
 			case 20564:
 				use20564(player, ctrl);
 				break;
+			
 			case 20563:
 				use20563(player, ctrl);
 				break;
+			
 			case 20562:
 				use20562(player, ctrl);
 				break;
+			
 			case 20561:
 				use20561(player, ctrl);
 				break;
+			
 			case 20560:
 				use20560(player, ctrl);
 				break;
+			
 			case 20559:
 				use20559(player, ctrl);
 				break;
+			
 			case 20558:
 				use20558(player, ctrl);
 				break;
+			
 			case 20557:
 				use20557(player, ctrl);
 				break;
+			
 			case 20556:
 				use20556(player, ctrl);
 				break;
+			
 			case 20555:
 				use20555(player, ctrl);
 				break;
+			
 			case 20554:
 				use20554(player, ctrl);
 				break;
+			
 			case 20553:
 				use20553(player, ctrl);
 				break;
+			
 			case 20552:
 				use20552(player, ctrl);
 				break;
+			
 			case 20551:
 				use20551(player, ctrl);
 				break;
+			
 			case 20550:
 				use20550(player, ctrl);
 				break;
+			
 			case 20549:
 				use20549(player, ctrl);
 				break;
+			
 			case 20548:
 				use20548(player, ctrl);
 				break;
+			
 			case 20544:
 				use20544(player, ctrl);
 				break;
+			
 			case 20543:
 				use20543(player, ctrl);
 				break;
+			
 			case 20542:
 				use20542(player, ctrl);
 				break;
+			
 			case 20541:
 				use20541(player, ctrl);
 				break;
+			
 			case 20540:
 				use20540(player, ctrl);
 				break;
+			
 			case 20514:
 				use20514(player, ctrl);
 				break;
+			
 			case 20513:
 				use20513(player, ctrl);
 				break;
+			
 			case 20512:
 				use20512(player, ctrl);
 				break;
+			
 			case 20511:
 				use20511(player, ctrl);
 				break;
+			
 			case 20510:
 				use20510(player, ctrl);
 				break;
+			
 			case 20509:
 				use20509(player, ctrl);
 				break;
+			
 			case 20508:
 				use20508(player, ctrl);
 				break;
+			
 			case 20507:
 				use20507(player, ctrl);
 				break;
+			
 			case 20506:
 				use20506(player, ctrl);
 				break;
+			
 			case 20505:
 				use20505(player, ctrl);
 				break;
+			
 			case 20898:
 				use20898(player, ctrl);
 				break;
+			
 			case 20869:
 				use20869(player, ctrl);
 				break;
+			
 			case 20803:
 				use20803(player, ctrl);
 				break;
+			
 			case 20802:
 				use20802(player, ctrl);
 				break;
+			
 			case 20801:
 				use20801(player, ctrl);
 				break;
+			
 			case 20800:
 				use20800(player, ctrl);
 				break;
+			
 			case 20699:
 				use20699(player, ctrl);
 				break;
+			
 			case 20698:
 				use20698(player, ctrl);
 				break;
+			
 			case 20697:
 				use20697(player, ctrl);
 				break;
+			
 			case 20696:
 				use20696(player, ctrl);
 				break;
+			
 			case 20695:
 				use20695(player, ctrl);
 				break;
+			
 			case 20694:
 				use20694(player, ctrl);
 				break;
+			
 			case 20693:
 				use20693(player, ctrl);
 				break;
+			
 			case 20692:
 				use20692(player, ctrl);
 				break;
+			
 			case 20691:
 				use20691(player, ctrl);
 				break;
+			
 			case 20690:
 				use20690(player, ctrl);
 				break;
+			
 			case 20689:
 				use20689(player, ctrl);
 				break;
+			
 			case 20688:
 				use20688(player, ctrl);
 				break;
+			
 			case 20687:
 				use20687(player, ctrl);
 				break;
+			
 			case 20686:
 				use20686(player, ctrl);
 				break;
+			
 			case 20685:
 				use20685(player, ctrl);
 				break;
+			
 			case 20684:
 				use20684(player, ctrl);
 				break;
+			
 			case 20683:
 				use20683(player, ctrl);
 				break;
+			
 			case 20682:
 				use20682(player, ctrl);
 				break;
+			
 			case 20681:
 				use20681(player, ctrl);
 				break;
+			
 			case 20680:
 				use20680(player, ctrl);
 				break;
+			
 			case 20632:
 				use20632(player, ctrl);
 				break;
+			
 			case 20631:
 				use20631(player, ctrl);
 				break;
+			
 			case 20627:
 				use20627(player, ctrl);
 				break;
+			
 			case 20625:
 				use20625(player, ctrl);
 				break;
+			
 			case 20624:
 				use20624(player, ctrl);
 				break;
+			
 			case 20623:
 				use20623(player, ctrl);
 				break;
@@ -1824,480 +2046,639 @@ public class Extractable extends SimpleItemHandler
 			case 20620:
 				use20620(player, ctrl);
 				break;
+			
 			case 20619:
 				use20619(player, ctrl);
 				break;
+			
 			case 20612:
 				use20612(player, ctrl);
 				break;
+			
 			case 20611:
 				use20611(player, ctrl);
 				break;
+			
 			case 20610:
 				use20610(player, ctrl);
 				break;
+			
 			case 20609:
 				use20609(player, ctrl);
 				break;
+			
 			case 20608:
 				use20608(player, ctrl);
 				break;
+			
 			case 20607:
 				use20607(player, ctrl);
 				break;
+			
 			case 14638:
 				use14638(player, ctrl);
 				break;
+			
 			case 14637:
 				use14637(player, ctrl);
 				break;
+			
 			case 14636:
 				use14636(player, ctrl);
 				break;
+			
 			case 14635:
 				use14635(player, ctrl);
 				break;
+			
 			case 20492:
 				use20492(player, ctrl);
 				break;
+			
 			case 20491:
 				use20491(player, ctrl);
 				break;
+			
 			case 20490:
 				use20490(player, ctrl);
 				break;
+			
 			case 20489:
 				use20489(player, ctrl);
 				break;
+			
 			case 20488:
 				use20488(player, ctrl);
 				break;
+			
 			case 20487:
 				use20487(player, ctrl);
 				break;
+			
 			case 20486:
 				use20486(player, ctrl);
 				break;
+			
 			case 20485:
 				use20485(player, ctrl);
 				break;
+			
 			case 20484:
 				use20484(player, ctrl);
 				break;
+			
 			case 20483:
 				use20483(player, ctrl);
 				break;
+			
 			case 20482:
 				use20482(player, ctrl);
 				break;
+			
 			case 20481:
 				use20481(player, ctrl);
 				break;
+			
 			case 20480:
 				use20480(player, ctrl);
 				break;
+			
 			case 20479:
 				use20479(player, ctrl);
 				break;
+			
 			case 20478:
 				use20478(player, ctrl);
 				break;
+			
 			case 20477:
 				use20477(player, ctrl);
 				break;
+			
 			case 20476:
 				use20476(player, ctrl);
 				break;
+			
 			case 20475:
 				use20475(player, ctrl);
 				break;
+			
 			case 20474:
 				use20474(player, ctrl);
 				break;
+			
 			case 20473:
 				use20473(player, ctrl);
 				break;
+			
 			case 20472:
 				use20472(player, ctrl);
 				break;
+			
 			case 20471:
 				use20471(player, ctrl);
 				break;
+			
 			case 20470:
 				use20470(player, ctrl);
 				break;
+			
 			case 20469:
 				use20469(player, ctrl);
 				break;
+			
 			case 20468:
 				use20468(player, ctrl);
 				break;
+			
 			case 20467:
 				use20467(player, ctrl);
 				break;
+			
 			case 20466:
 				use20466(player, ctrl);
 				break;
+			
 			case 20465:
 				use20465(player, ctrl);
 				break;
+			
 			case 20464:
 				use20464(player, ctrl);
 				break;
+			
 			case 20463:
 				use20463(player, ctrl);
 				break;
+			
 			case 20462:
 				use20462(player, ctrl);
 				break;
+			
 			case 20461:
 				use20461(player, ctrl);
 				break;
+			
 			case 20460:
 				use20460(player, ctrl);
 				break;
+			
 			case 20459:
 				use20459(player, ctrl);
 				break;
+			
 			case 20458:
 				use20458(player, ctrl);
 				break;
+			
 			case 20457:
 				use20457(player, ctrl);
 				break;
+			
 			case 20456:
 				use20456(player, ctrl);
 				break;
+			
 			case 20455:
 				use20455(player, ctrl);
 				break;
+			
 			case 20454:
 				use20454(player, ctrl);
 				break;
+			
 			case 20453:
 				use20453(player, ctrl);
 				break;
+			
 			case 20452:
 				use20452(player, ctrl);
 				break;
+			
 			case 20451:
 				use20451(player, ctrl);
 				break;
+			
 			case 20450:
 				use20450(player, ctrl);
 				break;
+			
 			case 20402:
 				use20402(player, ctrl);
 				break;
+			
 			case 20403:
 				use20403(player, ctrl);
 				break;
+			
 			case 20404:
 				use20404(player, ctrl);
 				break;
+			
 			case 14677:
 				use14677(player, ctrl);
 				break;
+			
 			case 14676:
 				use14676(player, ctrl);
 				break;
+			
 			case 14663:
 				use14663(player, ctrl);
 				break;
+			
 			case 14662:
 				use14662(player, ctrl);
 				break;
+			
 			case 14661:
 				use14661(player, ctrl);
 				break;
+			
 			case 14660:
 				use14660(player, ctrl);
 				break;
+			
 			case 14659:
 				use14659(player, ctrl);
 				break;
+			
 			case 14658:
 				use14658(player, ctrl);
 				break;
+			
 			case 14657:
 				use14657(player, ctrl);
 				break;
+			
 			case 14656:
 				use14656(player, ctrl);
 				break;
+			
 			case 14655:
 				use14655(player, ctrl);
 				break;
+			
 			case 14654:
 				use14654(player, ctrl);
 				break;
+			
 			case 14653:
 				use14653(player, ctrl);
 				break;
+			
 			case 14652:
 				use14652(player, ctrl);
 				break;
+			
 			case 14651:
 				use14651(player, ctrl);
 				break;
+			
 			case 14650:
 				use14650(player, ctrl);
 				break;
+			
 			case 14649:
 				use14649(player, ctrl);
 				break;
+			
 			case 14648:
 				use14648(player, ctrl);
 				break;
+			
 			case 14647:
 				use14647(player, ctrl);
 				break;
+			
 			case 14646:
 				use14646(player, ctrl);
 				break;
+			
 			case 14645:
 				use14645(player, ctrl);
 				break;
+			
 			case 14644:
 				use14644(player, ctrl);
 				break;
+			
 			case 14643:
 				use14643(player, ctrl);
 				break;
+			
 			case 14642:
 				use14642(player, ctrl);
 				break;
+			
 			case 14641:
 				use14641(player, ctrl);
 				break;
+			
 			case 14640:
 				use14640(player, ctrl);
 				break;
+			
 			case 14639:
 				use14639(player, ctrl);
 				break;
+			
 			case 20296:
 				use20296(player, ctrl);
 				break;
+			
 			case 20295:
 				use20295(player, ctrl);
 				break;
+			
 			case 20294:
 				use20294(player, ctrl);
 				break;
+			
 			case 20293:
 				use20293(player, ctrl);
 				break;
+			
 			case 20292:
 				use20292(player, ctrl);
 				break;
+			
 			case 20291:
 				use20291(player, ctrl);
 				break;
+			
 			case 20290:
 				use20290(player, ctrl);
 				break;
+			
 			case 20289:
 				use20289(player, ctrl);
 				break;
+			
 			case 20288:
 				use20288(player, ctrl);
 				break;
+			
 			case 20287:
 				use20287(player, ctrl);
 				break;
+			
 			case 20286:
 				use20286(player, ctrl);
 				break;
+			
 			case 20285:
 				use20285(player, ctrl);
 				break;
+			
 			case 20284:
 				use20284(player, ctrl);
 				break;
+			
 			case 20283:
 				use20283(player, ctrl);
 				break;
+			
 			case 20282:
 				use20282(player, ctrl);
 				break;
+			
 			case 20281:
 				use20281(player, ctrl);
 				break;
+			
 			case 20280:
 				use20280(player, ctrl);
 				break;
+			
 			case 20277:
 				use20277(player, ctrl);
 				break;
+			
 			case 15278:
 				use15278(player, ctrl);
 				break;
+			
 			case 15277:
 				use15277(player, ctrl);
 				break;
+			
 			case 15276:
 				use15276(player, ctrl);
 				break;
+			
 			case 15275:
 				use15275(player, ctrl);
 				break;
+			
 			case 15274:
 				use15274(player, ctrl);
 				break;
+			
 			case 15273:
 				use15273(player, ctrl);
 				break;
+			
 			case 15272:
 				use15272(player, ctrl);
 				break;
+			
 			case 15271:
 				use15271(player, ctrl);
 				break;
+			
 			case 15270:
 				use15270(player, ctrl);
 				break;
+			
 			case 15269:
 				use15269(player, ctrl);
 				break;
+			
 			case 15268:
 				use15268(player, ctrl);
 				break;
+			
 			case 15267:
 				use15267(player, ctrl);
 				break;
+			
 			case 15266:
 				use15266(player, ctrl);
 				break;
+			
 			case 15265:
 				use15265(player, ctrl);
 				break;
+			
 			case 15264:
 				use15264(player, ctrl);
 				break;
+			
 			case 15263:
 				use15263(player, ctrl);
 				break;
+			
 			case 15262:
 				use15262(player, ctrl);
 				break;
+			
 			case 15261:
 				use15261(player, ctrl);
 				break;
+			
 			case 15260:
 				use15260(player, ctrl);
 				break;
+			
 			case 15259:
 				use15259(player, ctrl);
 				break;
+			
 			case 15258:
 				use15258(player, ctrl);
 				break;
+			
 			case 15257:
 				use15257(player, ctrl);
 				break;
+			
 			case 15256:
 				use15256(player, ctrl);
 				break;
+			
 			case 15255:
 				use15255(player, ctrl);
 				break;
+			
 			case 15254:
 				use15254(player, ctrl);
 				break;
+			
 			case 15253:
 				use15253(player, ctrl);
 				break;
+			
 			case 15252:
 				use15252(player, ctrl);
 				break;
+			
 			case 15251:
 				use15251(player, ctrl);
 				break;
+			
 			case 15250:
 				use15250(player, ctrl);
 				break;
+			
 			case 15249:
 				use15249(player, ctrl);
 				break;
+			
 			case 15248:
 				use15248(player, ctrl);
 				break;
+			
 			case 15247:
 				use15247(player, ctrl);
 				break;
+			
 			case 15246:
 				use15246(player, ctrl);
 				break;
+			
 			case 15245:
 				use15245(player, ctrl);
 				break;
+			
 			case 15244:
 				use15244(player, ctrl);
 				break;
+			
 			case 15243:
 				use15243(player, ctrl);
 				break;
+			
 			case 15242:
 				use15242(player, ctrl);
 				break;
+			
 			case 15241:
 				use15241(player, ctrl);
 				break;
+			
 			case 15240:
 				use15240(player, ctrl);
 				break;
+			
 			case 15239:
 				use15239(player, ctrl);
 				break;
+			
 			case 15238:
 				use15238(player, ctrl);
 				break;
+			
 			case 15237:
 				use15237(player, ctrl);
 				break;
+			
 			case 15236:
 				use15236(player, ctrl);
 				break;
+			
 			case 15235:
 				use15235(player, ctrl);
 				break;
+			
 			case 15234:
 				use15234(player, ctrl);
 				break;
+			
 			case 15233:
 				use15233(player, ctrl);
 				break;
+			
 			case 15232:
 				use15232(player, ctrl);
 				break;
+			
 			case 15231:
 				use15231(player, ctrl);
 				break;
+			
 			case 15230:
 				use15230(player, ctrl);
 				break;
+			
 			case 15229:
 				use15229(player, ctrl);
 				break;
+			
 			case 15228:
 				use15228(player, ctrl);
 				break;
+			
 			case 15227:
 				use15227(player, ctrl);
 				break;
+			
 			case 15226:
 				use15226(player, ctrl);
 				break;
+			
 			case 15225:
 				use15225(player, ctrl);
 				break;
+			
 			case 15224:
 				use15224(player, ctrl);
 				break;
+			
 			case 15223:
 				use15223(player, ctrl);
 				break;
+			
 			case 15222:
 				use15222(player, ctrl);
 				break;
@@ -2305,51 +2686,67 @@ public class Extractable extends SimpleItemHandler
 			case 15219:
 				use15219(player, ctrl);
 				break;
+			
 			case 15218:
 				use15218(player, ctrl);
 				break;
+			
 			case 15217:
 				use15217(player, ctrl);
 				break;
+			
 			case 15216:
 				use15216(player, ctrl);
 				break;
+			
 			case 15215:
 				use15215(player, ctrl);
 				break;
+			
 			case 15214:
 				use15214(player, ctrl);
 				break;
+			
 			case 15213:
 				use15213(player, ctrl);
 				break;
+			
 			case 15212:
 				use15212(player, ctrl);
 				break;
+			
 			case 15209:
 				use15209(player, ctrl);
 				break;
+			
 			case 15207:
 				use15207(player, ctrl);
 				break;
+			
 			case 15206:
 				use15206(player, ctrl);
 				break;
+			
 			case 15205:
 				use15205(player, ctrl);
 				break;
+			
 			case 15204:
 				use15204(player, ctrl);
 				break;
+			
 			case 15203:
 				use15203(player, ctrl);
 				break;
+			
 			case 15202:
 				use15202(player, ctrl);
 				break;
+			
 			case 15201:
 				use15201(player, ctrl);
 				break;
+			
 			case 15200:
 				use15200(player, ctrl);
 				break;
@@ -2357,2040 +2754,2719 @@ public class Extractable extends SimpleItemHandler
 			case 20799:
 				use20799(player, ctrl);
 				break;
+			
 			case 20798:
 				use20798(player, ctrl);
 				break;
+			
 			case 20797:
 				use20797(player, ctrl);
 				break;
+			
 			case 20796:
 				use20796(player, ctrl);
 				break;
+			
 			case 20773:
 				use20773(player, ctrl);
 				break;
+			
 			case 20754:
 				use20754(player, ctrl);
 				break;
+			
 			case 20753:
 				use20753(player, ctrl);
 				break;
+			
 			case 20740:
 				use20740(player, ctrl);
 				break;
+			
 			case 20738:
 				use20738(player, ctrl);
 				break;
+			
 			case 20737:
 				use20737(player, ctrl);
 				break;
+			
 			case 20736:
 				use20736(player, ctrl);
 				break;
+			
 			case 20735:
 				use20735(player, ctrl);
 				break;
+			
 			case 20734:
 				use20734(player, ctrl);
 				break;
+			
 			case 20705:
 				use20705(player, ctrl);
 				break;
+			
 			case 20704:
 				use20704(player, ctrl);
 				break;
+			
 			case 20703:
 				use20703(player, ctrl);
 				break;
+			
 			case 20702:
 				use20702(player, ctrl);
 				break;
+			
 			case 20701:
 				use20701(player, ctrl);
 				break;
+			
 			case 20700:
 				use20700(player, ctrl);
 				break;
+			
 			case 14530:
 				use14530(player, ctrl);
 				break;
+			
 			case 13799:
 				use13799(player, ctrl);
 				break;
+			
 			case 13428:
 				use13428(player, ctrl);
 				break;
+			
 			case 13427:
 				use13427(player, ctrl);
 				break;
+			
 			case 13426:
 				use13426(player, ctrl);
 				break;
+			
 			case 13425:
 				use13425(player, ctrl);
 				break;
+			
 			case 13424:
 				use13424(player, ctrl);
 				break;
+			
 			case 13423:
 				use13423(player, ctrl);
 				break;
+			
 			case 13422:
 				use13422(player, ctrl);
 				break;
+			
 			case 13385:
 				use13385(player, ctrl);
 				break;
+			
 			case 13384:
 				use13384(player, ctrl);
 				break;
+			
 			case 13381:
 				use13381(player, ctrl);
 				break;
+			
 			case 13380:
 				use13380(player, ctrl);
 				break;
+			
 			case 13379:
 				use13379(player, ctrl);
 				break;
+			
 			case 13378:
 				use13378(player, ctrl);
 				break;
+			
 			case 13377:
 				use13377(player, ctrl);
 				break;
+			
 			case 13376:
 				use13376(player, ctrl);
 				break;
+			
 			case 13375:
 				use13375(player, ctrl);
 				break;
+			
 			case 13374:
 				use13374(player, ctrl);
 				break;
+			
 			case 13373:
 				use13373(player, ctrl);
 				break;
+			
 			case 13372:
 				use13372(player, ctrl);
 				break;
+			
 			case 13371:
 				use13371(player, ctrl);
 				break;
+			
 			case 13370:
 				use13370(player, ctrl);
 				break;
+			
 			case 13369:
 				use13369(player, ctrl);
 				break;
+			
 			case 13368:
 				use13368(player, ctrl);
 				break;
+			
 			case 13367:
 				use13367(player, ctrl);
 				break;
+			
 			case 13366:
 				use13366(player, ctrl);
 				break;
+			
 			case 13365:
 				use13365(player, ctrl);
 				break;
+			
 			case 13364:
 				use13364(player, ctrl);
 				break;
+			
 			case 13363:
 				use13363(player, ctrl);
 				break;
+			
 			case 13362:
 				use13362(player, ctrl);
 				break;
+			
 			case 13361:
 				use13361(player, ctrl);
 				break;
+			
 			case 13360:
 				use13360(player, ctrl);
 				break;
+			
 			case 13359:
 				use13359(player, ctrl);
 				break;
+			
 			case 13358:
 				use13358(player, ctrl);
 				break;
+			
 			case 13357:
 				use13357(player, ctrl);
 				break;
+			
 			case 13356:
 				use13356(player, ctrl);
 				break;
+			
 			case 13355:
 				use13355(player, ctrl);
 				break;
+			
 			case 13354:
 				use13354(player, ctrl);
 				break;
+			
 			case 13353:
 				use13353(player, ctrl);
 				break;
+			
 			case 13352:
 				use13352(player, ctrl);
 				break;
+			
 			case 13351:
 				use13351(player, ctrl);
 				break;
+			
 			case 13350:
 				use13350(player, ctrl);
 				break;
+			
 			case 13349:
 				use13349(player, ctrl);
 				break;
+			
 			case 13348:
 				use13348(player, ctrl);
 				break;
+			
 			case 13347:
 				use13347(player, ctrl);
 				break;
+			
 			case 13346:
 				use13346(player, ctrl);
 				break;
+			
 			case 13345:
 				use13345(player, ctrl);
 				break;
+			
 			case 13344:
 				use13344(player, ctrl);
 				break;
+			
 			case 13343:
 				use13343(player, ctrl);
 				break;
+			
 			case 13342:
 				use13342(player, ctrl);
 				break;
+			
 			case 13341:
 				use13341(player, ctrl);
 				break;
+			
 			case 16999:
 				use16999(player, ctrl);
 				break;
+			
 			case 16998:
 				use16998(player, ctrl);
 				break;
+			
 			case 16997:
 				use16997(player, ctrl);
 				break;
+			
 			case 16996:
 				use16996(player, ctrl);
 				break;
+			
 			case 16995:
 				use16995(player, ctrl);
 				break;
+			
 			case 16994:
 				use16994(player, ctrl);
 				break;
+			
 			case 16993:
 				use16993(player, ctrl);
 				break;
+			
 			case 16992:
 				use16992(player, ctrl);
 				break;
+			
 			case 16991:
 				use16991(player, ctrl);
 				break;
+			
 			case 16990:
 				use16990(player, ctrl);
 				break;
+			
 			case 16989:
 				use16989(player, ctrl);
 				break;
+			
 			case 16988:
 				use16988(player, ctrl);
 				break;
+			
 			case 16987:
 				use16987(player, ctrl);
 				break;
+			
 			case 16986:
 				use16986(player, ctrl);
 				break;
+			
 			case 16985:
 				use16985(player, ctrl);
 				break;
+			
 			case 16984:
 				use16984(player, ctrl);
 				break;
+			
 			case 16983:
 				use16983(player, ctrl);
 				break;
+			
 			case 16982:
 				use16982(player, ctrl);
 				break;
+			
 			case 16981:
 				use16981(player, ctrl);
 				break;
+			
 			case 16980:
 				use16980(player, ctrl);
 				break;
+			
 			case 16979:
 				use16979(player, ctrl);
 				break;
+			
 			case 16978:
 				use16978(player, ctrl);
 				break;
+			
 			case 16977:
 				use16977(player, ctrl);
 				break;
+			
 			case 16976:
 				use16976(player, ctrl);
 				break;
+			
 			case 16975:
 				use16975(player, ctrl);
 				break;
+			
 			case 16974:
 				use16974(player, ctrl);
 				break;
+			
 			case 16973:
 				use16973(player, ctrl);
 				break;
+			
 			case 16972:
 				use16972(player, ctrl);
 				break;
+			
 			case 16971:
 				use16971(player, ctrl);
 				break;
+			
 			case 16970:
 				use16970(player, ctrl);
 				break;
+			
 			case 16969:
 				use16969(player, ctrl);
 				break;
+			
 			case 16968:
 				use16968(player, ctrl);
 				break;
+			
 			case 16852:
 				use16852(player, ctrl);
 				break;
+			
 			case 16398:
 				use16398(player, ctrl);
 				break;
+			
 			case 16397:
 				use16397(player, ctrl);
 				break;
+			
 			case 16396:
 				use16396(player, ctrl);
 				break;
+			
 			case 16395:
 				use16395(player, ctrl);
 				break;
+			
 			case 16394:
 				use16394(player, ctrl);
 				break;
+			
 			case 16393:
 				use16393(player, ctrl);
 				break;
+			
 			case 16392:
 				use16392(player, ctrl);
 				break;
+			
 			case 16391:
 				use16391(player, ctrl);
 				break;
+			
 			case 16390:
 				use16390(player, ctrl);
 				break;
+			
 			case 16389:
 				use16389(player, ctrl);
 				break;
+			
 			case 16388:
 				use16388(player, ctrl);
 				break;
+			
 			case 16387:
 				use16387(player, ctrl);
 				break;
+			
 			case 16386:
 				use16386(player, ctrl);
 				break;
+			
 			case 16385:
 				use16385(player, ctrl);
 				break;
+			
 			case 16384:
 				use16384(player, ctrl);
 				break;
+			
 			case 16383:
 				use16383(player, ctrl);
 				break;
+			
 			case 20398:
 				use20398(player, ctrl);
 				break;
+			
 			case 20397:
 				use20397(player, ctrl);
 				break;
+			
 			case 20331:
 				use20331(player, ctrl);
 				break;
+			
 			case 20328:
 				use20328(player, ctrl);
 				break;
+			
 			case 20319:
 				use20319(player, ctrl);
 				break;
+			
 			case 20318:
 				use20318(player, ctrl);
 				break;
+			
 			case 20317:
 				use20317(player, ctrl);
 				break;
+			
 			case 20316:
 				use20316(player, ctrl);
 				break;
+			
 			case 20315:
 				use20315(player, ctrl);
 				break;
+			
 			case 20314:
 				use20314(player, ctrl);
 				break;
+			
 			case 21095:
 				use21095(player, ctrl);
 				break;
+			
 			case 21087:
 				use21087(player, ctrl);
 				break;
+			
 			case 21089:
 				use21089(player, ctrl);
 				break;
+			
 			case 21085:
 				use21085(player, ctrl);
 				break;
+			
 			case 21083:
 				use21083(player, ctrl);
 				break;
+			
 			case 21082:
 				use21082(player, ctrl);
 				break;
+			
 			case 21081:
 				use21081(player, ctrl);
 				break;
+			
 			case 21080:
 				use21080(player, ctrl);
 				break;
+			
 			case 21079:
 				use21079(player, ctrl);
 				break;
+			
 			case 21078:
 				use21078(player, ctrl);
 				break;
+			
 			case 21077:
 				use21077(player, ctrl);
 				break;
+			
 			case 21076:
 				use21076(player, ctrl);
 				break;
+			
 			case 21075:
 				use21075(player, ctrl);
 				break;
+			
 			case 21074:
 				use21074(player, ctrl);
 				break;
+			
 			case 21073:
 				use21073(player, ctrl);
 				break;
+			
 			case 21072:
 				use21072(player, ctrl);
 				break;
+			
 			case 21071:
 				use21071(player, ctrl);
 				break;
+			
 			case 21070:
 				use21070(player, ctrl);
 				break;
+			
 			case 21069:
 				use21069(player, ctrl);
 				break;
+			
 			case 21068:
 				use21068(player, ctrl);
 				break;
+			
 			case 21067:
 				use21067(player, ctrl);
 				break;
+			
 			case 21066:
 				use21066(player, ctrl);
 				break;
+			
 			case 21065:
 				use21065(player, ctrl);
 				break;
+			
 			case 2106:
 				use21064(player, ctrl);
 				break;
+			
 			case 21063:
 				use21063(player, ctrl);
 				break;
+			
 			case 21029:
 				use21029(player, ctrl);
 				break;
+			
 			case 21028:
 				use21028(player, ctrl);
 				break;
+			
 			case 21027:
 				use21027(player, ctrl);
 				break;
+			
 			case 21026:
 				use21026(player, ctrl);
 				break;
+			
 			case 21025:
 				use21025(player, ctrl);
 				break;
+			
 			case 21024:
 				use21024(player, ctrl);
 				break;
+			
 			case 21008:
 				use21008(player, ctrl);
 				break;
+			
 			case 21007:
 				use21007(player, ctrl);
 				break;
+			
 			case 21006:
 				use21006(player, ctrl);
 				break;
+			
 			case 21005:
 				use21005(player, ctrl);
 				break;
+			
 			case 21004:
 				use21004(player, ctrl);
 				break;
+			
 			case 21003:
 				use21003(player, ctrl);
 				break;
+			
 			case 21002:
 				use21002(player, ctrl);
 				break;
+			
 			case 21001:
 				use21001(player, ctrl);
 				break;
+			
 			case 21686:
 				use21686(player, ctrl);
 				break;
+			
 			case 21685:
 				use21685(player, ctrl);
 				break;
+			
 			case 21684:
 				use21684(player, ctrl);
 				break;
+			
 			case 21683:
 				use21683(player, ctrl);
 				break;
+			
 			case 21682:
 				use21682(player, ctrl);
 				break;
+			
 			case 21681:
 				use21681(player, ctrl);
 				break;
+			
 			case 21680:
 				use21680(player, ctrl);
 				break;
+			
 			case 21679:
 				use21679(player, ctrl);
 				break;
+			
 			case 21678:
 				use21678(player, ctrl);
 				break;
+			
 			case 21677:
 				use21677(player, ctrl);
 				break;
+			
 			case 21676:
 				use21676(player, ctrl);
 				break;
+			
 			case 21675:
 				use21675(player, ctrl);
 				break;
+			
 			case 21674:
 				use21674(player, ctrl);
 				break;
+			
 			case 21673:
 				use21673(player, ctrl);
 				break;
+			
 			case 21672:
 				use21672(player, ctrl);
 				break;
+			
 			case 21671:
 				use21671(player, ctrl);
 				break;
+			
 			case 21670:
 				use21670(player, ctrl);
 				break;
+			
 			case 21669:
 				use21669(player, ctrl);
 				break;
+			
 			case 21668:
 				use21668(player, ctrl);
 				break;
+			
 			case 21667:
 				use21667(player, ctrl);
 				break;
+			
 			case 21666:
 				use21666(player, ctrl);
 				break;
+			
 			case 21665:
 				use21665(player, ctrl);
 				break;
+			
 			case 21664:
 				use21664(player, ctrl);
 				break;
+			
 			case 21663:
 				use21663(player, ctrl);
 				break;
+			
 			case 21662:
 				use21662(player, ctrl);
 				break;
+			
 			case 21661:
 				use21661(player, ctrl);
 				break;
+			
 			case 21660:
 				use21660(player, ctrl);
 				break;
+			
 			case 21659:
 				use21659(player, ctrl);
 				break;
+			
 			case 21658:
 				use21658(player, ctrl);
 				break;
+			
 			case 21657:
 				use21657(player, ctrl);
 				break;
+			
 			case 21656:
 				use21656(player, ctrl);
 				break;
+			
 			case 21655:
 				use21655(player, ctrl);
 				break;
+			
 			case 21654:
 				use21654(player, ctrl);
 				break;
+			
 			case 21653:
 				use21653(player, ctrl);
 				break;
+			
 			case 21652:
 				use21652(player, ctrl);
 				break;
+			
 			case 21651:
 				use21651(player, ctrl);
 				break;
+			
 			case 21650:
 				use21650(player, ctrl);
 				break;
+			
 			case 21649:
 				use21649(player, ctrl);
 				break;
+			
 			case 21648:
 				use21648(player, ctrl);
 				break;
+			
 			case 21647:
 				use21647(player, ctrl);
 				break;
+			
 			case 21646:
 				use21646(player, ctrl);
 				break;
+			
 			case 21645:
 				use21645(player, ctrl);
 				break;
+			
 			case 21644:
 				use21644(player, ctrl);
 				break;
+			
 			case 21643:
 				use21643(player, ctrl);
 				break;
+			
 			case 21642:
 				use21642(player, ctrl);
 				break;
+			
 			case 21641:
 				use21641(player, ctrl);
 				break;
+			
 			case 21640:
 				use21640(player, ctrl);
 				break;
+			
 			case 21639:
 				use21639(player, ctrl);
 				break;
+			
 			case 21638:
 				use21638(player, ctrl);
 				break;
+			
 			case 21637:
 				use21637(player, ctrl);
 				break;
+			
 			case 21636:
 				use21636(player, ctrl);
 				break;
+			
 			case 21635:
 				use21635(player, ctrl);
 				break;
+			
 			case 21634:
 				use21634(player, ctrl);
 				break;
+			
 			case 21633:
 				use21633(player, ctrl);
 				break;
+			
 			case 21632:
 				use21632(player, ctrl);
 				break;
+			
 			case 21631:
 				use21631(player, ctrl);
 				break;
+			
 			case 21630:
 				use21630(player, ctrl);
 				break;
+			
 			case 21629:
 				use21629(player, ctrl);
 				break;
+			
 			case 21628:
 				use21628(player, ctrl);
 				break;
+			
 			case 21627:
 				use21627(player, ctrl);
 				break;
+			
 			case 21626:
 				use21626(player, ctrl);
 				break;
+			
 			case 21625:
 				use21625(player, ctrl);
 				break;
+			
 			case 21624:
 				use21624(player, ctrl);
 				break;
+			
 			case 21623:
 				use21623(player, ctrl);
 				break;
+			
 			case 21622:
 				use21622(player, ctrl);
 				break;
+			
 			case 21621:
 				use21621(player, ctrl);
 				break;
+			
 			case 21620:
 				use21620(player, ctrl);
 				break;
+			
 			case 13292:
 				use13292(player, ctrl);
 				break;
+			
 			case 13291:
 				use13291(player, ctrl);
 				break;
+			
 			case 13279:
 				use13279(player, ctrl);
 				break;
+			
 			case 13276:
 				use13276(player, ctrl);
 				break;
+			
 			case 13275:
 				use13275(player, ctrl);
 				break;
+			
 			case 13257:
 				use13257(player, ctrl);
 				break;
+			
 			case 13256:
 				use13256(player, ctrl);
 				break;
+			
 			case 13233:
 				use13233(player, ctrl);
 				break;
+			
 			case 13232:
 				use13232(player, ctrl);
 				break;
+			
 			case 13231:
 				use13231(player, ctrl);
 				break;
+			
 			case 13230:
 				use13230(player, ctrl);
 				break;
+			
 			case 13229:
 				use13229(player, ctrl);
 				break;
+			
 			case 13228:
 				use13228(player, ctrl);
 				break;
+			
 			case 13227:
 				use13227(player, ctrl);
 				break;
+			
 			case 13226:
 				use13226(player, ctrl);
 				break;
+			
 			case 13225:
 				use13225(player, ctrl);
 				break;
+			
 			case 13126:
 				use13126(player, ctrl);
 				break;
+			
 			case 13125:
 				use13125(player, ctrl);
 				break;
+			
 			case 13124:
 				use13124(player, ctrl);
 				break;
+			
 			case 13122:
 				use13122(player, ctrl);
 				break;
+			
 			case 13121:
 				use13121(player, ctrl);
 				break;
+			
 			case 13120:
 				use13120(player, ctrl);
 				break;
+			
 			case 13119:
 				use13119(player, ctrl);
 				break;
+			
 			case 13118:
 				use13118(player, ctrl);
 				break;
+			
 			case 13117:
 				use13117(player, ctrl);
 				break;
+			
 			case 13116:
 				use13116(player, ctrl);
 				break;
+			
 			case 13115:
 				use13115(player, ctrl);
 				break;
+			
 			case 13114:
 				use13114(player, ctrl);
 				break;
+			
 			case 13113:
 				use13113(player, ctrl);
 				break;
+			
 			case 13112:
 				use13112(player, ctrl);
 				break;
+			
 			case 13111:
 				use13111(player, ctrl);
 				break;
+			
 			case 13110:
 				use13110(player, ctrl);
 				break;
+			
 			case 13109:
 				use13109(player, ctrl);
 				break;
+			
 			case 13108:
 				use13108(player, ctrl);
 				break;
+			
 			case 13107:
 				use13107(player, ctrl);
 				break;
+			
 			case 13106:
 				use13106(player, ctrl);
 				break;
+			
 			case 13105:
 				use13105(player, ctrl);
 				break;
+			
 			case 13104:
 				use13104(player, ctrl);
 				break;
+			
 			case 13103:
 				use13103(player, ctrl);
 				break;
+			
 			case 10259:
 				use10259(player, ctrl);
 				break;
+			
 			case 10258:
 				use10258(player, ctrl);
 				break;
+			
 			case 10257:
 				use10257(player, ctrl);
 				break;
+			
 			case 10256:
 				use10256(player, ctrl);
 				break;
+			
 			case 10255:
 				use10255(player, ctrl);
 				break;
+			
 			case 15199:
 				use15199(player, ctrl);
 				break;
+			
 			case 15198:
 				use15198(player, ctrl);
 				break;
+			
 			case 15197:
 				use15197(player, ctrl);
 				break;
+			
 			case 15196:
 				use15196(player, ctrl);
 				break;
+			
 			case 15195:
 				use15195(player, ctrl);
 				break;
+			
 			case 15194:
 				use15194(player, ctrl);
 				break;
+			
 			case 20189:
 				use20189(player, ctrl);
 				break;
+			
 			case 20188:
 				use20188(player, ctrl);
 				break;
+			
 			case 20187:
 				use20187(player, ctrl);
 				break;
+			
 			case 20186:
 				use20186(player, ctrl);
 				break;
+			
 			case 20185:
 				use20185(player, ctrl);
 				break;
+			
 			case 20184:
 				use20184(player, ctrl);
 				break;
+			
 			case 20183:
 				use20183(player, ctrl);
 				break;
+			
 			case 20182:
 				use20182(player, ctrl);
 				break;
+			
 			case 20181:
 				use20181(player, ctrl);
 				break;
+			
 			case 20180:
 				use20180(player, ctrl);
 				break;
+			
 			case 20179:
 				use20179(player, ctrl);
 				break;
+			
 			case 20102:
 				use20102(player, ctrl);
 				break;
+			
 			case 20101:
 				use20101(player, ctrl);
 				break;
+			
 			case 15378:
 				use15378(player, ctrl);
 				break;
+			
 			case 15377:
 				use15377(player, ctrl);
 				break;
+			
 			case 15376:
 				use15376(player, ctrl);
 				break;
+			
 			case 15375:
 				use15375(player, ctrl);
 				break;
+			
 			case 15374:
 				use15374(player, ctrl);
 				break;
+			
 			case 15373:
 				use15373(player, ctrl);
 				break;
+			
 			case 15372:
 				use15372(player, ctrl);
 				break;
+			
 			case 15371:
 				use15371(player, ctrl);
 				break;
+			
 			case 15370:
 				use15370(player, ctrl);
 				break;
+			
 			case 15345:
 				use15345(player, ctrl);
 				break;
+			
 			case 15343:
 				use15343(player, ctrl);
 				break;
+			
 			case 21619:
 				use21619(player, ctrl);
 				break;
+			
 			case 21618:
 				use21618(player, ctrl);
 				break;
+			
 			case 21617:
 				use21617(player, ctrl);
 				break;
+			
 			case 21616:
 				use21616(player, ctrl);
 				break;
+			
 			case 21615:
 				use21615(player, ctrl);
 				break;
+			
 			case 21614:
 				use21614(player, ctrl);
 				break;
+			
 			case 21613:
 				use21613(player, ctrl);
 				break;
+			
 			case 21612:
 				use21612(player, ctrl);
 				break;
+			
 			case 21611:
 				use21611(player, ctrl);
 				break;
+			
 			case 21610:
 				use21610(player, ctrl);
 				break;
+			
 			case 21609:
 				use21609(player, ctrl);
 				break;
+			
 			case 21608:
 				use21608(player, ctrl);
 				break;
+			
 			case 21607:
 				use21607(player, ctrl);
 				break;
+			
 			case 21606:
 				use21606(player, ctrl);
 				break;
+			
 			case 21605:
 				use21605(player, ctrl);
 				break;
+			
 			case 21604:
 				use21604(player, ctrl);
 				break;
+			
 			case 21603:
 				use21603(player, ctrl);
 				break;
+			
 			case 21602:
 				use21602(player, ctrl);
 				break;
+			
 			case 21601:
 				use21601(player, ctrl);
 				break;
+			
 			case 22187:
 				use22187(player, ctrl);
 				break;
+			
 			case 14841:
 				use14841(player, ctrl);
 				break;
+			
 			case 14847:
 				use14847(player, ctrl);
 				break;
+			
 			case 10408:
 				use10408(player, ctrl);
 				break;
+			
 			case 10473:
 				use10473(player, ctrl);
 				break;
+			
 			case 9599:
 				use9599(player, ctrl);
 				break;
+			
 			case 20069:
 				use20069(player, ctrl);
 				break;
+			
 			case 20070:
 				use20070(player, ctrl);
 				break;
+			
 			case 20071:
 				use20071(player, ctrl);
 				break;
+			
 			case 20072:
 				use20072(player, ctrl);
 				break;
+			
 			case 20073:
 				use20073(player, ctrl);
 				break;
+			
 			case 20074:
 				use20074(player, ctrl);
 				break;
+			
 			case 20210:
 				use20210(player, ctrl);
 				break;
+			
 			case 20211:
 				use20211(player, ctrl);
 				break;
+			
 			case 20215:
 				use20215(player, ctrl);
 				break;
+			
 			case 20216:
 				use20216(player, ctrl);
 				break;
+			
 			case 20217:
 				use20217(player, ctrl);
 				break;
+			
 			case 20218:
 				use20218(player, ctrl);
 				break;
+			
 			case 20219:
 				use20219(player, ctrl);
 				break;
+			
 			case 20220:
 				use20220(player, ctrl);
 				break;
+			
 			case 20227:
 				use20227(player, ctrl);
 				break;
+			
 			case 20228:
 				use20228(player, ctrl);
 				break;
+			
 			case 20229:
 				use20229(player, ctrl);
 				break;
+			
 			case 20233:
 				use20233(player, ctrl);
 				break;
+			
 			case 20234:
 				use20234(player, ctrl);
 				break;
+			
 			case 20235:
 				use20235(player, ctrl);
 				break;
+			
 			case 20239:
 				use20239(player, ctrl);
 				break;
+			
 			case 20240:
 				use20240(player, ctrl);
 				break;
+			
 			case 20241:
 				use20241(player, ctrl);
 				break;
+			
 			case 20242:
 				use20242(player, ctrl);
 				break;
+			
 			case 20243:
 				use20243(player, ctrl);
 				break;
+			
 			case 20244:
 				use20244(player, ctrl);
 				break;
+			
 			case 20251:
 				use20251(player, ctrl);
 				break;
+			
 			case 20254:
 				use20254(player, ctrl);
 				break;
+			
 			case 20278:
 				use20278(player, ctrl);
 				break;
+			
 			case 20279:
 				use20279(player, ctrl);
 				break;
+			
 			case 20041:
 				use20041(player, ctrl);
 				break;
+			
 			case 20042:
 				use20042(player, ctrl);
 				break;
+			
 			case 20043:
 				use20043(player, ctrl);
 				break;
+			
 			case 20044:
 				use20044(player, ctrl);
 				break;
+			
 			case 20035:
 				use20035(player, ctrl);
 				break;
+			
 			case 20036:
 				use20036(player, ctrl);
 				break;
+			
 			case 20037:
 				use20037(player, ctrl);
 				break;
+			
 			case 20038:
 				use20038(player, ctrl);
 				break;
+			
 			case 20039:
 				use20039(player, ctrl);
 				break;
+			
 			case 20040:
 				use20040(player, ctrl);
 				break;
+			
 			case 20060:
 				use20060(player, ctrl);
 				break;
+			
 			case 20061:
 				use20061(player, ctrl);
 				break;
+			
 			case 22000:
 				use22000(player, ctrl);
 				break;
+			
 			case 22001:
 				use22001(player, ctrl);
 				break;
+			
 			case 22002:
 				use22002(player, ctrl);
 				break;
+			
 			case 22003:
 				use22003(player, ctrl);
 				break;
+			
 			case 22004:
 				use22004(player, ctrl);
 				break;
+			
 			case 22005:
 				use22005(player, ctrl);
 				break;
+			
 			case 20326:
 				use20326(player, ctrl);
 				break;
+			
 			case 20327:
 				use20327(player, ctrl);
 				break;
+			
 			case 20329:
 				use20329(player, ctrl);
 				break;
+			
 			case 20330:
 				use20330(player, ctrl);
 				break;
+			
 			case 20059:
 				use20059(player, ctrl);
 				break;
+			
 			case 20494:
 				use20494(player, ctrl);
 				break;
+			
 			case 20493:
 				use20493(player, ctrl);
 				break;
+			
 			case 20395:
 				use20395(player, ctrl);
 				break;
+			
 			case 21000:
 				use21000(player, ctrl);
 				break;
+			
 			case 13281:
 				use13281(player, ctrl);
 				break;
+			
 			case 13282:
 				use13282(player, ctrl);
 				break;
+			
 			case 13283:
 				use13283(player, ctrl);
 				break;
+			
 			case 13284:
 				use13284(player, ctrl);
 				break;
+			
 			case 13285:
 				use13285(player, ctrl);
 				break;
+			
 			case 13286:
 				use13286(player, ctrl);
 				break;
+			
 			case 13287:
 				use13287(player, ctrl);
 				break;
+			
 			case 13288:
 				use13288(player, ctrl);
 				break;
+			
 			case 13289:
 				use13289(player, ctrl);
 				break;
+			
 			case 13290:
 				use13290(player, ctrl);
 				break;
+			
 			case 14267:
 				use14267(player, ctrl);
 				break;
+			
 			case 14268:
 				use14268(player, ctrl);
 				break;
+			
 			case 14269:
 				use14269(player, ctrl);
 				break;
+			
 			case 13280:
 				use13280(player, ctrl);
 				break;
+			
 			case 13713:
 				use13713(player, ctrl);
 				break;
+			
 			case 13714:
 				use13714(player, ctrl);
 				break;
+			
 			case 13715:
 				use13715(player, ctrl);
 				break;
+			
 			case 13716:
 				use13716(player, ctrl);
 				break;
+			
 			case 13717:
 				use13717(player, ctrl);
 				break;
+			
 			case 13718:
 				use13718(player, ctrl);
 				break;
+			
 			case 13719:
 				use13719(player, ctrl);
 				break;
+			
 			case 13720:
 				use13720(player, ctrl);
 				break;
+			
 			case 13721:
 				use13721(player, ctrl);
 				break;
+			
 			case 14549:
 				use14549(player, ctrl);
 				break;
+			
 			case 14550:
 				use14550(player, ctrl);
 				break;
+			
 			case 14551:
 				use14551(player, ctrl);
 				break;
+			
 			case 14552:
 				use14552(player, ctrl);
 				break;
+			
 			case 14553:
 				use14553(player, ctrl);
 				break;
+			
 			case 14554:
 				use14554(player, ctrl);
 				break;
+			
 			case 14555:
 				use14555(player, ctrl);
 				break;
+			
 			case 14556:
 				use14556(player, ctrl);
 				break;
+			
 			case 14557:
 				use14557(player, ctrl);
 				break;
+			
 			case 13695:
 				use13695(player, ctrl);
 				break;
+			
 			case 13696:
 				use13696(player, ctrl);
 				break;
+			
 			case 13697:
 				use13697(player, ctrl);
 				break;
+			
 			case 13698:
 				use13698(player, ctrl);
 				break;
+			
 			case 13699:
 				use13699(player, ctrl);
 				break;
+			
 			case 13700:
 				use13700(player, ctrl);
 				break;
+			
 			case 13701:
 				use13701(player, ctrl);
 				break;
+			
 			case 13702:
 				use13702(player, ctrl);
 				break;
+			
 			case 13703:
 				use13703(player, ctrl);
 				break;
+			
 			case 14531:
 				use14531(player, ctrl);
 				break;
+			
 			case 14532:
 				use14532(player, ctrl);
 				break;
+			
 			case 14533:
 				use14533(player, ctrl);
 				break;
+			
 			case 14534:
 				use14534(player, ctrl);
 				break;
+			
 			case 14535:
 				use14535(player, ctrl);
 				break;
+			
 			case 14536:
 				use14536(player, ctrl);
 				break;
+			
 			case 14537:
 				use14537(player, ctrl);
 				break;
+			
 			case 14538:
 				use14538(player, ctrl);
 				break;
+			
 			case 14539:
 				use14539(player, ctrl);
 				break;
+			
 			case 13704:
 				use13704(player, ctrl);
 				break;
+			
 			case 13705:
 				use13705(player, ctrl);
 				break;
+			
 			case 13706:
 				use13706(player, ctrl);
 				break;
+			
 			case 13707:
 				use13707(player, ctrl);
 				break;
+			
 			case 13708:
 				use13708(player, ctrl);
 				break;
+			
 			case 13709:
 				use13709(player, ctrl);
 				break;
+			
 			case 13710:
 				use13710(player, ctrl);
 				break;
+			
 			case 13711:
 				use13711(player, ctrl);
 				break;
+			
 			case 13712:
 				use13712(player, ctrl);
 				break;
+			
 			case 14540:
 				use14540(player, ctrl);
 				break;
+			
 			case 14541:
 				use14541(player, ctrl);
 				break;
+			
 			case 14542:
 				use14542(player, ctrl);
 				break;
+			
 			case 14543:
 				use14543(player, ctrl);
 				break;
+			
 			case 14544:
 				use14544(player, ctrl);
 				break;
+			
 			case 14545:
 				use14545(player, ctrl);
 				break;
+			
 			case 14546:
 				use14546(player, ctrl);
 				break;
+			
 			case 14547:
 				use14547(player, ctrl);
 				break;
+			
 			case 14548:
 				use14548(player, ctrl);
 				break;
+			
 			case 14884:
 				use14884(player, ctrl);
 				break;
+			
 			case 14885:
 				use14885(player, ctrl);
 				break;
+			
 			case 14886:
 				use14886(player, ctrl);
 				break;
+			
 			case 14887:
 				use14887(player, ctrl);
 				break;
+			
 			case 14888:
 				use14888(player, ctrl);
 				break;
+			
 			case 14889:
 				use14889(player, ctrl);
 				break;
+			
 			case 14890:
 				use14890(player, ctrl);
 				break;
+			
 			case 14891:
 				use14891(player, ctrl);
 				break;
+			
 			case 14892:
 				use14892(player, ctrl);
 				break;
+			
 			case 14893:
 				use14893(player, ctrl);
 				break;
+			
 			case 14894:
 				use14894(player, ctrl);
 				break;
+			
 			case 14895:
 				use14895(player, ctrl);
 				break;
+			
 			case 14896:
 				use14896(player, ctrl);
 				break;
+			
 			case 14897:
 				use14897(player, ctrl);
 				break;
+			
 			case 14898:
 				use14898(player, ctrl);
 				break;
+			
 			case 14899:
 				use14899(player, ctrl);
 				break;
+			
 			case 14900:
 				use14900(player, ctrl);
 				break;
+			
 			case 14901:
 				use14901(player, ctrl);
 				break;
+			
 			case 14616:
 				use14616(player, ctrl);
 				break;
+			
 			case 20575:
 				use20575(player, ctrl);
 				break;
+			
 			case 20804:
 				use20804(player, ctrl);
 				break;
+			
 			case 20807:
 				use20807(player, ctrl);
 				break;
+			
 			case 20805:
 				use20805(player, ctrl);
 				break;
+			
 			case 20808:
 				use20808(player, ctrl);
 				break;
+			
 			case 20806:
 				use20806(player, ctrl);
 				break;
+			
 			case 20809:
 				use20809(player, ctrl);
 				break;
+			
 			case 20842:
 				use20842(player, ctrl);
 				break;
+			
 			case 20843:
 				use20843(player, ctrl);
 				break;
+			
 			case 20844:
 				use20844(player, ctrl);
 				break;
+			
 			case 20845:
 				use20845(player, ctrl);
 				break;
+			
 			case 20846:
 				use20846(player, ctrl);
 				break;
+			
 			case 20847:
 				use20847(player, ctrl);
 				break;
+			
 			case 20848:
 				use20848(player, ctrl);
 				break;
+			
 			case 20849:
 				use20849(player, ctrl);
 				break;
+			
 			case 20850:
 				use20850(player, ctrl);
 				break;
+			
 			case 20851:
 				use20851(player, ctrl);
 				break;
+			
 			case 20852:
 				use20852(player, ctrl);
 				break;
+			
 			case 20853:
 				use20853(player, ctrl);
 				break;
+			
 			case 20854:
 				use20854(player, ctrl);
 				break;
+			
 			case 20855:
 				use20855(player, ctrl);
 				break;
+			
 			case 20856:
 				use20856(player, ctrl);
 				break;
+			
 			case 20857:
 				use20857(player, ctrl);
 				break;
+			
 			case 20858:
 				use20858(player, ctrl);
 				break;
+			
 			case 20859:
 				use20859(player, ctrl);
 				break;
+			
 			case 20860:
 				use20860(player, ctrl);
 				break;
+			
 			case 20861:
 				use20861(player, ctrl);
 				break;
+			
 			case 20862:
 				use20862(player, ctrl);
 				break;
+			
 			case 20863:
 				use20863(player, ctrl);
 				break;
+			
 			case 20864:
 				use20864(player, ctrl);
 				break;
+			
 			case 20811:
 				use20811(player, ctrl);
 				break;
+			
 			case 20812:
 				use20812(player, ctrl);
 				break;
+			
 			case 20813:
 				use20813(player, ctrl);
 				break;
+			
 			case 20814:
 				use20814(player, ctrl);
 				break;
+			
 			case 20815:
 				use20815(player, ctrl);
 				break;
+			
 			case 20816:
 				use20816(player, ctrl);
 				break;
+			
 			case 20817:
 				use20817(player, ctrl);
 				break;
+			
 			case 20810:
 				use20810(player, ctrl);
 				break;
+			
 			case 20865:
 				use20865(player, ctrl);
 				break;
+			
 			case 20748:
 				use20748(player, ctrl);
 				break;
+			
 			case 20749:
 				use20749(player, ctrl);
 				break;
+			
 			case 20750:
 				use20750(player, ctrl);
 				break;
+			
 			case 20751:
 				use20751(player, ctrl);
 				break;
+			
 			case 20752:
 				use20752(player, ctrl);
 				break;
+			
 			case 13777:
 				use13777(player, ctrl);
 				break;
+			
 			case 13778:
 				use13778(player, ctrl);
 				break;
+			
 			case 13779:
 				use13779(player, ctrl);
 				break;
+			
 			case 13780:
 				use13780(player, ctrl);
 				break;
+			
 			case 13781:
 				use13781(player, ctrl);
 				break;
+			
 			case 13782:
 				use13782(player, ctrl);
 				break;
+			
 			case 13783:
 				use13783(player, ctrl);
 				break;
+			
 			case 13784:
 				use13784(player, ctrl);
 				break;
+			
 			case 13785:
 				use13785(player, ctrl);
 				break;
+			
 			case 13786:
 				use13786(player, ctrl);
 				break;
+			
 			case 14849:
 				use14849(player, ctrl);
 				break;
+			
 			case 14834:
 				use14834(player, ctrl);
 				break;
+			
 			case 14833:
 				use14833(player, ctrl);
 				break;
+			
 			case 13988:
 				use13988(player, ctrl);
 				break;
+			
 			case 13989:
 				use13989(player, ctrl);
 				break;
+			
 			case 13003:
 				use13003(player, ctrl);
 				break;
+			
 			case 13004:
 				use13004(player, ctrl);
 				break;
+			
 			case 13005:
 				use13005(player, ctrl);
 				break;
+			
 			case 13006:
 				use13006(player, ctrl);
 				break;
+			
 			case 13007:
 				use13007(player, ctrl);
 				break;
+			
 			case 13990:
 				use13990(player, ctrl);
 				break;
+			
 			case 13991:
 				use13991(player, ctrl);
 				break;
+			
 			case 13992:
 				use13992(player, ctrl);
 				break;
+			
 			case 14850:
 				use14850(player, ctrl);
 				break;
+			
 			case 14713:
 				use14713(player, ctrl);
 				break;
+			
 			case 14714:
 				use14714(player, ctrl);
 				break;
+			
 			case 14715:
 				use14715(player, ctrl);
 				break;
+			
 			case 14716:
 				use14716(player, ctrl);
 				break;
+			
 			case 14717:
 				use14717(player, ctrl);
 				break;
+			
 			case 14718:
 				use14718(player, ctrl);
 				break;
+			
 			case 17138:
 				use17138(player, ctrl);
 				break;
+			
 			case 15482:
 				use15482(player, ctrl);
 				break;
+			
 			case 15483:
 				use15483(player, ctrl);
 				break;
+			
 			case 13270:
 				use13270(player, ctrl);
 				break;
+			
 			case 13271:
 				use13271(player, ctrl);
 				break;
+			
 			case 13272:
 				use13272(player, ctrl);
 				break;
+			
 			case 14231:
 				use14231(player, ctrl);
 				break;
+			
 			case 14232:
 				use14232(player, ctrl);
 				break;
+			
 			case 21747:
 				use21747(player, ctrl);
 				break;
+			
 			case 21748:
 				use21748(player, ctrl);
 				break;
+			
 			case 21749:
 				use21749(player, ctrl);
 				break;
+			
 			case 17169:
 				use17169(player, ctrl);
 				break;
+			
 			case 21169:
 				use21169(player, ctrl);
 				break;
+			
 			case 20635:
 				use20635(player, ctrl);
 				break;
+			
 			case 21092:
 				use21092(player, ctrl);
 				break;
+			
 			case 21091:
 				use21091(player, ctrl);
 				break;
+			
 			case 53:
 				use53(player, ctrl);
 				break;
+			
 			case 54:
 				use54(player, ctrl);
 				break;
+			
 			case 55:
 				use55(player, ctrl);
 				break;
+			
 			case 56:
 				use56(player, ctrl);
 				break;
+			
 			case 136:
 				use136(player, ctrl);
 				break;
+			
 			case 137:
 				use137(player, ctrl);
 				break;
+			
 			case 138:
 				use138(player, ctrl);
 				break;
+			
 			case 139:
 				use139(player, ctrl);
 				break;
+			
 			case 140:
 				use140(player, ctrl);
 				break;
+			
 			case 141:
 				use141(player, ctrl);
 				break;
+			
 			case 163:
 				use163(player, ctrl);
 				break;
+			
 			case 170:
 				use170(player, ctrl);
 				break;
+			
 			case 5906:
 				use5906(player, ctrl);
 				break;
+			
 			case 5907:
 				use5907(player, ctrl);
 				break;
+			
 			case 5909:
 				use5909(player, ctrl);
 				break;
+			
 			case 5910:
 				use5910(player, ctrl);
 				break;
+			
 			case 5912:
 				use5912(player, ctrl);
 				break;
+			
 			case 5913:
 				use5913(player, ctrl);
 				break;
+			
 			case 10205:
 				use10205(player, ctrl);
 				break;
+			
 			case 10206:
 				use10206(player, ctrl);
 				break;
+			
 			case 10254:
 				use10254(player, ctrl);
 				break;
+			
 			case 13079:
 				use13079(player, ctrl);
 				break;
+			
 			case 13080:
 				use13080(player, ctrl);
 				break;
+			
 			case 13082:
 				use13082(player, ctrl);
 				break;
+			
 			case 13083:
 				use13083(player, ctrl);
 				break;
+			
 			case 13084:
 				use13084(player, ctrl);
 				break;
+			
 			case 13085:
 				use13085(player, ctrl);
 				break;
+			
 			case 13086:
 				use13086(player, ctrl);
 				break;
+			
 			case 13087:
 				use13087(player, ctrl);
 				break;
+			
 			case 13088:
 				use13088(player, ctrl);
 				break;
+			
 			case 13089:
 				use13089(player, ctrl);
 				break;
+			
 			case 13090:
 				use13090(player, ctrl);
 				break;
+			
 			case 13091:
 				use13091(player, ctrl);
 				break;
+			
 			case 13092:
 				use13092(player, ctrl);
 				break;
+			
 			case 13093:
 				use13093(player, ctrl);
 				break;
+			
 			case 13094:
 				use13094(player, ctrl);
 				break;
+			
 			case 13095:
 				use13095(player, ctrl);
 				break;
+			
 			case 13096:
 				use13096(player, ctrl);
 				break;
+			
 			case 13097:
 				use13097(player, ctrl);
 				break;
+			
 			case 13098:
 				use13098(player, ctrl);
 				break;
+			
 			case 21225: // by CosMOsiS start line
 				use21225(player, ctrl);
 				break;
+			
 			case 21226:
 				use21226(player, ctrl);
 				break;
+			
 			case 21229:
 				use21229(player, ctrl);
 				break;
+			
 			case 21230:
 				use21230(player, ctrl);
 				break;
+			
 			case 21233:
 				use21233(player, ctrl);
 				break;
+			
 			case 21234:
 				use21234(player, ctrl);
 				break;
+			
 			case 21237:
 				use21237(player, ctrl);
 				break;
+			
 			case 21238:
 				use21238(player, ctrl);
 				break;
+			
 			case 21240:
 				use21240(player, ctrl);
 				break;
+			
 			case 15404:
 				use15404(player, ctrl);
 				break;
+			
 			case 15405:
 				use15405(player, ctrl);
 				break;
+			
 			case 15406:
 				use15406(player, ctrl);
 				break;
+			
 			case 15407:
 				use15407(player, ctrl);
 				break;
+			
 			case 15408:
 				use15408(player, ctrl);
 				break;
+			
 			case 15409:
 				use15409(player, ctrl);
 				break;
+			
 			case 15410:
 				use15410(player, ctrl);
 				break;
+			
 			case 15411:
 				use15411(player, ctrl);
 				break;
+			
 			case 15412:
 				use15412(player, ctrl);
 				break;
+			
 			case 15413:
 				use15413(player, ctrl);
 				break;
+			
 			case 15414:
 				use15414(player, ctrl);
 				break;
+			
 			case 15415:
 				use15415(player, ctrl);
 				break;
+			
 			case 15416:
 				use15416(player, ctrl);
 				break;
+			
 			case 15417:
 				use15417(player, ctrl);
 				break;
+			
 			case 15425:
 				use15425(player, ctrl);
 				break;
+			
 			case 15434:
 				use15434(player, ctrl);
 				break;
+			
 			case 15435:
 				use15435(player, ctrl);
 				break;
+			
 			case 15437:
 				use15437(player, ctrl);
 				break;
+			
 			case 15454:
 				use15454(player, ctrl);
 				break;
+			
 			case 15455:
 				use15455(player, ctrl);
 				break;
+			
 			case 15456:
 				use15456(player, ctrl);
 				break;
+			
 			case 15457:
 				use15457(player, ctrl);
 				break;
+			
 			case 15458:
 				use15458(player, ctrl);
 				break;
+			
 			case 15459:
 				use15459(player, ctrl);
 				break;
+			
 			case 15460:
 				use15460(player, ctrl);
 				break;
+			
 			case 15462:
 				use15462(player, ctrl);
 				break;
+			
 			case 15465:
 				use15465(player, ctrl);
 				break;
+			
 			case 15466:
 				use15466(player, ctrl);
 				break;
+			
 			case 15468:
 				use15468(player, ctrl);
 				break;
+			
 			case 21421:
 				use21421(player, ctrl);
 				break;
+			
 			case 21422:
 				use21422(player, ctrl);
 				break;
+			
 			case 21241:
 				use21241(player, ctrl);
 				break; // by CosMOsiS end line
+				
 			case 20636:
 				use20636(player, ctrl);
 				break;
+			
 			case 20637:
 				use20637(player, ctrl);
 				break;
+			
 			case 20638:
 				use20638(player, ctrl);
 				break; // by SmokiMo end line
+				
 			case 30276: // Soulshot Pack (R-Grade)
 				use30276(player, ctrl);
 				break;
+			
 			case 30277: // Soulshot Large Pack (R-Grade)
 				use30277(player, ctrl);
 				break;
+			
 			case 30278: // Spiritshot Pack (R-Grade)
 				use30278(player, ctrl);
 				break;
+			
 			case 30279: // Spiritshot Large Pack (R-Grade)
 				use30279(player, ctrl);
 				break;
+			
 			case 30280: // Blessed Spiritshot Pack (R-Grade)
 				use30280(player, ctrl);
 				break;
+			
 			case 30281: // Blessed Spiritshot Large Pack (R-Grade)
 				use30281(player, ctrl);
 				break;
+			
 			case 30282: // Orichalcum Quiver
 				use30282(player, ctrl);
 				break;
+			
 			case 30283: // Orichalcum Bolt Container
 				use30283(player, ctrl);
 				break;
+			
 			case 30284: // Requiem Weapon Box
 				use30284(player, ctrl);
 				break;
+			
 			case 30285: // Immortal Heavy Armor Box
 				use30285(player, ctrl);
 				break;
+			
 			case 30286: // Immortal Light Armor Box
 				use30286(player, ctrl);
 				break;
+			
 			case 30287: // Immortal Robe Armor Box
 				use30287(player, ctrl);
 				break;
+			
 			case 30288: // Apocalypse Weapon Box
 				use30288(player, ctrl);
 				break;
+			
 			case 30289: // Twilight Heavy Armor Box
 				use30289(player, ctrl);
 				break;
+			
 			case 30290: // Twilight Light Armor Box
 				use30290(player, ctrl);
 				break;
+			
 			case 30291: // Twilight Robe Armor Box
 				use30291(player, ctrl);
 				break;
+			
 			case 30292: // Immortal Accessory Box
 				use30292(player, ctrl);
 				break;
+			
 			case 30293: // Twilight Accessory Box
 				use30293(player, ctrl);
 				break;
+			
 			case 33465:
 				use33465(player, ctrl);
 				break;
+			
 			case 34927:
 				use34927(player, ctrl);
 				break;
+			
 			case 34928:
 				use34928(player, ctrl);
 				break;
+			
 			case 34929:
 				use34929(player, ctrl);
 				break;
+			
 			case 34930:
 				use34930(player, ctrl);
 				break;
+			
 			case 34931:
 				use34931(player, ctrl);
 				break;
+			
 			case 34932:
 				use34932(player, ctrl);
 				break;
+			
 			case 34855:
 				use34855(player, ctrl);
 				break;
+			
 			default:
 				return false;
 		}
@@ -4693,14 +5769,12 @@ public class Extractable extends SimpleItemHandler
 			}
 		
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			80.0
 		
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -4734,7 +5808,6 @@ public class Extractable extends SimpleItemHandler
 			}
 		
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -4744,7 +5817,6 @@ public class Extractable extends SimpleItemHandler
 			50.0
 		
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -4788,7 +5860,6 @@ public class Extractable extends SimpleItemHandler
 			}
 		
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -4800,7 +5871,6 @@ public class Extractable extends SimpleItemHandler
 			50.0
 		
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -4860,7 +5930,6 @@ public class Extractable extends SimpleItemHandler
 			}
 		
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -4873,7 +5942,6 @@ public class Extractable extends SimpleItemHandler
 			1.5
 		
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -5633,14 +6701,12 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			20.00,
 			80.00
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -5899,7 +6965,6 @@ public class Extractable extends SimpleItemHandler
 		 */
 		Functions.addItem(player, 20341, 1);
 		Functions.addItem(player, 20392, 4);
-		
 	}
 	
 	private void use20566(Player player, boolean ctrl)
@@ -6189,7 +7254,6 @@ public class Extractable extends SimpleItemHandler
 		 */
 		Functions.addItem(player, 20867, 1);
 		Functions.addItem(player, 20868, 3);
-		
 	}
 	
 	private void use20803(Player player, boolean ctrl)
@@ -6531,7 +7595,6 @@ public class Extractable extends SimpleItemHandler
 				2
 			},
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -6541,7 +7604,6 @@ public class Extractable extends SimpleItemHandler
 			30.00,
 			30.00
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -6569,7 +7631,6 @@ public class Extractable extends SimpleItemHandler
 				4
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -6577,7 +7638,6 @@ public class Extractable extends SimpleItemHandler
 			30.00,
 			30.00
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -6605,7 +7665,6 @@ public class Extractable extends SimpleItemHandler
 				3
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -6613,7 +7672,6 @@ public class Extractable extends SimpleItemHandler
 			20.00,
 			20.00
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -6641,7 +7699,6 @@ public class Extractable extends SimpleItemHandler
 				2
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -6649,7 +7706,6 @@ public class Extractable extends SimpleItemHandler
 			10.00,
 			10.00
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -7115,7 +8171,6 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -7137,7 +8192,6 @@ public class Extractable extends SimpleItemHandler
 			0.13,
 			0.01
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -7235,7 +8289,6 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -7257,7 +8310,6 @@ public class Extractable extends SimpleItemHandler
 			0.13,
 			0.01
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -7646,7 +8698,6 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -7654,7 +8705,6 @@ public class Extractable extends SimpleItemHandler
 			33.00,
 			34.00
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -7688,7 +8738,6 @@ public class Extractable extends SimpleItemHandler
 				1
 			},
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -7698,7 +8747,6 @@ public class Extractable extends SimpleItemHandler
 			0.025
 		
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -8744,7 +9792,8 @@ public class Extractable extends SimpleItemHandler
 	}
 	
 	private void use13799(Player player, boolean ctrl)
-	{ /* by 4ipolino */
+	{
+		/* by 4ipolino */
 		int items[][] = new int[][]
 		{
 			// itemId, min, max
@@ -8764,7 +9813,6 @@ public class Extractable extends SimpleItemHandler
 				2
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -8773,12 +9821,12 @@ public class Extractable extends SimpleItemHandler
 			35.0
 		
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
 	private void use13428(Player player, boolean ctrl)
-	{ /* by 4ipolino */
+	{
+		/* by 4ipolino */
 		int items[][] = new int[][]
 		{
 			// itemId, min, max
@@ -8838,7 +9886,6 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -8855,12 +9902,12 @@ public class Extractable extends SimpleItemHandler
 			10.0
 		
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
 	private void use13427(Player player, boolean ctrl)
-	{ /* by 4ipolino */
+	{
+		/* by 4ipolino */
 		int items[][] = new int[][]
 		{
 			// itemId, min, max
@@ -8920,7 +9967,6 @@ public class Extractable extends SimpleItemHandler
 				2
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -8937,12 +9983,12 @@ public class Extractable extends SimpleItemHandler
 			10.0
 		
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
 	private void use13426(Player player, boolean ctrl)
-	{ /* by 4ipolino */
+	{
+		/* by 4ipolino */
 		int items[][] = new int[][]
 		{
 			// itemId, min, max
@@ -8977,7 +10023,6 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -8989,12 +10034,12 @@ public class Extractable extends SimpleItemHandler
 			17.0
 		
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
 	private void use13425(Player player, boolean ctrl)
-	{ /* by 4ipolino */
+	{
+		/* by 4ipolino */
 		int items[][] = new int[][]
 		{
 			// itemId, min, max
@@ -9069,7 +10114,6 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -9089,12 +10133,12 @@ public class Extractable extends SimpleItemHandler
 			7.14
 		
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
 	private void use13424(Player player, boolean ctrl)
-	{ /* by 4ipolino */
+	{
+		/* by 4ipolino */
 		int items[][] = new int[][]
 		{
 			// itemId, min, max
@@ -9154,7 +10198,6 @@ public class Extractable extends SimpleItemHandler
 				3
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -9170,12 +10213,12 @@ public class Extractable extends SimpleItemHandler
 			9.0,
 			10.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
 	private void use13423(Player player, boolean ctrl)
-	{ /* by 4ipolino */
+	{
+		/* by 4ipolino */
 		int items[][] = new int[][]
 		{
 			// itemId, min, max
@@ -9210,7 +10253,6 @@ public class Extractable extends SimpleItemHandler
 				2
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -9221,12 +10263,12 @@ public class Extractable extends SimpleItemHandler
 			2.16,
 			2.17
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
 	private void use13422(Player player, boolean ctrl)
-	{ /* by 4ipolino */
+	{
+		/* by 4ipolino */
 		int items[][] = new int[][]
 		{
 			// itemId, min, max
@@ -9301,7 +10343,6 @@ public class Extractable extends SimpleItemHandler
 				2
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -9320,7 +10361,6 @@ public class Extractable extends SimpleItemHandler
 			7.14,
 			7.14
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -9634,7 +10674,6 @@ public class Extractable extends SimpleItemHandler
 		Functions.addItem(player, 13297, 5);
 		Functions.addItem(player, 13298, 5);
 		Functions.addItem(player, 13299, 5);
-		
 	}
 	
 	private void use13345(Player player, boolean ctrl)
@@ -11503,7 +12542,8 @@ public class Extractable extends SimpleItemHandler
 	
 	// 6th Place Treasure Sack
 	private void use10259(Player player, boolean ctrl)
-	{ /* by 4ipolino */
+	{
+		/* by 4ipolino */
 		int items[][] = new int[][]
 		{
 			// itemId, min, max
@@ -11563,7 +12603,6 @@ public class Extractable extends SimpleItemHandler
 				3
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -11579,7 +12618,6 @@ public class Extractable extends SimpleItemHandler
 			9.00,
 			10.00
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -11595,7 +12633,8 @@ public class Extractable extends SimpleItemHandler
 	
 	// 4th Place Treasure Sack
 	private void use10257(Player player, boolean ctrl)
-	{ /* by 4ipolino */
+	{
+		/* by 4ipolino */
 		int items[][] = new int[][]
 		{
 			// itemId, min, max
@@ -11635,7 +12674,6 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -11647,13 +12685,13 @@ public class Extractable extends SimpleItemHandler
 			7.00,
 			7.00
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
 	// 3rd Place Treasure Sack
 	private void use10256(Player player, boolean ctrl)
-	{ /* by 4ipolino */
+	{
+		/* by 4ipolino */
 		int items[][] = new int[][]
 		{
 			// itemId, min, max
@@ -11703,7 +12741,6 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -11717,7 +12754,6 @@ public class Extractable extends SimpleItemHandler
 			11.57,
 			2.48
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -11786,7 +12822,6 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -11802,7 +12837,6 @@ public class Extractable extends SimpleItemHandler
 			0.28,
 			3.73
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -11826,7 +12860,6 @@ public class Extractable extends SimpleItemHandler
 		Functions.addItem(player, 15271, 1);
 		Functions.addItem(player, 15272, 1);
 		Functions.addItem(player, 15273, 1);
-		
 	}
 	
 	private void use15198(Player player, boolean ctrl)
@@ -11845,7 +12878,6 @@ public class Extractable extends SimpleItemHandler
 		Functions.addItem(player, 15271, 1);
 		Functions.addItem(player, 15272, 1);
 		Functions.addItem(player, 15273, 1);
-		
 	}
 	
 	private void use15197(Player player, boolean ctrl)
@@ -11881,7 +12913,6 @@ public class Extractable extends SimpleItemHandler
 		Functions.addItem(player, 15271, 1);
 		Functions.addItem(player, 15272, 1);
 		Functions.addItem(player, 15273, 1);
-		
 	}
 	
 	private void use15195(Player player, boolean ctrl)
@@ -11916,7 +12947,6 @@ public class Extractable extends SimpleItemHandler
 		Functions.addItem(player, 15271, 1);
 		Functions.addItem(player, 15272, 1);
 		Functions.addItem(player, 15273, 1);
-		
 	}
 	
 	private void use20189(Player player, boolean ctrl)
@@ -12141,7 +13171,6 @@ public class Extractable extends SimpleItemHandler
 			1
 		};
 		extract_item_r(list, counts, chances, player);
-		
 	}
 	
 	private void use15371(Player player, boolean ctrl)
@@ -12383,7 +13412,6 @@ public class Extractable extends SimpleItemHandler
 			1,
 			1
 		};
-		
 		extract_item_r(list, counts, chances, player);
 	}
 	
@@ -12424,6 +13452,7 @@ public class Extractable extends SimpleItemHandler
 		if (ctrl)
 		{
 			long item_count = 1 + Functions.removeItem(player, 14841, Functions.getItemCount(player, 14841));
+			
 			for (int[] res : mass_extract_item(item_count, list, counts, player))
 			{
 				Functions.addItem(player, res[0], res[1]);
@@ -12458,6 +13487,7 @@ public class Extractable extends SimpleItemHandler
 		if (ctrl)
 		{
 			long item_count = 1 + Functions.removeItem(player, 14847, Functions.getItemCount(player, 14847));
+			
 			for (int[] res : mass_extract_item(item_count, list, counts, player))
 			{
 				Functions.addItem(player, res[0], res[1]);
@@ -12520,6 +13550,7 @@ public class Extractable extends SimpleItemHandler
 		if (ctrl)
 		{
 			long item_count = 1 + Functions.removeItem(player, 9599, Functions.getItemCount(player, 9599));
+			
 			for (int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chances, player))
 			{
 				Functions.addItem(player, res[0], res[1]);
@@ -14680,7 +15711,6 @@ public class Extractable extends SimpleItemHandler
 	{
 		// Santa Claus' Weapon Exchange Ticket - 12 Hour Expiration Period
 		Functions.addItem(player, 20107, 1);
-		
 		// Christmas Red Sock
 		Functions.addItem(player, 14612, 1);
 		
@@ -14995,6 +16025,7 @@ public class Extractable extends SimpleItemHandler
 	private void use13777(Player player, boolean ctrl)
 	{
 		int rnd = Rnd.get(100);
+		
 		if (rnd <= 65)
 		{
 			Functions.addItem(player, 9630, 3); // 3 Orichalcum
@@ -15018,6 +16049,7 @@ public class Extractable extends SimpleItemHandler
 	private void use13778(Player player, boolean ctrl)
 	{
 		int rnd = Rnd.get(100);
+		
 		if (rnd <= 65)
 		{
 			Functions.addItem(player, 9630, 2); // 3 Orichalcum
@@ -15041,6 +16073,7 @@ public class Extractable extends SimpleItemHandler
 	private void use13779(Player player, boolean ctrl)
 	{
 		int rnd = Rnd.get(100);
+		
 		if (rnd <= 65)
 		{
 			Functions.addItem(player, 9630, 1); // 1 Orichalcum
@@ -15952,6 +16985,7 @@ public class Extractable extends SimpleItemHandler
 	{
 		int group = Rnd.get(7);
 		int[] items = new int[0];
+		
 		if (group < 4)
 		{
 			items = new int[]
@@ -15996,6 +17030,7 @@ public class Extractable extends SimpleItemHandler
 	{
 		int group = Rnd.get(10);
 		int[] items = new int[0];
+		
 		if (group < 4)
 		{
 			items = new int[]
@@ -16057,6 +17092,7 @@ public class Extractable extends SimpleItemHandler
 	{
 		int group = Rnd.get(9);
 		int[] items = new int[0];
+		
 		if (group < 5)
 		{
 			items = new int[]
@@ -16128,6 +17164,7 @@ public class Extractable extends SimpleItemHandler
 		if (Rnd.chance(10))
 		{
 			Functions.addItem(player, 15474, 40);
+			
 			if (Rnd.chance(50))
 			{
 				Functions.addItem(player, 15476, 5);
@@ -16149,6 +17186,7 @@ public class Extractable extends SimpleItemHandler
 		if (Rnd.chance(10))
 		{
 			Functions.addItem(player, 15475, 40);
+			
 			if (Rnd.chance(50))
 			{
 				Functions.addItem(player, 15477, 5);
@@ -16220,10 +17258,12 @@ public class Extractable extends SimpleItemHandler
 			46.5,
 			5.4
 		};
+		
 		if (Rnd.chance(60))
 		{
 			extractRandomOneItem(player, items, chances);
 		}
+		
 		int[] counts =
 		{
 			100,
@@ -16256,13 +17296,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16278,13 +17316,11 @@ public class Extractable extends SimpleItemHandler
 				3
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			72.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16300,13 +17336,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16322,13 +17356,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16344,13 +17376,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16366,13 +17396,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16388,13 +17416,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16410,13 +17436,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16432,13 +17456,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16454,13 +17476,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16476,13 +17496,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16498,13 +17516,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16525,14 +17541,12 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0,
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16553,14 +17567,12 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0,
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16581,14 +17593,12 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0,
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16609,14 +17619,12 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0,
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16637,14 +17645,12 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0,
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16665,14 +17671,12 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0,
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16688,13 +17692,11 @@ public class Extractable extends SimpleItemHandler
 				2
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16710,13 +17712,11 @@ public class Extractable extends SimpleItemHandler
 				2
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16827,7 +17827,6 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -16852,7 +17851,6 @@ public class Extractable extends SimpleItemHandler
 			15.67,
 			15.67
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16868,13 +17866,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16890,13 +17886,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16912,13 +17906,11 @@ public class Extractable extends SimpleItemHandler
 				3
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16934,13 +17926,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16956,13 +17946,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -16988,7 +17976,6 @@ public class Extractable extends SimpleItemHandler
 				5
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -16996,7 +17983,6 @@ public class Extractable extends SimpleItemHandler
 			100.0,
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -17012,13 +17998,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -17034,13 +18018,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -17056,13 +18038,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -17078,13 +18058,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -17100,13 +18078,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -17122,13 +18098,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -17144,13 +18118,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -17166,13 +18138,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -17188,13 +18158,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -17215,14 +18183,12 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0,
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -17248,7 +18214,6 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -17256,7 +18221,6 @@ public class Extractable extends SimpleItemHandler
 			100.0,
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -17272,13 +18236,11 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -17294,13 +18256,11 @@ public class Extractable extends SimpleItemHandler
 				3
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
 			100.0
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -17456,7 +18416,8 @@ public class Extractable extends SimpleItemHandler
 	
 	// Halloween Toy Chest by (CosMOsiS)
 	private void use15434(Player player, boolean ctrl)
-	{ /* by CosMOsiS */
+	{
+		/* by CosMOsiS */
 		int items[][] = new int[][]
 		{
 			// itemId, min, max
@@ -17486,7 +18447,6 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -17496,13 +18456,13 @@ public class Extractable extends SimpleItemHandler
 			20.00,
 			20.00
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
 	// Shiny Halloween Toy Chest by (CosMOsiS)
 	private void use15435(Player player, boolean ctrl)
-	{ /* by CosMOsiS */
+	{
+		/* by CosMOsiS */
 		int items[][] = new int[][]
 		{
 			// itemId, min, max
@@ -17532,7 +18492,6 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -17542,13 +18501,13 @@ public class Extractable extends SimpleItemHandler
 			20.00,
 			20.00
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
 	// Transformation Scroll Box by (CosMOsiS)
 	private void use15437(Player player, boolean ctrl)
-	{ /* by CosMOsiS */
+	{
+		/* by CosMOsiS */
 		int items[][] = new int[][]
 		{
 			// itemId, min, max
@@ -17568,7 +18527,6 @@ public class Extractable extends SimpleItemHandler
 				1
 			}
 		};
-		
 		double chances[] = new double[]
 		{
 			// chance
@@ -17576,7 +18534,6 @@ public class Extractable extends SimpleItemHandler
 			33.00,
 			34.00
 		};
-		
 		capsulate(player, items, chances);
 	}
 	
@@ -17695,47 +18652,56 @@ public class Extractable extends SimpleItemHandler
 	}
 	
 	private void use30276(Player player, boolean ctrl)
-	{ // Soulshot Pack (R-Grade)
+	{
+		// Soulshot Pack (R-Grade)
 		Functions.addItem(player, 177754, 5000);
 	}
 	
 	private void use30277(Player player, boolean ctrl)
-	{ // Soulshot Large Pack (R-Grade)
+	{
+		// Soulshot Large Pack (R-Grade)
 		Functions.addItem(player, 17754, 10000);
 	}
 	
 	private void use30278(Player player, boolean ctrl)
-	{ // Spiritshot Pack (R-Grade)
+	{
+		// Spiritshot Pack (R-Grade)
 		Functions.addItem(player, 19441, 5000);
 	}
 	
 	private void use30279(Player player, boolean ctrl)
-	{ // Spiritshot Large Pack (R-Grade)
+	{
+		// Spiritshot Large Pack (R-Grade)
 		Functions.addItem(player, 19441, 10000);
 	}
 	
 	private void use30280(Player player, boolean ctrl)
-	{ // Blessed Spiritshot Pack (R-Grade)
+	{
+		// Blessed Spiritshot Pack (R-Grade)
 		Functions.addItem(player, 19442, 5000);
 	}
 	
 	private void use30281(Player player, boolean ctrl)
-	{ // Blessed Spiritshot Large Pack (R-Grade)
+	{
+		// Blessed Spiritshot Large Pack (R-Grade)
 		Functions.addItem(player, 19442, 10000);
 	}
 	
 	private void use30282(Player player, boolean ctrl)
-	{ // Orichalcum Quiver
+	{
+		// Orichalcum Quiver
 		Functions.addItem(player, 19443, 10000);
 	}
 	
 	private void use30283(Player player, boolean ctrl)
-	{ // Orichalcum Bolt Container
+	{
+		// Orichalcum Bolt Container
 		Functions.addItem(player, 18550, 1);
 	}
 	
 	private void use30284(Player player, boolean ctrl)
-	{ // Requiem Weapon Box
+	{
+		// Requiem Weapon Box
 		Functions.addItem(player, 18103, 1);
 		Functions.addItem(player, 18104, 1);
 		Functions.addItem(player, 18105, 1);
@@ -17750,11 +18716,11 @@ public class Extractable extends SimpleItemHandler
 		Functions.addItem(player, 18114, 1);
 		Functions.addItem(player, 18115, 1);
 		Functions.addItem(player, 18116, 1);
-		
 	}
 	
 	private void use30285(Player player, boolean ctrl)
-	{ // Immortal Heavy Armor Box
+	{
+		// Immortal Heavy Armor Box
 		Functions.addItem(player, 18117, 1);
 		Functions.addItem(player, 18118, 1);
 		Functions.addItem(player, 18119, 1);
@@ -17764,17 +18730,18 @@ public class Extractable extends SimpleItemHandler
 	}
 	
 	private void use30286(Player player, boolean ctrl)
-	{ // Immortal Light Armor Box
+	{
+		// Immortal Light Armor Box
 		Functions.addItem(player, 18123, 1);
 		Functions.addItem(player, 18124, 1);
 		Functions.addItem(player, 18125, 1);
 		Functions.addItem(player, 18126, 1);
 		Functions.addItem(player, 18127, 1);
-		
 	}
 	
 	private void use30287(Player player, boolean ctrl)
-	{ // Immortal Robe Armor Box
+	{
+		// Immortal Robe Armor Box
 		Functions.addItem(player, 18128, 1);
 		Functions.addItem(player, 18129, 1);
 		Functions.addItem(player, 18130, 1);
@@ -17784,7 +18751,8 @@ public class Extractable extends SimpleItemHandler
 	}
 	
 	private void use30288(Player player, boolean ctrl)
-	{ // Apocalypse Weapon Box
+	{
+		// Apocalypse Weapon Box
 		Functions.addItem(player, 18137, 1);
 		Functions.addItem(player, 18138, 1);
 		Functions.addItem(player, 18139, 1);
@@ -17802,7 +18770,8 @@ public class Extractable extends SimpleItemHandler
 	}
 	
 	private void use30289(Player player, boolean ctrl)
-	{ // Twilight Heavy Armor Box
+	{
+		// Twilight Heavy Armor Box
 		Functions.addItem(player, 18151, 1);
 		Functions.addItem(player, 18152, 1);
 		Functions.addItem(player, 18153, 1);
@@ -17812,7 +18781,8 @@ public class Extractable extends SimpleItemHandler
 	}
 	
 	private void use30290(Player player, boolean ctrl)
-	{ // Twilight Light Armor Box
+	{
+		// Twilight Light Armor Box
 		Functions.addItem(player, 18157, 1);
 		Functions.addItem(player, 18158, 1);
 		Functions.addItem(player, 18159, 1);
@@ -17821,7 +18791,8 @@ public class Extractable extends SimpleItemHandler
 	}
 	
 	private void use30291(Player player, boolean ctrl)
-	{ // Twilight Robe Armor Box
+	{
+		// Twilight Robe Armor Box
 		Functions.addItem(player, 18162, 1);
 		Functions.addItem(player, 18163, 1);
 		Functions.addItem(player, 18164, 1);
@@ -17831,7 +18802,8 @@ public class Extractable extends SimpleItemHandler
 	}
 	
 	private void use30292(Player player, boolean ctrl)
-	{ // Immortal Accessory Box
+	{
+		// Immortal Accessory Box
 		Functions.addItem(player, 18134, 1);
 		Functions.addItem(player, 18135, 1);
 		Functions.addItem(player, 18135, 1);
@@ -17840,7 +18812,8 @@ public class Extractable extends SimpleItemHandler
 	}
 	
 	private void use30293(Player player, boolean ctrl)
-	{ // Twilight Accessory Box
+	{
+		// Twilight Accessory Box
 		Functions.addItem(player, 18168, 1);
 		Functions.addItem(player, 18169, 1);
 		Functions.addItem(player, 18169, 1);
@@ -18595,6 +19568,7 @@ public class Extractable extends SimpleItemHandler
 	{
 		int c = 0;
 		boolean empty = true;
+		
 		for (int[] i : items)
 		{
 			if ((chances[c] <= 0) || (i[1] <= 0) || (i[2] <= 0) || (i[2] < i[1]))
@@ -18608,6 +19582,7 @@ public class Extractable extends SimpleItemHandler
 				empty = false;
 			}
 		}
+		
 		if (empty)
 		{
 			player.sendPacket(SystemMsg.THERE_WAS_NOTHING_FOUND_INSIDE);
@@ -18631,8 +19606,8 @@ public class Extractable extends SimpleItemHandler
 			int index = Rnd.get(list.length);
 			int item = list[index];
 			int count = counts[index];
-			
 			int[] old = null;
+			
 			for (int[] res : result)
 			{
 				if (res[0] == item)
@@ -18661,10 +19636,12 @@ public class Extractable extends SimpleItemHandler
 	private static void extract_item_r(int[] list, int[] count_min, int[] count_max, int[] chances, Player player)
 	{
 		int[] counts = count_min;
+		
 		for (int i = 0; i < count_min.length; i++)
 		{
 			counts[i] = Rnd.get(count_min[i], count_max[i]);
 		}
+		
 		extract_item_r(list, counts, chances, player);
 	}
 	
@@ -18692,25 +19669,26 @@ public class Extractable extends SimpleItemHandler
 		int i = table[Rnd.get(table.length)];
 		int item = list[i];
 		int count = counts[i];
-		
 		Functions.addItem(player, item, count);
 	}
 	
 	private static List<int[]> mass_extract_item_r(long source_count, int[] list, int[] count_min, int[] count_max, int[] chances, Player player)
 	{
 		int[] counts = count_min;
+		
 		for (int i = 0; i < count_min.length; i++)
 		{
 			counts[i] = Rnd.get(count_min[i], count_max[i]);
 		}
+		
 		return mass_extract_item_r(source_count, list, counts, chances, player);
 	}
 	
 	private static List<int[]> mass_extract_item_r(long source_count, int[] list, int[] counts, int[] chances, Player player)
 	{
 		List<int[]> result = new ArrayList<>((int) Math.min(list.length, source_count));
-		
 		int sum = 0;
+		
 		for (int i = 0; i < list.length; i++)
 		{
 			sum += chances[i];
@@ -18733,8 +19711,8 @@ public class Extractable extends SimpleItemHandler
 			int i = table[Rnd.get(table.length)];
 			int item = list[i];
 			int count = counts[i];
-			
 			int[] old = null;
+			
 			for (int[] res : result)
 			{
 				if (res[0] == item)
@@ -18767,6 +19745,7 @@ public class Extractable extends SimpleItemHandler
 			player.sendPacket(Msg.YOUR_INVENTORY_IS_FULL, new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getItemId()));
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -18778,6 +19757,7 @@ public class Extractable extends SimpleItemHandler
 		}
 		
 		double extractChance = 0;
+		
 		for (double c : chances)
 		{
 			extractChance += c;
@@ -18786,6 +19766,7 @@ public class Extractable extends SimpleItemHandler
 		if (Rnd.chance(extractChance))
 		{
 			int[] successfulItems = new int[0];
+			
 			while (successfulItems.length == 0)
 			{
 				for (int i = 0; i < items.length; i++)
@@ -18796,7 +19777,9 @@ public class Extractable extends SimpleItemHandler
 					}
 				}
 			}
+			
 			int[] item = items[successfulItems[Rnd.get(successfulItems.length)]];
+			
 			if (item.length < 2)
 			{
 				return false;
@@ -18804,6 +19787,7 @@ public class Extractable extends SimpleItemHandler
 			
 			Functions.addItem(player, item[0], item[1]);
 		}
+		
 		return true;
 	}
 	

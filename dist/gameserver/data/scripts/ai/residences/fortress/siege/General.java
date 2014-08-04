@@ -51,6 +51,7 @@ public class General extends SiegeGuardFighter
 	{
 		super.onEvtAttacked(attacker, dam);
 		final SiegeGuardInstance actor = getActor();
+		
 		if (Rnd.chance(1))
 		{
 			Functions.npcSay(actor, NpcString.DO_YOU_NEED_MY_POWER_YOU_SEEM_TO_BE_STRUGGLING);
@@ -66,14 +67,17 @@ public class General extends SiegeGuardFighter
 		super.onEvtSpawn();
 		final SiegeGuardInstance actor = getActor();
 		final FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
+		
 		if (siegeEvent == null)
 		{
 			return;
 		}
+		
 		if (siegeEvent.getResidence().getFacilityLevel(Fortress.GUARD_BUFF) > 0)
 		{
 			actor.doCast(SkillTable.getInstance().getInfo(5432, siegeEvent.getResidence().getFacilityLevel(Fortress.GUARD_BUFF)), actor, false);
 		}
+		
 		siegeEvent.barrackAction(4, false);
 	}
 	
@@ -86,10 +90,12 @@ public class General extends SiegeGuardFighter
 	{
 		final SiegeGuardInstance actor = getActor();
 		final FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
+		
 		if (siegeEvent == null)
 		{
 			return;
 		}
+		
 		siegeEvent.barrackAction(4, true);
 		siegeEvent.broadcastTo(SystemMsg.THE_BARRACKS_HAVE_BEEN_SEIZED, SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
 		Functions.npcShout(actor, NpcString.I_FEEL_SO_MUCH_GRIEF_THAT_I_CANT_EVEN_TAKE_CARE_OF_MYSELF);

@@ -61,7 +61,7 @@ import gnu.trove.set.hash.TIntHashSet;
 public class MonsterInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -100,6 +100,7 @@ public class MonsterInstance extends NpcInstance
 			{
 				dmg = 0;
 			}
+			
 			_dmg += dmg;
 		}
 		
@@ -258,6 +259,7 @@ public class MonsterInstance extends NpcInstance
 		if (getReflection().canChampions() && canChampion())
 		{
 			double random = Rnd.nextDouble();
+			
 			if ((Config.ALT_CHAMPION_CHANCE2 / 100.) >= random)
 			{
 				setChampion(2);
@@ -322,6 +324,7 @@ public class MonsterInstance extends NpcInstance
 	{
 		super.onSpawn();
 		setCurrentHpMp(getMaxHp(), getMaxMp(), true);
+		
 		if (getMinionList().hasMinions())
 		{
 			if (minionMaintainTask != null)
@@ -329,6 +332,7 @@ public class MonsterInstance extends NpcInstance
 				minionMaintainTask.cancel(false);
 				minionMaintainTask = null;
 			}
+			
 			minionMaintainTask = ThreadPoolManager.getInstance().schedule(new MinionMaintainTask(), 1000L);
 		}
 	}
@@ -372,6 +376,7 @@ public class MonsterInstance extends NpcInstance
 			{
 				return;
 			}
+			
 			getMinionList().spawnMinions();
 		}
 	}
@@ -400,6 +405,7 @@ public class MonsterInstance extends NpcInstance
 	public void spawnMinion(MonsterInstance minion)
 	{
 		minion.setReflection(getReflection());
+		
 		if (getChampion() == 2)
 		{
 			minion.setChampion(1);
@@ -408,6 +414,7 @@ public class MonsterInstance extends NpcInstance
 		{
 			minion.setChampion(0);
 		}
+		
 		minion.setHeading(getHeading());
 		minion.setCurrentHpMp(minion.getMaxHp(), minion.getMaxMp(), true);
 		minion.spawnMe(getMinionPosition());
@@ -431,6 +438,7 @@ public class MonsterInstance extends NpcInstance
 	public void setReflection(Reflection reflection)
 	{
 		super.setReflection(reflection);
+		
 		if (hasMinions())
 		{
 			for (MinionInstance m : getMinionList().getAliveMinions())
@@ -451,6 +459,7 @@ public class MonsterInstance extends NpcInstance
 			minionMaintainTask.cancel(false);
 			minionMaintainTask = null;
 		}
+		
 		getMinionList().deleteMinions();
 		super.onDelete();
 	}
@@ -467,6 +476,7 @@ public class MonsterInstance extends NpcInstance
 			minionMaintainTask.cancel(false);
 			minionMaintainTask = null;
 		}
+		
 		calculateRewards(killer);
 		super.onDeath(killer);
 	}
@@ -486,6 +496,7 @@ public class MonsterInstance extends NpcInstance
 		if ((skill != null) && skill.isOverhit())
 		{
 			double overhitDmg = (getCurrentHp() - damage) * -1;
+			
 			if (overhitDmg <= 0)
 			{
 				setOverhitDamage(0);
@@ -497,6 +508,7 @@ public class MonsterInstance extends NpcInstance
 				setOverhitAttacker(attacker);
 			}
 		}
+		
 		super.onReduceCurrentHp(damage, attacker, skill, awake, standUp, directHp);
 	}
 	
@@ -507,27 +519,35 @@ public class MonsterInstance extends NpcInstance
 	public void calculateRewards(Creature lastAttacker)
 	{
 		Creature topDamager = getAggroList().getTopDamager();
+		
 		if ((lastAttacker == null) || !lastAttacker.isPlayable())
 		{
 			lastAttacker = topDamager;
 		}
+		
 		if ((lastAttacker == null) || !lastAttacker.isPlayable())
 		{
 			return;
 		}
+		
 		Player killer = lastAttacker.getPlayer();
+		
 		if (killer == null)
 		{
 			return;
 		}
+		
 		Map<Playable, HateInfo> aggroMap = getAggroList().getPlayableMap();
 		Quest[] quests = getTemplate().getEventQuests(QuestEventType.MOB_KILLED_WITH_QUEST);
+		
 		if ((quests != null) && (quests.length > 0))
 		{
 			List<Player> players = null;
+			
 			if (isRaid() && Config.ALT_NO_LASTHIT)
 			{
 				players = new ArrayList<>();
+				
 				for (Playable pl : aggroMap.keySet())
 				{
 					if (!pl.isDead() && (isInRangeZ(pl, Config.ALT_PARTY_DISTRIBUTION_RANGE) || killer.isInRangeZ(pl, Config.ALT_PARTY_DISTRIBUTION_RANGE)))
@@ -542,6 +562,7 @@ public class MonsterInstance extends NpcInstance
 			else if (killer.getParty() != null)
 			{
 				players = new ArrayList<>(killer.getParty().getMemberCount());
+				
 				for (Player pl : killer.getParty().getPartyMembers())
 				{
 					if (!pl.isDead() && (isInRangeZ(pl, Config.ALT_PARTY_DISTRIBUTION_RANGE) || killer.isInRangeZ(pl, Config.ALT_PARTY_DISTRIBUTION_RANGE)))
@@ -550,9 +571,11 @@ public class MonsterInstance extends NpcInstance
 					}
 				}
 			}
+			
 			for (Quest quest : quests)
 			{
 				Player toReward = killer;
+				
 				if ((quest.getParty() != Quest.PARTY_NONE) && (players != null))
 				{
 					if (isRaid() || (quest.getParty() == Quest.PARTY_ALL))
@@ -560,38 +583,47 @@ public class MonsterInstance extends NpcInstance
 						for (Player pl : players)
 						{
 							QuestState qs = pl.getQuestState(quest.getName());
+							
 							if ((qs != null) && !qs.isCompleted())
 							{
 								quest.notifyKill(this, qs);
 							}
 						}
+						
 						toReward = null;
 					}
 					else
 					{
 						List<Player> interested = new ArrayList<>(players.size());
+						
 						for (Player pl : players)
 						{
 							QuestState qs = pl.getQuestState(quest.getName());
+							
 							if ((qs != null) && !qs.isCompleted())
 							{
 								interested.add(pl);
 							}
 						}
+						
 						if (interested.isEmpty())
 						{
 							continue;
 						}
+						
 						toReward = interested.get(Rnd.get(interested.size()));
+						
 						if (toReward == null)
 						{
 							toReward = killer;
 						}
 					}
 				}
+				
 				if (toReward != null)
 				{
 					QuestState qs = toReward.getQuestState(quest.getName());
+					
 					if ((qs != null) && !qs.isCompleted())
 					{
 						quest.notifyKill(this, qs);
@@ -599,16 +631,20 @@ public class MonsterInstance extends NpcInstance
 				}
 			}
 		}
+		
 		Map<Player, RewardInfo> rewards = new HashMap<>();
+		
 		for (HateInfo info : aggroMap.values())
 		{
 			if (info.damage <= 1)
 			{
 				continue;
 			}
+			
 			Playable attacker = (Playable) info.attacker;
 			Player player = attacker.getPlayer();
 			RewardInfo reward = rewards.get(player);
+			
 			if (reward == null)
 			{
 				rewards.put(player, new RewardInfo(player, info.damage));
@@ -618,35 +654,44 @@ public class MonsterInstance extends NpcInstance
 				reward.addDamage(info.damage);
 			}
 		}
+		
 		Player[] attackers = rewards.keySet().toArray(new Player[rewards.size()]);
 		double[] xpsp = new double[2];
+		
 		for (Player attacker : attackers)
 		{
 			if (attacker.isDead())
 			{
 				continue;
 			}
+			
 			RewardInfo reward = rewards.get(attacker);
+			
 			if (reward == null)
 			{
 				continue;
 			}
+			
 			Party party = attacker.getParty();
 			int maxHp = getMaxHp();
 			xpsp[0] = 0.;
 			xpsp[1] = 0.;
+			
 			if (party == null)
 			{
 				int damage = Math.min(reward._dmg, maxHp);
+				
 				if (damage > 0)
 				{
 					if (isInRangeZ(attacker, Config.ALT_PARTY_DISTRIBUTION_RANGE))
 					{
 						xpsp = calculateExpAndSp(attacker.getLevel(), damage);
 					}
+					
 					xpsp[0] = applyOverhit(killer, xpsp[0]);
 					attacker.addExpAndCheckBonus(this, (long) xpsp[0], (long) xpsp[1], 1.);
 				}
+				
 				rewards.remove(attacker);
 			}
 			else
@@ -654,24 +699,31 @@ public class MonsterInstance extends NpcInstance
 				int partyDmg = 0;
 				int partylevel = 1;
 				List<Player> rewardedMembers = new ArrayList<>();
+				
 				for (Player partyMember : party.getPartyMembers())
 				{
 					RewardInfo ai = rewards.remove(partyMember);
+					
 					if (partyMember.isDead() || !isInRangeZ(partyMember, Config.ALT_PARTY_DISTRIBUTION_RANGE))
 					{
 						continue;
 					}
+					
 					if (ai != null)
 					{
 						partyDmg += ai._dmg;
 					}
+					
 					rewardedMembers.add(partyMember);
+					
 					if (partyMember.getLevel() > partylevel)
 					{
 						partylevel = partyMember.getLevel();
 					}
 				}
+				
 				partyDmg = Math.min(partyDmg, maxHp);
+				
 				if (partyDmg > 0)
 				{
 					xpsp = calculateExpAndSp(partylevel, partyDmg);
@@ -683,11 +735,14 @@ public class MonsterInstance extends NpcInstance
 				}
 			}
 		}
+		
 		CursedWeaponsManager.getInstance().dropAttackable(this, killer);
+		
 		if ((topDamager == null) || !topDamager.isPlayable())
 		{
 			return;
 		}
+		
 		for (Map.Entry<RewardType, RewardList> entry : getTemplate().getRewards().entrySet())
 		{
 			rollRewards(entry, lastAttacker, topDamager);
@@ -735,17 +790,21 @@ public class MonsterInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (getCurrentHpPercents() > 50)
 		{
 			return;
 		}
+		
 		absorbLock.lock();
+		
 		try
 		{
 			if (_absorbersIds == null)
 			{
 				_absorbersIds = new TIntHashSet();
 			}
+			
 			_absorbersIds.add(attacker.getObjectId());
 		}
 		finally
@@ -762,12 +821,14 @@ public class MonsterInstance extends NpcInstance
 	public boolean isAbsorbed(Player player)
 	{
 		absorbLock.lock();
+		
 		try
 		{
 			if (_absorbersIds == null)
 			{
 				return false;
 			}
+			
 			if (!_absorbersIds.contains(player.getObjectId()))
 			{
 				return false;
@@ -786,6 +847,7 @@ public class MonsterInstance extends NpcInstance
 	public void clearAbsorbers()
 	{
 		absorbLock.lock();
+		
 		try
 		{
 			if (_absorbersIds != null)
@@ -806,6 +868,7 @@ public class MonsterInstance extends NpcInstance
 	public RewardItem takeHarvest()
 	{
 		harvestLock.lock();
+		
 		try
 		{
 			RewardItem harvest;
@@ -825,6 +888,7 @@ public class MonsterInstance extends NpcInstance
 	public void clearHarvest()
 	{
 		harvestLock.lock();
+		
 		try
 		{
 			_harvestItem = null;
@@ -848,16 +912,19 @@ public class MonsterInstance extends NpcInstance
 	public boolean setSeeded(Player player, int seedId, boolean altSeed)
 	{
 		harvestLock.lock();
+		
 		try
 		{
 			if (isSeeded())
 			{
 				return false;
 			}
+			
 			_isSeeded = true;
 			_altSeed = altSeed;
 			_seederId = player.getObjectId();
 			_harvestItem = new RewardItem(Manor.getInstance().getCropType(seedId));
+			
 			if (getTemplate().rateHp > 1)
 			{
 				_harvestItem.count = Rnd.get(Math.round(getTemplate().rateHp), Math.round(1.5 * getTemplate().rateHp));
@@ -909,10 +976,12 @@ public class MonsterInstance extends NpcInstance
 		{
 			return false;
 		}
+		
 		if ((player.getObjectId() == spoilerId) && (getDeadTime() < 20000L))
 		{
 			return true;
 		}
+		
 		if (player.isInParty())
 		{
 			for (Player pm : player.getParty().getPartyMembers())
@@ -923,6 +992,7 @@ public class MonsterInstance extends NpcInstance
 				}
 			}
 		}
+		
 		return false;
 	}
 	
@@ -934,12 +1004,14 @@ public class MonsterInstance extends NpcInstance
 	public boolean setSpoiled(Player player)
 	{
 		sweepLock.lock();
+		
 		try
 		{
 			if (isSpoiled())
 			{
 				return false;
 			}
+			
 			_isSpoiled = true;
 			spoilerId = player.getObjectId();
 		}
@@ -957,6 +1029,7 @@ public class MonsterInstance extends NpcInstance
 	public boolean isSweepActive()
 	{
 		sweepLock.lock();
+		
 		try
 		{
 			return (_sweepItems != null) && (_sweepItems.size() > 0);
@@ -974,6 +1047,7 @@ public class MonsterInstance extends NpcInstance
 	public List<RewardItem> takeSweep()
 	{
 		sweepLock.lock();
+		
 		try
 		{
 			List<RewardItem> sweep = _sweepItems;
@@ -992,6 +1066,7 @@ public class MonsterInstance extends NpcInstance
 	public void clearSweep()
 	{
 		sweepLock.lock();
+		
 		try
 		{
 			_isSpoiled = false;
@@ -1014,25 +1089,31 @@ public class MonsterInstance extends NpcInstance
 	{
 		RewardType type = entry.getKey();
 		RewardList list = entry.getValue();
+		
 		if ((type == RewardType.SWEEP) && !isSpoiled())
 		{
 			return;
 		}
+		
 		final Creature activeChar = type == RewardType.SWEEP ? lastAttacker : topDamager;
 		final Player activePlayer = activeChar.getPlayer();
+		
 		if (activePlayer == null)
 		{
 			return;
 		}
+		
 		final int diff = calculateLevelDiffForDrop(topDamager.getLevel());
 		double mod = calcStat(Stats.REWARD_MULTIPLIER, 1., activeChar, null);
 		mod *= Experience.penaltyModifier(diff, 9);
 		List<RewardItem> rewardItems = list.roll(activePlayer, mod, this instanceof RaidBossInstance);
+		
 		switch (type)
 		{
 			case SWEEP:
 				_sweepItems = rewardItems;
 				break;
+			
 			default:
 				for (RewardItem drop : rewardItems)
 				{
@@ -1040,8 +1121,10 @@ public class MonsterInstance extends NpcInstance
 					{
 						continue;
 					}
+					
 					dropItem(activePlayer, drop.itemId, drop.count);
 				}
+				
 				break;
 		}
 	}
@@ -1055,28 +1138,34 @@ public class MonsterInstance extends NpcInstance
 	private double[] calculateExpAndSp(int level, long damage)
 	{
 		int diff = level - getLevel();
+		
 		if ((level > 77) && (diff > 3) && (diff <= 5))
 		{
 			diff += 3;
 		}
+		
 		double xp = (getExpReward() * damage) / getMaxHp();
 		double sp = (getSpReward() * damage) / getMaxHp();
+		
 		if (diff > 5)
 		{
 			double mod = Math.pow(.83, diff - 5);
 			xp *= mod;
 			sp *= mod;
 		}
+		
 		if ((level > 84) && (diff < -2))
 		{
 			double mod = Math.pow(.83, Math.abs(diff + 3));
 			xp *= mod;
 			sp *= mod;
 		}
+		
 		if (diff > 10)
 		{
 			xp = 0.;
 		}
+		
 		xp = Math.max(0., xp);
 		sp = Math.max(0., sp);
 		return new double[]
@@ -1100,6 +1189,7 @@ public class MonsterInstance extends NpcInstance
 			killer.sendPacket(Msg.OVER_HIT, new SystemMessage(SystemMessage.ACQUIRED_S1_BONUS_EXPERIENCE_THROUGH_OVER_HIT).addNumber(overHitExp));
 			xp += overHitExp;
 		}
+		
 		return xp;
 	}
 	
@@ -1140,10 +1230,12 @@ public class MonsterInstance extends NpcInstance
 	public int calculateOverhitExp(final double normalExp)
 	{
 		double overhitPercentage = (getOverhitDamage() * 100) / getMaxHp();
+		
 		if (overhitPercentage > 25)
 		{
 			overhitPercentage = 25;
 		}
+		
 		double overhitExp = (overhitPercentage / 100) * normalExp;
 		setOverhitAttacker(null);
 		setOverhitDamage(0);
@@ -1215,12 +1307,15 @@ public class MonsterInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (isMinion() || (getMinionList() != null) || isRaid() || (this instanceof ReflectionBossInstance) || (this instanceof ChestInstance) || (getChampion() > 0))
 		{
 			return;
 		}
+		
 		int skillId = 5044;
 		int skillLvl = 1;
+		
 		if ((getLevel() >= 41) || (getLevel() <= 60))
 		{
 			skillLvl = 2;
@@ -1229,7 +1324,9 @@ public class MonsterInstance extends NpcInstance
 		{
 			skillLvl = 3;
 		}
+		
 		double distance = getDistance(attacker);
+		
 		if (distance <= MIN_DISTANCE_FOR_CANCEL_UD)
 		{
 			if ((getEffectList() != null) && (getEffectList().getEffectsBySkillId(skillId) != null))
@@ -1243,9 +1340,11 @@ public class MonsterInstance extends NpcInstance
 		else if (distance >= MIN_DISTANCE_FOR_USE_UD)
 		{
 			double chance = UD_USE_CHANCE / (getMaxHp() / damage);
+			
 			if (Rnd.chance(chance))
 			{
 				Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
+				
 				if (skill != null)
 				{
 					skill.getEffects(this, this, false, false);

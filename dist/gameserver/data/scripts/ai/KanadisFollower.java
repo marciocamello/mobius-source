@@ -44,6 +44,7 @@ public class KanadisFollower extends Fighter
 		super.onEvtSpawn();
 		final NpcInstance actor = getActor();
 		final List<NpcInstance> around = actor.getAroundNpc(7000, 300);
+		
 		if ((around != null) && !around.isEmpty())
 		{
 			for (NpcInstance npc : around)
@@ -65,12 +66,14 @@ public class KanadisFollower extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (attacker.getNpcId() == 36562)
 		{
 			actor.getAggroList().addDamageHate(attacker, 0, 100);
 			startRunningTask(2000);
 			setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	

@@ -39,10 +39,10 @@ public class PrivateStoreManageListBuy extends L2GameServerPacket
 		_adena = buyer.getAdena();
 		_buyList0 = buyer.getBuyList();
 		_buyList = new ArrayList<>();
-		
 		ItemInstance[] items = buyer.getInventory().getItems();
 		ArrayUtils.eqSort(items, ItemClassComparator.getInstance());
 		TradeItem bi;
+		
 		for (ItemInstance item : items)
 		{
 			if (item.canBeTraded(buyer) && (item.getItemId() != ItemTemplate.ITEM_ID_ADENA))
@@ -60,9 +60,9 @@ public class PrivateStoreManageListBuy extends L2GameServerPacket
 		// section 1
 		writeD(_buyerId);
 		writeQ(_adena);
-		
 		// section2
 		writeD(_buyList.size());// for potential sells
+		
 		for (TradeItem bi : _buyList)
 		{
 			writeItemInfo(bi);
@@ -71,6 +71,7 @@ public class PrivateStoreManageListBuy extends L2GameServerPacket
 		
 		// section 3
 		writeD(_buyList0.size());// count for any items already added for sell
+		
 		for (TradeItem bi : _buyList0)
 		{
 			writeItemInfo(bi);

@@ -87,7 +87,7 @@ public class CrystalHall extends Reflection
 	private class DeathListener implements OnDeathListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public DeathListener()
 		{
@@ -152,6 +152,7 @@ public class CrystalHall extends Reflection
 				{
 					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying_open_door, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true));
 				}
+				
 				getDoor(DoorOutside).openMe();
 				getDoor(DoorInside).openMe();
 			}
@@ -162,6 +163,7 @@ public class CrystalHall extends Reflection
 					p.sendPacket(new ExSendUIEvent(p, 1, 1, 0, 0));
 					p.sendPacket(new SystemMessage2(SystemMsg.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addInteger(5));
 				}
+				
 				startCollapseTimer(5 * 60 * 1000L);
 				addSpawnWithoutRespawn(Exchanger, RB2Loc, 0);
 			}

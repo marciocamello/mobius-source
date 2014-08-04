@@ -67,30 +67,36 @@ public class ScrambledKeyPair
 	private final static byte[] scrambleModulus(BigInteger modulus)
 	{
 		byte[] scrambledMod = modulus.toByteArray();
+		
 		if ((scrambledMod.length == 0x81) && (scrambledMod[0] == 0x00))
 		{
 			byte[] temp = new byte[0x80];
 			System.arraycopy(scrambledMod, 1, temp, 0, 0x80);
 			scrambledMod = temp;
 		}
+		
 		for (int i = 0; i < 4; i++)
 		{
 			byte temp = scrambledMod[i];
 			scrambledMod[i] = scrambledMod[0x4d + i];
 			scrambledMod[0x4d + i] = temp;
 		}
+		
 		for (int i = 0; i < 0x40; i++)
 		{
 			scrambledMod[i] = (byte) (scrambledMod[i] ^ scrambledMod[0x40 + i]);
 		}
+		
 		for (int i = 0; i < 4; i++)
 		{
 			scrambledMod[0x0d + i] = (byte) (scrambledMod[0x0d + i] ^ scrambledMod[0x34 + i]);
 		}
+		
 		for (int i = 0; i < 0x40; i++)
 		{
 			scrambledMod[0x40 + i] = (byte) (scrambledMod[0x40 + i] ^ scrambledMod[i]);
 		}
+		
 		return scrambledMod;
 	}
 }

@@ -24,7 +24,7 @@ import lineage2.gameserver.utils.NpcUtils;
 public class SpawnSimpleObject implements SpawnableObject
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**

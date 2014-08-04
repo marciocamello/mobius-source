@@ -51,26 +51,31 @@ public class RequestMenteeAdd extends L2GameClientPacket
 		GameClient client = getClient();
 		Player activeChar = client.getActiveChar();
 		Player newMentee = World.getPlayer(_newMentee);
+		
 		if (newMentee == null)
 		{
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.THAT_PLAYER_IS_NOT_ONLINE));
 			return;
 		}
+		
 		if (activeChar.getClassId().getId() < 139)
 		{
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.YOU_MUST_AWAKEN_IN_ORDER_TO_BECOME_A_MENTOR));
 			return;
 		}
+		
 		if (activeChar.getMentorSystem().getMenteeInfo().size() == 3)
 		{
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.A_MENTOR_CAN_HAVE_UP_TO_3_MENTEES_AT_THE_SAME_TIME));
 			return;
 		}
+		
 		if (newMentee.getMentorSystem().getMentor() != 0)
 		{
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_ALREADY_HAS_A_MENTOR).addName(newMentee));
 			return;
 		}
+		
 		for (MenteeInfo entry : activeChar.getMentorSystem().getMenteeInfo())
 		{
 			if (entry.getName().equals(_newMentee))
@@ -78,22 +83,27 @@ public class RequestMenteeAdd extends L2GameClientPacket
 				return;
 			}
 		}
+		
 		if (activeChar.getName().equals(_newMentee))
 		{
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.YOU_CANNOT_BECOME_YOUR_OWN_MENTEE));
 			return;
 		}
+		
 		if (newMentee.getLevel() > 85)
 		{
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_IS_ABOVE_LEVEL_86_AND_CANNOT_BECOME_A_MENTEE).addName(newMentee));
 			return;
 		}
+		
 		if (!newMentee.getInventory().validateCapacity(33800, 1))
 		{
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_DOES_NOT_HAVE_THE_ITEM_NEDEED_TO_BECOME_A_MENTEE).addName(newMentee));
 			return;
 		}
+		
 		long mentorPenalty = activeChar.getVarLong("mentorPenalty", 0L);
+		
 		if (mentorPenalty > System.currentTimeMillis())
 		{
 			long milisPenalty = mentorPenalty - System.currentTimeMillis();
@@ -106,6 +116,7 @@ public class RequestMenteeAdd extends L2GameClientPacket
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.YOU_CAN_BOND_WITH_A_NEW_MENTEE_IN_S1_DAYS_S2_HOUR_S3_MINUTE).addInteger(numDays).addInteger(numHours).addInteger(numMins));
 			return;
 		}
+		
 		new Request(L2RequestType.MENTEE, activeChar, newMentee).setTimeout(10000L);
 		activeChar.sendPacket(new SystemMessage2(SystemMsg.YOU_HAVE_OFFERED_TO_BECOME_S1_MENTOR).addName(newMentee));
 		newMentee.sendPacket(new ExMentorAdd(activeChar));

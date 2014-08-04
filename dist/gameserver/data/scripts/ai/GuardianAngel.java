@@ -63,10 +63,12 @@ public class GuardianAngel extends DefaultAI
 	protected void onEvtDead(Creature killer)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor != null)
 		{
 			Functions.npcSay(actor, flood[2]);
 		}
+		
 		super.onEvtDead(killer);
 	}
 }

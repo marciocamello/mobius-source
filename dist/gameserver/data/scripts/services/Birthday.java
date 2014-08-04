@@ -53,10 +53,12 @@ public class Birthday extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null) || !NpcInstance.canBypassCheck(player, player.getLastNpc()))
 		{
 			return;
 		}
+		
 		for (NpcInstance n : World.getAroundNpc(npc))
 		{
 			if (n.getNpcId() == NPC_ALEGRIA)
@@ -65,7 +67,9 @@ public class Birthday extends Functions
 				return;
 			}
 		}
+		
 		player.sendPacket(PlaySound.HB01);
+		
 		try
 		{
 			int x = (int) (npc.getX() + (40 * Math.cos(npc.headingToRadians((npc.getHeading() - 32768) + 8000))));
@@ -86,15 +90,18 @@ public class Birthday extends Functions
 	{
 		Player player = getSelf();
 		final NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null) || !NpcInstance.canBypassCheck(player, player.getLastNpc()) || npc.isBusy())
 		{
 			return;
 		}
+		
 		if (ItemFunctions.getItemCount(player, EXPLORERHAT) < 1)
 		{
 			show("default/32600-nohat.htm", player, npc);
 			return;
 		}
+		
 		ItemFunctions.removeItem(player, EXPLORERHAT, 1, true);
 		ItemFunctions.addItem(player, HAT, 1, true);
 		show("default/32600-successful.htm", player, npc);

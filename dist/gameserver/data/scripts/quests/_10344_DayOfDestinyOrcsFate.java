@@ -23,27 +23,25 @@ public class _10344_DayOfDestinyOrcsFate extends SagasSuperclass implements Scri
 	public void onLoad()
 	{
 	}
-
+	
 	@Override
 	public void onReload()
 	{
 	}
-
+	
 	@Override
 	public void onShutdown()
 	{
 	}
-
+	
 	public _10344_DayOfDestinyOrcsFate()
 	{
 		super(false);
-
 		StartNPC = 30865;
 		StartRace = Race.orc;
-
 		init();
 	}
-
+	
 	@Override
 	public int questId()
 	{

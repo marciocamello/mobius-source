@@ -52,6 +52,7 @@ public class _10377_TheInvadedExecutionGrounds extends Quest implements ScriptFi
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("sylvain_q10377_06.htm"))
 		{
 			st.setCond(1);
@@ -82,6 +83,7 @@ public class _10377_TheInvadedExecutionGrounds extends Quest implements ScriptFi
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -91,6 +93,7 @@ public class _10377_TheInvadedExecutionGrounds extends Quest implements ScriptFi
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		String htmltext = "noquest";
+		
 		if (npcId == SYLVAIN)
 		{
 			if (st.isCompleted())
@@ -147,6 +150,7 @@ public class _10377_TheInvadedExecutionGrounds extends Quest implements ScriptFi
 				htmltext = "warden_endrigo_q10377_01.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -154,6 +158,7 @@ public class _10377_TheInvadedExecutionGrounds extends Quest implements ScriptFi
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if (cond > 2)
 		{
 			switch (npc.getNpcId())
@@ -163,27 +168,33 @@ public class _10377_TheInvadedExecutionGrounds extends Quest implements ScriptFi
 					{
 						break;
 					}
+					
 					st.setCond(4);
 					st.playSound(SOUND_MIDDLE);
 					break;
+				
 				case CROOK_THE_MAD:
 					if (cond != 4)
 					{
 						break;
 					}
+					
 					st.setCond(5);
 					st.playSound(SOUND_MIDDLE);
 					break;
+				
 				case EXECUTION_GROUNDS_WATCHMAN_GUILLOTINE:
 					if (cond != 5)
 					{
 						break;
 					}
+					
 					st.setCond(6);
 					st.playSound(SOUND_MIDDLE);
 					break;
 			}
 		}
+		
 		return null;
 	}
 	

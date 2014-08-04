@@ -66,11 +66,14 @@ public final class EffectDispelOnHIt extends Effect
 		{
 			return false;
 		}
+		
 		_hitCount += 1;
+		
 		if (_hitCount >= _maxHitCount)
 		{
 			_effected.getEffectList().stopEffect(getSkill());
 		}
+		
 		return true;
 	}
 }

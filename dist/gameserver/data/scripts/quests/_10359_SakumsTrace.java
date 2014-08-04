@@ -87,6 +87,7 @@ public class _10359_SakumsTrace extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -94,12 +95,14 @@ public class _10359_SakumsTrace extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "0-3.htm";
 		}
+		
 		if (event.equalsIgnoreCase("qet_rev"))
 		{
 			st.getPlayer().addExpAndSp(670000, 220000);
 			st.giveItems(57, 108000);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
+			
 			if (st.getPlayer().getRace() == Race.human)
 			{
 				if (st.getPlayer().isMageClass())
@@ -139,10 +142,12 @@ public class _10359_SakumsTrace extends Quest implements ScriptFile
 				htmltext = "2-3g.htm";
 			}
 		}
+		
 		if (event.equalsIgnoreCase("1-3.htm"))
 		{
 			st.setCond(2);
 		}
+		
 		return htmltext;
 	}
 	
@@ -152,6 +157,7 @@ public class _10359_SakumsTrace extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == guild)
 		{
 			if (st.isCompleted())
@@ -363,6 +369,7 @@ public class _10359_SakumsTrace extends Quest implements ScriptFile
 				htmltext = "2-1m.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -371,6 +378,7 @@ public class _10359_SakumsTrace extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
+		
 		if ((cond == 2) && (st.getQuestItemsCount(frag) < 20))
 		{
 			if (ArrayUtils.contains(huntl, npcId))
@@ -382,10 +390,12 @@ public class _10359_SakumsTrace extends Quest implements ScriptFile
 				st.rollAndGive(frag, 1, 35);
 			}
 		}
+		
 		if (st.getQuestItemsCount(frag) >= 20)
 		{
 			st.setCond(3);
 		}
+		
 		return null;
 	}
 }

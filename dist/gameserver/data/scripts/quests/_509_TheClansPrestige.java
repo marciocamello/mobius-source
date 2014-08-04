@@ -107,12 +107,14 @@ public class _509_TheClansPrestige extends Quest implements ScriptFile
 	{
 		super(PARTY_ALL);
 		addStartNpc(GRAND_MAGISTER_VALDIS);
+		
 		for (int[] i : REWARDS_LIST)
 		{
 			if (i[0] > 0)
 			{
 				addKillId(i[0]);
 			}
+			
 			if (i[1] > 0)
 			{
 				addQuestItem(i[1]);
@@ -125,6 +127,7 @@ public class _509_TheClansPrestige extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("31331-0.htm") && (cond == 0))
 		{
 			st.setCond(1);
@@ -138,10 +141,12 @@ public class _509_TheClansPrestige extends Quest implements ScriptFile
 			int x = RADAR[evt][0];
 			int y = RADAR[evt][1];
 			int z = RADAR[evt][2];
+			
 			if ((x + y + z) > 0)
 			{
 				st.addRadar(x, y, z);
 			}
+			
 			st.playSound(SOUND_ACCEPT);
 		}
 		else if (event.equalsIgnoreCase("31331-6.htm"))
@@ -149,6 +154,7 @@ public class _509_TheClansPrestige extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -157,6 +163,7 @@ public class _509_TheClansPrestige extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		Clan clan = st.getPlayer().getClan();
+		
 		if (clan == null)
 		{
 			st.exitCurrentQuest(true);
@@ -177,6 +184,7 @@ public class _509_TheClansPrestige extends Quest implements ScriptFile
 			int cond = st.getCond();
 			int raid = st.getInt("raid");
 			int id = st.getState();
+			
 			if ((id == CREATED) && (cond == 0))
 			{
 				htmltext = "31331-0c.htm";
@@ -185,6 +193,7 @@ public class _509_TheClansPrestige extends Quest implements ScriptFile
 			{
 				int item = REWARDS_LIST[raid][1];
 				long count = st.getQuestItemsCount(item);
+				
 				if (count == 0)
 				{
 					htmltext = "31331-" + raid + "a.htm";
@@ -198,6 +207,7 @@ public class _509_TheClansPrestige extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -206,34 +216,42 @@ public class _509_TheClansPrestige extends Quest implements ScriptFile
 	{
 		QuestState id = null;
 		Clan clan = st.getPlayer().getClan();
+		
 		if (clan == null)
 		{
 			return null;
 		}
+		
 		Player clan_leader = clan.getLeader().getPlayer();
+		
 		if (clan_leader == null)
 		{
 			return null;
 		}
+		
 		if (clan_leader.equals(st.getPlayer()) || (clan_leader.getDistance(npc) <= 1600))
 		{
 			id = clan_leader.getQuestState(getName());
 		}
+		
 		if (id == null)
 		{
 			return null;
 		}
+		
 		if ((st.getCond() == 1) && (st.getState() == STARTED))
 		{
 			int raid = REWARDS_LIST[st.getInt("raid")][0];
 			int item = REWARDS_LIST[st.getInt("raid")][1];
 			int npcId = npc.getNpcId();
+			
 			if ((npcId == raid) && (st.getQuestItemsCount(item) == 0))
 			{
 				st.giveItems(item, 1);
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		return null;
 	}
 }

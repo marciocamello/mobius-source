@@ -35,7 +35,7 @@ import lineage2.gameserver.utils.Location;
 public class Vehicle extends Boat
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -147,6 +147,7 @@ public class Vehicle extends Boat
 		{
 			return null;
 		}
+		
 		return new GetOnVehicle(playable.getPlayer(), this, location);
 	}
 	
@@ -163,6 +164,7 @@ public class Vehicle extends Boat
 		{
 			return null;
 		}
+		
 		return new GetOffVehicle(playable.getPlayer(), this, location);
 	}
 	

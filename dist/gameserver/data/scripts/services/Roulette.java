@@ -421,15 +421,18 @@ public class Roulette extends Functions
 		GameType type;
 		long bet = 0;
 		String betID = "";
+		
 		try
 		{
 			if (param.length != 3)
 			{
 				throw new NumberFormatException();
 			}
+			
 			type = GameType.valueOf(param[0]);
 			betID = param[1].trim();
 			bet = Long.parseLong(param[2]);
+			
 			if ((type == GameType.StraightUp) && ((betID.length() > 2) || (Integer.parseInt(betID) < 0) || (Integer.parseInt(betID) > 36)))
 			{
 				throw new NumberFormatException();
@@ -440,25 +443,30 @@ public class Roulette extends Functions
 			show("Invalid value input!<br><a action=\"bypass -h scripts_services.Roulette:dialog\">Back</a>", player);
 			return;
 		}
+		
 		if (bet < Config.SERVICES_ROULETTE_MIN_BET)
 		{
 			show("Too small bet!<br><a action=\"bypass -h scripts_services.Roulette:dialog\">Back</a>", player);
 			return;
 		}
+		
 		if (bet > Config.SERVICES_ROULETTE_MAX_BET)
 		{
 			show("Too large bet!<br><a action=\"bypass -h scripts_services.Roulette:dialog\">Back</a>", player);
 			return;
 		}
+		
 		if (player.getAdena() < bet)
 		{
 			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			show("You do not have enough adena!<br><a action=\"bypass -h scripts_services.Roulette:dialog\">Back</a>", player);
 			return;
 		}
+		
 		String[] roll = Numbers[Rnd.get(Numbers.length)];
 		int result = check(betID, roll, type);
 		String ret = HtmCache.getInstance().getNotNull("scripts/services/rouletteresult.htm", player);
+		
 		if (result == 0)
 		{
 			removeItem(player, 57, bet);
@@ -471,10 +479,12 @@ public class Roulette extends Functions
 			GameStats.addRoulette(-1 * bet * result);
 			ret = ret.replace("%result%", "<font color=\"00FF00\">Succes!</font>");
 		}
+		
 		if (player.isGM())
 		{
 			player.sendMessage("Roulette balance: " + Util.formatAdena(GameStats.getRouletteSum()));
 		}
+		
 		ret = ret.replace("%bettype%", new CustomMessage("Roulette." + type.toString(), player).toString());
 		ret = ret.replace("%betnumber%", type == GameType.StraightUp ? betID : new CustomMessage("Roulette." + betID, player).toString());
 		ret = ret.replace("%number%", roll[0]);
@@ -503,37 +513,49 @@ public class Roulette extends Functions
 				{
 					return 35;
 				}
+				
 				return 0;
+				
 			case ColumnBet:
 				if (betID.equals(roll[3]))
 				{
 					return 2;
 				}
+				
 				return 0;
+				
 			case DozenBet:
 				if (betID.equals(roll[2]))
 				{
 					return 2;
 				}
+				
 				return 0;
+				
 			case RedOrBlack:
 				if (betID.equals(roll[1]))
 				{
 					return 1;
 				}
+				
 				return 0;
+				
 			case EvenOrOdd:
 				if (betID.equals(roll[4]))
 				{
 					return 1;
 				}
+				
 				return 0;
+				
 			case LowOrHigh:
 				if (betID.equals(roll[5]))
 				{
 					return 1;
 				}
+				
 				return 0;
+				
 			default:
 				return 0;
 		}
@@ -597,10 +619,12 @@ public class Roulette extends Functions
 	public String getHtmlAppends(Integer val)
 	{
 		Player player = getSelf();
+		
 		if (Config.SERVICES_ALLOW_ROULETTE)
 		{
 			return "<br><a action=\"bypass -h scripts_services.Roulette:dialog\">" + new CustomMessage("Roulette.dialog", player).toString() + "</a>";
 		}
+		
 		return "";
 	}
 }

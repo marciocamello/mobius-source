@@ -35,6 +35,7 @@ public class PetitionSubGroup extends PetitionGroup
 	{
 		super(id);
 		Class<?> clazz = Scripts.getInstance().getClasses().get("handler.petition." + handler);
+		
 		try
 		{
 			_handler = (IPetitionHandler) clazz.newInstance();

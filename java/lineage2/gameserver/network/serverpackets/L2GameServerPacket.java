@@ -43,6 +43,7 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 		{
 			_log.error("Client: " + getClient() + " - Failed writing: " + getType() + " - Server Version: " + GameServer.getInstance().getVersion().getRevisionNumber(), e);
 		}
+		
 		return false;
 	}
 	
@@ -74,6 +75,7 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 		{
 			getByteBuffer().putInt(values.length);
 		}
+		
 		for (int value : values)
 		{
 			getByteBuffer().putInt(value);
@@ -104,7 +106,7 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 		writeH(item.getEnchantLevel());
 		writeH(item.getCustomType2());
 		writeD(item.getAugmentationId()); // L2WT TEST!!! D = [HH] [00 00] [00
-											// 00]
+		// 00]
 		writeD(item.getShadowLifeTime());
 		writeD(item.getTemporalLifeTime());
 		writeH(0x01); // L2WT GOD
@@ -140,7 +142,7 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 		writeH(item.getEnchantLevel());
 		writeH(item.getCustomType2());
 		writeD(item.getAugmentationId()); // L2WT TEST!!! D = [HH] [00 00] [00
-											// 00]
+		// 00]
 		// writeH(0x00); //??
 		writeD(item.getShadowLifeTime());
 		writeD(item.getTemporalLifeTime());
@@ -166,7 +168,9 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 			writeItemElements();
 			return;
 		}
+		
 		ItemTemplate i = ItemHolder.getInstance().getTemplate(item.getItemId());
+		
 		if (item.getItemAttributes().getValue() > 0)
 		{
 			if (i.isWeapon())
@@ -185,6 +189,7 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 			{
 				writeH(-1); // attack element (-1 - none)
 				writeH(0); // attack element value
+				
 				for (Element e : Element.VALUES)
 				{
 					writeH(item.getItemAttributes().getValue(e) + i.getBaseAttributeValue(e));

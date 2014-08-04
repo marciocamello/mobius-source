@@ -57,18 +57,18 @@ public class EnchantItemParser extends AbstractFileParser<EnchantItemHolder>
 		{
 			Element stoneElement = iterator.next();
 			int itemId = Integer.parseInt(stoneElement.attributeValue("id"));
-			
 			String[] targetTypesStr = stoneElement.attributeValue("target_type").split(",");
 			AppearanceStone.ShapeTargetType[] targetTypes = new AppearanceStone.ShapeTargetType[targetTypesStr.length];
+			
 			for (int i = 0; i < targetTypesStr.length; i++)
 			{
 				targetTypes[i] = AppearanceStone.ShapeTargetType.valueOf(targetTypesStr[i].toUpperCase());
 			}
 			
 			AppearanceStone.ShapeType type = AppearanceStone.ShapeType.valueOf(stoneElement.attributeValue("shifting_type").toUpperCase());
-			
 			String[] gradesStr = stoneElement.attributeValue("grade") == null ? new String[0] : stoneElement.attributeValue("grade").split(",");
 			ItemTemplate.Grade[] grades = new ItemTemplate.Grade[gradesStr.length];
+			
 			for (int i = 0; i < gradesStr.length; i++)
 			{
 				grades[i] = ItemTemplate.Grade.valueOf(gradesStr[i].toUpperCase());
@@ -76,9 +76,9 @@ public class EnchantItemParser extends AbstractFileParser<EnchantItemHolder>
 			
 			long cost = stoneElement.attributeValue("cost") == null ? 0L : Long.parseLong(stoneElement.attributeValue("cost"));
 			int extractItemId = stoneElement.attributeValue("extract_id") == null ? 0 : Integer.parseInt(stoneElement.attributeValue("extract_id"));
-			
 			String[] itemTypesStr = stoneElement.attributeValue("item_type") == null ? new String[0] : stoneElement.attributeValue("item_type").split(",");
 			ExItemType[] itemTypes = new ExItemType[itemTypesStr.length];
+			
 			for (int i = 0; i < itemTypesStr.length; i++)
 			{
 				itemTypes[i] = ExItemType.valueOf(itemTypesStr[i].toUpperCase());

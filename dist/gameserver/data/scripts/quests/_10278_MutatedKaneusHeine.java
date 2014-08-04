@@ -54,6 +54,7 @@ public class _10278_MutatedKaneusHeine extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("30916-03.htm"))
 		{
 			st.setCond(1);
@@ -67,6 +68,7 @@ public class _10278_MutatedKaneusHeine extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -77,6 +79,7 @@ public class _10278_MutatedKaneusHeine extends Quest implements ScriptFile
 		int id = st.getState();
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
+		
 		if (id == COMPLETED)
 		{
 			if (npcId == Gosta)
@@ -117,6 +120,7 @@ public class _10278_MutatedKaneusHeine extends Quest implements ScriptFile
 				htmltext = "30907-01.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -130,6 +134,7 @@ public class _10278_MutatedKaneusHeine extends Quest implements ScriptFile
 			st.setCond(2);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return null;
 	}
 }

@@ -41,10 +41,12 @@ public class TeleToFantasyIsle extends Functions
 	public void toFantasyIsle()
 	{
 		Player player = getSelf();
+		
 		if (!NpcInstance.canBypassCheck(player, player.getLastNpc()))
 		{
 			return;
 		}
+		
 		player.setVar("backCoords", player.getLoc().toXYZString(), -1);
 		player.teleToLocation(POINTS[Rnd.get(POINTS.length)]);
 	}
@@ -56,20 +58,25 @@ public class TeleToFantasyIsle extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		if (!NpcInstance.canBypassCheck(player, npc))
 		{
 			return;
 		}
+		
 		String var = player.getVar("backCoords");
+		
 		if ((var == null) || var.equals(""))
 		{
 			teleOut();
 			return;
 		}
+		
 		player.teleToLocation(Location.parseLoc(var));
 	}
 	
@@ -80,10 +87,12 @@ public class TeleToFantasyIsle extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		player.teleToLocation(-44316, -113136, -80);
 		show("I don't know from where you came here, but I can teleport you the nearest town.", player, npc);
 	}

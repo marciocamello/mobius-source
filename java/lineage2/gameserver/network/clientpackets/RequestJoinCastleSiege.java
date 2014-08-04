@@ -68,16 +68,20 @@ public class RequestJoinCastleSiege extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (!player.hasPrivilege(Privilege.CS_FS_SIEGE_WAR))
 		{
 			player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			return;
 		}
+		
 		Residence residence = ResidenceHolder.getInstance().getResidence(_id);
+		
 		if (residence.getType() == ResidenceType.Castle)
 		{
 			registerAtCastle(player, (Castle) residence, _isAttacker, _isJoining);
@@ -100,6 +104,7 @@ public class RequestJoinCastleSiege extends L2GameClientPacket
 		CastleSiegeEvent siegeEvent = castle.getSiegeEvent();
 		Clan playerClan = player.getClan();
 		SiegeClanObject siegeClan = null;
+		
 		if (attacker)
 		{
 			siegeClan = siegeEvent.getSiegeClan(SiegeEvent.ATTACKERS, playerClan);
@@ -107,30 +112,37 @@ public class RequestJoinCastleSiege extends L2GameClientPacket
 		else
 		{
 			siegeClan = siegeEvent.getSiegeClan(SiegeEvent.DEFENDERS, playerClan);
+			
 			if (siegeClan == null)
 			{
 				siegeClan = siegeEvent.getSiegeClan(CastleSiegeEvent.DEFENDERS_WAITING, playerClan);
 			}
 		}
+		
 		if (join)
 		{
 			Residence registeredCastle = null;
+			
 			for (Residence residence : ResidenceHolder.getInstance().getResidenceList(Castle.class))
 			{
 				SiegeClanObject tempCastle = residence.getSiegeEvent().getSiegeClan(SiegeEvent.ATTACKERS, playerClan);
+				
 				if (tempCastle == null)
 				{
 					tempCastle = residence.getSiegeEvent().getSiegeClan(SiegeEvent.DEFENDERS, playerClan);
 				}
+				
 				if (tempCastle == null)
 				{
 					tempCastle = residence.getSiegeEvent().getSiegeClan(CastleSiegeEvent.DEFENDERS_WAITING, playerClan);
 				}
+				
 				if (tempCastle != null)
 				{
 					registeredCastle = residence;
 				}
 			}
+			
 			if (attacker)
 			{
 				if (castle.getOwnerId() == playerClan.getClanId())
@@ -138,7 +150,9 @@ public class RequestJoinCastleSiege extends L2GameClientPacket
 					player.sendPacket(SystemMsg.CASTLE_OWNING_CLANS_ARE_AUTOMATICALLY_REGISTERED_ON_THE_DEFENDING_SIDE);
 					return;
 				}
+				
 				Alliance alliance = playerClan.getAlliance();
+				
 				if (alliance != null)
 				{
 					for (Clan clan : alliance.getMembers())
@@ -150,48 +164,59 @@ public class RequestJoinCastleSiege extends L2GameClientPacket
 						}
 					}
 				}
+				
 				if (playerClan.getCastle() > 0)
 				{
 					player.sendPacket(SystemMsg.A_CLAN_THAT_OWNS_A_CASTLE_CANNOT_PARTICIPATE_IN_ANOTHER_SIEGE);
 					return;
 				}
+				
 				if (siegeClan != null)
 				{
 					player.sendPacket(SystemMsg.YOU_ARE_ALREADY_REGISTERED_TO_THE_ATTACKER_SIDE_AND_MUST_CANCEL_YOUR_REGISTRATION_BEFORE_SUBMITTING_YOUR_REQUEST);
 					return;
 				}
+				
 				if (playerClan.getLevel() < 5)
 				{
 					player.sendPacket(SystemMsg.ONLY_CLANS_OF_LEVEL_5_OR_HIGHER_MAY_REGISTER_FOR_A_CASTLE_SIEGE);
 					return;
 				}
+				
 				if (registeredCastle != null)
 				{
 					player.sendPacket(SystemMsg.YOU_HAVE_ALREADY_REQUESTED_A_CASTLE_SIEGE);
 					return;
 				}
+				
 				if (siegeEvent.isRegistrationOver())
 				{
 					player.sendPacket(SystemMsg.YOU_ARE_TOO_LATE_THE_REGISTRATION_PERIOD_IS_OVER);
 					return;
 				}
+				
 				if (castle.getSiegeDate().getTimeInMillis() == 0)
 				{
 					player.sendPacket(SystemMsg.THIS_IS_NOT_THE_TIME_FOR_SIEGE_REGISTRATION_AND_SO_REGISTRATION_AND_CANCELLATION_CANNOT_BE_DONE);
 					return;
 				}
+				
 				int allSize = siegeEvent.getObjects(SiegeEvent.ATTACKERS).size();
+				
 				if (allSize >= CastleSiegeEvent.MAX_SIEGE_CLANS)
 				{
 					player.sendPacket(SystemMsg.NO_MORE_REGISTRATIONS_MAY_BE_ACCEPTED_FOR_THE_ATTACKER_SIDE);
 					return;
 				}
+				
 				Fortress fortress = player.getFortress();
+				
 				if ((fortress != null) && (fortress.getCastleId() == castle.getId()))
 				{
 					player.sendPacket(SystemMsg.SIEGE_REGISTRATION_IS_NOT_POSSIBLE_DUE_TO_YOUR_CASTLE_CONTRACT);
 					return;
 				}
+				
 				siegeClan = new SiegeClanObject(SiegeEvent.ATTACKERS, playerClan, 0);
 				siegeEvent.addObject(SiegeEvent.ATTACKERS, siegeClan);
 				SiegeClanDAO.getInstance().insert(castle, siegeClan);
@@ -203,41 +228,49 @@ public class RequestJoinCastleSiege extends L2GameClientPacket
 				{
 					return;
 				}
+				
 				if (castle.getOwnerId() == playerClan.getClanId())
 				{
 					player.sendPacket(SystemMsg.CASTLE_OWNING_CLANS_ARE_AUTOMATICALLY_REGISTERED_ON_THE_DEFENDING_SIDE);
 					return;
 				}
+				
 				if (playerClan.getCastle() > 0)
 				{
 					player.sendPacket(SystemMsg.A_CLAN_THAT_OWNS_A_CASTLE_CANNOT_PARTICIPATE_IN_ANOTHER_SIEGE);
 					return;
 				}
+				
 				if (siegeClan != null)
 				{
 					player.sendPacket(SystemMsg.YOU_HAVE_ALREADY_REGISTERED_TO_THE_DEFENDER_SIDE_AND_MUST_CANCEL_YOUR_REGISTRATION_BEFORE_SUBMITTING_YOUR_REQUEST);
 					return;
 				}
+				
 				if (playerClan.getLevel() < 5)
 				{
 					player.sendPacket(SystemMsg.ONLY_CLANS_OF_LEVEL_5_OR_HIGHER_MAY_REGISTER_FOR_A_CASTLE_SIEGE);
 					return;
 				}
+				
 				if (registeredCastle != null)
 				{
 					player.sendPacket(SystemMsg.YOU_HAVE_ALREADY_REQUESTED_A_CASTLE_SIEGE);
 					return;
 				}
+				
 				if (castle.getSiegeDate().getTimeInMillis() == 0)
 				{
 					player.sendPacket(SystemMsg.THIS_IS_NOT_THE_TIME_FOR_SIEGE_REGISTRATION_AND_SO_REGISTRATION_AND_CANCELLATION_CANNOT_BE_DONE);
 					return;
 				}
+				
 				if (siegeEvent.isRegistrationOver())
 				{
 					player.sendPacket(SystemMsg.YOU_ARE_TOO_LATE_THE_REGISTRATION_PERIOD_IS_OVER);
 					return;
 				}
+				
 				siegeClan = new SiegeClanObject(CastleSiegeEvent.DEFENDERS_WAITING, playerClan, 0);
 				siegeEvent.addObject(CastleSiegeEvent.DEFENDERS_WAITING, siegeClan);
 				SiegeClanDAO.getInstance().insert(castle, siegeClan);
@@ -250,18 +283,22 @@ public class RequestJoinCastleSiege extends L2GameClientPacket
 			{
 				siegeClan = siegeEvent.getSiegeClan(CastleSiegeEvent.DEFENDERS_REFUSED, playerClan);
 			}
+			
 			if (siegeClan == null)
 			{
 				player.sendPacket(SystemMsg.YOU_ARE_NOT_YET_REGISTERED_FOR_THE_CASTLE_SIEGE);
 				return;
 			}
+			
 			if (siegeEvent.isRegistrationOver())
 			{
 				player.sendPacket(SystemMsg.YOU_ARE_TOO_LATE_THE_REGISTRATION_PERIOD_IS_OVER);
 				return;
 			}
+			
 			siegeEvent.removeObject(siegeClan.getType(), siegeClan);
 			SiegeClanDAO.getInstance().delete(castle, siegeClan);
+			
 			if (siegeClan.getType().equals(SiegeEvent.ATTACKERS))
 			{
 				player.sendPacket(new CastleSiegeAttackerList(castle));
@@ -284,6 +321,7 @@ public class RequestJoinCastleSiege extends L2GameClientPacket
 		ClanHallSiegeEvent siegeEvent = clanHall.getSiegeEvent();
 		Clan playerClan = player.getClan();
 		SiegeClanObject siegeClan = siegeEvent.getSiegeClan(SiegeEvent.ATTACKERS, playerClan);
+		
 		if (join)
 		{
 			if (playerClan.getHasHideout() > 0)
@@ -291,27 +329,33 @@ public class RequestJoinCastleSiege extends L2GameClientPacket
 				player.sendPacket(SystemMsg.A_CLAN_THAT_OWNS_A_CLAN_HALL_MAY_NOT_PARTICIPATE_IN_A_CLAN_HALL_SIEGE);
 				return;
 			}
+			
 			if (siegeClan != null)
 			{
 				player.sendPacket(SystemMsg.YOU_ARE_ALREADY_REGISTERED_TO_THE_ATTACKER_SIDE_AND_MUST_CANCEL_YOUR_REGISTRATION_BEFORE_SUBMITTING_YOUR_REQUEST);
 				return;
 			}
+			
 			if (playerClan.getLevel() < 4)
 			{
 				player.sendPacket(SystemMsg.ONLY_CLANS_WHO_ARE_LEVEL_4_OR_ABOVE_CAN_REGISTER_FOR_BATTLE_AT_DEVASTATED_CASTLE_AND_FORTRESS_OF_THE_DEAD);
 				return;
 			}
+			
 			if (siegeEvent.isRegistrationOver())
 			{
 				player.sendPacket(SystemMsg.YOU_ARE_TOO_LATE_THE_REGISTRATION_PERIOD_IS_OVER);
 				return;
 			}
+			
 			int allSize = siegeEvent.getObjects(SiegeEvent.ATTACKERS).size();
+			
 			if (allSize >= CastleSiegeEvent.MAX_SIEGE_CLANS)
 			{
 				player.sendPacket(SystemMsg.NO_MORE_REGISTRATIONS_MAY_BE_ACCEPTED_FOR_THE_ATTACKER_SIDE);
 				return;
 			}
+			
 			siegeClan = new SiegeClanObject(SiegeEvent.ATTACKERS, playerClan, 0);
 			siegeEvent.addObject(SiegeEvent.ATTACKERS, siegeClan);
 			SiegeClanDAO.getInstance().insert(clanHall, siegeClan);
@@ -323,14 +367,17 @@ public class RequestJoinCastleSiege extends L2GameClientPacket
 				player.sendPacket(SystemMsg.YOU_ARE_NOT_YET_REGISTERED_FOR_THE_CASTLE_SIEGE);
 				return;
 			}
+			
 			if (siegeEvent.isRegistrationOver())
 			{
 				player.sendPacket(SystemMsg.YOU_ARE_TOO_LATE_THE_REGISTRATION_PERIOD_IS_OVER);
 				return;
 			}
+			
 			siegeEvent.removeObject(siegeClan.getType(), siegeClan);
 			SiegeClanDAO.getInstance().delete(clanHall, siegeClan);
 		}
+		
 		player.sendPacket(new CastleSiegeAttackerList(clanHall));
 	}
 }

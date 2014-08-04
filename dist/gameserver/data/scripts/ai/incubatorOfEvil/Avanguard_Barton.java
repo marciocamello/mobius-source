@@ -38,10 +38,12 @@ public class Avanguard_Barton extends DefaultAI
 	protected boolean thinkActive()
 	{
 		NpcInstance actor = getActor();
+		
 		if (Rnd.chance(8))
 		{
 			Functions.npcSay(actor, NpcString.I_HIT_THINGS_THEY_FALL_DEAD);
 		}
+		
 		return false;
 	}
 }

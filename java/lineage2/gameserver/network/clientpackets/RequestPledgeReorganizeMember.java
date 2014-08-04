@@ -53,6 +53,7 @@ public class RequestPledgeReorganizeMember extends L2GameClientPacket
 		_replace = readD();
 		_subjectName = readS(16);
 		_targetUnit = readD();
+		
 		if (_replace > 0)
 		{
 			_replaceName = readS();
@@ -66,69 +67,84 @@ public class RequestPledgeReorganizeMember extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		Clan clan = activeChar.getClan();
+		
 		if (clan == null)
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (!activeChar.isClanLeader())
 		{
 			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.ChangeAffiliations", activeChar));
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		UnitMember subject = clan.getAnyMember(_subjectName);
+		
 		if (subject == null)
 		{
 			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.NotInYourClan", activeChar));
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (subject.getPledgeType() == _targetUnit)
 		{
 			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.AlreadyInThatCombatUnit", activeChar));
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if ((_targetUnit != 0) && (clan.getSubUnit(_targetUnit) == null))
 		{
 			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.NoSuchCombatUnit", activeChar));
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (Clan.isAcademy(_targetUnit))
 		{
 			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.AcademyViaInvitation", activeChar));
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (Clan.isAcademy(subject.getPledgeType()))
 		{
 			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.CantMoveAcademyMember", activeChar));
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		UnitMember replacement = null;
+		
 		if (_replace > 0)
 		{
 			replacement = clan.getAnyMember(_replaceName);
+			
 			if (replacement == null)
 			{
 				activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.CharacterNotBelongClan", activeChar));
 				activeChar.sendActionFailed();
 				return;
 			}
+			
 			if (replacement.getPledgeType() != _targetUnit)
 			{
 				activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.CharacterNotBelongCombatUnit", activeChar));
 				activeChar.sendActionFailed();
 				return;
 			}
+			
 			if (replacement.isSubLeader() != 0)
 			{
 				activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.CharacterLeaderAnotherCombatUnit", activeChar));
@@ -148,9 +164,11 @@ public class RequestPledgeReorganizeMember extends L2GameClientPacket
 				{
 					activeChar.sendPacket(Msg.THE_ACADEMY_ROYAL_GUARD_ORDER_OF_KNIGHTS_IS_FULL_AND_CANNOT_ACCEPT_NEW_MEMBERS_AT_THIS_TIME);
 				}
+				
 				activeChar.sendActionFailed();
 				return;
 			}
+			
 			if (subject.isSubLeader() != 0)
 			{
 				activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.MemberLeaderAnotherUnit", activeChar));
@@ -158,21 +176,26 @@ public class RequestPledgeReorganizeMember extends L2GameClientPacket
 				return;
 			}
 		}
+		
 		SubUnit oldUnit = null;
+		
 		if (replacement != null)
 		{
 			oldUnit = replacement.getSubUnit();
 			oldUnit.replace(replacement.getObjectId(), subject.getPledgeType());
 			clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(replacement));
+			
 			if (replacement.isOnline())
 			{
 				replacement.getPlayer().updatePledgeClass();
 				replacement.getPlayer().broadcastCharInfo();
 			}
 		}
+		
 		oldUnit = subject.getSubUnit();
 		oldUnit.replace(subject.getObjectId(), _targetUnit);
 		clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(subject));
+		
 		if (subject.isOnline())
 		{
 			subject.getPlayer().updatePledgeClass();

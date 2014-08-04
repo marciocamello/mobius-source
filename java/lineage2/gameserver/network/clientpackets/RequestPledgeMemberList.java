@@ -36,11 +36,14 @@ public class RequestPledgeMemberList extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		Clan clan = activeChar.getClan();
+		
 		if (clan != null)
 		{
 			activeChar.sendPacket(clan.listAll());

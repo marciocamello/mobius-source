@@ -53,26 +53,33 @@ public final class RequestExCubeGameChangeTeam extends L2GameClientPacket
 		{
 			return;
 		}
+		
 		Player activeChar = getClient().getActiveChar();
+		
 		if ((activeChar == null) || activeChar.isDead())
 		{
 			return;
 		}
+		
 		switch (_team)
 		{
 			case 0:
 			case 1:
 				HandysBlockCheckerManager.getInstance().changePlayerToTeam(activeChar, _arena, _team);
 				break;
+			
 			case -1:
 			{
 				int team = HandysBlockCheckerManager.getInstance().getHolder(_arena).getPlayerTeam(activeChar);
+				
 				if (team > -1)
 				{
 					HandysBlockCheckerManager.getInstance().removePlayer(activeChar, _arena, team);
 				}
+				
 				break;
 			}
+			
 			default:
 				_log.warn("Wrong Team ID: " + _team);
 				break;

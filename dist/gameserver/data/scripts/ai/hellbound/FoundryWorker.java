@@ -42,9 +42,11 @@ public class FoundryWorker extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (attacker != null)
 		{
 			final Location pos = Location.findPointToStay(actor, 150, 250);
+			
 			if (GeoEngine.canMoveToCoord(attacker.getX(), attacker.getY(), attacker.getZ(), pos.x, pos.y, pos.z, actor.getGeoIndex()))
 			{
 				actor.setRunning();

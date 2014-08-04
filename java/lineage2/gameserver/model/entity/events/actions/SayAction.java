@@ -103,6 +103,7 @@ public class SayAction implements EventAction
 	public void call(GlobalEvent event)
 	{
 		List<Player> players = event.broadcastPlayers(_range);
+		
 		for (Player player : players)
 		{
 			packet(player);
@@ -119,7 +120,9 @@ public class SayAction implements EventAction
 		{
 			return;
 		}
+		
 		L2GameServerPacket packet = null;
+		
 		if (_sysString != null)
 		{
 			packet = new Say2(0, _chatType, _sysString, _systemMsg);
@@ -128,6 +131,7 @@ public class SayAction implements EventAction
 		{
 			packet = new Say2(0, _chatType, _how, _text);
 		}
+		
 		player.sendPacket(packet);
 	}
 }

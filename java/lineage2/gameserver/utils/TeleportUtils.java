@@ -69,6 +69,7 @@ public class TeleportUtils
 	public static Location getRestartLocation(Player player, Location from, RestartType restartType)
 	{
 		Reflection r = player.getReflection();
+		
 		if (r != ReflectionManager.DEFAULT)
 		{
 			if (r.getCoreLoc() != null)
@@ -80,22 +81,27 @@ public class TeleportUtils
 				return r.getReturnLoc();
 			}
 		}
+		
 		Clan clan = player.getClan();
+		
 		if (clan != null)
 		{
 			if ((restartType == RestartType.TO_CLANHALL) && (clan.getHasHideout() != 0))
 			{
 				return ResidenceHolder.getInstance().getResidence(clan.getHasHideout()).getOwnerRestartPoint();
 			}
+			
 			if ((restartType == RestartType.TO_CASTLE) && (clan.getCastle() != 0))
 			{
 				return ResidenceHolder.getInstance().getResidence(clan.getCastle()).getOwnerRestartPoint();
 			}
+			
 			if ((restartType == RestartType.TO_FORTRESS) && (clan.getHasFortress() != 0))
 			{
 				return ResidenceHolder.getInstance().getResidence(clan.getHasFortress()).getOwnerRestartPoint();
 			}
 		}
+		
 		if (player.isChaotic())
 		{
 			if (player.getPKRestartPoint() != null)
@@ -110,7 +116,9 @@ public class TeleportUtils
 				return player.getRestartPoint();
 			}
 		}
+		
 		RestartArea ra = MapRegionManager.getInstance().getRegionData(RestartArea.class, from);
+		
 		if (ra != null)
 		{
 			RestartPoint rp = ra.getRestartPoint().get(player.getRace());
@@ -118,6 +126,7 @@ public class TeleportUtils
 			Location PKrestartPoint = Rnd.get(rp.getPKrestartPoints());
 			return player.isChaotic() ? PKrestartPoint : restartPoint;
 		}
+		
 		_log.warn("Cannot find restart location from coordinates: " + from + "!");
 		return DEFAULT_RESTART;
 	}

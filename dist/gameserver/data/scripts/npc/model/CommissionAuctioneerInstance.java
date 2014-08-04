@@ -24,7 +24,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class CommissionAuctioneerInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -50,6 +50,7 @@ public class CommissionAuctioneerInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("ShowCommission"))
 		{
 			CommissionShopManager.getInstance().showCommission(player);

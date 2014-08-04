@@ -33,7 +33,7 @@ import npc.model.residences.SiegeGuardInstance;
 public class NurkaInstance extends SiegeGuardInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -73,6 +73,7 @@ public class NurkaInstance extends SiegeGuardInstance
 			doCast(SKILL, attacker, false);
 			return;
 		}
+		
 		super.reduceCurrentHp(damage, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
 	}
 	
@@ -84,10 +85,12 @@ public class NurkaInstance extends SiegeGuardInstance
 	public void onDeath(Creature killer)
 	{
 		SiegeEvent<?, ?> siegeEvent = getEvent(SiegeEvent.class);
+		
 		if (siegeEvent == null)
 		{
 			return;
 		}
+		
 		siegeEvent.processStep(getMostDamagedClan());
 		super.onDeath(killer);
 		deleteMe();
@@ -101,10 +104,12 @@ public class NurkaInstance extends SiegeGuardInstance
 	{
 		Player temp = null;
 		Map<Player, Integer> damageMap = new HashMap<>();
+		
 		for (AggroList.HateInfo info : getAggroList().getPlayableMap().values())
 		{
 			Playable killer = (Playable) info.attacker;
 			int damage = info.damage;
+			
 			if (killer.isPet() || killer.isServitor())
 			{
 				temp = killer.getPlayer();
@@ -113,10 +118,12 @@ public class NurkaInstance extends SiegeGuardInstance
 			{
 				temp = (Player) killer;
 			}
+			
 			if ((temp == null) || (temp.getClan() == null) || (temp.getClan().getHasHideout() > 0))
 			{
 				continue;
 			}
+			
 			if (!damageMap.containsKey(temp))
 			{
 				damageMap.put(temp, damage);
@@ -127,18 +134,22 @@ public class NurkaInstance extends SiegeGuardInstance
 				damageMap.put(temp, dmg);
 			}
 		}
+		
 		int mostDamage = 0;
 		Player player = null;
+		
 		for (Map.Entry<Player, Integer> entry : damageMap.entrySet())
 		{
 			int damage = entry.getValue();
 			Player t = entry.getKey();
+			
 			if (damage > mostDamage)
 			{
 				mostDamage = damage;
 				player = t;
 			}
 		}
+		
 		return player == null ? null : player.getClan();
 	}
 	

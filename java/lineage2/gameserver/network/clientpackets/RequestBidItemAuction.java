@@ -52,24 +52,31 @@ public final class RequestBidItemAuction extends L2GameClientPacket
 	protected final void runImpl()
 	{
 		final Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		ItemInstance adena = activeChar.getInventory().getItemByItemId(57);
+		
 		if ((_bid < 0) || (_bid > adena.getCount()))
 		{
 			return;
 		}
+		
 		final ItemAuctionInstance instance = ItemAuctionManager.getInstance().getManagerInstance(_instanceId);
 		NpcInstance broker = activeChar.getLastNpc();
+		
 		if ((broker == null) || (broker.getNpcId() != _instanceId) || (activeChar.getDistance(broker.getX(), broker.getY()) > Creature.INTERACTION_DISTANCE))
 		{
 			return;
 		}
+		
 		if (instance != null)
 		{
 			final ItemAuction auction = instance.getCurrentAuction();
+			
 			if (auction != null)
 			{
 				auction.registerBid(activeChar, _bid);

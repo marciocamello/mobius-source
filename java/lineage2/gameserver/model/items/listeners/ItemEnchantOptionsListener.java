@@ -55,30 +55,38 @@ public final class ItemEnchantOptionsListener implements OnEquipListener
 		{
 			return;
 		}
+		
 		Player player = actor.getPlayer();
 		boolean needSendInfo = false;
+		
 		for (int i : item.getEnchantOptions())
 		{
 			OptionDataTemplate template = OptionDataHolder.getInstance().getTemplate(i);
+			
 			if (template == null)
 			{
 				continue;
 			}
+			
 			player.addStatFuncs(template.getStatFuncs(template));
+			
 			for (Skill skill : template.getSkills())
 			{
 				player.addSkill(skill, false);
 				needSendInfo = true;
 			}
+			
 			for (TriggerInfo triggerInfo : template.getTriggerList())
 			{
 				player.addTrigger(triggerInfo);
 			}
 		}
+		
 		if (needSendInfo)
 		{
 			player.sendSkillList();
 		}
+		
 		player.sendChanges();
 	}
 	
@@ -96,30 +104,38 @@ public final class ItemEnchantOptionsListener implements OnEquipListener
 		{
 			return;
 		}
+		
 		Player player = actor.getPlayer();
 		boolean needSendInfo = false;
+		
 		for (int i : item.getEnchantOptions())
 		{
 			OptionDataTemplate template = OptionDataHolder.getInstance().getTemplate(i);
+			
 			if (template == null)
 			{
 				continue;
 			}
+			
 			player.removeStatsOwner(template);
+			
 			for (Skill skill : template.getSkills())
 			{
 				player.removeSkill(skill, false);
 				needSendInfo = true;
 			}
+			
 			for (TriggerInfo triggerInfo : template.getTriggerList())
 			{
 				player.removeTrigger(triggerInfo);
 			}
 		}
+		
 		if (needSendInfo)
 		{
 			player.sendSkillList();
 		}
+		
 		player.sendChanges();
 	}
 }

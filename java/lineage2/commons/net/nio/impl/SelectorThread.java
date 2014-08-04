@@ -182,6 +182,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 		{
 			return ByteBuffer.wrap(new byte[HELPER_BUFFER_SIZE]).order(_sc.BYTE_ORDER);
 		}
+		
 		return _bufferPool.poll();
 	}
 	
@@ -236,7 +237,6 @@ public class SelectorThread<T extends MMOClient> extends Thread
 		{
 			try
 			{
-				
 				if (isShuttingDown())
 				{
 					closeSelectorThread();
@@ -244,11 +244,12 @@ public class SelectorThread<T extends MMOClient> extends Thread
 				}
 				
 				currentMillis = System.currentTimeMillis();
-				
 				conItr = _connections.iterator();
+				
 				while (conItr.hasNext())
 				{
 					con = conItr.next();
+					
 					if (con.isPengingClose())
 					{
 						if (!con.isPendingWrite() || ((currentMillis - con.getPendingCloseTime()) >= 10000L))
@@ -257,6 +258,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 							continue;
 						}
 					}
+					
 					if (con.isPendingWrite())
 					{
 						if ((currentMillis - con.getPendingWriteTime()) >= _sc.INTEREST_DELAY)
@@ -297,6 +299,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 								{
 									readPacket(key);
 								}
+								
 								if (key.isValid())
 								{
 									if (key.isWritable())
@@ -307,7 +310,6 @@ public class SelectorThread<T extends MMOClient> extends Thread
 							}
 							catch (CancelledKeyException cke)
 							{
-								
 							}
 						}
 					}
@@ -319,7 +321,6 @@ public class SelectorThread<T extends MMOClient> extends Thread
 				}
 				catch (InterruptedException ie)
 				{
-					
 				}
 			}
 			catch (IOException e)
@@ -332,7 +333,6 @@ public class SelectorThread<T extends MMOClient> extends Thread
 				}
 				catch (InterruptedException ie)
 				{
-					
 				}
 			}
 		}
@@ -366,6 +366,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 		ServerSocketChannel ssc = (ServerSocketChannel) key.channel();
 		SocketChannel sc;
 		SelectionKey clientKey;
+		
 		try
 		{
 			while ((sc = ssc.accept()) != null)
@@ -374,13 +375,11 @@ public class SelectorThread<T extends MMOClient> extends Thread
 				{
 					sc.configureBlocking(false);
 					clientKey = sc.register(getSelector(), SelectionKey.OP_READ);
-					
 					MMOConnection<T> con = new MMOConnection<>(this, sc.socket(), clientKey);
 					T client = getClientFactory().create(con);
 					client.setConnection(con);
 					con.setClient(client);
 					clientKey.attach(con);
-					
 					_connections.add(con);
 					stats.increaseOpenedConnections();
 				}
@@ -426,7 +425,6 @@ public class SelectorThread<T extends MMOClient> extends Thread
 		}
 		else
 		{
-			
 			try
 			{
 				result = con.getReadableByteChannel().read(buf);
@@ -439,7 +437,6 @@ public class SelectorThread<T extends MMOClient> extends Thread
 			if (result > 0)
 			{
 				buf.flip();
-				
 				stats.increaseIncomingBytes(result);
 				
 				@SuppressWarnings("unused")
@@ -484,6 +481,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 		}
 		
 		int pos = buf.position();
+		
 		if (buf.remaining() > _sc.HEADER_SIZE)
 		{
 			int size = buf.getShort() & 0xffff;
@@ -553,9 +551,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	protected boolean parseClientPacket(IPacketHandler<T> handler, ByteBuffer buf, int dataSize, MMOConnection<T> con)
 	{
 		T client = con.getClient();
-		
 		int pos = buf.position();
-		
 		client.decrypt(buf, dataSize);
 		buf.position(pos);
 		
@@ -578,8 +574,10 @@ public class SelectorThread<T extends MMOClient> extends Thread
 				
 				rp.setByteBuffer(null);
 			}
+			
 			buf.limit(limit);
 		}
+		
 		return true;
 	}
 	
@@ -590,12 +588,9 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	protected void writePacket(SelectionKey key)
 	{
 		MMOConnection<T> con = (MMOConnection<T>) key.attachment();
-		
 		prepareWriteBuffer(con);
-		
 		DIRECT_WRITE_BUFFER.flip();
 		int size = DIRECT_WRITE_BUFFER.remaining();
-		
 		int result = -1;
 		
 		try
@@ -683,6 +678,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 					stats.increaseOutgoingPacketsCount();
 					putPacketIntoWriteBuffer(sp, true);
 					WRITE_BUFFER.flip();
+					
 					if (DIRECT_WRITE_BUFFER.remaining() >= WRITE_BUFFER.limit())
 					{
 						DIRECT_WRITE_BUFFER.put(WRITE_BUFFER);
@@ -713,22 +709,22 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	protected final void putPacketIntoWriteBuffer(SendablePacket<T> sp, boolean encrypt)
 	{
 		WRITE_BUFFER.clear();
-		
 		// reserve space for the size
 		int headerPos = WRITE_BUFFER.position();
 		WRITE_BUFFER.position(headerPos + _sc.HEADER_SIZE);
-		
 		// write content to buffer
 		sp.write();
-		
 		// size (incl header)
 		int dataSize = WRITE_BUFFER.position() - headerPos - _sc.HEADER_SIZE;
+		
 		if (dataSize == 0)
 		{
 			WRITE_BUFFER.position(headerPos);
 			return;
 		}
+		
 		WRITE_BUFFER.position(headerPos + _sc.HEADER_SIZE);
+		
 		if (encrypt)
 		{
 			WRITE_CLIENT.encrypt(WRITE_BUFFER, dataSize);
@@ -865,6 +861,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	protected void closeAllChannels()
 	{
 		Set<SelectionKey> keys = getSelector().keys();
+		
 		for (SelectionKey key : keys)
 		{
 			try
@@ -902,7 +899,6 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	public static CharSequence getStats()
 	{
 		StringBuilder list = new StringBuilder();
-		
 		list.append("selectorThreadCount: .... ").append(ALL_SELECTORS.size()).append('\n');
 		list.append("=================================================\n");
 		list.append("getTotalConnections: .... ").append(stats.getTotalConnections()).append('\n');
@@ -915,7 +911,6 @@ public class SelectorThread<T extends MMOClient> extends Thread
 		list.append("getMaxBytesPerRead: ..... ").append(stats.getMaxBytesPerRead()).append('\n');
 		list.append("getMaxBytesPerWrite: .... ").append(stats.getMaxBytesPerWrite()).append('\n');
 		list.append("=================================================\n");
-		
 		return list;
 	}
 }

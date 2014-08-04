@@ -51,6 +51,7 @@ public class _019_GoToThePastureland extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("trader_vladimir_q0019_0104.htm"))
 		{
 			st.giveItems(BEAST_MEAT, 1);
@@ -58,6 +59,7 @@ public class _019_GoToThePastureland extends Quest implements ScriptFile
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		if (event.equals("beast_herder_tunatun_q0019_0201.htm"))
 		{
 			st.takeItems(BEAST_MEAT, -1);
@@ -66,6 +68,7 @@ public class _019_GoToThePastureland extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -75,6 +78,7 @@ public class _019_GoToThePastureland extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == VLADIMIR)
 		{
 			if (cond == 0)
@@ -106,6 +110,7 @@ public class _019_GoToThePastureland extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 			}
 		}
+		
 		return htmltext;
 	}
 }

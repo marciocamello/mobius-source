@@ -44,6 +44,7 @@ public class RequestExTryToPutShapeShiftingTargetItem extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
@@ -59,6 +60,7 @@ public class RequestExTryToPutShapeShiftingTargetItem extends L2GameClientPacket
 		PcInventory inventory = player.getInventory();
 		ItemInstance targetItem = inventory.getItemByObjectId(_targetItemObjId);
 		ItemInstance stone = player.getAppearanceStone();
+		
 		if ((targetItem == null) || (stone == null))
 		{
 			player.sendPacket(ExShapeShiftingResult.FAIL);
@@ -87,6 +89,7 @@ public class RequestExTryToPutShapeShiftingTargetItem extends L2GameClientPacket
 		}
 		
 		AppearanceStone appearanceStone = EnchantItemHolder.getInstance().getAppearanceStone(stone.getItemId());
+		
 		if (appearanceStone == null)
 		{
 			player.sendPacket(ExShapeShiftingResult.FAIL);
@@ -107,6 +110,7 @@ public class RequestExTryToPutShapeShiftingTargetItem extends L2GameClientPacket
 		}
 		
 		Grade[] stoneGrades = appearanceStone.getGrades();
+		
 		if ((stoneGrades != null) && (stoneGrades.length > 0))
 		{
 			if (!ArrayUtils.contains(stoneGrades, targetItem.getTemplate().getItemGrade()))
@@ -117,6 +121,7 @@ public class RequestExTryToPutShapeShiftingTargetItem extends L2GameClientPacket
 		}
 		
 		ShapeTargetType[] targetTypes = appearanceStone.getTargetTypes();
+		
 		if ((targetTypes == null) || (targetTypes.length == 0))
 		{
 			player.sendPacket(ExShapeShiftingResult.FAIL);
@@ -153,6 +158,7 @@ public class RequestExTryToPutShapeShiftingTargetItem extends L2GameClientPacket
 		}
 		
 		ExItemType[] itemTypes = appearanceStone.getItemTypes();
+		
 		if ((itemTypes != null) && (itemTypes.length > 0))
 		{
 			if (!ArrayUtils.contains(itemTypes, targetItem.getExItemType()))

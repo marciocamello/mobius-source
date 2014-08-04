@@ -37,7 +37,6 @@ public class RequestFriendDetailInfo extends L2GameClientPacket
 		Player player = getClient().getActiveChar();
 		int objId = CharacterDAO.getInstance().getObjectIdByName(_name);
 		player.sendPacket(new ExFriendDetailInfo(player, objId));
-		
 	}
 	
 	@Override

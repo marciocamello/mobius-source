@@ -55,12 +55,15 @@ public class ConditionPlayerResidence extends Condition
 		{
 			return false;
 		}
+		
 		Player player = (Player) env.character;
 		Clan clan = player.getClan();
+		
 		if (clan == null)
 		{
 			return false;
 		}
+		
 		int residenceId = clan.getResidenceId(_type);
 		return _id > 0 ? residenceId == _id : residenceId > 0;
 	}

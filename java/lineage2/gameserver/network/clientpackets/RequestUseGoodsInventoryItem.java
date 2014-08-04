@@ -32,6 +32,7 @@ public class RequestUseGoodsInventoryItem extends L2GameClientPacket
 	{
 		_unk1 = readC();
 		_itemNum = readQ();
+		
 		if (_unk1 != 1)
 		{
 			_itemcount = readQ();
@@ -42,10 +43,12 @@ public class RequestUseGoodsInventoryItem extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (activeChar.getPrivateStoreType() != 0)
 		{
 			activeChar.sendPacket(new ExGoodsInventoryResult(-5));
@@ -70,13 +73,13 @@ public class RequestUseGoodsInventoryItem extends L2GameClientPacket
 		{
 			return;
 		}
+		
 		if ((_itemcount != 0L) && (_item.getCount() < _itemcount))
 		{
 			return;
 		}
 		
 		ItemFunctions.addItem(activeChar, _item.getItemId(), _itemcount, true);
-		
 		long itemsLeft = _item.getCount() - _itemcount;
 		
 		if (_itemcount < _item.getCount())

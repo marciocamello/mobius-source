@@ -992,19 +992,24 @@ public class PathfinderEquipment extends SimpleItemHandler
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
 		int itemId = item.getItemId();
+		
 		if (!canBeExtracted(itemId, player))
 		{
 			return false;
 		}
+		
 		int[][] _rewards = rewards.get(itemId);
+		
 		if ((_rewards == null) || (_rewards.length <= 0))
 		{
 			return false;
 		}
+		
 		if (Functions.removeItem(player, itemId, 1) != 1)
 		{
 			return false;
 		}
+		
 		for (int[] reward : _rewards)
 		{
 			if (reward.length == 2)
@@ -1015,6 +1020,7 @@ public class PathfinderEquipment extends SimpleItemHandler
 				}
 			}
 		}
+		
 		return true;
 	}
 	
@@ -1030,11 +1036,13 @@ public class PathfinderEquipment extends SimpleItemHandler
 		{
 			return false;
 		}
+		
 		if ((player.getWeightPenalty() >= 3) || (player.getInventory().getSize() > (player.getInventoryLimit() - 10)))
 		{
 			player.sendPacket(Msg.YOUR_INVENTORY_IS_FULL, new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(itemId));
 			return false;
 		}
+		
 		return true;
 	}
 	

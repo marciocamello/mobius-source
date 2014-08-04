@@ -75,6 +75,7 @@ public class _114_ResurrectionOfAnOldManager extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		int choice;
+		
 		if (event.equalsIgnoreCase("head_blacksmith_newyear_q0114_02.htm"))
 		{
 			st.setCond(22);
@@ -82,6 +83,7 @@ public class _114_ResurrectionOfAnOldManager extends Quest implements ScriptFile
 			st.giveItems(STARSTONE2, 1);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		if (event.equalsIgnoreCase("collecter_yumi_q0114_04.htm"))
 		{
 			st.setState(STARTED);
@@ -102,6 +104,7 @@ public class _114_ResurrectionOfAnOldManager extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("collecter_yumi_q0114_12.htm"))
 		{
 			choice = st.getInt("choice");
+			
 			if (choice == 1)
 			{
 				htmltext = "collecter_yumi_q0114_12.htm";
@@ -143,6 +146,7 @@ public class _114_ResurrectionOfAnOldManager extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("collecter_yumi_q0114_38.htm"))
 		{
 			choice = st.getInt("choice");
+			
 			if (choice > 1)
 			{
 				htmltext = "collecter_yumi_q0114_37.htm";
@@ -313,6 +317,7 @@ public class _114_ResurrectionOfAnOldManager extends Quest implements ScriptFile
 			st.playSound(SOUND_MIDDLE);
 			st.set("talk", "0");
 		}
+		
 		return htmltext;
 	}
 	
@@ -320,12 +325,15 @@ public class _114_ResurrectionOfAnOldManager extends Quest implements ScriptFile
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
 		QuestState st = player.getQuestState(getName());
+		
 		if ((st == null) || st.isCompleted())
 		{
 			return "";
 		}
+		
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if ((npcId == STONES) && (cond == 17))
 		{
 			st.playSound(SOUND_MIDDLE);
@@ -334,6 +342,7 @@ public class _114_ResurrectionOfAnOldManager extends Quest implements ScriptFile
 			st.setCond(18);
 			player.sendPacket(new ExShowScreenMessage(NpcString.THE_RADIO_SIGNAL_DETECTOR_IS_RESPONDING_A_SUSPICIOUS_PILE_OF_STONES_CATCHES_YOUR_EYE, 4500, ScreenMessageAlign.TOP_CENTER));
 		}
+		
 		return "";
 	}
 	
@@ -346,15 +355,18 @@ public class _114_ResurrectionOfAnOldManager extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int talk = st.getInt("talk");
 		int talk1 = st.getInt("talk1");
+		
 		if (npcId == YUMI)
 		{
 			if (id == CREATED)
 			{
 				QuestState Pavel = st.getPlayer().getQuestState(_121_PavelTheGiants.class);
+				
 				if (Pavel == null)
 				{
 					return "collecter_yumi_q0114_01.htm";
 				}
+				
 				if ((st.getPlayer().getLevel() >= 70) && (Pavel.getState() == COMPLETED))
 				{
 					htmltext = "collecter_yumi_q0114_02.htm";
@@ -461,6 +473,7 @@ public class _114_ResurrectionOfAnOldManager extends Quest implements ScriptFile
 			else if (cond == 6)
 			{
 				int choice = st.getInt("choice");
+				
 				if (choice == 1)
 				{
 					if (talk == 0)
@@ -602,6 +615,7 @@ public class _114_ResurrectionOfAnOldManager extends Quest implements ScriptFile
 				htmltext = "head_blacksmith_newyear_q0114_03.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -612,7 +626,9 @@ public class _114_ResurrectionOfAnOldManager extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		int npcId = npc.getNpcId();
+		
 		if (st.getCond() == 10)
 		{
 			if (npcId == GUARDIAN)
@@ -622,6 +638,7 @@ public class _114_ResurrectionOfAnOldManager extends Quest implements ScriptFile
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		return null;
 	}
 }

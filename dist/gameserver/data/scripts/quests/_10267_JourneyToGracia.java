@@ -72,6 +72,7 @@ public class _10267_JourneyToGracia extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return event;
 	}
 	
@@ -82,6 +83,7 @@ public class _10267_JourneyToGracia extends Quest implements ScriptFile
 		int id = st.getState();
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (id == COMPLETED)
 		{
 			if (npcId == Keucereus)
@@ -129,6 +131,7 @@ public class _10267_JourneyToGracia extends Quest implements ScriptFile
 				htmltext = "32548-01.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

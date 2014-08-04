@@ -24,6 +24,7 @@ public class HennaInfo extends L2GameServerPacket
 	{
 		_count = 0;
 		lineage2.gameserver.templates.Henna h;
+		
 		for (int i = 0; i < 3; i++)
 		{
 			if ((h = player.getHenna(i + 1)) != null)
@@ -52,6 +53,7 @@ public class HennaInfo extends L2GameServerPacket
 		writeC(_wit); // equip WIT
 		writeD(3); // interlude, slots?
 		writeD(_count);
+		
 		for (int i = 0; i < _count; i++)
 		{
 			writeD(_hennas[i]._symbolId);

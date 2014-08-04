@@ -50,16 +50,11 @@ public class _10384_AnAudienceWithTauti extends Quest implements ScriptFile
 	public _10384_AnAudienceWithTauti()
 	{
 		super(2);
-		
 		addStartNpc(FERGASON);
-		
 		addTalkId(AKU);
 		addTalkId(FERGASON);
-		
 		addKillId(TAUTI_EXTREME);
-		
 		addQuestItem(TAUTI_FRAGMENT);
-		
 		addLevelCheck(97, 99);
 		addQuestCompletedCheck(_10383_FergasonsOffer.class);
 	}
@@ -76,12 +71,14 @@ public class _10384_AnAudienceWithTauti extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "maestro_ferguson_q10384_04.htm";
 		}
+		
 		if (event.equalsIgnoreCase("sofa_aku_q10384_02.htm"))
 		{
 			st.setCond(2);
 			st.playSound(SOUND_MIDDLE);
 			htmltext = "sofa_aku_q10384_02.htm";
 		}
+		
 		if (event.equalsIgnoreCase("quest_done"))
 		{
 			st.giveItems(ADENA_ID, 3256740);
@@ -91,6 +88,7 @@ public class _10384_AnAudienceWithTauti extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			htmltext = "maestro_ferguson_q10384_11.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -128,6 +126,7 @@ public class _10384_AnAudienceWithTauti extends Quest implements ScriptFile
 				htmltext = "maestro_ferguson_q10384_05.htm";
 			}
 		}
+		
 		if (npcId == AKU)
 		{
 			if (cond == 1)
@@ -139,6 +138,7 @@ public class _10384_AnAudienceWithTauti extends Quest implements ScriptFile
 				htmltext = "sofa_aku_q10383_02.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -147,12 +147,14 @@ public class _10384_AnAudienceWithTauti extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if ((cond == 2) && (npcId == TAUTI_EXTREME))
 		{
 			st.giveItems(TAUTI_FRAGMENT, 1);
 			st.setCond(3);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return null;
 	}
 }

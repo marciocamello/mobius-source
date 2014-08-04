@@ -34,7 +34,7 @@ import lineage2.gameserver.utils.Location;
 public class QueenAntInstance extends BossInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -70,6 +70,7 @@ public class QueenAntInstance extends BossInstance
 		{
 			Larva = SpawnNPC(Queen_Ant_Larva, new Location(-21600, 179482, -5846, Rnd.get(0, 0xFFFF)));
 		}
+		
 		return Larva;
 	}
 	
@@ -117,12 +118,14 @@ public class QueenAntInstance extends BossInstance
 	private NpcInstance SpawnNPC(int npcId, Location loc)
 	{
 		NpcTemplate template = NpcHolder.getInstance().getTemplate(npcId);
+		
 		if (template == null)
 		{
 			System.out.println("WARNING! template is null for npc: " + npcId);
 			Thread.dumpStack();
 			return null;
 		}
+		
 		try
 		{
 			SimpleSpawner sp = new SimpleSpawner(template);

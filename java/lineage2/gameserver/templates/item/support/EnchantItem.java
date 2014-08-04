@@ -71,6 +71,7 @@ public class EnchantItem
 		{
 			_items = new HashIntSet();
 		}
+		
 		_items.add(id);
 	}
 	

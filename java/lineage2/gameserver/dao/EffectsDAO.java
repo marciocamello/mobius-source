@@ -71,6 +71,7 @@ public class EffectsDAO
 	public void restoreEffects(Playable playable)
 	{
 		int objectId, id;
+		
 		if (playable.isPlayer())
 		{
 			objectId = playable.getObjectId();
@@ -85,9 +86,11 @@ public class EffectsDAO
 		{
 			return;
 		}
+		
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -95,6 +98,7 @@ public class EffectsDAO
 			statement.setInt(1, objectId);
 			statement.setInt(2, id);
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				int skillId = rset.getInt("skill_id");
@@ -103,32 +107,40 @@ public class EffectsDAO
 				long effectCurTime = rset.getLong("effect_cur_time");
 				long duration = rset.getLong("duration");
 				Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
+				
 				if (skill == null)
 				{
 					continue;
 				}
+				
 				for (EffectTemplate et : skill.getEffectTemplates())
 				{
 					if (et == null)
 					{
 						continue;
 					}
+					
 					Env env = new Env(playable, playable, skill);
 					Effect effect = et.getEffect(env);
+					
 					if ((effect == null) || effect.isOneTime())
 					{
 						continue;
 					}
+					
 					effect.setCount(effectCount);
 					effect.setPeriod(effectCount == 1 ? duration - effectCurTime : duration);
+					
 					if ((et.getEffectType() == EffectType.ServitorShare) && playable.isPlayer())
 					{
 						playable.getPlayer().setServitorShareRestore(true, effect);
 						continue;
 					}
+					
 					playable.getEffectList().addEffect(effect);
 				}
 			}
+			
 			DbUtils.closeQuietly(statement, rset);
 			statement = con.prepareStatement("DELETE FROM character_effects_save WHERE object_id = ? AND id=?");
 			statement.setInt(1, objectId);
@@ -153,6 +165,7 @@ public class EffectsDAO
 	public void insert(Playable playable)
 	{
 		int objectId, id;
+		
 		if (playable.isPlayer())
 		{
 			objectId = playable.getObjectId();
@@ -167,13 +180,17 @@ public class EffectsDAO
 		{
 			return;
 		}
+		
 		List<Effect> effects = playable.getEffectList().getAllEffects();
+		
 		if (effects.isEmpty())
 		{
 			return;
 		}
+		
 		Connection con = null;
 		Statement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -181,6 +198,7 @@ public class EffectsDAO
 			int order = 0;
 			SqlBatch b = new SqlBatch("INSERT IGNORE INTO `character_effects_save` (`object_id`,`skill_id`,`skill_level`,`effect_count`,`effect_cur_time`,`duration`,`order`,`id`) VALUES");
 			StringBuilder sb;
+			
 			for (Effect effect : effects)
 			{
 				if ((effect != null) && effect.isInUse() && !effect.getSkill().isToggle() && (effect.getEffectType() != EffectType.HealOverTime) && (effect.getEffectType() != EffectType.CombatPointHealOverTime) && (effect.getEffectType() != EffectType.Mentoring))
@@ -198,6 +216,7 @@ public class EffectsDAO
 						sb.append(id).append(')');
 						b.write(sb.toString());
 					}
+					
 					while (((effect = effect.getNext()) != null) && effect.isSaveable())
 					{
 						sb = new StringBuilder("(");
@@ -211,9 +230,11 @@ public class EffectsDAO
 						sb.append(id).append(')');
 						b.write(sb.toString());
 					}
+					
 					order++;
 				}
 			}
+			
 			if (!b.isEmpty())
 			{
 				statement.executeUpdate(b.close());

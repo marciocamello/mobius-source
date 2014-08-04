@@ -115,42 +115,52 @@ public class SiegeGuard extends DefaultAI
 	protected boolean checkAggression(Creature target)
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((getIntention() != CtrlIntention.AI_INTENTION_ACTIVE) || !isGlobalAggro())
 		{
 			return false;
 		}
+		
 		if (target.isAlikeDead() || target.isInvul())
 		{
 			return false;
 		}
+		
 		if (target.isPlayable())
 		{
 			if (!canSeeInSilentMove((Playable) target))
 			{
 				return false;
 			}
+			
 			if (!canSeeInHide((Playable) target))
 			{
 				return false;
 			}
+			
 			if (target.isPlayer() && ((Player) target).isGM() && target.isInvisible())
 			{
 				return false;
 			}
+			
 			if (((Playable) target).getNonAggroTime() > System.currentTimeMillis())
 			{
 				return false;
 			}
+			
 			if (target.isPlayer() && !target.getPlayer().isActive())
 			{
 				return false;
 			}
+			
 			if (actor.isMonster() && target.isInZonePeace())
 			{
 				return false;
 			}
 		}
+		
 		final AggroList.AggroInfo ai = actor.getAggroList().get(target);
+		
 		if ((ai != null) && (ai.hate > 0))
 		{
 			if (!target.isInRangeZ(actor.getSpawnedLoc(), MAX_PURSUE_RANGE))
@@ -162,19 +172,24 @@ public class SiegeGuard extends DefaultAI
 		{
 			return false;
 		}
+		
 		if (!canAttackCharacter(target))
 		{
 			return false;
 		}
+		
 		if (!GeoEngine.canSeeTarget(actor, target, false))
 		{
 			return false;
 		}
+		
 		actor.getAggroList().addDamageHate(target, 0, 2);
+		
 		if ((target.isServitor() || target.isPet()))
 		{
 			actor.getAggroList().addDamageHate(target.getPlayer(), 0, 1);
 		}
+		
 		startRunningTask(AI_TASK_ATTACK_DELAY);
 		setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 		return true;
@@ -199,14 +214,17 @@ public class SiegeGuard extends DefaultAI
 	protected void onEvtAggression(Creature target, int aggro)
 	{
 		final SiegeGuardInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return;
 		}
+		
 		if ((target == null) || !actor.isAutoAttackable(target))
 		{
 			return;
 		}
+		
 		super.onEvtAggression(target, aggro);
 	}
 	
@@ -218,24 +236,30 @@ public class SiegeGuard extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isActionsDisabled())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			if (doTask())
 			{
 				clearTasks();
 			}
+			
 			return true;
 		}
+		
 		final long now = System.currentTimeMillis();
+		
 		if ((now - _checkAggroTimestamp) > Config.AGGRO_CHECK_INTERVAL)
 		{
 			_checkAggroTimestamp = now;
 			final List<Creature> chars = World.getAroundCharacters(actor);
 			CollectionUtils.eqSort(chars, _nearestTargetComparator);
+			
 			for (Creature cha : chars)
 			{
 				if (checkAggression(cha))
@@ -244,12 +268,15 @@ public class SiegeGuard extends DefaultAI
 				}
 			}
 		}
+		
 		final Location sloc = actor.getSpawnedLoc();
+		
 		if (!actor.isInRange(sloc, 250))
 		{
 			teleportHome();
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -261,12 +288,15 @@ public class SiegeGuard extends DefaultAI
 	protected Creature prepareTarget()
 	{
 		final SiegeGuardInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return null;
 		}
+		
 		final List<Creature> hateList = actor.getAggroList().getHateList();
 		Creature hated = null;
+		
 		for (Creature cha : hateList)
 		{
 			if (!checkTarget(cha, MAX_PURSUE_RANGE))
@@ -274,14 +304,17 @@ public class SiegeGuard extends DefaultAI
 				actor.getAggroList().remove(cha, true);
 				continue;
 			}
+			
 			hated = cha;
 			break;
 		}
+		
 		if (hated != null)
 		{
 			setAttackTarget(hated);
 			return hated;
 		}
+		
 		return null;
 	}
 	

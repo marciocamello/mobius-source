@@ -40,6 +40,7 @@ public final class NetList extends ArrayList<Net>
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -51,14 +52,17 @@ public final class NetList extends ArrayList<Net>
 	public String toString()
 	{
 		StringBuilder sb = new StringBuilder();
+		
 		for (Iterator<Net> itr = iterator(); itr.hasNext();)
 		{
 			sb.append(itr.next());
+			
 			if (itr.hasNext())
 			{
 				sb.append(',');
 			}
 		}
+		
 		return sb.toString();
 	}
 }

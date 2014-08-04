@@ -72,6 +72,7 @@ public class _606_WarwithVarkaSilenos extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("quest_accept"))
 		{
 			htmltext = "elder_kadun_zu_ketra_q0606_0104.htm";
@@ -82,6 +83,7 @@ public class _606_WarwithVarkaSilenos extends Quest implements ScriptFile
 		else if (event.equals("606_3"))
 		{
 			long ec = st.getQuestItemsCount(VARKAS_MANE) / 5;
+			
 			if (ec > 0)
 			{
 				htmltext = "elder_kadun_zu_ketra_q0606_0202.htm";
@@ -100,6 +102,7 @@ public class _606_WarwithVarkaSilenos extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -108,6 +111,7 @@ public class _606_WarwithVarkaSilenos extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (cond == 0)
 		{
 			if (st.getPlayer().getLevel() >= 74)
@@ -128,6 +132,7 @@ public class _606_WarwithVarkaSilenos extends Quest implements ScriptFile
 		{
 			htmltext = "elder_kadun_zu_ketra_q0606_0105.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -140,6 +145,7 @@ public class _606_WarwithVarkaSilenos extends Quest implements ScriptFile
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -150,6 +156,7 @@ public class _606_WarwithVarkaSilenos extends Quest implements ScriptFile
 		{
 			st.rollAndGive(VARKAS_MANE, 1, VARKAS_MANE_DROP_CHANCE);
 		}
+		
 		return null;
 	}
 }

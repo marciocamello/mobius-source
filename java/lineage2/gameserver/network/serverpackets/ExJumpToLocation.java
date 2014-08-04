@@ -31,13 +31,10 @@ public class ExJumpToLocation extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeEx(0x89);
-		
 		writeD(_objectId);
-		
 		writeD(_destination.x);
 		writeD(_destination.y);
 		writeD(_destination.z);
-		
 		writeD(_current.x);
 		writeD(_current.y);
 		writeD(_current.z);

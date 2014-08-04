@@ -26,30 +26,35 @@
 	<tstamp>
 		<format property="build.tstamp" pattern="yyyy.MM.dd HH:mm" />
 	</tstamp>
+	
 	<target name="checkRequirements" description="Check Requirements.">
-		<fail message="Ant 1.8.2 is required. But your version is ${ant.version} and if you are using Eclipse probably is outdated.">
+		<fail message="Ant 1.9.1 is required. But your version is ${ant.version} and if you are using Eclipse probably is outdated.">
 			<condition>
 				<not>
-					<antversion atleast="1.8.2" />
+					<antversion atleast="1.9.1" />
 				</not>
 			</condition>
 		</fail>
-		<available classname="java.lang.AutoCloseable" property="JDK7.present" />
-		<fail unless="JDK7.present" message="Java 1.7 is required. But your version is Java ${ant.java.version} and probably JDK is not installed." />
+		<available classname="java.util.stream.Stream" property="JDK8.present" />
+		<fail unless="JDK8.present" message="Java 1.8 is required. But your version is Java ${ant.java.version} and probably JDK is not installed." />
 	</target>
+	
 	<target name="clean" depends="checkRequirements" description="Remove the output directories.">
 		<delete dir="${build}" />
 	</target>
+	
 	<target name="init" depends="clean" description="Create the output directories.">
 		<mkdir dir="${build}" />
 	</target>
+	
 	<target name="compile-commons" depends="init">
 		<delete dir="${build.classes}" />
 		<mkdir dir="${build.classes}" />
-		<javac srcdir="${src.commons}" destdir="${build.classes}" optimize="on" debug="${debug}" source="1.7" target="1.7" includeantruntime="false" encoding="UTF-8" nowarn="off" classpath="${build.classpath}">
+		<javac srcdir="${src.commons}" destdir="${build.classes}" optimize="on" debug="${debug}" source="1.8" target="1.8" includeantruntime="false" encoding="UTF-8" nowarn="off" classpath="${build.classpath}">
 			<compilerarg value="-Xlint:unchecked,-serial" />
 		</javac>
 	</target>
+	
 	<target name="commons-jar" depends="compile-commons">
 		<jar destfile="${build}/lineage2-commons.jar">
 			<fileset dir="${build.classes}" />
@@ -61,13 +66,15 @@
 			</manifest>
 		</jar>
 	</target>
+	
 	<target name="compile-gameserver" depends="commons-jar">
 		<delete dir="${build.classes}" />
 		<mkdir dir="${build.classes}" />
-		<javac srcdir="${src.gameserver}" destdir="${build.classes}" optimize="on" debug="${debug}" source="1.7" target="1.7" includeantruntime="false" encoding="UTF-8" nowarn="off" classpath="${build.classpath}:${build}/lineage2-commons.jar">
+		<javac srcdir="${src.gameserver}" destdir="${build.classes}" optimize="on" debug="${debug}" source="1.8" target="1.8" includeantruntime="false" encoding="UTF-8" nowarn="off" classpath="${build.classpath}:${build}/lineage2-commons.jar">
 			<compilerarg value="-Xlint:unchecked,-serial" />
 		</javac>
 	</target>
+	
 	<target name="gameserver-jar" depends="compile-gameserver">
 		<jar destfile="${build}/lineage2-gameserver.jar">
 			<fileset dir="${build.classes}" />
@@ -81,6 +88,7 @@
 			</manifest>
 		</jar>
 	</target>
+	
 	<target name="gameserver" depends="gameserver-jar">
 		<mkdir dir="${build.dist}" />
 		<mkdir dir="${build.dist.tools}" />
@@ -106,13 +114,15 @@
 			</fileset>
 		</copy>
 	</target>
+	
 	<target name="compile-authserver" depends="commons-jar">
 		<delete dir="${build.classes}" />
 		<mkdir dir="${build.classes}" />
-		<javac srcdir="${src.authserver}" optimize="on" destdir="${build.classes}" debug="${debug}" source="1.7" target="1.7" includeantruntime="false" encoding="UTF-8" nowarn="off" classpath="${build.classpath}:${build}/lineage2-commons.jar">
+		<javac srcdir="${src.authserver}" optimize="on" destdir="${build.classes}" debug="${debug}" source="1.8" target="1.8" includeantruntime="false" encoding="UTF-8" nowarn="off" classpath="${build.classpath}:${build}/lineage2-commons.jar">
 			<compilerarg value="-Xlint:unchecked,-serial" />
 		</javac>
 	</target>
+	
 	<target name="authserver-jar" depends="compile-authserver">
 		<jar destfile="${build}/lineage2-loginserver.jar">
 			<fileset dir="${build.classes}" />
@@ -126,6 +136,7 @@
 			</manifest>
 		</jar>
 	</target>
+	
 	<target name="authserver" depends="authserver-jar">
 		<mkdir dir="${build.dist}" />
 		<mkdir dir="${build.dist.authserver}" />
@@ -149,6 +160,7 @@
 		<fixcrlf srcdir="${build.dist.authserver}" eol="lf" eof="remove" includes="**/*.sh"/>
 		<fixcrlf srcdir="${build.dist.authserver}" eol="crlf" eof="remove" includes="**/*.bat"/>
 	</target>
+	
 	<target name="dist" depends="authserver, gameserver" description="Create the Zip file.">
 		<!-- cleanup -->
 		<delete file="${build}/lineage2-gameserver.jar" />

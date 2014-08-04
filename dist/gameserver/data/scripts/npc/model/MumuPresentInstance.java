@@ -24,7 +24,7 @@ public final class MumuPresentInstance extends NpcInstance
 {
 	
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	

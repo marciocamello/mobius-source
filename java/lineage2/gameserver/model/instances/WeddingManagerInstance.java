@@ -33,7 +33,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class WeddingManagerInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -77,15 +77,19 @@ public class WeddingManagerInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		String filename = "wedding/start.htm";
 		String replace = "";
+		
 		if (player.getPartnerId() == 0)
 		{
 			filename = "wedding/nopartner.htm";
 			sendHtmlMessage(player, filename, replace);
 			return;
 		}
+		
 		Player ptarget = GameObjectsStorage.getPlayer(player.getPartnerId());
+		
 		if ((ptarget == null) || !ptarget.isOnline())
 		{
 			filename = "wedding/notfound.htm";
@@ -131,6 +135,7 @@ public class WeddingManagerInstance extends NpcInstance
 				sendHtmlMessage(player, filename, replace);
 				return;
 			}
+			
 			filename = "wedding/ask.htm";
 			player.setMaryRequest(false);
 			ptarget.setMaryRequest(false);
@@ -181,6 +186,7 @@ public class WeddingManagerInstance extends NpcInstance
 			sendHtmlMessage(player, filename, replace);
 			return;
 		}
+		
 		sendHtmlMessage(player, filename, replace);
 	}
 	
@@ -195,6 +201,7 @@ public class WeddingManagerInstance extends NpcInstance
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	

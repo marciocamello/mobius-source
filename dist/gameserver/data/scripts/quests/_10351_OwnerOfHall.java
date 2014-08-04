@@ -44,9 +44,7 @@ public class _10351_OwnerOfHall extends Quest implements ScriptFile
 		addStartNpc(TIPIA_NORMAL);
 		addTalkId(TIPIA_NORMAL);
 		addKillId(29212); // octavius
-		
 		addQuestCompletedCheck(_10318_DecayingDarkness.class);
-		
 		addLevelCheck(95, 100);
 	}
 	
@@ -59,6 +57,7 @@ public class _10351_OwnerOfHall extends Quest implements ScriptFile
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		if (event.equalsIgnoreCase("32892-10.htm"))
 		{
 			st.giveItems(57, 23655000);
@@ -67,6 +66,7 @@ public class _10351_OwnerOfHall extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return event;
 	}
 	
@@ -76,30 +76,37 @@ public class _10351_OwnerOfHall extends Quest implements ScriptFile
 		Player player = st.getPlayer();
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (player.getLevel() < 95)
 		{
 			return "32892-lvl.htm";
 		}
+		
 		QuestState qs = st.getPlayer().getQuestState(_10318_DecayingDarkness.class);
+		
 		if ((qs == null) || !qs.isCompleted())
 		{
 			return "32892-lvl.htm";
 		}
+		
 		if (npcId == TIPIA_NORMAL)
 		{
 			if (cond == 0)
 			{
 				return "32892.htm";
 			}
+			
 			if (cond == 1)
 			{
 				return "32892-8.htm";
 			}
+			
 			if (cond == 2)
 			{
 				return "32892-9.htm";
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -110,6 +117,7 @@ public class _10351_OwnerOfHall extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		st.setCond(2);
 		return null;
 	}

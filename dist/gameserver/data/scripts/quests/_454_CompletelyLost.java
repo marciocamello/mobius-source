@@ -263,6 +263,7 @@ public class _454_CompletelyLost extends Quest implements ScriptFile
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, st.getPlayer(), Config.FOLLOW_RANGE);
 			}
 		}
+		
 		return event;
 	}
 	
@@ -270,6 +271,7 @@ public class _454_CompletelyLost extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
+		
 		if (npc.getNpcId() == WoundedSoldier)
 		{
 			switch (st.getState())
@@ -291,17 +293,21 @@ public class _454_CompletelyLost extends Quest implements ScriptFile
 					{
 						htmltext = "wounded_soldier_q454_00a.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					if (st.getCond() == 1)
 					{
 						htmltext = "wounded_soldier_q454_04.htm";
+						
 						if (seeSoldier(npc, st.getPlayer()) == null)
 						{
 							npc.setFollowTarget(st.getPlayer());
 							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, st.getPlayer(), Config.FOLLOW_RANGE);
 						}
 					}
+					
 					break;
 			}
 		}
@@ -326,12 +332,14 @@ public class _454_CompletelyLost extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
 	private NpcInstance seeSoldier(NpcInstance npc, Player player)
 	{
 		List<NpcInstance> around = npc.getAroundNpc(Config.FOLLOW_RANGE * 2, 300);
+		
 		if ((around != null) && !around.isEmpty())
 		{
 			for (NpcInstance n : around)
@@ -345,6 +353,7 @@ public class _454_CompletelyLost extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 	

@@ -81,6 +81,7 @@ public abstract class ItemContainer
 	public ItemInstance[] getItems()
 	{
 		readLock();
+		
 		try
 		{
 			return _items.toArray(new ItemInstance[_items.size()]);
@@ -97,6 +98,7 @@ public abstract class ItemContainer
 	public void clear()
 	{
 		writeLock();
+		
 		try
 		{
 			_items.clear();
@@ -147,12 +149,15 @@ public abstract class ItemContainer
 	public ItemInstance getItemByObjectId(int objectId)
 	{
 		readLock();
+		
 		try
 		{
 			ItemInstance item;
+			
 			for (int i = 0; i < _items.size(); i++)
 			{
 				item = _items.get(i);
+				
 				if (item.getObjectId() == objectId)
 				{
 					return item;
@@ -174,12 +179,15 @@ public abstract class ItemContainer
 	public ItemInstance getItemByItemId(int itemId)
 	{
 		readLock();
+		
 		try
 		{
 			ItemInstance item;
+			
 			for (int i = 0; i < _items.size(); i++)
 			{
 				item = _items.get(i);
+				
 				if (item.getItemId() == itemId)
 				{
 					return item;
@@ -202,12 +210,15 @@ public abstract class ItemContainer
 	{
 		List<ItemInstance> result = new ArrayList<>();
 		readLock();
+		
 		try
 		{
 			ItemInstance item;
+			
 			for (int i = 0; i < _items.size(); i++)
 			{
 				item = _items.get(i);
+				
 				if (item.getItemId() == itemId)
 				{
 					result.add(item);
@@ -230,12 +241,15 @@ public abstract class ItemContainer
 	{
 		long count = 0L;
 		readLock();
+		
 		try
 		{
 			ItemInstance item;
+			
 			for (int i = 0; i < _items.size(); i++)
 			{
 				item = _items.get(i);
+				
 				if (item.getItemId() == itemId)
 				{
 					count = SafeMath.addAndLimit(count, item.getCount());
@@ -261,11 +275,14 @@ public abstract class ItemContainer
 		{
 			return null;
 		}
+		
 		ItemInstance item;
 		writeLock();
+		
 		try
 		{
 			item = getItemByItemId(itemId);
+			
 			if ((item != null) && item.isStackable())
 			{
 				synchronized (item)
@@ -300,22 +317,27 @@ public abstract class ItemContainer
 		{
 			return null;
 		}
+		
 		if (item.getCount() < 1)
 		{
 			return null;
 		}
+		
 		ItemInstance result = null;
 		writeLock();
+		
 		try
 		{
 			if (getItemByObjectId(item.getObjectId()) != null)
 			{
 				return null;
 			}
+			
 			if (item.isStackable())
 			{
 				int itemId = item.getItemId();
 				result = getItemByItemId(itemId);
+				
 				if (result != null)
 				{
 					synchronized (result)
@@ -326,6 +348,7 @@ public abstract class ItemContainer
 					}
 				}
 			}
+			
 			if (result == null)
 			{
 				_items.add(item);
@@ -352,15 +375,19 @@ public abstract class ItemContainer
 		{
 			return null;
 		}
+		
 		ItemInstance result;
 		writeLock();
+		
 		try
 		{
 			ItemInstance item;
+			
 			if ((item = getItemByObjectId(objectId)) == null)
 			{
 				return null;
 			}
+			
 			synchronized (item)
 			{
 				result = removeItem(item, count);
@@ -385,15 +412,19 @@ public abstract class ItemContainer
 		{
 			return null;
 		}
+		
 		ItemInstance result;
 		writeLock();
+		
 		try
 		{
 			ItemInstance item;
+			
 			if ((item = getItemByItemId(itemId)) == null)
 			{
 				return null;
 			}
+			
 			synchronized (item)
 			{
 				result = removeItem(item, count);
@@ -418,21 +449,26 @@ public abstract class ItemContainer
 		{
 			return null;
 		}
+		
 		if (count < 1)
 		{
 			return null;
 		}
+		
 		if (item.getCount() < count)
 		{
 			return null;
 		}
+		
 		writeLock();
+		
 		try
 		{
 			if (!_items.contains(item))
 			{
 				return null;
 			}
+			
 			if (item.getCount() > count)
 			{
 				item.setCount(item.getCount() - count);
@@ -441,6 +477,7 @@ public abstract class ItemContainer
 				newItem.setCount(count);
 				return newItem;
 			}
+			
 			return removeItem(item);
 		}
 		finally
@@ -460,13 +497,16 @@ public abstract class ItemContainer
 		{
 			return null;
 		}
+		
 		writeLock();
+		
 		try
 		{
 			if (!_items.remove(item))
 			{
 				return null;
 			}
+			
 			onRemoveItem(item);
 			return item;
 		}
@@ -485,13 +525,16 @@ public abstract class ItemContainer
 	public boolean destroyItemByObjectId(int objectId, long count)
 	{
 		writeLock();
+		
 		try
 		{
 			ItemInstance item;
+			
 			if ((item = getItemByObjectId(objectId)) == null)
 			{
 				return false;
 			}
+			
 			synchronized (item)
 			{
 				return destroyItem(item, count);
@@ -512,13 +555,16 @@ public abstract class ItemContainer
 	public boolean destroyItemByItemId(int itemId, long count)
 	{
 		writeLock();
+		
 		try
 		{
 			ItemInstance item;
+			
 			if ((item = getItemByItemId(itemId)) == null)
 			{
 				return false;
 			}
+			
 			synchronized (item)
 			{
 				return destroyItem(item, count);
@@ -542,27 +588,33 @@ public abstract class ItemContainer
 		{
 			return false;
 		}
+		
 		if (count < 1)
 		{
 			return false;
 		}
+		
 		if (item.getCount() < count)
 		{
 			return false;
 		}
+		
 		writeLock();
+		
 		try
 		{
 			if (!_items.contains(item))
 			{
 				return false;
 			}
+			
 			if (item.getCount() > count)
 			{
 				item.setCount(item.getCount() - count);
 				onModifyItem(item);
 				return true;
 			}
+			
 			return destroyItem(item);
 		}
 		finally
@@ -582,13 +634,16 @@ public abstract class ItemContainer
 		{
 			return false;
 		}
+		
 		writeLock();
+		
 		try
 		{
 			if (!_items.remove(item))
 			{
 				return false;
 			}
+			
 			onRemoveItem(item);
 			onDestroyItem(item);
 			return true;

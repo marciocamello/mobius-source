@@ -39,21 +39,26 @@ public class RequestPledgeCrestLarge extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (_crestId == 0)
 		{
 			return;
 		}
+		
 		byte[] data = CrestCache.getInstance().getPledgeCrestLarge(_crestId);
+		
 		if (data != null)
 		{
 			for (int i = 0; i <= 4; i++)
 			{
 				byte[] dest1 = new byte[14336];
 				byte[] dest2 = new byte[8320];
+				
 				if (i < 4)
 				{
 					System.arraycopy(data, (14336 * i), dest1, 0, 14336);

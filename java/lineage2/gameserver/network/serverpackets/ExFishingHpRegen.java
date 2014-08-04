@@ -46,6 +46,5 @@ public class ExFishingHpRegen extends L2GameServerPacket
 		writeC(_Anim); // Anim: 0 = none, 1 = reeling, 2 = pumping
 		writeD(_Penalty); // Penalty
 		writeC(_hpBarColor); // 0 = normal hp bar, 1 = purple hp bar
-		
 	}
 }

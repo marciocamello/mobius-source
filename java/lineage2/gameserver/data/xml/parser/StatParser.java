@@ -73,10 +73,12 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 	protected Condition parseFirstCond(Element sub)
 	{
 		List<Element> e = sub.elements();
+		
 		if (e.isEmpty())
 		{
 			return null;
 		}
+		
 		Element element = e.get(0);
 		return parseCond(element);
 	}
@@ -89,6 +91,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 	protected Condition parseCond(Element element)
 	{
 		String name = element.getName();
+		
 		if (name.equalsIgnoreCase("and"))
 		{
 			return parseLogicAnd(element);
@@ -117,6 +120,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		{
 			return parseZoneCondition(element);
 		}
+		
 		return null;
 	}
 	
@@ -128,15 +132,18 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 	protected Condition parseLogicAnd(Element n)
 	{
 		ConditionLogicAnd cond = new ConditionLogicAnd();
+		
 		for (Iterator<Element> iterator = n.elementIterator(); iterator.hasNext();)
 		{
 			Element condElement = iterator.next();
 			cond.add(parseCond(condElement));
 		}
+		
 		if ((cond._conditions == null) || (cond._conditions.length == 0))
 		{
 			error("Empty <and> condition in " + getCurrentFileName());
 		}
+		
 		return cond;
 	}
 	
@@ -148,15 +155,18 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 	protected Condition parseLogicOr(Element n)
 	{
 		ConditionLogicOr cond = new ConditionLogicOr();
+		
 		for (Iterator<Element> iterator = n.elementIterator(); iterator.hasNext();)
 		{
 			Element condElement = iterator.next();
 			cond.add(parseCond(condElement));
 		}
+		
 		if ((cond._conditions == null) || (cond._conditions.length == 0))
 		{
 			error("Empty <or> condition in " + getCurrentFileName());
 		}
+		
 		return cond;
 	}
 	
@@ -171,6 +181,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		{
 			return new ConditionLogicNot(parseCond((Element) element));
 		}
+		
 		error("Empty <not> condition in " + getCurrentFileName());
 		return null;
 	}
@@ -183,16 +194,19 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 	protected Condition parseTargetCondition(Element element)
 	{
 		Condition cond = null;
+		
 		for (Iterator<Attribute> iterator = element.attributeIterator(); iterator.hasNext();)
 		{
 			Attribute attribute = iterator.next();
 			String name = attribute.getName();
 			String value = attribute.getValue();
+			
 			if (name.equalsIgnoreCase("pvp"))
 			{
 				cond = joinAnd(cond, new ConditionTargetPlayable(Boolean.valueOf(value)));
 			}
 		}
+		
 		return cond;
 	}
 	
@@ -204,16 +218,19 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 	protected Condition parseZoneCondition(Element element)
 	{
 		Condition cond = null;
+		
 		for (Iterator<Attribute> iterator = element.attributeIterator(); iterator.hasNext();)
 		{
 			Attribute attribute = iterator.next();
 			String name = attribute.getName();
 			String value = attribute.getValue();
+			
 			if (name.equalsIgnoreCase("type"))
 			{
 				cond = joinAnd(cond, new ConditionZoneType(value));
 			}
 		}
+		
 		return cond;
 	}
 	
@@ -225,11 +242,13 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 	protected Condition parsePlayerCondition(Element element)
 	{
 		Condition cond = null;
+		
 		for (Iterator<Attribute> iterator = element.attributeIterator(); iterator.hasNext();)
 		{
 			Attribute attribute = iterator.next();
 			String name = attribute.getName();
 			String value = attribute.getValue();
+			
 			if (name.equalsIgnoreCase("residence"))
 			{
 				String[] st = value.split(";");
@@ -273,6 +292,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 				cond = joinAnd(cond, new ConditionCastleDarkClanLeader());
 			}
 		}
+		
 		return cond;
 	}
 	
@@ -284,21 +304,25 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 	protected Condition parseUsingCondition(Element element)
 	{
 		Condition cond = null;
+		
 		for (Iterator<Attribute> iterator = element.attributeIterator(); iterator.hasNext();)
 		{
 			Attribute attribute = iterator.next();
 			String name = attribute.getName();
 			String value = attribute.getValue();
+			
 			if (name.equalsIgnoreCase("slotitem"))
 			{
 				StringTokenizer st = new StringTokenizer(value, ";");
 				int id = Integer.parseInt(st.nextToken().trim());
 				int slot = Integer.parseInt(st.nextToken().trim());
 				int enchant = 0;
+				
 				if (st.hasMoreTokens())
 				{
 					enchant = Integer.parseInt(st.nextToken().trim());
 				}
+				
 				cond = joinAnd(cond, new ConditionSlotItemId(slot, id, enchant));
 			}
 			else if (name.equalsIgnoreCase("kind") || name.equalsIgnoreCase("weapon"))
@@ -306,9 +330,11 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 				long mask = 0;
 				StringTokenizer st = new StringTokenizer(value, ",");
 				tokens:
+				
 				while (st.hasMoreTokens())
 				{
 					String item = st.nextToken().trim();
+					
 					for (WeaponTemplate.WeaponType wt : WeaponTemplate.WeaponType.VALUES)
 					{
 						if (wt.toString().equalsIgnoreCase(item))
@@ -317,6 +343,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 							continue tokens;
 						}
 					}
+					
 					for (ArmorTemplate.ArmorType at : ArmorTemplate.ArmorType.VALUES)
 					{
 						if (at.toString().equalsIgnoreCase(item))
@@ -325,8 +352,10 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 							continue tokens;
 						}
 					}
+					
 					error("Invalid item kind: \"" + item + "\" in " + getCurrentFileName());
 				}
+				
 				if (mask != 0)
 				{
 					cond = joinAnd(cond, new ConditionUsingItemType(mask));
@@ -337,6 +366,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 				cond = joinAnd(cond, new ConditionUsingSkill(Integer.parseInt(value)));
 			}
 		}
+		
 		return cond;
 	}
 	
@@ -352,11 +382,13 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		{
 			return c;
 		}
+		
 		if (cond instanceof ConditionLogicAnd)
 		{
 			((ConditionLogicAnd) cond).add(c);
 			return cond;
 		}
+		
 		ConditionLogicAnd and = new ConditionLogicAnd();
 		and.add(cond);
 		and.add(c);
@@ -374,6 +406,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		{
 			Element element = iterator.next();
 			final String elementName = element.getName();
+			
 			if (elementName.equalsIgnoreCase("add"))
 			{
 				attachFunc(element, template, "Add");
@@ -417,10 +450,12 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 			double chance = parseNumber(element.attributeValue("chance")).doubleValue();
 			TriggerInfo trigger = new TriggerInfo(id, level, t, chance);
 			triggerable.addTrigger(trigger);
+			
 			for (Iterator<Element> subIterator = element.elementIterator(); subIterator.hasNext();)
 			{
 				Element subElement = subIterator.next();
 				Condition condition = parseFirstCond(subElement);
+				
 				if (condition != null)
 				{
 					trigger.addCondition(condition);
@@ -442,10 +477,12 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		int ord = parseNumber(order).intValue();
 		Condition applyCond = parseFirstCond(n);
 		double val = 0;
+		
 		if (n.attributeValue("value") != null)
 		{
 			val = parseNumber(n.attributeValue("value")).doubleValue();
 		}
+		
 		template.attachFunc(new FuncTemplate(applyCond, name, stat, ord, val));
 	}
 	
@@ -460,18 +497,22 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 		{
 			value = getTableValue(value).toString();
 		}
+		
 		try
 		{
 			if (value.indexOf('.') == -1)
 			{
 				int radix = 10;
+				
 				if ((value.length() > 2) && value.substring(0, 2).equalsIgnoreCase("0x"))
 				{
 					value = value.substring(2);
 					radix = 16;
 				}
+				
 				return Integer.valueOf(value, radix);
 			}
+			
 			return Double.valueOf(value);
 		}
 		catch (NumberFormatException e)

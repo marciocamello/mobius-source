@@ -36,6 +36,7 @@ public class NpcStatsChangeRecorder extends CharStatsChangeRecorder<NpcInstance>
 	protected void onSendChanges()
 	{
 		super.onSendChanges();
+		
 		if ((_changes & BROADCAST_CHAR_INFO) == BROADCAST_CHAR_INFO)
 		{
 			_activeChar.broadcastCharInfo();

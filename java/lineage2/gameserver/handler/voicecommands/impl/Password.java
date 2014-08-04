@@ -46,14 +46,17 @@ public class Password extends Functions implements IVoicedCommandHandler
 	public boolean useVoicedCommand(String command, Player activeChar, String args)
 	{
 		command = command.intern();
+		
 		if (command.equalsIgnoreCase("password"))
 		{
 			return password(command, activeChar, args);
 		}
+		
 		if (command.equalsIgnoreCase("check"))
 		{
 			return check(command, activeChar, args);
 		}
+		
 		return false;
 	}
 	
@@ -72,6 +75,7 @@ public class Password extends Functions implements IVoicedCommandHandler
 			show(dialog, activeChar);
 			return true;
 		}
+		
 		return true;
 	}
 	
@@ -95,26 +99,31 @@ public class Password extends Functions implements IVoicedCommandHandler
 	private boolean check(String command, Player activeChar, String target)
 	{
 		String[] parts = target.split(" ");
+		
 		if (parts.length != 3)
 		{
 			show(new CustomMessage("scripts.commands.user.password.IncorrectValues", activeChar), activeChar);
 			return false;
 		}
+		
 		if (!parts[1].equals(parts[2]))
 		{
 			show(new CustomMessage("scripts.commands.user.password.IncorrectConfirmation", activeChar), activeChar);
 			return false;
 		}
+		
 		if (parts[1].equals(parts[0]))
 		{
 			show(new CustomMessage("scripts.commands.user.password.NewPassIsOldPass", activeChar), activeChar);
 			return false;
 		}
+		
 		if ((parts[1].length() < 5) || (parts[1].length() > 20))
 		{
 			show(new CustomMessage("scripts.commands.user.password.IncorrectSize", activeChar), activeChar);
 			return false;
 		}
+		
 		LoginServerCommunication.getInstance().sendPacket(new ChangePassword(activeChar.getAccountName(), parts[0], parts[1], "null"));
 		show(new CustomMessage("scripts.commands.user.password.ResultTrue", activeChar), activeChar);
 		return true;

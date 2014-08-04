@@ -97,6 +97,7 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 	{
 		Player player = st.getPlayer();
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("elcardia_q10294_4.htm"))
 		{
 			st.setCond(1);
@@ -119,6 +120,7 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 			StringTokenizer tokenizer = new StringTokenizer(event);
 			tokenizer.nextToken();
 			Location loc = null;
+			
 			switch (Integer.parseInt(tokenizer.nextToken()))
 			{
 				case 1: // yellow
@@ -126,34 +128,44 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 					{
 						loc = new Location(82434, -249546, -8320);
 					}
+					
 					break;
+				
 				case 2: // green
 					if (st.getInt("green") == 0)
 					{
 						loc = new Location(88536, -249784, -8320);
 					}
+					
 					break;
+				
 				case 3: // blue
 					if (st.getInt("blue") == 0)
 					{
 						loc = new Location(85672, -246872, -8320);
 					}
+					
 					break;
+				
 				case 4: // red
 					if (st.getInt("red") == 0)
 					{
 						loc = new Location(85896, -252664, -8320);
 					}
+					
 					break;
+				
 				default:
 					break;
 			}
+			
 			if (loc != null)
 			{
 				player.teleToLocation(loc);
 				teleportElcardia(player);
 				return null;
 			}
+			
 			htmltext = "movingdevice_q10294_0.htm";
 		}
 		else if (event.equalsIgnoreCase("teleport_deeper_out"))
@@ -182,10 +194,12 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 				npc.setNpcState(1);
 				st.set("green", 1);
 				st.getPlayer().getReflection().addSpawnWithoutRespawn(JudevanEtinasEvilThoughts, new Location(87704, -249496, -8320, 49152), 0);
+				
 				for (int i = 0; i < 3; i++)
 				{
 					st.getPlayer().getReflection().addSpawnWithoutRespawn(SolinaLayrother, Location.findPointToStay(st.getPlayer(), 300), 0);
 				}
+				
 				proccessComplete(st);
 			}
 			else
@@ -242,7 +256,6 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 				{
 					htmltext = "relicwatcher_q10294_yellowtest.htm";
 				}
-				
 			}
 			else if (npc.getNpcId() == GreenRelicWatcher)
 			{
@@ -250,7 +263,6 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 				{
 					htmltext = "relicwatcher_q10294_greentest.htm";
 				}
-				
 			}
 			else if (npc.getNpcId() == BlueRelicWatcher)
 			{
@@ -258,7 +270,6 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 				{
 					htmltext = "relicwatcher_q10294_bluetest.htm";
 				}
-				
 			}
 			else if (npc.getNpcId() == RedRelicWatcher)
 			{
@@ -266,7 +277,6 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 				{
 					htmltext = "relicwatcher_q10294_redtest.htm";
 				}
-				
 			}
 		}
 		else if (event.equalsIgnoreCase("false_answer"))
@@ -286,6 +296,7 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -296,15 +307,18 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
+		
 		if (!player.isBaseClassActive())
 		{
 			return "no_subclass_allowed.htm";
 		}
+		
 		if (npcId == Elcardia)
 		{
 			if (cond == 0)
 			{
 				QuestState qs = player.getQuestState(_10293_SevenSignsForbiddenBook.class);
+				
 				if ((player.getLevel() >= 81) && (qs != null) && qs.isCompleted())
 				{
 					htmltext = "elcardia_q10294_1.htm";
@@ -423,6 +437,7 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 		{
 			htmltext = "solina_q10294_1.htm";
 		}
+		
 		return htmltext;
 	}
 	

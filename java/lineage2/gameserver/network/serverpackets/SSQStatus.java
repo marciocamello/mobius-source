@@ -37,7 +37,6 @@ public class SSQStatus extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xfb);
-		
 		writeC(_page);
 		writeC(period); // current period?
 	}

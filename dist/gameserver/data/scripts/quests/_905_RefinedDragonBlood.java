@@ -64,6 +64,7 @@ public class _905_RefinedDragonBlood extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("sepsoul_q905_05.htm"))
 		{
 			st.setState(STARTED);
@@ -76,22 +77,27 @@ public class _905_RefinedDragonBlood extends Quest implements ScriptFile
 			st.takeAllItems(AntharasDragonsRed);
 			StringTokenizer tokenizer = new StringTokenizer(event);
 			tokenizer.nextToken();
+			
 			switch (Integer.parseInt(tokenizer.nextToken()))
 			{
 				case 1:
 					st.giveItems(21903, 1);
 					break;
+				
 				case 2:
 					st.giveItems(21904, 1);
 					break;
+				
 				default:
 					break;
 			}
+			
 			htmltext = "sepsoul_q905_08.htm";
 			st.setState(COMPLETED);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(this);
 		}
+		
 		return htmltext;
 	}
 	
@@ -100,6 +106,7 @@ public class _905_RefinedDragonBlood extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (ArrayUtils.contains(SeparatedSoul, npc.getNpcId()))
 		{
 			switch (st.getState())
@@ -121,7 +128,9 @@ public class _905_RefinedDragonBlood extends Quest implements ScriptFile
 					{
 						htmltext = "sepsoul_q905_00a.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					if (cond == 1)
 					{
@@ -131,9 +140,11 @@ public class _905_RefinedDragonBlood extends Quest implements ScriptFile
 					{
 						htmltext = "sepsoul_q905_07.htm";
 					}
+					
 					break;
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -141,6 +152,7 @@ public class _905_RefinedDragonBlood extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if (cond == 1)
 		{
 			if (ArrayUtils.contains(AntharasDragonsBlue, npc.getNpcId()))
@@ -157,11 +169,13 @@ public class _905_RefinedDragonBlood extends Quest implements ScriptFile
 					st.giveItems(UnrefinedRedDragonBlood, 1);
 				}
 			}
+			
 			if ((st.getQuestItemsCount(UnrefinedBlueDragonBlood) >= 10) && (st.getQuestItemsCount(UnrefinedRedDragonBlood) >= 10))
 			{
 				st.setCond(2);
 			}
 		}
+		
 		return null;
 	}
 	

@@ -24,7 +24,7 @@ import lineage2.gameserver.utils.ItemFunctions;
 public class RafortyInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -62,6 +62,7 @@ public class RafortyInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("exchange_necklace_1"))
 		{
 			if (ItemFunctions.getItemCount(player, FREYA_NECKLACE) > 0)

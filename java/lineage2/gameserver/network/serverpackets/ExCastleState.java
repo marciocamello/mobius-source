@@ -35,6 +35,5 @@ public class ExCastleState extends L2GameServerPacket
 		writeEx(0x133);
 		writeD(_id);
 		writeD(_side.ordinal());
-		
 	}
 }

@@ -46,10 +46,12 @@ public class _031_SecretBuriedInTheSwamp extends Quest implements ScriptFile
 	{
 		super(false);
 		addStartNpc(ABERCROMBIE);
+		
 		for (int i = 31661; i <= 31665; i++)
 		{
 			addTalkId(i);
 		}
+		
 		addQuestItem(KRORINS_JOURNAL);
 	}
 	
@@ -58,6 +60,7 @@ public class _031_SecretBuriedInTheSwamp extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		String htmltext = event;
+		
 		if (event.equals("31555-1.htm"))
 		{
 			st.setCond(1);
@@ -99,6 +102,7 @@ public class _031_SecretBuriedInTheSwamp extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -108,6 +112,7 @@ public class _031_SecretBuriedInTheSwamp extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == ABERCROMBIE)
 		{
 			if (cond == 0)
@@ -194,6 +199,7 @@ public class _031_SecretBuriedInTheSwamp extends Quest implements ScriptFile
 				htmltext = "31664-2.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

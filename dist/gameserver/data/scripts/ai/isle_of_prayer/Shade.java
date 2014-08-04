@@ -58,26 +58,31 @@ public class Shade extends Fighter
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			doTask();
 			_wait = false;
 			return true;
 		}
+		
 		if (!_wait)
 		{
 			_wait = true;
 			_wait_timeout = System.currentTimeMillis() + DESPAWN_TIME;
 		}
+		
 		if ((_wait_timeout != 0) && _wait && (_wait_timeout < System.currentTimeMillis()))
 		{
 			actor.deleteMe();
 			return true;
 		}
+		
 		return super.thinkActive();
 	}
 	
@@ -101,15 +106,18 @@ public class Shade extends Fighter
 		if (killer != null)
 		{
 			final Player player = killer.getPlayer();
+			
 			if (player != null)
 			{
 				final NpcInstance actor = getActor();
+				
 				if (Rnd.chance(10))
 				{
 					actor.dropItem(player, BLUE_CRYSTAL, 1);
 				}
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 }

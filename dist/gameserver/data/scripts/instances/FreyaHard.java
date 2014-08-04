@@ -97,7 +97,6 @@ public class FreyaHard extends Reflection
 	protected void onCreate()
 	{
 		super.onCreate();
-		
 		attackUp = getZone("[freya_attack_up_hard]");
 		pcbuff = getZone("[freya_pc_buff1]");
 		pcbuff2 = getZone("[freya_pc_buff2]");
@@ -112,32 +111,41 @@ public class FreyaHard extends Reflection
 			damagezone.setActive(false);
 			return;
 		}
+		
 		switch (level)
 		{
 			case 1:
 				damagezone = getZone("[freya_normal_freezing_01]");
 				break;
+			
 			case 2:
 				damagezone = getZone("[freya_normal_freezing_02]");
 				break;
+			
 			case 3:
 				damagezone = getZone("[freya_normal_freezing_03]");
 				break;
+			
 			case 4:
 				damagezone = getZone("[freya_normal_freezing_04]");
 				break;
+			
 			case 5:
 				damagezone = getZone("[freya_normal_freezing_05]");
 				break;
+			
 			case 6:
 				damagezone = getZone("[freya_normal_freezing_06]");
 				break;
+			
 			case 7:
 				damagezone = getZone("[freya_normal_freezing_07]");
 				break;
+			
 			default:
 				break;
 		}
+		
 		if (damagezone != null)
 		{
 			damagezone.setActive(true);
@@ -151,6 +159,7 @@ public class FreyaHard extends Reflection
 			attackUp.setActive(false);
 			return;
 		}
+		
 		if (attackUp != null)
 		{
 			attackUp.setActive(true);
@@ -165,10 +174,12 @@ public class FreyaHard extends Reflection
 			pcbuff2.setActive(false);
 			return;
 		}
+		
 		if (pcbuff != null)
 		{
 			pcbuff.setActive(true);
 		}
+		
 		if (pcbuff2 != null)
 		{
 			pcbuff2.setActive(true);
@@ -201,7 +212,7 @@ public class FreyaHard extends Reflection
 	private class StartHardFreya extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public StartHardFreya()
 		{
@@ -213,6 +224,7 @@ public class FreyaHard extends Reflection
 		{
 			_entryLocked = true;
 			closeDoor(23140101);
+			
 			for (Player player : getPlayers())
 			{
 				player.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_FREYA_OPENING);
@@ -225,7 +237,7 @@ public class FreyaHard extends Reflection
 	private class PreStage extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public PreStage()
 		{
@@ -236,16 +248,19 @@ public class FreyaHard extends Reflection
 		public void runImpl()
 		{
 			manageDamageZone(4, false);
+			
 			// screen message
 			for (Player player : getPlayers())
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.BEGIN_STAGE_1_FREYA, 6000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
 			}
+			
 			// spawning few guards
 			for (int i = 0; i < 15; i++)
 			{
 				addSpawnWithoutRespawn(IceKnightHard, Territory.getRandomLoc(centralRoom, getGeoIndex()), 0);
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new FirstStage(), 40000L);
 		}
 	}
@@ -253,7 +268,7 @@ public class FreyaHard extends Reflection
 	private class FirstStage extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public FirstStage()
 		{
@@ -264,10 +279,12 @@ public class FreyaHard extends Reflection
 		public void runImpl()
 		{
 			manageCastleController(1);
+			
 			for (Player player : getPlayers())
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.FREYA_HAS_STARTED_TO_MOVE, 4000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			}
+			
 			// Spawning Freya Throne
 			NpcInstance freyaTrhone = addSpawnWithoutRespawn(FreyaThrone, new Location(114720, -117085, -11088, 15956), 0);
 			freyaTrhone.addListener(_deathListener);
@@ -282,6 +299,7 @@ public class FreyaHard extends Reflection
 		public GuardSpawnTask(int mode) // 1 - light, 2 - normal, 3 - hard, 4 - extreme
 		{
 			_mode = mode;
+			
 			if ((_mode < 1) || (_mode > 4))
 			{
 				_mode = 1;
@@ -299,35 +317,42 @@ public class FreyaHard extends Reflection
 					_breathMin = 1;
 					_breathMax = 2;
 					break;
+				
 				case 2:
 					_knightsMin = 3;
 					_knightsMax = 5;
 					_breathMin = 2;
 					_breathMax = 4;
 					break;
+				
 				case 3:
 					_knightsMin = 4;
 					_knightsMax = 7;
 					_breathMin = 3;
 					_breathMax = 6;
 					break;
+				
 				case 4:
 					_knightsMin = 7;
 					_knightsMax = 15;
 					_breathMin = 4;
 					_breathMax = 8;
 					break;
+				
 				default:
 					break;
 			}
+			
 			for (int i = 0; i < Rnd.get(_knightsMin, _knightsMax); i++)
 			{
 				addSpawnWithoutRespawn(IceKnightHard, Territory.getRandomLoc(centralRoom, getGeoIndex()), 0);
 			}
+			
 			for (int i = 0; i < Rnd.get(_breathMin, _breathMax); i++)
 			{
 				addSpawnWithoutRespawn(IceCastleBreath, Territory.getRandomLoc(centralRoom, getGeoIndex()), 0);
 			}
+			
 			if (Rnd.chance(60))
 			{
 				for (int i = 0; i < Rnd.get(1, 3); i++)
@@ -341,7 +366,7 @@ public class FreyaHard extends Reflection
 	private class PreSecondStage extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public PreSecondStage()
 		{
@@ -352,6 +377,7 @@ public class FreyaHard extends Reflection
 		public void runImpl()
 		{
 			firstStageGuardSpawn.cancel(true);
+			
 			for (NpcInstance n : getNpcs())
 			{
 				if ((n.getNpcId() != Sirra) && (n.getNpcId() != IceCastleController))
@@ -364,6 +390,7 @@ public class FreyaHard extends Reflection
 			{
 				p.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_FREYA_PHASE_A);
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new TimerToSecondStage(), 22000L); // 22.1 secs for movie
 		}
 	}
@@ -371,7 +398,7 @@ public class FreyaHard extends Reflection
 	private class TimerToSecondStage extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public TimerToSecondStage()
 		{
@@ -385,6 +412,7 @@ public class FreyaHard extends Reflection
 			{
 				p.sendPacket(new ExSendUIEvent(p, 0, 0, 60, 0, NpcString.TIME_REMAINING_UNTIL_NEXT_BATTLE));
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new SecondStage(), 60000L);
 		}
 	}
@@ -392,7 +420,7 @@ public class FreyaHard extends Reflection
 	private class SecondStage extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public SecondStage()
 		{
@@ -404,10 +432,12 @@ public class FreyaHard extends Reflection
 		{
 			manageCastleController(3);
 			manageDamageZone(5, false);
+			
 			for (Player p : getPlayers())
 			{
 				p.sendPacket(new ExShowScreenMessage(NpcString.BEGIN_STAGE_2_FREYA, 6000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
 			}
+			
 			secondStageGuardSpawn = ThreadPoolManager.getInstance().scheduleAtFixedRate(new GuardSpawnTask(4), 2000L, 60000L);
 			ThreadPoolManager.getInstance().schedule(new KnightCaptainSpawnMovie(), 60000L);
 		}
@@ -416,7 +446,7 @@ public class FreyaHard extends Reflection
 	private class KnightCaptainSpawnMovie extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public KnightCaptainSpawnMovie()
 		{
@@ -430,10 +460,12 @@ public class FreyaHard extends Reflection
 			{
 				n.block();
 			}
+			
 			for (Player p : getPlayers())
 			{
 				p.showQuestMovie(ExStartScenePlayer.SCENE_ICE_HEAVYKNIGHT_SPAWN);
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new KnightCaptainSpawn(), 7500L);
 		}
 	}
@@ -441,7 +473,7 @@ public class FreyaHard extends Reflection
 	private class KnightCaptainSpawn extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public KnightCaptainSpawn()
 		{
@@ -452,10 +484,12 @@ public class FreyaHard extends Reflection
 		public void runImpl()
 		{
 			manageDamageZone(6, false);
+			
 			for (NpcInstance n : getNpcs())
 			{
 				n.unblock();
 			}
+			
 			NpcInstance knightLeader = addSpawnWithoutRespawn(IceKnightLeaderHard, new Location(114707, -114799, -11199, 15956), 0);
 			knightLeader.addListener(_deathListener);
 		}
@@ -464,7 +498,7 @@ public class FreyaHard extends Reflection
 	private class PreThirdStage extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public PreThirdStage()
 		{
@@ -478,7 +512,9 @@ public class FreyaHard extends Reflection
 			{
 				p.sendPacket(new ExSendUIEvent(p, 0, 0, 60, 0, NpcString.TIME_REMAINING_UNTIL_NEXT_BATTLE));
 			}
+			
 			secondStageGuardSpawn.cancel(true);
+			
 			for (NpcInstance n : getNpcs())
 			{
 				if ((n.getNpcId() != Sirra) && (n.getNpcId() != IceCastleController))
@@ -486,6 +522,7 @@ public class FreyaHard extends Reflection
 					n.deleteMe();
 				}
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new PreThirdStageM(), 60000L);
 		}
 	}
@@ -493,7 +530,7 @@ public class FreyaHard extends Reflection
 	private class PreThirdStageM extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public PreThirdStageM()
 		{
@@ -507,6 +544,7 @@ public class FreyaHard extends Reflection
 			{
 				p.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_FREYA_PHASE_B);
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new ThirdStage(), 22000L); // 21.5 secs for movie
 		}
 	}
@@ -514,7 +552,7 @@ public class FreyaHard extends Reflection
 	private class ThirdStage extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public ThirdStage()
 		{
@@ -529,11 +567,13 @@ public class FreyaHard extends Reflection
 			manageAttackUpZone(false);
 			manageDamageZone(7, false);
 			manageStorm(true);
+			
 			for (Player p : getPlayers())
 			{
 				p.sendPacket(new ExShowScreenMessage(NpcString.BEGIN_STAGE_3_FREYA, 6000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
 				p.sendPacket(new ExChangeClientEffectInfo(2));
 			}
+			
 			thirdStageGuardSpawn = ThreadPoolManager.getInstance().scheduleAtFixedRate(new GuardSpawnTask(4), 2000L, 50000L);
 			NpcInstance freyaStand = addSpawnWithoutRespawn(FreyaStandHard, new Location(114720, -117085, -11088, 15956), 0);
 			freyaStand.addListener(_currentHpListener);
@@ -544,7 +584,7 @@ public class FreyaHard extends Reflection
 	private class PreForthStage extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public PreForthStage()
 		{
@@ -558,11 +598,13 @@ public class FreyaHard extends Reflection
 			{
 				n.block();
 			}
+			
 			for (Player p : getPlayers())
 			{
 				p.block();
 				p.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_KEGOR_INTRUSION);
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new ForthStage(), 28000L); // 27 secs for movie
 		}
 	}
@@ -570,7 +612,7 @@ public class FreyaHard extends Reflection
 	private class ForthStage extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public ForthStage()
 		{
@@ -584,11 +626,13 @@ public class FreyaHard extends Reflection
 			{
 				n.unblock();
 			}
+			
 			for (Player p : getPlayers())
 			{
 				p.unblock();
 				p.sendPacket(new ExShowScreenMessage(NpcString.BEGIN_STAGE_4_FREYA, 6000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
 			}
+			
 			addSpawnWithoutRespawn(Jinia, new Location(114727, -114700, -11200, -16260), 0);
 			addSpawnWithoutRespawn(Kegor, new Location(114690, -114700, -11200, -16260), 0);
 			managePcBuffZone(false);
@@ -598,7 +642,7 @@ public class FreyaHard extends Reflection
 	private class FreyaDeathStage extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public FreyaDeathStage()
 		{
@@ -615,11 +659,13 @@ public class FreyaHard extends Reflection
 			manageDamageZone(1, true);
 			manageAttackUpZone(true);
 			managePcBuffZone(true);
+			
 			// Deleting all NPCs + Freya corpse
 			for (NpcInstance n : getNpcs())
 			{
 				n.deleteMe();
 			}
+			
 			// Movie + quest update
 			for (Player p : getPlayers())
 			{
@@ -633,7 +679,7 @@ public class FreyaHard extends Reflection
 	private class ConclusionMovie extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public ConclusionMovie()
 		{
@@ -647,6 +693,7 @@ public class FreyaHard extends Reflection
 			{
 				p.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_FREYA_ENDING_B);
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new InstanceConclusion(), 57000L); // 56 secs for movie
 		}
 	}
@@ -654,7 +701,7 @@ public class FreyaHard extends Reflection
 	private class InstanceConclusion extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public InstanceConclusion()
 		{
@@ -666,6 +713,7 @@ public class FreyaHard extends Reflection
 		{
 			startCollapseTimer(5 * 60 * 1000L);
 			doCleanup();
+			
 			for (Player p : getPlayers())
 			{
 				p.sendPacket(new SystemMessage2(SystemMsg.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addInteger(5));
@@ -676,7 +724,7 @@ public class FreyaHard extends Reflection
 	private class DeathListener implements OnDeathListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public DeathListener()
 		{
@@ -711,8 +759,10 @@ public class FreyaHard extends Reflection
 			{
 				return;
 			}
+			
 			double newHp = actor.getCurrentHp() - damage;
 			double maxHp = actor.getMaxHp();
+			
 			if (!_freyaSlayed && (newHp <= (0.2 * maxHp)))
 			{
 				_freyaSlayed = true;
@@ -733,6 +783,7 @@ public class FreyaHard extends Reflection
 			}
 			
 			Player player = cha.getPlayer();
+			
 			if ((player == null) || !cha.isPlayer())
 			{
 				return;
@@ -749,6 +800,7 @@ public class FreyaHard extends Reflection
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
 			Player player = cha.getPlayer();
+			
 			if ((player == null) || !cha.isPlayer())
 			{
 				return;
@@ -786,10 +838,12 @@ public class FreyaHard extends Reflection
 		{
 			firstStageGuardSpawn.cancel(false);
 		}
+		
 		if (secondStageGuardSpawn != null)
 		{
 			secondStageGuardSpawn.cancel(false);
 		}
+		
 		if (thirdStageGuardSpawn != null)
 		{
 			thirdStageGuardSpawn.cancel(false);
@@ -800,7 +854,6 @@ public class FreyaHard extends Reflection
 	protected void onCollapse()
 	{
 		super.onCollapse();
-		
 		doCleanup();
 	}
 }

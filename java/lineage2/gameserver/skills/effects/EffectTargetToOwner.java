@@ -37,13 +37,16 @@ public class EffectTargetToOwner extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if (((SymbolInstance) getEffector()).getOwner().getObjectId() != _effected.getObjectId())
 		{
 			Location flyLoc = _effected.getFlyLocation(((SymbolInstance) getEffector()).getOwner(), getSkill());
+			
 			if (flyLoc == null)
 			{
 				_log.warn("EffectTargetToOwner Loc null check this!");
 			}
+			
 			_effected.setLoc(flyLoc);
 			_effected.broadcastPacket(new FlyToLocation(_effected, flyLoc, getSkill().getFlyType(), 0));
 		}

@@ -23,27 +23,25 @@ public class _10343_DayOfDestinyDarkElfsFate extends SagasSuperclass implements 
 	public void onLoad()
 	{
 	}
-
+	
 	@Override
 	public void onReload()
 	{
 	}
-
+	
 	@Override
 	public void onShutdown()
 	{
 	}
-
+	
 	public _10343_DayOfDestinyDarkElfsFate()
 	{
 		super(false);
-
 		StartNPC = 30862;
 		StartRace = Race.darkelf;
-
 		init();
 	}
-
+	
 	@Override
 	public int questId()
 	{

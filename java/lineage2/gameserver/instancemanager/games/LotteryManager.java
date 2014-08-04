@@ -109,6 +109,7 @@ public class LotteryManager
 		_isSellingTickets = false;
 		_isStarted = false;
 		_enddate = System.currentTimeMillis();
+		
 		if (Config.SERVICES_ALLOW_LOTTERY)
 		{
 			new startLottery().run();
@@ -151,6 +152,7 @@ public class LotteryManager
 		_prize += count;
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -179,14 +181,17 @@ public class LotteryManager
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_LAST_LOTTERY);
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				_number = rset.getInt("idnr");
+				
 				if (rset.getInt("finished") == 1)
 				{
 					_number++;
@@ -196,20 +201,24 @@ public class LotteryManager
 				{
 					_prize = rset.getInt("prize");
 					_enddate = rset.getLong("enddate");
+					
 					if (_enddate <= (System.currentTimeMillis() + (2 * MINUTE)))
 					{
 						new finishLottery().run();
 						return false;
 					}
+					
 					if (_enddate > System.currentTimeMillis())
 					{
 						_isStarted = true;
 						ThreadPoolManager.getInstance().schedule(new finishLottery(), _enddate - System.currentTimeMillis());
+						
 						if (_enddate > (System.currentTimeMillis() + (12 * MINUTE)))
 						{
 							_isSellingTickets = true;
 							ThreadPoolManager.getInstance().schedule(new stopSellingTickets(), _enddate - System.currentTimeMillis() - (10 * MINUTE));
 						}
+						
 						return false;
 					}
 				}
@@ -235,6 +244,7 @@ public class LotteryManager
 		{
 			_log.info("Lottery: Starting ticket sell for lottery #" + getId() + ".");
 		}
+		
 		_isSellingTickets = true;
 		_isStarted = true;
 		Announcements.getInstance().announceToAll("Lottery tickets are now available for Lucky Lottery #" + getId() + ".");
@@ -249,6 +259,7 @@ public class LotteryManager
 		finishtime.setTimeInMillis(_enddate);
 		finishtime.set(Calendar.MINUTE, 0);
 		finishtime.set(Calendar.SECOND, 0);
+		
 		if (finishtime.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY)
 		{
 			finishtime.set(Calendar.HOUR_OF_DAY, 19);
@@ -261,6 +272,7 @@ public class LotteryManager
 			finishtime.set(Calendar.HOUR_OF_DAY, 19);
 			_enddate = finishtime.getTimeInMillis();
 		}
+		
 		ThreadPoolManager.getInstance().schedule(new stopSellingTickets(), _enddate - System.currentTimeMillis() - (10 * MINUTE));
 		ThreadPoolManager.getInstance().schedule(new finishLottery(), _enddate - System.currentTimeMillis());
 	}
@@ -272,6 +284,7 @@ public class LotteryManager
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -315,6 +328,7 @@ public class LotteryManager
 			{
 				_log.info("Lottery: Stopping ticket sell for lottery #" + getId() + ".");
 			}
+			
 			_isSellingTickets = false;
 			Announcements.getInstance().announceToAll(Msg.LOTTERY_TICKET_SALES_HAVE_BEEN_TEMPORARILY_SUSPENDED);
 		}
@@ -342,15 +356,19 @@ public class LotteryManager
 			{
 				_log.info("Lottery: Ending lottery #" + getId() + ".");
 			}
+			
 			int[] luckynums = new int[5];
 			int luckynum = 0;
+			
 			for (int i = 0; i < 5; i++)
 			{
 				boolean found = true;
+				
 				while (found)
 				{
 					luckynum = Rnd.get(20) + 1;
 					found = false;
+					
 					for (int j = 0; j < i; j++)
 					{
 						if (luckynums[j] == luckynum)
@@ -359,14 +377,18 @@ public class LotteryManager
 						}
 					}
 				}
+				
 				luckynums[i] = luckynum;
 			}
+			
 			if (Config.SERVICES_ALLOW_LOTTERY)
 			{
 				_log.info("Lottery: The lucky numbers are " + luckynums[0] + ", " + luckynums[1] + ", " + luckynums[2] + ", " + luckynums[3] + ", " + luckynums[4] + ".");
 			}
+			
 			int enchant = 0;
 			int type2 = 0;
+			
 			for (int i = 0; i < 5; i++)
 			{
 				if (luckynums[i] < 17)
@@ -378,10 +400,12 @@ public class LotteryManager
 					type2 += Math.pow(2, luckynums[i] - 17);
 				}
 			}
+			
 			if (Config.SERVICES_ALLOW_LOTTERY)
 			{
 				_log.info("Lottery: Encoded lucky numbers are " + enchant + ", " + type2);
 			}
+			
 			int count1 = 0;
 			int count2 = 0;
 			int count3 = 0;
@@ -389,36 +413,46 @@ public class LotteryManager
 			Connection con = null;
 			PreparedStatement statement = null;
 			ResultSet rset = null;
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
 				statement = con.prepareStatement(SELECT_LOTTERY_ITEM);
 				statement.setInt(1, getId());
 				rset = statement.executeQuery();
+				
 				while (rset.next())
 				{
 					int curenchant = rset.getInt("enchant_level") & enchant;
 					int curtype2 = rset.getInt("custom_type2") & type2;
+					
 					if ((curenchant == 0) && (curtype2 == 0))
 					{
 						continue;
 					}
+					
 					int count = 0;
+					
 					for (int i = 1; i <= 16; i++)
 					{
 						int val = curenchant / 2;
+						
 						if (val != ((double) curenchant / 2))
 						{
 							count++;
 						}
+						
 						int val2 = curtype2 / 2;
+						
 						if (val2 != ((double) curtype2 / 2))
 						{
 							count++;
 						}
+						
 						curenchant = val;
 						curtype2 = val2;
 					}
+					
 					if (count == 5)
 					{
 						count1++;
@@ -450,18 +484,22 @@ public class LotteryManager
 			int prize2 = 0;
 			int prize3 = 0;
 			int newprize;
+			
 			if (count1 > 0)
 			{
 				prize1 = (int) (((getPrize() - prize4) * Config.SERVICES_LOTTERY_5_NUMBER_RATE) / count1);
 			}
+			
 			if (count2 > 0)
 			{
 				prize2 = (int) (((getPrize() - prize4) * Config.SERVICES_LOTTERY_4_NUMBER_RATE) / count2);
 			}
+			
 			if (count3 > 0)
 			{
 				prize3 = (int) (((getPrize() - prize4) * Config.SERVICES_LOTTERY_3_NUMBER_RATE) / count3);
 			}
+			
 			if ((prize1 == 0) && (prize2 == 0) && (prize3 == 0))
 			{
 				newprize = getPrize();
@@ -470,11 +508,14 @@ public class LotteryManager
 			{
 				newprize = getPrize() + prize1 + prize2 + prize3;
 			}
+			
 			if (Config.SERVICES_ALLOW_LOTTERY)
 			{
 				_log.info("Lottery: Jackpot for next lottery is " + newprize + ".");
 			}
+			
 			SystemMessage sm;
+			
 			if (count1 > 0)
 			{
 				sm = new SystemMessage(SystemMessage.THE_PRIZE_AMOUNT_FOR_THE_WINNER_OF_LOTTERY__S1__IS_S2_ADENA_WE_HAVE_S3_FIRST_PRIZE_WINNERS);
@@ -490,6 +531,7 @@ public class LotteryManager
 				sm.addNumber(getPrize());
 				Announcements.getInstance().announceToAll(sm);
 			}
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
@@ -529,27 +571,35 @@ public class LotteryManager
 		int res[] = new int[5];
 		int id = 0;
 		int nr = 1;
+		
 		while (enchant > 0)
 		{
 			int val = enchant / 2;
+			
 			if (val != ((double) enchant / 2))
 			{
 				res[id++] = nr;
 			}
+			
 			enchant /= 2;
 			nr++;
 		}
+		
 		nr = 17;
+		
 		while (type2 > 0)
 		{
 			int val = type2 / 2;
+			
 			if (val != ((double) type2 / 2))
 			{
 				res[id++] = nr;
 			}
+			
 			type2 /= 2;
 			nr++;
 		}
+		
 		return res;
 	}
 	
@@ -570,52 +620,66 @@ public class LotteryManager
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_LOTTERY_TICKET);
 			statement.setInt(1, id);
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				int curenchant = rset.getInt("number1") & enchant;
 				int curtype2 = rset.getInt("number2") & type2;
+				
 				if ((curenchant == 0) && (curtype2 == 0))
 				{
 					return res;
 				}
+				
 				int count = 0;
+				
 				for (int i = 1; i <= 16; i++)
 				{
 					int val = curenchant / 2;
+					
 					if (val != ((double) curenchant / 2))
 					{
 						count++;
 					}
+					
 					int val2 = curtype2 / 2;
+					
 					if (val2 != ((double) curtype2 / 2))
 					{
 						count++;
 					}
+					
 					curenchant = val;
 					curtype2 = val2;
 				}
+				
 				switch (count)
 				{
 					case 0:
 						break;
+					
 					case 5:
 						res[0] = 1;
 						res[1] = rset.getInt("prize1");
 						break;
+					
 					case 4:
 						res[0] = 2;
 						res[1] = rset.getInt("prize2");
 						break;
+					
 					case 3:
 						res[0] = 3;
 						res[1] = rset.getInt("prize3");
 						break;
+					
 					default:
 						res[0] = 4;
 						res[1] = 200;
@@ -671,6 +735,7 @@ public class LotteryManager
 		{
 			_instance = new LotteryManager();
 		}
+		
 		return _instance;
 	}
 	

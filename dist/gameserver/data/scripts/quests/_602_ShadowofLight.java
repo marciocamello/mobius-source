@@ -86,6 +86,7 @@ public class _602_ShadowofLight extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("eye_of_argos_q0602_0104.htm"))
 		{
 			st.setCond(1);
@@ -96,21 +97,25 @@ public class _602_ShadowofLight extends Quest implements ScriptFile
 		{
 			st.takeItems(EYE_OF_DARKNESS, -1);
 			int random = Rnd.get(100) + 1;
+			
 			for (int[] element : REWARDS)
 			{
 				if ((element[4] <= random) && (random <= element[5]))
 				{
 					st.giveItems(ADENA_ID, element[1], true);
 					st.addExpAndSp(element[2], element[3]);
+					
 					if (element[0] != 0)
 					{
 						st.giveItems(element[0], 3, true);
 					}
 				}
 			}
+			
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -121,10 +126,12 @@ public class _602_ShadowofLight extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int id = st.getState();
 		int cond = 0;
+		
 		if (id != CREATED)
 		{
 			cond = st.getCond();
 		}
+		
 		if (npcId == ARGOS)
 		{
 			if (cond == 0)
@@ -153,6 +160,7 @@ public class _602_ShadowofLight extends Quest implements ScriptFile
 				st.setCond(1);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -162,9 +170,11 @@ public class _602_ShadowofLight extends Quest implements ScriptFile
 		if (st.getCond() == 1)
 		{
 			long count = st.getQuestItemsCount(EYE_OF_DARKNESS);
+			
 			if ((count < 100) && Rnd.chance(npc.getNpcId() == 21299 ? 35 : 40))
 			{
 				st.giveItems(EYE_OF_DARKNESS, 1);
+				
 				if (count == 99)
 				{
 					st.setCond(2);
@@ -176,6 +186,7 @@ public class _602_ShadowofLight extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 }

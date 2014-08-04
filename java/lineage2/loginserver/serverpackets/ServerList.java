@@ -133,9 +133,11 @@ public final class ServerList extends L2LoginServerPacket
 	public ServerList(Account account)
 	{
 		_lastServer = account.getLastServer();
+		
 		for (GameServer gs : GameServerManager.getInstance().getGameServers())
 		{
 			InetAddress ip;
+			
 			try
 			{
 				ip = NetUtils.isInternalIP(account.getLastIP()) ? gs.getInternalHost() : gs.getExternalHost();
@@ -144,6 +146,7 @@ public final class ServerList extends L2LoginServerPacket
 			{
 				continue;
 			}
+			
 			Pair<Integer, int[]> entry = account.getAccountInfo(gs.getId());
 			_servers.add(new ServerData(gs.getId(), ip, gs.getPort(), gs.isPvp(), gs.isShowingBrackets(), gs.getServerType(), gs.getOnline(), gs.getMaxPlayers(), gs.isOnline(), entry == null ? 0 : entry.getKey(), gs.getAgeLimit(), entry == null ? ArrayUtils.EMPTY_INT_ARRAY : entry.getValue()));
 		}
@@ -158,6 +161,7 @@ public final class ServerList extends L2LoginServerPacket
 		writeC(0x04);
 		writeC(_servers.size());
 		writeC(_lastServer);
+		
 		for (ServerData server : _servers)
 		{
 			writeC(server.serverId);
@@ -176,13 +180,16 @@ public final class ServerList extends L2LoginServerPacket
 			writeD(server.type);
 			writeC(server.brackets ? 0x01 : 0x00);
 		}
+		
 		writeH(0x00);
 		writeC(_servers.size());
+		
 		for (ServerData server : _servers)
 		{
 			writeC(server.serverId);
 			writeC(server.playerSize);
 			writeC(server.deleteChars.length);
+			
 			for (int t : server.deleteChars)
 			{
 				writeD((int) (t - (System.currentTimeMillis() / 1000L)));

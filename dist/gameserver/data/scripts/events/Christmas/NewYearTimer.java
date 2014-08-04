@@ -35,7 +35,7 @@ public class NewYearTimer implements ScriptFile
 	 * Field instance.
 	 */
 	static NewYearTimer instance;
-
+	
 	/**
 	 * Method getInstance.
 	 * @return NewYearTimer
@@ -46,9 +46,10 @@ public class NewYearTimer implements ScriptFile
 		{
 			new NewYearTimer();
 		}
+		
 		return instance;
 	}
-
+	
 	/**
 	 * Constructor for NewYearTimer.
 	 */
@@ -58,11 +59,14 @@ public class NewYearTimer implements ScriptFile
 		{
 			return;
 		}
+		
 		instance = this;
+		
 		if (!isActive())
 		{
 			return;
 		}
+		
 		final Calendar c = Calendar.getInstance();
 		c.set(Calendar.YEAR, Calendar.getInstance().get(Calendar.YEAR));
 		c.set(Calendar.MONTH, Calendar.JANUARY);
@@ -71,10 +75,12 @@ public class NewYearTimer implements ScriptFile
 		c.set(Calendar.MINUTE, 0);
 		c.set(Calendar.SECOND, 0);
 		c.set(Calendar.MILLISECOND, 0);
+		
 		while (getDelay(c) < 0)
 		{
 			c.set(Calendar.YEAR, c.get(Calendar.YEAR) + 1);
 		}
+		
 		ThreadPoolManager.getInstance().schedule(new NewYearAnnouncer("New, " + c.get(Calendar.YEAR) + ", Year!!!"), getDelay(c));
 		c.add(Calendar.SECOND, -1);
 		ThreadPoolManager.getInstance().schedule(new NewYearAnnouncer("1"), getDelay(c));
@@ -87,7 +93,7 @@ public class NewYearTimer implements ScriptFile
 		c.add(Calendar.SECOND, -1);
 		ThreadPoolManager.getInstance().schedule(new NewYearAnnouncer("5"), getDelay(c));
 	}
-
+	
 	/**
 	 * Method getDelay.
 	 * @param c Calendar
@@ -97,7 +103,7 @@ public class NewYearTimer implements ScriptFile
 	{
 		return c.getTime().getTime() - System.currentTimeMillis();
 	}
-
+	
 	/**
 	 * Method onLoad.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
@@ -107,7 +113,7 @@ public class NewYearTimer implements ScriptFile
 	{
 		// empty method
 	}
-
+	
 	/**
 	 * Method onReload.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
@@ -117,7 +123,7 @@ public class NewYearTimer implements ScriptFile
 	{
 		// empty method
 	}
-
+	
 	/**
 	 * Method isActive.
 	 * @return boolean
@@ -126,7 +132,7 @@ public class NewYearTimer implements ScriptFile
 	{
 		return ServerVariables.getString("Christmas", "off").equalsIgnoreCase("on");
 	}
-
+	
 	/**
 	 * Method onShutdown.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
@@ -136,7 +142,7 @@ public class NewYearTimer implements ScriptFile
 	{
 		// empty method
 	}
-
+	
 	/**
 	 * @author Mobius
 	 */
@@ -146,7 +152,7 @@ public class NewYearTimer implements ScriptFile
 		 * Field message.
 		 */
 		private final String message;
-
+		
 		/**
 		 * Constructor for NewYearAnnouncer.
 		 * @param message String
@@ -155,7 +161,7 @@ public class NewYearTimer implements ScriptFile
 		{
 			this.message = message;
 		}
-
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -163,16 +169,19 @@ public class NewYearTimer implements ScriptFile
 		public void runImpl()
 		{
 			Announcements.getInstance().announceToAll(message);
+			
 			if (message.length() == 1)
 			{
 				return;
 			}
+			
 			for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 			{
 				Skill skill = SkillTable.getInstance().getInfo(3266, 1);
 				MagicSkillUse msu = new MagicSkillUse(player, player, 3266, 1, skill.getHitTime(), 0);
 				player.broadcastPacket(msu);
 			}
+			
 			instance = null;
 			new NewYearTimer();
 		}

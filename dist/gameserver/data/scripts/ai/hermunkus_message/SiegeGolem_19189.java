@@ -92,15 +92,18 @@ public class SiegeGolem_19189 extends DefaultAI
 	protected void onEvtThink()
 	{
 		super.onEvtThink();
+		
 		if (!getActor().getAggroList().isEmpty())
 		{
 			final List<Creature> chars = World.getAroundCharacters(getActor());
 			CollectionUtils.eqSort(chars, _nearestTargetComparator);
+			
 			for (Creature cha : chars)
 			{
 				if ((getActor().getAggroList().get(cha) != null) && checkAggression(cha))
 				{
 					Skill sk = SkillTable.getInstance().getInfo(SKILL_ID, 1);
+					
 					if ((lastCastTime + sk.getHitTime() + sk.getReuseDelay()) <= System.currentTimeMillis())
 					{
 						lastCastTime = System.currentTimeMillis();
@@ -119,23 +122,28 @@ public class SiegeGolem_19189 extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((actor == null) || actor.isDead())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			doTask();
 			return true;
 		}
+		
 		if ((diedTeredor < 3) || (currentPoint >= (MOVE_LOC.length - 1)))
 		{
 			final List<Creature> list = World.getAroundCharacters(getActor(), getActor().getAggroRange(), getActor().getAggroRange());
+			
 			for (Creature target : list)
 			{
 				if ((target != null) && !target.isDead() && ArrayUtils.contains(ATTACK_IDS, target.getNpcId()))
 				{
 					Skill sk = SkillTable.getInstance().getInfo(SKILL_ID, 1);
+					
 					if ((lastCastTime + sk.getHitTime() + sk.getReuseDelay()) <= System.currentTimeMillis())
 					{
 						lastCastTime = System.currentTimeMillis();
@@ -143,6 +151,7 @@ public class SiegeGolem_19189 extends DefaultAI
 						addTaskCast(target, sk);
 						return true;
 					}
+					
 					return false;
 				}
 			}
@@ -153,21 +162,25 @@ public class SiegeGolem_19189 extends DefaultAI
 			{
 				currentPoint++;
 				loc = new Location((MOVE_LOC[currentPoint].getX() + Rnd.get(50)) - Rnd.get(50), (MOVE_LOC[currentPoint].getY() + Rnd.get(50)) - Rnd.get(50), (MOVE_LOC[currentPoint].getZ() + Rnd.get(50)) - Rnd.get(50));
+				
 				if (currentPoint == 0)
 				{
 					final Reflection r = getActor().getReflection();
+					
 					if (r instanceof MemoryOfDisaster)
 					{
 						((MemoryOfDisaster) r).spawnTransparentTeredor();
 					}
 				}
 			}
+			
 			actor.setWalking();
 			clearTasks();
 			addTaskMove(loc, true);
 			doTask();
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -195,6 +208,7 @@ public class SiegeGolem_19189 extends DefaultAI
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
 		super.onEvtScriptEvent(event, arg1, arg2);
+		
 		if (event.equalsIgnoreCase("TEREDOR_DIE"))
 		{
 			diedTeredor++;

@@ -65,15 +65,18 @@ public class KartiaGuard extends Fighter
 	protected void onEvtThink()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (master == null)
 		{
 			master = getActor().getFollowTarget();
 		}
+		
 		// if master exit from instance delete me
 		if (actor.getReflectionId() != master.getReflectionId())
 		{
 			actor.deleteMe();
 		}
+		
 		// Check for Heal
 		if ((actor.getNpcId() == 33639) || (actor.getNpcId() == 33628) || (actor.getNpcId() == 33617))
 		{
@@ -86,6 +89,7 @@ public class KartiaGuard extends Fighter
 				}
 			}
 		}
+		
 		// Check for Aggression
 		if ((actor.getNpcId() == 33609) || (actor.getNpcId() == 33620) || (actor.getNpcId() == 33631))
 		{
@@ -107,10 +111,12 @@ public class KartiaGuard extends Fighter
 				}
 			}
 		}
+		
 		if (getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
 		{
 			// Check for Mobs to Attack
 			int mobscount = 0;
+			
 			for (NpcInstance npc : actor.getAroundNpc(600, 100))
 			{
 				if (npc instanceof MonsterInstance)
@@ -119,6 +125,7 @@ public class KartiaGuard extends Fighter
 					mobscount++;
 				}
 			}
+			
 			if ((mobscount > 0) && !actor.getAggroList().isEmpty())
 			{
 				Attack(actor.getAggroList().getRandomHated(), true, false);
@@ -130,6 +137,7 @@ public class KartiaGuard extends Fighter
 				{
 					setIntention(CtrlIntention.AI_INTENTION_FOLLOW);
 				}
+				
 				if ((master != null) && (actor.getDistance(master.getLoc()) > 300))
 				{
 					final Location loc = new Location(master.getX() + Rnd.get(-120, 120), master.getY() + Rnd.get(-120, 120), master.getZ());
@@ -138,6 +146,7 @@ public class KartiaGuard extends Fighter
 				}
 			}
 		}
+		
 		super.onEvtThink();
 	}
 }

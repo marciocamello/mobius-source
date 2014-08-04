@@ -19,7 +19,7 @@ public class GMHide extends L2GameServerPacket
 	public GMHide(int id)
 	{
 		obj_id = id; // TODO хз чей id должен посылатся, нужно
-						// эксперементировать
+		// эксперементировать
 	}
 	
 	@Override

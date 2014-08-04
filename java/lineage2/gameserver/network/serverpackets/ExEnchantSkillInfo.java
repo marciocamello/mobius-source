@@ -73,13 +73,12 @@ public class ExEnchantSkillInfo extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0x2a);
-		
 		writeD(_id);
 		writeD(_level);
 		writeD(_canAdd); // can add enchant
 		writeD(canDecrease); // can decrease enchant
-		
 		writeD(_routes.size());
+		
 		for (Integer route : _routes)
 		{
 			writeD(route);

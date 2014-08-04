@@ -48,7 +48,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class RaidBossInstance extends MonsterInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -155,19 +155,24 @@ public class RaidBossInstance extends MonsterInstance
 			minionMaintainTask.cancel(false);
 			minionMaintainTask = null;
 		}
+		
 		final int points = getTemplate().rewardRp;
+		
 		if (points > 0)
 		{
 			calcRaidPointsReward(points);
 		}
+		
 		if (this instanceof ReflectionBossInstance)
 		{
 			super.onDeath(killer);
 			return;
 		}
+		
 		if (killer.isPlayable())
 		{
 			Player player = killer.getPlayer();
+			
 			if (player.isInParty())
 			{
 				for (Player member : player.getParty().getPartyMembers())
@@ -177,6 +182,7 @@ public class RaidBossInstance extends MonsterInstance
 						Hero.getInstance().addHeroDiary(member.getObjectId(), HeroDiary.ACTION_RAID_KILLED, getNpcId());
 					}
 				}
+				
 				player.getParty().broadCast(Msg.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL);
 			}
 			else
@@ -185,12 +191,16 @@ public class RaidBossInstance extends MonsterInstance
 				{
 					Hero.getInstance().addHeroDiary(player.getObjectId(), HeroDiary.ACTION_RAID_KILLED, getNpcId());
 				}
+				
 				player.sendPacket(Msg.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL);
 			}
+			
 			Quest q = QuestManager.getQuest(508);
+			
 			if (q != null)
 			{
 				String qn = q.getName();
+				
 				if ((player.getClan() != null) && player.getClan().getLeader().isOnline() && (player.getClan().getLeader().getPlayer().getQuestState(qn) != null))
 				{
 					QuestState st = player.getClan().getLeader().getPlayer().getQuestState(qn);
@@ -198,6 +208,7 @@ public class RaidBossInstance extends MonsterInstance
 				}
 			}
 		}
+		
 		if (getMinionList().hasAliveMinions())
 		{
 			ThreadPoolManager.getInstance().schedule(new RunnableImpl()
@@ -212,25 +223,32 @@ public class RaidBossInstance extends MonsterInstance
 				}
 			}, getMinionUnspawnInterval());
 		}
+		
 		int boxId = 0;
+		
 		switch (getNpcId())
 		{
 			case 25035:
 				boxId = 31027;
 				break;
+			
 			case 25054:
 				boxId = 31028;
 				break;
+			
 			case 25126:
 				boxId = 31029;
 				break;
+			
 			case 25220:
 				boxId = 31030;
 				break;
 		}
+		
 		if (boxId != 0)
 		{
 			NpcTemplate boxTemplate = NpcHolder.getInstance().getTemplate(boxId);
+			
 			if (boxTemplate != null)
 			{
 				final NpcInstance box = new NpcInstance(IdFactory.getInstance().getNextId(), boxTemplate);
@@ -239,6 +257,7 @@ public class RaidBossInstance extends MonsterInstance
 				ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(box), 60000);
 			}
 		}
+		
 		super.onDeath(killer);
 	}
 	
@@ -251,11 +270,13 @@ public class RaidBossInstance extends MonsterInstance
 	{
 		Map<Object, Object[]> participants = new HashMap<>();
 		double totalHp = getMaxHp();
+		
 		for (HateInfo ai : getAggroList().getPlayableMap().values())
 		{
 			Player player = ai.attacker.getPlayer();
 			Object key = player.getParty() != null ? player.getParty().getCommandChannel() != null ? player.getParty().getCommandChannel() : player.getParty() : player.getPlayer();
 			Object[] info = participants.get(key);
+			
 			if (info == null)
 			{
 				info = new Object[]
@@ -265,6 +286,7 @@ public class RaidBossInstance extends MonsterInstance
 				};
 				participants.put(key, info);
 			}
+			
 			if (key instanceof CommandChannel)
 			{
 				for (Player p : ((CommandChannel) key))
@@ -289,24 +311,30 @@ public class RaidBossInstance extends MonsterInstance
 			{
 				((Set<Player>) info[0]).add(player);
 			}
+			
 			info[1] = ((Long) info[1]).longValue() + ai.damage;
 		}
+		
 		for (Object[] groupInfo : participants.values())
 		{
 			Set<Player> players = (HashSet<Player>) groupInfo[0];
 			int perPlayer = (int) Math.round((totalPoints * ((Long) groupInfo[1]).longValue()) / (totalHp * players.size()));
+			
 			for (Player player : players)
 			{
 				int playerReward = perPlayer;
 				playerReward = (int) Math.round(playerReward * Experience.penaltyModifier(calculateLevelDiffForDrop(player.getLevel()), 9));
+				
 				if (playerReward == 0)
 				{
 					continue;
 				}
+				
 				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EARNED_S1_RAID_POINTS).addNumber(playerReward));
 				RaidBossSpawnManager.getInstance().addPoints(player.getObjectId(), getNpcId(), playerReward);
 			}
 		}
+		
 		RaidBossSpawnManager.getInstance().updatePointsDb();
 		RaidBossSpawnManager.getInstance().calculateRanking();
 	}

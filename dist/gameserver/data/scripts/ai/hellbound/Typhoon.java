@@ -94,14 +94,17 @@ public class Typhoon extends Fighter
 	public boolean checkAggression(Creature target)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return false;
 		}
+		
 		if ((getIntention() != CtrlIntention.AI_INTENTION_ACTIVE) && (current_point > -1))
 		{
 			current_point--;
 		}
+		
 		actor.getAggroList().addDamageHate(target, 0, 1);
 		setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 		return true;
@@ -115,22 +118,27 @@ public class Typhoon extends Fighter
 	public boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			if (doTask())
 			{
 				clearTasks();
 			}
+			
 			return true;
 		}
+		
 		if (super.thinkActive())
 		{
 			return true;
 		}
+		
 		if ((System.currentTimeMillis() > wait_timeout) && ((current_point > -1) || Rnd.chance(5)))
 		{
 			if (!wait && (current_point == 31))
@@ -139,22 +147,27 @@ public class Typhoon extends Fighter
 				wait = true;
 				return true;
 			}
+			
 			wait_timeout = 0;
 			wait = false;
 			current_point++;
+			
 			if (current_point >= points.length)
 			{
 				current_point = 0;
 			}
+			
 			actor.setWalking();
 			addTaskMove(points[current_point], true);
 			doTask();
 			return true;
 		}
+		
 		if (randomAnimation())
 		{
 			return false;
 		}
+		
 		return false;
 	}
 	

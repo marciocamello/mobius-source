@@ -101,6 +101,7 @@ public class _111_ElrokianHuntersProof extends Quest implements ScriptFile
 		String htmltext = event;
 		int cond = st.getCond();
 		Player player = st.getPlayer();
+		
 		if (event.equalsIgnoreCase("marquez_q111_2.htm") && (cond == 0))
 		{
 			st.setCond(2);
@@ -161,6 +162,7 @@ public class _111_ElrokianHuntersProof extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -170,6 +172,7 @@ public class _111_ElrokianHuntersProof extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Marquez)
 		{
 			if ((st.getPlayer().getLevel() >= 75) && (cond == 0))
@@ -211,6 +214,7 @@ public class _111_ElrokianHuntersProof extends Quest implements ScriptFile
 				htmltext = "kirikachin_q111_1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -219,6 +223,7 @@ public class _111_ElrokianHuntersProof extends Quest implements ScriptFile
 	{
 		int id = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (cond == 4)
 		{
 			for (int i : Velociraptor)
@@ -226,12 +231,14 @@ public class _111_ElrokianHuntersProof extends Quest implements ScriptFile
 				if ((id == i) && (st.getQuestItemsCount(DiaryFragment) < 50))
 				{
 					st.giveItems(DiaryFragment, 1, false);
+					
 					if (st.getQuestItemsCount(DiaryFragment) == 50)
 					{
 						st.playSound(SOUND_MIDDLE);
 						st.setCond(5);
 						return null;
 					}
+					
 					st.playSound(SOUND_ITEMGET);
 				}
 			}
@@ -246,6 +253,7 @@ public class _111_ElrokianHuntersProof extends Quest implements ScriptFile
 					return null;
 				}
 			}
+			
 			for (int i : Deinonychus)
 			{
 				if ((id == i) && (st.getQuestItemsCount(DeinonychusBone) < 10))
@@ -254,6 +262,7 @@ public class _111_ElrokianHuntersProof extends Quest implements ScriptFile
 					return null;
 				}
 			}
+			
 			for (int i : Pachycephalosaurus)
 			{
 				if ((id == i) && (st.getQuestItemsCount(PachycephalosaurusSkin) < 10))
@@ -262,6 +271,7 @@ public class _111_ElrokianHuntersProof extends Quest implements ScriptFile
 					return null;
 				}
 			}
+			
 			if ((st.getQuestItemsCount(OrnithomimusClaw) >= 10) && (st.getQuestItemsCount(DeinonychusBone) >= 10) && (st.getQuestItemsCount(PachycephalosaurusSkin) >= 10))
 			{
 				st.setCond(11);
@@ -269,6 +279,7 @@ public class _111_ElrokianHuntersProof extends Quest implements ScriptFile
 				return null;
 			}
 		}
+		
 		return null;
 	}
 }

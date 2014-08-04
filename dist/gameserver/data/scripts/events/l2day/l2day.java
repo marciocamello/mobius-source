@@ -114,17 +114,9 @@ public class l2day extends LettersCollection
 	 */
 	private static int RING_OF_ANT_QUIEEN = 6660;
 	/**
-	 * Field EARRING_OF_ORFEN.
-	 */
-	private static int EARRING_OF_ORFEN = 6661;
-	/**
 	 * Field RING_OF_CORE.
 	 */
 	private static int RING_OF_CORE = 6662;
-	/**
-	 * Field FRINTEZZA_NECKLACE.
-	 */
-	private static int FRINTEZZA_NECKLACE = 8191;
 	static
 	{
 		_name = "l2day";
@@ -353,11 +345,13 @@ public class l2day extends LettersCollection
 		});
 		final int DROP_MULT = 3;
 		Map<Integer, Integer> temp = new HashMap<Integer, Integer>();
+		
 		for (Integer[][] ii : _words.values())
 		{
 			for (Integer[] i : ii)
 			{
 				Integer curr = temp.get(i[0]);
+				
 				if (curr == null)
 				{
 					temp.put(i[0], i[1]);
@@ -368,8 +362,10 @@ public class l2day extends LettersCollection
 				}
 			}
 		}
+		
 		letters = new int[temp.size()][2];
 		int i = 0;
+		
 		for (Entry<Integer, Integer> e : temp.entrySet())
 		{
 			letters[i++] = new int[]

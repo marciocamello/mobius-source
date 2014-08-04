@@ -110,6 +110,7 @@ public class EkimusFood extends DefaultAI
 		{
 			startMoveTask();
 		}
+		
 		return true;
 	}
 	
@@ -120,6 +121,7 @@ public class EkimusFood extends DefaultAI
 	{
 		final NpcInstance npc = getActor();
 		_lastPoint++;
+		
 		if (_lastPoint >= _points.length)
 		{
 			if (!npc.getReflection().isDefault())
@@ -129,6 +131,7 @@ public class EkimusFood extends DefaultAI
 				return;
 			}
 		}
+		
 		addTaskMove(Location.findPointToStay(_points[_lastPoint], 250, npc.getGeoIndex()), true);
 		doTask();
 	}

@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
 public class SpawnExObject implements SpawnableObject
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -59,6 +59,7 @@ public class SpawnExObject implements SpawnableObject
 	{
 		_name = name;
 		_spawns = SpawnManager.getInstance().getSpawners(_name);
+		
 		if (_spawns.isEmpty())
 		{
 			_log.info("SpawnExObject: not found spawn group: " + name);
@@ -89,9 +90,11 @@ public class SpawnExObject implements SpawnableObject
 				{
 					spawn.removeEvent(event);
 				}
+				
 				spawn.setReflection(event.getReflection());
 				spawn.init();
 			}
+			
 			_spawned = true;
 		}
 	}
@@ -108,7 +111,9 @@ public class SpawnExObject implements SpawnableObject
 		{
 			return;
 		}
+		
 		_spawned = false;
+		
 		for (Spawner spawn : _spawns)
 		{
 			spawn.removeEvent(event);
@@ -153,10 +158,12 @@ public class SpawnExObject implements SpawnableObject
 	public List<NpcInstance> getAllSpawned()
 	{
 		List<NpcInstance> npcs = new ArrayList<>();
+		
 		for (Spawner spawn : _spawns)
 		{
 			npcs.addAll(spawn.getAllSpawned());
 		}
+		
 		return npcs.isEmpty() ? Collections.<NpcInstance> emptyList() : npcs;
 	}
 	

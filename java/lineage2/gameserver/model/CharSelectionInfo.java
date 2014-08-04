@@ -230,6 +230,7 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 			_name = name;
 			Collection<ItemInstance> items = ItemsDAO.getInstance().getItemsByOwnerIdAndLoc(objectId, ItemInstance.ItemLocation.PAPERDOLL);
 			_paperdoll = new ItemInstance[Inventory.PAPERDOLL_MAX];
+			
 			for (ItemInstance item : items)
 			{
 				if (item.getEquipSlot() < Inventory.PAPERDOLL_MAX)
@@ -429,6 +430,7 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 			{
 				return _face;
 			}
+			
 			return _faceB;
 		}
 		
@@ -451,6 +453,7 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 			{
 				return _hairColor;
 			}
+			
 			return _hairColorB;
 		}
 		
@@ -473,6 +476,7 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 			{
 				return _hairStyle;
 			}
+			
 			return _hairStyleB;
 		}
 		
@@ -547,10 +551,12 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 		public int getPaperdollObjectId(int slot)
 		{
 			ItemInstance item = _paperdoll[slot];
+			
 			if (item != null)
 			{
 				return item.getObjectId();
 			}
+			
 			return 0;
 		}
 		
@@ -562,10 +568,12 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 		public int getPaperdollAugmentationId(int slot)
 		{
 			ItemInstance item = _paperdoll[slot];
+			
 			if ((item != null) && item.isAugmented())
 			{
 				return item.getAugmentationId();
 			}
+			
 			return 0;
 		}
 		
@@ -577,20 +585,24 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 		public int getPaperdollItemId(int slot)
 		{
 			ItemInstance item = _paperdoll[slot];
+			
 			if (item != null)
 			{
 				return item.getItemId();
 			}
+			
 			return 0;
 		}
 		
 		public int getVisualItemId(int slot)
 		{
 			ItemInstance item = _paperdoll[slot];
+			
 			if (item != null)
 			{
 				return item.getVisualId();
 			}
+			
 			return 0;
 		}
 		
@@ -602,10 +614,12 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 		public int getPaperdollEnchantEffect(int slot)
 		{
 			ItemInstance item = _paperdoll[slot];
+			
 			if (item != null)
 			{
 				return item.getEnchantLevel();
 			}
+			
 			return 0;
 		}
 		

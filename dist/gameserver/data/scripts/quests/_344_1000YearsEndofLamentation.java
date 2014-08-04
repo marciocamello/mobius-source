@@ -56,10 +56,12 @@ public class _344_1000YearsEndofLamentation extends Quest implements ScriptFile
 		addTalkId(ORVEN);
 		addTalkId(GARVARENTZ);
 		addTalkId(KAIEN);
+		
 		for (int mob = 20236; mob < 20241; mob++)
 		{
 			addKillId(mob);
 		}
+		
 		addQuestItem(new int[]
 		{
 			ARTICLES_DEAD_HEROES,
@@ -77,6 +79,7 @@ public class _344_1000YearsEndofLamentation extends Quest implements ScriptFile
 		long amount = st.getQuestItemsCount(ARTICLES_DEAD_HEROES);
 		int cond = st.getCond();
 		int level = st.getPlayer().getLevel();
+		
 		if (event.equalsIgnoreCase("30754-04.htm"))
 		{
 			if ((level >= 48) && (cond == 0))
@@ -114,6 +117,7 @@ public class _344_1000YearsEndofLamentation extends Quest implements ScriptFile
 					st.set("ok", "1");
 					st.set("amount", str(amount));
 				}
+				
 				st.takeItems(ARTICLES_DEAD_HEROES, -1);
 			}
 		}
@@ -128,6 +132,7 @@ public class _344_1000YearsEndofLamentation extends Quest implements ScriptFile
 				int random = Rnd.get(100);
 				st.setCond(2);
 				st.unset("ok");
+				
 				if (random < 25)
 				{
 					htmltext = "30754-12.htm";
@@ -149,6 +154,7 @@ public class _344_1000YearsEndofLamentation extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -160,6 +166,7 @@ public class _344_1000YearsEndofLamentation extends Quest implements ScriptFile
 		int id = st.getState();
 		int cond = st.getCond();
 		long amount = st.getQuestItemsCount(ARTICLES_DEAD_HEROES);
+		
 		if (id == CREATED)
 		{
 			if (st.getPlayer().getLevel() >= 48)
@@ -203,6 +210,7 @@ public class _344_1000YearsEndofLamentation extends Quest implements ScriptFile
 				int amt = st.getInt("amount");
 				int mission = st.getInt("mission");
 				int bonus = 0;
+				
 				if (mission == 1)
 				{
 					bonus = 1500;
@@ -219,11 +227,13 @@ public class _344_1000YearsEndofLamentation extends Quest implements ScriptFile
 				{
 					st.giveItems(4042, 1);
 				}
+				
 				if (amt > 0)
 				{
 					st.unset("amount");
 					st.giveItems(ADENA_ID, (amt * 50) + bonus, true);
 				}
+				
 				htmltext = "30754-16.htm";
 				st.setCond(1);
 				st.unset("mission");
@@ -233,6 +243,7 @@ public class _344_1000YearsEndofLamentation extends Quest implements ScriptFile
 				htmltext = str(npcId) + "-02.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -243,6 +254,7 @@ public class _344_1000YearsEndofLamentation extends Quest implements ScriptFile
 		{
 			st.rollAndGive(ARTICLES_DEAD_HEROES, 1, CHANCE + ((npc.getNpcId() - 20234) * 2));
 		}
+		
 		return null;
 	}
 	
@@ -250,11 +262,13 @@ public class _344_1000YearsEndofLamentation extends Quest implements ScriptFile
 	{
 		boolean state = false;
 		int chance = Rnd.get(100);
+		
 		if ((npcId == ORVEN) && (st.getQuestItemsCount(CRUCIFIX) > 0))
 		{
 			st.set("mission", "1");
 			st.takeItems(CRUCIFIX, -1);
 			state = true;
+			
 			if (chance < 50)
 			{
 				st.giveItems(1875, 19);
@@ -273,6 +287,7 @@ public class _344_1000YearsEndofLamentation extends Quest implements ScriptFile
 			st.set("mission", "2");
 			st.takeItems(OLD_TOTEM, -1);
 			state = true;
+			
 			if (chance < 45)
 			{
 				st.giveItems(1882, 70);
@@ -291,6 +306,7 @@ public class _344_1000YearsEndofLamentation extends Quest implements ScriptFile
 			st.set("mission", "3");
 			st.takeItems(OLD_HILT, -1);
 			state = true;
+			
 			if (chance < 50)
 			{
 				st.giveItems(1874, 25);
@@ -313,6 +329,7 @@ public class _344_1000YearsEndofLamentation extends Quest implements ScriptFile
 			st.set("mission", "4");
 			st.takeItems(OLD_KEY, -1);
 			state = true;
+			
 			if (chance < 40)
 			{
 				st.giveItems(1879, 55);
@@ -326,6 +343,7 @@ public class _344_1000YearsEndofLamentation extends Quest implements ScriptFile
 				st.giveItems(885, 1);
 			}
 		}
+		
 		return state;
 	}
 }

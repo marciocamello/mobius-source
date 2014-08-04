@@ -45,7 +45,6 @@ public class SpawnItem extends L2GameServerPacket
 		writeC(0x05);
 		writeD(_objectId);
 		writeD(_itemId);
-		
 		writeD(_x);
 		writeD(_y);
 		writeD(_z + Config.CLIENT_Z_SHIFT);

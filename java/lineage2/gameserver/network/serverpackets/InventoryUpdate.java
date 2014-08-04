@@ -57,6 +57,7 @@ public class InventoryUpdate extends L2GameServerPacket
 	{
 		writeC(0x21);
 		writeH(_items.size());
+		
 		for (ItemInfo temp : _items)
 		{
 			writeH(temp.getLastChange());

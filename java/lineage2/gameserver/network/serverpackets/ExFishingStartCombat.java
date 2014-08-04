@@ -37,7 +37,6 @@ public class ExFishingStartCombat extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeEx(0x27);
-		
 		writeD(char_obj_id);
 		writeD(_time);
 		writeD(_hp);

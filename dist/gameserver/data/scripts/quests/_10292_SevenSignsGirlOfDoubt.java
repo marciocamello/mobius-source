@@ -57,6 +57,7 @@ public class _10292_SevenSignsGirlOfDoubt extends Quest implements ScriptFile
 	{
 		Player player = st.getPlayer();
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("priest_wood_q10292_1.htm"))
 		{
 			st.setCond(1);
@@ -96,6 +97,7 @@ public class _10292_SevenSignsGirlOfDoubt extends Quest implements ScriptFile
 			addSpawnToInstance(CREATURE_OF_THE_DUSK_2, 89416, -238136, -9632, 0, 0, reflectId);
 			return null;
 		}
+		
 		return htmltext;
 	}
 	
@@ -107,16 +109,19 @@ public class _10292_SevenSignsGirlOfDoubt extends Quest implements ScriptFile
 		int cond = st.getCond();
 		st.getState();
 		Player player = st.getPlayer();
+		
 		if (player.getBaseClassId() != player.getActiveClassId())
 		{
 			return "no_subclass_allowed.htm";
 		}
+		
 		switch (npcId)
 		{
 			case WOOD:
 				if (cond == 0)
 				{
 					QuestState qs = player.getQuestState(_198_SevenSignsEmbryo.class);
+					
 					if ((player.getLevel() >= 81) && (qs != null) && qs.isCompleted())
 					{
 						htmltext = "priest_wood_q10292_0.htm";
@@ -139,7 +144,9 @@ public class _10292_SevenSignsGirlOfDoubt extends Quest implements ScriptFile
 				{
 					htmltext = "priest_wood_q10292_6.htm";
 				}
+				
 				break;
+			
 			case FRANZ:
 				if (cond == 1)
 				{
@@ -149,7 +156,9 @@ public class _10292_SevenSignsGirlOfDoubt extends Quest implements ScriptFile
 				{
 					htmltext = "witness_of_dawn_q10292_4.htm";
 				}
+				
 				break;
+			
 			case ELCARDIA:
 				if (cond == 2)
 				{
@@ -186,7 +195,9 @@ public class _10292_SevenSignsGirlOfDoubt extends Quest implements ScriptFile
 					st.exitCurrentQuest(false);
 					st.playSound(SOUND_FINISH);
 				}
+				
 				break;
+			
 			case HARDIN:
 				if (cond == 7)
 				{
@@ -196,8 +207,10 @@ public class _10292_SevenSignsGirlOfDoubt extends Quest implements ScriptFile
 				{
 					htmltext = "hardin_q10292_2.htm";
 				}
+				
 				break;
 		}
+		
 		return htmltext;
 	}
 	
@@ -206,9 +219,11 @@ public class _10292_SevenSignsGirlOfDoubt extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if ((cond == 3) && ArrayUtils.contains(MOBS_1, npcId) && Rnd.chance(70))
 		{
 			st.giveItems(ELCARDIAS_MARK, 1);
+			
 			if (st.getQuestItemsCount(ELCARDIAS_MARK) < 10)
 			{
 				st.playSound(SOUND_ITEMGET);
@@ -222,6 +237,7 @@ public class _10292_SevenSignsGirlOfDoubt extends Quest implements ScriptFile
 		else if (npcId == CREATURE_OF_THE_DUSK_1)
 		{
 			st.set("CreatureOfTheDusk1", 2);
+			
 			if ((st.get("CreatureOfTheDusk2") != null) && (Integer.parseInt(st.get("CreatureOfTheDusk2")) == 2))
 			{
 				st.playSound(SOUND_MIDDLE);
@@ -231,18 +247,21 @@ public class _10292_SevenSignsGirlOfDoubt extends Quest implements ScriptFile
 		else if (npcId == CREATURE_OF_THE_DUSK_2)
 		{
 			st.set("CreatureOfTheDusk2", 2);
+			
 			if ((st.get("CreatureOfTheDusk1") != null) && (Integer.parseInt(st.get("CreatureOfTheDusk1")) == 2))
 			{
 				st.playSound(SOUND_MIDDLE);
 				st.setCond(6);
 			}
 		}
+		
 		return null;
 	}
 	
 	private void enterInstance(Player player, int instancedZoneId)
 	{
 		Reflection r = player.getActiveReflection();
+		
 		if (r != null)
 		{
 			if (player.canReenterInstance(instancedZoneId))

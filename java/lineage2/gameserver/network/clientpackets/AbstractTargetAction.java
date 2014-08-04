@@ -69,8 +69,10 @@ public abstract class AbstractTargetAction extends L2GameClientPacket
 			{
 				obj.onActionSelect(actor, _forced);
 			}
+			
 			actor.setActive();
 		}
+		
 		actor.sendActionFailed();
 	}
 	

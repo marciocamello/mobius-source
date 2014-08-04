@@ -33,6 +33,7 @@ public class ExPVPMatchCCRecord extends L2GameServerPacket
 		writeEx(0x8A);
 		writeD(0x00); // Open/Dont Open
 		writeD(_players.length);
+		
 		for (KrateisCubePlayerObject p : _players)
 		{
 			writeS(p.getName());

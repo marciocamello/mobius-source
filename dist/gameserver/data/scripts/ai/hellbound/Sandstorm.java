@@ -62,6 +62,7 @@ public class Sandstorm extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((lastThrow + 5000) < System.currentTimeMillis())
 		{
 			for (Playable target : World.getAroundPlayables(actor, AGGRO_RANGE, AGGRO_RANGE))
@@ -75,6 +76,7 @@ public class Sandstorm extends DefaultAI
 				}
 			}
 		}
+		
 		return super.thinkActive();
 	}
 	
@@ -141,11 +143,13 @@ public class Sandstorm extends DefaultAI
 		final NpcInstance actor = getActor();
 		final Location sloc = actor.getSpawnedLoc();
 		final Location pos = Location.findPointToStay(actor, sloc, 150, 300);
+		
 		if (GeoEngine.canMoveToCoord(actor.getX(), actor.getY(), actor.getZ(), pos.x, pos.y, pos.z, actor.getGeoIndex()))
 		{
 			actor.setRunning();
 			addTaskMove(pos, false);
 		}
+		
 		return true;
 	}
 }

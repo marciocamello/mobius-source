@@ -64,6 +64,7 @@ public class SimpleSpawner extends Spawner
 		{
 			throw new NullPointerException();
 		}
+		
 		_npcTemplate = mobTemplate;
 		_spawned = new ArrayList<>(1);
 	}
@@ -75,10 +76,12 @@ public class SimpleSpawner extends Spawner
 	public SimpleSpawner(int npcId)
 	{
 		NpcTemplate mobTemplate = NpcHolder.getInstance().getTemplate(npcId);
+		
 		if (mobTemplate == null)
 		{
 			throw new NullPointerException("Not find npc: " + npcId);
 		}
+		
 		_npcTemplate = mobTemplate;
 		_spawned = new ArrayList<>(1);
 	}
@@ -176,6 +179,7 @@ public class SimpleSpawner extends Spawner
 		{
 			return _territory;
 		}
+		
 		return getLoc();
 	}
 	
@@ -285,6 +289,7 @@ public class SimpleSpawner extends Spawner
 	protected NpcInstance initNpc(NpcInstance mob, boolean spawn, MultiValueSet<String> set)
 	{
 		Location newLoc;
+		
 		if (_territory != null)
 		{
 			newLoc = _territory.getRandomLoc(_reflection.getGeoIndex());
@@ -295,6 +300,7 @@ public class SimpleSpawner extends Spawner
 			newLoc = getLoc();
 			newLoc.h = getHeading() == -1 ? Rnd.get(0xFFFF) : getHeading();
 		}
+		
 		return initNpc0(mob, newLoc, spawn, set);
 	}
 	

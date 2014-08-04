@@ -92,10 +92,12 @@ public final class AuctionItem extends ItemInfo
 	{
 		final ItemInstance item = ItemFunctions.createItem(getItemId());
 		item.setEnchantLevel(getEnchantLevel());
+		
 		if (getAugmentationId() != 0)
 		{
 			item.setAugmentationId(getAugmentationId());
 		}
+		
 		return item;
 	}
 }

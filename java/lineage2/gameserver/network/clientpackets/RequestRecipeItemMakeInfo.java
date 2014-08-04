@@ -44,16 +44,20 @@ public class RequestRecipeItemMakeInfo extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		RecipeTemplate recipeList = RecipeHolder.getInstance().getRecipeByRecipeId(_id);
+		
 		if (recipeList == null)
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		sendPacket(new RecipeItemMakeInfo(activeChar, recipeList, 0xffffffff));
 	}
 }

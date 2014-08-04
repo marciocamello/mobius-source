@@ -31,18 +31,22 @@ public class BuyHeroStatus extends Functions
 	public void list()
 	{
 		Player player = getSelf();
+		
 		if (!Config.SERVICES_HERO_SELL_ENABLED)
 		{
 			show(HtmCache.getInstance().getNotNull("npcdefault.htm", player), player);
 			return;
 		}
+		
 		String html = null;
 		html = HtmCache.getInstance().getNotNull("scripts/services/BuyHero.htm", player);
 		String add = "";
+		
 		for (int i = 0; i < Config.SERVICES_HERO_SELL_DAY.length; i++)
 		{
 			add += "<a action=\"bypass -h scripts_services.BuyHeroStatus:get " + i + "\">" + "for " + Config.SERVICES_HERO_SELL_DAY[i] + " days - " + Config.SERVICES_HERO_SELL_PRICE[i] + " " + ItemHolder.getInstance().getTemplate(Config.SERVICES_HERO_SELL_ITEM[i]).getName() + "</a><br>";
 		}
+		
 		html = html.replaceFirst("%toreplace%", add);
 		show(html, player);
 	}
@@ -54,12 +58,15 @@ public class BuyHeroStatus extends Functions
 	public void get(String[] param)
 	{
 		Player player = getSelf();
+		
 		if (!Config.SERVICES_HERO_SELL_ENABLED)
 		{
 			show(HtmCache.getInstance().getNotNull("npcdefault.htm", player), player);
 			return;
 		}
+		
 		int i = Integer.parseInt(param[0]);
+		
 		if ((Functions.getItemCount(player, Config.SERVICES_HERO_SELL_ITEM[i]) >= Config.SERVICES_HERO_SELL_PRICE[i]) && player.isNoble())
 		{
 			if (!player.isHero())

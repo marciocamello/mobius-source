@@ -51,15 +51,18 @@ public class BrazierOfPurity extends CharacterAI
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = (NpcInstance) getActor();
+		
 		if ((actor == null) || actor.isDead())
 		{
 			return;
 		}
+		
 		if (_firstTimeAttacked)
 		{
 			_firstTimeAttacked = false;
 			Functions.npcSay(actor, NpcString.THE_PURIFICATION_FIELD_IS_BEING_ATTACKED_GUARDIAN_SPIRITS_PROTECT_THE_MAGIC_FORCE, ChatType.ALL, 15000);
 			final List<NpcInstance> around = actor.getAroundNpc(1500, 300);
+			
 			if ((around != null) && !around.isEmpty())
 			{
 				for (NpcInstance npc : around)
@@ -71,6 +74,7 @@ public class BrazierOfPurity extends CharacterAI
 				}
 			}
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	

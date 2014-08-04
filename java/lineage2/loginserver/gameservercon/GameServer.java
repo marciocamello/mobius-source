@@ -188,6 +188,7 @@ public class GameServer
 		{
 			internalHost = getConnection().getIpAddress();
 		}
+		
 		_internalHost = internalHost;
 	}
 	
@@ -201,6 +202,7 @@ public class GameServer
 		{
 			externalHost = getConnection().getIpAddress();
 		}
+		
 		_externalHost = externalHost;
 	}
 	
@@ -313,6 +315,7 @@ public class GameServer
 	public void sendPacket(SendablePacket packet)
 	{
 		GameServerConnection conn = getConnection();
+		
 		if (conn != null)
 		{
 			conn.sendPacket(packet);

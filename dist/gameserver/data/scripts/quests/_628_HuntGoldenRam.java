@@ -46,10 +46,12 @@ public class _628_HuntGoldenRam extends Quest implements ScriptFile
 	{
 		super(true);
 		addStartNpc(KAHMAN);
+		
 		for (int npcId = 21508; npcId <= 21518; npcId++)
 		{
 			addKillId(npcId);
 		}
+		
 		addQuestItem(CHITIN);
 		addQuestItem(CHITIN2);
 	}
@@ -58,6 +60,7 @@ public class _628_HuntGoldenRam extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("31554-03a.htm"))
 		{
 			if ((st.getQuestItemsCount(CHITIN) >= 100) && (st.getCond() == 1))
@@ -74,6 +77,7 @@ public class _628_HuntGoldenRam extends Quest implements ScriptFile
 			st.playSound(SOUND_GIVEUP);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -84,6 +88,7 @@ public class _628_HuntGoldenRam extends Quest implements ScriptFile
 		int cond = st.getCond();
 		long chitin1 = st.getQuestItemsCount(CHITIN);
 		long chitin2 = st.getQuestItemsCount(CHITIN2);
+		
 		if (st.isCompleted())
 		{
 			htmltext = "31554-05a.htm";
@@ -127,6 +132,7 @@ public class _628_HuntGoldenRam extends Quest implements ScriptFile
 				st.playSound(SOUND_FINISH);
 				st.exitCurrentQuest(true);
 			}
+			
 			if ((chitin1 == 0) && (chitin2 == 0))
 			{
 				htmltext = "31554-04b.htm";
@@ -136,6 +142,7 @@ public class _628_HuntGoldenRam extends Quest implements ScriptFile
 				htmltext = "31554-04a.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -146,13 +153,16 @@ public class _628_HuntGoldenRam extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if ((cond >= 1) && (21507 < npcId) && (npcId < 21513))
 		{
 			if (Rnd.chance(CHANCE + ((npcId - 21506) * 2)))
 			{
 				st.giveItems(CHITIN, 1);
+				
 				if (st.getQuestItemsCount(CHITIN) < 100)
 				{
 					st.playSound(SOUND_ITEMGET);
@@ -168,6 +178,7 @@ public class _628_HuntGoldenRam extends Quest implements ScriptFile
 			if (Rnd.chance(CHANCE + ((npcId - 21512) * 3)))
 			{
 				st.giveItems(CHITIN2, 1);
+				
 				if (st.getQuestItemsCount(CHITIN2) < 100)
 				{
 					st.playSound(SOUND_ITEMGET);
@@ -178,6 +189,7 @@ public class _628_HuntGoldenRam extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 }

@@ -77,11 +77,13 @@ public final class StringHolder extends AbstractHolder
 	{
 		Language lang = player == null ? Language.ENGLISH : player.getLanguage();
 		String text = get(lang, name);
+		
 		if ((text == null) && (player != null))
 		{
 			text = "Not find string: " + name + "; for lang: " + lang;
 			_strings.get(lang).put(name, text);
 		}
+		
 		return text;
 	}
 	
@@ -107,34 +109,43 @@ public final class StringHolder extends AbstractHolder
 		{
 			_strings.put(lang, new HashMap<String, String>());
 			File f = new File(Config.DATAPACK_ROOT, "data/string/strings_" + lang.getShortName() + ".properties");
+			
 			if (!f.exists())
 			{
 				warn("Not find file: " + f.getAbsolutePath());
 				continue;
 			}
+			
 			LineNumberReader reader = null;
+			
 			try
 			{
 				reader = new LineNumberReader(new FileReader(f));
 				String line = null;
+				
 				while ((line = reader.readLine()) != null)
 				{
 					if ((line.length() > 0) && (line.charAt(0) == '#'))
 					{
 						continue;
 					}
+					
 					StringTokenizer token = new StringTokenizer(line, "=");
+					
 					if (token.countTokens() < 2)
 					{
 						error("Error on line: " + line + "; file: " + f.getName());
 						continue;
 					}
+					
 					String name = token.nextToken();
 					String value = token.nextToken();
+					
 					while (token.hasMoreTokens())
 					{
 						value += "=" + token.nextToken();
 					}
+					
 					Map<String, String> strings = _strings.get(lang);
 					strings.put(name, value);
 				}
@@ -154,6 +165,7 @@ public final class StringHolder extends AbstractHolder
 				}
 			}
 		}
+		
 		log();
 	}
 	

@@ -298,10 +298,12 @@ public enum SkillTrait
 	public static double calcEnchantMod(Env env)
 	{
 		int enchantLevel = env.skill.getDisplayLevel();
+		
 		if (enchantLevel <= 100)
 		{
 			return 0;
 		}
+		
 		enchantLevel = enchantLevel % 100;
 		return env.skill.getEnchantLevelCount() == 15 ? enchantLevel * 2 : enchantLevel;
 	}

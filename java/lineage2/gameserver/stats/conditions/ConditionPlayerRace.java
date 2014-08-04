@@ -48,6 +48,7 @@ public class ConditionPlayerRace extends Condition
 		{
 			return false;
 		}
+		
 		return ((Player) env.character).getRace() == _race;
 	}
 }

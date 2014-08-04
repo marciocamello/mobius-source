@@ -141,6 +141,7 @@ public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListen
 	public void onLoad()
 	{
 		CharListenerList.addGlobal(this);
+		
 		if (isActive())
 		{
 			_active = true;
@@ -168,10 +169,12 @@ public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListen
 	public void startEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive("trickoftrans", true))
 		{
 			spawnEventManagers();
@@ -182,6 +185,7 @@ public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListen
 		{
 			player.sendMessage("Event 'Trick of Transmutation' already started.");
 		}
+		
 		_active = true;
 		show("admin/events.htm", player);
 	}
@@ -192,10 +196,12 @@ public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListen
 	public void stopEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive("trickoftrans", false))
 		{
 			unSpawnEventManagers();
@@ -206,6 +212,7 @@ public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListen
 		{
 			player.sendMessage("Event 'Trick of Transmutation' not started.");
 		}
+		
 		_active = false;
 		show("admin/events.htm", player);
 	}
@@ -469,34 +476,42 @@ public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListen
 	public void accept()
 	{
 		final Player player = getSelf();
+		
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;
 		}
+		
 		if (!player.findRecipe(RED_PSTC_R))
 		{
 			addItem(player, RED_PSTC, 1);
 		}
+		
 		if (!player.findRecipe(BLACK_PSTC_R))
 		{
 			addItem(player, BLACK_PSTC, 1);
 		}
+		
 		if (!player.findRecipe(BLUE_PSTC_R))
 		{
 			addItem(player, BLUE_PSTC, 1);
 		}
+		
 		if (!player.findRecipe(GREEN_PSTC_R))
 		{
 			addItem(player, GREEN_PSTC, 1);
 		}
+		
 		if (!player.findRecipe(ORANGE_PSTC_R))
 		{
 			addItem(player, ORANGE_PSTC, 1);
 		}
+		
 		if (!player.findRecipe(WHITE_PSTC_R))
 		{
 			addItem(player, WHITE_PSTC, 1);
 		}
+		
 		show("scripts/events/TrickOfTrans/TrickOfTrans_01.htm", player);
 	}
 	
@@ -506,15 +521,18 @@ public class TrickOfTrans extends Functions implements ScriptFile, OnDeathListen
 	public void open()
 	{
 		final Player player = getSelf();
+		
 		if (getItemCount(player, A_CHEST_KEY) > 0)
 		{
 			removeItem(player, A_CHEST_KEY, 1);
 			addItem(player, PhilosophersStoneOre, Rnd.get(1, PhilosophersStoneOreMax));
 			addItem(player, MagicReagents, Rnd.get(1, MagicReagentsMax));
+			
 			if (Rnd.chance(80))
 			{
 				addItem(player, PhilosophersStoneConversionFormula, 1);
 			}
+			
 			show("scripts/events/TrickOfTrans/TrickOfTrans_02.htm", player);
 		}
 		else

@@ -55,8 +55,10 @@ public class Replace extends Skill
 		{
 			return;
 		}
+		
 		Player activePlayer = activeChar.getPlayer();
 		_log.info("" + targets.size());
+		
 		for (Creature target : targets)
 		{
 			if ((target != null) && !target.isDead())

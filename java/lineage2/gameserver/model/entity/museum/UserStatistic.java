@@ -9,14 +9,14 @@ import sw.awaken.gameserver.network.serverpackets.ExLoadStatUser;
  */
 /**
  * public class UserStatistic {
- * 
+ *
  * public static final UserStatistic getInstance() { return
  * SingletonHolder._instance; }
- * 
+ *
  * public void getUserStatistic(Player player) {
- * 
+ *
  * ExLoadStatUser stat = new ExLoadStatUser();
- * 
+ *
  * stat.addPoints(new UserRankPoints(RankType.ACQUIRED_XP.getId(),
  * player.getExp())); // SP stat.addPoints(new
  * UserRankPoints(RankType.ACQUIRED_ADENA.getId(), player.getAdena())); // Adena
@@ -25,12 +25,12 @@ import sw.awaken.gameserver.network.serverpackets.ExLoadStatUser;
  * UserRankPoints(RankType.PK_COUNT.getId(), player.getPkKills())); // PK kills
  * stat.addPoints(new UserRankPoints(RankType.PVP_COUNT.getId(),
  * player.getPvpKills())); // PVP kills
- * 
+ *
  * player.sendPacket(stat); }
- * 
+ *
  * @SuppressWarnings("synthetic-access") private static class SingletonHolder {
  *                                       protected static final UserStatistic
  *                                       _instance = new UserStatistic(); }
- * 
+ *
  *                                       }
  */

@@ -116,14 +116,17 @@ public class OlympiadGame
 		_reflection.init(instantZone);
 		_team1 = new OlympiadTeam(this, 1);
 		_team2 = new OlympiadTeam(this, 2);
+		
 		for (int i = 0; i < (opponents.size() / 2); i++)
 		{
 			_team1.addMember(opponents.get(i));
 		}
+		
 		for (int i = opponents.size() / 2; i < opponents.size(); i++)
 		{
 			_team2.addMember(opponents.get(i));
 		}
+		
 		Log.add("Olympiad System: Game - " + id + ": " + _team1.getName() + " Vs " + _team2.getName(), "olympiad");
 	}
 	
@@ -135,21 +138,26 @@ public class OlympiadGame
 	private String getBufferSpawnGroup(int instancedZoneId)
 	{
 		String bufferGroup = null;
+		
 		switch (instancedZoneId)
 		{
 			case 147:
 				bufferGroup = "olympiad_147_buffers";
 				break;
+			
 			case 148:
 				bufferGroup = "olympiad_148_buffers";
 				break;
+			
 			case 149:
 				bufferGroup = "olympiad_149_buffers";
 				break;
+			
 			case 150:
 				bufferGroup = "olympiad_150_buffers";
 				break;
 		}
+		
 		return bufferGroup;
 	}
 	
@@ -162,6 +170,7 @@ public class OlympiadGame
 		{
 			return;
 		}
+		
 		if (getBufferSpawnGroup(_reflection.getInstancedZoneId()) != null)
 		{
 			_reflection.spawnByGroup(getBufferSpawnGroup(_reflection.getInstancedZoneId()));
@@ -184,17 +193,21 @@ public class OlympiadGame
 		for (NpcInstance npc : Olympiad.getNpcs())
 		{
 			NpcString npcString;
+			
 			switch (_type)
 			{
 				case CLASSED:
 					npcString = NpcString.OLYMPIAD_CLASS_INDIVIDUAL_MATCH_IS_GOING_TO_BEGIN_IN_ARENA_S1_IN_A_MOMENT;
 					break;
+				
 				case NON_CLASSED:
 					npcString = NpcString.OLYMPIAD_CLASSFREE_INDIVIDUAL_MATCH_IS_GOING_TO_BEGIN_IN_ARENA_S1_IN_A_MOMENT;
 					break;
+				
 				default:
 					continue;
 			}
+			
 			Functions.npcShout(npc, npcString, String.valueOf(_id + 1));
 		}
 	}
@@ -244,12 +257,15 @@ public class OlympiadGame
 	{
 		int state = _state;
 		_state = 0;
+		
 		if (validated)
 		{
 			Log.add("Olympiad Result: " + _team1.getName() + " vs " + _team2.getName() + " ... double validate check!!!", "olympiad");
 			return;
 		}
+		
 		validated = true;
+		
 		if ((state < 1) && aborted)
 		{
 			_team1.takePointsForCrash();
@@ -257,8 +273,10 @@ public class OlympiadGame
 			broadcastPacket(Msg.THE_GAME_HAS_BEEN_CANCELLED_BECAUSE_THE_OTHER_PARTY_ENDS_THE_GAME, true, false);
 			return;
 		}
+		
 		boolean teamOneCheck = _team1.checkPlayers();
 		boolean teamTwoCheck = _team2.checkPlayers();
+		
 		if (_winner <= 0)
 		{
 			if (!teamOneCheck && !teamTwoCheck)
@@ -282,6 +300,7 @@ public class OlympiadGame
 				_winner = 2;
 			}
 		}
+		
 		if (_winner == 1)
 		{
 			winGame(_team1, _team2);
@@ -294,6 +313,7 @@ public class OlympiadGame
 		{
 			tie();
 		}
+		
 		_team1.saveNobleData();
 		_team2.saveNobleData();
 		broadcastRelation();
@@ -311,10 +331,12 @@ public class OlympiadGame
 		int pointDiff = 0;
 		TeamMember[] looserMembers = looseTeam.getMembers().toArray(new TeamMember[looseTeam.getMembers().size()]);
 		TeamMember[] winnerMembers = winnerTeam.getMembers().toArray(new TeamMember[winnerTeam.getMembers().size()]);
+		
 		for (int i = 0; i < Party.MAX_SIZE; i++)
 		{
 			TeamMember looserMember = ArrayUtils.valid(looserMembers, i);
 			TeamMember winnerMember = ArrayUtils.valid(winnerMembers, i);
+			
 			if ((looserMember != null) && (winnerMember != null))
 			{
 				winnerMember.incGameCount();
@@ -325,11 +347,13 @@ public class OlympiadGame
 				pointDiff += gamePoints;
 			}
 		}
+		
 		if (_type != CompType.TEAM)
 		{
 			int team = _team1 == winnerTeam ? 1 : 2;
 			TeamMember member1 = ArrayUtils.valid(_team1 == winnerTeam ? winnerMembers : looserMembers, 0);
 			TeamMember member2 = ArrayUtils.valid(_team2 == winnerTeam ? winnerMembers : looserMembers, 0);
+			
 			if ((member1 != null) && (member2 != null))
 			{
 				int diff = (int) ((System.currentTimeMillis() - _startTime) / 1000L);
@@ -337,15 +361,18 @@ public class OlympiadGame
 				OlympiadHistoryManager.getInstance().saveHistory(h);
 			}
 		}
+		
 		for (Player player : winnerTeam.getPlayers())
 		{
 			ItemInstance item = player.getInventory().addItem(Config.ALT_OLY_BATTLE_REWARD_ITEM, getType().getReward());
 			player.sendPacket(SystemMessage2.obtainItems(item.getItemId(), getType().getReward(), 0));
 			player.sendChanges();
 		}
+		
 		List<Player> teamsPlayers = new ArrayList<>();
 		teamsPlayers.addAll(winnerTeam.getPlayers());
 		teamsPlayers.addAll(looseTeam.getPlayers());
+		
 		for (Player player : teamsPlayers)
 		{
 			if (player != null)
@@ -359,6 +386,7 @@ public class OlympiadGame
 				}
 			}
 		}
+		
 		broadcastPacket(packet, true, false);
 		broadcastPacket(new SystemMessage2(SystemMsg.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH).addString(winnerTeam.getName()), false, true);
 		Log.add("Olympiad Result: " + winnerTeam.getName() + " vs " + looseTeam.getName() + " ... (" + (int) winnerTeam.getDamage() + " vs " + (int) looseTeam.getDamage() + ") " + winnerTeam.getName() + " win " + pointDiff + " points", "olympiad");
@@ -372,12 +400,14 @@ public class OlympiadGame
 		TeamMember[] teamMembers1 = _team1.getMembers().toArray(new TeamMember[_team1.getMembers().size()]);
 		TeamMember[] teamMembers2 = _team2.getMembers().toArray(new TeamMember[_team2.getMembers().size()]);
 		ExReceiveOlympiad.MatchResult packet = new ExReceiveOlympiad.MatchResult(true, StringUtils.EMPTY);
+		
 		for (int i = 0; i < teamMembers1.length; i++)
 		{
 			try
 			{
 				TeamMember member1 = ArrayUtils.valid(teamMembers1, i);
 				TeamMember member2 = ArrayUtils.valid(teamMembers2, i);
+				
 				if (member1 != null)
 				{
 					member1.incGameCount();
@@ -385,6 +415,7 @@ public class OlympiadGame
 					packet.addPlayer(0, member1, -2);
 					stat1.set(Olympiad.POINTS, stat1.getInteger(Olympiad.POINTS) - 2);
 				}
+				
 				if (member2 != null)
 				{
 					member2.incGameCount();
@@ -398,10 +429,12 @@ public class OlympiadGame
 				_log.error("OlympiadGame.tie(): " + e, e);
 			}
 		}
+		
 		if (_type != CompType.TEAM)
 		{
 			TeamMember member1 = ArrayUtils.valid(teamMembers1, 0);
 			TeamMember member2 = ArrayUtils.valid(teamMembers2, 0);
+			
 			if ((member1 != null) && (member2 != null))
 			{
 				int diff = (int) ((System.currentTimeMillis() - _startTime) / 1000L);
@@ -409,6 +442,7 @@ public class OlympiadGame
 				OlympiadHistoryManager.getInstance().saveHistory(h);
 			}
 		}
+		
 		broadcastPacket(SystemMsg.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE, false, true);
 		broadcastPacket(packet, true, false);
 		Log.add("Olympiad Result: " + _team1.getName() + " vs " + _team2.getName() + " ... tie", "olympiad");
@@ -517,6 +551,7 @@ public class OlympiadGame
 				pc.leaveOlympiadObserverMode(false);
 			}
 		}
+		
 		_spectators.clear();
 	}
 	
@@ -553,6 +588,7 @@ public class OlympiadGame
 					player.broadcastRelationChanged();
 				}
 			}
+			
 			for (Player player : _team2.getPlayers())
 			{
 				if (receiver != null)
@@ -577,6 +613,7 @@ public class OlympiadGame
 		{
 			player.broadcastRelationChanged();
 		}
+		
 		for (Player player : _team2.getPlayers())
 		{
 			player.broadcastRelationChanged();
@@ -596,6 +633,7 @@ public class OlympiadGame
 			_team1.broadcast(packet);
 			_team2.broadcast(packet);
 		}
+		
 		if (toSpectators && !_spectators.isEmpty())
 		{
 			for (Player spec : _spectators)
@@ -621,6 +659,7 @@ public class OlympiadGame
 			_team1.broadcast(packet);
 			_team2.broadcast(packet);
 		}
+		
 		if (toSpectators && !_spectators.isEmpty())
 		{
 			for (Player spec : _spectators)
@@ -640,14 +679,17 @@ public class OlympiadGame
 	public List<Player> getAllPlayers()
 	{
 		List<Player> result = new ArrayList<>();
+		
 		for (Player player : _team1.getPlayers())
 		{
 			result.add(player);
 		}
+		
 		for (Player player : _team2.getPlayers())
 		{
 			result.add(player);
 		}
+		
 		if (!_spectators.isEmpty())
 		{
 			for (Player spec : _spectators)
@@ -658,6 +700,7 @@ public class OlympiadGame
 				}
 			}
 		}
+		
 		return result;
 	}
 	
@@ -684,6 +727,7 @@ public class OlympiadGame
 		{
 			return _team2;
 		}
+		
 		return null;
 	}
 	
@@ -694,6 +738,7 @@ public class OlympiadGame
 	public void setState(int val)
 	{
 		_state = val;
+		
 		if (_state == 1)
 		{
 			_startTime = System.currentTimeMillis();
@@ -784,6 +829,7 @@ public class OlympiadGame
 		{
 			_shedule.cancel(false);
 		}
+		
 		_task = task;
 		_shedule = task.shedule();
 	}
@@ -807,6 +853,7 @@ public class OlympiadGame
 		{
 			return _task.getStatus();
 		}
+		
 		return BattleStatus.Begining;
 	}
 	
@@ -825,6 +872,7 @@ public class OlympiadGame
 		{
 			_log.error("", e);
 		}
+		
 		sheduleTask(new OlympiadGameTask(this, BattleStatus.Ending, 0, time));
 	}
 	

@@ -103,8 +103,8 @@ public class NpcInfoPoly extends L2GameServerPacket
 		writeC(_isInCombat ? 1 : 0);
 		writeC(_isAlikeDead ? 1 : 0);
 		writeC(_isSummoned ? 2 : 0); // invisible ?? 0=false 1=true 2=summoned
-										// (only works if model has a summon
-										// animation)
+		// (only works if model has a summon
+		// animation)
 		writeS(_name);
 		writeS(_title);
 		writeD(0);
@@ -122,10 +122,8 @@ public class NpcInfoPoly extends L2GameServerPacket
 		writeD(0x00);
 		writeD(0x00);
 		writeD(0x00);
-		
 		writeC(1); // show name
 		writeC(1); // show title
-		
 		writeD(0x00);
 		writeD(0x00);
 		writeD(0x00);
@@ -141,6 +139,7 @@ public class NpcInfoPoly extends L2GameServerPacket
 		if (_aveList != null)
 		{
 			writeD(_aveList.size());
+			
 			for (int i : _aveList)
 			{
 				writeD(i);

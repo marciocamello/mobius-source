@@ -66,6 +66,7 @@ public class HealWithCp extends Skill
 		{
 			return false;
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
@@ -78,11 +79,14 @@ public class HealWithCp extends Skill
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{
 		double hp = _power;
+		
 		if (!_staticPower)
 		{
 			hp += 0.1 * _power * Math.sqrt(activeChar.getMAtk(null, this) / 333);
 		}
+		
 		int sps = (isSSPossible()) && (getHpConsume() == 0) ? activeChar.getChargedSpiritShot() : 0;
+		
 		if (sps == 2)
 		{
 			hp *= 1.5;
@@ -91,11 +95,13 @@ public class HealWithCp extends Skill
 		{
 			hp *= 1.3;
 		}
+		
 		if ((activeChar.getSkillMastery(Integer.valueOf(getId())) == 3) && (!_staticPower))
 		{
 			activeChar.removeSkillMastery(Integer.valueOf(getId()));
 			hp *= 3.0;
 		}
+		
 		for (Creature target : targets)
 		{
 			if (target != null)
@@ -104,8 +110,10 @@ public class HealWithCp extends Skill
 				{
 					continue;
 				}
+				
 				double addToHp = 0.0;
 				double addToCp = 0.0;
+				
 				if (_staticPower)
 				{
 					addToHp = _power;
@@ -115,18 +123,22 @@ public class HealWithCp extends Skill
 					addToHp = (hp * (!_ignoreHpEff ? target.calcStat(Stats.HEAL_EFFECTIVNESS, 100.0, activeChar, this) : 100.0)) / 100.0;
 					addToHp = activeChar.calcStat(Stats.HEAL_POWER, addToHp, target, this);
 				}
+				
 				addToCp = addToHp;
 				addToHp = Math.max(0.0, Math.min(addToHp, ((target.calcStat(Stats.HP_LIMIT, null, null) * target.getMaxHp()) / 100.0) - target.getCurrentHp()));
 				addToCp -= addToHp;
 				addToCp = Math.max(0.0, Math.min(addToCp, ((target.calcStat(Stats.CP_LIMIT, null, null) * target.getMaxCp()) / 100.0) - target.getCurrentCp()));
+				
 				if (addToHp > 0.0)
 				{
 					target.setCurrentHp(addToHp + target.getCurrentHp(), false);
 				}
+				
 				if ((addToCp > 0.0) && (!target.isPet()))
 				{
 					target.setCurrentCp(addToCp + target.getCurrentCp(), true);
 				}
+				
 				if (getId() == 4051)
 				{
 					target.sendPacket(Msg.REJUVENATING_HP);
@@ -147,6 +159,7 @@ public class HealWithCp extends Skill
 				else if (target.isPet())
 				{
 					Player owner = target.getPlayer();
+					
 					if (owner != null)
 					{
 						if (activeChar == target)
@@ -163,9 +176,11 @@ public class HealWithCp extends Skill
 						}
 					}
 				}
+				
 				getEffects(activeChar, target, getActivateRate() > 0, false);
 			}
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());

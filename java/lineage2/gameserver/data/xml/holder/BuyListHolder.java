@@ -58,6 +58,7 @@ public class BuyListHolder
 		{
 			_instance = new BuyListHolder();
 		}
+		
 		return _instance;
 	}
 	
@@ -75,6 +76,7 @@ public class BuyListHolder
 	private BuyListHolder()
 	{
 		_lists = new HashMap<>();
+		
 		try
 		{
 			File filelists = new File(Config.DATAPACK_ROOT, "data/xml/other/merchant_filelists.xml");
@@ -84,6 +86,7 @@ public class BuyListHolder
 			Document doc1 = factory1.newDocumentBuilder().parse(filelists);
 			int counterFiles = 0;
 			int counterItems = 0;
+			
 			for (Node n1 = doc1.getFirstChild(); n1 != null; n1 = n1.getNextSibling())
 			{
 				if ("list".equalsIgnoreCase(n1.getNodeName()))
@@ -99,6 +102,7 @@ public class BuyListHolder
 							factory2.setIgnoringComments(true);
 							Document doc2 = factory2.newDocumentBuilder().parse(file);
 							counterFiles++;
+							
 							for (Node n2 = doc2.getFirstChild(); n2 != null; n2 = n2.getNextSibling())
 							{
 								if ("list".equalsIgnoreCase(n2.getNodeName()))
@@ -111,25 +115,31 @@ public class BuyListHolder
 											String[] shopIds = d2.getAttributes().getNamedItem("shop").getNodeValue().split(";");
 											String[] markups = new String[0];
 											boolean haveMarkups = false;
+											
 											if (d2.getAttributes().getNamedItem("markup") != null)
 											{
 												markups = d2.getAttributes().getNamedItem("markup").getNodeValue().split(";");
 												haveMarkups = true;
 											}
+											
 											int size = npcs.length;
+											
 											if (!haveMarkups)
 											{
 												markups = new String[size];
+												
 												for (int i = 0; i < size; i++)
 												{
 													markups[i] = "0";
 												}
 											}
+											
 											if ((shopIds.length != size) || (markups.length != size))
 											{
 												_log.warn("Do not correspond to the size of arrays");
 												continue;
 											}
+											
 											for (int n = 0; n < size; n++)
 											{
 												final int npc_id = Integer.parseInt(npcs[n]);
@@ -137,21 +147,25 @@ public class BuyListHolder
 												final double markup = npc_id > 0 ? 1. + (Double.parseDouble(markups[n]) / 100.) : 0.;
 												NpcTradeList tl = new NpcTradeList(shop_id);
 												tl.setNpcId(npc_id);
+												
 												for (Node i = d2.getFirstChild(); i != null; i = i.getNextSibling())
 												{
 													if ("item".equalsIgnoreCase(i.getNodeName()))
 													{
 														final int itemId = Integer.parseInt(i.getAttributes().getNamedItem("id").getNodeValue());
 														final ItemTemplate template = ItemHolder.getInstance().getTemplate(itemId);
+														
 														if (template == null)
 														{
 															_log.warn("Template not found for itemId: " + itemId + " for shop " + shop_id);
 															continue;
 														}
+														
 														if (!checkItem(template))
 														{
 															continue;
 														}
+														
 														counterItems++;
 														long price = i.getAttributes().getNamedItem("price") != null ? Long.parseLong(i.getAttributes().getNamedItem("price").getNodeValue()) : Math.round(template.getReferencePrice() * markup);
 														TradeItem item = new TradeItem();
@@ -166,6 +180,7 @@ public class BuyListHolder
 														tl.addItem(item);
 													}
 												}
+												
 												_lists.put(shop_id, tl);
 											}
 										}
@@ -176,6 +191,7 @@ public class BuyListHolder
 					}
 				}
 			}
+			
 			_log.info("TradeController: Loaded " + counterFiles + " file(s).");
 			_log.info("TradeController: Loaded " + counterItems + " Items.");
 			_log.info("TradeController: Loaded " + _lists.size() + " Buylists.");
@@ -198,6 +214,7 @@ public class BuyListHolder
 		{
 			return false;
 		}
+		
 		if (template.isEquipment() && !template.isForPet() && (Config.ALT_SHOP_PRICE_LIMITS.length > 0))
 		{
 			for (int i = 0; i < Config.ALT_SHOP_PRICE_LIMITS.length; i += 2)
@@ -208,10 +225,12 @@ public class BuyListHolder
 					{
 						return false;
 					}
+					
 					break;
 				}
 			}
 		}
+		
 		if (Config.ALT_SHOP_UNALLOWED_ITEMS.length > 0)
 		{
 			for (int i : Config.ALT_SHOP_UNALLOWED_ITEMS)
@@ -222,6 +241,7 @@ public class BuyListHolder
 				}
 			}
 		}
+		
 		return true;
 	}
 	
@@ -316,6 +336,7 @@ public class BuyListHolder
 		{
 			List<TradeItem> result = new ArrayList<>();
 			long currentTime = System.currentTimeMillis() / 60000L;
+			
 			for (TradeItem ti : tradeList)
 			{
 				if (ti.isCountLimited())
@@ -325,13 +346,16 @@ public class BuyListHolder
 						ti.setLastRechargeTime(ti.getLastRechargeTime() + ti.getRechargeTime());
 						ti.setCurrentValue(ti.getCount());
 					}
+					
 					if (ti.getCurrentValue() == 0)
 					{
 						continue;
 					}
 				}
+				
 				result.add(ti);
 			}
+			
 			return result;
 		}
 		
@@ -349,6 +373,7 @@ public class BuyListHolder
 					return ti;
 				}
 			}
+			
 			return null;
 		}
 		
@@ -361,6 +386,7 @@ public class BuyListHolder
 			for (TradeItem ti : buyList)
 			{
 				TradeItem ic = getItemByItemId(ti.getItemId());
+				
 				if (ic.isCountLimited())
 				{
 					ic.setCurrentValue(Math.max(ic.getCurrentValue() - ti.getCount(), 0));

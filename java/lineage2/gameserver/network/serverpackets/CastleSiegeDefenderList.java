@@ -65,23 +65,26 @@ public class CastleSiegeDefenderList extends L2GameServerPacket
 	{
 		_id = castle.getId();
 		_registrationValid = !castle.getSiegeEvent().isRegistrationOver() && (castle.getOwner() != null) ? 1 : 0;
-		
 		List<SiegeClanObject> defenders = castle.getSiegeEvent().getObjects(SiegeEvent.DEFENDERS);
 		List<SiegeClanObject> defendersWaiting = castle.getSiegeEvent().getObjects(CastleSiegeEvent.DEFENDERS_WAITING);
 		List<SiegeClanObject> defendersRefused = castle.getSiegeEvent().getObjects(CastleSiegeEvent.DEFENDERS_REFUSED);
 		_defenderClans = new ArrayList<>(defenders.size() + defendersWaiting.size() + defendersRefused.size());
+		
 		if (castle.getOwner() != null)
 		{
 			_defenderClans.add(new DefenderClan(castle.getOwner(), OWNER, 0));
 		}
+		
 		for (SiegeClanObject siegeClan : defenders)
 		{
 			_defenderClans.add(new DefenderClan(siegeClan.getClan(), ACCEPTED, (int) (siegeClan.getDate() / 1000L)));
 		}
+		
 		for (SiegeClanObject siegeClan : defendersWaiting)
 		{
 			_defenderClans.add(new DefenderClan(siegeClan.getClan(), WAITING, (int) (siegeClan.getDate() / 1000L)));
 		}
+		
 		for (SiegeClanObject siegeClan : defendersRefused)
 		{
 			_defenderClans.add(new DefenderClan(siegeClan.getClan(), REFUSE, (int) (siegeClan.getDate() / 1000L)));
@@ -96,13 +99,12 @@ public class CastleSiegeDefenderList extends L2GameServerPacket
 		writeD(0x00);
 		writeD(_registrationValid);
 		writeD(0x00);
+		writeD(_defenderClans.size());
+		writeD(_defenderClans.size());
 		
-		writeD(_defenderClans.size());
-		writeD(_defenderClans.size());
 		for (DefenderClan defenderClan : _defenderClans)
 		{
 			Clan clan = defenderClan._clan;
-			
 			writeD(clan.getClanId());
 			writeS(clan.getName());
 			writeS(clan.getLeaderName());
@@ -111,6 +113,7 @@ public class CastleSiegeDefenderList extends L2GameServerPacket
 			writeD(defenderClan._type);
 			writeD(clan.getAllyId());
 			Alliance alliance = clan.getAlliance();
+			
 			if (alliance != null)
 			{
 				writeS(alliance.getAllyName());

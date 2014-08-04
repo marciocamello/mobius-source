@@ -36,10 +36,12 @@ public class RequestCursedWeaponList extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Creature activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		activeChar.sendPacket(new ExCursedWeaponList());
 	}
 }

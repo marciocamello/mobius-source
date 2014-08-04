@@ -50,13 +50,16 @@ public class AwakenedMucrokian extends Fighter
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((actor == null) || actor.isDead())
 		{
 			return true;
 		}
+		
 		if (mob == null)
 		{
 			final List<NpcInstance> around = getActor().getAroundNpc(300, 300);
+			
 			if ((around != null) && !around.isEmpty())
 			{
 				for (NpcInstance npc : around)
@@ -71,6 +74,7 @@ public class AwakenedMucrokian extends Fighter
 				}
 			}
 		}
+		
 		if (mob != null)
 		{
 			actor.stopMove();
@@ -78,6 +82,7 @@ public class AwakenedMucrokian extends Fighter
 			getActor().getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, mob, 1);
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -90,6 +95,7 @@ public class AwakenedMucrokian extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((actor != null) && !actor.isDead())
 		{
 			if (attacker != null)
@@ -99,15 +105,18 @@ public class AwakenedMucrokian extends Fighter
 					if (Rnd.chance(25))
 					{
 						final Location pos = Location.findPointToStay(actor, 200, 300);
+						
 						if (GeoEngine.canMoveToCoord(actor.getX(), actor.getY(), actor.getZ(), pos.x, pos.y, pos.z, actor.getGeoIndex()))
 						{
 							actor.setRunning();
 						}
+						
 						addTaskMove(pos, false);
 					}
 				}
 			}
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 }

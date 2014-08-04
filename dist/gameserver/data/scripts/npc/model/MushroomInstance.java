@@ -33,7 +33,7 @@ import lineage2.gameserver.utils.Location;
 public class MushroomInstance extends MonsterInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -114,11 +114,14 @@ public class MushroomInstance extends MonsterInstance
 		{
 			return;
 		}
+		
 		Creature killer = attacker;
+		
 		if (killer.isPet() || killer.isServitor())
 		{
 			killer = killer.getPlayer();
 		}
+		
 		if (getNpcId() == RAINBOW_FROG)
 		{
 			ThreadPoolManager.getInstance().schedule(new TaskAfterDead(this, killer, RAINBOW_FROG_SKILL), 3000);
@@ -141,6 +144,7 @@ public class MushroomInstance extends MonsterInstance
 		else if (getNpcId() == FANTASY_MUSHROOM)
 		{
 			List<NpcInstance> around = getAroundNpc(700, 300);
+			
 			if ((around != null) && !around.isEmpty())
 			{
 				for (NpcInstance npc : around)
@@ -152,6 +156,7 @@ public class MushroomInstance extends MonsterInstance
 					}
 				}
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new TaskAfterDead(this, killer, FANTASY_MUSHROOM_SKILL), 4000);
 		}
 	}
@@ -197,10 +202,12 @@ public class MushroomInstance extends MonsterInstance
 			{
 				return;
 			}
+			
 			if ((_actor != null) && (_actor.getNpcId() == FANTASY_MUSHROOM))
 			{
 				_actor.broadcastPacket(new MagicSkillUse(_actor, _actor, _skill.getId(), _skill.getLevel(), 0, 0));
 				List<NpcInstance> around = _actor.getAroundNpc(200, 300);
+				
 				if ((around != null) && !around.isEmpty())
 				{
 					for (NpcInstance npc : around)
@@ -211,9 +218,11 @@ public class MushroomInstance extends MonsterInstance
 						}
 					}
 				}
+				
 				_actor.doDie(_killer);
 				return;
 			}
+			
 			if ((_killer != null) && _killer.isPlayer() && !_killer.isDead())
 			{
 				List<Creature> targets = new ArrayList<>();

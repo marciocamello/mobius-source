@@ -58,6 +58,7 @@ public class _134_TempleMissionary extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		int _state = st.getState();
+		
 		if (event.equalsIgnoreCase("glyvka_q0134_03.htm") && (_state == CREATED))
 		{
 			st.setCond(1);
@@ -89,6 +90,7 @@ public class _134_TempleMissionary extends Quest implements ScriptFile
 			st.giveItems(Roukes_Report, 1);
 			st.unset("Report");
 		}
+		
 		return event;
 	}
 	
@@ -96,75 +98,93 @@ public class _134_TempleMissionary extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int _state = st.getState();
+		
 		if (_state == COMPLETED)
 		{
 			return "completed";
 		}
+		
 		int npcId = npc.getNpcId();
+		
 		if (_state == CREATED)
 		{
 			if (npcId != Glyvka)
 			{
 				return "noquest";
 			}
+			
 			if (st.getPlayer().getLevel() < 35)
 			{
 				st.exitCurrentQuest(true);
 				return "glyvka_q0134_02.htm";
 			}
+			
 			st.setCond(0);
 			return "glyvka_q0134_01.htm";
 		}
+		
 		int cond = st.getCond();
+		
 		if ((npcId == Glyvka) && (_state == STARTED))
 		{
 			if (cond == 1)
 			{
 				return "glyvka_q0134_03.htm";
 			}
+			
 			if (cond == 5)
 			{
 				if (st.getInt("Report") == 1)
 				{
 					return "glyvka_q0134_09.htm";
 				}
+				
 				if (st.getQuestItemsCount(Roukes_Report) > 0)
 				{
 					st.takeItems(Roukes_Report, -1);
 					st.set("Report", "1");
 					return "glyvka_q0134_08.htm";
 				}
+				
 				return "noquest";
 			}
+			
 			return "glyvka_q0134_07.htm";
 		}
+		
 		if ((npcId == Rouke) && (_state == STARTED))
 		{
 			if (cond == 2)
 			{
 				return "scroll_seller_rouke_q0134_02.htm";
 			}
+			
 			if (cond == 5)
 			{
 				return "scroll_seller_rouke_q0134_10.htm";
 			}
+			
 			if (cond == 3)
 			{
 				long Tools = st.getQuestItemsCount(Giants_Experimental_Tool_Fragment) / 10;
+				
 				if (Tools < 1)
 				{
 					return "scroll_seller_rouke_q0134_04.htm";
 				}
+				
 				st.takeItems(Giants_Experimental_Tool_Fragment, Tools * 10);
 				st.giveItems(Giants_Experimental_Tool, Tools);
 				return "scroll_seller_rouke_q0134_05.htm";
 			}
+			
 			if (cond == 4)
 			{
 				if (st.getInt("Report") == 1)
 				{
 					return "scroll_seller_rouke_q0134_07.htm";
 				}
+				
 				if (st.getQuestItemsCount(Giants_Technology_Report) > 2)
 				{
 					st.takeItems(Giants_Experimental_Tool_Fragment, -1);
@@ -173,9 +193,11 @@ public class _134_TempleMissionary extends Quest implements ScriptFile
 					st.set("Report", "1");
 					return "scroll_seller_rouke_q0134_06.htm";
 				}
+				
 				return "noquest";
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -187,6 +209,7 @@ public class _134_TempleMissionary extends Quest implements ScriptFile
 			if (npc.getNpcId() == Cruma_Marshlands_Traitor)
 			{
 				qs.giveItems(Giants_Technology_Report, 1);
+				
 				if (qs.getQuestItemsCount(Giants_Technology_Report) < 3)
 				{
 					qs.playSound(SOUND_ITEMGET);
@@ -207,12 +230,14 @@ public class _134_TempleMissionary extends Quest implements ScriptFile
 			else
 			{
 				qs.takeItems(Giants_Experimental_Tool, 1);
+				
 				if (Rnd.chance(Cruma_Marshlands_Traitor_spawnchance))
 				{
 					qs.addSpawn(Cruma_Marshlands_Traitor, qs.getPlayer().getX(), qs.getPlayer().getY(), qs.getPlayer().getZ(), 0, 100, 900000);
 				}
 			}
 		}
+		
 		return null;
 	}
 	

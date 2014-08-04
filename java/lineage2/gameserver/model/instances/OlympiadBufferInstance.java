@@ -31,7 +31,7 @@ import gnu.trove.set.hash.TIntHashSet;
 public class OlympiadBufferInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -74,10 +74,12 @@ public class OlympiadBufferInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (buffs.size() > 4)
 		{
 			showChatWindow(player, 1);
 		}
+		
 		if (command.startsWith("Buff"))
 		{
 			int id = 0;
@@ -92,6 +94,7 @@ public class OlympiadBufferInstance extends NpcInstance
 			broadcastPacket(new MagicSkillUse(this, player, id, lvl, 0, 0));
 			callSkill(skill, target, true);
 			buffs.add(id);
+			
 			if (buffs.size() > 4)
 			{
 				showChatWindow(player, 1);
@@ -118,6 +121,7 @@ public class OlympiadBufferInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String pom;
+		
 		if (val == 0)
 		{
 			pom = "buffer";
@@ -126,6 +130,7 @@ public class OlympiadBufferInstance extends NpcInstance
 		{
 			pom = "buffer-" + val;
 		}
+		
 		return "olympiad/" + pom + ".htm";
 	}
 }

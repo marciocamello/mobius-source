@@ -60,6 +60,7 @@ public class _360_PlunderTheirSupplies extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("guard_coleman_q0360_04.htm"))
 		{
 			st.setCond(1);
@@ -71,6 +72,7 @@ public class _360_PlunderTheirSupplies extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -81,6 +83,7 @@ public class _360_PlunderTheirSupplies extends Quest implements ScriptFile
 		int id = st.getState();
 		long docs = st.getQuestItemsCount(RECIPE_OF_SUPPLY);
 		long supplies = st.getQuestItemsCount(SUPPLY_ITEM);
+		
 		if (id != STARTED)
 		{
 			if (st.getPlayer().getLevel() >= 52)
@@ -104,6 +107,7 @@ public class _360_PlunderTheirSupplies extends Quest implements ScriptFile
 		{
 			htmltext = "guard_coleman_q0360_05.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -111,11 +115,13 @@ public class _360_PlunderTheirSupplies extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		if (((npcId == TAIK_SEEKER) && Rnd.chance(ITEM_DROP_SEEKER)) || ((npcId == TAIK_LEADER) && Rnd.chance(ITEM_DROP_LEADER)))
 		{
 			st.giveItems(SUPPLY_ITEM, 1);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		if (Rnd.chance(DOCUMENT_DROP))
 		{
 			if (st.getQuestItemsCount(SUSPICIOUS_DOCUMENT) < 4)
@@ -127,8 +133,10 @@ public class _360_PlunderTheirSupplies extends Quest implements ScriptFile
 				st.takeItems(SUSPICIOUS_DOCUMENT, -1);
 				st.giveItems(RECIPE_OF_SUPPLY, 1);
 			}
+			
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		return null;
 	}
 }

@@ -58,10 +58,12 @@ public class AdminScripts implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		if (!activeChar.isGM())
 		{
 			return false;
 		}
+		
 		switch (command)
 		{
 			case admin_scripts_reload:
@@ -70,10 +72,13 @@ public class AdminScripts implements IAdminCommandHandler
 				{
 					return false;
 				}
+				
 				String param = wordList[1];
+				
 				if (param.equalsIgnoreCase("all"))
 				{
 					activeChar.sendMessage("Scripts reload starting...");
+					
 					if (!Scripts.getInstance().reload())
 					{
 						activeChar.sendMessage("Scripts reloaded with errors. Loaded " + Scripts.getInstance().getClasses().size() + " classes.");
@@ -86,6 +91,7 @@ public class AdminScripts implements IAdminCommandHandler
 				else if (param.equalsIgnoreCase("items"))
 				{
 					activeChar.sendMessage("EtcItem reload starting...");
+					
 					try
 					{
 						EtcItemParser.getInstance().reload();
@@ -95,7 +101,9 @@ public class AdminScripts implements IAdminCommandHandler
 						activeChar.sendMessage("EtcItem reloaded with errors.");
 						return false;
 					}
+					
 					activeChar.sendMessage("WeaponItem reload starting...");
+					
 					try
 					{
 						WeaponItemParser.getInstance().reload();
@@ -105,7 +113,9 @@ public class AdminScripts implements IAdminCommandHandler
 						activeChar.sendMessage("WeaponItem reloaded with errors.");
 						return false;
 					}
+					
 					activeChar.sendMessage("ArmorItem reload starting...");
+					
 					try
 					{
 						ArmorItemParser.getInstance().reload();
@@ -115,6 +125,7 @@ public class AdminScripts implements IAdminCommandHandler
 						activeChar.sendMessage("ArmorItem reloaded with errors.");
 						return false;
 					}
+					
 					activeChar.sendMessage("Items successfully reloaded.");
 					break;
 				}
@@ -126,13 +137,17 @@ public class AdminScripts implements IAdminCommandHandler
 				{
 					activeChar.sendMessage("Script(s) successfully reloaded.");
 				}
+				
 				break;
+			
 			case admin_sqreload:
 				if (wordList.length < 2)
 				{
 					return false;
 				}
+				
 				String quest = wordList[1];
+				
 				if (!Scripts.getInstance().reload("quests/" + quest))
 				{
 					activeChar.sendMessage("Quest \"" + quest + "\" reloaded with errors.");
@@ -141,9 +156,11 @@ public class AdminScripts implements IAdminCommandHandler
 				{
 					activeChar.sendMessage("Quest \"" + quest + "\" successfully reloaded.");
 				}
+				
 				reloadQuestStates(activeChar);
 				break;
 		}
+		
 		return true;
 	}
 	
@@ -157,6 +174,7 @@ public class AdminScripts implements IAdminCommandHandler
 		{
 			p.removeQuestState(qs.getQuest().getName());
 		}
+		
 		Quest.restoreQuestStates(p);
 	}
 	

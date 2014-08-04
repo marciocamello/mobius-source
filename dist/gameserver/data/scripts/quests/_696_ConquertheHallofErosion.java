@@ -41,6 +41,7 @@ public class _696_ConquertheHallofErosion extends Quest implements ScriptFile
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return event;
 	}
 	
@@ -51,6 +52,7 @@ public class _696_ConquertheHallofErosion extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		Player player = st.getPlayer();
 		int cond = st.getCond();
+		
 		if (npcId == TEPIOS)
 		{
 			if (cond == 0)
@@ -82,6 +84,7 @@ public class _696_ConquertheHallofErosion extends Quest implements ScriptFile
 						st.takeAllItems(MARK_OF_KEUCEREUS_STAGE_1);
 						st.giveItems(MARK_OF_KEUCEREUS_STAGE_2, 1);
 					}
+					
 					htmltext = "tepios_q696_5.htm";
 					st.playSound(SOUND_FINISH);
 					st.exitCurrentQuest(true);
@@ -92,6 +95,7 @@ public class _696_ConquertheHallofErosion extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -102,6 +106,7 @@ public class _696_ConquertheHallofErosion extends Quest implements ScriptFile
 		{
 			st.set("cohemenesDone", 1);
 		}
+		
 		return null;
 	}
 	

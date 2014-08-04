@@ -89,6 +89,7 @@ public final class SubClassInfo
 		Set<ClassId> availSubs = null;
 		Set<ClassId> availSubs1 = null;
 		Race race = player.getRace();
+		
 		if (race == Race.kamael)
 		{
 			availSubs = EnumSet.copyOf(KAMAEL_SUBCLASS_SET);
@@ -96,6 +97,7 @@ public final class SubClassInfo
 		else
 		{
 			ClassId classId = player.getClassId();
+			
 			if ((classId.isOfLevel(ClassLevel.Third)) || (classId.isOfLevel(ClassLevel.Fourth)) || (classId.isOfLevel(ClassLevel.Awaking)))
 			{
 				availSubs = EnumSet.copyOf(MAIN_SUBCLASS_SET);
@@ -104,25 +106,31 @@ public final class SubClassInfo
 				availSubs.remove(classId);
 				availSubs1.removeAll(BANNED_SUBCLASSES);
 				availSubs1.remove(classId);
+				
 				switch (race.ordinal())
 				{
 					case 1:
 						availSubs.removeAll(getSet(Race.darkelf, ClassLevel.Third));
 						break;
+					
 					case 2:
 						availSubs.removeAll(getSet(Race.elf, ClassLevel.Third));
 						break;
 				}
+				
 				switch (race.ordinal())
 				{
 					case 1:
 						availSubs1.removeAll(getSet(Race.darkelf, ClassLevel.Awaking));
 						break;
+					
 					case 2:
 						availSubs1.removeAll(getSet(Race.elf, ClassLevel.Awaking));
 						break;
 				}
+				
 				Set<?> unavailableClasses = SUBCLASS_SET_MAP.get(classId);
+				
 				if (unavailableClasses != null)
 				{
 					availSubs.removeAll(unavailableClasses);
@@ -130,13 +138,17 @@ public final class SubClassInfo
 				}
 			}
 		}
+		
 		int charClassId = player.getBaseClassId();
 		ClassId currClass = ClassId.VALUES[charClassId];
+		
 		if (availSubs == null)
 		{
 			return Collections.emptySet();
 		}
+		
 		availSubs.remove(currClass);
+		
 		for (ClassId availSub : availSubs)
 		{
 			for (SubClass subClass : player.getSubClassList().values())
@@ -146,36 +158,45 @@ public final class SubClassInfo
 					availSubs.remove(availSub);
 					continue;
 				}
+				
 				ClassId parent = ClassId.VALUES[availSub.ordinal()].getParent(player.getSex());
+				
 				if ((parent != null) && (parent.getId() == subClass.getClassId()))
 				{
 					availSubs.remove(availSub);
 					continue;
 				}
+				
 				ClassId subParent = ClassId.VALUES[subClass.getClassId()].getParent(player.getSex());
+				
 				if ((subParent != null) && (subParent.getId() == availSub.getId()))
 				{
 					availSubs.remove(availSub);
 				}
+				
 				if ((availSub.getType2() == ClassId.VALUES[subClass.getClassId()].getType2()) && subClass.isBase())
 				{
 					availSubs.remove(availSub);
 				}
 			}
+			
 			if (availSub.isOfRace(Race.kamael))
 			{
 				if ((player.getSex() == 1) && (availSub == ClassId.M_SOUL_BREAKER))
 				{
 					availSubs.remove(availSub);
 				}
+				
 				if ((player.getSex() == 0) && (availSub == ClassId.F_SOUL_BREAKER))
 				{
 					availSubs.remove(availSub);
 				}
+				
 				if (((currClass == ClassId.BERSERKER) || (currClass == ClassId.DOOMBRINGER) || (currClass == ClassId.ARBALESTER) || (currClass == ClassId.TRICKSTER)) && (((player.getSex() == 1) && (availSub == ClassId.M_SOUL_BREAKER)) || ((player.getSex() == 0) && (availSub == ClassId.F_SOUL_BREAKER))))
 				{
 					availSubs.remove(availSub);
 				}
+				
 				if (availSub == ClassId.INSPECTOR)
 				{
 					if (player.getSubClassList().size() < (isNew ? 3 : 4))
@@ -185,6 +206,7 @@ public final class SubClassInfo
 				}
 			}
 		}
+		
 		return availSubs;
 	}
 	
@@ -197,6 +219,7 @@ public final class SubClassInfo
 	public static EnumSet<ClassId> getSet(Race race, ClassLevel level)
 	{
 		EnumSet<ClassId> allOf = EnumSet.noneOf(ClassId.class);
+		
 		for (ClassId classId : EnumSet.allOf(ClassId.class))
 		{
 			if (((race == null) || (classId.isOfRace(race))) && ((level == null) || (classId.isOfLevel(level))))
@@ -204,6 +227,7 @@ public final class SubClassInfo
 				allOf.add(classId);
 			}
 		}
+		
 		return allOf;
 	}
 	
@@ -219,14 +243,17 @@ public final class SubClassInfo
 		{
 			return false;
 		}
+		
 		if (((c1.isOfRace(Race.elf)) && (c2.isOfRace(Race.darkelf))) || ((c1.isOfRace(Race.darkelf)) && (c2.isOfRace(Race.elf))))
 		{
 			return false;
 		}
+		
 		if ((c1 == ClassId.OVERLORD) || (c1 == ClassId.WARSMITH) || (c2 == ClassId.OVERLORD) || (c2 == ClassId.WARSMITH))
 		{
 			return false;
 		}
+		
 		return SUBCLASS_SET_MAP.get(c1) != SUBCLASS_SET_MAP.get(c2);
 	}
 	

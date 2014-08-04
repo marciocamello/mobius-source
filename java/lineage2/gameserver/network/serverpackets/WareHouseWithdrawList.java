@@ -39,20 +39,23 @@ public class WareHouseWithdrawList extends L2GameServerPacket
 	{
 		_adena = player.getAdena();
 		_type = type.ordinal();
-		
 		ItemInstance[] items;
+		
 		switch (type)
 		{
 			case PRIVATE:
 				items = player.getWarehouse().getItems(clss);
 				break;
+			
 			case FREIGHT:
 				items = player.getFreight().getItems(clss);
 				break;
+			
 			case CLAN:
 			case CASTLE:
 				items = player.getClan().getWarehouse().getItems(clss);
 				break;
+			
 			default:
 				_itemList = Collections.emptyList();
 				return;
@@ -60,10 +63,12 @@ public class WareHouseWithdrawList extends L2GameServerPacket
 		
 		_itemList = new ArrayList<>(items.length);
 		ArrayUtils.eqSort(items, ItemClassComparator.getInstance());
+		
 		for (ItemInstance item : items)
 		{
 			_itemList.add(new ItemInfo(item));
 		}
+		
 		_inventoryUsedSlots = player.getInventory().getSize();
 	}
 	
@@ -77,6 +82,7 @@ public class WareHouseWithdrawList extends L2GameServerPacket
 		writeH(1);
 		writeD(0);
 		writeD(_inventoryUsedSlots);
+		
 		for (ItemInfo item : _itemList)
 		{
 			writeItemInfo(item);

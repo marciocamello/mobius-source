@@ -192,6 +192,7 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 					_state.update();
 					_socialTask = ThreadPoolManager.getInstance().schedule(new AntharasSpawn(2), 2000);
 					break;
+				
 				case 2:
 					for (Player pc : _players)
 					{
@@ -205,10 +206,13 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new AntharasSpawn(3), 3000);
 					break;
+				
 				case 3:
 					_antharas.broadcastPacket(new SocialAction(_antharas.getObjectId(), 1));
+					
 					for (Player pc : _players)
 					{
 						if (pc.getDistance(_antharas) <= _distance)
@@ -221,10 +225,13 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new AntharasSpawn(4), 10000);
 					break;
+				
 				case 4:
 					_antharas.broadcastPacket(new SocialAction(_antharas.getObjectId(), 2));
+					
 					for (Player pc : _players)
 					{
 						if (pc.getDistance(_antharas) <= _distance)
@@ -237,8 +244,10 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new AntharasSpawn(5), 200);
 					break;
+				
 				case 5:
 					for (Player pc : _players)
 					{
@@ -252,8 +261,10 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new AntharasSpawn(6), 10800);
 					break;
+				
 				case 6:
 					for (Player pc : _players)
 					{
@@ -267,13 +278,16 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new AntharasSpawn(7), 7000);
 					break;
+				
 				case 7:
 					for (Player pc : _players)
 					{
 						pc.leaveMovieMode();
 					}
+					
 					broadcastScreenMessage(NpcString.ANTHARAS_YOU_CANNOT_HOPE_TO_DEFEAT_ME);
 					_antharas.broadcastPacket(new PlaySound(PlaySound.Type.MUSIC, "BS02_A", 1, _antharas.getObjectId(), _antharas.getLoc()));
 					_antharas.setAggroRange(_antharas.getTemplate().aggroRange);
@@ -281,6 +295,7 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 					_antharas.moveToLocation(new Location(179011, 114871, -7704), 0, false);
 					_sleepCheckTask = ThreadPoolManager.getInstance().schedule(new CheckLastAttack(), 600000);
 					break;
+				
 				case 8:
 					for (Player pc : _players)
 					{
@@ -294,14 +309,17 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 							pc.leaveMovieMode();
 						}
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new AntharasSpawn(9), 13000);
 					break;
+				
 				case 9:
 					for (Player pc : _players)
 					{
 						pc.leaveMovieMode();
 						pc.altOnMagicUseTimer(pc, SkillTable.getInstance().getInfo(23312, 1));
 					}
+					
 					broadcastScreenMessage(NpcString.ANTHARAS_THE_EVIL_LAND_DRAGON_ANTHARAS_DEFEATED);
 					onAntharasDie();
 					break;
@@ -451,6 +469,7 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
@@ -463,6 +482,7 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		{
 			return;
 		}
+		
 		Dying = true;
 		_state.setRespawnDate(getRespawnInterval());
 		_state.setState(EpicBossState.State.INTERVAL);
@@ -497,18 +517,21 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 	private static void setIntervalEndTask()
 	{
 		setUnspawn();
+		
 		if (_state.getState().equals(EpicBossState.State.ALIVE))
 		{
 			_state.setState(EpicBossState.State.NOTSPAWN);
 			_state.update();
 			return;
 		}
+		
 		if (!_state.getState().equals(EpicBossState.State.INTERVAL))
 		{
 			_state.setRespawnDate(getRespawnInterval());
 			_state.setState(EpicBossState.State.INTERVAL);
 			_state.update();
 		}
+		
 		_intervalEndTask = ThreadPoolManager.getInstance().schedule(new IntervalEnd(), _state.getInterval());
 	}
 	
@@ -518,44 +541,54 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 	private static void setUnspawn()
 	{
 		banishForeigners();
+		
 		if (_antharas != null)
 		{
 			_antharas.deleteMe();
 		}
+		
 		for (NpcInstance npc : _spawnedMinions)
 		{
 			npc.deleteMe();
 		}
+		
 		if (_teleCube != null)
 		{
 			_teleCube.deleteMe();
 		}
+		
 		_entryLocked = false;
+		
 		if (_monsterSpawnTask != null)
 		{
 			_monsterSpawnTask.cancel(false);
 			_monsterSpawnTask = null;
 		}
+		
 		if (_intervalEndTask != null)
 		{
 			_intervalEndTask.cancel(false);
 			_intervalEndTask = null;
 		}
+		
 		if (_socialTask != null)
 		{
 			_socialTask.cancel(false);
 			_socialTask = null;
 		}
+		
 		if (_moveAtRandomTask != null)
 		{
 			_moveAtRandomTask.cancel(false);
 			_moveAtRandomTask = null;
 		}
+		
 		if (_sleepCheckTask != null)
 		{
 			_sleepCheckTask.cancel(false);
 			_sleepCheckTask = null;
 		}
+		
 		if (_onAnnihilatedTask != null)
 		{
 			_onAnnihilatedTask.cancel(false);
@@ -572,10 +605,12 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		_zone = ReflectionUtils.getZone("[antharas_epic]");
 		CharListenerList.addGlobal(this);
 		_log.info("AntharasManager: State of Antharas is " + _state.getState() + ".");
+		
 		if (!_state.getState().equals(EpicBossState.State.NOTSPAWN))
 		{
 			setIntervalEndTask();
 		}
+		
 		_log.info("AntharasManager: Next spawn date of Antharas is " + TimeUtils.toSimpleFormat(_state.getRespawnDate()) + ".");
 	}
 	
@@ -585,6 +620,7 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 	static void sleep()
 	{
 		setUnspawn();
+		
 		if (_state.getState().equals(EpicBossState.State.ALIVE))
 		{
 			_state.setState(EpicBossState.State.NOTSPAWN);
@@ -609,6 +645,7 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		{
 			_monsterSpawnTask = ThreadPoolManager.getInstance().schedule(new AntharasSpawn(1), FWA_APPTIMEOFANTHARAS);
 		}
+		
 		_entryLocked = true;
 	}
 	
@@ -643,32 +680,39 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 		{
 			return;
 		}
+		
 		if ((ccleader.getParty() == null) || !ccleader.getParty().isInCommandChannel())
 		{
 			ccleader.sendPacket(Msg.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_IN_A_CURRENT_COMMAND_CHANNEL);
 			return;
 		}
+		
 		final CommandChannel cc = ccleader.getParty().getCommandChannel();
+		
 		if (!cc.getChannelLeader().equals(ccleader))
 		{
 			ccleader.sendPacket(Msg.ONLY_THE_ALLIANCE_CHANNEL_LEADER_CAN_ATTEMPT_ENTRY);
 			return;
 		}
+		
 		if (cc.getMemberCount() > 200)
 		{
 			ccleader.sendMessage("The maximum of 200 players can invade the Antharas Nest");
 			return;
 		}
+		
 		if (_state.getState() != EpicBossState.State.NOTSPAWN)
 		{
 			ccleader.sendMessage("Antharas is still reborning. You cannot invade the nest now");
 			return;
 		}
+		
 		if (_entryLocked || (_state.getState() == EpicBossState.State.ALIVE))
 		{
 			ccleader.sendMessage("Antharas has already been reborned and is being attacked. The entrance is sealed.");
 			return;
 		}
+		
 		for (Player p : cc)
 		{
 			if (p.isDead() || p.isFlying() || p.isCursedWeaponEquipped() || (p.getInventory().getCountOf(PORTAL_STONE) < 1) || !p.isInRange(ccleader, 500))
@@ -677,10 +721,12 @@ public class AntharasManager extends Functions implements ScriptFile, OnDeathLis
 				return;
 			}
 		}
+		
 		for (Player p : cc)
 		{
 			p.teleToLocation(TELEPORT_POSITION);
 		}
+		
 		setAntharasSpawnTask();
 	}
 	

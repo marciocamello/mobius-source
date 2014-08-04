@@ -36,6 +36,7 @@ public class SummonStatsChangeRecorder extends CharStatsChangeRecorder<Summon>
 	protected void onSendChanges()
 	{
 		super.onSendChanges();
+		
 		if ((_changes & SEND_CHAR_INFO) == SEND_CHAR_INFO)
 		{
 			_activeChar.sendPetInfo();

@@ -51,6 +51,7 @@ public class _10320_LetsGototheCentralSquare extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -59,6 +60,7 @@ public class _10320_LetsGototheCentralSquare extends Quest implements ScriptFile
 			st.showTutorialHTML(TutorialShowHtml.QT_001, TutorialShowHtml.TYPE_WINDOW);
 			htmltext = "0-3.htm";
 		}
+		
 		if (event.equalsIgnoreCase("qet_rev"))
 		{
 			htmltext = "1-2.htm";
@@ -67,6 +69,7 @@ public class _10320_LetsGototheCentralSquare extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -76,6 +79,7 @@ public class _10320_LetsGototheCentralSquare extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == panteleon)
 		{
 			if (st.isCompleted())
@@ -106,6 +110,7 @@ public class _10320_LetsGototheCentralSquare extends Quest implements ScriptFile
 				htmltext = "1-1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

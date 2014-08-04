@@ -55,16 +55,19 @@ public class _10374_ThatPlaceSuccubus extends Quest implements ScriptFile
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		if (event.equalsIgnoreCase("31588-02.htm"))
 		{
 			st.setCond(2);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		if (event.equalsIgnoreCase("32140-02.htm"))
 		{
 			st.setCond(3);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return event;
 	}
 	
@@ -73,6 +76,7 @@ public class _10374_ThatPlaceSuccubus extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == NPC_ANDREI)
 		{
 			switch (st.getState())
@@ -80,6 +84,7 @@ public class _10374_ThatPlaceSuccubus extends Quest implements ScriptFile
 				case COMPLETED:
 					htmltext = "31292-06.htm";
 					break;
+				
 				case CREATED:
 					if (st.getPlayer().getLevel() >= 80)
 					{
@@ -97,7 +102,9 @@ public class _10374_ThatPlaceSuccubus extends Quest implements ScriptFile
 					{
 						htmltext = "31292-05.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					if (st.getCond() == 1)
 					{
@@ -141,6 +148,7 @@ public class _10374_ThatPlaceSuccubus extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -151,6 +159,7 @@ public class _10374_ThatPlaceSuccubus extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		if (updateKill(npc, st))
 		{
 			st.unset(Mirage_Fighter);
@@ -161,6 +170,7 @@ public class _10374_ThatPlaceSuccubus extends Quest implements ScriptFile
 			st.setCond(4);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return null;
 	}
 	

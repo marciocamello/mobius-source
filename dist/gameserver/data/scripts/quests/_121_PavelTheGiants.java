@@ -53,6 +53,7 @@ public class _121_PavelTheGiants extends Quest implements ScriptFile
 			st.addExpAndSp(1959460, 2039940);
 			st.exitCurrentQuest(false);
 		}
+		
 		return event;
 	}
 	
@@ -63,6 +64,7 @@ public class _121_PavelTheGiants extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int id = st.getState();
 		int cond = st.getCond();
+		
 		if ((id == CREATED) && (npcId == NEWYEAR))
 		{
 			if (st.getPlayer().getLevel() >= 70)
@@ -89,6 +91,7 @@ public class _121_PavelTheGiants extends Quest implements ScriptFile
 				htmltext = "head_blacksmith_newyear_q0121_0105.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

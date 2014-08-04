@@ -45,6 +45,7 @@ public class _197_SevenSignsTheSacredBookofSeal extends Quest implements ScriptF
 	{
 		Player player = st.getPlayer();
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("wood_q197_2.htm"))
 		{
 			st.setCond(1);
@@ -95,6 +96,7 @@ public class _197_SevenSignsTheSacredBookofSeal extends Quest implements ScriptF
 				return "subclass_forbidden.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -105,9 +107,11 @@ public class _197_SevenSignsTheSacredBookofSeal extends Quest implements ScriptF
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		String htmltext = "noquest";
+		
 		if (npcId == Wood)
 		{
 			QuestState qs = player.getQuestState(_196_SevenSignsSealoftheEmperor.class);
+			
 			if (cond == 0)
 			{
 				if ((player.getLevel() >= 79) && (qs != null) && qs.isCompleted())
@@ -184,6 +188,7 @@ public class _197_SevenSignsTheSacredBookofSeal extends Quest implements ScriptF
 				htmltext = "sofia_q197_3.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -192,10 +197,12 @@ public class _197_SevenSignsTheSacredBookofSeal extends Quest implements ScriptF
 	{
 		int cond = st.getCond();
 		Player player = st.getPlayer();
+		
 		if (player == null)
 		{
 			return null;
 		}
+		
 		if ((npc.getNpcId() == ShilensEvilThoughts) && (cond == 3))
 		{
 			st.setCond(4);
@@ -203,6 +210,7 @@ public class _197_SevenSignsTheSacredBookofSeal extends Quest implements ScriptF
 			st.giveItems(PieceofDoubt, 1);
 			st.set("evilthought", 2);
 		}
+		
 		return null;
 	}
 	

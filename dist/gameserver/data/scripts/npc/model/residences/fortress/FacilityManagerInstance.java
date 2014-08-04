@@ -27,7 +27,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public abstract class FacilityManagerInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -52,21 +52,25 @@ public abstract class FacilityManagerInstance extends NpcInstance
 	protected boolean buyFacility(Player player, int type, int lvl, long price)
 	{
 		Fortress fortress = getFortress();
+		
 		if ((player.getClanPrivileges() & Clan.CP_CS_MANAGE_SIEGE) != Clan.CP_CS_MANAGE_SIEGE)
 		{
 			showChatWindow(player, "residence2/fortress/fortress_not_authorized.htm");
 			return false;
 		}
+		
 		if (fortress.getContractState() != Fortress.CONTRACT_WITH_CASTLE)
 		{
 			showChatWindow(player, "residence2/fortress/fortress_supply_officer005.htm");
 			return false;
 		}
+		
 		if (fortress.getFacilityLevel(type) >= lvl)
 		{
 			showChatWindow(player, "residence2/fortress/fortress_already_upgraded.htm");
 			return false;
 		}
+		
 		if (player.consumeItem(ItemTemplate.ITEM_ID_ADENA, price))
 		{
 			fortress.setFacilityLevel(type, lvl);
@@ -75,6 +79,7 @@ public abstract class FacilityManagerInstance extends NpcInstance
 			showChatWindow(player, "residence2/fortress/fortress_supply_officer006.htm");
 			return true;
 		}
+		
 		showChatWindow(player, "residence2/fortress/fortress_not_enough_money.htm");
 		return false;
 	}

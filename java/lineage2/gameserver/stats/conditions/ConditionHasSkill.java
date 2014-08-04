@@ -52,6 +52,7 @@ public final class ConditionHasSkill extends Condition
 		{
 			return false;
 		}
+		
 		return env.character.getSkillLevel(_id) >= _level;
 	}
 }

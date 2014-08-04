@@ -45,10 +45,12 @@ public class AdminEvents implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		if (!activeChar.getPlayerAccess().IsEventGm)
 		{
 			return false;
 		}
+		
 		switch (command)
 		{
 			case admin_events:
@@ -60,8 +62,10 @@ public class AdminEvents implements IAdminCommandHandler
 				{
 					activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/events/" + wordList[1].trim()));
 				}
+				
 				break;
 		}
+		
 		return true;
 	}
 	

@@ -67,11 +67,14 @@ public class FriendList
 		{
 			return;
 		}
+		
 		int objectId = removeFriend0(name);
+		
 		if (objectId > 0)
 		{
 			Player friendChar = World.getPlayer(objectId);
 			_owner.sendPacket(new SystemMessage(SystemMessage.S1_HAS_BEEN_REMOVED_FROM_YOUR_FRIEND_LIST).addString(name), new L2Friend(name, false, friendChar != null, objectId));
+			
 			if (friendChar != null)
 			{
 				friendChar.sendPacket(new SystemMessage(SystemMessage.S1__HAS_BEEN_DELETED_FROM_YOUR_FRIENDS_LIST).addString(_owner.getName()), new L2Friend(_owner, false));
@@ -92,18 +95,23 @@ public class FriendList
 		for (Friend friend : _friendList.values())
 		{
 			Player friendPlayer = GameObjectsStorage.getPlayer(friend.getObjectId());
+			
 			if (friendPlayer != null)
 			{
 				Friend thisFriend = friendPlayer.getFriendList().getList().get(_owner.getObjectId());
+				
 				if (thisFriend == null)
 				{
 					continue;
 				}
+				
 				thisFriend.update(_owner, login);
+				
 				if (login)
 				{
 					friendPlayer.sendPacket(new SystemMessage(SystemMessage.S1_FRIEND_HAS_LOGGED_IN).addString(_owner.getName()));
 				}
+				
 				friendPlayer.sendPacket(new L2FriendStatus(_owner, login));
 				friend.update(friendPlayer, login);
 			}
@@ -131,7 +139,9 @@ public class FriendList
 		{
 			return 0;
 		}
+		
 		Integer objectId = 0;
+		
 		for (Map.Entry<Integer, Friend> entry : _friendList.entrySet())
 		{
 			if (name.equalsIgnoreCase(entry.getValue().getName()))
@@ -140,12 +150,14 @@ public class FriendList
 				break;
 			}
 		}
+		
 		if (objectId > 0)
 		{
 			_friendList.remove(objectId);
 			CharacterFriendDAO.getInstance().delete(_owner, objectId);
 			return objectId;
 		}
+		
 		return 0;
 	}
 	

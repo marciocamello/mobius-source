@@ -51,9 +51,9 @@ public class ZakenNight extends Reflection
 		@Override
 		public void runImpl()
 		{
-			
 			Location rndLoc = zakenspawn[Rnd.get(zakenspawn.length)];
 			_r.addSpawnWithoutRespawn(Zaken, rndLoc, 0);
+			
 			for (int i = 0; i < 4; i++)
 			{
 				_r.addSpawnWithoutRespawn(20845, rndLoc, 200);

@@ -41,6 +41,7 @@ public final class EffectSilentMove extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if (_effected.isPlayable())
 		{
 			((Playable) _effected).startSilentMoving();
@@ -54,6 +55,7 @@ public final class EffectSilentMove extends Effect
 	public void onExit()
 	{
 		super.onExit();
+		
 		if (_effected.isPlayable())
 		{
 			((Playable) _effected).stopSilentMoving();
@@ -71,17 +73,21 @@ public final class EffectSilentMove extends Effect
 		{
 			return false;
 		}
+		
 		if (!getSkill().isToggle())
 		{
 			return false;
 		}
+		
 		double manaDam = calc();
+		
 		if (manaDam > _effected.getCurrentMp())
 		{
 			_effected.sendPacket(Msg.NOT_ENOUGH_MP);
 			_effected.sendPacket(new SystemMessage(SystemMessage.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED).addSkillName(getSkill().getId(), getSkill().getDisplayLevel()));
 			return false;
 		}
+		
 		_effected.reduceCurrentMp(manaDam, null);
 		return true;
 	}

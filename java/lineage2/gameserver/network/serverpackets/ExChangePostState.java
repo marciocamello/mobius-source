@@ -33,6 +33,7 @@ public class ExChangePostState extends L2GameServerPacket
 		writeEx(0xB4);
 		writeD(_receivedBoard ? 1 : 0);
 		writeD(_mails.length);
+		
 		for (Mail mail : _mails)
 		{
 			writeD(mail.getMessageId()); // postId

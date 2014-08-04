@@ -65,9 +65,11 @@ public class Beleth extends Mystic
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((System.currentTimeMillis() - lastFactionNotifyTime) > _minFactionNotifyInterval)
 		{
 			lastFactionNotifyTime = System.currentTimeMillis();
+			
 			for (NpcInstance npc : World.getAroundNpc(actor))
 			{
 				if (npc.getNpcId() == CLONE)
@@ -76,6 +78,7 @@ public class Beleth extends Mystic
 				}
 			}
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	

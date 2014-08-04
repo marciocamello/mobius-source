@@ -56,21 +56,26 @@ public final class EffectFear extends Effect
 			getEffector().sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
 			return false;
 		}
+		
 		Player player = _effected.getPlayer();
+		
 		if (player != null)
 		{
 			SiegeEvent<?, ?> siegeEvent = player.getEvent(SiegeEvent.class);
+			
 			if (_effected.isServitor() && (siegeEvent != null) && siegeEvent.containsSiegeSummon((SummonInstance) _effected))
 			{
 				getEffector().sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
 				return false;
 			}
 		}
+		
 		if (_effected.isInZonePeace())
 		{
 			getEffector().sendPacket(Msg.YOU_MAY_NOT_ATTACK_IN_A_PEACEFUL_ZONE);
 			return false;
 		}
+		
 		return super.checkCondition();
 	}
 	
@@ -81,12 +86,14 @@ public final class EffectFear extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if (!_effected.startFear())
 		{
 			_effected.abortAttack(true, true);
 			_effected.abortCast(true, true);
 			_effected.stopMove();
 		}
+		
 		onActionTime();
 	}
 	

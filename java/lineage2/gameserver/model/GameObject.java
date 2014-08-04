@@ -126,6 +126,7 @@ public abstract class GameObject extends EventOwner
 	private void clearRef()
 	{
 		HardReference<? extends GameObject> reference = getRef();
+		
 		if (reference != null)
 		{
 			reference.clear();
@@ -169,22 +170,29 @@ public abstract class GameObject extends EventOwner
 		{
 			return;
 		}
+		
 		boolean respawn = false;
+		
 		if (isVisible())
 		{
 			decayMe();
 			respawn = true;
 		}
+		
 		Reflection r = getReflection();
+		
 		if (!r.isDefault())
 		{
 			r.removeObject(this);
 		}
+		
 		_reflection = reflection;
+		
 		if (!reflection.isDefault())
 		{
 			reflection.addObject(this);
 		}
+		
 		if (respawn)
 		{
 			spawnMe();
@@ -198,11 +206,13 @@ public abstract class GameObject extends EventOwner
 	public void setReflection(int reflectionId)
 	{
 		Reflection r = ReflectionManager.getInstance().get(reflectionId);
+		
 		if (r == null)
 		{
 			Log.debug("Trying to set unavailable reflection: " + reflectionId + " for object: " + this + "!", new Throwable().fillInStackTrace());
 			return;
 		}
+		
 		setReflection(r);
 	}
 	
@@ -361,6 +371,7 @@ public abstract class GameObject extends EventOwner
 		{
 			return;
 		}
+		
 		World.addVisibleObject(this, dropper);
 		onSpawn();
 	}
@@ -396,6 +407,7 @@ public abstract class GameObject extends EventOwner
 		{
 			return;
 		}
+		
 		World.removeVisibleObject(this);
 		onDespawn();
 	}
@@ -413,10 +425,12 @@ public abstract class GameObject extends EventOwner
 	public final void deleteMe()
 	{
 		decayMe();
+		
 		if (!_state.compareAndSet(CREATED, DELETED))
 		{
 			return;
 		}
+		
 		onDelete();
 	}
 	
@@ -435,10 +449,12 @@ public abstract class GameObject extends EventOwner
 	protected void onDelete()
 	{
 		Reflection r = getReflection();
+		
 		if (!r.isDefault())
 		{
 			r.removeObject(this);
 		}
+		
 		clearRef();
 	}
 	
@@ -582,20 +598,26 @@ public abstract class GameObject extends EventOwner
 		{
 			return false;
 		}
+		
 		if (obj.getReflection() != getReflection())
 		{
 			return false;
 		}
+		
 		long dx = Math.abs(obj.getX() - getX());
+		
 		if (dx > range)
 		{
 			return false;
 		}
+		
 		long dy = Math.abs(obj.getY() - getY());
+		
 		if (dy > range)
 		{
 			return false;
 		}
+		
 		long dz = Math.abs(obj.getZ() - getZ());
 		return (dz <= 1500) && (((dx * dx) + (dy * dy)) <= (range * range));
 	}
@@ -612,20 +634,26 @@ public abstract class GameObject extends EventOwner
 		{
 			return false;
 		}
+		
 		if (obj.getReflection() != getReflection())
 		{
 			return false;
 		}
+		
 		long dx = Math.abs(obj.getX() - getX());
+		
 		if (dx > range)
 		{
 			return false;
 		}
+		
 		long dy = Math.abs(obj.getY() - getY());
+		
 		if (dy > range)
 		{
 			return false;
 		}
+		
 		long dz = Math.abs(obj.getZ() - getZ());
 		return (dz <= range) && (((dx * dx) + (dy * dy) + (dz * dz)) <= (range * range));
 	}
@@ -685,6 +713,7 @@ public abstract class GameObject extends EventOwner
 		{
 			return 0;
 		}
+		
 		return Math.sqrt(getXYDeltaSq(obj.getX(), obj.getY()));
 	}
 	
@@ -699,6 +728,7 @@ public abstract class GameObject extends EventOwner
 		{
 			return 0;
 		}
+		
 		return Math.sqrt(getXYZDeltaSq(obj.getX(), obj.getY(), obj.getZ()));
 	}
 	
@@ -731,14 +761,17 @@ public abstract class GameObject extends EventOwner
 	public final double getRealDistance3D(GameObject obj, boolean ignoreZ)
 	{
 		double distance = ignoreZ ? getDistance(obj) : getDistance3D(obj);
+		
 		if (isCreature())
 		{
 			distance -= ((Creature) this).getTemplate().getCollisionRadius();
 		}
+		
 		if (obj.isCreature())
 		{
 			distance -= ((Creature) obj).getTemplate().getCollisionRadius();
 		}
+		
 		return distance > 0 ? distance : 0;
 	}
 	
@@ -764,6 +797,7 @@ public abstract class GameObject extends EventOwner
 		{
 			return 0;
 		}
+		
 		return getXYDeltaSq(obj.getLoc());
 	}
 	
@@ -1150,14 +1184,17 @@ public abstract class GameObject extends EventOwner
 		{
 			return true;
 		}
+		
 		if (obj == null)
 		{
 			return false;
 		}
+		
 		if (obj.getClass() != getClass())
 		{
 			return false;
 		}
+		
 		return ((GameObject) obj).getObjectId() == getObjectId();
 	}
 	
@@ -1189,11 +1226,13 @@ public abstract class GameObject extends EventOwner
 		{
 			return;
 		}
+		
 		if (player.isSitting())
 		{
 			// msg?
 			return;
 		}
+		
 		if (player.isMovementDisabled())
 		{
 			return;
@@ -1204,6 +1243,7 @@ public abstract class GameObject extends EventOwner
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this, null);
 			return;
 		}
+		
 		onInteract(player);
 	}
 	
@@ -1243,7 +1283,6 @@ public abstract class GameObject extends EventOwner
 		{
 			if (player.isClanAirShipDriver())
 			{
-				
 				/*
 				 * 2740 : This action is prohibited while steering.
 				 */
@@ -1255,7 +1294,6 @@ public abstract class GameObject extends EventOwner
 		
 		if (player.isFrozen())
 		{
-			
 			/*
 			 * 687 : You cannot move while frozen. Please wait.
 			 */
@@ -1267,6 +1305,7 @@ public abstract class GameObject extends EventOwner
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	

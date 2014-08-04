@@ -33,7 +33,6 @@ public class ExBR_BuyProduct extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0xD9);
-		
 		writeD(_result);
 	}
 }

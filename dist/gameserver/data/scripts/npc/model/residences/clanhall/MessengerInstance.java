@@ -26,7 +26,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class MessengerInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -61,6 +61,7 @@ public class MessengerInstance extends NpcInstance
 	{
 		ClanHall clanHall = getClanHall();
 		ClanHallSiegeEvent siegeEvent = clanHall.getSiegeEvent();
+		
 		if ((clanHall.getOwner() != null) && (clanHall.getOwner() == player.getClan()))
 		{
 			showChatWindow(player, _ownerDialog);

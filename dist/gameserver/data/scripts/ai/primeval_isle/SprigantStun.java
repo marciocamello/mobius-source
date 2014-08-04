@@ -59,6 +59,7 @@ public class SprigantStun extends DefaultAI
 			_waitTime = System.currentTimeMillis() + TICK_IN_MILISECONDS;
 			return true;
 		}
+		
 		return false;
 	}
 }

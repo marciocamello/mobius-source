@@ -51,57 +51,72 @@ public final class RequestRefineCancel extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (activeChar.isActionsDisabled())
 		{
 			activeChar.sendPacket(new ExVariationCancelResult(0));
 			return;
 		}
+		
 		if (activeChar.isInStoreMode())
 		{
 			activeChar.sendPacket(new ExVariationCancelResult(0));
 			return;
 		}
+		
 		if (activeChar.isInTrade())
 		{
 			activeChar.sendPacket(new ExVariationCancelResult(0));
 			return;
 		}
+		
 		ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
+		
 		if ((targetItem == null) || !targetItem.isAugmented())
 		{
 			activeChar.sendPacket(new ExVariationCancelResult(0), Msg.AUGMENTATION_REMOVAL_CAN_ONLY_BE_DONE_ON_AN_AUGMENTED_ITEM);
 			return;
 		}
+		
 		int price = getRemovalPrice(targetItem.getTemplate());
+		
 		if (price < 0)
 		{
 			activeChar.sendPacket(new ExVariationCancelResult(0));
 		}
+		
 		if (!activeChar.reduceAdena(price, true))
 		{
 			activeChar.sendPacket(new ExVariationCancelResult(0), Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
+		
 		boolean equipped = targetItem.isEquipped();
+		
 		if (equipped)
 		{
 			activeChar.getInventory().unEquipItem(targetItem);
 		}
+		
 		targetItem.setAugmentationId(0);
 		targetItem.setJdbcState(JdbcEntityState.UPDATED);
 		targetItem.update();
+		
 		if (equipped)
 		{
 			activeChar.getInventory().equipItem(targetItem);
 		}
+		
 		InventoryUpdate iu = new InventoryUpdate().addModifiedItem(targetItem);
 		SystemMessage sm = new SystemMessage(SystemMessage.AUGMENTATION_HAS_BEEN_SUCCESSFULLY_REMOVED_FROM_YOUR_S1);
 		sm.addItemName(targetItem.getItemId());
 		activeChar.sendPacket(new ExVariationCancelResult(1), iu, sm);
+		
 		for (ShortCut sc : activeChar.getAllShortCuts())
 		{
 			if ((sc.getId() == targetItem.getObjectId()) && (sc.getType() == ShortCut.TYPE_ITEM))
@@ -109,6 +124,7 @@ public final class RequestRefineCancel extends L2GameClientPacket
 				activeChar.sendPacket(new ShortCutRegister(activeChar, sc));
 			}
 		}
+		
 		activeChar.sendChanges();
 	}
 	
@@ -134,12 +150,15 @@ public final class RequestRefineCancel extends L2GameClientPacket
 				{
 					return 210000;
 				}
+				
 			case ItemTemplate.CRYSTAL_B:
 				if (item.getCrystalCount() < 1746)
 				{
 					return 240000;
 				}
+				
 				return 270000;
+				
 			case ItemTemplate.CRYSTAL_A:
 				if (item.getCrystalCount() < 2160)
 				{
@@ -153,6 +172,7 @@ public final class RequestRefineCancel extends L2GameClientPacket
 				{
 					return 420000;
 				}
+				
 			case ItemTemplate.CRYSTAL_S:
 				if (item.getCrystalCount() == 10394)
 				{
@@ -170,6 +190,7 @@ public final class RequestRefineCancel extends L2GameClientPacket
 				{
 					return 480000;
 				}
+				
 			case ItemTemplate.CRYSTAL_R:
 				if (item.getItemGrade() == Grade.R)
 				{
@@ -183,7 +204,9 @@ public final class RequestRefineCancel extends L2GameClientPacket
 				{
 					return 14160000;
 				}
+				
 				return 1530000;
+				
 			default:
 				return -1;
 		}

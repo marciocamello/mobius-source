@@ -61,6 +61,7 @@ public class _641_AttackSailren extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("statue_of_shilen_q0641_05.htm"))
 		{
 			st.setCond(1);
@@ -76,6 +77,7 @@ public class _641_AttackSailren extends Quest implements ScriptFile
 			st.exitCurrentQuest(true);
 			st.unset("cond");
 		}
+		
 		return htmltext;
 	}
 	
@@ -84,9 +86,11 @@ public class _641_AttackSailren extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (cond == 0)
 		{
 			QuestState qs = st.getPlayer().getQuestState(_126_IntheNameofEvilPart2.class);
+			
 			if ((qs == null) || !qs.isCompleted())
 			{
 				htmltext = "statue_of_shilen_q0641_02.htm";
@@ -108,6 +112,7 @@ public class _641_AttackSailren extends Quest implements ScriptFile
 		{
 			htmltext = "statue_of_shilen_q0641_07.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -117,6 +122,7 @@ public class _641_AttackSailren extends Quest implements ScriptFile
 		if (st.getQuestItemsCount(FRAGMENTS) < 30)
 		{
 			st.giveItems(FRAGMENTS, 1);
+			
 			if (st.getQuestItemsCount(FRAGMENTS) == 30)
 			{
 				st.playSound(SOUND_MIDDLE);
@@ -128,6 +134,7 @@ public class _641_AttackSailren extends Quest implements ScriptFile
 				st.playSound(SOUND_ITEMGET);
 			}
 		}
+		
 		return null;
 	}
 }

@@ -62,6 +62,7 @@ public class RewardData implements Cloneable
 	public RewardData(int itemId)
 	{
 		_item = ItemHolder.getInstance().getTemplate(itemId);
+		
 		if (_item.isArrow() || (Config.NO_RATE_EQUIPMENT && _item.isEquipment()) || (Config.NO_RATE_KEY_MATERIAL && _item.isKeyMatherial()) || (Config.NO_RATE_RECIPES && _item.isRecipe()) || ArrayUtils.contains(Config.NO_RATE_ITEMS, itemId))
 		{
 			_notRate = true;
@@ -224,6 +225,7 @@ public class RewardData implements Cloneable
 			RewardData drop = (RewardData) o;
 			return drop.getItemId() == getItemId();
 		}
+		
 		return false;
 	}
 	
@@ -236,6 +238,7 @@ public class RewardData implements Cloneable
 	public List<RewardItem> roll(Player player, double mod)
 	{
 		double rate;
+		
 		if (_item.isAdena())
 		{
 			rate = (Config.RATE_DROP_ADENA + player.getVitalityBonus()) * player.getRateAdena();
@@ -244,6 +247,7 @@ public class RewardData implements Cloneable
 		{
 			rate = (Config.RATE_DROP_ITEMS + player.getVitalityBonus()) * (player.getRateItems());
 		}
+		
 		return roll(rate * mod);
 	}
 	
@@ -258,6 +262,7 @@ public class RewardData implements Cloneable
 		List<RewardItem> ret = new ArrayList<>(1);
 		RewardItem t = null;
 		long count;
+		
 		for (int n = 0; n < mult; n++)
 		{
 			if (Rnd.get(RewardList.MAX_CHANCE) <= (_chance * Math.min(rate - n, 1.0)))
@@ -270,6 +275,7 @@ public class RewardData implements Cloneable
 				{
 					count = Rnd.get(getMinDrop(), getMaxDrop());
 				}
+				
 				if (t == null)
 				{
 					ret.add(t = new RewardItem(_item.getItemId()));
@@ -281,6 +287,7 @@ public class RewardData implements Cloneable
 				}
 			}
 		}
+		
 		return ret;
 	}
 }

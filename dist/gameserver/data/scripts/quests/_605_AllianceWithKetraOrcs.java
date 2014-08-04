@@ -110,6 +110,7 @@ public class _605_AllianceWithKetraOrcs extends Quest implements ScriptFile
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -152,6 +153,7 @@ public class _605_AllianceWithKetraOrcs extends Quest implements ScriptFile
 		{
 			return;
 		}
+		
 		if (st.getQuestItemsCount(MARK_OF_KETRA_ALLIANCE5) > 0)
 		{
 			st.setCond(6);
@@ -184,38 +186,47 @@ public class _605_AllianceWithKetraOrcs extends Quest implements ScriptFile
 		{
 			return false;
 		}
+		
 		if ((capitan_count > 0) && (st.getQuestItemsCount(VB_CAPTAIN) < capitan_count))
 		{
 			return false;
 		}
+		
 		if ((general_count > 0) && (st.getQuestItemsCount(VB_GENERAL) < general_count))
 		{
 			return false;
 		}
+		
 		if ((other_item > 0) && (st.getQuestItemsCount(other_item) < 1))
 		{
 			return false;
 		}
+		
 		if (take)
 		{
 			if (soilder_count > 0)
 			{
 				st.takeItems(VB_SOLDIER, soilder_count);
 			}
+			
 			if (capitan_count > 0)
 			{
 				st.takeItems(VB_CAPTAIN, capitan_count);
 			}
+			
 			if (general_count > 0)
 			{
 				st.takeItems(VB_GENERAL, general_count);
 			}
+			
 			if (other_item > 0)
 			{
 				st.takeItems(other_item, 1);
 			}
+			
 			takeAllMarks(st);
 		}
+		
 		return true;
 	}
 	
@@ -229,8 +240,10 @@ public class _605_AllianceWithKetraOrcs extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			return event;
 		}
+		
 		checkMarks(st);
 		int cond = st.getCond();
+		
 		if (event.equalsIgnoreCase("first-have-2.htm") && (cond == 1) && CheckNextLevel(st, 100, 0, 0, 0, true))
 		{
 			st.giveItems(MARK_OF_KETRA_ALLIANCE1, 1);
@@ -274,6 +287,7 @@ public class _605_AllianceWithKetraOrcs extends Quest implements ScriptFile
 			st.playSound(SOUND_MIDDLE);
 			st.exitCurrentQuest(true);
 		}
+		
 		return event;
 	}
 	
@@ -285,13 +299,17 @@ public class _605_AllianceWithKetraOrcs extends Quest implements ScriptFile
 			st.exitCurrentQuest(true);
 			return "isvarka.htm";
 		}
+		
 		checkMarks(st);
+		
 		if (st.getState() == CREATED)
 		{
 			st.setCond(0);
 		}
+		
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == 31371)
 		{
 			if (cond == 0)
@@ -301,33 +319,41 @@ public class _605_AllianceWithKetraOrcs extends Quest implements ScriptFile
 					st.exitCurrentQuest(true);
 					return "no-level.htm";
 				}
+				
 				return "first.htm";
 			}
+			
 			if (cond == 1)
 			{
 				return CheckNextLevel(st, 100, 0, 0, 0, false) ? "first-have.htm" : "first-havenot.htm";
 			}
+			
 			if (cond == 2)
 			{
 				return CheckNextLevel(st, 200, 100, 0, 0, false) ? "second-have.htm" : "second.htm";
 			}
+			
 			if (cond == 3)
 			{
 				return CheckNextLevel(st, 300, 200, 100, 0, false) ? "third-have.htm" : "third.htm";
 			}
+			
 			if (cond == 4)
 			{
 				return CheckNextLevel(st, 300, 300, 200, TOTEM_OF_VALOR, false) ? "fourth-have.htm" : "fourth.htm";
 			}
+			
 			if (cond == 5)
 			{
 				return CheckNextLevel(st, 400, 400, 200, TOTEM_OF_WISDOM, false) ? "fifth-have.htm" : "fifth.htm";
 			}
+			
 			if (cond == 6)
 			{
 				return "high.htm";
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -335,6 +361,7 @@ public class _605_AllianceWithKetraOrcs extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		if (isKetraNpc(npcId))
 		{
 			if (st.getQuestItemsCount(MARK_OF_KETRA_ALLIANCE5) > 0)
@@ -373,11 +400,14 @@ public class _605_AllianceWithKetraOrcs extends Quest implements ScriptFile
 				return "quit-2.htm";
 			}
 		}
+		
 		if (st.getQuestItemsCount(MARK_OF_KETRA_ALLIANCE5) > 0)
 		{
 			return null;
 		}
+		
 		int cond = st.getCond();
+		
 		if ((npcId == RECRUIT) || (npcId == FOOTMAN) || (npcId == SCOUT) || (npcId == HUNTER) || (npcId == SHAMAN))
 		{
 			if (cond > 0)
@@ -399,6 +429,7 @@ public class _605_AllianceWithKetraOrcs extends Quest implements ScriptFile
 				st.rollAndGive(VB_GENERAL, 1, 80);
 			}
 		}
+		
 		return null;
 	}
 }

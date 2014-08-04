@@ -63,17 +63,20 @@ public class AdminLevel implements IAdminCommandHandler
 			activeChar.sendPacket(Msg.INVALID_TARGET);
 			return;
 		}
+		
 		if ((level < 1) || (level > Experience.getMaxLevel()))
 		{
 			activeChar.sendMessage("You must specify level 1 - " + Experience.getMaxLevel());
 			return;
 		}
+		
 		if (target.isPlayer())
 		{
 			Long exp_add = Experience.LEVEL[level] - ((Player) target).getExp();
 			((Player) target).addExpAndSp(exp_add, 0);
 			return;
 		}
+		
 		if (target.isPet())
 		{
 			Long exp_add = PetDataTable.getInstance().getInfo(((PetInstance) target).getNpcId(), level).getExp() - ((PetInstance) target).getExp();
@@ -93,17 +96,22 @@ public class AdminLevel implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		if (!activeChar.getPlayerAccess().CanEditChar)
 		{
 			return false;
 		}
+		
 		GameObject target = activeChar.getTarget();
+		
 		if ((target == null) || !(target.isPlayer() || target.isPet()))
 		{
 			activeChar.sendPacket(Msg.INVALID_TARGET);
 			return false;
 		}
+		
 		int level;
+		
 		switch (command)
 		{
 			case admin_add_level:
@@ -113,6 +121,7 @@ public class AdminLevel implements IAdminCommandHandler
 					activeChar.sendMessage("USAGE: //addLevel level");
 					return false;
 				}
+				
 				try
 				{
 					level = Integer.parseInt(wordList[1]);
@@ -122,8 +131,10 @@ public class AdminLevel implements IAdminCommandHandler
 					activeChar.sendMessage("You must specify level");
 					return false;
 				}
+				
 				setLevel(activeChar, target, level + ((Creature) target).getLevel());
 				break;
+			
 			case admin_set_level:
 			case admin_setLevel:
 				if (wordList.length < 2)
@@ -131,6 +142,7 @@ public class AdminLevel implements IAdminCommandHandler
 					activeChar.sendMessage("USAGE: //setlevel level");
 					return false;
 				}
+				
 				try
 				{
 					level = Integer.parseInt(wordList[1]);
@@ -140,9 +152,11 @@ public class AdminLevel implements IAdminCommandHandler
 					activeChar.sendMessage("You must specify level");
 					return false;
 				}
+				
 				setLevel(activeChar, target, level);
 				break;
 		}
+		
 		return true;
 	}
 	

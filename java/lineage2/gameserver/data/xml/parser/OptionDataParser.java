@@ -94,10 +94,12 @@ public final class OptionDataParser extends StatParser<OptionDataHolder>
 		{
 			Element optionDataElement = itemIterator.next();
 			OptionDataTemplate template = new OptionDataTemplate(Integer.parseInt(optionDataElement.attributeValue("id")));
+			
 			for (Iterator<Element> subIterator = optionDataElement.elementIterator(); subIterator.hasNext();)
 			{
 				Element subElement = subIterator.next();
 				String subName = subElement.getName();
+				
 				if (subName.equalsIgnoreCase("for"))
 				{
 					parseFor(subElement, template);
@@ -114,6 +116,7 @@ public final class OptionDataParser extends StatParser<OptionDataHolder>
 						int id = Integer.parseInt(nextElement.attributeValue("id"));
 						int level = Integer.parseInt(nextElement.attributeValue("level"));
 						Skill skill = SkillTable.getInstance().getInfo(id, level);
+						
 						if (skill != null)
 						{
 							template.addSkill(skill);
@@ -125,6 +128,7 @@ public final class OptionDataParser extends StatParser<OptionDataHolder>
 					}
 				}
 			}
+			
 			getHolder().addTemplate(template);
 		}
 	}

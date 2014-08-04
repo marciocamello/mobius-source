@@ -44,21 +44,26 @@ public class RequestRecipeItemDelete extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (activeChar.getPrivateStoreType() == Player.STORE_PRIVATE_MANUFACTURE)
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		RecipeTemplate rp = RecipeHolder.getInstance().getRecipeByRecipeId(_recipeId);
+		
 		if (rp == null)
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		activeChar.unregisterRecipe(_recipeId);
 		activeChar.sendPacket(new RecipeBookItemList(activeChar, rp.isDwarven()));
 	}

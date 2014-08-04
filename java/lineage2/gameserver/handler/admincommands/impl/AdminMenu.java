@@ -28,7 +28,6 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-@SuppressWarnings("unused")
 public class AdminMenu implements IAdminCommandHandler
 {
 	/**
@@ -81,18 +80,20 @@ public class AdminMenu implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
 		if (!activeChar.getPlayerAccess().Menu)
 		{
 			return false;
 		}
+		
 		if (fullString.startsWith("admin_teleport_character_to_menu"))
 		{
 			String[] data = fullString.split(" ");
+			
 			if (data.length == 5)
 			{
 				String playerName = data[1];
 				Player player = World.getPlayer(playerName);
+				
 				if (player != null)
 				{
 					teleportCharacter(player, new Location(Integer.parseInt(data[2]), Integer.parseInt(data[3]), Integer.parseInt(data[4])), activeChar);
@@ -127,17 +128,21 @@ public class AdminMenu implements IAdminCommandHandler
 		{
 			GameObject obj = activeChar.getTarget();
 			StringTokenizer st = new StringTokenizer(fullString);
+			
 			if (st.countTokens() > 1)
 			{
 				st.nextToken();
 				String player = st.nextToken();
 				Player plyr = World.getPlayer(player);
+				
 				if (plyr == null)
 				{
 					activeChar.sendMessage("Player " + player + " not found in game.");
 				}
+				
 				obj = plyr;
 			}
+			
 			if ((obj != null) && obj.isCreature())
 			{
 				Creature target = (Creature) obj;
@@ -151,16 +156,19 @@ public class AdminMenu implements IAdminCommandHandler
 		else if (fullString.startsWith("admin_kick_menu"))
 		{
 			StringTokenizer st = new StringTokenizer(fullString);
+			
 			if (st.countTokens() > 1)
 			{
 				st.nextToken();
 				String player = st.nextToken();
+				
 				if (AdminFunctions.kick(player, "kick"))
 				{
 					activeChar.sendMessage("Player kicked.");
 				}
 			}
 		}
+		
 		activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/charmanage.htm"));
 		return true;
 	}
@@ -198,6 +206,7 @@ public class AdminMenu implements IAdminCommandHandler
 	private void teleportToCharacter(Player activeChar, GameObject target)
 	{
 		Player player;
+		
 		if ((target != null) && target.isPlayer())
 		{
 			player = (Player) target;
@@ -207,6 +216,7 @@ public class AdminMenu implements IAdminCommandHandler
 			activeChar.sendPacket(Msg.INVALID_TARGET);
 			return;
 		}
+		
 		if (player.getObjectId() == activeChar.getObjectId())
 		{
 			activeChar.sendMessage("You cannot self teleport.");

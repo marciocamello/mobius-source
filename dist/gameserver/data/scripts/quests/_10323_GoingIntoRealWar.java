@@ -91,6 +91,7 @@ public class _10323_GoingIntoRealWar extends Quest implements ScriptFile
 	private void enterInstance(Player player, int instancedZoneId)
 	{
 		Reflection r = player.getActiveReflection();
+		
 		if (r != null)
 		{
 			if (player.canReenterInstance(instancedZoneId))
@@ -109,6 +110,7 @@ public class _10323_GoingIntoRealWar extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		Player player = st.getPlayer();
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.giveItems(17574, 1);
@@ -118,6 +120,7 @@ public class _10323_GoingIntoRealWar extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "0-3.htm";
 		}
+		
 		if (event.equalsIgnoreCase("qet_rev"))
 		{
 			htmltext = "3-2.htm";
@@ -127,6 +130,7 @@ public class _10323_GoingIntoRealWar extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		if (event.equalsIgnoreCase("enter_instance"))
 		{
 			if (st.getQuestItemsCount(key) >= 1)
@@ -137,12 +141,15 @@ public class _10323_GoingIntoRealWar extends Quest implements ScriptFile
 				enterInstance(player, 176);
 				return null;
 			}
+			
 			htmltext = "1-1.htm";
 		}
+		
 		if (event.equalsIgnoreCase("getshots"))
 		{
 			st.playSound(SOUND_MIDDLE);
 			st.showTutorialHTML(TutorialShowHtml.QT_003, TutorialShowHtml.TYPE_WINDOW);
+			
 			if (!player.isMageClass() || (player.getTemplate().getRace() == Race.orc))
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.GOING_INTO_REAL_WAR_SOULSHOTS_ADDED, 4500, ScreenMessageAlign.TOP_CENTER));
@@ -157,18 +164,22 @@ public class _10323_GoingIntoRealWar extends Quest implements ScriptFile
 				st.giveItems(5790, 500);
 				st.setCond(4);
 			}
+			
 			return null;
 		}
+		
 		if (event.equalsIgnoreCase("soul_timer"))
 		{
 			htmltext = "2-3.htm";
 			player.sendPacket(new ExShowScreenMessage(NpcString.GOING_INTO_REAL_WAR_AUTOMATE_SOULSHOTS, 4500, ScreenMessageAlign.TOP_CENTER));
 		}
+		
 		if (event.equalsIgnoreCase("spirit_timer"))
 		{
 			htmltext = "2-3m.htm";
 			player.sendPacket(new ExShowScreenMessage(NpcString.GOING_INTO_REAL_WAR_AUTOMATE_SPIRITSHOTS, 4500, ScreenMessageAlign.TOP_CENTER));
 		}
+		
 		return htmltext;
 	}
 	
@@ -178,6 +189,7 @@ public class _10323_GoingIntoRealWar extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == evain)
 		{
 			if (st.isCompleted())
@@ -221,6 +233,7 @@ public class _10323_GoingIntoRealWar extends Quest implements ScriptFile
 				htmltext = "3-1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -229,6 +242,7 @@ public class _10323_GoingIntoRealWar extends Quest implements ScriptFile
 	{
 		QuestState st = player.getQuestState(getClass());
 		String htmltext = "";
+		
 		if (npc.getNpcId() == guard)
 		{
 			if (st.getCond() == 3)
@@ -250,6 +264,7 @@ public class _10323_GoingIntoRealWar extends Quest implements ScriptFile
 				st.getPlayer().getReflection().addSpawnWithoutRespawn(husk, new Location(-114921, 248281, -7872, 0), 0);
 				st.getPlayer().getReflection().addSpawnWithoutRespawn(husk, new Location(-114559, 248661, -7872, 0), 0);
 				st.getPlayer().getReflection().addSpawnWithoutRespawn(husk, new Location(-114148, 248416, -7872, 0), 0);
+				
 				if (!player.isMageClass() || (player.getTemplate().getRace() == Race.orc))
 				{
 					htmltext = "2-4.htm";
@@ -268,6 +283,7 @@ public class _10323_GoingIntoRealWar extends Quest implements ScriptFile
 				htmltext = TODO_FIND_HTML;
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -276,6 +292,7 @@ public class _10323_GoingIntoRealWar extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int killedhusk = st.getInt("killedhusk");
+		
 		if ((npcId == husk) && ((st.getCond() == 2) || (st.getCond() == 7)))
 		{
 			if (killedhusk >= 3)
@@ -289,6 +306,7 @@ public class _10323_GoingIntoRealWar extends Quest implements ScriptFile
 				st.set("killedhusk", ++killedhusk);
 			}
 		}
+		
 		return null;
 	}
 }

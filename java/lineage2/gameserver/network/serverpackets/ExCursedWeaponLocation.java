@@ -40,11 +40,11 @@ public class ExCursedWeaponLocation extends L2GameServerPacket
 		else
 		{
 			writeD(_cursedWeaponInfo.size());
+			
 			for (CursedWeaponInfo w : _cursedWeaponInfo)
 			{
 				writeD(w._id);
 				writeD(w._status);
-				
 				writeD(w._pos.x);
 				writeD(w._pos.y);
 				writeD(w._pos.z);

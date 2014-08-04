@@ -36,6 +36,7 @@ public class BlowFishKeygen
 			{
 				CRYPT_KEYS[i][j] = (byte) Rnd.get(255);
 			}
+			
 			CRYPT_KEYS[i][8] = (byte) 0xc8;
 			CRYPT_KEYS[i][9] = (byte) 0x27;
 			CRYPT_KEYS[i][10] = (byte) 0x93;

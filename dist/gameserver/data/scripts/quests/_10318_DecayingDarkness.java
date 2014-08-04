@@ -51,12 +51,14 @@ public class _10318_DecayingDarkness extends Quest implements ScriptFile
 		{
 			return "noquest";
 		}
+		
 		if (event.equalsIgnoreCase("32892-07.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return event;
 	}
 	
@@ -64,12 +66,15 @@ public class _10318_DecayingDarkness extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
+		
 		if (st == null)
 		{
 			return htmltext;
 		}
+		
 		Player player = st.getPlayer();
 		QuestState previous = player.getQuestState(_10317_OrbisWitch.class);
+		
 		if (npc.getNpcId() == NPC_LYDIA)
 		{
 			if ((previous == null) || (!previous.isCompleted()) || (player.getLevel() < 95))
@@ -77,14 +82,17 @@ public class _10318_DecayingDarkness extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 				return "32892-02.htm";
 			}
+			
 			switch (st.getState())
 			{
 				case COMPLETED:
 					htmltext = "32892-03.htm";
 					break;
+				
 				case CREATED:
 					htmltext = "32892-01.htm";
 					break;
+				
 				case STARTED:
 					if (st.getCond() == 1)
 					{
@@ -103,6 +111,7 @@ public class _10318_DecayingDarkness extends Quest implements ScriptFile
 						{
 							break;
 						}
+						
 						htmltext = "32892-10.htm";
 						st.addExpAndSp(79260650, 36253450);
 						st.giveItems(ADENA_ID, 5427900, true);
@@ -111,6 +120,7 @@ public class _10318_DecayingDarkness extends Quest implements ScriptFile
 					}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -125,6 +135,7 @@ public class _10318_DecayingDarkness extends Quest implements ScriptFile
 				st.setCond(2);
 			}
 		}
+		
 		return null;
 	}
 	

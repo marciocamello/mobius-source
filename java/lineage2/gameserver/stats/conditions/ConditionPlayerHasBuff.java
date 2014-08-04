@@ -52,19 +52,24 @@ public class ConditionPlayerHasBuff extends Condition
 	protected boolean testImpl(Env env)
 	{
 		Creature character = env.character;
+		
 		if (character == null)
 		{
 			return false;
 		}
+		
 		Effect effect = character.getEffectList().getEffectByType(_effectType);
+		
 		if (effect == null)
 		{
 			return false;
 		}
+		
 		if ((_level == -1) || (effect.getSkill().getLevel() >= _level))
 		{
 			return true;
 		}
+		
 		return false;
 	}
 }

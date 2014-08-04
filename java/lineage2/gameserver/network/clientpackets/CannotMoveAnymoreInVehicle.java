@@ -51,11 +51,14 @@ public class CannotMoveAnymoreInVehicle extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		Boat boat = player.getBoat();
+		
 		if ((boat != null) && (boat.getObjectId() == _boatid))
 		{
 			player.setInBoatPosition(_loc);

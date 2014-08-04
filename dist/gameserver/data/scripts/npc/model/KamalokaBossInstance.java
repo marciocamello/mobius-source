@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
 public class KamalokaBossInstance extends LostCaptainInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -76,6 +76,7 @@ public class KamalokaBossInstance extends LostCaptainInstance
 			_manaRegen.cancel(false);
 			_manaRegen = null;
 		}
+		
 		super.onDeath(killer);
 	}
 	
@@ -107,16 +108,21 @@ public class KamalokaBossInstance extends LostCaptainInstance
 					{
 						continue;
 					}
+					
 					int addMp = getAddMp();
+					
 					if (addMp <= 0)
 					{
 						return;
 					}
+					
 					double newMp = Math.min(Math.max(0, p.getMaxMp() - p.getCurrentMp()), addMp);
+					
 					if (newMp > 0)
 					{
 						p.setCurrentMp(newMp + p.getCurrentMp());
 					}
+					
 					p.sendPacket(new SystemMessage(SystemMessage.S1_MPS_HAVE_BEEN_RESTORED).addNumber(Math.round(newMp)));
 				}
 			}
@@ -137,20 +143,26 @@ public class KamalokaBossInstance extends LostCaptainInstance
 				case 23:
 				case 26:
 					return 6;
+					
 				case 33:
 				case 36:
 					return 10;
+					
 				case 43:
 				case 46:
 					return 13;
+					
 				case 53:
 				case 56:
 					return 16;
+					
 				case 63:
 				case 66:
 					return 19;
+					
 				case 73:
 					return 22;
+					
 				default:
 					return 0;
 			}

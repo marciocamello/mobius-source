@@ -34,7 +34,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class QuestSiegeGuardInstance extends SiegeGuardInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -57,18 +57,23 @@ public class QuestSiegeGuardInstance extends SiegeGuardInstance
 	{
 		super.onDeath(lastAttacker);
 		Player killer = lastAttacker.getPlayer();
+		
 		if (killer == null)
 		{
 			return;
 		}
+		
 		Map<Playable, AggroList.HateInfo> aggroMap = getAggroList().getPlayableMap();
 		Quest[] quests = getTemplate().getEventQuests(QuestEventType.MOB_KILLED_WITH_QUEST);
+		
 		if ((quests != null) && (quests.length > 0))
 		{
 			List<Player> players = null;
+			
 			if (isRaid() && Config.ALT_NO_LASTHIT)
 			{
 				players = new ArrayList<>();
+				
 				for (Playable pl : aggroMap.keySet())
 				{
 					if (!pl.isDead() && (isInRangeZ(pl, Config.ALT_PARTY_DISTRIBUTION_RANGE) || killer.isInRangeZ(pl, Config.ALT_PARTY_DISTRIBUTION_RANGE)))
@@ -80,6 +85,7 @@ public class QuestSiegeGuardInstance extends SiegeGuardInstance
 			else if (killer.getParty() != null)
 			{
 				players = new ArrayList<>(killer.getParty().getMemberCount());
+				
 				for (Player pl : killer.getParty().getPartyMembers())
 				{
 					if (!pl.isDead() && (isInRangeZ(pl, Config.ALT_PARTY_DISTRIBUTION_RANGE) || killer.isInRangeZ(pl, Config.ALT_PARTY_DISTRIBUTION_RANGE)))
@@ -88,9 +94,11 @@ public class QuestSiegeGuardInstance extends SiegeGuardInstance
 					}
 				}
 			}
+			
 			for (Quest quest : quests)
 			{
 				Player toReward = killer;
+				
 				if ((quest.getParty() != Quest.PARTY_NONE) && (players != null))
 				{
 					if (isRaid() || (quest.getParty() == Quest.PARTY_ALL))
@@ -98,38 +106,47 @@ public class QuestSiegeGuardInstance extends SiegeGuardInstance
 						for (Player pl : players)
 						{
 							QuestState qs = pl.getQuestState(quest.getName());
+							
 							if ((qs != null) && !qs.isCompleted())
 							{
 								quest.notifyKill(this, qs);
 							}
 						}
+						
 						toReward = null;
 					}
 					else
 					{
 						List<Player> interested = new ArrayList<>(players.size());
+						
 						for (Player pl : players)
 						{
 							QuestState qs = pl.getQuestState(quest.getName());
+							
 							if ((qs != null) && !qs.isCompleted())
 							{
 								interested.add(pl);
 							}
 						}
+						
 						if (interested.isEmpty())
 						{
 							continue;
 						}
+						
 						toReward = interested.get(Rnd.get(interested.size()));
+						
 						if (toReward == null)
 						{
 							toReward = killer;
 						}
 					}
 				}
+				
 				if (toReward != null)
 				{
 					QuestState qs = toReward.getQuestState(quest.getName());
+					
 					if ((qs != null) && !qs.isCompleted())
 					{
 						quest.notifyKill(this, qs);

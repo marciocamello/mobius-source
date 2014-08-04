@@ -56,46 +56,55 @@ public class _124_MeetingTheElroki extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		String htmltext = event;
+		
 		if (event.equals("marquez_q0124_03.htm"))
 		{
 			st.setState(STARTED);
 		}
+		
 		if (event.equals("marquez_q0124_04.htm") && (cond == 0))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		if (event.equals("marquez_q0124_06.htm") && (cond == 1))
 		{
 			st.setCond(2);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		if (event.equals("mushika_q0124_03.htm") && (cond == 2))
 		{
 			st.setCond(3);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		if (event.equals("asama_q0124_06.htm") && (cond == 3))
 		{
 			st.setCond(4);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		if (event.equals("shaman_caracawe_q0124_03.htm") && (cond == 4))
 		{
 			st.set("id", "1");
 		}
+		
 		if (event.equals("shaman_caracawe_q0124_05.htm") && (cond == 4))
 		{
 			st.setCond(5);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		if (event.equals("egg_of_mantarasa_q0124_02.htm") && (cond == 5))
 		{
 			st.giveItems(Mushika_egg, 1);
 			st.setCond(6);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return htmltext;
 	}
 	
@@ -105,6 +114,7 @@ public class _124_MeetingTheElroki extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Marquez)
 		{
 			if (cond == 0)
@@ -154,6 +164,7 @@ public class _124_MeetingTheElroki extends Quest implements ScriptFile
 			if (cond == 4)
 			{
 				htmltext = "shaman_caracawe_q0124_01.htm";
+				
 				if (st.getInt("id") == 1)
 				{
 					htmltext = "shaman_caracawe_q0124_03.htm";
@@ -168,6 +179,7 @@ public class _124_MeetingTheElroki extends Quest implements ScriptFile
 		{
 			htmltext = "egg_of_mantarasa_q0124_01.htm";
 		}
+		
 		return htmltext;
 	}
 }

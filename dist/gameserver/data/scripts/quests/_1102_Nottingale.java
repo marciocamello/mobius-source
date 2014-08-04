@@ -50,6 +50,7 @@ public class _1102_Nottingale extends Quest implements ScriptFile
 		String htmltext = event;
 		Player player = st.getPlayer();
 		QuestState qs = player.getQuestState(_10273_GoodDayToFly.class);
+		
 		if ((qs == null) || (qs.getState() != COMPLETED))
 		{
 			player.sendPacket(new RadarControl(2, 2, 0, 0, 0));
@@ -86,6 +87,7 @@ public class _1102_Nottingale extends Quest implements ScriptFile
 			player.sendPacket(new RadarControl(2, 2, 0, 0, 0));
 			player.sendPacket(new RadarControl(0, 2, -246899, 251918, 4352));
 		}
+		
 		return htmltext;
 	}
 	
@@ -93,10 +95,12 @@ public class _1102_Nottingale extends Quest implements ScriptFile
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
 		QuestState qs = player.getQuestState(getClass());
+		
 		if (qs == null)
 		{
 			newQuestState(player, STARTED);
 		}
+		
 		return "";
 	}
 }

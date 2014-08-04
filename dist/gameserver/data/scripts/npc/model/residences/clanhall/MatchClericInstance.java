@@ -26,7 +26,7 @@ import ai.residences.clanhall.MatchCleric;
 public class MatchClericInstance extends CTBBossInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -64,6 +64,7 @@ public class MatchClericInstance extends CTBBossInstance
 		if (_massiveDamage > System.currentTimeMillis())
 		{
 			damage = 10000;
+			
 			if (Rnd.chance(10))
 			{
 				((MatchCleric) getAI()).heal();
@@ -102,6 +103,7 @@ public class MatchClericInstance extends CTBBossInstance
 		{
 			_massiveDamage = System.currentTimeMillis() + 5000L;
 		}
+		
 		super.reduceCurrentHp(damage, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
 	}
 }

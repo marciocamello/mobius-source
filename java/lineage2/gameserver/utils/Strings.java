@@ -31,6 +31,7 @@ public class Strings
 		{
 			return "";
 		}
+		
 		s = s.replace("\\'", "'");
 		s = s.replace("\\\\", "\\");
 		return s;
@@ -47,18 +48,22 @@ public class Strings
 		{
 			return false;
 		}
+		
 		if (x instanceof Number)
 		{
 			return ((Number) x).intValue() > 0;
 		}
+		
 		if (x instanceof Boolean)
 		{
 			return (Boolean) x;
 		}
+		
 		if (x instanceof Double)
 		{
 			return Math.abs((Double) x) < 0.00001;
 		}
+		
 		return !String.valueOf(x).isEmpty();
 	}
 	
@@ -100,6 +105,7 @@ public class Strings
 		{
 			s = s.replace(tr[i], tr[i + 1]);
 		}
+		
 		return s;
 	}
 	
@@ -125,6 +131,7 @@ public class Strings
 				s = s.replace(trcode[i], trcode[i + 1]);
 			}
 		}
+		
 		return s;
 	}
 	
@@ -164,6 +171,7 @@ public class Strings
 		{
 			return null;
 		}
+		
 		s = s.replace("\r", "");
 		s = s.replaceAll("(\\s|\"|\'|\\(|^|\n)\\*(.*?)\\*(\\s|\"|\'|\\)|\\?|\\.|!|:|;|,|$|\n)", "$1<font color=\"LEVEL\">$2</font>$3");
 		s = s.replaceAll("(\\s|\"|\'|\\(|^|\n)\\$(.*?)\\$(\\s|\"|\'|\\)|\\?|\\.|!|:|;|,|$|\n)", "$1<font color=\"00FFFF\">$2</font>$3");
@@ -186,23 +194,28 @@ public class Strings
 	public static String joinStrings(String glueStr, String[] strings, int startIdx, int maxCount)
 	{
 		String result = "";
+		
 		if (startIdx < 0)
 		{
 			startIdx += strings.length;
+			
 			if (startIdx < 0)
 			{
 				return result;
 			}
 		}
+		
 		while ((startIdx < strings.length) && (maxCount != 0))
 		{
 			if (!result.isEmpty() && (glueStr != null) && !glueStr.isEmpty())
 			{
 				result += glueStr;
 			}
+			
 			result += strings[startIdx++];
 			maxCount--;
 		}
+		
 		return result;
 	}
 	
@@ -240,12 +253,15 @@ public class Strings
 		{
 			return s;
 		}
+		
 		s = s.replaceAll("\\\\n", "\n");
 		int i = s.indexOf("\n");
+		
 		if (i > -1)
 		{
 			s = s.substring(0, i);
 		}
+		
 		return s;
 	}
 }

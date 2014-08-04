@@ -85,6 +85,7 @@ public class TimeStamp
 		{
 			return getReuseCurrent();
 		}
+		
 		return _reuse;
 	}
 	

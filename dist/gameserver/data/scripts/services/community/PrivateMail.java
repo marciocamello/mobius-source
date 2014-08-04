@@ -115,6 +115,7 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 		StringTokenizer st = new StringTokenizer(bypass, "_");
 		String cmd = st.nextToken();
 		player.setSessionVar("add_fav", null);
+		
 		if ("maillist".equals(cmd))
 		{
 			int type = Integer.parseInt(st.nextToken());
@@ -125,21 +126,26 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 			int inbox = 0;
 			int send = 0;
 			ResultSet rset = null;
+			
 			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement statement = con.prepareStatement("SELECT count(*) as cnt FROM `bbs_mail` WHERE `box_type` = 0 and `to_object_id` = ?");)
 			{
 				statement.setInt(1, player.getObjectId());
 				rset = statement.executeQuery();
+				
 				if (rset.next())
 				{
 					inbox = rset.getInt("cnt");
 				}
+				
 				statement.close();
 				rset.close();
+				
 				try (PreparedStatement statement2 = con.prepareStatement("SELECT count(*) as cnt FROM `bbs_mail` WHERE `box_type` = 1 and `from_object_id` = ?");)
 				{
 					statement2.setInt(1, player.getObjectId());
 					rset = statement2.executeQuery();
+					
 					if (rset.next())
 					{
 						send = rset.getInt("cnt");
@@ -154,6 +160,7 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 				DbUtils.closeQuietly(rset);
 			}
 			List<MailData> mailList = null;
+			
 			switch (type)
 			{
 				case 0:
@@ -165,6 +172,7 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 					html = html.replace("%writer_header%", "&$911;");
 					mailList = getMailList(player, type, search, byTitle == 1);
 					break;
+				
 				case 1:
 					html = html.replace("%inbox_link%", "<a action=\"bypass _maillist_0_1_0_\">[&$917;]</a>");
 					html = html.replace("%sentbox_link%", "[&$918;]");
@@ -174,6 +182,7 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 					html = html.replace("%writer_header%", "&$909;");
 					mailList = getMailList(player, type, search, byTitle == 1);
 					break;
+				
 				case 2:
 					html = html.replace("%inbox_link%", "<a action=\"bypass _maillist_0_1_0_\">[&$917;]</a>");
 					html = html.replace("%sentbox_link%", "<a action=\"bypass _maillist_1_1_0_\">[&$918;]</a>");
@@ -182,6 +191,7 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 					html = html.replace("%TREE%", "&$919;");
 					html = html.replace("%writer_header%", "&$911;");
 					break;
+				
 				case 3:
 					html = html.replace("%inbox_link%", "<a action=\"bypass _maillist_0_1_0_\">[&$917;]</a>");
 					html = html.replace("%sentbox_link%", "<a action=\"bypass _maillist_1_1_0_\">[&$918;]</a>");
@@ -191,10 +201,12 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 					html = html.replace("%writer_header%", "&$909;");
 					break;
 			}
+			
 			if (mailList != null)
 			{
 				int start = (page - 1) * MESSAGE_PER_PAGE;
 				int end = Math.min(page * MESSAGE_PER_PAGE, mailList.size());
+				
 				if (page == 1)
 				{
 					html = html.replace("%ACTION_GO_LEFT%", "");
@@ -206,26 +218,33 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 					html = html.replace("%ACTION_GO_LEFT%", "bypass _maillist_" + type + "_" + (page - 1) + "_" + byTitle + "_" + search);
 					html = html.replace("%NPAGE%", String.valueOf(page));
 					StringBuilder goList = new StringBuilder("");
+					
 					for (int i = page > 10 ? page - 10 : 1; i < page; i++)
 					{
 						goList.append("<td><a action=\"bypass _maillist_").append(type).append('_').append(i).append('_').append(byTitle).append('_').append(search).append("\"> ").append(i).append(" </a> </td>\n\n");
 					}
+					
 					html = html.replace("%GO_LIST%", goList.toString());
 				}
+				
 				int pages = Math.max(mailList.size() / MESSAGE_PER_PAGE, 1);
+				
 				if (mailList.size() > (pages * MESSAGE_PER_PAGE))
 				{
 					pages++;
 				}
+				
 				if (pages > page)
 				{
 					html = html.replace("%ACTION_GO_RIGHT%", "bypass _maillist_" + type + "_" + (page + 1) + "_" + byTitle + "_" + search);
 					int ep = Math.min(page + 10, pages);
 					StringBuilder goList = new StringBuilder("");
+					
 					for (int i = page + 1; i <= ep; i++)
 					{
 						goList.append("<td><a action=\"bypass _maillist_").append(type).append('_').append(i).append('_').append(byTitle).append('_').append(search).append("\"> ").append(i).append(" </a> </td>\n\n");
 					}
+					
 					html = html.replace("%GO_LIST2%", goList.toString());
 				}
 				else
@@ -233,8 +252,10 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 					html = html.replace("%ACTION_GO_RIGHT%", "");
 					html = html.replace("%GO_LIST2%", "");
 				}
+				
 				StringBuilder ml = new StringBuilder("");
 				String tpl = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_mailtpl.htm", player);
+				
 				for (int i = start; i < end; i++)
 				{
 					MailData md = mailList.get(i);
@@ -245,6 +266,7 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 					mailtpl = mailtpl.replace("%post_date%", md.postDate);
 					ml.append(mailtpl);
 				}
+				
 				html = html.replace("%MAIL_LIST%", ml.toString());
 			}
 			else
@@ -256,6 +278,7 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 				html = html.replace("%ACTION_GO_RIGHT%", "");
 				html = html.replace("%MAIL_LIST%", "");
 			}
+			
 			html = html.replace("%mailbox_type%", String.valueOf(type));
 			html = html.replace("%incomming_mail_no%", String.valueOf(inbox));
 			html = html.replace("%sent_mail_no%", String.valueOf(send));
@@ -273,6 +296,7 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 			Connection con = null;
 			PreparedStatement statement = null;
 			ResultSet rset = null;
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
@@ -281,24 +305,30 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 				statement.setInt(2, type);
 				statement.setInt(3, player.getObjectId());
 				rset = statement.executeQuery();
+				
 				if (rset.next())
 				{
 					String html = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_mail_read.htm", player);
+					
 					switch (type)
 					{
 						case 0:
 							html = html.replace("%TREE%", "<a action=\"bypass _maillist_0_1_0_\">&$917;</a>");
 							break;
+						
 						case 1:
 							html = html.replace("%TREE%", "<a action=\"bypass _maillist_1_1_0__\">&$918;</a>");
 							break;
+						
 						case 2:
 							html = html.replace("%TREE%", "<a action=\"bypass _maillist_2_1_0__\">&$919;</a>");
 							break;
+						
 						case 3:
 							html = html.replace("%TREE%", "<a action=\"bypass _maillist_3_1_0__\">&$920;</a>");
 							break;
 					}
+					
 					html = html.replace("%writer%", rset.getString("from_name"));
 					html = html.replace("%post_date%", String.format("%1$te-%1$tm-%1$tY", new Date(rset.getInt("post_date") * 1000L)));
 					html = html.replace("%del_date%", String.format("%1$te-%1$tm-%1$tY", new Date((rset.getInt("post_date") + (90 * 24 * 60 * 60)) * 1000L)));
@@ -333,6 +363,7 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 			int messageId = Integer.parseInt(st.nextToken());
 			Connection con = null;
 			PreparedStatement statement = null;
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
@@ -369,6 +400,7 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 	{
 		StringTokenizer st = new StringTokenizer(bypass, "_");
 		String cmd = st.nextToken();
+		
 		if ("mailsearch".equals(cmd))
 		{
 			onBypassCommand(player, "_maillist_" + st.nextToken() + "_1_" + ("Title".equals(arg3) ? "1_" : "0_") + (arg5 != null ? arg5 : ""));
@@ -384,12 +416,14 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM `bbs_mail` WHERE `box_type` = 0 and `read` = 0 and `to_object_id` = ?");
 			statement.setInt(1, player.getObjectId());
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				player.sendPacket(Msg.YOUVE_GOT_MAIL);
@@ -420,6 +454,7 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -433,6 +468,7 @@ public class PrivateMail extends Functions implements ScriptFile, ICommunityBoar
 			statement.setInt(1, type);
 			statement.setInt(2, player.getObjectId());
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				if (search.isEmpty())

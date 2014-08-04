@@ -38,7 +38,7 @@ import org.slf4j.LoggerFactory;
 public final class PetBabyInstance extends PetInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -127,12 +127,16 @@ public final class PetBabyInstance extends PetInstance
 		{
 			case PetDataTable.IMPROVED_BABY_COUGAR_ID:
 				return COUGAR_BUFFS[getBuffLevel()];
+				
 			case PetDataTable.IMPROVED_BABY_BUFFALO_ID:
 				return BUFFALO_BUFFS[getBuffLevel()];
+				
 			case PetDataTable.IMPROVED_BABY_KOOKABURRA_ID:
 				return KOOKABURRA_BUFFS[getBuffLevel()];
+				
 			case PetDataTable.FAIRY_PRINCESS_ID:
 				return FAIRY_PRINCESS_BUFFS[getBuffLevel()];
+				
 			default:
 				return Skill.EMPTY_ARRAY;
 		}
@@ -147,21 +151,26 @@ public final class PetBabyInstance extends PetInstance
 		try
 		{
 			Player owner = getPlayer();
+			
 			if (!owner.isDead() && !owner.isInvul() && !isCastingNow())
 			{
 				if (getEffectList().getEffectsCountForSkill(5753) > 0)
 				{
 					return null;
 				}
+				
 				if (getEffectList().getEffectsCountForSkill(5771) > 0)
 				{
 					return null;
 				}
+				
 				boolean improved = PetDataTable.isImprovedBabyPet(getNpcId());
 				Skill skill = null;
+				
 				if (!Config.ALT_PET_HEAL_BATTLE_ONLY || owner.isInCombat())
 				{
 					double curHp = owner.getCurrentHpPercents();
+					
 					if ((curHp < 90) && Rnd.chance((100 - curHp) / 3))
 					{
 						if (curHp < 33)
@@ -173,14 +182,17 @@ public final class PetBabyInstance extends PetInstance
 							skill = SkillTable.getInstance().getInfo(improved ? GreaterHeal : HealTrick, getHealLevel());
 						}
 					}
+					
 					if ((skill == null) && (getNpcId() == PetDataTable.IMPROVED_BABY_KOOKABURRA_ID))
 					{
 						double curMp = owner.getCurrentMpPercents();
+						
 						if ((curMp < 66) && Rnd.chance((100 - curMp) / 2))
 						{
 							skill = SkillTable.getInstance().getInfo(Recharge, getRechargeLevel());
 						}
 					}
+					
 					if ((skill != null) && skill.checkCondition(PetBabyInstance.this, owner, false, !isFollowMode(), true))
 					{
 						setTarget(owner);
@@ -188,17 +200,21 @@ public final class PetBabyInstance extends PetInstance
 						return skill;
 					}
 				}
+				
 				if (!improved || owner.isInOfflineMode() || (owner.getEffectList().getEffectsCountForSkill(5771) > 0))
 				{
 					return null;
 				}
+				
 				outer:
+				
 				for (Skill buff : getBuffs())
 				{
 					if (getCurrentMp() < buff.getMpConsume2())
 					{
 						continue;
 					}
+					
 					for (Effect ef : owner.getEffectList().getAllEffects())
 					{
 						if (checkEffect(ef, buff))
@@ -206,12 +222,14 @@ public final class PetBabyInstance extends PetInstance
 							continue outer;
 						}
 					}
+					
 					if (buff.checkCondition(PetBabyInstance.this, owner, false, !isFollowMode(), true))
 					{
 						setTarget(owner);
 						getAI().Cast(buff, owner, false, !isFollowMode());
 						return buff;
 					}
+					
 					return null;
 				}
 			}
@@ -221,6 +239,7 @@ public final class PetBabyInstance extends PetInstance
 			_log.warn("Pet [#" + getNpcId() + "] a buff task error has occurred: " + e);
 			_log.error("", e);
 		}
+		
 		return null;
 	}
 	
@@ -236,18 +255,22 @@ public final class PetBabyInstance extends PetInstance
 		{
 			return false;
 		}
+		
 		if (ef.getStackOrder() < skill.getEffectTemplates()[0]._stackOrder)
 		{
 			return false;
 		}
+		
 		if (ef.getTimeLeft() > 10)
 		{
 			return true;
 		}
+		
 		if (ef.getNext() != null)
 		{
 			return checkEffect(ef.getNext(), skill);
 		}
+		
 		return false;
 	}
 	
@@ -272,6 +295,7 @@ public final class PetBabyInstance extends PetInstance
 		{
 			stopBuffTask();
 		}
+		
 		if ((_actionTask == null) && !isDead())
 		{
 			_actionTask = ThreadPoolManager.getInstance().schedule(new ActionTask(), 5000);
@@ -354,6 +378,7 @@ public final class PetBabyInstance extends PetInstance
 		{
 			return Math.min(Math.max((getLevel() - getMinLevel()) / ((80 - getMinLevel()) / 3), 0), 3);
 		}
+		
 		return Math.min(Math.max((getLevel() - 55) / 5, 0), 3);
 	}
 	
@@ -386,11 +411,6 @@ public final class PetBabyInstance extends PetInstance
 	 */
 	private static final int Pet_Vampiric_Rage = 5187;
 	/**
-	 * Field Pet_Regeneration. (value is 5188)
-	 */
-	@SuppressWarnings("unused")
-	private static final int Pet_Regeneration = 5188;
-	/**
 	 * Field Pet_Blessed_Body. (value is 5189)
 	 */
 	private static final int Pet_Blessed_Body = 5189;
@@ -402,11 +422,6 @@ public final class PetBabyInstance extends PetInstance
 	 * Field Pet_Guidance. (value is 5191)
 	 */
 	private static final int Pet_Guidance = 5191;
-	/**
-	 * Field Pet_Wind_Walk. (value is 5192)
-	 */
-	@SuppressWarnings("unused")
-	private static final int Pet_Wind_Walk = 5192;
 	/**
 	 * Field Pet_Acumen. (value is 5193)
 	 */
@@ -435,11 +450,6 @@ public final class PetBabyInstance extends PetInstance
 	 * Field Pet_Death_Wisper. (value is 5589)
 	 */
 	private static final int Pet_Death_Wisper = 5589;
-	/**
-	 * Field CurseGloom. (value is 5199) Field Slow. (value is 5198) Field Hex. (value is 5197) Field WindShackle. (value is 5196)
-	 */
-	@SuppressWarnings("unused")
-	private static final int WindShackle = 5196, Hex = 5197, Slow = 5198, CurseGloom = 5199;
 	/**
 	 * Field COUGAR_BUFFS.
 	 */

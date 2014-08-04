@@ -41,7 +41,7 @@ import bosses.FourSepulchersSpawn.GateKeeper;
 public class SepulcherNpcInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -82,11 +82,13 @@ public class SepulcherNpcInstance extends NpcInstance
 			_closeTask.cancel(false);
 			_closeTask = null;
 		}
+		
 		if (_spawnMonsterTask != null)
 		{
 			_spawnMonsterTask.cancel(false);
 			_spawnMonsterTask = null;
 		}
+		
 		super.onDelete();
 	}
 	
@@ -104,6 +106,7 @@ public class SepulcherNpcInstance extends NpcInstance
 			player.sendActionFailed();
 			return;
 		}
+		
 		switch (getNpcId())
 		{
 			case 31468:
@@ -127,12 +130,15 @@ public class SepulcherNpcInstance extends NpcInstance
 			case 31486:
 			case 31487:
 				doDie(player);
+				
 				if (_spawnMonsterTask != null)
 				{
 					_spawnMonsterTask.cancel(false);
 				}
+				
 				_spawnMonsterTask = ThreadPoolManager.getInstance().schedule(new SpawnMonster(getNpcId()), 3500);
 				return;
+				
 			case 31455:
 			case 31456:
 			case 31457:
@@ -151,8 +157,10 @@ public class SepulcherNpcInstance extends NpcInstance
 					Functions.addItem(player.getParty().getPartyLeader(), HALLS_KEY, 1);
 					doDie(player);
 				}
+				
 				return;
 		}
+		
 		super.showChatWindow(player, val);
 	}
 	
@@ -167,6 +175,7 @@ public class SepulcherNpcInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String pom;
+		
 		if (val == 0)
 		{
 			pom = String.valueOf(npcId);
@@ -175,6 +184,7 @@ public class SepulcherNpcInstance extends NpcInstance
 		{
 			pom = npcId + "-" + val;
 		}
+		
 		return HTML_FILE_PATH + pom + ".htm";
 	}
 	
@@ -189,6 +199,7 @@ public class SepulcherNpcInstance extends NpcInstance
 		if (command.startsWith("open_gate"))
 		{
 			ItemInstance hallsKey = player.getInventory().getItemByItemId(HALLS_KEY);
+			
 			if (hallsKey == null)
 			{
 				showHtmlFile(player, "Gatekeeper-no.htm");
@@ -206,12 +217,15 @@ public class SepulcherNpcInstance extends NpcInstance
 							FourSepulchersSpawn.spawnShadow(getNpcId());
 						}
 				}
+				
 				openNextDoor(getNpcId());
+				
 				if (player.getParty() != null)
 				{
 					for (Player mem : player.getParty().getPartyMembers())
 					{
 						hallsKey = mem.getInventory().getItemByItemId(HALLS_KEY);
+						
 						if (hallsKey != null)
 						{
 							Functions.removeItem(mem, HALLS_KEY, hallsKey.getCount());
@@ -238,10 +252,12 @@ public class SepulcherNpcInstance extends NpcInstance
 	{
 		GateKeeper gk = FourSepulchersManager.getHallGateKeeper(npcId);
 		gk.door.openMe();
+		
 		if (_closeTask != null)
 		{
 			_closeTask.cancel(false);
 		}
+		
 		_closeTask = ThreadPoolManager.getInstance().schedule(new CloseNextDoor(gk), 10000);
 	}
 	
@@ -284,6 +300,7 @@ public class SepulcherNpcInstance extends NpcInstance
 				{
 					e.printStackTrace();
 				}
+				
 				state++;
 				_closeTask = ThreadPoolManager.getInstance().schedule(this, 10000);
 			}
@@ -334,18 +351,23 @@ public class SepulcherNpcInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		List<Player> knownPlayers = GameObjectsStorage.getAllPlayers();
+		
 		if ((knownPlayers == null) || knownPlayers.isEmpty())
 		{
 			return;
 		}
+		
 		Say2 sm = new Say2(0, ChatType.SHOUT, getName(), msg);
+		
 		for (Player player : knownPlayers)
 		{
 			if (player == null)
 			{
 				continue;
 			}
+			
 			if (PositionUtils.checkIfInRange(15000, player, this, true))
 			{
 				player.sendPacket(sm);
@@ -380,6 +402,7 @@ public class SepulcherNpcInstance extends NpcInstance
 				return true;
 			}
 		}
+		
 		return false;
 	}
 }

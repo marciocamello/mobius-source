@@ -105,12 +105,14 @@ public class ClanDataDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(sql);
 			statement.setInt(1, residence.getId());
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				return ClanTable.getInstance().getClan(rset.getInt("clan_id"));

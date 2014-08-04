@@ -104,12 +104,14 @@ public class ManageFavorites implements ScriptFile, ICommunityBoardHandler
 	{
 		StringTokenizer st = new StringTokenizer(bypass, "_");
 		String cmd = st.nextToken();
+		
 		if ("bbsgetfav".equals(cmd))
 		{
 			Connection con = null;
 			PreparedStatement statement = null;
 			ResultSet rset = null;
 			StringBuilder fl = new StringBuilder("");
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
@@ -117,6 +119,7 @@ public class ManageFavorites implements ScriptFile, ICommunityBoardHandler
 				statement.setInt(1, player.getObjectId());
 				rset = statement.executeQuery();
 				String tpl = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_favoritetpl.htm", player);
+				
 				while (rset.next())
 				{
 					String fav = tpl.replace("%fav_title%", rset.getString("fav_title"));
@@ -141,13 +144,16 @@ public class ManageFavorites implements ScriptFile, ICommunityBoardHandler
 		{
 			String fav = player.getSessionVar("add_fav");
 			player.setSessionVar("add_fav", null);
+			
 			if (fav != null)
 			{
 				String favs[] = fav.split("&");
+				
 				if (favs.length > 1)
 				{
 					Connection con = null;
 					PreparedStatement statement = null;
+					
 					try
 					{
 						con = DatabaseFactory.getInstance().getConnection();
@@ -168,6 +174,7 @@ public class ManageFavorites implements ScriptFile, ICommunityBoardHandler
 					}
 				}
 			}
+			
 			onBypassCommand(player, "_bbsgetfav");
 		}
 		else if ("bbsdelfav".equals(cmd))
@@ -175,6 +182,7 @@ public class ManageFavorites implements ScriptFile, ICommunityBoardHandler
 			int fav_id = Integer.parseInt(st.nextToken());
 			Connection con = null;
 			PreparedStatement statement = null;
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();

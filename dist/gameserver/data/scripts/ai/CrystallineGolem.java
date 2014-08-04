@@ -114,15 +114,18 @@ public class CrystallineGolem extends Fighter
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			doTask();
 			return true;
 		}
+		
 		if (itemToConsume != null)
 		{
 			if (itemToConsume.isVisible())
@@ -140,37 +143,46 @@ public class CrystallineGolem extends Fighter
 				return true;
 			}
 		}
+		
 		Info info = instanceInfo.get(actor.getReflectionId());
+		
 		if (info == null)
 		{
 			info = new Info();
 			instanceInfo.put(actor.getReflectionId(), info);
 		}
+		
 		boolean opened = info.stage1 && info.stage2;
+		
 		if (!info.stage1)
 		{
 			final int dx = actor.getX() - 142999;
 			final int dy = actor.getY() - 151671;
+			
 			if (((dx * dx) + (dy * dy)) < 10000)
 			{
 				actor.broadcastPacket(new MagicSkillUse(actor, actor, 5441, 1, 1, 0));
 				info.stage1 = true;
 			}
 		}
+		
 		if (!info.stage2)
 		{
 			final int dx = actor.getX() - 139494;
 			final int dy = actor.getY() - 151668;
+			
 			if (((dx * dx) + (dy * dy)) < 10000)
 			{
 				actor.broadcastPacket(new MagicSkillUse(actor, actor, 5441, 1, 1, 0));
 				info.stage2 = true;
 			}
 		}
+		
 		if (!opened && info.stage1 && info.stage2)
 		{
 			actor.getReflection().openDoor(CORAL_GARDEN_SECRETGATE);
 		}
+		
 		if (Rnd.chance(10))
 		{
 			for (GameObject obj : World.getAroundObjects(actor, 300, 200))
@@ -178,12 +190,14 @@ public class CrystallineGolem extends Fighter
 				if (obj.isItem())
 				{
 					ItemInstance item = (ItemInstance) obj;
+					
 					if (item.getItemId() == Crystal_Fragment)
 					{
 						if (Rnd.chance(50))
 						{
 							Functions.npcSay(actor, says[Rnd.get(says.length)]);
 						}
+						
 						itemToConsume = item;
 						lastPoint = actor.getLoc();
 						actor.setRunning();
@@ -193,10 +207,12 @@ public class CrystallineGolem extends Fighter
 				}
 			}
 		}
+		
 		if (randomAnimation())
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	

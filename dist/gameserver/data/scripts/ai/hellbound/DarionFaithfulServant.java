@@ -65,6 +65,7 @@ public class DarionFaithfulServant extends Fighter
 				e.printStackTrace();
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 	

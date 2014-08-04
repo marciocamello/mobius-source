@@ -202,11 +202,13 @@ public class Log
 	{
 		StringBuilder output = new StringBuilder();
 		output.append(cat);
+		
 		if (player != null)
 		{
 			output.append(' ');
 			output.append(player);
 		}
+		
 		output.append(' ');
 		output.append(text);
 		_logGame.info(output.toString());
@@ -254,16 +256,19 @@ public class Log
 		{
 			return;
 		}
+		
 		StringBuilder output = new StringBuilder();
 		output.append(type);
 		output.append(' ');
 		output.append('[');
 		output.append(player);
+		
 		if (target != null)
 		{
 			output.append(" -> ");
 			output.append(target);
 		}
+		
 		output.append(']');
 		output.append(' ');
 		output.append(text);
@@ -280,6 +285,7 @@ public class Log
 	public static void LogCommand(Player player, GameObject target, String command, boolean success)
 	{
 		StringBuilder output = new StringBuilder();
+		
 		if (success)
 		{
 			output.append("SUCCESS");
@@ -288,13 +294,16 @@ public class Log
 		{
 			output.append("FAIL   ");
 		}
+		
 		output.append(' ');
 		output.append(player);
+		
 		if (target != null)
 		{
 			output.append(" -> ");
 			output.append(target);
 		}
+		
 		output.append(' ');
 		output.append(command);
 		_logGm.info(output.toString());

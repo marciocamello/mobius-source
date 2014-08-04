@@ -56,6 +56,7 @@ public class TaskEndHero extends Task
 	public void onTimeElapsed(ExecutedTask task)
 	{
 		_log.info("Hero End Global Task: launched.");
+		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			if (player.getVarLong("HeroPeriod") <= System.currentTimeMillis())
@@ -68,6 +69,7 @@ public class TaskEndHero extends Task
 				player.unsetVar("HeroPeriod");
 			}
 		}
+		
 		_log.info("Hero End Global Task: completed.");
 	}
 	

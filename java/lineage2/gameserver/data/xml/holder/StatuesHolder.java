@@ -37,6 +37,7 @@ public class StatuesHolder extends AbstractHolder
 		{
 			_instance = new StatuesHolder();
 		}
+		
 		return _instance;
 	}
 	

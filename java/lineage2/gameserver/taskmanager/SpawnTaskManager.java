@@ -63,6 +63,7 @@ public class SpawnTaskManager
 		{
 			_instance = new SpawnTaskManager();
 		}
+		
 		return _instance;
 	}
 	
@@ -97,20 +98,25 @@ public class SpawnTaskManager
 					{
 						long current = System.currentTimeMillis();
 						int size = _spawnTasksSize;
+						
 						for (int i = size - 1; i >= 0; i--)
 						{
 							try
 							{
 								SpawnTask container = _spawnTasks[i];
+								
 								if ((container != null) && (container.endtime > 0) && (current > container.endtime))
 								{
 									NpcInstance actor = container.getActor();
+									
 									if ((actor != null) && (actor.getSpawn() != null))
 									{
 										works.add(actor);
 									}
+									
 									container.endtime = -1;
 								}
+								
 								if ((container == null) || (container.getActor() == null) || (container.endtime < 0))
 								{
 									if (i == (_spawnTasksSize - 1))
@@ -122,6 +128,7 @@ public class SpawnTaskManager
 										_spawnTasks[i] = _spawnTasks[_spawnTasksSize - 1];
 										_spawnTasks[_spawnTasksSize - 1] = null;
 									}
+									
 									if (_spawnTasksSize > 0)
 									{
 										_spawnTasksSize--;
@@ -134,14 +141,18 @@ public class SpawnTaskManager
 							}
 						}
 					}
+					
 					for (NpcInstance work : works)
 					{
 						Spawner spawn = work.getSpawn();
+						
 						if (spawn == null)
 						{
 							continue;
 						}
+						
 						spawn.decreaseScheduledCount();
+						
 						if (spawn.isDoRespawn())
 						{
 							spawn.respawnNpc(work);
@@ -167,11 +178,13 @@ public class SpawnTaskManager
 		sb.append("Tasks count: ").append(_spawnTasksSize).append("\n\r");
 		sb.append("Tasks dump:\n\r");
 		long current = System.currentTimeMillis();
+		
 		for (SpawnTask container : _spawnTasks)
 		{
 			sb.append("Class/Name: ").append(container.getClass().getSimpleName()).append('/').append(container.getActor());
 			sb.append(" spawn timer: ").append(Util.formatTime((int) (container.endtime - current))).append("\n\r");
 		}
+		
 		return sb.toString();
 	}
 	
@@ -224,6 +237,7 @@ public class SpawnTaskManager
 				System.arraycopy(_spawnTasks, 0, temp, 0, _spawnTasksSize);
 				_spawnTasks = temp;
 			}
+			
 			_spawnTasks[_spawnTasksSize] = decay;
 			_spawnTasksSize++;
 		}
@@ -240,6 +254,7 @@ public class SpawnTaskManager
 			if (_spawnTasksSize > 1)
 			{
 				int k = -1;
+				
 				for (int i = 0; i < _spawnTasksSize; i++)
 				{
 					if (_spawnTasks[i].getActor() == actor)
@@ -247,6 +262,7 @@ public class SpawnTaskManager
 						k = i;
 					}
 				}
+				
 				if (k > -1)
 				{
 					_spawnTasks[k] = _spawnTasks[_spawnTasksSize - 1];

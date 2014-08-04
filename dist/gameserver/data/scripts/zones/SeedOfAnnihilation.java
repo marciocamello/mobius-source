@@ -149,6 +149,7 @@ public class SeedOfAnnihilation implements ScriptFile
 	public void loadSeedRegionData()
 	{
 		_zoneListener = new ZoneListener();
+		
 		if ((_teleportZones != null) && !_teleportZones.isEmpty())
 		{
 			for (String s : _teleportZones.keySet())
@@ -157,6 +158,7 @@ public class SeedOfAnnihilation implements ScriptFile
 				zone.addListener(_zoneListener);
 			}
 		}
+		
 		_regionsData[0] = new SeedRegion(new String[]
 		{
 			"[14_23_beastacon_for_melee_for_pc]",
@@ -234,6 +236,7 @@ public class SeedOfAnnihilation implements ScriptFile
 		});
 		int buffsNow = 0;
 		long nextStatusChange = ServerVariables.getLong("SeedNextStatusChange", 0);
+		
 		if (nextStatusChange < System.currentTimeMillis())
 		{
 			buffsNow = Rnd.get(ZONE_BUFFS_LIST.length);
@@ -246,6 +249,7 @@ public class SeedOfAnnihilation implements ScriptFile
 			_seedsNextStatusChange = nextStatusChange;
 			buffsNow = ServerVariables.getInt("SeedBuffsList", 0);
 		}
+		
 		for (int i = 0; i < _regionsData.length; i++)
 		{
 			_regionsData[i].activeBuff = ZONE_BUFFS_LIST[buffsNow][i];
@@ -263,10 +267,12 @@ public class SeedOfAnnihilation implements ScriptFile
 		reenter.set(Calendar.MINUTE, 0);
 		reenter.set(Calendar.HOUR_OF_DAY, 13);
 		reenter.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
+		
 		if (reenter.getTimeInMillis() <= System.currentTimeMillis())
 		{
 			reenter.add(Calendar.DAY_OF_MONTH, 7);
 		}
+		
 		return reenter.getTimeInMillis();
 	}
 	
@@ -307,6 +313,7 @@ public class SeedOfAnnihilation implements ScriptFile
 		for (SeedRegion sr : _regionsData)
 		{
 			NpcTemplate template = NpcHolder.getInstance().getTemplate(ANNIHILATION_FURNACE);
+			
 			for (int i = 0; i < sr.af_spawns.length; i++)
 			{
 				NpcInstance npc = template.getNewInstance();
@@ -315,9 +322,11 @@ public class SeedOfAnnihilation implements ScriptFile
 				npc.setNpcState(sr.activeBuff);
 				sr.af_npcs[i] = npc;
 			}
+			
 			chanceZoneActive(sr.buff_zone_pc[sr.activeBuff - 1], true);
 			chanceZoneActive(sr.buff_zone_npc[sr.activeBuff - 1], true);
 		}
+		
 		ThreadPoolManager.getInstance().schedule(new ChangeSeedsStatus(), _seedsNextStatusChange - System.currentTimeMillis());
 	}
 	
@@ -343,19 +352,23 @@ public class SeedOfAnnihilation implements ScriptFile
 			_seedsNextStatusChange = getNextSeedsStatusChangeTime();
 			ServerVariables.set("SeedBuffsList", buffsNow);
 			ServerVariables.set("SeedNextStatusChange", _seedsNextStatusChange);
+			
 			for (int i = 0; i < _regionsData.length; i++)
 			{
 				int oldBuff = _regionsData[i].activeBuff;
 				_regionsData[i].activeBuff = ZONE_BUFFS_LIST[buffsNow][i];
+				
 				for (NpcInstance af : _regionsData[i].af_npcs)
 				{
 					af.setNpcState(_regionsData[i].activeBuff);
 				}
+				
 				chanceZoneActive(_regionsData[i].buff_zone_pc[oldBuff - 1], false);
 				chanceZoneActive(_regionsData[i].buff_zone_npc[oldBuff - 1], false);
 				chanceZoneActive(_regionsData[i].buff_zone_pc[_regionsData[i].activeBuff - 1], true);
 				chanceZoneActive(_regionsData[i].buff_zone_npc[_regionsData[i].activeBuff - 1], true);
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new ChangeSeedsStatus(), _seedsNextStatusChange - System.currentTimeMillis());
 		}
 	}
@@ -388,6 +401,7 @@ public class SeedOfAnnihilation implements ScriptFile
 			if (_teleportZones.containsKey(zone.getName()))
 			{
 				List<NpcInstance> around = cha.getAroundNpc(500, 300);
+				
 				if ((around != null) && !around.isEmpty())
 				{
 					for (NpcInstance npc : around)
@@ -402,6 +416,7 @@ public class SeedOfAnnihilation implements ScriptFile
 						}
 					}
 				}
+				
 				cha.teleToLocation(_teleportZones.get(zone.getName()));
 			}
 		}

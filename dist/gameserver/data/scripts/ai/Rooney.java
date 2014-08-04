@@ -63,22 +63,27 @@ public class Rooney extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((System.currentTimeMillis() - _lastTeleport) < TELEPORT_PERIOD)
 		{
 			return false;
 		}
+		
 		for (Location point : points)
 		{
 			Location loc = points[Rnd.get(points.length)];
+			
 			if (actor.getLoc().equals(loc))
 			{
 				continue;
 			}
+			
 			actor.broadcastPacketToOthers(new MagicSkillUse(actor, actor, 4671, 1, 1000, 0));
 			ThreadPoolManager.getInstance().schedule(new Teleport(loc), 1000);
 			_lastTeleport = System.currentTimeMillis();
 			break;
 		}
+		
 		return true;
 	}
 	

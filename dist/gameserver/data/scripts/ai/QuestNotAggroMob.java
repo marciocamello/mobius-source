@@ -56,9 +56,11 @@ public class QuestNotAggroMob extends DefaultAI
 	{
 		final NpcInstance actor = getActor();
 		final Player player = attacker.getPlayer();
+		
 		if (player != null)
 		{
 			final List<QuestState> quests = player.getQuestsForEvent(actor, QuestEventType.ATTACKED_WITH_QUEST, false);
+			
 			if (quests != null)
 			{
 				for (QuestState qs : quests)

@@ -40,11 +40,13 @@ public class Aenkinel extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((actor.getNpcId() == 25694) || (actor.getNpcId() == 25695))
 		{
 			final Reflection ref = actor.getReflection();
 			ref.setReenterTime(System.currentTimeMillis());
 		}
+		
 		if (actor.getNpcId() == 25694)
 		{
 			for (int i = 0; i < 4; i++)
@@ -59,6 +61,7 @@ public class Aenkinel extends Fighter
 				actor.getReflection().addSpawnWithoutRespawn(18823, actor.getLoc(), 250);
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 }

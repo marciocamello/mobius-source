@@ -71,9 +71,11 @@ public class Maguen extends Fighter
 		ThreadPoolManager.getInstance().schedule(new Plasma(), 2000L);
 		ThreadPoolManager.getInstance().schedule(new Despawn(), 10000L);
 		final List<Creature> around = getActor().getAroundCharacters(800, 300);
+		
 		if (!getActor().isInZone(ZoneType.dummy) && (around != null) && !around.isEmpty())
 		{
 			final ExShowScreenMessage sm = new ExShowScreenMessage(NpcString.MAGUEN_APPEARANCE, 5000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true);
+			
 			for (Creature character : around)
 			{
 				if (character.isPlayer())
@@ -96,7 +98,9 @@ public class Maguen extends Fighter
 		{
 			return;
 		}
+		
 		final NpcInstance actor = getActor();
+		
 		if (actor.isInZone(ZoneType.dummy))
 		{
 			switch (actor.getNpcState())
@@ -110,7 +114,9 @@ public class Maguen extends Fighter
 					{
 						actor.doCast(SkillTable.getInstance().getInfo(maguenStatsSkills[0], Rnd.get(1, 2)), caster, true);
 					}
+					
 					break;
+				
 				case 2:
 					if (Rnd.chance(80))
 					{
@@ -120,7 +126,9 @@ public class Maguen extends Fighter
 					{
 						actor.doCast(SkillTable.getInstance().getInfo(maguenStatsSkills[1], Rnd.get(1, 2)), caster, true);
 					}
+					
 					break;
+				
 				case 3:
 					if (Rnd.chance(80))
 					{
@@ -130,7 +138,9 @@ public class Maguen extends Fighter
 					{
 						actor.doCast(SkillTable.getInstance().getInfo(maguenStatsSkills[2], Rnd.get(1, 2)), caster, true);
 					}
+					
 					break;
+				
 				default:
 					break;
 			}
@@ -142,16 +152,20 @@ public class Maguen extends Fighter
 				case 1:
 					actor.doCast(SkillTable.getInstance().getInfo(maguenRaceSkills[0], 1), caster, true);
 					break;
+				
 				case 2:
 					actor.doCast(SkillTable.getInstance().getInfo(maguenRaceSkills[1], 1), caster, true);
 					break;
+				
 				case 3:
 					actor.doCast(SkillTable.getInstance().getInfo(maguenRaceSkills[2], 1), caster, true);
 					break;
+				
 				default:
 					break;
 			}
 		}
+		
 		getActor().setNpcState(4);
 	}
 	
@@ -167,10 +181,12 @@ public class Maguen extends Fighter
 		{
 			return;
 		}
+		
 		if (attacker.isPlayable())
 		{
 			return;
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	
@@ -186,6 +202,7 @@ public class Maguen extends Fighter
 		{
 			return false;
 		}
+		
 		return super.checkAggression(target);
 	}
 	

@@ -62,11 +62,13 @@ public class ItemAuctionManager
 		if (_instance == null)
 		{
 			_instance = new ItemAuctionManager();
+			
 			if (Config.ALT_ITEM_AUCTION_ENABLED)
 			{
 				_instance.load();
 			}
 		}
+		
 		return _instance;
 	}
 	
@@ -95,11 +97,13 @@ public class ItemAuctionManager
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT auctionId FROM item_auction ORDER BY auctionId DESC LIMIT 0, 1");
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				_nextId.set(rset.getInt(1));
@@ -114,11 +118,13 @@ public class ItemAuctionManager
 			DbUtils.closeQuietly(con, statement, rset);
 		}
 		File file = new File(Config.DATAPACK_ROOT, "data/xml/other/item_auctions.xml");
+		
 		if (!file.exists())
 		{
 			_log.warn("ItemAuctionManager: Missing item_auctions.xml!");
 			return;
 		}
+		
 		try
 		{
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -126,6 +132,7 @@ public class ItemAuctionManager
 			factory.setIgnoringComments(true);
 			DocumentBuilder builder = factory.newDocumentBuilder();
 			Document doc = builder.parse(file);
+			
 			for (Node na = doc.getFirstChild(); na != null; na = na.getNextSibling())
 			{
 				if ("list".equalsIgnoreCase(na.getNodeName()))
@@ -136,12 +143,15 @@ public class ItemAuctionManager
 						{
 							NamedNodeMap nab = nb.getAttributes();
 							int instanceId = Integer.parseInt(nab.getNamedItem("id").getNodeValue());
+							
 							if (_managerInstances.containsKey(instanceId))
 							{
 								throw new Exception("Duplicate instanceId " + instanceId);
 							}
+							
 							SchedulingPattern dateTime = new SchedulingPattern(nab.getNamedItem("schedule").getNodeValue());
 							List<AuctionItem> items = new ArrayList<>();
+							
 							for (Node nc = nb.getFirstChild(); nc != null; nc = nc.getNextSibling())
 							{
 								if ("item".equalsIgnoreCase(nc.getNodeName()))
@@ -152,10 +162,12 @@ public class ItemAuctionManager
 									long auctionInitBid = Integer.parseInt(nac.getNamedItem("auctionInitBid").getNodeValue());
 									int itemId = Integer.parseInt(nac.getNamedItem("itemId").getNodeValue());
 									int itemCount = Integer.parseInt(nac.getNamedItem("itemCount").getNodeValue());
+									
 									if (auctionLenght < 1)
 									{
 										throw new IllegalArgumentException("auctionLenght < 1 for instanceId: " + instanceId + ", itemId " + itemId);
 									}
+									
 									for (AuctionItem tmp : items)
 									{
 										if (tmp.getAuctionItemId() == auctionItemId)
@@ -163,15 +175,19 @@ public class ItemAuctionManager
 											throw new IllegalArgumentException("Dublicated auction item id " + auctionItemId + "for instanceId: " + instanceId);
 										}
 									}
+									
 									StatsSet itemExtra = new StatsSet();
+									
 									for (Node nd = nc.getFirstChild(); nd != null; nd = nd.getNextSibling())
 									{
 										if ("extra".equalsIgnoreCase(nd.getNodeName()))
 										{
 											NamedNodeMap nad = nd.getAttributes();
+											
 											for (int i = nad.getLength(); i-- > 0;)
 											{
 												Node n = nad.item(i);
+												
 												if (n != null)
 												{
 													itemExtra.set(n.getNodeName(), n.getNodeValue());
@@ -179,20 +195,24 @@ public class ItemAuctionManager
 											}
 										}
 									}
+									
 									AuctionItem item = new AuctionItem(auctionItemId, auctionLenght, auctionInitBid, itemId, itemCount, itemExtra);
 									items.add(item);
 								}
 							}
+							
 							if (items.isEmpty())
 							{
 								throw new IllegalArgumentException("No items defined for instanceId: " + instanceId);
 							}
+							
 							ItemAuctionInstance instance = new ItemAuctionInstance(instanceId, dateTime, items);
 							_managerInstances.put(instanceId, instance);
 						}
 					}
 				}
 			}
+			
 			_log.info("ItemAuctionManager: Loaded " + _managerInstances.size() + " instance(s).");
 		}
 		catch (Exception e)
@@ -207,6 +227,7 @@ public class ItemAuctionManager
 	public void shutdown()
 	{
 		ItemAuctionInstance[] instances = _managerInstances.values(new ItemAuctionInstance[_managerInstances.size()]);
+		
 		for (ItemAuctionInstance instance : instances)
 		{
 			instance.shutdown();
@@ -240,6 +261,7 @@ public class ItemAuctionManager
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();

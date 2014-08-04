@@ -39,11 +39,13 @@ public class ClonePlayerAI extends PlayableAI
 	{
 		ClonePlayer actor = getActor();
 		clearNextAction();
+		
 		if (actor.isFollowMode())
 		{
 			changeIntention(CtrlIntention.AI_INTENTION_FOLLOW, actor.getPlayer(), Config.FOLLOW_RANGE);
 			thinkFollow();
 		}
+		
 		super.thinkActive();
 	}
 	
@@ -56,10 +58,12 @@ public class ClonePlayerAI extends PlayableAI
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		ClonePlayer actor = getActor();
+		
 		if ((attacker != null) && actor.getPlayer().isDead())
 		{
 			Attack(attacker, false, false);
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	

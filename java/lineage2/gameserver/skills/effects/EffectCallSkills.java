@@ -43,13 +43,16 @@ public class EffectCallSkills extends Effect
 	{
 		super.onStart();
 		boolean isRecursive = getTemplate().getParam().getBool("isRecursive", false);
+		
 		if (!isRecursive)
 		{
 			int[] skillIds = getTemplate().getParam().getIntegerArray("skillIds");
 			int[] skillLevels = getTemplate().getParam().getIntegerArray("skillLevels");
+			
 			for (int i = 0; i < skillIds.length; i++)
 			{
 				Skill skill = SkillTable.getInstance().getInfo(skillIds[i], skillLevels[i]);
+				
 				for (Creature cha : skill.getTargets(getEffector(), getEffected(), false))
 				{
 					if (!getSkill().isAwakeningToggle())
@@ -57,6 +60,7 @@ public class EffectCallSkills extends Effect
 						getEffector().broadcastPacket(new MagicSkillUse(getEffector(), cha, skillIds[i], skillLevels[i], 0, 0));
 					}
 				}
+				
 				getEffector().callSkill(skill, skill.getTargets(getEffector(), getEffected(), false), false);
 			}
 		}
@@ -70,15 +74,19 @@ public class EffectCallSkills extends Effect
 	public boolean onActionTime()
 	{
 		boolean isRecursive = getTemplate().getParam().getBool("isRecursive", false);
+		
 		if (_effector.isDead() || !isRecursive)
 		{
 			return false;
 		}
+		
 		int[] skillIds = getTemplate().getParam().getIntegerArray("skillIds");
 		int[] skillLevels = getTemplate().getParam().getIntegerArray("skillLevels");
+		
 		for (int i = 0; i < skillIds.length; i++)
 		{
 			Skill skill = SkillTable.getInstance().getInfo(skillIds[i], skillLevels[i]);
+			
 			for (Creature cha : skill.getTargets(getEffector(), getEffected(), false))
 			{
 				if (!getSkill().isAwakeningToggle())
@@ -86,8 +94,10 @@ public class EffectCallSkills extends Effect
 					getEffector().broadcastPacket(new MagicSkillUse(getEffector(), cha, skillIds[i], skillLevels[i], 0, 0));
 				}
 			}
+			
 			getEffector().callSkill(skill, skill.getTargets(getEffector(), getEffected(), false), false);
 		}
+		
 		return true;
 	}
 }

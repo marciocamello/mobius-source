@@ -47,6 +47,7 @@ public class AdminTeam extends ScriptAdminCommand
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		TeamType team = TeamType.NONE;
+		
 		if (wordList.length >= 2)
 		{
 			for (TeamType t : TeamType.values())
@@ -57,12 +58,15 @@ public class AdminTeam extends ScriptAdminCommand
 				}
 			}
 		}
+		
 		final GameObject object = activeChar.getTarget();
+		
 		if ((object == null) || !object.isCreature())
 		{
 			activeChar.sendPacket(SystemMsg.INVALID_TARGET);
 			return false;
 		}
+		
 		((Creature) object).setTeam(team);
 		return true;
 	}

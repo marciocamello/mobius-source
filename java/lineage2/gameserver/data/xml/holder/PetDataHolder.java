@@ -91,11 +91,13 @@ public class PetDataHolder extends AbstractHolder
 	public PetData getInfo(int petNpcId, int level)
 	{
 		PetData result = null;
+		
 		while ((result == null) && (level < 100))
 		{
 			result = _pets.get((petNpcId * 100) + level);
 			level++;
 		}
+		
 		return result;
 	}
 	

@@ -49,6 +49,7 @@ public class TullyWorkshopZone implements ScriptFile
 	public void onLoad()
 	{
 		_zoneListener = new ZoneListener();
+		
 		for (String s : zones)
 		{
 			Zone zone = ReflectionUtils.getZone(s);
@@ -114,10 +115,12 @@ public class TullyWorkshopZone implements ScriptFile
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
 			Player player = cha.getPlayer();
+			
 			if (player == null)
 			{
 				return;
 			}
+			
 			if (zone.isActive())
 			{
 				if (zone.getName().equalsIgnoreCase("[tully1]"))

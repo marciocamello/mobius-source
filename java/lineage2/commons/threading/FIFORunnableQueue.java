@@ -64,6 +64,7 @@ public abstract class FIFORunnableQueue<T extends Runnable> implements Runnable
 			{
 				return;
 			}
+			
 			_state = QUEUED;
 		}
 		execute();
@@ -95,17 +96,21 @@ public abstract class FIFORunnableQueue<T extends Runnable> implements Runnable
 			{
 				return;
 			}
+			
 			_state = RUNNING;
 		}
+		
 		try
 		{
 			for (;;)
 			{
 				final Runnable t = _queue.poll();
+				
 				if (t == null)
 				{
 					break;
 				}
+				
 				t.run();
 			}
 		}

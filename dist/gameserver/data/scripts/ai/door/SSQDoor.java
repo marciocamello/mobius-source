@@ -76,18 +76,22 @@ public class SSQDoor extends DoorAI
 	public void onEvtTwiceClick(final Player player)
 	{
 		final DoorInstance door = getActor();
+		
 		if (door.getReflection().isDefault())
 		{
 			return;
 		}
+		
 		if (!ArrayUtils.contains(ssqDoors, door.getDoorId()))
 		{
 			return;
 		}
+		
 		if (!player.isInRange(door, 150))
 		{
 			return;
 		}
+		
 		switch (door.getDoorId())
 		{
 			case 17240102:
@@ -98,7 +102,9 @@ public class SSQDoor extends DoorAI
 						return;
 					}
 				}
+				
 				break;
+			
 			case 17240104:
 				for (NpcInstance n : door.getReflection().getNpcs())
 				{
@@ -107,7 +113,9 @@ public class SSQDoor extends DoorAI
 						return;
 					}
 				}
+				
 				break;
+			
 			case 17240106:
 				for (NpcInstance n : door.getReflection().getNpcs())
 				{
@@ -116,7 +124,9 @@ public class SSQDoor extends DoorAI
 						return;
 					}
 				}
+				
 				break;
+			
 			case 17240108:
 				for (NpcInstance n : door.getReflection().getNpcs())
 				{
@@ -125,7 +135,9 @@ public class SSQDoor extends DoorAI
 						return;
 					}
 				}
+				
 				break;
+			
 			case 17240110:
 				for (NpcInstance n : door.getReflection().getNpcs())
 				{
@@ -134,8 +146,10 @@ public class SSQDoor extends DoorAI
 						return;
 					}
 				}
+				
 				break;
 		}
+		
 		door.getReflection().openDoor(door.getDoorId());
 	}
 }

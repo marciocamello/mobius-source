@@ -53,9 +53,11 @@ public class MonsterMage extends Mystic
 	private boolean startAttack()
 	{
 		NpcInstance actor = getActor();
+		
 		if (target == null)
 		{
 			List<Creature> around = actor.getAroundCharacters(3000, 150);
+			
 			if ((around != null) && !around.isEmpty())
 			{
 				for (Creature obj : around)
@@ -96,6 +98,7 @@ public class MonsterMage extends Mystic
 		{
 			return false;
 		}
+		
 		if (target.isPlayer())
 		{
 			return true;
@@ -111,6 +114,7 @@ public class MonsterMage extends Mystic
 				return false;
 			}
 		}
+		
 		return true;
 	}
 }

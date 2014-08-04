@@ -94,12 +94,15 @@ public class HelpBook extends ScriptItemHandler
 		{
 			return false;
 		}
+		
 		final Player activeChar = (Player) playable;
 		Functions.show("help/" + item.getItemId() + ".htm", activeChar, null);
+		
 		if (item.getItemId() == 7063)
 		{
 			activeChar.sendPacket(new RadarControl(0, 2, new Location(51995, -51265, -3104)));
 		}
+		
 		activeChar.sendActionFailed();
 		return true;
 	}

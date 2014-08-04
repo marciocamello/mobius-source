@@ -24,7 +24,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class QueenAntLarvaInstance extends MonsterInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	

@@ -220,6 +220,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rs = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -227,6 +228,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 			rs = statement.executeQuery();
 			StringBuilder html = new StringBuilder();
 			html.append("<table width=570>");
+			
 			while (rs.next())
 			{
 				CBStatMan tp = new CBStatMan();
@@ -240,6 +242,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				String sex = tp.ChSex == 1 ? "F" : "M";
 				String color;
 				String OnOff;
+				
 				if (tp.ChOnOff == 1)
 				{
 					OnOff = "Online.";
@@ -250,6 +253,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 					OnOff = "Offline.";
 					color = "D70000";
 				}
+				
 				html.append("<tr>");
 				html.append("<td width=250>" + tp.ChName + "</td>");
 				html.append("<td width=50>" + sex + "</td>");
@@ -259,6 +263,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				html.append("<td width=100><font color=" + color + ">" + OnOff + "</font></td>");
 				html.append("</tr>");
 			}
+			
 			html.append("</table>");
 			String content = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/stats/stats_top_pvp.htm", player);
 			content = content.replace("%stats_top_pvp%", html.toString());
@@ -285,6 +290,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rs = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -292,6 +298,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 			rs = statement.executeQuery();
 			StringBuilder html = new StringBuilder();
 			html.append("<table width=570>");
+			
 			while (rs.next())
 			{
 				CBStatMan tp = new CBStatMan();
@@ -305,6 +312,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				String sex = tp.ChSex == 1 ? "F" : "M";
 				String color;
 				String OnOff;
+				
 				if (tp.ChOnOff == 1)
 				{
 					OnOff = "Online.";
@@ -315,6 +323,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 					OnOff = "Offline.";
 					color = "D70000";
 				}
+				
 				html.append("<tr>");
 				html.append("<td width=250>" + tp.ChName + "</td>");
 				html.append("<td width=50>" + sex + "</td>");
@@ -324,6 +333,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				html.append("<td width=100><font color=" + color + ">" + OnOff + "</font></td>");
 				html.append("</tr>");
 			}
+			
 			html.append("</table>");
 			String content = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/stats/stats_top_pk.htm", player);
 			content = content.replace("%stats_top_pk%", html.toString());
@@ -350,6 +360,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rs = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -357,6 +368,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 			rs = statement.executeQuery();
 			StringBuilder html = new StringBuilder();
 			html.append("<table width=570>");
+			
 			while (rs.next())
 			{
 				CBStatMan tp = new CBStatMan();
@@ -370,6 +382,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				String sex = tp.ChSex == 1 ? "F" : "M";
 				String color;
 				String OnOff;
+				
 				if (tp.ChOnOff == 1)
 				{
 					OnOff = "Online.";
@@ -380,6 +393,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 					OnOff = "Offline.";
 					color = "D70000";
 				}
+				
 				html.append("<tr>");
 				html.append("<td width=250>" + tp.ChName + "</td>");
 				html.append("<td width=50>" + sex + "</td>");
@@ -389,6 +403,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				html.append("<td width=100><font color=" + color + ">" + OnOff + "</font></td>");
 				html.append("</tr>");
 			}
+			
 			html.append("</table>");
 			String content = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/stats/stats_online.htm", player);
 			content = content.replace("%stats_online%", html.toString());
@@ -416,6 +431,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rs = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -425,6 +441,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 			html.append("<table width=570>");
 			String Owner = null;
 			String color = "FFFFFF";
+			
 			while (rs.next())
 			{
 				CBStatMan tp = new CBStatMan();
@@ -433,6 +450,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				tp.Percent = (rs.getString("tax_percent") + "%");
 				tp.siegeDate = sdf.format(new Date(rs.getLong("siege_date")));
 				Owner = CastleManorManager.getInstance().getOwner(tp.id);
+				
 				if (Owner != null)
 				{
 					color = "00CC00";
@@ -442,6 +460,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 					color = "FFFFFF";
 					Owner = "Not Owned";
 				}
+				
 				html.append("<tr>");
 				html.append("<td width=150>" + tp.NameCastl + "</td>");
 				html.append("<td width=100>" + tp.Percent + "</td>");
@@ -449,6 +468,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				html.append("<td width=150>" + tp.siegeDate + "</td>");
 				html.append("</tr>");
 			}
+			
 			html.append("</table>");
 			String content = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/stats/stats_castle.htm", player);
 			content = content.replace("%stats_castle%", html.toString());
@@ -475,6 +495,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rs = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -482,6 +503,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 			rs = statement.executeQuery();
 			StringBuilder html = new StringBuilder();
 			html.append("<table width=570>");
+			
 			while (rs.next())
 			{
 				CBStatMan tp = new CBStatMan();
@@ -492,51 +514,63 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				tp.hasCastle = rs.getInt("hasCastle");
 				String hasCastle = "";
 				String castleColor = "D70000";
+				
 				switch (tp.hasCastle)
 				{
 					case 1:
 						hasCastle = "Gludio";
 						castleColor = "00CC00";
 						break;
+					
 					case 2:
 						hasCastle = "Dion";
 						castleColor = "00CC00";
 						break;
+					
 					case 3:
 						hasCastle = "Giran";
 						castleColor = "00CC00";
 						break;
+					
 					case 4:
 						hasCastle = "Oren";
 						castleColor = "00CC00";
 						break;
+					
 					case 5:
 						hasCastle = "Aden";
 						castleColor = "00CC00";
 						break;
+					
 					case 6:
 						hasCastle = "Innadril";
 						castleColor = "00CC00";
 						break;
+					
 					case 7:
 						hasCastle = "Goddard";
 						castleColor = "00CC00";
 						break;
+					
 					case 8:
 						hasCastle = "Rune";
 						castleColor = "00CC00";
 						break;
+					
 					case 9:
 						hasCastle = "Schuttgart";
 						castleColor = "00CC00";
 						break;
+					
 					default:
 						hasCastle = "None";
 						castleColor = "D70000";
 						break;
 				}
+				
 				html.append("<tr>");
 				html.append("<td width=150>" + tp.ClanName + "</td>");
+				
 				if (tp.AllyName != null)
 				{
 					html.append("<td width=150>" + tp.AllyName + "</td>");
@@ -545,11 +579,13 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				{
 					html.append("<td width=150>No Ally</td>");
 				}
+				
 				html.append("<td width=100>" + tp.ReputationClan + "</td>");
 				html.append("<td width=50>" + tp.ClanLevel + "</td>");
 				html.append("<td width=100><font color=" + castleColor + ">" + hasCastle + "</font></td>");
 				html.append("</tr>");
 			}
+			
 			html.append("</table>");
 			String content = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/stats/stats_clan.htm", player);
 			content = content.replace("%stats_clan%", html.toString());
@@ -576,6 +612,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 	{
 		long onlinetimeH;
 		int onlinetimeM;
+		
 		if (((time / 60 / 60) - 0.5) <= 0)
 		{
 			onlinetimeH = 0;
@@ -584,6 +621,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		{
 			onlinetimeH = Math.round((time / 60 / 60) - 0.5);
 		}
+		
 		onlinetimeM = Math.round(((time / 60 / 60) - onlinetimeH) * 60);
 		return "" + onlinetimeH + "h. " + onlinetimeM + "m.";
 	}

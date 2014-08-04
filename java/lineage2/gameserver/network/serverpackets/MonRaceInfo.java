@@ -36,7 +36,6 @@ public class MonRaceInfo extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xe3);
-		
 		writeD(_unknown1);
 		writeD(_unknown2);
 		writeD(8);
@@ -55,10 +54,12 @@ public class MonRaceInfo extends L2GameServerPacket
 			writeF(_monsters[i].getColHeight()); // coll. height
 			writeF(_monsters[i].getColRadius()); // coll. radius
 			writeD(120); // ?? unknown
+			
 			for (int j = 0; j < 20; j++)
 			{
 				writeC(_unknown1 == 0 ? _speeds[i][j] : 0);
 			}
+			
 			writeD(0);
 			writeD(0x00); // ? GraciaFinal
 		}

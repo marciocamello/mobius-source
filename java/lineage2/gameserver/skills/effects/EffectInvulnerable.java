@@ -44,11 +44,14 @@ public final class EffectInvulnerable extends Effect
 		{
 			return false;
 		}
+		
 		Skill skill = _effected.getCastingSkill();
+		
 		if ((skill != null) && ((skill.getSkillType() == SkillType.TAKECASTLE) || (skill.getSkillType() == SkillType.TAKEFORTRESS)))
 		{
 			return false;
 		}
+		
 		return super.checkCondition();
 	}
 	

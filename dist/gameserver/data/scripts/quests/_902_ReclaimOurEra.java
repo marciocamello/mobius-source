@@ -57,6 +57,7 @@ public class _902_ReclaimOurEra extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("mathias_q902_04.htm"))
 		{
 			st.setState(STARTED);
@@ -92,10 +93,12 @@ public class _902_ReclaimOurEra extends Quest implements ScriptFile
 				st.giveItems(21750, 3);
 				st.giveItems(ADENA_ID, 348155);
 			}
+			
 			st.setState(COMPLETED);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(this);
 		}
+		
 		return htmltext;
 	}
 	
@@ -104,6 +107,7 @@ public class _902_ReclaimOurEra extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (npc.getNpcId() == Mathias)
 		{
 			switch (st.getState())
@@ -125,7 +129,9 @@ public class _902_ReclaimOurEra extends Quest implements ScriptFile
 					{
 						htmltext = "mathias_q902_00a.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					if (cond == 1)
 					{
@@ -147,9 +153,11 @@ public class _902_ReclaimOurEra extends Quest implements ScriptFile
 					{
 						htmltext = "mathias_q902_08.htm";
 					}
+					
 					break;
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -157,6 +165,7 @@ public class _902_ReclaimOurEra extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if ((cond == 2) && ArrayUtils.contains(OrcsSilenos, npc.getNpcId()))
 		{
 			st.giveItems(ShatteredBones, 1);
@@ -172,6 +181,7 @@ public class _902_ReclaimOurEra extends Quest implements ScriptFile
 			st.giveItems(AnaisScroll, 1);
 			st.setCond(5);
 		}
+		
 		return null;
 	}
 	

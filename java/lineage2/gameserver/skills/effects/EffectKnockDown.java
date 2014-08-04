@@ -78,6 +78,7 @@ public class EffectKnockDown extends Effect
 		{
 			return false;
 		}
+		
 		return super.checkCondition();
 	}
 	
@@ -91,19 +92,23 @@ public class EffectKnockDown extends Effect
 		Location playerLoc = _effected.getLoc();
 		Location tagetLoc = getEffector().getLoc();
 		double distance = playerLoc.distance(tagetLoc);
+		
 		if ((distance > 2000) || (distance < 1))
 		{
 			return;
 		}
+		
 		double dx = tagetLoc.x - playerLoc.x;
 		double dy = tagetLoc.y - playerLoc.y;
 		double dz = tagetLoc.z - playerLoc.z;
 		int offset = Math.min((int) distance + getSkill().getFlyRadius(), 1400);
 		offset = (int) (offset + Math.abs(dz));
+		
 		if (offset < 5)
 		{
 			offset = 5;
 		}
+		
 		double sin = dy / distance;
 		double cos = dx / distance;
 		_x = (tagetLoc.x - (int) (offset * cos));
@@ -111,11 +116,13 @@ public class EffectKnockDown extends Effect
 		_z = tagetLoc.z;
 		Location loc = new Location(_x, _y, _z);
 		loc = GeoEngine.moveCheck(tagetLoc.x, tagetLoc.y, tagetLoc.z, _x, _y, _effected.getGeoIndex());
+		
 		if (!_effected.isKnockedDown())
 		{
 			_effected.startKnockingdown();
 		}
-		for (Player playerNearEffected : World.getAroundPlayers(_effected, 1200, 400))// Need to check: When the target has been hitted by another Knock Down skill, don't trigger chain skill
+		
+		for (Player playerNearEffected : World.getAroundPlayers(_effected, 1200, 400)) // Need to check: When the target has been hitted by another Knock Down skill, don't trigger chain skill
 		{
 			if ((playerNearEffected.getTarget() == _effected) && playerNearEffected.isAwaking())
 			{
@@ -145,6 +152,7 @@ public class EffectKnockDown extends Effect
 	public void onExit()
 	{
 		super.onExit();
+		
 		if (_effected.isKnockedDown())
 		{
 			_effected.stopKnockingdown();

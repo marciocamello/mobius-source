@@ -64,6 +64,7 @@ public class _10282_ToTheSeedOfAnnihilation extends Quest implements ScriptFile
 			st.takeItems(SOA_ORDERS, -1);
 			st.exitCurrentQuest(false);
 		}
+		
 		return event;
 	}
 	
@@ -73,6 +74,7 @@ public class _10282_ToTheSeedOfAnnihilation extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int id = st.getState();
 		int npcId = npc.getNpcId();
+		
 		if (id == COMPLETED)
 		{
 			if (npcId == KBALDIR)
@@ -109,6 +111,7 @@ public class _10282_ToTheSeedOfAnnihilation extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 }

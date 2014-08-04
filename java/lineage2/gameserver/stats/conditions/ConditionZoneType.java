@@ -47,6 +47,7 @@ public class ConditionZoneType extends Condition
 		{
 			return false;
 		}
+		
 		return env.character.isInZone(_zoneType);
 	}
 }

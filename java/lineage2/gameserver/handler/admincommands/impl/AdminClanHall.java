@@ -64,32 +64,40 @@ public class AdminClanHall implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		if (!activeChar.getPlayerAccess().CanEditNPC)
 		{
 			return false;
 		}
+		
 		ClanHall clanhall = null;
+		
 		if (wordList.length > 1)
 		{
 			clanhall = ResidenceHolder.getInstance().getResidence(ClanHall.class, Integer.parseInt(wordList[1]));
 		}
+		
 		if (clanhall == null)
 		{
 			showClanHallSelectPage(activeChar);
 			return true;
 		}
+		
 		switch (command)
 		{
 			case admin_clanhall:
 				showClanHallSelectPage(activeChar);
 				break;
+			
 			case admin_clanhallset:
 				GameObject target = activeChar.getTarget();
 				Player player = activeChar;
+				
 				if ((target != null) && target.isPlayer())
 				{
 					player = (Player) target;
 				}
+				
 				if (player.getClan() == null)
 				{
 					activeChar.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
@@ -98,18 +106,24 @@ public class AdminClanHall implements IAdminCommandHandler
 				{
 					clanhall.changeOwner(player.getClan());
 				}
+				
 				break;
+			
 			case admin_clanhalldel:
 				clanhall.changeOwner(null);
 				break;
+			
 			case admin_clanhallteleportself:
 				Zone zone = clanhall.getZone();
+				
 				if (zone != null)
 				{
 					activeChar.teleToLocation(zone.getSpawn());
 				}
+				
 				break;
 		}
+		
 		showClanHallPage(activeChar, clanhall);
 		return true;
 	}
@@ -154,6 +168,7 @@ public class AdminClanHall implements IAdminCommandHandler
 		replyMSG.append("Location: &^" + clanhall.getId() + ";<br>");
 		replyMSG.append("ClanHall Owner: ");
 		Clan owner = clanhall.getOwnerId() == 0 ? null : ClanTable.getInstance().getClan(clanhall.getOwnerId());
+		
 		if (owner == null)
 		{
 			replyMSG.append("none");
@@ -162,6 +177,7 @@ public class AdminClanHall implements IAdminCommandHandler
 		{
 			replyMSG.append(owner.getName());
 		}
+		
 		replyMSG.append("<br><br><br>");
 		replyMSG.append("<table>");
 		replyMSG.append("<tr><td><button value=\"Open Doors\" action=\"bypass -h admin_clanhallopendoors " + clanhall.getId() + "\" width=80 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");

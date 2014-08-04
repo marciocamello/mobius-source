@@ -35,7 +35,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public class NaiaRoomControllerInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -130,10 +130,12 @@ public class NaiaRoomControllerInstance extends NpcInstance
 	public void onBypassFeedback(Player player, String command)
 	{
 		Location kickLoc = new Location(17656, 244328, 11595);
+		
 		if (!canBypassCheck(player, this))
 		{
 			return;
 		}
+		
 		if (command.startsWith("challengeroom"))
 		{
 			if (!NaiaTowerManager.isLegalGroup(player))
@@ -144,17 +146,22 @@ public class NaiaRoomControllerInstance extends NpcInstance
 					{
 						member.teleToLocation(kickLoc);
 					}
+					
 					return;
 				}
+				
 				player.teleToLocation(kickLoc);
 				return;
 			}
+			
 			int npcId = getNpcId();
+			
 			if (NaiaTowerManager.isRoomDone(npcId, player))
 			{
 				player.sendPacket(new NpcHtmlMessage(player, this).setHtml("Ingenious Contraption:<br><br>The room is already challenged."));
 				return;
 			}
+			
 			switch (npcId)
 			{
 				case 18494:
@@ -168,21 +175,25 @@ public class NaiaRoomControllerInstance extends NpcInstance
 					NaiaTowerManager.addMobsToRoom(npcId, _roomMobList);
 					break;
 				}
+				
 				case 18495:
 				{
 					ReflectionUtils.getDoor(18250002).closeMe();
 					ReflectionUtils.getDoor(18250003).closeMe();
 					_roomMobList = new ArrayList<>();
+					
 					for (Location _room2loc : _room2locs)
 					{
 						spawnExactToRoom(22439, _room2loc, npcId);
 					}
+					
 					NaiaTowerManager.lockRoom(npcId);
 					NaiaTowerManager.addRoomDone(npcId, player);
 					NaiaTowerManager.addMobsToRoom(npcId, _roomMobList);
 					NaiaTowerManager.updateGroupTimer(player);
 					break;
 				}
+				
 				case 18496:
 				{
 					ReflectionUtils.getDoor(18250004).closeMe();
@@ -196,21 +207,25 @@ public class NaiaRoomControllerInstance extends NpcInstance
 					NaiaTowerManager.updateGroupTimer(player);
 					break;
 				}
+				
 				case 18497:
 				{
 					ReflectionUtils.getDoor(18250006).closeMe();
 					ReflectionUtils.getDoor(18250007).closeMe();
 					_roomMobList = new ArrayList<>();
+					
 					for (Location _room4loc : _room4locs)
 					{
 						spawnExactToRoom(22440, _room4loc, npcId);
 					}
+					
 					NaiaTowerManager.lockRoom(npcId);
 					NaiaTowerManager.addRoomDone(npcId, player);
 					NaiaTowerManager.addMobsToRoom(npcId, _roomMobList);
 					NaiaTowerManager.updateGroupTimer(player);
 					break;
 				}
+				
 				case 18498:
 				{
 					ReflectionUtils.getDoor(18250008).closeMe();
@@ -225,6 +240,7 @@ public class NaiaRoomControllerInstance extends NpcInstance
 					NaiaTowerManager.updateGroupTimer(player);
 					break;
 				}
+				
 				case 18499:
 				{
 					ReflectionUtils.getDoor(18250010).closeMe();
@@ -237,6 +253,7 @@ public class NaiaRoomControllerInstance extends NpcInstance
 					NaiaTowerManager.updateGroupTimer(player);
 					break;
 				}
+				
 				case 18500:
 				{
 					ReflectionUtils.getDoor(18250101).closeMe();
@@ -251,6 +268,7 @@ public class NaiaRoomControllerInstance extends NpcInstance
 					NaiaTowerManager.updateGroupTimer(player);
 					break;
 				}
+				
 				case 18501:
 				{
 					ReflectionUtils.getDoor(18250014).closeMe();
@@ -263,6 +281,7 @@ public class NaiaRoomControllerInstance extends NpcInstance
 					NaiaTowerManager.updateGroupTimer(player);
 					break;
 				}
+				
 				case 18502:
 				{
 					ReflectionUtils.getDoor(18250102).closeMe();
@@ -276,6 +295,7 @@ public class NaiaRoomControllerInstance extends NpcInstance
 					NaiaTowerManager.updateGroupTimer(player);
 					break;
 				}
+				
 				case 18503:
 				{
 					ReflectionUtils.getDoor(18250018).closeMe();
@@ -288,6 +308,7 @@ public class NaiaRoomControllerInstance extends NpcInstance
 					NaiaTowerManager.updateGroupTimer(player);
 					break;
 				}
+				
 				case 18504:
 				{
 					ReflectionUtils.getDoor(18250103).closeMe();
@@ -300,6 +321,7 @@ public class NaiaRoomControllerInstance extends NpcInstance
 					NaiaTowerManager.updateGroupTimer(player);
 					break;
 				}
+				
 				case 18505:
 				{
 					ReflectionUtils.getDoor(18250022).closeMe();
@@ -312,6 +334,7 @@ public class NaiaRoomControllerInstance extends NpcInstance
 					NaiaTowerManager.removeGroupTimer(player);
 					break;
 				}
+				
 				default:
 					break;
 			}

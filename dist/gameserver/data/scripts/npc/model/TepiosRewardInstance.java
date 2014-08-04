@@ -30,7 +30,7 @@ import quests._695_DefendtheHallofSuffering;
 public class TepiosRewardInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -103,18 +103,22 @@ public class TepiosRewardInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("getreward"))
 		{
 			if (_gotReward)
 			{
 				return;
 			}
+			
 			if (player.isInParty() && (player.getParty().getPartyLeader() != player))
 			{
 				showChatWindow(player, 1);
 				return;
 			}
+			
 			int time = 0;
+			
 			if (getReflection().getInstancedZoneId() == 115)
 			{
 				time = ((SufferingHallAttack) getReflection()).timeSpent;
@@ -123,13 +127,16 @@ public class TepiosRewardInstance extends NpcInstance
 			{
 				time = ((SufferingHallDefence) getReflection()).timeSpent;
 			}
+			
 			for (Player p : getReflection().getPlayers())
 			{
 				if ((ItemFunctions.getItemCount(p, MARK_OF_KEUCEREUS_STAGE_1) < 1) && (ItemFunctions.getItemCount(p, MARK_OF_KEUCEREUS_STAGE_2) < 1))
 				{
 					ItemFunctions.addItem(p, MARK_OF_KEUCEREUS_STAGE_1, 1, true);
 				}
+				
 				ItemFunctions.addItem(p, SOE, 1, true);
+				
 				if (time > 0)
 				{
 					if (time <= ((20 * 60) + 59))
@@ -157,17 +164,21 @@ public class TepiosRewardInstance extends NpcInstance
 						ItemFunctions.addItem(p, SUPPLIES6_10[Rnd.get(SUPPLIES6_10.length)], 1, true);
 					}
 				}
+				
 				QuestState qs = p.getQuestState(_694_BreakThroughTheHallOfSuffering.class);
 				QuestState qs2 = p.getQuestState(_695_DefendtheHallofSuffering.class);
+				
 				if ((qs != null) && (getReflection().getInstancedZoneId() == 115))
 				{
 					qs.exitCurrentQuest(true);
 				}
+				
 				if ((qs2 != null) && (getReflection().getInstancedZoneId() == 116))
 				{
 					qs2.exitCurrentQuest(true);
 				}
 			}
+			
 			_gotReward = true;
 			showChatWindow(player, 2);
 		}
@@ -188,6 +199,7 @@ public class TepiosRewardInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String htmlpath;
+		
 		if (val == 0)
 		{
 			if (_gotReward)
@@ -203,6 +215,7 @@ public class TepiosRewardInstance extends NpcInstance
 		{
 			return super.getHtmlPath(npcId, val, player);
 		}
+		
 		return htmlpath;
 	}
 }

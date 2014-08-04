@@ -26,7 +26,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class SquashInstance extends SpecialMonsterInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -115,7 +115,9 @@ public class SquashInstance extends SpecialMonsterInstance
 		{
 			return;
 		}
+		
 		int weaponId = attacker.getActiveWeaponInstance().getItemId();
+		
 		if ((getNpcId() == Low_Quality_Large_Squash) || (getNpcId() == High_Quality_Large_Squash) || (getNpcId() == Emperor_Squash))
 		{
 			if ((weaponId != 4202) && (weaponId != 5133) && (weaponId != 5817) && (weaponId != 7058) && (weaponId != 8350))
@@ -123,6 +125,7 @@ public class SquashInstance extends SpecialMonsterInstance
 				return;
 			}
 		}
+		
 		i = 1;
 		super.reduceCurrentHp(i, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
 	}

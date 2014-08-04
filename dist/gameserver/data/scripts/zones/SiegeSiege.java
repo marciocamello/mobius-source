@@ -59,21 +59,21 @@ public class SiegeSiege implements ScriptFile
 	public void broadcastPacket(int value, boolean b)
 	{
 		L2GameServerPacket trigger = new EventTrigger(value, b);
+		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			player.sendPacket(trigger);
 		}
-		
 	}
 	
 	public void broadcastSend(Castle castle)
 	{
 		L2GameServerPacket trigger = new ExCastleState(castle);
+		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			player.sendPacket(trigger);
 		}
-		
 	}
 	
 	public class ZoneListener implements OnZoneEnterLeaveListener
@@ -106,11 +106,11 @@ public class SiegeSiege implements ScriptFile
 					// broadcastPacket(_side.ordinal(),false);
 					Announcements.getInstance().announceToAll(new ExCastleState(castle));
 				}
+				
 				// return;
 			}
 			
 			// Announcements.getInstance().announceToAll(new ExCastleState(castle));
-			
 		}
 		
 		@Override

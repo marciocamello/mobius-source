@@ -54,12 +54,14 @@ public class DeleteHateOfMe extends Skill
 				{
 					activeChar.sendMessage(new CustomMessage("lineage2.gameserver.skills.Formulas.Chance", (Player) activeChar).addString(getName()).addNumber(getActivateRate()));
 				}
+				
 				if (target.isNpc() && Formulas.calcSkillSuccess(activeChar, target, this, getActivateRate()))
 				{
 					NpcInstance npc = (NpcInstance) target;
 					npc.getAggroList().remove(activeChar, true);
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				}
+				
 				getEffects(activeChar, target, true, false);
 			}
 		}

@@ -68,12 +68,14 @@ public class CastleDoorUpgradeDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_SQL_QUERY);
 			statement.setInt(1, doorId);
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				return rset.getInt("hp");
@@ -99,6 +101,7 @@ public class CastleDoorUpgradeDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -125,6 +128,7 @@ public class CastleDoorUpgradeDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();

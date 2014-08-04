@@ -86,18 +86,23 @@ public class Net
 		int address = 0;
 		int netmask = 0;
 		String[] mask = s.trim().split("\\b\\/\\b");
+		
 		if ((mask.length < 1) || (mask.length > 2))
 		{
 			throw new IllegalArgumentException("For input string: \"" + s + "\"");
 		}
+		
 		if (mask.length == 1)
 		{
 			String[] octets = mask[0].split("\\.");
+			
 			if ((octets.length < 1) || (octets.length > 4))
 			{
 				throw new IllegalArgumentException("For input string: \"" + s + "\"");
 			}
+			
 			int i;
+			
 			for (i = 1; i <= octets.length; i++)
 			{
 				if (!octets[i - 1].equals("*"))
@@ -112,6 +117,7 @@ public class Net
 			address = parseAddress(mask[0]);
 			netmask = parseNetmask(mask[1]);
 		}
+		
 		return new Net(address, netmask);
 	}
 	
@@ -125,14 +131,17 @@ public class Net
 	{
 		int ip = 0;
 		String[] octets = s.split("\\.");
+		
 		if (octets.length != 4)
 		{
 			throw new IllegalArgumentException("For input string: \"" + s + "\"");
 		}
+		
 		for (int i = 1; i <= octets.length; i++)
 		{
 			ip |= (Integer.parseInt(octets[i - 1]) << (32 - (i * 8)));
 		}
+		
 		return ip;
 	}
 	
@@ -146,13 +155,16 @@ public class Net
 	{
 		int mask = 0;
 		String[] octets = s.split("\\.");
+		
 		if (octets.length == 1)
 		{
 			int bitmask = Integer.parseInt(octets[0]);
+			
 			if ((bitmask < 0) || (bitmask > 32))
 			{
 				throw new IllegalArgumentException("For input string: \"" + s + "\"");
 			}
+			
 			mask = (0xffffffff << (32 - bitmask));
 		}
 		else
@@ -177,14 +189,17 @@ public class Net
 		{
 			return true;
 		}
+		
 		if (o == null)
 		{
 			return false;
 		}
+		
 		if (o instanceof Net)
 		{
 			return ((((Net) o).address() == address) && (((Net) o).netmask() == netmask));
 		}
+		
 		return false;
 	}
 	

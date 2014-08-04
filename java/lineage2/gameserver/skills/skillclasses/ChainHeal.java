@@ -53,6 +53,7 @@ public class ChainHeal extends Skill
 		String[] params = set.getString("healPercents", "").split(";");
 		_maxTargets = params.length;
 		_healPercents = new int[params.length];
+		
 		for (int i = 0; i < params.length; i++)
 		{
 			_healPercents[i] = Integer.parseInt(params[i]);
@@ -68,19 +69,23 @@ public class ChainHeal extends Skill
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{
 		int curTarget = 0;
+		
 		for (Creature target : targets)
 		{
 			if (target == null)
 			{
 				continue;
 			}
+			
 			getEffects(activeChar, target, getActivateRate() > 0, false);
 			double hp = (_healPercents[curTarget] * target.getMaxHp()) / 100.;
 			double addToHp = Math.max(0, Math.min(hp, ((target.calcStat(Stats.HP_LIMIT, null, null) * target.getMaxHp()) / 100.) - target.getCurrentHp()));
+			
 			if (addToHp > 0)
 			{
 				target.setCurrentHp(addToHp + target.getCurrentHp(), false);
 			}
+			
 			if (target.isPlayer())
 			{
 				if (activeChar != target)
@@ -92,8 +97,10 @@ public class ChainHeal extends Skill
 					activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HPS_HAVE_BEEN_RESTORED).addNumber(Math.round(addToHp)));
 				}
 			}
+			
 			curTarget++;
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());
@@ -112,25 +119,31 @@ public class ChainHeal extends Skill
 	{
 		List<Creature> result = new ArrayList<>();
 		List<Creature> targets = aimingTarget.getAroundCharacters(_healRadius, 128);
+		
 		if ((targets == null) || targets.isEmpty())
 		{
 			return result;
 		}
+		
 		List<HealTarget> healTargets = new ArrayList<>();
 		healTargets.add(new HealTarget(-100.0D, aimingTarget));
+		
 		for (Creature target : targets)
 		{
 			if ((target == null) || target.isHealBlocked() || ((activeChar.getObjectId() != aimingTarget.getObjectId()) && (target.getObjectId() == activeChar.getObjectId())))
 			{
 				continue;
 			}
+			
 			if (target.isAutoAttackable(activeChar))
 			{
 				continue;
 			}
+			
 			double hpPercent = target.getCurrentHp() / target.getMaxHp();
 			healTargets.add(new HealTarget(hpPercent, target));
 		}
+		
 		HealTarget[] healTargetsArr = new HealTarget[healTargets.size()];
 		healTargets.toArray(healTargetsArr);
 		Arrays.sort(healTargetsArr, new Comparator<HealTarget>()
@@ -142,27 +155,33 @@ public class ChainHeal extends Skill
 				{
 					return 0;
 				}
+				
 				if (o1.getHpPercent() < o2.getHpPercent())
 				{
 					return -1;
 				}
+				
 				if (o1.getHpPercent() > o2.getHpPercent())
 				{
 					return 1;
 				}
+				
 				return 0;
 			}
 		});
 		int targetsCount = 0;
+		
 		for (HealTarget ht : healTargetsArr)
 		{
 			result.add(ht.getTarget());
 			targetsCount++;
+			
 			if (targetsCount >= _maxTargets)
 			{
 				break;
 			}
 		}
+		
 		return result;
 	}
 	

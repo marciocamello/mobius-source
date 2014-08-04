@@ -39,21 +39,27 @@ public class ExChangeAttributeInfo extends L2GameServerPacket
 			case 0:
 				_attribute = -2;
 				break;
+			
 			case 1:
 				_attribute = -3;
 				break;
+			
 			case 2:
 				_attribute = -5;
 				break;
+			
 			case 3:
 				_attribute = -9;
 				break;
+			
 			case 4:
 				_attribute = -17;
 				break;
+			
 			case 5:
 				_attribute = -33;
 		}
+		
 		_ObjectIdStone = ObjectIdStone;
 	}
 	

@@ -88,6 +88,7 @@ public class Faction
 		{
 			ignoreId = new TIntArrayList();
 		}
+		
 		ignoreId.add(npcId);
 	}
 	
@@ -121,6 +122,7 @@ public class Faction
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -136,14 +138,17 @@ public class Faction
 		{
 			return true;
 		}
+		
 		if (o == null)
 		{
 			return false;
 		}
+		
 		if (o.getClass() != this.getClass())
 		{
 			return false;
 		}
+		
 		return equals((Faction) o);
 	}
 	

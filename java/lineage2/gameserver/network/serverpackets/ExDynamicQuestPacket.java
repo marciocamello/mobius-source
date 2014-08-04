@@ -44,13 +44,11 @@ public class ExDynamicQuestPacket extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0xE9);
-		
 		writeC(questInfo.questType); // isCampaign
 		writeC(questInfo.subType); // subType
 		writeD(questInfo.questId); // campaignId
 		writeD(questInfo.step); // step
 		questInfo.write(this);
-		
 		/*
 		 * switch (subType) { case 2: writeC(0x00);// 0 - progress, 1 - receive reward, 2 - check results, 3 - campaign failed writeD(remainingTime); // remaining time (in second) if (type == DynamicQuestManager.TYPE_ZONE_QUEST) { writeD(0x00); // participant count? } writeD(tasks.size()); // tasks
 		 * size for (int taskId : tasks.keySet()) { DynamicQuest.DynamicQuestTask task = tasks.get(taskId); writeD(taskId);// taskId writeD(task.getCurrentPoints());// currentCount writeD(task.getMaxPoints());// totalCount } break; case 3: if (type == DynamicQuestManager.TYPE_ZONE_QUEST) {
@@ -60,7 +58,8 @@ public class ExDynamicQuestPacket extends L2GameServerPacket
 	}
 	
 	public static class DynamicQuestInfo
-	{ // Base class, subType = 0 - start, subType = 1 - end quest
+	{
+		// Base class, subType = 0 - start, subType = 1 - end quest
 		public int questType;
 		public int questId;
 		public int step;
@@ -98,11 +97,14 @@ public class ExDynamicQuestPacket extends L2GameServerPacket
 		{
 			packet.writeC(state);
 			packet.writeD(remainingTime);
+			
 			if (questType == 1)
 			{
 				packet.writeD(participantsCount);
 			}
+			
 			packet.writeD(tasks.size());
+			
 			for (DynamicQuestTask task : tasks)
 			{
 				packet.writeD(task.taskId);
@@ -134,6 +136,7 @@ public class ExDynamicQuestPacket extends L2GameServerPacket
 				packet.writeD(remainingTime); // remaining time
 				packet.writeD(friendsCount); // party members count
 				packet.writeD(participants.size()); // participants size
+				
 				for (DynamicQuestParticipant participant : participants)
 				{
 					packet.writeS(participant.getName());
@@ -145,6 +148,7 @@ public class ExDynamicQuestPacket extends L2GameServerPacket
 			else
 			{
 				packet.writeD(participants.size()); // participants size
+				
 				for (DynamicQuestParticipant participant : participants)
 				{
 					packet.writeS(participant.getName()); // name

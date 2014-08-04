@@ -56,6 +56,7 @@ public class _250_WatchWhatYouEat extends Quest implements ScriptFile
 		super(false);
 		addStartNpc(SALLY);
 		addTalkId(SALLY);
+		
 		for (int i[] : MOBS)
 		{
 			addKillId(i[0]);
@@ -66,6 +67,7 @@ public class _250_WatchWhatYouEat extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (npc.getNpcId() == SALLY)
 		{
 			if (event.equalsIgnoreCase("32743-03.htm"))
@@ -83,6 +85,7 @@ public class _250_WatchWhatYouEat extends Quest implements ScriptFile
 				st.exitCurrentQuest(false);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -91,6 +94,7 @@ public class _250_WatchWhatYouEat extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (npc.getNpcId() == SALLY)
 		{
 			switch (st.getState())
@@ -104,7 +108,9 @@ public class _250_WatchWhatYouEat extends Quest implements ScriptFile
 					{
 						htmltext = "32743-00.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					if (cond == 1)
 					{
@@ -115,6 +121,7 @@ public class _250_WatchWhatYouEat extends Quest implements ScriptFile
 						if ((st.getQuestItemsCount(MOBS[0][1]) > 0) && (st.getQuestItemsCount(MOBS[1][1]) > 0) && (st.getQuestItemsCount(MOBS[2][1]) > 0))
 						{
 							htmltext = "32743-05.htm";
+							
 							for (int items[] : MOBS)
 							{
 								st.takeItems(items[1], -1);
@@ -125,12 +132,15 @@ public class _250_WatchWhatYouEat extends Quest implements ScriptFile
 							htmltext = "32743-06.htm";
 						}
 					}
+					
 					break;
+				
 				case COMPLETED:
 					htmltext = "32743-done.htm";
 					break;
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -150,12 +160,14 @@ public class _250_WatchWhatYouEat extends Quest implements ScriptFile
 					}
 				}
 			}
+			
 			if ((st.getQuestItemsCount(MOBS[0][1]) > 0) && (st.getQuestItemsCount(MOBS[1][1]) > 0) && (st.getQuestItemsCount(MOBS[2][1]) > 0))
 			{
 				st.setCond(2);
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		return null;
 	}
 }

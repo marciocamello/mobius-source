@@ -48,6 +48,7 @@ public class _014_WhereaboutsoftheArchaeologist extends Quest implements ScriptF
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("trader_liesel_q0014_0104.htm"))
 		{
 			st.setCond(1);
@@ -64,6 +65,7 @@ public class _014_WhereaboutsoftheArchaeologist extends Quest implements ScriptF
 			st.exitCurrentQuest(false);
 			return "explorer_ghost_a_q0014_0201.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -73,6 +75,7 @@ public class _014_WhereaboutsoftheArchaeologist extends Quest implements ScriptF
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == 31263)
 		{
 			if (cond == 0)
@@ -99,6 +102,7 @@ public class _014_WhereaboutsoftheArchaeologist extends Quest implements ScriptF
 				htmltext = "explorer_ghost_a_q0014_0101.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

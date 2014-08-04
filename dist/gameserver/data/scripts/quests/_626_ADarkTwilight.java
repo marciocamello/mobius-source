@@ -42,10 +42,12 @@ public class _626_ADarkTwilight extends Quest implements ScriptFile
 	{
 		super(true);
 		addStartNpc(Hierarch);
+		
 		for (int npcId = 21520; npcId <= 21542; npcId++)
 		{
 			addKillId(npcId);
 		}
+		
 		addQuestItem(BloodOfSaint);
 	}
 	
@@ -53,6 +55,7 @@ public class _626_ADarkTwilight extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("dark_presbyter_q0626_0104.htm"))
 		{
 			st.setCond(1);
@@ -80,6 +83,7 @@ public class _626_ADarkTwilight extends Quest implements ScriptFile
 			htmltext = "dark_presbyter_q0626_0202.htm";
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -89,6 +93,7 @@ public class _626_ADarkTwilight extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
+		
 		if (npcId == Hierarch)
 		{
 			if (cond == 0)
@@ -112,6 +117,7 @@ public class _626_ADarkTwilight extends Quest implements ScriptFile
 				htmltext = "dark_presbyter_q0626_0105.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -121,11 +127,13 @@ public class _626_ADarkTwilight extends Quest implements ScriptFile
 		if ((st.getCond() == 1) && Rnd.chance(70))
 		{
 			st.giveItems(BloodOfSaint, 1);
+			
 			if (st.getQuestItemsCount(BloodOfSaint) == 300)
 			{
 				st.setCond(2);
 			}
 		}
+		
 		return null;
 	}
 }

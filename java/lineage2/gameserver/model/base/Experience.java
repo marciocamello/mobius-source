@@ -165,14 +165,17 @@ public class Experience
 	public static int getLevel(long thisExp)
 	{
 		int level = 0;
+		
 		for (int i = 0; i < LEVEL.length; i++)
 		{
 			long exp = LEVEL[i];
+			
 			if (thisExp >= exp)
 			{
 				level = i;
 			}
 		}
+		
 		return level;
 	}
 	
@@ -187,6 +190,7 @@ public class Experience
 		{
 			return 0;
 		}
+		
 		return Experience.LEVEL[lvl];
 	}
 	

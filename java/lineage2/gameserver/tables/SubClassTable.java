@@ -61,6 +61,7 @@ public final class SubClassTable
 		{
 			_instance = new SubClassTable();
 		}
+		
 		return _instance;
 	}
 	
@@ -70,28 +71,35 @@ public final class SubClassTable
 	private void init()
 	{
 		_subClasses = new TIntObjectHashMap<>();
+		
 		for (ClassId baseClassId : ClassId.VALUES)
 		{
 			if (baseClassId.isOfLevel(ClassLevel.First) || baseClassId.isOfLevel(ClassLevel.Second))
 			{
 				continue;
 			}
+			
 			TIntArrayList availSubs = new TIntArrayList();
+			
 			for (ClassId subClassId : ClassId.VALUES)
 			{
 				if (!subClassId.isOfLevel(ClassLevel.Third))
 				{
 					continue;
 				}
+				
 				if (!areClassesComportable(baseClassId, subClassId, false))
 				{
 					continue;
 				}
+				
 				availSubs.add(subClassId.getId());
 			}
+			
 			availSubs.sort();
 			_subClasses.put(baseClassId.getId(), availSubs);
 		}
+		
 		_log.info("SubClassTable: Loaded " + _subClasses.size() + " sub-classes variations.");
 	}
 	
@@ -104,11 +112,14 @@ public final class SubClassTable
 	public int[] getAvailableSubClasses(Player player, int classId)
 	{
 		TIntArrayList subClassesList = _subClasses.get(classId);
+		
 		if ((subClassesList == null) || subClassesList.isEmpty())
 		{
 			return new int[0];
 		}
+		
 		loop:
+		
 		for (int clsId : subClassesList.toArray())
 		{
 			ClassId subClassId = ClassId.VALUES[clsId];
@@ -116,12 +127,14 @@ public final class SubClassTable
 			for (SubClass playerSubClass : player.getSubClassList().values())
 			{
 				ClassId playerSubClassId = ClassId.VALUES[playerSubClass.getClassId()];
+				
 				if (!areClassesComportable(playerSubClassId, subClassId, playerSubClass.isBase()))
 				{
 					subClassesList.remove(clsId);
 					continue loop;
 				}
 			}
+			
 			if (player.getRace() == Race.kamael)
 			{
 				if (((player.getSex() == 1) && (subClassId == ClassId.M_SOUL_BREAKER)) || ((player.getSex() == 0) && (subClassId == ClassId.F_SOUL_BREAKER)))
@@ -129,6 +142,7 @@ public final class SubClassTable
 					subClassesList.remove(clsId);
 					continue;
 				}
+				
 				if ((subClassId == ClassId.INSPECTOR) && (player.getSubClassList().size() < 3))
 				{
 					subClassesList.remove(clsId);
@@ -136,6 +150,7 @@ public final class SubClassTable
 				}
 			}
 		}
+		
 		return subClassesList.toArray();
 	}
 	
@@ -152,22 +167,27 @@ public final class SubClassTable
 		{
 			return false;
 		}
+		
 		if ((baseClassId.getType2() == subClassId.getType2()) && isBase)
 		{
 			return false;
 		}
+		
 		if ((baseClassId.isOfRace(Race.kamael) != subClassId.isOfRace(Race.kamael)) && !baseClassId.isOfLevel(ClassLevel.Awaking))
 		{
 			return false;
 		}
+		
 		if ((baseClassId.isOfRace(Race.elf) && subClassId.isOfRace(Race.darkelf)) || (baseClassId.isOfRace(Race.darkelf) && subClassId.isOfRace(Race.elf)))
 		{
 			return false;
 		}
+		
 		if ((subClassId == ClassId.OVERLORD) || (subClassId == ClassId.WARSMITH))
 		{
 			return false;
 		}
+		
 		return true;
 	}
 }

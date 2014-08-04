@@ -63,12 +63,14 @@ public class _132_MatrasCuriosity extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("32245-02.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 			String is_given = st.getPlayer().getVar("q132_Rough_Ore_is_given");
+			
 			if (is_given != null)
 			{
 				htmltext = "32245-02a.htm";
@@ -102,6 +104,7 @@ public class _132_MatrasCuriosity extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			return null;
 		}
+		
 		return htmltext;
 	}
 	
@@ -111,6 +114,7 @@ public class _132_MatrasCuriosity extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Matras)
 		{
 			if ((cond < 1) && (st.getPlayer().getLevel() >= 78))
@@ -137,6 +141,7 @@ public class _132_MatrasCuriosity extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -151,18 +156,21 @@ public class _132_MatrasCuriosity extends Quest implements ScriptFile
 				st.playSound(SOUND_MIDDLE);
 				st.giveItems(Rankus_Blueprint, 1, false);
 			}
+			
 			if ((npc.getNpcId() == Demon_Prince) && (st.getQuestItemsCount(Demon_Princes_Blueprint) < 1))
 			{
 				st.playSound(SOUND_ITEMGET);
 				st.playSound(SOUND_MIDDLE);
 				st.giveItems(Demon_Princes_Blueprint, 1, false);
 			}
+			
 			if ((st.getQuestItemsCount(Rankus_Blueprint) > 0) && (st.getQuestItemsCount(Demon_Princes_Blueprint) > 0))
 			{
 				st.setCond(2);
 				st.setState(STARTED);
 			}
 		}
+		
 		return null;
 	}
 }

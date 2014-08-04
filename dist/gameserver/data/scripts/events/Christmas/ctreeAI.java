@@ -41,11 +41,14 @@ public class ctreeAI extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return true;
 		}
+		
 		final int skillId = 2139;
+		
 		for (Player player : World.getAroundPlayers(actor, 200, 200))
 		{
 			if ((player != null) && !player.isInZonePeace() && (player.getEffectList().getEffectsBySkillId(skillId) == null))
@@ -53,6 +56,7 @@ public class ctreeAI extends DefaultAI
 				actor.doCast(SkillTable.getInstance().getInfo(skillId, 1), player, true);
 			}
 		}
+		
 		return false;
 	}
 	

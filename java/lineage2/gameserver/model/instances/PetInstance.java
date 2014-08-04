@@ -58,7 +58,7 @@ import org.slf4j.LoggerFactory;
 public class PetInstance extends Summon
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -82,9 +82,11 @@ public class PetInstance extends Summon
 		public void runImpl()
 		{
 			Player owner = getPlayer();
+			
 			while ((getCurrentFed() <= (0.55 * getMaxFed())) && tryFeed())
 			{
 			}
+			
 			if (PetDataTable.isVitaminPet(getNpcId()) && (getCurrentFed() <= 0))
 			{
 				deleteMe();
@@ -95,6 +97,7 @@ public class PetInstance extends Summon
 				unSummon();
 				return;
 			}
+			
 			setCurrentFed(getCurrentFed() - 5);
 			sendStatusUpdate();
 			startFeed(isInCombat());
@@ -147,12 +150,14 @@ public class PetInstance extends Summon
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT objId, name, level, curHp, curMp, exp, sp, fed FROM pets WHERE item_obj_id=?");
 			statement.setInt(1, control.getObjectId());
 			rset = statement.executeQuery();
+			
 			if (!rset.next())
 			{
 				if (PetDataTable.isBabyPet(template.getNpcId()) || PetDataTable.isImprovedBabyPet(template.getNpcId()))
@@ -163,8 +168,10 @@ public class PetInstance extends Summon
 				{
 					pet = new PetInstance(IdFactory.getInstance().getNextId(), template, owner, control);
 				}
+				
 				return pet;
 			}
+			
 			if (PetDataTable.isBabyPet(template.getNpcId()) || PetDataTable.isImprovedBabyPet(template.getNpcId()))
 			{
 				pet = new PetBabyInstance(rset.getInt("objId"), template, owner, control, rset.getInt("level"), rset.getLong("exp"));
@@ -173,6 +180,7 @@ public class PetInstance extends Summon
 			{
 				pet = new PetInstance(rset.getInt("objId"), template, owner, control, rset.getInt("level"), rset.getLong("exp"));
 			}
+			
 			pet.setRespawned(true);
 			String name = rset.getString("name");
 			pet.setName((name == null) || name.isEmpty() ? template.name : name);
@@ -220,6 +228,7 @@ public class PetInstance extends Summon
 		_controlItemObjId = control.getObjectId();
 		_exp = exp;
 		_level = control.getEnchantLevel();
+		
 		if (_level <= 0)
 		{
 			if (template.npcId == PetDataTable.SIN_EATER_ID)
@@ -230,30 +239,38 @@ public class PetInstance extends Summon
 			{
 				_level = template.level;
 			}
+			
 			_exp = getExpForThisLevel();
 		}
+		
 		int minLevel = PetDataTable.getMinLevel(template.npcId);
+		
 		if (_level < minLevel)
 		{
 			_level = minLevel;
 		}
+		
 		if (_exp < getExpForThisLevel())
 		{
 			_exp = getExpForThisLevel();
 		}
+		
 		while ((_exp >= getExpForNextLevel()) && (_level < Experience.getMaxLevel()))
 		{
 			_level++;
 		}
+		
 		while ((_exp < getExpForThisLevel()) && (_level > minLevel))
 		{
 			_level--;
 		}
+		
 		if (PetDataTable.isVitaminPet(template.npcId))
 		{
 			_level = owner.getLevel();
 			_exp = getExpForNextLevel();
 		}
+		
 		_data = PetDataTable.getInstance().getInfo(template.npcId, _level);
 		_inventory = new PetInventory(this);
 	}
@@ -289,12 +306,16 @@ public class PetInstance extends Summon
 		{
 			return false;
 		}
+		
 		boolean deluxFood = PetDataTable.isStrider(getNpcId()) && (item.getItemId() == DELUXE_FOOD_FOR_STRIDER);
+		
 		if ((getFoodId() != item.getItemId()) && !deluxFood)
 		{
 			return false;
 		}
+		
 		int newFed = Math.min(getMaxFed(), getCurrentFed() + Math.max((getMaxFed() * getAddFed() * (deluxFood ? 2 : 1)) / 100, 1));
+		
 		if (getCurrentFed() != newFed)
 		{
 			if (getInventory().destroyItem(item, 1L))
@@ -304,6 +325,7 @@ public class PetInstance extends Summon
 				sendStatusUpdate();
 			}
 		}
+		
 		return true;
 	}
 	
@@ -314,10 +336,12 @@ public class PetInstance extends Summon
 	public boolean tryFeed()
 	{
 		ItemInstance food = getInventory().getItemByItemId(getFoodId());
+		
 		if ((food == null) && PetDataTable.isStrider(getNpcId()))
 		{
 			food = getInventory().getItemByItemId(DELUXE_FOOD_FOR_STRIDER);
 		}
+		
 		return tryFeedItem(food);
 	}
 	
@@ -330,40 +354,50 @@ public class PetInstance extends Summon
 	public void addExpAndSp(long addToExp, long addToSp)
 	{
 		Player owner = getPlayer();
+		
 		if (PetDataTable.isVitaminPet(getNpcId()))
 		{
 			return;
 		}
+		
 		_exp += addToExp;
 		_sp += addToSp;
+		
 		if (_exp > getMaxExp())
 		{
 			_exp = getMaxExp();
 		}
+		
 		if ((addToExp > 0) || (addToSp > 0))
 		{
 			owner.sendPacket(new SystemMessage(SystemMessage.THE_PET_ACQUIRED_EXPERIENCE_POINTS_OF_S1).addNumber(addToExp));
 		}
+		
 		int old_level = _level;
+		
 		while ((_exp >= getExpForNextLevel()) && (_level < Experience.getMaxLevel()))
 		{
 			_level++;
 		}
+		
 		while ((_exp < getExpForThisLevel()) && (_level > getMinLevel()))
 		{
 			_level--;
 		}
+		
 		if (old_level < _level)
 		{
 			owner.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2PetInstance.PetLevelUp", owner).addNumber(_level));
 			broadcastPacket(new SocialAction(getObjectId(), SocialAction.LEVEL_UP));
 			setCurrentHpMp(getMaxHp(), getMaxMp());
 		}
+		
 		if (old_level != _level)
 		{
 			updateControlItem();
 			updateData();
 		}
+		
 		if ((addToExp > 0) || (addToSp > 0))
 		{
 			sendStatusUpdate();
@@ -391,6 +425,7 @@ public class PetInstance extends Summon
 		{
 			return;
 		}
+		
 		int lvl = getLevel();
 		double percentLost = (-0.07 * lvl) + 6.5;
 		lostExp = (int) Math.round(((getExpForNextLevel() - getExpForThisLevel()) * percentLost) / 100);
@@ -403,16 +438,20 @@ public class PetInstance extends Summon
 	private void destroyControlItem()
 	{
 		Player owner = getPlayer();
+		
 		if (getControlItemObjId() == 0)
 		{
 			return;
 		}
+		
 		if (!owner.getInventory().destroyItemByObjectId(getControlItemObjId(), 1L))
 		{
 			return;
 		}
+		
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -441,10 +480,12 @@ public class PetInstance extends Summon
 		Player owner = getPlayer();
 		owner.sendPacket(Msg.THE_PET_HAS_BEEN_KILLED_IF_YOU_DO_NOT_RESURRECT_IT_WITHIN_24_HOURS_THE_PETS_BODY_WILL_DISAPPEAR_ALONG_WITH_ALL_THE_PETS_ITEMS);
 		startDecay(86400000L);
+		
 		if (PetDataTable.isVitaminPet(getNpcId()))
 		{
 			return;
 		}
+		
 		stopFeed();
 		deathPenalty();
 	}
@@ -458,25 +499,31 @@ public class PetInstance extends Summon
 	{
 		Player owner = getPlayer();
 		stopMove();
+		
 		if (!object.isItem())
 		{
 			return;
 		}
+		
 		ItemInstance item = (ItemInstance) object;
+		
 		if (item.isCursed())
 		{
 			owner.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_PICK_UP_S1).addItemName(item.getItemId()));
 			return;
 		}
+		
 		synchronized (item)
 		{
 			if (!item.isVisible())
 			{
 				return;
 			}
+			
 			if (item.isHerb())
 			{
 				Skill[] skills = item.getTemplate().getAttachedSkills();
+				
 				if (skills.length > 0)
 				{
 					for (Skill skill : skills)
@@ -484,30 +531,38 @@ public class PetInstance extends Summon
 						altUseSkill(skill, this);
 					}
 				}
+				
 				item.deleteMe();
 				return;
 			}
+			
 			if (!getInventory().validateWeight(item))
 			{
 				sendPacket(Msg.EXCEEDED_PET_INVENTORYS_WEIGHT_LIMIT);
 				return;
 			}
+			
 			if (!getInventory().validateCapacity(item))
 			{
 				sendPacket(Msg.DUE_TO_THE_VOLUME_LIMIT_OF_THE_PETS_INVENTORY_NO_MORE_ITEMS_CAN_BE_PLACED_THERE);
 				return;
 			}
+			
 			if (!item.getTemplate().getHandler().pickupItem(this, item))
 			{
 				return;
 			}
+			
 			FlagItemAttachment attachment = item.getAttachment() instanceof FlagItemAttachment ? (FlagItemAttachment) item.getAttachment() : null;
+			
 			if (attachment != null)
 			{
 				return;
 			}
+			
 			item.pickupMe();
 		}
+		
 		if ((owner.getParty() == null) || (owner.getParty().getLootDistribution() == Party.ITEM_LOOTER))
 		{
 			getInventory().addItem(item);
@@ -517,6 +572,7 @@ public class PetInstance extends Summon
 		{
 			owner.getParty().distributeItem(owner, item, null);
 		}
+		
 		broadcastPickUpMsg(item);
 	}
 	
@@ -579,15 +635,19 @@ public class PetInstance extends Summon
 	public ItemInstance getControlItem()
 	{
 		Player owner = getPlayer();
+		
 		if (owner == null)
 		{
 			return null;
 		}
+		
 		int item_obj_id = getControlItemObjId();
+		
 		if (item_obj_id == 0)
 		{
 			return null;
 		}
+		
 		return owner.getInventory().getItemByObjectId(item_obj_id);
 	}
 	
@@ -922,6 +982,7 @@ public class PetInstance extends Summon
 		{
 			return -1;
 		}
+		
 		int lvl = getLevel();
 		return lvl > 70 ? 7 + ((lvl - 70) / 5) : lvl / 10;
 	}
@@ -1014,9 +1075,11 @@ public class PetInstance extends Summon
 	{
 		boolean first = _feedTask == null;
 		stopFeed();
+		
 		if (!isDead())
 		{
 			int feedTime;
+			
 			if (PetDataTable.isVitaminPet(getNpcId()))
 			{
 				feedTime = 10000;
@@ -1025,6 +1088,7 @@ public class PetInstance extends Summon
 			{
 				feedTime = Math.max(first ? 15000 : 1000, 60000 / (battleFeed ? _data.getFeedBattle() : _data.getFeedNormal()));
 			}
+			
 			_feedTask = ThreadPoolManager.getInstance().schedule(new FeedTask(), feedTime);
 		}
 	}
@@ -1050,12 +1114,15 @@ public class PetInstance extends Summon
 		{
 			return;
 		}
+		
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			String req;
+			
 			if (!isRespawned())
 			{
 				req = "INSERT INTO pets (name,level,curHp,curMp,exp,sp,fed,objId,item_obj_id) VALUES (?,?,?,?,?,?,?,?,?)";
@@ -1064,6 +1131,7 @@ public class PetInstance extends Summon
 			{
 				req = "UPDATE pets SET name=?,level=?,curHp=?,curMp=?,exp=?,sp=?,fed=?,objId=? WHERE item_obj_id = ?";
 			}
+			
 			statement = con.prepareStatement(req);
 			statement.setString(1, getName().equalsIgnoreCase(getTemplate().name) ? "" : getName());
 			statement.setInt(2, _level);
@@ -1135,10 +1203,12 @@ public class PetInstance extends Summon
 	public void updateControlItem()
 	{
 		ItemInstance controlItem = getControlItem();
+		
 		if (controlItem == null)
 		{
 			return;
 		}
+		
 		controlItem.setEnchantLevel(_level);
 		controlItem.setCustomType2(isDefaultName() ? 0 : 1);
 		controlItem.setJdbcState(JdbcEntityState.UPDATED);
@@ -1178,10 +1248,12 @@ public class PetInstance extends Summon
 	public void displayGiveDamageMessage(Creature target, int damage, boolean crit, boolean miss, boolean shld, boolean magic)
 	{
 		Player owner = getPlayer();
+		
 		if (crit)
 		{
 			owner.sendPacket(SystemMsg.SUMMONED_MONSTERS_CRITICAL_HIT);
 		}
+		
 		if (miss)
 		{
 			owner.sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addName(this));
@@ -1201,9 +1273,11 @@ public class PetInstance extends Summon
 	public void displayReceiveDamageMessage(Creature attacker, int damage)
 	{
 		Player owner = getPlayer();
+		
 		if (!isDead())
 		{
 			SystemMessage sm = new SystemMessage(SystemMessage.THE_PET_RECEIVED_DAMAGE_OF_S2_CAUSED_BY_S1);
+			
 			if (attacker.isNpc())
 			{
 				sm.addNpcName(((NpcInstance) attacker).getTemplate().npcId);
@@ -1212,6 +1286,7 @@ public class PetInstance extends Summon
 			{
 				sm.addString(attacker.getName());
 			}
+			
 			sm.addNumber((long) damage);
 			owner.sendPacket(sm);
 		}
@@ -1242,8 +1317,10 @@ public class PetInstance extends Summon
 				{
 					return 1;
 				}
+				
 				break;
 		}
+		
 		return 0;
 	}
 	

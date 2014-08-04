@@ -28,7 +28,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public final class QuarrySlaveInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -65,7 +65,9 @@ public final class QuarrySlaveInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		StringTokenizer st = new StringTokenizer(command);
+		
 		if (st.nextToken().equals("rescue") && (HellboundManager.getHellboundLevel() == 5))
 		{
 			Functions.npcSay(this, "Sh-h! Guards are around, let's go.");
@@ -90,6 +92,7 @@ public final class QuarrySlaveInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String pom;
+		
 		if (val == 0)
 		{
 			pom = "" + npcId;
@@ -98,6 +101,7 @@ public final class QuarrySlaveInstance extends NpcInstance
 		{
 			pom = npcId + "-" + val;
 		}
+		
 		return "hellbound/" + pom + ".htm";
 	}
 	

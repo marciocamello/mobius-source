@@ -43,6 +43,7 @@ public class PcBangPointsAdd extends Skill
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{
 		int points = (int) _power;
+		
 		for (Creature target : targets)
 		{
 			if (target.isPlayer())
@@ -50,8 +51,10 @@ public class PcBangPointsAdd extends Skill
 				Player player = target.getPlayer();
 				player.addPcBangPoints(points, false);
 			}
+			
 			getEffects(activeChar, target, getActivateRate() > 0, false);
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());

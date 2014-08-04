@@ -64,8 +64,8 @@ public class ExEventMatchTeamInfo extends L2GameServerPacket
 			level = member.getLevel();
 			class_id = member.getClassId().getId();
 			race_id = member.getRace().ordinal();
-			
 			Summon pet = member.getSummonList().getFirstServitor();
+			
 			if (pet != null)
 			{
 				pet_id = pet.getObjectId();

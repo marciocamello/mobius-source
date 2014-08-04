@@ -43,6 +43,7 @@ public class MentoringSystem
 		{
 			return;
 		}
+		
 		menteeInfo.add(new MenteeInfo(mentee, false));
 		MentoringDAO.getInstance().insert(_mentor, mentee);
 	}
@@ -53,6 +54,7 @@ public class MentoringSystem
 		{
 			return;
 		}
+		
 		menteeInfo.add(new MenteeInfo(mentor, true));
 		MentorUtil.addSkillsToMentor(mentor);
 	}
@@ -63,11 +65,14 @@ public class MentoringSystem
 		{
 			return;
 		}
+		
 		int objectId = removeMentee(name);
+		
 		if ((objectId <= 0) || (!(notify)))
 		{
 			return;
 		}
+		
 		Player otherSideMentee = World.getPlayer(name);
 		
 		if (otherSideMentee != null)
@@ -75,6 +80,7 @@ public class MentoringSystem
 			otherSideMentee.sendPacket(new SystemMessage2(SystemMsg.THE_MENTORING_RELATIONSHIP_WITH_S1_HAS_BEEN_CANCELED).addString((isMentor) ? name : _mentor.getName()));
 			MentorUtil.removeEffectsFromPlayer(otherSideMentee);
 		}
+		
 		_mentor.sendPacket(new SystemMessage2(SystemMsg.THE_MENTORING_RELATIONSHIP_WITH_S1_HAS_BEEN_CANCELED).addString((isMentor) ? name : _mentor.getName()));
 	}
 	
@@ -86,6 +92,7 @@ public class MentoringSystem
 		}
 		
 		MenteeInfo removedMentee = null;
+		
 		for (MenteeInfo entry : menteeInfo)
 		{
 			if (name.equalsIgnoreCase(entry.getName()))
@@ -101,6 +108,7 @@ public class MentoringSystem
 			MentoringDAO.getInstance().delete(_mentor.getObjectId(), removedMentee.getObjectId());
 			return removedMentee.getObjectId();
 		}
+		
 		return 0;
 	}
 	
@@ -113,6 +121,7 @@ public class MentoringSystem
 				return info;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -130,6 +139,7 @@ public class MentoringSystem
 				return menteeInfo.getObjectId();
 			}
 		}
+		
 		return 0;
 	}
 	
@@ -142,6 +152,7 @@ public class MentoringSystem
 				return menteeInfo.getObjectId();
 			}
 		}
+		
 		return 0;
 	}
 	
@@ -155,9 +166,11 @@ public class MentoringSystem
 		for (MenteeInfo mentee : menteeInfo)
 		{
 			Player menteePlayer = World.getPlayer(mentee.getObjectId());
+			
 			if (menteePlayer != null)
 			{
 				MenteeInfo thisMentee = menteePlayer.getMentorSystem().checkInList(_mentor.getObjectId());
+				
 				if (thisMentee == null)
 				{
 					continue;
@@ -169,12 +182,14 @@ public class MentoringSystem
 				{
 					return true;
 				}
+				
 				if (menteePlayer.isInOfflineMode() && Config.ALLOW_MENTOR_BUFFS_IN_OFFLINE_MODE)
 				{
 					return true;
 				}
 			}
 		}
+		
 		return false;
 	}
 	
@@ -183,9 +198,11 @@ public class MentoringSystem
 		for (MenteeInfo mentee : menteeInfo)
 		{
 			Player menteePlayer = World.getPlayer(mentee.getObjectId());
+			
 			if (menteePlayer != null)
 			{
 				MenteeInfo thisMentee = menteePlayer.getMentorSystem().checkInList(_mentor.getObjectId());
+				
 				if (thisMentee == null)
 				{
 					continue;
@@ -201,6 +218,7 @@ public class MentoringSystem
 				{
 					menteePlayer.sendPacket(new SystemMessage2((mentee.isMentor()) ? SystemMsg.YOU_MENTEE_S1_HAS_DISCONNECTED : SystemMsg.YOU_MENTOR_S1_HAS_DISCONNECTED).addString(_mentor.getName()));
 				}
+				
 				menteePlayer.sendPacket(new ExMentorList(menteePlayer));
 				mentee.update(menteePlayer, online);
 			}
@@ -216,6 +234,7 @@ public class MentoringSystem
 				return mentee;
 			}
 		}
+		
 		return null;
 	}
 	

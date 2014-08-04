@@ -38,6 +38,7 @@ public class PledgeShowInfoUpdate extends L2GameServerPacket
 		ally_id = clan.getAllyId();
 		atwar = clan.isAtWar();
 		Alliance ally = clan.getAlliance();
+		
 		if (ally != null)
 		{
 			ally_name = ally.getAllyName();
@@ -47,7 +48,8 @@ public class PledgeShowInfoUpdate extends L2GameServerPacket
 	
 	@Override
 	protected final void writeImpl()
-	{ // dddddddddddd Sdddd
+	{
+		// dddddddddddd Sdddd
 		writeC(0x8e);
 		// sending empty data so client will ask all the info in response ;)
 		writeD(clan_id);

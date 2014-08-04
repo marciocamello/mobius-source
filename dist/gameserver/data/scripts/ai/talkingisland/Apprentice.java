@@ -51,11 +51,13 @@ public class Apprentice extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor != null)
 		{
 			final NpcString ns = NpcString.RIDING_KOOKARU;
 			Functions.npcSay(actor, ns);
 		}
+		
 		return false;
 	}
 }

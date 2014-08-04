@@ -27,6 +27,7 @@ public class RandomActions
 			Action[] actionsArr = _actions.values(new Action[_actions.size()]);
 			return actionsArr[Rnd.get(actionsArr.length)];
 		}
+		
 		return _actions.get(id);
 	}
 	

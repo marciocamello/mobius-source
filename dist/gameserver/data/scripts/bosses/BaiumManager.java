@@ -169,6 +169,7 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		public void runImpl()
 		{
 			final Skill skill = SkillTable.getInstance().getInfo(4136, 1);
+			
 			if ((_target != null) && (skill != null))
 			{
 				_boss.setTarget(_target);
@@ -471,6 +472,7 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 				angel.deleteMe();
 			}
 		}
+		
 		_angels.clear();
 	}
 	
@@ -500,6 +502,7 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		_state = new EpicBossState(BAIUM);
 		_zone = ReflectionUtils.getZone("[baium_epic]");
 		CharListenerList.addGlobal(this);
+		
 		try
 		{
 			final SimpleSpawner tempSpawn;
@@ -515,6 +518,7 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		{
 			e.printStackTrace();
 		}
+		
 		try
 		{
 			final NpcTemplate Cube = NpcHolder.getInstance().getTemplate(TELEPORT_CUBE);
@@ -527,21 +531,26 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		{
 			e.printStackTrace();
 		}
+		
 		try
 		{
 			final NpcTemplate angel = NpcHolder.getInstance().getTemplate(ARCHANGEL);
 			SimpleSpawner spawnDat;
 			_angelSpawns.clear();
 			final List<Integer> random = new ArrayList<>();
+			
 			for (int i = 0; i < 5; i++)
 			{
 				int r = -1;
+				
 				while ((r == -1) || random.contains(r))
 				{
 					r = Rnd.get(10);
 				}
+				
 				random.add(r);
 			}
+			
 			for (int i : random)
 			{
 				spawnDat = new SimpleSpawner(angel);
@@ -555,7 +564,9 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		{
 			e.printStackTrace();
 		}
+		
 		_log.info("BaiumManager: State of Baium is " + _state.getState() + ".");
+		
 		if (_state.getState().equals(EpicBossState.State.NOTSPAWN))
 		{
 			_statueSpawn.doSpawn(true);
@@ -570,6 +581,7 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		{
 			setIntervalEndTask();
 		}
+		
 		_log.info("BaiumManager: Next spawn date: " + TimeUtils.toSimpleFormat(_state.getRespawnDate()));
 	}
 	
@@ -586,6 +598,7 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
@@ -618,6 +631,7 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 		{
 			return;
 		}
+		
 		Dying = true;
 		self.broadcastPacket(new PlaySound(PlaySound.Type.MUSIC, "BS02_D", 1, 0, self.getLoc()));
 		_state.setRespawnDate(getRespawnInterval());
@@ -643,12 +657,14 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 	private static void setIntervalEndTask()
 	{
 		setUnspawn();
+		
 		if (!_state.getState().equals(EpicBossState.State.INTERVAL))
 		{
 			_state.setRespawnDate(getRespawnInterval());
 			_state.setState(EpicBossState.State.INTERVAL);
 			_state.update();
 		}
+		
 		_intervalEndTask = ThreadPoolManager.getInstance().schedule(new IntervalEnd(), _state.getInterval());
 	}
 	
@@ -667,63 +683,76 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 	{
 		banishForeigners();
 		deleteArchangels();
+		
 		for (NpcInstance mob : _monsters)
 		{
 			mob.getSpawn().stopRespawn();
 			mob.deleteMe();
 		}
+		
 		_monsters.clear();
+		
 		if (_teleportCube != null)
 		{
 			_teleportCube.getSpawn().stopRespawn();
 			_teleportCube.deleteMe();
 			_teleportCube = null;
 		}
+		
 		if (_cubeSpawnTask != null)
 		{
 			_cubeSpawnTask.cancel(false);
 			_cubeSpawnTask = null;
 		}
+		
 		if (_intervalEndTask != null)
 		{
 			_intervalEndTask.cancel(false);
 			_intervalEndTask = null;
 		}
+		
 		if (_socialTask != null)
 		{
 			_socialTask.cancel(false);
 			_socialTask = null;
 		}
+		
 		if (_mobiliseTask != null)
 		{
 			_mobiliseTask.cancel(false);
 			_mobiliseTask = null;
 		}
+		
 		if (_moveAtRandomTask != null)
 		{
 			_moveAtRandomTask.cancel(false);
 			_moveAtRandomTask = null;
 		}
+		
 		if (_socialTask2 != null)
 		{
 			_socialTask2.cancel(false);
 			_socialTask2 = null;
 		}
+		
 		if (_killPcTask != null)
 		{
 			_killPcTask.cancel(false);
 			_killPcTask = null;
 		}
+		
 		if (_callAngelTask != null)
 		{
 			_callAngelTask.cancel(false);
 			_callAngelTask = null;
 		}
+		
 		if (_sleepCheckTask != null)
 		{
 			_sleepCheckTask.cancel(false);
 			_sleepCheckTask = null;
 		}
+		
 		if (_onAnnihilatedTask != null)
 		{
 			_onAnnihilatedTask.cancel(false);

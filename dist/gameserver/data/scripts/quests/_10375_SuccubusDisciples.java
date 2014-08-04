@@ -50,11 +50,13 @@ public class _10375_SuccubusDisciples extends Quest implements ScriptFile
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		if (event.equalsIgnoreCase("32140-09.htm"))
 		{
 			st.setCond(3);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return event;
 	}
 	
@@ -63,6 +65,7 @@ public class _10375_SuccubusDisciples extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == NPC_ZENYA)
 		{
 			switch (st.getState())
@@ -70,10 +73,12 @@ public class _10375_SuccubusDisciples extends Quest implements ScriptFile
 				case COMPLETED:
 					htmltext = "32140-05.htm";
 					break;
+				
 				case CREATED:
 					if (st.getPlayer().getLevel() >= 80)
 					{
 						QuestState qs = st.getPlayer().getQuestState(_10374_ThatPlaceSuccubus.class);
+						
 						if ((st.getPlayer().getClassId().level() == 4) && (qs != null) && qs.isCompleted())
 						{
 							htmltext = "32140-01.htm";
@@ -88,7 +93,9 @@ public class _10375_SuccubusDisciples extends Quest implements ScriptFile
 					{
 						htmltext = "32140-04.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					if (st.getCond() == 1)
 					{
@@ -112,6 +119,7 @@ public class _10375_SuccubusDisciples extends Quest implements ScriptFile
 					}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -122,6 +130,7 @@ public class _10375_SuccubusDisciples extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		if (updateKill(npc, st))
 		{
 			if (st.getCond() == 1)
@@ -139,6 +148,7 @@ public class _10375_SuccubusDisciples extends Quest implements ScriptFile
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		return null;
 	}
 	

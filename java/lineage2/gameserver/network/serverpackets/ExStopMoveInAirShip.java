@@ -32,7 +32,6 @@ public class ExStopMoveInAirShip extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeEx(0x6F);
-		
 		writeD(char_id);
 		writeD(boat_id);
 		writeD(_loc.x);

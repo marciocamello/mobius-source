@@ -35,6 +35,7 @@ public class OrbisTeleport implements ScriptFile
 	private void init()
 	{
 		_zoneListener = new ZoneListener();
+		
 		for (String s : zones)
 		{
 			Zone zone = ReflectionUtils.getZone(s);
@@ -68,14 +69,17 @@ public class OrbisTeleport implements ScriptFile
 			{
 				return;
 			}
+			
 			if (cha == null)
 			{
 				return;
 			}
+			
 			if (!cha.isPlayer())
 			{
 				return;
 			}
+			
 			cha.teleToLocation(Location.parseLoc(zone.getParams().getString("tele")));
 		}
 		

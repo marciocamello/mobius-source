@@ -41,6 +41,7 @@ public class Calculator extends ScriptItemHandler
 		{
 			return false;
 		}
+		
 		playable.sendPacket(new ShowCalc(item.getItemId()));
 		return true;
 	}

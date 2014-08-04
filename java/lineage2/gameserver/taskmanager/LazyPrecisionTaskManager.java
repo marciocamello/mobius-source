@@ -82,6 +82,7 @@ public class LazyPrecisionTaskManager extends SteppingRunnableQueueManager
 				{
 					return;
 				}
+				
 				player.addPcBangPoints(Config.ALT_PCBANG_POINTS_BONUS, (Config.ALT_PCBANG_POINTS_BONUS_DOUBLE_CHANCE > 0) && Rnd.chance(Config.ALT_PCBANG_POINTS_BONUS_DOUBLE_CHANCE));
 			}
 		}, delay, delay);
@@ -105,13 +106,16 @@ public class LazyPrecisionTaskManager extends SteppingRunnableQueueManager
 				player.getBonus().setDropAdena(1.);
 				player.getBonus().setDropItems(1.);
 				player.getBonus().setDropSpoil(1.);
+				
 				if (player.getParty() != null)
 				{
 					player.getParty().recalculatePartyData();
 				}
+				
 				String msg = new CustomMessage("scripts.services.RateBonus.LuckEnded", player).toString();
 				player.sendPacket(new ExShowScreenMessage(msg, 10000, ScreenMessageAlign.TOP_CENTER, true), new ExBR_PremiumState(player, false));
 				player.sendMessage(msg);
+				
 				if (Config.SERVICES_RATE_TYPE == Bonus.BONUS_GLOBAL_ON_GAMESERVER)
 				{
 					AccountBonusDAO.getInstance().delete(player.getAccountName());

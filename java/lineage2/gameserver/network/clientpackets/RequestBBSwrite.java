@@ -71,11 +71,14 @@ public class RequestBBSwrite extends L2GameClientPacket
 	public void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		ICommunityBoardHandler handler = CommunityBoardManager.getInstance().getCommunityHandler(_url);
+		
 		if (handler != null)
 		{
 			if (!Config.COMMUNITYBOARD_ENABLED)

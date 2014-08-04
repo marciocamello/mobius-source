@@ -47,6 +47,7 @@ public class PetSummon extends ScriptItemHandler
 		{
 			return false;
 		}
+		
 		final Player player = (Player) playable;
 		player.setPetControlItem(item);
 		player.getAI().Cast(SkillTable.getInstance().getInfo(_skillId, 1), player, false, true);

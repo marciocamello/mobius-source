@@ -31,7 +31,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class EnvoyInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -95,16 +95,20 @@ public class EnvoyInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		int cond = getCond(player);
+		
 		switch (cond)
 		{
 			case COND_LEADER:
 				final int castleId,
 				state;
 				final String fileName;
+				
 				if (command.equalsIgnoreCase("yes"))
 				{
 					Residence castle = ResidenceHolder.getInstance().getResidence(Castle.class, _castleId);
+					
 					if (castle.getOwnerId() == 0)
 					{
 						castleId = -1;
@@ -124,6 +128,7 @@ public class EnvoyInstance extends NpcInstance
 					state = Fortress.INDEPENDENT;
 					fileName = _successIndependentDialog;
 				}
+				
 				if (state != Fortress.NOT_DECIDED)
 				{
 					Fortress fortress = getFortress();
@@ -133,8 +138,10 @@ public class EnvoyInstance extends NpcInstance
 					FortressSiegeEvent event = fortress.getSiegeEvent();
 					event.despawnEnvoy();
 				}
+				
 				player.sendPacket(new NpcHtmlMessage(player, this, fileName, 0));
 				break;
+			
 			case COND_FAIL:
 				player.sendPacket(new NpcHtmlMessage(player, this, _failDialog, 0));
 				break;
@@ -152,15 +159,18 @@ public class EnvoyInstance extends NpcInstance
 	{
 		String filename = null;
 		int cond = getCond(player);
+		
 		switch (cond)
 		{
 			case COND_LEADER:
 				filename = _mainDialog;
 				break;
+			
 			case COND_FAIL:
 				filename = _failDialog;
 				break;
 		}
+		
 		player.sendPacket(new NpcHtmlMessage(player, this, filename, val));
 	}
 	
@@ -172,15 +182,19 @@ public class EnvoyInstance extends NpcInstance
 	protected int getCond(Player player)
 	{
 		Residence residence = getFortress();
+		
 		if (residence == null)
 		{
 			throw new IllegalArgumentException("Not find fortress: " + getNpcId() + "; loc: " + getLoc());
 		}
+		
 		Clan residenceOwner = residence.getOwner();
+		
 		if ((residenceOwner != null) && (player.getClan() == residenceOwner) && (residenceOwner.getLeaderId() == player.getObjectId()))
 		{
 			return COND_LEADER;
 		}
+		
 		return COND_FAIL;
 	}
 }

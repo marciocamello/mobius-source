@@ -38,6 +38,7 @@ public class EffectMuteAttack extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if (!_effected.startAMuted())
 		{
 			_effected.abortCast(true, true);

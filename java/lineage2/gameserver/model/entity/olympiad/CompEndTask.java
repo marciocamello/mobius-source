@@ -41,15 +41,19 @@ class CompEndTask extends RunnableImpl
 		{
 			return;
 		}
+		
 		Olympiad._inCompPeriod = false;
+		
 		try
 		{
 			OlympiadManager manager = Olympiad._manager;
+			
 			if ((manager != null) && !manager.getOlympiadGames().isEmpty())
 			{
 				ThreadPoolManager.getInstance().schedule(new CompEndTask(), 60000);
 				return;
 			}
+			
 			Announcements.getInstance().announceToAll(Msg.THE_OLYMPIAD_GAME_HAS_ENDED);
 			_log.info("Olympiad System: Olympiad Game Ended");
 			OlympiadDatabase.save();
@@ -59,6 +63,7 @@ class CompEndTask extends RunnableImpl
 			_log.warn("Olympiad System: Failed to save Olympiad configuration:");
 			_log.error("", e);
 		}
+		
 		Olympiad.init();
 	}
 }

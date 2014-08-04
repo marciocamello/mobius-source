@@ -66,6 +66,7 @@ public class RequestBlock extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_type = readD();
+		
 		if ((_type == BLOCK) || (_type == UNBLOCK))
 		{
 			targetName = readS(16);
@@ -79,40 +80,51 @@ public class RequestBlock extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		switch (_type)
 		{
 			case BLOCK:
 				activeChar.addToBlockList(targetName);
 				break;
+			
 			case UNBLOCK:
 				activeChar.removeFromBlockList(targetName);
 				break;
+			
 			case BLOCKLIST:
 				Collection<String> blockList = activeChar.getBlockList();
+				
 				if (blockList != null)
 				{
 					activeChar.sendPacket(Msg._IGNORE_LIST_);
+					
 					for (String name : blockList)
 					{
 						activeChar.sendMessage(name);
 					}
+					
 					activeChar.sendPacket(Msg.__EQUALS__);
 				}
+				
 				break;
+			
 			case ALLBLOCK:
 				activeChar.setBlockAll(true);
 				activeChar.sendPacket(Msg.YOU_ARE_NOW_BLOCKING_EVERYTHING);
 				activeChar.sendEtcStatusUpdate();
 				break;
+			
 			case ALLUNBLOCK:
 				activeChar.setBlockAll(false);
 				activeChar.sendPacket(Msg.YOU_ARE_NO_LONGER_BLOCKING_EVERYTHING);
 				activeChar.sendEtcStatusUpdate();
 				break;
+			
 			default:
 				_log.info("Unknown 0x0a block type: " + _type);
 		}

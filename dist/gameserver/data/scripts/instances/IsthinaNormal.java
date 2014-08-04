@@ -83,6 +83,7 @@ public class IsthinaNormal extends Reflection
 			}
 			
 			Player player = cha.getPlayer();
+			
 			if ((player == null) || !cha.isPlayer())
 			{
 				return;
@@ -104,7 +105,7 @@ public class IsthinaNormal extends Reflection
 	private class StartNormalIsthina extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public StartNormalIsthina()
 		{
@@ -115,13 +116,10 @@ public class IsthinaNormal extends Reflection
 		public void runImpl()
 		{
 			_entryLocked = true;
-			
 			closeDoor(14220100);
 			closeDoor(14220101);
-			
 			NpcInstance isthinaNormal = addSpawnWithoutRespawn(Isthina, new Location(-177125, 147856, -11384, 49140), 0);
 			isthinaNormal.addListener(_deathListener);
-			
 			NpcInstance camera = addSpawnWithoutRespawn(Camera, new Location(-177325, 147856, -11384, 49140), 0);
 			camera.setTargetable(false);
 			
@@ -145,7 +143,6 @@ public class IsthinaNormal extends Reflection
 				}
 				
 				ballistaDamage += damage;
-				
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
 					@Override
@@ -205,7 +202,7 @@ public class IsthinaNormal extends Reflection
 	private class DeathListener implements OnDeathListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public DeathListener()
 		{
@@ -225,7 +222,7 @@ public class IsthinaNormal extends Reflection
 	private class IsthinaDeath extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public IsthinaDeath()
 		{
@@ -239,6 +236,7 @@ public class IsthinaNormal extends Reflection
 			{
 				player.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_ISTHINA_BRIDGE);
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new SpawnBallista(), 7200L); // 7.2 secs for movie
 		}
 	}
@@ -246,7 +244,7 @@ public class IsthinaNormal extends Reflection
 	private class IsthinaDeathFinalA extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public IsthinaDeathFinalA()
 		{
@@ -257,15 +255,19 @@ public class IsthinaNormal extends Reflection
 		public void runImpl()
 		{
 			setReenterTime(System.currentTimeMillis());
+			
 			for (Player player : getPlayers())
 			{
 				player.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_ISTHINA_ENDING_A);
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new FinalAndCollapse(), 23300); // 23.3 secs for movie
+			
 			for (NpcInstance n : getNpcs())
 			{
 				n.deleteMe();
 			}
+			
 			openDoor(14220100);
 			openDoor(14220101);
 		}
@@ -274,7 +276,7 @@ public class IsthinaNormal extends Reflection
 	private class IsthinaDeathFinalB extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public IsthinaDeathFinalB()
 		{
@@ -285,15 +287,19 @@ public class IsthinaNormal extends Reflection
 		public void runImpl()
 		{
 			setReenterTime(System.currentTimeMillis());
+			
 			for (Player player : getPlayers())
 			{
 				player.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_ISTHINA_ENDING_B);
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new FinalAndCollapse(), 22200L); // 22.2 secs for movie
+			
 			for (NpcInstance n : getNpcs())
 			{
 				n.deleteMe();
 			}
+			
 			openDoor(14220100);
 			openDoor(14220101);
 		}
@@ -302,7 +308,7 @@ public class IsthinaNormal extends Reflection
 	private class FinalAndCollapse extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public FinalAndCollapse()
 		{
@@ -320,7 +326,7 @@ public class IsthinaNormal extends Reflection
 	private class SpawnBallista extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public SpawnBallista()
 		{

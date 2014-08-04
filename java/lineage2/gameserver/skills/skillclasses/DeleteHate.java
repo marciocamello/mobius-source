@@ -54,23 +54,27 @@ public class DeleteHate extends Skill
 				{
 					continue;
 				}
+				
 				if (getActivateRate() > 0)
 				{
 					if (activeChar.isPlayer() && ((Player) activeChar).isGM())
 					{
 						activeChar.sendMessage(new CustomMessage("lineage2.gameserver.skills.Formulas.Chance", (Player) activeChar).addString(getName()).addNumber(getActivateRate()));
 					}
+					
 					if (!Rnd.chance(getActivateRate()))
 					{
 						return;
 					}
 				}
+				
 				if (target.isNpc())
 				{
 					NpcInstance npc = (NpcInstance) target;
 					npc.getAggroList().clear(false);
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				}
+				
 				getEffects(activeChar, target, false, false);
 			}
 		}

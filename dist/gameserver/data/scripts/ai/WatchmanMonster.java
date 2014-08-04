@@ -74,16 +74,20 @@ public class WatchmanMonster extends Fighter
 	protected void onEvtAttacked(final Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((attacker != null) && !actor.getFaction().isNone() && (actor.getCurrentHpPercents() < 50) && (_lastSearch < (System.currentTimeMillis() - 15000)))
 		{
 			_lastSearch = System.currentTimeMillis();
 			_attackerRef = attacker.getRef();
+			
 			if (findHelp())
 			{
 				return;
 			}
+			
 			Functions.npcSay(actor, "Anyone, help me!");
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	
@@ -96,10 +100,12 @@ public class WatchmanMonster extends Fighter
 		isSearching = false;
 		final NpcInstance actor = getActor();
 		final Creature attacker = _attackerRef.get();
+		
 		if (attacker == null)
 		{
 			return false;
 		}
+		
 		for (final NpcInstance npc : actor.getAroundNpc(1000, 150))
 		{
 			if (!actor.isDead() && npc.isInFaction(actor) && !npc.isInCombat())
@@ -111,6 +117,7 @@ public class WatchmanMonster extends Fighter
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -134,14 +141,17 @@ public class WatchmanMonster extends Fighter
 	protected void onEvtArrived()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (isSearching)
 		{
 			final Creature attacker = _attackerRef.get();
+			
 			if (attacker != null)
 			{
 				Functions.npcSay(actor, flood2[Rnd.get(flood2.length)]);
 				notifyFriends(attacker, 100);
 			}
+			
 			isSearching = false;
 			notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 100);
 		}

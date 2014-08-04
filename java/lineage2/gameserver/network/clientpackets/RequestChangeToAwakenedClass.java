@@ -58,23 +58,29 @@ public class RequestChangeToAwakenedClass extends L2GameClientPacket
 		if (!Config.AWAKING_FREE)
 		{
 			final Player player = getClient().getActiveChar();
+			
 			if (player == null)
 			{
 				return;
 			}
+			
 			if (player.getLevel() < 85)
 			{
 				return;
 			}
+			
 			if (player.getClassId().level() < 3)
 			{
 				return;
 			}
+			
 			if (change != 1)
 			{
 				return;
 			}
+			
 			ClassId classId = player.getClassId();
+			
 			for (ClassId cid : ClassId.VALUES)
 			{
 				if (cid.childOf(classId) && (cid.getClassLevel().ordinal() == (classId.getClassLevel().ordinal() + 1)))
@@ -82,6 +88,7 @@ public class RequestChangeToAwakenedClass extends L2GameClientPacket
 					if (player.getInventory().getCountOf(SCROLL_OF_AFTERLIFE) > 0)
 					{
 						player.getInventory().destroyItemByItemId(SCROLL_OF_AFTERLIFE, 1);
+						
 						if (player.getVarB("awakenByStoneOfDestiny", false))
 						{
 							int classTarget = player.getVarInt("classTarget");
@@ -93,6 +100,7 @@ public class RequestChangeToAwakenedClass extends L2GameClientPacket
 						{
 							AwakingManager.getInstance().SetAwakingId(player);
 						}
+						
 						ThreadPoolManager.getInstance().schedule(new RunnableImpl()
 						{
 							@Override
@@ -102,6 +110,7 @@ public class RequestChangeToAwakenedClass extends L2GameClientPacket
 							}
 						}, 15000);
 					}
+					
 					return;
 				}
 			}
@@ -109,22 +118,27 @@ public class RequestChangeToAwakenedClass extends L2GameClientPacket
 		else
 		{
 			Player player = getClient().getActiveChar();
+			
 			if (player == null)
 			{
 				return;
 			}
+			
 			if (player.getLevel() < 85)
 			{
 				return;
 			}
+			
 			if (player.getClassId().level() < 3)
 			{
 				return;
 			}
+			
 			if (player.isAwaking())
 			{
 				return;
 			}
+			
 			if (player.getVarB("awakenByStoneOfDestiny", false))
 			{
 				int classTarget = player.getVarInt("classTarget");

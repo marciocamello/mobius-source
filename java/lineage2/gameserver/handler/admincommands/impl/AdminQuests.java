@@ -57,44 +57,55 @@ public class AdminQuests implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		if (!activeChar.getPlayerAccess().CanEditCharAll)
 		{
 			return false;
 		}
+		
 		switch (command)
 		{
 			case admin_quests:
 				return ShowQuestList(getTargetChar(wordList, 1, activeChar), activeChar);
+				
 			case admin_quest:
 				if (wordList.length < 2)
 				{
 					activeChar.sendMessage("USAGE: //quest id|name [SHOW|STATE|VAR|CLEAR] ...");
 					return true;
 				}
+				
 				Quest _quest = QuestManager.getQuest2(wordList[1]);
+				
 				if (_quest == null)
 				{
 					activeChar.sendMessage("Quest " + wordList[1] + " undefined");
 					return true;
 				}
+				
 				if ((wordList.length < 3) || wordList[2].equalsIgnoreCase("SHOW"))
 				{
 					return cmd_Show(_quest, wordList, activeChar);
 				}
+				
 				if (wordList[2].equalsIgnoreCase("STATE"))
 				{
 					return cmd_State(_quest, wordList, activeChar);
 				}
+				
 				if (wordList[2].equalsIgnoreCase("VAR"))
 				{
 					return cmd_Var(_quest, wordList, activeChar);
 				}
+				
 				if (wordList[2].equalsIgnoreCase("CLEAR"))
 				{
 					return cmd_Clear(_quest, wordList, activeChar);
 				}
+				
 				return cmd_Show(_quest, wordList, activeChar);
 		}
+		
 		return true;
 	}
 	
@@ -109,11 +120,13 @@ public class AdminQuests implements IAdminCommandHandler
 	{
 		Player targetChar = getTargetChar(wordList, 3, activeChar);
 		QuestState qs = targetChar.getQuestState(_quest.getName());
+		
 		if (qs == null)
 		{
 			activeChar.sendMessage("Player " + targetChar.getName() + " havn't Quest [" + _quest.getName() + "]");
 			return false;
 		}
+		
 		qs.exitCurrentQuest(true);
 		return ShowQuestList(targetChar, activeChar);
 	}
@@ -129,11 +142,13 @@ public class AdminQuests implements IAdminCommandHandler
 	{
 		Player targetChar = getTargetChar(wordList, 3, activeChar);
 		QuestState qs = targetChar.getQuestState(_quest.getName());
+		
 		if (qs == null)
 		{
 			activeChar.sendMessage("Player " + targetChar.getName() + " havn't Quest [" + _quest.getName() + "]");
 			return false;
 		}
+		
 		return ShowQuestState(qs, activeChar);
 	}
 	
@@ -192,6 +207,7 @@ public class AdminQuests implements IAdminCommandHandler
 				""
 			})
 		}));
+		
 		for (String key : vars.keySet())
 		{
 			if (!key.equalsIgnoreCase("<state>"))
@@ -211,6 +227,7 @@ public class AdminQuests implements IAdminCommandHandler
 				}));
 			}
 		}
+		
 		replyMSG.append(fmtRow.sprintf(new Object[]
 		{
 			"<edit var=\"new_name\" width=50 height=12>",
@@ -257,6 +274,7 @@ public class AdminQuests implements IAdminCommandHandler
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		StringBuilder replyMSG = new StringBuilder("<html><body><table width=260>");
+		
 		for (QuestState qs : targetChar.getAllQuestsStates())
 		{
 			if ((qs != null) && (qs.getQuest().getQuestIntId() != 255))
@@ -270,6 +288,7 @@ public class AdminQuests implements IAdminCommandHandler
 				}));
 			}
 		}
+		
 		replyMSG.append(fmtListNew.sprintf(new Object[]
 		{
 			targetChar.getName()
@@ -294,14 +313,17 @@ public class AdminQuests implements IAdminCommandHandler
 			activeChar.sendMessage("USAGE: //quest id|name VAR varname newvalue [target]");
 			return false;
 		}
+		
 		Player targetChar = getTargetChar(wordList, 5, activeChar);
 		QuestState qs = targetChar.getQuestState(_quest.getName());
+		
 		if (qs == null)
 		{
 			activeChar.sendMessage("Player " + targetChar.getName() + " havn't Quest [" + _quest.getName() + "], init quest by command:");
 			activeChar.sendMessage("//quest id|name STATE 1|2|3 [target]");
 			return false;
 		}
+		
 		if (wordList[4].equalsIgnoreCase("~") || wordList[4].equalsIgnoreCase("#"))
 		{
 			qs.unset(wordList[3]);
@@ -310,6 +332,7 @@ public class AdminQuests implements IAdminCommandHandler
 		{
 			qs.set(wordList[3], wordList[4]);
 		}
+		
 		return ShowQuestState(qs, activeChar);
 	}
 	
@@ -327,7 +350,9 @@ public class AdminQuests implements IAdminCommandHandler
 			activeChar.sendMessage("USAGE: //quest id|name STATE 1|2|3 [target]");
 			return false;
 		}
+		
 		int state = 0;
+		
 		try
 		{
 			state = Integer.parseInt(wordList[3]);
@@ -337,8 +362,10 @@ public class AdminQuests implements IAdminCommandHandler
 			activeChar.sendMessage("Wrong State ID: " + wordList[3]);
 			return false;
 		}
+		
 		Player targetChar = getTargetChar(wordList, 4, activeChar);
 		QuestState qs = targetChar.getQuestState(_quest.getName());
+		
 		if (qs == null)
 		{
 			activeChar.sendMessage("Init Quest [" + _quest.getName() + "] for " + targetChar.getName());
@@ -349,6 +376,7 @@ public class AdminQuests implements IAdminCommandHandler
 		{
 			qs.setState(state);
 		}
+		
 		return ShowQuestState(qs, activeChar);
 	}
 	
@@ -364,17 +392,22 @@ public class AdminQuests implements IAdminCommandHandler
 		if ((wordListIndex >= 0) && (wordList.length > wordListIndex))
 		{
 			Player player = World.getPlayer(wordList[wordListIndex]);
+			
 			if (player == null)
 			{
 				activeChar.sendMessage("Can't find player: " + wordList[wordListIndex]);
 			}
+			
 			return player;
 		}
+		
 		GameObject my_target = activeChar.getTarget();
+		
 		if ((my_target != null) && my_target.isPlayer())
 		{
 			return (Player) my_target;
 		}
+		
 		return activeChar;
 	}
 	

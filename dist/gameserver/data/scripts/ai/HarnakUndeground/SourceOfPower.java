@@ -52,15 +52,18 @@ public class SourceOfPower extends DefaultAI
 		{
 			Player p = players.get(0);
 			Skill skill;
+			
 			if (!useLightHeal)
 			{
 				skill = SkillTable.getInstance().getInfo(SKILL_ID, 1);
 				addTaskCast(p, skill);
+				
 				if (firstCast)
 				{
 					addTimer(1, 7000);
 					firstCast = false;
 					getActor().broadcastPacket(new ExShowScreenMessage(MSG1, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 1, true, 0));
+					
 					if (controlNpc)
 					{
 						Functions.npcSayToPlayer(getActor(), p, NpcString.RRECEIVE_THIS_POWER_FROM_THE_ANCIENT_GIANT, ChatType.TELL);
@@ -78,6 +81,7 @@ public class SourceOfPower extends DefaultAI
 				firstCast = false;
 			}
 		}
+		
 		return super.thinkActive();
 	}
 	
@@ -85,10 +89,12 @@ public class SourceOfPower extends DefaultAI
 	protected void onEvtTimer(int timerId, Object arg1, Object arg2)
 	{
 		super.onEvtTimer(timerId, arg1, arg2);
+		
 		if (!isActive())
 		{
 			return;
 		}
+		
 		if (timerId == 1)
 		{
 			getActor().deleteMe();
@@ -96,6 +102,7 @@ public class SourceOfPower extends DefaultAI
 		else if (timerId == 2)
 		{
 			List<Player> players = World.getAroundPlayers(getActor(), 500, 300);
+			
 			if (!players.isEmpty())
 			{
 				Player p = players.get(0);

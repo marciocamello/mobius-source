@@ -59,9 +59,9 @@ public class ExEventMatchSpelledInfo extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0x04);
-		
 		writeD(char_obj_id);
 		writeD(_effects.size());
+		
 		for (Effect temp : _effects)
 		{
 			writeD(temp.skillId);

@@ -26,7 +26,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class RainbowChestInstance extends MonsterInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -141,6 +141,7 @@ public class RainbowChestInstance extends MonsterInstance
 		{
 			return;
 		}
+		
 		super.reduceCurrentHp(getMaxHp() * 0.2, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
 	}
 	
@@ -153,14 +154,18 @@ public class RainbowChestInstance extends MonsterInstance
 	{
 		super.onDeath(k);
 		Player killer = k.getPlayer();
+		
 		if (killer == null)
 		{
 			return;
 		}
+		
 		int count = 1 + Rnd.get(2);
+		
 		for (int i = 0; i < count; i++)
 		{
 			int chance = Rnd.get(100);
+			
 			if (chance <= 5)
 			{
 				dropItem(killer, ItemA, 1);

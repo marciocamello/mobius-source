@@ -52,6 +52,7 @@ public class _027_ChestCaughtWithABaitOfWind extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("fisher_lanosco_q0027_0104.htm"))
 		{
 			st.setCond(1);
@@ -87,6 +88,7 @@ public class _027_ChestCaughtWithABaitOfWind extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -97,6 +99,7 @@ public class _027_ChestCaughtWithABaitOfWind extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		int id = st.getState();
+		
 		if (npcId == Lanosco)
 		{
 			if (id == CREATED)
@@ -109,6 +112,7 @@ public class _027_ChestCaughtWithABaitOfWind extends Quest implements ScriptFile
 				else
 				{
 					QuestState LanoscosSpecialBait = st.getPlayer().getQuestState(_050_LanoscosSpecialBait.class);
+					
 					if (LanoscosSpecialBait != null)
 					{
 						if (LanoscosSpecialBait.isCompleted())
@@ -131,6 +135,7 @@ public class _027_ChestCaughtWithABaitOfWind extends Quest implements ScriptFile
 			else if (cond == 1)
 			{
 				htmltext = "fisher_lanosco_q0027_0105.htm";
+				
 				if (st.getQuestItemsCount(BigBlueTreasureChest) == 0)
 				{
 					htmltext = "fisher_lanosco_q0027_0106.htm";
@@ -152,6 +157,7 @@ public class _027_ChestCaughtWithABaitOfWind extends Quest implements ScriptFile
 				htmltext = "blueprint_seller_shaling_q0027_0302.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	

@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
 public class AdventurerInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -61,11 +61,13 @@ public class AdventurerInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.startsWith("npcfind_byid"))
 		{
 			try
 			{
 				int bossId = Integer.parseInt(command.substring(12).trim());
+				
 				switch (RaidBossSpawnManager.getInstance().getRaidBossStatusId(bossId))
 				{
 					case ALIVE:
@@ -74,6 +76,7 @@ public class AdventurerInstance extends NpcInstance
 						Location loc = spawn.getCurrentSpawnRange().getRandomLoc(spawn.getReflection().getGeoIndex());
 						player.sendPacket(new RadarControl(2, 2, loc), new RadarControl(0, 1, loc));
 						break;
+					
 					case UNDEFINED:
 						player.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2AdventurerInstance.BossNotInGame", player).addNumber(bossId));
 						break;
@@ -88,10 +91,12 @@ public class AdventurerInstance extends NpcInstance
 		{
 			int bossLevel = Integer.parseInt(command.substring(9).trim());
 			String filename = "adventurer_guildsman/raid_info/info.htm";
+			
 			if (bossLevel != 0)
 			{
 				filename = "adventurer_guildsman/raid_info/level" + bossLevel + ".htm";
 			}
+			
 			showChatWindow(player, filename);
 		}
 		else if (command.equalsIgnoreCase("questlist"))
@@ -115,6 +120,7 @@ public class AdventurerInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String pom;
+		
 		if (val == 0)
 		{
 			pom = "" + npcId;
@@ -123,6 +129,7 @@ public class AdventurerInstance extends NpcInstance
 		{
 			pom = npcId + "-" + val;
 		}
+		
 		return "adventurer_guildsman/" + pom + ".htm";
 	}
 }

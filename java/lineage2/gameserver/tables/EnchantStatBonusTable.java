@@ -55,6 +55,7 @@ public class EnchantStatBonusTable
 		{
 			_instance = new EnchantStatBonusTable();
 		}
+		
 		return _instance;
 	}
 	
@@ -79,6 +80,7 @@ public class EnchantStatBonusTable
 			factory.setIgnoringComments(true);
 			File file = new File(Config.DATAPACK_ROOT, "data/xml/other/enchant_stats.xml");
 			Document doc = factory.newDocumentBuilder().parse(file);
+			
 			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 			{
 				if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -89,7 +91,6 @@ public class EnchantStatBonusTable
 					List<enchantStat> head = new ArrayList<>();
 					List<enchantStat> hand = new ArrayList<>();
 					List<enchantStat> feet = new ArrayList<>();
-					
 					List<enchantStat> sword = new ArrayList<>();
 					List<enchantStat> blunt = new ArrayList<>();
 					List<enchantStat> rapier = new ArrayList<>();
@@ -98,14 +99,13 @@ public class EnchantStatBonusTable
 					List<enchantStat> dagger = new ArrayList<>();
 					List<enchantStat> dualdagger = new ArrayList<>();
 					List<enchantStat> crossbow = new ArrayList<>();
-					
 					List<enchantStat> bigsword = new ArrayList<>();
 					List<enchantStat> bigblunt = new ArrayList<>();
 					List<enchantStat> dualsword = new ArrayList<>();
 					List<enchantStat> dualblunt = new ArrayList<>();
 					List<enchantStat> dualfist = new ArrayList<>();
-					
 					List<enchantStat> bow = new ArrayList<>();
+					
 					for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 					{
 						Double opt1;
@@ -113,14 +113,17 @@ public class EnchantStatBonusTable
 						Integer grade;
 						NamedNodeMap attrs = d.getAttributes();
 						Node att;
+						
 						if ("enchant".equalsIgnoreCase(d.getNodeName()))
 						{
 							att = attrs.getNamedItem("grade");
+							
 							if (att == null)
 							{
 								_log.info("EnchantStatBonusTable: Missing grade. skipping");
 								continue;
 							}
+							
 							if ("R".equalsIgnoreCase(att.getNodeValue()))
 							{
 								grade = ItemTemplate.CRYSTAL_R;
@@ -154,14 +157,18 @@ public class EnchantStatBonusTable
 								_log.info("EnchantStatBonusTable: Invalid Grade Value. Skipping");
 								continue;
 							}
+							
 							att = attrs.getNamedItem("opt1");
+							
 							if (att == null)
 							{
 								_log.info("EnchantStatBonusTable: Missing opt1. skipping");
 								continue;
 							}
+							
 							opt1 = Double.parseDouble(att.getNodeValue());
 							att = attrs.getNamedItem("opt2");
+							
 							if (att == null)
 							{
 								opt2 = 0D;
@@ -170,12 +177,15 @@ public class EnchantStatBonusTable
 							{
 								opt2 = Double.parseDouble(att.getNodeValue());
 							}
+							
 							att = attrs.getNamedItem("name");
+							
 							if (att == null)
 							{
 								_log.info("EnchantStatBonusTable: Missing name. skipping");
 								continue;
 							}
+							
 							if ("defense".equalsIgnoreCase(att.getNodeValue()))
 							{
 								defense.add(new enchantStat(grade, opt1, opt2));
@@ -263,15 +273,14 @@ public class EnchantStatBonusTable
 							}
 						}
 					}
-					_enchantDefenseList = defense;
 					
+					_enchantDefenseList = defense;
 					_enchantStatListArmor.put(ItemTemplate.SLOT_CHEST, chest);
 					_enchantStatListArmor.put(ItemTemplate.SLOT_LEGS, legging);
 					_enchantStatListArmor.put(ItemTemplate.SLOT_HEAD, head);
 					_enchantStatListArmor.put(ItemTemplate.SLOT_GLOVES, hand);
 					_enchantStatListArmor.put(ItemTemplate.SLOT_FEET, feet);
 					_enchantStatListArmor.put(ItemTemplate.SLOT_CHEST, chest);
-					
 					_enchantStatListWeapon.put(WeaponType.SWORD, sword);
 					_enchantStatListWeapon.put(WeaponType.BLUNT, blunt);
 					_enchantStatListWeapon.put(WeaponType.RAPIER, rapier);
@@ -280,28 +289,31 @@ public class EnchantStatBonusTable
 					_enchantStatListWeapon.put(WeaponType.DAGGER, dagger);
 					_enchantStatListWeapon.put(WeaponType.DUALDAGGER, dualdagger);
 					_enchantStatListWeapon.put(WeaponType.CROSSBOW, crossbow);
-					
 					_enchantStatListWeapon.put(WeaponType.BIGSWORD, bigsword);
 					_enchantStatListWeapon.put(WeaponType.BIGBLUNT, bigblunt);
 					_enchantStatListWeapon.put(WeaponType.DUAL, dualsword);
 					_enchantStatListWeapon.put(WeaponType.DUALBLUNT, dualblunt);
 					_enchantStatListWeapon.put(WeaponType.DUALFIST, dualfist);
-					
 					_enchantStatListWeapon.put(WeaponType.BOW, bow);
 					int i = 0;
+					
 					for (List<enchantStat> iterator : _enchantStatListArmor.values())
 					{
 						i += iterator.size();
 					}
+					
 					_log.info("EnchantStatBonusTable: Loaded " + i + " Armor enchant bonuses.");
 					i = 0;
+					
 					for (List<enchantStat> iterator : _enchantStatListWeapon.values())
 					{
 						i += iterator.size();
 					}
+					
 					_log.info("EnchantStatBonusTable: Loaded " + i + " Weapon enchant bonuses.");
 				}
 			}
+			
 			_log.info("EnchantStatBonusTable: Loaded enchant bonuses.");
 		}
 		catch (Exception e)
@@ -323,11 +335,14 @@ public class EnchantStatBonusTable
 					{
 						return crystalType.getOption1();
 					}
+					
 					return crystalType.getOption2();
 				}
+				
 				return crystalType.getOption1();
 			}
 		}
+		
 		_log.info("EnchantStatBonusTable: Incorrect Crystal Type");
 		return 0;
 	}
@@ -335,11 +350,13 @@ public class EnchantStatBonusTable
 	public final double getStatBonus(Integer bodyPart, boolean isMagicStat)
 	{
 		List<enchantStat> bonus = _enchantStatListArmor.get(bodyPart);
+		
 		if (bonus == null)
 		{
 			_log.info("EnchantStatBonusTable: Incorrect part for bonus on bodyPart Integer: " + bodyPart);
 			return 0;
 		}
+		
 		for (enchantStat statBonus : bonus)
 		{
 			if (isMagicStat && (statBonus.getOption2() > 0))
@@ -355,19 +372,23 @@ public class EnchantStatBonusTable
 				_log.info("EnchantStatBonusTable: Incorrect armor bonus");
 			}
 		}
+		
 		return 0;
 	}
 	
 	public final double getWeaponStatBonus(WeaponType weapon, Integer CrystalType, boolean isMagicStat)
 	{
 		List<enchantStat> bonus = _enchantStatListWeapon.get(weapon);
+		
 		if (bonus == null)
 		{
 			_log.info("EnchantStatBonusTable: Incorrect weapon for bonus");
 			return 0;
 		}
+		
 		double option1 = 0;
 		double option2 = 0;
+		
 		for (enchantStat stats : bonus)
 		{
 			if (stats.getGrade() == CrystalType)
@@ -377,6 +398,7 @@ public class EnchantStatBonusTable
 				break;
 			}
 		}
+		
 		if (isMagicStat && (option2 > 0))
 		{
 			return option2;

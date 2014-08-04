@@ -169,25 +169,30 @@ public class MuseumManager
 	public void load()
 	{
 		_log.info(getClass().getSimpleName() + ": Initializing");
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			Museums.clear();
+			
 			for (String loadingInfo[] : _loadingInfo)
 			{
 				PreparedStatement statement = con.prepareStatement("SELECT * FROM characters_museum_" + loadingInfo[0] + " ORDER BY " + loadingInfo[1] + " DESC LIMIT 100");
 				int objID;
 				long acquiredItem;
 				ResultSet rset = statement.executeQuery();
+				
 				while (rset.next())
 				{
 					objID = (rset.getInt("objectID"));
 					acquiredItem = rset.getLong(loadingInfo[1]);
+					
 					if (acquiredItem != 0)
 					{
 						createMuseum(objID, acquiredItem, Integer.parseInt(loadingInfo[2]), loadingInfo[0].equals("total"));
 					}
 				}
+				
 				statement.execute();
 				rset.close();
 				statement.close();
@@ -225,6 +230,7 @@ public class MuseumManager
 	public List<Museum> getMuseums(int category, boolean isTotal)
 	{
 		List<Museum> museums = new ArrayList<>();
+		
 		for (Museum museum : Museums)
 		{
 			if (museum.isTotal() == isTotal)
@@ -235,6 +241,7 @@ public class MuseumManager
 				}
 			}
 		}
+		
 		return museums;
 	}
 	
@@ -257,6 +264,7 @@ public class MuseumManager
 				}
 			}
 		}
+		
 		return null;
 	}
 	
@@ -373,6 +381,7 @@ public class MuseumManager
 			0
 		};
 		Connection con = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -380,47 +389,60 @@ public class MuseumManager
 			statement.setInt(1, objectID);
 			statement.setString(2, "PAPERDOLL");
 			ResultSet rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				int itemId = rset.getInt("item_id");
 				int locData = rset.getInt("loc_data");
+				
 				switch (locData)
 				{
 					case Inventory.PAPERDOLL_NECK:
 						items[0] = itemId;
 						break;
+					
 					case Inventory.PAPERDOLL_HEAD:
 						items[1] = itemId;
 						break;
+					
 					case Inventory.PAPERDOLL_RHAND:
 						items[2] = itemId;
 						break;
+					
 					case Inventory.PAPERDOLL_LHAND:
 						items[3] = itemId;
 						break;
+					
 					case Inventory.PAPERDOLL_GLOVES:
 						items[4] = itemId;
 						break;
+					
 					case Inventory.PAPERDOLL_CHEST:
 						items[5] = itemId;
 						break;
+					
 					case Inventory.PAPERDOLL_LEGS:
 						items[6] = itemId;
 						break;
+					
 					case Inventory.PAPERDOLL_FEET:
 						items[7] = itemId;
 						break;
+					
 					case Inventory.PAPERDOLL_DECO6:
 						items[8] = itemId;
 						break;
+					
 					case Inventory.PAPERDOLL_HAIR:
 						items[9] = itemId;
 						break;
+					
 					case Inventory.PAPERDOLL_DHAIR:
 						items[10] = itemId;
 						break;
 				}
 			}
+			
 			rset.close();
 			statement.close();
 		}
@@ -452,12 +474,14 @@ public class MuseumManager
 			0
 		};
 		Connection con = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM `characters` WHERE `charId`=?");
 			statement.setInt(1, objectID);
 			ResultSet rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				items[0] = rset.getInt("classid");
@@ -467,6 +491,7 @@ public class MuseumManager
 				items[4] = rset.getInt("hairColor");
 				items[5] = rset.getInt("face");
 			}
+			
 			rset.close();
 			statement.close();
 		}
@@ -495,6 +520,7 @@ public class MuseumManager
 				return museum;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -507,15 +533,19 @@ public class MuseumManager
 		{
 			((L2StatueInstance) objects).deleteMe();
 		}
+		
 		if (!getMuseums().isEmpty())
 		{
 			Museum museum;
+			
 			for (String[] information : getLoadingInfo())
 			{
 				int category = Integer.parseInt(information[2]);
+				
 				if ((getTopMuseum(category) != null) && information[0].equalsIgnoreCase("monthly"))
 				{
 					museum = getTopMuseum(category);
+					
 					if (!getLocation(category).isEmpty())
 					{
 						for (int[] location : getLocation(category))
@@ -541,6 +571,7 @@ public class MuseumManager
 	private List<int[]> getLocation(int category)
 	{
 		List<int[]> locations = new ArrayList<>();
+		
 		if (!_locations.isEmpty())
 		{
 			for (int[] location : _locations)
@@ -551,6 +582,7 @@ public class MuseumManager
 				}
 			}
 		}
+		
 		return locations;
 	}
 	
@@ -566,6 +598,7 @@ public class MuseumManager
 		factory.setIgnoringComments(true);
 		File file = new File(Config.DATAPACK_ROOT, "data/StatuesLocations.xml");
 		Document doc = null;
+		
 		if (file.exists())
 		{
 			try
@@ -580,6 +613,7 @@ public class MuseumManager
 			if (doc != null)
 			{
 				Node n = doc.getFirstChild();
+				
 				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 				{
 					if (d.getNodeName().equals("location"))
@@ -596,6 +630,7 @@ public class MuseumManager
 				}
 			}
 		}
+		
 		_log.info(getClass().getSimpleName() + ": Loaded " + _locations.size() + " Locations for statues.");
 		spawnSculptures();
 	}
@@ -612,6 +647,7 @@ public class MuseumManager
 			_instance = new MuseumManager();
 			_instance.load();
 		}
+		
 		return _instance;
 	}
 	

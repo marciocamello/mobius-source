@@ -55,6 +55,7 @@ public class TeleportNpc extends Skill
 				int h = activeChar.getHeading();
 				int range = (int) (activeChar.getColRadius() + target.getColRadius());
 				int hyp = (int) Math.sqrt((range * range) / 2);
+				
 				if (h < 16384)
 				{
 					x += hyp;
@@ -75,6 +76,7 @@ public class TeleportNpc extends Skill
 					x += hyp;
 					y -= hyp;
 				}
+				
 				target.setXYZ(x, y, z);
 				target.validateLocation(1);
 			}

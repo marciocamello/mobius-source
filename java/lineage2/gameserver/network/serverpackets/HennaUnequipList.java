@@ -28,6 +28,7 @@ public class HennaUnequipList extends L2GameServerPacket
 	{
 		_adena = player.getAdena();
 		_emptySlots = player.getHennaEmptySlots();
+		
 		for (int i = 1; i <= 3; i++)
 		{
 			if (player.getHenna(i) != null)
@@ -41,10 +42,10 @@ public class HennaUnequipList extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xE6);
-		
 		writeQ(_adena);
 		writeD(_emptySlots);
 		writeD(availHenna.size());
+		
 		for (Henna henna : availHenna)
 		{
 			writeD(henna.getSymbolId()); // symbolid

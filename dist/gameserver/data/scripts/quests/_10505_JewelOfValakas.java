@@ -43,6 +43,7 @@ public class _10505_JewelOfValakas extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("valakas_watchman_klein_q10505_04.htm"))
 		{
 			st.setState(STARTED);
@@ -50,6 +51,7 @@ public class _10505_JewelOfValakas extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			st.giveItems(EMPTY_CRYSTAL, 1);
 		}
+		
 		return htmltext;
 	}
 	
@@ -59,6 +61,7 @@ public class _10505_JewelOfValakas extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == KLEIN)
 		{
 			if (cond == 0)
@@ -109,6 +112,7 @@ public class _10505_JewelOfValakas extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -117,12 +121,14 @@ public class _10505_JewelOfValakas extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if ((cond == 1) && (npcId == VALAKAS))
 		{
 			st.takeAllItems(EMPTY_CRYSTAL);
 			st.giveItems(FILLED_CRYSTAL_VALAKAS, 1);
 			st.setCond(2);
 		}
+		
 		return null;
 	}
 	

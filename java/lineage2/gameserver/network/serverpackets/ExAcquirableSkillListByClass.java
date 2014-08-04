@@ -38,8 +38,8 @@ public class ExAcquirableSkillListByClass extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeEx(0xFA);
-		
 		writeD(allskills.size());
+		
 		for (SkillLearn sk : allskills)
 		{
 			Skill skill = SkillTable.getInstance().getInfo(sk.getId(), sk.getLevel());
@@ -56,16 +56,20 @@ public class ExAcquirableSkillListByClass extends L2GameServerPacket
 			writeH(0x00); // Tauti
 			boolean consumeItem = sk.getItemId() > 0;
 			writeD(consumeItem ? 1 : 0);
+			
 			if (consumeItem)
 			{
 				writeD(sk.getItemId());
 				writeQ(sk.getItemCount());
 			}
+			
 			Skill relskill = SkillTable.getInstance().getInfo(sk.getId(), sk.getLevel());
+			
 			if ((relskill != null) && relskill.isRelationSkill())
 			{
 				int[] _dels = relskill.getRelationSkills();
 				writeD(_dels.length);// deletedSkillsSize
+				
 				for (int skillId : _dels)
 				{
 					writeD(skillId);// skillId

@@ -60,6 +60,7 @@ public class IceKnightNormal extends Fighter
 		actor.setNpcState(1);
 		actor.block();
 		final Reflection r = actor.getReflection();
+		
 		if ((r != null) && (r.getPlayers() != null))
 		{
 			for (Player p : r.getPlayers())
@@ -67,6 +68,7 @@ public class IceKnightNormal extends Fighter
 				this.notifyEvent(CtrlEvent.EVT_AGGRESSION, p, 300);
 			}
 		}
+		
 		task = ThreadPoolManager.getInstance().schedule(new ReleaseFromIce(), 6000L);
 	}
 	
@@ -79,16 +81,20 @@ public class IceKnightNormal extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (iced)
 		{
 			iced = false;
+			
 			if (task != null)
 			{
 				task.cancel(false);
 			}
+			
 			actor.unblock();
 			actor.setNpcState(2);
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	

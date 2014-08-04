@@ -85,19 +85,21 @@ public class RainbowYeti extends CharacterAI
 	{
 		final RainbowYetiInstance actor = (RainbowYetiInstance) getActor();
 		final ClanHallMiniGameEvent miniGameEvent = actor.getEvent(ClanHallMiniGameEvent.class);
+		
 		if (miniGameEvent == null)
 		{
 			return;
 		}
+		
 		if (!character.isPlayer())
 		{
 			return;
 		}
 		
 		final Player player = character.getPlayer();
-		
 		CMGSiegeClanObject siegeClan = null;
 		final List<CMGSiegeClanObject> attackers = miniGameEvent.getObjects(SiegeEvent.ATTACKERS);
+		
 		for (CMGSiegeClanObject $ : attackers)
 		{
 			if ($.isParticle(player))
@@ -113,15 +115,16 @@ public class RainbowYeti extends CharacterAI
 		
 		final int index = attackers.indexOf(siegeClan);
 		int warIndex = Integer.MIN_VALUE;
-		
 		RainbowGourdInstance gourdInstance = null;
 		RainbowGourdInstance gourdInstance2 = null;
+		
 		switch (skill.getId())
 		{
 			case 2240: // nectar
 				if (Rnd.chance(90))
 				{
 					gourdInstance = getGourd(index);
+					
 					if (gourdInstance == null)
 					{
 						return;
@@ -133,23 +136,30 @@ public class RainbowYeti extends CharacterAI
 				{
 					actor.addMob(NpcUtils.spawnSingle(35592, actor.getX() + 10, actor.getY() + 10, actor.getZ(), 0));
 				}
+				
 				break;
+			
 			case 2241: // mineral water
 				warIndex = rndEx(attackers.size(), index);
+				
 				if (warIndex == Integer.MIN_VALUE)
 				{
 					return;
 				}
 				
 				gourdInstance2 = getGourd(warIndex);
+				
 				if (gourdInstance2 == null)
 				{
 					return;
 				}
+				
 				gourdInstance2.doHeal();
 				break;
+			
 			case 2242: // water
 				warIndex = rndEx(attackers.size(), index);
+				
 				if (warIndex == Integer.MIN_VALUE)
 				{
 					return;
@@ -157,6 +167,7 @@ public class RainbowYeti extends CharacterAI
 				
 				gourdInstance = getGourd(index);
 				gourdInstance2 = getGourd(warIndex);
+				
 				if ((gourdInstance2 == null) || (gourdInstance == null))
 				{
 					return;
@@ -164,18 +175,22 @@ public class RainbowYeti extends CharacterAI
 				
 				gourdInstance.doSwitch(gourdInstance2);
 				break;
+			
 			case 2243: // sulfur
 				warIndex = rndEx(attackers.size(), index);
+				
 				if (warIndex == Integer.MIN_VALUE)
 				{
 					return;
 				}
 				
 				final ZoneObject zone = miniGameEvent.getFirstObject("zone_" + warIndex);
+				
 				if (zone == null)
 				{
 					return;
 				}
+				
 				zone.setActive(true);
 				ThreadPoolManager.getInstance().schedule(new ZoneDeactive(zone), 60000L);
 				break;
@@ -190,9 +205,7 @@ public class RainbowYeti extends CharacterAI
 	private RainbowGourdInstance getGourd(int index)
 	{
 		final ClanHallMiniGameEvent miniGameEvent = getActor().getEvent(ClanHallMiniGameEvent.class);
-		
 		final SpawnExObject spawnEx = miniGameEvent.getFirstObject("arena_" + index);
-		
 		return (RainbowGourdInstance) spawnEx.getSpawns().get(1).getFirstSpawned();
 	}
 	
@@ -205,9 +218,11 @@ public class RainbowYeti extends CharacterAI
 	private int rndEx(int size, int ex)
 	{
 		int rnd = Integer.MIN_VALUE;
+		
 		for (int i = 0; i < Byte.MAX_VALUE; i++)
 		{
 			rnd = Rnd.get(size);
+			
 			if (rnd != ex)
 			{
 				break;

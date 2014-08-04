@@ -44,6 +44,7 @@ public class RequestShowResetShopList extends L2GameClientPacket
 		{
 			return;
 		}
+		
 		long reqAdena = 0L;
 		boolean reset = false;
 		BeautyShopSet set = BeautyShopHolder.getInstance().getSet(activeChar);
@@ -61,6 +62,7 @@ public class RequestShowResetShopList extends L2GameClientPacket
 				activeChar.sendPacket(new ExResponseBeautyRegistResetPacket(activeChar, 1, 0));
 				return;
 			}
+			
 			reqAdena += set.getHairStyle(_hairStyle).getResetPrice();
 			reset = true;
 		}
@@ -72,6 +74,7 @@ public class RequestShowResetShopList extends L2GameClientPacket
 				activeChar.sendPacket(new ExResponseBeautyRegistResetPacket(activeChar, 1, 0));
 				return;
 			}
+			
 			reqAdena += set.getFace(_face).getResetPrice();
 			reset = true;
 		}

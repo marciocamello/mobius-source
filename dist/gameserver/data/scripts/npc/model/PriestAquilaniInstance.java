@@ -26,7 +26,7 @@ import quests._10288_SecretMission;
 public class PriestAquilaniInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -54,6 +54,7 @@ public class PriestAquilaniInstance extends NpcInstance
 			player.sendPacket(new NpcHtmlMessage(player, this, "default/32780-1.htm", val));
 			return;
 		}
+		
 		player.sendPacket(new NpcHtmlMessage(player, this, "default/32780.htm", val));
 		return;
 	}
@@ -70,11 +71,13 @@ public class PriestAquilaniInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("teleport"))
 		{
 			player.teleToLocation(new Location(118833, -80589, -2688));
 			return;
 		}
+		
 		super.onBypassFeedback(player, command);
 	}
 }

@@ -59,6 +59,7 @@ public class JoinedIterator<E> implements Iterator<E>
 		{
 			throw new NullPointerException("Unexpected NULL iterators argument");
 		}
+		
 		_iterators = (Iterator<E>[]) iterators;
 	}
 	
@@ -110,8 +111,10 @@ public class JoinedIterator<E> implements Iterator<E>
 			{
 				_currentIterator = _iterators[0];
 			}
+			
 			_lastUsedIterator = _currentIterator;
 		}
+		
 		while (!_currentIterator.hasNext() && (_currentIteratorIndex < (_iterators.length - 1)))
 		{
 			_currentIteratorIndex++;

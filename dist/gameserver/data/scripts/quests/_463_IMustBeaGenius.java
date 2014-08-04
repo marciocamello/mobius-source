@@ -70,6 +70,7 @@ public class _463_IMustBeaGenius extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		st.getPlayer();
+		
 		if (npc.getNpcId() == GUTENHAGEN)
 		{
 			if (event.equalsIgnoreCase("collecter_gutenhagen_q0463_05.htm"))
@@ -79,15 +80,19 @@ public class _463_IMustBeaGenius extends Quest implements ScriptFile
 				st.setCond(1);
 				int _number = Rnd.get(500, 600);
 				st.set("number", String.valueOf(_number));
+				
 				for (int _mob : MOBS)
 				{
 					int _rand = Rnd.get(-2, 4);
+					
 					if (_rand == 0)
 					{
 						_rand = 5;
 					}
+					
 					st.set(String.valueOf(_mob), String.valueOf(_rand));
 				}
+				
 				st.set(String.valueOf(MOBS[Rnd.get(0, MOBS.length - 1)]), String.valueOf(Rnd.get(1, 100)));
 				htmltext = HtmCache.getInstance().getNotNull("quests/_463_IMustBeaGenius/" + event, st.getPlayer());
 				htmltext = htmltext.replace("%num%", String.valueOf(_number));
@@ -100,6 +105,7 @@ public class _463_IMustBeaGenius extends Quest implements ScriptFile
 			else if (event.equalsIgnoreCase("reward"))
 			{
 				int diff = st.getInt("number") - 500;
+				
 				if (diff == 0)
 				{
 					st.addExpAndSp(198725, 15892);
@@ -150,16 +156,20 @@ public class _463_IMustBeaGenius extends Quest implements ScriptFile
 					st.addExpAndSp(1192352, 95353);
 					htmltext = "collecter_gutenhagen_q0463_15.htm";
 				}
+				
 				st.unset("cond");
 				st.unset("number");
+				
 				for (int _mob : MOBS)
 				{
 					st.unset(String.valueOf(_mob));
 				}
+				
 				st.playSound(SOUND_FINISH);
 				st.exitCurrentQuest(this);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -168,6 +178,7 @@ public class _463_IMustBeaGenius extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		Player player = st.getPlayer();
+		
 		if (npc.getNpcId() == GUTENHAGEN)
 		{
 			switch (st.getState())
@@ -188,7 +199,9 @@ public class _463_IMustBeaGenius extends Quest implements ScriptFile
 					{
 						htmltext = "collecter_gutenhagen_q0463_02.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					if (st.getCond() == 1)
 					{
@@ -206,9 +219,11 @@ public class _463_IMustBeaGenius extends Quest implements ScriptFile
 							htmltext = "collecter_gutenhagen_q0463_08a.htm";
 						}
 					}
+					
 					break;
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -219,6 +234,7 @@ public class _463_IMustBeaGenius extends Quest implements ScriptFile
 		{
 			int _day_number = st.getInt("number");
 			int _number = st.getInt(String.valueOf(npc.getNpcId()));
+			
 			if (_number > 0)
 			{
 				st.giveItems(CORPSE_LOG, _number);
@@ -231,6 +247,7 @@ public class _463_IMustBeaGenius extends Quest implements ScriptFile
 				st.playSound(SOUND_ITEMGET);
 				Functions.npcSay(npc, NpcString.ATT__ATTACK__S1__RO__ROGUE__S2, st.getPlayer().getName(), String.valueOf(_number));
 			}
+			
 			if (st.getQuestItemsCount(CORPSE_LOG) >= _day_number)
 			{
 				st.takeItems(CORPSE_LOG, -1);
@@ -238,6 +255,7 @@ public class _463_IMustBeaGenius extends Quest implements ScriptFile
 				st.setCond(2);
 			}
 		}
+		
 		return null;
 	}
 }

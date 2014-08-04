@@ -60,12 +60,14 @@ public class DynamicQuestTask
 		if (!isCompleted())
 		{
 			lock.lock();
+			
 			if (!taskParticipants.contains(player))
 			{
 				if ((currentPoints + points) > maxPoints)
 				{
 					points = maxPoints - currentPoints;
 				}
+				
 				taskParticipants.add(player);
 				currentPoints += points;
 				player.increaseCurrentPoints(points);
@@ -76,13 +78,16 @@ public class DynamicQuestTask
 				{
 					points = maxPoints - currentPoints;
 				}
+				
 				player.increaseCurrentPoints(points);
 				currentPoints += points;
 			}
+			
 			if (currentPoints == maxPoints)
 			{
 				DynamicQuestController.getInstance().taskCompleted(questId, taskId);
 			}
+			
 			lock.unlock();
 		}
 	}

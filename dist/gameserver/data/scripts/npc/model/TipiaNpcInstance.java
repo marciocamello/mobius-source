@@ -44,6 +44,7 @@ public final class TipiaNpcInstance extends NpcInstance
 		if (command.equalsIgnoreCase("request_normaloctavis"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(normalOctavisInstId))
@@ -56,10 +57,10 @@ public final class TipiaNpcInstance extends NpcInstance
 				ReflectionUtils.enterReflection(player, new OctavisNormal(), normalOctavisInstId);
 			}
 		}
-		
 		else if (command.equalsIgnoreCase("request_hardoctavis"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(hardOctavisInstId))

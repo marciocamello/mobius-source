@@ -48,6 +48,7 @@ public class ExShowReceivedPostList extends L2GameServerPacket
 		writeEx(0xAB);
 		writeD((int) (System.currentTimeMillis() / 1000L));
 		writeD(mails.size()); // количество писем
+		
 		for (Mail mail : mails)
 		{
 			writeD(mail.getType().ordinal()); // тип письма
@@ -65,18 +66,19 @@ public class ExShowReceivedPostList extends L2GameServerPacket
 			writeS(mail.getTopic());
 			writeS(mail.getSenderName());
 			writeD(mail.isPayOnDelivery() ? 1 : 0); // если тут 1 то письмо
-													// требует оплаты
+			// требует оплаты
 			writeD(mail.getExpireTime()); // время действительности письма
 			writeD(mail.isUnread() ? 1 : 0); // письмо не прочитано - его нельзя
-												// удалить и оно выделяется ярким
-												// цветом
+			// удалить и оно выделяется ярким
+			// цветом
 			writeD(mail.isReturnable()); // returnable
 			writeD(mail.getAttachments().isEmpty() ? 0 : 1); // 1 - письмо с
-																// приложением, 0 -
-																// просто письмо
+			// приложением, 0 -
+			// просто письмо
 			writeD(0x00); // unknown
 			writeD(mail.getReceiverId());
 		}
+		
 		writeD(100);
 		writeD(1000);
 	}

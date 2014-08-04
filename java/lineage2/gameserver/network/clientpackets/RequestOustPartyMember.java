@@ -44,33 +44,42 @@ public class RequestOustPartyMember extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		Party party = activeChar.getParty();
+		
 		if ((party == null) || !activeChar.getParty().isLeader(activeChar))
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (activeChar.isInOlympiadMode())
 		{
 			activeChar.sendMessage("Вы не можете �?ейча�? выйти из группы.");
 			return;
 		}
+		
 		Player member = party.getPlayerByName(_name);
+		
 		if (member == activeChar)
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (member == null)
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		Reflection r = party.getReflection();
+		
 		if (r != null)
 		{
 			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestOustPartyMember.CantOustInDungeon", activeChar));

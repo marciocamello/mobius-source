@@ -59,6 +59,7 @@ public class CrystallizationManager
 		factory.setIgnoringComments(true);
 		File file = new File(Config.DATAPACK_ROOT, "data/xml/asc/model/player/CrystallizationData.xml");
 		Document doc = null;
+		
 		if (file.exists())
 		{
 			try
@@ -70,64 +71,80 @@ public class CrystallizationManager
 				_log.warn("Could not parse CrystallizationData.xml file: " + e.getMessage(), e);
 				return;
 			}
+			
 			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 			{
 				if (!"list".equalsIgnoreCase(n.getNodeName()))
 				{
 					continue;
 				}
+				
 				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 				{
 					if (!"grade".equalsIgnoreCase(d.getNodeName()))
 					{
 						continue;
 					}
+					
 					NamedNodeMap attrs = d.getAttributes();
 					Node att = attrs.getNamedItem("type");
 					Grade crystalGrade = Grade.valueOf(att.getNodeValue());
 					Map<Integer, FastList<CrystallizationItem>> crystallizationData = new HashMap<>();
+					
 					for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling())
 					{
 						if (!"crystal".equalsIgnoreCase(c.getNodeName()))
 						{
 							continue;
 						}
+						
 						NamedNodeMap attrs1 = c.getAttributes();
 						Node att1 = attrs1.getNamedItem("count");
 						int crystalCount = Integer.parseInt(att1.getNodeValue());
 						FastList<CrystallizationItem> itemsData = new FastList<>();
+						
 						for (Node b = c.getFirstChild(); b != null; b = b.getNextSibling())
 						{
 							if (!"item".equalsIgnoreCase(b.getNodeName()))
 							{
 								continue;
 							}
+							
 							NamedNodeMap attrs2 = b.getAttributes();
 							Node att2;
 							att2 = attrs2.getNamedItem("id");
+							
 							if (att2 != null)
 							{
 								_id = Integer.parseInt(att2.getNodeValue());
 							}
+							
 							att2 = attrs2.getNamedItem("count");
+							
 							if (att2 != null)
 							{
 								_count = Integer.parseInt(att2.getNodeValue());
 							}
+							
 							att2 = attrs2.getNamedItem("chance");
+							
 							if (att2 != null)
 							{
 								_chance = Double.parseDouble(att2.getNodeValue());
 							}
+							
 							CrystallizationItem crHolder = new CrystallizationItem(_id, _count, _chance);
 							itemsData.add(crHolder);
 						}
+						
 						crystallizationData.put(crystalCount, itemsData);
 					}
+					
 					data.put(crystalGrade, crystallizationData);
 				}
 			}
 		}
+		
 		_log.info("CrystallizationManager: Loaded " + data.size() + " variable...");
 	}
 	
@@ -139,10 +156,12 @@ public class CrystallizationManager
 	public static FastList<CrystallizationItem> getProductsForItem(ItemInstance item)
 	{
 		Map<Integer, FastList<CrystallizationItem>> temp = data.get(item.getTemplate().getCrystalType());
+		
 		if (temp.containsKey(Integer.valueOf(item.getTemplate().getCrystalCount())))
 		{
 			return temp.get(Integer.valueOf(item.getTemplate().getCrystalCount()));
 		}
+		
 		return null;
 	}
 	

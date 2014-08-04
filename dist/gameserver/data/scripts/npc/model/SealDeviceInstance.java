@@ -31,7 +31,7 @@ import lineage2.gameserver.utils.Location;
 public final class SealDeviceInstance extends MonsterInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -74,14 +74,17 @@ public final class SealDeviceInstance extends MonsterInstance
 				broadcastCharInfo();
 				ItemFunctions.addItem(attacker.getPlayer(), 13846, 1, true);
 				_gaveItem = true;
+				
 				if (ItemFunctions.getItemCount(attacker.getPlayer(), 13846) >= 4)
 				{
 					attacker.getPlayer().showQuestMovie(ExStartScenePlayer.SCENE_SSQ_SEALING_EMPEROR_2ND);
 					ThreadPoolManager.getInstance().schedule(new TeleportPlayer(attacker.getPlayer()), 26500L);
 				}
 			}
+			
 			i = getCurrentHp() - 1;
 		}
+		
 		attacker.reduceCurrentHp(450, 0, this, null, true, false, true, false, false, false, true);
 		super.reduceCurrentHp(i, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
 	}
@@ -118,6 +121,7 @@ public final class SealDeviceInstance extends MonsterInstance
 					n.deleteMe();
 				}
 			}
+			
 			_p.getPlayer().teleToLocation(new Location(-89560, 215784, -7488));
 		}
 	}

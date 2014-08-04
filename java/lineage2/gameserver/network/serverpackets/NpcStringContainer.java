@@ -32,6 +32,7 @@ public abstract class NpcStringContainer extends L2GameServerPacket
 	protected void writeElements()
 	{
 		writeD(_npcString.getId());
+		
 		for (String st : _parameters)
 		{
 			writeS(st);

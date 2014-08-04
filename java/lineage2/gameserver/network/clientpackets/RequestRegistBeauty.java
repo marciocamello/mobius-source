@@ -46,6 +46,7 @@ public class RequestRegistBeauty extends L2GameClientPacket
 		{
 			return;
 		}
+		
 		long reqAdena = 0L;
 		long reqCoins = 0L;
 		boolean change = false;
@@ -118,10 +119,12 @@ public class RequestRegistBeauty extends L2GameClientPacket
 		{
 			activeChar.getInventory().destroyItemByItemId(57, reqAdena);
 		}
+		
 		if (reqCoins > 0L)
 		{
 			activeChar.getInventory().destroyItemByItemId(Config.BEAUTY_SHOP_COIN_ITEM_ID, reqCoins);
 		}
+		
 		if (_hairStyle > 0)
 		{
 			activeChar.setNewHairStyle(_hairStyle);
@@ -132,6 +135,7 @@ public class RequestRegistBeauty extends L2GameClientPacket
 		{
 			activeChar.setNewFace(_face);
 		}
+		
 		activeChar.sendPacket(new IStaticPacket[]
 		{
 			new ExResponseBeautyRegistResetPacket(activeChar, 0, 1),

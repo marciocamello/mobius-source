@@ -60,15 +60,18 @@ public class Battleground extends SimpleItemHandler
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
 		final int itemId = item.getItemId();
+		
 		if (!player.isInZone(ZoneType.SIEGE))
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(itemId));
 			return false;
 		}
+		
 		if (!useItem(player, item, 1))
 		{
 			return false;
 		}
+		
 		switch (itemId)
 		{
 			case 10143:
@@ -85,6 +88,7 @@ public class Battleground extends SimpleItemHandler
 					player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(skill, 1));
 				}
 				break;
+			
 			case 10144:
 				for (int skill : new int[]
 				{
@@ -99,6 +103,7 @@ public class Battleground extends SimpleItemHandler
 					player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(skill, 1));
 				}
 				break;
+			
 			case 10145:
 				for (int skill : new int[]
 				{
@@ -113,6 +118,7 @@ public class Battleground extends SimpleItemHandler
 					player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(skill, 1));
 				}
 				break;
+			
 			case 10146:
 				for (int skill : new int[]
 				{
@@ -127,6 +133,7 @@ public class Battleground extends SimpleItemHandler
 					player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(skill, 1));
 				}
 				break;
+			
 			case 10147:
 				for (int skill : new int[]
 				{
@@ -141,6 +148,7 @@ public class Battleground extends SimpleItemHandler
 					player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(skill, 1));
 				}
 				break;
+			
 			case 10148:
 				for (int skill : new int[]
 				{
@@ -152,6 +160,7 @@ public class Battleground extends SimpleItemHandler
 					player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(skill, 1));
 				}
 				break;
+			
 			case 10411:
 				for (int skill : new int[]
 				{
@@ -162,9 +171,11 @@ public class Battleground extends SimpleItemHandler
 					player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(skill, 1));
 				}
 				break;
+			
 			default:
 				return false;
 		}
+		
 		return true;
 	}
 }

@@ -44,11 +44,14 @@ public class BypassUserCmd extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		IUserCommandHandler handler = UserCommandHandler.getInstance().getUserCommandHandler(_command);
+		
 		if (handler == null)
 		{
 			activeChar.sendMessage(new CustomMessage("common.S1NotImplemented", activeChar).addString(String.valueOf(_command)));

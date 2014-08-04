@@ -25,7 +25,7 @@ import lineage2.gameserver.utils.ItemFunctions;
 public final class KeplonInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -51,6 +51,7 @@ public final class KeplonInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("buygreen"))
 		{
 			if (ItemFunctions.removeItem(player, 57, 10000, true) >= 10000)
@@ -58,6 +59,7 @@ public final class KeplonInstance extends NpcInstance
 				ItemFunctions.addItem(player, 4401, 1, true);
 				return;
 			}
+			
 			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
@@ -68,6 +70,7 @@ public final class KeplonInstance extends NpcInstance
 				ItemFunctions.addItem(player, 4402, 1, true);
 				return;
 			}
+			
 			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
@@ -78,6 +81,7 @@ public final class KeplonInstance extends NpcInstance
 				ItemFunctions.addItem(player, 4403, 1, true);
 				return;
 			}
+			
 			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}

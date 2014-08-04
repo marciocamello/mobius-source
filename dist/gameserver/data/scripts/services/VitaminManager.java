@@ -62,6 +62,7 @@ public class VitaminManager extends Functions
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
+		
 		if (getItemCount(player, MinionCoupon) > 0)
 		{
 			removeItem(player, MinionCoupon, 1);
@@ -72,6 +73,7 @@ public class VitaminManager extends Functions
 		{
 			htmltext = npc.getNpcId() + "-no.htm";
 		}
+		
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 	
@@ -83,6 +85,7 @@ public class VitaminManager extends Functions
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
+		
 		if (getItemCount(player, MinionCoupon) > 0)
 		{
 			removeItem(player, MinionCoupon, 1);
@@ -93,6 +96,7 @@ public class VitaminManager extends Functions
 		{
 			htmltext = npc.getNpcId() + "-no.htm";
 		}
+		
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 	
@@ -104,6 +108,7 @@ public class VitaminManager extends Functions
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
+		
 		if (getItemCount(player, MinionCoupon) > 0)
 		{
 			removeItem(player, MinionCoupon, 1);
@@ -114,6 +119,7 @@ public class VitaminManager extends Functions
 		{
 			htmltext = npc.getNpcId() + "-no.htm";
 		}
+		
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 	
@@ -125,6 +131,7 @@ public class VitaminManager extends Functions
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
+		
 		if (getItemCount(player, MinionCoupon) > 0)
 		{
 			removeItem(player, MinionCoupon, 1);
@@ -135,6 +142,7 @@ public class VitaminManager extends Functions
 		{
 			htmltext = npc.getNpcId() + "-no.htm";
 		}
+		
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 	
@@ -146,6 +154,7 @@ public class VitaminManager extends Functions
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
+		
 		if (getItemCount(player, SuperiorMinionCoupon) > 0)
 		{
 			removeItem(player, SuperiorMinionCoupon, 1);
@@ -156,6 +165,7 @@ public class VitaminManager extends Functions
 		{
 			htmltext = npc.getNpcId() + "-no.htm";
 		}
+		
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 	
@@ -167,6 +177,7 @@ public class VitaminManager extends Functions
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
+		
 		if (getItemCount(player, SuperiorMinionCoupon) > 0)
 		{
 			removeItem(player, SuperiorMinionCoupon, 1);
@@ -177,6 +188,7 @@ public class VitaminManager extends Functions
 		{
 			htmltext = npc.getNpcId() + "-no.htm";
 		}
+		
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 	
@@ -188,6 +200,7 @@ public class VitaminManager extends Functions
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
+		
 		if (getItemCount(player, SuperiorMinionCoupon) > 0)
 		{
 			removeItem(player, SuperiorMinionCoupon, 1);
@@ -198,6 +211,7 @@ public class VitaminManager extends Functions
 		{
 			htmltext = npc.getNpcId() + "-no.htm";
 		}
+		
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 	
@@ -209,6 +223,7 @@ public class VitaminManager extends Functions
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
+		
 		if (getItemCount(player, EnhancedRoseSpiritCoupon) > 0)
 		{
 			removeItem(player, EnhancedRoseSpiritCoupon, 1);
@@ -219,6 +234,7 @@ public class VitaminManager extends Functions
 		{
 			htmltext = npc.getNpcId() + "-no2.htm";
 		}
+		
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 	
@@ -230,6 +246,7 @@ public class VitaminManager extends Functions
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
+		
 		if (getItemCount(player, EnhancedRoseSpiritCoupon) > 0)
 		{
 			removeItem(player, EnhancedRoseSpiritCoupon, 1);
@@ -240,6 +257,7 @@ public class VitaminManager extends Functions
 		{
 			htmltext = npc.getNpcId() + "-no2.htm";
 		}
+		
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 	
@@ -251,6 +269,7 @@ public class VitaminManager extends Functions
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
+		
 		if (getItemCount(player, EnhancedRoseSpiritCoupon) > 0)
 		{
 			removeItem(player, EnhancedRoseSpiritCoupon, 1);
@@ -261,6 +280,7 @@ public class VitaminManager extends Functions
 		{
 			htmltext = npc.getNpcId() + "-no2.htm";
 		}
+		
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 	
@@ -272,6 +292,7 @@ public class VitaminManager extends Functions
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
+		
 		if (getItemCount(player, EnhancedRoseSpiritCoupon) > 0)
 		{
 			removeItem(player, EnhancedRoseSpiritCoupon, 1);
@@ -282,6 +303,7 @@ public class VitaminManager extends Functions
 		{
 			htmltext = npc.getNpcId() + "-no2.htm";
 		}
+		
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 	
@@ -293,6 +315,7 @@ public class VitaminManager extends Functions
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
+		
 		if (getItemCount(player, EnhancedRoseSpiritCoupon) > 0)
 		{
 			removeItem(player, EnhancedRoseSpiritCoupon, 1);
@@ -303,6 +326,7 @@ public class VitaminManager extends Functions
 		{
 			htmltext = npc.getNpcId() + "-no2.htm";
 		}
+		
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 	
@@ -314,6 +338,7 @@ public class VitaminManager extends Functions
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
+		
 		if (getItemCount(player, EnhancedRoseSpiritCoupon) > 0)
 		{
 			removeItem(player, EnhancedRoseSpiritCoupon, 1);
@@ -324,6 +349,7 @@ public class VitaminManager extends Functions
 		{
 			htmltext = npc.getNpcId() + "-no2.htm";
 		}
+		
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 }

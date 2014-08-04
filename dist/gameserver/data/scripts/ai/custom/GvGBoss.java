@@ -55,6 +55,7 @@ public class GvGBoss extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((actor.getCurrentHpPercents() < 50) && (!phrase1))
 		{
 			phrase1 = true;
@@ -70,6 +71,7 @@ public class GvGBoss extends Fighter
 			phrase3 = true;
 			Functions.npcSay(actor, "Вы в�?е погибнете в �?тра�?ных муках! Уничтожу!");
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 }

@@ -110,6 +110,7 @@ public class _456_DontKnowDontCare extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("sepsoul_q456_05.htm"))
 		{
 			st.setState(STARTED);
@@ -127,27 +128,35 @@ public class _456_DontKnowDontCare extends Quest implements ScriptFile
 						{
 							st.giveItems(DrakeLordsEssence, 1);
 						}
+						
 						break;
+					
 					case BehemothLeaderCorpse:
 						if (st.getQuestItemsCount(BehemothLeadersEssence) < 1)
 						{
 							st.giveItems(BehemothLeadersEssence, 1);
 						}
+						
 						break;
+					
 					case DragonBeastCorpse:
 						if (st.getQuestItemsCount(DragonBeastsEssence) < 1)
 						{
 							st.giveItems(DragonBeastsEssence, 1);
 						}
+						
 						break;
+					
 					default:
 						break;
 				}
+				
 				if ((st.getQuestItemsCount(DrakeLordsEssence) > 0) && (st.getQuestItemsCount(BehemothLeadersEssence) > 0) && (st.getQuestItemsCount(DragonBeastsEssence) > 0))
 				{
 					st.setCond(2);
 				}
 			}
+			
 			return null;
 		}
 		else if (event.equalsIgnoreCase("sepsoul_q456_08.htm"))
@@ -155,6 +164,7 @@ public class _456_DontKnowDontCare extends Quest implements ScriptFile
 			st.takeAllItems(DrakeLordsEssence);
 			st.takeAllItems(BehemothLeadersEssence);
 			st.takeAllItems(DragonBeastsEssence);
+			
 			if (Rnd.chance(30))
 			{
 				st.giveItems(weapons[Rnd.get(weapons.length)], 1);
@@ -167,19 +177,23 @@ public class _456_DontKnowDontCare extends Quest implements ScriptFile
 			{
 				st.giveItems(accessory[Rnd.get(accessory.length)], 1);
 			}
+			
 			if (Rnd.chance(30))
 			{
 				st.giveItems(scrolls[Rnd.get(scrolls.length)], 1);
 			}
+			
 			if (Rnd.chance(70))
 			{
 				st.giveItems(reward_attr_crystal[Rnd.get(reward_attr_crystal.length)], 1);
 			}
+			
 			st.giveItems(gemstone_s, 3);
 			st.setState(COMPLETED);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(this);
 		}
+		
 		return htmltext;
 	}
 	
@@ -188,6 +202,7 @@ public class _456_DontKnowDontCare extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (ArrayUtils.contains(SeparatedSoul, npc.getNpcId()))
 		{
 			switch (st.getState())
@@ -209,7 +224,9 @@ public class _456_DontKnowDontCare extends Quest implements ScriptFile
 					{
 						htmltext = "sepsoul_q456_00a.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					if (cond == 1)
 					{
@@ -219,9 +236,11 @@ public class _456_DontKnowDontCare extends Quest implements ScriptFile
 					{
 						htmltext = "sepsoul_q456_07.htm";
 					}
+					
 					break;
 			}
 		}
+		
 		return htmltext;
 	}
 	

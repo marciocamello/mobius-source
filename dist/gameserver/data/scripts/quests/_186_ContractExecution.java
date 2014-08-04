@@ -63,6 +63,7 @@ public class _186_ContractExecution extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("researcher_lorain_q0186_03.htm"))
 		{
 			st.playSound(SOUND_ACCEPT);
@@ -81,6 +82,7 @@ public class _186_ContractExecution extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -90,6 +92,7 @@ public class _186_ContractExecution extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (st.getState() == STARTED)
 		{
 			if (npcId == Lorain)
@@ -133,6 +136,7 @@ public class _186_ContractExecution extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -144,6 +148,7 @@ public class _186_ContractExecution extends Quest implements ScriptFile
 			st.playSound(SOUND_MIDDLE);
 			st.giveItems(Accessory, 1);
 		}
+		
 		return null;
 	}
 	
@@ -151,10 +156,12 @@ public class _186_ContractExecution extends Quest implements ScriptFile
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
 		QuestState qs = player.getQuestState(_184_NikolasCooperationContract.class);
+		
 		if ((qs != null) && qs.isCompleted() && (player.getQuestState(getClass()) == null))
 		{
 			newQuestState(player, STARTED);
 		}
+		
 		return "";
 	}
 }

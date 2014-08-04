@@ -163,7 +163,6 @@ public abstract class MatchingRoom implements PlayerGroup
 		_maxMemberSize = maxMemberSize;
 		_lootType = lootType;
 		_topic = topic;
-		
 		addMember0(leader, null);
 	}
 	
@@ -205,7 +204,6 @@ public abstract class MatchingRoom implements PlayerGroup
 		}
 		
 		_members.add(player);
-		
 		player.setMatchingRoom(this);
 		
 		for (Player $member : this)
@@ -236,6 +234,7 @@ public abstract class MatchingRoom implements PlayerGroup
 		
 		member.removeListener(_listener);
 		member.setMatchingRoom(null);
+		
 		if (_members.isEmpty())
 		{
 			disband();
@@ -245,6 +244,7 @@ public abstract class MatchingRoom implements PlayerGroup
 			L2GameServerPacket infoPacket = infoRoomPacket();
 			SystemMsg exitMessage0 = exitMessage(true, oust);
 			L2GameServerPacket exitMessage = exitMessage0 != null ? new SystemMessage2(exitMessage0).addName(member) : null;
+			
 			for (Player player : this)
 			{
 				player.sendPacket(infoPacket, removeMemberPacket(player, member), exitMessage);
@@ -280,12 +280,10 @@ public abstract class MatchingRoom implements PlayerGroup
 			player.sendPacket(closeRoomPacket());
 			player.setMatchingRoom(null);
 			player.sendChanges();
-			
 			MatchingRoomManager.getInstance().addToWaitingList(player);
 		}
 		
 		_members.clear();
-		
 		MatchingRoomManager.getInstance().removeMatchingRoom(this);
 	}
 	

@@ -38,6 +38,7 @@ public class ExShowAgitInfo extends L2GameServerPacket
 		{
 			int ch_id = clanHall.getId();
 			int getType;
+			
 			if (clanHall.getSiegeEvent().getClass() == ClanHallAuctionEvent.class)
 			{
 				getType = 0;
@@ -63,6 +64,7 @@ public class ExShowAgitInfo extends L2GameServerPacket
 	{
 		writeEx(0x16);
 		writeD(_clanHalls.size());
+		
 		for (AgitInfo info : _clanHalls)
 		{
 			writeD(info.ch_id);

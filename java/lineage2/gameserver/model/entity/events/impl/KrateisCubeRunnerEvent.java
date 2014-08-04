@@ -112,12 +112,14 @@ public class KrateisCubeRunnerEvent extends GlobalEvent
 	public void announce(int val)
 	{
 		NpcInstance npc = getNpc();
+		
 		switch (val)
 		{
 			case -600:
 			case -300:
 				Functions.npcSay(npc, NpcString.THE_MATCH_WILL_BEGIN_IN_S1_MINUTES, String.valueOf(-val / 60));
 				break;
+			
 			case -540:
 			case -330:
 			case 60:
@@ -126,20 +128,25 @@ public class KrateisCubeRunnerEvent extends GlobalEvent
 			case 960:
 				Functions.npcSay(npc, NpcString.REGISTRATION_FOR_THE_NEXT_MATCH_WILL_END_AT_S1_MINUTES_AFTER_HOUR, String.valueOf(_calendar.get(Calendar.MINUTE) == 30 ? 57 : 27));
 				break;
+			
 			case -480:
 				Functions.npcSay(npc, NpcString.THERE_ARE_5_MINUTES_REMAINING_TO_REGISTER_FOR_KRATEIS_CUBE_MATCH);
 				break;
+			
 			case -360:
 				Functions.npcSay(npc, NpcString.THERE_ARE_3_MINUTES_REMAINING_TO_REGISTER_FOR_KRATEIS_CUBE_MATCH);
 				break;
+			
 			case -240:
 				Functions.npcSay(npc, NpcString.THERE_ARE_1_MINUTES_REMAINING_TO_REGISTER_FOR_KRATEIS_CUBE_MATCH);
 				break;
+			
 			case -180:
 			case -120:
 			case -60:
 				Functions.npcSay(npc, NpcString.THE_MATCH_WILL_BEGIN_SHORTLY);
 				break;
+			
 			case 600:
 				Functions.npcSay(npc, NpcString.THE_MATCH_WILL_BEGIN_IN_S1_MINUTES, String.valueOf(20));
 				break;
@@ -246,6 +253,7 @@ public class KrateisCubeRunnerEvent extends GlobalEvent
 				return true;
 			}
 		}
+		
 		return false;
 	}
 }

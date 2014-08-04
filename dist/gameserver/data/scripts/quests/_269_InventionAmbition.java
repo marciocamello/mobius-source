@@ -61,6 +61,7 @@ public class _269_InventionAmbition extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("inventor_maru_q0269_04.htm"))
 		{
 			st.setCond(1);
@@ -72,6 +73,7 @@ public class _269_InventionAmbition extends Quest implements ScriptFile
 			st.exitCurrentQuest(true);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -80,6 +82,7 @@ public class _269_InventionAmbition extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		long count = st.getQuestItemsCount(ENERGY_ORES);
+		
 		if (st.getState() == CREATED)
 		{
 			if (st.getPlayer().getLevel() < 18)
@@ -102,6 +105,7 @@ public class _269_InventionAmbition extends Quest implements ScriptFile
 		{
 			htmltext = "inventor_maru_q0269_05.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -112,11 +116,13 @@ public class _269_InventionAmbition extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		if (Rnd.chance(60))
 		{
 			st.giveItems(ENERGY_ORES, 1, false);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		return null;
 	}
 }

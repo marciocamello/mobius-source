@@ -35,13 +35,13 @@ public class PrivateStoreListBuy extends L2GameServerPacket
 		_adena = seller.getAdena();
 		_buyerId = buyer.getObjectId();
 		_sellList = new ArrayList<>();
-		
 		List<TradeItem> buyList = buyer.getBuyList();
 		ItemInstance[] items = seller.getInventory().getItems();
 		
 		for (TradeItem bi : buyList)
 		{
 			TradeItem si = null;
+			
 			for (ItemInstance item : items)
 			{
 				if ((item.getItemId() == bi.getItemId()) && item.canBeTraded(seller))
@@ -53,6 +53,7 @@ public class PrivateStoreListBuy extends L2GameServerPacket
 					si.setCurrentValue(Math.min(bi.getCount(), item.getCount()));
 				}
 			}
+			
 			if (si == null)
 			{
 				si = new TradeItem();
@@ -69,11 +70,11 @@ public class PrivateStoreListBuy extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xBE);
-		
 		writeD(_buyerId);
 		writeQ(_adena);
 		writeD(0x00); // L2WT GOD
 		writeD(_sellList.size());
+		
 		for (TradeItem si : _sellList)
 		{
 			writeItemInfo(si, si.getCurrentValue());

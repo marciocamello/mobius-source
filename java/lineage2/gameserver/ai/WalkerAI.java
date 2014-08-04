@@ -57,25 +57,32 @@ public class WalkerAI extends DefaultAI
 	protected boolean thinkActive()
 	{
 		WalkerRouteTemplate routeTemplate = getActor().getWalkerRouteTemplate();
+		
 		if (routeTemplate == null)
 		{
 			return false;
 		}
+		
 		boolean LINEAR = (routeTemplate.getRouteType() == RouteType.LINEAR);
 		boolean CYCLE = (routeTemplate.getRouteType() == RouteType.CYCLE);
 		boolean TELEPORT = (routeTemplate.getRouteType() == RouteType.TELEPORT);
 		boolean RANDOM = (routeTemplate.getRouteType() == RouteType.RANDOM);
+		
 		if (routeTemplate.getIsRunning())
 		{
 			getActor().setRunning();
 		}
+		
 		int pointsCount = routeTemplate.getPointsCount();
+		
 		if (pointsCount <= 0)
 		{
 			return false;
 		}
+		
 		Route point = null;
 		int oldIndex = _routeIndex;
+		
 		if (((_routeIndex + _direction) >= pointsCount) || ((_routeIndex + _direction) < 0))
 		{
 			if (LINEAR)
@@ -114,6 +121,7 @@ public class WalkerAI extends DefaultAI
 		
 		Location nextLoc = point.getLoc();
 		long delay = (point.getDelay() <= 0) ? routeTemplate.getDelay() : point.getDelay();
+		
 		if (_lastMove == 0)
 		{
 			_lastMove = System.currentTimeMillis() + delay;
@@ -133,12 +141,14 @@ public class WalkerAI extends DefaultAI
 		{
 			getActor().moveToLocation(nextLoc, 0, true);
 			_lastMove = System.currentTimeMillis();
+			
 			if (TELEPORT & point.getLastPoint())
 			{
 				getActor().teleToLocation(nextLoc);
 				_lastMove = System.currentTimeMillis();
 			}
 		}
+		
 		return true;
 	}
 	
@@ -151,15 +161,19 @@ public class WalkerAI extends DefaultAI
 	{
 		WalkerRouteTemplate routeTemplate = getActor().getWalkerRouteTemplate();
 		int AI_WALK_RANGE = routeTemplate.getWalkRange();
+		
 		if ((AI_WALK_RANGE == 0) | (routeTemplate.getRouteType() == RouteType.RANDOM))
 		{
 			return false;
 		}
+		
 		NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return false;
 		}
+		
 		Location sloc = actor.getSpawnedLoc();
 		int x = (sloc.x + Rnd.get(2 * AI_WALK_RANGE)) - AI_WALK_RANGE;
 		int y = (sloc.y + Rnd.get(2 * AI_WALK_RANGE)) - AI_WALK_RANGE;

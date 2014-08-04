@@ -56,6 +56,7 @@ public class _10309_MysteriousLetter extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -78,6 +79,7 @@ public class _10309_MysteriousLetter extends Quest implements ScriptFile
 			st.playSound(SOUND_MIDDLE);
 			st.giveItems(letter, 1, false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -89,6 +91,7 @@ public class _10309_MysteriousLetter extends Quest implements ScriptFile
 		Player player = st.getPlayer();
 		player.getClassId().getId();
 		String htmltext = "noquest";
+		
 		if (npcId == advent)
 		{
 			if (st.isCompleted())
@@ -167,6 +170,7 @@ public class _10309_MysteriousLetter extends Quest implements ScriptFile
 				htmltext = "3-1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

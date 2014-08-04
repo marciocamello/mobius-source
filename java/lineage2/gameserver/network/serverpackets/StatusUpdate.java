@@ -43,6 +43,7 @@ public class StatusUpdate extends L2GameServerPacket
 		{
 			addAttribute(s);
 		}
+		
 		return this;
 	}
 	
@@ -52,6 +53,7 @@ public class StatusUpdate extends L2GameServerPacket
 		{
 			addAttribute(s);
 		}
+		
 		return this;
 	}
 	
@@ -61,6 +63,7 @@ public class StatusUpdate extends L2GameServerPacket
 		{
 			attributes = new ArrayList<>();
 		}
+		
 		attributes.add(new int[]
 		{
 			type.ordinal(),
@@ -72,6 +75,7 @@ public class StatusUpdate extends L2GameServerPacket
 	public StatusUpdate addAttribute(StatusUpdateField type)
 	{
 		int value = -1;
+		
 		switch (type)
 		{
 			case LEVEL:
@@ -79,61 +83,73 @@ public class StatusUpdate extends L2GameServerPacket
 				value = _actor.getLevel();
 				break;
 			}
+			
 			case EXP:
 			{
 				// long?
 				break;
 			}
+			
 			case STR:
 			{
 				value = _actor.getSTR();
 				break;
 			}
+			
 			case DEX:
 			{
 				value = _actor.getDEX();
 				break;
 			}
+			
 			case CON:
 			{
 				value = _actor.getCON();
 				break;
 			}
+			
 			case INT:
 			{
 				value = _actor.getINT();
 				break;
 			}
+			
 			case WIT:
 			{
 				value = _actor.getWIT();
 				break;
 			}
+			
 			case MEN:
 			{
 				value = _actor.getMEN();
 				break;
 			}
+			
 			case CUR_HP:
 			{
 				value = (int) _actor.getCurrentHp();
 				break;
 			}
+			
 			case MAX_HP:
 			{
 				value = _actor.getMaxHp();
 				break;
 			}
+			
 			case CUR_MP:
 			{
 				value = (int) _actor.getCurrentMp();
 				break;
 			}
+			
 			case MAX_MP:
 			{
 				value = _actor.getMaxMp();
 				break;
 			}
+			
 			case SP:
 			{
 				// if (_actor.isPlayable() && (_actor.isPlayer() || _actor.isPet()))
@@ -141,114 +157,139 @@ public class StatusUpdate extends L2GameServerPacket
 				// }
 				break;
 			}
+			
 			case CUR_LOAD:
 			{
 				if (_actor.isPlayer())
 				{
 					value = _actor.getPlayer().getCurrentLoad();
 				}
+				
 				break;
 			}
+			
 			case MAX_LOAD:
 			{
 				if (_actor.isPlayer())
 				{
 					value = _actor.getPlayer().getMaxLoad();
 				}
+				
 				break;
 			}
+			
 			case P_ATK:
 			{
 				value = _actor.getPAtk(null);
 				break;
 			}
+			
 			case ATK_SPD:
 			{
 				value = _actor.getPAtkSpd();
 				break;
 			}
+			
 			case P_DEF:
 			{
 				value = _actor.getPDef(null);
 				break;
 			}
+			
 			case EVASION:
 			{
 				value = _actor.getEvasionRate(null);
 				break;
 			}
+			
 			case ACCURACY:
 			{
 				value = _actor.getAccuracy();
 				break;
 			}
+			
 			case CRITICAL:
 			{
 				value = _actor.getCriticalHit(null, null);
 				break;
 			}
+			
 			case M_ATK:
 			{
 				value = _actor.getMAtk(null, null);
 				break;
 			}
+			
 			case CAST_SPD:
 			{
 				value = _actor.getMAtkSpd();
 				break;
 			}
+			
 			case M_DEF:
 			{
 				value = _actor.getMDef(null, null);
 				break;
 			}
+			
 			case PVP_FLAG:
 			{
 				if (_actor.isPlayable())
 				{
 					value = _actor.getPvpFlag();
 				}
+				
 				break;
 			}
+			
 			case KARMA:
 			{
 				if (_actor.isPlayable())
 				{
 					value = _actor.getKarma();
 				}
+				
 				break;
 			}
+			
 			case CUR_CP:
 			{
 				if (_actor.isPlayer())
 				{
 					value = (int) _actor.getCurrentCp();
 				}
+				
 				break;
 			}
+			
 			case MAX_CP:
 			{
 				if (_actor.isPlayer())
 				{
 					value = _actor.getMaxCp();
 				}
+				
 				break;
 			}
+			
 			default:
 				break;
 		}
+		
 		if (value != -1)
 		{
 			if (attributes.isEmpty())
 			{
 				attributes = new ArrayList<>();
 			}
+			
 			attributes.add(new int[]
 			{
 				type.ordinal(),
 				value
 			});
 		}
+		
 		return this;
 	}
 	
@@ -259,8 +300,8 @@ public class StatusUpdate extends L2GameServerPacket
 		{
 			return;
 		}
-		writeC(0x18);
 		
+		writeC(0x18);
 		writeD(_actor.getObjectId());
 		writeD(getReceiverId());
 		writeD(hpRegActive);
@@ -283,11 +324,13 @@ public class StatusUpdate extends L2GameServerPacket
 		if (getClient().getActiveChar() != null)
 		{
 			Player act = getClient().getActiveChar();
+			
 			if ((act == _actor) || (act.getTarget() == _actor))
 			{
 				return act.getObjectId();
 			}
 		}
+		
 		return 0;
 	}
 	

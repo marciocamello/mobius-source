@@ -75,6 +75,7 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile
 	private static ItemInstance GetDragonflute(QuestState st)
 	{
 		List<ItemInstance> Dragonflutes = new ArrayList<>();
+		
 		for (ItemInstance item : st.getPlayer().getInventory().getItems())
 		{
 			if ((item != null) && ((item.getItemId() == Dragonflute_of_Wind) || (item.getItemId() == Dragonflute_of_Star) || (item.getItemId() == Dragonflute_of_Twilight)))
@@ -82,19 +83,24 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile
 				Dragonflutes.add(item);
 			}
 		}
+		
 		if (Dragonflutes.isEmpty())
 		{
 			return null;
 		}
+		
 		if (Dragonflutes.size() == 1)
 		{
 			return Dragonflutes.get(0);
 		}
+		
 		if (st.getState() == CREATED)
 		{
 			return null;
 		}
+		
 		int dragonflute_id = st.getInt("dragonflute");
+		
 		for (ItemInstance item : Dragonflutes)
 		{
 			if (item.getObjectId() == dragonflute_id)
@@ -102,37 +108,46 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile
 				return item;
 			}
 		}
+		
 		return null;
 	}
 	
 	private static boolean HatchlingSummoned(QuestState st, boolean CheckObjID)
 	{
 		Summon _pet = st.getPlayer().getSummonList().getPet();
+		
 		if (_pet == null)
 		{
 			return false;
 		}
+		
 		if (CheckObjID)
 		{
 			int dragonflute_id = st.getInt("dragonflute");
+			
 			if (dragonflute_id == 0)
 			{
 				return false;
 			}
+			
 			if (_pet.getControlItemObjId() != dragonflute_id)
 			{
 				return false;
 			}
 		}
+		
 		ItemInstance dragonflute = GetDragonflute(st);
+		
 		if (dragonflute == null)
 		{
 			return false;
 		}
+		
 		if (PetDataTable.getControlItemId(_pet.getNpcId()) != dragonflute.getItemId())
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -148,6 +163,7 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile
 		ItemInstance dragonflute = GetDragonflute(st);
 		int dragonflute_id = st.getInt("dragonflute");
 		int cond = st.getCond();
+		
 		if (event.equalsIgnoreCase("30610_05.htm") && (_state == CREATED))
 		{
 			st.setState(STARTED);
@@ -160,6 +176,7 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile
 			{
 				return "noquest";
 			}
+			
 			if (dragonflute.getObjectId() != dragonflute_id)
 			{
 				if (Rnd.chance(10))
@@ -168,12 +185,15 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile
 					st.playSound(SOUND_FINISH);
 					st.exitCurrentQuest(true);
 				}
+				
 				return "30747_00.htm";
 			}
+			
 			if (!HatchlingSummoned(st, false))
 			{
 				return event.equalsIgnoreCase("30747_04.htm") ? "30747_04a.htm" : "30747_02.htm";
 			}
+			
 			if (event.equalsIgnoreCase("30747_04.htm"))
 			{
 				st.setCond(2);
@@ -182,6 +202,7 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		return event;
 	}
 	
@@ -193,102 +214,123 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile
 		int cond = st.getCond();
 		ItemInstance dragonflute = GetDragonflute(st);
 		int dragonflute_id = st.getInt("dragonflute");
+		
 		if (_state == CREATED)
 		{
 			if (npcId != Cronos)
 			{
 				return "noquest";
 			}
+			
 			if (st.getPlayer().getLevel() < 45)
 			{
 				st.exitCurrentQuest(true);
 				return "30610_01.htm";
 			}
+			
 			if (dragonflute == null)
 			{
 				st.exitCurrentQuest(true);
 				return "30610_02.htm";
 			}
+			
 			if (dragonflute.getEnchantLevel() < 55)
 			{
 				st.exitCurrentQuest(true);
 				return "30610_03.htm";
 			}
+			
 			st.setCond(0);
 			st.set("dragonflute", String.valueOf(dragonflute.getObjectId()));
 			return "30610_04.htm";
 		}
+		
 		if (_state != STARTED)
 		{
 			return "noquest";
 		}
+		
 		if (npcId == Cronos)
 		{
 			if (dragonflute == null)
 			{
 				return "30610_02.htm";
 			}
+			
 			return dragonflute.getObjectId() == dragonflute_id ? "30610_07.htm" : "30610_06.htm";
 		}
+		
 		if (npcId == Mimyu)
 		{
 			if ((st.getQuestItemsCount(Dragon_Bugle_of_Wind) + st.getQuestItemsCount(Dragon_Bugle_of_Star) + st.getQuestItemsCount(Dragon_Bugle_of_Twilight)) > 0)
 			{
 				return "30747_00b.htm";
 			}
+			
 			if (dragonflute == null)
 			{
 				return "noquest";
 			}
+			
 			if (cond == 1)
 			{
 				return "30747_01.htm";
 			}
+			
 			if (cond == 2)
 			{
 				if (!HatchlingSummoned(st, false))
 				{
 					return "30747_09.htm";
 				}
+				
 				if (st.getQuestItemsCount(Fairy_Leaf) == 0)
 				{
 					st.playSound(SOUND_FINISH);
 					st.exitCurrentQuest(true);
 					return "30747_11.htm";
 				}
+				
 				return "30747_10.htm";
 			}
+			
 			if (cond == 3)
 			{
 				if (dragonflute.getObjectId() != dragonflute_id)
 				{
 					return "30747_00a.htm";
 				}
+				
 				if (st.getQuestItemsCount(Fairy_Leaf) > 0)
 				{
 					st.playSound(SOUND_FINISH);
 					st.exitCurrentQuest(true);
 					return "30747_11.htm";
 				}
+				
 				if (!(CheckTree(st, Fairy_Tree_of_Wind) && CheckTree(st, Fairy_Tree_of_Star) && CheckTree(st, Fairy_Tree_of_Twilight) && CheckTree(st, Fairy_Tree_of_Abyss)))
 				{
 					st.playSound(SOUND_FINISH);
 					st.exitCurrentQuest(true);
 					return "30747_11.htm";
 				}
+				
 				if (st.getInt("welldone") == 0)
 				{
 					if (!HatchlingSummoned(st, false))
 					{
 						return "30747_09.htm";
 					}
+					
 					st.set("welldone", "1");
 					return "30747_12.htm";
 				}
+				
 				if (HatchlingSummoned(st, false) || (st.getPlayer().getSummonList() != null))
 				{
 					return "30747_13a.htm";
 				}
+				
 				dragonflute.setItemId((Dragon_Bugle_of_Wind + dragonflute.getItemId()) - Dragonflute_of_Wind);
 				dragonflute.setJdbcState(JdbcEntityState.UPDATED);
 				dragonflute.update();
@@ -298,6 +340,7 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile
 				return "30747_13.htm";
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -308,17 +351,21 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		String npcID = String.valueOf(npc.getNpcId());
 		Integer attaked_times = st.getInt(npcID);
+		
 		if (CheckTree(st, npc.getNpcId()))
 		{
 			return null;
 		}
+		
 		if (attaked_times > Min_Fairy_Tree_Attaks)
 		{
 			st.set(npcID, "1000000");
 			Functions.npcSay(npc, "Give me the leaf!");
 			st.takeItems(Fairy_Leaf, 1);
+			
 			if (CheckTree(st, Fairy_Tree_of_Wind) && CheckTree(st, Fairy_Tree_of_Star) && CheckTree(st, Fairy_Tree_of_Twilight) && CheckTree(st, Fairy_Tree_of_Abyss))
 			{
 				st.setCond(3);
@@ -333,6 +380,7 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile
 		{
 			st.set(npcID, String.valueOf(attaked_times + 1));
 		}
+		
 		return null;
 	}
 	
@@ -369,10 +417,12 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile
 		public GuardiansSpawner(NpcInstance npc, QuestState st, int _count)
 		{
 			NpcTemplate template = NpcHolder.getInstance().getTemplate(Soul_of_Tree_Guardian);
+			
 			if (template == null)
 			{
 				return;
 			}
+			
 			try
 			{
 				_spawn = new SimpleSpawner(template);
@@ -381,6 +431,7 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile
 			{
 				e.printStackTrace();
 			}
+			
 			for (int i = 0; i < _count; i++)
 			{
 				_spawn.setLoc(Location.findPointToStay(npc, 50, 200));
@@ -388,13 +439,16 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile
 				_spawn.setAmount(1);
 				_spawn.doSpawn(true);
 				agressor = st.getPlayer().getName();
+				
 				if (st.getPlayer().getSummonList().getPet() != null)
 				{
 					agressors_pet = st.getPlayer().getSummonList().getPet().getName();
 				}
+				
 				if (st.getPlayer().getParty() != null)
 				{
 					agressors_party = new ArrayList<>();
+					
 					for (Player _member : st.getPlayer().getParty().getPartyMembers())
 					{
 						if (!_member.equals(st.getPlayer()))
@@ -404,6 +458,7 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile
 					}
 				}
 			}
+			
 			_spawn.stopRespawn();
 			updateAgression();
 		}
@@ -414,6 +469,7 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile
 			{
 				return;
 			}
+			
 			for (NpcInstance mob : _spawn.getAllSpawned())
 			{
 				mob.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, player, aggro);
@@ -423,14 +479,17 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile
 		private void updateAgression()
 		{
 			Player _player = World.getPlayer(agressor);
+			
 			if (_player != null)
 			{
 				if ((agressors_pet != null) && (_player.getSummonList().getPet() != null) && _player.getSummonList().getPet().getName().equalsIgnoreCase(agressors_pet))
 				{
 					AddAgression(_player.getSummonList().getPet(), 10);
 				}
+				
 				AddAgression(_player, 2);
 			}
+			
 			if (agressors_party != null)
 			{
 				for (String _agressor : agressors_party)
@@ -447,13 +506,16 @@ public class _421_LittleWingAdventures extends Quest implements ScriptFile
 			{
 				return;
 			}
+			
 			tiks++;
+			
 			if (tiks < 600)
 			{
 				updateAgression();
 				ThreadPoolManager.getInstance().schedule(this, 1000);
 				return;
 			}
+			
 			_spawn.deleteAll();
 		}
 	}

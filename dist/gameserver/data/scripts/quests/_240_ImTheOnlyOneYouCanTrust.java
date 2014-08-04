@@ -53,12 +53,14 @@ public class _240_ImTheOnlyOneYouCanTrust extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("32640-3.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return htmltext;
 	}
 	
@@ -68,6 +70,7 @@ public class _240_ImTheOnlyOneYouCanTrust extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int id = st.getState();
 		int cond = st.getCond();
+		
 		if (id == COMPLETED)
 		{
 			htmltext = "32640-10.htm";
@@ -96,6 +99,7 @@ public class _240_ImTheOnlyOneYouCanTrust extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			htmltext = "32640-9.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -105,6 +109,7 @@ public class _240_ImTheOnlyOneYouCanTrust extends Quest implements ScriptFile
 		if (st.getCond() == 1)
 		{
 			st.giveItems(STAKATOFANGS, 1);
+			
 			if (st.getQuestItemsCount(STAKATOFANGS) >= 25)
 			{
 				st.setCond(2);
@@ -115,6 +120,7 @@ public class _240_ImTheOnlyOneYouCanTrust extends Quest implements ScriptFile
 				st.playSound(SOUND_ITEMGET);
 			}
 		}
+		
 		return null;
 	}
 }

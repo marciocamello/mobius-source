@@ -72,6 +72,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		switch (command)
 		{
 			case admin_oly_save:
@@ -80,6 +81,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 				{
 					return false;
 				}
+				
 				try
 				{
 					OlympiadDatabase.save();
@@ -87,9 +89,11 @@ public class AdminOlympiad implements IAdminCommandHandler
 				catch (Exception e)
 				{
 				}
+				
 				activeChar.sendMessage("olympaid data saved.");
 				break;
 			}
+			
 			case admin_add_oly_points:
 			{
 				if (wordList.length < 3)
@@ -98,13 +102,17 @@ public class AdminOlympiad implements IAdminCommandHandler
 					activeChar.sendMessage("This command can be applied only for online players.");
 					return false;
 				}
+				
 				Player player = World.getPlayer(wordList[1]);
+				
 				if (player == null)
 				{
 					activeChar.sendMessage("Character " + wordList[1] + " not found in game.");
 					return false;
 				}
+				
 				int pointToAdd;
+				
 				try
 				{
 					pointToAdd = Integer.parseInt(wordList[2]);
@@ -114,6 +122,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 					activeChar.sendMessage("Please specify integer value for olympiad points.");
 					return false;
 				}
+				
 				int curPoints = Olympiad.getNoblePoints(player.getObjectId());
 				Olympiad.manualSetNoblePoints(player.getObjectId(), curPoints + pointToAdd);
 				int newPoints = Olympiad.getNoblePoints(player.getObjectId());
@@ -121,6 +130,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 				activeChar.sendMessage("Old points: " + curPoints + ", new points: " + newPoints);
 				break;
 			}
+			
 			case admin_oly_start:
 			{
 				Olympiad._manager = new OlympiadManager();
@@ -129,10 +139,12 @@ public class AdminOlympiad implements IAdminCommandHandler
 				Announcements.getInstance().announceToAll(Msg.THE_OLYMPIAD_GAME_HAS_STARTED);
 				break;
 			}
+			
 			case admin_oly_stop:
 			{
 				Olympiad._inCompPeriod = false;
 				Announcements.getInstance().announceToAll(Msg.THE_OLYMPIAD_GAME_HAS_ENDED);
+				
 				try
 				{
 					OlympiadDatabase.save();
@@ -140,8 +152,10 @@ public class AdminOlympiad implements IAdminCommandHandler
 				catch (Exception e)
 				{
 				}
+				
 				break;
 			}
+			
 			case admin_add_hero:
 			{
 				if (wordList.length < 2)
@@ -150,12 +164,15 @@ public class AdminOlympiad implements IAdminCommandHandler
 					activeChar.sendMessage("This command can be applied only for online players.");
 					return false;
 				}
+				
 				Player player = World.getPlayer(wordList[1]);
+				
 				if (player == null)
 				{
 					activeChar.sendMessage("Character " + wordList[1] + " not found in game.");
 					return false;
 				}
+				
 				StatsSet hero = new StatsSet();
 				hero.set(Olympiad.CLASS_ID, player.getBaseClassId());
 				hero.set(Olympiad.CHAR_ID, player.getObjectId());
@@ -167,6 +184,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 				break;
 			}
 		}
+		
 		return true;
 	}
 	

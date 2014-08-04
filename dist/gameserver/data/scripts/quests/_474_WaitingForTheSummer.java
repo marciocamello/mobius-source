@@ -79,12 +79,14 @@ public class _474_WaitingForTheSummer extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		st.getPlayer();
+		
 		if (event.equalsIgnoreCase("33463-3.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return event;
 	}
 	
@@ -95,6 +97,7 @@ public class _474_WaitingForTheSummer extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int state = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == GUIDE)
 		{
 			if (state == 1)
@@ -103,23 +106,26 @@ public class _474_WaitingForTheSummer extends Quest implements ScriptFile
 				{
 					return "33463-comp.htm";
 				}
+				
 				return "33463.htm";
 			}
+			
 			if (state == 2)
 			{
 				if (cond == 1)
 				{
 					return "33463-4.htm";
 				}
-				
 			}
 		}
+		
 		if ((npcId == VISHOTSKY) && (state == 2))
 		{
 			if (cond == 1)
 			{
 				return "31981-1.htm";
 			}
+			
 			if (cond == 2)
 			{
 				st.giveItems(57, 194000);
@@ -133,6 +139,7 @@ public class _474_WaitingForTheSummer extends Quest implements ScriptFile
 				return "31981.htm"; // no further html do here
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -141,6 +148,7 @@ public class _474_WaitingForTheSummer extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if ((cond == 1) && (Rnd.chance(50)))
 		{
 			if (ArrayUtils.contains(YETI, npcId))
@@ -167,12 +175,14 @@ public class _474_WaitingForTheSummer extends Quest implements ScriptFile
 					st.playSound("ItemSound.quest_itemget");
 				}
 			}
+			
 			if ((st.getQuestItemsCount(YETI_MIAT) >= 30) && (st.getQuestItemsCount(URSUS_MEAT) >= 30) && (st.getQuestItemsCount(BUFFALO_MEAT) >= 30))
 			{
 				st.setCond(2);
 				st.playSound("ItemSound.quest_middle");
 			}
 		}
+		
 		return null;
 	}
 	

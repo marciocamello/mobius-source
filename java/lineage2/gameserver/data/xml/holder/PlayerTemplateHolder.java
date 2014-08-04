@@ -66,10 +66,12 @@ public final class PlayerTemplateHolder extends AbstractHolder
 		{
 			_templates.put(race.ordinal(), new TIntObjectHashMap<TIntObjectHashMap<PlayerTemplate>>());
 		}
+		
 		if (!_templates.get(race.ordinal()).containsKey(type.ordinal()))
 		{
 			_templates.get(race.ordinal()).put(type.ordinal(), new TIntObjectHashMap<PlayerTemplate>());
 		}
+		
 		_templates.get(race.ordinal()).get(type.ordinal()).put(sex.ordinal(), template);
 		_templates_count++;
 	}
@@ -84,10 +86,12 @@ public final class PlayerTemplateHolder extends AbstractHolder
 	public PlayerTemplate getPlayerTemplate(Race race, ClassId classId, Sex sex)
 	{
 		ClassType type = classId.getType();
+		
 		if (!classId.isOfLevel(ClassLevel.Awaking))
 		{
 			race = classId.getRace();
 		}
+		
 		if (_templates.containsKey(race.ordinal()))
 		{
 			if (_templates.get(race.ordinal()).containsKey(type.ordinal()))
@@ -95,6 +99,7 @@ public final class PlayerTemplateHolder extends AbstractHolder
 				return _templates.get(race.ordinal()).get(type.ordinal()).get(sex.ordinal());
 			}
 		}
+		
 		return null;
 	}
 	

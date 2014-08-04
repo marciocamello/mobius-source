@@ -45,19 +45,23 @@ public class PaganDoormans extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		if (!NpcInstance.canBypassCheck(player, npc))
 		{
 			return;
 		}
+		
 		if ((getItemCount(player, 8064) == 0) && (getItemCount(player, 8067) == 0))
 		{
 			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
 			return;
 		}
+		
 		openDoor(MainDoorId);
 		show("default/32034-1.htm", player, npc);
 	}
@@ -69,19 +73,23 @@ public class PaganDoormans extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		if (!NpcInstance.canBypassCheck(player, npc))
 		{
 			return;
 		}
+		
 		if (getItemCount(player, 8067) == 0)
 		{
 			show("default/32036-2.htm", player, npc);
 			return;
 		}
+		
 		openDoor(SecondDoor1Id);
 		openDoor(SecondDoor2Id);
 		show("default/32036-1.htm", player, npc);
@@ -94,14 +102,17 @@ public class PaganDoormans extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		if (!NpcInstance.canBypassCheck(player, npc))
 		{
 			return;
 		}
+		
 		openDoor(MainDoorId);
 		show("default/32035-1.htm", player, npc);
 	}
@@ -113,14 +124,17 @@ public class PaganDoormans extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		if (!NpcInstance.canBypassCheck(player, npc))
 		{
 			return;
 		}
+		
 		openDoor(SecondDoor1Id);
 		openDoor(SecondDoor2Id);
 		show("default/32037-1.htm", player, npc);

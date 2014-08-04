@@ -249,13 +249,16 @@ public final class RecipeTemplate
 	public RecipeComponent getRandomProduct()
 	{
 		int chancesAmount = 0;
+		
 		for (RecipeComponent product : _products)
 		{
 			chancesAmount += product.getChance();
 		}
+		
 		if (Rnd.chance(chancesAmount))
 		{
 			RecipeComponent[] successProducts = new RecipeComponent[0];
+			
 			while (successProducts.length == 0)
 			{
 				for (RecipeComponent product : _products)
@@ -266,8 +269,10 @@ public final class RecipeTemplate
 					}
 				}
 			}
+			
 			return successProducts[Rnd.get(successProducts.length)];
 		}
+		
 		return null;
 	}
 	

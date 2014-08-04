@@ -62,6 +62,7 @@ public class _616_MagicalPowerofFire2 extends Quest implements ScriptFile
 	{
 		NpcInstance isQuest = GameObjectsStorage.getByNpcId(SoulOfFireNastron);
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_accept"))
 		{
 			htmltext = "shaman_udan_q0616_0104.htm";
@@ -102,6 +103,7 @@ public class _616_MagicalPowerofFire2 extends Quest implements ScriptFile
 				htmltext = "shaman_udan_q0616_0302.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -112,6 +114,7 @@ public class _616_MagicalPowerofFire2 extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		switch (npcId)
 		{
 			case UDAN:
@@ -147,7 +150,9 @@ public class _616_MagicalPowerofFire2 extends Quest implements ScriptFile
 				{
 					htmltext = "shaman_udan_q0616_0201.htm";
 				}
+				
 				break;
+			
 			case KETRAS_HOLY_ALTAR:
 				if ((ServerVariables.getLong(_616_MagicalPowerofFire2.class.getSimpleName(), 0) + (3 * 60 * 60 * 1000)) > System.currentTimeMillis())
 				{
@@ -174,8 +179,10 @@ public class _616_MagicalPowerofFire2 extends Quest implements ScriptFile
 						htmltext = "<html><body>Already in spawn.</body></html>";
 					}
 				}
+				
 				break;
 		}
+		
 		return htmltext;
 	}
 	
@@ -200,12 +207,15 @@ public class _616_MagicalPowerofFire2 extends Quest implements ScriptFile
 		{
 			st.giveItems(FIRE_HEART_OF_NASTRON, 1);
 			st.setCond(3);
+			
 			if (SoulOfFireNastronSpawn != null)
 			{
 				SoulOfFireNastronSpawn.deleteMe();
 			}
+			
 			SoulOfFireNastronSpawn = null;
 		}
+		
 		return null;
 	}
 }

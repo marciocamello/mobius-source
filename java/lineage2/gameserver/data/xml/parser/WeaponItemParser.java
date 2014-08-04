@@ -105,10 +105,12 @@ public final class WeaponItemParser extends StatParser<ItemHolder>
 			set.set("name", itemElement.attributeValue("name"));
 			set.set("add_name", itemElement.attributeValue("add_name", StringUtils.EMPTY));
 			int slot = 0;
+			
 			for (Iterator<org.dom4j.Element> subIterator = itemElement.elementIterator(); subIterator.hasNext();)
 			{
 				org.dom4j.Element subElement = subIterator.next();
 				String subName = subElement.getName();
+				
 				if (subName.equalsIgnoreCase("set"))
 				{
 					set.set(subElement.attributeValue("name"), subElement.attributeValue("value"));
@@ -119,6 +121,7 @@ public final class WeaponItemParser extends StatParser<ItemHolder>
 					{
 						org.dom4j.Element slotElement = slotIterator.next();
 						Bodypart bodypart = Bodypart.valueOf(slotElement.attributeValue("id"));
+						
 						if (bodypart.getReal() != null)
 						{
 							slot = bodypart.mask();
@@ -130,8 +133,10 @@ public final class WeaponItemParser extends StatParser<ItemHolder>
 					}
 				}
 			}
+			
 			set.set("bodypart", slot);
 			ItemTemplate template = null;
+			
 			try
 			{
 				if (itemElement.getName().equalsIgnoreCase("weapon"))
@@ -147,6 +152,7 @@ public final class WeaponItemParser extends StatParser<ItemHolder>
 							set.set("class", ItemTemplate.ItemClass.WEAPON);
 						}
 					}
+					
 					template = new WeaponTemplate(set);
 				}
 			}
@@ -155,10 +161,12 @@ public final class WeaponItemParser extends StatParser<ItemHolder>
 				warn("Fail create item: " + set.get("item_id"), e);
 				continue;
 			}
+			
 			for (Iterator<org.dom4j.Element> subIterator = itemElement.elementIterator(); subIterator.hasNext();)
 			{
 				org.dom4j.Element subElement = subIterator.next();
 				String subName = subElement.getName();
+				
 				if (subName.equalsIgnoreCase("for"))
 				{
 					parseFor(subElement, template);
@@ -175,6 +183,7 @@ public final class WeaponItemParser extends StatParser<ItemHolder>
 						int id = Integer.parseInt(nextElement.attributeValue("id"));
 						int level = Integer.parseInt(nextElement.attributeValue("level"));
 						Skill skill = SkillTable.getInstance().getInfo(id, level);
+						
 						if ((skill != null) && (template != null))
 						{
 							template.attachSkill(skill);
@@ -190,6 +199,7 @@ public final class WeaponItemParser extends StatParser<ItemHolder>
 					int id = Integer.parseInt(subElement.attributeValue("id"));
 					int level = Integer.parseInt(subElement.attributeValue("level"));
 					Skill skill = SkillTable.getInstance().getInfo(id, level);
+					
 					if ((skill != null) && (template != null))
 					{
 						template.setEnchant4Skill(skill);
@@ -200,6 +210,7 @@ public final class WeaponItemParser extends StatParser<ItemHolder>
 					int id = Integer.parseInt(subElement.attributeValue("id"));
 					int level = Integer.parseInt(subElement.attributeValue("level"));
 					Skill skill = SkillTable.getInstance().getInfo(id, level);
+					
 					if ((skill != null) && (template != null))
 					{
 						template.setUnequipeSkill(skill);
@@ -208,6 +219,7 @@ public final class WeaponItemParser extends StatParser<ItemHolder>
 				else if (subName.equalsIgnoreCase("cond"))
 				{
 					Condition condition = parseFirstCond(subElement);
+					
 					if ((condition != null) && (template != null))
 					{
 						int msgId = parseNumber(subElement.attributeValue("msgId")).intValue();
@@ -218,16 +230,19 @@ public final class WeaponItemParser extends StatParser<ItemHolder>
 				else if (subName.equalsIgnoreCase("attributes") && (template != null))
 				{
 					int[] attributes = new int[6];
+					
 					for (Iterator<org.dom4j.Element> nextIterator = subElement.elementIterator(); nextIterator.hasNext();)
 					{
 						org.dom4j.Element nextElement = nextIterator.next();
 						Element element;
+						
 						if (nextElement.getName().equalsIgnoreCase("attribute"))
 						{
 							element = Element.getElementByName(nextElement.attributeValue("element"));
 							attributes[element.getId()] = Integer.parseInt(nextElement.attributeValue("value"));
 						}
 					}
+					
 					template.setBaseAtributeElements(attributes);
 				}
 				else if (subName.equalsIgnoreCase("enchant_options"))
@@ -235,26 +250,32 @@ public final class WeaponItemParser extends StatParser<ItemHolder>
 					for (Iterator<org.dom4j.Element> nextIterator = subElement.elementIterator(); nextIterator.hasNext();)
 					{
 						org.dom4j.Element nextElement = nextIterator.next();
+						
 						if (nextElement.getName().equalsIgnoreCase("level") && (template != null))
 						{
 							int val = Integer.parseInt(nextElement.attributeValue("val"));
 							int i = 0;
 							int[] options = new int[3];
+							
 							for (org.dom4j.Element optionElement : nextElement.elements())
 							{
 								OptionDataTemplate optionData = OptionDataHolder.getInstance().getTemplate(Integer.parseInt(optionElement.attributeValue("id")));
+								
 								if (optionData == null)
 								{
 									error("Not found option_data for id: " + optionElement.attributeValue("id") + "; item_id: " + set.get("item_id"));
 									continue;
 								}
+								
 								options[i++] = optionData.getId();
 							}
+							
 							template.addEnchantOptions(val, options);
 						}
 					}
 				}
 			}
+			
 			getHolder().addItem(template);
 		}
 	}

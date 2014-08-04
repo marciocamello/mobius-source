@@ -54,14 +54,6 @@ public class _419_GetaPet extends Quest implements ScriptFile
 	private static final int SPIDER_LEG5 = 3427;
 	private static final int SPIDER_LEG6 = 10165;
 	private static final int WOLF_COLLAR = 2375;
-	@SuppressWarnings("unused")
-	private static final int DROP_CHANCE_BUGBEAR_BLOOD_ID = 25;
-	@SuppressWarnings("unused")
-	private static final int DROP_CHANCE_FORBIDDEN_LOVE_SCROLL_ID = 3;
-	@SuppressWarnings("unused")
-	private static final int DROP_CHANCE_NECKLACE_OF_GRACE_ID = 4;
-	@SuppressWarnings("unused")
-	private static final int DROP_CHANCE_GOLD_BAR_ID = 10;
 	private static final int[][] DROPLIST_COND =
 	{
 		{
@@ -251,6 +243,7 @@ public class _419_GetaPet extends Quest implements ScriptFile
 		addQuestItem(SPIDER_LEG4);
 		addQuestItem(SPIDER_LEG5);
 		addQuestItem(SPIDER_LEG6);
+		
 		for (int[] element : DROPLIST_COND)
 		{
 			addKillId(element[2]);
@@ -260,26 +253,33 @@ public class _419_GetaPet extends Quest implements ScriptFile
 	public long getCount_proof(QuestState st)
 	{
 		long counts = 0;
+		
 		switch (st.getPlayer().getRace())
 		{
 			case human:
 				counts = st.getQuestItemsCount(SPIDER_LEG1);
 				break;
+			
 			case elf:
 				counts = st.getQuestItemsCount(SPIDER_LEG2);
 				break;
+			
 			case darkelf:
 				counts = st.getQuestItemsCount(SPIDER_LEG3);
 				break;
+			
 			case orc:
 				counts = st.getQuestItemsCount(SPIDER_LEG4);
 				break;
+			
 			case dwarf:
 				counts = st.getQuestItemsCount(SPIDER_LEG5);
 				break;
+			
 			case kamael:
 				counts = st.getQuestItemsCount(SPIDER_LEG6);
 		}
+		
 		return counts;
 	}
 	
@@ -288,6 +288,7 @@ public class _419_GetaPet extends Quest implements ScriptFile
 		String htmltext = "";
 		int answers = st.getInt("answers");
 		int question = st.getInt("question");
+		
 		if (question > 0)
 		{
 			htmltext = "419_q" + String.valueOf(question) + ".htm";
@@ -299,12 +300,14 @@ public class _419_GetaPet extends Quest implements ScriptFile
 			String index = ANS[GetQuestion];
 			st.set("question", index);
 			String quiz = "";
+			
 			if ((GetQuestion + 1) == ANS.length)
 			{
 				for (int i = 0; i < (ANS.length - 2); i++)
 				{
 					quiz = quiz + ANS[i] + " ";
 				}
+				
 				quiz = quiz + ANS[ANS.length - 2];
 			}
 			else
@@ -316,8 +319,10 @@ public class _419_GetaPet extends Quest implements ScriptFile
 						quiz = quiz + ANS[i] + " ";
 					}
 				}
+				
 				quiz = quiz + ANS[ANS.length - 1];
 			}
+			
 			st.set("quiz", quiz);
 			htmltext = "419_q" + index + ".htm";
 		}
@@ -328,6 +333,7 @@ public class _419_GetaPet extends Quest implements ScriptFile
 			htmltext = "Completed.htm";
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -336,6 +342,7 @@ public class _419_GetaPet extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		int StateId = st.getInt("id");
+		
 		if (event.equalsIgnoreCase("details"))
 		{
 			htmltext = "419_confirm.htm";
@@ -344,6 +351,7 @@ public class _419_GetaPet extends Quest implements ScriptFile
 		{
 			st.setState(STARTED);
 			st.setCond(1);
+			
 			switch (st.getPlayer().getRace())
 			{
 				case human:
@@ -352,26 +360,32 @@ public class _419_GetaPet extends Quest implements ScriptFile
 					st.addRadar(-111768, 233016, -3180);
 					htmltext = "419_slay_0.htm";
 					break;
+				
 				case elf:
 					st.giveItems(ANIMAL_SLAYER_LIST2, 1);
 					htmltext = "419_slay_1.htm";
 					break;
+				
 				case darkelf:
 					st.giveItems(ANIMAL_SLAYER_LIST3, 1);
 					htmltext = "419_slay_2.htm";
 					break;
+				
 				case orc:
 					st.giveItems(ANIMAL_SLAYER_LIST4, 1);
 					htmltext = "419_slay_3.htm";
 					break;
+				
 				case dwarf:
 					st.giveItems(ANIMAL_SLAYER_LIST5, 1);
 					htmltext = "419_slay_4.htm";
 					break;
+				
 				case kamael:
 					st.giveItems(ANIMAL_SLAYER_LIST6, 1);
 					htmltext = "419_slay_5.htm";
 			}
+			
 			st.playSound(SOUND_ACCEPT);
 		}
 		else if (event.equalsIgnoreCase("disagree"))
@@ -428,6 +442,7 @@ public class _419_GetaPet extends Quest implements ScriptFile
 				htmltext = check_questions(st);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -438,6 +453,7 @@ public class _419_GetaPet extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int StateId = st.getInt("id");
 		int cond = st.getCond();
+		
 		if (cond == 0)
 		{
 			if (npcId == PET_MANAGER_MARTIN)
@@ -460,6 +476,7 @@ public class _419_GetaPet extends Quest implements ScriptFile
 				if (StateId == 0)
 				{
 					long counts = getCount_proof(st);
+					
 					if (counts == 0)
 					{
 						htmltext = "419_no_slay.htm";
@@ -476,26 +493,32 @@ public class _419_GetaPet extends Quest implements ScriptFile
 								st.takeItems(ANIMAL_SLAYER_LIST1, -1);
 								st.takeItems(SPIDER_LEG1, -1);
 								break;
+							
 							case elf:
 								st.takeItems(ANIMAL_SLAYER_LIST2, -1);
 								st.takeItems(SPIDER_LEG2, -1);
 								break;
+							
 							case darkelf:
 								st.takeItems(ANIMAL_SLAYER_LIST3, -1);
 								st.takeItems(SPIDER_LEG3, -1);
 								break;
+							
 							case orc:
 								st.takeItems(ANIMAL_SLAYER_LIST4, -1);
 								st.takeItems(SPIDER_LEG4, -1);
 								break;
+							
 							case dwarf:
 								st.takeItems(ANIMAL_SLAYER_LIST5, -1);
 								st.takeItems(SPIDER_LEG5, -1);
 								break;
+							
 							case kamael:
 								st.takeItems(ANIMAL_SLAYER_LIST6, -1);
 								st.takeItems(SPIDER_LEG6, -1);
 						}
+						
 						st.set("id", "1");
 						st.giveItems(ANIMAL_LOVERS_LIST1, 1);
 						htmltext = "Slayed.htm";
@@ -537,6 +560,7 @@ public class _419_GetaPet extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -545,6 +569,7 @@ public class _419_GetaPet extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		for (int[] element : DROPLIST_COND)
 		{
 			if ((cond == element[0]) && (npcId == element[2]))
@@ -566,6 +591,7 @@ public class _419_GetaPet extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 }

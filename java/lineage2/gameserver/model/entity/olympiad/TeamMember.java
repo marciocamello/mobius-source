@@ -130,10 +130,12 @@ public class TeamMember
 		_type = game.getType();
 		_side = side;
 		_player = player;
+		
 		if (_player == null)
 		{
 			return;
 		}
+		
 		_clanName = player.getClan() == null ? StringUtils.EMPTY : player.getClan().getName();
 		_classId = player.getActiveClassId();
 		player.setOlympiadSide(side);
@@ -155,14 +157,17 @@ public class TeamMember
 	public void incGameCount()
 	{
 		StatsSet set = getStat();
+		
 		switch (_type)
 		{
 			case CLASSED:
 				set.set(Olympiad.GAME_CLASSES_COUNT, set.getInteger(Olympiad.GAME_CLASSES_COUNT) + 1);
 				break;
+			
 			case NON_CLASSED:
 				set.set(Olympiad.GAME_NOCLASSES_COUNT, set.getInteger(Olympiad.GAME_NOCLASSES_COUNT) + 1);
 				break;
+			
 			default:
 				break;
 		}
@@ -181,6 +186,7 @@ public class TeamMember
 			stat.set(Olympiad.POINTS, points - diff);
 			Log.add("Olympiad Result: " + _name + " lost " + diff + " points for crash", "olympiad");
 			Player player = _player;
+			
 			if (player == null)
 			{
 				Log.add("Olympiad info: " + _name + " crashed coz player == null", "olympiad");
@@ -191,14 +197,17 @@ public class TeamMember
 				{
 					Log.add("Olympiad info: " + _name + " crashed coz player.isLogoutStarted()", "olympiad");
 				}
+				
 				if (!player.isConnected())
 				{
 					Log.add("Olympiad info: " + _name + " crashed coz !player.isOnline()", "olympiad");
 				}
+				
 				if (player.getOlympiadGame() == null)
 				{
 					Log.add("Olympiad info: " + _name + " crashed coz player.getOlympiadGame() == null", "olympiad");
 				}
+				
 				if (player.getOlympiadObserveGame() != null)
 				{
 					Log.add("Olympiad info: " + _name + " crashed coz player.getOlympiadObserveGame() != null", "olympiad");
@@ -214,10 +223,12 @@ public class TeamMember
 	public boolean checkPlayer()
 	{
 		Player player = _player;
+		
 		if ((player == null) || player.isLogoutStarted() || (player.getOlympiadGame() == null) || player.isInObserverMode())
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -227,25 +238,32 @@ public class TeamMember
 	public void portPlayerToArena()
 	{
 		Player player = _player;
+		
 		if (!checkPlayer() || player.isTeleporting())
 		{
 			_player = null;
 			return;
 		}
+		
 		DuelEvent duel = player.getEvent(DuelEvent.class);
+		
 		if (duel != null)
 		{
 			duel.abortDuel(player);
 		}
+		
 		_returnLoc = player._stablePoint == null ? player.getReflection().getReturnLoc() == null ? player.getLoc() : player.getReflection().getReturnLoc() : player._stablePoint;
+		
 		if (player.isDead())
 		{
 			player.setPendingRevive(true);
 		}
+		
 		if (player.isSitting())
 		{
 			player.standUp();
 		}
+		
 		player.setTarget(null);
 		player.setIsInOlympiadMode(true);
 		player.leaveParty();
@@ -254,10 +272,12 @@ public class TeamMember
 		Location tele = Location.findPointToStay(instantZone.getTeleportCoords().get(_side - 1), 50, 50, ref.getGeoIndex());
 		player._stablePoint = _returnLoc;
 		player.teleToLocation(tele, ref);
+		
 		if (_type == CompType.TEAM)
 		{
 			player.setTeam(_side == 1 ? TeamType.BLUE : TeamType.RED);
 		}
+		
 		player.sendPacket(new ExOlympiadMode(_side));
 	}
 	
@@ -267,21 +287,26 @@ public class TeamMember
 	public void portPlayerBack()
 	{
 		Player player = _player;
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (_returnLoc == null)
 		{
 			return;
 		}
+		
 		player.setIsInOlympiadMode(false);
 		player.setOlympiadSide(-1);
 		player.setOlympiadGame(null);
+		
 		if (_type == CompType.TEAM)
 		{
 			player.setTeam(TeamType.NONE);
 		}
+		
 		for (Effect e : player.getEffectList().getAllEffects())
 		{
 			if ((e.getEffectType() != EffectType.Cubic) || (player.getSkillLevel(e.getSkill().getId()) <= 0))
@@ -289,12 +314,15 @@ public class TeamMember
 				e.exit();
 			}
 		}
+		
 		for (Summon summon : player.getSummonList())
 		{
 			summon.getEffectList().stopAllEffects();
 		}
+		
 		player.setCurrentCp(player.getMaxCp());
 		player.setCurrentMp(player.getMaxMp());
+		
 		if (player.isDead())
 		{
 			player.setCurrentHp(player.getMaxHp(), true);
@@ -304,14 +332,17 @@ public class TeamMember
 		{
 			player.setCurrentHp(player.getMaxHp(), false);
 		}
+		
 		if ((player.getClan() != null) && (player.getClan().getReputationScore() >= 0))
 		{
 			player.getClan().enableSkills(player);
 		}
+		
 		if (player.isHero())
 		{
 			Hero.addSkills(player);
 		}
+		
 		player.sendSkillList();
 		player.sendPacket(new ExOlympiadMode(0));
 		player.sendPacket(new ExOlympiadMatchEnd());
@@ -325,10 +356,12 @@ public class TeamMember
 	public void preparePlayer()
 	{
 		Player player = _player;
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (player.isInObserverMode())
 		{
 			if (player.getOlympiadObserveGame() != null)
@@ -340,18 +373,22 @@ public class TeamMember
 				player.leaveObserverMode();
 			}
 		}
+		
 		if (player.getClan() != null)
 		{
 			player.getClan().disableSkills(player);
 		}
+		
 		if (player.isHero())
 		{
 			Hero.removeSkills(player);
 		}
+		
 		if (player.isCastingNow())
 		{
 			player.abortCast(true, true);
 		}
+		
 		for (Effect e : player.getEffectList().getAllEffects())
 		{
 			if ((e.getEffectType() != EffectType.Cubic) || (player.getSkillLevel(e.getSkill().getId()) <= 0))
@@ -359,6 +396,7 @@ public class TeamMember
 				e.exit();
 			}
 		}
+		
 		for (Summon summon : player.getSummonList())
 		{
 			if (summon.isPet())
@@ -370,46 +408,58 @@ public class TeamMember
 				summon.getEffectList().stopAllEffects();
 			}
 		}
+		
 		if (player.getAgathionId() > 0)
 		{
 			player.setAgathion(0);
 		}
+		
 		for (TimeStamp sts : player.getSkillReuses())
 		{
 			if (sts == null)
 			{
 				continue;
 			}
+			
 			Skill skill = SkillTable.getInstance().getInfo(sts.getId(), sts.getLevel());
+			
 			if (skill == null)
 			{
 				continue;
 			}
+			
 			if (sts.getReuseBasic() <= (15 * 60000L))
 			{
 				player.enableSkill(skill);
 			}
 		}
+		
 		player.sendSkillList();
 		player.sendPacket(new SkillCoolTime(player));
 		ItemInstance wpn = player.getActiveWeaponInstance();
+		
 		if ((wpn != null) && wpn.isHeroWeapon())
 		{
 			player.getInventory().unEquipItem(wpn);
 			player.abortAttack(true, true);
 		}
+		
 		Set<Integer> activeSoulShots = player.getAutoSoulShot();
+		
 		for (int itemId : activeSoulShots)
 		{
 			player.removeAutoSoulShot(itemId);
 			player.sendPacket(new ExAutoSoulShot(itemId, false));
 		}
+		
 		ItemInstance weapon = player.getActiveWeaponInstance();
+		
 		if (weapon != null)
 		{
 			weapon.setChargedSpiritshot(ItemInstance.CHARGED_NONE);
 			weapon.setChargedSoulshot(ItemInstance.CHARGED_NONE);
 		}
+		
 		player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
 		player.setCurrentCp(player.getMaxCp());
 		player.broadcastUserInfo();

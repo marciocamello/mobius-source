@@ -59,6 +59,7 @@ public class Kamaloka extends SimpleItemHandler
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
 		final int itemId = item.getItemId();
+		
 		switch (itemId)
 		{
 			case 13010:
@@ -67,12 +68,14 @@ public class Kamaloka extends SimpleItemHandler
 				useItem(player, item, 1);
 				player.removeInstanceReusesByGroupId(1);
 				break;
+			
 			case 13011:
 			case 13298:
 			case 20027:
 				useItem(player, item, 1);
 				player.removeInstanceReusesByGroupId(2);
 				break;
+			
 			case 13012:
 			case 13299:
 			case 20028:
@@ -80,6 +83,7 @@ public class Kamaloka extends SimpleItemHandler
 				player.removeInstanceReusesByGroupId(3);
 				break;
 		}
+		
 		player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(itemId));
 		return false;
 	}

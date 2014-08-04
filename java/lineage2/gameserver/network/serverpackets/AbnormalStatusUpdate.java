@@ -40,7 +40,6 @@ public class AbnormalStatusUpdate extends L2GameServerPacket implements IconEffe
 	protected final void writeImpl()
 	{
 		writeC(0x85);
-		
 		writeH(_effects.size());
 		
 		for (IconEffect temp : _effects)

@@ -56,6 +56,7 @@ public class AttributeStoneManager
 		factory.setIgnoringComments(true);
 		File file = new File(Config.DATAPACK_ROOT, "data/xml/asc/model/etcitems/AttributeStone.xml");
 		Document doc = null;
+		
 		if (file.exists())
 		{
 			try
@@ -67,6 +68,7 @@ public class AttributeStoneManager
 				_log.warn("Could not parse AttributeStone.xml file: " + e.getMessage(), e);
 				return;
 			}
+			
 			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 			{
 				if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -88,55 +90,75 @@ public class AttributeStoneManager
 							_element = Element.NONE;
 							_chance = 0;
 							att = attrs.getNamedItem("id");
+							
 							if (att != null)
 							{
 								_id = Integer.parseInt(att.getNodeValue());
 							}
+							
 							att = attrs.getNamedItem("min_arm");
+							
 							if (att != null)
 							{
 								_min_arm = Integer.parseInt(att.getNodeValue());
 							}
+							
 							att = attrs.getNamedItem("max_arm");
+							
 							if (att != null)
 							{
 								_max_arm = Integer.parseInt(att.getNodeValue());
 							}
+							
 							att = attrs.getNamedItem("min_weap");
+							
 							if (att != null)
 							{
 								_min_weap = Integer.parseInt(att.getNodeValue());
 							}
+							
 							att = attrs.getNamedItem("max_weap");
+							
 							if (att != null)
 							{
 								_max_weap = Integer.parseInt(att.getNodeValue());
 							}
+							
 							att = attrs.getNamedItem("inc_arm");
+							
 							if (att != null)
 							{
 								_inc_arm = Integer.parseInt(att.getNodeValue());
 							}
+							
 							att = attrs.getNamedItem("inc_weap");
+							
 							if (att != null)
 							{
 								_inc_weap = Integer.parseInt(att.getNodeValue());
 							}
+							
 							att = attrs.getNamedItem("inc_weap_arm");
+							
 							if (att != null)
 							{
 								_inc_weap_arm = Integer.parseInt(att.getNodeValue());
 							}
+							
 							att = attrs.getNamedItem("element");
+							
 							if (att != null)
 							{
 								_element = Element.getElementByName(att.getNodeValue());
 							}
+							
 							att = attrs.getNamedItem("chance");
+							
 							if (att != null)
 							{
 								_chance = Integer.parseInt(att.getNodeValue());
 							}
+							
 							AttributeStoneInfo asi = new AttributeStoneInfo();
 							asi.setItemId(_id);
 							asi.setMinArmor(_min_arm);
@@ -154,6 +176,7 @@ public class AttributeStoneManager
 				}
 			}
 		}
+		
 		_log.info("AttributeStoneManager: Loaded " + _stones.size() + " stone data...");
 	}
 	

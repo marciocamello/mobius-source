@@ -56,6 +56,7 @@ public class _699_GuardianoftheSkies extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		String htmltext = event;
+		
 		if (event.equals("lekon_q699_2.htm") && (cond == 0))
 		{
 			st.setCond(1);
@@ -75,6 +76,7 @@ public class _699_GuardianoftheSkies extends Quest implements ScriptFile
 				htmltext = "lekon_q699_3a.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -85,6 +87,7 @@ public class _699_GuardianoftheSkies extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		QuestState GoodDayToFly = st.getPlayer().getQuestState(_10273_GoodDayToFly.class);
+		
 		if (npcId == Lekon)
 		{
 			if (cond == 0)
@@ -111,6 +114,7 @@ public class _699_GuardianoftheSkies extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -119,6 +123,7 @@ public class _699_GuardianoftheSkies extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (cond == 1)
 		{
 			if ((npcId == VultureRider1) || (npcId == VultureRider2) || (npcId == EliteRider))
@@ -132,6 +137,7 @@ public class _699_GuardianoftheSkies extends Quest implements ScriptFile
 				st.playSound(SOUND_ITEMGET);
 			}
 		}
+		
 		return null;
 	}
 }

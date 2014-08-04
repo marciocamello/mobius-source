@@ -149,11 +149,13 @@ public final class PlayerStatsChangeRecorder extends CharStatsChangeRecorder<Pla
 		super.refreshStats();
 		_maxLoad = set(SEND_CHAR_INFO | SEND_MAX_LOAD, _maxLoad, _activeChar.getMaxLoad());
 		_curLoad = set(SEND_CUR_LOAD, _curLoad, _activeChar.getCurrentLoad());
+		
 		for (Element e : Element.VALUES)
 		{
 			_attackElement[e.getId()] = set(SEND_CHAR_INFO, _attackElement[e.getId()], _activeChar.getAttack(e));
 			_defenceElement[e.getId()] = set(SEND_CHAR_INFO, _defenceElement[e.getId()], _activeChar.getDefence(e));
 		}
+		
 		_exp = set(SEND_CHAR_INFO, _exp, _activeChar.getExp());
 		_sp = set(SEND_CHAR_INFO, _sp, _activeChar.getIntSp());
 		_pk = set(SEND_CHAR_INFO, _pk, _activeChar.getPkKills());
@@ -179,14 +181,17 @@ public final class PlayerStatsChangeRecorder extends CharStatsChangeRecorder<Pla
 	protected void onSendChanges()
 	{
 		super.onSendChanges();
+		
 		if ((_changes & BROADCAST_CHAR_INFO2) == BROADCAST_CHAR_INFO2)
 		{
 			_activeChar.broadcastCharInfo();
+			
 			for (Summon summon : _activeChar.getSummonList())
 			{
 				summon.broadcastCharInfo();
 			}
 		}
+		
 		if ((_changes & BROADCAST_CHAR_INFO) == BROADCAST_CHAR_INFO)
 		{
 			_activeChar.broadcastCharInfo();
@@ -195,18 +200,22 @@ public final class PlayerStatsChangeRecorder extends CharStatsChangeRecorder<Pla
 		{
 			_activeChar.sendUserInfo();
 		}
+		
 		if ((_changes & SEND_CUR_LOAD) == SEND_CUR_LOAD)
 		{
 			_activeChar.sendStatusUpdate(false, false, StatusUpdateField.CUR_LOAD);
 		}
+		
 		if ((_changes & SEND_MAX_LOAD) == SEND_MAX_LOAD)
 		{
 			_activeChar.sendStatusUpdate(false, false, StatusUpdateField.MAX_LOAD);
 		}
+		
 		if ((_changes & BROADCAST_KARMA) == BROADCAST_KARMA)
 		{
 			_activeChar.sendStatusUpdate(true, false, StatusUpdateField.KARMA);
 		}
+		
 		if ((_changes & SEND_STORAGE_INFO) == SEND_STORAGE_INFO)
 		{
 			_activeChar.sendPacket(new ExStorageMaxCount(_activeChar));

@@ -74,6 +74,7 @@ public class BloodAltarManager
 		{
 			_instance = new BloodAltarManager();
 		}
+		
 		return _instance;
 	}
 	
@@ -142,6 +143,7 @@ public class BloodAltarManager
 		else
 		{
 			bossRespawnTimer = System.currentTimeMillis() + (4 * 3600 * 1000L);
+			
 			for (String s : bossGroups)
 			{
 				SpawnManager.getInstance().despawn(s);

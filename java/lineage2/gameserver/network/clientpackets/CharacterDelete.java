@@ -56,6 +56,7 @@ public class CharacterDelete extends L2GameClientPacket
 	{
 		int clan = clanStatus();
 		int online = onlineStatus();
+		
 		if ((clan > 0) || (online > 0))
 		{
 			if (clan == 2)
@@ -70,9 +71,12 @@ public class CharacterDelete extends L2GameClientPacket
 			{
 				sendPacket(new CharacterDeleteFail(CharacterDeleteFail.REASON_DELETION_FAILED));
 			}
+			
 			return;
 		}
+		
 		GameClient client = getClient();
+		
 		try
 		{
 			if (Config.DELETE_DAYS == 0)
@@ -88,6 +92,7 @@ public class CharacterDelete extends L2GameClientPacket
 		{
 			_log.error("Error:", e);
 		}
+		
 		sendPacket(new CharacterDeleteSuccess());
 		CharacterSelectionInfo cl = new CharacterSelectionInfo(client.getLogin(), client.getSessionKey().playOkID1);
 		ExLoginVitalityEffectInfo vl = new ExLoginVitalityEffectInfo(cl.getCharInfo());
@@ -102,18 +107,22 @@ public class CharacterDelete extends L2GameClientPacket
 	private int clanStatus()
 	{
 		int obj = getClient().getObjectIdForSlot(_charSlot);
+		
 		if (obj == -1)
 		{
 			return 0;
 		}
+		
 		if (mysql.simple_get_int("clanid", "characters", "obj_Id=" + obj) > 0)
 		{
 			if (mysql.simple_get_int("leader_id", "clan_subpledges", "leader_id=" + obj + " AND type = " + Clan.SUBUNIT_MAIN_CLAN) > 0)
 			{
 				return 2;
 			}
+			
 			return 1;
 		}
+		
 		return 0;
 	}
 	
@@ -124,14 +133,17 @@ public class CharacterDelete extends L2GameClientPacket
 	private int onlineStatus()
 	{
 		int obj = getClient().getObjectIdForSlot(_charSlot);
+		
 		if (obj == -1)
 		{
 			return 0;
 		}
+		
 		if (mysql.simple_get_int("online", "characters", "obj_Id=" + obj) > 0)
 		{
 			return 1;
 		}
+		
 		return 0;
 	}
 }

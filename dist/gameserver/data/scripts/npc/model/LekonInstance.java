@@ -24,7 +24,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class LekonInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -58,6 +58,7 @@ public class LekonInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equals("get_license"))
 		{
 			if ((player.getClan() == null) || !player.isClanLeader() || (player.getClan().getLevel() < 5))
@@ -65,16 +66,19 @@ public class LekonInstance extends NpcInstance
 				showChatWindow(player, 2);
 				return;
 			}
+			
 			if (player.getClan().isHaveAirshipLicense() || (Functions.getItemCount(player, AIRSHIP_SUMMON_LICENSE) > 0))
 			{
 				showChatWindow(player, 4);
 				return;
 			}
+			
 			if (Functions.removeItem(player, ENERGY_STAR_STONE, 10) != 10)
 			{
 				showChatWindow(player, 3);
 				return;
 			}
+			
 			Functions.addItem(player, AIRSHIP_SUMMON_LICENSE, 1);
 		}
 		else

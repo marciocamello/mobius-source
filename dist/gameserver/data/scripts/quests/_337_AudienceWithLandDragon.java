@@ -274,6 +274,7 @@ public class _337_AudienceWithLandDragon extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("1"))
 		{
 			st.set("step", "1");
@@ -339,6 +340,7 @@ public class _337_AudienceWithLandDragon extends Quest implements ScriptFile
 			st.takeItems(HERALD_OF_SLAYER_ID, -1);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return htmltext;
 	}
 	
@@ -349,6 +351,7 @@ public class _337_AudienceWithLandDragon extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int step = st.getInt("step");
 		int cond = st.getCond();
+		
 		if (npcId == GABRIELLE)
 		{
 			if (cond == 0)
@@ -555,6 +558,7 @@ public class _337_AudienceWithLandDragon extends Quest implements ScriptFile
 				st.playSound(SOUND_FINISH);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -563,6 +567,7 @@ public class _337_AudienceWithLandDragon extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int step = st.getInt("step");
+		
 		for (int[] element : SPAWNLIST)
 		{
 			if ((npcId == element[1]) && (step == element[0]) && (npc.getCurrentHpPercents() < 50) && (st.getInt("guard") == 0))
@@ -571,10 +576,12 @@ public class _337_AudienceWithLandDragon extends Quest implements ScriptFile
 				{
 					st.addSpawn(element[2]);
 				}
+				
 				st.playSound(SOUND_BEFORE_BATTLE);
 				st.set("guard", "1");
 			}
 		}
+		
 		return null;
 	}
 	
@@ -583,6 +590,7 @@ public class _337_AudienceWithLandDragon extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int step = st.getInt("step");
+		
 		for (int[] element : DROPLIST)
 		{
 			if ((npcId == element[1]) && (step == element[0]) && (st.getQuestItemsCount(element[2]) < element[3]) && Rnd.chance(element[4]))
@@ -591,6 +599,7 @@ public class _337_AudienceWithLandDragon extends Quest implements ScriptFile
 				st.playSound(SOUND_ITEMGET);
 			}
 		}
+		
 		for (int[] element : SPAWNLIST)
 		{
 			if ((step == element[0]) && (npcId == element[1]) && Rnd.chance(50) && (st.getInt("guard") == 0))
@@ -599,13 +608,16 @@ public class _337_AudienceWithLandDragon extends Quest implements ScriptFile
 				{
 					st.addSpawn(element[2]);
 				}
+				
 				st.playSound(SOUND_BEFORE_BATTLE);
 			}
+			
 			if ((step == element[0]) && (npcId == element[1]) && (st.getInt("guard") == 1))
 			{
 				st.set("guard", "0");
 			}
 		}
+		
 		return null;
 	}
 }

@@ -56,6 +56,7 @@ public class _311_ExpulsionOfEvilSpirits extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("chairen_q311_03.htm"))
 		{
 			st.setCond(1);
@@ -87,6 +88,7 @@ public class _311_ExpulsionOfEvilSpirits extends Quest implements ScriptFile
 		else
 		{
 			int id = 0;
+			
 			try
 			{
 				id = Integer.parseInt(event);
@@ -94,63 +96,82 @@ public class _311_ExpulsionOfEvilSpirits extends Quest implements ScriptFile
 			catch (Exception e)
 			{
 			}
+			
 			if (id > 0)
 			{
 				int count = 0;
+				
 				switch (id)
 				{
 					case 9482:
 						count = 488;
 						break;
+					
 					case 9483:
 						count = 305;
 						break;
+					
 					case 9484:
 						count = 183;
 						break;
+					
 					case 9485:
 						count = 122;
 						break;
+					
 					case 9486:
 						count = 122;
 						break;
+					
 					case 9487:
 						count = 366;
 						break;
+					
 					case 9488:
 						count = 229;
 						break;
+					
 					case 9489:
 						count = 183;
 						break;
+					
 					case 9490:
 						count = 122;
 						break;
+					
 					case 9491:
 						count = 122;
 						break;
+					
 					case 9497:
 						count = 129;
 						break;
+					
 					case 9628:
 						count = 24;
 						break;
+					
 					case 9629:
 						count = 43;
 						break;
+					
 					case 9630:
 						count = 36;
 						break;
+					
 					case 9625:
 						count = 667;
 						break;
+					
 					case 9626:
 						count = 1000;
 						break;
+					
 					default:
 						count = 0;
 						break;
 				}
+				
 				if (count > 0)
 				{
 					if (st.getQuestItemsCount(RagnaOrcAmulet) >= count)
@@ -171,6 +192,7 @@ public class _311_ExpulsionOfEvilSpirits extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -181,6 +203,7 @@ public class _311_ExpulsionOfEvilSpirits extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int id = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == Chairen)
 		{
 			if (cond == 0)
@@ -207,6 +230,7 @@ public class _311_ExpulsionOfEvilSpirits extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -215,6 +239,7 @@ public class _311_ExpulsionOfEvilSpirits extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if ((cond == 1) && ArrayUtils.contains(MOBS, npcId))
 		{
 			if (Rnd.chance(DROP_CHANCE1) && (st.getQuestItemsCount(SoulCoreContainingEvilSpirit) < 10))
@@ -222,12 +247,14 @@ public class _311_ExpulsionOfEvilSpirits extends Quest implements ScriptFile
 				st.giveItems(SoulCoreContainingEvilSpirit, 1);
 				st.playSound(SOUND_FANFARE2);
 			}
+			
 			if (Rnd.chance(DROP_CHANCE2))
 			{
 				st.giveItems(RagnaOrcAmulet, (int) Config.RATE_QUESTS_REWARD * 1);
 				st.playSound(SOUND_ITEMGET);
 			}
 		}
+		
 		return null;
 	}
 	

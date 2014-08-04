@@ -165,14 +165,18 @@ public final class WorldRegion implements Iterable<GameObject>
 		{
 			return;
 		}
+		
 		NpcInstance npc;
+		
 		for (GameObject obj : this)
 		{
 			if (!obj.isNpc())
 			{
 				continue;
 			}
+			
 			npc = (NpcInstance) obj;
+			
 			if (npc.getAI().isActive() != isActive())
 			{
 				if (isActive())
@@ -202,24 +206,30 @@ public final class WorldRegion implements Iterable<GameObject>
 		{
 			return;
 		}
+		
 		Player player = null;
+		
 		if (object.isPlayer())
 		{
 			player = (Player) object;
 		}
+		
 		int oid = object.getObjectId();
 		int rid = object.getReflectionId();
 		Player p;
+		
 		for (GameObject obj : this)
 		{
 			if ((obj.getObjectId() == oid) || (obj.getReflectionId() != rid))
 			{
 				continue;
 			}
+			
 			if (player != null)
 			{
 				player.sendPacket(player.addVisibleObject(obj, null));
 			}
+			
 			if (obj.isPlayer())
 			{
 				p = (Player) obj;
@@ -238,25 +248,31 @@ public final class WorldRegion implements Iterable<GameObject>
 		{
 			return;
 		}
+		
 		Player player = null;
+		
 		if (object.isPlayer())
 		{
 			player = (Player) object;
 		}
+		
 		int oid = object.getObjectId();
 		Reflection rid = object.getReflection();
 		Player p;
 		List<L2GameServerPacket> d = null;
+		
 		for (GameObject obj : this)
 		{
 			if ((obj.getObjectId() == oid) || (obj.getReflection() != rid))
 			{
 				continue;
 			}
+			
 			if (player != null)
 			{
 				player.sendPacket(player.removeVisibleObject(obj, null));
 			}
+			
 			if (obj.isPlayer())
 			{
 				p = (Player) obj;
@@ -275,7 +291,9 @@ public final class WorldRegion implements Iterable<GameObject>
 		{
 			return;
 		}
+		
 		lock.lock();
+		
 		try
 		{
 			GameObject[] objects = _objects;
@@ -284,6 +302,7 @@ public final class WorldRegion implements Iterable<GameObject>
 			objects = resizedObjects;
 			objects[_objectsCount++] = obj;
 			_objects = resizedObjects;
+			
 			if (obj.isPlayer())
 			{
 				if (_playersCount++ == 0)
@@ -292,6 +311,7 @@ public final class WorldRegion implements Iterable<GameObject>
 					{
 						_activateTask.cancel(false);
 					}
+					
 					_activateTask = ThreadPoolManager.getInstance().schedule(new ActivateTask(true), 1000L);
 				}
 			}
@@ -312,11 +332,14 @@ public final class WorldRegion implements Iterable<GameObject>
 		{
 			return;
 		}
+		
 		lock.lock();
+		
 		try
 		{
 			GameObject[] objects = _objects;
 			int index = -1;
+			
 			for (int i = 0; i < _objectsCount; i++)
 			{
 				if (objects[i] == obj)
@@ -325,15 +348,18 @@ public final class WorldRegion implements Iterable<GameObject>
 					break;
 				}
 			}
+			
 			if (index == -1)
 			{
 				return;
 			}
+			
 			_objectsCount--;
 			GameObject[] resizedObjects = new GameObject[_objectsCount];
 			objects[index] = objects[_objectsCount];
 			System.arraycopy(objects, 0, resizedObjects, 0, _objectsCount);
 			_objects = resizedObjects;
+			
 			if (obj.isPlayer())
 			{
 				if (--_playersCount == 0)
@@ -342,6 +368,7 @@ public final class WorldRegion implements Iterable<GameObject>
 					{
 						_activateTask.cancel(false);
 					}
+					
 					_activateTask = ThreadPoolManager.getInstance().schedule(new ActivateTask(false), 60000L);
 				}
 			}
@@ -395,6 +422,7 @@ public final class WorldRegion implements Iterable<GameObject>
 	void addZone(Zone zone)
 	{
 		lock.lock();
+		
 		try
 		{
 			_zones = ArrayUtils.add(_zones, zone);
@@ -412,6 +440,7 @@ public final class WorldRegion implements Iterable<GameObject>
 	void removeZone(Zone zone)
 	{
 		lock.lock();
+		
 		try
 		{
 			_zones = ArrayUtils.remove(_zones, zone);
@@ -485,6 +514,7 @@ public final class WorldRegion implements Iterable<GameObject>
 			{
 				return objects[cursor] != null;
 			}
+			
 			return false;
 		}
 		

@@ -82,6 +82,7 @@ public class SoIManager
 		{
 			_instance = new SoIManager();
 		}
+		
 		return _instance;
 	}
 	
@@ -93,6 +94,7 @@ public class SoIManager
 		_log.info("Seed of Infinity Manager: Loaded. Current stage is: " + getCurrentStage());
 		_zone = ReflectionUtils.getZone("[inner_undying01]");
 		checkStageAndSpawn();
+		
 		if (isSeedOpen())
 		{
 			openSeed(getOpenedTime());
@@ -118,6 +120,7 @@ public class SoIManager
 		{
 			return 0;
 		}
+		
 		return (ServerVariables.getLong("SoI_opened", 0) * 1000L) - System.currentTimeMillis();
 	}
 	
@@ -131,6 +134,7 @@ public class SoIManager
 		{
 			return;
 		}
+		
 		if (stage == 3)
 		{
 			openSeed(SOI_OPEN_TIME);
@@ -139,6 +143,7 @@ public class SoIManager
 		{
 			closeSeed();
 		}
+		
 		ServerVariables.set("SoI_stage", stage);
 		setCohemenesCount(0);
 		setEkimusCount(0);
@@ -166,6 +171,7 @@ public class SoIManager
 		{
 			return;
 		}
+		
 		ServerVariables.set("SoI_opened", (System.currentTimeMillis() + time) / 1000L);
 		_log.info("Seed of Infinity Manager: Opening the seed for " + Util.formatTime((int) time / 1000));
 		spawnOpenedSeed();
@@ -193,6 +199,7 @@ public class SoIManager
 		SpawnManager.getInstance().despawn("soi_hoi_middle_seeds");
 		SpawnManager.getInstance().despawn("soi_all_middle_stable_tumor");
 		ReflectionUtils.getDoor(14240102).closeMe();
+		
 		for (Playable p : getZone().getInsidePlayables())
 		{
 			p.teleToLocation(getZone().getRestartPoints().get(0));
@@ -208,6 +215,7 @@ public class SoIManager
 		SpawnManager.getInstance().despawn("soi_world_mouths");
 		SpawnManager.getInstance().despawn("soi_world_abyssgaze2");
 		SpawnManager.getInstance().despawn("soi_world_abyssgaze1");
+		
 		switch (getCurrentStage())
 		{
 			case 1:
@@ -215,10 +223,12 @@ public class SoIManager
 				SpawnManager.getInstance().spawn("soi_world_mouths");
 				SpawnManager.getInstance().spawn("soi_world_abyssgaze2");
 				break;
+			
 			case 5:
 				SpawnManager.getInstance().spawn("soi_world_closedmouths");
 				SpawnManager.getInstance().spawn("soi_world_abyssgaze2");
 				break;
+			
 			default:
 				SpawnManager.getInstance().spawn("soi_world_closedmouths");
 				SpawnManager.getInstance().spawn("soi_world_abyssgaze1");

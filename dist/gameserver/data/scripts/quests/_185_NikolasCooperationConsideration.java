@@ -57,6 +57,7 @@ public class _185_NikolasCooperationConsideration extends Quest implements Scrip
 	{
 		String htmltext = event;
 		Player player = st.getPlayer();
+		
 		if (event.equalsIgnoreCase("30621-01.htm"))
 		{
 			if (player.getLevel() < 40)
@@ -91,6 +92,7 @@ public class _185_NikolasCooperationConsideration extends Quest implements Scrip
 			{
 				st.giveItems(Certificate, 1);
 			}
+			
 			st.giveItems(ADENA_ID, 80598);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
@@ -125,6 +127,7 @@ public class _185_NikolasCooperationConsideration extends Quest implements Scrip
 		{
 			st.set("pass", str(st.getInt("pass") + 1));
 			htmltext = event.substring(8);
+			
 			if (htmltext.equals("32367-07.htm"))
 			{
 				if (st.getInt("pass") == 4)
@@ -168,6 +171,7 @@ public class _185_NikolasCooperationConsideration extends Quest implements Scrip
 			st.set("step", "2");
 			return null;
 		}
+		
 		return htmltext;
 	}
 	
@@ -177,6 +181,7 @@ public class _185_NikolasCooperationConsideration extends Quest implements Scrip
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (st.isStarted())
 		{
 			if (npcId == Nikola)
@@ -219,6 +224,7 @@ public class _185_NikolasCooperationConsideration extends Quest implements Scrip
 			else if (npcId == Device)
 			{
 				int step = st.getInt("step");
+				
 				if (cond == 3)
 				{
 					if (step == 0)
@@ -244,6 +250,7 @@ public class _185_NikolasCooperationConsideration extends Quest implements Scrip
 				htmltext = "32367-01.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

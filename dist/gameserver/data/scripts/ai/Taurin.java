@@ -114,15 +114,18 @@ public class Taurin extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			doTask();
 			return true;
 		}
+		
 		if ((System.currentTimeMillis() > wait_timeout) && ((current_point > -1) || Rnd.chance(5)))
 		{
 			if (!wait)
@@ -133,67 +136,82 @@ public class Taurin extends DefaultAI
 						wait_timeout = System.currentTimeMillis() + 10000;
 						wait = true;
 						return true;
+						
 					case 10:
 						wait_timeout = System.currentTimeMillis() + 10000;
 						wait = true;
 						return true;
+						
 					case 14:
 						wait_timeout = System.currentTimeMillis() + 10000;
 						wait = true;
 						return true;
+						
 					case 16:
 						wait_timeout = System.currentTimeMillis() + 10000;
 						wait = true;
 						return true;
+						
 					case 21:
 						wait_timeout = System.currentTimeMillis() + 10000;
 						wait = true;
 						return true;
+						
 					case 27:
 						wait_timeout = System.currentTimeMillis() + 10000;
 						wait = true;
 						return true;
+						
 					case 30:
 						wait_timeout = System.currentTimeMillis() + 10000;
 						Functions.npcSay(actor, "В�?ем лежат�?, у мен�? бомба!");
 						wait = true;
 						return true;
+						
 					case 31:
 						wait_timeout = System.currentTimeMillis() + 15000;
 						Functions.npcSay(actor, "Я бол�?ной, за �?еб�? не руча�?�?�?!!!!");
 						wait = true;
 						return true;
+						
 					case 32:
 						wait_timeout = System.currentTimeMillis() + 15000;
 						Functions.npcSay(actor, "Вы в�?е еще тут? Я ва�? предупреждал!!!!!");
 						wait = true;
 						return true;
+						
 					case 33:
 						actor.broadcastPacket(new MagicSkillUse(actor, actor, 2025, 1, 500, 0));
 						wait_timeout = System.currentTimeMillis() + 1000;
 						wait = true;
 						return true;
+						
 					case 35:
 						wait_timeout = System.currentTimeMillis() + 10000;
 						wait = true;
 						return true;
+						
 					case 37:
 						wait_timeout = System.currentTimeMillis() + 30000000;
 						wait = true;
 						return true;
 				}
 			}
+			
 			wait_timeout = 0;
 			wait = false;
 			current_point++;
+			
 			if (current_point >= points.length)
 			{
 				current_point = 0;
 			}
+			
 			addTaskMove(points[current_point], true);
 			doTask();
 			return true;
 		}
+		
 		/**
 		 * Method onEvtAttacked.
 		 * @param attacker Creature
@@ -203,6 +221,7 @@ public class Taurin extends DefaultAI
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	

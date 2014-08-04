@@ -23,10 +23,6 @@ public class _607_ProveYourCourage extends Quest implements ScriptFile
 	private final static int VARKAS_HERO_SHADITH = 25309;
 	private final static int HEAD_OF_SHADITH = 7235;
 	private final static int TOTEM_OF_VALOR = 7219;
-	@SuppressWarnings("unused")
-	private final static int MARK_OF_KETRA_ALLIANCE1 = 7211;
-	@SuppressWarnings("unused")
-	private final static int MARK_OF_KETRA_ALLIANCE2 = 7212;
 	private final static int MARK_OF_KETRA_ALLIANCE3 = 7213;
 	private final static int MARK_OF_KETRA_ALLIANCE4 = 7214;
 	private final static int MARK_OF_KETRA_ALLIANCE5 = 7215;
@@ -58,6 +54,7 @@ public class _607_ProveYourCourage extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("quest_accept"))
 		{
 			htmltext = "elder_kadun_zu_ketra_q0607_0104.htm";
@@ -82,6 +79,7 @@ public class _607_ProveYourCourage extends Quest implements ScriptFile
 				htmltext = "elder_kadun_zu_ketra_q0607_0106.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -90,6 +88,7 @@ public class _607_ProveYourCourage extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (cond == 0)
 		{
 			if (st.getPlayer().getLevel() >= 75)
@@ -118,6 +117,7 @@ public class _607_ProveYourCourage extends Quest implements ScriptFile
 		{
 			htmltext = "elder_kadun_zu_ketra_q0607_0105.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -125,12 +125,14 @@ public class _607_ProveYourCourage extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		if ((npcId == VARKAS_HERO_SHADITH) && (st.getCond() == 1))
 		{
 			st.giveItems(HEAD_OF_SHADITH, 1);
 			st.setCond(2);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		return null;
 	}
 }

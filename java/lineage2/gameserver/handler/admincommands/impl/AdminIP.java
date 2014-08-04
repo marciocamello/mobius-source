@@ -45,10 +45,12 @@ public class AdminIP implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		if (!activeChar.getPlayerAccess().CanBan)
 		{
 			return false;
 		}
+		
 		switch (command)
 		{
 			case admin_charip:
@@ -58,21 +60,27 @@ public class AdminIP implements IAdminCommandHandler
 					activeChar.sendMessage(" Gets character's IP.");
 					break;
 				}
+				
 				Player pl = World.getPlayer(wordList[1]);
+				
 				if (pl == null)
 				{
 					activeChar.sendMessage("Character " + wordList[1] + " not found.");
 					break;
 				}
+				
 				String ip_adr = pl.getIP();
+				
 				if (ip_adr.equalsIgnoreCase("<not connected>"))
 				{
 					activeChar.sendMessage("Character " + wordList[1] + " not found.");
 					break;
 				}
+				
 				activeChar.sendMessage("Character's IP: " + ip_adr);
 				break;
 		}
+		
 		return true;
 	}
 	

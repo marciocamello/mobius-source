@@ -266,17 +266,20 @@ public class SeekerEscort extends DefaultAI
 		final NpcInstance actor = getActor();
 		final Creature target = actor.getFollowTarget();
 		int[][] coords = {};
+		
 		if ((target == null) || !(target instanceof Player))
 		{
 			actor.deleteMe();
 			return false;
 		}
+		
 		final Player player = target.getPlayer();
 		final QuestState st = player.getQuestState(_10365_SeekerEscort.class);
 		final int zone = st.getInt("zone");
 		int saytimes = st.getInt("saytimes");
 		final int cond = st.getCond();
 		actor.setRunning();
+		
 		if ((saytimes == 9) || (cond == 0))
 		{
 			actor.deleteMe();
@@ -286,20 +289,25 @@ public class SeekerEscort extends DefaultAI
 			target.sendPacket(new ExShowScreenMessage(NpcString.KING_HAS_RETURNED_TO_DEF_RETURN_TO_DEF_AND_START_AGAIN, 5500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
 			return false;
 		}
+		
 		if ((lastSayTimer + SAY_RAFF) < System.currentTimeMillis())
 		{
 			lastSayTimer = System.currentTimeMillis();
 			Functions.npcSay(actor, NpcString.RUFF_RUFF_RRRRRR, ChatType.NPC_SAY, 800, st.getPlayer().getName());
 		}
+		
 		if (zone == 1)
 		{
 			coords = SMP_COORDS;
+			
 			if ((actor.getDistance(target) < 100) || (currentState >= coords.length) || (currentState == 0))
 			{
 				st.unset("saytimes");
+				
 				if (currentState < coords.length)
 				{
 					actor.moveToLocation(coords[currentState][0], coords[currentState][1], coords[currentState][2], Rnd.get(0, 50), true);
+					
 					if (actor.getDestination() == null)
 					{
 						++currentState;
@@ -333,17 +341,20 @@ public class SeekerEscort extends DefaultAI
 			{
 				st.set("zone", 3);
 			}
+			
 			st.unset("saytimes");
 		}
 		else if (zone == 3)
 		{
 			coords = SMP_COORDS2;
+			
 			if ((actor.getDistance(target) < 100) || (currentState1 >= coords.length))
 			{
 				if (currentState1 < coords.length)
 				{
 					st.unset("saytimes");
 					actor.moveToLocation(coords[currentState1][0], coords[currentState1][1], coords[currentState1][2], Rnd.get(0, 50), true);
+					
 					if (actor.getDestination() == null)
 					{
 						++currentState1;
@@ -367,6 +378,7 @@ public class SeekerEscort extends DefaultAI
 				st.set("saytimes", ++saytimes);
 			}
 		}
+		
 		return true;
 	}
 	

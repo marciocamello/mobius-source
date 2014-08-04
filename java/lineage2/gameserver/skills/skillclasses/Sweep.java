@@ -56,25 +56,30 @@ public class Sweep extends Skill
 		{
 			return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 		}
+		
 		if (target == null)
 		{
 			return false;
 		}
+		
 		if (!target.isMonster() || !target.isDead())
 		{
 			activeChar.sendPacket(Msg.INVALID_TARGET);
 			return false;
 		}
+		
 		if (!((MonsterInstance) target).isSpoiled())
 		{
 			activeChar.sendPacket(Msg.SWEEPER_FAILED_TARGET_NOT_SPOILED);
 			return false;
 		}
+		
 		if (!((MonsterInstance) target).isSpoiled((Player) activeChar))
 		{
 			activeChar.sendPacket(Msg.THERE_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER);
 			return false;
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
@@ -90,42 +95,53 @@ public class Sweep extends Skill
 		{
 			return;
 		}
+		
 		Player player = (Player) activeChar;
+		
 		for (Creature targ : targets)
 		{
 			if ((targ == null) || !targ.isMonster() || !targ.isDead() || !((MonsterInstance) targ).isSpoiled())
 			{
 				continue;
 			}
+			
 			MonsterInstance target = (MonsterInstance) targ;
+			
 			if (!target.isSpoiled(player))
 			{
 				activeChar.sendPacket(Msg.THERE_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER);
 				continue;
 			}
+			
 			List<RewardItem> items = target.takeSweep();
+			
 			if (items == null)
 			{
 				activeChar.getAI().setAttackTarget(null);
 				target.endDecayTask();
 				continue;
 			}
+			
 			for (RewardItem item : items)
 			{
 				ItemInstance sweep = ItemFunctions.createItem(item.itemId);
 				sweep.setCount(item.count);
+				
 				if (player.isInParty() && player.getParty().isDistributeSpoilLoot())
 				{
 					player.getParty().distributeItem(player, sweep, null);
 					continue;
 				}
+				
 				if (!player.getInventory().validateCapacity(sweep) || !player.getInventory().validateWeight(sweep))
 				{
 					sweep.dropToTheGround(player, target);
 					continue;
 				}
+				
 				player.getInventory().addItem(sweep);
 				SystemMessage smsg;
+				
 				if (item.count == 1)
 				{
 					smsg = new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1);
@@ -139,6 +155,7 @@ public class Sweep extends Skill
 					smsg.addNumber(item.count);
 					player.sendPacket(smsg);
 				}
+				
 				if (player.isInParty())
 				{
 					if (item.count == 1)
@@ -158,6 +175,7 @@ public class Sweep extends Skill
 					}
 				}
 			}
+			
 			activeChar.getAI().setAttackTarget(null);
 			target.endDecayTask();
 		}

@@ -54,6 +54,7 @@ public class _050_LanoscosSpecialBait extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("fisher_lanosco_q0050_0104.htm"))
 		{
 			st.setState(STARTED);
@@ -75,6 +76,7 @@ public class _050_LanoscosSpecialBait extends Quest implements ScriptFile
 				st.exitCurrentQuest(false);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -85,6 +87,7 @@ public class _050_LanoscosSpecialBait extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		int id = st.getState();
+		
 		if (npcId == Lanosco)
 		{
 			if (id == CREATED)
@@ -117,6 +120,7 @@ public class _050_LanoscosSpecialBait extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -124,11 +128,13 @@ public class _050_LanoscosSpecialBait extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		if ((npcId == SingingWind) && (st.getCond() == 1))
 		{
 			if ((st.getQuestItemsCount(EssenceofWind) < 100) && Rnd.chance(30))
 			{
 				st.giveItems(EssenceofWind, 1);
+				
 				if (st.getQuestItemsCount(EssenceofWind) == 100)
 				{
 					st.playSound(SOUND_MIDDLE);
@@ -140,6 +146,7 @@ public class _050_LanoscosSpecialBait extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 }

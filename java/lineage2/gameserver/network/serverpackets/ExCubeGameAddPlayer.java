@@ -35,9 +35,7 @@ public class ExCubeGameAddPlayer extends L2GameServerPacket
 	{
 		writeEx(0x98);
 		writeD(0x01);
-		
 		writeD(0xffffffff);
-		
 		writeD(_isRedTeam ? 0x01 : 0x00);
 		writeD(_objectId);
 		writeS(_name);

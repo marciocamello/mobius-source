@@ -66,6 +66,7 @@ public class SelectorStats
 		{
 			_connectionsMax.incrementAndGet();
 		}
+		
 		_connectionsTotal.incrementAndGet();
 	}
 	
@@ -87,6 +88,7 @@ public class SelectorStats
 		{
 			_bytesMaxPerRead.set(size);
 		}
+		
 		_incomingBytesTotal.addAndGet(size);
 	}
 	
@@ -100,6 +102,7 @@ public class SelectorStats
 		{
 			_bytesMaxPerWrite.set(size);
 		}
+		
 		_outgoingBytesTotal.addAndGet(size);
 	}
 	

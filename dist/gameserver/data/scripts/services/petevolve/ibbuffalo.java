@@ -48,36 +48,44 @@ public class ibbuffalo extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		Summon pl_pet = player.getSummonList().getPet();
+		
 		if (player.getInventory().getItemByItemId(BABY_BUFFALO_PANPIPE) == null)
 		{
 			show("scripts/services/petevolve/no_item.htm", player, npc);
 			return;
 		}
+		
 		if ((pl_pet == null) || pl_pet.isDead())
 		{
 			show("scripts/services/petevolve/evolve_no.htm", player, npc);
 			return;
 		}
+		
 		if (pl_pet.getNpcId() != BABY_BUFFALO)
 		{
 			show("scripts/services/petevolve/no_pet.htm", player, npc);
 			return;
 		}
+		
 		if (Config.ALT_IMPROVED_PETS_LIMITED_USE && player.isMageClass())
 		{
 			show("scripts/services/petevolve/no_class_w.htm", player, npc);
 			return;
 		}
+		
 		if (pl_pet.getLevel() < 55)
 		{
 			show("scripts/services/petevolve/no_level.htm", player, npc);
 			return;
 		}
+		
 		int controlItemId = pl_pet.getControlItemObjId();
 		player.getSummonList().unsummonPet(false);
 		ItemInstance control = player.getInventory().getItemByObjectId(controlItemId);

@@ -56,6 +56,7 @@ public class GameObjectTasks
 		public void runImpl()
 		{
 			Creature c = _ref.get();
+			
 			if (c != null)
 			{
 				c.deleteMe();
@@ -89,10 +90,12 @@ public class GameObjectTasks
 		public void runImpl()
 		{
 			Player player = _playerRef.get();
+			
 			if (player == null)
 			{
 				return;
 			}
+			
 			player.setConsumedSouls(player.getConsumedSouls() + 1, null);
 		}
 	}
@@ -123,11 +126,14 @@ public class GameObjectTasks
 		public void runImpl()
 		{
 			Player player = _playerRef.get();
+			
 			if (player == null)
 			{
 				return;
 			}
+			
 			long diff = Math.abs(System.currentTimeMillis() - player.getlastPvpAttack());
+			
 			if (diff > Config.PVP_TIME)
 			{
 				player.stopPvPFlag();
@@ -169,10 +175,12 @@ public class GameObjectTasks
 		public void runImpl()
 		{
 			Player player = _playerRef.get();
+			
 			if (player == null)
 			{
 				return;
 			}
+			
 			int hoursInGame = player.getHoursInGame();
 			player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_BEEN_PLAYING_FOR_AN_EXTENDED_PERIOD_OF_TIME_PLEASE_CONSIDER_TAKING_A_BREAK).addNumber(hoursInGame));
 			player.sendPacket(new SystemMessage(SystemMessage.YOU_OBTAINED_S1_RECOMMENDS).addNumber(player.addRecomLeft()));
@@ -205,10 +213,12 @@ public class GameObjectTasks
 		public void runImpl()
 		{
 			Player player = _playerRef.get();
+			
 			if (player == null)
 			{
 				return;
 			}
+			
 			player.setRecomBonusTime(0);
 			player.sendPacket(new ExVoteSystemInfo(player));
 		}
@@ -240,15 +250,18 @@ public class GameObjectTasks
 		public void runImpl()
 		{
 			Player player = _playerRef.get();
+			
 			if (player == null)
 			{
 				return;
 			}
+			
 			if (player.isDead() || !player.isInWater())
 			{
 				player.stopWaterTask();
 				return;
 			}
+			
 			double reduceHp = player.getMaxHp() < 100 ? 1 : player.getMaxHp() / 100;
 			player.reduceCurrentHp(reduceHp, 0, player, null, false, false, true, false, false, false, false);
 			player.sendPacket(new SystemMessage(SystemMessage.YOU_RECEIVED_S1_DAMAGE_BECAUSE_YOU_WERE_UNABLE_TO_BREATHE).addNumber((long) reduceHp));
@@ -281,10 +294,12 @@ public class GameObjectTasks
 		public void runImpl()
 		{
 			Player player = _playerRef.get();
+			
 			if (player == null)
 			{
 				return;
 			}
+			
 			player.setOfflineMode(false);
 			player.kick();
 		}
@@ -316,10 +331,12 @@ public class GameObjectTasks
 		public void runImpl()
 		{
 			Player player = _playerRef.get();
+			
 			if (player == null)
 			{
 				return;
 			}
+			
 			player.unblock();
 			player.standUp();
 			player.teleToLocation(17817, 170079, -3530, ReflectionManager.DEFAULT);
@@ -352,10 +369,12 @@ public class GameObjectTasks
 		public void runImpl()
 		{
 			Player player = _playerRef.get();
+			
 			if (player == null)
 			{
 				return;
 			}
+			
 			player.sittingTaskLaunched = false;
 			player.getAI().clearNextAction();
 		}
@@ -387,12 +406,15 @@ public class GameObjectTasks
 		public void runImpl()
 		{
 			Player player = _playerRef.get();
+			
 			if (player == null)
 			{
 				return;
 			}
+			
 			player.sittingTaskLaunched = false;
 			player.setSitting(false);
+			
 			if (!player.getAI().setNextIntention())
 			{
 				player.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
@@ -437,10 +459,12 @@ public class GameObjectTasks
 		public void runImpl()
 		{
 			Creature cha, target;
+			
 			if (((cha = _charRef.get()) == null) || ((target = _targetRef.get()) == null))
 			{
 				return;
 			}
+			
 			cha.altOnMagicUseTimer(target, _skill);
 		}
 	}
@@ -471,10 +495,12 @@ public class GameObjectTasks
 		public void runImpl()
 		{
 			Creature character = _charRef.get();
+			
 			if (character == null)
 			{
 				return;
 			}
+			
 			character.onCastEndTime(true);
 		}
 	}
@@ -552,15 +578,19 @@ public class GameObjectTasks
 		public void runImpl()
 		{
 			Creature character, target;
+			
 			if (((character = _charRef.get()) == null) || ((target = _targetRef.get()) == null))
 			{
 				return;
 			}
+			
 			if (character.isAttackAborted())
 			{
 				return;
 			}
+			
 			character.onHitTimer(target, _damage, _reflectableDamage, _crit, _miss, _soulshot, _shld, _unchargeSS);
+			
 			if (_notify)
 			{
 				character.getAI().notifyEvent(CtrlEvent.EVT_READY_TO_ACT);
@@ -600,17 +630,21 @@ public class GameObjectTasks
 		public void runImpl()
 		{
 			Creature character = _charRef.get();
+			
 			if (character == null)
 			{
 				return;
 			}
+			
 			Skill castingSkill = character.getCastingSkill();
 			Creature castingTarget = character.getCastingTarget();
+			
 			if ((castingSkill == null) || (castingTarget == null))
 			{
 				character.clearCastVars();
 				return;
 			}
+			
 			character.onMagicUseTimer(castingTarget, castingSkill, _forceUse);
 		}
 	}
@@ -647,17 +681,21 @@ public class GameObjectTasks
 		public void runImpl()
 		{
 			Creature character = _charRef.get();
+			
 			if (character == null)
 			{
 				return;
 			}
+			
 			Skill castingSkill = character.getCastingSkill();
 			Creature castingTarget = character.getCastingTarget();
+			
 			if ((castingSkill == null) || (castingTarget == null))
 			{
 				character.clearCastVars();
 				return;
 			}
+			
 			List<Creature> targets = castingSkill.getTargets(character, castingTarget, _forceUse);
 			character.broadcastPacket(new MagicSkillLaunched(character.getObjectId(), castingSkill.getDisplayId(), castingSkill.getDisplayLevel(), targets));
 		}
@@ -717,10 +755,12 @@ public class GameObjectTasks
 		public void runImpl()
 		{
 			Creature character = _charRef.get();
+			
 			if ((character == null) || !character.hasAI())
 			{
 				return;
 			}
+			
 			character.getAI().notifyEvent(_evt, _agr0, _agr1);
 		}
 	}

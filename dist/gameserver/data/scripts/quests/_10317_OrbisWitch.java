@@ -39,6 +39,7 @@ public class _10317_OrbisWitch extends Quest implements ScriptFile
 		{
 			return "noquest";
 		}
+		
 		if (event.equalsIgnoreCase("32946-08.htm"))
 		{
 			st.setCond(1);
@@ -52,6 +53,7 @@ public class _10317_OrbisWitch extends Quest implements ScriptFile
 			st.giveItems(ADENA_ID, 506760, true);
 			st.exitCurrentQuest(false);
 		}
+		
 		return event;
 	}
 	
@@ -59,12 +61,15 @@ public class _10317_OrbisWitch extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
+		
 		if (st == null)
 		{
 			return htmltext;
 		}
+		
 		Player player = st.getPlayer();
 		QuestState previous = player.getQuestState(_10316_UndecayingMemoryOfThePast.class);
+		
 		if (npc.getNpcId() == NPC_OPERA)
 		{
 			if ((previous == null) || (!previous.isCompleted()) || (player.getLevel() < 95))
@@ -72,19 +77,23 @@ public class _10317_OrbisWitch extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 				return "32946-03.htm";
 			}
+			
 			switch (st.getState())
 			{
 				case COMPLETED:
 					htmltext = "32946-02.htm";
 					break;
+				
 				case CREATED:
 					htmltext = "32946-01.htm";
 					break;
+				
 				case STARTED:
 					if (st.getCond() != 1)
 					{
 						break;
 					}
+					
 					htmltext = "32946-09.htm";
 			}
 		}
@@ -102,6 +111,7 @@ public class _10317_OrbisWitch extends Quest implements ScriptFile
 				htmltext = "32892-03.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	

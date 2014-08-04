@@ -62,14 +62,17 @@ public class Version
 	public Version(Class<?> c)
 	{
 		File jarName = null;
+		
 		try
 		{
 			jarName = Locator.getClassSource(c);
+			
 			if (!jarName.getName().endsWith(".jar"))
 			{
 				_log.warn("Version: Cannot find a jar library (" + jarName.getPath() + ")");
 				return;
 			}
+			
 			JarFile jarFile = new JarFile(jarName);
 			Attributes attrs = jarFile.getManifest().getMainAttributes();
 			setBuildJdk(attrs);
@@ -93,6 +96,7 @@ public class Version
 	private void setBuildNumber(Attributes attrs)
 	{
 		String buildNumber = attrs.getValue("Implementation-Number");
+		
 		if (buildNumber != null)
 		{
 			_buildNumber = buildNumber;
@@ -110,6 +114,7 @@ public class Version
 	private void setVersionNumber(Attributes attrs)
 	{
 		String versionNumber = attrs.getValue("Implementation-Version");
+		
 		if (versionNumber != null)
 		{
 			_versionNumber = versionNumber;
@@ -127,6 +132,7 @@ public class Version
 	private void setRevisionNumber(Attributes attrs)
 	{
 		String revisionNumber = attrs.getValue("Implementation-Build");
+		
 		if (revisionNumber != null)
 		{
 			_revisionNumber = revisionNumber;
@@ -144,6 +150,7 @@ public class Version
 	private void setBuildJdk(Attributes attrs)
 	{
 		String buildJdk = attrs.getValue("Build-Jdk");
+		
 		if (buildJdk != null)
 		{
 			_buildJdk = buildJdk;
@@ -151,6 +158,7 @@ public class Version
 		else
 		{
 			buildJdk = attrs.getValue("Created-By");
+			
 			if (buildJdk != null)
 			{
 				_buildJdk = buildJdk;
@@ -169,6 +177,7 @@ public class Version
 	private void setBuildDate(Attributes attrs)
 	{
 		String buildDate = attrs.getValue("Build-Date");
+		
 		if (buildDate != null)
 		{
 			_buildDate = buildDate;
@@ -240,6 +249,7 @@ public class Version
 	public void setVendor(Attributes attrs)
 	{
 		String vendor = attrs.getValue("Vendor");
+		
 		if (vendor != null)
 		{
 			_vendor = vendor;
@@ -248,6 +258,7 @@ public class Version
 		{
 			_vendor = "There is something wrong going on here!";
 		}
+		
 		_vendor = vendor;
 	}
 }

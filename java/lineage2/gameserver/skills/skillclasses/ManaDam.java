@@ -46,10 +46,12 @@ public class ManaDam extends Skill
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{
 		int sps = 0;
+		
 		if (isSSPossible())
 		{
 			sps = activeChar.getChargedSpiritShot();
 		}
+		
 		for (Creature target : targets)
 		{
 			if (target != null)
@@ -58,13 +60,16 @@ public class ManaDam extends Skill
 				{
 					continue;
 				}
+				
 				int magicLevel = getMagicLevel() == 0 ? activeChar.getLevel() : getMagicLevel();
 				int landRate = Rnd.get(30, 100);
 				landRate *= target.getLevel();
 				landRate /= magicLevel;
+				
 				if (Rnd.chance(landRate))
 				{
 					double mAtk = activeChar.getMAtk(target, this);
+					
 					if (sps == 2)
 					{
 						mAtk *= 4;
@@ -73,19 +78,24 @@ public class ManaDam extends Skill
 					{
 						mAtk *= 2;
 					}
+					
 					double mDef = target.getMDef(activeChar, this);
+					
 					if (mDef < 1.)
 					{
 						mDef = 1.;
 					}
+					
 					double damage = (Math.sqrt(mAtk) * this.getPower() * (target.getMaxMp() / 97)) / mDef;
 					boolean crit = Formulas.calcMCrit(activeChar.getMagicCriticalRate(target, this));
+					
 					if (crit)
 					{
 						activeChar.sendPacket(Msg.MAGIC_CRITICAL_HIT);
 						damage *= 2.0;
 						damage += activeChar.getMagicCriticalDmg(target, this);
 					}
+					
 					target.reduceCurrentMp(damage, activeChar);
 				}
 				else
@@ -95,9 +105,11 @@ public class ManaDam extends Skill
 					target.sendPacket(msg);
 					target.reduceCurrentHp(1., 0, activeChar, this, true, true, false, true, false, false, true);
 				}
+				
 				getEffects(activeChar, target, getActivateRate() > 0, false);
 			}
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());

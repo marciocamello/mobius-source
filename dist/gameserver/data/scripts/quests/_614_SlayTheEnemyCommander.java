@@ -21,12 +21,6 @@ public class _614_SlayTheEnemyCommander extends Quest implements ScriptFile
 {
 	private static final int DURAI = 31377;
 	private static final int KETRAS_COMMANDER_TAYR = 25302;
-	@SuppressWarnings("unused")
-	private static final int MARK_OF_VARKA_ALLIANCE1 = 7221;
-	@SuppressWarnings("unused")
-	private static final int MARK_OF_VARKA_ALLIANCE2 = 7222;
-	@SuppressWarnings("unused")
-	private static final int MARK_OF_VARKA_ALLIANCE3 = 7223;
 	private static final int MARK_OF_VARKA_ALLIANCE4 = 7224;
 	private static final int MARK_OF_VARKA_ALLIANCE5 = 7225;
 	private static final int HEAD_OF_TAYR = 7241;
@@ -59,6 +53,7 @@ public class _614_SlayTheEnemyCommander extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_accept"))
 		{
 			htmltext = "elder_ashas_barka_durai_q0614_0104.htm";
@@ -83,6 +78,7 @@ public class _614_SlayTheEnemyCommander extends Quest implements ScriptFile
 				htmltext = "elder_ashas_barka_durai_q0614_0106.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -91,6 +87,7 @@ public class _614_SlayTheEnemyCommander extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (cond == 0)
 		{
 			if (st.getPlayer().getLevel() >= 75)
@@ -119,6 +116,7 @@ public class _614_SlayTheEnemyCommander extends Quest implements ScriptFile
 		{
 			htmltext = "elder_ashas_barka_durai_q0614_0105.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -131,6 +129,7 @@ public class _614_SlayTheEnemyCommander extends Quest implements ScriptFile
 			st.setCond(2);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		return null;
 	}
 }

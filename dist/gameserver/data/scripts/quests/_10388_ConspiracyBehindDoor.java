@@ -53,6 +53,7 @@ public class _10388_ConspiracyBehindDoor extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("go.htm"))
 		{
 			st.setCond(1);
@@ -76,6 +77,7 @@ public class _10388_ConspiracyBehindDoor extends Quest implements ScriptFile
 			st.giveItems(ADENA_ID, 65136);
 			st.addExpAndSp(29638350, 2963835);
 		}
+		
 		return htmltext;
 	}
 	
@@ -86,6 +88,7 @@ public class _10388_ConspiracyBehindDoor extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		int id = st.getState();
+		
 		if (id == CREATED)
 		{
 			if (st.getPlayer().getLevel() >= 97)
@@ -118,6 +121,7 @@ public class _10388_ConspiracyBehindDoor extends Quest implements ScriptFile
 				return "cond3.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

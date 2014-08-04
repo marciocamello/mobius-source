@@ -87,8 +87,8 @@ public class OctavisNormalStage3 extends Fighter
 		if (!actor.isCastingNow() && (_eternalblizzardReuseTimer < System.currentTimeMillis()))
 		{
 			actor.doCast(SkillTable.getInstance().getInfo(Skill_EternalBlizzard, 1), actor, true);
-			
 			Reflection r = getActor().getReflection();
+			
 			for (Player p : r.getPlayers())
 			{
 				p.sendPacket(new ExShowScreenMessage(NpcString.I_FEEL_STRONG_MAGIC_FLOW, 3000, ScreenMessageAlign.MIDDLE_CENTER, true));
@@ -156,6 +156,7 @@ public class OctavisNormalStage3 extends Fighter
 		{
 			actor.doCast(SkillTable.getInstance().getInfo(Skill_Anger, 1), actor, true);
 			_angerReuseTimer = System.currentTimeMillis() + (_angerReuseDelay * 1000L);
+			
 			// Random agro
 			if ((mostHated != null) && (randomHated != null) && (actor.getAggroList().getCharMap().size() > 1))
 			{
@@ -195,6 +196,7 @@ public class OctavisNormalStage3 extends Fighter
 				}
 			}
 		}
+		
 		super.thinkAttack();
 	}
 	
@@ -202,7 +204,6 @@ public class OctavisNormalStage3 extends Fighter
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		
 		long generalReuse = System.currentTimeMillis() + 30000L;
 		_eternalblizzardReuseTimer += generalReuse + (Rnd.get(1, 20) * 1000L);
 		_iceballReuseTimer += generalReuse + (Rnd.get(1, 20) * 1000L);
@@ -212,8 +213,8 @@ public class OctavisNormalStage3 extends Fighter
 		_icestormReuseTimer += generalReuse + (Rnd.get(1, 20) * 1000L);
 		_deathsentenceReuseTimer += generalReuse + (Rnd.get(1, 20) * 1000L);
 		_angerReuseTimer += generalReuse + (Rnd.get(1, 20) * 1000L);
-		
 		Reflection r = getActor().getReflection();
+		
 		for (Player p : r.getPlayers())
 		{
 			this.notifyEvent(CtrlEvent.EVT_AGGRESSION, p, 2);
@@ -229,6 +230,7 @@ public class OctavisNormalStage3 extends Fighter
 		}
 		
 		Reflection ref = getActor().getReflection();
+		
 		if (!getActor().isDead() && (_idleDelay > 0) && ((_idleDelay + 60000) < System.currentTimeMillis()))
 		{
 			if (!ref.isDefault())
@@ -237,6 +239,7 @@ public class OctavisNormalStage3 extends Fighter
 				{
 					p.sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(1));
 				}
+				
 				ref.collapse();
 			}
 		}

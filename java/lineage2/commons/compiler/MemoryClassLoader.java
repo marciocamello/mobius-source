@@ -39,14 +39,17 @@ public class MemoryClassLoader extends ClassLoader
 	protected Class<?> findClass(String name) throws ClassNotFoundException
 	{
 		MemoryByteCode mbc = classes.get(name);
+		
 		if (mbc == null)
 		{
 			mbc = classes.get(name);
+			
 			if (mbc == null)
 			{
 				return super.findClass(name);
 			}
 		}
+		
 		return defineClass(name, mbc.getBytes(), 0, mbc.getBytes().length);
 	}
 	

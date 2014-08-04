@@ -50,9 +50,11 @@ public class ItemHandler extends AbstractHolder
 	public void registerItemHandler(IItemHandler handler)
 	{
 		int[] ids = handler.getItemIds();
+		
 		for (int itemId : ids)
 		{
 			ItemTemplate template = ItemHolder.getInstance().getTemplate(itemId);
+			
 			if (template == null)
 			{
 				warn("Item not found: " + itemId + " handler: " + handler.getClass().getSimpleName());

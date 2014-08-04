@@ -42,7 +42,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class ManorManagerInstance extends MerchantInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -62,7 +62,6 @@ public class ManorManagerInstance extends MerchantInstance
 		if (CastleManorManager.getInstance().isDisabled())
 		{
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
-			
 			html.setFile("npcdefault.htm");
 			html.replace("%objectId%", String.valueOf(getObjectId()));
 			html.replace("%npcname%", getName());
@@ -94,6 +93,7 @@ public class ManorManagerInstance extends MerchantInstance
 		{
 			return;
 		}
+		
 		if (command.startsWith("manor_menu_select"))
 		{
 			if (CastleManorManager.getInstance().isUnderMaintenance())
@@ -101,6 +101,7 @@ public class ManorManagerInstance extends MerchantInstance
 				player.sendPacket(ActionFail.STATIC, Msg.THE_MANOR_SYSTEM_IS_CURRENTLY_UNDER_MAINTENANCE);
 				return;
 			}
+			
 			String params = command.substring(command.indexOf("?") + 1);
 			StringTokenizer st = new StringTokenizer(params, "&");
 			int ask = Integer.parseInt(st.nextToken().split("=")[1]);
@@ -108,6 +109,7 @@ public class ManorManagerInstance extends MerchantInstance
 			int time = Integer.parseInt(st.nextToken().split("=")[1]);
 			Castle castle = getCastle();
 			int castleId;
+			
 			if (state == -1)
 			{
 				castleId = castle.getId();
@@ -116,6 +118,7 @@ public class ManorManagerInstance extends MerchantInstance
 			{
 				castleId = state;
 			}
+			
 			switch (ask)
 			{
 				case 1:
@@ -127,24 +130,30 @@ public class ManorManagerInstance extends MerchantInstance
 					{
 						NpcTradeList tradeList = new NpcTradeList(0);
 						List<SeedProduction> seeds = castle.getSeedProduction(CastleManorManager.PERIOD_CURRENT);
+						
 						for (SeedProduction s : seeds)
 						{
 							TradeItem item = new TradeItem();
 							item.setItemId(s.getId());
 							item.setOwnersPrice(s.getPrice());
 							item.setCount(s.getCanProduce());
+							
 							if ((item.getCount() > 0) && (item.getOwnersPrice() > 0))
 							{
 								tradeList.addItem(item);
 							}
 						}
+						
 						BuyListSeed bl = new BuyListSeed(tradeList, castleId, player.getAdena());
 						player.sendPacket(bl);
 					}
+					
 					break;
+				
 				case 2:
 					player.sendPacket(new ExShowSellCropList(player, castleId, castle.getCropProcure(CastleManorManager.PERIOD_CURRENT)));
 					break;
+				
 				case 3:
 					if ((time == 1) && !ResidenceHolder.getInstance().getResidence(Castle.class, castleId).isNextPeriodApproved())
 					{
@@ -154,7 +163,9 @@ public class ManorManagerInstance extends MerchantInstance
 					{
 						player.sendPacket(new ExShowSeedInfo(castleId, ResidenceHolder.getInstance().getResidence(Castle.class, castleId).getSeedProduction(time)));
 					}
+					
 					break;
+				
 				case 4:
 					if ((time == 1) && !ResidenceHolder.getInstance().getResidence(Castle.class, castleId).isNextPeriodApproved())
 					{
@@ -164,13 +175,17 @@ public class ManorManagerInstance extends MerchantInstance
 					{
 						player.sendPacket(new ExShowCropInfo(castleId, ResidenceHolder.getInstance().getResidence(Castle.class, castleId).getCropProcure(time)));
 					}
+					
 					break;
+				
 				case 5:
 					player.sendPacket(new ExShowManorDefaultInfo());
 					break;
+				
 				case 6:
 					showShopWindow(player, Integer.parseInt("3" + getNpcId()), false);
 					break;
+				
 				case 9:
 					player.sendPacket(new ExShowProcureCropDetail(state));
 					break;

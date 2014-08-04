@@ -55,10 +55,12 @@ public class Aggression extends Skill
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{
 		int effect = _effectPoint;
+		
 		if (isSSPossible() && (activeChar.getChargedSoulShot() || (activeChar.getChargedSpiritShot() > 0)))
 		{
 			effect *= 2;
 		}
+		
 		for (Creature target : targets)
 		{
 			if (target != null)
@@ -67,6 +69,7 @@ public class Aggression extends Skill
 				{
 					continue;
 				}
+				
 				if (target.isNpc())
 				{
 					if (_unaggring)
@@ -79,6 +82,7 @@ public class Aggression extends Skill
 					else
 					{
 						target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, activeChar, effect);
+						
 						if (!_silent)
 						{
 							target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, activeChar, 0);
@@ -89,9 +93,11 @@ public class Aggression extends Skill
 				{
 					target.setTarget(activeChar);
 				}
+				
 				getEffects(activeChar, target, getActivateRate() > 0, false);
 			}
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());

@@ -56,6 +56,7 @@ public class _10293_SevenSignsForbiddenBook extends Quest implements ScriptFile
 	{
 		Player player = st.getPlayer();
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("elcardia_q10293_3.htm"))
 		{
 			st.setCond(1);
@@ -114,6 +115,7 @@ public class _10293_SevenSignsForbiddenBook extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -124,16 +126,19 @@ public class _10293_SevenSignsForbiddenBook extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
+		
 		if (!player.isBaseClassActive())
 		{
 			return "no_subclass_allowed.htm";
 		}
+		
 		switch (npcId)
 		{
 			case Elcardia:
 				if (cond == 0)
 				{
 					QuestState qs = player.getQuestState(_10292_SevenSignsGirlOfDoubt.class);
+					
 					if ((player.getLevel() >= 81) && (qs != null) && qs.isCompleted())
 					{
 						htmltext = "elcardia_q10293_1.htm";
@@ -152,13 +157,17 @@ public class _10293_SevenSignsForbiddenBook extends Quest implements ScriptFile
 				{
 					htmltext = "elcardia_q10293_5.htm";
 				}
+				
 				break;
+			
 			case Sophia:
 				if ((cond >= 1) && (cond <= 7))
 				{
 					htmltext = "sophia_q10293_1.htm";
 				}
+				
 				break;
+			
 			case SophiaInzone1:
 				if (cond == 1)
 				{
@@ -180,7 +189,9 @@ public class _10293_SevenSignsForbiddenBook extends Quest implements ScriptFile
 				{
 					htmltext = "sophia2_q10293_11.htm";
 				}
+				
 				break;
+			
 			case ElcardiaInzone1:
 				if ((cond == 1) || (cond == 3) || (cond == 5) || (cond == 6))
 				{
@@ -206,6 +217,7 @@ public class _10293_SevenSignsForbiddenBook extends Quest implements ScriptFile
 				}
 				
 				break;
+			
 			case SophiaInzone2:
 				if ((cond == 6) || (cond == 7))
 				{
@@ -215,25 +227,31 @@ public class _10293_SevenSignsForbiddenBook extends Quest implements ScriptFile
 				{
 					htmltext = "sophia3_q10293_4.htm";
 				}
+				
 				break;
+			
 			// Books
 			case 32809:
 				htmltext = "book_q10293_3.htm";
 				break;
+			
 			case 32811:
 				htmltext = "book_q10293_1.htm";
 				break;
+			
 			case 32812:
 				htmltext = "book_q10293_2.htm";
 				break;
+			
 			case 32810:
 				htmltext = "book_q10293_4.htm";
 				break;
+			
 			case 32813:
 				htmltext = "book_q10293_5.htm";
 				break;
-		
 		}
+		
 		return htmltext;
 	}
 	

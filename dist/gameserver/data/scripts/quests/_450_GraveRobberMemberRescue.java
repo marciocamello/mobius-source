@@ -64,6 +64,7 @@ public class _450_GraveRobberMemberRescue extends Quest implements ScriptFile
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return event;
 	}
 	
@@ -75,6 +76,7 @@ public class _450_GraveRobberMemberRescue extends Quest implements ScriptFile
 		int id = st.getState();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
+		
 		if (npcId == KANEMIKA)
 		{
 			if (id == CREATED)
@@ -132,6 +134,7 @@ public class _450_GraveRobberMemberRescue extends Quest implements ScriptFile
 						npc.deleteMe();
 					}
 				}, 2500L);
+				
 				if (st.getQuestItemsCount(EVIDENCE_OF_MIGRATION) == 10)
 				{
 					st.setCond(2);
@@ -144,6 +147,7 @@ public class _450_GraveRobberMemberRescue extends Quest implements ScriptFile
 				player.sendPacket(new ExShowScreenMessage("The grave robber warrior has been filled with dark energy and is attacking you!", 4000, ScreenMessageAlign.MIDDLE_CENTER, false));
 				NpcInstance warrior = st.addSpawn(WARRIOR_MON, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), 100, 120000);
 				warrior.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, player, Rnd.get(1, 100));
+				
 				if (Rnd.chance(50))
 				{
 					Functions.npcSay(warrior, "...Grunt... oh...");
@@ -152,10 +156,12 @@ public class _450_GraveRobberMemberRescue extends Quest implements ScriptFile
 				{
 					Functions.npcSay(warrior, "Grunt... What's... wrong with me...");
 				}
+				
 				npc.decayMe();
 				return null;
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -165,11 +171,14 @@ public class _450_GraveRobberMemberRescue extends Quest implements ScriptFile
 		{
 			return true;
 		}
+		
 		String var = player.getVar(getName());
+		
 		if (var == null)
 		{
 			return true;
 		}
+		
 		return (Long.parseLong(var) - System.currentTimeMillis()) > (24 * 60 * 60 * 1000);
 	}
 }

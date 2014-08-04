@@ -82,6 +82,7 @@ public class Tully extends Fighter
 				SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(32371));
 				sp.setLoc(element);
 				sp.doSpawn(true);
+				
 				if (!s)
 				{
 					Functions.npcShout(sp.getLastSpawn(), "Self Destruction mechanism launched: 10 minutes to explosion");
@@ -93,6 +94,7 @@ public class Tully extends Fighter
 				e.printStackTrace();
 			}
 		}
+		
 		for (Location element : locFTT)
 		{
 			try
@@ -106,6 +108,7 @@ public class Tully extends Fighter
 				e.printStackTrace();
 			}
 		}
+		
 		try
 		{
 			final SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(32370));
@@ -117,6 +120,7 @@ public class Tully extends Fighter
 		{
 			e.printStackTrace();
 		}
+		
 		ThreadPoolManager.getInstance().schedule(new UnspawnAndExplode(), 600 * 1000L);
 		super.onEvtDead(killer);
 	}
@@ -144,10 +148,12 @@ public class Tully extends Fighter
 			{
 				npc.deleteMe();
 			}
+			
 			for (NpcInstance npc : GameObjectsStorage.getAllByNpcId(22392, true))
 			{
 				npc.deleteMe();
 			}
+			
 			if (removable_ghost != null)
 			{
 				removable_ghost.deleteMe();

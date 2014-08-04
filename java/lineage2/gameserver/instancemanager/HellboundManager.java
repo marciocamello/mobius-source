@@ -83,6 +83,7 @@ public class HellboundManager
 		{
 			_instance = new HellboundManager();
 		}
+		
 		return _instance;
 	}
 	
@@ -138,10 +139,12 @@ public class HellboundManager
 	public static void reduceConfidence(long value)
 	{
 		long i = getConfidence() - value;
+		
 		if (i < 1)
 		{
 			i = 1;
 		}
+		
 		ServerVariables.set("HellboundConfidence", i);
 	}
 	
@@ -165,6 +168,7 @@ public class HellboundManager
 		boolean bernardBoxes = ServerVariables.getBool("HB_bernardBoxes", false);
 		boolean derekKilled = ServerVariables.getBool("HB_derekKilled", false);
 		boolean captainKilled = ServerVariables.getBool("HB_captainKilled", false);
+		
 		if (confidence < 1)
 		{
 			return 0;
@@ -210,6 +214,7 @@ public class HellboundManager
 			{
 				return 9;
 			}
+			
 			return 8;
 		}
 		else if ((confidence >= 2100000) && (confidence < 2200000))
@@ -220,6 +225,7 @@ public class HellboundManager
 		{
 			return 11;
 		}
+		
 		return 0;
 	}
 	
@@ -249,10 +255,12 @@ public class HellboundManager
 			{
 				return;
 			}
+			
 			switch (getHellboundLevel())
 			{
 				case 0:
 					break;
+				
 				case 1:
 				{
 					switch (cha.getNpcId())
@@ -263,19 +271,23 @@ public class HellboundManager
 						case 22325:
 							addConfidence(1);
 							break;
+						
 						case 22327:
 						case 22328:
 						case 22329:
 							addConfidence(3);
 							break;
+						
 						case 22322:
 						case 22323:
 						case 32299:
 							reduceConfidence(10);
 							break;
 					}
+					
 					break;
 				}
+				
 				case 2:
 				{
 					switch (cha.getNpcId())
@@ -284,14 +296,17 @@ public class HellboundManager
 						case 18464:
 							addConfidence(5);
 							break;
+						
 						case 22322:
 						case 22323:
 						case 32299:
 							reduceConfidence(10);
 							break;
 					}
+					
 					break;
 				}
+				
 				case 3:
 				{
 					switch (cha.getNpcId())
@@ -300,17 +315,21 @@ public class HellboundManager
 						case 22343:
 							addConfidence(3);
 							break;
+						
 						case 22341:
 							addConfidence(100);
 							break;
+						
 						case 22322:
 						case 22323:
 						case 32299:
 							reduceConfidence(10);
 							break;
 					}
+					
 					break;
 				}
+				
 				case 4:
 				{
 					switch (cha.getNpcId())
@@ -319,14 +338,17 @@ public class HellboundManager
 							addConfidence(10000);
 							ServerVariables.set("HB_derekKilled", true);
 							break;
+						
 						case 22322:
 						case 22323:
 						case 32299:
 							reduceConfidence(10);
 							break;
 					}
+					
 					break;
 				}
+				
 				case 5:
 				{
 					switch (cha.getNpcId())
@@ -335,8 +357,10 @@ public class HellboundManager
 							reduceConfidence(50);
 							break;
 					}
+					
 					break;
 				}
+				
 				case 6:
 				{
 					switch (cha.getNpcId())
@@ -344,12 +368,15 @@ public class HellboundManager
 						case 22326:
 							addConfidence(500);
 							break;
+						
 						case 18484:
 							addConfidence(5);
 							break;
 					}
+					
 					break;
 				}
+				
 				case 8:
 				{
 					switch (cha.getNpcId())
@@ -359,8 +386,10 @@ public class HellboundManager
 							ServerVariables.set("HB_captainKilled", true);
 							break;
 					}
+					
 					break;
 				}
+				
 				default:
 					break;
 			}
@@ -374,6 +403,7 @@ public class HellboundManager
 	{
 		SimpleSpawner spawnDat;
 		NpcTemplate template;
+		
 		for (HellboundSpawn hbsi : _list)
 		{
 			if (ArrayUtils.contains(hbsi.getStages(), getHellboundLevel()))
@@ -381,18 +411,22 @@ public class HellboundManager
 				try
 				{
 					template = NpcHolder.getInstance().getTemplate(hbsi.getNpcId());
+					
 					for (int i = 0; i < hbsi.getAmount(); i++)
 					{
 						spawnDat = new SimpleSpawner(template);
 						spawnDat.setAmount(1);
+						
 						if (hbsi.getLoc() != null)
 						{
 							spawnDat.setLoc(hbsi.getLoc());
 						}
+						
 						if (hbsi.getSpawnTerritory() != null)
 						{
 							spawnDat.setTerritory(hbsi.getSpawnTerritory());
 						}
+						
 						spawnDat.setReflection(ReflectionManager.DEFAULT);
 						spawnDat.setRespawnDelay(hbsi.getRespawn(), hbsi.getRespawnRnd());
 						spawnDat.setRespawnTime(0);
@@ -408,6 +442,7 @@ public class HellboundManager
 				}
 			}
 		}
+		
 		_log.info("HellboundManager: Spawned " + _spawnList.size() + " mobs and NPCs according to the current Hellbound stage");
 	}
 	
@@ -418,6 +453,7 @@ public class HellboundManager
 	{
 		_list = new ArrayList<>();
 		_spawnList = new ArrayList<>();
+		
 		try
 		{
 			File file = new File(Config.DATAPACK_ROOT + "/data/xml/other/hellbound_spawnlist.xml");
@@ -426,6 +462,7 @@ public class HellboundManager
 			factory.setIgnoringComments(true);
 			Document doc1 = factory.newDocumentBuilder().parse(file);
 			int counter = 0;
+			
 			for (Node n1 = doc1.getFirstChild(); n1 != null; n1 = n1.getNextSibling())
 			{
 				if ("list".equalsIgnoreCase(n1.getNodeName()))
@@ -437,40 +474,52 @@ public class HellboundManager
 							counter++;
 							int npcId = Integer.parseInt(d1.getAttributes().getNamedItem("npc_id").getNodeValue());
 							Location spawnLoc = null;
+							
 							if (d1.getAttributes().getNamedItem("loc") != null)
 							{
 								spawnLoc = Location.parseLoc(d1.getAttributes().getNamedItem("loc").getNodeValue());
 							}
+							
 							int count = 1;
+							
 							if (d1.getAttributes().getNamedItem("count") != null)
 							{
 								count = Integer.parseInt(d1.getAttributes().getNamedItem("count").getNodeValue());
 							}
+							
 							int respawn = 60;
+							
 							if (d1.getAttributes().getNamedItem("respawn") != null)
 							{
 								respawn = Integer.parseInt(d1.getAttributes().getNamedItem("respawn").getNodeValue());
 							}
+							
 							int respawnRnd = 0;
+							
 							if (d1.getAttributes().getNamedItem("respawn_rnd") != null)
 							{
 								respawnRnd = Integer.parseInt(d1.getAttributes().getNamedItem("respawn_rnd").getNodeValue());
 							}
+							
 							Node att = d1.getAttributes().getNamedItem("stage");
 							StringTokenizer st = new StringTokenizer(att.getNodeValue(), ";");
 							int tokenCount = st.countTokens();
 							int[] stages = new int[tokenCount];
+							
 							for (int i = 0; i < tokenCount; i++)
 							{
 								Integer value = Integer.decode(st.nextToken().trim());
 								stages[i] = value;
 							}
+							
 							Territory territory = null;
+							
 							for (Node s1 = d1.getFirstChild(); s1 != null; s1 = s1.getNextSibling())
 							{
 								if ("territory".equalsIgnoreCase(s1.getNodeName()))
 								{
 									Polygon poly = new Polygon();
+									
 									for (Node s2 = s1.getFirstChild(); s2 != null; s2 = s2.getNextSibling())
 									{
 										if ("add".equalsIgnoreCase(s2.getNodeName()))
@@ -482,7 +531,9 @@ public class HellboundManager
 											poly.add(x, y).setZmin(minZ).setZmax(maxZ);
 										}
 									}
+									
 									territory = new Territory().add(poly);
+									
 									if (!poly.validate())
 									{
 										_log.error("HellboundManager: Invalid spawn territory : " + poly + "!");
@@ -490,17 +541,20 @@ public class HellboundManager
 									}
 								}
 							}
+							
 							if ((spawnLoc == null) && (territory == null))
 							{
 								_log.error("HellboundManager: no spawn data for npc id : " + npcId + "!");
 								continue;
 							}
+							
 							HellboundSpawn hbs = new HellboundSpawn(npcId, spawnLoc, count, territory, respawn, respawnRnd, stages);
 							_list.add(hbs);
 						}
 					}
 				}
 			}
+			
 			_log.info("HellboundManager: Loaded " + counter + " spawn entries.");
 		}
 		catch (Exception e)
@@ -519,6 +573,7 @@ public class HellboundManager
 		{
 			spawnToDelete.deleteAll();
 		}
+		
 		_spawnList.clear();
 	}
 	
@@ -690,58 +745,72 @@ public class HellboundManager
 			sdoor_trans_mesh00,
 			Hell_gate_door
 		};
+		
 		for (int _door : _doors)
 		{
 			ReflectionUtils.getDoor(_door).closeMe();
 		}
+		
 		switch (getHellboundLevel())
 		{
 			case 0:
 				break;
+			
 			case 1:
 				break;
+			
 			case 2:
 				break;
+			
 			case 3:
 				break;
+			
 			case 4:
 				break;
+			
 			case 5:
 				ReflectionUtils.getDoor(NativeHell_native0131).openMe();
 				ReflectionUtils.getDoor(NativeHell_native0132).openMe();
 				break;
+			
 			case 6:
 				ReflectionUtils.getDoor(NativeHell_native0131).openMe();
 				ReflectionUtils.getDoor(NativeHell_native0132).openMe();
 				break;
+			
 			case 7:
 				ReflectionUtils.getDoor(NativeHell_native0131).openMe();
 				ReflectionUtils.getDoor(NativeHell_native0132).openMe();
 				ReflectionUtils.getDoor(sdoor_trans_mesh00).openMe();
 				break;
+			
 			case 8:
 				ReflectionUtils.getDoor(NativeHell_native0131).openMe();
 				ReflectionUtils.getDoor(NativeHell_native0132).openMe();
 				ReflectionUtils.getDoor(sdoor_trans_mesh00).openMe();
 				break;
+			
 			case 9:
 				ReflectionUtils.getDoor(NativeHell_native0131).openMe();
 				ReflectionUtils.getDoor(NativeHell_native0132).openMe();
 				ReflectionUtils.getDoor(sdoor_trans_mesh00).openMe();
 				ReflectionUtils.getDoor(Hell_gate_door).openMe();
 				break;
+			
 			case 10:
 				ReflectionUtils.getDoor(NativeHell_native0131).openMe();
 				ReflectionUtils.getDoor(NativeHell_native0132).openMe();
 				ReflectionUtils.getDoor(sdoor_trans_mesh00).openMe();
 				ReflectionUtils.getDoor(Hell_gate_door).openMe();
 				break;
+			
 			case 11:
 				ReflectionUtils.getDoor(NativeHell_native0131).openMe();
 				ReflectionUtils.getDoor(NativeHell_native0132).openMe();
 				ReflectionUtils.getDoor(sdoor_trans_mesh00).openMe();
 				ReflectionUtils.getDoor(Hell_gate_door).openMe();
 				break;
+			
 			default:
 				break;
 		}

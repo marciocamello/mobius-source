@@ -27,7 +27,7 @@ import npc.model.residences.ResidenceManager;
 public class ManagerInstance extends ResidenceManager
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -59,10 +59,12 @@ public class ManagerInstance extends ResidenceManager
 	public L2GameServerPacket decoPacket()
 	{
 		ClanHall clanHall = getClanHall();
+		
 		if (clanHall != null)
 		{
 			return new AgitDecoInfo(clanHall);
 		}
+		
 		return null;
 	}
 	

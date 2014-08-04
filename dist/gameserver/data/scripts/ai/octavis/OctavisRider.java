@@ -22,7 +22,6 @@ public class OctavisRider extends Pointer
 	{
 		super(actor);
 		AI_TASK_ACTIVE_DELAY = 250;
-		
 		_points = new Location[]
 		{
 			// new Location(181911, 114835, -7678),

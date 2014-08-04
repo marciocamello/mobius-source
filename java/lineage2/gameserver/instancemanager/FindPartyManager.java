@@ -108,6 +108,7 @@ public class FindPartyManager
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -126,6 +127,7 @@ public class FindPartyManager
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -143,6 +145,7 @@ public class FindPartyManager
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -161,6 +164,7 @@ public class FindPartyManager
 				return player;
 			}
 		}
+		
 		return null;
 	}
 	

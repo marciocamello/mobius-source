@@ -55,6 +55,7 @@ public class Debug implements IVoicedCommandHandler
 		{
 			return false;
 		}
+		
 		if (player.isDebug())
 		{
 			player.setDebug(false);
@@ -65,6 +66,7 @@ public class Debug implements IVoicedCommandHandler
 			player.setDebug(true);
 			player.sendMessage(new CustomMessage("voicedcommandhandlers.Debug.Enabled", player));
 		}
+		
 		return true;
 	}
 }

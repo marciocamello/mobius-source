@@ -42,6 +42,7 @@ public class IceCastleBreath extends Fighter
 	{
 		super.onEvtSpawn();
 		final Reflection r = getActor().getReflection();
+		
 		if ((r != null) && (r.getPlayers() != null))
 		{
 			for (Player p : r.getPlayers())

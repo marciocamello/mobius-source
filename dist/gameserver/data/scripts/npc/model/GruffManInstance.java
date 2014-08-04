@@ -25,7 +25,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public final class GruffManInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -55,9 +55,11 @@ public final class GruffManInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("elcardia_enter"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(elcardiaIzId))

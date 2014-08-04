@@ -323,6 +323,7 @@ public final class NpcTemplate extends CharTemplate
 		{
 			_log.error("Unable to create instance of NPC " + npcId, e);
 		}
+		
 		return null;
 	}
 	
@@ -341,6 +342,7 @@ public final class NpcTemplate extends CharTemplate
 		{
 			_log.error("Unable to create ai of NPC " + npcId, e);
 		}
+		
 		return new CharacterAI(npc);
 	}
 	
@@ -352,6 +354,7 @@ public final class NpcTemplate extends CharTemplate
 	private void setType(String type)
 	{
 		Class<NpcInstance> classType = null;
+		
 		try
 		{
 			classType = (Class<NpcInstance>) Class.forName("lineage2.gameserver.model.instances." + type + "Instance");
@@ -360,6 +363,7 @@ public final class NpcTemplate extends CharTemplate
 		{
 			classType = (Class<NpcInstance>) Scripts.getInstance().getClasses().get("npc.model." + type + "Instance");
 		}
+		
 		if (classType == null)
 		{
 			_log.error("Not found type class for type: " + type + ". NpcId: " + npcId);
@@ -369,10 +373,12 @@ public final class NpcTemplate extends CharTemplate
 			_classType = classType;
 			_constructorType = (Constructor<NpcInstance>) _classType.getConstructors()[0];
 		}
+		
 		if (_classType.isAnnotationPresent(Deprecated.class))
 		{
 			_log.error("Npc type: " + type + ", is deprecated. NpcId: " + npcId);
 		}
+		
 		isRaid = isInstanceOf(RaidBossInstance.class) && !isInstanceOf(ReflectionBossInstance.class);
 	}
 	
@@ -384,6 +390,7 @@ public final class NpcTemplate extends CharTemplate
 	private void setAI(String ai)
 	{
 		Class<CharacterAI> classAI = null;
+		
 		try
 		{
 			classAI = (Class<CharacterAI>) Class.forName("lineage2.gameserver.ai." + ai);
@@ -392,6 +399,7 @@ public final class NpcTemplate extends CharTemplate
 		{
 			classAI = (Class<CharacterAI>) Scripts.getInstance().getClasses().get("ai." + ai);
 		}
+		
 		if (classAI == null)
 		{
 			_log.error("Not found ai class for ai: " + ai + ". NpcId: " + npcId);
@@ -401,6 +409,7 @@ public final class NpcTemplate extends CharTemplate
 			_classAI = classAI;
 			_constructorAI = (Constructor<CharacterAI>) _classAI.getConstructors()[0];
 		}
+		
 		if (_classAI.isAnnotationPresent(Deprecated.class))
 		{
 			_log.error("Ai type: " + ai + ", is deprecated. NpcId: " + npcId);
@@ -417,6 +426,7 @@ public final class NpcTemplate extends CharTemplate
 		{
 			_teachInfo = new ArrayList<>(1);
 		}
+		
 		_teachInfo.add(classId);
 	}
 	
@@ -450,6 +460,7 @@ public final class NpcTemplate extends CharTemplate
 		{
 			_teleportList = new TIntObjectHashMap<>(1);
 		}
+		
 		_teleportList.put(id, list);
 	}
 	
@@ -483,6 +494,7 @@ public final class NpcTemplate extends CharTemplate
 		{
 			_rewards = new HashMap<>(RewardType.values().length);
 		}
+		
 		_rewards.put(rewardType, list);
 	}
 	
@@ -515,6 +527,7 @@ public final class NpcTemplate extends CharTemplate
 		{
 			_absorbInfo = new ArrayList<>(1);
 		}
+		
 		_absorbInfo.add(absorbInfo);
 	}
 	
@@ -528,6 +541,7 @@ public final class NpcTemplate extends CharTemplate
 		{
 			_minions = new ArrayList<>(1);
 		}
+		
 		_minions.add(minion);
 	}
 	
@@ -559,11 +573,14 @@ public final class NpcTemplate extends CharTemplate
 		{
 			_skills = new TIntObjectHashMap<>();
 		}
+		
 		_skills.put(skill.getId(), skill);
+		
 		if (skill.isNotUsedByAI() || (skill.getTargetType() == Skill.SkillTargetType.TARGET_NONE) || (skill.getSkillType() == Skill.SkillType.NOTDONE) || !skill.isActive())
 		{
 			return;
 		}
+		
 		switch (skill.getSkillType())
 		{
 			case PDAM:
@@ -573,6 +590,7 @@ public final class NpcTemplate extends CharTemplate
 			case DRAIN_SOUL:
 			{
 				boolean added = false;
+				
 				if (skill.hasEffects())
 				{
 					for (EffectTemplate eff : skill.getEffectTemplates())
@@ -583,6 +601,7 @@ public final class NpcTemplate extends CharTemplate
 								_stunSkills = ArrayUtils.add(_stunSkills, skill);
 								added = true;
 								break;
+							
 							case DamOverTime:
 							case DamOverTimeLethal:
 							case ManaDamOverTime:
@@ -590,23 +609,28 @@ public final class NpcTemplate extends CharTemplate
 								_dotSkills = ArrayUtils.add(_dotSkills, skill);
 								added = true;
 								break;
+							
 							default:
 								break;
 						}
 					}
 				}
+				
 				if (!added)
 				{
 					_damageSkills = ArrayUtils.add(_damageSkills, skill);
 				}
+				
 				break;
 			}
+			
 			case DOT:
 			case MDOT:
 			case POISON:
 			case BLEED:
 				_dotSkills = ArrayUtils.add(_dotSkills, skill);
 				break;
+			
 			case DEBUFF:
 			case SLEEP:
 			case ROOT:
@@ -616,17 +640,21 @@ public final class NpcTemplate extends CharTemplate
 			case AGGRESSION:
 				_debuffSkills = ArrayUtils.add(_debuffSkills, skill);
 				break;
+			
 			case BUFF:
 				_buffSkills = ArrayUtils.add(_buffSkills, skill);
 				break;
+			
 			case STUN:
 				_stunSkills = ArrayUtils.add(_stunSkills, skill);
 				break;
+			
 			case HEAL:
 			case HEAL_PERCENT:
 			case HOT:
 				_healSkills = ArrayUtils.add(_healSkills, skill);
 				break;
+			
 			default:
 				break;
 		}
@@ -715,6 +743,7 @@ public final class NpcTemplate extends CharTemplate
 		{
 			_questEvents = new HashMap<>();
 		}
+		
 		if (_questEvents.get(EventType) == null)
 		{
 			_questEvents.put(EventType, new Quest[]
@@ -727,6 +756,7 @@ public final class NpcTemplate extends CharTemplate
 			Quest[] _quests = _questEvents.get(EventType);
 			int len = _quests.length;
 			Quest[] tmp = new Quest[len + 1];
+			
 			for (int i = 0; i < len; i++)
 			{
 				if (_quests[i].getName().equals(q.getName()))
@@ -734,8 +764,10 @@ public final class NpcTemplate extends CharTemplate
 					_quests[i] = q;
 					return;
 				}
+				
 				tmp[i] = _quests[i];
 			}
+			
 			tmp[len] = q;
 			_questEvents.put(EventType, tmp);
 		}
@@ -895,6 +927,7 @@ public final class NpcTemplate extends CharTemplate
 		{
 			return;
 		}
+		
 		_walkerRoute.put(walkerRoute.getId(), walkerRoute);
 	}
 	

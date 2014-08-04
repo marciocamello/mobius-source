@@ -46,7 +46,9 @@ public class Subjob extends Skill
 		{
 			return;
 		}
+		
 		Player player = (Player) activeChar;
+		
 		switch (getId())
 		{
 			case 1566:
@@ -54,14 +56,17 @@ public class Subjob extends Skill
 				player.changeClass(1);
 				break;
 			}
+			
 			case 1567:
 			{
 				player.changeClass(2);
 				break;
 			}
+			
 			case 1568:
 				player.changeClass(3);
 				break;
+			
 			case 1569:
 				player.changeClass(4);
 				break;

@@ -54,6 +54,7 @@ public class _036_MakeASewingKit extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		int cond = st.getCond();
+		
 		if (event.equals("head_blacksmith_ferris_q0036_0104.htm") && (cond == 0))
 		{
 			st.setCond(1);
@@ -80,6 +81,7 @@ public class _036_MakeASewingKit extends Quest implements ScriptFile
 				htmltext = "head_blacksmith_ferris_q0036_0203.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -88,11 +90,13 @@ public class _036_MakeASewingKit extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if ((cond == 0) && (st.getQuestItemsCount(SEWING_KIT) == 0))
 		{
 			if (st.getPlayer().getLevel() >= 60)
 			{
 				QuestState fwear = st.getPlayer().getQuestState(_037_PleaseMakeMeFormalWear.class);
+				
 				if ((fwear != null) && (fwear.getState() == STARTED))
 				{
 					if (fwear.getCond() == 6)
@@ -130,6 +134,7 @@ public class _036_MakeASewingKit extends Quest implements ScriptFile
 		{
 			htmltext = "head_blacksmith_ferris_q0036_0203.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -139,6 +144,7 @@ public class _036_MakeASewingKit extends Quest implements ScriptFile
 		if (st.getQuestItemsCount(REINFORCED_STEEL) < 5)
 		{
 			st.giveItems(REINFORCED_STEEL, 1);
+			
 			if (st.getQuestItemsCount(REINFORCED_STEEL) == 5)
 			{
 				st.playSound(SOUND_MIDDLE);
@@ -149,6 +155,7 @@ public class _036_MakeASewingKit extends Quest implements ScriptFile
 				st.playSound(SOUND_ITEMGET);
 			}
 		}
+		
 		return null;
 	}
 }

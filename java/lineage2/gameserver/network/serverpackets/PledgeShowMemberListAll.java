@@ -45,7 +45,6 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 		_rank = clan.getRank();
 		_reputation = clan.getReputationScore();
 		_atClanWar = clan.isAtWarOrUnderAttack();
-		
 		Alliance ally = clan.getAlliance();
 		
 		if (ally != null)
@@ -67,7 +66,6 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x5a);
-		
 		writeD(_pledgeType == Clan.SUBUNIT_MAIN_CLAN ? 0 : 1);
 		writeD(_clanObjectId);
 		writeD(_pledgeType);
@@ -88,8 +86,8 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 		writeD(_allianceCrestId);
 		writeD(_atClanWar);
 		writeD(0x00);
-		
 		writeD(_members.size());
+		
 		for (PledgePacketMember m : _members)
 		{
 			writeS(m._name);

@@ -28,7 +28,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public final class FrintezzaGatekeeperInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -58,9 +58,11 @@ public final class FrintezzaGatekeeperInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("request_frintezza"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(frintezzaIzId))
@@ -75,6 +77,7 @@ public final class FrintezzaGatekeeperInstance extends NpcInstance
 					player.sendPacket(new SystemMessage(SystemMessage.C1S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED).addName(player));
 					return;
 				}
+				
 				ReflectionUtils.enterReflection(player, new Frintezza(), frintezzaIzId);
 			}
 		}

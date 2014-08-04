@@ -154,21 +154,25 @@ public class _372_LegacyOfInsolence extends Quest implements ScriptFile
 				return false;
 			}
 		}
+		
 		for (int item_id = items_range[0]; item_id <= items_range[1]; item_id++)
 		{
 			st.takeItems(item_id, 1);
 		}
+		
 		if (Rnd.chance(Three_Recipes_Reward_Chance))
 		{
 			for (int reward_item_id : reward)
 			{
 				giveRecipe(st, reward_item_id);
 			}
+			
 			st.playSound(SOUND_JACKPOT);
 		}
 		else if (Rnd.chance(Two_Recipes_Reward_Chance))
 		{
 			int ignore_reward_id = reward[Rnd.get(reward.length)];
+			
 			for (int reward_item_id : reward)
 			{
 				if (reward_item_id != ignore_reward_id)
@@ -176,6 +180,7 @@ public class _372_LegacyOfInsolence extends Quest implements ScriptFile
 					giveRecipe(st, reward_item_id);
 				}
 			}
+			
 			st.playSound(SOUND_JACKPOT);
 		}
 		else if (Rnd.chance(Adena4k_Reward_Chance))
@@ -186,6 +191,7 @@ public class _372_LegacyOfInsolence extends Quest implements ScriptFile
 		{
 			giveRecipe(st, reward[Rnd.get(reward.length)]);
 		}
+		
 		return true;
 	}
 	
@@ -194,6 +200,7 @@ public class _372_LegacyOfInsolence extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		int _state = st.getState();
+		
 		if (_state == CREATED)
 		{
 			if (event.equalsIgnoreCase("30844-6.htm"))
@@ -247,6 +254,7 @@ public class _372_LegacyOfInsolence extends Quest implements ScriptFile
 				htmltext = check_and_reward(st, Blueprint_Tower_of_Insolence_Range, Reward_Majestic) ? "30844-11.htm" : "30844-12.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -256,12 +264,14 @@ public class _372_LegacyOfInsolence extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int _state = st.getState();
 		int npcId = npc.getNpcId();
+		
 		if (_state == CREATED)
 		{
 			if (npcId != WALDERAL)
 			{
 				return htmltext;
 			}
+			
 			if (st.getPlayer().getLevel() >= 59)
 			{
 				htmltext = "30844-4.htm";
@@ -276,6 +286,7 @@ public class _372_LegacyOfInsolence extends Quest implements ScriptFile
 		{
 			htmltext = String.valueOf(npcId) + "-1.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -286,11 +297,14 @@ public class _372_LegacyOfInsolence extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		int[] drop = DROPLIST.get(npc.getNpcId());
+		
 		if (drop == null)
 		{
 			return null;
 		}
+		
 		qs.rollAndGive(drop[0], 1, drop[1]);
 		return null;
 	}

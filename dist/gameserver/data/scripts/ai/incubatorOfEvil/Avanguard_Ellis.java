@@ -38,10 +38,12 @@ public class Avanguard_Ellis extends DefaultAI
 	protected boolean thinkActive()
 	{
 		NpcInstance actor = getActor();
+		
 		if (Rnd.chance(8))
 		{
 			Functions.npcSay(actor, NpcString.I_CAN_HEAL_YOU_DURING_COMBAT);
 		}
+		
 		return false;
 	}
 }

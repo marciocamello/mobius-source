@@ -21,16 +21,13 @@ public class ExCuriousHouseObserveList extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0x12B);
-		
 		writeD(0);
 		
 		for (;;)
 		{
 			writeD(0);
 			writeS("");
-			
 			writeH(0);
-			
 			writeD(0);
 		}
 	}

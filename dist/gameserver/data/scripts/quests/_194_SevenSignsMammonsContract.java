@@ -48,6 +48,7 @@ public class _194_SevenSignsMammonsContract extends Quest implements ScriptFile
 	{
 		Player player = st.getPlayer();
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("sirgustavathebaldt_q194_2.htm"))
 		{
 			st.setCond(1);
@@ -79,6 +80,7 @@ public class _194_SevenSignsMammonsContract extends Quest implements ScriptFile
 				player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 				return null;
 			}
+			
 			negateSpeedBuffs(player);
 			SkillTable.getInstance().getInfo(6201, 1).getEffects(npc, player, false, false);
 		}
@@ -101,6 +103,7 @@ public class _194_SevenSignsMammonsContract extends Quest implements ScriptFile
 				player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 				return null;
 			}
+			
 			st.setCond(7);
 			st.playSound(SOUND_MIDDLE);
 			negateSpeedBuffs(player);
@@ -125,6 +128,7 @@ public class _194_SevenSignsMammonsContract extends Quest implements ScriptFile
 				player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 				return null;
 			}
+			
 			st.setCond(10);
 			st.playSound(SOUND_MIDDLE);
 			negateSpeedBuffs(player);
@@ -163,6 +167,7 @@ public class _194_SevenSignsMammonsContract extends Quest implements ScriptFile
 				player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 				return null;
 			}
+			
 			negateSpeedBuffs(player);
 			SkillTable.getInstance().getInfo(6201, 1).getEffects(player, player, false, false);
 		}
@@ -173,6 +178,7 @@ public class _194_SevenSignsMammonsContract extends Quest implements ScriptFile
 				player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 				return null;
 			}
+			
 			negateSpeedBuffs(player);
 			SkillTable.getInstance().getInfo(6202, 1).getEffects(player, player, false, false);
 		}
@@ -183,6 +189,7 @@ public class _194_SevenSignsMammonsContract extends Quest implements ScriptFile
 				player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 				return null;
 			}
+			
 			negateSpeedBuffs(player);
 			SkillTable.getInstance().getInfo(6203, 1).getEffects(player, player, false, false);
 		}
@@ -190,6 +197,7 @@ public class _194_SevenSignsMammonsContract extends Quest implements ScriptFile
 		{
 			negateTransformations(player);
 		}
+		
 		return htmltext;
 	}
 	
@@ -200,13 +208,16 @@ public class _194_SevenSignsMammonsContract extends Quest implements ScriptFile
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		String htmltext = "noquest";
+		
 		if (player.getBaseClassId() != player.getActiveClassId())
 		{
 			return "subclass_forbidden.htm";
 		}
+		
 		if (npcId == SirGustavAthebaldt)
 		{
 			QuestState qs = player.getQuestState(_193_SevenSignDyingMessage.class);
+			
 			if ((cond == 0) && (player.getLevel() >= 79) && (qs != null) && qs.isCompleted())
 			{
 				htmltext = "sirgustavathebaldt_q194_1.htm";
@@ -225,6 +236,7 @@ public class _194_SevenSignsMammonsContract extends Quest implements ScriptFile
 				{
 					st.giveItems(AthebaldtsIntroduction, 1);
 				}
+				
 				htmltext = "sirgustavathebaldt_q194_4.htm";
 			}
 			else
@@ -343,6 +355,7 @@ public class _194_SevenSignsMammonsContract extends Quest implements ScriptFile
 				htmltext = "claudiaathebaldt_q194_0.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	

@@ -167,16 +167,19 @@ public class Newbie extends DefaultAI
 		if (!_def_think)
 		{
 			final NpcInstance npc = getActor();
+			
 			if (npc == null)
 			{
 				return true;
 			}
+			
 			for (Player player : World.getAroundPlayers(npc, 200, 200))
 			{
 				if ((player.getLevel() <= 40) && (player.getEffectList().getEffectsBySkillId(4322) == null))
 				{
 					List<Creature> target = new ArrayList<>();
 					target.add(player);
+					
 					if (!player.isMageClass())
 					{
 						for (int[] buff : _warrBuff)
@@ -193,10 +196,12 @@ public class Newbie extends DefaultAI
 							npc.callSkill(SkillTable.getInstance().getInfo(buff[2], buff[3]), target, true);
 						}
 					}
+					
 					player.sendPacket(new ExShowScreenMessage(NpcString.NEWBIE_HELPER_HAS_CASTED_BUFFS_ON_$S1, 800, ScreenMessageAlign.TOP_CENTER, true, String.valueOf(player.getName())));
 				}
 			}
 		}
+		
 		return true;
 	}
 	

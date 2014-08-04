@@ -66,6 +66,7 @@ public class DeathPenalty extends Skill
 				{
 					continue;
 				}
+				
 				((Player) target).getDeathPenalty().reduceLevel();
 			}
 		}

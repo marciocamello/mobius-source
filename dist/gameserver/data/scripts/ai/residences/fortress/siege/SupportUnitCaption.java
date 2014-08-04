@@ -51,6 +51,7 @@ public class SupportUnitCaption extends SiegeGuardMystic
 	{
 		super.onEvtAttacked(attacker, dam);
 		final SiegeGuardInstance actor = getActor();
+		
 		if (Rnd.chance(1))
 		{
 			Functions.npcShout(actor, NpcString.SPIRIT_OF_FIRE_UNLEASH_YOUR_POWER_BURN_THE_ENEMY);
@@ -66,14 +67,17 @@ public class SupportUnitCaption extends SiegeGuardMystic
 		super.onEvtSpawn();
 		final SiegeGuardInstance actor = getActor();
 		final FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
+		
 		if (siegeEvent == null)
 		{
 			return;
 		}
+		
 		if (siegeEvent.getResidence().getFacilityLevel(Fortress.GUARD_BUFF) > 0)
 		{
 			actor.doCast(SkillTable.getInstance().getInfo(5432, siegeEvent.getResidence().getFacilityLevel(Fortress.GUARD_BUFF)), actor, false);
 		}
+		
 		siegeEvent.barrackAction(2, false);
 	}
 	
@@ -86,10 +90,12 @@ public class SupportUnitCaption extends SiegeGuardMystic
 	{
 		final SiegeGuardInstance actor = getActor();
 		final FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
+		
 		if (siegeEvent == null)
 		{
 			return;
 		}
+		
 		siegeEvent.barrackAction(2, true);
 		siegeEvent.broadcastTo(SystemMsg.THE_BARRACKS_HAVE_BEEN_SEIZED, SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
 		Functions.npcShout(actor, NpcString.AT_LAST_THE_MAGIC_FIELD_THAT_PROTECTS_THE_FORTRESS_HAS_WEAKENED_VOLUNTEERS_STAND_BACK);

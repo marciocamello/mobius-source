@@ -56,6 +56,7 @@ public abstract class L2GameClientPacket extends ReceivablePacket<GameClient>
 		{
 			_log.error("Client: " + _client + " - Failed reading: " + getType() + " - Server Version: " + GameServer.getInstance().getVersion().getRevisionNumber(), e);
 		}
+		
 		return false;
 	}
 	
@@ -73,6 +74,7 @@ public abstract class L2GameClientPacket extends ReceivablePacket<GameClient>
 	public final void run()
 	{
 		GameClient client = getClient();
+		
 		try
 		{
 			runImpl();

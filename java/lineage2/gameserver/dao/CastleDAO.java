@@ -54,6 +54,7 @@ public class CastleDAO
 			statement = con.prepareStatement(SELECT_SQL_QUERY);
 			statement.setInt(1, castle.getId());
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				castle.setTaxPercent(rset.getInt("tax_percent"));
@@ -90,6 +91,7 @@ public class CastleDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();

@@ -55,11 +55,13 @@ public class TeleportBookmark extends SimpleItemHandler
 		{
 			return false;
 		}
+		
 		if (player.bookmarks.getCapacity() >= 30)
 		{
 			player.sendPacket(SystemMsg.YOUR_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_REACHED_ITS_MAXIMUM_LIMIT);
 			return false;
 		}
+		
 		player.getInventory().destroyItem(item, 1);
 		player.sendPacket(new SystemMessage2(SystemMsg.S1_HAS_DISAPPEARED).addItemName(item.getItemId()));
 		player.bookmarks.setCapacity(player.bookmarks.getCapacity() + 3);

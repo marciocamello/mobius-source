@@ -36,10 +36,12 @@ public class RequestExBR_ProductList extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		activeChar.sendPacket(new ExBR_ProductList());
 	}
 }

@@ -84,7 +84,9 @@ public class TelnetServer implements TelnetCommandHolder
 				{
 					return null;
 				}
+				
 				StringBuilder sb = new StringBuilder();
+				
 				if (NumberUtils.isNumber(args[0]))
 				{
 					int val = NumberUtils.toInt(args[0]);
@@ -106,15 +108,18 @@ public class TelnetServer implements TelnetCommandHolder
 					date.set(Calendar.MINUTE, hhmm.length > 1 ? Integer.parseInt(hhmm[1]) : 0);
 					date.set(Calendar.SECOND, 0);
 					date.set(Calendar.MILLISECOND, 0);
+					
 					if (date.before(now))
 					{
 						date.roll(Calendar.DAY_OF_MONTH, true);
 					}
+					
 					int seconds = (int) ((date.getTimeInMillis() / 1000L) - (now.getTimeInMillis() / 1000L));
 					Shutdown.getInstance().schedule(seconds, Shutdown.RESTART);
 					sb.append("Server will restart in ").append(Shutdown.getInstance().getSeconds()).append(" seconds!\n");
 					sb.append("Type \"abort\" to abort restart!\n");
 				}
+				
 				return sb.toString();
 			}
 		});
@@ -133,7 +138,9 @@ public class TelnetServer implements TelnetCommandHolder
 				{
 					return null;
 				}
+				
 				StringBuilder sb = new StringBuilder();
+				
 				if (NumberUtils.isNumber(args[0]))
 				{
 					int val = NumberUtils.toInt(args[0]);
@@ -155,15 +162,18 @@ public class TelnetServer implements TelnetCommandHolder
 					date.set(Calendar.MINUTE, hhmm.length > 1 ? Integer.parseInt(hhmm[1]) : 0);
 					date.set(Calendar.SECOND, 0);
 					date.set(Calendar.MILLISECOND, 0);
+					
 					if (date.before(now))
 					{
 						date.roll(Calendar.DAY_OF_MONTH, true);
 					}
+					
 					int seconds = (int) ((date.getTimeInMillis() / 1000L) - (now.getTimeInMillis() / 1000L));
 					Shutdown.getInstance().schedule(seconds, Shutdown.SHUTDOWN);
 					sb.append("Server will shutdown in ").append(Shutdown.getInstance().getSeconds()).append(" seconds!\n");
 					sb.append("Type \"abort\" to abort shutdown!\n");
 				}
+				
 				return sb.toString();
 			}
 		});

@@ -32,7 +32,7 @@ import lineage2.gameserver.utils.Location;
 public class KrateisCubePlayerObject implements Serializable, Comparable<KrateisCubePlayerObject>
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -60,6 +60,7 @@ public class KrateisCubePlayerObject implements Serializable, Comparable<Krateis
 		public void runImpl()
 		{
 			_seconds -= 1;
+			
 			if (_seconds == 0)
 			{
 				KrateisCubeEvent cubeEvent = _player.getEvent(KrateisCubeEvent.class);
@@ -188,6 +189,7 @@ public class KrateisCubePlayerObject implements Serializable, Comparable<Krateis
 		{
 			return;
 		}
+		
 		_ressurectTask = ThreadPoolManager.getInstance().schedule(new RessurectTask(), 1000L);
 	}
 	
@@ -215,6 +217,7 @@ public class KrateisCubePlayerObject implements Serializable, Comparable<Krateis
 		{
 			return (int) ((getRegistrationTime() - o.getRegistrationTime()) / 1000L);
 		}
+		
 		return getPoints() - o.getPoints();
 	}
 }

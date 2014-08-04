@@ -28,7 +28,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public final class AbyssGazeInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -62,6 +62,7 @@ public final class AbyssGazeInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.startsWith("request_permission"))
 		{
 			if ((SoIManager.getCurrentStage() == 2) || (SoIManager.getCurrentStage() == 5))
@@ -85,6 +86,7 @@ public final class AbyssGazeInstance extends NpcInstance
 			if (SoIManager.getCurrentStage() == 2)
 			{
 				Reflection r = player.getActiveReflection();
+				
 				if (r != null)
 				{
 					if (player.canReenterInstance(ekimusIzId))
@@ -111,6 +113,7 @@ public final class AbyssGazeInstance extends NpcInstance
 			if (SoIManager.getCurrentStage() == 5)
 			{
 				Reflection r = player.getActiveReflection();
+				
 				if (r != null)
 				{
 					if (player.canReenterInstance(hoidefIzId))

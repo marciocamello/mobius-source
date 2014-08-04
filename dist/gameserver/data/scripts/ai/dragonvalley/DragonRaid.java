@@ -53,10 +53,12 @@ public class DragonRaid extends Fighter
 	protected boolean thinkActive()
 	{
 		super.thinkActive();
+		
 		if ((lastAttackTime != 0) && ((lastAttackTime + (30 * 60 * 1000L)) < System.currentTimeMillis()))
 		{
 			getActor().deleteMe();
 		}
+		
 		return true;
 	}
 }

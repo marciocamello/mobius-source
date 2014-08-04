@@ -32,20 +32,24 @@ public class ExpandInventory extends Functions
 	public void get()
 	{
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (!Config.SERVICES_EXPAND_INVENTORY_ENABLED)
 		{
 			show("Expand Inventory", player);
 			return;
 		}
+		
 		if (player.getInventoryLimit() >= Config.SERVICES_EXPAND_INVENTORY_MAX)
 		{
 			player.sendMessage("Already max count.");
 			return;
 		}
+		
 		if (player.getInventory().destroyItemByItemId(Config.SERVICES_EXPAND_INVENTORY_ITEM, Config.SERVICES_EXPAND_INVENTORY_PRICE))
 		{
 			player.setExpandInventory(player.getExpandInventory() + 1);
@@ -60,6 +64,7 @@ public class ExpandInventory extends Functions
 		{
 			player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
 		}
+		
 		/**
 		 * Method show.
 		 */
@@ -69,15 +74,18 @@ public class ExpandInventory extends Functions
 	public void show()
 	{
 		Player player = getSelf();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (!Config.SERVICES_EXPAND_INVENTORY_ENABLED)
 		{
 			show("Expand Inventory", player);
 			return;
 		}
+		
 		ItemTemplate item = ItemHolder.getInstance().getTemplate(Config.SERVICES_EXPAND_INVENTORY_ITEM);
 		String out = "";
 		out += "<html><body>Expand Personal Inventory";

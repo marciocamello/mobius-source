@@ -35,7 +35,7 @@ import org.napile.primitive.sets.impl.HashIntSet;
 public class WorkshopGatekeeperInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -137,9 +137,11 @@ public class WorkshopGatekeeperInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.startsWith("trydoor"))
 		{
 			int npcId = getNpcId();
+			
 			if ((doorRecharge == 0) || (doorRecharge <= System.currentTimeMillis()))
 			{
 				if (player.getClassId() == ClassId.MAESTRO)
@@ -189,6 +191,7 @@ public class WorkshopGatekeeperInstance extends NpcInstance
 	private void openDoor(int npcId)
 	{
 		IntSet set = doors.get(npcId);
+		
 		if (set != null)
 		{
 			for (int i : set.toArray())

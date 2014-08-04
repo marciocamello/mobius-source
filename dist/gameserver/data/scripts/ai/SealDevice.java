@@ -47,6 +47,7 @@ public class SealDevice extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (!_firstAttack)
 		{
 			actor.broadcastPacket(new MagicSkillUse(actor, actor, 5980, 1, 0, 0));

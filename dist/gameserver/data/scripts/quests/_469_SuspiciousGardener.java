@@ -51,9 +51,7 @@ public class _469_SuspiciousGardener extends Quest implements ScriptFile
 	{
 		super(2);
 		addTalkId(HORPINA);
-		
 		addKillNpcWithLog(1, APHERUS_WATCHMAN_KILL, 30, APHERUS_WATCHMAN);
-		
 		addLevelCheck(90, 99);
 	}
 	
@@ -69,6 +67,7 @@ public class _469_SuspiciousGardener extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "33031-03.htm";
 		}
+		
 		if (event.equalsIgnoreCase("quest_done"))
 		{
 			st.giveItems(CERTIFICATE_OF_LIFE, 2);
@@ -76,6 +75,7 @@ public class _469_SuspiciousGardener extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			htmltext = "33031-06.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -109,6 +109,7 @@ public class _469_SuspiciousGardener extends Quest implements ScriptFile
 				htmltext = "33032-07.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -123,6 +124,7 @@ public class _469_SuspiciousGardener extends Quest implements ScriptFile
 			st.playSound(SOUND_MIDDLE);
 			st.setCond(2);
 		}
+		
 		return null;
 	}
 }

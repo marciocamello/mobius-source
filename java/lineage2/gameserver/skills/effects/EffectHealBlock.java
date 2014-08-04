@@ -42,6 +42,7 @@ public final class EffectHealBlock extends Effect
 		{
 			return false;
 		}
+		
 		return super.checkCondition();
 	}
 	

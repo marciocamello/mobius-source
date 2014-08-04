@@ -57,6 +57,7 @@ public class _10274_CollectingInTheAir extends Quest implements ScriptFile
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return event;
 	}
 	
@@ -65,6 +66,7 @@ public class _10274_CollectingInTheAir extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int id = st.getState();
+		
 		if (id == COMPLETED)
 		{
 			htmltext = "32557-0a.htm";
@@ -72,6 +74,7 @@ public class _10274_CollectingInTheAir extends Quest implements ScriptFile
 		else if (id == CREATED)
 		{
 			QuestState qs = st.getPlayer().getQuestState(_10273_GoodDayToFly.class);
+			
 			if ((qs != null) && qs.isCompleted() && (st.getPlayer().getLevel() >= 75))
 			{
 				htmltext = "32557-01.htm";
@@ -94,6 +97,7 @@ public class _10274_CollectingInTheAir extends Quest implements ScriptFile
 		{
 			htmltext = "32557-04.htm";
 		}
+		
 		return htmltext;
 	}
 }

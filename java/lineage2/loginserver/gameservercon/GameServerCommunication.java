@@ -101,6 +101,7 @@ public class GameServerCommunication extends Thread
 		Iterator<SelectionKey> iterator;
 		SelectionKey key = null;
 		int opts;
+		
 		while (!isShutdown())
 		{
 			try
@@ -108,30 +109,38 @@ public class GameServerCommunication extends Thread
 				selector.select();
 				keys = selector.selectedKeys();
 				iterator = keys.iterator();
+				
 				while (iterator.hasNext())
 				{
 					key = iterator.next();
 					iterator.remove();
+					
 					if (!key.isValid())
 					{
 						close(key);
 						continue;
 					}
+					
 					opts = key.readyOps();
+					
 					switch (opts)
 					{
 						case SelectionKey.OP_CONNECT:
 							close(key);
 							break;
+						
 						case SelectionKey.OP_ACCEPT:
 							accept(key);
 							break;
+						
 						case SelectionKey.OP_WRITE:
 							write(key);
 							break;
+						
 						case SelectionKey.OP_READ:
 							read(key);
 							break;
+						
 						case SelectionKey.OP_READ | SelectionKey.OP_WRITE:
 							write(key);
 							read(key);
@@ -187,6 +196,7 @@ public class GameServerCommunication extends Thread
 		ByteBuffer buf = conn.getReadBuffer();
 		int count;
 		count = channel.read(buf);
+		
 		if (count == -1)
 		{
 			close(key);
@@ -196,7 +206,9 @@ public class GameServerCommunication extends Thread
 		{
 			return;
 		}
+		
 		buf.flip();
+		
 		while (tryReadPacket(key, gs, buf))
 		{
 		}
@@ -213,40 +225,52 @@ public class GameServerCommunication extends Thread
 	protected boolean tryReadPacket(SelectionKey key, GameServer gs, ByteBuffer buf) throws IOException
 	{
 		int pos = buf.position();
+		
 		if (buf.remaining() > 2)
 		{
 			int size = buf.getShort() & 0xffff;
+			
 			if (size <= 2)
 			{
 				throw new IOException("Incorrect packet size: <= 2");
 			}
+			
 			size -= 2;
+			
 			if (size <= buf.remaining())
 			{
 				int limit = buf.limit();
 				buf.limit(pos + size + 2);
 				ReceivablePacket rp = PacketHandler.handlePacket(gs, buf);
+				
 				if (rp != null)
 				{
 					rp.setByteBuffer(buf);
 					rp.setClient(gs);
+					
 					if (rp.read())
 					{
 						ThreadPoolManager.getInstance().execute(rp);
 					}
+					
 					rp.setByteBuffer(null);
 				}
+				
 				buf.limit(limit);
 				buf.position(pos + size + 2);
+				
 				if (!buf.hasRemaining())
 				{
 					buf.clear();
 					return false;
 				}
+				
 				return true;
 			}
+			
 			buf.position(pos);
 		}
+		
 		buf.compact();
 		return false;
 	}
@@ -267,10 +291,12 @@ public class GameServerCommunication extends Thread
 		Lock sendLock = conn.sendLock;
 		boolean done;
 		sendLock.lock();
+		
 		try
 		{
 			int i = 0;
 			SendablePacket sp;
+			
 			while ((i++ < 64) && ((sp = sendQueue.poll()) != null))
 			{
 				int headerPos = buf.position();
@@ -279,16 +305,20 @@ public class GameServerCommunication extends Thread
 				sp.setClient(gs);
 				sp.write();
 				int dataSize = buf.position() - headerPos - 2;
+				
 				if (dataSize == 0)
 				{
 					buf.position(headerPos);
 					continue;
 				}
+				
 				buf.position(headerPos);
 				buf.putShort((short) (dataSize + 2));
 				buf.position(headerPos + dataSize + 2);
 			}
+			
 			done = sendQueue.isEmpty();
+			
 			if (done)
 			{
 				conn.disableWriteInterest();
@@ -300,6 +330,7 @@ public class GameServerCommunication extends Thread
 		}
 		buf.flip();
 		channel.write(buf);
+		
 		if (buf.remaining() > 0)
 		{
 			buf.compact();
@@ -337,11 +368,13 @@ public class GameServerCommunication extends Thread
 		{
 			return;
 		}
+		
 		try
 		{
 			try
 			{
 				GameServerConnection conn = (GameServerConnection) key.attachment();
+				
 				if (conn != null)
 				{
 					conn.onDisconnection();

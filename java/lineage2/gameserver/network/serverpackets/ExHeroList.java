@@ -36,8 +36,8 @@ public class ExHeroList extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeEx(0x7A);
-		
 		writeD(_heroList.size());
+		
 		for (StatsSet hero : _heroList.values())
 		{
 			writeS(hero.getString(Olympiad.CHAR_NAME));

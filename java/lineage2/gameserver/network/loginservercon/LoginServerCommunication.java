@@ -159,8 +159,10 @@ public class LoginServerCommunication extends Thread
 		{
 			return;
 		}
+		
 		boolean wakeUp;
 		sendLock.lock();
+		
 		try
 		{
 			sendQueue.add(packet);
@@ -174,6 +176,7 @@ public class LoginServerCommunication extends Thread
 		{
 			sendLock.unlock();
 		}
+		
 		if (wakeUp)
 		{
 			selector.wakeup();
@@ -192,6 +195,7 @@ public class LoginServerCommunication extends Thread
 			key.interestOps(key.interestOps() & ~SelectionKey.OP_WRITE);
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -207,6 +211,7 @@ public class LoginServerCommunication extends Thread
 			key.interestOps(key.interestOps() | SelectionKey.OP_WRITE);
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -239,22 +244,28 @@ public class LoginServerCommunication extends Thread
 		Iterator<SelectionKey> iterator;
 		SelectionKey key;
 		int opts;
+		
 		while (!shutdown)
 		{
 			restart = false;
+			
 			try
 			{
 				loop:
+				
 				while (!isShutdown())
 				{
 					connect();
 					selector.select(5000L);
 					keys = selector.selectedKeys();
+					
 					if (keys.isEmpty())
 					{
 						throw new IOException("Connection timeout.");
 					}
+					
 					iterator = keys.iterator();
+					
 					try
 					{
 						while (iterator.hasNext())
@@ -262,6 +273,7 @@ public class LoginServerCommunication extends Thread
 							key = iterator.next();
 							iterator.remove();
 							opts = key.readyOps();
+							
 							switch (opts)
 							{
 								case SelectionKey.OP_CONNECT:
@@ -275,12 +287,15 @@ public class LoginServerCommunication extends Thread
 						break;
 					}
 				}
+				
 				loop:
+				
 				while (!isShutdown())
 				{
 					selector.select();
 					keys = selector.selectedKeys();
 					iterator = keys.iterator();
+					
 					try
 					{
 						while (iterator.hasNext())
@@ -288,14 +303,17 @@ public class LoginServerCommunication extends Thread
 							key = iterator.next();
 							iterator.remove();
 							opts = key.readyOps();
+							
 							switch (opts)
 							{
 								case SelectionKey.OP_WRITE:
 									write(key);
 									break;
+								
 								case SelectionKey.OP_READ:
 									read(key);
 									break;
+								
 								case SelectionKey.OP_READ | SelectionKey.OP_WRITE:
 									write(key);
 									read(key);
@@ -313,7 +331,9 @@ public class LoginServerCommunication extends Thread
 			{
 				_log.error("Could not communicate with login server.");
 			}
+			
 			close();
+			
 			try
 			{
 				Thread.sleep(5000L);
@@ -335,15 +355,19 @@ public class LoginServerCommunication extends Thread
 		ByteBuffer buf = getReadBuffer();
 		int count;
 		count = channel.read(buf);
+		
 		if (count == -1)
 		{
 			throw new IOException("End of stream.");
 		}
+		
 		if (count == 0)
 		{
 			return;
 		}
+		
 		buf.flip();
+		
 		while (tryReadPacket(key, buf))
 		{
 		}
@@ -359,19 +383,24 @@ public class LoginServerCommunication extends Thread
 	private boolean tryReadPacket(SelectionKey key, ByteBuffer buf) throws IOException
 	{
 		int pos = buf.position();
+		
 		if (buf.remaining() > 2)
 		{
 			int size = buf.getShort() & 0xffff;
+			
 			if (size <= 2)
 			{
 				throw new IOException("Incorrect packet size: <= 2");
 			}
+			
 			size -= 2;
+			
 			if (size <= buf.remaining())
 			{
 				int limit = buf.limit();
 				buf.limit(pos + size + 2);
 				ReceivablePacket rp = PacketHandler.handlePacket(buf);
+				
 				if (rp != null)
 				{
 					if (rp.read())
@@ -379,17 +408,22 @@ public class LoginServerCommunication extends Thread
 						ThreadPoolManager.getInstance().execute(rp);
 					}
 				}
+				
 				buf.limit(limit);
 				buf.position(pos + size + 2);
+				
 				if (!buf.hasRemaining())
 				{
 					buf.clear();
 					return false;
 				}
+				
 				return true;
 			}
+			
 			buf.position(pos);
 		}
+		
 		buf.compact();
 		return false;
 	}
@@ -405,26 +439,32 @@ public class LoginServerCommunication extends Thread
 		ByteBuffer buf = getWriteBuffer();
 		boolean done;
 		sendLock.lock();
+		
 		try
 		{
 			int i = 0;
 			SendablePacket sp;
+			
 			while ((i++ < 64) && ((sp = sendQueue.poll()) != null))
 			{
 				int headerPos = buf.position();
 				buf.position(headerPos + 2);
 				sp.write();
 				int dataSize = buf.position() - headerPos - 2;
+				
 				if (dataSize == 0)
 				{
 					buf.position(headerPos);
 					continue;
 				}
+				
 				buf.position(headerPos);
 				buf.putShort((short) (dataSize + 2));
 				buf.position(headerPos + dataSize + 2);
 			}
+			
 			done = sendQueue.isEmpty();
+			
 			if (done)
 			{
 				disableWriteInterest();
@@ -436,6 +476,7 @@ public class LoginServerCommunication extends Thread
 		}
 		buf.flip();
 		channel.write(buf);
+		
 		if (buf.remaining() > 0)
 		{
 			buf.compact();
@@ -475,6 +516,7 @@ public class LoginServerCommunication extends Thread
 	{
 		restart = !shutdown;
 		sendLock.lock();
+		
 		try
 		{
 			sendQueue.clear();
@@ -486,6 +528,7 @@ public class LoginServerCommunication extends Thread
 		readBuffer.clear();
 		writeBuffer.clear();
 		isPengingWrite.set(false);
+		
 		try
 		{
 			if (key != null)
@@ -497,7 +540,9 @@ public class LoginServerCommunication extends Thread
 		catch (IOException e)
 		{
 		}
+		
 		writeLock.lock();
+		
 		try
 		{
 			waitingClients.clear();
@@ -543,6 +588,7 @@ public class LoginServerCommunication extends Thread
 	public GameClient addWaitingClient(GameClient client)
 	{
 		writeLock.lock();
+		
 		try
 		{
 			return waitingClients.put(client.getLogin(), client);
@@ -561,6 +607,7 @@ public class LoginServerCommunication extends Thread
 	public GameClient removeWaitingClient(String account)
 	{
 		writeLock.lock();
+		
 		try
 		{
 			return waitingClients.remove(account);
@@ -579,6 +626,7 @@ public class LoginServerCommunication extends Thread
 	public GameClient addAuthedClient(GameClient client)
 	{
 		writeLock.lock();
+		
 		try
 		{
 			return authedClients.put(client.getLogin(), client);
@@ -597,6 +645,7 @@ public class LoginServerCommunication extends Thread
 	public GameClient removeAuthedClient(String login)
 	{
 		writeLock.lock();
+		
 		try
 		{
 			return authedClients.remove(login);
@@ -615,6 +664,7 @@ public class LoginServerCommunication extends Thread
 	public GameClient getAuthedClient(String login)
 	{
 		readLock.lock();
+		
 		try
 		{
 			return authedClients.get(login);
@@ -633,12 +683,14 @@ public class LoginServerCommunication extends Thread
 	public GameClient removeClient(GameClient client)
 	{
 		writeLock.lock();
+		
 		try
 		{
 			if (client.isAuthed())
 			{
 				return authedClients.remove(client.getLogin());
 			}
+			
 			return waitingClients.remove(client.getSessionKey());
 		}
 		finally
@@ -654,6 +706,7 @@ public class LoginServerCommunication extends Thread
 	public String[] getAccounts()
 	{
 		readLock.lock();
+		
 		try
 		{
 			return authedClients.keySet().toArray(new String[authedClients.size()]);

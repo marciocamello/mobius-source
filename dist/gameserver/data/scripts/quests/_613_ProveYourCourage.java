@@ -26,11 +26,6 @@ public class _613_ProveYourCourage extends Quest implements ScriptFile
 	private final static int HEAD_OF_HEKATON = 7240;
 	private final static int FEATHER_OF_VALOR = 7229;
 	
-	// etc
-	@SuppressWarnings("unused")
-	private final static int MARK_OF_VARKA_ALLIANCE1 = 7221;
-	@SuppressWarnings("unused")
-	private final static int MARK_OF_VARKA_ALLIANCE2 = 7222;
 	private final static int MARK_OF_VARKA_ALLIANCE3 = 7223;
 	private final static int MARK_OF_VARKA_ALLIANCE4 = 7224;
 	private final static int MARK_OF_VARKA_ALLIANCE5 = 7225;
@@ -53,10 +48,8 @@ public class _613_ProveYourCourage extends Quest implements ScriptFile
 	public _613_ProveYourCourage()
 	{
 		super(true);
-		
 		addStartNpc(DURAI);
 		addKillId(KETRAS_HERO_HEKATON);
-		
 		addQuestItem(HEAD_OF_HEKATON);
 	}
 	
@@ -64,6 +57,7 @@ public class _613_ProveYourCourage extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("quest_accept"))
 		{
 			htmltext = "elder_ashas_barka_durai_q0613_0104.htm";
@@ -88,6 +82,7 @@ public class _613_ProveYourCourage extends Quest implements ScriptFile
 				htmltext = "elder_ashas_barka_durai_q0613_0106.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -96,6 +91,7 @@ public class _613_ProveYourCourage extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (cond == 0)
 		{
 			if (st.getPlayer().getLevel() >= 75)
@@ -124,6 +120,7 @@ public class _613_ProveYourCourage extends Quest implements ScriptFile
 		{
 			htmltext = "elder_ashas_barka_durai_q0613_0105.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -131,12 +128,14 @@ public class _613_ProveYourCourage extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		if ((npcId == KETRAS_HERO_HEKATON) && (st.getCond() == 1))
 		{
 			st.giveItems(HEAD_OF_HEKATON, 1);
 			st.setCond(2);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		return null;
 	}
 }

@@ -52,6 +52,7 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 			}
 			
 			ItemInstance item = seller.getInventory().getItemByObjectId(si.getObjectId());
+			
 			if (item == null)
 			{
 				// вещь недоступна, пробуем найти такую же по itemId
@@ -72,6 +73,7 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 		// Проверяем список вещей в инвентаре, если вещь остутствует в списке
 		// продажи, добавляем в список доступных для продажи
 		loop:
+		
 		for (ItemInstance item : items)
 		{
 			if (item.canBeTraded(seller) && (item.getItemId() != ItemTemplate.ITEM_ID_ADENA))
@@ -84,6 +86,7 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 						{
 							continue loop;
 						}
+						
 						// Показывает остаток вещей для продажи
 						TradeItem ti = new TradeItem(item);
 						ti.setCount(item.getCount() - si.getCount());
@@ -91,6 +94,7 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 						continue loop;
 					}
 				}
+				
 				_sellList.add(new TradeItem(item));
 			}
 		}
@@ -104,9 +108,9 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 		writeD(_sellerId);
 		writeD(_package ? 1 : 0);
 		writeQ(_adena);
-		
 		// Список имеющихся вещей
 		writeD(_sellList.size());
+		
 		for (TradeItem si : _sellList)
 		{
 			writeItemInfo(si);
@@ -115,6 +119,7 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 		
 		// Список вещей уже поставленых на продажу
 		writeD(_sellList0.size());
+		
 		for (TradeItem si : _sellList0)
 		{
 			writeItemInfo(si);

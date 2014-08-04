@@ -92,6 +92,7 @@ public class QuestTimer extends RunnableImpl
 	public void runImpl()
 	{
 		QuestState qs = getQuestState();
+		
 		if (qs != null)
 		{
 			qs.removeQuestTimer(getName());
@@ -180,14 +181,17 @@ public class QuestTimer extends RunnableImpl
 		{
 			return true;
 		}
+		
 		if (o == null)
 		{
 			return false;
 		}
+		
 		if (o.getClass() != this.getClass())
 		{
 			return false;
 		}
+		
 		return ((QuestTimer) o).getName().equals(getName());
 	}
 }

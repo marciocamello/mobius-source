@@ -67,6 +67,7 @@ public class OiAriosh extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (!actor.isDead())
 		{
 			if (actor.getCurrentHpPercents() < _hps[_hpCount])
@@ -75,6 +76,7 @@ public class OiAriosh extends Fighter
 				_hpCount++;
 			}
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	
@@ -85,6 +87,7 @@ public class OiAriosh extends Fighter
 	private void spawnMob(Creature attacker)
 	{
 		final NpcInstance actor = getActor();
+		
 		try
 		{
 			final SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(MOB));

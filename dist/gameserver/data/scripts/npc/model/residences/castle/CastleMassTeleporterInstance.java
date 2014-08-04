@@ -35,7 +35,7 @@ import lineage2.gameserver.utils.Location;
 public class CastleMassTeleporterInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -59,10 +59,12 @@ public class CastleMassTeleporterInstance extends NpcInstance
 		public void runImpl()
 		{
 			Functions.npcShout(CastleMassTeleporterInstance.this, NpcString.THE_DEFENDERS_OF_S1_CASTLE_WILL_BE_TELEPORTED_TO_THE_INNER_CASTLE, "#" + getCastle().getNpcStringName().getId());
+			
 			for (Player p : World.getAroundPlayers(CastleMassTeleporterInstance.this, 200, 50))
 			{
 				p.teleToLocation(Location.findPointToStay(_teleportLoc, 10, 100, p.getGeoIndex()));
 			}
+			
 			_teleportTask = null;
 		}
 	}
@@ -99,11 +101,13 @@ public class CastleMassTeleporterInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (_teleportTask != null)
 		{
 			showChatWindow(player, "residence2/castle/CastleTeleportDelayed.htm");
 			return;
 		}
+		
 		_teleportTask = ThreadPoolManager.getInstance().schedule(new TeleportTask(), isAllTowersDead() ? 480000L : 30000L);
 		showChatWindow(player, "residence2/castle/CastleTeleportDelayed.htm");
 	}
@@ -141,11 +145,14 @@ public class CastleMassTeleporterInstance extends NpcInstance
 	private boolean isAllTowersDead()
 	{
 		SiegeEvent<?, ?> siegeEvent = getEvent(SiegeEvent.class);
+		
 		if ((siegeEvent == null) || !siegeEvent.isInProgress())
 		{
 			return false;
 		}
+		
 		List<SiegeToggleNpcObject> towers = siegeEvent.getObjects(CastleSiegeEvent.CONTROL_TOWERS);
+		
 		for (SiegeToggleNpcObject t : towers)
 		{
 			if (t.isAlive())
@@ -153,6 +160,7 @@ public class CastleMassTeleporterInstance extends NpcInstance
 				return false;
 			}
 		}
+		
 		return true;
 	}
 }

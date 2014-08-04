@@ -28,15 +28,10 @@ public class _149_PrimalMotherIstina extends Quest implements ScriptFile
 	public _149_PrimalMotherIstina()
 	{
 		super(false);
-		
 		addStartNpc(LIMIER);
-		
 		addTalkId(LIMIER);
-		
 		addKillId(ISXINA_NORMAL);
-		
 		addQuestItem(SIGN_OF_SHILEN);
-		
 		addLevelCheck(90, 100);
 	}
 	
@@ -44,12 +39,14 @@ public class _149_PrimalMotherIstina extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("33293-5.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return htmltext;
 	}
 	
@@ -77,10 +74,12 @@ public class _149_PrimalMotherIstina extends Quest implements ScriptFile
 			{
 				return "33293.htm";
 			}
+			
 			if (cond == 1)
 			{
 				return "33293-7.htm";
 			}
+			
 			if (cond == 2)
 			{
 				st.takeItems(SIGN_OF_SHILEN, -1);
@@ -91,6 +90,7 @@ public class _149_PrimalMotherIstina extends Quest implements ScriptFile
 				return "33293-8.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -102,8 +102,8 @@ public class _149_PrimalMotherIstina extends Quest implements ScriptFile
 			st.giveItems(SIGN_OF_SHILEN, 1);
 			st.setCond(2);
 		}
-		return null;
 		
+		return null;
 	}
 	
 	@Override

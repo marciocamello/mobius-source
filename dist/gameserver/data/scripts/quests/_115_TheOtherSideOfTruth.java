@@ -51,16 +51,19 @@ public class _115_TheOtherSideOfTruth extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		int _state = st.getState();
+		
 		if (event.equalsIgnoreCase("32020-02.htm") && (_state == CREATED))
 		{
 			st.setState(STARTED);
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		if (_state != STARTED)
 		{
 			return event;
 		}
+		
 		if (event.equalsIgnoreCase("32020-06.htm") || event.equalsIgnoreCase("32020-08a.htm"))
 		{
 			st.playSound(SOUND_FINISH);
@@ -92,10 +95,12 @@ public class _115_TheOtherSideOfTruth extends Quest implements ScriptFile
 		{
 			st.setCond(8);
 			st.playSound(SOUND_MIDDLE);
+			
 			if ((st.getInt("32021") == 0) && (st.getInt("32077") == 0))
 			{
 				st.giveItems(Piece_of_Tablet, 1);
 			}
+			
 			return "Sculpture-04.htm";
 		}
 		else if (event.equalsIgnoreCase("32022-02.htm"))
@@ -137,9 +142,11 @@ public class _115_TheOtherSideOfTruth extends Quest implements ScriptFile
 				st.set("talk", "1");
 				event = event.replace("-pick", "");
 			}
+			
 			st.set(event, "1");
 			return "Sculpture-05.htm";
 		}
+		
 		return event;
 	}
 	
@@ -147,26 +154,33 @@ public class _115_TheOtherSideOfTruth extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int _state = st.getState();
+		
 		if (_state == COMPLETED)
 		{
 			return "completed";
 		}
+		
 		int npcId = npc.getNpcId();
+		
 		if (_state == CREATED)
 		{
 			if (npcId != Rafforty)
 			{
 				return "noquest";
 			}
+			
 			if (st.getPlayer().getLevel() >= 53)
 			{
 				st.setCond(0);
 				return "32020-01.htm";
 			}
+			
 			st.exitCurrentQuest(true);
 			return "32020-00.htm";
 		}
+		
 		int cond = st.getCond();
+		
 		if ((npcId == Rafforty) && (_state == STARTED))
 		{
 			if (cond == 1)
@@ -256,6 +270,7 @@ public class _115_TheOtherSideOfTruth extends Quest implements ScriptFile
 			{
 				String _npcId = String.valueOf(npcId);
 				int npcId_flag = st.getInt(_npcId);
+				
 				if ((npcId == Ice_Sculpture1) || (npcId == Ice_Sculpture2))
 				{
 					int talk_flag = st.getInt("talk");
@@ -287,6 +302,7 @@ public class _115_TheOtherSideOfTruth extends Quest implements ScriptFile
 				return "Sculpture-08.htm";
 			}
 		}
+		
 		return "noquest";
 	}
 	

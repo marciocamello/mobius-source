@@ -58,6 +58,7 @@ public abstract class AbstractFileParser<H extends AbstractHolder> extends Abstr
 		}
 		
 		File dtd = new File(file.getParent(), getDTDFileName());
+		
 		if (!dtd.exists())
 		{
 			info("DTD file: " + dtd.getName() + " not exists.");

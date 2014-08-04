@@ -58,6 +58,7 @@ public class GreatPowerfulDevice extends DefaultAI
 	protected void onEvtDead(Creature killer)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (checkAllDestroyed(actor.getNpcId()))
 		{
 			for (int i = 0; i < 6; i++)
@@ -67,7 +68,9 @@ public class GreatPowerfulDevice extends DefaultAI
 					actor.getReflection().addSpawnWithoutRespawn(mobId, Location.findPointToStay(OBELISK_LOC.clone().setZ(-12224), 600, 1200, actor.getGeoIndex()), 0);
 				}
 			}
+			
 			actor.getReflection().openDoor(12240027);
+			
 			for (NpcInstance n : actor.getReflection().getNpcs())
 			{
 				if (n.getNpcId() == 18778)
@@ -76,6 +79,7 @@ public class GreatPowerfulDevice extends DefaultAI
 				}
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 	
@@ -93,6 +97,7 @@ public class GreatPowerfulDevice extends DefaultAI
 				return false;
 			}
 		}
+		
 		return true;
 	}
 }

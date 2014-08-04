@@ -58,6 +58,7 @@ public abstract class ExBuySellList extends L2GameServerPacket
 			writeD(_listId);
 			writeD(0x00); // L2WT GOD Количество занятых слотов
 			writeH(_buyList.size());
+			
 			for (TradeItem item : _buyList)
 			{
 				writeItemInfo(item, item.getCurrentValue());
@@ -76,6 +77,7 @@ public abstract class ExBuySellList extends L2GameServerPacket
 		{
 			super(1);
 			_done = done ? 1 : 0;
+			
 			if (done)
 			{
 				_refundList = Collections.emptyList();
@@ -85,6 +87,7 @@ public abstract class ExBuySellList extends L2GameServerPacket
 			{
 				ItemInstance[] items = activeChar.getRefund().getItems();
 				_refundList = new ArrayList<>(items.length);
+				
 				for (ItemInstance item : items)
 				{
 					_refundList.add(new TradeItem(item));
@@ -92,6 +95,7 @@ public abstract class ExBuySellList extends L2GameServerPacket
 				
 				items = activeChar.getInventory().getItems();
 				_sellList = new ArrayList<>(items.length);
+				
 				for (ItemInstance item : items)
 				{
 					if (item.canBeSold(activeChar))
@@ -108,18 +112,22 @@ public abstract class ExBuySellList extends L2GameServerPacket
 			super.writeImpl();
 			writeD(0x00); // L2WT GOD Количество занятых слотов
 			writeH(_sellList.size());
+			
 			for (TradeItem item : _sellList)
 			{
 				writeItemInfo(item);
 				writeQ(item.getReferencePrice() / 2);
 			}
+			
 			writeH(_refundList.size());
+			
 			for (TradeItem item : _refundList)
 			{
 				writeItemInfo(item);
 				writeD(item.getObjectId());
 				writeQ((item.getCount() * item.getReferencePrice()) / 2);
 			}
+			
 			writeC(_done);
 		}
 	}

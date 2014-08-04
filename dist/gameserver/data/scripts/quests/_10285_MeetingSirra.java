@@ -46,6 +46,7 @@ public class _10285_MeetingSirra extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("rafforty_q10285_03.htm"))
 		{
 			st.setState(STARTED);
@@ -58,6 +59,7 @@ public class _10285_MeetingSirra extends Quest implements ScriptFile
 			{
 				st.setCond(2);
 			}
+			
 			enterInstance(st.getPlayer(), 141);
 			return null;
 		}
@@ -73,6 +75,7 @@ public class _10285_MeetingSirra extends Quest implements ScriptFile
 		{
 			st.setCond(5);
 			st.getPlayer().getReflection().addSpawnWithoutRespawn(Sirra, new Location(-23848, -8744, -5413, 49152), 0);
+			
 			for (NpcInstance sirra : st.getPlayer().getAroundNpc(1000, 100))
 			{
 				if (sirra.getNpcId() == Sirra)
@@ -80,11 +83,13 @@ public class _10285_MeetingSirra extends Quest implements ScriptFile
 					Functions.npcSay(sirra, "Вас послушать, получается, что Вы знаете обо всем на свете. Но я больше не могу слушать Ваши мудрствования");
 				}
 			}
+			
 			return null;
 		}
 		else if (event.equalsIgnoreCase("sirra_q10285_07.htm"))
 		{
 			st.setCond(6);
+			
 			for (NpcInstance sirra : st.getPlayer().getAroundNpc(1000, 100))
 			{
 				if (sirra.getNpcId() == 32762)
@@ -100,6 +105,7 @@ public class _10285_MeetingSirra extends Quest implements ScriptFile
 				st.getPlayer().getReflection().startCollapseTimer(60 * 1000L);
 				st.getPlayer().sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(1));
 			}
+			
 			st.setCond(7);
 		}
 		else if (event.equalsIgnoreCase("exitinstance"))
@@ -113,6 +119,7 @@ public class _10285_MeetingSirra extends Quest implements ScriptFile
 			enterInstance(st.getPlayer(), 137);
 			return null;
 		}
+		
 		return htmltext;
 	}
 	
@@ -122,11 +129,13 @@ public class _10285_MeetingSirra extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Rafforty)
 		{
 			if (cond == 0)
 			{
 				QuestState qs = st.getPlayer().getQuestState(_10284_AcquisionOfDivineSword.class);
+				
 				if ((st.getPlayer().getLevel() >= 82) && (qs != null) && qs.isCompleted())
 				{
 					htmltext = "rafforty_q10285_01.htm";
@@ -196,12 +205,14 @@ public class _10285_MeetingSirra extends Quest implements ScriptFile
 				htmltext = "jinia2_q10285_02.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
 	private void enterInstance(Player player, int izId)
 	{
 		Reflection r = player.getActiveReflection();
+		
 		if (r != null)
 		{
 			if (player.canReenterInstance(izId))
@@ -212,6 +223,7 @@ public class _10285_MeetingSirra extends Quest implements ScriptFile
 		else if (player.canEnterInstance(izId))
 		{
 			Reflection newInstance = ReflectionUtils.enterReflection(player, izId);
+			
 			if (izId == 137)
 			{
 				ThreadPoolManager.getInstance().schedule(new FreyaSpawn(newInstance, player), 2 * 60 * 1000L);
@@ -261,10 +273,12 @@ public class _10285_MeetingSirra extends Quest implements ScriptFile
 			{
 				sp.deleteAll();
 			}
+			
 			if ((_npc != null) && !_npc.isDead())
 			{
 				_npc.deleteMe();
 			}
+			
 			_player.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_FREYA_FORCED_DEFEAT);
 			ThreadPoolManager.getInstance().schedule(new ResetInstance(_player, _r), 23000L);
 		}

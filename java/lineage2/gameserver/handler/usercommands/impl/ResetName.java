@@ -42,6 +42,7 @@ public class ResetName implements IUserCommandHandler
 		{
 			return false;
 		}
+		
 		if (activeChar.getVar("oldtitle") != null)
 		{
 			activeChar.setTitleColor(Player.DEFAULT_TITLE_COLOR);
@@ -49,6 +50,7 @@ public class ResetName implements IUserCommandHandler
 			activeChar.broadcastUserInfo();
 			return true;
 		}
+		
 		return false;
 	}
 	

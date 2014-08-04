@@ -36,6 +36,7 @@ public class _10290_LandDragonConqueror extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("theodric_q10290_04.htm"))
 		{
 			st.setState(STARTED);
@@ -43,6 +44,7 @@ public class _10290_LandDragonConqueror extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			st.giveItems(ShabbyNecklace, 1);
 		}
+		
 		return htmltext;
 	}
 	
@@ -52,6 +54,7 @@ public class _10290_LandDragonConqueror extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Theodric)
 		{
 			if (cond == 0)
@@ -92,6 +95,7 @@ public class _10290_LandDragonConqueror extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -100,12 +104,14 @@ public class _10290_LandDragonConqueror extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if ((cond == 1) && (npcId == UltimateAntharas))
 		{
 			st.takeAllItems(ShabbyNecklace);
 			st.giveItems(MiracleNecklace, 1);
 			st.setCond(2);
 		}
+		
 		return null;
 	}
 	

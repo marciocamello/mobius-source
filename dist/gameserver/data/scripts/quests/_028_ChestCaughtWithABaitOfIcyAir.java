@@ -52,6 +52,7 @@ public class _028_ChestCaughtWithABaitOfIcyAir extends Quest implements ScriptFi
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("fisher_ofulle_q0028_0104.htm"))
 		{
 			st.setState(STARTED);
@@ -88,6 +89,7 @@ public class _028_ChestCaughtWithABaitOfIcyAir extends Quest implements ScriptFi
 				st.exitCurrentQuest(true);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -98,6 +100,7 @@ public class _028_ChestCaughtWithABaitOfIcyAir extends Quest implements ScriptFi
 		String htmltext = "noquest";
 		int id = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == OFulle)
 		{
 			if (id == CREATED)
@@ -110,6 +113,7 @@ public class _028_ChestCaughtWithABaitOfIcyAir extends Quest implements ScriptFi
 				else
 				{
 					QuestState OFullesSpecialBait = st.getPlayer().getQuestState(_051_OFullesSpecialBait.class);
+					
 					if (OFullesSpecialBait != null)
 					{
 						if (OFullesSpecialBait.isCompleted())
@@ -132,6 +136,7 @@ public class _028_ChestCaughtWithABaitOfIcyAir extends Quest implements ScriptFi
 			else if (cond == 1)
 			{
 				htmltext = "fisher_ofulle_q0028_0105.htm";
+				
 				if (st.getQuestItemsCount(BigYellowTreasureChest) == 0)
 				{
 					htmltext = "fisher_ofulle_q0028_0106.htm";
@@ -153,6 +158,7 @@ public class _028_ChestCaughtWithABaitOfIcyAir extends Quest implements ScriptFi
 				htmltext = "mineral_trader_kiki_q0028_0302.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

@@ -37,9 +37,7 @@ public class _10378_WeedingWork extends Quest implements ScriptFile
 		addTalkId(DADFENA);
 		addQuestItem(STEBEL);
 		addQuestItem(KOREN);
-		
 		addKillId(23210, 23211);
-		
 		addLevelCheck(95, 100);
 	}
 	
@@ -65,6 +63,7 @@ public class _10378_WeedingWork extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -74,6 +73,7 @@ public class _10378_WeedingWork extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == DADFENA)
 		{
 			if (cond == 0)
@@ -105,22 +105,27 @@ public class _10378_WeedingWork extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		if (qs.getCond() != 1)
 		{
 			return null;
 		}
+		
 		if ((qs.getQuestItemsCount(STEBEL) < 5) && Rnd.chance(7))
 		{
 			qs.giveItems(STEBEL, 1);
 		}
+		
 		if ((qs.getQuestItemsCount(KOREN) < 5) && Rnd.chance(7))
 		{
 			qs.giveItems(KOREN, 1);
 		}
+		
 		if ((qs.getQuestItemsCount(KOREN) >= 5) && (qs.getQuestItemsCount(STEBEL) >= 5))
 		{
 			qs.setCond(2);
 		}
+		
 		return null;
 	}
 	

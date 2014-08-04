@@ -70,6 +70,7 @@ public class ManageBbsBuffer
 				return scheme;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -81,6 +82,7 @@ public class ManageBbsBuffer
 	public static int getAutoIncrement(int ain)
 	{
 		int count = 0;
+		
 		for (SBufferScheme scheme : getInstance().listScheme)
 		{
 			if (ain == scheme.id)
@@ -88,10 +90,12 @@ public class ManageBbsBuffer
 				count++;
 			}
 		}
+		
 		if (count == 0)
 		{
 			return ain;
 		}
+		
 		return getAutoIncrement(ain + 1);
 	}
 	
@@ -104,10 +108,12 @@ public class ManageBbsBuffer
 	{
 		List<Integer> skills_id = new ArrayList<>();
 		String[] s_id = list.split(";");
+		
 		for (String element : s_id)
 		{
 			skills_id.add(Integer.valueOf(Integer.parseInt(element)));
 		}
+		
 		return skills_id;
 	}
 	
@@ -119,10 +125,12 @@ public class ManageBbsBuffer
 	public static String IntToString(List<Integer> id)
 	{
 		String buff_list = "";
+		
 		for (int i = 0; i < id.size(); i++)
 		{
 			buff_list = buff_list + new StringBuilder().append(id.get(i)).append(';').toString();
 		}
+		
 		return buff_list;
 	}
 	
@@ -143,6 +151,7 @@ public class ManageBbsBuffer
 	public static int getCountOnePlayer(int obj_id)
 	{
 		int count = 0;
+		
 		for (SBufferScheme scheme : getInstance().listScheme)
 		{
 			if (obj_id == scheme.obj_id)
@@ -150,6 +159,7 @@ public class ManageBbsBuffer
 				count++;
 			}
 		}
+		
 		return count;
 	}
 	
@@ -168,6 +178,7 @@ public class ManageBbsBuffer
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -179,6 +190,7 @@ public class ManageBbsBuffer
 	public static List<SBufferScheme> getSchemePlayer(int obj_id)
 	{
 		List<SBufferScheme> list = new ArrayList<>();
+		
 		for (SBufferScheme sm : getInstance().listScheme)
 		{
 			if (sm.obj_id == obj_id)
@@ -186,6 +198,7 @@ public class ManageBbsBuffer
 				list.add(sm);
 			}
 		}
+		
 		return list;
 	}
 	

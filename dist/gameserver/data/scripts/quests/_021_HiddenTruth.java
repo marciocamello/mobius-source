@@ -51,6 +51,7 @@ public class _021_HiddenTruth extends Quest implements ScriptFile
 		{
 			GhostofvonHellmannsPage.deleteMe();
 		}
+		
 		GhostofvonHellmannsPage = null;
 	}
 	
@@ -65,6 +66,7 @@ public class _021_HiddenTruth extends Quest implements ScriptFile
 		{
 			GhostofvonHellmann.deleteMe();
 		}
+		
 		GhostofvonHellmann = null;
 	}
 	
@@ -101,6 +103,7 @@ public class _021_HiddenTruth extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("31522-02.htm"))
 		{
 			st.setState(STARTED);
@@ -114,10 +117,12 @@ public class _021_HiddenTruth extends Quest implements ScriptFile
 		{
 			st.unset("cond");
 			st.takeItems(CrossofEinhasad, -1);
+			
 			if (st.getQuestItemsCount(CrossofEinhasadNextQuest) == 0)
 			{
 				st.giveItems(CrossofEinhasadNextQuest, 1);
 			}
+			
 			st.addExpAndSp(3472500, 3291820);
 			st.playSound(SOUND_FINISH);
 			st.startQuestTimer("html", 1);
@@ -151,6 +156,7 @@ public class _021_HiddenTruth extends Quest implements ScriptFile
 			st.giveItems(CrossofEinhasad, 1);
 			st.setCond(6);
 		}
+		
 		return htmltext;
 	}
 	
@@ -160,6 +166,7 @@ public class _021_HiddenTruth extends Quest implements ScriptFile
 		String htmltext = "This person inaccessible and does not want with you to talk!<br>Are they please returned later...";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == MysteriousWizard)
 		{
 			if (cond == 0)
@@ -213,13 +220,16 @@ public class _021_HiddenTruth extends Quest implements ScriptFile
 			if ((cond == 3) || (cond == 4))
 			{
 				htmltext = "31525-01.htm";
+				
 				if ((GhostofvonHellmannsPage == null) || !GhostofvonHellmannsPage.isMoving)
 				{
 					htmltext = "31525-02.htm";
+					
 					if (cond == 3)
 					{
 						st.setCond(4);
 					}
+					
 					despawnGhostofvonHellmannsPage();
 				}
 			}
@@ -317,6 +327,7 @@ public class _021_HiddenTruth extends Quest implements ScriptFile
 				htmltext = "31328-06.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

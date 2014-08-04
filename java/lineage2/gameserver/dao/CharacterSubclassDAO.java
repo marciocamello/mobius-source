@@ -86,6 +86,7 @@ public class CharacterSubclassDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -132,12 +133,14 @@ public class CharacterSubclassDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_SQL_QUERY);
 			statement.setInt(1, player.getObjectId());
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				SubClass subClass = new SubClass();
@@ -179,11 +182,13 @@ public class CharacterSubclassDAO
 	{
 		Connection con = null;
 		Statement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.createStatement();
 			StringBuilder sb;
+			
 			for (SubClass subClass : player.getSubClassList().values())
 			{
 				sb = new StringBuilder("UPDATE character_subclasses SET ");
@@ -201,6 +206,7 @@ public class CharacterSubclassDAO
 				sb.append(" WHERE char_obj_id=").append(player.getObjectId()).append(" AND class_id=").append(subClass.getClassId()).append(" LIMIT 1");
 				statement.executeUpdate(sb.toString());
 			}
+			
 			sb = new StringBuilder("UPDATE character_subclasses SET ");
 			sb.append("maxHp=").append(player.getMaxHp()).append(',');
 			sb.append("maxMp=").append(player.getMaxMp()).append(',');

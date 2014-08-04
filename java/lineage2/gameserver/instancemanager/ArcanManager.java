@@ -35,6 +35,7 @@ public class ArcanManager
 		{
 			_instance = new ArcanManager();
 		}
+		
 		return _instance;
 	}
 	
@@ -48,7 +49,7 @@ public class ArcanManager
 	private class ChangeStage extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public ChangeStage()
 		{
@@ -78,6 +79,7 @@ public class ArcanManager
 	public void broadcastPacket(int value, boolean b, boolean message)
 	{
 		L2GameServerPacket trigger = new EventTrigger(value, b);
+		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			player.sendPacket(trigger);
@@ -86,6 +88,7 @@ public class ArcanManager
 		if (message)
 		{
 			L2GameServerPacket sm = new ExShowScreenMessage(NpcString.DARK_POWER_SEEPS_OUT_FROM_THE_MIDDLE_OF_THE_TOWN, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true);
+			
 			for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 			{
 				player.sendPacket(sm);

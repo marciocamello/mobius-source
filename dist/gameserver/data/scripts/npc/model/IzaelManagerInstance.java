@@ -22,7 +22,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public final class IzaelManagerInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	private static final int fortunaId = 179;
@@ -39,9 +39,11 @@ public final class IzaelManagerInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("enter"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(fortunaId))
@@ -54,6 +56,7 @@ public final class IzaelManagerInstance extends NpcInstance
 				ReflectionUtils.enterReflection(player, new FortunaInstance(), fortunaId);
 			}
 		}
+		
 		super.onBypassFeedback(player, command);
 	}
 }

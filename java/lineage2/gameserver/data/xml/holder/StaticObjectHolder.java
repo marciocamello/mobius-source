@@ -79,6 +79,7 @@ public final class StaticObjectHolder extends AbstractHolder
 				_spawned.put(template.getUId(), obj);
 			}
 		}
+		
 		info("spawned: " + _spawned.size() + " static object(s).");
 	}
 	

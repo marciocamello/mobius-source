@@ -76,6 +76,7 @@ public class MemorialService extends DynamicQuest implements ScriptFile
 		for (int objectId : getParticipants())
 		{
 			Player player = GameObjectsStorage.getPlayer(objectId);
+			
 			if (player != null)
 			{
 				removeParticipant(player);
@@ -99,15 +100,18 @@ public class MemorialService extends DynamicQuest implements ScriptFile
 				{
 					return "dc0003_start001.htm";
 				}
+				
 				return "dc0003_context001.htm";
 			}
 			else if (isSuccessed())
 			{
 				boolean rewardReceived = rewardReceived(player);
+				
 				if (rewardReceived)
 				{
 					return "dc0003_reward_received001.htm";
 				}
+				
 				return "dc0003_reward001.htm";
 			}
 			else
@@ -115,6 +119,7 @@ public class MemorialService extends DynamicQuest implements ScriptFile
 				return "dc0003_failed001.htm";
 			}
 		}
+		
 		return null;
 	}
 	
@@ -126,6 +131,7 @@ public class MemorialService extends DynamicQuest implements ScriptFile
 			addParticipant(player);
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -138,6 +144,7 @@ public class MemorialService extends DynamicQuest implements ScriptFile
 	protected String onDialogEvent(String event, Player player)
 	{
 		String response = null;
+		
 		if (event.equals("Accept"))
 		{
 			addParticipant(player);
@@ -152,6 +159,7 @@ public class MemorialService extends DynamicQuest implements ScriptFile
 		{
 			response = event;
 		}
+		
 		return response;
 	}
 	
@@ -192,7 +200,7 @@ public class MemorialService extends DynamicQuest implements ScriptFile
 	private final class OnSocialActionListenerImpl implements OnSocialActionListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public OnSocialActionListenerImpl()
 		{
@@ -205,6 +213,7 @@ public class MemorialService extends DynamicQuest implements ScriptFile
 			if ((target != null) && target.isNpc() && player.isInRange(target, Creature.INTERACTION_DISTANCE))
 			{
 				NpcInstance npc = (NpcInstance) target;
+				
 				switch (npc.getNpcId())
 				{
 					case PRIEST_KHYBER:
@@ -212,12 +221,15 @@ public class MemorialService extends DynamicQuest implements ScriptFile
 						{
 							increaseTaskPoint(SORROW_EMOTE, player, 1);
 						}
+						
 						break;
+					
 					case GUARD_JANSON:
 						if (action.value == SocialAction.BOW)
 						{
 							increaseTaskPoint(PERFORM_POLITE, player, 1);
 						}
+						
 						break;
 				}
 			}

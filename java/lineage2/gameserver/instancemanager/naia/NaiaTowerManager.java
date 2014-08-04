@@ -91,18 +91,23 @@ public final class NaiaTowerManager
 		if (lockedRooms == null)
 		{
 			lockedRooms = new HashMap<>();
+			
 			for (int i = 18494; i <= 18505; i++)
 			{
 				lockedRooms.put(i, false);
 			}
+			
 			_roomMobs = new HashMap<>();
+			
 			for (int i = 18494; i <= 18505; i++)
 			{
 				_roomMobList = new ArrayList<>();
 				_roomMobs.put(i, _roomMobList);
 			}
+			
 			_log.info("Naia Tower Manager: Loaded 12 rooms");
 		}
+		
 		ThreadPoolManager.getInstance().schedule(new GroupTowerTimer(), 30 * 1000L);
 	}
 	
@@ -116,14 +121,17 @@ public final class NaiaTowerManager
 		{
 			return;
 		}
+		
 		if (_towerAccessible > System.currentTimeMillis())
 		{
 			return;
 		}
+		
 		for (Player member : leader.getParty().getPartyMembers())
 		{
 			member.teleToLocation(new Location(-47271, 246098, -9120));
 		}
+		
 		addGroupToTower(leader);
 		_towerAccessible += 20 * 60 * 1000L;
 		ReflectionUtils.getDoor(18250001).openMe();
@@ -185,6 +193,7 @@ public final class NaiaTowerManager
 		{
 			return false;
 		}
+		
 		for (int i : _groupList.keySet())
 		{
 			if (_groupList.get(i).contains(player))
@@ -192,6 +201,7 @@ public final class NaiaTowerManager
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -248,14 +258,17 @@ public final class NaiaTowerManager
 		{
 			return false;
 		}
+		
 		if ((_roomsDone.get(roomId) == null) || _roomsDone.get(roomId).isEmpty())
 		{
 			return false;
 		}
+		
 		if (_roomsDone.get(roomId).contains(player))
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -308,6 +321,7 @@ public final class NaiaTowerManager
 		public void runImpl()
 		{
 			ThreadPoolManager.getInstance().schedule(new GroupTowerTimer(), 30 * 1000L);
+			
 			if (!_groupList.isEmpty() && !_groupTimer.isEmpty())
 			{
 				for (int i : _groupTimer.keySet())
@@ -319,6 +333,7 @@ public final class NaiaTowerManager
 							kicked.teleToLocation(new Location(17656, 244328, 11595));
 							kicked.sendMessage("The time has expired. You cannot stay in Tower of Naia any longer");
 						}
+						
 						_groupList.remove(i);
 						_groupTimer.remove(i);
 					}

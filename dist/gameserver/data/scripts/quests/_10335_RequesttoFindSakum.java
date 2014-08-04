@@ -65,6 +65,7 @@ public class _10335_RequesttoFindSakum extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -86,6 +87,7 @@ public class _10335_RequesttoFindSakum extends Quest implements ScriptFile
 			htmltext = "1-2.htm";
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return htmltext;
 	}
 	
@@ -95,6 +97,7 @@ public class _10335_RequesttoFindSakum extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == batis)
 		{
 			if (st.isCompleted())
@@ -156,6 +159,7 @@ public class _10335_RequesttoFindSakum extends Quest implements ScriptFile
 				htmltext = "2-1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -163,6 +167,7 @@ public class _10335_RequesttoFindSakum extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		boolean doneKill = updateKill(npc, st);
+		
 		if (doneKill)
 		{
 			st.unset(sledopyt_item);
@@ -171,6 +176,7 @@ public class _10335_RequesttoFindSakum extends Quest implements ScriptFile
 			st.unset(zombie_item);
 			st.setCond(3);
 		}
+		
 		return null;
 	}
 }

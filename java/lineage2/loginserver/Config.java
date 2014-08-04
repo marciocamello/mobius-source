@@ -200,6 +200,7 @@ public class Config
 	{
 		DEFAULT_CRYPT = new PasswordHash(Config.DEFAULT_PASSWORD_HASH);
 		List<PasswordHash> legacy = new ArrayList<>();
+		
 		for (String method : Config.LEGACY_PASSWORD_HASH.split(";"))
 		{
 			if (!method.equalsIgnoreCase(Config.DEFAULT_PASSWORD_HASH))
@@ -207,18 +208,22 @@ public class Config
 				legacy.add(new PasswordHash(method));
 			}
 		}
+		
 		LEGACY_CRYPT = legacy.toArray(new PasswordHash[legacy.size()]);
 		_log.info("Loaded " + Config.DEFAULT_PASSWORD_HASH + " as default crypt.");
 		_keyPairs = new ScrambledKeyPair[Config.LOGIN_RSA_KEYPAIRS];
 		KeyPairGenerator keygen = KeyPairGenerator.getInstance("RSA");
 		RSAKeyGenParameterSpec spec = new RSAKeyGenParameterSpec(1024, RSAKeyGenParameterSpec.F4);
 		keygen.initialize(spec);
+		
 		for (int i = 0; i < _keyPairs.length; i++)
 		{
 			_keyPairs[i] = new ScrambledKeyPair(keygen.generateKeyPair());
 		}
+		
 		_log.info("Cached " + _keyPairs.length + " KeyPairs for RSA communication");
 		_blowfishKeys = new byte[Config.LOGIN_BLOWFISH_KEYS][16];
+		
 		for (int i = 0; i < _blowfishKeys.length; i++)
 		{
 			for (int j = 0; j < _blowfishKeys[i].length; j++)
@@ -226,6 +231,7 @@ public class Config
 				_blowfishKeys[i][j] = (byte) (Rnd.get(255) + 1);
 			}
 		}
+		
 		_log.info("Stored " + _blowfishKeys.length + " keys for Blowfish communication");
 	}
 	
@@ -235,14 +241,17 @@ public class Config
 	public final static void loadServerNames()
 	{
 		SERVER_NAMES.clear();
+		
 		try
 		{
 			SAXReader reader = new SAXReader(true);
 			Document document = reader.read(new File(SERVER_NAMES_FILE));
 			Element root = document.getRootElement();
+			
 			for (Iterator<?> itr = root.elementIterator(); itr.hasNext();)
 			{
 				Element node = (Element) itr.next();
+				
 				if (node.getName().equalsIgnoreCase("server"))
 				{
 					Integer id = Integer.valueOf(node.attributeValue("id"));
@@ -250,6 +259,7 @@ public class Config
 					SERVER_NAMES.put(id, name);
 				}
 			}
+			
 			_log.info("Loaded " + SERVER_NAMES.size() + " server names");
 		}
 		catch (Exception e)
@@ -309,6 +319,7 @@ public class Config
 	public static ExProperties load(File file)
 	{
 		ExProperties result = new ExProperties();
+		
 		try
 		{
 			result.load(file);
@@ -317,6 +328,7 @@ public class Config
 		{
 			_log.error("", e);
 		}
+		
 		return result;
 	}
 	

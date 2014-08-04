@@ -42,6 +42,7 @@ public class Necromancer extends Mystic
 	protected void onEvtDead(Creature killer)
 	{
 		super.onEvtDead(killer);
+		
 		if (Rnd.chance(30))
 		{
 			final NpcInstance n = NpcUtils.spawnSingle(Rnd.chance(50) ? 22818 : 22819, getActor().getLoc());

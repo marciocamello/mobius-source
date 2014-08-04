@@ -37,6 +37,7 @@ public class _648_AnIceMerchantsDream extends Quest implements ScriptFile
 		super(true);
 		addStartNpc(Rafforty);
 		addStartNpc(Ice_Shelf);
+		
 		for (int i = 22080; i <= 22098; i++)
 		{
 			if (i != 22095)
@@ -50,6 +51,7 @@ public class _648_AnIceMerchantsDream extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		int _state = st.getState();
+		
 		if (event.equalsIgnoreCase("repre_q0648_04.htm") && (_state == CREATED))
 		{
 			st.setState(STARTED);
@@ -61,15 +63,19 @@ public class _648_AnIceMerchantsDream extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		if (_state != STARTED)
 		{
 			return event;
 		}
+		
 		long Silver_Ice_Crystal_Count = st.getQuestItemsCount(Silver_Ice_Crystal);
 		long Black_Ice_Crystal_Count = st.getQuestItemsCount(Black_Ice_Crystal);
+		
 		if (event.equalsIgnoreCase("repre_q0648_14.htm"))
 		{
 			long reward = (Silver_Ice_Crystal_Count * 300) + (Black_Ice_Crystal_Count * 1200);
+			
 			if (reward > 0)
 			{
 				st.takeItems(Silver_Ice_Crystal, -1);
@@ -119,6 +125,7 @@ public class _648_AnIceMerchantsDream extends Quest implements ScriptFile
 					return "cheat.htm";
 				}
 			}
+			
 			if (Rnd.chance(Silver2Black_Chance))
 			{
 				st.giveItems(Black_Ice_Crystal, 1);
@@ -130,6 +137,7 @@ public class _648_AnIceMerchantsDream extends Quest implements ScriptFile
 				return "ice_lathe_q0648_09.htm";
 			}
 		}
+		
 		return event;
 	}
 	
@@ -139,6 +147,7 @@ public class _648_AnIceMerchantsDream extends Quest implements ScriptFile
 		int _state = st.getState();
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (_state == CREATED)
 		{
 			if (npcId == Rafforty)
@@ -148,46 +157,58 @@ public class _648_AnIceMerchantsDream extends Quest implements ScriptFile
 					st.setCond(0);
 					return "repre_q0648_03.htm";
 				}
+				
 				st.exitCurrentQuest(true);
 				return "repre_q0648_01.htm";
 			}
+			
 			if (npcId == Ice_Shelf)
 			{
 				return "ice_lathe_q0648_01.htm";
 			}
 		}
+		
 		if (_state != STARTED)
 		{
 			return "noquest";
 		}
+		
 		long Silver_Ice_Crystal_Count = st.getQuestItemsCount(Silver_Ice_Crystal);
+		
 		if (npcId == Ice_Shelf)
 		{
 			return Silver_Ice_Crystal_Count > 0 ? "ice_lathe_q0648_03.htm" : "ice_lathe_q0648_02.htm";
 		}
+		
 		long Black_Ice_Crystal_Count = st.getQuestItemsCount(Black_Ice_Crystal);
+		
 		if (npcId == Rafforty)
 		{
 			QuestState st_115 = st.getPlayer().getQuestState(_115_TheOtherSideOfTruth.class);
+			
 			if ((st_115 != null) && st_115.isCompleted())
 			{
 				cond = 2;
 				st.setCond(2);
 				st.playSound(SOUND_MIDDLE);
 			}
+			
 			if (cond == 1)
 			{
 				if ((Silver_Ice_Crystal_Count > 0) || (Black_Ice_Crystal_Count > 0))
 				{
 					return "repre_q0648_10.htm";
 				}
+				
 				return "repre_q0648_08.htm";
 			}
+			
 			if (cond == 2)
 			{
 				return (Silver_Ice_Crystal_Count > 0) || (Black_Ice_Crystal_Count > 0) ? "repre_q0648_11.htm" : "repre_q0648_09.htm";
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -195,14 +216,17 @@ public class _648_AnIceMerchantsDream extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState qs)
 	{
 		int cond = qs.getCond();
+		
 		if (cond > 0)
 		{
 			qs.rollAndGive(Silver_Ice_Crystal, 1, npc.getNpcId() - 22050);
+			
 			if (cond == 2)
 			{
 				qs.rollAndGive(Silver_Hemocyte, 1, Silver_Hemocyte_Chance);
 			}
 		}
+		
 		return null;
 	}
 	

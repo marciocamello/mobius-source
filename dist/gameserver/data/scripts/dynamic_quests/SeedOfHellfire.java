@@ -93,6 +93,7 @@ public class SeedOfHellfire extends DynamicQuest implements ScriptFile
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -118,6 +119,7 @@ public class SeedOfHellfire extends DynamicQuest implements ScriptFile
 		for (int objectId : getParticipants())
 		{
 			Player player = GameObjectsStorage.getPlayer(objectId);
+			
 			if (player != null)
 			{
 				removeParticipant(player);
@@ -132,6 +134,7 @@ public class SeedOfHellfire extends DynamicQuest implements ScriptFile
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -158,15 +161,18 @@ public class SeedOfHellfire extends DynamicQuest implements ScriptFile
 				{
 					return "dc0015_01_start001.htm";
 				}
+				
 				return "dc0015_01_context001.htm";
 			}
 			else if (isSuccessed())
 			{
 				boolean rewardReceived = rewardReceived(player);
+				
 				if (rewardReceived)
 				{
 					return null;
 				}
+				
 				return "dc0015_01_reward001.htm";
 			}
 			else
@@ -174,6 +180,7 @@ public class SeedOfHellfire extends DynamicQuest implements ScriptFile
 				return "dc0015_01_failed001.htm";
 			}
 		}
+		
 		return null;
 	}
 	
@@ -181,6 +188,7 @@ public class SeedOfHellfire extends DynamicQuest implements ScriptFile
 	protected String onDialogEvent(String event, Player player)
 	{
 		String response = null;
+		
 		if (event.equals("Reward"))
 		{
 			tryReward(player);
@@ -190,6 +198,7 @@ public class SeedOfHellfire extends DynamicQuest implements ScriptFile
 		{
 			response = event;
 		}
+		
 		return response;
 	}
 	
@@ -207,7 +216,7 @@ public class SeedOfHellfire extends DynamicQuest implements ScriptFile
 	private final class KillListenerImpl implements OnKillListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public KillListenerImpl()
 		{
@@ -234,21 +243,27 @@ public class SeedOfHellfire extends DynamicQuest implements ScriptFile
 					case SMELTING_FURNACE:
 						increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 1);
 						break;
+					
 					case COOLING_DEVICE:
 						increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 2);
 						break;
+					
 					case WEAPON_STAND:
 						increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 3);
 						break;
+					
 					case ARMOR_STAND:
 						increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 3);
 						break;
+					
 					case KOJA_THE_ENGINEER:
 						increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 4);
 						break;
+					
 					case BOROK_THE_ENGINEER:
 						increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 3);
 						break;
+					
 					case ADAK_THE_ENGINEER:
 						increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 2);
 						break;
@@ -266,7 +281,7 @@ public class SeedOfHellfire extends DynamicQuest implements ScriptFile
 	private final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public ZoneListener()
 		{
@@ -287,6 +302,7 @@ public class SeedOfHellfire extends DynamicQuest implements ScriptFile
 			}
 			
 			Player player = character.getPlayer();
+			
 			if (isStarted() && !isSuccessed())
 			{
 				if (!getParticipants().contains(player.getObjectId()))
@@ -309,6 +325,7 @@ public class SeedOfHellfire extends DynamicQuest implements ScriptFile
 			}
 			
 			Player player = character.getPlayer();
+			
 			if (isStarted() && !isSuccessed())
 			{
 				if (getParticipants().contains(player.getObjectId()))

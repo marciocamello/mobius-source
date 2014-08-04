@@ -47,22 +47,28 @@ public final class RequestInfoItemAuction extends L2GameClientPacket
 	protected final void runImpl()
 	{
 		final Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		activeChar.getAndSetLastItemAuctionRequest();
 		final ItemAuctionInstance instance = ItemAuctionManager.getInstance().getManagerInstance(_instanceId);
+		
 		if (instance == null)
 		{
 			return;
 		}
+		
 		final ItemAuction auction = instance.getCurrentAuction();
 		NpcInstance broker = activeChar.getLastNpc();
+		
 		if ((auction == null) || (broker == null) || (broker.getNpcId() != _instanceId) || (activeChar.getDistance(broker.getX(), broker.getY()) > Creature.INTERACTION_DISTANCE))
 		{
 			return;
 		}
+		
 		activeChar.sendPacket(new ExItemAuctionInfo(true, auction, instance.getNextAuction()));
 	}
 }

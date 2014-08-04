@@ -71,14 +71,17 @@ public class Point2D implements Cloneable
 		{
 			return true;
 		}
+		
 		if (o == null)
 		{
 			return false;
 		}
+		
 		if (o.getClass() != getClass())
 		{
 			return false;
 		}
+		
 		return equals((Point2D) o);
 	}
 	

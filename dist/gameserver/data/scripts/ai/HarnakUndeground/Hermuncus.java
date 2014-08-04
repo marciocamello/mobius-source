@@ -32,6 +32,7 @@ public class Hermuncus extends DefaultAI
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
+		
 		if (!LAST_SPAWN)
 		{
 			getActor().setNpcState(1);

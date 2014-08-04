@@ -28,7 +28,7 @@ import lineage2.gameserver.utils.Location;
 public class OrfenInstance extends BossInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -110,6 +110,7 @@ public class OrfenInstance extends BossInstance
 	public void reduceCurrentHp(double damage, double reflectableDamage, Creature attacker, Skill skill, boolean awake, boolean standUp, boolean directHp, boolean canReflect, boolean transferDamage, boolean isDot, boolean sendMessage)
 	{
 		super.reduceCurrentHp(damage, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
+		
 		if (!isTeleported() && (getCurrentHpPercents() <= 50))
 		{
 			setTeleported(true);

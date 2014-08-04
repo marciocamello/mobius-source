@@ -82,6 +82,7 @@ public final class Calculator
 	public void removeFunc(Func f)
 	{
 		_functions = ArrayUtils.remove(_functions, f);
+		
 		if (_functions.length == 0)
 		{
 			_functions = Func.EMPTY_FUNC_ARRAY;
@@ -99,6 +100,7 @@ public final class Calculator
 	public void removeOwner(Object owner)
 	{
 		Func[] tmp = _functions;
+		
 		for (Func element : tmp)
 		{
 			if (element.owner == owner)
@@ -117,32 +119,38 @@ public final class Calculator
 		Func[] funcs = _functions;
 		_base = env.value;
 		boolean overrideLimits = false;
+		
 		for (Func func : funcs)
 		{
 			if (func == null)
 			{
 				continue;
 			}
+			
 			if (func.owner instanceof FuncOwner)
 			{
 				if (!((FuncOwner) func.owner).isFuncEnabled())
 				{
 					continue;
 				}
+				
 				if (((FuncOwner) func.owner).overrideLimits())
 				{
 					overrideLimits = true;
 				}
 			}
+			
 			if ((func.getCondition() == null) || func.getCondition().test(env))
 			{
 				func.calc(env);
 			}
 		}
+		
 		if (!overrideLimits)
 		{
 			env.value = _stat.validate(env.value);
 		}
+		
 		if (env.value != _last)
 		{
 			_last = env.value;

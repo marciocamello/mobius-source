@@ -162,10 +162,12 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 	public void startEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive("CofferofShadows", true))
 		{
 			spawnEventManagers();
@@ -176,6 +178,7 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 		{
 			player.sendMessage("Event 'Coffer of Shadows' already started.");
 		}
+		
 		_active = true;
 		show("admin/events.htm", player);
 	}
@@ -186,10 +189,12 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 	public void stopEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive("CofferofShadows", false))
 		{
 			unSpawnEventManagers();
@@ -200,6 +205,7 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 		{
 			player.sendMessage("Event 'Coffer of Shadows' not started.");
 		}
+		
 		_active = false;
 		show("admin/events.htm", player);
 	}
@@ -211,15 +217,19 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 	public void buycoffer(String[] var)
 	{
 		final Player player = getSelf();
+		
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;
 		}
+		
 		if (!NpcInstance.canBypassCheck(player, player.getLastNpc()))
 		{
 			return;
 		}
+		
 		int coffer_count = 1;
+		
 		try
 		{
 			coffer_count = Integer.valueOf(var[0]);
@@ -228,12 +238,15 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 		{
 			// empty catch clause
 		}
+		
 		final long need_adena = (long) (COFFER_PRICE * Config.EVENT_CofferOfShadowsPriceRate * coffer_count);
+		
 		if (player.getAdena() < need_adena)
 		{
 			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
+		
 		player.reduceAdena(need_adena, true);
 		Functions.addItem(player, COFFER_ID, coffer_count);
 	}
@@ -260,12 +273,15 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 		{
 			return "";
 		}
+		
 		String price;
 		String append = "";
+		
 		for (int cnt : buycoffer_counts)
 		{
 			price = Util.formatAdena((long) (COFFER_PRICE * Config.EVENT_CofferOfShadowsPriceRate * cnt));
 			append += "<a action=\"bypass -h scripts_events.CofferofShadows.CofferofShadows:buycoffer " + cnt + "\">";
+			
 			if (cnt == 1)
 			{
 				append += new CustomMessage("scripts.events.CofferofShadows.buycoffer", getSelf()).addString(price);
@@ -274,8 +290,10 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 			{
 				append += new CustomMessage("scripts.events.CofferofShadows.buycoffers", getSelf()).addNumber(cnt).addString(price);
 			}
+			
 			append += "</a><br>";
 		}
+		
 		return append;
 	}
 	
@@ -287,6 +305,7 @@ public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEn
 	public void onLoad()
 	{
 		CharListenerList.addGlobal(this);
+		
 		if (isActive())
 		{
 			_active = true;

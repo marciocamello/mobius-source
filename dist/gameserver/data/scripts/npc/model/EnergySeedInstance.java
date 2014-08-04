@@ -23,7 +23,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public final class EnergySeedInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	

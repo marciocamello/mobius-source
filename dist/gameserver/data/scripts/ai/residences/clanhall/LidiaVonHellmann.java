@@ -77,6 +77,7 @@ public class LidiaVonHellmann extends SiegeGuardFighter
 	{
 		final NpcInstance actor = getActor();
 		super.onEvtAttacked(attacker, damage);
+		
 		if (Rnd.chance(0.22))
 		{
 			addTaskCast(attacker, DRAIN_SKILL);
@@ -85,6 +86,7 @@ public class LidiaVonHellmann extends SiegeGuardFighter
 		{
 			addTaskCast(attacker, DRAIN_SKILL);
 		}
+		
 		if ((PositionUtils.calculateDistance(actor, attacker, false) > 300) && Rnd.chance(0.13))
 		{
 			addTaskCast(attacker, DAMAGE_SKILL);

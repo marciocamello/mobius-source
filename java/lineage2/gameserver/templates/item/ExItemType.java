@@ -319,7 +319,9 @@ public enum ExItemType
 		{
 			return new ExItemType[0];
 		}
+		
 		List<ExItemType> list = new ArrayList<>();
+		
 		for (ExItemType exType : values())
 		{
 			if (exType.getMask() == mask)
@@ -327,6 +329,7 @@ public enum ExItemType
 				list.add(exType);
 			}
 		}
+		
 		return list.toArray(new ExItemType[list.size()]);
 	}
 	
@@ -344,6 +347,7 @@ public enum ExItemType
 				return type;
 			}
 		}
+		
 		return null;
 	}
 }

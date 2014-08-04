@@ -42,6 +42,7 @@ public class ExFriendDetailInfo extends L2GameServerPacket
 		friendObjId = objId;
 		name = CharacterDAO.getInstance().getNameByObjectId(objId);
 		isOnline = World.getPlayer(objId) != null ? 1 : 0;
+		
 		// memo = activeChar.getFriendMemo(objId);
 		if (isOnline == 1)
 		{
@@ -49,6 +50,7 @@ public class ExFriendDetailInfo extends L2GameServerPacket
 			level = friend.getLevel();
 			classId = friend.getClassId().getId();
 			clanId = friend.getClanId();
+			
 			if (clanId != 0)
 			{
 				clanCrestId = friend.getClanId();
@@ -57,10 +59,12 @@ public class ExFriendDetailInfo extends L2GameServerPacket
 				allyCrestId = friend.getAllyId();
 				allyName = friend.getClan().getName();
 			}
+			
 			// createdMonth = friend.getCreateDate().get(Calendar.MONTH) + 1;
 			// createdDay = friend.getCreateDate().get(Calendar.DAY_OF_MONTH);
 			lastLogin = (int) friend.getLastAccess();
 		}
+		
 		// else
 		// offlineFriendInfo(objId);
 	}

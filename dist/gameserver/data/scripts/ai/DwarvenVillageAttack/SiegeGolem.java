@@ -62,15 +62,18 @@ public class SiegeGolem extends DefaultAI
 	protected void onEvtThink()
 	{
 		super.onEvtThink();
+		
 		if (!getActor().getAggroList().isEmpty())
 		{
 			List<Creature> chars = World.getAroundCharacters(getActor());
 			CollectionUtils.eqSort(chars, _nearestTargetComparator);
+			
 			for (Creature cha : chars)
 			{
 				if ((getActor().getAggroList().get(cha) != null) && checkAggression(cha))
 				{
 					Skill sk = SkillTable.getInstance().getInfo(SKILL_ID, 1);
+					
 					if ((lastCastTime + sk.getHitTime() + sk.getReuseDelay()) <= System.currentTimeMillis())
 					{
 						lastCastTime = System.currentTimeMillis();
@@ -85,6 +88,7 @@ public class SiegeGolem extends DefaultAI
 	protected boolean thinkActive()
 	{
 		NpcInstance actor = getActor();
+		
 		if ((actor == null) || actor.isDead())
 		{
 			return true;
@@ -99,11 +103,13 @@ public class SiegeGolem extends DefaultAI
 		if ((diedTeredor < 3) || (currentPoint >= (MOVE_LOC.length - 1)))
 		{
 			List<Creature> list = World.getAroundCharacters(getActor(), getActor().getAggroRange(), getActor().getAggroRange());
+			
 			for (Creature target : list)
 			{
 				if ((target != null) && !target.isDead() && ArrayUtils.contains(ATTACK_IDS, target.getNpcId()))
 				{
 					Skill sk = SkillTable.getInstance().getInfo(SKILL_ID, 1);
+					
 					if ((lastCastTime + sk.getHitTime() + sk.getReuseDelay()) <= System.currentTimeMillis())
 					{
 						lastCastTime = System.currentTimeMillis();
@@ -111,6 +117,7 @@ public class SiegeGolem extends DefaultAI
 						addTaskCast(target, sk);
 						return true;
 					}
+					
 					return false;
 				}
 			}
@@ -121,21 +128,25 @@ public class SiegeGolem extends DefaultAI
 			{
 				currentPoint++;
 				loc = new Location((MOVE_LOC[currentPoint].getX() + Rnd.get(50)) - Rnd.get(50), (MOVE_LOC[currentPoint].getY() + Rnd.get(50)) - Rnd.get(50), (MOVE_LOC[currentPoint].getZ() + Rnd.get(50)) - Rnd.get(50));
+				
 				if (currentPoint == 0)
 				{
 					Reflection r = getActor().getReflection();
+					
 					if (r instanceof MemoryOfDisaster)
 					{
 						((MemoryOfDisaster) r).spawnTransparentTeredor();
 					}
 				}
 			}
+			
 			actor.setWalking();
 			clearTasks();
 			addTaskMove(loc, true);
 			doTask();
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -152,6 +163,7 @@ public class SiegeGolem extends DefaultAI
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
 		super.onEvtScriptEvent(event, arg1, arg2);
+		
 		if (event.equalsIgnoreCase("TEREDOR_DIE"))
 		{
 			diedTeredor++;

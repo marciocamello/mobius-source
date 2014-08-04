@@ -49,16 +49,15 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 	{
 		writeEx(0x5F);
 		// FIXME GraciaEpilogue ddddd dx[dd]
-		
 		writeD(_unk); // ?
 		writeD(_skillId);
 		writeD(_skillLvl);
 		writeD(_sp);
 		writeD(_chance);
-		
 		writeD(2);
 		writeD(57); // adena
 		writeD(_adenaCount); // adena count ?
+		
 		if (_bookId > 0)
 		{
 			writeD(_bookId); // book

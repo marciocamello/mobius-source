@@ -29,7 +29,7 @@ import lineage2.gameserver.model.pledge.Clan;
 public class CTBSiegeClanObject extends SiegeClanObject
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -94,6 +94,7 @@ public class CTBSiegeClanObject extends SiegeClanObject
 		for (int i : getPlayers())
 		{
 			Player player = GameObjectsStorage.getPlayer(i);
+			
 			if (player != null)
 			{
 				if (start)
@@ -104,6 +105,7 @@ public class CTBSiegeClanObject extends SiegeClanObject
 				{
 					player.removeEvent(event);
 				}
+				
 				player.broadcastCharInfo();
 			}
 		}

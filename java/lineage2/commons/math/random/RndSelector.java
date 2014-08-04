@@ -100,6 +100,7 @@ public class RndSelector<E>
 		{
 			return;
 		}
+		
 		totalWeight += weight;
 		nodes.add(new RndNode<>(value, weight));
 	}
@@ -115,9 +116,11 @@ public class RndSelector<E>
 		{
 			return null;
 		}
+		
 		Collections.sort(nodes);
 		int r = Rnd.get(maxWeight);
 		int weight = 0;
+		
 		for (int i = 0; i < nodes.size(); i++)
 		{
 			if ((weight += nodes.get(i).weight) > r)
@@ -125,6 +128,7 @@ public class RndSelector<E>
 				return nodes.get(i).value;
 			}
 		}
+		
 		return null;
 	}
 	

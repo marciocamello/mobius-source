@@ -44,10 +44,12 @@ public class RequestSetPledgeCrestLarge extends L2GameClientPacket
 	{
 		readD();
 		_length = readD();
+		
 		if ((_length != 0) && (_length == _buf.remaining()))
 		{
 			_data = new byte[_length];
 			readB(_data);
+			
 			if (_request == 0)
 			{
 				CrestCache.getInstance().crestLargeTmp = _data;
@@ -68,15 +70,19 @@ public class RequestSetPledgeCrestLarge extends L2GameClientPacket
 		if (_request == 4)
 		{
 			Player activeChar = getClient().getActiveChar();
+			
 			if (activeChar == null)
 			{
 				return;
 			}
+			
 			Clan clan = activeChar.getClan();
+			
 			if (clan == null)
 			{
 				return;
 			}
+			
 			if ((activeChar.getClanPrivileges() & Clan.CP_CL_EDIT_CREST) == Clan.CP_CL_EDIT_CREST)
 			{
 				if ((clan.getCastle() == 0) && (clan.getHasHideout() == 0))
@@ -84,6 +90,7 @@ public class RequestSetPledgeCrestLarge extends L2GameClientPacket
 					activeChar.sendPacket(Msg.THE_CLANS_EMBLEM_WAS_SUCCESSFULLY_REGISTERED__ONLY_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_A_CASTLE_CAN_GET_THEIR_EMBLEM_DISPLAYED_ON_CLAN_RELATED_ITEMS);
 					return;
 				}
+				
 				int crestId = 0;
 				crestId = CrestCache.getInstance().savePledgeCrestLarge(clan.getClanId(), CrestCache.getInstance().crestLargeTmp);
 				activeChar.sendPacket(Msg.THE_CLANS_EMBLEM_WAS_SUCCESSFULLY_REGISTERED__ONLY_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_A_CASTLE_CAN_GET_THEIR_EMBLEM_DISPLAYED_ON_CLAN_RELATED_ITEMS);
@@ -94,15 +101,19 @@ public class RequestSetPledgeCrestLarge extends L2GameClientPacket
 		else if ((_request == 0) && (_data == null))
 		{
 			Player activeChar = getClient().getActiveChar();
+			
 			if (activeChar == null)
 			{
 				return;
 			}
+			
 			Clan clan = activeChar.getClan();
+			
 			if (clan == null)
 			{
 				return;
 			}
+			
 			if ((activeChar.getClanPrivileges() & Clan.CP_CL_EDIT_CREST) == Clan.CP_CL_EDIT_CREST)
 			{
 				if ((clan.getCastle() == 0) && (clan.getHasHideout() == 0))
@@ -110,12 +121,15 @@ public class RequestSetPledgeCrestLarge extends L2GameClientPacket
 					activeChar.sendPacket(Msg.THE_CLANS_EMBLEM_WAS_SUCCESSFULLY_REGISTERED__ONLY_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_A_CASTLE_CAN_GET_THEIR_EMBLEM_DISPLAYED_ON_CLAN_RELATED_ITEMS);
 					return;
 				}
+				
 				int crestId = 0;
+				
 				if (clan.hasCrestLarge())
 				{
 					CrestCache.getInstance().removePledgeCrestLarge(clan.getClanId());
 					activeChar.sendMessage("Large Crest Deleted.");
 				}
+				
 				clan.setCrestLargeId(crestId);
 				clan.broadcastClanStatus(false, true, false);
 			}

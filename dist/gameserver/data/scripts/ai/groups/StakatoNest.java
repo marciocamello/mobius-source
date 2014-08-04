@@ -133,6 +133,7 @@ public class StakatoNest extends Fighter
 	public StakatoNest(NpcInstance actor)
 	{
 		super(actor);
+		
 		if (ArrayUtils.contains(BIZARRE_COCOON, actor.getNpcId()))
 		{
 			actor.setIsInvul(true);
@@ -147,11 +148,13 @@ public class StakatoNest extends Fighter
 	protected void onEvtSpawn()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.getNpcId() != QUEEN_SHYEED)
 		{
 			super.onEvtSpawn();
 			return;
 		}
+		
 		if (!_debuffed)
 		{
 			_debuffed = true;
@@ -159,6 +162,7 @@ public class StakatoNest extends Fighter
 			_zone_mob_buff_pc_display.setActive(true);
 			_zone_pc_buff.setActive(false);
 		}
+		
 		for (Player player : World.getAroundPlayers(actor))
 		{
 			if (player != null)
@@ -166,6 +170,7 @@ public class StakatoNest extends Fighter
 				player.sendPacket(Msg.SHYEED_S_ROAR_FILLED_WITH_WRATH_RINGS_THROUGHOUT_THE_STAKATO_NEST);
 			}
 		}
+		
 		super.onEvtSpawn();
 	}
 	
@@ -179,9 +184,11 @@ public class StakatoNest extends Fighter
 	{
 		final NpcInstance actor = getActor();
 		final MonsterInstance _mob = (MonsterInstance) actor;
+		
 		if ((_mob.getNpcId() == CANNIBALISTIC_STAKATO_LEADER) && Rnd.chance(ABSORB_MINION_CHANCE) && (_mob.getCurrentHpPercents() < 30))
 		{
 			final MonsterInstance _follower = getAliveMinion(actor);
+			
 			if ((_follower != null) && (_follower.getCurrentHpPercents() > 30))
 			{
 				_mob.abortAttack(true, false);
@@ -193,6 +200,7 @@ public class StakatoNest extends Fighter
 				_follower.deleteMe();
 			}
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	
@@ -206,6 +214,7 @@ public class StakatoNest extends Fighter
 		final NpcInstance actor = getActor();
 		final MinionInstance _minion = getAliveMinion(actor);
 		MonsterInstance _leader = null;
+		
 		switch (actor.getNpcId())
 		{
 			case SPIKE_STAKATO_NURSE:
@@ -213,37 +222,51 @@ public class StakatoNest extends Fighter
 				{
 					break;
 				}
+				
 				actor.broadcastPacket(new MagicSkillUse(actor, actor, 2046, 1, 1000, 0));
+				
 				for (int i = 0; i < 3; i++)
 				{
 					spawnMonster(_minion, killer, SPIKED_STAKATO_CAPTAIN);
 				}
+				
 				break;
+			
 			case SPIKED_STAKATO_BABY:
 				_leader = ((MinionInstance) actor).getLeader();
+				
 				if ((_leader != null) && !_leader.isDead())
 				{
 					ThreadPoolManager.getInstance().schedule(new ChangeMonster(SPIKE_STAKATO_NURSE_CHANGED, actor, killer), 3000L);
 				}
+				
 				break;
+			
 			case MALE_SPIKED_STAKATO:
 				if (_minion == null)
 				{
 					break;
 				}
+				
 				actor.broadcastPacket(new MagicSkillUse(actor, actor, 2046, 1, 1000, 0));
+				
 				for (int i = 0; i < 3; i++)
 				{
 					spawnMonster(_minion, killer, SPIKED_STAKATO_GUARD);
 				}
+				
 				break;
+			
 			case FEMALE_SPIKED_STAKATO:
 				_leader = ((MinionInstance) actor).getLeader();
+				
 				if ((_leader != null) && !_leader.isDead())
 				{
 					ThreadPoolManager.getInstance().schedule(new ChangeMonster(MALE_SPIKED_STAKATO_2, actor, killer), 3000L);
 				}
+				
 				break;
+			
 			case QUEEN_SHYEED:
 				if (_debuffed)
 				{
@@ -252,10 +275,13 @@ public class StakatoNest extends Fighter
 					_zone_mob_buff.setActive(false);
 					_zone_mob_buff_pc_display.setActive(false);
 				}
+				
 				break;
+			
 			default:
 				break;
 		}
+		
 		super.onEvtDead(killer);
 	}
 	
@@ -268,18 +294,22 @@ public class StakatoNest extends Fighter
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((actor == null) || !ArrayUtils.contains(BIZARRE_COCOON, actor.getNpcId()) || (caster == null) || (skill.getId() != SKILL_GROWTH_ACCELERATOR))
 		{
 			super.onEvtSeeSpell(skill, caster);
 			return;
 		}
+		
 		if (Rnd.chance(FAIL_COCOON_CHANCE))
 		{
 			caster.getPlayer().sendPacket(Msg.NOTHING_HAPPENED);
 			return;
 		}
+		
 		actor.doDie(null);
 		actor.endDecayTask();
+		
 		try
 		{
 			final NpcInstance mob = NpcHolder.getInstance().getTemplate(CANNIBALISTIC_STAKATO_CHIEF).getNewInstance();
@@ -293,6 +323,7 @@ public class StakatoNest extends Fighter
 		{
 			e.printStackTrace();
 		}
+		
 		super.onEvtSeeSpell(skill, caster);
 	}
 	
@@ -345,6 +376,7 @@ public class StakatoNest extends Fighter
 	private MinionInstance getAliveMinion(NpcInstance npc)
 	{
 		final MinionList ml = npc.getMinionList();
+		
 		if ((ml != null) && ml.hasAliveMinions())
 		{
 			for (MinionInstance minion : ml.getAliveMinions())
@@ -352,6 +384,7 @@ public class StakatoNest extends Fighter
 				return minion;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -370,6 +403,7 @@ public class StakatoNest extends Fighter
 			npc.setReflection(actor.getReflection());
 			npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp(), true);
 			npc.spawnMe(actor.getSpawnedLoc());
+			
 			if (killer != null)
 			{
 				npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, killer, Rnd.get(1, 100));

@@ -39,6 +39,7 @@ public class _694_BreakThroughTheHallOfSuffering extends Quest implements Script
 			qs.setState(STARTED);
 			qs.playSound(SOUND_ACCEPT);
 		}
+		
 		return event;
 	}
 	
@@ -49,6 +50,7 @@ public class _694_BreakThroughTheHallOfSuffering extends Quest implements Script
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
+		
 		if (npcId == TEPIOS)
 		{
 			if (cond == 0)
@@ -59,6 +61,7 @@ public class _694_BreakThroughTheHallOfSuffering extends Quest implements Script
 					{
 						st.giveItems(MARK_OF_KEUCEREUS_STAGE_1, 1);
 					}
+					
 					st.exitCurrentQuest(true);
 					htmltext = "32603-00.htm";
 				}
@@ -72,6 +75,7 @@ public class _694_BreakThroughTheHallOfSuffering extends Quest implements Script
 				htmltext = "32603-05.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	

@@ -67,27 +67,34 @@ public class FishShots extends ScriptItemHandler
 		{
 			return false;
 		}
+		
 		final Player player = (Player) playable;
 		final int FishshotId = item.getItemId();
 		boolean isAutoSoulShot = false;
+		
 		if (player.getAutoSoulShot().contains(FishshotId))
 		{
 			isAutoSoulShot = true;
 		}
+		
 		final ItemInstance weaponInst = player.getActiveWeaponInstance();
 		final WeaponTemplate weaponItem = player.getActiveWeaponItem();
+		
 		if ((weaponInst == null) || (weaponItem.getItemType() != WeaponType.ROD))
 		{
 			if (!isAutoSoulShot)
 			{
 				player.sendPacket(Msg.CANNOT_USE_SOULSHOTS);
 			}
+			
 			return false;
 		}
+		
 		if (weaponInst.getChargedFishshot())
 		{
 			return false;
 		}
+		
 		if (item.getCount() < 1)
 		{
 			if (isAutoSoulShot)
@@ -96,25 +103,31 @@ public class FishShots extends ScriptItemHandler
 				player.sendPacket(new ExAutoSoulShot(FishshotId, false), new SystemMessage(SystemMessage.THE_AUTOMATIC_USE_OF_S1_WILL_NOW_BE_CANCELLED).addString(item.getName()));
 				return false;
 			}
+			
 			player.sendPacket(Msg.NOT_ENOUGH_SPIRITSHOTS);
 			return false;
 		}
+		
 		final int grade = weaponItem.getCrystalType().externalOrdinal;
+		
 		if (((grade == 0) && (FishshotId != 6535)) || ((grade == 1) && (FishshotId != 6536)) || ((grade == 2) && (FishshotId != 6537)) || ((grade == 3) && (FishshotId != 6538)) || ((grade == 4) && (FishshotId != 6539)) || ((grade == 5) && (FishshotId != 6540)))
 		{
 			if (isAutoSoulShot)
 			{
 				return false;
 			}
+			
 			player.sendPacket(Msg.THIS_FISHING_SHOT_IS_NOT_FIT_FOR_THE_FISHING_POLE_CRYSTAL);
 			return false;
 		}
+		
 		if (player.getInventory().destroyItem(item, 1L))
 		{
 			weaponInst.setChargedFishshot(true);
 			player.sendPacket(Msg.POWER_OF_MANA_ENABLED);
 			player.broadcastPacket(new MagicSkillUse(player, player, _skillIds[grade], 1, 0, 0));
 		}
+		
 		return true;
 	}
 	

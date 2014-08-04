@@ -50,10 +50,12 @@ public class _627_HeartInSearchOfPower extends Quest implements ScriptFile
 		addStartNpc(31518);
 		addTalkId(31518);
 		addTalkId(31519);
+		
 		for (int mobs = 21520; mobs <= 21541; mobs++)
 		{
 			addKillId(mobs);
 		}
+		
 		addQuestItem(GEM_OF_SUBMISSION);
 	}
 	
@@ -61,6 +63,7 @@ public class _627_HeartInSearchOfPower extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("dark_necromancer_q0627_0104.htm"))
 		{
 			st.setCond(1);
@@ -110,9 +113,11 @@ public class _627_HeartInSearchOfPower extends Quest implements ScriptFile
 				htmltext = "dark_necromancer_q0627_0402.htm";
 				st.giveItems(MOLD_HARDENER, 3, true);
 			}
+			
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -122,6 +127,7 @@ public class _627_HeartInSearchOfPower extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == M_NECROMANCER)
 		{
 			if (cond == 0)
@@ -153,6 +159,7 @@ public class _627_HeartInSearchOfPower extends Quest implements ScriptFile
 		{
 			htmltext = "enfeux_q0627_0201.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -160,9 +167,11 @@ public class _627_HeartInSearchOfPower extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		long count = st.getQuestItemsCount(GEM_OF_SUBMISSION);
+		
 		if ((st.getCond() == 1) && (count < 300))
 		{
 			st.giveItems(GEM_OF_SUBMISSION, 1);
+			
 			if (count == 299)
 			{
 				st.playSound(SOUND_MIDDLE);
@@ -173,6 +182,7 @@ public class _627_HeartInSearchOfPower extends Quest implements ScriptFile
 				st.playSound(SOUND_ITEMGET);
 			}
 		}
+		
 		return null;
 	}
 }

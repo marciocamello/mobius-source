@@ -44,6 +44,7 @@ public class AuthGameGuard extends L2LoginClientPacket
 	protected void runImpl()
 	{
 		L2LoginClient client = getClient();
+		
 		if ((_sessionId == 0) || (_sessionId == client.getSessionId()))
 		{
 			client.setState(LoginClientState.AUTHED_GG);

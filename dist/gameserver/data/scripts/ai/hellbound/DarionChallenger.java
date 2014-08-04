@@ -64,6 +64,7 @@ public class DarionChallenger extends Fighter
 				e.printStackTrace();
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 	
@@ -77,14 +78,17 @@ public class DarionChallenger extends Fighter
 		{
 			return false;
 		}
+		
 		if (!GameObjectsStorage.getAllByNpcId(25601, true).isEmpty())
 		{
 			return false;
 		}
+		
 		if (!GameObjectsStorage.getAllByNpcId(25602, true).isEmpty())
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	

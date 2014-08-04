@@ -34,7 +34,7 @@ import ai.residences.fortress.siege.MercenaryCaption;
 public class MercenaryCaptionInstance extends MonsterInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -64,17 +64,22 @@ public class MercenaryCaptionInstance extends MonsterInstance
 			{
 				return;
 			}
+			
 			FortressSiegeEvent event = door.getEvent(FortressSiegeEvent.class);
+			
 			if (event == null)
 			{
 				return;
 			}
+			
 			Functions.npcShout(MercenaryCaptionInstance.this, NpcString.WE_HAVE_BROKEN_THROUGH_THE_GATE_DESTROY_THE_ENCAMPMENT_AND_MOVE_TO_THE_COMMAND_POST);
 			List<DoorObject> objects = event.getObjects(FortressSiegeEvent.ENTER_DOORS);
+			
 			for (DoorObject d : objects)
 			{
 				d.open(event);
 			}
+			
 			((MercenaryCaption) getAI()).startMove(true);
 		}
 	}
@@ -105,6 +110,7 @@ public class MercenaryCaptionInstance extends MonsterInstance
 		Fortress f = getFortress();
 		FortressSiegeEvent event = f.getSiegeEvent();
 		List<DoorObject> objects = event.getObjects(FortressSiegeEvent.ENTER_DOORS);
+		
 		for (DoorObject d : objects)
 		{
 			d.getDoor().addListener(_doorDeathListener);
@@ -131,15 +137,19 @@ public class MercenaryCaptionInstance extends MonsterInstance
 	public boolean isAutoAttackable(Creature attacker)
 	{
 		FortressSiegeEvent event = getEvent(FortressSiegeEvent.class);
+		
 		if (event == null)
 		{
 			return false;
 		}
+		
 		SiegeClanObject object = event.getSiegeClan(SiegeEvent.DEFENDERS, attacker.getClan());
+		
 		if (object == null)
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -164,6 +174,7 @@ public class MercenaryCaptionInstance extends MonsterInstance
 		Fortress f = getFortress();
 		FortressSiegeEvent event = f.getSiegeEvent();
 		List<DoorObject> objects = event.getObjects(FortressSiegeEvent.ENTER_DOORS);
+		
 		for (DoorObject d : objects)
 		{
 			d.getDoor().removeListener(_doorDeathListener);

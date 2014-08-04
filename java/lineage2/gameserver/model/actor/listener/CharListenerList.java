@@ -136,6 +136,7 @@ public class CharListenerList extends ListenerList<Creature>
 				}
 			}
 		}
+		
 		if (!getListeners().isEmpty())
 		{
 			for (Listener<Creature> listener : getListeners())
@@ -164,6 +165,7 @@ public class CharListenerList extends ListenerList<Creature>
 				}
 			}
 		}
+		
 		if (!getListeners().isEmpty())
 		{
 			for (Listener<Creature> listener : getListeners())
@@ -194,6 +196,7 @@ public class CharListenerList extends ListenerList<Creature>
 				}
 			}
 		}
+		
 		if (!getListeners().isEmpty())
 		{
 			for (Listener<Creature> listener : getListeners())
@@ -223,6 +226,7 @@ public class CharListenerList extends ListenerList<Creature>
 				}
 			}
 		}
+		
 		if (!getListeners().isEmpty())
 		{
 			for (Listener<Creature> listener : getListeners())
@@ -251,6 +255,7 @@ public class CharListenerList extends ListenerList<Creature>
 				}
 			}
 		}
+		
 		if (!getListeners().isEmpty())
 		{
 			for (Listener<Creature> listener : getListeners())
@@ -279,6 +284,7 @@ public class CharListenerList extends ListenerList<Creature>
 				}
 			}
 		}
+		
 		if (!getListeners().isEmpty())
 		{
 			for (Listener<Creature> listener : getListeners())
@@ -307,6 +313,7 @@ public class CharListenerList extends ListenerList<Creature>
 				}
 			}
 		}
+		
 		if (!getListeners().isEmpty())
 		{
 			for (Listener<Creature> listener : getListeners())
@@ -337,6 +344,7 @@ public class CharListenerList extends ListenerList<Creature>
 				}
 			}
 		}
+		
 		if (!getListeners().isEmpty())
 		{
 			for (Listener<Creature> listener : getListeners())

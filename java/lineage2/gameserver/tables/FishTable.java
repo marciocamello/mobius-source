@@ -78,6 +78,7 @@ public class FishTable
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet resultSet = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -85,6 +86,7 @@ public class FishTable
 			resultSet = statement.executeQuery();
 			FishTemplate fish;
 			List<FishTemplate> fishes;
+			
 			while (resultSet.next())
 			{
 				int id = resultSet.getInt("id");
@@ -99,13 +101,16 @@ public class FishTable
 				int wait_time = resultSet.getInt("wait_time");
 				int combat_time = resultSet.getInt("combat_time");
 				fish = new FishTemplate(id, lvl, name, hp, hpreg, type, group, fish_guts, guts_check_time, wait_time, combat_time);
+				
 				if ((fishes = _fishes.get(group)) == null)
 				{
 					_fishes.put(group, fishes = new ArrayList<>());
 				}
+				
 				fishes.add(fish);
 				count++;
 			}
+			
 			_log.info("FishTable: Loaded " + count + " fishes.");
 		}
 		catch (Exception e)
@@ -129,27 +134,33 @@ public class FishTable
 	{
 		List<FishTemplate> result = new ArrayList<>();
 		List<FishTemplate> fishs = _fishes.get(group);
+		
 		if (fishs == null)
 		{
 			_log.warn("No fishes defined for group : " + group + "!");
 			return null;
 		}
+		
 		for (FishTemplate f : fishs)
 		{
 			if (f.getType() != type)
 			{
 				continue;
 			}
+			
 			if (f.getLevel() != lvl)
 			{
 				continue;
 			}
+			
 			result.add(f);
 		}
+		
 		if (result.isEmpty())
 		{
 			_log.warn("No fishes for group : " + group + " type: " + type + " level: " + lvl + "!");
 		}
+		
 		return result;
 	}
 }

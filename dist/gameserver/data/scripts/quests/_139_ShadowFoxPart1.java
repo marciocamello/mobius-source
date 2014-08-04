@@ -57,10 +57,12 @@ public class _139_ShadowFoxPart1 extends Quest implements ScriptFile
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
 		QuestState qs = player.getQuestState(_138_TempleChampionPart2.class);
+		
 		if ((qs != null) && qs.isCompleted() && (player.getQuestState(getClass()) == null))
 		{
 			newQuestState(player, STARTED);
 		}
+		
 		return "";
 	}
 	
@@ -91,6 +93,7 @@ public class _139_ShadowFoxPart1 extends Quest implements ScriptFile
 			st.giveItems(ADENA_ID, 14050);
 			st.exitCurrentQuest(false);
 		}
+		
 		return event;
 	}
 	
@@ -100,6 +103,7 @@ public class _139_ShadowFoxPart1 extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
+		
 		if (npcId == MIA)
 		{
 			if (cond == 0)
@@ -133,6 +137,7 @@ public class _139_ShadowFoxPart1 extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -140,15 +145,18 @@ public class _139_ShadowFoxPart1 extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if (cond == 2)
 		{
 			st.giveItems(FRAGMENT, 1);
 			st.playSound(SOUND_ITEMGET);
+			
 			if (Rnd.chance(10))
 			{
 				st.giveItems(CHEST, 1);
 			}
 		}
+		
 		return null;
 	}
 }

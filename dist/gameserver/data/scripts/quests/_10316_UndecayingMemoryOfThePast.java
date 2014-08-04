@@ -45,6 +45,7 @@ public class _10316_UndecayingMemoryOfThePast extends Quest implements ScriptFil
 		{
 			return "noquest";
 		}
+		
 		if (event.equalsIgnoreCase("32946-06.htm"))
 		{
 			st.setCond(1);
@@ -75,6 +76,7 @@ public class _10316_UndecayingMemoryOfThePast extends Quest implements ScriptFil
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return event;
 	}
 	
@@ -82,12 +84,15 @@ public class _10316_UndecayingMemoryOfThePast extends Quest implements ScriptFil
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
+		
 		if (st == null)
 		{
 			return htmltext;
 		}
+		
 		Player player = st.getPlayer();
 		QuestState previous = player.getQuestState(_10315_ToThePrisonOfDarkness.class);
+		
 		if (npc.getNpcId() == NPC_OPERA)
 		{
 			if ((previous == null) || (!previous.isCompleted()))
@@ -103,14 +108,17 @@ public class _10316_UndecayingMemoryOfThePast extends Quest implements ScriptFil
 				st.exitCurrentQuest(true);
 				return "32946-09.htm";
 			}
+			
 			switch (st.getState())
 			{
 				case COMPLETED:
 					htmltext = "32946-10.htm";
 					break;
+				
 				case CREATED:
 					htmltext = "32946-01.htm";
 					break;
+				
 				case STARTED:
 					if (st.getCond() == 1)
 					{
@@ -122,10 +130,12 @@ public class _10316_UndecayingMemoryOfThePast extends Quest implements ScriptFil
 						{
 							break;
 						}
+						
 						htmltext = "32946-08.htm";
 					}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -137,6 +147,7 @@ public class _10316_UndecayingMemoryOfThePast extends Quest implements ScriptFil
 			st.playSound(SOUND_MIDDLE);
 			st.setCond(2);
 		}
+		
 		return null;
 	}
 	

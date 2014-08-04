@@ -235,6 +235,7 @@ public class Zone
 		public void stop()
 		{
 			active = false;
+			
 			if (future != null)
 			{
 				future.cancel(false);
@@ -251,10 +252,12 @@ public class Zone
 			{
 				return;
 			}
+			
 			if ((getTemplate().getUnitTick() == 0) && (getTemplate().getRandomTick() == 0))
 			{
 				return;
 			}
+			
 			future = EffectTaskManager.getInstance().schedule(this, (getTemplate().getUnitTick() + Rnd.get(0, getTemplate().getRandomTick())) * 1000L);
 		}
 		
@@ -290,19 +293,24 @@ public class Zone
 			{
 				return;
 			}
+			
 			if (!checkTarget(cha))
 			{
 				return;
 			}
+			
 			Skill skill = getZoneSkill();
+			
 			if (skill == null)
 			{
 				return;
 			}
+			
 			if (Rnd.chance(getTemplate().getSkillProb()) && !cha.isDead())
 			{
 				skill.getEffects(cha, cha, false, false);
 			}
+			
 			next();
 		}
 	}
@@ -331,33 +339,41 @@ public class Zone
 			{
 				return;
 			}
+			
 			if (!checkTarget(cha))
 			{
 				return;
 			}
+			
 			int hp = getDamageOnHP();
 			int mp = getDamageOnMP();
 			int message = getDamageMessageId();
+			
 			if ((hp == 0) && (mp == 0))
 			{
 				return;
 			}
+			
 			if (hp > 0)
 			{
 				cha.reduceCurrentHp(hp, 0, cha, null, false, false, true, false, false, false, true);
+				
 				if (message > 0)
 				{
 					cha.sendPacket(new SystemMessage(message).addNumber(hp));
 				}
 			}
+			
 			if (mp > 0)
 			{
 				cha.reduceCurrentMp(mp, null);
+				
 				if (message > 0)
 				{
 					cha.sendPacket(new SystemMessage(message).addNumber(mp));
 				}
 			}
+			
 			next();
 		}
 	}
@@ -649,6 +665,7 @@ public class Zone
 		{
 			return null;
 		}
+		
 		Location loc = getRestartPoints().get(Rnd.get(getRestartPoints().size()));
 		return loc.clone();
 	}
@@ -663,6 +680,7 @@ public class Zone
 		{
 			return getSpawn();
 		}
+		
 		Location loc = getPKRestartPoints().get(Rnd.get(getPKRestartPoints().size()));
 		return loc.clone();
 	}
@@ -711,6 +729,7 @@ public class Zone
 	public boolean checkIfInZone(Creature cha)
 	{
 		readLock.lock();
+		
 		try
 		{
 			return _objects.contains(cha);
@@ -753,6 +772,7 @@ public class Zone
 	{
 		boolean added = false;
 		writeLock.lock();
+		
 		try
 		{
 			if (!_objects.contains(cha))
@@ -764,6 +784,7 @@ public class Zone
 		{
 			writeLock.unlock();
 		}
+		
 		if (added)
 		{
 			onZoneEnter(cha);
@@ -778,21 +799,25 @@ public class Zone
 	{
 		checkEffects(actor, true);
 		addZoneStats(actor);
+		
 		if (actor.isPlayer())
 		{
 			if (getEnteringMessageId() != 0)
 			{
 				actor.sendPacket(new SystemMessage(getEnteringMessageId()));
 			}
+			
 			if (getTemplate().getEventId() != 0)
 			{
 				actor.sendPacket(new EventTrigger(getTemplate().getEventId(), true));
 			}
+			
 			if (getTemplate().getBlockedActions() != null)
 			{
 				((Player) actor).blockActions(getTemplate().getBlockedActions());
 			}
 		}
+		
 		listeners.onEnter(actor);
 	}
 	
@@ -804,6 +829,7 @@ public class Zone
 	{
 		boolean removed = false;
 		writeLock.lock();
+		
 		try
 		{
 			removed = _objects.remove(cha);
@@ -812,6 +838,7 @@ public class Zone
 		{
 			writeLock.unlock();
 		}
+		
 		if (removed)
 		{
 			onZoneLeave(cha);
@@ -826,21 +853,25 @@ public class Zone
 	{
 		checkEffects(actor, false);
 		removeZoneStats(actor);
+		
 		if (actor.isPlayer())
 		{
 			if ((getLeavingMessageId() != 0) && actor.isPlayer())
 			{
 				actor.sendPacket(new SystemMessage(getLeavingMessageId()));
 			}
+			
 			if ((getTemplate().getEventId() != 0) && actor.isPlayer())
 			{
 				actor.sendPacket(new EventTrigger(getTemplate().getEventId(), false));
 			}
+			
 			if (getTemplate().getBlockedActions() != null)
 			{
 				((Player) actor).unblockActions(getTemplate().getBlockedActions());
 			}
 		}
+		
 		listeners.onLeave(actor);
 	}
 	
@@ -854,6 +885,7 @@ public class Zone
 		{
 			return;
 		}
+		
 		if (getMoveBonus() != 0)
 		{
 			if (cha.isPlayable())
@@ -862,10 +894,12 @@ public class Zone
 				cha.sendChanges();
 			}
 		}
+		
 		if (getRegenBonusHP() != 0)
 		{
 			cha.addStatFunc(new FuncAdd(Stats.REGENERATE_HP_RATE, ZONE_STATS_ORDER, this, getRegenBonusHP()));
 		}
+		
 		if (getRegenBonusMP() != 0)
 		{
 			cha.addStatFunc(new FuncAdd(Stats.REGENERATE_MP_RATE, ZONE_STATS_ORDER, this, getRegenBonusMP()));
@@ -882,6 +916,7 @@ public class Zone
 		{
 			return;
 		}
+		
 		cha.removeStatsOwner(this);
 		cha.sendChanges();
 	}
@@ -913,10 +948,12 @@ public class Zone
 			else
 			{
 				ZoneTimer timer = _zoneTimers.remove(cha);
+				
 				if (timer != null)
 				{
 					timer.stop();
 				}
+				
 				if (getZoneSkill() != null)
 				{
 					cha.getEffectList().stopEffect(getZoneSkill());
@@ -939,32 +976,41 @@ public class Zone
 				{
 					return false;
 				}
+				
 				break;
+			
 			case only_pc:
 				if (!cha.isPlayer())
 				{
 					return false;
 				}
+				
 				break;
+			
 			case npc:
 				if (!cha.isNpc())
 				{
 					return false;
 				}
+				
 				break;
 		}
+		
 		if (getAffectRace() != null)
 		{
 			Player player = cha.getPlayer();
+			
 			if (player == null)
 			{
 				return false;
 			}
+			
 			if (player.getRace() != getAffectRace())
 			{
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
@@ -975,6 +1021,7 @@ public class Zone
 	public Creature[] getObjects()
 	{
 		readLock.lock();
+		
 		try
 		{
 			return _objects.toArray(new Creature[_objects.size()]);
@@ -993,9 +1040,11 @@ public class Zone
 	{
 		List<Player> result = new LazyArrayList<>();
 		readLock.lock();
+		
 		try
 		{
 			Creature cha;
+			
 			for (int i = 0; i < _objects.size(); i++)
 			{
 				if (((cha = _objects.get(i)) != null) && cha.isPlayer())
@@ -1019,9 +1068,11 @@ public class Zone
 	{
 		List<Playable> result = new LazyArrayList<>();
 		readLock.lock();
+		
 		try
 		{
 			Creature cha;
+			
 			for (int i = 0; i < _objects.size(); i++)
 			{
 				if (((cha = _objects.get(i)) != null) && cha.isPlayable())
@@ -1044,18 +1095,21 @@ public class Zone
 	public void setActive(boolean value)
 	{
 		writeLock.lock();
+		
 		try
 		{
 			if (_active == value)
 			{
 				return;
 			}
+			
 			_active = value;
 		}
 		finally
 		{
 			writeLock.unlock();
 		}
+		
 		if (isActive())
 		{
 			World.addZone(Zone.this);
@@ -1162,6 +1216,7 @@ public class Zone
 	public void broadcastPacket(L2GameServerPacket packet, boolean toAliveOnly)
 	{
 		List<Player> insideZoners = getInsidePlayers();
+		
 		if ((insideZoners != null) && !insideZoners.isEmpty())
 		{
 			for (Player player : insideZoners)

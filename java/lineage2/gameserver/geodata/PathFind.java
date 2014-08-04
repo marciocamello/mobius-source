@@ -81,6 +81,7 @@ public class PathFind
 		endPoint.z = GeoEngine.NgetHeight(endPoint.x, endPoint.y, endPoint.z, geoIndex);
 		int xdiff = Math.abs(endPoint.x - startPoint.x);
 		int ydiff = Math.abs(endPoint.y - startPoint.y);
+		
 		if ((xdiff == 0) && (ydiff == 0))
 		{
 			if (Math.abs(endPoint.z - startPoint.z) < 32)
@@ -88,18 +89,23 @@ public class PathFind
 				path = new ArrayList<>();
 				path.add(0, startPoint);
 			}
+			
 			return;
 		}
+		
 		int mapSize = 2 * Math.max(xdiff, ydiff);
+		
 		if ((buff = PathFindBuffers.alloc(mapSize)) != null)
 		{
 			buff.offsetX = startPoint.x - (buff.mapSize / 2);
 			buff.offsetY = startPoint.y - (buff.mapSize / 2);
 			buff.totalUses++;
+			
 			if (obj.isPlayable())
 			{
 				buff.playableUses++;
 			}
+			
 			findPath();
 			buff.free();
 			PathFindBuffers.recycle(buff);
@@ -126,19 +132,24 @@ public class PathFind
 		long nanos = System.nanoTime();
 		long searhTime = 0;
 		int itr = 0;
+		
 		while (((searhTime = System.nanoTime() - nanos) < Config.PATHFIND_MAX_TIME) && ((currentNode = buff.open.poll()) != null))
 		{
 			itr++;
+			
 			if ((currentNode.x == endPoint.x) && (currentNode.y == endPoint.y) && (Math.abs(currentNode.z - endPoint.z) < 64))
 			{
 				path = tracePath(currentNode);
 				break;
 			}
+			
 			handleNode(currentNode);
 			currentNode.state = GeoNode.CLOSED;
 		}
+		
 		buff.totalTime += searhTime;
 		buff.totalItr += itr;
+		
 		if (path != null)
 		{
 			buff.successUses++;
@@ -147,6 +158,7 @@ public class PathFind
 		{
 			buff.overtimeUses++;
 		}
+		
 		return path;
 	}
 	
@@ -158,12 +170,14 @@ public class PathFind
 	private List<Location> tracePath(GeoNode f)
 	{
 		List<Location> locations = new ArrayList<>();
+		
 		do
 		{
 			locations.add(0, f.getLoc());
 			f = f.parent;
 		}
 		while (f.parent != null);
+		
 		return locations;
 	}
 	
@@ -178,50 +192,62 @@ public class PathFind
 		short clZ = node.z;
 		getHeightAndNSWE(clX, clY, clZ);
 		short NSWE = hNSWE[1];
+		
 		if (Config.PATHFIND_DIAGONAL)
 		{
 			if (((NSWE & SOUTH) == SOUTH) && ((NSWE & EAST) == EAST))
 			{
 				getHeightAndNSWE(clX + 1, clY, clZ);
+				
 				if ((hNSWE[1] & SOUTH) == SOUTH)
 				{
 					getHeightAndNSWE(clX, clY + 1, clZ);
+					
 					if ((hNSWE[1] & EAST) == EAST)
 					{
 						handleNeighbour(clX + 1, clY + 1, node, true);
 					}
 				}
 			}
+			
 			if (((NSWE & SOUTH) == SOUTH) && ((NSWE & WEST) == WEST))
 			{
 				getHeightAndNSWE(clX - 1, clY, clZ);
+				
 				if ((hNSWE[1] & SOUTH) == SOUTH)
 				{
 					getHeightAndNSWE(clX, clY + 1, clZ);
+					
 					if ((hNSWE[1] & WEST) == WEST)
 					{
 						handleNeighbour(clX - 1, clY + 1, node, true);
 					}
 				}
 			}
+			
 			if (((NSWE & NORTH) == NORTH) && ((NSWE & EAST) == EAST))
 			{
 				getHeightAndNSWE(clX + 1, clY, clZ);
+				
 				if ((hNSWE[1] & NORTH) == NORTH)
 				{
 					getHeightAndNSWE(clX, clY - 1, clZ);
+					
 					if ((hNSWE[1] & EAST) == EAST)
 					{
 						handleNeighbour(clX + 1, clY - 1, node, true);
 					}
 				}
 			}
+			
 			if (((NSWE & NORTH) == NORTH) && ((NSWE & WEST) == WEST))
 			{
 				getHeightAndNSWE(clX - 1, clY, clZ);
+				
 				if ((hNSWE[1] & NORTH) == NORTH)
 				{
 					getHeightAndNSWE(clX, clY - 1, clZ);
+					
 					if ((hNSWE[1] & WEST) == WEST)
 					{
 						handleNeighbour(clX - 1, clY - 1, node, true);
@@ -229,18 +255,22 @@ public class PathFind
 				}
 			}
 		}
+		
 		if ((NSWE & EAST) == EAST)
 		{
 			handleNeighbour(clX + 1, clY, node, false);
 		}
+		
 		if ((NSWE & WEST) == WEST)
 		{
 			handleNeighbour(clX - 1, clY, node, false);
 		}
+		
 		if ((NSWE & SOUTH) == SOUTH)
 		{
 			handleNeighbour(clX, clY + 1, node, false);
 		}
+		
 		if ((NSWE & NORTH) == NORTH)
 		{
 			handleNeighbour(clX, clY - 1, node, false);
@@ -273,26 +303,35 @@ public class PathFind
 		{
 			return 3f;
 		}
+		
 		getHeightAndNSWE(n.x + 1, n.y, n.z);
+		
 		if ((hNSWE[1] != NSWE_ALL) || (Math.abs(n.z - hNSWE[0]) > 16))
 		{
 			return 2f;
 		}
+		
 		getHeightAndNSWE(n.x - 1, n.y, n.z);
+		
 		if ((hNSWE[1] != NSWE_ALL) || (Math.abs(n.z - hNSWE[0]) > 16))
 		{
 			return 2f;
 		}
+		
 		getHeightAndNSWE(n.x, n.y + 1, n.z);
+		
 		if ((hNSWE[1] != NSWE_ALL) || (Math.abs(n.z - hNSWE[0]) > 16))
 		{
 			return 2f;
 		}
+		
 		getHeightAndNSWE(n.x, n.y - 1, n.z);
+		
 		if ((hNSWE[1] != NSWE_ALL) || (Math.abs(n.z - hNSWE[0]) > 16))
 		{
 			return 2f;
 		}
+		
 		return d ? 1.414f : 1f;
 	}
 	
@@ -306,12 +345,15 @@ public class PathFind
 	private void handleNeighbour(int x, int y, GeoNode from, boolean d)
 	{
 		int nX = x - buff.offsetX, nY = y - buff.offsetY;
+		
 		if ((nX >= buff.mapSize) || (nX < 0) || (nY >= buff.mapSize) || (nY < 0))
 		{
 			return;
 		}
+		
 		GeoNode n = buff.nodes[nX][nY];
 		float newCost;
+		
 		if (!n.isSet())
 		{
 			n = n.set(x, y, from.z);
@@ -319,12 +361,16 @@ public class PathFind
 			n.z = hNSWE[0];
 			n.nswe = hNSWE[1];
 		}
+		
 		int height = Math.abs(n.z - from.z);
+		
 		if ((height > Config.PATHFIND_MAX_Z_DIFF) || (n.nswe == NSWE_NONE))
 		{
 			return;
 		}
+		
 		newCost = from.costFromStart + traverseCost(from, n, d);
+		
 		if ((n.state == GeoNode.OPENED) || (n.state == GeoNode.CLOSED))
 		{
 			if (n.costFromStart <= newCost)
@@ -332,17 +378,21 @@ public class PathFind
 				return;
 			}
 		}
+		
 		if (n.state == GeoNode.NONE)
 		{
 			n.costToEnd = pathCostEstimate(n);
 		}
+		
 		n.parent = from;
 		n.costFromStart = newCost;
 		n.totalCost = n.costFromStart + n.costToEnd;
+		
 		if (n.state == GeoNode.OPENED)
 		{
 			return;
 		}
+		
 		n.state = GeoNode.OPENED;
 		buff.open.add(n);
 	}
@@ -356,12 +406,15 @@ public class PathFind
 	private void getHeightAndNSWE(int x, int y, short z)
 	{
 		int nX = x - buff.offsetX, nY = y - buff.offsetY;
+		
 		if ((nX >= buff.mapSize) || (nX < 0) || (nY >= buff.mapSize) || (nY < 0))
 		{
 			hNSWE[1] = NSWE_NONE;
 			return;
 		}
+		
 		GeoNode n = buff.nodes[nX][nY];
+		
 		if (!n.isSet())
 		{
 			n = n.set(x, y, z);

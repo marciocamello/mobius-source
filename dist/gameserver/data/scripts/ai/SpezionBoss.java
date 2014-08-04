@@ -49,10 +49,12 @@ public class SpezionBoss extends Fighter
 		NpcInstance actor = getActor();
 		DeadTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new SpawnMinion(), 1000, 30000);
 		Reflection r = actor.getReflection();
+		
 		for (Player p : r.getPlayers())
 		{
 			notifyEvent(CtrlEvent.EVT_AGGRESSION, p, 2);
 		}
+		
 		super.onEvtSpawn();
 		Skill fp = SkillTable.getInstance().getInfo(14190, 1);
 		fp.getEffects(actor, actor, false, false);
@@ -76,6 +78,7 @@ public class SpezionBoss extends Fighter
 		{
 			NpcInstance actor = getActor();
 			NpcInstance minion = actor.getReflection().addSpawnWithoutRespawn(25780, actor.getLoc(), 250);
+			
 			for (Player p : actor.getReflection().getPlayers())
 			{
 				minion.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, p, 2);

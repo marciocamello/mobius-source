@@ -28,7 +28,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public class DoormanInstance extends npc.model.residences.DoormanInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -44,9 +44,11 @@ public class DoormanInstance extends npc.model.residences.DoormanInstance
 	public DoormanInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
+		
 		for (int i = 0; i < _locs.length; i++)
 		{
 			String loc = template.getAIParams().getString("tele_loc" + i, null);
+			
 			if (loc != null)
 			{
 				_locs[i] = Location.parseLoc(loc);
@@ -66,7 +68,9 @@ public class DoormanInstance extends npc.model.residences.DoormanInstance
 		{
 			return;
 		}
+		
 		int cond = getCond(player);
+		
 		switch (cond)
 		{
 			case COND_OWNER:
@@ -88,17 +92,21 @@ public class DoormanInstance extends npc.model.residences.DoormanInstance
 				{
 					int id = Integer.parseInt(command.substring(4, 5));
 					Location loc = _locs[id];
+					
 					if (loc != null)
 					{
 						player.teleToLocation(loc);
 					}
 				}
+				
 				break;
+			
 			case COND_SIEGE:
 				if (command.startsWith("tele"))
 				{
 					int id = Integer.parseInt(command.substring(4, 5));
 					Location loc = _locs[id];
+					
 					if (loc != null)
 					{
 						player.teleToLocation(loc);
@@ -108,7 +116,9 @@ public class DoormanInstance extends npc.model.residences.DoormanInstance
 				{
 					player.sendPacket(new NpcHtmlMessage(player, this, _siegeDialog, 0));
 				}
+				
 				break;
+			
 			case COND_FAIL:
 				player.sendPacket(new NpcHtmlMessage(player, this, _failDialog, 0));
 				break;
@@ -126,16 +136,19 @@ public class DoormanInstance extends npc.model.residences.DoormanInstance
 	{
 		String filename = null;
 		int cond = getCond(player);
+		
 		switch (cond)
 		{
 			case COND_OWNER:
 			case COND_SIEGE:
 				filename = _mainDialog;
 				break;
+			
 			case COND_FAIL:
 				filename = _failDialog;
 				break;
 		}
+		
 		player.sendPacket(new NpcHtmlMessage(player, this, filename, val));
 	}
 	
@@ -149,14 +162,17 @@ public class DoormanInstance extends npc.model.residences.DoormanInstance
 	{
 		Castle residence = getCastle();
 		Clan residenceOwner = residence.getOwner();
+		
 		if ((residenceOwner != null) && (player.getClan() == residenceOwner) && ((player.getClanPrivileges() & getOpenPriv()) == getOpenPriv()))
 		{
 			if (residence.getSiegeEvent().isInProgress())
 			{
 				return COND_SIEGE;
 			}
+			
 			return COND_OWNER;
 		}
+		
 		return COND_FAIL;
 	}
 	

@@ -56,24 +56,30 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 		{
 			return false;
 		}
+		
 		if (gemStones.getOwnerId() != player.getObjectId())
 		{
 			return false;
 		}
+		
 		if (gemStones.getLocation() != ItemInstance.ItemLocation.INVENTORY)
 		{
 			return false;
 		}
+		
 		final Grade grade = item.getTemplate().getItemGrade();
 		LifeStoneInfo ls = LifeStoneManager.getStoneInfo(refinerItem.getItemId());
+		
 		if (getGemStoneId(grade) != gemStones.getItemId())
 		{
 			return false;
 		}
+		
 		if (getGemStoneCount(ls.getGrade(), grade) > gemStones.getCount())
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -90,19 +96,24 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 		{
 			return false;
 		}
+		
 		if (refinerItem.getLocation() != ItemInstance.ItemLocation.INVENTORY)
 		{
 			return false;
 		}
+		
 		LifeStoneInfo ls = LifeStoneManager.getStoneInfo(refinerItem.getItemId());
+		
 		if (player.getLevel() < ls.getLevel())
 		{
 			return false;
 		}
+		
 		if (!item.canBeAugmented(player, ls.getGrade()))
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -118,14 +129,17 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 		{
 			return false;
 		}
+		
 		switch (item.getLocation())
 		{
 			case INVENTORY:
 			case PAPERDOLL:
 				break;
+			
 			default:
 				return false;
 		}
+		
 		return true;
 	}
 	
@@ -140,18 +154,22 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 		{
 			return false;
 		}
+		
 		if (player.isInStoreMode())
 		{
 			return false;
 		}
+		
 		if (player.isInTrade())
 		{
 			return false;
 		}
+		
 		if (player.getLevel() < 46)
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -167,16 +185,20 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 			case C:
 			case B:
 				return GEMSTONE_D;
+				
 			case A:
 			case S:
 				return GEMSTONE_C;
+				
 			case S80:
 			case S84:
 				return GEMSTONE_B;
+				
 			case R:
 			case R95:
 			case R99:
 				return GEMSTONE_A;
+				
 			default:
 				return 0;
 		}
@@ -198,52 +220,72 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 				{
 					case C:
 						return 200;
+						
 					case B:
 						return 300;
+						
 					case A:
 						return 200;
+						
 					case S:
 						return 250;
+						
 					case S80:
 						return 360;
+						
 					case S84:
 						return 480;
+						
 					case R:
 						return 26;
+						
 					case R95:
 						return 90;
+						
 					case R99:
 						return 236;
+						
 					default:
 						return 0;
 				}
 			}
+			
 			case UNDERWEAR:
 			{
 				return 26;
 			}
+			
 			default:
 			{
 				switch (itemGrade)
 				{
 					case C:
 						return 20;
+						
 					case B:
 						return 30;
+						
 					case A:
 						return 20;
+						
 					case S:
 						return 25;
+						
 					case S80:
 						return 36;
+						
 					case S84:
 						return 48;
+						
 					case R:
 						return 13;
+						
 					case R95:
 						return 15;
+						
 					case R99:
 						return 118;
+						
 					default:
 						return 0;
 				}

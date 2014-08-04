@@ -27,7 +27,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class FameManagerInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -53,9 +53,11 @@ public class FameManagerInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		StringTokenizer st = new StringTokenizer(command, " ");
 		String actualCommand = st.nextToken();
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
+		
 		if (actualCommand.equalsIgnoreCase("PK_Count"))
 		{
 			if (player.getFame() >= 5000)
@@ -75,6 +77,7 @@ public class FameManagerInstance extends NpcInstance
 			{
 				html.setFile("default/" + getNpcId() + "-nofame.htm");
 			}
+			
 			html.replace("%objectId%", String.valueOf(getObjectId()));
 			player.sendPacket(html);
 		}
@@ -96,6 +99,7 @@ public class FameManagerInstance extends NpcInstance
 				player.sendPacket(Msg.ACQUIRED_50_CLAN_FAME_POINTS);
 				html.setFile("default/" + getNpcId() + "-okclancrp.htm");
 			}
+			
 			html.replace("%objectId%", String.valueOf(getObjectId()));
 			player.sendPacket(html);
 		}

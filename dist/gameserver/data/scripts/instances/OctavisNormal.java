@@ -92,6 +92,7 @@ public class OctavisNormal extends Reflection
 			}
 			
 			Player player = cha.getPlayer();
+			
 			if ((player == null) || !cha.isPlayer())
 			{
 				return;
@@ -108,6 +109,7 @@ public class OctavisNormal extends Reflection
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
 			Player player = cha.getPlayer();
+			
 			if ((player == null) || !cha.isPlayer())
 			{
 				return;
@@ -141,6 +143,7 @@ public class OctavisNormal extends Reflection
 					ThreadPoolManager.getInstance().schedule(new TwoStage(), 10);
 					actor.removeListener(_currentHpListenerFistsStage);
 					octavisMassive.removeListener(_currentHpListenerOctavisRide);
+					
 					for (NpcInstance n : getNpcs())
 					{
 						n.deleteMe();
@@ -160,6 +163,7 @@ public class OctavisNormal extends Reflection
 					_lockedTurn = true;
 					ThreadPoolManager.getInstance().schedule(new ThreeStage(), 10);
 					actor.removeListener(_currentHpListenerTwoStage);
+					
 					for (NpcInstance n : getNpcs())
 					{
 						n.deleteMe();
@@ -194,7 +198,7 @@ public class OctavisNormal extends Reflection
 	private class FirstStage extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public FirstStage()
 		{
@@ -205,7 +209,6 @@ public class OctavisNormal extends Reflection
 		public void runImpl()
 		{
 			_entryLocked = true;
-			
 			closeDoor(Door);
 			closeDoor(Door2);
 			
@@ -223,7 +226,6 @@ public class OctavisNormal extends Reflection
 					octavisFirstStage.addListener(_currentHpListenerFistsStage);
 					octavisFirstStage.setLockedTarget(true);
 					octavisMassive = octavisFirstStage;
-					
 					NpcInstance octavisRider = addSpawnWithoutRespawn(OctavisRider, new Location(207192, 120588, -10032, 49151), 0);
 					octavisRider.addListener(_currentHpListenerOctavisRide);
 				}
@@ -234,7 +236,7 @@ public class OctavisNormal extends Reflection
 	private class TwoStage extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public TwoStage()
 		{
@@ -250,7 +252,6 @@ public class OctavisNormal extends Reflection
 			}
 			
 			twoStageGuardSpawn = ThreadPoolManager.getInstance().scheduleAtFixedRate(new SpawnGuardForStage(1), 10000L, 120000L); // 10 secs for movie
-			
 			NpcInstance octavisTwoStage = addSpawnWithoutRespawn(Octavis2, new Location(207192, 120568, -10032, 49151), 0);
 			octavisTwoStage.addListener(_currentHpListenerTwoStage);
 			_lockedTurn = false;
@@ -275,12 +276,14 @@ public class OctavisNormal extends Reflection
 					_guard1MinCount = 5;
 					_guard1MaxCount = 10;
 					break;
+				
 				case 2:
 					_guard2MinCount = 5;
 					_guard2MaxCount = 10;
 					_guard1MinCount = 5;
 					_guard1MaxCount = 10;
 					break;
+				
 				default:
 					break;
 			}
@@ -289,6 +292,7 @@ public class OctavisNormal extends Reflection
 			{
 				addSpawnWithoutRespawn(guardOctavisGladiator, Territory.getRandomLoc(centralRoomPoint, getGeoIndex()), 0);
 			}
+			
 			for (int i = 0; i < Rnd.get(_guard2MinCount, _guard2MaxCount); i++)
 			{
 				addSpawnWithoutRespawn(guardOctavisHighAcademic, Territory.getRandomLoc(centralRoomPoint, getGeoIndex()), 0);
@@ -299,7 +303,7 @@ public class OctavisNormal extends Reflection
 	private class ThreeStage extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public ThreeStage()
 		{
@@ -310,13 +314,13 @@ public class OctavisNormal extends Reflection
 		public void runImpl()
 		{
 			twoStageGuardSpawn.cancel(true);
+			
 			for (Player player : getPlayers())
 			{
 				player.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_OCTABIS_PHASECH_B);
 			}
 			
 			threeStageGuardSpawn = ThreadPoolManager.getInstance().scheduleAtFixedRate(new SpawnGuardForStage(2), 14000L, 120000L); // 14 secs for movie
-			
 			NpcInstance octavisThreeStage = addSpawnWithoutRespawn(Octavis3, new Location(207192, 120568, -10032, 49151), 0);
 			octavisThreeStage.addListener(_deathListener);
 		}
@@ -325,7 +329,7 @@ public class OctavisNormal extends Reflection
 	private class DeathListener implements OnDeathListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public DeathListener()
 		{
@@ -348,7 +352,7 @@ public class OctavisNormal extends Reflection
 	private class EndingMovie extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public EndingMovie()
 		{
@@ -362,10 +366,12 @@ public class OctavisNormal extends Reflection
 			{
 				p.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_OCTABIS_ENDING);
 			}
+			
 			for (NpcInstance n : getNpcs())
 			{
 				n.deleteMe();
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new CollapseInstance(), 38000L); // 38 secs for movie
 		}
 	}
@@ -373,7 +379,7 @@ public class OctavisNormal extends Reflection
 	private class CollapseInstance extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public CollapseInstance()
 		{
@@ -385,6 +391,7 @@ public class OctavisNormal extends Reflection
 		{
 			startCollapseTimer(5 * 60 * 1000L);
 			doCleanup();
+			
 			for (Player p : getPlayers())
 			{
 				p.sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(5));
@@ -398,6 +405,7 @@ public class OctavisNormal extends Reflection
 		{
 			twoStageGuardSpawn.cancel(true);
 		}
+		
 		if (threeStageGuardSpawn != null)
 		{
 			threeStageGuardSpawn.cancel(true);

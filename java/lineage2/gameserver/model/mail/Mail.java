@@ -423,14 +423,17 @@ public class Mail implements JdbcEntity, Comparable<Mail>
 		{
 			return true;
 		}
+		
 		if (o == null)
 		{
 			return false;
 		}
+		
 		if (o.getClass() != this.getClass())
 		{
 			return false;
 		}
+		
 		return ((Mail) o).getMessageId() == getMessageId();
 	}
 	
@@ -505,6 +508,7 @@ public class Mail implements JdbcEntity, Comparable<Mail>
 			{
 				mail.addAttachment(item);
 			}
+			
 			getAttachments().clear();
 		}
 		mail.setType(SenderType.NORMAL);

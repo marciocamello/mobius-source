@@ -42,11 +42,14 @@ public class EffectConsumeSoulsOverTime extends Effect
 		{
 			return false;
 		}
+		
 		if (_effected.getConsumedSouls() < 0)
 		{
 			return false;
 		}
+		
 		int damage = (int) calc();
+		
 		if (_effected.getConsumedSouls() < damage)
 		{
 			_effected.setConsumedSouls(0, null);
@@ -55,6 +58,7 @@ public class EffectConsumeSoulsOverTime extends Effect
 		{
 			_effected.setConsumedSouls(_effected.getConsumedSouls() - damage, null);
 		}
+		
 		return true;
 	}
 }

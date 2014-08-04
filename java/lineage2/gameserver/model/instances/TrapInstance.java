@@ -39,7 +39,7 @@ import lineage2.gameserver.utils.Location;
 public final class TrapInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -69,21 +69,26 @@ public final class TrapInstance extends NpcInstance
 		public void runImpl()
 		{
 			TrapInstance trap = (TrapInstance) _trapRef.get();
+			
 			if (trap == null)
 			{
 				return;
 			}
+			
 			Creature owner = trap.getOwner();
+			
 			if (owner == null)
 			{
 				return;
 			}
+			
 			if (trap._skill == null)
 			{
 				System.out.println("ERROR IN TRAP SKILL");
 				trap.deleteMe();
 				return;
 			}
+			
 			for (Creature target : trap.getAroundCharacters(200, 200))
 			{
 				if (target != owner)
@@ -91,6 +96,7 @@ public final class TrapInstance extends NpcInstance
 					if (trap._skill.checkTarget(owner, target, null, false, false) == null)
 					{
 						List<Creature> targets = new ArrayList<>();
+						
 						if (trap._skill.getTargetType() != SkillTargetType.TARGET_AREA)
 						{
 							targets.add(target);
@@ -105,11 +111,14 @@ public final class TrapInstance extends NpcInstance
 								}
 							}
 						}
+						
 						trap._skill.useSkill(trap, targets);
+						
 						if (target.isPlayer())
 						{
 							target.sendMessage(new CustomMessage("common.Trap", target.getPlayer()));
 						}
+						
 						trap.deleteMe();
 						break;
 					}
@@ -210,6 +219,7 @@ public final class TrapInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		super.broadcastCharInfo();
 	}
 	
@@ -220,19 +230,24 @@ public final class TrapInstance extends NpcInstance
 	protected void onDelete()
 	{
 		Creature owner = getOwner();
+		
 		if ((owner != null) && owner.isPlayer())
 		{
 			((Player) owner).removeTrap(this);
 		}
+		
 		if (_destroyTask != null)
 		{
 			_destroyTask.cancel(false);
 		}
+		
 		_destroyTask = null;
+		
 		if (_targetTask != null)
 		{
 			_targetTask.cancel(false);
 		}
+		
 		_targetTask = null;
 		super.onDelete();
 	}
@@ -402,6 +417,7 @@ public final class TrapInstance extends NpcInstance
 		{
 			return Collections.emptyList();
 		}
+		
 		return Collections.<L2GameServerPacket> singletonList(new NpcInfo(this, forPlayer));
 	}
 }

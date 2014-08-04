@@ -60,17 +60,21 @@ public class EnergyReplenish extends Skill
 		{
 			return false;
 		}
+		
 		if (!activeChar.isPlayer())
 		{
 			return false;
 		}
+		
 		Player player = (Player) activeChar;
 		ItemInstance item = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LBRACELET);
+		
 		if ((item == null) || ((item.getTemplate().getAgathionEnergy() - item.getAgathionEnergy()) < _addEnergy))
 		{
 			player.sendPacket(SystemMsg.YOUR_ENERGY_CANNOT_BE_REPLENISHED_BECAUSE_CONDITIONS_ARE_NOT_MET);
 			return false;
 		}
+		
 		return true;
 	}
 	

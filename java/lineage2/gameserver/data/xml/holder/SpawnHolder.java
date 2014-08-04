@@ -53,10 +53,12 @@ public final class SpawnHolder extends AbstractHolder
 	public void addSpawn(String group, SpawnTemplate spawn)
 	{
 		List<SpawnTemplate> spawns = _spawns.get(group);
+		
 		if (spawns == null)
 		{
 			_spawns.put(group, (spawns = new ArrayList<>()));
 		}
+		
 		spawns.add(spawn);
 	}
 	
@@ -79,10 +81,12 @@ public final class SpawnHolder extends AbstractHolder
 	public int size()
 	{
 		int i = 0;
+		
 		for (List<?> l : _spawns.values())
 		{
 			i += l.size();
 		}
+		
 		return i;
 	}
 	

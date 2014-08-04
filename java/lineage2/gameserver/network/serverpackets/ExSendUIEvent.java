@@ -54,11 +54,11 @@ public class ExSendUIEvent extends NpcStringContainer
 		writeS(String.valueOf(_startTime / 60)); // timer starting minute(s)
 		writeS(String.valueOf(_startTime % 60)); // timer starting second(s)
 		writeS(String.valueOf(_endTime / 60)); // timer length minute(s) (timer
-												// will disappear 10 seconds
-												// before it ends)
+		// will disappear 10 seconds
+		// before it ends)
 		writeS(String.valueOf(_endTime % 60)); // timer length second(s) (timer
-												// will disappear 10 seconds
-												// before it ends)
+		// will disappear 10 seconds
+		// before it ends)
 		writeElements();
 	}
 }

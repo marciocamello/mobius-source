@@ -51,6 +51,7 @@ public class TiatCamera extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		for (Player p : World.getAroundPlayers(actor, 300, 300))
 		{
 			if (!_players.contains(p))
@@ -59,6 +60,7 @@ public class TiatCamera extends DefaultAI
 				_players.add(p);
 			}
 		}
+		
 		return true;
 	}
 }

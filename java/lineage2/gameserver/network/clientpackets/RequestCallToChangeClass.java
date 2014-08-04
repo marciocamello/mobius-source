@@ -43,15 +43,19 @@ public class RequestCallToChangeClass extends L2GameClientPacket
 		if (!Config.AWAKING_FREE)
 		{
 			Player player = getClient().getActiveChar();
+			
 			if (player == null)
 			{
 				return;
 			}
+			
 			if (player.getVarB("GermunkusUSM"))
 			{
 				return;
 			}
+			
 			int _cId = 0;
+			
 			for (ClassId Cl : ClassId.VALUES)
 			{
 				if ((Cl.level() == 5) && player.getClassId().childOf(Cl))
@@ -60,28 +64,34 @@ public class RequestCallToChangeClass extends L2GameClientPacket
 					break;
 				}
 			}
+			
 			if (player.isDead())
 			{
 				sendPacket(new ExShowScreenMessage(NpcString.YOU_CANNOT_TELEPORT_WHILE_YOU_ARE_DEAD, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, false, ExShowScreenMessage.STRING_TYPE, -1, false), new ExCallToChangeClass(_cId, false));
 				return;
 			}
+			
 			player.processQuestEvent("_10338_SeizeYourDestiny", "MemoryOfDisaster", null);
 		}
 		else
 		{
 			Player player = getClient().getActiveChar();
+			
 			if (player == null)
 			{
 				return;
 			}
+			
 			if (player.getLevel() < 85)
 			{
 				return;
 			}
+			
 			if (player.getClassId().level() < 3)
 			{
 				return;
 			}
+			
 			AwakingManager.getInstance().SendReqToAwaking(player);
 		}
 	}

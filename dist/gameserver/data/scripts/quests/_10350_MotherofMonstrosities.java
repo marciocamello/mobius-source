@@ -51,6 +51,7 @@ public class _10350_MotherofMonstrosities extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("take_item"))
 		{
 			st.giveItems(ITEM_WYRM_PART, 1);
@@ -63,6 +64,7 @@ public class _10350_MotherofMonstrosities extends Quest implements ScriptFile
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return htmltext;
 	}
 	
@@ -72,6 +74,7 @@ public class _10350_MotherofMonstrosities extends Quest implements ScriptFile
 		st.getCond();
 		npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npc.getNpcId() == NPC_CHICHIRIN)
 		{
 			if (st.getPlayer().getLevel() < 40)
@@ -79,19 +82,23 @@ public class _10350_MotherofMonstrosities extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 				return "30539-02.htm";
 			}
+			
 			if (st.getPlayer().getLevel() > 75)
 			{
 				st.exitCurrentQuest(true);
 				return "30539-05.htm";
 			}
+			
 			switch (st.getState())
 			{
 				case COMPLETED:
 					htmltext = "30539-03.htm";
 					break;
+				
 				case CREATED:
 					htmltext = "30539-01.htm";
 					break;
+				
 				case STARTED:
 					if (st.getCond() == 1)
 					{
@@ -103,6 +110,7 @@ public class _10350_MotherofMonstrosities extends Quest implements ScriptFile
 						{
 							break;
 						}
+						
 						htmltext = "30539-10.htm";
 						st.addExpAndSp(200454, 135933);
 						st.giveItems(57, 40299, true);
@@ -125,6 +133,7 @@ public class _10350_MotherofMonstrosities extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 }

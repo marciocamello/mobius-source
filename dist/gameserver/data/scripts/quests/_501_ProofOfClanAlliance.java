@@ -97,11 +97,13 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 		addTalkId(WITCH_KALIS);
 		addQuestItem(SYMBOL_OF_LOYALTY);
 		addQuestItem(ANTIDOTE_RECIPE);
+		
 		for (int[] i : MOBS)
 		{
 			addKillId(i[0]);
 			addQuestItem(i[1]);
 		}
+		
 		for (int i : CHESTS)
 		{
 			addKillId(i);
@@ -112,10 +114,12 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 	{
 		Clan clan = st.getPlayer().getClan();
 		QuestState leader = null;
+		
 		if ((clan != null) && (clan.getLeader() != null) && (clan.getLeader().getPlayer() != null))
 		{
 			leader = clan.getLeader().getPlayer().getQuestState(getName());
 		}
+		
 		return leader;
 	}
 	
@@ -132,9 +136,11 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 			st.exitCurrentQuest(true);
 			return;
 		}
+		
 		int clan = st.getPlayer().getClan().getClanId();
 		Connection con = null;
 		PreparedStatement offline = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -160,21 +166,26 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 			st.exitCurrentQuest(true);
 			return;
 		}
+		
 		QuestState l;
 		Player pleader = null;
+		
 		if (leader)
 		{
 			l = getLeader(st);
+			
 			if (l != null)
 			{
 				pleader = l.getPlayer();
 			}
 		}
+		
 		if (pleader != null)
 		{
 			pleader.stopImmobilized();
 			pleader.getEffectList().stopEffect(4082);
 		}
+		
 		for (Player pl : st.getPlayer().getClan().getOnlineMembers(st.getPlayer().getClan().getLeaderId()))
 		{
 			if ((pl != null) && (pl.getQuestState(getName()) != null))
@@ -192,13 +203,17 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 			st.exitCurrentQuest(true);
 			return "noquest";
 		}
+		
 		QuestState leader = getLeader(st);
+		
 		if (leader == null)
 		{
 			removeQuestFromMembers(st, true);
 			return "Quest Failed";
 		}
+		
 		String htmltext = event;
+		
 		if (st.getPlayer().isClanLeader())
 		{
 			if (event.equalsIgnoreCase("30756-03.htm"))
@@ -227,6 +242,7 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 				htmltext = "30759-07.htm";
 			}
 		}
+		
 		if (event.equalsIgnoreCase("poison_timer"))
 		{
 			removeQuestFromMembers(st, true);
@@ -235,6 +251,7 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("chest_timer"))
 		{
 			htmltext = "";
+			
 			if (leader.getInt("chest_game") < 2)
 			{
 				stop_chest_game(st);
@@ -246,16 +263,20 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 			deadlist.addAll(Arrays.asList(leader.get("dead_list").split(" ")));
 			deadlist.add(st.getPlayer().getName());
 			String deadstr = "";
+			
 			for (String s : deadlist)
 			{
 				deadstr += s + " ";
 			}
+			
 			leader.set("dead_list", deadstr);
 			st.addNotifyOfDeath(leader.getPlayer(), false);
+			
 			if (Rnd.chance(50))
 			{
 				st.getPlayer().reduceCurrentHp(st.getPlayer().getCurrentHp() * 8, 0, st.getPlayer(), null, true, true, false, false, false, false, false);
 			}
+			
 			st.giveItems(SYMBOL_OF_LOYALTY, 1);
 			st.playSound(SOUND_ACCEPT);
 		}
@@ -278,6 +299,7 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 				st.takeItems(ADENA_ID, RETRY_PRICE);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -286,18 +308,23 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if ((st.getPlayer() == null) || (st.getPlayer().getClan() == null))
 		{
 			st.exitCurrentQuest(true);
 			return htmltext;
 		}
+		
 		QuestState leader = getLeader(st);
+		
 		if (leader == null)
 		{
 			removeQuestFromMembers(st, true);
 			return "Quest Failed";
 		}
+		
 		int npcId = npc.getNpcId();
+		
 		if (npcId == SIR_KRISTOF_RODEMAI)
 		{
 			if (!st.getPlayer().isClanLeader())
@@ -350,13 +377,16 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 				else if (cond == 2)
 				{
 					htmltext = "30759-05.htm";
+					
 					if (st.getQuestItemsCount(SYMBOL_OF_LOYALTY) == 3)
 					{
 						int deads = 0;
+						
 						try
 						{
 							deads = st.get("dead_list").split(" ").length;
 						}
+						
 						finally
 						{
 							if (deads == 3)
@@ -411,6 +441,7 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 			{
 				String[] dlist;
 				int deads;
+				
 				try
 				{
 					dlist = leader.get("dead_list").split(" ");
@@ -421,6 +452,7 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 					removeQuestFromMembers(st, true);
 					return "Who are you?";
 				}
+				
 				if (deads < 3)
 				{
 					for (String str : dlist)
@@ -430,6 +462,7 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 							return "you cannot die again!";
 						}
 					}
+					
 					return "30757-01.htm";
 				}
 			}
@@ -440,7 +473,9 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 			{
 				return "30757-03.htm";
 			}
+			
 			String[] dlist;
+			
 			try
 			{
 				dlist = leader.get("dead_list").split(" ");
@@ -450,7 +485,9 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 				return "Who are you?";
 			}
+			
 			Boolean flag = false;
+			
 			if (dlist != null)
 			{
 				for (String str : dlist)
@@ -461,18 +498,22 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 					}
 				}
 			}
+			
 			if (!flag)
 			{
 				st.exitCurrentQuest(true);
 				return "Who are you?";
 			}
+			
 			int game_state = leader.getInt("chest_game");
+			
 			if (game_state == 0)
 			{
 				if (leader.getInt("chest_try") == 0)
 				{
 					return "30758-01.htm";
 				}
+				
 				return "30758-05.htm";
 			}
 			else if (game_state == 1)
@@ -489,6 +530,7 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 				return "30758-08.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -500,18 +542,23 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 			st.exitCurrentQuest(true);
 			return "noquest";
 		}
+		
 		QuestState leader = getLeader(st);
+		
 		if (leader == null)
 		{
 			removeQuestFromMembers(st, true);
 			return "Quest Failed";
 		}
+		
 		int npcId = npc.getNpcId();
+		
 		if (!leader.isRunningQuestTimer("poison_timer"))
 		{
 			stop_chest_game(st);
 			return "Quest Failed";
 		}
+		
 		for (int[] m : MOBS)
 		{
 			if ((npcId == m[0]) && (st.getInt(String.valueOf(m[1])) == 0))
@@ -525,6 +572,7 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		for (int i : CHESTS)
 		{
 			if (npcId == i)
@@ -534,15 +582,18 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 					stop_chest_game(st);
 					return "Time is up!";
 				}
+				
 				if (Rnd.chance(25))
 				{
 					Functions.npcSay(npc, "###### BINGO! ######");
 					int count = leader.getInt("chest_count");
+					
 					if (count < 4)
 					{
 						count += 1;
 						leader.set("chest_count", String.valueOf(count));
 					}
+					
 					if (count >= 4)
 					{
 						stop_chest_game(st);
@@ -555,9 +606,11 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 						st.playSound(SOUND_ITEMGET);
 					}
 				}
+				
 				return null;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -568,20 +621,25 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 			st.exitCurrentQuest(true);
 			return;
 		}
+		
 		QuestState leader = getLeader(st);
+		
 		if (leader == null)
 		{
 			removeQuestFromMembers(st, true);
 			return;
 		}
+		
 		leader.set("chest_game", "1");
 		leader.set("chest_count", "0");
 		int attempts = leader.getInt("chest_try");
 		leader.set("chest_try", String.valueOf(attempts + 1));
+		
 		for (NpcInstance npc : GameObjectsStorage.getAllByNpcId(CHESTS, false))
 		{
 			npc.deleteMe();
 		}
+		
 		for (int n = 1; n <= 5; n++)
 		{
 			for (int i : CHESTS)
@@ -589,21 +647,25 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 				leader.addSpawn(i, 102100, 103450, -3400, 0, 100, 60000);
 			}
 		}
+		
 		leader.startQuestTimer("chest_timer", 60000);
 	}
 	
 	public void stop_chest_game(QuestState st)
 	{
 		QuestState leader = getLeader(st);
+		
 		if (leader == null)
 		{
 			removeQuestFromMembers(st, true);
 			return;
 		}
+		
 		for (NpcInstance npc : GameObjectsStorage.getAllByNpcId(CHESTS, false))
 		{
 			npc.deleteMe();
 		}
+		
 		leader.set("chest_game", "0");
 	}
 	
@@ -615,18 +677,22 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 			st.exitCurrentQuest(true);
 			return null;
 		}
+		
 		QuestState leader = getLeader(st);
+		
 		if (leader == null)
 		{
 			removeQuestFromMembers(st, true);
 			return null;
 		}
+		
 		if (st.getPlayer() == pc)
 		{
 			leader.cancelQuestTimer("poison_timer");
 			leader.cancelQuestTimer("chest_timer");
 			removeQuestFromMembers(st, true);
 		}
+		
 		return null;
 	}
 }

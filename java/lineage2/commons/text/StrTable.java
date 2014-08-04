@@ -175,6 +175,7 @@ public class StrTable
 	public StrTable set(int rowIndex, String colName, String val)
 	{
 		Map<String, String> row;
+		
 		if (rows.containsKey(rowIndex))
 		{
 			row = rows.get(rowIndex);
@@ -184,8 +185,10 @@ public class StrTable
 			row = new HashMap<>();
 			rows.put(rowIndex, row);
 		}
+		
 		row.put(colName, val);
 		int columnSize;
+		
 		if (!columns.containsKey(colName))
 		{
 			columnSize = Math.max(colName.length(), val.length());
@@ -194,6 +197,7 @@ public class StrTable
 		{
 			return this;
 		}
+		
 		columns.put(colName, columnSize);
 		return this;
 	}
@@ -219,6 +223,7 @@ public class StrTable
 	private static StringBuilder right(StringBuilder result, String s, int sz)
 	{
 		result.append(s);
+		
 		if ((sz -= s.length()) > 0)
 		{
 			for (int i = 0; i < sz; i++)
@@ -226,6 +231,7 @@ public class StrTable
 				result.append(' ');
 			}
 		}
+		
 		return result;
 	}
 	
@@ -241,14 +247,17 @@ public class StrTable
 		int offset = result.length();
 		result.append(s);
 		int i;
+		
 		while ((i = sz - (result.length() - offset)) > 0)
 		{
 			result.append(' ');
+			
 			if (i > 1)
 			{
 				result.insert(offset, " ");
 			}
 		}
+		
 		return result;
 	}
 	
@@ -265,6 +274,7 @@ public class StrTable
 		{
 			result.append(s);
 		}
+		
 		return result;
 	}
 	
@@ -276,40 +286,50 @@ public class StrTable
 	public String toString()
 	{
 		StringBuilder result = new StringBuilder();
+		
 		if (columns.isEmpty())
 		{
 			return result.toString();
 		}
+		
 		StringBuilder header = new StringBuilder("|");
 		StringBuilder line = new StringBuilder("|");
+		
 		for (String c : columns.keySet())
 		{
 			center(header, c, columns.get(c) + 2).append('|');
 			repeat(line, "-", columns.get(c) + 2).append('|');
 		}
+		
 		if (!titles.isEmpty())
 		{
 			result.append(' ');
 			repeat(result, "-", header.length() - 2).append(' ').append('\n');
+			
 			for (String title : titles)
 			{
 				result.append("| ");
 				right(result, title, header.length() - 3).append('|').append('\n');
 			}
 		}
+		
 		result.append(' ');
 		repeat(result, "-", header.length() - 2).append(' ').append('\n');
 		result.append(header).append('\n');
 		result.append(line).append('\n');
+		
 		for (Map<String, String> row : rows.values())
 		{
 			result.append('|');
+			
 			for (String c : columns.keySet())
 			{
 				center(result, row.containsKey(c) ? row.get(c) : "-", columns.get(c) + 2).append('|');
 			}
+			
 			result.append('\n');
 		}
+		
 		result.append(' ');
 		repeat(result, "-", header.length() - 2).append(' ').append('\n');
 		return result.toString();

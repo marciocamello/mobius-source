@@ -59,6 +59,7 @@ public class Ping extends Functions implements IVoicedCommandHandler
 			ThreadPoolManager.getInstance().schedule(new AnswerTask(activeChar), 3000L);
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -89,6 +90,7 @@ public class Ping extends Functions implements IVoicedCommandHandler
 		public void run()
 		{
 			int ping = _player.getPing();
+			
 			if (ping != -1)
 			{
 				_player.sendMessage("Current ping: " + ping + " ms.");

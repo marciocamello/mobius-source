@@ -33,7 +33,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class ClanAirShipControllerInstance extends AirShipControllerInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -83,6 +83,7 @@ public class ClanAirShipControllerInstance extends AirShipControllerInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("summon"))
 		{
 			if ((player.getClan() == null) || (player.getClan().getLevel() < 5))
@@ -90,18 +91,22 @@ public class ClanAirShipControllerInstance extends AirShipControllerInstance
 				player.sendPacket(SystemMsg.IN_ORDER_TO_ACQUIRE_AN_AIRSHIP_THE_CLANS_LEVEL_MUST_BE_LEVEL_5_OR_HIGHER);
 				return;
 			}
+			
 			if ((player.getClanPrivileges() & Clan.CP_CL_SUMMON_AIRSHIP) != Clan.CP_CL_SUMMON_AIRSHIP)
 			{
 				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 				return;
 			}
+			
 			if (!player.getClan().isHaveAirshipLicense())
 			{
 				player.sendPacket(SystemMsg.AN_AIRSHIP_CANNOT_BE_SUMMONED_BECAUSE_EITHER_YOU_HAVE_NOT_REGISTERED_YOUR_AIRSHIP_LICENSE_OR_THE_AIRSHIP_HAS_NOT_YET_BEEN_SUMMONED);
 				return;
 			}
+			
 			ClanAirShip dockedAirShip = getDockedAirShip();
 			ClanAirShip clanAirship = player.getClan().getAirship();
+			
 			if (clanAirship != null)
 			{
 				if (clanAirship == dockedAirShip)
@@ -112,18 +117,22 @@ public class ClanAirShipControllerInstance extends AirShipControllerInstance
 				{
 					player.sendPacket(SystemMsg.YOUR_CLANS_AIRSHIP_IS_ALREADY_BEING_USED_BY_ANOTHER_CLAN_MEMBER);
 				}
+				
 				return;
 			}
+			
 			if (dockedAirShip != null)
 			{
 				Functions.npcSay(this, NpcString.IN_AIR_HARBOR_ALREADY_AIRSHIP_DOCKED_PLEASE_WAIT_AND_TRY_AGAIN, ChatType.SHOUT, 5000);
 				return;
 			}
+			
 			if (Functions.removeItem(player, ENERGY_STAR_STONE, 5) != 5)
 			{
 				player.sendPacket(new SystemMessage2(SystemMsg.AN_AIRSHIP_CANNOT_BE_SUMMONED_BECAUSE_YOU_DONT_HAVE_ENOUGH_S1).addItemName(ENERGY_STAR_STONE));
 				return;
 			}
+			
 			ClanAirShip dockedShip = new ClanAirShip(player.getClan());
 			dockedShip.setDock(_dock);
 			dockedShip.setPlatform(_platform);
@@ -139,16 +148,19 @@ public class ClanAirShipControllerInstance extends AirShipControllerInstance
 				player.sendPacket(SystemMsg.IN_ORDER_TO_ACQUIRE_AN_AIRSHIP_THE_CLANS_LEVEL_MUST_BE_LEVEL_5_OR_HIGHER);
 				return;
 			}
+			
 			if (player.getClan().isHaveAirshipLicense())
 			{
 				player.sendPacket(SystemMsg.THE_AIRSHIP_SUMMON_LICENSE_HAS_ALREADY_BEEN_ACQUIRED);
 				return;
 			}
+			
 			if (Functions.getItemCount(player, AIRSHIP_SUMMON_LICENSE) == 0)
 			{
 				player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
 				return;
 			}
+			
 			Functions.removeItem(player, AIRSHIP_SUMMON_LICENSE, 1);
 			player.getClan().setAirshipLicense(true);
 			player.getClan().setAirshipFuel(ClanAirShip.MAX_FUEL);
@@ -169,10 +181,12 @@ public class ClanAirShipControllerInstance extends AirShipControllerInstance
 	protected ClanAirShip getDockedAirShip()
 	{
 		ClanAirShip ship = _dockedShipRef.get();
+		
 		if ((ship != null) && ship.isDocked())
 		{
 			return ship;
 		}
+		
 		return null;
 	}
 	
@@ -184,21 +198,25 @@ public class ClanAirShipControllerInstance extends AirShipControllerInstance
 	public void setDockedShip(ClanAirShip dockedShip)
 	{
 		ClanAirShip old = _dockedShipRef.get();
+		
 		if (old != null)
 		{
 			old.setDock(null);
 			old.setPlatform(null);
 		}
+		
 		if (dockedShip != null)
 		{
 			boolean alreadyEnter = dockedShip.getDock() != null;
 			dockedShip.setDock(_dock);
 			dockedShip.setPlatform(_platform);
+			
 			if (!alreadyEnter)
 			{
 				dockedShip.startArrivalTask();
 			}
 		}
+		
 		if (dockedShip == null)
 		{
 			_dockedShipRef = HardReferences.emptyRef();

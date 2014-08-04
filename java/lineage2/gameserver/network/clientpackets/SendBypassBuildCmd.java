@@ -33,6 +33,7 @@ public class SendBypassBuildCmd extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_command = readS();
+		
 		if (_command != null)
 		{
 			_command = _command.trim();
@@ -46,15 +47,19 @@ public class SendBypassBuildCmd extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		String cmd = _command;
+		
 		if (!cmd.contains("admin_"))
 		{
 			cmd = "admin_" + cmd;
 		}
+		
 		AdminCommandHandler.getInstance().useAdminCommandHandler(activeChar, cmd);
 	}
 }

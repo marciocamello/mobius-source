@@ -38,6 +38,7 @@ public class PartyMemberPosition extends L2GameServerPacket
 	{
 		writeC(0xba);
 		writeD(positions.size());
+		
 		for (Map.Entry<Integer, Location> e : positions.entrySet())
 		{
 			writeD(e.getKey());

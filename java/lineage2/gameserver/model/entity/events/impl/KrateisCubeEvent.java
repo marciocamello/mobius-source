@@ -79,18 +79,16 @@ public class KrateisCubeEvent extends GlobalEvent
 			}
 			
 			KrateisCubeEvent cubeEvent2 = victim.getEvent(KrateisCubeEvent.class);
+			
 			if (cubeEvent2 != KrateisCubeEvent.this)
 			{
 				return;
 			}
 			
 			KrateisCubePlayerObject winnerPlayer = getParticlePlayer((Player) actor);
-			
 			winnerPlayer.setPoints(winnerPlayer.getPoints() + 5);
 			updatePoints(winnerPlayer);
-			
 			KrateisCubePlayerObject looserPlayer = getParticlePlayer((Player) victim);
-			
 			looserPlayer.startRessurectTask();
 		}
 		
@@ -128,6 +126,7 @@ public class KrateisCubeEvent extends GlobalEvent
 		public void onTeleport(Player player, int x, int y, int z, Reflection reflection)
 		{
 			List<Location> waitLocs = getObjects(WAIT_LOCS);
+			
 			for (Location loc : waitLocs)
 			{
 				if ((loc.x == x) && (loc.y == y))
@@ -255,7 +254,6 @@ public class KrateisCubeEvent extends GlobalEvent
 	public void initEvent()
 	{
 		_runnerEvent = EventHolder.getInstance().getEvent(EventType.MAIN_EVENT, 2);
-		
 		super.initEvent();
 	}
 	
@@ -267,6 +265,7 @@ public class KrateisCubeEvent extends GlobalEvent
 		NpcInstance npc = _runnerEvent.getNpc();
 		List<KrateisCubePlayerObject> registeredPlayers = removeObjects(REGISTERED_PLAYERS);
 		List<Location> waitLocs = getObjects(WAIT_LOCS);
+		
 		for (KrateisCubePlayerObject k : registeredPlayers)
 		{
 			if (npc.getDistance(k.getPlayer()) > 800)
@@ -275,9 +274,7 @@ public class KrateisCubeEvent extends GlobalEvent
 			}
 			
 			addObject(PARTICLE_PLAYERS, k);
-			
 			Player player = k.getPlayer();
-			
 			player.teleToLocation(Rnd.get(waitLocs), ReflectionManager.DEFAULT);
 		}
 	}
@@ -289,7 +286,6 @@ public class KrateisCubeEvent extends GlobalEvent
 	public void startEvent()
 	{
 		super.startEvent();
-		
 		List<KrateisCubePlayerObject> players = getObjects(PARTICLE_PLAYERS);
 		List<Location> teleportLocs = getObjects(TELEPORT_LOCS);
 		
@@ -297,14 +293,10 @@ public class KrateisCubeEvent extends GlobalEvent
 		{
 			KrateisCubePlayerObject k = players.get(i);
 			Player player = k.getPlayer();
-			
 			player.getEffectList().stopAllEffects();
-			
 			giveEffects(player);
-			
 			player.teleToLocation(teleportLocs.get(i));
 			player.addEvent(this);
-			
 			player.sendPacket(new ExPVPMatchCCMyRecord(k), SystemMsg.THE_MATCH_HAS_STARTED);
 		}
 	}
@@ -317,23 +309,23 @@ public class KrateisCubeEvent extends GlobalEvent
 	{
 		super.stopEvent();
 		reCalcNextTime(false);
-		
 		double dif = 0.05;
 		int pos = 0;
-		
 		List<KrateisCubePlayerObject> players = removeObjects(PARTICLE_PLAYERS);
+		
 		for (KrateisCubePlayerObject krateisPlayer : players)
 		{
 			Player player = krateisPlayer.getPlayer();
 			pos++;
+			
 			if (krateisPlayer.getPoints() >= 10)
 			{
 				int count = (int) (krateisPlayer.getPoints() * dif * (1.0 + ((players.size() / pos) * 0.04)));
 				dif -= 0.0016;
+				
 				if (count > 0)
 				{
 					Functions.addItem(player, 13067, count);
-					
 					int exp = count * 2880;
 					int sp = count * 288;
 					player.addExpAndSp(exp, sp);
@@ -341,7 +333,6 @@ public class KrateisCubeEvent extends GlobalEvent
 			}
 			
 			player.removeEvent(this);
-			
 			player.sendPacket(ExPVPMatchCCRetire.STATIC, SystemMsg.END_MATCH);
 			player.teleToLocation(RETURN_LOC);
 		}
@@ -359,6 +350,7 @@ public class KrateisCubeEvent extends GlobalEvent
 		for (int j = 0; j < SKILL_IDS.length; j++)
 		{
 			Skill skill = SkillTable.getInstance().getInfo(SKILL_IDS[j], SKILL_LEVEL[j]);
+			
 			if (skill != null)
 			{
 				skill.getEffects(player, player, false, false);
@@ -374,9 +366,7 @@ public class KrateisCubeEvent extends GlobalEvent
 	public void reCalcNextTime(boolean onInit)
 	{
 		clearActions();
-		
 		_calendar.setTimeInMillis(DATE_PATTERN.next(System.currentTimeMillis()));
-		
 		registerActions();
 	}
 	
@@ -412,6 +402,7 @@ public class KrateisCubeEvent extends GlobalEvent
 	public KrateisCubePlayerObject getRegisteredPlayer(Player player)
 	{
 		List<KrateisCubePlayerObject> registeredPlayers = getObjects(REGISTERED_PLAYERS);
+		
 		for (KrateisCubePlayerObject p : registeredPlayers)
 		{
 			if (p.getPlayer() == player)
@@ -419,6 +410,7 @@ public class KrateisCubeEvent extends GlobalEvent
 				return p;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -430,6 +422,7 @@ public class KrateisCubeEvent extends GlobalEvent
 	public KrateisCubePlayerObject getParticlePlayer(Player player)
 	{
 		List<KrateisCubePlayerObject> registeredPlayers = getObjects(PARTICLE_PLAYERS);
+		
 		for (KrateisCubePlayerObject p : registeredPlayers)
 		{
 			if (p.getPlayer() == player)
@@ -437,6 +430,7 @@ public class KrateisCubeEvent extends GlobalEvent
 				return p;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -447,13 +441,13 @@ public class KrateisCubeEvent extends GlobalEvent
 	public void showRank(Player player)
 	{
 		KrateisCubePlayerObject particlePlayer = getParticlePlayer(player);
+		
 		if ((particlePlayer == null) || particlePlayer.isShowRank())
 		{
 			return;
 		}
 		
 		particlePlayer.setShowRank(true);
-		
 		player.sendPacket(new ExPVPMatchCCRecord(this));
 	}
 	
@@ -464,6 +458,7 @@ public class KrateisCubeEvent extends GlobalEvent
 	public void closeRank(Player player)
 	{
 		KrateisCubePlayerObject particlePlayer = getParticlePlayer(player);
+		
 		if ((particlePlayer == null) || !particlePlayer.isShowRank())
 		{
 			return;
@@ -479,10 +474,9 @@ public class KrateisCubeEvent extends GlobalEvent
 	public void updatePoints(KrateisCubePlayerObject k)
 	{
 		k.getPlayer().sendPacket(new ExPVPMatchCCMyRecord(k));
-		
 		final ExPVPMatchCCRecord p = new ExPVPMatchCCRecord(this);
-		
 		List<KrateisCubePlayerObject> players = getObjects(PARTICLE_PLAYERS);
+		
 		for (KrateisCubePlayerObject $player : players)
 		{
 			if ($player.isShowRank())
@@ -513,9 +507,7 @@ public class KrateisCubeEvent extends GlobalEvent
 	{
 		KrateisCubePlayerObject krateisCubePlayer = getParticlePlayer(player);
 		krateisCubePlayer.stopRessurectTask();
-		
 		getObjects(PARTICLE_PLAYERS).remove(krateisCubePlayer);
-		
 		player.sendPacket(ExPVPMatchCCRetire.STATIC);
 		player.removeEvent(this);
 		
@@ -533,6 +525,7 @@ public class KrateisCubeEvent extends GlobalEvent
 	public void announce(int a)
 	{
 		IStaticPacket p = null;
+		
 		if (a > 0)
 		{
 			p = new SystemMessage2(SystemMsg.S1_SECONDS_TO_GAME_END).addInteger(a);
@@ -543,6 +536,7 @@ public class KrateisCubeEvent extends GlobalEvent
 		}
 		
 		List<KrateisCubePlayerObject> players = getObjects(PARTICLE_PLAYERS);
+		
 		for (KrateisCubePlayerObject $player : players)
 		{
 			$player.getPlayer().sendPacket(p);

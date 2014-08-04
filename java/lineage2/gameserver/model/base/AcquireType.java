@@ -78,11 +78,14 @@ public enum AcquireType
 		{
 			case 97:
 				return TRANSFER_CARDINAL;
+				
 			case 105:
 				return TRANSFER_EVA_SAINTS;
+				
 			case 112:
 				return TRANSFER_SHILLIEN_SAINTS;
 		}
+		
 		return null;
 	}
 	
@@ -96,13 +99,17 @@ public enum AcquireType
 		{
 			case TRANSFER_CARDINAL:
 				return 97;
+				
 			case TRANSFER_EVA_SAINTS:
 				return 105;
+				
 			case TRANSFER_SHILLIEN_SAINTS:
 				return 112;
+				
 			default:
 				break;
 		}
+		
 		return 0;
 	}
 }

@@ -296,6 +296,7 @@ public class RequestActionUse extends L2GameClientPacket
 					return action;
 				}
 			}
+			
 			return null;
 		}
 	}
@@ -318,17 +319,21 @@ public class RequestActionUse extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		Action action = Action.find(_actionId);
+		
 		if (action == null)
 		{
 			_log.warn("unhandled action type " + _actionId + " by player " + activeChar.getName());
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		final boolean usePet = action.type == PET_ACTION;
 		final boolean useServitor = action.type == SERVITOR_ACTION;
 		final boolean useServitorGroup = action.type == SERVITOR_GROUP_ACTION;
@@ -336,20 +341,24 @@ public class RequestActionUse extends L2GameClientPacket
 		final Summon pet = activeChar.getSummonList().getPet();
 		final Summon servitor = activeChar.getSummonList().getFirstServitor();
 		final List<Summon> servitors = activeChar.getSummonList().getServitors();
+		
 		if (activeChar.isGM() && activeChar.isDebug())
 		{
 			activeChar.sendMessage("ActionId:" + action.id + " useServitor:" + useServitor + " useServitorGroup:" + useServitorGroup);
 		}
+		
 		if (!usePet && !useServitor && !useServitorGroup && (activeChar.isOutOfControl() || activeChar.isActionsDisabled()) && !(activeChar.isFakeDeath() && (_actionId == 0)))
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if ((activeChar.getTransformation() != 0) && (action.transform > 0))
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		switch (action.type)
 		{
 			case PLAYER_ACTION:
@@ -361,12 +370,14 @@ public class RequestActionUse extends L2GameClientPacket
 							activeChar.sendActionFailed();
 							break;
 						}
+						
 						if (activeChar.isFakeDeath())
 						{
 							activeChar.breakFakeDeath();
 							activeChar.updateEffectIcons();
 							break;
 						}
+						
 						if (!activeChar.isSitting())
 						{
 							if ((target != null) && (target instanceof StaticObjectInstance) && (((StaticObjectInstance) target).getType() == 1) && (activeChar.getDistance3D(target) <= Creature.INTERACTION_DISTANCE))
@@ -382,7 +393,9 @@ public class RequestActionUse extends L2GameClientPacket
 						{
 							activeChar.standUp();
 						}
+						
 						break;
+					
 					case 1:
 						if (activeChar.isRunning())
 						{
@@ -392,7 +405,9 @@ public class RequestActionUse extends L2GameClientPacket
 						{
 							activeChar.setRunning();
 						}
+						
 						break;
+					
 					case 10:
 					case 61:
 					{
@@ -401,6 +416,7 @@ public class RequestActionUse extends L2GameClientPacket
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						if (activeChar.isInStoreMode())
 						{
 							activeChar.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
@@ -412,9 +428,11 @@ public class RequestActionUse extends L2GameClientPacket
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						activeChar.sendPacket(new PrivateStoreManageListSell(activeChar, _actionId == 61));
 						break;
 					}
+					
 					case 28:
 					{
 						if (activeChar.getSittingTask())
@@ -422,6 +440,7 @@ public class RequestActionUse extends L2GameClientPacket
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						if (activeChar.isInStoreMode())
 						{
 							activeChar.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
@@ -433,9 +452,11 @@ public class RequestActionUse extends L2GameClientPacket
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						activeChar.sendPacket(new PrivateStoreManageListBuy(activeChar));
 						break;
 					}
+					
 					case 51:
 					{
 						if (activeChar.getSittingTask())
@@ -443,6 +464,7 @@ public class RequestActionUse extends L2GameClientPacket
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						if (activeChar.isInStoreMode())
 						{
 							activeChar.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
@@ -454,9 +476,11 @@ public class RequestActionUse extends L2GameClientPacket
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						activeChar.sendPacket(new RecipeShopManageList(activeChar, true));
 						break;
 					}
+					
 					case 38:
 						if (activeChar.getTransformation() != 0)
 						{
@@ -470,6 +494,7 @@ public class RequestActionUse extends L2GameClientPacket
 								activeChar.sendActionFailed();
 								return;
 							}
+							
 							activeChar.setMount(0, 0, 0);
 						}
 						else if (activeChar.isMounted() || activeChar.isInBoat())
@@ -522,7 +547,9 @@ public class RequestActionUse extends L2GameClientPacket
 							activeChar.setMount(pet.getTemplate().npcId, pet.getObjectId(), pet.getLevel());
 							activeChar.getSummonList().unsummonPet(false);
 						}
+						
 						break;
+					
 					case 37:
 					{
 						if (activeChar.getSittingTask())
@@ -530,6 +557,7 @@ public class RequestActionUse extends L2GameClientPacket
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						if (activeChar.isInStoreMode())
 						{
 							activeChar.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
@@ -541,13 +569,16 @@ public class RequestActionUse extends L2GameClientPacket
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						activeChar.sendPacket(new RecipeShopManageList(activeChar, false));
 						break;
 					}
+					
 					case 67:
 						if (activeChar.isInBoat() && activeChar.getBoat().isClanAirShip() && !activeChar.getBoat().isMoving)
 						{
 							ClanAirShip boat = (ClanAirShip) activeChar.getBoat();
+							
 							if (boat.getDriver() == null)
 							{
 								boat.setDriver(activeChar);
@@ -557,7 +588,9 @@ public class RequestActionUse extends L2GameClientPacket
 								activeChar.sendPacket(SystemMsg.ANOTHER_PLAYER_IS_PROBABLY_CONTROLLING_THE_TARGET);
 							}
 						}
+						
 						break;
+					
 					case 68:
 						if (activeChar.isClanAirShipDriver())
 						{
@@ -565,178 +598,223 @@ public class RequestActionUse extends L2GameClientPacket
 							boat.setDriver(null);
 							activeChar.broadcastCharInfo();
 						}
+						
 						break;
+					
 					case 69:
 						if (activeChar.isClanAirShipDriver() && activeChar.getBoat().isDocked())
 						{
 							activeChar.sendPacket(new ExAirShipTeleportList((ClanAirShip) activeChar.getBoat()));
 						}
+						
 						break;
+					
 					case 70:
 						if (activeChar.isInBoat() && activeChar.getBoat().isAirShip() && activeChar.getBoat().isDocked())
 						{
 							activeChar.getBoat().oustPlayer(activeChar, activeChar.getBoat().getReturnLoc(), true);
 						}
+						
 						break;
+					
 					case 78:
 						TacticalSignManager.setTacticalSign(activeChar, target, 1);
 						break;
+					
 					case 79:
 						TacticalSignManager.setTacticalSign(activeChar, target, 2);
 						break;
+					
 					case 80:
 						TacticalSignManager.setTacticalSign(activeChar, target, 3);
 						break;
+					
 					case 81:
 						TacticalSignManager.setTacticalSign(activeChar, target, 4);
 						break;
+					
 					case 82:
 						TacticalSignManager.getTargetOnTacticalSign(activeChar, 1);
 						break;
+					
 					case 83:
 						TacticalSignManager.getTargetOnTacticalSign(activeChar, 2);
 						break;
+					
 					case 84:
 						TacticalSignManager.getTargetOnTacticalSign(activeChar, 3);
 						break;
+					
 					case 85:
 						TacticalSignManager.getTargetOnTacticalSign(activeChar, 4);
 						break;
+					
 					case 90:
 						activeChar.sendPacket(new ExInzoneWaitingInfo(activeChar));
 						break;
+					
 					default:
 						_log.info("Player action: " + action.id + " - not done.");
 						break;
 				}
+				
 				break;
+			
 			case PET_ACTION:
 				if ((pet == null) || pet.isOutOfControl())
 				{
 					activeChar.sendActionFailed();
 					return;
 				}
+				
 				if (pet.isDepressed())
 				{
 					activeChar.sendPacket(SystemMsg.YOUR_PETSERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
 					return;
 				}
+				
 				switch (action.id)
 				{
 					case 15:
 						pet.setFollowMode(!pet.isFollowMode());
 						break;
+					
 					case 16:
 						pet.setFollowMode(!pet.isFollowMode());
+						
 						if ((target == null) || !target.isCreature() || (pet == target) || pet.isDead())
 						{
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						if (activeChar.isInOlympiadMode() && !activeChar.isOlympiadCompStart())
 						{
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						if (pet.getTemplate().getNpcId() == PetDataTable.SIN_EATER_ID)
 						{
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						if (!_ctrlPressed && target.isCreature() && !((Creature) target).isAutoAttackable(pet))
 						{
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						if (_ctrlPressed && !target.isAttackable(pet))
 						{
 							activeChar.sendPacket(SystemMsg.INVALID_TARGET);
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						if (!target.isMonster() && (pet.isInZonePeace() || (target.isCreature() && ((Creature) target).isInZonePeace())))
 						{
 							activeChar.sendPacket(SystemMsg.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						if ((activeChar.getLevel() + 20) <= pet.getLevel())
 						{
 							activeChar.sendPacket(SystemMsg.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL);
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						pet.getAI().Attack(target, _ctrlPressed, _shiftPressed);
 						break;
+					
 					case 17:
 						pet.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 						break;
+					
 					case 19:
 						if (pet.isDead())
 						{
 							activeChar.sendPacket(SystemMsg.DEAD_PETS_CANNOT_BE_RETURNED_TO_THEIR_SUMMONING_ITEM, ActionFail.STATIC);
 							return;
 						}
+						
 						if (pet.isInCombat())
 						{
 							activeChar.sendPacket(SystemMsg.A_PET_CANNOT_BE_UNSUMMONED_DURING_BATTLE, ActionFail.STATIC);
 							return;
 						}
+						
 						if (!PetDataTable.isVitaminPet(pet.getNpcId()) && pet.isPet() && (pet.getCurrentFed() < (0.55 * pet.getMaxFed())))
 						{
 							activeChar.sendPacket(SystemMsg.YOU_MAY_NOT_RESTORE_A_HUNGRY_PET, ActionFail.STATIC);
 							return;
 						}
+						
 						activeChar.getSummonList().unsummonPet(false);
 						break;
+					
 					case 54:
 						if ((target != null) && (pet != target) && !pet.isMovementDisabled())
 						{
 							pet.setFollowMode(false);
 							pet.moveToLocation(target.getLoc(), 100, true);
 						}
+						
 						break;
+					
 					case 1070:
 						if (pet instanceof PetBabyInstance)
 						{
 							((PetBabyInstance) pet).triggerBuff();
 						}
+						
 						break;
 				}
+				
 				if (action.value > 0)
 				{
 					UseSkill(action.value, pet);
 					activeChar.sendActionFailed();
 					return;
 				}
+				
 				break;
+			
 			case SERVITOR_ACTION:
 				if (servitor == null)
 				{
 					activeChar.sendActionFailed();
 					return;
 				}
+				
 				switch (action.id)
 				{
 					case 21:
 						servitor.setFollowMode(!servitor.isFollowMode());
 						break;
+					
 					case 22:
 						if ((target == null) || !target.isCreature())
 						{
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						if ((servitor == target) || servitor.isDead())
 						{
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						if (activeChar.isInOlympiadMode() && !activeChar.isOlympiadCompStart())
 						{
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						if (_ctrlPressed)
 						{
 							if (!target.isAttackable(servitor))
@@ -754,6 +832,7 @@ public class RequestActionUse extends L2GameClientPacket
 								return;
 							}
 						}
+						
 						if (!target.isMonster() && (target.isCreature() && ((Creature) target).isInZonePeace()))
 						{
 							if (servitor.isInZonePeace())
@@ -763,12 +842,15 @@ public class RequestActionUse extends L2GameClientPacket
 								return;
 							}
 						}
+						
 						servitor.setFollowMode(!servitor.isFollowMode());
 						servitor.getAI().Attack(target, _ctrlPressed, _shiftPressed);
 						break;
+					
 					case 23:
 						servitor.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 						break;
+					
 					case 52:
 						if (servitor.isInCombat())
 						{
@@ -780,21 +862,27 @@ public class RequestActionUse extends L2GameClientPacket
 							servitor.saveEffects();
 							activeChar.getSummonList().unsummonAllServitors();
 						}
+						
 						break;
+					
 					case 53:
 						if ((target != null) && (servitor != target) && !servitor.isMovementDisabled())
 						{
 							servitor.setFollowMode(false);
 							servitor.moveToLocation(target.getLoc(), 100, true);
 						}
+						
 						break;
+					
 					case 1000:
 						if ((target != null) && !target.isDoor())
 						{
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						break;
+					
 					case 1039:
 					case 1040:
 						if (target.isDoor() || (target instanceof SiegeFlagInstance))
@@ -802,21 +890,26 @@ public class RequestActionUse extends L2GameClientPacket
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						break;
 				}
+				
 				if (action.value > 0)
 				{
 					UseSkill(action.value, servitor);
 					activeChar.sendActionFailed();
 					return;
 				}
+				
 				break;
+			
 			case SERVITOR_GROUP_ACTION:
 				if (servitors.isEmpty())
 				{
 					activeChar.sendActionFailed();
 					return;
 				}
+				
 				switch (action.id)
 				{
 					case 1099: // Attack
@@ -825,16 +918,19 @@ public class RequestActionUse extends L2GameClientPacket
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						if (activeChar.isInOlympiadMode() && !activeChar.isOlympiadCompStart())
 						{
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						if (servitors.contains(target))
 						{
 							activeChar.sendActionFailed();
 							return;
 						}
+						
 						for (Summon summon : servitors)
 						{
 							if (_ctrlPressed)
@@ -854,6 +950,7 @@ public class RequestActionUse extends L2GameClientPacket
 									return;
 								}
 							}
+							
 							if (!target.isMonster() && (target.isCreature() && ((Creature) target).isInZonePeace()))
 							{
 								if (summon.isInZonePeace())
@@ -864,6 +961,7 @@ public class RequestActionUse extends L2GameClientPacket
 								}
 							}
 						}
+						
 						for (Summon summon : servitors)
 						{
 							if (!summon.isDead())
@@ -872,7 +970,9 @@ public class RequestActionUse extends L2GameClientPacket
 								summon.getAI().Attack(target, _ctrlPressed, _shiftPressed);
 							}
 						}
+						
 						break;
+					
 					case 1100: // Move
 						if ((target != null) && !servitors.contains(target))
 						{
@@ -885,13 +985,17 @@ public class RequestActionUse extends L2GameClientPacket
 								}
 							}
 						}
+						
 						break;
+					
 					case 1101: // Pause
 						for (Summon summon : servitors)
 						{
 							summon.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 						}
+						
 						break;
+					
 					case 1102: // Cancel the Summoning
 						if (activeChar.getSummonList().isInCombat())
 						{
@@ -902,93 +1006,117 @@ public class RequestActionUse extends L2GameClientPacket
 						{
 							activeChar.getSummonList().unsummonAllServitors();
 						}
+						
 						break;
+					
 					case 1103: // Passive
 						for (Summon summon : servitors)
 						{
 							summon.setDefendMode(false);
 						}
+						
 						break;
+					
 					case 1104: // Defend
 						for (Summon summon : servitors)
 						{
 							summon.setDefendMode(true);
 						}
+						
 						break;
 				}
+				
 				if (action.value > 0)
 				{
 					UseSkill(action.value, servitors.toArray(new Summon[servitors.size()]));
 					activeChar.sendActionFailed();
 					return;
 				}
+				
 				break;
+			
 			case SOCIAL_ACTION:
 				if (activeChar.isOutOfControl() || (activeChar.getTransformation() != 0) || activeChar.isActionsDisabled() || activeChar.isSitting() || (activeChar.getPrivateStoreType() != Player.STORE_PRIVATE_NONE) || activeChar.isProcessingRequest())
 				{
 					activeChar.sendActionFailed();
 					return;
 				}
+				
 				if (activeChar.isFishing())
 				{
 					activeChar.sendPacket(SystemMsg.YOU_CANNOT_DO_THAT_WHILE_FISHING_2);
 					activeChar.sendActionFailed();
 					return;
 				}
+				
 				activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), action.value));
+				
 				for (QuestState state : activeChar.getAllQuestsStates())
 				{
 					state.getQuest().notifySocialActionUse(state, action.value);
 				}
+				
 				if (Config.ALT_SOCIAL_ACTION_REUSE)
 				{
 					ThreadPoolManager.getInstance().schedule(new SocialTask(activeChar), 2600);
 					activeChar.startParalyzed();
 				}
+				
 				activeChar.getListeners().onSocialAction(action); // DynamicQuest
 				break;
+			
 			case COUPLE_ACTION:
 				if (activeChar.isOutOfControl() || activeChar.isActionsDisabled() || activeChar.isSitting())
 				{
 					activeChar.sendActionFailed();
 					return;
 				}
+				
 				if ((target == null) || !target.isPlayer())
 				{
 					activeChar.sendActionFailed();
 					return;
 				}
+				
 				final Player pcTarget = target.getPlayer();
+				
 				if (pcTarget.isProcessingRequest() && pcTarget.getRequest().isTypeOf(L2RequestType.COUPLE_ACTION))
 				{
 					activeChar.sendPacket(new SystemMessage2(SystemMsg.C1_IS_ALREADY_PARTICIPATING_IN_A_COUPLE_ACTION_AND_CANNOT_BE_REQUESTED_FOR_ANOTHER_COUPLE_ACTION).addName(pcTarget));
 					return;
 				}
+				
 				if (pcTarget.isProcessingRequest())
 				{
 					activeChar.sendPacket(new SystemMessage2(SystemMsg.C1_IS_ON_ANOTHER_TASK).addName(pcTarget));
 					return;
 				}
+				
 				if (!activeChar.isInRange(pcTarget, 300) || activeChar.isInRange(pcTarget, 25) || (activeChar.getTargetId() == activeChar.getObjectId()) || !GeoEngine.canSeeTarget(activeChar, pcTarget, false))
 				{
 					activeChar.sendPacket(SystemMsg.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);
 					return;
 				}
+				
 				if (!activeChar.checkCoupleAction(pcTarget))
 				{
 					activeChar.sendActionFailed();
 					return;
 				}
+				
 				new Request(L2RequestType.COUPLE_ACTION, activeChar, pcTarget).setTimeout(10000L);
 				activeChar.sendPacket(new SystemMessage2(SystemMsg.YOU_HAVE_REQUESTED_A_COUPLE_ACTION_WITH_C1).addName(pcTarget));
 				pcTarget.sendPacket(new ExAskCoupleAction(activeChar.getObjectId(), action.value));
+				
 				if (Config.ALT_SOCIAL_ACTION_REUSE)
 				{
 					ThreadPoolManager.getInstance().schedule(new SocialTask(activeChar), 2600);
 					activeChar.startParalyzed();
 				}
+				
 				break;
 		}
+		
 		activeChar.sendActionFailed();
 	}
 	
@@ -1000,10 +1128,12 @@ public class RequestActionUse extends L2GameClientPacket
 	private void UseSkill(int skillId, Summon... casters)
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (casters.length == 0)
 		{
 			return;
 		}
+		
 		for (Summon summon : casters)
 		{
 			if (summon.isPet() && ((activeChar.getLevel() + 20) <= summon.getLevel()))
@@ -1011,13 +1141,17 @@ public class RequestActionUse extends L2GameClientPacket
 				activeChar.sendPacket(SystemMsg.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL);
 				continue;
 			}
+			
 			int skillLevel = PetSkillsTable.getInstance().getAvailableLevel(summon, skillId);
 			Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
+			
 			if (skill == null)
 			{
 				continue;
 			}
+			
 			Creature aimingTarget = skill.getAimingTarget(summon, activeChar.getTarget());
+			
 			if (skill.checkCondition(summon, aimingTarget, _ctrlPressed, _shiftPressed, true))
 			{
 				summon.getAI().Cast(skill, aimingTarget, _ctrlPressed, _shiftPressed);

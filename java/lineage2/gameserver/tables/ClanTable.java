@@ -74,6 +74,7 @@ public class ClanTable
 		{
 			new ClanTable();
 		}
+		
 		return _instance;
 	}
 	
@@ -117,6 +118,7 @@ public class ClanTable
 		{
 			return null;
 		}
+		
 		return _clans.get(clanId);
 	}
 	
@@ -142,6 +144,7 @@ public class ClanTable
 		{
 			return null;
 		}
+		
 		for (Clan clan : getClans())
 		{
 			if ((clan != null) && clan.isAnyMember(charId))
@@ -149,6 +152,7 @@ public class ClanTable
 				return clan;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -163,6 +167,7 @@ public class ClanTable
 		{
 			return null;
 		}
+		
 		return _alliances.get(allyId);
 	}
 	
@@ -177,6 +182,7 @@ public class ClanTable
 		{
 			return null;
 		}
+		
 		Clan charClan = getClanByCharId(charId);
 		return charClan == null ? null : charClan.getAlliance();
 	}
@@ -202,11 +208,13 @@ public class ClanTable
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet result = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT clan_id FROM clan_data");
 			result = statement.executeQuery();
+			
 			while (result.next())
 			{
 				clanIds.add(result.getInt("clan_id"));
@@ -220,24 +228,29 @@ public class ClanTable
 		{
 			DbUtils.closeQuietly(con, statement, result);
 		}
+		
 		for (int clanId : clanIds)
 		{
 			Clan clan = Clan.restore(clanId);
+			
 			if (clan == null)
 			{
 				_log.warn("Error while restoring clanId: " + clanId);
 				continue;
 			}
+			
 			if (clan.getAllSize() <= 0)
 			{
 				_log.warn("membersCount = 0 for clanId: " + clanId);
 				continue;
 			}
+			
 			if (clan.getLeader() == null)
 			{
 				_log.warn("Not found leader for clanId: " + clanId);
 				continue;
 			}
+			
 			_clans.put(clan.getClanId(), clan);
 		}
 	}
@@ -251,11 +264,13 @@ public class ClanTable
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet result = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT ally_id FROM ally_data");
 			result = statement.executeQuery();
+			
 			while (result.next())
 			{
 				allyIds.add(result.getInt("ally_id"));
@@ -269,19 +284,23 @@ public class ClanTable
 		{
 			DbUtils.closeQuietly(con, statement, result);
 		}
+		
 		for (int allyId : allyIds)
 		{
 			Alliance ally = new Alliance(allyId);
+			
 			if (ally.getMembersCount() <= 0)
 			{
 				_log.warn("membersCount = 0 for allyId: " + allyId);
 				continue;
 			}
+			
 			if (ally.getLeader() == null)
 			{
 				_log.warn("Not found leader for allyId: " + allyId);
 				continue;
 			}
+			
 			_alliances.put(ally.getAllyId(), ally);
 		}
 	}
@@ -297,6 +316,7 @@ public class ClanTable
 		{
 			return null;
 		}
+		
 		for (Clan clan : _clans.values())
 		{
 			if (clan.getName().equalsIgnoreCase(clanName))
@@ -304,6 +324,7 @@ public class ClanTable
 				return clan;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -318,6 +339,7 @@ public class ClanTable
 		{
 			return null;
 		}
+		
 		for (Alliance ally : _alliances.values())
 		{
 			if (ally.getAllyName().equalsIgnoreCase(allyName))
@@ -325,6 +347,7 @@ public class ClanTable
 				return ally;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -352,6 +375,7 @@ public class ClanTable
 			_clans.put(clan.getClanId(), clan);
 			return clan;
 		}
+		
 		return null;
 	}
 	
@@ -364,6 +388,7 @@ public class ClanTable
 		Clan clan = player.getClan();
 		long curtime = System.currentTimeMillis();
 		SiegeUtils.removeSiegeSkills(player);
+		
 		for (Player clanMember : clan.getOnlineMembers(0))
 		{
 			clanMember.setClan(null);
@@ -372,6 +397,7 @@ public class ClanTable
 			clanMember.broadcastCharInfo();
 			clanMember.setLeaveClanTime(curtime);
 		}
+		
 		clan.flush();
 		deleteClanFromDb(clan.getClanId());
 		_clans.remove(clan.getClanId());
@@ -388,6 +414,7 @@ public class ClanTable
 		long curtime = System.currentTimeMillis();
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -431,6 +458,7 @@ public class ClanTable
 	public Alliance createAlliance(Player player, String allyName)
 	{
 		Alliance alliance = null;
+		
 		if (getAllyByName(allyName) == null)
 		{
 			Clan leader = player.getClan();
@@ -438,11 +466,13 @@ public class ClanTable
 			alliance.store();
 			_alliances.put(alliance.getAllyId(), alliance);
 			player.getClan().setAllyId(alliance.getAllyId());
+			
 			for (Player temp : player.getClan().getOnlineMembers(0))
 			{
 				temp.broadcastCharInfo();
 			}
 		}
+		
 		return alliance;
 	}
 	
@@ -453,6 +483,7 @@ public class ClanTable
 	public void dissolveAlly(Player player)
 	{
 		int allyId = player.getAllyId();
+		
 		for (Clan member : player.getAlliance().getMembers())
 		{
 			member.setAllyId(0);
@@ -460,6 +491,7 @@ public class ClanTable
 			member.broadcastToOnlineMembers(Msg.YOU_HAVE_WITHDRAWN_FROM_THE_ALLIANCE);
 			member.setLeavedAlly();
 		}
+		
 		deleteAllyFromDb(allyId);
 		_alliances.remove(allyId);
 		player.sendPacket(Msg.THE_ALLIANCE_HAS_BEEN_DISSOLVED);
@@ -474,6 +506,7 @@ public class ClanTable
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -508,6 +541,7 @@ public class ClanTable
 		clan2.broadcastClanStatus(false, false, true);
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -541,6 +575,7 @@ public class ClanTable
 		clan2.broadcastClanStatus(false, false, true);
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -569,6 +604,7 @@ public class ClanTable
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -576,10 +612,12 @@ public class ClanTable
 			rset = statement.executeQuery();
 			Clan clan1;
 			Clan clan2;
+			
 			while (rset.next())
 			{
 				clan1 = getClan(rset.getInt("clan1"));
 				clan2 = getClan(rset.getInt("clan2"));
+				
 				if ((clan1 != null) && (clan2 != null))
 				{
 					clan1.setEnemyClan(clan2);

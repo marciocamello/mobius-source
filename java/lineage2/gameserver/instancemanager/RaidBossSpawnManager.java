@@ -99,6 +99,7 @@ public class RaidBossSpawnManager
 	private RaidBossSpawnManager()
 	{
 		_instance = this;
+		
 		if (!Config.DONTLOADSPAWN)
 		{
 			reloadBosses();
@@ -137,6 +138,7 @@ public class RaidBossSpawnManager
 		{
 			new RaidBossSpawnManager();
 		}
+		
 		return _instance;
 	}
 	
@@ -149,10 +151,12 @@ public class RaidBossSpawnManager
 		Connection con = null;
 		Statement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			rset = con.createStatement().executeQuery("SELECT * FROM `raidboss_status`");
+			
 			while (rset.next())
 			{
 				int id = rset.getInt("id");
@@ -192,20 +196,26 @@ public class RaidBossSpawnManager
 	private void updateStatusDb(int id)
 	{
 		Spawner spawner = _spawntable.get(id);
+		
 		if (spawner == null)
 		{
 			return;
 		}
+		
 		StatsSet info = _storedInfo.get(id);
+		
 		if (info == null)
 		{
 			_storedInfo.put(id, info = new StatsSet());
 		}
+		
 		NpcInstance raidboss = spawner.getFirstSpawned();
+		
 		if (raidboss instanceof ReflectionBossInstance)
 		{
 			return;
 		}
+		
 		if (raidboss != null)
 		{
 			info.set("current_hp", raidboss.getCurrentHp());
@@ -218,8 +228,10 @@ public class RaidBossSpawnManager
 			info.set("current_mp", 0);
 			info.set("respawn_delay", spawner.getRespawnTime());
 		}
+		
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -251,8 +263,10 @@ public class RaidBossSpawnManager
 		{
 			return;
 		}
+		
 		_spawntable.put(npcId, spawnDat);
 		StatsSet info = _storedInfo.get(npcId);
+		
 		if (info != null)
 		{
 			spawnDat.setRespawnTime(info.getInteger("respawn_delay", 0));
@@ -266,16 +280,20 @@ public class RaidBossSpawnManager
 	public void onBossSpawned(RaidBossInstance raidboss)
 	{
 		int bossId = raidboss.getNpcId();
+		
 		if (!_spawntable.containsKey(bossId))
 		{
 			return;
 		}
+		
 		StatsSet info = _storedInfo.get(bossId);
+		
 		if ((info != null) && (info.getDouble("current_hp") > 1))
 		{
 			raidboss.setCurrentHp(info.getDouble("current_hp"), false);
 			raidboss.setCurrentMp(info.getDouble("current_mp"));
 		}
+		
 		GmListTable.broadcastMessageToGMs("Spawning RaidBoss " + raidboss.getName());
 	}
 	
@@ -296,10 +314,12 @@ public class RaidBossSpawnManager
 	public Status getRaidBossStatusId(int bossId)
 	{
 		Spawner spawner = _spawntable.get(bossId);
+		
 		if (spawner == null)
 		{
 			return Status.UNDEFINED;
 		}
+		
 		NpcInstance npc = spawner.getFirstSpawned();
 		return npc == null ? Status.DEAD : Status.ALIVE;
 	}
@@ -346,6 +366,7 @@ public class RaidBossSpawnManager
 		Connection con = null;
 		Statement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -353,6 +374,7 @@ public class RaidBossSpawnManager
 			rset = statement.executeQuery("SELECT owner_id, boss_id, points FROM `raidboss_points` ORDER BY owner_id ASC");
 			int currentOwner = 0;
 			Map<Integer, Integer> score = null;
+			
 			while (rset.next())
 			{
 				if (currentOwner != rset.getInt("owner_id"))
@@ -361,6 +383,7 @@ public class RaidBossSpawnManager
 					score = new HashMap<>();
 					_points.put(currentOwner, score);
 				}
+				
 				assert score != null;
 				int bossId = rset.getInt("boss_id");
 				NpcTemplate template = NpcHolder.getInstance().getTemplate(bossId);
@@ -389,36 +412,44 @@ public class RaidBossSpawnManager
 	public void updatePointsDb()
 	{
 		pointsLock.lock();
+		
 		if (!mysql.set("DELETE FROM `raidboss_points`"))
 		{
 			_log.warn("RaidBossSpawnManager: Couldnt empty raidboss_points table");
 		}
+		
 		if (_points.isEmpty())
 		{
 			pointsLock.unlock();
 			return;
 		}
+		
 		Connection con = null;
 		Statement statement = null;
 		StringBuilder sb;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.createStatement();
 			SqlBatch b = new SqlBatch("INSERT INTO `raidboss_points` (owner_id, boss_id, points) VALUES");
+			
 			for (Map.Entry<Integer, Map<Integer, Integer>> pointEntry : _points.entrySet())
 			{
 				Map<Integer, Integer> tmpPoint = pointEntry.getValue();
+				
 				if ((tmpPoint == null) || tmpPoint.isEmpty())
 				{
 					continue;
 				}
+				
 				for (Map.Entry<Integer, Integer> pointListEntry : tmpPoint.entrySet())
 				{
 					if (KEY_RANK.equals(pointListEntry.getKey()) || KEY_TOTAL_POINTS.equals(pointListEntry.getKey()) || (pointListEntry.getValue() == null) || (pointListEntry.getValue() == 0))
 					{
 						continue;
 					}
+					
 					sb = new StringBuilder("(");
 					sb.append(pointEntry.getKey()).append(',');
 					sb.append(pointListEntry.getKey()).append(',');
@@ -426,6 +457,7 @@ public class RaidBossSpawnManager
 					b.write(sb.toString());
 				}
 			}
+			
 			if (!b.isEmpty())
 			{
 				statement.executeUpdate(b.close());
@@ -454,13 +486,16 @@ public class RaidBossSpawnManager
 		{
 			return;
 		}
+		
 		pointsLock.lock();
 		Map<Integer, Integer> pointsTable = _points.get(ownerId);
+		
 		if (pointsTable == null)
 		{
 			pointsTable = new HashMap<>();
 			_points.put(ownerId, pointsTable);
 		}
+		
 		if (pointsTable.isEmpty())
 		{
 			pointsTable.put(bossId, points);
@@ -470,6 +505,7 @@ public class RaidBossSpawnManager
 			Integer currentPoins = pointsTable.get(bossId);
 			pointsTable.put(bossId, currentPoins == null ? points : currentPoins + points);
 		}
+		
 		pointsLock.unlock();
 	}
 	
@@ -481,29 +517,35 @@ public class RaidBossSpawnManager
 	{
 		TreeMap<Integer, Integer> tmpRanking = new TreeMap<>();
 		pointsLock.lock();
+		
 		for (Map.Entry<Integer, Map<Integer, Integer>> point : _points.entrySet())
 		{
 			Map<Integer, Integer> tmpPoint = point.getValue();
 			tmpPoint.remove(KEY_RANK);
 			tmpPoint.remove(KEY_TOTAL_POINTS);
 			int totalPoints = 0;
+			
 			for (Entry<Integer, Integer> e : tmpPoint.entrySet())
 			{
 				totalPoints += e.getValue();
 			}
+			
 			if (totalPoints != 0)
 			{
 				tmpPoint.put(KEY_TOTAL_POINTS, totalPoints);
 				tmpRanking.put(totalPoints, point.getKey());
 			}
 		}
+		
 		int ranking = 1;
+		
 		for (Entry<Integer, Integer> entry : tmpRanking.descendingMap().entrySet())
 		{
 			Map<Integer, Integer> tmpPoint = _points.get(entry.getValue());
 			tmpPoint.put(KEY_RANK, ranking);
 			ranking++;
 		}
+		
 		pointsLock.unlock();
 		return tmpRanking;
 	}
@@ -517,10 +559,12 @@ public class RaidBossSpawnManager
 		TreeMap<Integer, Integer> ranking = calculateRanking();
 		Iterator<Integer> e = ranking.descendingMap().values().iterator();
 		int counter = 1;
+		
 		while (e.hasNext() && (counter <= 100))
 		{
 			int reward = 0;
 			int playerId = e.next();
+			
 			if (counter == 1)
 			{
 				reward = 2500;
@@ -569,8 +613,10 @@ public class RaidBossSpawnManager
 			{
 				reward = 25;
 			}
+			
 			Player player = GameObjectsStorage.getPlayer(playerId);
 			Clan clan = null;
+			
 			if (player != null)
 			{
 				clan = player.getClan();
@@ -579,12 +625,15 @@ public class RaidBossSpawnManager
 			{
 				clan = ClanTable.getInstance().getClan(mysql.simple_get_int("clanid", "characters", "obj_Id=" + playerId));
 			}
+			
 			if (clan != null)
 			{
 				clan.incReputation(reward, true, "RaidPoints");
 			}
+			
 			counter++;
 		}
+		
 		_points.clear();
 		updatePointsDb();
 		pointsLock.unlock();

@@ -31,7 +31,6 @@ public class SwoopCannon extends DefaultAI
 	protected void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		
 		addTimer(1, 1000 + Rnd.get(500));
 	}
 	
@@ -46,6 +45,7 @@ public class SwoopCannon extends DefaultAI
 			{
 				return;
 			}
+			
 			Skill skill = SkillTable.getInstance().getInfo(SKILL_ID, 1);
 			addTaskBuff(getActor(), skill);
 			addTimer(1, skill.getHitTime() + 10000);

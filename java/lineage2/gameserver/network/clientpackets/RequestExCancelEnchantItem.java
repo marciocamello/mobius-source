@@ -36,6 +36,7 @@ public class RequestExCancelEnchantItem extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar != null)
 		{
 			activeChar.setEnchantScroll(null);

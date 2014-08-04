@@ -44,6 +44,7 @@ public class Recipes extends ScriptItemHandler
 		final Collection<RecipeTemplate> rc = RecipeHolder.getInstance().getRecipes();
 		_itemIds = new int[rc.size()];
 		int i = 0;
+		
 		for (RecipeTemplate r : rc)
 		{
 			_itemIds[i++] = r.getItemId();
@@ -64,8 +65,10 @@ public class Recipes extends ScriptItemHandler
 		{
 			return false;
 		}
+		
 		final Player player = (Player) playable;
 		final RecipeTemplate rp = RecipeHolder.getInstance().getRecipeByRecipeItem(item.getItemId());
+		
 		if (rp.isDwarven())
 		{
 			if (player.getDwarvenRecipeLimit() > 0)
@@ -75,26 +78,31 @@ public class Recipes extends ScriptItemHandler
 					player.sendPacket(Msg.NO_FURTHER_RECIPES_MAY_BE_REGISTERED);
 					return false;
 				}
+				
 				if (rp.getLevel() > player.getSkillLevel(Skill.SKILL_CRAFTING))
 				{
 					player.sendPacket(Msg.CREATE_ITEM_LEVEL_IS_TOO_LOW_TO_REGISTER_THIS_RECIPE);
 					return false;
 				}
+				
 				if (player.hasRecipe(rp))
 				{
 					player.sendPacket(Msg.THAT_RECIPE_IS_ALREADY_REGISTERED);
 					return false;
 				}
+				
 				if (!player.getInventory().destroyItem(item, 1L))
 				{
 					player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
 					return false;
 				}
+				
 				player.registerRecipe(rp, true);
 				player.sendPacket(new SystemMessage(SystemMessage.S1_HAS_BEEN_ADDED).addItemName(item.getItemId()));
 				player.sendPacket(new RecipeBookItemList(player, true));
 				return true;
 			}
+			
 			player.sendPacket(Msg.YOU_ARE_NOT_AUTHORIZED_TO_REGISTER_A_RECIPE);
 		}
 		else if (player.getCommonRecipeLimit() > 0)
@@ -104,16 +112,19 @@ public class Recipes extends ScriptItemHandler
 				player.sendPacket(Msg.NO_FURTHER_RECIPES_MAY_BE_REGISTERED);
 				return false;
 			}
+			
 			if (player.hasRecipe(rp))
 			{
 				player.sendPacket(Msg.THAT_RECIPE_IS_ALREADY_REGISTERED);
 				return false;
 			}
+			
 			if (!player.getInventory().destroyItem(item, 1L))
 			{
 				player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
 				return false;
 			}
+			
 			player.registerRecipe(rp, true);
 			player.sendPacket(new SystemMessage(SystemMessage.S1_HAS_BEEN_ADDED).addItemName(item.getItemId()));
 			player.sendPacket(new RecipeBookItemList(player, false));
@@ -123,6 +134,7 @@ public class Recipes extends ScriptItemHandler
 		{
 			player.sendPacket(Msg.YOU_ARE_NOT_AUTHORIZED_TO_REGISTER_A_RECIPE);
 		}
+		
 		return false;
 	}
 	

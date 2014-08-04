@@ -34,7 +34,9 @@ public class TacticalSignManager
 		{
 			return;
 		}
+		
 		player.getParty().getTacticalSignsList().put(signId, target);
+		
 		for (Player partyChar : player.getParty())
 		{
 			partyChar.sendPacket(new ExTacticalSign(target.getObjectId(), signId));
@@ -73,6 +75,7 @@ public class TacticalSignManager
 				}
 			}
 		}
+		
 		return 0;
 	}
 	

@@ -55,28 +55,35 @@ public class RequestAnswerJoinParty extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		Request request = activeChar.getRequest();
+		
 		if ((request == null) || !request.isTypeOf(L2RequestType.PARTY))
 		{
 			return;
 		}
+		
 		if (!request.isInProgress())
 		{
 			request.cancel();
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (activeChar.isOutOfControl())
 		{
 			request.cancel();
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		Player requestor = request.getRequestor();
+		
 		if (requestor == null)
 		{
 			request.cancel();
@@ -84,18 +91,21 @@ public class RequestAnswerJoinParty extends L2GameClientPacket
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (requestor.getRequest() != request)
 		{
 			request.cancel();
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (_response <= 0)
 		{
 			request.cancel();
 			requestor.sendPacket(JoinParty.FAIL);
 			return;
 		}
+		
 		if (activeChar.isInOlympiadMode())
 		{
 			request.cancel();
@@ -103,13 +113,16 @@ public class RequestAnswerJoinParty extends L2GameClientPacket
 			requestor.sendPacket(JoinParty.FAIL);
 			return;
 		}
+		
 		if (requestor.isInOlympiadMode())
 		{
 			request.cancel();
 			requestor.sendPacket(JoinParty.FAIL);
 			return;
 		}
+		
 		Party party = requestor.getParty();
+		
 		if ((party != null) && (party.getMemberCount() >= Party.MAX_SIZE))
 		{
 			request.cancel();
@@ -118,7 +131,9 @@ public class RequestAnswerJoinParty extends L2GameClientPacket
 			requestor.sendPacket(JoinParty.FAIL);
 			return;
 		}
+		
 		IStaticPacket problem = activeChar.canJoinParty(requestor);
+		
 		if (problem != null)
 		{
 			request.cancel();
@@ -126,11 +141,13 @@ public class RequestAnswerJoinParty extends L2GameClientPacket
 			requestor.sendPacket(JoinParty.FAIL);
 			return;
 		}
+		
 		if (party == null)
 		{
 			int itemDistribution = request.getInteger("itemDistribution");
 			requestor.setParty(party = new Party(requestor, itemDistribution));
 		}
+		
 		try
 		{
 			activeChar.joinParty(party);

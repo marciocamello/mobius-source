@@ -68,6 +68,7 @@ public class _382_KailsMagicCoin extends Quest implements ScriptFile
 	{
 		super(false);
 		addStartNpc(VERGARA);
+		
 		for (int mobId : MOBS.keySet())
 		{
 			addKillId(mobId);
@@ -78,6 +79,7 @@ public class _382_KailsMagicCoin extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("head_blacksmith_vergara_q0382_03.htm"))
 		{
 			if ((st.getPlayer().getLevel() >= 55) && (st.getQuestItemsCount(ROYAL_MEMBERSHIP) > 0))
@@ -97,6 +99,7 @@ public class _382_KailsMagicCoin extends Quest implements ScriptFile
 			MultiSellHolder.getInstance().SeparateAndSend(382, st.getPlayer(), 0);
 			htmltext = null;
 		}
+		
 		return htmltext;
 	}
 	
@@ -105,6 +108,7 @@ public class _382_KailsMagicCoin extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if ((st.getQuestItemsCount(ROYAL_MEMBERSHIP) == 0) || (st.getPlayer().getLevel() < 55))
 		{
 			htmltext = "head_blacksmith_vergara_q0382_01.htm";
@@ -118,6 +122,7 @@ public class _382_KailsMagicCoin extends Quest implements ScriptFile
 		{
 			htmltext = "head_blacksmith_vergara_q0382_04.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -128,6 +133,7 @@ public class _382_KailsMagicCoin extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		int[] droplist = MOBS.get(npc.getNpcId());
 		st.rollAndGive(droplist[Rnd.get(droplist.length)], 1, 10);
 		return null;

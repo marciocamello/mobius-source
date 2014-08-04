@@ -74,6 +74,7 @@ public class SummonItem extends Skill
 		{
 			return;
 		}
+		
 		for (Creature target : targets)
 		{
 			if (target != null)

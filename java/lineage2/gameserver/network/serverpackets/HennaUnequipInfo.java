@@ -36,16 +36,13 @@ public class HennaUnequipInfo extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		
 		writeC(0xE7);
 		writeD(_henna.getSymbolId()); // symbol Id
 		writeD(_henna.getDyeId()); // item id of dye
-		
 		writeQ(_henna.getDrawCount());
 		writeQ(_henna.getPrice());
 		writeD(1); // able to draw or not 0 is false and 1 is true
 		writeQ(_adena);
-		
 		writeD(_int); // current INT
 		writeC(_int + _henna.getStatINT()); // equip INT
 		writeD(_str); // current STR

@@ -43,25 +43,30 @@ public class RequestAcceptWaitingSubstitute extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (willJoin)
 		{
 			if (activeChar.getParty() == null)
 			{
 				FindPartyManager.getInstance().removeLookingForParty(activeChar);
 			}
+			
 			if (activeChar.getPlayerForChange() != null)
 			{
 				Player player = activeChar.getPlayerForChange();
 				FindPartyManager.getInstance().removeChangeThisPlayer(player);
+				
 				if (player.getParty() != null)
 				{
 					activeChar.joinParty(player.getParty());
 					player.getParty().removePartyMember(player, false);
 					activeChar.setPlayerForChange(null);
 					Player leader = activeChar.getParty().getPartyLeader();
+					
 					if (leader != null)
 					{
 						activeChar.teleToLocation(leader.getX(), leader.getY(), leader.getZ());
+						
 						for (Player member : activeChar.getParty().getPartyMembers())
 						{
 							SkillTable.getInstance().getInfo(14534, 1).getEffects(member, member, true, true);

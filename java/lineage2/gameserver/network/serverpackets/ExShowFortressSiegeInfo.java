@@ -27,9 +27,9 @@ public class ExShowFortressSiegeInfo extends L2GameServerPacket
 	public ExShowFortressSiegeInfo(Fortress fortress)
 	{
 		_fortressId = fortress.getId();
-		
 		FortressSiegeEvent siegeEvent = fortress.getSiegeEvent();
 		_commandersMax = siegeEvent.getBarrackStatus().length;
+		
 		if (fortress.getSiegeEvent().isInProgress())
 		{
 			for (int i = 0; i < _commandersMax; i++)

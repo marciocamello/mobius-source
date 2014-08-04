@@ -26,16 +26,17 @@ public class ExBR_BroadcastEventState extends L2GameServerPacket
 	
 	public static final int APRIL_FOOLS = 20090401;
 	public static final int EVAS_INFERNO = 20090801; // event state (0 - hide, 1
-														// - show), day (1-14),
-														// percent (0-100)
+	// - show), day (1-14),
+	// percent (0-100)
 	public static final int HALLOWEEN_EVENT = 20091031; // event state (0 -
-														// hide, 1 - show)
+	// hide, 1 - show)
 	public static final int RAISING_RUDOLPH = 20091225; // event state (0 -
-														// hide, 1 - show)
+	// hide, 1 - show)
 	public static final int LOVERS_JUBILEE = 20100214; // event state (0 - hide,
-														// 1 - show)
+	// 1 - show)
 	public static final int APRIL_FOOLS_10 = 20100401; // event state (0 - hide,
-														// 1 - show)
+	
+	// 1 - show)
 	
 	public ExBR_BroadcastEventState(int eventId, int eventState)
 	{

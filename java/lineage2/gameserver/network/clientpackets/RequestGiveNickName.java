@@ -53,15 +53,18 @@ public class RequestGiveNickName extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (!_title.isEmpty() && !Util.isMatchingRegexp(_title, Config.CLAN_TITLE_TEMPLATE))
 		{
 			activeChar.sendMessage("Incorrect title.");
 			return;
 		}
+		
 		if (activeChar.isNoble() && _target.matches(activeChar.getName()))
 		{
 			activeChar.setTitle(_title);
@@ -73,15 +76,19 @@ public class RequestGiveNickName extends L2GameClientPacket
 		{
 			return;
 		}
+		
 		if (activeChar.getClan().getLevel() < 3)
 		{
 			activeChar.sendPacket(Msg.TITLE_ENDOWMENT_IS_ONLY_POSSIBLE_WHEN_CLANS_SKILL_LEVELS_ARE_ABOVE_3);
 			return;
 		}
+		
 		UnitMember member = activeChar.getClan().getAnyMember(_target);
+		
 		if (member != null)
 		{
 			member.setTitle(_title);
+			
 			if (member.isOnline())
 			{
 				member.getPlayer().sendPacket(Msg.TITLE_HAS_CHANGED);

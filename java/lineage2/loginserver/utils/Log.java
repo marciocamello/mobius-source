@@ -44,8 +44,10 @@ public class Log
 		{
 			return;
 		}
+		
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = L2DatabaseFactory.getInstance().getConnection();

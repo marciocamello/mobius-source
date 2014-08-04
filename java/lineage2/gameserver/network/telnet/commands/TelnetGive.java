@@ -49,10 +49,12 @@ public class TelnetGive implements TelnetCommandHolder
 				{
 					return null;
 				}
+				
 				if (AdminFunctions.give(args[0], Integer.parseInt(args[1]), Integer.parseInt(args[2]), "telnet"))
 				{
 					return "Added " + Integer.parseInt(args[2]) + " item:" + Integer.parseInt(args[1]) + " to the player:" + args[0] + ".\n";
 				}
+				
 				return "Player not found.\n";
 			}
 		});

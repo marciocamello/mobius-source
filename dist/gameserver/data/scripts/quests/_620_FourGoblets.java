@@ -81,6 +81,7 @@ public class _620_FourGoblets extends Quest implements ScriptFile
 		addTalkId(GHOST_OF_WIGOTH_1, GHOST_OF_WIGOTH_2);
 		addQuestItem(Sealed_Box, GRAVE_PASS);
 		addQuestItem(GOBLETS);
+		
 		for (int id = 18120; id <= 18256; id++)
 		{
 			addKillId(id);
@@ -105,11 +106,13 @@ public class _620_FourGoblets extends Quest implements ScriptFile
 	{
 		Player player = st.getPlayer();
 		int cond = st.getCond();
+		
 		if (event.equalsIgnoreCase("Enter"))
 		{
 			FourSepulchersManager.tryEntry(npc, player);
 			return null;
 		}
+		
 		if (event.equalsIgnoreCase("accept"))
 		{
 			if (cond == 0)
@@ -121,6 +124,7 @@ public class _620_FourGoblets extends Quest implements ScriptFile
 					st.setCond(1);
 					return "31453-13.htm";
 				}
+				
 				st.exitCurrentQuest(true);
 				return "31453-12.htm";
 			}
@@ -135,6 +139,7 @@ public class _620_FourGoblets extends Quest implements ScriptFile
 			{
 				return "31453-14.htm";
 			}
+			
 			st.takeAllItems(GOBLETS);
 			st.giveItems(ANTIQUE_BROOCH, 1);
 			st.setCond(2);
@@ -153,6 +158,7 @@ public class _620_FourGoblets extends Quest implements ScriptFile
 			{
 				return "31453-19.htm";
 			}
+			
 			return "31453-13.htm";
 		}
 		else if (event.equalsIgnoreCase("15"))
@@ -162,12 +168,14 @@ public class _620_FourGoblets extends Quest implements ScriptFile
 				st.getPlayer().teleToLocation(178298, -84574, -7216);
 				return null;
 			}
+			
 			if (st.getQuestItemsCount(GRAVE_PASS) >= 1)
 			{
 				st.takeItems(GRAVE_PASS, 1);
 				st.getPlayer().teleToLocation(178298, -84574, -7216);
 				return null;
 			}
+			
 			return "" + str(npc.getNpcId()) + "-0.htm";
 		}
 		else if (event.equalsIgnoreCase("16"))
@@ -177,12 +185,14 @@ public class _620_FourGoblets extends Quest implements ScriptFile
 				st.getPlayer().teleToLocation(186942, -75602, -2834);
 				return null;
 			}
+			
 			if (st.getQuestItemsCount(GRAVE_PASS) >= 1)
 			{
 				st.takeItems(GRAVE_PASS, 1);
 				st.getPlayer().teleToLocation(186942, -75602, -2834);
 				return null;
 			}
+			
 			return "" + str(npc.getNpcId()) + "-0.htm";
 		}
 		else if (event.equalsIgnoreCase("17"))
@@ -196,6 +206,7 @@ public class _620_FourGoblets extends Quest implements ScriptFile
 				st.takeItems(GRAVE_PASS, 1);
 				st.getPlayer().teleToLocation(169590, -90218, -2914);
 			}
+			
 			return "31452-6.htm";
 		}
 		else if (event.equalsIgnoreCase("18"))
@@ -204,10 +215,12 @@ public class _620_FourGoblets extends Quest implements ScriptFile
 			{
 				return "31452-3.htm";
 			}
+			
 			if (st.getSumQuestItemsCount(GOBLETS) == 3)
 			{
 				return "31452-4.htm";
 			}
+			
 			if (st.getSumQuestItemsCount(GOBLETS) >= 4)
 			{
 				return "31452-5.htm";
@@ -228,6 +241,7 @@ public class _620_FourGoblets extends Quest implements ScriptFile
 		else
 		{
 			int id = 0;
+			
 			try
 			{
 				id = Integer.parseInt(event);
@@ -235,6 +249,7 @@ public class _620_FourGoblets extends Quest implements ScriptFile
 			catch (Exception e)
 			{
 			}
+			
 			if (ArrayUtils.contains(RCP_REWARDS, id))
 			{
 				st.takeItems(RELIC, 1000);
@@ -242,6 +257,7 @@ public class _620_FourGoblets extends Quest implements ScriptFile
 				return "31454-17.htm";
 			}
 		}
+		
 		return event;
 	}
 	
@@ -252,10 +268,12 @@ public class _620_FourGoblets extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int id = st.getState();
 		int cond = st.getCond();
+		
 		if (id == CREATED)
 		{
 			st.setCond(0);
 		}
+		
 		if (npcId == NAMELESS_SPIRIT)
 		{
 			if (cond == 0)
@@ -384,6 +402,7 @@ public class _620_FourGoblets extends Quest implements ScriptFile
 		{
 			htmltext = "31919-1.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -392,11 +411,13 @@ public class _620_FourGoblets extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (((cond == 1) || (cond == 2)) && (npcId >= 18120) && (npcId <= 18256) && Rnd.chance(30))
 		{
 			st.giveItems(Sealed_Box, 1);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		return null;
 	}
 }

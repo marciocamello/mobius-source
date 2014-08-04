@@ -55,15 +55,10 @@ public class _10382_DayOfLiberation extends Quest implements ScriptFile
 	public _10382_DayOfLiberation()
 	{
 		super(2);
-		
 		addStartNpc(SIZRAK);
-		
 		addTalkId(SIZRAK);
-		
 		addKillId(TAUTI_NORMAL);
-		
 		addKillNpcWithLog(1, TAUTI_KILL, 1, TAUTI_NORMAL);
-		
 		addLevelCheck(97, 99);
 		addQuestCompletedCheck(_10381_ToTheSeedOfHellFire.class);
 	}
@@ -81,11 +76,13 @@ public class _10382_DayOfLiberation extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "sofa_sizraku_q10382_03.htm";
 		}
+		
 		if (event.equalsIgnoreCase("enter_instance"))
 		{
 			if (player.getInventory().getItemByItemId(MARK_OF_THE_RESISTANCE) != null)
 			{
 				Reflection r = player.getActiveReflection();
+				
 				if (r != null)
 				{
 					if (player.canReenterInstance(normalTautiInstanceId))
@@ -97,10 +94,13 @@ public class _10382_DayOfLiberation extends Quest implements ScriptFile
 				{
 					ReflectionUtils.enterReflection(player, new TautiNormal(), normalTautiInstanceId);
 				}
+				
 				return "";
 			}
+			
 			htmltext = "sofa_sizraku_q10382_07.htm";
 		}
+		
 		if (event.equalsIgnoreCase("quest_done"))
 		{
 			st.giveItems(ADENA_ID, 3256740);
@@ -110,6 +110,7 @@ public class _10382_DayOfLiberation extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			htmltext = "sofa_sizraku_q10382_10.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -147,6 +148,7 @@ public class _10382_DayOfLiberation extends Quest implements ScriptFile
 				htmltext = "sofa_sizraku_q10382_04.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -161,6 +163,7 @@ public class _10382_DayOfLiberation extends Quest implements ScriptFile
 			st.playSound(SOUND_MIDDLE);
 			st.setCond(2);
 		}
+		
 		return null;
 	}
 }

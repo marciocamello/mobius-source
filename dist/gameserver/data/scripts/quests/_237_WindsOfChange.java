@@ -58,6 +58,7 @@ public class _237_WindsOfChange extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("30899-06.htm"))
 		{
 			st.giveItems(FlauensLetter, 1);
@@ -104,6 +105,7 @@ public class _237_WindsOfChange extends Quest implements ScriptFile
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -114,6 +116,7 @@ public class _237_WindsOfChange extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int id = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == Flauen)
 		{
 			if (id == CREATED)
@@ -205,6 +208,7 @@ public class _237_WindsOfChange extends Quest implements ScriptFile
 				htmltext = "32643-03.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

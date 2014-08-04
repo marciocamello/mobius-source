@@ -58,19 +58,23 @@ public class NpcArcherAI extends Ranger
 				case 33173:
 					Functions.npcSay(actor, NpcString.BOOM_HEADSHOT);
 					break;
+				
 				default:
 					break;
 			}
 		}
+		
 		return startAttack();
 	}
 	
 	private boolean startAttack()
 	{
 		NpcInstance actor = getActor();
+		
 		if (target == null)
 		{
 			List<NpcInstance> around = actor.getAroundNpc(3000, 150);
+			
 			if ((around != null) && !around.isEmpty())
 			{
 				for (NpcInstance npc : around)
@@ -107,6 +111,7 @@ public class NpcArcherAI extends Ranger
 		{
 			return false;
 		}
+		
 		int _id = target.getNpcId();
 		
 		if ((_id == 33170) || (_id == 33171) || (_id == 33172) || (_id == 33173) || (_id == 33174) || (_id == 33414) || (_id == 33415) || (_id == 33416))

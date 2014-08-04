@@ -27,7 +27,6 @@ public class ExAutoSoulShot extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeEx(0x0c);
-		
 		writeD(_itemId);
 		writeD(_type ? 1 : 0);
 	}

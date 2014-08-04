@@ -73,14 +73,17 @@ public class Baium extends DefaultAI
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		BaiumManager.setLastAttackTime();
+		
 		if (_firstTimeAttacked)
 		{
 			_firstTimeAttacked = false;
 			final NpcInstance actor = getActor();
+			
 			if (attacker == null)
 			{
 				return;
 			}
+			
 			if (attacker.isPlayer())
 			{
 				for (Summon summon : attacker.getPlayer().getSummonList())
@@ -92,8 +95,10 @@ public class Baium extends DefaultAI
 			{
 				attacker.getPlayer().doDie(actor);
 			}
+			
 			attacker.doDie(actor);
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	
@@ -105,31 +110,38 @@ public class Baium extends DefaultAI
 	protected boolean createNewTask()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return true;
 		}
+		
 		if (!BaiumManager.getZone().checkIfInZone(actor))
 		{
 			teleportHome();
 			return false;
 		}
+		
 		clearTasks();
 		Creature target = prepareTarget();
+		
 		if (target == null)
 		{
 			return false;
 		}
+		
 		if (!BaiumManager.getZone().checkIfInZone(target))
 		{
 			actor.getAggroList().remove(target, false);
 			return false;
 		}
+		
 		final int s_energy_wave = 20;
 		final int s_earth_quake = 20;
 		final int s_group_hold = (actor.getCurrentHpPercents() > 50) ? 0 : 20;
 		final int s_thunderbolt = (actor.getCurrentHpPercents() > 25) ? 0 : 20;
 		Skill r_skill = null;
+		
 		if (actor.isMovementDisabled())
 		{
 			r_skill = thunderbolt;
@@ -140,16 +152,20 @@ public class Baium extends DefaultAI
 			final double distance = actor.getDistance(target);
 			addDesiredSkill(d_skill, target, distance, energy_wave);
 			addDesiredSkill(d_skill, target, distance, earth_quake);
+			
 			if (s_group_hold > 0)
 			{
 				addDesiredSkill(d_skill, target, distance, group_hold);
 			}
+			
 			if (s_thunderbolt > 0)
 			{
 				addDesiredSkill(d_skill, target, distance, thunderbolt);
 			}
+			
 			r_skill = selectTopSkill(d_skill);
 		}
+		
 		if (r_skill == null)
 		{
 			r_skill = baium_normal_attack;
@@ -158,6 +174,7 @@ public class Baium extends DefaultAI
 		{
 			target = actor;
 		}
+		
 		addTaskCast(target, r_skill);
 		r_skill = null;
 		return true;
@@ -171,10 +188,12 @@ public class Baium extends DefaultAI
 	protected boolean maybeMoveToHome()
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((actor != null) && !BaiumManager.getZone().checkIfInZone(actor))
 		{
 			teleportHome();
 		}
+		
 		return false;
 	}
 	

@@ -54,10 +54,12 @@ public class Craft extends Skill
 	public boolean checkCondition(Creature activeChar, Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
 		Player p = (Player) activeChar;
+		
 		if (p.isInStoreMode() || p.isProcessingRequest())
 		{
 			return false;
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	

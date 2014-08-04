@@ -106,6 +106,7 @@ public class ProductItem
 		_points = points;
 		_tabId = tabId;
 		Calendar calendar;
+		
 		if (startTimeSale > 0)
 		{
 			calendar = Calendar.getInstance();
@@ -120,6 +121,7 @@ public class ProductItem
 			_startHour = NOT_LIMITED_START_HOUR;
 			_startMin = NOT_LIMITED_START_MIN;
 		}
+		
 		if (endTimeSale > 0)
 		{
 			calendar = Calendar.getInstance();
@@ -155,6 +157,7 @@ public class ProductItem
 		{
 			_components = new ArrayList<>();
 		}
+		
 		return _components;
 	}
 	

@@ -116,6 +116,7 @@ public class _376_GiantsExploration1 extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		int cond = st.getCond();
+		
 		if (event.equalsIgnoreCase("yes"))
 		{
 			htmltext = "Starting.htm";
@@ -133,20 +134,25 @@ public class _376_GiantsExploration1 extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("show"))
 		{
 			htmltext = "no_items.htm";
+			
 			for (int i = 0; i < EXCHANGE.length; i = i + 2)
 			{
 				long count = Long.MAX_VALUE;
+				
 				for (int j : EXCHANGE[i])
 				{
 					count = Math.min(count, st.getQuestItemsCount(j));
 				}
+				
 				if (count >= 1)
 				{
 					htmltext = "tnx4items.htm";
+					
 					for (int j : EXCHANGE[i])
 					{
 						st.takeItems(j, count);
 					}
+					
 					for (int l = 0; l < count; l++)
 					{
 						int item = EXCHANGE[i + 1][Rnd.get(EXCHANGE[i + 1].length)];
@@ -175,6 +181,7 @@ public class _376_GiantsExploration1 extends Quest implements ScriptFile
 				htmltext = "no_part2.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -185,6 +192,7 @@ public class _376_GiantsExploration1 extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int id = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == HR_SOBLING)
 		{
 			if (id == CREATED)
@@ -222,6 +230,7 @@ public class _376_GiantsExploration1 extends Quest implements ScriptFile
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -229,14 +238,17 @@ public class _376_GiantsExploration1 extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if (cond > 0)
 		{
 			st.rollAndGive(ANCIENT_PARCHMENT, 1, 1, DROP_RATE);
+			
 			if (cond == 1)
 			{
 				st.rollAndGive(MST_BK, 1, 1, 1, DROP_RATE_BOOK);
 			}
 		}
+		
 		return null;
 	}
 }

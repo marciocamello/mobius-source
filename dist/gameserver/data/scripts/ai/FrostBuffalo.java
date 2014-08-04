@@ -59,13 +59,16 @@ public class FrostBuffalo extends Fighter
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (skill.isMagic())
 		{
 			return;
 		}
+		
 		if (_mobsNotSpawned)
 		{
 			_mobsNotSpawned = false;
+			
 			for (int i = 0; i < MOBS_COUNT; i++)
 			{
 				try
@@ -73,10 +76,12 @@ public class FrostBuffalo extends Fighter
 					SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(MOBS));
 					sp.setLoc(Location.findPointToStay(actor, 100, 120));
 					NpcInstance npc = sp.doSpawn(true);
+					
 					if (caster.isPet() || caster.isServitor())
 					{
 						npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, caster, Rnd.get(2, 100));
 					}
+					
 					npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, caster.getPlayer(), Rnd.get(1, 100));
 				}
 				catch (Exception e)

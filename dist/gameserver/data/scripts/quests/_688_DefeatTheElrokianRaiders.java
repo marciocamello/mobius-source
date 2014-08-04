@@ -53,6 +53,7 @@ public class _688_DefeatTheElrokianRaiders extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		long count = st.getQuestItemsCount(DINOSAUR_FANG_NECKLACE);
+		
 		if (event.equalsIgnoreCase("32105-03.htm"))
 		{
 			st.setCond(1);
@@ -66,6 +67,7 @@ public class _688_DefeatTheElrokianRaiders extends Quest implements ScriptFile
 				st.takeItems(DINOSAUR_FANG_NECKLACE, -1);
 				st.giveItems(ADENA_ID, count * 3000);
 			}
+			
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
@@ -90,6 +92,7 @@ public class _688_DefeatTheElrokianRaiders extends Quest implements ScriptFile
 		{
 			htmltext = null;
 		}
+		
 		return htmltext;
 	}
 	
@@ -99,6 +102,7 @@ public class _688_DefeatTheElrokianRaiders extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		long count = st.getQuestItemsCount(DINOSAUR_FANG_NECKLACE);
+		
 		if (cond == 0)
 		{
 			if (st.getPlayer().getLevel() >= 75)
@@ -122,6 +126,7 @@ public class _688_DefeatTheElrokianRaiders extends Quest implements ScriptFile
 				htmltext = "32105-05.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -129,13 +134,16 @@ public class _688_DefeatTheElrokianRaiders extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		long count = st.getQuestItemsCount(DINOSAUR_FANG_NECKLACE);
+		
 		if ((st.getCond() == 1) && (count < 100) && Rnd.chance(DROP_CHANCE))
 		{
 			long numItems = (int) Config.RATE_QUESTS_REWARD;
+			
 			if ((count + numItems) > 100)
 			{
 				numItems = 100 - count;
 			}
+			
 			if ((count + numItems) >= 100)
 			{
 				st.playSound("ItemSound.quest_middle");
@@ -144,8 +152,10 @@ public class _688_DefeatTheElrokianRaiders extends Quest implements ScriptFile
 			{
 				st.playSound("ItemSound.quest_itemget");
 			}
+			
 			st.giveItems(DINOSAUR_FANG_NECKLACE, numItems);
 		}
+		
 		return null;
 	}
 }

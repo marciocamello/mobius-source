@@ -77,6 +77,7 @@ public class SiegePlayerDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -84,6 +85,7 @@ public class SiegePlayerDAO
 			statement.setInt(1, residence.getId());
 			statement.setInt(2, clanId);
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				set.add(rset.getInt("object_id"));
@@ -110,6 +112,7 @@ public class SiegePlayerDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -139,6 +142,7 @@ public class SiegePlayerDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -166,6 +170,7 @@ public class SiegePlayerDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();

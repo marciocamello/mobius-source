@@ -117,6 +117,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 		String cmd = st.nextToken();
 		player.setSessionVar("add_fav", null);
 		String html = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_memo_list.htm", player);
+		
 		if ("bbsmemo".equals(cmd) || "_mmlist_1".equals(bypass))
 		{
 			int count = getMemoCount(player);
@@ -124,14 +125,18 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 			html = html.replace("%prev_page%", "");
 			html = html.replace("%page%", "1");
 			String pages = "<td>1</td>\n\n";
+			
 			if (count > MEMO_PER_PAGE)
 			{
 				int pgs = count / MEMO_PER_PAGE;
+				
 				if ((count % MEMO_PER_PAGE) != 0)
 				{
 					pgs++;
 				}
+				
 				html = html.replace("%next_page%", "bypass _mmlist_2");
+				
 				for (int i = 2; i <= pgs; i++)
 				{
 					pages += "<td><a action=\"bypass _mmlist_" + i + "\"> " + i + " </a></td>\n\n";
@@ -141,6 +146,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 			{
 				html = html.replace("%next_page%", "");
 			}
+			
 			html = html.replace("%pages%", pages);
 		}
 		else if ("mmlist".equals(cmd))
@@ -152,10 +158,12 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 			html = html.replace("%page%", String.valueOf(currPage));
 			String pages = "";
 			int pgs = count / MEMO_PER_PAGE;
+			
 			if ((count % MEMO_PER_PAGE) != 0)
 			{
 				pgs++;
 			}
+			
 			if (count > (currPage * MEMO_PER_PAGE))
 			{
 				html = html.replace("%next_page%", "bypass _mmlist_" + (currPage + 1));
@@ -164,6 +172,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 			{
 				html = html.replace("%next_page%", "");
 			}
+			
 			for (int i = 1; i <= pgs; i++)
 			{
 				if (i == currPage)
@@ -175,6 +184,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 					pages += "<td height=15><a action=\"bypass _mmlist_" + i + "\"> " + i + " </a></td>\n\n";
 				}
 			}
+			
 			html = html.replace("%pages%", pages);
 		}
 		else if ("mmcrea".equals(cmd))
@@ -185,6 +195,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 				onBypassCommand(player, "_mmlist_1");
 				return;
 			}
+			
 			String page = st.nextToken();
 			html = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_memo_edit.htm", player);
 			html = html.replace("%page%", page);
@@ -220,6 +231,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 			Connection con = null;
 			PreparedStatement statement = null;
 			ResultSet rset = null;
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
@@ -227,6 +239,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 				statement.setString(1, player.getAccountName());
 				statement.setInt(2, memoId);
 				rset = statement.executeQuery();
+				
 				if (rset.next())
 				{
 					String post = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_memo_read.htm", player);
@@ -255,6 +268,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 			int memoId = Integer.parseInt(st.nextToken());
 			Connection con = null;
 			PreparedStatement statement = null;
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
@@ -280,6 +294,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 			Connection con = null;
 			PreparedStatement statement = null;
 			ResultSet rset = null;
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
@@ -287,6 +302,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 				statement.setString(1, player.getAccountName());
 				statement.setInt(2, memoId);
 				rset = statement.executeQuery();
+				
 				if (rset.next())
 				{
 					html = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_memo_edit.htm", player);
@@ -327,6 +343,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 			onBypassCommand(player, "_mmlist_" + page);
 			return;
 		}
+		
 		ShowBoard.separateAndSend(html, player);
 	}
 	
@@ -344,6 +361,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 	{
 		StringTokenizer st = new StringTokenizer(bypass, "_");
 		String cmd = st.nextToken();
+		
 		if ("mmwrite".equals(cmd))
 		{
 			if (getMemoCount(player) >= 100)
@@ -352,36 +370,45 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 				onBypassCommand(player, "_mmlist_1");
 				return;
 			}
+			
 			if ((arg3 != null) && !arg3.isEmpty() && (arg4 != null) && !arg4.isEmpty())
 			{
 				String title = arg3.replace("<", "");
 				title = title.replace(">", "");
 				title = title.replace("&", "");
 				title = title.replace("$", "");
+				
 				if (title.length() > 128)
 				{
 					title = title.substring(0, 128);
 				}
+				
 				String memo = arg4.replace("<", "");
 				memo = memo.replace(">", "");
 				memo = memo.replace("&", "");
 				memo = memo.replace("$", "");
+				
 				if (memo.length() > 1000)
 				{
 					memo = memo.substring(0, 1000);
 				}
+				
 				int memoId = 0;
+				
 				if ((arg2 != null) && !arg2.isEmpty())
 				{
 					memoId = Integer.parseInt(arg2);
 				}
+				
 				if ((title.length() > 0) && (memo.length() > 0))
 				{
 					Connection con = null;
 					PreparedStatement stmt = null;
+					
 					try
 					{
 						con = DatabaseFactory.getInstance().getConnection();
+						
 						if (memoId > 0)
 						{
 							stmt = con.prepareStatement("UPDATE bbs_memo SET title = ?, memo = ? WHERE memo_id = ? AND account_name = ?");
@@ -413,6 +440,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 				}
 			}
 		}
+		
 		onBypassCommand(player, "_bbsmemo");
 	}
 	
@@ -429,6 +457,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			if (count > 0)
@@ -440,6 +469,7 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 				statement.setString(1, player.getAccountName());
 				rset = statement.executeQuery();
 				String tpl = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_memo_post.htm", player);
+				
 				while (rset.next())
 				{
 					String post = tpl;
@@ -473,12 +503,14 @@ public class ManageMemo implements ScriptFile, ICommunityBoardHandler
 		PreparedStatement statement = null;
 		ResultSet rset = null;
 		int count = 0;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT count(*) as cnt FROM bbs_memo WHERE `account_name` = ?");
 			statement.setString(1, player.getAccountName());
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				count = rset.getInt("cnt");

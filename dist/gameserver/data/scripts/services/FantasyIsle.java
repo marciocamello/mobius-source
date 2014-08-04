@@ -274,6 +274,7 @@ public class FantasyIsle extends Functions implements ScriptFile
 			_startTask.cancel(false);
 			_startTask = null;
 		}
+		
 		_isStarted = false;
 	}
 	
@@ -311,6 +312,7 @@ public class FantasyIsle extends Functions implements ScriptFile
 				int gameTime = GameTimeController.getInstance().getGameTime();
 				int h = (gameTime / 60) % 24;
 				int m = gameTime % 60;
+				
 				if ((h == 20) && (m >= 27) && (m <= 33))
 				{
 					_isStarted = true;
@@ -369,6 +371,7 @@ public class FantasyIsle extends Functions implements ScriptFile
 	public void start(String event)
 	{
 		NpcInstance temp_npc = getNpc();
+		
 		if (event.equals("Start"))
 		{
 			NpcInstance mc = addSpawn(MC, -56698, -56430, -2008, 32768);

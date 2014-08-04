@@ -59,9 +59,11 @@ public class HekatonPrime extends Fighter
 			{
 				getActor().getMinionList().deleteMinions();
 			}
+			
 			getActor().deleteMe();
 			return true;
 		}
+		
 		return false;
 	}
 	

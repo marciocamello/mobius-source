@@ -88,30 +88,37 @@ public class SummonList implements Iterable<Summon>
 		{
 			return false;
 		}
+		
 		if (summonType == SummonType.PET)
 		{
 			return _pet == null;
 		}
+		
 		if (((summonType == SummonType.SERVITOR) || (summonType == SummonType.TREE)) && (_summonList.size() > 0))
 		{
 			return false;
 		}
+		
 		if (summonType == SummonType.MULTI_SERVITOR)
 		{
 			if (_summonList.size() >= 4)
 			{
 				return false;
 			}
+			
 			Summon summon = getFirstServitor();
+			
 			if (summon != null)
 			{
 				Skill skill = SkillTable.getInstance().getInfo(summon.getSummonSkillId(), summon.getSummonSkillLvl());
+				
 				if (skill != null)
 				{
 					return (skill instanceof SummonServitor) && (((SummonServitor) skill).getSummonType() == SummonType.MULTI_SERVITOR);
 				}
 			}
 		}
+		
 		return true;
 	}
 	
@@ -130,6 +137,7 @@ public class SummonList implements Iterable<Summon>
 		{
 			_pet = (PetInstance) summon;
 		}
+		
 		summon.setTitle(_owner.getName());
 		_owner.autoShot();
 	}
@@ -165,6 +173,7 @@ public class SummonList implements Iterable<Summon>
 			{
 				_owner.unsetVar("petss@");
 			}
+			
 			_pet.unSummon();
 			_pet = null;
 			_owner.setPetControlItem(null);
@@ -182,6 +191,7 @@ public class SummonList implements Iterable<Summon>
 			{
 				summon.unSummon();
 			}
+			
 			_summonList.clear();
 			_usedPoints = 0;
 		}
@@ -208,6 +218,7 @@ public class SummonList implements Iterable<Summon>
 	public boolean isInCombat()
 	{
 		boolean isCombat = false;
+		
 		if (_summonList.size() > 0)
 		{
 			for (Summon summon : _summonList.values())
@@ -219,6 +230,7 @@ public class SummonList implements Iterable<Summon>
 				}
 			}
 		}
+		
 		return isCombat || ((_pet != null) && _pet.isInCombat());
 	}
 	
@@ -239,6 +251,7 @@ public class SummonList implements Iterable<Summon>
 				}
 			}
 		}
+		
 		if (_pet != null)
 		{
 			_owner.setVar("petss@", _owner.getPetControlItem().getObjectId(), -1);
@@ -262,29 +275,38 @@ public class SummonList implements Iterable<Summon>
 	public void restorePet()
 	{
 		int controlItemId = _owner.getVarInt("petss@");
+		
 		if (controlItemId > 0)
 		{
 			ItemInstance controlItem = _owner.getInventory().getItemByObjectId(controlItemId);
+			
 			if (controlItem == null)
 			{
 				return;
 			}
+			
 			_owner.setPetControlItem(controlItem);
 			int npcId = PetDataTable.getSummonId(controlItem);
+			
 			if (npcId == 0)
 			{
 				return;
 			}
+			
 			NpcTemplate petTemplate = NpcHolder.getInstance().getTemplate(npcId);
+			
 			if (petTemplate == null)
 			{
 				return;
 			}
+			
 			PetInstance pet = PetInstance.restore(controlItem, petTemplate, _owner);
+			
 			if (pet == null)
 			{
 				return;
 			}
+			
 			if (!pet.isRespawned())
 			{
 				pet.setCurrentHp(pet.getMaxHp(), false);
@@ -293,6 +315,7 @@ public class SummonList implements Iterable<Summon>
 				pet.updateControlItem();
 				pet.store();
 			}
+			
 			pet.getInventory().restore();
 			addSummon(pet);
 		}
@@ -304,10 +327,12 @@ public class SummonList implements Iterable<Summon>
 	public void restoreServitors()
 	{
 		List<Summon> summons = ServitorsDAO.getInstance().restore(_owner);
+		
 		if (summons.size() == 0)
 		{
 			return;
 		}
+		
 		for (Summon summon : summons)
 		{
 			addSummon(summon);
@@ -331,6 +356,7 @@ public class SummonList implements Iterable<Summon>
 				summon.setFollowMode(true);
 			}
 		}
+		
 		if (_pet != null)
 		{
 			if (!_pet.isRespawned())
@@ -341,6 +367,7 @@ public class SummonList implements Iterable<Summon>
 				_pet.updateControlItem();
 				_pet.store();
 			}
+			
 			_pet.getInventory().restore();
 			_pet.setNonAggroTime(System.currentTimeMillis() + Config.NONAGGRO_TIME_ONTELEPORT);
 			_pet.setReflection(_owner.getReflection());
@@ -348,6 +375,7 @@ public class SummonList implements Iterable<Summon>
 			_pet.setRunning();
 			_pet.setFollowMode(true);
 			_pet.getInventory().validateItems();
+			
 			if (_pet instanceof PetBabyInstance)
 			{
 				((PetBabyInstance) _pet).startBuffTask();
@@ -374,12 +402,15 @@ public class SummonList implements Iterable<Summon>
 		{
 			Summon summon = _summonList.values().iterator().next();
 			Skill skill = SkillTable.getInstance().getInfo(summon.getSummonSkillId(), summon.getSummonSkillLvl());
+			
 			if ((skill == null) || (skill.getSkillType() != Skill.SkillType.SUMMON) || (((SummonServitor) skill).getSummonType() == SummonType.MULTI_SERVITOR))
 			{
 				return null;
 			}
+			
 			return summon;
 		}
+		
 		return null;
 	}
 	
@@ -393,12 +424,15 @@ public class SummonList implements Iterable<Summon>
 		{
 			Summon summon = _summonList.values().iterator().next();
 			Skill skill = SkillTable.getInstance().getInfo(summon.getSummonSkillId(), summon.getSummonSkillLvl());
+			
 			if ((skill == null) || (skill.getSkillType() != Skill.SkillType.SUMMON))
 			{
 				return null;
 			}
+			
 			return summon;
 		}
+		
 		return null;
 	}
 	
@@ -411,12 +445,15 @@ public class SummonList implements Iterable<Summon>
 		if (_summonList.size() > 0)
 		{
 			List<Summon> servitors = new ArrayList<>();
+			
 			for (Summon summon : _summonList.values())
 			{
 				servitors.add(summon);
 			}
+			
 			return servitors;
 		}
+		
 		return Collections.emptyList();
 	}
 	
@@ -431,14 +468,17 @@ public class SummonList implements Iterable<Summon>
 		{
 			return false;
 		}
+		
 		if (_pet == creature)
 		{
 			return true;
 		}
+		
 		if (_summonList.size() == 0)
 		{
 			return false;
 		}
+		
 		for (Summon summon : _summonList.values())
 		{
 			if (summon == creature)
@@ -446,6 +486,7 @@ public class SummonList implements Iterable<Summon>
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -457,14 +498,17 @@ public class SummonList implements Iterable<Summon>
 	public Iterator<Summon> iterator()
 	{
 		List<Summon> summons = new ArrayList<>(4);
+		
 		if (_pet != null)
 		{
 			summons.add(_pet);
 		}
+		
 		if (_summonList.size() > 0)
 		{
 			summons.addAll(_summonList.values());
 		}
+		
 		return Collections.unmodifiableList(summons).iterator();
 	}
 	

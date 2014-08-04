@@ -32,6 +32,7 @@ public class RequestTeleport extends L2GameClientPacket
 	{
 		unk = readD();
 		_type = readD();
+		
 		if (_type == 2)
 		{
 			unk2 = readD();

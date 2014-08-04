@@ -68,10 +68,12 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 	public void onLoad()
 	{
 		CharListenerList.addGlobal(this);
+		
 		if (!Config.EVENT_BOUNTY_HUNTERS_ENABLED)
 		{
 			return;
 		}
+		
 		VoicedCommandHandler.getInstance().registerVoicedCommandHandler(this);
 		_log.info("Loaded Event: Bounty Hunters Guild");
 	}
@@ -107,46 +109,57 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 		{
 			return false;
 		}
+		
 		if (npc.rewardExp == 0)
 		{
 			return false;
 		}
+		
 		if (npc.isInstanceOf(RaidBossInstance.class))
 		{
 			return false;
 		}
+		
 		if (npc.isInstanceOf(QueenAntLarvaInstance.class))
 		{
 			return false;
 		}
+		
 		if (npc.isInstanceOf(npc.model.SquashInstance.class))
 		{
 			return false;
 		}
+		
 		if (npc.isInstanceOf(MinionInstance.class))
 		{
 			return false;
 		}
+		
 		if (npc.isInstanceOf(TamedBeastInstance.class))
 		{
 			return false;
 		}
+		
 		if (npc.isInstanceOf(DeadManInstance.class))
 		{
 			return false;
 		}
+		
 		if (npc.isInstanceOf(ChestInstance.class))
 		{
 			return false;
 		}
+		
 		if (npc.title.contains("Quest Monster"))
 		{
 			return false;
 		}
+		
 		if (GameObjectsStorage.getByNpcId(npc.getNpcId()) == null)
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -161,17 +174,22 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 		{
 			return;
 		}
+		
 		NpcTemplate target;
 		double mod = 1.;
+		
 		if (id == 0)
 		{
 			final List<NpcTemplate> monsters = NpcHolder.getInstance().getAllOfLevel(player.getLevel());
+			
 			if ((monsters == null) || monsters.isEmpty())
 			{
 				show(new CustomMessage("scripts.events.bountyhunters.NoTargets", player), player);
 				return;
 			}
+			
 			final List<NpcTemplate> targets = new ArrayList<>();
+			
 			for (NpcTemplate npc : monsters)
 			{
 				if (checkTarget(npc))
@@ -179,28 +197,34 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 					targets.add(npc);
 				}
 			}
+			
 			if (targets.isEmpty())
 			{
 				show(new CustomMessage("scripts.events.bountyhunters.NoTargets", player), player);
 				return;
 			}
+			
 			target = targets.get(Rnd.get(targets.size()));
 		}
 		else
 		{
 			target = NpcHolder.getInstance().getTemplate(id);
+			
 			if ((target == null) || !checkTarget(target))
 			{
 				show(new CustomMessage("scripts.events.bountyhunters.WrongTarget", player), player);
 				return;
 			}
+			
 			if ((player.getLevel() - target.level) > 5)
 			{
 				show(new CustomMessage("scripts.events.bountyhunters.TooEasy", player), player);
 				return;
 			}
+			
 			mod = (0.5 * ((10 + target.level) - player.getLevel())) / 10.;
 		}
+		
 		final int mobcount = target.level + Rnd.get(25, 50);
 		player.setVar("bhMonstersId", String.valueOf(target.getNpcId()), -1);
 		player.setVar("bhMonstersNeeded", String.valueOf(mobcount), -1);
@@ -209,6 +233,7 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 		final int success = (player.getVar("bhsuccess") == null) ? 0 : Integer.parseInt(player.getVar("bhsuccess")) * 5;
 		final double reputation = Math.min(Math.max(((100 + success) - fails) / 100., .25), 2.) * mod;
 		final long adenarewardvalue = Math.round(((target.level * Math.max(Math.log(target.level), 1) * 10) + Math.max((target.level - 60) * 33, 0) + Math.max((target.level - 65) * 50, 0)) * target.rateHp * mobcount * (Config.RATE_DROP_ADENA + player.getVitalityBonus()) * player.getRateAdena() * reputation * .15);
+		
 		if (Rnd.chance(30))
 		{
 			player.setVar("bhRewardId", "57", -1);
@@ -217,6 +242,7 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 		else
 		{
 			int crystal = 0;
+			
 			if (target.level <= 39)
 			{
 				crystal = 1458;
@@ -237,9 +263,11 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 			{
 				crystal = 1462;
 			}
+			
 			player.setVar("bhRewardId", String.valueOf(crystal), -1);
 			player.setVar("bhRewardCount", String.valueOf(adenarewardvalue / ItemHolder.getInstance().getTemplate(crystal).getReferencePrice()), -1);
 		}
+		
 		show(new CustomMessage("scripts.events.bountyhunters.TaskGiven", player).addNumber(mobcount).addString(target.name), player);
 	}
 	
@@ -256,11 +284,13 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 		{
 			return;
 		}
+		
 		if (cha.isMonster() && !cha.isRaid() && (killer != null) && (killer.getPlayer() != null) && (killer.getPlayer().getVar("bhMonstersId") != null) && (Integer.parseInt(killer.getPlayer().getVar("bhMonstersId")) == cha.getNpcId()))
 		{
 			final int count = Integer.parseInt(killer.getPlayer().getVar("bhMonstersKilled")) + 1;
 			killer.getPlayer().setVar("bhMonstersKilled", String.valueOf(count), -1);
 			final int needed = Integer.parseInt(killer.getPlayer().getVar("bhMonstersNeeded"));
+			
 			if (count >= needed)
 			{
 				doReward(killer.getPlayer());
@@ -282,6 +312,7 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 		{
 			return;
 		}
+		
 		final int rewardid = Integer.parseInt(player.getVar("bhRewardId"));
 		final long rewardcount = Long.parseLong(player.getVar("bhRewardCount"));
 		player.unsetVar("bhMonstersId");
@@ -289,6 +320,7 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 		player.unsetVar("bhMonstersKilled");
 		player.unsetVar("bhRewardId");
 		player.unsetVar("bhRewardCount");
+		
 		if (player.getVar("bhsuccess") != null)
 		{
 			player.setVar("bhsuccess", String.valueOf(Integer.parseInt(player.getVar("bhsuccess")) + 1), -1);
@@ -297,6 +329,7 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 		{
 			player.setVar("bhsuccess", "1", -1);
 		}
+		
 		addItem(player, rewardid, rewardcount);
 		show(new CustomMessage("scripts.events.bountyhunters.TaskCompleted", player).addNumber(rewardcount).addItemName(rewardid), player);
 	}
@@ -325,11 +358,13 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 		{
 			return false;
 		}
+		
 		if (activeChar.getLevel() < 20)
 		{
 			sendMessage(new CustomMessage("scripts.events.bountyhunters.TooLowLevel", activeChar), activeChar);
 			return true;
 		}
+		
 		if (command.equalsIgnoreCase("gettask"))
 		{
 			if (activeChar.getVar("bhMonstersId") != null)
@@ -339,14 +374,18 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 				show(new CustomMessage("scripts.events.bountyhunters.TaskGiven", activeChar).addNumber(mobcount).addString(NpcHolder.getInstance().getTemplate(mobid).name), activeChar);
 				return true;
 			}
+			
 			int id = 0;
+			
 			if ((target != null) && target.trim().matches("[\\d]{1,9}"))
 			{
 				id = Integer.parseInt(target);
 			}
+			
 			getTask(activeChar, id);
 			return true;
 		}
+		
 		if (command.equalsIgnoreCase("declinetask"))
 		{
 			if (activeChar.getVar("bhMonstersId") == null)
@@ -354,11 +393,13 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 				sendMessage(new CustomMessage("scripts.events.bountyhunters.NoTask", activeChar), activeChar);
 				return true;
 			}
+			
 			activeChar.unsetVar("bhMonstersId");
 			activeChar.unsetVar("bhMonstersNeeded");
 			activeChar.unsetVar("bhMonstersKilled");
 			activeChar.unsetVar("bhRewardId");
 			activeChar.unsetVar("bhRewardCount");
+			
 			if (activeChar.getVar("bhfails") != null)
 			{
 				activeChar.setVar("bhfails", String.valueOf(Integer.parseInt(activeChar.getVar("bhfails")) + 1), -1);
@@ -367,9 +408,11 @@ public class HuntersGuild extends Functions implements ScriptFile, IVoicedComman
 			{
 				activeChar.setVar("bhfails", "1", -1);
 			}
+			
 			show(new CustomMessage("scripts.events.bountyhunters.TaskCanceled", activeChar), activeChar);
 			return true;
 		}
+		
 		return false;
 	}
 }

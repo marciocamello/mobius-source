@@ -46,13 +46,16 @@ public class NaiaRoomController extends DefaultAI
 	{
 		final NpcInstance actor = getActor();
 		final int npcId = actor.getNpcId();
+		
 		if (NaiaTowerManager.isLockedRoom(npcId))
 		{
 			final List<NpcInstance> _roomMobs = NaiaTowerManager.getRoomMobs(npcId);
+			
 			if (_roomMobs == null)
 			{
 				return false;
 			}
+			
 			if (!_roomMobs.isEmpty())
 			{
 				for (NpcInstance npc : _roomMobs)
@@ -63,6 +66,7 @@ public class NaiaRoomController extends DefaultAI
 					}
 				}
 			}
+			
 			switch (npcId)
 			{
 				case 18494:
@@ -73,6 +77,7 @@ public class NaiaRoomController extends DefaultAI
 					NaiaTowerManager.removeRoomMobs(npcId);
 					break;
 				}
+				
 				case 18495:
 				{
 					ReflectionUtils.getDoor(18250004).openMe();
@@ -81,6 +86,7 @@ public class NaiaRoomController extends DefaultAI
 					NaiaTowerManager.removeRoomMobs(npcId);
 					break;
 				}
+				
 				case 18496:
 				{
 					ReflectionUtils.getDoor(18250006).openMe();
@@ -89,6 +95,7 @@ public class NaiaRoomController extends DefaultAI
 					NaiaTowerManager.removeRoomMobs(npcId);
 					break;
 				}
+				
 				case 18497:
 				{
 					ReflectionUtils.getDoor(18250008).openMe();
@@ -97,6 +104,7 @@ public class NaiaRoomController extends DefaultAI
 					NaiaTowerManager.removeRoomMobs(npcId);
 					break;
 				}
+				
 				case 18498:
 				{
 					ReflectionUtils.getDoor(18250010).openMe();
@@ -105,6 +113,7 @@ public class NaiaRoomController extends DefaultAI
 					NaiaTowerManager.removeRoomMobs(npcId);
 					break;
 				}
+				
 				case 18499:
 				{
 					ReflectionUtils.getDoor(18250101).openMe();
@@ -113,6 +122,7 @@ public class NaiaRoomController extends DefaultAI
 					NaiaTowerManager.removeRoomMobs(npcId);
 					break;
 				}
+				
 				case 18500:
 				{
 					ReflectionUtils.getDoor(18250014).openMe();
@@ -121,6 +131,7 @@ public class NaiaRoomController extends DefaultAI
 					NaiaTowerManager.removeRoomMobs(npcId);
 					break;
 				}
+				
 				case 18501:
 				{
 					ReflectionUtils.getDoor(18250102).openMe();
@@ -129,6 +140,7 @@ public class NaiaRoomController extends DefaultAI
 					NaiaTowerManager.removeRoomMobs(npcId);
 					break;
 				}
+				
 				case 18502:
 				{
 					ReflectionUtils.getDoor(18250018).openMe();
@@ -137,6 +149,7 @@ public class NaiaRoomController extends DefaultAI
 					NaiaTowerManager.removeRoomMobs(npcId);
 					break;
 				}
+				
 				case 18503:
 				{
 					ReflectionUtils.getDoor(18250103).openMe();
@@ -145,6 +158,7 @@ public class NaiaRoomController extends DefaultAI
 					NaiaTowerManager.removeRoomMobs(npcId);
 					break;
 				}
+				
 				case 18504:
 				{
 					ReflectionUtils.getDoor(18250022).openMe();
@@ -153,6 +167,7 @@ public class NaiaRoomController extends DefaultAI
 					NaiaTowerManager.removeRoomMobs(npcId);
 					break;
 				}
+				
 				case 18505:
 				{
 					ReflectionUtils.getDoor(18250024).openMe();
@@ -161,10 +176,12 @@ public class NaiaRoomController extends DefaultAI
 					NaiaTowerManager.removeRoomMobs(npcId);
 					break;
 				}
+				
 				default:
 					break;
 			}
 		}
+		
 		return true;
 	}
 	

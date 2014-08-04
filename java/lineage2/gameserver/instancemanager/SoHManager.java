@@ -40,6 +40,7 @@ public class SoHManager
 		{
 			_instance = new SoHManager();
 		}
+		
 		return _instance;
 	}
 	
@@ -48,6 +49,7 @@ public class SoHManager
 		_log.info("Seed of Hellfire Manager: Loaded.");
 		_zone = ReflectionUtils.getZone("[inner_hellfire01]");
 		checkStageAndSpawn();
+		
 		if (!isSeedOpen())
 		{
 			openSeed(getOpenedTime());
@@ -65,6 +67,7 @@ public class SoHManager
 		{
 			return 0;
 		}
+		
 		return (ServerVariables.getLong("SoH_opened", 0) * 1000L) - System.currentTimeMillis();
 	}
 	
@@ -79,6 +82,7 @@ public class SoHManager
 		{
 			return;
 		}
+		
 		if (stage == 2)
 		{
 			openSeed(SOH_OPEN_TIME);
@@ -87,6 +91,7 @@ public class SoHManager
 		{
 			closeSeed();
 		}
+		
 		ServerVariables.set("SoH_stage", stage);
 		checkStageAndSpawn();
 		_log.info("Seed of Hellfire Manager: Set to stage " + stage);
@@ -101,14 +106,17 @@ public class SoHManager
 	{
 		SpawnManager.getInstance().despawn(SPAWN_GROUP);
 		SpawnManager.getInstance().despawn(SPAWN_GROUP2);
+		
 		switch (getCurrentStage())
 		{
 			case 1:
 				SpawnManager.getInstance().spawn(SPAWN_GROUP);
 				break;
+			
 			case 2:
 				SpawnManager.getInstance().spawn(SPAWN_GROUP);
 				break;
+			
 			default:
 				SpawnManager.getInstance().spawn(SPAWN_GROUP);
 				break;
@@ -126,7 +134,6 @@ public class SoHManager
 		ServerVariables.set("SoH_opened", (System.currentTimeMillis() + timelimit) / 1000L);
 		_log.info("Seed of Hellfire Manager: Opening the seed for " + Util.formatTime((int) timelimit / 1000));
 		SpawnManager.getInstance().spawn(SPAWN_GROUP);
-		
 		ThreadPoolManager.getInstance().schedule(new RunnableImpl()
 		{
 			@Override

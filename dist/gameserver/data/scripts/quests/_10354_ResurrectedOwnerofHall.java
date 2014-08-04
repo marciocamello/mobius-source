@@ -46,6 +46,7 @@ public class _10354_ResurrectedOwnerofHall extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("orbis_typia_q10354_07.htm"))
 		{
 			st.setCond(1);
@@ -57,13 +58,13 @@ public class _10354_ResurrectedOwnerofHall extends Quest implements ScriptFile
 			Player player = st.getPlayer();
 			htmltext = HtmCache.getInstance().getNotNull("quests/_10354_ResurrectedOwnerofHall/orbis_typia_q10354_10.htm", player);
 			htmltext = htmltext.replace("<?name?>", player.getName());
-			
 			st.addExpAndSp(897850000, 416175000);
 			st.giveItems(ADENA_ID, 23655000, true);
 			st.giveItems(BOTTLE_OF_OCTAVIS_SOUL, 1);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -73,6 +74,7 @@ public class _10354_ResurrectedOwnerofHall extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		String htmltext = "noquest";
+		
 		if (npcId == LYDIA)
 		{
 			if (st.isCompleted())
@@ -94,6 +96,7 @@ public class _10354_ResurrectedOwnerofHall extends Quest implements ScriptFile
 			{
 				Player player = st.getPlayer();
 				QuestState pst = player.getQuestState(_10351_OwnerOfHall.class);
+				
 				if (player.getLevel() < 95)
 				{
 					htmltext = "orbis_typia_q10354_02.htm";
@@ -108,6 +111,7 @@ public class _10354_ResurrectedOwnerofHall extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -116,6 +120,7 @@ public class _10354_ResurrectedOwnerofHall extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == OCTAVIS)
 		{
 			if (cond == 1)
@@ -124,6 +129,7 @@ public class _10354_ResurrectedOwnerofHall extends Quest implements ScriptFile
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		return null;
 	}
 	

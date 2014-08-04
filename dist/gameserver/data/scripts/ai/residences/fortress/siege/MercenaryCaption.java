@@ -69,22 +69,27 @@ public class MercenaryCaption extends Fighter
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isActionsDisabled())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			if (doTask())
 			{
 				clearTasks();
 			}
+			
 			return true;
 		}
+		
 		if (randomWalk())
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -122,10 +127,12 @@ public class MercenaryCaption extends Fighter
 		{
 			_tick = 0;
 		}
+		
 		if (_tick == -1)
 		{
 			return;
 		}
+		
 		if (_tick < _points.size())
 		{
 			addTaskMove(_points.get(_tick++), true);

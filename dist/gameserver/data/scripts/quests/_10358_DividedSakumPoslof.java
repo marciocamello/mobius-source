@@ -56,7 +56,6 @@ public class _10358_DividedSakumPoslof extends Quest implements ScriptFile
 		addKillId(poslov);
 		addKillNpcWithLog(1, vilan_item, 23, vilan);
 		addKillNpcWithLog(1, zombi_item, 20, zombi);
-		
 		addLevelCheck(32, 40);
 		addQuestCompletedCheck(_10337_SakumsImpact.class);
 	}
@@ -65,6 +64,7 @@ public class _10358_DividedSakumPoslof extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -72,6 +72,7 @@ public class _10358_DividedSakumPoslof extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "0-3.htm";
 		}
+		
 		if (event.equalsIgnoreCase("qet_rev"))
 		{
 			htmltext = "1-3.htm";
@@ -81,12 +82,14 @@ public class _10358_DividedSakumPoslof extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		if (event.equalsIgnoreCase("1-3.htm"))
 		{
 			htmltext = "1-3.htm";
 			st.setCond(2);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return htmltext;
 	}
 	
@@ -166,6 +169,7 @@ public class _10358_DividedSakumPoslof extends Quest implements ScriptFile
 		if ((npcId == poslov) && (st.getCond() == 3))
 		{
 			++killedposlov;
+			
 			if (killedposlov >= 1)
 			{
 				st.setCond(4);
@@ -173,6 +177,7 @@ public class _10358_DividedSakumPoslof extends Quest implements ScriptFile
 				killedposlov = 0;
 			}
 		}
+		
 		return null;
 	}
 }

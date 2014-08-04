@@ -32,7 +32,6 @@ public class ExMoveToLocationAirShip extends L2GameServerPacket
 	{
 		writeEx(0x66);
 		writeD(_objectId);
-		
 		writeD(_destination.x);
 		writeD(_destination.y);
 		writeD(_destination.z);

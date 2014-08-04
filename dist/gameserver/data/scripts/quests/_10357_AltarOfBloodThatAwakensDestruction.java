@@ -47,10 +47,8 @@ public class _10357_AltarOfBloodThatAwakensDestruction extends Quest implements 
 		addStartNpc(JORJINO);
 		addTalkId(JORJINO);
 		addTalkId(ELKARDIA);
-		
 		addKillNpcWithLog(2, A_LIST, 1, 25876); // recheck this npc (more than one!)
 		addKillNpcWithLog(2, B_LIST, 1, 25877);
-		
 		addLevelCheck(95, 100);
 	}
 	
@@ -63,11 +61,13 @@ public class _10357_AltarOfBloodThatAwakensDestruction extends Quest implements 
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		if (event.equalsIgnoreCase("32798-1.htm"))
 		{
 			st.setCond(2);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		if (event.startsWith("give"))
 		{
 			if (event.equalsIgnoreCase("givematerials"))
@@ -85,11 +85,13 @@ public class _10357_AltarOfBloodThatAwakensDestruction extends Quest implements 
 			{
 				st.giveItems(34861, 2);
 			}
+			
 			st.addExpAndSp(11000000, 5000000);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 			return "33515-7.htm";
 		}
+		
 		return event;
 	}
 	
@@ -144,6 +146,7 @@ public class _10357_AltarOfBloodThatAwakensDestruction extends Quest implements 
 				return "32798-5.htm";
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -151,17 +154,21 @@ public class _10357_AltarOfBloodThatAwakensDestruction extends Quest implements 
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if (cond != 2)
 		{
 			return null;
 		}
+		
 		boolean doneKill = updateKill(npc, st);
+		
 		if (doneKill)
 		{
 			st.unset(A_LIST);
 			st.unset(B_LIST);
 			st.setCond(3);
 		}
+		
 		return null;
 	}
 }

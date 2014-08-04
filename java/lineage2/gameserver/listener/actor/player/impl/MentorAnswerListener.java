@@ -52,14 +52,17 @@ public class MentorAnswerListener implements OnAnswerListener
 	public void sayYes()
 	{
 		Player player = _playerRef.get();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (player.isDead() || !player.getReflection().isDefault() || player.isInOlympiadMode() || player.isInObserverMode() || player.isTeleporting() || (player.getTeam() != TeamType.NONE))
 		{
 			return;
 		}
+		
 		player.teleToLocation(World.getPlayer(_mentee).getLoc());
 	}
 	

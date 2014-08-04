@@ -207,6 +207,7 @@ public final class WeaponTemplate extends ItemTemplate
 		_rndDam = set.getInteger("rnd_dam", 0);
 		_atkReuse = set.getInteger("atk_reuse", type == WeaponType.BOW ? Config.BOW_REUSE : type == WeaponType.CROSSBOW ? Config.CROSSBOW_REUSE : 0);
 		_mpConsume = set.getInteger("mp_consume", 0);
+		
 		if (getItemType() == WeaponType.NONE)
 		{
 			_type1 = TYPE1_SHIELD_ARMOR;
@@ -217,9 +218,11 @@ public final class WeaponTemplate extends ItemTemplate
 			_type1 = TYPE1_WEAPON_RING_EARRING_NECKLACE;
 			_type2 = TYPE2_WEAPON;
 		}
+		
 		if (getItemType() == WeaponType.PET)
 		{
 			_type1 = ItemTemplate.TYPE1_WEAPON_RING_EARRING_NECKLACE;
+			
 			if (_bodyPart == ItemTemplate.SLOT_WOLF)
 			{
 				_type2 = ItemTemplate.TYPE2_PET_WOLF;
@@ -236,6 +239,7 @@ public final class WeaponTemplate extends ItemTemplate
 			{
 				_type2 = ItemTemplate.TYPE2_PET_STRIDER;
 			}
+			
 			_bodyPart = ItemTemplate.SLOT_R_HAND;
 		}
 	}
@@ -324,10 +328,13 @@ public final class WeaponTemplate extends ItemTemplate
 		{
 			case BOW:
 				return 460;
+				
 			case CROSSBOW:
 				return 360;
+				
 			case POLE:
 				return 40;
+				
 			default:
 				return 0;
 		}
@@ -344,6 +351,7 @@ public final class WeaponTemplate extends ItemTemplate
 		{
 			_critical = (int) Math.round(f._value / 10);
 		}
+		
 		super.attachFunc(f);
 	}
 	

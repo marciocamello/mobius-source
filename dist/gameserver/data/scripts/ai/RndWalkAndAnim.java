@@ -47,11 +47,14 @@ public class RndWalkAndAnim extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isMoving)
 		{
 			return false;
 		}
+		
 		final int val = Rnd.get(100);
+		
 		if (val < 10)
 		{
 			randomWalk();
@@ -60,6 +63,7 @@ public class RndWalkAndAnim extends DefaultAI
 		{
 			actor.onRandomAnimation();
 		}
+		
 		return false;
 	}
 	
@@ -71,10 +75,12 @@ public class RndWalkAndAnim extends DefaultAI
 	protected boolean randomWalk()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return false;
 		}
+		
 		final Location sloc = actor.getSpawnedLoc();
 		final int x = (sloc.x + Rnd.get(2 * PET_WALK_RANGE)) - PET_WALK_RANGE;
 		final int y = (sloc.y + Rnd.get(2 * PET_WALK_RANGE)) - PET_WALK_RANGE;

@@ -33,7 +33,7 @@ import lineage2.gameserver.utils.Location;
 public class WorkshopServantInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -79,6 +79,7 @@ public class WorkshopServantInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.startsWith("getmedals"))
 		{
 			for (int medal : medals)
@@ -89,6 +90,7 @@ public class WorkshopServantInstance extends NpcInstance
 					return;
 				}
 			}
+			
 			Functions.addItem(player, medals[Rnd.get(0, 4)], 1);
 			player.sendPacket(new NpcHtmlMessage(player, this).setHtml("Ingenious Contraption:<br><br>The medal for access to Anomic Founrdy has been given."));
 		}
@@ -115,21 +117,26 @@ public class WorkshopServantInstance extends NpcInstance
 			for (NpcInstance challenger : World.getAroundNpc(this, 600, 300))
 			{
 				challenger.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, player, 5000);
+				
 				switch (challenger.getNpcId())
 				{
 					case 25600:
 						Functions.npcSay(challenger, phrases[0]);
 						break;
+					
 					case 25601:
 						Functions.npcSay(challenger, phrases[1]);
 						break;
+					
 					case 25602:
 						Functions.npcSay(challenger, phrases[2]);
 						break;
+					
 					default:
 						break;
 				}
 			}
+			
 			Functions.npcSay(this, "Oh...");
 			doDie(null);
 		}
@@ -140,12 +147,15 @@ public class WorkshopServantInstance extends NpcInstance
 				player.sendPacket(Msg.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
 				return;
 			}
+			
 			Party party = player.getParty();
+			
 			if (!party.isLeader(player))
 			{
 				player.sendPacket(Msg.ONLY_A_PARTY_LEADER_CAN_TRY_TO_ENTER);
 				return;
 			}
+			
 			for (Player p : party.getPartyMembers())
 			{
 				if (!this.isInRange(p, 500))
@@ -154,6 +164,7 @@ public class WorkshopServantInstance extends NpcInstance
 					return;
 				}
 			}
+			
 			for (int i = 0; i < medals.length; i++)
 			{
 				if (!hasItem(party, medals[i]))
@@ -162,6 +173,7 @@ public class WorkshopServantInstance extends NpcInstance
 					return;
 				}
 			}
+			
 			party.Teleport(new Location(25512, 247240, -2656));
 		}
 		else
@@ -181,6 +193,7 @@ public class WorkshopServantInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String pom;
+		
 		if (val == 0)
 		{
 			pom = String.valueOf(npcId);
@@ -189,6 +202,7 @@ public class WorkshopServantInstance extends NpcInstance
 		{
 			pom = npcId + "-" + val;
 		}
+		
 		if (getNpcId() == 32372)
 		{
 			if (this.isInZone("[tully5]"))
@@ -196,6 +210,7 @@ public class WorkshopServantInstance extends NpcInstance
 				return "default/32372-floor.htm";
 			}
 		}
+		
 		return "default/" + pom + ".htm";
 	}
 	
@@ -214,6 +229,7 @@ public class WorkshopServantInstance extends NpcInstance
 				return true;
 			}
 		}
+		
 		return false;
 	}
 }

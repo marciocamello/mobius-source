@@ -61,6 +61,7 @@ public class PetInventoryUpdate extends L2GameServerPacket
 	{
 		writeC(0xb4);
 		writeH(_items.size());
+		
 		for (ItemInfo temp : _items)
 		{
 			writeH(temp.getLastChange());

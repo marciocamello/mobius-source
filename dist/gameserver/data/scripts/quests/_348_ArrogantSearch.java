@@ -243,7 +243,6 @@ public class _348_ArrogantSearch extends Quest implements ScriptFile
 	public _348_ArrogantSearch()
 	{
 		super(true);
-		
 		addStartNpc(HANELLIN);
 		addTalkId(ARK_GUARDIANS_CORPSE);
 		
@@ -273,16 +272,13 @@ public class _348_ArrogantSearch extends Quest implements ScriptFile
 		if (event.equals("30864_02"))
 		{
 			st.setCond(2);
-			
 			htmltext = "30864-03.htm";
 		}
 		else if (event.equals("30864_04a")) // work alone
 		{
 			st.setCond(4);
 			st.takeItems(SHELL_OF_MONSTERS, -1);
-			
 			htmltext = "30864-04c.htm";
-			
 			st.set("companions", "0");
 		}
 		else if (event.equals("30864_04b")) // work with friends
@@ -290,7 +286,6 @@ public class _348_ArrogantSearch extends Quest implements ScriptFile
 			st.setCond(3);
 			st.set("companions", "1");
 			st.takeItems(SHELL_OF_MONSTERS, -1);
-			
 			htmltext = "not yet implemented";
 			// todo: give flowers & handle the multiperson quest...
 		}
@@ -316,9 +311,7 @@ public class _348_ArrogantSearch extends Quest implements ScriptFile
 			if (st.getQuestItemsCount(BLOODED_FABRIC) > 1)
 			{
 				long count = st.takeItems(BLOODED_FABRIC, -1);
-				
 				st.giveItems(ADENA_ID, count * 5000, true);
-				
 				htmltext = "30864-10.htm";
 			}
 			else
@@ -347,7 +340,6 @@ public class _348_ArrogantSearch extends Quest implements ScriptFile
 				if (st.getQuestItemsCount(BLOODED_FABRIC) >= 1)
 				{
 					htmltext = "30864-Baium.htm";
-					
 					st.exitCurrentQuest(true);
 				}
 				else
@@ -358,14 +350,12 @@ public class _348_ArrogantSearch extends Quest implements ScriptFile
 					if (st.getPlayer().getLevel() < 60)
 					{
 						htmltext = "30864-01.htm"; // not qualified
-						
 						st.exitCurrentQuest(true);
 					}
 					else if (cond == 0)
 					{
 						st.setState(STARTED);
 						st.setCond(1);
-						
 						htmltext = "30864-02.htm"; // Successful start: begin the dialog which will set cond=2
 					}
 				}
@@ -390,7 +380,6 @@ public class _348_ArrogantSearch extends Quest implements ScriptFile
 				st.giveItems(HANELLINS_FIRST_LETTER, 1);
 				st.giveItems(HANELLINS_SECOND_LETTER, 1);
 				st.giveItems(HANELLINS_THIRD_LETTER, 1);
-				
 				htmltext = "30864-05.htm"; // Go get the 3 sacred relics
 			}
 			else if ((cond == 5) && ((st.getQuestItemsCount(BOOK_OF_SAINT) + st.getQuestItemsCount(BLOOD_OF_SAINT) + st.getQuestItemsCount(BRANCH_OF_SAINT)) < 3))
@@ -400,7 +389,6 @@ public class _348_ArrogantSearch extends Quest implements ScriptFile
 			else if (cond == 5)
 			{
 				htmltext = "30864-06.htm"; // All relics collected!...Get me antidotes & greater healing
-				
 				st.takeItems(BOOK_OF_SAINT, -1);
 				st.takeItems(BLOOD_OF_SAINT, -1);
 				st.takeItems(BRANCH_OF_SAINT, -1);
@@ -418,17 +406,13 @@ public class _348_ArrogantSearch extends Quest implements ScriptFile
 				if (st.getInt("companions") == 0)
 				{
 					st.setCond(25);
-					
 					htmltext = "30864-07.htm"; // go get platinum tribe blood...
-					
 					st.giveItems(WHITE_FABRIC_1, 1);
 				}
 				else
 				{
 					st.setCond(23);
-					
 					htmltext = "not implemented yet";
-					
 					st.giveItems(WHITE_FABRIC_0, 3);
 				}
 			}
@@ -473,16 +457,13 @@ public class _348_ArrogantSearch extends Quest implements ScriptFile
 				if (st.getQuestItemsCount(ARK_OWNERS.get(npcId)[0]) == 1)
 				{
 					st.takeItems(ARK_OWNERS.get(npcId)[0], 1);
-					
 					htmltext = ARK_OWNERS_TEXT.get(npcId)[0];
-					
 					st.getPlayer().sendPacket(new RadarControl(0, 1, ARK_OWNERS.get(npcId)[2], ARK_OWNERS.get(npcId)[3], ARK_OWNERS.get(npcId)[4]));
 				}
 				// do not have letter and do not have the item
 				else if (st.getQuestItemsCount(ARK_OWNERS.get(npcId)[1]) < 1)
 				{
 					htmltext = ARK_OWNERS_TEXT.get(npcId)[1];
-					
 					st.getPlayer().sendPacket(new RadarControl(0, 1, ARK_OWNERS.get(npcId)[2], ARK_OWNERS.get(npcId)[3], ARK_OWNERS.get(npcId)[4]));
 				}
 				else
@@ -512,7 +493,6 @@ public class _348_ArrogantSearch extends Quest implements ScriptFile
 				// the player has the key and doesn't have the contents, give the contents
 				{
 					htmltext = ARKS_TEXT.get(npcId)[1];
-					
 					st.takeItems(ARKS.get(npcId)[0], 1);
 					st.giveItems(ARKS.get(npcId)[2], 1);
 				}
@@ -523,13 +503,11 @@ public class _348_ArrogantSearch extends Quest implements ScriptFile
 				if ((st.getQuestItemsCount(FIRST_KEY_OF_ARK) == 0) && (st.getInt("angelKillerIsDefeated") == 0))
 				{
 					st.addSpawn(ANGEL_KILLER, 120000);
-					
 					htmltext = "30980-01.htm";
 				}
 				else if ((st.getQuestItemsCount(FIRST_KEY_OF_ARK) == 0) && (st.getInt("angelKillerIsDefeated") == 1))
 				{
 					st.giveItems(FIRST_KEY_OF_ARK, 1);
-					
 					htmltext = "30980-02.htm";
 				}
 				else

@@ -85,7 +85,6 @@ public class UserInfo extends L2GameServerPacket
 		else
 		{
 			_name = player.getName();
-			
 			Clan clan = player.getClan();
 			Alliance alliance = clan == null ? null : clan.getAlliance();
 			//
@@ -95,7 +94,6 @@ public class UserInfo extends L2GameServerPacket
 			//
 			ally_id = alliance == null ? 0 : alliance.getAllyId();
 			ally_crest_id = alliance == null ? 0 : alliance.getAllyCrestId();
-			
 			cw_level = 0;
 			title = player.getTitle();
 		}
@@ -131,11 +129,9 @@ public class UserInfo extends L2GameServerPacket
 		}
 		
 		_weaponFlag = player.getActiveWeaponInstance() == null ? 0x14 : 0x28;
-		
 		move_speed = player.getMovementSpeedMultiplier();
 		_runSpd = (int) (player.getRunSpeed() / move_speed);
 		_walkSpd = (int) (player.getWalkSpeed() / move_speed);
-		
 		_flRunSpd = (int) player.getTemplate().getBaseFlyRunSpd();
 		_flWalkSpd = (int) player.getTemplate().getBaseFlyWalkSpd();
 		
@@ -152,8 +148,8 @@ public class UserInfo extends L2GameServerPacket
 		
 		_swimRunSpd = player.getSwimRunSpeed();
 		_swimWalkSpd = player.getSwimWalkSpeed();
-		
 		_inv = new int[Inventory.PAPERDOLL_MAX][3];
+		
 		for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
 		{
 			_inv[PAPERDOLL_ID][0] = player.getInventory().getPaperdollObjectId(PAPERDOLL_ID);
@@ -162,6 +158,7 @@ public class UserInfo extends L2GameServerPacket
 		}
 		
 		_relation = player.isClanLeader() ? 0x40 : 0;
+		
 		for (GlobalEvent e : player.getEvents())
 		{
 			_relation = e.getUserRelation(player, _relation);
@@ -278,7 +275,6 @@ public class UserInfo extends L2GameServerPacket
 		}
 		
 		writeC(0x32);
-		
 		writeD(_loc.x);
 		writeD(_loc.y);
 		writeD(_loc.z + Config.CLIENT_Z_SHIFT);
@@ -323,7 +319,6 @@ public class UserInfo extends L2GameServerPacket
 		
 		writeD(talismans);
 		writeD(openCloak ? 0x01 : 0x00);
-		
 		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_RHAND)); // Tauti
 		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_LHAND)); // Tauti
 		writeD(0); // Tauti
@@ -333,7 +328,6 @@ public class UserInfo extends L2GameServerPacket
 		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_FEET)); // Tauti
 		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_HAIR)); // Tauti
 		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_DHAIR)); // Tauti
-		
 		writeD(_patk);
 		writeD(_patkspd);
 		writeD(_pdef);
@@ -380,10 +374,12 @@ public class UserInfo extends L2GameServerPacket
 		writeD(pk_kills);
 		writeD(pvp_kills);
 		writeH(cubics.length);
+		
 		for (EffectCubic cubic : cubics)
 		{
 			writeH(cubic == null ? 0 : cubic.getId());
 		}
+		
 		writeC(partyRoom ? 0x01 : 0x00); // 1-find party members
 		writeC(isFlying ? 0x02 : 0x00);
 		writeD(ClanPrivs);
@@ -411,7 +407,6 @@ public class UserInfo extends L2GameServerPacket
 		writeD(title_color);
 		writeD(cw_level);
 		writeD(transformation); // Transformation id
-		
 		// AttackElement (0 - Fire, 1 - Water, 2 - Wind, 3 - Earth, 4 - Holy, 5
 		// - Dark, -2 - None)
 		writeH(attackElement.getId());
@@ -422,14 +417,11 @@ public class UserInfo extends L2GameServerPacket
 		writeH(defenceEarth); // DefAttrEarth
 		writeH(defenceHoly); // DefAttrHoly
 		writeH(defenceUnholy); // DefAttrUnholy
-		
 		writeD(agathion);
-		
 		// T2 Starts
 		writeD(fame); // Fame
 		writeD(_allowMap ? 1 : 0); // Minimap on Hellbound
 		writeD(vitality); // Vitality Points
-		
 		writeD(0x00);// Unknown GOD
 		writeD(0x00);// Unknown GOD (1 - Party searching?)
 		writeC(_partySubstitute);
@@ -438,6 +430,7 @@ public class UserInfo extends L2GameServerPacket
 		if (_aveList != null)
 		{
 			writeD(_aveList.size());
+			
 			for (int i : _aveList)
 			{
 				writeD(i);
@@ -447,6 +440,7 @@ public class UserInfo extends L2GameServerPacket
 		{
 			writeD(0x00);
 		}
+		
 		writeC(0x00);
 	}
 }

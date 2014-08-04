@@ -31,6 +31,7 @@ public class ExChangeAttributeItemList extends L2GameServerPacket
 		writeEx(0x118);
 		writeD(_itemId);
 		writeD(_itemsList.length); // size
+		
 		for (ItemInfo item : _itemsList)
 		{
 			writeItemInfo(item);

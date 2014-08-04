@@ -67,6 +67,7 @@ public class _359_ForSleeplessDeadmen extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("30857-06.htm"))
 		{
 			st.setState(STARTED);
@@ -83,6 +84,7 @@ public class _359_ForSleeplessDeadmen extends Quest implements ScriptFile
 			st.setCond(1);
 			int chance = Rnd.get(100);
 			int item;
+			
 			if (chance <= 16)
 			{
 				item = PhoenixNeclPart;
@@ -115,8 +117,10 @@ public class _359_ForSleeplessDeadmen extends Quest implements ScriptFile
 			{
 				item = NightmareShieldPart;
 			}
+			
 			st.giveItems(item, 4, true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -126,6 +130,7 @@ public class _359_ForSleeplessDeadmen extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int id = st.getState();
 		int cond = st.getCond();
+		
 		if (id == CREATED)
 		{
 			if (st.getPlayer().getLevel() < 60)
@@ -155,6 +160,7 @@ public class _359_ForSleeplessDeadmen extends Quest implements ScriptFile
 		{
 			htmltext = "30857-05.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -162,9 +168,11 @@ public class _359_ForSleeplessDeadmen extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		long count = st.getQuestItemsCount(REMAINS);
+		
 		if ((count < REQUIRED) && Rnd.chance(DROP_RATE))
 		{
 			st.giveItems(REMAINS, 1);
+			
 			if ((count + 1) >= REQUIRED)
 			{
 				st.playSound(SOUND_MIDDLE);
@@ -175,6 +183,7 @@ public class _359_ForSleeplessDeadmen extends Quest implements ScriptFile
 				st.playSound(SOUND_ITEMGET);
 			}
 		}
+		
 		return null;
 	}
 }

@@ -167,6 +167,7 @@ public class WalkerRouteTemplate
 			{
 				_loc = new Location(_x, _y, _z, _h);
 			}
+			
 			return _loc;
 		}
 		

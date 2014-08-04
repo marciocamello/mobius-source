@@ -76,8 +76,8 @@ public class BirthingRoom implements ScriptFile
 			}
 			
 			Player player = cha.getPlayer();
-			
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(InstanceId))

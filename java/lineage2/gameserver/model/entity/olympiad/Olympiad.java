@@ -196,30 +196,37 @@ public class Olympiad
 		_validationEnd = ServerVariables.getLong("Olympiad_ValdationEnd", -1);
 		_nextWeeklyChange = ServerVariables.getLong("Olympiad_NextWeeklyChange", -1);
 		ExProperties olympiadProperties = Config.load(Config.OLYMPIAD_DATA_FILE);
+		
 		if (_currentCycle == -1)
 		{
 			_currentCycle = olympiadProperties.getProperty("CurrentCycle", 1);
 		}
+		
 		if (_period == -1)
 		{
 			_period = olympiadProperties.getProperty("Period", 0);
 		}
+		
 		if (_olympiadEnd == -1)
 		{
 			_olympiadEnd = olympiadProperties.getProperty("OlympiadEnd", 0L);
 		}
+		
 		if (_validationEnd == -1)
 		{
 			_validationEnd = olympiadProperties.getProperty("ValdationEnd", 0L);
 		}
+		
 		if (_nextWeeklyChange == -1)
 		{
 			_nextWeeklyChange = olympiadProperties.getProperty("NextWeeklyChange", 0L);
 		}
+		
 		initStadiums();
 		OlympiadHistoryManager.getInstance();
 		OlympiadNobleDAO.getInstance().select();
 		OlympiadDatabase.loadNoblesRank();
+		
 		switch (_period)
 		{
 			case 0:
@@ -231,16 +238,21 @@ public class Olympiad
 				{
 					_isOlympiadEnd = false;
 				}
+				
 				break;
+			
 			case 1:
 				_isOlympiadEnd = true;
 				_scheduledValdationTask = ThreadPoolManager.getInstance().schedule(new ValidationTask(), getMillisToValidationEnd());
 				break;
+			
 			default:
 				_log.warn("Olympiad System: Omg something went wrong in loading!! Period = " + _period);
 				return;
 		}
+		
 		_log.info("Olympiad System: Loading Olympiad System....");
+		
 		if (_period == 0)
 		{
 			_log.info("Olympiad System: Currently in Olympiad Period");
@@ -249,8 +261,10 @@ public class Olympiad
 		{
 			_log.info("Olympiad System: Currently in Validation Period");
 		}
+		
 		_log.info("Olympiad System: Period Ends....");
 		long milliToEnd;
+		
 		if (_period == 0)
 		{
 			milliToEnd = getMillisToOlympiadEnd();
@@ -259,6 +273,7 @@ public class Olympiad
 		{
 			milliToEnd = getMillisToValidationEnd();
 		}
+		
 		double numSecs = (milliToEnd / 1000) % 60;
 		double countDown = ((milliToEnd / 1000) - numSecs) / 60;
 		int numMins = (int) Math.floor(countDown % 60);
@@ -266,6 +281,7 @@ public class Olympiad
 		int numHours = (int) Math.floor(countDown % 24);
 		int numDays = (int) Math.floor((countDown - numHours) / 24);
 		_log.info("Olympiad System: In " + numDays + " days, " + numHours + " hours and " + numMins + " mins.");
+		
 		if (_period == 0)
 		{
 			_log.info("Olympiad System: Next Weekly Change is in....");
@@ -278,7 +294,9 @@ public class Olympiad
 			int numDays2 = (int) Math.floor((countDown2 - numHours2) / 24);
 			_log.info("Olympiad System: In " + numDays2 + " days, " + numHours2 + " hours and " + numMins2 + " mins.");
 		}
+		
 		_log.info("Olympiad System: Loaded " + _nobles.size() + " Noblesses");
+		
 		if (_period == 0)
 		{
 			init();
@@ -308,27 +326,34 @@ public class Olympiad
 		{
 			return;
 		}
+		
 		int nowDay = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
+		
 		if ((nowDay > Calendar.SUNDAY) && (nowDay < Calendar.FRIDAY) && !Config.ALT_OLY_DAYS)
 		{
 			_log.info("Olympiad System: NotStarted. Day of week: " + nowDay);
 			return;
 		}
+		
 		_log.info("Olympiad System: Started. Day of week: " + nowDay);
 		_compStart = Calendar.getInstance();
 		_compStart.set(Calendar.HOUR_OF_DAY, Config.ALT_OLY_START_TIME);
 		_compStart.set(Calendar.MINUTE, Config.ALT_OLY_MIN);
 		_compEnd = _compStart.getTimeInMillis() + Config.ALT_OLY_CPERIOD;
+		
 		if (_scheduledOlympiadEnd != null)
 		{
 			_scheduledOlympiadEnd.cancel(false);
 		}
+		
 		_scheduledOlympiadEnd = ThreadPoolManager.getInstance().schedule(new OlympiadEndTask(), getMillisToOlympiadEnd());
 		updateCompStatus();
+		
 		if (_scheduledWeeklyTask != null)
 		{
 			_scheduledWeeklyTask.cancel(false);
 		}
+		
 		_scheduledWeeklyTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new WeeklyTask(), getMillisToWeekChange(), Config.ALT_OLY_WPERIOD);
 	}
 	
@@ -345,36 +370,45 @@ public class Olympiad
 			noble.sendPacket(SystemMsg.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
 			return false;
 		}
+		
 		if (getMillisToOlympiadEnd() <= (600 * 1000))
 		{
 			noble.sendPacket(SystemMsg.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
 			return false;
 		}
+		
 		if (getMillisToCompEnd() <= (600 * 1000))
 		{
 			noble.sendPacket(SystemMsg.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
 			return false;
 		}
+		
 		if (noble.isCursedWeaponEquipped())
 		{
 			noble.sendPacket(SystemMsg.YOU_CANNOT_REGISTER_WHILE_IN_POSSESSION_OF_A_CURSED_WEAPON);
 			return false;
 		}
+		
 		StatsSet nobleInfo = _nobles.get(noble.getObjectId());
+		
 		if (!validPlayer(noble, noble, type))
 		{
 			return false;
 		}
+		
 		if (getNoblePoints(noble.getObjectId()) < 3)
 		{
 			noble.sendMessage(new CustomMessage("lineage2.gameserver.model.entity.Olympiad.LessPoints", noble));
 			return false;
 		}
+		
 		if (noble.getOlympiadGame() != null)
 		{
 			return false;
 		}
+		
 		int classId = nobleInfo.getInteger(CLASS_ID);
+		
 		switch (type)
 		{
 			case CLASSED:
@@ -383,15 +417,18 @@ public class Olympiad
 				noble.sendPacket(SystemMsg.YOU_HAVE_BEEN_REGISTERED_FOR_THE_GRAND_OLYMPIAD_WAITING_LIST_FOR_A_CLASS_SPECIFIC_MATCH);
 				break;
 			}
+			
 			case NON_CLASSED:
 			{
 				_nonClassBasedRegisters.add(noble.getObjectId());
 				noble.sendPacket(SystemMsg.YOU_ARE_CURRENTLY_REGISTERED_FOR_A_1V1_CLASS_IRRELEVANT_MATCH);
 				break;
 			}
+			
 			default:
 				break;
 		}
+		
 		return true;
 	}
 	
@@ -409,17 +446,21 @@ public class Olympiad
 			sendPlayer.sendPacket(new SystemMessage2(SystemMsg.C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_ONLY_NOBLESSE_CHARACTERS_CAN_PARTICIPATE_IN_THE_OLYMPIAD).addName(validPlayer));
 			return false;
 		}
+		
 		if (validPlayer.getBaseClassId() != validPlayer.getClassId().getId())
 		{
 			sendPlayer.sendPacket(new SystemMessage2(SystemMsg.C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_SUBCLASS_CHARACTER_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD).addName(validPlayer));
 			return false;
 		}
+		
 		if (!validPlayer.isAwaking())
 		{
 			sendPlayer.sendMessage("You don't meet the requirement to play in the Olympiad.");
 			return false;
 		}
+		
 		int[] ar = getWeekGameCounts(validPlayer.getObjectId());
+		
 		switch (type)
 		{
 			case CLASSED:
@@ -428,37 +469,46 @@ public class Olympiad
 					sendPlayer.sendPacket(new SystemMessage2(SystemMsg.C1_IS_ALREADY_REGISTERED_ON_THE_CLASS_MATCH_WAITING_LIST).addName(validPlayer));
 					return false;
 				}
+				
 				if (ar[1] == 0)
 				{
 					validPlayer.sendPacket(SystemMsg.THE_TOTAL_NUMBER_OF_MATCHES_THAT_CAN_BE_ENTERED_IN_1_WEEK_IS_60_CLASS_IRRELEVANT_INDIVIDUAL_MATCHES_30_SPECIFIC_MATCHES_AND_10_TEAM_MATCHES);
 					return false;
 				}
+				
 				break;
+			
 			case NON_CLASSED:
 				if (_nonClassBasedRegisters.contains(validPlayer.getObjectId()))
 				{
 					sendPlayer.sendPacket(new SystemMessage2(SystemMsg.C1_IS_ALREADY_REGISTERED_ON_THE_WAITING_LIST_FOR_THE_CLASS_IRRELEVANT_INDIVIDUAL_MATCH).addName(validPlayer));
 					return false;
 				}
+				
 				if (ar[2] == 0)
 				{
 					validPlayer.sendPacket(SystemMsg.THE_TOTAL_NUMBER_OF_MATCHES_THAT_CAN_BE_ENTERED_IN_1_WEEK_IS_60_CLASS_IRRELEVANT_INDIVIDUAL_MATCHES_30_SPECIFIC_MATCHES_AND_10_TEAM_MATCHES);
 					return false;
 				}
+				
 				break;
+			
 			default:
 				break;
 		}
+		
 		if (ar[0] == 0)
 		{
 			validPlayer.sendPacket(SystemMsg.THE_MAXIMUM_MATCHES_YOU_CAN_PARTICIPATE_IN_1_WEEK_IS_70);
 			return false;
 		}
+		
 		if (isRegisteredInComp(validPlayer))
 		{
 			sendPlayer.sendPacket(new SystemMessage2(SystemMsg.C1_IS_ALREADY_REGISTERED_ON_THE_MATCH_WAITING_LIST).addName(validPlayer));
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -471,6 +521,7 @@ public class Olympiad
 		_classBasedRegisters.removeValue(player.getObjectId());
 		_nonClassBasedRegisters.remove(new Integer(player.getObjectId()));
 		OlympiadGame game = player.getOlympiadGame();
+		
 		if (game != null)
 		{
 			try
@@ -499,17 +550,21 @@ public class Olympiad
 			noble.sendPacket(SystemMsg.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
 			return false;
 		}
+		
 		if (!noble.isNoble())
 		{
 			noble.sendPacket(SystemMsg.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
 			return false;
 		}
+		
 		if (!isRegistered(noble))
 		{
 			noble.sendPacket(SystemMsg.YOU_ARE_NOT_CURRENTLY_REGISTERED_FOR_THE_GRAND_OLYMPIAD);
 			return false;
 		}
+		
 		OlympiadGame game = noble.getOlympiadGame();
+		
 		if (game != null)
 		{
 			if (game.getStatus() == BattleStatus.Begin_Countdown)
@@ -517,6 +572,7 @@ public class Olympiad
 				noble.sendMessage("Now you can't cancel participation in the Grand Olympiad.");
 				return false;
 			}
+			
 			try
 			{
 				if (!game.logoutPlayer(noble) && !game.validated)
@@ -529,6 +585,7 @@ public class Olympiad
 				_log.error("", e);
 			}
 		}
+		
 		_classBasedRegisters.removeValue(noble.getObjectId());
 		_nonClassBasedRegisters.remove(new Integer(noble.getObjectId()));
 		noble.sendPacket(SystemMsg.YOU_HAVE_BEEN_REMOVED_FROM_THE_GRAND_OLYMPIAD_WAITING_LIST);
@@ -571,6 +628,7 @@ public class Olympiad
 		{
 			return _validationEnd - System.currentTimeMillis();
 		}
+		
 		return 10L;
 	}
 	
@@ -602,10 +660,12 @@ public class Olympiad
 		{
 			return 10L;
 		}
+		
 		if (_compStart.getTimeInMillis() > Calendar.getInstance().getTimeInMillis())
 		{
 			return _compStart.getTimeInMillis() - Calendar.getInstance().getTimeInMillis();
 		}
+		
 		return setNewCompBegin();
 	}
 	
@@ -643,6 +703,7 @@ public class Olympiad
 		{
 			return _nextWeeklyChange - Calendar.getInstance().getTimeInMillis();
 		}
+		
 		return 10L;
 	}
 	
@@ -655,16 +716,20 @@ public class Olympiad
 		{
 			return;
 		}
+		
 		for (Map.Entry<Integer, StatsSet> entry : _nobles.entrySet())
 		{
 			StatsSet set = entry.getValue();
 			Player player = GameObjectsStorage.getPlayer(entry.getKey());
+			
 			if (_period != 1)
 			{
 				set.set(POINTS, set.getInteger(POINTS) + Config.OLYMPIAD_POINTS_WEEKLY);
 			}
+			
 			set.set(GAME_CLASSES_COUNT, 0);
 			set.set(GAME_NOCLASSES_COUNT, 0);
+			
 			if (player != null)
 			{
 				player.sendPacket(new SystemMessage2(SystemMsg.C1_HAS_EARNED_S2_POINTS_IN_THE_GRAND_OLYMPIAD_GAMES).addName(player).addInteger(Config.OLYMPIAD_POINTS_WEEKLY));
@@ -693,17 +758,21 @@ public class Olympiad
 			spectator.sendPacket(SystemMsg.YOU_MAY_NOT_OBSERVE_A_GRAND_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST);
 			return;
 		}
+		
 		if ((_manager == null) || (_manager.getOlympiadInstance(id) == null) || (_manager.getOlympiadInstance(id).getStatus() == BattleStatus.Begining) || (_manager.getOlympiadInstance(id).getStatus() == BattleStatus.Begin_Countdown))
 		{
 			spectator.sendPacket(SystemMsg.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
 			return;
 		}
+		
 		for (Summon summon : spectator.getSummonList())
 		{
 			summon.unSummon();
 		}
+		
 		OlympiadGame game = getOlympiadGame(id);
 		List<Location> spawns = game.getReflection().getInstancedZone().getTeleportCoords();
+		
 		if (spawns.size() < 3)
 		{
 			Location c1 = spawns.get(0);
@@ -727,6 +796,7 @@ public class Olympiad
 		{
 			return;
 		}
+		
 		_manager.getOlympiadInstance(id).removeSpectator(spectator);
 	}
 	
@@ -741,6 +811,7 @@ public class Olympiad
 		{
 			return null;
 		}
+		
 		return _manager.getOlympiadInstance(id).getSpectators();
 	}
 	
@@ -755,6 +826,7 @@ public class Olympiad
 		{
 			return null;
 		}
+		
 		return _manager.getOlympiadGames().get(gameId);
 	}
 	
@@ -768,6 +840,7 @@ public class Olympiad
 		{
 			return null;
 		}
+		
 		int[] array = new int[2];
 		array[0] = _classBasedRegisters.totalSize();
 		array[1] = _nonClassBasedRegisters.size();
@@ -783,37 +856,48 @@ public class Olympiad
 	{
 		int objId = player.getObjectId();
 		StatsSet noble = _nobles.get(objId);
+		
 		if (noble == null)
 		{
 			return 0;
 		}
+		
 		int points = noble.getInteger(POINTS_PAST);
+		
 		if (points == 0)
 		{
 			return 0;
 		}
+		
 		int rank = _noblesRank.get(objId);
+		
 		switch (rank)
 		{
 			case 1:
 				points = Config.ALT_OLY_RANK1_POINTS;
 				break;
+			
 			case 2:
 				points = Config.ALT_OLY_RANK2_POINTS;
 				break;
+			
 			case 3:
 				points = Config.ALT_OLY_RANK3_POINTS;
 				break;
+			
 			case 4:
 				points = Config.ALT_OLY_RANK4_POINTS;
 				break;
+			
 			default:
 				points = Config.ALT_OLY_RANK5_POINTS;
 		}
+		
 		if (player.isHero() || Hero.getInstance().isInactiveHero(player.getObjectId()))
 		{
 			points += Config.ALT_OLY_HERO_POINTS;
 		}
+		
 		noble.set(POINTS_PAST, 0);
 		OlympiadDatabase.saveNobleData(objId);
 		return points * Config.ALT_OLY_GP_PER_POINT;
@@ -830,10 +914,12 @@ public class Olympiad
 		{
 			return true;
 		}
+		
 		if (_nonClassBasedRegisters.contains(noble.getObjectId()))
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -848,10 +934,12 @@ public class Olympiad
 		{
 			return true;
 		}
+		
 		if ((_manager == null) || (_manager.getOlympiadGames() == null))
 		{
 			return false;
 		}
+		
 		for (OlympiadGame g : _manager.getOlympiadGames().values())
 		{
 			if ((g != null) && g.isRegistered(player.getObjectId()))
@@ -859,6 +947,7 @@ public class Olympiad
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -870,10 +959,12 @@ public class Olympiad
 	public static synchronized int getNoblePoints(int objId)
 	{
 		StatsSet noble = _nobles.get(objId);
+		
 		if (noble == null)
 		{
 			return 0;
 		}
+		
 		return noble.getInteger(POINTS);
 	}
 	
@@ -885,10 +976,12 @@ public class Olympiad
 	public static synchronized int getNoblePointsPast(int objId)
 	{
 		StatsSet noble = _nobles.get(objId);
+		
 		if (noble == null)
 		{
 			return 0;
 		}
+		
 		return noble.getInteger(POINTS_PAST);
 	}
 	
@@ -900,10 +993,12 @@ public class Olympiad
 	public static synchronized int getCompetitionDone(int objId)
 	{
 		StatsSet noble = _nobles.get(objId);
+		
 		if (noble == null)
 		{
 			return 0;
 		}
+		
 		return noble.getInteger(COMP_DONE);
 	}
 	
@@ -915,10 +1010,12 @@ public class Olympiad
 	public static synchronized int getCompetitionWin(int objId)
 	{
 		StatsSet noble = _nobles.get(objId);
+		
 		if (noble == null)
 		{
 			return 0;
 		}
+		
 		return noble.getInteger(COMP_WIN);
 	}
 	
@@ -930,10 +1027,12 @@ public class Olympiad
 	public static synchronized int getCompetitionLoose(int objId)
 	{
 		StatsSet noble = _nobles.get(objId);
+		
 		if (noble == null)
 		{
 			return 0;
 		}
+		
 		return noble.getInteger(COMP_LOOSE);
 	}
 	
@@ -946,10 +1045,12 @@ public class Olympiad
 	{
 		int[] ar = new int[3];
 		StatsSet noble = _nobles.get(objId);
+		
 		if (noble == null)
 		{
 			return ar;
 		}
+		
 		ar[0] = Config.GAME_MAX_LIMIT - noble.getInteger(GAME_CLASSES_COUNT) - noble.getInteger(GAME_NOCLASSES_COUNT);
 		ar[1] = Config.GAME_CLASSES_COUNT_LIMIT - noble.getInteger(GAME_CLASSES_COUNT);
 		ar[2] = Config.GAME_NOCLASSES_COUNT_LIMIT - noble.getInteger(GAME_NOCLASSES_COUNT);
@@ -991,10 +1092,12 @@ public class Olympiad
 	public static void changeNobleName(int objId, String newName)
 	{
 		StatsSet noble = _nobles.get(objId);
+		
 		if (noble == null)
 		{
 			return;
 		}
+		
 		noble.set(CHAR_NAME, newName);
 		OlympiadDatabase.saveNobleData(objId);
 	}
@@ -1007,10 +1110,12 @@ public class Olympiad
 	public static String getNobleName(int objId)
 	{
 		StatsSet noble = _nobles.get(objId);
+		
 		if (noble == null)
 		{
 			return null;
 		}
+		
 		return noble.getString(CHAR_NAME);
 	}
 	
@@ -1022,10 +1127,12 @@ public class Olympiad
 	public static int getNobleClass(int objId)
 	{
 		StatsSet noble = _nobles.get(objId);
+		
 		if (noble == null)
 		{
 			return 0;
 		}
+		
 		return noble.getInteger(CLASS_ID);
 	}
 	
@@ -1037,10 +1144,12 @@ public class Olympiad
 	public static void manualSetNoblePoints(int objId, int points)
 	{
 		StatsSet noble = _nobles.get(objId);
+		
 		if (noble == null)
 		{
 			return;
 		}
+		
 		noble.set(POINTS, points);
 		OlympiadDatabase.saveNobleData(objId);
 	}
@@ -1064,10 +1173,12 @@ public class Olympiad
 		if (!_nobles.containsKey(noble.getObjectId()))
 		{
 			int classId = noble.getBaseClassId();
+			
 			if (classId < 139)
 			{
 				return;
 			}
+			
 			StatsSet statDat = new StatsSet();
 			statDat.set(CLASS_ID, classId);
 			statDat.set(CHAR_NAME, noble.getName());

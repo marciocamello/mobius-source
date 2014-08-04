@@ -160,10 +160,12 @@ public final class EffectTemplate extends StatTemplate
 		_abnormalEffect2 = set.getEnum("abnormal2", AbnormalEffect.class);
 		_abnormalEffect3 = set.getEnum("abnormal3", AbnormalEffect.class);
 		String args[] = set.getString("stackType", NO_STACK).split(";", -1);
+		
 		for (String arg : args)
 		{
 			_stackTypes.add(arg);
 		}
+		
 		_stackOrder = set.getInteger("stackOrder", _stackTypes.contains(NO_STACK) ? 1 : 0);
 		_applyOnCaster = set.getBool("applyOnCaster", false);
 		_applyOnSummon = set.getBool("applyOnSummon", true);
@@ -193,6 +195,7 @@ public final class EffectTemplate extends StatTemplate
 		{
 			return null;
 		}
+		
 		try
 		{
 			return _effectType.makeEffect(env, this);
@@ -201,6 +204,7 @@ public final class EffectTemplate extends StatTemplate
 		{
 			_log.error("", e);
 		}
+		
 		return null;
 	}
 	
@@ -254,6 +258,7 @@ public final class EffectTemplate extends StatTemplate
 				return ef;
 			}
 		}
+		
 		return null;
 	}
 	

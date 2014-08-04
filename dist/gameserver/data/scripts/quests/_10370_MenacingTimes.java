@@ -104,6 +104,7 @@ public class _10370_MenacingTimes extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -121,6 +122,7 @@ public class _10370_MenacingTimes extends Quest implements ScriptFile
 			st.setCond(3);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return htmltext;
 	}
 	
@@ -132,6 +134,7 @@ public class _10370_MenacingTimes extends Quest implements ScriptFile
 		Player player = st.getPlayer();
 		int classid = player.getClassId().getId();
 		String htmltext = "noquest";
+		
 		if (npcId == winoin)
 		{
 			if (st.isCompleted())
@@ -201,6 +204,7 @@ public class _10370_MenacingTimes extends Quest implements ScriptFile
 				st.playSound(SOUND_FINISH);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -208,16 +212,19 @@ public class _10370_MenacingTimes extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		if ((st.getCond() == 3) && ArrayUtils.contains(mobs, npcId) && (st.getQuestItemsCount(Ashes) < 30))
 		{
 			st.rollAndGive(Ashes, 1, chance);
 			st.playSound(SOUND_ITEMGET);
 		}
+		
 		if (st.getQuestItemsCount(Ashes) >= 30)
 		{
 			st.setCond(4);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return null;
 	}
 }

@@ -54,6 +54,7 @@ public class _061_LawEnforcement extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("ask"))
 		{
 			if (st.getPlayer().getRace() != Race.kamael)
@@ -91,6 +92,7 @@ public class _061_LawEnforcement extends Quest implements ScriptFile
 			st.getPlayer().broadcastPacket(new MagicSkillUse(npc, 4339, 1, 6000, 1));
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -100,6 +102,7 @@ public class _061_LawEnforcement extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Liane)
 		{
 			if (st.getState() == CREATED)
@@ -126,6 +129,7 @@ public class _061_LawEnforcement extends Quest implements ScriptFile
 		{
 			htmltext = "subelder_aientburg_q0061_01.htm";
 		}
+		
 		return htmltext;
 	}
 	

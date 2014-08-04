@@ -158,6 +158,7 @@ public class ExtractStone extends Skill
 	{
 		super(set);
 		StringTokenizer st = new StringTokenizer(set.getString("npcIds", ""), ";");
+		
 		while (st.hasMoreTokens())
 		{
 			_npcIds.add(Integer.valueOf(st.nextToken()));
@@ -181,11 +182,13 @@ public class ExtractStone extends Skill
 			activeChar.sendPacket(Msg.INVALID_TARGET);
 			return false;
 		}
+		
 		if (!_npcIds.isEmpty() && !_npcIds.contains(new Integer(target.getNpcId())))
 		{
 			activeChar.sendPacket(Msg.INVALID_TARGET);
 			return false;
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
@@ -205,7 +208,9 @@ public class ExtractStone extends Skill
 				{
 					return ExtractedCoarseRedStarStone;
 				}
+				
 				return ExtractedRedStarStone;
+				
 			case BlueStarStone1:
 			case BlueStarStone2:
 			case BlueStarStone3:
@@ -213,7 +218,9 @@ public class ExtractStone extends Skill
 				{
 					return ExtractedCoarseBlueStarStone;
 				}
+				
 				return ExtractedBlueStarStone;
+				
 			case GreenStarStone1:
 			case GreenStarStone2:
 			case GreenStarStone3:
@@ -221,19 +228,27 @@ public class ExtractStone extends Skill
 				{
 					return ExtractedCoarseGreenStarStone;
 				}
+				
 				return ExtractedGreenStarStone;
+				
 			case SeedFire:
 				return FireEnergyCompressionStone;
+				
 			case SeedWater:
 				return WaterEnergyCompressionStone;
+				
 			case SeedWind:
 				return WindEnergyCompressionStone;
+				
 			case SeedEarth:
 				return EarthEnergyCompressionStone;
+				
 			case SeedDarkness:
 				return DarknessEnergyCompressionStone;
+				
 			case SeedDivinity:
 				return SacredEnergyCompressionStone;
+				
 			default:
 				return 0;
 		}
@@ -248,10 +263,12 @@ public class ExtractStone extends Skill
 	public void useSkill(Creature activeChar, List<Creature> targets)
 	{
 		Player player = activeChar.getPlayer();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		for (Creature target : targets)
 		{
 			if ((target != null) && (getItemId(target.getNpcId()) != 0))
@@ -259,6 +276,7 @@ public class ExtractStone extends Skill
 				double rate = Config.RATE_QUESTS_DROP * player.getBonus().getQuestDropRate();
 				long count = _id == ExtractScrollSkill ? 1 : Math.min(10, Rnd.get((int) ((getLevel() * rate) + 1)));
 				int itemId = getItemId(target.getNpcId());
+				
 				if (count > 0)
 				{
 					player.getInventory().addItem(itemId, count);
@@ -270,9 +288,11 @@ public class ExtractStone extends Skill
 				{
 					player.sendPacket(Msg.THE_COLLECTION_HAS_FAILED);
 				}
+				
 				target.doDie(player);
 			}
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());

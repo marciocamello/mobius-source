@@ -50,22 +50,28 @@ public final class RequestPetition extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (Config.EX_NEW_PETITION_SYSTEM)
 		{
 			PetitionMainGroup group = player.getPetitionGroup();
+			
 			if (group == null)
 			{
 				return;
 			}
+			
 			PetitionSubGroup subGroup = group.getSubGroup(_type);
+			
 			if (subGroup == null)
 			{
 				return;
 			}
+			
 			subGroup.getHandler().handle(player, _type, _content);
 		}
 		else

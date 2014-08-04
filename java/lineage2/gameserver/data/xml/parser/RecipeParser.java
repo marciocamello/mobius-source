@@ -89,9 +89,11 @@ public final class RecipeParser extends AbstractFileParser<RecipeHolder>
 			final int itemId = Integer.parseInt(element.attributeValue("item_id"));
 			final boolean isDwarven = element.attributeValue("is_dwarven") == null ? false : Boolean.parseBoolean(element.attributeValue("is_dwarven"));
 			RecipeTemplate recipe = new RecipeTemplate(id, level, mpConsume, successRate, itemId, isDwarven);
+			
 			for (Iterator<Element> subIterator = element.elementIterator(); subIterator.hasNext();)
 			{
 				Element subElement = subIterator.next();
+				
 				if ("materials".equalsIgnoreCase(subElement.getName()))
 				{
 					for (Element e : subElement.elements())
@@ -130,6 +132,7 @@ public final class RecipeParser extends AbstractFileParser<RecipeHolder>
 					}
 				}
 			}
+			
 			getHolder().addRecipe(recipe);
 		}
 	}

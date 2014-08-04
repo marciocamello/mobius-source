@@ -91,6 +91,7 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		{
 			FortressSiegeEvent siegeEvent = actor.getEvent(FortressSiegeEvent.class);
 			SpawnExObject siegeCommanders = siegeEvent.getFirstObject(FortressSiegeEvent.SIEGE_COMMANDERS);
+			
 			if (siegeCommanders.isSpawned())
 			{
 				siegeEvent.broadcastTo(SystemMsg.THE_BARRACKS_FUNCTION_HAS_BEEN_RESTORED, SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
@@ -209,12 +210,15 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		_barrackStatus = new boolean[exObject.getSpawns().size()];
 		int lvl = getResidence().getFacilityLevel(Fortress.DOOR_UPGRADE);
 		List<DoorObject> doorObjects = getObjects(UPGRADEABLE_DOORS);
+		
 		for (DoorObject d : doorObjects)
 		{
 			d.setUpgradeValue(this, d.getDoor().getMaxHp() * lvl);
 			d.getDoor().addListener(_doorDeathListener);
 		}
+		
 		flagPoleUpdate(false);
+		
 		if (getResidence().getOwnerId() > 0)
 		{
 			spawnEnvoy();
@@ -228,10 +232,12 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 	public void startEvent()
 	{
 		_oldOwner = getResidence().getOwner();
+		
 		if (_oldOwner != null)
 		{
 			addObject(DEFENDERS, new SiegeClanObject(DEFENDERS, _oldOwner, 0));
 		}
+		
 		SiegeClanDAO.getInstance().delete(getResidence());
 		flagPoleUpdate(true);
 		updateParticles(true, ATTACKERS, DEFENDERS);
@@ -250,6 +256,7 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		updateParticles(false, ATTACKERS, DEFENDERS);
 		broadcastTo(new SystemMessage2(SystemMsg.THE_FORTRESS_BATTLE_OF_S1_HAS_FINISHED).addResidenceName(getResidence()), ATTACKERS, DEFENDERS);
 		Clan ownerClan = getResidence().getOwner();
+		
 		if (ownerClan != null)
 		{
 			if (_oldOwner != ownerClan)
@@ -266,11 +273,14 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		{
 			getResidence().getOwnDate().setTimeInMillis(0);
 		}
+		
 		List<SiegeClanObject> attackers = removeObjects(ATTACKERS);
+		
 		for (SiegeClanObject siegeClan : attackers)
 		{
 			siegeClan.deleteFlag();
 		}
+		
 		removeObjects(DEFENDERS);
 		flagPoleUpdate(false);
 		super.stopEvent(step);
@@ -287,6 +297,7 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		Calendar startSiegeDate = getResidence().getSiegeDate();
 		Calendar lastSiegeDate = getResidence().getLastSiegeDate();
 		final long currentTimeMillis = System.currentTimeMillis();
+		
 		if (startSiegeDate.getTimeInMillis() > currentTimeMillis)
 		{
 			if (attackersSize > 0)
@@ -295,10 +306,13 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 				{
 					registerActions();
 				}
+				
 				return;
 			}
 		}
+		
 		clearActions();
+		
 		if (attackersSize > 0)
 		{
 			if ((currentTimeMillis - lastSiegeDate.getTimeInMillis()) > SIEGE_WAIT_PERIOD)
@@ -311,12 +325,14 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 				startSiegeDate.setTimeInMillis(lastSiegeDate.getTimeInMillis());
 				startSiegeDate.add(Calendar.HOUR_OF_DAY, 5);
 			}
+			
 			registerActions();
 		}
 		else
 		{
 			startSiegeDate.setTimeInMillis(0);
 		}
+		
 		getResidence().setJdbcState(JdbcEntityState.UPDATED);
 		getResidence().update();
 	}
@@ -330,6 +346,7 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 	{
 		SystemMessage2 msg;
 		int min = val / 60;
+		
 		if (min > 0)
 		{
 			msg = new SystemMessage2(SystemMsg.S1_MINUTES_UNTIL_THE_FORTRESS_BATTLE_STARTS).addInteger(min);
@@ -338,6 +355,7 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		{
 			msg = new SystemMessage2(SystemMsg.S1_SECONDS_UNTIL_THE_FORTRESS_BATTLE_STARTS).addInteger(val);
 		}
+		
 		broadcastTo(msg, ATTACKERS, DEFENDERS);
 	}
 	
@@ -348,13 +366,16 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 	{
 		long endTime = getResidence().getOwnDate().getTimeInMillis() + (60 * 60 * 1000L);
 		long diff = endTime - System.currentTimeMillis();
+		
 		if ((diff > 0) && (getResidence().getContractState() == Fortress.NOT_DECIDED))
 		{
 			SpawnExObject exObject = getFirstObject(ENVOY);
+			
 			if (exObject.isSpawned())
 			{
 				info("Last siege: " + TimeUtils.toSimpleFormat(getResidence().getLastSiegeDate()) + ", own date: " + TimeUtils.toSimpleFormat(getResidence().getOwnDate()) + ", siege date: " + TimeUtils.toSimpleFormat(getResidence().getSiegeDate()));
 			}
+			
 			spawnAction(ENVOY, true);
 			_envoyTask = ThreadPoolManager.getInstance().schedule(new EnvoyDespawn(), diff);
 		}
@@ -374,6 +395,7 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		_envoyTask.cancel(false);
 		_envoyTask = null;
 		spawnAction(ENVOY, false);
+		
 		if (getResidence().getContractState() == Fortress.NOT_DECIDED)
 		{
 			getResidence().setFortState(Fortress.INDEPENDENT, 0);
@@ -389,6 +411,7 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 	public void flagPoleUpdate(boolean dis)
 	{
 		StaticObjectObject object = getFirstObject(FLAG_POLE);
+		
 		if (object != null)
 		{
 			object.setMeshIndex(dis ? 0 : (getResidence().getOwner() != null ? 1 : 0));
@@ -411,6 +434,7 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 	public synchronized void checkBarracks()
 	{
 		boolean allDead = true;
+		
 		for (boolean b : getBarrackStatus())
 		{
 			if (!b)
@@ -418,16 +442,19 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 				allDead = false;
 			}
 		}
+		
 		if (allDead)
 		{
 			if (_oldOwner != null)
 			{
 				SpawnExObject spawn = getFirstObject(FortressSiegeEvent.MERCENARY);
 				NpcInstance npc = spawn.getFirstSpawned();
+				
 				if ((npc == null) || npc.isDead())
 				{
 					return;
 				}
+				
 				Functions.npcShout(npc, NpcString.THE_COMMAND_GATE_HAS_OPENED_CAPTURE_THE_FLAG_QUICKLY_AND_RAISE_IT_HIGH_TO_PROCLAIM_OUR_VICTORY);
 				spawnFlags();
 			}
@@ -446,10 +473,12 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		doorAction(FortressSiegeEvent.COMMANDER_DOORS, true);
 		spawnAction(FortressSiegeEvent.SIEGE_COMMANDERS, false);
 		spawnAction(FortressSiegeEvent.COMBAT_FLAGS, true);
+		
 		if (_oldOwner != null)
 		{
 			spawnAction(FortressSiegeEvent.MERCENARY, false);
 		}
+		
 		spawnAction(FortressSiegeEvent.GUARDS_LIVE_WITH_C_CENTER, false);
 		broadcastTo(SystemMsg.ALL_BARRACKS_ARE_OCCUPIED, SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
 	}
@@ -466,22 +495,27 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		{
 			return getResidence().getOwner() != null;
 		}
+		
 		if (name.equals(OLD_OWNER))
 		{
 			return _oldOwner != null;
 		}
+		
 		if (name.equalsIgnoreCase("reinforce_1"))
 		{
 			return getResidence().getFacilityLevel(Fortress.REINFORCE) == 1;
 		}
+		
 		if (name.equalsIgnoreCase("reinforce_2"))
 		{
 			return getResidence().getFacilityLevel(Fortress.REINFORCE) == 2;
 		}
+		
 		if (name.equalsIgnoreCase("dwarvens"))
 		{
 			return getResidence().getFacilityLevel(Fortress.DWARVENS) == 1;
 		}
+		
 		return false;
 	}
 	
@@ -506,39 +540,49 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 	{
 		boolean playerInZone = resurrectPlayer.isInZone(Zone.ZoneType.SIEGE);
 		boolean targetInZone = target.isInZone(Zone.ZoneType.SIEGE);
+		
 		if (!playerInZone && !targetInZone)
 		{
 			return true;
 		}
+		
 		if (!targetInZone)
 		{
 			return false;
 		}
+		
 		Player targetPlayer = target.getPlayer();
 		FortressSiegeEvent siegeEvent = target.getEvent(FortressSiegeEvent.class);
+		
 		if (siegeEvent != this)
 		{
 			if (force)
 			{
 				targetPlayer.sendPacket(SystemMsg.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEFIELDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
 			}
+			
 			resurrectPlayer.sendPacket(force ? SystemMsg.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEFIELDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE : SystemMsg.INVALID_TARGET);
 			return false;
 		}
+		
 		SiegeClanObject targetSiegeClan = siegeEvent.getSiegeClan(ATTACKERS, targetPlayer.getClan());
+		
 		if ((targetSiegeClan == null) || (targetSiegeClan.getFlag() == null))
 		{
 			if (force)
 			{
 				targetPlayer.sendPacket(SystemMsg.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE);
 			}
+			
 			resurrectPlayer.sendPacket(force ? SystemMsg.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE : SystemMsg.INVALID_TARGET);
 			return false;
 		}
+		
 		if (force)
 		{
 			return true;
 		}
+		
 		resurrectPlayer.sendPacket(SystemMsg.INVALID_TARGET);
 		return false;
 	}
@@ -551,11 +595,13 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 	public void setRegistrationOver(boolean b)
 	{
 		super.setRegistrationOver(b);
+		
 		if (b)
 		{
 			getResidence().getLastSiegeDate().setTimeInMillis(getResidence().getSiegeDate().getTimeInMillis());
 			getResidence().setJdbcState(JdbcEntityState.UPDATED);
 			getResidence().update();
+			
 			if (getResidence().getOwner() != null)
 			{
 				getResidence().getOwner().broadcastToOnlineMembers(SystemMsg.ENEMY_BLOOD_PLEDGES_HAVE_INTRUDED_INTO_THE_FORTRESS);

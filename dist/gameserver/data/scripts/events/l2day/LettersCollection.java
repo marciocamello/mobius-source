@@ -159,6 +159,7 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
 	public void onLoad()
 	{
 		CharListenerList.addGlobal(this);
+		
 		if (isActive())
 		{
 			_active = true;
@@ -228,6 +229,7 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
 		if (_active && SimpleCheckDrop(cha, killer))
 		{
 			final int[] letter = letters[Rnd.get(letters.length)];
+			
 			if (Rnd.chance(letter[1] * Config.EVENT_L2DAY_LETTER_CHANCE * ((NpcTemplate) cha.getTemplate()).rateHp))
 			{
 				((NpcInstance) cha).dropItem(killer.getPlayer(), letter[0], 1);
@@ -241,10 +243,12 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
 	public void startEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive(_name, true))
 		{
 			spawnEventManagers();
@@ -255,6 +259,7 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
 		{
 			player.sendMessage("Event '" + _name + "' already started.");
 		}
+		
 		_active = true;
 		show("admin/events.htm", player);
 	}
@@ -265,10 +270,12 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
 	public void stopEvent()
 	{
 		final Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive(_name, false))
 		{
 			unSpawnEventManagers();
@@ -279,6 +286,7 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
 		{
 			player.sendMessage("Event '" + _name + "' not started.");
 		}
+		
 		_active = false;
 		show("admin/events.htm", player);
 	}
@@ -290,15 +298,19 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
 	public void exchange(String[] var)
 	{
 		final Player player = getSelf();
+		
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;
 		}
+		
 		if (!NpcInstance.canBypassCheck(player, player.getLastNpc()))
 		{
 			return;
 		}
+		
 		final Integer[][] mss = _words.get(var[0]);
+		
 		for (Integer[] l : mss)
 		{
 			if (getItemCount(player, l[0]) < l[1])
@@ -307,21 +319,27 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
 				return;
 			}
 		}
+		
 		for (Integer[] l : mss)
 		{
 			removeItem(player, l[0], l[1]);
 		}
+		
 		final RewardData[] rewards = _rewards.get(var[0]);
 		int sum = 0;
+		
 		for (RewardData r : rewards)
 		{
 			sum += r.getChance();
 		}
+		
 		final int random = Rnd.get(sum);
 		sum = 0;
+		
 		for (RewardData r : rewards)
 		{
 			sum += r.getChance();
+			
 			if (sum > random)
 			{
 				addItem(player, r.getItemId(), Rnd.get(r.getMinDrop(), r.getMaxDrop()));
@@ -355,11 +373,14 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
 		{
 			return "";
 		}
+		
 		final StringBuilder append = new StringBuilder("<br><br>");
+		
 		for (String word : _words.keySet())
 		{
 			append.append("[scripts_").append(getClass().getName()).append(":exchange ").append(word).append('|').append(word).append("]<br1>");
 		}
+		
 		return append.toString();
 	}
 }

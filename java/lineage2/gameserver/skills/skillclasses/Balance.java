@@ -44,6 +44,7 @@ public class Balance extends Skill
 	{
 		double summaryCurrentHp = 0;
 		int summaryMaximumHp = 0;
+		
 		for (Creature target : targets)
 		{
 			if (target != null)
@@ -52,11 +53,14 @@ public class Balance extends Skill
 				{
 					continue;
 				}
+				
 				summaryCurrentHp += target.getCurrentHp();
 				summaryMaximumHp += target.getMaxHp();
 			}
 		}
+		
 		double percent = summaryCurrentHp / summaryMaximumHp;
+		
 		for (Creature target : targets)
 		{
 			if (target != null)
@@ -65,10 +69,13 @@ public class Balance extends Skill
 				{
 					continue;
 				}
+				
 				double hp = target.getMaxHp() * percent;
+				
 				if (hp > target.getCurrentHp())
 				{
 					double limit = (target.calcStat(Stats.HP_LIMIT, null, null) * target.getMaxHp()) / 100.;
+					
 					if (target.getCurrentHp() < limit)
 					{
 						target.setCurrentHp(Math.min(hp, limit), false);
@@ -78,9 +85,11 @@ public class Balance extends Skill
 				{
 					target.setCurrentHp(Math.max(1.01, hp), false);
 				}
+				
 				getEffects(activeChar, target, getActivateRate() > 0, false);
 			}
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());

@@ -80,25 +80,31 @@ public final class EffectCurseOfLifeFlow extends Effect
 		{
 			return false;
 		}
+		
 		for (TObjectIntIterator<HardReference<? extends Creature>> iterator = _damageList.iterator(); iterator.hasNext();)
 		{
 			iterator.advance();
 			Creature damager = iterator.key().get();
+			
 			if ((damager == null) || damager.isDead() || damager.isCurrentHpFull())
 			{
 				continue;
 			}
+			
 			int damage = iterator.value();
+			
 			if (damage <= 0)
 			{
 				continue;
 			}
+			
 			double max_heal = calc();
 			double heal = Math.min(damage, max_heal);
 			double newHp = Math.min(damager.getCurrentHp() + heal, damager.getMaxHp());
 			damager.sendPacket(new SystemMessage(SystemMessage.S1_HPS_HAVE_BEEN_RESTORED).addNumber((long) (newHp - damager.getCurrentHp())));
 			damager.setCurrentHp(newHp, false);
 		}
+		
 		_damageList.clear();
 		return true;
 	}
@@ -131,6 +137,7 @@ public final class EffectCurseOfLifeFlow extends Effect
 			{
 				return;
 			}
+			
 			int old_damage = _damageList.get(attacker.getRef());
 			_damageList.put(attacker.getRef(), old_damage == 0 ? (int) damage : old_damage + (int) damage);
 		}

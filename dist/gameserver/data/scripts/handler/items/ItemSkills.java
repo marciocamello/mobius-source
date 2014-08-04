@@ -40,12 +40,14 @@ public class ItemSkills extends ScriptItemHandler
 	public ItemSkills()
 	{
 		final TIntHashSet set = new TIntHashSet();
+		
 		for (ItemTemplate template : ItemHolder.getInstance().getAllTemplates())
 		{
 			if (template == null)
 			{
 				continue;
 			}
+			
 			for (Skill skill : template.getAttachedSkills())
 			{
 				if (skill.isHandler())
@@ -54,6 +56,7 @@ public class ItemSkills extends ScriptItemHandler
 				}
 			}
 		}
+		
 		_itemIds = set.toArray();
 	}
 	
@@ -68,6 +71,7 @@ public class ItemSkills extends ScriptItemHandler
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
 		Player player;
+		
 		if (playable.isPlayer())
 		{
 			player = (Player) playable;
@@ -80,7 +84,9 @@ public class ItemSkills extends ScriptItemHandler
 		{
 			return false;
 		}
+		
 		final Skill[] skills = item.getTemplate().getAttachedSkills();
+		
 		if (item.getTemplate().isCapsuled())
 		{
 			if (!player.getInventory().destroyItem(item, 1))
@@ -88,12 +94,15 @@ public class ItemSkills extends ScriptItemHandler
 				player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
 				return false;
 			}
+			
 			player.sendPacket(new SystemMessage(SystemMessage.YOU_USE_S1).addItemName(item.getItemId()));
 		}
+		
 		for (int i = 0; i < skills.length; i++)
 		{
 			Skill skill = skills[i];
 			Creature aimingTarget = skill.getAimingTarget(player, player.getTarget());
+			
 			if (skill.checkCondition(player, aimingTarget, ctrl, false, true))
 			{
 				player.getAI().Cast(skill, aimingTarget, ctrl, false);
@@ -103,6 +112,7 @@ public class ItemSkills extends ScriptItemHandler
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	

@@ -48,7 +48,7 @@ import org.apache.commons.lang3.StringUtils;
 public class AuctioneerInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -122,6 +122,7 @@ public class AuctioneerInstance extends NpcInstance
 		
 		StringTokenizer tokenizer = new StringTokenizer(command.replace("\r\n", "<br1>"));
 		String actualCommand = tokenizer.nextToken();
+		
 		if (actualCommand.equalsIgnoreCase("map"))
 		{
 			NpcHtmlMessage msg = new NpcHtmlMessage(player, this);
@@ -132,8 +133,8 @@ public class AuctioneerInstance extends NpcInstance
 		else if (actualCommand.equalsIgnoreCase("list_all"))
 		{
 			int page = Integer.parseInt(tokenizer.nextToken());
-			
 			List<ClanHallAuctionEvent> events = new ArrayList<>();
+			
 			for (ClanHall ch : ResidenceHolder.getInstance().getResidenceList(ClanHall.class))
 			{
 				if ((ch.getSiegeEvent().getClass() == ClanHallAuctionEvent.class) && ch.getSiegeEvent().isInProgress())
@@ -151,6 +152,7 @@ public class AuctioneerInstance extends NpcInstance
 			
 			int min = CH_PAGE_SIZE * page;
 			int max = min + CH_PAGE_SIZE;
+			
 			if (min > events.size())
 			{
 				min = 0;
@@ -164,20 +166,19 @@ public class AuctioneerInstance extends NpcInstance
 			
 			NpcHtmlMessage msg = new NpcHtmlMessage(player, this);
 			msg.setFile("residence2/clanhall/auction_list_clanhalls.htm");
-			
 			StringBuilder b = new StringBuilder();
+			
 			for (int i = min; i < max; i++)
 			{
 				ClanHallAuctionEvent event = events.get(i);
 				List<AuctionSiegeClanObject> attackers = event.getObjects(SiegeEvent.ATTACKERS);
 				Calendar endDate = event.getEndSiegeDate();
-				
 				String out = CH_IN_LIST.replace("%id%", String.valueOf(event.getId())).replace("%min_bid%", String.valueOf(event.getResidence().getAuctionMinBid())).replace("%size%", String.valueOf(attackers.size())).replace("%date%", DATE_FORMAT.format(endDate.getTimeInMillis()));
-				
 				b.append(out);
 			}
 			
 			msg.replace("%list%", b.toString());
+			
 			if (events.size() > max)
 			{
 				msg.replace("%next_button%", "<td>" + HtmlUtils.NEXT_BUTTON + "</td>");
@@ -203,19 +204,19 @@ public class AuctioneerInstance extends NpcInstance
 		else if (actualCommand.equalsIgnoreCase("info"))
 		{
 			String fileName = null;
-			
 			ClanHall clanHall = null;
 			SiegeClanObject siegeClan = null;
+			
 			if (tokenizer.hasMoreTokens())
 			{
 				int id = Integer.parseInt(tokenizer.nextToken());
 				clanHall = ResidenceHolder.getInstance().getResidence(id);
-				
 				fileName = "residence2/clanhall/auction_clanhall_info_main.htm";
 			}
 			else
 			{
 				clanHall = player.getClan() == null ? null : player.getClan().getHasHideout() > 0 ? ResidenceHolder.getInstance().<ClanHall> getResidence(player.getClan().getHasHideout()) : null;
+				
 				if ((clanHall != null) && (clanHall.getSiegeEvent().getClass() == ClanHallAuctionEvent.class))
 				{
 					if (clanHall.getSiegeEvent().isInProgress())
@@ -256,28 +257,21 @@ public class AuctioneerInstance extends NpcInstance
 			
 			ClanHallAuctionEvent auctionEvent = clanHall.getSiegeEvent();
 			List<AuctionSiegeClanObject> attackers = auctionEvent.getObjects(SiegeEvent.ATTACKERS);
-			
 			NpcHtmlMessage msg = new NpcHtmlMessage(player, this);
 			msg.setFile(fileName);
 			msg.replace("%id%", String.valueOf(clanHall.getId()));
 			msg.replace("%bigger_size%", String.valueOf(attackers.size()));
 			msg.replace("%grade%", String.valueOf(clanHall.getGrade()));
 			msg.replace("%rental_fee%", String.valueOf(clanHall.getRentalFee()));
-			
 			Clan owner = clanHall.getOwner();
-			
 			msg.replace("%owner%", owner == null ? StringUtils.EMPTY : owner.getName());
 			msg.replace("%owner_leader%", owner == null ? StringUtils.EMPTY : owner.getLeaderName());
 			msg.replace("%description%", clanHall.getAuctionDescription());
 			msg.replace("%min_bid%", String.valueOf(clanHall.getAuctionMinBid()));
-			
 			Calendar c = auctionEvent.getEndSiegeDate();
-			
 			msg.replace("%date%", DATE_FORMAT.format(c.getTimeInMillis()));
 			msg.replace("%hour%", String.valueOf(c.get(Calendar.HOUR_OF_DAY)));
-			
 			int remainingTime = (int) ((c.getTimeInMillis() - System.currentTimeMillis()) / 60000L);
-			
 			msg.replace("%remaining_hour%", String.valueOf(remainingTime / 60));
 			msg.replace("%remaining_minutes%", String.valueOf(remainingTime % 60));
 			
@@ -292,7 +286,6 @@ public class AuctioneerInstance extends NpcInstance
 		{
 			int id = Integer.parseInt(tokenizer.nextToken());
 			int page = Integer.parseInt(tokenizer.nextToken());
-			
 			ClanHall clanHall = ResidenceHolder.getInstance().getResidence(id);
 			ClanHallAuctionEvent auctionEvent = clanHall.getSiegeEvent();
 			List<AuctionSiegeClanObject> attackers = auctionEvent.getObjects(SiegeEvent.ATTACKERS);
@@ -304,6 +297,7 @@ public class AuctioneerInstance extends NpcInstance
 			
 			int min = BIDDER_PAGE_SIZE * page;
 			int max = min + BIDDER_PAGE_SIZE;
+			
 			if (min > attackers.size())
 			{
 				min = 0;
@@ -318,14 +312,15 @@ public class AuctioneerInstance extends NpcInstance
 			NpcHtmlMessage msg = new NpcHtmlMessage(player, this);
 			msg.setFile("residence2/clanhall/auction_bidder_list.htm");
 			msg.replace("%id%", String.valueOf(id));
-			
 			StringBuilder b = new StringBuilder();
+			
 			for (int i = min; i < max; i++)
 			{
 				AuctionSiegeClanObject siegeClan = attackers.get(i);
 				String t = BIDDER_IN_LIST.replace("%id%", String.valueOf(id)).replace("%clan_name%", siegeClan.getClan().getName()).replace("%date%", DATE_FORMAT.format(siegeClan.getDate()));
 				b.append(t);
 			}
+			
 			msg.replace("%list%", b.toString());
 			
 			if (attackers.size() > max)
@@ -359,7 +354,6 @@ public class AuctioneerInstance extends NpcInstance
 			}
 			
 			int id = Integer.parseInt(tokenizer.nextToken());
-			
 			ClanHall clanHall = ResidenceHolder.getInstance().getResidence(id);
 			ClanHallAuctionEvent auctionEvent = clanHall.getSiegeEvent();
 			
@@ -370,6 +364,7 @@ public class AuctioneerInstance extends NpcInstance
 			
 			long minBid = clanHall.getAuctionMinBid();
 			AuctionSiegeClanObject siegeClan = auctionEvent.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
+			
 			if (siegeClan != null)
 			{
 				minBid = siegeClan.getParam();
@@ -380,7 +375,6 @@ public class AuctioneerInstance extends NpcInstance
 			msg.replace("%id%", String.valueOf(id));
 			msg.replace("%min_bid%", String.valueOf(minBid));
 			msg.replace("%clan_adena%", String.valueOf(player.getClan().getWarehouse().getCountOf(ItemTemplate.ITEM_ID_ADENA)));
-			
 			player.sendPacket(msg);
 		}
 		else if (actualCommand.equalsIgnoreCase("bid_next"))
@@ -393,6 +387,7 @@ public class AuctioneerInstance extends NpcInstance
 			
 			int id = Integer.parseInt(tokenizer.nextToken());
 			long bid = 0;
+			
 			if (tokenizer.hasMoreTokens())
 			{
 				try
@@ -420,6 +415,7 @@ public class AuctioneerInstance extends NpcInstance
 			
 			long minBid = clanHall.getAuctionMinBid();
 			AuctionSiegeClanObject siegeClan = auctionEvent.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
+			
 			if (siegeClan != null)
 			{
 				minBid = siegeClan.getParam();
@@ -430,12 +426,9 @@ public class AuctioneerInstance extends NpcInstance
 			msg.replace("%id%", String.valueOf(id));
 			msg.replace("%bid%", String.valueOf(bid));
 			msg.replace("%min_bid%", String.valueOf(minBid));
-			
 			Calendar c = auctionEvent.getEndSiegeDate();
-			
 			msg.replace("%date%", DATE_FORMAT.format(c.getTimeInMillis()));
 			msg.replace("%hour%", String.valueOf(c.get(Calendar.HOUR_OF_DAY)));
-			
 			player.sendPacket(msg);
 		}
 		else if (actualCommand.equalsIgnoreCase("bid_confirm"))
@@ -448,7 +441,6 @@ public class AuctioneerInstance extends NpcInstance
 			
 			int id = Integer.parseInt(tokenizer.nextToken());
 			final long bid = Long.parseLong(tokenizer.nextToken());
-			
 			ClanHall clanHall = ResidenceHolder.getInstance().getResidence(id);
 			ClanHallAuctionEvent auctionEvent = clanHall.getSiegeEvent();
 			
@@ -474,9 +466,11 @@ public class AuctioneerInstance extends NpcInstance
 			
 			long consumeBid = bid;
 			AuctionSiegeClanObject siegeClan = auctionEvent.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
+			
 			if (siegeClan != null)
 			{
 				consumeBid -= siegeClan.getParam();
+				
 				if (bid <= siegeClan.getParam())
 				{
 					player.sendPacket(SystemMsg.THE_BID_AMOUNT_MUST_BE_HIGHER_THAN_THE_PREVIOUS_BID);
@@ -490,19 +484,16 @@ public class AuctioneerInstance extends NpcInstance
 			if (siegeClan != null)
 			{
 				siegeClan.setParam(bid);
-				
 				SiegeClanDAO.getInstance().update(clanHall, siegeClan);
 			}
 			else
 			{
 				siegeClan = new AuctionSiegeClanObject(SiegeEvent.ATTACKERS, player.getClan(), bid);
 				auctionEvent.addObject(SiegeEvent.ATTACKERS, siegeClan);
-				
 				SiegeClanDAO.getInstance().insert(clanHall, siegeClan);
 			}
 			
 			player.sendPacket(SystemMsg.YOUR_BID_HAS_BEEN_SUCCESSFULLY_PLACED);
-			
 			onBypassFeedback(player, "info");
 		}
 		else if (actualCommand.equalsIgnoreCase("cancel_bid"))
@@ -512,8 +503,8 @@ public class AuctioneerInstance extends NpcInstance
 				showChatWindow(player, 0);
 				return;
 			}
-			int id = Integer.parseInt(tokenizer.nextToken());
 			
+			int id = Integer.parseInt(tokenizer.nextToken());
 			ClanHall clanHall = ResidenceHolder.getInstance().getResidence(id);
 			ClanHallAuctionEvent auctionEvent = clanHall.getSiegeEvent();
 			
@@ -523,6 +514,7 @@ public class AuctioneerInstance extends NpcInstance
 			}
 			
 			AuctionSiegeClanObject siegeClan = auctionEvent.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
+			
 			if (siegeClan == null)
 			{
 				return;
@@ -534,7 +526,6 @@ public class AuctioneerInstance extends NpcInstance
 			msg.replace("%id%", String.valueOf(id));
 			msg.replace("%bid%", String.valueOf(siegeClan.getParam()));
 			msg.replace("%return%", String.valueOf(returnVal));
-			
 			player.sendPacket(msg);
 		}
 		else if (actualCommand.equalsIgnoreCase("cancel_bid_confirm"))
@@ -544,8 +535,8 @@ public class AuctioneerInstance extends NpcInstance
 				showChatWindow(player, 0);
 				return;
 			}
-			int id = Integer.parseInt(tokenizer.nextToken());
 			
+			int id = Integer.parseInt(tokenizer.nextToken());
 			ClanHall clanHall = ResidenceHolder.getInstance().getResidence(id);
 			ClanHallAuctionEvent auctionEvent = clanHall.getSiegeEvent();
 			
@@ -555,17 +546,16 @@ public class AuctioneerInstance extends NpcInstance
 			}
 			
 			AuctionSiegeClanObject siegeClan = auctionEvent.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
+			
 			if (siegeClan == null)
 			{
 				return;
 			}
 			
 			long returnVal = siegeClan.getParam() - (long) (siegeClan.getParam() * 0.1);
-			
 			player.getClan().getWarehouse().addItem(ItemTemplate.ITEM_ID_ADENA, returnVal);
 			auctionEvent.removeObject(SiegeEvent.ATTACKERS, siegeClan);
 			SiegeClanDAO.getInstance().delete(clanHall, siegeClan);
-			
 			player.sendPacket(SystemMsg.YOU_HAVE_CANCELED_YOUR_BID);
 			showChatWindow(player, 0);
 		}
@@ -578,6 +568,7 @@ public class AuctioneerInstance extends NpcInstance
 			}
 			
 			ClanHall clanHall = ResidenceHolder.getInstance().getResidence(player.getClan().getHasHideout());
+			
 			if ((clanHall.getSiegeEvent().getClass() != ClanHallAuctionEvent.class) || clanHall.getSiegeEvent().isInProgress())
 			{
 				return;
@@ -595,7 +586,6 @@ public class AuctioneerInstance extends NpcInstance
 			msg.replace("%id%", String.valueOf(player.getClan().getHasHideout()));
 			msg.replace("%adena%", String.valueOf(player.getClan().getWarehouse().getCountOf(ItemTemplate.ITEM_ID_ADENA)));
 			msg.replace("%deposit%", String.valueOf(clanHall.getDeposit()));
-			
 			player.sendPacket(msg);
 		}
 		else if (actualCommand.equalsIgnoreCase("register_next"))
@@ -607,6 +597,7 @@ public class AuctioneerInstance extends NpcInstance
 			}
 			
 			ClanHall clanHall = ResidenceHolder.getInstance().getResidence(player.getClan().getHasHideout());
+			
 			if ((clanHall.getSiegeEvent().getClass() != ClanHallAuctionEvent.class) || clanHall.getSiegeEvent().isInProgress())
 			{
 				showChatWindow(player, 0);
@@ -624,7 +615,6 @@ public class AuctioneerInstance extends NpcInstance
 			msg.setFile("residence2/clanhall/auction_clanhall_register_next.htm");
 			msg.replace("%min_bid%", String.valueOf(clanHall.getBaseMinBid()));
 			msg.replace("%last_bid%", String.valueOf(clanHall.getBaseMinBid())); // TODO [VISTALL] get last bid
-			
 			player.sendPacket(msg);
 		}
 		else if (actualCommand.equalsIgnoreCase("register_next2"))
@@ -636,6 +626,7 @@ public class AuctioneerInstance extends NpcInstance
 			}
 			
 			ClanHall clanHall = ResidenceHolder.getInstance().getResidence(player.getClan().getHasHideout());
+			
 			if ((clanHall.getSiegeEvent().getClass() != ClanHallAuctionEvent.class) || clanHall.getSiegeEvent().isInProgress())
 			{
 				showChatWindow(player, 0);
@@ -645,6 +636,7 @@ public class AuctioneerInstance extends NpcInstance
 			int day = Integer.parseInt(tokenizer.nextToken());
 			long bid = -1;
 			String comment = StringUtils.EMPTY;
+			
 			if (tokenizer.hasMoreTokens())
 			{
 				try
@@ -659,6 +651,7 @@ public class AuctioneerInstance extends NpcInstance
 			if (tokenizer.hasMoreTokens())
 			{
 				comment = tokenizer.nextToken();
+				
 				while (tokenizer.hasMoreTokens())
 				{
 					comment += " " + tokenizer.nextToken();
@@ -666,6 +659,7 @@ public class AuctioneerInstance extends NpcInstance
 			}
 			
 			comment = comment.substring(0, Math.min(comment.length(), Byte.MAX_VALUE));
+			
 			if (bid <= -1)
 			{
 				onBypassFeedback(player, "register_next");
@@ -674,7 +668,6 @@ public class AuctioneerInstance extends NpcInstance
 			
 			Calendar cal = Calendar.getInstance();
 			cal.add(Calendar.HOUR_OF_DAY, day);
-			
 			NpcHtmlMessage msg = new NpcHtmlMessage(player, this);
 			msg.setFile("residence2/clanhall/auction_clanhall_register_confirm.htm");
 			msg.replace("%description%", comment);
@@ -683,7 +676,6 @@ public class AuctioneerInstance extends NpcInstance
 			msg.replace("%base_bid%", String.valueOf(clanHall.getBaseMinBid()));
 			msg.replace("%hour%", String.valueOf(cal.get(Calendar.HOUR_OF_DAY)));
 			msg.replace("%date%", DATE_FORMAT.format(cal.getTimeInMillis()));
-			
 			player.sendPacket(msg);
 		}
 		else if (actualCommand.equalsIgnoreCase("register_confirm"))
@@ -695,6 +687,7 @@ public class AuctioneerInstance extends NpcInstance
 			}
 			
 			ClanHall clanHall = ResidenceHolder.getInstance().getResidence(player.getClan().getHasHideout());
+			
 			if ((clanHall.getSiegeEvent().getClass() != ClanHallAuctionEvent.class) || clanHall.getSiegeEvent().isInProgress())
 			{
 				showChatWindow(player, 0);
@@ -715,6 +708,7 @@ public class AuctioneerInstance extends NpcInstance
 			if (tokenizer.hasMoreTokens())
 			{
 				comment = tokenizer.nextToken();
+				
 				while (tokenizer.hasMoreTokens())
 				{
 					comment += " " + tokenizer.nextToken();
@@ -733,9 +727,7 @@ public class AuctioneerInstance extends NpcInstance
 			clanHall.getSiegeDate().setTimeInMillis(System.currentTimeMillis());
 			clanHall.setJdbcState(JdbcEntityState.UPDATED);
 			clanHall.update();
-			
 			clanHall.getSiegeEvent().reCalcNextTime(false);
-			
 			onBypassFeedback(player, "info");
 			player.sendPacket(SystemMsg.YOU_HAVE_REGISTERED_FOR_A_CLAN_HALL_AUCTION);
 		}
@@ -748,6 +740,7 @@ public class AuctioneerInstance extends NpcInstance
 			}
 			
 			ClanHall clanHall = ResidenceHolder.getInstance().getResidence(player.getClan().getHasHideout());
+			
 			if ((clanHall.getSiegeEvent().getClass() != ClanHallAuctionEvent.class) || !clanHall.getSiegeEvent().isInProgress())
 			{
 				showChatWindow(player, 0);
@@ -757,7 +750,6 @@ public class AuctioneerInstance extends NpcInstance
 			NpcHtmlMessage msg = new NpcHtmlMessage(player, this);
 			msg.setFile("residence2/clanhall/auction_clanhall_cancel_confirm.htm");
 			msg.replace("%deposit%", String.valueOf(clanHall.getDeposit()));
-			
 			player.sendPacket(msg);
 		}
 		else if (actualCommand.equals("cancel_confirm"))
@@ -769,6 +761,7 @@ public class AuctioneerInstance extends NpcInstance
 			}
 			
 			ClanHall clanHall = ResidenceHolder.getInstance().getResidence(player.getClan().getHasHideout());
+			
 			if ((clanHall.getSiegeEvent().getClass() != ClanHallAuctionEvent.class) || !clanHall.getSiegeEvent().isInProgress())
 			{
 				showChatWindow(player, 0);
@@ -776,7 +769,6 @@ public class AuctioneerInstance extends NpcInstance
 			}
 			
 			clanHall.getSiegeEvent().setInProgress(false);
-			
 			clanHall.getSiegeDate().setTimeInMillis(0);
 			clanHall.getLastSiegeDate().setTimeInMillis(System.currentTimeMillis());
 			clanHall.setAuctionDescription(StringUtils.EMPTY);
@@ -784,7 +776,6 @@ public class AuctioneerInstance extends NpcInstance
 			clanHall.setAuctionMinBid(0);
 			clanHall.setJdbcState(JdbcEntityState.UPDATED);
 			clanHall.update();
-			
 			ClanHallAuctionEvent auctionEvent = clanHall.getSiegeEvent();
 			List<AuctionSiegeClanObject> siegeClans = auctionEvent.removeObjects(SiegeEvent.ATTACKERS);
 			SiegeClanDAO.getInstance().delete(clanHall);
@@ -792,7 +783,6 @@ public class AuctioneerInstance extends NpcInstance
 			for (AuctionSiegeClanObject $siegeClan : siegeClans)
 			{
 				long returnBid = $siegeClan.getParam() - (long) ($siegeClan.getParam() * 0.1);
-				
 				$siegeClan.getClan().getWarehouse().addItem(ItemTemplate.ITEM_ID_ADENA, returnBid);
 			}
 			
@@ -850,6 +840,7 @@ public class AuctioneerInstance extends NpcInstance
 	{
 		long consumeBid = bid;
 		AuctionSiegeClanObject siegeClan = auctionEvent.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
+		
 		if (siegeClan != null)
 		{
 			consumeBid -= siegeClan.getParam();
@@ -863,12 +854,14 @@ public class AuctioneerInstance extends NpcInstance
 		}
 		
 		long minBid = siegeClan == null ? auctionEvent.getResidence().getAuctionMinBid() : siegeClan.getParam();
+		
 		if (bid < minBid)
 		{
 			player.sendPacket(SystemMsg.YOUR_BID_PRICE_MUST_BE_HIGHER_THAN_THE_MINIMUM_PRICE_CURRENTLY_BEING_BID);
 			onBypassFeedback(player, "bid_start " + auctionEvent.getId());
 			return false;
 		}
+		
 		return true;
 	}
 	

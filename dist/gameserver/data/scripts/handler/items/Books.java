@@ -51,14 +51,17 @@ public class Books extends SimpleItemHandler
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
 		final int itemId = item.getItemId();
+		
 		switch (itemId)
 		{
 			case 5555:
 				player.sendPacket(new ShowXMasSeal(5555));
 				break;
+			
 			default:
 				return false;
 		}
+		
 		return true;
 	}
 }

@@ -41,10 +41,12 @@ public class RequestRecipeShopMessageSet extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		activeChar.setManufactureName(_name);
 	}
 }

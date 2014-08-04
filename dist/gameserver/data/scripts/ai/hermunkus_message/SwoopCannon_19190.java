@@ -58,12 +58,14 @@ public class SwoopCannon_19190 extends DefaultAI
 	protected void onEvtTimer(int timer_id, Object arg1, Object arg2)
 	{
 		super.onEvtTimer(timer_id, arg1, arg2);
+		
 		if (timer_id == 1)
 		{
 			if (!isActive())
 			{
 				return;
 			}
+			
 			final Skill skill = SkillTable.getInstance().getInfo(SKILL_ID, 1);
 			addTaskBuff(getActor(), skill);
 			addTimer(1, skill.getHitTime() + 10000);

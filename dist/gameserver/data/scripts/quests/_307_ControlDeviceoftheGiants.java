@@ -46,6 +46,7 @@ public class _307_ControlDeviceoftheGiants extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("droph_q307_2.htm"))
 		{
 			st.setCond(1);
@@ -86,6 +87,7 @@ public class _307_ControlDeviceoftheGiants extends Quest implements ScriptFile
 				htmltext = "droph_q307_2b.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -95,6 +97,7 @@ public class _307_ControlDeviceoftheGiants extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Droph)
 		{
 			if (cond == 0)
@@ -135,6 +138,7 @@ public class _307_ControlDeviceoftheGiants extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -143,10 +147,12 @@ public class _307_ControlDeviceoftheGiants extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if ((cond == 1) && (npcId == HekatonPrime))
 		{
 			st.setCond(2);
 		}
+		
 		return null;
 	}
 	

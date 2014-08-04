@@ -50,14 +50,18 @@ public class RequestPledgeMemberInfo extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		Clan clan = activeChar.getClan();
+		
 		if (clan != null)
 		{
 			UnitMember cm = clan.getAnyMember(_target);
+			
 			if (cm != null)
 			{
 				activeChar.sendPacket(new PledgeReceiveMemberInfo(cm));

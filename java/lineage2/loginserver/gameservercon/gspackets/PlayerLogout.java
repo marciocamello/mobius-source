@@ -42,6 +42,7 @@ public class PlayerLogout extends ReceivablePacket
 	protected void runImpl()
 	{
 		GameServer gs = getGameServer();
+		
 		if (gs.isAuthed())
 		{
 			gs.removeAccount(account);

@@ -48,11 +48,14 @@ public class RequestPledgeWarList extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		Clan clan = activeChar.getClan();
+		
 		if (clan != null)
 		{
 			activeChar.sendPacket(new PledgeReceiveWarList(clan, _type, _page));

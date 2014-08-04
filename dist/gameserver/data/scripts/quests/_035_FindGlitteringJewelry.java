@@ -55,6 +55,7 @@ public class _035_FindGlitteringJewelry extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		int cond = st.getCond();
+		
 		if (event.equals("30091-1.htm") && (cond == 0))
 		{
 			st.setCond(1);
@@ -93,6 +94,7 @@ public class _035_FindGlitteringJewelry extends Quest implements ScriptFile
 				htmltext = "30091-hvnmat-bug.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -102,6 +104,7 @@ public class _035_FindGlitteringJewelry extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == 30091)
 		{
 			if ((cond == 0) && (st.getQuestItemsCount(JEWEL_BOX) == 0))
@@ -109,6 +112,7 @@ public class _035_FindGlitteringJewelry extends Quest implements ScriptFile
 				if (st.getPlayer().getLevel() >= 60)
 				{
 					QuestState fwear = st.getPlayer().getQuestState(_037_PleaseMakeMeFormalWear.class);
+					
 					if ((fwear != null) && (fwear.getCond() == 6))
 					{
 						htmltext = "30091-0.htm";
@@ -156,6 +160,7 @@ public class _035_FindGlitteringJewelry extends Quest implements ScriptFile
 				htmltext = "30879-1r.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -163,9 +168,11 @@ public class _035_FindGlitteringJewelry extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		long count = st.getQuestItemsCount(ROUGH_JEWEL);
+		
 		if (count < 10)
 		{
 			st.giveItems(ROUGH_JEWEL, 1);
+			
 			if (st.getQuestItemsCount(ROUGH_JEWEL) == 10)
 			{
 				st.playSound(SOUND_MIDDLE);
@@ -176,6 +183,7 @@ public class _035_FindGlitteringJewelry extends Quest implements ScriptFile
 				st.playSound(SOUND_ITEMGET);
 			}
 		}
+		
 		return null;
 	}
 }

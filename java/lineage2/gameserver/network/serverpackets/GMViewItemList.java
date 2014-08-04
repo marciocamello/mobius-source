@@ -37,8 +37,8 @@ public class GMViewItemList extends L2GameServerPacket
 		writeS(_name);
 		writeD(_limit); // c4?
 		writeH(1); // show window ??
-		
 		writeH(_size);
+		
 		for (ItemInstance temp : _items)
 		{
 			if (!temp.getTemplate().isQuest())

@@ -46,6 +46,7 @@ public class WalkerRoute
 		{
 			return size() > 0;
 		}
+		
 		return size() > 1;
 	}
 }

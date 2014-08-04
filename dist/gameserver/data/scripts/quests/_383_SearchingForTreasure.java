@@ -81,6 +81,7 @@ public class _383_SearchingForTreasure extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("30890-03.htm"))
 		{
 			st.setCond(1);
@@ -115,6 +116,7 @@ public class _383_SearchingForTreasure extends Quest implements ScriptFile
 			{
 				htmltext = "You don't have required items";
 			}
+			
 			st.exitCurrentQuest(true);
 		}
 		else if (event.equalsIgnoreCase("31148-02.htm"))
@@ -124,6 +126,7 @@ public class _383_SearchingForTreasure extends Quest implements ScriptFile
 				st.takeItems(1661, 1);
 				st.giveItems(ADENA_ID, 500 + (Rnd.get(5) * 300));
 				int count = 0;
+				
 				while (count < 1)
 				{
 					for (rewardInfo reward : rewards)
@@ -131,11 +134,13 @@ public class _383_SearchingForTreasure extends Quest implements ScriptFile
 						int id = reward.id;
 						int qty = reward.count;
 						int chance = reward.chance;
+						
 						if ((Rnd.get(1000) < chance) && (count < 2))
 						{
 							st.giveItems(id, Rnd.get(qty) + 1);
 							count += 1;
 						}
+						
 						if (count < 2)
 						{
 							for (int i = 4481; i <= 4505; i++)
@@ -149,6 +154,7 @@ public class _383_SearchingForTreasure extends Quest implements ScriptFile
 						}
 					}
 				}
+				
 				st.playSound("ItemSound.quest_finish");
 				st.exitCurrentQuest(true);
 			}
@@ -157,6 +163,7 @@ public class _383_SearchingForTreasure extends Quest implements ScriptFile
 				htmltext = "31148-03.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -165,6 +172,7 @@ public class _383_SearchingForTreasure extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
+		
 		if (st.getState() == CREATED)
 		{
 			if (st.getPlayer().getLevel() >= 42)
@@ -193,6 +201,7 @@ public class _383_SearchingForTreasure extends Quest implements ScriptFile
 		{
 			htmltext = "31148-01.htm";
 		}
+		
 		return htmltext;
 	}
 }

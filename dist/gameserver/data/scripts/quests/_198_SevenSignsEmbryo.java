@@ -50,6 +50,7 @@ public class _198_SevenSignsEmbryo extends Quest implements ScriptFile
 	{
 		Player player = st.getPlayer();
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("wood_q198_2.htm"))
 		{
 			st.setCond(1);
@@ -59,6 +60,7 @@ public class _198_SevenSignsEmbryo extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("wood_q198_3.htm"))
 		{
 			enterInstance(player);
+			
 			if (st.get("embryo") != null)
 			{
 				st.unset("embryo");
@@ -87,6 +89,7 @@ public class _198_SevenSignsEmbryo extends Quest implements ScriptFile
 		{
 			player.getReflection().collapse();
 		}
+		
 		return htmltext;
 	}
 	
@@ -97,9 +100,11 @@ public class _198_SevenSignsEmbryo extends Quest implements ScriptFile
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		String htmltext = "noquest";
+		
 		if (npcId == Wood)
 		{
 			QuestState qs = player.getQuestState(_197_SevenSignsTheSacredBookofSeal.class);
+			
 			if (cond == 0)
 			{
 				if ((player.getLevel() >= 79) && (qs != null) && qs.isCompleted())
@@ -160,6 +165,7 @@ public class _198_SevenSignsEmbryo extends Quest implements ScriptFile
 		{
 			htmltext = "jaina_q198_1.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -169,10 +175,12 @@ public class _198_SevenSignsEmbryo extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
+		
 		if (player == null)
 		{
 			return null;
 		}
+		
 		if ((npcId == ShilensEvilThoughtsCapt) && (cond == 1))
 		{
 			Functions.npcSay(npc, player.getName() + ", I'm leaving now. But we shall meet again!");
@@ -181,12 +189,14 @@ public class _198_SevenSignsEmbryo extends Quest implements ScriptFile
 			st.giveItems(PieceOfDoubt, 1);
 			player.showQuestMovie(ExStartScenePlayer.SCENE_SSQ_EMBRYO);
 		}
+		
 		return null;
 	}
 	
 	private void enterInstance(Player player)
 	{
 		Reflection r = player.getActiveReflection();
+		
 		if (r != null)
 		{
 			if (player.canReenterInstance(izId))

@@ -41,11 +41,9 @@ public class ExCubeGameExtendedChangePoints extends L2GameServerPacket
 	{
 		writeEx(0x99);
 		writeD(0x00);
-		
 		writeD(_timeLeft);
 		writeD(_bluePoints);
 		writeD(_redPoints);
-		
 		writeD(_isRedTeam ? 0x01 : 0x00);
 		writeD(_objectId);
 		writeD(_playerPoints);

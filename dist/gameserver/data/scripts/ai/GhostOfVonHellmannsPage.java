@@ -86,15 +86,18 @@ public class GhostOfVonHellmannsPage extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			doTask();
 			return true;
 		}
+		
 		if ((System.currentTimeMillis() > wait_timeout) && ((current_point > -1) || Rnd.chance(5)))
 		{
 			if (!wait)
@@ -107,22 +110,27 @@ public class GhostOfVonHellmannsPage extends DefaultAI
 						return true;
 				}
 			}
+			
 			wait_timeout = 0;
 			wait = false;
 			current_point++;
+			
 			if (current_point >= points.length)
 			{
 				actor.deleteMe();
 				return false;
 			}
+			
 			addTaskMove(points[current_point], true);
 			doTask();
 			return true;
 		}
+		
 		if (randomAnimation())
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	

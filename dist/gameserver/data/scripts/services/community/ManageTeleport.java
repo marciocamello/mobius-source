@@ -110,6 +110,7 @@ public class ManageTeleport extends Functions implements ScriptFile, ICommunityB
 		{
 			return;
 		}
+		
 		if (bypass.startsWith("_bbsteleport"))
 		{
 			StringTokenizer st2 = new StringTokenizer(bypass, ";");
@@ -125,12 +126,14 @@ public class ManageTeleport extends Functions implements ScriptFile, ICommunityB
 			int cZ = Integer.parseInt(mBypass[4]);
 			int pice = Config.COMMUNITYBOARD_TELE_PICE;
 			String page = mBypass[1];
+			
 			if (player.getAdena() < pice)
 			{
 				player.sendMessage("It is not enough money!");
 				ShowHtml(page, player);
 				return;
 			}
+			
 			player.teleToLocation(cX, cY, cZ, 0);
 			player.reduceAdena(pice);
 			ShowHtml(page, player);
@@ -141,32 +144,38 @@ public class ManageTeleport extends Functions implements ScriptFile, ICommunityB
 			String[] mBypass = st2.nextToken().split(":");
 			String name = mBypass[2].substring(1);
 			int pice = Config.COMMUNITYBOARD_SAVE_TELE_PICE;
+			
 			if (player.getAdena() < pice)
 			{
 				player.sendMessage("It is not enough money!");
 				ShowHtml(mBypass[1], player);
 				return;
 			}
+			
 			if (getTeleCount(player) >= 7)
 			{
 				player.sendMessage("Exceeded the maximum number of return points!");
 				ShowHtml(mBypass[1], player);
 				return;
 			}
+			
 			if (!CheckTeleName(player, name))
 			{
 				player.sendMessage("The point with this name already exists!");
 				ShowHtml(mBypass[1], player);
 				return;
 			}
+			
 			if (name.length() > 15)
 			{
 				name = name.substring(0, 15);
 			}
+			
 			if (name.length() > 0)
 			{
 				Connection con = null;
 				PreparedStatement stmt = null;
+				
 				try
 				{
 					con = DatabaseFactory.getInstance().getConnection();
@@ -186,6 +195,7 @@ public class ManageTeleport extends Functions implements ScriptFile, ICommunityB
 					DbUtils.closeQuietly(con, stmt);
 				}
 			}
+			
 			player.reduceAdena(pice);
 			ShowHtml(mBypass[1], player);
 		}
@@ -195,6 +205,7 @@ public class ManageTeleport extends Functions implements ScriptFile, ICommunityB
 			String[] mBypass = st2.nextToken().split(":");
 			Connection con = null;
 			PreparedStatement statement = null;
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
@@ -241,12 +252,14 @@ public class ManageTeleport extends Functions implements ScriptFile, ICommunityB
 		PreparedStatement statement = null;
 		ResultSet rset = null;
 		int count = 0;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT count(*) as cnt FROM bbs_pointsave WHERE `charId` = ?");
 			statement.setInt(1, player.getObjectId());
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				count = rset.getInt("cnt");
@@ -273,6 +286,7 @@ public class ManageTeleport extends Functions implements ScriptFile, ICommunityB
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -280,6 +294,7 @@ public class ManageTeleport extends Functions implements ScriptFile, ICommunityB
 			statement.setInt(1, player.getObjectId());
 			statement.setString(2, name);
 			rset = statement.executeQuery();
+			
 			if (rset.next() && (rset.getInt("cnt") == 0))
 			{
 				return true;
@@ -308,6 +323,7 @@ public class ManageTeleport extends Functions implements ScriptFile, ICommunityB
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rs = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -316,6 +332,7 @@ public class ManageTeleport extends Functions implements ScriptFile, ICommunityB
 			rs = statement.executeQuery();
 			StringBuilder content = new StringBuilder("");
 			content.append("<table width=220>");
+			
 			while (rs.next())
 			{
 				content.append("<tr>");
@@ -327,6 +344,7 @@ public class ManageTeleport extends Functions implements ScriptFile, ICommunityB
 				content.append("</td>");
 				content.append("</tr>");
 			}
+			
 			content.append("</table>");
 			html = html.replace("%list_teleport%", content.toString());
 			ShowBoard.separateAndSend(BbsUtil.htmlBuff(html, player), player);
@@ -338,17 +356,6 @@ public class ManageTeleport extends Functions implements ScriptFile, ICommunityB
 		{
 			DbUtils.closeQuietly(con, statement, rs);
 		}
-		/**
-		 * Method CheckCondition.
-		 * @param player Player
-		 * @return boolean
-		 */
-		
-		/**
-		 * Method CheckCondition.
-		 * @param player Player
-		 * @return boolean
-		 */
 	}
 	
 	private static boolean CheckCondition(Player player)
@@ -357,26 +364,31 @@ public class ManageTeleport extends Functions implements ScriptFile, ICommunityB
 		{
 			return false;
 		}
+		
 		if (!Config.USE_BBS_TELEPORT_IS_COMBAT && ((player.getPvpFlag() != 0) || player.isInDuel() || player.isInCombat() || player.isAttackingNow()))
 		{
 			player.sendMessage("During combat, you can not use this feature.");
 			return false;
 		}
+		
 		if (player.isInOlympiadMode())
 		{
 			player.sendMessage("During the Olympics you can not use this feature.");
 			return false;
 		}
+		
 		if ((player.getReflection().getId() != 0) && !Config.COMMUNITYBOARD_INSTANCE_ENABLED)
 		{
 			player.sendMessage("Teleport is not available in instance.");
 			return false;
 		}
+		
 		if (!Config.COMMUNITYBOARD_BUFFER_ENABLED)
 		{
 			player.sendMessage("Teleport function is disabled.");
 			return false;
 		}
+		
 		if (!Config.COMMUNITYBOARD_EVENTS_ENABLED)
 		{
 			if (player.getTeam() != TeamType.NONE)
@@ -385,6 +397,7 @@ public class ManageTeleport extends Functions implements ScriptFile, ICommunityB
 				return false;
 			}
 		}
+		
 		return true;
 	}
 }

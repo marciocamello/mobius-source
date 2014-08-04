@@ -68,11 +68,13 @@ public class CommunityBufferDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_SQL_QUERY);
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				SBufferScheme scheme = new SBufferScheme();
@@ -102,6 +104,7 @@ public class CommunityBufferDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -131,6 +134,7 @@ public class CommunityBufferDAO
 		PreparedStatement stmt = null;
 		scheme.id = ManageBbsBuffer.getAutoIncrement(1);
 		String buff_list = ManageBbsBuffer.IntToString(scheme.skills_id);
+		
 		try
 		{
 			if ((buff_list != "") || !buff_list.isEmpty())
@@ -145,7 +149,6 @@ public class CommunityBufferDAO
 				ManageBbsBuffer.getInstance();
 				ManageBbsBuffer.getSchemeList().add(scheme);
 			}
-			
 		}
 		catch (Exception e)
 		{

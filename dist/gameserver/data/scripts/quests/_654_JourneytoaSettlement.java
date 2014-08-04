@@ -58,16 +58,19 @@ public class _654_JourneytoaSettlement extends Quest implements ScriptFile
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		if (event.equalsIgnoreCase("printessa_spirit_q0654_04.htm"))
 		{
 			st.setCond(2);
 		}
+		
 		if (event.equalsIgnoreCase("printessa_spirit_q0654_07.htm"))
 		{
 			st.giveItems(FrintezzasMagicForceFieldRemovalScroll, 1);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return event;
 	}
 	
@@ -76,10 +79,12 @@ public class _654_JourneytoaSettlement extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		QuestState q = st.getPlayer().getQuestState(_119_LastImperialPrince.class);
+		
 		if (q == null)
 		{
 			return htmltext;
 		}
+		
 		if (st.getPlayer().getLevel() < 74)
 		{
 			htmltext = "printessa_spirit_q0654_02.htm";
@@ -92,17 +97,21 @@ public class _654_JourneytoaSettlement extends Quest implements ScriptFile
 			st.exitCurrentQuest(true);
 			return htmltext;
 		}
+		
 		int cond = st.getCond();
+		
 		if (npc.getNpcId() == NamelessSpirit)
 		{
 			if (cond == 0)
 			{
 				return "printessa_spirit_q0654_01.htm";
 			}
+			
 			if (cond == 1)
 			{
 				return "printessa_spirit_q0654_03.htm";
 			}
+			
 			if (cond == 3)
 			{
 				return "printessa_spirit_q0654_06.htm";
@@ -112,6 +121,7 @@ public class _654_JourneytoaSettlement extends Quest implements ScriptFile
 		{
 			htmltext = "noquest";
 		}
+		
 		return htmltext;
 	}
 	
@@ -124,6 +134,7 @@ public class _654_JourneytoaSettlement extends Quest implements ScriptFile
 			st.giveItems(AntelopeSkin, 1);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return null;
 	}
 }

@@ -263,6 +263,7 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 	public void onLoad()
 	{
 		CharListenerList.addGlobal(this);
+		
 		if (isActive())
 		{
 			_active = true;
@@ -293,34 +294,41 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 	public void startEvent()
 	{
 		Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (Boolean.FALSE)
 		{
 			player.sendMessage("Event is currently disabled");
 			return;
 		}
+		
 		if (SetActive("SavingSnowman", true))
 		{
 			spawnEventManagers();
 			System.out.println("Event 'SavingSnowman' started.");
 			Announcements.getInstance().announceByCustomMessage("scripts.events.SavingSnowman.AnnounceEventStarted", null);
+			
 			if (_saveTask == null)
 			{
 				_saveTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new SaveTask(), INITIAL_SAVE_DELAY, SAVE_INTERVAL);
 			}
+			
 			if (_sayTask == null)
 			{
 				_sayTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new SayTask(), SATNA_SAY_INTERVAL, SATNA_SAY_INTERVAL);
 			}
+			
 			_snowmanState = SnowmanState.SAVED;
 		}
 		else
 		{
 			player.sendMessage("Event 'SavingSnowman' already started.");
 		}
+		
 		_active = true;
 		show("admin/events.htm", player);
 	}
@@ -331,44 +339,54 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 	public void stopEvent()
 	{
 		Player player = getSelf();
+		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
 		}
+		
 		if (SetActive("SavingSnowman", false))
 		{
 			unSpawnEventManagers();
+			
 			if (_snowman != null)
 			{
 				_snowman.deleteMe();
 			}
+			
 			if (_thomas != null)
 			{
 				_thomas.deleteMe();
 			}
+			
 			System.out.println("Event 'SavingSnowman' stopped.");
 			Announcements.getInstance().announceByCustomMessage("scripts.events.SavingSnowman.AnnounceEventStoped", null);
+			
 			if (_saveTask != null)
 			{
 				_saveTask.cancel(false);
 				_saveTask = null;
 			}
+			
 			if (_sayTask != null)
 			{
 				_sayTask.cancel(false);
 				_sayTask = null;
 			}
+			
 			if (_eatTask != null)
 			{
 				_eatTask.cancel(false);
 				_eatTask = null;
 			}
+			
 			_snowmanState = SnowmanState.SAVED;
 		}
 		else
 		{
 			player.sendMessage("Event 'SavingSnowman' not started.");
 		}
+		
 		_active = false;
 		show("admin/events.htm", player);
 	}
@@ -548,15 +566,19 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 	public void onReload()
 	{
 		unSpawnEventManagers();
+		
 		if (_saveTask != null)
 		{
 			_saveTask.cancel(false);
 		}
+		
 		_saveTask = null;
+		
 		if (_sayTask != null)
 		{
 			_sayTask.cancel(false);
 		}
+		
 		_sayTask = null;
 		_snowmanState = SnowmanState.SAVED;
 	}
@@ -583,9 +605,11 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		if (_active && (killer != null))
 		{
 			Player pKiller = killer.getPlayer();
+			
 			if ((pKiller != null) && SimpleCheckDrop(cha, killer) && (Rnd.get(1000) < Config.EVENT_SAVING_SNOWMAN_REWARDER_CHANCE))
 			{
 				List<Player> players = new ArrayList<>();
+				
 				if (pKiller.isInParty())
 				{
 					players = pKiller.getParty().getPartyMembers();
@@ -594,6 +618,7 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 				{
 					players.add(pKiller);
 				}
+				
 				spawnRewarder(players.get(Rnd.get(players.size())));
 			}
 		}
@@ -612,18 +637,23 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 				return;
 			}
 		}
+		
 		Location spawnLoc = Location.findPointToStay(rewarded, 300, 400);
+		
 		for (int i = 0; (i < 20) && !GeoEngine.canSeeCoord(rewarded, spawnLoc.x, spawnLoc.y, spawnLoc.z, false); i++)
 		{
 			spawnLoc = Location.findPointToStay(rewarded, 300, 400);
 		}
+		
 		NpcTemplate template = NpcHolder.getInstance().getTemplate(EVENT_REWARDER_ID);
+		
 		if (template == null)
 		{
 			System.out.println("WARNING! events.SavingSnowman.spawnRewarder template is null for npc: " + EVENT_REWARDER_ID);
 			Thread.dumpStack();
 			return;
 		}
+		
 		NpcInstance rewarder = new NpcInstance(IdFactory.getInstance().getNextId(), template);
 		rewarder.setLoc(spawnLoc);
 		rewarder.setHeading((int) (Math.atan2(spawnLoc.y - rewarded.getY(), spawnLoc.x - rewarded.getX()) * Creature.HEADINGS_IN_PI) + 32768);
@@ -650,6 +680,7 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		{
 			return;
 		}
+		
 		Functions.npcSayCustomMessage(rewarder, "scripts.events.SavingSnowman.RewarderPhrase2", rewarded.getName());
 		Functions.addItem(rewarded, 14616, 1);
 		executeTask("events.SavingSnowman.SavingSnowman", "removeRewarder", new Object[]
@@ -668,6 +699,7 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		{
 			return;
 		}
+		
 		Functions.npcSayCustomMessage(rewarder, "scripts.events.SavingSnowman.RewarderPhrase3");
 		Location loc = rewarder.getSpawnedLoc();
 		double radian = PositionUtils.convertHeadingToRadian(rewarder.getHeading());
@@ -691,6 +723,7 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		{
 			return;
 		}
+		
 		rewarder.deleteMe();
 	}
 	
@@ -700,28 +733,35 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 	public void buff()
 	{
 		Player player = getSelf();
+		
 		if (!_active || player.isActionsDisabled() || player.isSitting() || (player.getLastNpc() == null) || (player.getLastNpc().getDistance(player) > 300))
 		{
 			return;
 		}
+		
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;
 		}
+		
 		String var = player.getVar("santaEventTime");
+		
 		if ((var != null) && (Long.parseLong(var) > System.currentTimeMillis()))
 		{
 			show("default/13184-4.htm", player);
 			return;
 		}
+		
 		if (_snowmanState != SnowmanState.SAVED)
 		{
 			show("default/13184-3.htm", player);
 			return;
 		}
+		
 		player.broadcastPacket(new MagicSkillUse(player, player, 23017, 1, 0, 0));
 		player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(23017, 1));
 		player.setVar("santaEventTime", String.valueOf(System.currentTimeMillis() + SANTA_BUFF_REUSE), -1);
+		
 		for (Summon summon : player.getSummonList())
 		{
 			summon.broadcastPacket(new MagicSkillUse(summon, summon, 23017, 1, 0, 0));
@@ -735,10 +775,12 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 	public void locateSnowman()
 	{
 		Player player = getSelf();
+		
 		if (!_active || player.isActionsDisabled() || player.isSitting() || (player.getLastNpc() == null) || (player.getLastNpc().getDistance(player) > 300))
 		{
 			return;
 		}
+		
 		if (_snowman != null)
 		{
 			player.sendPacket(new RadarControl(2, 2, _snowman.getLoc()), new RadarControl(0, 1, _snowman.getLoc()));
@@ -757,24 +799,30 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 	public void coupon(String[] var)
 	{
 		Player player = getSelf();
+		
 		if (!_active || player.isActionsDisabled() || player.isSitting() || (player.getLastNpc() == null) || (player.getLastNpc().getDistance(player) > 300))
 		{
 			return;
 		}
+		
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;
 		}
+		
 		if (getItemCount(player, 20107) < 1)
 		{
 			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
 			return;
 		}
+		
 		int num = Integer.parseInt(var[0]);
+		
 		if ((num < 0) || (num > 13))
 		{
 			return;
 		}
+		
 		int expertise = Math.min(player.expertiseIndex, 5);
 		expertise = Math.max(expertise, 1);
 		expertise--;
@@ -793,28 +841,35 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 	public void lotery()
 	{
 		Player player = getSelf();
+		
 		if (!_active || player.isActionsDisabled() || player.isSitting() || (player.getLastNpc() == null) || (player.getLastNpc().getDistance(player) > 300))
 		{
 			return;
 		}
+		
 		if (!player.isQuestContinuationPossible(true))
 		{
 			return;
 		}
+		
 		if (getItemCount(player, 57) < Config.EVENT_SAVING_SNOWMAN_LOTERY_PRICE)
 		{
 			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
+		
 		String var = player.getVar("santaLotteryTime");
+		
 		if ((var != null) && (Long.parseLong(var) > System.currentTimeMillis()))
 		{
 			show("default/13184-5.htm", player);
 			return;
 		}
+		
 		removeItem(player, 57, Config.EVENT_SAVING_SNOWMAN_LOTERY_PRICE);
 		player.setVar("santaLotteryTime", String.valueOf(System.currentTimeMillis() + SANTA_LOTTERY_REUSE), -1);
 		int chance = Rnd.get(RewardList.MAX_CHANCE);
+		
 		if (chance < 300000)
 		{
 			addItem(player, 5561, 1);
@@ -876,6 +931,7 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		{
 			return "";
 		}
+		
 		return " (" + Util.formatAdena(Config.EVENT_SAVING_SNOWMAN_LOTERY_PRICE) + " adena)";
 	}
 	
@@ -908,57 +964,71 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 	public void captureSnowman()
 	{
 		Location spawnPoint = getRandomSpawnPoint();
+		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.SavingSnowman.AnnounceSnowmanCaptured", null, ChatType.CRITICAL_ANNOUNCE);
 			player.sendPacket(new SystemMessage(SystemMessage.S2_S1).addZoneName(spawnPoint).addString("�?щите Снеговика в "));
 			player.sendPacket(new RadarControl(2, 2, spawnPoint), new RadarControl(0, 1, spawnPoint));
 		}
+		
 		NpcTemplate template = NpcHolder.getInstance().getTemplate(SNOWMAN_ID);
+		
 		if (template == null)
 		{
 			System.out.println("WARNING! events.SavingSnowman.captureSnowman template is null for npc: " + SNOWMAN_ID);
 			Thread.dumpStack();
 			return;
 		}
+		
 		SimpleSpawner sp = new SimpleSpawner(template);
 		sp.setLoc(spawnPoint);
 		sp.setAmount(1);
 		sp.setRespawnDelay(0);
 		_snowman = sp.doSpawn(true);
+		
 		if (_snowman == null)
 		{
 			return;
 		}
+		
 		template = NpcHolder.getInstance().getTemplate(THOMAS_ID);
+		
 		if (template == null)
 		{
 			System.out.println("WARNING! events.SavingSnowman.captureSnowman template is null for npc: " + THOMAS_ID);
 			Thread.dumpStack();
 			return;
 		}
+		
 		Location pos = Location.findPointToStay(_snowman, 100, 120);
 		sp = new SimpleSpawner(template);
 		sp.setLoc(pos);
 		sp.setAmount(1);
 		sp.setRespawnDelay(0);
 		_thomas = sp.doSpawn(true);
+		
 		if (_thomas == null)
 		{
 			return;
 		}
+		
 		_snowmanState = SnowmanState.CAPTURED;
+		
 		if (_snowmanShoutTask != null)
 		{
 			_snowmanShoutTask.cancel(false);
 			_snowmanShoutTask = null;
 		}
+		
 		_snowmanShoutTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new ShoutTask(), 1, SNOWMAN_SHOUT_INTERVAL);
+		
 		if (_eatTask != null)
 		{
 			_eatTask.cancel(false);
 			_eatTask = null;
 		}
+		
 		_eatTask = executeTask("events.SavingSnowman.SavingSnowman", "eatSnowman", new Object[0], THOMAS_EAT_DELAY);
 	}
 	
@@ -971,16 +1041,20 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		{
 			return;
 		}
+		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.SavingSnowman.AnnounceSnowmanKilled", null, ChatType.CRITICAL_ANNOUNCE);
 		}
+		
 		_snowmanState = SnowmanState.KILLED;
+		
 		if (_snowmanShoutTask != null)
 		{
 			_snowmanShoutTask.cancel(false);
 			_snowmanShoutTask = null;
 		}
+		
 		_snowman.deleteMe();
 		_thomas.deleteMe();
 	}
@@ -995,21 +1069,26 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 		{
 			return;
 		}
+		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.SavingSnowman.AnnounceSnowmanSaved", null, ChatType.CRITICAL_ANNOUNCE);
 		}
+		
 		_snowmanState = SnowmanState.SAVED;
+		
 		if (_snowmanShoutTask != null)
 		{
 			_snowmanShoutTask.cancel(false);
 			_snowmanShoutTask = null;
 		}
+		
 		if (_eatTask != null)
 		{
 			_eatTask.cancel(false);
 			_eatTask = null;
 		}
+		
 		Player player = topDamager.getPlayer();
 		Functions.npcSayCustomMessage(_snowman, "scripts.events.SavingSnowman.SnowmanSayTnx", player.getName());
 		addItem(player, 20034, 3);
@@ -1039,6 +1118,7 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 			{
 				return;
 			}
+			
 			for (SimpleSpawner s : _spawns)
 			{
 				if (s.getCurrentNpcId() == EVENT_MANAGER_ID)
@@ -1063,6 +1143,7 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 			{
 				return;
 			}
+			
 			Functions.npcShoutCustomMessage(_snowman, "scripts.events.SavingSnowman.SnowmanShout");
 		}
 	}
@@ -1081,6 +1162,7 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 			{
 				return;
 			}
+			
 			captureSnowman();
 		}
 	}

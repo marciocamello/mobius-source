@@ -102,11 +102,14 @@ public class FortuneBug extends DefaultAI
 	{
 		super.onEvtArrived();
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		ItemInstance closestItem = null;
+		
 		if (_nextEat < System.currentTimeMillis())
 		{
 			for (GameObject obj : World.getAroundObjects(actor, 20, 200))
@@ -116,12 +119,14 @@ public class FortuneBug extends DefaultAI
 					closestItem = (ItemInstance) obj;
 				}
 			}
+			
 			if (closestItem != null)
 			{
 				closestItem.deleteMe();
 				actor.altUseSkill(s_display_bug_of_fortune1, actor);
 				Functions.npcSayInRange(actor, 600, NpcString.YUMYUM_YUMYUM);
 				i_ai0++;
+				
 				if ((i_ai0 > 1) && (i_ai0 <= 10))
 				{
 					i_ai1 = 1;
@@ -138,15 +143,18 @@ public class FortuneBug extends DefaultAI
 				{
 					i_ai1 = 4;
 				}
+				
 				if (i_ai0 > 1000)
 				{
 					i_ai1 = 5;
 				}
+				
 				switch (i_ai1)
 				{
 					case 0:
 						i_ai2 = 0;
 						break;
+					
 					case 1:
 						if (Rnd.get(100) < 10)
 						{
@@ -160,7 +168,9 @@ public class FortuneBug extends DefaultAI
 						{
 							i_ai2 = 1;
 						}
+						
 						break;
+					
 					case 2:
 						if (Rnd.get(100) < 10)
 						{
@@ -174,7 +184,9 @@ public class FortuneBug extends DefaultAI
 						{
 							i_ai2 = 2;
 						}
+						
 						break;
+					
 					case 3:
 						if (Rnd.get(100) < 10)
 						{
@@ -184,7 +196,9 @@ public class FortuneBug extends DefaultAI
 						{
 							i_ai2 = 3;
 						}
+						
 						break;
+					
 					case 4:
 						if (Rnd.get(100) < 10)
 						{
@@ -194,8 +208,10 @@ public class FortuneBug extends DefaultAI
 						{
 							i_ai2 = 4;
 						}
+						
 						break;
 				}
+				
 				_nextEat = System.currentTimeMillis() + 10000;
 			}
 		}
@@ -209,13 +225,16 @@ public class FortuneBug extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((actor == null) || actor.isDead())
 		{
 			return true;
 		}
+		
 		if (!actor.isMoving && (_nextEat < System.currentTimeMillis()))
 		{
 			ItemInstance closestItem = null;
+			
 			for (GameObject obj : World.getAroundObjects(actor, MAX_RADIUS, 200))
 			{
 				if (obj.isItem() && ((ItemInstance) obj).isStackable())
@@ -223,11 +242,13 @@ public class FortuneBug extends DefaultAI
 					closestItem = (ItemInstance) obj;
 				}
 			}
+			
 			if (closestItem != null)
 			{
 				actor.moveToLocation(closestItem.getLoc(), 0, true);
 			}
 		}
+		
 		return false;
 	}
 	
@@ -240,10 +261,12 @@ public class FortuneBug extends DefaultAI
 	{
 		super.onEvtDead(killer);
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		if (killer != null)
 		{
 			if (i_ai2 == 0)
@@ -254,7 +277,9 @@ public class FortuneBug extends DefaultAI
 			{
 				actor.broadcastPacket(new MagicSkillUse(actor, s_display_jackpot_firework.getId(), 1, s_display_jackpot_firework.getHitTime(), 0));
 			}
+			
 			int i0, i1;
+			
 			switch (i_ai2)
 			{
 				case 1:
@@ -262,11 +287,13 @@ public class FortuneBug extends DefaultAI
 					i1 = 2245;
 					actor.dropItem(killer.getPlayer(), ItemName_A, i0 + Rnd.get(i1 - i0));
 					break;
+				
 				case 2:
 					i0 = 3200;
 					i1 = 8400;
 					actor.dropItem(killer.getPlayer(), ItemName_A, i0 + Rnd.get(i1 - i0));
 					break;
+				
 				case 3:
 					i0 = 7;
 					i1 = 17;
@@ -278,6 +305,7 @@ public class FortuneBug extends DefaultAI
 					i1 = 17;
 					actor.dropItem(killer.getPlayer(), ItemName_B_3, i0 + Rnd.get(i1 - i0));
 					break;
+				
 				case 4:
 					i0 = 15;
 					i1 = 45;
@@ -288,10 +316,12 @@ public class FortuneBug extends DefaultAI
 					i0 = 15;
 					i1 = 45;
 					actor.dropItem(killer.getPlayer(), ItemName_B_3, i0 + Rnd.get(i1 - i0));
+					
 					if (Rnd.get(100) < 10)
 					{
 						actor.dropItem(killer.getPlayer(), ItemName_B_4, 1);
 					}
+					
 					break;
 			}
 		}
@@ -307,10 +337,12 @@ public class FortuneBug extends DefaultAI
 	protected void onEvtTimer(int timerId, Object arg1, Object arg2)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		if (timerId == 7778)
 		{
 			switch (i_ai0)
@@ -318,22 +350,28 @@ public class FortuneBug extends DefaultAI
 				case 0:
 					Functions.npcSayInRange(actor, 600, Rnd.chance(50) ? NpcString.IF_YOU_HAVE_ITEMS_PLEASE_GIVE_THEM_TO_ME : NpcString.MY_STOMACH_IS_EMPTY);
 					break;
+				
 				case 1:
 					Functions.npcSayInRange(actor, 600, Rnd.chance(50) ? NpcString.IM_HUNGRY_IM_HUNGRY : NpcString.IM_STILL_NOT_FULL);
 					break;
+				
 				case 2:
 					Functions.npcSayInRange(actor, 600, Rnd.chance(50) ? NpcString.IM_STILL_HUNGRY : NpcString.I_FEEL_A_LITTLE_WOOZY);
 					break;
+				
 				case 3:
 					Functions.npcSayInRange(actor, 600, Rnd.chance(50) ? NpcString.GIVE_ME_SOMETHING_TO_EAT : NpcString.NOW_ITS_TIME_TO_EAT);
 					break;
+				
 				case 4:
 					Functions.npcSayInRange(actor, 600, Rnd.chance(50) ? NpcString.I_ALSO_NEED_A_DESSERT : NpcString.IM_STILL_HUNGRY_);
 					break;
+				
 				case 5:
 					Functions.npcSayInRange(actor, 600, NpcString.IM_FULL_NOW_I_DONT_WANT_TO_EAT_ANYMORE);
 					break;
 			}
+			
 			addTimer(7778, 10000 + (Rnd.get(10) * 1000));
 		}
 		else

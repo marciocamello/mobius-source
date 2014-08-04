@@ -130,10 +130,12 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		Player player = st.getPlayer();
+		
 		if (player.getClassLevel() > 2)
 		{
 			return htmltext;
 		}
+		
 		if (event.equalsIgnoreCase("1-3.htm"))
 		{
 			st.setState(STARTED);
@@ -208,6 +210,7 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 			st.setState(STARTED);
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
+			
 			if (st.getPlayer().getRace() == Race.human)
 			{
 				if (st.getPlayer().isMageClass())
@@ -259,9 +262,11 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 			st.playSound(SOUND_MIDDLE);
 			st.setCond(4);
 		}
+		
 		if (event.startsWith("changeclass"))
 		{
 			int newClassId = 0;
+			
 			try
 			{
 				newClassId = Integer.parseInt(event.substring(12, event.length()));
@@ -270,6 +275,7 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 			{
 				e.printStackTrace();
 			}
+			
 			player.sendPacket(Msg.CONGRATULATIONS_YOU_HAVE_TRANSFERRED_TO_A_NEW_CLASS);
 			player.setClassId(newClassId, false, false);
 			player.broadcastCharInfo();
@@ -282,6 +288,7 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.takeAllItems(Stone);
 			st.playSound(SOUND_FINISH);
+			
 			if (st.getPlayer().getRace() == Race.human)
 			{
 				if (st.getPlayer().isMageClass())
@@ -320,8 +327,10 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 			{
 				htmltext = HtmCache.getInstance().getNotNull("quests/_10360_CertificationOfFate/0-6g.htm", st.getPlayer());
 			}
+			
 			htmltext = htmltext.replace("%showproof%", HtmlUtils.htmlClassName(newClassId));
 		}
+		
 		return htmltext;
 	}
 	
@@ -333,6 +342,7 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		Player player = st.getPlayer();
 		int classid = player.getClassId().getId();
+		
 		if ((npcId == raimon) && (st.getPlayer().getRace() == Race.human) && st.getPlayer().isMageClass())
 		{
 			if (st.isCompleted())
@@ -569,6 +579,7 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 				htmltext = "4-2.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -576,9 +587,11 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		if ((npcId == poslov) && (st.getCond() == 4))
 		{
 			++killedposlov;
+			
 			if (killedposlov >= 1)
 			{
 				st.setCond(5);
@@ -586,9 +599,11 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 				killedposlov = 0;
 			}
 		}
+		
 		if ((npcId == kanilov) && (st.getCond() == 2))
 		{
 			++killedkanilov;
+			
 			if (killedkanilov >= 1)
 			{
 				st.setCond(3);
@@ -596,9 +611,11 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 				killedkanilov = 0;
 			}
 		}
+		
 		if ((npcId == sakum) && (st.getCond() == 6))
 		{
 			++killedsakum;
+			
 			if (killedsakum >= 1)
 			{
 				st.setCond(7);
@@ -607,6 +624,7 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 				st.giveItems(Stone, 1, false);
 			}
 		}
+		
 		return null;
 	}
 	
@@ -614,17 +632,20 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 	{
 		ClassId classId = player.getClassId();
 		StringBuilder html = new StringBuilder();
+		
 		for (ClassId cid : ClassId.VALUES)
 		{
 			if (cid == ClassId.INSPECTOR)
 			{
 				continue;
 			}
+			
 			if (cid.childOf(classId) && (cid.getClassLevel().ordinal() == (classId.getClassLevel().ordinal() + 1)))
 			{
 				html.append("<a action=\"bypass -h Quest ").append(getClass().getSimpleName()).append(" changeclass ").append(cid.getId()).append(" ").append("\">").append(HtmlUtils.htmlClassName(cid.getId())).append("</a><br>");
 			}
 		}
+		
 		return html.toString();
 	}
 }

@@ -50,19 +50,24 @@ public class RequestAutoSoulShot extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if ((activeChar.getPrivateStoreType() != Player.STORE_PRIVATE_NONE) || activeChar.isDead())
 		{
 			return;
 		}
+		
 		ItemInstance item = activeChar.getInventory().getItemByItemId(_itemId);
+		
 		if (item == null)
 		{
 			return;
 		}
+		
 		if (_type)
 		{
 			activeChar.addAutoSoulShot(_itemId);
@@ -72,6 +77,7 @@ public class RequestAutoSoulShot extends L2GameClientPacket
 			handler.useItem(activeChar, item, false);
 			return;
 		}
+		
 		activeChar.removeAutoSoulShot(_itemId);
 		activeChar.sendPacket(new ExAutoSoulShot(_itemId, false));
 		activeChar.sendPacket(new SystemMessage(SystemMessage.THE_AUTOMATIC_USE_OF_S1_WILL_NOW_BE_CANCELLED).addString(item.getName()));

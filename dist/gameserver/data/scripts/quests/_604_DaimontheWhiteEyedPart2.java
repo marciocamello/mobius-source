@@ -64,6 +64,7 @@ public class _604_DaimontheWhiteEyedPart2 extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		NpcInstance isQuest = GameObjectsStorage.getByNpcId(DAIMON);
+		
 		if (event.equalsIgnoreCase("31683-02.htm"))
 		{
 			if (st.getPlayer().getLevel() < 73)
@@ -71,6 +72,7 @@ public class _604_DaimontheWhiteEyedPart2 extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 				return "31683-00b.htm";
 			}
+			
 			st.setCond(1);
 			st.setState(STARTED);
 			st.takeItems(U_SUMMON, 1);
@@ -83,14 +85,17 @@ public class _604_DaimontheWhiteEyedPart2 extends Quest implements ScriptFile
 			{
 				return "31541-04.htm";
 			}
+			
 			if (isQuest != null)
 			{
 				return "31541-03.htm";
 			}
+			
 			if ((ServerVariables.getLong(_604_DaimontheWhiteEyedPart2.class.getSimpleName(), 0) + (3 * 60 * 60 * 1000)) > System.currentTimeMillis())
 			{
 				return "31541-05.htm";
 			}
+			
 			st.takeItems(S_SUMMON, 1);
 			isQuest = st.addSpawn(DAIMON, 186320, -43904, -3175);
 			Functions.npcSay(isQuest, "Who called me?");
@@ -107,6 +112,7 @@ public class _604_DaimontheWhiteEyedPart2 extends Quest implements ScriptFile
 			{
 				return "list.htm";
 			}
+			
 			st.exitCurrentQuest(true);
 			return "31683-05.htm";
 		}
@@ -164,6 +170,7 @@ public class _604_DaimontheWhiteEyedPart2 extends Quest implements ScriptFile
 			isQuest.deleteMe();
 			return null;
 		}
+		
 		return event;
 	}
 	
@@ -188,6 +195,7 @@ public class _604_DaimontheWhiteEyedPart2 extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (cond == 0)
 		{
 			if (npcId == EYE)
@@ -257,11 +265,13 @@ public class _604_DaimontheWhiteEyedPart2 extends Quest implements ScriptFile
 					htmltext = "31683-06.htm";
 				}
 			}
+			
 			if (npcId == ALTAR)
 			{
 				htmltext = "31541-05.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -276,6 +286,7 @@ public class _604_DaimontheWhiteEyedPart2 extends Quest implements ScriptFile
 			st.setState(STARTED);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return null;
 	}
 }

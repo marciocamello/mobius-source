@@ -108,6 +108,7 @@ public class GameServerConnection
 					return;
 				}
 			}
+			
 			_pingRetry++;
 			sendPacket(new PingRequest());
 		}
@@ -131,6 +132,7 @@ public class GameServerConnection
 	{
 		boolean wakeUp;
 		sendLock.lock();
+		
 		try
 		{
 			sendQueue.add(packet);
@@ -144,6 +146,7 @@ public class GameServerConnection
 		{
 			sendLock.unlock();
 		}
+		
 		if (wakeUp)
 		{
 			selector.wakeup();
@@ -162,6 +165,7 @@ public class GameServerConnection
 			key.interestOps(key.interestOps() & ~SelectionKey.OP_WRITE);
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -177,6 +181,7 @@ public class GameServerConnection
 			key.interestOps(key.interestOps() | SelectionKey.OP_WRITE);
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -199,6 +204,7 @@ public class GameServerConnection
 			stopPingTask();
 			readBuffer.clear();
 			sendLock.lock();
+			
 			try
 			{
 				sendQueue.clear();
@@ -208,12 +214,14 @@ public class GameServerConnection
 				sendLock.unlock();
 			}
 			isPengingWrite.set(false);
+			
 			if ((gameServer != null) && gameServer.isAuthed())
 			{
 				_log.info("Connection with gameserver " + gameServer.getId() + " [" + gameServer.getName() + "] lost.");
 				_log.info("Setting gameserver down.");
 				gameServer.setDown();
 			}
+			
 			gameServer = null;
 		}
 		catch (Exception e)
@@ -275,6 +283,7 @@ public class GameServerConnection
 		{
 			return;
 		}
+		
 		_pingTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new PingTask(), Config.GAME_SERVER_PING_DELAY, Config.GAME_SERVER_PING_DELAY);
 	}
 	

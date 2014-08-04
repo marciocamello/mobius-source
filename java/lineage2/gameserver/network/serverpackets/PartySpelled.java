@@ -31,10 +31,12 @@ public class PartySpelled extends L2GameServerPacket implements IconEffectPacket
 		_objId = activeChar.getObjectId();
 		_type = activeChar.isPet() ? 1 : activeChar.isServitor() ? 2 : 0;
 		_effects = new ArrayList<>();
+		
 		if (full)
 		{
 			lineage2.gameserver.model.Effect[] effects = activeChar.getEffectList().getAllFirstEffects();
 			Arrays.sort(effects, EffectsComparator.getInstance());
+			
 			for (lineage2.gameserver.model.Effect effect : effects)
 			{
 				if ((effect != null) && effect.isInUse())
@@ -52,6 +54,7 @@ public class PartySpelled extends L2GameServerPacket implements IconEffectPacket
 		writeD(_type);
 		writeD(_objId);
 		writeD(_effects.size());
+		
 		for (IconEffect temp : _effects)
 		{
 			writeD(temp.getSkillId());

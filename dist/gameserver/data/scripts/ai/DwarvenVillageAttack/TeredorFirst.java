@@ -39,6 +39,7 @@ public class TeredorFirst extends DefaultAI
 	protected void onEvtTimer(int timer_id, Object arg1, Object arg2)
 	{
 		super.onEvtTimer(timer_id, arg1, arg2);
+		
 		switch (timer_id)
 		{
 			case 1:
@@ -46,12 +47,15 @@ public class TeredorFirst extends DefaultAI
 				addTaskBuff(getActor(), sk);
 				doTask();
 				break;
+			
 			case 2:
 				Reflection r = getActor().getReflection();
+				
 				if (r instanceof MemoryOfDisaster)
 				{
 					((MemoryOfDisaster) r).spawnWyrm();
 				}
+				
 				getActor().deleteMe();
 				break;
 		}

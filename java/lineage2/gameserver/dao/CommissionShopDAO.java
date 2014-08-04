@@ -95,6 +95,7 @@ public class CommissionShopDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -132,20 +133,24 @@ public class CommissionShopDAO
 		ResultSet rset = null;
 		CommissionItemContainer container = CommissionShopManager.getInstance().getContainer();
 		container.readLock();
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_PLAYER_REGISTERED_ITEMS_SQL_QUERY);
 			statement.setInt(1, player.getObjectId());
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				int objectId = rset.getInt("obj_id");
 				ItemInstance item;
+				
 				if ((item = container.getItemByObjectId(objectId)) == null)
 				{
 					continue;
 				}
+				
 				CommissionItemInfo itemInfo = new CommissionItemInfo(item);
 				itemInfo.setAuctionId(rset.getLong("auction_id"));
 				itemInfo.setRegisteredPrice(rset.getLong("price"));
@@ -183,16 +188,20 @@ public class CommissionShopDAO
 		PreparedStatement statement = null;
 		ResultSet rset = null;
 		String type = "";
+		
 		for (int i = 0; i < types.length; i++)
 		{
 			type += types[i].name();
+			
 			if ((i + 1) < types.length)
 			{
 				type += ",";
 			}
 		}
+		
 		CommissionItemContainer container = CommissionShopManager.getInstance().getContainer();
 		container.readLock();
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -202,26 +211,32 @@ public class CommissionShopDAO
 			int i = 0;
 			List<CommissionItemInfo> list = new ArrayList<>(120);
 			items.add(list);
+			
 			while (rset.next() && (i <= 999))
 			{
 				int objectId = rset.getInt("obj_id");
 				ItemInstance item;
+				
 				if ((item = container.getItemByObjectId(objectId)) == null)
 				{
 					continue;
 				}
+				
 				if (((rareType == 1) && !item.getTemplate().isBlessed()) || ((rareType == 0) && item.getTemplate().isBlessed()))
 				{
 					continue;
 				}
+				
 				if ((grade > -1) && (item.getTemplate().getItemGrade().ordinal() != grade))
 				{
 					continue;
 				}
+				
 				if (!searchName.isEmpty() && !rset.getString("item_name").toLowerCase().contains(searchName.toLowerCase()))
 				{
 					continue;
 				}
+				
 				CommissionItemInfo itemInfo = new CommissionItemInfo(item);
 				itemInfo.setAuctionId(rset.getLong("auction_id"));
 				itemInfo.setRegisteredPrice(rset.getLong("price"));
@@ -230,11 +245,13 @@ public class CommissionShopDAO
 				itemInfo.setSaleEndTime(rset.getLong("sale_end_time"));
 				itemInfo.setSellerName(rset.getString("seller_name"));
 				list.add(itemInfo);
+				
 				if ((i != 0) && ((i % 120) == 0))
 				{
 					list = new ArrayList<>(120);
 					items.add(list);
 				}
+				
 				i++;
 			}
 		}
@@ -262,20 +279,24 @@ public class CommissionShopDAO
 		ResultSet rset = null;
 		CommissionItemContainer container = CommissionShopManager.getInstance().getContainer();
 		container.readLock();
+		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(SELECT_COMMISSION_ITEM_INFO);)
 		{
 			statement.setLong(1, auctionId);
 			statement.setString(2, exItemType.name());
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				int objectId = rset.getInt("obj_id");
 				ItemInstance item;
+				
 				if ((item = container.getItemByObjectId(objectId)) == null)
 				{
 					return null;
 				}
+				
 				itemInfo = new CommissionItemInfo(item);
 				itemInfo.setAuctionId(auctionId);
 				itemInfo.setRegisteredPrice(rset.getLong("price"));
@@ -306,6 +327,7 @@ public class CommissionShopDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -338,20 +360,24 @@ public class CommissionShopDAO
 		ResultSet rset = null;
 		CommissionItemContainer container = CommissionShopManager.getInstance().getContainer();
 		container.writeLock();
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_EXPIRED_ITEMS);
 			statement.setLong(1, expireTime);
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				int objectId = rset.getInt("obj_id");
 				ItemInstance item;
+				
 				if ((item = container.getItemByObjectId(objectId)) == null)
 				{
 					continue;
 				}
+				
 				CommissionItemInfo itemInfo = new CommissionItemInfo(item);
 				itemInfo.setAuctionId(rset.getLong("auction_id"));
 				itemInfo.setRegisteredPrice(rset.getLong("price"));

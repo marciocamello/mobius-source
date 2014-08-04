@@ -41,6 +41,7 @@ public final class TeredorGatekeeperInstance extends NpcInstance
 		if (command.equalsIgnoreCase("teredorenterinst"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(teredorInstanceId))

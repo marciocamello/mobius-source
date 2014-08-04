@@ -51,13 +51,16 @@ public abstract class mysql
 		Connection con = null;
 		Statement statement = null;
 		PreparedStatement pstatement = null;
+		
 		try
 		{
 			if (db == null)
 			{
 				db = DatabaseFactory.getInstance();
 			}
+			
 			con = db.getConnection();
+			
 			if (vars.length == 0)
 			{
 				statement = con.createStatement();
@@ -94,6 +97,7 @@ public abstract class mysql
 		Number n;
 		long long_val;
 		double double_val;
+		
 		for (int i = 0; i < vars.length; i++)
 		{
 			if (vars[i] instanceof Number)
@@ -101,6 +105,7 @@ public abstract class mysql
 				n = (Number) vars[i];
 				long_val = n.longValue();
 				double_val = n.doubleValue();
+				
 				if (long_val == double_val)
 				{
 					statement.setLong(i + 1, long_val);
@@ -149,21 +154,25 @@ public abstract class mysql
 		Connection con = null;
 		Statement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.createStatement();
 			rset = statement.executeQuery(query + " LIMIT 1");
 			ResultSetMetaData md = rset.getMetaData();
+			
 			if (rset.next())
 			{
 				if (md.getColumnCount() > 1)
 				{
 					Map<String, Object> tmp = new HashMap<>();
+					
 					for (int i = md.getColumnCount(); i > 0; i--)
 					{
 						tmp.put(md.getColumnName(i), rset.getObject(i));
 					}
+					
 					ret = tmp;
 				}
 				else
@@ -195,19 +204,23 @@ public abstract class mysql
 		Connection con = null;
 		Statement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.createStatement();
 			rset = statement.executeQuery(query);
 			ResultSetMetaData md = rset.getMetaData();
+			
 			while (rset.next())
 			{
 				Map<String, Object> tmp = new HashMap<>();
+				
 				for (int i = md.getColumnCount(); i > 0; i--)
 				{
 					tmp.put(md.getColumnName(i), rset.getObject(i));
 				}
+				
 				ret.add(tmp);
 			}
 		}
@@ -235,25 +248,30 @@ public abstract class mysql
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			if (db == null)
 			{
 				db = DatabaseFactory.getInstance();
 			}
+			
 			con = db.getConnection();
 			statement = con.prepareStatement(query);
 			rset = statement.executeQuery();
 			ResultSetMetaData md = rset.getMetaData();
+			
 			while (rset.next())
 			{
 				if (md.getColumnCount() > 1)
 				{
 					Map<String, Object> tmp = new HashMap<>();
+					
 					for (int i = 0; i < md.getColumnCount(); i++)
 					{
 						tmp.put(md.getColumnName(i + 1), rset.getObject(i + 1));
 					}
+					
 					ret.add(tmp);
 				}
 				else
@@ -298,11 +316,13 @@ public abstract class mysql
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(query);
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				res = rset.getInt(1);
@@ -331,6 +351,7 @@ public abstract class mysql
 	public static Integer[][] simple_get_int_array(DatabaseFactory db, String[] ret_fields, String table, String where)
 	{
 		String fields = null;
+		
 		for (String field : ret_fields)
 		{
 			if (fields != null)
@@ -343,32 +364,39 @@ public abstract class mysql
 				fields = "`" + field + "`";
 			}
 		}
+		
 		String query = "SELECT " + fields + " FROM `" + table + "` WHERE " + where;
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
 		Integer res[][] = null;
+		
 		try
 		{
 			if (db == null)
 			{
 				db = DatabaseFactory.getInstance();
 			}
+			
 			con = db.getConnection();
 			statement = con.prepareStatement(query);
 			rset = statement.executeQuery();
 			List<Integer[]> al = new ArrayList<>();
 			int row = 0;
+			
 			while (rset.next())
 			{
 				Integer[] tmp = new Integer[ret_fields.length];
+				
 				for (int i = 0; i < ret_fields.length; i++)
 				{
 					tmp[i] = rset.getInt(i + 1);
 				}
+				
 				al.add(row, tmp);
 				row++;
 			}
+			
 			res = al.toArray(new Integer[row][ret_fields.length]);
 		}
 		catch (Exception e)

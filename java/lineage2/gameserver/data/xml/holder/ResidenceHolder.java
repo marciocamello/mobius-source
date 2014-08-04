@@ -92,10 +92,12 @@ public final class ResidenceHolder extends AbstractHolder
 	public <R extends Residence> R getResidence(Class<R> type, int id)
 	{
 		Residence r = getResidence(id);
+		
 		if ((r == null) || (r.getClass() != type))
 		{
 			return null;
 		}
+		
 		return (R) r;
 	}
 	
@@ -144,6 +146,7 @@ public final class ResidenceHolder extends AbstractHolder
 	public <R extends Residence> R getResidenceByCoord(Class<R> type, int x, int y, int z, Reflection ref)
 	{
 		Collection<Residence> residences = type == null ? getResidences() : (Collection<Residence>) getResidenceList(type);
+		
 		for (Residence residence : residences)
 		{
 			if (residence.checkIfInZone(x, y, z, ref))
@@ -151,6 +154,7 @@ public final class ResidenceHolder extends AbstractHolder
 				return (R) residence;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -168,13 +172,16 @@ public final class ResidenceHolder extends AbstractHolder
 	public <R extends Residence> R findNearestResidence(Class<R> clazz, int x, int y, int z, Reflection ref, int offset)
 	{
 		Residence residence = getResidenceByCoord(clazz, x, y, z, ref);
+		
 		if (residence == null)
 		{
 			double closestDistance = offset;
 			double distance;
+			
 			for (Residence r : getResidenceList(clazz))
 			{
 				distance = r.getZone().findDistanceToZone(x, y, z, false);
+				
 				if (closestDistance > distance)
 				{
 					closestDistance = distance;
@@ -182,6 +189,7 @@ public final class ResidenceHolder extends AbstractHolder
 				}
 			}
 		}
+		
 		return (R) residence;
 	}
 	
@@ -204,10 +212,12 @@ public final class ResidenceHolder extends AbstractHolder
 		for (Residence residence : _residences.values())
 		{
 			List<Residence> list = _fastResidencesByType.get(residence.getClass());
+			
 			if (list == null)
 			{
 				_fastResidencesByType.put(residence.getClass(), (list = new ArrayList<>()));
 			}
+			
 			list.add(residence);
 		}
 	}
@@ -220,6 +230,7 @@ public final class ResidenceHolder extends AbstractHolder
 	{
 		buildFastLook();
 		info("total size: " + _residences.size());
+		
 		for (Map.Entry<Class<?>, List<Residence>> entry : _fastResidencesByType.entrySet())
 		{
 			info(" - load " + entry.getValue().size() + " " + entry.getKey().getSimpleName().toLowerCase() + "(s).");

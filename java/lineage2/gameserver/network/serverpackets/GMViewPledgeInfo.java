@@ -36,12 +36,14 @@ public class GMViewPledgeInfo extends L2GameServerPacket
 	public GMViewPledgeInfo(Player activeChar)
 	{
 		Clan clan = activeChar.getClan();
+		
 		for (UnitMember member : clan)
 		{
 			if (member == null)
 			{
 				continue;
 			}
+			
 			char_name = member.getName();
 			clan_level = member.getLevel();
 			clan_id = member.getClassId();
@@ -62,6 +64,7 @@ public class GMViewPledgeInfo extends L2GameServerPacket
 		rank = clan.getRank();
 		rep = clan.getReputationScore();
 		ally_id = clan.getAllyId();
+		
 		if (clan.getAlliance() != null)
 		{
 			ally_name = clan.getAlliance().getAllyName();
@@ -72,6 +75,7 @@ public class GMViewPledgeInfo extends L2GameServerPacket
 			ally_name = "";
 			ally_crest_id = 0;
 		}
+		
 		atWar = clan.isAtWar();
 	}
 	
@@ -79,13 +83,11 @@ public class GMViewPledgeInfo extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x96);
-		
 		writeS(char_name);
 		writeD(clan_id);
 		writeD(0x00);
 		writeS(clan_name);
 		writeS(leader_name);
-		
 		writeD(clan_crest_id);
 		writeD(clan_level);
 		writeD(hasCastle);
@@ -100,8 +102,8 @@ public class GMViewPledgeInfo extends L2GameServerPacket
 		writeD(ally_crest_id);
 		writeD(atWar);
 		writeD(0); // Territory castle ID
-		
 		writeD(infos.size());
+		
 		for (PledgeMemberInfo _info : infos)
 		{
 			writeS(_info._name);
@@ -112,6 +114,7 @@ public class GMViewPledgeInfo extends L2GameServerPacket
 			writeD(_info.online);
 			writeD(_info.sponsor);
 		}
+		
 		infos.clear();
 	}
 	

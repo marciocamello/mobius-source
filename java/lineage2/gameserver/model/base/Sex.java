@@ -41,9 +41,11 @@ public enum Sex
 		{
 			case MALE:
 				break;
+			
 			case FEMALE:
 				break;
 		}
+		
 		return this;
 	}
 }

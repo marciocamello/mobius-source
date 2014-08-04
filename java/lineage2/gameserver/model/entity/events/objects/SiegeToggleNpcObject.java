@@ -26,7 +26,7 @@ import lineage2.gameserver.utils.Location;
 public class SiegeToggleNpcObject implements SpawnableObject
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -64,6 +64,7 @@ public class SiegeToggleNpcObject implements SpawnableObject
 	public void spawnObject(GlobalEvent event)
 	{
 		_toggleNpc.decayFake();
+		
 		if (event.isInProgress())
 		{
 			_toggleNpc.addEvent(event);
@@ -72,6 +73,7 @@ public class SiegeToggleNpcObject implements SpawnableObject
 		{
 			_toggleNpc.removeEvent(event);
 		}
+		
 		_toggleNpc.setCurrentHp(_toggleNpc.getMaxHp(), true);
 		_toggleNpc.spawnMe(_location);
 	}

@@ -44,7 +44,6 @@ public class AdminForgePacket extends L2GameServerPacket
 		{
 			generate(p.b, p.str);
 		}
-		
 	}
 	
 	public boolean generate(byte b, String string)
@@ -84,6 +83,7 @@ public class AdminForgePacket extends L2GameServerPacket
 			writeQ(Long.decode(string));
 			return true;
 		}
+		
 		return false;
 	}
 	

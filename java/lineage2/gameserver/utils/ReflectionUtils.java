@@ -70,11 +70,14 @@ public class ReflectionUtils
 	public static List<Zone> getZonesByType(Zone.ZoneType zoneType)
 	{
 		Collection<Zone> zones = ReflectionManager.DEFAULT.getZones();
+		
 		if (zones.isEmpty())
 		{
 			return Collections.emptyList();
 		}
+		
 		List<Zone> zones2 = new ArrayList<>(5);
+		
 		for (Zone z : zones)
 		{
 			if (z.getType() == zoneType)
@@ -82,6 +85,7 @@ public class ReflectionUtils
 				zones2.add(z);
 			}
 		}
+		
 		return zones2;
 	}
 	
@@ -120,12 +124,13 @@ public class ReflectionUtils
 	public static Reflection enterReflection(Player invoker, Reflection r, InstantZone iz)
 	{
 		r.init(iz);
-		
 		_log.info("Player: " + invoker.getName() + " started instance " + r.getName() + " id:" + r.getId());
+		
 		if (r.getReturnLoc() == null)
 		{
 			r.setReturnLoc(invoker.getLoc());
 		}
+		
 		switch (iz.getEntryType())
 		{
 			case SOLO:
@@ -133,75 +138,94 @@ public class ReflectionUtils
 				{
 					ItemFunctions.removeItem(invoker, iz.getRemovedItemId(), iz.getRemovedItemCount(), true);
 				}
+				
 				if (iz.getGiveItemId() > 0)
 				{
 					ItemFunctions.addItem(invoker, iz.getGiveItemId(), iz.getGiveItemCount(), true);
 				}
+				
 				if (iz.isDispelBuffs())
 				{
 					invoker.dispelBuffs();
 				}
+				
 				if (iz.getSetReuseUponEntry() && (iz.getResetReuse().next(System.currentTimeMillis()) > System.currentTimeMillis()))
 				{
 					invoker.setInstanceReuse(iz.getId(), System.currentTimeMillis());
 				}
+				
 				invoker.setVar("backCoords", invoker.getLoc().toXYZString(), -1);
 				invoker.teleToLocation(iz.getTeleportCoord(), r);
 				break;
+			
 			case PARTY:
 				Party party = invoker.getParty();
 				party.setReflection(r);
 				r.setParty(party);
+				
 				for (Player member : party.getPartyMembers())
 				{
 					if (iz.getRemovedItemId() > 0)
 					{
 						ItemFunctions.removeItem(member, iz.getRemovedItemId(), iz.getRemovedItemCount(), true);
 					}
+					
 					if (iz.getGiveItemId() > 0)
 					{
 						ItemFunctions.addItem(member, iz.getGiveItemId(), iz.getGiveItemCount(), true);
 					}
+					
 					if (iz.isDispelBuffs())
 					{
 						member.dispelBuffs();
 					}
+					
 					if (iz.getSetReuseUponEntry())
 					{
 						member.setInstanceReuse(iz.getId(), System.currentTimeMillis());
 					}
+					
 					member.setVar("backCoords", invoker.getLoc().toXYZString(), -1);
 					member.teleToLocation(iz.getTeleportCoord(), r);
 				}
+				
 				break;
+			
 			case COMMAND_CHANNEL:
 				Party commparty = invoker.getParty();
 				CommandChannel cc = commparty.getCommandChannel();
 				cc.setReflection(r);
 				r.setCommandChannel(cc);
+				
 				for (Player member : cc)
 				{
 					if (iz.getRemovedItemId() > 0)
 					{
 						ItemFunctions.removeItem(member, iz.getRemovedItemId(), iz.getRemovedItemCount(), true);
 					}
+					
 					if (iz.getGiveItemId() > 0)
 					{
 						ItemFunctions.addItem(member, iz.getGiveItemId(), iz.getGiveItemCount(), true);
 					}
+					
 					if (iz.isDispelBuffs())
 					{
 						member.dispelBuffs();
 					}
+					
 					if (iz.getSetReuseUponEntry())
 					{
 						member.setInstanceReuse(iz.getId(), System.currentTimeMillis());
 					}
+					
 					member.setVar("backCoords", invoker.getLoc().toXYZString(), -1);
 					member.teleToLocation(iz.getTeleportCoord(), r);
 				}
+				
 				break;
 		}
+		
 		return r;
 	}
 }

@@ -24,7 +24,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class AuctionedManagerInstance extends ManagerInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -58,10 +58,12 @@ public class AuctionedManagerInstance extends ManagerInstance
 	{
 		Residence residence = getResidence();
 		Clan residenceOwner = residence.getOwner();
+		
 		if ((residenceOwner != null) && (player.getClan() == residenceOwner))
 		{
 			return COND_OWNER;
 		}
+		
 		return COND_FAIL;
 	}
 }

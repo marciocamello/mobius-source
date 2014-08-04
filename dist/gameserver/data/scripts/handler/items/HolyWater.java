@@ -54,17 +54,21 @@ public class HolyWater extends SimpleItemHandler
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
 		final GameObject target = player.getTarget();
+		
 		if ((target == null) || !(target instanceof HellboundRemnantInstance))
 		{
 			player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
 			return false;
 		}
+		
 		final HellboundRemnantInstance npc = (HellboundRemnantInstance) target;
+		
 		if (npc.isDead())
 		{
 			player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
 			return false;
 		}
+		
 		player.broadcastPacket(new MagicSkillUse(player, npc, 2358, 1, 0, 0));
 		npc.onUseHolyWater(player);
 		return true;

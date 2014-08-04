@@ -65,6 +65,7 @@ public class GuardianSubAI extends DefaultAI
 		{
 			startMoveTask();
 		}
+		
 		return true;
 	}
 	
@@ -75,10 +76,12 @@ public class GuardianSubAI extends DefaultAI
 	protected void onEvtArrived()
 	{
 		startMoveTask();
+		
 		if (Rnd.chance(52))
 		{
 			sayRndMsg();
 		}
+		
 		super.onEvtArrived();
 	}
 	
@@ -88,10 +91,12 @@ public class GuardianSubAI extends DefaultAI
 	private void startMoveTask()
 	{
 		_lastPoint++;
+		
 		if (_lastPoint >= _points.length)
 		{
 			_lastPoint = 0;
 		}
+		
 		addTaskMove(_points[_lastPoint], false);
 		doTask();
 	}
@@ -102,20 +107,25 @@ public class GuardianSubAI extends DefaultAI
 	private void sayRndMsg()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		NpcString ns;
+		
 		switch (Rnd.get(1))
 		{
 			case 1:
 				ns = NpcString.INFORMATION_IS_COLLECTED_IN_THE_MUSEUM_WHERE_CAN_LEARN_ABOUT_THE_HEROES;
 				break;
+			
 			default:
 				ns = NpcString.INFORMATION_IS_COLLECTED_IN_THE_MUSEUM_WHERE_CAN_LEARN_ABOUT_THE_HEROES;
 				break;
 		}
+		
 		Functions.npcSay(actor, ns);
 	}
 	

@@ -54,6 +54,7 @@ public class _10280_MutatedKaneusSchuttgart extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("31981-03.htm"))
 		{
 			st.setCond(1);
@@ -67,6 +68,7 @@ public class _10280_MutatedKaneusSchuttgart extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -77,6 +79,7 @@ public class _10280_MutatedKaneusSchuttgart extends Quest implements ScriptFile
 		int id = st.getState();
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
+		
 		if (id == COMPLETED)
 		{
 			if (npcId == Vishotsky)
@@ -117,6 +120,7 @@ public class _10280_MutatedKaneusSchuttgart extends Quest implements ScriptFile
 				htmltext = "31972-01.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -130,6 +134,7 @@ public class _10280_MutatedKaneusSchuttgart extends Quest implements ScriptFile
 			st.setCond(2);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return null;
 	}
 }

@@ -39,12 +39,14 @@ public class _460_PreciousResearchMaterial extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		int cond = st.getCond();
+		
 		if (event.equalsIgnoreCase("4.htm"))
 		{
 			st.setState(STARTED);
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		if (event.equalsIgnoreCase("reward"))
 		{
 			if (cond == 2)
@@ -56,6 +58,7 @@ public class _460_PreciousResearchMaterial extends Quest implements ScriptFile
 				st.exitCurrentQuest(this);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -65,6 +68,7 @@ public class _460_PreciousResearchMaterial extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Amer)
 		{
 			if (cond == 0)
@@ -98,6 +102,7 @@ public class _460_PreciousResearchMaterial extends Quest implements ScriptFile
 				htmltext = "con_quest.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -115,6 +120,7 @@ public class _460_PreciousResearchMaterial extends Quest implements ScriptFile
 			st.giveItems(PART_EGG, 1);
 			st.setCond(2);
 		}
+		
 		return null;
 	}
 	

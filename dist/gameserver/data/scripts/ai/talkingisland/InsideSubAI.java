@@ -65,6 +65,7 @@ public class InsideSubAI extends DefaultAI
 		{
 			startMoveTask();
 		}
+		
 		return true;
 	}
 	
@@ -75,10 +76,12 @@ public class InsideSubAI extends DefaultAI
 	protected void onEvtArrived()
 	{
 		startMoveTask();
+		
 		if (Rnd.chance(52))
 		{
 			sayRndMsg();
 		}
+		
 		super.onEvtArrived();
 	}
 	
@@ -88,10 +91,12 @@ public class InsideSubAI extends DefaultAI
 	private void startMoveTask()
 	{
 		_lastPoint++;
+		
 		if (_lastPoint >= _points.length)
 		{
 			_lastPoint = 0;
 		}
+		
 		addTaskMove(_points[_lastPoint], false);
 		doTask();
 	}
@@ -102,32 +107,41 @@ public class InsideSubAI extends DefaultAI
 	private void sayRndMsg()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		NpcString ns;
+		
 		switch (Rnd.get(6))
 		{
 			case 1:
 				ns = NpcString.KIDS_THESE_DAYS;
 				break;
+			
 			case 2:
 				ns = NpcString.KIDS_THESE_DAYS;
 				break;
+			
 			case 3:
 				ns = NpcString.KIDS_THESE_DAYS;
 				break;
+			
 			case 4:
 				ns = NpcString.KIDS_THESE_DAYS;
 				break;
+			
 			case 5:
 				ns = NpcString.KIDS_THESE_DAYS;
 				break;
+			
 			default:
 				ns = NpcString.KIDS_THESE_DAYS;
 				break;
 		}
+		
 		Functions.npcSay(actor, ns);
 	}
 	

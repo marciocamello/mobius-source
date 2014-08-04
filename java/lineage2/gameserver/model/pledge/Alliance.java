@@ -135,6 +135,7 @@ public class Alliance
 	public void addAllyMember(Clan member, boolean storeInDb)
 	{
 		_members.put(member.getClanId(), member);
+		
 		if (storeInDb)
 		{
 			storeNewMemberInDatabase(member);
@@ -161,12 +162,15 @@ public class Alliance
 		{
 			return;
 		}
+		
 		Clan exMember = _members.remove(id);
+		
 		if (exMember == null)
 		{
 			_log.warn("Clan " + id + " not found in alliance while trying to remove");
 			return;
 		}
+		
 		removeMemberInDatabase(exMember);
 	}
 	
@@ -299,14 +303,17 @@ public class Alliance
 			Thread.dumpStack();
 			return;
 		}
+		
 		if (getAllyId() == 0)
 		{
 			_log.warn("updateAllyInDB with empty AllyId");
 			Thread.dumpStack();
 			return;
 		}
+		
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -333,6 +340,7 @@ public class Alliance
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -365,6 +373,7 @@ public class Alliance
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -391,6 +400,7 @@ public class Alliance
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -417,9 +427,11 @@ public class Alliance
 		{
 			return;
 		}
+		
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			Clan member;
@@ -427,6 +439,7 @@ public class Alliance
 			statement = con.prepareStatement("SELECT ally_name,leader_id FROM ally_data where ally_id=?");
 			statement.setInt(1, getAllyId());
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				setAllyName(rset.getString("ally_name"));
@@ -435,9 +448,11 @@ public class Alliance
 				statement = con.prepareStatement("SELECT clan_id FROM clan_data WHERE ally_id=?");
 				statement.setInt(1, getAllyId());
 				rset = statement.executeQuery();
+				
 				while (rset.next())
 				{
 					member = ClanTable.getInstance().getClan(rset.getInt("clan_id"));
+					
 					if (member != null)
 					{
 						if (member.getClanId() == leaderId)
@@ -451,6 +466,7 @@ public class Alliance
 					}
 				}
 			}
+			
 			setAllyCrestId(CrestCache.getInstance().getAllyCrestId(getAllyId()));
 		}
 		catch (Exception e)

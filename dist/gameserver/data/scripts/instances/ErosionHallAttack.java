@@ -77,10 +77,12 @@ public class ErosionHallAttack extends Reflection
 		viceraZones[9] = getZone("[soi_hoe_attack_pc_vicera_10]");
 		viceraZones[10] = getZone("[soi_hoe_attack_pc_vicera_11]");
 		viceraZones[11] = getZone("[soi_hoe_attack_pc_vicera_12]");
+		
 		for (Zone z : viceraZones)
 		{
 			z.setActive(true);
 		}
+		
 		tumorRespawnTime = 3 * 60 * 1000L;
 	}
 	
@@ -90,11 +92,14 @@ public class ErosionHallAttack extends Reflection
 		{
 			p.sendPacket(new ExShowScreenMessage(NpcString.YOU_CAN_HEAR_THE_UNDEAD_OF_EKIMUS_RUSHING_TOWARD_YOU, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, "#" + NpcString.HALL_OF_EROSION.getId(), "#" + NpcString.ATTACK.getId()));
 		}
+		
 		spawnByGroup("soi_hoe_attack_tumors");
+		
 		for (NpcInstance n : getAllByNpcId(AliveTumor, true))
 		{
 			n.setCurrentHp(n.getMaxHp() * .5, false);
 		}
+		
 		spawnByGroup("soi_hoe_attack_symbols");
 		spawnByGroup("soi_hoe_attack_wards");
 		invokeDeathListener();
@@ -132,7 +137,7 @@ public class ErosionHallAttack extends Reflection
 	private class DeathListener implements OnDeathListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public DeathListener()
 		{
@@ -146,6 +151,7 @@ public class ErosionHallAttack extends Reflection
 			{
 				return;
 			}
+			
 			if (self.getNpcId() == AliveTumor)
 			{
 				((NpcInstance) self).dropItem(killer.getPlayer(), 13797, Rnd.get(2, 5));
@@ -170,6 +176,7 @@ public class ErosionHallAttack extends Reflection
 	public void onPlayerEnter(Player player)
 	{
 		super.onPlayerEnter(player);
+		
 		for (int i : zoneEventTriggers)
 		{
 			player.sendPacket(new EventTrigger(i, true));
@@ -192,6 +199,7 @@ public class ErosionHallAttack extends Reflection
 			{
 				return;
 			}
+			
 			NpcInstance tumor = addSpawnWithoutRespawn(AliveTumor, _deadTumor.getLoc(), 0);
 			tumor.setCurrentHp(tumor.getMaxHp() * .25, false);
 			notifyTumorRevival(_deadTumor);
@@ -216,6 +224,7 @@ public class ErosionHallAttack extends Reflection
 			{
 				return;
 			}
+			
 			for (int i = 0; i < 4; i++)
 			{
 				addSpawnWithoutRespawn(RegenerationCoffin, new Location(_deadTumor.getLoc().x, _deadTumor.getLoc().y, _deadTumor.getLoc().z, Location.getRandomHeading()), 250);
@@ -226,7 +235,7 @@ public class ErosionHallAttack extends Reflection
 	private class TimerTask extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public TimerTask()
 		{
@@ -237,6 +246,7 @@ public class ErosionHallAttack extends Reflection
 		public void runImpl()
 		{
 			long time = ((startTime + (25 * 60 * 1000L)) - System.currentTimeMillis()) / 60000;
+			
 			if (time == 0)
 			{
 				conquestConclusion(false);
@@ -277,6 +287,7 @@ public class ErosionHallAttack extends Reflection
 				p.sendPacket(new ExShowScreenMessage(NpcString.THE_TUMOR_INSIDE_S1_HAS_BEEN_DESTROYED_NIN_ORDER_TO_DRAW_OUT_THE_COWARDLY_COHEMENES_YOU_MUST_DESTROY_ALL_THE_TUMORS, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, "#" + NpcString.HALL_OF_EROSION.getId()));
 			}
 		}
+		
 		manageRegenZone(getRoomId(tumor), true);
 	}
 	
@@ -287,10 +298,12 @@ public class ErosionHallAttack extends Reflection
 			cohemenes.getMinionList().deleteMinions();
 			cohemenes.deleteMe();
 		}
+		
 		for (Player p : getPlayers())
 		{
 			p.sendPacket(new ExShowScreenMessage(NpcString.THE_TUMOR_INSIDE_S1_HAS_COMPLETELY_REVIVED, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, "#" + NpcString.HALL_OF_EROSION.getId()));
 		}
+		
 		manageRegenZone(getRoomId(tumor), false);
 	}
 	
@@ -313,24 +326,30 @@ public class ErosionHallAttack extends Reflection
 		{
 			timerTask.cancel(false);
 		}
+		
 		conquestEnded = true;
 		despawnByGroup("soi_hoe_attack_symbols");
 		despawnByGroup("soi_hoe_attack_wards");
+		
 		if ((cohemenes != null) && !cohemenes.isDead())
 		{
 			cohemenes.getMinionList().deleteMinions();
 			cohemenes.deleteMe();
 		}
+		
 		startCollapseTimer(15 * 60 * 1000L);
+		
 		if (win)
 		{
 			setReenterTime(System.currentTimeMillis());
 		}
+		
 		for (Player p : getPlayers())
 		{
 			p.sendPacket(new SystemMessage2(SystemMsg.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addInteger(15));
 			p.sendPacket(new ExShowScreenMessage(win ? NpcString.CONGRATULATIONS_YOU_HAVE_SUCCEEDED_AT_S1_S2_THE_INSTANCE_WILL_SHORTLY_EXPIRE : NpcString.YOU_HAVE_FAILED_AT_S1_S2, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, "#" + NpcString.HALL_OF_EROSION.getId(), "#" + NpcString.ATTACK.getId()));
 		}
+		
 		for (NpcInstance npc : getNpcs())
 		{
 			if ((npc.getNpcId() == AliveTumor) || (npc.getNpcId() == DeadTumor))
@@ -348,6 +367,7 @@ public class ErosionHallAttack extends Reflection
 	private int getRoomId(NpcInstance npc)
 	{
 		int i = 0;
+		
 		if (npc.isInZone("[soi_hoe_attack_attackup1_1]"))
 		{
 			i = 1;
@@ -380,6 +400,7 @@ public class ErosionHallAttack extends Reflection
 		{
 			i = 8;
 		}
+		
 		return i;
 	}
 	
@@ -390,38 +411,46 @@ public class ErosionHallAttack extends Reflection
 			case 1:
 				getZone("[soi_hoe_attack_pc_regen_1]").setActive(doActivate);
 				break;
+			
 			case 2:
 				getZone("[soi_hoe_attack_pc_regen_2]").setActive(doActivate);
 				break;
+			
 			case 3:
 				getZone("[soi_hoe_attack_pc_regen_3]").setActive(doActivate);
 				break;
+			
 			case 4:
 				getZone("[soi_hoe_attack_pc_regen_4]").setActive(doActivate);
 				break;
+			
 			case 5:
 				getZone("[soi_hoe_attack_pc_regen_5]").setActive(doActivate);
 				break;
+			
 			case 6:
 				getZone("[soi_hoe_attack_pc_regen_6]").setActive(doActivate);
 				break;
+			
 			case 7:
 				getZone("[soi_hoe_attack_pc_regen_7]").setActive(doActivate);
 				break;
+			
 			case 8:
 				getZone("[soi_hoe_attack_pc_regen_8]").setActive(doActivate);
 				break;
-		
 		}
 	}
 	
 	private Location getRandomSymbolLocation()
 	{
 		List<NpcInstance> npclocations = getAllByNpcId(18780, true);
+		
 		if (!npclocations.isEmpty())
 		{
 			return Location.findPointToStay(npclocations.get(Rnd.get(npclocations.size())), 100, 250);
 		}
+		
 		return new Location(-178418, 211653, -12029);
 	}
 	
@@ -432,6 +461,7 @@ public class ErosionHallAttack extends Reflection
 		{
 			timerTask.cancel(false);
 		}
+		
 		super.onCollapse();
 	}
 }

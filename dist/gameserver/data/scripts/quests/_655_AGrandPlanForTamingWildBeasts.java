@@ -41,12 +41,14 @@ public class _655_AGrandPlanForTamingWildBeasts extends Quest implements ScriptF
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmlText = event;
+		
 		if (event.equalsIgnoreCase("farm_messenger_q0655_06.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return htmlText;
 	}
 	
@@ -58,6 +60,7 @@ public class _655_AGrandPlanForTamingWildBeasts extends Quest implements ScriptF
 		Player player = st.getPlayer();
 		Clan clan = player.getClan();
 		ClanHall clanhall = ResidenceHolder.getInstance().getResidence(63);
+		
 		if (clanhall.getSiegeEvent().isRegistrationOver())
 		{
 			htmlText = null;
@@ -98,6 +101,7 @@ public class _655_AGrandPlanForTamingWildBeasts extends Quest implements ScriptF
 		{
 			htmlText = "farm_messenger_q0655_09.htm";
 		}
+		
 		return htmlText;
 	}
 	

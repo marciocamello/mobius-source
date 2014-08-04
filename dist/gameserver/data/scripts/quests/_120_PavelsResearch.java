@@ -69,6 +69,7 @@ public class _120_PavelsResearch extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("32041-03.htm"))
 		{
 			st.setCond(3);
@@ -255,6 +256,7 @@ public class _120_PavelsResearch extends Quest implements ScriptFile
 			st.playSound("ItemSound.quest_middle");
 			st.giveItems(Report, 1);
 			Player player = st.getPlayer();
+			
 			if (player != null)
 			{
 				npc.broadcastPacket(new MagicSkillUse(npc, player, 5073, 5, 1500, 0));
@@ -373,6 +375,7 @@ public class _120_PavelsResearch extends Quest implements ScriptFile
 			st.set("talk1", "1");
 			htmltext = "32044-05.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -382,9 +385,11 @@ public class _120_PavelsResearch extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		String htmltext = "<html><head><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>";
 		int cond = st.getCond();
+		
 		if (npcId == Stones)
 		{
 			QuestState q = st.getPlayer().getQuestState(_114_ResurrectionOfAnOldManager.class);
+			
 			if (q == null)
 			{
 				return htmltext;
@@ -617,6 +622,7 @@ public class _120_PavelsResearch extends Quest implements ScriptFile
 				htmltext = "32045-03.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

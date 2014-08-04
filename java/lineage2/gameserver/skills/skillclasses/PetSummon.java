@@ -57,53 +57,65 @@ public class PetSummon extends Skill
 	public boolean checkCondition(Creature activeChar, Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
 		Player player = activeChar.getPlayer();
+		
 		if (player == null)
 		{
 			return false;
 		}
+		
 		if (player.getPetControlItem() == null)
 		{
 			return false;
 		}
+		
 		int npcId = PetDataTable.getSummonId(player.getPetControlItem());
+		
 		if (npcId == 0)
 		{
 			return false;
 		}
+		
 		if (player.isInCombat() || player.getSummonList().isInCombat())
 		{
 			player.sendPacket(Msg.YOU_CANNOT_SUMMON_DURING_COMBAT);
 			return false;
 		}
+		
 		if (player.isProcessingRequest())
 		{
 			player.sendPacket(Msg.PETS_AND_SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
 			return false;
 		}
+		
 		if (player.isMounted() || !player.getSummonList().canSummon(SummonType.PET, 0))
 		{
 			player.sendPacket(Msg.YOU_ALREADY_HAVE_A_PET);
 			return false;
 		}
+		
 		if (player.isInBoat())
 		{
 			player.sendPacket(Msg.YOU_MAY_NOT_CALL_FORTH_A_PET_OR_SUMMONED_CREATURE_FROM_THIS_LOCATION);
 			return false;
 		}
+		
 		if (player.isInFlyingTransform())
 		{
 			return false;
 		}
+		
 		if (player.isInOlympiadMode())
 		{
 			player.sendPacket(Msg.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 			return false;
 		}
+		
 		if (player.isCursedWeaponEquipped())
 		{
 			player.sendPacket(Msg.YOU_MAY_NOT_USE_MULTIPLE_PETS_OR_SERVITORS_AT_THE_SAME_TIME);
 			return false;
 		}
+		
 		for (GameObject o : World.getAroundObjects(player, 120, 200))
 		{
 			if (o.isDoor())
@@ -112,6 +124,7 @@ public class PetSummon extends Skill
 				return false;
 			}
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
@@ -125,25 +138,33 @@ public class PetSummon extends Skill
 	{
 		Player activeChar = caster.getPlayer();
 		ItemInstance controlItem = activeChar.getPetControlItem();
+		
 		if (controlItem == null)
 		{
 			return;
 		}
+		
 		int npcId = PetDataTable.getSummonId(controlItem);
+		
 		if (npcId == 0)
 		{
 			return;
 		}
+		
 		NpcTemplate petTemplate = NpcHolder.getInstance().getTemplate(npcId);
+		
 		if (petTemplate == null)
 		{
 			return;
 		}
+		
 		PetInstance pet = PetInstance.restore(controlItem, petTemplate, activeChar);
+		
 		if (pet == null)
 		{
 			return;
 		}
+		
 		if (!pet.isRespawned())
 		{
 			pet.setCurrentHp(pet.getMaxHp(), false);
@@ -152,6 +173,7 @@ public class PetSummon extends Skill
 			pet.updateControlItem();
 			pet.store();
 		}
+		
 		pet.getInventory().restore();
 		activeChar.getSummonList().addSummon(pet);
 		pet.setHeading(activeChar.getHeading());
@@ -159,10 +181,12 @@ public class PetSummon extends Skill
 		pet.spawnMe(Location.findAroundPosition(activeChar, 50, 70));
 		pet.setRunning();
 		pet.setFollowMode(true);
+		
 		if (activeChar.isInOlympiadMode())
 		{
 			pet.getEffectList().stopAllEffects();
 		}
+		
 		if (isSSPossible())
 		{
 			caster.unChargeShots(isMagic());

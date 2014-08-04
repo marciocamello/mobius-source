@@ -24,7 +24,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class GuardInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -60,6 +60,7 @@ public class GuardInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String pom;
+		
 		if (val == 0)
 		{
 			pom = "" + npcId;
@@ -68,6 +69,7 @@ public class GuardInstance extends NpcInstance
 		{
 			pom = npcId + "-" + val;
 		}
+		
 		return "guard/" + pom + ".htm";
 	}
 	

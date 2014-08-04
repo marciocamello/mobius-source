@@ -79,6 +79,7 @@ public class DimensionMovingDevice extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((spawnTime + MOBS_WAVE_DELAY) < System.currentTimeMillis())
 		{
 			if (_npcs.size() < 100)
@@ -89,9 +90,11 @@ public class DimensionMovingDevice extends DefaultAI
 					_npcs.add(mob);
 				}
 			}
+			
 			spawnTime = System.currentTimeMillis();
 			return true;
 		}
+		
 		return true;
 	}
 	

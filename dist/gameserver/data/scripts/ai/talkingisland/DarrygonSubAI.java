@@ -65,6 +65,7 @@ public class DarrygonSubAI extends DefaultAI
 		{
 			startMoveTask();
 		}
+		
 		return true;
 	}
 	
@@ -75,10 +76,12 @@ public class DarrygonSubAI extends DefaultAI
 	protected void onEvtArrived()
 	{
 		startMoveTask();
+		
 		if (Rnd.chance(52))
 		{
 			sayRndMsg();
 		}
+		
 		super.onEvtArrived();
 	}
 	
@@ -88,10 +91,12 @@ public class DarrygonSubAI extends DefaultAI
 	private void startMoveTask()
 	{
 		_lastPoint++;
+		
 		if (_lastPoint >= _points.length)
 		{
 			_lastPoint = 0;
 		}
+		
 		addTaskMove(_points[_lastPoint], false);
 		doTask();
 	}
@@ -102,32 +107,41 @@ public class DarrygonSubAI extends DefaultAI
 	private void sayRndMsg()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		NpcString ns;
+		
 		switch (Rnd.get(6))
 		{
 			case 1:
 				ns = NpcString.YOU_WILL_FIND_PANTHEON_IN_THE_MUSEUM;
 				break;
+			
 			case 2:
 				ns = NpcString.IT_S_DANGEROUS_OUT_THERE_IF_YOU_DON_T_KNOW_WHAT_YOU_RE_DOING;
 				break;
+			
 			case 3:
 				ns = NpcString.YOU_WILL_FIND_PANTHEON_IN_THE_MUSEUM;
 				break;
+			
 			case 4:
 				ns = NpcString.IT_S_DANGEROUS_OUT_THERE_IF_YOU_DON_T_KNOW_WHAT_YOU_RE_DOING;
 				break;
+			
 			case 5:
 				ns = NpcString.YOU_WILL_FIND_PANTHEON_IN_THE_MUSEUM;
 				break;
+			
 			default:
 				ns = NpcString.IT_S_DANGEROUS_OUT_THERE_IF_YOU_DON_T_KNOW_WHAT_YOU_RE_DOING;
 				break;
 		}
+		
 		Functions.npcSay(actor, ns);
 	}
 	

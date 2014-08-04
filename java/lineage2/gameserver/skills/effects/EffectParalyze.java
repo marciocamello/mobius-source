@@ -43,6 +43,7 @@ public final class EffectParalyze extends Effect
 		{
 			return false;
 		}
+		
 		return super.checkCondition();
 	}
 	
@@ -53,10 +54,12 @@ public final class EffectParalyze extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if (!_effected.isParalyzed())
 		{
 			_effected.startParalyzed();
 		}
+		
 		_effected.abortAttack(true, true);
 		_effected.abortCast(true, true);
 	}
@@ -68,6 +71,7 @@ public final class EffectParalyze extends Effect
 	public void onExit()
 	{
 		super.onExit();
+		
 		if (_effected.isParalyzed() && (_effected.getEffectList().getEffectByType(EffectType.KnockDown) == null) && (_effected.getEffectList().getEffectByType(EffectType.HellBinding) == null))
 		{
 			_effected.stopParalyzed();

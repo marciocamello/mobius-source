@@ -58,33 +58,40 @@ public class SummonMentor extends Skill
 		{
 			return false;
 		}
+		
 		if (activeChar.isPlayer())
 		{
 			Player p = (Player) activeChar;
+			
 			if (p.getActiveWeaponFlagAttachment() != null)
 			{
 				activeChar.sendPacket(SystemMsg.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD);
 				return false;
 			}
+			
 			if (p.isInDuel() || (p.getTeam() != TeamType.NONE))
 			{
 				activeChar.sendMessage(new CustomMessage("common.RecallInDuel", p));
 				return false;
 			}
+			
 			if (p.isInOlympiadMode())
 			{
 				activeChar.sendPacket(Msg.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 				return false;
 			}
 		}
+		
 		if (activeChar.isInZone(Zone.ZoneType.no_escape) && (activeChar.getReflection() != null) && (activeChar.getReflection().getCoreLoc() != null))
 		{
 			if (activeChar.isPlayer())
 			{
 				activeChar.sendMessage(new CustomMessage("lineage2.gameserver.skills.skillclasses.Recall.Here", (Player) activeChar));
 			}
+			
 			return false;
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
@@ -100,8 +107,10 @@ public class SummonMentor extends Skill
 		{
 			return;
 		}
+		
 		Player player = (Player) activeChar;
 		int mentorId = player.getMentorSystem().getMentor();
+		
 		if (mentorId != 0)
 		{
 			Player mentor = World.getPlayer(mentorId);

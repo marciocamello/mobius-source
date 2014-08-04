@@ -60,6 +60,7 @@ public class _125_InTheNameOfEvilPart1 extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("32114-05.htm"))
 		{
 			st.setCond(1);
@@ -109,6 +110,7 @@ public class _125_InTheNameOfEvilPart1 extends Quest implements ScriptFile
 			st.setCond(8);
 			htmltext = "32121-1.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -118,11 +120,13 @@ public class _125_InTheNameOfEvilPart1 extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Mushika)
 		{
 			if (cond == 0)
 			{
 				QuestState meetQuest = st.getPlayer().getQuestState(_124_MeetingTheElroki.class);
+				
 				if ((st.getPlayer().getLevel() > 76) && (meetQuest != null) && meetQuest.isCompleted())
 				{
 					htmltext = "32114.htm";
@@ -184,6 +188,7 @@ public class _125_InTheNameOfEvilPart1 extends Quest implements ScriptFile
 				htmltext = "32121.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -191,6 +196,7 @@ public class _125_InTheNameOfEvilPart1 extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		if (st.getCond() == 3)
 		{
 			if (((npcId == 22744) || (npcId == 22742)) && (st.getQuestItemsCount(OrClaw) < 2) && Rnd.chance(10 * Config.RATE_QUESTS_DROP))
@@ -198,16 +204,19 @@ public class _125_InTheNameOfEvilPart1 extends Quest implements ScriptFile
 				st.giveItems(OrClaw, 1);
 				st.playSound(SOUND_MIDDLE);
 			}
+			
 			if (((npcId == 22743) || (npcId == 22745)) && (st.getQuestItemsCount(DienBone) < 2) && Rnd.chance(10 * Config.RATE_QUESTS_DROP))
 			{
 				st.giveItems(DienBone, 1);
 				st.playSound(SOUND_MIDDLE);
 			}
+			
 			if ((st.getQuestItemsCount(DienBone) >= 2) && (st.getQuestItemsCount(OrClaw) >= 2))
 			{
 				st.setCond(4);
 			}
 		}
+		
 		return null;
 	}
 }

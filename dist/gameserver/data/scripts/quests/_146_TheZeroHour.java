@@ -53,12 +53,14 @@ public class _146_TheZeroHour extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		String htmltext = event;
+		
 		if (event.equals("merc_kahmun_q0146_0103.htm") && (cond == 0))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		if (event.equals("reward") && (cond == 2))
 		{
 			htmltext = "merc_kahmun_q0146_0107.htm";
@@ -67,6 +69,7 @@ public class _146_TheZeroHour extends Quest implements ScriptFile
 			st.addExpAndSp(2850000, 3315000);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -77,6 +80,7 @@ public class _146_TheZeroHour extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		QuestState InSearchOfTheNest = st.getPlayer().getQuestState(_109_InSearchOfTheNest.class);
+		
 		if (npcId == KAHMAN)
 		{
 			if (cond == 0)
@@ -106,6 +110,7 @@ public class _146_TheZeroHour extends Quest implements ScriptFile
 				htmltext = "merc_kahmun_q0146_0106.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -117,6 +122,7 @@ public class _146_TheZeroHour extends Quest implements ScriptFile
 			st.setCond(2);
 			st.giveItems(STAKATO_QUEENS_FANG, 1);
 		}
+		
 		return null;
 	}
 }

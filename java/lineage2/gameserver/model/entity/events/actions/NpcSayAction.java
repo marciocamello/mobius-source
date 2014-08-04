@@ -71,23 +71,28 @@ public class NpcSayAction implements EventAction
 	public void call(GlobalEvent event)
 	{
 		NpcInstance npc = GameObjectsStorage.getByNpcId(_npcId);
+		
 		if (npc == null)
 		{
 			return;
 		}
+		
 		if (_range <= 0)
 		{
 			int rx = MapUtils.regionX(npc);
 			int ry = MapUtils.regionY(npc);
 			int offset = Config.SHOUT_OFFSET;
+			
 			for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 			{
 				if (npc.getReflection() != player.getReflection())
 				{
 					continue;
 				}
+				
 				int tx = MapUtils.regionX(player);
 				int ty = MapUtils.regionY(player);
+				
 				if ((tx >= (rx - offset)) && (tx <= (rx + offset)) && (ty >= (ry - offset)) && (ty <= (ry + offset)))
 				{
 					packet(npc, player);

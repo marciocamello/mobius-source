@@ -80,6 +80,7 @@ public class _377_GiantsExploration2 extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("yes"))
 		{
 			htmltext = "Starting.htm";
@@ -96,24 +97,30 @@ public class _377_GiantsExploration2 extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("show"))
 		{
 			htmltext = "no_items.htm";
+			
 			for (int[] i : EXCHANGE)
 			{
 				long count = Long.MAX_VALUE;
+				
 				for (int j : i)
 				{
 					count = Math.min(count, st.getQuestItemsCount(j));
 				}
+				
 				if (count > 0)
 				{
 					htmltext = "tnx4items.htm";
+					
 					for (int j : i)
 					{
 						st.takeItems(j, count);
 					}
+					
 					for (int n = 0; n < count; n++)
 					{
 						int luck = Rnd.get(100);
 						int item = 0;
+						
 						if (luck > 75)
 						{
 							item = 5420;
@@ -130,11 +137,13 @@ public class _377_GiantsExploration2 extends Quest implements ScriptFile
 						{
 							item = 5338;
 						}
+						
 						st.giveItems(item, 1);
 					}
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -143,6 +152,7 @@ public class _377_GiantsExploration2 extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int id = st.getState();
+		
 		if (st.getQuestItemsCount(DICT2) == 0)
 		{
 			st.exitCurrentQuest(true);
@@ -150,6 +160,7 @@ public class _377_GiantsExploration2 extends Quest implements ScriptFile
 		else if (id == CREATED)
 		{
 			htmltext = "start.htm";
+			
 			if (st.getPlayer().getLevel() < 75)
 			{
 				st.exitCurrentQuest(true);
@@ -167,6 +178,7 @@ public class _377_GiantsExploration2 extends Quest implements ScriptFile
 				htmltext = "checkout2.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -177,6 +189,7 @@ public class _377_GiantsExploration2 extends Quest implements ScriptFile
 		{
 			st.rollAndGive(ANC_BOOK, 1, DROP_RATE);
 		}
+		
 		return null;
 	}
 }

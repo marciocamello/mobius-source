@@ -51,16 +51,20 @@ public class Kanabion extends Fighter
 	{
 		final NpcInstance actor = getActor();
 		boolean isOverhit = false;
+		
 		if (actor instanceof MonsterInstance)
 		{
 			isOverhit = ((MonsterInstance) actor).getOverhitDamage() > 0;
 		}
+		
 		final int npcId = actor.getNpcId();
 		int nextId = 0;
 		int type = 0;
+		
 		if ((npcId != getNextDoppler(npcId)) && (npcId != getNextVoid(npcId)))
 		{
 			type = 1;
+			
 			if (isOverhit)
 			{
 				if (Rnd.chance(70))
@@ -80,6 +84,7 @@ public class Kanabion extends Fighter
 		else if (npcId == getNextDoppler(npcId))
 		{
 			type = 2;
+			
 			if (isOverhit)
 			{
 				if (Rnd.chance(60))
@@ -103,6 +108,7 @@ public class Kanabion extends Fighter
 		else if (npcId == getNextVoid(npcId))
 		{
 			type = 3;
+			
 			if (isOverhit)
 			{
 				if (Rnd.chance(80))
@@ -115,17 +121,21 @@ public class Kanabion extends Fighter
 				nextId = getNextVoid(npcId);
 			}
 		}
+		
 		final Reflection r = actor.getReflection();
 		boolean spawnPossible = true;
+		
 		if (r instanceof KamalokaNightmare)
 		{
 			final KamalokaNightmare kama = (KamalokaNightmare) r;
 			kama.addKilledKanabion(type);
 			spawnPossible = kama.isSpawnPossible();
 		}
+		
 		if (spawnPossible && (nextId > 0))
 		{
 			Creature player = null;
+			
 			if (!killer.isPlayer())
 			{
 				for (Player pl : World.getAroundPlayers(actor))
@@ -134,12 +144,15 @@ public class Kanabion extends Fighter
 					break;
 				}
 			}
+			
 			if (player == null)
 			{
 				player = killer;
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new SpawnNext(actor, player, nextId), 5000);
 		}
+		
 		super.onEvtDead(killer);
 	}
 	
@@ -204,46 +217,57 @@ public class Kanabion extends Fighter
 			case 22453:
 			case 22454:
 				return 22453;
+				
 			case 22455:
 			case 22456:
 			case 22457:
 				return 22456;
+				
 			case 22458:
 			case 22459:
 			case 22460:
 				return 22459;
+				
 			case 22461:
 			case 22462:
 			case 22463:
 				return 22462;
+				
 			case 22464:
 			case 22465:
 			case 22466:
 				return 22465;
+				
 			case 22467:
 			case 22468:
 			case 22469:
 				return 22468;
+				
 			case 22470:
 			case 22471:
 			case 22472:
 				return 22471;
+				
 			case 22473:
 			case 22474:
 			case 22475:
 				return 22474;
+				
 			case 22476:
 			case 22477:
 			case 22478:
 				return 22477;
+				
 			case 22479:
 			case 22480:
 			case 22481:
 				return 22480;
+				
 			case 22482:
 			case 22483:
 			case 22484:
 				return 22483;
+				
 			default:
 				return 0;
 		}
@@ -262,46 +286,57 @@ public class Kanabion extends Fighter
 			case 22453:
 			case 22454:
 				return 22454;
+				
 			case 22455:
 			case 22456:
 			case 22457:
 				return 22457;
+				
 			case 22458:
 			case 22459:
 			case 22460:
 				return 22460;
+				
 			case 22461:
 			case 22462:
 			case 22463:
 				return 22463;
+				
 			case 22464:
 			case 22465:
 			case 22466:
 				return 22466;
+				
 			case 22467:
 			case 22468:
 			case 22469:
 				return 22469;
+				
 			case 22470:
 			case 22471:
 			case 22472:
 				return 22472;
+				
 			case 22473:
 			case 22474:
 			case 22475:
 				return 22475;
+				
 			case 22476:
 			case 22477:
 			case 22478:
 				return 22478;
+				
 			case 22479:
 			case 22480:
 			case 22481:
 				return 22481;
+				
 			case 22482:
 			case 22483:
 			case 22484:
 				return 22484;
+				
 			default:
 				return 0;
 		}

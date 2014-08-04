@@ -423,6 +423,7 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
 		World world = worlds.get(player.getReflectionId());
+		
 		if (world.status == 4)
 		{
 			for (long[] npcObj : world.SecondRoom.monolith)
@@ -432,12 +433,14 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 					checkStone(npc, world.SecondRoom.monolithOrder, npcObj, world);
 				}
 			}
+			
 			if (allStonesDone(world))
 			{
 				removeMonoliths(world);
 				runHall3(world);
 			}
 		}
+		
 		return null;
 	}
 	
@@ -446,23 +449,28 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		Player player = st.getPlayer();
+		
 		if (npcId == YIYEN)
 		{
 			st.setState(STARTED);
 			enterInstance(player);
 			return null;
 		}
+		
 		if (npc.getReflection() == ReflectionManager.DEFAULT)
 		{
 			return null;
 		}
+		
 		World world = worlds.get(npc.getReflectionId());
+		
 		if (world != null)
 		{
 			if (npcId == SOTruth)
 			{
 				player.setReflection(0);
 				player.teleToLocation(new Location(139968, 150367, -3111));
+				
 				if (!world.rewarded.contains(player.getStoredId()))
 				{
 					st.giveItems(CC, 1);
@@ -470,6 +478,7 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 	
@@ -478,10 +487,12 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 	{
 		Player player = st.getPlayer();
 		World world = worlds.get(npc.getReflectionId());
+		
 		if (world == null)
 		{
 			return null;
 		}
+		
 		switch (world.status)
 		{
 			case 0:
@@ -489,44 +500,58 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 				{
 					runHall(world);
 				}
+				
 				break;
+			
 			case 1:
 				if (checkKillProgress(npc, world.Hall))
 				{
 					runFirstRoom(world);
 				}
+				
 				break;
+			
 			case 2:
 				if (checkKillProgress(npc, world.FirstRoom))
 				{
 					runHall2(world);
 				}
+				
 				break;
+			
 			case 3:
 				if (checkKillProgress(npc, world.Hall))
 				{
 					runSecondRoom(world);
 				}
+				
 				break;
+			
 			case 5:
 				if (checkKillProgress(npc, world.Hall))
 				{
 					runThirdRoom(world);
 				}
+				
 				break;
+			
 			case 6:
 				if (checkKillProgress(npc, world.ThirdRoom))
 				{
 					runForthRoom(world);
 				}
+				
 				break;
+			
 			case 7:
 				chkShadowColumn(world, npc);
 				break;
+			
 			case 8:
 				BelethSampleKilled(world, npc, player);
 				break;
 		}
+		
 		return null;
 	}
 	
@@ -535,6 +560,7 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 	{
 		Player player = st.getPlayer();
 		World world = worlds.get(player.getReflectionId());
+		
 		if ((world != null) && (world.status == 7))
 		{
 			for (long[] mob : world.ForthRoom.npclist2)
@@ -548,10 +574,12 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		if ((world != null) && (world.status == 8))
 		{
 			BelethSampleAttacked(world, npc, player);
 		}
+		
 		return null;
 	}
 	
@@ -570,6 +598,7 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 	private void enterInstance(Player player)
 	{
 		Reflection r = player.getActiveReflection();
+		
 		if (r != null)
 		{
 			if (player.canReenterInstance(INCSTANCED_ZONE_ID))
@@ -585,6 +614,7 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 			world.instanceId = newInstance.getId();
 			worlds.put(newInstance.getId(), world);
 			runStartRoom(world);
+			
 			for (Player member : player.getParty().getPartyMembers())
 			{
 				if (member != player)
@@ -756,29 +786,36 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 		world.ForthRoom.counter = 0;
 		int[] temp = new int[7];
 		int[][] templist = new int[7][];
+		
 		for (int i = 0; i < temp.length; i++)
 		{
 			temp[i] = Rnd.get(rows.length);
 		}
+		
 		for (int i = 0; i < temp.length; i++)
 		{
 			templist[i] = rows[temp[i]];
 		}
+		
 		int xx = 0;
 		int yy = 0;
+		
 		for (int x = 148660; x <= 149160; x += 125)
 		{
 			yy = 0;
+			
 			for (int y = 179280; y >= 178530; y -= 125)
 			{
 				NpcInstance newNpc = addSpawnToInstance(SC, new Location(x, y, -6115, 16215), 0, world.instanceId);
 				newNpc.setAI(new CharacterAI(newNpc));
+				
 				if (templist[yy][xx] == 0)
 				{
 					newNpc.setBusy(true);
 					newNpc.addStatFunc(new FuncMul(Stats.MAGIC_DEFENCE, 0x30, this, 1000));
 					newNpc.addStatFunc(new FuncMul(Stats.POWER_DEFENCE, 0x30, this, 1000));
 				}
+				
 				world.ForthRoom.npclist2.add(new long[]
 				{
 					newNpc.getStoredId(),
@@ -787,6 +824,7 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 				});
 				yy += 1;
 			}
+			
 			xx += 1;
 		}
 	}
@@ -807,6 +845,7 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 		world.FifthRoom.belethOrder = new ArrayList<>();
 		world.FifthRoom.belethOrder.add(beleth);
 		int idx = 0;
+		
 		for (int x = 148720; x <= 149110; x += 65)
 		{
 			NpcInstance newNpc = addSpawnToInstance(BS[idx], new Location(x, 182145, -6117, 48810), 0, world.instanceId);
@@ -826,6 +865,7 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 		{
 			room.npclist.put(npc, true);
 		}
+		
 		for (boolean value : room.npclist.values())
 		{
 			if (!value)
@@ -833,6 +873,7 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
@@ -860,6 +901,7 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		spawnRndGolem(world);
 	}
 	
@@ -874,6 +916,7 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 					Functions.npcSay(npc, "You have done well!");
 					npc.decayMe();
 					world.FifthRoom.counter += 1;
+					
 					if (world.FifthRoom.counter >= 3)
 					{
 						unspawnBelethSample(world);
@@ -885,6 +928,7 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 				{
 					world.FifthRoom.counter = 0;
 				}
+				
 				return;
 			}
 		}
@@ -909,6 +953,7 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 		for (long[] list : world.FifthRoom.npclist2)
 		{
 			NpcInstance npc = GameObjectsStorage.getAsNpc(list[0]);
+			
 			if (npc != null)
 			{
 				npc.decayMe();
@@ -921,6 +966,7 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 		for (long[] list : world.SecondRoom.monolith)
 		{
 			NpcInstance npc = GameObjectsStorage.getAsNpc(list[0]);
+			
 			if (npc != null)
 			{
 				npc.decayMe();
@@ -937,12 +983,14 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
 	private void chkShadowColumn(World world, NpcInstance npc)
 	{
 		Reflection ref = ReflectionManager.getInstance().get(world.instanceId);
+		
 		for (long[] mob : world.ForthRoom.npclist2)
 		{
 			if (mob[0] == npc.getStoredId())
@@ -953,6 +1001,7 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 					{
 						ref.openDoor(W1 + i);
 						world.ForthRoom.counter += 1;
+						
 						if (world.ForthRoom.counter == 7)
 						{
 							runFifthRoom(world);

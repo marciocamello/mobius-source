@@ -41,18 +41,21 @@ public class RequestExMpccPartymasterList extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
 		
 		MatchingRoom room = player.getMatchingRoom();
+		
 		if ((room == null) || (room.getType() != MatchingRoom.CC_MATCHING))
 		{
 			return;
 		}
 		
 		Set<String> set = new HashSet<>();
+		
 		for (Player $member : room.getPlayers())
 		{
 			if ($member.getParty() != null)

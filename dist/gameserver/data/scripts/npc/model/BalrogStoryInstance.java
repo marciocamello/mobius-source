@@ -25,7 +25,7 @@ public final class BalrogStoryInstance extends NpcInstance
 {
 	
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	

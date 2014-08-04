@@ -55,14 +55,17 @@ public class EffectRestorationRandom extends Effect
 		items = new ArrayList<>(groups.length);
 		chances = new double[groups.length];
 		double prevChance = 0;
+		
 		for (int i = 0; i < groups.length; i++)
 		{
 			String group = groups[i];
 			Matcher m = groupPattern.matcher(group);
+			
 			if (m.find())
 			{
 				String its = m.group(1);
 				List<Item> list = new ArrayList<>(its.split(";").length);
+				
 				for (String item : its.split(";"))
 				{
 					String id = item.split(":")[0];
@@ -72,6 +75,7 @@ public class EffectRestorationRandom extends Effect
 					it.count = Long.parseLong(count);
 					list.add(it);
 				}
+				
 				double chance = Double.parseDouble(m.group(2));
 				items.add(i, list);
 				chances[i] = prevChance + chance;
@@ -90,6 +94,7 @@ public class EffectRestorationRandom extends Effect
 		double chance = (double) Rnd.get(0, 1000000) / 10000;
 		double prevChance = 0.0D;
 		int i = 0;
+		
 		for (; i < chances.length; i++)
 		{
 			if ((chance > prevChance) && (chance < chances[i]))
@@ -97,9 +102,11 @@ public class EffectRestorationRandom extends Effect
 				break;
 			}
 		}
+		
 		if (i < chances.length)
 		{
 			List<Item> itemList = items.get(i);
+			
 			for (Item item : itemList)
 			{
 				ItemFunctions.addItem((Playable) getEffected(), item.itemId, item.count, true);

@@ -61,6 +61,7 @@ public final class ItemSkillsListener implements OnEquipListener
 		enchant4Skill = it.getEnchant4Skill();
 		unequipeSkill = it.getUnequipeSkill();
 		player.removeTriggers(it);
+		
 		if ((itemSkills != null) && (itemSkills.length > 0))
 		{
 			for (Skill itemSkill : itemSkills)
@@ -69,6 +70,7 @@ public final class ItemSkillsListener implements OnEquipListener
 				{
 					int level = player.getSkillLevel(itemSkill.getId());
 					int newlevel = level - 1;
+					
 					if (newlevel > 0)
 					{
 						player.addSkill(SkillTable.getInstance().getInfo(itemSkill.getId(), newlevel), false);
@@ -84,14 +86,17 @@ public final class ItemSkillsListener implements OnEquipListener
 				}
 			}
 		}
+		
 		if (enchant4Skill != null)
 		{
 			player.removeSkill(enchant4Skill, false);
 		}
+		
 		if (unequipeSkill != null)
 		{
 			player.doCast(unequipeSkill, player, true);
 		}
+		
 		if (((itemSkills != null) && (itemSkills.length > 0)) || (enchant4Skill != null))
 		{
 			player.sendSkillList();
@@ -114,16 +119,20 @@ public final class ItemSkillsListener implements OnEquipListener
 		Skill enchant4Skill = null;
 		ItemTemplate it = item.getTemplate();
 		itemSkills = it.getAttachedSkills();
+		
 		if (item.getEnchantLevel() >= 4)
 		{
 			enchant4Skill = it.getEnchant4Skill();
 		}
+		
 		if ((it.getType2() == ItemTemplate.TYPE2_WEAPON) && (player.getWeaponsExpertisePenalty() > 0))
 		{
 			return;
 		}
+		
 		player.addTriggers(it);
 		boolean needSendInfo = false;
+		
 		if (itemSkills.length > 0)
 		{
 			for (Skill itemSkill : itemSkills)
@@ -132,6 +141,7 @@ public final class ItemSkillsListener implements OnEquipListener
 				{
 					int level = player.getSkillLevel(itemSkill.getId());
 					int newlevel = level;
+					
 					if (level > 0)
 					{
 						if (SkillTable.getInstance().getInfo(itemSkill.getId(), level + 1) != null)
@@ -143,6 +153,7 @@ public final class ItemSkillsListener implements OnEquipListener
 					{
 						newlevel = 1;
 					}
+					
 					if (newlevel != level)
 					{
 						player.addSkill(SkillTable.getInstance().getInfo(itemSkill.getId(), newlevel), false);
@@ -151,10 +162,12 @@ public final class ItemSkillsListener implements OnEquipListener
 				else if (player.getSkillLevel(itemSkill.getId()) < itemSkill.getLevel())
 				{
 					player.addSkill(itemSkill, false);
+					
 					if (itemSkill.isActive())
 					{
 						long reuseDelay = Formulas.calcSkillReuseDelay(player, itemSkill);
 						reuseDelay = Math.min(reuseDelay, 30000);
+						
 						if ((reuseDelay > 0) && !player.isSkillDisabled(itemSkill))
 						{
 							player.disableSkill(itemSkill, reuseDelay);
@@ -164,14 +177,17 @@ public final class ItemSkillsListener implements OnEquipListener
 				}
 			}
 		}
+		
 		if (enchant4Skill != null)
 		{
 			player.addSkill(enchant4Skill, false);
 		}
+		
 		if ((itemSkills.length > 0) || (enchant4Skill != null))
 		{
 			player.sendSkillList();
 			player.updateStats();
+			
 			if (needSendInfo)
 			{
 				player.sendPacket(new SkillCoolTime(player));

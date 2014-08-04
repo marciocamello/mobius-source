@@ -66,14 +66,17 @@ public class Decoy extends Skill
 		{
 			return false;
 		}
+		
 		if (_npcId <= 0)
 		{
 			return false;
 		}
+		
 		if (activeChar.isInObserverMode())
 		{
 			return false;
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	

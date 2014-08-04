@@ -49,6 +49,7 @@ public class _013_ParcelDelivery extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("mineral_trader_fundin_q0013_0104.htm"))
 		{
 			st.setCond(1);
@@ -64,6 +65,7 @@ public class _013_ParcelDelivery extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -73,6 +75,7 @@ public class _013_ParcelDelivery extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == 31274)
 		{
 			if (cond == 0)
@@ -99,6 +102,7 @@ public class _013_ParcelDelivery extends Quest implements ScriptFile
 				htmltext = "warsmith_vulcan_q0013_0101.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

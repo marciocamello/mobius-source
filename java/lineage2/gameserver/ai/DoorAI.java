@@ -77,17 +77,22 @@ public class DoorAI extends CharacterAI
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		Creature actor;
+		
 		if ((attacker == null) || ((actor = getActor()) == null))
 		{
 			return;
 		}
+		
 		Player player = attacker.getPlayer();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		SiegeEvent<?, ?> siegeEvent1 = player.getEvent(SiegeEvent.class);
 		SiegeEvent<?, ?> siegeEvent2 = actor.getEvent(SiegeEvent.class);
+		
 		if ((siegeEvent1 == null) || ((siegeEvent1 == siegeEvent2) && (siegeEvent1.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan()) != null)))
 		{
 			for (NpcInstance npc : actor.getAroundNpc(900, 200))
@@ -96,6 +101,7 @@ public class DoorAI extends CharacterAI
 				{
 					continue;
 				}
+				
 				if (Rnd.chance(20))
 				{
 					npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 10000);

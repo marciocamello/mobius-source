@@ -42,6 +42,7 @@ public class ExShuttleInfoPacket extends L2GameServerPacket
 		writeD(0/* _shuttle.getHeading() */); // Maybe H
 		writeD(_shuttle.getBoatId()); // unk??
 		writeD(_doors.size()); // doors_count
+		
 		for (ShuttleDoor door : _doors)
 		{
 			int doorId = door.getId();

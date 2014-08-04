@@ -33,12 +33,14 @@ public class ExBR_AgathionEnergyInfo extends L2GameServerPacket
 	{
 		writeEx(0xDF);
 		writeD(_size);
+		
 		for (ItemInstance item : _itemList)
 		{
 			if (item.getTemplate().getAgathionEnergy() == 0)
 			{
 				continue;
 			}
+			
 			writeD(item.getObjectId());
 			writeD(item.getItemId());
 			writeD(0x200000);

@@ -67,20 +67,23 @@ public class SpezionNormal extends Reflection
 		if (!introShowed)
 		{
 			introShowed = true;
+			
 			for (Player p : getPlayers())
 			{
 				p.showQuestMovie(ExStartScenePlayer.SCENE_SC_SPACIA_OPENING);
 				ItemFunctions.removeItem(p, 17611, ItemFunctions.getItemCount(player, 17611), true);
 			}
+			
 			ThreadPoolManager.getInstance().schedule(new Spawn(), 39500L);
 		}
+		
 		super.onPlayerEnter(player);
 	}
 	
 	private class Spawn extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public Spawn()
 		{
@@ -105,7 +108,7 @@ public class SpezionNormal extends Reflection
 	private class Fail extends RunnableImpl
 	{
 		/**
-		 * 
+		 *
 		 */
 		public Fail()
 		{
@@ -116,19 +119,23 @@ public class SpezionNormal extends Reflection
 		public void runImpl()
 		{
 			time_stage++;
+			
 			if (time_stage == 3)
 			{
 				if (failTask != null)
 				{
 					failTask.cancel(true);
 				}
+				
 				collapse();
 			}
+			
 			for (Player player : getPlayers())
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.LOCATION_PORTAL_CHANGED, 5000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
 				player.sendPacket(new ExSendUIEvent(player, 0, 0, 420, 0, NpcString.INSTALLATION_CHARGE));
 			}
+			
 			TeleportCube.teleToLocation(TELEPORT_CUBE_COORDS[Rnd.get(TELEPORT_CUBE_COORDS.length)]);
 			failTask = ThreadPoolManager.getInstance().schedule(new Fail(), Time[time_stage] * 1000);
 		}
@@ -147,6 +154,7 @@ public class SpezionNormal extends Reflection
 			player.teleToLocation(new Location(213242, 53235, -8352));
 			player.sendPacket(new ExSendUIEvent(player, 1, 1, 0, 0));
 		}
+		
 		spawnByGroup("spassia_second_room");
 	}
 	
@@ -155,6 +163,7 @@ public class SpezionNormal extends Reflection
 		if (!getDoor(id).isOpen())
 		{
 			openDoor(id);
+			
 			if (id == 26190004)
 			{
 				for (Player player : getPlayers())
@@ -175,6 +184,7 @@ public class SpezionNormal extends Reflection
 	public void thirdStage()
 	{
 		spawnByGroup("spassia_third_room");
+		
 		for (Player p : getPlayers())
 		{
 			p.showQuestMovie(ExStartScenePlayer.SCENE_SC_SPACIA_B);
@@ -189,15 +199,15 @@ public class SpezionNormal extends Reflection
 			p.showQuestMovie(ExStartScenePlayer.SCENE_SC_SPACIA_C);
 			p.sendPacket(new ExShowScreenMessage(NpcString.RESCUED_CHANGES_STATE_ONLY_AFTER_EXPOSURE_TO_LIGHT_IT, 5000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
 		}
+		
 		SpezionBossNormal = addSpawnWithoutRespawn(SPEZION_NORMAL, new Location(184920, 143576, -11794, 0), 0);
 		SpezionBossNormal.addListener(_deathListener);
-		
 	}
 	
 	private class DeathListener implements OnDeathListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public DeathListener()
 		{
@@ -221,6 +231,7 @@ public class SpezionNormal extends Reflection
 				{
 					p.showQuestMovie(ExStartScenePlayer.SCENE_SC_SPACIA_ENDING);
 				}
+				
 				clearReflection(5, true);
 				// addSpawnWithoutRespawn(33385, self.getLoc(), 0); // id npc xz
 			}

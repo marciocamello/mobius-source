@@ -63,7 +63,6 @@ public class _10304_ForTheForgottenHeroes extends Quest implements ScriptFile
 		addKillId(HORNAPI);
 		addKillId(YONTYMAK);
 		addKillId(FRON);
-		
 		addLevelCheck(90, 100);
 		addQuestCompletedCheck(_10302_UnsettlingShadowAndRumors.class);
 	}
@@ -88,6 +87,7 @@ public class _10304_ForTheForgottenHeroes extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return event;
 	}
 	
@@ -107,7 +107,9 @@ public class _10304_ForTheForgottenHeroes extends Quest implements ScriptFile
 		{
 			return "32894-lvl.htm";
 		}
+		
 		QuestState qs = st.getPlayer().getQuestState(_10302_UnsettlingShadowAndRumors.class);
+		
 		if ((qs == null) || !qs.isCompleted())
 		{
 			return "32894-lvl.htm";
@@ -128,6 +130,7 @@ public class _10304_ForTheForgottenHeroes extends Quest implements ScriptFile
 				return "32894-10.htm";
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -136,6 +139,7 @@ public class _10304_ForTheForgottenHeroes extends Quest implements ScriptFile
 	{
 		int cond = qs.getCond();
 		int npcId = npc.getNpcId();
+		
 		if ((npcId == YUI) && (cond == 2))
 		{
 			qs.setCond(3);
@@ -170,6 +174,7 @@ public class _10304_ForTheForgottenHeroes extends Quest implements ScriptFile
 		{
 			qs.setCond(9);
 		}
+		
 		return null;
 	}
 	
@@ -179,6 +184,7 @@ public class _10304_ForTheForgottenHeroes extends Quest implements ScriptFile
 		{
 			return;
 		}
+		
 		if ((player.getVar("MarkywaKilled") != null) && (player.getVar("HornapiKilled") != null))
 		{
 			qs.setCond(7);

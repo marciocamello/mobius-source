@@ -26,7 +26,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class ControlUnitInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -68,7 +68,9 @@ public class ControlUnitInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		int cond = getCond(player);
+		
 		if (cond == COND_CAN_OPEN)
 		{
 			if (player.consumeItem(ITEM_ID, 1))
@@ -94,14 +96,17 @@ public class ControlUnitInstance extends NpcInstance
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 		int cond = getCond(player);
+		
 		switch (cond)
 		{
 			case COND_CAN_OPEN:
 				showChatWindow(player, "residence2/fortress/fortress_controller001.htm");
 				break;
+			
 			case COND_NO_ITEM:
 				showChatWindow(player, "residence2/fortress/fortress_controller002.htm");
 				break;
+			
 			case COND_POWER:
 				showChatWindow(player, "residence2/fortress/fortress_controller003.htm");
 				break;
@@ -116,28 +121,35 @@ public class ControlUnitInstance extends NpcInstance
 	private int getCond(Player player)
 	{
 		FortressSiegeEvent event = getEvent(FortressSiegeEvent.class);
+		
 		if (event == null)
 		{
 			return COND_POWER;
 		}
+		
 		SpawnExObject object = event.getFirstObject(FortressSiegeEvent.OUT_POWER_UNITS);
 		boolean allPowerDisabled = true;
+		
 		for (int i = 0; i < 4; i++)
 		{
 			Spawner spawn = object.getSpawns().get(i);
+			
 			if (spawn.getFirstSpawned() != null)
 			{
 				allPowerDisabled = false;
 			}
 		}
+		
 		if (allPowerDisabled)
 		{
 			if (player.getInventory().getCountOf(ITEM_ID) > 0)
 			{
 				return COND_CAN_OPEN;
 			}
+			
 			return COND_NO_ITEM;
 		}
+		
 		return COND_POWER;
 	}
 }

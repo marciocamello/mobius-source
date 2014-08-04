@@ -102,16 +102,20 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
 		if ((args != null) && !args.isEmpty())
 		{
 			String[] param = args.split(" ");
+			
 			if ((param.length >= 2) && Util.isNumber(param[0]) && Util.isNumber(param[1]))
 			{
 				String playerId = activeChar.getAccountName();
 				Vote v = VoteList.get(Integer.parseInt(param[0]));
+				
 				if ((v == null) || !v.active)
 				{
 					return false;
 				}
+				
 				int var = Integer.parseInt(param[1]);
 				Integer[] alreadyResults = v.results.get(playerId);
+				
 				if (alreadyResults == null)
 				{
 					v.results.put(playerId, new Integer[]
@@ -130,6 +134,7 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
 							return false;
 						}
 					}
+					
 					v.results.put(playerId, ArrayUtils.add(alreadyResults, var));
 					mysql.set("INSERT IGNORE INTO vote (`id`, `HWID`, `vote`) VALUES (?,?,?)", param[0], playerId, param[1]);
 				}
@@ -140,9 +145,11 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
 				}
 			}
 		}
+		
 		int count = 0;
 		StringBuilder html = new StringBuilder("!Vote Manager:\n<br>");
 		String playerId = activeChar.getAccountName();
+		
 		for (Entry<Integer, Vote> e : VoteList.entrySet())
 		{
 			if (e.getValue().active)
@@ -150,6 +157,7 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
 				count++;
 				html.append(e.getValue().name).append(":<br>");
 				Integer[] already = e.getValue().results.get(playerId);
+				
 				if ((already != null) && (already.length >= e.getValue().maxPerAccount))
 				{
 					html.append("You have already voted.<br>");
@@ -158,13 +166,16 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
 				{
 					Entry<Integer, String>[] variants = new Entry[e.getValue().variants.size()];
 					int i = 0;
+					
 					for (Entry<Integer, String> variant : e.getValue().variants.entrySet())
 					{
 						variants[i] = variant;
 						i++;
 					}
+					
 					shuffle(variants);
 					variants:
+					
 					for (Entry<Integer, String> variant : variants)
 					{
 						if (already != null)
@@ -177,16 +188,20 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
 								}
 							}
 						}
+						
 						html.append("[user_vote " + e.getValue().id + " " + variant.getKey() + "|" + variant.getValue() + "]<br1>");
 					}
+					
 					html.append("<br>");
 				}
 			}
 		}
+		
 		if (count == 0)
 		{
 			html.append("No active votes now.");
 		}
+		
 		show(html.toString(), activeChar);
 		return true;
 	}
@@ -199,6 +214,7 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
 	{
 		int j;
 		Entry<Integer, String> tmp;
+		
 		for (int i = array.length; i > 1; i--)
 		{
 			j = Rnd.get(i);
@@ -214,6 +230,7 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
 	public static void load()
 	{
 		VoteList.clear();
+		
 		try
 		{
 			File file = new File(Config.DATAPACK_ROOT, "data/xml/other/vote.xml");
@@ -221,6 +238,7 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
 			factory2.setValidating(false);
 			factory2.setIgnoringComments(true);
 			Document doc2 = factory2.newDocumentBuilder().parse(file);
+			
 			for (Node n2 = doc2.getFirstChild(); n2 != null; n2 = n2.getNextSibling())
 			{
 				if ("list".equalsIgnoreCase(n2.getNodeName()))
@@ -234,6 +252,7 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
 							v.maxPerAccount = Integer.parseInt(d2.getAttributes().getNamedItem("maxPerAccount").getNodeValue());
 							v.name = d2.getAttributes().getNamedItem("name").getNodeValue();
 							v.active = Boolean.parseBoolean(d2.getAttributes().getNamedItem("active").getNodeValue());
+							
 							for (Node i = d2.getFirstChild(); i != null; i = i.getNextSibling())
 							{
 								if ("variant".equalsIgnoreCase(i.getNodeName()))
@@ -241,6 +260,7 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
 									v.variants.put(Integer.parseInt(i.getAttributes().getNamedItem("id").getNodeValue()), i.getAttributes().getNamedItem("desc").getNodeValue());
 								}
 							}
+							
 							VoteList.put(v.id, v);
 						}
 					}
@@ -251,17 +271,21 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
 		{
 			e.printStackTrace();
 		}
+		
 		Connection con = null;
 		PreparedStatement st = null;
 		ResultSet rs = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			st = con.prepareStatement("SELECT * FROM vote");
 			rs = st.executeQuery();
+			
 			while (rs.next())
 			{
 				Vote v = VoteList.get(rs.getInt("id"));
+				
 				if (v != null)
 				{
 					String HWID = rs.getString("HWID");
@@ -312,6 +336,7 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
 		{
 			return vote(command, activeChar, args);
 		}
+		
 		return false;
 	}
 	

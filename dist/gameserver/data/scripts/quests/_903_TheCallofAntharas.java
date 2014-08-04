@@ -37,6 +37,7 @@ public class _903_TheCallofAntharas extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("theodric_q903_03.htm"))
 		{
 			st.setState(STARTED);
@@ -52,6 +53,7 @@ public class _903_TheCallofAntharas extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(this);
 		}
+		
 		return htmltext;
 	}
 	
@@ -60,6 +62,7 @@ public class _903_TheCallofAntharas extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (npc.getNpcId() == Theodric)
 		{
 			switch (st.getState())
@@ -88,7 +91,9 @@ public class _903_TheCallofAntharas extends Quest implements ScriptFile
 					{
 						htmltext = "theodric_q903_00a.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					if (cond == 1)
 					{
@@ -98,9 +103,11 @@ public class _903_TheCallofAntharas extends Quest implements ScriptFile
 					{
 						htmltext = "theodric_q903_05.htm";
 					}
+					
 					break;
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -108,6 +115,7 @@ public class _903_TheCallofAntharas extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if (cond == 1)
 		{
 			switch (npc.getNpcId())
@@ -117,21 +125,27 @@ public class _903_TheCallofAntharas extends Quest implements ScriptFile
 					{
 						st.giveItems(TaraskDragonsLeatherFragment, 1);
 					}
+					
 					break;
+				
 				case BehemothDragon:
 					if (st.getQuestItemsCount(BehemothDragonLeather) < 1)
 					{
 						st.giveItems(BehemothDragonLeather, 1);
 					}
+					
 					break;
+				
 				default:
 					break;
 			}
+			
 			if ((st.getQuestItemsCount(BehemothDragonLeather) > 0) && (st.getQuestItemsCount(TaraskDragonsLeatherFragment) > 0))
 			{
 				st.setCond(2);
 			}
 		}
+		
 		return null;
 	}
 	

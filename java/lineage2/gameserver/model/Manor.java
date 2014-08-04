@@ -72,6 +72,7 @@ public class Manor
 		{
 			_instance = new Manor();
 		}
+		
 		return _instance;
 	}
 	
@@ -82,6 +83,7 @@ public class Manor
 	public List<Integer> getAllCrops()
 	{
 		List<Integer> crops = new ArrayList<>();
+		
 		for (SeedData seed : _seeds.values())
 		{
 			if (!crops.contains(seed.getCrop()) && (seed.getCrop() != 0) && !crops.contains(seed.getCrop()))
@@ -89,6 +91,7 @@ public class Manor
 				crops.add(seed.getCrop());
 			}
 		}
+		
 		return crops;
 	}
 	
@@ -109,10 +112,12 @@ public class Manor
 	public int getSeedBasicPrice(int seedId)
 	{
 		ItemTemplate seedItem = ItemHolder.getInstance().getTemplate(seedId);
+		
 		if (seedItem != null)
 		{
 			return seedItem.getReferencePrice();
 		}
+		
 		return 0;
 	}
 	
@@ -130,6 +135,7 @@ public class Manor
 				return getSeedBasicPrice(seed.getId());
 			}
 		}
+		
 		return 0;
 	}
 	
@@ -141,10 +147,12 @@ public class Manor
 	public int getCropBasicPrice(int cropId)
 	{
 		ItemTemplate cropItem = ItemHolder.getInstance().getTemplate(cropId);
+		
 		if (cropItem != null)
 		{
 			return cropItem.getReferencePrice();
 		}
+		
 		return 0;
 	}
 	
@@ -162,6 +170,7 @@ public class Manor
 				return seed.getMature();
 			}
 		}
+		
 		return 0;
 	}
 	
@@ -184,10 +193,12 @@ public class Manor
 	public int getSeedMinLevel(int seedId)
 	{
 		SeedData seed = _seeds.get(seedId);
+		
 		if (seed != null)
 		{
 			return seed.getLevel() - 5;
 		}
+		
 		return -1;
 	}
 	
@@ -199,10 +210,12 @@ public class Manor
 	public int getSeedMaxLevel(int seedId)
 	{
 		SeedData seed = _seeds.get(seedId);
+		
 		if (seed != null)
 		{
 			return seed.getLevel() + 5;
 		}
+		
 		return -1;
 	}
 	
@@ -220,6 +233,7 @@ public class Manor
 				return seed.getLevel();
 			}
 		}
+		
 		return 0;
 	}
 	
@@ -231,10 +245,12 @@ public class Manor
 	public int getSeedLevel(int seedId)
 	{
 		SeedData seed = _seeds.get(seedId);
+		
 		if (seed != null)
 		{
 			return seed.getLevel();
 		}
+		
 		return -1;
 	}
 	
@@ -252,6 +268,7 @@ public class Manor
 				return seed.isAlternative();
 			}
 		}
+		
 		return false;
 	}
 	
@@ -263,10 +280,12 @@ public class Manor
 	public int getCropType(int seedId)
 	{
 		SeedData seed = _seeds.get(seedId);
+		
 		if (seed != null)
 		{
 			return seed.getCrop();
 		}
+		
 		return -1;
 	}
 	
@@ -285,6 +304,7 @@ public class Manor
 				return seed.getReward(type);
 			}
 		}
+		
 		return -1;
 	}
 	
@@ -298,6 +318,7 @@ public class Manor
 	public synchronized long getRewardAmountPerCrop(int castle, int cropId, int type)
 	{
 		final CropProcure cs = ResidenceHolder.getInstance().getResidence(Castle.class, castle).getCropProcure(CastleManorManager.PERIOD_CURRENT).get(cropId);
+		
 		for (SeedData seed : _seeds.values())
 		{
 			if (seed.getCrop() == cropId)
@@ -305,6 +326,7 @@ public class Manor
 				return cs.getPrice() / getCropBasicPrice(seed.getReward(type));
 			}
 		}
+		
 		return -1;
 	}
 	
@@ -317,10 +339,12 @@ public class Manor
 	public synchronized int getRewardItemBySeed(int seedId, int type)
 	{
 		SeedData seed = _seeds.get(seedId);
+		
 		if (seed != null)
 		{
 			return seed.getReward(type);
 		}
+		
 		return 0;
 	}
 	
@@ -332,6 +356,7 @@ public class Manor
 	public List<Integer> getCropsForCastle(int castleId)
 	{
 		List<Integer> crops = new ArrayList<>();
+		
 		for (SeedData seed : _seeds.values())
 		{
 			if ((seed.getManorId() == castleId) && !crops.contains(seed.getCrop()))
@@ -339,6 +364,7 @@ public class Manor
 				crops.add(seed.getCrop());
 			}
 		}
+		
 		return crops;
 	}
 	
@@ -350,6 +376,7 @@ public class Manor
 	public List<Integer> getSeedsForCastle(int castleId)
 	{
 		List<Integer> seedsID = new ArrayList<>();
+		
 		for (SeedData seed : _seeds.values())
 		{
 			if ((seed.getManorId() == castleId) && !seedsID.contains(seed.getId()))
@@ -357,6 +384,7 @@ public class Manor
 				seedsID.add(seed.getId());
 			}
 		}
+		
 		return seedsID;
 	}
 	
@@ -368,10 +396,12 @@ public class Manor
 	public int getCastleIdForSeed(int seedId)
 	{
 		SeedData seed = _seeds.get(seedId);
+		
 		if (seed != null)
 		{
 			return seed.getManorId();
 		}
+		
 		return 0;
 	}
 	
@@ -383,10 +413,12 @@ public class Manor
 	public long getSeedSaleLimit(int seedId)
 	{
 		SeedData seed = _seeds.get(seedId);
+		
 		if (seed != null)
 		{
 			return seed.getSeedLimit();
 		}
+		
 		return 0;
 	}
 	
@@ -404,6 +436,7 @@ public class Manor
 				return seed.getCropLimit();
 			}
 		}
+		
 		return 0;
 	}
 	
@@ -576,20 +609,24 @@ public class Manor
 	private void parseData()
 	{
 		LineNumberReader lnr = null;
+		
 		try
 		{
 			File seedData = new File(Config.DATAPACK_ROOT, "data/xml/other/seeds.csv");
 			lnr = new LineNumberReader(new BufferedReader(new FileReader(seedData)));
 			String line = null;
+			
 			while ((line = lnr.readLine()) != null)
 			{
 				if ((line.trim().length() == 0) || ((line.length() > 0) && (line.charAt(0) == '#')))
 				{
 					continue;
 				}
+				
 				SeedData seed = parseList(line);
 				_seeds.put(seed.getId(), seed);
 			}
+			
 			_log.info("ManorManager: Loaded " + _seeds.size() + " seeds");
 		}
 		catch (FileNotFoundException e)

@@ -57,6 +57,7 @@ public class _052_WilliesSpecialBait extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("fisher_willeri_q0052_0104.htm"))
 		{
 			st.setState(STARTED);
@@ -78,6 +79,7 @@ public class _052_WilliesSpecialBait extends Quest implements ScriptFile
 				st.exitCurrentQuest(false);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -88,6 +90,7 @@ public class _052_WilliesSpecialBait extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		int id = st.getState();
+		
 		if (npcId == Willie)
 		{
 			if (id == CREATED)
@@ -120,6 +123,7 @@ public class _052_WilliesSpecialBait extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -127,11 +131,13 @@ public class _052_WilliesSpecialBait extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		if ((npcId == TarlkBasilisks[0]) || ((npcId == TarlkBasilisks[1]) && (st.getCond() == 1)))
 		{
 			if ((st.getQuestItemsCount(EyeOfTarlkBasilisk) < 100) && Rnd.chance(30))
 			{
 				st.giveItems(EyeOfTarlkBasilisk, 1);
+				
 				if (st.getQuestItemsCount(EyeOfTarlkBasilisk) == 100)
 				{
 					st.playSound(SOUND_MIDDLE);
@@ -143,6 +149,7 @@ public class _052_WilliesSpecialBait extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 }

@@ -55,15 +55,18 @@ public class NpcHealerAI extends Priest
 		{
 			Functions.npcSay(actor, NpcString.DID_SOMEONE_CRY_MEDIC_HERE_BE_HEALED);
 		}
+		
 		return startAttack();
 	}
 	
 	private boolean startAttack()
 	{
 		NpcInstance actor = getActor();
+		
 		if (target == null)
 		{
 			List<NpcInstance> around = actor.getAroundNpc(3000, 150);
+			
 			if ((around != null) && !around.isEmpty())
 			{
 				for (NpcInstance npc : around)
@@ -90,7 +93,6 @@ public class NpcHealerAI extends Priest
 			target = null;
 			return false;
 		}
-		
 		else if (defaultThinkBuff(10, 5))
 		{
 			return true;
@@ -105,6 +107,7 @@ public class NpcHealerAI extends Priest
 		{
 			return false;
 		}
+		
 		int _id = target.getNpcId();
 		
 		if ((_id == 33170) || (_id == 33171) || (_id == 33172) || (_id == 33173) || (_id == 33174) || (_id == 33414) || (_id == 33415) || (_id == 33416))

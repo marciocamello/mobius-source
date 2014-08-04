@@ -134,9 +134,11 @@ public class _692_HowtoOpposeEvil extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		int cond = st.getCond();
+		
 		if (event.equalsIgnoreCase("take_test") && (cond == 0))
 		{
 			QuestState GoodDayToFly = st.getPlayer().getQuestState(_10273_GoodDayToFly.class);
+			
 			if ((GoodDayToFly != null) && GoodDayToFly.isCompleted())
 			{
 				st.setCond(2);
@@ -242,6 +244,7 @@ public class _692_HowtoOpposeEvil extends Quest implements ScriptFile
 				htmltext = "kutran_q692_5.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -251,6 +254,7 @@ public class _692_HowtoOpposeEvil extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Dilios)
 		{
 			if (cond == 0)
@@ -284,6 +288,7 @@ public class _692_HowtoOpposeEvil extends Quest implements ScriptFile
 				htmltext = "lekon_q692_1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -292,6 +297,7 @@ public class _692_HowtoOpposeEvil extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (cond == 3)
 		{
 			if (ArrayUtils.contains(SOD, npcId))
@@ -307,6 +313,7 @@ public class _692_HowtoOpposeEvil extends Quest implements ScriptFile
 				st.rollAndGive(SpiritStoneDust, (int) Config.RATE_QUESTS_REWARD * 1, 20);
 			}
 		}
+		
 		return null;
 	}
 }

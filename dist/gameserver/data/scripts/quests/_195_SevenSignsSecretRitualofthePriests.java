@@ -359,6 +359,7 @@ public class _195_SevenSignsSecretRitualofthePriests extends Quest implements Sc
 		Player player = st.getPlayer();
 		String htmltext = event;
 		Reflection ref = player.getReflection();
+		
 		if (event.equalsIgnoreCase("claudiaathebaldt_q195_2.htm"))
 		{
 			st.setCond(1);
@@ -378,6 +379,7 @@ public class _195_SevenSignsSecretRitualofthePriests extends Quest implements Sc
 				player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 				return null;
 			}
+			
 			st.playSound(SOUND_MIDDLE);
 			negateSpeedBuffs(player);
 			SkillTable.getInstance().getInfo(6204, 1).getEffects(player, player, false, false);
@@ -390,6 +392,7 @@ public class _195_SevenSignsSecretRitualofthePriests extends Quest implements Sc
 				player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 				return null;
 			}
+			
 			negateSpeedBuffs(player);
 			SkillTable.getInstance().getInfo(6204, 1).getEffects(player, player, false, false);
 			htmltext = "raymond_q195_4c.htm";
@@ -416,6 +419,7 @@ public class _195_SevenSignsSecretRitualofthePriests extends Quest implements Sc
 			{
 				htmltext = "darknessofdawn_q195_2.htm";
 			}
+			
 			if (ref != null)
 			{
 				ref.collapse();
@@ -463,6 +467,7 @@ public class _195_SevenSignsSecretRitualofthePriests extends Quest implements Sc
 				ref.openDoor(door5);
 				ref.openDoor(door6);
 			}
+			
 			htmltext = "passwordentrydevice_q195_1.htm";
 		}
 		else if (event.equalsIgnoreCase("bookshelf_q195_2.htm"))
@@ -499,6 +504,7 @@ public class _195_SevenSignsSecretRitualofthePriests extends Quest implements Sc
 				return "subclass_forbidden.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -509,13 +515,16 @@ public class _195_SevenSignsSecretRitualofthePriests extends Quest implements Sc
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		String htmltext = "noquest";
+		
 		if (player.getBaseClassId() != player.getActiveClassId())
 		{
 			return "subclass_forbidden.htm";
 		}
+		
 		if (npcId == ClaudiaAthebaldt)
 		{
 			QuestState qs = player.getQuestState(_194_SevenSignsMammonsContract.class);
+			
 			if (cond == 0)
 			{
 				if ((player.getLevel() >= 79) && (qs != null) && qs.isCompleted())
@@ -589,12 +598,14 @@ public class _195_SevenSignsSecretRitualofthePriests extends Quest implements Sc
 				htmltext = "iasonheine_q195_1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
 	private void enterInstance(Player player)
 	{
 		Reflection r = player.getActiveReflection();
+		
 		if (r != null)
 		{
 			if (player.canReenterInstance(izId))
@@ -612,21 +623,25 @@ public class _195_SevenSignsSecretRitualofthePriests extends Quest implements Sc
 					NpcInstance guard = newInstance.addSpawnWithoutRespawn(18835, spawn[0], 0);
 					guard.setAI(new GuardofDawn(guard, spawn[1], spawn[2]));
 				}
+				
 				for (Location spawn[] : guardsOfDawn1stationary)
 				{
 					NpcInstance guard = newInstance.addSpawnWithoutRespawn(18835, spawn[0], 0);
 					guard.setAI(new GuardofDawnStat(guard, spawn[1]));
 				}
+				
 				for (Location spawn[] : guardsOfDawnFemale)
 				{
 					NpcInstance guard = newInstance.addSpawnWithoutRespawn(27352, spawn[0], 0);
 					guard.setAI(new GuardofDawnFemale(guard, spawn[1]));
 				}
+				
 				for (Location spawn[] : guardsOfDawn2)
 				{
 					NpcInstance guard = newInstance.addSpawnWithoutRespawn(18834, spawn[0], 0);
 					guard.setAI(new GuardofDawn(guard, spawn[1], spawn[2]));
 				}
+				
 				for (Location spawn[] : guardsOfDawn2stationary)
 				{
 					NpcInstance guard = newInstance.addSpawnWithoutRespawn(18834, spawn[0], 0);

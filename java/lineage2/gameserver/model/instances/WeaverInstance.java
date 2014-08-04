@@ -30,7 +30,7 @@ import lineage2.gameserver.utils.ItemFunctions;
 public class WeaverInstance extends MerchantInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -56,24 +56,30 @@ public class WeaverInstance extends MerchantInstance
 		{
 			return;
 		}
+		
 		StringTokenizer st = new StringTokenizer(command, " ");
 		String actualCommand = st.nextToken();
+		
 		if (actualCommand.equalsIgnoreCase("unseal"))
 		{
 			int cost = Integer.parseInt(st.nextToken());
 			int id = Integer.parseInt(st.nextToken());
+			
 			if (player.getAdena() < cost)
 			{
 				player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 				return;
 			}
+			
 			if (ItemFunctions.removeItem(player, id, 1, true) != 1)
 			{
 				player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
 				return;
 			}
+			
 			player.reduceAdena(cost, true);
 			int chance = Rnd.get(RewardList.MAX_CHANCE);
+			
 			switch (id)
 			{
 				case 13898:
@@ -97,7 +103,9 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
+					
 					break;
+				
 				case 13899:
 					if (chance < 350000)
 					{
@@ -119,7 +127,9 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
+					
 					break;
+				
 				case 13900:
 					if (chance < 350000)
 					{
@@ -141,7 +151,9 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
+					
 					break;
+				
 				case 13901:
 					if (chance < 350000)
 					{
@@ -163,7 +175,9 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
+					
 					break;
+				
 				case 13918:
 					if (chance < 350000)
 					{
@@ -185,7 +199,9 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
+					
 					break;
+				
 				case 13919:
 					if (chance < 350000)
 					{
@@ -207,7 +223,9 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
+					
 					break;
+				
 				case 13920:
 					if (chance < 350000)
 					{
@@ -229,7 +247,9 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
+					
 					break;
+				
 				case 13921:
 					if (chance < 350000)
 					{
@@ -251,7 +271,9 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
+					
 					break;
+				
 				case 14902:
 					if (chance < 350000)
 					{
@@ -273,7 +295,9 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
+					
 					break;
+				
 				case 14903:
 					if (chance < 350000)
 					{
@@ -295,7 +319,9 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
+					
 					break;
+				
 				case 14904:
 					if (chance < 350000)
 					{
@@ -317,7 +343,9 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
+					
 					break;
+				
 				case 14905:
 					if (chance < 350000)
 					{
@@ -339,7 +367,9 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
+					
 					break;
+				
 				default:
 					return;
 			}

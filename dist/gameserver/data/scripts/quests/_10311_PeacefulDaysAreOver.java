@@ -38,6 +38,7 @@ public class _10311_PeacefulDaysAreOver extends Quest implements ScriptFile
 		{
 			return "noquest";
 		}
+		
 		if (event.equalsIgnoreCase("33031-06.htm"))
 		{
 			st.setCond(1);
@@ -51,6 +52,7 @@ public class _10311_PeacefulDaysAreOver extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return event;
 	}
 	
@@ -58,13 +60,16 @@ public class _10311_PeacefulDaysAreOver extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
+		
 		if (st == null)
 		{
 			return htmltext;
 		}
+		
 		npc.getNpcId();
 		Player player = st.getPlayer();
 		QuestState previous = player.getQuestState(_10312_AbandonedGodsCreature.class);
+		
 		if (npc.getNpcId() == NPC_SELINA)
 		{
 			if ((previous == null) || (!previous.isCompleted()) || (player.getLevel() < 90))
@@ -72,19 +77,23 @@ public class _10311_PeacefulDaysAreOver extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 				return "33032-03.htm";
 			}
+			
 			switch (st.getState())
 			{
 				case COMPLETED:
 					htmltext = "33032-02.htm";
 					break;
+				
 				case CREATED:
 					htmltext = "33032-01.htm";
 					break;
+				
 				case STARTED:
 					if (st.getCond() != 1)
 					{
 						break;
 					}
+					
 					htmltext = "33032-07.htm";
 			}
 		}
@@ -98,6 +107,7 @@ public class _10311_PeacefulDaysAreOver extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	

@@ -40,6 +40,7 @@ public class _10287_StoryOfThoseLeft extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("rafforty_q10287_02.htm"))
 		{
 			st.setState(STARTED);
@@ -72,30 +73,38 @@ public class _10287_StoryOfThoseLeft extends Quest implements ScriptFile
 			str.nextToken();
 			int id = Integer.parseInt(str.nextToken());
 			htmltext = "rafforty_q10287_05.htm";
+			
 			switch (id)
 			{
 				case 1:
 					st.giveItems(10549, 1);
 					break;
+				
 				case 2:
 					st.giveItems(10550, 1);
 					break;
+				
 				case 3:
 					st.giveItems(10551, 1);
 					break;
+				
 				case 4:
 					st.giveItems(10552, 1);
 					break;
+				
 				case 5:
 					st.giveItems(10553, 1);
 					break;
+				
 				case 6:
 					st.giveItems(14219, 1);
 					break;
 			}
+			
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -105,11 +114,13 @@ public class _10287_StoryOfThoseLeft extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Rafforty)
 		{
 			if (cond == 0)
 			{
 				QuestState qs = st.getPlayer().getQuestState(_10286_ReunionWithSirra.class);
+				
 				if ((st.getPlayer().getLevel() >= 82) && (qs != null) && qs.isCompleted())
 				{
 					htmltext = "rafforty_q10287_01.htm";
@@ -159,12 +170,14 @@ public class _10287_StoryOfThoseLeft extends Quest implements ScriptFile
 				htmltext = "kegor_q10287_04.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
 	private void enterInstance(Player player, int izId)
 	{
 		Reflection r = player.getActiveReflection();
+		
 		if (r != null)
 		{
 			if (player.canReenterInstance(izId))

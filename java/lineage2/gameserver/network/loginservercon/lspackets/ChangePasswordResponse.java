@@ -51,15 +51,19 @@ public class ChangePasswordResponse extends ReceivablePacket
 	protected void runImpl()
 	{
 		GameClient client = LoginServerCommunication.getInstance().removeWaitingClient(account);
+		
 		if (client == null)
 		{
 			return;
 		}
+		
 		Player activeChar = client.getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (changed)
 		{
 			Functions.show(new CustomMessage("scripts.commands.user.password.ResultTrue", activeChar), activeChar);

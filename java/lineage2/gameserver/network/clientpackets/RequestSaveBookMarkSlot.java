@@ -48,6 +48,7 @@ public class RequestSaveBookMarkSlot extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if ((activeChar != null) && activeChar.bookmarks.add(name, acronym, icon))
 		{
 			activeChar.sendPacket(new ExGetBookMarkInfo(activeChar));

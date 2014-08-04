@@ -102,16 +102,21 @@ public class FreyaEventAI extends DefaultAI
 	protected void onEvtSeeSpell(Skill skill, Creature caster)
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((caster == null) || !caster.isPlayer())
 		{
 			return;
 		}
+		
 		final GameObject casterTarget = caster.getTarget();
+		
 		if ((casterTarget == null) || (casterTarget.getObjectId() != actor.getObjectId()))
 		{
 			return;
 		}
+		
 		final Player player = caster.getPlayer();
+		
 		if (ArrayUtils.contains(GIFT_SKILLS, skill.getId()))
 		{
 			if (Rnd.chance(GIFT_CHANCE))

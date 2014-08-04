@@ -63,10 +63,12 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 	public void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (!isValidPlayer(player))
 		{
 			player.setEnchantScroll(null);
@@ -74,28 +76,35 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 			player.sendPacket(SystemMsg.INAPPROPRIATE_ENCHANT_CONDITIONS);
 			player.sendActionFailed();
 		}
+		
 		PcInventory inventory = player.getInventory();
 		inventory.writeLock();
+		
 		try
 		{
 			ItemInstance item = inventory.getItemByObjectId(_objectId);
 			ItemInstance scroll = player.getEnchantScroll();
 			ItemInstance catalyst = _catalystObjId > 0 ? inventory.getItemByObjectId(_catalystObjId) : null;
+			
 			if (!ItemFunctions.checkCatalyst(item, catalyst))
 			{
 				catalyst = null;
 			}
+			
 			if ((item == null) || (scroll == null))
 			{
 				player.sendActionFailed();
 				return;
 			}
+			
 			EnchantScrollInfo esi = EnchantScrollManager.getScrollInfo(scroll.getItemId());
+			
 			if (esi == null)
 			{
 				player.sendActionFailed();
 				return;
 			}
+			
 			if ((item.getEnchantLevel() >= esi.getMax()) || (item.getEnchantLevel() < esi.getMin()))
 			{
 				player.sendPacket(EnchantResult.CANCEL);
@@ -103,6 +112,7 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 				player.sendActionFailed();
 				return;
 			}
+			
 			if (esi.getType() != EnchantScrollType.SPECIAL)
 			{
 				if (!checkItem(item, esi))
@@ -113,36 +123,45 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 					return;
 				}
 			}
+			
 			if ((!inventory.destroyItem(scroll, 1)) || ((catalyst != null) && (!inventory.destroyItem(catalyst, 1))))
 			{
 				player.sendPacket(EnchantResult.CANCEL);
 				player.sendActionFailed();
 				return;
 			}
+			
 			boolean equipped = item.isEquipped();
+			
 			if (equipped)
 			{
 				inventory.isRefresh = true;
 				inventory.unEquipItem(item);
 			}
+			
 			int safeEnchantLevel = item.getTemplate().getBodyPart() == 32768 ? (esi.getSafe() + 1) : esi.getSafe();
 			int chance = esi.getChance();
+			
 			if (catalyst != null)
 			{
 				chance += ItemFunctions.getCatalystPower(catalyst.getItemId());
 			}
+			
 			if ((esi.getType() == EnchantScrollType.ANCIENT) || (esi.getType() == EnchantScrollType.ITEM_MALL))
 			{
 				chance += 10;
 			}
+			
 			if (esi.getType() == EnchantScrollType.DIVINE)
 			{
 				chance = 100;
 			}
+			
 			if (item.getEnchantLevel() <= safeEnchantLevel)
 			{
 				chance = 100;
 			}
+			
 			chance = Math.min(chance, 100);
 			
 			if (item.isArmor())
@@ -159,11 +178,13 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 				item.setEnchantLevel(item.getEnchantLevel() + 1);
 				item.setJdbcState(JdbcEntityState.UPDATED);
 				item.update();
+				
 				if (equipped)
 				{
 					inventory.equipItem(item);
 					inventory.isRefresh = false;
 				}
+				
 				player.sendPacket(new InventoryUpdate().addModifiedItem(item));
 				
 				if (item.isArmor())
@@ -199,23 +220,29 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 						{
 							player.sendDisarmMessage(item);
 						}
+						
 						if (!inventory.destroyItem(item, 1L))
 						{
 							player.sendActionFailed();
 							return;
 						}
+						
 						int crystalId = item.getCrystalType().cry;
+						
 						if ((crystalId > 0) && (item.getTemplate().getCrystalCount() > 0))
 						{
 							int crystalAmount = (int) (item.getTemplate().getCrystalCount() * 0.87D);
+							
 							if (item.getEnchantLevel() > 3)
 							{
 								crystalAmount = (int) (crystalAmount + (item.getTemplate().getCrystalCount() * 0.25D * (item.getEnchantLevel() - 3)));
 							}
+							
 							if (crystalAmount < 1)
 							{
 								crystalAmount = 1;
 							}
+							
 							player.sendPacket(new EnchantResult(1, crystalId, crystalAmount));
 							ItemFunctions.addItem(player, crystalId, crystalAmount, true);
 						}
@@ -223,38 +250,47 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 						{
 							player.sendPacket(EnchantResult.FAILED_NO_CRYSTALS);
 						}
+						
 						break;
+					
 					case DESTRUCTION:
 						item.setEnchantLevel(item.getEnchantLevel());
 						item.setJdbcState(JdbcEntityState.UPDATED);
 						item.update();
+						
 						if (equipped)
 						{
 							inventory.equipItem(item);
 							inventory.isRefresh = false;
 						}
+						
 						player.sendPacket(new InventoryUpdate().addModifiedItem(item));
 						player.sendPacket(SystemMsg.THE_BLESSED_ENCHANT_FAILED);
 						player.sendPacket(EnchantResult.ANCIENT_FAILED);
 						break;
+					
 					case BLESSED:
 					case ITEM_MALL:
 					case CRYSTALL:
 						item.setEnchantLevel(0);
 						item.setJdbcState(JdbcEntityState.UPDATED);
 						item.update();
+						
 						if (equipped)
 						{
 							inventory.equipItem(item);
 							inventory.isRefresh = false;
 						}
+						
 						player.sendPacket(new InventoryUpdate().addModifiedItem(item));
 						player.sendPacket(SystemMsg.THE_BLESSED_ENCHANT_FAILED);
 						player.sendPacket(EnchantResult.BLESSED_FAILED);
 						break;
+					
 					case ANCIENT:
 						player.sendPacket(EnchantResult.ANCIENT_FAILED);
 						break;
+					
 					default:
 						break;
 				}

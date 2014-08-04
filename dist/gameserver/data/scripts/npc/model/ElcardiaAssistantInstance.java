@@ -28,7 +28,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public final class ElcardiaAssistantInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -84,10 +84,12 @@ public final class ElcardiaAssistantInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("request_blessing"))
 		{
 			List<Creature> target = new ArrayList<>();
 			target.add(player);
+			
 			for (int[] buff : _elcardiaBuff)
 			{
 				callSkill(SkillTable.getInstance().getInfo(buff[0], 1), target, true);

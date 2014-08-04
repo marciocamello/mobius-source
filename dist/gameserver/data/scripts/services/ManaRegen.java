@@ -40,11 +40,13 @@ public class ManaRegen extends Functions
 		Player player = getSelf();
 		long mp = (long) Math.floor(player.getMaxMp() - player.getCurrentMp());
 		long fullCost = mp * PRICE;
+		
 		if (fullCost <= 0)
 		{
 			player.sendPacket(Msg.NOTHING_HAPPENED);
 			return;
 		}
+		
 		if (getItemCount(player, ADENA) >= fullCost)
 		{
 			removeItem(player, ADENA, fullCost);

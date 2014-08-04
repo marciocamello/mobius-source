@@ -29,10 +29,12 @@ public class RequestFriendInfoList extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		activeChar.sendPacket(new FriendList(activeChar));
 	}
 }

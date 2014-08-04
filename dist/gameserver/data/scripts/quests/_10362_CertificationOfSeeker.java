@@ -57,6 +57,7 @@ public class _10362_CertificationOfSeeker extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -64,6 +65,7 @@ public class _10362_CertificationOfSeeker extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "0-4.htm";
 		}
+		
 		if (event.equalsIgnoreCase("qet_rev"))
 		{
 			htmltext = "1-3.htm";
@@ -74,6 +76,7 @@ public class _10362_CertificationOfSeeker extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		return htmltext;
 	}
 	
@@ -83,6 +86,7 @@ public class _10362_CertificationOfSeeker extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == chesha)
 		{
 			if (st.isCompleted())
@@ -111,6 +115,7 @@ public class _10362_CertificationOfSeeker extends Quest implements ScriptFile
 				htmltext = "0-nc.htm";
 			}
 		}
+		
 		if (npcId == nagel)
 		{
 			if (st.isCompleted())
@@ -126,6 +131,7 @@ public class _10362_CertificationOfSeeker extends Quest implements ScriptFile
 				htmltext = "1-1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -133,12 +139,14 @@ public class _10362_CertificationOfSeeker extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		boolean doneKill = updateKill(npc, st);
+		
 		if (doneKill)
 		{
 			st.unset(stalker_item);
 			st.unset(husk_item);
 			st.setCond(2);
 		}
+		
 		return null;
 	}
 }

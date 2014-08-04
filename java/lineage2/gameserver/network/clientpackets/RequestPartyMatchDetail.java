@@ -53,21 +53,26 @@ public class RequestPartyMatchDetail extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (player.getMatchingRoom() != null)
 		{
 			return;
 		}
+		
 		if (_roomId > 0)
 		{
 			MatchingRoom room = MatchingRoomManager.getInstance().getMatchingRoom(MatchingRoom.PARTY_MATCHING, _roomId);
+			
 			if (room == null)
 			{
 				return;
 			}
+			
 			room.addMember(player);
 		}
 		else

@@ -30,6 +30,7 @@ public class ExAbnormalStatusUpdateFromTarget extends L2GameServerPacket
 	{
 		_objId = target.getObjectId();
 		final Effect[] el = target.getEffectList().getAllFirstEffects();
+		
 		if (el.length > 0)
 		{
 			for (final Effect eo : el)
@@ -39,6 +40,7 @@ public class ExAbnormalStatusUpdateFromTarget extends L2GameServerPacket
 					_effectArray = ArrayUtils.add(_effectArray, eo);
 				}
 			}
+			
 			Arrays.sort(_effectArray, EffectsComparator.getInstance());
 		}
 	}
@@ -53,7 +55,6 @@ public class ExAbnormalStatusUpdateFromTarget extends L2GameServerPacket
 		for (final Effect temp : _effectArray)
 		{
 			final Skill sk = temp.getSkill();
-			
 			writeD(sk.getDisplayId());
 			writeH(sk.getDisplayLevel());
 			writeD(getDisplayTypeOfEffect(sk));

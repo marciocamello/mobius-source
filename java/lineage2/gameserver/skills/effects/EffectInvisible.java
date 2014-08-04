@@ -51,15 +51,19 @@ public final class EffectInvisible extends Effect
 		{
 			return false;
 		}
+		
 		Player player = (Player) _effected;
+		
 		if (player.isInvisible())
 		{
 			return false;
 		}
+		
 		if (player.getActiveWeaponFlagAttachment() != null)
 		{
 			return false;
 		}
+		
 		return super.checkCondition();
 	}
 	
@@ -84,12 +88,15 @@ public final class EffectInvisible extends Effect
 	{
 		super.onExit();
 		Player player = (Player) _effected;
+		
 		if (!player.isInvisible())
 		{
 			return;
 		}
+		
 		player.setInvisibleType(_invisibleType);
 		player.broadcastUserInfo();
+		
 		for (Summon summon : player.getSummonList())
 		{
 			summon.broadcastCharInfo();

@@ -63,11 +63,14 @@ public class EffectCubic extends Effect
 			{
 				return;
 			}
+			
 			Player player = (_effected != null) && _effected.isPlayer() ? (Player) _effected : null;
+			
 			if (player == null)
 			{
 				return;
 			}
+			
 			doAction(player);
 		}
 	}
@@ -100,10 +103,12 @@ public class EffectCubic extends Effect
 	{
 		super.onStart();
 		Player player = _effected.getPlayer();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		player.addCubic(this);
 		_task = ThreadPoolManager.getInstance().scheduleAtFixedRate(new ActionTask(), 1000L, 1000L);
 	}
@@ -116,10 +121,12 @@ public class EffectCubic extends Effect
 	{
 		super.onExit();
 		Player player = _effected.getPlayer();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		player.removeCubic(getId());
 		_task.cancel(true);
 		_task = null;
@@ -141,22 +148,27 @@ public class EffectCubic extends Effect
 					{
 						continue;
 					}
+					
 					switch (skillInfo.getActionType())
 					{
 						case ATTACK:
 							doAttack(player, skillInfo, _template.getDelay());
 							break;
+						
 						case DEBUFF:
 							doDebuff(player, skillInfo, _template.getDelay());
 							break;
+						
 						case HEAL:
 							doHeal(player, skillInfo, _template.getDelay());
 							break;
+						
 						case CANCEL:
 							doCancel(player, skillInfo, _template.getDelay());
 							break;
 					}
 				}
+				
 				break;
 			}
 		}
@@ -211,6 +223,7 @@ public class EffectCubic extends Effect
 	{
 		final Skill skill = info.getSkill();
 		Creature target = null;
+		
 		if (player.getParty() == null)
 		{
 			if (!player.isCurrentHpFull() && !player.isDead())
@@ -221,12 +234,14 @@ public class EffectCubic extends Effect
 		else
 		{
 			double currentHp = Integer.MAX_VALUE;
+			
 			for (Player member : player.getParty().getPartyMembers())
 			{
 				if (member == null)
 				{
 					continue;
 				}
+				
 				if (player.isInRange(member, info.getSkill().getCastRange()) && !member.isCurrentHpFull() && !member.isDead() && (member.getCurrentHp() < currentHp))
 				{
 					currentHp = member.getCurrentHp();
@@ -234,15 +249,19 @@ public class EffectCubic extends Effect
 				}
 			}
 		}
+		
 		if (target == null)
 		{
 			return;
 		}
+		
 		int chance = info.getChance((int) target.getCurrentHpPercents());
+		
 		if (!Rnd.chance(chance))
 		{
 			return;
 		}
+		
 		final Creature aimTarget = target;
 		player.broadcastPacket(new MagicSkillUse(player, aimTarget, skill.getDisplayId(), skill.getDisplayLevel(), skill.getHitTime(), 0));
 		player.disableSkill(skill, delay * 1000L);
@@ -271,17 +290,21 @@ public class EffectCubic extends Effect
 		{
 			return;
 		}
+		
 		final Skill skill = info.getSkill();
 		Creature target = null;
+		
 		if (player.isInCombat())
 		{
 			GameObject object = player.getTarget();
 			target = (object != null) && object.isCreature() ? (Creature) object : null;
 		}
+		
 		if ((target == null) || target.isDead() || (target.isDoor() && !info.isCanAttackDoor()) || !player.isInRangeZ(target, skill.getCastRange()) || !target.isAutoAttackable(player))
 		{
 			return;
 		}
+		
 		final Creature aimTarget = target;
 		player.broadcastPacket(new MagicSkillUse(player, target, skill.getDisplayId(), skill.getDisplayLevel(), skill.getHitTime(), 0));
 		player.disableSkill(skill, delay * 1000L);
@@ -294,6 +317,7 @@ public class EffectCubic extends Effect
 				targets.add(aimTarget);
 				player.broadcastPacket(new MagicSkillLaunched(player.getObjectId(), skill.getDisplayId(), skill.getDisplayLevel(), targets));
 				player.callSkill(skill, targets, false);
+				
 				if (aimTarget.isNpc())
 				{
 					if (aimTarget.paralizeOnAttack(player))
@@ -325,17 +349,21 @@ public class EffectCubic extends Effect
 		{
 			return;
 		}
+		
 		final Skill skill = info.getSkill();
 		Creature target = null;
+		
 		if (player.isInCombat())
 		{
 			GameObject object = player.getTarget();
 			target = (object != null) && object.isCreature() ? (Creature) object : null;
 		}
+		
 		if ((target == null) || target.isDead() || (target.isDoor() && !info.isCanAttackDoor()) || !player.isInRangeZ(target, skill.getCastRange()) || !target.isAutoAttackable(player))
 		{
 			return;
 		}
+		
 		final Creature aimTarget = target;
 		player.broadcastPacket(new MagicSkillUse(player, target, skill.getDisplayId(), skill.getDisplayLevel(), skill.getHitTime(), 0));
 		player.disableSkill(skill, delay * 1000L);
@@ -348,10 +376,12 @@ public class EffectCubic extends Effect
 				targets.add(aimTarget);
 				player.broadcastPacket(new MagicSkillLaunched(player.getObjectId(), skill.getDisplayId(), skill.getDisplayLevel(), targets));
 				final boolean succ = Formulas.calcSkillSuccess(player, aimTarget, skill, info.getChance());
+				
 				if (succ)
 				{
 					player.callSkill(skill, targets, false);
 				}
+				
 				if (aimTarget.isNpc())
 				{
 					if (aimTarget.paralizeOnAttack(player))
@@ -383,8 +413,10 @@ public class EffectCubic extends Effect
 		{
 			return;
 		}
+		
 		final Skill skill = info.getSkill();
 		boolean hasDebuff = false;
+		
 		for (Effect e : player.getEffectList().getAllEffects())
 		{
 			if ((e != null) && e.isOffensive() && e.isCancelable() && !e.getTemplate()._applyOnCaster)
@@ -392,10 +424,12 @@ public class EffectCubic extends Effect
 				hasDebuff = true;
 			}
 		}
+		
 		if (!hasDebuff)
 		{
 			return;
 		}
+		
 		player.broadcastPacket(new MagicSkillUse(player, player, skill.getDisplayId(), skill.getDisplayLevel(), skill.getHitTime(), 0));
 		player.disableSkill(skill, delay * 1000L);
 		ThreadPoolManager.getInstance().schedule(new RunnableImpl()

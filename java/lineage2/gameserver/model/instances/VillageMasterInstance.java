@@ -73,6 +73,7 @@ public final class VillageMasterInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.startsWith("create_clan") && (command.length() > 12))
 		{
 			String val = command.substring(12);
@@ -86,6 +87,7 @@ public final class VillageMasterInstance extends NpcInstance
 		else if (command.startsWith("create_royal") && (command.length() > 15))
 		{
 			String[] sub = command.substring(13, command.length()).split(" ", 2);
+			
 			if (sub.length == 2)
 			{
 				createSubPledge(player, sub[1], Clan.SUBUNIT_ROYAL1, 6, sub[0]);
@@ -94,6 +96,7 @@ public final class VillageMasterInstance extends NpcInstance
 		else if (command.startsWith("create_knight") && (command.length() > 16))
 		{
 			String[] sub = command.substring(14, command.length()).split(" ", 2);
+			
 			if (sub.length == 2)
 			{
 				createSubPledge(player, sub[1], Clan.SUBUNIT_KNIGHT1, 7, sub[0]);
@@ -102,6 +105,7 @@ public final class VillageMasterInstance extends NpcInstance
 		else if (command.startsWith("assign_subpl_leader") && (command.length() > 22))
 		{
 			String[] sub = command.substring(20, command.length()).split(" ", 2);
+			
 			if (sub.length == 2)
 			{
 				assignSubPledgeLeader(player, sub[1], sub[0]);
@@ -112,6 +116,7 @@ public final class VillageMasterInstance extends NpcInstance
 			String val = command.substring(23);
 			setLeader(player, val);
 		}
+		
 		if (command.startsWith("create_ally") && (command.length() > 12))
 		{
 			String val = command.substring(12);
@@ -143,6 +148,7 @@ public final class VillageMasterInstance extends NpcInstance
 			{
 				command = "Link villagemaster/reflect_weapon_master_noticket.htm";
 			}
+			
 			super.onBypassFeedback(player, command);
 		}
 		else if (command.equalsIgnoreCase("CertificationList"))
@@ -169,6 +175,7 @@ public final class VillageMasterInstance extends NpcInstance
 	public String getHtmlPath(int npcId, int val, Player player)
 	{
 		String pom;
+		
 		if (val == 0)
 		{
 			pom = "" + npcId;
@@ -177,6 +184,7 @@ public final class VillageMasterInstance extends NpcInstance
 		{
 			pom = npcId + "-" + val;
 		}
+		
 		return "villagemaster/" + pom + ".htm";
 	}
 	
@@ -192,32 +200,39 @@ public final class VillageMasterInstance extends NpcInstance
 			player.sendPacket(Msg.YOU_ARE_NOT_QUALIFIED_TO_CREATE_A_CLAN);
 			return;
 		}
+		
 		if (player.getClanId() != 0)
 		{
 			player.sendPacket(Msg.YOU_HAVE_FAILED_TO_CREATE_A_CLAN);
 			return;
 		}
+		
 		if (!player.canCreateClan())
 		{
 			player.sendPacket(Msg.YOU_MUST_WAIT_10_DAYS_BEFORE_CREATING_A_NEW_CLAN);
 			return;
 		}
+		
 		if (clanName.length() > 16)
 		{
 			player.sendPacket(Msg.CLAN_NAMES_LENGTH_IS_INCORRECT);
 			return;
 		}
+		
 		if (!Util.isMatchingRegexp(clanName, Config.CLAN_NAME_TEMPLATE))
 		{
 			player.sendPacket(Msg.CLAN_NAME_IS_INCORRECT);
 			return;
 		}
+		
 		Clan clan = ClanTable.getInstance().createClan(player, clanName);
+		
 		if (clan == null)
 		{
 			player.sendPacket(Msg.THIS_NAME_ALREADY_EXISTS);
 			return;
 		}
+		
 		player.sendPacket(clan.listAll());
 		player.sendPacket(new PledgeShowInfoUpdate(clan), Msg.CLAN_HAS_BEEN_CREATED);
 		player.updatePledgeClass();
@@ -236,24 +251,29 @@ public final class VillageMasterInstance extends NpcInstance
 			leader.sendPacket(Msg.ONLY_THE_CLAN_LEADER_IS_ENABLED);
 			return;
 		}
+		
 		if (leader.getEvent(SiegeEvent.class) != null)
 		{
 			leader.sendMessage(new CustomMessage("scripts.services.Rename.SiegeNow", leader));
 			return;
 		}
+		
 		Clan clan = leader.getClan();
 		SubUnit mainUnit = clan.getSubUnit(Clan.SUBUNIT_MAIN_CLAN);
 		UnitMember member = mainUnit.getUnitMember(newLeader);
+		
 		if (member == null)
 		{
 			showChatWindow(leader, "villagemaster/clan-20.htm");
 			return;
 		}
+		
 		if (member.getLeaderOf() != Clan.SUBUNIT_NONE)
 		{
 			leader.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.CannotAssignUnitLeader", leader));
 			return;
 		}
+		
 		setLeader(leader, clan, mainUnit, member);
 	}
 	
@@ -283,17 +303,21 @@ public final class VillageMasterInstance extends NpcInstance
 	{
 		UnitMember subLeader = null;
 		Clan clan = player.getClan();
+		
 		if ((clan == null) || !player.isClanLeader())
 		{
 			player.sendPacket(Msg.YOU_HAVE_FAILED_TO_CREATE_A_CLAN);
 			return;
 		}
+		
 		if (!Util.isMatchingRegexp(clanName, Config.CLAN_NAME_TEMPLATE))
 		{
 			player.sendPacket(Msg.CLAN_NAME_IS_INCORRECT);
 			return;
 		}
+		
 		Collection<SubUnit> subPledge = clan.getAllSubUnits();
+		
 		for (SubUnit element : subPledge)
 		{
 			if (element.getName().equals(clanName))
@@ -302,20 +326,25 @@ public final class VillageMasterInstance extends NpcInstance
 				return;
 			}
 		}
+		
 		if (ClanTable.getInstance().getClanByName(clanName) != null)
 		{
 			player.sendPacket(Msg.ANOTHER_MILITARY_UNIT_IS_ALREADY_USING_THAT_NAME_PLEASE_ENTER_A_DIFFERENT_NAME);
 			return;
 		}
+		
 		if (clan.getLevel() < minClanLvl)
 		{
 			player.sendPacket(Msg.THE_CONDITIONS_NECESSARY_TO_CREATE_A_MILITARY_UNIT_HAVE_NOT_BEEN_MET);
 			return;
 		}
+		
 		SubUnit unit = clan.getSubUnit(Clan.SUBUNIT_MAIN_CLAN);
+		
 		if (pledgeType != Clan.SUBUNIT_ACADEMY)
 		{
 			subLeader = unit.getUnitMember(leaderName);
+			
 			if (subLeader == null)
 			{
 				player.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.PlayerCantBeAssignedAsSubUnitLeader", player));
@@ -327,13 +356,17 @@ public final class VillageMasterInstance extends NpcInstance
 				return;
 			}
 		}
+		
 		pledgeType = clan.createSubPledge(player, pledgeType, subLeader, clanName);
+		
 		if (pledgeType == Clan.SUBUNIT_NONE)
 		{
 			return;
 		}
+		
 		clan.broadcastToOnlineMembers(new PledgeReceiveSubPledgeCreated(clan.getSubUnit(pledgeType)));
 		SystemMessage sm;
+		
 		if (pledgeType == Clan.SUBUNIT_ACADEMY)
 		{
 			sm = new SystemMessage(SystemMessage.CONGRATULATIONS_THE_S1S_CLAN_ACADEMY_HAS_BEEN_CREATED);
@@ -353,10 +386,13 @@ public final class VillageMasterInstance extends NpcInstance
 		{
 			sm = Msg.CLAN_HAS_BEEN_CREATED;
 		}
+		
 		player.sendPacket(sm);
+		
 		if (subLeader != null)
 		{
 			clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(subLeader));
+			
 			if (subLeader.isOnline())
 			{
 				subLeader.getPlayer().updatePledgeClass();
@@ -374,53 +410,65 @@ public final class VillageMasterInstance extends NpcInstance
 	public void assignSubPledgeLeader(Player player, String clanName, String leaderName)
 	{
 		Clan clan = player.getClan();
+		
 		if (clan == null)
 		{
 			player.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.ClanDoesntExist", player));
 			return;
 		}
+		
 		if (!player.isClanLeader())
 		{
 			player.sendPacket(Msg.ONLY_THE_CLAN_LEADER_IS_ENABLED);
 			return;
 		}
+		
 		SubUnit targetUnit = null;
+		
 		for (SubUnit unit : clan.getAllSubUnits())
 		{
 			if ((unit.getType() == Clan.SUBUNIT_MAIN_CLAN) || (unit.getType() == Clan.SUBUNIT_ACADEMY))
 			{
 				continue;
 			}
+			
 			if (unit.getName().equalsIgnoreCase(clanName))
 			{
 				targetUnit = unit;
 			}
 		}
+		
 		if (targetUnit == null)
 		{
 			player.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.SubUnitNotFound", player));
 			return;
 		}
+		
 		SubUnit mainUnit = clan.getSubUnit(Clan.SUBUNIT_MAIN_CLAN);
 		UnitMember subLeader = mainUnit.getUnitMember(leaderName);
+		
 		if (subLeader == null)
 		{
 			player.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.PlayerCantBeAssignedAsSubUnitLeader", player));
 			return;
 		}
+		
 		if (subLeader.getLeaderOf() != Clan.SUBUNIT_NONE)
 		{
 			player.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.ItCantBeSubUnitLeader", player));
 			return;
 		}
+		
 		targetUnit.setLeader(subLeader, true);
 		clan.broadcastToOnlineMembers(new PledgeReceiveSubPledgeCreated(targetUnit));
 		clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(subLeader));
+		
 		if (subLeader.isOnline())
 		{
 			subLeader.getPlayer().updatePledgeClass();
 			subLeader.getPlayer().broadcastCharInfo();
 		}
+		
 		player.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.NewSubUnitLeaderHasBeenAssigned", player));
 	}
 	
@@ -434,27 +482,33 @@ public final class VillageMasterInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		Clan clan = player.getClan();
+		
 		if (!player.isClanLeader())
 		{
 			player.sendPacket(Msg.ONLY_THE_CLAN_LEADER_IS_ENABLED);
 			return;
 		}
+		
 		if (clan.getAllyId() != 0)
 		{
 			player.sendPacket(Msg.YOU_CANNOT_DISPERSE_THE_CLANS_IN_YOUR_ALLIANCE);
 			return;
 		}
+		
 		if (clan.isAtWar() > 0)
 		{
 			player.sendPacket(Msg.YOU_CANNOT_DISSOLVE_A_CLAN_WHILE_ENGAGED_IN_A_WAR);
 			return;
 		}
+		
 		if ((clan.getCastle() != 0) || (clan.getHasHideout() != 0) || (clan.getHasFortress() != 0))
 		{
 			player.sendPacket(Msg.UNABLE_TO_DISPERSE_YOUR_CLAN_OWNS_ONE_OR_MORE_CASTLES_OR_HIDEOUTS);
 			return;
 		}
+		
 		for (Residence r : ResidenceHolder.getInstance().getResidences())
 		{
 			if ((r.getSiegeEvent().getSiegeClan(SiegeEvent.ATTACKERS, clan) != null) || (r.getSiegeEvent().getSiegeClan(SiegeEvent.DEFENDERS, clan) != null) || (r.getSiegeEvent().getSiegeClan(CastleSiegeEvent.DEFENDERS_WAITING, clan) != null))
@@ -463,6 +517,7 @@ public final class VillageMasterInstance extends NpcInstance
 				return;
 			}
 		}
+		
 		ClanTable.getInstance().dissolveClan(player);
 	}
 	
@@ -473,16 +528,20 @@ public final class VillageMasterInstance extends NpcInstance
 	public void levelUpClan(Player player)
 	{
 		Clan clan = player.getClan();
+		
 		if (clan == null)
 		{
 			return;
 		}
+		
 		if (!player.isClanLeader())
 		{
 			player.sendPacket(Msg.ONLY_THE_CLAN_LEADER_IS_ENABLED);
 			return;
 		}
+		
 		boolean increaseClanLevel = false;
+		
 		switch (clan.getLevel())
 		{
 			case 0:
@@ -492,7 +551,9 @@ public final class VillageMasterInstance extends NpcInstance
 					player.reduceAdena(650000, true);
 					increaseClanLevel = true;
 				}
+				
 				break;
+			
 			case 1:
 				if ((player.getSp() >= 100000) && (player.getAdena() >= 2500000))
 				{
@@ -500,49 +561,63 @@ public final class VillageMasterInstance extends NpcInstance
 					player.reduceAdena(2500000, true);
 					increaseClanLevel = true;
 				}
+				
 				break;
+			
 			case 2:
 				if ((player.getSp() >= 350000) && player.getInventory().destroyItemByItemId(1419, 1))
 				{
 					player.setSp(player.getSp() - 350000);
 					increaseClanLevel = true;
 				}
+				
 				break;
+			
 			case 3:
 				if ((player.getSp() >= 1000000) && player.getInventory().destroyItemByItemId(3874, 1))
 				{
 					player.setSp(player.getSp() - 1000000);
 					increaseClanLevel = true;
 				}
+				
 				break;
+			
 			case 4:
 				if ((player.getSp() >= 2500000) && player.getInventory().destroyItemByItemId(3870, 1))
 				{
 					player.setSp(player.getSp() - 2500000);
 					increaseClanLevel = true;
 				}
+				
 				break;
+			
 			case 5:
 				if ((clan.getReputationScore() >= Config.ALT_CLAN_REP_COUNT_6LVL) && (clan.getAllSize() >= Config.ALT_CLAN_PLAYER_COUNT_6LVL))
 				{
 					clan.incReputation(-Config.ALT_CLAN_REP_COUNT_6LVL, false, "LvlUpClan");
 					increaseClanLevel = true;
 				}
+				
 				break;
+			
 			case 6:
 				if ((clan.getReputationScore() >= Config.ALT_CLAN_REP_COUNT_7LVL) && (clan.getAllSize() >= Config.ALT_CLAN_PLAYER_COUNT_7LVL))
 				{
 					clan.incReputation(-Config.ALT_CLAN_REP_COUNT_7LVL, false, "LvlUpClan");
 					increaseClanLevel = true;
 				}
+				
 				break;
+			
 			case 7:
 				if ((clan.getReputationScore() >= Config.ALT_CLAN_REP_COUNT_8LVL) && (clan.getAllSize() >= Config.ALT_CLAN_PLAYER_COUNT_8LVL))
 				{
 					clan.incReputation(-Config.ALT_CLAN_REP_COUNT_8LVL, false, "LvlUpClan");
 					increaseClanLevel = true;
 				}
+				
 				break;
+			
 			case 8:
 				if ((clan.getReputationScore() >= Config.ALT_CLAN_REP_COUNT_9LVL) && (clan.getAllSize() >= Config.ALT_CLAN_PLAYER_COUNT_9LVL))
 				{
@@ -552,7 +627,9 @@ public final class VillageMasterInstance extends NpcInstance
 						increaseClanLevel = true;
 					}
 				}
+				
 				break;
+			
 			case 9:
 				if ((clan.getReputationScore() >= Config.ALT_CLAN_REP_COUNT_10LVL) && (clan.getAllSize() >= Config.ALT_CLAN_PLAYER_COUNT_10LVL))
 				{
@@ -562,7 +639,9 @@ public final class VillageMasterInstance extends NpcInstance
 						increaseClanLevel = true;
 					}
 				}
+				
 				break;
+			
 			case 10:
 				if ((clan.getReputationScore() >= Config.ALT_CLAN_REP_COUNT_11LVL) && (clan.getAllSize() >= Config.ALT_CLAN_PLAYER_COUNT_11LVL) && (clan.getCastle() > 0))
 				{
@@ -573,24 +652,30 @@ public final class VillageMasterInstance extends NpcInstance
 						increaseClanLevel = true;
 					}
 				}
+				
 				break;
 		}
+		
 		if (increaseClanLevel)
 		{
 			clan.setLevel(clan.getLevel() + 1);
 			clan.updateClanInDB();
 			player.broadcastCharInfo();
 			doCast(SkillTable.getInstance().getInfo(5103, 1), player, true);
+			
 			if (clan.getLevel() >= 4)
 			{
 				SiegeUtils.addSiegeSkills(player);
 			}
+			
 			if (clan.getLevel() == 5)
 			{
 				player.sendPacket(Msg.NOW_THAT_YOUR_CLAN_LEVEL_IS_ABOVE_LEVEL_5_IT_CAN_ACCUMULATE_CLAN_REPUTATION_POINTS);
 			}
+			
 			PledgeShowInfoUpdate pu = new PledgeShowInfoUpdate(clan);
 			PledgeStatusChanged ps = new PledgeStatusChanged(clan);
+			
 			for (UnitMember mbr : clan)
 			{
 				if (mbr.isOnline())
@@ -619,41 +704,50 @@ public final class VillageMasterInstance extends NpcInstance
 			player.sendPacket(Msg.ONLY_CLAN_LEADERS_MAY_CREATE_ALLIANCES);
 			return;
 		}
+		
 		if (player.getClan().getAllyId() != 0)
 		{
 			player.sendPacket(Msg.YOU_ALREADY_BELONG_TO_ANOTHER_ALLIANCE);
 			return;
 		}
+		
 		if (allyName.length() > 16)
 		{
 			player.sendPacket(Msg.INCORRECT_LENGTH_FOR_AN_ALLIANCE_NAME);
 			return;
 		}
+		
 		if (!Util.isMatchingRegexp(allyName, Config.ALLY_NAME_TEMPLATE))
 		{
 			player.sendPacket(Msg.INCORRECT_ALLIANCE_NAME);
 			return;
 		}
+		
 		if (player.getClan().getLevel() < 5)
 		{
 			player.sendPacket(Msg.TO_CREATE_AN_ALLIANCE_YOUR_CLAN_MUST_BE_LEVEL_5_OR_HIGHER);
 			return;
 		}
+		
 		if (ClanTable.getInstance().getAllyByName(allyName) != null)
 		{
 			player.sendPacket(Msg.THIS_ALLIANCE_NAME_ALREADY_EXISTS);
 			return;
 		}
+		
 		if (!player.getClan().canCreateAlly())
 		{
 			player.sendPacket(Msg.YOU_CANNOT_CREATE_A_NEW_ALLIANCE_WITHIN_1_DAY_AFTER_DISSOLUTION);
 			return;
 		}
+		
 		Alliance alliance = ClanTable.getInstance().createAlliance(player, allyName);
+		
 		if (alliance == null)
 		{
 			return;
 		}
+		
 		player.broadcastCharInfo();
 		player.sendMessage("Alliance " + allyName + " has been created.");
 	}
@@ -668,16 +762,19 @@ public final class VillageMasterInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (!player.isAllyLeader())
 		{
 			player.sendPacket(Msg.FEATURE_AVAILABLE_TO_ALLIANCE_LEADERS_ONLY);
 			return;
 		}
+		
 		if (player.getAlliance().getMembersCount() > 1)
 		{
 			player.sendPacket(Msg.YOU_HAVE_FAILED_TO_DISSOLVE_THE_ALLIANCE);
 			return;
 		}
+		
 		ClanTable.getInstance().dissolveAlly(player);
 	}
 }

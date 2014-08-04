@@ -37,10 +37,12 @@ public class BoatAI extends CharacterAI
 	protected void onEvtArrived()
 	{
 		Boat actor = (Boat) getActor();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		actor.onEvtArrived();
 	}
 	

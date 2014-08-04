@@ -57,12 +57,10 @@ public class _468_BeLosIinTheMysteriousScent extends Quest implements ScriptFile
 	{
 		super(2);
 		addTalkId(SELINA);
-		
 		addKillNpcWithLog(1, GARDEN_COMMANDER_KILL, 10, GARDEN_COMMANDER);
 		addKillNpcWithLog(1, MOON_GARDEN_MANAGER_KILL, 10, MOON_GARDEN_MANAGER);
 		addKillNpcWithLog(1, MOON_GARDEN_KILL, 10, MOON_GARDEN);
 		addKillNpcWithLog(1, GARDEN_PROTECTOR_KILL, 10, GARDEN_PROTECTOR);
-		
 		addLevelCheck(90, 99);
 	}
 	
@@ -78,6 +76,7 @@ public class _468_BeLosIinTheMysteriousScent extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "33032-04.htm";
 		}
+		
 		if (event.equalsIgnoreCase("quest_done"))
 		{
 			st.giveItems(CERTIFICATE_OF_LIFE, 2);
@@ -85,6 +84,7 @@ public class _468_BeLosIinTheMysteriousScent extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			htmltext = "33032-07.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -118,6 +118,7 @@ public class _468_BeLosIinTheMysteriousScent extends Quest implements ScriptFile
 				htmltext = "33032-02.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -135,6 +136,7 @@ public class _468_BeLosIinTheMysteriousScent extends Quest implements ScriptFile
 			st.playSound(SOUND_MIDDLE);
 			st.setCond(2);
 		}
+		
 		return null;
 	}
 }

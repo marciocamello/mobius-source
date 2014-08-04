@@ -52,6 +52,7 @@ public class SafeMath
 	private static int addAndCheck(int a, int b, String msg, boolean limit)
 	{
 		int ret;
+		
 		if (a > b)
 		{
 			ret = addAndCheck(b, a, msg, limit);
@@ -90,6 +91,7 @@ public class SafeMath
 		{
 			throw new ArithmeticException(msg);
 		}
+		
 		return ret;
 	}
 	
@@ -127,6 +129,7 @@ public class SafeMath
 	private static long addAndCheck(long a, long b, String msg, boolean limit)
 	{
 		long ret;
+		
 		if (a > b)
 		{
 			ret = addAndCheck(b, a, msg, limit);
@@ -165,6 +168,7 @@ public class SafeMath
 		{
 			throw new ArithmeticException(msg);
 		}
+		
 		return ret;
 	}
 	
@@ -202,6 +206,7 @@ public class SafeMath
 	private static int mulAndCheck(int a, int b, String msg, boolean limit)
 	{
 		int ret;
+		
 		if (a > b)
 		{
 			ret = mulAndCheck(b, a, msg, limit);
@@ -262,6 +267,7 @@ public class SafeMath
 		{
 			ret = 0;
 		}
+		
 		return ret;
 	}
 	
@@ -299,6 +305,7 @@ public class SafeMath
 	private static long mulAndCheck(long a, long b, String msg, boolean limit)
 	{
 		long ret;
+		
 		if (a > b)
 		{
 			ret = mulAndCheck(b, a, msg, limit);
@@ -359,6 +366,7 @@ public class SafeMath
 		{
 			ret = 0;
 		}
+		
 		return ret;
 	}
 }

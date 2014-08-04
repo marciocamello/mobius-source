@@ -158,6 +158,7 @@ public class ThreadPoolManager
 	public void shutdown() throws InterruptedException
 	{
 		_shutdown = true;
+		
 		try
 		{
 			_scheduledExecutor.shutdown();

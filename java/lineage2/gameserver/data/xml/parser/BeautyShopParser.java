@@ -69,7 +69,6 @@ public final class BeautyShopParser extends AbstractFileParser<BeautyShopHolder>
 		{
 			Element element = (Element) iterator.next();
 			int setId = Integer.parseInt(element.attributeValue("id"));
-			
 			TIntObjectHashMap<BeautyShopHairStyle> hairStyles = new TIntObjectHashMap<>();
 			TIntObjectHashMap<BeautyShopFace> faces = new TIntObjectHashMap<>();
 			
@@ -95,6 +94,7 @@ public final class BeautyShopParser extends AbstractFileParser<BeautyShopHolder>
 				{
 					colors.put(101, new BeautyShopHairColor(101, 0L, 0L));
 				}
+				
 				hairStyles.put(id, new BeautyShopHairStyle(id, adena, coins, resetPrice, colors));
 			}
 			

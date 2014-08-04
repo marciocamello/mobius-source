@@ -49,6 +49,7 @@ public class _10310_CreationOfTwistedSpiral extends Quest implements ScriptFile
 		{
 			return "noquest";
 		}
+		
 		if (event.equalsIgnoreCase("33032-06.htm"))
 		{
 			st.setCond(1);
@@ -67,6 +68,7 @@ public class _10310_CreationOfTwistedSpiral extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return event;
 	}
 	
@@ -74,13 +76,16 @@ public class _10310_CreationOfTwistedSpiral extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
+		
 		if (st == null)
 		{
 			return htmltext;
 		}
+		
 		int npcId = npc.getNpcId();
 		Player player = st.getPlayer();
 		QuestState previous = player.getQuestState(_10302_UnsettlingShadowAndRumors.class);
+		
 		if (npcId == NPC_SELINA)
 		{
 			if ((previous == null) || (!previous.isCompleted()) || (player.getLevel() < 90))
@@ -88,14 +93,17 @@ public class _10310_CreationOfTwistedSpiral extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 				return "33032-03.htm";
 			}
+			
 			switch (st.getState())
 			{
 				case COMPLETED:
 					htmltext = "33032-02.htm";
 					break;
+				
 				case CREATED:
 					htmltext = "33032-01.htm";
 					break;
+				
 				case STARTED:
 					htmltext = "33032-07.htm";
 			}
@@ -107,6 +115,7 @@ public class _10310_CreationOfTwistedSpiral extends Quest implements ScriptFile
 				case COMPLETED:
 					htmltext = "completed";
 					break;
+				
 				case STARTED:
 					if (st.getCond() == 1)
 					{
@@ -122,10 +131,12 @@ public class _10310_CreationOfTwistedSpiral extends Quest implements ScriptFile
 						{
 							break;
 						}
+						
 						htmltext = "33031-04.htm";
 					}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -136,6 +147,7 @@ public class _10310_CreationOfTwistedSpiral extends Quest implements ScriptFile
 		{
 			return null;
 		}
+		
 		if (updateKill(npc, st))
 		{
 			st.setCond(3);
@@ -146,6 +158,7 @@ public class _10310_CreationOfTwistedSpiral extends Quest implements ScriptFile
 			st.unset("Gardener");
 			st.unset("Destroyer");
 		}
+		
 		return null;
 	}
 	

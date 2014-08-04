@@ -44,20 +44,24 @@ public class AdminGm implements IAdminCommandHandler
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
 	{
 		Commands command = (Commands) comm;
+		
 		if (Boolean.TRUE)
 		{
 			return false;
 		}
+		
 		if (!activeChar.getPlayerAccess().CanEditChar)
 		{
 			return false;
 		}
+		
 		switch (command)
 		{
 			case admin_gm:
 				handleGm(activeChar);
 				break;
 		}
+		
 		return true;
 	}
 	

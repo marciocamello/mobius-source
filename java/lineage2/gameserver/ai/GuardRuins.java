@@ -40,11 +40,14 @@ public class GuardRuins extends Fighter
 	protected boolean thinkActive()
 	{
 		NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return false;
 		}
+		
 		List<NpcInstance> around = actor.getAroundNpc(500, 300);
+		
 		if ((around != null) && !around.isEmpty())
 		{
 			for (NpcInstance npc : around)
@@ -55,6 +58,7 @@ public class GuardRuins extends Fighter
 				}
 			}
 		}
+		
 		return true;
 	}
 	
@@ -70,6 +74,7 @@ public class GuardRuins extends Fighter
 		{
 			return;
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 }

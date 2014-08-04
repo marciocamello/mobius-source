@@ -57,6 +57,7 @@ public class _366_SilverHairedShaman extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("30111-02.htm"))
 		{
 			st.setCond(1);
@@ -69,6 +70,7 @@ public class _366_SilverHairedShaman extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -79,6 +81,7 @@ public class _366_SilverHairedShaman extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int id = st.getState();
 		int cond = st.getCond();
+		
 		if (id == CREATED)
 		{
 			st.setCond(0);
@@ -87,6 +90,7 @@ public class _366_SilverHairedShaman extends Quest implements ScriptFile
 		{
 			cond = st.getCond();
 		}
+		
 		if (npcId == 30111)
 		{
 			if (cond == 0)
@@ -112,6 +116,7 @@ public class _366_SilverHairedShaman extends Quest implements ScriptFile
 				htmltext = "30111-have.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -119,11 +124,13 @@ public class _366_SilverHairedShaman extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if ((cond == 1) && Rnd.chance(66))
 		{
 			st.giveItems(SAIRONS_SILVER_HAIR, 1);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		return null;
 	}
 }

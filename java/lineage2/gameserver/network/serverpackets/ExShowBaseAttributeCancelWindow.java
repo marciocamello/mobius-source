@@ -35,6 +35,7 @@ public class ExShowBaseAttributeCancelWindow extends L2GameServerPacket
 			{
 				continue;
 			}
+			
 			_items.add(item);
 		}
 	}
@@ -44,6 +45,7 @@ public class ExShowBaseAttributeCancelWindow extends L2GameServerPacket
 	{
 		writeEx(0x75);
 		writeD(_items.size());
+		
 		for (ItemInstance item : _items)
 		{
 			writeD(item.getObjectId());
@@ -57,20 +59,27 @@ public class ExShowBaseAttributeCancelWindow extends L2GameServerPacket
 		{
 			case S:
 				return item.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON ? 50000 : 40000;
+				
 			case S80:
 				return item.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON ? 100000 : 80000;
+				
 				// S84 По идеи теперь весь как s80... Инфа не точна...
 			case S84:
 				return item.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON ? 200000 : 160000;
+				
 			case R:
 				return item.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON ? 400000 : 320000;
+				
 			case R95:
 				return item.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON ? 800000 : 640000;
+				
 			case R99:
 				return item.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON ? 3200000 : 2560000;
+				
 			default:
 				break;
 		}
+		
 		return 0;
 	}
 }

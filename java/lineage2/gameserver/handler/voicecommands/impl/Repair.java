@@ -78,7 +78,9 @@ public class Repair extends Functions implements IVoicedCommandHandler
 				sendMessage(new CustomMessage("voicedcommandhandlers.Repair.YouCantRepairYourself", activeChar), activeChar);
 				return false;
 			}
+			
 			int objId = 0;
+			
 			for (Map.Entry<Integer, String> e : activeChar.getAccountChars().entrySet())
 			{
 				if (e.getValue().equalsIgnoreCase(target))
@@ -87,6 +89,7 @@ public class Repair extends Functions implements IVoicedCommandHandler
 					break;
 				}
 			}
+			
 			if (objId == 0)
 			{
 				sendMessage(new CustomMessage("voicedcommandhandlers.Repair.YouCanRepairOnlyOnSameAccount", activeChar), activeChar);
@@ -97,10 +100,12 @@ public class Repair extends Functions implements IVoicedCommandHandler
 				sendMessage(new CustomMessage("voicedcommandhandlers.Repair.CharIsOnline", activeChar), activeChar);
 				return false;
 			}
+			
 			Connection con = null;
 			PreparedStatement statement = null;
 			PreparedStatement statement2 = null;
 			ResultSet rs = null;
+			
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
@@ -112,6 +117,7 @@ public class Repair extends Functions implements IVoicedCommandHandler
 				rs.next();
 				karma = rs.getInt("karma");
 				DbUtils.close(statement, rs);
+				
 				if (karma > 0)
 				{
 					statement = con.prepareStatement("UPDATE characters SET x=17144, y=170156, z=-3502 WHERE obj_Id=?");
@@ -126,6 +132,7 @@ public class Repair extends Functions implements IVoicedCommandHandler
 					statement2.execute();
 					DbUtils.close(statement2);
 					Collection<ItemInstance> items = ItemsDAO.getInstance().getItemsByOwnerIdAndLoc(objId, ItemLocation.PAPERDOLL);
+					
 					for (ItemInstance item : items)
 					{
 						item.setEquipped(false);
@@ -135,6 +142,7 @@ public class Repair extends Functions implements IVoicedCommandHandler
 						item.update();
 					}
 				}
+				
 				statement = con.prepareStatement("DELETE FROM character_variables WHERE obj_id=? AND type='user-var' AND name='reflection'");
 				statement.setInt(1, objId);
 				statement.execute();
@@ -152,6 +160,7 @@ public class Repair extends Functions implements IVoicedCommandHandler
 				DbUtils.closeQuietly(con, statement, rs);
 			}
 		}
+		
 		activeChar.sendMessage(".repair <name>");
 		return false;
 	}

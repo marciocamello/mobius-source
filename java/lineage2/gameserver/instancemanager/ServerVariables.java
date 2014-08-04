@@ -49,6 +49,7 @@ public class ServerVariables
 			server_vars = new StatsSet();
 			LoadFromDB();
 		}
+		
 		return server_vars;
 	}
 	
@@ -60,11 +61,13 @@ public class ServerVariables
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rs = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM server_variables");
 			rs = statement.executeQuery();
+			
 			while (rs.next())
 			{
 				server_vars.set(rs.getString("name"), rs.getString("value"));
@@ -88,10 +91,12 @@ public class ServerVariables
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			String value = getVars().getString(name, "");
+			
 			if (value.isEmpty())
 			{
 				statement = con.prepareStatement("DELETE FROM server_variables WHERE name = ?");

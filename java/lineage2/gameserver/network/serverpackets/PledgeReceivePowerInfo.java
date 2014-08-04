@@ -26,6 +26,7 @@ public class PledgeReceivePowerInfo extends L2GameServerPacket
 	{
 		PowerGrade = member.getPowerGrade();
 		member_name = member.getName();
+		
 		if (member.isClanLeader())
 		{
 			privs = Clan.CP_ALL;
@@ -33,6 +34,7 @@ public class PledgeReceivePowerInfo extends L2GameServerPacket
 		else
 		{
 			RankPrivs temp = member.getClan().getRankPrivs(member.getPowerGrade());
+			
 			if (temp != null)
 			{
 				privs = temp.getPrivs();

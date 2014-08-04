@@ -69,6 +69,7 @@ public class MinionList
 	public boolean addMinion(MinionData m)
 	{
 		lock.lock();
+		
 		try
 		{
 			return _minionData.add(m);
@@ -87,6 +88,7 @@ public class MinionList
 	public boolean addMinion(MinionInstance m)
 	{
 		lock.lock();
+		
 		try
 		{
 			return _minions.add(m);
@@ -104,6 +106,7 @@ public class MinionList
 	public boolean hasAliveMinions()
 	{
 		lock.lock();
+		
 		try
 		{
 			for (MinionInstance m : _minions)
@@ -138,6 +141,7 @@ public class MinionList
 	{
 		List<MinionInstance> result = new ArrayList<>(_minions.size());
 		lock.lock();
+		
 		try
 		{
 			for (MinionInstance m : _minions)
@@ -161,20 +165,24 @@ public class MinionList
 	public void spawnMinions()
 	{
 		lock.lock();
+		
 		try
 		{
 			int minionCount;
 			int minionId;
+			
 			for (MinionData minion : _minionData)
 			{
 				minionId = minion.getMinionId();
 				minionCount = minion.getAmount();
+				
 				for (MinionInstance m : _minions)
 				{
 					if (m.getNpcId() == minionId)
 					{
 						minionCount--;
 					}
+					
 					if (m.isDead() || !m.isVisible())
 					{
 						m.refreshID();
@@ -182,6 +190,7 @@ public class MinionList
 						_master.spawnMinion(m);
 					}
 				}
+				
 				for (int i = 0; i < minionCount; i++)
 				{
 					MinionInstance m = new MinionInstance(IdFactory.getInstance().getNextId(), NpcHolder.getInstance().getTemplate(minionId));
@@ -203,6 +212,7 @@ public class MinionList
 	public void unspawnMinions()
 	{
 		lock.lock();
+		
 		try
 		{
 			for (MinionInstance m : _minions)
@@ -222,12 +232,14 @@ public class MinionList
 	public void deleteMinions()
 	{
 		lock.lock();
+		
 		try
 		{
 			for (MinionInstance m : _minions)
 			{
 				m.deleteMe();
 			}
+			
 			_minions.clear();
 		}
 		finally

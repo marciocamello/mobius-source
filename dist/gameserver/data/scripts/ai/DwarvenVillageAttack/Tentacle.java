@@ -59,11 +59,13 @@ public class Tentacle extends Fighter
 	protected boolean canAttackCharacter(Creature target)
 	{
 		NpcInstance actor = getActor();
+		
 		if (getIntention() == CtrlIntention.AI_INTENTION_ATTACK)
 		{
 			AggroList.AggroInfo ai = actor.getAggroList().get(target);
 			return (ai != null) && (ai.hate > 0);
 		}
+		
 		return target.isPlayable() || ArrayUtils.contains(ATTACK_IDS, target.getNpcId());
 	}
 	
@@ -87,6 +89,7 @@ public class Tentacle extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		super.onEvtDead(killer);
+		
 		if (getActor().getParameter("notifyDie", false))
 		{
 			broadCastScriptEvent("TENTACLE_DIE", 600);

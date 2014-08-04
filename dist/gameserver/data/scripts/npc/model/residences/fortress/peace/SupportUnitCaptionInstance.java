@@ -26,7 +26,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class SupportUnitCaptionInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -64,16 +64,20 @@ public class SupportUnitCaptionInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		int condition = validateCondition(player);
+		
 		if ((condition <= COND_ALL_FALSE) || (condition == COND_BUSY_BECAUSE_OF_SIEGE))
 		{
 			return;
 		}
+		
 		if ((player.getClanPrivileges() & Clan.CP_CS_USE_FUNCTIONS) != Clan.CP_CS_USE_FUNCTIONS)
 		{
 			player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			return;
 		}
+		
 		if (condition == COND_OWNER)
 		{
 			super.onBypassFeedback(player, command);
@@ -92,6 +96,7 @@ public class SupportUnitCaptionInstance extends NpcInstance
 		player.sendActionFailed();
 		String filename = "fortress/SupportUnitCaptain-no.htm";
 		int condition = validateCondition(player);
+		
 		if (condition > COND_ALL_FALSE)
 		{
 			if (condition == COND_BUSY_BECAUSE_OF_SIEGE)
@@ -110,6 +115,7 @@ public class SupportUnitCaptionInstance extends NpcInstance
 				}
 			}
 		}
+		
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		html.setFile(filename);
 		player.sendPacket(html);
@@ -126,6 +132,7 @@ public class SupportUnitCaptionInstance extends NpcInstance
 		{
 			return COND_OWNER;
 		}
+		
 		if ((getFortress() != null) && (getFortress().getId() > 0))
 		{
 			if (player.getClan() != null)
@@ -140,6 +147,7 @@ public class SupportUnitCaptionInstance extends NpcInstance
 				}
 			}
 		}
+		
 		return COND_ALL_FALSE;
 	}
 }

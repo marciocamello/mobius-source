@@ -49,20 +49,26 @@ public class ConditionPlayerCubic extends Condition
 		{
 			return false;
 		}
+		
 		Player targetPlayer = (Player) env.target;
+		
 		if (targetPlayer.getCubic(_id) != null)
 		{
 			return true;
 		}
+		
 		int size = (int) targetPlayer.calcStat(Stats.CUBICS_LIMIT, 1);
+		
 		if (targetPlayer.getCubics().size() >= size)
 		{
 			if (env.character == targetPlayer)
 			{
 				targetPlayer.sendPacket(Msg.CUBIC_SUMMONING_FAILED);
 			}
+			
 			return false;
 		}
+		
 		return true;
 	}
 }

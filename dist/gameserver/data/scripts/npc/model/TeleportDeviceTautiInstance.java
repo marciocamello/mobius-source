@@ -55,6 +55,7 @@ public class TeleportDeviceTautiInstance extends NpcInstance
 				player.getInventory().destroyItemByItemId(KEY_OF_DARKNESS, 1);
 				setNpcState(1);
 				accepted = true;
+				
 				// for(Player party : player.getParty().getPartyMembers())
 				// {
 				// party.teleToLocation(TAUTI_ROOM_HALL, player.getReflection());
@@ -77,6 +78,7 @@ public class TeleportDeviceTautiInstance extends NpcInstance
 			{
 				party.teleToLocation(TAUTI_ROOM_HALL, player.getReflection());
 			}
+			
 			// }
 			// else
 			// player.sendPacket(new SystemMessage(SystemMessage.ONLY_A_PARTY_LEADER_CAN_TRY_TO_ENTER));
@@ -95,6 +97,7 @@ public class TeleportDeviceTautiInstance extends NpcInstance
 			player.sendPacket(new NpcHtmlMessage(player, this, "default/33678.htm", val));
 			return;
 		}
+		
 		player.sendPacket(new NpcHtmlMessage(player, this, "default/33678-1.htm", val));
 		return;
 	}

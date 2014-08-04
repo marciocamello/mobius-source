@@ -75,10 +75,12 @@ public class _633_InTheForgottenVillage extends Quest implements ScriptFile
 		UNDEADS.put(21601, 41.1);
 		addStartNpc(MINA);
 		addQuestItem(RIB_BONE);
+		
 		for (int i : UNDEADS.keySet())
 		{
 			addKillId(i);
 		}
+		
 		for (int i : DAMOBS.keySet())
 		{
 			addKillId(i);
@@ -89,6 +91,7 @@ public class _633_InTheForgottenVillage extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_accept"))
 		{
 			st.setCond(1);
@@ -96,6 +99,7 @@ public class _633_InTheForgottenVillage extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "day_mina_q0633_0104.htm";
 		}
+		
 		if (event.equalsIgnoreCase("633_4"))
 		{
 			st.takeItems(RIB_BONE, -1);
@@ -126,6 +130,7 @@ public class _633_InTheForgottenVillage extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -136,6 +141,7 @@ public class _633_InTheForgottenVillage extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		int id = st.getState();
+		
 		if (npcId == MINA)
 		{
 			if (id == CREATED)
@@ -159,6 +165,7 @@ public class _633_InTheForgottenVillage extends Quest implements ScriptFile
 				htmltext = "day_mina_q0633_0105.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -166,6 +173,7 @@ public class _633_InTheForgottenVillage extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
+		
 		if (UNDEADS.containsKey(npcId))
 		{
 			st.rollAndGive(Z_LIVER, 1, UNDEADS.get(npcId));
@@ -173,9 +181,11 @@ public class _633_InTheForgottenVillage extends Quest implements ScriptFile
 		else if (DAMOBS.containsKey(npcId))
 		{
 			long count = st.getQuestItemsCount(RIB_BONE);
+			
 			if ((count < 200) && Rnd.chance(DAMOBS.get(npcId)))
 			{
 				st.giveItems(RIB_BONE, 1);
+				
 				if (count >= 199)
 				{
 					st.setCond(2);
@@ -187,6 +197,7 @@ public class _633_InTheForgottenVillage extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 }

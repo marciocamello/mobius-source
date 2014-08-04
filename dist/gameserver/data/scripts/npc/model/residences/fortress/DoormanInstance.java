@@ -27,7 +27,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public class DoormanInstance extends npc.model.residences.DoormanInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -44,6 +44,7 @@ public class DoormanInstance extends npc.model.residences.DoormanInstance
 	{
 		super(objectId, template);
 		String loc = template.getAIParams().getString("tele_loc", null);
+		
 		if (loc != null)
 		{
 			_loc = Location.parseLoc(loc);
@@ -62,7 +63,9 @@ public class DoormanInstance extends npc.model.residences.DoormanInstance
 		{
 			return;
 		}
+		
 		int cond = getCond(player);
+		
 		switch (cond)
 		{
 			case COND_OWNER:
@@ -80,13 +83,17 @@ public class DoormanInstance extends npc.model.residences.DoormanInstance
 						ReflectionUtils.getDoor(i).closeMe(player, true);
 					}
 				}
+				
 				break;
+			
 			case COND_SIEGE:
 				if (command.equalsIgnoreCase("tele"))
 				{
 					player.teleToLocation(_loc);
 				}
+				
 				break;
+			
 			case COND_FAIL:
 				player.sendPacket(new NpcHtmlMessage(player, this, _failDialog, 0));
 				break;

@@ -40,7 +40,7 @@ public class Nursery extends Reflection
 	private class DeathListener implements OnDeathListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public DeathListener()
 		{
@@ -54,8 +54,7 @@ public class Nursery extends Reflection
 			{
 				if ((self.getNpcId() == Creature1) || (self.getNpcId() == Creature2) || (self.getNpcId() == Creature3) || (self.getNpcId() == Creature4) || (self.getNpcId() == Creature5))
 				{
-					@SuppressWarnings("unused")
-					int count = reward + Rnd.get(15);
+					Rnd.get(15);
 				}
 			}
 		}

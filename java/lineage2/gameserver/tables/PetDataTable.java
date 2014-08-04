@@ -212,10 +212,12 @@ public class PetDataTable
 	{
 		PetData result = null;
 		result = _pets.get((petNpcId * 100) + level);
+		
 		if (result != null)
 		{
 			return result;
 		}
+		
 		_log.error("Missing PetData for NpcId:" + petNpcId + " at level:" + level);
 		return null;
 	}
@@ -229,11 +231,13 @@ public class PetDataTable
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT id, level, exp, hp, mp, patk, pdef, matk, mdef, acc, evasion, crit, speed, atk_speed, cast_speed, max_meal, battle_meal, normal_meal, loadMax, hpregen, mpregen FROM pet_data");
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				petData = new PetData();
@@ -288,27 +292,34 @@ public class PetDataTable
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT objId FROM pets WHERE item_obj_id=?");
 			statement.setInt(1, item.getObjectId());
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				petObjectId = rset.getInt("objId");
 			}
+			
 			DbUtils.close(statement, rset);
 			Summon summon = owner.getPlayer().getSummonList().getPet();
+			
 			if ((summon != null) && (summon.getObjectId() == petObjectId))
 			{
 				owner.getPlayer().getSummonList().unsummonPet(false);
 			}
+			
 			Player player = owner.getPlayer();
+			
 			if ((player != null) && player.isMounted() && (player.getMountObjId() == petObjectId))
 			{
 				player.setMount(0, 0, 0);
 			}
+			
 			statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?");
 			statement.setInt(1, item.getObjectId());
 			statement.execute();
@@ -334,26 +345,33 @@ public class PetDataTable
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT objId FROM pets WHERE item_obj_id=?");
 			statement.setInt(1, oldItem.getObjectId());
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				petObjectId = rset.getInt("objId");
 			}
+			
 			if (owner == null)
 			{
 				return;
 			}
+			
 			Summon summon = owner.getPlayer().getSummonList().getPet();
+			
 			if ((summon != null) && (summon.getObjectId() == petObjectId))
 			{
 				owner.getPlayer().getSummonList().unsummonPet(false);
 			}
+			
 			Player player = owner.getPlayer();
+			
 			if ((player != null) && player.isMounted() && (player.getMountObjId() == petObjectId))
 			{
 				player.setMount(0, 0, 0);
@@ -660,6 +678,7 @@ public class PetDataTable
 				return pet.getControlItemId();
 			}
 		}
+		
 		return 1;
 	}
 	
@@ -677,6 +696,7 @@ public class PetDataTable
 				return pet.getFoodId();
 			}
 		}
+		
 		return 1;
 	}
 	
@@ -694,6 +714,7 @@ public class PetDataTable
 				return pet.isMountable();
 			}
 		}
+		
 		return false;
 	}
 	
@@ -711,6 +732,7 @@ public class PetDataTable
 				return pet.getMinLevel();
 			}
 		}
+		
 		return 1;
 	}
 	
@@ -728,6 +750,7 @@ public class PetDataTable
 				return pet.getAddFed();
 			}
 		}
+		
 		return 1;
 	}
 	
@@ -745,6 +768,7 @@ public class PetDataTable
 				return pet.getExpPenalty();
 			}
 		}
+		
 		return 0f;
 	}
 	
@@ -762,6 +786,7 @@ public class PetDataTable
 				return pet.getSoulshots();
 			}
 		}
+		
 		return 2;
 	}
 	
@@ -779,6 +804,7 @@ public class PetDataTable
 				return pet.getSpiritshots();
 			}
 		}
+		
 		return 2;
 	}
 	
@@ -796,6 +822,7 @@ public class PetDataTable
 				return pet.getNpcId();
 			}
 		}
+		
 		return 0;
 	}
 	
@@ -807,10 +834,12 @@ public class PetDataTable
 	{
 		int[] items = new int[L2Pet.values().length];
 		int i = 0;
+		
 		for (L2Pet pet : L2Pet.values())
 		{
 			items[i++] = pet.getControlItemId();
 		}
+		
 		return items;
 	}
 	
@@ -828,6 +857,7 @@ public class PetDataTable
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -844,6 +874,7 @@ public class PetDataTable
 			case BABY_KOOKABURRA_ID:
 			case BABY_COUGAR_ID:
 				return true;
+				
 			default:
 				return false;
 		}
@@ -863,6 +894,7 @@ public class PetDataTable
 			case IMPROVED_BABY_COUGAR_ID:
 			case FAIRY_PRINCESS_ID:
 				return true;
+				
 			default:
 				return false;
 		}
@@ -891,6 +923,7 @@ public class PetDataTable
 			case HATCHLING_STAR_ID:
 			case HATCHLING_TWILIGHT_ID:
 				return true;
+				
 			default:
 				return false;
 		}
@@ -913,6 +946,7 @@ public class PetDataTable
 			case RED_STRIDER_TWILIGHT_ID:
 			case GUARDIANS_STRIDER_ID:
 				return true;
+				
 			default:
 				return false;
 		}
@@ -932,6 +966,7 @@ public class PetDataTable
 			case FENRIR_WOLF_ID:
 			case WFENRIR_WOLF_ID:
 				return true;
+				
 			default:
 				return false;
 		}
@@ -955,6 +990,7 @@ public class PetDataTable
 			case TOY_KNIGHT_ID:
 			case TURTLE_ASCETIC_ID:
 				return true;
+				
 			default:
 				return false;
 		}

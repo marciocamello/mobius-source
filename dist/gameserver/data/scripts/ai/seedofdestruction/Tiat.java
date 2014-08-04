@@ -130,11 +130,14 @@ public class Tiat extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return;
 		}
+		
 		_lastAttackTime = System.currentTimeMillis();
+		
 		if (_notUsedTransform && (actor.getCurrentHpPercents() < 50))
 		{
 			if (_immobilized)
@@ -142,6 +145,7 @@ public class Tiat extends Fighter
 				_immobilized = false;
 				actor.stopImmobilized();
 			}
+			
 			_notUsedTransform = false;
 			clearTasks();
 			spawnTraps();
@@ -159,9 +163,11 @@ public class Tiat extends Fighter
 				}
 			}, TIAT_TRANSFORMATION_SKILL.getHitTime());
 		}
+		
 		if ((System.currentTimeMillis() - lastFactionNotifyTime) > _minFactionNotifyInterval)
 		{
 			lastFactionNotifyTime = System.currentTimeMillis();
+			
 			for (NpcInstance npc : World.getAroundNpc(actor))
 			{
 				if (ArrayUtils.contains(TIAT_MINION_IDS, npc.getNpcId()))
@@ -169,11 +175,13 @@ public class Tiat extends Fighter
 					npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 30000);
 				}
 			}
+			
 			if (Rnd.chance(15) && !_notUsedTransform)
 			{
 				actor.broadcastPacket(new ExShowScreenMessage(TIAT_TEXT[Rnd.get(TIAT_TEXT.length)], 4000, ScreenMessageAlign.MIDDLE_CENTER, false));
 			}
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	
@@ -185,10 +193,12 @@ public class Tiat extends Fighter
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (!_failed && (_lastAttackTime != 0) && ((_lastAttackTime + COLLAPSE_BY_INACTIVITY_INTERVAL) < System.currentTimeMillis()))
 		{
 			final Reflection r = actor.getReflection();
@@ -202,11 +212,13 @@ public class Tiat extends Fighter
 					{
 						pl.showQuestMovie(ExStartScenePlayer.SCENE_TIAT_FAIL);
 					}
+					
 					r.clearReflection(5, true);
 				}
 			}, 1000);
 			return true;
 		}
+		
 		return super.thinkActive();
 	}
 	
@@ -224,10 +236,12 @@ public class Tiat extends Fighter
 		SoDManager.addTiatKill();
 		final Reflection r = actor.getReflection();
 		r.setReenterTime(System.currentTimeMillis());
+		
 		for (NpcInstance n : r.getNpcs())
 		{
 			n.deleteMe();
 		}
+		
 		ThreadPoolManager.getInstance().schedule(new RunnableImpl()
 		{
 			@Override
@@ -251,6 +265,7 @@ public class Tiat extends Fighter
 	{
 		final NpcInstance actor = getActor();
 		actor.broadcastPacket(new ExShowScreenMessage("Come out, warriors. Protect Seed of Destruction.", 5000, ScreenMessageAlign.MIDDLE_CENTER, false));
+		
 		for (int i = 0; i < TRAPS_COUNT; i++)
 		{
 			actor.getReflection().addSpawnWithRespawn(TRAP_NPC_ID, TRAP_LOCS[i], 0, 180);

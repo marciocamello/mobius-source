@@ -48,10 +48,10 @@ public class ExMentorList extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeEx(0x121);
-		
 		writeD((_mentor == 0) && activeChar.isMentor() ? 0x01 : 0x02);
 		writeD(0);
 		writeD(_list.size());
+		
 		for (MenteeInfo entry : _list)
 		{
 			writeD(entry.getObjectId());

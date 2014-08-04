@@ -54,8 +54,8 @@ public class ShortBuffStatusUpdate extends L2GameServerPacket
 		writeC(0xfa); // Packet type
 		writeD(_skillId); // skill id??? CD 04 00 00 = skill 1229, hex 4CD
 		writeD(_skillLevel); // Skill Level??? 07 00 00 00 = casted by heal 7
-								// lvl.
+		// lvl.
 		writeD(_skillDuration); // DURATION???? 0F 00 00 00 = 15 sec =
-								// overlord's heal
+		// overlord's heal
 	}
 }

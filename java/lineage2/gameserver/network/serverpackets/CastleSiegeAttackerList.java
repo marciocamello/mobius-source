@@ -64,28 +64,24 @@ public class CastleSiegeAttackerList extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xCA);
-		
 		writeD(_id);
-		
 		writeD(0x00);
 		writeD(_registrationValid);
 		writeD(0x00);
-		
 		writeD(_clans.size());
 		writeD(_clans.size());
 		
 		for (SiegeClanObject siegeClan : _clans)
 		{
 			Clan clan = siegeClan.getClan();
-			
 			writeD(clan.getClanId());
 			writeS(clan.getName());
 			writeS(clan.getLeaderName());
 			writeD(clan.getCrestId());
 			writeD((int) (siegeClan.getDate() / 1000L));
-			
 			Alliance alliance = clan.getAlliance();
 			writeD(clan.getAllyId());
+			
 			if (alliance != null)
 			{
 				writeS(alliance.getAllyName());

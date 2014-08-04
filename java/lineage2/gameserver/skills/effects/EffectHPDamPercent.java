@@ -38,10 +38,12 @@ public class EffectHPDamPercent extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		if (_effected.isDead())
 		{
 			return;
 		}
+		
 		double newHp = ((100. - calc()) * _effected.getMaxHp()) / 100.;
 		newHp = Math.min(_effected.getCurrentHp(), Math.max(0, newHp));
 		_effected.setCurrentHp(newHp, false);

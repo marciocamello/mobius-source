@@ -32,6 +32,7 @@ public class ExAirShipInfo extends L2GameServerPacket
 		_loc = ship.getLoc();
 		_speed1 = ship.getRunSpeed();
 		_speed2 = ship.getRotationSpeed();
+		
 		if (ship.isClanAirShip())
 		{
 			_fuel = ((ClanAirShip) ship).getCurrentFuel();
@@ -46,7 +47,6 @@ public class ExAirShipInfo extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeEx(0x61);
-		
 		writeD(_objId);
 		writeD(_loc.x);
 		writeD(_loc.y);

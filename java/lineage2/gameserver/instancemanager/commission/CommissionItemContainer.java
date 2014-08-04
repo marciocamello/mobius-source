@@ -42,6 +42,7 @@ public class CommissionItemContainer extends ItemContainer
 	{
 		item.setLocation(getItemLocation());
 		item.setLocData(0);
+		
 		if (item.getJdbcState().isSavable())
 		{
 			item.save();
@@ -91,9 +92,11 @@ public class CommissionItemContainer extends ItemContainer
 	public void restore()
 	{
 		writeLock();
+		
 		try
 		{
 			Collection<ItemInstance> items = _itemsDAO.getItemsByLoc(getItemLocation());
+			
 			for (ItemInstance item : items)
 			{
 				_items.add(item);

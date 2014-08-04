@@ -107,13 +107,11 @@ public class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 	@Override
 	public void onReload()
 	{
-		
 	}
 	
 	@Override
 	public void onShutdown()
 	{
-		
 	}
 	
 	@Override
@@ -142,6 +140,7 @@ public class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 		for (int objectId : getParticipants())
 		{
 			Player player = GameObjectsStorage.getPlayer(objectId);
+			
 			if (player != null)
 			{
 				removeParticipant(player);
@@ -152,7 +151,6 @@ public class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 	@Override
 	protected void onFinish()
 	{
-		
 	}
 	
 	@Override
@@ -166,15 +164,18 @@ public class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 				{
 					return "dc0008_01_start001.htm";
 				}
+				
 				return "dc0008_01_context001.htm";
 			}
 			else if (isSuccessed())
 			{
 				boolean rewardReceived = rewardReceived(player);
+				
 				if (rewardReceived)
 				{
 					return null;
 				}
+				
 				return "dc0008_01_reward001.htm";
 			}
 			else
@@ -182,6 +183,7 @@ public class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 				return "dc0008_01_failed001.htm";
 			}
 		}
+		
 		return null;
 	}
 	
@@ -192,19 +194,20 @@ public class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
 	@Override
 	protected void onTaskCompleted(int taskId)
 	{
-		
 	}
 	
 	@Override
 	protected String onDialogEvent(String event, Player player)
 	{
 		String response = null;
+		
 		if (event.equals("Reward"))
 		{
 			tryReward(player);
@@ -214,6 +217,7 @@ public class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 		{
 			response = event;
 		}
+		
 		return response;
 	}
 	
@@ -238,7 +242,7 @@ public class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 	private final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public ZoneListener()
 		{
@@ -259,6 +263,7 @@ public class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 			}
 			
 			Player player = character.getPlayer();
+			
 			if (isStarted() && !isSuccessed())
 			{
 				if (!getParticipants().contains(player.getObjectId()))
@@ -286,6 +291,7 @@ public class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 			}
 			
 			Player player = character.getPlayer();
+			
 			if (isStarted() && !isSuccessed())
 			{
 				if (getParticipants().contains(player.getObjectId()))
@@ -303,7 +309,7 @@ public class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 	private final class KillListenerImpl implements OnKillListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public KillListenerImpl()
 		{
@@ -330,27 +336,35 @@ public class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 					case DEMONIC_BATHUS:
 						increaseTaskPoint(KILL_LOH_MOB, actor.getPlayer(), 1);
 						break;
+					
 					case DEMONIC_CARCASS:
 						increaseTaskPoint(KILL_LOH_MOB, actor.getPlayer(), 1);
 						break;
+					
 					case DEMONIC_LOTUS:
 						increaseTaskPoint(KILL_LOH_MOB, actor.getPlayer(), 1);
 						break;
+					
 					case DEMONIC_RAKZAN:
 						increaseTaskPoint(KILL_LOH_MOB, actor.getPlayer(), 1);
 						break;
+					
 					case DEMONIC_WEISS_KHAN:
 						increaseTaskPoint(KILL_LOH_MOB, actor.getPlayer(), 1);
 						break;
+					
 					case DEMONIC_WEISS_ELE:
 						increaseTaskPoint(KILL_LOH_MOB, actor.getPlayer(), 1);
 						break;
+					
 					case DEMONIC_BAMONTI:
 						increaseTaskPoint(KILL_LOH_MOB, actor.getPlayer(), 1);
 						break;
+					
 					case DEMONIC_SEKNUS:
 						increaseTaskPoint(KILL_LOH_MOB, actor.getPlayer(), 1);
 						break;
+					
 					case DEMONIC_NOKTUM:
 						increaseTaskPoint(KILL_LOH_MOB, actor.getPlayer(), 2);
 						break;

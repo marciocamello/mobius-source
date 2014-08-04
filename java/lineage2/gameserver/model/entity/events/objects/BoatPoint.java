@@ -23,7 +23,7 @@ import org.dom4j.Element;
 public class BoatPoint extends Location
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**

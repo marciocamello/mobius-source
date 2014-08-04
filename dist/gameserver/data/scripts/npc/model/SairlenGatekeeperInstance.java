@@ -25,7 +25,7 @@ import bosses.SailrenManager;
 public final class SairlenGatekeeperInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -55,6 +55,7 @@ public final class SairlenGatekeeperInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.startsWith("request_entrance"))
 		{
 			if (player.getLevel() < 75)
@@ -64,6 +65,7 @@ public final class SairlenGatekeeperInstance extends NpcInstance
 			else if (ItemFunctions.getItemCount(player, GAZKH) > 0)
 			{
 				int check = SailrenManager.canIntoSailrenLair(player);
+				
 				if ((check == 1) || (check == 2))
 				{
 					showChatWindow(player, "default/32109-5.htm");

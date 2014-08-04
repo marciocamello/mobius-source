@@ -36,10 +36,12 @@ public class RequestSkillCoolTime extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		player.sendPacket(new SkillCoolTime(player));
 	}
 }

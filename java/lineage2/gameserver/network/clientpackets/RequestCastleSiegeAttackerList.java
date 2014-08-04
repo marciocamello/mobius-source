@@ -44,11 +44,14 @@ public class RequestCastleSiegeAttackerList extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		Residence residence = ResidenceHolder.getInstance().getResidence(_unitId);
+		
 		if (residence != null)
 		{
 			sendPacket(new CastleSiegeAttackerList(residence));

@@ -59,6 +59,7 @@ public class _623_TheFinestFood extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_accept"))
 		{
 			htmltext = "jeremy_q0623_0104.htm";
@@ -77,6 +78,7 @@ public class _623_TheFinestFood extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -86,15 +88,19 @@ public class _623_TheFinestFood extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int id = st.getState();
+		
 		if (id == CREATED)
 		{
 			st.setCond(0);
 		}
+		
 		if (summ(st) >= 300)
 		{
 			st.setCond(2);
 		}
+		
 		int cond = st.getCond();
+		
 		if (npcId == JEREMY)
 		{
 			if (cond == 0)
@@ -118,6 +124,7 @@ public class _623_TheFinestFood extends Quest implements ScriptFile
 				htmltext = "jeremy_q0623_0105.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -126,6 +133,7 @@ public class _623_TheFinestFood extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
+		
 		if (cond == 1)
 		{
 			if (npcId == HOT_SPRINGS_BUFFALO)
@@ -133,12 +141,14 @@ public class _623_TheFinestFood extends Quest implements ScriptFile
 				if (st.getQuestItemsCount(BUFFALO_MEAT) < 100)
 				{
 					st.giveItems(BUFFALO_MEAT, 1);
+					
 					if (st.getQuestItemsCount(BUFFALO_MEAT) == 100)
 					{
 						if (summ(st) >= 300)
 						{
 							st.setCond(2);
 						}
+						
 						st.playSound(SOUND_MIDDLE);
 					}
 					else
@@ -152,12 +162,14 @@ public class _623_TheFinestFood extends Quest implements ScriptFile
 				if (st.getQuestItemsCount(LEAF_OF_FLAVA) < 100)
 				{
 					st.giveItems(LEAF_OF_FLAVA, 1);
+					
 					if (st.getQuestItemsCount(LEAF_OF_FLAVA) == 100)
 					{
 						if (summ(st) >= 300)
 						{
 							st.setCond(2);
 						}
+						
 						st.playSound(SOUND_MIDDLE);
 					}
 					else
@@ -171,12 +183,14 @@ public class _623_TheFinestFood extends Quest implements ScriptFile
 				if (st.getQuestItemsCount(ANTELOPE_HORN) < 100)
 				{
 					st.giveItems(ANTELOPE_HORN, 1);
+					
 					if (st.getQuestItemsCount(ANTELOPE_HORN) == 100)
 					{
 						if (summ(st) >= 300)
 						{
 							st.setCond(2);
 						}
+						
 						st.playSound(SOUND_MIDDLE);
 					}
 					else
@@ -186,6 +200,7 @@ public class _623_TheFinestFood extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return null;
 	}
 	

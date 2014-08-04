@@ -35,19 +35,15 @@ public class ExReplySentPost extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0xAE);
-		
 		writeD(mail.getType().ordinal());
-		
 		// Type = Normal
 		writeD(mail.getMessageId());
-		
 		writeD(0x00);// unknown1
-		
 		writeS(mail.getSenderName()); // от кого
 		writeS(mail.getTopic()); // топик
 		writeS(mail.getBody()); // тело
-		
 		writeD(mail.getAttachments().size()); // количество приложенных вещей
+		
 		for (ItemInstance item : mail.getAttachments())
 		{
 			writeItemInfo(item);

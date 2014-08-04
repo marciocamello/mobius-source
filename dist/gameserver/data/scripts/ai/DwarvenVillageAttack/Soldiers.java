@@ -44,11 +44,13 @@ public class Soldiers extends Fighter
 	protected boolean canAttackCharacter(Creature target)
 	{
 		NpcInstance actor = getActor();
+		
 		if (getIntention() == CtrlIntention.AI_INTENTION_ATTACK)
 		{
 			AggroList.AggroInfo ai = actor.getAggroList().get(target);
 			return (ai != null) && (ai.hate > 0);
 		}
+		
 		return ArrayUtils.contains(ATTACK_IDS, target.getNpcId());
 	}
 	

@@ -23,28 +23,28 @@ public class ClassDataHolder extends AbstractHolder
 {
 	private static final ClassDataHolder _instance = new ClassDataHolder();
 	private final TIntObjectHashMap<ClassData> _classDataList = new TIntObjectHashMap<>();
-
+	
 	public static ClassDataHolder getInstance()
 	{
 		return _instance;
 	}
-
+	
 	public void addClassData(ClassData classData)
 	{
 		_classDataList.put(classData.getClassId(), classData);
 	}
-
+	
 	public ClassData getClassData(int classId)
 	{
 		return _classDataList.get(classId);
 	}
-
+	
 	@Override
 	public int size()
 	{
 		return _classDataList.size();
 	}
-
+	
 	@Override
 	public void clear()
 	{

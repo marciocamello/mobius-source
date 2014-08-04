@@ -86,101 +86,130 @@ public class TreasureBox extends SimpleItemHandler
 			case 33477:
 				use33477(player, ctrl);
 				break;
+			
 			// -------------Chest end
 			// -------------Enchant
 			case 32730:
 				use32730(player, ctrl);
 				break;
+			
 			case 32731:
 				use32731(player, ctrl);
 				break;
+			
 			case 32732:
 				use32732(player, ctrl);
 				break;
+			
 			case 32733:
 				use32733(player, ctrl);
 				break;
+			
 			case 32734:
 				use32734(player, ctrl);
 				break;
+			
 			case 32735:
 				use32735(player, ctrl);
 				break;
+			
 			case 34695:
 				use34695(player, ctrl);
 				break;
+			
 			case 34696:
 				use34696(player, ctrl);
 				break;
+			
 			// -------------Enchant end
 			// -------------Elixir
 			case 32736:
 				use32736(player, ctrl);
 				break;
+			
 			case 32737:
 				use32737(player, ctrl);
 				break;
+			
 			case 32738:
 				use32738(player, ctrl);
 				break;
+			
 			case 32739:
 				use32739(player, ctrl);
 				break;
+			
 			case 32740:
 				use32740(player, ctrl);
 				break;
+			
 			case 32741:
 				use32741(player, ctrl);
 				break;
+			
 			// -------------Elixir end
 			// -------------Hair Accessory
 			case 32728:
 				use32728(player, ctrl);
 				break;
+			
 			case 32729:
 				use32729(player, ctrl);
 				break;
+			
 			// -------------Hair Accessory end
 			// -------------Awakening Chest
 			case 32264:
 				use32264(player, ctrl);
 				break;
+			
 			case 32265:
 				use32265(player, ctrl);
 				break;
+			
 			case 32266:
 				use32266(player, ctrl);
 				break;
+			
 			case 32267:
 				use32267(player, ctrl);
 				break;
+			
 			case 32268:
 				use32268(player, ctrl);
 				break;
+			
 			case 32269:
 				use32269(player, ctrl);
 				break;
+			
 			case 32270:
 				use32270(player, ctrl);
 				break;
+			
 			case 32271:
 				use32271(player, ctrl);
 				break;
+			
 			// -------------Awakening Chest end
 			// -------------Aden Hero's Treasure Box
 			case 33771:
 				use33771(player, ctrl);
 				break;
+			
 			case 33772:
 				use33772(player, ctrl);
 				break;
+			
 			case 33773:
 				use33773(player, ctrl);
 				break;
+			
 			// -------------Aden Hero's Treasure Box end
 			// -------------Other Items
 			case 32241:
 				use32241(player, ctrl);
+				
 				// -------------Other Items end
 			default:
 				return false;
@@ -1117,6 +1146,7 @@ public class TreasureBox extends SimpleItemHandler
 			player.sendPacket(Msg.YOUR_INVENTORY_IS_FULL, new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getItemId()));
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -1128,6 +1158,7 @@ public class TreasureBox extends SimpleItemHandler
 		}
 		
 		double extractChance = 0;
+		
 		for (double c : chances)
 		{
 			extractChance += c;
@@ -1136,6 +1167,7 @@ public class TreasureBox extends SimpleItemHandler
 		if (Rnd.chance(extractChance))
 		{
 			int[] successfulItems = new int[0];
+			
 			while (successfulItems.length == 0)
 			{
 				for (int i = 0; i < items.length; i++)
@@ -1146,7 +1178,9 @@ public class TreasureBox extends SimpleItemHandler
 					}
 				}
 			}
+			
 			int[] item = items[successfulItems[Rnd.get(successfulItems.length)]];
+			
 			if (item.length < 2)
 			{
 				return false;
@@ -1154,6 +1188,7 @@ public class TreasureBox extends SimpleItemHandler
 			
 			Functions.addItem(player, item[0], item[1]);
 		}
+		
 		return true;
 	}
 }

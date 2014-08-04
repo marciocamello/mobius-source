@@ -93,6 +93,7 @@ public class Kama63Minion extends Fighter
 			minion.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _boss.getAggroList().getRandomHated(), Rnd.get(1, 100));
 			_dieTask = ThreadPoolManager.getInstance().schedule(new DieScheduleTimerTask(minion, _boss), MINION_DIE_TIME);
 		}
+		
 		return super.thinkActive();
 	}
 	
@@ -107,12 +108,15 @@ public class Kama63Minion extends Fighter
 		{
 			return null;
 		}
+		
 		_wait_timeout = System.currentTimeMillis() + 15000;
 		final NpcInstance minion = getActor();
+		
 		if (minion == null)
 		{
 			return null;
 		}
+		
 		for (NpcInstance npc : World.getAroundNpc(minion))
 		{
 			if (npc.getNpcId() == npcId)
@@ -120,6 +124,7 @@ public class Kama63Minion extends Fighter
 				return npc;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -131,11 +136,13 @@ public class Kama63Minion extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		_spawned = false;
+		
 		if (_dieTask != null)
 		{
 			_dieTask.cancel(false);
 			_dieTask = null;
 		}
+		
 		super.onEvtDead(killer);
 	}
 	
@@ -174,6 +181,7 @@ public class Kama63Minion extends Fighter
 			{
 				_master.setCurrentHp(_master.getCurrentHp() + (_minion.getCurrentHp() * 5), false);
 			}
+			
 			Functions.npcSayCustomMessage(_minion, "Kama63Minion");
 			_minion.doDie(_minion);
 		}

@@ -61,16 +61,19 @@ public class DrillSergeant extends Fighter
 	public boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (System.currentTimeMillis() > _wait_timeout)
 		{
 			_wait_timeout = System.currentTimeMillis() + (Rnd.get(10, 30) * 1000L);
 			final List<NpcInstance> around = actor.getAroundNpc(700, 100);
+			
 			if ((around != null) && !around.isEmpty())
 			{
 				switch (Rnd.get(1, 3))
 				{
 					case 1:
 						actor.broadcastPacket(new SocialAction(actor.getObjectId(), 7));
+						
 						for (NpcInstance mob : around)
 						{
 							if (ArrayUtils.contains(recruits, mob.getNpcId()))
@@ -78,9 +81,12 @@ public class DrillSergeant extends Fighter
 								mob.broadcastPacket(new SocialAction(mob.getObjectId(), 7));
 							}
 						}
+						
 						break;
+					
 					case 2:
 						actor.broadcastPacket(new SocialAction(actor.getObjectId(), 7));
+						
 						for (NpcInstance mob : around)
 						{
 							if (ArrayUtils.contains(recruits, mob.getNpcId()))
@@ -88,9 +94,12 @@ public class DrillSergeant extends Fighter
 								mob.broadcastPacket(new SocialAction(mob.getObjectId(), 4));
 							}
 						}
+						
 						break;
+					
 					case 3:
 						actor.broadcastPacket(new SocialAction(actor.getObjectId(), 7));
+						
 						for (NpcInstance mob : around)
 						{
 							if (ArrayUtils.contains(recruits, mob.getNpcId()))
@@ -98,10 +107,12 @@ public class DrillSergeant extends Fighter
 								mob.broadcastPacket(new SocialAction(mob.getObjectId(), 5));
 							}
 						}
+						
 						break;
 				}
 			}
 		}
+		
 		return false;
 	}
 }

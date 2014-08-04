@@ -53,10 +53,12 @@ public class RequestCommissionDelete extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		CommissionShopManager.getInstance().returnBuyItem(activeChar, _bidId, itemObjId);
 		activeChar.sendPacket(SystemMsg.CANCELLATION_OF_SALE_FOR_THE_ITEM_IS_SUCCESSFUL);
 	}

@@ -65,6 +65,7 @@ public class ActionRunner extends LoggerObject
 		{
 			register(new OlympiadSaveTask());
 		}
+		
 		register(new DeleteExpiredVarsTask());
 		register(new DeleteExpiredMailTask());
 		register(new CommissionShopExpiredItemsTask());
@@ -91,11 +92,13 @@ public class ActionRunner extends LoggerObject
 			info("Try register " + wrapper.getName() + " not defined time.");
 			return;
 		}
+		
 		if (time <= System.currentTimeMillis())
 		{
 			ThreadPoolManager.getInstance().execute(wrapper);
 			return;
 		}
+		
 		addScheduled(wrapper.getName(), wrapper, time - System.currentTimeMillis());
 	}
 	
@@ -108,14 +111,17 @@ public class ActionRunner extends LoggerObject
 	protected void addScheduled(String name, final ActionWrapper r, long diff)
 	{
 		_lock.lock();
+		
 		try
 		{
 			String lower = name.toLowerCase();
 			List<ActionWrapper> wrapperList = _futures.get(lower);
+			
 			if (wrapperList == null)
 			{
 				_futures.put(lower, (wrapperList = new ArrayList<>()));
 			}
+			
 			r.schedule(diff);
 			wrapperList.add(r);
 		}
@@ -133,15 +139,19 @@ public class ActionRunner extends LoggerObject
 	protected void remove(String name, ActionWrapper f)
 	{
 		_lock.lock();
+		
 		try
 		{
 			final String lower = name.toLowerCase();
 			List<ActionWrapper> wrapperList = _futures.get(lower);
+			
 			if (wrapperList == null)
 			{
 				return;
 			}
+			
 			wrapperList.remove(f);
+			
 			if (wrapperList.isEmpty())
 			{
 				_futures.remove(lower);
@@ -160,18 +170,22 @@ public class ActionRunner extends LoggerObject
 	public void clear(String name)
 	{
 		_lock.lock();
+		
 		try
 		{
 			final String lower = name.toLowerCase();
 			List<ActionWrapper> wrapperList = _futures.remove(lower);
+			
 			if (wrapperList == null)
 			{
 				return;
 			}
+			
 			for (ActionWrapper f : wrapperList)
 			{
 				f.cancel();
 			}
+			
 			wrapperList.clear();
 		}
 		finally
@@ -186,6 +200,7 @@ public class ActionRunner extends LoggerObject
 	public void info()
 	{
 		_lock.lock();
+		
 		try
 		{
 			for (Map.Entry<String, List<ActionWrapper>> entry : _futures.entrySet())

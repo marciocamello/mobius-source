@@ -25,7 +25,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class CastleMessengerInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -49,6 +49,7 @@ public class CastleMessengerInstance extends NpcInstance
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 		Castle castle = getCastle();
+		
 		if (player.isCastleLord(castle.getId()))
 		{
 			if (castle.getSiegeEvent().isInProgress())

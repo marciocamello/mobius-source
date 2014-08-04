@@ -66,6 +66,7 @@ public class _473_InTheCoralGarden extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(this);
 		}
+		
 		return event;
 	}
 	
@@ -76,6 +77,7 @@ public class _473_InTheCoralGarden extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int state = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == FIOREN)
 		{
 			if (state == 1)
@@ -84,6 +86,7 @@ public class _473_InTheCoralGarden extends Quest implements ScriptFile
 				{
 					return "33044-lvl.htm";
 				}
+				
 				if (!st.isNowAvailable())
 				{
 					return "33044-comp.htm";
@@ -96,18 +99,21 @@ public class _473_InTheCoralGarden extends Quest implements ScriptFile
 				
 				return "33044.htm";
 			}
+			
 			if (state == 2)
 			{
 				if (cond == 1)
 				{
 					return "33044-4.htm";
 				}
+				
 				if (cond == 2)
 				{
 					return "33044-5.htm";
 				}
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -115,10 +121,12 @@ public class _473_InTheCoralGarden extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if ((cond != 1) || (npc == null))
 		{
 			return null;
 		}
+		
 		st.setCond(2);
 		return null;
 	}

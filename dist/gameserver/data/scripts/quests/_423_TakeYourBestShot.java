@@ -51,6 +51,7 @@ public class _423_TakeYourBestShot extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("johnny_q423_04.htm"))
 		{
 			st.exitCurrentQuest(true);
@@ -61,6 +62,7 @@ public class _423_TakeYourBestShot extends Quest implements ScriptFile
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return htmltext;
 	}
 	
@@ -70,11 +72,13 @@ public class _423_TakeYourBestShot extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == Johnny)
 		{
 			if (cond == 0)
 			{
 				QuestState qs = st.getPlayer().getQuestState(_249_PoisonedPlainsOfTheLizardmen.class);
+				
 				if ((st.getPlayer().getLevel() >= 82) && (qs != null) && qs.isCompleted())
 				{
 					htmltext = "johnny_q423_01.htm";
@@ -107,6 +111,7 @@ public class _423_TakeYourBestShot extends Quest implements ScriptFile
 				st.exitCurrentQuest(true);
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -115,6 +120,7 @@ public class _423_TakeYourBestShot extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (cond == 1)
 		{
 			if (ArrayUtils.contains(TantaClan, npcId) && Rnd.chance(2))
@@ -127,6 +133,7 @@ public class _423_TakeYourBestShot extends Quest implements ScriptFile
 				st.setCond(2);
 			}
 		}
+		
 		return null;
 	}
 	

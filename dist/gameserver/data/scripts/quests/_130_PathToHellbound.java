@@ -51,33 +51,40 @@ public class _130_PathToHellbound extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		String htmltext = event;
+		
 		if (event.equals("sage_kasian_q0130_05.htm") && (cond == 0))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		if (event.equals("galate_q0130_03.htm") && (cond == 1))
 		{
 			st.setCond(2);
 			st.playSound(SOUND_MIDDLE);
 		}
+		
 		if (event.equals("sage_kasian_q0130_08.htm") && (cond == 2))
 		{
 			st.setCond(3);
 			st.playSound(SOUND_MIDDLE);
 			st.giveItems(CASIAN_BLUE_CRY, 1);
 		}
+		
 		if (event.equals("galate_q0130_07.htm") && (cond == 3))
 		{
 			st.playSound(SOUND_FINISH);
 			st.takeItems(CASIAN_BLUE_CRY, -1);
+			
 			if (HellboundManager.getHellboundLevel() == 0)
 			{
 				HellboundManager.getInstance().openHellbound();
 			}
+			
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -88,6 +95,7 @@ public class _130_PathToHellbound extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int id = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == CASIAN)
 		{
 			if (cond == 0)
@@ -102,6 +110,7 @@ public class _130_PathToHellbound extends Quest implements ScriptFile
 					st.exitCurrentQuest(true);
 				}
 			}
+			
 			if (cond == 2)
 			{
 				htmltext = "sage_kasian_q0130_07.htm";
@@ -115,12 +124,14 @@ public class _130_PathToHellbound extends Quest implements ScriptFile
 				{
 					htmltext = "galate_q0130_01.htm";
 				}
+				
 				if (cond == 3)
 				{
 					htmltext = "galate_q0130_05.htm";
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 }

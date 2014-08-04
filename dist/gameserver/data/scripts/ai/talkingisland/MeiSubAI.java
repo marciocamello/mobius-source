@@ -65,6 +65,7 @@ public class MeiSubAI extends DefaultAI
 		{
 			startMoveTask();
 		}
+		
 		return true;
 	}
 	
@@ -75,10 +76,12 @@ public class MeiSubAI extends DefaultAI
 	protected void onEvtArrived()
 	{
 		startMoveTask();
+		
 		if (Rnd.chance(52))
 		{
 			sayRndMsg();
 		}
+		
 		super.onEvtArrived();
 	}
 	
@@ -88,10 +91,12 @@ public class MeiSubAI extends DefaultAI
 	private void startMoveTask()
 	{
 		_lastPoint++;
+		
 		if (_lastPoint >= _points.length)
 		{
 			_lastPoint = 0;
 		}
+		
 		addTaskMove(_points[_lastPoint], false);
 		doTask();
 	}
@@ -102,32 +107,41 @@ public class MeiSubAI extends DefaultAI
 	private void sayRndMsg()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return;
 		}
+		
 		NpcString ns;
+		
 		switch (Rnd.get(6))
 		{
 			case 1:
 				ns = NpcString.IF_YOU_IGNORE_THE_TRAINING_GROUNDS_YOU_LL_REGRET_IT;
 				break;
+			
 			case 2:
 				ns = NpcString.IF_YOU_IGNORE_THE_TRAINING_GROUNDS_YOU_LL_REGRET_IT;
 				break;
+			
 			case 3:
 				ns = NpcString.IF_YOU_IGNORE_THE_TRAINING_GROUNDS_YOU_LL_REGRET_IT;
 				break;
+			
 			case 4:
 				ns = NpcString.IF_YOU_IGNORE_THE_TRAINING_GROUNDS_YOU_LL_REGRET_IT;
 				break;
+			
 			case 5:
 				ns = NpcString.IF_YOU_IGNORE_THE_TRAINING_GROUNDS_YOU_LL_REGRET_IT;
 				break;
+			
 			default:
 				ns = NpcString.IF_YOU_IGNORE_THE_TRAINING_GROUNDS_YOU_LL_REGRET_IT;
 				break;
 		}
+		
 		Functions.npcSay(actor, ns);
 	}
 	

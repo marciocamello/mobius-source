@@ -103,6 +103,7 @@ public class TotemSummon extends DefaultAI
 		if (_timer < System.currentTimeMillis())
 		{
 			_timer = System.currentTimeMillis() + 15000L;
+			
 			for (Creature c : getActor().getAroundCharacters(450, 200))
 			{
 				if (c.isPlayable() && !c.isDead())
@@ -111,6 +112,7 @@ public class TotemSummon extends DefaultAI
 				}
 			}
 		}
+		
 		return true;
 	}
 	
@@ -122,23 +124,29 @@ public class TotemSummon extends DefaultAI
 	private int getBuffId(int npcId)
 	{
 		int buffId = 0;
+		
 		switch (npcId)
 		{
 			case TotemofBody:
 				buffId = TotemofBodyBuff;
 				break;
+			
 			case TotemofSpirit:
 				buffId = TotemofSpiritBuff;
 				break;
+			
 			case TotemofBravery:
 				buffId = TotemofBraveryBuff;
 				break;
+			
 			case TotemofFortitude:
 				buffId = TotemofFortitudeBuff;
 				break;
+			
 			default:
 				break;
 		}
+		
 		return buffId;
 	}
 }

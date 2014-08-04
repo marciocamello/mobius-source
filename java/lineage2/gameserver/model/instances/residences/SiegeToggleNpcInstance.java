@@ -31,7 +31,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public abstract class SiegeToggleNpcInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -109,6 +109,7 @@ public abstract class SiegeToggleNpcInstance extends NpcInstance
 	protected void onReduceCurrentHp(double damage, Creature attacker, Skill skill, boolean awake, boolean standUp, boolean directHp)
 	{
 		setCurrentHp(Math.max(getCurrentHp() - damage, 0), false);
+		
 		if (getCurrentHp() < 0.5)
 		{
 			doDie(attacker);
@@ -130,20 +131,26 @@ public abstract class SiegeToggleNpcInstance extends NpcInstance
 		{
 			return false;
 		}
+		
 		Player player = attacker.getPlayer();
+		
 		if (player == null)
 		{
 			return false;
 		}
+		
 		SiegeEvent<?, ?> siegeEvent = getEvent(SiegeEvent.class);
+		
 		if ((siegeEvent == null) || !siegeEvent.isInProgress())
 		{
 			return false;
 		}
+		
 		if (siegeEvent.getSiegeClan(SiegeEvent.DEFENDERS, player.getClan()) != null)
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	

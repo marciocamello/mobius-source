@@ -135,17 +135,21 @@ public class Teredor extends Fighter
 			teredorEggs = r.getAllByNpcId(teredorLairEgg, true);
 			ThreadPoolManager.getInstance().scheduleAtFixedDelay(new EggSpawnTask(r), 1000, delayEggTask * 1000);
 		}
+		
 		if (!_eliteSpawned)
 		{
 			final SimpleSpawner sp = new SimpleSpawner(NpcHolder.getInstance().getTemplate(eliteMillipede));
 			sp.setLoc(Location.findPointToStay(actor, 100, 120));
+			
 			for (int i = 0; i == 2; i++)
 			{
 				NpcInstance npc = sp.doSpawn(true);
 				npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, actor.getAggroList().getMostHated(), Rnd.get(1, 100));
 			}
+			
 			_eliteSpawned = true;
 		}
+		
 		super.thinkAttack();
 	}
 	
@@ -190,13 +194,16 @@ public class Teredor extends Fighter
 			{
 				return;
 			}
+			
 			final double newHp = actor.getCurrentHp() - damage;
 			final double maxHp = actor.getMaxHp();
+			
 			if (_teredorActive && ((newHp == (0.8 * maxHp)) || (newHp == (0.6 * maxHp)) || (newHp == (0.4 * maxHp)) || (newHp == (0.2 * maxHp))))
 			{
 				_teredorActive = false;
 				_eliteSpawned = false;
 				ThreadPoolManager.getInstance().execute(new TeredorPassiveTask((NpcInstance) actor));
+				
 				if ((newHp <= (0.8 * maxHp)) && !_canUsePoison)
 				{
 					_canUsePoison = true;

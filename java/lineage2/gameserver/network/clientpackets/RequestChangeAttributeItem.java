@@ -58,19 +58,23 @@ public class RequestChangeAttributeItem extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = (getClient()).getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		PcInventory inventory = activeChar.getInventory();
 		ItemInstance _item = inventory.getItemByObjectId(_itemObjId);
 		ItemFunctions.removeItem(activeChar, _consumeItemId, 1, true);
 		boolean equipped = _item.isEquipped();
+		
 		if (equipped)
 		{
 			activeChar.getInventory().isRefresh = true;
 			activeChar.getInventory().unEquipItem(_item);
 		}
+		
 		Element oldElement = _item.getAttackElement();
 		int elementVal = _item.getAttributeElementValue(oldElement, false);
 		_item.setAttributeElement(oldElement, 0);
@@ -78,11 +82,13 @@ public class RequestChangeAttributeItem extends L2GameClientPacket
 		_item.setAttributeElement(newElement, _item.getAttributeElementValue(newElement, false) + elementVal);
 		_item.setJdbcState(JdbcEntityState.UPDATED);
 		_item.update();
+		
 		if (equipped)
 		{
 			activeChar.getInventory().equipItem(_item);
 			activeChar.getInventory().isRefresh = false;
 		}
+		
 		activeChar.sendPacket(new InventoryUpdate().addModifiedItem(_item));
 		activeChar.sendPacket(new ExChangeAttributeOk());
 	}

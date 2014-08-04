@@ -48,24 +48,30 @@ public class RequestSetCastleSiegeTime extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		Castle castle = ResidenceHolder.getInstance().getResidence(Castle.class, _id);
+		
 		if (castle == null)
 		{
 			return;
 		}
+		
 		if (player.getClan().getCastle() != castle.getId())
 		{
 			return;
 		}
+		
 		if ((player.getClanPrivileges() & Clan.CP_CS_MANAGE_SIEGE) != Clan.CP_CS_MANAGE_SIEGE)
 		{
 			player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_THE_AUTHORITY_TO_MODIFY_THE_SIEGE_TIME);
 			return;
 		}
+		
 		CastleSiegeEvent siegeEvent = castle.getSiegeEvent();
 		siegeEvent.setNextSiegeTime(_time);
 		player.sendPacket(new CastleSiegeInfo(castle, player));

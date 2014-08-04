@@ -37,6 +37,7 @@ public class ListMenteeWaiting extends L2GameServerPacket
 		for (Player player : World.getAroundPlayers(activeChar))
 		{
 			int mentorId = player.getMentorSystem().getMentor();
+			
 			// _log.info("players: " + player + " mentee: [" + mentorId + "]");
 			if ((player.getLevel() >= minLevel) && (player.getLevel() <= maxLevel) && (mentorId == 0) && !player.isAwaking())
 			{
@@ -49,14 +50,15 @@ public class ListMenteeWaiting extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0x123);
-		
 		writeD(page);
 		int i;
+		
 		if (!mentees.isEmpty())
 		{
 			writeD(mentees.size());
 			writeD(mentees.size() % playersInPage);
 			i = 1;
+			
 			for (Player player : mentees)
 			{
 				if ((i <= (playersInPage * page)) && (i > (playersInPage * (page - 1))))

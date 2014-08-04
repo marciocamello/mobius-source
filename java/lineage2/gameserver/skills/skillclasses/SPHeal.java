@@ -49,6 +49,7 @@ public class SPHeal extends Skill
 		{
 			return false;
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
@@ -68,6 +69,7 @@ public class SPHeal extends Skill
 				getEffects(activeChar, target, getActivateRate() > 0, false);
 			}
 		}
+		
 		if (isSSPossible())
 		{
 			activeChar.unChargeShots(isMagic());

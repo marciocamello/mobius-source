@@ -31,6 +31,7 @@ public class ApherusLookoutBewildered extends Fighter
 	{
 		super.onEvtDead(killer);
 		NpcInstance actor = getActor();
+		
 		if ((actor != null) && (killer != null) && (actor != killer))
 		{
 			NpcUtils.spawnSingle(19002, new Location(killer.getX() - Rnd.get(40), killer.getY() - Rnd.get(40), killer.getZ(), 0));

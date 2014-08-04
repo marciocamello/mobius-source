@@ -62,9 +62,11 @@ public final class RumieseNpcInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("request_normalisthina"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(normalIsthinaInstId))
@@ -80,6 +82,7 @@ public final class RumieseNpcInstance extends NpcInstance
 		else if (command.equalsIgnoreCase("request_hardisthina"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(hardIsthinaInstId))
@@ -102,6 +105,7 @@ public final class RumieseNpcInstance extends NpcInstance
 				showChatWindow(player, "default/" + getNpcId() + "-no.htm");
 				return;
 			}
+			
 			Functions.addItem(player, 17608, 1);
 			showChatWindow(player, "default/" + getNpcId() + "-ok.htm");
 		}

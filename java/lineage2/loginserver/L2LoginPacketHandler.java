@@ -40,6 +40,7 @@ public final class L2LoginPacketHandler implements IPacketHandler<L2LoginClient>
 		int opcode = buf.get() & 0xFF;
 		ReceivablePacket<L2LoginClient> packet = null;
 		LoginClientState state = client.getState();
+		
 		switch (state)
 		{
 			case CONNECTED:
@@ -47,13 +48,17 @@ public final class L2LoginPacketHandler implements IPacketHandler<L2LoginClient>
 				{
 					packet = new AuthGameGuard();
 				}
+				
 				break;
+			
 			case AUTHED_GG:
 				if (opcode == 0x00)
 				{
 					packet = new RequestAuthLogin();
 				}
+				
 				break;
+			
 			case AUTHED:
 				if (opcode == 0x05)
 				{
@@ -63,10 +68,13 @@ public final class L2LoginPacketHandler implements IPacketHandler<L2LoginClient>
 				{
 					packet = new RequestServerLogin();
 				}
+				
 				break;
+			
 			default:
 				break;
 		}
+		
 		return packet;
 	}
 }

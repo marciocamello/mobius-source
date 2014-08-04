@@ -35,6 +35,7 @@ abstract class SimpleItemHandler extends ScriptItemHandler
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
 	{
 		Player player;
+		
 		if (playable.isPlayer())
 		{
 			player = (Player) playable;
@@ -47,11 +48,13 @@ abstract class SimpleItemHandler extends ScriptItemHandler
 		{
 			return false;
 		}
+		
 		if (player.isInFlyingTransform())
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getItemId()));
 			return false;
 		}
+		
 		return useItemImpl(player, item, ctrl);
 	}
 	
@@ -78,6 +81,7 @@ abstract class SimpleItemHandler extends ScriptItemHandler
 			player.sendPacket(new SystemMessage(SystemMessage.YOU_USE_S1).addItemName(item.getItemId()));
 			return true;
 		}
+		
 		player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
 		return false;
 	}

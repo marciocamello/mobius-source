@@ -27,7 +27,7 @@ import lineage2.gameserver.utils.Location;
 public class CTBTeamObject implements SpawnableObject
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -115,11 +115,13 @@ public class CTBTeamObject implements SpawnableObject
 			_mob.deleteMe();
 			_mob = null;
 		}
+		
 		if (_flag != null)
 		{
 			_flag.deleteMe();
 			_flag = null;
 		}
+		
 		_siegeClan = null;
 	}
 	

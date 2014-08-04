@@ -21,9 +21,12 @@ import lineage2.gameserver.model.Player;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-@SuppressWarnings("serial")
 public class RewardList extends ArrayList<RewardGroup>
 {
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 1L;
 	/**
 	 * Field MAX_CHANCE. (value is 1000000)
 	 */
@@ -93,9 +96,11 @@ public class RewardList extends ArrayList<RewardGroup>
 	public List<RewardItem> roll(Player player, double mod, boolean isRaid, boolean isSiegeGuard)
 	{
 		List<RewardItem> temp = new ArrayList<>(size());
+		
 		for (RewardGroup g : this)
 		{
 			List<RewardItem> tdl = g.roll(_type, player, mod, isRaid, isSiegeGuard);
+			
 			if (!tdl.isEmpty())
 			{
 				for (RewardItem itd : tdl)
@@ -104,6 +109,7 @@ public class RewardList extends ArrayList<RewardGroup>
 				}
 			}
 		}
+		
 		return temp;
 	}
 	
@@ -116,15 +122,19 @@ public class RewardList extends ArrayList<RewardGroup>
 		for (RewardGroup g : this)
 		{
 			int chanceSum = 0;
+			
 			for (RewardData d : g.getItems())
 			{
 				chanceSum += d.getChance();
 			}
+			
 			if (chanceSum <= MAX_CHANCE)
 			{
 				return true;
 			}
+			
 			double mod = MAX_CHANCE / chanceSum;
+			
 			for (RewardData d : g.getItems())
 			{
 				double chance = d.getChance() * mod;
@@ -132,6 +142,7 @@ public class RewardList extends ArrayList<RewardGroup>
 				g.setChance(MAX_CHANCE);
 			}
 		}
+		
 		return false;
 	}
 	

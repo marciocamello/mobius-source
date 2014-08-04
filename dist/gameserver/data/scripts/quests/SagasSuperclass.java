@@ -132,10 +132,8 @@ public abstract class SagasSuperclass extends Quest
 		addTalkId(Avanguard_Barton);
 		addTalkId(Avanguard_Xaok);
 		addTalkId(Avanguard_Ellia);
-		
 		addQuestItem(DeadSoldierOrbs);
 		addQuestItem(Ring_Shout);
-		
 		addLevelCheck(76, 99);
 	}
 	
@@ -164,15 +162,19 @@ public abstract class SagasSuperclass extends Quest
 			case 33171:
 				sel1.setAI(new NpcHealerAI(sel1));
 				break;
+			
 			case 33172:
 				sel1.setAI(new NpcWarriorAI(sel1));
 				break;
+			
 			case 33173:
 				sel1.setAI(new NpcArcherAI(sel1));
 				break;
+			
 			case 33174:
 				sel1.setAI(new NpcMageAI(sel1));
 				break;
+			
 			default:
 				break;
 		}
@@ -182,18 +184,23 @@ public abstract class SagasSuperclass extends Quest
 			case 33171:
 				sel2.setAI(new NpcHealerAI(sel2));
 				break;
+			
 			case 33172:
 				sel2.setAI(new NpcWarriorAI(sel2));
 				break;
+			
 			case 33173:
 				sel2.setAI(new NpcArcherAI(sel2));
 				break;
+			
 			case 33174:
 				sel2.setAI(new NpcMageAI(sel2));
 				break;
+			
 			default:
 				break;
 		}
+		
 		adolf.setAI(new NpcWarriorAI(adolf));
 		archer1.setAI(new NpcArcherAI(archer1));
 		archer2.setAI(new NpcArcherAI(archer2));
@@ -275,23 +282,22 @@ public abstract class SagasSuperclass extends Quest
 			st.playSound(SOUND_MIDDLE);
 			checkOrbs(player, st);
 		}
-		
 		else if (event.equalsIgnoreCase("33170-2.htm"))
 		{
 			st.setCond(6);
 			st.playSound(SOUND_MIDDLE);
 		}
-		
 		else if (event.equalsIgnoreCase("33170-6.htm"))
 		{
 			st.setCond(10);
+			
 			if (st.getQuestItemsCount(Ring_Shout) == 0)
 			{
 				st.giveItems(Ring_Shout, 1); // ring
 			}
+			
 			Functions.npcSay(npc, NpcString.THE_CRY_OF_FATE_PENDANT_WILL_BE_HELPFUL_TO_YOU_PLEASE_EQUIP_IT_AND_BRING_OUT_THE_POWER_OF_THE_PENDANT_TO_PREPARE_FOR_THE_NEXT_FIGHT);
 		}
-		
 		else if (event.equalsIgnoreCase("selection"))
 		{
 			if (player.getVar("sel1") == null)
@@ -300,6 +306,7 @@ public abstract class SagasSuperclass extends Quest
 				npc.deleteMe();
 				return null;
 			}
+			
 			if (player.getVar("sel2") == null)
 			{
 				player.setVar("sel2", npc.getNpcId(), -1);
@@ -308,13 +315,13 @@ public abstract class SagasSuperclass extends Quest
 				return null;
 			}
 		}
-		
 		else if (event.equalsIgnoreCase("enterinstance"))
 		{
 			if (!_npcWaves.isEmpty())
 			{
 				_npcWaves.clear();
 			}
+			
 			player.unsetVar("wave");
 			player.unsetVar("sel1");
 			player.unsetVar("sel2");
@@ -323,7 +330,6 @@ public abstract class SagasSuperclass extends Quest
 			enterInstance(st, 185);
 			return null;
 		}
-		
 		else if (event.equalsIgnoreCase("battleField"))
 		{
 			// missing parts of the instance:
@@ -336,20 +342,17 @@ public abstract class SagasSuperclass extends Quest
 			st.setCond(8);
 			return null;
 		}
-		
 		else if (event.equalsIgnoreCase("wave1"))
 		{
 			initWave1(player);
 			return null;
 		}
-		
 		else if (event.equalsIgnoreCase("2"))
 		{
 			initWave2(player);
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			return null;
 		}
-		
 		else if (event.equalsIgnoreCase("3"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
@@ -411,7 +414,6 @@ public abstract class SagasSuperclass extends Quest
 			player.setVar("wave", 12, -1);
 			return null;
 		}
-		
 		else if (event.equalsIgnoreCase("13"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.I_DEATH_WOUND_CHAMPION_OF_SHILEN_SHALL_END_YOUR_WORLD, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
@@ -427,7 +429,6 @@ public abstract class SagasSuperclass extends Quest
 			st.setCond(9);
 			return null;
 		}
-		
 		else if (event.equalsIgnoreCase("engagesecondstand"))
 		{
 			// init second stand
@@ -438,7 +439,6 @@ public abstract class SagasSuperclass extends Quest
 			initWave7(player);
 			return null;
 		}
-		
 		else if (event.equalsIgnoreCase("secondStandCompleted"))
 		{
 			player.unsetVar("wave");
@@ -461,6 +461,7 @@ public abstract class SagasSuperclass extends Quest
 			}
 			
 			int _reqClass = -1;
+			
 			for (ClassId cid : ClassId.VALUES)
 			{
 				if (cid.childOf(player.getClassId()) && (cid.getClassLevel().ordinal() == (player.getClassId().getClassLevel().ordinal() + 1)))
@@ -487,8 +488,8 @@ public abstract class SagasSuperclass extends Quest
 			player.sendPacket(new ExShowScreenMessage(NpcString.CONGRATULATIONS_YOU_WILL_NOW_GRADUATE_FROM_THE_CLAN_ACADEMY_AND_LEAVE_YOUR_CURRENT_CLAN_AS_A_GRADUATE_OF_THE_ACADEMY_YOU_CAN_IMMEDIATELY_JOIN_A_CLAN_AS_A_REGULAR_MEMBER_WITHOUT_BEING_SUBJECT_TO_ANY_PENALTIES, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			return StartNPC + "-7.htm";
 		}
-		return htmltext;
 		
+		return htmltext;
 	}
 	
 	private void initWave13(Player player)
@@ -502,7 +503,6 @@ public abstract class SagasSuperclass extends Quest
 		NpcInstance boss = player.getReflection().addSpawnWithoutRespawn(Death_wound, new Location(56168, -177544, -7974, 16383), 0);
 		boss.broadcastPacket(new Earthquake(boss.getLoc(), 40, 10));
 		boss.addListener(deathListener);
-		
 	}
 	
 	private void initWave12(Player player)
@@ -800,7 +800,7 @@ public abstract class SagasSuperclass extends Quest
 	private class DeathListener implements OnDeathListener
 	{
 		/**
-		 * 
+		 *
 		 */
 		public DeathListener()
 		{
@@ -813,6 +813,7 @@ public abstract class SagasSuperclass extends Quest
 			if (self.isNpc())
 			{
 				NpcInstance npc = (NpcInstance) self;
+				
 				if (_npcWaves.contains(npc) || (npc.getNpcId() == Death_wound))
 				{
 					// we need to find our player in this instance, let's search
@@ -823,6 +824,7 @@ public abstract class SagasSuperclass extends Quest
 						{
 							continue;
 						}
+						
 						QuestState st = findQuest(p);
 						onKill(npc, st);
 					}
@@ -836,6 +838,7 @@ public abstract class SagasSuperclass extends Quest
 	{
 		Player player = st.getPlayer();
 		int wave = Integer.parseInt(player.getVar("wave"));
+		
 		if (npc.getNpcId() == Death_wound)
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.AGH_HUMANS_HA_IT_DOES_NOT_MATTER_YOUR_WORLD_WILL_END_ANYWAYS, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
@@ -847,6 +850,7 @@ public abstract class SagasSuperclass extends Quest
 		{
 			return null;
 		}
+		
 		return null;
 	}
 	
@@ -856,12 +860,14 @@ public abstract class SagasSuperclass extends Quest
 		{
 			_npcWaves.remove(npc);
 		}
+		
 		if (waveId < 7) // after the first stand we go on timers anyway
 		{
 			if (_npcWaves.isEmpty())
 			{
 				int _nextWave = waveId + 1;
 				player.setVar("wave", _nextWave, -1);
+				
 				if (_nextWave == 7)
 				{
 					st.startQuestTimer("firstStandCompleted", 5000);
@@ -872,10 +878,12 @@ public abstract class SagasSuperclass extends Quest
 				}
 			}
 		}
+		
 		if ((waveId == 12) && _npcWaves.isEmpty())
 		{
 			st.startQuestTimer("13", 2000);
 		}
+		
 		return true;
 	}
 	
@@ -900,6 +908,7 @@ public abstract class SagasSuperclass extends Quest
 		int npcId = npc.getNpcId();
 		Player player = st.getPlayer();
 		String htmltext = "noquest";
+		
 		if (!canTakeQuest(player))
 		{
 			return StartNPC + ".htm";
@@ -976,7 +985,6 @@ public abstract class SagasSuperclass extends Quest
 				return "33165.htm";
 			}
 		}
-		
 		else if (npcId == Avanguard_camptain)
 		{
 			if (cond == 5)
@@ -1003,7 +1011,6 @@ public abstract class SagasSuperclass extends Quest
 				return "33170-8.htm";
 			}
 		}
-		
 		else if (npcId == Avanguard_Ellis)
 		{
 			if (cond == 6)
@@ -1011,7 +1018,6 @@ public abstract class SagasSuperclass extends Quest
 				return "33171-1.htm";
 			}
 		}
-		
 		else if (npcId == Avanguard_Barton)
 		{
 			if (cond == 6)
@@ -1019,7 +1025,6 @@ public abstract class SagasSuperclass extends Quest
 				return "33172-1.htm";
 			}
 		}
-		
 		else if (npcId == Avanguard_Xaok)
 		{
 			if (cond == 6)
@@ -1027,7 +1032,6 @@ public abstract class SagasSuperclass extends Quest
 				return "33173-1.htm";
 			}
 		}
-		
 		else if (npcId == Avanguard_Ellia)
 		{
 			if (cond == 6)
@@ -1035,6 +1039,7 @@ public abstract class SagasSuperclass extends Quest
 				return "33174-1.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -1044,18 +1049,22 @@ public abstract class SagasSuperclass extends Quest
 		{
 			return false;
 		}
+		
 		if (player.getLevel() < 76)
 		{
 			return false;
 		}
+		
 		if (!player.getClassId().isOfLevel(ClassLevel.Third))
 		{
 			return false;
 		}
+		
 		if (player.getClassId().getRace() != StartRace)
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -1063,10 +1072,12 @@ public abstract class SagasSuperclass extends Quest
 	{
 		QuestState st = null;
 		st = player.getQuestState(Quests.get(questId()));
+		
 		if (st != null)
 		{
 			return st;
 		}
+		
 		return null;
 	}
 	

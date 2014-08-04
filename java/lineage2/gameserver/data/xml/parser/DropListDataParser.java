@@ -59,6 +59,7 @@ public final class DropListDataParser extends DocumentParser
 		{
 			_instance = new DropListDataParser();
 		}
+		
 		return _instance;
 	}
 	
@@ -93,17 +94,20 @@ public final class DropListDataParser extends DocumentParser
 			{
 				continue;
 			}
+			
 			for (Node npcNode = globalNode.getFirstChild(); npcNode != null; npcNode = npcNode.getNextSibling())
 			{
 				if (!"npc".equalsIgnoreCase(npcNode.getNodeName()))
 				{
 					continue;
 				}
+				
 				NamedNodeMap attrs = npcNode.getAttributes();
 				RewardList list = null;
 				RewardType type = null;
 				int npcId = parseInt(attrs, "id");
 				NpcTemplate template = NpcHolder.getInstance().getTemplate(npcId);
+				
 				if (template == null)
 				{
 					_log.warn("Omitted NPC ID: " + npcId + " - NPC template does not exists!");
@@ -116,26 +120,31 @@ public final class DropListDataParser extends DocumentParser
 						{
 							type = RewardType.RATED_GROUPED;
 							list = new RewardList(type, false);
+							
 							for (Node catNode = dropNode.getFirstChild(); catNode != null; catNode = catNode.getNextSibling())
 							{
 								if (!"category".equalsIgnoreCase(catNode.getNodeName()))
 								{
 									continue;
 								}
+								
 								attrs = catNode.getAttributes();
 								int chance = (int) (parseDouble(attrs, "chance") * 10000.0D);
 								RewardGroup group = new RewardGroup(chance);
+								
 								for (Node itemNode = catNode.getFirstChild(); itemNode != null; itemNode = itemNode.getNextSibling())
 								{
 									if (!"item".equalsIgnoreCase(itemNode.getNodeName()))
 									{
 										continue;
 									}
+									
 									_dropsParsed += 1;
 									attrs = itemNode.getAttributes();
 									RewardData data = parseReward(attrs);
 									group.addData(data);
 								}
+								
 								list.add(group);
 							}
 						}
@@ -145,22 +154,27 @@ public final class DropListDataParser extends DocumentParser
 							{
 								continue;
 							}
+							
 							RewardGroup g = new RewardGroup(RewardList.MAX_CHANCE);
 							type = RewardType.SWEEP;
 							list = new RewardList(type, false);
+							
 							for (Node itemNode = dropNode.getFirstChild(); itemNode != null; itemNode = itemNode.getNextSibling())
 							{
 								if (!"item".equalsIgnoreCase(itemNode.getNodeName()))
 								{
 									continue;
 								}
+								
 								_spoilsParsed += 1;
 								attrs = itemNode.getAttributes();
 								RewardData data = parseReward(attrs);
 								g.addData(data);
 							}
+							
 							list.add(g);
 						}
+						
 						template.putRewardList(type, list);
 					}
 				}
@@ -180,6 +194,7 @@ public final class DropListDataParser extends DocumentParser
 		int max = parseInt(attrs, "max");
 		double chance = parseDouble(attrs, "chance") * 10000.0D;
 		RewardData data = new RewardData(itemId);
+		
 		if (data.getItem().isCommonItem())
 		{
 			data.setChance(chance * Config.RATE_DROP_COMMON_ITEMS);
@@ -188,6 +203,7 @@ public final class DropListDataParser extends DocumentParser
 		{
 			data.setChance(chance);
 		}
+		
 		data.setMinDrop(min);
 		data.setMaxDrop(max);
 		return data;

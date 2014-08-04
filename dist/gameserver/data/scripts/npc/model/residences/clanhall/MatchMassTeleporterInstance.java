@@ -30,7 +30,7 @@ import lineage2.gameserver.utils.Location;
 public class MatchMassTeleporterInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -74,10 +74,9 @@ public class MatchMassTeleporterInstance extends NpcInstance
 		if (isInRange(player, INTERACTION_DISTANCE))
 		{
 			_timeout = System.currentTimeMillis() + 60000L;
-			
 			List<CTBTeamObject> locs = siegeEvent.getObjects(ClanHallTeamBattleEvent.TRYOUT_PART);
-			
 			CTBTeamObject object = locs.get(_flagId);
+			
 			if (object.getFlag() != null)
 			{
 				for (Player $player : World.getAroundPlayers(this, 400, 100))

@@ -27,7 +27,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class CastleControlTowerInstance extends SiegeToggleNpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -56,6 +56,7 @@ public class CastleControlTowerInstance extends SiegeToggleNpcInstance
 		{
 			spawn.stopRespawn();
 		}
+		
 		_spawnList.clear();
 	}
 	

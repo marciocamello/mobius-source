@@ -33,7 +33,7 @@ import lineage2.gameserver.utils.Location;
 public class AirShip extends Boat
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	

@@ -66,18 +66,22 @@ public class AbstractHardReference<T> implements HardReference<T>
 		{
 			return true;
 		}
+		
 		if (o == null)
 		{
 			return false;
 		}
+		
 		if (!(o instanceof AbstractHardReference))
 		{
 			return false;
 		}
+		
 		if ((((AbstractHardReference) o)).get() == null)
 		{
 			return false;
 		}
+		
 		return ((((AbstractHardReference) o)).get().equals(get()));
 	}
 }

@@ -34,10 +34,12 @@ public class RequestObservingListCuriousHouse extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player player = getClient().getActiveChar();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		player.sendPacket(new ExCuriousHouseObserveList());
 		_log.info("[IMPLEMENT ME!] RequestObservingListCuriousHouse (maybe trigger)");
 	}

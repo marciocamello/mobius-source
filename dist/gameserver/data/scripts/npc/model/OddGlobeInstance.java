@@ -30,7 +30,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public final class OddGlobeInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -60,9 +60,11 @@ public final class OddGlobeInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("monastery_enter"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(instancedZoneId))
@@ -105,10 +107,12 @@ public final class OddGlobeInstance extends NpcInstance
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
 			Player player = cha.getPlayer();
+			
 			if ((player == null) || !cha.isPlayer() || done)
 			{
 				return;
 			}
+			
 			done = true;
 			player.showQuestMovie(ExStartScenePlayer.SCENE_SSQ2_HOLY_BURIAL_GROUND_OPENING);
 		}
@@ -145,11 +149,14 @@ public final class OddGlobeInstance extends NpcInstance
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
 			Player player = cha.getPlayer();
+			
 			if ((player == null) || !cha.isPlayer())
 			{
 				return;
 			}
+			
 			player.broadcastPacket(new EventTrigger(21100100, true));
+			
 			if (!done)
 			{
 				done = true;

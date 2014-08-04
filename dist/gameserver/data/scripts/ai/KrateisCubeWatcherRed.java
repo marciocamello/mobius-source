@@ -92,16 +92,19 @@ public class KrateisCubeWatcherRed extends DefaultAI
 	{
 		final NpcInstance actor = getActor();
 		final List<Creature> around = World.getAroundCharacters(actor, 600, 300);
+		
 		if (around.isEmpty())
 		{
 			return;
 		}
+		
 		for (Creature cha : around)
 		{
 			if (cha.isPlayer() && !cha.isDead() && Rnd.chance(SKILL_CHANCE))
 			{
 				int rnd = Rnd.get(SKILLS.length);
 				Skill skill = SkillTable.getInstance().getInfo(SKILLS[rnd][0], SKILLS[rnd][1]);
+				
 				if (skill != null)
 				{
 					skill.getEffects(cha, cha, false, false);
@@ -126,6 +129,7 @@ public class KrateisCubeWatcherRed extends DefaultAI
 			public void runImpl()
 			{
 				final NpcTemplate template = NpcHolder.getInstance().getTemplate(18602);
+				
 				if (template != null)
 				{
 					final NpcInstance a = template.getNewInstance();

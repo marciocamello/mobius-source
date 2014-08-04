@@ -34,7 +34,7 @@ import org.apache.commons.lang3.ArrayUtils;
 public class PowerControlUnitInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -100,9 +100,11 @@ public class PowerControlUnitInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		StringTokenizer token = new StringTokenizer(command);
 		token.nextToken();
 		int val = Integer.parseInt(token.nextToken());
+		
 		if ((player.getClassId() == ClassId.WARSMITH) || (player.getClassId() == ClassId.MAESTRO))
 		{
 			if (_tryCount == 0)
@@ -125,6 +127,7 @@ public class PowerControlUnitInstance extends NpcInstance
 				_tryCount++;
 			}
 		}
+		
 		showChatWindow(player, 0);
 	}
 	
@@ -148,16 +151,20 @@ public class PowerControlUnitInstance extends NpcInstance
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 		NpcHtmlMessage message = new NpcHtmlMessage(player, this);
+		
 		if ((_invalidatePeriod > 0) && (_invalidatePeriod < System.currentTimeMillis()))
 		{
 			generate();
 		}
+		
 		int cond = getCond();
+		
 		switch (cond)
 		{
 			case COND_ALL_OK:
 				message.setFile("residence2/fortress/fortress_inner_controller002.htm");
 				FortressSiegeEvent event = getEvent(FortressSiegeEvent.class);
+				
 				if (event != null)
 				{
 					SpawnExObject exObject = event.getFirstObject(FortressSiegeEvent.SIEGE_COMMANDERS);
@@ -166,23 +173,29 @@ public class PowerControlUnitInstance extends NpcInstance
 					machineInstance.powerOff(this);
 					onDecay();
 				}
+				
 				break;
+			
 			case COND_TIMEOUT:
 				message.setFile("residence2/fortress/fortress_inner_controller003.htm");
 				break;
+			
 			case COND_FAIL:
 				message.setFile("residence2/fortress/fortress_inner_controller003.htm");
 				_invalidatePeriod = System.currentTimeMillis() + 30000L;
 				break;
+			
 			case COND_ENTERED:
 				message.setFile("residence2/fortress/fortress_inner_controller004.htm");
 				message.replaceNpcString("%password%", _index == 0 ? NpcString.PASSWORD_HAS_NOT_BEEN_ENTERED : _index == 1 ? NpcString.FIRST_PASSWORD_HAS_BEEN_ENTERED : NpcString.SECOND_PASSWORD_HAS_BEEN_ENTERED);
 				message.replaceNpcString("%try_count%", NpcString.ATTEMPT_S1__3_IS_IN_PROGRESS, _tryCount);
 				break;
+			
 			case COND_NO_ENTERED:
 				message.setFile("residence2/fortress/fortress_inner_controller001.htm");
 				break;
 		}
+		
 		player.sendPacket(message);
 	}
 	
@@ -194,18 +207,23 @@ public class PowerControlUnitInstance extends NpcInstance
 		_invalidatePeriod = 0;
 		_tryCount = 0;
 		_index = 0;
+		
 		for (int i = 0; i < _generated.length; i++)
 		{
 			_generated[i] = -1;
 		}
+		
 		int j = 0;
+		
 		while (j != LIMIT)
 		{
 			int val = Rnd.get(0, 9);
+			
 			if (ArrayUtils.contains(_generated, val))
 			{
 				continue;
 			}
+			
 			_generated[j++] = val;
 		}
 	}

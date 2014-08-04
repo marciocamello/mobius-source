@@ -67,11 +67,14 @@ public class RandomWalkingAI extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isMoving)
 		{
 			return false;
 		}
+		
 		final int val = Rnd.get(100);
+		
 		if (val < 80)
 		{
 			randomWalk();
@@ -80,6 +83,7 @@ public class RandomWalkingAI extends DefaultAI
 		{
 			actor.onRandomAnimation();
 		}
+		
 		return false;
 	}
 	
@@ -91,40 +95,49 @@ public class RandomWalkingAI extends DefaultAI
 	protected boolean randomWalk()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return false;
 		}
+		
 		final Location sloc = actor.getSpawnedLoc();
 		final int x = (sloc.x + Rnd.get(2 * AI_WALK_RANGE)) - AI_WALK_RANGE;
 		final int y = (sloc.y + Rnd.get(2 * AI_WALK_RANGE)) - AI_WALK_RANGE;
 		final int z = GeoEngine.getHeight(x, y, sloc.z, actor.getGeoIndex());
+		
 		switch (actor.getNpcId())
 		{
 			case Boy:
 				actor.setRunning();
 				actor.moveToLocation(x, y, z, 0, true);
 				break;
+			
 			case Girl:
 				actor.setRunning();
 				actor.moveToLocation(x, y, z, 0, true);
 				break;
+			
 			case Rabbits:
 				actor.setRunning();
 				actor.moveToLocation(x, y, z, 0, true);
 				break;
+			
 			case Rabbits2:
 				actor.setRunning();
 				actor.moveToLocation(x, y, z, 0, true);
 				break;
+			
 			case Marsha:
 				actor.setRunning();
 				actor.moveToLocation(x, y, z, 0, true);
 				break;
+			
 			default:
 				actor.moveToLocation(x, y, z, 0, true);
 				break;
 		}
+		
 		return true;
 	}
 }

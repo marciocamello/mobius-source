@@ -142,19 +142,24 @@ public class Pterosaur extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			if (doTask())
 			{
 				clearTasks();
 			}
+			
 			return true;
 		}
+		
 		final long now = System.currentTimeMillis();
+		
 		if ((now > wait_timeout) && ((current_point > -1) || Rnd.chance(5)))
 		{
 			if (!wait)
@@ -168,21 +173,26 @@ public class Pterosaur extends DefaultAI
 						return true;
 				}
 			}
+			
 			wait_timeout = 0;
 			wait = true;
 			current_point++;
+			
 			if (current_point >= points.length)
 			{
 				current_point = 0;
 			}
+			
 			addTaskMove(points[current_point], false);
 			doTask();
 			return true;
 		}
+		
 		if (randomAnimation())
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	

@@ -191,6 +191,7 @@ public class Tasks
 			Connection con = null;
 			Statement s = null;
 			ResultSet rs = null;
+			
 			try
 			{
 				if (_parent != null)
@@ -203,12 +204,15 @@ public class Tasks
 						}
 					}
 				}
+				
 				con = DatabaseFactory.getInstance().getConnection();
 				s = con.createStatement();
 				int currCount = s.executeUpdate(_query);
+				
 				if (currCount > 0)
 				{
 					totalLock.lock();
+					
 					if (_update)
 					{
 						totalUpdated += currCount;
@@ -217,7 +221,9 @@ public class Tasks
 					{
 						totalDeleted += currCount;
 					}
+					
 					totalLock.unlock();
+					
 					if (_update)
 					{
 						_log.info("Updated " + currCount + " elements in table " + _table + ".");

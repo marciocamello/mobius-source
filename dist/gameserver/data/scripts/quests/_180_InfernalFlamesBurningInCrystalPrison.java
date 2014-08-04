@@ -54,12 +54,14 @@ public class _180_InfernalFlamesBurningInCrystalPrison extends Quest implements 
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("33044-06.htm"))
 		{
 			st.setState(STARTED);
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return htmltext;
 	}
 	
@@ -70,6 +72,7 @@ public class _180_InfernalFlamesBurningInCrystalPrison extends Quest implements 
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == CON1)
 		{
 			if (st.getState() == CREATED)
@@ -84,6 +87,7 @@ public class _180_InfernalFlamesBurningInCrystalPrison extends Quest implements 
 					htmltext = "33044-01.htm";
 				}
 			}
+			
 			if (st.getState() == STARTED)
 			{
 				if (cond == 1)
@@ -102,11 +106,13 @@ public class _180_InfernalFlamesBurningInCrystalPrison extends Quest implements 
 					}
 				}
 			}
+			
 			if (st.getState() == COMPLETED)
 			{
 				htmltext = "33044-03.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -116,6 +122,7 @@ public class _180_InfernalFlamesBurningInCrystalPrison extends Quest implements 
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
+		
 		if (cond == 1)
 		{
 			if (npcId == CON2)
@@ -131,6 +138,7 @@ public class _180_InfernalFlamesBurningInCrystalPrison extends Quest implements 
 					for (Player pmember : player.getParty().getPartyMembers())
 					{
 						QuestState pst = pmember.getQuestState("_180_InfernalFlamesBurningInCrystalPrison");
+						
 						if ((pst != null) && (pst.getCond() == 1))
 						{
 							pst.setCond(2);
@@ -141,6 +149,7 @@ public class _180_InfernalFlamesBurningInCrystalPrison extends Quest implements 
 				}
 			}
 		}
+		
 		return null;
 	}
 }

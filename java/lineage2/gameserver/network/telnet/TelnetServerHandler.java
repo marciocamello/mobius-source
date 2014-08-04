@@ -80,17 +80,22 @@ public class TelnetServerHandler extends SimpleChannelUpstreamHandler implements
 				{
 					StringBuilder sb = new StringBuilder();
 					sb.append("Available commands:\n");
+					
 					for (TelnetCommand cmd : _commands)
 					{
 						sb.append(cmd.getCommand()).append('\n');
 					}
+					
 					return sb.toString();
 				}
+				
 				TelnetCommand cmd = TelnetServerHandler.this.getCommand(args[0]);
+				
 				if (cmd == null)
 				{
 					return "Unknown command.\n";
 				}
+				
 				return "usage:\n" + cmd.getUsage() + "\n";
 			}
 		});
@@ -140,6 +145,7 @@ public class TelnetServerHandler extends SimpleChannelUpstreamHandler implements
 				return cmd;
 			}
 		}
+		
 		return null;
 	}
 	
@@ -152,15 +158,19 @@ public class TelnetServerHandler extends SimpleChannelUpstreamHandler implements
 	private String tryHandleCommand(String command, String[] args)
 	{
 		TelnetCommand cmd = getCommand(command);
+		
 		if (cmd == null)
 		{
 			return "Unknown command.\n";
 		}
+		
 		String response = cmd.handle(args);
+		
 		if (response == null)
 		{
 			response = "usage:\n" + cmd.getUsage() + "\n";
 		}
+		
 		return response;
 	}
 	
@@ -174,6 +184,7 @@ public class TelnetServerHandler extends SimpleChannelUpstreamHandler implements
 	{
 		e.getChannel().write("Welcome to Lineage2 GameServer telnet console.\n");
 		e.getChannel().write("It is " + new Date() + " now.\n");
+		
 		if (!Config.TELNET_PASSWORD.isEmpty())
 		{
 			e.getChannel().write("Password:");
@@ -197,6 +208,7 @@ public class TelnetServerHandler extends SimpleChannelUpstreamHandler implements
 		String request = e.getMessage().toString();
 		String response = null;
 		boolean close = false;
+		
 		if (Boolean.FALSE.equals(ctx.getAttachment()))
 		{
 			if (Config.TELNET_PASSWORD.equals(request))
@@ -209,6 +221,7 @@ public class TelnetServerHandler extends SimpleChannelUpstreamHandler implements
 				response = "Wrong password!\n";
 			}
 		}
+		
 		if (Boolean.TRUE.equals(ctx.getAttachment()))
 		{
 			if (request.isEmpty())
@@ -227,19 +240,25 @@ public class TelnetServerHandler extends SimpleChannelUpstreamHandler implements
 				String command = m.group();
 				List<String> args = new ArrayList<>();
 				String arg;
+				
 				while (m.find())
 				{
 					arg = m.group(1);
+					
 					if (arg == null)
 					{
 						arg = m.group(0);
 					}
+					
 					args.add(arg);
 				}
+				
 				response = tryHandleCommand(command, args.toArray(new String[args.size()]));
 			}
 		}
+		
 		ChannelFuture future = e.getChannel().write(response);
+		
 		if (close)
 		{
 			future.addListener(ChannelFutureListener.CLOSE);

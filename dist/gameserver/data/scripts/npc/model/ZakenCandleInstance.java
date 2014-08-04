@@ -25,7 +25,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public final class ZakenCandleInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -71,10 +71,12 @@ public final class ZakenCandleInstance extends NpcInstance
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 		Reflection r = getReflection();
+		
 		if (r.isDefault() || used)
 		{
 			return;
 		}
+		
 		for (NpcInstance npc : getAroundNpc(1000, 100))
 		{
 			if (npc.getNpcId() == Anchor)
@@ -87,6 +89,7 @@ public final class ZakenCandleInstance extends NpcInstance
 				return;
 			}
 		}
+		
 		setRHandId(THS_Weapon);
 		startAbnormalEffect(AbnormalEffect.REDCIRCLE);
 		player.sendMessage("Not Here...");

@@ -29,7 +29,7 @@ import lineage2.gameserver.templates.spawn.SpawnTemplate;
 public class HardSpawner extends Spawner
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -112,11 +112,13 @@ public class HardSpawner extends Spawner
 	public int getCurrentNpcId()
 	{
 		SpawnNpcInfo npcInfo = _template.getNpcId(_npcIndex);
+		
 		if (npcInfo.getTemplate() == null)
 		{
 			_log.warn("NpcIndex not found: " + _npcIndex);
 			return 0;
 		}
+		
 		return npcInfo.getTemplate().npcId;
 	}
 	
@@ -147,11 +149,13 @@ public class HardSpawner extends Spawner
 	public void deleteAll()
 	{
 		super.deleteAll();
+		
 		for (NpcInstance npc : _reSpawned)
 		{
 			npc.setSpawn(null);
 			npc.deleteMe();
 		}
+		
 		_reSpawned.clear();
 	}
 	
@@ -162,14 +166,18 @@ public class HardSpawner extends Spawner
 	private synchronized SpawnNpcInfo getNextNpcInfo()
 	{
 		int old = _npcIndex++;
+		
 		if (_npcIndex >= _template.getNpcSize())
 		{
 			_npcIndex = 0;
 		}
+		
 		SpawnNpcInfo npcInfo = _template.getNpcId(old);
+		
 		if (npcInfo.getMax() > 0)
 		{
 			int count = 0;
+			
 			for (NpcInstance npc : _spawned)
 			{
 				if (npc.getNpcId() == npcInfo.getTemplate().getNpcId())
@@ -177,11 +185,13 @@ public class HardSpawner extends Spawner
 					count++;
 				}
 			}
+			
 			if (count >= npcInfo.getMax())
 			{
 				return getNextNpcInfo();
 			}
 		}
+		
 		return npcInfo;
 	}
 	
@@ -192,10 +202,12 @@ public class HardSpawner extends Spawner
 	private synchronized int getNextRangeId()
 	{
 		int old = _pointIndex++;
+		
 		if (_pointIndex >= _template.getSpawnRangeSize())
 		{
 			_pointIndex = 0;
 		}
+		
 		return old;
 	}
 	

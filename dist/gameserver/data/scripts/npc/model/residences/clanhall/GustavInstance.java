@@ -45,7 +45,7 @@ import npc.model.residences.SiegeGuardInstance;
 public class GustavInstance extends SiegeGuardInstance implements _34SiegeGuard
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -89,16 +89,21 @@ public class GustavInstance extends SiegeGuardInstance implements _34SiegeGuard
 		{
 			_canDead.set(true);
 			setCurrentHp(1, true);
+			
 			for (Creature cha : World.getAroundCharacters(this))
 			{
 				ThreadPoolManager.getInstance().execute(new GameObjectTasks.NotifyAITask(cha, CtrlEvent.EVT_FORGET_OBJECT, this, null));
 			}
+			
 			ClanHallSiegeEvent siegeEvent = getEvent(ClanHallSiegeEvent.class);
+			
 			if (siegeEvent == null)
 			{
 				return;
 			}
+			
 			SpawnExObject obj = siegeEvent.getFirstObject(ClanHallSiegeEvent.BOSS);
+			
 			for (int i = 0; i < 3; i++)
 			{
 				final NpcInstance npc = obj.getSpawns().get(i).getFirstSpawned();
@@ -111,6 +116,7 @@ public class GustavInstance extends SiegeGuardInstance implements _34SiegeGuard
 					{
 						Location loc = Location.findAroundPosition(177134, -18807, -2256, 50, 100, npc.getGeoIndex());
 						npc.teleToLocation(loc);
+						
 						if (npc == GustavInstance.this)
 						{
 							npc.reduceCurrentHp(npc.getCurrentHp(), 0, npc, null, false, false, false, false, false, false, false);
@@ -126,11 +132,14 @@ public class GustavInstance extends SiegeGuardInstance implements _34SiegeGuard
 				_teleportTask.cancel(false);
 				_teleportTask = null;
 			}
+			
 			SiegeEvent<?, ?> siegeEvent = getEvent(SiegeEvent.class);
+			
 			if (siegeEvent == null)
 			{
 				return;
 			}
+			
 			siegeEvent.processStep(getMostDamagedClan());
 			super.onDeath(killer);
 		}
@@ -145,10 +154,12 @@ public class GustavInstance extends SiegeGuardInstance implements _34SiegeGuard
 		ClanHallSiegeEvent siegeEvent = getEvent(ClanHallSiegeEvent.class);
 		Player temp = null;
 		Map<Player, Integer> damageMap = new HashMap<>();
+		
 		for (AggroList.HateInfo info : getAggroList().getPlayableMap().values())
 		{
 			Playable killer = (Playable) info.attacker;
 			int damage = info.damage;
+			
 			if (killer.isPet() || killer.isServitor())
 			{
 				temp = killer.getPlayer();
@@ -157,10 +168,12 @@ public class GustavInstance extends SiegeGuardInstance implements _34SiegeGuard
 			{
 				temp = (Player) killer;
 			}
+			
 			if ((temp == null) || (siegeEvent.getSiegeClan(SiegeEvent.ATTACKERS, temp.getClan()) == null))
 			{
 				continue;
 			}
+			
 			if (!damageMap.containsKey(temp))
 			{
 				damageMap.put(temp, damage);
@@ -171,18 +184,22 @@ public class GustavInstance extends SiegeGuardInstance implements _34SiegeGuard
 				damageMap.put(temp, dmg);
 			}
 		}
+		
 		int mostDamage = 0;
 		Player player = null;
+		
 		for (Map.Entry<Player, Integer> entry : damageMap.entrySet())
 		{
 			int damage = entry.getValue();
 			Player t = entry.getKey();
+			
 			if (damage > mostDamage)
 			{
 				mostDamage = damage;
 				player = t;
 			}
 		}
+		
 		return player == null ? null : player.getClan();
 	}
 	

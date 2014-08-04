@@ -55,6 +55,7 @@ public class Default extends Skill
 		{
 			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.skills.skillclasses.Default.NotImplemented", (Player) activeChar).addNumber(getId()).addString("" + getSkillType()));
 		}
+		
 		_log.warn("NOTDONE skill: " + getId() + ", used by " + activeChar);
 		activeChar.sendActionFailed();
 	}

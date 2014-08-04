@@ -25,7 +25,7 @@ import lineage2.gameserver.utils.WarehouseFunctions;
 public class FreightSenderInstance extends MerchantInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -51,6 +51,7 @@ public class FreightSenderInstance extends MerchantInstance
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("deposit_items"))
 		{
 			player.sendPacket(new PackageToList(player));

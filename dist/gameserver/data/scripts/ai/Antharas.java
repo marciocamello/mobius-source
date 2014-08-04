@@ -78,10 +78,12 @@ public class Antharas extends DefaultAI
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		AntharasManager.setLastAttackTime();
+		
 		for (Playable p : AntharasManager.getZone().getInsidePlayables())
 		{
 			notifyEvent(CtrlEvent.EVT_AGGRESSION, p, 1);
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	
@@ -104,17 +106,22 @@ public class Antharas extends DefaultAI
 	{
 		clearTasks();
 		Creature target = prepareTarget();
+		
 		if (target == null)
 		{
 			return false;
 		}
+		
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return false;
 		}
+		
 		final double distance = actor.getDistance(target);
 		final double chp = actor.getCurrentHpPercents();
+		
 		if (_hpStage == 0)
 		{
 			actor.altOnMagicUseTimer(actor, s_regen1);
@@ -135,17 +142,21 @@ public class Antharas extends DefaultAI
 			actor.altOnMagicUseTimer(actor, s_regen3);
 			_hpStage = 4;
 		}
+		
 		if ((_minionsSpawnDelay < System.currentTimeMillis()) && (getAliveMinionsCount() < 30) && Rnd.chance(5))
 		{
 			final NpcInstance minion = Functions.spawn(Location.findPointToStay(actor.getLoc(), 400, 700, actor.getGeoIndex()), Rnd.chance(50) ? 29190 : 29069);
 			minions.add(minion);
 			AntharasManager.addSpawnedMinion(minion);
 		}
+		
 		if (Rnd.chance(50))
 		{
 			return chooseTaskAndTargets(Rnd.chance(50) ? s_antharas_ordinary_attack : s_antharas_ordinary_attack2, target, distance);
 		}
+		
 		final Map<Skill, Integer> d_skill = new HashMap<>();
+		
 		switch (_hpStage)
 		{
 			case 1:
@@ -153,12 +164,14 @@ public class Antharas extends DefaultAI
 				addDesiredSkill(d_skill, target, distance, s_paralyze);
 				addDesiredSkill(d_skill, target, distance, s_meteor);
 				break;
+			
 			case 2:
 				addDesiredSkill(d_skill, target, distance, s_curse);
 				addDesiredSkill(d_skill, target, distance, s_paralyze);
 				addDesiredSkill(d_skill, target, distance, s_meteor);
 				addDesiredSkill(d_skill, target, distance, s_fear2);
 				break;
+			
 			case 3:
 				addDesiredSkill(d_skill, target, distance, s_curse);
 				addDesiredSkill(d_skill, target, distance, s_paralyze);
@@ -167,6 +180,7 @@ public class Antharas extends DefaultAI
 				addDesiredSkill(d_skill, target, distance, s_shock2);
 				addDesiredSkill(d_skill, target, distance, s_breath);
 				break;
+			
 			case 4:
 				addDesiredSkill(d_skill, target, distance, s_curse);
 				addDesiredSkill(d_skill, target, distance, s_paralyze);
@@ -177,14 +191,18 @@ public class Antharas extends DefaultAI
 				addDesiredSkill(d_skill, target, distance, s_shock);
 				addDesiredSkill(d_skill, target, distance, s_breath);
 				break;
+			
 			default:
 				break;
 		}
+		
 		final Skill r_skill = selectTopSkill(d_skill);
+		
 		if ((r_skill != null) && !r_skill.isOffensive())
 		{
 			target = actor;
 		}
+		
 		return chooseTaskAndTargets(r_skill, target, distance);
 	}
 	
@@ -195,6 +213,7 @@ public class Antharas extends DefaultAI
 	private int getAliveMinionsCount()
 	{
 		int i = 0;
+		
 		for (NpcInstance n : minions)
 		{
 			if ((n != null) && !n.isDead())
@@ -202,6 +221,7 @@ public class Antharas extends DefaultAI
 				i++;
 			}
 		}
+		
 		return i;
 	}
 	
@@ -230,6 +250,7 @@ public class Antharas extends DefaultAI
 				n.deleteMe();
 			}
 		}
+		
 		super.onEvtDead(killer);
 	}
 }

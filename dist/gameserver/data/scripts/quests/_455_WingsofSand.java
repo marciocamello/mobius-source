@@ -153,6 +153,7 @@ public class _455_WingsofSand extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("sepsoul_q455_05.htm"))
 		{
 			st.setState(STARTED);
@@ -164,23 +165,29 @@ public class _455_WingsofSand extends Quest implements ScriptFile
 			st.takeAllItems(LargeDragon);
 			StringTokenizer tokenizer = new StringTokenizer(event);
 			tokenizer.nextToken();
+			
 			switch (Integer.parseInt(tokenizer.nextToken()))
 			{
 				case 1:
 					st.giveItems(reward_mats_w[Rnd.get(reward_mats_w.length)], Rnd.get(1, 2));
 					break;
+				
 				case 2:
 					st.giveItems(reward_mats_a[Rnd.get(reward_mats_a.length)], Rnd.get(1, 2));
 					break;
+				
 				case 3:
 					st.giveItems(reward_mats_acc[Rnd.get(reward_mats_acc.length)], Rnd.get(1, 2));
 					break;
+				
 				case 4:
 					st.giveItems(reward_attr_crystal[Rnd.get(reward_attr_crystal.length)], 1);
 					break;
+				
 				default:
 					break;
 			}
+			
 			htmltext = "sepsoul_q455_08.htm";
 			st.setState(COMPLETED);
 			st.playSound(SOUND_FINISH);
@@ -191,32 +198,40 @@ public class _455_WingsofSand extends Quest implements ScriptFile
 			st.takeAllItems(LargeDragon);
 			StringTokenizer tokenizer = new StringTokenizer(event);
 			tokenizer.nextToken();
+			
 			switch (Integer.parseInt(tokenizer.nextToken()))
 			{
 				case 1:
 					st.giveItems(reward_resipes_w[Rnd.get(reward_resipes_w.length)], 1);
 					break;
+				
 				case 2:
 					st.giveItems(reward_resipes_a[Rnd.get(reward_resipes_a.length)], 1);
 					break;
+				
 				case 3:
 					st.giveItems(reward_resipes_acc[Rnd.get(reward_resipes_acc.length)], 1);
 					break;
+				
 				case 4:
 					st.giveItems(reward_attr_crystal[Rnd.get(reward_attr_crystal.length)], 2);
 					break;
+				
 				default:
 					break;
 			}
+			
 			if (Rnd.chance(25))
 			{
 				st.giveItems(reward_ench_scroll[Rnd.get(reward_ench_scroll.length)], 1);
 			}
+			
 			htmltext = "sepsoul_q455_11.htm";
 			st.setState(COMPLETED);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(this);
 		}
+		
 		return htmltext;
 	}
 	
@@ -225,6 +240,7 @@ public class _455_WingsofSand extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (ArrayUtils.contains(SeparatedSoul, npc.getNpcId()))
 		{
 			switch (st.getState())
@@ -246,7 +262,9 @@ public class _455_WingsofSand extends Quest implements ScriptFile
 					{
 						htmltext = "sepsoul_q455_00a.htm";
 					}
+					
 					break;
+				
 				case STARTED:
 					if (cond == 1)
 					{
@@ -260,9 +278,11 @@ public class _455_WingsofSand extends Quest implements ScriptFile
 					{
 						htmltext = "sepsoul_q455_10.htm";
 					}
+					
 					break;
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -270,6 +290,7 @@ public class _455_WingsofSand extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if (cond == 1)
 		{
 			st.giveItems(LargeDragon, 1);
@@ -279,6 +300,7 @@ public class _455_WingsofSand extends Quest implements ScriptFile
 		{
 			st.setCond(3);
 		}
+		
 		return null;
 	}
 	

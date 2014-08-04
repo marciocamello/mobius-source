@@ -33,6 +33,7 @@ public class ExMpccPartymasterList extends L2GameServerPacket
 	{
 		writeEx(0xA3);
 		writeD(_members.size());
+		
 		for (String t : _members)
 		{
 			writeS(t);

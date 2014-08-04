@@ -826,15 +826,18 @@ public class Config
 		LOGIN_SERVER_GM_ONLY = serverSettings.getProperty("ServerGMOnly", false);
 		LOGIN_SERVER_BRACKETS = serverSettings.getProperty("ServerBrackets", false);
 		LOGIN_SERVER_IS_PVP = serverSettings.getProperty("PvPServer", false);
+		
 		for (String a : serverSettings.getProperty("ServerType", ArrayUtils.EMPTY_STRING_ARRAY))
 		{
 			if (a.trim().isEmpty())
 			{
 				continue;
 			}
+			
 			ServerType t = ServerType.valueOf(a.toUpperCase());
 			LOGIN_SERVER_SERVER_TYPE |= t.getMask();
 		}
+		
 		INTERNAL_HOSTNAME = serverSettings.getProperty("InternalHostname", "*");
 		EXTERNAL_HOSTNAME = serverSettings.getProperty("ExternalHostname", "*");
 		REQUEST_ID = serverSettings.getProperty("RequestServerID", 0);
@@ -909,6 +912,7 @@ public class Config
 		AUTODESTROY_PLAYER_ITEM_AFTER = serverSettings.getProperty("AutoDestroyPlayerDroppedItemAfter", 0);
 		DELETE_DAYS = serverSettings.getProperty("DeleteCharAfterDays", 7);
 		PURGE_BYPASS_TASK_FREQUENCY = serverSettings.getProperty("PurgeTaskFrequency", 60);
+		
 		try
 		{
 			DATAPACK_ROOT = new File(serverSettings.getProperty("DatapackRoot", ".")).getCanonicalFile();
@@ -917,6 +921,7 @@ public class Config
 		{
 			_log.error("", e);
 		}
+		
 		ALLOW_DISCARDITEM = serverSettings.getProperty("AllowDiscardItem", true);
 		ALLOW_MAIL = serverSettings.getProperty("AllowMail", true);
 		ALLOW_WAREHOUSE = serverSettings.getProperty("AllowWarehouse", true);
@@ -955,6 +960,7 @@ public class Config
 		CHAT_MESSAGE_MAX_LEN = serverSettings.getProperty("ChatMessageLimit", 1000);
 		ABUSEWORD_BANCHAT = serverSettings.getProperty("ABUSEWORD_BANCHAT", false);
 		int counter = 0;
+		
 		for (int id : serverSettings.getProperty("ABUSEWORD_BAN_CHANNEL", new int[]
 		{
 			0
@@ -971,6 +977,7 @@ public class Config
 		ABUSEWORD_BANTIME = serverSettings.getProperty("ABUSEWORD_UNBAN_TIMER", 30);
 		CHATFILTER_MIN_LEVEL = serverSettings.getProperty("ChatFilterMinLevel", 0);
 		counter = 0;
+		
 		for (int id : serverSettings.getProperty("ChatFilterChannels", new int[]
 		{
 			1,
@@ -1009,10 +1016,12 @@ public class Config
 		ALLOW_PACKET_FAIL = serverSettings.getProperty("AllowPacketFail", false);
 		Random ppc = new Random();
 		int z = ppc.nextInt(6);
+		
 		if (z == 0)
 		{
 			z += 2;
 		}
+		
 		for (int x = 0; x < 8; x++)
 		{
 			if (x == 4)
@@ -1024,6 +1033,7 @@ public class Config
 				RWHO_ARRAY[x] = 51 + ppc.nextInt(z);
 			}
 		}
+		
 		RWHO_ARRAY[11] = 37265 + ppc.nextInt((z * 2) + 3);
 		RWHO_ARRAY[8] = 51 + ppc.nextInt(z);
 		z = 36224 + ppc.nextInt(z * 2);
@@ -1046,6 +1056,7 @@ public class Config
 	{
 		ExProperties communitySettings = load(COMMUNITY_CONFIGURATION_FILE);
 		COMMUNITYBOARD_ENABLED = communitySettings.getProperty("CommunityBoardEnable", true);
+		
 		if (COMMUNITYBOARD_ENABLED)
 		{
 			ALLOW_COMMUNITYBOARD_IN_COMBAT = communitySettings.getProperty("AllowInCombat", false);
@@ -1054,10 +1065,12 @@ public class Config
 			BBS_HOME_DIR = communitySettings.getProperty("BBSHomeDir", "scripts/services/community/");
 			COMMUNITYBOARD_SHOP_ENABLED = communitySettings.getProperty("CommunityShopEnable", false);
 			COMMUNITYBOARD_SELL_ENABLED = communitySettings.getProperty("CommunitySellEnable", false);
+			
 			for (String name : communitySettings.getProperty("AllowMultisell", ArrayUtils.EMPTY_STRING_ARRAY))
 			{
 				COMMUNITYBOARD_MULTISELL_ALLOW.add(name);
 			}
+			
 			COMMUNITYBOARD_BUFFER_ENABLED = communitySettings.getProperty("CommunityBufferEnable", false);
 			COMMUNITYBOARD_BUFFER_PET_ENABLED = communitySettings.getProperty("CommunityBufferPetEnable", false);
 			COMMUNITYBOARD_BUFFER_SAVE_ENABLED = communitySettings.getProperty("CommunityBufferSaveEnable", false);
@@ -1066,6 +1079,7 @@ public class Config
 			COMMUNITYBOARD_BUFF_TIME = communitySettings.getProperty("CommunityBuffTime", 20) * 60000;
 			COMMUNITYBOARD_BUFF_PICE = communitySettings.getProperty("CommunityBuffPice", 5000);
 			COMMUNITYBOARD_BUFF_SAVE_PICE = communitySettings.getProperty("CommunityBuffSavePice", 50000);
+			
 			for (int id : communitySettings.getProperty("AllowEffect", new int[]
 			{
 				1085,
@@ -1075,6 +1089,7 @@ public class Config
 			{
 				COMMUNITYBOARD_BUFF_ALLOW.add(Integer.valueOf(id));
 			}
+			
 			for (int id : communitySettings.getProperty("MageScheme", new int[]
 			{
 				1085
@@ -1082,6 +1097,7 @@ public class Config
 			{
 				COMMUNITI_LIST_MAGE_SUPPORT.add(Integer.valueOf(id));
 			}
+			
 			for (int id : communitySettings.getProperty("FighterScheme", new int[]
 			{
 				1085
@@ -1287,12 +1303,13 @@ public class Config
 		STARTING_ITEMS = otherSettings.getProperty("StartingItems", false);
 		STARTING_ITEMS_ID_QTY = new ArrayList<>();
 		String[] propertySplit = otherSettings.getProperty("StartingItemsIdQty", "20635,1;20638,1").split(";");
+		
 		for (String reward : propertySplit)
 		{
 			String[] rewardSplit = reward.split(",");
+			
 			if (rewardSplit.length != 2)
 			{
-				
 			}
 			else
 			{
@@ -1306,7 +1323,6 @@ public class Config
 				}
 				catch (NumberFormatException nfe)
 				{
-					
 				}
 			}
 		}
@@ -1443,6 +1459,7 @@ public class Config
 			20,
 			10
 		});
+		
 		if (ALT_GAME_DUALCLASS_REAWAKENING_COST.length != 10)
 		{
 			double[] DefaultValues = new double[]
@@ -1461,6 +1478,7 @@ public class Config
 			ALT_GAME_DUALCLASS_REAWAKENING_COST = DefaultValues;
 			_log.warn("altGameReawakeningCost - Incorrect values for corresponding levels, loaded default values.");
 		}
+		
 		ALT_MAX_LEVEL = Math.min(altSettings.getProperty("AltMaxLevel", 99), Experience.LEVEL.length - 1);
 		ALT_MAX_SUB_LEVEL = Math.min(altSettings.getProperty("AltMaxSubLevel", 80), Experience.LEVEL.length - 1);
 		ALT_MAX_DUAL_SUB_LEVEL = Math.min(altSettings.getProperty("AltMaxDualSubLevel", 99), Experience.LEVEL.length - 1);
@@ -1629,6 +1647,7 @@ public class Config
 	public static void loadServicesSettings()
 	{
 		ExProperties servicesSettings = load(SERVICES_FILE);
+		
 		for (int id : servicesSettings.getProperty("AllowClassMasters", ArrayUtils.EMPTY_INT_ARRAY))
 		{
 			if (id != 0)
@@ -1636,26 +1655,33 @@ public class Config
 				ALLOW_CLASS_MASTERS_LIST.add(id);
 			}
 		}
+		
 		CLASS_MASTERS_PRICE = servicesSettings.getProperty("ClassMastersPrice", "0,0,0,0");
+		
 		if (CLASS_MASTERS_PRICE.length() >= 7)
 		{
 			int level = 1;
+			
 			for (String id : CLASS_MASTERS_PRICE.split(","))
 			{
 				CLASS_MASTERS_PRICE_LIST[level] = Integer.parseInt(id);
 				level++;
 			}
 		}
+		
 		CLASS_MASTERS_PRICE_ITEM = servicesSettings.getProperty("ClassMastersPriceItem", "0,0,0,0");
+		
 		if (CLASS_MASTERS_PRICE_ITEM.length() >= 7)
 		{
 			int level = 1;
+			
 			for (String id : CLASS_MASTERS_PRICE_ITEM.split(","))
 			{
 				CLASS_MASTERS_PRICE_ITEM_LIST[level] = Integer.parseInt(id);
 				level++;
 			}
 		}
+		
 		SERVICES_CHANGE_NICK_ENABLED = servicesSettings.getProperty("NickChangeEnabled", false);
 		SERVICES_CHANGE_NICK_PRICE = servicesSettings.getProperty("NickChangePrice", 100);
 		SERVICES_CHANGE_NICK_ITEM = servicesSettings.getProperty("NickChangeItem", 4037);
@@ -1796,6 +1822,7 @@ public class Config
 		DROPCHANCE_EQUIPMENT = pvpSettings.getProperty("ChanceOfDropEquippment", 17);
 		DROPCHANCE_ITEM = pvpSettings.getProperty("ChanceOfDropOther", 80);
 		KARMA_LIST_NONDROPPABLE_ITEMS = new ArrayList<>();
+		
 		for (int id : pvpSettings.getProperty("ListOfNonDroppableItems", new int[]
 		{
 			57,
@@ -2015,18 +2042,22 @@ public class Config
 	{
 		List<Pattern> tmp = new ArrayList<>();
 		LineNumberReader lnr = null;
+		
 		try
 		{
 			String line;
 			lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(ANUSEWORDS_CONFIG_FILE), "UTF-8"));
+			
 			while ((line = lnr.readLine()) != null)
 			{
 				StringTokenizer st = new StringTokenizer(line, "\n\r");
+				
 				if (st.hasMoreTokens())
 				{
 					tmp.add(Pattern.compile(".*" + st.nextToken() + ".*", Pattern.DOTALL | Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE));
 				}
 			}
+			
 			ABUSEWORD_LIST = tmp.toArray(new Pattern[tmp.size()]);
 			tmp.clear();
 			_log.info("Abuse: Loaded " + ABUSEWORD_LIST.length + " abuse words.");
@@ -2058,11 +2089,13 @@ public class Config
 		gmlist.clear();
 		loadGMAccess(new File(GM_PERSONAL_ACCESS_FILE));
 		File dir = new File(GM_ACCESS_FILES_DIR);
+		
 		if (!dir.exists() || !dir.isDirectory())
 		{
 			_log.info("Dir " + dir.getAbsolutePath() + " not exists.");
 			return;
 		}
+		
 		for (File f : dir.listFiles())
 		{
 			if (!f.isDirectory() && f.getName().endsWith(".xml"))
@@ -2085,6 +2118,7 @@ public class Config
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
 			Document doc = factory.newDocumentBuilder().parse(file);
+			
 			for (Node z = doc.getFirstChild(); z != null; z = z.getNextSibling())
 			{
 				for (Node n = z.getFirstChild(); n != null; n = n.getNextSibling())
@@ -2093,15 +2127,19 @@ public class Config
 					{
 						continue;
 					}
+					
 					PlayerAccess pa = new PlayerAccess();
+					
 					for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 					{
 						Class<?> cls = pa.getClass();
 						String node = d.getNodeName();
+						
 						if (node.equalsIgnoreCase("#text"))
 						{
 							continue;
 						}
+						
 						try
 						{
 							fld = cls.getField(node);
@@ -2111,6 +2149,7 @@ public class Config
 							_log.info("Not found desclarate ACCESS name: " + node + " in XML Player access Object");
 							continue;
 						}
+						
 						if (fld.getType().getName().equalsIgnoreCase("boolean"))
 						{
 							fld.setBoolean(pa, Boolean.parseBoolean(d.getAttributes().getNamedItem("set").getNodeValue()));
@@ -2120,6 +2159,7 @@ public class Config
 							fld.setInt(pa, Integer.valueOf(d.getAttributes().getNamedItem("set").getNodeValue()));
 						}
 					}
+					
 					gmlist.put(pa.PlayerID, pa);
 				}
 			}
@@ -2138,10 +2178,12 @@ public class Config
 	public static String getField(String fieldName)
 	{
 		Field field = FieldUtils.getField(Config.class, fieldName);
+		
 		if (field == null)
 		{
 			return null;
 		}
+		
 		try
 		{
 			return String.valueOf(field.get(null));
@@ -2152,6 +2194,7 @@ public class Config
 		catch (IllegalAccessException e)
 		{
 		}
+		
 		return null;
 	}
 	
@@ -2164,10 +2207,12 @@ public class Config
 	public static boolean setField(String fieldName, String value)
 	{
 		Field field = FieldUtils.getField(Config.class, fieldName);
+		
 		if (field == null)
 		{
 			return false;
 		}
+		
 		try
 		{
 			if (field.getType() == boolean.class)
@@ -2203,6 +2248,7 @@ public class Config
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
@@ -2224,6 +2270,7 @@ public class Config
 	public static ExProperties load(File file)
 	{
 		ExProperties result = new ExProperties();
+		
 		try
 		{
 			result.load(file);
@@ -2232,6 +2279,7 @@ public class Config
 		{
 			_log.error("Error loading config : " + file.getName() + "!");
 		}
+		
 		return result;
 	}
 	
@@ -2249,6 +2297,7 @@ public class Config
 				return true;
 			}
 		}
+		
 		return false;
 	}
 }

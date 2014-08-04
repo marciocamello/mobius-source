@@ -27,7 +27,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class TreasureChestInstance extends ChestInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -54,6 +54,7 @@ public class TreasureChestInstance extends ChestInstance
 	public void tryOpen(Player opener, Skill skill)
 	{
 		double chance = calcChance(opener, skill);
+		
 		if (Rnd.chance(chance))
 		{
 			getAggroList().addDamageHate(opener, 10000, 0);
@@ -75,6 +76,7 @@ public class TreasureChestInstance extends ChestInstance
 	{
 		double chance = skill.getActivateRate();
 		int npcLvl = getLevel();
+		
 		if (!isCommonTreasureChest())
 		{
 			double levelmod = (double) skill.getMagicLevel() - npcLvl;
@@ -84,15 +86,18 @@ public class TreasureChestInstance extends ChestInstance
 		{
 			int openerLvl = opener.getLevel();
 			int lvlDiff = Math.max(openerLvl - npcLvl, 0);
+			
 			if (((openerLvl <= 77) && (lvlDiff >= 6)) || ((openerLvl >= 78) && (lvlDiff >= 5)))
 			{
 				chance = 0;
 			}
 		}
+		
 		if (chance < 0)
 		{
 			chance = 1;
 		}
+		
 		return chance;
 	}
 	
@@ -103,10 +108,12 @@ public class TreasureChestInstance extends ChestInstance
 	private void fakeOpen(Creature opener)
 	{
 		Skill bomb = SkillTable.getInstance().getInfo(TREASURE_BOMB_ID, getBombLvl());
+		
 		if (bomb != null)
 		{
 			doCast(bomb, opener, false);
 		}
+		
 		onDecay();
 	}
 	
@@ -118,6 +125,7 @@ public class TreasureChestInstance extends ChestInstance
 	{
 		int npcLvl = getLevel();
 		int lvl = 1;
+		
 		if (npcLvl >= 78)
 		{
 			lvl = 10;
@@ -154,6 +162,7 @@ public class TreasureChestInstance extends ChestInstance
 		{
 			lvl = 2;
 		}
+		
 		return lvl;
 	}
 	
@@ -164,10 +173,12 @@ public class TreasureChestInstance extends ChestInstance
 	private boolean isCommonTreasureChest()
 	{
 		int npcId = getNpcId();
+		
 		if ((npcId >= 18265) && (npcId <= 18286))
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	

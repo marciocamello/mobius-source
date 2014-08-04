@@ -58,14 +58,17 @@ public class Succubus extends Fighter
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((attacker == null) || (attacker.getPlayer() == null))
 		{
 			return;
 		}
+		
 		if (Rnd.chance(25))
 		{
 			Functions.npcSay(actor, SAY_TEXT[Rnd.get(SAY_TEXT.length)]);
 		}
+		
 		super.onEvtAttacked(attacker, damage);
 	}
 	
@@ -80,6 +83,7 @@ public class Succubus extends Fighter
 		SkillTable.getInstance().getInfo(14975, 1).getEffects(killer, killer, false, false);
 		SkillTable.getInstance().getInfo(14976, 1).getEffects(killer, killer, false, false);
 		SkillTable.getInstance().getInfo(14977, 1).getEffects(killer, killer, false, false);
+		
 		if (Rnd.chance(25))
 		{
 			Functions.npcSay(actor, NpcString.TO_THINK_THAT_I_COULD_FAIL_IMPOSSIBLE);
@@ -88,6 +92,7 @@ public class Succubus extends Fighter
 		{
 			Functions.npcSay(actor, NpcString.SHILEN_I_HAVE_FAILED);
 		}
+		
 		super.onEvtDead(killer);
 		getActor().endDecayTask();
 	}

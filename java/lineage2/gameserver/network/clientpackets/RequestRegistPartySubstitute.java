@@ -62,8 +62,6 @@ public class RequestRegistPartySubstitute extends L2GameClientPacket
 		}
 		
 		PartySubstitute.getInstance().addPlayerToReplace(chp);
-		
 		player.sendPacket(new ExRegistPartySubstitute(_changeCharId, ExRegistPartySubstitute.REGISTER_OK));
-		
 	}
 }

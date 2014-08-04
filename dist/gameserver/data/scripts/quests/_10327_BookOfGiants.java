@@ -78,12 +78,14 @@ public class _10327_BookOfGiants extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		Functions.npcSayToPlayer(Tairen, st.getPlayer(), NpcString.ENOUGH_OF_THIS_COME_AT_ME, ChatType.NPC_SAY);
+		
 		if (npcId == assasin)
 		{
 			if (Tairen != null)
 			{
 				Tairen.getAggroList().addDamageHate(npc, 0, 5000);
 			}
+			
 			if (killedassasin >= 1)
 			{
 				st.setCond(3);
@@ -96,12 +98,14 @@ public class _10327_BookOfGiants extends Quest implements ScriptFile
 				killedassasin++;
 			}
 		}
+		
 		return null;
 	}
 	
 	private void enterInstance(Player player)
 	{
 		Reflection reflection = player.getActiveReflection();
+		
 		if (reflection != null)
 		{
 			if (player.canReenterInstance(INSTANCE_ID))
@@ -113,17 +117,21 @@ public class _10327_BookOfGiants extends Quest implements ScriptFile
 		{
 			ReflectionUtils.enterReflection(player, INSTANCE_ID);
 		}
+		
 		List<NpcInstance> desks = player.getActiveReflection().getAllByNpcId(table, true);
 		double seed = Math.random();
 		int counter = 0;
+		
 		for (NpcInstance desk : desks)
 		{
 			if (((seed <= 0.25) && (counter == 0)) || ((seed > 0.25) && (seed <= 0.5) && (counter == 1)) || ((seed > 0.5) && (seed <= 0.75) && (counter == 2)) || ((seed > 0.75) && (counter == 3)))
 			{
 				bookDeskObjectId = desk.getObjectId();
 			}
+			
 			++counter;
 		}
+		
 		if ((bookDeskObjectId == 0) && (desks.size() > 0))
 		{
 			bookDeskObjectId = desks.get(0).getObjectId();
@@ -135,6 +143,7 @@ public class _10327_BookOfGiants extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		Player player = st.getPlayer();
+		
 		if (event.equalsIgnoreCase("quest_ac"))
 		{
 			st.setState(STARTED);
@@ -142,23 +151,28 @@ public class _10327_BookOfGiants extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "0-3.htm";
 		}
+		
 		if (event.equalsIgnoreCase("enter_museum"))
 		{
 			player.teleToLocation(-114360, 260184, -1224);
 			return null;
 		}
+		
 		if (event.equalsIgnoreCase("enter_instance"))
 		{
 			enterInstance(st.getPlayer());
 			st.playSound(SOUND_MIDDLE);
 			bookTaken = false;
 			Tairen = st.getPlayer().getActiveReflection().getAllByNpcId(tairen, true).get(0);
+			
 			if (Tairen != null)
 			{
 				Tairen.setRunning();
 			}
+			
 			return null;
 		}
+		
 		if (event.equalsIgnoreCase("qet_rev"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.ACCESSORIES_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
@@ -169,29 +183,35 @@ public class _10327_BookOfGiants extends Quest implements ScriptFile
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}
+		
 		if (event.equalsIgnoreCase("attak"))
 		{
 			htmltext = "";
 			st.startQuestTimer("attak", 5000);
+			
 			if (Tairen != null)
 			{
 				Tairen.moveToLocation(st.getPlayer().getLoc(), Rnd.get(0, 100), true);
 			}
+			
 			{
 				if (Rnd.chance(33))
 				{
 					Functions.npcSayToPlayer(Tairen, st.getPlayer(), NpcString.LOOKS_LIKE_ONLY_SKILL_BASED_ATTACKS_DAMAGE_THEM, ChatType.NPC_SAY);
 				}
+				
 				if (Rnd.chance(33))
 				{
 					Functions.npcSayToPlayer(Tairen, st.getPlayer(), NpcString.YOUR_NORMAL_ATTACKS_ARENT_WORKING, ChatType.NPC_SAY);
 				}
+				
 				if (Rnd.chance(33))
 				{
 					Functions.npcSayToPlayer(Tairen, st.getPlayer(), NpcString.USE_YOUR_SKILL_ATTACKS_AGAINST_THEM, ChatType.NPC_SAY);
 				}
 			}
 		}
+		
 		if (event.equalsIgnoreCase("spawnas"))
 		{
 			htmltext = "";
@@ -201,6 +221,7 @@ public class _10327_BookOfGiants extends Quest implements ScriptFile
 			asa.getAggroList().addDamageHate(st.getPlayer(), 0, 10000);
 			asa.setAggressionTarget(player);
 		}
+		
 		return htmltext;
 	}
 	
@@ -210,6 +231,7 @@ public class _10327_BookOfGiants extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
+		
 		if (npcId == panteleon)
 		{
 			if (st.isCompleted())
@@ -239,6 +261,7 @@ public class _10327_BookOfGiants extends Quest implements ScriptFile
 				htmltext = "0-nc.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 	
@@ -247,11 +270,14 @@ public class _10327_BookOfGiants extends Quest implements ScriptFile
 	{
 		String htmltext = "3-4.htm";
 		QuestState st = player.getQuestState(getClass());
+		
 		if (st == null)
 		{
 			return htmltext;
 		}
+		
 		int npcId = npc.getNpcId();
+		
 		if (npcId == table)
 		{
 			if ((npc.getObjectId() == bookDeskObjectId) && !bookTaken)
@@ -270,9 +296,11 @@ public class _10327_BookOfGiants extends Quest implements ScriptFile
 				htmltext = "2-1.htm";
 			}
 		}
+		
 		if (npcId == tairen)
 		{
 			htmltext = "3-4.htm";
+			
 			if (st.getCond() == 1)
 			{
 				htmltext = "3-1.htm";
@@ -286,6 +314,7 @@ public class _10327_BookOfGiants extends Quest implements ScriptFile
 				htmltext = "3-3.htm";
 			}
 		}
+		
 		return htmltext;
 	}
 }

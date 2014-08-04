@@ -26,7 +26,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public final class SnonePortalInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	private static final int VullockInstance = 193;
@@ -47,6 +47,7 @@ public final class SnonePortalInstance extends NpcInstance
 		if (command.equalsIgnoreCase("start"))
 		{
 			Reflection r = player.getActiveReflection();
+			
 			if (r != null)
 			{
 				if (player.canReenterInstance(VullockInstance))

@@ -40,13 +40,14 @@ public class ExResponseCommissionBuyItem extends L2GameServerPacket
 	{
 		writeEx(0xF9);
 		writeD(_code);
+		
 		if (_code == 0)
 		{
 			return;
 		}
+		
 		writeD(0x00); // unk, maybe item object Id
 		writeD(_itemId);
 		writeQ(_count);
-		
 	}
 }

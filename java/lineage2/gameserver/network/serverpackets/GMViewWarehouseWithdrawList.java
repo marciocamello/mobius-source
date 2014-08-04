@@ -35,6 +35,7 @@ public class GMViewWarehouseWithdrawList extends L2GameServerPacket
 		writeS(_charName);
 		writeQ(_charAdena);
 		writeH(_items.length);
+		
 		for (ItemInstance temp : _items)
 		{
 			writeItemInfo(temp);

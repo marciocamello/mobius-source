@@ -49,13 +49,16 @@ public class EffectManaHealOverTime extends Effect
 		{
 			return true;
 		}
+		
 		double mp = calc();
 		double newMp = (mp * (!_ignoreMpEff ? _effected.calcStat(Stats.MANAHEAL_EFFECTIVNESS, 100., _effector, getSkill()) : 100.)) / 100.;
 		double addToMp = Math.max(0, Math.min(newMp, ((_effected.calcStat(Stats.MP_LIMIT, null, null) * _effected.getMaxMp()) / 100.) - _effected.getCurrentMp()));
+		
 		if (addToMp > 0)
 		{
 			_effected.setCurrentMp(_effected.getCurrentMp() + addToMp);
 		}
+		
 		return true;
 	}
 }

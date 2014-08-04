@@ -101,10 +101,12 @@ public abstract class ReceivablePacket<T> extends AbstractPacket<T> implements R
 	{
 		StringBuilder sb = new StringBuilder();
 		char ch;
+		
 		while ((ch = getByteBuffer().getChar()) != 0)
 		{
 			sb.append(ch);
 		}
+		
 		return sb.toString();
 	}
 	

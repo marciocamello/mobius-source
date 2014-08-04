@@ -75,11 +75,13 @@ public class TriggerInfo extends Skill.AddedSkill
 		{
 			return false;
 		}
+		
 		Env env = new Env();
 		env.character = actor;
 		env.skill = owner;
 		env.target = target;
 		env.value = damage;
+		
 		for (Condition c : _conditions)
 		{
 			if (!c.test(env))
@@ -87,6 +89,7 @@ public class TriggerInfo extends Skill.AddedSkill
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	

@@ -42,20 +42,25 @@ public class MammonsInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		super.onBypassFeedback(player, command);
+		
 		if (command.startsWith("bmarket"))
 		{
 			ItemInstance ancientAdena = player.getInventory().getItemByItemId(ANCIENT_ADENA_ID);
 			long ancientAdenaAmount = ancientAdena != null ? ancientAdena.getCount() : 0L;
 			int val = Integer.parseInt(command.substring(11, 12).trim());
+			
 			if (command.length() > 12)
 			{
 				val = Integer.parseInt(command.substring(11, 13).trim());
 			}
+			
 			switch (val)
 			{
 				case 1:
 					long ancientAdenaConvert = 0L;
+					
 					try
 					{
 						ancientAdenaConvert = Long.parseLong(command.substring(13).trim());
@@ -70,17 +75,20 @@ public class MammonsInstance extends NpcInstance
 						player.sendMessage(new CustomMessage("common.IntegerAmount", player, new Object[0]));
 						return;
 					}
+					
 					if ((ancientAdenaAmount < ancientAdenaConvert) || (ancientAdenaConvert < 1L))
 					{
 						player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 						return;
 					}
+					
 					if (player.getInventory().destroyItemByItemId(ANCIENT_ADENA_ID, ancientAdenaConvert))
 					{
 						player.addAdena(ancientAdenaConvert);
 						player.sendPacket(SystemMessage2.removeItems(ANCIENT_ADENA_ID, ancientAdenaConvert));
 						player.sendPacket(SystemMessage2.obtainItems(ADENA, ancientAdenaConvert, 0));
 					}
+					
 					break;
 				
 				default:
@@ -95,24 +103,30 @@ public class MammonsInstance extends NpcInstance
 	{
 		int npcId = getTemplate().npcId;
 		String filename = MAMMONS_HTML_PATH;
+		
 		switch (npcId)
 		{
 			case 31092:
 				filename = new StringBuilder().append(filename).append("blkmrkt.htm").toString();
 				break;
+			
 			case 31113:
 				filename = new StringBuilder().append(filename).append("merchmamm.htm").toString();
 				break;
+			
 			case 31126:
 				filename = new StringBuilder().append(filename).append("blksmithmam.htm").toString();
 				break;
+			
 			case 33511:
 				filename = new StringBuilder().append(filename).append("priestmam.htm").toString();
 				break;
+			
 			default:
 				filename = getHtmlPath(npcId, val, player);
 				break;
 		}
+		
 		player.sendPacket(new NpcHtmlMessage(player, this, filename, val));
 	}
 }

@@ -35,7 +35,7 @@ import lineage2.gameserver.utils.Location;
 public class StaticObjectInstance extends GameObject
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -99,6 +99,7 @@ public class StaticObjectInstance extends GameObject
 			case 0:
 				player.sendPacket(new NpcHtmlMessage(player, getUId(), "newspaper/arena.htm", 0));
 				break;
+			
 			case 2:
 				player.sendPacket(new ShowTownMap(_template.getFilePath(), _template.getMapX(), _template.getMapY()));
 				break;
@@ -135,6 +136,7 @@ public class StaticObjectInstance extends GameObject
 	public void broadcastInfo(boolean force)
 	{
 		StaticObject p = new StaticObject(this);
+		
 		for (Player player : World.getAroundPlayers(this))
 		{
 			player.sendPacket(p);

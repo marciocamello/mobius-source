@@ -73,6 +73,7 @@ public class CastleDamageZoneDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -80,6 +81,7 @@ public class CastleDamageZoneDAO
 			statement.setInt(1, r.getId());
 			rset = statement.executeQuery();
 			set = new ArrayList<>();
+			
 			while (rset.next())
 			{
 				set.add(rset.getString("zone"));
@@ -105,6 +107,7 @@ public class CastleDamageZoneDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -131,6 +134,7 @@ public class CastleDamageZoneDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();

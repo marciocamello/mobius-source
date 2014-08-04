@@ -58,6 +58,7 @@ public class _496_IncarnationOfGluttonyKaliosGroup extends Quest implements Scri
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 		}
+		
 		return event;
 	}
 	
@@ -67,6 +68,7 @@ public class _496_IncarnationOfGluttonyKaliosGroup extends Quest implements Scri
 		int npcId = npc.getNpcId();
 		int state = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == KARTIA_RESEARCH)
 		{
 			if (state == 1)
@@ -75,14 +77,17 @@ public class _496_IncarnationOfGluttonyKaliosGroup extends Quest implements Scri
 				{
 					return "33647-3.htm";
 				}
+				
 				return "33647.htm";
 			}
+			
 			if (state == 2)
 			{
 				if (cond == 1)
 				{
 					return "33647-2.htm";
 				}
+				
 				if (cond == 2)
 				{
 					st.giveItems(34929, 1);
@@ -93,6 +98,7 @@ public class _496_IncarnationOfGluttonyKaliosGroup extends Quest implements Scri
 				}
 			}
 		}
+		
 		return "noquest";
 	}
 	
@@ -100,10 +106,12 @@ public class _496_IncarnationOfGluttonyKaliosGroup extends Quest implements Scri
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
+		
 		if ((cond != 1) || (npc == null))
 		{
 			return null;
 		}
+		
 		st.setCond(2);
 		return null;
 	}

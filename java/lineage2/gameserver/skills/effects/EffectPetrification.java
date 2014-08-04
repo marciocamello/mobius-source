@@ -42,6 +42,7 @@ public final class EffectPetrification extends Effect
 		{
 			return false;
 		}
+		
 		return super.checkCondition();
 	}
 	

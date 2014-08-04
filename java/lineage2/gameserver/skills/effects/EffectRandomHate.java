@@ -55,13 +55,16 @@ public class EffectRandomHate extends Effect
 	{
 		MonsterInstance monster = (MonsterInstance) getEffected();
 		Creature mostHated = monster.getAggroList().getMostHated();
+		
 		if (mostHated == null)
 		{
 			return;
 		}
+		
 		AggroList.AggroInfo mostAggroInfo = monster.getAggroList().get(mostHated);
 		List<Creature> hateList = monster.getAggroList().getHateList();
 		hateList.remove(mostHated);
+		
 		if (!hateList.isEmpty())
 		{
 			AggroList.AggroInfo newAggroInfo = monster.getAggroList().get(hateList.get(Rnd.get(hateList.size())));

@@ -59,13 +59,16 @@ public class EvilNpc extends DefaultAI
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((attacker == null) || (attacker.getPlayer() == null))
 		{
 			return;
 		}
+		
 		if ((System.currentTimeMillis() - _lastAction) > 3000)
 		{
 			final int chance = Rnd.get(0, 100);
+			
 			if (chance < 2)
 			{
 				attacker.getPlayer().setKarma(attacker.getPlayer().getKarma() + 5);
@@ -78,6 +81,7 @@ public class EvilNpc extends DefaultAI
 			{
 				actor.doCast(SkillTable.getInstance().getInfo(4185, 7), attacker, true);
 			}
+			
 			Functions.npcSay(actor, attacker.getName() + ", " + _txt[Rnd.get(_txt.length)]);
 			_lastAction = System.currentTimeMillis();
 		}

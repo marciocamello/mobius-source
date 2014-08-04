@@ -44,6 +44,7 @@ public class _10379_AnUninvitedGuest extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("warden_endrigo_q10379_06.htm"))
 		{
 			st.setCond(1);
@@ -58,6 +59,7 @@ public class _10379_AnUninvitedGuest extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
+		
 		return htmltext;
 	}
 	
@@ -67,6 +69,7 @@ public class _10379_AnUninvitedGuest extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		String htmltext = "noquest";
+		
 		if (npcId == ENDRIGO)
 		{
 			if (st.isCompleted())
@@ -95,8 +98,8 @@ public class _10379_AnUninvitedGuest extends Quest implements ScriptFile
 					htmltext = "warden_endrigo_q10379_02.htm";
 				}
 			}
-			
 		}
+		
 		return htmltext;
 	}
 	
@@ -105,6 +108,7 @@ public class _10379_AnUninvitedGuest extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
 		if (npcId == SCALDISECT_THE_FURIOUS)
 		{
 			if (cond == 1)
@@ -113,6 +117,7 @@ public class _10379_AnUninvitedGuest extends Quest implements ScriptFile
 				st.playSound(SOUND_MIDDLE);
 			}
 		}
+		
 		return null;
 	}
 	

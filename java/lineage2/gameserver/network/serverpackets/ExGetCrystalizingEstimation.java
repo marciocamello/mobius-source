@@ -45,6 +45,7 @@ public class ExGetCrystalizingEstimation extends L2GameServerPacket
 	{
 		writeEx(0xE1);
 		writeD(_items.size());
+		
 		for (CrystallizationItem i : _items)
 		{
 			writeD(i.getItemId());
@@ -63,6 +64,7 @@ public class ExGetCrystalizingEstimation extends L2GameServerPacket
 		{
 			_items = new ArrayList<>();
 		}
+		
 		_items.add(i);
 	}
 }

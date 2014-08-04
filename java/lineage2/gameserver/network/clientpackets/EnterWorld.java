@@ -136,26 +136,30 @@ public class EnterWorld extends L2GameClientPacket
 	{
 		GameClient client = getClient();
 		Player activeChar = client.getActiveChar();
+		
 		if (activeChar == null)
 		{
 			client.closeNow(false);
 			return;
 		}
+		
 		int MyObjectId = activeChar.getObjectId();
 		Long MyStoreId = activeChar.getStoredId();
+		
 		for (Castle castle : ResidenceHolder.getInstance().getResidenceList(Castle.class))
 		{
 			activeChar.sendPacket(new ExCastleState(castle));
 		}
+		
 		synchronized (_lock)
 		{
-			
 			for (Player cha : GameObjectsStorage.getAllPlayersForIterate())
 			{
 				if (MyStoreId.equals(cha.getStoredId()))
 				{
 					continue;
 				}
+				
 				try
 				{
 					if (cha.getObjectId() == MyObjectId)
@@ -172,15 +176,19 @@ public class EnterWorld extends L2GameClientPacket
 		}
 		GameStats.incrementPlayerEnterGame();
 		boolean first = activeChar.entering;
+		
 		if (first)
 		{
 			activeChar.setOnlineStatus(true);
+			
 			if (activeChar.getPlayerAccess().GodMode && !Config.SHOW_GM_LOGIN)
 			{
 				activeChar.setInvisibleType(InvisibleType.NORMAL);
 			}
+			
 			activeChar.setNonAggroTime(Long.MAX_VALUE);
 			activeChar.spawnMe();
+			
 			if (activeChar.isInStoreMode())
 			{
 				if (!TradeHelper.checksIfCanOpenStore(activeChar, activeChar.getPrivateStoreType()))
@@ -190,12 +198,13 @@ public class EnterWorld extends L2GameClientPacket
 					activeChar.broadcastCharInfo();
 				}
 			}
+			
 			activeChar.setRunning();
 			activeChar.standUp();
 			activeChar.startTimers();
 		}
-		activeChar.sendPacket(new ExBR_PremiumState(activeChar, activeChar.hasBonus()));
 		
+		activeChar.sendPacket(new ExBR_PremiumState(activeChar, activeChar.hasBonus()));
 		activeChar.getMacroses().sendUpdate(0x01, 0, true);
 		activeChar.sendPacket(new SSQInfo(), new HennaInfo(activeChar));
 		activeChar.sendItemList(false);
@@ -204,28 +213,35 @@ public class EnterWorld extends L2GameClientPacket
 		activeChar.sendPacket(new SkillCoolTime(activeChar));
 		// activeChar.sendPacket(new ExCastleState(_castle));
 		activeChar.sendPacket(new ExVitalityEffectInfo(activeChar));
+		
 		for (Castle castle : ResidenceHolder.getInstance().getResidenceList(Castle.class))
 		{
 			activeChar.sendPacket(new ExCastleState(castle));
 		}
+		
 		activeChar.sendPacket(SystemMsg.WELCOME_TO_THE_WORLD_OF_LINEAGE_II);
 		// activeChar.sendPacket(new ExBR_NewIConCashBtnWnd());
 		Announcements.getInstance().showAnnouncements(activeChar);
+		
 		if (first)
 		{
 			activeChar.getListeners().onEnter();
 		}
+		
 		if (first && (activeChar.getCreateTime() > 0))
 		{
 			Calendar create = Calendar.getInstance();
 			create.setTimeInMillis(activeChar.getCreateTime());
 			Calendar now = Calendar.getInstance();
 			int day = create.get(Calendar.DAY_OF_MONTH);
+			
 			if ((create.get(Calendar.MONTH) == Calendar.FEBRUARY) && (day == 29))
 			{
 				day = 28;
 			}
+			
 			int myBirthdayReceiveYear = activeChar.getVarInt(Player.MY_BIRTHDAY_RECEIVE_YEAR, 0);
+			
 			if ((create.get(Calendar.MONTH) == now.get(Calendar.MONTH)) && (create.get(Calendar.DAY_OF_MONTH) == day))
 			{
 				if (((myBirthdayReceiveYear == 0) && (create.get(Calendar.YEAR) != now.get(Calendar.YEAR))) || ((myBirthdayReceiveYear > 0) && (myBirthdayReceiveYear != now.get(Calendar.YEAR))))
@@ -250,17 +266,20 @@ public class EnterWorld extends L2GameClientPacket
 				}
 			}
 		}
+		
 		if (activeChar.getClan() != null)
 		{
 			notifyClanMembers(activeChar);
 			activeChar.sendPacket(activeChar.getClan().listAll());
 			activeChar.sendPacket(new PledgeShowInfoUpdate(activeChar.getClan()), new PledgeSkillList(activeChar.getClan()));
 		}
+		
 		if (first && Config.ALLOW_WEDDING)
 		{
 			CoupleManager.getInstance().engage(activeChar);
 			CoupleManager.getInstance().notifyPartner(activeChar);
 		}
+		
 		if (first)
 		{
 			activeChar.getFriendList().notifyFriends(true);
@@ -268,13 +287,16 @@ public class EnterWorld extends L2GameClientPacket
 			activeChar.restoreDisableSkills();
 			activeChar.mentoringLoginConditions();
 		}
+		
 		sendPacket(new L2FriendList(activeChar), new ExStorageMaxCount(activeChar), new QuestList(activeChar), new ExBasicActionList(activeChar), new EtcStatusUpdate(activeChar));
 		activeChar.checkHpMessages(activeChar.getMaxHp(), activeChar.getCurrentHp());
 		activeChar.checkDayNightMessages();
+		
 		if (Config.PETITIONING_ALLOWED)
 		{
 			PetitionManager.getInstance().checkPetitionMessages(activeChar);
 		}
+		
 		if (!first)
 		{
 			if (activeChar.isCastingNow())
@@ -282,34 +304,42 @@ public class EnterWorld extends L2GameClientPacket
 				Creature castingTarget = activeChar.getCastingTarget();
 				Skill castingSkill = activeChar.getCastingSkill();
 				long animationEndTime = activeChar.getAnimationEndTime();
+				
 				if ((castingSkill != null) && (castingTarget != null) && castingTarget.isCreature() && (activeChar.getAnimationEndTime() > 0))
 				{
 					sendPacket(new MagicSkillUse(activeChar, castingTarget, castingSkill.getId(), castingSkill.getLevel(), (int) (animationEndTime - System.currentTimeMillis()), 0));
 				}
 			}
+			
 			if (activeChar.isInBoat())
 			{
 				activeChar.sendPacket(activeChar.getBoat().getOnPacket(activeChar, activeChar.getInBoatPosition()));
 			}
+			
 			if (activeChar.isMoving || activeChar.isFollow)
 			{
 				sendPacket(activeChar.movePacket());
 			}
+			
 			if (activeChar.getMountNpcId() != 0)
 			{
 				sendPacket(new Ride(activeChar));
 			}
+			
 			if (activeChar.isFishing())
 			{
 				activeChar.stopFishing();
 			}
 		}
+		
 		activeChar.entering = false;
 		activeChar.sendUserInfo();
+		
 		if (activeChar.isSitting())
 		{
 			activeChar.sendPacket(new ChangeWaitType(activeChar, ChangeWaitType.WT_SITTING));
 		}
+		
 		if (activeChar.getPrivateStoreType() != Player.STORE_PRIVATE_NONE)
 		{
 			if (activeChar.getPrivateStoreType() == Player.STORE_PRIVATE_BUY)
@@ -325,12 +355,15 @@ public class EnterWorld extends L2GameClientPacket
 				sendPacket(new RecipeShopMsg(activeChar));
 			}
 		}
+		
 		if (activeChar.isDead())
 		{
 			sendPacket(new Die(activeChar));
 		}
+		
 		activeChar.unsetVar("offline");
 		activeChar.sendActionFailed();
+		
 		if (first && activeChar.isGM() && Config.SAVE_GM_EFFECTS && activeChar.getPlayerAccess().CanUseGMCommand)
 		{
 			if (activeChar.getVarB("gm_silence"))
@@ -338,15 +371,18 @@ public class EnterWorld extends L2GameClientPacket
 				activeChar.setMessageRefusal(true);
 				activeChar.sendPacket(SystemMsg.MESSAGE_REFUSAL_MODE);
 			}
+			
 			if (activeChar.getVarB("gm_invul"))
 			{
 				activeChar.setIsInvul(true);
 				activeChar.startAbnormalEffect(AbnormalEffect.S_INVINCIBLE);
 				activeChar.sendMessage(activeChar.getName() + " is now immortal.");
 			}
+			
 			try
 			{
 				int var_gmspeed = Integer.parseInt(activeChar.getVar("gm_gmspeed"));
+				
 				if ((var_gmspeed >= 1) && (var_gmspeed <= 4))
 				{
 					activeChar.doCast(SkillTable.getInstance().getInfo(7029, var_gmspeed), activeChar, true);
@@ -356,17 +392,21 @@ public class EnterWorld extends L2GameClientPacket
 			{
 			}
 		}
+		
 		PlayerMessageStack.getInstance().CheckMessages(activeChar);
 		sendPacket(ClientSetTime.STATIC, new ExSetCompassZoneCode(activeChar));
 		Pair<Integer, OnAnswerListener> entry = activeChar.getAskListener(false);
+		
 		if ((entry != null) && (entry.getValue() instanceof ReviveAnswerListener))
 		{
 			sendPacket(new ConfirmDlg(SystemMsg.C1_IS_MAKING_AN_ATTEMPT_TO_RESURRECT_YOU_IF_YOU_CHOOSE_THIS_PATH_S2_EXPERIENCE_WILL_BE_RETURNED_FOR_YOU, 0).addString("Other player").addString("some"));
 		}
+		
 		if (activeChar.isCursedWeaponEquipped())
 		{
 			CursedWeaponsManager.getInstance().showUsageTime(activeChar, activeChar.getCursedWeaponEquippedId());
 		}
+		
 		if (!first)
 		{
 			if (activeChar.isInObserverMode())
@@ -388,34 +428,42 @@ public class EnterWorld extends L2GameClientPacket
 			{
 				World.showObjectsToPlayer(activeChar);
 			}
+			
 			for (Summon summon : activeChar.getSummonList())
 			{
 				sendPacket(new PetInfo(summon));
 			}
+			
 			if (activeChar.isInParty())
 			{
 				sendPacket(new PartySmallWindowAll(activeChar.getParty(), activeChar));
+				
 				for (Player member : activeChar.getParty().getPartyMembers())
 				{
 					if (member != activeChar)
 					{
 						sendPacket(new PartySpelled(member, true));
+						
 						for (Summon memberPet : member.getSummonList())
 						{
 							sendPacket(new PartySpelled(memberPet, true));
 						}
+						
 						sendPacket(RelationChanged.update(activeChar, member, activeChar));
 					}
 				}
+				
 				if (activeChar.getParty().isInCommandChannel())
 				{
 					sendPacket(ExMPCCOpen.STATIC);
 				}
 			}
+			
 			for (int shotId : activeChar.getAutoSoulShot())
 			{
 				sendPacket(new ExAutoSoulShot(shotId, true));
 			}
+			
 			for (Effect e : activeChar.getEffectList().getAllFirstEffects())
 			{
 				if (e.getSkill().isToggle())
@@ -423,34 +471,41 @@ public class EnterWorld extends L2GameClientPacket
 					sendPacket(new MagicSkillLaunched(activeChar.getObjectId(), e.getSkill().getId(), e.getSkill().getLevel(), activeChar));
 				}
 			}
+			
 			activeChar.broadcastCharInfo();
 		}
 		else
 		{
 			activeChar.sendUserInfo();
 		}
+		
 		activeChar.updateEffectIcons();
 		activeChar.setCurrentHpMp(activeChar.getActiveSubClass().getlogOnHp(), activeChar.getActiveSubClass().getlogOnMp());
 		activeChar.setCurrentCp(activeChar.getActiveSubClass().getlogOnCp());
 		activeChar.updateStats();
+		
 		if (Config.ALT_PCBANG_POINTS_ENABLED)
 		{
 			activeChar.sendPacket(new ExPCCafePointInfo(activeChar, 0, 1, 2, 12));
 		}
+		
 		if (!activeChar.getPremiumItemList().isEmpty())
 		{
 			activeChar.sendPacket(Config.GOODS_INVENTORY_ENABLED ? ExGoodsInventoryChangedNotify.STATIC : ExNotifyPremiumItem.STATIC);
 		}
+		
 		if (activeChar.getVarB("HeroPeriod") && Config.SERVICES_HERO_SELL_ENABLED)
 		{
 			activeChar.setHero(activeChar);
 		}
+		
 		activeChar.sendVoteSystemInfo();
 		activeChar.sendPacket(new ExReceiveShowPostFriend(activeChar));
 		activeChar.sendPacket(new ExSubjobInfo(activeChar.getPlayer(), false));
 		activeChar.sendPacket(new ExVitalityEffectInfo(activeChar));
 		activeChar.sendPacket(new ExTutorialList());
 		activeChar.sendPacket(new ExWaitWaitingSubStituteInfo(true));
+		
 		for (Effect effect : activeChar.getEffectList().getAllEffects())
 		{
 			if (effect.isInUse())
@@ -461,10 +516,12 @@ public class EnterWorld extends L2GameClientPacket
 				}
 			}
 		}
+		
 		if (Config.ALT_GAME_REMOVE_PREVIOUS_CERTIFICATES)
 		{
 			Skill[] allSkill = activeChar.getAllSkillsArray();
 			int totalCertificates = 0;
+			
 			for (Skill skl : allSkill)
 			{
 				if ((skl.getId() >= 1573) && (skl.getId() <= 1581))
@@ -473,10 +530,12 @@ public class EnterWorld extends L2GameClientPacket
 					activeChar.removeSkill(skl, true);
 				}
 			}
+			
 			if (totalCertificates > 0)
 			{
 				activeChar.getInventory().addItem(10280, totalCertificates);
 				_log.info("EnterWorld: Player - " + activeChar.getName() + " - Has received " + totalCertificates + " by previous skill certificate deletion.");
+				
 				for (SubClass sc : activeChar.getSubClassList().values())
 				{
 					sc.setCertification(0);
@@ -484,6 +543,7 @@ public class EnterWorld extends L2GameClientPacket
 				}
 			}
 		}
+		
 		activeChar.sendPacket(new ExAcquirableSkillListByClass(activeChar));
 		activeChar.setPartySearchStatus(true);
 		activeChar.sendPacket(new ExWaitWaitingSubStituteInfo(true));
@@ -494,15 +554,18 @@ public class EnterWorld extends L2GameClientPacket
 		activeChar.sendPacket(new ExChangeMPCost(1, -10));
 		activeChar.sendPacket(new ExChangeMPCost(3, -20));
 		activeChar.sendPacket(new ExChangeMPCost(22, -20));
+		
 		if (activeChar.getVar("startMovie") == null)
 		{
 			activeChar.setVar("startMovie", "1", -1);
 			activeChar.sendPacket(new ExShowUsmVideo(ExShowUsmVideo.GD1_INTRO));
 		}
+		
 		if ((activeChar.getLevel() > 84) && !activeChar.isAwaking())
 		{
 			AwakingManager.getInstance().SendReqToStartQuest(activeChar);
 		}
+		
 		if (activeChar.isAwaking()) // If the characters returns to Main, or dual Subclass and Delete Skills prof are active, do check of Correct skills
 		{
 			if (Config.ALT_CHECK_SKILLS_AWAKENING)
@@ -520,23 +583,29 @@ public class EnterWorld extends L2GameClientPacket
 	{
 		Clan clan = activeChar.getClan();
 		SubUnit subUnit = activeChar.getSubUnit();
+		
 		if ((clan == null) || (subUnit == null))
 		{
 			return;
 		}
+		
 		UnitMember member = subUnit.getUnitMember(activeChar.getObjectId());
+		
 		if (member == null)
 		{
 			return;
 		}
+		
 		member.setPlayerInstance(activeChar, false);
 		int sponsor = activeChar.getSponsor();
 		int apprentice = activeChar.getApprentice();
 		L2GameServerPacket msg = new SystemMessage2(SystemMsg.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME).addName(activeChar);
 		PledgeShowMemberListUpdate memberUpdate = new PledgeShowMemberListUpdate(activeChar);
+		
 		for (Player clanMember : clan.getOnlineMembers(activeChar.getObjectId()))
 		{
 			clanMember.sendPacket(memberUpdate);
+			
 			if (clanMember.getObjectId() == sponsor)
 			{
 				clanMember.sendPacket(new SystemMessage2(SystemMsg.YOUR_APPRENTICE_C1_HAS_LOGGED_OUT).addName(activeChar));
@@ -550,20 +619,26 @@ public class EnterWorld extends L2GameClientPacket
 				clanMember.sendPacket(msg);
 			}
 		}
+		
 		activeChar.getClan().startNotifyClanEnterWorld(activeChar);
+		
 		if (!activeChar.isClanLeader())
 		{
 			return;
 		}
+		
 		ClanHall clanHall = clan.getHasHideout() > 0 ? ResidenceHolder.getInstance().getResidence(ClanHall.class, clan.getHasHideout()) : null;
+		
 		if ((clanHall == null) || (clanHall.getAuctionLength() != 0))
 		{
 			return;
 		}
+		
 		if (clanHall.getSiegeEvent().getClass() != ClanHallAuctionEvent.class)
 		{
 			return;
 		}
+		
 		if (clan.getWarehouse().getCountOf(ItemTemplate.ITEM_ID_ADENA) < clanHall.getRentalFee())
 		{
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_ME_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW).addLong(clanHall.getRentalFee()));
@@ -577,6 +652,7 @@ public class EnterWorld extends L2GameClientPacket
 	private void loadTutorial(Player player)
 	{
 		Quest q = QuestManager.getQuest(255);
+		
 		if (q != null)
 		{
 			player.processQuestEvent(q.getName(), "UC", null);

@@ -34,7 +34,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class KrateisCubeManagerInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -59,20 +59,24 @@ public class KrateisCubeManagerInstance extends NpcInstance
 		if (command.startsWith("Kratei_UnRegister"))
 		{
 			KrateisCubeRunnerEvent runnerEvent = EventHolder.getInstance().getEvent(EventType.MAIN_EVENT, 2);
+			
 			for (KrateisCubeEvent cubeEvent : runnerEvent.getCubes())
 			{
 				List<KrateisCubePlayerObject> list = cubeEvent.getObjects(KrateisCubeEvent.REGISTERED_PLAYERS);
 				KrateisCubePlayerObject krateisCubePlayer = cubeEvent.getRegisteredPlayer(player);
+				
 				if (krateisCubePlayer != null)
 				{
 					list.remove(krateisCubePlayer);
 				}
 			}
+			
 			showChatWindow(player, 4);
 		}
 		else if (command.startsWith("Kratei_TryRegister"))
 		{
 			KrateisCubeRunnerEvent runnerEvent = EventHolder.getInstance().getEvent(EventType.MAIN_EVENT, 2);
+			
 			if (runnerEvent.isRegistrationOver())
 			{
 				if (runnerEvent.isInProgress())
@@ -114,34 +118,43 @@ public class KrateisCubeManagerInstance extends NpcInstance
 				player.sendPacket(SystemMsg.YOU_CANNOT_BE_SIMULTANEOUSLY_REGISTERED_FOR_PVP_MATCHES_SUCH_AS_THE_OLYMPIAD_UNDERGROUND_COLISEUM_AERIAL_CLEFT_KRATEIS_CUBE_AND_HANDYS_BLOCK_CHECKERS);
 				return;
 			}
+			
 			if (player.isCursedWeaponEquipped())
 			{
 				player.sendPacket(SystemMsg.YOU_CANNOT_REGISTER_WHILE_IN_POSSESSION_OF_A_CURSED_WEAPON);
 				return;
 			}
+			
 			StringTokenizer t = new StringTokenizer(command);
+			
 			if (t.countTokens() < 2)
 			{
 				return;
 			}
+			
 			t.nextToken();
 			KrateisCubeEvent cubeEvent = EventHolder.getInstance().getEvent(EventType.PVP_EVENT, Integer.parseInt(t.nextToken()));
+			
 			if (cubeEvent == null)
 			{
 				return;
 			}
+			
 			if ((player.getLevel() < cubeEvent.getMinLevel()) || (player.getLevel() > cubeEvent.getMaxLevel()))
 			{
 				showChatWindow(player, 2);
 				return;
 			}
+			
 			List<KrateisCubePlayerObject> list = cubeEvent.getObjects(KrateisCubeEvent.REGISTERED_PLAYERS);
 			KrateisCubePlayerObject krateisCubePlayer = cubeEvent.getRegisteredPlayer(player);
+			
 			if (krateisCubePlayer != null)
 			{
 				showChatWindow(player, 6);
 				return;
 			}
+			
 			if (list.size() >= 25)
 			{
 				showChatWindow(player, 9);

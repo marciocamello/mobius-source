@@ -64,6 +64,7 @@ public class Files
 		{
 			_log.error("Error while copying file : " + srcFile + " to " + destFile, e);
 		}
+		
 		return false;
 	}
 }

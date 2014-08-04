@@ -32,6 +32,7 @@ public class ExFlyMove extends L2GameServerPacket
 	{
 		_objId = objId;
 		_points = points;
+		
 		if (_points.length > 1)
 		{
 			_type = MANY_WAY_TYPE;
@@ -40,6 +41,7 @@ public class ExFlyMove extends L2GameServerPacket
 		{
 			_type = ONE_WAY_TYPE;
 		}
+		
 		_trackId = trackId;
 	}
 	
@@ -48,12 +50,11 @@ public class ExFlyMove extends L2GameServerPacket
 	{
 		writeEx(0xE8);
 		writeD(_objId); // Player Object ID
-		
 		writeD(_type); // Fly Type (1 - Many Way, 2 - One Way)
 		writeD(0x00); // UNK
 		writeD(_trackId); // Track ID
-		
 		writeD(_points.length); // Next Points Count
+		
 		for (JumpPoint point : _points)
 		{
 			writeD(point.getNextWayId()); // Next Way ID

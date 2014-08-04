@@ -50,16 +50,20 @@ public class TelnetConfig implements TelnetCommandHolder
 				{
 					return null;
 				}
+				
 				String[] val = args[0].split("=");
+				
 				if (val.length == 1)
 				{
 					String value = Config.getField(args[0]);
 					return value == null ? "Not found.\n" : value + "\n";
 				}
+				
 				if (Config.setField(val[0], val[1]))
 				{
 					return "Done.\n";
 				}
+				
 				return "Error!\n";
 			}
 		});

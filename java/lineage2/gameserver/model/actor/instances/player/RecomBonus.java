@@ -160,10 +160,12 @@ public final class RecomBonus
 			{
 				return 0;
 			}
+			
 			int _lvl = (int) Math.ceil(activeChar.getLevel() / 10);
 			int _exp = (int) Math.ceil((Math.min(100, activeChar.getRecomHave()) - 1) / 10);
 			return _recoBonus[_lvl][_exp];
 		}
+		
 		return 0;
 	}
 	
@@ -175,10 +177,12 @@ public final class RecomBonus
 	public static double getRecoMultiplier(Player activeChar)
 	{
 		double bonus = getRecoBonus(activeChar);
+		
 		if (bonus > 0)
 		{
 			return 1. + (bonus / 100);
 		}
+		
 		return 1.;
 	}
 }

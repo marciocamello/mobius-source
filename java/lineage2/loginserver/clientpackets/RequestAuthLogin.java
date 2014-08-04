@@ -66,6 +66,7 @@ public class RequestAuthLogin extends L2LoginClientPacket
 	{
 		L2LoginClient client = getClient();
 		byte[] decrypted;
+		
 		try
 		{
 			Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
@@ -77,6 +78,7 @@ public class RequestAuthLogin extends L2LoginClientPacket
 			client.closeNow(true);
 			return;
 		}
+		
 		String user = new String(decrypted, 0x5E, 14).trim();
 		user = user.toLowerCase();
 		String password = new String(decrypted, 0x6C, 16).trim();
@@ -84,6 +86,7 @@ public class RequestAuthLogin extends L2LoginClientPacket
 		Account account = new Account(user);
 		account.restore();
 		String passwordHash = Config.DEFAULT_CRYPT.encrypt(password);
+		
 		if (account.getPasswordHash() == null)
 		{
 			if (Config.AUTO_CREATE_ACCOUNTS && user.matches(Config.ANAME_TEMPLATE) && password.matches(Config.APASSWD_TEMPLATE))
@@ -98,7 +101,9 @@ public class RequestAuthLogin extends L2LoginClientPacket
 				return;
 			}
 		}
+		
 		boolean passwordCorrect = account.getPasswordHash().equals(passwordHash);
+		
 		if (!passwordCorrect)
 		{
 			for (PasswordHash c : Config.LEGACY_CRYPT)
@@ -111,31 +116,37 @@ public class RequestAuthLogin extends L2LoginClientPacket
 				}
 			}
 		}
+		
 		if (!IpBanManager.getInstance().tryLogin(client.getIpAddress(), passwordCorrect))
 		{
 			client.closeNow(false);
 			return;
 		}
+		
 		if (!passwordCorrect)
 		{
 			client.close(LoginFailReason.REASON_USER_OR_PASS_WRONG);
 			return;
 		}
+		
 		if (account.getAccessLevel() < 0)
 		{
 			client.close(LoginFailReason.REASON_ACCESS_FAILED);
 			return;
 		}
+		
 		if (account.getBanExpire() > currentTime)
 		{
 			client.close(LoginFailReason.REASON_ACCESS_FAILED);
 			return;
 		}
+		
 		if (!account.isAllowedIP(client.getIpAddress()))
 		{
 			client.close(LoginFailReason.REASON_ATTEMPTED_RESTRICTED_IP);
 			return;
 		}
+		
 		for (GameServer gs : GameServerManager.getInstance().getGameServers())
 		{
 			if ((gs.getProtocol() >= 2) && gs.isAuthed())
@@ -143,6 +154,7 @@ public class RequestAuthLogin extends L2LoginClientPacket
 				gs.sendPacket(new GetAccountInfo(user));
 			}
 		}
+		
 		account.setLastAccess(currentTime);
 		account.setLastIP(client.getIpAddress());
 		Log.LogAccount(account);

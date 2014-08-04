@@ -82,15 +82,18 @@ public class AirshipGuard1 extends Guard
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			doTask();
 			return true;
 		}
+		
 		if ((System.currentTimeMillis() > wait_timeout) && ((current_point > -1) || Rnd.chance(5)))
 		{
 			if (!wait && ((current_point == 0) || (current_point == 8)))
@@ -99,17 +102,21 @@ public class AirshipGuard1 extends Guard
 				wait = true;
 				return true;
 			}
+			
 			wait_timeout = 0;
 			wait = false;
 			current_point++;
+			
 			if (current_point >= points.length)
 			{
 				current_point = 0;
 			}
+			
 			addTaskMove(Location.findPointToStay(actor, points[current_point], 0, 100), true);
 			doTask();
 			return true;
 		}
+		
 		return false;
 	}
 	

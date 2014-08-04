@@ -115,20 +115,24 @@ public class NpcUtils
 	public static NpcInstance spawnSingle(int npcId, Location loc, Reflection reflection, long despawnTime)
 	{
 		NpcTemplate template = NpcHolder.getInstance().getTemplate(npcId);
+		
 		if (template == null)
 		{
 			throw new NullPointerException("Npc template id : " + npcId + " not found!");
 		}
+		
 		NpcInstance npc = template.getNewInstance();
 		npc.setHeading(loc.h < 0 ? Rnd.get(0xFFFF) : loc.h);
 		npc.setSpawnedLoc(loc);
 		npc.setReflection(reflection);
 		npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp(), true);
 		npc.spawnMe(npc.getSpawnedLoc());
+		
 		if (despawnTime > 0)
 		{
 			ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(npc), despawnTime);
 		}
+		
 		return npc;
 	}
 }

@@ -53,11 +53,14 @@ public class BuffCharger extends Skill
 		{
 			int level = 0;
 			List<Effect> el = target.getEffectList().getEffectsBySkillId(_target);
+			
 			if (el != null)
 			{
 				level = el.get(0).getSkill().getLevel();
 			}
+			
 			Skill next = SkillTable.getInstance().getInfo(_target, level + 1);
+			
 			if (next != null)
 			{
 				next.getEffects(activeChar, target, false, false);

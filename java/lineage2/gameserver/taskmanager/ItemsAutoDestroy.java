@@ -44,11 +44,13 @@ public class ItemsAutoDestroy
 	private ItemsAutoDestroy()
 	{
 		_herbs = new ConcurrentLinkedQueue<>();
+		
 		if (Config.AUTODESTROY_ITEM_AFTER > 0)
 		{
 			_items = new ConcurrentLinkedQueue<>();
 			ThreadPoolManager.getInstance().scheduleAtFixedRate(new CheckItemsForDestroy(), 60000, 60000);
 		}
+		
 		ThreadPoolManager.getInstance().scheduleAtFixedRate(new CheckHerbsForDestroy(), 1000, 1000);
 	}
 	
@@ -62,6 +64,7 @@ public class ItemsAutoDestroy
 		{
 			_instance = new ItemsAutoDestroy();
 		}
+		
 		return _instance;
 	}
 	
@@ -98,6 +101,7 @@ public class ItemsAutoDestroy
 		{
 			long _sleep = Config.AUTODESTROY_ITEM_AFTER * 1000L;
 			long curtime = System.currentTimeMillis();
+			
 			for (ItemInstance item : _items)
 			{
 				if ((item == null) || (item.getLastDropTime() == 0) || (item.getLocation() != ItemInstance.ItemLocation.VOID))
@@ -130,6 +134,7 @@ public class ItemsAutoDestroy
 		public void runImpl()
 		{
 			long curtime = System.currentTimeMillis();
+			
 			for (ItemInstance item : _herbs)
 			{
 				if ((item == null) || (item.getLastDropTime() == 0) || (item.getLocation() != ItemInstance.ItemLocation.VOID))

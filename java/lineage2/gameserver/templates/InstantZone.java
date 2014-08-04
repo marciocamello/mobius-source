@@ -513,6 +513,7 @@ public class InstantZone
 		_requiredQuestId = requiredQuestId;
 		_setReuseUponEntry = setReuseUponEntry;
 		_addParams = params;
+		
 		if (getMinParty() == 1)
 		{
 			_entryType = InstantZoneEntryType.SOLO;
@@ -640,6 +641,7 @@ public class InstantZone
 		{
 			return _teleportCoords.get(0);
 		}
+		
 		return _teleportCoords.get(Rnd.get(_teleportCoords.size()));
 	}
 	

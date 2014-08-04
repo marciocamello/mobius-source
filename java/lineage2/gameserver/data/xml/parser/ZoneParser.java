@@ -103,15 +103,18 @@ public class ZoneParser extends AbstractDirParser<ZoneHolder>
 		{
 			StatsSet zoneDat = new StatsSet();
 			Element zoneElement = iterator.next();
+			
 			if ("zone".equals(zoneElement.getName()))
 			{
 				zoneDat.set("name", zoneElement.attribute("name").getValue());
 				zoneDat.set("type", zoneElement.attribute("type").getValue());
 				Territory territory = null;
 				boolean isShape;
+				
 				for (Iterator<Element> i = zoneElement.elementIterator(); i.hasNext();)
 				{
 					Element n = i.next();
+					
 					if ("set".equals(n.getName()))
 					{
 						zoneDat.set(n.attributeValue("name"), n.attributeValue("val"));
@@ -119,39 +122,47 @@ public class ZoneParser extends AbstractDirParser<ZoneHolder>
 					else if ("restart_point".equals(n.getName()))
 					{
 						List<Location> restartPoints = new ArrayList<>();
+						
 						for (Iterator<?> ii = n.elementIterator(); ii.hasNext();)
 						{
 							Element d = (Element) ii.next();
+							
 							if ("coords".equalsIgnoreCase(d.getName()))
 							{
 								Location loc = Location.parseLoc(d.attribute("loc").getValue());
 								restartPoints.add(loc);
 							}
 						}
+						
 						zoneDat.set("restart_points", restartPoints);
 					}
 					else if ("PKrestart_point".equals(n.getName()))
 					{
 						List<Location> PKrestartPoints = new ArrayList<>();
+						
 						for (Iterator<?> ii = n.elementIterator(); ii.hasNext();)
 						{
 							Element d = (Element) ii.next();
+							
 							if ("coords".equalsIgnoreCase(d.getName()))
 							{
 								Location loc = Location.parseLoc(d.attribute("loc").getValue());
 								PKrestartPoints.add(loc);
 							}
 						}
+						
 						zoneDat.set("PKrestart_points", PKrestartPoints);
 					}
 					else if ((isShape = "rectangle".equalsIgnoreCase(n.getName())) || "banned_rectangle".equalsIgnoreCase(n.getName()))
 					{
 						Shape shape = parseRectangle(n);
+						
 						if (territory == null)
 						{
 							territory = new Territory();
 							zoneDat.set("territory", territory);
 						}
+						
 						if (isShape)
 						{
 							territory.add(shape);
@@ -164,11 +175,13 @@ public class ZoneParser extends AbstractDirParser<ZoneHolder>
 					else if ((isShape = "circle".equalsIgnoreCase(n.getName())) || "banned_cicrcle".equalsIgnoreCase(n.getName()))
 					{
 						Shape shape = parseCircle(n);
+						
 						if (territory == null)
 						{
 							territory = new Territory();
 							zoneDat.set("territory", territory);
 						}
+						
 						if (isShape)
 						{
 							territory.add(shape);
@@ -181,15 +194,18 @@ public class ZoneParser extends AbstractDirParser<ZoneHolder>
 					else if ((isShape = "polygon".equalsIgnoreCase(n.getName())) || "banned_polygon".equalsIgnoreCase(n.getName()))
 					{
 						Polygon shape = parsePolygon(n);
+						
 						if (!shape.validate())
 						{
 							error("ZoneParser: invalid territory data : " + shape + ", zone: " + zoneDat.getString("name") + "!");
 						}
+						
 						if (territory == null)
 						{
 							territory = new Territory();
 							zoneDat.set("territory", territory);
 						}
+						
 						if (isShape)
 						{
 							territory.add(shape);
@@ -200,10 +216,12 @@ public class ZoneParser extends AbstractDirParser<ZoneHolder>
 						}
 					}
 				}
+				
 				if ((territory == null) || territory.getTerritories().isEmpty())
 				{
 					error("Empty territory for zone: " + zoneDat.get("name"));
 				}
+				
 				ZoneTemplate template = new ZoneTemplate(zoneDat);
 				getHolder().addTemplate(template);
 			}
@@ -224,20 +242,24 @@ public class ZoneParser extends AbstractDirParser<ZoneHolder>
 		String[] coord = d.attributeValue("loc").split("[\\s,;]+");
 		x1 = Integer.parseInt(coord[0]);
 		y1 = Integer.parseInt(coord[1]);
+		
 		if (coord.length > 2)
 		{
 			zmin = Integer.parseInt(coord[2]);
 			zmax = Integer.parseInt(coord[3]);
 		}
+		
 		d = i.next();
 		coord = d.attributeValue("loc").split("[\\s,;]+");
 		x2 = Integer.parseInt(coord[0]);
 		y2 = Integer.parseInt(coord[1]);
+		
 		if (coord.length > 2)
 		{
 			zmin = Integer.parseInt(coord[2]);
 			zmax = Integer.parseInt(coord[3]);
 		}
+		
 		Rectangle rectangle = new Rectangle(x1, y1, x2, y2);
 		rectangle.setZmin(zmin);
 		rectangle.setZmax(zmax);
@@ -253,12 +275,15 @@ public class ZoneParser extends AbstractDirParser<ZoneHolder>
 	public static Polygon parsePolygon(Element shape) throws Exception
 	{
 		Polygon poly = new Polygon();
+		
 		for (Iterator<Element> i = shape.elementIterator(); i.hasNext();)
 		{
 			Element d = i.next();
+			
 			if ("coords".equals(d.getName()))
 			{
 				String[] coord = d.attributeValue("loc").split("[\\s,;]+");
+				
 				if (coord.length < 4)
 				{
 					poly.add(Integer.parseInt(coord[0]), Integer.parseInt(coord[1])).setZmin(World.MAP_MIN_Z).setZmax(World.MAP_MAX_Z);
@@ -269,6 +294,7 @@ public class ZoneParser extends AbstractDirParser<ZoneHolder>
 				}
 			}
 		}
+		
 		return poly;
 	}
 	
@@ -282,6 +308,7 @@ public class ZoneParser extends AbstractDirParser<ZoneHolder>
 	{
 		Circle circle;
 		String[] coord = shape.attribute("loc").getValue().split("[\\s,;]+");
+		
 		if (coord.length < 5)
 		{
 			circle = new Circle(Integer.parseInt(coord[0]), Integer.parseInt(coord[1]), Integer.parseInt(coord[2])).setZmin(World.MAP_MIN_Z).setZmax(World.MAP_MAX_Z);

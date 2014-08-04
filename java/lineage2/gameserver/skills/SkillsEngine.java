@@ -71,6 +71,7 @@ public class SkillsEngine
 			_log.warn("SkillsEngine: File not found!");
 			return null;
 		}
+		
 		DocumentSkill doc = new DocumentSkill(file);
 		doc.parse();
 		return doc.getSkills();
@@ -83,34 +84,42 @@ public class SkillsEngine
 	public Map<Integer, Skill> loadAllSkills()
 	{
 		File dir = new File(Config.DATAPACK_ROOT, "data/xml/skills");
+		
 		if (!dir.exists())
 		{
 			_log.info("Dir " + dir.getAbsolutePath() + " not exists");
 			return Collections.emptyMap();
 		}
+		
 		Collection<File> files = FileUtils.listFiles(dir, FileFilterUtils.suffixFileFilter(".xml"), FileFilterUtils.directoryFileFilter());
 		Map<Integer, Skill> result = new HashMap<>();
 		int maxId = 0, maxLvl = 0;
+		
 		for (File file : files)
 		{
 			List<Skill> s = loadSkills(file);
+			
 			if (s == null)
 			{
 				continue;
 			}
+			
 			for (Skill skill : s)
 			{
 				result.put(SkillTable.getSkillHashCode(skill), skill);
+				
 				if (skill.getId() > maxId)
 				{
 					maxId = skill.getId();
 				}
+				
 				if (skill.getLevel() > maxLvl)
 				{
 					maxLvl = skill.getLevel();
 				}
 			}
 		}
+		
 		_log.info("SkillsEngine: Loaded " + result.size() + " skill templates from XML files. Max id: " + maxId + ", max level: " + maxLvl);
 		return result;
 	}

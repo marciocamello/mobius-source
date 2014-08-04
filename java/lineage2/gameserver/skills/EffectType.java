@@ -569,6 +569,7 @@ public enum EffectType
 		{
 			throw new Error(e);
 		}
+		
 		_abnormal = abnormal;
 		_resistType = resistType;
 		_attributeType = attributeType;

@@ -32,16 +32,19 @@ public class ShowInfo extends Functions implements ScriptFile
 		Player player = getSelf();
 		String info_folder = "";
 		String info_page = "";
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		if (param.length != 2)
 		{
 			String html = HtmCache.getInstance().getNotNull("scripts/services/wiki/error_page.htm", player);
 			show(html, player);
 			return;
 		}
+		
 		info_folder = String.valueOf(param[0]);
 		info_page = String.valueOf(param[1]);
 		String html = HtmCache.getInstance().getNotNull("scripts/services/wiki/" + info_folder + "/" + info_page + ".htm", player);

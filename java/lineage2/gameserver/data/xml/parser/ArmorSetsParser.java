@@ -81,45 +81,57 @@ public final class ArmorSetsParser extends AbstractFileParser<ArmorSetsHolder>
 		for (Iterator<Element> iterator = rootElement.elementIterator(); iterator.hasNext();)
 		{
 			Element element = iterator.next();
+			
 			if ("set".equalsIgnoreCase(element.getName()))
 			{
 				String[] chests = null, legs = null, head = null, gloves = null, feet = null, shield = null, shield_skills = null, enchant6skills = null;
+				
 				if (element.attributeValue("chests") != null)
 				{
 					chests = element.attributeValue("chests").split(";");
 				}
+				
 				if (element.attributeValue("legs") != null)
 				{
 					legs = element.attributeValue("legs").split(";");
 				}
+				
 				if (element.attributeValue("head") != null)
 				{
 					head = element.attributeValue("head").split(";");
 				}
+				
 				if (element.attributeValue("gloves") != null)
 				{
 					gloves = element.attributeValue("gloves").split(";");
 				}
+				
 				if (element.attributeValue("feet") != null)
 				{
 					feet = element.attributeValue("feet").split(";");
 				}
+				
 				if (element.attributeValue("shield") != null)
 				{
 					shield = element.attributeValue("shield").split(";");
 				}
+				
 				if (element.attributeValue("shield_skills") != null)
 				{
 					shield_skills = element.attributeValue("shield_skills").split(";");
 				}
+				
 				if (element.attributeValue("enchant6skills") != null)
 				{
 					enchant6skills = element.attributeValue("enchant6skills").split(";");
 				}
+				
 				ArmorSet armorSet = new ArmorSet(chests, legs, head, gloves, feet, shield, shield_skills, enchant6skills);
+				
 				for (Iterator<Element> subIterator = element.elementIterator(); subIterator.hasNext();)
 				{
 					Element subElement = subIterator.next();
+					
 					if ("set_skills".equalsIgnoreCase(subElement.getName()))
 					{
 						int partsCount = Integer.parseInt(subElement.attributeValue("parts"));
@@ -127,6 +139,7 @@ public final class ArmorSetsParser extends AbstractFileParser<ArmorSetsHolder>
 						armorSet.addSkills(partsCount, skills);
 					}
 				}
+				
 				getHolder().addArmorSet(armorSet);
 			}
 		}

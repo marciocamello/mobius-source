@@ -28,7 +28,7 @@ import lineage2.gameserver.utils.NpcUtils;
 public final class BigCoconInstance extends NpcInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	private final int[] small =
@@ -62,6 +62,7 @@ public final class BigCoconInstance extends NpcInstance
 		{
 			return;
 		}
+		
 		if (getNpcId() == 32920)
 		{
 			if (command.startsWith("non_strong_mass_attack"))
@@ -70,6 +71,7 @@ public final class BigCoconInstance extends NpcInstance
 				doDie(null);
 				return;
 			}
+			
 			if (command.startsWith("strong_mass_attack"))
 			{
 				NpcUtils.spawnSingle(big[Rnd.get(big.length)], Location.coordsRandomize(getLoc(), 1, 1), getReflection());

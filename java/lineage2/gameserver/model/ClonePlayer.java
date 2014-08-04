@@ -155,6 +155,7 @@ public class ClonePlayer extends Playable
 				}
 			}
 		}
+		
 		return (ClonePlayerAI) _ai;
 	}
 	
@@ -180,26 +181,33 @@ public class ClonePlayer extends Playable
 		super.onDeath(killer);
 		startDecay(8500L);
 		Player owner = getPlayer();
+		
 		if ((killer == null) || (killer == owner) || (killer == this) || isInZoneBattle() || killer.isInZoneBattle())
 		{
 			return;
 		}
+		
 		if (killer instanceof Summon)
 		{
 			killer = killer.getPlayer();
 		}
+		
 		if (killer == null)
 		{
 			return;
 		}
+		
 		if (killer.isPlayer())
 		{
 			Player pk = (Player) killer;
+			
 			if (isInZone(ZoneType.SIEGE))
 			{
 				return;
 			}
+			
 			DuelEvent duelEvent = getEvent(DuelEvent.class);
+			
 			if ((owner.getPvpFlag() > 0) || owner.atMutualWarWith(pk))
 			{
 				pk.setPvpKills(pk.getPvpKills() + 1);
@@ -209,9 +217,9 @@ public class ClonePlayer extends Playable
 				int pkCountMulti = Math.max(pk.getPkKills() / 2, 1);
 				pk.increaseKarma(Config.KARMA_MIN_KARMA * pkCountMulti);
 			}
+			
 			pk.sendChanges();
 		}
-		
 	}
 	
 	/**
@@ -222,6 +230,7 @@ public class ClonePlayer extends Playable
 	{
 		Player owner = getPlayer();
 		_follow = state;
+		
 		if (_follow)
 		{
 			if (getAI().getIntention() == CtrlIntention.AI_INTENTION_ACTIVE)
@@ -273,6 +282,7 @@ public class ClonePlayer extends Playable
 		Player owner = getPlayer();
 		PartySpelled ps = new PartySpelled(this, true);
 		Party party = owner.getParty();
+		
 		if (party != null)
 		{
 			party.broadCast(ps);
@@ -332,6 +342,7 @@ public class ClonePlayer extends Playable
 	public boolean unChargeShots(final boolean spirit)
 	{
 		Player owner = getPlayer();
+		
 		if (spirit)
 		{
 			if (_spsCharged != 0)
@@ -347,6 +358,7 @@ public class ClonePlayer extends Playable
 			owner.autoShot();
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -404,6 +416,7 @@ public class ClonePlayer extends Playable
 	{
 		Player owner = getPlayer();
 		setNonAggroTime(System.currentTimeMillis() + Config.NONAGGRO_TIME_ONTELEPORT);
+		
 		if (owner.isInOlympiadMode())
 		{
 			teleToLocation(owner.getLoc(), owner.getReflection());
@@ -412,6 +425,7 @@ public class ClonePlayer extends Playable
 		{
 			teleToLocation(Location.findPointToStay(owner, 50, 150), owner.getReflection());
 		}
+		
 		if (!isDead() && _follow)
 		{
 			getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, owner, Config.FOLLOW_RANGE);
@@ -495,6 +509,7 @@ public class ClonePlayer extends Playable
 	{
 		List<L2GameServerPacket> list = new ArrayList<>();
 		Player owner = getPlayer();
+		
 		if (owner == forPlayer)
 		{
 			list.add(new CharInfo(this));
@@ -502,21 +517,26 @@ public class ClonePlayer extends Playable
 		else
 		{
 			Party party = forPlayer.getParty();
+			
 			if ((getReflection() == ReflectionManager.GIRAN_HARBOR) && ((owner == null) || (party == null) || (party != owner.getParty())))
 			{
 				return list;
 			}
+			
 			list.add(new CharInfo(this));
 			list.add(RelationChanged.update(forPlayer, this, forPlayer));
 		}
+		
 		if (isInCombat())
 		{
 			list.add(new AutoAttackStart(getObjectId()));
 		}
+		
 		if (isMoving || isFollow)
 		{
 			list.add(movePacket());
 		}
+		
 		return list;
 	}
 	
@@ -528,6 +548,7 @@ public class ClonePlayer extends Playable
 	{
 		startAttackStanceTask0();
 		Player player = getPlayer();
+		
 		if (player != null)
 		{
 			player.startAttackStanceTask0();
@@ -543,10 +564,12 @@ public class ClonePlayer extends Playable
 	public <E extends GlobalEvent> E getEvent(Class<E> eventClass)
 	{
 		Player player = getPlayer();
+		
 		if (player != null)
 		{
 			return player.getEvent(eventClass);
 		}
+		
 		return super.getEvent(eventClass);
 	}
 	
@@ -558,10 +581,12 @@ public class ClonePlayer extends Playable
 	public Set<GlobalEvent> getEvents()
 	{
 		Player player = getPlayer();
+		
 		if (player != null)
 		{
 			return player.getEvents();
 		}
+		
 		return super.getEvents();
 	}
 	
@@ -652,6 +677,5 @@ public class ClonePlayer extends Playable
 	public void doPickupItem(GameObject object)
 	{
 		// TODO Auto-generated method stub
-		
 	}
 }

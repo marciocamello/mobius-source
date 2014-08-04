@@ -94,16 +94,20 @@ public class RestartPointParser extends AbstractFileParser<MapRegionManager>
 	{
 		List<Pair<Territory, Map<Race, String>>> restartArea = new ArrayList<>();
 		Map<String, RestartPoint> restartPoint = new HashMap<>();
+		
 		for (Iterator<Element> iterator = rootElement.elementIterator(); iterator.hasNext();)
 		{
 			Element listElement = iterator.next();
+			
 			if ("restart_area".equals(listElement.getName()))
 			{
 				Territory territory = null;
 				Map<Race, String> restarts = new HashMap<>();
+				
 				for (Iterator<Element> i = listElement.elementIterator(); i.hasNext();)
 				{
 					Element n = i.next();
+					
 					if ("region".equalsIgnoreCase(n.getName()))
 					{
 						Rectangle shape;
@@ -119,23 +123,28 @@ public class RestartPointParser extends AbstractFileParser<MapRegionManager>
 						shape = new Rectangle(x1, y1, x2, y2);
 						shape.setZmin(World.MAP_MIN_Z);
 						shape.setZmax(World.MAP_MAX_Z);
+						
 						if (territory == null)
 						{
 							territory = new Territory();
 						}
+						
 						territory.add(shape);
 					}
 					else if ("polygon".equalsIgnoreCase(n.getName()))
 					{
 						Polygon shape = ZoneParser.parsePolygon(n);
+						
 						if (!shape.validate())
 						{
 							error("RestartPointParser: invalid territory data : " + shape + "!");
 						}
+						
 						if (territory == null)
 						{
 							territory = new Territory();
 						}
+						
 						territory.add(shape);
 					}
 					else if ("restart".equalsIgnoreCase(n.getName()))
@@ -145,14 +154,17 @@ public class RestartPointParser extends AbstractFileParser<MapRegionManager>
 						restarts.put(race, locName);
 					}
 				}
+				
 				if (territory == null)
 				{
 					throw new RuntimeException("RestartPointParser: empty territory!");
 				}
+				
 				if (restarts.isEmpty())
 				{
 					throw new RuntimeException("RestartPointParser: restarts not defined!");
 				}
+				
 				restartArea.add(new ImmutablePair<>(territory, restarts));
 			}
 			else if ("restart_loc".equals(listElement.getName()))
@@ -162,14 +174,17 @@ public class RestartPointParser extends AbstractFileParser<MapRegionManager>
 				int msgId = Integer.parseInt(listElement.attributeValue("msg_id", "0"));
 				List<Location> restartPoints = new ArrayList<>();
 				List<Location> PKrestartPoints = new ArrayList<>();
+				
 				for (Iterator<Element> i = listElement.elementIterator(); i.hasNext();)
 				{
 					Element n = i.next();
+					
 					if ("restart_point".equals(n.getName()))
 					{
 						for (Iterator<Element> ii = n.elementIterator(); ii.hasNext();)
 						{
 							Element d = ii.next();
+							
 							if ("coords".equalsIgnoreCase(d.getName()))
 							{
 								Location loc = Location.parseLoc(d.attribute("loc").getValue());
@@ -182,6 +197,7 @@ public class RestartPointParser extends AbstractFileParser<MapRegionManager>
 						for (Iterator<Element> ii = n.elementIterator(); ii.hasNext();)
 						{
 							Element d = ii.next();
+							
 							if ("coords".equalsIgnoreCase(d.getName()))
 							{
 								Location loc = Location.parseLoc(d.attribute("loc").getValue());
@@ -190,28 +206,35 @@ public class RestartPointParser extends AbstractFileParser<MapRegionManager>
 						}
 					}
 				}
+				
 				if (restartPoints.isEmpty())
 				{
 					throw new RuntimeException("RestartPointParser: restart_points not defined for restart_loc : " + name + "!");
 				}
+				
 				if (PKrestartPoints.isEmpty())
 				{
 					PKrestartPoints = restartPoints;
 				}
+				
 				RestartPoint rp = new RestartPoint(name, bbs, msgId, restartPoints, PKrestartPoints);
 				restartPoint.put(name, rp);
 			}
 		}
+		
 		for (Pair<Territory, Map<Race, String>> ra : restartArea)
 		{
 			Map<Race, RestartPoint> restarts = new HashMap<>();
+			
 			for (Map.Entry<Race, String> e : ra.getValue().entrySet())
 			{
 				RestartPoint rp = restartPoint.get(e.getValue());
+				
 				if (rp == null)
 				{
 					throw new RuntimeException("RestartPointParser: restart_loc not found : " + e.getValue() + "!");
 				}
+				
 				restarts.put(e.getKey(), rp);
 				getHolder().addRegionData(new RestartArea(ra.getKey(), restarts));
 			}

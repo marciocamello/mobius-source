@@ -48,24 +48,30 @@ public class MatchFighter extends Fighter
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isActionsDisabled())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			if (doTask())
 			{
 				clearTasks();
 			}
+			
 			return true;
 		}
+		
 		final long now = System.currentTimeMillis();
+		
 		if ((now - _checkAggroTimestamp) > Config.AGGRO_CHECK_INTERVAL)
 		{
 			_checkAggroTimestamp = now;
 			final List<Creature> chars = World.getAroundCharacters(actor);
 			CollectionUtils.eqSort(chars, _nearestTargetComparator);
+			
 			for (Creature cha : chars)
 			{
 				if (checkAggression(cha))
@@ -74,10 +80,12 @@ public class MatchFighter extends Fighter
 				}
 			}
 		}
+		
 		if (randomWalk())
 		{
 			return true;
 		}
+		
 		return false;
 	}
 	
@@ -90,27 +98,34 @@ public class MatchFighter extends Fighter
 	protected boolean checkAggression(Creature target)
 	{
 		final CTBBossInstance actor = getActor();
+		
 		if (getIntention() != CtrlIntention.AI_INTENTION_ACTIVE)
 		{
 			return false;
 		}
+		
 		if (target.isAlikeDead() || target.isInvul())
 		{
 			return false;
 		}
+		
 		if (!actor.isAttackable(target))
 		{
 			return false;
 		}
+		
 		if (!GeoEngine.canSeeTarget(actor, target, false))
 		{
 			return false;
 		}
+		
 		actor.getAggroList().addDamageHate(target, 0, 2);
+		
 		if ((target.isServitor() || target.isPet()))
 		{
 			actor.getAggroList().addDamageHate(target.getPlayer(), 0, 1);
 		}
+		
 		startRunningTask(AI_TASK_ATTACK_DELAY);
 		setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 		return true;

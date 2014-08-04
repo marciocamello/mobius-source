@@ -103,9 +103,11 @@ public class PetDataParser extends AbstractDirParser<PetDataHolder>
 			StatsSet set = new StatsSet();
 			set.set("id", pet.attributeValue("id"));
 			set.set("index", pet.attributeValue("index"));
+			
 			for (Iterator<Element> i1 = pet.elementIterator(); i1.hasNext();)
 			{
 				Element element = i1.next();
+				
 				if (element.getName().equals("set"))
 				{
 					set.set(element.attributeValue("name"), element.attributeValue("val"));
@@ -116,6 +118,7 @@ public class PetDataParser extends AbstractDirParser<PetDataHolder>
 					{
 						Element stat = itr.next();
 						set.set("level", stat.attributeValue("level"));
+						
 						for (Iterator<Element> it = stat.elementIterator("set"); it.hasNext();)
 						{
 							Element e = it.next();
@@ -124,6 +127,7 @@ public class PetDataParser extends AbstractDirParser<PetDataHolder>
 					}
 				}
 			}
+			
 			getHolder().addPetData(set);
 		}
 	}

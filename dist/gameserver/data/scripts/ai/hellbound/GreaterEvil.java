@@ -66,21 +66,25 @@ public class GreaterEvil extends Fighter
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return true;
 		}
+		
 		if (_def_think)
 		{
 			doTask();
 			return true;
 		}
+		
 		if (current_point >= path.length)
 		{
 			actor.doDie(null);
 			current_point = 0;
 			return true;
 		}
+		
 		actor.setRunning();
 		addTaskMove(path[current_point], false);
 		doTask();

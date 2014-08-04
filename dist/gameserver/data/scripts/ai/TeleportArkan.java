@@ -42,10 +42,12 @@ public class TeleportArkan extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if (actor == null)
 		{
 			return true;
 		}
+		
 		for (Player player : World.getAroundPlayers(actor, 200, 200))
 		{
 			if (player != null)
@@ -53,6 +55,7 @@ public class TeleportArkan extends DefaultAI
 				player.teleToLocation(new Location(207559, 86429, -1000));
 			}
 		}
+		
 		return true;
 	}
 	

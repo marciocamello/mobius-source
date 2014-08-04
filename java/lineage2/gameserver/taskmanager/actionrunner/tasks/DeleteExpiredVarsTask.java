@@ -57,12 +57,14 @@ public class DeleteExpiredVarsTask extends AutomaticTask
 		PreparedStatement query = null;
 		Map<Integer, String> varMap = new HashMap<>();
 		ResultSet rs = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			query = con.prepareStatement("SELECT obj_id, name FROM character_variables WHERE expire_time > 0 AND expire_time < ?");
 			query.setLong(1, System.currentTimeMillis());
 			rs = query.executeQuery();
+			
 			while (rs.next())
 			{
 				String name = rs.getString("name");
@@ -78,11 +80,13 @@ public class DeleteExpiredVarsTask extends AutomaticTask
 		{
 			DbUtils.closeQuietly(con, query, rs);
 		}
+		
 		if (!varMap.isEmpty())
 		{
 			for (Map.Entry<Integer, String> entry : varMap.entrySet())
 			{
 				Player player = GameObjectsStorage.getPlayer(entry.getKey());
+				
 				if ((player != null) && player.isOnline())
 				{
 					player.unsetVar(entry.getValue());

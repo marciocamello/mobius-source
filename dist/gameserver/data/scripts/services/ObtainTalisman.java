@@ -34,25 +34,31 @@ public class ObtainTalisman extends Functions
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
+		
 		if ((player == null) || (npc == null))
 		{
 			return;
 		}
+		
 		if (!NpcInstance.canBypassCheck(player, npc))
 		{
 			return;
 		}
+		
 		if (!player.isQuestContinuationPossible(false))
 		{
 			player.sendPacket(Msg.YOUR_INVENTORY_IS_FULL);
 			return;
 		}
+		
 		if (getItemCount(player, 9912) < 10)
 		{
 			show("scripts/services/ObtainTalisman-no.htm", player, npc);
 			return;
 		}
+		
 		final List<Integer> talismans = new ArrayList<>();
+		
 		for (int i = 9914; i <= 9965; i++)
 		{
 			if (i != 9923)
@@ -60,18 +66,22 @@ public class ObtainTalisman extends Functions
 				talismans.add(i);
 			}
 		}
+		
 		for (int i = 10416; i <= 10424; i++)
 		{
 			talismans.add(i);
 		}
+		
 		for (int i = 10518; i <= 10519; i++)
 		{
 			talismans.add(i);
 		}
+		
 		for (int i = 10533; i <= 10543; i++)
 		{
 			talismans.add(i);
 		}
+		
 		removeItem(player, 9912, 10);
 		addItem(player, talismans.get(Rnd.get(talismans.size())), 1);
 		show("scripts/services/ObtainTalisman.htm", player, npc);

@@ -55,11 +55,13 @@ public final class RestorationInfoParser extends AbstractDirParser<RestorationIn
 			int consumeItemId = restorationElement.attributeValue("consume_item_id") == null ? -1 : Integer.parseInt(restorationElement.attributeValue("consume_item_id"));
 			int consumeItemCount = restorationElement.attributeValue("consume_item_count") == null ? 1 : Integer.parseInt(restorationElement.attributeValue("consume_item_count"));
 			RestorationInfo restorationInfo = new RestorationInfo(skillId, skillLvl, consumeItemId, consumeItemCount);
+			
 			for (Iterator<?> groupIterator = restorationElement.elementIterator(); groupIterator.hasNext();)
 			{
 				Element groupElement = (Element) groupIterator.next();
 				double chance = Double.parseDouble(groupElement.attributeValue("chance"));
 				RestorationGroup restorationGroup = new RestorationGroup(chance);
+				
 				for (Iterator<?> itemIterator = groupElement.elementIterator(); itemIterator.hasNext();)
 				{
 					Element itemElement = (Element) itemIterator.next();
@@ -68,8 +70,10 @@ public final class RestorationInfoParser extends AbstractDirParser<RestorationIn
 					int maxCount = itemElement.attributeValue("max_count") == null ? minCount : Integer.parseInt(itemElement.attributeValue("max_count"));
 					restorationGroup.addRestorationItem(new RestorationItem(id, minCount, maxCount));
 				}
+				
 				restorationInfo.addRestorationGroup(restorationGroup);
 			}
+			
 			(getHolder()).addRestorationInfo(restorationInfo);
 		}
 	}

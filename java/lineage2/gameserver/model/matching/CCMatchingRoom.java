@@ -40,7 +40,6 @@ public class CCMatchingRoom extends MatchingRoom
 	public CCMatchingRoom(Player leader, int minLevel, int maxLevel, int maxMemberSize, int lootType, String topic)
 	{
 		super(leader, minLevel, maxLevel, maxMemberSize, lootType, topic);
-		
 		leader.sendPacket(SystemMsg.THE_COMMAND_CHANNEL_MATCHING_ROOM_WAS_CREATED);
 	}
 	
@@ -77,6 +76,7 @@ public class CCMatchingRoom extends MatchingRoom
 		{
 			return kick ? SystemMsg.YOU_WERE_EXPELLED_FROM_THE_COMMAND_CHANNEL_MATCHING_ROOM : SystemMsg.YOU_EXITED_FROM_THE_COMMAND_CHANNEL_MATCHING_ROOM;
 		}
+		
 		return null;
 	}
 	
@@ -174,9 +174,11 @@ public class CCMatchingRoom extends MatchingRoom
 	public void disband()
 	{
 		Party party = _leader.getParty();
+		
 		if (party != null)
 		{
 			CommandChannel commandChannel = party.getCommandChannel();
+			
 			if (commandChannel != null)
 			{
 				commandChannel.setMatchingRoom(null);
@@ -196,6 +198,7 @@ public class CCMatchingRoom extends MatchingRoom
 	{
 		Party party = _leader.getParty();
 		CommandChannel commandChannel = party.getCommandChannel();
+		
 		if (member == _leader)
 		{
 			return MatchingRoom.UNION_LEADER;

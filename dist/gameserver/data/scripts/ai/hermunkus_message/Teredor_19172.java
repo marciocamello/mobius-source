@@ -76,11 +76,13 @@ public class Teredor_19172 extends Fighter
 	protected boolean canAttackCharacter(Creature target)
 	{
 		final NpcInstance actor = getActor();
+		
 		if (getIntention() == CtrlIntention.AI_INTENTION_ATTACK)
 		{
 			final AggroList.AggroInfo ai = actor.getAggroList().get(target);
 			return (ai != null) && (ai.hate > 0);
 		}
+		
 		return target.isPlayable() || ArrayUtils.contains(ATTACK_IDS, target.getNpcId());
 	}
 	
@@ -96,10 +98,12 @@ public class Teredor_19172 extends Fighter
 		{
 			return false;
 		}
+		
 		if (target.isNpc() && !ArrayUtils.contains(ATTACK_IDS, target.getNpcId()))
 		{
 			return false;
 		}
+		
 		return super.checkAggression(target);
 	}
 	

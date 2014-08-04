@@ -127,6 +127,7 @@ abstract class DocumentBase
 	Document parse()
 	{
 		Document doc;
+		
 		try
 		{
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -139,6 +140,7 @@ abstract class DocumentBase
 			_log.error("Error loading file " + file, e);
 			return null;
 		}
+		
 		try
 		{
 			parseDocument(doc);
@@ -148,6 +150,7 @@ abstract class DocumentBase
 			_log.error("Error in file " + file, e);
 			return null;
 		}
+		
 		return doc;
 	}
 	
@@ -198,13 +201,16 @@ abstract class DocumentBase
 	protected void parseTemplate(Node n, StatTemplate template)
 	{
 		n = n.getFirstChild();
+		
 		if (n == null)
 		{
 			return;
 		}
+		
 		for (; n != null; n = n.getNextSibling())
 		{
 			String nodeName = n.getNodeName();
+			
 			if ("add".equalsIgnoreCase(nodeName))
 			{
 				attachFunc(n, template, "Add");
@@ -235,6 +241,7 @@ abstract class DocumentBase
 				{
 					throw new RuntimeException("Nested effects");
 				}
+				
 				attachEffect(n, template);
 			}
 			else if (template instanceof EffectTemplate)
@@ -246,6 +253,7 @@ abstract class DocumentBase
 				else
 				{
 					Condition cond = parseCondition(n);
+					
 					if (cond != null)
 					{
 						((EffectTemplate) template).attachCond(cond);
@@ -273,9 +281,11 @@ abstract class DocumentBase
 				double chance = parseNumber(map.getNamedItem("chance").getNodeValue()).doubleValue();
 				TriggerInfo trigger = new TriggerInfo(id, level, t, chance);
 				template.addTrigger(trigger);
+				
 				for (Node n2 = n.getFirstChild(); n2 != null; n2 = n2.getNextSibling())
 				{
 					Condition condition = parseCondition(n.getFirstChild());
+					
 					if (condition != null)
 					{
 						trigger.addCondition(condition);
@@ -298,10 +308,12 @@ abstract class DocumentBase
 		int ord = parseNumber(order).intValue();
 		Condition applyCond = parseCondition(n.getFirstChild());
 		double val = 0;
+		
 		if (n.getAttributes().getNamedItem("val") != null)
 		{
 			val = parseNumber(n.getAttributes().getNamedItem("val").getNodeValue()).doubleValue();
 		}
+		
 		template.attachFunc(new FuncTemplate(applyCond, name, stat, ord, val));
 	}
 	
@@ -316,26 +328,32 @@ abstract class DocumentBase
 		StatsSet set = new StatsSet();
 		set.set("name", attrs.getNamedItem("name").getNodeValue());
 		set.set("object", template);
+		
 		if (attrs.getNamedItem("count") != null)
 		{
 			set.set("count", parseNumber(attrs.getNamedItem("count").getNodeValue()).intValue());
 		}
+		
 		if (attrs.getNamedItem("time") != null)
 		{
 			int time = parseNumber(attrs.getNamedItem("time").getNodeValue()).intValue();
 			set.set("time", time);
 		}
+		
 		set.set("value", attrs.getNamedItem("val") != null ? parseNumber(attrs.getNamedItem("val").getNodeValue()).doubleValue() : 0.);
 		set.set("abnormal", AbnormalEffect.NULL);
 		set.set("abnormal2", AbnormalEffect.NULL);
 		set.set("abnormal3", AbnormalEffect.NULL);
+		
 		if (attrs.getNamedItem("abnormal") != null)
 		{
 			AbnormalEffect ae = AbnormalEffect.getByName(attrs.getNamedItem("abnormal").getNodeValue());
+			
 			if (ae.isSpecial())
 			{
 				set.set("abnormal2", ae);
 			}
+			
 			if (ae.isEvent())
 			{
 				set.set("abnormal3", ae);
@@ -345,56 +363,70 @@ abstract class DocumentBase
 				set.set("abnormal", ae);
 			}
 		}
+		
 		if (attrs.getNamedItem("stackType") != null)
 		{
 			set.set("stackType", attrs.getNamedItem("stackType").getNodeValue());
 		}
+		
 		if (attrs.getNamedItem("stackType2") != null)
 		{
 			set.set("stackType2", attrs.getNamedItem("stackType2").getNodeValue());
 		}
+		
 		if (attrs.getNamedItem("stackOrder") != null)
 		{
 			set.set("stackOrder", parseNumber(attrs.getNamedItem("stackOrder").getNodeValue()).intValue());
 		}
+		
 		if (attrs.getNamedItem("applyOnCaster") != null)
 		{
 			set.set("applyOnCaster", Boolean.valueOf(attrs.getNamedItem("applyOnCaster").getNodeValue()));
 		}
+		
 		if (attrs.getNamedItem("applyOnSummon") != null)
 		{
 			set.set("applyOnSummon", Boolean.valueOf(attrs.getNamedItem("applyOnSummon").getNodeValue()));
 		}
+		
 		if (attrs.getNamedItem("displayId") != null)
 		{
 			set.set("displayId", parseNumber(attrs.getNamedItem("displayId").getNodeValue()).intValue());
 		}
+		
 		if (attrs.getNamedItem("displayLevel") != null)
 		{
 			set.set("displayLevel", parseNumber(attrs.getNamedItem("displayLevel").getNodeValue()).intValue());
 		}
+		
 		if (attrs.getNamedItem("chance") != null)
 		{
 			set.set("chance", parseNumber(attrs.getNamedItem("chance").getNodeValue()).intValue());
 		}
+		
 		if (attrs.getNamedItem("cancelOnAction") != null)
 		{
 			set.set("cancelOnAction", Boolean.valueOf(attrs.getNamedItem("cancelOnAction").getNodeValue()));
 		}
+		
 		if (attrs.getNamedItem("cancelOnAttacked") != null)
 		{
 			set.set("cancelOnAttacked", Boolean.valueOf(attrs.getNamedItem("cancelOnAttacked").getNodeValue()));
 		}
+		
 		if (attrs.getNamedItem("isOffensive") != null)
 		{
 			set.set("isOffensive", Boolean.valueOf(attrs.getNamedItem("isOffensive").getNodeValue()));
 		}
+		
 		if (attrs.getNamedItem("isReflectable") != null)
 		{
 			set.set("isReflectable", Boolean.valueOf(attrs.getNamedItem("isReflectable").getNodeValue()));
 		}
+		
 		EffectTemplate lt = new EffectTemplate(set);
 		parseTemplate(n, lt);
+		
 		for (Node n1 = n.getFirstChild(); n1 != null; n1 = n1.getNextSibling())
 		{
 			if ("triggers".equalsIgnoreCase(n1.getNodeName()))
@@ -402,6 +434,7 @@ abstract class DocumentBase
 				parseTrigger(n1, lt);
 			}
 		}
+		
 		if (template instanceof Skill)
 		{
 			((Skill) template).attach(lt);
@@ -419,46 +452,57 @@ abstract class DocumentBase
 		{
 			n = n.getNextSibling();
 		}
+		
 		if (n == null)
 		{
 			return null;
 		}
+		
 		if ("and".equalsIgnoreCase(n.getNodeName()))
 		{
 			return parseLogicAnd(n);
 		}
+		
 		if ("or".equalsIgnoreCase(n.getNodeName()))
 		{
 			return parseLogicOr(n);
 		}
+		
 		if ("not".equalsIgnoreCase(n.getNodeName()))
 		{
 			return parseLogicNot(n);
 		}
+		
 		if ("player".equalsIgnoreCase(n.getNodeName()))
 		{
 			return parsePlayerCondition(n);
 		}
+		
 		if ("target".equalsIgnoreCase(n.getNodeName()))
 		{
 			return parseTargetCondition(n);
 		}
+		
 		if ("has".equalsIgnoreCase(n.getNodeName()))
 		{
 			return parseHasCondition(n);
 		}
+		
 		if ("using".equalsIgnoreCase(n.getNodeName()))
 		{
 			return parseUsingCondition(n);
 		}
+		
 		if ("game".equalsIgnoreCase(n.getNodeName()))
 		{
 			return parseGameCondition(n);
 		}
+		
 		if ("zone".equalsIgnoreCase(n.getNodeName()))
 		{
 			return parseZoneCondition(n);
 		}
+		
 		return null;
 	}
 	
@@ -470,6 +514,7 @@ abstract class DocumentBase
 	protected Condition parseLogicAnd(Node n)
 	{
 		ConditionLogicAnd cond = new ConditionLogicAnd();
+		
 		for (n = n.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if (n.getNodeType() == Node.ELEMENT_NODE)
@@ -477,10 +522,12 @@ abstract class DocumentBase
 				cond.add(parseCondition(n));
 			}
 		}
+		
 		if ((cond._conditions == null) || (cond._conditions.length == 0))
 		{
 			_log.error("Empty <and> condition in " + file);
 		}
+		
 		return cond;
 	}
 	
@@ -492,6 +539,7 @@ abstract class DocumentBase
 	protected Condition parseLogicOr(Node n)
 	{
 		ConditionLogicOr cond = new ConditionLogicOr();
+		
 		for (n = n.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if (n.getNodeType() == Node.ELEMENT_NODE)
@@ -499,10 +547,12 @@ abstract class DocumentBase
 				cond.add(parseCondition(n));
 			}
 		}
+		
 		if ((cond._conditions == null) || (cond._conditions.length == 0))
 		{
 			_log.error("Empty <or> condition in " + file);
 		}
+		
 		return cond;
 	}
 	
@@ -520,6 +570,7 @@ abstract class DocumentBase
 				return new ConditionLogicNot(parseCondition(n));
 			}
 		}
+		
 		_log.error("Empty <not> condition in " + file);
 		return null;
 	}
@@ -533,10 +584,12 @@ abstract class DocumentBase
 	{
 		Condition cond = null;
 		NamedNodeMap attrs = n.getAttributes();
+		
 		for (int i = 0; i < attrs.getLength(); i++)
 		{
 			Node a = attrs.item(i);
 			String nodeName = a.getNodeName();
+			
 			if ("race".equalsIgnoreCase(nodeName))
 			{
 				cond = joinAnd(cond, new ConditionPlayerRace(a.getNodeValue()));
@@ -628,6 +681,7 @@ abstract class DocumentBase
 			else if ("riding".equalsIgnoreCase(nodeName))
 			{
 				String riding = a.getNodeValue();
+				
 				if ("strider".equalsIgnoreCase(riding))
 				{
 					cond = joinAnd(cond, new ConditionPlayerRiding(CheckPlayerRiding.STRIDER));
@@ -650,10 +704,12 @@ abstract class DocumentBase
 				StringTokenizer st = new StringTokenizer(a.getNodeValue(), ";");
 				int id = Integer.parseInt(st.nextToken().trim());
 				int level = -1;
+				
 				if (st.hasMoreTokens())
 				{
 					level = Integer.parseInt(st.nextToken().trim());
 				}
+				
 				cond = joinAnd(cond, new ConditionPlayerHasBuffId(id, level));
 			}
 			else if ("hasBuff".equalsIgnoreCase(nodeName))
@@ -661,10 +717,12 @@ abstract class DocumentBase
 				StringTokenizer st = new StringTokenizer(a.getNodeValue(), ";");
 				EffectType et = Enum.valueOf(EffectType.class, st.nextToken().trim());
 				int level = -1;
+				
 				if (st.hasMoreTokens())
 				{
 					level = Integer.parseInt(st.nextToken().trim());
 				}
+				
 				cond = joinAnd(cond, new ConditionPlayerHasBuff(et, level));
 			}
 			else if ("damage".equalsIgnoreCase(nodeName))
@@ -673,10 +731,12 @@ abstract class DocumentBase
 				cond = joinAnd(cond, new ConditionPlayerMinMaxDamage(Double.parseDouble(st[0]), Double.parseDouble(st[1])));
 			}
 		}
+		
 		if (cond == null)
 		{
 			_log.error("Unrecognized <player> condition in " + file);
 		}
+		
 		return cond;
 	}
 	
@@ -689,11 +749,13 @@ abstract class DocumentBase
 	{
 		Condition cond = null;
 		NamedNodeMap attrs = n.getAttributes();
+		
 		for (int i = 0; i < attrs.getLength(); i++)
 		{
 			Node a = attrs.item(i);
 			String nodeName = a.getNodeName();
 			String nodeValue = a.getNodeValue();
+			
 			if ("aggro".equalsIgnoreCase(nodeName))
 			{
 				cond = joinAnd(cond, new ConditionTargetAggro(Boolean.valueOf(nodeValue)));
@@ -763,10 +825,12 @@ abstract class DocumentBase
 				StringTokenizer st = new StringTokenizer(nodeValue, ";");
 				int id = Integer.parseInt(st.nextToken().trim());
 				int level = -1;
+				
 				if (st.hasMoreTokens())
 				{
 					level = Integer.parseInt(st.nextToken().trim());
 				}
+				
 				cond = joinAnd(cond, new ConditionTargetHasBuffId(id, level));
 			}
 			else if ("hasBuff".equalsIgnoreCase(nodeName))
@@ -774,10 +838,12 @@ abstract class DocumentBase
 				StringTokenizer st = new StringTokenizer(nodeValue, ";");
 				EffectType et = Enum.valueOf(EffectType.class, st.nextToken().trim());
 				int level = -1;
+				
 				if (st.hasMoreTokens())
 				{
 					level = Integer.parseInt(st.nextToken().trim());
 				}
+				
 				cond = joinAnd(cond, new ConditionTargetHasBuff(et, level));
 			}
 			else if ("hasForbiddenSkill".equalsIgnoreCase(nodeName))
@@ -785,10 +851,12 @@ abstract class DocumentBase
 				cond = joinAnd(cond, new ConditionTargetHasForbiddenSkill(parseNumber(a.getNodeValue()).intValue()));
 			}
 		}
+		
 		if (cond == null)
 		{
 			_log.error("Unrecognized <target> condition in " + file);
 		}
+		
 		return cond;
 	}
 	
@@ -801,19 +869,23 @@ abstract class DocumentBase
 	{
 		Condition cond = null;
 		NamedNodeMap attrs = n.getAttributes();
+		
 		for (int i = 0; i < attrs.getLength(); i++)
 		{
 			Node a = attrs.item(i);
 			String nodeName = a.getNodeName();
 			String nodeValue = a.getNodeValue();
+			
 			if ("kind".equalsIgnoreCase(nodeName) || "weapon".equalsIgnoreCase(nodeName))
 			{
 				long mask = 0;
 				StringTokenizer st = new StringTokenizer(nodeValue, ",");
 				tokens:
+				
 				while (st.hasMoreTokens())
 				{
 					String item = st.nextToken().trim();
+					
 					for (WeaponType wt : WeaponType.VALUES)
 					{
 						if (wt.toString().equalsIgnoreCase(item))
@@ -822,6 +894,7 @@ abstract class DocumentBase
 							continue tokens;
 						}
 					}
+					
 					for (ArmorType at : ArmorType.VALUES)
 					{
 						if (at.toString().equalsIgnoreCase(item))
@@ -830,8 +903,10 @@ abstract class DocumentBase
 							continue tokens;
 						}
 					}
+					
 					_log.error("Invalid item kind: \"" + item + "\" in " + file);
 				}
+				
 				if (mask != 0)
 				{
 					cond = joinAnd(cond, new ConditionUsingItemType(mask));
@@ -852,17 +927,21 @@ abstract class DocumentBase
 				int id = Integer.parseInt(st.nextToken().trim());
 				int slot = Integer.parseInt(st.nextToken().trim());
 				int enchant = 0;
+				
 				if (st.hasMoreTokens())
 				{
 					enchant = Integer.parseInt(st.nextToken().trim());
 				}
+				
 				cond = joinAnd(cond, new ConditionSlotItemId(slot, id, enchant));
 			}
 		}
+		
 		if (cond == null)
 		{
 			_log.error("Unrecognized <using> condition in " + file);
 		}
+		
 		return cond;
 	}
 	
@@ -875,11 +954,13 @@ abstract class DocumentBase
 	{
 		Condition cond = null;
 		NamedNodeMap attrs = n.getAttributes();
+		
 		for (int i = 0; i < attrs.getLength(); i++)
 		{
 			Node a = attrs.item(i);
 			String nodeName = a.getNodeName();
 			String nodeValue = a.getNodeValue();
+			
 			if ("skill".equalsIgnoreCase(nodeName))
 			{
 				StringTokenizer st = new StringTokenizer(nodeValue, ";");
@@ -892,10 +973,12 @@ abstract class DocumentBase
 				cond = joinAnd(cond, new ConditionFirstEffectSuccess(Boolean.valueOf(nodeValue)));
 			}
 		}
+		
 		if (cond == null)
 		{
 			_log.error("Unrecognized <has> condition in " + file);
 		}
+		
 		return cond;
 	}
 	
@@ -908,19 +991,23 @@ abstract class DocumentBase
 	{
 		Condition cond = null;
 		NamedNodeMap attrs = n.getAttributes();
+		
 		for (int i = 0; i < attrs.getLength(); i++)
 		{
 			Node a = attrs.item(i);
+			
 			if ("night".equalsIgnoreCase(a.getNodeName()))
 			{
 				boolean val = Boolean.valueOf(a.getNodeValue());
 				cond = joinAnd(cond, new ConditionGameTime(CheckGameTime.NIGHT, val));
 			}
 		}
+		
 		if (cond == null)
 		{
 			_log.error("Unrecognized <game> condition in " + file);
 		}
+		
 		return cond;
 	}
 	
@@ -933,18 +1020,22 @@ abstract class DocumentBase
 	{
 		Condition cond = null;
 		NamedNodeMap attrs = n.getAttributes();
+		
 		for (int i = 0; i < attrs.getLength(); i++)
 		{
 			Node a = attrs.item(i);
+			
 			if ("type".equalsIgnoreCase(a.getNodeName()))
 			{
 				cond = joinAnd(cond, new ConditionZoneType(a.getNodeValue()));
 			}
 		}
+		
 		if (cond == null)
 		{
 			_log.error("Unrecognized <zone> condition in " + file);
 		}
+		
 		return cond;
 	}
 	
@@ -957,16 +1048,20 @@ abstract class DocumentBase
 	{
 		NamedNodeMap attrs = n.getAttributes();
 		String name = attrs.getNamedItem("name").getNodeValue();
+		
 		if (name.charAt(0) != '#')
 		{
 			throw new IllegalArgumentException("Table name must start with #");
 		}
+		
 		StringTokenizer data = new StringTokenizer(n.getFirstChild().getNodeValue());
 		List<String> array = new ArrayList<>();
+		
 		while (data.hasMoreTokens())
 		{
 			array.add(data.nextToken());
 		}
+		
 		Object[] res = array.toArray(new Object[array.size()]);
 		setTable(name, res);
 		return res;
@@ -985,6 +1080,7 @@ abstract class DocumentBase
 			String name = n.getAttributes().getNamedItem("name").getNodeValue().trim();
 			String value = n.getAttributes().getNamedItem("val").getNodeValue().trim();
 			char ch = value.length() == 0 ? ' ' : value.charAt(0);
+			
 			if (value.contains("#") && (ch != '#'))
 			{
 				for (String str : value.split("[;: ]+"))
@@ -995,6 +1091,7 @@ abstract class DocumentBase
 					}
 				}
 			}
+			
 			if (ch == '#')
 			{
 				Object tableVal = getTableValue(value, level);
@@ -1028,26 +1125,32 @@ abstract class DocumentBase
 		{
 			value = getTableValue(value).toString();
 		}
+		
 		try
 		{
 			if (value.equalsIgnoreCase("max"))
 			{
 				return Double.POSITIVE_INFINITY;
 			}
+			
 			if (value.equalsIgnoreCase("min"))
 			{
 				return Double.NEGATIVE_INFINITY;
 			}
+			
 			if (value.indexOf('.') == -1)
 			{
 				int radix = 10;
+				
 				if ((value.length() > 2) && value.substring(0, 2).equalsIgnoreCase("0x"))
 				{
 					value = value.substring(2);
 					radix = 16;
 				}
+				
 				return Integer.valueOf(value, radix);
 			}
+			
 			return Double.valueOf(value);
 		}
 		catch (NumberFormatException e)
@@ -1068,11 +1171,13 @@ abstract class DocumentBase
 		{
 			return c;
 		}
+		
 		if (cond instanceof ConditionLogicAnd)
 		{
 			((ConditionLogicAnd) cond).add(c);
 			return cond;
 		}
+		
 		ConditionLogicAnd and = new ConditionLogicAnd();
 		and.add(cond);
 		and.add(c);

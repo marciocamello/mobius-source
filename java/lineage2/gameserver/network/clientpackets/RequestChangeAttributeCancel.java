@@ -28,10 +28,12 @@ public class RequestChangeAttributeCancel extends L2GameClientPacket
 	public void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		activeChar.sendActionFailed();
 	}
 }

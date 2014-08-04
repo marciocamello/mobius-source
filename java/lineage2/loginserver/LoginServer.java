@@ -89,6 +89,7 @@ public class LoginServer
 	public static void checkFreePorts() throws Throwable
 	{
 		ServerSocket ss = null;
+		
 		try
 		{
 			if (Config.LOGIN_HOST.equalsIgnoreCase("*"))

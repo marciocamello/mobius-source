@@ -70,6 +70,7 @@ public class EffectDispelEffects extends Effect
 	{
 		List<Effect> _musicList = new ArrayList<>();
 		List<Effect> _buffList = new ArrayList<>();
+		
 		for (Effect e : _effected.getEffectList().getAllEffects())
 		{
 			if (_dispelType.equals("cancellation"))
@@ -101,17 +102,21 @@ public class EffectDispelEffects extends Effect
 				}
 			}
 		}
+		
 		List<Effect> _effectList = new ArrayList<>();
 		Collections.reverse(_musicList);
 		Collections.reverse(_buffList);
 		_effectList.addAll(_musicList);
 		_effectList.addAll(_buffList);
+		
 		if (_effectList.isEmpty())
 		{
 			return;
 		}
+		
 		double prelimChance, eml, dml, cancel_res_multiplier = _effected.calcStat(Stats.CANCEL_RESIST, 0, null, null);
 		int buffTime, negated = 0;
+		
 		for (Effect e : _effectList)
 		{
 			if (negated < _negateCount)
@@ -121,6 +126,7 @@ public class EffectDispelEffects extends Effect
 				buffTime = e.getTimeLeft();
 				cancel_res_multiplier = 1 - (cancel_res_multiplier * .01);
 				prelimChance = ((2. * dml) + _cancelRate + (buffTime / 120)) * cancel_res_multiplier;
+				
 				if (Rnd.chance(calcSkillChanceLimits(prelimChance, _effector.isPlayable())))
 				{
 					negated++;
@@ -165,6 +171,7 @@ public class EffectDispelEffects extends Effect
 		{
 			return _cancelRate;
 		}
+		
 		return prelimChance;
 	}
 	

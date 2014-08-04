@@ -110,6 +110,7 @@ public class SpawnManager
 		{
 			fillSpawn(entry.getKey(), entry.getValue());
 		}
+		
 		GameTimeController.getInstance().addListener(_listeners);
 	}
 	
@@ -125,16 +126,20 @@ public class SpawnManager
 		{
 			return Collections.emptyList();
 		}
+		
 		List<Spawner> spawnerList = _spawns.get(group);
+		
 		if (spawnerList == null)
 		{
 			_spawns.put(group, spawnerList = new ArrayList<>(templateList.size()));
 		}
+		
 		for (SpawnTemplate template : templateList)
 		{
 			HardSpawner spawner = new HardSpawner(template);
 			spawnerList.add(spawner);
 			NpcTemplate npcTemplate = NpcHolder.getInstance().getTemplate(spawner.getCurrentNpcId());
+			
 			if ((Config.RATE_MOB_SPAWN > 1) && (npcTemplate.getInstanceClass() == MonsterInstance.class) && (npcTemplate.level >= Config.RATE_MOB_SPAWN_MIN_LEVEL) && (npcTemplate.level <= Config.RATE_MOB_SPAWN_MAX_LEVEL))
 			{
 				spawner.setAmount(template.getCount() * Config.RATE_MOB_SPAWN);
@@ -143,14 +148,17 @@ public class SpawnManager
 			{
 				spawner.setAmount(template.getCount());
 			}
+			
 			spawner.setRespawnDelay(template.getRespawn(), template.getRespawnRandom());
 			spawner.setReflection(ReflectionManager.DEFAULT);
 			spawner.setRespawnTime(0);
+			
 			if (npcTemplate.isRaid && group.equals(PeriodOfDay.NONE.name()))
 			{
 				RaidBossSpawnManager.getInstance().addNewSpawn(npcTemplate.getNpcId(), spawner);
 			}
 		}
+		
 		return spawnerList;
 	}
 	
@@ -160,10 +168,12 @@ public class SpawnManager
 	public void spawnAll()
 	{
 		spawn(PeriodOfDay.NONE.name());
+		
 		if (Config.ALLOW_EVENT_GATEKEEPER)
 		{
 			spawn("event_gatekeeper");
 		}
+		
 		if (!Config.ALLOW_CLASS_MASTERS_LIST.isEmpty())
 		{
 			spawn("class_master");
@@ -177,11 +187,14 @@ public class SpawnManager
 	public void spawn(String group)
 	{
 		List<Spawner> spawnerList = _spawns.get(group);
+		
 		if (spawnerList == null)
 		{
 			return;
 		}
+		
 		int npcSpawnCount = 0;
+		
 		for (Spawner spawner : spawnerList)
 		{
 			npcSpawnCount += spawner.init();
@@ -190,6 +203,7 @@ public class SpawnManager
 			// _log.info("SpawnManager: spawned " + npcSpawnCount + " npc for group: " + group);
 			// }
 		}
+		
 		_log.info("SpawnManager: spawned " + npcSpawnCount + " npc; spawns: " + spawnerList.size() + "; group: " + group);
 	}
 	
@@ -200,10 +214,12 @@ public class SpawnManager
 	public void despawn(String group)
 	{
 		List<Spawner> spawnerList = _spawns.get(group);
+		
 		if (spawnerList == null)
 		{
 			return;
 		}
+		
 		for (Spawner spawner : spawnerList)
 		{
 			spawner.deleteAll();
@@ -227,6 +243,7 @@ public class SpawnManager
 	public void reloadAll()
 	{
 		RaidBossSpawnManager.getInstance().cleanUp();
+		
 		for (List<Spawner> spawnerList : _spawns.values())
 		{
 			for (Spawner spawner : spawnerList)
@@ -234,8 +251,10 @@ public class SpawnManager
 				spawner.deleteAll();
 			}
 		}
+		
 		RaidBossSpawnManager.getInstance().reloadBosses();
 		spawnAll();
+		
 		if (GameTimeController.getInstance().isNowNight())
 		{
 			_listeners.onNight();

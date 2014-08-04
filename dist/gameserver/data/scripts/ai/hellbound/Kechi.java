@@ -158,16 +158,21 @@ public class Kechi extends DefaultAI
 	{
 		clearTasks();
 		final Creature target = prepareTarget();
+		
 		if (target == null)
 		{
 			return false;
 		}
+		
 		final NpcInstance actor = getActor();
+		
 		if (actor.isDead())
 		{
 			return false;
 		}
+		
 		final double actor_hp_precent = actor.getCurrentHpPercents();
+		
 		switch (stage)
 		{
 			case 0:
@@ -176,61 +181,79 @@ public class Kechi extends DefaultAI
 					spawnMobs();
 					return true;
 				}
+				
 				break;
+			
 			case 1:
 				if (actor_hp_precent < 60)
 				{
 					spawnMobs();
 					return true;
 				}
+				
 				break;
+			
 			case 2:
 				if (actor_hp_precent < 40)
 				{
 					spawnMobs();
 					return true;
 				}
+				
 				break;
+			
 			case 3:
 				if (actor_hp_precent < 30)
 				{
 					spawnMobs();
 					return true;
 				}
+				
 				break;
+			
 			case 4:
 				if (actor_hp_precent < 20)
 				{
 					spawnMobs();
 					return true;
 				}
+				
 				break;
+			
 			case 5:
 				if (actor_hp_precent < 10)
 				{
 					spawnMobs();
 					return true;
 				}
+				
 				break;
+			
 			case 6:
 				if (actor_hp_precent < 5)
 				{
 					spawnMobs();
 					return true;
 				}
+				
 				break;
 		}
+		
 		final int rnd_per = Rnd.get(100);
+		
 		if (rnd_per < 5)
 		{
 			addTaskBuff(actor, Invincible);
 			return true;
 		}
+		
 		final double distance = actor.getDistance(target);
+		
 		if (!actor.isAMuted() && (rnd_per < 75))
 		{
 			return chooseTaskAndTargets(null, target, distance);
 		}
+		
 		final Map<Skill, Integer> d_skill = new HashMap<>();
 		addDesiredSkill(d_skill, target, distance, KechiDoubleCutter);
 		addDesiredSkill(d_skill, target, distance, KechiAirBlade);
@@ -246,6 +269,7 @@ public class Kechi extends DefaultAI
 		stage++;
 		final NpcInstance actor = getActor();
 		Functions.npcSay(actor, chat[Rnd.get(chat.length)]);
+		
 		for (int[] run : guard_run)
 		{
 			try
@@ -260,6 +284,7 @@ public class Kechi extends DefaultAI
 				ai.addTaskMove(runLoc, true);
 				ai.setGlobalAggro(0);
 				Creature hated = actor.getAggroList().getRandomHated();
+				
 				if (hated != null)
 				{
 					guard.getAggroList().addDamageHate(hated, 0, Rnd.get(1, 100));

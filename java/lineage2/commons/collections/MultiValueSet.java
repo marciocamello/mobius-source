@@ -169,18 +169,22 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 	public boolean getBool(T key)
 	{
 		Object val = get(key);
+		
 		if (val instanceof Number)
 		{
 			return ((Number) val).intValue() != 0;
 		}
+		
 		if (val instanceof String)
 		{
 			return Boolean.parseBoolean((String) val);
 		}
+		
 		if (val instanceof Boolean)
 		{
 			return ((Boolean) val).booleanValue();
 		}
+		
 		throw new IllegalArgumentException("Boolean value required, but found: " + val + "!");
 	}
 	
@@ -193,18 +197,22 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 	public boolean getBool(T key, boolean defaultValue)
 	{
 		Object val = get(key);
+		
 		if (val instanceof Number)
 		{
 			return ((Number) val).intValue() != 0;
 		}
+		
 		if (val instanceof String)
 		{
 			return Boolean.parseBoolean((String) val);
 		}
+		
 		if (val instanceof Boolean)
 		{
 			return ((Boolean) val).booleanValue();
 		}
+		
 		return defaultValue;
 	}
 	
@@ -227,18 +235,22 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 	public int getInteger(T key, int defaultValue)
 	{
 		Object val = get(key);
+		
 		if (val instanceof Number)
 		{
 			return ((Number) val).intValue();
 		}
+		
 		if (val instanceof String)
 		{
 			return Integer.parseInt((String) val);
 		}
+		
 		if (val instanceof Boolean)
 		{
 			return ((Boolean) val).booleanValue() ? 1 : 0;
 		}
+		
 		return defaultValue;
 	}
 	
@@ -250,10 +262,12 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 	public int[] getIntegerArray(T key)
 	{
 		Object val = get(key);
+		
 		if (val instanceof int[])
 		{
 			return (int[]) val;
 		}
+		
 		if (val instanceof Number)
 		{
 			return new int[]
@@ -261,17 +275,21 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 				((Number) val).intValue()
 			};
 		}
+		
 		if (val instanceof String)
 		{
 			String[] vals = ((String) val).split(";");
 			int[] result = new int[vals.length];
 			int i = 0;
+			
 			for (String v : vals)
 			{
 				result[i++] = Integer.parseInt(v);
 			}
+			
 			return result;
 		}
+		
 		throw new IllegalArgumentException("Integer array required, but found: " + val + "!");
 	}
 	
@@ -301,18 +319,22 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 	public long getLong(T key)
 	{
 		Object val = get(key);
+		
 		if (val instanceof Number)
 		{
 			return ((Number) val).longValue();
 		}
+		
 		if (val instanceof String)
 		{
 			return Long.parseLong((String) val);
 		}
+		
 		if (val instanceof Boolean)
 		{
 			return ((Boolean) val).booleanValue() ? 1L : 0L;
 		}
+		
 		throw new IllegalArgumentException("Long value required, but found: " + val + "!");
 	}
 	
@@ -325,18 +347,22 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 	public long getLong(T key, long defaultValue)
 	{
 		Object val = get(key);
+		
 		if (val instanceof Number)
 		{
 			return ((Number) val).longValue();
 		}
+		
 		if (val instanceof String)
 		{
 			return Long.parseLong((String) val);
 		}
+		
 		if (val instanceof Boolean)
 		{
 			return ((Boolean) val).booleanValue() ? 1L : 0L;
 		}
+		
 		return defaultValue;
 	}
 	
@@ -348,18 +374,22 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 	public double getDouble(T key)
 	{
 		Object val = get(key);
+		
 		if (val instanceof Number)
 		{
 			return ((Number) val).doubleValue();
 		}
+		
 		if (val instanceof String)
 		{
 			return Double.parseDouble((String) val);
 		}
+		
 		if (val instanceof Boolean)
 		{
 			return ((Boolean) val).booleanValue() ? 1. : 0.;
 		}
+		
 		throw new IllegalArgumentException("Double value required, but found: " + val + "!");
 	}
 	
@@ -372,18 +402,22 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 	public double getDouble(T key, double defaultValue)
 	{
 		Object val = get(key);
+		
 		if (val instanceof Number)
 		{
 			return ((Number) val).doubleValue();
 		}
+		
 		if (val instanceof String)
 		{
 			return Double.parseDouble((String) val);
 		}
+		
 		if (val instanceof Boolean)
 		{
 			return ((Boolean) val).booleanValue() ? 1. : 0.;
 		}
+		
 		return defaultValue;
 	}
 	
@@ -395,10 +429,12 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 	public String getString(T key)
 	{
 		Object val = get(key);
+		
 		if (val != null)
 		{
 			return String.valueOf(val);
 		}
+		
 		throw new IllegalArgumentException("String value required, but not specified!");
 	}
 	
@@ -411,10 +447,12 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 	public String getString(T key, String defaultValue)
 	{
 		Object val = get(key);
+		
 		if (val != null)
 		{
 			return String.valueOf(val);
 		}
+		
 		return defaultValue;
 	}
 	
@@ -437,10 +475,12 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 	public Object getObject(T key, Object defaultValue)
 	{
 		Object val = get(key);
+		
 		if (val != null)
 		{
 			return val;
 		}
+		
 		return defaultValue;
 	}
 	
@@ -455,14 +495,17 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 	public <E extends Enum<E>> E getEnum(T name, Class<E> enumClass)
 	{
 		Object val = get(name);
+		
 		if ((val != null) && enumClass.isInstance(val))
 		{
 			return (E) val;
 		}
+		
 		if (val instanceof String)
 		{
 			return Enum.valueOf(enumClass, (String) val);
 		}
+		
 		throw new IllegalArgumentException("Enum value of type " + enumClass.getName() + "required, but found: " + val + "!");
 	}
 	
@@ -478,14 +521,17 @@ public class MultiValueSet<T> extends HashMap<T, Object>
 	public <E extends Enum<E>> E getEnum(T name, Class<E> enumClass, E defaultValue)
 	{
 		Object val = get(name);
+		
 		if ((val != null) && enumClass.isInstance(val))
 		{
 			return (E) val;
 		}
+		
 		if (val instanceof String)
 		{
 			return Enum.valueOf(enumClass, (String) val);
 		}
+		
 		return defaultValue;
 	}
 }

@@ -81,6 +81,7 @@ public class _309_ForAGoodCause extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("32647-05.htm"))
 		{
 			st.setCond(1);
@@ -98,6 +99,7 @@ public class _309_ForAGoodCause extends Quest implements ScriptFile
 				st.giveItems(MoiraiRecipes[Rnd.get(MoiraiRecipes.length - 1)], 1);
 				return null;
 			}
+			
 			htmltext = "32646-14.htm";
 		}
 		else if (event.equalsIgnoreCase("moiraimat"))
@@ -108,8 +110,10 @@ public class _309_ForAGoodCause extends Quest implements ScriptFile
 				st.giveItems(Moiraimaterials[Rnd.get(Moiraimaterials.length - 1)], 1);
 				return null;
 			}
+			
 			htmltext = "32646-14.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -120,28 +124,34 @@ public class _309_ForAGoodCause extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int id = st.getState();
 		int cond = st.getCond();
+		
 		if (npcId == Atra)
 		{
 			if (id == CREATED)
 			{
 				QuestState qs1 = st.getPlayer().getQuestState(_308_ReedFieldMaintenance.class);
+				
 				if ((qs1 != null) && qs1.isStarted())
 				{
 					return "32647-17.htm";
 				}
+				
 				if (st.getPlayer().getLevel() < 82)
 				{
 					return "32647-00.htm";
 				}
+				
 				return "32647-01.htm";
 			}
 			else if (cond == 1)
 			{
 				long fallen = st.takeAllItems(FallenMucrokianHide);
+				
 				if (fallen > 0)
 				{
 					st.giveItems(MucrokianHide, fallen * 2);
 				}
+				
 				if (st.getQuestItemsCount(MucrokianHide) == 0)
 				{
 					return "32647-06.htm";
@@ -156,6 +166,7 @@ public class _309_ForAGoodCause extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	

@@ -33,6 +33,7 @@ public class ExPartyRoomMember extends L2GameServerPacket
 	{
 		_type = room.getMemberType(activeChar);
 		_members = new ArrayList<>(room.getPlayers().size());
+		
 		for (Player $member : room.getPlayers())
 		{
 			_members.add(new PartyRoomMemberInfo($member, room.getMemberType($member)));
@@ -45,6 +46,7 @@ public class ExPartyRoomMember extends L2GameServerPacket
 		writeEx(0x08);
 		writeD(_type);
 		writeD(_members.size());
+		
 		for (PartyRoomMemberInfo member_info : _members)
 		{
 			writeD(member_info.objectId);
@@ -54,6 +56,7 @@ public class ExPartyRoomMember extends L2GameServerPacket
 			writeD(member_info.location);
 			writeD(member_info.memberType);
 			writeD(member_info.instanceReuses.length);
+			
 			for (int i : member_info.instanceReuses)
 			{
 				writeD(i);

@@ -35,6 +35,7 @@ public class TakeBeastHandler extends Functions
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
 		String htmltext;
+		
 		if (player.getLevel() < 82)
 		{
 			htmltext = npc.getNpcId() + "-1.htm";
@@ -48,6 +49,7 @@ public class TakeBeastHandler extends Functions
 			Functions.addItem(player, BEAST_WHIP, 1);
 			htmltext = npc.getNpcId() + "-3.htm";
 		}
+		
 		npc.showChatWindow(player, "default/" + htmltext);
 	}
 }

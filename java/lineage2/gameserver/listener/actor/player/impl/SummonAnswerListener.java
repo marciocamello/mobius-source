@@ -59,13 +59,16 @@ public class SummonAnswerListener implements OnAnswerListener
 	public void sayYes()
 	{
 		Player player = _playerRef.get();
+		
 		if (player == null)
 		{
 			return;
 		}
+		
 		player.abortAttack(true, true);
 		player.abortCast(true, true);
 		player.stopMove();
+		
 		if (_count > 0)
 		{
 			if (player.getInventory().destroyItemByItemId(8615, _count))

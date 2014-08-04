@@ -142,6 +142,7 @@ public class EpicBossState
 	public EpicBossState(int bossId, boolean isDoLoad)
 	{
 		_bossId = bossId;
+		
 		if (isDoLoad)
 		{
 			load();
@@ -156,15 +157,18 @@ public class EpicBossState
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("SELECT * FROM epic_boss_spawn WHERE bossId = ? LIMIT 1");
 			statement.setInt(1, _bossId);
 			rset = statement.executeQuery();
+			
 			if (rset.next())
 			{
 				_respawnDate = rset.getLong("respawnDate") * 1000L;
+				
 				if ((_respawnDate - System.currentTimeMillis()) <= 0)
 				{
 					_state = State.NOTSPAWN;
@@ -172,6 +176,7 @@ public class EpicBossState
 				else
 				{
 					final int tempState = rset.getInt("state");
+					
 					if (tempState == State.NOTSPAWN.ordinal())
 					{
 						_state = State.NOTSPAWN;
@@ -212,6 +217,7 @@ public class EpicBossState
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
@@ -238,6 +244,7 @@ public class EpicBossState
 	{
 		Connection con = null;
 		Statement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();

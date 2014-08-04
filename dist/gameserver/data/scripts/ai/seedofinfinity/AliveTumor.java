@@ -61,10 +61,12 @@ public class AliveTumor extends DefaultAI
 	protected boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
+		
 		if ((checkTimer + 10000) < System.currentTimeMillis())
 		{
 			checkTimer = System.currentTimeMillis();
 			int i = 0;
+			
 			for (NpcInstance n : actor.getAroundNpc(400, 300))
 			{
 				if (ArrayUtils.contains(regenCoffins, n.getNpcId()) && !n.isDead())
@@ -72,16 +74,19 @@ public class AliveTumor extends DefaultAI
 					i++;
 				}
 			}
+			
 			if (coffinsCount != i)
 			{
 				coffinsCount = i;
 				coffinsCount = Math.min(coffinsCount, 12);
+				
 				if (coffinsCount > 0)
 				{
 					actor.altOnMagicUseTimer(actor, SkillTable.getInstance().getInfo(5940, coffinsCount));
 				}
 			}
 		}
+		
 		return super.thinkActive();
 	}
 	

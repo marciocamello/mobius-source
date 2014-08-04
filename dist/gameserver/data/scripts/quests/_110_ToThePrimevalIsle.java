@@ -50,6 +50,7 @@ public class _110_ToThePrimevalIsle extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equals("1"))
 		{
 			htmltext = "scroll_seller_anton_q0110_05.htm";
@@ -72,6 +73,7 @@ public class _110_ToThePrimevalIsle extends Quest implements ScriptFile
 			htmltext = "marquez_q0110_06.htm";
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -82,6 +84,7 @@ public class _110_ToThePrimevalIsle extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int id = st.getState();
 		int cond = st.getCond();
+		
 		if (id == CREATED)
 		{
 			if (st.getPlayer().getLevel() >= 75)
@@ -115,6 +118,7 @@ public class _110_ToThePrimevalIsle extends Quest implements ScriptFile
 				}
 			}
 		}
+		
 		return htmltext;
 	}
 	

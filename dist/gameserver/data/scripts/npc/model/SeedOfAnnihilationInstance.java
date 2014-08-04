@@ -27,7 +27,7 @@ import org.apache.commons.lang3.ArrayUtils;
 public class SeedOfAnnihilationInstance extends MonsterInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -120,6 +120,7 @@ public class SeedOfAnnihilationInstance extends MonsterInstance
 	public SeedOfAnnihilationInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
+		
 		if (ArrayUtils.contains(BISTAKON_MOBS, template.getNpcId()))
 		{
 			addMinions(BISTAKON_MINIONS[Rnd.get(BISTAKON_MINIONS.length)], template);

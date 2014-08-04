@@ -46,15 +46,19 @@ public class KickPlayer extends ReceivablePacket
 	protected void runImpl()
 	{
 		GameClient client = LoginServerCommunication.getInstance().removeWaitingClient(account);
+		
 		if (client == null)
 		{
 			client = LoginServerCommunication.getInstance().removeAuthedClient(account);
 		}
+		
 		if (client == null)
 		{
 			return;
 		}
+		
 		Player activeChar = client.getActiveChar();
+		
 		if (activeChar != null)
 		{
 			activeChar.sendPacket(Msg.ANOTHER_PERSON_HAS_LOGGED_IN_WITH_THE_SAME_ACCOUNT);

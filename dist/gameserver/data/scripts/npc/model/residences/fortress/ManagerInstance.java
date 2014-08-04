@@ -32,7 +32,7 @@ import npc.model.residences.ResidenceManager;
 public class ManagerInstance extends ResidenceManager
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -73,11 +73,13 @@ public class ManagerInstance extends ResidenceManager
 		{
 			return;
 		}
+		
 		if (command.equalsIgnoreCase("receive_report"))
 		{
 			int ownedTime = (int) ((System.currentTimeMillis() - getFortress().getOwnDate().getTimeInMillis()) / 60000L);
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			Fortress fortress = getFortress();
+			
 			if (fortress.getContractState() == Fortress.CONTRACT_WITH_CASTLE)
 			{
 				html.setFile("residence2/fortress/fortress_steward022.htm");
@@ -92,6 +94,7 @@ public class ManagerInstance extends ResidenceManager
 			{
 				html.setFile("residence2/fortress/fortress_steward023.htm");
 			}
+			
 			html.replaceNpcString("%time_remained%", NpcString.S1HOUR_S2MINUTE, ownedTime / 60, ownedTime % 60);
 			player.sendPacket(html);
 		}
@@ -111,14 +114,17 @@ public class ManagerInstance extends ResidenceManager
 	{
 		Residence residence = getResidence();
 		Clan residenceOwner = residence.getOwner();
+		
 		if ((residenceOwner != null) && (player.getClan() == residenceOwner))
 		{
 			if (residence.getSiegeEvent().isInProgress())
 			{
 				return COND_SIEGE;
 			}
+			
 			return COND_OWNER;
 		}
+		
 		return COND_FAIL;
 	}
 	

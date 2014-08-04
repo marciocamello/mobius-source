@@ -63,12 +63,15 @@ public class Toma extends DefaultAI
 		{
 			return false;
 		}
+		
 		final NpcInstance _thisActor = getActor();
 		final Location loc = _points[Rnd.get(_points.length)];
+		
 		if (_thisActor.getLoc().equals(loc))
 		{
 			return false;
 		}
+		
 		_thisActor.broadcastPacketToOthers(new MagicSkillUse(_thisActor, _thisActor, 4671, 1, 1000, 0));
 		ThreadPoolManager.getInstance().schedule(new Teleport(loc), 1000);
 		_lastTeleport = System.currentTimeMillis();

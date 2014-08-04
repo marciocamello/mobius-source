@@ -124,15 +124,18 @@ public class Cocktails extends SimpleItemHandler
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
 		final int itemId = item.getItemId();
+		
 		if (player.isInOlympiadMode())
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(itemId));
 			return false;
 		}
+		
 		if (!useItem(player, item, 1))
 		{
 			return false;
 		}
+		
 		switch (itemId)
 		{
 			case 10178:
@@ -143,7 +146,9 @@ public class Cocktails extends SimpleItemHandler
 					player.broadcastPacket(new MagicSkillUse(player, player, skill, 1, 0, 0));
 					player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(skill, 1));
 				}
+				
 				break;
+			
 			case 10179:
 			case 15357:
 			case 20394:
@@ -152,7 +157,9 @@ public class Cocktails extends SimpleItemHandler
 					player.broadcastPacket(new MagicSkillUse(player, player, skill, 1, 0, 0));
 					player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(skill, 1));
 				}
+				
 				break;
+			
 			case 32316:
 			case 33862:
 			case 33766:
@@ -161,19 +168,25 @@ public class Cocktails extends SimpleItemHandler
 					player.broadcastPacket(new MagicSkillUse(player, player, skill, 1, 0, 0));
 					player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(skill, 1));
 				}
+				
 				break;
+			
 			case 14739:
 				player.broadcastPacket(new MagicSkillUse(player, player, 2873, 1, 0, 0));
 				player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(2891, 6));
+				
 				for (int skill : milk_list)
 				{
 					player.broadcastPacket(new MagicSkillUse(player, player, skill, 1, 0, 0));
 					player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(skill, 1));
 				}
+				
 				break;
+			
 			default:
 				return false;
 		}
+		
 		return true;
 	}
 }

@@ -87,11 +87,13 @@ public class OlympiadNobleDAO
 		Connection con = null;
 		PreparedStatement statement = null;
 		ResultSet rset = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(SELECT_SQL_QUERY);
 			rset = statement.executeQuery();
+			
 			while (rset.next())
 			{
 				int classId = rset.getInt(Olympiad.CLASS_ID);
@@ -128,6 +130,7 @@ public class OlympiadNobleDAO
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
+		
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();

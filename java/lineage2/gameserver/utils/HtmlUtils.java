@@ -110,6 +110,7 @@ public class HtmlUtils
 	public static String htmlNpcString(int id, Object... params)
 	{
 		String replace = "<fstring";
+		
 		if (params.length > 0)
 		{
 			for (int i = 0; i < params.length; i++)
@@ -117,6 +118,7 @@ public class HtmlUtils
 				replace += " p" + (i + 1) + "=\"" + String.valueOf(params[i]) + "\"";
 			}
 		}
+		
 		replace += ">" + id + "</fstring>";
 		return replace;
 	}

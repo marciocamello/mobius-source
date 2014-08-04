@@ -35,11 +35,11 @@ public class ExLoadStatHotLink extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeEx(0x103);
-		
 		writeD(categoryId); // catId
 		writeD(subCatId); // subCatId
 		// Monthly
 		writeD(monthlyStatistic.size()); // loop count (always 5)
+		
 		for (int i = 0; i < monthlyStatistic.size(); i++)
 		{
 			CharacterStatistic statistic = monthlyStatistic.get(i);
@@ -51,8 +51,10 @@ public class ExLoadStatHotLink extends L2GameServerPacket
 			writeD(0x00);
 			writeD(0x00);
 		}
+		
 		// General
 		writeD(globalStatistic.size()); // loop count (always 5)
+		
 		for (int i = 0; i < globalStatistic.size(); i++)
 		{
 			CharacterStatistic statistic = globalStatistic.get(i);

@@ -81,6 +81,7 @@ public class SqlBatch
 	public void write(String str)
 	{
 		isEmpty = false;
+		
 		if ((_sb.length() + str.length()) < (_limit - _tail.length()))
 		{
 			_sb.append(str + ",\n");
@@ -99,10 +100,12 @@ public class SqlBatch
 	public void writeBuffer()
 	{
 		String last = _sb.toString();
+		
 		if (last.length() > 0)
 		{
 			_result.append(last.substring(0, last.length() - 2) + _tail);
 		}
+		
 		_sb = new StringBuilder(_header);
 	}
 	
@@ -116,6 +119,7 @@ public class SqlBatch
 		{
 			writeBuffer();
 		}
+		
 		return _result.toString();
 	}
 	

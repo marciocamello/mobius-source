@@ -44,6 +44,7 @@ public class HermunkusInstance extends NpcInstance
 				{
 					showChatWindow(player, "teleporter/hermunkus-85.htm");
 				}
+				
 				if (player.getLevel() >= 90)
 				{
 					showChatWindow(player, "teleporter/hermunkus-90.htm");

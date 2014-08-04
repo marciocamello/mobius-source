@@ -213,56 +213,72 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 				_socialTask.cancel(false);
 				_socialTask = null;
 			}
+			
 			switch (_npcId)
 			{
 				case Velociraptor:
 					_velociraptor = spawn(new Location(27852, -5536, -1983, 44732), Velociraptor);
 					((DefaultAI) _velociraptor.getAI()).addTaskMove(_pos, false);
+					
 					if (_socialTask != null)
 					{
 						_socialTask.cancel(false);
 						_socialTask = null;
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new Social(_velociraptor, 2), 6000);
+					
 					if (_activityTimeEndTask != null)
 					{
 						_activityTimeEndTask.cancel(false);
 						_activityTimeEndTask = null;
 					}
+					
 					_activityTimeEndTask = ThreadPoolManager.getInstance().schedule(new ActivityTimeEnd(), FWS_ACTIVITYTIMEOFMOBS);
 					break;
+				
 				case Pterosaur:
 					_pterosaur = spawn(new Location(27852, -5536, -1983, 44732), Pterosaur);
 					((DefaultAI) _pterosaur.getAI()).addTaskMove(_pos, false);
+					
 					if (_socialTask != null)
 					{
 						_socialTask.cancel(false);
 						_socialTask = null;
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new Social(_pterosaur, 2), 6000);
+					
 					if (_activityTimeEndTask != null)
 					{
 						_activityTimeEndTask.cancel(false);
 						_activityTimeEndTask = null;
 					}
+					
 					_activityTimeEndTask = ThreadPoolManager.getInstance().schedule(new ActivityTimeEnd(), FWS_ACTIVITYTIMEOFMOBS);
 					break;
+				
 				case Tyrannosaurus:
 					_tyranno = spawn(new Location(27852, -5536, -1983, 44732), Tyrannosaurus);
 					((DefaultAI) _tyranno.getAI()).addTaskMove(_pos, false);
+					
 					if (_socialTask != null)
 					{
 						_socialTask.cancel(false);
 						_socialTask = null;
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new Social(_tyranno, 2), 6000);
+					
 					if (_activityTimeEndTask != null)
 					{
 						_activityTimeEndTask.cancel(false);
 						_activityTimeEndTask = null;
 					}
+					
 					_activityTimeEndTask = ThreadPoolManager.getInstance().schedule(new ActivityTimeEnd(), FWS_ACTIVITYTIMEOFMOBS);
 					break;
+				
 				case Sailren:
 					_sailren = spawn(new Location(27810, -5655, -1983, 44732), Sailren);
 					_state.setRespawnDate(getRespawnInterval() + FWS_ACTIVITYTIMEOFMOBS);
@@ -270,17 +286,21 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 					_state.update();
 					_sailren.setRunning();
 					((DefaultAI) _sailren.getAI()).addTaskMove(_pos, false);
+					
 					if (_socialTask != null)
 					{
 						_socialTask.cancel(false);
 						_socialTask = null;
 					}
+					
 					_socialTask = ThreadPoolManager.getInstance().schedule(new Social(_sailren, 2), 6000);
+					
 					if (_activityTimeEndTask != null)
 					{
 						_activityTimeEndTask.cancel(false);
 						_activityTimeEndTask = null;
 					}
+					
 					_activityTimeEndTask = ThreadPoolManager.getInstance().schedule(new ActivityTimeEnd(), FWS_ACTIVITYTIMEOFMOBS);
 					break;
 			}
@@ -450,10 +470,12 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		_state = new EpicBossState(Sailren);
 		_zone = ReflectionUtils.getZone("[sailren_epic]");
 		_log.info("SailrenManager: State of Sailren is " + _state.getState() + ".");
+		
 		if (!_state.getState().equals(EpicBossState.State.NOTSPAWN))
 		{
 			setIntervalEndTask();
 		}
+		
 		_log.info("SailrenManager: Next spawn date of Sailren is " + TimeUtils.toSimpleFormat(_state.getRespawnDate()) + ".");
 	}
 	
@@ -470,6 +492,7 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
@@ -492,6 +515,7 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 			{
 				_monsterSpawnTask.cancel(false);
 			}
+			
 			_monsterSpawnTask = ThreadPoolManager.getInstance().schedule(new SailrenSpawn(Pterosaur), FWS_INTERVALOFNEXTMONSTER);
 		}
 		else if (self.equals(_pterosaur))
@@ -500,6 +524,7 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 			{
 				_monsterSpawnTask.cancel(false);
 			}
+			
 			_monsterSpawnTask = ThreadPoolManager.getInstance().schedule(new SailrenSpawn(Tyrannosaurus), FWS_INTERVALOFNEXTMONSTER);
 		}
 		else if (self.equals(_tyranno))
@@ -508,6 +533,7 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 			{
 				_monsterSpawnTask.cancel(false);
 			}
+			
 			_monsterSpawnTask = ThreadPoolManager.getInstance().schedule(new SailrenSpawn(Sailren), FWS_INTERVALOFNEXTMONSTER);
 		}
 		else if (self.equals(_sailren))
@@ -526,6 +552,7 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		{
 			return;
 		}
+		
 		Dying = true;
 		_state.setRespawnDate(getRespawnInterval());
 		_state.setState(EpicBossState.State.INTERVAL);
@@ -540,18 +567,21 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 	private static void setIntervalEndTask()
 	{
 		setUnspawn();
+		
 		if (_state.getState().equals(EpicBossState.State.ALIVE))
 		{
 			_state.setState(EpicBossState.State.NOTSPAWN);
 			_state.update();
 			return;
 		}
+		
 		if (!_state.getState().equals(EpicBossState.State.INTERVAL))
 		{
 			_state.setRespawnDate(getRespawnInterval());
 			_state.setState(EpicBossState.State.INTERVAL);
 			_state.update();
 		}
+		
 		_intervalEndTask = ThreadPoolManager.getInstance().schedule(new IntervalEnd(), _state.getInterval());
 	}
 	
@@ -561,76 +591,92 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 	private static void setUnspawn()
 	{
 		banishForeigners();
+		
 		if (_velociraptor != null)
 		{
 			if (_velociraptor.getSpawn() != null)
 			{
 				_velociraptor.getSpawn().stopRespawn();
 			}
+			
 			_velociraptor.deleteMe();
 			_velociraptor = null;
 		}
+		
 		if (_pterosaur != null)
 		{
 			if (_pterosaur.getSpawn() != null)
 			{
 				_pterosaur.getSpawn().stopRespawn();
 			}
+			
 			_pterosaur.deleteMe();
 			_pterosaur = null;
 		}
+		
 		if (_tyranno != null)
 		{
 			if (_tyranno.getSpawn() != null)
 			{
 				_tyranno.getSpawn().stopRespawn();
 			}
+			
 			_tyranno.deleteMe();
 			_tyranno = null;
 		}
+		
 		if (_sailren != null)
 		{
 			if (_sailren.getSpawn() != null)
 			{
 				_sailren.getSpawn().stopRespawn();
 			}
+			
 			_sailren.deleteMe();
 			_sailren = null;
 		}
+		
 		if (_teleportCube != null)
 		{
 			if (_teleportCube.getSpawn() != null)
 			{
 				_teleportCube.getSpawn().stopRespawn();
 			}
+			
 			_teleportCube.deleteMe();
 			_teleportCube = null;
 		}
+		
 		if (_cubeSpawnTask != null)
 		{
 			_cubeSpawnTask.cancel(false);
 			_cubeSpawnTask = null;
 		}
+		
 		if (_monsterSpawnTask != null)
 		{
 			_monsterSpawnTask.cancel(false);
 			_monsterSpawnTask = null;
 		}
+		
 		if (_intervalEndTask != null)
 		{
 			_intervalEndTask.cancel(false);
 			_intervalEndTask = null;
 		}
+		
 		if (_socialTask != null)
 		{
 			_socialTask.cancel(false);
 			_socialTask = null;
 		}
+		
 		if (_activityTimeEndTask != null)
 		{
 			_activityTimeEndTask.cancel(false);
 			_activityTimeEndTask = null;
 		}
+		
 		if (_onAnnihilatedTask != null)
 		{
 			_onAnnihilatedTask.cancel(false);
@@ -644,6 +690,7 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 	static void sleep()
 	{
 		setUnspawn();
+		
 		if (_state.getState().equals(EpicBossState.State.ALIVE))
 		{
 			_state.setState(EpicBossState.State.NOTSPAWN);
@@ -717,6 +764,7 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 		else
 		{
 			final List<Player> members = new ArrayList<>();
+			
 			for (Player mem : pc.getParty().getPartyMembers())
 			{
 				if ((mem != null) && !mem.isDead() && mem.isInRange(pc, 1000))
@@ -724,11 +772,13 @@ public class SailrenManager extends Functions implements ScriptFile, OnDeathList
 					members.add(mem);
 				}
 			}
+			
 			for (Player mem : members)
 			{
 				mem.teleToLocation(Location.findPointToStay(_enter, 80, mem.getGeoIndex()));
 			}
 		}
+		
 		_isAlreadyEnteredOtherParty = true;
 	}
 	

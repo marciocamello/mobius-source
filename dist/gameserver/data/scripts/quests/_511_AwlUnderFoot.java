@@ -99,8 +99,10 @@ public class _511_AwlUnderFoot extends Quest implements ScriptFile
 			{
 				return "gludio_fort_a_campkeeper_q0511_01a.htm";
 			}
+			
 			return enterPrison(st.getPlayer());
 		}
+		
 		return event;
 	}
 	
@@ -111,10 +113,12 @@ public class _511_AwlUnderFoot extends Quest implements ScriptFile
 		{
 			return "gludio_fort_a_campkeeper_q0511_01a.htm";
 		}
+		
 		if (st.getState() == CREATED)
 		{
 			return "gludio_fort_a_campkeeper_q0511_01.htm";
 		}
+		
 		if (st.getQuestItemsCount(DungeonLeaderMark) > 0)
 		{
 			st.giveItems(KnightsEpaulette, st.getQuestItemsCount(DungeonLeaderMark));
@@ -122,6 +126,7 @@ public class _511_AwlUnderFoot extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			return "gludio_fort_a_campkeeper_q0511_09.htm";
 		}
+		
 		return "gludio_fort_a_campkeeper_q0511_10.htm";
 	}
 	
@@ -139,21 +144,25 @@ public class _511_AwlUnderFoot extends Quest implements ScriptFile
 					case Jakard:
 						prison.initSpawn(type2[Rnd.get(type2.length)], false);
 						break;
+					
 					case Helsing:
 					case Gillien:
 					case Medici:
 					case ImmortalMuus:
 						prison.initSpawn(type3[Rnd.get(type3.length)], false);
 						break;
+					
 					case BrandTheExile:
 					case CommanderKoenig:
 					case GergTheHunter:
 						Party party = st.getPlayer().getParty();
+						
 						if (party != null)
 						{
 							for (Player member : party.getPartyMembers())
 							{
 								QuestState qs = member.getQuestState(getClass());
+								
 								if ((qs != null) && qs.isStarted())
 								{
 									qs.giveItems(DungeonLeaderMark, RewardMarksCount / party.getMemberCount());
@@ -168,87 +177,108 @@ public class _511_AwlUnderFoot extends Quest implements ScriptFile
 							st.playSound(SOUND_ITEMGET);
 							st.getPlayer().sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(5));
 						}
+						
 						Reflection r = ReflectionManager.getInstance().get(prison.getReflectionId());
+						
 						if (r != null)
 						{
 							r.startCollapseTimer(300000);
 						}
+						
 						break;
 				}
+				
 				break;
 			}
 		}
+		
 		return null;
 	}
 	
 	private boolean check(Player player)
 	{
 		Fortress fort = ResidenceHolder.getInstance().getResidenceByObject(Fortress.class, player);
+		
 		if (fort == null)
 		{
 			return false;
 		}
+		
 		Clan clan = player.getClan();
+		
 		if (clan == null)
 		{
 			return false;
 		}
+		
 		if (clan.getClanId() != fort.getOwnerId())
 		{
 			return false;
 		}
+		
 		return true;
 	}
 	
 	private String enterPrison(Player player)
 	{
 		Fortress fort = ResidenceHolder.getInstance().getResidenceByObject(Fortress.class, player);
+		
 		if ((fort == null) || (fort.getOwner() != player.getClan()))
 		{
 			return "gludio_fort_a_campkeeper_q0511_01a.htm";
 		}
+		
 		if (fort.getContractState() != 1)
 		{
 			return "gludio_fort_a_campkeeper_q0511_13.htm";
 		}
+		
 		if (!areMembersSameClan(player))
 		{
 			return "gludio_fort_a_campkeeper_q0511_01a.htm";
 		}
+		
 		if (player.canEnterInstance(INSTANCE_ZONE_ID))
 		{
 			InstantZone iz = InstantZoneHolder.getInstance().getInstantZone(INSTANCE_ZONE_ID);
 			Prison prison = null;
+			
 			if (!_prisons.isEmpty())
 			{
 				prison = _prisons.get(fort.getId());
+				
 				if ((prison != null) && prison.isLocked())
 				{
 					player.sendPacket(new SystemMessage(SystemMessage.C1_MAY_NOT_RE_ENTER_YET).addName(player));
 					return null;
 				}
 			}
+			
 			prison = new Prison(fort.getId(), iz);
 			_prisons.put(prison.getFortId(), prison);
 			Reflection r = ReflectionManager.getInstance().get(prison.getReflectionId());
 			r.setReturnLoc(player.getLoc());
+			
 			for (Player member : player.getParty().getPartyMembers())
 			{
 				if (member != player)
 				{
 					newQuestState(member, STARTED);
 				}
+				
 				member.setReflection(r);
 				member.teleToLocation(iz.getTeleportCoord());
 				member.setVar("backCoords", r.getReturnLoc().toXYZString(), -1);
 				member.setInstanceReuse(iz.getId(), System.currentTimeMillis());
 			}
+			
 			player.getParty().setReflection(r);
 			r.setParty(player.getParty());
 			r.startCollapseTimer(iz.getTimelimit() * 60 * 1000L);
 			player.getParty().broadCast(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(iz.getTimelimit()));
 			prison.initSpawn(type1[Rnd.get(type1.length)], true);
 		}
+		
 		return null;
 	}
 	
@@ -317,6 +347,7 @@ public class _511_AwlUnderFoot extends Quest implements ScriptFile
 		{
 			return true;
 		}
+		
 		for (Player p : player.getParty().getPartyMembers())
 		{
 			if (p.getClan() != player.getClan())
@@ -324,6 +355,7 @@ public class _511_AwlUnderFoot extends Quest implements ScriptFile
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	

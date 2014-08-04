@@ -54,30 +54,37 @@ public class PurpleManedHorse extends Functions implements ScriptFile
 		{
 			return;
 		}
+		
 		String[] SELLPETS = Config.SERVICES_SELLPETS.split(";");
+		
 		if (SELLPETS.length == 0)
 		{
 			return;
 		}
+		
 		list = new MultiSellListContainer();
 		list.setNoTax(true);
 		list.setShowAll(true);
 		list.setKeepEnchant(false);
 		list.setNoKey(true);
 		int entId = 1;
+		
 		for (String SELLPET : SELLPETS)
 		{
 			MultiSellEntry e = MultiSellHolder.parseEntryFromStr(SELLPET);
+			
 			if (e != null)
 			{
 				e.setEntryId(entId++);
 				list.addEntry(e);
 			}
 		}
+		
 		if (list.getEntries().size() == 0)
 		{
 			return;
 		}
+		
 		Enabled = true;
 		loadMultiSell();
 	}
@@ -123,6 +130,7 @@ public class PurpleManedHorse extends Functions implements ScriptFile
 				"Buy New Pets"
 			});
 		}
+		
 		return "";
 	}
 	

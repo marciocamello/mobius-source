@@ -49,6 +49,7 @@ public class MagicSkillLaunched extends L2GameServerPacket
 		writeD(_skillId);
 		writeD(_skillLevel);
 		writeD(_targets.size());
+		
 		for (Creature target : _targets)
 		{
 			if (target != null)

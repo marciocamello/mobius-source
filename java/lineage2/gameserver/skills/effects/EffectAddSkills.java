@@ -39,6 +39,7 @@ public class EffectAddSkills extends Effect
 	public void onStart()
 	{
 		super.onStart();
+		
 		for (AddedSkill as : getSkill().getAddedSkills())
 		{
 			getEffected().addSkill(as.getSkill());
@@ -52,6 +53,7 @@ public class EffectAddSkills extends Effect
 	public void onExit()
 	{
 		super.onExit();
+		
 		for (AddedSkill as : getSkill().getAddedSkills())
 		{
 			getEffected().removeSkill(as.getSkill());

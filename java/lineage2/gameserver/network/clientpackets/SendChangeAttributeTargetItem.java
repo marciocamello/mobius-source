@@ -48,16 +48,20 @@ public class SendChangeAttributeTargetItem extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		ItemInstance item = activeChar.getInventory().getItemByObjectId(_itemObjId);
+		
 		if ((item == null) || !item.isWeapon())
 		{
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		activeChar.sendPacket(new ExChangeAttributeInfo(_crystalItemId, item.getItemId()));
 	}
 }

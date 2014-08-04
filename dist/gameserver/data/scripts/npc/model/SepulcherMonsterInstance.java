@@ -34,7 +34,7 @@ import bosses.FourSepulchersSpawn;
 public class SepulcherMonsterInstance extends MonsterInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -92,13 +92,17 @@ public class SepulcherMonsterInstance extends MonsterInstance
 				{
 					_victimSpawnKeyBoxTask.cancel(false);
 				}
+				
 				_victimSpawnKeyBoxTask = ThreadPoolManager.getInstance().schedule(new VictimSpawnKeyBox(this), 300000);
+				
 				if (_victimShout != null)
 				{
 					_victimShout.cancel(false);
 				}
+				
 				_victimShout = ThreadPoolManager.getInstance().schedule(new VictimShout(this), 5000);
 				break;
+			
 			case 18196:
 			case 18197:
 			case 18198:
@@ -116,6 +120,7 @@ public class SepulcherMonsterInstance extends MonsterInstance
 			case 18210:
 			case 18211:
 				break;
+			
 			case 18231:
 			case 18232:
 			case 18233:
@@ -133,11 +138,14 @@ public class SepulcherMonsterInstance extends MonsterInstance
 				{
 					_changeImmortalTask.cancel(false);
 				}
+				
 				_changeImmortalTask = ThreadPoolManager.getInstance().schedule(new ChangeImmortal(this), 1600);
 				break;
+			
 			case 18256:
 				break;
 		}
+		
 		super.onSpawn();
 	}
 	
@@ -149,6 +157,7 @@ public class SepulcherMonsterInstance extends MonsterInstance
 	protected void onDeath(Creature killer)
 	{
 		super.onDeath(killer);
+		
 		switch (getNpcId())
 		{
 			case 18120:
@@ -186,8 +195,10 @@ public class SepulcherMonsterInstance extends MonsterInstance
 				{
 					_onDeadEventTask.cancel(false);
 				}
+				
 				_onDeadEventTask = ThreadPoolManager.getInstance().schedule(new OnDeadEvent(this), 3500);
 				break;
+			
 			case 18150:
 			case 18151:
 			case 18152:
@@ -201,17 +212,21 @@ public class SepulcherMonsterInstance extends MonsterInstance
 					_victimSpawnKeyBoxTask.cancel(false);
 					_victimSpawnKeyBoxTask = null;
 				}
+				
 				if (_victimShout != null)
 				{
 					_victimShout.cancel(false);
 					_victimShout = null;
 				}
+				
 				if (_onDeadEventTask != null)
 				{
 					_onDeadEventTask.cancel(false);
 				}
+				
 				_onDeadEventTask = ThreadPoolManager.getInstance().schedule(new OnDeadEvent(this), 3500);
 				break;
+			
 			case 18141:
 			case 18142:
 			case 18143:
@@ -226,9 +241,12 @@ public class SepulcherMonsterInstance extends MonsterInstance
 					{
 						_onDeadEventTask.cancel(false);
 					}
+					
 					_onDeadEventTask = ThreadPoolManager.getInstance().schedule(new OnDeadEvent(this), 3500);
 				}
+				
 				break;
+			
 			case 18220:
 			case 18221:
 			case 18222:
@@ -256,8 +274,10 @@ public class SepulcherMonsterInstance extends MonsterInstance
 					{
 						_onDeadEventTask.cancel(false);
 					}
+					
 					_onDeadEventTask = ThreadPoolManager.getInstance().schedule(new OnDeadEvent(this), 3500);
 				}
+				
 				break;
 		}
 	}
@@ -273,11 +293,13 @@ public class SepulcherMonsterInstance extends MonsterInstance
 			_victimSpawnKeyBoxTask.cancel(false);
 			_victimSpawnKeyBoxTask = null;
 		}
+		
 		if (_onDeadEventTask != null)
 		{
 			_onDeadEventTask.cancel(false);
 			_onDeadEventTask = null;
 		}
+		
 		super.onDelete();
 	}
 	
@@ -310,10 +332,12 @@ public class SepulcherMonsterInstance extends MonsterInstance
 			{
 				return;
 			}
+			
 			if (!_activeChar.isVisible())
 			{
 				return;
 			}
+			
 			broadcastPacket(new NpcSay(SepulcherMonsterInstance.this, ChatType.ALL, "forgive me!!"));
 		}
 	}
@@ -347,12 +371,15 @@ public class SepulcherMonsterInstance extends MonsterInstance
 			{
 				return;
 			}
+			
 			if (!_activeChar.isVisible())
 			{
 				return;
 			}
+			
 			FourSepulchersSpawn.spawnKeyBox(_activeChar);
 			broadcastPacket(new NpcSay(SepulcherMonsterInstance.this, ChatType.ALL, "Many thanks for rescue me."));
+			
 			if (_victimShout != null)
 			{
 				_victimShout.cancel(false);
@@ -421,6 +448,7 @@ public class SepulcherMonsterInstance extends MonsterInstance
 				case 18219:
 					FourSepulchersSpawn.spawnKeyBox(_activeChar);
 					break;
+				
 				case 18150:
 				case 18151:
 				case 18152:
@@ -431,6 +459,7 @@ public class SepulcherMonsterInstance extends MonsterInstance
 				case 18157:
 					FourSepulchersSpawn.spawnExecutionerOfHalisha(_activeChar);
 					break;
+				
 				case 18141:
 				case 18142:
 				case 18143:
@@ -441,6 +470,7 @@ public class SepulcherMonsterInstance extends MonsterInstance
 				case 18148:
 					FourSepulchersSpawn.spawnMonster(_activeChar.mysteriousBoxId);
 					break;
+				
 				case 18220:
 				case 18221:
 				case 18222:
@@ -512,6 +542,7 @@ public class SepulcherMonsterInstance extends MonsterInstance
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	

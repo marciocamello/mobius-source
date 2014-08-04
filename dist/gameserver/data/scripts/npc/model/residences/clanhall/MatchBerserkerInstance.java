@@ -24,7 +24,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 public class MatchBerserkerInstance extends CTBBossInstance
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -63,6 +63,7 @@ public class MatchBerserkerInstance extends CTBBossInstance
 		{
 			damage = ((damage / getMaxHp()) / 0.05) * 10;
 		}
+		
 		super.reduceCurrentHp(damage, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
 	}
 }

@@ -63,9 +63,11 @@ public class Time implements IUserCommandHandler
 		{
 			return false;
 		}
+		
 		int h = GameTimeController.getInstance().getGameHour();
 		int m = GameTimeController.getInstance().getGameMin();
 		SystemMessage sm;
+		
 		if (GameTimeController.getInstance().isNowNight())
 		{
 			sm = new SystemMessage(SystemMessage.THE_CURRENT_TIME_IS_S1S2_IN_THE_NIGHT);
@@ -74,12 +76,15 @@ public class Time implements IUserCommandHandler
 		{
 			sm = new SystemMessage(SystemMessage.THE_CURRENT_TIME_IS_S1S2_IN_THE_DAY);
 		}
+		
 		sm.addString(df.format(h)).addString(df.format(m));
 		activeChar.sendPacket(sm);
+		
 		if (Config.ALT_SHOW_SERVER_TIME)
 		{
 			activeChar.sendMessage(new CustomMessage("usercommandhandlers.Time.ServerTime", activeChar, sf.format(new Date(System.currentTimeMillis()))));
 		}
+		
 		return true;
 	}
 	

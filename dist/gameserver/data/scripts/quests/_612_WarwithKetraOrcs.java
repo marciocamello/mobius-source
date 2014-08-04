@@ -71,6 +71,7 @@ public class _612_WarwithKetraOrcs extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
+		
 		if (event.equalsIgnoreCase("quest_accept"))
 		{
 			htmltext = "elder_ashas_barka_durai_q0612_0104.htm";
@@ -81,6 +82,7 @@ public class _612_WarwithKetraOrcs extends Quest implements ScriptFile
 		else if (event.equalsIgnoreCase("elder_ashas_barka_durai_q0612_0202.htm"))
 		{
 			long ec = st.getQuestItemsCount(MOLAR_OF_KETRA_ORC) / 5;
+			
 			if (ec > 0)
 			{
 				st.takeItems(MOLAR_OF_KETRA_ORC, ec * 5);
@@ -97,6 +99,7 @@ public class _612_WarwithKetraOrcs extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(true);
 		}
+		
 		return htmltext;
 	}
 	
@@ -105,6 +108,7 @@ public class _612_WarwithKetraOrcs extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
+		
 		if (cond == 0)
 		{
 			if (st.getPlayer().getLevel() >= 74)
@@ -125,6 +129,7 @@ public class _612_WarwithKetraOrcs extends Quest implements ScriptFile
 		{
 			htmltext = "elder_ashas_barka_durai_q0612_0105.htm";
 		}
+		
 		return htmltext;
 	}
 	
@@ -137,6 +142,7 @@ public class _612_WarwithKetraOrcs extends Quest implements ScriptFile
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -147,6 +153,7 @@ public class _612_WarwithKetraOrcs extends Quest implements ScriptFile
 		{
 			st.rollAndGive(MOLAR_OF_KETRA_ORC, 1, MOLAR_OF_KETRA_ORC_DROP_CHANCE);
 		}
+		
 		return null;
 	}
 }

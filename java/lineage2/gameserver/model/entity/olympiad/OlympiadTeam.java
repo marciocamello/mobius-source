@@ -81,6 +81,7 @@ public class OlympiadTeam
 	{
 		String player_name = "";
 		Player player = GameObjectsStorage.getPlayer(obj_id);
+		
 		if (player != null)
 		{
 			player_name = player.getName();
@@ -88,11 +89,13 @@ public class OlympiadTeam
 		else
 		{
 			StatsSet noble = Olympiad._nobles.get(obj_id);
+			
 			if (noble != null)
 			{
 				player_name = noble.getString(Olympiad.CHAR_NAME, "");
 			}
 		}
+		
 		_members.put(obj_id, new TeamMember(obj_id, player_name, player, _game, _side));
 		_name = player_name;
 	}
@@ -158,31 +161,40 @@ public class OlympiadTeam
 		{
 			member.preparePlayer();
 		}
+		
 		if (_members.size() <= 1)
 		{
 			return;
 		}
+		
 		List<Player> list = new ArrayList<>();
+		
 		for (TeamMember member : _members.values())
 		{
 			Player player = member.getPlayer();
+			
 			if (player != null)
 			{
 				list.add(player);
 				player.leaveParty();
 			}
 		}
+		
 		if (list.size() <= 1)
 		{
 			return;
 		}
+		
 		Player leader = list.get(0);
+		
 		if (leader == null)
 		{
 			return;
 		}
+		
 		Party party = new Party(leader, 0);
 		leader.setParty(party);
+		
 		for (Player player : list)
 		{
 			if (player != leader)
@@ -216,6 +228,7 @@ public class OlympiadTeam
 				return true;
 			}
 		}
+		
 		return false;
 	}
 	
@@ -232,6 +245,7 @@ public class OlympiadTeam
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	
@@ -252,14 +266,17 @@ public class OlympiadTeam
 	public List<Player> getPlayers()
 	{
 		List<Player> players = new ArrayList<>(_members.size());
+		
 		for (TeamMember member : _members.values())
 		{
 			Player player = member.getPlayer();
+			
 			if (player != null)
 			{
 				players.add(player);
 			}
 		}
+		
 		return players;
 	}
 	
@@ -281,6 +298,7 @@ public class OlympiadTeam
 		for (TeamMember member : _members.values())
 		{
 			Player player = member.getPlayer();
+			
 			if (player != null)
 			{
 				player.sendPacket(p);
@@ -297,6 +315,7 @@ public class OlympiadTeam
 		for (TeamMember member : _members.values())
 		{
 			Player player = member.getPlayer();
+			
 			if (player != null)
 			{
 				player.sendPacket(p);
@@ -312,6 +331,7 @@ public class OlympiadTeam
 		for (TeamMember member : _members.values())
 		{
 			Player player = member.getPlayer();
+			
 			if (player != null)
 			{
 				player.broadcastPacket(new ExOlympiadUserInfo(player, player.getOlympiadSide()));
@@ -331,12 +351,14 @@ public class OlympiadTeam
 			for (TeamMember member : _members.values())
 			{
 				Player pl = member.getPlayer();
+				
 				if ((pl != null) && (pl == player))
 				{
 					member.logout();
 				}
 			}
 		}
+		
 		return checkPlayers();
 	}
 	
@@ -352,12 +374,14 @@ public class OlympiadTeam
 			for (TeamMember member : _members.values())
 			{
 				Player pl = member.getPlayer();
+				
 				if ((pl != null) && (pl == player))
 				{
 					member.doDie();
 				}
 			}
 		}
+		
 		return isAllDead();
 	}
 	

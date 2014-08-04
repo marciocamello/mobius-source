@@ -44,6 +44,7 @@ public class Kama56Minion extends Fighter
 		{
 			return;
 		}
+		
 		super.onEvtAggression(attacker, aggro);
 	}
 	

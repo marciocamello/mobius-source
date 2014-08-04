@@ -37,44 +37,52 @@ public class Logout extends L2GameClientPacket
 	protected void runImpl()
 	{
 		Player activeChar = getClient().getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		if (activeChar.isInCombat())
 		{
 			activeChar.sendPacket(SystemMsg.YOU_CANNOT_EXIT_THE_GAME_WHILE_IN_COMBAT);
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (activeChar.isFishing())
 		{
 			activeChar.sendPacket(SystemMsg.YOU_CANNOT_DO_THAT_WHILE_FISHING_2);
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (activeChar.isBlocked() && !activeChar.isFlying())
 		{
 			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.Logout.OutOfControl", activeChar));
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (activeChar.isInOlympiadMode())
 		{
 			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.Logout.Olympiad", activeChar));
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (activeChar.isInObserverMode())
 		{
 			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.Logout.Observer", activeChar));
 			activeChar.sendActionFailed();
 			return;
 		}
+		
 		if (activeChar.getClan() != null)
 		{
 			activeChar.getClan().startNotifyClanLogOut(activeChar);
 		}
+		
 		activeChar.kick();
 	}
 }

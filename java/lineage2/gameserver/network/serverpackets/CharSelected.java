@@ -29,7 +29,6 @@ public class CharSelected extends L2GameServerPacket
 	public CharSelected(final Player cha, final int sessionId)
 	{
 		_sessionId = sessionId;
-		
 		_name = cha.getName();
 		char_id = cha.getObjectId(); // FIXME 0x00030b7a ??
 		_title = cha.getTitle();
@@ -57,7 +56,6 @@ public class CharSelected extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x0B);
-		
 		writeS(_name);
 		writeD(char_id);
 		writeS(_title);
@@ -71,7 +69,6 @@ public class CharSelected extends L2GameServerPacket
 		writeD(_loc.x);
 		writeD(_loc.y);
 		writeD(_loc.z);
-		
 		writeF(curHp);
 		writeF(curMp);
 		writeD(_sp);
@@ -87,14 +84,11 @@ public class CharSelected extends L2GameServerPacket
 		writeD(_wit);
 		writeD(GameTimeController.getInstance().getGameTime());
 		writeD(0x00);
-		
 		writeD(class_id);
-		
 		writeD(0x00);
 		writeD(0x00);
 		writeD(0x00);
 		writeD(0x00);
-		
 		writeB(new byte[64]);
 		writeD(0x00);
 	}

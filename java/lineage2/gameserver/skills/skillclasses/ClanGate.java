@@ -53,18 +53,23 @@ public class ClanGate extends Skill
 		{
 			return false;
 		}
+		
 		Player player = (Player) activeChar;
+		
 		if (!player.isClanLeader())
 		{
 			player.sendPacket(Msg.ONLY_THE_CLAN_LEADER_IS_ENABLED);
 			return false;
 		}
+		
 		SystemMessage msg = Call.canSummonHere(player);
+		
 		if (msg != null)
 		{
 			activeChar.sendPacket(msg);
 			return false;
 		}
+		
 		return super.checkCondition(activeChar, target, forceUse, dontMove, first);
 	}
 	
@@ -80,6 +85,7 @@ public class ClanGate extends Skill
 		{
 			return;
 		}
+		
 		Player player = (Player) activeChar;
 		Clan clan = player.getClan();
 		clan.broadcastToOtherOnlineMembers(Msg.COURT_MAGICIAN__THE_PORTAL_HAS_BEEN_CREATED, player);

@@ -53,19 +53,24 @@ public class ConditionPlayerHasBuffId extends Condition
 	protected boolean testImpl(Env env)
 	{
 		Creature character = env.character;
+		
 		if (character == null)
 		{
 			return false;
 		}
+		
 		if (_level == -1)
 		{
 			return character.getEffectList().getEffectsBySkillId(_id) != null;
 		}
+		
 		List<Effect> el = character.getEffectList().getEffectsBySkillId(_id);
+		
 		if (el == null)
 		{
 			return false;
 		}
+		
 		for (Effect effect : el)
 		{
 			if ((effect != null) && (effect.getSkill().getLevel() >= _level))
@@ -73,6 +78,7 @@ public class ConditionPlayerHasBuffId extends Condition
 				return true;
 			}
 		}
+		
 		return false;
 	}
 }
