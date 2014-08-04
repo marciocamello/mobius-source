@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<weapon id="36500" name="Valakas Cutter">
+		<set name="weight" value="1520"/>
+		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<attributes>
+			<attribute element="fire" value="450"/>
+		</attributes>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<skills>
+			<skill id="8901" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8896" level="1"/>
+			<skill id="8895" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="2884"/>
+			<add stat="mAtk" order="0x10" value="1257"/>
+			<add stat="pAtkSpd" order="0x08" value="379"/>
+			<add stat="rCrit" order="0x08" value="80"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36501" name="Valakas Slasher">
+		<set name="weight" value="1740"/>
+		<set name="type" value="BIGSWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<attributes>
+			<attribute element="fire" value="450"/>
+		</attributes>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<skills>
+			<skill id="8901" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8896" level="1"/>
+			<skill id="8895" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="3509"/>
+			<add stat="mAtk" order="0x10" value="1257"/>
+			<add stat="pAtkSpd" order="0x08" value="325"/>
+			<add stat="rCrit" order="0x08" value="80"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36502" name="Valakas Thrower">
+		<set name="weight" value="1520"/>
+		<set name="type" value="BOW"/>
+		<set name="ex_type" value="BOW"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<attributes>
+			<attribute element="fire" value="450"/>
+		</attributes>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<skills>
+			<skill id="8901" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8896" level="1"/>
+			<skill id="8895" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="5678"/>
+			<add stat="mAtk" order="0x10" value="1257"/>
+			<add stat="pAtkSpd" order="0x08" value="293"/>
+			<add stat="accCombat" order="0x10" value="3.75"/>
+			<add stat="rCrit" order="0x08" value="120"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36503" name="Valakas Buster">
+		<set name="weight" value="1520"/>
+		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<attributes>
+			<attribute element="fire" value="450"/>
+		</attributes>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<skills>
+			<skill id="8903" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8896" level="1"/>
+			<skill id="8895" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="2307"/>
+			<add stat="mAtk" order="0x10" value="1676"/>
+			<add stat="pAtkSpd" order="0x08" value="379"/>
+			<add stat="rCrit" order="0x08" value="80"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36504" name="Valakas Caster">
+		<set name="weight" value="1080"/>
+		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BLUNT_WEAPON"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<attributes>
+			<attribute element="fire" value="450"/>
+		</attributes>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<skills>
+			<skill id="8903" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8896" level="1"/>
+			<skill id="8895" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="2307"/>
+			<add stat="mAtk" order="0x10" value="1676"/>
+			<add stat="pAtkSpd" order="0x08" value="379"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+			<add stat="rCrit" order="0x08" value="60"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36505" name="Valakas Retributer">
+		<set name="weight" value="1080"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<attributes>
+			<attribute element="fire" value="450"/>
+		</attributes>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<skills>
+			<skill id="8903" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8896" level="1"/>
+			<skill id="8895" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="2809"/>
+			<add stat="mAtk" order="0x10" value="1843"/>
+			<add stat="pAtkSpd" order="0x08" value="325"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+			<add stat="rCrit" order="0x08" value="60"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36506" name="Lindvior Shaper">
+		<set name="weight" value="1520"/>
+		<set name="type" value="DAGGER"/>
+		<set name="ex_type" value="DAGGER"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<attributes>
+			<attribute element="wind" value="450"/>
+		</attributes>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<skills>
+			<skill id="8901" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8898" level="1"/>
+			<skill id="8899" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="2523"/>
+			<add stat="mAtk" order="0x10" value="1257"/>
+			<add stat="pAtkSpd" order="0x08" value="433"/>
+			<add stat="accCombat" order="0x10" value="3.75"/>
+			<add stat="rCrit" order="0x08" value="120"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36507" name="Lindvior Thrower">
+		<set name="weight" value="1520"/>
+		<set name="type" value="BOW"/>
+		<set name="ex_type" value="BOW"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<attributes>
+			<attribute element="wind" value="450"/>
+		</attributes>
+		<skills>
+			<skill id="8901" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8898" level="1"/>
+			<skill id="8899" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="5678"/>
+			<add stat="mAtk" order="0x10" value="1257"/>
+			<add stat="pAtkSpd" order="0x08" value="293"/>
+			<add stat="accCombat" order="0x10" value="3.75"/>
+			<add stat="rCrit" order="0x08" value="120"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36508" name="Lindvior Slasher">
+		<set name="weight" value="1740"/>
+		<set name="type" value="BIGSWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<attributes>
+			<attribute element="wind" value="450"/>
+		</attributes>
+		<skills>
+			<skill id="8901" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8898" level="1"/>
+			<skill id="8899" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="3509"/>
+			<add stat="mAtk" order="0x10" value="1257"/>
+			<add stat="pAtkSpd" order="0x08" value="325"/>
+			<add stat="rCrit" order="0x08" value="80"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36509" name="Lindvior Caster">
+		<set name="weight" value="1520"/>
+		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BLUNT_WEAPON"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<attributes>
+			<attribute element="wind" value="450"/>
+		</attributes>
+		<skills>
+			<skill id="8903" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8898" level="1"/>
+			<skill id="8899" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="2307"/>
+			<add stat="mAtk" order="0x10" value="1676"/>
+			<add stat="pAtkSpd" order="0x08" value="379"/>
+			<add stat="rCrit" order="0x08" value="80"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36510" name="Lindvior Cutter">
+		<set name="weight" value="1520"/>
+		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<attributes>
+			<attribute element="wind" value="450"/>
+		</attributes>
+		<skills>
+			<skill id="8901" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8898" level="1"/>
+			<skill id="8899" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="2884"/>
+			<add stat="mAtk" order="0x10" value="1257"/>
+			<add stat="pAtkSpd" order="0x08" value="379"/>
+			<add stat="rCrit" order="0x08" value="80"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36511" name="Lindvior Shooter">
+		<set name="weight" value="1580"/>
+		<set name="type" value="CROSSBOW"/>
+		<set name="ex_type" value="CROSSBOW"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<attributes>
+			<attribute element="wind" value="450"/>
+		</attributes>
+		<skills>
+			<skill id="8901" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8898" level="1"/>
+			<skill id="8899" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="5678"/>
+			<add stat="mAtk" order="0x10" value="1257"/>
+			<add stat="pAtkSpd" order="0x08" value="325"/>
+			<add stat="accCombat" order="0x10" value="3.75"/>
+			<add stat="rCrit" order="0x08" value="120"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36512" name="Lindvior Dual Dagger">
+		<set name="weight" value="2050"/>
+		<set name="type" value="DUALDAGGER"/>
+		<set name="ex_type" value="DUAL_DAGGER"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<attributes>
+			<attribute element="wind" value="450"/>
+		</attributes>
+		<skills>
+			<skill id="8901" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8898" level="1"/>
+			<skill id="8899" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="2523"/>
+			<add stat="mAtk" order="0x10" value="1257"/>
+			<add stat="pAtkSpd" order="0x08" value="433"/>
+			<add stat="accCombat" order="0x10" value="3.75"/>
+			<add stat="rCrit" order="0x08" value="120"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+</list>

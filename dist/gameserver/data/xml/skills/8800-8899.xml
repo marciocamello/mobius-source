@@ -203,6 +203,9 @@
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysDmgBonus" val="0.3" />
 		</for>
 	</skill>
 	<skill id="8821" levels="1" name="Dark Amaranthine Cutter">
@@ -216,6 +219,9 @@
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysDmgBonus" val="0.3" />
 		</for>
 	</skill>
 	<skill id="8822" levels="1" name="Dark Amaranthine Slasher">
@@ -229,6 +235,9 @@
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysDmgBonus" val="0.3" />
 		</for>
 	</skill>
 	<skill id="8823" levels="1" name="Dark Amaranthine Avenger">
@@ -242,6 +251,9 @@
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysDmgBonus" val="0.3" />
 		</for>
 	</skill>
 	<skill id="8824" levels="1" name="Dark Amaranthine Fighter">
@@ -255,6 +267,9 @@
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysDmgBonus" val="0.3" />
 		</for>
 	</skill>
 	<skill id="8825" levels="1" name="Dark Amaranthine Stormer">
@@ -268,6 +283,9 @@
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysDmgBonus" val="0.3" />
 		</for>
 	</skill>
 	<skill id="8826" levels="1" name="Dark Amaranthine Thrower">
@@ -281,6 +299,9 @@
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysDmgBonus" val="0.3" />
 		</for>
 	</skill>
 	<skill id="8827" levels="1" name="Dark Amaranthine Shooter">
@@ -294,6 +315,9 @@
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysDmgBonus" val="0.3" />
 		</for>
 	</skill>
 	<skill id="8828" levels="1" name="Dark Amaranthine Buster">
@@ -307,6 +331,9 @@
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysDmgBonus" val="0.3" />
 		</for>
 	</skill>
 	<skill id="8829" levels="1" name="Dark Amaranthine Caster">
@@ -320,6 +347,9 @@
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysDmgBonus" val="0.3" />
 		</for>
 	</skill>
 	<skill id="8830" levels="1" name="Dark Amaranthine Retributer">
@@ -333,6 +363,9 @@
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysDmgBonus" val="0.3" />
 		</for>
 	</skill>
 	<skill id="8831" levels="1" name="Dark Amaranthine Dualsword">
@@ -346,6 +379,9 @@
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysDmgBonus" val="0.3" />
 		</for>
 	</skill>
 	<skill id="8832" levels="1" name="Dark Amaranthine Dual Dagger">
@@ -359,6 +395,9 @@
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysDmgBonus" val="0.3" />
 		</for>
 	</skill>
 	<skill id="8833" levels="1" name="Dark Amaranthine Dual Blunt Weapon">
@@ -372,9 +411,13 @@
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="1.15"/>
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="0.3" />
+			<mul order="0x30" stat="pvePhysDmgBonus" val="0.3" />
 		</for>
 	</skill>
 	<skill id="8834" levels="1" name="Bloody Eternal Helmet">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -385,6 +428,7 @@
 		</for>
 	</skill>
 	<skill id="8835" levels="1" name="Bloody Eternal Breastplate">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -395,6 +439,7 @@
 		</for>
 	</skill>
 	<skill id="8836" levels="1" name="Bloody Eternal Gaiters">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -405,26 +450,29 @@
 		</for>
 	</skill>
 	<skill id="8837" levels="1" name="Bloody Eternal Gauntlets">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="pvePhysDefenceBonus" val="1.02"/>
-			<mul order="0x30" stat="pvePhysSkillDefenceBonus" val="1.02"/>
-			<mul order="0x30" stat="pveMagicSkillDefenceBonus" val="1.02"/>
+			<mul order="0x30" stat="pveMagicSkillDefenceBonus" val="1.08" />
+			<mul order="0x30" stat="pvePhysSkillDefenceBonus" val="1.08" />
+			<mul order="0x30" stat="pvePhysDefenceBonus" val="1.08" />
 		</for>
 	</skill>
 	<skill id="8838" levels="1" name="Bloody Eternal Boots">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="pvePhysDefenceBonus" val="1.02"/>
-			<mul order="0x30" stat="pvePhysSkillDefenceBonus" val="1.02"/>
-			<mul order="0x30" stat="pveMagicSkillDefenceBonus" val="1.02"/>
+			<mul order="0x30" stat="pveMagicSkillDefenceBonus" val="1.08" />
+			<mul order="0x30" stat="pvePhysSkillDefenceBonus" val="1.08" />
+			<mul order="0x30" stat="pvePhysDefenceBonus" val="1.08" />
 		</for>
 	</skill>
 	<skill id="8839" levels="1" name="Bloody Eternal Leather Helmet">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -435,6 +483,7 @@
 		</for>
 	</skill>
 	<skill id="8840" levels="1" name="Bloody Eternal Leather Armor">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -445,6 +494,7 @@
 		</for>
 	</skill>
 	<skill id="8841" levels="1" name="Bloody Eternal Leather Leggings">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -455,26 +505,29 @@
 		</for>
 	</skill>
 	<skill id="8842" levels="1" name="Bloody Eternal Leather Gloves">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="pvePhysDefenceBonus" val="1.02"/>
-			<mul order="0x30" stat="pvePhysSkillDefenceBonus" val="1.02"/>
-			<mul order="0x30" stat="pveMagicSkillDefenceBonus" val="1.02"/>
+			<mul order="0x30" stat="pveMagicSkillDefenceBonus" val="1.08" />
+			<mul order="0x30" stat="pvePhysSkillDefenceBonus" val="1.08" />
+			<mul order="0x30" stat="pvePhysDefenceBonus" val="1.08" />
 		</for>
 	</skill>
 	<skill id="8843" levels="1" name="Bloody Eternal Leather Boots">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="pvePhysDefenceBonus" val="1.02"/>
-			<mul order="0x30" stat="pvePhysSkillDefenceBonus" val="1.02"/>
-			<mul order="0x30" stat="pveMagicSkillDefenceBonus" val="1.02"/>
+			<mul order="0x30" stat="pveMagicSkillDefenceBonus" val="1.08" />
+			<mul order="0x30" stat="pvePhysSkillDefenceBonus" val="1.08" />
+			<mul order="0x30" stat="pvePhysDefenceBonus" val="1.08" />
 		</for>
 	</skill>
 	<skill id="8844" levels="1" name="Bloody Eternal Circlet">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -485,6 +538,7 @@
 		</for>
 	</skill>
 	<skill id="8845" levels="1" name="Bloody Eternal Tunic">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -495,6 +549,7 @@
 		</for>
 	</skill>
 	<skill id="8846" levels="1" name="Bloody Eternal Stockings">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -505,205 +560,221 @@
 		</for>
 	</skill>
 	<skill id="8847" levels="1" name="Bloody Eternal Gloves">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="pvePhysDefenceBonus" val="1.02"/>
-			<mul order="0x30" stat="pvePhysSkillDefenceBonus" val="1.02"/>
-			<mul order="0x30" stat="pveMagicSkillDefenceBonus" val="1.02"/>
+			<mul order="0x30" stat="pveMagicSkillDefenceBonus" val="1.08" />
+			<mul order="0x30" stat="pvePhysSkillDefenceBonus" val="1.08" />
+			<mul order="0x30" stat="pvePhysDefenceBonus" val="1.08" />
 		</for>
 	</skill>
 	<skill id="8848" levels="1" name="Bloody Eternal Shoes">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="pvePhysDefenceBonus" val="1.02"/>
-			<mul order="0x30" stat="pvePhysSkillDefenceBonus" val="1.02"/>
-			<mul order="0x30" stat="pveMagicSkillDefenceBonus" val="1.02"/>
+			<mul order="0x30" stat="pveMagicSkillDefenceBonus" val="1.08" />
+			<mul order="0x30" stat="pvePhysSkillDefenceBonus" val="1.08" />
+			<mul order="0x30" stat="pvePhysDefenceBonus" val="1.08" />
 		</for>
 	</skill>
 	<skill id="8849" levels="1" name="Bloody Amaranthine Shaper">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.10"/>
-			<mul order="0x30" stat="maxHp" val="1.10"/>
-			<mul order="0x30" stat="maxCp" val="1.10"/>
-			<mul order="0x30" stat="pvePhysDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pvePhysDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="0.30" />
 		</for>
 	</skill>
 	<skill id="8850" levels="1" name="Bloody Amaranthine Cutter">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.10"/>
-			<mul order="0x30" stat="maxHp" val="1.10"/>
-			<mul order="0x30" stat="maxCp" val="1.10"/>
-			<mul order="0x30" stat="pvePhysDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pvePhysDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="0.30" />
 		</for>
 	</skill>
 	<skill id="8851" levels="1" name="Bloody Amaranthine Slasher">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.10"/>
-			<mul order="0x30" stat="maxHp" val="1.10"/>
-			<mul order="0x30" stat="maxCp" val="1.10"/>
-			<mul order="0x30" stat="pvePhysDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pvePhysDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="0.30" />
 		</for>
 	</skill>
 	<skill id="8852" levels="1" name="Bloody Amaranthine Avenger">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.10"/>
-			<mul order="0x30" stat="maxHp" val="1.10"/>
-			<mul order="0x30" stat="maxCp" val="1.10"/>
-			<mul order="0x30" stat="pvePhysDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pvePhysDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="0.30" />
 		</for>
 	</skill>
 	<skill id="8853" levels="1" name="Bloody Amaranthine Fighter">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.10"/>
-			<mul order="0x30" stat="maxHp" val="1.10"/>
-			<mul order="0x30" stat="maxCp" val="1.10"/>
-			<mul order="0x30" stat="pvePhysDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pvePhysDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="0.30" />
 		</for>
 	</skill>
 	<skill id="8854" levels="1" name="Bloody Amaranthine Stormer">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.10"/>
-			<mul order="0x30" stat="maxHp" val="1.10"/>
-			<mul order="0x30" stat="maxCp" val="1.10"/>
-			<mul order="0x30" stat="pvePhysDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pvePhysDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="0.30" />
 		</for>
 	</skill>
 	<skill id="8855" levels="1" name="Bloody Amaranthine Thrower">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.10"/>
-			<mul order="0x30" stat="maxHp" val="1.10"/>
-			<mul order="0x30" stat="maxCp" val="1.10"/>
-			<mul order="0x30" stat="pvePhysDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pvePhysDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="0.30" />
 		</for>
 	</skill>
 	<skill id="8856" levels="1" name="Bloody Amaranthine Shooter">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.10"/>
-			<mul order="0x30" stat="maxHp" val="1.10"/>
-			<mul order="0x30" stat="maxCp" val="1.10"/>
-			<mul order="0x30" stat="pvePhysDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pvePhysDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="0.30" />
 		</for>
 	</skill>
 	<skill id="8857" levels="1" name="Bloody Amaranthine Buster">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.10"/>
-			<mul order="0x30" stat="maxHp" val="1.10"/>
-			<mul order="0x30" stat="maxCp" val="1.10"/>
-			<mul order="0x30" stat="pvePhysDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pvePhysDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="0.30" />
 		</for>
 	</skill>
 	<skill id="8858" levels="1" name="Bloody Amaranthine Caster">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.10"/>
-			<mul order="0x30" stat="maxHp" val="1.10"/>
-			<mul order="0x30" stat="maxCp" val="1.10"/>
-			<mul order="0x30" stat="pvePhysDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pvePhysDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="0.30" />
 		</for>
 	</skill>
 	<skill id="8859" levels="1" name="Bloody Amaranthine Retributer">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.10"/>
-			<mul order="0x30" stat="maxHp" val="1.10"/>
-			<mul order="0x30" stat="maxCp" val="1.10"/>
-			<mul order="0x30" stat="pvePhysDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pvePhysDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="0.30" />
 		</for>
 	</skill>
 	<skill id="8860" levels="1" name="Bloody Amaranthine Dualsword">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.10"/>
-			<mul order="0x30" stat="maxHp" val="1.10"/>
-			<mul order="0x30" stat="maxCp" val="1.10"/>
-			<mul order="0x30" stat="pvePhysDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pvePhysDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="0.30" />
 		</for>
 	</skill>
 	<skill id="8861" levels="1" name="Bloody Amaranthine Dual Dagger">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.10"/>
-			<mul order="0x30" stat="maxHp" val="1.10"/>
-			<mul order="0x30" stat="maxCp" val="1.10"/>
-			<mul order="0x30" stat="pvePhysDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pvePhysDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="0.30" />
 		</for>
 	</skill>
 	<skill id="8862" levels="1" name="Bloody Amaranthine Dual Blunt">
+		<set name="magicLevel" val="99" />
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.10"/>
-			<mul order="0x30" stat="maxHp" val="1.10"/>
-			<mul order="0x30" stat="maxCp" val="1.10"/>
-			<mul order="0x30" stat="pvePhysDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.15"/>
-			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="pvePhysDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" val="1.12" />
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" val="0.30" />
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="0.30" />
 		</for>
 	</skill>
 	<skill id="8863" levels="1" name="Tauti's Bracelet">
@@ -749,6 +820,7 @@
 		</for>
 	</skill>
 	<skill id="8871" levels="1" name="Glorious T-shirt">
+		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -780,7 +852,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x10" stat="WIT" val="3"/>
+			<add order="0x40" stat="WIT" val="3"/>	
 		</for>
 	</skill>
 	<skill id="8875" levels="1" name="Refined Romantic Chapeau containing the GM's Blessing">
@@ -790,7 +862,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.05"/>
-			<mul order="0x30" stat="rCrit" val="50"/>
+			<add order="0x40" stat="rCrit" val="50"/>	
 		</for>
 	</skill>
 	<skill id="8876" levels="1" name="Refined Romantic Chapeau containing the GM's Blessing">
