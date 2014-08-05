@@ -19,7 +19,8 @@ import java.util.concurrent.CopyOnWriteArraySet;
 
 import lineage2.loginserver.Config;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author Mobius
@@ -31,7 +32,7 @@ public class GameServer
 	 * Field _log.
 	 */
 	@SuppressWarnings("unused")
-	private static final Logger _log = Logger.getLogger(GameServer.class);
+	private static final Logger _log = LoggerFactory.getLogger(GameServer.class);
 	/**
 	 * Field _id.
 	 */
@@ -44,9 +45,9 @@ public class GameServer
 	 * Field _ports.
 	 */
 	private int[] _ports = new int[]
-	{
+		{
 		7777
-	};
+		};
 	/**
 	 * Field _serverType.
 	 */

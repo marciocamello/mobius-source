@@ -25,7 +25,8 @@ import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Strings;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author Mobius
@@ -36,7 +37,7 @@ public class DeleteExpiredVarsTask extends AutomaticTask
 	/**
 	 * Field _log.
 	 */
-	private static final Logger _log = Logger.getLogger(DeleteExpiredVarsTask.class);
+	private static final Logger _log = LoggerFactory.getLogger(DeleteExpiredVarsTask.class);
 	
 	/**
 	 * Constructor for DeleteExpiredVarsTask.

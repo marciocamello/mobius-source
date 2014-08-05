@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.serverpackets;
 
 import lineage2.commons.net.nio.impl.SendablePacket;
-import lineage2.gameserver.GameServer;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.Element;
@@ -41,7 +40,7 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 		}
 		catch (Exception e)
 		{
-			_log.error("Client: " + getClient() + " - Failed writing: " + getType() + " - Server Version: " + GameServer.getInstance().getVersion().getRevisionNumber(), e);
+			_log.error("Client: " + getClient() + " - Failed writing: " + getType(), e);
 		}
 		
 		return false;
