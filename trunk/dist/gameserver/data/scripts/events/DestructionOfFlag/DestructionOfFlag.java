@@ -59,7 +59,8 @@ import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author Mobius
@@ -70,7 +71,7 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 	/**
 	 * Field _log.
 	 */
-	static Logger _log = Logger.getLogger(DestructionOfFlag.class.getName());
+	static Logger _log = LoggerFactory.getLogger(DestructionOfFlag.class.getName());
 	/**
 	 * Field REMOVE_BUFFS. (value is false)
 	 */
@@ -623,11 +624,11 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 			
 			_log.info("DestructionOfFlag: started, end Time: " + endTime);
 			start(new String[]
-			{
+				{
 				"-1",
 				"-1",
 				endTime
-			});
+				});
 		}
 	}
 	
@@ -1127,9 +1128,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		sayToAll("scripts.events.DestructionOfFlag.AnnouncePreStart", param);
 		executeTask("events.DestructionOfFlag.DestructionOfFlag", "question", new Object[0], 10000);
 		executeTask("events.DestructionOfFlag.DestructionOfFlag", "announce", new Object[]
-		{
+			{
 			var[2]
-		}, 60000);
+			}, 60000);
 	}
 	
 	/**
@@ -1182,9 +1183,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 			};
 			sayToAll("scripts.events.DestructionOfFlag.AnnouncePreStart", param);
 			executeTask("events.DestructionOfFlag.DestructionOfFlag", "announce", new Object[]
-			{
+				{
 				s
-			}, 60000);
+				}, 60000);
 		}
 		else
 		{
@@ -1192,9 +1193,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 			_isRegistrationActive = false;
 			sayToAll("scripts.events.DestructionOfFlag.AnnounceEventStarting", null);
 			executeTask("events.DestructionOfFlag.DestructionOfFlag", "prepare", new Object[]
-			{
+				{
 				s
-			}, 5000);
+				}, 5000);
 		}
 	}
 	
@@ -1320,9 +1321,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		executeTask("events.DestructionOfFlag.DestructionOfFlag", "paralyzePlayers", new Object[0], 4000);
 		executeTask("events.DestructionOfFlag.DestructionOfFlag", "teleportPlayersToColiseum", new Object[0], 5000);
 		executeTask("events.DestructionOfFlag.DestructionOfFlag", "go", new Object[]
-		{
+			{
 			s
-		}, 60000);
+			}, 60000);
 		sayToAll("scripts.events.DestructionOfFlag.AnnounceFinalCountdown", null);
 	}
 	
@@ -1467,10 +1468,10 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 			}
 			
 			start(new String[]
-			{
+				{
 				"" + (_autoContinue + 1),
 				"" + (_autoContinue + 1)
-			});
+				});
 		}
 	}
 	
@@ -1707,7 +1708,7 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 				}
 				
 				break;
-			
+				
 			case 2:
 				for (Player player : getPlayers(players_list2))
 				{
@@ -1715,7 +1716,7 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 				}
 				
 				break;
-			
+				
 			case 3:
 				for (Player player : getPlayers(players_list3))
 				{
@@ -1723,7 +1724,7 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 				}
 				
 				break;
-			
+				
 			case 4:
 				for (Player player : getPlayers(players_list4))
 				{
@@ -2259,9 +2260,9 @@ public class DestructionOfFlag extends Functions implements ScriptFile, OnDeathL
 		{
 			self.sendMessage("Wait " + TIME_FOR_RES + " seconds you can resurrect at base.");
 			_resurrectionList.put(self.getStoredId(), executeTask("events.DestructionOfFlag.DestructionOfFlag", "resurrectAtBase", new Object[]
-			{
+				{
 				(Player) self
-			}, TIME_FOR_RES * 100));
+				}, TIME_FOR_RES * 100));
 		}
 		
 		if ((self instanceof MonsterInstance) && ((self == greenFlag) || (self == whiteFlag) || (self == yellowFlag) || (self == blackFlag)))

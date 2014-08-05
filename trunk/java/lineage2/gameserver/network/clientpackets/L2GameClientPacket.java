@@ -16,7 +16,6 @@ import java.nio.BufferUnderflowException;
 import java.util.List;
 
 import lineage2.commons.net.nio.impl.ReceivablePacket;
-import lineage2.gameserver.GameServer;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
@@ -50,11 +49,11 @@ public abstract class L2GameClientPacket extends ReceivablePacket<GameClient>
 		catch (BufferUnderflowException e)
 		{
 			_client.onPacketReadFail();
-			_log.error("Client: " + _client + " - Failed reading: " + getType() + " - Server Version: " + GameServer.getInstance().getVersion().getRevisionNumber(), e);
+			_log.error("Client: " + _client + " - Failed reading: " + getType(), e);
 		}
 		catch (Exception e)
 		{
-			_log.error("Client: " + _client + " - Failed reading: " + getType() + " - Server Version: " + GameServer.getInstance().getVersion().getRevisionNumber(), e);
+			_log.error("Client: " + _client + " - Failed reading: " + getType(), e);
 		}
 		
 		return false;
@@ -81,7 +80,7 @@ public abstract class L2GameClientPacket extends ReceivablePacket<GameClient>
 		}
 		catch (Exception e)
 		{
-			_log.error("Client: " + client + " - Failed running: " + getType() + " - Server Version: " + GameServer.getInstance().getVersion().getRevisionNumber(), e);
+			_log.error("Client: " + client + " - Failed running: " + getType(), e);
 		}
 	}
 	

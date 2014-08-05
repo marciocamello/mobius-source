@@ -20,7 +20,8 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javolution.util.FastList;
 import lineage2.commons.util.fileio.XMLFilter;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -36,7 +37,7 @@ public abstract class DocumentParser
 	/**
 	 * Field _log.
 	 */
-	private final static Logger _log = Logger.getLogger(DocumentParser.class);
+	private final static Logger _log = LoggerFactory.getLogger(DocumentParser.class);
 	/**
 	 * Field xmlFilter.
 	 */

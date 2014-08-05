@@ -14,7 +14,8 @@ package lineage2.gameserver.taskmanager.actionrunner.tasks;
 
 import lineage2.gameserver.model.entity.olympiad.OlympiadDatabase;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author Mobius
@@ -30,7 +31,7 @@ public class OlympiadSaveTask extends AutomaticTask
 	 * Field _log.
 	 */
 	@SuppressWarnings("unused")
-	private static final Logger _log = Logger.getLogger(OlympiadSaveTask.class);
+	private static final Logger _log = LoggerFactory.getLogger(OlympiadSaveTask.class);
 	
 	/**
 	 * Constructor for OlympiadSaveTask.
