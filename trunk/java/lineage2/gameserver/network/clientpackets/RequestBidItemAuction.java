@@ -26,13 +26,7 @@ import lineage2.gameserver.model.items.ItemInstance;
  */
 public final class RequestBidItemAuction extends L2GameClientPacket
 {
-	/**
-	 * Field _instanceId.
-	 */
 	private int _instanceId;
-	/**
-	 * Field _bid.
-	 */
 	private long _bid;
 	
 	/**

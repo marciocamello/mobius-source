@@ -23,17 +23,8 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public final class AuctionItem extends ItemInfo
 {
-	/**
-	 * Field _auctionItemId.
-	 */
 	private final int _auctionItemId;
-	/**
-	 * Field _auctionLength.
-	 */
 	private final int _auctionLength;
-	/**
-	 * Field _auctionInitBid.
-	 */
 	private final long _auctionInitBid;
 	
 	/**

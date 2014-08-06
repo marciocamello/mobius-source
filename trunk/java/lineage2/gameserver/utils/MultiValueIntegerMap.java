@@ -27,9 +27,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
  */
 public class MultiValueIntegerMap
 {
-	/**
-	 * Field map.
-	 */
 	private final Map<Integer, List<Integer>> map;
 	
 	/**

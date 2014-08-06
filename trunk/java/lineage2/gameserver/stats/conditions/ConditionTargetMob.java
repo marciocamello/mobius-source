@@ -20,9 +20,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionTargetMob extends Condition
 {
-	/**
-	 * Field _isMob.
-	 */
 	private final boolean _isMob;
 	
 	/**

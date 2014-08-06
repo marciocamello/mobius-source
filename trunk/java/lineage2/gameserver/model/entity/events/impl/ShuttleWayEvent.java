@@ -25,25 +25,10 @@ import gnu.trove.list.array.TIntArrayList;
  */
 public class ShuttleWayEvent extends GlobalEvent
 {
-	/**
-	 * Field _shuttle.
-	 */
 	private final Shuttle _shuttle;
-	/**
-	 * Field _nextFloorLoc.
-	 */
 	private final Location _nextFloorLoc;
-	/**
-	 * Field _floorDoorsId.
-	 */
 	private final TIntArrayList _floorDoorsId = new TIntArrayList();
-	/**
-	 * Field _speed.
-	 */
 	private final int _speed;
-	/**
-	 * Field _returnLoc.
-	 */
 	private final Location _returnLoc;
 	
 	/**

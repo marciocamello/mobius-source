@@ -22,9 +22,6 @@ import lineage2.gameserver.templates.item.ItemTemplate;
  */
 public class ItemHandler extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final ItemHandler _instance = new ItemHandler();
 	
 	/**

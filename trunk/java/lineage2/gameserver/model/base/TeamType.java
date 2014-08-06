@@ -18,17 +18,8 @@ package lineage2.gameserver.model.base;
  */
 public enum TeamType
 {
-	/**
-	 * Field NONE.
-	 */
 	NONE,
-	/**
-	 * Field BLUE.
-	 */
 	BLUE,
-	/**
-	 * Field RED.
-	 */
 	RED;
 	/**
 	 * Method revert.

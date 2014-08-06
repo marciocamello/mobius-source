@@ -15,7 +15,6 @@ package lineage2.gameserver.scripts;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.lang.reference.HardReferences;
 import lineage2.commons.threading.RunnableImpl;
@@ -54,13 +53,7 @@ import lineage2.gameserver.utils.Strings;
  */
 public class Functions
 {
-	/**
-	 * Field self.
-	 */
 	public HardReference<Player> self = HardReferences.emptyRef();
-	/**
-	 * Field npc.
-	 */
 	public HardReference<NpcInstance> npc = HardReferences.emptyRef();
 	
 	/**

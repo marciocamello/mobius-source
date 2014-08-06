@@ -17,7 +17,6 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
@@ -33,7 +32,6 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.stats.Stats;
-
 import org.apache.commons.lang3.math.NumberUtils;
 
 /**
@@ -47,97 +45,28 @@ public class AdminAdmin implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_admin.
-		 */
 		admin_admin,
-		/**
-		 * Field admin_play_sounds.
-		 */
 		admin_play_sounds,
-		/**
-		 * Field admin_play_sound.
-		 */
 		admin_play_sound,
-		/**
-		 * Field admin_silence.
-		 */
 		admin_silence,
-		/**
-		 * Field admin_tradeoff.
-		 */
 		admin_tradeoff,
-		/**
-		 * Field admin_cfg.
-		 */
 		admin_cfg,
-		/**
-		 * Field admin_config.
-		 */
 		admin_config,
-		/**
-		 * Field admin_show_html.
-		 */
 		admin_show_html,
-		/**
-		 * Field admin_setnpcstate.
-		 */
 		admin_setnpcstate,
-		/**
-		 * Field admin_setareanpcstate.
-		 */
 		admin_setareanpcstate,
-		/**
-		 * Field admin_showmovie.
-		 */
 		admin_showmovie,
-		/**
-		 * Field admin_setzoneinfo.
-		 */
 		admin_setzoneinfo,
-		/**
-		 * Field admin_eventtrigger.
-		 */
 		admin_eventtrigger,
-		/**
-		 * Field admin_debug.
-		 */
 		admin_debug,
-		/**
-		 * Field admin_uievent.
-		 */
 		admin_uievent,
-		/**
-		 * Field admin_opensod.
-		 */
 		admin_opensod,
-		/**
-		 * Field admin_closesod.
-		 */
 		admin_closesod,
-		/**
-		 * Field admin_setsoistage.
-		 */
 		admin_setsoistage,
-		/**
-		 * Field admin_soinotify.
-		 */
 		admin_soinotify,
-		/**
-		 * Field admin_forcenpcinfo.
-		 */
 		admin_forcenpcinfo,
-		/**
-		 * Field admin_loc.
-		 */
 		admin_loc,
-		/**
-		 * Field admin_locdump.
-		 */
 		admin_locdump,
-		/**
-		 * Field admin_undying.
-		 */
 		admin_undying
 	}
 	

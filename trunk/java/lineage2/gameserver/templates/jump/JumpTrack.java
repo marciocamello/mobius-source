@@ -21,17 +21,8 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class JumpTrack
 {
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _trackWays.
-	 */
 	private final TIntObjectHashMap<JumpWay> _trackWays;
-	/**
-	 * Field _startLoc.
-	 */
 	private final Location _startLoc;
 	
 	/**

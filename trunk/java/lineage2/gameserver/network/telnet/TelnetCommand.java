@@ -20,13 +20,7 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public abstract class TelnetCommand implements Comparable<TelnetCommand>
 {
-	/**
-	 * Field command.
-	 */
 	private final String command;
-	/**
-	 * Field acronyms.
-	 */
 	private final String[] acronyms;
 	
 	/**

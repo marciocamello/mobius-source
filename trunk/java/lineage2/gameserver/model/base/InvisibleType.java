@@ -18,16 +18,7 @@ package lineage2.gameserver.model.base;
  */
 public enum InvisibleType
 {
-	/**
-	 * Field NONE.
-	 */
 	NONE,
-	/**
-	 * Field NORMAL.
-	 */
 	NORMAL,
-	/**
-	 * Field EFFECT.
-	 */
 	EFFECT
 }

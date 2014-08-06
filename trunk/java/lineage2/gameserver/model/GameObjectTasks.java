@@ -13,7 +13,6 @@
 package lineage2.gameserver.model;
 
 import java.util.List;
-
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
@@ -35,9 +34,6 @@ public class GameObjectTasks
 	 */
 	public static class DeleteTask extends RunnableImpl
 	{
-		/**
-		 * Field _ref.
-		 */
 		private final HardReference<? extends Creature> _ref;
 		
 		/**
@@ -69,9 +65,6 @@ public class GameObjectTasks
 	 */
 	public static class SoulConsumeTask extends RunnableImpl
 	{
-		/**
-		 * Field _playerRef.
-		 */
 		private final HardReference<Player> _playerRef;
 		
 		/**
@@ -105,9 +98,6 @@ public class GameObjectTasks
 	 */
 	public static class PvPFlagTask extends RunnableImpl
 	{
-		/**
-		 * Field _playerRef.
-		 */
 		private final HardReference<Player> _playerRef;
 		
 		/**
@@ -154,9 +144,6 @@ public class GameObjectTasks
 	 */
 	public static class HourlyTask extends RunnableImpl
 	{
-		/**
-		 * Field _playerRef.
-		 */
 		private final HardReference<Player> _playerRef;
 		
 		/**
@@ -192,9 +179,6 @@ public class GameObjectTasks
 	 */
 	public static class RecomBonusTask extends RunnableImpl
 	{
-		/**
-		 * Field _playerRef.
-		 */
 		private final HardReference<Player> _playerRef;
 		
 		/**
@@ -229,9 +213,6 @@ public class GameObjectTasks
 	 */
 	public static class WaterTask extends RunnableImpl
 	{
-		/**
-		 * Field _playerRef.
-		 */
 		private final HardReference<Player> _playerRef;
 		
 		/**
@@ -273,9 +254,6 @@ public class GameObjectTasks
 	 */
 	public static class KickTask extends RunnableImpl
 	{
-		/**
-		 * Field _playerRef.
-		 */
 		private final HardReference<Player> _playerRef;
 		
 		/**
@@ -310,9 +288,6 @@ public class GameObjectTasks
 	 */
 	public static class UnJailTask extends RunnableImpl
 	{
-		/**
-		 * Field _playerRef.
-		 */
 		private final HardReference<Player> _playerRef;
 		
 		/**
@@ -348,9 +323,6 @@ public class GameObjectTasks
 	 */
 	public static class EndSitDownTask extends RunnableImpl
 	{
-		/**
-		 * Field _playerRef.
-		 */
 		private final HardReference<Player> _playerRef;
 		
 		/**
@@ -385,9 +357,6 @@ public class GameObjectTasks
 	 */
 	public static class EndStandUpTask extends RunnableImpl
 	{
-		/**
-		 * Field _playerRef.
-		 */
 		private final HardReference<Player> _playerRef;
 		
 		/**
@@ -427,16 +396,7 @@ public class GameObjectTasks
 	 */
 	public static class AltMagicUseTask extends RunnableImpl
 	{
-		/**
-		 * Field _skill.
-		 */
 		public final Skill _skill;
-		/**
-		 * Field _targetRef.
-		 */
-		/**
-		 * Field _charRef.
-		 */
 		private final HardReference<? extends Creature> _charRef, _targetRef;
 		
 		/**
@@ -474,9 +434,6 @@ public class GameObjectTasks
 	 */
 	public static class CastEndTimeTask extends RunnableImpl
 	{
-		/**
-		 * Field _charRef.
-		 */
 		private final HardReference<? extends Creature> _charRef;
 		
 		/**
@@ -510,38 +467,8 @@ public class GameObjectTasks
 	 */
 	public static class HitTask extends RunnableImpl
 	{
-		/**
-		 * Field _notify.
-		 */
-		/**
-		 * Field _unchargeSS.
-		 */
-		/**
-		 * Field _soulshot.
-		 */
-		/**
-		 * Field _shld.
-		 */
-		/**
-		 * Field _miss.
-		 */
-		/**
-		 * Field _crit.
-		 */
 		boolean _crit, _miss, _shld, _soulshot, _unchargeSS, _notify;
-		/**
-		 * Field _reflectableDamage.
-		 */
-		/**
-		 * Field _damage.
-		 */
 		int _damage, _reflectableDamage;
-		/**
-		 * Field _targetRef.
-		 */
-		/**
-		 * Field _charRef.
-		 */
 		private final HardReference<? extends Creature> _charRef, _targetRef;
 		
 		/**
@@ -603,13 +530,7 @@ public class GameObjectTasks
 	 */
 	public static class MagicUseTask extends RunnableImpl
 	{
-		/**
-		 * Field _forceUse.
-		 */
 		public boolean _forceUse;
-		/**
-		 * Field _charRef.
-		 */
 		private final HardReference<? extends Creature> _charRef;
 		
 		/**
@@ -654,13 +575,7 @@ public class GameObjectTasks
 	 */
 	public static class MagicLaunchedTask extends RunnableImpl
 	{
-		/**
-		 * Field _forceUse.
-		 */
 		public boolean _forceUse;
-		/**
-		 * Field _charRef.
-		 */
 		private final HardReference<? extends Creature> _charRef;
 		
 		/**
@@ -706,21 +621,9 @@ public class GameObjectTasks
 	 */
 	public static class NotifyAITask extends RunnableImpl
 	{
-		/**
-		 * Field _evt.
-		 */
 		private final CtrlEvent _evt;
-		/**
-		 * Field _agr0.
-		 */
 		private final Object _agr0;
-		/**
-		 * Field _agr1.
-		 */
 		private final Object _agr1;
-		/**
-		 * Field _charRef.
-		 */
 		private final HardReference<? extends Creature> _charRef;
 		
 		/**

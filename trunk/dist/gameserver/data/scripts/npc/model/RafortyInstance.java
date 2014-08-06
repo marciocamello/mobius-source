@@ -27,17 +27,8 @@ public final class RafortyInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field FREYA_NECKLACE. (value is 16025)
-	 */
 	private static final int FREYA_NECKLACE = 16025;
-	/**
-	 * Field BLESSED_FREYA_NECKLACE. (value is 16026)
-	 */
 	private static final int BLESSED_FREYA_NECKLACE = 16026;
-	/**
-	 * Field BOTTLE_OF_FREYAS_SOUL. (value is 16027)
-	 */
 	private static final int BOTTLE_OF_FREYAS_SOUL = 16027;
 	
 	/**

@@ -21,9 +21,6 @@ import lineage2.loginserver.gameservercon.ReceivablePacket;
  */
 public class OnlineStatus extends ReceivablePacket
 {
-	/**
-	 * Field _online.
-	 */
 	private boolean _online;
 	
 	/**

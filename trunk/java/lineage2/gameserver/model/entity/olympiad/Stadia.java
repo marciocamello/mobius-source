@@ -18,9 +18,6 @@ package lineage2.gameserver.model.entity.olympiad;
  */
 public class Stadia
 {
-	/**
-	 * Field _freeToUse.
-	 */
 	private boolean _freeToUse = true;
 	
 	/**

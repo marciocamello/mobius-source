@@ -22,9 +22,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class EffectChargesOverTime extends Effect
 {
-	/**
-	 * Field _maxCharges.
-	 */
 	private final int _maxCharges;
 	
 	/**

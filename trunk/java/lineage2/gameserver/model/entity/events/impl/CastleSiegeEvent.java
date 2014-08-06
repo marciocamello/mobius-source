@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.Future;
-
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.threading.RunnableImpl;
@@ -49,7 +48,6 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.item.support.MerchantGuard;
 import lineage2.gameserver.utils.Location;
-
 import org.napile.primitive.Containers;
 import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.TreeIntSet;
@@ -76,16 +74,13 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 	
 	public static final int MAX_SIEGE_CLANS = 20;
 	public static final long DAY_IN_MILISECONDS = 86400000L;
-	
 	public static final String DEFENDERS_WAITING = "defenders_waiting";
 	public static final String DEFENDERS_REFUSED = "defenders_refused";
-	
 	public static final String CONTROL_TOWERS = "control_towers";
 	public static final String FLAME_TOWERS = "flame_towers";
 	public static final String BOUGHT_ZONES = "bought_zones";
 	public static final String GUARDS = "guards";
 	public static final String HIRED_GUARDS = "hired_guards";
-	
 	private IntSet _nextSiegeTimes = Containers.EMPTY_INT_SET;
 	private Future<?> _nextSiegeDateSetTask = null;
 	private boolean _firstStep = false;
@@ -345,7 +340,6 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 	}
 	
 	// ========================================================================================================================================================================
-	
 	@Override
 	public void reCalcNextTime(boolean onInit)
 	{

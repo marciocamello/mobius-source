@@ -20,7 +20,6 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 import java.util.StringTokenizer;
-
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.gameserver.dao.SiegeClanDAO;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
@@ -38,7 +37,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.HtmlUtils;
-
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -51,25 +49,11 @@ public final class AuctioneerInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field DATE_FORMAT.
-	 */
 	private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yy");
-	/**
-	 * Field NUMBER_FORMAT.
-	 */
 	private static final NumberFormat NUMBER_FORMAT = NumberFormat.getIntegerInstance(Locale.KOREA);
-	/**
-	 * Field WEEK.
-	 */
 	private final static long WEEK = 7 * 24 * 60 * 60 * 1000L;
-	
-	/**
-	 * Field CH_PAGE_SIZE. (value is 7)
-	 */
 	private final static int CH_PAGE_SIZE = 7;
 	/**
-	 * Field CH_IN_LIST. (value is ""\t
 	 * <tr>
 	 * \n" + "\t\t
 	 * <td width=50>\n" + "\t\t\t<font color=\"aaaaff\">&^%id%;</font>\n" + "\t\t</td>\n" + "\t\t
@@ -80,13 +64,8 @@ public final class AuctioneerInstance extends NpcInstance
 	 * "")
 	 */
 	private final static String CH_IN_LIST = "\t<tr>\n" + "\t\t<td width=50>\n" + "\t\t\t<font color=\"aaaaff\">&^%id%;</font>\n" + "\t\t</td>\n" + "\t\t<td width=100>\n" + "\t\t\t<a action=\"bypass -h npc_%objectId%_info %id%\"><font color=\"ffffaa\">&%%id%;[%size%]</font></a>\n" + "\t\t</td>\n" + "\t\t<td width=50>%date%</td>\n" + "\t\t<td width=70 align=right>\n" + "\t\t\t<font color=\"aaffff\">%min_bid%</font>\n" + "\t\t</td>\n" + "\t</tr>";
-	
-	/**
-	 * Field BIDDER_PAGE_SIZE. (value is 10)
-	 */
 	private final static int BIDDER_PAGE_SIZE = 10;
 	/**
-	 * Field BIDDER_IN_LIST. (value is ""\t
 	 * <tr>
 	 * \n" + "\t\t
 	 * <td width=100><font color=\"aaaaff\">&%%id%;</font></td>\n" + "\t\t

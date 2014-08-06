@@ -22,45 +22,15 @@ import lineage2.gameserver.utils.Location;
  */
 public class StaticObjectTemplate
 {
-	/**
-	 * Field _uid.
-	 */
 	private final int _uid;
-	/**
-	 * Field _type.
-	 */
 	private final int _type;
-	/**
-	 * Field _filePath.
-	 */
 	private final String _filePath;
-	/**
-	 * Field _mapX.
-	 */
 	private final int _mapX;
-	/**
-	 * Field _mapY.
-	 */
 	private final int _mapY;
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
-	/**
-	 * Field _x.
-	 */
 	private final int _x;
-	/**
-	 * Field _y.
-	 */
 	private final int _y;
-	/**
-	 * Field _z.
-	 */
 	private final int _z;
-	/**
-	 * Field _spawn.
-	 */
 	private final boolean _spawn;
 	
 	/**

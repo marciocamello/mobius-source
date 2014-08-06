@@ -14,7 +14,6 @@ package lineage2.gameserver.templates;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.stats.StatTemplate;
 
@@ -24,13 +23,7 @@ import lineage2.gameserver.stats.StatTemplate;
  */
 public class OptionDataTemplate extends StatTemplate
 {
-	/**
-	 * Field _skills.
-	 */
 	private final List<Skill> _skills = new ArrayList<>(0);
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
 	
 	/**

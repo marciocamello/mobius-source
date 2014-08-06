@@ -23,9 +23,6 @@ import java.util.concurrent.CopyOnWriteArraySet;
  */
 public class ListenerList<T>
 {
-	/**
-	 * Field listeners.
-	 */
 	protected final Set<Listener<T>> listeners = new CopyOnWriteArraySet<>();
 	
 	/**

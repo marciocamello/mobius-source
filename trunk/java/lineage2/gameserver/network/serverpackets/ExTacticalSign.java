@@ -19,15 +19,8 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class ExTacticalSign extends L2GameServerPacket
 {
-	/**
-	 * Field _targetId.
-	 */
 	private final int _targetId;
-	/**
-	 * Field _signId.
-	 */
 	private final int _signId;
-	
 	public static final int SIGN_NONE = 0;
 	public static final int SIGN_STAR = 1;
 	public static final int SIGN_HEART = 2;

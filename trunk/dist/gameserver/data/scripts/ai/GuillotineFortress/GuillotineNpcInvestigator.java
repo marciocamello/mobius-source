@@ -23,7 +23,6 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class GuillotineNpcInvestigator extends GuillotineNpcPriest
 {
-	
 	public GuillotineNpcInvestigator(NpcInstance actor)
 	{
 		super(actor);

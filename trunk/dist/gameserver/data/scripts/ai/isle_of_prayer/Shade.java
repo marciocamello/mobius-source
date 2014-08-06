@@ -24,21 +24,9 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public final class Shade extends Fighter
 {
-	/**
-	 * Field _wait_timeout.
-	 */
 	private long _wait_timeout = 0;
-	/**
-	 * Field _wait.
-	 */
 	private boolean _wait = false;
-	/**
-	 * Field DESPAWN_TIME.
-	 */
 	private static final int DESPAWN_TIME = 5 * 60 * 1000;
-	/**
-	 * Field BLUE_CRYSTAL. (value is 9595)
-	 */
 	private static final int BLUE_CRYSTAL = 9595;
 	
 	/**

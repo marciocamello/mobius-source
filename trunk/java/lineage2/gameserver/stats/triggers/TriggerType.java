@@ -18,44 +18,14 @@ package lineage2.gameserver.stats.triggers;
  */
 public enum TriggerType
 {
-	/**
-	 * Field ADD.
-	 */
 	ADD,
-	/**
-	 * Field ATTACK.
-	 */
 	ATTACK,
-	/**
-	 * Field RECEIVE_DAMAGE.
-	 */
 	RECEIVE_DAMAGE,
-	/**
-	 * Field CRIT.
-	 */
 	CRIT,
-	/**
-	 * Field OFFENSIVE_PHYSICAL_SKILL_USE.
-	 */
 	OFFENSIVE_PHYSICAL_SKILL_USE,
-	/**
-	 * Field OFFENSIVE_MAGICAL_SKILL_USE.
-	 */
 	OFFENSIVE_MAGICAL_SKILL_USE,
-	/**
-	 * Field SUPPORT_MAGICAL_SKILL_USE.
-	 */
 	SUPPORT_MAGICAL_SKILL_USE,
-	/**
-	 * Field UNDER_MISSED_ATTACK.
-	 */
 	UNDER_MISSED_ATTACK,
-	/**
-	 * Field DIE.
-	 */
 	DIE,
-	/**
-	 * Field IDLE.
-	 */
 	IDLE,
 }

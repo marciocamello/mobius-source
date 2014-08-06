@@ -14,7 +14,6 @@ package events.TvTArena;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
@@ -47,121 +46,34 @@ import lineage2.gameserver.utils.PositionUtils;
  */
 public abstract class TvTTemplate extends Functions
 {
-	/**
-	 * Field ITEM_ID.
-	 */
 	private static final int ITEM_ID = 4357;
-	/**
-	 * Field ITEM_NAME.
-	 */
 	private static final String ITEM_NAME = "Silver Shilen";
-	/**
-	 * Field LENGTH_TEAM.
-	 */
 	private static final int LENGTH_TEAM = 12;
-	/**
-	 * Field ALLOW_BUFFS.
-	 */
 	private static final boolean ALLOW_BUFFS = false;
-	/**
-	 * Field ALLOW_CLAN_SKILL.
-	 */
 	private static final boolean ALLOW_CLAN_SKILL = true;
-	/**
-	 * Field ALLOW_HERO_SKILL.
-	 */
 	private static final boolean ALLOW_HERO_SKILL = false;
-	/**
-	 * Field _managerId.
-	 */
 	protected int _managerId;
-	/**
-	 * Field _className.
-	 */
 	protected String _className;
-	/**
-	 * Field _creatorId.
-	 */
 	protected Long _creatorId;
-	/**
-	 * Field _manager.
-	 */
 	protected NpcInstance _manager;
-	/**
-	 * Field _status.
-	 */
 	protected int _status = 0;
-	/**
-	 * Field _CharacterFound.
-	 */
 	protected final int _CharacterFound = 0;
-	/**
-	 * Field _price.
-	 */
 	protected int _price = 10000;
-	/**
-	 * Field _team1count.
-	 */
 	protected int _team1count = 1;
-	/**
-	 * Field _team2count.
-	 */
 	protected int _team2count = 1;
-	/**
-	 * Field _team1min.
-	 */
 	protected int _team1min = 1;
-	/**
-	 * Field _team1max.
-	 */
 	protected int _team1max = 85;
-	/**
-	 * Field _team2min.
-	 */
 	protected int _team2min = 1;
-	/**
-	 * Field _team2max.
-	 */
 	protected int _team2max = 85;
-	/**
-	 * Field _timeToStart.
-	 */
 	protected int _timeToStart = 10;
-	/**
-	 * Field _timeOutTask.
-	 */
 	protected boolean _timeOutTask;
-	/**
-	 * Field _team1points.
-	 */
 	protected List<Location> _team1points;
-	/**
-	 * Field _team2points.
-	 */
 	protected List<Location> _team2points;
-	/**
-	 * Field _team1list.
-	 */
 	protected List<Long> _team1list;
-	/**
-	 * Field _team2list.
-	 */
 	protected List<Long> _team2list;
-	/**
-	 * Field _team1live.
-	 */
 	protected List<Long> _team1live;
-	/**
-	 * Field _team2live.
-	 */
 	protected List<Long> _team2live;
-	/**
-	 * Field _zone.
-	 */
 	protected Zone _zone;
-	/**
-	 * Field _zoneListener.
-	 */
 	protected ZoneListener _zoneListener;
 	
 	/**
@@ -1260,8 +1172,6 @@ public abstract class TvTTemplate extends Functions
 		}
 	}
 	
-	/**
-	 */
 	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		/**
@@ -1304,17 +1214,9 @@ public abstract class TvTTemplate extends Functions
 		}
 	}
 	
-	/**
-	 */
 	public final class TeleportTask extends RunnableImpl
 	{
-		/**
-		 * Field loc.
-		 */
 		Location loc;
-		/**
-		 * Field target.
-		 */
 		Creature target;
 		
 		/**

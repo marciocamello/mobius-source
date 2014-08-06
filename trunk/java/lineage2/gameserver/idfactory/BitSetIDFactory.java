@@ -14,11 +14,9 @@ package lineage2.gameserver.idfactory;
 
 import java.util.BitSet;
 import java.util.concurrent.atomic.AtomicInteger;
-
 import lineage2.commons.math.PrimeFinder;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,21 +26,9 @@ import org.slf4j.LoggerFactory;
  */
 public class BitSetIDFactory extends IdFactory
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(BitSetIDFactory.class);
-	/**
-	 * Field freeIds.
-	 */
 	private BitSet freeIds;
-	/**
-	 * Field freeIdCount.
-	 */
 	private AtomicInteger freeIdCount;
-	/**
-	 * Field nextFreeId.
-	 */
 	private AtomicInteger nextFreeId;
 	
 	/**

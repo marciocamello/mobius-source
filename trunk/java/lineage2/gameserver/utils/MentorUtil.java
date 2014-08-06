@@ -14,7 +14,6 @@ package lineage2.gameserver.utils;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.database.mysql;
 import lineage2.gameserver.model.Effect;
@@ -81,7 +80,6 @@ public class MentorUtil
 			put(85, 863);
 		}
 	};
-	
 	public static final int[] effectsForMentee =
 	{
 		9227,
@@ -92,18 +90,14 @@ public class MentorUtil
 		9232,
 		9233
 	};
-	
 	public static final int skillForMentee = 9379;
-	
 	public static final int[] skillsForMentor =
 	{
 		9376,
 		9377,
 		9378
 	};
-	
 	public static final int effectForMentor = 9256;
-	
 	public static final int[] effectsRemove =
 	{
 		9233,
@@ -115,7 +109,6 @@ public class MentorUtil
 		9232,
 		9256
 	};
-	
 	public static final int[] skillRemove =
 	{
 		9376,

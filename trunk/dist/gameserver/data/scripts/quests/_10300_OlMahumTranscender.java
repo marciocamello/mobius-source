@@ -16,7 +16,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -24,14 +23,11 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public class _10300_OlMahumTranscender extends Quest implements ScriptFile
 {
-	
 	private static final int[] Adventurequid =
 	{
 		33463
 	};
-	
 	private static final int mouen = 30196;
-	
 	private static final int[] Basilisk =
 	{
 		20573,
@@ -52,7 +48,6 @@ public class _10300_OlMahumTranscender extends Quest implements ScriptFile
 		20576,
 		20161
 	};
-	
 	private static final int markofbandit = 19484;
 	private static final int markofshaman = 19485;
 	private static final int proofmonstr = 19486;

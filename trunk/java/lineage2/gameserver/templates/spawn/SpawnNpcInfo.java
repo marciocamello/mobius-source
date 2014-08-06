@@ -22,17 +22,8 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class SpawnNpcInfo
 {
-	/**
-	 * Field _template.
-	 */
 	private final NpcTemplate _template;
-	/**
-	 * Field _max.
-	 */
 	private final int _max;
-	/**
-	 * Field _parameters.
-	 */
 	private final MultiValueSet<String> _parameters;
 	
 	/**

@@ -22,13 +22,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public final class ArmorSetsHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final ArmorSetsHolder _instance = new ArmorSetsHolder();
-	/**
-	 * Field _armorSets.
-	 */
 	private final TIntObjectHashMap<ArmorSet> _armorSets = new TIntObjectHashMap<>();
 	
 	/**

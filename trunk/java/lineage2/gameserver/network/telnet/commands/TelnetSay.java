@@ -14,7 +14,6 @@ package lineage2.gameserver.network.telnet.commands;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
-
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
@@ -29,9 +28,6 @@ import lineage2.gameserver.network.telnet.TelnetCommandHolder;
  */
 public class TelnetSay implements TelnetCommandHolder
 {
-	/**
-	 * Field _commands.
-	 */
 	private final Set<TelnetCommand> _commands = new LinkedHashSet<>();
 	
 	/**

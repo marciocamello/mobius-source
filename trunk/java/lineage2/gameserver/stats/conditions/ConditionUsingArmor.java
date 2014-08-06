@@ -22,9 +22,6 @@ import lineage2.gameserver.templates.item.ArmorTemplate.ArmorType;
  */
 public class ConditionUsingArmor extends Condition
 {
-	/**
-	 * Field _armor.
-	 */
 	private final ArmorType _armor;
 	
 	/**

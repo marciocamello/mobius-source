@@ -15,7 +15,6 @@ package lineage2.gameserver.instancemanager;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-
 import lineage2.gameserver.data.xml.holder.DoorHolder;
 import lineage2.gameserver.data.xml.holder.ZoneHolder;
 import lineage2.gameserver.model.entity.Reflection;
@@ -28,25 +27,10 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class ReflectionManager
 {
-	/**
-	 * Field DEFAULT.
-	 */
 	public static final Reflection DEFAULT = Reflection.createReflection(0);
-	/**
-	 * Field PARNASSUS.
-	 */
 	public static final Reflection PARNASSUS = Reflection.createReflection(-1);
-	/**
-	 * Field GIRAN_HARBOR.
-	 */
 	public static final Reflection GIRAN_HARBOR = Reflection.createReflection(-2);
-	/**
-	 * Field JAIL.
-	 */
 	public static final Reflection JAIL = Reflection.createReflection(-3);
-	/**
-	 * Field _instance.
-	 */
 	private static final ReflectionManager _instance = new ReflectionManager();
 	
 	/**
@@ -58,21 +42,9 @@ public class ReflectionManager
 		return _instance;
 	}
 	
-	/**
-	 * Field _reflections.
-	 */
 	private final TIntObjectHashMap<Reflection> _reflections = new TIntObjectHashMap<>();
-	/**
-	 * Field lock.
-	 */
 	private final ReadWriteLock lock = new ReentrantReadWriteLock();
-	/**
-	 * Field readLock.
-	 */
 	private final Lock readLock = lock.readLock();
-	/**
-	 * Field writeLock.
-	 */
 	private final Lock writeLock = lock.writeLock();
 	
 	/**

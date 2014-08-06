@@ -13,7 +13,6 @@
 package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
-
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -48,21 +47,9 @@ import lineage2.gameserver.utils.Location;
  */
 public class SummonServitor extends Skill
 {
-	/**
-	 * Field _summonType.
-	 */
 	private final SummonType _summonType;
-	/**
-	 * Field _expPenalty.
-	 */
 	private final double _expPenalty;
-	/**
-	 * Field _lifeTime.
-	 */
 	private final int _lifeTime;
-	/**
-	 * Field _summonPoint.
-	 */
 	private final int _summonPoint;
 	
 	/**

@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.clientpackets;
 
 import java.util.List;
-
 import lineage2.commons.math.SafeMath;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
@@ -33,9 +32,6 @@ import lineage2.gameserver.utils.Log;
  */
 public class TradeDone extends L2GameClientPacket
 {
-	/**
-	 * Field _response.
-	 */
 	private int _response;
 	
 	/**

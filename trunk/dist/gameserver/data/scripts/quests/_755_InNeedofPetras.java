@@ -17,7 +17,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -27,7 +26,6 @@ public class _755_InNeedofPetras extends Quest implements ScriptFile
 {
 	// NPC's
 	private static final int AKU = 33671;
-	
 	// Monster's
 	private static final int[] MONSTERS =
 	{
@@ -48,12 +46,10 @@ public class _755_InNeedofPetras extends Quest implements ScriptFile
 		23237,
 		23219
 	};
-	
 	// Item's
 	private static final int AKUS_SUPPLY_BOX = 35550;
 	private static final int ENERGY_OF_DESTRUCTION = 35562;
 	private static final int PETRA = 34959;
-	
 	// Other
 	private static final double PETRA_DROP_CHANCE = 75.0;
 	

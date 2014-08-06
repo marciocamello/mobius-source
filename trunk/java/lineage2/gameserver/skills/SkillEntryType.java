@@ -18,16 +18,7 @@ package lineage2.gameserver.skills;
  */
 public enum SkillEntryType
 {
-	/**
-	 * Field NONE.
-	 */
 	NONE,
-	/**
-	 * Field CERTIFICATION.
-	 */
 	CERTIFICATION,
-	/**
-	 * Field TRANSFER.
-	 */
 	TRANSFER
 }

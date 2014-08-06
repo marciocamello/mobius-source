@@ -14,9 +14,7 @@ package lineage2.gameserver.skills.skillclasses;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
-
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
@@ -29,17 +27,8 @@ import lineage2.gameserver.templates.StatsSet;
  */
 public class ChainHeal extends Skill
 {
-	/**
-	 * Field _healPercents.
-	 */
 	private final int[] _healPercents;
-	/**
-	 * Field _healRadius.
-	 */
 	private final int _healRadius;
-	/**
-	 * Field _maxTargets.
-	 */
 	private final int _maxTargets;
 	
 	/**
@@ -146,28 +135,21 @@ public class ChainHeal extends Skill
 		
 		HealTarget[] healTargetsArr = new HealTarget[healTargets.size()];
 		healTargets.toArray(healTargetsArr);
-		Arrays.sort(healTargetsArr, new Comparator<HealTarget>()
+		Arrays.sort(healTargetsArr, (o1, o2) ->
 		{
-			@Override
-			public int compare(HealTarget o1, HealTarget o2)
+			if ((o1 == null) || (o2 == null))
 			{
-				if ((o1 == null) || (o2 == null))
-				{
-					return 0;
-				}
-				
-				if (o1.getHpPercent() < o2.getHpPercent())
-				{
-					return -1;
-				}
-				
-				if (o1.getHpPercent() > o2.getHpPercent())
-				{
-					return 1;
-				}
-				
 				return 0;
 			}
+			if (o1.getHpPercent() < o2.getHpPercent())
+			{
+				return -1;
+			}
+			if (o1.getHpPercent() > o2.getHpPercent())
+			{
+				return 1;
+			}
+			return 0;
 		});
 		int targetsCount = 0;
 		
@@ -190,13 +172,7 @@ public class ChainHeal extends Skill
 	 */
 	private static class HealTarget
 	{
-		/**
-		 * Field hpPercent.
-		 */
 		private final double hpPercent;
-		/**
-		 * Field target.
-		 */
 		private final Creature target;
 		
 		/**

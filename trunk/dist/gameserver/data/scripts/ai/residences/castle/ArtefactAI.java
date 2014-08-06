@@ -71,9 +71,6 @@ public final class ArtefactAI extends CharacterAI
 	 */
 	class notifyGuard extends RunnableImpl
 	{
-		/**
-		 * Field _playerRef.
-		 */
 		private final HardReference<Player> _playerRef;
 		
 		/**

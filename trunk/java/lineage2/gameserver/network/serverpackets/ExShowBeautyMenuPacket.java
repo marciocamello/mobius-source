@@ -30,5 +30,4 @@ public class ExShowBeautyMenuPacket extends L2GameServerPacket
 		writeEx(0x13E);
 		writeD(_type);
 	}
-	
 }

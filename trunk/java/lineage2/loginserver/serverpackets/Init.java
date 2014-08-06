@@ -20,17 +20,8 @@ import lineage2.loginserver.L2LoginClient;
  */
 public final class Init extends L2LoginServerPacket
 {
-	/**
-	 * Field _sessionId.
-	 */
 	private final int _sessionId;
-	/**
-	 * Field _publicKey.
-	 */
 	private final byte[] _publicKey;
-	/**
-	 * Field _blowfishKey.
-	 */
 	private final byte[] _blowfishKey;
 	
 	/**

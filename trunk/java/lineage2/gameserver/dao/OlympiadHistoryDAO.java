@@ -21,11 +21,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.entity.olympiad.OlympiadHistory;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,29 +33,11 @@ import org.slf4j.LoggerFactory;
  */
 public class OlympiadHistoryDAO
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(OlympiadHistoryDAO.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final OlympiadHistoryDAO _instance = new OlympiadHistoryDAO();
-	/**
-	 * Field SELECT_SQL_QUERY. (value is ""SELECT * FROM olympiad_history ORDER BY game_start_time"")
-	 */
 	public static final String SELECT_SQL_QUERY = "SELECT * FROM olympiad_history ORDER BY game_start_time";
-	/**
-	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM olympiad_history WHERE old=1"")
-	 */
 	public static final String DELETE_SQL_QUERY = "DELETE FROM olympiad_history WHERE old=1";
-	/**
-	 * Field UPDATE_SQL_QUERY. (value is ""UPDATE olympiad_history SET old=1"")
-	 */
 	public static final String UPDATE_SQL_QUERY = "UPDATE olympiad_history SET old=1";
-	/**
-	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO olympiad_history(object_id_1, object_id_2, class_id_1, class_id_2, name_1, name_2, game_start_time, game_time, game_status, game_type, old) VALUES (?,?,?,?,?,?,?,?,?,?,?)"")
-	 */
 	public static final String INSERT_SQL_QUERY = "INSERT INTO olympiad_history(object_id_1, object_id_2, class_id_1, class_id_2, name_1, name_2, game_start_time, game_time, game_status, game_type, old) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
 	
 	/**

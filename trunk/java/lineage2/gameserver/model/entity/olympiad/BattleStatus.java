@@ -18,36 +18,12 @@ package lineage2.gameserver.model.entity.olympiad;
  */
 public enum BattleStatus
 {
-	/**
-	 * Field Begining.
-	 */
 	Begining,
-	/**
-	 * Field Begin_Countdown.
-	 */
 	Begin_Countdown,
-	/**
-	 * Field PortPlayers.
-	 */
 	PortPlayers,
-	/**
-	 * Field Started.
-	 */
 	Started,
-	/**
-	 * Field CountDown.
-	 */
 	CountDown,
-	/**
-	 * Field StartComp.
-	 */
 	StartComp,
-	/**
-	 * Field ValidateWinner.
-	 */
 	ValidateWinner,
-	/**
-	 * Field Ending.
-	 */
 	Ending
 }

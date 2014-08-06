@@ -23,7 +23,6 @@ import lineage2.gameserver.utils.ItemFunctions;
 public final class MentoringInstance extends NpcInstance
 {
 	private static final long serialVersionUID = 907679679965868534L;
-	
 	private final int MENTEE_CERTIFICATE = 33800;
 	private final int DIPLOMA = 33805;
 	

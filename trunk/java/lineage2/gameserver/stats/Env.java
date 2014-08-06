@@ -22,25 +22,10 @@ import lineage2.gameserver.model.items.ItemInstance;
  */
 public final class Env
 {
-	/**
-	 * Field character.
-	 */
 	public Creature character;
-	/**
-	 * Field target.
-	 */
 	public Creature target;
-	/**
-	 * Field item.
-	 */
 	public ItemInstance item;
-	/**
-	 * Field skill.
-	 */
 	public Skill skill;
-	/**
-	 * Field value.
-	 */
 	public double value;
 	
 	/**

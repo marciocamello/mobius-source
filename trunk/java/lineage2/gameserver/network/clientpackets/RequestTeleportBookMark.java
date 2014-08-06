@@ -20,9 +20,6 @@ import lineage2.gameserver.model.Player;
  */
 public class RequestTeleportBookMark extends L2GameClientPacket
 {
-	/**
-	 * Field slot.
-	 */
 	private int slot;
 	
 	/**

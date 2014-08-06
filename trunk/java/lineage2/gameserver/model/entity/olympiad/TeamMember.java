@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.entity.olympiad;
 
 import java.util.Set;
-
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Player;
@@ -36,7 +35,6 @@ import lineage2.gameserver.templates.InstantZone;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
-
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,54 +45,18 @@ import org.slf4j.LoggerFactory;
  */
 public class TeamMember
 {
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(TeamMember.class);
-	/**
-	 * Field _name.
-	 */
 	private String _name = StringUtils.EMPTY;
-	/**
-	 * Field _clanName.
-	 */
 	private String _clanName = StringUtils.EMPTY;
-	/**
-	 * Field _classId.
-	 */
 	private int _classId;
-	/**
-	 * Field _damage.
-	 */
 	private double _damage;
-	/**
-	 * Field _isDead.
-	 */
 	private boolean _isDead;
-	/**
-	 * Field _objId.
-	 */
 	private final int _objId;
-	/**
-	 * Field _game.
-	 */
 	private final OlympiadGame _game;
-	/**
-	 * Field _type.
-	 */
 	private final CompType _type;
-	/**
-	 * Field _side.
-	 */
 	private final int _side;
-	/**
-	 * Field _player.
-	 */
 	private Player _player;
-	/**
-	 * Field _returnLoc.
-	 */
 	private Location _returnLoc = null;
 	
 	/**

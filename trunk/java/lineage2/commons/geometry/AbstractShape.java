@@ -18,13 +18,7 @@ package lineage2.commons.geometry;
  */
 public abstract class AbstractShape implements Shape
 {
-	/**
-	 * Field max.
-	 */
 	protected final Point3D max = new Point3D();
-	/**
-	 * Field min.
-	 */
 	protected final Point3D min = new Point3D();
 	
 	/**

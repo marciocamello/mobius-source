@@ -14,7 +14,6 @@ package lineage2.gameserver.network.clientpackets;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -32,7 +31,6 @@ import lineage2.gameserver.network.serverpackets.ShopPreviewList;
 import lineage2.gameserver.templates.item.ArmorTemplate.ArmorType;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,27 +40,12 @@ import org.slf4j.LoggerFactory;
  */
 public class RequestPreviewItem extends L2GameClientPacket
 {
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(RequestPreviewItem.class);
-	/**
-	 * Field _unknow.
-	 */
 	@SuppressWarnings("unused")
 	private int _unknow;
-	/**
-	 * Field _listId.
-	 */
 	private int _listId;
-	/**
-	 * Field _count.
-	 */
 	private int _count;
-	/**
-	 * Field _items.
-	 */
 	private int[] _items;
 	
 	/**
@@ -226,9 +209,6 @@ public class RequestPreviewItem extends L2GameClientPacket
 	 */
 	private static class RemoveWearItemsTask extends RunnableImpl
 	{
-		/**
-		 * Field _activeChar.
-		 */
 		private final Player _activeChar;
 		
 		/**

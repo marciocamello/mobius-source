@@ -31,9 +31,6 @@ public final class DoormanInstance extends npc.model.residences.DoormanInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _locs.
-	 */
 	private final Location[] _locs = new Location[2];
 	
 	/**

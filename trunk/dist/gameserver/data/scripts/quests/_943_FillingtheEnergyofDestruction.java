@@ -16,7 +16,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -26,7 +25,6 @@ public class _943_FillingtheEnergyofDestruction extends Quest implements ScriptF
 {
 	// NPC's
 	private static final int SEED_TALISMAN_SUPERVISOR = 33715;
-	
 	// Monster's
 	private static final int[] RAID_BOSSES =
 	{
@@ -42,7 +40,6 @@ public class _943_FillingtheEnergyofDestruction extends Quest implements ScriptF
 		29236,
 		29238
 	};
-	
 	// Item's
 	private static final int CORE_OF_TWISTED_MAGIC = 35668;
 	private static final int ENERGY_OF_DESTRUCTION = 35562;

@@ -22,17 +22,8 @@ import lineage2.gameserver.utils.SecondaryPasswordAuth;
  */
 public class RequestEx2ndPasswordReq extends L2GameClientPacket
 {
-	/**
-	 * Field _changePass.
-	 */
 	private int _changePass;
-	/**
-	 * Field _password.
-	 */
 	private String _password;
-	/**
-	 * Field _newPassword.
-	 */
 	private String _newPassword;
 	
 	/**

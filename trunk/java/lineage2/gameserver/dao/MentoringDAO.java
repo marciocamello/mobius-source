@@ -17,12 +17,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.MenteeInfo;
 import lineage2.gameserver.model.Player;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,23 +30,10 @@ import org.slf4j.LoggerFactory;
  */
 public class MentoringDAO
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(MentoringDAO.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final MentoringDAO _instance = new MentoringDAO();
-	/**
-	 * Field menteeList. (value is ""SELECT m.mentor AS charid, c.char_name, s.class_id, s.level FROM character_mentoring m LEFT JOIN characters c ON m.mentor = c.obj_Id LEFT JOIN character_subclasses s ON ( m.mentor = s.char_obj_id AND s.active =1 ) WHERE m.mentee = ?"")
-	 */
 	private static final String menteeList = "SELECT m.mentor AS charid, c.char_name, s.class_id, s.level FROM character_mentoring m LEFT JOIN characters c ON m.mentor = c.obj_Id LEFT JOIN character_subclasses s ON ( m.mentor = s.char_obj_id AND s.active =1 ) WHERE m.mentee = ?";
-	/**
-	 * Field mentorList. (value is ""SELECT m.mentee AS charid, c.char_name, s.class_id, s.level FROM character_mentoring m LEFT JOIN characters c ON m.mentee = c.obj_Id LEFT JOIN character_subclasses s ON ( m.mentee = s.char_obj_id AND s.active =1 ) WHERE m.mentor = ?"")
-	 */
 	private static final String mentorList = "SELECT m.mentee AS charid, c.char_name, s.class_id, s.level FROM character_mentoring m LEFT JOIN characters c ON m.mentee = c.obj_Id LEFT JOIN character_subclasses s ON ( m.mentee = s.char_obj_id AND s.active =1 ) WHERE m.mentor = ?";
-	
 	private static final String providedCertificate = "SELECT status FROM account_mentoring WHERE accountId= ?;";
 	private static final String INSERT_CHAR_MENTORING = "INSERT INTO character_mentoring (mentor,mentee) VALUES(?,?)";
 	private static final String DELETE_CHAR_MENTORING = "DELETE FROM character_mentoring WHERE mentor=? AND mentee=?";

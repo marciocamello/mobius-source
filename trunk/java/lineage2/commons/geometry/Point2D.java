@@ -18,17 +18,8 @@ package lineage2.commons.geometry;
  */
 public class Point2D implements Cloneable
 {
-	/**
-	 * Field EMPTY_ARRAY.
-	 */
 	public static final Point2D[] EMPTY_ARRAY = new Point2D[0];
-	/**
-	 * Field x.
-	 */
 	public int x;
-	/**
-	 * Field y.
-	 */
 	public int y;
 	
 	/**

@@ -21,13 +21,7 @@ import lineage2.gameserver.model.Player;
  */
 public final class ItemAuctionBid
 {
-	/**
-	 * Field _charId.
-	 */
 	private final int _charId;
-	/**
-	 * Field _lastBid.
-	 */
 	private long _lastBid;
 	
 	/**

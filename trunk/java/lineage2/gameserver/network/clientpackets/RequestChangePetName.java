@@ -22,9 +22,6 @@ import lineage2.gameserver.model.instances.PetInstance;
  */
 public class RequestChangePetName extends L2GameClientPacket
 {
-	/**
-	 * Field _name.
-	 */
 	private String _name;
 	
 	/**

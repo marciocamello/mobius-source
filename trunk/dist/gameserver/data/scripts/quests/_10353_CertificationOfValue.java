@@ -24,7 +24,6 @@ public class _10353_CertificationOfValue extends Quest implements ScriptFile
 	// npc
 	public static final int LILEJ = 33155;
 	public static final int KUORI = 33358;
-	
 	public static final String A_LIST = "a_list";
 	
 	@Override

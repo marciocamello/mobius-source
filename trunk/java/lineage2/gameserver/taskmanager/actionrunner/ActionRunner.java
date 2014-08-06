@@ -18,7 +18,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
 import lineage2.commons.logging.LoggerObject;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -34,17 +33,8 @@ import lineage2.gameserver.taskmanager.actionrunner.tasks.OlympiadSaveTask;
  */
 public class ActionRunner extends LoggerObject
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final ActionRunner _instance = new ActionRunner();
-	/**
-	 * Field _futures.
-	 */
 	private final Map<String, List<ActionWrapper>> _futures = new HashMap<>();
-	/**
-	 * Field _lock.
-	 */
 	private final Lock _lock = new ReentrantLock();
 	
 	/**

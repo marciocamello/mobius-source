@@ -23,117 +23,33 @@ import lineage2.gameserver.model.base.SubClassType;
  */
 public class SubClass
 {
-	/**
-	 * Field CERTIFICATION_65.
-	 */
 	public static final int CERTIFICATION_65 = 1 << 0;
-	/**
-	 * Field CERTIFICATION_70.
-	 */
 	public static final int CERTIFICATION_70 = 1 << 1;
-	/**
-	 * Field CERTIFICATION_75.
-	 */
 	public static final int CERTIFICATION_75 = 1 << 2;
-	/**
-	 * Field CERTIFICATION_80.
-	 */
 	public static final int CERTIFICATION_80 = 1 << 3;
-	/**
-	 * Field CERTIFICATION_85.
-	 */
 	public static final int DUALCERTIFICATION_85 = 1 << 0;
-	/**
-	 * Field CERTIFICATION_90.
-	 */
 	public static final int DUALCERTIFICATION_90 = 1 << 1;
-	/**
-	 * Field CERTIFICATION_95.
-	 */
 	public static final int DUALCERTIFICATION_95 = 1 << 2;
-	/**
-	 * Field CERTIFICATION_85.
-	 */
 	public static final int DUALCERTIFICATION_99 = 1 << 3;
-	/**
-	 * Field _classId.
-	 */
 	private int _classId = 0;
-	/**
-	 * Field _defaultClassId.
-	 */
 	private int _defaultClassId = 0;
-	/**
-	 * Field _index.
-	 */
 	private int _index = 1;
-	/**
-	 * Field _active.
-	 */
 	private boolean _active = false;
-	/**
-	 * Field _type.
-	 */
 	private SubClassType _type = SubClassType.BASE_CLASS;
-	/**
-	 * Field _dp.
-	 */
 	private DeathPenalty _dp;
-	/**
-	 * Field _level.
-	 */
 	private int _level = 1;
-	/**
-	 * Field _exp.
-	 */
 	private long _exp = 0;
-	/**
-	 * Field _sp.
-	 */
 	private int _sp = 0;
-	/**
-	 * Field _maxLvl.
-	 */
 	private int _maxLvl = Experience.getMaxLevel();
-	/**
-	 * Field _maxExp.
-	 */
 	private long _maxExp = Experience.LEVEL[_maxLvl + 1] - 1;
-	/**
-	 * Field _certification.
-	 */
 	private int _certification;
-	/**
-	 * Field _dualCertification.
-	 */
 	private int _dualCertification;
-	/**
-	 * Field _hp.
-	 */
 	private double _hp = 1;
-	/**
-	 * Field _mp.
-	 */
 	private double _mp = 1;
-	/**
-	 * Field _cp.
-	 */
 	private double _cp = 1;
-	/**
-	 * Field _hp.
-	 */
 	private double _logOnhp = 1;
-	/**
-	 * Field _mp.
-	 */
 	private double _logOnMp = 1;
-	/**
-	 * Field _cp.
-	 */
 	private double _logOnCp = 1;
-	/**
-	 * Field awakingId.
-	 */
 	private int awakingId;
 	
 	/**

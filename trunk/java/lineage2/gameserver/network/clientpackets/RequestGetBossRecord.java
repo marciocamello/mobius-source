@@ -15,7 +15,6 @@ package lineage2.gameserver.network.clientpackets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.gameserver.instancemanager.RaidBossSpawnManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExGetBossRecord;
@@ -27,9 +26,6 @@ import lineage2.gameserver.network.serverpackets.ExGetBossRecord.BossRecordInfo;
  */
 public class RequestGetBossRecord extends L2GameClientPacket
 {
-	/**
-	 * Field _bossID.
-	 */
 	@SuppressWarnings("unused")
 	private int _bossID;
 	

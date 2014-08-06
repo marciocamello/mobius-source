@@ -22,25 +22,10 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class RequestExManageMpccRoom extends L2GameClientPacket
 {
-	/**
-	 * Field _id.
-	 */
 	private int _id;
-	/**
-	 * Field _memberSize.
-	 */
 	private int _memberSize;
-	/**
-	 * Field _minLevel.
-	 */
 	private int _minLevel;
-	/**
-	 * Field _maxLevel.
-	 */
 	private int _maxLevel;
-	/**
-	 * Field _topic.
-	 */
 	private String _topic;
 	
 	/**

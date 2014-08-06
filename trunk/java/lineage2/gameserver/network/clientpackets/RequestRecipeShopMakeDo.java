@@ -33,17 +33,8 @@ import lineage2.gameserver.utils.TradeHelper;
  */
 public class RequestRecipeShopMakeDo extends L2GameClientPacket
 {
-	/**
-	 * Field _manufacturerId.
-	 */
 	private int _manufacturerId;
-	/**
-	 * Field _recipeId.
-	 */
 	private int _recipeId;
-	/**
-	 * Field _price.
-	 */
 	private long _price;
 	
 	/**

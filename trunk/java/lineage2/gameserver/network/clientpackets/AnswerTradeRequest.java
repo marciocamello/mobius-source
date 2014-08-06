@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.clientpackets;
 
 import java.util.concurrent.CopyOnWriteArrayList;
-
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Request;
@@ -29,9 +28,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class AnswerTradeRequest extends L2GameClientPacket
 {
-	/**
-	 * Field _response.
-	 */
 	private int _response;
 	
 	/**

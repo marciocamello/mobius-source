@@ -18,49 +18,16 @@ package lineage2.gameserver.model.actor.instances.player;
  */
 public class Bonus
 {
-	/**
-	 * Field NO_BONUS. (value is 0)
-	 */
 	public static final int NO_BONUS = 0;
-	/**
-	 * Field BONUS_GLOBAL_ON_LOGINSERVER. (value is 1)
-	 */
 	public static final int BONUS_GLOBAL_ON_LOGINSERVER = 1;
-	/**
-	 * Field BONUS_GLOBAL_ON_GAMESERVER. (value is 2)
-	 */
 	public static final int BONUS_GLOBAL_ON_GAMESERVER = 2;
-	/**
-	 * Field rateXp.
-	 */
 	private double rateXp = 1.;
-	/**
-	 * Field rateSp.
-	 */
 	private double rateSp = 1.;
-	/**
-	 * Field questRewardRate.
-	 */
 	private double questRewardRate = 1.;
-	/**
-	 * Field questDropRate.
-	 */
 	private double questDropRate = 1.;
-	/**
-	 * Field dropAdena.
-	 */
 	private double dropAdena = 1.;
-	/**
-	 * Field dropItems.
-	 */
 	private double dropItems = 1.;
-	/**
-	 * Field dropSpoil.
-	 */
 	private double dropSpoil = 1.;
-	/**
-	 * Field bonusExpire.
-	 */
 	private int bonusExpire;
 	
 	/**

@@ -25,17 +25,8 @@ import lineage2.gameserver.utils.PositionUtils;
  */
 public final class LizardmanSummoner extends Mystic
 {
-	/**
-	 * Field TANTA_LIZARDMAN_SCOUT.
-	 */
 	private static final int TANTA_LIZARDMAN_SCOUT = 22768;
-	/**
-	 * Field SPAWN_COUNT.
-	 */
 	private static final int SPAWN_COUNT = 2;
-	/**
-	 * Field spawnedMobs.
-	 */
 	private boolean spawnedMobs = false;
 	
 	/**

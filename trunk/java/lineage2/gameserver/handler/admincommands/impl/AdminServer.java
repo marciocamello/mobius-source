@@ -15,7 +15,6 @@ package lineage2.gameserver.handler.admincommands.impl;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import lineage2.gameserver.ai.CharacterAI;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -43,25 +42,10 @@ public class AdminServer implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_server.
-		 */
 		admin_server,
-		/**
-		 * Field admin_check_actor.
-		 */
 		admin_check_actor,
-		/**
-		 * Field admin_setvar.
-		 */
 		admin_setvar,
-		/**
-		 * Field admin_set_ai_interval.
-		 */
 		admin_set_ai_interval,
-		/**
-		 * Field admin_spawn2.
-		 */
 		admin_spawn2
 	}
 	

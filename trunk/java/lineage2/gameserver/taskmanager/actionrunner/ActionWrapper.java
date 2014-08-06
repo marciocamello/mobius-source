@@ -13,10 +13,8 @@
 package lineage2.gameserver.taskmanager.actionrunner;
 
 import java.util.concurrent.Future;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,17 +24,8 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class ActionWrapper extends RunnableImpl
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(ActionWrapper.class);
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
-	/**
-	 * Field _scheduledFuture.
-	 */
 	private Future<?> _scheduledFuture;
 	
 	/**

@@ -22,13 +22,7 @@ import lineage2.gameserver.model.entity.events.GlobalEvent;
  */
 public class GiveItemAction implements EventAction
 {
-	/**
-	 * Field _itemId.
-	 */
 	private final int _itemId;
-	/**
-	 * Field _count.
-	 */
 	private final long _count;
 	
 	/**

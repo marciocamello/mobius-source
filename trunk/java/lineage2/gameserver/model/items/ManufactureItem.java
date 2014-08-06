@@ -18,13 +18,7 @@ package lineage2.gameserver.model.items;
  */
 public class ManufactureItem
 {
-	/**
-	 * Field _recipeId.
-	 */
 	private final int _recipeId;
-	/**
-	 * Field _cost.
-	 */
 	private final long _cost;
 	
 	/**

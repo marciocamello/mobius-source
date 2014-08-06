@@ -26,7 +26,6 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.item.ExItemType;
 import lineage2.gameserver.templates.item.ItemTemplate.Grade;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -232,7 +231,6 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 			/*
 			 * if(!extracItem.isOther() && extracItem.getGrade() == ItemGrade.NONE) { player.sendPacket(ExShapeShiftingResult.FAIL); player.setAppearanceStone(null); player.setAppearanceExtractItem(null); return; }
 			 */
-			
 			if (!extracItem.isOther() && (targetItem.getTemplate().getItemGrade().ordinal() <= extracItem.getTemplate().getItemGrade().ordinal()))
 			{
 				player.sendPacket(ExShapeShiftingResult.FAIL);

@@ -17,7 +17,6 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class SetPledgeCrestPacket extends L2GameServerPacket
 {
-	
 	@Override
 	protected void writeImpl()
 	{

@@ -25,9 +25,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Rogin extends DefaultAI
 {
-	/**
-	 * Field points.
-	 */
 	static final Location[] points =
 	{
 		new Location(115756, -183472, -1480),
@@ -41,17 +38,8 @@ public final class Rogin extends DefaultAI
 		new Location(115857, -183295, -1480),
 		new Location(115756, -183472, -1480)
 	};
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = -1;
-	/**
-	 * Field wait_timeout.
-	 */
 	private long wait_timeout = 0;
-	/**
-	 * Field wait.
-	 */
 	private boolean wait = false;
 	
 	/**

@@ -16,7 +16,6 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.data.xml.AbstractFileParser;
 import lineage2.gameserver.Config;
@@ -25,7 +24,6 @@ import lineage2.gameserver.templates.item.support.FishGroup;
 import lineage2.gameserver.templates.item.support.FishTemplate;
 import lineage2.gameserver.templates.item.support.LureTemplate;
 import lineage2.gameserver.templates.item.support.LureType;
-
 import org.dom4j.Attribute;
 import org.dom4j.Element;
 
@@ -35,9 +33,6 @@ import org.dom4j.Element;
  */
 public class FishDataParser extends AbstractFileParser<FishDataHolder>
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final FishDataParser _instance = new FishDataParser();
 	
 	/**

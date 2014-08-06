@@ -23,17 +23,8 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class SprigantStun extends DefaultAI
 {
-	/**
-	 * Field SKILL.
-	 */
 	private final Skill SKILL = SkillTable.getInstance().getInfo(5085, 1);
-	/**
-	 * Field _waitTime.
-	 */
 	private long _waitTime;
-	/**
-	 * Field TICK_IN_MILISECONDS. (value is 15000)
-	 */
 	private static final int TICK_IN_MILISECONDS = 15000;
 	
 	/**

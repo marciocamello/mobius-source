@@ -13,9 +13,7 @@
 package ai.DwarvenVillageAttack;
 
 import instances.MemoryOfDisaster;
-
 import java.util.List;
-
 import lineage2.commons.collections.CollectionUtils;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CtrlIntention;
@@ -28,7 +26,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.Earthquake;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 public final class SiegeGolem extends DefaultAI
@@ -39,13 +36,11 @@ public final class SiegeGolem extends DefaultAI
 		19172,
 		19217
 	};
-	
 	private static final Location[] MOVE_LOC =
 	{
 		new Location(116560, -179440, -1144),
 		new Location(116608, -179205, -1176)
 	};
-	
 	private long lastCastTime = 0;
 	private int diedTeredor = 0;
 	private int currentPoint = -1;

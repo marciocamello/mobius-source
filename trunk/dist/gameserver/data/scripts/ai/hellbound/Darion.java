@@ -29,9 +29,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class Darion extends Fighter
 {
-	/**
-	 * Field doors.
-	 */
 	private static final int[] doors =
 	{
 		20250009,

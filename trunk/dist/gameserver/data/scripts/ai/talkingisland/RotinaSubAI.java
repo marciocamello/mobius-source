@@ -26,13 +26,7 @@ import lineage2.gameserver.utils.Location;
  */
 public class RotinaSubAI extends DefaultAI
 {
-	/**
-	 * Field _points.
-	 */
 	protected Location[] _points;
-	/**
-	 * Field _lastPoint.
-	 */
 	private int _lastPoint = 0;
 	
 	/**

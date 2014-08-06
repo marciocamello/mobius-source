@@ -13,7 +13,6 @@
 package lineage2.gameserver.handler.usercommands.impl;
 
 import java.text.SimpleDateFormat;
-
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.handler.usercommands.IUserCommandHandler;
 import lineage2.gameserver.model.Player;
@@ -26,9 +25,6 @@ import lineage2.gameserver.utils.Strings;
  */
 public class ClanPenalty implements IUserCommandHandler
 {
-	/**
-	 * Field COMMAND_IDS.
-	 */
 	private static final int[] COMMAND_IDS =
 	{
 		100,

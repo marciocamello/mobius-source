@@ -28,9 +28,6 @@ public class AdminTarget implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_target.
-		 */
 		admin_target
 	}
 	

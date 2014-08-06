@@ -16,14 +16,11 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.enchantStat;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -32,17 +29,10 @@ import org.w3c.dom.Node;
 
 public class EnchantStatBonusTable
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(EnchantStatBonusTable.class);
-	
 	private static final HashMap<Integer, List<enchantStat>> _enchantStatListArmor = new HashMap<>();
-	
 	private static final HashMap<WeaponType, List<enchantStat>> _enchantStatListWeapon = new HashMap<>();
-	
 	private List<enchantStat> _enchantDefenseList;
-	
 	private static EnchantStatBonusTable _instance = new EnchantStatBonusTable();
 	
 	/**
@@ -413,5 +403,4 @@ public class EnchantStatBonusTable
 			return 0D;
 		}
 	}
-	
 }

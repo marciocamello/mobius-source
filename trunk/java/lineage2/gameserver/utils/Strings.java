@@ -67,17 +67,8 @@ public class Strings
 		return !String.valueOf(x).isEmpty();
 	}
 	
-	/**
-	 * Field tr.
-	 */
 	private static String[] tr;
-	/**
-	 * Field trb.
-	 */
 	private static String[] trb;
-	/**
-	 * Field trcode.
-	 */
 	private static String[] trcode;
 	
 	/**

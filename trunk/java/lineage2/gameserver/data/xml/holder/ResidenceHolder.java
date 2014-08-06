@@ -17,12 +17,10 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.entity.residence.Residence;
-
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.TreeIntObjectMap;
 
@@ -33,17 +31,8 @@ import org.napile.primitive.maps.impl.TreeIntObjectMap;
 @SuppressWarnings("unchecked")
 public final class ResidenceHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final ResidenceHolder _instance = new ResidenceHolder();
-	/**
-	 * Field _residences.
-	 */
 	private final IntObjectMap<Residence> _residences = new TreeIntObjectMap<>();
-	/**
-	 * Field _fastResidencesByType.
-	 */
 	private final Map<Class<?>, List<Residence>> _fastResidencesByType = new HashMap<>(4);
 	
 	/**

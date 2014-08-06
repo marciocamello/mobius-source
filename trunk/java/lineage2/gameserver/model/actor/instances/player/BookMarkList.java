@@ -18,7 +18,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.database.DatabaseFactory;
@@ -28,7 +27,6 @@ import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.Zone.ZoneType;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,9 +36,6 @@ import org.slf4j.LoggerFactory;
  */
 public class BookMarkList
 {
-	/**
-	 * Field FORBIDDEN_ZONES.
-	 */
 	public static final ZoneType[] FORBIDDEN_ZONES = new ZoneType[]
 	{
 		ZoneType.RESIDENCE,
@@ -50,21 +45,9 @@ public class BookMarkList
 		ZoneType.no_restart,
 		ZoneType.no_summon,
 	};
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(BookMarkList.class);
-	/**
-	 * Field owner.
-	 */
 	private final Player owner;
-	/**
-	 * Field elementData.
-	 */
 	private final List<BookMark> elementData;
-	/**
-	 * Field capacity.
-	 */
 	private int capacity;
 	
 	/**

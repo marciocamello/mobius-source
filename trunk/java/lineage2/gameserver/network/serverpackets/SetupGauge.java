@@ -21,7 +21,6 @@ public class SetupGauge extends L2GameServerPacket
 	public static final int BLUE_MINI = 2;
 	public static final int GREEN_MINI = 3;
 	public static final int RED_MINI = 4;
-	
 	private final int _charId;
 	private final int _dat1;
 	private int _time;

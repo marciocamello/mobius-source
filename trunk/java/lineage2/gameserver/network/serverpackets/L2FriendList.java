@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.instances.player.Friend;
 

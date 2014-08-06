@@ -15,7 +15,6 @@ package lineage2.gameserver.skills.skillclasses;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
@@ -33,121 +32,34 @@ import lineage2.gameserver.templates.StatsSet;
  */
 public class ExtractStone extends Skill
 {
-	/**
-	 * Field ExtractScrollSkill. (value is 2630)
-	 */
 	private final static int ExtractScrollSkill = 2630;
-	/**
-	 * Field ExtractedCoarseRedStarStone. (value is 13858)
-	 */
 	private final static int ExtractedCoarseRedStarStone = 13858;
-	/**
-	 * Field ExtractedCoarseBlueStarStone. (value is 13859)
-	 */
 	private final static int ExtractedCoarseBlueStarStone = 13859;
-	/**
-	 * Field ExtractedCoarseGreenStarStone. (value is 13860)
-	 */
 	private final static int ExtractedCoarseGreenStarStone = 13860;
-	/**
-	 * Field ExtractedRedStarStone. (value is 14009)
-	 */
 	private final static int ExtractedRedStarStone = 14009;
-	/**
-	 * Field ExtractedBlueStarStone. (value is 14010)
-	 */
 	private final static int ExtractedBlueStarStone = 14010;
-	/**
-	 * Field ExtractedGreenStarStone. (value is 14011)
-	 */
 	private final static int ExtractedGreenStarStone = 14011;
-	/**
-	 * Field RedStarStone1. (value is 18684)
-	 */
 	private final static int RedStarStone1 = 18684;
-	/**
-	 * Field RedStarStone2. (value is 18685)
-	 */
 	private final static int RedStarStone2 = 18685;
-	/**
-	 * Field RedStarStone3. (value is 18686)
-	 */
 	private final static int RedStarStone3 = 18686;
-	/**
-	 * Field BlueStarStone1. (value is 18687)
-	 */
 	private final static int BlueStarStone1 = 18687;
-	/**
-	 * Field BlueStarStone2. (value is 18688)
-	 */
 	private final static int BlueStarStone2 = 18688;
-	/**
-	 * Field BlueStarStone3. (value is 18689)
-	 */
 	private final static int BlueStarStone3 = 18689;
-	/**
-	 * Field GreenStarStone1. (value is 18690)
-	 */
 	private final static int GreenStarStone1 = 18690;
-	/**
-	 * Field GreenStarStone2. (value is 18691)
-	 */
 	private final static int GreenStarStone2 = 18691;
-	/**
-	 * Field GreenStarStone3. (value is 18692)
-	 */
 	private final static int GreenStarStone3 = 18692;
-	/**
-	 * Field FireEnergyCompressionStone. (value is 14015)
-	 */
 	private final static int FireEnergyCompressionStone = 14015;
-	/**
-	 * Field WaterEnergyCompressionStone. (value is 14016)
-	 */
 	private final static int WaterEnergyCompressionStone = 14016;
-	/**
-	 * Field WindEnergyCompressionStone. (value is 14017)
-	 */
 	private final static int WindEnergyCompressionStone = 14017;
-	/**
-	 * Field EarthEnergyCompressionStone. (value is 14018)
-	 */
 	private final static int EarthEnergyCompressionStone = 14018;
-	/**
-	 * Field DarknessEnergyCompressionStone. (value is 14019)
-	 */
 	private final static int DarknessEnergyCompressionStone = 14019;
-	/**
-	 * Field SacredEnergyCompressionStone. (value is 14020)
-	 */
 	private final static int SacredEnergyCompressionStone = 14020;
-	/**
-	 * Field SeedFire. (value is 18679)
-	 */
 	private final static int SeedFire = 18679;
-	/**
-	 * Field SeedWater. (value is 18678)
-	 */
 	private final static int SeedWater = 18678;
-	/**
-	 * Field SeedWind. (value is 18680)
-	 */
 	private final static int SeedWind = 18680;
-	/**
-	 * Field SeedEarth. (value is 18681)
-	 */
 	private final static int SeedEarth = 18681;
-	/**
-	 * Field SeedDarkness. (value is 18683)
-	 */
 	private final static int SeedDarkness = 18683;
-	/**
-	 * Field SeedDivinity. (value is 18682)
-	 */
 	private final static int SeedDivinity = 18682;
-	/**
-	 * Field _npcIds.
-	 */
 	private final List<Integer> _npcIds = new ArrayList<>();
 	
 	/**

@@ -14,7 +14,6 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
@@ -509,5 +508,4 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 			return SysMsgContainer.Types.CLASS_NAME;
 		}
 	}
-	
 }

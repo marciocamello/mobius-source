@@ -25,7 +25,6 @@ import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -43,7 +42,6 @@ import lineage2.gameserver.tables.GmListTable;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.SqlBatch;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -53,25 +51,10 @@ import org.slf4j.LoggerFactory;
  */
 public class RaidBossSpawnManager
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(RaidBossSpawnManager.class);
-	/**
-	 * Field _instance.
-	 */
 	private static RaidBossSpawnManager _instance;
-	/**
-	 * Field _spawntable.
-	 */
 	protected static final Map<Integer, Spawner> _spawntable = new ConcurrentHashMap<>();
-	/**
-	 * Field _storedInfo.
-	 */
 	protected static Map<Integer, StatsSet> _storedInfo;
-	/**
-	 * Field _points.
-	 */
 	protected static Map<Integer, Map<Integer, Integer>> _points;
 	
 	/**
@@ -79,17 +62,8 @@ public class RaidBossSpawnManager
 	 */
 	public static enum Status
 	{
-		/**
-		 * Field ALIVE.
-		 */
 		ALIVE,
-		/**
-		 * Field DEAD.
-		 */
 		DEAD,
-		/**
-		 * Field UNDEFINED.
-		 */
 		UNDEFINED
 	}
 	
@@ -343,17 +317,8 @@ public class RaidBossSpawnManager
 		return _spawntable;
 	}
 	
-	/**
-	 * Field KEY_RANK.
-	 */
 	public static final Integer KEY_RANK = new Integer(-1);
-	/**
-	 * Field KEY_TOTAL_POINTS.
-	 */
 	public static final Integer KEY_TOTAL_POINTS = new Integer(0);
-	/**
-	 * Field pointsLock.
-	 */
 	private final Lock pointsLock = new ReentrantLock();
 	
 	/**

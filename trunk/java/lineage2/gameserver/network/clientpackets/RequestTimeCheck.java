@@ -18,9 +18,6 @@ package lineage2.gameserver.network.clientpackets;
  */
 public class RequestTimeCheck extends L2GameClientPacket
 {
-	/**
-	 * Field unk2. Field unk.
-	 */
 	@SuppressWarnings("unused")
 	private int unk, unk2;
 	

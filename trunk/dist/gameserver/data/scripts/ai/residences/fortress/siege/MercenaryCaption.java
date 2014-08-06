@@ -14,7 +14,6 @@ package ai.residences.fortress.siege;
 
 import java.util.Collections;
 import java.util.List;
-
 import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.entity.events.impl.FortressSiegeEvent;
@@ -29,13 +28,7 @@ import npc.model.residences.fortress.siege.MercenaryCaptionInstance;
  */
 public final class MercenaryCaption extends Fighter
 {
-	/**
-	 * Field _points.
-	 */
 	private List<Location> _points = Collections.emptyList();
-	/**
-	 * Field _tick.
-	 */
 	private int _tick = -1;
 	
 	/**

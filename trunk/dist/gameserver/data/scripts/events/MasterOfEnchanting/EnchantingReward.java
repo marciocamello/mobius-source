@@ -26,59 +26,26 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public final class EnchantingReward extends Functions implements ScriptFile
 {
-	/**
-	 * Field MASTER_YOGI_STAFF.
-	 */
 	private static final int MASTER_YOGI_STAFF = 13539;
-	/**
-	 * Field MASTER_YOGI_SCROLL.
-	 */
 	private static final int MASTER_YOGI_SCROLL = 13540;
-	/**
-	 * Field ADENA.
-	 */
 	private static final int ADENA = 57;
-	/**
-	 * Field STAFF_PRICE.
-	 */
 	private static final int STAFF_PRICE = 1000;
-	/**
-	 * Field TIMED_SCROLL_PRICE.
-	 */
 	private static final int TIMED_SCROLL_PRICE = 6000;
-	/**
-	 * Field TIMED_SCROLL_HOURS.
-	 */
 	private static final int TIMED_SCROLL_HOURS = 6;
-	/**
-	 * Field ONE_SCROLL_PRICE.
-	 */
 	private static final int ONE_SCROLL_PRICE = 77777;
-	/**
-	 * Field TEN_SCROLLS_PRICE.
-	 */
 	private static final int TEN_SCROLLS_PRICE = 777770;
-	/**
-	 * Field HAT_SHADOW.
-	 */
 	private static final int[] HAT_SHADOW = new int[]
 	{
 		13074,
 		13075,
 		13076
 	};
-	/**
-	 * Field HAT_EVENT.
-	 */
 	private static final int[] HAT_EVENT = new int[]
 	{
 		13518,
 		13519,
 		13522
 	};
-	/**
-	 * Field SOUL_CRYSTALL.
-	 */
 	private static final int[] SOUL_CRYSTALL = new int[]
 	{
 		9570,

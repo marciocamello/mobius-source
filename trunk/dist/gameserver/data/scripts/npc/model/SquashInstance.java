@@ -29,41 +29,14 @@ public final class SquashInstance extends SpecialMonsterInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field Young_Squash. (value is 12774)
-	 */
 	public final static int Young_Squash = 12774;
-	/**
-	 * Field High_Quality_Squash. (value is 12775)
-	 */
 	public final static int High_Quality_Squash = 12775;
-	/**
-	 * Field Low_Quality_Squash. (value is 12776)
-	 */
 	public final static int Low_Quality_Squash = 12776;
-	/**
-	 * Field Large_Young_Squash. (value is 12777)
-	 */
 	public final static int Large_Young_Squash = 12777;
-	/**
-	 * Field High_Quality_Large_Squash. (value is 12778)
-	 */
 	public final static int High_Quality_Large_Squash = 12778;
-	/**
-	 * Field Low_Quality_Large_Squash. (value is 12779)
-	 */
 	public final static int Low_Quality_Large_Squash = 12779;
-	/**
-	 * Field King_Squash. (value is 13016)
-	 */
 	public final static int King_Squash = 13016;
-	/**
-	 * Field Emperor_Squash. (value is 13017)
-	 */
 	public final static int Emperor_Squash = 13017;
-	/**
-	 * Field _spawnerRef.
-	 */
 	private HardReference<Player> _spawnerRef;
 	
 	/**

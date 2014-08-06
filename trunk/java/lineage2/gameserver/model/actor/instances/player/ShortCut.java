@@ -18,105 +18,30 @@ package lineage2.gameserver.model.actor.instances.player;
  */
 public class ShortCut
 {
-	/**
-	 * Field TYPE_ITEM. (value is 1)
-	 */
 	public final static int TYPE_ITEM = 1;
-	/**
-	 * Field TYPE_SKILL. (value is 2)
-	 */
 	public final static int TYPE_SKILL = 2;
-	/**
-	 * Field TYPE_ACTION. (value is 3)
-	 */
 	public final static int TYPE_ACTION = 3;
-	/**
-	 * Field TYPE_MACRO. (value is 4)
-	 */
 	public final static int TYPE_MACRO = 4;
-	/**
-	 * Field TYPE_RECIPE. (value is 5)
-	 */
 	public final static int TYPE_RECIPE = 5;
-	/**
-	 * Field TYPE_TPBOOKMARK. (value is 6)
-	 */
 	public final static int TYPE_TPBOOKMARK = 6;
-	/**
-	 * Field PAGE_NORMAL_0. (value is 0)
-	 */
 	public final static int PAGE_NORMAL_0 = 0;
-	/**
-	 * Field PAGE_NORMAL_1. (value is 1)
-	 */
 	public final static int PAGE_NORMAL_1 = 1;
-	/**
-	 * Field PAGE_NORMAL_2. (value is 2)
-	 */
 	public final static int PAGE_NORMAL_2 = 2;
-	/**
-	 * Field PAGE_NORMAL_3. (value is 3)
-	 */
 	public final static int PAGE_NORMAL_3 = 3;
-	/**
-	 * Field PAGE_NORMAL_4. (value is 4)
-	 */
 	public final static int PAGE_NORMAL_4 = 4;
-	/**
-	 * Field PAGE_NORMAL_5. (value is 5)
-	 */
 	public final static int PAGE_NORMAL_5 = 5;
-	/**
-	 * Field PAGE_NORMAL_6. (value is 6)
-	 */
 	public final static int PAGE_NORMAL_6 = 6;
-	/**
-	 * Field PAGE_NORMAL_7. (value is 7)
-	 */
 	public final static int PAGE_NORMAL_7 = 7;
-	/**
-	 * Field PAGE_NORMAL_8. (value is 8)
-	 */
 	public final static int PAGE_NORMAL_8 = 8;
-	/**
-	 * Field PAGE_NORMAL_9. (value is 9)
-	 */
 	public final static int PAGE_NORMAL_9 = 9;
-	/**
-	 * Field PAGE_FLY_TRANSFORM. (value is 10)
-	 */
 	public final static int PAGE_FLY_TRANSFORM = 10;
-	/**
-	 * Field PAGE_AIRSHIP. (value is 11)
-	 */
 	public final static int PAGE_AIRSHIP = 11;
-	/**
-	 * Field PAGE_MAX.
-	 */
 	public final static int PAGE_MAX = PAGE_AIRSHIP;
-	/**
-	 * Field _slot.
-	 */
 	private final int _slot;
-	/**
-	 * Field _page.
-	 */
 	private final int _page;
-	/**
-	 * Field _type.
-	 */
 	private final int _type;
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _level.
-	 */
 	private final int _level;
-	/**
-	 * Field _characterType.
-	 */
 	private final int _characterType;
 	
 	/**

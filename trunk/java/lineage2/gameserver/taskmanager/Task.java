@@ -13,7 +13,6 @@
 package lineage2.gameserver.taskmanager;
 
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.gameserver.taskmanager.TaskManager.ExecutedTask;
 
 /**

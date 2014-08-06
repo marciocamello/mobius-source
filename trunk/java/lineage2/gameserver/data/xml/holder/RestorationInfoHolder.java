@@ -43,7 +43,6 @@ public final class RestorationInfoHolder extends AbstractHolder
 		_restorationInfoList.clear();
 	}
 }
-
 /*
  * Location: D:\JavaDecompiler\l2Scripts GoD September 2012 - DECOMPILED\gameserver.jar Qualified Name: l2s.gameserver.data.xml.holder.RestorationInfoHolder JD-Core Version: 0.6.2
  */

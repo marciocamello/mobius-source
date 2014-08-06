@@ -22,9 +22,6 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public class RequestAcceptWaitingSubstitute extends L2GameClientPacket
 {
-	/**
-	 * Field willJoin.
-	 */
 	boolean willJoin;
 	
 	/**

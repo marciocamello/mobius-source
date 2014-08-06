@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.clientpackets;
 
 import java.util.List;
-
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.residence.Fortress;

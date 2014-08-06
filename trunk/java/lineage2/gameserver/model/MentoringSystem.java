@@ -14,14 +14,12 @@ package lineage2.gameserver.model;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.dao.MentoringDAO;
 import lineage2.gameserver.network.serverpackets.ExMentorList;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.MentorUtil;
-
 import org.apache.commons.lang3.StringUtils;
 
 /**

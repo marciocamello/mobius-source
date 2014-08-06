@@ -22,7 +22,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.StringTokenizer;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.AwakingManager;
@@ -42,32 +41,16 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.CertificationFunctions;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.ItemFunctions;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import gnu.trove.map.hash.TIntIntHashMap;
 
-/**
- */
 public final class SubClassManagerInstance extends NpcInstance
 {
-	/**
-	 * Field serialVersionUID. (value is 1)
-	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field CERTIFICATE_ID. (value is 30433)
-	 */
 	private static final int CERTIFICATE_ID = 30433;
-	
 	private static final TIntIntHashMap _DESTINYCHANGECLASSES = new TIntIntHashMap(8);
-	
 	private static Map<Integer, Double> _REAWAKENINGCOST = new HashMap<>();
-	
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(SubClassManagerInstance.class);
 	
 	/**

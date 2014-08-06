@@ -17,7 +17,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
@@ -29,7 +28,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ShowBoard;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.BbsUtil;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,9 +37,6 @@ import org.slf4j.LoggerFactory;
  */
 public final class CommunityStats implements ScriptFile, ICommunityBoardHandler
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(CommunityStats.class);
 	
 	/**
@@ -98,81 +93,25 @@ public final class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		};
 	}
 	
-	/**
-	 */
 	public final class CBStatMan
 	{
-		/**
-		 * Field PlayerId.
-		 */
 		public int PlayerId = 0;
-		/**
-		 * Field ChName.
-		 */
 		public String ChName = "";
-		/**
-		 * Field ChGameTime.
-		 */
 		public int ChGameTime = 0;
-		/**
-		 * Field ChPk.
-		 */
 		public int ChPk = 0;
-		/**
-		 * Field ChPvP.
-		 */
 		public int ChPvP = 0;
-		/**
-		 * Field ChOnOff.
-		 */
 		public int ChOnOff = 0;
-		/**
-		 * Field ChSex.
-		 */
 		public int ChSex = 0;
-		/**
-		 * Field NameCastl.
-		 */
 		public String NameCastl;
-		/**
-		 * Field siegeDate.
-		 */
 		public Object siegeDate;
-		/**
-		 * Field Percent.
-		 */
 		public String Percent;
-		/**
-		 * Field id2.
-		 */
 		public Object id2;
-		/**
-		 * Field id.
-		 */
 		public int id;
-		/**
-		 * Field ClanLevel.
-		 */
 		public int ClanLevel;
-		/**
-		 * Field hasCastle.
-		 */
 		public int hasCastle;
-		/**
-		 * Field ReputationClan.
-		 */
 		public int ReputationClan;
-		/**
-		 * Field AllyName.
-		 */
 		public String AllyName;
-		/**
-		 * Field ClanName.
-		 */
 		public String ClanName;
-		/**
-		 * Field Owner.
-		 */
 		public String Owner;
 	}
 	

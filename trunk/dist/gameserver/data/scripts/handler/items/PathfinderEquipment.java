@@ -25,9 +25,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public final class PathfinderEquipment extends SimpleItemHandler
 {
-	/**
-	 * Field rewards.
-	 */
 	private static final TIntObjectHashMap<int[][]> rewards = new TIntObjectHashMap<>();
 	static
 	{

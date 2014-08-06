@@ -20,9 +20,6 @@ import lineage2.gameserver.model.Player;
  */
 public class RequestRecipeShopMessageSet extends L2GameClientPacket
 {
-	/**
-	 * Field _name.
-	 */
 	private String _name;
 	
 	/**

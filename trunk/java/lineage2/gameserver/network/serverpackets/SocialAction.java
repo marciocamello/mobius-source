@@ -16,7 +16,6 @@ public class SocialAction extends L2GameServerPacket
 {
 	private final int _playerId;
 	private final int _actionId;
-	
 	// Это для фрея.
 	public static final int GREETING = 2;
 	public static final int VICTORY = 3;

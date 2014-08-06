@@ -33,13 +33,10 @@ public final class GunPrisionInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	
 	/**
 	 * @author cruel
 	 */
-	
 	boolean checkShot = true;
-	
 	private static final Location[] point_bombs =
 	{
 		new Location(176856, 144152, -11875),
@@ -47,7 +44,6 @@ public final class GunPrisionInstance extends NpcInstance
 		new Location(174264, 141208, -11874),
 		new Location(174056, 144056, -11870)
 	};
-	
 	private static final Location[] point_bombs_spezion =
 	{
 		new Location(186056, 144152, -11851),
@@ -217,5 +213,4 @@ public final class GunPrisionInstance extends NpcInstance
 			spawnMe();
 		}
 	}
-	
 }

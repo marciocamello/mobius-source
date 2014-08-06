@@ -15,7 +15,6 @@ package lineage2.gameserver.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.entity.residence.Castle;
@@ -23,7 +22,6 @@ import lineage2.gameserver.model.entity.residence.Residence;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,29 +31,11 @@ import org.slf4j.LoggerFactory;
  */
 public class CastleHiredGuardDAO
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(CastleHiredGuardDAO.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final CastleHiredGuardDAO _instance = new CastleHiredGuardDAO();
-	/**
-	 * Field SELECT_SQL_QUERY. (value is ""SELECT * FROM castle_hired_guards WHERE residence_id=?"")
-	 */
 	public static final String SELECT_SQL_QUERY = "SELECT * FROM castle_hired_guards WHERE residence_id=?";
-	/**
-	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO castle_hired_guards(residence_id, item_id, x, y, z) VALUES (?, ?, ?, ?, ?)"")
-	 */
 	public static final String INSERT_SQL_QUERY = "INSERT INTO castle_hired_guards(residence_id, item_id, x, y, z) VALUES (?, ?, ?, ?, ?)";
-	/**
-	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM castle_hired_guards WHERE residence_id=?"")
-	 */
 	public static final String DELETE_SQL_QUERY = "DELETE FROM castle_hired_guards WHERE residence_id=?";
-	/**
-	 * Field DELETE_SQL_QUERY2. (value is ""DELETE FROM castle_hired_guards WHERE residence_id=? AND item_id=? AND x=? AND y=? AND z=?"")
-	 */
 	public static final String DELETE_SQL_QUERY2 = "DELETE FROM castle_hired_guards WHERE residence_id=? AND item_id=? AND x=? AND y=? AND z=?";
 	
 	/**

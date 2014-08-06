@@ -23,9 +23,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class GreatPowerfulDevice extends DefaultAI
 {
-	/**
-	 * Field MOBS.
-	 */
 	private static final int[] MOBS =
 	{
 		22540,
@@ -34,9 +31,6 @@ public final class GreatPowerfulDevice extends DefaultAI
 		22547,
 		22538
 	};
-	/**
-	 * Field OBELISK_LOC.
-	 */
 	private static final Location OBELISK_LOC = new Location(-245825, 217075, -12208);
 	
 	/**

@@ -32,9 +32,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class RequestAnswerJoinPledge extends L2GameClientPacket
 {
-	/**
-	 * Field _response.
-	 */
 	private int _response;
 	
 	/**

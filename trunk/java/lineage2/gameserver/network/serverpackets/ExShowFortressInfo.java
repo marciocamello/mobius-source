@@ -15,11 +15,9 @@ package lineage2.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.model.entity.residence.Fortress;
 import lineage2.gameserver.model.pledge.Clan;
-
 import org.apache.commons.lang3.StringUtils;
 
 public class ExShowFortressInfo extends L2GameServerPacket

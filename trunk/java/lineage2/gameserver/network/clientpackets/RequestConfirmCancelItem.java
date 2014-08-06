@@ -23,9 +23,6 @@ import lineage2.gameserver.network.serverpackets.ExPutItemResultForVariationCanc
  */
 public class RequestConfirmCancelItem extends L2GameClientPacket
 {
-	/**
-	 * Field _itemId.
-	 */
 	int _itemId;
 	
 	/**

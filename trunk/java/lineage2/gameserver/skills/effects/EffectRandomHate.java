@@ -13,7 +13,6 @@
 package lineage2.gameserver.skills.effects;
 
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.AggroList;
 import lineage2.gameserver.model.Creature;

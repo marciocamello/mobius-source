@@ -17,7 +17,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 public class _467_TheOppressorAndTheOppressed extends Quest implements ScriptFile
@@ -25,7 +24,6 @@ public class _467_TheOppressorAndTheOppressed extends Quest implements ScriptFil
 	// npc
 	public static final int GUIDE = 33463;
 	public static final int DASMOND = 30855;
-	
 	// mobs
 	private final int[] Mobs =
 	{
@@ -34,7 +32,6 @@ public class _467_TheOppressorAndTheOppressed extends Quest implements ScriptFil
 		20647,
 		20649
 	};
-	
 	// q items
 	public static final int CLEAR_CORE = 19488;
 	

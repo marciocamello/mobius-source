@@ -17,7 +17,6 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class FriendRemove extends L2GameServerPacket
 {
-	
 	@Override
 	protected final void writeImpl()
 	{

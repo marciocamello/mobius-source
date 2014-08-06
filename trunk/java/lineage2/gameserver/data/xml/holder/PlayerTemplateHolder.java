@@ -27,21 +27,12 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public final class PlayerTemplateHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final PlayerTemplateHolder _instance = new PlayerTemplateHolder();
-	/**
-	 * Field _templates.
-	 */
 	private static final TIntObjectHashMap<TIntObjectHashMap<TIntObjectHashMap<PlayerTemplate>>> _templates;
 	static
 	{
 		_templates = new TIntObjectHashMap<>();
 	}
-	/**
-	 * Field _templates_count.
-	 */
 	private static int _templates_count = 0;
 	
 	/**

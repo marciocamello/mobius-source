@@ -26,9 +26,6 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RollingDice extends ScriptItemHandler
 {
-	/**
-	 * Field _itemIds.
-	 */
 	private static final int[] _itemIds =
 	{
 		4625,

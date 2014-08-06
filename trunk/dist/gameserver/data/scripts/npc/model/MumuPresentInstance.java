@@ -22,7 +22,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class MumuPresentInstance extends NpcInstance
 {
-	
 	/**
 	 *
 	 */

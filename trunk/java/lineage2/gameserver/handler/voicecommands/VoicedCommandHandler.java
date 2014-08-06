@@ -14,7 +14,6 @@ package lineage2.gameserver.handler.voicecommands;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.handler.voicecommands.impl.Debug;
 import lineage2.gameserver.handler.voicecommands.impl.Hellbound;
@@ -32,9 +31,6 @@ import lineage2.gameserver.handler.voicecommands.impl.WhoAmI;
  */
 public class VoicedCommandHandler extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final VoicedCommandHandler _instance = new VoicedCommandHandler();
 	
 	/**
@@ -46,9 +42,6 @@ public class VoicedCommandHandler extends AbstractHolder
 		return _instance;
 	}
 	
-	/**
-	 * Field _datatable.
-	 */
 	private final Map<String, IVoicedCommandHandler> _datatable = new HashMap<>();
 	
 	/**

@@ -15,7 +15,6 @@ package bosses;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -40,10 +39,8 @@ import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.ReflectionUtils;
 import lineage2.gameserver.utils.TimeUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import bosses.EpicBossState.State;
 
 /**
@@ -52,101 +49,29 @@ import bosses.EpicBossState.State;
  */
 public final class AntharasManager extends Functions implements ScriptFile, OnDeathListener
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(AntharasManager.class);
-	/**
-	 * Field _teleportCubeId. (value is 31859)
-	 */
 	private static final int _teleportCubeId = 31859;
-	/**
-	 * Field ANTHARAS_STRONG. (value is 29068)
-	 */
 	private static final int ANTHARAS_STRONG = 29068;
-	/**
-	 * Field PORTAL_STONE. (value is 3865)
-	 */
 	private static final int PORTAL_STONE = 3865;
-	/**
-	 * Field TELEPORT_POSITION.
-	 */
 	private static final Location TELEPORT_POSITION = new Location(179892, 114915, -7704);
-	/**
-	 * Field _teleportCubeLocation.
-	 */
 	private static final Location _teleportCubeLocation = new Location(177615, 114941, -7709, 0);
-	/**
-	 * Field _antharasLocation.
-	 */
 	static final Location _antharasLocation = new Location(181911, 114835, -7678, 32542);
-	/**
-	 * Field _antharas.
-	 */
 	static BossInstance _antharas;
-	/**
-	 * Field _teleCube.
-	 */
 	private static NpcInstance _teleCube;
-	/**
-	 * Field _spawnedMinions.
-	 */
 	private static final List<NpcInstance> _spawnedMinions = new ArrayList<>();
-	/**
-	 * Field _monsterSpawnTask.
-	 */
 	private static ScheduledFuture<?> _monsterSpawnTask;
-	/**
-	 * Field _intervalEndTask.
-	 */
 	private static ScheduledFuture<?> _intervalEndTask;
-	/**
-	 * Field _socialTask.
-	 */
 	static ScheduledFuture<?> _socialTask;
-	/**
-	 * Field _moveAtRandomTask.
-	 */
 	private static ScheduledFuture<?> _moveAtRandomTask;
-	/**
-	 * Field _sleepCheckTask.
-	 */
 	static ScheduledFuture<?> _sleepCheckTask;
-	/**
-	 * Field _onAnnihilatedTask.
-	 */
 	private static ScheduledFuture<?> _onAnnihilatedTask;
-	/**
-	 * Field _state.
-	 */
 	static EpicBossState _state;
-	/**
-	 * Field _zone.
-	 */
 	private static Zone _zone;
-	/**
-	 * Field _lastAttackTime.
-	 */
 	static long _lastAttackTime = 0;
-	/**
-	 * Field FWA_LIMITUNTILSLEEP.
-	 */
 	private static final int FWA_LIMITUNTILSLEEP = 15 * 60000;
-	/**
-	 * Field FWA_FIXINTERVALOFANTHARAS.
-	 */
 	private static final int FWA_FIXINTERVALOFANTHARAS = 11 * 24 * 60 * 60000;
-	/**
-	 * Field FWA_APPTIMEOFANTHARAS.
-	 */
 	private static final int FWA_APPTIMEOFANTHARAS = 5 * 60000;
-	/**
-	 * Field Dying.
-	 */
 	private static boolean Dying = false;
-	/**
-	 * Field _entryLocked.
-	 */
 	private static boolean _entryLocked = false;
 	
 	/**
@@ -154,17 +79,8 @@ public final class AntharasManager extends Functions implements ScriptFile, OnDe
 	 */
 	private static class AntharasSpawn extends RunnableImpl
 	{
-		/**
-		 * Field _distance.
-		 */
 		private static final int _distance = 2550;
-		/**
-		 * Field _taskId.
-		 */
 		private int _taskId = 0;
-		/**
-		 * Field _players.
-		 */
 		private final List<Player> _players = getPlayersInside();
 		
 		/**

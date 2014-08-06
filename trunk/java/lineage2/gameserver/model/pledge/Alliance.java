@@ -17,14 +17,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.cache.CrestCache;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.tables.ClanTable;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,37 +32,13 @@ import org.slf4j.LoggerFactory;
  */
 public class Alliance
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Alliance.class);
-	/**
-	 * Field _allyName.
-	 */
 	private String _allyName;
-	/**
-	 * Field _allyId.
-	 */
 	private int _allyId;
-	/**
-	 * Field _leader.
-	 */
 	private Clan _leader = null;
-	/**
-	 * Field _members.
-	 */
 	private final Map<Integer, Clan> _members = new ConcurrentHashMap<>();
-	/**
-	 * Field _allyCrestId.
-	 */
 	private int _allyCrestId;
-	/**
-	 * Field _expelledMemberTime.
-	 */
 	private long _expelledMemberTime;
-	/**
-	 * Field EXPELLED_MEMBER_PENALTY.
-	 */
 	public static final long EXPELLED_MEMBER_PENALTY = 24 * 60 * 60 * 1000L;
 	
 	/**

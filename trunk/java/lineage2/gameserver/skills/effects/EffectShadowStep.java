@@ -27,9 +27,6 @@ import lineage2.gameserver.utils.Util;
  */
 public class EffectShadowStep extends Effect
 {
-	/**
-	 * Field _z. Field _y. Field _x.
-	 */
 	private int _x, _y, _z;
 	
 	/**

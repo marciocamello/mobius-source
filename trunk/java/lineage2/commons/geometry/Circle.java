@@ -18,13 +18,7 @@ package lineage2.commons.geometry;
  */
 public class Circle extends AbstractShape
 {
-	/**
-	 * Field c.
-	 */
 	protected final Point2D c;
-	/**
-	 * Field r.
-	 */
 	protected final int r;
 	
 	/**

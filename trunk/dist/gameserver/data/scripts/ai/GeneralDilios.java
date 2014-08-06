@@ -13,7 +13,6 @@
 package ai;
 
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -26,17 +25,8 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class GeneralDilios extends DefaultAI
 {
-	/**
-	 * Field GUARD_ID. (value is 32619)
-	 */
 	private static final int GUARD_ID = 32619;
-	/**
-	 * Field _wait_timeout.
-	 */
 	private long _wait_timeout = 0;
-	/**
-	 * Field diliosText.
-	 */
 	private static final String[] diliosText =
 	{
 		"Messenger, inform the patrons of the Keucereus Alliance Base! We're gathering brave adventurers to attack Tiat's Mounted Troop that's rooted in the Seed of Destruction.",

@@ -13,7 +13,6 @@
 package ai.DwarvenVillageAttack;
 
 import java.util.List;
-
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.entity.Reflection;
@@ -24,7 +23,6 @@ import lineage2.gameserver.scripts.Functions;
 public final class Rogin extends Dwarvs
 {
 	private static final int BRONK_ID = 19192;
-	
 	private static final int[][] MOVE_LOC =
 	{
 		{
@@ -33,7 +31,6 @@ public final class Rogin extends Dwarvs
 			-1600
 		}
 	};
-	
 	private int currentPoint;
 	
 	public Rogin(NpcInstance actor)

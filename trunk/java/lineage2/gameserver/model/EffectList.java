@@ -18,15 +18,12 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
 import lineage2.gameserver.skills.EffectType;
 import lineage2.gameserver.skills.effects.EffectTemplate;
 import lineage2.gameserver.skills.skillclasses.Transformation;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.funcs.FuncTemplate;
-
 import org.apache.commons.lang3.ArrayUtils;
-
 import gnu.trove.list.array.TIntArrayList;
 import gnu.trove.map.hash.TIntObjectHashMap;
 import gnu.trove.set.hash.TIntHashSet;
@@ -37,49 +34,16 @@ import gnu.trove.set.hash.TIntHashSet;
  */
 public class EffectList
 {
-	/**
-	 * Field NONE_SLOT_TYPE. (value is -1)
-	 */
 	public static final int NONE_SLOT_TYPE = -1;
-	/**
-	 * Field BUFF_SLOT_TYPE. (value is 0)
-	 */
 	public static final int BUFF_SLOT_TYPE = 0;
-	/**
-	 * Field MUSIC_SLOT_TYPE. (value is 1)
-	 */
 	public static final int MUSIC_SLOT_TYPE = 1;
-	/**
-	 * Field TRIGGER_SLOT_TYPE. (value is 2)
-	 */
 	public static final int TRIGGER_SLOT_TYPE = 2;
-	/**
-	 * Field DEBUFF_SLOT_TYPE. (value is 3)
-	 */
 	public static final int DEBUFF_SLOT_TYPE = 3;
-	/**
-	 * Field DEBUFF_LIMIT. (value is 8)
-	 */
 	public static final int DEBUFF_LIMIT = 8;
-	/**
-	 * Field MUSIC_LIMIT. (value is 12)
-	 */
 	public static final int MUSIC_LIMIT = 12;
-	/**
-	 * Field TRIGGER_LIMIT. (value is 12)
-	 */
 	public static final int TRIGGER_LIMIT = 12;
-	/**
-	 * Field _actor.
-	 */
 	private final Creature _actor;
-	/**
-	 * Field _effects.
-	 */
 	private List<Effect> _effects;
-	/**
-	 * Field lock.
-	 */
 	private final Lock lock = new ReentrantLock();
 	
 	/**

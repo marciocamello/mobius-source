@@ -13,7 +13,6 @@
 package instances;
 
 import java.util.List;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -71,7 +70,6 @@ public final class EvilIncubator extends Reflection
 		new Location(56023, -177087, -7952, 16026),
 		new Location(56212, -176074, -7944, 37403)
 	};
-	
 	List<NpcInstance> ADOLPH;
 	private int GUARD1 = 0;
 	private int GUARD2 = 0;
@@ -81,7 +79,6 @@ public final class EvilIncubator extends Reflection
 	int mobKilled = 0;
 	int instanceStage = 0;
 	private final QuestState state;
-	
 	DeathListener deathListener = new DeathListener();
 	
 	public EvilIncubator(QuestState state)

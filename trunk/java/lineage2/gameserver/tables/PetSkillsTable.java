@@ -18,15 +18,12 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.SkillLearn;
 import lineage2.gameserver.model.Summon;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
@@ -35,17 +32,8 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class PetSkillsTable
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(PetSkillsTable.class);
-	/**
-	 * Field _skillTrees.
-	 */
 	private final TIntObjectHashMap<List<SkillLearn>> _skillTrees = new TIntObjectHashMap<>();
-	/**
-	 * Field _instance.
-	 */
 	private static PetSkillsTable _instance = new PetSkillsTable();
 	
 	/**

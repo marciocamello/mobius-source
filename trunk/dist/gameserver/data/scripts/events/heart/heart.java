@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.text.PrintfFormat;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
@@ -33,7 +32,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Util;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,29 +41,11 @@ import org.slf4j.LoggerFactory;
  */
 public final class heart extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(heart.class);
-	/**
-	 * Field _active.
-	 */
 	private static boolean _active = false;
-	/**
-	 * Field _spawns.
-	 */
 	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
-	/**
-	 * Field Guesses.
-	 */
 	private static final Map<Integer, Integer> Guesses = new HashMap<>();
-	/**
-	 * Field links_ru. Field links_en.
-	 */
 	private static String links_en = "", links_ru = "";
-	/**
-	 * Field variants.
-	 */
 	private static final String[][] variants =
 	{
 		{
@@ -99,13 +79,7 @@ public final class heart extends Functions implements ScriptFile, OnDeathListene
 			});
 		}
 	}
-	/**
-	 * Field EVENT_MANAGER_ID. (value is 31227)
-	 */
 	private static final int EVENT_MANAGER_ID = 31227;
-	/**
-	 * Field hearts.
-	 */
 	private static final int[] hearts =
 	{
 		4209,
@@ -118,9 +92,6 @@ public final class heart extends Functions implements ScriptFile, OnDeathListene
 		4216,
 		4217
 	};
-	/**
-	 * Field potions.
-	 */
 	private static final int[] potions =
 	{
 		1374,
@@ -128,9 +99,6 @@ public final class heart extends Functions implements ScriptFile, OnDeathListene
 		6036,
 		1539
 	};
-	/**
-	 * Field scrolls.
-	 */
 	private static final int[] scrolls =
 	{
 		3926,

@@ -25,9 +25,6 @@ public class ReflectionBossInstance extends RaidBossInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field COLLAPSE_AFTER_DEATH_TIME. (value is 5)
-	 */
 	private final static int COLLAPSE_AFTER_DEATH_TIME = 5;
 	
 	/**

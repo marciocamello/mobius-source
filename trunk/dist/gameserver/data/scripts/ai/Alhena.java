@@ -25,9 +25,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Alhena extends DefaultAI
 {
-	/**
-	 * Field points.
-	 */
 	static final Location[] points =
 	{
 		new Location(10968, 14620, -4248),
@@ -45,17 +42,8 @@ public final class Alhena extends DefaultAI
 		new Location(10827, 14757, -4248),
 		new Location(10968, 14620, -4248)
 	};
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = -1;
-	/**
-	 * Field wait_timeout.
-	 */
 	private long wait_timeout = 0;
-	/**
-	 * Field wait.
-	 */
 	private boolean wait = false;
 	
 	/**

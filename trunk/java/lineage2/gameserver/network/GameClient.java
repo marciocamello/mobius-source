@@ -17,7 +17,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.net.nio.impl.MMOClient;
 import lineage2.commons.net.nio.impl.MMOConnection;
@@ -34,7 +33,6 @@ import lineage2.gameserver.network.loginservercon.SessionKey;
 import lineage2.gameserver.network.loginservercon.gspackets.PlayerLogout;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.utils.SecondaryPasswordAuth;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -546,13 +544,7 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 		_state = state;
 	}
 	
-	/**
-	 * Field _failedPackets.
-	 */
 	private int _failedPackets = 0;
-	/**
-	 * Field _unknownPackets.
-	 */
 	private int _unknownPackets = 0;
 	
 	/**

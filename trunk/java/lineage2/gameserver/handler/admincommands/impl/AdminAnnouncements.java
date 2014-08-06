@@ -13,7 +13,6 @@
 package lineage2.gameserver.handler.admincommands.impl;
 
 import java.util.List;
-
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.GameObjectsStorage;
@@ -34,53 +33,17 @@ public class AdminAnnouncements implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_list_announcements.
-		 */
 		admin_list_announcements,
-		/**
-		 * Field admin_announce_announcements.
-		 */
 		admin_announce_announcements,
-		/**
-		 * Field admin_add_announcement.
-		 */
 		admin_add_announcement,
-		/**
-		 * Field admin_del_announcement.
-		 */
 		admin_del_announcement,
-		/**
-		 * Field admin_announce.
-		 */
 		admin_announce,
-		/**
-		 * Field admin_a.
-		 */
 		admin_a,
-		/**
-		 * Field admin_announce_menu.
-		 */
 		admin_announce_menu,
-		/**
-		 * Field admin_crit_announce.
-		 */
 		admin_crit_announce,
-		/**
-		 * Field admin_c.
-		 */
 		admin_c,
-		/**
-		 * Field admin_toscreen.
-		 */
 		admin_toscreen,
-		/**
-		 * Field admin_s.
-		 */
 		admin_s,
-		/**
-		 * Field admin_reload_announcements.
-		 */
 		admin_reload_announcements
 	}
 	

@@ -31,85 +31,25 @@ public class AdminEnchant implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_seteh.
-		 */
 		admin_seteh,
-		/**
-		 * Field admin_setec.
-		 */
 		admin_setec,
-		/**
-		 * Field admin_seteg.
-		 */
 		admin_seteg,
-		/**
-		 * Field admin_setel.
-		 */
 		admin_setel,
-		/**
-		 * Field admin_seteb.
-		 */
 		admin_seteb,
-		/**
-		 * Field admin_setew.
-		 */
 		admin_setew,
-		/**
-		 * Field admin_setes.
-		 */
 		admin_setes,
-		/**
-		 * Field admin_setle.
-		 */
 		admin_setle,
-		/**
-		 * Field admin_setre.
-		 */
 		admin_setre,
-		/**
-		 * Field admin_setlf.
-		 */
 		admin_setlf,
-		/**
-		 * Field admin_setrf.
-		 */
 		admin_setrf,
-		/**
-		 * Field admin_seten.
-		 */
 		admin_seten,
-		/**
-		 * Field admin_setun.
-		 */
 		admin_setun,
-		/**
-		 * Field admin_setba.
-		 */
 		admin_setba,
-		/**
-		 * Field admin_setha.
-		 */
 		admin_setha,
-		/**
-		 * Field admin_setdha.
-		 */
 		admin_setdha,
-		/**
-		 * Field admin_setlbr.
-		 */
 		admin_setlbr,
-		/**
-		 * Field admin_setrbr.
-		 */
 		admin_setrbr,
-		/**
-		 * Field admin_setbelt.
-		 */
 		admin_setbelt,
-		/**
-		 * Field admin_enchant.
-		 */
 		admin_enchant
 	}
 	

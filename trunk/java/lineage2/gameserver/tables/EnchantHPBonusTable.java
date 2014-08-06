@@ -14,19 +14,15 @@ package lineage2.gameserver.tables;
 
 import java.io.File;
 import java.util.StringTokenizer;
-
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.templates.item.ItemTemplate;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
-
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
@@ -35,21 +31,9 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class EnchantHPBonusTable
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(EnchantHPBonusTable.class);
-	/**
-	 * Field _armorHPBonus.
-	 */
 	private final TIntObjectHashMap<Integer[]> _armorHPBonus = new TIntObjectHashMap<>();
-	/**
-	 * Field _onepieceFactor.
-	 */
 	private int _onepieceFactor = 100;
-	/**
-	 * Field _instance.
-	 */
 	private static EnchantHPBonusTable _instance = new EnchantHPBonusTable();
 	
 	/**

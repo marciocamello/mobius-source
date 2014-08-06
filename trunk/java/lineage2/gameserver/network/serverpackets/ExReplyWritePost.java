@@ -21,7 +21,6 @@ public class ExReplyWritePost extends L2GameServerPacket
 {
 	public static final L2GameServerPacket STATIC_TRUE = new ExReplyWritePost(1);
 	public static final L2GameServerPacket STATIC_FALSE = new ExReplyWritePost(0);
-	
 	private final int _reply;
 	
 	/**

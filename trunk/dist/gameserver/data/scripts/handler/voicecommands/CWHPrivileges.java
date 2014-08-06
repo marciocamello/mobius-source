@@ -13,7 +13,6 @@
 package handler.voicecommands;
 
 import java.util.List;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
@@ -32,9 +31,6 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public final class CWHPrivileges implements IVoicedCommandHandler, ScriptFile
 {
-	/**
-	 * Field _commandList.
-	 */
 	private final String[] _commandList = new String[]
 	{
 		"clan"

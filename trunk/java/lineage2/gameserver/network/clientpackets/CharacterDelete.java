@@ -20,7 +20,6 @@ import lineage2.gameserver.network.serverpackets.CharacterDeleteFail;
 import lineage2.gameserver.network.serverpackets.CharacterDeleteSuccess;
 import lineage2.gameserver.network.serverpackets.CharacterSelectionInfo;
 import lineage2.gameserver.network.serverpackets.ExLoginVitalityEffectInfo;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,13 +29,7 @@ import org.slf4j.LoggerFactory;
  */
 public class CharacterDelete extends L2GameClientPacket
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(CharacterDelete.class);
-	/**
-	 * Field _charSlot.
-	 */
 	private int _charSlot;
 	
 	/**

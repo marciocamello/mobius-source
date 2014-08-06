@@ -23,9 +23,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public final class SiegeStatus extends ScriptUserCommand
 {
-	/**
-	 * Field COMMANDS.
-	 */
 	public static final int[] COMMANDS =
 	{
 		99

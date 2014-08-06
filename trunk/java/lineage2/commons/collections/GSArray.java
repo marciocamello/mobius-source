@@ -25,17 +25,8 @@ import java.util.NoSuchElementException;
  */
 public class GSArray<E> implements Collection<E>
 {
-	/**
-	 * Field elementData.
-	 */
 	private transient E[] elementData;
-	/**
-	 * Field modCount.
-	 */
 	transient int modCount = 0;
-	/**
-	 * Field size.
-	 */
 	private int size;
 	
 	/**
@@ -450,17 +441,8 @@ public class GSArray<E> implements Collection<E>
 	 */
 	private class Itr implements Iterator<E>
 	{
-		/**
-		 * Field cursor.
-		 */
 		int cursor = 0;
-		/**
-		 * Field lastRet.
-		 */
 		int lastRet = -1;
-		/**
-		 * Field expectedModCount.
-		 */
 		int expectedModCount = modCount;
 		
 		/**

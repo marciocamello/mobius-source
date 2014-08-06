@@ -21,9 +21,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public final class DragonRaid extends Fighter
 {
-	/**
-	 * Field lastAttackTime.
-	 */
 	private long lastAttackTime = 0;
 	
 	/**

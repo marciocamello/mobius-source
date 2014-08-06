@@ -21,13 +21,7 @@ import java.util.Map;
  */
 public class MemoryClassLoader extends ClassLoader
 {
-	/**
-	 * Field classes.
-	 */
 	private final Map<String, MemoryByteCode> classes = new HashMap<>();
-	/**
-	 * Field loaded.
-	 */
 	private final Map<String, MemoryByteCode> loaded = new HashMap<>();
 	
 	/**

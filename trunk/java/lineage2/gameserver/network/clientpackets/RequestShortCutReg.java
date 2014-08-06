@@ -22,9 +22,6 @@ import lineage2.gameserver.network.serverpackets.ShortCutRegister;
  */
 public class RequestShortCutReg extends L2GameClientPacket
 {
-	/**
-	 * Field _characterType. Field _lvl. Field _page. Field _slot. Field _id. Field _type.
-	 */
 	private int _type, _id, _slot, _page, _lvl, _characterType;
 	
 	/**

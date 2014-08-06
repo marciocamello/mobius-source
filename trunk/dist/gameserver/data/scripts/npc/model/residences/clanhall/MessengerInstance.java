@@ -29,13 +29,7 @@ public final class MessengerInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _siegeDialog.
-	 */
 	private final String _siegeDialog;
-	/**
-	 * Field _ownerDialog.
-	 */
 	private final String _ownerDialog;
 	
 	/**

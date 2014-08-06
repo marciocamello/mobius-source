@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.entity.events.objects;
 
 import lineage2.gameserver.utils.Location;
-
 import org.dom4j.Element;
 
 /**
@@ -26,21 +25,9 @@ public class BoatPoint extends Location
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _speed1.
-	 */
 	private int _speed1;
-	/**
-	 * Field _speed2.
-	 */
 	private int _speed2;
-	/**
-	 * Field _fuel.
-	 */
 	private final int _fuel;
-	/**
-	 * Field _teleport.
-	 */
 	private boolean _teleport;
 	
 	/**

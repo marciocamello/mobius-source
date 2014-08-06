@@ -14,7 +14,6 @@ package lineage2.gameserver.model.entity.events.objects;
 
 import java.io.Serializable;
 import java.util.Comparator;
-
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
@@ -39,9 +38,6 @@ public class SiegeClanObject implements Serializable
 	 */
 	public static class SiegeClanComparatorImpl implements Comparator<SiegeClanObject>
 	{
-		/**
-		 * Field _instance.
-		 */
 		private static final SiegeClanComparatorImpl _instance = new SiegeClanComparatorImpl();
 		
 		/**
@@ -66,21 +62,9 @@ public class SiegeClanObject implements Serializable
 		}
 	}
 	
-	/**
-	 * Field _type.
-	 */
 	private String _type;
-	/**
-	 * Field _clan.
-	 */
 	private final Clan _clan;
-	/**
-	 * Field _flag.
-	 */
 	private NpcInstance _flag;
-	/**
-	 * Field _date.
-	 */
 	private final long _date;
 	
 	/**

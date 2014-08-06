@@ -14,7 +14,6 @@ package npc.model.residences.clanhall;
 
 import java.util.List;
 import java.util.StringTokenizer;
-
 import lineage2.commons.collections.CollectionUtils;
 import lineage2.gameserver.dao.SiegeClanDAO;
 import lineage2.gameserver.dao.SiegePlayerDAO;
@@ -32,9 +31,7 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.TimeUtils;
-
 import org.apache.commons.lang3.StringUtils;
-
 import quests._504_CompetitionForTheBanditStronghold;
 
 /**

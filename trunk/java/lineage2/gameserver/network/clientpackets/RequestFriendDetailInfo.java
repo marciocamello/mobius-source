@@ -22,7 +22,6 @@ import lineage2.gameserver.network.serverpackets.ExFriendDetailInfo;
 public class RequestFriendDetailInfo extends L2GameClientPacket
 {
 	private static final String _C__D0_97_REQUESTFRIENDDETAILINFO = "[C] D0:97 RequestFriendDetailInfo";
-	
 	private String _name;
 	
 	@Override

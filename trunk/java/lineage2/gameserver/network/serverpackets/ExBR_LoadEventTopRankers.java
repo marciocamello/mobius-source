@@ -14,7 +14,6 @@ package lineage2.gameserver.network.serverpackets;
 
 public class ExBR_LoadEventTopRankers extends L2GameServerPacket
 {
-	
 	private final int _eventId;
 	private final int _day;
 	private final int _count;

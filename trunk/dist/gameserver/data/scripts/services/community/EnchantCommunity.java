@@ -13,7 +13,6 @@
 package services.community;
 
 import java.util.StringTokenizer;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
@@ -30,7 +29,6 @@ import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.item.EtcItemTemplate;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.BbsUtil;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,13 +38,7 @@ import org.slf4j.LoggerFactory;
  */
 public final class EnchantCommunity extends Functions implements ScriptFile, ICommunityBoardHandler
 {
-	/**
-	 * Field _Instance.
-	 */
 	private static EnchantCommunity _Instance = null;
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(EnchantCommunity.class);
 	
 	/**

@@ -21,9 +21,6 @@ import lineage2.gameserver.network.serverpackets.RecipeBookItemList;
  */
 public class RequestRecipeBookOpen extends L2GameClientPacket
 {
-	/**
-	 * Field isDwarvenCraft.
-	 */
 	private boolean isDwarvenCraft;
 	
 	/**

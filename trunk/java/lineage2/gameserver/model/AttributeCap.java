@@ -19,9 +19,7 @@ package lineage2.gameserver.model;
 public final class AttributeCap
 {
 	private final Integer _capVal;
-	
 	private final Double _attackVal;
-	
 	private final Double _defenseVal;
 	
 	/**
@@ -30,7 +28,6 @@ public final class AttributeCap
 	 * @param attackValue
 	 * @param defenseValue
 	 */
-	
 	public AttributeCap(Integer capValues, Double attackValue, Double defenseValue)
 	{
 		_capVal = capValues;
@@ -60,5 +57,4 @@ public final class AttributeCap
 	{
 		return _defenseVal;
 	}
-	
 }

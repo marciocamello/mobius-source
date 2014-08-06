@@ -19,7 +19,6 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,18 +32,9 @@ public class MammonsInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(MammonsInstance.class);
-	/**
-	 * Field ANCIENT_ADENA_ID. (value is 5575)
-	 */
 	private static final int ANCIENT_ADENA_ID = 5575;
-	/**
-	 * Field MAMMONS_HTML_PATH. (value is ""mammons/"")
-	 */
 	public static final String MAMMONS_HTML_PATH = "mammons/";
 	
 	/**

@@ -13,7 +13,6 @@
 package npc.model;
 
 import java.util.StringTokenizer;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
@@ -49,9 +48,6 @@ public final class ClassMasterInstance extends MerchantInstance
 		super(objectId, template);
 	}
 	
-	/**
-	 * Field jobLevel.
-	 */
 	int jobLevel = 0;
 	
 	/**

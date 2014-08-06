@@ -14,7 +14,6 @@ package quests;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 
 public class Bingo

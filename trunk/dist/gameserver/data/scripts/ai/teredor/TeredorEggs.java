@@ -31,37 +31,16 @@ import lineage2.gameserver.utils.Location;
  */
 public final class TeredorEggs extends Fighter
 {
-	/**
-	 * Field eggMonsters.
-	 */
 	static final int[] eggMonsters =
 	{
 		18993,
 		18994
 	};
-	/**
-	 * Field monsterSpawnDelay.
-	 */
 	private static final int monsterSpawnDelay = 3;
-	/**
-	 * Field poisonId.
-	 */
 	private static final int poisonId = 14561;
-	/**
-	 * Field poisonLevel.
-	 */
 	private static final int poisonLevel = 1;
-	/**
-	 * Field distanceToDebuff.
-	 */
 	private static final int distanceToDebuff = 400;
-	/**
-	 * Field _activated.
-	 */
 	boolean _activated = false;
-	/**
-	 * Field actor.
-	 */
 	final NpcInstance actor = getActor();
 	
 	/**
@@ -108,17 +87,8 @@ public final class TeredorEggs extends Fighter
 	 */
 	private class SpawnMonster extends RunnableImpl
 	{
-		/**
-		 * Field _npc.
-		 */
 		NpcInstance _npc;
-		/**
-		 * Field _player.
-		 */
 		Player _player;
-		/**
-		 * Field _ref.
-		 */
 		Reflection _ref;
 		
 		/**

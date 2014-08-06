@@ -13,7 +13,6 @@
 package npc.model.residences.fortress.siege;
 
 import java.util.StringTokenizer;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.ClassId;
@@ -21,7 +20,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.templates.npc.NpcTemplate;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -34,45 +32,15 @@ public final class BackupPowerUnitInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field LIMIT. (value is 3)
-	 */
 	public static final int LIMIT = 3;
-	/**
-	 * Field COND_NO_ENTERED. (value is 0)
-	 */
 	public static final int COND_NO_ENTERED = 0;
-	/**
-	 * Field COND_ENTERED. (value is 1)
-	 */
 	public static final int COND_ENTERED = 1;
-	/**
-	 * Field COND_ALL_OK. (value is 2)
-	 */
 	public static final int COND_ALL_OK = 2;
-	/**
-	 * Field COND_FAIL. (value is 3)
-	 */
 	public static final int COND_FAIL = 3;
-	/**
-	 * Field COND_TIMEOUT. (value is 4)
-	 */
 	public static final int COND_TIMEOUT = 4;
-	/**
-	 * Field _generated.
-	 */
 	private final int[] _generated = new int[LIMIT];
-	/**
-	 * Field _index.
-	 */
 	private int _index;
-	/**
-	 * Field _tryCount.
-	 */
 	private int _tryCount;
-	/**
-	 * Field _invalidatePeriod.
-	 */
 	private long _invalidatePeriod;
 	
 	/**

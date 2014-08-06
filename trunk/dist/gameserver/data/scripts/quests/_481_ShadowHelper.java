@@ -22,7 +22,6 @@ public class _481_ShadowHelper extends Quest implements ScriptFile
 {
 	// npc
 	public static final int RINOBERG = 33302;
-	
 	public static final String A_LIST = "a_list";
 	
 	@Override

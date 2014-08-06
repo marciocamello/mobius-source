@@ -26,9 +26,6 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class DarkElves extends DefaultAI
 {
-	/**
-	 * Field TEXT.
-	 */
 	private static final NpcString[] TEXT =
 	{
 		NpcString.GAH_SHILEN_WHY_MUST_YOU_MAKE_US_SUFFER,

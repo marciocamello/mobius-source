@@ -22,13 +22,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public final class CubicHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final CubicHolder _instance = new CubicHolder();
-	/**
-	 * Field _cubics.
-	 */
 	private final TIntObjectHashMap<CubicTemplate> _cubics = new TIntObjectHashMap<>(10);
 	
 	/**

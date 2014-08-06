@@ -28,9 +28,6 @@ public final class SairlenGatekeeperInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field GAZKH. (value is 8784)
-	 */
 	private static final int GAZKH = 8784;
 	
 	/**

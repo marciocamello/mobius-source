@@ -14,7 +14,6 @@ package lineage2.gameserver.handler.admincommands.impl;
 
 import java.util.Collection;
 import java.util.List;
-
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
@@ -45,63 +44,21 @@ public class AdminSkill implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_show_skills.
-		 */
 		admin_show_skills,
-		/**
-		 * Field admin_remove_skills.
-		 */
 		admin_remove_skills,
-		/**
-		 * Field admin_skill_list.
-		 */
 		admin_skill_list,
-		/**
-		 * Field admin_skill_index.
-		 */
 		admin_skill_index,
-		/**
-		 * Field admin_add_skill.
-		 */
 		admin_add_skill,
-		/**
-		 * Field admin_remove_skill.
-		 */
 		admin_remove_skill,
-		/**
-		 * Field admin_get_skills.
-		 */
 		admin_get_skills,
-		/**
-		 * Field admin_reset_skills.
-		 */
 		admin_reset_skills,
-		/**
-		 * Field admin_give_all_skills.
-		 */
 		admin_give_all_skills,
-		/**
-		 * Field admin_show_effects.
-		 */
 		admin_show_effects,
-		/**
-		 * Field admin_debug_stats.
-		 */
 		admin_debug_stats,
-		/**
-		 * Field admin_remove_cooldown.
-		 */
 		admin_remove_cooldown,
-		/**
-		 * Field admin_buff.
-		 */
 		admin_buff
 	}
 	
-	/**
-	 * Field adminSkills.
-	 */
 	private static Skill[] adminSkills;
 	
 	/**

@@ -23,17 +23,8 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class GvGBoss extends Fighter
 {
-	/**
-	 * Field phrase1.
-	 */
 	boolean phrase1 = false;
-	/**
-	 * Field phrase2.
-	 */
 	boolean phrase2 = false;
-	/**
-	 * Field phrase3.
-	 */
 	boolean phrase3 = false;
 	
 	/**

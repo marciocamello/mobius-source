@@ -33,17 +33,8 @@ import lineage2.gameserver.templates.manor.SeedProduction;
  */
 public class RequestBuySeed extends L2GameClientPacket
 {
-	/**
-	 * Field _manorId. Field _count.
-	 */
 	private int _count, _manorId;
-	/**
-	 * Field _items.
-	 */
 	private int[] _items;
-	/**
-	 * Field _itemQ.
-	 */
 	private long[] _itemQ;
 	
 	/**

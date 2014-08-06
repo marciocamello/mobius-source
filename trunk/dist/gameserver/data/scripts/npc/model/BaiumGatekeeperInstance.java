@@ -31,21 +31,9 @@ public final class BaiumGatekeeperInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field Baium. (value is 29020)
-	 */
 	private static final int Baium = 29020;
-	/**
-	 * Field BaiumNpc. (value is 29025)
-	 */
 	private static final int BaiumNpc = 29025;
-	/**
-	 * Field BloodedFabric. (value is 4295)
-	 */
 	private static final int BloodedFabric = 4295;
-	/**
-	 * Field TELEPORT_POSITION.
-	 */
 	private static final Location TELEPORT_POSITION = new Location(113100, 14500, 10077);
 	
 	/**

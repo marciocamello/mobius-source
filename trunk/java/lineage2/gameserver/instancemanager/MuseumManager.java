@@ -21,9 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -34,7 +32,6 @@ import lineage2.gameserver.model.instances.L2StatueInstance;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.npc.NpcTemplate;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -45,13 +42,7 @@ import org.w3c.dom.Node;
  */
 public class MuseumManager
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = Logger.getLogger(MuseumManager.class.getName());
-	/**
-	 * Field con.
-	 */
 	Connection con = null;
 	
 	/**
@@ -79,33 +70,12 @@ public class MuseumManager
 		}
 	}
 	
-	/**
-	 * Field loadTask.
-	 */
 	private final LoadTask loadTask;
-	/**
-	 * Field Museums.
-	 */
 	List<Museum> Museums;
-	/**
-	 * Field topPlayerItems.
-	 */
 	HashMap<Integer, int[]> topPlayerItems;
-	/**
-	 * Field topPlayerAppearance.
-	 */
 	HashMap<Integer, int[]> topPlayerAppearance;
-	/**
-	 * Field _locations.
-	 */
 	List<int[]> _locations;
-	/**
-	 * Field _loadingInfo.
-	 */
 	List<String[]> _loadingInfo;
-	/**
-	 * Field objects.
-	 */
 	private GameObject objects;
 	
 	/**
@@ -282,20 +252,8 @@ public class MuseumManager
 	 */
 	public class Museum
 	{
-		/**
-		 * Field category.
-		 */
-		/**
-		 * Field objectID.
-		 */
 		int objectID, category;
-		/**
-		 * Field isTotal.
-		 */
 		boolean isTotal;
-		/**
-		 * Field acquiredItem.
-		 */
 		long acquiredItem;
 		
 		/**
@@ -651,8 +609,5 @@ public class MuseumManager
 		return _instance;
 	}
 	
-	/**
-	 * Field _instance.
-	 */
 	private static MuseumManager _instance;
 }

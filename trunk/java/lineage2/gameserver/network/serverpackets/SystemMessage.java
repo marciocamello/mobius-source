@@ -14,14 +14,12 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.DoorInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Location;
-
 import org.apache.commons.lang3.StringUtils;
 
 public class SystemMessage extends L2GameServerPacket
@@ -47,7 +45,6 @@ public class SystemMessage extends L2GameServerPacket
 	private static final int TYPE_TEXT = 0;
 	private final int _messageId;
 	private final List<Arg> args = new ArrayList<>();
-	
 	public static final int YOU_HAVE_BEEN_DISCONNECTED_FROM_THE_SERVER = 0; // Соединение
 	// с
 	// сервером
@@ -8852,7 +8849,6 @@ public class SystemMessage extends L2GameServerPacket
 	// в
 	// магазин
 	// возможна.
-	
 	public static final int THERE_IS_NO_SKILL_THAT_ENABLES_ENCHANT = 1438; // Отсутствует
 	// умение,
 	// позволяющее
@@ -8893,7 +8889,6 @@ public class SystemMessage extends L2GameServerPacket
 	// для
 	// улучшения
 	// умения.
-	
 	public static final int Untrain_of_enchant_skill_was_successful_Current_level_of_enchant_skill_S1_has_been_decreased_by_1 = 2069; // Разучивание
 	// умения
 	// улучшения
@@ -8962,7 +8957,6 @@ public class SystemMessage extends L2GameServerPacket
 	// остался
 	// без
 	// изменений.
-	
 	public static final int REMAINING_TIME_S1_SECOND = 1442; // Осталось: $s1
 	// сек.
 	public static final int YOUR_PREVIOUS_SUB_CLASS_WILL_BE_DELETED_AND_YOUR_NEW_SUB_CLASS_WILL_START_AT_LEVEL_40__DO_YOU_WISH_TO_PROCEED = 1445; // Предыдущий
@@ -14122,7 +14116,6 @@ public class SystemMessage extends L2GameServerPacket
 	// оседлали
 	// другого
 	// питомца.
-	
 	public static final int THE_PET_CAN_RUN_AWAY_IF_THE_HUNGER_GAUGE_IS_BELOW_10 = 2260; // Питомец
 	// может
 	// убежать,
@@ -15989,7 +15982,6 @@ public class SystemMessage extends L2GameServerPacket
 	// окно
 	// сообщений
 	// MSN.
-	
 	public static final int ASSIGN_1ST_SLOT_SHORTCUT_IN_THE_SHORTCUT_BASE_WINDOW_COMBINATION_OF_CTRL_AND_SHIFT_CANNOT_BE = 2513; // Назначьте
 	// ярлык
 	// к
@@ -16554,7 +16546,6 @@ public class SystemMessage extends L2GameServerPacket
 	// может
 	// быть
 	// назначена.
-	
 	public static final int MOVE_THE_SHORTCUT_PAGE_IN_THE_SHORTCUT_BASE_WINDOW_TO_PAGE_1 = 2549; // Переместите
 	// лист
 	// ярлыков
@@ -16655,7 +16646,6 @@ public class SystemMessage extends L2GameServerPacket
 	// на
 	// стр.
 	// 10.
-	
 	public static final int OPENS_AND_CLOSES_THE_ACTION_WINDOW_EXECUTING_CHARACTER_ACTIONS_AND_GAME_COMMANDS = 2559; // Открывает
 	// и
 	// закрывает
@@ -17774,7 +17764,6 @@ public class SystemMessage extends L2GameServerPacket
 	// осталось
 	// $s1
 	// мин!
-	
 	public static final int NO_TRANSLATION_REQUIRED_2800 = 2800; // Не
 	// переводить
 	public static final int NO_TRANSLATION_REQUIRED_2801 = 2801; // Не
@@ -17807,7 +17796,6 @@ public class SystemMessage extends L2GameServerPacket
 	// переводить
 	public static final int NO_TRANSLATION_REQUIRED_2815 = 2815; // Не
 	// переводить
-	
 	public static final int DESIGNATE_A_SHORTCUT_KEY_FOR_THE_FLYING_TRANSFORMED_OBJECT_EXCLUSIVE_USE_SHORTCUT_WINDOW_S_NO_1 = 2816; // Назначьте
 	// ярлык
 	// к
@@ -18192,7 +18180,6 @@ public class SystemMessage extends L2GameServerPacket
 	// может
 	// быть
 	// назначена.
-	
 	public static final int EXECUTE_THE_DESIGNATED_SHORTCUT_S_ACTION_SKILL_MACRO = 2840; // Запускает
 	// дейстивя,
 	// умения
@@ -19299,7 +19286,6 @@ public class SystemMessage extends L2GameServerPacket
 	// Становится
 	// лучше
 	// видно.
-	
 	// Recommedations
 	public static final int YOU_CANNOT_RECOMMEND_YOURSELF = 829; // Вы не можете
 	// рекомендовать
@@ -19350,7 +19336,6 @@ public class SystemMessage extends L2GameServerPacket
 	// от
 	// Вас
 	// рекомендации.
-	
 	// Duelling
 	public static final int THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL = 1926; // Ни
 	// один
@@ -19726,7 +19711,6 @@ public class SystemMessage extends L2GameServerPacket
 	// нельзя
 	// создать
 	// группу.
-	
 	public static final int A_MALICIOUS_SKILL_CANNOT_BE_USED_IN_A_PEACE_ZONE = 2167; // Вредоносное
 	// умение
 	// не
@@ -19765,9 +19749,7 @@ public class SystemMessage extends L2GameServerPacket
 	// умением,
 	// успешным
 	// наполовину.
-	
 	public static final int NOT_ENOUGH_BOLTS = 2226; // Недостаточно болтов.
-	
 	// ClanHall Auction messages
 	public static final int ONLY_A_CLAN_LEADER_WHOSE_CLAN_IS_OF_LEVEL_2_OR_HIGHER_IS_ALLOWED_TO_PARTICIPATE_IN_A_CLAN_HALL_AUCTION = 673; // Участвовать
 	// в
@@ -19932,7 +19914,6 @@ public class SystemMessage extends L2GameServerPacket
 	// закончен.
 	public static final int S1_S_AUCTION_HAS_ENDED = 2173; // $s1: аукцион
 	// закончен.
-	
 	// Combat messages
 	public static final int C1S_IS_PERFORMING_A_COUNTERATTACK = 1997; // $c1
 	// проводит
@@ -19988,7 +19969,6 @@ public class SystemMessage extends L2GameServerPacket
 	// $c2,
 	// урон
 	// уменьшен.
-	
 	public static final int THERE_ARE_S2_SECONDS_REMAINING_IN_S1S_REUSE_TIME = 2303; // $s1:
 	// до
 	// повторного
@@ -20013,7 +19993,6 @@ public class SystemMessage extends L2GameServerPacket
 	// мин
 	// $s4
 	// сек.
-	
 	// Augmentation
 	public static final int SELECT_THE_ITEM_TO_BE_AUGMENTED = 1957; // Выберите
 	// предмет
@@ -20063,7 +20042,6 @@ public class SystemMessage extends L2GameServerPacket
 	// быть
 	// зачарован
 	// снова.
-	
 	public static final int YOU_CANNOT_AUGMENT_ITEMS_WHILE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP_IS_IN_OPERATION = 1972; // Вы
 	// не
 	// можете
@@ -20103,7 +20081,6 @@ public class SystemMessage extends L2GameServerPacket
 	// зачаровать
 	// предметы
 	// сидя.
-	
 	public static final int PRESS_THE_AUGMENT_BUTTON_TO_BEGIN = 1984; // Для
 	// начала
 	// нажмите
@@ -20115,7 +20092,6 @@ public class SystemMessage extends L2GameServerPacket
 	// зачарование
 	// не
 	// удалось.
-	
 	// Shadow items
 	public static final int S1S_REMAINING_MANA_IS_NOW_10 = 1979; // $s1:
 	// осталось 10
@@ -20134,7 +20110,6 @@ public class SystemMessage extends L2GameServerPacket
 	// закончилась.
 	// Предмет
 	// исчез.
-	
 	// Limited-items
 	public static final int THE_LIMITED_TIME_ITEM_HAS_BEEN_DELETED = 2366; // Вы
 	// удалили
@@ -20143,7 +20118,6 @@ public class SystemMessage extends L2GameServerPacket
 	// ограниченным
 	// временем
 	// использования.
-	
 	// Трансформация
 	public static final int YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN = 2058; // Вы
 	// уже
@@ -20245,7 +20219,6 @@ public class SystemMessage extends L2GameServerPacket
 	// можете
 	// превратиться
 	// сидя.
-	
 	public static final int THERE_IS_NOT_ENOUGH_SPACE_TO_MOVE_THE_SKILL_CANNOT_BE_USED = 2161; // Недостаточно
 	// свободного
 	// пространства,
@@ -20254,7 +20227,6 @@ public class SystemMessage extends L2GameServerPacket
 	// может
 	// быть
 	// использовано.
-	
 	// Абсорбация душ
 	public static final int YOUR_SOUL_HAS_INCREASED_BY_S1_SO_IT_IS_NOW_AT_S2 = 2162; // Ваше
 	// количество
@@ -20279,7 +20251,6 @@ public class SystemMessage extends L2GameServerPacket
 	// нельзя.
 	public static final int THERE_IS_NOT_ENOUGHT_SOUL = 2195; // Недостаточно
 	// душ.
-	
 	public static final int AGATHION_SKILLS_CAN_BE_USED_ONLY_WHEN_AGATHION_IS_SUMMONED = 2292; // Умения
 	// Агатиона
 	// можно
@@ -20290,7 +20261,6 @@ public class SystemMessage extends L2GameServerPacket
 	// как
 	// Агатион
 	// призван.
-	
 	public static final int YOU_HAVE_GAINED_VITALITY_POINTS = 2296; // Требуются
 	// очки
 	// энергии.
@@ -20300,7 +20270,6 @@ public class SystemMessage extends L2GameServerPacket
 	public static final int VITALITY_HAS_DECREASED = 2316; // Энергия уменьшена.
 	public static final int VITALITY_IS_FULLY_EXHAUSTED = 2317; // Вся энергия
 	// израсходована.
-	
 	public static final int ACQUIRED_50_CLAN_FAME_POINTS = 2326; // Вы получили
 	// 50 очков
 	// клановой
@@ -20312,7 +20281,6 @@ public class SystemMessage extends L2GameServerPacket
 	// $s1
 	// очков
 	// репутации.
-	
 	public static final int C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED = 2096; // $c1
 	// находится
 	// в
@@ -20437,7 +20405,6 @@ public class SystemMessage extends L2GameServerPacket
 	public static final int ITS_TOO_FAR_FROM_THE_NPC_TO_WORK = 2193; // NPC
 	// слишком
 	// далеко.
-	
 	public static final int INSTANCE_ZONE_TIME_LIMIT = 2228; // Лимит времени
 	// зоны:
 	public static final int THERE_IS_NO_INSTANCE_ZONE_UNDER_A_TIME_LIMIT = 2229; // Все
@@ -20453,7 +20420,6 @@ public class SystemMessage extends L2GameServerPacket
 	// ч
 	// $s3
 	// мин.
-	
 	// TODO Расставить сообщения для фортов
 	public static final int ENEMY_BLOOD_PLEDGES_HAVE_INTRUDED_INTO_THE_FORTRESS = 2084; // Вражеские
 	// Заложники
@@ -20507,7 +20473,6 @@ public class SystemMessage extends L2GameServerPacket
 	// отвоевала
 	// крепость
 	// обратно.
-	
 	public static final int FIVE_YEARS_HAVE_PASSED_SINCE_THIS_CHARACTERS_CREATION = 2447; // Со
 	// дня
 	// создания
@@ -20556,7 +20521,6 @@ public class SystemMessage extends L2GameServerPacket
 	// г. $s3
 	// м. $s4
 	// ч.
-	
 	public static final int _IF_YOU_JOIN_THE_CLAN_ACADEMY_YOU_CAN_BECOME_A_CLAN_MEMBER_AND_LEARN_THE_GAME_SYSTEM_UNTIL_YOU = 2875; // Поступив
 	// в
 	// Академию
@@ -21724,7 +21688,6 @@ public class SystemMessage extends L2GameServerPacket
 	// Парное
 	// действие
 	// недоступен.
-	
 	public static final int YOU_HAVE_EXCEEDED_THE_CORRECT_CALCULATION_RANGE_PLEASE_ENTER_AGAIN = 3093; // Вы
 	// превысили
 	// лимит
@@ -21809,7 +21772,6 @@ public class SystemMessage extends L2GameServerPacket
 	// их
 	// раньше.
 	public static final int BELOW_S1_POINTS = 6036; // Меньше $s1 очков
-	
 	public static final int YOU_CANCEL_FOR_COUPLE_ACTION = 3119; // Вы
 	// отказались
 	// от Парного
@@ -21980,7 +21942,6 @@ public class SystemMessage extends L2GameServerPacket
 	// Семени
 	// Уничтожения)
 	public static final int YOU_HAVE_EARNED_S1_B_S2_EXP_AND_S3_B_S4_SP = 3259; // Получено
-	
 	// значение
 	// опыта
 	// $s1
@@ -21991,7 +21952,6 @@ public class SystemMessage extends L2GameServerPacket
 	// $s3
 	// (Бонус:
 	// $s4).
-	
 	public static final int YOU_CANNOT_MOVE_WHILE_IN_A_CHAOTIC_STATE = 3404;
 	public static final int YOU_CANNOT_MOVE_WHILE_DEAD = 3392;
 	public static final int YOU_CANNOT_MOVE_DURING_COMBAT = 3393;

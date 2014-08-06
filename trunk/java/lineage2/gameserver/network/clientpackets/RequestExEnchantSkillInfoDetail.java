@@ -23,33 +23,12 @@ import lineage2.gameserver.tables.SkillTreeTable;
  */
 public final class RequestExEnchantSkillInfoDetail extends L2GameClientPacket
 {
-	/**
-	 * Field TYPE_NORMAL_ENCHANT. (value is 0)
-	 */
 	private static final int TYPE_NORMAL_ENCHANT = 0;
-	/**
-	 * Field TYPE_SAFE_ENCHANT. (value is 1)
-	 */
 	private static final int TYPE_SAFE_ENCHANT = 1;
-	/**
-	 * Field TYPE_UNTRAIN_ENCHANT. (value is 2)
-	 */
 	private static final int TYPE_UNTRAIN_ENCHANT = 2;
-	/**
-	 * Field TYPE_CHANGE_ENCHANT. (value is 3)
-	 */
 	private static final int TYPE_CHANGE_ENCHANT = 3;
-	/**
-	 * Field _type.
-	 */
 	private int _type;
-	/**
-	 * Field _skillId.
-	 */
 	private int _skillId;
-	/**
-	 * Field _skillLvl.
-	 */
 	private int _skillLvl;
 	
 	/**

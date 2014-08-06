@@ -23,13 +23,7 @@ import lineage2.gameserver.stats.Env;
  */
 public final class ConditionTargetHasBuff extends Condition
 {
-	/**
-	 * Field _effectType.
-	 */
 	private final EffectType _effectType;
-	/**
-	 * Field _level.
-	 */
 	private final int _level;
 	
 	/**

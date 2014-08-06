@@ -26,9 +26,6 @@ import lineage2.gameserver.scripts.Functions;
  */
 public class Offline extends Functions implements IVoicedCommandHandler
 {
-	/**
-	 * Field _commandList.
-	 */
 	private final String[] _commandList = new String[]
 	{
 		"offline"

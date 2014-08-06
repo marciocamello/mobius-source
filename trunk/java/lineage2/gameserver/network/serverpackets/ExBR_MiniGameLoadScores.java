@@ -17,10 +17,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
 import lineage2.gameserver.instancemanager.games.MiniGameScoreManager;
 import lineage2.gameserver.model.Player;
-
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.TreeIntObjectMap;
 
@@ -33,7 +31,6 @@ public class ExBR_MiniGameLoadScores extends L2GameServerPacket
 	private int _place;
 	private int _score;
 	private int _lastScore;
-	
 	private final IntObjectMap<List<Map.Entry<String, Integer>>> _entries = new TreeIntObjectMap<>();
 	
 	public ExBR_MiniGameLoadScores(Player player)

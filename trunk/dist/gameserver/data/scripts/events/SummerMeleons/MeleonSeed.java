@@ -37,9 +37,6 @@ public final class MeleonSeed extends ScriptItemHandler
 	 */
 	static public final class DeSpawnScheduleTimerTask extends RunnableImpl
 	{
-		/**
-		 * Field spawnedPlant.
-		 */
 		SimpleSpawner spawnedPlant = null;
 		
 		/**
@@ -61,17 +58,11 @@ public final class MeleonSeed extends ScriptItemHandler
 		}
 	}
 	
-	/**
-	 * Field _itemIds.
-	 */
 	private static final int[] _itemIds =
 	{
 		15366,
 		15367
 	};
-	/**
-	 * Field _npcIds.
-	 */
 	private static final int[] _npcIds =
 	{
 		13271,

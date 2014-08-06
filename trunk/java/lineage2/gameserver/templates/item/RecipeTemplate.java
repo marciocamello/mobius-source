@@ -14,7 +14,6 @@ package lineage2.gameserver.templates.item;
 
 import java.util.ArrayList;
 import java.util.Collection;
-
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.commons.util.Rnd;
 
@@ -29,17 +28,8 @@ public final class RecipeTemplate
 	 */
 	public static class RecipeComponent
 	{
-		/**
-		 * Field _itemId.
-		 */
 		private final int _itemId;
-		/**
-		 * Field _count.
-		 */
 		private final long _count;
-		/**
-		 * Field _chance.
-		 */
 		private final int _chance;
 		
 		/**
@@ -93,41 +83,14 @@ public final class RecipeTemplate
 		}
 	}
 	
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _level.
-	 */
 	private final int _level;
-	/**
-	 * Field _mpConsume.
-	 */
 	private final int _mpConsume;
-	/**
-	 * Field _successRate.
-	 */
 	private final int _successRate;
-	/**
-	 * Field _itemId.
-	 */
 	private final int _itemId;
-	/**
-	 * Field _isDwarven.
-	 */
 	private final boolean _isDwarven;
-	/**
-	 * Field _materials.
-	 */
 	private final Collection<RecipeComponent> _materials;
-	/**
-	 * Field _products.
-	 */
 	private final Collection<RecipeComponent> _products;
-	/**
-	 * Field _npcFee.
-	 */
 	private final Collection<RecipeComponent> _npcFee;
 	
 	/**

@@ -13,7 +13,6 @@
 package ai.HarnakUndeground;
 
 import java.util.List;
-
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;

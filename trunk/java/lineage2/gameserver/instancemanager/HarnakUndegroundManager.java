@@ -18,10 +18,8 @@ import lineage2.gameserver.network.serverpackets.Earthquake;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.utils.NpcUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
@@ -69,31 +67,26 @@ public class HarnakUndegroundManager
 			
 			if (secondStageAltarCount == 8)
 			{
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
+					if (player.isInParty())
 					{
-						if (player.isInParty())
+						for (Player players : player.getParty().getPartyMembers())
 						{
-							for (Player players : player.getParty().getPartyMembers())
+							if (players.isInRange(player, 1000))
 							{
-								if (players.isInRange(player, 1000))
-								{
-									players.sendPacket(new ExShowScreenMessage(NpcString.ALL_SEALS_HAVE_BEEN_BROKEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
-									player.broadcastPacket(new Earthquake(players.getLoc(), 50, 4));
-								}
+								players.sendPacket(new ExShowScreenMessage(NpcString.ALL_SEALS_HAVE_BEEN_BROKEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
+								player.broadcastPacket(new Earthquake(players.getLoc(), 50, 4));
 							}
 						}
-						else
-						{
-							player.sendPacket(new ExShowScreenMessage(NpcString.ALL_SEALS_HAVE_BEEN_BROKEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
-							player.broadcastPacket(new Earthquake(player.getLoc(), 50, 4));
-						}
-						
-						secondStageAltarCount = 0;
-						NpcUtils.spawnSingle(HARNAK, -114712, 149256, -10800, 47671, 1800000L);
 					}
+					else
+					{
+						player.sendPacket(new ExShowScreenMessage(NpcString.ALL_SEALS_HAVE_BEEN_BROKEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
+						player.broadcastPacket(new Earthquake(player.getLoc(), 50, 4));
+					}
+					secondStageAltarCount = 0;
+					NpcUtils.spawnSingle(HARNAK, -114712, 149256, -10800, 47671, 1800000L);
 				}, 10000L);
 			}
 			
@@ -114,39 +107,34 @@ public class HarnakUndegroundManager
 			
 			if (thirdStageAltarCount == 8)
 			{
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
+					if (player.isInParty())
 					{
-						if (player.isInParty())
+						for (Player players : player.getParty().getPartyMembers())
 						{
-							for (Player players : player.getParty().getPartyMembers())
+							if (players.isInRange(player, 1000))
 							{
-								if (players.isInRange(player, 1000))
-								{
-									players.sendPacket(new ExShowScreenMessage(NpcString.ALL_JAILS_ARE_OPEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
-									player.broadcastPacket(new Earthquake(player.getLoc(), 50, 4));
-								}
+								players.sendPacket(new ExShowScreenMessage(NpcString.ALL_JAILS_ARE_OPEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
+								player.broadcastPacket(new Earthquake(player.getLoc(), 50, 4));
 							}
 						}
-						else
-						{
-							player.sendPacket(new ExShowScreenMessage(NpcString.ALL_JAILS_ARE_OPEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
-							player.broadcastPacket(new Earthquake(player.getLoc(), 50, 4));
-						}
-						
-						thirdStageAltarCount = 0;
-						NpcUtils.spawnSingle(ANGRY_HARNAK, -114712, 183352, -13820, 49151, 1800000L);
-						NpcUtils.spawnSingle(DEMONIC_NOKTUM, -114696, 182872, -13846, 48112, 1800000L);
-						NpcUtils.spawnSingle(DEMONIC_NOKTUM, -114360, 183016, -13846, 58824, 1800000L);
-						NpcUtils.spawnSingle(DEMONIC_NOKTUM, -114216, 183352, -13846, 1297, 1800000L);
-						NpcUtils.spawnSingle(DEMONIC_NOKTUM, -114360, 183688, -13846, 7738, 1800000L);
-						NpcUtils.spawnSingle(DEMONIC_NOKTUM, -114712, 183816, -13846, 16383, 1800000L);
-						NpcUtils.spawnSingle(DEMONIC_NOKTUM, -115048, 183688, -13846, 26634, 1800000L);
-						NpcUtils.spawnSingle(DEMONIC_NOKTUM, -115192, 183352, -13846, 34065, 1800000L);
-						NpcUtils.spawnSingle(DEMONIC_NOKTUM, -115032, 183016, -13846, 40463, 1800000L);
 					}
+					else
+					{
+						player.sendPacket(new ExShowScreenMessage(NpcString.ALL_JAILS_ARE_OPEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
+						player.broadcastPacket(new Earthquake(player.getLoc(), 50, 4));
+					}
+					thirdStageAltarCount = 0;
+					NpcUtils.spawnSingle(ANGRY_HARNAK, -114712, 183352, -13820, 49151, 1800000L);
+					NpcUtils.spawnSingle(DEMONIC_NOKTUM, -114696, 182872, -13846, 48112, 1800000L);
+					NpcUtils.spawnSingle(DEMONIC_NOKTUM, -114360, 183016, -13846, 58824, 1800000L);
+					NpcUtils.spawnSingle(DEMONIC_NOKTUM, -114216, 183352, -13846, 1297, 1800000L);
+					NpcUtils.spawnSingle(DEMONIC_NOKTUM, -114360, 183688, -13846, 7738, 1800000L);
+					NpcUtils.spawnSingle(DEMONIC_NOKTUM, -114712, 183816, -13846, 16383, 1800000L);
+					NpcUtils.spawnSingle(DEMONIC_NOKTUM, -115048, 183688, -13846, 26634, 1800000L);
+					NpcUtils.spawnSingle(DEMONIC_NOKTUM, -115192, 183352, -13846, 34065, 1800000L);
+					NpcUtils.spawnSingle(DEMONIC_NOKTUM, -115032, 183016, -13846, 40463, 1800000L);
 				}, 10000L);
 			}
 			

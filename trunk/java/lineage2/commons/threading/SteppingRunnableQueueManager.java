@@ -20,9 +20,7 @@ import java.util.concurrent.Delayed;
 import java.util.concurrent.RunnableScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
-
 import lineage2.commons.collections.LazyArrayList;
-
 import org.apache.commons.lang3.mutable.MutableLong;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,21 +31,9 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class SteppingRunnableQueueManager implements Runnable
 {
-	/**
-	 * Field _log.
-	 */
 	static final Logger _log = LoggerFactory.getLogger(SteppingRunnableQueueManager.class);
-	/**
-	 * Field tickPerStepInMillis.
-	 */
 	protected final long tickPerStepInMillis;
-	/**
-	 * Field queue.
-	 */
 	private final List<SteppingScheduledFuture<?>> queue = new CopyOnWriteArrayList<>();
-	/**
-	 * Field isRunning.
-	 */
 	private final AtomicBoolean isRunning = new AtomicBoolean();
 	
 	/**
@@ -65,25 +51,10 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 	 */
 	public class SteppingScheduledFuture<V> implements RunnableScheduledFuture<V>
 	{
-		/**
-		 * Field r.
-		 */
 		final Runnable r;
-		/**
-		 * Field stepping.
-		 */
 		private final long stepping;
-		/**
-		 * Field isPeriodic.
-		 */
 		private final boolean isPeriodic;
-		/**
-		 * Field step.
-		 */
 		private long step;
-		/**
-		 * Field isCancelled.
-		 */
 		private boolean isCancelled;
 		
 		/**

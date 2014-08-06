@@ -14,7 +14,6 @@ package lineage2.loginserver.gameservercon.gspackets;
 
 import lineage2.loginserver.accounts.Account;
 import lineage2.loginserver.gameservercon.ReceivablePacket;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,22 +23,10 @@ import org.slf4j.LoggerFactory;
  */
 public class BonusRequest extends ReceivablePacket
 {
-	/**
-	 * Field log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger log = LoggerFactory.getLogger(BonusRequest.class);
-	/**
-	 * Field account.
-	 */
 	private String account;
-	/**
-	 * Field bonus.
-	 */
 	private double bonus;
-	/**
-	 * Field bonusExpire.
-	 */
 	private int bonusExpire;
 	
 	/**

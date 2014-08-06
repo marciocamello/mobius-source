@@ -20,9 +20,6 @@ import lineage2.gameserver.stats.Env;
  */
 public abstract class ConditionInventory extends Condition
 {
-	/**
-	 * Field _slot.
-	 */
 	protected final int _slot;
 	
 	/**

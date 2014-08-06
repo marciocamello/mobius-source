@@ -13,7 +13,6 @@
 package instances;
 
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.listener.actor.OnDeathListener;
@@ -27,7 +26,6 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.utils.Location;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 public final class KartiaLabyrinth95Solo extends Reflection
@@ -39,15 +37,12 @@ public final class KartiaLabyrinth95Solo extends Reflection
 	boolean _entryLocked;
 	boolean _startLaunched;
 	boolean _landingentered;
-	
 	private static final int DOOR1_ID = 16170002;
 	private static final int DOOR2_ID = 16170003;
-	
 	private final int KartiaGuard = 19226;
 	private final int KartiaWatchman = 19227;
 	private final int DimensionalWatchman = 19228;
 	private final int LordOfKartia = 19255;
-	
 	static final int[] supporter =
 	{
 		33631,

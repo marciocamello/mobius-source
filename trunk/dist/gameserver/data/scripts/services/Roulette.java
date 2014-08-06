@@ -28,49 +28,16 @@ import lineage2.gameserver.utils.Util;
  */
 public final class Roulette extends Functions
 {
-	/**
-	 * Field R. (value is ""red"")
-	 */
 	private static final String R = "red";
-	/**
-	 * Field B. (value is ""black"")
-	 */
 	private static final String B = "black";
-	/**
-	 * Field fst. (value is ""first"")
-	 */
 	private static final String fst = "first";
-	/**
-	 * Field snd. (value is ""second"")
-	 */
 	private static final String snd = "second";
-	/**
-	 * Field trd. (value is ""third"")
-	 */
 	private static final String trd = "third";
-	/**
-	 * Field E. (value is ""even"")
-	 */
 	private static final String E = "even";
-	/**
-	 * Field O. (value is ""odd"")
-	 */
 	private static final String O = "odd";
-	/**
-	 * Field L. (value is ""low"")
-	 */
 	private static final String L = "low";
-	/**
-	 * Field H. (value is ""high"")
-	 */
 	private static final String H = "high";
-	/**
-	 * Field Z. (value is ""zero"")
-	 */
 	private static final String Z = "zero";
-	/**
-	 * Field Numbers.
-	 */
 	private static final String[][] Numbers =
 	{
 		{
@@ -376,29 +343,11 @@ public final class Roulette extends Functions
 	 */
 	private static enum GameType
 	{
-		/**
-		 * Field StraightUp.
-		 */
 		StraightUp,
-		/**
-		 * Field ColumnBet.
-		 */
 		ColumnBet,
-		/**
-		 * Field DozenBet.
-		 */
 		DozenBet,
-		/**
-		 * Field RedOrBlack.
-		 */
 		RedOrBlack,
-		/**
-		 * Field EvenOrOdd.
-		 */
 		EvenOrOdd,
-		/**
-		 * Field LowOrHigh.
-		 */
 		LowOrHigh;
 	}
 	

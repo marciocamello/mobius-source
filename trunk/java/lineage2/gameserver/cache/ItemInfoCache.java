@@ -26,9 +26,6 @@ import net.sf.ehcache.Element;
  */
 public class ItemInfoCache
 {
-	/**
-	 * Field _instance.
-	 */
 	private final static ItemInfoCache _instance = new ItemInfoCache();
 	
 	/**
@@ -40,9 +37,6 @@ public class ItemInfoCache
 		return _instance;
 	}
 	
-	/**
-	 * Field cache.
-	 */
 	private final Cache cache;
 	
 	/**

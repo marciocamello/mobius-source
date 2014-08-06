@@ -21,9 +21,6 @@ import lineage2.gameserver.network.serverpackets.HennaUnequipList;
  */
 public class RequestHennaUnequipList extends L2GameClientPacket
 {
-	/**
-	 * Field _symbolId.
-	 */
 	@SuppressWarnings("unused")
 	private int _symbolId;
 	

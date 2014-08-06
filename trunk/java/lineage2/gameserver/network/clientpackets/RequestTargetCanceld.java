@@ -22,9 +22,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class RequestTargetCanceld extends L2GameClientPacket
 {
-	/**
-	 * Field _unselect.
-	 */
 	private int _unselect;
 	
 	/**

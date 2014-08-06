@@ -30,29 +30,11 @@ public class CTBTeamObject implements SpawnableObject
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _siegeClan.
-	 */
 	private CTBSiegeClanObject _siegeClan;
-	/**
-	 * Field _mobTemplate.
-	 */
 	private final NpcTemplate _mobTemplate;
-	/**
-	 * Field _flagTemplate.
-	 */
 	private final NpcTemplate _flagTemplate;
-	/**
-	 * Field _flagLoc.
-	 */
 	private final Location _flagLoc;
-	/**
-	 * Field _flag.
-	 */
 	private NpcInstance _flag;
-	/**
-	 * Field _mob.
-	 */
 	private CTBBossInstance _mob;
 	
 	/**

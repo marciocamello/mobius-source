@@ -21,13 +21,7 @@ import lineage2.loginserver.gameservercon.SendablePacket;
  */
 public class AuthResponse extends SendablePacket
 {
-	/**
-	 * Field serverId.
-	 */
 	private final int serverId;
-	/**
-	 * Field name.
-	 */
 	private final String name;
 	
 	/**

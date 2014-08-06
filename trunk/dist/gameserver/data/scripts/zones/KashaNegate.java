@@ -17,7 +17,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Future;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -46,18 +45,12 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class KashaNegate implements ScriptFile
 {
-	/**
-	 * Field _buffs.
-	 */
 	static final int[] _buffs =
 	{
 		6150,
 		6152,
 		6154
 	};
-	/**
-	 * Field ZONES.
-	 */
 	static final String[] ZONES =
 	{
 		"[kasha1]",
@@ -69,34 +62,16 @@ public final class KashaNegate implements ScriptFile
 		"[kasha7]",
 		"[kasha8]"
 	};
-	/**
-	 * Field mobs.
-	 */
 	static final int[] mobs =
 	{
 		18812,
 		18813,
 		18814
 	};
-	/**
-	 * Field _debuff.
-	 */
 	private static final int _debuff = 6149;
-	/**
-	 * Field _buffTask.
-	 */
 	private static Future<?> _buffTask;
-	/**
-	 * Field TICK_BUFF_DELAY.
-	 */
 	private static final long TICK_BUFF_DELAY = 10000L;
-	/**
-	 * Field _zoneListener.
-	 */
 	private static ZoneListener _zoneListener;
-	/**
-	 * Field KASHARESPAWN.
-	 */
 	static final Map<Integer, Integer> KASHARESPAWN = new HashMap<>();
 	static
 	{
@@ -271,9 +246,6 @@ public final class KashaNegate implements ScriptFile
 	 */
 	private class KashaRespawn extends RunnableImpl
 	{
-		/**
-		 * Field _n.
-		 */
 		private final NpcInstance _n;
 		
 		/**
@@ -305,9 +277,6 @@ public final class KashaNegate implements ScriptFile
 	 */
 	private class CampDestroyTask extends RunnableImpl
 	{
-		/**
-		 * Field _zone.
-		 */
 		private final Zone _zone;
 		
 		/**
@@ -339,13 +308,7 @@ public final class KashaNegate implements ScriptFile
 	 */
 	private class BroadcastMessageTask extends RunnableImpl
 	{
-		/**
-		 * Field _message.
-		 */
 		private final int _message;
-		/**
-		 * Field _zone.
-		 */
 		private final Zone _zone;
 		
 		/**

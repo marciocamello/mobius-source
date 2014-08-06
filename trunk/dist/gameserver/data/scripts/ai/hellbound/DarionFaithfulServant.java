@@ -29,9 +29,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class DarionFaithfulServant extends Fighter
 {
-	/**
-	 * Field MysteriousAgent. (value is 32372)
-	 */
 	private static final int MysteriousAgent = 32372;
 	
 	/**

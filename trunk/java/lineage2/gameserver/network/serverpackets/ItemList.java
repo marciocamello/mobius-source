@@ -20,7 +20,6 @@ public class ItemList extends L2GameServerPacket
 	private final int _size;
 	private final ItemInstance[] _items;
 	private final boolean _showWindow;
-	
 	private final LockType _lockType;
 	private final int[] _lockItems;
 	

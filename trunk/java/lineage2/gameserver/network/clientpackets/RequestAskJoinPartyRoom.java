@@ -27,9 +27,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class RequestAskJoinPartyRoom extends L2GameClientPacket
 {
-	/**
-	 * Field _name.
-	 */
 	private String _name;
 	
 	/**

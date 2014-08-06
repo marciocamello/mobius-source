@@ -26,9 +26,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class OriginalSinWarden extends Fighter
 {
-	/**
-	 * Field servants1.
-	 */
 	private static final int[] servants1 =
 	{
 		22424,
@@ -39,9 +36,6 @@ public final class OriginalSinWarden extends Fighter
 		22429,
 		22430
 	};
-	/**
-	 * Field servants2.
-	 */
 	private static final int[] servants2 =
 	{
 		22432,
@@ -52,9 +46,6 @@ public final class OriginalSinWarden extends Fighter
 		22437,
 		22438
 	};
-	/**
-	 * Field DarionsFaithfulServants.
-	 */
 	private static final int[] DarionsFaithfulServants =
 	{
 		22405,

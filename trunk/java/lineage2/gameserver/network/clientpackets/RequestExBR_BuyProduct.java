@@ -27,13 +27,7 @@ import lineage2.gameserver.templates.item.ItemTemplate;
  */
 public class RequestExBR_BuyProduct extends L2GameClientPacket
 {
-	/**
-	 * Field _productId.
-	 */
 	private int _productId;
-	/**
-	 * Field _count.
-	 */
 	private int _count;
 	
 	/**

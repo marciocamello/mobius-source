@@ -13,11 +13,9 @@
 package lineage2.gameserver.network.serverpackets;
 
 import java.util.Map;
-
 import lineage2.gameserver.model.entity.Hero;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.templates.StatsSet;
-
 import org.apache.commons.lang3.StringUtils;
 
 /**

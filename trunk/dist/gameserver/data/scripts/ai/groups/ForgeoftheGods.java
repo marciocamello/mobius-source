@@ -13,7 +13,6 @@
 package ai.groups;
 
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.Fighter;
@@ -23,7 +22,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -32,9 +30,6 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public final class ForgeoftheGods extends Fighter
 {
-	/**
-	 * Field RANDOM_SPAWN_MOBS.
-	 */
 	private static final int[] RANDOM_SPAWN_MOBS =
 	{
 		18799,
@@ -43,9 +38,6 @@ public final class ForgeoftheGods extends Fighter
 		18802,
 		18803
 	};
-	/**
-	 * Field FOG_MOBS.
-	 */
 	private static final int[] FOG_MOBS =
 	{
 		22634,
@@ -65,17 +57,8 @@ public final class ForgeoftheGods extends Fighter
 		22648,
 		22649
 	};
-	/**
-	 * Field TAR_BEETLE. (value is 18804)
-	 */
 	private static final int TAR_BEETLE = 18804;
-	/**
-	 * Field TAR_BEETLE_ACTIVATE_SKILL_CHANGE.
-	 */
 	private static final int TAR_BEETLE_ACTIVATE_SKILL_CHANGE = 2;
-	/**
-	 * Field TAR_BEETLE_SEARCH_RADIUS.
-	 */
 	private static final int TAR_BEETLE_SEARCH_RADIUS = 500;
 	
 	/**

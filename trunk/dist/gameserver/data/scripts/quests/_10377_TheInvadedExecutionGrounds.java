@@ -27,12 +27,10 @@ public class _10377_TheInvadedExecutionGrounds extends Quest implements ScriptFi
 	private static final int HARLAN = 30074;
 	private static final int RODERIK = 30631;
 	private static final int ENDRIGO = 30632;
-	
 	// Monster's
 	private static final int HOUPON_THE_WARDEN_OVERSEER = 25886;
 	private static final int CROOK_THE_MAD = 25887;
 	private static final int EXECUTION_GROUNDS_WATCHMAN_GUILLOTINE = 25888;
-	
 	// Item's
 	private static final int SOE_GUILLOTINE_FORTRESS = 35292;
 	private static final int HARLANS_ORDERS = 34972;

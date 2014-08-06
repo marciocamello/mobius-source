@@ -20,45 +20,15 @@ import lineage2.gameserver.model.base.Element;
  */
 public class AttributeStoneInfo
 {
-	/**
-	 * Field itemId.
-	 */
 	private int itemId;
-	/**
-	 * Field minArmor.
-	 */
 	private int minArmor;
-	/**
-	 * Field maxArmor.
-	 */
 	private int maxArmor;
-	/**
-	 * Field minWeapon.
-	 */
 	private int minWeapon;
-	/**
-	 * Field maxWeapon.
-	 */
 	private int maxWeapon;
-	/**
-	 * Field incArmor.
-	 */
 	private int incArmor;
-	/**
-	 * Field incWeapon.
-	 */
 	private int incWeapon;
-	/**
-	 * Field incWeaponArmor.
-	 */
 	private int incWeaponArmor;
-	/**
-	 * Field element.
-	 */
 	private Element element;
-	/**
-	 * Field chance.
-	 */
 	private int chance;
 	
 	/**

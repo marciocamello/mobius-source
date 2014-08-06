@@ -18,7 +18,6 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,146 +27,41 @@ import org.slf4j.LoggerFactory;
  */
 public class Log
 {
-	/**
-	 * Field LOG_BOSS_KILLED.
-	 */
 	public static final PrintfFormat LOG_BOSS_KILLED = new PrintfFormat("%s: %s[%d] killed by %s at Loc(%d %d %d) in %s");
-	/**
-	 * Field LOG_BOSS_RESPAWN.
-	 */
 	public static final PrintfFormat LOG_BOSS_RESPAWN = new PrintfFormat("%s: %s[%d] scheduled for respawn in %s at %s");
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(Log.class);
-	/**
-	 * Field _logChat.
-	 */
 	private static final Logger _logChat = LoggerFactory.getLogger("chat");
-	/**
-	 * Field _logGm.
-	 */
 	private static final Logger _logGm = LoggerFactory.getLogger("gmactions");
-	/**
-	 * Field _logItems.
-	 */
 	private static final Logger _logItems = LoggerFactory.getLogger("item");
-	/**
-	 * Field _logGame.
-	 */
 	private static final Logger _logGame = LoggerFactory.getLogger("game");
-	/**
-	 * Field _logDebug.
-	 */
 	private static final Logger _logDebug = LoggerFactory.getLogger("debug");
-	/**
-	 * Field Create. (value is ""Create"")
-	 */
 	public static final String Create = "Create";
-	/**
-	 * Field Delete. (value is ""Delete"")
-	 */
 	public static final String Delete = "Delete";
-	/**
-	 * Field Drop. (value is ""Drop"")
-	 */
 	public static final String Drop = "Drop";
-	/**
-	 * Field PvPDrop. (value is ""PvPDrop"")
-	 */
 	public static final String PvPDrop = "PvPDrop";
-	/**
-	 * Field Crystalize. (value is ""Crystalize"")
-	 */
 	public static final String Crystalize = "Crystalize";
-	/**
-	 * Field EnchantFail. (value is ""EnchantFail"")
-	 */
 	public static final String EnchantFail = "EnchantFail";
-	/**
-	 * Field Pickup. (value is ""Pickup"")
-	 */
 	public static final String Pickup = "Pickup";
-	/**
-	 * Field PartyPickup. (value is ""PartyPickup"")
-	 */
 	public static final String PartyPickup = "PartyPickup";
-	/**
-	 * Field PrivateStoreBuy. (value is ""PrivateStoreBuy"")
-	 */
 	public static final String PrivateStoreBuy = "PrivateStoreBuy";
-	/**
-	 * Field PrivateStoreSell. (value is ""PrivateStoreSell"")
-	 */
 	public static final String PrivateStoreSell = "PrivateStoreSell";
-	/**
-	 * Field TradeBuy. (value is ""TradeBuy"")
-	 */
 	public static final String TradeBuy = "TradeBuy";
-	/**
-	 * Field TradeSell. (value is ""TradeSell"")
-	 */
 	public static final String TradeSell = "TradeSell";
-	/**
-	 * Field PostRecieve. (value is ""PostRecieve"")
-	 */
 	public static final String PostRecieve = "PostRecieve";
-	/**
-	 * Field PostSend. (value is ""PostSend"")
-	 */
 	public static final String PostSend = "PostSend";
-	/**
-	 * Field PostCancel. (value is ""PostCancel"")
-	 */
 	public static final String PostCancel = "PostCancel";
-	/**
-	 * Field PostExpire. (value is ""PostExpire"")
-	 */
 	public static final String PostExpire = "PostExpire";
-	/**
-	 * Field RefundSell. (value is ""RefundSell"")
-	 */
 	public static final String RefundSell = "RefundSell";
-	/**
-	 * Field RefundReturn. (value is ""RefundReturn"")
-	 */
 	public static final String RefundReturn = "RefundReturn";
-	/**
-	 * Field WarehouseDeposit. (value is ""WarehouseDeposit"")
-	 */
 	public static final String WarehouseDeposit = "WarehouseDeposit";
-	/**
-	 * Field WarehouseWithdraw. (value is ""WarehouseWithdraw"")
-	 */
 	public static final String WarehouseWithdraw = "WarehouseWithdraw";
-	/**
-	 * Field FreightWithdraw. (value is ""FreightWithdraw"")
-	 */
 	public static final String FreightWithdraw = "FreightWithdraw";
-	/**
-	 * Field FreightDeposit. (value is ""FreightDeposit"")
-	 */
 	public static final String FreightDeposit = "FreightDeposit";
-	/**
-	 * Field ClanWarehouseDeposit. (value is ""ClanWarehouseDeposit"")
-	 */
 	public static final String ClanWarehouseDeposit = "ClanWarehouseDeposit";
-	/**
-	 * Field ClanWarehouseWithdraw. (value is ""ClanWarehouseWithdraw"")
-	 */
 	public static final String ClanWarehouseWithdraw = "ClanWarehouseWithdraw";
-	/**
-	 * Field CommissionItemRegister. (value is ""CommissionShopRegister"")
-	 */
 	public static final String CommissionItemRegister = "CommissionShopRegister";
-	/**
-	 * Field CommissionItemSold. (value is ""CommissionShopItemSold"")
-	 */
 	public static final String CommissionItemSold = "CommissionShopItemSold";
-	/**
-	 * Field CommissionItemDelete. (value is ""CommissionShopItemDelete"")
-	 */
 	public static final String CommissionItemDelete = "CommissionShopItemDelete";
 	
 	/**

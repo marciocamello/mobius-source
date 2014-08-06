@@ -21,9 +21,6 @@ import lineage2.gameserver.model.instances.DoorInstance;
  */
 public class MasterOnOpenCloseListenerImpl implements OnOpenCloseListener
 {
-	/**
-	 * Field _door.
-	 */
 	private final DoorInstance _door;
 	
 	/**

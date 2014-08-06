@@ -15,7 +15,6 @@ package lineage2.gameserver.model;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Skill.AddedSkill;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -35,53 +34,17 @@ import lineage2.gameserver.utils.Location;
  */
 public class CursedWeapon
 {
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
-	/**
-	 * Field _transformationName.
-	 */
 	private String _transformationName;
-	/**
-	 * Field _skillMaxLevel. Field _itemId.
-	 */
 	private final int _itemId, _skillMaxLevel;
-	/**
-	 * Field _skillId.
-	 */
 	private final int _skillId;
-	/**
-	 * Field _disapearChance. Field _dropRate.
-	 */
 	private int _dropRate, _disapearChance;
-	/**
-	 * Field _durationLost. Field _durationMax. Field _durationMin.
-	 */
 	private int _durationMin, _durationMax, _durationLost;
-	/**
-	 * Field _transformationTemplateId. Field _transformationId.
-	 */
 	private int _transformationId, _transformationTemplateId;
-	/**
-	 * Field _playerPkKills. Field _playerKarma. Field _nbKills. Field _stageKills.
-	 */
 	private int _stageKills, _nbKills = 0, _playerKarma = 0, _playerPkKills = 0;
-	/**
-	 * Field _state.
-	 */
 	private CursedWeaponState _state = CursedWeaponState.NONE;
-	/**
-	 * Field _loc.
-	 */
 	private Location _loc = null;
-	/**
-	 * Field _owner. Field _endTime.
-	 */
 	private long _endTime = 0, _owner = 0;
-	/**
-	 * Field _item.
-	 */
 	private ItemInstance _item = null;
 	
 	/**
@@ -89,17 +52,8 @@ public class CursedWeapon
 	 */
 	public enum CursedWeaponState
 	{
-		/**
-		 * Field NONE.
-		 */
 		NONE,
-		/**
-		 * Field ACTIVATED.
-		 */
 		ACTIVATED,
-		/**
-		 * Field DROPPED.
-		 */
 		DROPPED,
 	}
 	

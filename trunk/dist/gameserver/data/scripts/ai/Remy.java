@@ -25,9 +25,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Remy extends DefaultAI
 {
-	/**
-	 * Field points.
-	 */
 	static final Location[] points =
 	{
 		new Location(-81926, 243894, -3712),
@@ -48,17 +45,8 @@ public final class Remy extends DefaultAI
 		new Location(-81674, 243391, -3712),
 		new Location(-81926, 243894, -3712)
 	};
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = -1;
-	/**
-	 * Field wait_timeout.
-	 */
 	private long wait_timeout = 0;
-	/**
-	 * Field wait.
-	 */
 	private boolean wait = false;
 	
 	/**

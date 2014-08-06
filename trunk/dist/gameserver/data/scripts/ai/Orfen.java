@@ -28,9 +28,6 @@ import npc.model.OrfenInstance;
  */
 public final class Orfen extends Fighter
 {
-	/**
-	 * Field MsgOnRecall.
-	 */
 	public static final PrintfFormat[] MsgOnRecall =
 	{
 		new PrintfFormat("%s. Stop kidding yourself about your own powerlessness!"),
@@ -38,9 +35,6 @@ public final class Orfen extends Fighter
 		new PrintfFormat("You're really stupid to have challenged me. %s! Get ready!"),
 		new PrintfFormat("%s. Do you think that's going to work?!")
 	};
-	/**
-	 * Field _paralyze.
-	 */
 	public final Skill[] _paralyze;
 	
 	/**

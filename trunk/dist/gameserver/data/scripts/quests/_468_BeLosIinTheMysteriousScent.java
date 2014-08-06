@@ -25,14 +25,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 public class _468_BeLosIinTheMysteriousScent extends Quest implements ScriptFile
 {
 	private static final int SELINA = 33032;
-	
 	private static final int GARDEN_COMMANDER = 22962;
 	private static final int MOON_GARDEN_MANAGER = 22958;
 	private static final int MOON_GARDEN = 22960;
 	private static final int GARDEN_PROTECTOR = 22959;
-	
 	private static final int CERTIFICATE_OF_LIFE = 30385;
-	
 	private static final String GARDEN_COMMANDER_KILL = "commander";
 	private static final String MOON_GARDEN_MANAGER_KILL = "manager";
 	private static final String MOON_GARDEN_KILL = "moon";

@@ -18,7 +18,6 @@ import java.util.Map;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,13 +27,7 @@ import org.slf4j.LoggerFactory;
  */
 public class IpBanManager
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(IpBanManager.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final IpBanManager _instance = new IpBanManager();
 	
 	/**
@@ -59,35 +52,14 @@ public class IpBanManager
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Field tryCount.
-		 */
 		public int tryCount;
-		/**
-		 * Field lastTry.
-		 */
 		public long lastTry;
-		/**
-		 * Field banExpire.
-		 */
 		public long banExpire;
 	}
 	
-	/**
-	 * Field ips.
-	 */
 	final Map<String, IpSession> ips = new HashMap<>();
-	/**
-	 * Field lock.
-	 */
 	private final ReadWriteLock lock = new ReentrantReadWriteLock();
-	/**
-	 * Field readLock.
-	 */
 	private final Lock readLock = lock.readLock();
-	/**
-	 * Field writeLock.
-	 */
 	final Lock writeLock = lock.writeLock();
 	
 	/**
@@ -95,32 +67,28 @@ public class IpBanManager
 	 */
 	private IpBanManager()
 	{
-		ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		ThreadPoolManager.getInstance().scheduleAtFixedRate(() ->
 		{
-			@Override
-			public void run()
+			long currentMillis = System.currentTimeMillis();
+			writeLock.lock();
+			
+			try
 			{
-				long currentMillis = System.currentTimeMillis();
-				writeLock.lock();
+				IpSession session;
 				
-				try
+				for (Iterator<IpSession> itr = ips.values().iterator(); itr.hasNext();)
 				{
-					IpSession session;
+					session = itr.next();
 					
-					for (Iterator<IpSession> itr = ips.values().iterator(); itr.hasNext();)
+					if ((session.banExpire < currentMillis) && (session.lastTry < (currentMillis - Config.LOGIN_TRY_TIMEOUT)))
 					{
-						session = itr.next();
-						
-						if ((session.banExpire < currentMillis) && (session.lastTry < (currentMillis - Config.LOGIN_TRY_TIMEOUT)))
-						{
-							itr.remove();
-						}
+						itr.remove();
 					}
 				}
-				finally
-				{
-					writeLock.unlock();
-				}
+			}
+			finally
+			{
+				writeLock.unlock();
 			}
 		}, 1000L, 1000L);
 	}

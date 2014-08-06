@@ -16,8 +16,6 @@ import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Location;
 
-/**
- */
 public abstract class AbstractTargetAction extends L2GameClientPacket
 {
 	private final Location _actorPosition = new Location();

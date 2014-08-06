@@ -20,7 +20,6 @@ import java.util.Map.Entry;
 import java.util.NavigableMap;
 import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.data.xml.holder.RecipeHolder;
@@ -51,21 +50,9 @@ import lineage2.gameserver.utils.Util;
  */
 public final class ItemBroker extends Functions
 {
-	/**
-	 * Field MAX_ITEMS_PER_PAGE. (value is 10)
-	 */
 	private static final int MAX_ITEMS_PER_PAGE = 10;
-	/**
-	 * Field MAX_PAGES_PER_LIST. (value is 9)
-	 */
 	private static final int MAX_PAGES_PER_LIST = 9;
-	/**
-	 * Field _npcInfos.
-	 */
 	private static final Map<Integer, NpcInfo> _npcInfos = new ConcurrentHashMap<>();
-	/**
-	 * Field RARE_ITEMS.
-	 */
 	public final int[] RARE_ITEMS =
 	{
 		16255,
@@ -1290,21 +1277,9 @@ public final class ItemBroker extends Functions
 	 */
 	public final class NpcInfo
 	{
-		/**
-		 * Field lastUpdate.
-		 */
 		public long lastUpdate;
-		/**
-		 * Field bestSellItems.
-		 */
 		public TreeMap<String, TreeMap<Long, Item>> bestSellItems;
-		/**
-		 * Field bestBuyItems.
-		 */
 		public TreeMap<String, TreeMap<Long, Item>> bestBuyItems;
-		/**
-		 * Field bestCraftItems.
-		 */
 		public TreeMap<String, TreeMap<Long, Item>> bestCraftItems;
 	}
 	
@@ -1313,53 +1288,17 @@ public final class ItemBroker extends Functions
 	 */
 	public final class Item
 	{
-		/**
-		 * Field itemId.
-		 */
 		public final int itemId;
-		/**
-		 * Field itemObjId.
-		 */
 		public final int itemObjId;
-		/**
-		 * Field type.
-		 */
 		public final int type;
-		/**
-		 * Field price.
-		 */
 		public final long price;
-		/**
-		 * Field count.
-		 */
 		public final long count;
-		/**
-		 * Field enchant.
-		 */
 		public final int enchant;
-		/**
-		 * Field rare.
-		 */
 		public final boolean rare;
-		/**
-		 * Field merchantStoredId.
-		 */
 		public final long merchantStoredId;
-		/**
-		 * Field name.
-		 */
 		public final String name;
-		/**
-		 * Field merchantName.
-		 */
 		public final String merchantName;
-		/**
-		 * Field player.
-		 */
 		public final Location player;
-		/**
-		 * Field item.
-		 */
 		public final TradeItem item;
 		
 		/**

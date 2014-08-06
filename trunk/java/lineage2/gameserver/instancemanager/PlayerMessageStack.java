@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
@@ -27,13 +26,7 @@ import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
  */
 public class PlayerMessageStack
 {
-	/**
-	 * Field _instance.
-	 */
 	private static PlayerMessageStack _instance;
-	/**
-	 * Field _stack.
-	 */
 	private final Map<Integer, List<L2GameServerPacket>> _stack = new HashMap<>();
 	
 	/**

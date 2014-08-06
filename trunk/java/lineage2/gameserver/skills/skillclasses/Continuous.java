@@ -13,7 +13,6 @@
 package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Creature;
@@ -28,13 +27,7 @@ import lineage2.gameserver.templates.StatsSet;
  */
 public class Continuous extends Skill
 {
-	/**
-	 * Field _lethal1.
-	 */
 	private final int _lethal1;
-	/**
-	 * Field _lethal2.
-	 */
 	private final int _lethal2;
 	
 	/**

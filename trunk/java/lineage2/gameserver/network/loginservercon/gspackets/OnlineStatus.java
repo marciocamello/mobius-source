@@ -20,9 +20,6 @@ import lineage2.gameserver.network.loginservercon.SendablePacket;
  */
 public class OnlineStatus extends SendablePacket
 {
-	/**
-	 * Field _online.
-	 */
 	private final boolean _online;
 	
 	/**

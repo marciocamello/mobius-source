@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.clientpackets;
 
 import java.util.Calendar;
-
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.dao.MailDAO;
@@ -100,7 +99,6 @@ import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.GameStats;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.TradeHelper;
-
 import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -111,13 +109,7 @@ import org.slf4j.LoggerFactory;
  */
 public class EnterWorld extends L2GameClientPacket
 {
-	/**
-	 * Field _lock.
-	 */
 	private static final Object _lock = new Object();
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(EnterWorld.class);
 	
 	/**

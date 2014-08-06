@@ -128,17 +128,14 @@ public final class Vullock extends Reflection
 				}
 			}
 		}
-		
 	}
 	
 	public final class CaveStage extends RunnableImpl
 	{
 		// Reflection _r1;
-		
 		// public CaveStage() {
 		// _r1 = r;
 		// }
-		
 		@Override
 		public void runImpl()
 		{

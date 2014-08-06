@@ -21,9 +21,6 @@ import lineage2.gameserver.network.serverpackets.ExBR_ProductInfo;
  */
 public class RequestExBR_ProductInfo extends L2GameClientPacket
 {
-	/**
-	 * Field _productId.
-	 */
 	private int _productId;
 	
 	/**

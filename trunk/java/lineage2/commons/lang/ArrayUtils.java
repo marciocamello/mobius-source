@@ -22,9 +22,6 @@ import java.util.Comparator;
  */
 public final class ArrayUtils
 {
-	/**
-	 * Field INDEX_NOT_FOUND. (value is -1)
-	 */
 	public static final int INDEX_NOT_FOUND = -1;
 	
 	/**

@@ -18,16 +18,7 @@ package lineage2.gameserver.model.items;
  */
 public enum LockType
 {
-	/**
-	 * Field INCLUDE.
-	 */
 	INCLUDE,
-	/**
-	 * Field EXCLUDE.
-	 */
 	EXCLUDE,
-	/**
-	 * Field NONE.
-	 */
 	NONE
 }

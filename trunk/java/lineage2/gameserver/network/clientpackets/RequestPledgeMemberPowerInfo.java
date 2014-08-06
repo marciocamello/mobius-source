@@ -23,14 +23,8 @@ import lineage2.gameserver.network.serverpackets.PledgeReceivePowerInfo;
  */
 public class RequestPledgeMemberPowerInfo extends L2GameClientPacket
 {
-	/**
-	 * Field _not_known.
-	 */
 	@SuppressWarnings("unused")
 	private int _not_known;
-	/**
-	 * Field _target.
-	 */
 	private String _target;
 	
 	/**

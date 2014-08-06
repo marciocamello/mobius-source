@@ -22,45 +22,15 @@ import lineage2.gameserver.utils.TimeUtils;
  */
 public class OlympiadHistory
 {
-	/**
-	 * Field _objectId1.
-	 */
 	private final int _objectId1;
-	/**
-	 * Field _objectId2.
-	 */
 	private final int _objectId2;
-	/**
-	 * Field _classId1.
-	 */
 	private final int _classId1;
-	/**
-	 * Field _classId2.
-	 */
 	private final int _classId2;
-	/**
-	 * Field _name1.
-	 */
 	private final String _name1;
-	/**
-	 * Field _name2.
-	 */
 	private final String _name2;
-	/**
-	 * Field _gameStartTime.
-	 */
 	private final long _gameStartTime;
-	/**
-	 * Field _gameTime.
-	 */
 	private final int _gameTime;
-	/**
-	 * Field _gameStatus.
-	 */
 	private final int _gameStatus;
-	/**
-	 * Field _gameType.
-	 */
 	private final int _gameType;
 	
 	/**

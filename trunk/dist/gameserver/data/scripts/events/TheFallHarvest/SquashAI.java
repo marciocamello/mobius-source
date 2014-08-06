@@ -14,7 +14,6 @@ package events.TheFallHarvest;
 
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -75,9 +74,6 @@ public final class SquashAI extends Fighter
 		}
 	}
 	
-	/**
-	 * Field _dropList.
-	 */
 	protected static final RewardData[] _dropList = new RewardData[]
 	{
 		new RewardData(1539, 1, 5, 15000),
@@ -160,58 +156,22 @@ public final class SquashAI extends Fighter
 		new RewardData(959, 1, 1, 50),
 		new RewardData(960, 1, 1, 300),
 	};
-	/**
-	 * Field Young_Squash. (value is 12774)
-	 */
 	public final static int Young_Squash = 12774;
-	/**
-	 * Field High_Quality_Squash. (value is 12775)
-	 */
 	public final static int High_Quality_Squash = 12775;
-	/**
-	 * Field Low_Quality_Squash. (value is 12776)
-	 */
 	public final static int Low_Quality_Squash = 12776;
-	/**
-	 * Field Large_Young_Squash. (value is 12777)
-	 */
 	public final static int Large_Young_Squash = 12777;
-	/**
-	 * Field High_Quality_Large_Squash. (value is 12778)
-	 */
 	public final static int High_Quality_Large_Squash = 12778;
-	/**
-	 * Field Low_Quality_Large_Squash. (value is 12779)
-	 */
 	public final static int Low_Quality_Large_Squash = 12779;
-	/**
-	 * Field King_Squash. (value is 13016)
-	 */
 	public final static int King_Squash = 13016;
-	/**
-	 * Field Emperor_Squash. (value is 13017)
-	 */
 	public final static int Emperor_Squash = 13017;
-	/**
-	 * Field Squash_Level_up. (value is 4513)
-	 */
 	public final static int Squash_Level_up = 4513;
-	/**
-	 * Field Squash_Poisoned. (value is 4514)
-	 */
 	public final static int Squash_Poisoned = 4514;
-	/**
-	 * Field textOnSpawn.
-	 */
 	private static final String[] textOnSpawn = new String[]
 	{
 		"scripts.events.TheFallHarvest.SquashAI.textOnSpawn.0",
 		"scripts.events.TheFallHarvest.SquashAI.textOnSpawn.1",
 		"scripts.events.TheFallHarvest.SquashAI.textOnSpawn.2"
 	};
-	/**
-	 * Field textOnAttack.
-	 */
 	private static final String[] textOnAttack = new String[]
 	{
 		"Bites rat-a-tat... to change... body...!",
@@ -224,9 +184,6 @@ public final class SquashAI extends Fighter
 		"Time to hit again! Come again!",
 		"Only useful music can open big pumpkin... It can not be opened with weapon!"
 	};
-	/**
-	 * Field textTooFast.
-	 */
 	private static final String[] textTooFast = new String[]
 	{
 		"heh heh,looks well hit!",
@@ -238,9 +195,6 @@ public final class SquashAI extends Fighter
 		"Good fighting method. Evidently flies away the fly also can overcome.",
 		"Strives to excel strength oh! But waste your time..."
 	};
-	/**
-	 * Field textSuccess0.
-	 */
 	private static final String[] textSuccess0 = new String[]
 	{
 		"The lovely pumpkin young fruit start to glisten when taken to the threshing ground! From now on will be able to grow healthy and strong!",
@@ -249,18 +203,12 @@ public final class SquashAI extends Fighter
 		"Well! This is something! Is the nectar?",
 		"Refuels! Drink 5 bottles to be able to grow into the big pumpkin oh!"
 	};
-	/**
-	 * Field textFail0.
-	 */
 	private static final String[] textFail0 = new String[]
 	{
 		"If I drink nectar, I can grow up faster!",
 		"Come, believe me, sprinkle a nectar! I can certainly turn the big pumpkin!!!",
 		"Take nectar to come, pumpkin nectar!"
 	};
-	/**
-	 * Field textSuccess1.
-	 */
 	private static final String[] textSuccess1 = new String[]
 	{
 		"Wish the big pumpkin!",
@@ -268,9 +216,6 @@ public final class SquashAI extends Fighter
 		"Guessed I am mature or am rotten?",
 		"Nectar is just the best! Ha! Ha! Ha!"
 	};
-	/**
-	 * Field textFail1.
-	 */
 	private static final String[] textFail1 = new String[]
 	{
 		"oh! Randomly missed! Too quickly sprinkles the nectar?",
@@ -278,18 +223,12 @@ public final class SquashAI extends Fighter
 		"Cultivate a bit faster! The good speech becomes the big pumpkin, the young pumpkin is not good!",
 		"The such small pumpkin you all must eat? Bring the nectar, I can be bigger!"
 	};
-	/**
-	 * Field textSuccess2.
-	 */
 	private static final String[] textSuccess2 = new String[]
 	{
 		"Young pumpkin wishing! Has how already grown up?",
 		"Already grew up! Quickly sneaked off...",
 		"Graciousness, is very good. Come again to see, now felt more and more well"
 	};
-	/**
-	 * Field textFail2.
-	 */
 	private static final String[] textFail2 = new String[]
 	{
 		"Hey! Was not there! Here is! Here! Not because I can not properly care? Small!",
@@ -297,66 +236,33 @@ public final class SquashAI extends Fighter
 		"Hungry for a nectar oh...",
 		"Do you want the big pumpkin? But I like young pumpkin..."
 	};
-	/**
-	 * Field textSuccess3.
-	 */
 	private static final String[] textSuccess3 = new String[]
 	{
 		"Big pumpkin wishing! Ask, to sober!",
 		"Rumble rumble... it's really tasty! Hasn't it?",
 		"Cultivating me just to eat? Good, is casual your... not to give the manna on the suicide!"
 	};
-	/**
-	 * Field textFail3.
-	 */
 	private static final String[] textFail3 = new String[]
 	{
 		"Isn't it the water you add? What flavor?",
 		"Master, rescue my... I don't have the nectar flavor, I must die..."
 	};
-	/**
-	 * Field textSuccess4.
-	 */
 	private static final String[] textSuccess4 = new String[]
 	{
 		"is very good, does extremely well! Knew what next step should make?",
 		"If you catch me, I give you 10 million adena!!! Agree?"
 	};
-	/**
-	 * Field textFail4.
-	 */
 	private static final String[] textFail4 = new String[]
 	{
 		"Hungry for a nectar oh...",
 		"If I drink nectar, I can grow up faster!"
 	};
-	/**
-	 * Field _npcId.
-	 */
 	int _npcId;
-	/**
-	 * Field _nectar.
-	 */
 	private int _nectar;
-	/**
-	 * Field _tryCount.
-	 */
 	private int _tryCount;
-	/**
-	 * Field _lastNectarUse.
-	 */
 	private long _lastNectarUse;
-	/**
-	 * Field _timeToUnspawn.
-	 */
 	long _timeToUnspawn;
-	/**
-	 * Field _polimorphTask.
-	 */
 	private ScheduledFuture<?> _polimorphTask;
-	/**
-	 * Field NECTAR_REUSE.
-	 */
 	private static final int NECTAR_REUSE = 3000;
 	
 	/**

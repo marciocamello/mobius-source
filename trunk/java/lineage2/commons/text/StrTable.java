@@ -24,17 +24,8 @@ import java.util.Map;
  */
 public class StrTable
 {
-	/**
-	 * Field rows.
-	 */
 	private final Map<Integer, Map<String, String>> rows = new HashMap<>();
-	/**
-	 * Field columns.
-	 */
 	private final Map<String, Integer> columns = new LinkedHashMap<>();
-	/**
-	 * Field titles.
-	 */
 	private final List<String> titles = new ArrayList<>();
 	
 	/**

@@ -13,7 +13,6 @@
 package instances;
 
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -37,7 +36,6 @@ public final class SpezionNormal extends Reflection
 {
 	private final static int TELEPORT_CUBE = 32947;
 	private final static int SPEZION_NORMAL = 25779;
-	
 	private boolean introShowed = false;
 	ScheduledFuture<?> failTask;
 	static NpcInstance TeleportCube;
@@ -237,5 +235,4 @@ public final class SpezionNormal extends Reflection
 			}
 		}
 	}
-	
 }

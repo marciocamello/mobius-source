@@ -21,7 +21,6 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -30,9 +29,6 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public final class FreyaEventAI extends DefaultAI
 {
-	/**
-	 * Field GIFT_SKILLS.
-	 */
 	private static final int[] GIFT_SKILLS =
 	{
 		9150,
@@ -43,17 +39,8 @@ public final class FreyaEventAI extends DefaultAI
 		9155,
 		9156
 	};
-	/**
-	 * Field GIFT_CHANCE. (value is 5)
-	 */
 	private static final int GIFT_CHANCE = 5;
-	/**
-	 * Field FREYA_GIFT. (value is 17138)
-	 */
 	private static final int FREYA_GIFT = 17138;
-	/**
-	 * Field SAY_TEXT.
-	 */
 	private static final NpcString[] SAY_TEXT = new NpcString[]
 	{
 		NpcString.DEAR_S1,

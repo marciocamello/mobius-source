@@ -28,9 +28,6 @@ public final class VenomTeleportCubicInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field LOCS.
-	 */
 	public static final Location[] LOCS = new Location[]
 	{
 		new Location(11913, -48851, -1088),

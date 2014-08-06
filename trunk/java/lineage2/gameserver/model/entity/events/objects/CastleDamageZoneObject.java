@@ -22,9 +22,6 @@ public class CastleDamageZoneObject extends ZoneObject
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _price.
-	 */
 	private final long _price;
 	
 	/**

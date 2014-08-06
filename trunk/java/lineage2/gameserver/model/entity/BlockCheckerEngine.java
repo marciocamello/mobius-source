@@ -18,7 +18,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -49,7 +48,6 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ReflectionUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -59,49 +57,16 @@ import org.slf4j.LoggerFactory;
  */
 public final class BlockCheckerEngine
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(BlockCheckerEngine.class);
-	/**
-	 * Field _holder.
-	 */
 	HandysBlockCheckerManager.ArenaParticipantsHolder _holder;
-	/**
-	 * Field _redTeamPoints.
-	 */
 	final Map<Player, Integer> _redTeamPoints = new ConcurrentHashMap<>();
-	/**
-	 * Field _blueTeamPoints.
-	 */
 	final Map<Player, Integer> _blueTeamPoints = new ConcurrentHashMap<>();
-	/**
-	 * Field _redPoints.
-	 */
 	int _redPoints = 15;
-	/**
-	 * Field _bluePoints.
-	 */
 	int _bluePoints = 15;
-	/**
-	 * Field _arena.
-	 */
 	int _arena = -1;
-	/**
-	 * Field _spawns.
-	 */
 	final List<SimpleSpawner> _spawns = new CopyOnWriteArrayList<>();
-	/**
-	 * Field _isRedWinner.
-	 */
 	boolean _isRedWinner;
-	/**
-	 * Field _startedTime.
-	 */
 	long _startedTime;
-	/**
-	 * Field _arenaCoordinates.
-	 */
 	static final int[][] _arenaCoordinates =
 	{
 		{
@@ -137,37 +102,13 @@ public final class BlockCheckerEngine
 			-62391
 		}
 	};
-	/**
-	 * Field _zCoord. (value is -2405)
-	 */
 	private static final int _zCoord = -2405;
-	/**
-	 * Field _girlNpc.
-	 */
 	NpcInstance _girlNpc;
-	/**
-	 * Field _drops.
-	 */
 	final List<ItemInstance> _drops = new ArrayList<>();
-	/**
-	 * Field DEFAULT_ARENA. (value is -1)
-	 */
 	private static final byte DEFAULT_ARENA = -1;
-	/**
-	 * Field _isStarted.
-	 */
 	boolean _isStarted = false;
-	/**
-	 * Field _task.
-	 */
 	ScheduledFuture<?> _task;
-	/**
-	 * Field _abnormalEnd.
-	 */
 	boolean _abnormalEnd = false;
-	/**
-	 * Field zoneNames.
-	 */
 	final String[] zoneNames =
 	{
 		"[block_checker_1]",
@@ -398,19 +339,7 @@ public final class BlockCheckerEngine
 	 */
 	public class StartEvent extends RunnableImpl
 	{
-		/**
-		 * Field _transformationBlue.
-		 */
-		/**
-		 * Field _transformationRed.
-		 */
-		/**
-		 * Field _freeze.
-		 */
 		private final Skill _freeze, _transformationRed, _transformationBlue;
-		/**
-		 * Field _closeUserInterface.
-		 */
 		private final ExCubeGameCloseUI _closeUserInterface = new ExCubeGameCloseUI();
 		
 		/**
@@ -519,13 +448,7 @@ public final class BlockCheckerEngine
 	 */
 	class SpawnRound extends RunnableImpl
 	{
-		/**
-		 * Field _numOfBoxes.
-		 */
 		int _numOfBoxes;
-		/**
-		 * Field _round.
-		 */
 		int _round;
 		
 		/**
@@ -639,9 +562,6 @@ public final class BlockCheckerEngine
 	 */
 	class CountDown extends RunnableImpl
 	{
-		/**
-		 * Field seconds.
-		 */
 		private int seconds = 5;
 		
 		/**
@@ -900,9 +820,6 @@ public final class BlockCheckerEngine
 		}
 	}
 	
-	/**
-	 * Field _listener.
-	 */
 	final OnExitPlayerListener _listener = new OnExitPlayerListener();
 	
 	/**
@@ -910,9 +827,6 @@ public final class BlockCheckerEngine
 	 */
 	private class OnExitPlayerListener implements OnTeleportListener, OnPlayerExitListener
 	{
-		/**
-		 * Field _isExit.
-		 */
 		private boolean _isExit = false;
 		
 		/**

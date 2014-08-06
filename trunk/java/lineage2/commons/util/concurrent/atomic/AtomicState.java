@@ -20,13 +20,7 @@ import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
  */
 public class AtomicState
 {
-	/**
-	 * Field stateUpdater.
-	 */
 	private static final AtomicIntegerFieldUpdater<AtomicState> stateUpdater = AtomicIntegerFieldUpdater.newUpdater(AtomicState.class, "value");
-	/**
-	 * Field value.
-	 */
 	private volatile int value;
 	
 	/**

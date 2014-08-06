@@ -15,7 +15,6 @@ package lineage2.gameserver.skills.skillclasses;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Effect;
@@ -31,21 +30,9 @@ import lineage2.gameserver.templates.StatsSet;
  */
 public class NegateEffects extends Skill
 {
-	/**
-	 * Field _negateEffects.
-	 */
 	private final Map<EffectType, Integer> _negateEffects = new HashMap<>();
-	/**
-	 * Field _negateStackType.
-	 */
 	private final Map<String, Integer> _negateStackType = new HashMap<>();
-	/**
-	 * Field _onlyPhysical.
-	 */
 	private final boolean _onlyPhysical;
-	/**
-	 * Field _negateDebuffs.
-	 */
 	private final boolean _negateDebuffs;
 	
 	/**

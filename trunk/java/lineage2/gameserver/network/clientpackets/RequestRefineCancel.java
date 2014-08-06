@@ -30,9 +30,6 @@ import lineage2.gameserver.templates.item.ItemTemplate.Grade;
  */
 public final class RequestRefineCancel extends L2GameClientPacket
 {
-	/**
-	 * Field _targetItemObjId.
-	 */
 	private int _targetItemObjId;
 	
 	/**

@@ -21,14 +21,8 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class TroveUtils
 {
-	/**
-	 * Field EMPTY_INT_OBJECT_MAP.
-	 */
 	@SuppressWarnings("rawtypes")
 	private static final TIntObjectHashMap EMPTY_INT_OBJECT_MAP = new TIntObjectHashMapEmpty();
-	/**
-	 * Field EMPTY_INT_ARRAY_LIST.
-	 */
 	public static final TIntArrayList EMPTY_INT_ARRAY_LIST = new TIntArrayListEmpty();
 	
 	/**

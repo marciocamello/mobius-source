@@ -21,9 +21,6 @@ import java.util.Calendar;
  */
 public class TimeUtils
 {
-	/**
-	 * Field SIMPLE_FORMAT.
-	 */
 	private static final SimpleDateFormat SIMPLE_FORMAT = new SimpleDateFormat("HH:mm dd.MM.yyyy");
 	
 	/**

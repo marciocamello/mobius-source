@@ -22,9 +22,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class ConditionTargetRace extends Condition
 {
-	/**
-	 * Field _race.
-	 */
 	private final int _race;
 	
 	/**

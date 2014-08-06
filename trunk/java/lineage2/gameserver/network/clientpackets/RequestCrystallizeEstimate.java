@@ -14,7 +14,6 @@ package lineage2.gameserver.network.clientpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
@@ -30,9 +29,6 @@ import lineage2.gameserver.templates.item.ItemTemplate.Grade;
  */
 public class RequestCrystallizeEstimate extends L2GameClientPacket
 {
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
 	
 	/**

@@ -29,9 +29,6 @@ public final class AdminTeam extends ScriptAdminCommand
 	 */
 	enum Commands
 	{
-		/**
-		 * Field admin_setteam.
-		 */
 		admin_setteam
 	}
 	

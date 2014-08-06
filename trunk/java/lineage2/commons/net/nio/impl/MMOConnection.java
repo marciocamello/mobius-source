@@ -32,61 +32,19 @@ import java.util.concurrent.atomic.AtomicBoolean;
 @SuppressWarnings("rawtypes")
 public class MMOConnection<T extends MMOClient>
 {
-	/**
-	 * Field _selectorThread.
-	 */
 	private final SelectorThread<T> _selectorThread;
-	/**
-	 * Field _selectionKey.
-	 */
 	private final SelectionKey _selectionKey;
-	/**
-	 * Field _socket.
-	 */
 	private final Socket _socket;
-	/**
-	 * Field _writableByteChannel.
-	 */
 	private final WritableByteChannel _writableByteChannel;
-	/**
-	 * Field _readableByteChannel.
-	 */
 	private final ReadableByteChannel _readableByteChannel;
-	/**
-	 * Field _sendQueue.
-	 */
 	private final Queue<SendablePacket<T>> _sendQueue;
-	/**
-	 * Field _recvQueue.
-	 */
 	private final Queue<ReceivablePacket<T>> _recvQueue;
-	/**
-	 * Field _client.
-	 */
 	private T _client;
-	/**
-	 * Field _secondaryWriteBuffer. Field _primaryWriteBuffer. Field _readBuffer.
-	 */
 	private ByteBuffer _readBuffer, _primaryWriteBuffer, _secondaryWriteBuffer;
-	/**
-	 * Field _pendingClose.
-	 */
 	private boolean _pendingClose;
-	/**
-	 * Field _pendingCloseTime.
-	 */
 	private long _pendingCloseTime;
-	/**
-	 * Field _closed.
-	 */
 	private boolean _closed;
-	/**
-	 * Field _pendingWriteTime.
-	 */
 	private long _pendingWriteTime;
-	/**
-	 * Field _isPengingWrite.
-	 */
 	private final AtomicBoolean _isPengingWrite = new AtomicBoolean();
 	
 	/**

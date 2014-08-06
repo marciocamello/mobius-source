@@ -24,9 +24,6 @@ import lineage2.gameserver.network.serverpackets.ExQuestNpcLogList;
  */
 public class RequestAddExpandQuestAlarm extends L2GameClientPacket
 {
-	/**
-	 * Field _questId.
-	 */
 	private int _questId;
 	
 	/**

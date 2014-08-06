@@ -16,7 +16,6 @@ import lineage2.gameserver.dao.CharacterPostFriendDAO;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
-
 import org.apache.commons.lang3.StringUtils;
 import org.napile.primitive.maps.IntObjectMap;
 
@@ -26,9 +25,6 @@ import org.napile.primitive.maps.IntObjectMap;
  */
 public class RequestExDeletePostFriendForPostBox extends L2GameClientPacket
 {
-	/**
-	 * Field _name.
-	 */
 	private String _name;
 	
 	/**

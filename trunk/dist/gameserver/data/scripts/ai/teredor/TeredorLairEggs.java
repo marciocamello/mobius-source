@@ -34,49 +34,16 @@ import lineage2.gameserver.utils.Location;
  */
 public final class TeredorLairEggs extends Fighter
 {
-	/**
-	 * Field awakenedMillipede.
-	 */
 	static final int awakenedMillipede = 18995;
-	/**
-	 * Field teredorLarva.
-	 */
 	private static final int teredorLarva = 19016;
-	/**
-	 * Field timeToBlue.
-	 */
 	private static final int timeToBlue = 60;
-	/**
-	 * Field maxRandomTimeBlue.
-	 */
 	private static final int maxRandomTimeBlue = 80;
-	/**
-	 * Field monsterSpawnDelay.
-	 */
 	static final int monsterSpawnDelay = 15;
-	/**
-	 * Field poisonId.
-	 */
 	private static final int poisonId = 14561;
-	/**
-	 * Field poisonLevel.
-	 */
 	private static final int poisonLevel = 1;
-	/**
-	 * Field distanceToDebuff.
-	 */
 	private static final int distanceToDebuff = 400;
-	/**
-	 * Field _poisoned.
-	 */
 	boolean _poisoned = false;
-	/**
-	 * Field _activated.
-	 */
 	boolean _activated = false;
-	/**
-	 * Field actor.
-	 */
 	final NpcInstance actor = getActor();
 	
 	/**
@@ -142,17 +109,8 @@ public final class TeredorLairEggs extends Fighter
 	 */
 	public final class TaskSetBlue implements Runnable
 	{
-		/**
-		 * Field _npc.
-		 */
 		NpcInstance _npc;
-		/**
-		 * Field _player.
-		 */
 		Player _player;
-		/**
-		 * Field _ref.
-		 */
 		Reflection _ref;
 		
 		/**
@@ -187,17 +145,8 @@ public final class TeredorLairEggs extends Fighter
 	 */
 	public final class SpawnMonster extends RunnableImpl
 	{
-		/**
-		 * Field _npc.
-		 */
 		NpcInstance _npc;
-		/**
-		 * Field _player.
-		 */
 		Player _player;
-		/**
-		 * Field _ref.
-		 */
 		Reflection _ref;
 		
 		/**

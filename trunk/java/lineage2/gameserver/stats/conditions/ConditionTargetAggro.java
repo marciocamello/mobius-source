@@ -22,9 +22,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionTargetAggro extends Condition
 {
-	/**
-	 * Field _isAggro.
-	 */
 	private final boolean _isAggro;
 	
 	/**

@@ -30,9 +30,6 @@ public final class DragonVortexInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field bosses.
-	 */
 	private final int[] bosses =
 	{
 		25718,
@@ -43,9 +40,6 @@ public final class DragonVortexInstance extends NpcInstance
 		25723,
 		25724
 	};
-	/**
-	 * Field boss.
-	 */
 	private NpcInstance boss;
 	
 	/**

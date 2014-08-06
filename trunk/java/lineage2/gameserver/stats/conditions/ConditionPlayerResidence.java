@@ -23,13 +23,7 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionPlayerResidence extends Condition
 {
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _type.
-	 */
 	private final ResidenceType _type;
 	
 	/**

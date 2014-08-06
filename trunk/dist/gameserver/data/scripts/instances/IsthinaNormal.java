@@ -13,7 +13,6 @@
 package instances;
 
 import java.util.concurrent.atomic.AtomicInteger;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.instancemanager.WorldStatisticsManager;
@@ -149,7 +148,6 @@ public final class IsthinaNormal extends Reflection
 					{
 						return;
 					}
-					
 					if (!_lockedTurn && (ballistaSeconds <= 0))
 					{
 						_lockedTurn = true;
@@ -180,7 +178,6 @@ public final class IsthinaNormal extends Reflection
 							WorldStatisticsManager.getInstance().updateStat(attacker.getPlayer(), CategoryType.EPIC_BOSS_KILLS_29195, 1);
 						}
 					}
-					
 					int progress = (int) Math.min(6000, (ballistaDamage / 4660000) * 6000);
 					progress -= progress % 60;
 					
@@ -188,7 +185,6 @@ public final class IsthinaNormal extends Reflection
 					{
 						player.sendPacket(new ExSendUIEvent(player, 2, ballistaSeconds, progress, 122520, NpcString.NONE2));
 					}
-					
 					ballistaSeconds -= 1;
 				}, 1000);
 			}

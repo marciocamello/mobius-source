@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.handler.bbs.CommunityBoardManager;
@@ -25,7 +24,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.instances.player.Friend;
 import lineage2.gameserver.network.serverpackets.ShowBoard;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,9 +33,6 @@ import org.slf4j.LoggerFactory;
  */
 public final class ManageFriends implements ScriptFile, ICommunityBoardHandler
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(ManageFriends.class);
 	
 	/**

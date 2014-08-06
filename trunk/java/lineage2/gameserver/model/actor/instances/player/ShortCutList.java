@@ -18,14 +18,12 @@ import java.sql.ResultSet;
 import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExAutoSoulShot;
 import lineage2.gameserver.network.serverpackets.ShortCutInit;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,17 +33,8 @@ import org.slf4j.LoggerFactory;
  */
 public class ShortCutList
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(ShortCutList.class);
-	/**
-	 * Field player.
-	 */
 	private final Player player;
-	/**
-	 * Field _shortCuts.
-	 */
 	private final Map<Integer, ShortCut> _shortCuts = new ConcurrentHashMap<>();
 	
 	/**

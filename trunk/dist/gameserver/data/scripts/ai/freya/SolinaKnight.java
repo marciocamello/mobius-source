@@ -13,7 +13,6 @@
 package ai.freya;
 
 import java.util.List;
-
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -24,9 +23,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public final class SolinaKnight extends Fighter
 {
-	/**
-	 * Field scarecrow.
-	 */
 	private NpcInstance scarecrow = null;
 	
 	/**

@@ -14,7 +14,6 @@ package lineage2.gameserver.model.reward;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.model.Player;
 
 /**
@@ -27,17 +26,8 @@ public class RewardList extends ArrayList<RewardGroup>
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field MAX_CHANCE. (value is 1000000)
-	 */
 	public static final int MAX_CHANCE = 1000000;
-	/**
-	 * Field _type.
-	 */
 	private final RewardType _type;
-	/**
-	 * Field _autoLoot.
-	 */
 	private final boolean _autoLoot;
 	
 	/**

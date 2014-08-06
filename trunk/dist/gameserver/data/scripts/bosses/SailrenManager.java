@@ -15,7 +15,6 @@ package bosses;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -34,10 +33,8 @@ import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.ReflectionUtils;
 import lineage2.gameserver.utils.TimeUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import bosses.EpicBossState.State;
 
 /**
@@ -46,9 +43,6 @@ import bosses.EpicBossState.State;
  */
 public final class SailrenManager extends Functions implements ScriptFile, OnDeathListener
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(SailrenManager.class);
 	
 	/**
@@ -126,13 +120,7 @@ public final class SailrenManager extends Functions implements ScriptFile, OnDea
 	 */
 	private static class Social extends RunnableImpl
 	{
-		/**
-		 * Field _action.
-		 */
 		private final int _action;
-		/**
-		 * Field _npc.
-		 */
 		private final NpcInstance _npc;
 		
 		/**
@@ -184,13 +172,7 @@ public final class SailrenManager extends Functions implements ScriptFile, OnDea
 	 */
 	private static class SailrenSpawn extends RunnableImpl
 	{
-		/**
-		 * Field _npcId.
-		 */
 		private final int _npcId;
-		/**
-		 * Field _pos.
-		 */
 		private final Location _pos = new Location(27628, -6109, -1982, 44732);
 		
 		/**
@@ -307,109 +289,31 @@ public final class SailrenManager extends Functions implements ScriptFile, OnDea
 		}
 	}
 	
-	/**
-	 * Field _velociraptor.
-	 */
 	static NpcInstance _velociraptor;
-	/**
-	 * Field _pterosaur.
-	 */
 	static NpcInstance _pterosaur;
-	/**
-	 * Field _tyranno.
-	 */
 	static NpcInstance _tyranno;
-	/**
-	 * Field _sailren.
-	 */
 	static NpcInstance _sailren;
-	/**
-	 * Field _teleportCube.
-	 */
 	static NpcInstance _teleportCube;
-	/**
-	 * Field _cubeSpawnTask.
-	 */
 	private static ScheduledFuture<?> _cubeSpawnTask = null;
-	/**
-	 * Field _monsterSpawnTask.
-	 */
 	private static ScheduledFuture<?> _monsterSpawnTask = null;
-	/**
-	 * Field _intervalEndTask.
-	 */
 	private static ScheduledFuture<?> _intervalEndTask = null;
-	/**
-	 * Field _socialTask.
-	 */
 	static ScheduledFuture<?> _socialTask = null;
-	/**
-	 * Field _activityTimeEndTask.
-	 */
 	static ScheduledFuture<?> _activityTimeEndTask = null;
-	/**
-	 * Field _onAnnihilatedTask.
-	 */
 	private static ScheduledFuture<?> _onAnnihilatedTask = null;
-	/**
-	 * Field Sailren. (value is 29065)
-	 */
 	private static final int Sailren = 29065;
-	/**
-	 * Field Velociraptor. (value is 22198)
-	 */
 	private static final int Velociraptor = 22198;
-	/**
-	 * Field Pterosaur. (value is 22199)
-	 */
 	private static final int Pterosaur = 22199;
-	/**
-	 * Field Tyrannosaurus. (value is 22217)
-	 */
 	private static final int Tyrannosaurus = 22217;
-	/**
-	 * Field TeleportCubeId. (value is 31759)
-	 */
 	private static final int TeleportCubeId = 31759;
-	/**
-	 * Field _state.
-	 */
 	static EpicBossState _state;
-	/**
-	 * Field _zone.
-	 */
 	private static Zone _zone;
-	/**
-	 * Field _enter.
-	 */
 	private static final Location _enter = new Location(27734, -6938, -1982);
-	/**
-	 * Field FWS_ENABLESINGLEPLAYER. (value is false)
-	 */
 	private static final boolean FWS_ENABLESINGLEPLAYER = Boolean.TRUE;
-	/**
-	 * Field FWS_ACTIVITYTIMEOFMOBS.
-	 */
 	private static final int FWS_ACTIVITYTIMEOFMOBS = 120 * 60000;
-	/**
-	 * Field FWS_FIXINTERVALOFSAILRENSPAWN.
-	 */
 	private static final int FWS_FIXINTERVALOFSAILRENSPAWN = 1 * 24 * 60 * 60000;
-	/**
-	 * Field FWS_RANDOMINTERVALOFSAILRENSPAWN.
-	 */
 	private static final int FWS_RANDOMINTERVALOFSAILRENSPAWN = 1 * 24 * 60 * 60000;
-	/**
-	 * Field FWS_INTERVALOFNEXTMONSTER. (value is 60000)
-	 */
 	private static final int FWS_INTERVALOFNEXTMONSTER = 60000;
-	/**
-	 * Field _isAlreadyEnteredOtherParty.
-	 */
 	private static boolean _isAlreadyEnteredOtherParty = false;
-	/**
-	 * Field Dying.
-	 */
 	private static boolean Dying = false;
 	
 	/**

@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.gameserver.listener.actor.OnDeathListener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
@@ -48,10 +47,8 @@ public abstract class SagasSuperclass extends Quest
 	
 	protected int StartNPC = 0;
 	protected Race StartRace;
-	
 	// massives
 	static final List<NpcInstance> _npcWaves = new ArrayList<>();
-	
 	private static final int Avanguard_aden = 33407;
 	private static final int Avanguard_corpse1 = 33166;
 	private static final int Avanguard_corpse2 = 33167;
@@ -60,7 +57,6 @@ public abstract class SagasSuperclass extends Quest
 	private static final int Avanguard_member = 33165;
 	// instance npc:
 	private static final int Avanguard_camptain = 33170;
-	
 	private static final int Avanguard_Ellis = 33171;
 	private static final int Avanguard_Barton = 33172;
 	private static final int Avanguard_Xaok = 33173;
@@ -68,7 +64,6 @@ public abstract class SagasSuperclass extends Quest
 	// npc helpers
 	private static final int Van_Archer = 33414;
 	private static final int Van_Infantry = 33415;
-	
 	// monsters
 	private static final int Shaman = 27430;
 	private static final int Slayer = 27431;
@@ -77,13 +72,11 @@ public abstract class SagasSuperclass extends Quest
 	private static final int Guard_Darkness = 27434;
 	// boss
 	private static final int Death_wound = 27425;
-	
 	// items
 	private static final int DeadSoldierOrbs = 17748;
 	private static final int Ring_Shout = 17484;
 	// onKill won't work here because mobs also killing mobs
 	private final DeathListener deathListener = new DeathListener();
-	
 	protected static final Map<Integer, Class<?>> Quests = new HashMap<>();
 	static
 	{
@@ -94,7 +87,6 @@ public abstract class SagasSuperclass extends Quest
 		Quests.put(10345, _10345_DayOfDestinyDwarfsFate.class);
 		Quests.put(10346, _10346_DayOfDestinyKamaelsFate.class);
 	}
-	
 	protected static final int[][] QuestRace = new int[][]
 	{
 		{

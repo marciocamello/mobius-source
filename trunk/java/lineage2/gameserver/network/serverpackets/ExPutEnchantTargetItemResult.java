@@ -16,7 +16,6 @@ public class ExPutEnchantTargetItemResult extends L2GameServerPacket
 {
 	public static final L2GameServerPacket FAIL = new ExPutEnchantTargetItemResult(0);
 	public static final L2GameServerPacket SUCCESS = new ExPutEnchantTargetItemResult(1);
-	
 	private final int _result;
 	
 	public ExPutEnchantTargetItemResult(int result)

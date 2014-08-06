@@ -18,7 +18,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 public class _466_PlacingMySmallPower extends Quest implements ScriptFile
@@ -26,7 +25,6 @@ public class _466_PlacingMySmallPower extends Quest implements ScriptFile
 	// npc
 	public static final int ASTERIOS = 30154;
 	public static final int NOEM_MILID = 32895;
-	
 	// mobs
 	private final int[] WingMobs =
 	{
@@ -49,7 +47,6 @@ public class _466_PlacingMySmallPower extends Quest implements ScriptFile
 		22894,
 		22878
 	};
-	
 	// q items
 	public static final int WingI = 17597;
 	public static final int CoconI = 17598;

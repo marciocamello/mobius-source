@@ -13,7 +13,6 @@
 package lineage2.commons.compiler;
 
 import java.net.URI;
-
 import javax.tools.FileObject;
 import javax.tools.ForwardingJavaFileManager;
 import javax.tools.JavaFileObject;
@@ -26,9 +25,6 @@ import javax.tools.StandardJavaFileManager;
  */
 public class MemoryJavaFileManager extends ForwardingJavaFileManager<StandardJavaFileManager>
 {
-	/**
-	 * Field cl.
-	 */
 	private final MemoryClassLoader cl;
 	
 	/**

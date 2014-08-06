@@ -28,7 +28,6 @@ public class _10378_WeedingWork extends Quest implements ScriptFile
 	private static final int KOREN = 34975;
 	// reward items
 	private static final int SCROLL = 35292;
-	
 	private static final int DADFENA = 33697;
 	
 	public _10378_WeedingWork()

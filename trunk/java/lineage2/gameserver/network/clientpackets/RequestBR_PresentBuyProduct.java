@@ -14,7 +14,6 @@ package lineage2.gameserver.network.clientpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.dao.CharacterDAO;
@@ -38,13 +37,7 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public class RequestBR_PresentBuyProduct extends L2GameClientPacket
 {
-	/**
-	 * Field count. Field productId.
-	 */
 	private int productId, count;
-	/**
-	 * Field message. Field topic. Field receiverName.
-	 */
 	private String receiverName, topic, message;
 	
 	/**

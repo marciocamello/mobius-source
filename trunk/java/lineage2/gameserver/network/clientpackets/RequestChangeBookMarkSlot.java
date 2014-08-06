@@ -18,9 +18,6 @@ package lineage2.gameserver.network.clientpackets;
  */
 public class RequestChangeBookMarkSlot extends L2GameClientPacket
 {
-	/**
-	 * Field slot_new. Field slot_old.
-	 */
 	@SuppressWarnings("unused")
 	private int slot_old, slot_new;
 	

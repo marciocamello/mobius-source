@@ -20,7 +20,6 @@ import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.matching.MatchingRoom;
 import lineage2.gameserver.network.serverpackets.ExStorageMaxCount;
 import lineage2.gameserver.network.serverpackets.StatusUpdate.StatusUpdateField;
-
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -29,105 +28,30 @@ import org.apache.commons.lang3.StringUtils;
  */
 public final class PlayerStatsChangeRecorder extends CharStatsChangeRecorder<Player>
 {
-	/**
-	 * Field BROADCAST_KARMA.
-	 */
 	public static final int BROADCAST_KARMA = 1 << 3;
-	/**
-	 * Field SEND_STORAGE_INFO.
-	 */
 	public static final int SEND_STORAGE_INFO = 1 << 4;
-	/**
-	 * Field SEND_MAX_LOAD.
-	 */
 	public static final int SEND_MAX_LOAD = 1 << 5;
-	/**
-	 * Field SEND_CUR_LOAD.
-	 */
 	public static final int SEND_CUR_LOAD = 1 << 6;
-	/**
-	 * Field BROADCAST_CHAR_INFO2.
-	 */
 	public static final int BROADCAST_CHAR_INFO2 = 1 << 7;
-	/**
-	 * Field _maxCp.
-	 */
 	private int _maxCp;
-	/**
-	 * Field _maxLoad.
-	 */
 	private int _maxLoad;
-	/**
-	 * Field _curLoad.
-	 */
 	private int _curLoad;
-	/**
-	 * Field _attackElement.
-	 */
 	private final int[] _attackElement = new int[6];
-	/**
-	 * Field _defenceElement.
-	 */
 	private final int[] _defenceElement = new int[6];
-	/**
-	 * Field _exp.
-	 */
 	private long _exp;
-	/**
-	 * Field _sp.
-	 */
 	private int _sp;
-	/**
-	 * Field _karma.
-	 */
 	private int _karma;
-	/**
-	 * Field _pk.
-	 */
 	private int _pk;
-	/**
-	 * Field _pvp.
-	 */
 	private int _pvp;
-	/**
-	 * Field _fame.
-	 */
 	private int _fame;
-	/**
-	 * Field _inventory.
-	 */
 	private int _inventory;
-	/**
-	 * Field _warehouse.
-	 */
 	private int _warehouse;
-	/**
-	 * Field _clan.
-	 */
 	private int _clan;
-	/**
-	 * Field _trade.
-	 */
 	private int _trade;
-	/**
-	 * Field _recipeDwarven.
-	 */
 	private int _recipeDwarven;
-	/**
-	 * Field _recipeCommon.
-	 */
 	private int _recipeCommon;
-	/**
-	 * Field _partyRoom.
-	 */
 	private int _partyRoom;
-	/**
-	 * Field _title.
-	 */
 	private String _title = StringUtils.EMPTY;
-	/**
-	 * Field _cubicsHash.
-	 */
 	private int _cubicsHash;
 	
 	/**

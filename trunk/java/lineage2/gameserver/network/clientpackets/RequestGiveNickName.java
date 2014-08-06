@@ -27,13 +27,7 @@ import lineage2.gameserver.utils.Util;
  */
 public class RequestGiveNickName extends L2GameClientPacket
 {
-	/**
-	 * Field _target.
-	 */
 	private String _target;
-	/**
-	 * Field _title.
-	 */
 	private String _title;
 	
 	/**

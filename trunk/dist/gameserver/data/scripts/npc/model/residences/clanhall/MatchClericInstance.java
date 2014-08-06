@@ -29,9 +29,6 @@ public final class MatchClericInstance extends CTBBossInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _massiveDamage.
-	 */
 	private long _massiveDamage;
 	
 	/**

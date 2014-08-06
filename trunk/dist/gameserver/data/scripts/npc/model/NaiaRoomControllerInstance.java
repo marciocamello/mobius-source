@@ -14,7 +14,6 @@ package npc.model;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.geometry.Rectangle;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -38,53 +37,17 @@ public final class NaiaRoomControllerInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _room1territory.
-	 */
 	private static final Territory _room1territory = new Territory().add(new Rectangle(-46652, 245576, -45735, 246648).setZmin(-9175).setZmax(-9075));
-	/**
-	 * Field _room3territory.
-	 */
 	private static final Territory _room3territory = new Territory().add(new Rectangle(-52088, 245667, -51159, 246609).setZmin(-10037).setZmax(-9837));
-	/**
-	 * Field _room5territory.
-	 */
 	private static final Territory _room5territory = new Territory().add(new Rectangle(-46652, 245596, -45737, 246626).setZmin(-10032).setZmax(-9832));
-	/**
-	 * Field _room6territory.
-	 */
 	private static final Territory _room6territory = new Territory().add(new Rectangle(-49220, 247903, -48647, 248543).setZmin(-10027).setZmax(-9827));
-	/**
-	 * Field _room7territory.
-	 */
 	private static final Territory _room7territory = new Territory().add(new Rectangle(-52068, 245575, -51195, 246617).setZmin(-10896).setZmax(-10696));
-	/**
-	 * Field _room8territory.
-	 */
 	private static final Territory _room8territory = new Territory().add(new Rectangle(-49284, 243788, -48592, 244408).setZmin(-10892).setZmax(-10692));
-	/**
-	 * Field _room9territory.
-	 */
 	private static final Territory _room9territory = new Territory().add(new Rectangle(-46679, 245661, -45771, 246614).setZmin(-11756).setZmax(-11556));
-	/**
-	 * Field _room10territory.
-	 */
 	private static final Territory _room10territory = new Territory().add(new Rectangle(-49252, 247894, -48587, 248519).setZmin(-11757).setZmax(-11757));
-	/**
-	 * Field _room11territory.
-	 */
 	private static final Territory _room11territory = new Territory().add(new Rectangle(-52080, 245665, -51174, 246660).setZmin(-12619).setZmax(-12419));
-	/**
-	 * Field _room12territory.
-	 */
 	private static final Territory _room12territory = new Territory().add(new Rectangle(-48732, 243186, -47752, 244097).setZmin(-13423).setZmax(-13223));
-	/**
-	 * Field _roomMobList.
-	 */
 	private static List<NpcInstance> _roomMobList;
-	/**
-	 * Field _room2locs.
-	 */
 	private static final Location[] _room2locs =
 	{
 		new Location(-48146, 249597, -9124, -16280),
@@ -96,9 +59,6 @@ public final class NaiaRoomControllerInstance extends NpcInstance
 		new Location(-49225, 248710, -9104, 16512),
 		new Location(-48705, 248708, -9104, 16576),
 	};
-	/**
-	 * Field _room4locs.
-	 */
 	private static final Location[] _room4locs =
 	{
 		new Location(-49754, 243866, -9968, -16328),

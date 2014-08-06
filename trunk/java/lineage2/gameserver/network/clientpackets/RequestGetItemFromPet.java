@@ -18,7 +18,6 @@ import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.model.items.PetInventory;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,22 +27,10 @@ import org.slf4j.LoggerFactory;
  */
 public class RequestGetItemFromPet extends L2GameClientPacket
 {
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(RequestGetItemFromPet.class);
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
-	/**
-	 * Field _amount.
-	 */
 	private long _amount;
-	/**
-	 * Field _unknown.
-	 */
 	@SuppressWarnings("unused")
 	private int _unknown;
 	

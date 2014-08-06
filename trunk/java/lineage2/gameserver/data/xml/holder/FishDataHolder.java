@@ -16,13 +16,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.templates.item.support.FishGroup;
 import lineage2.gameserver.templates.item.support.FishTemplate;
 import lineage2.gameserver.templates.item.support.LureTemplate;
 import lineage2.gameserver.templates.item.support.LureType;
-
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 
@@ -32,21 +30,9 @@ import org.napile.primitive.maps.impl.HashIntObjectMap;
  */
 public class FishDataHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final FishDataHolder _instance = new FishDataHolder();
-	/**
-	 * Field _fishes.
-	 */
 	private final List<FishTemplate> _fishes = new ArrayList<>();
-	/**
-	 * Field _lures.
-	 */
 	private final IntObjectMap<LureTemplate> _lures = new HashIntObjectMap<>();
-	/**
-	 * Field _distributionsForZones.
-	 */
 	private final IntObjectMap<Map<LureType, Map<FishGroup, Integer>>> _distributionsForZones = new HashIntObjectMap<>();
 	
 	/**

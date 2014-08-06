@@ -27,13 +27,7 @@ import bosses.BelethManager;
  */
 public final class Beleth extends Mystic
 {
-	/**
-	 * Field lastFactionNotifyTime.
-	 */
 	private long lastFactionNotifyTime = 0;
-	/**
-	 * Field CLONE. (value is 29119)
-	 */
 	private static final int CLONE = 29119;
 	
 	/**

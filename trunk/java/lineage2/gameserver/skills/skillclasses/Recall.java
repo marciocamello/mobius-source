@@ -13,7 +13,6 @@
 package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
-
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
@@ -32,25 +31,10 @@ import lineage2.gameserver.utils.Location;
  */
 public class Recall extends Skill
 {
-	/**
-	 * Field _townId.
-	 */
 	private final int _townId;
-	/**
-	 * Field _clanhall.
-	 */
 	private final boolean _clanhall;
-	/**
-	 * Field _castle.
-	 */
 	private final boolean _castle;
-	/**
-	 * Field _fortress.
-	 */
 	private final boolean _fortress;
-	/**
-	 * Field _loc.
-	 */
 	private final Location _loc;
 	
 	/**

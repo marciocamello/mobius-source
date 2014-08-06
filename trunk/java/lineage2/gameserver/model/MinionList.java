@@ -18,7 +18,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.idfactory.IdFactory;
 import lineage2.gameserver.model.instances.MinionInstance;
@@ -31,21 +30,9 @@ import lineage2.gameserver.templates.npc.MinionData;
  */
 public class MinionList
 {
-	/**
-	 * Field _minionData.
-	 */
 	private final Set<MinionData> _minionData;
-	/**
-	 * Field _minions.
-	 */
 	private final Set<MinionInstance> _minions;
-	/**
-	 * Field lock.
-	 */
 	private final Lock lock;
-	/**
-	 * Field _master.
-	 */
 	private final MonsterInstance _master;
 	
 	/**

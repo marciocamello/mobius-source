@@ -26,9 +26,6 @@ import lineage2.gameserver.network.serverpackets.ExItemAuctionInfo;
  */
 public final class RequestInfoItemAuction extends L2GameClientPacket
 {
-	/**
-	 * Field _instanceId.
-	 */
 	private int _instanceId;
 	
 	/**

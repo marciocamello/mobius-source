@@ -23,13 +23,7 @@ import lineage2.gameserver.stats.Env;
  */
 public final class ConditionSlotItemId extends ConditionInventory
 {
-	/**
-	 * Field _itemId.
-	 */
 	private final int _itemId;
-	/**
-	 * Field _enchantLevel.
-	 */
 	private final int _enchantLevel;
 	
 	/**

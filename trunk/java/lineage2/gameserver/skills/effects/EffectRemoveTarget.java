@@ -24,9 +24,6 @@ import lineage2.gameserver.stats.Env;
  */
 public final class EffectRemoveTarget extends Effect
 {
-	/**
-	 * Field _doStopTarget.
-	 */
 	private final boolean _doStopTarget;
 	
 	/**

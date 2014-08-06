@@ -16,7 +16,6 @@ import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.logging.Logger;
-
 import lineage2.commons.util.Base64;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.network.GameClient;
@@ -34,29 +33,11 @@ import lineage2.gameserver.network.serverpackets.Ex2ndPasswordVerify;
  */
 public class SecondaryPasswordAuth
 {
-	/**
-	 * Field _log.
-	 */
 	private final Logger _log = Logger.getLogger(SecondaryPasswordAuth.class.getName());
-	/**
-	 * Field _activeClient.
-	 */
 	private final GameClient _activeClient;
-	/**
-	 * Field _password.
-	 */
 	private String _password;
-	/**
-	 * Field _wrongAttempts.
-	 */
 	private int _wrongAttempts;
-	/**
-	 * Field _authed.
-	 */
 	private boolean _authed;
-	/**
-	 * Field _unBanTime.
-	 */
 	private long _unBanTime;
 	
 	/**

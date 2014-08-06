@@ -15,7 +15,6 @@ package lineage2.commons.math.random;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 
 /**
@@ -31,13 +30,7 @@ public class RndSelector<E>
 	 */
 	private class RndNode<T> implements Comparable<RndNode<T>>
 	{
-		/**
-		 * Field value.
-		 */
 		final T value;
-		/**
-		 * Field weight.
-		 */
 		final int weight;
 		
 		/**
@@ -63,13 +56,7 @@ public class RndSelector<E>
 		}
 	}
 	
-	/**
-	 * Field totalWeight.
-	 */
 	private int totalWeight = 0;
-	/**
-	 * Field nodes.
-	 */
 	private final List<RndNode<E>> nodes;
 	
 	/**

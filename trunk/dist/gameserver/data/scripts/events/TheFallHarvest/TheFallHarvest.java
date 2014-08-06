@@ -15,7 +15,6 @@ package events.TheFallHarvest;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
@@ -29,7 +28,6 @@ import lineage2.gameserver.model.actor.listener.CharListenerList;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,29 +37,11 @@ import org.slf4j.LoggerFactory;
  */
 public final class TheFallHarvest extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(TheFallHarvest.class);
-	/**
-	 * Field EVENT_MANAGER_ID.
-	 */
 	private static final int EVENT_MANAGER_ID = 31255;
-	/**
-	 * Field _spawns.
-	 */
 	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
-	/**
-	 * Field _active.
-	 */
 	private static boolean _active = false;
-	/**
-	 * Field MultiSellLoaded.
-	 */
 	private static boolean MultiSellLoaded = false;
-	/**
-	 * Field multiSellFile.
-	 */
 	private static final File multiSellFile = new File(Config.DATAPACK_ROOT, "data/xml/other/event/TheFallHarvest/31255.xml");
 	
 	/**

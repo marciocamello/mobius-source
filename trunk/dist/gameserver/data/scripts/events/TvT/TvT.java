@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.geometry.Polygon;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -52,7 +51,6 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -62,9 +60,6 @@ import org.slf4j.LoggerFactory;
  */
 public final class TvT extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(TvT.class);
 	
 	/**
@@ -112,73 +107,22 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
-	/**
-	 * Field _startTask.
-	 */
 	private static ScheduledFuture<?> _startTask;
-	/**
-	 * Field players_list1.
-	 */
 	private static List<Long> players_list1 = new CopyOnWriteArrayList<>();
-	/**
-	 * Field players_list2.
-	 */
 	private static List<Long> players_list2 = new CopyOnWriteArrayList<>();
-	/**
-	 * Field live_list1.
-	 */
 	static List<Long> live_list1 = new CopyOnWriteArrayList<>();
-	/**
-	 * Field live_list2.
-	 */
 	static List<Long> live_list2 = new CopyOnWriteArrayList<>();
-	/**
-	 * Field _isRegistrationActive.
-	 */
 	private static boolean _isRegistrationActive = false;
-	/**
-	 * Field _status.
-	 */
 	static int _status = 0;
-	/**
-	 * Field _time_to_start.
-	 */
 	private static int _time_to_start;
-	/**
-	 * Field _category.
-	 */
 	private static int _category;
-	/**
-	 * Field _minLevel.
-	 */
 	private static int _minLevel;
-	/**
-	 * Field _maxLevel.
-	 */
 	private static int _maxLevel;
-	/**
-	 * Field _autoContinue.
-	 */
 	private static int _autoContinue = 0;
-	/**
-	 * Field _endTask.
-	 */
 	private static ScheduledFuture<?> _endTask;
-	/**
-	 * Field _zone.
-	 */
 	private static final Zone _zone = ReflectionUtils.getZone("[colosseum_battle]");
-	/**
-	 * Field _zoneListener.
-	 */
 	private static final ZoneListener _zoneListener = new ZoneListener();
-	/**
-	 * Field team1spawn.
-	 */
 	private static final Territory team1spawn = new Territory().add(new Polygon().add(149878, 47505).add(150262, 47513).add(150502, 47233).add(150507, 46300).add(150256, 46002).add(149903, 46005).setZmin(-3408).setZmax(-3308));
-	/**
-	 * Field team2spawn.
-	 */
 	private static final Territory team2spawn = new Territory().add(new Polygon().add(149027, 46005).add(148686, 46003).add(148448, 46302).add(148449, 47231).add(148712, 47516).add(149014, 47527).setZmin(-3408).setZmax(-3308));
 	
 	/**
@@ -221,9 +165,6 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		onReload();
 	}
 	
-	/**
-	 * Field _active.
-	 */
 	static boolean _active = false;
 	
 	/**
@@ -1211,13 +1152,7 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 	 */
 	private static class TeleportTask extends RunnableImpl
 	{
-		/**
-		 * Field loc.
-		 */
 		Location loc;
-		/**
-		 * Field target.
-		 */
 		Creature target;
 		
 		/**

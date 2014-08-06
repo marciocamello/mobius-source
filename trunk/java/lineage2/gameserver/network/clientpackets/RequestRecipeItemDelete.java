@@ -23,9 +23,6 @@ import lineage2.gameserver.templates.item.RecipeTemplate;
  */
 public class RequestRecipeItemDelete extends L2GameClientPacket
 {
-	/**
-	 * Field _recipeId.
-	 */
 	private int _recipeId;
 	
 	/**

@@ -17,13 +17,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.items.TradeItem;
 import lineage2.gameserver.templates.item.ItemTemplate;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -35,17 +32,8 @@ import org.w3c.dom.Node;
  */
 public class BuyListHolder
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(BuyListHolder.class);
-	/**
-	 * Field _instance.
-	 */
 	private static BuyListHolder _instance;
-	/**
-	 * Field _lists.
-	 */
 	private final Map<Integer, NpcTradeList> _lists;
 	
 	/**
@@ -270,17 +258,8 @@ public class BuyListHolder
 	 */
 	public static class NpcTradeList
 	{
-		/**
-		 * Field tradeList.
-		 */
 		private final List<TradeItem> tradeList = new ArrayList<>();
-		/**
-		 * Field _id.
-		 */
 		private final int _id;
-		/**
-		 * Field _npcId.
-		 */
 		private int _npcId;
 		
 		/**

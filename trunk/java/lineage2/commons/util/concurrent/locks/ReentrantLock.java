@@ -20,17 +20,8 @@ import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
  */
 public class ReentrantLock
 {
-	/**
-	 * Field stateUpdater.
-	 */
 	private static final AtomicIntegerFieldUpdater<ReentrantLock> stateUpdater = AtomicIntegerFieldUpdater.newUpdater(ReentrantLock.class, "state");
-	/**
-	 * Field owner.
-	 */
 	private Thread owner;
-	/**
-	 * Field state.
-	 */
 	private volatile int state;
 	
 	/**

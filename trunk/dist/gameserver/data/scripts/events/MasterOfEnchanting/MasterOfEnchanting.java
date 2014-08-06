@@ -14,7 +14,6 @@ package events.MasterOfEnchanting;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.listener.actor.player.OnPlayerEnterListener;
 import lineage2.gameserver.model.Player;
@@ -22,7 +21,6 @@ import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.model.actor.listener.CharListenerList;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,25 +30,10 @@ import org.slf4j.LoggerFactory;
  */
 public final class MasterOfEnchanting extends Functions implements ScriptFile, OnPlayerEnterListener
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(MasterOfEnchanting.class);
-	/**
-	 * Field EVENT_NAME. (value is ""MasterOfEnchanting"")
-	 */
 	private static final String EVENT_NAME = "MasterOfEnchanting";
-	/**
-	 * Field EVENT_MANAGER_ID.
-	 */
 	private static final int EVENT_MANAGER_ID = 32599;
-	/**
-	 * Field _spawns.
-	 */
 	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
-	/**
-	 * Field _active.
-	 */
 	private static boolean _active = false;
 	
 	/**

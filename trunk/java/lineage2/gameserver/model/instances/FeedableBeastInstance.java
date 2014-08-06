@@ -14,7 +14,6 @@ package lineage2.gameserver.model.instances;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -27,10 +26,8 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import gnu.trove.list.array.TIntArrayList;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
@@ -44,9 +41,6 @@ public class FeedableBeastInstance extends MonsterInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(NpcInstance.class);
 	
 	/**
@@ -54,25 +48,10 @@ public class FeedableBeastInstance extends MonsterInstance
 	 */
 	private static class growthInfo
 	{
-		/**
-		 * Field growth_level.
-		 */
 		public final int growth_level;
-		/**
-		 * Field growth_chance.
-		 */
 		public final int growth_chance;
-		/**
-		 * Field tameinfo.
-		 */
 		public final int[] tameinfo;
-		/**
-		 * Field spice.
-		 */
 		public final int[] spice;
-		/**
-		 * Field adultId.
-		 */
 		public final int[] adultId;
 		
 		/**
@@ -93,17 +72,8 @@ public class FeedableBeastInstance extends MonsterInstance
 		}
 	}
 	
-	/**
-	 * Field growthCapableMobs.
-	 */
 	public static final TIntObjectHashMap<growthInfo> growthCapableMobs = new TIntObjectHashMap<>();
-	/**
-	 * Field tamedBeasts.
-	 */
 	public static final TIntArrayList tamedBeasts = new TIntArrayList();
-	/**
-	 * Field feedableBeasts.
-	 */
 	public static final TIntArrayList feedableBeasts = new TIntArrayList();
 	static
 	{
@@ -378,9 +348,6 @@ public class FeedableBeastInstance extends MonsterInstance
 			feedableBeasts.add(i);
 		}
 	}
-	/**
-	 * Field feedInfo.
-	 */
 	public static final Map<Integer, Integer> feedInfo = new ConcurrentHashMap<>();
 	
 	/**
@@ -587,13 +554,7 @@ public class FeedableBeastInstance extends MonsterInstance
 	 */
 	public static class AggrPlayer extends RunnableImpl
 	{
-		/**
-		 * Field _actor.
-		 */
 		private final NpcInstance _actor;
-		/**
-		 * Field _killer.
-		 */
 		private final Player _killer;
 		
 		/**

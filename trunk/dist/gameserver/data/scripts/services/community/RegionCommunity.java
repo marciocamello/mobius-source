@@ -18,7 +18,6 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.StringTokenizer;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
@@ -38,7 +37,6 @@ import lineage2.gameserver.templates.item.RecipeTemplate;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.MapUtils;
 import lineage2.gameserver.utils.Util;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -48,13 +46,7 @@ import org.slf4j.LoggerFactory;
  */
 public final class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(RegionCommunity.class);
-	/**
-	 * Field _towns.
-	 */
 	private static final int[][] _towns = new int[][]
 	{
 		{
@@ -103,18 +95,12 @@ public final class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 			13
 		}
 	};
-	/**
-	 * Field _regionTypes.
-	 */
 	private static final String[] _regionTypes =
 	{
 		"&$596;",
 		"&$597;",
 		"&$665;"
 	};
-	/**
-	 * Field _elements.
-	 */
 	private static final String[] _elements =
 	{
 		"&$1622;",
@@ -124,9 +110,6 @@ public final class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 		"&$1626;",
 		"&$1627;"
 	};
-	/**
-	 * Field _grade.
-	 */
 	private static final String[] _grade =
 	{
 		"&$1291;",
@@ -137,9 +120,6 @@ public final class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 		"S80 Grade",
 		"S84 Grade"
 	};
-	/**
-	 * Field SELLER_PER_PAGE. (value is 12)
-	 */
 	private static final int SELLER_PER_PAGE = 12;
 	
 	/**
@@ -648,7 +628,6 @@ public final class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 	 * @param arg5 String g)
 	 * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#onWriteCommand(Player, String, String, String, String, String, String)
 	 */
-	
 	@Override
 	public void onWriteCommand(Player player, String bypass, String arg1, String arg2, String arg3, String arg4, String arg5)
 	{
@@ -688,7 +667,6 @@ public final class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 	 * @param byItem boolean r>
 	 * @return List<Player>
 	 */
-	
 	private static List<Player> getSellersList(int townId, int type, String search, boolean byItem)
 	{
 		List<Player> list = new ArrayList<>();

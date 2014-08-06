@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.entity.events.actions;
 
 import java.util.List;
-
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.EventAction;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
@@ -30,29 +29,11 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class SayAction implements EventAction
 {
-	/**
-	 * Field _range.
-	 */
 	private final int _range;
-	/**
-	 * Field _chatType.
-	 */
 	private final ChatType _chatType;
-	/**
-	 * Field _how.
-	 */
 	private String _how;
-	/**
-	 * Field _text.
-	 */
 	private NpcString _text;
-	/**
-	 * Field _sysString.
-	 */
 	private SysString _sysString;
-	/**
-	 * Field _systemMsg.
-	 */
 	private SystemMsg _systemMsg;
 	
 	/**

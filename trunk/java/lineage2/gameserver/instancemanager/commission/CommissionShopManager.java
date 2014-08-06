@@ -16,7 +16,6 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
-
 import lineage2.commons.math.SafeMath;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.dao.CommissionShopDAO;
@@ -39,7 +38,6 @@ import lineage2.gameserver.templates.item.ExItemType;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Log;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,29 +47,11 @@ import org.slf4j.LoggerFactory;
  */
 public class CommissionShopManager
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(CommissionShopManager.class);
-	/**
-	 * Field MIN_FEE. (value is 10000)
-	 */
 	private static final long MIN_FEE = 10000;
-	/**
-	 * Field REGISTRATION_FEE. (value is 0.01)
-	 */
 	private static final double REGISTRATION_FEE = 0.01;
-	/**
-	 * Field SALE_FEE. (value is 0.5)
-	 */
 	private static final double SALE_FEE = 0.5;
-	/**
-	 * Field container.
-	 */
 	private static final CommissionItemContainer container = new CommissionItemContainer();
-	/**
-	 * Field ourInstance.
-	 */
 	private static final CommissionShopManager ourInstance = new CommissionShopManager();
 	
 	/**

@@ -18,14 +18,11 @@ import java.sql.ResultSet;
 import java.sql.Types;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
-
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import gnu.trove.map.hash.TIntIntHashMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
@@ -35,21 +32,9 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class CrestCache
 {
-	/**
-	 * Field ALLY_CREST_SIZE. (value is 192)
-	 */
 	public static final int ALLY_CREST_SIZE = 192;
-	/**
-	 * Field CREST_SIZE. (value is 256)
-	 */
 	public static final int CREST_SIZE = 256;
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(CrestCache.class);
-	/**
-	 * Field _instance.
-	 */
 	private final static CrestCache _instance = new CrestCache();
 	
 	/**
@@ -61,43 +46,15 @@ public class CrestCache
 		return _instance;
 	}
 	
-	/**
-	 * Field _pledgeCrestId.
-	 */
 	private final TIntIntHashMap _pledgeCrestId = new TIntIntHashMap();
-	/**
-	 * Field _pledgeCrestLargeId.
-	 */
 	private final TIntIntHashMap _pledgeCrestLargeId = new TIntIntHashMap();
-	/**
-	 * Field _allyCrestId.
-	 */
 	private final TIntIntHashMap _allyCrestId = new TIntIntHashMap();
-	/**
-	 * Field _pledgeCrest.
-	 */
 	private final TIntObjectHashMap<byte[]> _pledgeCrest = new TIntObjectHashMap<>();
-	/**
-	 * Field _pledgeCrestLarge.
-	 */
 	private final TIntObjectHashMap<byte[]> _pledgeCrestLarge = new TIntObjectHashMap<>();
-	/**
-	 * Field _allyCrest.
-	 */
 	private final TIntObjectHashMap<byte[]> _allyCrest = new TIntObjectHashMap<>();
-	/**
-	 * Field lock.
-	 */
 	private final ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
-	/**
-	 * Field readLock.
-	 */
 	private final Lock readLock = lock.readLock();
-	/**
-	 * Field writeLock.
-	 */
 	private final Lock writeLock = lock.writeLock();
-	
 	public byte[] crestLargeTmp = null;
 	
 	/**

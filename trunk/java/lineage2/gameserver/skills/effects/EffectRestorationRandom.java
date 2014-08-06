@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Playable;
@@ -30,17 +29,8 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public class EffectRestorationRandom extends Effect
 {
-	/**
-	 * Field items.
-	 */
 	private final List<List<Item>> items;
-	/**
-	 * Field chances.
-	 */
 	private final double[] chances;
-	/**
-	 * Field groupPattern.
-	 */
 	private static final Pattern groupPattern = Pattern.compile("\\{\\[([\\d:;]+?)\\]([\\d.e-]+)\\}");
 	
 	/**
@@ -141,13 +131,7 @@ public class EffectRestorationRandom extends Effect
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Field itemId.
-		 */
 		public int itemId;
-		/**
-		 * Field count.
-		 */
 		public long count;
 	}
 }

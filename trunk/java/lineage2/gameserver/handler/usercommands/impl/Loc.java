@@ -24,9 +24,6 @@ import lineage2.gameserver.templates.mapregion.RestartArea;
  */
 public class Loc implements IUserCommandHandler
 {
-	/**
-	 * Field COMMAND_IDS.
-	 */
 	private static final int[] COMMAND_IDS =
 	{
 		0

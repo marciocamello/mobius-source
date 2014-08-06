@@ -14,7 +14,6 @@ package lineage2.gameserver.network.serverpackets;
 
 public class WareHouseDone extends L2GameServerPacket
 {
-	
 	@Override
 	protected void writeImpl()
 	{

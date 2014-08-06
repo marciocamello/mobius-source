@@ -24,21 +24,9 @@ import lineage2.gameserver.utils.Location;
  */
 public class ValidatePosition extends L2GameClientPacket
 {
-	/**
-	 * Field _loc.
-	 */
 	private final Location _loc = new Location();
-	/**
-	 * Field _boatObjectId.
-	 */
 	private int _boatObjectId;
-	/**
-	 * Field _lastClientPosition.
-	 */
 	private Location _lastClientPosition;
-	/**
-	 * Field _lastServerPosition.
-	 */
 	private Location _lastServerPosition;
 	
 	/**

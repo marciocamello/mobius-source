@@ -18,7 +18,6 @@ import java.io.LineNumberReader;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
-
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
@@ -30,13 +29,7 @@ import lineage2.gameserver.utils.Language;
  */
 public final class StringHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final StringHolder _instance = new StringHolder();
-	/**
-	 * Field _strings.
-	 */
 	private final Map<Language, Map<String, String>> _strings = new HashMap<>();
 	
 	/**

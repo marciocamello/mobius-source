@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.petition;
 
 import java.util.Collection;
-
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 
@@ -23,9 +22,6 @@ import org.napile.primitive.maps.impl.HashIntObjectMap;
  */
 public class PetitionMainGroup extends PetitionGroup
 {
-	/**
-	 * Field _subGroups.
-	 */
 	private final IntObjectMap<PetitionSubGroup> _subGroups = new HashIntObjectMap<>();
 	
 	/**

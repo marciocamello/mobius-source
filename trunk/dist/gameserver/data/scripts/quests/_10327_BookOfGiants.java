@@ -13,7 +13,6 @@
 package quests;
 
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;

@@ -20,7 +20,6 @@ import java.util.Map;
 import java.util.NavigableSet;
 import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.collections.CollectionUtils;
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.lang.reference.HardReference;
@@ -52,7 +51,6 @@ import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.taskmanager.AiTaskManager;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.NpcUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -62,9 +60,6 @@ import org.slf4j.LoggerFactory;
  */
 public class DefaultAI extends CharacterAI
 {
-	/**
-	 * Field _log.
-	 */
 	protected static final Logger _log = LoggerFactory.getLogger(DefaultAI.class);
 	
 	/**
@@ -72,27 +67,12 @@ public class DefaultAI extends CharacterAI
 	 */
 	public static enum TaskType
 	{
-		/**
-		 * Field MOVE.
-		 */
 		MOVE,
-		/**
-		 * Field ATTACK.
-		 */
 		ATTACK,
-		/**
-		 * Field CAST.
-		 */
 		CAST,
-		/**
-		 * Field BUFF.
-		 */
 		BUFF
 	}
 	
-	/**
-	 * Field TaskDefaultWeight. (value is 10000)
-	 */
 	public static final int TaskDefaultWeight = 10000;
 	
 	/**
@@ -100,29 +80,11 @@ public class DefaultAI extends CharacterAI
 	 */
 	public static class Task
 	{
-		/**
-		 * Field type.
-		 */
 		public TaskType type;
-		/**
-		 * Field skill.
-		 */
 		public Skill skill;
-		/**
-		 * Field target.
-		 */
 		public HardReference<? extends Creature> target;
-		/**
-		 * Field loc.
-		 */
 		public Location loc;
-		/**
-		 * Field pathfind.
-		 */
 		public boolean pathfind;
-		/**
-		 * Field weight.
-		 */
 		public int weight = TaskDefaultWeight;
 	}
 	
@@ -218,9 +180,6 @@ public class DefaultAI extends CharacterAI
 	 */
 	private static class TaskComparator implements Comparator<Task>
 	{
-		/**
-		 * Field instance.
-		 */
 		private static final Comparator<Task> instance = new TaskComparator();
 		
 		/**
@@ -255,9 +214,6 @@ public class DefaultAI extends CharacterAI
 	 */
 	protected class Teleport extends RunnableImpl
 	{
-		/**
-		 * Field _destination.
-		 */
 		Location _destination;
 		
 		/**
@@ -333,9 +289,6 @@ public class DefaultAI extends CharacterAI
 	 */
 	protected class NearestTargetComparator implements Comparator<Creature>
 	{
-		/**
-		 * Field actor.
-		 */
 		private final Creature actor;
 		
 		/**
@@ -367,85 +320,25 @@ public class DefaultAI extends CharacterAI
 		}
 	}
 	
-	/**
-	 * Field AI_TASK_ATTACK_DELAY.
-	 */
 	protected long AI_TASK_ATTACK_DELAY = Config.AI_TASK_ATTACK_DELAY;
-	/**
-	 * Field AI_TASK_ACTIVE_DELAY.
-	 */
 	protected long AI_TASK_ACTIVE_DELAY = Config.AI_TASK_ACTIVE_DELAY;
-	/**
-	 * Field AI_TASK_DELAY_CURRENT.
-	 */
 	protected long AI_TASK_DELAY_CURRENT = AI_TASK_ACTIVE_DELAY;
-	/**
-	 * Field MAX_PURSUE_RANGE.
-	 */
 	protected int MAX_PURSUE_RANGE;
-	/**
-	 * Field _aiTask.
-	 */
 	protected ScheduledFuture<?> _aiTask;
-	/**
-	 * Field _runningTask.
-	 */
 	protected ScheduledFuture<?> _runningTask;
-	/**
-	 * Field _madnessTask.
-	 */
 	public ScheduledFuture<?> _madnessTask;
-	/**
-	 * Field _thinking.
-	 */
 	private boolean _thinking = false;
-	/**
-	 * Field _def_think.
-	 */
 	protected boolean _def_think = false;
-	/**
-	 * Field _globalAggro.
-	 */
 	protected long _globalAggro;
-	/**
-	 * Field _randomAnimationEnd.
-	 */
 	protected long _randomAnimationEnd;
-	/**
-	 * Field _pathfindFails.
-	 */
 	protected int _pathfindFails;
-	/**
-	 * Field _tasks.
-	 */
 	protected final NavigableSet<Task> _tasks = new ConcurrentSkipListSet<>(TaskComparator.getInstance());
-	/**
-	 * Field _stunSkills. Field _buffSkills. Field _healSkills. Field _debuffSkills. Field _dotSkills. Field _damSkills.
-	 */
 	protected final Skill[] _damSkills, _dotSkills, _debuffSkills, _healSkills, _buffSkills, _stunSkills;
-	/**
-	 * Field _lastActiveCheck.
-	 */
 	protected long _lastActiveCheck;
-	/**
-	 * Field _checkAggroTimestamp.
-	 */
 	protected long _checkAggroTimestamp = 0;
-	/**
-	 * Field _attackTimeout.
-	 */
 	protected long _attackTimeout;
-	/**
-	 * Field _lastFactionNotifyTime.
-	 */
 	protected long _lastFactionNotifyTime = 0;
-	/**
-	 * Field _minFactionNotifyInterval.
-	 */
 	protected long _minFactionNotifyInterval = 10000;
-	/**
-	 * Field _nearestTargetComparator.
-	 */
 	protected final Comparator<Creature> _nearestTargetComparator;
 	
 	/**

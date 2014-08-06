@@ -32,21 +32,9 @@ public class AdminLevel implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_add_level.
-		 */
 		admin_add_level,
-		/**
-		 * Field admin_addLevel.
-		 */
 		admin_addLevel,
-		/**
-		 * Field admin_set_level.
-		 */
 		admin_set_level,
-		/**
-		 * Field admin_setLevel.
-		 */
 		admin_setLevel,
 	}
 	

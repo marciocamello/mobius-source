@@ -23,7 +23,6 @@ import lineage2.gameserver.model.CharSelectionInfo;
  */
 public class ExLoginVitalityEffectInfo extends L2GameServerPacket
 {
-	
 	private final CharSelectionInfo charInfo;
 	
 	public ExLoginVitalityEffectInfo(CharSelectionInfo charInfo)

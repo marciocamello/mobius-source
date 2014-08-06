@@ -18,9 +18,6 @@ package lineage2.gameserver.network.clientpackets;
  */
 class SuperCmdCharacterInfo extends L2GameClientPacket
 {
-	/**
-	 * Field _characterName.
-	 */
 	@SuppressWarnings("unused")
 	private String _characterName;
 	

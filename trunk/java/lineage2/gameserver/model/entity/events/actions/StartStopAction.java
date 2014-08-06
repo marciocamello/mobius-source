@@ -21,17 +21,8 @@ import lineage2.gameserver.model.entity.events.GlobalEvent;
  */
 public class StartStopAction implements EventAction
 {
-	/**
-	 * Field EVENT. (value is ""event"")
-	 */
 	public static final String EVENT = "event";
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
-	/**
-	 * Field _start.
-	 */
 	private final boolean _start;
 	
 	/**

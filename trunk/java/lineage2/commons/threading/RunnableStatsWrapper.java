@@ -21,13 +21,7 @@ import org.slf4j.LoggerFactory;
  */
 public class RunnableStatsWrapper implements Runnable
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(RunnableStatsWrapper.class);
-	/**
-	 * Field _runnable.
-	 */
 	private final Runnable _runnable;
 	
 	/**

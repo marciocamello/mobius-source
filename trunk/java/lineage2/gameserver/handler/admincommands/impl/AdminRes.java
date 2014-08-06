@@ -32,9 +32,6 @@ public class AdminRes implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_res.
-		 */
 		admin_res
 	}
 	

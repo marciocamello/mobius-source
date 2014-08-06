@@ -13,7 +13,6 @@
 package instances;
 
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.listener.actor.OnDeathListener;
@@ -36,10 +35,8 @@ public final class KartiaLabyrinth85Party extends Reflection
 	private final ZoneListenerL _landingZoneListener;
 	boolean _startLaunched;
 	boolean _landingentered;
-	
 	private static final int DOOR1_ID = 16170002;
 	private static final int DOOR2_ID = 16170003;
-	
 	final int KartiaGuard = 19229;
 	final int KartiaWatchman = 19230;
 	final int DimensionalWatchman = 19231;

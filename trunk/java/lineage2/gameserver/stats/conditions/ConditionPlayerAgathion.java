@@ -21,9 +21,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionPlayerAgathion extends Condition
 {
-	/**
-	 * Field _agathionId.
-	 */
 	private final int _agathionId;
 	
 	/**

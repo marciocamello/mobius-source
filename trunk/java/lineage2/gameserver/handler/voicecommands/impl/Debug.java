@@ -23,9 +23,6 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
  */
 public class Debug implements IVoicedCommandHandler
 {
-	/**
-	 * Field _commandList.
-	 */
 	private final String[] _commandList = new String[]
 	{
 		"debug"

@@ -15,11 +15,9 @@ package lineage2.gameserver.instancemanager;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.templates.StatsSet;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,13 +27,7 @@ import org.slf4j.LoggerFactory;
  */
 public class ServerVariables
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(ServerVariables.class);
-	/**
-	 * Field server_vars.
-	 */
 	private static StatsSet server_vars = null;
 	
 	/**

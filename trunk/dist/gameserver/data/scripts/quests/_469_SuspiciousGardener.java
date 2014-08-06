@@ -25,11 +25,8 @@ import lineage2.gameserver.scripts.ScriptFile;
 public class _469_SuspiciousGardener extends Quest implements ScriptFile
 {
 	private static final int HORPINA = 33031;
-	
 	private static final int APHERUS_WATCHMAN = 22964;
-	
 	private static final int CERTIFICATE_OF_LIFE = 30385;
-	
 	private static final String APHERUS_WATCHMAN_KILL = "watchman";
 	
 	@Override

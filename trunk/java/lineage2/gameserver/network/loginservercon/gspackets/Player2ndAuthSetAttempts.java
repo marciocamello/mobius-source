@@ -20,13 +20,7 @@ import lineage2.gameserver.network.loginservercon.SendablePacket;
  */
 public class Player2ndAuthSetAttempts extends SendablePacket
 {
-	/**
-	 * Field _login.
-	 */
 	private final String _login;
-	/**
-	 * Field _attempts.
-	 */
 	private final int _attempts;
 	
 	/**

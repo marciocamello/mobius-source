@@ -13,7 +13,6 @@
 package lineage2.loginserver.gameservercon;
 
 import java.nio.ByteBuffer;
-
 import lineage2.loginserver.gameservercon.gspackets.AuthRequest;
 import lineage2.loginserver.gameservercon.gspackets.BonusRequest;
 import lineage2.loginserver.gameservercon.gspackets.ChangeAccessLevel;
@@ -27,7 +26,6 @@ import lineage2.loginserver.gameservercon.gspackets.PlayerAuthRequest;
 import lineage2.loginserver.gameservercon.gspackets.PlayerInGame;
 import lineage2.loginserver.gameservercon.gspackets.PlayerLogout;
 import lineage2.loginserver.gameservercon.gspackets.SetAccountInfo;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,9 +35,6 @@ import org.slf4j.LoggerFactory;
  */
 public class PacketHandler
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(PacketHandler.class);
 	
 	/**

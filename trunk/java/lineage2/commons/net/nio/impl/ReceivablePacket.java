@@ -22,13 +22,7 @@ import java.nio.ByteBuffer;
 @SuppressWarnings("rawtypes")
 public abstract class ReceivablePacket<T extends MMOClient> extends lineage2.commons.net.nio.ReceivablePacket<T>
 {
-	/**
-	 * Field _client.
-	 */
 	protected T _client;
-	/**
-	 * Field _buf.
-	 */
 	protected ByteBuffer _buf;
 	
 	/**

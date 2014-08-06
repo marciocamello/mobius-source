@@ -21,9 +21,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionPlayerClassId extends Condition
 {
-	/**
-	 * Field _classIds.
-	 */
 	private final int[] _classIds;
 	
 	/**

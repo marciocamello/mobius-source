@@ -14,7 +14,6 @@ package lineage2.gameserver.handler.admincommands.impl;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.instancemanager.MapRegionManager;
@@ -36,25 +35,10 @@ public class AdminZone implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_zone_check.
-		 */
 		admin_zone_check,
-		/**
-		 * Field admin_region.
-		 */
 		admin_region,
-		/**
-		 * Field admin_pos.
-		 */
 		admin_pos,
-		/**
-		 * Field admin_vis_count.
-		 */
 		admin_vis_count,
-		/**
-		 * Field admin_domain.
-		 */
 		admin_domain
 	}
 	

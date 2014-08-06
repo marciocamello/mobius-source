@@ -24,17 +24,8 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public final class ItemHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final ItemHolder _instance = new ItemHolder();
-	/**
-	 * Field _items.
-	 */
 	private final TIntObjectHashMap<ItemTemplate> _items = new TIntObjectHashMap<>();
-	/**
-	 * Field _allTemplates.
-	 */
 	private ItemTemplate[] _allTemplates;
 	
 	/**

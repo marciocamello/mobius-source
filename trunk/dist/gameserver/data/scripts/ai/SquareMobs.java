@@ -33,7 +33,6 @@ public final class SquareMobs extends Mystic
 		23011,
 		23010
 	};
-	
 	int _lastMinionCount = 12;
 	
 	private class FuncMulMinionCount extends Func

@@ -22,7 +22,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -68,97 +67,28 @@ import lineage2.gameserver.utils.Log;
  */
 public class Party implements PlayerGroup
 {
-	/**
-	 * Field MAX_SIZE. (value is 7)
-	 */
 	public static final int MAX_SIZE = 7;
-	/**
-	 * Field ITEM_LOOTER. (value is 0)
-	 */
 	public static final int ITEM_LOOTER = 0;
-	/**
-	 * Field ITEM_RANDOM. (value is 1)
-	 */
 	public static final int ITEM_RANDOM = 1;
-	/**
-	 * Field ITEM_RANDOM_SPOIL. (value is 2)
-	 */
 	public static final int ITEM_RANDOM_SPOIL = 2;
-	/**
-	 * Field ITEM_ORDER. (value is 3)
-	 */
 	public static final int ITEM_ORDER = 3;
-	/**
-	 * Field ITEM_ORDER_SPOIL. (value is 4)
-	 */
 	public static final int ITEM_ORDER_SPOIL = 4;
-	/**
-	 * Field _members.
-	 */
 	final List<Player> _members = new CopyOnWriteArrayList<>();
-	/**
-	 * Field _tacticalSigns.
-	 */
 	private static final Map<Integer, GameObject> _tacticalSigns = new HashMap<>(4);
-	/**
-	 * Field _partyLvl.
-	 */
 	private int _partyLvl = 0;
-	/**
-	 * Field _itemDistribution.
-	 */
 	private int _itemDistribution = 0;
-	/**
-	 * Field _itemOrder.
-	 */
 	private int _itemOrder = 0;
-	/**
-	 * Field _reflection.
-	 */
 	private Reflection _reflection;
-	/**
-	 * Field _commandChannel.
-	 */
 	private CommandChannel _commandChannel;
-	/**
-	 * Field _rateExp.
-	 */
 	public double _rateExp;
-	/**
-	 * Field _rateSp.
-	 */
 	public double _rateSp;
-	/**
-	 * Field _rateDrop.
-	 */
 	public double _rateDrop;
-	/**
-	 * Field _rateAdena.
-	 */
 	public double _rateAdena;
-	/**
-	 * Field _rateSpoil.
-	 */
 	public double _rateSpoil;
-	/**
-	 * Field positionTask.
-	 */
 	private ScheduledFuture<?> positionTask;
-	/**
-	 * Field _requestChangeLoot.
-	 */
 	private int _requestChangeLoot = -1;
-	/**
-	 * Field _requestChangeLootTimer.
-	 */
 	long _requestChangeLootTimer = 0;
-	/**
-	 * Field _changeLootAnswers.
-	 */
 	private Set<Integer> _changeLootAnswers = null;
-	/**
-	 * Field LOOT_SYSSTRINGS.
-	 */
 	private static final int[] LOOT_SYSSTRINGS =
 	{
 		487,
@@ -167,9 +97,6 @@ public class Party implements PlayerGroup
 		799,
 		800
 	};
-	/**
-	 * Field _checkTask.
-	 */
 	private Future<?> _checkTask = null;
 	
 	/**

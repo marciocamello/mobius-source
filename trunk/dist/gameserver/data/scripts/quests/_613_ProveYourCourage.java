@@ -21,11 +21,9 @@ public class _613_ProveYourCourage extends Quest implements ScriptFile
 {
 	private final static int DURAI = 31377;
 	private final static int KETRAS_HERO_HEKATON = 25299;
-	
 	// Quest items
 	private final static int HEAD_OF_HEKATON = 7240;
 	private final static int FEATHER_OF_VALOR = 7229;
-	
 	private final static int MARK_OF_VARKA_ALLIANCE3 = 7223;
 	private final static int MARK_OF_VARKA_ALLIANCE4 = 7224;
 	private final static int MARK_OF_VARKA_ALLIANCE5 = 7225;

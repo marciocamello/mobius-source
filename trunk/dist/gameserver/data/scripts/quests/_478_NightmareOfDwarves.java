@@ -23,10 +23,8 @@ public class _478_NightmareOfDwarves extends Quest implements ScriptFile
 {
 	// npc
 	public static final int DAICHIR = 30537;
-	
 	// mobs
 	public static final int TRASKEN = 33159; // is this is the boss?
-	
 	public static final String WPL = "WPL";
 	public static final String BWPL = "BWPL";
 	public static final String LCK = "LCK";

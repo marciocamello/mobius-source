@@ -37,9 +37,6 @@ public final class PassagewayMobWithHerbInstance extends MonsterInstance
 		super(objectId, template);
 	}
 	
-	/**
-	 * Field FieryDemonBloodHerb. (value is 9849)
-	 */
 	public static final int FieryDemonBloodHerb = 9849;
 	
 	/**

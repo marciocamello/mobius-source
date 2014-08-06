@@ -17,9 +17,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Properties;
 import java.util.logging.Logger;
-
 import javax.sql.DataSource;
-
 import org.apache.commons.dbcp.ConnectionFactory;
 import org.apache.commons.dbcp.DriverManagerConnectionFactory;
 import org.apache.commons.dbcp.PoolableConnectionFactory;
@@ -35,13 +33,7 @@ import org.apache.commons.pool.impl.GenericObjectPool;
  */
 public class BasicDataSource implements DataSource
 {
-	/**
-	 * Field _source.
-	 */
 	private final PoolingDataSource _source;
-	/**
-	 * Field _connectionPool.
-	 */
 	private final ObjectPool<?> _connectionPool;
 	
 	/**

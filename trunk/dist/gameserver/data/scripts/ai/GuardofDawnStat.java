@@ -31,21 +31,9 @@ import lineage2.gameserver.utils.Location;
  */
 public final class GuardofDawnStat extends DefaultAI
 {
-	/**
-	 * Field _aggrorange. (value is 120)
-	 */
 	private static final int _aggrorange = 120;
-	/**
-	 * Field _skill.
-	 */
 	private static final Skill _skill = SkillTable.getInstance().getInfo(5978, 1);
-	/**
-	 * Field _locTele.
-	 */
 	private Location _locTele = null;
-	/**
-	 * Field noCheckPlayers.
-	 */
 	boolean noCheckPlayers = false;
 	
 	/**
@@ -65,13 +53,7 @@ public final class GuardofDawnStat extends DefaultAI
 	 */
 	public final class Teleportation extends RunnableImpl
 	{
-		/**
-		 * Field _telePoint.
-		 */
 		Location _telePoint = null;
-		/**
-		 * Field _target.
-		 */
 		Playable _target = null;
 		
 		/**

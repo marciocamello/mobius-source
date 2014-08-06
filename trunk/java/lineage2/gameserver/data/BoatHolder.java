@@ -13,7 +13,6 @@
 package lineage2.gameserver.data;
 
 import java.lang.reflect.Constructor;
-
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.data.xml.holder.ShuttleTemplateHolder;
 import lineage2.gameserver.idfactory.IdFactory;
@@ -30,17 +29,8 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public final class BoatHolder extends AbstractHolder
 {
-	/**
-	 * Field TEMPLATE.
-	 */
 	public static final CharTemplate TEMPLATE = new CharTemplate(CharTemplate.getEmptyStatsSet());
-	/**
-	 * Field _instance.
-	 */
 	private static final BoatHolder _instance = new BoatHolder();
-	/**
-	 * Field _boats.
-	 */
 	private final TIntObjectHashMap<Boat> _boats = new TIntObjectHashMap<>();
 	
 	/**

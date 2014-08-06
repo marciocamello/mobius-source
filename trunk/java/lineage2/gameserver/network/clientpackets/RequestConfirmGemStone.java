@@ -25,21 +25,9 @@ import lineage2.gameserver.network.serverpackets.ExPutCommissionResultForVariati
  */
 public class RequestConfirmGemStone extends AbstractRefinePacket
 {
-	/**
-	 * Field _targetItemObjId.
-	 */
 	private int _targetItemObjId;
-	/**
-	 * Field _refinerItemObjId.
-	 */
 	private int _refinerItemObjId;
-	/**
-	 * Field _gemstoneItemObjId.
-	 */
 	private int _gemstoneItemObjId;
-	/**
-	 * Field _gemstoneCount.
-	 */
 	private long _gemstoneCount;
 	
 	/**

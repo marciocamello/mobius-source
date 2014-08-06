@@ -15,7 +15,6 @@ package services;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.GameTimeController;
 import lineage2.gameserver.ThreadPoolManager;
@@ -32,81 +31,24 @@ import lineage2.gameserver.utils.Location;
  */
 public final class FantasyIsle extends Functions implements ScriptFile
 {
-	/**
-	 * Field _startTask.
-	 */
 	private static ScheduledFuture<?> _startTask;
-	/**
-	 * Field _isStarted.
-	 */
 	static boolean _isStarted;
-	/**
-	 * Field MC.
-	 */
 	private static final int MC = 32433;
-	/**
-	 * Field singer1.
-	 */
 	private static final int singer1 = 32431;
-	/**
-	 * Field singer2.
-	 */
 	private static final int singer2 = 32432;
-	/**
-	 * Field circus1.
-	 */
 	private static final int circus1 = 32442;
-	/**
-	 * Field circus2.
-	 */
 	private static final int circus2 = 32443;
-	/**
-	 * Field circus3.
-	 */
 	private static final int circus3 = 32444;
-	/**
-	 * Field circus4.
-	 */
 	private static final int circus4 = 32445;
-	/**
-	 * Field circus5.
-	 */
 	private static final int circus5 = 32446;
-	/**
-	 * Field individual1.
-	 */
 	private static final int individual1 = 32439;
-	/**
-	 * Field individual2.
-	 */
 	private static final int individual2 = 32440;
-	/**
-	 * Field individual3.
-	 */
 	private static final int individual3 = 32441;
-	/**
-	 * Field showstuff1.
-	 */
 	private static final int showstuff1 = 32424;
-	/**
-	 * Field showstuff2.
-	 */
 	private static final int showstuff2 = 32425;
-	/**
-	 * Field showstuff3.
-	 */
 	private static final int showstuff3 = 32426;
-	/**
-	 * Field showstuff4.
-	 */
 	private static final int showstuff4 = 32427;
-	/**
-	 * Field showstuff5.
-	 */
 	private static final int showstuff5 = 32428;
-	/**
-	 * Field WALKS.
-	 */
 	private static final Map<String, Walk> WALKS = new HashMap<>();
 	static
 	{
@@ -199,9 +141,6 @@ public final class FantasyIsle extends Functions implements ScriptFile
 		WALKS.put("24", new Walk(-56730, -56340, -2008, "25", 1800));
 		WALKS.put("27", new Walk(-56702, -56340, -2008, "29", 1800));
 	}
-	/**
-	 * Field TEXT.
-	 */
 	private static final String[] TEXT = new String[]
 	{
 		"How come people are not here... We are about to start the show.. Hmm",
@@ -227,9 +166,6 @@ public final class FantasyIsle extends Functions implements ScriptFile
 		"Please remember that Fantasy Isle is always planning a lot of great shows for you.",
 		"Well, I wish I could continue all night long, but this is it for today. Thank you."
 	};
-	/**
-	 * Field TALKS.
-	 */
 	private static final Map<String, Talk> TALKS = new HashMap<>();
 	static
 	{
@@ -560,22 +496,7 @@ public final class FantasyIsle extends Functions implements ScriptFile
 	 */
 	public static class Walk
 	{
-		/**
-		 * Field time.
-		 */
-		/**
-		 * Field z.
-		 */
-		/**
-		 * Field y.
-		 */
-		/**
-		 * Field x.
-		 */
 		public int x, y, z, time;
-		/**
-		 * Field event.
-		 */
 		public String event;
 		
 		/**
@@ -601,16 +522,7 @@ public final class FantasyIsle extends Functions implements ScriptFile
 	 */
 	public static class Talk
 	{
-		/**
-		 * Field time.
-		 */
 		public int time;
-		/**
-		 * Field event.
-		 */
-		/**
-		 * Field text.
-		 */
 		public String text, event;
 		
 		/**

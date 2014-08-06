@@ -13,7 +13,6 @@
 package ai;
 
 import java.util.List;
-
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.Priest;
 import lineage2.gameserver.model.Creature;
@@ -25,9 +24,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public final class RagnaHealer extends Priest
 {
-	/**
-	 * Field lastFactionNotifyTime.
-	 */
 	private long lastFactionNotifyTime;
 	
 	/**

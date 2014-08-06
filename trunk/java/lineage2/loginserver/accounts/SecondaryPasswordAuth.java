@@ -17,7 +17,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.loginserver.database.L2DatabaseFactory;
 
@@ -27,25 +26,10 @@ import lineage2.loginserver.database.L2DatabaseFactory;
  */
 public class SecondaryPasswordAuth
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = Logger.getLogger(SecondaryPasswordAuth.class.getName());
-	/**
-	 * Field SELECT_PARAMS. (value is ""SELECT account_password, wrongAttempts, banTime FROM account_2ndAuth WHERE account_name=?"")
-	 */
 	private static final String SELECT_PARAMS = "SELECT account_password, wrongAttempts, banTime FROM account_2ndAuth WHERE account_name=?";
-	/**
-	 * Field INSERT_PASSWORD. (value is ""INSERT INTO account_2ndAuth VALUES (?, ?, 0, 0) ON DUPLICATE KEY UPDATE account_password=?"")
-	 */
 	private static final String INSERT_PASSWORD = "INSERT INTO account_2ndAuth VALUES (?, ?, 0, 0) ON DUPLICATE KEY UPDATE account_password=?";
-	/**
-	 * Field UPDATE_WA. (value is ""UPDATE account_2ndAuth SET wrongAttempts=? WHERE account_name=?"")
-	 */
 	private static final String UPDATE_WA = "UPDATE account_2ndAuth SET wrongAttempts=? WHERE account_name=?";
-	/**
-	 * Field UPDATE_BT. (value is ""UPDATE account_2ndAuth SET banTime=? WHERE account_name=?"")
-	 */
 	private static final String UPDATE_BT = "UPDATE account_2ndAuth SET banTime=? WHERE account_name=?";
 	
 	/**

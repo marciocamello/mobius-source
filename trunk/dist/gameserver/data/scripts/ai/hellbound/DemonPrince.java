@@ -25,25 +25,10 @@ import lineage2.gameserver.utils.Location;
  */
 public final class DemonPrince extends Fighter
 {
-	/**
-	 * Field ULTIMATE_DEFENSE_SKILL_ID. (value is 5044)
-	 */
 	private static final int ULTIMATE_DEFENSE_SKILL_ID = 5044;
-	/**
-	 * Field ULTIMATE_DEFENSE_SKILL.
-	 */
 	private static final Skill ULTIMATE_DEFENSE_SKILL = SkillTable.getInstance().getInfo(ULTIMATE_DEFENSE_SKILL_ID, 3);
-	/**
-	 * Field TELEPORTATION_CUBIC_ID. (value is 32375)
-	 */
 	private static final int TELEPORTATION_CUBIC_ID = 32375;
-	/**
-	 * Field CUBIC_POSITION.
-	 */
 	private static final Location CUBIC_POSITION = new Location(-22144, 278744, -8239, 0);
-	/**
-	 * Field _notUsedUltimateDefense.
-	 */
 	private boolean _notUsedUltimateDefense = true;
 	
 	/**

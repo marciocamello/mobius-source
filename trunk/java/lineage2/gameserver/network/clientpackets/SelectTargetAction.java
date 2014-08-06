@@ -12,8 +12,6 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-/**
- */
 public class SelectTargetAction extends AbstractTargetAction
 {
 	@Override

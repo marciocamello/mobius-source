@@ -14,7 +14,6 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,13 +23,7 @@ import org.slf4j.LoggerFactory;
  */
 public class RequestLinkHtml extends L2GameClientPacket
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(RequestLinkHtml.class);
-	/**
-	 * Field _link.
-	 */
 	private String _link;
 	
 	/**

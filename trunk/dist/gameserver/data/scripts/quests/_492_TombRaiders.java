@@ -19,14 +19,12 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 public class _492_TombRaiders extends Quest implements ScriptFile
 {
 	// npc
 	public static final int ZENIA = 32140;
-	
 	// mobs
 	private static final int[] Mobs =
 	{
@@ -35,7 +33,6 @@ public class _492_TombRaiders extends Quest implements ScriptFile
 		23195,
 		23196
 	};
-	
 	// q items
 	public static final int ANCIENT_REL = 34769;
 	

@@ -18,9 +18,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.concurrent.ScheduledFuture;
-
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -36,14 +34,12 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
-
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
-
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
@@ -52,13 +48,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class CursedWeaponsManager
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(CursedWeaponsManager.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final CursedWeaponsManager _instance = new CursedWeaponsManager();
 	
 	/**
@@ -70,21 +60,9 @@ public class CursedWeaponsManager
 		return _instance;
 	}
 	
-	/**
-	 * Field _cursedWeapons.
-	 */
 	CursedWeapon[] _cursedWeapons;
-	/**
-	 * Field _cursedWeaponsMap.
-	 */
 	private TIntObjectHashMap<CursedWeapon> _cursedWeaponsMap;
-	/**
-	 * Field _removeTask.
-	 */
 	private ScheduledFuture<?> _removeTask;
-	/**
-	 * Field CURSEDWEAPONS_MAINTENANCE_INTERVAL.
-	 */
 	private static final int CURSEDWEAPONS_MAINTENANCE_INTERVAL = 5 * 60 * 1000;
 	
 	/**

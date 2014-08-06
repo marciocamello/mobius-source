@@ -20,13 +20,7 @@ import lineage2.gameserver.utils.Location;
  */
 public class JumpPoint
 {
-	/**
-	 * Field _loc.
-	 */
 	private final Location _loc;
-	/**
-	 * Field _nextWayId.
-	 */
 	private final int _nextWayId;
 	
 	/**

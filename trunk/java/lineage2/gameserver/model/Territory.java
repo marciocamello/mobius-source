@@ -14,7 +14,6 @@ package lineage2.gameserver.model;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.geometry.Point3D;
 import lineage2.commons.geometry.Shape;
 import lineage2.commons.util.Rnd;
@@ -28,21 +27,9 @@ import lineage2.gameserver.utils.Location;
  */
 public class Territory implements Shape, SpawnRange
 {
-	/**
-	 * Field max.
-	 */
 	protected final Point3D max = new Point3D();
-	/**
-	 * Field min.
-	 */
 	protected final Point3D min = new Point3D();
-	/**
-	 * Field include.
-	 */
 	private final List<Shape> include = new ArrayList<>(1);
-	/**
-	 * Field exclude.
-	 */
 	private final List<Shape> exclude = new ArrayList<>(1);
 	
 	/**

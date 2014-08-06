@@ -24,9 +24,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class AirshipGuard1 extends Guard
 {
-	/**
-	 * Field points.
-	 */
 	static final Location[] points =
 	{
 		new Location(-149633, 254016, -180),
@@ -42,17 +39,8 @@ public final class AirshipGuard1 extends Guard
 		new Location(-150301, 254855, -184),
 		new Location(-150438, 255133, -181)
 	};
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = -1;
-	/**
-	 * Field wait_timeout.
-	 */
 	private long wait_timeout = 0;
-	/**
-	 * Field wait.
-	 */
 	private boolean wait = false;
 	
 	/**

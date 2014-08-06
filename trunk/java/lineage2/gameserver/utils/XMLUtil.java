@@ -23,9 +23,6 @@ import org.w3c.dom.Node;
  */
 public class XMLUtil
 {
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(XMLUtil.class);
 	

@@ -25,17 +25,8 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class PaganDoormans extends Functions
 {
-	/**
-	 * Field MainDoorId. (value is 19160001)
-	 */
 	private static final int MainDoorId = 19160001;
-	/**
-	 * Field SecondDoor1Id. (value is 19160011)
-	 */
 	private static final int SecondDoor1Id = 19160011;
-	/**
-	 * Field SecondDoor2Id. (value is 19160010)
-	 */
 	private static final int SecondDoor2Id = 19160010;
 	
 	/**

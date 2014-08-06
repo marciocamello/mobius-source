@@ -29,13 +29,7 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class RequestJoinParty extends L2GameClientPacket
 {
-	/**
-	 * Field _name.
-	 */
 	private String _name;
-	/**
-	 * Field _itemDistribution.
-	 */
 	private int _itemDistribution;
 	
 	/**

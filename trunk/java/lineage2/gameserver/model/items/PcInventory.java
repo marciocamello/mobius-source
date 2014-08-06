@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.items;
 
 import java.util.Collection;
-
 import lineage2.commons.collections.CollectionUtils;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.threading.RunnableImpl;
@@ -34,7 +33,6 @@ import lineage2.gameserver.taskmanager.DelayedItemsManager;
 import lineage2.gameserver.templates.item.EtcItemTemplate.EtcItemType;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -43,17 +41,8 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public class PcInventory extends Inventory
 {
-	/**
-	 * Field _owner.
-	 */
 	private final Player _owner;
-	/**
-	 * Field _lockType.
-	 */
 	private LockType _lockType = LockType.NONE;
-	/**
-	 * Field _lockItems.
-	 */
 	private int[] _lockItems = ArrayUtils.EMPTY_INT_ARRAY;
 	
 	/**
@@ -282,9 +271,6 @@ public class PcInventory extends Inventory
 		}
 	}
 	
-	/**
-	 * Field isRefresh.
-	 */
 	public boolean isRefresh = false;
 	
 	/**
@@ -350,9 +336,6 @@ public class PcInventory extends Inventory
 		}
 	}
 	
-	/**
-	 * Field arrows.
-	 */
 	private static final int[][] arrows =
 	{
 		{
@@ -411,9 +394,6 @@ public class PcInventory extends Inventory
 		return null;
 	}
 	
-	/**
-	 * Field bolts.
-	 */
 	private static final int[][] bolts =
 	{
 		{
@@ -811,9 +791,6 @@ public class PcInventory extends Inventory
 	 */
 	protected class ShadowLifeTimeTask extends RunnableImpl
 	{
-		/**
-		 * Field item.
-		 */
 		private final ItemInstance item;
 		
 		/**
@@ -885,9 +862,6 @@ public class PcInventory extends Inventory
 	 */
 	protected class LifeTimeTask extends RunnableImpl
 	{
-		/**
-		 * Field item.
-		 */
 		private final ItemInstance item;
 		
 		/**

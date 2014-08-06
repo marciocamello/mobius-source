@@ -29,7 +29,6 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessa
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -38,25 +37,10 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public final class Tiat extends Fighter
 {
-	/**
-	 * Field TIAT_TRANSFORMATION_SKILL_ID. (value is 5974)
-	 */
 	private static final int TIAT_TRANSFORMATION_SKILL_ID = 5974;
-	/**
-	 * Field TIAT_TRANSFORMATION_SKILL.
-	 */
 	private static final Skill TIAT_TRANSFORMATION_SKILL = SkillTable.getInstance().getInfo(TIAT_TRANSFORMATION_SKILL_ID, 1);
-	/**
-	 * Field _notUsedTransform.
-	 */
 	private boolean _notUsedTransform = true;
-	/**
-	 * Field TRAPS_COUNT. (value is 4)
-	 */
 	private static final int TRAPS_COUNT = 4;
-	/**
-	 * Field TRAP_LOCS.
-	 */
 	private static final Location[] TRAP_LOCS =
 	{
 		new Location(-252022, 210130, -11995, 16384),
@@ -64,21 +48,9 @@ public final class Tiat extends Fighter
 		new Location(-248782, 206875, -11995, 16384),
 		new Location(-252022, 206875, -11995, 16384)
 	};
-	/**
-	 * Field COLLAPSE_BY_INACTIVITY_INTERVAL.
-	 */
 	private static final long COLLAPSE_BY_INACTIVITY_INTERVAL = 10 * 60 * 1000;
-	/**
-	 * Field _lastAttackTime.
-	 */
 	private long _lastAttackTime = 0;
-	/**
-	 * Field TRAP_NPC_ID. (value is 18696)
-	 */
 	private static final int TRAP_NPC_ID = 18696;
-	/**
-	 * Field TIAT_MINION_IDS.
-	 */
 	private static final int[] TIAT_MINION_IDS =
 	{
 		29162,
@@ -88,26 +60,14 @@ public final class Tiat extends Fighter
 		22542,
 		22548
 	};
-	/**
-	 * Field TIAT_TEXT.
-	 */
 	private static final String[] TIAT_TEXT =
 	{
 		"You'll regret challenging me!",
 		"You shall die in pain!",
 		"I will wipe out your entire kind!"
 	};
-	/**
-	 * Field lastFactionNotifyTime.
-	 */
 	private long lastFactionNotifyTime = 0;
-	/**
-	 * Field _immobilized.
-	 */
 	private boolean _immobilized;
-	/**
-	 * Field _failed.
-	 */
 	private boolean _failed = false;
 	
 	/**

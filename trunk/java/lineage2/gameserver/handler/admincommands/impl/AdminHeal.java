@@ -30,9 +30,6 @@ public class AdminHeal implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_heal.
-		 */
 		admin_heal
 	}
 	

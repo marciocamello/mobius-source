@@ -17,7 +17,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 public class _486_BeWell extends Quest implements ScriptFile
@@ -25,7 +24,6 @@ public class _486_BeWell extends Quest implements ScriptFile
 	// npc
 	public static final int GUIDE = 33463;
 	public static final int ANEKOBI = 31555;
-	
 	// mobs
 	private static final int[] Mobs =
 	{
@@ -42,7 +40,6 @@ public class _486_BeWell extends Quest implements ScriptFile
 		21518,
 		21519
 	};
-	
 	// q items
 	public static final int STAKATO_PAN = 19498;
 	

@@ -29,9 +29,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Tully extends Fighter
 {
-	/**
-	 * Field locSD.
-	 */
 	private static final Location[] locSD =
 	{
 		new Location(-12524, 273932, -9014, 49151),
@@ -40,9 +37,6 @@ public final class Tully extends Fighter
 		new Location(-13773, 275119, -9040, 8428),
 		new Location(-11547, 271772, -9040, -19124),
 	};
-	/**
-	 * Field locFTT.
-	 */
 	private static final Location[] locFTT =
 	{
 		new Location(-10832, 273808, -9040, 0),
@@ -50,13 +44,7 @@ public final class Tully extends Fighter
 		new Location(-13824, 275072, -9040, -24644),
 		new Location(-11504, 271952, -9040, 9328),
 	};
-	/**
-	 * Field s.
-	 */
 	private boolean s = false;
-	/**
-	 * Field removable_ghost.
-	 */
 	static NpcInstance removable_ghost = null;
 	
 	/**

@@ -25,17 +25,8 @@ import lineage2.gameserver.utils.Location;
  */
 public class RequestDropItem extends L2GameClientPacket
 {
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
-	/**
-	 * Field _count.
-	 */
 	private long _count;
-	/**
-	 * Field _loc.
-	 */
 	private Location _loc;
 	
 	/**

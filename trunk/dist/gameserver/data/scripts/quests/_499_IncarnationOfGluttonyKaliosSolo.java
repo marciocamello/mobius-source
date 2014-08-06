@@ -21,7 +21,6 @@ public class _499_IncarnationOfGluttonyKaliosSolo extends Quest implements Scrip
 {
 	// npc
 	public static final int KARTIA_RESEARCH = 33647;
-	
 	// mobs
 	public static final int KALIOS = 19255;
 	

@@ -13,7 +13,6 @@
 package services.community;
 
 import java.util.StringTokenizer;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.data.xml.holder.BuyListHolder;
@@ -28,7 +27,6 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.scripts.Scripts;
 import lineage2.gameserver.utils.BbsUtil;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,9 +36,6 @@ import org.slf4j.LoggerFactory;
  */
 public final class CommunityBoard implements ScriptFile, ICommunityBoardHandler
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(CommunityBoard.class);
 	
 	/**

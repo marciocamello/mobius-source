@@ -31,9 +31,6 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class BufferNoobs extends DefaultAI
 {
-	/**
-	 * Field BUFFS.
-	 */
 	private static final int[] BUFFS =
 	{
 		4322,

@@ -20,9 +20,6 @@ import lineage2.gameserver.model.Player;
  */
 public class ExBrExtraUserInfo extends L2GameServerPacket
 {
-	/**
-	 * Field _charId.
-	 */
 	private final int _charId;
 	
 	/**

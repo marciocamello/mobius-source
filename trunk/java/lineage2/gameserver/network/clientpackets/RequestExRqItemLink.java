@@ -23,9 +23,6 @@ import lineage2.gameserver.network.serverpackets.ExRpItemLink;
  */
 public class RequestExRqItemLink extends L2GameClientPacket
 {
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
 	
 	/**

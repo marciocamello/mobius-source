@@ -2,14 +2,12 @@ package lineage2.gameserver.data.xml.parser;
 
 import java.io.File;
 import java.util.Iterator;
-
 import lineage2.commons.data.xml.AbstractDirParser;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.RestorationInfoHolder;
 import lineage2.gameserver.templates.skill.restoration.RestorationGroup;
 import lineage2.gameserver.templates.skill.restoration.RestorationInfo;
 import lineage2.gameserver.templates.skill.restoration.RestorationItem;
-
 import org.dom4j.Element;
 
 public final class RestorationInfoParser extends AbstractDirParser<RestorationInfoHolder>

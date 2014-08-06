@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -40,21 +39,9 @@ import gnu.trove.map.hash.TIntIntHashMap;
  */
 public final class HandysBlockCheckerManager
 {
-	/**
-	 * Field _arenaPlayers.
-	 */
 	private static ArenaParticipantsHolder[] _arenaPlayers;
-	/**
-	 * Field _arenaVotes.
-	 */
 	private static final TIntIntHashMap _arenaVotes = new TIntIntHashMap();
-	/**
-	 * Field _arenaStatus.
-	 */
 	private static Map<Integer, Boolean> _arenaStatus;
-	/**
-	 * Field _registrationPenalty.
-	 */
 	static final List<Integer> _registrationPenalty = new ArrayList<>();
 	
 	/**
@@ -352,9 +339,6 @@ public final class HandysBlockCheckerManager
 	 */
 	private static class SingletonHolder
 	{
-		/**
-		 * Field _instance.
-		 */
 		static final HandysBlockCheckerManager _instance = new HandysBlockCheckerManager();
 	}
 	
@@ -363,21 +347,9 @@ public final class HandysBlockCheckerManager
 	 */
 	public class ArenaParticipantsHolder
 	{
-		/**
-		 * Field _arena.
-		 */
 		int _arena;
-		/**
-		 * Field _redPlayers.
-		 */
 		List<Player> _redPlayers;
-		/**
-		 * Field _bluePlayers.
-		 */
 		List<Player> _bluePlayers;
-		/**
-		 * Field _engine.
-		 */
 		BlockCheckerEngine _engine;
 		
 		/**
@@ -596,9 +568,6 @@ public final class HandysBlockCheckerManager
 	 */
 	private class PenaltyRemove extends RunnableImpl
 	{
-		/**
-		 * Field objectId.
-		 */
 		Integer objectId;
 		
 		/**

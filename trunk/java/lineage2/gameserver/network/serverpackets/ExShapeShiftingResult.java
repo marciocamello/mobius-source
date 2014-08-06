@@ -19,7 +19,6 @@ public class ExShapeShiftingResult extends L2GameServerPacket
 {
 	public static final L2GameServerPacket FAIL = new ExShapeShiftingResult(0x00, 0, 0);
 	public static final int SUCCESS_RESULT = 0x01;
-	
 	private final int _result;
 	private final int _targetItemId;
 	private final int _extractItemId;

@@ -13,7 +13,6 @@
 package ai.Heine.FieldOfSelenceAndWhispers;
 
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.CtrlIntention;
@@ -30,17 +29,8 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class GuardianWaterspirit extends Fighter
 {
-	/**
-	 * Field mob.
-	 */
 	private NpcInstance mob = null;
-	/**
-	 * Field _firstTimeAttacked.
-	 */
 	private boolean _firstTimeAttacked = true;
-	/**
-	 * Field MsgText.
-	 */
 	public static final NpcString[] MsgText =
 	{
 		NpcString.AH_AH_FROM_THE_MAGIC_FORCE_NO_MORE_I_WILL_BE_FREED,

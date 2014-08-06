@@ -38,9 +38,6 @@ public final class Seed extends ScriptItemHandler
 	 */
 	static public final class DeSpawnScheduleTimerTask extends RunnableImpl
 	{
-		/**
-		 * Field spawnedTree.
-		 */
 		SimpleSpawner spawnedTree = null;
 		
 		/**
@@ -62,25 +59,16 @@ public final class Seed extends ScriptItemHandler
 		}
 	}
 	
-	/**
-	 * Field _itemIds.
-	 */
 	private static final int[] _itemIds =
 	{
 		5560,
 		5561
 	};
-	/**
-	 * Field _npcIds.
-	 */
 	private static final int[] _npcIds =
 	{
 		13006,
 		13007
 	};
-	/**
-	 * Field DESPAWN_TIME. (value is 600000)
-	 */
 	private static final int DESPAWN_TIME = 600000;
 	
 	/**

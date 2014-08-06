@@ -16,7 +16,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -37,7 +36,6 @@ import lineage2.gameserver.utils.NpcUtils;
 public final class HarnakUndegroundTeleportInstance extends NpcInstance
 {
 	private static final long serialVersionUID = -3733574033243896045L;
-	
 	private static final Map<Integer, Location> teleCoords = new HashMap<>();
 	private static final int[] cycleStartTeleports =
 	{

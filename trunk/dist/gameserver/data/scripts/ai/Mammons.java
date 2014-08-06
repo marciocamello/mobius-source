@@ -13,7 +13,6 @@
 package ai;
 
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -24,7 +23,6 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,54 +32,21 @@ import org.slf4j.LoggerFactory;
  */
 public final class Mammons extends Functions implements ScriptFile
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Mammons.class);
-	/**
-	 * Field MAMMON_PRIEST_ID. (value is 33511)
-	 */
 	private static final int MAMMON_PRIEST_ID = 33511;
-	/**
-	 * Field MAMMON_MERCHANT_ID. (value is 31113)
-	 */
 	private static final int MAMMON_MERCHANT_ID = 31113;
-	/**
-	 * Field MAMMON_BLACKSMITH_ID. (value is 31126)
-	 */
 	private static final int MAMMON_BLACKSMITH_ID = 31126;
-	/**
-	 * Field PORT_TIME.
-	 */
 	private static final int PORT_TIME = 10 * 60 * 1000;
-	/**
-	 * Field PriestNpc.
-	 */
 	static NpcInstance PriestNpc;
-	/**
-	 * Field MerchantNpc.
-	 */
 	static NpcInstance MerchantNpc;
-	/**
-	 * Field BlacksmithNpc.
-	 */
 	static NpcInstance BlacksmithNpc;
-	/**
-	 * Field _mammonTeleportTask.
-	 */
 	private static ScheduledFuture<?> _mammonTeleportTask;
-	/**
-	 * Field mammonText.
-	 */
 	static final NpcString[] mammonText =
 	{
 		NpcString.RULERS_OF_THE_SEAL_I_BRING_YOU_WONDROUS_GIFTS,
 		NpcString.RULERS_OF_THE_SEAL_I_HAVE_SOME_EXCELLENT_WEAPONS_TO_SHOW_YOU,
 		NpcString.IVE_BEEN_SO_BUSY_LATELY_IN_ADDITION_TO_PLANNING_MY_TRIP
 	};
-	/**
-	 * Field MAMMON_PRIEST_POINTS.
-	 */
 	static final Location[] MAMMON_PRIEST_POINTS =
 	{
 		new Location(16403, 144843, -3016, 27931),
@@ -96,9 +61,6 @@ public final class Mammons extends Functions implements ScriptFile
 		new Location(144632, -54136, -3006, 0),
 		new Location(90024, -143672, -1565, 0),
 	};
-	/**
-	 * Field MAMMON_MERCHANT_POINTS.
-	 */
 	static final Location[] MAMMON_MERCHANT_POINTS =
 	{
 		new Location(16380, 144784, -3016, 27931),
@@ -113,9 +75,6 @@ public final class Mammons extends Functions implements ScriptFile
 		new Location(144552, -54104, -3006, 0),
 		new Location(89944, -143688, -1565, 0),
 	};
-	/**
-	 * Field MAMMON_BLACKSMITH_POINTS.
-	 */
 	static final Location[] MAMMON_BLACKSMITH_POINTS =
 	{
 		new Location(16335, 144696, -3024, 27931),

@@ -15,14 +15,12 @@ package lineage2.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.model.entity.events.impl.ClanHallAuctionEvent;
 import lineage2.gameserver.model.entity.events.impl.ClanHallMiniGameEvent;
 import lineage2.gameserver.model.entity.residence.ClanHall;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.tables.ClanTable;
-
 import org.apache.commons.lang3.StringUtils;
 
 public class ExShowAgitInfo extends L2GameServerPacket

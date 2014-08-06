@@ -14,7 +14,6 @@ package lineage2.gameserver.handler.admincommands.impl;
 
 import java.util.ArrayList;
 import java.util.StringTokenizer;
-
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.instancemanager.CastleManorManager;
@@ -36,21 +35,9 @@ public class AdminManor implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_manor.
-		 */
 		admin_manor,
-		/**
-		 * Field admin_manor_reset.
-		 */
 		admin_manor_reset,
-		/**
-		 * Field admin_manor_save.
-		 */
 		admin_manor_save,
-		/**
-		 * Field admin_manor_disable.
-		 */
 		admin_manor_disable
 	}
 	

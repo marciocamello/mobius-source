@@ -30,7 +30,6 @@ public final class AdeptAden extends Adept
 		super(actor);
 		_points = new Location[]
 		{
-			
 			new Location(146363, 24149, -2008),
 			new Location(146360, 25672, -2008),
 			new Location(148552, 25688, -2008),

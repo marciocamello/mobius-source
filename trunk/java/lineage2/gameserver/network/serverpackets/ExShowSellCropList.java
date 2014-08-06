@@ -15,7 +15,6 @@ package lineage2.gameserver.network.serverpackets;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
-
 import lineage2.gameserver.model.Manor;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
@@ -75,9 +74,9 @@ public class ExShowSellCropList extends L2GameServerPacket
 			// id
 			writeC(1);
 			writeD(Manor.getInstance().getRewardItem(item.getItemId(), 2)); // reward
+			
 			// 2
 			// id
-			
 			if (_castleCrops.containsKey(item.getItemId()))
 			{
 				CropProcure crop = _castleCrops.get(item.getItemId());

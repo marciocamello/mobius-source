@@ -24,9 +24,6 @@ public class AuctionSiegeClanObject extends SiegeClanObject
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _bid.
-	 */
 	private long _bid;
 	
 	/**

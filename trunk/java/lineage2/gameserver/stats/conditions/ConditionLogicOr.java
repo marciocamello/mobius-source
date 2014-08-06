@@ -20,13 +20,7 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionLogicOr extends Condition
 {
-	/**
-	 * Field emptyConditions.
-	 */
 	private final static Condition[] emptyConditions = new Condition[0];
-	/**
-	 * Field _conditions.
-	 */
 	public Condition[] _conditions = emptyConditions;
 	
 	/**

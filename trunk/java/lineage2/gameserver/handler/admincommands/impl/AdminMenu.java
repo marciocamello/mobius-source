@@ -13,7 +13,6 @@
 package lineage2.gameserver.handler.admincommands.impl;
 
 import java.util.StringTokenizer;
-
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.Creature;
@@ -35,37 +34,13 @@ public class AdminMenu implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_char_manage.
-		 */
 		admin_char_manage,
-		/**
-		 * Field admin_teleport_character_to_menu.
-		 */
 		admin_teleport_character_to_menu,
-		/**
-		 * Field admin_recall_char_menu.
-		 */
 		admin_recall_char_menu,
-		/**
-		 * Field admin_goto_char_menu.
-		 */
 		admin_goto_char_menu,
-		/**
-		 * Field admin_kick_menu.
-		 */
 		admin_kick_menu,
-		/**
-		 * Field admin_kill_menu.
-		 */
 		admin_kill_menu,
-		/**
-		 * Field admin_ban_menu.
-		 */
 		admin_ban_menu,
-		/**
-		 * Field admin_unban_menu.
-		 */
 		admin_unban_menu
 	}
 	

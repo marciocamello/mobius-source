@@ -15,7 +15,6 @@ package lineage2.gameserver.model.entity.events.impl;
 import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.Future;
-
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.threading.RunnableImpl;
@@ -99,77 +98,23 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		}
 	}
 	
-	/**
-	 * Field FLAG_POLE. (value is ""flag_pole"")
-	 */
 	public static final String FLAG_POLE = "flag_pole";
-	/**
-	 * Field COMBAT_FLAGS. (value is ""combat_flags"")
-	 */
 	public static final String COMBAT_FLAGS = "combat_flags";
-	/**
-	 * Field SIEGE_COMMANDERS. (value is ""siege_commanders"")
-	 */
 	public static final String SIEGE_COMMANDERS = "siege_commanders";
-	/**
-	 * Field PEACE_COMMANDERS. (value is ""peace_commanders"")
-	 */
 	public static final String PEACE_COMMANDERS = "peace_commanders";
-	/**
-	 * Field UPGRADEABLE_DOORS. (value is ""upgradeable_doors"")
-	 */
 	public static final String UPGRADEABLE_DOORS = "upgradeable_doors";
-	/**
-	 * Field COMMANDER_DOORS. (value is ""commander_doors"")
-	 */
 	public static final String COMMANDER_DOORS = "commander_doors";
-	/**
-	 * Field ENTER_DOORS. (value is ""enter_doors"")
-	 */
 	public static final String ENTER_DOORS = "enter_doors";
-	/**
-	 * Field MACHINE_DOORS. (value is ""machine_doors"")
-	 */
 	public static final String MACHINE_DOORS = "machine_doors";
-	/**
-	 * Field OUT_POWER_UNITS. (value is ""out_power_units"")
-	 */
 	public static final String OUT_POWER_UNITS = "out_power_units";
-	/**
-	 * Field IN_POWER_UNITS. (value is ""in_power_units"")
-	 */
 	public static final String IN_POWER_UNITS = "in_power_units";
-	/**
-	 * Field GUARDS_LIVE_WITH_C_CENTER. (value is ""guards_live_with_c_center"")
-	 */
 	public static final String GUARDS_LIVE_WITH_C_CENTER = "guards_live_with_c_center";
-	/**
-	 * Field ENVOY. (value is ""envoy"")
-	 */
 	public static final String ENVOY = "envoy";
-	/**
-	 * Field MERCENARY_POINTS. (value is ""mercenary_points"")
-	 */
 	public static final String MERCENARY_POINTS = "mercenary_points";
-	/**
-	 * Field MERCENARY. (value is ""mercenary"")
-	 */
 	public static final String MERCENARY = "mercenary";
-	/**
-	 * Field SIEGE_WAIT_PERIOD.
-	 */
 	public static final long SIEGE_WAIT_PERIOD = 4 * 60 * 60 * 1000L;
-	/**
-	 * Field RESTORE_BARRACKS_LISTENER.
-	 */
 	public static final OnSpawnListener RESTORE_BARRACKS_LISTENER = new RestoreBarracksListener();
-	/**
-	 * Field _envoyTask.
-	 */
 	private Future<?> _envoyTask;
-	/**
-	 * Field _barrackStatus.
-	 */
 	private boolean[] _barrackStatus;
 	
 	/**

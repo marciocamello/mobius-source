@@ -25,9 +25,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Kasiel extends DefaultAI
 {
-	/**
-	 * Field points.
-	 */
 	static final Location[] points =
 	{
 		new Location(43932, 51096, -2992),
@@ -50,17 +47,8 @@ public final class Kasiel extends DefaultAI
 		new Location(44357, 51259, -2900),
 		new Location(44111, 51252, -2992)
 	};
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = -1;
-	/**
-	 * Field wait_timeout.
-	 */
 	private long wait_timeout = 0;
-	/**
-	 * Field wait.
-	 */
 	private boolean wait = false;
 	
 	/**

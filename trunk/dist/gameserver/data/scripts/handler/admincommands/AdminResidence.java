@@ -17,7 +17,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
@@ -49,37 +48,13 @@ public final class AdminResidence extends ScriptAdminCommand
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_residence_list.
-		 */
 		admin_residence_list,
-		/**
-		 * Field admin_residence.
-		 */
 		admin_residence,
-		/**
-		 * Field admin_set_owner.
-		 */
 		admin_set_owner,
-		/**
-		 * Field admin_set_siege_time.
-		 */
 		admin_set_siege_time,
-		/**
-		 * Field admin_quick_siege_start.
-		 */
 		admin_quick_siege_start,
-		/**
-		 * Field admin_quick_siege_stop.
-		 */
 		admin_quick_siege_stop,
-		/**
-		 * Field admin_backup_unit_info.
-		 */
 		admin_backup_unit_info,
-		/**
-		 * Field admin_fortress_spawn_flags.
-		 */
 		admin_fortress_spawn_flags
 	}
 	

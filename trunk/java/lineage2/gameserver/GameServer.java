@@ -15,7 +15,6 @@ package lineage2.gameserver;
 import java.io.File;
 import java.net.InetAddress;
 import java.net.ServerSocket;
-
 import lineage2.commons.lang.StatsUtils;
 import lineage2.commons.listener.Listener;
 import lineage2.commons.listener.ListenerList;
@@ -95,7 +94,6 @@ import lineage2.gameserver.taskmanager.TaskManager;
 import lineage2.gameserver.taskmanager.tasks.RestoreOfflineTraders;
 import lineage2.gameserver.utils.Strings;
 import net.sf.ehcache.CacheManager;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -105,13 +103,7 @@ import org.slf4j.LoggerFactory;
  */
 public class GameServer
 {
-	/**
-	 * Field LOGIN_SERVER_PROTOCOL. (value is 2)
-	 */
 	public static final int LOGIN_SERVER_PROTOCOL = 2;
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(GameServer.class);
 	
 	/**
@@ -148,29 +140,11 @@ public class GameServer
 		}
 	}
 	
-	/**
-	 * Field _instance.
-	 */
 	public static GameServer _instance;
-	/**
-	 * Field _selectorThreads.
-	 */
 	private final SelectorThread<GameClient> _selectorThreads[];
-	/**
-	 * Field version.
-	 */
 	private final Version version;
-	/**
-	 * Field statusServer.
-	 */
 	private TelnetServer statusServer;
-	/**
-	 * Field _listeners.
-	 */
 	private final GameServerListenerList _listeners;
-	/**
-	 * Field _serverStarted.
-	 */
 	private final int _serverStarted;
 	
 	/**
@@ -312,7 +286,6 @@ public class GameServer
 		SoIManager.getInstance();
 		SoHManager.getInstance();
 		HarnakUndegroundManager.getInstance();
-		
 		BloodAltarManager.getInstance();
 		L2TopManager.getInstance();
 		MMOTopManager.getInstance();
@@ -320,10 +293,8 @@ public class GameServer
 		MiniGameScoreManager.getInstance();
 		AwakingManager.getInstance();
 		FindPartyManager.getInstance().load();
-		
 		ArcanManager.getInstance();
 		WorldStatisticsManager.getInstance();
-		
 		SubClassTable.getInstance();
 		DualClassTable.getInstance();
 		

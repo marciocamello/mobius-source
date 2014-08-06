@@ -31,9 +31,6 @@ public final class FrintezzaGatekeeperInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field frintezzaIzId. (value is 136)
-	 */
 	private static final int frintezzaIzId = 136;
 	
 	/**

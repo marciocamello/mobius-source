@@ -15,12 +15,10 @@ package lineage2.loginserver;
 import java.io.File;
 import java.net.InetAddress;
 import java.net.ServerSocket;
-
 import lineage2.commons.net.nio.impl.SelectorConfig;
 import lineage2.commons.net.nio.impl.SelectorThread;
 import lineage2.loginserver.database.L2DatabaseFactory;
 import lineage2.loginserver.gameservercon.GameServerCommunication;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,17 +28,8 @@ import org.slf4j.LoggerFactory;
  */
 public class LoginServer
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(LoginServer.class);
-	/**
-	 * Field authServer.
-	 */
 	private static LoginServer authServer;
-	/**
-	 * Field _gameServerListener.
-	 */
 	private final GameServerCommunication _gameServerListener;
 	
 	/**

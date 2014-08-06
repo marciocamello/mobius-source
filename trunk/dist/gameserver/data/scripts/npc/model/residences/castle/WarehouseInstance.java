@@ -36,25 +36,10 @@ public final class WarehouseInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field COND_ALL_FALSE. (value is 0)
-	 */
 	protected static final int COND_ALL_FALSE = 0;
-	/**
-	 * Field COND_BUSY_BECAUSE_OF_SIEGE. (value is 1)
-	 */
 	protected static final int COND_BUSY_BECAUSE_OF_SIEGE = 1;
-	/**
-	 * Field COND_OWNER. (value is 2)
-	 */
 	protected static final int COND_OWNER = 2;
-	/**
-	 * Field ITEM_BLOOD_ALLI. (value is 9911)
-	 */
 	private static final int ITEM_BLOOD_ALLI = 9911;
-	/**
-	 * Field ITEM_BLOOD_OATH. (value is 9910)
-	 */
 	private static final int ITEM_BLOOD_OATH = 9910;
 	
 	/**

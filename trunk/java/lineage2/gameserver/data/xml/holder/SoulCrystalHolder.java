@@ -22,9 +22,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public final class SoulCrystalHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final SoulCrystalHolder _instance = new SoulCrystalHolder();
 	
 	/**
@@ -36,9 +33,6 @@ public final class SoulCrystalHolder extends AbstractHolder
 		return _instance;
 	}
 	
-	/**
-	 * Field _crystals.
-	 */
 	private final TIntObjectHashMap<SoulCrystal> _crystals = new TIntObjectHashMap<>();
 	
 	/**

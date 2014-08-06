@@ -18,7 +18,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.ThreadPoolManager;
@@ -58,7 +57,6 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -68,17 +66,8 @@ import org.slf4j.LoggerFactory;
  */
 public final class DestructionOfFlag extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
 {
-	/**
-	 * Field _log.
-	 */
 	static final Logger _log = LoggerFactory.getLogger(DestructionOfFlag.class.getName());
-	/**
-	 * Field REMOVE_BUFFS. (value is false)
-	 */
 	private static final boolean REMOVE_BUFFS = false;
-	/**
-	 * Field BUFFS_TO_REMOVE.
-	 */
 	private static final int[][] BUFFS_TO_REMOVE =
 	{
 		{
@@ -93,17 +82,11 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 			1
 		}
 	};
-	/**
-	 * Field REWARD.
-	 */
 	private static final int[] REWARD =
 	{
 		57,
 		2000000000
 	};
-	/**
-	 * Field startTime.
-	 */
 	private static final String[][] startTime =
 	{
 		{
@@ -143,13 +126,7 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 			"23:46"
 		}
 	};
-	/**
-	 * Field MIN_PLAYERS.
-	 */
 	private static final int MIN_PLAYERS = 0;
-	/**
-	 * Field _listAllowSaveBuffs.
-	 */
 	private static final int[] _listAllowSaveBuffs =
 	{
 		1388,
@@ -257,9 +234,6 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 		1357,
 		1363
 	};
-	/**
-	 * Field _listBuff.
-	 */
 	static final int[][][] _listBuff =
 	{
 		{
@@ -311,13 +285,7 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 			}
 		}
 	};
-	/**
-	 * Field ALLOW_RESTRICT_SKILLS.
-	 */
 	private static final boolean ALLOW_RESTRICT_SKILLS = false;
-	/**
-	 * Field RESTRICT_SKILLS.
-	 */
 	private static final int[][] RESTRICT_SKILLS =
 	{
 		{
@@ -333,54 +301,24 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 			2
 		}
 	};
-	/**
-	 * Field colors.
-	 */
 	public static final String[] colors =
 	{
 		"00ff00",
 		"ffffff",
 		"00ffff"
 	};
-	/**
-	 * Field players_list.
-	 */
 	private static final List<Long> players_list = new CopyOnWriteArrayList<>();
-	/**
-	 * Field live_list.
-	 */
 	static List<Long> live_list = new CopyOnWriteArrayList<>();
-	/**
-	 * Field ALLOW_RESTRICT_ITEMS.
-	 */
 	private static final boolean ALLOW_RESTRICT_ITEMS = false;
-	/**
-	 * Field RESTRICT_ITEMS.
-	 */
 	private static final int[] RESTRICT_ITEMS =
 	{
 		725,
 		727
 	};
-	/**
-	 * Field PROTECT_IP_ACTIVE.
-	 */
 	private static final boolean PROTECT_IP_ACTIVE = false;
-	/**
-	 * Field _startTask.
-	 */
 	private static ScheduledFuture<?> _startTask;
-	/**
-	 * Field _saveBuffList.
-	 */
 	static final HashMap<Long, LazyArrayList<Effect>> _saveBuffList = new HashMap<>();
-	/**
-	 * Field _spawns.
-	 */
 	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
-	/**
-	 * Field EVENT_MANAGER_ID.
-	 */
 	private static final int EVENT_MANAGER_ID = 31143;
 	
 	/**
@@ -580,9 +518,6 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 	 */
 	public final class StartTask implements Runnable
 	{
-		/**
-		 * Field endTime.
-		 */
 		private final String endTime;
 		
 		/**
@@ -632,121 +567,34 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 		}
 	}
 	
-	/**
-	 * Field startTasks.
-	 */
 	private static final List<ScheduledFuture<?>> startTasks = new ArrayList<>();
-	/**
-	 * Field players_list1.
-	 */
 	static LazyArrayList<Long> players_list1 = new LazyArrayList<>();
-	/**
-	 * Field players_list2.
-	 */
 	static LazyArrayList<Long> players_list2 = new LazyArrayList<>();
-	/**
-	 * Field players_list3.
-	 */
 	static final LazyArrayList<Long> players_list3 = new LazyArrayList<>();
-	/**
-	 * Field players_list4.
-	 */
 	private static final LazyArrayList<Long> players_list4 = new LazyArrayList<>();
-	/**
-	 * Field whiteFlag.
-	 */
 	static MonsterInstance whiteFlag = null;
-	/**
-	 * Field greenFlag.
-	 */
 	static MonsterInstance greenFlag = null;
-	/**
-	 * Field yellowFlag.
-	 */
 	static MonsterInstance yellowFlag = null;
-	/**
-	 * Field blackFlag.
-	 */
 	static MonsterInstance blackFlag = null;
-	/**
-	 * Field _isRegistrationActive.
-	 */
 	private static boolean _isRegistrationActive = false;
-	/**
-	 * Field _status.
-	 */
 	public static int _status = 0;
-	/**
-	 * Field _time_to_start.
-	 */
 	private static int _time_to_start;
-	/**
-	 * Field _category.
-	 */
 	private static int _category;
-	/**
-	 * Field _minLevel.
-	 */
 	private static int _minLevel;
-	/**
-	 * Field _maxLevel.
-	 */
 	private static int _maxLevel;
-	/**
-	 * Field _autoContinue.
-	 */
 	private static int _autoContinue = 0;
-	/**
-	 * Field ALLOW_BUFFS.
-	 */
 	private static final boolean ALLOW_BUFFS = true;
-	/**
-	 * Field ALLOW_CLAN_SKILL.
-	 */
 	private static final boolean ALLOW_CLAN_SKILL = true;
-	/**
-	 * Field ALLOW_HERO_SKILL.
-	 */
 	private static final boolean ALLOW_HERO_SKILL = true;
-	/**
-	 * Field EVENT_DestructionOfFlag_rate.
-	 */
 	private static final boolean EVENT_DestructionOfFlag_rate = false;
-	/**
-	 * Field ALLOW_PETS.
-	 */
 	private static final boolean ALLOW_PETS = true;
-	/**
-	 * Field TIME_FOR_RES.
-	 */
 	private static final int TIME_FOR_RES = 5;
-	/**
-	 * Field _zone.
-	 */
 	private static final Zone _zone = ReflectionUtils.getZone("[colosseum_battle]");
-	/**
-	 * Field _zoneListener.
-	 */
 	private static final ZoneListener _zoneListener = new ZoneListener();
-	/**
-	 * Field team1loc.
-	 */
 	private static final Location team1loc = new Location(-82952, -44344, -11496, -11396);
-	/**
-	 * Field team2loc.
-	 */
 	private static final Location team2loc = new Location(-82536, -47016, -11504, -11404);
-	/**
-	 * Field team3loc.
-	 */
 	private static final Location team3loc = new Location(-80680, -44296, -11496, -11396);
-	/**
-	 * Field team4loc.
-	 */
 	private static final Location team4loc = new Location(-78680, -41296, -11496, -11204);
-	/**
-	 * Field _resurrectionList.
-	 */
 	private static final HashMap<Long, ScheduledFuture<?>> _resurrectionList = new HashMap<>();
 	
 	/**
@@ -824,9 +672,6 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 		onReload();
 	}
 	
-	/**
-	 * Field _active.
-	 */
 	static boolean _active = false;
 	
 	/**
@@ -2349,17 +2194,9 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 		OnEscape(player);
 	}
 	
-	/**
-	 */
 	public static class TeleportTask implements Runnable
 	{
-		/**
-		 * Field loc.
-		 */
 		Location loc;
-		/**
-		 * Field target.
-		 */
 		Creature target;
 		
 		/**
@@ -2501,13 +2338,8 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 		}
 	}
 	
-	/**
-	 */
 	public static class restoreBuffListForPlayer implements Runnable
 	{
-		/**
-		 * Field player.
-		 */
 		Player player;
 		
 		/**
@@ -2563,13 +2395,8 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 		}
 	}
 	
-	/**
-	 */
 	public static class buffPlayer implements Runnable
 	{
-		/**
-		 * Field player.
-		 */
 		Player player;
 		
 		/**
@@ -2623,13 +2450,8 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 		}
 	}
 	
-	/**
-	 */
 	public static class timer implements Runnable
 	{
-		/**
-		 * Field time.
-		 */
 		int time;
 		
 		/**
@@ -3326,8 +3148,6 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 		return false;
 	}
 	
-	/**
-	 */
 	private static class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		/**

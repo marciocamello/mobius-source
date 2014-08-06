@@ -270,21 +270,16 @@ public final class Locator
 			return urls;
 		}
 		
-		File[] matches = location.listFiles(new FilenameFilter()
+		File[] matches = location.listFiles((FilenameFilter) (dir, name) ->
 		{
-			@Override
-			public boolean accept(File dir, String name)
+			for (String extension : extensions)
 			{
-				for (String extension : extensions)
+				if (name.toLowerCase().endsWith(extension))
 				{
-					if (name.toLowerCase().endsWith(extension))
-					{
-						return true;
-					}
+					return true;
 				}
-				
-				return false;
 			}
+			return false;
 		});
 		urls = new URL[matches.length];
 		

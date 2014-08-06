@@ -14,7 +14,6 @@ package instances;
 
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Player;
@@ -28,7 +27,6 @@ import lineage2.gameserver.utils.Location;
  * Rim Pailaka - Rune
  * @author pchayka
  */
-
 public final class RimPailaka extends Reflection
 {
 	private static final int SeducedKnight = 36562;
@@ -45,7 +43,6 @@ public final class RimPailaka extends Reflection
 	private static final long firstwavedelay = 120 * 1000L;
 	private static final long secondwavedelay = 480 * 1000L; // 8
 	private static final long thirdwavedelay = 480 * 1000L; // 16
-	
 	private ScheduledFuture<?> initTask;
 	private ScheduledFuture<?> firstwaveTask;
 	ScheduledFuture<?> secondWaveTask;

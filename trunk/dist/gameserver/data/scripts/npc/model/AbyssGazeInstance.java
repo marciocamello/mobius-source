@@ -31,13 +31,7 @@ public final class AbyssGazeInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field ekimusIzId. (value is 121)
-	 */
 	private static final int ekimusIzId = 121;
-	/**
-	 * Field hoidefIzId. (value is 122)
-	 */
 	private static final int hoidefIzId = 122;
 	
 	/**

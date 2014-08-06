@@ -25,43 +25,16 @@ public class AbsorbInfo
 	 */
 	public static enum AbsorbType
 	{
-		/**
-		 * Field LAST_HIT.
-		 */
 		LAST_HIT,
-		/**
-		 * Field PARTY_ONE.
-		 */
 		PARTY_ONE,
-		/**
-		 * Field PARTY_ALL.
-		 */
 		PARTY_ALL,
-		/**
-		 * Field PARTY_RANDOM.
-		 */
 		PARTY_RANDOM
 	}
 	
-	/**
-	 * Field _skill.
-	 */
 	private final boolean _skill;
-	/**
-	 * Field _absorbType.
-	 */
 	private final AbsorbType _absorbType;
-	/**
-	 * Field _chance.
-	 */
 	private final int _chance;
-	/**
-	 * Field _cursedChance.
-	 */
 	private final int _cursedChance;
-	/**
-	 * Field _levels.
-	 */
 	private final TIntHashSet _levels;
 	
 	/**

@@ -23,7 +23,6 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
@@ -113,10 +112,8 @@ import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
 import lineage2.gameserver.utils.Strings;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import gnu.trove.iterator.TIntObjectIterator;
 
 /**
@@ -129,149 +126,41 @@ public class NpcInstance extends Creature
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field NO_CHAT_WINDOW. (value is ""noChatWindow"")
-	 */
 	public static final String NO_CHAT_WINDOW = "noChatWindow";
-	/**
-	 * Field NO_RANDOM_WALK. (value is ""noRandomWalk"")
-	 */
 	public static final String NO_RANDOM_WALK = "noRandomWalk";
-	/**
-	 * Field NO_RANDOM_ANIMATION. (value is ""noRandomAnimation"")
-	 */
 	public static final String NO_RANDOM_ANIMATION = "noRandomAnimation";
-	/**
-	 * Field TARGETABLE. (value is ""TargetEnabled"")
-	 */
 	public static final String TARGETABLE = "TargetEnabled";
-	/**
-	 * Field ATTACKABLE. (value is ""attackable"")
-	 */
 	public static final String ATTACKABLE = "attackable";
-	/**
-	 * Field SHOW_NAME. (value is ""showName"")
-	 */
 	public static final String SHOW_NAME = "showName";
-	/**
-	 * Field SHOW_TITLE. (value is ""showTitle"")
-	 */
 	public static final String SHOW_TITLE = "showTitle";
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(NpcInstance.class);
-	/**
-	 * Field _personalAggroRange.
-	 */
 	private int _personalAggroRange = -1;
-	/**
-	 * Field _level.
-	 */
 	private int _level = 0;
-	/**
-	 * Field _dieTime.
-	 */
 	private long _dieTime = 0L;
-	/**
-	 * Field _spawnAnimation.
-	 */
 	protected int _spawnAnimation = 2;
-	/**
-	 * Field _currentLHandId.
-	 */
 	private int _currentLHandId;
-	/**
-	 * Field _currentRHandId.
-	 */
 	private int _currentRHandId;
-	/**
-	 * Field _currentCollisionRadius.
-	 */
 	private double _currentCollisionRadius;
-	/**
-	 * Field _currentCollisionHeight.
-	 */
 	private double _currentCollisionHeight;
-	/**
-	 * Field npcState.
-	 */
 	private int npcState = 0;
-	/**
-	 * Field _hasRandomAnimation.
-	 */
 	protected boolean _hasRandomAnimation;
-	/**
-	 * Field _hasRandomWalk.
-	 */
 	protected boolean _hasRandomWalk;
-	/**
-	 * Field _hasChatWindow.
-	 */
 	protected boolean _hasChatWindow;
-	/**
-	 * Field _decayTask.
-	 */
 	private Future<?> _decayTask;
-	/**
-	 * Field _animationTask.
-	 */
 	private Future<?> _animationTask;
-	/**
-	 * Field _aggroList.
-	 */
 	private final AggroList _aggroList;
-	/**
-	 * Field _isTargetable.
-	 */
 	private boolean _isTargetable;
-	/**
-	 * Field _isAttackable.
-	 */
 	private boolean _isAttackable;
-	/**
-	 * Field _showName.
-	 */
 	private boolean _showName;
-	/**
-	 * Field _showTitle.
-	 */
 	private boolean _showTitle;
-	/**
-	 * Field _nearestCastle.
-	 */
 	private Castle _nearestCastle;
-	/**
-	 * Field _nearestFortress.
-	 */
 	private Fortress _nearestFortress;
-	/**
-	 * Field _nearestClanHall.
-	 */
 	private ClanHall _nearestClanHall;
-	/**
-	 * Field _nameNpcString.
-	 */
 	private NpcString _nameNpcString = NpcString.NONE;
-	/**
-	 * Field _titleNpcString.
-	 */
 	private NpcString _titleNpcString = NpcString.NONE;
-	/**
-	 * Field _spawn.
-	 */
 	private Spawner _spawn;
-	/**
-	 * Field _spawnedLoc.
-	 */
 	private Location _spawnedLoc = new Location();
-	/**
-	 * Field _spawnRange.
-	 */
 	private SpawnRange _spawnRange;
-	/**
-	 * Field _parameters.
-	 */
 	private MultiValueSet<String> _parameters = StatsSet.EMPTY;
 	
 	/**
@@ -701,9 +590,6 @@ public class NpcInstance extends Creature
 		return getTemplate().npcId;
 	}
 	
-	/**
-	 * Field _unAggred.
-	 */
 	protected boolean _unAggred = false;
 	
 	/**
@@ -951,9 +837,6 @@ public class NpcInstance extends Creature
 		return _level == 0 ? getTemplate().level : _level;
 	}
 	
-	/**
-	 * Field _displayId.
-	 */
 	private int _displayId = 0;
 	
 	/**
@@ -1056,9 +939,6 @@ public class NpcInstance extends Creature
 		super.sendChanges();
 	}
 	
-	/**
-	 * Field _broadcastCharInfoTask.
-	 */
 	ScheduledFuture<?> _broadcastCharInfoTask;
 	
 	/**
@@ -1221,9 +1101,6 @@ public class NpcInstance extends Creature
 		return _nearestClanHall;
 	}
 	
-	/**
-	 * Field _lastSocialAction.
-	 */
 	protected long _lastSocialAction;
 	
 	@Override
@@ -1758,21 +1635,10 @@ public class NpcInstance extends Creature
 		player.sendPacket(html);
 	}
 	
-	/**
-	 */
 	private class QuestInfo implements Comparable<QuestInfo>
 	{
-		/**
-		 * Field quest.
-		 */
 		private final Quest quest;
-		/**
-		 * Field player.
-		 */
 		private final Player player;
-		/**
-		 * Field isStart.
-		 */
 		private final boolean isStart;
 		
 		/**
@@ -2044,13 +1910,7 @@ public class NpcInstance extends Creature
 		return "npcdefault.htm";
 	}
 	
-	/**
-	 * Field _isBusy.
-	 */
 	private boolean _isBusy;
-	/**
-	 * Field _busyMessage.
-	 */
 	private String _busyMessage = "";
 	
 	/**
@@ -2452,9 +2312,6 @@ public class NpcInstance extends Creature
 		_storedId = GameObjectsStorage.refreshId(this);
 	}
 	
-	/**
-	 * Field _isUnderground.
-	 */
 	private boolean _isUnderground = false;
 	
 	/**

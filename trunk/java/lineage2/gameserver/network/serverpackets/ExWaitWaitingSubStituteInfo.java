@@ -18,9 +18,6 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class ExWaitWaitingSubStituteInfo extends L2GameServerPacket
 {
-	/**
-	 * Field turnOn.
-	 */
 	boolean turnOn;
 	
 	/**
@@ -34,7 +31,6 @@ public class ExWaitWaitingSubStituteInfo extends L2GameServerPacket
 	
 	public static final int WAITING_CANCEL = 0;
 	public static final int WAITING_OK = 1;
-	
 	private int _code;
 	
 	public ExWaitWaitingSubStituteInfo(int code)
@@ -53,5 +49,4 @@ public class ExWaitWaitingSubStituteInfo extends L2GameServerPacket
 		writeD(0x00);
 		writeD(_code);
 	}
-	
 }

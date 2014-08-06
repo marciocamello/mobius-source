@@ -18,13 +18,7 @@ package lineage2.commons.net.utils;
  */
 public class Net
 {
-	/**
-	 * Field address.
-	 */
 	private final int address;
-	/**
-	 * Field netmask.
-	 */
 	private final int netmask;
 	
 	/**

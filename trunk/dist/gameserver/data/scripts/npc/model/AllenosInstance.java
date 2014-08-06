@@ -29,9 +29,6 @@ public final class AllenosInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field tiatIzId. (value is 110)
-	 */
 	private static final int tiatIzId = 110;
 	
 	/**

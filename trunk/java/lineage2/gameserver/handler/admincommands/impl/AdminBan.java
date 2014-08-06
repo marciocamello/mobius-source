@@ -14,7 +14,6 @@ package lineage2.gameserver.handler.admincommands.impl;
 
 import java.util.Collection;
 import java.util.StringTokenizer;
-
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
@@ -46,53 +45,17 @@ public class AdminBan implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_ban.
-		 */
 		admin_ban,
-		/**
-		 * Field admin_unban.
-		 */
 		admin_unban,
-		/**
-		 * Field admin_cban.
-		 */
 		admin_cban,
-		/**
-		 * Field admin_chatban.
-		 */
 		admin_chatban,
-		/**
-		 * Field admin_chatunban.
-		 */
 		admin_chatunban,
-		/**
-		 * Field admin_accban.
-		 */
 		admin_accban,
-		/**
-		 * Field admin_accunban.
-		 */
 		admin_accunban,
-		/**
-		 * Field admin_trade_ban.
-		 */
 		admin_trade_ban,
-		/**
-		 * Field admin_trade_unban.
-		 */
 		admin_trade_unban,
-		/**
-		 * Field admin_jail.
-		 */
 		admin_jail,
-		/**
-		 * Field admin_unjail.
-		 */
 		admin_unjail,
-		/**
-		 * Field admin_permaban.
-		 */
 		admin_permaban
 	}
 	

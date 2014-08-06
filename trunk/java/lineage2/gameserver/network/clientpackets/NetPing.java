@@ -20,14 +20,8 @@ import lineage2.gameserver.model.Player;
  */
 public class NetPing extends L2GameClientPacket
 {
-	/**
-	 * Field _clientID.
-	 */
 	@SuppressWarnings("unused")
 	private int _clientID;
-	/**
-	 * Field _ping.
-	 */
 	private int _ping;
 	
 	/**

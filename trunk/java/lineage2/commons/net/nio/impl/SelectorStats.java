@@ -20,41 +20,14 @@ import java.util.concurrent.atomic.AtomicLong;
  */
 public class SelectorStats
 {
-	/**
-	 * Field _connectionsTotal.
-	 */
 	private final AtomicLong _connectionsTotal = new AtomicLong();
-	/**
-	 * Field _connectionsCurrent.
-	 */
 	private final AtomicLong _connectionsCurrent = new AtomicLong();
-	/**
-	 * Field _connectionsMax.
-	 */
 	private final AtomicLong _connectionsMax = new AtomicLong();
-	/**
-	 * Field _incomingBytesTotal.
-	 */
 	private final AtomicLong _incomingBytesTotal = new AtomicLong();
-	/**
-	 * Field _outgoingBytesTotal.
-	 */
 	private final AtomicLong _outgoingBytesTotal = new AtomicLong();
-	/**
-	 * Field _incomingPacketsTotal.
-	 */
 	private final AtomicLong _incomingPacketsTotal = new AtomicLong();
-	/**
-	 * Field _outgoingPacketsTotal.
-	 */
 	private final AtomicLong _outgoingPacketsTotal = new AtomicLong();
-	/**
-	 * Field _bytesMaxPerRead.
-	 */
 	private final AtomicLong _bytesMaxPerRead = new AtomicLong();
-	/**
-	 * Field _bytesMaxPerWrite.
-	 */
 	private final AtomicLong _bytesMaxPerWrite = new AtomicLong();
 	
 	/**

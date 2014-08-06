@@ -18,7 +18,6 @@ package lineage2.gameserver.network.serverpackets;
 public class ExResponseCommissionBuyItem extends L2GameServerPacket
 {
 	public static final ExResponseCommissionBuyItem FAILED = new ExResponseCommissionBuyItem(0);
-	
 	private final int _code;
 	private int _itemId;
 	private long _count;

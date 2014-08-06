@@ -38,7 +38,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagicUseListener
 {
 	public static final int INSTANCE_ID = 241;
-	
 	private static final int Rean = 33491;
 	private static final int Morelin = 30925;
 	private static final int Lania = 33783;
@@ -79,7 +78,6 @@ public class _10385_RedThreadofFate extends Quest implements ScriptFile, OnMagic
 	private static final int soul = 9581;
 	private static final int flame = 9582;
 	private static final int love = 9583;
-	
 	private final ZoneListener _zoneListener;
 	
 	public _10385_RedThreadofFate()

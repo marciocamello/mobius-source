@@ -21,25 +21,10 @@ import gnu.trove.list.array.TIntArrayList;
  */
 public class Faction
 {
-	/**
-	 * Field none. (value is ""none"")
-	 */
 	public final static String none = "none";
-	/**
-	 * Field NONE.
-	 */
 	public final static Faction NONE = new Faction(none);
-	/**
-	 * Field factionId.
-	 */
 	public final String factionId;
-	/**
-	 * Field factionRange.
-	 */
 	public int factionRange;
-	/**
-	 * Field ignoreId.
-	 */
 	public TIntArrayList ignoreId = TroveUtils.EMPTY_INT_ARRAY_LIST;
 	
 	/**

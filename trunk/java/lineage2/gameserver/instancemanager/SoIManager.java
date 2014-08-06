@@ -21,7 +21,6 @@ import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
 import lineage2.gameserver.utils.Util;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,21 +30,9 @@ import org.slf4j.LoggerFactory;
  */
 public class SoIManager
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(SoIManager.class);
-	/**
-	 * Field _instance.
-	 */
 	private static SoIManager _instance = null;
-	/**
-	 * Field SOI_OPEN_TIME.
-	 */
 	private static final long SOI_OPEN_TIME = 24 * 60 * 60 * 1000L;
-	/**
-	 * Field openSeedTeleportLocs.
-	 */
 	private static final Location[] openSeedTeleportLocs =
 	{
 		new Location(-179537, 209551, -15504),
@@ -67,9 +54,6 @@ public class SoIManager
 		new Location(-177264, 217760, -9536),
 		new Location(-173727, 218169, -9536)
 	};
-	/**
-	 * Field _zone.
-	 */
 	private static Zone _zone = null;
 	
 	/**

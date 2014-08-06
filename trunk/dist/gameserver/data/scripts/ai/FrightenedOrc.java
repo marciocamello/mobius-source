@@ -24,9 +24,6 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class FrightenedOrc extends Fighter
 {
-	/**
-	 * Field _sayOnAttack.
-	 */
 	private boolean _sayOnAttack;
 	
 	/**

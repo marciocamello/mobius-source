@@ -26,9 +26,6 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
  */
 public class CommandChannel implements IUserCommandHandler
 {
-	/**
-	 * Field COMMAND_IDS.
-	 */
 	private static final int[] COMMAND_IDS =
 	{
 		92,

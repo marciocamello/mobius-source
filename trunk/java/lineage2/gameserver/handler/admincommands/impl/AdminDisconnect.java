@@ -32,13 +32,7 @@ public class AdminDisconnect implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_disconnect.
-		 */
 		admin_disconnect,
-		/**
-		 * Field admin_kick.
-		 */
 		admin_kick
 	}
 	

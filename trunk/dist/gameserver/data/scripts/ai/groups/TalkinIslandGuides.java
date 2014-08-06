@@ -28,37 +28,13 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class TalkinIslandGuides extends DefaultAI
 {
-	/**
-	 * Field SEARCHING_MYST_POWER_SOLDIER. (value is 33016)
-	 */
 	private final static int SEARCHING_MYST_POWER_SOLDIER = 33016;
-	/**
-	 * Field GOING_INTO_REAL_WAR_SOLDIER. (value is 33014)
-	 */
 	private final static int GOING_INTO_REAL_WAR_SOLDIER = 33014;
-	/**
-	 * Field BACKUP_SEEKERS_ASSASSIN. (value is 33204)
-	 */
 	private final static int BACKUP_SEEKERS_ASSASSIN = 33204;
-	/**
-	 * Field SEARCHING_MYST_POWER_STRING.
-	 */
 	private final static NpcString SEARCHING_MYST_POWER_STRING = NpcString.S1_COME_FOLLOW_ME;
-	/**
-	 * Field GOING_INTO_REAL_WAR_STRING.
-	 */
 	private final static NpcString GOING_INTO_REAL_WAR_STRING = NpcString.S1_COME_FOLLOW_ME;
-	/**
-	 * Field BACKUP_SEEKERS_STRING.
-	 */
 	private final static NpcString BACKUP_SEEKERS_STRING = NpcString.HEY_KID_HARRY_UP_AND_FOLLOW_ME;
-	/**
-	 * Field SAY_INTERVAL. (value is 6000)
-	 */
 	private static final int SAY_INTERVAL = 6000;
-	/**
-	 * Field SMP_COORDS.
-	 */
 	private final static int[][] SMP_COORDS =
 	{
 		{
@@ -87,9 +63,6 @@ public final class TalkinIslandGuides extends DefaultAI
 			-1792
 		}
 	};
-	/**
-	 * Field GRW_COORDS_LEFT.
-	 */
 	private final static int[][] GRW_COORDS_LEFT =
 	{
 		{
@@ -118,9 +91,6 @@ public final class TalkinIslandGuides extends DefaultAI
 			-1976
 		}
 	};
-	/**
-	 * Field GRW_COORDS_RIGHT.
-	 */
 	private final static int[][] GRW_COORDS_RIGHT =
 	{
 		{
@@ -149,9 +119,6 @@ public final class TalkinIslandGuides extends DefaultAI
 			-1984
 		}
 	};
-	/**
-	 * Field BS_COORDS.
-	 */
 	private final static int[][] BS_COORDS =
 	{
 		{
@@ -180,13 +147,7 @@ public final class TalkinIslandGuides extends DefaultAI
 			-1528
 		}
 	};
-	/**
-	 * Field currentState.
-	 */
 	private int currentState;
-	/**
-	 * Field lastSayTime.
-	 */
 	private long lastSayTime = 0;
 	
 	/**

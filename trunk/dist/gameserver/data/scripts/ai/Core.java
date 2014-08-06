@@ -29,25 +29,10 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Core extends Fighter
 {
-	/**
-	 * Field _firstTimeAttacked.
-	 */
 	private boolean _firstTimeAttacked = true;
-	/**
-	 * Field TELEPORTATION_CUBIC_ID. (value is 31842)
-	 */
 	private static final int TELEPORTATION_CUBIC_ID = 31842;
-	/**
-	 * Field CUBIC_1_POSITION.
-	 */
 	private static final Location CUBIC_1_POSITION = new Location(16502, 110165, -6394, 0);
-	/**
-	 * Field CUBIC_2_POSITION.
-	 */
 	private static final Location CUBIC_2_POSITION = new Location(18948, 110165, -6394, 0);
-	/**
-	 * Field CUBIC_DESPAWN_TIME.
-	 */
 	private static final int CUBIC_DESPAWN_TIME = 15 * 60 * 1000;
 	
 	/**
@@ -120,13 +105,7 @@ public final class Core extends Fighter
 	 */
 	static class DeSpawnScheduleTimerTask extends RunnableImpl
 	{
-		/**
-		 * Field cubic1.
-		 */
 		final NpcInstance cubic1;
-		/**
-		 * Field cubic2.
-		 */
 		final NpcInstance cubic2;
 		
 		/**

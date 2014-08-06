@@ -14,11 +14,9 @@ package lineage2.gameserver.handler.voicecommands.impl;
 
 import static lineage2.gameserver.model.Zone.ZoneType.no_restart;
 import static lineage2.gameserver.model.Zone.ZoneType.no_summon;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
@@ -46,7 +44,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.skills.AbnormalEffect;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
-
 import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -62,13 +59,7 @@ public class Wedding implements IVoicedCommandHandler
 	 */
 	private static class CoupleAnswerListener implements OnAnswerListener
 	{
-		/**
-		 * Field _playerRef1.
-		 */
 		private final HardReference<Player> _playerRef1;
-		/**
-		 * Field _playerRef2.
-		 */
 		private final HardReference<Player> _playerRef2;
 		
 		/**
@@ -118,13 +109,7 @@ public class Wedding implements IVoicedCommandHandler
 		}
 	}
 	
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Wedding.class);
-	/**
-	 * Field _voicedCommands.
-	 */
 	private static final String[] _voicedCommands =
 	{
 		"divorce",
@@ -429,13 +414,7 @@ public class Wedding implements IVoicedCommandHandler
 	 */
 	static class EscapeFinalizer extends RunnableImpl
 	{
-		/**
-		 * Field _activeChar.
-		 */
 		private final Player _activeChar;
-		/**
-		 * Field _loc.
-		 */
 		private final Location _loc;
 		
 		/**

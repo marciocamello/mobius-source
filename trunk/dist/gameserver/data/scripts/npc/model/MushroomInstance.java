@@ -14,7 +14,6 @@ package npc.model;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Creature;
@@ -36,41 +35,14 @@ public final class MushroomInstance extends MonsterInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field FANTASY_MUSHROOM. (value is 18864)
-	 */
 	private static final int FANTASY_MUSHROOM = 18864;
-	/**
-	 * Field FANTASY_MUSHROOM_SKILL. (value is 6427)
-	 */
 	private static final int FANTASY_MUSHROOM_SKILL = 6427;
-	/**
-	 * Field RAINBOW_FROG. (value is 18866)
-	 */
 	private static final int RAINBOW_FROG = 18866;
-	/**
-	 * Field RAINBOW_FROG_SKILL. (value is 6429)
-	 */
 	private static final int RAINBOW_FROG_SKILL = 6429;
-	/**
-	 * Field STICKY_MUSHROOM. (value is 18865)
-	 */
 	private static final int STICKY_MUSHROOM = 18865;
-	/**
-	 * Field STICKY_MUSHROOM_SKILL. (value is 6428)
-	 */
 	private static final int STICKY_MUSHROOM_SKILL = 6428;
-	/**
-	 * Field ENERGY_PLANT. (value is 18868)
-	 */
 	private static final int ENERGY_PLANT = 18868;
-	/**
-	 * Field ENERGY_PLANT_SKILL. (value is 6430)
-	 */
 	private static final int ENERGY_PLANT_SKILL = 6430;
-	/**
-	 * Field ABYSS_WEED. (value is 18867)
-	 */
 	private static final int ABYSS_WEED = 18867;
 	
 	/**
@@ -166,17 +138,8 @@ public final class MushroomInstance extends MonsterInstance
 	 */
 	public static class TaskAfterDead extends RunnableImpl
 	{
-		/**
-		 * Field _actor.
-		 */
 		private final NpcInstance _actor;
-		/**
-		 * Field _killer.
-		 */
 		private final Creature _killer;
-		/**
-		 * Field _skill.
-		 */
 		private final Skill _skill;
 		
 		/**

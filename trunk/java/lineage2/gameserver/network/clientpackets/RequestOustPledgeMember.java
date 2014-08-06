@@ -27,9 +27,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class RequestOustPledgeMember extends L2GameClientPacket
 {
-	/**
-	 * Field _target.
-	 */
 	private String _target;
 	
 	/**

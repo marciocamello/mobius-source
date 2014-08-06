@@ -17,7 +17,6 @@ import lineage2.loginserver.gameservercon.GameServer;
 import lineage2.loginserver.gameservercon.ReceivablePacket;
 import lineage2.loginserver.gameservercon.lspackets.AuthResponse;
 import lineage2.loginserver.gameservercon.lspackets.LoginServerFail;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,57 +26,18 @@ import org.slf4j.LoggerFactory;
  */
 public class AuthRequest extends ReceivablePacket
 {
-	/**
-	 * Field _log.
-	 */
 	private final static Logger _log = LoggerFactory.getLogger(AuthRequest.class);
-	/**
-	 * Field _protocolVersion.
-	 */
 	private int _protocolVersion;
-	/**
-	 * Field requestId.
-	 */
 	private int requestId;
-	/**
-	 * Field acceptAlternateID.
-	 */
 	private boolean acceptAlternateID;
-	/**
-	 * Field externalIp.
-	 */
 	private String externalIp;
-	/**
-	 * Field internalIp.
-	 */
 	private String internalIp;
-	/**
-	 * Field maxOnline.
-	 */
 	private int maxOnline;
-	/**
-	 * Field _serverType.
-	 */
 	private int _serverType;
-	/**
-	 * Field _ageLimit.
-	 */
 	private int _ageLimit;
-	/**
-	 * Field _gmOnly.
-	 */
 	private boolean _gmOnly;
-	/**
-	 * Field _brackets.
-	 */
 	private boolean _brackets;
-	/**
-	 * Field _pvp.
-	 */
 	private boolean _pvp;
-	/**
-	 * Field ports.
-	 */
 	private int[] ports;
 	
 	/**

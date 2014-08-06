@@ -14,7 +14,6 @@ package ai.seedofdestruction;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -25,17 +24,8 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public final class DimensionMovingDevice extends DefaultAI
 {
-	/**
-	 * Field MOBS_WAVE_DELAY.
-	 */
 	private static final int MOBS_WAVE_DELAY = 120 * 1000;
-	/**
-	 * Field spawnTime.
-	 */
 	private long spawnTime = 0;
-	/**
-	 * Field MOBS.
-	 */
 	private static final int[] MOBS =
 	{
 		22538,
@@ -44,9 +34,6 @@ public final class DimensionMovingDevice extends DefaultAI
 		22542,
 		22548
 	};
-	/**
-	 * Field _npcs.
-	 */
 	private final List<NpcInstance> _npcs = new ArrayList<>();
 	
 	/**

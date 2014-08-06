@@ -22,9 +22,6 @@ import lineage2.gameserver.model.matching.MatchingRoom;
  */
 public class RequestOustFromPartyRoom extends L2GameClientPacket
 {
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
 	
 	/**

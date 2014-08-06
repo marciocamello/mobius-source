@@ -26,9 +26,6 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
  */
 public class RequestExMPCCAcceptJoin extends L2GameClientPacket
 {
-	/**
-	 * Field _unk. Field _response.
-	 */
 	@SuppressWarnings("unused")
 	private int _response, _unk;
 	

@@ -81,7 +81,6 @@ public class ExFriendDetailInfo extends L2GameServerPacket
 	 * (rset.getInt("ally_id")); allyName = (rset.getString("ally_name")); allyCrestId = (rset.getInt("ally_crest_id")); } statement.execute(); rset.close(); statement.close(); } catch (Exception e) { System.out.println("Failed loading clan_data. " + e); } finally { DbUtils.closeQuietly(con); } }
 	 * createdMonth = Integer.parseInt(createDate.substring(5, 7)); createdDay = Integer.parseInt(createDate.substring(8)); }
 	 */
-	
 	@Override
 	protected void writeImpl()
 	{

@@ -13,7 +13,6 @@
 package ai;
 
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ai.CtrlIntention;
@@ -29,11 +28,7 @@ import lineage2.gameserver.utils.Location;
  */
 public final class KartiaGuard extends Fighter
 {
-	
 	private long _ReuseTimer = 0;
-	/**
-	 * Field _followTask.
-	 */
 	ScheduledFuture<?> _followTask;
 	Creature master = null;
 	

@@ -14,7 +14,6 @@ package lineage2.gameserver.handler.admincommands.impl;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
@@ -33,27 +32,12 @@ public class AdminMammon implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_find_mammon.
-		 */
 		admin_find_mammon,
-		/**
-		 * Field admin_show_mammon.
-		 */
 		admin_show_mammon,
-		/**
-		 * Field admin_hide_mammon.
-		 */
 		admin_hide_mammon,
-		/**
-		 * Field admin_list_spawns.
-		 */
 		admin_list_spawns
 	}
 	
-	/**
-	 * Field npcIds.
-	 */
 	final List<Integer> npcIds = new ArrayList<Integer>();
 	
 	/**

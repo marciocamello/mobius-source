@@ -28,9 +28,6 @@ public final class GruffManInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field elcardiaIzId. (value is 158)
-	 */
 	private static final int elcardiaIzId = 158;
 	
 	/**

@@ -26,19 +26,10 @@ public class ConditionGameTime extends Condition
 	 */
 	public enum CheckGameTime
 	{
-		/**
-		 * Field NIGHT.
-		 */
 		NIGHT
 	}
 	
-	/**
-	 * Field _check.
-	 */
 	private final CheckGameTime _check;
-	/**
-	 * Field _required.
-	 */
 	private final boolean _required;
 	
 	/**

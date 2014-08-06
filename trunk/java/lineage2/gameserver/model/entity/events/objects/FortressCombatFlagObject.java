@@ -26,7 +26,6 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
-
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,21 +40,9 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(FortressCombatFlagObject.class);
-	/**
-	 * Field _item.
-	 */
 	private ItemInstance _item;
-	/**
-	 * Field _location.
-	 */
 	private final Location _location;
-	/**
-	 * Field _event.
-	 */
 	private GlobalEvent _event;
 	
 	/**

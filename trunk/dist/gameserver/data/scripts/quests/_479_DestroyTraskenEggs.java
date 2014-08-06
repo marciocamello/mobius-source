@@ -22,7 +22,6 @@ public class _479_DestroyTraskenEggs extends Quest implements ScriptFile
 {
 	// npc
 	public static final int DAICHIR = 30537;
-	
 	public static final String A_LIST = "a_list";
 	
 	@Override

@@ -27,13 +27,11 @@ public class ExSetCompassZoneCode extends L2GameServerPacket
 	public static final int ZONE_SSQ = 13;
 	public static final int ZONE_PVP = 14;
 	public static final int ZONE_GENERAL_FIELD = 15;
-	
 	public static final int ZONE_PVP_FLAG = 1 << ExSetCompassZoneCode.ZONE_PVP;
 	public static final int ZONE_ALTERED_FLAG = 1 << ExSetCompassZoneCode.ZONE_ALTERED;
 	public static final int ZONE_SIEGE_FLAG = 1 << ExSetCompassZoneCode.ZONE_SIEGE;
 	public static final int ZONE_PEACE_FLAG = 1 << ExSetCompassZoneCode.ZONE_PEACE;
 	public static final int ZONE_SSQ_FLAG = 1 << ExSetCompassZoneCode.ZONE_SSQ;
-	
 	private final int _zone;
 	
 	public ExSetCompassZoneCode(Player player)

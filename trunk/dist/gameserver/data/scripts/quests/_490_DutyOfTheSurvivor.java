@@ -18,14 +18,12 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 {
 	// npc
 	public static final int VOLODOS = 30137;
-	
 	// mobs
 	public static final int[] mobs =
 	{

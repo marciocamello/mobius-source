@@ -20,13 +20,7 @@ import lineage2.gameserver.model.Player;
  */
 public class RequestShortCutDel extends L2GameClientPacket
 {
-	/**
-	 * Field _slot.
-	 */
 	private int _slot;
-	/**
-	 * Field _page.
-	 */
 	private int _page;
 	
 	/**

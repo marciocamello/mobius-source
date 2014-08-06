@@ -30,13 +30,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_open.
-		 */
 		admin_open,
-		/**
-		 * Field admin_close.
-		 */
 		admin_close,
 	}
 	

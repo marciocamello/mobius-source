@@ -25,9 +25,6 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
  */
 public class RequestFriendAddReply extends L2GameClientPacket
 {
-	/**
-	 * Field _response.
-	 */
 	private int _response;
 	
 	/**

@@ -21,9 +21,6 @@ import lineage2.gameserver.scripts.Scripts;
  */
 public class PetitionSubGroup extends PetitionGroup
 {
-	/**
-	 * Field _handler.
-	 */
 	private final IPetitionHandler _handler;
 	
 	/**

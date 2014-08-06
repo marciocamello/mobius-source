@@ -101,13 +101,11 @@ public class RequestExTryToPutShapeShiftingEnchantSupportItem extends L2GameClie
 		/*
 		 * if(!extracItem.isOther() && extracItem.getGrade() == ItemGrade.NONE) { player.sendPacket(SystemMsg.ITEM_GRADES_DO_NOT_MATCH); return; }
 		 */
-		
 		// if(!extracItem.isOther() && targetItem.getTemplate().getItemGrade().ordinal() <= extracItem.getTemplate().getItemGrade().ordinal())
 		// {
 		// player.sendPacket(SystemMsg.YOU_CANNOT_EXTRACT_FROM_ITEMS_THAT_ARE_HIGHERGRADE_THAN_ITEMS_TO_BE_MODIFIED);
 		// return;
 		// }
-		
 		if (extracItem.getVisualId() > 0)
 		{
 			player.sendPacket(SystemMsg.YOU_CANNOT_EXTRACT_FROM_A_MODIFIED_ITEM);

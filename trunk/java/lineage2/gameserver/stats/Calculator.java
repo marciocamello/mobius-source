@@ -23,25 +23,10 @@ import lineage2.gameserver.stats.funcs.FuncOwner;
  */
 public final class Calculator
 {
-	/**
-	 * Field _functions.
-	 */
 	private Func[] _functions;
-	/**
-	 * Field _base.
-	 */
 	private double _base;
-	/**
-	 * Field _last.
-	 */
 	private double _last;
-	/**
-	 * Field _stat.
-	 */
 	public final Stats _stat;
-	/**
-	 * Field _character.
-	 */
 	public final Creature _character;
 	
 	/**

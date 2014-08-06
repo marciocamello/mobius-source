@@ -21,7 +21,6 @@ public class _497_IncarnationOfGreedZellakaSolo extends Quest implements ScriptF
 {
 	// npc
 	public static final int KARTIA_RESEARCH = 33647;
-	
 	// mobs
 	public static final int CHALAKA = 19253;
 	

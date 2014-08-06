@@ -22,29 +22,11 @@ import lineage2.gameserver.model.matching.PartyMatchingRoom;
  */
 public class RequestPartyMatchList extends L2GameClientPacket
 {
-	/**
-	 * Field _lootDist.
-	 */
 	private int _lootDist;
-	/**
-	 * Field _maxMembers.
-	 */
 	private int _maxMembers;
-	/**
-	 * Field _minLevel.
-	 */
 	private int _minLevel;
-	/**
-	 * Field _maxLevel.
-	 */
 	private int _maxLevel;
-	/**
-	 * Field _roomId.
-	 */
 	private int _roomId;
-	/**
-	 * Field _roomTitle.
-	 */
 	private String _roomTitle;
 	
 	/**

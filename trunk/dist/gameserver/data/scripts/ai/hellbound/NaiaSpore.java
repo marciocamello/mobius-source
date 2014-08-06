@@ -14,7 +14,6 @@ package ai.hellbound;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.instancemanager.naia.NaiaCoreManager;
 import lineage2.gameserver.model.Creature;
@@ -26,9 +25,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public final class NaiaSpore extends Fighter
 {
-	/**
-	 * Field epidosIndex.
-	 */
 	private static final Map<Integer, Integer> epidosIndex = new HashMap<>();
 	static
 	{

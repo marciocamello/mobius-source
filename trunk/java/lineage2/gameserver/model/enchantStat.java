@@ -18,17 +18,8 @@ package lineage2.gameserver.model;
  */
 public final class enchantStat
 {
-	/**
-	 * Field _level.
-	 */
 	private final int _grade;
-	/**
-	 * Field _minLevel.
-	 */
 	private final double _option1;
-	/**
-	 * Field _cost.
-	 */
 	private final double _option2;
 	
 	/**
@@ -70,5 +61,4 @@ public final class enchantStat
 	{
 		return _option2;
 	}
-	
 }

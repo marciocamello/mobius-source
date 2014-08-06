@@ -14,7 +14,6 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.entity.residence.ClanHall;
 import lineage2.gameserver.model.entity.residence.ResidenceFunction;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -50,7 +49,6 @@ public class AgitDecoInfo extends L2GameServerPacket
 		2,
 		2
 	};
-	
 	/**
 	 * В коментах: Первое число = присланое сервером, второе уровень установленый в кланхолле Пример: mp recovery: 0 = 0 значит что уровень 0 прислал 0, уровни 5 и 15 прислали 1, уровни 25, 35, 50 прислали 2
 	 * <p/>

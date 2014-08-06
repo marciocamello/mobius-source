@@ -18,7 +18,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExChangeClientEffectInfo;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -31,18 +30,12 @@ public final class SirraInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field questInstances.
-	 */
 	private static final int[] questInstances =
 	{
 		140,
 		138,
 		141
 	};
-	/**
-	 * Field warInstances.
-	 */
 	private static final int[] warInstances =
 	{
 		139,

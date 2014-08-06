@@ -18,11 +18,9 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.entity.residence.Residence;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,25 +30,10 @@ import org.slf4j.LoggerFactory;
  */
 public class CastleDamageZoneDAO
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final CastleDamageZoneDAO _instance = new CastleDamageZoneDAO();
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(CastleDoorUpgradeDAO.class);
-	/**
-	 * Field SELECT_SQL_QUERY. (value is ""SELECT zone FROM castle_damage_zones WHERE residence_id=?"")
-	 */
 	public static final String SELECT_SQL_QUERY = "SELECT zone FROM castle_damage_zones WHERE residence_id=?";
-	/**
-	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO castle_damage_zones (residence_id, zone) VALUES (?,?)"")
-	 */
 	public static final String INSERT_SQL_QUERY = "INSERT INTO castle_damage_zones (residence_id, zone) VALUES (?,?)";
-	/**
-	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM castle_damage_zones WHERE residence_id=?"")
-	 */
 	public static final String DELETE_SQL_QUERY = "DELETE FROM castle_damage_zones WHERE residence_id=?";
 	
 	/**

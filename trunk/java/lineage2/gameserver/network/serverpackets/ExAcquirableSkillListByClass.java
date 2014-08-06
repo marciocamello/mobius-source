@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.serverpackets;
 
 import java.util.Collection;
-
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
@@ -26,7 +25,6 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public class ExAcquirableSkillListByClass extends L2GameServerPacket
 {
-	
 	private final Collection<SkillLearn> allskills;
 	
 	public ExAcquirableSkillListByClass(Player player)

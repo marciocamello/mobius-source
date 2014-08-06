@@ -13,7 +13,6 @@
 package ai;
 
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.DefaultAI;
@@ -31,9 +30,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class GuardianAltar extends DefaultAI
 {
-	/**
-	 * Field DarkShamanVarangka. (value is 18808)
-	 */
 	private static final int DarkShamanVarangka = 18808;
 	
 	/**

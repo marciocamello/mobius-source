@@ -13,7 +13,6 @@
 package npc.model;
 
 import java.util.StringTokenizer;
-
 import lineage2.gameserver.instancemanager.HellboundManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;

@@ -18,9 +18,6 @@ package lineage2.gameserver.network.clientpackets;
  */
 public class RequestDeletePartySubstitute extends L2GameClientPacket
 {
-	/**
-	 * Field id.
-	 */
 	int id = 0;
 	
 	/**

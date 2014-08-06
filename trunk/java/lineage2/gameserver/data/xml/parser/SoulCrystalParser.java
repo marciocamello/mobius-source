@@ -14,12 +14,10 @@ package lineage2.gameserver.data.xml.parser;
 
 import java.io.File;
 import java.util.Iterator;
-
 import lineage2.commons.data.xml.AbstractFileParser;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.SoulCrystalHolder;
 import lineage2.gameserver.templates.SoulCrystal;
-
 import org.dom4j.Element;
 
 /**
@@ -28,9 +26,6 @@ import org.dom4j.Element;
  */
 public final class SoulCrystalParser extends AbstractFileParser<SoulCrystalHolder>
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final SoulCrystalParser _instance = new SoulCrystalParser();
 	
 	/**

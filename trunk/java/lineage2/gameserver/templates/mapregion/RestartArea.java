@@ -13,7 +13,6 @@
 package lineage2.gameserver.templates.mapregion;
 
 import java.util.Map;
-
 import lineage2.gameserver.model.Territory;
 import lineage2.gameserver.model.base.Race;
 
@@ -23,13 +22,7 @@ import lineage2.gameserver.model.base.Race;
  */
 public class RestartArea implements RegionData
 {
-	/**
-	 * Field _territory.
-	 */
 	private final Territory _territory;
-	/**
-	 * Field _restarts.
-	 */
 	private final Map<Race, RestartPoint> _restarts;
 	
 	/**

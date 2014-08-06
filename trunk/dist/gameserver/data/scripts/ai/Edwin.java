@@ -24,9 +24,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Edwin extends DefaultAI
 {
-	/**
-	 * Field points.
-	 */
 	static final Location[] points =
 	{
 		new Location(89991, -144601, -1467),
@@ -47,17 +44,8 @@ public final class Edwin extends DefaultAI
 		new Location(90538, -143470, -1467),
 		new Location(89991, -144601, -1467)
 	};
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = -1;
-	/**
-	 * Field wait_timeout.
-	 */
 	private long wait_timeout = 0;
-	/**
-	 * Field wait.
-	 */
 	private boolean wait = false;
 	
 	/**

@@ -35,12 +35,10 @@ public final class Harnak extends Fighter
 		14613,
 		14614
 	};
-	
 	private boolean firstMsg = false;
 	private boolean secondMsg = false;
 	private boolean thirdMsg = false;
 	private boolean sealLaunched = false;
-	
 	private int seal_active = 0;
 	
 	public Harnak(NpcInstance actor)

@@ -18,14 +18,12 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.DeathPenalty;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SubClass;
 import lineage2.gameserver.model.base.SubClassType;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,21 +33,9 @@ import org.slf4j.LoggerFactory;
  */
 public class CharacterSubclassDAO
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(CharacterSubclassDAO.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final CharacterSubclassDAO _instance = new CharacterSubclassDAO();
-	/**
-	 * Field SELECT_SQL_QUERY. (value is ""SELECT class_id, default_class_id, exp, sp, curHp, curCp, curMp, active, type, death_penalty, certification, dual_certificationFROM character_subclasses WHERE char_obj_id=?"")
-	 */
 	public static final String SELECT_SQL_QUERY = "SELECT class_id, default_class_id, exp, sp, curHp, curCp, curMp, active, type, death_penalty, certification, dual_certification FROM character_subclasses WHERE char_obj_id=?";
-	/**
-	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO character_subclasses (char_obj_id, class_id, default_class_id, exp, sp, curHp, curMp, curCp, maxHp, maxMp, maxCp, level, active, type, death_penalty, certification, dual_certification) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"")
-	 */
 	public static final String INSERT_SQL_QUERY = "INSERT INTO character_subclasses (char_obj_id, class_id, default_class_id, exp, sp, curHp, curMp, curCp, maxHp, maxMp, maxCp, level, active, type, death_penalty, certification, dual_certification) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 	
 	/**

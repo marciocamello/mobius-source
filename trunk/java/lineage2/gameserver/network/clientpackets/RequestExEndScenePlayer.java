@@ -20,9 +20,6 @@ import lineage2.gameserver.model.Player;
  */
 public class RequestExEndScenePlayer extends L2GameClientPacket
 {
-	/**
-	 * Field _movieId.
-	 */
 	private int _movieId;
 	
 	/**

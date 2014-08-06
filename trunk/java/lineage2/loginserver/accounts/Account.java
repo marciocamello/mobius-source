@@ -15,12 +15,10 @@ package lineage2.loginserver.accounts;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.net.utils.Net;
 import lineage2.commons.net.utils.NetList;
 import lineage2.loginserver.database.L2DatabaseFactory;
-
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 import org.napile.primitive.maps.IntObjectMap;
@@ -34,57 +32,18 @@ import org.slf4j.LoggerFactory;
  */
 public class Account
 {
-	/**
-	 * Field _log.
-	 */
 	private final static Logger _log = LoggerFactory.getLogger(Account.class);
-	/**
-	 * Field login.
-	 */
 	private final String login;
-	/**
-	 * Field passwordHash.
-	 */
 	private String passwordHash;
-	/**
-	 * Field allowedIP.
-	 */
 	private String allowedIP;
-	/**
-	 * Field allowedIpList.
-	 */
 	private final NetList allowedIpList = new NetList();
-	/**
-	 * Field accessLevel.
-	 */
 	private int accessLevel;
-	/**
-	 * Field banExpire.
-	 */
 	private int banExpire;
-	/**
-	 * Field bonus.
-	 */
 	private double bonus;
-	/**
-	 * Field bonusExpire.
-	 */
 	private int bonusExpire;
-	/**
-	 * Field lastIP.
-	 */
 	private String lastIP;
-	/**
-	 * Field lastAccess.
-	 */
 	private int lastAccess;
-	/**
-	 * Field lastServer.
-	 */
 	private int lastServer;
-	/**
-	 * Field _serversInfo.
-	 */
 	private final IntObjectMap<Pair<Integer, int[]>> _serversInfo = new HashIntObjectMap<>(2);
 	
 	/**

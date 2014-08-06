@@ -14,7 +14,6 @@ package lineage2.gameserver.network.clientpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.math.SafeMath;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
@@ -24,7 +23,6 @@ import lineage2.gameserver.model.items.TradeItem;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.TradeHelper;
-
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,26 +33,11 @@ import org.slf4j.LoggerFactory;
  */
 public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 {
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(RequestPrivateStoreBuySellList.class);
-	/**
-	 * Field _count. Field _buyerId.
-	 */
 	private int _buyerId, _count;
-	/**
-	 * Field _items.
-	 */
 	private int[] _items;
-	/**
-	 * Field _itemQ.
-	 */
 	private long[] _itemQ;
-	/**
-	 * Field _itemP.
-	 */
 	private long[] _itemP;
 	
 	/**

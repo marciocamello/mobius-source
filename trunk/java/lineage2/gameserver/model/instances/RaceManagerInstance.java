@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.cache.Msg;
@@ -44,62 +43,20 @@ public class RaceManagerInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field LANES. (value is 8)
-	 */
 	public static final int LANES = 8;
-	/**
-	 * Field WINDOW_START. (value is 0)
-	 */
 	public static final int WINDOW_START = 0;
-	/**
-	 * Field history.
-	 */
 	@SuppressWarnings("unused")
 	private static List<Race> history;
-	/**
-	 * Field managers.
-	 */
 	private static Set<RaceManagerInstance> managers;
-	/**
-	 * Field _raceNumber.
-	 */
 	static int _raceNumber = 1;
-	/**
-	 * Field SECOND. (value is 1000)
-	 */
 	private final static long SECOND = 1000;
-	/**
-	 * Field MINUTE.
-	 */
 	private final static long MINUTE = 60 * SECOND;
-	/**
-	 * Field minutes.
-	 */
 	private static int minutes = 5;
-	/**
-	 * Field ACCEPTING_BETS. (value is 0)
-	 */
 	private static final int ACCEPTING_BETS = 0;
-	/**
-	 * Field WAITING. (value is 1)
-	 */
 	private static final int WAITING = 1;
-	/**
-	 * Field STARTING_RACE. (value is 2)
-	 */
 	private static final int STARTING_RACE = 2;
-	/**
-	 * Field RACE_END. (value is 3)
-	 */
 	private static final int RACE_END = 3;
-	/**
-	 * Field state.
-	 */
 	private static int state = RACE_END;
-	/**
-	 * Field codes.
-	 */
 	protected static final int[][] codes =
 	{
 		{
@@ -115,17 +72,8 @@ public class RaceManagerInstance extends NpcInstance
 			-1
 		}
 	};
-	/**
-	 * Field notInitialized.
-	 */
 	private static boolean notInitialized = true;
-	/**
-	 * Field packet.
-	 */
 	protected static MonRaceInfo packet;
-	/**
-	 * Field cost.
-	 */
 	protected static final int cost[] =
 	{
 		100,
@@ -196,9 +144,6 @@ public class RaceManagerInstance extends NpcInstance
 	 */
 	class Announcement extends RunnableImpl
 	{
-		/**
-		 * Field type.
-		 */
 		private final int type;
 		
 		/**
@@ -569,9 +514,6 @@ public class RaceManagerInstance extends NpcInstance
 	 */
 	public class Race
 	{
-		/**
-		 * Field info.
-		 */
 		private final Info[] info;
 		
 		/**
@@ -598,21 +540,9 @@ public class RaceManagerInstance extends NpcInstance
 		 */
 		public class Info
 		{
-			/**
-			 * Field id.
-			 */
 			private final int id;
-			/**
-			 * Field place.
-			 */
 			private final int place;
-			/**
-			 * Field odds.
-			 */
 			private final int odds;
-			/**
-			 * Field payout.
-			 */
 			private final int payout;
 			
 			/**

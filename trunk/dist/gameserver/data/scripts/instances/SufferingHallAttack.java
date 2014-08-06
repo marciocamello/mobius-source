@@ -32,7 +32,6 @@ public final class SufferingHallAttack extends Reflection
 	private static final int DeadTumor = 32531;
 	private static final int Yehan = 25665;
 	public int timeSpent;
-	
 	long _savedTime = 0;
 	private final DeathListener _deathListener = new DeathListener();
 	
@@ -202,5 +201,4 @@ public final class SufferingHallAttack extends Reflection
 		super.onPlayerExit(player);
 		player.sendPacket(new ExSendUIEvent(player, 1, 1, 0, 0));
 	}
-	
 }

@@ -16,7 +16,6 @@ import java.text.NumberFormat;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.Experience;
@@ -29,7 +28,6 @@ import lineage2.gameserver.model.reward.RewardType;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.utils.HtmlUtils;
-
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -38,13 +36,7 @@ import org.apache.commons.lang3.StringUtils;
  */
 public final class RewardListInfo
 {
-	/**
-	 * Field pf.
-	 */
 	private static final NumberFormat pf = NumberFormat.getPercentInstance(Locale.ENGLISH);
-	/**
-	 * Field df.
-	 */
 	private static final NumberFormat df = NumberFormat.getInstance(Locale.ENGLISH);
 	static
 	{

@@ -16,12 +16,10 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.net.utils.NetUtils;
 import lineage2.loginserver.GameServerManager;
 import lineage2.loginserver.accounts.Account;
 import lineage2.loginserver.gameservercon.GameServer;
-
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.tuple.Pair;
 
@@ -31,13 +29,7 @@ import org.apache.commons.lang3.tuple.Pair;
  */
 public final class ServerList extends L2LoginServerPacket
 {
-	/**
-	 * Field _servers.
-	 */
 	private final List<ServerData> _servers = new ArrayList<>();
-	/**
-	 * Field _lastServer.
-	 */
 	private final int _lastServer;
 	
 	/**
@@ -45,53 +37,17 @@ public final class ServerList extends L2LoginServerPacket
 	 */
 	private static class ServerData
 	{
-		/**
-		 * Field serverId.
-		 */
 		int serverId;
-		/**
-		 * Field ip.
-		 */
 		InetAddress ip;
-		/**
-		 * Field port.
-		 */
 		int port;
-		/**
-		 * Field online.
-		 */
 		int online;
-		/**
-		 * Field maxPlayers.
-		 */
 		int maxPlayers;
-		/**
-		 * Field status.
-		 */
 		boolean status;
-		/**
-		 * Field pvp.
-		 */
 		boolean pvp;
-		/**
-		 * Field brackets.
-		 */
 		boolean brackets;
-		/**
-		 * Field type.
-		 */
 		int type;
-		/**
-		 * Field ageLimit.
-		 */
 		int ageLimit;
-		/**
-		 * Field playerSize.
-		 */
 		int playerSize;
-		/**
-		 * Field deleteChars.
-		 */
 		int[] deleteChars;
 		
 		/**

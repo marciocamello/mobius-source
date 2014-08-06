@@ -31,29 +31,11 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_cw_info.
-		 */
 		admin_cw_info,
-		/**
-		 * Field admin_cw_remove.
-		 */
 		admin_cw_remove,
-		/**
-		 * Field admin_cw_goto.
-		 */
 		admin_cw_goto,
-		/**
-		 * Field admin_cw_reload.
-		 */
 		admin_cw_reload,
-		/**
-		 * Field admin_cw_add.
-		 */
 		admin_cw_add,
-		/**
-		 * Field admin_cw_drop.
-		 */
 		admin_cw_drop
 	}
 	

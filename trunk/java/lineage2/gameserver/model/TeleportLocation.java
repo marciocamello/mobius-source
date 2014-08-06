@@ -26,21 +26,9 @@ public class TeleportLocation extends Location
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _price.
-	 */
 	private final long _price;
-	/**
-	 * Field _item.
-	 */
 	private final ItemTemplate _item;
-	/**
-	 * Field _name.
-	 */
 	private final int _name;
-	/**
-	 * Field _castleId.
-	 */
 	private final int _castleId;
 	
 	/**

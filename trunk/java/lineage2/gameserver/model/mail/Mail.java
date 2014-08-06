@@ -14,7 +14,6 @@ package lineage2.gameserver.model.mail;
 
 import java.util.HashSet;
 import java.util.Set;
-
 import lineage2.commons.dao.JdbcEntity;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.gameserver.dao.MailDAO;
@@ -67,123 +66,36 @@ public class Mail implements JdbcEntity, Comparable<Mail>
 	 */
 	public static enum SenderType
 	{
-		/**
-		 * Field NORMAL.
-		 */
 		NORMAL,
-		/**
-		 * Field NEWS_INFORMER.
-		 */
 		NEWS_INFORMER,
-		/**
-		 * Field NONE.
-		 */
 		NONE,
-		/**
-		 * Field BIRTHDAY.
-		 */
 		BIRTHDAY,
-		/**
-		 * Field UNKNOWN.
-		 */
 		UNKNOWN,
-		/**
-		 * Field SYSTEM.
-		 */
 		SYSTEM,
-		/**
-		 * Field MENTOR.
-		 */
 		MENTOR,
-		/**
-		 * Field PRESENT.
-		 */
 		PRESENT;
-		/**
-		 * Field VALUES.
-		 */
 		public static SenderType[] VALUES = values();
 	}
 	
-	/**
-	 * Field serialVersionUID. (value is -8704970972611917153)
-	 */
 	private static final long serialVersionUID = -8704970972611917153L;
-	/**
-	 * Field DELETED. (value is 0)
-	 */
 	public static final int DELETED = 0;
-	/**
-	 * Field READED. (value is 1)
-	 */
 	public static final int READED = 1;
-	/**
-	 * Field REJECTED. (value is 2)
-	 */
 	public static final int REJECTED = 2;
-	/**
-	 * Field _mailDAO.
-	 */
 	private static final MailDAO _mailDAO = MailDAO.getInstance();
-	/**
-	 * Field messageId.
-	 */
 	private int messageId;
-	/**
-	 * Field senderId.
-	 */
 	private int senderId;
-	/**
-	 * Field senderName.
-	 */
 	private String senderName;
-	/**
-	 * Field receiverId.
-	 */
 	private int receiverId;
-	/**
-	 * Field receiverName.
-	 */
 	private String receiverName;
-	/**
-	 * Field expireTime.
-	 */
 	private int expireTime;
-	/**
-	 * Field topic.
-	 */
 	private String topic;
-	/**
-	 * Field body.
-	 */
 	private String body;
-	/**
-	 * Field price.
-	 */
 	private long price;
-	/**
-	 * Field _type.
-	 */
 	private SenderType _type = SenderType.NORMAL;
-	/**
-	 * Field isUnread.
-	 */
 	private boolean isUnread;
-	/**
-	 * Field isReturnable.
-	 */
 	private boolean isReturnable;
-	/**
-	 * Field attachments.
-	 */
 	private final Set<ItemInstance> attachments = new HashSet<>();
-	/**
-	 * Field systemMsg2. Field systemMsg1.
-	 */
 	private int systemMsg1, systemMsg2;
-	/**
-	 * Field _state.
-	 */
 	private JdbcEntityState _state = JdbcEntityState.CREATED;
 	
 	/**

@@ -21,53 +21,17 @@ import gnu.trove.list.array.TIntArrayList;
  */
 public class Henna
 {
-	/**
-	 * Field _symbolId.
-	 */
 	private final int _symbolId;
-	/**
-	 * Field _dyeId.
-	 */
 	private final int _dyeId;
-	/**
-	 * Field _price.
-	 */
 	private final long _price;
-	/**
-	 * Field _drawCount.
-	 */
 	private final long _drawCount;
-	/**
-	 * Field _statINT.
-	 */
 	private final int _statINT;
-	/**
-	 * Field _statSTR.
-	 */
 	private final int _statSTR;
-	/**
-	 * Field _statCON.
-	 */
 	private final int _statCON;
-	/**
-	 * Field _statMEN.
-	 */
 	private final int _statMEN;
-	/**
-	 * Field _statDEX.
-	 */
 	private final int _statDEX;
-	/**
-	 * Field _statWIT.
-	 */
 	private final int _statWIT;
-	/**
-	 * Field _skillId.
-	 */
 	private final int _skillId;
-	/**
-	 * Field _classes.
-	 */
 	private final TIntArrayList _classes;
 	
 	/**

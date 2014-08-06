@@ -21,9 +21,6 @@ import lineage2.gameserver.model.entity.events.GlobalEvent;
  */
 public class TeleportPlayersAction implements EventAction
 {
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
 	
 	/**

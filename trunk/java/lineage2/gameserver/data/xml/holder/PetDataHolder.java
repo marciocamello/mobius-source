@@ -15,10 +15,8 @@ package lineage2.gameserver.data.xml.holder;
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.model.PetData;
 import lineage2.gameserver.templates.StatsSet;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
@@ -27,17 +25,8 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class PetDataHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final PetDataHolder _instance = new PetDataHolder();
-	/**
-	 * Field _pets.
-	 */
 	private final TIntObjectHashMap<PetData> _pets = new TIntObjectHashMap<>();
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(PetDataHolder.class);
 	

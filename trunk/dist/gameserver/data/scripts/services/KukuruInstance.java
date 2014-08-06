@@ -14,7 +14,6 @@ package services;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;

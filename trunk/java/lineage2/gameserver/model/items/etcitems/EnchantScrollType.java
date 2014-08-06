@@ -18,36 +18,12 @@ package lineage2.gameserver.model.items.etcitems;
  */
 public enum EnchantScrollType
 {
-	/**
-	 * Field NORMAL.
-	 */
 	NORMAL,
-	/**
-	 * Field BLESSED.
-	 */
 	BLESSED,
-	/**
-	 * Field ANCIENT.
-	 */
 	ANCIENT,
-	/**
-	 * Field DESTRUCTION.
-	 */
 	DESTRUCTION,
-	/**
-	 * Field ITEM_MALL.
-	 */
 	ITEM_MALL,
-	/**
-	 * Field DIVINE.
-	 */
 	DIVINE,
-	/**
-	 * Field CRYSTALL.
-	 */
 	CRYSTALL,
-	/**
-	 * Field SPECIAL.
-	 */
 	SPECIAL;
 }

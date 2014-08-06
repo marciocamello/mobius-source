@@ -15,11 +15,9 @@ package lineage2.gameserver.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
-
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,13 +28,7 @@ import org.slf4j.LoggerFactory;
  */
 public class CharacterDAO
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(CharacterDAO.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final CharacterDAO _instance = new CharacterDAO();
 	
 	/**

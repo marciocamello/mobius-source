@@ -17,7 +17,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 public class _470_Divinity_Protector extends Quest implements ScriptFile
@@ -25,7 +24,6 @@ public class _470_Divinity_Protector extends Quest implements ScriptFile
 	// npc
 	public static final int GUIDE = 33463;
 	public static final int APRIGEL = 31348;
-	
 	// mobs
 	private final int[] Mobs =
 	{
@@ -57,7 +55,6 @@ public class _470_Divinity_Protector extends Quest implements ScriptFile
 		21540,
 		21544
 	};
-	
 	// q items
 	public static final int COLORLESS_SOUL = 19489;
 	

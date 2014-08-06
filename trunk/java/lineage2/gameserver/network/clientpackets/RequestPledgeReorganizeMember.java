@@ -27,21 +27,9 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
  */
 public class RequestPledgeReorganizeMember extends L2GameClientPacket
 {
-	/**
-	 * Field _replace.
-	 */
 	int _replace;
-	/**
-	 * Field _subjectName.
-	 */
 	String _subjectName;
-	/**
-	 * Field _targetUnit.
-	 */
 	int _targetUnit;
-	/**
-	 * Field _replaceName.
-	 */
 	String _replaceName;
 	
 	/**

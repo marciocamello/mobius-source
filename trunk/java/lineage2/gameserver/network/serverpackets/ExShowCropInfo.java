@@ -13,14 +13,12 @@
 package lineage2.gameserver.network.serverpackets;
 
 import java.util.List;
-
 import lineage2.gameserver.model.Manor;
 import lineage2.gameserver.templates.manor.CropProcure;
 
 /**
  * Format: cddd[ddddcdc[d]c[d]] cddd[dQQQcdc[d]c[d]] - Gracia Final
  */
-
 public class ExShowCropInfo extends L2GameServerPacket
 {
 	private final List<CropProcure> _crops;

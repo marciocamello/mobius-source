@@ -14,19 +14,12 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.Collections;
 import java.util.List;
-
 import lineage2.gameserver.model.MenteeInfo;
 import lineage2.gameserver.model.Player;
 
 public class ExMentorList extends L2GameServerPacket
 {
-	/**
-	 * Field _list.
-	 */
 	private List<MenteeInfo> _list = Collections.emptyList();
-	/**
-	 * Field _mentor.
-	 */
 	private final int _mentor;
 	private final Player activeChar;
 	

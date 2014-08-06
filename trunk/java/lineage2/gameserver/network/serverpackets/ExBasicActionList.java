@@ -247,7 +247,6 @@ public class ExBasicActionList extends L2GameServerPacket
 		5014, // Greatly enhances their skills.
 		5015, // Change the attacker /auxiliary state pet.
 	};
-	
 	private static final int[] TransformationActions =
 	{
 		1, // switch Run Walk. (/Walk, /run)
@@ -406,7 +405,6 @@ public class ExBasicActionList extends L2GameServerPacket
 		5014, // Greatly enhances their skills.
 		5015, // Change the attacker /auxiliary state pet ..
 	};
-	
 	private final int[] actions;
 	
 	public ExBasicActionList(Player activeChar)

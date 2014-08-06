@@ -30,25 +30,10 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public final class CrystallineGolem extends Fighter
 {
-	/**
-	 * Field CORAL_GARDEN_SECRETGATE. (value is 24220026)
-	 */
 	private static final int CORAL_GARDEN_SECRETGATE = 24220026;
-	/**
-	 * Field Crystal_Fragment. (value is 9693)
-	 */
 	private static final int Crystal_Fragment = 9693;
-	/**
-	 * Field itemToConsume.
-	 */
 	private ItemInstance itemToConsume = null;
-	/**
-	 * Field lastPoint.
-	 */
 	private Location lastPoint = null;
-	/**
-	 * Field says.
-	 */
 	private static final String[] says = new String[]
 	{
 		"�?�?м, н�?м!!!",
@@ -58,9 +43,6 @@ public final class CrystallineGolem extends Fighter
 		"Еще!!!",
 		"Еда!!!"
 	};
-	/**
-	 * Field says2.
-	 */
 	private static final String[] says2 = new String[]
 	{
 		"�?тдай!!!",
@@ -69,9 +51,6 @@ public final class CrystallineGolem extends Fighter
 		"�?уда оно подевало�?�??",
 		"�?аверное показало�?�?..."
 	};
-	/**
-	 * Field instanceInfo
-	 */
 	private static final TIntObjectHashMap<Info> instanceInfo = new TIntObjectHashMap<>();
 	
 	/**
@@ -87,13 +66,7 @@ public final class CrystallineGolem extends Fighter
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Field stage1.
-		 */
 		boolean stage1 = false;
-		/**
-		 * Field stage2.
-		 */
 		boolean stage2 = false;
 	}
 	

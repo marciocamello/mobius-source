@@ -18,17 +18,8 @@ package lineage2.gameserver.model.quest;
  */
 public class QuestNpcLogInfo
 {
-	/**
-	 * Field _npcIds.
-	 */
 	private final int[] _npcIds;
-	/**
-	 * Field _varName.
-	 */
 	private final String _varName;
-	/**
-	 * Field _maxCount.
-	 */
 	private final int _maxCount;
 	
 	/**

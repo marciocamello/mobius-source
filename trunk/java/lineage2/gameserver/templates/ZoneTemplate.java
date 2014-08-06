@@ -13,7 +13,6 @@
 package lineage2.gameserver.templates;
 
 import java.util.List;
-
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.configuration.ExProperties;
 import lineage2.gameserver.model.Skill;
@@ -30,117 +29,33 @@ import lineage2.gameserver.utils.Location;
  */
 public class ZoneTemplate
 {
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
-	/**
-	 * Field _type.
-	 */
 	private final ZoneType _type;
-	/**
-	 * Field _territory.
-	 */
 	private final Territory _territory;
-	/**
-	 * Field _isEnabled.
-	 */
 	private final boolean _isEnabled;
-	/**
-	 * Field _restartPoints.
-	 */
 	private final List<Location> _restartPoints;
-	/**
-	 * Field _PKrestartPoints.
-	 */
 	private final List<Location> _PKrestartPoints;
-	/**
-	 * Field _restartTime.
-	 */
 	private final long _restartTime;
-	/**
-	 * Field _enteringMessageId.
-	 */
 	private final int _enteringMessageId;
-	/**
-	 * Field _leavingMessageId.
-	 */
 	private final int _leavingMessageId;
-	/**
-	 * Field _affectRace.
-	 */
 	private final Race _affectRace;
-	/**
-	 * Field _target.
-	 */
 	private final ZoneTarget _target;
-	/**
-	 * Field _skill.
-	 */
 	private final Skill _skill;
-	/**
-	 * Field _skillProb.
-	 */
 	private final int _skillProb;
-	/**
-	 * Field _initialDelay.
-	 */
 	private final int _initialDelay;
-	/**
-	 * Field _unitTick.
-	 */
 	private final int _unitTick;
-	/**
-	 * Field _randomTick.
-	 */
 	private final int _randomTick;
-	/**
-	 * Field _damageMessageId.
-	 */
 	private final int _damageMessageId;
-	/**
-	 * Field _damageOnHP.
-	 */
 	private final int _damageOnHP;
-	/**
-	 * Field _damageOnMP.
-	 */
 	private final int _damageOnMP;
-	/**
-	 * Field _moveBonus.
-	 */
 	private final double _moveBonus;
-	/**
-	 * Field _regenBonusHP.
-	 */
 	private final double _regenBonusHP;
-	/**
-	 * Field _regenBonusMP.
-	 */
 	private final double _regenBonusMP;
-	/**
-	 * Field _eventId.
-	 */
 	private final int _eventId;
-	/**
-	 * Field _blockedActions.
-	 */
 	private final String[] _blockedActions;
-	/**
-	 * Field _index.
-	 */
 	private final int _index;
-	/**
-	 * Field _taxById.
-	 */
 	private final int _taxById;
-	/**
-	 * Field _params.
-	 */
 	private final StatsSet _params;
-	/**
-	 * Field _jumpingTrackId.
-	 */
 	private final int _jumpingTrackId;
 	
 	/**

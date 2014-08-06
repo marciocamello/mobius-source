@@ -14,7 +14,6 @@ package lineage2.gameserver.network.serverpackets;
 
 public class MagicSkillCanceled extends L2GameServerPacket
 {
-	
 	private final int _objectId;
 	
 	public MagicSkillCanceled(int objectId)

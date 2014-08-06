@@ -21,9 +21,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionTargetCastleDoor extends Condition
 {
-	/**
-	 * Field _isCastleDoor.
-	 */
 	private final boolean _isCastleDoor;
 	
 	/**

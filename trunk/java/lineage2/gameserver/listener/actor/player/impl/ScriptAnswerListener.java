@@ -23,17 +23,8 @@ import lineage2.gameserver.scripts.Scripts;
  */
 public class ScriptAnswerListener implements OnAnswerListener
 {
-	/**
-	 * Field _playerRef.
-	 */
 	private final HardReference<Player> _playerRef;
-	/**
-	 * Field _scriptName.
-	 */
 	private final String _scriptName;
-	/**
-	 * Field _arg.
-	 */
 	private final Object[] _arg;
 	
 	/**

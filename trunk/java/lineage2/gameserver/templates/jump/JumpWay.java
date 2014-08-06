@@ -20,13 +20,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class JumpWay
 {
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _points.
-	 */
 	private final TIntObjectHashMap<JumpPoint> _points;
 	
 	/**

@@ -14,7 +14,6 @@ package lineage2.gameserver.network.clientpackets;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
@@ -28,17 +27,8 @@ import lineage2.gameserver.utils.TradeHelper;
  */
 public class RequestRecipeShopListSet extends L2GameClientPacket
 {
-	/**
-	 * Field _recipes.
-	 */
 	private int[] _recipes;
-	/**
-	 * Field _prices.
-	 */
 	private long[] _prices;
-	/**
-	 * Field _count.
-	 */
 	private int _count;
 	
 	/**

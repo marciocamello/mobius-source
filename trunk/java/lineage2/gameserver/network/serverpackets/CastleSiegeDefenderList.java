@@ -15,14 +15,12 @@ package lineage2.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 import lineage2.gameserver.model.entity.events.impl.CastleSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.entity.events.objects.SiegeClanObject;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
-
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -57,7 +55,6 @@ public class CastleSiegeDefenderList extends L2GameServerPacket
 	public static final int WAITING = 2;
 	public static final int ACCEPTED = 3;
 	public static final int REFUSE = 4;
-	
 	private final int _id, _registrationValid;
 	private List<DefenderClan> _defenderClans = Collections.emptyList();
 	

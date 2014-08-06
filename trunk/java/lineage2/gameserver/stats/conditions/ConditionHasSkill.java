@@ -20,13 +20,7 @@ import lineage2.gameserver.stats.Env;
  */
 public final class ConditionHasSkill extends Condition
 {
-	/**
-	 * Field _id.
-	 */
 	private final Integer _id;
-	/**
-	 * Field _level.
-	 */
 	private final int _level;
 	
 	/**

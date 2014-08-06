@@ -27,17 +27,8 @@ public class SpawnSimpleObject implements SpawnableObject
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _npcId.
-	 */
 	private final int _npcId;
-	/**
-	 * Field _loc.
-	 */
 	private final Location _loc;
-	/**
-	 * Field _npc.
-	 */
 	private NpcInstance _npc;
 	
 	/**

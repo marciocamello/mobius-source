@@ -25,9 +25,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class HelpBook extends ScriptItemHandler
 {
-	/**
-	 * Field _itemIds.
-	 */
 	private static final int[] _itemIds =
 	{
 		34767,

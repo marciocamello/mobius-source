@@ -29,9 +29,6 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public enum InstantZoneEntryType
 {
-	/**
-	 * Field SOLO.
-	 */
 	SOLO
 	{
 		@Override
@@ -74,9 +71,6 @@ public enum InstantZoneEntryType
 			return true;
 		}
 	},
-	/**
-	 * Field PARTY.
-	 */
 	PARTY
 	{
 		@Override
@@ -162,9 +156,6 @@ public enum InstantZoneEntryType
 			return true;
 		}
 	},
-	/**
-	 * Field COMMAND_CHANNEL.
-	 */
 	COMMAND_CHANNEL
 	{
 		@Override

@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.serverpackets;
 
 import java.util.Collection;
-
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.data.xml.holder.ProductHolder;
 import lineage2.gameserver.model.ProductItem;

@@ -14,7 +14,6 @@ package lineage2.gameserver.model.entity.events.objects;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.dao.SiegePlayerDAO;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
@@ -32,13 +31,7 @@ public class CTBSiegeClanObject extends SiegeClanObject
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _players.
-	 */
 	private final List<Integer> _players = new ArrayList<>();
-	/**
-	 * Field _npcId.
-	 */
 	private long _npcId;
 	
 	/**

@@ -15,7 +15,6 @@
 package lineage2.gameserver;
 
 import java.util.Calendar;
-
 import lineage2.commons.listener.Listener;
 import lineage2.commons.listener.ListenerList;
 import lineage2.commons.threading.RunnableImpl;
@@ -25,7 +24,6 @@ import lineage2.gameserver.listener.game.OnStartListener;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ClientSetTime;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -121,33 +119,12 @@ public class GameTimeController
 		}
 	}
 	
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(GameTimeController.class);
-	/**
-	 * Field TICKS_PER_SECOND. (value is 10)
-	 */
 	public static final int TICKS_PER_SECOND = 10;
-	/**
-	 * Field MILLIS_IN_TICK.
-	 */
 	public static final int MILLIS_IN_TICK = 1000 / TICKS_PER_SECOND;
-	/**
-	 * Field _instance.
-	 */
 	private static final GameTimeController _instance = new GameTimeController();
-	/**
-	 * Field _gameStartTime.
-	 */
 	private final long _gameStartTime;
-	/**
-	 * Field listenerEngine.
-	 */
 	private final GameTimeListenerList listenerEngine = new GameTimeListenerList();
-	/**
-	 * Field _dayChangeNotify.
-	 */
 	final Runnable _dayChangeNotify = new CheckSunState();
 	
 	/**

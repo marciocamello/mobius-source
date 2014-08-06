@@ -24,7 +24,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExBR_BroadcastEventState;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,22 +33,13 @@ import org.slf4j.LoggerFactory;
  */
 public final class AprilFoolsDay extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(AprilFoolsDay.class);
-	/**
-	 * Field HERBS.
-	 */
 	private static final int[] HERBS = new int[]
 	{
 		20923,
 		20924,
 		20925
 	};
-	/**
-	 * Field _active.
-	 */
 	private static boolean _active = false;
 	
 	/**

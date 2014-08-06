@@ -13,7 +13,6 @@
 package npc.model.residences.clanhall;
 
 import java.util.List;
-
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.impl.ClanHallMiniGameEvent;

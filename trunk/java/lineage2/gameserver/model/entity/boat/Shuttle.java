@@ -43,9 +43,6 @@ public class Shuttle extends Boat
 	 */
 	private static class Docked extends RunnableImpl
 	{
-		/**
-		 * Field _shuttle.
-		 */
 		private final Shuttle _shuttle;
 		
 		/**
@@ -73,21 +70,9 @@ public class Shuttle extends Boat
 		}
 	}
 	
-	/**
-	 * Field serialVersionUID. (value is 1)
-	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _floors.
-	 */
 	private final TIntObjectHashMap<ShuttleWayEvent> _floors = new TIntObjectHashMap<>();
-	/**
-	 * Field _moveBack.
-	 */
 	private boolean _moveBack;
-	/**
-	 * Field _currentWay.
-	 */
 	public int _currentWay;
 	
 	/**

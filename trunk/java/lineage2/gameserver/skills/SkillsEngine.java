@@ -18,11 +18,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.tables.SkillTable;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.FileFilterUtils;
 import org.slf4j.Logger;
@@ -34,13 +32,7 @@ import org.slf4j.LoggerFactory;
  */
 public class SkillsEngine
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(SkillsEngine.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final SkillsEngine _instance = new SkillsEngine();
 	
 	/**

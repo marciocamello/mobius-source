@@ -17,7 +17,6 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-
 import lineage2.commons.threading.RunnableImpl;
 
 /**
@@ -26,13 +25,7 @@ import lineage2.commons.threading.RunnableImpl;
  */
 public class ThreadPoolManager
 {
-	/**
-	 * Field MAX_DELAY.
-	 */
 	private static final long MAX_DELAY = TimeUnit.NANOSECONDS.toMillis(Long.MAX_VALUE - System.nanoTime()) / 2;
-	/**
-	 * Field _instance.
-	 */
 	private static final ThreadPoolManager _instance = new ThreadPoolManager();
 	
 	/**
@@ -44,13 +37,7 @@ public class ThreadPoolManager
 		return _instance;
 	}
 	
-	/**
-	 * Field scheduledExecutor.
-	 */
 	final ScheduledThreadPoolExecutor scheduledExecutor = new ScheduledThreadPoolExecutor(1);
-	/**
-	 * Field executor.
-	 */
 	final ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 1, 5L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
 	
 	/**

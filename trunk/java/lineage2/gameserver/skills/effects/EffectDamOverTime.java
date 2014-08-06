@@ -25,9 +25,6 @@ import lineage2.gameserver.stats.Stats;
  */
 public class EffectDamOverTime extends Effect
 {
-	/**
-	 * Field bleed.
-	 */
 	private static final int[] bleed = new int[]
 	{
 		12,
@@ -43,9 +40,6 @@ public class EffectDamOverTime extends Effect
 		82,
 		87
 	};
-	/**
-	 * Field poison.
-	 */
 	private static final int[] poison = new int[]
 	{
 		11,
@@ -61,9 +55,6 @@ public class EffectDamOverTime extends Effect
 		77,
 		82
 	};
-	/**
-	 * Field _percent.
-	 */
 	private final boolean _percent;
 	
 	/**

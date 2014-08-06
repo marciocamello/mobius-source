@@ -24,9 +24,6 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
  */
 public final class NihilInvaderChest extends DefaultAI
 {
-	/**
-	 * Field _firstLevelItems.
-	 */
 	private static final int[] _firstLevelItems =
 	{
 		4039,
@@ -36,9 +33,6 @@ public final class NihilInvaderChest extends DefaultAI
 		4043,
 		4044
 	};
-	/**
-	 * Field _secondLevelItems.
-	 */
 	private static final int[] _secondLevelItems =
 	{
 		9628,

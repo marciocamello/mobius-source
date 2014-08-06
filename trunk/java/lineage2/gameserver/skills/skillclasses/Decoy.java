@@ -13,7 +13,6 @@
 package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
-
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.idfactory.IdFactory;
 import lineage2.gameserver.model.Creature;
@@ -30,13 +29,7 @@ import lineage2.gameserver.utils.Location;
  */
 public class Decoy extends Skill
 {
-	/**
-	 * Field _npcId.
-	 */
 	private final int _npcId;
-	/**
-	 * Field _lifeTime.
-	 */
 	private final int _lifeTime;
 	
 	/**

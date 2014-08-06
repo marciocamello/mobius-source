@@ -20,9 +20,6 @@ import lineage2.gameserver.network.loginservercon.SendablePacket;
  */
 public class PlayerInGame extends SendablePacket
 {
-	/**
-	 * Field account.
-	 */
 	private final String account;
 	
 	/**

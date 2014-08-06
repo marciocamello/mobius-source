@@ -24,17 +24,8 @@ import lineage2.gameserver.utils.NpcUtils;
  */
 public final class EtisEtina extends Fighter
 {
-	/**
-	 * Field summonsReleased.
-	 */
 	private boolean summonsReleased = false;
-	/**
-	 * Field summon1.
-	 */
 	private NpcInstance summon1;
-	/**
-	 * Field summon2.
-	 */
 	private NpcInstance summon2;
 	
 	/**

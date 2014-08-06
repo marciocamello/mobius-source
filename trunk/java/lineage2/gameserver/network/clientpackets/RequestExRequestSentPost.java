@@ -24,9 +24,6 @@ import lineage2.gameserver.network.serverpackets.ExShowSentPostList;
  */
 public class RequestExRequestSentPost extends L2GameClientPacket
 {
-	/**
-	 * Field postId.
-	 */
 	private int postId;
 	
 	/**

@@ -13,7 +13,6 @@
 package ai;
 
 import java.util.List;
-
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.lang.reference.HardReferences;
@@ -33,13 +32,7 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class Kama56Boss extends Fighter
 {
-	/**
-	 * Field _nextOrderTime.
-	 */
 	private long _nextOrderTime = 0;
-	/**
-	 * Field _lastMinionsTargetRef.
-	 */
 	private HardReference<Player> _lastMinionsTargetRef = HardReferences.emptyRef();
 	
 	/**

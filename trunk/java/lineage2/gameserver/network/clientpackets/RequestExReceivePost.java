@@ -26,7 +26,6 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Log;
-
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -35,9 +34,6 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class RequestExReceivePost extends L2GameClientPacket
 {
-	/**
-	 * Field postId.
-	 */
 	private int postId;
 	
 	/**

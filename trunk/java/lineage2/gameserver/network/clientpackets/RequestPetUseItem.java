@@ -21,7 +21,6 @@ import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.ItemFunctions;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -30,9 +29,6 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public class RequestPetUseItem extends L2GameClientPacket
 {
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
 	
 	/**

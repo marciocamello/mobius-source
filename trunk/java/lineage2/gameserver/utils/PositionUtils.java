@@ -26,35 +26,14 @@ public class PositionUtils
 	 */
 	public enum TargetDirection
 	{
-		/**
-		 * Field NONE.
-		 */
 		NONE,
-		/**
-		 * Field FRONT.
-		 */
 		FRONT,
-		/**
-		 * Field SIDE.
-		 */
 		SIDE,
-		/**
-		 * Field BEHIND.
-		 */
 		BEHIND
 	}
 	
-	/**
-	 * Field MAX_ANGLE. (value is 360)
-	 */
 	private static final int MAX_ANGLE = 360;
-	/**
-	 * Field FRONT_MAX_ANGLE. (value is 100.0)
-	 */
 	private static final double FRONT_MAX_ANGLE = 100;
-	/**
-	 * Field BACK_MAX_ANGLE. (value is 40.0)
-	 */
 	private static final double BACK_MAX_ANGLE = 40;
 	
 	/**

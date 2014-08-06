@@ -15,7 +15,6 @@ package lineage2.gameserver.model;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Zone.ZoneType;
@@ -23,7 +22,6 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,77 +31,23 @@ import org.slf4j.LoggerFactory;
  */
 public class World
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(World.class);
-	/**
-	 * Field MAP_MIN_X.
-	 */
 	public static final int MAP_MIN_X = (Config.GEO_X_FIRST - 20) << 15;
-	/**
-	 * Field MAP_MAX_X.
-	 */
 	public static final int MAP_MAX_X = (((Config.GEO_X_LAST - 20) + 1) << 15) - 1;
-	/**
-	 * Field MAP_MIN_Y.
-	 */
 	public static final int MAP_MIN_Y = (Config.GEO_Y_FIRST - 18) << 15;
-	/**
-	 * Field MAP_MAX_Y.
-	 */
 	public static final int MAP_MAX_Y = (((Config.GEO_Y_LAST - 18) + 1) << 15) - 1;
-	/**
-	 * Field MAP_MIN_Z.
-	 */
 	public static final int MAP_MIN_Z = Config.MAP_MIN_Z;
-	/**
-	 * Field MAP_MAX_Z.
-	 */
 	public static final int MAP_MAX_Z = Config.MAP_MAX_Z;
-	/**
-	 * Field WORLD_SIZE_X.
-	 */
 	public static final int WORLD_SIZE_X = (Config.GEO_X_LAST - Config.GEO_X_FIRST) + 1;
-	/**
-	 * Field WORLD_SIZE_Y.
-	 */
 	public static final int WORLD_SIZE_Y = (Config.GEO_Y_LAST - Config.GEO_Y_FIRST) + 1;
-	/**
-	 * Field SHIFT_BY.
-	 */
 	public static final int SHIFT_BY = Config.SHIFT_BY;
-	/**
-	 * Field SHIFT_BY_Z.
-	 */
 	public static final int SHIFT_BY_Z = Config.SHIFT_BY_Z;
-	/**
-	 * Field OFFSET_X.
-	 */
 	public static final int OFFSET_X = Math.abs(MAP_MIN_X >> SHIFT_BY);
-	/**
-	 * Field OFFSET_Y.
-	 */
 	public static final int OFFSET_Y = Math.abs(MAP_MIN_Y >> SHIFT_BY);
-	/**
-	 * Field OFFSET_Z.
-	 */
 	public static final int OFFSET_Z = Math.abs(MAP_MIN_Z >> SHIFT_BY_Z);
-	/**
-	 * Field REGIONS_X.
-	 */
 	private static final int REGIONS_X = (MAP_MAX_X >> SHIFT_BY) + OFFSET_X;
-	/**
-	 * Field REGIONS_Y.
-	 */
 	private static final int REGIONS_Y = (MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y;
-	/**
-	 * Field REGIONS_Z.
-	 */
 	private static final int REGIONS_Z = (MAP_MAX_Z >> SHIFT_BY_Z) + OFFSET_Z;
-	/**
-	 * Field _worldRegions.
-	 */
 	private static volatile WorldRegion[][][] _worldRegions = new WorldRegion[REGIONS_X + 1][REGIONS_Y + 1][REGIONS_Z + 1];
 	
 	/**

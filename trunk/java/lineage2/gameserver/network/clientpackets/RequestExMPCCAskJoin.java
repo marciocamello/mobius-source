@@ -28,9 +28,6 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
  */
 public class RequestExMPCCAskJoin extends L2GameClientPacket
 {
-	/**
-	 * Field _name.
-	 */
 	private String _name;
 	
 	/**

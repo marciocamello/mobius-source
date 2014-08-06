@@ -23,13 +23,7 @@ import lineage2.gameserver.utils.Location;
  */
 public class RequestGetOnVehicle extends L2GameClientPacket
 {
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
-	/**
-	 * Field _loc.
-	 */
 	private final Location _loc = new Location();
 	
 	/**

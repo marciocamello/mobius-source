@@ -14,7 +14,6 @@ package lineage2.gameserver.data.xml.holder;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.templates.ZoneTemplate;
 
@@ -24,13 +23,7 @@ import lineage2.gameserver.templates.ZoneTemplate;
  */
 public class ZoneHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final ZoneHolder _instance = new ZoneHolder();
-	/**
-	 * Field _zones.
-	 */
 	private final Map<String, ZoneTemplate> _zones = new HashMap<>();
 	
 	/**

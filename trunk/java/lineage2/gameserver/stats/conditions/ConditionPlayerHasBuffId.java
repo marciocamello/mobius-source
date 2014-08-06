@@ -13,7 +13,6 @@
 package lineage2.gameserver.stats.conditions;
 
 import java.util.List;
-
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.stats.Env;
@@ -24,13 +23,7 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionPlayerHasBuffId extends Condition
 {
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _level.
-	 */
 	private final int _level;
 	
 	/**

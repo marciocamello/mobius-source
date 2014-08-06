@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.clientpackets;
 
 import java.util.List;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -47,7 +46,6 @@ import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.tables.PetSkillsTable;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.TradeHelper;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -261,7 +259,6 @@ public class RequestActionUse extends L2GameClientPacket
 		ACTION85(85, PLAYER_ACTION, 0, 1),
 		ACTION86(86, PLAYER_ACTION, 0, 1),
 		ACTION90(90, PLAYER_ACTION, 0, 1);
-		
 		public int id;
 		public int type;
 		public int value;
@@ -1164,9 +1161,6 @@ public class RequestActionUse extends L2GameClientPacket
 	 */
 	static class SocialTask extends RunnableImpl
 	{
-		/**
-		 * Field _player.
-		 */
 		Player _player;
 		
 		/**

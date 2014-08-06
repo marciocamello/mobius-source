@@ -15,7 +15,6 @@ package lineage2.gameserver.handler.admincommands.impl;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.instancemanager.HellboundManager;
 import lineage2.gameserver.model.Player;
-
 import org.apache.commons.lang3.math.NumberUtils;
 
 /**
@@ -29,17 +28,8 @@ public class AdminHellbound implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_hbadd.
-		 */
 		admin_hbadd,
-		/**
-		 * Field admin_hbsub.
-		 */
 		admin_hbsub,
-		/**
-		 * Field admin_hbset.
-		 */
 		admin_hbset,
 	}
 	

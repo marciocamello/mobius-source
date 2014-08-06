@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.serverpackets;
 
 import java.util.List;
-
 import lineage2.gameserver.instancemanager.commission.CommissionItemInfo;
 
 /**
@@ -24,7 +23,6 @@ public class ExResponseCommissionList extends L2GameServerPacket
 	public static final int EMPTY_LIST = -2;
 	public static final int PLAYER_REGISTERED_ITEMS = 2;
 	public static final int ALL_ITEMS = 3;
-	
 	private final int type;
 	private int currentTime;
 	private int part;

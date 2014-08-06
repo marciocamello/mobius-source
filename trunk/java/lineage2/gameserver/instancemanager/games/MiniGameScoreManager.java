@@ -19,13 +19,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
-
-import org.napile.primitive.comparators.IntComparator;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CTreeIntObjectMap;
 import org.slf4j.Logger;
@@ -37,24 +34,8 @@ import org.slf4j.LoggerFactory;
  */
 public class MiniGameScoreManager
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(MiniGameScoreManager.class);
-	/**
-	 * Field _scores.
-	 */
-	private final IntObjectMap<Set<String>> _scores = new CTreeIntObjectMap<>(new IntComparator()
-	{
-		@Override
-		public int compare(int o1, int o2)
-		{
-			return o2 - o1;
-		}
-	});
-	/**
-	 * Field _instance.
-	 */
+	private final IntObjectMap<Set<String>> _scores = new CTreeIntObjectMap<>((o1, o2) -> o2 - o1);
 	private static final MiniGameScoreManager _instance = new MiniGameScoreManager();
 	
 	/**

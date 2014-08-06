@@ -29,9 +29,6 @@ public final class CellphineInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field INSTANCE_ID. (value is 200)
-	 */
 	private static final int INSTANCE_ID = 200;
 	
 	/**

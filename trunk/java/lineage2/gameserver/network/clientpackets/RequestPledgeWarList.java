@@ -22,13 +22,7 @@ import lineage2.gameserver.network.serverpackets.PledgeReceiveWarList;
  */
 public class RequestPledgeWarList extends L2GameClientPacket
 {
-	/**
-	 * Field _type.
-	 */
 	static int _type;
-	/**
-	 * Field _page.
-	 */
 	private int _page;
 	
 	/**

@@ -20,9 +20,6 @@ import lineage2.commons.lang.ArrayUtils;
  */
 public class Polygon extends AbstractShape
 {
-	/**
-	 * Field points.
-	 */
 	protected Point2D[] points = Point2D.EMPTY_ARRAY;
 	
 	/**

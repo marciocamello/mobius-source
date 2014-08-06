@@ -18,17 +18,8 @@ package lineage2.gameserver.model.reward;
  */
 public class RewardItem
 {
-	/**
-	 * Field itemId.
-	 */
 	public final int itemId;
-	/**
-	 * Field count.
-	 */
 	public long count;
-	/**
-	 * Field isAdena.
-	 */
 	public boolean isAdena;
 	
 	/**

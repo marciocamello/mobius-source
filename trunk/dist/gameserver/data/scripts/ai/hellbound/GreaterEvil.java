@@ -22,9 +22,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class GreaterEvil extends Fighter
 {
-	/**
-	 * Field path.
-	 */
 	static final Location[] path =
 	{
 		new Location(28448, 243816, -3696),
@@ -33,9 +30,6 @@ public final class GreaterEvil extends Fighter
 		new Location(28296, 247912, -3248),
 		new Location(25880, 246184, -3176)
 	};
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = 0;
 	
 	/**

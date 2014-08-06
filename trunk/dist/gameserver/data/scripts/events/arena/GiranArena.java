@@ -15,7 +15,6 @@ package events.arena;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
-
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.listener.actor.OnDeathListener;
 import lineage2.gameserver.listener.actor.player.OnPlayerExitListener;
@@ -95,9 +94,6 @@ public final class GiranArena extends Functions implements ScriptFile, OnDeathLi
 		}
 	}
 	
-	/**
-	 * Field _instance.
-	 */
 	private static ArenaTemplate _instance;
 	
 	/**

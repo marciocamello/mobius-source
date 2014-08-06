@@ -18,16 +18,7 @@ package lineage2.gameserver.templates.spawn;
  */
 public enum PeriodOfDay
 {
-	/**
-	 * Field NONE.
-	 */
 	NONE,
-	/**
-	 * Field DAY.
-	 */
 	DAY,
-	/**
-	 * Field NIGHT.
-	 */
 	NIGHT
 }

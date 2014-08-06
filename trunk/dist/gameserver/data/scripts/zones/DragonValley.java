@@ -17,7 +17,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener;
@@ -36,25 +35,10 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class DragonValley implements ScriptFile
 {
-	/**
-	 * Field _zoneListener.
-	 */
 	private static ZoneListener _zoneListener;
-	/**
-	 * Field zone.
-	 */
 	private static Zone zone;
-	/**
-	 * Field weight.
-	 */
 	private static final Map<ClassId, Double> weight = new HashMap<>();
-	/**
-	 * Field inzone.
-	 */
 	static final List<Player> inzone = new ArrayList<>();
-	/**
-	 * Field buffTask.
-	 */
 	private static ScheduledFuture<?> buffTask;
 	static
 	{

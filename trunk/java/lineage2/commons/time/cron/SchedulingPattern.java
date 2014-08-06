@@ -25,65 +25,20 @@ import java.util.TimeZone;
  */
 public class SchedulingPattern
 {
-	/**
-	 * Field MINUTE_MIN_VALUE. (value is 0)
-	 */
 	private static final int MINUTE_MIN_VALUE = 0;
-	/**
-	 * Field MINUTE_MAX_VALUE. (value is 59)
-	 */
 	private static final int MINUTE_MAX_VALUE = 59;
-	/**
-	 * Field HOUR_MIN_VALUE. (value is 0)
-	 */
 	private static final int HOUR_MIN_VALUE = 0;
-	/**
-	 * Field HOUR_MAX_VALUE. (value is 23)
-	 */
 	private static final int HOUR_MAX_VALUE = 23;
-	/**
-	 * Field DAY_OF_MONTH_MIN_VALUE. (value is 1)
-	 */
 	private static final int DAY_OF_MONTH_MIN_VALUE = 1;
-	/**
-	 * Field DAY_OF_MONTH_MAX_VALUE. (value is 31)
-	 */
 	private static final int DAY_OF_MONTH_MAX_VALUE = 31;
-	/**
-	 * Field MONTH_MIN_VALUE. (value is 1)
-	 */
 	private static final int MONTH_MIN_VALUE = 1;
-	/**
-	 * Field MONTH_MAX_VALUE. (value is 12)
-	 */
 	private static final int MONTH_MAX_VALUE = 12;
-	/**
-	 * Field DAY_OF_WEEK_MIN_VALUE. (value is 0)
-	 */
 	private static final int DAY_OF_WEEK_MIN_VALUE = 0;
-	/**
-	 * Field DAY_OF_WEEK_MAX_VALUE. (value is 7)
-	 */
 	private static final int DAY_OF_WEEK_MAX_VALUE = 7;
-	/**
-	 * Field MINUTE_VALUE_PARSER.
-	 */
 	private static final ValueParser MINUTE_VALUE_PARSER = new MinuteValueParser();
-	/**
-	 * Field HOUR_VALUE_PARSER.
-	 */
 	private static final ValueParser HOUR_VALUE_PARSER = new HourValueParser();
-	/**
-	 * Field DAY_OF_MONTH_VALUE_PARSER.
-	 */
 	private static final ValueParser DAY_OF_MONTH_VALUE_PARSER = new DayOfMonthValueParser();
-	/**
-	 * Field MONTH_VALUE_PARSER.
-	 */
 	private static final ValueParser MONTH_VALUE_PARSER = new MonthValueParser();
-	/**
-	 * Field DAY_OF_WEEK_VALUE_PARSER.
-	 */
 	private static final ValueParser DAY_OF_WEEK_VALUE_PARSER = new DayOfWeekValueParser();
 	
 	/**
@@ -105,33 +60,12 @@ public class SchedulingPattern
 		return true;
 	}
 	
-	/**
-	 * Field asString.
-	 */
 	private final String asString;
-	/**
-	 * Field minuteMatchers.
-	 */
 	protected final List<ValueMatcher> minuteMatchers = new ArrayList<>();
-	/**
-	 * Field hourMatchers.
-	 */
 	protected final List<ValueMatcher> hourMatchers = new ArrayList<>();
-	/**
-	 * Field dayOfMonthMatchers.
-	 */
 	protected final List<ValueMatcher> dayOfMonthMatchers = new ArrayList<>();
-	/**
-	 * Field monthMatchers.
-	 */
 	protected final List<ValueMatcher> monthMatchers = new ArrayList<>();
-	/**
-	 * Field dayOfWeekMatchers.
-	 */
 	protected final List<ValueMatcher> dayOfWeekMatchers = new ArrayList<>();
-	/**
-	 * Field matcherSize.
-	 */
 	protected int matcherSize = 0;
 	
 	/**
@@ -599,9 +533,6 @@ public class SchedulingPattern
 	 */
 	public class InvalidPatternException extends RuntimeException
 	{
-		/**
-		 * Field serialVersionUID. (value is 1)
-		 */
 		private static final long serialVersionUID = 1L;
 		
 		/**
@@ -652,13 +583,7 @@ public class SchedulingPattern
 	 */
 	private static class SimpleValueParser implements ValueParser
 	{
-		/**
-		 * Field minValue.
-		 */
 		protected int minValue;
-		/**
-		 * Field maxValue.
-		 */
 		protected int maxValue;
 		
 		/**
@@ -783,9 +708,6 @@ public class SchedulingPattern
 	 */
 	private static class MonthValueParser extends SimpleValueParser
 	{
-		/**
-		 * Field ALIASES.
-		 */
 		private static final String[] ALIASES =
 		{
 			"jan",
@@ -834,9 +756,6 @@ public class SchedulingPattern
 	 */
 	private static class DayOfWeekValueParser extends SimpleValueParser
 	{
-		/**
-		 * Field ALIASES.
-		 */
 		private static final String[] ALIASES =
 		{
 			"sun",
@@ -918,9 +837,6 @@ public class SchedulingPattern
 	 */
 	private static class IntArrayValueMatcher implements ValueMatcher
 	{
-		/**
-		 * Field values.
-		 */
 		private final int[] values;
 		
 		/**
@@ -970,9 +886,6 @@ public class SchedulingPattern
 	 */
 	private static class DayOfMonthValueMatcher extends IntArrayValueMatcher
 	{
-		/**
-		 * Field lastDays.
-		 */
 		private static final int[] lastDays =
 		{
 			31,

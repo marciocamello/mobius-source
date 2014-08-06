@@ -18,9 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import lineage2.commons.geometry.Rectangle;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -33,7 +31,6 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.TeleportToLocation;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -46,17 +43,8 @@ import org.w3c.dom.Node;
  */
 public class DelusionChamberManager
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(DelusionChamberManager.class);
-	/**
-	 * Field _instance.
-	 */
 	private static DelusionChamberManager _instance;
-	/**
-	 * Field _rooms.
-	 */
 	private final Map<Integer, Map<Integer, DelusionChamberRoom>> _rooms = new ConcurrentHashMap<>();
 	
 	/**
@@ -277,21 +265,9 @@ public class DelusionChamberManager
 	 */
 	public class DelusionChamberRoom
 	{
-		/**
-		 * Field _territory.
-		 */
 		private final Territory _territory;
-		/**
-		 * Field _teleportCoords.
-		 */
 		private final Location _teleportCoords;
-		/**
-		 * Field _isBossRoom.
-		 */
 		private final boolean _isBossRoom;
-		/**
-		 * Field _roomSpawns.
-		 */
 		private final List<SimpleSpawner> _roomSpawns;
 		
 		/**

@@ -25,9 +25,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Leandro extends DefaultAI
 {
-	/**
-	 * Field points.
-	 */
 	static final Location[] points =
 	{
 		new Location(-82428, 245204, -3720),
@@ -49,17 +46,8 @@ public final class Leandro extends DefaultAI
 		new Location(-83595, 244051, -3728),
 		new Location(-82108, 244974, -3720)
 	};
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = -1;
-	/**
-	 * Field wait_timeout.
-	 */
 	private long wait_timeout = 0;
-	/**
-	 * Field wait.
-	 */
 	private boolean wait = false;
 	
 	/**

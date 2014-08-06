@@ -21,113 +21,32 @@ import lineage2.gameserver.templates.player.StatAttributes;
  */
 public class CharTemplate
 {
-	/**
-	 * Field EMPTY_ATTRIBUTES.
-	 */
 	private static final int[] EMPTY_ATTRIBUTES = new int[6];
-	/**
-	 * Field _baseAttr.
-	 */
 	private final StatAttributes _baseAttr;
-	/**
-	 * Field _baseAtkRange.
-	 */
 	private final int _baseAtkRange;
-	/**
-	 * Field _baseHpMax.
-	 */
 	private final double _baseHpMax;
-	/**
-	 * Field _baseCpMax.
-	 */
 	private final double _baseCpMax;
-	/**
-	 * Field _baseMpMax.
-	 */
 	private final double _baseMpMax;
-	/**
-	 * Field _baseHpReg.
-	 */
 	private final double _baseHpReg;
-	/**
-	 * Field _baseMpReg.
-	 */
 	private final double _baseMpReg;
-	/**
-	 * Field _baseCpReg.
-	 */
 	private final double _baseCpReg;
-	/**
-	 * Field _basePAtk.
-	 */
 	private final double _basePAtk;
-	/**
-	 * Field _baseMAtk.
-	 */
 	private final double _baseMAtk;
-	/**
-	 * Field _basePDef.
-	 */
 	private final double _basePDef;
-	/**
-	 * Field _baseMDef.
-	 */
 	private final double _baseMDef;
-	/**
-	 * Field _basePAtkSpd.
-	 */
 	private final double _basePAtkSpd;
-	/**
-	 * Field _baseMAtkSpd.
-	 */
 	private final double _baseMAtkSpd;
-	/**
-	 * Field _baseShldDef.
-	 */
 	private final double _baseShldDef;
-	/**
-	 * Field _baseShldRate.
-	 */
 	private final double _baseShldRate;
-	/**
-	 * Field _baseCritRate.
-	 */
 	private final double _baseCritRate;
-	/**
-	 * Field _baseRunSpd.
-	 */
 	private final int _baseRunSpd;
-	/**
-	 * Field _baseWalkSpd.
-	 */
 	private final double _baseWalkSpd;
-	/**
-	 * Field _baseWaterRunSpd.
-	 */
 	private final double _baseWaterRunSpd;
-	/**
-	 * Field _baseWaterWalkSpd.
-	 */
 	private final double _baseWaterWalkSpd;
-	/**
-	 * Field _baseAttributeAttack.
-	 */
 	private final int[] _baseAttributeAttack;
-	/**
-	 * Field _baseAttributeDefence.
-	 */
 	private final int[] _baseAttributeDefence;
-	/**
-	 * Field _collisionRadius.
-	 */
 	private final double _collisionRadius;
-	/**
-	 * Field _collisionHeight.
-	 */
 	private final double _collisionHeight;
-	/**
-	 * Field _baseAttackType.
-	 */
 	private final WeaponTemplate.WeaponType _baseAttackType;
 	
 	/**

@@ -13,7 +13,6 @@
 package lineage2.gameserver.taskmanager.actionrunner.tasks;
 
 import lineage2.gameserver.model.entity.olympiad.OlympiadDatabase;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,13 +22,7 @@ import org.slf4j.LoggerFactory;
  */
 public class OlympiadSaveTask extends AutomaticTask
 {
-	/**
-	 * Field INTERVAL. (value is 7200000)
-	 */
 	private static final long INTERVAL = 7200000L;
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(OlympiadSaveTask.class);
 	

@@ -26,17 +26,8 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
  */
 public class RequestPledgeSetAcademyMaster extends L2GameClientPacket
 {
-	/**
-	 * Field _mode.
-	 */
 	private int _mode;
-	/**
-	 * Field _sponsorName.
-	 */
 	private String _sponsorName;
-	/**
-	 * Field _apprenticeName.
-	 */
 	private String _apprenticeName;
 	
 	/**

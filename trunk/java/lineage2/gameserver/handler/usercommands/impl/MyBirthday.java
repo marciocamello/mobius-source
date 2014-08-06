@@ -13,7 +13,6 @@
 package lineage2.gameserver.handler.usercommands.impl;
 
 import java.util.Calendar;
-
 import lineage2.gameserver.handler.usercommands.IUserCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
@@ -25,9 +24,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class MyBirthday implements IUserCommandHandler
 {
-	/**
-	 * Field COMMAND_IDS.
-	 */
 	private static final int[] COMMAND_IDS =
 	{
 		126

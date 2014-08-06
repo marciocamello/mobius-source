@@ -24,9 +24,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Pterosaur extends DefaultAI
 {
-	/**
-	 * Field points.
-	 */
 	private static final Location[] points =
 	{
 		new Location(3964, -7496, -3488),
@@ -90,17 +87,8 @@ public final class Pterosaur extends DefaultAI
 		new Location(9316, -12869, -3989),
 		new Location(6935, -7852, -3685)
 	};
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = -1;
-	/**
-	 * Field wait_timeout.
-	 */
 	private long wait_timeout = 0;
-	/**
-	 * Field wait.
-	 */
 	private boolean wait = false;
 	
 	/**

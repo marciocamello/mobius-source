@@ -14,7 +14,6 @@ package ai.hellbound;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.ai.DefaultAI;
@@ -33,41 +32,14 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public final class Kechi extends DefaultAI
 {
-	/**
-	 * Field KechiDoubleCutter.
-	 */
 	final Skill KechiDoubleCutter;
-	/**
-	 * Field KechiAirBlade.
-	 */
 	final Skill KechiAirBlade;
-	/**
-	 * Field Invincible.
-	 */
 	final Skill Invincible;
-	/**
-	 * Field NPCparty60ClanHeal.
-	 */
 	final Skill NPCparty60ClanHeal;
-	/**
-	 * Field GUARD1. (value is 22309)
-	 */
 	private static final int GUARD1 = 22309;
-	/**
-	 * Field GUARD2. (value is 22310)
-	 */
 	private static final int GUARD2 = 22310;
-	/**
-	 * Field GUARD3. (value is 22417)
-	 */
 	private static final int GUARD3 = 22417;
-	/**
-	 * Field guard_spawn_loc.
-	 */
 	private static final Location guard_spawn_loc = new Location(153384, 149528, -12136);
-	/**
-	 * Field guard_run.
-	 */
 	private static final int[][] guard_run = new int[][]
 	{
 		{
@@ -119,9 +91,6 @@ public final class Kechi extends DefaultAI
 			-12159
 		}
 	};
-	/**
-	 * Field chat.
-	 */
 	private static final String[] chat = new String[]
 	{
 		"Стража, убейте их!",
@@ -130,9 +99,6 @@ public final class Kechi extends DefaultAI
 		"Добейте их.",
 		"Вы в�?е умрете!"
 	};
-	/**
-	 * Field stage.
-	 */
 	private int stage = 0;
 	
 	/**

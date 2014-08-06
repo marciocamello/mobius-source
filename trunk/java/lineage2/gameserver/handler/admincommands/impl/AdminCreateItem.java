@@ -35,25 +35,10 @@ public class AdminCreateItem implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_itemcreate.
-		 */
 		admin_itemcreate,
-		/**
-		 * Field admin_create_item.
-		 */
 		admin_create_item,
-		/**
-		 * Field admin_ci.
-		 */
 		admin_ci,
-		/**
-		 * Field admin_spreaditem.
-		 */
 		admin_spreaditem,
-		/**
-		 * Field admin_create_item_element.
-		 */
 		admin_create_item_element
 	}
 	

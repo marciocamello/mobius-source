@@ -13,7 +13,6 @@
 package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
-
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
@@ -28,8 +27,6 @@ import lineage2.gameserver.stats.Formulas.AttackInfo;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.ItemFunctions;
 
-/**
- */
 public class Plunder extends Skill
 {
 	/**

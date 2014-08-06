@@ -161,17 +161,8 @@ public final class Kanabion extends Fighter
 	 */
 	public static class SpawnNext extends RunnableImpl
 	{
-		/**
-		 * Field _actor.
-		 */
 		private final NpcInstance _actor;
-		/**
-		 * Field _player.
-		 */
 		private final Creature _player;
-		/**
-		 * Field _nextId.
-		 */
 		private final int _nextId;
 		
 		/**

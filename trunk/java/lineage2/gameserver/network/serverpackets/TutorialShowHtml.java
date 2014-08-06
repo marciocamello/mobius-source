@@ -14,7 +14,6 @@ package lineage2.gameserver.network.serverpackets;
 
 public class TutorialShowHtml extends L2GameServerPacket
 {
-	
 	/**
 	 * <html><head><body><center> <font color="LEVEL">Quest</font> </center> <br>
 	 * Speak to the <font color="LEVEL"> Paagrio Priests </font> of the Temple of Paagrio. They will explain the basics of combat through quests. <br>
@@ -33,7 +32,6 @@ public class TutorialShowHtml extends L2GameServerPacket
 	public static final String QT_004 = "..\\L2Text\\QT_004_skill_01.htm";
 	public static final String QT_009 = "..\\L2Text\\QT_009_enchant_01.htm";
 	public static final String GUIDE_ADVENTURER = "..\\L2Text\\Guide_Ad.htm";
-	
 	public static final String GUIDE_40_50 = "..\\L2Text\\Guide_Ad_4050_01_ivorytower.htm";
 	public static final String GUIDE_50_55 = "..\\L2Text\\Guide_Ad_5055_01_outlaws.htm";
 	public static final String GUIDE_55_60 = "..\\L2Text\\Guide_Ad_5560_01_forsaken.htm";
@@ -42,7 +40,6 @@ public class TutorialShowHtml extends L2GameServerPacket
 	public static final String GUIDE_70_75 = "..\\L2Text\\Guide_Ad_7075_00_main.htm";
 	public static final String GUIDE_75_80 = "..\\L2Text\\Guide_Ad_7580_00_main.htm";
 	public static final String GUIDE_80_85 = "..\\L2Text\\Guide_Ad_8085_00_main.htm";
-	
 	public static final String GUIDE_AWAKING = "..\\L2text\\Guide_Aw.htm";
 	public static final String AWAKING85_90 = "..\\L2text\\Guide_Aw_8590_00_main.htm";
 	public static final String AWAKING90_95 = "..\\L2text\\Guide_Aw_9095_00_main.htm";

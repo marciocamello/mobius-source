@@ -18,25 +18,10 @@ package lineage2.gameserver.model.base;
  */
 public enum ClassType
 {
-	/**
-	 * Field FIGHTER.
-	 */
 	FIGHTER,
-	/**
-	 * Field MYSTIC.
-	 */
 	MYSTIC,
-	/**
-	 * Field PRIEST.
-	 */
 	PRIEST;
-	/**
-	 * Field VALUES.
-	 */
 	public static final ClassType[] VALUES = values();
-	/**
-	 * Field MAIN_TYPES.
-	 */
 	public static final ClassType[] MAIN_TYPES = getMainTypes();
 	
 	/**

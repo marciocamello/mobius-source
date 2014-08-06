@@ -28,9 +28,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public final class SoulCoffin extends DefaultAI
 {
-	/**
-	 * Field checkTimer.
-	 */
 	private long checkTimer = 0;
 	
 	/**

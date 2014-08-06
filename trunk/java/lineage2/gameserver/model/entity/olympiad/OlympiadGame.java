@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -41,7 +40,6 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.InstantZone;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.Log;
-
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -52,53 +50,17 @@ import org.slf4j.LoggerFactory;
  */
 public class OlympiadGame
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(OlympiadGame.class);
-	/**
-	 * Field MAX_POINTS_LOOSE. (value is 10)
-	 */
 	public static final int MAX_POINTS_LOOSE = 10;
-	/**
-	 * Field validated.
-	 */
 	public boolean validated = false;
-	/**
-	 * Field _winner.
-	 */
 	private int _winner = 0;
-	/**
-	 * Field _state.
-	 */
 	private int _state = 0;
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _reflection.
-	 */
 	private final Reflection _reflection;
-	/**
-	 * Field _type.
-	 */
 	private final CompType _type;
-	/**
-	 * Field _team1.
-	 */
 	private final OlympiadTeam _team1;
-	/**
-	 * Field _team2.
-	 */
 	private final OlympiadTeam _team2;
-	/**
-	 * Field _spectators.
-	 */
 	private final List<Player> _spectators = new CopyOnWriteArrayList<>();
-	/**
-	 * Field _startTime.
-	 */
 	private long _startTime;
 	
 	/**
@@ -810,13 +772,7 @@ public class OlympiadGame
 		return (player != null) && (player.getOlympiadSide() == 1 ? _team1.logout(player) : _team2.logout(player));
 	}
 	
-	/**
-	 * Field _task.
-	 */
 	OlympiadGameTask _task;
-	/**
-	 * Field _shedule.
-	 */
 	ScheduledFuture<?> _shedule;
 	
 	/**

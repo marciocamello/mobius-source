@@ -13,7 +13,6 @@
 package ai.residences;
 
 import java.util.List;
-
 import lineage2.commons.collections.CollectionUtils;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;

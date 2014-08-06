@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -94,13 +93,7 @@ public final class BaylorManager extends Functions implements ScriptFile
 	 */
 	private static class BaylorSpawn extends RunnableImpl
 	{
-		/**
-		 * Field _npcId.
-		 */
 		private final int _npcId;
-		/**
-		 * Field _pos.
-		 */
 		private final Location _pos = new Location(153569, 142075, -12711, 44732);
 		
 		/**
@@ -203,13 +196,7 @@ public final class BaylorManager extends Functions implements ScriptFile
 	 */
 	private static class Social extends RunnableImpl
 	{
-		/**
-		 * Field _action.
-		 */
 		private final int _action;
-		/**
-		 * Field _npc.
-		 */
 		private final NpcInstance _npc;
 		
 		/**
@@ -278,25 +265,10 @@ public final class BaylorManager extends Functions implements ScriptFile
 		}
 	}
 	
-	/**
-	 * Field Baylor. (value is 29099)
-	 */
 	private static final int Baylor = 29099;
-	/**
-	 * Field CrystalPrisonGuard. (value is 29100)
-	 */
 	private static final int CrystalPrisonGuard = 29100;
-	/**
-	 * Field Parme. (value is 32271)
-	 */
 	private static final int Parme = 32271;
-	/**
-	 * Field Oracle. (value is 32273)
-	 */
 	private static final int Oracle = 32273;
-	/**
-	 * Field _crystalineLocation.
-	 */
 	static final Location[] _crystalineLocation =
 	{
 		new Location(154404, 140596, -12711, 44732),
@@ -308,9 +280,6 @@ public final class BaylorManager extends Functions implements ScriptFile
 		new Location(154439, 143538, -12711, 44732),
 		new Location(155246, 142068, -12711, 44732)
 	};
-	/**
-	 * Field _baylorChestLocation.
-	 */
 	private static final Location[] _baylorChestLocation =
 	{
 		new Location(153763, 142075, -12741, 64792),
@@ -330,9 +299,6 @@ public final class BaylorManager extends Functions implements ScriptFile
 		new Location(152907, 141428, -12741, 39590),
 		new Location(154243, 141411, -12741, 55500)
 	};
-	/**
-	 * Field doors.
-	 */
 	static final int[] doors =
 	{
 		24220009,
@@ -344,65 +310,20 @@ public final class BaylorManager extends Functions implements ScriptFile
 		24220017,
 		24220019
 	};
-	/**
-	 * Field _crystaline.
-	 */
 	static final NpcInstance[] _crystaline = new NpcInstance[8];
-	/**
-	 * Field _baylor.
-	 */
 	static NpcInstance _baylor;
-	/**
-	 * Field _intervalEndTask.
-	 */
 	private static ScheduledFuture<?> _intervalEndTask = null;
-	/**
-	 * Field _activityTimeEndTask.
-	 */
 	static ScheduledFuture<?> _activityTimeEndTask = null;
-	/**
-	 * Field _socialTask.
-	 */
 	static ScheduledFuture<?> _socialTask = null;
-	/**
-	 * Field _endSceneTask.
-	 */
 	static ScheduledFuture<?> _endSceneTask = null;
-	/**
-	 * Field _isAlreadyEnteredOtherParty.
-	 */
 	private static boolean _isAlreadyEnteredOtherParty = false;
-	/**
-	 * Field _state.
-	 */
 	static EpicBossState _state;
-	/**
-	 * Field _zone.
-	 */
 	private static Zone _zone;
-	/**
-	 * Field FWBA_ACTIVITYTIMEOFMOBS.
-	 */
 	private static final int FWBA_ACTIVITYTIMEOFMOBS = 120 * 60000;
-	/**
-	 * Field FWBA_FIXINTERVALOFBAYLORSPAWN.
-	 */
 	private static final int FWBA_FIXINTERVALOFBAYLORSPAWN = 1440 * 60000;
-	/**
-	 * Field FWBA_RANDOMINTERVALOFBAYLORSPAWN.
-	 */
 	private static final int FWBA_RANDOMINTERVALOFBAYLORSPAWN = 1440 * 60000;
-	/**
-	 * Field FWBA_ENABLESINGLEPLAYER. (value is false)
-	 */
 	private static final boolean FWBA_ENABLESINGLEPLAYER = false;
-	/**
-	 * Field Dying.
-	 */
 	static boolean Dying = false;
-	/**
-	 * Field currentReflection.
-	 */
 	static int currentReflection;
 	
 	/**
@@ -591,9 +512,6 @@ public final class BaylorManager extends Functions implements ScriptFile
 	 */
 	private static class BaylorZoneListener implements OnZoneEnterLeaveListener
 	{
-		/**
-		 * Field _instance.
-		 */
 		private static final OnZoneEnterLeaveListener _instance = new BaylorZoneListener();
 		
 		/**
@@ -641,9 +559,6 @@ public final class BaylorManager extends Functions implements ScriptFile
 	 */
 	private static class PlayerDeathListener implements OnDeathListener
 	{
-		/**
-		 * Field _instance.
-		 */
 		private static final OnDeathListener _instance = new PlayerDeathListener();
 		
 		/**
@@ -673,9 +588,6 @@ public final class BaylorManager extends Functions implements ScriptFile
 	 */
 	private static class BaylorDeathListener implements OnDeathListener
 	{
-		/**
-		 * Field _instance.
-		 */
 		private static final OnDeathListener _instance = new BaylorDeathListener();
 		
 		/**

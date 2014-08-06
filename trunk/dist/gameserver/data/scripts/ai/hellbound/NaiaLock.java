@@ -26,13 +26,7 @@ import lineage2.gameserver.utils.Location;
  */
 public final class NaiaLock extends Fighter
 {
-	/**
-	 * Field _attacked.
-	 */
 	private static boolean _attacked = false;
-	/**
-	 * Field _entranceactive.
-	 */
 	private static boolean _entranceactive = false;
 	
 	/**

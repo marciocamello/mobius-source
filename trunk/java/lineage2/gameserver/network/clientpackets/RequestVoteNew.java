@@ -24,9 +24,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class RequestVoteNew extends L2GameClientPacket
 {
-	/**
-	 * Field _targetObjectId.
-	 */
 	private int _targetObjectId;
 	
 	/**

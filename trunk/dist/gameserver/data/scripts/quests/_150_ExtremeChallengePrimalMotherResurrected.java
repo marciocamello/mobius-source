@@ -21,9 +21,7 @@ import lineage2.gameserver.scripts.ScriptFile;
 public class _150_ExtremeChallengePrimalMotherResurrected extends Quest implements ScriptFile
 {
 	private static final int LIMIER = 33293;
-	
 	private static final int ISXINA_EXTRIM = 29196;
-	
 	private static final int SIGN_OF_SHILEN = 17589;
 	
 	public _150_ExtremeChallengePrimalMotherResurrected()

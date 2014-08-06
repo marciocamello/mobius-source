@@ -23,7 +23,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
 /**
  * @author Awakeninger
  */
-
 public final class AltarGatekeeperInstance extends NpcInstance
 {
 	/**

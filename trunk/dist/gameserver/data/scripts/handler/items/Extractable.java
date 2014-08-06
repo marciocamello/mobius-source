@@ -14,7 +14,6 @@ package handler.items;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
@@ -22,7 +21,6 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 public final class Extractable extends SimpleItemHandler
@@ -1108,7 +1106,6 @@ public final class Extractable extends SimpleItemHandler
 		34931,
 		34932,
 		34855
-	
 	};
 	
 	// TODO
@@ -5767,13 +5764,11 @@ public final class Extractable extends SimpleItemHandler
 				1,
 				1
 			}
-		
 		};
 		double chances[] = new double[]
 		{
 			// chance
 			80.0
-		
 		};
 		capsulate(player, items, chances);
 	}
@@ -5806,7 +5801,6 @@ public final class Extractable extends SimpleItemHandler
 				1,
 				1
 			}
-		
 		};
 		double chances[] = new double[]
 		{
@@ -5815,7 +5809,6 @@ public final class Extractable extends SimpleItemHandler
 			50.0,
 			50.0,
 			50.0
-		
 		};
 		capsulate(player, items, chances);
 	}
@@ -5858,7 +5851,6 @@ public final class Extractable extends SimpleItemHandler
 				1,
 				1
 			}
-		
 		};
 		double chances[] = new double[]
 		{
@@ -5869,7 +5861,6 @@ public final class Extractable extends SimpleItemHandler
 			40.0,
 			50.0,
 			50.0
-		
 		};
 		capsulate(player, items, chances);
 	}
@@ -5928,7 +5919,6 @@ public final class Extractable extends SimpleItemHandler
 				1,
 				1
 			}
-		
 		};
 		double chances[] = new double[]
 		{
@@ -5940,7 +5930,6 @@ public final class Extractable extends SimpleItemHandler
 			6.1,
 			3.0,
 			1.5
-		
 		};
 		capsulate(player, items, chances);
 	}
@@ -8745,7 +8734,6 @@ public final class Extractable extends SimpleItemHandler
 			5.0,
 			0.025,
 			0.025
-		
 		};
 		capsulate(player, items, chances);
 	}
@@ -9819,7 +9807,6 @@ public final class Extractable extends SimpleItemHandler
 			60.0,
 			30.0,
 			35.0
-		
 		};
 		capsulate(player, items, chances);
 	}
@@ -9900,7 +9887,6 @@ public final class Extractable extends SimpleItemHandler
 			9.0,
 			9.0,
 			10.0
-		
 		};
 		capsulate(player, items, chances);
 	}
@@ -9981,7 +9967,6 @@ public final class Extractable extends SimpleItemHandler
 			9.0,
 			9.0,
 			10.0
-		
 		};
 		capsulate(player, items, chances);
 	}
@@ -10032,7 +10017,6 @@ public final class Extractable extends SimpleItemHandler
 			16.6,
 			16.6,
 			17.0
-		
 		};
 		capsulate(player, items, chances);
 	}
@@ -10131,7 +10115,6 @@ public final class Extractable extends SimpleItemHandler
 			7.14,
 			7.14,
 			7.14
-		
 		};
 		capsulate(player, items, chances);
 	}
@@ -13368,7 +13351,6 @@ public final class Extractable extends SimpleItemHandler
 	}
 	
 	// ------ AGNOLIC © 2012 ---------
-	
 	// D-GRADE FIGHTER SUPPORT PACK
 	private void use20636(Player player, boolean ctrl)
 	{
@@ -13428,7 +13410,6 @@ public final class Extractable extends SimpleItemHandler
 	}
 	
 	// ------ Adventurer's Boxes ------
-	
 	// Quest 376: Giants Cave Exploration, Part 1
 	private void use14841(Player player, boolean ctrl)
 	{
@@ -14476,7 +14457,6 @@ public final class Extractable extends SimpleItemHandler
 	}
 	
 	// ****** End Item Mall ******
-	
 	// ****** Belts ******
 	// Gludio Supply Box - Belt: Grade B, C
 	private void use13713(Player player, boolean ctrl)
@@ -18616,8 +18596,8 @@ public final class Extractable extends SimpleItemHandler
 		Functions.addItem(player, 15461, 6);
 		Functions.addItem(player, 15464, 1);
 	} // |==========================================| END LINE by CosMOsiS |==========================================|
+		// No Grade Beginner's Adventurer Support Pack by (SmokiMo)
 	
-	// No Grade Beginner's Adventurer Support Pack by (SmokiMo)
 	private void use20635(Player player, boolean ctrl)
 	{
 		Functions.addItem(player, 8973, 1);
@@ -19817,5 +19797,4 @@ public final class Extractable extends SimpleItemHandler
 			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
 		}
 	}
-	
 }

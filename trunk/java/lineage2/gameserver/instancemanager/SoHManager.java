@@ -18,7 +18,6 @@ import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.utils.ReflectionUtils;
 import lineage2.gameserver.utils.Util;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

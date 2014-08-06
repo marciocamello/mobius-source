@@ -25,17 +25,8 @@ import lineage2.gameserver.utils.Location;
  */
 public class SummonAnswerListener implements OnAnswerListener
 {
-	/**
-	 * Field _playerRef.
-	 */
 	private final HardReference<Player> _playerRef;
-	/**
-	 * Field _location.
-	 */
 	private final Location _location;
-	/**
-	 * Field _count.
-	 */
 	private final long _count;
 	
 	/**

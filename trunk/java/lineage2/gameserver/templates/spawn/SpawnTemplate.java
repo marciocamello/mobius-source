@@ -21,29 +21,11 @@ import java.util.List;
  */
 public class SpawnTemplate
 {
-	/**
-	 * Field _periodOfDay.
-	 */
 	private final PeriodOfDay _periodOfDay;
-	/**
-	 * Field _count.
-	 */
 	private final int _count;
-	/**
-	 * Field _respawn.
-	 */
 	private final int _respawn;
-	/**
-	 * Field _respawnRandom.
-	 */
 	private final int _respawnRandom;
-	/**
-	 * Field _npcList.
-	 */
 	private final List<SpawnNpcInfo> _npcList = new ArrayList<>(1);
-	/**
-	 * Field _spawnRangeList.
-	 */
 	private final List<SpawnRange> _spawnRangeList = new ArrayList<>(1);
 	
 	/**

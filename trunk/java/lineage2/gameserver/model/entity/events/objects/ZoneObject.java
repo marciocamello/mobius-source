@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.entity.events.objects;
 
 import java.util.List;
-
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Zone;
@@ -30,13 +29,7 @@ public class ZoneObject implements InitableObject
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
-	/**
-	 * Field _zone.
-	 */
 	private Zone _zone;
 	
 	/**

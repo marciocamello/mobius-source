@@ -21,17 +21,9 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.skills.TimeStamp;
 import lineage2.gameserver.tables.PetDataTable;
 
-/**
- */
 public class UseItem extends L2GameClientPacket
 {
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
-	/**
-	 * Field _ctrlPressed.
-	 */
 	private boolean _ctrlPressed;
 	
 	/**

@@ -24,9 +24,6 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class MatchLeader extends MatchFighter
 {
-	/**
-	 * Field ATTACK_SKILL.
-	 */
 	public static final Skill ATTACK_SKILL = SkillTable.getInstance().getInfo(4077, 6);
 	
 	/**

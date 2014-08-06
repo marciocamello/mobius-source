@@ -13,7 +13,6 @@
 package lineage2.gameserver.handler.admincommands.impl;
 
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
@@ -44,73 +43,22 @@ public class AdminEffects implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_invis.
-		 */
 		admin_invis,
-		/**
-		 * Field admin_vis.
-		 */
 		admin_vis,
-		/**
-		 * Field admin_offline_vis.
-		 */
 		admin_offline_vis,
-		/**
-		 * Field admin_offline_invis.
-		 */
 		admin_offline_invis,
-		/**
-		 * Field admin_earthquake.
-		 */
 		admin_earthquake,
-		/**
-		 * Field admin_block.
-		 */
 		admin_block,
-		/**
-		 * Field admin_unblock.
-		 */
 		admin_unblock,
-		/**
-		 * Field admin_changename.
-		 */
 		admin_changename,
-		/**
-		 * Field admin_gmspeed.
-		 */
 		admin_gmspeed,
-		/**
-		 * Field admin_invul.
-		 */
 		admin_invul,
-		/**
-		 * Field admin_setinvul.
-		 */
 		admin_setinvul,
-		/**
-		 * Field admin_getinvul.
-		 */
 		admin_getinvul,
-		/**
-		 * Field admin_social.
-		 */
 		admin_social,
-		/**
-		 * Field admin_abnormal.
-		 */
 		admin_abnormal,
-		/**
-		 * Field admin_abnormal.
-		 */
 		admin_effect,
-		/**
-		 * Field admin_transform.
-		 */
 		admin_transform,
-		/**
-		 * Field admin_showmovie.
-		 */
 		admin_showmovie
 	}
 	

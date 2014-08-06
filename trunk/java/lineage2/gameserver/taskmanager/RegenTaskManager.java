@@ -22,9 +22,6 @@ import lineage2.gameserver.ThreadPoolManager;
  */
 public class RegenTaskManager extends SteppingRunnableQueueManager
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final RegenTaskManager _instance = new RegenTaskManager();
 	
 	/**

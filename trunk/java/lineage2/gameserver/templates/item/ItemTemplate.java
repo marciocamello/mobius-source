@@ -29,7 +29,6 @@ import lineage2.gameserver.stats.funcs.FuncTemplate;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.EtcItemTemplate.EtcItemType;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
-
 import org.napile.primitive.Containers;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
@@ -45,9 +44,6 @@ public abstract class ItemTemplate extends StatTemplate
 	 */
 	public static enum ReuseType
 	{
-		/**
-		 * Field NORMAL.
-		 */
 		NORMAL(SystemMsg.THERE_ARE_S2_SECONDS_REMAINING_IN_S1S_REUSE_TIME, SystemMsg.THERE_ARE_S2_MINUTES_S3_SECONDS_REMAINING_IN_S1S_REUSE_TIME, SystemMsg.THERE_ARE_S2_HOURS_S3_MINUTES_AND_S4_SECONDS_REMAINING_IN_S1S_REUSE_TIME)
 		{
 			@Override
@@ -56,9 +52,6 @@ public abstract class ItemTemplate extends StatTemplate
 				return System.currentTimeMillis() + item.getTemplate().getReuseDelay();
 			}
 		},
-		/**
-		 * Field EVERY_DAY_AT_6_30.
-		 */
 		EVERY_DAY_AT_6_30(SystemMsg.THERE_ARE_S2_SECONDS_REMAINING_FOR_S1S_REUSE_TIME, SystemMsg.THERE_ARE_S2_MINUTES_S3_SECONDS_REMAINING_FOR_S1S_REUSE_TIME, SystemMsg.THERE_ARE_S2_HOURS_S3_MINUTES_S4_SECONDS_REMAINING_FOR_S1S_REUSE_TIME)
 		{
 			private final SchedulingPattern _pattern = new SchedulingPattern("30 6 * * *");
@@ -69,9 +62,6 @@ public abstract class ItemTemplate extends StatTemplate
 				return _pattern.next(System.currentTimeMillis());
 			}
 		};
-		/**
-		 * Field _messages.
-		 */
 		private SystemMsg[] _messages;
 		
 		/**
@@ -105,75 +95,24 @@ public abstract class ItemTemplate extends StatTemplate
 	 */
 	public static enum ItemClass
 	{
-		/**
-		 * Field ALL.
-		 */
 		ALL,
-		/**
-		 * Field WEAPON.
-		 */
 		WEAPON,
-		/**
-		 * Field ARMOR.
-		 */
 		ARMOR,
-		/**
-		 * Field JEWELRY.
-		 */
 		JEWELRY,
-		/**
-		 * Field ACCESSORY.
-		 */
 		ACCESSORY,
-		/**
-		 * Field CONSUMABLE.
-		 */
 		CONSUMABLE,
-		/**
-		 * Field MATHERIALS.
-		 */
 		MATHERIALS,
-		/**
-		 * Field PIECES.
-		 */
 		PIECES,
-		/**
-		 * Field RECIPIES.
-		 */
 		RECIPIES,
-		/**
-		 * Field SPELLBOOKS.
-		 */
 		SPELLBOOKS,
-		/**
-		 * Field MISC.
-		 */
 		MISC,
-		/**
-		 * Field OTHER.
-		 */
 		OTHER
 	}
 	
-	/**
-	 * Field ITEM_ID_PC_BANG_POINTS. (value is -100)
-	 */
 	public static final int ITEM_ID_PC_BANG_POINTS = -100;
-	/**
-	 * Field ITEM_ID_CLAN_REPUTATION_SCORE. (value is -200)
-	 */
 	public static final int ITEM_ID_CLAN_REPUTATION_SCORE = -200;
-	/**
-	 * Field ITEM_ID_FAME. (value is -300)
-	 */
 	public static final int ITEM_ID_FAME = -300;
-	/**
-	 * Field ITEM_ID_ADENA. (value is 57)
-	 */
 	public static final int ITEM_ID_ADENA = 57;
-	/**
-	 * Field ITEM_ID_CASTLE_CIRCLET.
-	 */
 	public static final int[] ITEM_ID_CASTLE_CIRCLET =
 	{
 		0,
@@ -187,237 +126,63 @@ public abstract class ItemTemplate extends StatTemplate
 		8182,
 		8183,
 	};
-	/**
-	 * Field ITEM_ID_FORMAL_WEAR. (value is 6408)
-	 */
 	public static final int ITEM_ID_FORMAL_WEAR = 6408;
-	/**
-	 * Field TYPE1_WEAPON_RING_EARRING_NECKLACE. (value is 0)
-	 */
 	public static final int TYPE1_WEAPON_RING_EARRING_NECKLACE = 0;
-	/**
-	 * Field TYPE1_SHIELD_ARMOR. (value is 1)
-	 */
 	public static final int TYPE1_SHIELD_ARMOR = 1;
-	/**
-	 * Field TYPE1_OTHER. (value is 2)
-	 */
 	public static final int TYPE1_OTHER = 2;
-	/**
-	 * Field TYPE1_ITEM_QUESTITEM_ADENA. (value is 4)
-	 */
 	public static final int TYPE1_ITEM_QUESTITEM_ADENA = 4;
-	/**
-	 * Field TYPE2_WEAPON. (value is 0)
-	 */
 	public static final int TYPE2_WEAPON = 0;
-	/**
-	 * Field TYPE2_SHIELD_ARMOR. (value is 1)
-	 */
 	public static final int TYPE2_SHIELD_ARMOR = 1;
-	/**
-	 * Field TYPE2_ACCESSORY. (value is 2)
-	 */
 	public static final int TYPE2_ACCESSORY = 2;
-	/**
-	 * Field TYPE2_QUEST. (value is 3)
-	 */
 	public static final int TYPE2_QUEST = 3;
-	/**
-	 * Field TYPE2_MONEY. (value is 4)
-	 */
 	public static final int TYPE2_MONEY = 4;
-	/**
-	 * Field TYPE2_OTHER. (value is 5)
-	 */
 	public static final int TYPE2_OTHER = 5;
-	/**
-	 * Field TYPE2_PET_WOLF. (value is 6)
-	 */
 	public static final int TYPE2_PET_WOLF = 6;
-	/**
-	 * Field TYPE2_PET_HATCHLING. (value is 7)
-	 */
 	public static final int TYPE2_PET_HATCHLING = 7;
-	/**
-	 * Field TYPE2_PET_STRIDER. (value is 8)
-	 */
 	public static final int TYPE2_PET_STRIDER = 8;
-	/**
-	 * Field TYPE2_NODROP. (value is 9)
-	 */
 	public static final int TYPE2_NODROP = 9;
-	/**
-	 * Field TYPE2_PET_GWOLF. (value is 10)
-	 */
 	public static final int TYPE2_PET_GWOLF = 10;
-	/**
-	 * Field TYPE2_PENDANT. (value is 11)
-	 */
 	public static final int TYPE2_PENDANT = 11;
-	/**
-	 * Field TYPE2_PET_BABY. (value is 12)
-	 */
 	public static final int TYPE2_PET_BABY = 12;
-	/**
-	 * Field SLOT_NONE.
-	 */
 	public static final int SLOT_NONE = 0x00000;
-	/**
-	 * Field SLOT_UNDERWEAR.
-	 */
 	public static final int SLOT_UNDERWEAR = 0x00001;
-	/**
-	 * Field SLOT_R_EAR.
-	 */
 	public static final int SLOT_R_EAR = 0x00002;
-	/**
-	 * Field SLOT_L_EAR.
-	 */
 	public static final int SLOT_L_EAR = 0x00004;
-	/**
-	 * Field SLOT_NECK.
-	 */
 	public static final int SLOT_NECK = 0x00008;
-	/**
-	 * Field SLOT_R_FINGER.
-	 */
 	public static final int SLOT_R_FINGER = 0x00010;
-	/**
-	 * Field SLOT_L_FINGER.
-	 */
 	public static final int SLOT_L_FINGER = 0x00020;
-	/**
-	 * Field SLOT_HEAD.
-	 */
 	public static final int SLOT_HEAD = 0x00040;
-	/**
-	 * Field SLOT_R_HAND.
-	 */
 	public static final int SLOT_R_HAND = 0x00080;
-	/**
-	 * Field SLOT_L_HAND.
-	 */
 	public static final int SLOT_L_HAND = 0x00100;
-	/**
-	 * Field SLOT_GLOVES.
-	 */
 	public static final int SLOT_GLOVES = 0x00200;
-	/**
-	 * Field SLOT_CHEST.
-	 */
 	public static final int SLOT_CHEST = 0x00400;
-	/**
-	 * Field SLOT_LEGS.
-	 */
 	public static final int SLOT_LEGS = 0x00800;
-	/**
-	 * Field SLOT_FEET.
-	 */
 	public static final int SLOT_FEET = 0x01000;
-	/**
-	 * Field SLOT_BACK.
-	 */
 	public static final int SLOT_BACK = 0x02000;
-	/**
-	 * Field SLOT_LR_HAND.
-	 */
 	public static final int SLOT_LR_HAND = 0x04000;
-	/**
-	 * Field SLOT_FULL_ARMOR.
-	 */
 	public static final int SLOT_FULL_ARMOR = 0x08000;
-	/**
-	 * Field SLOT_HAIR.
-	 */
 	public static final int SLOT_HAIR = 0x10000;
-	/**
-	 * Field SLOT_FORMAL_WEAR.
-	 */
 	public static final int SLOT_FORMAL_WEAR = 0x20000;
-	/**
-	 * Field SLOT_DHAIR.
-	 */
 	public static final int SLOT_DHAIR = 0x40000;
-	/**
-	 * Field SLOT_HAIRALL.
-	 */
 	public static final int SLOT_HAIRALL = 0x80000;
-	/**
-	 * Field SLOT_R_BRACELET.
-	 */
 	public static final int SLOT_R_BRACELET = 0x100000;
-	/**
-	 * Field SLOT_L_BRACELET.
-	 */
 	public static final int SLOT_L_BRACELET = 0x200000;
-	/**
-	 * Field SLOT_DECO.
-	 */
 	public static final int SLOT_DECO = 0x400000;
-	/**
-	 * Field SLOT_BELT.
-	 */
 	public static final int SLOT_BELT = 0x10000000;
-	/**
-	 * Field SLOT_WOLF. (value is -100)
-	 */
 	public static final int SLOT_WOLF = -100;
-	/**
-	 * Field SLOT_HATCHLING. (value is -101)
-	 */
 	public static final int SLOT_HATCHLING = -101;
-	/**
-	 * Field SLOT_STRIDER. (value is -102)
-	 */
 	public static final int SLOT_STRIDER = -102;
-	/**
-	 * Field SLOT_BABYPET. (value is -103)
-	 */
 	public static final int SLOT_BABYPET = -103;
-	/**
-	 * Field SLOT_GWOLF. (value is -104)
-	 */
 	public static final int SLOT_GWOLF = -104;
-	/**
-	 * Field SLOT_PENDANT. (value is -105)
-	 */
 	public static final int SLOT_PENDANT = -105;
-	/**
-	 * Field SLOTS_ARMOR.
-	 */
 	public static final int SLOTS_ARMOR = SLOT_HEAD | SLOT_L_HAND | SLOT_GLOVES | SLOT_CHEST | SLOT_LEGS | SLOT_FEET | SLOT_BACK | SLOT_FULL_ARMOR;
-	/**
-	 * Field SLOTS_JEWELRY.
-	 */
 	public static final int SLOTS_JEWELRY = SLOT_R_EAR | SLOT_L_EAR | SLOT_NECK | SLOT_R_FINGER | SLOT_L_FINGER;
-	/**
-	 * Field CRYSTAL_NONE. (value is 0)
-	 */
 	public static final int CRYSTAL_NONE = 0;
-	/**
-	 * Field CRYSTAL_D. (value is 1458)
-	 */
 	public static final int CRYSTAL_D = 1458;
-	/**
-	 * Field CRYSTAL_C. (value is 1459)
-	 */
 	public static final int CRYSTAL_C = 1459;
-	/**
-	 * Field CRYSTAL_B. (value is 1460)
-	 */
 	public static final int CRYSTAL_B = 1460;
-	/**
-	 * Field CRYSTAL_A. (value is 1461)
-	 */
 	public static final int CRYSTAL_A = 1461;
-	/**
-	 * Field CRYSTAL_S. (value is 1462)
-	 */
 	public static final int CRYSTAL_S = 1462;
-	/**
-	 * Field CRYSTAL_R. (value is 17371)
-	 */
 	public static final int CRYSTAL_R = 17371;
 	
 	/**
@@ -425,57 +190,18 @@ public abstract class ItemTemplate extends StatTemplate
 	 */
 	public static enum Grade
 	{
-		/**
-		 * Field NONE.
-		 */
 		NONE(CRYSTAL_NONE, 0),
-		/**
-		 * Field D.
-		 */
 		D(CRYSTAL_D, 1),
-		/**
-		 * Field C.
-		 */
 		C(CRYSTAL_C, 2),
-		/**
-		 * Field B.
-		 */
 		B(CRYSTAL_B, 3),
-		/**
-		 * Field A.
-		 */
 		A(CRYSTAL_A, 4),
-		/**
-		 * Field S.
-		 */
 		S(CRYSTAL_S, 5),
-		/**
-		 * Field S80.
-		 */
 		S80(CRYSTAL_S, 5),
-		/**
-		 * Field S84.
-		 */
 		S84(CRYSTAL_S, 5),
-		/**
-		 * Field R.
-		 */
 		R(CRYSTAL_R, 6),
-		/**
-		 * Field R95.
-		 */
 		R95(CRYSTAL_R, 6),
-		/**
-		 * Field R99.
-		 */
 		R99(CRYSTAL_R, 6);
-		/**
-		 * Field cry.
-		 */
 		public final int cry;
-		/**
-		 * Field externalOrdinal.
-		 */
 		public final int externalOrdinal;
 		
 		/**
@@ -490,169 +216,46 @@ public abstract class ItemTemplate extends StatTemplate
 		}
 	}
 	
-	/**
-	 * Field ATTRIBUTE_NONE. (value is -2)
-	 */
 	public static final int ATTRIBUTE_NONE = -2;
-	/**
-	 * Field ATTRIBUTE_FIRE. (value is 0)
-	 */
 	public static final int ATTRIBUTE_FIRE = 0;
-	/**
-	 * Field ATTRIBUTE_WATER. (value is 1)
-	 */
 	public static final int ATTRIBUTE_WATER = 1;
-	/**
-	 * Field ATTRIBUTE_WIND. (value is 2)
-	 */
 	public static final int ATTRIBUTE_WIND = 2;
-	/**
-	 * Field ATTRIBUTE_EARTH. (value is 3)
-	 */
 	public static final int ATTRIBUTE_EARTH = 3;
-	/**
-	 * Field ATTRIBUTE_HOLY. (value is 4)
-	 */
 	public static final int ATTRIBUTE_HOLY = 4;
-	/**
-	 * Field ATTRIBUTE_DARK. (value is 5)
-	 */
 	public static final int ATTRIBUTE_DARK = 5;
-	/**
-	 * Field _itemId.
-	 */
 	protected final int _itemId;
-	/**
-	 * Field _class.
-	 */
 	private final ItemClass _class;
-	/**
-	 * Field _name.
-	 */
 	protected final String _name;
-	/**
-	 * Field _addname.
-	 */
 	protected final String _addname;
-	/**
-	 * Field _icon.
-	 */
 	protected final String _icon;
-	/**
-	 * Field _icon32.
-	 */
 	protected final String _icon32;
-	/**
-	 * Field _type1.
-	 */
 	protected int _type1;
-	/**
-	 * Field _type2.
-	 */
 	protected int _type2;
-	/**
-	 * Field _weight.
-	 */
 	private final int _weight;
-	/**
-	 * Field _crystalType.
-	 */
 	protected final Grade _crystalType;
-	/**
-	 * Field _durability.
-	 */
 	private final int _durability;
-	/**
-	 * Field _bodyPart.
-	 */
 	protected int _bodyPart;
-	/**
-	 * Field _referencePrice.
-	 */
 	private final int _referencePrice;
-	/**
-	 * Field _crystalCount.
-	 */
 	private final int _crystalCount;
-	/**
-	 * Field _temporal.
-	 */
 	private final boolean _temporal;
-	/**
-	 * Field _isBlessed.
-	 */
 	private final boolean _isBlessedEquipment;
-	/**
-	 * Field _stackable.
-	 */
 	private final boolean _stackable;
-	/**
-	 * Field _crystallizable.
-	 */
 	private final boolean _crystallizable;
-	/**
-	 * Field _flags.
-	 */
 	private int _flags;
-	/**
-	 * Field _reuseType.
-	 */
 	private final ReuseType _reuseType;
-	/**
-	 * Field _reuseDelay.
-	 */
 	private final int _reuseDelay;
-	/**
-	 * Field _reuseGroup.
-	 */
 	private final int _reuseGroup;
-	/**
-	 * Field _agathionEnergy.
-	 */
 	private final int _agathionEnergy;
-	/**
-	 * Field _skills.
-	 */
 	protected Skill[] _skills;
-	/**
-	 * Field _enchant4Skill.
-	 */
 	private Skill _enchant4Skill = null;
-	/**
-	 * Field _unequippedSkill.
-	 */
 	private Skill _unequipeSkill = null;
-	/**
-	 * Field type.
-	 */
 	public ItemType type;
-	/**
-	 * Field _exItemType.
-	 */
 	public ExItemType _exItemType;
-	/**
-	 * Field _baseAttributes.
-	 */
 	private int[] _baseAttributes = new int[6];
-	/**
-	 * Field _enchantOptions.
-	 */
 	private IntObjectMap<int[]> _enchantOptions = Containers.emptyIntObjectMap();
-	/**
-	 * Field _condition.
-	 */
 	private Condition _condition;
-	/**
-	 * Field _handler.
-	 */
 	private IItemHandler _handler = IItemHandler.NULL;
-	/**
-	 * Field _blessed.
-	 */
 	private final boolean _blessed;
-	/**
-	 * Field _capsuled.
-	 */
 	private final boolean _capsuled;
 	
 	/**

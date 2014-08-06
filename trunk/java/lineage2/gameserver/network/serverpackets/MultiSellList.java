@@ -14,7 +14,6 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.data.xml.holder.MultiSellHolder.MultiSellListContainer;
@@ -24,21 +23,9 @@ import lineage2.gameserver.templates.item.ItemTemplate;
 
 public class MultiSellList extends L2GameServerPacket
 {
-	/**
-	 * Field _page.
-	 */
 	private final int _page;
-	/**
-	 * Field _finished.
-	 */
 	private final int _finished;
-	/**
-	 * Field _listId.
-	 */
 	private final int _listId;
-	/**
-	 * Field _list.
-	 */
 	private final List<MultiSellEntry> _list;
 	
 	/**

@@ -18,53 +18,17 @@ package lineage2.gameserver.model.base;
  */
 public enum AcquireType
 {
-	/**
-	 * Field NORMAL.
-	 */
 	NORMAL,
-	/**
-	 * Field FISHING.
-	 */
 	FISHING,
-	/**
-	 * Field CLAN.
-	 */
 	CLAN,
-	/**
-	 * Field SUB_UNIT.
-	 */
 	SUB_UNIT,
-	/**
-	 * Field TRANSFORMATION.
-	 */
 	TRANSFORMATION,
-	/**
-	 * Field CERTIFICATION.
-	 */
 	CERTIFICATION,
-	/**
-	 * Field CERTIFICATION.
-	 */
 	DUAL_CERTIFICATION,
-	/**
-	 * Field COLLECTION.
-	 */
 	COLLECTION,
-	/**
-	 * Field TRANSFER_CARDINAL.
-	 */
 	TRANSFER_CARDINAL,
-	/**
-	 * Field TRANSFER_EVA_SAINTS.
-	 */
 	TRANSFER_EVA_SAINTS,
-	/**
-	 * Field TRANSFER_SHILLIEN_SAINTS.
-	 */
 	TRANSFER_SHILLIEN_SAINTS;
-	/**
-	 * Field VALUES.
-	 */
 	public static final AcquireType[] VALUES = AcquireType.values();
 	
 	/**

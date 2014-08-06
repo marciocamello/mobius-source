@@ -20,13 +20,7 @@ import java.util.Arrays;
  */
 public final class PrimeFinder
 {
-	/**
-	 * Field largestPrime.
-	 */
 	public static final int largestPrime = Integer.MAX_VALUE;
-	/**
-	 * Field primeCapacities.
-	 */
 	private static final int[] primeCapacities =
 	{
 		largestPrime,

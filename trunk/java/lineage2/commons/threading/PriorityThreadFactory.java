@@ -21,21 +21,9 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class PriorityThreadFactory implements ThreadFactory
 {
-	/**
-	 * Field _prio.
-	 */
 	private final int _prio;
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
-	/**
-	 * Field _threadNumber.
-	 */
 	private final AtomicInteger _threadNumber = new AtomicInteger(1);
-	/**
-	 * Field _group.
-	 */
 	private final ThreadGroup _group;
 	
 	/**

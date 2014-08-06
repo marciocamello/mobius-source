@@ -16,7 +16,6 @@ import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.GameTimeController;
 import lineage2.gameserver.handler.usercommands.IUserCommandHandler;
@@ -30,20 +29,11 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
  */
 public class Time implements IUserCommandHandler
 {
-	/**
-	 * Field COMMAND_IDS.
-	 */
 	private static final int[] COMMAND_IDS =
 	{
 		77
 	};
-	/**
-	 * Field df.
-	 */
 	private static final NumberFormat df = NumberFormat.getInstance(Locale.ENGLISH);
-	/**
-	 * Field sf.
-	 */
 	private static final SimpleDateFormat sf = new SimpleDateFormat("H:mm");
 	static
 	{

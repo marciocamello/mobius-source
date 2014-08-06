@@ -14,7 +14,6 @@ package lineage2.loginserver.serverpackets;
 
 import lineage2.commons.net.nio.impl.SendablePacket;
 import lineage2.loginserver.L2LoginClient;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,9 +23,6 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class L2LoginServerPacket extends SendablePacket<L2LoginClient>
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(L2LoginServerPacket.class);
 	
 	/**

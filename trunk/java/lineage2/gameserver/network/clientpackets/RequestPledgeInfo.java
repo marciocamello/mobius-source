@@ -23,9 +23,6 @@ import lineage2.gameserver.tables.ClanTable;
  */
 public class RequestPledgeInfo extends L2GameClientPacket
 {
-	/**
-	 * Field _clanId.
-	 */
 	private int _clanId;
 	
 	/**

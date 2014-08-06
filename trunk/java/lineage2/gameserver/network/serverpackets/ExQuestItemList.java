@@ -23,7 +23,6 @@ public class ExQuestItemList extends L2GameServerPacket
 {
 	private final int _size;
 	private final ItemInstance[] _items;
-	
 	private final LockType _lockType;
 	private final int[] _lockItems;
 	

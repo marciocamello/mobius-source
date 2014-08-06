@@ -27,9 +27,6 @@ import lineage2.gameserver.templates.OptionDataTemplate;
  */
 public final class ItemEnchantOptionsListener implements OnEquipListener
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final ItemEnchantOptionsListener _instance = new ItemEnchantOptionsListener();
 	
 	/**

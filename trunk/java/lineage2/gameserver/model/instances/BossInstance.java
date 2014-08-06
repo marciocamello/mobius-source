@@ -28,9 +28,6 @@ public class BossInstance extends RaidBossInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _teleportedToNest.
-	 */
 	private boolean _teleportedToNest;
 	
 	/**

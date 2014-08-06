@@ -14,7 +14,6 @@ package ai.TI;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;

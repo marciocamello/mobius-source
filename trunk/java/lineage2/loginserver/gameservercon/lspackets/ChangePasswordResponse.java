@@ -20,13 +20,7 @@ import lineage2.loginserver.gameservercon.SendablePacket;
  */
 public class ChangePasswordResponse extends SendablePacket
 {
-	/**
-	 * Field _account.
-	 */
 	private final String _account;
-	/**
-	 * Field _hasChanged.
-	 */
 	boolean _hasChanged;
 	
 	/**

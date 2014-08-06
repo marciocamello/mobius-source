@@ -16,7 +16,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.dao.ClanDataDAO;
@@ -27,7 +26,6 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.ItemTemplate;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,85 +39,25 @@ public class Fortress extends Residence
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Fortress.class);
-	/**
-	 * Field REMOVE_CYCLE.
-	 */
 	private static final long REMOVE_CYCLE = 7 * 24;
-	/**
-	 * Field REWARD_CYCLE. (value is 6)
-	 */
 	private static final long REWARD_CYCLE = 6;
-	/**
-	 * Field CASTLE_FEE. (value is 25000)
-	 */
 	public static final long CASTLE_FEE = 25000;
-	/**
-	 * Field DOMAIN. (value is 0)
-	 */
 	public static final int DOMAIN = 0;
-	/**
-	 * Field BOUNDARY. (value is 1)
-	 */
 	public static final int BOUNDARY = 1;
-	/**
-	 * Field NOT_DECIDED. (value is 0)
-	 */
 	public static final int NOT_DECIDED = 0;
-	/**
-	 * Field INDEPENDENT. (value is 1)
-	 */
 	public static final int INDEPENDENT = 1;
-	/**
-	 * Field CONTRACT_WITH_CASTLE. (value is 2)
-	 */
 	public static final int CONTRACT_WITH_CASTLE = 2;
-	/**
-	 * Field REINFORCE. (value is 0)
-	 */
 	public static final int REINFORCE = 0;
-	/**
-	 * Field GUARD_BUFF. (value is 1)
-	 */
 	public static final int GUARD_BUFF = 1;
-	/**
-	 * Field DOOR_UPGRADE. (value is 2)
-	 */
 	public static final int DOOR_UPGRADE = 2;
-	/**
-	 * Field DWARVENS. (value is 3)
-	 */
 	public static final int DWARVENS = 3;
-	/**
-	 * Field SCOUT. (value is 4)
-	 */
 	public static final int SCOUT = 4;
-	/**
-	 * Field FACILITY_MAX. (value is 5)
-	 */
 	public static final int FACILITY_MAX = 5;
-	/**
-	 * Field _facilities.
-	 */
 	private final int[] _facilities = new int[FACILITY_MAX];
-	/**
-	 * Field _state.
-	 */
 	private int _state;
-	/**
-	 * Field _castleId.
-	 */
 	private int _castleId;
-	/**
-	 * Field _supplyCount.
-	 */
 	private int _supplyCount;
-	/**
-	 * Field _relatedCastles.
-	 */
 	private final List<Castle> _relatedCastles = new ArrayList<>(5);
 	
 	/**

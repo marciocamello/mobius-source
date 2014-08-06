@@ -24,49 +24,16 @@ import lineage2.loginserver.gameservercon.SendablePacket;
  */
 public class PlayerAuthResponse extends SendablePacket
 {
-	/**
-	 * Field login.
-	 */
 	private final String login;
-	/**
-	 * Field authed.
-	 */
 	private final boolean authed;
-	/**
-	 * Field playOkID1.
-	 */
 	private int playOkID1;
-	/**
-	 * Field playOkID2.
-	 */
 	private int playOkID2;
-	/**
-	 * Field loginOkID1.
-	 */
 	private int loginOkID1;
-	/**
-	 * Field loginOkID2.
-	 */
 	private int loginOkID2;
-	/**
-	 * Field bonus.
-	 */
 	private double bonus;
-	/**
-	 * Field bonusExpire.
-	 */
 	private int bonusExpire;
-	/**
-	 * Field _2ndPassword.
-	 */
 	private String _2ndPassword;
-	/**
-	 * Field _2ndWrongAttempts.
-	 */
 	private int _2ndWrongAttempts;
-	/**
-	 * Field _2ndUnbanTime.
-	 */
 	private long _2ndUnbanTime;
 	
 	/**

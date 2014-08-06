@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.instances;
 
 import java.util.Collection;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
@@ -46,9 +45,6 @@ import lineage2.gameserver.utils.Util;
  */
 public final class VillageMasterInstance extends NpcInstance
 {
-	/**
-	 * Field serialVersionUID. (value is 5239866251261965991)
-	 */
 	private static final long serialVersionUID = 5239866251261965991L;
 	
 	/**

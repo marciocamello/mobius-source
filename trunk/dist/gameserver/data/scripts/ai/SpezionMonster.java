@@ -24,7 +24,6 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class SpezionMonster extends Mystic
 {
-	
 	public SpezionMonster(NpcInstance actor)
 	{
 		super(actor);

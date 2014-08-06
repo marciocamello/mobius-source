@@ -17,7 +17,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.templates.spawn.SpawnTemplate;
 
@@ -27,13 +26,7 @@ import lineage2.gameserver.templates.spawn.SpawnTemplate;
  */
 public final class SpawnHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final SpawnHolder _instance = new SpawnHolder();
-	/**
-	 * Field _spawns.
-	 */
 	private final Map<String, List<SpawnTemplate>> _spawns = new HashMap<>();
 	
 	/**

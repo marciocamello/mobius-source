@@ -22,9 +22,6 @@ import gnu.trove.set.hash.TIntHashSet;
  */
 public class ConditionTargetForbiddenClassId extends Condition
 {
-	/**
-	 * Field _classIds.
-	 */
 	private final TIntHashSet _classIds = new TIntHashSet();
 	
 	/**

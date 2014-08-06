@@ -27,13 +27,11 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
-
 import lineage2.commons.compiler.Compiler;
 import lineage2.commons.compiler.MemoryClassLoader;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.quest.Quest;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.filefilter.FileFilterUtils;
@@ -50,14 +48,7 @@ import org.slf4j.LoggerFactory;
  */
 public class Scripts
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Scripts.class);
-	
-	/**
-	 * Field _instance.
-	 */
 	private static final Scripts _instance = new Scripts();
 	
 	/**
@@ -69,26 +60,10 @@ public class Scripts
 		return _instance;
 	}
 	
-	/**
-	 * Field dialogAppends.
-	 */
 	public static final Map<Integer, List<ScriptClassAndMethod>> dialogAppends = new HashMap<>();
-	/**
-	 * Field onAction.
-	 */
 	public static final Map<String, ScriptClassAndMethod> onAction = new HashMap<>();
-	/**
-	 * Field onActionShift.
-	 */
 	public static final Map<String, ScriptClassAndMethod> onActionShift = new HashMap<>();
-	
-	/**
-	 * Field compiler.
-	 */
 	private final Compiler compiler = new Compiler();
-	/**
-	 * Field _classes.
-	 */
 	private final Map<String, Class<?>> _classes = new TreeMap<>();
 	
 	/**
@@ -671,13 +646,7 @@ public class Scripts
 	 */
 	public static class ScriptClassAndMethod
 	{
-		/**
-		 * Field className.
-		 */
 		public final String className;
-		/**
-		 * Field methodName.
-		 */
 		public final String methodName;
 		
 		/**

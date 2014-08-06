@@ -29,9 +29,6 @@ import gnu.trove.set.hash.TIntHashSet;
  */
 public final class EquipableItem extends ScriptItemHandler
 {
-	/**
-	 * Field _itemIds.
-	 */
 	private final int[] _itemIds;
 	
 	/**

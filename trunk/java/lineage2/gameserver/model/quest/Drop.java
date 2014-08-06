@@ -20,21 +20,9 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public class Drop
 {
-	/**
-	 * Field condition.
-	 */
 	public final int condition;
-	/**
-	 * Field maxcount.
-	 */
 	public final int maxcount;
-	/**
-	 * Field chance.
-	 */
 	public final int chance;
-	/**
-	 * Field itemList.
-	 */
 	public int[] itemList = ArrayUtils.EMPTY_INT_ARRAY;
 	
 	/**

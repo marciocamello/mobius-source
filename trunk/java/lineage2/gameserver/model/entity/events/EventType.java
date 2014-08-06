@@ -18,33 +18,12 @@ package lineage2.gameserver.model.entity.events;
  */
 public enum EventType
 {
-	/**
-	 * Field MAIN_EVENT.
-	 */
 	MAIN_EVENT,
-	/**
-	 * Field SIEGE_EVENT.
-	 */
 	SIEGE_EVENT,
-	/**
-	 * Field PVP_EVENT.
-	 */
 	PVP_EVENT,
-	/**
-	 * Field BOAT_EVENT.
-	 */
 	BOAT_EVENT,
-	/**
-	 * Field FUN_EVENT.
-	 */
 	FUN_EVENT,
-	/**
-	 * Field SHUTTLE_EVENT.
-	 */
 	SHUTTLE_EVENT;
-	/**
-	 * Field _step.
-	 */
 	private int _step;
 	
 	/**

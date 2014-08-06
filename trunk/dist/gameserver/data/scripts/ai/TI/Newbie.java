@@ -14,7 +14,6 @@ package ai.TI;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
@@ -32,9 +31,6 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class Newbie extends DefaultAI
 {
-	/**
-	 * Field _mageBuff.
-	 */
 	private final static int[][] _mageBuff = new int[][]
 	{
 		{
@@ -86,9 +82,6 @@ public final class Newbie extends DefaultAI
 			1
 		},
 	};
-	/**
-	 * Field _warrBuff.
-	 */
 	private final static int[][] _warrBuff = new int[][]
 	{
 		{

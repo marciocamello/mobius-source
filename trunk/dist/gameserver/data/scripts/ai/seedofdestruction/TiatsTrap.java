@@ -18,7 +18,6 @@ import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -27,9 +26,6 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public final class TiatsTrap extends DefaultAI
 {
-	/**
-	 * Field holdTraps.
-	 */
 	private static final int[] holdTraps =
 	{
 		18720,
@@ -42,9 +38,6 @@ public final class TiatsTrap extends DefaultAI
 		18727,
 		18728
 	};
-	/**
-	 * Field damageTraps.
-	 */
 	private static final int[] damageTraps =
 	{
 		18737,
@@ -86,9 +79,6 @@ public final class TiatsTrap extends DefaultAI
 		18773,
 		18774
 	};
-	/**
-	 * Field stunTraps.
-	 */
 	private static final int[] stunTraps =
 	{
 		18729,

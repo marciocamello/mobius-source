@@ -1,8 +1,6 @@
 /*package sw.awaken.gameserver.model.entity.museum;
-
 import sw.awaken.gameserver.model.Player;
 import sw.awaken.gameserver.network.serverpackets.ExLoadStatUser;
-
 /**
  * @author ALF
  * @data 19.05.2012

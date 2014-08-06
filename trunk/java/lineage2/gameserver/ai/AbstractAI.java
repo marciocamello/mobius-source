@@ -20,7 +20,6 @@ import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,21 +29,9 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class AbstractAI extends RunnableImpl
 {
-	/**
-	 * Field _log.
-	 */
 	protected static final Logger _log = LoggerFactory.getLogger(AbstractAI.class);
-	/**
-	 * Field _actor.
-	 */
 	protected final Creature _actor;
-	/**
-	 * Field _attackTarget.
-	 */
 	private HardReference<? extends Creature> _attackTarget = HardReferences.emptyRef();
-	/**
-	 * Field _intention.
-	 */
 	private CtrlIntention _intention = CtrlIntention.AI_INTENTION_IDLE;
 	
 	/**

@@ -19,7 +19,6 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.instancemanager.commission.CommissionItemContainer;
@@ -28,7 +27,6 @@ import lineage2.gameserver.instancemanager.commission.CommissionShopManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.templates.item.ExItemType;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,37 +36,13 @@ import org.slf4j.LoggerFactory;
  */
 public class CommissionShopDAO
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(CommissionShopDAO.class);
-	/**
-	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO commission_shop(obj_id, seller_id, item_name, price, item_type, sale_days, sale_end_time, seller_name) VALUES (?,?,?,?,?,?,?,?)"")
-	 */
 	private static final String INSERT_SQL_QUERY = "INSERT INTO commission_shop(obj_id, seller_id, item_name, price, item_type, sale_days, sale_end_time, seller_name) VALUES (?,?,?,?,?,?,?,?)";
-	/**
-	 * Field SELECT_PLAYER_REGISTERED_ITEMS_SQL_QUERY. (value is ""SELECT auction_id, price, item_type, sale_days, sale_end_time, seller_name, obj_id FROM commission_shop WHERE seller_id=?"")
-	 */
 	private static final String SELECT_PLAYER_REGISTERED_ITEMS_SQL_QUERY = "SELECT auction_id, price, item_type, sale_days, sale_end_time, seller_name, obj_id  FROM commission_shop WHERE seller_id=?";
-	/**
-	 * Field SELECT_REGISTERED_ITEMS. (value is ""SELECT auction_id, price, item_name, item_type, sale_days, sale_end_time, seller_name, obj_id FROM commission_shop WHERE item_type IN(?) ORDER BY auction_id"")
-	 */
 	private static final String SELECT_REGISTERED_ITEMS = "SELECT auction_id, price, item_name, item_type, sale_days, sale_end_time, seller_name, obj_id  FROM commission_shop WHERE item_type IN(?) ORDER BY auction_id";
-	/**
-	 * Field SELECT_COMMISSION_ITEM_INFO. (value is ""SELECT price, sale_days, sale_end_time, seller_name, obj_id FROM commission_shop WHERE auction_id=? AND item_type=?"")
-	 */
 	private static final String SELECT_COMMISSION_ITEM_INFO = "SELECT price, sale_days, sale_end_time, seller_name, obj_id  FROM commission_shop WHERE auction_id=? AND item_type=?";
-	/**
-	 * Field DELETE_COMMISSION_ITEM. (value is ""DELETE FROM commission_shop WHERE auction_id=?"")
-	 */
 	private static final String DELETE_COMMISSION_ITEM = "DELETE FROM commission_shop WHERE auction_id=?";
-	/**
-	 * Field SELECT_EXPIRED_ITEMS. (value is ""SELECT auction_id, price, sale_days, seller_name, item_type, obj_id, sale_end_time FROM commission_shop WHERE sale_end_time <= ?"")
-	 */
 	private static final String SELECT_EXPIRED_ITEMS = "SELECT auction_id, price, sale_days, seller_name, item_type, obj_id, sale_end_time  FROM commission_shop WHERE sale_end_time <= ?";
-	/**
-	 * Field ourInstance.
-	 */
 	private static final CommissionShopDAO ourInstance = new CommissionShopDAO();
 	
 	/**

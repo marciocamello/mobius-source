@@ -29,30 +29,15 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public final class IsleOfPrayerMystic extends Mystic
 {
-	/**
-	 * Field _penaltyMobsNotSpawned.
-	 */
 	private boolean _penaltyMobsNotSpawned = true;
-	/**
-	 * Field PENALTY_MOBS.
-	 */
 	private static final int[] PENALTY_MOBS =
 	{
 		18364,
 		18365,
 		18366
 	};
-	/**
-	 * Field YELLOW_CRYSTAL. (value is 9593)
-	 */
 	private static final int YELLOW_CRYSTAL = 9593;
-	/**
-	 * Field GREEN_CRYSTAL. (value is 9594)
-	 */
 	private static final int GREEN_CRYSTAL = 9594;
-	/**
-	 * Field RED_CRYSTAL. (value is 9596)
-	 */
 	private static final int RED_CRYSTAL = 9596;
 	
 	/**

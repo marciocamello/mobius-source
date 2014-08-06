@@ -33,9 +33,6 @@ import gnu.trove.set.hash.TIntHashSet;
  */
 public final class SoulCrystals extends ScriptItemHandler
 {
-	/**
-	 * Field _itemIds.
-	 */
 	private final int[] _itemIds;
 	
 	/**
@@ -103,13 +100,7 @@ public final class SoulCrystals extends ScriptItemHandler
 	 */
 	static class CrystalFinalizer extends RunnableImpl
 	{
-		/**
-		 * Field _activeChar.
-		 */
 		private final Player _activeChar;
-		/**
-		 * Field _target.
-		 */
 		private final MonsterInstance _target;
 		
 		/**

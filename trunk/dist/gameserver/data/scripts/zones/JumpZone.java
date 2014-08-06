@@ -14,7 +14,6 @@ package zones;
 
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Player;
@@ -29,13 +28,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class JumpZone implements ScriptFile
 {
-	/**
-	 * Field zoneTask.
-	 */
 	private static ScheduledFuture<?> zoneTask;
-	/**
-	 * Field jumpZones.
-	 */
 	static List<Zone> jumpZones;
 	
 	/**

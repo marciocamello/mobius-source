@@ -19,7 +19,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.StringTokenizer;
 import java.util.concurrent.Future;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObjectsStorage;
@@ -30,7 +29,6 @@ import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 import lineage2.gameserver.utils.MapUtils;
-
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -46,17 +44,8 @@ public class Announcements
 	 */
 	public class Announce extends RunnableImpl
 	{
-		/**
-		 * Field _task.
-		 */
 		private Future<?> _task;
-		/**
-		 * Field _time.
-		 */
 		private final int _time;
-		/**
-		 * Field _announce.
-		 */
 		private final String _announce;
 		
 		/**
@@ -131,13 +120,7 @@ public class Announcements
 		}
 	}
 	
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Announcements.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final Announcements _instance = new Announcements();
 	
 	/**
@@ -149,9 +132,6 @@ public class Announcements
 		return _instance;
 	}
 	
-	/**
-	 * Field _announcements.
-	 */
 	private final List<Announce> _announcements = new ArrayList<>();
 	
 	/**

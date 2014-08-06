@@ -17,7 +17,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.LineNumberReader;
 import java.util.logging.Logger;
-
 import lineage2.commons.collections.GArray;
 import lineage2.commons.collections.GCArray;
 import lineage2.commons.util.Rnd;
@@ -69,21 +68,9 @@ public class FakePlayersTable
 		}
 	}
 	
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = Logger.getLogger(FakePlayersTable.class.getName());
-	/**
-	 * Field _fakePlayers.
-	 */
 	static String[] _fakePlayers;
-	/**
-	 * Field _activeFakePlayers.
-	 */
 	static final GCArray<String> _activeFakePlayers = new GCArray<>();
-	/**
-	 * Field _instance.
-	 */
 	private static FakePlayersTable _instance;
 	
 	/**

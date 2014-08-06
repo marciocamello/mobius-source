@@ -13,7 +13,6 @@
 package ai;
 
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.Mystic;
 import lineage2.gameserver.model.Creature;
@@ -28,9 +27,6 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class HotSpringsMob extends Mystic
 {
-	/**
-	 * Field DeBuffs.
-	 */
 	private static final int[] DeBuffs =
 	{
 		4554,

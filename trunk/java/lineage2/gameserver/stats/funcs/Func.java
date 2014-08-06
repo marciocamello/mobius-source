@@ -22,29 +22,11 @@ import lineage2.gameserver.stats.conditions.Condition;
  */
 public abstract class Func implements Comparable<Func>
 {
-	/**
-	 * Field EMPTY_FUNC_ARRAY.
-	 */
 	public static final Func[] EMPTY_FUNC_ARRAY = new Func[0];
-	/**
-	 * Field stat.
-	 */
 	public final Stats stat;
-	/**
-	 * Field order.
-	 */
 	public final int order;
-	/**
-	 * Field owner.
-	 */
 	public final Object owner;
-	/**
-	 * Field value.
-	 */
 	public final double value;
-	/**
-	 * Field cond.
-	 */
 	protected Condition cond;
 	
 	/**

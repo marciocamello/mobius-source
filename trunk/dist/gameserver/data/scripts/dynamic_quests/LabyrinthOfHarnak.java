@@ -23,7 +23,6 @@ import lineage2.gameserver.network.serverpackets.ExDynamicQuestPacket;
 import lineage2.gameserver.network.serverpackets.ExDynamicQuestPacket.DynamicQuestInfo;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ReflectionUtils;
-
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,27 +30,20 @@ import org.slf4j.LoggerFactory;
 public final class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 {
 	private static final Logger _log = LoggerFactory.getLogger(LabyrinthOfHarnak.class);
-	
 	private static final int QUEST_ID = 8;
-	
 	private static final int MIN_LEVEL = 85;
 	private static final int MAX_LEVEL = 99;
-	
 	private static final int DURATION = 10800;
 	private static final String START_TIME = "1 * * * *";
-	
 	private static final int REWARD = 32726;
 	private static final int ELITE_REWARD = 32725;
-	
 	private static final int KILL_LOH_MOB = 801;
 	private static final int MAX_TASK_POINT = 10000;
-	
 	private static final String QUEST_ZONE_FIRST_SECOND = "[loh_first_second]";
 	private static final String QUEST_ZONE_THIRD = "[loh_third]";
 	private ZoneListener _zoneListener;
 	private Zone zoneFirstSecond;
 	private Zone zoneThird;
-	
 	private final KillListenerImpl _killListener = new KillListenerImpl();
 	private static final int DEMONIC_BATHUS = 22939;
 	private static final int DEMONIC_CARCASS = 22940;

@@ -25,9 +25,6 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public class RequestPetGetItem extends L2GameClientPacket
 {
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
 	
 	/**

@@ -31,12 +31,10 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.loginservercon.gspackets.AuthRequest;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -46,13 +44,7 @@ import org.slf4j.LoggerFactory;
  */
 public class LoginServerCommunication extends Thread
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(LoginServerCommunication.class);
-	/**
-	 * Field instance.
-	 */
 	private static final LoginServerCommunication instance = new LoginServerCommunication();
 	
 	/**
@@ -64,61 +56,19 @@ public class LoginServerCommunication extends Thread
 		return instance;
 	}
 	
-	/**
-	 * Field waitingClients.
-	 */
 	private final Map<String, GameClient> waitingClients = new HashMap<>();
-	/**
-	 * Field authedClients.
-	 */
 	private final Map<String, GameClient> authedClients = new HashMap<>();
-	/**
-	 * Field lock.
-	 */
 	private final ReadWriteLock lock = new ReentrantReadWriteLock();
-	/**
-	 * Field readLock.
-	 */
 	private final Lock readLock = lock.readLock();
-	/**
-	 * Field writeLock.
-	 */
 	private final Lock writeLock = lock.writeLock();
-	/**
-	 * Field readBuffer.
-	 */
 	private final ByteBuffer readBuffer = ByteBuffer.allocate(64 * 1024).order(ByteOrder.LITTLE_ENDIAN);
-	/**
-	 * Field writeBuffer.
-	 */
 	private final ByteBuffer writeBuffer = ByteBuffer.allocate(64 * 1024).order(ByteOrder.LITTLE_ENDIAN);
-	/**
-	 * Field sendQueue.
-	 */
 	private final Queue<SendablePacket> sendQueue = new ArrayDeque<>();
-	/**
-	 * Field sendLock.
-	 */
 	private final Lock sendLock = new ReentrantLock();
-	/**
-	 * Field isPengingWrite.
-	 */
 	private final AtomicBoolean isPengingWrite = new AtomicBoolean();
-	/**
-	 * Field key.
-	 */
 	private SelectionKey key;
-	/**
-	 * Field selector.
-	 */
 	private Selector selector;
-	/**
-	 * Field shutdown.
-	 */
 	private boolean shutdown;
-	/**
-	 * Field restart.
-	 */
 	private boolean restart;
 	
 	/**

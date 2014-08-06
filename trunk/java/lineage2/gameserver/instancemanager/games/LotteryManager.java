@@ -17,7 +17,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Calendar;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -28,7 +27,6 @@ import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,65 +36,20 @@ import org.slf4j.LoggerFactory;
  */
 public class LotteryManager
 {
-	/**
-	 * Field SECOND. (value is 1000)
-	 */
 	public static final long SECOND = 1000;
-	/**
-	 * Field MINUTE. (value is 60000)
-	 */
 	public static final long MINUTE = 60000;
-	/**
-	 * Field _instance.
-	 */
 	private static LotteryManager _instance;
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(LotteryManager.class);
-	/**
-	 * Field INSERT_LOTTERY. (value is ""INSERT INTO games(id, idnr, enddate, prize, newprize) VALUES (?, ?, ?, ?, ?)"")
-	 */
 	private static final String INSERT_LOTTERY = "INSERT INTO games(id, idnr, enddate, prize, newprize) VALUES (?, ?, ?, ?, ?)";
-	/**
-	 * Field UPDATE_PRICE. (value is ""UPDATE games SET prize=?, newprize=? WHERE id = 1 AND idnr = ?"")
-	 */
 	private static final String UPDATE_PRICE = "UPDATE games SET prize=?, newprize=? WHERE id = 1 AND idnr = ?";
-	/**
-	 * Field UPDATE_LOTTERY. (value is ""UPDATE games SET finished=1, prize=?, newprize=?, number1=?, number2=?, prize1=?, prize2=?, prize3=? WHERE id=1 AND idnr=?"")
-	 */
 	private static final String UPDATE_LOTTERY = "UPDATE games SET finished=1, prize=?, newprize=?, number1=?, number2=?, prize1=?, prize2=?, prize3=? WHERE id=1 AND idnr=?";
-	/**
-	 * Field SELECT_LAST_LOTTERY. (value is ""SELECT idnr, prize, newprize, enddate, finished FROM games WHERE id = 1 ORDER BY idnr DESC LIMIT 1"")
-	 */
 	private static final String SELECT_LAST_LOTTERY = "SELECT idnr, prize, newprize, enddate, finished FROM games WHERE id = 1 ORDER BY idnr DESC LIMIT 1";
-	/**
-	 * Field SELECT_LOTTERY_ITEM. (value is ""SELECT enchant_level, custom_type2 FROM items WHERE item_id = 4442 AND custom_type1 = ?"")
-	 */
 	private static final String SELECT_LOTTERY_ITEM = "SELECT enchant_level, custom_type2 FROM items WHERE item_id = 4442 AND custom_type1 = ?";
-	/**
-	 * Field SELECT_LOTTERY_TICKET. (value is ""SELECT number1, number2, prize1, prize2, prize3 FROM games WHERE id = 1 AND idnr = ?"")
-	 */
 	private static final String SELECT_LOTTERY_TICKET = "SELECT number1, number2, prize1, prize2, prize3 FROM games WHERE id = 1 AND idnr = ?";
-	/**
-	 * Field _number.
-	 */
 	protected int _number;
-	/**
-	 * Field _prize.
-	 */
 	protected int _prize;
-	/**
-	 * Field _isSellingTickets.
-	 */
 	protected boolean _isSellingTickets;
-	/**
-	 * Field _isStarted.
-	 */
 	protected boolean _isStarted;
-	/**
-	 * Field _enddate.
-	 */
 	protected long _enddate;
 	
 	/**

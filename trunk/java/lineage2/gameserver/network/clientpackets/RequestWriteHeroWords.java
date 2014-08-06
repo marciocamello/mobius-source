@@ -21,9 +21,6 @@ import lineage2.gameserver.model.entity.Hero;
  */
 public class RequestWriteHeroWords extends L2GameClientPacket
 {
-	/**
-	 * Field _heroWords.
-	 */
 	private String _heroWords;
 	
 	/**

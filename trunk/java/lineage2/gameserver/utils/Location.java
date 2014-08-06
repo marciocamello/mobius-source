@@ -13,7 +13,6 @@
 package lineage2.gameserver.utils;
 
 import java.io.Serializable;
-
 import lineage2.commons.geometry.Point3D;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.geodata.GeoEngine;
@@ -21,7 +20,6 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.templates.spawn.SpawnRange;
-
 import org.dom4j.Element;
 
 /**
@@ -34,9 +32,6 @@ public class Location extends Point3D implements SpawnRange, Serializable
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field h.
-	 */
 	public int h;
 	
 	/**

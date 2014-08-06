@@ -26,29 +26,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 @SuppressWarnings("rawtypes")
 public class MMOExecutableQueue<T extends MMOClient> implements Queue<ReceivablePacket<T>>, Runnable
 {
-	/**
-	 * Field NONE. (value is 0)
-	 */
 	private static final int NONE = 0;
-	/**
-	 * Field QUEUED. (value is 1)
-	 */
 	private static final int QUEUED = 1;
-	/**
-	 * Field RUNNING. (value is 2)
-	 */
 	private static final int RUNNING = 2;
-	/**
-	 * Field _executor.
-	 */
 	private final IMMOExecutor<T> _executor;
-	/**
-	 * Field _queue.
-	 */
 	private final Queue<ReceivablePacket<T>> _queue;
-	/**
-	 * Field _state.
-	 */
 	private final AtomicInteger _state = new AtomicInteger(NONE);
 	
 	/**

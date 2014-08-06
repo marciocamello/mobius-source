@@ -13,7 +13,6 @@
 package ai.Heine.FieldOfSelenceAndWhispers;
 
 import java.util.List;
-
 import lineage2.gameserver.ai.CharacterAI;
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.model.Creature;
@@ -28,9 +27,6 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class BrazierOfPurity extends CharacterAI
 {
-	/**
-	 * Field _firstTimeAttacked.
-	 */
 	private boolean _firstTimeAttacked = true;
 	
 	/**

@@ -22,9 +22,6 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class MatchTrief extends MatchFighter
 {
-	/**
-	 * Field HOLD.
-	 */
 	public static final Skill HOLD = SkillTable.getInstance().getInfo(4047, 6);
 	
 	/**

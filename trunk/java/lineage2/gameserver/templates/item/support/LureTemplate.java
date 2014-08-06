@@ -13,7 +13,6 @@
 package lineage2.gameserver.templates.item.support;
 
 import java.util.Map;
-
 import lineage2.commons.collections.MultiValueSet;
 
 /**
@@ -22,29 +21,11 @@ import lineage2.commons.collections.MultiValueSet;
  */
 public class LureTemplate
 {
-	/**
-	 * Field _itemId.
-	 */
 	private final int _itemId;
-	/**
-	 * Field _lengthBonus.
-	 */
 	private final int _lengthBonus;
-	/**
-	 * Field _revisionNumber.
-	 */
 	private final double _revisionNumber;
-	/**
-	 * Field _rateBonus.
-	 */
 	private final double _rateBonus;
-	/**
-	 * Field _lureType.
-	 */
 	private final LureType _lureType;
-	/**
-	 * Field _chances.
-	 */
 	private final Map<FishGroup, Integer> _chances;
 	
 	/**

@@ -27,9 +27,6 @@ import lineage2.gameserver.utils.Log;
  */
 public class RequestExTryToPutEnchantTargetItem extends AbstractEnchantPacket
 {
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
 	
 	/**

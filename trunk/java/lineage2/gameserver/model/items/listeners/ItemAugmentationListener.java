@@ -27,9 +27,6 @@ import lineage2.gameserver.templates.OptionDataTemplate;
  */
 public final class ItemAugmentationListener implements OnEquipListener
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final ItemAugmentationListener _instance = new ItemAugmentationListener();
 	
 	/**

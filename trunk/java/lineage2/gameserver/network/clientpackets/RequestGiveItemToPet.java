@@ -25,13 +25,7 @@ import lineage2.gameserver.model.items.PetInventory;
  */
 public class RequestGiveItemToPet extends L2GameClientPacket
 {
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
-	/**
-	 * Field _amount.
-	 */
 	private long _amount;
 	
 	/**

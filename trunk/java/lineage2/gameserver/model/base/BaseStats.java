@@ -15,13 +15,10 @@ package lineage2.gameserver.model.base;
 import java.io.File;
 import java.io.IOException;
 import java.util.NoSuchElementException;
-
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Creature;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -34,9 +31,6 @@ import org.xml.sax.SAXException;
  */
 public enum BaseStats
 {
-	/**
-	 * Field STR.
-	 */
 	STR
 	{
 		@Override
@@ -57,9 +51,6 @@ public enum BaseStats
 			return Math.min(2. - Math.sqrt(calcBonus(actor)), 1.);
 		}
 	},
-	/**
-	 * Field INT.
-	 */
 	INT
 	{
 		@Override
@@ -74,9 +65,6 @@ public enum BaseStats
 			return actor == null ? 1. : INTbonus[actor.getINT()];
 		}
 	},
-	/**
-	 * Field DEX.
-	 */
 	DEX
 	{
 		@Override
@@ -91,9 +79,6 @@ public enum BaseStats
 			return actor == null ? 1. : DEXbonus[actor.getDEX()];
 		}
 	},
-	/**
-	 * Field WIT.
-	 */
 	WIT
 	{
 		@Override
@@ -108,9 +93,6 @@ public enum BaseStats
 			return actor == null ? 1. : WITbonus[actor.getWIT()];
 		}
 	},
-	/**
-	 * Field CON.
-	 */
 	CON
 	{
 		@Override
@@ -125,9 +107,6 @@ public enum BaseStats
 			return actor == null ? 1. : CONbonus[actor.getCON()];
 		}
 	},
-	/**
-	 * Field MEN.
-	 */
 	MEN
 	{
 		@Override
@@ -142,45 +121,15 @@ public enum BaseStats
 			return actor == null ? 1. : MENbonus[actor.getMEN()];
 		}
 	},
-	/**
-	 * Field NONE.
-	 */
 	NONE;
-	/**
-	 * Field VALUES.
-	 */
 	public static final BaseStats[] VALUES = values();
-	/**
-	 * Field _log.
-	 */
 	protected static final Logger _log = LoggerFactory.getLogger(BaseStats.class);
-	/**
-	 * Field MAX_STAT_VALUE. (value is 201)
-	 */
 	private static final int MAX_STAT_VALUE = 201;
-	/**
-	 * Field STRbonus.
-	 */
 	static final double[] STRbonus = new double[MAX_STAT_VALUE];
-	/**
-	 * Field INTbonus.
-	 */
 	static final double[] INTbonus = new double[MAX_STAT_VALUE];
-	/**
-	 * Field DEXbonus.
-	 */
 	static final double[] DEXbonus = new double[MAX_STAT_VALUE];
-	/**
-	 * Field WITbonus.
-	 */
 	static final double[] WITbonus = new double[MAX_STAT_VALUE];
-	/**
-	 * Field CONbonus.
-	 */
 	static final double[] CONbonus = new double[MAX_STAT_VALUE];
-	/**
-	 * Field MENbonus.
-	 */
 	static final double[] MENbonus = new double[MAX_STAT_VALUE];
 	
 	/**

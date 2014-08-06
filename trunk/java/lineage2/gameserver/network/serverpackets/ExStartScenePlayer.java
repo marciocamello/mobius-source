@@ -17,7 +17,6 @@ import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 public class ExStartScenePlayer extends L2GameServerPacket
 {
 	private final int _sceneId;
-	
 	public static final int SCENE_LINDVIOR = 1;
 	public static final int SCENE_ECHMUS_OPENING = 2;
 	public static final int SCENE_ECHMUS_SUCCESS = 3;

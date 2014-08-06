@@ -23,13 +23,7 @@ import lineage2.gameserver.model.pledge.Clan;
  */
 public class RequestSetPledgeCrest extends L2GameClientPacket
 {
-	/**
-	 * Field _length.
-	 */
 	private int _length;
-	/**
-	 * Field _data.
-	 */
 	private byte[] _data;
 	
 	/**

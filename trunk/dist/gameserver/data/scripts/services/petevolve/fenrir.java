@@ -27,17 +27,8 @@ import lineage2.gameserver.tables.PetDataTable.L2Pet;
  */
 public final class fenrir extends Functions
 {
-	/**
-	 * Field GREAT_WOLF.
-	 */
 	private static final int GREAT_WOLF = PetDataTable.GREAT_WOLF_ID;
-	/**
-	 * Field GREAT_WOLF_NECKLACE.
-	 */
 	private static final int GREAT_WOLF_NECKLACE = L2Pet.GREAT_WOLF.getControlItemId();
-	/**
-	 * Field FENRIR_NECKLACE.
-	 */
 	private static final int FENRIR_NECKLACE = L2Pet.FENRIR_WOLF.getControlItemId();
 	
 	/**

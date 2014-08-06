@@ -25,61 +25,19 @@ public class L2StatueInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _face. Field _hairColor. Field _hairStyle. Field _sex. Field _socialFrame. Field _socialId. Field _recordId.
-	 */
 	private final int _recordId, _socialId, _socialFrame, _sex, _hairStyle, _hairColor, _face;
-	/**
-	 * Field _necklace.
-	 */
 	private int _necklace = 0;
-	/**
-	 * Field _head.
-	 */
 	private int _head = 0;
-	/**
-	 * Field _classId.
-	 */
 	private int _classId = 0;
-	/**
-	 * Field _rHand.
-	 */
 	private int _rHand = 0;
-	/**
-	 * Field _lHand.
-	 */
 	private int _lHand = 0;
-	/**
-	 * Field _gloves.
-	 */
 	private int _gloves = 0;
-	/**
-	 * Field _chest.
-	 */
 	private int _chest = 0;
-	/**
-	 * Field _pants.
-	 */
 	private int _pants = 0;
-	/**
-	 * Field _boots.
-	 */
 	private int _boots = 0;
-	/**
-	 * Field _cloak.
-	 */
 	private int _cloak = 0;
-	/**
-	 * Field _hair1.
-	 */
 	private int _hair1 = 0;
-	/**
-	 * Field _hair2.
-	 */
 	private int _hair2 = 0;
-	/**
-	 * Field _race.
-	 */
 	private int _race = 0;
 	
 	/**

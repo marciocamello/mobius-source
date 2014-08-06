@@ -32,17 +32,8 @@ import ai.residences.SiegeGuardMystic;
  */
 public final class GiselleVonHellmann extends SiegeGuardMystic
 {
-	/**
-	 * Field DAMAGE_SKILL.
-	 */
 	private static final Skill DAMAGE_SKILL = SkillTable.getInstance().getInfo(5003, 1);
-	/**
-	 * Field ZONE_1.
-	 */
 	private static final Zone ZONE_1 = ReflectionUtils.getZone("lidia_zone1");
-	/**
-	 * Field ZONE_2.
-	 */
 	private static final Zone ZONE_2 = ReflectionUtils.getZone("lidia_zone2");
 	
 	/**

@@ -21,9 +21,6 @@ import lineage2.gameserver.model.Player;
  */
 public class RequestPartyLootModification extends L2GameClientPacket
 {
-	/**
-	 * Field _mode.
-	 */
 	private byte _mode;
 	
 	/**

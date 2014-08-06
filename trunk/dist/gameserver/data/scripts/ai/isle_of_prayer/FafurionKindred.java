@@ -15,7 +15,6 @@ package ai.isle_of_prayer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -37,41 +36,14 @@ import lineage2.gameserver.utils.Location;
  */
 public final class FafurionKindred extends Fighter
 {
-	/**
-	 * Field DETRACTOR1. (value is 22270)
-	 */
 	private static final int DETRACTOR1 = 22270;
-	/**
-	 * Field DETRACTOR2. (value is 22271)
-	 */
 	private static final int DETRACTOR2 = 22271;
-	/**
-	 * Field Spirit_of_the_Lake. (value is 2368)
-	 */
 	private static final int Spirit_of_the_Lake = 2368;
-	/**
-	 * Field Water_Dragon_Scale. (value is 9691)
-	 */
 	private static final int Water_Dragon_Scale = 9691;
-	/**
-	 * Field Water_Dragon_Claw. (value is 9700)
-	 */
 	private static final int Water_Dragon_Claw = 9700;
-	/**
-	 * Field poisonTask.
-	 */
 	ScheduledFuture<?> poisonTask;
-	/**
-	 * Field despawnTask.
-	 */
 	ScheduledFuture<?> despawnTask;
-	/**
-	 * Field spawns.
-	 */
 	final List<SimpleSpawner> spawns = new ArrayList<>();
-	/**
-	 * Field ft.
-	 */
 	private static final FuncTemplate ft = new FuncTemplate(null, "Mul", Stats.HEAL_EFFECTIVNESS, 0x90, 0);
 	
 	/**
@@ -174,9 +146,6 @@ public final class FafurionKindred extends Fighter
 	 */
 	private class SpawnTask extends RunnableImpl
 	{
-		/**
-		 * Field _id.
-		 */
 		private final int _id;
 		
 		/**

@@ -31,9 +31,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class ZakenDaytime extends Fighter
 {
-	/**
-	 * Field _locations.
-	 */
 	static final Location[] _locations = new Location[]
 	{
 		new Location(55272, 219112, -3496),
@@ -52,17 +49,8 @@ public final class ZakenDaytime extends Fighter
 		new Location(54248, 220136, -2952),
 		new Location(56296, 220136, -2952)
 	};
-	/**
-	 * Field _teleportSelfTimer.
-	 */
 	private long _teleportSelfTimer = 0L;
-	/**
-	 * Field _teleportSelfReuse.
-	 */
 	private static final long _teleportSelfReuse = 120000L;
-	/**
-	 * Field actor.
-	 */
 	final NpcInstance actor = getActor();
 	
 	/**

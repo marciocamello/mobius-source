@@ -30,13 +30,7 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class RequestExRemoveItemAttribute extends L2GameClientPacket
 {
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
-	/**
-	 * Field _attributeId.
-	 */
 	private int _attributeId;
 	
 	/**

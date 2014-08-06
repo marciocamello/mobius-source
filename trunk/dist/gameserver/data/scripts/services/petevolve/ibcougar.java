@@ -27,17 +27,8 @@ import lineage2.gameserver.tables.PetDataTable.L2Pet;
  */
 public final class ibcougar extends Functions
 {
-	/**
-	 * Field BABY_COUGAR.
-	 */
 	private static final int BABY_COUGAR = PetDataTable.BABY_COUGAR_ID;
-	/**
-	 * Field BABY_COUGAR_CHIME.
-	 */
 	private static final int BABY_COUGAR_CHIME = L2Pet.BABY_COUGAR.getControlItemId();
-	/**
-	 * Field IN_COUGAR_CHIME.
-	 */
 	private static final int IN_COUGAR_CHIME = L2Pet.IMPROVED_BABY_COUGAR.getControlItemId();
 	
 	/**

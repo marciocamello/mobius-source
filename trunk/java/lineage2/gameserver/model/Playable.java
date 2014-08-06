@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.util.Rnd;
 import lineage2.commons.util.concurrent.atomic.AtomicState;
@@ -55,25 +54,10 @@ public abstract class Playable extends Creature
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _isSilentMoving.
-	 */
 	private final AtomicState _isSilentMoving = new AtomicState();
-	/**
-	 * Field _isPendingRevive.
-	 */
 	private boolean _isPendingRevive;
-	/**
-	 * Field questLock.
-	 */
 	protected final ReadWriteLock questLock = new ReentrantReadWriteLock();
-	/**
-	 * Field questRead.
-	 */
 	protected final Lock questRead = questLock.readLock();
-	/**
-	 * Field questWrite.
-	 */
 	protected final Lock questWrite = questLock.writeLock();
 	
 	/**
@@ -109,13 +93,7 @@ public abstract class Playable extends Creature
 	 */
 	public abstract long getWearedMask();
 	
-	/**
-	 * Field _boat.
-	 */
 	private Boat _boat;
-	/**
-	 * Field _inBoatPosition.
-	 */
 	private Location _inBoatPosition;
 	
 	/**
@@ -910,9 +888,6 @@ public abstract class Playable extends Creature
 	{
 	}
 	
-	/**
-	 * Field _nonAggroTime.
-	 */
 	private long _nonAggroTime;
 	
 	/**

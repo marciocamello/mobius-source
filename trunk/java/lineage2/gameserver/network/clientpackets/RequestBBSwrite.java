@@ -25,29 +25,11 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class RequestBBSwrite extends L2GameClientPacket
 {
-	/**
-	 * Field _url.
-	 */
 	private String _url;
-	/**
-	 * Field _arg1.
-	 */
 	private String _arg1;
-	/**
-	 * Field _arg2.
-	 */
 	private String _arg2;
-	/**
-	 * Field _arg3.
-	 */
 	private String _arg3;
-	/**
-	 * Field _arg4.
-	 */
 	private String _arg4;
-	/**
-	 * Field _arg5.
-	 */
 	private String _arg5;
 	
 	/**

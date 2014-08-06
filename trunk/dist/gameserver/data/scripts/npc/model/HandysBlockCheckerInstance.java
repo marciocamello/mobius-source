@@ -52,21 +52,9 @@ public final class HandysBlockCheckerInstance extends NpcInstance
 		HandysBlockCheckerManager.getInstance().startUpParticipantsQueue();
 	}
 	
-	/**
-	 * Field A_MANAGER_1. (value is 32521)
-	 */
 	private static final int A_MANAGER_1 = 32521;
-	/**
-	 * Field A_MANAGER_2. (value is 32522)
-	 */
 	private static final int A_MANAGER_2 = 32522;
-	/**
-	 * Field A_MANAGER_3. (value is 32523)
-	 */
 	private static final int A_MANAGER_3 = 32523;
-	/**
-	 * Field A_MANAGER_4. (value is 32524)
-	 */
 	private static final int A_MANAGER_4 = 32524;
 	
 	/**

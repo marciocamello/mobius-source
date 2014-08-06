@@ -24,9 +24,6 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class SwoopCannon_19190 extends DefaultAI
 {
-	/**
-	 * Field SKILL_ID. (value is 16023)
-	 */
 	private static final int SKILL_ID = 16023;
 	
 	/**

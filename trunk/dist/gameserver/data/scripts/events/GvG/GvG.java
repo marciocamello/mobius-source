@@ -13,14 +13,12 @@
 package events.GvG;
 
 import instances.GvGInstance;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.lang.reference.HardReferences;
@@ -40,7 +38,6 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.InstantZone;
 import lineage2.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -50,82 +47,28 @@ import org.slf4j.LoggerFactory;
  */
 public final class GvG extends Functions implements ScriptFile
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(GvG.class);
-	/**
-	 * Field TEAM1_LOC.
-	 */
 	public static final Location TEAM1_LOC = new Location(139736, 145832, -15264);
-	/**
-	 * Field TEAM2_LOC.
-	 */
 	public static final Location TEAM2_LOC = new Location(139736, 139832, -15264);
-	/**
-	 * Field RETURN_LOC.
-	 */
 	public static final Location RETURN_LOC = new Location(43816, -48232, -822);
-	/**
-	 * Field everydayStartTime.
-	 */
 	public static final int[] everydayStartTime =
 	{
 		21,
 		30,
 		00
 	};
-	/**
-	 * Field _active.
-	 */
 	private static boolean _active = false;
-	/**
-	 * Field _isRegistrationActive.
-	 */
 	private static boolean _isRegistrationActive = false;
-	/**
-	 * Field _minLevel.
-	 */
 	private static final int _minLevel = 80;
-	/**
-	 * Field _maxLevel.
-	 */
 	private static final int _maxLevel = 99;
-	/**
-	 * Field _groupsLimit.
-	 */
 	private static final int _groupsLimit = 100;
-	/**
-	 * Field _minPartyMembers.
-	 */
 	private static final int _minPartyMembers = 6;
-	/**
-	 * Field regActiveTime.
-	 */
 	private static final long regActiveTime = 10 * 60 * 1000L;
-	/**
-	 * Field _globalTask.
-	 */
 	private static ScheduledFuture<?> _globalTask;
-	/**
-	 * Field _regTask.
-	 */
 	private static ScheduledFuture<?> _regTask;
-	/**
-	 * Field _countdownTask1.
-	 */
 	private static ScheduledFuture<?> _countdownTask1;
-	/**
-	 * Field _countdownTask2.
-	 */
 	private static ScheduledFuture<?> _countdownTask2;
-	/**
-	 * Field _countdownTask3.
-	 */
 	private static ScheduledFuture<?> _countdownTask3;
-	/**
-	 * Field leaderList.
-	 */
 	private static final List<HardReference<Player>> leaderList = new CopyOnWriteArrayList<>();
 	
 	/**
@@ -148,9 +91,6 @@ public final class GvG extends Functions implements ScriptFile
 	 */
 	public static class Countdown extends RunnableImpl
 	{
-		/**
-		 * Field _timer.
-		 */
 		int _timer;
 		
 		/**

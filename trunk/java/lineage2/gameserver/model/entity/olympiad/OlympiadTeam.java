@@ -15,7 +15,6 @@ package lineage2.gameserver.model.entity.olympiad;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
@@ -23,7 +22,6 @@ import lineage2.gameserver.network.serverpackets.ExOlympiadUserInfo;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 import lineage2.gameserver.templates.StatsSet;
-
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
@@ -35,30 +33,12 @@ import org.slf4j.LoggerFactory;
  */
 public class OlympiadTeam
 {
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(OlympiadManager.class);
-	/**
-	 * Field _game.
-	 */
 	private final OlympiadGame _game;
-	/**
-	 * Field _members.
-	 */
 	private final IntObjectMap<TeamMember> _members;
-	/**
-	 * Field _name.
-	 */
 	private String _name = "";
-	/**
-	 * Field _side.
-	 */
 	private final int _side;
-	/**
-	 * Field _damage.
-	 */
 	private double _damage;
 	
 	/**

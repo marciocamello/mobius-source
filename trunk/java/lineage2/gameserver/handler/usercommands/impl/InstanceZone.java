@@ -24,9 +24,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class InstanceZone implements IUserCommandHandler
 {
-	/**
-	 * Field COMMAND_IDS.
-	 */
 	private static final int[] COMMAND_IDS =
 	{
 		114

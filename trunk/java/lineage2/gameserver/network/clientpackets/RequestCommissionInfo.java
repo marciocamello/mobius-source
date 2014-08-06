@@ -21,9 +21,6 @@ import lineage2.gameserver.model.Player;
  */
 public class RequestCommissionInfo extends L2GameClientPacket
 {
-	/**
-	 * Field itemObjId.
-	 */
 	private int itemObjId;
 	
 	/**

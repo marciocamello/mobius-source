@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Future;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -67,37 +66,13 @@ public abstract class Summon extends Playable
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field SUMMON_DISAPPEAR_RANGE. (value is 2500)
-	 */
 	private static final int SUMMON_DISAPPEAR_RANGE = 2500;
-	/**
-	 * Field _owner.
-	 */
 	private final Player _owner;
-	/**
-	 * Field _spawnAnimation.
-	 */
 	private int _spawnAnimation = 2;
-	/**
-	 * Field _exp.
-	 */
 	protected long _exp = 0;
-	/**
-	 * Field _sp.
-	 */
 	protected int _sp = 0;
-	/**
-	 * Field _spsCharged. Field _maxLoad.
-	 */
 	private int _maxLoad, _spsCharged;
-	/**
-	 * Field _ssCharged. Field _depressed. Field _follow. Field _defend.
-	 */
 	private boolean _follow = true, _depressed = false, _ssCharged = false, _defend = false;
-	/**
-	 * Field _decayTask.
-	 */
 	private Future<?> _decayTask;
 	
 	/**
@@ -565,9 +540,6 @@ public abstract class Summon extends Playable
 		return _defend;
 	}
 	
-	/**
-	 * Field _updateEffectIconsTask.
-	 */
 	Future<?> _updateEffectIconsTask;
 	
 	/**
@@ -1112,5 +1084,4 @@ public abstract class Summon extends Playable
 		
 		super.onActionTargeted(player, forced);
 	}
-	
 }

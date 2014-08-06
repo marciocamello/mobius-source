@@ -50,9 +50,6 @@ public final class NaiaCube extends DefaultAI
 	 */
 	static private class Despawn extends RunnableImpl
 	{
-		/**
-		 * Field _npc.
-		 */
 		NpcInstance _npc;
 		
 		/**

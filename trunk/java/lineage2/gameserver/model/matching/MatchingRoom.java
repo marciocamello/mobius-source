@@ -16,7 +16,6 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
-
 import lineage2.gameserver.instancemanager.MatchingRoomManager;
 import lineage2.gameserver.listener.actor.player.OnPlayerPartyInviteListener;
 import lineage2.gameserver.listener.actor.player.OnPlayerPartyLeaveListener;
@@ -69,80 +68,23 @@ public abstract class MatchingRoom implements PlayerGroup
 		}
 	}
 	
-	/**
-	 * Field PARTY_MATCHING.
-	 */
 	public static final int PARTY_MATCHING = 0;
-	/**
-	 * Field CC_MATCHING.
-	 */
 	public static final int CC_MATCHING = 1;
-	
-	/**
-	 * Field WAIT_PLAYER.
-	 */
 	public static final int WAIT_PLAYER = 0;
-	/**
-	 * Field ROOM_MASTER.
-	 */
 	public static final int ROOM_MASTER = 1;
-	/**
-	 * Field PARTY_MEMBER.
-	 */
 	public static final int PARTY_MEMBER = 2;
-	/**
-	 * Field UNION_LEADER.
-	 */
 	public static final int UNION_LEADER = 3;
-	/**
-	 * Field UNION_PARTY.
-	 */
 	public static final int UNION_PARTY = 4;
-	/**
-	 * Field WAIT_PARTY.
-	 */
 	public static final int WAIT_PARTY = 5;
-	/**
-	 * Field WAIT_NORMAL.
-	 */
 	public static final int WAIT_NORMAL = 6;
-	
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _minLevel.
-	 */
 	private int _minLevel;
-	/**
-	 * Field _maxLevel.
-	 */
 	private int _maxLevel;
-	/**
-	 * Field _maxMemberSize.
-	 */
 	private int _maxMemberSize;
-	/**
-	 * Field _lootType.
-	 */
 	private int _lootType;
-	/**
-	 * Field _topic.
-	 */
 	private String _topic;
-	
-	/**
-	 * Field _listener.
-	 */
 	private final PartyListenerImpl _listener = new PartyListenerImpl();
-	/**
-	 * Field _leader.
-	 */
 	protected final Player _leader;
-	/**
-	 * Field _members.
-	 */
 	protected final Set<Player> _members = new CopyOnWriteArraySet<>();
 	
 	/**

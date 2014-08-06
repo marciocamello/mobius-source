@@ -20,21 +20,9 @@ import lineage2.gameserver.model.Skill;
  */
 public class TimeStamp
 {
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _level.
-	 */
 	private final int _level;
-	/**
-	 * Field _reuse.
-	 */
 	private final long _reuse;
-	/**
-	 * Field _endTime.
-	 */
 	private final long _endTime;
 	
 	/**

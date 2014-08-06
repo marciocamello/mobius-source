@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.serverpackets.components;
 
 import java.util.NoSuchElementException;
-
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
@@ -291,7 +290,6 @@ public enum SystemMsg implements IStaticPacket
 	YOUR_BID_PRICE_MUST_BE_HIGHER_THAN_THE_MINIMUM_PRICE_CURRENTLY_BEING_BID(677),
 	// Message: You have canceled your bid.
 	YOU_HAVE_CANCELED_YOUR_BID(679),
-	// Field YOU_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER.
 	YOU_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER(683),
 	// Message: You cannot move while frozen. Please wait.
 	YOU_CANNOT_MOVE_WHILE_FROZEN(687),
@@ -540,7 +538,6 @@ public enum SystemMsg implements IStaticPacket
 	// Message: The Blessed Enchant failed. The enchant value of the item became
 	// 0.
 	THE_BLESSED_ENCHANT_FAILED(1517),
-	
 	// You do not meet the required condition to equip that item.
 	YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM(1518),
 	// Message: You should release your pet or servitor so that it does not fall
@@ -927,7 +924,6 @@ public enum SystemMsg implements IStaticPacket
 	END_MATCH(2374),
 	// Message: A party cannot be formed in this area.
 	A_PARTY_CANNOT_BE_FORMED_IN_THIS_AREA(2388),
-	// Field YOUR_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_REACHED_ITS_MAXIMUM_LIMIT.
 	YOUR_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_REACHED_ITS_MAXIMUM_LIMIT(2390),
 	// Message: You have used the Feather of Blessing to resurrect.
 	YOU_HAVE_USED_THE_FEATHER_OF_BLESSING_TO_RESURRECT(2391),
@@ -1359,7 +1355,6 @@ public enum SystemMsg implements IStaticPacket
 	YOU_CANNOT_MODIFY_OR_RESTORE_NOGRADE_ITEMS(6103),
 	WEAPONS_ONLY(6104),
 	ARMOR_ONLY(6105);
-	
 	private final L2GameServerPacket _message;
 	private final int _id;
 	private final byte _size;

@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.gameserver.templates.npc.NpcTemplate;
@@ -29,25 +28,10 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public final class NpcHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final NpcHolder _instance = new NpcHolder();
-	/**
-	 * Field _npcs.
-	 */
 	private final TIntObjectHashMap<NpcTemplate> _npcs = new TIntObjectHashMap<>(30000);
-	/**
-	 * Field _npcsByLevel.
-	 */
 	private TIntObjectHashMap<List<NpcTemplate>> _npcsByLevel;
-	/**
-	 * Field _allTemplates.
-	 */
 	private NpcTemplate[] _allTemplates;
-	/**
-	 * Field _npcsNames.
-	 */
 	private Map<String, NpcTemplate> _npcsNames;
 	
 	/**

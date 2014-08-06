@@ -15,7 +15,6 @@ package lineage2.gameserver.model.reward;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 import lineage2.commons.math.SafeMath;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -27,25 +26,10 @@ import lineage2.gameserver.model.Player;
  */
 public class RewardGroup implements Cloneable
 {
-	/**
-	 * Field _chance.
-	 */
 	private double _chance;
-	/**
-	 * Field _isAdena.
-	 */
 	private boolean _isAdena = false;
-	/**
-	 * Field _notRate.
-	 */
 	private boolean _notRate = false;
-	/**
-	 * Field _items.
-	 */
 	private final List<RewardData> _items = new ArrayList<>();
-	/**
-	 * Field _chanceSum.
-	 */
 	private double _chanceSum;
 	
 	/**

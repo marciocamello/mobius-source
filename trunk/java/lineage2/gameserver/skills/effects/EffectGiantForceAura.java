@@ -14,7 +14,6 @@ package lineage2.gameserver.skills.effects;
 
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -32,17 +31,8 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public class EffectGiantForceAura extends Effect
 {
-	/**
-	 * Field forceSkillId.
-	 */
 	private final int forceSkillId;
-	/**
-	 * Field auraSkillId.
-	 */
 	private final int auraSkillId;
-	/**
-	 * Field startEffectTask.
-	 */
 	private ScheduledFuture<?> startEffectTask;
 	
 	/**

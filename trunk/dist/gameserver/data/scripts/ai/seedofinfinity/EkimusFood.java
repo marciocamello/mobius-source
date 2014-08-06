@@ -25,9 +25,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class EkimusFood extends DefaultAI
 {
-	/**
-	 * Field _route1.
-	 */
 	private static final Location[] _route1 =
 	{
 		new Location(-179544, 207400, -15496),
@@ -42,9 +39,6 @@ public final class EkimusFood extends DefaultAI
 		new Location(-179512, 211864, -15496),
 		new Location(-179528, 211448, -15472)
 	};
-	/**
-	 * Field _route2.
-	 */
 	private static final Location[] _route2 =
 	{
 		new Location(-179576, 207352, -15496),
@@ -57,13 +51,7 @@ public final class EkimusFood extends DefaultAI
 		new Location(-179528, 211848, -15496),
 		new Location(-179528, 211400, -15472)
 	};
-	/**
-	 * Field _points.
-	 */
 	private final Location[] _points;
-	/**
-	 * Field _lastPoint.
-	 */
 	private int _lastPoint = 0;
 	
 	/**

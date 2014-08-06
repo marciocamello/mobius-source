@@ -13,10 +13,8 @@
 package lineage2.gameserver.model.entity.olympiad;
 
 import java.util.Calendar;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,9 +24,6 @@ import org.slf4j.LoggerFactory;
  */
 public class WeeklyTask extends RunnableImpl
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(WeeklyTask.class);
 	
 	/**

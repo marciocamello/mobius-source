@@ -29,9 +29,6 @@ import lineage2.gameserver.utils.PositionUtils;
  */
 public final class EffectFear extends Effect
 {
-	/**
-	 * Field FEAR_RANGE. (value is 900.0)
-	 */
 	public static final double FEAR_RANGE = 900;
 	
 	/**

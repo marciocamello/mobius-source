@@ -24,9 +24,7 @@ public class _10389_TheVoiceOfAuthority extends Quest implements ScriptFile
 {
 	// reward items
 	private static final int SIGN = 36229;
-	
 	private static final int RADZEN = 33803;
-	
 	private static final String KILL = "kill";
 	
 	public _10389_TheVoiceOfAuthority()

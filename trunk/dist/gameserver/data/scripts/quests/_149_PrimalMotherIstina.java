@@ -20,9 +20,7 @@ import lineage2.gameserver.scripts.ScriptFile;
 public class _149_PrimalMotherIstina extends Quest implements ScriptFile
 {
 	private static final int LIMIER = 33293;
-	
 	private static final int ISXINA_NORMAL = 29195;
-	
 	private static final int SIGN_OF_SHILEN = 17589;
 	
 	public _149_PrimalMotherIstina()

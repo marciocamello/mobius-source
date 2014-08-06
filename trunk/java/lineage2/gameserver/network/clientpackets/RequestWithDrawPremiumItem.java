@@ -25,17 +25,8 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
  */
 public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 {
-	/**
-	 * Field _itemNum.
-	 */
 	private int _itemNum;
-	/**
-	 * Field _charId.
-	 */
 	private int _charId;
-	/**
-	 * Field _itemcount.
-	 */
 	private long _itemcount;
 	
 	/**

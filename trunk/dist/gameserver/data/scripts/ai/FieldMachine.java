@@ -13,7 +13,6 @@
 package ai;
 
 import java.util.List;
-
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
@@ -26,9 +25,6 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class FieldMachine extends DefaultAI
 {
-	/**
-	 * Field _lastAction.
-	 */
 	private long _lastAction;
 	
 	/**

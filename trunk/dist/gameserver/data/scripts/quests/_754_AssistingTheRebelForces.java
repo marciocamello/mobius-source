@@ -26,13 +26,11 @@ public class _754_AssistingTheRebelForces extends Quest implements ScriptFile
 {
 	private final int REBEL_SUPPLY_BOX = 35549;
 	private final int MARK_OF_RESISTANCE = 34909;
-	
 	private final int SIZRAK = 33669;
 	private final int COMMUNICATION = 33676;
 	private final int KUNDA_GUARDIAN = 23224;
 	private final int KUNDA_BERSERKER = 23225;
 	private final int KUNDA_EXECUTOR = 23226;
-	
 	private static final String KUNDA_GUARDIAN_KILL = "guardian";
 	private static final String KUNDA_BERSERKER_KILL = "berserker";
 	private static final String KUNDA_EXECUTOR_KILL = "executor";

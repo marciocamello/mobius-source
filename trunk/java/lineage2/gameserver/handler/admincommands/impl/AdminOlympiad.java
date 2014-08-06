@@ -14,7 +14,6 @@ package lineage2.gameserver.handler.admincommands.impl;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
@@ -38,25 +37,10 @@ public class AdminOlympiad implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_oly_save.
-		 */
 		admin_oly_save,
-		/**
-		 * Field admin_add_oly_points.
-		 */
 		admin_add_oly_points,
-		/**
-		 * Field admin_oly_start.
-		 */
 		admin_oly_start,
-		/**
-		 * Field admin_add_hero.
-		 */
 		admin_add_hero,
-		/**
-		 * Field admin_oly_stop.
-		 */
 		admin_oly_stop
 	}
 	

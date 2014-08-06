@@ -33,9 +33,6 @@ import lineage2.gameserver.templates.item.ItemTemplate;
  */
 public class RequestEnchantItemAttribute extends L2GameClientPacket
 {
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
 	
 	/**

@@ -25,7 +25,6 @@ public class LoginFail extends L2GameServerPacket
 	public static final int ACCESS_FAILED_TRY_LATER3 = 8;
 	public static final int ACCESS_FAILED_TRY_LATER4 = 9;
 	public static final int ACCESS_FAILED_TRY_LATER5 = 10;
-	
 	private final int _reason;
 	
 	public LoginFail(int reason)

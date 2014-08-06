@@ -22,9 +22,6 @@ import lineage2.gameserver.network.serverpackets.ShowXMasSeal;
  */
 public final class Books extends SimpleItemHandler
 {
-	/**
-	 * Field ITEM_IDS.
-	 */
 	private static final int[] ITEM_IDS = new int[]
 	{
 		5555

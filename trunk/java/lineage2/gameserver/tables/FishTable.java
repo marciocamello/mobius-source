@@ -17,25 +17,16 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.templates.FishTemplate;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 public class FishTable
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(FishTable.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final FishTable _instance = new FishTable();
 	
 	/**
@@ -47,9 +38,6 @@ public class FishTable
 		return _instance;
 	}
 	
-	/**
-	 * Field _fishes.
-	 */
 	private TIntObjectHashMap<List<FishTemplate>> _fishes;
 	
 	/**

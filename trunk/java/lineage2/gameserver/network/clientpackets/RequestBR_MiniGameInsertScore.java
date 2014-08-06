@@ -22,9 +22,6 @@ import lineage2.gameserver.model.Player;
  */
 public class RequestBR_MiniGameInsertScore extends L2GameClientPacket
 {
-	/**
-	 * Field _score.
-	 */
 	private int _score;
 	
 	/**

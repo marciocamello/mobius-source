@@ -26,9 +26,6 @@ public class MinionInstance extends MonsterInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _master.
-	 */
 	private MonsterInstance _master;
 	
 	/**

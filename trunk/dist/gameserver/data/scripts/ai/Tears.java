@@ -15,7 +15,6 @@ package ai;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -95,45 +94,15 @@ public final class Tears extends DefaultAI
 		}
 	}
 	
-	/**
-	 * Field Invincible.
-	 */
 	final Skill Invincible;
-	/**
-	 * Field Freezing.
-	 */
 	final Skill Freezing;
-	/**
-	 * Field Water_Dragon_Scale. (value is 2369)
-	 */
 	private static final int Water_Dragon_Scale = 2369;
-	/**
-	 * Field Tears_Copy. (value is 25535)
-	 */
 	private static final int Tears_Copy = 25535;
-	/**
-	 * Field spawnTask.
-	 */
 	ScheduledFuture<?> spawnTask;
-	/**
-	 * Field despawnTask.
-	 */
 	ScheduledFuture<?> despawnTask;
-	/**
-	 * Field spawns.
-	 */
 	final List<NpcInstance> spawns = new ArrayList<>();
-	/**
-	 * Field _isUsedInvincible.
-	 */
 	private boolean _isUsedInvincible = false;
-	/**
-	 * Field _scale_count.
-	 */
 	private int _scale_count = 0;
-	/**
-	 * Field _last_scale_time.
-	 */
 	private long _last_scale_time = 0;
 	
 	/**

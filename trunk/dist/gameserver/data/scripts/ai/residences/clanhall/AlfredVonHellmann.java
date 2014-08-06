@@ -32,17 +32,8 @@ import ai.residences.SiegeGuardFighter;
  */
 public final class AlfredVonHellmann extends SiegeGuardFighter
 {
-	/**
-	 * Field DAMAGE_SKILL.
-	 */
 	public static final Skill DAMAGE_SKILL = SkillTable.getInstance().getInfo(5000, 1);
-	/**
-	 * Field DRAIN_SKILL.
-	 */
 	public static final Skill DRAIN_SKILL = SkillTable.getInstance().getInfo(5001, 1);
-	/**
-	 * Field ZONE_3.
-	 */
 	private static final Zone ZONE_3 = ReflectionUtils.getZone("lidia_zone3");
 	
 	/**

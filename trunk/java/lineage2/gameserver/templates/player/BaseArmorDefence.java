@@ -18,33 +18,12 @@ package lineage2.gameserver.templates.player;
  */
 public final class BaseArmorDefence
 {
-	/**
-	 * Field _chest.
-	 */
 	private final int _chest;
-	/**
-	 * Field _legs.
-	 */
 	private final int _legs;
-	/**
-	 * Field _helmet.
-	 */
 	private final int _helmet;
-	/**
-	 * Field _boots.
-	 */
 	private final int _boots;
-	/**
-	 * Field _gloves.
-	 */
 	private final int _gloves;
-	/**
-	 * Field _underwear.
-	 */
 	private final int _underwear;
-	/**
-	 * Field _cloak.
-	 */
 	private final int _cloak;
 	
 	/**

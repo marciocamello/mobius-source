@@ -13,7 +13,6 @@
 package ai.residences.clanhall;
 
 import java.util.List;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -42,9 +41,6 @@ public final class RainbowYeti extends CharacterAI
 	 */
 	private static class ZoneDeactive extends RunnableImpl
 	{
-		/**
-		 * Field _zone.
-		 */
 		private final ZoneObject _zone;
 		
 		/**

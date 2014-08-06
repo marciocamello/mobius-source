@@ -15,7 +15,6 @@ package ai;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -43,37 +42,13 @@ import quests._10296_SevenSignsPoweroftheSeal;
  */
 public final class ElcardiaAssistant extends DefaultAI
 {
-	/**
-	 * Field _thinking.
-	 */
 	private boolean _thinking = false;
-	/**
-	 * Field _followTask.
-	 */
 	ScheduledFuture<?> _followTask;
-	/**
-	 * Field _chatTimer.
-	 */
 	private long _chatTimer;
-	/**
-	 * Field vampRage.
-	 */
 	private final Skill vampRage = SkillTable.getInstance().getInfo(6727, 1);
-	/**
-	 * Field holyResist.
-	 */
 	private final Skill holyResist = SkillTable.getInstance().getInfo(6729, 1);
-	/**
-	 * Field blessBlood.
-	 */
 	private final Skill blessBlood = SkillTable.getInstance().getInfo(6725, 1);
-	/**
-	 * Field recharge.
-	 */
 	private final Skill recharge = SkillTable.getInstance().getInfo(6728, 1);
-	/**
-	 * Field heal.
-	 */
 	private final Skill heal = SkillTable.getInstance().getInfo(6724, 1);
 	
 	/**

@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.entity.events.impl;
 
 import java.util.List;
-
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.model.GameObject;

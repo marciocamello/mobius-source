@@ -23,9 +23,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public final class TeleportBookmark extends SimpleItemHandler
 {
-	/**
-	 * Field ITEM_IDS.
-	 */
 	private static final int[] ITEM_IDS = new int[]
 	{
 		13015

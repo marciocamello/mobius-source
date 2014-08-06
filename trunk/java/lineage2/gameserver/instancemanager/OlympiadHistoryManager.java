@@ -16,7 +16,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
-
 import lineage2.gameserver.dao.OlympiadHistoryDAO;
 import lineage2.gameserver.data.StringHolder;
 import lineage2.gameserver.model.Player;
@@ -25,7 +24,6 @@ import lineage2.gameserver.model.entity.olympiad.OlympiadHistory;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.HtmlUtils;
-
 import org.apache.commons.lang3.StringUtils;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
@@ -36,17 +34,8 @@ import org.napile.primitive.maps.impl.CHashIntObjectMap;
  */
 public class OlympiadHistoryManager
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final OlympiadHistoryManager _instance = new OlympiadHistoryManager();
-	/**
-	 * Field _historyNew.
-	 */
 	private final IntObjectMap<List<OlympiadHistory>> _historyNew = new CHashIntObjectMap<>();
-	/**
-	 * Field _historyOld.
-	 */
 	private final IntObjectMap<List<OlympiadHistory>> _historyOld = new CHashIntObjectMap<>();
 	
 	/**

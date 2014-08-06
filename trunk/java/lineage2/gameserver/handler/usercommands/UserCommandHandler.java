@@ -31,9 +31,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class UserCommandHandler extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final UserCommandHandler _instance = new UserCommandHandler();
 	
 	/**
@@ -45,9 +42,6 @@ public class UserCommandHandler extends AbstractHolder
 		return _instance;
 	}
 	
-	/**
-	 * Field _datatable.
-	 */
 	private final TIntObjectHashMap<IUserCommandHandler> _datatable = new TIntObjectHashMap<>();
 	
 	/**

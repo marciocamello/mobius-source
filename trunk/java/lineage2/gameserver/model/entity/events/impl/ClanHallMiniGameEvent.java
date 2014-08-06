@@ -15,7 +15,6 @@ package lineage2.gameserver.model.entity.events.impl;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import lineage2.commons.collections.CollectionUtils;
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.gameserver.dao.SiegeClanDAO;
@@ -37,17 +36,8 @@ import lineage2.gameserver.tables.ClanTable;
  */
 public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObject>
 {
-	/**
-	 * Field NEXT_STEP. (value is ""next_step"")
-	 */
 	public static final String NEXT_STEP = "next_step";
-	/**
-	 * Field REFUND. (value is ""refund"")
-	 */
 	public static final String REFUND = "refund";
-	/**
-	 * Field _arenaClosed.
-	 */
 	private boolean _arenaClosed = true;
 	
 	/**

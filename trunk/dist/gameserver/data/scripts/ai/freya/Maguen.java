@@ -13,7 +13,6 @@
 package ai.freya;
 
 import java.util.List;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -33,18 +32,12 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class Maguen extends Fighter
 {
-	/**
-	 * Field maguenStatsSkills.
-	 */
 	private static final int[] maguenStatsSkills =
 	{
 		6343,
 		6365,
 		6366
 	};
-	/**
-	 * Field maguenRaceSkills.
-	 */
 	private static final int[] maguenRaceSkills =
 	{
 		6367,

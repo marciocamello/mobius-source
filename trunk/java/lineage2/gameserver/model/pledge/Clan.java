@@ -21,7 +21,6 @@ import java.util.Collection;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
-
 import lineage2.commons.collections.JoinedIterator;
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
@@ -52,7 +51,6 @@ import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Log;
-
 import org.apache.commons.lang3.StringUtils;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CTreeIntObjectMap;
@@ -65,277 +63,73 @@ import org.slf4j.LoggerFactory;
  */
 public class Clan implements Iterable<UnitMember>
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Clan.class);
-	/**
-	 * Field _clanId.
-	 */
 	private final int _clanId;
-	/**
-	 * Field _allyId.
-	 */
 	private int _allyId;
-	/**
-	 * Field _level.
-	 */
 	private int _level;
-	/**
-	 * Field _unionType.
-	 */
 	private int _unionType;
-	/**
-	 * Field _hasCastle.
-	 */
 	private int _hasCastle;
-	/**
-	 * Field _hasFortress.
-	 */
 	private int _hasFortress;
-	/**
-	 * Field _hasHideout.
-	 */
 	private int _hasHideout;
-	/**
-	 * Field _warDominion.
-	 */
 	private int _warDominion;
-	/**
-	 * Field _crestId.
-	 */
 	private int _crestId;
-	/**
-	 * Field _crestLargeId.
-	 */
 	private int _crestLargeId;
-	/**
-	 * Field _expelledMemberTime.
-	 */
 	private long _expelledMemberTime;
-	/**
-	 * Field _leavedAllyTime.
-	 */
 	private long _leavedAllyTime;
-	/**
-	 * Field _dissolvedAllyTime.
-	 */
 	private long _dissolvedAllyTime;
-	/**
-	 * Field _airship.
-	 */
 	private ClanAirShip _airship;
-	/**
-	 * Field _airshipLicense.
-	 */
 	private boolean _airshipLicense;
-	/**
-	 * Field _airshipFuel.
-	 */
 	private int _airshipFuel;
-	/**
-	 * Field EXPELLED_MEMBER_PENALTY.
-	 */
 	public static final long EXPELLED_MEMBER_PENALTY = 24 * 60 * 60 * 1000L;
-	/**
-	 * Field LEAVED_ALLY_PENALTY.
-	 */
 	public static final long LEAVED_ALLY_PENALTY = 24 * 60 * 60 * 1000L;
-	/**
-	 * Field DISSOLVED_ALLY_PENALTY.
-	 */
 	public static final long DISSOLVED_ALLY_PENALTY = 24 * 60 * 60 * 1000L;
-	/**
-	 * Field _warehouse.
-	 */
 	private final ClanWarehouse _warehouse;
-	/**
-	 * Field _whBonus.
-	 */
 	private int _whBonus = -1;
-	/**
-	 * Field _notice.
-	 */
 	private String _notice = null;
-	/**
-	 * Field _atWarWith.
-	 */
 	private final List<Clan> _atWarWith = new ArrayList<>();
-	/**
-	 * Field _underAttackFrom.
-	 */
 	private final List<Clan> _underAttackFrom = new ArrayList<>();
-	/**
-	 * Field _skills.
-	 */
 	protected final IntObjectMap<Skill> _skills = new CTreeIntObjectMap<>();
-	/**
-	 * Field _privs.
-	 */
 	protected final IntObjectMap<RankPrivs> _privs = new CTreeIntObjectMap<>();
-	/**
-	 * Field _subUnits.
-	 */
 	protected final IntObjectMap<SubUnit> _subUnits = new CTreeIntObjectMap<>();
-	/**
-	 * Field _clanLeaderSkill.
-	 */
 	static Skill _clanLeaderSkill = SkillTable.getInstance().getInfo(19009, 1);
-	/**
-	 * Field _reputation.
-	 */
 	private int _reputation = 0;
-	/**
-	 * Field CP_NOTHING. (value is 0)
-	 */
 	public static final int CP_NOTHING = 0;
-	/**
-	 * Field CP_CL_INVITE_CLAN. (value is 2)
-	 */
 	public static final int CP_CL_INVITE_CLAN = 2;
-	/**
-	 * Field CP_CL_MANAGE_TITLES. (value is 4)
-	 */
 	public static final int CP_CL_MANAGE_TITLES = 4;
-	/**
-	 * Field CP_CL_WAREHOUSE_SEARCH. (value is 8)
-	 */
 	public static final int CP_CL_WAREHOUSE_SEARCH = 8;
-	/**
-	 * Field CP_CL_MANAGE_RANKS. (value is 16)
-	 */
 	public static final int CP_CL_MANAGE_RANKS = 16;
-	/**
-	 * Field CP_CL_CLAN_WAR. (value is 32)
-	 */
 	public static final int CP_CL_CLAN_WAR = 32;
-	/**
-	 * Field CP_CL_DISMISS. (value is 64)
-	 */
 	public static final int CP_CL_DISMISS = 64;
-	/**
-	 * Field CP_CL_EDIT_CREST. (value is 128)
-	 */
 	public static final int CP_CL_EDIT_CREST = 128;
-	/**
-	 * Field CP_CL_APPRENTICE. (value is 256)
-	 */
 	public static final int CP_CL_APPRENTICE = 256;
-	/**
-	 * Field CP_CL_TROOPS_FAME. (value is 512)
-	 */
 	public static final int CP_CL_TROOPS_FAME = 512;
-	/**
-	 * Field CP_CL_SUMMON_AIRSHIP. (value is 1024)
-	 */
 	public static final int CP_CL_SUMMON_AIRSHIP = 1024;
-	/**
-	 * Field CP_CH_ENTRY_EXIT. (value is 2048)
-	 */
 	public static final int CP_CH_ENTRY_EXIT = 2048;
-	/**
-	 * Field CP_CH_USE_FUNCTIONS. (value is 4096)
-	 */
 	public static final int CP_CH_USE_FUNCTIONS = 4096;
-	/**
-	 * Field CP_CH_AUCTION. (value is 8192)
-	 */
 	public static final int CP_CH_AUCTION = 8192;
-	/**
-	 * Field CP_CH_DISMISS. (value is 16384)
-	 */
 	public static final int CP_CH_DISMISS = 16384;
-	/**
-	 * Field CP_CH_SET_FUNCTIONS. (value is 32768)
-	 */
 	public static final int CP_CH_SET_FUNCTIONS = 32768;
-	/**
-	 * Field CP_CS_ENTRY_EXIT. (value is 65536)
-	 */
 	public static final int CP_CS_ENTRY_EXIT = 65536;
-	/**
-	 * Field CP_CS_MANOR_ADMIN. (value is 131072)
-	 */
 	public static final int CP_CS_MANOR_ADMIN = 131072;
-	/**
-	 * Field CP_CS_MANAGE_SIEGE. (value is 262144)
-	 */
 	public static final int CP_CS_MANAGE_SIEGE = 262144;
-	/**
-	 * Field CP_CS_USE_FUNCTIONS. (value is 524288)
-	 */
 	public static final int CP_CS_USE_FUNCTIONS = 524288;
-	/**
-	 * Field CP_CS_DISMISS. (value is 1048576)
-	 */
 	public static final int CP_CS_DISMISS = 1048576;
-	/**
-	 * Field CP_CS_TAXES. (value is 2097152)
-	 */
 	public static final int CP_CS_TAXES = 2097152;
-	/**
-	 * Field CP_CS_MERCENARIES. (value is 4194304)
-	 */
 	public static final int CP_CS_MERCENARIES = 4194304;
-	/**
-	 * Field CP_CS_SET_FUNCTIONS. (value is 8388606)
-	 */
 	public static final int CP_CS_SET_FUNCTIONS = 8388606;
-	/**
-	 * Field CP_ALL. (value is 16777214)
-	 */
 	public static final int CP_ALL = 16777214;
-	/**
-	 * Field RANK_FIRST. (value is 1)
-	 */
 	public static final int RANK_FIRST = 1;
-	/**
-	 * Field RANK_LAST. (value is 9)
-	 */
 	public static final int RANK_LAST = 9;
-	/**
-	 * Field SUBUNIT_NONE.
-	 */
 	public static final int SUBUNIT_NONE = Byte.MIN_VALUE;
-	/**
-	 * Field SUBUNIT_ACADEMY. (value is -1)
-	 */
 	public static final int SUBUNIT_ACADEMY = -1;
-	/**
-	 * Field SUBUNIT_MAIN_CLAN. (value is 0)
-	 */
 	public static final int SUBUNIT_MAIN_CLAN = 0;
-	/**
-	 * Field SUBUNIT_ROYAL1. (value is 100)
-	 */
 	public static final int SUBUNIT_ROYAL1 = 100;
-	/**
-	 * Field SUBUNIT_ROYAL2. (value is 200)
-	 */
 	public static final int SUBUNIT_ROYAL2 = 200;
-	/**
-	 * Field SUBUNIT_KNIGHT1. (value is 1001)
-	 */
 	public static final int SUBUNIT_KNIGHT1 = 1001;
-	/**
-	 * Field SUBUNIT_KNIGHT2. (value is 1002)
-	 */
 	public static final int SUBUNIT_KNIGHT2 = 1002;
-	/**
-	 * Field SUBUNIT_KNIGHT3. (value is 2001)
-	 */
 	public static final int SUBUNIT_KNIGHT3 = 2001;
-	/**
-	 * Field SUBUNIT_KNIGHT4. (value is 2002)
-	 */
 	public static final int SUBUNIT_KNIGHT4 = 2002;
-	/**
-	 * Field REPUTATION_COMPARATOR.
-	 */
 	private final static ClanReputationComparator REPUTATION_COMPARATOR = new ClanReputationComparator();
-	/**
-	 * Field REPUTATION_PLACES. (value is 100)
-	 */
 	private final static int REPUTATION_PLACES = 100;
 	
 	/**

@@ -27,17 +27,8 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public class RequestChangeAttributeItem extends L2GameClientPacket
 {
-	/**
-	 * Field _consumeItemId.
-	 */
 	public int _consumeItemId;
-	/**
-	 * Field _itemObjId.
-	 */
 	public int _itemObjId;
-	/**
-	 * Field _newElementId.
-	 */
 	public int _newElementId;
 	
 	/**

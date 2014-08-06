@@ -17,7 +17,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.List;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Effect;
@@ -29,7 +28,6 @@ import lineage2.gameserver.skills.effects.EffectTemplate;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.SqlBatch;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,13 +37,7 @@ import org.slf4j.LoggerFactory;
  */
 public class EffectsDAO
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(EffectsDAO.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final EffectsDAO _instance = new EffectsDAO();
 	
 	/**

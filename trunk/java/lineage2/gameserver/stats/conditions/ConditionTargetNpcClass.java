@@ -23,9 +23,6 @@ import lineage2.gameserver.stats.Env;
 @SuppressWarnings("unchecked")
 public class ConditionTargetNpcClass extends Condition
 {
-	/**
-	 * Field _npcClass.
-	 */
 	private final Class<NpcInstance> _npcClass;
 	
 	/**

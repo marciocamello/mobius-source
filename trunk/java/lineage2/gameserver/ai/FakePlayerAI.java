@@ -13,7 +13,6 @@
 package lineage2.gameserver.ai;
 
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.geodata.GeoEngine;
@@ -27,21 +26,9 @@ import lineage2.gameserver.model.Player;
  */
 public class FakePlayerAI extends CharacterAI
 {
-	/**
-	 * Field thinking.
-	 */
 	private volatile int thinking = 0;
-	/**
-	 * Field _intention_arg0.
-	 */
 	Object _intention_arg0 = null;
-	/**
-	 * Field _intention_arg1.
-	 */
 	Object _intention_arg1 = null;
-	/**
-	 * Field _followTask.
-	 */
 	ScheduledFuture<?> _followTask;
 	
 	/**

@@ -25,9 +25,6 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public final class HeroItems extends Functions
 {
-	/**
-	 * Field HERO_ITEMS.
-	 */
 	private static final String[][] HERO_ITEMS =
 	{
 		{

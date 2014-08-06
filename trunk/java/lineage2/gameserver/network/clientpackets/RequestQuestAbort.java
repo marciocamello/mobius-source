@@ -23,9 +23,6 @@ import lineage2.gameserver.model.quest.QuestState;
  */
 public class RequestQuestAbort extends L2GameClientPacket
 {
-	/**
-	 * Field _questID.
-	 */
 	private int _questID;
 	
 	/**

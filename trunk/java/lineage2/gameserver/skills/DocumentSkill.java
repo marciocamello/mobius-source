@@ -20,14 +20,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Skill.SkillType;
 import lineage2.gameserver.model.base.EnchantSkillLearn;
 import lineage2.gameserver.stats.conditions.Condition;
 import lineage2.gameserver.tables.SkillTreeTable;
 import lineage2.gameserver.templates.StatsSet;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -40,9 +38,6 @@ import org.w3c.dom.Node;
  */
 public final class DocumentSkill extends DocumentBase
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(DocumentSkill.class);
 	
 	/**
@@ -50,43 +45,16 @@ public final class DocumentSkill extends DocumentBase
 	 */
 	public class Skill
 	{
-		/**
-		 * Field id.
-		 */
 		public int id;
-		/**
-		 * Field name.
-		 */
 		public String name;
-		/**
-		 * Field sets.
-		 */
 		public StatsSet[] sets;
-		/**
-		 * Field currentLevel.
-		 */
 		public int currentLevel;
-		/**
-		 * Field skills.
-		 */
 		public final List<lineage2.gameserver.model.Skill> skills = new ArrayList<>();
-		/**
-		 * Field currentSkills.
-		 */
 		public List<lineage2.gameserver.model.Skill> currentSkills = new ArrayList<>();
 	}
 	
-	/**
-	 * Field currentSkill.
-	 */
 	private Skill currentSkill;
-	/**
-	 * Field usedTables.
-	 */
 	private final Set<String> usedTables = new HashSet<>();
-	/**
-	 * Field skillsInFile.
-	 */
 	private final List<lineage2.gameserver.model.Skill> skillsInFile = new LinkedList<>();
 	
 	/**

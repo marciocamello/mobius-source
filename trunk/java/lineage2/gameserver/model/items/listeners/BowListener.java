@@ -25,9 +25,6 @@ import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
  */
 public final class BowListener implements OnEquipListener
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final BowListener _instance = new BowListener();
 	
 	/**

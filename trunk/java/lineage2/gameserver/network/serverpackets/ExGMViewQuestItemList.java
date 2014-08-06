@@ -24,7 +24,6 @@ public class ExGMViewQuestItemList extends L2GameServerPacket
 {
 	private final int _size;
 	private final ItemInstance[] _items;
-	
 	private final int _limit;
 	private final String _name;
 	

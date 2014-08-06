@@ -25,9 +25,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class RequestShowBoard extends L2GameClientPacket
 {
-	/**
-	 * Field _unknown.
-	 */
 	@SuppressWarnings("unused")
 	private int _unknown;
 	

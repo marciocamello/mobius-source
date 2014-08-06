@@ -20,9 +20,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionLogicNot extends Condition
 {
-	/**
-	 * Field _condition.
-	 */
 	private final Condition _condition;
 	
 	/**

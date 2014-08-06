@@ -17,7 +17,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -26,9 +25,6 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public interface IItemHandler
 {
-	/**
-	 * Field NULL.
-	 */
 	public static final IItemHandler NULL = new IItemHandler()
 	{
 		@Override

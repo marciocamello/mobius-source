@@ -31,7 +31,6 @@ public class EtcStatusUpdate extends L2GameServerPacket
 	 * <p/>
 	 * NOTE: End of buff: You must send empty packet F9 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 to remove the statusbar or just empty value to remove some icon.
 	 */
-	
 	private final int IncreasedForce, WeightPenalty, MessageRefusal, DangerArea;
 	private final int armorExpertisePenalty, weaponExpertisePenalty, CharmOfCourage, DeathPenaltyLevel, ConsumedSouls;
 	

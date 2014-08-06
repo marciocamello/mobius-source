@@ -36,15 +36,9 @@ public class AdminMonsterRace implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_mons.
-		 */
 		admin_mons
 	}
 	
-	/**
-	 * Field state.
-	 */
 	protected static int state = -1;
 	
 	/**
@@ -131,13 +125,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 	 */
 	class RunRace extends RunnableImpl
 	{
-		/**
-		 * Field codes.
-		 */
 		private final int[][] codes;
-		/**
-		 * Field activeChar.
-		 */
 		private final Player activeChar;
 		
 		/**
@@ -168,9 +156,6 @@ public class AdminMonsterRace implements IAdminCommandHandler
 	 */
 	class RunEnd extends RunnableImpl
 	{
-		/**
-		 * Field activeChar.
-		 */
 		private final Player activeChar;
 		
 		/**

@@ -20,11 +20,9 @@ import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.CRC32;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.World;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,17 +32,8 @@ import org.slf4j.LoggerFactory;
  */
 public class GeoOptimizer
 {
-	/**
-	 * Field log.
-	 */
 	static final Logger log = LoggerFactory.getLogger(GeoOptimizer.class);
-	/**
-	 * Field checkSums.
-	 */
 	public static int[][][] checkSums;
-	/**
-	 * Field version. (value is 1)
-	 */
 	private static final byte version = 1;
 	
 	/**
@@ -52,25 +41,7 @@ public class GeoOptimizer
 	 */
 	public static class GeoBlocksMatchFinder extends RunnableImpl
 	{
-		/**
-		 * Field maxScanRegions.
-		 */
-		/**
-		 * Field ry.
-		 */
-		/**
-		 * Field rx.
-		 */
-		/**
-		 * Field geoY.
-		 */
-		/**
-		 * Field geoX.
-		 */
 		private final int geoX, geoY, rx, ry, maxScanRegions;
-		/**
-		 * Field fileName.
-		 */
 		private final String fileName;
 		
 		/**
@@ -234,26 +205,8 @@ public class GeoOptimizer
 	 */
 	public static class CheckSumLoader extends RunnableImpl
 	{
-		/**
-		 * Field ry.
-		 */
-		/**
-		 * Field rx.
-		 */
-		/**
-		 * Field geoY.
-		 */
-		/**
-		 * Field geoX.
-		 */
 		private final int geoX, geoY, rx, ry;
-		/**
-		 * Field region.
-		 */
 		private final byte[][][] region;
-		/**
-		 * Field fileName.
-		 */
 		private final String fileName;
 		
 		/**
@@ -382,19 +335,7 @@ public class GeoOptimizer
 	 */
 	public static class BlockLink
 	{
-		/**
-		 * Field linkBlockIndex.
-		 */
-		/**
-		 * Field blockIndex.
-		 */
 		public final int blockIndex, linkBlockIndex;
-		/**
-		 * Field linkMapY.
-		 */
-		/**
-		 * Field linkMapX.
-		 */
 		public final byte linkMapX, linkMapY;
 		
 		/**

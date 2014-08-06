@@ -23,9 +23,6 @@ import lineage2.gameserver.network.serverpackets.ExChangeNicknameNColor;
  */
 public final class NameColor extends SimpleItemHandler
 {
-	/**
-	 * Field ITEM_IDS.
-	 */
 	private static final int[] ITEM_IDS = new int[]
 	{
 		13021,

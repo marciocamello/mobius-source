@@ -13,7 +13,6 @@
 package lineage2.gameserver.templates.mapregion;
 
 import java.util.List;
-
 import lineage2.gameserver.utils.Location;
 
 /**
@@ -22,25 +21,10 @@ import lineage2.gameserver.utils.Location;
  */
 public class RestartPoint
 {
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
-	/**
-	 * Field _bbs.
-	 */
 	private final int _bbs;
-	/**
-	 * Field _msgId.
-	 */
 	private final int _msgId;
-	/**
-	 * Field _restartPoints.
-	 */
 	private final List<Location> _restartPoints;
-	/**
-	 * Field _PKrestartPoints.
-	 */
 	private final List<Location> _PKrestartPoints;
 	
 	/**

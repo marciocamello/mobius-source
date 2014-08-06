@@ -18,37 +18,13 @@ package lineage2.commons.dao;
  */
 public enum JdbcEntityState
 {
-	/**
-	 * Field CREATED.
-	 */
 	CREATED(true, false, false, false),
-	/**
-	 * Field STORED.
-	 */
 	STORED(false, true, false, true),
-	/**
-	 * Field UPDATED.
-	 */
 	UPDATED(false, true, true, true),
-	/**
-	 * Field DELETED.
-	 */
 	DELETED(false, false, false, false);
-	/**
-	 * Field savable.
-	 */
 	private final boolean savable;
-	/**
-	 * Field deletable.
-	 */
 	private final boolean deletable;
-	/**
-	 * Field updatable.
-	 */
 	private final boolean updatable;
-	/**
-	 * Field persisted.
-	 */
 	private final boolean persisted;
 	
 	/**

@@ -18,9 +18,6 @@ package lineage2.gameserver.network.clientpackets;
  */
 public class MoveWithDelta extends L2GameClientPacket
 {
-	/**
-	 * Field _dz. Field _dy. Field _dx.
-	 */
 	@SuppressWarnings("unused")
 	private int _dx, _dy, _dz;
 	

@@ -43,5 +43,4 @@ public class ExBR_BuffEventState extends L2GameServerPacket
 		writeD(_state);
 		writeD(_endtime);
 	}
-	
 }

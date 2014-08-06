@@ -19,9 +19,6 @@ package lineage2.commons.lang.reference;
  */
 public class AbstractHardReference<T> implements HardReference<T>
 {
-	/**
-	 * Field reference.
-	 */
 	private T reference;
 	
 	/**

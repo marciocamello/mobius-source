@@ -21,9 +21,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionPlayerMaxPK extends Condition
 {
-	/**
-	 * Field _pk.
-	 */
 	private final int _pk;
 	
 	/**

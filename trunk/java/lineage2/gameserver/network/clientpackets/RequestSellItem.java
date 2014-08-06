@@ -21,7 +21,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExBuySellList;
 import lineage2.gameserver.utils.Log;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -30,22 +29,10 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public class RequestSellItem extends L2GameClientPacket
 {
-	/**
-	 * Field _listId.
-	 */
 	@SuppressWarnings("unused")
 	private int _listId;
-	/**
-	 * Field _count.
-	 */
 	private int _count;
-	/**
-	 * Field _items.
-	 */
 	private int[] _items;
-	/**
-	 * Field _itemQ.
-	 */
 	private long[] _itemQ;
 	
 	/**

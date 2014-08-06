@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
@@ -32,7 +31,6 @@ import lineage2.gameserver.model.reward.RewardData;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.npc.NpcTemplate;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,113 +40,32 @@ import org.slf4j.LoggerFactory;
  */
 public class LettersCollection extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(LettersCollection.class);
-	/**
-	 * Field _active.
-	 */
 	protected static boolean _active;
-	/**
-	 * Field _name.
-	 */
 	protected static String _name;
-	/**
-	 * Field letters.
-	 */
 	protected static int[][] letters;
-	/**
-	 * Field EVENT_MANAGERS.
-	 */
 	protected static int[][] EVENT_MANAGERS = null;
-	/**
-	 * Field _msgStarted.
-	 */
 	protected static String _msgStarted;
-	/**
-	 * Field _msgEnded.
-	 */
 	protected static String _msgEnded;
-	/**
-	 * Field A.
-	 */
 	protected static final int A = 3875;
-	/**
-	 * Field C.
-	 */
 	protected static final int C = 3876;
-	/**
-	 * Field E.
-	 */
 	protected static final int E = 3877;
-	/**
-	 * Field F.
-	 */
 	protected static final int F = 3878;
-	/**
-	 * Field G.
-	 */
 	protected static final int G = 3879;
-	/**
-	 * Field H.
-	 */
 	protected static final int H = 3880;
-	/**
-	 * Field I.
-	 */
 	protected static final int I = 3881;
-	/**
-	 * Field L.
-	 */
 	protected static final int L = 3882;
-	/**
-	 * Field N.
-	 */
 	protected static final int N = 3883;
-	/**
-	 * Field O.
-	 */
 	protected static final int O = 3884;
-	/**
-	 * Field R.
-	 */
 	protected static final int R = 3885;
-	/**
-	 * Field S.
-	 */
 	protected static final int S = 3886;
-	/**
-	 * Field T.
-	 */
 	protected static final int T = 3887;
-	/**
-	 * Field II.
-	 */
 	protected static final int II = 3888;
-	/**
-	 * Field Y.
-	 */
 	protected static final int Y = 13417;
-	/**
-	 * Field _5.
-	 */
 	protected static final int _5 = 13418;
-	/**
-	 * Field EVENT_MANAGER_ID.
-	 */
 	protected static final int EVENT_MANAGER_ID = 31230;
-	/**
-	 * Field _words.
-	 */
 	protected static final Map<String, Integer[][]> _words = new HashMap<>();
-	/**
-	 * Field _rewards.
-	 */
 	protected static final Map<String, RewardData[]> _rewards = new HashMap<>();
-	/**
-	 * Field _spawns.
-	 */
 	protected static final List<SimpleSpawner> _spawns = new ArrayList<>();
 	
 	/**

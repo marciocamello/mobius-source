@@ -26,9 +26,6 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class PrisonGuard extends Fighter
 {
-	/**
-	 * Field RACE_STAMP. (value is 10013)
-	 */
 	private static final int RACE_STAMP = 10013;
 	
 	/**

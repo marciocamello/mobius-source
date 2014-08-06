@@ -31,13 +31,7 @@ public final class OrfenInstance extends BossInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field nest.
-	 */
 	public static final Location nest = new Location(43728, 17220, -4342);
-	/**
-	 * Field locs.
-	 */
 	public static final Location[] locs = new Location[]
 	{
 		new Location(55024, 17368, -5412),

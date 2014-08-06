@@ -14,7 +14,6 @@ package npc.model.events;
 
 import java.util.List;
 import java.util.StringTokenizer;
-
 import lineage2.gameserver.data.xml.holder.EventHolder;
 import lineage2.gameserver.instancemanager.games.HandysBlockCheckerManager;
 import lineage2.gameserver.model.Player;

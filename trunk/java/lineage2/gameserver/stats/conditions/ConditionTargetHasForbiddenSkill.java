@@ -21,9 +21,6 @@ import lineage2.gameserver.stats.Env;
  */
 public final class ConditionTargetHasForbiddenSkill extends Condition
 {
-	/**
-	 * Field _skillId.
-	 */
 	private final int _skillId;
 	
 	/**

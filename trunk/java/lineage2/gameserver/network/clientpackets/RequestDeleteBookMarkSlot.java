@@ -21,9 +21,6 @@ import lineage2.gameserver.network.serverpackets.ExGetBookMarkInfo;
  */
 public class RequestDeleteBookMarkSlot extends L2GameClientPacket
 {
-	/**
-	 * Field slot.
-	 */
 	private int slot;
 	
 	/**

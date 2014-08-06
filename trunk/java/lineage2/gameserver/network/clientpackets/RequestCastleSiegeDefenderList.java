@@ -23,9 +23,6 @@ import lineage2.gameserver.network.serverpackets.CastleSiegeDefenderList;
  */
 public class RequestCastleSiegeDefenderList extends L2GameClientPacket
 {
-	/**
-	 * Field _unitId.
-	 */
 	private int _unitId;
 	
 	/**

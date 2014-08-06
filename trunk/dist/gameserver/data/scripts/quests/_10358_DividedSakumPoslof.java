@@ -20,14 +20,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 //By Evil_dnk
 public class _10358_DividedSakumPoslof extends Quest implements ScriptFile
 {
-	
 	private static final int guild = 31795;
 	private static final int lef = 33510;
-	
 	private static final int vilan = 20402;
 	private static final int zombi = 20458;
 	private static final int poslov = 27452;
-	
 	private static final String vilan_item = "vilan";
 	private static final String zombi_item = "zombi";
 	private int killedposlov;

@@ -21,73 +21,22 @@ import java.util.Calendar;
  */
 public class ProductItem
 {
-	/**
-	 * Field NOT_LIMITED_START_TIME. (value is 315547200000)
-	 */
 	public static final long NOT_LIMITED_START_TIME = 315558000000L;
-	/**
-	 * Field NOT_LIMITED_END_TIME. (value is 2127445200000)
-	 */
 	public static final long NOT_LIMITED_END_TIME = 2127452400000L;
-	/**
-	 * Field NOT_LIMITED_START_HOUR. (value is 0)
-	 */
 	public static final int NOT_LIMITED_START_HOUR = 0;
-	/**
-	 * Field NOT_LIMITED_END_HOUR. (value is 23)
-	 */
 	public static final int NOT_LIMITED_END_HOUR = 23;
-	/**
-	 * Field NOT_LIMITED_START_MIN. (value is 0)
-	 */
 	public static final int NOT_LIMITED_START_MIN = 0;
-	/**
-	 * Field NOT_LIMITED_END_MIN. (value is 59)
-	 */
 	public static final int NOT_LIMITED_END_MIN = 59;
-	/**
-	 * Field _productId.
-	 */
 	private final int _productId;
-	/**
-	 * Field _category.
-	 */
 	private final int _category;
-	/**
-	 * Field _points.
-	 */
 	private final int _points;
-	/**
-	 * Field _tabId.
-	 */
 	private final int _tabId;
-	/**
-	 * Field _startTimeSale.
-	 */
 	private final long _startTimeSale;
-	/**
-	 * Field _endTimeSale.
-	 */
 	private final long _endTimeSale;
-	/**
-	 * Field _startHour.
-	 */
 	private final int _startHour;
-	/**
-	 * Field _endHour.
-	 */
 	private final int _endHour;
-	/**
-	 * Field _startMin.
-	 */
 	private final int _startMin;
-	/**
-	 * Field _endMin.
-	 */
 	private final int _endMin;
-	/**
-	 * Field _components.
-	 */
 	private ArrayList<ProductItemComponent> _components;
 	
 	/**

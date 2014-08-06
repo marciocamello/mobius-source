@@ -14,7 +14,6 @@ package lineage2.gameserver.model.actor.instances.player;
 
 import java.util.Collections;
 import java.util.Map;
-
 import lineage2.gameserver.dao.CharacterFriendDAO;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
@@ -22,7 +21,6 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.L2Friend;
 import lineage2.gameserver.network.serverpackets.L2FriendStatus;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -31,13 +29,7 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class FriendList
 {
-	/**
-	 * Field _friendList.
-	 */
 	private Map<Integer, Friend> _friendList = Collections.emptyMap();
-	/**
-	 * Field _owner.
-	 */
 	private final Player _owner;
 	
 	/**

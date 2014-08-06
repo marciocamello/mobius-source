@@ -14,7 +14,6 @@ package lineage2.gameserver.templates.spawn;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.utils.Location;
 
 /**
@@ -28,25 +27,10 @@ public class WalkerRouteTemplate
 	 */
 	public enum RouteType
 	{
-		/**
-		 * Field CYCLE.
-		 */
 		CYCLE(0),
-		/**
-		 * Field LINEAR.
-		 */
 		LINEAR(1),
-		/**
-		 * Field RANDOM.
-		 */
 		RANDOM(2),
-		/**
-		 * Field TELEPORT.
-		 */
 		TELEPORT(3);
-		/**
-		 * Field _id.
-		 */
 		int _id;
 		
 		/**
@@ -64,30 +48,9 @@ public class WalkerRouteTemplate
 	 */
 	public class Route
 	{
-		/**
-		 * Field _h.
-		 */
-		/**
-		 * Field _z.
-		 */
-		/**
-		 * Field _y.
-		 */
-		/**
-		 * Field _x.
-		 */
 		private final int _x, _y, _z, _h;
-		/**
-		 * Field _delay.
-		 */
 		private final long _delay;
-		/**
-		 * Field _loc.
-		 */
 		private Location _loc;
-		/**
-		 * Field _end.
-		 */
 		private boolean _end = false;
 		
 		/**
@@ -199,29 +162,11 @@ public class WalkerRouteTemplate
 		}
 	}
 	
-	/**
-	 * Field _npcId.
-	 */
 	private final int _npcId;
-	/**
-	 * Field _walkRange.
-	 */
 	private final int _walkRange;
-	/**
-	 * Field _delay.
-	 */
 	private final long _delay;
-	/**
-	 * Field _type.
-	 */
 	private final RouteType _type;
-	/**
-	 * Field _routes.
-	 */
 	private final List<Route> _routes = new ArrayList<>();
-	/**
-	 * Field _isRunning.
-	 */
 	private boolean _isRunning = false;
 	
 	/**

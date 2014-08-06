@@ -13,7 +13,6 @@
 package lineage2.gameserver.utils;
 
 import org.apache.commons.lang3.StringUtils;
-
 import gnu.trove.iterator.TIntLongIterator;
 import gnu.trove.map.hash.TIntLongHashMap;
 
@@ -23,33 +22,12 @@ import gnu.trove.map.hash.TIntLongHashMap;
  */
 public class AntiFlood
 {
-	/**
-	 * Field _recentReceivers.
-	 */
 	private final TIntLongHashMap _recentReceivers = new TIntLongHashMap();
-	/**
-	 * Field _lastSent.
-	 */
 	private long _lastSent = 0L;
-	/**
-	 * Field _lastText.
-	 */
 	private String _lastText = StringUtils.EMPTY;
-	/**
-	 * Field _lastHeroTime.
-	 */
 	private long _lastHeroTime;
-	/**
-	 * Field _lastTradeTime.
-	 */
 	private long _lastTradeTime;
-	/**
-	 * Field _lastShoutTime.
-	 */
 	private long _lastShoutTime;
-	/**
-	 * Field _lastMailTime.
-	 */
 	private long _lastMailTime;
 	
 	/**

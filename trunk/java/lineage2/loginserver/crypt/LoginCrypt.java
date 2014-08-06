@@ -13,7 +13,6 @@
 package lineage2.loginserver.crypt;
 
 import java.io.IOException;
-
 import lineage2.commons.util.Rnd;
 
 /**
@@ -22,9 +21,6 @@ import lineage2.commons.util.Rnd;
  */
 public class LoginCrypt
 {
-	/**
-	 * Field STATIC_BLOWFISH_KEY.
-	 */
 	private static final byte[] STATIC_BLOWFISH_KEY =
 	{
 		(byte) 0x6b,
@@ -44,17 +40,8 @@ public class LoginCrypt
 		(byte) 0x6c,
 		(byte) 0x6c
 	};
-	/**
-	 * Field _staticCrypt.
-	 */
 	private NewCrypt _staticCrypt;
-	/**
-	 * Field _crypt.
-	 */
 	private NewCrypt _crypt;
-	/**
-	 * Field _static.
-	 */
 	private boolean _static = true;
 	
 	/**

@@ -14,11 +14,9 @@ package lineage2.commons.data.xml;
 
 import java.io.File;
 import java.io.InputStream;
-
 import lineage2.commons.data.xml.helpers.ErrorHandlerImpl;
 import lineage2.commons.data.xml.helpers.SimpleDTDEntityResolver;
 import lineage2.commons.logging.LoggerObject;
-
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
@@ -29,18 +27,8 @@ import org.dom4j.io.SAXReader;
  */
 public abstract class AbstractParser<H extends AbstractHolder> extends LoggerObject
 {
-	/**
-	 * Field _holder.
-	 */
 	protected final H _holder;
-	
-	/**
-	 * Field _currentFile.
-	 */
 	protected String _currentFile;
-	/**
-	 * Field _reader.
-	 */
 	protected SAXReader _reader;
 	
 	/**
@@ -73,9 +61,7 @@ public abstract class AbstractParser<H extends AbstractHolder> extends LoggerObj
 	protected void parseDocument(InputStream f, String name) throws Exception
 	{
 		_currentFile = name;
-		
 		org.dom4j.Document document = _reader.read(f);
-		
 		readData(document.getRootElement());
 	}
 	

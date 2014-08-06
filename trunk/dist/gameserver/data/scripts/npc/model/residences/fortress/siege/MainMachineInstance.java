@@ -34,9 +34,6 @@ public final class MainMachineInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _powerUnits.
-	 */
 	private int _powerUnits = 3;
 	
 	/**

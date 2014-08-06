@@ -34,49 +34,16 @@ import lineage2.gameserver.utils.SecondaryPasswordAuth;
  */
 public class PlayerAuthResponse extends ReceivablePacket
 {
-	/**
-	 * Field account.
-	 */
 	private String account;
-	/**
-	 * Field authed.
-	 */
 	private boolean authed;
-	/**
-	 * Field playOkId1.
-	 */
 	private int playOkId1;
-	/**
-	 * Field playOkId2.
-	 */
 	private int playOkId2;
-	/**
-	 * Field loginOkId1.
-	 */
 	private int loginOkId1;
-	/**
-	 * Field loginOkId2.
-	 */
 	private int loginOkId2;
-	/**
-	 * Field bonus.
-	 */
 	private double bonus;
-	/**
-	 * Field bonusExpire.
-	 */
 	private int bonusExpire;
-	/**
-	 * Field _2ndPassword.
-	 */
 	private String _2ndPassword;
-	/**
-	 * Field _2ndWrongAttempts.
-	 */
 	private int _2ndWrongAttempts;
-	/**
-	 * Field _2ndUnbanTime.
-	 */
 	private long _2ndUnbanTime;
 	
 	/**

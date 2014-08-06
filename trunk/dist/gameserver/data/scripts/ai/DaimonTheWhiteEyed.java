@@ -24,9 +24,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class DaimonTheWhiteEyed extends DefaultAI
 {
-	/**
-	 * Field points.
-	 */
 	static final Location[] points =
 	{
 		new Location(191276, -49556, -2960),
@@ -54,17 +51,8 @@ public final class DaimonTheWhiteEyed extends DefaultAI
 		new Location(170964, -41753, -3464),
 		new Location(170428, -39132, -3432)
 	};
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = -1;
-	/**
-	 * Field wait_timeout.
-	 */
 	private long wait_timeout = 0;
-	/**
-	 * Field wait.
-	 */
 	private boolean wait = false;
 	
 	/**

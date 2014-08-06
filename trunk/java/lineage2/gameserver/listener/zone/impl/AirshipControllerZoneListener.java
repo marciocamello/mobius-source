@@ -24,9 +24,6 @@ import lineage2.gameserver.model.instances.ClanAirShipControllerInstance;
  */
 public class AirshipControllerZoneListener implements OnZoneEnterLeaveListener
 {
-	/**
-	 * Field _controllerInstance.
-	 */
 	private ClanAirShipControllerInstance _controllerInstance;
 	
 	/**

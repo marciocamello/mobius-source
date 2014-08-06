@@ -14,7 +14,6 @@ package lineage2.gameserver.skills.skillclasses;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Effect;
@@ -31,17 +30,8 @@ import lineage2.gameserver.templates.StatsSet;
  */
 public class NegateStats extends Skill
 {
-	/**
-	 * Field _negateStats.
-	 */
 	private final List<Stats> _negateStats;
-	/**
-	 * Field _negateOffensive.
-	 */
 	private final boolean _negateOffensive;
-	/**
-	 * Field _negateCount.
-	 */
 	private final int _negateCount;
 	
 	/**

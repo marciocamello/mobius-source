@@ -18,17 +18,8 @@ package lineage2.gameserver.templates.item;
  */
 public final class StartItem
 {
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _count.
-	 */
 	private final long _count;
-	/**
-	 * Field _equiped.
-	 */
 	private final boolean _equiped;
 	
 	/**

@@ -21,13 +21,7 @@ import lineage2.gameserver.model.entity.events.GlobalEvent;
  */
 public class OpenCloseAction implements EventAction
 {
-	/**
-	 * Field _open.
-	 */
 	private final boolean _open;
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
 	
 	/**

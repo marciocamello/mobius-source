@@ -18,25 +18,10 @@ package lineage2.gameserver.templates.player;
  */
 public final class BaseJewelDefence
 {
-	/**
-	 * Field _r_earring.
-	 */
 	private final int _r_earring;
-	/**
-	 * Field _l_earring.
-	 */
 	private final int _l_earring;
-	/**
-	 * Field _r_ring.
-	 */
 	private final int _r_ring;
-	/**
-	 * Field _l_ring.
-	 */
 	private final int _l_ring;
-	/**
-	 * Field _necklace.
-	 */
 	private final int _necklace;
 	
 	/**

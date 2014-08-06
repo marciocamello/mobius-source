@@ -21,7 +21,6 @@ public class Macro
 	public final static int CMD_TYPE_SKILL = 1;
 	public final static int CMD_TYPE_ACTION = 3;
 	public final static int CMD_TYPE_SHORTCUT = 4;
-	
 	public int id;
 	public final int icon;
 	public final String name;

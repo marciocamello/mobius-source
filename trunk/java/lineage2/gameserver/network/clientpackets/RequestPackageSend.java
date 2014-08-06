@@ -23,7 +23,6 @@ import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.Log;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -32,25 +31,10 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public class RequestPackageSend extends L2GameClientPacket
 {
-	/**
-	 * Field _FREIGHT_FEE. (value is 1000)
-	 */
 	private static final long _FREIGHT_FEE = 1000;
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
-	/**
-	 * Field _count.
-	 */
 	private int _count;
-	/**
-	 * Field _items.
-	 */
 	private int[] _items;
-	/**
-	 * Field _itemQ.
-	 */
 	private long[] _itemQ;
 	
 	/**

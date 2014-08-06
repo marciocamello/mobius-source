@@ -26,9 +26,6 @@ import quests._240_ImTheOnlyOneYouCanTrust;
  */
 public final class TeleToStakatoNest extends Functions
 {
-	/**
-	 * Field teleports.
-	 */
 	private final static Location[] teleports =
 	{
 		new Location(80456, -52322, -5640),

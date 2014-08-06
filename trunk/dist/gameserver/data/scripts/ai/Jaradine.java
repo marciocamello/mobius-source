@@ -25,9 +25,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Jaradine extends DefaultAI
 {
-	/**
-	 * Field points.
-	 */
 	static final Location[] points =
 	{
 		new Location(44964, 50568, -3056),
@@ -38,17 +35,8 @@ public final class Jaradine extends DefaultAI
 		new Location(46452, 49743, -3056),
 		new Location(45730, 50590, -3056)
 	};
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = -1;
-	/**
-	 * Field wait_timeout.
-	 */
 	private long wait_timeout = 0;
-	/**
-	 * Field wait.
-	 */
 	private boolean wait = false;
 	
 	/**

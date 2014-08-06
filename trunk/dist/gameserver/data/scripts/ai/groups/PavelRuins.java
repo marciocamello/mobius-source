@@ -29,33 +29,12 @@ import lineage2.gameserver.utils.PositionUtils;
  */
 public final class PavelRuins extends Fighter
 {
-	/**
-	 * Field PAVEL_SAFETY_DEVICE. (value is 18917)
-	 */
 	private static final int PAVEL_SAFETY_DEVICE = 18917;
-	/**
-	 * Field CRUEL_PINCER_GOLEM_1. (value is 22801)
-	 */
 	private static final int CRUEL_PINCER_GOLEM_1 = 22801;
-	/**
-	 * Field CRUEL_PINCER_GOLEM_2. (value is 22802)
-	 */
 	private static final int CRUEL_PINCER_GOLEM_2 = 22802;
-	/**
-	 * Field CRUEL_PINCER_GOLEM_3. (value is 22803)
-	 */
 	private static final int CRUEL_PINCER_GOLEM_3 = 22803;
-	/**
-	 * Field DRILL_GOLEM_OF_TERROR_1. (value is 22804)
-	 */
 	private static final int DRILL_GOLEM_OF_TERROR_1 = 22804;
-	/**
-	 * Field DRILL_GOLEM_OF_TERROR_2. (value is 22805)
-	 */
 	private static final int DRILL_GOLEM_OF_TERROR_2 = 22805;
-	/**
-	 * Field DRILL_GOLEM_OF_TERROR_3. (value is 22806)
-	 */
 	private static final int DRILL_GOLEM_OF_TERROR_3 = 22806;
 	
 	/**
@@ -84,13 +63,7 @@ public final class PavelRuins extends Fighter
 	 */
 	private static class SpawnNext extends RunnableImpl
 	{
-		/**
-		 * Field _actor.
-		 */
 		private final NpcInstance _actor;
-		/**
-		 * Field _killer.
-		 */
 		private final Creature _killer;
 		
 		/**

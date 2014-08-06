@@ -26,9 +26,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class RequestSetCastleSiegeTime extends L2GameClientPacket
 {
-	/**
-	 * Field _time. Field _id.
-	 */
 	private int _id, _time;
 	
 	/**

@@ -24,7 +24,6 @@ import lineage2.gameserver.utils.NpcUtils;
  * @created 15.09.2012
  * @reworked 20.11.2012
  */
-
 public final class BigCoconInstance extends NpcInstance
 {
 	/**

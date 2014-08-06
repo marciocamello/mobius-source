@@ -13,7 +13,6 @@
 package ai;
 
 import java.util.List;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -32,9 +31,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class KrateisCubeWatcherRed extends DefaultAI
 {
-	/**
-	 * Field SKILLS.
-	 */
 	private static final int[][] SKILLS =
 	{
 		{
@@ -58,9 +54,6 @@ public final class KrateisCubeWatcherRed extends DefaultAI
 			7
 		}
 	};
-	/**
-	 * Field SKILL_CHANCE. (value is 25)
-	 */
 	private static final int SKILL_CHANCE = 25;
 	
 	/**

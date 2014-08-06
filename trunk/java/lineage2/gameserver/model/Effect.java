@@ -15,7 +15,6 @@ package lineage2.gameserver.model;
 import java.util.List;
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.listener.actor.OnAttackListener;
@@ -34,7 +33,6 @@ import lineage2.gameserver.stats.funcs.Func;
 import lineage2.gameserver.stats.funcs.FuncOwner;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.taskmanager.EffectTaskManager;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,105 +42,30 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class Effect extends RunnableImpl implements Comparable<Effect>, FuncOwner
 {
-	/**
-	 * Field _log.
-	 */
 	public static final Logger _log = LoggerFactory.getLogger(Effect.class);
-	/**
-	 * Field EMPTY_L2EFFECT_ARRAY.
-	 */
 	public final static Effect[] EMPTY_L2EFFECT_ARRAY = new Effect[0];
-	/**
-	 * Field SUSPENDED.
-	 */
 	public static final int SUSPENDED = -1;
-	/**
-	 * Field STARTING.
-	 */
 	public static final int STARTING = 0;
-	/**
-	 * Field STARTED.
-	 */
 	public static final int STARTED = 1;
-	/**
-	 * Field ACTING.
-	 */
 	public static final int ACTING = 2;
-	/**
-	 * Field FINISHING.
-	 */
 	public static final int FINISHING = 3;
-	/**
-	 * Field FINISHED.
-	 */
 	public static final int FINISHED = 4;
-	/**
-	 * Field _effector.
-	 */
 	protected final Creature _effector;
-	/**
-	 * Field _effected.
-	 */
 	public final Creature _effected;
-	/**
-	 * Field _skill.
-	 */
 	protected final Skill _skill;
-	/**
-	 * Field _displayId.
-	 */
 	protected final int _displayId;
-	/**
-	 * Field _displayLevel.
-	 */
 	protected final int _displayLevel;
-	/**
-	 * Field _value.
-	 */
 	private final double _value;
-	/**
-	 * Field _state.
-	 */
 	private final AtomicInteger _state;
-	/**
-	 * Field _count.
-	 */
 	private int _count;
-	/**
-	 * Field _period.
-	 */
 	private long _period;
-	/**
-	 * Field _startTimeMillis.
-	 */
 	private long _startTimeMillis;
-	/**
-	 * Field _duration.
-	 */
 	private long _duration;
-	/**
-	 * Field _inUse.
-	 */
 	private boolean _inUse = false;
-	/**
-	 * Field _next.
-	 */
 	private Effect _next = null;
-	/**
-	 * Field _active.
-	 */
 	private boolean _active = false;
-	/**
-	 * Field _template.
-	 */
 	protected final EffectTemplate _template;
-	/**
-	 * Field _effectTask.
-	 */
 	private Future<?> _effectTask;
-	/**
-	 * Field _effector_obj.
-	 */
 	private final int _effector_obj;
 	
 	/**
@@ -445,9 +368,6 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		return _state.compareAndSet(oldState, newState);
 	}
 	
-	/**
-	 * Field _listener.
-	 */
 	private ActionDispelListener _actionlistener;
 	
 	/**
@@ -490,9 +410,6 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		}
 	}
 	
-	/**
-	 * Field _listener.
-	 */
 	private AttackedDispelListener _attackedlistener;
 	
 	/**

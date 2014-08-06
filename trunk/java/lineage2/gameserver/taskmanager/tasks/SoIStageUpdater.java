@@ -13,13 +13,11 @@
 package lineage2.gameserver.taskmanager.tasks;
 
 import java.util.Calendar;
-
 import lineage2.gameserver.instancemanager.SoIManager;
 import lineage2.gameserver.taskmanager.Task;
 import lineage2.gameserver.taskmanager.TaskManager;
 import lineage2.gameserver.taskmanager.TaskManager.ExecutedTask;
 import lineage2.gameserver.taskmanager.TaskTypes;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,13 +27,7 @@ import org.slf4j.LoggerFactory;
  */
 public class SoIStageUpdater extends Task
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(SoIStageUpdater.class);
-	/**
-	 * Field NAME. (value is ""soi_update"")
-	 */
 	private static final String NAME = "soi_update";
 	
 	/**

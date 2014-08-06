@@ -14,9 +14,7 @@ package lineage2.gameserver.templates.item.support;
 
 import java.util.Collections;
 import java.util.Set;
-
 import lineage2.gameserver.templates.item.ItemTemplate;
-
 import org.napile.primitive.Containers;
 import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.HashIntSet;
@@ -27,25 +25,10 @@ import org.napile.primitive.sets.impl.HashIntSet;
  */
 public class EnchantItem
 {
-	/**
-	 * Field _itemId.
-	 */
 	private final int _itemId;
-	/**
-	 * Field _chance.
-	 */
 	private final int _chance;
-	/**
-	 * Field _maxEnchant.
-	 */
 	private final int _maxEnchant;
-	/**
-	 * Field _items.
-	 */
 	private IntSet _items = Containers.EMPTY_INT_SET;
-	/**
-	 * Field _grades.
-	 */
 	private final Set<ItemTemplate.Grade> _grades = Collections.emptySet();
 	
 	/**

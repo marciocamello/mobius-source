@@ -24,13 +24,7 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class PetSummon extends ScriptItemHandler
 {
-	/**
-	 * Field _itemIds.
-	 */
 	private static final int[] _itemIds = PetDataTable.getPetControlItems();
-	/**
-	 * Field _skillId. (value is 2046)
-	 */
 	private static final int _skillId = 2046;
 	
 	/**

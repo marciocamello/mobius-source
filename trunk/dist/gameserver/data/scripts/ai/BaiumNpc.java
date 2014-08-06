@@ -13,7 +13,6 @@
 package ai;
 
 import java.util.List;
-
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -26,13 +25,7 @@ import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
  */
 public final class BaiumNpc extends DefaultAI
 {
-	/**
-	 * Field _wait_timeout.
-	 */
 	private long _wait_timeout = 0;
-	/**
-	 * Field BAIUM_EARTHQUAKE_TIMEOUT.
-	 */
 	private static final int BAIUM_EARTHQUAKE_TIMEOUT = 1000 * 60 * 15;
 	
 	/**

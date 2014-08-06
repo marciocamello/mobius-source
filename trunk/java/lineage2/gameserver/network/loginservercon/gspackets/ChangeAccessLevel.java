@@ -20,17 +20,8 @@ import lineage2.gameserver.network.loginservercon.SendablePacket;
  */
 public class ChangeAccessLevel extends SendablePacket
 {
-	/**
-	 * Field account.
-	 */
 	private final String account;
-	/**
-	 * Field level.
-	 */
 	private final int level;
-	/**
-	 * Field banExpire.
-	 */
 	private final int banExpire;
 	
 	/**

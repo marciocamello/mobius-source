@@ -24,13 +24,7 @@ import lineage2.gameserver.utils.Log;
  */
 public class RequestSendL2FriendSay extends L2GameClientPacket
 {
-	/**
-	 * Field _message.
-	 */
 	private String _message;
-	/**
-	 * Field _reciever.
-	 */
 	private String _reciever;
 	
 	/**

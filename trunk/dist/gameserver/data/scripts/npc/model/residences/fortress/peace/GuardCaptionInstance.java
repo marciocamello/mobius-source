@@ -13,7 +13,6 @@
 package npc.model.residences.fortress.peace;
 
 import java.util.List;
-
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.impl.FortressSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;

@@ -13,12 +13,10 @@
 package ai.selmahum;
 
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.SocialAction;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -27,9 +25,6 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public final class DrillSergeant extends Fighter
 {
-	/**
-	 * Field recruits.
-	 */
 	private static final int[] recruits =
 	{
 		22780,
@@ -38,9 +33,6 @@ public final class DrillSergeant extends Fighter
 		22784,
 		22785
 	};
-	/**
-	 * Field _wait_timeout.
-	 */
 	private long _wait_timeout = 0;
 	
 	/**

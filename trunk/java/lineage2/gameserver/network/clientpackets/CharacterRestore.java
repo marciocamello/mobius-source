@@ -22,9 +22,6 @@ import lineage2.gameserver.network.serverpackets.ExLoginVitalityEffectInfo;
  */
 public class CharacterRestore extends L2GameClientPacket
 {
-	/**
-	 * Field _charSlot.
-	 */
 	private int _charSlot;
 	
 	/**

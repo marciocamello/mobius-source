@@ -21,9 +21,6 @@ import lineage2.gameserver.model.Player;
  */
 public class ResetName implements IUserCommandHandler
 {
-	/**
-	 * Field COMMAND_IDS.
-	 */
 	private static final int[] COMMAND_IDS =
 	{
 		117

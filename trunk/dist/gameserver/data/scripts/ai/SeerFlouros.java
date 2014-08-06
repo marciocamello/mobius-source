@@ -26,21 +26,9 @@ import lineage2.gameserver.utils.Location;
  */
 public final class SeerFlouros extends Mystic
 {
-	/**
-	 * Field _hpCount.
-	 */
 	private int _hpCount = 0;
-	/**
-	 * Field MOB. (value is 18560)
-	 */
 	private static final int MOB = 18560;
-	/**
-	 * Field MOBS_COUNT. (value is 2)
-	 */
 	private static final int MOBS_COUNT = 2;
-	/**
-	 * Field _hps.
-	 */
 	private static final int[] _hps =
 	{
 		80,

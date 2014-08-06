@@ -15,7 +15,6 @@ package lineage2.gameserver.handler.admincommands.impl;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
@@ -32,13 +31,7 @@ public class AdminRepairChar implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_restore.
-		 */
 		admin_restore,
-		/**
-		 * Field admin_repair.
-		 */
 		admin_repair
 	}
 	

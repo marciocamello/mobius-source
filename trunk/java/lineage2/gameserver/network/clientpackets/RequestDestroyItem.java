@@ -29,13 +29,7 @@ import lineage2.gameserver.utils.Log;
  */
 public class RequestDestroyItem extends L2GameClientPacket
 {
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
-	/**
-	 * Field _count.
-	 */
 	private long _count;
 	
 	/**

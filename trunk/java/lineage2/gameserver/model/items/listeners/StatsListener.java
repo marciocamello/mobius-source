@@ -23,9 +23,6 @@ import lineage2.gameserver.stats.funcs.Func;
  */
 public final class StatsListener implements OnEquipListener
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final StatsListener _instance = new StatsListener();
 	
 	/**

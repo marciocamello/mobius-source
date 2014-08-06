@@ -27,9 +27,6 @@ public class AdminHelpPage implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_showhtml.
-		 */
 		admin_showhtml
 	}
 	

@@ -15,7 +15,6 @@ package lineage2.gameserver.instancemanager;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,29 +24,11 @@ import org.slf4j.LoggerFactory;
  */
 public class BloodAltarManager
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(BloodAltarManager.class);
-	/**
-	 * Field _instance.
-	 */
 	private static BloodAltarManager _instance;
-	/**
-	 * Field delay.
-	 */
 	private static final long delay = 30 * 60 * 1000L;
-	/**
-	 * Field bossRespawnTimer.
-	 */
 	static long bossRespawnTimer = 0;
-	/**
-	 * Field bossesSpawned.
-	 */
 	static boolean bossesSpawned = false;
-	/**
-	 * Field bossGroups.
-	 */
 	private static final String[] bossGroups =
 	{
 		"bloodaltar_boss_aden",

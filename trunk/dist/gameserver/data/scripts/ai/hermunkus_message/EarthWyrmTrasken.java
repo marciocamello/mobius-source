@@ -25,21 +25,9 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class EarthWyrmTrasken extends DefaultAI
 {
-	/**
-	 * Field RHAND_ID. (value is 15280)
-	 */
 	private static final int RHAND_ID = 15280;
-	/**
-	 * Field ENRAGED_SKILL_ID. (value is 14505)
-	 */
 	private static final int ENRAGED_SKILL_ID = 14505;
-	/**
-	 * Field BODY_STRIKE_SKILL_ID_1. (value is 14337)
-	 */
 	private static final int BODY_STRIKE_SKILL_ID_1 = 14337;
-	/**
-	 * Field BODY_STRIKE_SKILL_ID_2. (value is 14338)
-	 */
 	private static final int BODY_STRIKE_SKILL_ID_2 = 14338;
 	
 	/**

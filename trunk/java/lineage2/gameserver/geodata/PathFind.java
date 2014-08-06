@@ -18,10 +18,8 @@ import static lineage2.gameserver.geodata.GeoEngine.NSWE_ALL;
 import static lineage2.gameserver.geodata.GeoEngine.NSWE_NONE;
 import static lineage2.gameserver.geodata.GeoEngine.SOUTH;
 import static lineage2.gameserver.geodata.GeoEngine.WEST;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.geodata.PathFindBuffers.GeoNode;
 import lineage2.gameserver.geodata.PathFindBuffers.PathFindBuffer;
@@ -34,29 +32,11 @@ import lineage2.gameserver.utils.Location;
  */
 public class PathFind
 {
-	/**
-	 * Field geoIndex.
-	 */
 	private int geoIndex = 0;
-	/**
-	 * Field buff.
-	 */
 	private PathFindBuffer buff;
-	/**
-	 * Field path.
-	 */
 	private List<Location> path;
-	/**
-	 * Field hNSWE.
-	 */
 	private final short[] hNSWE = new short[2];
-	/**
-	 * Field endPoint. Field startPoint.
-	 */
 	private final Location startPoint, endPoint;
-	/**
-	 * Field currentNode. Field endNode. Field startNode.
-	 */
 	private GeoNode startNode, endNode, currentNode;
 	
 	/**

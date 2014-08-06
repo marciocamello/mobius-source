@@ -28,9 +28,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class RequestMenteeAdd extends L2GameClientPacket
 {
-	/**
-	 * Field _newMentee.
-	 */
 	private String _newMentee;
 	
 	/**

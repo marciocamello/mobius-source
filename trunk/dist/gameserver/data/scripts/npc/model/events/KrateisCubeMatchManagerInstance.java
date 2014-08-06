@@ -13,7 +13,6 @@
 package npc.model.events;
 
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.Player;

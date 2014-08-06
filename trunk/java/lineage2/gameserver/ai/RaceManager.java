@@ -14,7 +14,6 @@ package lineage2.gameserver.ai;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -27,13 +26,7 @@ import lineage2.gameserver.network.serverpackets.MonRaceInfo;
  */
 public class RaceManager extends DefaultAI
 {
-	/**
-	 * Field thinking.
-	 */
 	private boolean thinking = false;
-	/**
-	 * Field _knownPlayers.
-	 */
 	private List<Player> _knownPlayers = new ArrayList<>();
 	
 	/**

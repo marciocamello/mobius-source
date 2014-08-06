@@ -15,14 +15,12 @@ package lineage2.gameserver.network.loginservercon.lspackets;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.network.loginservercon.LoginServerCommunication;
 import lineage2.gameserver.network.loginservercon.ReceivablePacket;
 import lineage2.gameserver.network.loginservercon.gspackets.SetAccountInfo;
-
 import org.napile.primitive.Containers;
 import org.napile.primitive.lists.IntList;
 import org.napile.primitive.lists.impl.ArrayIntList;
@@ -35,13 +33,7 @@ import org.slf4j.LoggerFactory;
  */
 public class GetAccountInfo extends ReceivablePacket
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(GetAccountInfo.class);
-	/**
-	 * Field _account.
-	 */
 	private String _account;
 	
 	/**

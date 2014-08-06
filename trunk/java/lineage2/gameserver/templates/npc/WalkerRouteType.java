@@ -19,6 +19,5 @@ public enum WalkerRouteType
 	RANDOM,
 	DELETE,
 	FINISH;
-	
 	public static final WalkerRouteType[] VALUES = values();
 }

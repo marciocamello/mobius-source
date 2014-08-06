@@ -29,13 +29,7 @@ public class AdminCamera implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_freelook.
-		 */
 		admin_freelook,
-		/**
-		 * Field admin_cinematic.
-		 */
 		admin_cinematic
 	}
 	

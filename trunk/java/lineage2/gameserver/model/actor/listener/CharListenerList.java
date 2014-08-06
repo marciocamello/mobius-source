@@ -34,13 +34,7 @@ import lineage2.gameserver.model.Skill;
  */
 public class CharListenerList extends ListenerList<Creature>
 {
-	/**
-	 * Field global.
-	 */
 	final static ListenerList<Creature> global = new ListenerList<>();
-	/**
-	 * Field actor.
-	 */
 	protected final Creature actor;
 	
 	/**

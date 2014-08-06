@@ -19,7 +19,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public class NpcSayNative extends L2GameServerPacket
 {
-	
 	private final int _id;
 	private final int _objId;
 	private final int _msgId;
@@ -40,5 +39,4 @@ public class NpcSayNative extends L2GameServerPacket
 		writeD(1000000 + _id);
 		writeD(_msgId);
 	}
-	
 }

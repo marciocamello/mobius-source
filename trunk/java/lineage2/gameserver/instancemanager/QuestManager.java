@@ -15,7 +15,6 @@ package lineage2.gameserver.instancemanager;
 import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
 import lineage2.gameserver.model.quest.Quest;
 
 /**
@@ -24,13 +23,7 @@ import lineage2.gameserver.model.quest.Quest;
  */
 public class QuestManager
 {
-	/**
-	 * Field _questsByName.
-	 */
 	private static final Map<String, Quest> _questsByName = new ConcurrentHashMap<>();
-	/**
-	 * Field _questsById.
-	 */
 	private static final Map<Integer, Quest> _questsById = new ConcurrentHashMap<>();
 	
 	/**

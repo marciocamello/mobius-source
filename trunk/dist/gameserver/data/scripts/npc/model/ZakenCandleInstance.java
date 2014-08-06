@@ -28,25 +28,10 @@ public final class ZakenCandleInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field OHS_Weapon. (value is 15280)
-	 */
 	private static final int OHS_Weapon = 15280;
-	/**
-	 * Field THS_Weapon. (value is 15281)
-	 */
 	private static final int THS_Weapon = 15281;
-	/**
-	 * Field BOW_Weapon. (value is 15302)
-	 */
 	private static final int BOW_Weapon = 15302;
-	/**
-	 * Field Anchor. (value is 32468)
-	 */
 	private static final int Anchor = 32468;
-	/**
-	 * Field used.
-	 */
 	private boolean used = false;
 	
 	/**

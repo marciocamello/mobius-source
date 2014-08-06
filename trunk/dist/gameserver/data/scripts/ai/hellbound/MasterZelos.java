@@ -25,13 +25,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class MasterZelos extends Fighter
 {
-	/**
-	 * Field _zone.
-	 */
 	private static Zone _zone;
-	/**
-	 * Field doors.
-	 */
 	private static final int[] doors =
 	{
 		19260054,

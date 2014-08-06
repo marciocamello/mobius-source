@@ -18,7 +18,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.Set;
-
 import lineage2.commons.lang.StatsUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.GameTimeController;
@@ -29,7 +28,6 @@ import lineage2.gameserver.network.telnet.TelnetCommand;
 import lineage2.gameserver.network.telnet.TelnetCommandHolder;
 import lineage2.gameserver.tables.GmListTable;
 import lineage2.gameserver.utils.Util;
-
 import org.apache.commons.lang3.time.DurationFormatUtils;
 
 /**
@@ -38,9 +36,6 @@ import org.apache.commons.lang3.time.DurationFormatUtils;
  */
 public class TelnetStatus implements TelnetCommandHolder
 {
-	/**
-	 * Field _commands.
-	 */
 	private final Set<TelnetCommand> _commands = new LinkedHashSet<>();
 	
 	/**

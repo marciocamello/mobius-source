@@ -39,9 +39,6 @@ public class StatFunctions
 	 */
 	private static class FuncMultRegenResting extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncMultRegenResting[] func = new FuncMultRegenResting[Stats.NUM_STATS];
 		
 		/**
@@ -94,9 +91,6 @@ public class StatFunctions
 	 */
 	private static class FuncMultRegenStanding extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncMultRegenStanding[] func = new FuncMultRegenStanding[Stats.NUM_STATS];
 		
 		/**
@@ -142,9 +136,6 @@ public class StatFunctions
 	 */
 	private static class FuncMultRegenRunning extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncMultRegenRunning[] func = new FuncMultRegenRunning[Stats.NUM_STATS];
 		
 		/**
@@ -190,9 +181,6 @@ public class StatFunctions
 	 */
 	private static class FuncPAtkMul extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncPAtkMul func = new FuncPAtkMul();
 		
 		/**
@@ -219,9 +207,6 @@ public class StatFunctions
 	 */
 	private static class FuncMAtkMul extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncMAtkMul func = new FuncMAtkMul();
 		
 		/**
@@ -250,9 +235,6 @@ public class StatFunctions
 	 */
 	private static class FuncPDefMul extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncPDefMul func = new FuncPDefMul();
 		
 		/**
@@ -279,9 +261,6 @@ public class StatFunctions
 	 */
 	private static class FuncMDefMul extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncMDefMul func = new FuncMDefMul();
 		
 		/**
@@ -308,9 +287,6 @@ public class StatFunctions
 	 */
 	private static class FuncAttackRange extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncAttackRange func = new FuncAttackRange();
 		
 		/**
@@ -342,9 +318,6 @@ public class StatFunctions
 	 */
 	private static class FuncMAccuracyAdd extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncMAccuracyAdd func = new FuncMAccuracyAdd();
 		
 		/**
@@ -376,9 +349,6 @@ public class StatFunctions
 	 */
 	private static class FuncMEvasionAdd extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncMEvasionAdd func = new FuncMEvasionAdd();
 		
 		/**
@@ -405,9 +375,6 @@ public class StatFunctions
 	 */
 	private static class FuncAccuracyAdd extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncAccuracyAdd func = new FuncAccuracyAdd();
 		
 		/**
@@ -459,9 +426,6 @@ public class StatFunctions
 	 */
 	private static class FuncEvasionAdd extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncEvasionAdd func = new FuncEvasionAdd();
 		
 		/**
@@ -498,9 +462,6 @@ public class StatFunctions
 	 */
 	private static class FuncMCriticalRateMul extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncMCriticalRateMul func = new FuncMCriticalRateMul();
 		
 		/**
@@ -527,9 +488,6 @@ public class StatFunctions
 	 */
 	private static class FuncPCriticalRateMul extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncPCriticalRateMul func = new FuncPCriticalRateMul();
 		
 		/**
@@ -561,9 +519,6 @@ public class StatFunctions
 	 */
 	private static class FuncMoveSpeedMul extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncMoveSpeedMul func = new FuncMoveSpeedMul();
 		
 		/**
@@ -589,9 +544,6 @@ public class StatFunctions
 	 */
 	private static class FuncPAtkSpeedMul extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncPAtkSpeedMul func = new FuncPAtkSpeedMul();
 		
 		/**
@@ -618,9 +570,6 @@ public class StatFunctions
 	 */
 	private static class FuncMAtkSpeedMul extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncMAtkSpeedMul func = new FuncMAtkSpeedMul();
 		
 		/**
@@ -647,9 +596,6 @@ public class StatFunctions
 	 */
 	private static class FuncHennaSTR extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncHennaSTR func = new FuncHennaSTR();
 		
 		/**
@@ -681,9 +627,6 @@ public class StatFunctions
 	 */
 	private static class FuncHennaDEX extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncHennaDEX func = new FuncHennaDEX();
 		
 		/**
@@ -715,9 +658,6 @@ public class StatFunctions
 	 */
 	private static class FuncHennaINT extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncHennaINT func = new FuncHennaINT();
 		
 		/**
@@ -749,9 +689,6 @@ public class StatFunctions
 	 */
 	private static class FuncHennaMEN extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncHennaMEN func = new FuncHennaMEN();
 		
 		/**
@@ -783,9 +720,6 @@ public class StatFunctions
 	 */
 	private static class FuncHennaCON extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncHennaCON func = new FuncHennaCON();
 		
 		/**
@@ -817,9 +751,6 @@ public class StatFunctions
 	 */
 	private static class FuncHennaWIT extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncHennaWIT func = new FuncHennaWIT();
 		
 		/**
@@ -851,9 +782,6 @@ public class StatFunctions
 	 */
 	private static class FuncMaxHpMul extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncMaxHpMul func = new FuncMaxHpMul();
 		
 		/**
@@ -880,9 +808,6 @@ public class StatFunctions
 	 */
 	private static class FuncMaxCpMul extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncMaxCpMul func = new FuncMaxCpMul();
 		
 		/**
@@ -909,9 +834,6 @@ public class StatFunctions
 	 */
 	private static class FuncMaxMpMul extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncMaxMpMul func = new FuncMaxMpMul();
 		
 		/**
@@ -938,9 +860,6 @@ public class StatFunctions
 	 */
 	private static class FuncPDamageResists extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncPDamageResists func = new FuncPDamageResists();
 		
 		/**
@@ -984,9 +903,6 @@ public class StatFunctions
 	 */
 	private static class FuncMDamageResists extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncMDamageResists func = new FuncMDamageResists();
 		
 		/**
@@ -1019,9 +935,6 @@ public class StatFunctions
 	 */
 	private static class FuncInventory extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncInventory func = new FuncInventory();
 		
 		/**
@@ -1064,9 +977,6 @@ public class StatFunctions
 	 */
 	private static class FuncWarehouse extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncWarehouse func = new FuncWarehouse();
 		
 		/**
@@ -1104,9 +1014,6 @@ public class StatFunctions
 	 */
 	private static class FuncTradeLimit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncTradeLimit func = new FuncTradeLimit();
 		
 		/**
@@ -1142,9 +1049,6 @@ public class StatFunctions
 	 */
 	private static class FuncSDefInit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func func = new FuncSDefInit();
 		
 		/**
@@ -1172,9 +1076,6 @@ public class StatFunctions
 	 */
 	private static class FuncSDefAll extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncSDefAll func = new FuncSDefAll();
 		
 		/**
@@ -1230,9 +1131,6 @@ public class StatFunctions
 	 */
 	private static class FuncSDefPlayers extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final FuncSDefPlayers func = new FuncSDefPlayers();
 		
 		/**
@@ -1272,9 +1170,6 @@ public class StatFunctions
 	 */
 	private static class FuncMaxHpLimit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func func = new FuncMaxHpLimit();
 		
 		/**
@@ -1301,9 +1196,6 @@ public class StatFunctions
 	 */
 	private static class FuncMaxMpLimit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func func = new FuncMaxMpLimit();
 		
 		/**
@@ -1330,9 +1222,6 @@ public class StatFunctions
 	 */
 	private static class FuncMaxCpLimit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func func = new FuncMaxCpLimit();
 		
 		/**
@@ -1359,9 +1248,6 @@ public class StatFunctions
 	 */
 	private static class FuncRunSpdLimit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func func = new FuncRunSpdLimit();
 		
 		/**
@@ -1395,9 +1281,6 @@ public class StatFunctions
 	 */
 	private static class FuncPDefLimit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func func = new FuncPDefLimit();
 		
 		/**
@@ -1424,9 +1307,6 @@ public class StatFunctions
 	 */
 	private static class FuncMDefLimit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func func = new FuncMDefLimit();
 		
 		/**
@@ -1453,9 +1333,6 @@ public class StatFunctions
 	 */
 	private static class FuncPAtkLimit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func func = new FuncPAtkLimit();
 		
 		/**
@@ -1482,9 +1359,6 @@ public class StatFunctions
 	 */
 	private static class FuncMAtkLimit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func func = new FuncMAtkLimit();
 		
 		/**
@@ -1511,9 +1385,6 @@ public class StatFunctions
 	 */
 	private static class FuncPAtkSpdLimit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func func = new FuncPAtkSpdLimit();
 		
 		/**
@@ -1540,9 +1411,6 @@ public class StatFunctions
 	 */
 	private static class FuncMAtkSpdLimit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func func = new FuncMAtkSpdLimit();
 		
 		/**
@@ -1569,9 +1437,6 @@ public class StatFunctions
 	 */
 	private static class FuncCAtkLimit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func func = new FuncCAtkLimit();
 		
 		/**
@@ -1598,9 +1463,6 @@ public class StatFunctions
 	 */
 	private static class FuncEvasionLimit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func func = new FuncEvasionLimit();
 		
 		/**
@@ -1627,9 +1489,6 @@ public class StatFunctions
 	 */
 	private static class FuncMEvasionLimit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func func = new FuncMEvasionLimit();
 		
 		/**
@@ -1656,9 +1515,6 @@ public class StatFunctions
 	 */
 	private static class FuncMAccuracyLimit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func func = new FuncMAccuracyLimit();
 		
 		/**
@@ -1685,9 +1541,6 @@ public class StatFunctions
 	 */
 	private static class FuncAccuracyLimit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func func = new FuncAccuracyLimit();
 		
 		/**
@@ -1714,9 +1567,6 @@ public class StatFunctions
 	 */
 	private static class FuncCritLimit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func func = new FuncCritLimit();
 		
 		/**
@@ -1740,9 +1590,6 @@ public class StatFunctions
 	
 	private static class FuncMCritLimit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func func = new FuncMCritLimit();
 		
 		/**
@@ -1769,9 +1616,6 @@ public class StatFunctions
 	 */
 	private static class FuncAttributeAttackInit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func[] func = new FuncAttributeAttackInit[Element.VALUES.length];
 		static
 		{
@@ -1791,9 +1635,6 @@ public class StatFunctions
 			return func[element.getId()];
 		}
 		
-		/**
-		 * Field element.
-		 */
 		private final Element element;
 		
 		/**
@@ -1822,9 +1663,6 @@ public class StatFunctions
 	 */
 	private static class FuncAttributeDefenceInit extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func[] func = new FuncAttributeDefenceInit[Element.VALUES.length];
 		static
 		{
@@ -1844,9 +1682,6 @@ public class StatFunctions
 			return func[element.getId()];
 		}
 		
-		/**
-		 * Field element.
-		 */
 		private final Element element;
 		
 		/**
@@ -1875,9 +1710,6 @@ public class StatFunctions
 	 */
 	private static class FuncAttributeAttackSet extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func[] func = new FuncAttributeAttackSet[Element.VALUES.length];
 		static
 		{
@@ -1925,9 +1757,6 @@ public class StatFunctions
 	 */
 	private static class FuncAttributeDefenceSet extends Func
 	{
-		/**
-		 * Field func.
-		 */
 		static final Func[] func = new FuncAttributeDefenceSet[Element.VALUES.length];
 		static
 		{

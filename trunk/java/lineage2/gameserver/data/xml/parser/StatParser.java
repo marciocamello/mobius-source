@@ -15,7 +15,6 @@ package lineage2.gameserver.data.xml.parser;
 import java.util.Iterator;
 import java.util.List;
 import java.util.StringTokenizer;
-
 import lineage2.commons.data.xml.AbstractDirParser;
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.model.entity.residence.ResidenceType;
@@ -45,7 +44,6 @@ import lineage2.gameserver.stats.triggers.TriggerInfo;
 import lineage2.gameserver.stats.triggers.TriggerType;
 import lineage2.gameserver.templates.item.ArmorTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate;
-
 import org.dom4j.Attribute;
 import org.dom4j.Element;
 

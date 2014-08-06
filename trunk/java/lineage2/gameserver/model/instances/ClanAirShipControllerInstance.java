@@ -36,25 +36,10 @@ public class ClanAirShipControllerInstance extends AirShipControllerInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field ENERGY_STAR_STONE. (value is 13277)
-	 */
 	protected static final int ENERGY_STAR_STONE = 13277;
-	/**
-	 * Field AIRSHIP_SUMMON_LICENSE. (value is 13559)
-	 */
 	protected static final int AIRSHIP_SUMMON_LICENSE = 13559;
-	/**
-	 * Field _dockedShipRef.
-	 */
 	private HardReference<ClanAirShip> _dockedShipRef = HardReferences.emptyRef();
-	/**
-	 * Field _dock.
-	 */
 	private final AirshipDock _dock;
-	/**
-	 * Field _platform.
-	 */
 	private final AirshipDock.AirshipPlatform _platform;
 	
 	/**

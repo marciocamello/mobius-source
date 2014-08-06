@@ -20,17 +20,8 @@ import lineage2.gameserver.model.items.ItemInstance;
  */
 public class Attachment
 {
-	/**
-	 * Field messageId.
-	 */
 	private int messageId;
-	/**
-	 * Field item.
-	 */
 	private ItemInstance item;
-	/**
-	 * Field mail.
-	 */
 	private Mail mail;
 	
 	/**

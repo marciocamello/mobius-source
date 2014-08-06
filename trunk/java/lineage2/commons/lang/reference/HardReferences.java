@@ -45,9 +45,6 @@ public class HardReferences
 		}
 	}
 	
-	/**
-	 * Field EMPTY_REF.
-	 */
 	private static HardReference<?> EMPTY_REF = new EmptyReferencedHolder(null);
 	
 	/**
@@ -90,9 +87,6 @@ public class HardReferences
 	 */
 	private static class WrappedIterable<T> implements Iterable<T>
 	{
-		/**
-		 * Field refs.
-		 */
 		final Iterable<HardReference<T>> refs;
 		
 		/**
@@ -110,9 +104,6 @@ public class HardReferences
 		 */
 		private static class WrappedIterator<T> implements Iterator<T>
 		{
-			/**
-			 * Field iterator.
-			 */
 			final Iterator<HardReference<T>> iterator;
 			
 			/**

@@ -28,9 +28,6 @@ import lineage2.gameserver.templates.item.ItemTemplate;
  */
 public final class ItemSkillsListener implements OnEquipListener
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final ItemSkillsListener _instance = new ItemSkillsListener();
 	
 	/**

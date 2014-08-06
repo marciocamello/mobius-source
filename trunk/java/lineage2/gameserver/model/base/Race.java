@@ -18,28 +18,10 @@ package lineage2.gameserver.model.base;
  */
 public enum Race
 {
-	/**
-	 * Field human.
-	 */
 	human,
-	/**
-	 * Field elf.
-	 */
 	elf,
-	/**
-	 * Field darkelf.
-	 */
 	darkelf,
-	/**
-	 * Field orc.
-	 */
 	orc,
-	/**
-	 * Field dwarf.
-	 */
 	dwarf,
-	/**
-	 * Field kamael.
-	 */
 	kamael
 }

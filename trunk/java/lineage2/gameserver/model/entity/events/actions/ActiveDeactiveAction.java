@@ -21,13 +21,7 @@ import lineage2.gameserver.model.entity.events.GlobalEvent;
  */
 public class ActiveDeactiveAction implements EventAction
 {
-	/**
-	 * Field _active.
-	 */
 	private final boolean _active;
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
 	
 	/**

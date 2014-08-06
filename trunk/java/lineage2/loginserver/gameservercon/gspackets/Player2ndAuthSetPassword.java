@@ -21,13 +21,7 @@ import lineage2.loginserver.gameservercon.ReceivablePacket;
  */
 public class Player2ndAuthSetPassword extends ReceivablePacket
 {
-	/**
-	 * Field _account.
-	 */
 	private String _account;
-	/**
-	 * Field _password.
-	 */
 	private String _password;
 	
 	/**

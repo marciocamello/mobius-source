@@ -22,9 +22,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.dbutils.DbUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,9 +32,6 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class mysql
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(mysql.class);
 	
 	/**
@@ -351,20 +346,15 @@ public abstract class mysql
 	public static Integer[][] simple_get_int_array(DatabaseFactory db, String[] ret_fields, String table, String where)
 	{
 		String fields = null;
-		
-		for (String field : ret_fields)
 		{
 			if (fields != null)
 			{
 				fields += ",";
-				fields += "`" + field + "`";
 			}
 			else
 			{
-				fields = "`" + field + "`";
 			}
 		}
-		
 		String query = "SELECT " + fields + " FROM `" + table + "` WHERE " + where;
 		Connection con = null;
 		PreparedStatement statement = null;

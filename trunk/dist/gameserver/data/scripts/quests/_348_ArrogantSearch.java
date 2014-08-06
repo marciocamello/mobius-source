@@ -14,7 +14,6 @@ package quests;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
@@ -69,7 +68,6 @@ public class _348_ArrogantSearch extends Quest implements ScriptFile
 	private final static Map<Integer, String[]> ARK_OWNERS_TEXT = new HashMap<>();
 	// mob: cond, giveItem, amount, chance%, takeItem (assumed to take only 1 of it)
 	private final static Map<Integer, Integer[]> DROPS = new HashMap<>();
-	
 	static
 	{
 		ARKS.put(HOLY_ARK_OF_SECRECY_1, new Integer[]

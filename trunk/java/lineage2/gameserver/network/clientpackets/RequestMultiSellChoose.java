@@ -14,7 +14,6 @@ package lineage2.gameserver.network.clientpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.math.SafeMath;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -43,17 +42,8 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public class RequestMultiSellChoose extends L2GameClientPacket
 {
-	/**
-	 * Field _listId.
-	 */
 	private int _listId;
-	/**
-	 * Field _entryId.
-	 */
 	private int _entryId;
-	/**
-	 * Field _amount.
-	 */
 	private long _amount;
 	
 	/**
@@ -61,17 +51,8 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 	 */
 	private class ItemData
 	{
-		/**
-		 * Field _id.
-		 */
 		private final int _id;
-		/**
-		 * Field _count.
-		 */
 		private final long _count;
-		/**
-		 * Field _item.
-		 */
 		private final ItemInstance _item;
 		
 		/**

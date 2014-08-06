@@ -13,11 +13,9 @@
 package bosses;
 
 import static lineage2.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -42,10 +40,8 @@ import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.ReflectionUtils;
 import lineage2.gameserver.utils.TimeUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import bosses.EpicBossState.State;
 
 /**
@@ -54,13 +50,7 @@ import bosses.EpicBossState.State;
  */
 public final class ValakasManager extends Functions implements ScriptFile, OnDeathListener
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(ValakasManager.class);
-	/**
-	 * Field _teleportCubeLocation.
-	 */
 	private static final int[][] _teleportCubeLocation =
 	{
 		{
@@ -154,93 +144,27 @@ public final class ValakasManager extends Functions implements ScriptFile, OnDea
 			0
 		}
 	};
-	/**
-	 * Field _teleportCube.
-	 */
 	private static final List<NpcInstance> _teleportCube = new ArrayList<>();
-	/**
-	 * Field _spawnedMinions.
-	 */
 	private static final List<NpcInstance> _spawnedMinions = new ArrayList<>();
-	/**
-	 * Field _valakas.
-	 */
 	static BossInstance _valakas;
-	/**
-	 * Field _valakasSpawnTask.
-	 */
 	private static ScheduledFuture<?> _valakasSpawnTask = null;
-	/**
-	 * Field _intervalEndTask.
-	 */
 	private static ScheduledFuture<?> _intervalEndTask = null;
-	/**
-	 * Field _socialTask.
-	 */
 	static ScheduledFuture<?> _socialTask = null;
-	/**
-	 * Field _mobiliseTask.
-	 */
 	private static ScheduledFuture<?> _mobiliseTask = null;
-	/**
-	 * Field _moveAtRandomTask.
-	 */
 	private static ScheduledFuture<?> _moveAtRandomTask = null;
-	/**
-	 * Field _respawnValakasTask.
-	 */
 	private static ScheduledFuture<?> _respawnValakasTask = null;
-	/**
-	 * Field _sleepCheckTask.
-	 */
 	static ScheduledFuture<?> _sleepCheckTask = null;
-	/**
-	 * Field _onAnnihilatedTask.
-	 */
 	private static ScheduledFuture<?> _onAnnihilatedTask = null;
-	/**
-	 * Field Valakas. (value is 29028)
-	 */
 	private static final int Valakas = 29028;
-	/**
-	 * Field _teleportCubeId. (value is 31759)
-	 */
 	private static final int _teleportCubeId = 31759;
-	/**
-	 * Field _state.
-	 */
 	static EpicBossState _state;
-	/**
-	 * Field _zone.
-	 */
 	private static Zone _zone;
-	/**
-	 * Field _lastAttackTime.
-	 */
 	static long _lastAttackTime = 0;
-	/**
-	 * Field FWV_LIMITUNTILSLEEP.
-	 */
 	private static final int FWV_LIMITUNTILSLEEP = 20 * 60000;
-	/**
-	 * Field FWV_APPTIMEOFVALAKAS.
-	 */
 	private static final int FWV_APPTIMEOFVALAKAS = 10 * 60000;
-	/**
-	 * Field FWV_FIXINTERVALOFVALAKAS.
-	 */
 	private static final int FWV_FIXINTERVALOFVALAKAS = 11 * 24 * 60 * 60000;
-	/**
-	 * Field Dying.
-	 */
 	private static boolean Dying = false;
-	/**
-	 * Field TELEPORT_POSITION.
-	 */
 	private static final Location TELEPORT_POSITION = new Location(203940, -111840, 66);
-	/**
-	 * Field _entryLocked.
-	 */
 	private static boolean _entryLocked = false;
 	
 	/**
@@ -328,17 +252,8 @@ public final class ValakasManager extends Functions implements ScriptFile, OnDea
 	 */
 	private static class SpawnDespawn extends RunnableImpl
 	{
-		/**
-		 * Field _distance.
-		 */
 		private static final int _distance = 2550;
-		/**
-		 * Field _taskId.
-		 */
 		private final int _taskId;
-		/**
-		 * Field _players.
-		 */
 		private final List<Player> _players = getPlayersInside();
 		
 		/**

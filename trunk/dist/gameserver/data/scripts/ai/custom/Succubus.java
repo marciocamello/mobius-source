@@ -26,9 +26,6 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class Succubus extends Fighter
 {
-	/**
-	 * Field SAY_TEXT.
-	 */
 	private static final NpcString[] SAY_TEXT = new NpcString[]
 	{
 		NpcString.HAHAHA_YOU_DARE_TO_DISRUPT_ME_I_WILL_BE_YOUR_NIGHTMARE_FROM_WHICH_YOU_CAN_NEVER_AWAKEN,

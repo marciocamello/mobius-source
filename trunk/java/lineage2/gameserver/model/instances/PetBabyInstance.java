@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.instances;
 
 import java.util.concurrent.Future;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -27,7 +26,6 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,17 +39,8 @@ public final class PetBabyInstance extends PetInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(PetBabyInstance.class);
-	/**
-	 * Field _actionTask.
-	 */
 	Future<?> _actionTask;
-	/**
-	 * Field _buffEnabled.
-	 */
 	private boolean _buffEnabled = true;
 	
 	/**
@@ -80,25 +69,10 @@ public final class PetBabyInstance extends PetInstance
 		super(objectId, template, owner, control);
 	}
 	
-	/**
-	 * Field HealTrick. (value is 4717)
-	 */
 	private static final int HealTrick = 4717;
-	/**
-	 * Field GreaterHealTrick. (value is 4718)
-	 */
 	private static final int GreaterHealTrick = 4718;
-	/**
-	 * Field GreaterHeal. (value is 5195)
-	 */
 	private static final int GreaterHeal = 5195;
-	/**
-	 * Field BattleHeal. (value is 5590)
-	 */
 	private static final int BattleHeal = 5590;
-	/**
-	 * Field Recharge. (value is 5200)
-	 */
 	private static final int Recharge = 5200;
 	
 	/**
@@ -402,57 +376,18 @@ public final class PetBabyInstance extends PetInstance
 		return 1;
 	}
 	
-	/**
-	 * Field Pet_Haste. (value is 5186)
-	 */
 	private static final int Pet_Haste = 5186;
-	/**
-	 * Field Pet_Vampiric_Rage. (value is 5187)
-	 */
 	private static final int Pet_Vampiric_Rage = 5187;
-	/**
-	 * Field Pet_Blessed_Body. (value is 5189)
-	 */
 	private static final int Pet_Blessed_Body = 5189;
-	/**
-	 * Field Pet_Blessed_Soul. (value is 5190)
-	 */
 	private static final int Pet_Blessed_Soul = 5190;
-	/**
-	 * Field Pet_Guidance. (value is 5191)
-	 */
 	private static final int Pet_Guidance = 5191;
-	/**
-	 * Field Pet_Acumen. (value is 5193)
-	 */
 	private static final int Pet_Acumen = 5193;
-	/**
-	 * Field Pet_Empower. (value is 5194)
-	 */
 	private static final int Pet_Empower = 5194;
-	/**
-	 * Field Pet_Concentration. (value is 5201)
-	 */
 	private static final int Pet_Concentration = 5201;
-	/**
-	 * Field Pet_Might. (value is 5586)
-	 */
 	private static final int Pet_Might = 5586;
-	/**
-	 * Field Pet_Shield. (value is 5587)
-	 */
 	private static final int Pet_Shield = 5587;
-	/**
-	 * Field Pet_Focus. (value is 5588)
-	 */
 	private static final int Pet_Focus = 5588;
-	/**
-	 * Field Pet_Death_Wisper. (value is 5589)
-	 */
 	private static final int Pet_Death_Wisper = 5589;
-	/**
-	 * Field COUGAR_BUFFS.
-	 */
 	private static final Skill[][] COUGAR_BUFFS =
 	{
 		{
@@ -484,9 +419,6 @@ public final class PetBabyInstance extends PetInstance
 			SkillTable.getInstance().getInfo(Pet_Focus, 3)
 		}
 	};
-	/**
-	 * Field BUFFALO_BUFFS.
-	 */
 	private static final Skill[][] BUFFALO_BUFFS =
 	{
 		{
@@ -518,9 +450,6 @@ public final class PetBabyInstance extends PetInstance
 			SkillTable.getInstance().getInfo(Pet_Death_Wisper, 3)
 		}
 	};
-	/**
-	 * Field KOOKABURRA_BUFFS.
-	 */
 	private static final Skill[][] KOOKABURRA_BUFFS =
 	{
 		{
@@ -550,9 +479,6 @@ public final class PetBabyInstance extends PetInstance
 			SkillTable.getInstance().getInfo(Pet_Concentration, 6)
 		}
 	};
-	/**
-	 * Field FAIRY_PRINCESS_BUFFS.
-	 */
 	private static final Skill[][] FAIRY_PRINCESS_BUFFS =
 	{
 		{

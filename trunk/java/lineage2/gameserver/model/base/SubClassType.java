@@ -18,20 +18,8 @@ package lineage2.gameserver.model.base;
  */
 public enum SubClassType
 {
-	/**
-	 * Field BASE_CLASS.
-	 */
 	BASE_CLASS,
-	/**
-	 * Field DOUBLE_SUBCLASS.
-	 */
 	DOUBLE_SUBCLASS,
-	/**
-	 * Field SUBCLASS.
-	 */
 	SUBCLASS;
-	/**
-	 * Field VALUES.
-	 */
 	public static final SubClassType[] VALUES = values();
 }

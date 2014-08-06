@@ -15,10 +15,8 @@ package lineage2.gameserver.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,25 +26,10 @@ import org.slf4j.LoggerFactory;
  */
 public class AccountBonusDAO
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(AccountBonusDAO.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final AccountBonusDAO _instance = new AccountBonusDAO();
-	/**
-	 * Field SELECT_SQL_QUERY. (value is ""SELECT bonus, bonus_expire FROM account_bonus WHERE account=?"")
-	 */
 	public static final String SELECT_SQL_QUERY = "SELECT bonus, bonus_expire FROM account_bonus WHERE account=?";
-	/**
-	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM account_bonus WHERE account=?"")
-	 */
 	public static final String DELETE_SQL_QUERY = "DELETE FROM account_bonus WHERE account=?";
-	/**
-	 * Field INSERT_SQL_QUERY. (value is ""REPLACE INTO account_bonus(account, bonus, bonus_expire) VALUES (?,?,?)"")
-	 */
 	public static final String INSERT_SQL_QUERY = "REPLACE INTO account_bonus(account, bonus, bonus_expire) VALUES (?,?,?)";
 	
 	/**

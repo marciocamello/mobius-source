@@ -26,25 +26,10 @@ import lineage2.gameserver.network.serverpackets.ServerClose;
  */
 public class AuthLogin extends L2GameClientPacket
 {
-	/**
-	 * Field _loginName.
-	 */
 	private String _loginName;
-	/**
-	 * Field _playKey1.
-	 */
 	private int _playKey1;
-	/**
-	 * Field _playKey2.
-	 */
 	private int _playKey2;
-	/**
-	 * Field _loginKey1.
-	 */
 	private int _loginKey1;
-	/**
-	 * Field _loginKey2.
-	 */
 	private int _loginKey2;
 	
 	/**

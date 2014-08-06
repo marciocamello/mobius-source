@@ -26,9 +26,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Taurin extends DefaultAI
 {
-	/**
-	 * Field points.
-	 */
 	static final Location[] points =
 	{
 		new Location(80752, 146400, -3533),
@@ -73,17 +70,8 @@ public final class Taurin extends DefaultAI
 		new Location(81067, 146925, -3559),
 		new Location(80752, 146400, -3533)
 	};
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = -1;
-	/**
-	 * Field wait_timeout.
-	 */
 	private long wait_timeout = 0;
-	/**
-	 * Field wait.
-	 */
 	private boolean wait = false;
 	
 	/**

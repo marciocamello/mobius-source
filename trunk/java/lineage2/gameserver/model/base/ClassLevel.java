@@ -18,32 +18,11 @@ package lineage2.gameserver.model.base;
  */
 public enum ClassLevel
 {
-	/**
-	 * Field NONE.
-	 */
 	NONE,
-	/**
-	 * Field First.
-	 */
 	First,
-	/**
-	 * Field Second.
-	 */
 	Second,
-	/**
-	 * Field Third.
-	 */
 	Third,
-	/**
-	 * Field Fourth.
-	 */
 	Fourth,
-	/**
-	 * Field Awaking.
-	 */
 	Awaking;
-	/**
-	 * Field VALUES.
-	 */
 	public static final ClassLevel[] VALUES = values();
 }
